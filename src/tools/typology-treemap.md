@@ -8,7 +8,7 @@ toc: false
 The composition of MW1899's 286,561 records by article type, as a squarified treemap.
 
 ```js
-const data = FileAttachment("../../data/article-type-counts.json").json();
+const data = FileAttachment("../data/article-type-counts.json").json();
 ```
 
 ```js

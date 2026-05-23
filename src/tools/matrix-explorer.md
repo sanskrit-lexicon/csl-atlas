@@ -8,8 +8,8 @@ toc: false
 The 18 × 14 block-by-article-type heatmap. Hover any cell to see exact percentages + entry counts. Click an article type to filter.
 
 ```js
-const matrix = FileAttachment("../../data/block-by-type-matrix.json").json();
-const palette = FileAttachment("../../data/palette-tokens.json").json();
+const matrix = FileAttachment("../data/block-by-type-matrix.json").json();
+const palette = FileAttachment("../data/palette-tokens.json").json();
 ```
 
 ```js

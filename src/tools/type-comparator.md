@@ -7,7 +7,7 @@ title: Type comparator
 Pick two article types and see how their block profiles differ side-by-side.
 
 ```js
-const matrix = FileAttachment("../../data/block-by-type-matrix.json").json();
+const matrix = FileAttachment("../data/block-by-type-matrix.json").json();
 ```
 
 ```js
