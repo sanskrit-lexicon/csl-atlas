@@ -1,0 +1,37 @@
+{
+  "name": "csl-atlas",
+  "version": "0.1.0",
+  "description": "Atlas of the Cologne Digital Sanskrit Lexicons — interactive microstructural analysis",
+  "type": "module",
+  "license": "CC-BY-SA-4.0",
+  "scripts": {
+    "dev": "observable preview",
+    "build": "observable build",
+    "deploy": "observable deploy",
+    "sync-data": "bash scripts/sync-data.sh",
+    "sync-palette": "bash scripts/sync-palette.sh"
+  },
+  "devDependencies": {
+    "@observablehq/framework": "^1.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanskrit-lexicon/csl-atlas.git"
+  },
+  "homepage": "https://sanskrit-lexicon.github.io/csl-atlas/",
+  "keywords": [
+    "sanskrit",
+    "lexicography",
+    "microstructure",
+    "monier-williams",
+    "cdsl",
+    "kosha",
+    "indology"
+  ],
+  "author": "CDSL contributors",
+  "contributors": [
+    "@gasyoun",
+    "@funderburkjim",
+    "@Andhrabharati"
+  ]
+}
