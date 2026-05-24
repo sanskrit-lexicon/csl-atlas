@@ -25,6 +25,7 @@ One consolidated study of Monier-Williams 1899 — a data-grounded body, triangu
 
 ### Explore the tools
 
+- **[Cross-dictionary comparison](/tools/cross-dict)** — nine dicts: citation density + common-block population
 - **[Matrix explorer](/tools/matrix-explorer)** — 18 formal blocks × 14 article types
 - **[Lineage Sankey](/tools/lineage-sankey)** — PWG → MW kosha-citation collapse
 - **[Typology treemap](/tools/typology-treemap)** — 286,561 MW entries by article type
