@@ -9,12 +9,11 @@ export default {
       path: "/"
     },
     {
-      name: "Papers",
+      name: "Paper",
       pages: [
-        { name: "Wiegand", path: "/papers/wiegand" },
-        { name: "Atkins–Rundell", path: "/papers/atkins-rundell" },
-        { name: "Hausmann–Wiegand", path: "/papers/hausmann" },
-        { name: "Grounded", path: "/papers/grounded" }
+        { name: "Grounded framework (body)", path: "/paper/grounded" },
+        { name: "Triangulation (§7)", path: "/paper/triangulation" },
+        { name: "Framework appendices A·B·C", path: "/paper/appendices" }
       ]
     },
     {

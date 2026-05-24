@@ -42,7 +42,7 @@ timeline
 
 For the fully-detailed version with all 50+ dates, sources, and CDSL repo links: [timeline-en.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/timeline-en.md).
 
-[Русская версия →](/ru/tools/timeline)
+<!-- Русская версия → /ru/tools/timeline — re-enable once the RU locale routes are wired (see I18N.md / DOUBTS D11). -->
 
 ---
 

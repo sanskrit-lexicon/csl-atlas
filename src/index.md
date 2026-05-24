@@ -7,7 +7,7 @@ toc: false
 
 A comparative microstructural atlas of nine Sanskrit dictionaries spanning the indigenous *kośa* tradition (~6th c.) through to the [Cologne Digital Sanskrit Lexicon](https://www.sanskrit-lexicon.uni-koeln.de/) (2024).
 
-[Русская версия →](/ru/)
+<!-- Русская версия → /ru/ — re-enable once the RU locale routes are wired (see I18N.md / DOUBTS D11). -->
 
 ---
 
@@ -15,14 +15,13 @@ A comparative microstructural atlas of nine Sanskrit dictionaries spanning the i
 
 <div class="card-grid">
 
-### Read the papers
+### Read the paper
 
-Four parallel framework analyses of Monier-Williams 1899:
+One consolidated study of Monier-Williams 1899 — a data-grounded body, triangulated against three external frameworks:
 
-- **[Wiegand microstructure theory](/papers/wiegand)** — integrated microstructure, structural indicators, treatment units
-- **[Atkins–Rundell practical lexicography](/papers/atkins-rundell)** — retrieval dictionary, headword inventory, sense division
-- **[Hausmann–Wiegand hybrid](/papers/hausmann)** — five comment-classes including a proposed *Provenienz-Komment*
-- **[Grounded](/papers/grounded)** — five constructs built from MW outward (block, slot, profile, hedge, infrastructure)
+- **[Grounded framework (body)](/paper/grounded)** — five constructs built from MW outward (block, slot, profile, hedge, infrastructure) + the block-economy thesis
+- **[Triangulation (§7)](/paper/triangulation)** — how Wiegand, Atkins–Rundell and Hausmann converge as three witnesses to one analysis
+- **[Framework appendices A·B·C](/paper/appendices)** — the condensed Wiegand / Atkins–Rundell / Hausmann readings (incl. the proposed *Provenienz-Komment*)
 
 ### Explore the tools
 
