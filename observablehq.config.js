@@ -2,6 +2,7 @@
 // https://observablehq.com/framework/config
 
 export default {
+  root: "src",
   title: "Atlas of the Cologne Digital Sanskrit Lexicons",
   pages: [
     {
