@@ -1,30 +1,44 @@
 ---
-title: VCP — Vācaspatyam (Sanskrit–Sanskrit)
+title: VCP — Vācaspatyam (1873–1884)
 ---
 
 # VCP — *Vācaspatyam* (1873–1884)
 
-The encyclopedic Sanskrit-Sanskrit dictionary compiled by [Tārānātha Tarkavācaspati](https://en.wikipedia.org/wiki/Taranatha_Tarkavachaspati). 50,135 records — the **largest Sanskrit-Sanskrit lexicon in CDSL** by record count. Contemporary with [PWG](pwg) (1855–1875); Tārānātha worked without using it. Where [SKD](skd) is concise and lexicographic, VCP is **encyclopedic**: entries quote Manu-Smṛti, the Bhagavad-Gītā, the Yajurveda, Pāṇini sūtras, astronomical texts, and Vedānta commentary. Mean entry length ~494 characters.
+*Chapter authored per [Decision 29 Tier C](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 9 (final) in the atlas ordering — the **second Sanskrit-Sanskrit lexicon** and the framework's outer limit. The atlas closes here.*
 
-**[Source: csl-orig v02/vcp/vcp.txt](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt) · [VCP GitHub](https://github.com/sanskrit-lexicon/vcp)**
+## 1. Overview
 
-## At a glance
+[*Vācaspatyam*](https://en.wikipedia.org/wiki/Vachaspatya) ("the work of Vācaspati", named after the editor's epithet), an encyclopedic Sanskrit-Sanskrit dictionary compiled by **Tārānātha Tarkavācaspati**, published Calcutta 1873–1884 in six volumes. VCP is the **second indigenous-Indian large-scale Sanskrit-Sanskrit lexicon** in CDSL, contemporary with PWG's later volumes and PWK's beginning, and the **largest single dict in the CDSL set** by record count (50,135 records — exceeding even MW's 286,561 in raw lexical reach per volume). VCP is structurally similar to [SKD](skd) — encyclopedic, monolingual, prose-paragraph entries with inline `iti` citation — but with a *much sparser* inline citation density (0.26 *iti* / record vs SKD's 1.70). This is the **final chapter** of the atlas: it confirms the genre boundary discovered at SKD and closes the atlas with the framework's explicit outer limit.
 
 | | |
 |---|---|
-| Records | 50,135 |
-| Volumes | 1 |
-| Language | Sanskrit (definitions in Sanskrit) |
-| Year | 1873–1884 |
-| Genre | Sanskrit–Sanskrit encyclopedic lexicon |
-| Modal blocks/entry | 2 |
-| Mean blocks/entry | 1.96 |
-| `<ls>` citations total | 0 |
-| `<ls>` citations/record | 0.000 |
-| Inline *iti* quotations | 13,110 |
-| Inline *iti*/record | 0.26 |
+| **Records** | **50,135** (largest in CDSL by raw record count) |
+| **Volumes** | 6 |
+| **Year** | 1873–1884 |
+| **Editor** | Tārānātha Tarkavācaspati |
+| **Publisher** | Various Calcutta presses |
+| **Source language** | Sanskrit |
+| **Target language** | **Sanskrit** (monolingual, encyclopedic) |
+| **Genre** | **Sanskrit-Sanskrit encyclopedic *kośa*** (genre-bound) |
+| **`<lex>` tagged grammar** | 0 |
+| **`<ls>` tagged source citations** | **0** |
+| **Inline `iti` citations / record** | **0.26** (much sparser than SKD's 1.70) |
+| **Mean entry length** | 494 characters |
+| **License** | CC-BY-SA-4.0 |
+| **Repo** | [sanskrit-lexicon/VCP](https://github.com/sanskrit-lexicon/VCP) |
+| **Source file** | [`csl-orig/v02/vcp/vcp.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt) |
 
-## Block profile
+## 2. Genre-bound (the framework does not apply — second confirmation)
+
+VCP confirms the genre boundary that SKD established. The same three preconditions fail in VCP as in SKD:
+
+1. **No `<lex>` tags.** Gender + grammatical category encoded inline in Sanskrit.
+2. **No `<ls>` tags.** Sources cited via inline `iti <source>` prose.
+3. **Long encyclopedic prose entries.** Mean 494 characters per entry.
+
+The 18-block detector produces the same degenerate output as for SKD: every block-presence column at or near zero, no meaningful profile differentiation.
+
+Block-presence by name:
 
 ```js
 const cross = FileAttachment("../data/cross-dict.json").json();
@@ -39,7 +53,7 @@ display(Plot.plot({
   x: {label: "% of entries", domain: [0, 100], grid: true},
   y: {label: null},
   marks: [
-    Plot.barX(bars, {y: "block", x: "pct", fill: "#999999"}),
+    Plot.barX(bars, {y: "block", x: "pct", fill: "#984ea3"}),
     Plot.text(bars, {y: "block", x: "pct",
       text: d => d.pct >= 0.5 ? d.pct.toFixed(1)+"%" : "",
       dx: 4, textAnchor: "start", fontSize: 10}),
@@ -48,26 +62,71 @@ display(Plot.plot({
 }));
 ```
 
-Only `head` (100%) and `body` (96.5%) register. VCP's `body` is slightly lower than [SKD](skd)'s 99.2%, reflecting entries that are purely headword. All other blocks = 0.0% for the same genre-bound reason as SKD.
+## 3. Prose-pattern analysis — sparser *iti* than SKD
 
-## Framework notes
+VCP's inline-`iti` citation density is **0.26 per record** — about a sixth of SKD's 1.70. The same *iti*-formula apparatus is operative (sources named in prose as "*… iti <SOURCE>*"), but VCP's editorial choice was to *quote more sparingly*. Where SKD entries typically include 1–2 quoted prior-kośa passages, VCP entries are often **encyclopedic prose without quotation** — Tārānātha's own synthesis, with named-source attribution reserved for direct quotations. This is a *different editorial philosophy* within the same genre:
 
-**The block apparatus does not transfer to VCP.** From [`analysis/CROSS_DICT_PROFILES.md`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT_PROFILES.md) Part B:
+| | SKD | VCP |
+|---|--:|--:|
+| Records | 42,531 | 50,135 |
+| Volumes | 5 | 6 |
+| Inline `iti` total | 72,176 | 13,110 |
+| Inline `iti` / record | **1.70** | **0.26** |
+| Mean entry length | 532 chars | 494 chars |
 
-> SKD/VCP carry no `<lex>`/`<ls>`; they mark gender inline and cite via inline `iti <source>`. The block-profile apparatus is **genre-bound**.
+SKD is the **quotation-rich** kośa (the prior tradition speaks through the entries); VCP is the **synthesis-rich** kośa (the editor speaks, citing only where direct quotation matters). Both are valid genre-internal variants — neither maps to the European-bilingual structured-block framework.
 
-The 13,110 inline *iti* quotations (0.26/record) are lower than [SKD](skd) (1.70/record) despite VCP's encyclopedic character — VCP cites long verbatim passages (Gītā verses, Pāṇini sūtras) rather than brief *iti*-style attributions. Entries are long (mean 494 characters) because of extended Sanskrit prose definitions, not citation density.
+## 4. Why the framework stops here — the atlas's outer limit
 
-## Significance
+This is the **final chapter** of the atlas, and its purpose is to make the framework's scope explicit. The 18-block apparatus developed for MW in [PAPER.md §3](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#3-the-five-grounded-constructs) was designed to analyse structured bilingual dictionaries — works where every source citation occupies a discrete tagged slot and every entry decomposes into a kernel + enrichment block-economy. SKD and VCP do not have this structure; they are *encyclopedic Sanskrit-Sanskrit kośa* works whose source-discipline lives in prose. The 18-block detector applied to them returns a degenerate "everything is zero" reading — not because the dictionaries are deficient, but because they are *a different kind of artefact*.
 
-VCP demonstrates that the **indigenous Sanskrit-Sanskrit lexicographic tradition continued in parallel with the European philological project**. Tārānātha compiled VCP (1873–1884) simultaneously with [PWG](pwg) (1855–1875) — both spanning the same two decades — without the two projects influencing each other. This parallel development is the strongest evidence that the two lexicographic traditions (Sanskrit kośa vs European philological bilingual) are structurally independent.
+[PAPER.md §8](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#8-implications-for-future-cdsl-work) names this explicitly:
 
-## See also
+> "*The block apparatus is therefore genre-bound to structured bilingual dictionaries — a useful limit on the framework's scope.*"
 
-- [Cross-dictionary comparison](../tools/cross-dict)
-- [SKD chapter](skd) — the earlier Sanskrit-Sanskrit lexicon; concise vs VCP's encyclopedic scope
-- [Lineage Sankey](../tools/lineage-sankey)
+And [PAPER.md §10](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#10-conclusion) further:
+
+> "*Sanskrit-Sanskrit lexica … require a different microstructural framework, oriented to inline-iti citation rather than tagged sources.*"
+
+The atlas therefore **closes** at VCP. A Phase-5 companion project — a separate microanalysis tool designed for inline-prose citation, with `iti` as its primary structural unit and paragraph-flow as its block unit — would extend the framework to SKD, VCP, and the indigenous-*kośa* tradition the four kosha repos ([ARMH](https://github.com/sanskrit-lexicon/armh), [ABCH](https://github.com/sanskrit-lexicon/abch), [ACPH](https://github.com/sanskrit-lexicon/acph), [ACSJ](https://github.com/sanskrit-lexicon/acsj)) represent. That work is *out of scope* for the present atlas.
+
+## 5. Lineage statement
+
+VCP occupies the **synthesis-rich position** in the indigenous Sanskrit *kośa* tradition. Tārānātha Tarkavācaspati (active 1855–1885) was a Calcutta-based Sanskrit grammarian and lexicographer; his *Vācaspatyam* draws on the same prior-*kośa* sources as SKD (Amarakośa, Hemacandra, Medinīkośa, Halāyudha) but with a *more synthetic* editorial voice — quoting less, explaining more. VCP is **contemporary with PWG's later volumes** (1873–1884 vs PWG's last volume 1875) but the two enterprises did not draw on each other: PWG cited prior indigenous *kośa* sources directly; VCP did not engage with the European tradition. The two run as parallel monuments of 19th-century Sanskrit-lexicography on opposite sides of the genre boundary.
+
+The four kosha repos that resolve MW's `<ls>L.</ls>` hedge are *prior to* both SKD and VCP in the indigenous tradition; SKD and VCP synthesised them rather than introducing new material. The full lineage chain of the indigenous tradition lies *upstream* of this atlas.
+
+## 6. Cross-references — divergence/convergence with adjacent chapters
+
+| Adjacent chapter | Convergence | Divergence |
+|---|---|---|
+| **← prior: [SKD](skd)** | Both encyclopedic Sanskrit-Sanskrit *kośa*; both no `<lex>`/`<ls>` tags; both prose-paragraph entries; same genre, same editorial tradition | SKD inline `iti` density = **1.70**/record (quotation-rich prototype); VCP = **0.26** (synthesis-rich variant). SKD is the *prototype* of the genre, VCP is a *variant editorial philosophy* within it. Both confirm the genre boundary; together they delimit the framework's outer limit |
+| **next →: (none — final chapter)** | — | VCP is the atlas's **closing node**. The block apparatus stops here; a separate Phase-5 framework would be needed for the indigenous-*kośa* tradition |
+
+## 7. Decisions log
+
+- **Final chapter** of the atlas — the cross-references close by stating "next: none" rather than linking forward.
+- **Tier C template** per [Decision 29 §29.2](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#292--chapter-template-variants-three-tiers).
+- **Two-monograph comparison with SKD** structures §3: SKD vs VCP shows two editorial philosophies *within* the genre-bound kośa tradition (quotation-rich vs synthesis-rich).
+- **Explicit framework-limit statement** in §4 — the atlas's *purpose* in including SKD and VCP is to demarcate the framework's outer scope, not to extend the framework to cover them.
+- **Phase-5 future work** flagged in §4 as the next research project (a different microstructural tool for inline-`iti` citation).
+- **Effect-size threshold** ([D19](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md)): all numerical comparisons (SKD 1.70 vs VCP 0.26, both vs MW 0) are large effects.
+
+## 8. Data dictionary + reproducibility manifest
+
+- **`DATA_DICTIONARY.md`** — [VCP/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/VCP/blob/docs-pass/DATA_DICTIONARY.md) (notes absence of `<lex>`/`<ls>`)
+- **Source file**: [`csl-orig/v02/vcp/vcp.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt)
+- **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py) (same degenerate output as SKD)
+- **Per-dict matrix JSON**: [`data/vcp_blocks.json`](../data/vcp_blocks.json) (per Sonnet S8 spec, should carry `{"applicable": false, "reason": "Sanskrit-Sanskrit lexicon; uses inline iti citation instead of tagged <ls>"}`)
+- **Cross-dict aggregate**: [`data/cross-dict.json`](../data/cross-dict.json)
+- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/VCP/blob/master/LICENSE)
+
+## See also (tools + epilogue)
+
+- [Cross-dictionary comparison](../tools/cross-dict) — VCP shown alongside SKD and the structured bilingual dicts for the full atlas view
+- [VCP#31 — docs-pass tracking issue](https://github.com/sanskrit-lexicon/VCP/issues/31)
+- **End of atlas chapters.** Return to [the atlas landing page](../) for the framework summary and reading paths.
 
 ---
 
-Source: CDSL vcp.txt 2026-05-24 · CC-BY-SA-4.0
+Source: CDSL `vcp.txt` 2026-05-23 · MWS docs-pass commit reflects audit pipeline as of 2026-05-28 · CC-BY-SA-4.0
