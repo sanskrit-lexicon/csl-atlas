@@ -121,6 +121,7 @@ Full lineage in [PWK/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/PWK/bl
 - **No `<ls>L.</ls>` but typographic `*` exists** — PWK uses asterisk *less systematically* than Cappeller (CAE); the digitisation preserves these in the headword field, not as tagged `<ls>`.
 - **The "missing link" finding** is the chapter's central narrative: PWK drops PWG's kosha apparatus *before* MW; MW's `<ls>L.</ls>` is a re-introduction in compressed form.
 - **Effect-size threshold** ([D19](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md)): all numerical claims on this page exceed |Δ| ≥ 5 pt threshold.
+- **[D21 three-stage hedge lineage](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md#d21--cappeller-precedent-narrative-checked-against-mw-1872--partially-resolved-2026-05-27-finding-three-stage-lineage--was-blocking-now-closed)**: PWK sits *between* PWG (named-kosha tradition) and the lineage proper — uses typographic `*` for kosha-only entries but does not scale or tag the convention.
 
 ## 8. Data dictionary + reproducibility manifest
 

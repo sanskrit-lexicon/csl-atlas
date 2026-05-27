@@ -119,6 +119,7 @@ Full lineage in [CAE/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/CAE
 - **Three-stage lineage rendered** per [D21 resolution](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md#d21--cappeller-precedent-narrative-checked-against-mw-1872--partially-resolved-2026-05-27-finding-three-stage-lineage--was-blocking-now-closed).
 - **CAE dagger explicitly distinguished from MW's hedge** — the dagger marks Prakrit-translation-only attestation, not lexicographer-only; it has no MW successor.
 - **CAE's missing DATA_DICTIONARY documentation** of the asterisk/dagger is named as an editorial gap and a future issue.
+- **[D19 effect-size threshold](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md)**: numerical claims (1,370 asterisks, 903 daggers, 0 `<ls>` tags) are large effects.
 
 ## 8. Data dictionary + reproducibility manifest
 

@@ -118,6 +118,8 @@ BEN occupies the **IE-comparative-philology position** in the European-Sanskrit-
 - **§3a typography mandatory** per [Decision 29 Tier B](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#292--chapter-template-variants-three-tiers).
 - **D22 marker-distinction honesty** explicitly rendered as a 3-row table — Benfey's asterisk is *not* a hedge precedent (it's a Proto-IE-reconstruction marker); only the dagger is.
 - **IE-cognate density** is the chapter's distinguishing structural feature (vs other Tier B chapters).
+- **[D21 three-stage hedge lineage](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md#d21--cappeller-precedent-narrative-checked-against-mw-1872--partially-resolved-2026-05-27-finding-three-stage-lineage--was-blocking-now-closed)** places Benfey 1866 `†` as the *earliest but weakest* precedent (semantic content is "no authoritative references", not specifically kosha-only).
+- **[D19 effect-size threshold](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md)**: numerical claims (~900 dagger instances, 38 % IE-cognate density in roots) exceed |Δ| ≥ 5 pt threshold trivially.
 
 ## 8. Data dictionary + reproducibility manifest
 
