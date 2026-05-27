@@ -1,28 +1,49 @@
 ---
-title: WIL — Wilson Sanskrit–English Dictionary (1832)
+title: WIL — Wilson Sanskrit-English Dictionary (1832)
 ---
 
-# WIL — Wilson's Sanskrit–English Dictionary (1832)
+# WIL — Wilson *A Dictionary in Sanscrit and English* (1832, 2nd edn)
 
-The 1832 Sanskrit–English dictionary by [Horace Hayman Wilson](https://en.wikipedia.org/wiki/Horace_Hayman_Wilson), compiled at [Fort William College, Calcutta](https://en.wikipedia.org/wiki/Fort_William_College) with the aid of Indian pandits. **MW's direct English-language ancestor** — Monier-Williams used the 1832 WIL as the base for both editions (1872 and 1899), supplementing it with [PWG](pwg)'s philological apparatus. CDSL classifies WIL as a `koSa` (kosha), not a European philological dictionary — reflecting the Indian scholarly tradition that shaped it.
+*Chapter authored per [Decision 29 Tier B](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 7 in the atlas ordering — the **base** from which the European Sanskrit-lexicography tradition departs; no systematic hedge convention.*
 
-**[Source: csl-orig v02/wil/wil.txt](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt) · [WIL GitHub](https://github.com/sanskrit-lexicon/wil)**
+## 1. Overview
 
-## At a glance
+[Horace Hayman Wilson](https://en.wikipedia.org/wiki/Horace_Hayman_Wilson)'s *A Dictionary in Sanscrit and English; translated, amended, and enlarged, from an original compilation prepared by learned natives for the College of Fort William*, 2nd edition Calcutta 1832 (the first dictionary in Devanāgarī printed in India; 1st edn 1819, also Calcutta). The **earliest CDSL dictionary** and the **base** from which the European Sanskrit-lexicography tradition departs. Wilson's compilation rests on an indigenous-Indian word list prepared by Calcutta College *paṇḍits* (chiefly an Amarakośa-derived inventory) which Wilson then translated, annotated, and supplemented with citations from the Roxburgh botanical catalogue. The structural-features story is therefore *inverted* compared to MW: where MW has 18 blocks and a 6-block kernel, WIL has effectively *one* citation source (Roxburgh) and otherwise relies on bare glosses. WIL is what comes *before* the European editorial apparatus is layered on.
 
 | | |
 |---|---|
-| Records | 44,577 |
-| Volumes | 1 (single-volume) |
-| Language | English |
-| Year | 1832 |
-| Genre | Structured bilingual (kosha-lineage) |
-| Modal blocks/entry | 3 |
-| Mean blocks/entry | 3.00 |
-| `<ls>` citations total | 230 |
-| `<ls>` citations/record | 0.005 |
+| **Records** | 44,577 |
+| **Volumes** | 1 (single-volume) |
+| **Year** | 1832 (2nd edn); 1819 (1st edn, also Calcutta) |
+| **Editor** | H. H. Wilson (with the Calcutta College *paṇḍits*) |
+| **Publisher** | Education Press, Calcutta |
+| **Source language** | Sanskrit |
+| **Target language** | English |
+| **Genre** | Structured bilingual scholarly dictionary (earliest CDSL) |
+| **`<ls>` citations total** | **230** (essentially no apparatus) |
+| **`<ls>` citations/record** | 0.005 |
+| **`<ls>L.</ls>` hedges** | 0 (no systematic convention attested in print or digital record) |
+| **License** | CC-BY-SA-4.0 |
+| **Repo** | [sanskrit-lexicon/WIL](https://github.com/sanskrit-lexicon/WIL) |
+| **Source file** | [`csl-orig/v02/wil/wil.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt) |
 
-## Block profile
+## 2. Structural features (Tier B: in place of profile table)
+
+WIL has `<lex>` tagged grammar (the gender / part-of-speech apparatus) but essentially **no `<ls>` source citations** — 230 tags total across 44,577 records, of which 224 are `<ls>Rox.</ls>` (Roxburgh's *Hortus Bengalensis* / *Flora Indica* botanical catalogue). The full table of `<ls>` markers ([analysis/LS_HEDGE_CHECK.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/LS_HEDGE_CHECK.md)):
+
+| `<ls>` siglum | Source | Count |
+|---|---|--:|
+| `<ls>Rox.</ls>` | Roxburgh's botanical catalogue | **224** |
+| `<ls>Rox. Catalogue</ls>` | (longer form) | 1 |
+| `<ls>Roxburgh's Catalogue</ls>` | (full form) | 1 |
+| `<ls>ROXBURGH'S catalogue</ls>` | (caps variant) | 1 |
+| `<ls>Rox.'s {%Catalogue%}</ls>` | (italic variant) | 1 |
+| `<ls>Rox.'s Cata.</ls>` | (abbrev variant) | 1 |
+| `<ls>{%As. R.%} {%Vol.%} viii. p. 442</ls>` | *Asiatic Researches* vol. VIII | 1 |
+
+This is the **base case** of Sanskrit-English lexicography: a dictionary with a defined word list (the Amarakośa-derived Calcutta inventory), translation glosses, and one specialised citation apparatus (Roxburgh for botany). Everything else — the philological scholarly apparatus, the kosha-tradition naming, the lexicographer hedge — is *added* by later editors (Böhtlingk-Roth in PWG, Monier-Williams in MW).
+
+Block-presence by name:
 
 ```js
 const cross = FileAttachment("../data/cross-dict.json").json();
@@ -37,7 +58,7 @@ display(Plot.plot({
   x: {label: "% of entries", domain: [0, 100], grid: true},
   y: {label: null},
   marks: [
-    Plot.barX(bars, {y: "block", x: "pct", fill: "#ff7f00"}),
+    Plot.barX(bars, {y: "block", x: "pct", fill: "#1f78b4"}),
     Plot.text(bars, {y: "block", x: "pct",
       text: d => d.pct >= 0.5 ? d.pct.toFixed(1)+"%" : "",
       dx: 4, textAnchor: "start", fontSize: 10}),
@@ -46,43 +67,57 @@ display(Plot.plot({
 }));
 ```
 
-**Key signal:** `cite` block present in only 0.5% of entries — effectively absent. WIL operates without a source-citation apparatus. The `gram` block (99.8%) is near-universal — more systematic than [MW](mw) (67.5%) or [PWG](pwg) (79.8%). Modal blocks = head + body + gram: a very consistent three-block entry across the entire dictionary.
+## 3. Citation strategy — single-source
 
-## Per-type citation profile
+WIL's apparatus is **single-source** (Roxburgh). Every entry of botanical character carries `<ls>Rox.</ls>` (or one of the formatting variants above); other entries carry no `<ls>` citation at all. This is *not* a sign of poor scholarship — Wilson's design choice was to publish the Calcutta College's Amarakośa-derived inventory + English glosses as a working reference for Company Bahadur officers and missionaries, not to compete with the European philological tradition. The detailed apparatus came later: PWG (1855–75) is the first European Sanskrit dictionary with a systematic citation discipline.
 
-From [`analysis/CROSS_DICT_PROFILES.md`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT_PROFILES.md).
+WIL's type-citation profile is therefore mostly flat at zero. Where the citation rate is non-zero (botanical entries), it is 100 % `<ls>Rox.</ls>` — a single-source apparatus on a sub-population.
 
-| Type | N | cite% | etym% | mean blocks |
-|---|---:|---:|---:|---:|
-| noun-m | 15,294 | 0.7% | 0.0% | 3.01 |
-| noun-f | 5,950 | 0.9% | 0.0% | 3.01 |
-| noun-n | 6,521 | 0.2% | 0.0% | 3.00 |
-| adj-mfn | 13,239 | 0.2% | 0.0% | 3.00 |
-| indeclinable | 880 | 0.0% | 0.0% | 3.00 |
-| other | 2,693 | 0.3% | 0.0% | 2.97 |
+## 3a. Typography & precedent — *no* systematic hedge convention
 
-**Citation spread: 0.9 pts** — near-zero across all types. Note: this reflects the absence of an `<ls>` apparatus, not a genuine "uniform citation culture." WIL's flat profile is structurally different from [PWG](pwg)'s flat profile — PWG = uniformly *high* citing; WIL = uniformly *absent* citing. Mean blocks ~3.0 for all types: WIL's entry format is exceptionally consistent.
+Per the 2026-05-27 print-preface and digital-record read ([analysis/LS_HEDGE_CHECK.md "Wilson 1832"](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/LS_HEDGE_CHECK.md)):
 
-## Framework notes
+- The Wilson 1832 print preface (OCR-fetched in part) shows **no systematic convention** marking words attested only in indigenous lexicons. The Calcutta College compilation Wilson worked from *is* an Amarakośa-derived inventory; the distinction Wilson cared about was "the inventory" vs "additional Wilson material", not "kosha-only vs literary-attested".
+- The digital record carries 0 `<ls>L.</ls>` hedges and 0 typographic asterisks / daggers in the tagged data.
+- The closest thing to a hedge in WIL is the *implicit* fact that any entry without a citation is implicitly lexicographer-attested — but the dictionary does not mark this; the reader must infer it.
 
-The common-block framework applies at a reduced level:
+**WIL is therefore *not* part of the three-stage hedge lineage** (Benfey 1866 † → MW 1872 preface → Cappeller 1891 `*` → MW 1899 `<ls>L.</ls>`). WIL belongs to the *pre-hedge* tradition of Sanskrit lexicography — the base before the European typographic apparatus was added.
 
-- **No `cite` apparatus.** Only 230 `<ls>` tags across 44,577 entries. The citation-profile construct yields no useful comparative information for WIL.
-- **No `etym`, `xref`, `hedge`, or `info`** blocks at any meaningful scale.
-- **Gram coverage (99.8%) is the highest of any dict.** WIL is exceptional for systematic grammatical notation — every headword gets a `<lex>` tag — while providing almost no source attribution.
+## 5. Lineage statement
 
-The contrast with MW is the point of the lineage analysis: MW inherits WIL's sense-division structure while adding PWG's citation apparatus on top. See [DICT_PROFILE.md — Lineage](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/DICT_PROFILE.md#lineage-wil--koshas-mw--pwg) and [PAPER.md §3](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#3-lineage).
+WIL occupies the **base position** in the European-Sanskrit-lexicography lineage. It is the *first* English-Sanskrit dictionary printed in India and the *earliest* CDSL dictionary. Its word list comes from the Calcutta College's indigenous-*paṇḍit* compilation (essentially Amarakośa + Hemacandra material, the same indigenous-kosha tradition that PWG would later cite by name and MW would later compress into `<ls>L.</ls>`). The European Sanskrit-lexicography lineage that comes after — PWG 1855–75, PWK 1879–89, Benfey 1866, Cappeller 1891, MW 1872/1899, Apte 1890/1957 — *all* draw on Wilson directly (PWG cites `<ls>WILS.</ls>` 2,014×; MW cites `<ls>W.</ls>` 8,285×) and *all* add layers of apparatus that Wilson did not.
 
-## Lineage position
+Full lineage in [WIL/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/WIL/blob/docs-pass/DICT_PROFILE.md).
 
-WIL is the **bridge node**: classical Indian kosha → European philological bilingual dictionary → [MW](mw). The kosha lineage is provable through CDSL's own `koSa` subject classification and the Fort William College record. See [ARMH](armh) and [ABCH](abch) for the kosha sources WIL's pandits worked from.
+## 6. Cross-references — divergence/convergence with adjacent chapters
 
-## See also
+| Adjacent chapter | Convergence | Divergence |
+|---|---|---|
+| **← prior: [CAE](cae)** | Both single-volume; both have effectively zero `<ls>` tagged apparatus | CAE has 1,370-instance systematic typographic hedge (`*` for lexicographer-only); WIL has no systematic hedge convention at all. CAE is the *systematic-precedent* node (1891), WIL is the *base* node (1832); 59 years and an entire methodology separate them |
+| **next →: [SKD](skd)** | Both 1820–30s compilations rooted in indigenous-Indian scholarship (WIL from Calcutta College, SKD from Bengal Sanskrit scholarship) | WIL is bilingual (Sanskrit → English); SKD is monolingual Sanskrit-Sanskrit (the *kośa* tradition itself, not a European reading of it); WIL is structured-bilingual genre, SKD is genre-bound `iti`-citation. The genre boundary in the atlas falls here: WIL is the last structured bilingual chapter, SKD is the first genre-bound chapter |
+
+## 7. Decisions log
+
+- **Tier B template** per Decision 29 (compact + typography slot optional). Since WIL has *no* systematic hedge convention, §3a is reduced to the negative finding (no marker found in print preface or digital record).
+- **Single-source apparatus narrative** is the chapter's structural centre: Roxburgh-botany only, 224 of 230 `<ls>` tags.
+- **No participation in the three-stage hedge lineage** — explicit per [D21 resolution](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md). WIL's word list *is* the kosha tradition; WIL just doesn't *mark* it as such.
+- **Effect-size threshold** ([D19](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md)): numerical claims (224 of 230, 100 % botanical-`<ls>` rate) exceed the threshold trivially.
+
+## 8. Data dictionary + reproducibility manifest
+
+- **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/WIL/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory
+- **Source file**: [`csl-orig/v02/wil/wil.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt)
+- **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
+- **Per-dict matrix JSON**: [`data/wil_blocks.json`](../data/wil_blocks.json)
+- **Cross-dict aggregate**: [`data/cross-dict.json`](../data/cross-dict.json)
+- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/WIL/blob/master/LICENSE)
+
+## See also (tools)
 
 - [Cross-dictionary comparison](../tools/cross-dict)
-- [Lineage Sankey](../tools/lineage-sankey) — kosha → WIL → MW flow
-- [ARMH chapter](armh) · [ABCH chapter](abch) — the kosha sources
+- [Lineage Sankey](../tools/lineage-sankey) — WIL as the base from which the European tradition departs
+- [WIL#18 — docs-pass tracking issue](https://github.com/sanskrit-lexicon/WIL/issues/18)
 
 ---
 
-Source: CDSL wil.txt 2026-05-24 · CC-BY-SA-4.0
+Source: CDSL `wil.txt` 2026-05-23 · MWS docs-pass commit reflects audit pipeline as of 2026-05-27 · CC-BY-SA-4.0
