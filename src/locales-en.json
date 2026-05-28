@@ -148,5 +148,28 @@
       "ontolex": "OntoLex Stub (.json)",
       "loss": "Loss Reports JSON"
     }
+  },
+  "status": {
+    "partial": "partial",
+    "lossy": "lossy",
+    "clean": "clean"
+  },
+  "review": {
+    "machine": "machine",
+    "human-reviewed": "human-reviewed"
+  },
+  "failure": {
+    "model-vocabulary-gap": "model-vocabulary-gap",
+    "print-compression": "print-compression",
+    "cdsl-markup-gap": "cdsl-markup-gap",
+    "none": "none"
+  },
+  "phenomenon": {
+    "generic-lexicographer-hedge": "generic-lexicographer-hedge",
+    "root-as-entry": "root-as-entry",
+    "root-as-derivational-base": "root-as-derivational-base",
+    "compound-subentry": "compound-subentry",
+    "compound-decomposition": "compound-decomposition",
+    "continuation-parent": "continuation-parent"
   }
 }

@@ -171,6 +171,8 @@ display(html`
     const safeId = stableId.replace(/:/g, "-");
     const reports = lossByCase.get(stableId) || [];
 
+    const isHumanReviewed = reports.some(r => r.reviewStatus === 'human-reviewed');
+    const curatedPath = isHumanReviewed ? "/curated" : "";
     const repoBase = "https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pilot";
 
     return html`<details class="case-card">
@@ -186,8 +188,8 @@ display(html`
         
         <div class="link-bar">
           <a href="${repoBase}/neutral-model.json" target="_blank">📄 ${t("interop.links.neutral")}</a>
-          <a href="${repoBase}/tei/${safeId}.xml" target="_blank">📄 ${t("interop.links.tei")}</a>
-          <a href="${repoBase}/ontolex/${safeId}.json" target="_blank">📄 ${t("interop.links.ontolex")}</a>
+          <a href="${repoBase}${curatedPath}/tei/${safeId}.xml" target="_blank">📄 ${t("interop.links.tei")}</a>
+          <a href="${repoBase}${curatedPath}/ontolex/${safeId}.json" target="_blank">📄 ${t("interop.links.ontolex")}</a>
           <a href="${repoBase}/loss-reports.json" target="_blank">📄 ${t("interop.links.loss")}</a>
         </div>
 
@@ -205,10 +207,10 @@ display(html`
             ${reports.map(r => html`
               <div class="report-row" style="flex-wrap: wrap; gap: 8px; align-items: center;">
                 <div class="report-target">[${r.target.toUpperCase()}]</div>
-                <div class="report-status status-${r.status}">${r.status}</div>
-                <div style="font-size: 0.85em; background: #e6f6ff; padding: 2px 6px; border-radius: 4px; color: #005080;">${r.failureClassification || "none"}</div>
-                <div style="font-size: 0.85em; background: ${r.reviewStatus === 'human-reviewed' ? '#e2fbe8' : '#f1f1f1'}; padding: 2px 6px; border-radius: 4px; color: ${r.reviewStatus === 'human-reviewed' ? '#0e6220' : '#444'};">${r.reviewStatus}</div>
-                <div style="flex-basis: 100%; margin-top: 2px; padding-left: 8px; border-left: 2px solid #ccc; color: #555;">${r.phenomenon}: ${r.loss || r.claim}</div>
+                <div class="report-status status-${r.status}">${t("status." + r.status)}</div>
+                <div style="font-size: 0.85em; background: #e6f6ff; padding: 2px 6px; border-radius: 4px; color: #005080;">${t("failure." + (r.failureClassification || "none"))}</div>
+                <div style="font-size: 0.85em; background: ${r.reviewStatus === 'human-reviewed' ? '#e2fbe8' : '#f1f1f1'}; padding: 2px 6px; border-radius: 4px; color: ${r.reviewStatus === 'human-reviewed' ? '#0e6220' : '#444'};">${t("review." + r.reviewStatus)}</div>
+                <div style="flex-basis: 100%; margin-top: 2px; padding-left: 8px; border-left: 2px solid #ccc; color: #555;">${t("phenomenon." + r.phenomenon)}: ${r.loss || r.claim}</div>
               </div>
             `)}
           </div>

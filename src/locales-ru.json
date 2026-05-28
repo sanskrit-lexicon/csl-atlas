@@ -151,5 +151,28 @@
       "ontolex": "Шаблон OntoLex (.json)",
       "loss": "Отчеты о потере JSON"
     }
+  },
+  "status": {
+    "partial": "частичный",
+    "lossy": "с потерей",
+    "clean": "чистый"
+  },
+  "review": {
+    "machine": "машинный",
+    "human-reviewed": "проверен человеком"
+  },
+  "failure": {
+    "model-vocabulary-gap": "пробел-в-словаре-модели",
+    "print-compression": "печатное-сжатие",
+    "cdsl-markup-gap": "пробел-в-разметке-cdsl",
+    "none": "отсутствует"
+  },
+  "phenomenon": {
+    "generic-lexicographer-hedge": "ограничитель-лексикографа",
+    "root-as-entry": "корень-как-статья",
+    "root-as-derivational-base": "корень-как-база-деривации",
+    "compound-subentry": "композит-подстатья",
+    "compound-decomposition": "декомпозиция-композита",
+    "continuation-parent": "продолжение-родитель"
   }
 }
