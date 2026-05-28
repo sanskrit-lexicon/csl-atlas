@@ -45,6 +45,24 @@ Each dictionary gets a chapter; each Tier-1 figure has a per-dictionary variant 
 
 ---
 
+## MW-PWG-PWK interoperability track
+
+The interoperability track tests how difficult Sanskrit lexicographic cases move across CDSL source records, TEI archival encoding, and OntoLex semantic modeling.
+
+- [Implementation handoff](HANDOFF.md)
+- [Project specification](docs/PROJECT_SPEC.md)
+- [Interoperability model](docs/INTEROPERABILITY_MODEL.md)
+- [Sampling strategy](docs/SAMPLING_STRATEGY.md)
+- [Loss-report schema](docs/LOSS_REPORT_SCHEMA.md)
+
+Generate the pilot hard-case sample with:
+
+```bash
+npm run sample-hard-cases
+```
+
+---
+
 ## Tech stack
 
 - [**Observable Framework**](https://observablehq.com/framework) (per [Decision 10](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/VISUALISATIONS.md#decision-10--microsite-stack-observable-framework))

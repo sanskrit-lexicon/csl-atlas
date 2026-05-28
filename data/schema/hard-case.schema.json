@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sanskrit-lexicon.github.io/csl-atlas/schema/hard-case.schema.json",
+  "title": "CSL Atlas Hard Case Sample",
+  "type": "object",
+  "required": ["generatedAt", "generator", "maxItems", "sources", "recordCounts", "method", "items"],
+  "properties": {
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "generator": { "type": "string" },
+    "maxItems": { "type": "integer", "minimum": 1 },
+    "sources": {
+      "type": "object",
+      "required": ["mw", "pwg", "pwk"],
+      "properties": {
+        "mw": { "type": "string" },
+        "pwg": { "type": "string" },
+        "pwk": { "type": "string" }
+      }
+    },
+    "recordCounts": {
+      "type": "object",
+      "required": ["mw", "pwg", "pwk"],
+      "properties": {
+        "mw": { "type": "integer" },
+        "pwg": { "type": "integer" },
+        "pwk": { "type": "integer" }
+      }
+    },
+    "method": {
+      "type": "object",
+      "required": ["description", "signatures"],
+      "properties": {
+        "description": { "type": "string" },
+        "signatures": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/item" }
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": ["rank", "key", "score", "phenomena", "lossHints", "records"],
+      "properties": {
+        "rank": { "type": "integer", "minimum": 1 },
+        "key": { "type": "string" },
+        "score": { "type": "integer" },
+        "phenomena": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "lossHints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "records": {
+          "type": "object",
+          "required": ["mw", "pwg", "pwk"],
+          "properties": {
+            "mw": { "$ref": "#/$defs/record" },
+            "pwg": { "anyOf": [{ "$ref": "#/$defs/record" }, { "type": "null" }] },
+            "pwk": { "anyOf": [{ "$ref": "#/$defs/record" }, { "type": "null" }] }
+          }
+        }
+      }
+    },
+    "record": {
+      "type": "object",
+      "required": ["L", "pc", "k1", "k2", "line", "citationCount", "hasHedge", "hasRootMarker", "isCompound", "isContinuation", "raw"],
+      "properties": {
+        "L": { "type": ["string", "null"] },
+        "pc": { "type": ["string", "null"] },
+        "k1": { "type": ["string", "null"] },
+        "k2": { "type": ["string", "null"] },
+        "h": { "type": ["string", "null"] },
+        "e": { "type": ["string", "null"] },
+        "line": { "type": ["integer", "null"] },
+        "citationCount": { "type": "integer" },
+        "hasHedge": { "type": "boolean" },
+        "hasRootMarker": { "type": "boolean" },
+        "isCompound": { "type": "boolean" },
+        "isContinuation": { "type": "boolean" },
+        "raw": { "type": "string" }
+      }
+    }
+  }
+}

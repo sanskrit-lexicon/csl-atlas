@@ -8,6 +8,7 @@
     "dev": "observable preview",
     "build": "observable build",
     "deploy": "observable deploy",
+    "sample-hard-cases": "node scripts/sample-hard-cases.mjs",
     "sync-data": "bash scripts/sync-data.sh",
     "sync-palette": "bash scripts/sync-palette.sh"
   },
