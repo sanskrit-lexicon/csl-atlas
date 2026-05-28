@@ -4,3 +4,7 @@ src/.observablehq/cache/
 .observablehq/cache/
 .DS_Store
 *.log
+
+# audit sidecars
+.contributing_old.md
+.contributing_audit.txt
