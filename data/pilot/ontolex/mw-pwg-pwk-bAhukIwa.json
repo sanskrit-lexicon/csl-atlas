@@ -2,11 +2,14 @@
   "@context": {
     "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
     "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
+    "decomp": "http://www.w3.org/ns/lemon/decomp#",
+    "frac": "http://www.w3.org/ns/lemon/frac#",
     "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
   },
   "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/bAhukIwa",
-  "@type": "lexicog:Entry",
+  "@type": "lexicog:CompoundEntry",
   "ontolex:canonicalForm": {
+    "@type": "ontolex:Form",
     "ontolex:writtenRep": "bAhukIwa"
   },
   "csl:phenomenon": [
@@ -16,5 +19,21 @@
     "pwk-abridged",
     "mw-uncited-pwg-cited",
     "homophone"
+  ],
+  "decomp:constituent": [
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/bAhukIwa#component1",
+      "@type": "decomp:Component",
+      "ontolex:correspondsTo": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/bAhu"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/bAhukIwa#component2",
+      "@type": "decomp:Component",
+      "ontolex:correspondsTo": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/kIwa"
+      }
+    }
   ]
 }

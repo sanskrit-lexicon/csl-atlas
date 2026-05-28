@@ -132,5 +132,21 @@
     "TRIK.": "Trikāṇḍaśeṣa",
     "HALĀY.": "Halāyudha",
     "H. an.": "Hemacandra Anekārthasaṃgraha"
+  },
+  "interop": {
+    "title": "MW-PWG-PWK Interoperability Hard Cases",
+    "description": "This tool shows 50 automatically sampled hard cases for the MW-PWG-PWK interoperability track.",
+    "select-language": "Select Language",
+    "case-label": "Case",
+    "phenomena": "Phenomena",
+    "loss-hints": "Loss Hints",
+    "machine-loss-reports": "Machine Loss Reports",
+    "source-records": "Source Records",
+    "links": {
+      "neutral": "Neutral Model JSON",
+      "tei": "TEI Stub (.xml)",
+      "ontolex": "OntoLex Stub (.json)",
+      "loss": "Loss Reports JSON"
+    }
   }
 }

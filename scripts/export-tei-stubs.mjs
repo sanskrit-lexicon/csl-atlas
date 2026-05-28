@@ -26,8 +26,37 @@ async function main() {
     const safeKey = escapeXml(model.key);
     
     let xml = `<entry xml:id="${safeId}">\n`;
-    xml += `  <form type="lemma"><orth notation="SLP1">${safeKey}</orth></form>\n`;
     
+    // Output parsed forms
+    for (const f of model.forms || []) {
+      const typeAttr = f.type ? ` type="${escapeXml(f.type)}"` : "";
+      xml += `  <form${typeAttr}>\n`;
+      xml += `    <orth notation="SLP1">${escapeXml(f.orth)}</orth>\n`;
+      if (f.grammar) {
+        xml += `    <gramGrp><gram>${escapeXml(f.grammar)}</gram></gramGrp>\n`;
+      }
+      if (f.verbClass) {
+        xml += `    <note type="verb-class">${escapeXml(f.verbClass)}</note>\n`;
+      }
+      xml += `  </form>\n`;
+    }
+
+    // Output mapped relations
+    for (const rel of model.relations || []) {
+      const typeAttr = rel.type ? ` type="${escapeXml(rel.type)}"` : "";
+      if (rel.components) {
+        xml += `  <etym${typeAttr}>\n`;
+        for (const comp of rel.components) {
+          xml += `    <seg type="component">${escapeXml(comp)}</seg>\n`;
+        }
+        xml += `  </etym>\n`;
+      } else {
+        const targetVal = rel.target || rel.eCode || "";
+        xml += `  <xr${typeAttr} target="${escapeXml(targetVal)}"/>\n`;
+      }
+    }
+
+    // Output source records
     for (const dict of ['mw', 'pwg', 'pwk']) {
       const raw = model.records[dict]?.raw;
       if (raw) {
@@ -46,3 +75,4 @@ async function main() {
 }
 
 main().catch(console.error);
+

@@ -2,11 +2,14 @@
   "@context": {
     "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
     "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
+    "decomp": "http://www.w3.org/ns/lemon/decomp#",
+    "frac": "http://www.w3.org/ns/lemon/frac#",
     "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
   },
   "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AaMh-mw114",
-  "@type": "lexicog:Entry",
+  "@type": "lexicog:LemmaEntry",
   "ontolex:canonicalForm": {
+    "@type": "ontolex:Form",
     "ontolex:writtenRep": "aMh"
   },
   "csl:phenomenon": [
@@ -16,5 +19,10 @@
     "pwg-rich",
     "pwk-abridged",
     "homophone"
-  ]
+  ],
+  "frac:attestation": {
+    "@type": "frac:Attestation",
+    "frac:value": "L.",
+    "csl:evidenceType": "generic-lexicographer-hedge"
+  }
 }

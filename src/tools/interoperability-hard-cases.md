@@ -3,19 +3,40 @@ title: MW-PWG-PWK Interoperability Hard Cases
 toc: false
 ---
 
-# MW-PWG-PWK Interoperability Hard Cases
-
-This tool shows 50 automatically sampled hard cases for the MW-PWG-PWK interoperability track.
-
 ```js
 const data = FileAttachment("../data/pilot/hard-cases.json").json();
 const neutralData = FileAttachment("../data/pilot/neutral-model.json").json();
 const lossData = FileAttachment("../data/pilot/loss-reports.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
 ```
 
 ```js
 const items = data.items;
 const neutralMap = new Map(neutralData.map(d => [d.key, d]));
+```
+
+```js
+// Define active language state
+const langVar = Mutable("en");
+const setLanguage = (lang) => { langVar.value = lang; };
+const lang = langVar;
+```
+
+```js
+const t = (key) => {
+  const currentLocale = lang === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) {
+    if (result && result[part] !== undefined) {
+      result = result[part];
+    } else {
+      return key;
+    }
+  }
+  return result;
+};
 ```
 
 ```js
@@ -27,6 +48,19 @@ for (const report of lossData) {
   }
   lossByCase.get(report.caseId).push(report);
 }
+```
+
+# ${t("interop.title")}
+
+${t("interop.description")}
+
+```js
+// Render language selector
+const langInput = Inputs.button([
+  ["English (EN)", () => setLanguage("en")],
+  ["Русский (RU)", () => setLanguage("ru")]
+], {label: t("interop.select-language")});
+display(langInput);
 ```
 
 ```html
@@ -140,25 +174,25 @@ display(html`
     const repoBase = "https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pilot";
 
     return html`<details class="case-card">
-      <summary>Case ${item.rank}: <strong>${item.key}</strong></summary>
+      <summary>${t("interop.case-label")} ${item.rank}: <strong>${item.key}</strong></summary>
       <div style="margin-top: 16px;">
         
         <div>
-          <strong>Phenomena:</strong>
+          <strong>${t("interop.phenomena")}:</strong>
           <div style="margin-top: 6px;">
             ${item.phenomena.map(p => html`<span class="phenomenon-badge">${p}</span>`)}
           </div>
         </div>
         
         <div class="link-bar">
-          <a href="${repoBase}/neutral-model.json" target="_blank">📄 Neutral Model JSON</a>
-          <a href="${repoBase}/tei/${safeId}.xml" target="_blank">📄 TEI Stub (.xml)</a>
-          <a href="${repoBase}/ontolex/${safeId}.json" target="_blank">📄 OntoLex Stub (.json)</a>
-          <a href="${repoBase}/loss-reports.json" target="_blank">📄 Loss Reports JSON</a>
+          <a href="${repoBase}/neutral-model.json" target="_blank">📄 ${t("interop.links.neutral")}</a>
+          <a href="${repoBase}/tei/${safeId}.xml" target="_blank">📄 ${t("interop.links.tei")}</a>
+          <a href="${repoBase}/ontolex/${safeId}.json" target="_blank">📄 ${t("interop.links.ontolex")}</a>
+          <a href="${repoBase}/loss-reports.json" target="_blank">📄 ${t("interop.links.loss")}</a>
         </div>
 
         <div class="loss-hints">
-          <strong>Loss Hints:</strong>
+          <strong>${t("interop.loss-hints")}:</strong>
           <ul style="margin: 6px 0 0 0; padding-left: 20px;">
             ${item.lossHints.map(hint => html`<li>${hint}</li>`)}
           </ul>
@@ -166,7 +200,7 @@ display(html`
         
         ${reports.length > 0 ? html`
         <div class="machine-reports">
-          <strong>Machine Loss Reports:</strong>
+          <strong>${t("interop.machine-loss-reports")}:</strong>
           <div style="margin-top: 6px;">
             ${reports.map(r => html`
               <div class="report-row">
@@ -178,6 +212,10 @@ display(html`
           </div>
         </div>
         ` : ''}
+        
+        <div style="margin-top: 12px;">
+          <strong>${t("interop.source-records")}:</strong>
+        </div>
         
         ${['mw', 'pwg', 'pwk'].map(dict => {
           const rec = item.records[dict];
