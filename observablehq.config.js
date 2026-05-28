@@ -26,7 +26,8 @@ export default {
         { name: "Typology treemap", path: "/tools/typology-treemap" },
         { name: "Lexicographic timeline", path: "/tools/timeline" },
         { name: "Type comparator", path: "/tools/type-comparator" },
-        { name: "Citation tracer", path: "/tools/citation-tracer" }
+        { name: "Citation tracer", path: "/tools/citation-tracer" },
+        { name: "Interoperability hard cases", path: "/tools/interoperability-hard-cases" }
       ]
     },
     {

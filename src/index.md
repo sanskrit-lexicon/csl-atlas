@@ -45,6 +45,7 @@ One consolidated study of Monier-Williams 1899 — a data-grounded body, triangu
 - **[Lexicographic timeline](/tools/timeline)** — 6th c. — 2024
 - **[Type comparator](/tools/type-comparator)** — pick two types, see block differences
 - **[Citation tracer](/tools/citation-tracer)** — click a source, see all entries
+- **[Interoperability hard cases](/tools/interoperability-hard-cases)** — 50 sampled MW-led hard cases
 
 ### Browse the 9 dictionaries (Decision 29 order)
 

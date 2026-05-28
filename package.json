@@ -9,6 +9,10 @@
     "build": "observable build",
     "deploy": "observable deploy",
     "sample-hard-cases": "node scripts/sample-hard-cases.mjs",
+    "build-neutral-model": "node scripts/build-neutral-model.mjs",
+    "build-loss-reports": "node scripts/build-loss-reports.mjs",
+    "export-tei-stubs": "node scripts/export-tei-stubs.mjs",
+    "export-ontolex-stubs": "node scripts/export-ontolex-jsonld-stubs.mjs",
     "sync-data": "bash scripts/sync-data.sh",
     "sync-palette": "bash scripts/sync-palette.sh"
   },

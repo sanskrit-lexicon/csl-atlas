@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Neutral Interoperability Model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "key": {
+        "type": "string"
+      },
+      "phenomena": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "records": {
+        "type": "object",
+        "properties": {
+          "mw": { "$ref": "#/$defs/record" },
+          "pwg": { "$ref": "#/$defs/record" },
+          "pwk": { "$ref": "#/$defs/record" }
+        },
+        "required": ["mw", "pwg", "pwk"]
+      },
+      "forms": {
+        "type": "array"
+      },
+      "senses": {
+        "type": "array"
+      },
+      "citations": {
+        "type": "array"
+      },
+      "relations": {
+        "type": "array"
+      },
+      "loss": {
+        "type": "array"
+      }
+    },
+    "required": ["id", "key", "phenomena", "records", "forms", "senses", "citations", "relations", "loss"]
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "properties": {
+        "L": { "type": ["string", "null"] },
+        "line": { "type": ["integer", "null"] },
+        "pc": { "type": ["string", "null"] },
+        "raw": { "type": ["string", "null"] }
+      },
+      "required": ["L", "line", "pc", "raw"]
+    }
+  }
+}

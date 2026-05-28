@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
+    "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
+    "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
+  },
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/DAv",
+  "@type": "lexicog:Entry",
+  "ontolex:canonicalForm": {
+    "ontolex:writtenRep": "DAv"
+  },
+  "csl:phenomenon": [
+    "hedge",
+    "root",
+    "tri-dict",
+    "pwg-rich",
+    "pwk-abridged",
+    "homophone"
+  ]
+}
