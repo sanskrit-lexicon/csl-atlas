@@ -203,10 +203,12 @@ display(html`
           <strong>${t("interop.machine-loss-reports")}:</strong>
           <div style="margin-top: 6px;">
             ${reports.map(r => html`
-              <div class="report-row">
+              <div class="report-row" style="flex-wrap: wrap; gap: 8px; align-items: center;">
                 <div class="report-target">[${r.target.toUpperCase()}]</div>
                 <div class="report-status status-${r.status}">${r.status}</div>
-                <div>${r.phenomenon}: ${r.loss || r.claim}</div>
+                <div style="font-size: 0.85em; background: #e6f6ff; padding: 2px 6px; border-radius: 4px; color: #005080;">${r.failureClassification || "none"}</div>
+                <div style="font-size: 0.85em; background: ${r.reviewStatus === 'human-reviewed' ? '#e2fbe8' : '#f1f1f1'}; padding: 2px 6px; border-radius: 4px; color: ${r.reviewStatus === 'human-reviewed' ? '#0e6220' : '#444'};">${r.reviewStatus}</div>
+                <div style="flex-basis: 100%; margin-top: 2px; padding-left: 8px; border-left: 2px solid #ccc; color: #555;">${r.phenomenon}: ${r.loss || r.claim}</div>
               </div>
             `)}
           </div>

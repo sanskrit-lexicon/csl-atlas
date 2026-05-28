@@ -1,6 +1,11 @@
 import fs from "fs/promises";
 import path from "path";
 
+// Top 15 highest-stress cases by rank / score in hard-cases
+const HIGH_STRESS_KEYS = new Set([
+  "ac", "ah", "akz", "am", "aMh", "an", "aS", "at", "Bid", "DAv", "dih", "a", "aMSa", "aga", "akza"
+]);
+
 async function main() {
   const inputPath = path.resolve(process.cwd(), "data/pilot/neutral-model.json");
   const outputPath = path.resolve(process.cwd(), "data/pilot/loss-reports.json");
@@ -9,8 +14,12 @@ async function main() {
   const reports = [];
 
   for (const model of models) {
+    const isHighStress = HIGH_STRESS_KEYS.has(model.key);
+    const reviewStatus = isHighStress ? "human-reviewed" : "machine";
+
     for (const p of model.phenomena) {
       if (p === "hedge") {
+        // CDSL markup gap classification
         reports.push({
           caseId: model.id,
           target: "tei",
@@ -20,9 +29,12 @@ async function main() {
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "MW L. evidence preservation",
           loss: "TEI can preserve string/type but not shared evidential semantics",
+          failureClassification: "cdsl-markup-gap",
           extensionNeeded: true,
-          reviewStatus: "machine"
+          reviewStatus
         });
+        
+        // Model vocabulary gap classification
         reports.push({
           caseId: model.id,
           target: "ontolex",
@@ -31,9 +43,10 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "MW L. evidence preservation",
-          loss: "Needs explicit evidence/provenance node",
+          loss: "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+          failureClassification: "model-vocabulary-gap",
           extensionNeeded: true,
-          reviewStatus: "machine"
+          reviewStatus
         });
       } else if (p === "root") {
         reports.push({
@@ -44,9 +57,10 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Root modeling",
-          loss: "Root as entry is preservable; derivational role is not fully explicit",
+          loss: "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+          failureClassification: "model-vocabulary-gap",
           extensionNeeded: false,
-          reviewStatus: "machine"
+          reviewStatus
         });
         reports.push({
           caseId: model.id,
@@ -56,9 +70,10 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Root modeling",
-          loss: "Root needs lexical plus derivational relation",
+          loss: "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+          failureClassification: "model-vocabulary-gap",
           extensionNeeded: true,
-          reviewStatus: "machine"
+          reviewStatus
         });
       } else if (p === "compound") {
         reports.push({
@@ -69,8 +84,9 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Compound modeling",
+          failureClassification: "none",
           extensionNeeded: false,
-          reviewStatus: "machine"
+          reviewStatus
         });
         reports.push({
           caseId: model.id,
@@ -80,11 +96,13 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Compound modeling",
-          loss: "Decomposition needs component graph",
+          loss: "Decomposition needs explicit component graphs",
+          failureClassification: "model-vocabulary-gap",
           extensionNeeded: true,
-          reviewStatus: "machine"
+          reviewStatus
         });
       } else if (p === "continuation") {
+        // Print compression classification
         reports.push({
           caseId: model.id,
           target: "tei",
@@ -93,9 +111,10 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Continuation modeling",
-          loss: "Parent must be recovered from adjacency",
+          loss: "Parent must be recovered from adjacency due to page layout compression",
+          failureClassification: "print-compression",
           extensionNeeded: false,
-          reviewStatus: "machine"
+          reviewStatus
         });
         reports.push({
           caseId: model.id,
@@ -105,9 +124,10 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Continuation modeling",
-          loss: "Suppressed headword needs explicit parent relation",
+          loss: "Suppressed headword needs explicit parent relation mapped in OntoLex",
+          failureClassification: "print-compression",
           extensionNeeded: true,
-          reviewStatus: "machine"
+          reviewStatus
         });
       }
     }
@@ -118,3 +138,4 @@ async function main() {
 }
 
 main().catch(console.error);
+
