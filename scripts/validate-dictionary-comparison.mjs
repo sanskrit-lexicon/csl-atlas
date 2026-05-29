@@ -17,6 +17,7 @@ const REQUIRED = [
   "dictionary-unique.json",
   "pos-disagreement.json",
   "alignment-confidence.json",
+  "lemma-dossier.json",
   "dictionary-comparison-validation.json"
 ];
 
@@ -52,6 +53,17 @@ if (pos) {
   const missing = (pos.conflicts || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
   if (missing.length) errors.push(`${missing.length} gender conflicts lack source links.`);
   else notes.push(`${pos.conflictCount} gender conflicts (${pos.shown} sampled), all with source links.`);
+}
+
+const dossier = docs["lemma-dossier.json"];
+if (dossier) {
+  if (!(dossier.count > 0) || !Array.isArray(dossier.entries) || dossier.entries.length === 0) {
+    errors.push("lemma-dossier has no entries.");
+  } else if (dossier.entries.some(e => !e.l || !Array.isArray(e.d) || e.d.length < dossier.minDicts)) {
+    errors.push("lemma-dossier has malformed entries (missing lemma or too few dictionaries).");
+  } else {
+    notes.push(`Dossier covers ${dossier.count} lemmas (>= ${dossier.minDicts} dictionaries).`);
+  }
 }
 
 const report = docs["dictionary-comparison-validation.json"];
