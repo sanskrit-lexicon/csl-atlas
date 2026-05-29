@@ -1,0 +1,448 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-29T09:09:25.037Z",
+  "sourcePath": "../csl-orig/v02/mw/mw.txt",
+  "sourceDate": "2026-05-29",
+  "recordCount": 286560,
+  "assumptions": [
+    "Layers are coarse buckets for comparison, not dates.",
+    "Brahmana, Aranyaka, Upanishadic, Sutra, and Pratisakhya sources are folded into 'vedic' at this resolution.",
+    "Dharmasastra (Mn, Yajn, Gaut, Apast) is mapped to 'technical' (sastra), not 'classical'.",
+    "Commentators (e.g. Say, Sayana) are left 'unknown' because the cited layer differs from the commentator's own date.",
+    "Editorial and catalogue references (ib., W., MW., Cat., Col., Gal.) are not textual witnesses; they are listed under editorialReferences and treated as 'unknown' for chronology.",
+    "Every source not present in 'map' resolves to 'unknown' and should enter the source-layer review queue."
+  ],
+  "warnings": [
+    "40202 distinct source abbreviations are unmapped and resolve to \"unknown\" (source-layer review queue, UC-DIA-07)."
+  ],
+  "layerOrder": [
+    "vedic",
+    "epic",
+    "classical",
+    "puranic",
+    "technical",
+    "lexicographic",
+    "unknown"
+  ],
+  "recordsByLayerMembership": {
+    "vedic": 27066,
+    "epic": 29974,
+    "classical": 25910,
+    "puranic": 11316,
+    "technical": 23891,
+    "lexicographic": 39962,
+    "unknown": 78049
+  },
+  "citationsByLayer": {
+    "vedic": 27066,
+    "epic": 29974,
+    "classical": 25910,
+    "puranic": 11316,
+    "technical": 23891,
+    "lexicographic": 39962,
+    "unknown": 78049
+  },
+  "distinctUnknownSources": 40202,
+  "topUnknownSources": [
+    {
+      "source": "Buddh",
+      "count": 1865
+    },
+    {
+      "source": "Hcat",
+      "count": 1126
+    },
+    {
+      "source": "Sāy",
+      "count": 922
+    },
+    {
+      "source": "Divyāv",
+      "count": 898
+    },
+    {
+      "source": "Pañcar",
+      "count": 846
+    },
+    {
+      "source": "Lalit",
+      "count": 659
+    },
+    {
+      "source": "Śaṃk",
+      "count": 583
+    },
+    {
+      "source": "HPariś",
+      "count": 457
+    },
+    {
+      "source": "ĀrṣBr",
+      "count": 455
+    },
+    {
+      "source": "Subh",
+      "count": 453
+    },
+    {
+      "source": "Kāraṇḍ",
+      "count": 447
+    },
+    {
+      "source": "Gobh",
+      "count": 445
+    },
+    {
+      "source": "Kull",
+      "count": 442
+    },
+    {
+      "source": "Up",
+      "count": 439
+    },
+    {
+      "source": "Jātakam",
+      "count": 422
+    },
+    {
+      "source": "Npr",
+      "count": 417
+    },
+    {
+      "source": "Sūryas",
+      "count": 416
+    },
+    {
+      "source": "Siṃhās",
+      "count": 414
+    },
+    {
+      "source": "Bhag",
+      "count": 399
+    },
+    {
+      "source": "Kir",
+      "count": 383
+    },
+    {
+      "source": "GṛŚrS",
+      "count": 370
+    },
+    {
+      "source": "Pañc",
+      "count": 368
+    },
+    {
+      "source": "Kāvyād",
+      "count": 347
+    },
+    {
+      "source": "Mālav",
+      "count": 344
+    },
+    {
+      "source": "Saṃgīt",
+      "count": 334
+    },
+    {
+      "source": "Ratnāv",
+      "count": 332
+    },
+    {
+      "source": "Kālid",
+      "count": 327
+    },
+    {
+      "source": "PārGṛ",
+      "count": 324
+    },
+    {
+      "source": "ŚāṅkhGṛ",
+      "count": 319
+    },
+    {
+      "source": "A",
+      "count": 313
+    },
+    {
+      "source": "Gīt",
+      "count": 311
+    },
+    {
+      "source": "Vedāntas",
+      "count": 306
+    },
+    {
+      "source": "Vcar",
+      "count": 301
+    },
+    {
+      "source": "ŚBr. xiv",
+      "count": 296
+    },
+    {
+      "source": "TĀr",
+      "count": 294
+    },
+    {
+      "source": "Vet",
+      "count": 290
+    },
+    {
+      "source": "Vās",
+      "count": 285
+    },
+    {
+      "source": "Bcar",
+      "count": 280
+    },
+    {
+      "source": "Viṣṇ",
+      "count": 279
+    },
+    {
+      "source": "Jain",
+      "count": 277
+    },
+    {
+      "source": "T",
+      "count": 276
+    },
+    {
+      "source": "ŚāṅkhBr",
+      "count": 272
+    },
+    {
+      "source": "ŚārṅgS",
+      "count": 266
+    },
+    {
+      "source": "Uttarar",
+      "count": 265
+    },
+    {
+      "source": "Vait",
+      "count": 262
+    },
+    {
+      "source": "Nīlak",
+      "count": 262
+    },
+    {
+      "source": "TāṇḍyaBr",
+      "count": 261
+    },
+    {
+      "source": "Siddh",
+      "count": 254
+    },
+    {
+      "source": "PañcavBr",
+      "count": 251
+    },
+    {
+      "source": "ŚārṅgP",
+      "count": 250
+    },
+    {
+      "source": "Kap",
+      "count": 239
+    },
+    {
+      "source": "MaitrUp",
+      "count": 235
+    },
+    {
+      "source": "Āp",
+      "count": 234
+    },
+    {
+      "source": "Śatr",
+      "count": 231
+    },
+    {
+      "source": "Cāṇ",
+      "count": 223
+    },
+    {
+      "source": "Nyāyam",
+      "count": 220
+    },
+    {
+      "source": "RāmatUp",
+      "count": 214
+    },
+    {
+      "source": "TPrāt",
+      "count": 213
+    },
+    {
+      "source": "Dhātup",
+      "count": 210
+    },
+    {
+      "source": "TāṇḍBr",
+      "count": 209
+    },
+    {
+      "source": "Amar",
+      "count": 209
+    },
+    {
+      "source": "BrahmaP",
+      "count": 208
+    },
+    {
+      "source": "VPrāt",
+      "count": 204
+    },
+    {
+      "source": "Baudh",
+      "count": 199
+    },
+    {
+      "source": "Pravar",
+      "count": 199
+    },
+    {
+      "source": "Pañcad",
+      "count": 197
+    },
+    {
+      "source": "GṛS",
+      "count": 196
+    },
+    {
+      "source": "Prasannar",
+      "count": 196
+    },
+    {
+      "source": "Saṃskārak",
+      "count": 188
+    },
+    {
+      "source": "Daśar",
+      "count": 184
+    },
+    {
+      "source": "Mcar",
+      "count": 184
+    },
+    {
+      "source": "Prāt",
+      "count": 181
+    },
+    {
+      "source": "MānGṛ",
+      "count": 180
+    },
+    {
+      "source": "SkandaP",
+      "count": 179
+    },
+    {
+      "source": "Jaim",
+      "count": 176
+    },
+    {
+      "source": "Śivag",
+      "count": 176
+    },
+    {
+      "source": "ĀpGṛ",
+      "count": 170
+    },
+    {
+      "source": "VarBṛ",
+      "count": 168
+    },
+    {
+      "source": "ŚvetUp",
+      "count": 165
+    },
+    {
+      "source": "Mudr",
+      "count": 161
+    },
+    {
+      "source": "Yājñ., Sch",
+      "count": 161
+    },
+    {
+      "source": "MBh. i",
+      "count": 161
+    },
+    {
+      "source": "ṢaḍvBr",
+      "count": 159
+    },
+    {
+      "source": "KaṭhUp",
+      "count": 157
+    },
+    {
+      "source": "Kpr",
+      "count": 157
+    },
+    {
+      "source": "Uṇ",
+      "count": 150
+    },
+    {
+      "source": "PBr",
+      "count": 147
+    },
+    {
+      "source": "Sāṃkhyak",
+      "count": 147
+    },
+    {
+      "source": "SV",
+      "count": 147
+    },
+    {
+      "source": "APrāt",
+      "count": 147
+    },
+    {
+      "source": "Kuval",
+      "count": 143
+    },
+    {
+      "source": "Pratāp",
+      "count": 142
+    },
+    {
+      "source": "BṛĀrUp",
+      "count": 141
+    },
+    {
+      "source": "Śāntiś",
+      "count": 141
+    },
+    {
+      "source": "Veṇīs",
+      "count": 140
+    },
+    {
+      "source": "MBh. iii",
+      "count": 138
+    },
+    {
+      "source": "Nal",
+      "count": 137
+    },
+    {
+      "source": "AgP",
+      "count": 136
+    },
+    {
+      "source": "Ṛtus",
+      "count": 134
+    },
+    {
+      "source": "KāśīKh",
+      "count": 133
+    }
+  ]
+}

@@ -12,6 +12,7 @@ Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskr
 
 - **Paper tour:** read the current atlas argument pages ([Grounded](src/paper/grounded.md) · [Triangulation](src/paper/triangulation.md) · [Appendices](src/paper/appendices.md)).
 - **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md), and [MW-PWG-PWK interoperability hard cases](src/tools/interoperability-hard-cases.md).
+- **MW Quantitative Depth (Phase 1):** [Depth dashboard](src/tools/mw-depth-dashboard.md), [Diachronic layers](src/tools/mw-diachronic-layers.md), [Family depth](src/tools/mw-family-depth.md).
 
 Current URL structure:
 
@@ -75,6 +76,23 @@ The external harness records TEI ODD/RELAX NG and SHACL-engine status in `data/p
 
 ---
 
+## MW Quantitative Depth (Phase 1)
+
+Deterministic synchronic + conservative diachronic metrics for Monier-Williams, generated from `../csl-orig/v02/mw/mw.txt`. No LLM inference.
+
+```bash
+npm run build-mw-depth      # parse mw.txt → src/data/mw/*.json
+npm run validate-mw-depth   # check counts, links, required outputs
+```
+
+- **Counted (observed/derived):** article types (overlapping membership counts, validated against `src/data/article-type-counts.json`), citation density, compound segment depth, type overlaps.
+- **Inferred (flagged):** lexical families (grouped by shared `<k2>` base — no explicit MW derivation link) and diachronic source layers (from the reviewable seed map `src/data/mw-source-layers.json`).
+- **Approximate:** source layers are coarse comparison buckets, **not dates**; unmapped sources fall to `unknown` and surface as a review queue.
+
+Pipeline: `scripts/lib/mw-{parser,classifiers,source-layers,depth-graph}.mjs` → `scripts/build-mw-quantitative-depth.mjs`. See [`docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md`](docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md).
+
+---
+
 ## Documentation
 
 Reader-facing:
@@ -108,6 +126,7 @@ Architecture and planning:
 npm install
 npm run build-coverage
 npm run build-pilot
+npm run build-mw-depth   # MW quantitative depth (Phase 1)
 npm run dev      # starts dev server on http://localhost:3000
 npm run build    # produces dist/ for GitHub Pages
 ```
@@ -129,7 +148,9 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] Full 50-case archival TEI machine review and project ODD/profile validation
 - [x] Full 50-case OntoLex/RDF machine review and project SHACL/profile validation
 - [x] Optional external TEI/SHACL validation harness with strict mode
+- [x] MW Quantitative Depth Phase 1: parser, classifiers, source-layer + family-depth metrics, 3 dashboards
 - [x] Build and link validation
+- [ ] Human review of MW source-layer seed map (unmapped sources → `unknown`)
 - [ ] Human philological review of all 50 TEI/OntoLex cases
 
 ---

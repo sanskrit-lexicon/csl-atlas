@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-29T09:09:24.555Z",
+  "sourcePath": "../csl-orig/v02/mw/mw.txt",
+  "sourceDate": "2026-05-29",
+  "recordCount": 286560,
+  "assumptions": [
+    "compoundSegmentDistribution counts <k2> segments; segment count 1 means no compound marker."
+  ],
+  "warnings": [],
+  "typesPerRecord": [
+    {
+      "value": 1,
+      "count": 207043
+    },
+    {
+      "value": 2,
+      "count": 69788
+    },
+    {
+      "value": 3,
+      "count": 9271
+    },
+    {
+      "value": 4,
+      "count": 456
+    },
+    {
+      "value": 5,
+      "count": 2
+    }
+  ],
+  "compoundSegmentDistribution": [
+    {
+      "value": 1,
+      "count": 104541
+    },
+    {
+      "value": 2,
+      "count": 151316
+    },
+    {
+      "value": 3,
+      "count": 27174
+    },
+    {
+      "value": 4,
+      "count": 2974
+    },
+    {
+      "value": 5,
+      "count": 434
+    },
+    {
+      "value": 6,
+      "count": 95
+    },
+    {
+      "value": 7,
+      "count": 15
+    },
+    {
+      "value": 8,
+      "count": 9
+    },
+    {
+      "value": 9,
+      "count": 1
+    },
+    {
+      "value": 10,
+      "count": 1
+    }
+  ],
+  "citationCountBuckets": {
+    "0": 59814,
+    "1": 180133,
+    "2-3": 39246,
+    "4-7": 5907,
+    "8-15": 977,
+    "16+": 483
+  }
+}

@@ -15,6 +15,8 @@
     "export-tei-stubs": "node scripts/export-tei-stubs.mjs",
     "export-ontolex-stubs": "node scripts/export-ontolex-jsonld-stubs.mjs",
     "build-coverage": "node scripts/build-dictionary-coverage.mjs",
+    "build-mw-depth": "node scripts/build-mw-quantitative-depth.mjs",
+    "validate-mw-depth": "node scripts/validate-mw-depth.mjs",
     "build-pilot": "npm run sample-hard-cases && npm run select-review-cases && npm run build-neutral-model && npm run build-loss-reports && npm run export-tei-stubs && npm run export-ontolex-stubs && npm run validate-pilot && npm run validate-tei-profile && npm run validate-ontolex-profile",
     "validate-pilot": "node scripts/validate-pilot.mjs",
     "validate-tei-profile": "node scripts/validate-tei-profile.mjs",

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-29T09:09:25.039Z",
+  "sourcePath": "../csl-orig/v02/mw/mw.txt",
+  "sourceDate": "2026-05-29",
+  "recordCount": 286560,
+  "assumptions": [
+    "Layers are coarse buckets for comparison, NOT exact dates.",
+    "earliestLayer ignores \"unknown\" unless it is a record's only layer; records with no textual citation are counted as \"none\"."
+  ],
+  "warnings": [
+    "Diachronic layers are derived/inferred; do not cite as dating evidence."
+  ],
+  "layerOrder": [
+    "vedic",
+    "epic",
+    "classical",
+    "puranic",
+    "technical",
+    "lexicographic",
+    "unknown"
+  ],
+  "recordsByEarliestLayer": {
+    "vedic": 27066,
+    "epic": 27172,
+    "classical": 20058,
+    "puranic": 7567,
+    "technical": 16702,
+    "lexicographic": 39223,
+    "unknown": 61024,
+    "none": 87748
+  },
+  "recordsByLayerMembership": {
+    "vedic": 27066,
+    "epic": 29974,
+    "classical": 25910,
+    "puranic": 11316,
+    "technical": 23891,
+    "lexicographic": 39962,
+    "unknown": 78049
+  }
+}

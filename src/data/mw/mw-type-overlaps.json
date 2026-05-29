@@ -1,0 +1,300 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-29T09:09:24.554Z",
+  "sourcePath": "../csl-orig/v02/mw/mw.txt",
+  "sourceDate": "2026-05-29",
+  "recordCount": 286560,
+  "assumptions": [
+    "Overlap counts records sharing both types."
+  ],
+  "warnings": [],
+  "typeTotals": {
+    "root": 750,
+    "noun-m": 19204,
+    "noun-f": 8480,
+    "noun-n": 9918,
+    "adjective-mfn": 12240,
+    "indeclinable": 1929,
+    "compound": 126359,
+    "derived": 72119,
+    "continuation": 9294,
+    "lexicographer-only": 38407,
+    "etymological-ie": 2103,
+    "botanical": 8059,
+    "biographical": 346,
+    "vedic-accented": 47598,
+    "other": 19460
+  },
+  "overlaps": [
+    {
+      "a": "derived",
+      "b": "vedic-accented",
+      "count": 20266
+    },
+    {
+      "a": "compound",
+      "b": "lexicographer-only",
+      "count": 16080
+    },
+    {
+      "a": "compound",
+      "b": "vedic-accented",
+      "count": 13148
+    },
+    {
+      "a": "derived",
+      "b": "lexicographer-only",
+      "count": 11191
+    },
+    {
+      "a": "botanical",
+      "b": "lexicographer-only",
+      "count": 5559
+    },
+    {
+      "a": "lexicographer-only",
+      "b": "vedic-accented",
+      "count": 4692
+    },
+    {
+      "a": "botanical",
+      "b": "compound",
+      "count": 4172
+    },
+    {
+      "a": "continuation",
+      "b": "vedic-accented",
+      "count": 4094
+    },
+    {
+      "a": "lexicographer-only",
+      "b": "noun-m",
+      "count": 3444
+    },
+    {
+      "a": "continuation",
+      "b": "lexicographer-only",
+      "count": 1889
+    },
+    {
+      "a": "adjective-mfn",
+      "b": "vedic-accented",
+      "count": 1842
+    },
+    {
+      "a": "botanical",
+      "b": "derived",
+      "count": 1825
+    },
+    {
+      "a": "noun-m",
+      "b": "vedic-accented",
+      "count": 1821
+    },
+    {
+      "a": "lexicographer-only",
+      "b": "noun-f",
+      "count": 1691
+    },
+    {
+      "a": "lexicographer-only",
+      "b": "noun-n",
+      "count": 1157
+    },
+    {
+      "a": "noun-n",
+      "b": "vedic-accented",
+      "count": 958
+    },
+    {
+      "a": "botanical",
+      "b": "vedic-accented",
+      "count": 828
+    },
+    {
+      "a": "noun-f",
+      "b": "vedic-accented",
+      "count": 806
+    },
+    {
+      "a": "botanical",
+      "b": "noun-m",
+      "count": 650
+    },
+    {
+      "a": "indeclinable",
+      "b": "vedic-accented",
+      "count": 523
+    },
+    {
+      "a": "adjective-mfn",
+      "b": "lexicographer-only",
+      "count": 511
+    },
+    {
+      "a": "botanical",
+      "b": "noun-f",
+      "count": 504
+    },
+    {
+      "a": "derived",
+      "b": "etymological-ie",
+      "count": 440
+    },
+    {
+      "a": "etymological-ie",
+      "b": "vedic-accented",
+      "count": 365
+    },
+    {
+      "a": "etymological-ie",
+      "b": "root",
+      "count": 264
+    },
+    {
+      "a": "botanical",
+      "b": "continuation",
+      "count": 224
+    },
+    {
+      "a": "biographical",
+      "b": "lexicographer-only",
+      "count": 214
+    },
+    {
+      "a": "compound",
+      "b": "etymological-ie",
+      "count": 190
+    },
+    {
+      "a": "botanical",
+      "b": "noun-n",
+      "count": 174
+    },
+    {
+      "a": "biographical",
+      "b": "compound",
+      "count": 154
+    },
+    {
+      "a": "etymological-ie",
+      "b": "noun-m",
+      "count": 100
+    },
+    {
+      "a": "biographical",
+      "b": "derived",
+      "count": 88
+    },
+    {
+      "a": "continuation",
+      "b": "etymological-ie",
+      "count": 55
+    },
+    {
+      "a": "biographical",
+      "b": "vedic-accented",
+      "count": 53
+    },
+    {
+      "a": "biographical",
+      "b": "noun-m",
+      "count": 52
+    },
+    {
+      "a": "etymological-ie",
+      "b": "lexicographer-only",
+      "count": 44
+    },
+    {
+      "a": "etymological-ie",
+      "b": "noun-f",
+      "count": 43
+    },
+    {
+      "a": "indeclinable",
+      "b": "lexicographer-only",
+      "count": 40
+    },
+    {
+      "a": "etymological-ie",
+      "b": "indeclinable",
+      "count": 39
+    },
+    {
+      "a": "etymological-ie",
+      "b": "noun-n",
+      "count": 38
+    },
+    {
+      "a": "lexicographer-only",
+      "b": "root",
+      "count": 26
+    },
+    {
+      "a": "adjective-mfn",
+      "b": "botanical",
+      "count": 24
+    },
+    {
+      "a": "adjective-mfn",
+      "b": "etymological-ie",
+      "count": 22
+    },
+    {
+      "a": "biographical",
+      "b": "continuation",
+      "count": 15
+    },
+    {
+      "a": "biographical",
+      "b": "noun-f",
+      "count": 14
+    },
+    {
+      "a": "botanical",
+      "b": "etymological-ie",
+      "count": 11
+    },
+    {
+      "a": "biographical",
+      "b": "botanical",
+      "count": 6
+    },
+    {
+      "a": "biographical",
+      "b": "noun-n",
+      "count": 5
+    },
+    {
+      "a": "botanical",
+      "b": "indeclinable",
+      "count": 1
+    },
+    {
+      "a": "derived",
+      "b": "root",
+      "count": 1
+    },
+    {
+      "a": "biographical",
+      "b": "indeclinable",
+      "count": 1
+    },
+    {
+      "a": "adjective-mfn",
+      "b": "biographical",
+      "count": 1
+    },
+    {
+      "a": "biographical",
+      "b": "etymological-ie",
+      "count": 1
+    },
+    {
+      "a": "noun-f",
+      "b": "root",
+      "count": 1
+    }
+  ]
+}
