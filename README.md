@@ -13,6 +13,7 @@ Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskr
 - **Paper tour:** read the current atlas argument pages ([Grounded](src/paper/grounded.md) · [Triangulation](src/paper/triangulation.md) · [Appendices](src/paper/appendices.md)).
 - **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md), and [MW-PWG-PWK interoperability hard cases](src/tools/interoperability-hard-cases.md).
 - **MW Quantitative Depth (Phase 1):** [Depth dashboard](src/tools/mw-depth-dashboard.md), [Diachronic layers](src/tools/mw-diachronic-layers.md), [Family depth](src/tools/mw-family-depth.md).
+- **Comparative Dictionary Lab (Phase 2):** [Coverage matrix](src/tools/dictionary-coverage-matrix.md), [Pairwise overlap](src/tools/dictionary-overlap.md), [Gender conflicts](src/tools/dictionary-conflicts.md).
 
 Current URL structure:
 
@@ -93,6 +94,23 @@ Pipeline: `scripts/lib/mw-{parser,classifiers,source-layers,depth-graph}.mjs` �
 
 ---
 
+## Comparative Dictionary Lab (Phase 2)
+
+Deterministic cross-dictionary comparison of MW, AP, PWG, PWK (`pw`), WIL, VCP, SKD, grouped by normalized SLP1 headword. First slice.
+
+```bash
+npm run build-dict-comparison      # index 7 dicts → src/data/dicts/*.json
+npm run validate-dict-comparison
+```
+
+- **Coverage / overlap / intersection / unique (all 7):** distinct-lemma presence, UpSet-style combinations, pairwise Jaccard, all-dictionary core, per-dictionary unique vocabulary.
+- **POS/gender disagreement (5 tagged dicts):** lemmas where MW/AP/PWG/PWK/WIL assert disjoint genders, with source links and an alignment-confidence queue.
+- **Deferred:** sense-depth and citation-apparatus comparison, VCP/SKD prose gender, homonym-split detection, and the interactive per-lemma dossier (needs a lemma-keyed dataset). No `LexemeHub` yet — per plan.
+
+Pipeline: `scripts/lib/dict-{normalize,manifest,parser,align}.mjs` → `scripts/build-dictionary-comparison.mjs`. See [`docs/DICTIONARY_COMPARISON_PLAN.md`](docs/DICTIONARY_COMPARISON_PLAN.md).
+
+---
+
 ## Documentation
 
 Reader-facing:
@@ -126,7 +144,8 @@ Architecture and planning:
 npm install
 npm run build-coverage
 npm run build-pilot
-npm run build-mw-depth   # MW quantitative depth (Phase 1)
+npm run build-mw-depth         # MW quantitative depth (Phase 1)
+npm run build-dict-comparison  # comparative dictionary lab (Phase 2)
 npm run dev      # starts dev server on http://localhost:3000
 npm run build    # produces dist/ for GitHub Pages
 ```
@@ -149,6 +168,8 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] Full 50-case OntoLex/RDF machine review and project SHACL/profile validation
 - [x] Optional external TEI/SHACL validation harness with strict mode
 - [x] MW Quantitative Depth Phase 1: parser, classifiers, source-layer + family-depth metrics, 3 dashboards
+- [x] Comparative Dictionary Lab Phase 2 (first slice): 7-dictionary coverage/overlap/intersection/unique + tagged-dict gender disagreement, 3 pages
+- [ ] Phase 2 follow-ups: sense-depth & citation-apparatus comparison, VCP/SKD prose gender, homonym-split, per-lemma dossier
 - [x] Build and link validation
 - [ ] Human review of MW source-layer seed map (unmapped sources → `unknown`)
 - [ ] Human philological review of all 50 TEI/OntoLex cases

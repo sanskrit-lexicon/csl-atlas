@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-29T09:33:31.508Z",
+  "sourceRoot": "../csl-orig/v02",
+  "dictionaries": [
+    {
+      "code": "mw",
+      "label": "MW",
+      "grammarReliable": true
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "grammarReliable": true
+    },
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "grammarReliable": true
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "grammarReliable": true
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "grammarReliable": true
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "grammarReliable": false
+    },
+    {
+      "code": "skd",
+      "label": "SKD",
+      "grammarReliable": false
+    }
+  ],
+  "assumptions": [
+    "high = every contributing dictionary used the identical raw <k1>; medium = matched only after normalization.",
+    "Only lemmas present in >=2 dictionaries are scored."
+  ],
+  "warnings": [],
+  "distribution": {
+    "high": 174787,
+    "medium": 7
+  },
+  "reviewQueueSample": [
+    {
+      "lemma": "U",
+      "dicts": [
+        "MW",
+        "PWG",
+        "PWK",
+        "WIL",
+        "VCP",
+        "SKD"
+      ],
+      "variants": [
+        "U",
+        "U~"
+      ]
+    },
+    {
+      "lemma": "o",
+      "dicts": [
+        "MW",
+        "AP",
+        "PWG",
+        "PWK",
+        "WIL",
+        "VCP",
+        "SKD"
+      ],
+      "variants": [
+        "o",
+        "o~"
+      ]
+    },
+    {
+      "lemma": "O",
+      "dicts": [
+        "MW",
+        "AP",
+        "PWG",
+        "PWK",
+        "WIL",
+        "VCP",
+        "SKD"
+      ],
+      "variants": [
+        "O",
+        "O~"
+      ]
+    },
+    {
+      "lemma": "kayya",
+      "dicts": [
+        "MW",
+        "PWG",
+        "PWK"
+      ],
+      "variants": [
+        "kayya",
+        "ka~yya"
+      ]
+    },
+    {
+      "lemma": "GrA",
+      "dicts": [
+        "MW",
+        "AP",
+        "PWG",
+        "PWK",
+        "WIL",
+        "VCP",
+        "SKD"
+      ],
+      "variants": [
+        "GrA",
+        "GrA~"
+      ]
+    },
+    {
+      "lemma": "sArisTAKA",
+      "dicts": [
+        "MW",
+        "PWG",
+        "PWK"
+      ],
+      "variants": [
+        "sArisTAKA",
+        "sArisTAKA~"
+      ]
+    },
+    {
+      "lemma": "hU",
+      "dicts": [
+        "MW",
+        "AP",
+        "PWG",
+        "PWK",
+        "WIL",
+        "SKD"
+      ],
+      "variants": [
+        "hU",
+        "hU~"
+      ]
+    }
+  ]
+}
