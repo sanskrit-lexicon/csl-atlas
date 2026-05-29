@@ -17,6 +17,13 @@ import { presentDicts, lemmaConfidence, genderConflict } from "./lib/dict-align.
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
 const SAMPLE = 50;
+// A lemma enters the dossier when it is attested in at least this many of the
+// 7 target dictionaries. Keeps the static dossier dataset compact while
+// covering the well-attested shared vocabulary (full-corpus lookup over all
+// ~300k lemmas would need a search backend — see the comparison plan).
+const DOSSIER_MIN_DICTS = 5;
+const GENDER_TOKENS = new Set(["m", "f", "n", "adj", "ind"]);
+const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
 
 const ORDER = DICTS.map(d => d.code);
 const TAGGED = DICTS.filter(d => d.grammarReliable).map(d => d.code);
@@ -101,6 +108,7 @@ function main() {
   const conflicts = [];
   let conflictCount = 0;
   const lowConfidence = [];
+  const dossier = [];
 
   for (const [normalized, entry] of index) {
     const codes = presentDicts(entry, ORDER);
@@ -136,6 +144,22 @@ function main() {
           variants: [...new Set(codes.flatMap(c => [...entry[c].raws]))]
         });
       }
+    }
+
+    // per-lemma dossier (well-attested vocabulary only). Compact tuple form
+    // [code, records, firstLine, gender] keeps the static dataset small; the
+    // page reconstructs the source href from HREF_BASE + code.
+    if (k >= DOSSIER_MIN_DICTS) {
+      dossier.push({
+        l: normalized,
+        c: k,
+        d: codes.map(code => [
+          code,
+          entry[code].records,
+          entry[code].example.line,
+          [...entry[code].genders].filter(g => GENDER_TOKENS.has(g)).sort().join("")
+        ])
+      });
     }
 
     // gender conflict (tagged dicts)
@@ -256,9 +280,35 @@ function main() {
     )
   );
 
-  // 7. Validation report.
+  // 7. Per-lemma dossier (well-attested vocabulary). Written without
+  // indentation: it is the one large data file and stays a flat compact array.
+  dossier.sort((a, b) => b.c - a.c || a.l.localeCompare(b.l));
+  const dossierPayload = envelope(
+    {
+      minDicts: DOSSIER_MIN_DICTS,
+      hrefBase: HREF_BASE,
+      tupleFields: ["code", "records", "firstLine", "gender"],
+      count: dossier.length,
+      entries: dossier
+    },
+    {
+      assumptions: [
+        `Includes lemmas attested in at least ${DOSSIER_MIN_DICTS} of the ${ORDER.length} target dictionaries.`,
+        "Each dict tuple is [code, records, firstLine, gender]; href = hrefBase + /code/code.txt#L firstLine.",
+        "gender (from <lex>) is empty for VCP/SKD (prose) and for entries without a <lex> tag."
+      ],
+      warnings: [
+        "Lemmas in fewer than the threshold number of dictionaries are omitted; full-corpus lookup needs a search backend (deferred)."
+      ]
+    }
+  );
+  fs.writeFileSync(path.join(OUT_DIR, "lemma-dossier.json"), `${JSON.stringify(dossierPayload)}\n`);
+  written.push(path.relative(process.cwd(), path.join(OUT_DIR, "lemma-dossier.json")));
+
+  // 8. Validation report.
   const report = {
     distinctLemmas,
+    dossierEntries: dossier.length,
     recordsByDict: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], perDictRecords[c]])),
     intersectionAll: intersectionAll.count,
     genderConflicts: conflictCount,
