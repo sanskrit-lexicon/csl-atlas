@@ -58,6 +58,13 @@ The atlas must serve two entry modes:
 
 See `docs/READER_DEVELOPER_CRITIQUE.md` for the current critique of the architecture from both viewpoints.
 
+See `docs/USE_CASES.md` for the full use-case inventory that should guide product scope, implementation phases, review queues, and reader-facing documentation.
+
+Reader-facing entry documentation:
+
+- `docs/DICTIONARY_USER_GUIDE.md` — which dictionary to use and how to read an entry;
+- `docs/EVIDENCE_LABELS.md` — what the certainty labels mean in plain language.
+
 ## Core Principle
 
 Separate the following levels of certainty in all data outputs:
@@ -284,6 +291,12 @@ Purpose:
 - identify dictionary-unique vocabulary;
 - expose alignment confidence and manual review queues.
 
+Detailed plan:
+
+```text
+docs/DICTIONARY_COMPARISON_PLAN.md
+```
+
 Core comparison levels:
 
 | Level | Question |
@@ -308,6 +321,12 @@ Purpose:
 - compare dictionary claims with actual corpus attestations.
 
 Initial corpus should be DCS exports. GRETIL follows after a stable metadata and tokenization strategy exists.
+
+Detailed plan:
+
+```text
+docs/DCS_CORPUS_INGESTION_PLAN.md
+```
 
 Key grammar areas:
 
@@ -373,6 +392,8 @@ Key grammar areas:
 Manual review is part of the design, not an afterthought.
 
 Review reports should be JSON-first and reproducible, following the pattern already used for TEI and OntoLex review reports.
+
+The shared review-report shape and status vocabulary are defined in `docs/REVIEW_REPORTS.md`.
 
 Suggested review statuses:
 

@@ -75,6 +75,23 @@ The external harness records TEI ODD/RELAX NG and SHACL-engine status in `data/p
 
 ---
 
+## Documentation
+
+Reader-facing:
+
+- [Dictionary user guide](docs/DICTIONARY_USER_GUIDE.md) — which dictionary to use and how to read an entry
+- [Evidence labels](docs/EVIDENCE_LABELS.md) — what the certainty labels mean
+
+Architecture and planning:
+
+- [Architecture](ARCHITECTURE.md) · [Use cases](docs/USE_CASES.md) · [Reader/developer critique](docs/READER_DEVELOPER_CRITIQUE.md)
+- [MW Quantitative Depth handoff](docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md) (Phase 1)
+- [Dictionary comparison plan](docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
+- [DCS corpus ingestion plan](docs/DCS_CORPUS_INGESTION_PLAN.md) (Phase 3)
+- [Review reports](docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary
+
+---
+
 ## Tech stack
 
 - [**Observable Framework**](https://observablehq.com/framework) (per [Decision 10](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/VISUALISATIONS.md#decision-10--microsite-stack-observable-framework))
