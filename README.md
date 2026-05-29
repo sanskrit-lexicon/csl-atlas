@@ -14,7 +14,7 @@ Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskr
 - **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md), and [MW-PWG-PWK interoperability hard cases](src/tools/interoperability-hard-cases.md).
 - **MW Quantitative Depth (Phase 1):** [Depth dashboard](src/tools/mw-depth-dashboard.md), [Diachronic layers](src/tools/mw-diachronic-layers.md), [Family depth](src/tools/mw-family-depth.md).
 - **Comparative Dictionary Lab (Phase 2):** [Coverage matrix](src/tools/dictionary-coverage-matrix.md), [Pairwise overlap](src/tools/dictionary-overlap.md), [Gender conflicts](src/tools/dictionary-conflicts.md), [Lemma dossier](src/tools/dictionary-dossier.md).
-- **Review queues:** [Gender conflicts review](src/tools/review-gender-conflicts.md).
+- **Review queues:** [Gender conflicts review](src/tools/review-gender-conflicts.md), [Source-layer review](src/tools/review-source-layers.md).
 
 Current URL structure:
 
@@ -148,7 +148,8 @@ npm run build-coverage
 npm run build-pilot
 npm run build-mw-depth         # MW quantitative depth (Phase 1)
 npm run build-dict-comparison  # comparative dictionary lab (Phase 2)
-npm run build-gender-review    # gender-conflict review queue (review layer)
+npm run build-gender-review        # gender-conflict review queue
+npm run build-source-layer-review  # unknown source-layer review queue
 npm run dev      # starts dev server on http://localhost:3000
 npm run build    # produces dist/ for GitHub Pages
 ```
@@ -173,7 +174,7 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] MW Quantitative Depth Phase 1: parser, classifiers, source-layer + family-depth metrics, 3 dashboards
 - [x] Comparative Dictionary Lab Phase 2 (first slice): 7-dictionary coverage/overlap/intersection/unique + tagged-dict gender disagreement, 4 pages
 - [x] Per-lemma dossier: interactive lookup over ~28.5k lemmas in ≥5 dictionaries
-- [x] Review layer: gender-conflict queue (3,671 schema-conforming reports, human decisions preserved across rebuilds) + review page
+- [x] Review layer: gender-conflict queue (3,671 reports) + unknown-source-layer queue (449 reports), schema-conforming, human decisions preserved across rebuilds, 2 review pages
 - [ ] Phase 2 follow-ups: sense-depth & citation-apparatus comparison, VCP/SKD prose gender, homonym-split, full-corpus lemma lookup (search backend)
 - [x] Build and link validation
 - [ ] Human review of MW source-layer seed map (unmapped sources → `unknown`)
