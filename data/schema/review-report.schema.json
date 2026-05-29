@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Review Report",
+  "description": "Stub schema for atlas review reports. See docs/REVIEW_REPORTS.md for the canonical field and status definitions. Reports overlay machine output with human judgment; they never edit generated source data.",
+  "type": "object",
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "sourcePath": { "type": "string" },
+    "recordCount": { "type": "integer" },
+    "assumptions": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reviewId": { "type": "string" },
+          "queue": {
+            "type": "string",
+            "enum": [
+              "low-confidence-alignment",
+              "pos-gender-conflict",
+              "unknown-source-layer",
+              "corpus-lemma-mismatch",
+              "encoding-ocr",
+              "tei-ontolex-review",
+              "over-broad-family"
+            ]
+          },
+          "subject": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": ["alignment", "entry", "source-abbreviation", "family", "construction", "corpus-lemma"]
+              },
+              "lemma": { "type": ["string", "null"] },
+              "dictionaries": { "type": "array", "items": { "type": "string" } }
+            },
+            "required": ["kind"]
+          },
+          "sourcePointers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "dictionary": { "type": ["string", "null"] },
+                "corpusId": { "type": ["string", "null"] },
+                "L": { "type": ["string", "null"] },
+                "line": { "type": ["integer", "null"] },
+                "href": { "type": ["string", "null"] }
+              }
+            }
+          },
+          "machineValue": {},
+          "evidenceLevel": {
+            "type": "string",
+            "enum": ["observed", "derived", "inferred", "reviewed"]
+          },
+          "reviewStatus": {
+            "type": "string",
+            "enum": ["machine", "needs-review", "reviewed-ok", "reviewed-corrected", "blocked", "deferred"]
+          },
+          "reviewedValue": {},
+          "reviewer": { "type": ["string", "null"] },
+          "reviewedAt": { "type": ["string", "null"] },
+          "note": { "type": "string" }
+        },
+        "required": ["reviewId", "queue", "subject", "sourcePointers", "machineValue", "evidenceLevel", "reviewStatus"]
+      }
+    }
+  },
+  "required": ["items"]
+}
