@@ -1,0 +1,141 @@
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix lexicog: <http://www.w3.org/ns/lemon/lexicog#> .
+@prefix decomp: <http://www.w3.org/ns/lemon/decomp#> .
+@prefix frac: <http://www.w3.org/ns/lemon/frac#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix csl: <https://sanskrit-lexicon.github.io/csl-atlas/ns#> .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> a ontolex:LexicalEntry, lexicog:Entry ;
+  ontolex:canonicalForm <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#form-canonical> ;
+  csl:caseId "mw-pwg-pwk:dURASa" ;
+  csl:key "dURASa" ;
+  csl:entryType "compound" ;
+  csl:profileVersion "ontolex-frac-profile-v0.1" ;
+  csl:reviewStatus "full-50-machine-review" ;
+  csl:validationScope "full-50-ontolex-shacl-profile" ;
+  csl:phenomenon "compound" ;
+  csl:phenomenon "tri-dict" ;
+  csl:phenomenon "pwg-rich" ;
+  csl:phenomenon "pwk-abridged" ;
+  csl:phenomenon "mw-uncited-pwg-cited" ;
+  csl:phenomenon "homophone" ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-mw> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwk> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-1> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-2> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-3> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-4> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-5> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-6> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-7> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-8> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-9> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwk-1> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwk-2> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwk-3> .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#form-canonical> a ontolex:Form ;
+  ontolex:writtenRep "dURASa"@sa-Latn-x-SLP1 .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-mw> a csl:SourceRecord ;
+  dct:source "Monier-Williams 1899" ;
+  csl:dictionary "mw" ;
+  csl:recordNumber "94703" ;
+  csl:lineNumber "317837" ;
+  csl:pageColumn "488,2" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> a csl:SourceRecord ;
+  dct:source "Boehtlingk-Roth PWG" ;
+  csl:dictionary "pwg" ;
+  csl:recordNumber "34090" ;
+  csl:lineNumber "331678" ;
+  csl:pageColumn "3-0716" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwk> a csl:SourceRecord ;
+  dct:source "Boehtlingk PWK" ;
+  csl:dictionary "pwk" ;
+  csl:recordNumber "207444" ;
+  csl:lineNumber "591667" ;
+  csl:pageColumn "5-256-b" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-1> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "ṚV. PRĀT. 5,24." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-2> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "VS. PRĀT. 3,42." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-3> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "P. 6,3,109" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-4> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "ṚV. 6,27,8." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-5> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "9,63,11." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-6> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "KĀTY. ŚR. 22,8,26." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-7> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "ŚĀṄKH. ŚR. 14,32,3" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-8> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "MAŚ." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwg-9> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "Verz. d. B. H. 72 (IV,7)" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwk-1> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "ṚV. 1,176,4" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwk> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwk-2> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "7,32,7" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwk> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#attestation-pwk-3> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  frac:evidence "AUFRECHT" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#record-pwk> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa#decomposition> a decomp:ComponentList ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdURASa> ;
+  csl:modelingNote "Machine segmentation exported for review." .
+

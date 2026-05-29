@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-Asecana">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case Asecana</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>continuation</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-Asecana-entry" type="continuation" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AAsecana">
+    <form type="continuation">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">Asecana</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-Asecana-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <xr xml:id="mw-pwg-pwk-Asecana-continuation-relation" type="adjacency-continuation-parent" target="#e-1A"><ref>MW e=1A</ref></xr>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-Asecana-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-Asecana-record-pwg">
+        <abbr>KĀTY. ŚR. 9,5,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Asecana-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-Asecana-record-pwg">
+        <abbr>6,2.</abbr>
+        <ref type="inherited-siglum">KĀTY. ŚR. 9,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Asecana-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-Asecana-record-pwg">
+        <abbr>15,9,4.</abbr>
+        <ref type="inherited-siglum">KĀTY. ŚR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Asecana-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-Asecana-record-pwg">
+        <abbr>25,12,12.</abbr>
+        <ref type="inherited-siglum">KĀTY. ŚR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Asecana-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-Asecana-record-pwg">
+        <abbr>ṚV. 1,162,13.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Asecana-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-Asecana-record-pwg">
+        <abbr>ŚAT. BR. 2,1,4,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Asecana-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-Asecana-record-pwg">
+        <abbr>KĀTY. ŚR. 4,8,5.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-Asecana-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">28084.1</idno>
+        <idno type="line">99292</idno>
+        <idno type="pc">161,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;28084.1&lt;pc&gt;161,1&lt;k1&gt;Asecana&lt;k2&gt;Asecana&lt;e&gt;1A
+¦ (for &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;A-secana&lt;/s&gt; See &lt;s&gt;A-√ sic&lt;/s&gt;.)&lt;info lex=&quot;inh&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Asecana-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">9785</idno>
+        <idno type="line">84349</idno>
+        <idno type="pc">1-0740</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;9785&lt;pc&gt;1-0740&lt;k1&gt;Asecana&lt;k2&gt;Ase/cana&lt;h&gt;1
+1. {#Ase/cana#}¦ (von {#sic#} mit {#A#}) &lt;lex&gt;n.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%das Aufgiessen, Eingiessen%}
+&lt;ls&gt;KĀTY. ŚR. 9,5,4.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 9,&quot;&gt;6,2.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;15,9,4.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;25,12,12.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%der Ort des Aufgiessens, Behälter von Flüssigkeiten%}: {#yA pAtrA^Ri yU\zRa A\seca^nAni#}
+&lt;ls&gt;ṚV. 1,162,13.&lt;/ls&gt; {#tasya sarpirAsecanaM kftvA#}
+&lt;ls&gt;ŚAT. BR. 2,1,4,5.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 4,8,5.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Asecana-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">16419</idno>
+        <idno type="line">62330</idno>
+        <idno type="pc">1-195-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;16419&lt;pc&gt;1-195-a&lt;k1&gt;Asecana&lt;k2&gt;Ase/cana
+{#Ase/cana#}¦ &lt;lex&gt;n.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%das Aufgiessen, Eingiessen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%Behälter für Flüssigkeiten%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

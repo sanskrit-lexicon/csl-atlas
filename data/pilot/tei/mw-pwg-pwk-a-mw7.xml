@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-a-mw7">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case a</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Selected for the first 15-case validated TEI profile slice.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-a-mw7-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3Aa-mw7">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">a</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-a-mw7-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-a-mw7-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>P. 2,2,6.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>AK. 3,5,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>TRIK. 3,3,463.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>464.</abbr>
+        <ref type="inherited-siglum">TRIK. 3,3,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>H. 1539.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>an. 7,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>MED. avy . 2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>P. 6,2,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>116.</abbr>
+        <ref type="inherited-siglum">P. 6,2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>155</abbr>
+        <ref type="inherited-siglum">P. 6,2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>161.</abbr>
+        <ref type="inherited-siglum">P. 6,2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>172</abbr>
+        <ref type="inherited-siglum">P. 6,2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>174.</abbr>
+        <ref type="inherited-siglum">P. 6,2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>AUFR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>P. 5,1,121.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>7,3,30.</abbr>
+        <ref type="inherited-siglum">P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>31</abbr>
+        <ref type="inherited-siglum">P. 7,3,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>P. 5,1,119.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>BHAG. 2,47.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>YĀJÑ. 1,144.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>P. 3,3,112</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>R. 1,2,32.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>BHAG. 17,22.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>BṚH. ĀR. UP. 4,3,22.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>CHĀND. UP. 4,4,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>M. 7,85.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>PAT.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>P. 1,1,43.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>TRIK.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>MED.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>P. 1,2,69.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>N. 26,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>YĀJÑ. 1,140.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>CHĀND. UP. 4,4,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>P. 6,2,159.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>P. 5,4,71.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>72.</abbr>
+        <ref type="inherited-siglum">P. 5,4,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>VOP. 6,90.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>TRIK.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwg">
+        <abbr>VS. 2,27.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwk">
+        <abbr>BHĀG. P.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-a-mw7-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-a-mw7-record-pwk">
+        <abbr>ŚIŚ. 15,33</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-a-mw7-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">7</idno>
+        <idno type="line">46</idno>
+        <idno type="pc">1,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7&lt;pc&gt;1,1&lt;k1&gt;a&lt;k2&gt;a&lt;h&gt;6&lt;e&gt;1
+&lt;hom&gt;6.&lt;/hom&gt; &lt;s&gt;a&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; &lt;ab&gt;N.&lt;/ab&gt; of &lt;s1&gt;Viṣṇu&lt;/s1&gt;, &lt;ls&gt;L.&lt;/ls&gt; (especially as the first of the three sounds in the sacred syllable &lt;s&gt;om&lt;/s&gt;). &lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-a-mw7-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">3</idno>
+        <idno type="line">21</idno>
+        <idno type="pc">1-0001</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;3&lt;pc&gt;1-0001&lt;k1&gt;a&lt;k2&gt;a&lt;h&gt;3
+3. {#a#}¦ vor Consonanten und {#an#} vor Vocalen (&lt;ab&gt;vergl.&lt;/ab&gt; jedoch {#afRin#}). Eine negirende Partikel, die wie das griech.
+&lt;lang n=&quot;greek&quot;&gt;ἀ, ἀν&lt;/lang&gt; &lt;ab&gt;priv.&lt;/ab&gt;, das lat. {%in%} und deutsche {%un%} nur in Verbindung mit andern Worten erscheint,
+&lt;ls&gt;P. 2,2,6.&lt;/ls&gt;
+&lt;ls&gt;AK. 3,5,1.&lt;/ls&gt;
+&lt;ls&gt;TRIK. 3,3,463.&lt;/ls&gt; &lt;ls n=&quot;TRIK. 3,3,&quot;&gt;464.&lt;/ls&gt;
+&lt;ls&gt;H. 1539.&lt;/ls&gt;
+&lt;ls&gt;an. 7,1.&lt;/ls&gt;
+&lt;ls&gt;MED. &lt;is&gt;avy&lt;/is&gt;. 2.&lt;/ls&gt; Ueber den Accent solcher &lt;ab&gt;zusammenges.&lt;/ab&gt; Wörter &lt;ab&gt;s.&lt;/ab&gt;
+&lt;ls&gt;P. 6,2,2.&lt;/ls&gt; &lt;ls n=&quot;P. 6,2,&quot;&gt;116.&lt;/ls&gt; &lt;ls n=&quot;P. 6,2,&quot;&gt;155&lt;/ls&gt;-&lt;ls n=&quot;P. 6,2,&quot;&gt;161.&lt;/ls&gt; &lt;ls n=&quot;P. 6,2,&quot;&gt;172&lt;/ls&gt;-&lt;ls n=&quot;P. 6,2,&quot;&gt;174.&lt;/ls&gt;
+&lt;ls&gt;AUFR.&lt;/ls&gt; {%De accentu &lt;ab&gt;comp.&lt;/ab&gt;%} § 35. 36. 40. 44,6. 127-132; über die Bildung von Derivaten
+&lt;ls&gt;P. 5,1,121.&lt;/ls&gt; &lt;ls n=&quot;P.&quot;&gt;7,3,30.&lt;/ls&gt; &lt;ls n=&quot;P. 7,3,&quot;&gt;31&lt;/ls&gt;; über den Accent derselben &lt;is&gt;Vārtt&lt;/is&gt;. 7-9. zu &lt;ls&gt;P. 5,1,119.&lt;/ls&gt;
+Wird verbunden:
+&lt;div n=&quot;1&quot;&gt; 1) mit Substantiven aller Art:
+&lt;div n=&quot;2&quot;&gt; a) der nachfolgende Begriff wird einfach negirt: {#akarman#} {%das Nichthandeln%}
+&lt;ls&gt;BHAG. 2,47.&lt;/ls&gt; {#tryahamanaDyAyaH#} {%während dreier Tage kein Lesen%}
+&lt;ls&gt;YĀJÑ. 1,144.&lt;/ls&gt; {#ajIvaniste BUyAt#} {%Nichtleben sei dir, mögest du sterben%}
+&lt;ls&gt;P. 3,3,112&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#akAraRAt#} {%ohne Grund%}
+&lt;ls&gt;R. 1,2,32.&lt;/ls&gt; {#adeSakAle#} {%am unrechten Orte und zu unrechter Zeit%}
+&lt;ls&gt;BHAG. 17,22.&lt;/ls&gt; {#atra pitApitA Bavati mAtAmAtA lokA alokA devA adevA vedA avedAH#}
+&lt;ls&gt;BṚH. ĀR. UP. 4,3,22.&lt;/ls&gt; {#abrAhmaRa#} {%ein Nicht-Brahmane%}
+&lt;ls&gt;CHĀND. UP. 4,4,5.&lt;/ls&gt;
+&lt;ls&gt;M. 7,85.&lt;/ls&gt; {#anapuMsakena#} {%mit einem Worte, das kein Neutrum ist%}
+&lt;F&gt;*Mit Unrecht nimmt
+&lt;ls&gt;PAT.&lt;/ls&gt; an {#anapuMsakasya#}
+&lt;ls&gt;P. 1,1,43.&lt;/ls&gt; Anstoss. Er löst dasselbe in {#na Bavati napuMsakasya#} auf und ähnliche Auflösungen mögen
+&lt;ls&gt;TRIK.&lt;/ls&gt; und &lt;ls&gt;MED.&lt;/ls&gt; veranlasst haben, dem &lt;ab&gt;neg.&lt;/ab&gt; {#a#} die Bedeutung von {#nizeDa#} und {#pratizeDa#} zuzutheilen.&lt;/F&gt;
+&lt;ls&gt;P. 1,2,69.&lt;/ls&gt; {#devanena #}
+[Page1-0002]
+{# mama prItirna BavatyasuhfdgaREH#} {%ich habe keine Freude am Spiel mit Nicht-Freunden%}
+&lt;ls&gt;N. 26,14.&lt;/ls&gt; {#nAdvAreRa viSet#} {%er trete nicht anders als durch die Thür ein%}
+&lt;ls&gt;YĀJÑ. 1,140.&lt;/ls&gt; {#nAsahasreRAvarteya#} {%ich möchte nicht mit einem Nicht-Tausend heimkehren%}, &lt;ab&gt;d. h.&lt;/ab&gt; {%ich möchte nicht eher heimkehren, bis ein Tausend voll ist%}
+&lt;ls&gt;CHĀND. UP. 4,4,5.&lt;/ls&gt; Vor einem &lt;ab&gt;Nomen pr.&lt;/ab&gt; oder &lt;ab&gt;Appell.&lt;/ab&gt; ({#saMjYA#}) im Vorwurf, mit dem Accent auf der letzten Silbe
+&lt;ls&gt;P. 6,2,159.&lt;/ls&gt; {#adevadatta/H#} {%wie ein Nicht%}-&lt;is&gt;Devadatta&lt;/is&gt;, {%des%} &lt;ab&gt;D.&lt;/ab&gt; {%unwürdig%}
+&lt;ab&gt;Sch.&lt;/ab&gt; In der Regel behält das Substantiv die unveränderte Gestalt bei
+&lt;ls&gt;P. 5,4,71.&lt;/ls&gt; {#arAjA#} (sonst am Ende eines &lt;ab&gt;Comp.&lt;/ab&gt; — {#rAjas), asaKA#} (sonst — {#saKas#}), ({#agOs#}) (sonst — {#gavas#})
+&lt;ab&gt;Sch.&lt;/ab&gt; Ausnahmen: &lt;ab&gt;ebend.&lt;/ab&gt; &lt;ls n=&quot;P. 5,4,&quot;&gt;72.&lt;/ls&gt; &lt;ls&gt;VOP. 6,90.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— b) die Identität des nachfolgenden Begriffs mit einem andern Begriff im Satze wird negirt. Durch ein solches einfaches Negiren der Identität wird indessen auf die Aehnlichkeit der beiden Begriffe in einer im Satze näher angegebenen Beziehung hingewiesen. Das Compositum erscheint als Apposition eines andern Nominalbegriffs, der mit diesem verglichen wird. Diese Bedeutung von {#a#}, die an den vedischen Gebrauch der Negation {#na#} erinnert, finden wir im
+&lt;ls&gt;TRIK.&lt;/ls&gt; ({#naY sAdfSye#}) erwähnt, vermögen aber dieselbe nur durch ein
+&lt;F&gt;{#asTUri#}
+&lt;ls&gt;VS. 2,27.&lt;/ls&gt; gehört nicht, wie
+&lt;ls&gt;WEBER&lt;/ls&gt; in &lt;ls&gt;Ind. St. I,339, N.&lt;/ls&gt; anzunehmen geneigt wäre, hierher. Der Scholiast erklärt es durch {#asTUrIva#} und nicht durch {#sTUrIva#} .&lt;/F&gt; Beispiel zu belegen: {#brahmEva — kurUnaSvABirakzati#} {%Br. beschützt die Vollbringer von Werken%} ({#kurUn = kartFn#}
+&lt;ab&gt;Sch.&lt;/ab&gt;) {%wie ein Hund%} (&lt;is&gt;Śaṃkar&lt;/is&gt;. fasst {#aSvA#} als {%Stute%} und ergänzt {#yaTA#})
+&lt;ls&gt;CHĀND. UP. 4,17,10.&lt;/ls&gt; &lt;ab&gt;vgl.&lt;/ab&gt; {#anikzu#} {%eine Art Zuckerrohr%} ({#ikzu#}), das auch den Namen {#ikzutulyA#} führt.
+&lt;div n=&quot;2&quot;&gt;— c) der nachfolgende Begriff wird an einem andern Begriff negirt. Das Compositum bildet ein Adjectiv des Nichtbesitzes, das wie ein anderes Adjectiv in ein Appellativ oder ein &lt;ab&gt;Nomen pr.&lt;/ab&gt; übergehen kann; &lt;is&gt;Vārtt&lt;/is&gt;. 6. zu &lt;ls&gt;P. 2,2,24.&lt;/ls&gt;
+{#akardama#} {%sumpflos%}
+&lt;ls&gt;R. 1,2,5.&lt;/ls&gt; {#asveda#} {%schweisslos%}
+&lt;ls&gt;N. 5,23.&lt;/ls&gt; {#anaNga#} {%gliederlos, der Liebesgott.%}
+[Page1-0003]
+Bezeichnet das Substantiv einen Theil des Körpers, so geht das &lt;ab&gt;Fem.&lt;/ab&gt; auf {#A#} aus,
+&lt;ls&gt;P. 4,1,57.&lt;/ls&gt; ({#akeSA#} {%haarlos%}, &lt;ab&gt;Sch.&lt;/ab&gt;). Der Ton ruht auf der letzten Silbe
+&lt;ls&gt;P. 6,2,172.&lt;/ls&gt; In den Veden vielfache Ausnahmen, ohne dass eine bestimmte Regel wahrzunehmen wäre. Vor dem Affix {#ka (abrahmabanDU/ka, avrI/hika)#} eine abweichende Betonung,
+&lt;ls&gt;P. 6,2,173.&lt;/ls&gt; &lt;ls n=&quot;P. 6,2,&quot;&gt;174.&lt;/ls&gt; Die indischen Lexicographen geben der Negation auch die Bedeutung von wenig ({#IzadarTe#}
+&lt;ls&gt;TRIK.&lt;/ls&gt; {#svalpArTe#}
+&lt;ls&gt;MED.&lt;/ls&gt; &lt;ls&gt;H. an.&lt;/ls&gt;), weil sie, wie auch in andern Sprachen, bisweilen in übertreibender Weise gebraucht wird. So umschreibt &lt;ab&gt;z. B.&lt;/ab&gt;
+&lt;ls&gt;ŚKDR.&lt;/ls&gt; {#akeSa#} durch
+&lt;div n=&quot;1&quot;&gt; 1) {#keSarahita#} {%haarlos%},
+&lt;div n=&quot;1&quot;&gt; 2) {#alpakeSayukta#} {%mit wenig Haar versehen%},
+&lt;div n=&quot;1&quot;&gt; 3) {#apraSastakeSaviSizwa#} {%nicht durch schönes Haar ausgezeichnet.%}
+&lt;div n=&quot;1&quot;&gt;— 2) mit Adjectiven aller Art: {#akrUra#} {%nicht rauh%}
+&lt;ls&gt;M. 2,33.&lt;/ls&gt; {#atEjasa#} {%nicht von Metall%}
+&lt;ls&gt;M. 6,53.&lt;/ls&gt; {#ahastABaraRopeta#} {%nicht mit Handschmuck versehen%}
+&lt;ls&gt;R. 1,6,9.&lt;/ls&gt; {#a/tIkzRa#} oder {#atIkzRa/, a/Suci#} oder {#aSuci/#}; dieselbe doppelte Betonung haben die &lt;ab&gt;Nomina ag.&lt;/ab&gt; auf {#tar#} mit dem Accent auf der ersten Silbe,
+&lt;ls&gt;P. 6,2,161.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; über die Betonung noch
+&lt;ls&gt;P. 6,2,155&lt;/ls&gt; — &lt;ls n=&quot;P. 6,2,&quot;&gt;158.&lt;/ls&gt; &lt;ls n=&quot;P. 6,2,&quot;&gt;160.&lt;/ls&gt; Bisweilen verlieren solche Composita ganz die ihnen ursprünglich zukommende Unbestimmtheit des Begriffs, indem durch das Negiren eines bestimmten Begriffes der gerade entgegengesetzte Begriff gemeint wird; so bedeutet &lt;ab&gt;z. B.&lt;/ab&gt; {#asita#} {%nicht weiss%} geradezu {%schwarz.%} Zwei Negationen bejahen: {#anamitaMpaca = mitaMpaca, anasUri#}
+&lt;ls&gt;CHĀND. UP. 4,3,7.&lt;/ls&gt; = {#sUri#} .
+&lt;div n=&quot;1&quot;&gt;— 3) mit verschiedenen Pronominibus: {#asas#} {%nicht er%}, {#anezas#} {%nicht dieser%}
+&lt;ls&gt;P. 6,1,132.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#akasmAt, akiMcana, akutoBaya, akutrA, akuDryaYc#} .
+&lt;div n=&quot;1&quot;&gt;— 4) mit Adverbien: {#amfzA#} {%in Wahrheit%}
+&lt;ls&gt;BṚH. ĀR. UP. 3,9,28.&lt;/ls&gt; {#asakft#} {%nicht einmal, öfters.%}
+&lt;div n=&quot;1&quot;&gt;— 5) mit Participien aller Art, mit dem Gerundivum und mit dem Infinitiv: {#mAmapaSyan#}
+&lt;ls&gt;N. 11,12.&lt;/ls&gt; {#kiM nu me syAdidamakurvataH#} {%was würde wohl mit mir geschehen, wenn ich dieses nicht thäte%}
+&lt;ls&gt;N. 10,10.&lt;/ls&gt; {#a/nanna#} oder {#ananna/#}
+&lt;ls&gt;P. 6,2,161.&lt;/ls&gt; Das &lt;ab&gt;Partic.&lt;/ab&gt; &lt;ab&gt;praet.&lt;/ab&gt; &lt;ab&gt;pass.&lt;/ab&gt; verbindet sich mit der verneinten Form desselben &lt;ab&gt;Partic.&lt;/ab&gt; sehr häufig zu einem Compositum,
+&lt;ls&gt;P. 2,1,60.&lt;/ls&gt; ({#kftAkftam, BuktABuktam, aSitAnaSitena jIvati, klizwAkliSitena vartate#}
+&lt;ab&gt;Sch.&lt;/ab&gt;) {#akartavya/, akaraRIya/#}
+&lt;ls&gt;P. 6,2,160.&lt;/ls&gt; {#a/datvA#}
+&lt;ls&gt;AV. 12,5,19.&lt;/ls&gt; {#anavApya#}
+&lt;ls&gt;VIŚV. 8,17.&lt;/ls&gt; {#anaSituM daDre#}
+&lt;ls&gt;CHĀND. UP. 4,10,3.&lt;/ls&gt; {#nASakattIvramAyAsamakartum#}
+&lt;ls&gt;DAŚ. 2,19.&lt;/ls&gt; {#veti Sakyamavaktum#}
+&lt;ls&gt;PAT.&lt;/ls&gt; zu &lt;ls&gt;P. 7,3,70.&lt;/ls&gt; {#anyataracCakyamakartum#} &lt;ab&gt;id.&lt;/ab&gt; zu &lt;ls n=&quot;P.&quot;&gt;1,1,62.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 6) mit einem Verbum finitum: {#apacasi tvaM jAlma#} {%du kochst nicht%} (im Vorwurf), {%Narr!%} &lt;is&gt;Vārtt&lt;/is&gt;. zu &lt;ls&gt;P. 6,3,73.&lt;/ls&gt;
+— Man hat die &lt;ab&gt;neg.&lt;/ab&gt; Partikel {#a#} mit dem im vorigen Artikel besprochenen Pronominalstamm der 3ten Person identificirt; die indischen Grammatiker dagegen halten {#a#} für eine Verstümmelung von {#na (naY)#}; &lt;ab&gt;s.&lt;/ab&gt;
+&lt;ls&gt;P. 6,3,73&lt;/ls&gt; — &lt;ls n=&quot;P. 6,3,&quot;&gt;77.&lt;/ls&gt; &lt;ls&gt;VOP. 6,9.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-a-mw7-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">2</idno>
+        <idno type="line">4</idno>
+        <idno type="pc">1-001-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;2&lt;pc&gt;1-001-a&lt;k1&gt;a&lt;k2&gt;a˚&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; {#a˚#} vor Consonanten, {#an˚#} vor Vocalen¦ = &lt;gk&gt;ἀ, ἀν&lt;/gk&gt; &lt;ab&gt;priv.&lt;/ab&gt; {#abrAhmaRa#} {%kein Brahman,%} {#anaDyAya#} {%kein Lesen,%} {#asveda#} {%schweisslos,%} {#anaNga#} {%körperlos,%} {#aSuci#} {%unrein,%} {#atarha#} {%unwürdig,%} {#akftvA#} {%nicht gethan habend,%} {#anarcitum#} (selten) {%nicht ehren,%} {#aspfhayanti#} (&lt;ls&gt;BHĀG. P.&lt;/ls&gt; &lt;ls&gt;ŚIŚ. 15,33&lt;/ls&gt;) {%sie begehren nicht%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">validated-slice</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

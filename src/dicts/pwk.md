@@ -8,24 +8,24 @@ title: PWK — Böhtlingk Kürzeres PW (1879–1889)
 
 ## 1. Overview
 
-[Otto von Böhtlingk](https://en.wikipedia.org/wiki/Otto_von_B%C3%B6htlingk)'s own one-volume abridgement of PWG, published St. Petersburg 1879–1889 in seven slim *Lieferungen*. Where PWG (1855–1875) ran to seven folio volumes and 570,817 source citations, PWK condenses the same lexical material into a single volume by **dropping nearly all of PWG's indigenous-kosha apparatus**: the top PWG sigla `ŚKDR.` (20,109×), `MED.` (7,176×), and `H. an.` (6,619×) all collapse to zero in PWK. The result is a dictionary with *more headwords than PWG* (170,556 vs 123,366 — Böhtlingk added new material in 14 years of intervening scholarship) but *fewer citations per headword* (0.51 vs PWG's 4.63 — an order-of-magnitude reduction). PWK is therefore the **missing link** in the European-Sanskrit-lexicography lineage: the editorial moves that MW 1899 would complete (collapse named-kosha sigla, compact into a single volume) are first attempted by PWG's own editor, here.
+[Otto von Böhtlingk](https://en.wikipedia.org/wiki/Otto_von_B%C3%B6htlingk)'s own shorter counterpart to PWG, published St. Petersburg 1879–1889 in seven slim *Lieferungen* / volumes. Where PWG (1855–1875) ran to seven folio volumes and 570,817 source citations, PWK condenses the same lexical material into a smaller seven-part reference by **dropping nearly all of PWG's indigenous-kosha apparatus**: the top PWG sigla `ŚKDR.` (20,109×), `MED.` (7,176×), and `H. an.` (6,619×) all collapse to zero in PWK. The result is a dictionary with *more headwords than PWG* (170,556 vs 123,366 — Böhtlingk added new material in 14 years of intervening scholarship) but *fewer citations per headword* (0.51 vs PWG's 4.63 — an order-of-magnitude reduction). PWK is therefore the **missing link** in the European-Sanskrit-lexicography lineage: the editorial moves that MW 1899 would complete (collapse named-kosha sigla, compact the citation apparatus) are first attempted by PWG's own editor, here.
 
 | | |
 |---|---|
 | **Records** | 170,556 |
-| **Volumes** | 1 (single-volume) |
+| **Volumes** | 7 (seven *Lieferungen* / volumes; compact PWK, not one-volume) |
 | **Year** | 1879–1889 |
 | **Editor** | Otto von Böhtlingk (without Roth) |
 | **Publisher** | Kaiserliche Akademie der Wissenschaften, St Petersburg |
 | **Source language** | Sanskrit |
 | **Target language** | German |
-| **Genre** | Structured bilingual scholarly dictionary (single-volume reduction) |
+| **Genre** | Structured bilingual scholarly dictionary (compact seven-part reduction) |
 | **`<ls>` citations total** | 86,750 |
 | **`<ls>` citations/record** | 0.51 (vs PWG 4.63 — 9× sparser) |
 | **`<ls>L.</ls>` hedges** | 0 (but typographic `*` prefix used as hedge — see §3) |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/PWK](https://github.com/sanskrit-lexicon/PWK) |
-| **Source file** | [`csl-orig/v02/pwk/pwk.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwk/pwk.txt) |
+| **Source file** | [`csl-orig/v02/pw/pw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt) |
 
 ## 2. Profile table (5 primary types × profile)
 
@@ -40,7 +40,7 @@ Per [PAPER.md §5](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers
 | Indeclinable | 87 | 0.05 % | 21.8 % | 0.0 % | 3.22 |
 | Other | 37,023 | 21.7 % | 22.7 % | 11.2 % | 2.10 |
 
-**Citation profile spread: 7.7 pts** — between PWG's 0.4 (uniform) and MW's 11.3 (most selective). PWK is the **single-volume midpoint** of the type-citation differentiation effect: dropping from PWG's near-uniform 98 % citation rate to ~40 % across most types, with adjectives slightly favoured (45.2 %) and noun-m slightly disfavoured (37.6 %).
+**Citation profile spread: 7.7 pts** — between PWG's 0.4 (uniform) and MW's 11.3 (most selective). PWK is the **compact-Petersburg midpoint** of the type-citation differentiation effect: dropping from PWG's near-uniform 98 % citation rate to ~40 % across most types, with adjectives slightly favoured (45.2 %) and noun-m slightly disfavoured (37.6 %).
 
 Block-presence by name (cross-dict-common subset):
 
@@ -104,7 +104,7 @@ PWK has 0 tagged `<ls>L.</ls>` instances but does use a typographic asterisk `*`
 
 ## 5. Lineage statement
 
-PWK occupies the **abridgement node** in the European-Sanskrit-lexicography lineage. It is **derivative-by-design**: Böhtlingk's stated intention was to produce a single-volume working reference for scholars who could not afford or carry the seven-volume PWG. The abridgement strategy — keep PWG's lemma set, drop most of PWG's citation apparatus, expand selectively where new scholarship demanded — is what MW 1899 would later adopt for English-language users. PWK predates MW 1899 by 10–20 years and demonstrates that the *editorial moves* MW would make were already on Böhtlingk's mind a decade earlier.
+PWK occupies the **abridgement node** in the European-Sanskrit-lexicography lineage. It is **derivative-by-design**: Böhtlingk's stated intention was to produce a handier working reference for scholars who could not afford or carry the seven-volume PWG. The abridgement strategy — keep PWG's lemma set, drop most of PWG's citation apparatus, expand selectively where new scholarship demanded — is what MW 1899 would later adapt for English-language users. PWK predates MW 1899 by 10–20 years and demonstrates that the *editorial moves* MW would make were already on Böhtlingk's mind a decade earlier.
 
 Full lineage in [PWK/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/PWK/blob/docs-pass/DICT_PROFILE.md).
 
@@ -113,7 +113,7 @@ Full lineage in [PWK/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/PWK/bl
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
 | **← prior: [BEN](ben)** | Both 19th-century works contemporary with PWG | BEN is small (5,186 records), IE-comparative, single-author English; PWK is large (170,556), single-author German, abridgement-by-design; BEN has 14,708 tagged `<ls>` (no hedge), PWK has 86,750 tagged `<ls>` (no hedge but typographic `*`) |
-| **next →: [AP](ap)** | Both single-volume; both have moderate `<ls>` density (PWK 0.51, AP 0.69) | AP is 20th-century English practical (1957); PWK is 19th-century German scholarly (1879–89); AP has 1× `<ls>L.</ls>`, PWK has 0 (typographic `*` only); AP type-citation spread 15.2 vs PWK 7.7 (AP more selective) |
+| **next →: [AP](ap)** | Both are working-reference reductions with moderate `<ls>` density (PWK 0.51, AP 0.69) | AP is 20th-century English practical (1957); PWK is 19th-century German scholarly (1879–89); AP has 1× `<ls>L.</ls>`, PWK has 0 (typographic `*` only); AP type-citation spread 15.2 vs PWK 7.7 (AP more selective) |
 
 ## 7. Decisions log
 
@@ -126,10 +126,9 @@ Full lineage in [PWK/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/PWK/bl
 ## 8. Data dictionary + reproducibility manifest
 
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/PWK/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory
-- **Source file**: [`csl-orig/v02/pwk/pwk.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwk/pwk.txt)
+- **Source file**: [`csl-orig/v02/pw/pw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
-- **Per-dict matrix JSON**: [`data/pwk_blocks.json`](../data/pwk_blocks.json) (note: `csl_code='pw'` but filename is `pwk_blocks.json` — Round 1 S6 bug fix)
-- **Cross-dict aggregate**: [`data/cross-dict.json`](../data/cross-dict.json)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes PWK/PW block matrix data)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/PWK/blob/master/LICENSE)
 
 ## See also (tools)

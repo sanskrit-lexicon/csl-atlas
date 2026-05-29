@@ -1,0 +1,118 @@
+{
+  "@context": {
+    "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
+    "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
+    "decomp": "http://www.w3.org/ns/lemon/decomp#",
+    "frac": "http://www.w3.org/ns/lemon/frac#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
+  },
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa",
+  "@graph": [
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa",
+      "@type": [
+        "ontolex:LexicalEntry",
+        "lexicog:Entry"
+      ],
+      "ontolex:canonicalForm": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#form-canonical"
+      },
+      "ontolex:sense": [],
+      "frac:attestation": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#attestation-pwg-1"
+        }
+      ],
+      "csl:sourceRecord": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#record-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#record-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#record-pwk"
+        }
+      ],
+      "csl:caseId": "mw-pwg-pwk:BadreSa",
+      "csl:key": "BadreSa",
+      "csl:entryType": "compound",
+      "csl:phenomenon": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "csl:profileVersion": "ontolex-frac-profile-v0.1",
+      "csl:reviewStatus": "validated-slice",
+      "csl:validationScope": "full-50-ontolex-shacl-profile"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#form-canonical",
+      "@type": "ontolex:Form",
+      "ontolex:writtenRep": {
+        "@value": "BadreSa",
+        "@language": "sa-Latn-x-SLP1"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#record-mw",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "csl:recordNumber": "148511",
+      "csl:lineNumber": 497724,
+      "csl:pageColumn": "746,3",
+      "rdf:value": "<L>148511<pc>746,3<k1>BadreSa<k2>BadreSa<e>3\n<s>Badre<srs/>Sa</s> ¦ See <s>Badre<srs/>Sa</s> &c. <hom>1.</hom> <s>BadrA</s> below.<info hui=\"a\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#record-pwg",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "csl:recordNumber": "54093",
+      "csl:lineNumber": 523284,
+      "csl:pageColumn": "5-0200",
+      "rdf:value": "<L>54093<pc>5-0200<k1>BadreSa<k2>BadreSa\n{#BadreSa#}¦ ({#Badra + ISa#}) <lex>m.</lex> <ab>Bein.</ab> <is>Śiva's</is>\n<ls>PAÑCAR. 1,15,25.</ls>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#record-pwk",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "csl:recordNumber": "78801",
+      "csl:lineNumber": 324557,
+      "csl:pageColumn": "4-250-a",
+      "rdf:value": "<L>78801<pc>4-250-a<k1>BadreSa<k2>BadreSa\n{#BadreSa#}¦ <lex>m.</lex> <ab>Bein.</ab> <is>Śiva</is>ʼs.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#attestation-pwg-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa"
+      },
+      "frac:evidence": "PAÑCAR. 1,15,25.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa#decomposition",
+      "@type": "decomp:ComponentList",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSa"
+      },
+      "decomp:constituent": [],
+      "csl:modelingNote": "Compound recognized, but component segmentation requires philological review."
+    }
+  ]
+}

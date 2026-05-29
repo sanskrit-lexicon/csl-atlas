@@ -1,0 +1,481 @@
+{
+  "@context": {
+    "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
+    "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
+    "decomp": "http://www.w3.org/ns/lemon/decomp#",
+    "frac": "http://www.w3.org/ns/lemon/frac#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
+  },
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz",
+  "@graph": [
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz",
+      "@type": [
+        "ontolex:LexicalEntry",
+        "lexicog:Entry"
+      ],
+      "ontolex:canonicalForm": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#form-canonical"
+      },
+      "ontolex:sense": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#sense-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#sense-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#sense-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#sense-4"
+        }
+      ],
+      "frac:attestation": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-6"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-7"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-8"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-9"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-6"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-7"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-8"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-9"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-10"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwk-1"
+        }
+      ],
+      "csl:sourceRecord": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwk"
+        }
+      ],
+      "csl:caseId": "mw-pwg-pwk:akz",
+      "csl:key": "akz",
+      "csl:entryType": "verbal-root",
+      "csl:phenomenon": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "csl:profileVersion": "ontolex-frac-profile-v0.1",
+      "csl:reviewStatus": "validated-slice",
+      "csl:validationScope": "full-50-ontolex-shacl-profile"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#form-canonical",
+      "@type": "ontolex:Form",
+      "ontolex:writtenRep": {
+        "@value": "akz",
+        "@language": "sa-Latn-x-SLP1"
+      },
+      "csl:grammar": "cl.",
+      "csl:verbClass": "1,5"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#sense-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "skos:definition": {
+        "@value": "reach",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#sense-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "skos:definition": {
+        "@value": "pass through, penetrate, pervade, embrace",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#sense-3",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "skos:definition": {
+        "@value": "accumulate (to form the cube?)",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#sense-4",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "skos:definition": {
+        "@value": "cause to pervade",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "csl:recordNumber": "423",
+      "csl:lineNumber": 1539,
+      "csl:pageColumn": "3,1",
+      "rdf:value": "<L>423<pc>3,1<k1>akz<k2>akz<e>1\n<s>akz</s> ¦ (perhaps a kind of old <ab>Desid.</ab> of √ <hom>1.</hom> <s>aS</s>) <ab>cl.</ab> 1. 5. <s>akzati</s>, <s>akzRoti</s> (<ls>Pāṇ. iii, 1, 75</ls>; <ab>fut.</ab> <s>akzizyati</s> or <s>akzyati</s>, <ls>L.</ls>; <ab>aor.</ab> <s>AkzIt</s>, 3. <ab>du.</ab> <s>AkzizwAm</s> or <s>AzwAm</s>, <ls>L.</ls>; <ab>perf.</ab> <s>Anakza</s> [<ls>Pāṇ. vii, 4, 60</ls> <ab>Comm.</ab>], but <ab>Ā.</ab> <ab>p.</ab> [with the Vedic weak stem <s>Akz</s> <ab>cf.</ab> <ab>perf.</ab> <s>AS-uH</s> 3. <ab>pl.</ab> &c. <ab>fr.</ab> √ <hom>1.</hom> <s>aS</s>] <s>AkzARa/</s>),\n<div n=\"to\"/>to reach, <ls>RV. x, 22, 11</ls>;\n<div n=\"to\"/>to pass through, penetrate, pervade, embrace, <ls>L.</ls>;\n<div n=\"to\"/>to accumulate (to form the cube?), <ls>L.</ls> :\n<div n=\"vp\"/><ab>Caus.</ab> <s>akzayati</s>, <s>Acikzat</s>, to cause to pervade, <ls>L.</ls> :\n<div n=\"vp\"/><ab>Desid.</ab> <s>acikzizati</s> or <s>acikzati</s>, <ls>L.</ls><info whitneyroots=\"akz1,1;akz2,1\"/><info verb=\"genuineroot\" cp=\"1,5\"/><listinfo n=\"sup\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "csl:recordNumber": "165",
+      "csl:lineNumber": 1321,
+      "csl:pageColumn": "1-0013",
+      "rdf:value": "<L>165<pc>1-0013<k1>akz<k2>akz\n{#akz#}¦, {#a/kzati#} und {#akzRo/ti#}\n<ls>P. 3,1,75.</ls>\n<ls>VOP. 8,74.</ls> {#Anakza#}\n<ls>P. 7,4,60</ls>, <is>Vārtt</is>. 1. {#akzitA#} und {#azwA; akzizyati#} und {#akzyati; AkzIt, AkzizwAm#} oder {#AzwAm#}\n<ls>VOP. 8,75.</ls> {#akzitvA#} oder {#azwvA; azwa#} .\n<div n=\"1\"> 1) {%erreichen, treffen%}: {#ma\\kzU tA ta^ indra dA\\nApna^sa AkzA\\Re#} (<ab>d. i.</ab> {#AnAkzARe) SU^ra vajrivaH . yadDa\\ SuzRa^sya da\\mBayo^ jA\\taM viSva^M sa\\yAva^BiH ..#}\n<ls>ṚV. 10,22,11.</ls>\n<div n=\"1\">— 2) {%durchdringen, erfüllen%} ({#vyAptO#})\n<ls>DHĀTUP.</ls> <ls>NAIGH. 2,18.</ls> ({#A\\kzA\\RaH#}).\n<div n=\"1\">— 3) {%anhäufen%} ({#saMGAte#})\n<ls>DHĀTUP.</ls> — <ab>Caus.</ab> {#akzayati, Acikzat#} . — <ab>Desid.</ab> {#acikzizati#} und {#acikzati#} .\n<div n=\"v\">— <ab>Vgl.</ab> {#aS#} .\n<div n=\"p\">— {#nis#} {%zerstreuen, aus einander jagen%}: {#i\\mami^ndra varDaya kza\\triya^M ma i\\maM vi\\SAme^kavf\\zaM kf^Ru\\ tvam . nira\\mitrA^~ akzRuhyasya\\ sarvA\\~stAnra^nDayAsmA ahamu\\ttarezu^ ..#}\n<ls>AV. 4,22,1.</ls>\n<div n=\"p\">— {#sam#} {%durchgehen, durchwandern%}: {#tvaM devi brahmalokaM samakzase#} (Med.)\n<ls>R. 2,52,80.</ls>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwk",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "csl:recordNumber": "222077",
+      "csl:lineNumber": 641471,
+      "csl:pageColumn": "7-384-1b",
+      "rdf:value": "<L>222077<pc>7-384-1b<k1>akz<k2>akz\n√{#akz#}¦ I. {#akzRute, akzRuyAt#} und {#akzita/#} in der <ab>Bed.</ab> {%verschneiden%} <ls>MAITR. S. 4,2,9 (32,8. fgg.)</ls>.<info n=\"sup_7\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "Pāṇ. iii, 1, 75",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "L.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "generic-lexicographer-hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "L.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "generic-lexicographer-hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-4",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "Pāṇ. vii, 4, 60",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-5",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "RV. x, 22, 11",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "L.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "generic-lexicographer-hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-7",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "L.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "generic-lexicographer-hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-8",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "L.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "generic-lexicographer-hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-mw-9",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "L.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "generic-lexicographer-hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "P. 3,1,75.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "VOP. 8,74.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "P. 7,4,60",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-4",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "VOP. 8,75.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-5",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "ṚV. 10,22,11.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "DHĀTUP.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-7",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "NAIGH. 2,18.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-8",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "DHĀTUP.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-9",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "AV. 4,22,1.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwg-10",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "R. 2,52,80.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#attestation-pwk-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "frac:evidence": "MAITR. S. 4,2,9 (32,8. fgg.)",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz#root-relation",
+      "@type": "csl:RootRelation",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3Aakz"
+      },
+      "csl:whitneyRoot": "akz1,1;akz2,1",
+      "csl:modelingNote": "Root is modeled as lexical entry plus derivational/grammatical relation."
+    }
+  ]
+}

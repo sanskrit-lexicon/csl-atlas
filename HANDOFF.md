@@ -1,7 +1,8 @@
 # HANDOFF -- Gemini 3.5 Flash Implementation Brief
 
-Last updated: 2026-05-28
-Repo: `C:\Users\user\Documents\GitHub\csl-atlas`
+Last updated: 2026-05-29
+Repo: `sanskrit-lexicon/csl-atlas`
+Branch: `interoperability-handoff`
 Remote baseline: `origin/main` at `1d4a39c atlas: O10 landing-page refresh -- reflects all 9 chapters complete`
 
 ## Read This First
@@ -50,6 +51,20 @@ This branch adds:
 | `docs/LOSS_REPORT_SCHEMA.md` | Loss-report schema |
 | `docs/PAPER_OUTLINE.md` | Paper abstract and outline |
 | `docs/BILINGUAL_TERMS.md` | English/Russian terminology notes |
+| `docs/ALL_DICTIONARY_COVERAGE.md` | Coverage, size, type, and fit plan for every local CDSL v02 dictionary |
+| `scripts/build-dictionary-coverage.mjs` | Generates all-dictionary coverage and size data |
+| `src/tools/dictionary-coverage.md` | Observable all-dictionary coverage tool |
+| `scripts/select-review-cases.mjs` | Deterministically selects the 15-case TEI/OntoLex review slice |
+| `data/pilot/review-cases.json` | Generated 15-case review slice metadata |
+| `scripts/validate-tei-profile.mjs` | Validates all 50 TEI archival profile files against the project ODD/profile |
+| `scripts/validate-ontolex-profile.mjs` | Validates all 50 OntoLex/FrAC JSON-LD plus RDF/Turtle files against the project SHACL/profile |
+| `data/schema/tei-archival-profile.odd.xml` | Project TEI ODD/profile for generated archival XML |
+| `data/schema/ontolex-frac-profile.shacl.ttl` | Project SHACL/profile for generated OntoLex/FrAC/RDF |
+| `data/pilot/tei-review.json` | Full 50-case TEI machine-review report |
+| `data/pilot/ontolex-review.json` | Full 50-case OntoLex/RDF machine-review report |
+| `scripts/validate-external-profiles.mjs` | Optional external TEI/SHACL validation harness with strict mode |
+| `data/pilot/external-validation-review.json` | Generated external-tool availability and validation report |
+| `docs/VALIDATED_INTEROPERABILITY_PROFILE.md` | Implementation notes for the validated profile |
 
 Generated sample currently has:
 
@@ -59,6 +74,16 @@ Generated sample currently has:
 - 8 continuations.
 - 27 `L.` hedge cases.
 - All 50 have MW/PWG/PWK matched records.
+- 15 deterministic review cases selected from hard cases:
+  - 5 roots.
+  - 5 compounds.
+  - 3 continuations.
+  - 2 hedge-only cases.
+- 50 generated TEI archival-profile XML files in `data/pilot/tei/`.
+- 50 generated OntoLex/FrAC JSON-LD files in `data/pilot/ontolex/`.
+- 50 generated RDF/Turtle files in `data/pilot/rdf/`.
+- 50-case TEI ODD/profile validation passes.
+- 50-case OntoLex/RDF SHACL/profile validation passes.
 
 ## Commands
 
@@ -66,7 +91,11 @@ Run from repo root:
 
 ```bash
 npm install
-npm run sample-hard-cases
+npm run build-coverage
+npm run build-pilot
+npm run validate-tei-profile
+npm run validate-ontolex-profile
+npm run validate-external-profiles
 npm run dev
 ```
 
@@ -84,7 +113,27 @@ The sampler expects sibling CDSL source data:
 ../csl-orig/v02/pw/pw.txt
 ```
 
+The coverage builder scans every sibling dictionary with this shape:
+
+```text
+../csl-orig/v02/<code>/<code>.txt
+```
+
 Do not commit full source dictionaries. They are huge and live in `csl-orig`.
+
+`npm run build-pilot` now runs the complete pilot pipeline:
+
+```bash
+npm run sample-hard-cases
+npm run select-review-cases
+npm run build-neutral-model
+npm run build-loss-reports
+npm run export-tei-stubs
+npm run export-ontolex-stubs
+npm run validate-pilot
+npm run validate-tei-profile
+npm run validate-ontolex-profile
+```
 
 ## Implementation Style For Gemini Flash
 
@@ -109,11 +158,26 @@ Avoid:
 - Do not manually curate the pilot sample as the primary method.
 - Do not silently hide conversion loss.
 
-## Next Implementation Slice
+## Current Implemented Slice
+
+Atlas v0.1 now has the first serious TEI/OntoLex implementation layer:
+
+- automatic hard-case sample remains 50 cases;
+- deterministic review slice selects 15 hard cases;
+- TEI output is no longer a toy entry-only stub for that slice, but a validated archival profile with `TEI`, `teiHeader`, source-entry citations, safe raw preservation, extracted forms/senses where possible, and phenomenon-specific structures;
+- OntoLex output is no longer only a minimal JSON-LD stub, but a validated OntoLex/Lexicog/FrAC graph, with RDF/Turtle mirrors for all 50 cases;
+- `src/tools/interoperability-hard-cases.md` marks validated-slice cases, shows full 50-case validation status, and links RDF/Turtle for every case.
+
+Remaining limits are deliberate:
+
+- human philological review of all 50 cases is still separate from machine validation;
+- external TEI ODD compilation and external SHACL-engine execution are wired through `npm run validate-external-profiles`, but a full pass depends on local `teitorelaxng`, `jing` or `xmllint`, and `pyshacl` availability.
+
+## Historical v0.1 Implementation Slice
 
 Implement **Atlas v0.1 data workbench**.
 
-The goal is not full TEI/OntoLex correctness. The goal is to make each hard case navigable and ready for mapping.
+The initial workbench goal was to make each hard case navigable and ready for mapping. The newer validated-slice work above supersedes the stub-only parts of this section, but the task list remains useful as provenance for the branch.
 
 ### Task 1: Observable Hard-Case Tool Page
 
@@ -341,24 +405,25 @@ mw-pwg-pwk:<k1>-mw<L>
 Before finishing any implementation pass:
 
 ```bash
-npm run sample-hard-cases
-npm run build-neutral-model
-npm run build-loss-reports
-npm run export-tei-stubs
-npm run export-ontolex-stubs
+npm run build-pilot
+npm run validate-tei-profile
+npm run validate-ontolex-profile
 npm run build
 ```
 
-If not all scripts exist yet, run the ones that do and state exactly which are pending.
+The standalone commands remain available, but `build-pilot` is the canonical full-pipeline check.
 
 Then verify:
 
 - Observable preview loads.
 - The interoperability tool page shows 50 cases.
+- The page marks the 15 validated-slice cases.
+- The page shows full 50-case validation status for TEI and OntoLex/RDF.
 - Detail view works.
 - JSON files parse.
 - TEI files are XML-escaped.
 - OntoLex files parse as JSON.
+- RDF/Turtle files exist for all 50 cases.
 
 ## Final Output Expected From Gemini
 

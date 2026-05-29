@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-akupya">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case akupya</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>continuation</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Selected for the first 15-case validated TEI profile slice.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-akupya-entry" type="continuation" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3Aakupya">
+    <form type="continuation">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">akupya</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-akupya-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <xr xml:id="mw-pwg-pwk-akupya-continuation-relation" type="adjacency-continuation-parent" target="#e-1A"><ref>MW e=1A</ref></xr>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-akupya-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-akupya-record-pwg">
+        <abbr>H. 1045.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akupya-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-akupya-record-pwg">
+        <abbr>HALĀY.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akupya-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-akupya-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akupya-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-akupya-record-pwg">
+        <abbr>AK. 2,9,92</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akupya-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-akupya-record-pwk">
+        <abbr>MBH. 15,30,3</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-akupya-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">295</idno>
+        <idno type="line">1041</idno>
+        <idno type="pc">2,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;295&lt;pc&gt;2,2&lt;k1&gt;akupya&lt;k2&gt;a-kupya&lt;e&gt;1A
+¦ any base metal (= &lt;s&gt;kupya&lt;/s&gt; See &lt;hom&gt;3.&lt;/hom&gt; &lt;s&gt;a&lt;/s&gt;). &lt;info lex=&quot;inh&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-akupya-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">122</idno>
+        <idno type="line">983</idno>
+        <idno type="pc">1-0010</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;122&lt;pc&gt;1-0010&lt;k1&gt;akupya&lt;k2&gt;akupya
+{#akupya#}¦ (3. {#a + kupya#}) &lt;lex&gt;n.&lt;/lex&gt; {%Gold%} oder {%Silber%}
+&lt;ls&gt;H. 1045.&lt;/ls&gt;
+&lt;ls&gt;HALĀY.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; {%geringes Metall%} (= {#kupya#}), {%jedes Metall mit Ausnahme von Gold und Silber%}
+&lt;ls&gt;AK. 2,9,92&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-akupya-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">201802</idno>
+        <idno type="line">573050</idno>
+        <idno type="pc">2-285-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;201802&lt;pc&gt;2-285-a&lt;k1&gt;akupya&lt;k2&gt;akupya
+{#akupya#}¦ &lt;lex&gt;n.&lt;/lex&gt; &lt;ab&gt;impers.&lt;/ab&gt; {%haud irascendum%} &lt;ls&gt;MBH. 15,30,3&lt;/ls&gt;.&lt;info n=&quot;sup_2&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">validated-slice</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

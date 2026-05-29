@@ -1,0 +1,157 @@
+{
+  "@context": {
+    "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
+    "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
+    "decomp": "http://www.w3.org/ns/lemon/decomp#",
+    "frac": "http://www.w3.org/ns/lemon/frac#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
+  },
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti",
+  "@graph": [
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti",
+      "@type": [
+        "ontolex:LexicalEntry",
+        "lexicog:Entry"
+      ],
+      "ontolex:canonicalForm": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#form-canonical"
+      },
+      "ontolex:sense": [],
+      "frac:attestation": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#attestation-mw-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#attestation-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#attestation-pwg-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#attestation-pwk-1"
+        }
+      ],
+      "csl:sourceRecord": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-pwk"
+        }
+      ],
+      "csl:caseId": "mw-pwg-pwk:aBIti",
+      "csl:key": "aBIti",
+      "csl:entryType": "lemma",
+      "csl:phenomenon": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "csl:profileVersion": "ontolex-frac-profile-v0.1",
+      "csl:reviewStatus": "full-50-machine-review",
+      "csl:validationScope": "full-50-ontolex-shacl-profile"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#form-canonical",
+      "@type": "ontolex:Form",
+      "ontolex:writtenRep": {
+        "@value": "aBIti",
+        "@language": "sa-Latn-x-SLP1"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-mw",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "csl:recordNumber": "12996",
+      "csl:lineNumber": 46929,
+      "csl:pageColumn": "74,2",
+      "rdf:value": "<L>12996<pc>74,2<k1>aBIti<k2>a-BIti<h>1<e>2\n<hom>1.</hom> <s>a-BIti</s> ¦ <lex>f.</lex> fearlessness, <ls>L.</ls><info lex=\"f\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-pwg",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "csl:recordNumber": "4846",
+      "csl:lineNumber": 39856,
+      "csl:pageColumn": "1-0355",
+      "rdf:value": "<L>4846<pc>1-0355<k1>aBIti<k2>aBI^ti\n{#aBI^ti#}¦ (von {#i#} mit {#aBi#}) <lex>f.</lex> {%Anlauf%}: {#viSvA^ a\\BI^tI\\ rapa^so yuyoDi#}\n<ls>ṚV. 4,33,3.</ls> {#(vanvantu) a\\BI^tima\\ryaH#}\n<ls n=\"ṚV.\">7,21,9.</ls>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-pwk",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "csl:recordNumber": "7781",
+      "csl:lineNumber": 28829,
+      "csl:pageColumn": "1-091-a",
+      "rdf:value": "<L>7781<pc>1-091-a<k1>aBIti<k2>aBI^ti\n{#aBI^ti#}¦ <lex>f.</lex> {%Anlauf, Angriff%} <ls>ṚV. 2,33,3</ls>.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#attestation-mw-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti"
+      },
+      "frac:evidence": "L.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "generic-lexicographer-hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#attestation-pwg-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti"
+      },
+      "frac:evidence": "ṚV. 4,33,3.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#attestation-pwg-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti"
+      },
+      "frac:evidence": "7,21,9.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "ṚV."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#attestation-pwk-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti"
+      },
+      "frac:evidence": "ṚV. 2,33,3",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AaBIti#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Loss Report",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "caseId": { "type": "string" },
+      "target": { "type": "string", "enum": ["tei", "ontolex", "neutral"] },
+      "status": { "type": "string", "enum": ["clean", "partial", "lossy", "failure"] },
+      "phenomenon": { "type": "string" },
+      "sourceDictionary": { "type": "string", "enum": ["mw", "pwg", "pwk"] },
+      "sourcePointer": {
+        "type": "object",
+        "properties": {
+          "L": { "type": ["string", "null"] },
+          "line": { "type": ["integer", "null"] }
+        },
+        "required": ["L", "line"]
+      },
+      "claim": { "type": "string" },
+      "mappedAs": { "type": "string" },
+      "loss": { "type": "string" },
+      "failureClassification": {
+        "type": "string",
+        "enum": ["none", "cdsl-markup-gap", "model-vocabulary-gap", "print-compression"]
+      },
+      "extensionNeeded": { "type": "boolean" },
+      "reviewStatus": { "type": "string", "enum": ["machine", "reviewed", "published"] }
+    },
+    "required": ["caseId", "target", "status", "phenomenon", "sourceDictionary", "sourcePointer", "claim", "extensionNeeded", "reviewStatus"]
+  }
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-druRaha">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case druRaha</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-druRaha-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AdruRaha">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">druRaha</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-druRaha-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-druRaha-compound-relation" type="compound">
+      <seg type="component">druRa</seg>
+      <seg type="component">ha</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-druRaha-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-druRaha-record-pwg">
+        <abbr>HĀR. 125.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-druRaha-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-druRaha-record-pwg">
+        <abbr>WILSON</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-druRaha-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">97948</idno>
+        <idno type="line">328418</idno>
+        <idno type="pc">502,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;97948&lt;pc&gt;502,2&lt;k1&gt;druRaha&lt;k2&gt;druRa—ha&lt;e&gt;3
+&lt;s&gt;druRa—ha&lt;/s&gt; ¦ See &lt;s&gt;druRaha&lt;/s&gt; under &lt;hom&gt;4.&lt;/hom&gt; &lt;s&gt;dru&lt;/s&gt;.&lt;info hui=&quot;b&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-druRaha-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">35371</idno>
+        <idno type="line">342585</idno>
+        <idno type="pc">3-0809</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;35371&lt;pc&gt;3-0809&lt;k1&gt;druRaha&lt;k2&gt;druRaha
+{#druRaha#}¦ &lt;lex&gt;m.&lt;/lex&gt; {%Degenscheide%}
+&lt;ls&gt;HĀR. 125.&lt;/ls&gt; Eher 4. {#dru + naha#}, als {#druRa#} {%Schwert%} + {#ha#}, wie
+&lt;ls&gt;WILSON&lt;/ls&gt; angiebt; nach ihm auch {#drunaha#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-druRaha-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">53461</idno>
+        <idno type="line">219290</idno>
+        <idno type="pc">3-130-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;53461&lt;pc&gt;3-130-a&lt;k1&gt;druRaha&lt;k2&gt;*druRaha
+*{#druRaha#}¦ &lt;lex&gt;m.&lt;/lex&gt; {%Degenscheide%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

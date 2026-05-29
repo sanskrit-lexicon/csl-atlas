@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
+    "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
+    "decomp": "http://www.w3.org/ns/lemon/decomp#",
+    "frac": "http://www.w3.org/ns/lemon/frac#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
+  },
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara",
+  "@graph": [
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara",
+      "@type": [
+        "ontolex:LexicalEntry",
+        "lexicog:Entry"
+      ],
+      "ontolex:canonicalForm": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#form-canonical"
+      },
+      "ontolex:sense": [],
+      "frac:attestation": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-6"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-7"
+        }
+      ],
+      "csl:sourceRecord": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwk"
+        }
+      ],
+      "csl:caseId": "mw-pwg-pwk:BadreSvara",
+      "csl:key": "BadreSvara",
+      "csl:entryType": "compound",
+      "csl:phenomenon": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "csl:profileVersion": "ontolex-frac-profile-v0.1",
+      "csl:reviewStatus": "full-50-machine-review",
+      "csl:validationScope": "full-50-ontolex-shacl-profile"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#form-canonical",
+      "@type": "ontolex:Form",
+      "ontolex:writtenRep": {
+        "@value": "BadreSvara",
+        "@language": "sa-Latn-x-SLP1"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-mw",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "csl:recordNumber": "148512",
+      "csl:lineNumber": 497727,
+      "csl:pageColumn": "746,3",
+      "rdf:value": "<L>148512<pc>746,3<k1>BadreSvara<k2>BadreSvara<e>3\n<s>Badre<srs/>˚Svara</s> ¦ See <s>Badre<srs/>Sa</s> &c. <hom>1.</hom> <s>BadrA</s> below.<info hui=\"a\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "csl:recordNumber": "54094",
+      "csl:lineNumber": 523289,
+      "csl:pageColumn": "5-0200",
+      "rdf:value": "<L>54094<pc>5-0200<k1>BadreSvara<k2>BadreSvara\n{#BadreSvara#}¦ ({#Badra + I˚#}) <lex>m.</lex>\n<div n=\"1\"> 1) <ab>Bez.</ab> verschiedener Statuen und <is>Liṅga</is> des <is>Śiva</is>\n<ls>ŚKDR.</ls> nach den <ls>PURĀṆA.</ls>\n<div n=\"1\">— 2) <ab>N. pr.</ab> einer Oertlichkeit\n<ls>Verz. d. Oxf. H. 39,b,3.</ls>\n<div n=\"1\">— 3) <ab>N. pr.</ab> eines <is>Kāyastha</is>\n<ls>RĀJA-TAR. 7,38.</ls> <ls n=\"RĀJA-TAR. 7,\">44. fg.</ls> <ls n=\"RĀJA-TAR. 7,\">106.</ls> <ls n=\"RĀJA-TAR. 7,\">121.</ls>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwk",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "csl:recordNumber": "78802",
+      "csl:lineNumber": 324560,
+      "csl:pageColumn": "4-250-a",
+      "rdf:value": "<L>78802<pc>4-250-a<k1>BadreSvara<k2>BadreSvara\n{#BadreSvara#}¦ <lex>m.</lex> <ab>N. pr.</ab>\n<div n=\"1\">— 1〉 verschiedener Statuen und <is>Liṅga</is> des <is>Śiva</is>.\n<div n=\"1\">— 2〉 einer Oertlichkeit.\n<div n=\"1\">— 3〉 eines <is>Kāyastha</is>.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara"
+      },
+      "frac:evidence": "ŚKDR.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara"
+      },
+      "frac:evidence": "PURĀṆA.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara"
+      },
+      "frac:evidence": "Verz. d. Oxf. H. 39,b,3.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-4",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara"
+      },
+      "frac:evidence": "RĀJA-TAR. 7,38.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-5",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara"
+      },
+      "frac:evidence": "44. fg.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "RĀJA-TAR. 7,"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara"
+      },
+      "frac:evidence": "106.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "RĀJA-TAR. 7,"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-7",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara"
+      },
+      "frac:evidence": "121.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "RĀJA-TAR. 7,"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#decomposition",
+      "@type": "decomp:ComponentList",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara"
+      },
+      "decomp:constituent": [],
+      "csl:modelingNote": "Compound recognized, but component segmentation requires philological review."
+    }
+  ]
+}

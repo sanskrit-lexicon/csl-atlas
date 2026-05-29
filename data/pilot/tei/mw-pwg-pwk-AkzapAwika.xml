@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-AkzapAwika">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case AkzapAwika</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-AkzapAwika-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AAkzapAwika">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">AkzapAwika</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-AkzapAwika-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-AkzapAwika-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-AkzapAwika-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-AkzapAwika-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-AkzapAwika-record-pwg">
+        <abbr>JAṬĀDH.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-AkzapAwika-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-AkzapAwika-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-AkzapAwika-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">22368</idno>
+        <idno type="line">79764</idno>
+        <idno type="pc">128,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;22368&lt;pc&gt;128,2&lt;k1&gt;AkzapAwika&lt;k2&gt;AkzapAwika&lt;e&gt;2
+&lt;s&gt;AkzapAwika&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; (= &lt;s&gt;akz˚&lt;/s&gt; &lt;ab&gt;s.v.&lt;/ab&gt; &lt;hom&gt;3.&lt;/hom&gt; &lt;s&gt;akza&lt;/s&gt;) a judge, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-AkzapAwika-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">7877</idno>
+        <idno type="line">67151</idno>
+        <idno type="pc">1-0592</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7877&lt;pc&gt;1-0592&lt;k1&gt;AkzapAwika&lt;k2&gt;AkzapAwika
+{#AkzapAwika#}¦ &lt;lex&gt;m.&lt;/lex&gt; = {#akzapAwaka#}
+&lt;ls&gt;JAṬĀDH.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-AkzapAwika-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">13517</idno>
+        <idno type="line">50986</idno>
+        <idno type="pc">1-160-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;13517&lt;pc&gt;1-160-a&lt;k1&gt;AkzapAwika&lt;k2&gt;*AkzapAwika
+*{#AkzapAwika#}¦ &lt;lex&gt;m.&lt;/lex&gt; = {#AkzapAwaka#} {%Richter%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

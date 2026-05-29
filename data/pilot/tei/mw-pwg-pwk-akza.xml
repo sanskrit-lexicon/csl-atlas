@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-akza">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case akza</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-akza-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3Aakza">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">akza</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-akza-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-akza-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>ŚĀNT. 2,12.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>P. 5,4,74.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>H. an. 2,556</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>VAIJ.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>ŚIŚ. 12,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>18,7.</abbr>
+        <ref type="inherited-siglum">ŚIŚ.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>ṚV. 1,30,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>6,24,3.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>10,89,4.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>1,166,9.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>3,53,17.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>M. 8,291.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>P. 5,4,74</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>VOP. 6,73.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>ŚIŚ. 18,7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>AK. 3,4,224.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>MED. ṣ. 3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>H. an. 2,556.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>MED. ṣ. 2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>MIT. 146,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>P. 5,4,76</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>VOP. 6,77.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>YĀJÑ. 3,87.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>VIJÑĀNEŚVARA</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>AK. 2,4,2,39.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>3,4,224.</abbr>
+        <ref type="inherited-siglum">AK.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>H. 1145.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>an. 2,556.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>MED. ṣ. 3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>ROTH</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>Z. d. d. m. G. II,123.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>CHĀND. UP. 7,3,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>ARJ. 8,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>ŚĀNT. 2,12.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>MED. ṣ. 3</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>MED. ṣ. 3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>AK. 2,9,86.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>3,4,224.</abbr>
+        <ref type="inherited-siglum">AK.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>H. 884.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwg">
+        <abbr>an. 2,556.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwk">
+        <abbr>163,2</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwk">
+        <abbr>174,5</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwk-3" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwk">
+        <abbr>175,25</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwk-4" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwk">
+        <abbr>184,1</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwk-5" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwk">
+        <abbr>186,6</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-pwk-6" type="named-source-citation" corresp="#mw-pwg-pwk-akza-record-pwk">
+        <abbr>Ind. St. 14,382</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-akza-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">424</idno>
+        <idno type="line">1559</idno>
+        <idno type="pc">3,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;424&lt;pc&gt;3,1&lt;k1&gt;akza&lt;k2&gt;a/kza&lt;h&gt;1&lt;e&gt;2
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;a/kza&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; an axle, axis (in this sense also &lt;lex type=&quot;hwalt&quot;&gt;n.&lt;/lex&gt;, &lt;ls&gt;L.&lt;/ls&gt;)&lt;info lex=&quot;m:n&quot;/&gt;&lt;listinfo n=&quot;sup&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-akza-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">167</idno>
+        <idno type="line">1359</idno>
+        <idno type="pc">1-0013</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;167&lt;pc&gt;1-0013&lt;k1&gt;akza&lt;k2&gt;a/kza&lt;h&gt;2
+2. {#a/kza#}¦ &lt;lex&gt;m.&lt;/lex&gt;
+&lt;ls&gt;ŚĀNT. 2,12.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%Achse am Wagen%}
+&lt;ls&gt;P. 5,4,74.&lt;/ls&gt;
+&lt;ls&gt;H. an. 2,556&lt;/ls&gt; ({#raTasyAvayave#}).
+[Page1-0014]
+&lt;ls&gt;VAIJ.&lt;/ls&gt; beim &lt;ab&gt;Sch.&lt;/ab&gt; zu &lt;ls&gt;ŚIŚ. 12,2.&lt;/ls&gt; ({#akzaScakraDAraRe#}) und zu &lt;ls n=&quot;ŚIŚ.&quot;&gt;18,7.&lt;/ls&gt;
+({#akzaM#} [sic] {#raTANga ADAre)#}.{# akza\M na ca\kryo^H#}
+&lt;ls&gt;ṚV. 1,30,14.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;6,24,3.&lt;/ls&gt; {#yo akze^Reva ca\kriyA\ SacI^Bi\rvizva^kta\stamBa^ pfTi\vImu\ta dyAm#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,89,4.&lt;/ls&gt; {#akzo^ vaSca\krA sa\mayA\ vi vA^vfte#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,166,9.&lt;/ls&gt; {#sTi\rO gAvO^ BavataM vI\Lurakzo\ mezA vi va^rhi\ mA yu\gaM vi SA^ri#}
+&lt;ls n=&quot;ṚV.&quot;&gt;3,53,17.&lt;/ls&gt; {#akzaBaNge#}
+&lt;ls&gt;M. 8,291.&lt;/ls&gt; {#dfQaDUrakzaH#}
+&lt;ls&gt;P. 5,4,74&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#akzaDUH#}
+&lt;ls&gt;VOP. 6,73.&lt;/ls&gt;
+&lt;ls&gt;ŚIŚ. 18,7.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#akzAgrakIla#} und {#akzAgrakIlaka#} .
+&lt;div n=&quot;1&quot;&gt;— 2) {%Rad%}
+&lt;ls&gt;AK. 3,4,224.&lt;/ls&gt;
+&lt;ls&gt;MED. ṣ. 3.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%Karren%}
+&lt;ls&gt;H. an. 2,556.&lt;/ls&gt;
+&lt;ls&gt;MED. ṣ. 2.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%eine auf zwei Pfosten ruhende Platte%} ({#pawwa#}), {%an die eine Wage gehängt wird(?)%}: {#akzaH pAdastamBayorupari nivizwatulADArapawwaH#}
+&lt;ls&gt;MIT. 146,1.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 5) {%Auge%} in übertragener Bedeutung am Ende einiger Composita: {#puzkarAkzaH#}
+&lt;ls&gt;P. 5,4,76&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#gavAkzaH#} &lt;ab&gt;ibid.&lt;/ab&gt; und
+&lt;ls&gt;VOP. 6,77.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#akza#} &lt;lex&gt;n.&lt;/lex&gt;, {#akzan#} und {#akzi#} .
+&lt;div n=&quot;1&quot;&gt;— 6) {%die Gegend unterhalb der Schläfen%}
+&lt;ls&gt;YĀJÑ. 3,87.&lt;/ls&gt; (&lt;ls&gt;VIJÑĀNEŚVARA&lt;/ls&gt;: {#akzaH karRanetrayormaDye SaNKAdaDoBAgaH#}).
+&lt;div n=&quot;1&quot;&gt;— 7) Name einer Pflanze, {%Terminalia Bellerica%},
+&lt;ls&gt;AK. 2,4,2,39.&lt;/ls&gt; &lt;ls n=&quot;AK.&quot;&gt;3,4,224.&lt;/ls&gt;
+&lt;ls&gt;H. 1145.&lt;/ls&gt;
+&lt;ls&gt;an. 2,556.&lt;/ls&gt;
+&lt;ls&gt;MED. ṣ. 3.&lt;/ls&gt; &lt;is&gt;Suśr&lt;/is&gt;. Die Synonyme {#kali#} und {#viBIdaka (viBItaka)#} bedeuten gleichfalls {%Würfel%} ({#a/kza#}), da dazu die Nüsse der {%Terminalia Bellerica%} gebraucht wurden; &lt;ab&gt;vgl.&lt;/ab&gt;
+&lt;ls&gt;ROTH&lt;/ls&gt; in &lt;ls&gt;Z. d. d. m. G. II,123.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 8) {%die Nuss der Terminalia Bellerica%}: {#yaTA vE dve vAmalake dve vA kole dvO vAkzO#}
+(&lt;ab&gt;Sch.&lt;/ab&gt; = {#viBItakaPale) muzwiranuBavati#}
+&lt;ls&gt;CHĀND. UP. 7,3,1.&lt;/ls&gt; {#DArABirakzamAtrABiH#}
+&lt;ls&gt;ARJ. 8,4.&lt;/ls&gt;
+&lt;F&gt;*Diese und die vorhergehende Bedeutung, die, wie wir auch oben angedeutet haben, in der innigsten Verbindung mit {#akza#} {%Würfel%} stehen, haben wir des Accents wegen hierher gezogen.
+&lt;ls&gt;ŚĀNT. 2,12.&lt;/ls&gt; heisst es nämlich, dass {#akza#}, wenn es nicht {%Würfel%} bedeute, den Ton auf der ersten Silbe habe.&lt;/F&gt;
+&lt;div n=&quot;1&quot;&gt;— 9) {%Elaeocarpus Ganitrus%} &lt;is&gt;Suśr&lt;/is&gt;.
+&lt;div n=&quot;1&quot;&gt;— 10) {%der Saame dieser Pflanze%}, der zu Rosenkränzen gebraucht wird ({#rudrAkze#})
+&lt;ls&gt;MED. ṣ. 3&lt;/ls&gt;; &lt;ab&gt;vgl.&lt;/ab&gt; {#akzamAlA#} .
+&lt;div n=&quot;1&quot;&gt;— 11) {%der Saame einer anderen Pflanze%} ({#indrAkze#})
+&lt;ls&gt;MED. ṣ. 3.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 12) Name eines Gewichts, ein &lt;is&gt;karṣa&lt;/is&gt; =
+16 &lt;is&gt;māṣaka&lt;/is&gt;
+&lt;ls&gt;AK. 2,9,86.&lt;/ls&gt; &lt;ls n=&quot;AK.&quot;&gt;3,4,224.&lt;/ls&gt;
+&lt;ls&gt;H. 884.&lt;/ls&gt;
+&lt;ls&gt;an. 2,556.&lt;/ls&gt;
+&lt;ls&gt;MED. ṣ. 3.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 13) {%Schlange%}
+&lt;ls&gt;MED. ṣ. 3.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 14) &lt;is&gt;Garuḍa&lt;/is&gt;,
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 15) {%Process%}
+&lt;ls&gt;AK. 3,4,224.&lt;/ls&gt;
+&lt;ls&gt;H. an. 2,556.&lt;/ls&gt;
+&lt;ls&gt;MED. ṣ. 2.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#akzadarSaka, akzadfS, akzapawala, akzapAwaka#} .
+&lt;div n=&quot;1&quot;&gt;— 16) {%Kenntniss%}
+&lt;ls&gt;H. an. 2,556.&lt;/ls&gt; ({#jYAne#})
+&lt;ls&gt;MED. ṣ. 2.&lt;/ls&gt; (wenn {#jYAnArTa#} &lt;ab&gt;st.&lt;/ab&gt; {#jYAtArTa#} zu lesen ist, dann müsste noch {#arTa#} als besondere Bedeutung aufgeführt werden; &lt;ab&gt;vgl.&lt;/ab&gt;
+8° {%affaire, transaction%} bei
+&lt;ls&gt;LOIS.&lt;/ls&gt; zu &lt;ls&gt;AK. 3,4,224&lt;/ls&gt;).
+&lt;div n=&quot;1&quot;&gt;— 17) {%Seele%}
+&lt;ls&gt;H. an. 2,556.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 18) {%ein Blindgeborner%}
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+({#jAtAnDa#}, vielleicht ein verlesenes {#jYAnArTa#}, von dem oben &lt;ab&gt;u.&lt;/ab&gt; 16. die Rede war).
+&lt;div n=&quot;1&quot;&gt;— 19) &lt;ab&gt;Nom. pr.&lt;/ab&gt; eines Mannes, &lt;is&gt;Rāvaṇa&apos;s&lt;/is&gt; Sohn
+&lt;ls&gt;H. an. 2,556.&lt;/ls&gt;
+&lt;ls&gt;R. 1,1,73.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 12,63.&lt;/ls&gt; ein König, Sohn &lt;is&gt;Nara&apos;s&lt;/is&gt;
+&lt;ls&gt;RĀJA-TAR. 1,340.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 20) Zur astronomischen Bedeutung von {#akza#} ({%terrestrial latitude%},
+&lt;ls&gt;WILS.&lt;/ls&gt;) &lt;ab&gt;vgl.&lt;/ab&gt; folgende Citate im
+&lt;ls&gt;ŚKDR.&lt;/ls&gt; : {#candrASviniGnA palaBArdDitA ca laNkAvaDiH syAdiha dakziRo &apos;kzaH . iti BAsvatI . praBA SaraGnA svaturIyayogAdakzaH sadA dakziRadikpradizwaH . iti jAtakArRavaH . dakziRottarareKAyAM sA tatra vizuvatpraBA SaNkucCAyAhate trijye vizuvatkarRaBAjite . lambAkzajye tayoScApe lambAkzO dakziRO sadA . iti sUryasidDAntaH .#}
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-akza-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">252</idno>
+        <idno type="line">936</idno>
+        <idno type="pc">1-004-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;252&lt;pc&gt;1-004-a&lt;k1&gt;akza&lt;k2&gt;akza&lt;h&gt;3
+&lt;hom&gt;3.&lt;/hom&gt; {#akza#}¦
+&lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;m.&lt;/lex&gt; &lt;lex&gt;n.&lt;/lex&gt; {%Sinnesorgan%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 am Ende eines &lt;ab&gt;adj. Comp.&lt;/ab&gt; (&lt;lex&gt;f.&lt;/lex&gt; {#I#}) = {#akzi#}
+&lt;div n=&quot;2&quot;&gt;— a〉 {%Auge%} &lt;ls n=&quot;Chr.&quot;&gt;163,2&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;174,5&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;175,25&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;184,1&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;186,6&lt;/ls&gt;.
+&lt;div n=&quot;2&quot;&gt;— b〉 {%Masche%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 &lt;lex&gt;m.&lt;/lex&gt; {%Seele%} &lt;ls&gt;Ind. St. 14,382&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

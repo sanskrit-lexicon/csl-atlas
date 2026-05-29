@@ -1,0 +1,106 @@
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix lexicog: <http://www.w3.org/ns/lemon/lexicog#> .
+@prefix decomp: <http://www.w3.org/ns/lemon/decomp#> .
+@prefix frac: <http://www.w3.org/ns/lemon/frac#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix csl: <https://sanskrit-lexicon.github.io/csl-atlas/ns#> .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara> a ontolex:LexicalEntry, lexicog:Entry ;
+  ontolex:canonicalForm <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#form-canonical> ;
+  csl:caseId "mw-pwg-pwk:BadreSvara" ;
+  csl:key "BadreSvara" ;
+  csl:entryType "compound" ;
+  csl:profileVersion "ontolex-frac-profile-v0.1" ;
+  csl:reviewStatus "full-50-machine-review" ;
+  csl:validationScope "full-50-ontolex-shacl-profile" ;
+  csl:phenomenon "compound" ;
+  csl:phenomenon "tri-dict" ;
+  csl:phenomenon "pwg-rich" ;
+  csl:phenomenon "pwk-abridged" ;
+  csl:phenomenon "mw-uncited-pwg-cited" ;
+  csl:phenomenon "homophone" ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-mw> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwk> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-1> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-2> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-3> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-4> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-5> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-6> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-7> .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#form-canonical> a ontolex:Form ;
+  ontolex:writtenRep "BadreSvara"@sa-Latn-x-SLP1 .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-mw> a csl:SourceRecord ;
+  dct:source "Monier-Williams 1899" ;
+  csl:dictionary "mw" ;
+  csl:recordNumber "148512" ;
+  csl:lineNumber "497727" ;
+  csl:pageColumn "746,3" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg> a csl:SourceRecord ;
+  dct:source "Boehtlingk-Roth PWG" ;
+  csl:dictionary "pwg" ;
+  csl:recordNumber "54094" ;
+  csl:lineNumber "523289" ;
+  csl:pageColumn "5-0200" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwk> a csl:SourceRecord ;
+  dct:source "Boehtlingk PWK" ;
+  csl:dictionary "pwk" ;
+  csl:recordNumber "78802" ;
+  csl:lineNumber "324560" ;
+  csl:pageColumn "4-250-a" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-1> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara> ;
+  frac:evidence "ŚKDR." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-2> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara> ;
+  frac:evidence "PURĀṆA." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-3> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara> ;
+  frac:evidence "Verz. d. Oxf. H. 39,b,3." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-4> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara> ;
+  frac:evidence "RĀJA-TAR. 7,38." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-5> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara> ;
+  frac:evidence "44. fg." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-6> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara> ;
+  frac:evidence "106." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#attestation-pwg-7> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara> ;
+  frac:evidence "121." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara#decomposition> a decomp:ComponentList ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ABadreSvara> ;
+  csl:modelingNote "Compound recognized, but component segmentation requires philological review." .
+

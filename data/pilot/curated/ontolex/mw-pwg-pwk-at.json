@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
+    "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
+    "decomp": "http://www.w3.org/ns/lemon/decomp#",
+    "frac": "http://www.w3.org/ns/lemon/frac#",
+    "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#",
+    "morph": "http://www.w3.org/ns/lemon/morph#"
+  },
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/at",
+  "@type": "lexicog:Verbal-rootEntry",
+  "ontolex:canonicalForm": {
+    "@type": "ontolex:Form",
+    "ontolex:writtenRep": "at",
+    "ontolex:gender": "cl."
+  },
+  "csl:phenomenon": [
+    "hedge",
+    "root",
+    "tri-dict",
+    "pwg-rich",
+    "pwk-abridged",
+    "homophone"
+  ],
+  "frac:attestation": {
+    "@type": "frac:Attestation",
+    "frac:value": "L.",
+    "csl:evidenceType": "generic-lexicographer-hedge"
+  },
+  "csl:curationStatus": "human-reviewed",
+  "morph:baseForm": {
+    "@type": "ontolex:Form",
+    "ontolex:writtenRep": "at"
+  }
+}

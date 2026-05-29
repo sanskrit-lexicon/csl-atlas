@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-Bid">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case Bid</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-Bid-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3ABid">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">Bid</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">7</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-Bid-sense-1" n="1">
+      <def xml:lang="en">split, cleave, break, cut or rend asunder, pierce, destroy</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-Bid-sense-2" n="2">
+      <def xml:lang="en">distinguish, discriminate</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-Bid-sense-3" n="3">
+      <def xml:lang="en">separate, divide (see Bedita )</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-Bid-sense-4" n="4">
+      <def xml:lang="en">wish to break through or disperse or defeat</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-Bid-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <note type="root-association">No Whitney root pointer extracted.</note>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-1" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Dhātup. xix, 2</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>ib.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-4" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>ib.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-5" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Var.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-6" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-7" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>AV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-8" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-9" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-10" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>R.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-11" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>TS.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-12" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Br.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-13" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Up.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-14" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>ŚBr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-15" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>ib.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-16" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-17" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-18" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Hariv.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-19" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Var.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-20" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>R.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-21" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Śak.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-22" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-23" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Kāv.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-24" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>MaitrUp.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-25" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Megh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-26" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-27" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Kāv.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-28" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>ib.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-29" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Mn.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-30" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-31" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>ib.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-32" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-33" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Br.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-34" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-35" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Kālid.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-36" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Br.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-37" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Kāv.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-38" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Pur.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-39" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>R.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-mw-40" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-mw">
+        <abbr>Hariv.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>DHĀTUP. 29,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 6,1,68.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>8,2,75</abbr>
+        <ref type="inherited-siglum">P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>ṚV. 10,89,14</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 1,2,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>7,2,61.</abbr>
+        <ref type="inherited-siglum">P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>62.</abbr>
+        <ref type="inherited-siglum">P. 7,2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>67</abbr>
+        <ref type="inherited-siglum">P. 7,2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 7,2,67</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 3,1,57.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>7,2,3</abbr>
+        <ref type="inherited-siglum">P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 1,2,11.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>3,1,57</abbr>
+        <ref type="inherited-siglum">P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 8,2,6</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>SIDDH. K.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 7,2,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>7,2,61. fg.</abbr>
+        <ref type="inherited-siglum">P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 1,2,11</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 8,2,42</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>ṚV. 1,53,8.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>2,14,6.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>AIT. BR. 1,25.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>ṚV. 1,62,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>4,3,11.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>2,11,20.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>3,34,10.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>8,44,11.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>4,2,16.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>16,6.</abbr>
+        <ref type="inherited-siglum">ṚV. 4,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>4,17,3.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>8,6,6.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>AV. 5,23,13.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>ṚV. 1,104,8.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>6,27,6.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>7,104,22.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>P. 3,1,85</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>8,40,10.</abbr>
+        <ref type="inherited-siglum">P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>AV. 6,138,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>VS. 11,64.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwg">
+        <abbr>68.</abbr>
+        <ref type="inherited-siglum">VS. 11,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>ṚV. 6,27,6</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>BAUDH.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-3" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>Comm. zu ĀPAST. ŚR. 5,29,12</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-4" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>MBH. 6,4125</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-5" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>104,27</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-6" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>MBH. 3,135,52</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-7" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>BHAṬṬ.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-8" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>Comm. zu NYĀYAS. 4,2,18</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-9" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>MBH. 2,2483</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-10" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>DAŚAK. 19,8</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-11" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>ŚAT. BR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-12" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>BHĀG. P. 3,2,5</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-13" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>PAÑCAR. 4,6,7</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-14" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>BHĀG. P.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-15" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>ŚAT. BR. 5,3,5,29</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-16" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>BĀLAR. 74,3</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-17" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>Nachtr. 4</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bid-cite-pwk-18" type="named-source-citation" corresp="#mw-pwg-pwk-Bid-record-pwk">
+        <abbr>ĀPAST. ŚR. 3,5,2. 8,5,20</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-Bid-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">150727</idno>
+        <idno type="line">504830</idno>
+        <idno type="pc">756,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;150727&lt;pc&gt;756,3&lt;k1&gt;Bid&lt;k2&gt;Bid&lt;h&gt;1&lt;e&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;Bid&lt;/s&gt; ¦ &lt;ab&gt;cl.&lt;/ab&gt; 7.&lt;ab&gt;P.&lt;/ab&gt; &lt;ab&gt;Ā.&lt;/ab&gt; (&lt;ls&gt;Dhātup. xix, 2&lt;/ls&gt;) &lt;s&gt;Bina/tti&lt;/s&gt;, &lt;s&gt;Bintte&lt;/s&gt; (&lt;ab&gt;impf.&lt;/ab&gt; 2. 3. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;a/Binat&lt;/s&gt;, &lt;ls&gt;RV.&lt;/ls&gt;; &lt;ab&gt;Subj.&lt;/ab&gt; &lt;s&gt;Bina/daH&lt;/s&gt;, &lt;ls&gt;ib.&lt;/ls&gt;; &lt;ab&gt;Impv.&lt;/ab&gt; &lt;s&gt;binDi/&lt;/s&gt;, &lt;ls&gt;ib.&lt;/ls&gt;; &lt;s&gt;bindDi&lt;/s&gt;, &lt;ls&gt;Var.&lt;/ls&gt; [&lt;ab&gt;cf.&lt;/ab&gt; &lt;s&gt;bindDi-lavaRA&lt;/s&gt;]; &lt;ab&gt;cl.&lt;/ab&gt; 1. &lt;ab&gt;P.&lt;/ab&gt; &lt;s&gt;Be/dati&lt;/s&gt;, &lt;ls&gt;RV.&lt;/ls&gt;; &lt;ab&gt;Pot.&lt;/ab&gt; &lt;s&gt;Bideyam&lt;/s&gt;, &lt;ls&gt;AV.&lt;/ls&gt;; &lt;ab&gt;pf.&lt;/ab&gt; &lt;s&gt;biBe/da&lt;/s&gt;, &lt;ls&gt;RV.&lt;/ls&gt;; &lt;ab&gt;aor.&lt;/ab&gt;, 2. 3. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;Be/t&lt;/s&gt;, &lt;ls&gt;RV.&lt;/ls&gt; &lt;s&gt;aBEtsIt&lt;/s&gt;, &lt;ls&gt;R.&lt;/ls&gt;; &lt;s&gt;BitTAs&lt;/s&gt;, &lt;ls&gt;TS.&lt;/ls&gt;; &lt;ab&gt;Prec.&lt;/ab&gt; &lt;s&gt;BitsIzwa&lt;/s&gt; &lt;ab&gt;Gr.&lt;/ab&gt;; &lt;ab&gt;fut.&lt;/ab&gt; &lt;s&gt;Betsya/ti&lt;/s&gt;, &lt;s&gt;˚te&lt;/s&gt;, &lt;ls&gt;Br.&lt;/ls&gt; &amp;c.; &lt;ab&gt;Cond.&lt;/ab&gt; &lt;s&gt;aBetsyat&lt;/s&gt;, &lt;ls&gt;Up.&lt;/ls&gt;; &lt;ab&gt;fut.&lt;/ab&gt; &lt;s&gt;BettA&lt;/s&gt; &lt;ab&gt;Gr.&lt;/ab&gt;; &lt;ab&gt;inf.&lt;/ab&gt; &lt;s&gt;Be/ttavE/&lt;/s&gt;, &lt;ls&gt;ŚBr.&lt;/ls&gt;; &lt;s&gt;Bettum&lt;/s&gt;, &lt;ls&gt;ib.&lt;/ls&gt; &amp;c.; &lt;ab&gt;ind.p.&lt;/ab&gt; &lt;s&gt;BittvA/&lt;/s&gt;, &lt;s&gt;-Bidya&lt;/s&gt;, &lt;ls&gt;RV.&lt;/ls&gt; &amp;c.),
+&lt;div n=&quot;to&quot;/&gt;to split, cleave, break, cut or rend asunder, pierce, destroy, &lt;ls&gt;RV.&lt;/ls&gt; &amp;c. &amp;c.;
+&lt;div n=&quot;to&quot;/&gt;to pass through (as a planet or comet), &lt;ls&gt;Hariv.&lt;/ls&gt;; &lt;ls&gt;Var.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to disperse (darkness), &lt;ls&gt;R.&lt;/ls&gt;; &lt;ls&gt;Śak.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to transgress, violate, (a compact or alliance), &lt;ls&gt;MBh.&lt;/ls&gt;; &lt;ls&gt;Kāv.&lt;/ls&gt; &amp;c.;
+&lt;div n=&quot;to&quot;/&gt;to open, expand, &lt;ls&gt;MaitrUp.&lt;/ls&gt;; &lt;ls&gt;Megh.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to loosen, disentangle, dissolve, &lt;ls&gt;MBh.&lt;/ls&gt;; &lt;ls&gt;Kāv.&lt;/ls&gt; &amp;c.;
+&lt;div n=&quot;to&quot;/&gt;to disturb, interrupt, stop, &lt;ls&gt;ib.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to disclose, betray, &lt;ls&gt;Mn.&lt;/ls&gt;; &lt;ls&gt;MBh.&lt;/ls&gt; &amp;c.;
+&lt;div n=&quot;to&quot;/&gt;to disunite, set at variance, &lt;ls&gt;ib.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to distinguish, discriminate, &lt;ls&gt;L.&lt;/ls&gt; :
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Pass.&lt;/ab&gt; &lt;s&gt;Bidya/te&lt;/s&gt; (&lt;lang&gt;ep.&lt;/lang&gt; also &lt;s&gt;˚ti&lt;/s&gt; &lt;ab&gt;aor.&lt;/ab&gt; &lt;s&gt;aBedi&lt;/s&gt;, &lt;ls&gt;Br.&lt;/ls&gt;; &lt;ls&gt;MBh.&lt;/ls&gt; &amp;c.; &lt;ab&gt;pf.&lt;/ab&gt; &lt;s&gt;biBide&lt;/s&gt;, &lt;ls&gt;Kālid.&lt;/ls&gt;),
+&lt;div n=&quot;to&quot;/&gt;to be split or broken, burst (&lt;ab&gt;intrans.&lt;/ab&gt;), &lt;ls&gt;Br.&lt;/ls&gt; &amp;c. &amp;c.;
+&lt;div n=&quot;to&quot;/&gt;to be opened (as a closed hand, eyes &amp;c.), &lt;ls&gt;Kāv.&lt;/ls&gt;; &lt;ls&gt;Pur.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to overflow (as water), &lt;ls&gt;R.&lt;/ls&gt;; &lt;ls&gt;Hariv.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to be loosened, become loose, &lt;ls&gt;MuṇḍUp.&lt;/ls&gt;; &lt;ls&gt;Kāv.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to be stopped or interrupted, &lt;ls&gt;MBh.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to be disclosed or betrayed, &lt;ls&gt;Kāv.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to be changed or altered (in mind), be won over, &lt;ls&gt;Kāv.&lt;/ls&gt;; &lt;ls&gt;Pur.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to be disunited, &lt;ls&gt;MBh.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to keep aloof from (&lt;ab&gt;instr.&lt;/ab&gt;), &lt;ls&gt;ib.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to be distinguished, differ from (&lt;ab&gt;abl.&lt;/ab&gt;), &lt;ls&gt;Sāṃkhyak.&lt;/ls&gt;; &lt;ls&gt;Kāv.&lt;/ls&gt; &amp;c.:
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Caus.&lt;/ab&gt; &lt;s&gt;Bedayati&lt;/s&gt;, &lt;s&gt;˚te&lt;/s&gt; (&lt;ab&gt;aor.&lt;/ab&gt; &lt;s&gt;abIBidat&lt;/s&gt;; &lt;ab&gt;cf.&lt;/ab&gt; also &lt;s&gt;BidApana&lt;/s&gt;),
+&lt;div n=&quot;to&quot;/&gt;to cause to split or break &amp;c.;
+&lt;div n=&quot;to&quot;/&gt;to split, break, shatter, crush, destroy, &lt;ls&gt;MBh.&lt;/ls&gt;; &lt;ls&gt;Hariv.&lt;/ls&gt;; &lt;ls&gt;Hit.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to separate, divide (see &lt;s&gt;Bedita&lt;/s&gt;);
+&lt;div n=&quot;to&quot;/&gt;to disunite, set at variance, perplex, unsettle (in opinion), seduce, win over, &lt;ls&gt;MBh.&lt;/ls&gt;; &lt;ls&gt;R.&lt;/ls&gt; :
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Desid.&lt;/ab&gt; &lt;s&gt;bi/Bitsati&lt;/s&gt;, &lt;s&gt;˚te&lt;/s&gt;, to wish to break through or disperse or defeat, &lt;ls&gt;RV.&lt;/ls&gt;; &lt;ls&gt;MBh.&lt;/ls&gt; (&lt;ab&gt;cf.&lt;/ab&gt;, &lt;s&gt;biBitsA&lt;/s&gt;) :
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Desid.&lt;/ab&gt; of &lt;ab&gt;Caus.&lt;/ab&gt; See &lt;s&gt;biBedayizu&lt;/s&gt;:
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Intens.&lt;/ab&gt; &lt;s&gt;beBidIti&lt;/s&gt; or &lt;s&gt;beBetti&lt;/s&gt;, to cleave repeatedly, &lt;ls&gt;Bhaṭṭ.&lt;/ls&gt;&lt;info westergaard=&quot;vyaTa,19.2,01.0499&quot;/&gt;&lt;info whitneyroots=&quot;Bid,111&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;7P,7Ā,1P&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Bid-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">54863</idno>
+        <idno type="line">531980</idno>
+        <idno type="pc">5-0281</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;54863&lt;pc&gt;5-0281&lt;k1&gt;Bid&lt;k2&gt;Bid&lt;h&gt;1
+1. {#Bid#}¦, {#Bina/tti, Bintte#}
+&lt;ls&gt;DHĀTUP. 29,2.&lt;/ls&gt; {#a/Binad, Bina/d#},2. &lt;ab&gt;p.&lt;/ab&gt; {#aBinas#} und {#aBinad#} (
+&lt;ab&gt;Sch.&lt;/ab&gt; zu &lt;ls&gt;P. 6,1,68.&lt;/ls&gt; &lt;ls n=&quot;P.&quot;&gt;8,2,75&lt;/ls&gt;), {#Bina/das#} (
+&lt;ls&gt;ṚV. 10,89,14&lt;/ls&gt;), {#BindDi (BinDi/)#}, &lt;ab&gt;ved.&lt;/ab&gt; {#Be/dati#} und {#aBedam; biBeda, biBide, biBediTa#} (
+&lt;ab&gt;Sch.&lt;/ab&gt; zu &lt;ls&gt;P. 1,2,5.&lt;/ls&gt; &lt;ls n=&quot;P.&quot;&gt;7,2,61.&lt;/ls&gt; &lt;ls n=&quot;P. 7,2,&quot;&gt;62.&lt;/ls&gt; &lt;ls n=&quot;P. 7,2,&quot;&gt;67&lt;/ls&gt;), {#biBidvaMs#} (
+&lt;ls&gt;P. 7,2,67&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;);
+{#aBidat#} und {#aBEtsIt#} (
+&lt;ab&gt;Sch.&lt;/ab&gt; zu &lt;ls&gt;P. 3,1,57.&lt;/ls&gt; &lt;ls n=&quot;P.&quot;&gt;7,2,3&lt;/ls&gt;), {#aBitta#} (
+&lt;ab&gt;Sch.&lt;/ab&gt; zu &lt;ls&gt;P. 1,2,11.&lt;/ls&gt; &lt;ls n=&quot;P.&quot;&gt;3,1,57&lt;/ls&gt;), {#aBitTAs, aBitsAtAm#}
+(&lt;ls&gt;P. 8,2,6&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;), &lt;ab&gt;ved.&lt;/ab&gt; {#Bed, Bedi, BitTAs; Betsyati, ˚te, BettA#} (&lt;is&gt;Kār.&lt;/is&gt; 3
+aus &lt;ls&gt;SIDDH. K.&lt;/ls&gt; zu &lt;ls&gt;P. 7,2,10.&lt;/ls&gt; &lt;ab&gt;Sch.&lt;/ab&gt; zu &lt;ls n=&quot;P.&quot;&gt;7,2,61. fg.&lt;/ls&gt;); {#BitsIzwa#}
+(&lt;ls&gt;P. 1,2,11&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt; );
+&lt;ab&gt;inf.&lt;/ab&gt; {#Bettum#}, &lt;ab&gt;ved.&lt;/ab&gt; {#Be/ttavE/#}; &lt;ab&gt;pass.&lt;/ab&gt; {#Bidyate, Binna/#}
+(&lt;ls&gt;P. 8,2,42&lt;/ls&gt;).
+&lt;div n=&quot;1&quot;&gt; 1) {%spalten, einbrechen, ein Loch in Etwas schlagen, zerschlagen, zersprengen, aufreissen, schlitzen%}: {#puraH#}
+&lt;ls&gt;ṚV. 1,53,8.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;2,14,6.&lt;/ls&gt;
+&lt;ls&gt;AIT. BR. 1,25.&lt;/ls&gt; {#adrim#}
+&lt;ls&gt;ṚV. 1,62,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;4,3,11.&lt;/ls&gt; {#valam#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,11,20.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;3,34,10.&lt;/ls&gt; {#Bi\nDi dveza^H#}
+&lt;ls n=&quot;ṚV.&quot;&gt;8,44,11.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;4,2,16.&lt;/ls&gt; {#aSmA^naM ci\dye bi^Bi\durvaco^BiH#}
+&lt;ls n=&quot;ṚV. 4,&quot;&gt;16,6.&lt;/ls&gt; {#girim#}
+&lt;ls n=&quot;ṚV.&quot;&gt;4,17,3.&lt;/ls&gt; {#SiraH#}
+&lt;ls n=&quot;ṚV.&quot;&gt;8,6,6.&lt;/ls&gt; &lt;ls&gt;AV. 5,23,13.&lt;/ls&gt; {#pAtrA#}
+&lt;ls&gt;ṚV. 1,104,8.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;6,27,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;7,104,22.&lt;/ls&gt; {#yaH SuzRa^syA\RqAni\ Beda^ti#}
+(&lt;ls&gt;P. 3,1,85&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;) &lt;ls n=&quot;P.&quot;&gt;8,40,10.&lt;/ls&gt; &lt;ls&gt;AV. 6,138,2.&lt;/ls&gt; &lt;ls&gt;VS. 11,64.&lt;/ls&gt; &lt;ls n=&quot;VS. 11,&quot;&gt;68.&lt;/ls&gt; &lt;ls&gt;AV. 2,32,6.&lt;/ls&gt; {#muzkO#}
+&lt;ls n=&quot;ṚV.&quot;&gt;4,37,7.&lt;/ls&gt; {#nA\qyO^#}
+&lt;ls n=&quot;ṚV.&quot;&gt;6,138,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 6,138,&quot;&gt;5.&lt;/ls&gt; {#sapatnAn#}
+&lt;ls n=&quot;ṚV.&quot;&gt;5,28,4.&lt;/ls&gt; {#BinnA nOH#}
+&lt;ls n=&quot;ṚV. 5,&quot;&gt;19,8.&lt;/ls&gt; &lt;ls&gt;ṚV. 1,32,8.&lt;/ls&gt; &lt;ls&gt;AIT. BR. 7,5.&lt;/ls&gt; {#keSaH sahasraDA BinnaH#}
+&lt;ls&gt;ŚAT. BR. 14,6,11,4.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,9,4,18.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;9,1,2,12.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;12,4,1,6.&lt;/ls&gt; {#yadvE kiM ca yajYe mfnmayaM Bidyate#}
+&lt;ls&gt;ṢAḌV. BR. 1,6.&lt;/ls&gt; {#hatvA BittvA ca SIrzARi#}
+&lt;ls&gt;ĀŚV. GṚHY. 1,6,8. 3,10,11.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 26,7,48.&lt;/ls&gt;
+&lt;ls&gt;KAUŚ. 57.&lt;/ls&gt; {#nyagroDaPalaM BinDi#}
+&lt;ls&gt;CHĀND. UP. 6,12,1.&lt;/ls&gt; {#hatvA CittvA ca BittvA ca#}
+&lt;ls&gt;M. 3,33.&lt;/ls&gt; {#CinDi BinDi praDAva#}
+&lt;ls&gt;MBH. 1,1175.&lt;/ls&gt; {#prahara hara cCindDi BindDi#}
+&lt;ls&gt;VARĀH. BṚH. S. 46,77.&lt;/ls&gt; {#vane kAzWAni BindataH (me)#}
+&lt;ls&gt;SĀV. 6,30.&lt;/ls&gt;
+&lt;ls&gt;R. 2,80,10.&lt;/ls&gt; {#lakzyaM BittvA#}
+&lt;ls&gt;MBH. 1,152.&lt;/ls&gt; &lt;ls n=&quot;MBH. 1,&quot;&gt;7004.&lt;/ls&gt; {#lakzaRam#}
+&lt;ls&gt;MAITRYUP. 6,24.&lt;/ls&gt; {#sAyakEH kAMScidaBinat#}
+&lt;ls&gt;MBH. 1,2834.&lt;/ls&gt; &lt;ls n=&quot;MBH. 1,&quot;&gt;1170.&lt;/ls&gt;
+&lt;ls&gt;R. 1,1,64.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;3,50,18&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;6,75,63.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 5,55.&lt;/ls&gt; &lt;ls n=&quot;RAGH.&quot;&gt;12,77.&lt;/ls&gt; &lt;ls n=&quot;RAGH. 12,&quot;&gt;91.&lt;/ls&gt;
+&lt;ls&gt;ŚIŚ. 9,66.&lt;/ls&gt;
+&lt;ls&gt;BHAṬṬ. 15,65.&lt;/ls&gt; &lt;ls n=&quot;BHAṬṬ. 15,&quot;&gt;117.&lt;/ls&gt; {#DanuzA hfdi BinnaH#}
+&lt;ls&gt;HIT. 35,13.&lt;/ls&gt; {#tAnpakzanaKatuRqAgrEraBinadvinatAsutaH#}
+&lt;ls&gt;MBH. 1,1490.&lt;/ls&gt; {#Bindanti#} (so ist zu lesen) {#mama#} (die Sonne spricht) {#maRqalam#}
+&lt;ls&gt;KATHĀS. 48,5.&lt;/ls&gt; {#aBittvA paramarmARi#}
+&lt;ls&gt;Spr. 1543.&lt;/ls&gt; {#vajraM vajreRa Bidyate#}
+&lt;ls&gt;KĀM. NĪTIS. 8. 67.&lt;/ls&gt; {#darBaBinnapeSalapAdA#}
+&lt;ls&gt;SOM. NALA 73.&lt;/ls&gt; {#pfTivIM lANgaleneha BittvA#}
+&lt;ls&gt;MBH. 3,1248.&lt;/ls&gt; {#Binatti BImaM karirAjakumBam (siMhaH)#}
+&lt;ls&gt;Spr. 2047.&lt;/ls&gt; {#DaraRItalam . biBiduH — vajrasparSasamErBujEH#}
+&lt;ls&gt;R. 1,40,18.&lt;/ls&gt; {#atiSItalamapyamBaH kiM Binatti na BUBftaH#}
+&lt;ls&gt;Spr. 1853.&lt;/ls&gt;
+&lt;ls&gt;BHAṬṬ. 6,35.&lt;/ls&gt; &lt;ls n=&quot;BHAṬṬ. 6,&quot;&gt;116.&lt;/ls&gt; &lt;ls n=&quot;BHAṬṬ.&quot;&gt;15,22.&lt;/ls&gt; {#nABidyata mahAvyUho BImena#}
+&lt;ls&gt;MBH. 6,2433.&lt;/ls&gt; &lt;ls n=&quot;MBH. 6,&quot;&gt;2432.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;7,1521.&lt;/ls&gt; {#girIRAmiva BidyatAm (adrIRAmiva BindatAm#} die ältere &lt;ab&gt;Ausg.&lt;/ab&gt;) {%bersten%}
+&lt;ls n=&quot;MBH.&quot;&gt;6,4125.&lt;/ls&gt; {#svayameva kAzWaM Bidyate, aBedi#}
+&lt;ls&gt;VOP. 24,8.&lt;/ls&gt; {#nirGozo Bindanniva rasAtalam#}
+&lt;ls&gt;LA. (II) 90,6.&lt;/ls&gt; {#(DvaniH) yajYamuzAM manAMsi Bindan#}
+&lt;ls&gt;VARĀH. BṚH. S. 19,13.&lt;/ls&gt; {#BidyerandarSanAdasyA BIrURAM hfdayAni ca#}
+&lt;ls&gt;R. 1,28,9.&lt;/ls&gt; {#(amitram) BindyAdGawamivASmani#}
+&lt;ls&gt;Spr. 2764.&lt;/ls&gt;
+&lt;ls&gt;MBH. 4,687.&lt;/ls&gt; {#aRqAni biBrati svAni na Bindanti pipIlikAH#}
+&lt;ls n=&quot;MBH.&quot;&gt;1,3042.&lt;/ls&gt; {#BImo gadAGAtEstavoru Betsyate#}
+&lt;ls&gt;MBH. 3,379.&lt;/ls&gt; {#BinnA nOH#}
+&lt;ls&gt;Spr. 3065.&lt;/ls&gt;
+&lt;ls&gt;BHAṬṬ. 5,88.&lt;/ls&gt; {#Gawa#}
+&lt;ls&gt;Spr. 2917.&lt;/ls&gt; {#BARqa#}
+&lt;ls&gt;M. 4,65.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;10,52.&lt;/ls&gt; {#BAjana#}
+&lt;ls n=&quot;M. 10,&quot;&gt;54.&lt;/ls&gt; {#Asana#}
+&lt;ls n=&quot;M.&quot;&gt;4,69.&lt;/ls&gt; {#BinnaSfNgAkziKurEH #}
+[Page5-0282]
+{# (DuryEH)#}
+&lt;ls n=&quot;M. 4,&quot;&gt;67.&lt;/ls&gt; {#tUryaGozErdvizAM sEnyaM BindannAnandayannijam#} {%auseinandersprengend%}
+&lt;ls&gt;RĀJA-TAR. 6,246.&lt;/ls&gt; {#kawakaM biBiduH#}
+&lt;ls&gt;KATHĀS. 15,101.&lt;/ls&gt; {#Binne sEnye#}
+&lt;ls n=&quot;KATHĀS. 15,&quot;&gt;102.&lt;/ls&gt; {#BinnasAraNgayUTa (gaja)#}
+&lt;ls&gt;ŚĀK. 32.&lt;/ls&gt; {#SItena Bidyate#} {%vor Kälte bersten%}
+&lt;ls&gt;PAÑCAT. I,436.&lt;/ls&gt; &lt;ls n=&quot;PAÑCAT.&quot;&gt;III,148.&lt;/ls&gt; {#BerI#}
+&lt;ls&gt;MBH. 4,772.&lt;/ls&gt;
+&lt;ls&gt;SUŚR. 1,155,20.&lt;/ls&gt; {#Binna = dArita, dIrRa#}
+&lt;ls&gt;AK. 3,2,50.&lt;/ls&gt;
+&lt;ls&gt;TRIK. 3,3,250.&lt;/ls&gt;
+&lt;ls&gt;H. 1488.&lt;/ls&gt;
+&lt;ls&gt;an. 2,277.&lt;/ls&gt;
+&lt;ls&gt;MED. n. 14.&lt;/ls&gt; {#setum, maryAdAm, velAM Bid#} {%einen Damm, Schranken, das Ufer durchbrechen%}: {#badDaM setuM ko nu#} (so ist zu lesen) {#BindyAt#}
+&lt;ls&gt;MBH. 2,2483.&lt;/ls&gt; {#amBasA Bidyate setuH#}
+&lt;ls&gt;Spr. 119.&lt;/ls&gt; {#Bidyeransarve setavaH#}
+&lt;ls&gt;M. 7,24.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 3,21,54.&lt;/ls&gt; {#DarmasetUnBindanti te#}
+&lt;ls n=&quot;BHĀG. P. 3,&quot;&gt;5,26.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P. 3,5,&quot;&gt;22.&lt;/ls&gt; {#BinnamaryAdA Bavanti kila sAgarAH#}
+&lt;ls&gt;Spr. 4588.&lt;/ls&gt; {#BinnamaryAdin#}
+&lt;ls&gt;MĀRK. P. S. 660, Z. 6.&lt;/ls&gt; {#aBinnavelO gamBIrAvamburASirBavAnapi#}
+&lt;ls&gt;Spr. 3542.&lt;/ls&gt;
+&lt;ls&gt;HARIV. 2465.&lt;/ls&gt; {#sTitiM#} (= {#maryAdAM#} &lt;ab&gt;Schol.&lt;/ab&gt;) {#Bindan#}
+&lt;ls&gt;BHAṬṬ. 7,68.&lt;/ls&gt; {#aBinnasTitiH#}
+&lt;ls&gt;ŚĀK. 107.&lt;/ls&gt; {#BindyAccEva taqAgAni prAkArapariKAstaTA#} {%durchstechen, durchbrechen%}
+&lt;ls&gt;M. 7,196.&lt;/ls&gt; {#prapAm#}
+&lt;ls n=&quot;M.&quot;&gt;8,319.&lt;/ls&gt; {#AgamamapAm#}
+&lt;ls n=&quot;M.&quot;&gt;9,281.&lt;/ls&gt; {#vAri BidyamAnam#} {%sich brechendes, tosendes Wasser%}
+&lt;ls&gt;R. 1,26,6.&lt;/ls&gt; {#yugAnte BidyamAnAnAM sAgarARAmiva svanaH#} {%durchbrechend, über die Ufer tretend%}
+&lt;ls&gt;HARIV. 5003.&lt;/ls&gt; {#sAgarasyeva BidyataH#}
+&lt;ls&gt;R. GORR. 2,5,27.&lt;/ls&gt; ein Planet oder Komet {%durchbricht%} einen Stern, wenn er {%durch ihn durchgeht%}: {#ketunA DUmaketostu nakzatrARi trayodaSa . BaraRyAdIni BinnAni nAnuyAnti niSAkaram ..#}
+&lt;ls&gt;HARIV. 4259.&lt;/ls&gt;
+&lt;ls&gt;SŪRYAS. 8,13.&lt;/ls&gt;
+&lt;ls&gt;VARĀH. BṚH. S. 4,25.&lt;/ls&gt; &lt;ls n=&quot;VARĀH. BṚH. S. 4,&quot;&gt;26.&lt;/ls&gt; &lt;ls n=&quot;VARĀH. BṚH. S.&quot;&gt;6,9.&lt;/ls&gt; &lt;ls n=&quot;VARĀH. BṚH. S.&quot;&gt;9,28.&lt;/ls&gt;
+&lt;ls&gt;Spr. 1886.&lt;/ls&gt; &lt;ls n=&quot;Spr.&quot;&gt;2354.&lt;/ls&gt; &lt;ls n=&quot;Spr.&quot;&gt;2649.&lt;/ls&gt; {#yadi Bintte sUryasuto rohiRyAH Sakawam#}
+&lt;ls n=&quot;Spr.&quot;&gt;2367.&lt;/ls&gt; {#tamaH, timiraM Bid#} {%die Finsterniss durchbrechen, — zerstreuen%}
+&lt;ls&gt;P. Einl. 2.&lt;/ls&gt; &lt;ls&gt;ŚĀK. 181.&lt;/ls&gt; &lt;ls&gt;VID. 145.&lt;/ls&gt; {#yo na Bidyate (saMgatasaMDiH)#} {%ein Bündniss, das nicht gebrochen wird%},
+&lt;ls&gt;Spr. 4880.&lt;/ls&gt; {#yESunyAdBidyate snehaH#}
+&lt;ls n=&quot;Spr.&quot;&gt;199.&lt;/ls&gt; {#saMbanDiBinno &apos;pi gireH kulasya snehastadekAyatanaM jagAma#}
+&lt;ls&gt;KUMĀRAS. 7,5.&lt;/ls&gt; {#kzaRaBinnasOhfdaH#}
+&lt;ls n=&quot;KUMĀRAS.&quot;&gt;4,6.&lt;/ls&gt; {#prItiralpena Bidyate#}
+&lt;ls&gt;Spr. 5234.&lt;/ls&gt; {#BittvA pratijYAm#}
+&lt;ls&gt;HARIV. 8121.&lt;/ls&gt; {#vrataM BindDi#}
+&lt;ls&gt;SĀV. 4,7.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%spalten%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%theilen%}: {#biBeda puruzatvaM ca daSaDA cEkaDA ca saH#}
+&lt;ls&gt;Verz. d. Oxf. H. 82,b,23.&lt;/ls&gt; {#AnandajaH SokajamaSru vAzpastayoraSItaM SiSiro biBeda . gaNgAsarawvorjalamuzRataptaM himAdrinisyanda ivAvatIrRaH ..#}
+&lt;ls&gt;RAGH. 14,3.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%sich theilen%}: {#tezAM dvayordvayorEkyaM biBide na kadA ca na#}
+&lt;ls n=&quot;RAGH.&quot;&gt;10,83.&lt;/ls&gt; {#ekEva mUrtirbiBide triDA sA#}
+&lt;ls&gt;KUMĀRAS. 7,44.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 2,10,41.&lt;/ls&gt;
+&lt;ls&gt;MĀRK. P. 101,8.&lt;/ls&gt;
+&lt;ls&gt;VARĀH. BṚH. S. 33,1.&lt;/ls&gt; {#kekA dviDA BinnAH SiKaRqiBiH#}
+&lt;ls&gt;RAGH. 1,39.&lt;/ls&gt; &lt;ls n=&quot;RAGH.&quot;&gt;12,98.&lt;/ls&gt; &lt;ls n=&quot;RAGH. 12,&quot;&gt;100.&lt;/ls&gt;
+&lt;ls&gt;KUMĀRAS. 2,7.&lt;/ls&gt;
+&lt;ls&gt;RĀJA-TAR. 5,260.&lt;/ls&gt;
+&lt;ls&gt;P. 4,1,94&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#BinnaH paRaH#} {%ein getheilter%} &lt;is&gt;Paṇa&lt;/is&gt; so &lt;ab&gt;v. a.&lt;/ab&gt; {%kein ganzer%}
+P., {%weniger als ein%}
+P. &lt;ls&gt;YĀJÑ. 2,248.&lt;/ls&gt; {#Binna#} {%ein Bruch, eine gebrochene Zahl%}
+&lt;ls&gt;COLEBR. Alg. 13.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%spalten%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%öffnen; blühen machen%}; &lt;ab&gt;pass.&lt;/ab&gt; {%sich öffnen%}: {#KAnImAni BittvA#}
+&lt;ls&gt;MAITRYUP. 2,6.&lt;/ls&gt; {#biBide niviqo &apos;pi muzwiH#}
+&lt;ls&gt;RAGH. 9,58.&lt;/ls&gt; {#aBidyetAmakziRI#}
+&lt;ls&gt;BHĀG. P. 3,26,55.&lt;/ls&gt; {#navozasA BinnamivEkapaNkajam#} {%aufgeblüht%}
+&lt;ls&gt;ŚĀK. 175.&lt;/ls&gt;
+&lt;ls&gt;KUMĀRAS. 1,32.&lt;/ls&gt; {#ketakEH sUciBinnEH#}
+&lt;ls&gt;MEGH. 24.&lt;/ls&gt; {#BittvA sadyaH kisalayapuwAndevadrumARAm#}
+&lt;ls n=&quot;MEGH.&quot;&gt;106.&lt;/ls&gt; {#Binna#} = {#Pulla#}
+&lt;ls&gt;H. an. 2,277.&lt;/ls&gt;
+&lt;ls&gt;MED. n. 14.&lt;/ls&gt; {#Binnakarawa#} von einem Elephanten, {%dessen Schläfen sich%} (während der Brunstzeit) {%geöffnet haben und fliessen%}
+&lt;ls&gt;MBH. 3,16039.&lt;/ls&gt; {#madaBinnagaRqakarawa#}
+&lt;ls&gt;Spr. 2399.&lt;/ls&gt; {#Binna#} (&lt;ab&gt;vgl.&lt;/ab&gt; {#praBinna)#} allein von einem {%brünstigen%} Elephanten gebraucht: {#madavegaBinnA mattA yaTA hEmavatA gajAH#}
+&lt;ls&gt;MBH. 1,7006.&lt;/ls&gt;
+&lt;ls&gt;Spr. 2529&lt;/ls&gt; (&lt;ab&gt;Conj.&lt;/ab&gt;). in der Stelle {#BinneBamOktikApUrRapARiH siMhaH#}
+&lt;ls&gt;RĀJA-TAR. 4,176&lt;/ls&gt; bedeutet aber {#Binna#} nicht {%brünstig%}, sondern {%zerfleischt.%}
+&lt;div n=&quot;1&quot;&gt;— 4) {%lösen%}, &lt;ab&gt;pass.&lt;/ab&gt; {%sich lösen, aufgehen%}: {#prasTAnaBinnAM na babanDa nIvIm#}
+&lt;ls&gt;RAGH. 7,9.&lt;/ls&gt; {#tatastO tu jawA#} (so die &lt;ls&gt;ed. Bomb.&lt;/ls&gt; und
+&lt;ls&gt;SUND. 1,30&lt;/ls&gt;) {#BittvA mOlinO saMbaBUvatuH#}
+&lt;ls&gt;MBH. 1,7647.&lt;/ls&gt; {#SirastranizkarzaRaBinnamOli#}
+&lt;ls&gt;RAGH. 7,63.&lt;/ls&gt; {#Bidyate hfdayagranTiSCidyante sarvasaMSayAH#}
+&lt;ls&gt;MUṆḌ. UP. 2,2. 8.&lt;/ls&gt;
+[Page5-0283]
+{#vacAMsi yogagraTitAni sADo na naH kzamaM te manasApi Bettum#} {%entwirren%}
+&lt;ls&gt;BHĀG. P. 5,10,19.&lt;/ls&gt; {#tacClokakUwamadyApi graTitaM sudfQaM mune . BettuM na Sakyate &apos;rTasya gUQatvAt#}
+&lt;ls&gt;MBH. 1,82.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 5) {%unterbrechen, stören%}: {#tayordvAHsTaH samayaM lakzmaRo &apos;Binat#}
+&lt;ls&gt;RAGH. 15,94.&lt;/ls&gt; {#tezAM na BinnA mudaH#}
+&lt;ls&gt;Spr. 2526.&lt;/ls&gt; {#tatastErBidyate vfttam#} {%den guten Lebenswandel unterbrechen%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%ihn verlassen%}
+&lt;ls&gt;MBH. 13,7544. fg.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#Binnavftta#}.{# BrUBaNgaBinnatilaka#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%verwischt%}
+&lt;ls&gt;MĀLAV. 67.&lt;/ls&gt;
+&lt;ls&gt;DAŚAK.&lt;/ls&gt; in &lt;ls&gt;BENF. Chr. 199,5.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 6) {%brechen%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%verrathen%}: {#BindantyavamatA mantram#}
+&lt;ls&gt;M. 7,150.&lt;/ls&gt;
+&lt;ls&gt;KĀM. NĪTIS. 11,65.&lt;/ls&gt; &lt;ls&gt;Spr. 2548.&lt;/ls&gt; {#zawkarRo Bidyate mantraH#}
+&lt;ls n=&quot;Spr.&quot;&gt;3060. fgg.&lt;/ls&gt; &lt;ls n=&quot;Spr.&quot;&gt;3871.&lt;/ls&gt; &lt;ls n=&quot;Spr.&quot;&gt;199.&lt;/ls&gt; {#Binnamantra#}
+&lt;ls&gt;R. 4,55,9.&lt;/ls&gt; {#mantravIjamidaM yatnAdrakzaRIyaM taTA yaTA . manAgapi na Bidyeta tadBinnaM na prarohati ..#}
+&lt;ls&gt;Spr. 2113.&lt;/ls&gt;
+&lt;ls&gt;KĀM. NĪTIS. 11,53.&lt;/ls&gt; {#na rahasyaM Betsyati#}
+&lt;ls&gt;DAŚAK.&lt;/ls&gt; in &lt;ls&gt;BENF. Chr. 197,20.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 7) {%spalten, theilen%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%entzweien%}: {#dUta eva hi saMDatte Binattyeva ca saMhatAn . dUtastatkurute karma Bidyante yena vA na vA ..#}
+&lt;ls&gt;M. 7,66.&lt;/ls&gt; {#jalavatparvatAYCatrUnBindyAdanupalakzitaH#}
+&lt;ls&gt;KĀM. NĪTIS. 17,17. 22.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 46,50.&lt;/ls&gt; {#kaTaM ca paYca kfzRAyAmekasyAM te narADipAH . vartamAnA mahABAgA nABidyanta parasparam ..#}
+&lt;ls&gt;MBH. 1,7598.&lt;/ls&gt; {#BinnAH#} {%Entzweite, Zerfallene%}
+&lt;ls n=&quot;MBH. 1,&quot;&gt;1358. fg.&lt;/ls&gt; &lt;ls&gt;Spr. 4331. fg.&lt;/ls&gt;
+&lt;ls&gt;R. 4,54,7.&lt;/ls&gt;
+&lt;ls&gt;KĀM. NĪTIS. 17,25. 19,2.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 34,210.&lt;/ls&gt; {#dAnaBinna#} {%durch Geschenke abtrünnig gemacht, — bestochen%}
+&lt;ls&gt;Spr. 4956.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%sich abtheilen von, sich fernhalten von%} (&lt;ab&gt;instr.&lt;/ab&gt;): {#dvezyErapakzErahitESca tasya Bidyasva nityaM kuhakodDatESca#}
+&lt;ls&gt;MBH. 3,14718.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 8) {%Jmd mit sich selbst entzweien, irre machen, umstimmen%}: {#mahAnto &apos;pi hi Bidyante strIBiradBirivAcalAH#}
+&lt;ls&gt;Spr. 2102.&lt;/ls&gt; {#evaM viprakfto rAjanvalirBagavatAsuraH . BidyamAno &apos;pyaBinnAtmA pratyAha#}
+&lt;ls&gt;BHĀG. P. 8,22,1.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#vAgBirBedyo hi kAtaraH#}
+&lt;ls&gt;Spr. 199.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 9) {%ändern%}; &lt;ab&gt;pass.&lt;/ab&gt; {%sich ändern%}: {#na — Bindanti mandAM gatim#}
+&lt;ls&gt;KUMĀRAS. 1,11.&lt;/ls&gt; {#yaTemA nadyaH syandamAnAH samudrAyaRAH samudraM prApyAstaM gacCanti Bidyete tAsAM nAmarUpe#}
+&lt;ls&gt;PRAŚNOP. 6,5.&lt;/ls&gt; {#SuzkaBinnamuKasvarAH#}
+&lt;ls&gt;YĀJÑ. 2,267.&lt;/ls&gt; {#Binnasvara#} {%eine veränderte, entstellte Stimme habend%}
+&lt;ls&gt;SUŚR. 1,308,14.&lt;/ls&gt; &lt;ls n=&quot;SUŚR.&quot;&gt;2,85,13.&lt;/ls&gt;
+&lt;ls&gt;Spr. 2048.&lt;/ls&gt;
+&lt;ls&gt;ŚĀK. CH. 140,10.&lt;/ls&gt; {#BinnakaRWaDvani#}
+&lt;ls&gt;SĀH. D. 28.&lt;/ls&gt; {#viSvAsopagamAdaBinnagatayaH (mfgAH)#}
+&lt;ls&gt;ŚĀK. 14.&lt;/ls&gt;
+&lt;ls&gt;VIKR. 80.&lt;/ls&gt; {#BinnavarRADarOzWa#}
+&lt;ls&gt;MEGH. 82.&lt;/ls&gt; {#CAyABinnasPawikaviSada#}
+&lt;ls n=&quot;MEGH.&quot;&gt;63.&lt;/ls&gt; {#Binno rAgaH kisalarucAmAjyaDUmodgamena#} ad
+&lt;ls&gt;ŚĀK. 14.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 10) {%unterscheiden, einen Unterschied machen%}; &lt;ab&gt;pass.&lt;/ab&gt; {%verschieden sein. sich unterscheiden von%} (&lt;ab&gt;abl.&lt;/ab&gt;): {#ityanye Bindanti#}
+&lt;ls&gt;H. 309.&lt;/ls&gt;
+&lt;ab&gt;Sch.&lt;/ab&gt; {#upADirBidyate#}
+&lt;ls&gt;KAP. 1,152.&lt;/ls&gt; {#Bidyete rUpanAmanI#}
+&lt;ls&gt;BĀLAB. 21.&lt;/ls&gt; {#na kAraRAdbiBide kumAraH#}
+&lt;ls&gt;RAGH. 5,37.&lt;/ls&gt;
+&lt;ls&gt;ŚIŚ. 9,16.&lt;/ls&gt;
+&lt;ls&gt;MALLIN.&lt;/ls&gt; zu &lt;ls&gt;ŚIŚ. 12,63.&lt;/ls&gt; &lt;ab&gt;Schol.&lt;/ab&gt; bei &lt;ls&gt;WILSON, SĀṂKHYAK. S. 38.&lt;/ls&gt; {#Binna#} {%verschieden%}
+&lt;ls&gt;AK. 3,2,32.&lt;/ls&gt;
+&lt;ls&gt;TRIK. 3,1,18.&lt;/ls&gt; &lt;ls n=&quot;TRIK. 3,1,&quot;&gt;27.&lt;/ls&gt; &lt;ls n=&quot;TRIK. 3,&quot;&gt;3,250.&lt;/ls&gt;
+&lt;ls&gt;H. 1468.&lt;/ls&gt;
+&lt;ls&gt;an. 2,277.&lt;/ls&gt;
+&lt;ls&gt;MED. n. 14.&lt;/ls&gt; &lt;ls&gt;RAGH. 2,50.&lt;/ls&gt; &lt;ls&gt;ŚĀK. 50.&lt;/ls&gt; &lt;ls&gt;MĀLAV. 4.&lt;/ls&gt; &lt;ls&gt;SŪRYAS. 1,26. 7,10.&lt;/ls&gt; &lt;ls&gt;Spr. 229.&lt;/ls&gt; &lt;ls n=&quot;Spr.&quot;&gt;382.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 33,108.&lt;/ls&gt; &lt;ls&gt;RĀJA-TAR. 4,428.&lt;/ls&gt; &lt;ls n=&quot;RĀJA-TAR.&quot;&gt;5,176.&lt;/ls&gt; &lt;ls&gt;BĀLAB. 21.&lt;/ls&gt; &lt;ls&gt;VOP. 6,2.&lt;/ls&gt; {#aBinnakAla#}
+&lt;ls&gt;ŚĀṄKH. ŚR. 1,16,5.&lt;/ls&gt;
+&lt;ls&gt;GṚHY. 1,3.&lt;/ls&gt; {#BinnajAtimant#}
+&lt;ls&gt;MĀRK. P. 113,8.&lt;/ls&gt; mit einem &lt;ab&gt;abl.&lt;/ab&gt;
+&lt;ls&gt;P. 2,3,29.&lt;/ls&gt;
+&lt;ab&gt;Sch.&lt;/ab&gt; {#jaganmiTo BinnamaBinnamISvarAt#}
+&lt;ls&gt;PRAB. 53,10.&lt;/ls&gt; mit der Ergänzung componirt: {#BramaBinnaM tu jYAnamatrocyate pramA#} {%ein anderes Wissen als Irrthum%}
+&lt;ls&gt;BHĀṢĀP. 133,8.&lt;/ls&gt; {#ANBinno nipAtaH#} {%eine andere Partikel als%} {#AN#}
+&lt;ab&gt;Schol.&lt;/ab&gt; zu &lt;ls&gt;P. 1,1,14.&lt;/ls&gt; &lt;ls n=&quot;P. 1,&quot;&gt;2,1.&lt;/ls&gt; &lt;ls n=&quot;P. 1,&quot;&gt;4,6.&lt;/ls&gt; &lt;ls&gt;NĪLAK. 160.&lt;/ls&gt; {%verschieden%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%vom Gewöhnlichen —, Normalen abweichend%}: {#Binnavartman#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%der den rechten Weg verlassen hat%}
+&lt;ls&gt;Spr. 1707.&lt;/ls&gt; {#BinnacAritradarSana#}
+&lt;ls&gt;R. GORR. 2,118,7.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#nAtiBinna#} .
+&lt;div n=&quot;1&quot;&gt;— 11) {#Binna#} {%vermischt —, verbunden mit%} (&lt;ab&gt;instr.&lt;/ab&gt;); = {#saMgata#}
+&lt;ls&gt;H. an. 2,277.&lt;/ls&gt;
+&lt;ls&gt;MED. n. 14.&lt;/ls&gt; = {#miSra, saMvalita#} die &lt;ab&gt;Scholl.&lt;/ab&gt; {#BinnAM rucaM raveH ketanaratnaBAsA#}
+&lt;ls&gt;KIR. 16,3.&lt;/ls&gt; {#svedaleSEraBinnaM#} (&lt;ab&gt;v. l.&lt;/ab&gt; {#kleSaleSE˚) gAtram#}
+&lt;ls&gt;ŚĀK. 37.&lt;/ls&gt; mit der Ergänzung
+[Page5-0284]
+componirt: {#yOvanaBinnaSESava#}
+&lt;ls&gt;RAGH. 3,32.&lt;/ls&gt; {#puzpoccayaH pallavaBaNgaBinnaH#}
+&lt;ls&gt;KUMĀRAS. 3,61.&lt;/ls&gt;
+&lt;ls&gt;ŚIŚ. 4,26. 20,56.&lt;/ls&gt; {#tIvrAGAtAdaBimuKataruskanDaBinnEkadantaH (Binna#} &lt;ab&gt;v. l.&lt;/ab&gt; für {#Bagna)#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%hängen geblieben%} (= {#lagna#}
+&lt;ab&gt;Schol.&lt;/ab&gt;) &lt;ls&gt;ŚĀK. 32.&lt;/ls&gt; {#dfzwvAM BinnaM (= lagnaM#} &lt;ab&gt;Schol.&lt;/ab&gt;) {#kuNkumaM kApi kaRWe#} {%hängend an, haftend%}
+&lt;ls&gt;KUVALAY. 174,a,4.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#BinnAYjana#} .
+&lt;div n=&quot;p&quot;&gt;— &lt;ab&gt;caus.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%spalten, brechen, zerschlagen%}: {#BedayeyuH sTirAndrumAn#}
+&lt;ls&gt;R. 1,16,23.&lt;/ls&gt; {#purodyAnAni sarvARi BedayAmAsa#}
+&lt;ls&gt;MBH. 3,620.&lt;/ls&gt;
+&lt;ls&gt;HARIV. 11905.&lt;/ls&gt; {#anayormahAnnisargopajAtaH snehaH kaTaM BedayituM SakyaH#} {%zerstören, lösen%}
+&lt;ls&gt;HIT. 67,2.&lt;/ls&gt; {#Bedita = Binna#}
+&lt;ls&gt;AK. 3,2,50.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%theilen%}: {#zoqaSaBeditAH#} {%sechszehnfach getheilt, in 16 Arten zerfallend%}
+&lt;ls&gt;SĀH. D. 18,112.&lt;/ls&gt; Könnte auch &lt;lex&gt;adj.&lt;/lex&gt; von {#zoqaSa — Beda#} sein.
+&lt;div n=&quot;1&quot;&gt;— 3) {%entzweien mit Andern%} oder {%mit sich, Jmd irre machen, auf seine Seite hinüberziehen%}
+&lt;ls&gt;MBH. 1,1358.&lt;/ls&gt; &lt;ls n=&quot;MBH. 1,&quot;&gt;7399.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;13,555.&lt;/ls&gt; &lt;ls n=&quot;MBH. 13,&quot;&gt;558.&lt;/ls&gt; {#suSlizwAnapi#} (so die neuere &lt;ab&gt;Ausg.&lt;/ab&gt;) {#lokezu Bedayan#}
+&lt;ls&gt;HARIV. 3209.&lt;/ls&gt;
+&lt;ls&gt;R. 4,54,6.&lt;/ls&gt; &lt;ls n=&quot;R. 4,54,&quot;&gt;7&lt;/ls&gt;
+&lt;ls&gt;KATHĀS. 34,209.&lt;/ls&gt; {#Bayena BedayedBIruM SUramaYjalikarmaRA . lubDamarTapradAnena samaM nyUnaM taTOjasA ..#}
+&lt;ls&gt;Spr. 2017.&lt;/ls&gt; &lt;ls n=&quot;Spr.&quot;&gt;3013.&lt;/ls&gt; {#asakfccApyahaM tena tvatkfte pArTa BeditaH#}
+&lt;ls&gt;MBH. 5,2835.&lt;/ls&gt;
+&lt;ls&gt;R. GORR. 2,18,15.&lt;/ls&gt; &lt;ls n=&quot;R. GORR. 2,&quot;&gt;77,2.&lt;/ls&gt; {#tamfziM kOSikaM ramBe Bedayasva (= kAmotpAdanena tapasaScAlaya#} &lt;ab&gt;Schol.&lt;/ab&gt;) {#tapasvinam#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%verfähre%}
+&lt;ls&gt;R. SCHL. 1,64,7.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— &lt;ab&gt;desid.&lt;/ab&gt; {#viBitsati#}
+&lt;ls&gt;P. 1,2,10&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{%zu durchbrechen —, zu sprengen beabsichtigen%}: {#anIkam#}
+&lt;ls&gt;MBH. 7,1480.&lt;/ls&gt; &lt;ls n=&quot;MBH. 7,&quot;&gt;1624.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#biBitsA#} &lt;ab&gt;fg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— &lt;ab&gt;desid.&lt;/ab&gt; vom &lt;ab&gt;caus.&lt;/ab&gt; &lt;ab&gt;s.&lt;/ab&gt; {#biBedayizu#} .
+&lt;div n=&quot;p&quot;&gt;— &lt;ab&gt;intens.&lt;/ab&gt; {#beBidIti#}
+&lt;ls&gt;P. 7,4,65&lt;/ls&gt;, &lt;ls&gt;Sch. 6,4,49&lt;/ls&gt;,
+&lt;ab&gt;Sch.&lt;/ab&gt;
+{#beBetti#}
+&lt;ls&gt;VOP. 20,22.&lt;/ls&gt; {%zu wiederholten Malen spalten, — einhauen in%}: {#BUyastaM beBidAM cakre naKatuRqAyuDaH KagaH#}
+&lt;ls&gt;BHAṬṬ. 5,105.&lt;/ls&gt; {#tasyApyabeBidizwAsO mUrDAnaM muzwinANgadaH#}
+&lt;ls n=&quot;BHAṬṬ.&quot;&gt;15,116.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#anu#} {%der Länge nach spalten, — zerschlitzen%}: {#taM dveDAnvaBinat#}
+&lt;ls&gt;ŚAT. BR. 1,6,3,17.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%sich öffnen%}: {#anvaBidyetAM#} (&lt;ab&gt;v. l.&lt;/ab&gt; {#nyaBi˚) karRO#}
+&lt;ls&gt;BHĀG. P. 3,26,55.&lt;/ls&gt; — {#badDaM setuM ko &apos;nuBindyAt#}
+&lt;ls&gt;MBH. 2,2483&lt;/ls&gt; fehlerhaft für {#ko nu Bi˚#} .
+&lt;div n=&quot;p&quot;&gt;— {#apa#} {%abschlagen%}: {#Bi\nDi viSvA\ apa\ dviza^H#}
+&lt;ls&gt;ṚV. 8,45,40.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ava#} {%zerspalten, durchbohren%}: {#ava\ tmanA^ Dfza\tA Samba^raM Binat#}
+&lt;ls&gt;ṚV. 1,54,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;59,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;7,18,20.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;2,11,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 2,11,&quot;&gt;18.&lt;/ls&gt; {#avA^Binatka\kuBa\H parva^tAnAm#}
+&lt;ls n=&quot;ṚV.&quot;&gt;4,19,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,8,9.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 10,&quot;&gt;69,11.&lt;/ls&gt; {#tI\kzReza^vo dU\rAdava^ Bindantyenam#}
+&lt;ls&gt;AV. 5,18,9.&lt;/ls&gt; {#carma#}
+&lt;ls&gt;TS. 7,5,10,1.&lt;/ls&gt; {#dantidantAvaBinna#}
+&lt;ls&gt;MBH. 6,1774.&lt;/ls&gt; {#(agnihotram) yatrAvaBinnaM syAt#} {%zersprungen%}
+&lt;ls&gt;ŚAT. BR. 12,4,1,8.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#avaBoden#} .
+&lt;div n=&quot;p&quot;&gt;— {#A#} {%zerschlitzen, zerreissen%}: {#tanme varzma nfsiMharAjakarajErABidyate#}
+&lt;ls&gt;Spr. 2507.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ud#} {%durchdringen durch%} (&lt;ab&gt;acc.&lt;/ab&gt;): {#udBijjAni BUmimudBidya jAtAni latAvfkzAdIni#}
+&lt;ls&gt;VEDĀNTAS. (Allah.) No. 71.&lt;/ls&gt; {#pulakodBinnasarvANga#}
+&lt;ls&gt;BHĀG. P. 3,2,5.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%aufspringen%}: {#aRqaM — nodBidyati#}
+&lt;ls&gt;MBH. 5,3563.&lt;/ls&gt; {%hervorbrechen, hervorschiessen, zum Vorschein kommen%}; &lt;ab&gt;act.&lt;/ab&gt;: {#nastaH, cakzuzwaH, Srotrata udaBinat#}
+&lt;ls&gt;ŚAT. BR. 13,4,4,6. fgg.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; &lt;ab&gt;dass.&lt;/ab&gt;: {#yAvannodBidyete#} (so zu lesen) {#stanO#}
+&lt;ls&gt;PAIṬHĪNASI&lt;/ls&gt; in &lt;ls&gt;DĀYABH. 273,1.&lt;/ls&gt; {#udBidyamAnaSramajalapulaka#}
+&lt;ls&gt;DAŚAK.&lt;/ls&gt; in &lt;ls&gt;BENF. Chr. 199,5.&lt;/ls&gt; &lt;ls&gt;BHĀG. P. 5,7,11.&lt;/ls&gt; {#tvatsunItipAdapasya puzpamudBinnamidam#}
+&lt;ls&gt;MĀLAV. 10,14.&lt;/ls&gt;
+&lt;ls&gt;KATHĀS. 14,27.&lt;/ls&gt;
+&lt;ls&gt;Spr. 3790.&lt;/ls&gt; {#udBinnaromapulakEH#}
+&lt;ls&gt;CAURAP. 35.&lt;/ls&gt; {#praTamayOvanodBinnakarkaSastanayuga#}
+&lt;ls&gt;PAÑCAT. ed. orn. 49,22.&lt;/ls&gt; {#yOvanodBinnadehA#}
+&lt;ls&gt;PAÑCAR. 4,6,7.&lt;/ls&gt; {#navameGaSabdAdudBinnayA ratnaSalAkayeva#}
+&lt;ls&gt;KUMĀRAS. 1,24.&lt;/ls&gt; {#udBinnavidyudvalayo meGaH#}
+&lt;ls&gt;RAGH. 13,21.&lt;/ls&gt; {#udBinnaruDira#}
+&lt;ls&gt;MBH. 7,3787.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;9,3237.&lt;/ls&gt;
+[Page5-0285]
+{#ravipraBodBinnaSiromaRipraBa (PaRin)#}
+&lt;ls&gt;ṚT. 1,19.&lt;/ls&gt; {#udBinnasaMBrama#}
+&lt;ls&gt;RĀJA-TAR. 6,124.&lt;/ls&gt; {#anudBinnapadArTAni gfhyavAkyAni#} {%nicht an die Oberfläche gedrungen%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%nicht offenliegend%}
+&lt;ls&gt;GṚHYASAṂGR. 1,34.&lt;/ls&gt; {%durchdringen, obenauf kommen%}; &lt;ab&gt;act.&lt;/ab&gt;: {#ujjA\tena^ Bi\nada\dujjani^tvEH#}
+&lt;ls&gt;ṚV. 10,45,10.&lt;/ls&gt; {#kAmaM stu\tvoda\haM Bi^deyam#}
+&lt;ls&gt;AV. 9,2,2.&lt;/ls&gt; {#ji\tama\smAka\mudBi^nnama\smAka^m#}
+&lt;ls n=&quot;AV.&quot;&gt;10,5,36.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;16,8,1.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;4,38,1.&lt;/ls&gt; &lt;ls&gt;PAÑCAV. BR. 16,16,2. 3.&lt;/ls&gt; {#anyo &apos;nyaSaNkayodBinnAn — vaSamAnayet#} {%Emporgekommene%}
+&lt;ls&gt;KĀM. NĪTIS. 17,45.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#udBid#} &lt;ab&gt;fg.&lt;/ab&gt;, {#udBeda#} &lt;ab&gt;fg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#prod#}, &lt;ab&gt;partic.&lt;/ab&gt; {#prodBinna#} {%hervorgeschossen, hervorgebrochen%}: {#˚romodgamA#}
+&lt;ls&gt;Spr. 830.&lt;/ls&gt; {#˚kAntidrava#}
+&lt;ls&gt;ŚĀK. CH. 128,18.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ni#} &lt;ab&gt;pass.&lt;/ab&gt; {%sich öffnen%}: {#nyaBidyetAM#} (&lt;ab&gt;v. l.&lt;/ab&gt; für {#anuBi˚) karRO#}
+&lt;ls&gt;BHĀG. P. 3,26,55.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#prani#} und {#praRi, ˚Binatti#}
+&lt;ls&gt;P. 8,4,18&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#nis#}
+&lt;div n=&quot;1&quot;&gt; 1) {%auseinanderspalten, — schlitzen, aufreissen, durchschlagen, durchschiessen, verwunden%}: {#A\RqA#}
+&lt;ls&gt;ṚV. 1,104,8.&lt;/ls&gt; {#a\MSUn#}
+&lt;ls&gt;AV. 11,1,9.&lt;/ls&gt; {#vrIhIn#}
+&lt;ls&gt;KAUŚ. 61.&lt;/ls&gt; {#vrIhIRAM naKErnirBidya#}
+&lt;ls&gt;ŚAT. BR. 5,3,1,13.&lt;/ls&gt; {#naKa/nirBinna#}
+&lt;ls&gt;TBR. 1,7,3,4.&lt;/ls&gt; {#tadA devyaSmanA kukziM nirviBeda#}
+&lt;ls&gt;MBH. 1,6790.&lt;/ls&gt; {#nArAyaRoruM nirBidya#}
+&lt;ls&gt;HARIV. 4601.&lt;/ls&gt;
+&lt;ls&gt;PRAB. 116,2.&lt;/ls&gt;
+&lt;ls&gt;DAŚAK.&lt;/ls&gt; in &lt;ls&gt;BENF. Chr. 201,1.&lt;/ls&gt; {#snehaprasravanirBinnamudvahantI stanAMSukam#} (so die &lt;ab&gt;v. l.&lt;/ab&gt;)
+&lt;ls&gt;VIKR. 150.&lt;/ls&gt; {#nirBidyopari karRikArakusumAnyASerate zawpadAH#}
+&lt;ls n=&quot;VIKR.&quot;&gt;41.&lt;/ls&gt; {#ekEkaM yojanaM BUmernirBindantaH#}
+&lt;ls&gt;R. 1,40,15&lt;/ls&gt; (&lt;ls n=&quot;GORR. 1,&quot;&gt;41,16&lt;/ls&gt; &lt;ls&gt;GORR.&lt;/ls&gt;). {#(vyAGragaRAn) nirviBeda ca sAyakEH#}
+&lt;ls&gt;MBH. 1,2834.&lt;/ls&gt; &lt;ls n=&quot;MBH. 1,&quot;&gt;4563.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;4,2001.&lt;/ls&gt; &lt;ls n=&quot;MBH. 4,&quot;&gt;2097.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;7,4583.&lt;/ls&gt;
+&lt;ls&gt;HARIV. 6648.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;10747.&lt;/ls&gt;
+&lt;ls&gt;R. 2,35,4.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;3,55,10&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;6,18,37.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 9,61.&lt;/ls&gt;
+&lt;ls&gt;KATHĀS. 47,66.&lt;/ls&gt; {#vAjinaH — tvakzu nirBidya#}
+&lt;ls&gt;BHAṬṬ. 9,67.&lt;/ls&gt; {#yayABiyujya saMgrAme SatruM nirbiBide raRe#}
+&lt;ls&gt;HARIV. 12151.&lt;/ls&gt; {#na ca tatrApyanirBinnaH kaScidAsIt#}
+&lt;ls&gt;MBH. 6,3573.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;7,4584.&lt;/ls&gt;
+&lt;ls&gt;R. 2,97,30.&lt;/ls&gt;
+&lt;ls&gt;VIKR. 144.&lt;/ls&gt;
+&lt;ls&gt;KATHĀS. 4,8.&lt;/ls&gt; &lt;ls n=&quot;KATHĀS.&quot;&gt;22,128.&lt;/ls&gt; &lt;ls n=&quot;KATHĀS.&quot;&gt;33,55.&lt;/ls&gt; {#nirBidya mUrDan#} {%am Kopfe eine Oeffnung durchschlagend%}
+&lt;ls&gt;BHĀG. P. 2,2,11.&lt;/ls&gt; {#bahuDA nirbiBeda Kam#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%bildete eine Menge Oeffnungen%}
+&lt;ls n=&quot;BHĀG. P.&quot;&gt;3,26,53.&lt;/ls&gt; {#kaRwakena — nirbiBedAsya locane#} {%ausstechen%}
+&lt;ls&gt;MBH. 3,10328.&lt;/ls&gt;
+&lt;ls&gt;HARIV. 1068.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;1153.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 9,3,7.&lt;/ls&gt; {#hfdayagranTim#} {%lösen%}
+&lt;ls n=&quot;BHĀG. P.&quot;&gt;5,25,8.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%sich spalten, sich öffnen%}: {#ARqaM niraBidyata#}
+&lt;ls&gt;CHĀND. UP. 3,19,1.&lt;/ls&gt; {#muKaM niraBidyata yaTARqam#}
+&lt;ls&gt;AIT. UP. 1,4.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 2,10,17.&lt;/ls&gt; {#nAsike niraBidyetAm#}
+&lt;ls n=&quot;BHĀG. P. 2,10,&quot;&gt;20.&lt;/ls&gt; {#niraBidyata vE gudam#}
+&lt;ls n=&quot;BHĀG. P.&quot;&gt;3,26,56.&lt;/ls&gt; &lt;ls&gt;SUŚR. 1,271,19.&lt;/ls&gt; &lt;ab&gt;act.&lt;/ab&gt; in derselben &lt;ab&gt;Bed.&lt;/ab&gt;: {#nirbiBeda virAjastvak#}
+&lt;ls&gt;BHĀG. P. 3,26,56.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%trennen, scheiden%}: {#muKatastAlu nirBinnam#} {%trennte sich%}
+&lt;ls&gt;BHĀG. P. 2,10,18.&lt;/ls&gt; {#anirBinna (brahman#} und {#sujanapreman)#} {%nicht geschieden%} und {%ununterbrochen%}
+&lt;ls&gt;Spr. 3473.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {#nirBinna#} {%uneinig%}: {#anyo&apos;nyameva nirBinnam (balam)#}
+&lt;ls&gt;KĀM. NĪTIS. 13,81.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%verrathen%}: {#nirBinnaprAyaM rahasyam#}
+&lt;ls&gt;DAŚAK.&lt;/ls&gt; in &lt;ls&gt;BENF. Chr. 193,8.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 5) {%hinter Etwas kommen%}: {#kAntakApacAraM nirBidya#}
+&lt;ls&gt;DAŚAK.&lt;/ls&gt; in &lt;ls&gt;BENF. Chr. 200,20.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#nirBeda#} &lt;ab&gt;fg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vinis#} {%auseinanderspalten, aufschlitzen, durchchiessen%}: {#tasya pArSvaM vinirBidya#}
+&lt;ls&gt;MBH. 3,8551.&lt;/ls&gt; &lt;ls n=&quot;MBH. 3,&quot;&gt;14.&lt;/ls&gt; &lt;ls n=&quot;MBH. 3,&quot;&gt;2238.&lt;/ls&gt;
+&lt;ls&gt;HARIV. 2554.&lt;/ls&gt; {#puruzo &apos;RqaM vinirBidya#}
+&lt;ls&gt;BHĀG. P. 2,10,10.&lt;/ls&gt; {#izuRA hfdi . vinirBinnam#}
+&lt;ls&gt;DAŚ. 2,15.&lt;/ls&gt;
+&lt;ls&gt;MBH. 6,2524.&lt;/ls&gt;
+&lt;ls&gt;HARIV. 10748.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%sich spalten, sich öffnen%}: {#karRAvasya vinirBinnO#}
+&lt;ls&gt;BHĀG. P. 3,6,17.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#parA#} {%durchbohren, verwunden%}: {#SarEScEnam — parABinat#}
+&lt;ls&gt;MBH. 7,9379.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;8,481.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pari#}
+&lt;div n=&quot;1&quot;&gt; 1) {%zerspalten, zerschlagen%}: {#dArURi pariBinnAni vanajErupajIviBiH#}
+&lt;ls&gt;R. 2,54,7.&lt;/ls&gt; {#aSmaBiH pariBinnANgAH#}
+&lt;ls n=&quot;R.&quot;&gt;4,18,2.&lt;/ls&gt; {#taRqulAH#} {%zersprungen, zerbröckelt%}
+&lt;ls&gt;ŚAT. BR. 5,3,2,7.&lt;/ls&gt; {%durchbrechen%} (&lt;ab&gt;uneig.&lt;/ab&gt;): {#Darmasya — saMsTA #}
+[Page5-0286]
+{# ca tErapi (yatnErapi#} &lt;ls&gt;ed. Bomb.&lt;/ls&gt;) {#kftA kAlena pariBidyate#}
+&lt;ls&gt;MBH. 13,7543.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%verändern, entstellen%}: {#pariBinnasvara#}
+&lt;ls&gt;MBH. 12,5362.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#pariBedaka#} .
+&lt;div n=&quot;p&quot;&gt;— {#pra#}
+&lt;div n=&quot;1&quot;&gt; 1) {%spalten, zerspalten, schlitzen%}: {#pra va\kzaRA^ aBina\tparva^tAnAm#}
+&lt;ls&gt;ṚV. 1,32,1.&lt;/ls&gt; {#df\|A ci\tsa pra Be^dati#}
+&lt;ls n=&quot;ṚV.&quot;&gt;5,86,1.&lt;/ls&gt; {#mfDaH#}
+&lt;ls&gt;VS. 5,37.&lt;/ls&gt; {#yaTA\ vE lANga^leno\rvarA^M praBi\ndanti^#} {%wie man mit dem Pfluge den Acker aufreisst%}
+&lt;ls&gt;TS. 6,6,7,4.&lt;/ls&gt;
+&lt;ls&gt;ŚAT. BR. 3,4,4,6.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,4,4,&quot;&gt;8.&lt;/ls&gt; {#mamorumetya prabiBeda kIwaH#}
+&lt;ls&gt;MBH. 8,1966.&lt;/ls&gt; {#SarEH praBindanniva pARqaveyO#}
+&lt;ls n=&quot;MBH. 8,&quot;&gt;4299.&lt;/ls&gt; &lt;ls&gt;HARIV. 16286.&lt;/ls&gt; {#praBinnavEdUryaniBEstfRANkurEH#}
+&lt;ls&gt;ṚT. 2,5.&lt;/ls&gt; {#praBinnAnkarakAn#} {%zerbrochen%}
+&lt;ls&gt;R. 5,14,51.&lt;/ls&gt; {#vAyupraBinnAmiva DUmareKAm#} {%durchbrochen, unterbrochen%}
+&lt;ls n=&quot;R. 5,&quot;&gt;11,24.&lt;/ls&gt; {%durchstechen, öffnen%}: {#pra te^ Binadmi\ meha^na\M vartra^M veSa\ntyA i^va#}
+&lt;ls&gt;AV. 1,3,7.&lt;/ls&gt; {#praBinnAmiva vistIrRAM vAzImapahftotpalAm#}
+&lt;ls&gt;R. GORR. 2,125,15.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%zerspringen, zerbröckeln%}: {#dantAH praBidyante#}
+&lt;ls&gt;ŚAT. BR. 11,4,1,5.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 11,4,1,&quot;&gt;12.&lt;/ls&gt; {%aufgehen, sich lösen%}: {#praBinnakamalodara#} {%aufgegangen, aufgeblüht%}
+&lt;ls&gt;SĀH. D. 10,8.&lt;/ls&gt; {#yadA sarve praBidyante hfdayasyeha granTayaH#}
+&lt;ls&gt;KĀTHOP. 6. 15.&lt;/ls&gt; {#(granTayaH) praBinnAH sravanti#} {%gehen auf und fliessen%}
+&lt;ls&gt;SUŚR. 1,287,15.&lt;/ls&gt; {#praBinnaM prasrutaM ca yat (SoRitam)#} {%durch Oeffnungen hervordringend%}
+&lt;ls n=&quot;SUŚR.&quot;&gt;253,18.&lt;/ls&gt; {#praBinnaviw#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%aperiens, evacuans%}
+&lt;ls n=&quot;SUŚR.&quot;&gt;199,6.&lt;/ls&gt; {#praBinnaprasrutANga#} (so ist zu lesen) {%dessen Glieder nässen und fliessen%}
+&lt;ls n=&quot;SUŚR.&quot;&gt;120,4.&lt;/ls&gt; {#praBinnakarawa#} von einem Elephanten, {%dessen Schläfen sich geöffnet haben und fliessen%} (während der Brunstzeit)
+&lt;ls&gt;MBH. 1,7671.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;12,4280.&lt;/ls&gt;
+&lt;ls&gt;R. GORR. 2,28,8.&lt;/ls&gt; &lt;ls n=&quot;R. GORR.&quot;&gt;6,18,3.&lt;/ls&gt; {#praBinnakarawAmuKa#}
+&lt;ls&gt;MBH. 3,441.&lt;/ls&gt; &lt;ls n=&quot;MBH. 3,&quot;&gt;8704.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;4,757.&lt;/ls&gt; &lt;ls n=&quot;MBH. 4,&quot;&gt;1030.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;14,2183.&lt;/ls&gt; {#praBinna#} allein von einem {%brünstigen%} Elephanten gesagt
+&lt;ls&gt;AK. 2,8,2,4.&lt;/ls&gt;
+&lt;ls&gt;H. 1220.&lt;/ls&gt;
+&lt;ls&gt;HALĀY. 2,65.&lt;/ls&gt;
+&lt;ls&gt;DRAUP. 5,5.&lt;/ls&gt;
+&lt;ls&gt;MBH. 1,7074.&lt;/ls&gt; &lt;ls n=&quot;MBH. 1,&quot;&gt;8013.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;4,585.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;13,641.&lt;/ls&gt; &lt;ls n=&quot;MBH. 13,&quot;&gt;4848.&lt;/ls&gt;
+&lt;ls&gt;R. GORR. 2,20,4.&lt;/ls&gt; &lt;ls n=&quot;R. GORR.&quot;&gt;6,4,10.&lt;/ls&gt;
+&lt;ls&gt;KUMĀRAS. 5,80.&lt;/ls&gt;
+&lt;ls&gt;Spr. 673.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) &lt;ab&gt;pass.&lt;/ab&gt; {%sich spalten%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%sich theilen%}: {#jaNgamAnAM ca sarvezAM SarIre paYca DAtavaH . pratyekaSaH praBidyante yEH SarIraM vicezwate ..#}
+&lt;ls&gt;MBH. 12,6839.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {#praBinna#} {%entstellt, verändert, verstimmt%}: {#na tvAM praBinnaM (= parAjitaM#} &lt;ab&gt;Schol.&lt;/ab&gt;). {#jAnAmi#}
+&lt;ls&gt;MBH. 16,259.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {#praBinnAYjana#} so &lt;ab&gt;v. a.&lt;/ab&gt; {#BinnAYjana#} {%mit Oel angemachte Augensalbe%}
+&lt;ls&gt;ṚT. 2,2.&lt;/ls&gt;
+&lt;ls&gt;PAÑCAR. 4,6,8.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#praBid, praBeda#} &lt;ab&gt;fgg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#upapra#} {%zerbröckeln, in Brocken hinstreuen%}: {#tABya\H sUda\mupa\ prABi^nat#}
+&lt;ls&gt;TBR. 1,1,3,5.&lt;/ls&gt; &lt;ls n=&quot;TBR. 1,&quot;&gt;2,1,3.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#saMpra#}, &lt;ab&gt;partic.&lt;/ab&gt; {#˚Binna#} von einem Elephanten, {%dessen Stirn sich geöffnet hat und fliesst%} (in der Brunstzeit)
+&lt;ls&gt;MBH. 7,1083.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#prati#}
+&lt;div n=&quot;1&quot;&gt; 1) {%durchbohren%}: {#kasyAdya kAyaM pratiBidya GorA mahIM pravekzyanti SitAH SarAgryAH#}
+&lt;ls&gt;MBH. 3,15681.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%verrathen%}: {#apratiBidya rahasyam#}
+&lt;ls&gt;DAŚAK.&lt;/ls&gt; in &lt;ls&gt;BENF. Chr. 199,21.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%seinen Unwillen gegen Jmd%} (&lt;ab&gt;acc.&lt;/ab&gt;) {%an den Tag legen%}
+&lt;ls&gt;RAGH. 19,22.&lt;/ls&gt;
+&lt;ls&gt;ŚIŚ. 9,58. 10,35.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {#pratiBinna#} wohl {%in unmittelbarer Berührung stehend —, eng verbunden mit%} (&lt;ab&gt;instr.&lt;/ab&gt;): {#dUrvApravAlEH pratiBinnaSoBam#} ({%cujus splendor divisus est%} &lt;is&gt;Dūrvae&lt;/is&gt; {%culminibus%} &lt;ls&gt;ST.&lt;/ls&gt;)
+&lt;ls&gt;KUMĀRAS. 7,7.&lt;/ls&gt; {#candreRa nityaM pratiBinnamOleH — harasya#} ({%cujus crista distincta est luna%} &lt;ls&gt;ST.&lt;/ls&gt;)
+&lt;ls n=&quot;KUMĀRAS. 7,&quot;&gt;35.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#pratiBeda#} &lt;ab&gt;fg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vi#}
+&lt;div n=&quot;1&quot;&gt; 1) {%durchbohren, zerspalten, zerbrechen, eröffnen%}
+&lt;ls&gt;ṚV. 1,33,12.&lt;/ls&gt; {#parvatam#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;85,10.&lt;/ls&gt; {#adrim#}
+&lt;ls n=&quot;ṚV.&quot;&gt;8,49,16.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,49,&quot;&gt;6.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,&quot;&gt;65,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,28,9.&lt;/ls&gt; {#puro^ viBi\ndanna^cara\dvi dAsI^H#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,103,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,33,7.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,67,5.&lt;/ls&gt; {#SiraH#}
+&lt;ls n=&quot;ṚV.&quot;&gt;8,65,2.&lt;/ls&gt; &lt;ls&gt;AV. 10,128,13.&lt;/ls&gt; {#mUrDAnam#}
+&lt;ls&gt;ṚV. 10,67,12.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 10,&quot;&gt;68,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 10,&quot;&gt;138,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 10,67,&quot;&gt;6.&lt;/ls&gt;
+&lt;ls&gt;AV. 1,11,5.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;4,19,5.&lt;/ls&gt; {#tasya varma viBidyASu ca bARaH#}
+&lt;ls&gt;MBH. 3,709.&lt;/ls&gt; {#vizAREScAvaniM gatvA vyaBindanraTino bahUn#}
+&lt;ls n=&quot;MBH.&quot;&gt;7,1388.&lt;/ls&gt; &lt;ls n=&quot;MBH. 7,&quot;&gt;4694.&lt;/ls&gt; {#viBidyedaM rasAtalam#}
+&lt;ls&gt;R. GORR. 1,42,10.&lt;/ls&gt; &lt;ls&gt;BHĀG. P. 3,13,31.&lt;/ls&gt; &lt;ls&gt;VARĀH. BṚH. S. 44,21.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 2,10.&lt;/ls&gt; {#niSitaSarErviBidyamAnatvaci#}
+&lt;ls&gt;BHĀG. P. 1,9,34.&lt;/ls&gt; {#SarErativiBinnANgaH#}
+&lt;ls&gt;R. 6,18,44.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 16,16.&lt;/ls&gt;
+&lt;ls&gt;VARĀH. BṚH. S. 45,13.&lt;/ls&gt;
+&lt;ls&gt;MĀRK. P. 112,4.&lt;/ls&gt;
+[Page5-0287]
+{#nEnaM kuSo na kaRwako viBinatti#} {%sticht%}
+&lt;ls&gt;ŚAT. BR. 5,3,2,7.&lt;/ls&gt;
+&lt;ls&gt;MĀRK. P. 14,75.&lt;/ls&gt; {%einen Himmelskörper spalten%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%durch ihn gehen%}: {#SItaraSmiH — vAkpatinA viBinnaH#}
+&lt;ls&gt;VARĀH. BṚH. S. 4,23.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%zerbrechen%} (&lt;ab&gt;intrans.&lt;/ab&gt;) {%auseinanderbersten%}
+&lt;ls&gt;SUŚR. 1,302,4.&lt;/ls&gt; {#yadA DarmapraDAnasya DarmaseturviBidyate#}
+&lt;ls&gt;Spr. 4806.&lt;/ls&gt; &lt;ab&gt;act.&lt;/ab&gt; &lt;ab&gt;dass.&lt;/ab&gt;: {#vastiste vyaBetsyat#}
+&lt;ls&gt;CHĀND. UP. 5,16,2.&lt;/ls&gt; {#viBinna#} {%offen und fliessend%} (von der Stirn eines brünstigen Elephanten)
+&lt;ls&gt;Spr. 791.&lt;/ls&gt; {%geöffnet%} von einer Knospe
+&lt;ls&gt;RAGH. 13,29.&lt;/ls&gt; {#sOhfdaM Bid#} {%die Freundschaft brechen%}, &lt;ab&gt;med.&lt;/ab&gt;
+&lt;ls&gt;R. 4,34,84.&lt;/ls&gt; {#premaviBinnaDErya#} {%gebrochen%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%zu Nichte gemacht%}
+&lt;ls&gt;BHĀG. P. 3,1,32.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%trennen%}: {#SarIrAdaviBinno &apos;sya gomuKastu Bavizyati#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%nicht von seiner Seite kommend%}
+&lt;ls&gt;KATHĀS. 34,118.&lt;/ls&gt; {#(rAjYI) aBUdaviBinnEva BUpateH#}
+&lt;ls n=&quot;KATHĀS.&quot;&gt;27,57.&lt;/ls&gt; &lt;ls&gt;Spr. 1801.&lt;/ls&gt; neben {#saMBinna#} unter den &lt;ab&gt;Beiww.&lt;/ab&gt; von &lt;is&gt;Śiva&lt;/is&gt;
+&lt;ls&gt;MBH. 12,10374.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%lösen, auseinandermachen%}: {#AntrapASaM viBidya#}
+&lt;ls&gt;HARIV. 14717.&lt;/ls&gt; {#hftsaMSayabanDanaM me viBettumarhasi#}
+&lt;ls&gt;Verz. d. Oxf. H. 29,a,4.&lt;/ls&gt; {#avidyAgranTiM viBetsyati#}
+&lt;ls&gt;BHĀG. P. 4,11,30.&lt;/ls&gt; {%auseinanderbreiten, auseinandertreiben%}: {#mfdupavanaviBinnaH — GanarucirakalApaH#}
+&lt;ls&gt;VIKR. 85.&lt;/ls&gt; {#marutA viBinnam — aBram#}
+&lt;ls&gt;BHAṬṬ. 2,8.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%entzweien%}, &lt;ab&gt;pass.&lt;/ab&gt; {%sich entzweien%}; &lt;ab&gt;part.&lt;/ab&gt; {#viBinna#} {%uneins, in Uneinigkeit lebend%}
+&lt;ls&gt;VID. 62.&lt;/ls&gt; {%wo Uneinigkeit herrscht%}: {#sTAna#}
+&lt;ls&gt;Spr. 2732.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 5) {%umstimmen%}: {#viBetsyati manAMsyezAm#}
+&lt;ls&gt;MBH. 5,124.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%eine Umstimmung erfahren%}: {#paSubudDirviBidyate#}
+&lt;ls&gt;BHĀG. P. 7,5,12.&lt;/ls&gt; {#viBinna#} {%umgestimmt%}
+&lt;ls&gt;R. GORR. 2,28,15.&lt;/ls&gt; {%untreu geworden%}
+&lt;ls&gt;RĀJA-TAR. 6,124.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 6) &lt;ab&gt;pass.&lt;/ab&gt; {%sich ändern, eine Veränderung erfahren%}: {#svaraScEva vyaBidyata#}
+&lt;ls&gt;R. GORR. 2,36,10.&lt;/ls&gt; &lt;ls n=&quot;R. GORR.&quot;&gt;3,29,14.&lt;/ls&gt; {#viBinnavarRarahita#}
+&lt;ls&gt;Spr. 2045&lt;/ls&gt;, &lt;ab&gt;v. l.&lt;/ab&gt; {#aviBinnena muKarAgeRa#}
+&lt;ls&gt;KATHĀS. 33,8.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 8,42.&lt;/ls&gt; {#ASAviBinna#} {%in seiner Hoffnung getäuscht%}
+&lt;ls&gt;Spr. 3054.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 7) {#viBinna#} {%verschieden%}: {#viBinnO cAhiduRquBO#}
+&lt;ls&gt;KATHĀS. 14,84.&lt;/ls&gt; {#namo viBinnaveSAya (vizRave)#}
+&lt;ls&gt;PAÑCAR. 4,4,13.&lt;/ls&gt; &lt;ls&gt;MĀRK. P. 23,84.&lt;/ls&gt; {#˚darSin#} (&lt;ab&gt;vgl.&lt;/ab&gt; {#BinnadarSin#})
+&lt;ls n=&quot;MĀRK. P. 23,&quot;&gt;38.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 8) {#viBinna#} {%vermengt mit%} (&lt;ab&gt;instr.&lt;/ab&gt;): {#viBinnamamBojapalASaSoBayA#}
+&lt;ls&gt;KIR. 4,27. 5,34.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%Jmd von Jmd%} (&lt;ab&gt;abl.&lt;/ab&gt;) {%entfernen, abspänstig machen%}
+&lt;ls&gt;MBH. 12,4108.&lt;/ls&gt;
+&lt;ls&gt;R. GORR. 2,6,16&lt;/ls&gt; (&lt;ls n=&quot;SCHL. 2,&quot;&gt;7,18&lt;/ls&gt; &lt;ls&gt;SCHL.&lt;/ls&gt;). &lt;ls n=&quot;R. GORR. 2,&quot;&gt;8,55.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#viBettar#} &lt;ab&gt;u. s. w.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pravi#} {%aufreissen, verwunden%}: {#pratodapraviBinnANga#}
+&lt;ls&gt;R. GORR. 2,76,24.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#sam#}
+&lt;div n=&quot;1&quot;&gt; 1) {%zerspalten, zerbrechen, durchbohren%}: {#SiraH#}
+&lt;ls&gt;AV. 10,4,5.&lt;/ls&gt;
+&lt;ls&gt;MBH. 8,3839.&lt;/ls&gt; {#saMBinnajarjaritakozWaSiraHkapAla#}
+&lt;ls&gt;SUŚR. 1,352,17.&lt;/ls&gt; {#saMBinnacarmaGaRwAH (saMBinnamarma˚#} &lt;ls&gt;ed. Bomb.&lt;/ls&gt;)
+&lt;ls&gt;MBH. 7,4565.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;8,499.&lt;/ls&gt; {#saMBinnamaryAda#} {%der die Schranken durchbrochen hat%}
+&lt;ls&gt;R. 2,49,5&lt;/ls&gt; (&lt;ls n=&quot;GORR. 2,&quot;&gt;46,7&lt;/ls&gt; &lt;ls&gt;GORR.&lt;/ls&gt;). &lt;ls n=&quot;R. 2,&quot;&gt;67,28.&lt;/ls&gt; {#asaMBinnAryamaryAda#}
+&lt;ls&gt;Spr. 5088.&lt;/ls&gt;
+&lt;ls&gt;MBH. 15,383.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;2,2443&lt;/ls&gt; (wo beide &lt;ab&gt;Ausgg.&lt;/ab&gt; fälschlich {#asaMBinnArTa˚#} lesen). {#saMBinnavftta#} {%der seinen guten Lebenswandel unterbrochen, — verlassen hat%}
+&lt;ls n=&quot;MBH.&quot;&gt;12,788.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%zusammenbringen, in Berührung bringen, verbinden, vermengen%}: {#na saMBi^natti\ tasmA\dasa^MBinnAH prA\RAH#}
+&lt;ls&gt;TS. 6,2,11,2.&lt;/ls&gt; {#asa^MBinda\nnava^dyati#}
+&lt;ls n=&quot;TS. 6,&quot;&gt;4,1,1.&lt;/ls&gt; &lt;ls n=&quot;TS. 6,&quot;&gt;5,9,3.&lt;/ls&gt; &lt;ls&gt;TBR. 3,7,5,6.&lt;/ls&gt; {#pf\Ta\mA\trAdvedI\ asa^MBinne BavataH#} {%stehen um ein%} &lt;is&gt;Pṛtha&lt;/is&gt; {%von einander ab%}
+&lt;ls n=&quot;TBR.&quot;&gt;1,6,4,2.&lt;/ls&gt; {#yadvA urvarayorasaMBinnaM Bavati Kila iti vE tadAcakzate#} {%was%} (ungepflügt) {%zwischen zwei Aeckern liegt%}
+&lt;ls&gt;ŚAT. BR. 8,3,4,1.&lt;/ls&gt;
+&lt;ls&gt;ŚĀṄKH. BR. 30,8.&lt;/ls&gt;
+&lt;ls&gt;KĀṬH. 25,9.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 1,9,6.&lt;/ls&gt; {#uparavAnakzRayA saMBindyAt#}
+&lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;8,5,11.&lt;/ls&gt; &lt;ls&gt;KAUŚ. 27. 50.&lt;/ls&gt; {#saMBinnasarvANgaM kUrmam#} {%zusammengezogen%}
+&lt;ls&gt;MBH. 4,794.&lt;/ls&gt; {#snigDakuntalasaMBinnakirIwamukuwojjvala#} {%dicht anliegend%}
+&lt;ls&gt;PAÑCAR. 3,11,18.&lt;/ls&gt; {#kadambasaMBinnaH pavanaH#} {%in Berührung gekommen%}
+&lt;ls&gt;BHAṬṬ. 7,5.&lt;/ls&gt; {#saMBinno mAruto yasya marmasTAnAni kfntati#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%compact%}
+&lt;ls&gt;MĀRK. P. 43,14&lt;/ls&gt; = &lt;ls&gt;VĀYU-P.&lt;/ls&gt; in &lt;ls&gt;Verz. d. Oxf. H. 51,b,6.&lt;/ls&gt; {#saMBinna#} {%verbunden%} neben {#viBinna#} als &lt;ab&gt;Beiw.&lt;/ab&gt; &lt;is&gt;Śiva&apos;s&lt;/is&gt;
+&lt;ls&gt;MBH. 12,10374.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3)
+[Page5-0288]
+{%sich zu Jmd%} (&lt;ab&gt;acc.&lt;/ab&gt;) {%gesellen%}: {#tataSca BagavAnasmAnupekzate na saMBinatti (saMBinanti#} &lt;ab&gt;gedr.&lt;/ab&gt;) {#nAcazWe (nA cezwa#} &lt;ab&gt;gedr.&lt;/ab&gt;)
+&lt;ls&gt;SADDH. P. 4,27,b.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#saMBeda#} .
+&lt;div n=&quot;p&quot;&gt;— {#anusam#} {%zusammenbringen &lt;ab&gt;u. s. w.&lt;/ab&gt;%}
+&lt;ls&gt;KĀṬH. 36,7.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#upasam#} &lt;ab&gt;dass.&lt;/ab&gt;
+&lt;ls&gt;LĀṬY. 5,1,4.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Bid-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">79806</idno>
+        <idno type="line">329226</idno>
+        <idno type="pc">4-266-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;79806&lt;pc&gt;4-266-a&lt;k1&gt;Bid&lt;k2&gt;Bid&lt;h&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; √{#Bid#}¦, {#Ba/dati#}, {#Bina/tti#}; ausnahmsweise auch &lt;ab&gt;Med.&lt;/ab&gt; ({#BindAna/#} &lt;ls&gt;ṚV. 6,27,6&lt;/ls&gt;).
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%spalten, einbrechen, ein Loch in Etwas schlagen, durchstechen, durchbrechen, zersprengen, aufreissen, -schlitzen%}. {#setum#}, {#maryAdAm#}, {#sTitim#}, {#velAm#} {%einen Damm, Schranken, das Ufer durchbrechen%}. Ein Planet oder Komet {%durchbricht%} eines Stern, wenn er {%durch ihn durchgeht%}. &lt;ab&gt;Pass.&lt;/ab&gt; {#Bidyate#}, {#˚ti#} (metrisch, aber auch bei &lt;ls&gt;BAUDH.&lt;/ls&gt; im &lt;ls&gt;Comm. zu ĀPAST. ŚR. 5,29,12&lt;/ls&gt;; {#BindatAm#} &lt;ls&gt;MBH. 6,4125&lt;/ls&gt; fehlerhaft für {#BidyatAm#}) auch in &lt;ab&gt;intransit.&lt;/ab&gt; &lt;ab&gt;Bed.&lt;/ab&gt; {%bersten%}. {#Binna/#} {%zerschlagen, zerbrochen%} &lt;ab&gt;u. s. w.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%brechen%} in &lt;ab&gt;übertr.&lt;/ab&gt; &lt;ab&gt;Bed.&lt;/ab&gt; so &lt;ab&gt;v. a.&lt;/ab&gt; {%vertreiben, verschwinden —, zu Nichte machen;%} &lt;ab&gt;Pass.&lt;/ab&gt; {%zu Nichte werden%}. {#Binna#} {%zu Nichte gemacht%} &lt;ls n=&quot;Chr.&quot;&gt;104,27&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%spalten,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%theilen;%} &lt;ab&gt;Pass.&lt;/ab&gt; {%getheilt werden, sich theilen%}. {#Binna#} {%getheilt%} auch so &lt;ab&gt;v. a.&lt;/ab&gt; {%nicht ganz, weniger als ein%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%spalten,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%öffen; blühen machen;%} &lt;ab&gt;Pass.&lt;/ab&gt; {%sich öffnen, freien Lauf haben%} (Wasser), {%sich ergiessen, über die Ufer treten%}. {#Binna#} {%geöffnet, aufgeblüht%}. {#˚karawa#} oder {#˚gaRqakarawa#} &lt;lex&gt;Adj.&lt;/lex&gt; von einem Elephanten, {%dessen Schläfen zur Brunstzeit sich geöffnet haben und fliessen;%} auch {#Binna#} allein in derselben &lt;ab&gt;Bed.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%lösen, entwirren;%} &lt;ab&gt;Pass.&lt;/ab&gt; {%sich lösen, aufgehen%}.
+&lt;div n=&quot;1&quot;&gt;— 6〉 {%unterbrechen, stören; nicht einhalten%} (die Zeit).
+&lt;div n=&quot;1&quot;&gt;— 7〉 {%brechen,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%verrathen%}.
+&lt;div n=&quot;1&quot;&gt;— 8〉 {%spalten, theilen,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%entzweien%}. {#Binna#} &lt;ab&gt;Pl.&lt;/ab&gt; {%Entzweite, Zerfallene;%} {#dAna˚#} {%durch Geschenke abtrünnig gemacht, — bestochen%}.
+&lt;div n=&quot;1&quot;&gt;— 9〉 &lt;ab&gt;Pass.&lt;/ab&gt; {%sich abtheilen —, sich fernhalten von%} (&lt;ab&gt;Instr.&lt;/ab&gt;)
+&lt;div n=&quot;1&quot;&gt;— 10〉 {%Jmd mit sich selbst entzweien, irre machen, umstimmen;%} nur &lt;ab&gt;Pass.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 11〉 {%ändern,%} &lt;ab&gt;Pass.&lt;/ab&gt; {%sich ändern%}. {#Binna#} {%verändert, entstellt%}.
+&lt;div n=&quot;1&quot;&gt;— 12〉 {%unterscheiden, einen [Page4-266-b] Unterschied machen;%} &lt;ab&gt;Pass.&lt;/ab&gt; {%verschieden sein, sich unterscheiden von%} (&lt;ab&gt;Abl.&lt;/ab&gt;). {#Binna#} {%verschieden, — von%} (&lt;ab&gt;Abl.&lt;/ab&gt; oder im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend); {%verschieden%} auch so &lt;ab&gt;v. a.&lt;/ab&gt; {%vom Gewöhnlichen —, vom Normalen abweichend%}.
+&lt;div n=&quot;1&quot;&gt;— 13〉 {#Binna#} {%vermischt —, verbunden mit%} (&lt;ab&gt;Instr.&lt;/ab&gt; oder im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend), {%hängend —, haftend —, hängen geblieben an%} (&lt;ab&gt;Loc.&lt;/ab&gt; oder im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend).
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {#Bedayati#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%spalten, brechen, zerschlagen%} &lt;ls&gt;MBH. 3,135,52&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%zerstören, zu Nichte machen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%theilen%}. {#zoqaSaBedita#} {%sechzehnfach getheilt, in 46 Arten zerfallend%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%entzweien mit Andern%} oder {%mit sich, Jmd irre machen, auf seine Seite herüberziehen, verführen%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Desid.&lt;/ab&gt; {#biBitsati#} {%zu durchbrechen —, zu sprengen beabsichtigen%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Desid.&lt;/ab&gt; vom &lt;ab&gt;Caus.&lt;/ab&gt; in {#biBedayizu#}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Intens.&lt;/ab&gt; {#beBidIti#}, {#beBetti#} {%zu wiederholten Malen spalten, — einhauen in%} &lt;ls&gt;BHAṬṬ.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— Mit {#vyati#}, {#˚Binna#} {%unzertrennlich verbunden mit%} (&lt;ab&gt;Instr.&lt;/ab&gt;) &lt;ls&gt;Comm. zu NYĀYAS. 4,2,18&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#anu#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%der Länge nach spalten, — zerschlitzen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 &lt;ab&gt;Pass.&lt;/ab&gt; {%sich öffnen%}. — {#ko &apos;nuBindyAt#} &lt;ls&gt;MBH. 2,2483&lt;/ls&gt; fehlerhaft für {#ko nu Bi˚#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#antar#} {%auf Verrath sinnen%} &lt;ls&gt;DAŚAK. 19,8&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#apa#} {%abschlagen%} (Feinde).
+&lt;div n=&quot;p&quot;&gt;— Mit {#aBi#} &lt;ab&gt;Pass.&lt;/ab&gt; {%zerspringen, zerbrechen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ava#} {%zerspalten, durchbohren%}. {#a/vaBinna#} {%durchbohrt, zersprungen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#A#} {%zerschlitzen, zerreissen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ud#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%durchbrechen, durchdringen durch%} (&lt;ab&gt;Acc.&lt;/ab&gt;).
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%durchdringen, obenauf kommen%}. {#udBinna#} {%emporgekommen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 &lt;ab&gt;Pass.&lt;/ab&gt; {%aufspringen, bersten%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 &lt;ab&gt;Act.&lt;/ab&gt; (nur einmal in &lt;ls&gt;ŚAT. BR.&lt;/ls&gt;) &lt;ab&gt;Pass.&lt;/ab&gt; {%hervorbrechen, hervorschiessen, zum Vorschein kommen%}. {#udBinna#} {%hervorgebrochen, hervorgeschossen, zum Vorschein gekommen%}.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {#udBinna#}
+&lt;div n=&quot;2&quot;&gt;— a〉 {%verrathen%}.
+&lt;div n=&quot;2&quot;&gt;— b〉 {%versehen —, ausgestattet mit%} (im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend) &lt;ls&gt;BHĀG. P. 3,2,5&lt;/ls&gt;. &lt;ls&gt;PAÑCAR. 4,6,7&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#prod#}, {#prodBinna#} {%hervorgeschossen, hervorgebrochen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ni#} &lt;ab&gt;Pass.&lt;/ab&gt; {%sich öffnen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#nis#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%auseinanderspalten, -schlitzen, aufreissen, durchschlagen, durchschiessen, ausstechen%} (die Augen), {%verwunden:%} &lt;ab&gt;Pass.&lt;/ab&gt; (und einmal &lt;ls&gt;BHĀG. P.&lt;/ls&gt;) &lt;ab&gt;Act.&lt;/ab&gt; {%sich spalten, sich öffnen%}. {#nirBinna#} {%auseinandergespalten%} &lt;ab&gt;u. s. w.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 2〉 Oeffnungen (&lt;ab&gt;Acc.&lt;/ab&gt;) {%bilden%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%lösen%} (einen Knoten).
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%hinter Etwas%} (&lt;ab&gt;Acc.&lt;/ab&gt;) {%kommen%}.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {#nirBinna#}
+&lt;div n=&quot;2&quot;&gt;— a〉 {%sich abgesondert habend von%} ({#˚tas#}).
+&lt;div n=&quot;2&quot;&gt;— b〉 {%verrathen%}.
+&lt;div n=&quot;2&quot;&gt;— c〉 {%uneinig%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vinis#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%auseinanderspalten, aufschlitzen, durchschiessen%}. {#vinirBinna#} {%durchschossen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {#vinirBinna#} {%sich geöffnet habend%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#parA#} {%durchbohren, verwunden%} &lt;ls&gt;ŚAT. BR. 5,3,5,29&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pari#} &lt;ab&gt;Pass.&lt;/ab&gt; {%durchbrochen werden%} [Page4-266-c] in &lt;ab&gt;übertr.&lt;/ab&gt; &lt;ab&gt;Bed.&lt;/ab&gt; {#pa/riBinna#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%zerspalten, zerschlagen, zersprungen, zerbröckelt%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%verändert, entstellt%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pra#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%spalten, zerspalten, aufreissen, durchstechen;%} &lt;ab&gt;Pass.&lt;/ab&gt; {%zerspringen, zerbröckeln%}. {#praBinna#} {%zerspalten, zerbrochen, durchstochen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 &lt;ab&gt;Pass.&lt;/ab&gt; {%aufgehen, sich lösen, sich öffnen%}. {#praBinna#} {%aufgegangen, aufgeblüht%}. {#˚karawa#} und {#˚karawAmuKa#} &lt;lex&gt;Adj.&lt;/lex&gt; von einem Elephanten, {%dessen Schläfen sich geöffnet haben und fliessen%} (in der Brunstzeit).
+&lt;div n=&quot;1&quot;&gt;— 3〉 &lt;ab&gt;Pass.&lt;/ab&gt; {%sich spalten,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%sich theilen%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {#praBinna#}
+&lt;div n=&quot;2&quot;&gt;— a〉 {%durch Oeffnungen hervordringend%} (Blut).
+&lt;div n=&quot;2&quot;&gt;— b〉 {%durch Oeffnungen nässend%}.
+&lt;div n=&quot;2&quot;&gt;— c〉 {%durchbrochen,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%unterbrochen%}.
+&lt;div n=&quot;2&quot;&gt;— d〉 {%entstellt, verändert, verstimmt%}.
+&lt;div n=&quot;m&quot;&gt;— *&lt;ab&gt;Caus.&lt;/ab&gt; vom &lt;ab&gt;Intens.&lt;/ab&gt; {#prabeBidayya#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#upapra#} {%zerbröckeln, in Brocken hinstreuen%}.
+&lt;div n=&quot;p&quot;&gt;Mit {#saMpra#}, {#˚Binna#} von einem Elephanten, {%dessen Stirn sich geöffnet hat und fliesst%} (in der Brunstzeit).
+&lt;div n=&quot;p&quot;&gt;— Mit {#prati#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%durchbohren%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%verrathen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%seinen Unwillen gegen Jmd%} (&lt;ab&gt;Acc.&lt;/ab&gt;) {%an den Tag legen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vi#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%durchbohren, zerspalten, zerbrechen; stechen%} (von einem Insecte). Einen Himmelskörper {%spalten,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%durch ihn gehen%}. &lt;ab&gt;Pass.&lt;/ab&gt; und ausnahmsweise &lt;ab&gt;Act.&lt;/ab&gt; {%zerbrechen, auseinanderbersten%}. {#viBinna#} {%durchbohrt%} &lt;ab&gt;u. s. w.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%brechen,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%zu Nichte machen%}. {#viBinna#} {%zu%} &lt;ab&gt;N.&lt;/ab&gt; {%gemacht%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%lösen, auseinandermachen%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%brechen,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%verstossen gegen%} &lt;ls&gt;BĀLAR. 74,3&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%umstimmen,%} &lt;ab&gt;Pass.&lt;/ab&gt; {%eine Umstimmung erfahren%}. {#viBinna#} {%umgestimmt, untreu geworden%}.
+&lt;div n=&quot;1&quot;&gt;— 6〉 &lt;ab&gt;Pass.&lt;/ab&gt; {%sich ändern, eine Veränderung erfahren%}. {#viBinna#} {%verändert, entstellt%}.
+&lt;div n=&quot;1&quot;&gt;— 7〉 {#viBinna#}
+&lt;div n=&quot;2&quot;&gt;— a〉 {%geöffnet, aufgeblüht; offen und fliessend%} (die Stirn eines brünstigen Elephanten).
+&lt;div n=&quot;2&quot;&gt;— b〉 {%auseinandergebreitet, -getrieben%}.
+&lt;div n=&quot;2&quot;&gt;— c〉 {%getrennt%} in {#a˚#} (&lt;ls&gt;Nachtr. 4&lt;/ls&gt;).
+&lt;div n=&quot;2&quot;&gt;— d〉 {%uneins, in Uneinigkeit lebend%}.
+&lt;div n=&quot;2&quot;&gt;— e〉 {%wo Uneinigkeit herrscht%}.
+&lt;div n=&quot;2&quot;&gt;— f〉 {%sich widersprechend%}.
+&lt;div n=&quot;2&quot;&gt;— g〉 {%getäuscht%} in {#ASA˚#} {%in seiner Hoffnung%}.
+&lt;div n=&quot;2&quot;&gt;— h〉 {%verschieden%}.
+&lt;div n=&quot;2&quot;&gt;— i〉 {%vermengt mit%} (&lt;ab&gt;Instr.&lt;/ab&gt;)
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {%Jmd von Jmd%} (&lt;ab&gt;Abl.&lt;/ab&gt;) {%entfernen, abspänstig machen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pravi#}, {#˚Binna#} {%aufgerissen, verwundet, geborsten%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#sam#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%zerspalten, zerbrechen, durchbohren, verletzen%}. {#saMBinna#} {%zerspalten%} &lt;ab&gt;u. s. w.&lt;/ab&gt; {#˚maryAda#} &lt;lex&gt;Adj.&lt;/lex&gt; {%der die Schranken durchbrochen hat%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%unterbrechen, aufgeben%}. {#saMBinnavftta#} &lt;lex&gt;Adj.&lt;/lex&gt; {%der seinen guten Lebenswandel verlassen hat%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%zusammenbringen, in Berührung bringen, verbinden, vermengen%}. {#saMBinna#} {%zusammengezogen%} (die Glieder einer Schildkröte), {%in Berührung gekommen, verbunden, dicht anliegend, compact%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%sich zu Jmd%} (&lt;ab&gt;Acc.&lt;/ab&gt;) {%gesellen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#anusam#} {%zusammenbringen, verbinden%} [Page4-267-a] &lt;ls&gt;ĀPAST. ŚR. 3,5,2. 8,5,20&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#upasam#} &lt;ab&gt;dass.&lt;/ab&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

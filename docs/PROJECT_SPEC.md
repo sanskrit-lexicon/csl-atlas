@@ -26,8 +26,10 @@ The project should not merely ask whether CDSL data can be converted. It should 
 - Difficult entries selected automatically from hard-case signatures.
 - TEI as archival encoding.
 - OntoLex/Lexicog/FrAC as semantic web representation.
+- Optional external validation harness for TEI ODD/RELAX NG and SHACL-engine checks.
 - Bilingual English/Russian public interface from the beginning.
 - Static public site first; deeper interactive graph tooling later.
+- All-dictionary coverage inventory as the bridge from the MW/PWG/PWK pilot to a broader CDSL atlas.
 
 ### Out Of Scope For The First 3 Months
 
@@ -36,6 +38,7 @@ The project should not merely ask whether CDSL data can be converted. It should 
 - Production RDF endpoint.
 - Exhaustive TEI customization.
 - Corpus attestation verification beyond dictionary-internal citations.
+- Full philological typology for every CDSL dictionary; the first pass is heuristic coverage and size measurement.
 
 ## Standards Roles
 
@@ -55,6 +58,7 @@ The project should not merely ask whether CDSL data can be converted. It should 
 5. Can compound entries be represented at once as archival subentries and semantic decomposition graphs?
 6. Are roots lexical entries, derivational nodes, grammatical infrastructure, or all three?
 7. What minimum Sanskrit-specific extension layer is needed above TEI/OntoLex?
+8. Which CDSL dictionaries fit the MW-derived block scheme fully, partially, or only as prose/genre-bound boundary cases?
 
 ## Digital Tool
 
@@ -87,9 +91,13 @@ Paper sections:
 By the end of month 3:
 
 - 50 automatically sampled hard cases are public.
+- All available CDSL v02 dictionaries with main source files have a reproducible coverage and size inventory.
 - Each case has MW/PWG/PWK raw snippets where available.
 - Each case has a normalized JSON record.
-- At least 15 cases have hand-reviewed TEI and OntoLex mappings.
+- All 50 cases have strict, reproducible TEI archival-profile mappings and machine-review reports.
+- All 50 cases have OntoLex/FrAC JSON-LD, RDF/Turtle mirrors, and machine-review reports.
+- The project includes a TEI ODD/profile file and an OntoLex/FrAC SHACL/profile file for reproducible validation.
+- The project records optional external validator status for TEI ODD/RELAX NG and SHACL engines separately from the canonical local profile validators.
 - The atlas exposes loss reports, not just successful mappings.
 - A paper abstract and detailed outline exist in the repo.
 - English and Russian labels are both present in the public interface.

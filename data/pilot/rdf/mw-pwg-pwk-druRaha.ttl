@@ -1,0 +1,71 @@
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix lexicog: <http://www.w3.org/ns/lemon/lexicog#> .
+@prefix decomp: <http://www.w3.org/ns/lemon/decomp#> .
+@prefix frac: <http://www.w3.org/ns/lemon/frac#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix csl: <https://sanskrit-lexicon.github.io/csl-atlas/ns#> .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha> a ontolex:LexicalEntry, lexicog:Entry ;
+  ontolex:canonicalForm <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#form-canonical> ;
+  csl:caseId "mw-pwg-pwk:druRaha" ;
+  csl:key "druRaha" ;
+  csl:entryType "compound" ;
+  csl:profileVersion "ontolex-frac-profile-v0.1" ;
+  csl:reviewStatus "full-50-machine-review" ;
+  csl:validationScope "full-50-ontolex-shacl-profile" ;
+  csl:phenomenon "compound" ;
+  csl:phenomenon "tri-dict" ;
+  csl:phenomenon "pwg-rich" ;
+  csl:phenomenon "pwk-abridged" ;
+  csl:phenomenon "mw-uncited-pwg-cited" ;
+  csl:phenomenon "homophone" ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#record-mw> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#record-pwg> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#record-pwk> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#attestation-pwg-1> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#attestation-pwg-2> .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#form-canonical> a ontolex:Form ;
+  ontolex:writtenRep "druRaha"@sa-Latn-x-SLP1 .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#record-mw> a csl:SourceRecord ;
+  dct:source "Monier-Williams 1899" ;
+  csl:dictionary "mw" ;
+  csl:recordNumber "97948" ;
+  csl:lineNumber "328418" ;
+  csl:pageColumn "502,2" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#record-pwg> a csl:SourceRecord ;
+  dct:source "Boehtlingk-Roth PWG" ;
+  csl:dictionary "pwg" ;
+  csl:recordNumber "35371" ;
+  csl:lineNumber "342585" ;
+  csl:pageColumn "3-0809" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#record-pwk> a csl:SourceRecord ;
+  dct:source "Boehtlingk PWK" ;
+  csl:dictionary "pwk" ;
+  csl:recordNumber "53461" ;
+  csl:lineNumber "219290" ;
+  csl:pageColumn "3-130-a" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#attestation-pwg-1> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha> ;
+  frac:evidence "HĀR. 125." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#attestation-pwg-2> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha> ;
+  frac:evidence "WILSON" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#record-pwg> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha#decomposition> a decomp:ComponentList ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AdruRaha> ;
+  csl:modelingNote "Machine segmentation exported for review." .
+

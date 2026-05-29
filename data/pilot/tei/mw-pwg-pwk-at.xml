@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-at">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case at</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-at-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3Aat">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">at</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">1P,1Ā</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-at-sense-1" n="1">
+      <def xml:lang="en">go constantly, walk, run</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-at-sense-2" n="2">
+      <def xml:lang="en">obtain</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-at-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <ref type="whitney-root" target="urn:csl:whitney-root:at,3">at,3</ref>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-at-cite-mw-1" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-mw">
+        <abbr>Naigh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-mw-3" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-at-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwg">
+        <abbr>DHĀTUP. 3,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwg">
+        <abbr>NAIGH. 2,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwg">
+        <abbr>ṚV. 6,61,9.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwg">
+        <abbr>2,38,3.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwg">
+        <abbr>6,9,2.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwg">
+        <abbr>NIR. 4,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwg">
+        <abbr>NIR. 10,13.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwg">
+        <abbr>ṚV. 1,30,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwk">
+        <abbr>ĀPAST. ŚR. 9,10,15</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-at-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-at-record-pwk">
+        <abbr>TBR. 1,4,3,6</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-at-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">2490</idno>
+        <idno type="line">8899</idno>
+        <idno type="pc">12,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;2490&lt;pc&gt;12,1&lt;k1&gt;at&lt;k2&gt;at&lt;h&gt;2&lt;e&gt;1
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;at&lt;/s&gt; ¦ &lt;ab&gt;cl.&lt;/ab&gt; 1. &lt;ab&gt;P.&lt;/ab&gt; &lt;ab&gt;Ā.&lt;/ab&gt; &lt;s&gt;a/tati&lt;/s&gt; (&lt;ls&gt;Naigh.&lt;/ls&gt;; &lt;ab&gt;p.&lt;/ab&gt; &lt;s&gt;a/tat&lt;/s&gt; or &lt;s&gt;a/tamAna&lt;/s&gt;),
+&lt;div n=&quot;to&quot;/&gt;to go constantly, walk, run, &lt;ls&gt;RV.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to obtain, &lt;ls&gt;L.&lt;/ls&gt;&lt;info whitneyroots=&quot;at,3&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;1P,1Ā&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-at-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">1188</idno>
+        <idno type="line">10151</idno>
+        <idno type="pc">1-0087</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1188&lt;pc&gt;1-0087&lt;k1&gt;at&lt;k2&gt;at&lt;h&gt;1
+1. {#at#}¦, {#a/tati, atitA, atizyati, AtIt#} {%beständig gehen%}
+&lt;ls&gt;DHĀTUP. 3,1.&lt;/ls&gt; {#a/tati = gatikarma#}
+&lt;ls&gt;NAIGH. 2,14.&lt;/ls&gt; {%wandern, laufen%}: {#sA no viSvA ati dvizaH svasFranyA ftAvarI . atannaheva sUryaH ..#}
+&lt;ls&gt;ṚV. 6,61,9.&lt;/ls&gt; &lt;ab&gt;med.&lt;/ab&gt;: {#arI^rama\data^mAnaM ci\deto^H#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,38,3.&lt;/ls&gt; {#sa\ma\re &apos;ta^mAnAH#}
+&lt;ls n=&quot;ṚV.&quot;&gt;6,9,2.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#aw#} .
+&lt;div n=&quot;p&quot;&gt;— {#aBi#} {%besuchen, einkehren%}: {#atiTiraByatito gfhAnBavati#}
+&lt;ls&gt;NIR. 4,5.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ava#} {%hinabgehen%}: {#avAtita#}
+&lt;ls&gt;NIR. 10,13.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#sam#} {%besuchen%}: {#sama^tasi ka\pota^ iva garBa\Dim#}
+&lt;ls&gt;ṚV. 1,30,4.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-at-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">204999</idno>
+        <idno type="line">584130</idno>
+        <idno type="pc">4-291-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;204999&lt;pc&gt;4-291-b&lt;k1&gt;at&lt;k2&gt;at
+√{#at#}¦ mit {#anu#} in {#anvatya#} (= {#anugamayya#} &lt;ab&gt;Comm.&lt;/ab&gt;) &lt;ls&gt;ĀPAST. ŚR. 9,10,15&lt;/ls&gt;. Schon nach der Betonung &lt;ls&gt;TBR. 1,4,3,6&lt;/ls&gt; ist diese Trennung in {#anvatyAva/rtayet#} nicht denkbar.&lt;info n=&quot;sup_4&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

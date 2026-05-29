@@ -31,6 +31,13 @@ const sources = {
   pwk: path.join(cslV02, "pw", "pw.txt")
 };
 
+const publicSources = Object.fromEntries(
+  Object.entries(sources).map(([code, filePath]) => [
+    code,
+    path.relative(repoRoot, filePath).split(path.sep).join("/")
+  ])
+);
+
 for (const filePath of Object.values(sources)) {
   if (!fs.existsSync(filePath)) {
     throw new Error(`Missing source file: ${filePath}`);
@@ -262,11 +269,32 @@ for (const candidate of candidates) {
   addCandidate(candidate);
 }
 
+const selectedKeyCounts = selected.reduce((counts, candidate) => {
+  counts.set(candidate.key, (counts.get(candidate.key) || 0) + 1);
+  return counts;
+}, new Map());
+
+const selectedArtifactStemCounts = selected.reduce((counts, candidate) => {
+  const stem = `mw-pwg-pwk-${candidate.key}`.toLowerCase();
+  counts.set(stem, (counts.get(stem) || 0) + 1);
+  return counts;
+}, new Map());
+
+function caseIdFor(candidate) {
+  const stem = `mw-pwg-pwk-${candidate.key}`.toLowerCase();
+  const needsDisambiguator = selectedKeyCounts.get(candidate.key) > 1
+    || selectedArtifactStemCounts.get(stem) > 1;
+  const suffix = needsDisambiguator
+    ? `-mw${candidate.mw.L}`
+    : "";
+  return `mw-pwg-pwk:${candidate.key}${suffix}`;
+}
+
 const output = {
   generatedAt: new Date().toISOString(),
   generator: "scripts/sample-hard-cases.mjs",
   maxItems,
-  sources,
+  sources: publicSources,
   recordCounts: {
     mw: mwRecords.length,
     pwg: pwgRecords.length,
@@ -277,6 +305,7 @@ const output = {
     signatures: ["hedge", "root", "compound", "continuation", "pwg-rich", "pwk-abridged", "tri-dict"]
   },
   items: selected.map((candidate, index) => ({
+    id: caseIdFor(candidate),
     rank: index + 1,
     key: candidate.key,
     score: candidate.score,
@@ -290,11 +319,17 @@ const output = {
   }))
 };
 
-const outputPath = path.join(repoRoot, "data", "pilot", "hard-cases.json");
-fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-fs.writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+const outputPaths = [
+  path.join(repoRoot, "data", "pilot", "hard-cases.json"),
+  path.join(repoRoot, "src", "data", "pilot", "hard-cases.json")
+];
 
-console.log(`Wrote ${output.items.length} hard cases to ${outputPath}`);
+for (const outputPath of outputPaths) {
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+}
+
+console.log(`Wrote ${output.items.length} hard cases to ${outputPaths.join(", ")}`);
 console.log(`Parsed MW=${mwRecords.length}, PWG=${pwgRecords.length}, PWK=${pwkRecords.length}`);
 
 function isPreferredForQuota(candidate, phenomenon) {

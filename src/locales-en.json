@@ -132,5 +132,52 @@
     "TRIK.": "Trikāṇḍaśeṣa",
     "HALĀY.": "Halāyudha",
     "H. an.": "Hemacandra Anekārthasaṃgraha"
+  },
+  "interop": {
+    "title": "MW-PWG-PWK Interoperability Hard Cases",
+    "description": "This tool shows 50 automatically sampled hard cases for the MW-PWG-PWK interoperability track.",
+    "select-language": "Select Language",
+    "case-label": "Case",
+    "phenomena": "Phenomena",
+    "loss-hints": "Loss Hints",
+    "machine-loss-reports": "Machine Loss Reports",
+    "source-records": "Source Records",
+    "review-slice": "Validated TEI/OntoLex slice",
+    "review-rank": "review",
+    "full-validation": "Full 50-case machine validation",
+    "tei-status": "TEI ODD/profile",
+    "rdf-status": "OntoLex/RDF SHACL/profile",
+    "links": {
+      "neutral": "Neutral Model JSON",
+      "tei": "TEI Profile (.xml)",
+      "ontolex": "OntoLex/FrAC Profile (.json)",
+      "rdf": "RDF Turtle (.ttl)",
+      "loss": "Loss Reports JSON",
+      "teiReview": "TEI Review JSON",
+      "ontolexReview": "OntoLex/RDF Review JSON"
+    }
+  },
+  "status": {
+    "partial": "partial",
+    "lossy": "lossy",
+    "clean": "clean"
+  },
+  "review": {
+    "machine": "machine",
+    "reviewed": "reviewed"
+  },
+  "failure": {
+    "model-vocabulary-gap": "model-vocabulary-gap",
+    "print-compression": "print-compression",
+    "cdsl-markup-gap": "cdsl-markup-gap",
+    "none": "none"
+  },
+  "phenomenon": {
+    "generic-lexicographer-hedge": "generic-lexicographer-hedge",
+    "root-as-entry": "root-as-entry",
+    "root-as-derivational-base": "root-as-derivational-base",
+    "compound-subentry": "compound-subentry",
+    "compound-decomposition": "compound-decomposition",
+    "continuation-parent": "continuation-parent"
   }
 }

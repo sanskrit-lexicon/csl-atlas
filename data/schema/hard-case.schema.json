@@ -45,8 +45,9 @@
   "$defs": {
     "item": {
       "type": "object",
-      "required": ["rank", "key", "score", "phenomena", "lossHints", "records"],
+      "required": ["id", "rank", "key", "score", "phenomena", "lossHints", "records"],
       "properties": {
+        "id": { "type": "string", "pattern": "^mw-pwg-pwk:" },
         "rank": { "type": "integer", "minimum": 1 },
         "key": { "type": "string" },
         "score": { "type": "integer" },

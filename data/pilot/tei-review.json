@@ -1,0 +1,1002 @@
+{
+  "generatedAt": "2026-05-29T02:47:42.096Z",
+  "generator": "scripts/validate-tei-profile.mjs",
+  "profileVersion": "tei-archival-profile-v0.1",
+  "validationScope": "full-50-tei-odd-profile",
+  "schemaProfile": "data/schema/tei-archival-profile.odd.xml",
+  "reviewType": "machine-review",
+  "caveat": "This is full 50-case machine review and project ODD/profile validation, not a human philological review.",
+  "totals": {
+    "cases": 50,
+    "passed": 50,
+    "failed": 0,
+    "warnings": 0
+  },
+  "items": [
+    {
+      "id": "mw-pwg-pwk:ac",
+      "key": "ac",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:ah",
+      "key": "ah",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:akz",
+      "key": "akz",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:am",
+      "key": "am",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:aMh-mw107",
+      "key": "aMh",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:aMh-mw114",
+      "key": "aMh",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:an",
+      "key": "an",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:aS",
+      "key": "aS",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:at",
+      "key": "at",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:Bid",
+      "key": "Bid",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:DAv",
+      "key": "DAv",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:dih",
+      "key": "dih",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "verbal-root",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:annavid",
+      "key": "annavid",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:arcya",
+      "key": "arcya",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:arTAntara",
+      "key": "arTAntara",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:aryapatnI",
+      "key": "aryapatnI",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:BadreSa",
+      "key": "BadreSa",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:BadreSvara",
+      "key": "BadreSvara",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:bAhukIwa",
+      "key": "bAhukIwa",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:cEtika",
+      "key": "cEtika",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:daSagrAmika",
+      "key": "daSagrAmika",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:DIratA",
+      "key": "DIratA",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:dozAkara",
+      "key": "dozAkara",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:druRaha",
+      "key": "druRaha",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:dURASa",
+      "key": "dURASa",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:durizwa",
+      "key": "durizwa",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:DUrvaha",
+      "key": "DUrvaha",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "compound",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:akupya",
+      "key": "akupya",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "continuation",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:aMSa",
+      "key": "aMSa",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "continuation",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:Apra",
+      "key": "Apra",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "continuation",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:asana",
+      "key": "asana",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "continuation",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:Asecana",
+      "key": "Asecana",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "continuation",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:ASis",
+      "key": "ASis",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "continuation",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:Ayana",
+      "key": "Ayana",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "continuation",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:daSA",
+      "key": "daSA",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "continuation",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:a-mw7",
+      "key": "a",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:A-mw22012",
+      "key": "A",
+      "status": "pass",
+      "reviewStatus": "validated-slice",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:abaDya",
+      "key": "abaDya",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:aBIka",
+      "key": "aBIka",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:aBIti",
+      "key": "aBIti",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:ABoga",
+      "key": "ABoga",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:aga",
+      "key": "aga",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:Ahava",
+      "key": "Ahava",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:Akalpa",
+      "key": "Akalpa",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:akza",
+      "key": "akza",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:AkzapAda",
+      "key": "AkzapAda",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:AkzapAwika",
+      "key": "AkzapAwika",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:alipaka",
+      "key": "alipaka",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:Ama",
+      "key": "Ama",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "id": "mw-pwg-pwk:anti",
+      "key": "anti",
+      "status": "pass",
+      "reviewStatus": "full-50-machine-review",
+      "profileVersion": "tei-archival-profile-v0.1",
+      "validationScope": "full-50-tei-odd-profile",
+      "entryType": "lemma",
+      "sourceEntryCount": 3,
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

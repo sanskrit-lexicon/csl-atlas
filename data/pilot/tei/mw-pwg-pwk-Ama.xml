@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-Ama">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case Ama</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-Ama-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AAma">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">Ama</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-Ama-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-Ama-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>H. an. 2,315.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>MED. m. 2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>ṚV. 1,162,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>AV. 4,17,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>5,29,6.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>8,6,23.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>M. 4,223.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>YĀJÑ. 1,286.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>R. 4,40,31.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>SUŚR. 1,176,16.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>KĀTY. ŚR. 5,3,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>ṚV. 3,30,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>1,62,9.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>180,3.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>2,40,2.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>4,3,9.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>6,72,4.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>8,78,7.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>TS. 6,5,6,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>ŚAT. BR. 2,2,4,15.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>14,9,3,10.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>AV. 5,31,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>MBH. 3,1215.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>PAÑCAT. III,13.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>HIT. IV,63.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>MṚCCH. 47,9.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>AK. 2,4,1,15.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>H. 1130.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>SUŚR. 1,215,20.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>SUŚR. 1,62,11. 63,3. 2,105,18. 224,7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>SUŚR. 2,429,4. 7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>SUŚR. 1,186,9.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>SUŚR. 2,488,6. 489,2. 490,9.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>WISE 335.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>SUŚR. 2,430,20.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>21.</abbr>
+        <ref type="inherited-siglum">SUŚR. 2,430,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>10.</abbr>
+        <ref type="inherited-siglum">SUŚR. 2,430,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>H. an. 2,315</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwg">
+        <abbr>MED. m. 2</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwk">
+        <abbr>VP.² 5,79</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ama-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-Ama-record-pwk">
+        <abbr>BHĀG. P. 5,20,21</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-Ama-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">25437</idno>
+        <idno type="line">90182</idno>
+        <idno type="pc">146,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;25437&lt;pc&gt;146,2&lt;k1&gt;Ama&lt;k2&gt;Ama&lt;h&gt;2&lt;e&gt;1
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;Ama&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; (probably identical with &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;Ama&lt;/s&gt;), sickness, disease, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Ama-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">8901</idno>
+        <idno type="line">76073</idno>
+        <idno type="pc">1-0668</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;8901&lt;pc&gt;1-0668&lt;k1&gt;Ama&lt;k2&gt;Ama/&lt;h&gt;1
+1. {#Ama/#}¦
+&lt;div n=&quot;1&quot;&gt; 1) &lt;lex&gt;adj.&lt;/lex&gt; &lt;lex&gt;f.&lt;/lex&gt; {#A#}
+&lt;lang n=&quot;greek&quot;&gt;ὠμός&lt;/lang&gt;, &lt;ab&gt;Gegens.&lt;/ab&gt; {#pakva#}
+&lt;ls&gt;H. an. 2,315.&lt;/ls&gt;
+&lt;ls&gt;MED. m. 2.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— a) {%roh, ungekocht%}: {#ya A\masya^ kra\vizo^ ga\nDo asti^#}
+&lt;ls&gt;ṚV. 1,162,10.&lt;/ls&gt; {#mA\Mse#}
+&lt;ls&gt;AV. 4,17,4.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;5,29,6.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;8,6,23.&lt;/ls&gt; {#annam#}
+&lt;ls&gt;M. 4,223.&lt;/ls&gt; {#matsyAn#}
+&lt;ls&gt;YĀJÑ. 1,286.&lt;/ls&gt;
+&lt;ls&gt;R. 4,40,31.&lt;/ls&gt; {#striyAH stanyamAmam#}
+&lt;ls&gt;SUŚR. 1,176,16.&lt;/ls&gt; {#AmaBfzwa#} {%halbgeröstet%}
+&lt;ls&gt;KĀTY. ŚR. 5,3,2.&lt;/ls&gt; Im &lt;is&gt;Veda&lt;/is&gt; besonders von {%der Kuh%}, welche im Gegensatz zu der gleichsam {%gekochten Milch%}, die sie erzeugt, selbst als {%roh%} bezeichnet wird: {#mahi\ jyoti\rnihi^taM va\kzaRA^svA\mA pa\kvaM ca^rati\ biBra^tI\ gOH#}
+&lt;ls&gt;ṚV. 3,30,14.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;1,62,9.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;180,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;2,40,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;4,3,9.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;6,72,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,78,7.&lt;/ls&gt; {#tasmA^dA\mA pa\kvaM du^he#}
+&lt;ls&gt;TS. 6,5,6,4.&lt;/ls&gt;
+&lt;ls&gt;ŚAT. BR. 2,2,4,15.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;14,9,3,10.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— b) {%ungebrannt%}, von einem Gefäss
+&lt;ls&gt;AV. 5,31,1.&lt;/ls&gt;
+&lt;ls&gt;MBH. 3,1215.&lt;/ls&gt;
+&lt;ls&gt;PAÑCAT. III,13.&lt;/ls&gt; &lt;ls&gt;HIT. IV,63.&lt;/ls&gt; {#AmezwakAnAm#}
+&lt;ls&gt;MṚCCH. 47,9.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#AmapAtra#} .
+&lt;div n=&quot;2&quot;&gt;— c) {%unreif%}, von Früchten
+&lt;ls&gt;AK. 2,4,1,15.&lt;/ls&gt;
+&lt;ls&gt;H. 1130.&lt;/ls&gt;
+&lt;ls&gt;SUŚR. 1,215,20.&lt;/ls&gt; von Geschwüren und &lt;ab&gt;dgl.&lt;/ab&gt;: {#AmaM vipacyamAnaM ca samyakpakvaM ca yo Bizak . jAnIyAt#}
+&lt;ls&gt;SUŚR. 1,62,11. 63,3. 2,105,18. 224,7.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— d) {%unverdaut%}, von krankhafter Ausleerung
+&lt;ls&gt;SUŚR. 2,429,4. 7.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) &lt;lex&gt;n.&lt;/lex&gt;
+&lt;div n=&quot;2&quot;&gt; a) {%der Zustand des Rohseins%}
+&lt;ls&gt;SUŚR. 1,186,9.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— b) {%Verdauungslosigkeit, cruditas%}
+&lt;ls&gt;SUŚR. 2,488,6. 489,2. 490,9.&lt;/ls&gt; Bezeichnung {%einer acuten Form von Dysenterie%}
+&lt;ls&gt;WISE 335.&lt;/ls&gt;
+&lt;ls&gt;SUŚR. 2,430,20.&lt;/ls&gt; vollständiger {#AmAtisAra#}
+&lt;ls n=&quot;SUŚR. 2,430,&quot;&gt;21.&lt;/ls&gt; {%der damit Behaftete%} {#AmAtisArin#}
+&lt;ls n=&quot;SUŚR. 2,430,&quot;&gt;10.&lt;/ls&gt; Aus den obigen Stellen lässt sich das Geschlecht nicht bestimmen; nach Anführungen im
+&lt;ls&gt;ŚKDR.&lt;/ls&gt; ist das Wort &lt;lex&gt;n.&lt;/lex&gt;;
+&lt;ls&gt;H. an. 2,315&lt;/ls&gt; und &lt;ls&gt;MED. m. 2&lt;/ls&gt; wird {#Ama#} &lt;lex&gt;m.&lt;/lex&gt; als {%besondere Krankheit%} aufgeführt; nach dem
+&lt;ls&gt;RĀJAN.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; bedeutet {#Ama#} &lt;lex&gt;m.&lt;/lex&gt; auch {%Verstopfung%} ({#malavEzamyaroga#}). &lt;ab&gt;Vgl.&lt;/ab&gt; 2. {#Ama#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Ama-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">15125</idno>
+        <idno type="line">57224</idno>
+        <idno type="pc">1-179-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;15125&lt;pc&gt;1-179-b&lt;k1&gt;Ama&lt;k2&gt;Ama/&lt;h&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; {#Ama/#}¦
+&lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;Adj.&lt;/lex&gt; (&lt;lex&gt;f.&lt;/lex&gt; {#A#})
+&lt;div n=&quot;2&quot;&gt;— a〉 {%roh, ungekocht%}. Als &lt;ab&gt;Beiw.&lt;/ab&gt; der Kuh im Gegensatz zur Milch, die als {%gar, gekocht%} bezeichnet wird; als &lt;ab&gt;Beiw.&lt;/ab&gt; der Wolken im Gegensatz zum Wasser, das sie entlassen.
+&lt;div n=&quot;2&quot;&gt;— b〉 {%ungebrannt%} (von Gefässen).
+&lt;div n=&quot;2&quot;&gt;— c〉 {%unreif%} (von Früchten, Geschwüren &lt;ab n=&quot;und&quot;&gt;u.&lt;/ab&gt; &lt;ab&gt;dgl.&lt;/ab&gt;).
+&lt;div n=&quot;2&quot;&gt;— d〉 {%unverdaut%} (von krankhafter Ausleerung).
+&lt;div n=&quot;2&quot;&gt;— e〉 {%zart, fein%} (Haut).
+&lt;div n=&quot;1&quot;&gt;— 2〉 &lt;lex&gt;m.&lt;/lex&gt; &lt;ab&gt;N. pr.&lt;/ab&gt;
+&lt;div n=&quot;2&quot;&gt;— a〉 eines Sohnes des &lt;is&gt;Kṛṣṇa&lt;/is&gt; &lt;ls&gt;VP.² 5,79&lt;/ls&gt;.
+&lt;div n=&quot;2&quot;&gt;— b〉 eines Sohnes des &lt;is&gt;Ghṛtapṛṣṭha&lt;/is&gt; und des von ihm beherrschten &lt;is&gt;Varṣa&lt;/is&gt; &lt;ls&gt;BHĀG. P. 5,20,21&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3〉 &lt;lex&gt;m.&lt;/lex&gt; oder &lt;lex&gt;n.&lt;/lex&gt; {%Verdauungslosigkeit, cruditas;%} &lt;ab&gt;insbes.&lt;/ab&gt; {%eine akute Form von Dysenterie%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 &lt;lex&gt;n.&lt;/lex&gt; {%der Zustand des Rohseins%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

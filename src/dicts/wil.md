@@ -108,8 +108,7 @@ Full lineage in [WIL/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/WIL/bl
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/WIL/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory
 - **Source file**: [`csl-orig/v02/wil/wil.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
-- **Per-dict matrix JSON**: [`data/wil_blocks.json`](../data/wil_blocks.json)
-- **Cross-dict aggregate**: [`data/cross-dict.json`](../data/cross-dict.json)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes WIL block matrix data)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/WIL/blob/master/LICENSE)
 
 ## See also (tools)

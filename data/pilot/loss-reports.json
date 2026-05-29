@@ -1,0 +1,1971 @@
+[
+  {
+    "caseId": "mw-pwg-pwk:ac",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "1767",
+      "line": 6421
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ac",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "1767",
+      "line": 6421
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ac",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "1767",
+      "line": 6421
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ac",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "1767",
+      "line": 6421
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ah",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "21630",
+      "line": 77189
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ah",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "21630",
+      "line": 77189
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ah",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "21630",
+      "line": 77189
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ah",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "21630",
+      "line": 77189
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:akz",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "423",
+      "line": 1539
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:akz",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "423",
+      "line": 1539
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:akz",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "423",
+      "line": 1539
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:akz",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "423",
+      "line": 1539
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:am",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "13748",
+      "line": 49569
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:am",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "13748",
+      "line": 49569
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:am",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "13748",
+      "line": 49569
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:am",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "13748",
+      "line": 49569
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMh-mw107",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "107",
+      "line": 364
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMh-mw107",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "107",
+      "line": 364
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMh-mw107",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "107",
+      "line": 364
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMh-mw107",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "107",
+      "line": 364
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMh-mw114",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "114",
+      "line": 392
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMh-mw114",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "114",
+      "line": 392
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMh-mw114",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "114",
+      "line": 392
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMh-mw114",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "114",
+      "line": 392
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:an",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "4782",
+      "line": 17305
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:an",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "4782",
+      "line": 17305
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:an",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "4782",
+      "line": 17305
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:an",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "4782",
+      "line": 17305
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aS",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "19412",
+      "line": 69415
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aS",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "19412",
+      "line": 69415
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aS",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "19412",
+      "line": 69415
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aS",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "19412",
+      "line": 69415
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:at",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "2490",
+      "line": 8899
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:at",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "2490",
+      "line": 8899
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:at",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "2490",
+      "line": 8899
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:at",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "2490",
+      "line": 8899
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Bid",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "150727",
+      "line": 504830
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Bid",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "150727",
+      "line": 504830
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Bid",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "150727",
+      "line": 504830
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Bid",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "150727",
+      "line": 504830
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:DAv",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "101170",
+      "line": 339074
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:DAv",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "101170",
+      "line": 339074
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:DAv",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "101170",
+      "line": 339074
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:DAv",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "101170",
+      "line": 339074
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:dih",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "92642",
+      "line": 311255
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:dih",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "92642",
+      "line": 311255
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:dih",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "root-as-entry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "92642",
+      "line": 311255
+    },
+    "claim": "Root modeling",
+    "loss": "Root as entry is preservable; derivational role is not fully explicit in TEI dicts",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:dih",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "root-as-derivational-base",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "92642",
+      "line": 311255
+    },
+    "claim": "Root modeling",
+    "loss": "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:annavid",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "8540",
+      "line": 30962
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:annavid",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "8540",
+      "line": 30962
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:arcya",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "15738",
+      "line": 56577
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:arcya",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "15738",
+      "line": 56577
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:arTAntara",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "16023",
+      "line": 57588
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:arTAntara",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "16023",
+      "line": 57588
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aryapatnI",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "16387",
+      "line": 58902
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aryapatnI",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "16387",
+      "line": 58902
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:BadreSa",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "148511",
+      "line": 497724
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:BadreSa",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "148511",
+      "line": 497724
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:BadreSvara",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "148512",
+      "line": 497727
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:BadreSvara",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "148512",
+      "line": 497727
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:bAhukIwa",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "145018.1",
+      "line": 486174
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:bAhukIwa",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "145018.1",
+      "line": 486174
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:cEtika",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "75032",
+      "line": 253563
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:cEtika",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "75032",
+      "line": 253563
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:daSagrAmika",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "90836",
+      "line": 305109
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:daSagrAmika",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "90836",
+      "line": 305109
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:DIratA",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "101344",
+      "line": 339640
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:DIratA",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "101344",
+      "line": 339640
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:dozAkara",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "97015",
+      "line": 325412
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:dozAkara",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "97015",
+      "line": 325412
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:druRaha",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "97948",
+      "line": 328418
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:druRaha",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "97948",
+      "line": 328418
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:dURASa",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "94703",
+      "line": 317837
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:dURASa",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "94703",
+      "line": 317837
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:durizwa",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "93828",
+      "line": 315008
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:durizwa",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "93828",
+      "line": 315008
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:DUrvaha",
+    "target": "tei",
+    "status": "clean",
+    "phenomenon": "compound-subentry",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "101442",
+      "line": 339948
+    },
+    "claim": "Compound modeling",
+    "failureClassification": "none",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:DUrvaha",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "compound-decomposition",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "101442",
+      "line": 339948
+    },
+    "claim": "Compound modeling",
+    "loss": "Decomposition needs explicit component graphs",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:akupya",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "295",
+      "line": 1041
+    },
+    "claim": "Continuation modeling",
+    "loss": "Parent must be recovered from adjacency due to page layout compression",
+    "failureClassification": "print-compression",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:akupya",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "295",
+      "line": 1041
+    },
+    "claim": "Continuation modeling",
+    "loss": "Suppressed headword needs explicit parent relation mapped in OntoLex",
+    "failureClassification": "print-compression",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMSa",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "15",
+      "line": 70
+    },
+    "claim": "Continuation modeling",
+    "loss": "Parent must be recovered from adjacency due to page layout compression",
+    "failureClassification": "print-compression",
+    "extensionNeeded": false,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aMSa",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "15",
+      "line": 70
+    },
+    "claim": "Continuation modeling",
+    "loss": "Suppressed headword needs explicit parent relation mapped in OntoLex",
+    "failureClassification": "print-compression",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Apra",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "25099",
+      "line": 89022
+    },
+    "claim": "Continuation modeling",
+    "loss": "Parent must be recovered from adjacency due to page layout compression",
+    "failureClassification": "print-compression",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Apra",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "25099",
+      "line": 89022
+    },
+    "claim": "Continuation modeling",
+    "loss": "Suppressed headword needs explicit parent relation mapped in OntoLex",
+    "failureClassification": "print-compression",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:asana",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "20611",
+      "line": 73705
+    },
+    "claim": "Continuation modeling",
+    "loss": "Parent must be recovered from adjacency due to page layout compression",
+    "failureClassification": "print-compression",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:asana",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "20611",
+      "line": 73705
+    },
+    "claim": "Continuation modeling",
+    "loss": "Suppressed headword needs explicit parent relation mapped in OntoLex",
+    "failureClassification": "print-compression",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Asecana",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "28084.1",
+      "line": 99292
+    },
+    "claim": "Continuation modeling",
+    "loss": "Parent must be recovered from adjacency due to page layout compression",
+    "failureClassification": "print-compression",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Asecana",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "28084.1",
+      "line": 99292
+    },
+    "claim": "Continuation modeling",
+    "loss": "Suppressed headword needs explicit parent relation mapped in OntoLex",
+    "failureClassification": "print-compression",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ASis",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "27487",
+      "line": 97219
+    },
+    "claim": "Continuation modeling",
+    "loss": "Parent must be recovered from adjacency due to page layout compression",
+    "failureClassification": "print-compression",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ASis",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "27487",
+      "line": 97219
+    },
+    "claim": "Continuation modeling",
+    "loss": "Suppressed headword needs explicit parent relation mapped in OntoLex",
+    "failureClassification": "print-compression",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Ayana",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "25763",
+      "line": 91280
+    },
+    "claim": "Continuation modeling",
+    "loss": "Parent must be recovered from adjacency due to page layout compression",
+    "failureClassification": "print-compression",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Ayana",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "25763",
+      "line": 91280
+    },
+    "claim": "Continuation modeling",
+    "loss": "Suppressed headword needs explicit parent relation mapped in OntoLex",
+    "failureClassification": "print-compression",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:daSA",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "91099",
+      "line": 306032
+    },
+    "claim": "Continuation modeling",
+    "loss": "Parent must be recovered from adjacency due to page layout compression",
+    "failureClassification": "print-compression",
+    "extensionNeeded": false,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:daSA",
+    "target": "ontolex",
+    "status": "lossy",
+    "phenomenon": "continuation-parent",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "91099",
+      "line": 306032
+    },
+    "claim": "Continuation modeling",
+    "loss": "Suppressed headword needs explicit parent relation mapped in OntoLex",
+    "failureClassification": "print-compression",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:a-mw7",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "7",
+      "line": 46
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:a-mw7",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "7",
+      "line": 46
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:A-mw22012",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "22012",
+      "line": 78497
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:A-mw22012",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "22012",
+      "line": 78497
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:abaDya",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "10934",
+      "line": 39872
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:abaDya",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "10934",
+      "line": 39872
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aBIka",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "12993",
+      "line": 46920
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aBIka",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "12993",
+      "line": 46920
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aBIti",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "12996",
+      "line": 46929
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aBIti",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "12996",
+      "line": 46929
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ABoga",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "25369",
+      "line": 89951
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:ABoga",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "25369",
+      "line": 89951
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aga",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "763",
+      "line": 2741
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:aga",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "763",
+      "line": 2741
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Ahava",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "28341",
+      "line": 100205
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Ahava",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "28341",
+      "line": 100205
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Akalpa",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "22062",
+      "line": 78716
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Akalpa",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "22062",
+      "line": 78716
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:akza",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "424",
+      "line": 1559
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:akza",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "424",
+      "line": 1559
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "reviewed"
+  },
+  {
+    "caseId": "mw-pwg-pwk:AkzapAda",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "22369",
+      "line": 79767
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:AkzapAda",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "22369",
+      "line": 79767
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:AkzapAwika",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "22368",
+      "line": 79764
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:AkzapAwika",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "22368",
+      "line": 79764
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:alipaka",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "16749",
+      "line": 60151
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:alipaka",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "16749",
+      "line": 60151
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Ama",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "25437",
+      "line": 90182
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:Ama",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "25437",
+      "line": 90182
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:anti",
+    "target": "tei",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "8345",
+      "line": 30312
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "TEI can preserve string/type but not shared evidential semantics",
+    "failureClassification": "cdsl-markup-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  },
+  {
+    "caseId": "mw-pwg-pwk:anti",
+    "target": "ontolex",
+    "status": "partial",
+    "phenomenon": "generic-lexicographer-hedge",
+    "sourceDictionary": "mw",
+    "sourcePointer": {
+      "L": "8345",
+      "line": 30312
+    },
+    "claim": "MW L. evidence preservation",
+    "loss": "Needs explicit evidence/provenance node (OntoLex-FrAC)",
+    "failureClassification": "model-vocabulary-gap",
+    "extensionNeeded": true,
+    "reviewStatus": "machine"
+  }
+]

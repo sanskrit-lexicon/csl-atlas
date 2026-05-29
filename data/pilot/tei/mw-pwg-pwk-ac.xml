@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-ac">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case ac</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Selected for the first 15-case validated TEI profile slice.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-ac-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3Aac">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">ac</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">1P,1Ā</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-ac-sense-1" n="1">
+      <def xml:lang="en">go, move, tend</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-ac-sense-2" n="2">
+      <def xml:lang="en">honour</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-ac-sense-3" n="3">
+      <def xml:lang="en">make round or curved</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-ac-sense-4" n="4">
+      <def xml:lang="en">request, ask</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-ac-sense-5" n="5">
+      <def xml:lang="en">speak indistinctly</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-ac-sense-6" n="6">
+      <def xml:lang="en">adorn</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-ac-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <ref type="whitney-root" target="urn:csl:whitney-root:ac,1">ac,1</ref>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-ac-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-mw-2" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-ac-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-mw">
+        <abbr>Dharmaś.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>NAIGH. 2,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>P. 8,4,58</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>DHĀTUP. 7,6.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>21,2.</abbr>
+        <ref type="inherited-siglum">DHĀTUP.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>VOP. 8,58.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>BHAṬṬ. 4,22.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>14,99.</abbr>
+        <ref type="inherited-siglum">BHAṬṬ.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>AK. 3,1,34.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>H. 444.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>NAIGH. 2,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>VOP. 8,58.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>26,102.</abbr>
+        <ref type="inherited-siglum">VOP.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>NIR. 5,17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>DURGA</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>11,25.</abbr>
+        <ref type="inherited-siglum">NIR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>DHĀTUP. 7,6.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>P. 6,4,30.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>7,2,53.</abbr>
+        <ref type="inherited-siglum">P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>VOP. 26,102.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>8,41.</abbr>
+        <ref type="inherited-siglum">VOP.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>58.</abbr>
+        <ref type="inherited-siglum">VOP. 8,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>AK. 3,2,47.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>H. 447.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>RAGH. 2,18.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>9,24.</abbr>
+        <ref type="inherited-siglum">RAGH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>AMAR. 78.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>ŚAT. BR. 3,4,3,2</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>5.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR. 3,4,3,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>KĀTY. ŚR. 7,3,7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>NIR. 5,28.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>BHAṬṬ. 9,40.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>NIR. 5,25.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>R. 6,3,43.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>5,65,14.</abbr>
+        <ref type="inherited-siglum">R.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>BHAṬṬ. 9,40.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>R. 6,29,12.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>4,13,29.</abbr>
+        <ref type="inherited-siglum">R.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>5,18,25.</abbr>
+        <ref type="inherited-siglum">R.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>RAGH. 18,50.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwg">
+        <abbr>BHAṬṬ. 2,31.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>Spr. 7734</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>Comm. zu TBR. 2,1,4,3</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-3" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>GĪT. 10,11</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-4" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>37,28</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-5" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>PRASANNAR. 136,1</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-6" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>BĀLAR. 203,8</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-7" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>BĀLAR. 208,4</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-8" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>VIDDH. 76,13</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-9" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>BĀLAR. 64,2</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-10" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>204,4. 208,3</abbr>
+        <ref type="inherited-siglum">BĀLAR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-11" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>ŚAT. BR. 11,4,2,4</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-12" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>19,4</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ac-cite-pwk-13" type="named-source-citation" corresp="#mw-pwg-pwk-ac-record-pwk">
+        <abbr>AIT. ĀR. 1,4,1</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-ac-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">1767</idno>
+        <idno type="line">6421</idno>
+        <idno type="pc">8,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1767&lt;pc&gt;8,3&lt;k1&gt;ac&lt;k2&gt;ac&lt;h&gt;1&lt;e&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;ac&lt;/s&gt; ¦ (connected with √ &lt;s&gt;aYc&lt;/s&gt;, &lt;ab&gt;q.v.&lt;/ab&gt;) &lt;ab&gt;cl.&lt;/ab&gt; 1. &lt;ab&gt;P.&lt;/ab&gt; &lt;ab&gt;Ā.&lt;/ab&gt; &lt;s&gt;a/cati&lt;/s&gt;, &lt;s&gt;a/Ycati&lt;/s&gt;, &lt;s&gt;˚te&lt;/s&gt;, &lt;s&gt;AnaYca&lt;/s&gt;, &lt;s&gt;˚ce&lt;/s&gt;, to go, move, tend;
+&lt;div n=&quot;to&quot;/&gt;to honour;
+&lt;div n=&quot;to&quot;/&gt;to make round or curved;
+&lt;div n=&quot;to&quot;/&gt;to request, ask, &lt;ls&gt;L.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to speak indistinctly, &lt;ls&gt;L.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;/&gt;(also) to adorn, &lt;ls&gt;Dharmaś.&lt;/ls&gt;&lt;info n=&quot;sup&quot;/&gt;
+&lt;div n=&quot;1&quot;/&gt;See &lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;acita&lt;/s&gt;, &lt;s&gt;a/cizwu&lt;/s&gt;.&lt;info whitneyroots=&quot;ac,1&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;1P,1Ā&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ac-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">791</idno>
+        <idno type="line">6637</idno>
+        <idno type="pc">1-0059</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;791&lt;pc&gt;1-0059&lt;k1&gt;ac&lt;k2&gt;ac
+{#ac#}¦, {#aYc, a/cati#}
+&lt;ls&gt;NAIGH. 2,14.&lt;/ls&gt; {#a/Ycati, ˚te; AnaYca, ˚Yce; aYcitA#}
+&lt;ls&gt;P. 8,4,58&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%gehen%},
+&lt;ls&gt;DHĀTUP. 7,6.&lt;/ls&gt; &lt;ls n=&quot;DHĀTUP.&quot;&gt;21,2.&lt;/ls&gt; &lt;ls&gt;VOP. 8,58.&lt;/ls&gt; {#svatantrA kaTamaYcasi#}
+&lt;ls&gt;BHAṬṬ. 4,22.&lt;/ls&gt; {#vAmamAnaYcuryajYiyA mfgAH#}
+&lt;ls n=&quot;BHAṬṬ.&quot;&gt;14,99.&lt;/ls&gt; {#devAnaYcati, vizvagaYcati, sahAYcati, tiro &apos;Ycati#}
+&lt;ls&gt;AK. 3,1,34.&lt;/ls&gt;
+&lt;ls&gt;H. 444.&lt;/ls&gt; {#a/cati = gatikarman#}
+&lt;ls&gt;NAIGH. 2,14.&lt;/ls&gt; {#avyAt#}
+&lt;ls&gt;VOP. 8,58.&lt;/ls&gt; {#akta#}
+&lt;ls n=&quot;VOP.&quot;&gt;26,102.&lt;/ls&gt; {#aNgeti kzipranAmAYcitamevANkitaM Bavati#}
+&lt;ls&gt;NIR. 5,17.&lt;/ls&gt; {#acita#}
+(&lt;ls&gt;DURGA&lt;/ls&gt;: {#gata#})
+&lt;ls n=&quot;NIR.&quot;&gt;11,25.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%ehren%}
+&lt;ls&gt;DHĀTUP. 7,6.&lt;/ls&gt; {#aYcita#} und {#aYcitvA#}
+&lt;ls&gt;P. 6,4,30.&lt;/ls&gt; &lt;ls n=&quot;P.&quot;&gt;7,2,53.&lt;/ls&gt;
+&lt;ls&gt;VOP. 26,102.&lt;/ls&gt; {#aYcyAt#}
+&lt;ls n=&quot;VOP.&quot;&gt;8,41.&lt;/ls&gt; &lt;ls n=&quot;VOP. 8,&quot;&gt;58.&lt;/ls&gt; {#aYcita#} {%geehrt%}
+&lt;ls&gt;AK. 3,2,47.&lt;/ls&gt;
+&lt;ls&gt;H. 447.&lt;/ls&gt; {%ausgezeichnet, ausserordentlich%}: {#aYcitAByAM gatAByAm#} ({%Gang%})
+&lt;ls&gt;RAGH. 2,18.&lt;/ls&gt; {#aYcitavikrama#}
+&lt;ls n=&quot;RAGH.&quot;&gt;9,24.&lt;/ls&gt; {%geziert (?)%}: {#vaktraM svedakaRAYcitam#} (&lt;ab&gt;Schol.&lt;/ab&gt; = {#vyAptam#})
+&lt;ls&gt;AMAR. 78.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%biegen, krümmen%}: {#aNgulIH — acate — AYcanta#}
+&lt;ls&gt;ŚAT. BR. 3,4,3,2&lt;/ls&gt;-&lt;ls n=&quot;ŚAT. BR. 3,4,3,&quot;&gt;5.&lt;/ls&gt; &lt;ls&gt;KĀTY. ŚR. 7,3,7.&lt;/ls&gt; &lt;ls&gt;NIR. 5,28.&lt;/ls&gt; {#Siro &apos;YcitvA#}
+&lt;ls&gt;BHAṬṬ. 9,40.&lt;/ls&gt; {#aYcita#} {%gebogen%}
+&lt;ls&gt;NIR. 5,25.&lt;/ls&gt; {#sudIrGAYcitalANgUlAH (plavaMgamAH)#}
+&lt;ls&gt;R. 6,3,43.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;5,65,14.&lt;/ls&gt;
+&lt;ls&gt;BHAṬṬ. 9,40.&lt;/ls&gt; {#mattasiMhAYcitaskanDa#}
+&lt;ls&gt;R. 6,29,12.&lt;/ls&gt; {#dfptasiMharzaBAYcitaM vIkzya rAmam#}
+&lt;ls n=&quot;R.&quot;&gt;4,13,29.&lt;/ls&gt; {#pInAYcitaguruSroRI#}
+&lt;ls n=&quot;R.&quot;&gt;5,18,25.&lt;/ls&gt; {#aYcitasavyajAnu#}
+&lt;ls&gt;RAGH. 18,50.&lt;/ls&gt; {#aYcitadakziRoru#}
+&lt;ls&gt;BHAṬṬ. 2,31.&lt;/ls&gt; {#netrayugalaM lIlAYcitaBrUlatam#}
+&lt;ls&gt;ŚĀK. CH. 128,15.&lt;/ls&gt; {#aYcitapadmAkzaM muKam#}
+&lt;ls&gt;MBH. 1,7703&lt;/ls&gt; (&lt;ls&gt;SUND. 3,25&lt;/ls&gt;: {#aYcitapatrAkzaM)#}.{# pfTucArvaYcitekzaRa#}
+&lt;ls&gt;N. 12,32.&lt;/ls&gt; {#aYcitAkzipakzman#}
+&lt;ls&gt;RAGH. 5,76.&lt;/ls&gt; (&lt;ab&gt;Sch.&lt;/ab&gt; {#aYcita = sundara)#}.{# SItkArAYcitalocanA#}
+&lt;ls&gt;AMAR. 32.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%verlangen, fordern%}
+&lt;ls&gt;DHĀTUP. 21,2.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 5) {%murmeln, undeutlich sprechen%} &lt;ab&gt;ebend.&lt;/ab&gt; &lt;ab&gt;v. l.&lt;/ab&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#aYcay#} .
+&lt;div n=&quot;p&quot;&gt;— {#apa#} {%wegdrücken, wegtreiben%}: {#apA\mitrA\~ apA\cito^ ace\taH#}
+&lt;ls&gt;ṚV. 9,97,54.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#A#} {%biegen, krümmen%}: {#AcyA\ jAnu^#}
+&lt;ls&gt;ṚV. 9,15,16.&lt;/ls&gt; {#dakziRaM jAnvAcya#}
+&lt;ls&gt;ŚAT. BR. 2,4,2,1.&lt;/ls&gt;
+&lt;ls&gt;ĀŚV. GṚHY. 1,21.&lt;/ls&gt; {#i\zva\grARyAYca/tu#}
+&lt;ls&gt;AV. 11,12,16.&lt;/ls&gt; {#jAnvAkna/#} {%mit gebogenem Knie%}
+&lt;ls&gt;ŚAT. BR. 3,2,1,5.&lt;/ls&gt; (&lt;ab&gt;u.&lt;/ab&gt; {#akna#} ist dieses Beispiel zu streichen).
+&lt;div n=&quot;p&quot;&gt;— {#ud#} {%aufheben, in die Höhe ziehen%}: {#ma\hAnta\M koSa\muda^cA\ ni zi^Yca#}
+&lt;ls&gt;ṚV. 5,83,8.&lt;/ls&gt;
+&lt;ls&gt;VS. 10,19.&lt;/ls&gt; {#ekEkameva pAdamudacya tizWati (aSvaH)#}
+&lt;ls&gt;ŚAT. BR. 5,1,4,5.&lt;/ls&gt; {#pUrRAtpUrRamudacyate#}
+(&lt;ls&gt;ŚAṂK.&lt;/ls&gt;: {#udricyate, udgacCati#})
+&lt;ls&gt;BṚH.&lt;/ls&gt; &lt;ls&gt;AR. UP. 5,1.&lt;/ls&gt; {#udaktamudakaM kUpAt#}
+&lt;ls&gt;P. 7,2,53&lt;/ls&gt;, &lt;ls&gt;Sch. 8,2,48&lt;/ls&gt;,
+&lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;ls&gt;VOP. 26,91.&lt;/ls&gt; {#udaYcitAkzaH#}
+&lt;ls&gt;BHAṬṬ. 2,31.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%ausstossen, ertönen lassen%}: {#harim — anugAyati kAcidudaYcitapaYcamarAgam#}
+&lt;ls&gt;GĪT. 1,39.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#udAca#} .
+&lt;div n=&quot;p&quot;&gt;— {#upa#} {%schöpfen%} (Wasser): {#aYjalinApa upAcati#}
+&lt;ls&gt;ŚAT. BR. 13,8,4,5.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ni#} {%niederbiegen%}: {#aNgulIH — nyacati#}
+&lt;ls&gt;ŚAT. BR. 3,1,3,25.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,&quot;&gt;2,1,36.&lt;/ls&gt; {#nya^knANguli#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,2,1,6.&lt;/ls&gt; auch {#nya^kta#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;1,6,3,17.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 1,&quot;&gt;7,1,1.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,3,4,10.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,&quot;&gt;5,2,18.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#nyAca#} .
+&lt;div n=&quot;p&quot;&gt;— {#pari#} {%umwenden, drehen%}: {#a\haM tazwe^va va\nDura\M parya^cAmi hf\dA ma\tim#} {%cogitationes volvo%}
+&lt;ls&gt;ṚV. 10,119,5.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vi#}
+&lt;div n=&quot;1&quot;&gt; 1) {%auseinander drängen, — biegen%}: {#mA\yABi^raSvinA yu\vaM vf\kzaM saM ca\ vi cA^caTaH#}
+&lt;ls&gt;ṚV. 5,78,6.&lt;/ls&gt; {#saM ca\ vi cA^cyase#}
+&lt;ls&gt;AV. 4,49,2.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%ausweiten, ausbreiten%}: {#agne\ vya^casva\ roda^sI urU\cI#}
+&lt;ls&gt;AV. 3,3,1.&lt;/ls&gt; {#utsa\makzi^taM vya\cyamA^naM sali\lasya^ pf\zWe#}
+&lt;ls n=&quot;AV.&quot;&gt;18,4,36.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#sam#}
+&lt;div n=&quot;1&quot;&gt; 1) {%zusammendrängen%}: {#sama^cyanta vf\janA^#}
+&lt;ls&gt;ṚV. 5,54,12&lt;/ls&gt;; &lt;ab&gt;vgl.&lt;/ab&gt; auch unter {#vi#} .
+&lt;div n=&quot;1&quot;&gt;— 2) {%zusammenbiegen%}: {#aNgulIH samacya#}
+&lt;ab&gt;Sch.&lt;/ab&gt; zu &lt;ls&gt;ŚAT. BR. 3,3,2,14.&lt;/ls&gt; {#samakna#} {%gebogen%}: {#samaknO SakuneH pAdO#}
+&lt;ls&gt;P. 8,2,48&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;ls&gt;VOP. 26,90.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ac-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">1095</idno>
+        <idno type="line">4133</idno>
+        <idno type="pc">1-013-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1095&lt;pc&gt;1-013-b&lt;k1&gt;ac&lt;k2&gt;ac
+√{#ac#}¦ {#aYc, a/cati, ˚te, a/Ycati, ˚te#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%biegen%}. {#aYcita#} {%gebogen; kraus, lockig%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%gehen%}. {#saMkocamaYcati tvayi#} (&lt;ab&gt;d. i.&lt;/ab&gt; {#sarasi#}) {%kommen in, theilhaft werden%} &lt;ls&gt;Spr. 7734&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%verfahren, zu Werke gehen%} &lt;ls&gt;Comm. zu TBR. 2,1,4,3&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%in ehren halten%}. {#aYcita#} {%ausgezeichnet, ausserordentlich%}.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {#aYcitam#} &lt;lex&gt;Adv.&lt;/lex&gt; {%behutsam, aufmerksam%}. — {#˚Ycita#} häufig fehlerhaft für {#˚cita#} ({#ci#} mit {#A#}).
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {#aYcayati#} {%erregen, bewirken%} &lt;ls&gt;GĪT. 10,11&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#anu#} {%nachgehen, folgen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#apa#} {%fortdrängen, vertreiben%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ava#}, &lt;ab&gt;Partic.&lt;/ab&gt; {#avAYcita#} {%gesenkt%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#A#} {%biegen, krümmen%}. &lt;ab&gt;Absol.&lt;/ab&gt; {#A/cya#} &lt;ls n=&quot;Chr.&quot;&gt;37,28&lt;/ls&gt;. &lt;ab&gt;Partic.&lt;/ab&gt; {#Akna#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ud#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%aufheben, in die Höhe ziehen; ausschöpfen, leeren%}. &lt;ab&gt;Partic.&lt;/ab&gt; {#udakta#}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%erregen, bewirken%} &lt;ls&gt;PRASANNAR. 136,1&lt;/ls&gt; &lt;ab&gt;v. u.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%sich erheben%} &lt;ls&gt;BĀLAR. 203,8&lt;/ls&gt;. {%ertönen%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%in die Höhe ziehen; erheben%} &lt;ls&gt;BĀLAR. 208,4&lt;/ls&gt;. &lt;ab&gt;v. u.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%ertönen lassen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vyud#} &lt;ab&gt;Caus.&lt;/ab&gt; ({#˚aYcayati#}) {%erheben%} &lt;ls&gt;VIDDH. 76,13&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#samud#} {%in die Höhe heben%}. &lt;ab&gt;Partic.&lt;/ab&gt; {#amudakta#}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {#˚aYcayati#} {%erregen, bewirken%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#upa#} {%schöpfen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ni#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%niederbiegen%}. &lt;ab&gt;Partic.&lt;/ab&gt; {#nya/kta#} und {#nya^kna#}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%sich beugen, sich senken, herabhängen%} &lt;ls&gt;BĀLAR. 64,2&lt;/ls&gt;. &lt;ab&gt;v. u.&lt;/ab&gt; &lt;ls n=&quot;BĀLAR.&quot;&gt;204,4. 208,3&lt;/ls&gt;. &lt;ab&gt;v. u.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— Mit {#upani#} [Page1-013-c] {%hinbiegen%} &lt;ls&gt;ŚAT. BR. 11,4,2,4&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pari#} {%herumbiegen, umwenden%} &lt;ls n=&quot;Chr.&quot;&gt;19,4&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#prati#} &lt;ab&gt;Pass.&lt;/ab&gt; {%sich anschliessen an%} &lt;ls&gt;AIT. ĀR. 1,4,1&lt;/ls&gt;. &lt;ab&gt;Partic.&lt;/ab&gt; {#pratyaYcita#} {%geehrt%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vi#} {%auseinanderbiegen; ausweiten, ausbreiten%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#sam#} {%zusammenbiegen, zusammendrängen%}. &lt;ab&gt;Partic.&lt;/ab&gt; {#samakna#}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">validated-slice</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

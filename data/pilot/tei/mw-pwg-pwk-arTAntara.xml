@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-arTAntara">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case arTAntara</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Selected for the first 15-case validated TEI profile slice.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-arTAntara-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AarTAntara">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">arTAntara</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-arTAntara-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-arTAntara-compound-relation" type="compound">
+      <note type="decomposition-status">Component segmentation requires philological review.</note>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>SĀH. D. 460.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>KĀVYĀD. 2,169.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>SĀH. D. 709.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>PRATĀPAR. 98,a,8.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>KUVALAY. 122,b</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>147,b</abbr>
+        <ref type="inherited-siglum">KUVALAY.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>Verz. d. Oxf. H. 208,b,21.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>MALLIN.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>KIR. 5,51.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>SĀH. D. 253.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>584.</abbr>
+        <ref type="inherited-siglum">SĀH. D.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwg">
+        <abbr>AV. PRĀT. 4,102.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwk">
+        <abbr>231,29</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arTAntara-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-arTAntara-record-pwk">
+        <abbr>NYĀYAS. 5,2,7</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-arTAntara-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">16023</idno>
+        <idno type="line">57588</idno>
+        <idno type="pc">91,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;16023&lt;pc&gt;91,2&lt;k1&gt;arTAntara&lt;k2&gt;arTAntara&lt;e&gt;3
+&lt;s&gt;arTA&lt;srs/&gt;ntara&lt;/s&gt; ¦ &lt;lex&gt;n.&lt;/lex&gt; another matter, a different or new circumstance, a similar case (often with &lt;s&gt;ny-&lt;/s&gt; √ &lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;as&lt;/s&gt;, to introduce some other matter as an illustration See &lt;s&gt;arTA&lt;srs/&gt;ntara-nyAsa&lt;/s&gt; below)&lt;info lex=&quot;n&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-arTAntara-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">65145</idno>
+        <idno type="line">622549</idno>
+        <idno type="pc">5-1047</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;65145&lt;pc&gt;5-1047&lt;k1&gt;arTAntara&lt;k2&gt;arTAntara
+{#arTAntara#}¦
+&lt;div n=&quot;1&quot;&gt; 1) {%etwas Anderes%}
+&lt;ls&gt;SĀH. D. 460.&lt;/ls&gt; {#arTAntaraM nyas#} bedeutet in der Rhetorik {%eine Erscheinung zu einer anderen in Beziehung setzen und sie dadurch zu erklären suchen%}, &lt;ab&gt;z. B.&lt;/ab&gt; {%einen einzelnen Fall durch einen allgemeinen oder umgekehrt einen allgemeinen durch einen einzelnen; einen analogen Fall beibringen.%} {#arTAntaranyAsa#}
+&lt;ls&gt;KĀVYĀD. 2,169.&lt;/ls&gt; &lt;ls&gt;SĀH. D. 709.&lt;/ls&gt; &lt;ls&gt;PRATĀPAR. 98,a,8.&lt;/ls&gt; &lt;ls&gt;KUVALAY. 122,b&lt;/ls&gt; (&lt;ls n=&quot;KUVALAY.&quot;&gt;147,b&lt;/ls&gt;). &lt;ls&gt;Verz. d. Oxf. H. 208,b,21.&lt;/ls&gt; &lt;ls&gt;MALLIN.&lt;/ls&gt; zu &lt;ls&gt;KIR. 5,51.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {#arTAntaraM saMkramite vAcye#}
+&lt;ls&gt;SĀH. D. 253.&lt;/ls&gt; &lt;ls n=&quot;SĀH. D.&quot;&gt;584.&lt;/ls&gt; &lt;ab&gt;Schol.&lt;/ab&gt; zu &lt;ls&gt;AV. PRĀT. 4,102.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-arTAntara-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">9536</idno>
+        <idno type="line">35755</idno>
+        <idno type="pc">1-112-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;9536&lt;pc&gt;1-112-a&lt;k1&gt;arTAntara&lt;k2&gt;arTAntara
+{#arTAntara#}¦ &lt;lex&gt;n.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%etwas Anderes%}. Mit &lt;ab&gt;Abl.&lt;/ab&gt; &lt;ls n=&quot;Chr.&quot;&gt;231,29&lt;/ls&gt;. &lt;ls&gt;NYĀYAS. 5,2,7&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%eine andere Bedeutung%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">validated-slice</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

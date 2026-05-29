@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-A-mw22012">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case A</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Selected for the first 15-case validated TEI profile slice.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-A-mw22012-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AA-mw22012">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">A</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-A-mw22012-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-A-mw22012-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>ṚV. 1,10,11.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>17,3.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>AV. 3,4,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>6,35,1.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>18,4,49.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>ṚV. 1,83,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>24,12.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>3,31,3.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>10,17,10.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>3,16,5.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>2,14,7.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>1,48,16.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>7,2.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>150,1.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>4,11,1.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>12,2.</abbr>
+        <ref type="inherited-siglum">ṚV. 4,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>ṚV. 1,38,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>37,6.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>6,45,33.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>59,2.</abbr>
+        <ref type="inherited-siglum">ṚV. 6,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>2,12,15.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>4,7.</abbr>
+        <ref type="inherited-siglum">ṚV. 2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>7,20,2.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>1,134,3.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>10,11,6.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>22,3.</abbr>
+        <ref type="inherited-siglum">ṚV. 10,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>AV. 6,33,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>7,22,1.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>ŚAT. BR. 14,7,2,20</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>BṚH. ĀR. UP. 4,4,16). 9,2,3,44.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>KENOP. 29.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>NIR. 3,13.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>ŚAṂK.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>KENOP. 19.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>ṚV. 9,67,23.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>73,5.</abbr>
+        <ref type="inherited-siglum">ṚV. 9,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>6.</abbr>
+        <ref type="inherited-siglum">ṚV. 9,73,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>2,38,7.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>1,9,3.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-A-mw22012-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-A-mw22012-record-pwg">
+        <abbr>ṚV. 7,32,4.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-A-mw22012-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">22012</idno>
+        <idno type="line">78497</idno>
+        <idno type="pc">126,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;22012&lt;pc&gt;126,1&lt;k1&gt;A&lt;k2&gt;A&lt;h&gt;3&lt;e&gt;1
+&lt;hom&gt;3.&lt;/hom&gt; &lt;s&gt;A&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; &lt;ab&gt;N.&lt;/ab&gt; of &lt;s1&gt;Śiva&lt;/s1&gt;, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-A-mw22012-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">7766</idno>
+        <idno type="line">66022</idno>
+        <idno type="pc">1-0581</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7766&lt;pc&gt;1-0581&lt;k1&gt;A&lt;k2&gt;A&lt;h&gt;2
+2. {#A#}¦
+&lt;div n=&quot;1&quot;&gt; 1) &lt;lex&gt;adv.&lt;/lex&gt;
+&lt;div n=&quot;2&quot;&gt; a) {%her, herzu%}: {#A tU na^ indra kOSika mandasA\naH su\taM pi^ba#}
+&lt;ls&gt;ṚV. 1,10,11.&lt;/ls&gt; {#a\nu\kA\maM ta^rpayeTA\mindrA^varuRa rA\ya A#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;17,3.&lt;/ls&gt; {#A pra dra^va#}
+&lt;ls&gt;AV. 3,4,5.&lt;/ls&gt; {#A pra yA^tu parA\vata^H#}
+&lt;ls n=&quot;AV.&quot;&gt;6,35,1.&lt;/ls&gt; {#A pra cya^veTAm#}
+&lt;ls n=&quot;AV.&quot;&gt;18,4,49.&lt;/ls&gt; In dieser Bedeutung überaus häufig in Verbindung mit Verben {%der Bewegung.%}
+&lt;div n=&quot;2&quot;&gt;— b) anreihend: {%dazu, ferner, auch, und%}: {#sarva^M pa\ReH sama^vindanta\ Boja^na\maSvA^vanta\M goma^nta\mA pa\SuM nara^H#}
+&lt;ls&gt;ṚV. 1,83,4.&lt;/ls&gt; {#(tanmahyamAhuH) tada\yaM keto^ hf\da A vi ca/zwe#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;24,12.&lt;/ls&gt; {#ma\hAngarBo\ mahyA jA\tame^zAm#}
+&lt;ls n=&quot;ṚV.&quot;&gt;3,31,3.&lt;/ls&gt; {#udidA^Bya\H Suci\rA pU\ta e^mi#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,17,10.&lt;/ls&gt; {#apa\ dvezA\MsyA kf^Di#}
+&lt;ls n=&quot;ṚV.&quot;&gt;3,16,5.&lt;/ls&gt; {#Sa\tamA sa\hasra^m#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,14,7.&lt;/ls&gt; {#mi\mi\kzvA samiLA^Bi\rA#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,48,16.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;7,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;150,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;4,11,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 4,&quot;&gt;12,2.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— c) steigernd und hervorhebend: {%zumal, ganz, gar%}; nicht selten dient es nur um auf das Wort, nach welchem es steht, den Nachdruck zu werfen. {#aDa^ sva\nAnma\rutA\M viSva\mA sadma\ pArTi^vam . are^janta\ pra mAnu^zAH#}
+&lt;ls&gt;ṚV. 1,38,10.&lt;/ls&gt; {#ko vo\ varzi^zWa\ A na^raH#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;37,6.&lt;/ls&gt; {#tatsu no\ viSve^ a\rya A sadA^ gfRanti kA\rava^H#}
+&lt;ls n=&quot;ṚV.&quot;&gt;6,45,33.&lt;/ls&gt; {#baLi\tTA ma^hi\mA vA\mindrA^gnI\ pani^zWa\ A#}
+&lt;ls n=&quot;ṚV. 6,&quot;&gt;59,2.&lt;/ls&gt; {#yaH su^nva\te paca^te du\Dra A ci^t#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,12,15.&lt;/ls&gt; {#muhu\rA#}
+&lt;ls n=&quot;ṚV. 2,&quot;&gt;4,7.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;7,20,2.&lt;/ls&gt; {#pra bo^DayA\ pura^MDiM jA\ra A sa^sa\tImi^va#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,134,3.&lt;/ls&gt; {#udI^raya pi\tarA^ jA\ra A Baga^m#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,11,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 10,&quot;&gt;22,3.&lt;/ls&gt; &lt;ls&gt;AV. 6,33,1.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;7,22,1.&lt;/ls&gt; {#taddevA jyotizAM jyotirAyurhyopAsate &apos;mftam#}
+&lt;ls&gt;ŚAT. BR. 14,7,2,20&lt;/ls&gt; (= &lt;ls&gt;BṚH. ĀR. UP. 4,4,16). 9,2,3,44.&lt;/ls&gt; {#tasyEza AdeSo yadetadvidyuto vyadyutadA itIti nyamImizadA#}
+&lt;ls&gt;KENOP. 29.&lt;/ls&gt; Aus Stellen wie ein Theil der hier angeführten wurde die Bedeutung {%wie%} abgeleitet, welche aber nicht unmittelbar im Worte liegt.
+&lt;ls&gt;NIR. 3,13.&lt;/ls&gt;
+&lt;ls&gt;ŚAṂK.&lt;/ls&gt; zu &lt;ls&gt;KENOP. 19.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— d) zur Verstärkung oder näheren Bestimmung verschiedener &lt;ab&gt;praepp.&lt;/ab&gt; dienend; bei {#antar#}
+&lt;ls&gt;ṚV. 9,67,23.&lt;/ls&gt; {#aDi#}
+&lt;ls n=&quot;ṚV. 9,&quot;&gt;73,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 9,73,&quot;&gt;6.&lt;/ls&gt; {#anu#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,38,7.&lt;/ls&gt; {#sacA#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,9,3.&lt;/ls&gt; &lt;ab&gt;S. u.&lt;/ab&gt; &lt;ab&gt;d. Ww.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) &lt;ab&gt;praep.&lt;/ab&gt;
+&lt;div n=&quot;2&quot;&gt; a) {%zu — hin, bis an, bis zu, bis auf, bevor%}:
+&lt;div n=&quot;3&quot;&gt; α) mit &lt;ab&gt;vorang.&lt;/ab&gt; &lt;ab&gt;acc.&lt;/ab&gt;: {#tA~ A #}
+[Page1-0582]
+{# madA^ya vajrahasta pI\taye\ hari^ByAM yA\hyoka\ A#}
+&lt;ls&gt;ṚV. 7,32,4.&lt;/ls&gt; {#f\tasya\ yoni\mA#}
+&lt;ls n=&quot;ṚV.&quot;&gt;9,66,12.&lt;/ls&gt; {#(DAvati) sa\pta pra\vata\ A diva^m#}
+&lt;ls n=&quot;ṚV. 9,&quot;&gt;54,2.&lt;/ls&gt; {#joza\mA#}
+&lt;ls n=&quot;ṚV.&quot;&gt;8,83,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;7,43,4.&lt;/ls&gt;
+&lt;div n=&quot;3&quot;&gt;— β) mit &lt;ab&gt;folg.&lt;/ab&gt; &lt;ab&gt;acc.&lt;/ab&gt;, häufig im
+&lt;ls&gt;ŚAT. BR.&lt;/ls&gt; in Verbindung mit {#it#}, wozu ein Zeitwort der Bewegung zu ergänzen: {#etpuroqASameva kUrmaM BUtaM sarpantam#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;1,6,2,3.&lt;/ls&gt; {#punarema iti devA edagniM tiroBUtam#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;2,2,3,3.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 2,2,&quot;&gt;4,12.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 2,&quot;&gt;3,4,2.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;4,1,3,4.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;11,5,1,4.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 11,5,1,&quot;&gt;11.&lt;/ls&gt;
+&lt;div n=&quot;3&quot;&gt;— γ) mit &lt;ab&gt;folg.&lt;/ab&gt; &lt;ab&gt;abl.&lt;/ab&gt;
+&lt;ls&gt;P. 2,1,13.&lt;/ls&gt; &lt;ls n=&quot;P. 2,&quot;&gt;3,10.&lt;/ls&gt; {#sva\styA gf\heBya\ Ava\sA A vi\mocanA^t#}
+&lt;ls&gt;ṚV. 3,53,20.&lt;/ls&gt; {#AsyA ya\jYasyo\dfca^H#}
+&lt;ls&gt;VS. 4,9.&lt;/ls&gt; {#A mUlA^t#}
+&lt;ls&gt;AV. 7,59,1.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;12,4,16.&lt;/ls&gt; {#A ja^ri\mRaH#}
+&lt;ls n=&quot;AV.&quot;&gt;18,3,62.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;1,14,3.&lt;/ls&gt; {#SIrzRa A pucCAt#}
+&lt;ls&gt;ŚAT. BR. 10,2,1,9.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,1,3,9.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;12,8,3,17.&lt;/ls&gt; {#EtasmAtkAlAt#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;4,2,4,5.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;1,5,2,9.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;2,4,2,21.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,2,1,7.&lt;/ls&gt; {#yadidaM kiM ca miTunamA pipIlikAByaH#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;14,4,2,9&lt;/ls&gt; (= &lt;ls&gt;BṚH. ĀR. UP. 1,4,4&lt;/ls&gt;). {#yattapastapyata A mETunAt#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;10,4,4,4.&lt;/ls&gt; &lt;ls&gt;KĀTY. ŚR. 2,2,2.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 2,&quot;&gt;6,9.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;12,4,1.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 12,&quot;&gt;6,18.&lt;/ls&gt; {#A samudrAttu vE pUrvAdA samudrAttu paScimAt . tayorevAntaraM giryorAryAvartaM vidurbuDAH ..#}
+&lt;ls&gt;M. 2,22.&lt;/ls&gt; {#A hEva sa naKAgreByaH paramaM tapyate tapaH#}
+&lt;ls n=&quot;M. 2,&quot;&gt;167.&lt;/ls&gt; {#A zoqaSAt#} {%bis zum 16ten%} (Jahre)
+&lt;ls n=&quot;M. 2,&quot;&gt;38.&lt;/ls&gt; {#ArkadarSanAt#}
+&lt;ls n=&quot;M. 2,&quot;&gt;101.&lt;/ls&gt; &lt;ls n=&quot;M. 2,&quot;&gt;108.&lt;/ls&gt; &lt;ls n=&quot;M. 2,&quot;&gt;171.&lt;/ls&gt; &lt;ls n=&quot;M. 2,&quot;&gt;243.&lt;/ls&gt; &lt;ls n=&quot;M. 2,&quot;&gt;244.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;3,279.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;4,137.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;5,88.&lt;/ls&gt; &lt;ls n=&quot;M. 5,&quot;&gt;158.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;6,31.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;9,70.&lt;/ls&gt; &lt;ls n=&quot;M. 9,&quot;&gt;89.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;10,64.&lt;/ls&gt; &lt;ls n=&quot;M. 10,&quot;&gt;91.&lt;/ls&gt; &lt;ls n=&quot;M. 10,&quot;&gt;104.&lt;/ls&gt; &lt;ls&gt;YĀJÑ. 3,23.&lt;/ls&gt; &lt;ls&gt;MBH. 1,4405.&lt;/ls&gt; &lt;ls&gt;BHAG. 8,16.&lt;/ls&gt; &lt;ls&gt;R. 1,6,25.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;2,32,32.&lt;/ls&gt; &lt;ls n=&quot;R. 2,32,&quot;&gt;38.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;3,34,23.&lt;/ls&gt; &lt;ls n=&quot;R. 3,&quot;&gt;46,2.&lt;/ls&gt; {#udayaM parvataM gatvA A mAsAdvinivartata#} {%bevor ein Monat um ist, in Monatsfrist%}
+&lt;ls n=&quot;R.&quot;&gt;4,40,69.&lt;/ls&gt; &lt;ls n=&quot;R. 4,&quot;&gt;58,34.&lt;/ls&gt; &lt;ls&gt;ŚĀK. 2.&lt;/ls&gt; &lt;ls n=&quot;ŚĀK.&quot;&gt;26.&lt;/ls&gt; &lt;ls n=&quot;ŚĀK.&quot;&gt;71,10.&lt;/ls&gt; &lt;ls&gt;RAGH. 1,90.&lt;/ls&gt; &lt;ls n=&quot;RAGH. 1,&quot;&gt;91.&lt;/ls&gt; An das &lt;ab&gt;subst.&lt;/ab&gt; tritt &lt;ab&gt;pleon.&lt;/ab&gt; noch {#anta#} {%Grenze%}: {#odakAntAt#}
+&lt;ls&gt;ŚĀK. 54,21.&lt;/ls&gt;
+&lt;div n=&quot;3&quot;&gt;— δ) verbindet sich mit dem regierten Worte zu einem &lt;lex&gt;adv.&lt;/lex&gt; &lt;ab&gt;comp.&lt;/ab&gt;
+&lt;ls&gt;P. 2,1,13.&lt;/ls&gt; {#aSvApadAnyAkIwapataMgapipIlakam#}
+&lt;ls&gt;CHĀND. UP. 7,2,1. 8,1.&lt;/ls&gt; {#AsapiRqakriyAkarma#}
+&lt;ls&gt;M. 3,247.&lt;/ls&gt; {#AkarRamUlamAkfzya#} ({#kArmukam#})
+&lt;ls&gt;R. 4,9,106.&lt;/ls&gt; {#AmaraRam#}
+&lt;ls&gt;PAÑCAT. I,44.&lt;/ls&gt; {#maRibanDAdAkanizWaM karasya karaBo bahiH#}
+&lt;ls&gt;AK. 2,6,2,32.&lt;/ls&gt; {#AvatsarAntam#}
+&lt;ls&gt;KATHĀS. 23,20.&lt;/ls&gt; &lt;ls n=&quot;KATHĀS.&quot;&gt;10,208.&lt;/ls&gt;
+&lt;ls&gt;VID. 54.&lt;/ls&gt; {#AkumAraM yaSaH pARineH#}
+&lt;ls&gt;P. 2,1,13&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#Adfzwiprasaram#} (so ist zu lesen)
+&lt;ls&gt;AMAR. 74.&lt;/ls&gt; Statt {#AsamudrAnte#}
+&lt;ls&gt;R. 4,37,3&lt;/ls&gt; ist wohl {#˚ntam#} zu lesen. Am &lt;ab&gt;Anf.&lt;/ab&gt; eines &lt;ab&gt;comp.&lt;/ab&gt; ohne Flexionszeichen: {#AyojanasuganDin#}
+&lt;ls&gt;MBH. 1,6965.&lt;/ls&gt; {#AjAnubAhu#} {%dessen Arme bis an die Knie reichen%}
+&lt;ls&gt;R. 1,1,12.&lt;/ls&gt; {#AkarRamuktErizuBiH#}
+&lt;ls n=&quot;R.&quot;&gt;3,69,16.&lt;/ls&gt; &lt;ls&gt;RAGH. 1,5.&lt;/ls&gt; &lt;ls&gt;ŚĀK. 80.&lt;/ls&gt; &lt;ls n=&quot;ŚĀK.&quot;&gt;145.&lt;/ls&gt; &lt;ls&gt;VID. 21.&lt;/ls&gt; {#AmaraRAnta#} (
+&lt;ls&gt;HIT. I,180&lt;/ls&gt;) oder {#AmaraRAntika#} (
+&lt;ls&gt;M. 9,101.&lt;/ls&gt;
+&lt;ls&gt;MBH. 3,8333&lt;/ls&gt;) {%sich bis zum Tode erstreckend.%} &lt;ab&gt;Vgl.&lt;/ab&gt; {#Ajarasam, Avyuzam, otsUryam#} .
+&lt;div n=&quot;3&quot;&gt;— ε) bildet mit dem &lt;ab&gt;reg.&lt;/ab&gt; Worte ein &lt;ab&gt;adj. comp.&lt;/ab&gt;: {#AsaptamAMstasya#} ({%die siebente Welt mit%}) {#lokAnhinasti#}
+&lt;ls&gt;MUṆḌ. UP. 1,2,3.&lt;/ls&gt; {#AgopAlA dvijAtayaH#}
+&lt;ls&gt;MBH. 2,531.&lt;/ls&gt; {#kulamAsaptamaM#} (kann auch &lt;lex&gt;adv.&lt;/lex&gt; sein) {#hanti#}
+&lt;ls&gt;R. 4,34,16.&lt;/ls&gt;
+&lt;ls&gt;YĀJÑ. 1,205.&lt;/ls&gt;
+[Page1-0583]
+&lt;div n=&quot;2&quot;&gt;— b) {%von — her, von — aus, von — weg, von — an%}:
+&lt;div n=&quot;3&quot;&gt; α) mit &lt;ab&gt;folg.&lt;/ab&gt; &lt;ab&gt;abl.&lt;/ab&gt;: {#trirA di\vaH sa^vita\rvAryA^Ri di\ve di^ ve\ A su^va\ trirno\ ahna^H#}
+&lt;ls&gt;ṚV. 3,56,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 3,56,&quot;&gt;7.&lt;/ls&gt; {#A pa^rA\vata^H#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,92,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,92,&quot;&gt;17.&lt;/ls&gt; {#AntA\dA pa^rA\kAt#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;30,21.&lt;/ls&gt; {#Sye\no ha\vyaM na^ya\tvA para^smAt#}
+&lt;ls&gt;AV. 3,3,4.&lt;/ls&gt; {#A prajApatito manoH#}
+&lt;ls&gt;MBH. 1,3756.&lt;/ls&gt;
+&lt;ls&gt;R. 1,5,1.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 1,17.&lt;/ls&gt; {#A bAlyAttApaso &apos;Bavam#}
+&lt;ls&gt;KATHĀS. 24,186.&lt;/ls&gt; {#A janmanaH#} (&lt;ab&gt;v. l.&lt;/ab&gt; {#janmataH#})
+&lt;ls&gt;ŚĀK. 121.&lt;/ls&gt; {#A mUlAcCrotumicCAmi#}
+&lt;ls n=&quot;ŚĀK.&quot;&gt;14,19.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 25,195.&lt;/ls&gt; {#A mUlataH#}
+&lt;ls n=&quot;KATHĀS.&quot;&gt;12,191.&lt;/ls&gt; &lt;ls&gt;VID. 130.&lt;/ls&gt; Mit &lt;ab&gt;folg.&lt;/ab&gt; {#praBfti#} in einer &lt;is&gt;Prākṛt&lt;/is&gt;-Stelle: {#A mUlAdo pahudi#}
+&lt;ls&gt;ŚĀK. CH. 13,6.&lt;/ls&gt;
+&lt;div n=&quot;3&quot;&gt;— β) mit &lt;ab&gt;vorang.&lt;/ab&gt; &lt;ab&gt;abl.&lt;/ab&gt;: {#avA^daho di\va A dasyu^m#}
+&lt;ls&gt;ṚV. 1,33,7.&lt;/ls&gt; {#sa\mA\nAdA sada^saH#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,17,7.&lt;/ls&gt; {#a\smadA ni\do va\DEra^jeta durma\tim#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,129,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,66,6.&lt;/ls&gt; &lt;ls&gt;AV. 4,15,11.&lt;/ls&gt;
+&lt;div n=&quot;3&quot;&gt;— γ) bildet mit dem &lt;ab&gt;reg.&lt;/ab&gt; Worte ein &lt;lex&gt;adv.&lt;/lex&gt; &lt;ab&gt;comp.&lt;/ab&gt;: {#mAM cApi — jAnanti hyAkumAram#}
+&lt;ls&gt;MBH. 3,1403.&lt;/ls&gt; {#sarvamAjanma vfttAntaM#} (so ist zu trennen) {#vistarAdidamabravIt#}
+&lt;ls&gt;KATHĀS. 2,29&lt;/ls&gt;
+(&lt;ab&gt;vgl.&lt;/ab&gt; &lt;ls n=&quot;KATHĀS. 2,&quot;&gt;28&lt;/ls&gt; : {#tadbrUhi nijavfttAntaM janmanaH praBfti#}). In {#ASiraHpAdam#} {%vom Kopfe bis zu den Füssen%}
+&lt;ls n=&quot;KATHĀS.&quot;&gt;4,53&lt;/ls&gt; ist Anfang und Ende mit {#A#} zu einem &lt;ab&gt;comp.&lt;/ab&gt; verbunden. Am &lt;ab&gt;Anf.&lt;/ab&gt; eines &lt;ab&gt;comp.&lt;/ab&gt; ohne Flexionszeichen: {#AjanmaSudDAnAm#}
+&lt;ls&gt;RAGH. 1,5.&lt;/ls&gt;
+&lt;ls&gt;KATHĀS. 21,122.&lt;/ls&gt; Auch bei dieser Bedeutung mit &lt;ab&gt;pleon.&lt;/ab&gt; {#anta#} {%Grenze%}: {#AmajjanAntaM vfttAntaM saKyustasya ca varRayan#}
+&lt;ls&gt;KATHĀS. 10,69.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— c) {%aus, von, unter%}, zur Hervorhebung eines Einzelnen unter Mehreren: {#yaSci\dDi tvA^ ba\huBya\ A su\tAvA^~ A\vivA^sati#}
+&lt;ls&gt;ṚV. 1,84,9.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,84,&quot;&gt;20.&lt;/ls&gt; {#yaste\ saKi^Bya\ A vara^m#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;4,4.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— d) {%in, bei%}, mit dem &lt;ab&gt;loc.&lt;/ab&gt;
+&lt;ls&gt;NIR. 5,5.&lt;/ls&gt; {#dama\ A#}
+&lt;ls&gt;ṚV. 1,61,9.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;73,4.&lt;/ls&gt; {#gAvo\ na yava^se\zvA#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;91,13.&lt;/ls&gt; {#kiyA\tyA#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;113,10.&lt;/ls&gt; {#u\pA\ka A#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;27,6.&lt;/ls&gt; {#Sa\ra\Ra A#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;150,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;82,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;112,17.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;2,30,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;4,11,1.&lt;/ls&gt; {#a\Bra A#}
+&lt;ls n=&quot;ṚV.&quot;&gt;5,48,1.&lt;/ls&gt; {#sIda\nyonA\ vane\zvA#}
+&lt;ls n=&quot;ṚV.&quot;&gt;9,62,8.&lt;/ls&gt; {#ajI^jano amfta\ martye\zvA#}
+&lt;ls n=&quot;ṚV.&quot;&gt;9,110,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 9,&quot;&gt;73,7.&lt;/ls&gt; {#marya\M na yozA^ kfRute sa\DasTa\ A#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,40,2.&lt;/ls&gt; {#sa\mu\dra A gU\|am#}
+&lt;ls n=&quot;ṚV. 10,&quot;&gt;72,7.&lt;/ls&gt; {#vara\ A pf^Ti\vyAH#}
+&lt;ls&gt;AV. 7,8,1.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;16,4,2.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— e) im &lt;ab&gt;comp.&lt;/ab&gt; mit einem &lt;lex&gt;adj.&lt;/lex&gt; oder &lt;ab&gt;partic.&lt;/ab&gt; {%etwas, ein wenig, kaum%}
+&lt;ls&gt;P. 2,2,18&lt;/ls&gt;, &lt;ls&gt;SAUN.&lt;/ls&gt; &lt;is&gt;Vārtt&lt;/is&gt;. 3.
+Scheinbar &lt;lex&gt;adv.&lt;/lex&gt;, aber ursprünglich gewiss &lt;ab&gt;praep.&lt;/ab&gt; und zwar in der unter {%a.%} aufgeführten Bedeutung: {#ApIta#} {%bis zum Gelben angelangt, gelblich%}
+&lt;ls&gt;R. 2,76,4.&lt;/ls&gt; {#Alohita#}
+&lt;ab&gt;v. l.&lt;/ab&gt; zu &lt;ls&gt;ŚĀK. 69,2.&lt;/ls&gt; {#AnIla#} {%bläulich%}
+&lt;ls&gt;H. 1239.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 3,8.&lt;/ls&gt; {#ApiYcara#}
+&lt;ls n=&quot;RAGH.&quot;&gt;16,51.&lt;/ls&gt; {#ApARqura#}
+&lt;ls&gt;AMAR. 89.&lt;/ls&gt; {#ozRa (A + uzRa)#}
+&lt;ls&gt;P. 1,1,14&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#Akuwila#} {%etwas gebogen%}
+&lt;ls&gt;ŚĀK. 184.&lt;/ls&gt; {#AtiraScIna#} {%etwas in die Quere gehend%}
+&lt;ls&gt;DAŚAK.&lt;/ls&gt; in &lt;ls&gt;BENF. Chr. 198,23.&lt;/ls&gt; {#Apakva#} (&lt;ab&gt;s. d.&lt;/ab&gt;)
+&lt;ls&gt;AK. 2,9,47.&lt;/ls&gt; {#Alola#}
+&lt;ls&gt;BHARTṚ. 3,48&lt;/ls&gt; ({#AlolAyatalocanAH#}).{# Alakzya#} {%kaum, eben sichtbar%}
+&lt;ls&gt;ŚĀK. 176.&lt;/ls&gt; {#ABugna#} {%ein wenig gebogen%}
+&lt;ls&gt;RAGH. 1,83.&lt;/ls&gt; — Um diese Partikel von der &lt;lex&gt;interj.&lt;/lex&gt; {#A#} zu unterscheiden, versehen die indischen Grammatiker und Lexicographen dieselbe mit einem {#N#} am Ende ({#AN#}).
+&lt;ls&gt;P. 1,1,14.&lt;/ls&gt; &lt;ls n=&quot;P. 1,&quot;&gt;4,89.&lt;/ls&gt; &lt;ls n=&quot;P.&quot;&gt;2,1,13.&lt;/ls&gt; &lt;ls n=&quot;P. 2,&quot;&gt;3,10.&lt;/ls&gt;
+&lt;ls&gt;VOP. 1,8.&lt;/ls&gt; &lt;ls n=&quot;VOP.&quot;&gt;2,19.&lt;/ls&gt;
+&lt;ls&gt;AK. 3,4,32,1.&lt;/ls&gt; (&lt;ls&gt;COL. 3,4,28,1.&lt;/ls&gt;) &lt;ls&gt;H. an. 7,2.&lt;/ls&gt; &lt;ls&gt;MED. avy. 13.&lt;/ls&gt; Euphonische Regeln in Betreff dieses {#A#}
+&lt;ls&gt;P. 6,1,74.&lt;/ls&gt; &lt;ls n=&quot;P. 6,1,&quot;&gt;95.&lt;/ls&gt; &lt;ls n=&quot;P. 6,1,&quot;&gt;126&lt;/ls&gt; ({#A~#}).
+&lt;ls&gt;VOP. 2,5.&lt;/ls&gt; &lt;ls n=&quot;VOP. 2,&quot;&gt;19.&lt;/ls&gt; In vielen in Europa gedruckten Werken, in denen sonst die Trennung der Wörter beobachtet wird, findet man {#A#} mit einem folgenden &lt;ab&gt;abl.&lt;/ab&gt; fälschlich zu einem &lt;ab&gt;comp.&lt;/ab&gt; verbunden.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-A-mw22012-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">13334</idno>
+        <idno type="line">50262</idno>
+        <idno type="pc">1-157-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;13334&lt;pc&gt;1-157-c&lt;k1&gt;A&lt;k2&gt;A/&lt;h&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; {#A/#}¦
+&lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;Adv.&lt;/lex&gt;
+&lt;div n=&quot;2&quot;&gt;— a〉 {%heran, herbei%}.
+&lt;div n=&quot;2&quot;&gt;— b〉 {%dazu, ferner, auch%}.
+&lt;div n=&quot;2&quot;&gt;— c〉 das vorangehende Wort steigernd und hervorhebend; {%gerade, recht, zumal%}. Oft nur durch stärkere Betonung des vorangehenden Wortes wiederzugeben.
+&lt;div n=&quot;1&quot;&gt;— 2〉 &lt;ab&gt;Praep.&lt;/ab&gt;
+&lt;div n=&quot;2&quot;&gt;— a〉 mit vorangehendem &lt;ab&gt;Acc.&lt;/ab&gt; {%zu — hin, bis an, — zu%}.
+&lt;div n=&quot;2&quot;&gt;— b〉 mit folgendem &lt;ab&gt;Acc.&lt;/ab&gt; {%mit Ausschluss von%}.
+&lt;div n=&quot;2&quot;&gt;— c〉 mit vorangehendem &lt;ab&gt;Abl.&lt;/ab&gt;
+&lt;div n=&quot;3&quot;&gt;— α〉 {%von — her, — aus, — weg, — an%}.
+&lt;div n=&quot;3&quot;&gt;— β〉 {%aus, von, unter%} (zur Hervorhebung eines Einzelnen unter Mehreren).
+&lt;div n=&quot;2&quot;&gt;— d〉 mit folgendem &lt;ab&gt;Abl.&lt;/ab&gt;
+&lt;div n=&quot;3&quot;&gt;— α〉 {%bis zu%} (einem &lt;ab&gt;best.&lt;/ab&gt; Orte, Zeitpunkte oder Eintritt eines Falles).
+&lt;div n=&quot;3&quot;&gt;— β〉 {%von — an%}.
+&lt;div n=&quot;2&quot;&gt;— e〉 mit vorangehendem &lt;ab&gt;Loc.&lt;/ab&gt; {%an, auf, in, bei, zu%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 am &lt;ab&gt;Anf.&lt;/ab&gt; eines &lt;ab&gt;Comp.&lt;/ab&gt;
+&lt;div n=&quot;2&quot;&gt;— a〉 eines &lt;lex&gt;Adj.&lt;/lex&gt; {%bis zu — sich erstreckend%}.
+&lt;div n=&quot;2&quot;&gt;— b〉 eines &lt;lex&gt;Adv.&lt;/lex&gt; {%bis zu%}.
+&lt;div n=&quot;2&quot;&gt;— c〉 vor einem &lt;lex&gt;Adj.&lt;/lex&gt; oder &lt;ab&gt;Subst.&lt;/ab&gt; {%etwas, ein wenig, kaum; gering%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">validated-slice</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

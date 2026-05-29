@@ -9,6 +9,7 @@ Goal: define the research object and generate the first difficult sample.
 Deliverables:
 
 - Project spec and public site skeleton.
+- All-dictionary coverage and size inventory for local CDSL v02 source files.
 - Neutral JSON model v0.1.
 - Automatic hard-case sampler for MW/PWG/PWK.
 - First generated 50-entry sample.
@@ -21,11 +22,13 @@ Work packages:
 3. Match records by `k1` headword key.
 4. Score candidates by interoperability stress.
 5. Publish generated JSON plus a minimal public browser.
-6. Start manual mapping notes for the top cases.
+6. Generate the all-dictionary coverage layer: records, entry length, block population, block character mass, type counts, and fit bands.
+7. Start manual mapping notes for the top cases.
 
 Milestone:
 
 > Atlas v0.0.1: public page + generated hard-case sample + model draft.
+> Atlas v0.0.2: all-dictionary coverage page + generated coverage JSON.
 
 ## Month 2: TEI/OntoLex Workbench
 
@@ -33,8 +36,9 @@ Goal: make the atlas show actual interoperability, not only records.
 
 Deliverables:
 
-- TEI export prototype for selected cases.
-- OntoLex JSON-LD/Turtle prototype for selected cases.
+- TEI archival-profile export for the full 50-case pilot, with a deterministic 15-case initial review slice preserved.
+- OntoLex/FrAC JSON-LD plus RDF/Turtle export for the full 50-case pilot.
+- Project ODD/profile and SHACL/profile validators for TEI XML and OntoLex/FrAC/RDF artifacts.
 - Loss-report schema.
 - Public entry pages or richer client-side explorer.
 - English/Russian UI labels in locale files.
@@ -43,23 +47,26 @@ Work packages:
 
 1. Implement neutral-model-to-TEI serializer for a constrained subset.
 2. Implement neutral-model-to-OntoLex serializer for the same subset.
-3. Define evidence classes:
+3. Select 15 hard cases deterministically from roots, compounds, continuations, and hedge-only records.
+4. Define evidence classes:
    - named textual citation
    - named kosha citation
    - generic lexicographer hedge
    - editorial self-reference
    - catalogue/bibliographic reference
    - unresolved/ambiguous source
-4. Add compound relation types:
+5. Add compound relation types:
    - archival subentry
    - lexical decomposition
    - unresolved segmentation
-5. Add root relation types:
+6. Add root relation types:
    - lexical root entry
    - derivational base
    - preverb construction
    - grammatical class carrier
-6. Produce loss reports for at least 15 entries.
+7. Produce loss reports for at least 15 entries.
+8. Validate the selected TEI profile and OntoLex/FrAC profile reproducibly.
+9. Extend machine review, ODD/profile validation, RDF/Turtle export, and SHACL/profile validation to all 50 cases.
 
 Milestone:
 
@@ -90,9 +97,10 @@ Work packages:
    - PWG named evidence retained or lost
    - PWK abbreviation/compression
    - MW `L.` conversion or collapse
-4. Draft the TEI/OntoLex extension proposal.
-5. Add Russian abstract and terminology review layer.
-6. Prepare a small public demo narrative.
+4. Use all-dictionary coverage to identify which non-MW/PWG/PWK dictionaries deserve the next curated chapters.
+5. Draft the TEI/OntoLex extension proposal.
+6. Add Russian abstract and terminology review layer.
+7. Prepare a small public demo narrative.
 
 Milestone:
 

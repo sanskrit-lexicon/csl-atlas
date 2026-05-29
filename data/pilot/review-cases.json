@@ -1,0 +1,451 @@
+{
+  "generatedAt": "2026-05-29T02:47:34.349Z",
+  "generator": "scripts/select-review-cases.mjs",
+  "profileVersion": "interoperability-profile-v0.1",
+  "description": "Deterministic 15-case validation slice for TEI archival and OntoLex/FrAC modeling.",
+  "selectionPolicy": {
+    "quotas": [
+      {
+        "bucket": "root",
+        "count": 5,
+        "reason": "root/verbal lemma with MW L. hedge and PWG/PWK compression"
+      },
+      {
+        "bucket": "compound",
+        "count": 5,
+        "reason": "compound entry requiring archival subentry preservation and semantic decomposition review"
+      },
+      {
+        "bucket": "continuation",
+        "count": 3,
+        "reason": "continuation entry requiring adjacency recovery before semantic modeling"
+      },
+      {
+        "bucket": "hedge-only",
+        "count": 2,
+        "reason": "MW generic lexicographer hedge without root/compound/continuation confound"
+      }
+    ],
+    "ordering": "Use existing hard-case rank inside each quota; fill any shortage from remaining rank order."
+  },
+  "items": [
+    {
+      "id": "mw-pwg-pwk:ac",
+      "reviewRank": 1,
+      "originalRank": 1,
+      "key": "ac",
+      "score": 19,
+      "bucket": "root",
+      "selectionReason": "root/verbal lemma with MW L. hedge and PWG/PWK compression",
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-ac.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-ac.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-ac.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:ah",
+      "reviewRank": 2,
+      "originalRank": 2,
+      "key": "ah",
+      "score": 19,
+      "bucket": "root",
+      "selectionReason": "root/verbal lemma with MW L. hedge and PWG/PWK compression",
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-ah.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-ah.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-ah.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:akz",
+      "reviewRank": 3,
+      "originalRank": 3,
+      "key": "akz",
+      "score": 19,
+      "bucket": "root",
+      "selectionReason": "root/verbal lemma with MW L. hedge and PWG/PWK compression",
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-akz.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-akz.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-akz.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:am",
+      "reviewRank": 4,
+      "originalRank": 4,
+      "key": "am",
+      "score": 19,
+      "bucket": "root",
+      "selectionReason": "root/verbal lemma with MW L. hedge and PWG/PWK compression",
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-am.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-am.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-am.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:aMh-mw107",
+      "reviewRank": 5,
+      "originalRank": 5,
+      "key": "aMh",
+      "score": 19,
+      "bucket": "root",
+      "selectionReason": "root/verbal lemma with MW L. hedge and PWG/PWK compression",
+      "phenomena": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-aMh-mw107.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-aMh-mw107.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-aMh-mw107.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:annavid",
+      "reviewRank": 6,
+      "originalRank": 13,
+      "key": "annavid",
+      "score": 15,
+      "bucket": "compound",
+      "selectionReason": "compound entry requiring archival subentry preservation and semantic decomposition review",
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-annavid.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-annavid.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-annavid.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:arcya",
+      "reviewRank": 7,
+      "originalRank": 14,
+      "key": "arcya",
+      "score": 15,
+      "bucket": "compound",
+      "selectionReason": "compound entry requiring archival subentry preservation and semantic decomposition review",
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-arcya.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-arcya.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-arcya.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:arTAntara",
+      "reviewRank": 8,
+      "originalRank": 15,
+      "key": "arTAntara",
+      "score": 15,
+      "bucket": "compound",
+      "selectionReason": "compound entry requiring archival subentry preservation and semantic decomposition review",
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-arTAntara.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-arTAntara.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-arTAntara.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:aryapatnI",
+      "reviewRank": 9,
+      "originalRank": 16,
+      "key": "aryapatnI",
+      "score": 15,
+      "bucket": "compound",
+      "selectionReason": "compound entry requiring archival subentry preservation and semantic decomposition review",
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-aryapatnI.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-aryapatnI.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-aryapatnI.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:BadreSa",
+      "reviewRank": 10,
+      "originalRank": 17,
+      "key": "BadreSa",
+      "score": 15,
+      "bucket": "compound",
+      "selectionReason": "compound entry requiring archival subentry preservation and semantic decomposition review",
+      "phenomena": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-BadreSa.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-BadreSa.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-BadreSa.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:akupya",
+      "reviewRank": 11,
+      "originalRank": 28,
+      "key": "akupya",
+      "score": 14,
+      "bucket": "continuation",
+      "selectionReason": "continuation entry requiring adjacency recovery before semantic modeling",
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-akupya.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-akupya.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-akupya.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:aMSa",
+      "reviewRank": 12,
+      "originalRank": 29,
+      "key": "aMSa",
+      "score": 14,
+      "bucket": "continuation",
+      "selectionReason": "continuation entry requiring adjacency recovery before semantic modeling",
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-aMSa.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-aMSa.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-aMSa.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:Apra",
+      "reviewRank": 13,
+      "originalRank": 30,
+      "key": "Apra",
+      "score": 14,
+      "bucket": "continuation",
+      "selectionReason": "continuation entry requiring adjacency recovery before semantic modeling",
+      "phenomena": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-Apra.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-Apra.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-Apra.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:a-mw7",
+      "reviewRank": 14,
+      "originalRank": 36,
+      "key": "a",
+      "score": 14,
+      "bucket": "hedge-only",
+      "selectionReason": "MW generic lexicographer hedge without root/compound/continuation confound",
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-a-mw7.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-a-mw7.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-a-mw7.ttl"
+      }
+    },
+    {
+      "id": "mw-pwg-pwk:A-mw22012",
+      "reviewRank": 15,
+      "originalRank": 37,
+      "key": "A",
+      "score": 14,
+      "bucket": "hedge-only",
+      "selectionReason": "MW generic lexicographer hedge without root/compound/continuation confound",
+      "phenomena": [
+        "hedge",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "validationTargets": [
+        "tei-archival-profile",
+        "ontolex-frac-profile",
+        "rdf-turtle"
+      ],
+      "reviewStatus": "profile-validated-by-script",
+      "artifacts": {
+        "tei": "data/pilot/tei/mw-pwg-pwk-A-mw22012.xml",
+        "ontolexJsonld": "data/pilot/ontolex/mw-pwg-pwk-A-mw22012.json",
+        "turtle": "data/pilot/rdf/mw-pwg-pwk-A-mw22012.ttl"
+      }
+    }
+  ]
+}
