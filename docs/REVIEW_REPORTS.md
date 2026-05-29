@@ -119,10 +119,10 @@ Follow the directory strategy in `ARCHITECTURE.md`:
 ```text
 src/data/review/        review reports consumed by Observable pages
 data/pilot/*-review.json existing pilot reviews (TEI, OntoLex, external validation)
-data/schema/            JSON schemas (add review-report.schema.json here)
+data/schema/review-report.schema.json   JSON Schema for review reports
 ```
 
-A formal `review-report.schema.json` should be added under `data/schema/` alongside the existing `loss-report.schema.json`, `hard-case.schema.json`, and `neutral-model.schema.json`, and validated the same way.
+The schema lives at [`data/schema/review-report.schema.json`](../data/schema/review-report.schema.json), alongside the existing `loss-report.schema.json`, `hard-case.schema.json`, and `neutral-model.schema.json`. It is currently a stub (the review layer is built from Phase 2 onward); review-report generators should validate against it the same way the pilot profiles are validated.
 
 ## Workflow
 
@@ -146,6 +146,7 @@ Steps 2 already has precedent in `scripts/select-review-cases.mjs` (→ `data/pi
 
 ## Related Documents
 
+- [`data/schema/review-report.schema.json`](../data/schema/review-report.schema.json) — the machine-checkable schema for this shape.
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — evidence labels vs review status.
 - `docs/LOSS_REPORT_SCHEMA.md` — the loss-report shape that review reports generalize.
 - `docs/DICTIONARY_COMPARISON_PLAN.md` — the alignment queues that produce most reviews.
