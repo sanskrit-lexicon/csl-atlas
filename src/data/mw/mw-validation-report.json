@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-29T09:09:25.040Z",
+  "sourcePath": "../csl-orig/v02/mw/mw.txt",
+  "sourceDate": "2026-05-29",
+  "recordCount": 286560,
+  "assumptions": [
+    "Expected counts come from src/data/article-type-counts.json, generated from an earlier mw.txt revision."
+  ],
+  "warnings": [],
+  "expectedSource": "src/data/article-type-counts.json",
+  "typeDiffs": [
+    {
+      "type": "root",
+      "generated": 750,
+      "expected": 750,
+      "diff": 0
+    },
+    {
+      "type": "noun-m",
+      "generated": 19204,
+      "expected": 19204,
+      "diff": 0
+    },
+    {
+      "type": "noun-f",
+      "generated": 8480,
+      "expected": 8479,
+      "diff": 1
+    },
+    {
+      "type": "noun-n",
+      "generated": 9918,
+      "expected": 9918,
+      "diff": 0
+    },
+    {
+      "type": "adjective-mfn",
+      "generated": 12240,
+      "expected": 12240,
+      "diff": 0
+    },
+    {
+      "type": "indeclinable",
+      "generated": 1929,
+      "expected": 1929,
+      "diff": 0
+    },
+    {
+      "type": "compound",
+      "generated": 126359,
+      "expected": 126360,
+      "diff": -1
+    },
+    {
+      "type": "derived",
+      "generated": 72119,
+      "expected": 72119,
+      "diff": 0
+    },
+    {
+      "type": "continuation",
+      "generated": 9294,
+      "expected": 9294,
+      "diff": 0
+    },
+    {
+      "type": "lexicographer-only",
+      "generated": 38407,
+      "expected": 38414,
+      "diff": -7
+    },
+    {
+      "type": "etymological-ie",
+      "generated": 2103,
+      "expected": 2099,
+      "diff": 4
+    },
+    {
+      "type": "botanical",
+      "generated": 8059,
+      "expected": 8059,
+      "diff": 0
+    },
+    {
+      "type": "biographical",
+      "generated": 346,
+      "expected": 346,
+      "diff": 0
+    },
+    {
+      "type": "vedic-accented",
+      "generated": 47598,
+      "expected": 47598,
+      "diff": 0
+    },
+    {
+      "type": "other",
+      "generated": 19460,
+      "expected": 19460,
+      "diff": 0
+    }
+  ]
+}
