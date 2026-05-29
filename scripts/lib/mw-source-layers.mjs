@@ -17,14 +17,26 @@ const EDITORIAL = new Set(data.editorialReferences ?? []);
 export const LAYER_ORDER = data.layerOrder;
 export const SOURCE_LAYER_ASSUMPTIONS = data.assumptions ?? [];
 
+/**
+ * Reduce a citation to its base sigla by dropping a trailing book/section
+ * reference or editorial tail, e.g. "MBh. i" -> "MBh", "ŚBr. xiv" -> "ŚBr",
+ * "Yājñ., Sch" -> "Yājñ". Returns the original string when there is no tail.
+ */
+export function baseForm(normalized) {
+  const base = normalized.split(/[.,]/)[0].trim();
+  return base.length ? base : normalized;
+}
+
 /** Layer for one normalized source abbreviation. */
 export function layerForSource(normalized) {
   if (SOURCE_MAP.has(normalized)) return SOURCE_MAP.get(normalized);
+  const base = baseForm(normalized);
+  if (base !== normalized && SOURCE_MAP.has(base)) return SOURCE_MAP.get(base);
   return "unknown";
 }
 
 export function isEditorialReference(normalized) {
-  return EDITORIAL.has(normalized);
+  return EDITORIAL.has(normalized) || EDITORIAL.has(baseForm(normalized));
 }
 
 function layerRank(layer) {

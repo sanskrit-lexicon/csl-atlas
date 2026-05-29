@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-05-29T09:09:25.022Z",
+  "generatedAt": "2026-05-29T09:22:46.021Z",
   "sourcePath": "../csl-orig/v02/mw/mw.txt",
   "sourceDate": "2026-05-29",
   "recordCount": 286560,
@@ -4232,6 +4232,81 @@
       ]
     },
     {
+      "familyKey": "taTA",
+      "rootCandidate": "taTAtA",
+      "memberCount": 41,
+      "descendantCount": 40,
+      "maxFamilyDepth": 6,
+      "maxCompoundDepth": 6,
+      "sourceLayerSpan": 5,
+      "earliestLayer": "vedic",
+      "latestLayer": "lexicographic",
+      "citationCount": 57,
+      "depthScore": 47.774,
+      "topExamples": [
+        {
+          "k1": "taTAgataguRajYAnAcintyavizayAvatAranirdeSa",
+          "L": "82008",
+          "pc": "433,3",
+          "line": 276203,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276203",
+          "compoundSegmentCount": 6,
+          "citationCount": 0,
+          "types": [
+            "noun-m"
+          ]
+        },
+        {
+          "k1": "taTAgatakoSaparipAlitA",
+          "L": "82006",
+          "pc": "433,3",
+          "line": 276197,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276197",
+          "compoundSegmentCount": 4,
+          "citationCount": 1,
+          "types": [
+            "noun-f"
+          ]
+        },
+        {
+          "k1": "taTAgatagarBa",
+          "L": "82007",
+          "pc": "433,3",
+          "line": 276200,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276200",
+          "compoundSegmentCount": 3,
+          "citationCount": 2,
+          "types": [
+            "noun-m"
+          ]
+        },
+        {
+          "k1": "taTABavitavyatA",
+          "L": "82018",
+          "pc": "433,3",
+          "line": 276233,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276233",
+          "compoundSegmentCount": 3,
+          "citationCount": 1,
+          "types": [
+            "compound"
+          ]
+        },
+        {
+          "k1": "taTArTatva",
+          "L": "82028.1",
+          "pc": "433,3",
+          "line": 276266,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276266",
+          "compoundSegmentCount": 3,
+          "citationCount": 1,
+          "types": [
+            "noun-n"
+          ]
+        }
+      ]
+    },
+    {
       "familyKey": "bahv",
       "rootCandidate": "bahv",
       "memberCount": 54,
@@ -6039,6 +6114,81 @@
       ]
     },
     {
+      "familyKey": "sura",
+      "rootCandidate": "sura",
+      "memberCount": 234,
+      "descendantCount": 233,
+      "maxFamilyDepth": 5,
+      "maxCompoundDepth": 5,
+      "sourceLayerSpan": 5,
+      "earliestLayer": "vedic",
+      "latestLayer": "lexicographic",
+      "citationCount": 268,
+      "depthScore": 46.05,
+      "topExamples": [
+        {
+          "k1": "surasundarasenAgaRapati",
+          "L": "249476.1",
+          "pc": "1235,1",
+          "line": 827753,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L827753",
+          "compoundSegmentCount": 5,
+          "citationCount": 0,
+          "types": [
+            "noun-m"
+          ]
+        },
+        {
+          "k1": "surapatiDanus",
+          "L": "249351",
+          "pc": "1234,3",
+          "line": 827360,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L827360",
+          "compoundSegmentCount": 3,
+          "citationCount": 2,
+          "types": [
+            "noun-n"
+          ]
+        },
+        {
+          "k1": "surakarIndradarpApahA",
+          "L": "249267",
+          "pc": "1234,2",
+          "line": 827108,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L827108",
+          "compoundSegmentCount": 3,
+          "citationCount": 1,
+          "types": [
+            "noun-f"
+          ]
+        },
+        {
+          "k1": "suragurudivasa",
+          "L": "249293",
+          "pc": "1234,2",
+          "line": 827186,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L827186",
+          "compoundSegmentCount": 3,
+          "citationCount": 1,
+          "types": [
+            "noun-m"
+          ]
+        },
+        {
+          "k1": "suradArumaya",
+          "L": "249309",
+          "pc": "1234,2",
+          "line": 827234,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L827234",
+          "compoundSegmentCount": 3,
+          "citationCount": 1,
+          "types": [
+            "botanical"
+          ]
+        }
+      ]
+    },
+    {
       "familyKey": "rAma",
       "rootCandidate": "rAma",
       "memberCount": 328,
@@ -6634,81 +6784,6 @@
           "citationCount": 0,
           "types": [
             "compound"
-          ]
-        }
-      ]
-    },
-    {
-      "familyKey": "taTA",
-      "rootCandidate": "taTAtA",
-      "memberCount": 41,
-      "descendantCount": 40,
-      "maxFamilyDepth": 6,
-      "maxCompoundDepth": 6,
-      "sourceLayerSpan": 4,
-      "earliestLayer": "epic",
-      "latestLayer": "lexicographic",
-      "citationCount": 57,
-      "depthScore": 45.774,
-      "topExamples": [
-        {
-          "k1": "taTAgataguRajYAnAcintyavizayAvatAranirdeSa",
-          "L": "82008",
-          "pc": "433,3",
-          "line": 276203,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276203",
-          "compoundSegmentCount": 6,
-          "citationCount": 0,
-          "types": [
-            "noun-m"
-          ]
-        },
-        {
-          "k1": "taTAgatakoSaparipAlitA",
-          "L": "82006",
-          "pc": "433,3",
-          "line": 276197,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276197",
-          "compoundSegmentCount": 4,
-          "citationCount": 1,
-          "types": [
-            "noun-f"
-          ]
-        },
-        {
-          "k1": "taTAgatagarBa",
-          "L": "82007",
-          "pc": "433,3",
-          "line": 276200,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276200",
-          "compoundSegmentCount": 3,
-          "citationCount": 2,
-          "types": [
-            "noun-m"
-          ]
-        },
-        {
-          "k1": "taTABavitavyatA",
-          "L": "82018",
-          "pc": "433,3",
-          "line": 276233,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276233",
-          "compoundSegmentCount": 3,
-          "citationCount": 1,
-          "types": [
-            "compound"
-          ]
-        },
-        {
-          "k1": "taTArTatva",
-          "L": "82028.1",
-          "pc": "433,3",
-          "line": 276266,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276266",
-          "compoundSegmentCount": 3,
-          "citationCount": 1,
-          "types": [
-            "noun-n"
           ]
         }
       ]
@@ -7319,6 +7394,81 @@
       ]
     },
     {
+      "familyKey": "tat",
+      "rootCandidate": "tat",
+      "memberCount": 166,
+      "descendantCount": 165,
+      "maxFamilyDepth": 5,
+      "maxCompoundDepth": 5,
+      "sourceLayerSpan": 5,
+      "earliestLayer": "vedic",
+      "latestLayer": "lexicographic",
+      "citationCount": 207,
+      "depthScore": 45.4495,
+      "topExamples": [
+        {
+          "k1": "tatsTatadaYjanatA",
+          "L": "81961",
+          "pc": "433,2",
+          "line": 276008,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276008",
+          "compoundSegmentCount": 5,
+          "citationCount": 1,
+          "types": [
+            "noun-f"
+          ]
+        },
+        {
+          "k1": "tattvanikazagrAvan",
+          "L": "81870",
+          "pc": "433,1",
+          "line": 275714,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L275714",
+          "compoundSegmentCount": 4,
+          "citationCount": 1,
+          "types": [
+            "noun-m"
+          ]
+        },
+        {
+          "k1": "tattvanizWatA",
+          "L": "81872",
+          "pc": "433,1",
+          "line": 275720,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L275720",
+          "compoundSegmentCount": 4,
+          "citationCount": 1,
+          "types": [
+            "noun-f"
+          ]
+        },
+        {
+          "k1": "tattvavAdarahasya",
+          "L": "81887",
+          "pc": "433,1",
+          "line": 275765,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L275765",
+          "compoundSegmentCount": 4,
+          "citationCount": 1,
+          "types": [
+            "noun-n"
+          ]
+        },
+        {
+          "k1": "tattvapraboDaprakaraRa",
+          "L": "81875",
+          "pc": "433,1",
+          "line": 275729,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L275729",
+          "compoundSegmentCount": 4,
+          "citationCount": 0,
+          "types": [
+            "noun-n"
+          ]
+        }
+      ]
+    },
+    {
       "familyKey": "Dana",
       "rootCandidate": "Dana",
       "memberCount": 174,
@@ -7389,156 +7539,6 @@
           "citationCount": 0,
           "types": [
             "other"
-          ]
-        }
-      ]
-    },
-    {
-      "familyKey": "pitf",
-      "rootCandidate": "pitf",
-      "memberCount": 163,
-      "descendantCount": 162,
-      "maxFamilyDepth": 5,
-      "maxCompoundDepth": 5,
-      "sourceLayerSpan": 5,
-      "earliestLayer": "vedic",
-      "latestLayer": "lexicographic",
-      "citationCount": 182,
-      "depthScore": 45.3032,
-      "topExamples": [
-        {
-          "k1": "pitfmAtfguruSuSrUzADyAnavat",
-          "L": "124084",
-          "pc": "626,3",
-          "line": 416800,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L416800",
-          "compoundSegmentCount": 5,
-          "citationCount": 1,
-          "types": [
-            "compound"
-          ]
-        },
-        {
-          "k1": "pitftIrTamAhAtmya",
-          "L": "124024",
-          "pc": "626,2",
-          "line": 416611,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L416611",
-          "compoundSegmentCount": 3,
-          "citationCount": 1,
-          "types": [
-            "compound"
-          ]
-        },
-        {
-          "k1": "pitfpaNktiviDAna",
-          "L": "124053",
-          "pc": "626,3",
-          "line": 416698,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L416698",
-          "compoundSegmentCount": 3,
-          "citationCount": 1,
-          "types": [
-            "compound"
-          ]
-        },
-        {
-          "k1": "pitfmAtfmaya",
-          "L": "124085",
-          "pc": "626,3",
-          "line": 416803,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L416803",
-          "compoundSegmentCount": 3,
-          "citationCount": 1,
-          "types": [
-            "compound"
-          ]
-        },
-        {
-          "k1": "pitfmAtfhIna",
-          "L": "124086",
-          "pc": "626,3",
-          "line": 416806,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L416806",
-          "compoundSegmentCount": 3,
-          "citationCount": 1,
-          "types": [
-            "compound"
-          ]
-        }
-      ]
-    },
-    {
-      "familyKey": "zaw",
-      "rootCandidate": "zaw",
-      "memberCount": 180,
-      "descendantCount": 179,
-      "maxFamilyDepth": 5,
-      "maxCompoundDepth": 5,
-      "sourceLayerSpan": 5,
-      "earliestLayer": "vedic",
-      "latestLayer": "lexicographic",
-      "citationCount": 161,
-      "depthScore": 45.2806,
-      "topExamples": [
-        {
-          "k1": "zawcakraBedavivftiwIkA",
-          "L": "224975.40",
-          "pc": "1108,2",
-          "line": 746136,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L746136",
-          "compoundSegmentCount": 5,
-          "citationCount": 0,
-          "types": [
-            "noun-f"
-          ]
-        },
-        {
-          "k1": "zawtriMSadahaSas",
-          "L": "225000.15",
-          "pc": "1108,2",
-          "line": 746247,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L746247",
-          "compoundSegmentCount": 4,
-          "citationCount": 1,
-          "types": [
-            "indeclinable"
-          ]
-        },
-        {
-          "k1": "zawkarmavyAKyAnacintAmaRi",
-          "L": "224957.2",
-          "pc": "1108,2",
-          "line": 746049,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L746049",
-          "compoundSegmentCount": 4,
-          "citationCount": 0,
-          "types": [
-            "noun-m"
-          ]
-        },
-        {
-          "k1": "zawcakraDyAnapadDati",
-          "L": "224975.10",
-          "pc": "1108,2",
-          "line": 746118,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L746118",
-          "compoundSegmentCount": 4,
-          "citationCount": 0,
-          "types": [
-            "noun-f"
-          ]
-        },
-        {
-          "k1": "zawcakraBedawippaRI",
-          "L": "224975.35",
-          "pc": "1108,2",
-          "line": 746133,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L746133",
-          "compoundSegmentCount": 4,
-          "citationCount": 0,
-          "types": [
-            "noun-f"
           ]
         }
       ]
