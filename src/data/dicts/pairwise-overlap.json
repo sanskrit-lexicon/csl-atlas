@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-29T09:33:31.494Z",
+  "sourceRoot": "../csl-orig/v02",
+  "dictionaries": [
+    {
+      "code": "mw",
+      "label": "MW",
+      "grammarReliable": true
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "grammarReliable": true
+    },
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "grammarReliable": true
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "grammarReliable": true
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "grammarReliable": true
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "grammarReliable": false
+    },
+    {
+      "code": "skd",
+      "label": "SKD",
+      "grammarReliable": false
+    }
+  ],
+  "assumptions": [],
+  "warnings": [],
+  "pairwise": [
+    {
+      "a": "MW",
+      "b": "PWK",
+      "shared": 129004,
+      "jaccard": 0.5961
+    },
+    {
+      "a": "PWG",
+      "b": "PWK",
+      "shared": 99452,
+      "jaccard": 0.6295
+    },
+    {
+      "a": "MW",
+      "b": "PWG",
+      "shared": 94778,
+      "jaccard": 0.4615
+    },
+    {
+      "a": "MW",
+      "b": "VCP",
+      "shared": 39062,
+      "jaccard": 0.1918
+    },
+    {
+      "a": "MW",
+      "b": "AP",
+      "shared": 38143,
+      "jaccard": 0.1559
+    },
+    {
+      "a": "MW",
+      "b": "WIL",
+      "shared": 36548,
+      "jaccard": 0.1814
+    },
+    {
+      "a": "PWK",
+      "b": "VCP",
+      "shared": 35265,
+      "jaccard": 0.2141
+    },
+    {
+      "a": "PWG",
+      "b": "VCP",
+      "shared": 34638,
+      "jaccard": 0.2885
+    },
+    {
+      "a": "PWK",
+      "b": "WIL",
+      "shared": 29375,
+      "jaccard": 0.1771
+    },
+    {
+      "a": "PWG",
+      "b": "WIL",
+      "shared": 28158,
+      "jaccard": 0.2311
+    },
+    {
+      "a": "AP",
+      "b": "PWK",
+      "shared": 26622,
+      "jaccard": 0.1247
+    },
+    {
+      "a": "WIL",
+      "b": "VCP",
+      "shared": 26178,
+      "jaccard": 0.3943
+    },
+    {
+      "a": "AP",
+      "b": "PWG",
+      "shared": 23692,
+      "jaccard": 0.1385
+    },
+    {
+      "a": "AP",
+      "b": "SKD",
+      "shared": 18899,
+      "jaccard": 0.1709
+    },
+    {
+      "a": "AP",
+      "b": "VCP",
+      "shared": 15776,
+      "jaccard": 0.1298
+    },
+    {
+      "a": "AP",
+      "b": "WIL",
+      "shared": 14921,
+      "jaccard": 0.1268
+    },
+    {
+      "a": "MW",
+      "b": "SKD",
+      "shared": 8854,
+      "jaccard": 0.0392
+    },
+    {
+      "a": "VCP",
+      "b": "SKD",
+      "shared": 6941,
+      "jaccard": 0.0841
+    },
+    {
+      "a": "PWK",
+      "b": "SKD",
+      "shared": 5654,
+      "jaccard": 0.0303
+    },
+    {
+      "a": "WIL",
+      "b": "SKD",
+      "shared": 5528,
+      "jaccard": 0.0698
+    },
+    {
+      "a": "PWG",
+      "b": "SKD",
+      "shared": 5518,
+      "jaccard": 0.039
+    }
+  ]
+}

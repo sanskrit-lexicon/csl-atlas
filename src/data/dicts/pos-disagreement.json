@@ -1,0 +1,5781 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-29T09:33:31.505Z",
+  "sourceRoot": "../csl-orig/v02",
+  "dictionaries": [
+    {
+      "code": "mw",
+      "label": "MW",
+      "grammarReliable": true
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "grammarReliable": true
+    },
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "grammarReliable": true
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "grammarReliable": true
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "grammarReliable": true
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "grammarReliable": false
+    },
+    {
+      "code": "skd",
+      "label": "SKD",
+      "grammarReliable": false
+    }
+  ],
+  "assumptions": [
+    "Gender conflicts are computed only across grammar-reliable tagged dictionaries: MW, AP, PWG, PWK, WIL.",
+    "A conflict means two dictionaries assert disjoint specific genders ({m,f,n}); adjective/indeclinable tags never trigger one.",
+    "Within-dictionary polysemy (a lemma listed under several genders) does not count as a conflict."
+  ],
+  "warnings": [
+    "VCP and SKD encode gender in prose and are excluded from conflict detection in this slice."
+  ],
+  "conflictCount": 3671,
+  "shown": 200,
+  "conflicts": [
+    {
+      "lemma": "aMSin",
+      "byDict": {
+        "AP": [
+          "m"
+        ],
+        "PWG": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L200"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L229"
+        }
+      ]
+    },
+    {
+      "lemma": "aMsapIWa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L331"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L578758"
+        }
+      ]
+    },
+    {
+      "lemma": "aka",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m",
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L465"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L619"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L252"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L338"
+        }
+      ]
+    },
+    {
+      "lemma": "akaraRi",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L582"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L665"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L340"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L418"
+        }
+      ]
+    },
+    {
+      "lemma": "akAlakusuma",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L894"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L596"
+        }
+      ]
+    },
+    {
+      "lemma": "akula",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1059"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L995"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L633"
+        }
+      ]
+    },
+    {
+      "lemma": "akuSala",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1086"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1010"
+        }
+      ]
+    },
+    {
+      "lemma": "akUpAra",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1134"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1021"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L697"
+        }
+      ]
+    },
+    {
+      "lemma": "akfzwa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1290"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1102450"
+        }
+      ]
+    },
+    {
+      "lemma": "akta",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1362"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L801"
+        }
+      ]
+    },
+    {
+      "lemma": "aktu",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "AP": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1377"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L1454"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1182"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L806"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L841"
+        }
+      ]
+    },
+    {
+      "lemma": "akzakarRa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1589"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L979"
+        }
+      ]
+    },
+    {
+      "lemma": "akzadyUta",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1728"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1570"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1024"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1020"
+        }
+      ]
+    },
+    {
+      "lemma": "akzata",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1938"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1502"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L995"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L985"
+        }
+      ]
+    },
+    {
+      "lemma": "akzara",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2073"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1729"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1173"
+        }
+      ]
+    },
+    {
+      "lemma": "akzarajananI",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "AP": [
+          "m"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2152"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L2271"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L606751"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1179"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1219"
+        }
+      ]
+    },
+    {
+      "lemma": "akziBezaja",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2335"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2129"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1376"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1383"
+        }
+      ]
+    },
+    {
+      "lemma": "akzoBya",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2572"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2273"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1467"
+        }
+      ]
+    },
+    {
+      "lemma": "aKaRqana",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2644"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2347"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1516"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1511"
+        }
+      ]
+    },
+    {
+      "lemma": "agamyAgamana",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2919"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2574"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1664"
+        }
+      ]
+    },
+    {
+      "lemma": "agaru",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "AP": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2934"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L3040"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2591"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1673"
+        }
+      ]
+    },
+    {
+      "lemma": "agastidru",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2976"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2631"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1699"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1709"
+        }
+      ]
+    },
+    {
+      "lemma": "agADa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3018"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1741"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1730"
+        }
+      ]
+    },
+    {
+      "lemma": "agADajala",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3027"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1748"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1739"
+        }
+      ]
+    },
+    {
+      "lemma": "agAra",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3039"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2756"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1756"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1760"
+        }
+      ]
+    },
+    {
+      "lemma": "aguru",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "AP": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3138"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L3257"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1808"
+        }
+      ]
+    },
+    {
+      "lemma": "agnikoRa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3317"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3117"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L1956"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L1950"
+        }
+      ]
+    },
+    {
+      "lemma": "agnidagDa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3474"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2075"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2048"
+        }
+      ]
+    },
+    {
+      "lemma": "agniparicCada",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3588"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3413"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2164"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2096"
+        }
+      ]
+    },
+    {
+      "lemma": "agniBa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3669"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3463"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2230"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2117"
+        }
+      ]
+    },
+    {
+      "lemma": "agnimadana",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3705"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L584053"
+        }
+      ]
+    },
+    {
+      "lemma": "agniSAla",
+      "byDict": {
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3757"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2410"
+        }
+      ]
+    },
+    {
+      "lemma": "agniSeKara",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3960"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3813"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2436"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2311"
+        }
+      ]
+    },
+    {
+      "lemma": "agnizwut",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3975"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3829"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2450"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2318"
+        }
+      ]
+    },
+    {
+      "lemma": "agnizwomasAma",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3996"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2466"
+        }
+      ]
+    },
+    {
+      "lemma": "agnizWa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4005"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2478"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2332"
+        }
+      ]
+    },
+    {
+      "lemma": "agnyADeya",
+      "byDict": {
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4133"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2671"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2455"
+        }
+      ]
+    },
+    {
+      "lemma": "agracCada",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4441"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L2743"
+        }
+      ]
+    },
+    {
+      "lemma": "agraja",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4444"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4312"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2526"
+        }
+      ]
+    },
+    {
+      "lemma": "agrediDizu",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4813"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4711"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3013"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2774"
+        }
+      ]
+    },
+    {
+      "lemma": "agru",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4903"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2753"
+        }
+      ]
+    },
+    {
+      "lemma": "aGa",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4921"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3059"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2815"
+        }
+      ]
+    },
+    {
+      "lemma": "aGamarzaRa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4955"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4852"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3086"
+        }
+      ]
+    },
+    {
+      "lemma": "aNka",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5134"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5054"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3236"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L2950"
+        }
+      ]
+    },
+    {
+      "lemma": "aNkura",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5350"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5320"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3349"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L3068"
+        }
+      ]
+    },
+    {
+      "lemma": "aNga",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m",
+          "n"
+        ],
+        "PWK": [
+          "f",
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5483"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5494"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3451"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L3177"
+        }
+      ]
+    },
+    {
+      "lemma": "aNgapAli",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5655"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5795"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L3306"
+        }
+      ]
+    },
+    {
+      "lemma": "aNgarakta",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5709"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5829"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3614"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L3327"
+        }
+      ]
+    },
+    {
+      "lemma": "aNgavikfti",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5757"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5892"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3652"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L3384"
+        }
+      ]
+    },
+    {
+      "lemma": "aNganAgaRa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5922"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L3278"
+        }
+      ]
+    },
+    {
+      "lemma": "aNgas",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "AP": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5940"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L6340"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L607938"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3670"
+        }
+      ]
+    },
+    {
+      "lemma": "aNgArakadina",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6060"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L607975"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3740"
+        }
+      ]
+    },
+    {
+      "lemma": "aNgurIya",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6178"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6326"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L3938"
+        }
+      ]
+    },
+    {
+      "lemma": "aNgulitrARa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6230"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6413"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L3680"
+        }
+      ]
+    },
+    {
+      "lemma": "aNgulIya",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6305"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6476"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4027"
+        }
+      ]
+    },
+    {
+      "lemma": "acala",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6523"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4209"
+        }
+      ]
+    },
+    {
+      "lemma": "acyuta",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6920"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4517"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4005"
+        }
+      ]
+    },
+    {
+      "lemma": "ajaganDinI",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7083"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7619"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4674"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4124"
+        }
+      ]
+    },
+    {
+      "lemma": "ajaloman",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7196"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7997"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4902"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4283"
+        }
+      ]
+    },
+    {
+      "lemma": "ajAvi",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7274"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5071"
+        }
+      ]
+    },
+    {
+      "lemma": "ajakava",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7340"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4644"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4098"
+        }
+      ]
+    },
+    {
+      "lemma": "ajagava",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7352"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7646"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4687"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4138"
+        }
+      ]
+    },
+    {
+      "lemma": "ajanani",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7418"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7740"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4747"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4176"
+        }
+      ]
+    },
+    {
+      "lemma": "ajAtaSatru",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7577"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4994"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4357"
+        }
+      ]
+    },
+    {
+      "lemma": "ajita",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7622"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8273"
+        }
+      ]
+    },
+    {
+      "lemma": "ajina",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7673"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8339"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5130"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4412"
+        }
+      ]
+    },
+    {
+      "lemma": "ajira",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7709"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8408"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4433"
+        }
+      ]
+    },
+    {
+      "lemma": "ajeya",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7871"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8606"
+        }
+      ]
+    },
+    {
+      "lemma": "ajJala",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7895"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8655"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5330"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4539"
+        }
+      ]
+    },
+    {
+      "lemma": "ajman",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "AP": [
+          "f"
+        ],
+        "PWG": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8009"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L8480"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8764"
+        }
+      ]
+    },
+    {
+      "lemma": "aYjanaka",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f",
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8185"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5518"
+        }
+      ]
+    },
+    {
+      "lemma": "aYjIra",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m",
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8332"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9379"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5675"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L4788"
+        }
+      ]
+    },
+    {
+      "lemma": "aRu",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "AP": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8631"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L9195"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5928"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L5027"
+        }
+      ]
+    },
+    {
+      "lemma": "aRureRu",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8694"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L5057"
+        }
+      ]
+    },
+    {
+      "lemma": "aRqa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8760"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9996"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L6010"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L5081"
+        }
+      ]
+    },
+    {
+      "lemma": "aRqaka",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8851"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10022"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L6020"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L5091"
+        }
+      ]
+    },
+    {
+      "lemma": "adButa",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8893"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L14831"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L7119"
+        }
+      ]
+    },
+    {
+      "lemma": "atikfcCra",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L9217"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10585"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L6356"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L5339"
+        }
+      ]
+    },
+    {
+      "lemma": "atidUra",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L9485"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L6850"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L5660"
+        }
+      ]
+    },
+    {
+      "lemma": "atiBI",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L9654"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11500"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L7231"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L5785"
+        }
+      ]
+    },
+    {
+      "lemma": "atisvapna",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L10131"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12448"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L8093"
+        }
+      ]
+    },
+    {
+      "lemma": "atiruc",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "AP": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L11240"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L11041"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11803"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L7472"
+        }
+      ]
+    },
+    {
+      "lemma": "atyantika",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L12184"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12875"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L8421"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L6488"
+        }
+      ]
+    },
+    {
+      "lemma": "atriBAradvAjikA",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L12479"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13406"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L6741"
+        }
+      ]
+    },
+    {
+      "lemma": "aTari",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L12601"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13623"
+        }
+      ]
+    },
+    {
+      "lemma": "aTarvaSiKA",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "AP": [
+          "n"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L12652"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L12665"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13745"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L8864"
+        }
+      ]
+    },
+    {
+      "lemma": "aTarvaSiras",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L12655"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13750"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L8867"
+        }
+      ]
+    },
+    {
+      "lemma": "adarSanapaTa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m",
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L12962"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L14112"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L9078"
+        }
+      ]
+    },
+    {
+      "lemma": "adas",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m",
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L12992"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L14142"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L9101"
+        }
+      ]
+    },
+    {
+      "lemma": "adUra",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L13277"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L9317"
+        }
+      ]
+    },
+    {
+      "lemma": "adButaSAnti",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L13604"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L9599"
+        }
+      ]
+    },
+    {
+      "lemma": "adyadina",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L13682"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L9680"
+        }
+      ]
+    },
+    {
+      "lemma": "adriBU",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L13874"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15213"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L9802"
+        }
+      ]
+    },
+    {
+      "lemma": "adriSfNga",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L13904"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L7279"
+        }
+      ]
+    },
+    {
+      "lemma": "aDamArDa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L14198"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L10157"
+        }
+      ]
+    },
+    {
+      "lemma": "aDarozWa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L14306"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L10255"
+        }
+      ]
+    },
+    {
+      "lemma": "aDoBakta",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L14611"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L17449"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L11323"
+        }
+      ]
+    },
+    {
+      "lemma": "aDomuKa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L14638"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L11343"
+        }
+      ]
+    },
+    {
+      "lemma": "aDidevatA",
+      "byDict": {
+        "PWG": [
+          "f"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L16641"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L10710"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L7901"
+        }
+      ]
+    },
+    {
+      "lemma": "aDiprazwiyuga",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L15495"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L16776"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L10783"
+        }
+      ]
+    },
+    {
+      "lemma": "aDimAMsa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L15558"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L16818"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L10826"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L7960"
+        }
+      ]
+    },
+    {
+      "lemma": "aDimAtrakAruRika",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L15573"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L610890"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L10838"
+        }
+      ]
+    },
+    {
+      "lemma": "aDimukti",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L15597"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L16845"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L10859"
+        }
+      ]
+    },
+    {
+      "lemma": "aDIzwa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L16411"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L568972"
+        }
+      ]
+    },
+    {
+      "lemma": "aDyakza",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L16501"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L17542"
+        }
+      ]
+    },
+    {
+      "lemma": "aDyAsa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L16707"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L17981"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L11664"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L8707"
+        }
+      ]
+    },
+    {
+      "lemma": "aDyAtmadfS",
+      "byDict": {
+        "AP": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L16417"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L8621"
+        }
+      ]
+    },
+    {
+      "lemma": "aDvagati",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L17125"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L574046"
+        }
+      ]
+    },
+    {
+      "lemma": "aDvalozwa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L17155"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L579490"
+        }
+      ]
+    },
+    {
+      "lemma": "aDvanIna",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L17176"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18238"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L11811"
+        }
+      ]
+    },
+    {
+      "lemma": "anaGa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L17432"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18675"
+        }
+      ]
+    },
+    {
+      "lemma": "anaNgaka",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L17522"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18743"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L12101"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L8995"
+        }
+      ]
+    },
+    {
+      "lemma": "ananta",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L17853"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L12556"
+        }
+      ]
+    },
+    {
+      "lemma": "anantarASi",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L17988"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L19238"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L12701"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L9273"
+        }
+      ]
+    },
+    {
+      "lemma": "ananyaguru",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L18189"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L579556"
+        }
+      ]
+    },
+    {
+      "lemma": "anavaDAnatA",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L19209"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L20069"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L13733"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L9748"
+        }
+      ]
+    },
+    {
+      "lemma": "anAkAla",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L19623"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L20462"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L14102"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L9929"
+        }
+      ]
+    },
+    {
+      "lemma": "anAdyanta",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L19974"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L14408"
+        }
+      ]
+    },
+    {
+      "lemma": "anAhAra",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L20686"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L21328"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L14922"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L10389"
+        }
+      ]
+    },
+    {
+      "lemma": "animiza",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L21032"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L21531"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L15151"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L10545"
+        }
+      ]
+    },
+    {
+      "lemma": "anirudDaBAvinI",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L21200"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L21703"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L15288"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L10618"
+        }
+      ]
+    },
+    {
+      "lemma": "anIka",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m",
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L21699"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L21939"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L15602"
+        }
+      ]
+    },
+    {
+      "lemma": "anukAmIna",
+      "byDict": {
+        "PWG": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L22433"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L11106"
+        }
+      ]
+    },
+    {
+      "lemma": "anukarman",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "AP": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L22097"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L21221"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L612671"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L15800"
+        }
+      ]
+    },
+    {
+      "lemma": "anucara",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L22609"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L22810"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L11307"
+        }
+      ]
+    },
+    {
+      "lemma": "anutara",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L22936"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L22962"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L16287"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L11436"
+        }
+      ]
+    },
+    {
+      "lemma": "anutarzaRa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L22948"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L22981"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L16296"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L11452"
+        }
+      ]
+    },
+    {
+      "lemma": "anudDaraRa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L23353"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L11591"
+        }
+      ]
+    },
+    {
+      "lemma": "anudravaRa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L23416"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L584379"
+        }
+      ]
+    },
+    {
+      "lemma": "anubimba",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m",
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L24911"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L613434"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L17233"
+        }
+      ]
+    },
+    {
+      "lemma": "anuBAva",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L25052"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L23846"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L17283"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L12103"
+        }
+      ]
+    },
+    {
+      "lemma": "anumanana",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L25184"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L23986"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L17340"
+        }
+      ]
+    },
+    {
+      "lemma": "anuyAyin",
+      "byDict": {
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L24198"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L17531"
+        }
+      ]
+    },
+    {
+      "lemma": "anurAga",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L25597"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L24312"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L17600"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L12377"
+        }
+      ]
+    },
+    {
+      "lemma": "anuvAsana",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L26185"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L24802"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L17900"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L12619"
+        }
+      ]
+    },
+    {
+      "lemma": "anuvartman",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "AP": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L26446"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L24747"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L24656"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L17812"
+        }
+      ]
+    },
+    {
+      "lemma": "anuzaYjana",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L26905"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L12845"
+        }
+      ]
+    },
+    {
+      "lemma": "anUpAlu",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L27977"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L18668"
+        }
+      ]
+    },
+    {
+      "lemma": "anfta",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L28103"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L25954"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L13128"
+        }
+      ]
+    },
+    {
+      "lemma": "antaHkoSa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L28885"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L26510"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L19089"
+        }
+      ]
+    },
+    {
+      "lemma": "antaHsAra",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L29120"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L28219"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L20098"
+        }
+      ]
+    },
+    {
+      "lemma": "antaHsveda",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L29171"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L28235"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L20146"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L13345"
+        }
+      ]
+    },
+    {
+      "lemma": "antarAgAra",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L29231"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L19450"
+        }
+      ]
+    },
+    {
+      "lemma": "antardaSAha",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L29399"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L27773"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L19705"
+        }
+      ]
+    },
+    {
+      "lemma": "antarvedi",
+      "byDict": {
+        "PWG": [
+          "f"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L28038"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L19928"
+        }
+      ]
+    },
+    {
+      "lemma": "antigfha",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L30237"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L28395"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L20186"
+        }
+      ]
+    },
+    {
+      "lemma": "antyaja",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L30363"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L20266"
+        }
+      ]
+    },
+    {
+      "lemma": "andolana",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L30508"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L28714"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L20372"
+        }
+      ]
+    },
+    {
+      "lemma": "anDa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L30520"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L28734"
+        }
+      ]
+    },
+    {
+      "lemma": "annagati",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L30796"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L29103"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L20546"
+        }
+      ]
+    },
+    {
+      "lemma": "annabrahman",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "AP": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L30890"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L29710"
+        }
+      ]
+    },
+    {
+      "lemma": "annAda",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L31004"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L29260"
+        }
+      ]
+    },
+    {
+      "lemma": "anyaloha",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L31254"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L21070"
+        }
+      ]
+    },
+    {
+      "lemma": "anyArTa",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L31311"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L30061"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L21118"
+        }
+      ]
+    },
+    {
+      "lemma": "anyonyASraya",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f",
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L31736"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L30194"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L21185"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L14743"
+        }
+      ]
+    },
+    {
+      "lemma": "anvADi",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L32234"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L30419"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L21354"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L14817"
+        }
+      ]
+    },
+    {
+      "lemma": "appitta",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L32641"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L35010"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24735"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L17538"
+        }
+      ]
+    },
+    {
+      "lemma": "apkftsna",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L32644"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24657"
+        }
+      ]
+    },
+    {
+      "lemma": "apatantra",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L33443"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L570292"
+        }
+      ]
+    },
+    {
+      "lemma": "apanayana",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L33925"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L31528"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22129"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L15535"
+        }
+      ]
+    },
+    {
+      "lemma": "apamAna",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L34203"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L31722"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22309"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L15620"
+        }
+      ]
+    },
+    {
+      "lemma": "aparaloka",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L34508"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L15730"
+        }
+      ]
+    },
+    {
+      "lemma": "aparasakTa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L34532"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L32084"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22539"
+        }
+      ]
+    },
+    {
+      "lemma": "aparAntaka",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L34571"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L32263"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22639"
+        }
+      ]
+    },
+    {
+      "lemma": "aparArDa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L34595"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L32294"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22663"
+        }
+      ]
+    },
+    {
+      "lemma": "apahasta",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L36264"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L616739"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L23511"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L16595"
+        }
+      ]
+    },
+    {
+      "lemma": "apANga",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L36519"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L23651"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L16769"
+        }
+      ]
+    },
+    {
+      "lemma": "apAtra",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L36642"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L33643"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L23734"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L16834"
+        }
+      ]
+    },
+    {
+      "lemma": "apADvan",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "AP": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L36711"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L34981"
+        }
+      ]
+    },
+    {
+      "lemma": "apAna",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L36718"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L33673"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L23777"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L16858"
+        }
+      ]
+    },
+    {
+      "lemma": "apAra",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L36832"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L33860"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L23891"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L16926"
+        }
+      ]
+    },
+    {
+      "lemma": "apikarRa",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L37200"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L34309"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24035"
+        }
+      ]
+    },
+    {
+      "lemma": "apuMs",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "AP": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L37561"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L35645"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L34495"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24195"
+        }
+      ]
+    },
+    {
+      "lemma": "apOlkasa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38195"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24654"
+        }
+      ]
+    },
+    {
+      "lemma": "aprakampatA",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38330"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L17567"
+        }
+      ]
+    },
+    {
+      "lemma": "abja",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L40145"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L26346"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L18551"
+        }
+      ]
+    },
+    {
+      "lemma": "abrahman",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "m",
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L40394"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L36506"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L26560"
+        }
+      ]
+    },
+    {
+      "lemma": "aBijit",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "WIL": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L41523"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L19225"
+        }
+      ]
+    },
+    {
+      "lemma": "aBiDAna",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L41954"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L37548"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L27253"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L19303"
+        }
+      ]
+    },
+    {
+      "lemma": "aBimAti",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L43687"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L27803"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L19758"
+        }
+      ]
+    },
+    {
+      "lemma": "aBImAna",
+      "byDict": {
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L28847"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L20549"
+        }
+      ]
+    },
+    {
+      "lemma": "aBirAma",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L44247"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L27969"
+        }
+      ]
+    },
+    {
+      "lemma": "aBIka",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L46920"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L39762"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L28796"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L20490"
+        }
+      ]
+    },
+    {
+      "lemma": "aBIru",
+      "byDict": {
+        "MW": [
+          "f",
+          "m"
+        ],
+        "AP": [
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L46932"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L43422"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L39909"
+        }
+      ]
+    },
+    {
+      "lemma": "aByArohaRIya",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L48511"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L40642"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L29439"
+        }
+      ]
+    },
+    {
+      "lemma": "aByudita",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L48845"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L29566"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L21187"
+        }
+      ]
+    },
+    {
+      "lemma": "aByuza",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L49220"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L40950"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L29649"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L21295"
+        }
+      ]
+    },
+    {
+      "lemma": "aBra",
+      "byDict": {
+        "MW": [
+          "n"
+        ],
+        "PWG": [
+          "m",
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L49314"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L41002"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L29708"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L21336"
+        }
+      ]
+    },
+    {
+      "lemma": "aBrapuzpa",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L49395"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L41097"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L29754"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L21388"
+        }
+      ]
+    },
+    {
+      "lemma": "amati",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "PWG": [
+          "f",
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L49610"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L41409"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L29951"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L21575"
+        }
+      ]
+    },
+    {
+      "lemma": "amantra",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L49850"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L30046"
+        }
+      ]
+    },
+    {
+      "lemma": "amara",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L49929"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L30107"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L21733"
+        }
+      ]
+    },
+    {
+      "lemma": "amarakoza",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L49989"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L41650"
+        }
+      ]
+    },
+    {
+      "lemma": "amaradAru",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "n"
+        ],
+        "WIL": [
+          "m"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L50037"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L41687"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L30166"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L21780"
+        }
+      ]
+    },
+    {
+      "lemma": "amaramfgIdfS",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "f"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L50097"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L619904"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L30210"
+        }
+      ]
+    },
+    {
+      "lemma": "amaraSakti",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "PWK": [
+          "f"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L50133"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L41746"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L30246"
+        }
+      ]
+    },
+    {
+      "lemma": "amareSvaratIrTa",
+      "byDict": {
+        "MW": [
+          "m"
+        ],
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L50208"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L619978"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L30324"
+        }
+      ]
+    },
+    {
+      "lemma": "amala",
+      "byDict": {
+        "MW": [
+          "m",
+          "n"
+        ],
+        "PWG": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L50331"
+        },
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L41924"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L21954"
+        }
+      ]
+    },
+    {
+      "lemma": "amalA",
+      "byDict": {
+        "MW": [
+          "f"
+        ],
+        "AP": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L50343"
+        },
+        {
+          "dict": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L46142"
+        }
+      ]
+    },
+    {
+      "lemma": "amiza",
+      "byDict": {
+        "PWG": [
+          "n"
+        ],
+        "PWK": [
+          "m"
+        ],
+        "WIL": [
+          "n"
+        ]
+      },
+      "examples": [
+        {
+          "dict": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L42393"
+        },
+        {
+          "dict": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L30865"
+        },
+        {
+          "dict": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L22246"
+        }
+      ]
+    }
+  ]
+}

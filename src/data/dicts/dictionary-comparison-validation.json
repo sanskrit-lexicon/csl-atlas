@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-29T09:33:31.510Z",
+  "sourceRoot": "../csl-orig/v02",
+  "dictionaries": [
+    {
+      "code": "mw",
+      "label": "MW",
+      "grammarReliable": true
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "grammarReliable": true
+    },
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "grammarReliable": true
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "grammarReliable": true
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "grammarReliable": true
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "grammarReliable": false
+    },
+    {
+      "code": "skd",
+      "label": "SKD",
+      "grammarReliable": false
+    }
+  ],
+  "assumptions": [],
+  "warnings": [],
+  "distinctLemmas": 298427,
+  "recordsByDict": {
+    "MW": 286560,
+    "AP": 90654,
+    "PWG": 123366,
+    "PWK": 170556,
+    "WIL": 44577,
+    "VCP": 50135,
+    "SKD": 42531
+  },
+  "intersectionAll": 1913,
+  "genderConflicts": 3671
+}
