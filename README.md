@@ -1,4 +1,4 @@
-# csl-atlas — Atlas of the Cologne Digital Sanskrit Lexicons
+# csl-atlas
 
 An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de/) — comparative microstructural analysis of nine narrative Sanskrit-dictionary chapters, plus an all-dictionary coverage layer for every local CDSL v02 source dictionary.
 
@@ -131,6 +131,32 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] Optional external TEI/SHACL validation harness with strict mode
 - [x] Build and link validation
 - [ ] Human philological review of all 50 TEI/OntoLex cases
+
+---
+
+## Issues Overview
+
+Snapshot 2026-05-29: **0** open, **0** closed.
+
+### By Milestone
+
+| Milestone | Open | Closed | Total |
+|---|---:|---:|---:|
+| API Stability | 0 | 0 | 0 |
+| User Experience | 0 | 0 | 0 |
+| Data Quality | 0 | 0 | 0 |
+| Developer Experience | 0 | 0 | 0 |
+| Community | 0 | 0 | 0 |
+
+## GitHub Issue Conventions
+
+Follows the [Cologne tooling-repo taxonomy](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-tooling-runbook.md):
+
+- **17 type labels** across 5 categories
+- **4 severity levels**: trivial, minor, major, critical
+- **5 milestones**: API Stability, User Experience, Data Quality, Developer Experience, Community
+- **Domain labels** scoped to web-frontend: `domain:ui`, `domain:routing`, `domain:i18n`, `domain:rendering`
+- **Org Project**: [Tooling Roadmap](https://github.com/orgs/sanskrit-lexicon/projects/9)
 
 ---
 
