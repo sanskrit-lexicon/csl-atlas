@@ -136,6 +136,16 @@ The schema lives at [`data/schema/review-report.schema.json`](../data/schema/rev
 
 Steps 2 already has precedent in `scripts/select-review-cases.mjs` (→ `data/pilot/review-cases.json`) and `scripts/sample-hard-cases.mjs`. New queues should reuse that pattern rather than inventing one-off report formats.
 
+## Implemented queues
+
+| Queue | Generator | Output | Page |
+|---|---|---|---|
+| `pos-gender-conflict` | `scripts/build-gender-conflict-review.mjs` (`npm run build-gender-review`) | `src/data/review/gender-conflicts-review.json` | `src/tools/review-gender-conflicts.md` |
+
+The generator implements steps 1–5 for this queue: it derives every cross-dictionary gender conflict, emits schema-conforming reports with `reviewStatus: needs-review`, and **preserves human decisions across rebuilds** by `reviewId` (human-set statuses `reviewed-ok` / `reviewed-corrected` / `blocked` / `deferred`, or any item with a `reviewer`, are carried forward; only machine fields refresh). `npm run validate-review-reports` checks every `src/data/review/*.json` against the schema.
+
+To record a decision, edit the item's `reviewStatus` / `reviewedValue` / `reviewer` / `reviewedAt` / `note` in the output file and rerun the generator; your edit survives.
+
 ## Rules
 
 - A review never edits generated source data — it overlays it.
