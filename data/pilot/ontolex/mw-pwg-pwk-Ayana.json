@@ -4,20 +4,147 @@
     "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
     "decomp": "http://www.w3.org/ns/lemon/decomp#",
     "frac": "http://www.w3.org/ns/lemon/frac#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
   },
-  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/Ayana",
-  "@type": "lexicog:ContinuationEntry",
-  "ontolex:canonicalForm": {
-    "@type": "ontolex:Form",
-    "ontolex:writtenRep": "Ayana"
-  },
-  "csl:phenomenon": [
-    "continuation",
-    "tri-dict",
-    "pwg-rich",
-    "pwk-abridged",
-    "mw-uncited-pwg-cited",
-    "homophone"
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana",
+  "@graph": [
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana",
+      "@type": [
+        "ontolex:LexicalEntry",
+        "lexicog:Entry"
+      ],
+      "ontolex:canonicalForm": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#form-canonical"
+      },
+      "ontolex:sense": [],
+      "frac:attestation": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#attestation-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#attestation-pwg-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#attestation-pwg-3"
+        }
+      ],
+      "csl:sourceRecord": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#record-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#record-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#record-pwk"
+        }
+      ],
+      "csl:caseId": "mw-pwg-pwk:Ayana",
+      "csl:key": "Ayana",
+      "csl:entryType": "continuation",
+      "csl:phenomenon": [
+        "continuation",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "csl:profileVersion": "ontolex-frac-profile-v0.1",
+      "csl:reviewStatus": "full-50-machine-review",
+      "csl:validationScope": "full-50-ontolex-shacl-profile"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#form-canonical",
+      "@type": "ontolex:Form",
+      "ontolex:writtenRep": {
+        "@value": "Ayana",
+        "@language": "sa-Latn-x-SLP1"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#record-mw",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "csl:recordNumber": "25763",
+      "csl:lineNumber": 91280,
+      "csl:pageColumn": "148,1",
+      "rdf:value": "<L>25763<pc>148,1<k1>Ayana<k2>Ayana<e>1A\n¦ (for <hom>1.</hom> <s>Ayana</s> See under <s>Aya</s>.)\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#record-pwg",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "csl:recordNumber": "9024",
+      "csl:lineNumber": 77059,
+      "csl:pageColumn": "1-0675",
+      "rdf:value": "<L>9024<pc>1-0675<k1>Ayana<k2>A/yana\n{#A/yana#}¦ (von {#i#} mit {#A#}) <lex>n.</lex> {%das Kommen%}: {#Aya^ne te pa\\rAya^Re\\ dUrvA^ rohantu pu\\zpiRI^H#}\n<ls>ṚV. 10,142,8.</ls>\n<ls>VS. 22,7.</ls>\n<ls>AV. 6,122,2.</ls>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#record-pwk",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "csl:recordNumber": "15295",
+      "csl:lineNumber": 57890,
+      "csl:pageColumn": "1-181-a",
+      "rdf:value": "<L>15295<pc>1-181-a<k1>Ayana<k2>Ayana<h>2\n<hom>2.</hom> {#Ayana#}¦ <lex>Adj.</lex> {%zum Solstitium in Beziehung stehend%}.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#attestation-pwg-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana"
+      },
+      "frac:evidence": "ṚV. 10,142,8.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#attestation-pwg-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana"
+      },
+      "frac:evidence": "VS. 22,7.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#attestation-pwg-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana"
+      },
+      "frac:evidence": "AV. 6,122,2.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana#continuation-relation",
+      "@type": "csl:ContinuationRelation",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AAyana"
+      },
+      "csl:mwECode": "1A",
+      "csl:modelingNote": "Continuation parent must be recovered from MW adjacency before semantic assertion."
+    }
   ]
 }

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-anti">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case anti</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-anti-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3Aanti">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">anti</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-anti-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-anti-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>ṚV. 1,89,9.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>176,1.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>AV. 6,4,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>8,5,11.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>ṚV. 1,94,9.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>84,17.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>2,27,3.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>5,76,2.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>44,11.</abbr>
+        <ref type="inherited-siglum">ṚV. 5,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>4,2,18.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>5,10.</abbr>
+        <ref type="inherited-siglum">ṚV. 4,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>8,62,1.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>9,19,7.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>AV. 10,4,9.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>8,32.</abbr>
+        <ref type="inherited-siglum">AV. 10,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>BHĀG. P.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anti-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-anti-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-anti-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">8345</idno>
+        <idno type="line">30312</idno>
+        <idno type="pc">44,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;8345&lt;pc&gt;44,3&lt;k1&gt;anti&lt;k2&gt;anti&lt;h&gt;2&lt;e&gt;1
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;anti&lt;/s&gt; ¦ &lt;lex&gt;f.&lt;/lex&gt; an elder sister (in theatrical language), &lt;ls&gt;L.&lt;/ls&gt; for &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;a/nti&lt;/s&gt; See &lt;ab&gt;col.&lt;/ab&gt; 2.&lt;info lex=&quot;f&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-anti-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">3402</idno>
+        <idno type="line">28264</idno>
+        <idno type="pc">1-0252</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;3402&lt;pc&gt;1-0252&lt;k1&gt;anti&lt;k2&gt;a/nti&lt;h&gt;1
+1. {#a/nti#}¦
+&lt;lang n=&quot;greek&quot;&gt;ἀντί&lt;/lang&gt;, {%ante.%}
+&lt;div n=&quot;1&quot;&gt; 1) &lt;lex&gt;adv.&lt;/lex&gt;
+&lt;div n=&quot;2&quot;&gt; a) {%gegenüber, davor%}: {#Sa\taminnu Sa\rado\ anti^ devAH#} {%hundert Herbste seien noch vor uns!%}
+&lt;ls&gt;ṚV. 1,89,9.&lt;/ls&gt; {#Satru\manti\ na vi^ndasi#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;176,1.&lt;/ls&gt; &lt;ls&gt;AV. 6,4,2.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;8,5,11.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— b) {%Angesichts, in Gegenwart, nahe%} (Geg. {#dUre#} &lt;ab&gt;u. s. w.&lt;/ab&gt;): {#dU\re vA\ ye anti^ vA\ ke ci^da\triRa^H#}
+&lt;ls&gt;ṚV. 1,94,9.&lt;/ls&gt; {#ko ma^Msate\ santa\mindra\M #}
+[Page1-0253]
+{# ko anti^#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;84,17.&lt;/ls&gt; {#sarva\M rAja^ByaH pa\ramA ci\danti^#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,27,3.&lt;/ls&gt; {#anti^ nU\nama\Svinopa^stute\ha#}
+&lt;ls n=&quot;ṚV.&quot;&gt;5,76,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 5,&quot;&gt;44,11.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;4,2,18.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 4,&quot;&gt;5,10.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,62,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;9,19,7.&lt;/ls&gt; &lt;ls&gt;AV. 10,4,9.&lt;/ls&gt; &lt;ls n=&quot;AV. 10,&quot;&gt;8,32.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) &lt;ab&gt;praep.&lt;/ab&gt; {%in die Nähe von, zu%}, mit dem &lt;ab&gt;gen.&lt;/ab&gt;: {#mugDapraBItavadupeyaturanti mAtroH#}
+&lt;ls&gt;BHĀG. P.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-anti-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">5442</idno>
+        <idno type="line">20158</idno>
+        <idno type="pc">1-064-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;5442&lt;pc&gt;1-064-b&lt;k1&gt;anti&lt;k2&gt;a/nti&lt;h&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; {#a/nti#}¦
+&lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;Adv.&lt;/lex&gt;
+&lt;div n=&quot;2&quot;&gt;— a〉 {%gegenüber, davor%}.
+&lt;div n=&quot;2&quot;&gt;— b〉 {%Angesichts, in Gegenwart, nahe%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 &lt;ab&gt;Praep.&lt;/ab&gt; mit &lt;ab&gt;Gen.&lt;/ab&gt; oder am Ende eines &lt;ab&gt;Comp.&lt;/ab&gt; {%in der (die) Nähe von, zu%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

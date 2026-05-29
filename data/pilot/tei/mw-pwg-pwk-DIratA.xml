@@ -1,13 +1,140 @@
-<entry xml:id="mw-pwg-pwk-DIratA">
-  <form type="compound">
-    <orth notation="SLP1">DIratA</orth>
-  </form>
-  <etym type="lexical-decomposition">
-    <seg type="component">DIra</seg>
-    <seg type="component">tA</seg>
-  </etym>
-  <note type="source" target="mw">&lt;L&gt;101344&lt;pc&gt;517,1&lt;k1&gt;DIratA&lt;k2&gt;DIra—tA&lt;h&gt;2&lt;e&gt;3 &lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;DIra—tA&lt;/s&gt; ¦ &lt;lex&gt;f.&lt;/lex&gt; 2.&lt;info lex=&quot;f&quot;/&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwg">&lt;L&gt;36778&lt;pc&gt;3-0968&lt;k1&gt;DIratA&lt;k2&gt;DIratA {#DIratA#}¦ (von 1. {#DIra#}) &lt;lex&gt;f.&lt;/lex&gt; {%Standhaftigkeit, Charakterfestigkeit, Muth%}: {#vilalApa sa vAzpagadgadaM sahajAmapyapahAya DIratAm#} &lt;ls&gt;RAGH. 8,43.&lt;/ls&gt; &lt;ls&gt;MEGH. 112.&lt;/ls&gt; &lt;ls&gt;PAÑCAT. 129,22.&lt;/ls&gt; &lt;ls&gt;ed. orn. I,85.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 11,51.&lt;/ls&gt; &lt;ls&gt;DHŪRTAS. 72,13.&lt;/ls&gt; {#a˚#} {%Kleinmuth%} &lt;ls&gt;KATHĀS. 6,21.&lt;/ls&gt; &lt;ls&gt;PRAB. 15,8.&lt;/ls&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwk">&lt;L&gt;55440&lt;pc&gt;3-161-c&lt;k1&gt;DIratA&lt;k2&gt;DIratA&lt;h&gt;2 &lt;hom&gt;2.&lt;/hom&gt; {#DIratA#}¦ &lt;lex&gt;f.&lt;/lex&gt; {%Klugheit%} &lt;ls&gt;Spr. 2713&lt;/ls&gt;. &lt;LEND&gt;</note>
-  <note type="model-loss">Machine-generated stub; not reviewed.</note>
-</entry>
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-DIratA">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case DIratA</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-DIratA-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3ADIratA">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">DIratA</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-DIratA-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-DIratA-compound-relation" type="compound">
+      <seg type="component">DIra</seg>
+      <seg type="component">tA</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-DIratA-record-pwg">
+        <abbr>RAGH. 8,43.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-DIratA-record-pwg">
+        <abbr>MEGH. 112.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-DIratA-record-pwg">
+        <abbr>PAÑCAT. 129,22.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-DIratA-record-pwg">
+        <abbr>ed. orn. I,85.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-DIratA-record-pwg">
+        <abbr>KATHĀS. 11,51.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-DIratA-record-pwg">
+        <abbr>DHŪRTAS. 72,13.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-DIratA-record-pwg">
+        <abbr>KATHĀS. 6,21.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-DIratA-record-pwg">
+        <abbr>PRAB. 15,8.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-DIratA-record-pwk">
+        <abbr>Spr. 2713</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-DIratA-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">101344</idno>
+        <idno type="line">339640</idno>
+        <idno type="pc">517,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;101344&lt;pc&gt;517,1&lt;k1&gt;DIratA&lt;k2&gt;DIra—tA&lt;h&gt;2&lt;e&gt;3
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;DIra—tA&lt;/s&gt; ¦ &lt;lex&gt;f.&lt;/lex&gt; 2.&lt;info lex=&quot;f&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-DIratA-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">36778</idno>
+        <idno type="line">358311</idno>
+        <idno type="pc">3-0968</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;36778&lt;pc&gt;3-0968&lt;k1&gt;DIratA&lt;k2&gt;DIratA
+{#DIratA#}¦ (von 1. {#DIra#}) &lt;lex&gt;f.&lt;/lex&gt; {%Standhaftigkeit, Charakterfestigkeit, Muth%}: {#vilalApa sa vAzpagadgadaM sahajAmapyapahAya DIratAm#}
+&lt;ls&gt;RAGH. 8,43.&lt;/ls&gt;
+&lt;ls&gt;MEGH. 112.&lt;/ls&gt;
+&lt;ls&gt;PAÑCAT. 129,22.&lt;/ls&gt; &lt;ls&gt;ed. orn. I,85.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 11,51.&lt;/ls&gt; &lt;ls&gt;DHŪRTAS. 72,13.&lt;/ls&gt; {#a˚#} {%Kleinmuth%}
+&lt;ls&gt;KATHĀS. 6,21.&lt;/ls&gt;
+&lt;ls&gt;PRAB. 15,8.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-DIratA-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">55440</idno>
+        <idno type="line">227855</idno>
+        <idno type="pc">3-161-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;55440&lt;pc&gt;3-161-c&lt;k1&gt;DIratA&lt;k2&gt;DIratA&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; {#DIratA#}¦ &lt;lex&gt;f.&lt;/lex&gt; {%Klugheit%} &lt;ls&gt;Spr. 2713&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

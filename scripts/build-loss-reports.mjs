@@ -8,14 +8,17 @@ const HIGH_STRESS_KEYS = new Set([
 
 async function main() {
   const inputPath = path.resolve(process.cwd(), "data/pilot/neutral-model.json");
-  const outputPath = path.resolve(process.cwd(), "data/pilot/loss-reports.json");
+  const outputPaths = [
+    path.resolve(process.cwd(), "data/pilot/loss-reports.json"),
+    path.resolve(process.cwd(), "src/data/pilot/loss-reports.json")
+  ];
 
   const models = JSON.parse(await fs.readFile(inputPath, "utf-8"));
   const reports = [];
 
   for (const model of models) {
     const isHighStress = HIGH_STRESS_KEYS.has(model.key);
-    const reviewStatus = isHighStress ? "human-reviewed" : "machine";
+    const reviewStatus = isHighStress ? "reviewed" : "machine";
 
     for (const p of model.phenomena) {
       if (p === "hedge") {
@@ -133,9 +136,11 @@ async function main() {
     }
   }
 
-  await fs.writeFile(outputPath, JSON.stringify(reports, null, 2), "utf-8");
-  console.log(`Generated ${reports.length} loss reports at ${outputPath}`);
+  for (const outputPath of outputPaths) {
+    await fs.mkdir(path.dirname(outputPath), { recursive: true });
+    await fs.writeFile(outputPath, `${JSON.stringify(reports, null, 2)}\n`, "utf-8");
+  }
+  console.log(`Generated ${reports.length} loss reports at ${outputPaths.join(", ")}`);
 }
 
 main().catch(console.error);
-

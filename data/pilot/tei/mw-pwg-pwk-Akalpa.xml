@@ -1,9 +1,169 @@
-<entry xml:id="mw-pwg-pwk-Akalpa">
-  <form type="lemma">
-    <orth notation="SLP1">Akalpa</orth>
-  </form>
-  <note type="source" target="mw">&lt;L&gt;22062&lt;pc&gt;126,3&lt;k1&gt;Akalpa&lt;k2&gt;A-kalpa&lt;h&gt;1&lt;e&gt;1 &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;A-kalpa&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; = &lt;s&gt;kalpana&lt;/s&gt;, &lt;ab&gt;q.v.&lt;/ab&gt;, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m&quot;/&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwg">&lt;L&gt;7785&lt;pc&gt;1-0585&lt;k1&gt;Akalpa&lt;k2&gt;Akalpa {#Akalpa#}¦ (von {#kalp#} mit {#A#}) &lt;lex&gt;m.&lt;/lex&gt; &lt;div n=&quot;1&quot;&gt; 1) {%Anwendung, Anfügung%} ({#kalpana#}) &lt;ls&gt;TRIK. 3,3,274.&lt;/ls&gt; &lt;ls&gt;H. an. 3,440.&lt;/ls&gt; &lt;ls&gt;MED. p. 15.&lt;/ls&gt; &lt;div n=&quot;1&quot;&gt;— 2) {%Schmuck, Putz, Zierath%} &lt;ls&gt;AK. 2,6,3,1.&lt;/ls&gt; &lt;ls&gt;TRIK.&lt;/ls&gt; &lt;ls&gt;H. 635.&lt;/ls&gt; &lt;ls&gt;an. 3,439.&lt;/ls&gt; &lt;ls&gt;MED.&lt;/ls&gt; {#AkalpaparicaryA#} &lt;ls&gt;MBH. 3,13373.&lt;/ls&gt; {#˚sADana#} &lt;ls&gt;RAGH. 17,22.&lt;/ls&gt; &lt;ls n=&quot;RAGH.&quot;&gt;18,51.&lt;/ls&gt; &lt;ls&gt;SĀH. D. 54,12.&lt;/ls&gt; &lt;ls n=&quot;SĀH. D. 54,&quot;&gt;17.&lt;/ls&gt; &lt;div n=&quot;1&quot;&gt;— 3) {%Krankheit, Unwohlsein%} &lt;ls&gt;VIKR. (LENZ) 93,16.&lt;/ls&gt; Falsche Lesart für {#Akalya#} . &lt;LEND&gt;</note>
-  <note type="source" target="pwk">&lt;L&gt;13372&lt;pc&gt;1-158-b&lt;k1&gt;Akalpa&lt;k2&gt;Akalpa˚&lt;h&gt;2 &lt;hom&gt;2.&lt;/hom&gt; {#Akalpa˚#}¦ &lt;lex&gt;Adv.&lt;/lex&gt; = {#Akalpam, ˚sTAyin#} {%bis zum Ende der Welt dauernd%} &lt;ls&gt;KĀD. II,46,19&lt;/ls&gt;. &lt;LEND&gt;</note>
-  <note type="model-loss">Machine-generated stub; not reviewed.</note>
-</entry>
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-Akalpa">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case Akalpa</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-Akalpa-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AAkalpa">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">Akalpa</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-Akalpa-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-Akalpa-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>TRIK. 3,3,274.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>H. an. 3,440.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>MED. p. 15.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>AK. 2,6,3,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>TRIK.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>H. 635.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>an. 3,439.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>MED.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>MBH. 3,13373.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>RAGH. 17,22.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>18,51.</abbr>
+        <ref type="inherited-siglum">RAGH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>SĀH. D. 54,12.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>17.</abbr>
+        <ref type="inherited-siglum">SĀH. D. 54,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwg">
+        <abbr>VIKR. (LENZ) 93,16.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-Akalpa-record-pwk">
+        <abbr>KĀD. II,46,19</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-Akalpa-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">22062</idno>
+        <idno type="line">78716</idno>
+        <idno type="pc">126,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;22062&lt;pc&gt;126,3&lt;k1&gt;Akalpa&lt;k2&gt;A-kalpa&lt;h&gt;1&lt;e&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;A-kalpa&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; = &lt;s&gt;kalpana&lt;/s&gt;, &lt;ab&gt;q.v.&lt;/ab&gt;, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Akalpa-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">7785</idno>
+        <idno type="line">66363</idno>
+        <idno type="pc">1-0585</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7785&lt;pc&gt;1-0585&lt;k1&gt;Akalpa&lt;k2&gt;Akalpa
+{#Akalpa#}¦ (von {#kalp#} mit {#A#}) &lt;lex&gt;m.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%Anwendung, Anfügung%} ({#kalpana#})
+&lt;ls&gt;TRIK. 3,3,274.&lt;/ls&gt;
+&lt;ls&gt;H. an. 3,440.&lt;/ls&gt;
+&lt;ls&gt;MED. p. 15.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%Schmuck, Putz, Zierath%}
+&lt;ls&gt;AK. 2,6,3,1.&lt;/ls&gt;
+&lt;ls&gt;TRIK.&lt;/ls&gt;
+&lt;ls&gt;H. 635.&lt;/ls&gt;
+&lt;ls&gt;an. 3,439.&lt;/ls&gt;
+&lt;ls&gt;MED.&lt;/ls&gt; {#AkalpaparicaryA#}
+&lt;ls&gt;MBH. 3,13373.&lt;/ls&gt; {#˚sADana#}
+&lt;ls&gt;RAGH. 17,22.&lt;/ls&gt; &lt;ls n=&quot;RAGH.&quot;&gt;18,51.&lt;/ls&gt;
+&lt;ls&gt;SĀH. D. 54,12.&lt;/ls&gt; &lt;ls n=&quot;SĀH. D. 54,&quot;&gt;17.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%Krankheit, Unwohlsein%}
+&lt;ls&gt;VIKR. (LENZ) 93,16.&lt;/ls&gt; Falsche Lesart für {#Akalya#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Akalpa-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">13372</idno>
+        <idno type="line">50446</idno>
+        <idno type="pc">1-158-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;13372&lt;pc&gt;1-158-b&lt;k1&gt;Akalpa&lt;k2&gt;Akalpa˚&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; {#Akalpa˚#}¦ &lt;lex&gt;Adv.&lt;/lex&gt; = {#Akalpam, ˚sTAyin#} {%bis zum Ende der Welt dauernd%} &lt;ls&gt;KĀD. II,46,19&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

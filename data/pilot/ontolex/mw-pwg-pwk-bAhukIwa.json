@@ -4,36 +4,132 @@
     "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
     "decomp": "http://www.w3.org/ns/lemon/decomp#",
     "frac": "http://www.w3.org/ns/lemon/frac#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
   },
-  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/bAhukIwa",
-  "@type": "lexicog:CompoundEntry",
-  "ontolex:canonicalForm": {
-    "@type": "ontolex:Form",
-    "ontolex:writtenRep": "bAhukIwa"
-  },
-  "csl:phenomenon": [
-    "compound",
-    "tri-dict",
-    "pwg-rich",
-    "pwk-abridged",
-    "mw-uncited-pwg-cited",
-    "homophone"
-  ],
-  "decomp:constituent": [
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa",
+  "@graph": [
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/bAhukIwa#component1",
-      "@type": "decomp:Component",
-      "ontolex:correspondsTo": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/bAhu"
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa",
+      "@type": [
+        "ontolex:LexicalEntry",
+        "lexicog:Entry"
+      ],
+      "ontolex:canonicalForm": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#form-canonical"
+      },
+      "ontolex:sense": [],
+      "frac:attestation": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#attestation-pwg-1"
+        }
+      ],
+      "csl:sourceRecord": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#record-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#record-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#record-pwk"
+        }
+      ],
+      "csl:caseId": "mw-pwg-pwk:bAhukIwa",
+      "csl:key": "bAhukIwa",
+      "csl:entryType": "compound",
+      "csl:phenomenon": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "csl:profileVersion": "ontolex-frac-profile-v0.1",
+      "csl:reviewStatus": "full-50-machine-review",
+      "csl:validationScope": "full-50-ontolex-shacl-profile"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#form-canonical",
+      "@type": "ontolex:Form",
+      "ontolex:writtenRep": {
+        "@value": "bAhukIwa",
+        "@language": "sa-Latn-x-SLP1"
       }
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/bAhukIwa#component2",
-      "@type": "decomp:Component",
-      "ontolex:correspondsTo": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/kIwa"
-      }
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#record-mw",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "csl:recordNumber": "145018.1",
+      "csl:lineNumber": 486174,
+      "csl:pageColumn": "730,3",
+      "rdf:value": "<L>145018.1<pc>730,3<k1>bAhukIwa<k2>bAhu-kIwa<h>2<e>3\n<hom>2.</hom> <s>bAhu-kIwa</s> ¦ <lex>mfn.</lex> <ab>g.</ab> <s>palady-Adi</s>.<info lex=\"m:f:n\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#record-pwg",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "csl:recordNumber": "52584",
+      "csl:lineNumber": 509744,
+      "csl:pageColumn": "5-0080",
+      "rdf:value": "<L>52584<pc>5-0080<k1>bAhukIwa<k2>bAhukIwa/\n{#bAhukIwa/#}¦ <lex>adj.</lex> von {#bahukIwa#} <is>gaṇa</is> {#paladyAdi#} zu <ls>P. 4,2,110.</ls>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#record-pwk",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "csl:recordNumber": "76888",
+      "csl:lineNumber": 316768,
+      "csl:pageColumn": "4-223-c",
+      "rdf:value": "<L>76888<pc>4-223-c<k1>bAhukIwa<k2>*bAhukIwa\n*{#bAhukIwa#}¦ <lex>Adj.</lex> von {#bahukIwa#}.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#attestation-pwg-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa"
+      },
+      "frac:evidence": "P. 4,2,110.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#decomposition",
+      "@type": "decomp:ComponentList",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa"
+      },
+      "decomp:constituent": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#component-1",
+          "@type": "decomp:Component",
+          "ontolex:correspondsTo": {
+            "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/lexeme/bAhu"
+          },
+          "rdfs:label": "bAhu"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3AbAhukIwa#component-2",
+          "@type": "decomp:Component",
+          "ontolex:correspondsTo": {
+            "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/lexeme/kIwa"
+          },
+          "rdfs:label": "kIwa"
+        }
+      ],
+      "csl:modelingNote": "Machine segmentation exported for review."
     }
   ]
 }

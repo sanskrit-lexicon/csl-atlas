@@ -5,7 +5,7 @@ toc: false
 
 # Cross-dictionary comparison
 
-The atlas's core comparison: nine CDSL dictionaries on a **format-robust common-block vocabulary** (blocks detectable regardless of each dict's markup). It shows source-citation density and the population of each structural block, per dictionary. Data: the [cross-dict audit](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT.md) in the MWS docs-pass branch.
+The atlas's original core comparison: nine CDSL dictionaries on a **format-robust common-block vocabulary** (blocks detectable regardless of each dict's markup). It shows source-citation density and the population of each structural block, per dictionary. For size, block mass, entry lengths, and all CDSL v02 dictionaries, use the [all-dictionary coverage tool](dictionary-coverage). Data: the [cross-dict audit](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT.md) in the MWS docs-pass branch.
 
 ```js
 const cross = FileAttachment("../data/cross-dict.json").json();
@@ -23,7 +23,7 @@ const BLOCK_LABEL = {
 
 ## Source-citation density (`<ls>` per record)
 
-Multi-volume PWG is ~4× denser per entry than single-volume MW; the Sanskrit-Sanskrit lexica (SKD, VCP) and Cappeller carry no `<ls>` apparatus at all.
+PWG is ~4× denser per entry than MW in tagged `<ls>` citation. PWK is also a seven-part Petersburg work, but its compact editorial design drops most of PWG's named-kosha apparatus. The Sanskrit-Sanskrit lexica (SKD, VCP) and Cappeller carry no `<ls>` apparatus at all.
 
 ```js
 display(Plot.plot({
@@ -83,10 +83,10 @@ display(Inputs.table(dicts, {
 
 ## Reading the comparison
 
-- **Block economy is general.** Every single-volume dict reuses a small modal kernel (2–5 blocks) with a long tail — not unique to MW. Multi-volume PWG is denser. See [PAPER.md §9.3](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#9-methodological-limitations).
+- **Block economy is a structural shape, not merely a volume count.** MW, PWG, PWK, AP, WIL, Benfey, and Cappeller all reuse a small modal kernel (2–5 blocks) with a long tail. PWG is citation-denser; PWK shows that a seven-part work can still be editorially compact. See [PAPER.md §9.3](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#9-methodological-limitations).
 - **The `L.` hedge is MW-specific.** Of all nine, only MW carries the generic lexicographer-hedge (14% of entries); PWG cites *named* koshas instead. See the [D2 audit](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/LS_HEDGE_CHECK.md).
 - **`info` is a digitisation trace.** The near-universal MW `info` block (96%) has no analogue elsewhere — it is the infrastructure layer added by CDSL, not part of the print dictionary.
-- **SKD/VCP are a different genre.** No `<lex>`/`<ls>`; they mark gender inline and cite via inline `iti <source>`. The block apparatus does not transfer to them.
+- **SKD/VCP are a different genre.** Both are seven-volume Sanskrit-Sanskrit works with no `<lex>`/`<ls>`; they mark gender inline and cite via inline `iti <source>`. The structured-bilingual block apparatus does not transfer cleanly to them, but the coverage tool records their partial fit and size.
 
 Static figures: [cross-dict-density](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/cross-dict-density-en.svg) · [cross-dict-blocks](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/cross-dict-blocks-en.svg).
 

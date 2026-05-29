@@ -8,12 +8,12 @@ title: AP — Apte Practical Sanskrit-English Dictionary (1890 / 1957)
 
 ## 1. Overview
 
-[Vaman Shivaram Apte](https://en.wikipedia.org/wiki/Vaman_Shivaram_Apte)'s *Practical Sanskrit-English Dictionary*, first published 1890, revised and enlarged 1957 (the edition digitised in CDSL). A single-volume work designed for active reading of classical Sanskrit literature, particularly the *kāvya* and *śāstra* corpora, with substantial coverage of the [Aṣṭādhyāyī](https://en.wikipedia.org/wiki/A%E1%B9%A3%E1%B9%AD%C4%81dhy%C4%81y%C4%AB) terminology. The most recent dictionary in the CDSL bilingual set and the only modern (post-1899) work in the atlas. AP's distinguishing structural feature is its **maximum type-citation differentiation** (spread 15.2 pts — the largest in CDSL): Apte chose to cite the literary apparatus heavily for adjectives and indeclinables and lightly for nouns, reflecting his pedagogical orientation toward reading rather than reference.
+[Vaman Shivaram Apte](https://en.wikipedia.org/wiki/Vaman_Shivaram_Apte)'s *Practical Sanskrit-English Dictionary*, first published 1890, revised and enlarged in the 1957 three-volume edition digitised in CDSL. A practical reference designed for active reading of classical Sanskrit literature, particularly the *kāvya* and *śāstra* corpora, with substantial coverage of the [Aṣṭādhyāyī](https://en.wikipedia.org/wiki/A%E1%B9%A3%E1%B9%AD%C4%81dhy%C4%81y%C4%AB) terminology. The most recent dictionary in the CDSL bilingual set and the only modern (post-1899) work in the atlas. AP's distinguishing structural feature is its **maximum type-citation differentiation** (spread 15.2 pts — the largest in CDSL): Apte chose to cite the literary apparatus heavily for adjectives and indeclinables and lightly for nouns, reflecting his pedagogical orientation toward reading rather than reference.
 
 | | |
 |---|---|
 | **Records** | 90,654 |
-| **Volumes** | 1 (single-volume) |
+| **Volumes** | 3 (1957 revised/enlarged CDSL edition) |
 | **Year** | 1890 (1st edn); 1957 (revised, digitised) |
 | **Editor** | Vaman Shivaram Apte (1890); P. K. Gode + C. G. Karve (1957 rev.) |
 | **Publisher** | Prasad Prakashan, Poona (1957 revised) |
@@ -103,8 +103,8 @@ Full lineage in [AP/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/AP90/bl
 
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
-| **← prior: [PWK](pwk)** | Both single-volume; both moderate `<ls>` density (PWK 0.51, AP 0.69) | AP is 20th-century English practical; PWK is 19th-century German scholarly; AP has 1× `<ls>L.</ls>` (post-MW inheritance), PWK has 0; AP type-citation spread 15.2 pts (most selective) vs PWK 7.7 pts |
-| **next →: [BEN](ben)** | Both compact single-volume reference works | AP is 20th-century practical (1957); BEN is 19th-century philological (1866); AP has `<lex>` tagging, BEN does not; AP has 1× `<ls>L.</ls>`, BEN has 0 |
+| **← prior: [PWK](pwk)** | Both working-reference formats; both moderate `<ls>` density (PWK 0.51, AP 0.69) | AP is 20th-century English practical; PWK is 19th-century German scholarly; AP has 1× `<ls>L.</ls>` (post-MW inheritance), PWK has 0; AP type-citation spread 15.2 pts (most selective) vs PWK 7.7 pts |
+| **next →: [BEN](ben)** | Both compact practical reference works | AP is 20th-century practical (1957); BEN is 19th-century philological (1866); AP has `<lex>` tagging, BEN does not; AP has 1× `<ls>L.</ls>`, BEN has 0 |
 
 ## 7. Decisions log
 
@@ -118,8 +118,7 @@ Full lineage in [AP/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/AP90/bl
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/AP90/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory
 - **Source file**: [`csl-orig/v02/ap90/ap90.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
-- **Per-dict matrix JSON**: [`data/ap_blocks.json`](../data/ap_blocks.json) (note: `csl_code='ap90'` but filename is `ap_blocks.json` — Round 1 S6 bug fix)
-- **Cross-dict aggregate**: [`data/cross-dict.json`](../data/cross-dict.json)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes AP/AP90 block matrix data)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/AP90/blob/master/LICENSE)
 
 ## See also (tools)

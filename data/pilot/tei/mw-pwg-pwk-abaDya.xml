@@ -1,9 +1,115 @@
-<entry xml:id="mw-pwg-pwk-abaDya">
-  <form type="lemma">
-    <orth notation="SLP1">abaDya</orth>
-  </form>
-  <note type="source" target="mw">&lt;L&gt;10934&lt;pc&gt;60,1&lt;k1&gt;abaDya&lt;k2&gt;a-baDya&lt;h&gt;1&lt;e&gt;2 &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;a-baDya&lt;/s&gt; ¦ &lt;lex&gt;mfn.&lt;/lex&gt; unmeaning, nonsensical, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m:f:n&quot;/&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwg">&lt;L&gt;4376&lt;pc&gt;1-0323&lt;k1&gt;abaDya&lt;k2&gt;abaDya&lt;h&gt;1 1. {#abaDya#}¦ (3. {#a + baDya#} von {#banD) = abadDa#} &lt;ls&gt;H. an. 3,476.&lt;/ls&gt; &lt;ls&gt;MED. y. 68.&lt;/ls&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwk">&lt;L&gt;7072&lt;pc&gt;1-083-a&lt;k1&gt;abaDya&lt;k2&gt;*abaDya *{#abaDya#}¦ &lt;lex&gt;Adj.&lt;/lex&gt; = {#abadDa#} 2〉. &lt;LEND&gt;</note>
-  <note type="model-loss">Machine-generated stub; not reviewed.</note>
-</entry>
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-abaDya">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case abaDya</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-abaDya-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AabaDya">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">abaDya</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-abaDya-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-abaDya-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-abaDya-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-abaDya-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-abaDya-record-pwg">
+        <abbr>H. an. 3,476.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-abaDya-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-abaDya-record-pwg">
+        <abbr>MED. y. 68.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-abaDya-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">10934</idno>
+        <idno type="line">39872</idno>
+        <idno type="pc">60,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;10934&lt;pc&gt;60,1&lt;k1&gt;abaDya&lt;k2&gt;a-baDya&lt;h&gt;1&lt;e&gt;2
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;a-baDya&lt;/s&gt; ¦ &lt;lex&gt;mfn.&lt;/lex&gt; unmeaning, nonsensical, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m:f:n&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-abaDya-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">4376</idno>
+        <idno type="line">36043</idno>
+        <idno type="pc">1-0323</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;4376&lt;pc&gt;1-0323&lt;k1&gt;abaDya&lt;k2&gt;abaDya&lt;h&gt;1
+1. {#abaDya#}¦ (3. {#a + baDya#} von {#banD) = abadDa#}
+&lt;ls&gt;H. an. 3,476.&lt;/ls&gt;
+&lt;ls&gt;MED. y. 68.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-abaDya-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">7072</idno>
+        <idno type="line">26122</idno>
+        <idno type="pc">1-083-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7072&lt;pc&gt;1-083-a&lt;k1&gt;abaDya&lt;k2&gt;*abaDya
+*{#abaDya#}¦ &lt;lex&gt;Adj.&lt;/lex&gt; = {#abadDa#} 2〉.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

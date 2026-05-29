@@ -4,26 +4,1100 @@
     "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
     "decomp": "http://www.w3.org/ns/lemon/decomp#",
     "frac": "http://www.w3.org/ns/lemon/frac#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "csl": "https://sanskrit-lexicon.github.io/csl-atlas/ns#"
   },
-  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/case/DAv",
-  "@type": "lexicog:Verbal-rootEntry",
-  "ontolex:canonicalForm": {
-    "@type": "ontolex:Form",
-    "ontolex:writtenRep": "DAv",
-    "ontolex:gender": "cl."
-  },
-  "csl:phenomenon": [
-    "hedge",
-    "root",
-    "tri-dict",
-    "pwg-rich",
-    "pwk-abridged",
-    "homophone"
-  ],
-  "frac:attestation": {
-    "@type": "frac:Attestation",
-    "frac:value": "L.",
-    "csl:evidenceType": "generic-lexicographer-hedge"
-  }
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv",
+  "@graph": [
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv",
+      "@type": [
+        "ontolex:LexicalEntry",
+        "lexicog:Entry"
+      ],
+      "ontolex:canonicalForm": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#form-canonical"
+      },
+      "ontolex:sense": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#sense-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#sense-2"
+        }
+      ],
+      "frac:attestation": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-6"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-7"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-8"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-9"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-10"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-6"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-7"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-8"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-9"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-10"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-11"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-12"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-13"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-14"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-15"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-16"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-17"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-18"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-19"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-20"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-21"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-22"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-23"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-24"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-25"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-26"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-27"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-28"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-29"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-30"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-31"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-32"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-33"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-34"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-35"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-36"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-37"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-38"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-39"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-40"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-6"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-7"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-8"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-9"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-10"
+        }
+      ],
+      "csl:sourceRecord": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+        }
+      ],
+      "csl:caseId": "mw-pwg-pwk:DAv",
+      "csl:key": "DAv",
+      "csl:entryType": "verbal-root",
+      "csl:phenomenon": [
+        "hedge",
+        "root",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "homophone"
+      ],
+      "csl:profileVersion": "ontolex-frac-profile-v0.1",
+      "csl:reviewStatus": "full-50-machine-review",
+      "csl:validationScope": "full-50-ontolex-shacl-profile"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#form-canonical",
+      "@type": "ontolex:Form",
+      "ontolex:writtenRep": {
+        "@value": "DAv",
+        "@language": "sa-Latn-x-SLP1"
+      },
+      "csl:grammar": "cl.",
+      "csl:verbClass": "1P,1Ā"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#sense-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "skos:definition": {
+        "@value": "rub one's self with, rub into one's own person)",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#sense-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "skos:definition": {
+        "@value": "be washed",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "csl:recordNumber": "101170",
+      "csl:lineNumber": 339074,
+      "csl:pageColumn": "516,1",
+      "rdf:value": "<L>101170<pc>516,1<k1>DAv<k2>DAv<h>2<e>1\n<hom>2.</hom> <s>DAv</s> ¦ <ab>cl.</ab> 1. <ab>P.</ab> <ab>Ā.</ab> <s>DAvati</s>, <s>˚te</s> (<ab>pf.</ab> <s>daDAva</s>, <ls>Bhaṭṭ.</ls>; <ab>aor.</ab> <s>-aDAvizwa</s>, <ls>RV. ix, 70, 8</ls>; <ab>ind.p.</ab> <s>DOtvA</s>, <ls>Prab. iv, 23</ls> [<ab>v.l.</ab> <s>DUtvA</s>] and <s>-DAvya</s>, <ls>Kauś.</ls>)\n<div n=\"to\"/>to rinse, cleanse, wash, purify, polish, make bright (<ab>Ā.</ab> also to rub one's self with, rub into one's own person), <ls>RV.</ls> &c. &c.:\n<div n=\"vp\"/><ab>Pass.</ab> <s>DAvyate</s> (<ab>pf.</ab> 3. <ab>pl.</ab> <s>-daDAvire</s>), <ls>Śiś.</ls> :\n<div n=\"vp\"/><ab>Caus.</ab> <s>DAvayati</s>, <s>˚te</s>, to cleanse, wash, <ls>Br.</ls>; <ls>Mn.</ls>; <ls>MBh.</ls> &c.;\n<div n=\"vp\"/> cause to be washed, <ls>L.</ls> :\n<div n=\"vp\"/><ab>Desid.</ab> <s>diDAvizati</s>, <s>˚te</s>;\n<div n=\"vp\"/> <ab>Intens.</ab> <s>dADAvyate</s> <ab>Gr.</ab><info whitneyroots=\"DAv2,82\"/><info verb=\"genuineroot\" cp=\"1P,1Ā\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "csl:recordNumber": "36704",
+      "csl:lineNumber": 357002,
+      "csl:pageColumn": "3-0952",
+      "rdf:value": "<L>36704<pc>3-0952<k1>DAv<k2>DAv<h>1\n1. {#DAv#}¦ (<ab>vgl.</ab> {#Dav, Danv), DA/vati#} und {#˚te#} (seltener)\n<ls>DHĀTUP. 15,92</ls> ({#gatO#}).\n<ls>P. 7,3,78</ls> ({#DO#}).\n<div n=\"1\"> 1) {%rinnen, hervorströmen, rinnen nach, in%}\n<ls>NIR. 13,6.</ls> {#tara\\tsa ma\\ndI DA^vati#}\n<ls>ṚV. 9,58,1.</ls> <ls n=\"ṚV. 9,\">21,1.</ls> {#a\\yaM sarA^Msi DAvati#}\n<ls n=\"ṚV. 9,\">54,2.</ls> <ls n=\"ṚV.\">6,17,4.</ls> {#retaH siktamaDAvat#}\n<ls>AIT. BR. 3,33.</ls> {#ApaH#}\n<ls>KĀṬH. 23,6. 8.</ls>\n<ls>AV. 10,6,14.</ls> {#gaNgA yatra saricCrezWA maDye DAvati#}\n<ls>HARIV. 14516.</ls> {#ASukArI DAvatyamBasi tElavat#}\n<ls>SUŚR. 1,247,13.</ls> {#DAvadDukkAraDArAbaDirita#} <ab>Inschr.</ab> in\n<ls>Journ. of the Am. Or. S. 7,9, Śl. 30.</ls> {#tuBya^M DAvanti De\\nava^H#} {%rinnen%} so <ab>v. a.</ab> {%geben Flüssigkeit, Milch%}\n<ls>ṚV. 9,66,6.</ls> In der <ab>folg.</ab> Stelle <ab>Bed.</ab> 1 und 2: {#eza su^vA\\naH pari\\ soma^H pa\\vitre\\ sargo\\ na sf\\zwo a^daDAva\\darvA^#}\n<ls>ṚV. 9,87,7.</ls>\n<div n=\"1\">— 2) {%rennen, laufen, umherlaufen; davonlaufen; zulaufen auf, rennen gegen%}: {#yadDAva^si triyoja\\nam#}\n<ls>AV. 6,131,3.</ls> {#Ajim#} {%einen Wettlauf anstellen%}\n[Page3-0953]\n<ls>AIT. BR. 4,8.</ls>\n<ls>ŚAT. BR. 5,1,4,1.</ls> {#yaTA parAYcaM DAvantamanulipseta#}\n<ls n=\"ŚAT. BR.\">3,2,1,36.</ls> {#na sarvaM javaM DAvati#}\n<ls>ŚĀṄKH. BR. 18,1.</ls>\n<ls>VS. 16,20.</ls> {#mf\\gaH sf\\tiM yati\\ DAvA\\daju^zwAm#}\n<ls>AV. 10,3,6.</ls> {#yasyA^gniho\\tre^ 'DiSri^te\\ SvAnta\\rA DAva^ti#}\n<ls>TBR. 1,4,3,6.</ls>\n<ls>ĀŚV. GṚHY. 3,9.</ls> {#DAva^dBirhU\\yate\\ yaSca^ ji\\gyuBi^H#} {%fliehend%}\n<ls>ṚV. 1,101,6.</ls>\n<ls>AV. 5,20,5.</ls> <ls n=\"AV. 5,\">21,2.</ls> <ls n=\"AV.\">8,8,19.</ls>\n<ls>KATHOP. 6,3.</ls> <ls>AIT. UP. 2,8.</ls> — {#DAvanbalADiko yaH syAt#} {%wer schneller laufen sollte%}\n<ls>KATHĀS. 3,51.</ls> {#DAvantyamI — raTyAH#}\n<ls>ŚĀK. 8.</ls>\n<ls>SĀH. D. 11,22.</ls> <ls n=\"SĀH. D.\">13,4.</ls> {#DAvatKura#}\n<ls>PRAB. 79,6.</ls> {#rAjA stenena gantavyo muktakeSena DAvatA#}\n<ls>M. 8,314.</ls> {#itaScetaSca DAvati#}\n<ls>MBH. 3,2380.</ls>\n<ls>HIT. I,136.</ls> {#unmattAviva DAvataH#}\n<ls>SĀV. 6,5.</ls>\n<ls>R. GORR. 2,62,22.</ls> <ls n=\"R. GORR.\">3,50,11.</ls> <ls n=\"R. GORR.\">4,47,15.</ls>\n<ls>BHARTṚ. 3,45.</ls> {#divi DAvati BUtaBedaH#}\n<ls>BHĀG. P. 3,11,15.</ls>\n<ls>RĀJA-TAR. 5,409.</ls> {#paScAdDAvaMstu DAvataH#} {%hinterherlaufend%}\n<ls>M. 2,196.</ls>\n<ls>HIT. 14,9.</ls> {#DAvitvA#}\n<ls>KATHĀS. 18,37.</ls> <ls n=\"KATHĀS. 18,\">282.</ls> {#aDAvIccArisaMmuKam#}\n<ls>BHAṬṬ. 15,67.</ls> {#vanagulmAMSca DAvantaH#} {%laufend in%}\n<ls>MBH. 3,2543.</ls> {#yaTA DAvati gOrvatsaM sravantI vatsalA payaH#} {%nachlaufen%}\n<ls n=\"MBH.\">13,3132.</ls> {#buBukzayA pIqyamAno vizayAneva DAvati#}\n<ls n=\"MBH.\">14,681.</ls> {#Aruhya Saktidevo 'SvamaDAvatsUkaraM prati#} {%sprengen, reiten%}\n<ls>KATHĀS. 26,172.</ls> {#aMsapfzWe 'Ta DAvantaM karam#} {%die hingleitende Hand%}\n<ls>RĀJA-TAR. 4,425.</ls> {#kAlasya cAvyaktagateryo 'ntarDAvati jantuzu#}\n<ls>BHĀG. P. 3,32,37.</ls> {#adyApi DAvati manaH#}\n<ls>CAURAP. 37.</ls> {#praBURAM hi viBUtyanDA DAvatyavizaye matiH#}\n<ls>KATHĀS. 17,138.</ls> {#gacCati puraH SarIraM DAvati paScAdasaMstutaM cetaH#}\n<ls>ŚĀK. 33.</ls> {#DarmasyADarmamudvfttaM nihantuM DAvataH#}\n<ls>RĀJA-TAR. 6,61.</ls> <ab>med.</ab>: {#di\\vaspf\\zWe DAva^mAnaM supa\\rRam#}\n<ls>AV. 13,2,37.</ls> {#ca\\ndramA^ a\\psva1^\\ntarA su^pa\\rRo DA^vate di\\vi#}\n<ls>ṚV. 1,105,1.</ls> {#DU\\mena^ DAvate di\\vi#}\n<ls n=\"ṚV.\">6,48,6.</ls> <ls>VS. 20,40.</ls> {#satataM DAvamAnaH#}\n<ls>MBH. 3,12929.</ls> {#nftyate kUjate cEva DAvate calate taTA#}\n<ls>VET. 30,15.</ls>\n<ls>BHĀG. P. 4,11,20.</ls> <ls n=\"BHĀG. P.\">5,26,15.</ls> {#tridaSAMScApyaDAvanta#} {%losrennen auf%}\n<ls>MBH. 3,8854.</ls>\n<ls>R. 6,13,27.</ls> {#DAvita#} {%rennend, laufend%}: {#evamastviti tO mUQO DAvitO#} {%fingen an zu laufen%}\n<ls>KATHĀS. 3,52.</ls>\n<div n=\"p\">— <ab>caus.</ab>\n<div n=\"1\"> 1) {%laufen lassen, zum Laufen antreiben%}: {#yadi KalInaM muKe prakzipyAhaM tava pfzWe samAruhya tvAM DAvayAmi . DAvitastu yadyaSvavadDezase#}\n<ls>PAÑCAT. 223,12.</ls>\n<div n=\"1\">— 2) {%fahren, sich fahren lassen%}: {#vAhanena#}\n<ls>ŚAT. BR. 1,8,2,9.</ls> {#aDvAnam#}\n<ls>PAÑCAV. BR. 6,3,15. 16,13,11.</ls> {#DAvayanbrAhmakumAraM raTena vyacCinat#}\n<ls n=\"PAÑCAV. BR.\">13,3,12.</ls> <ls>ŚAT. BR. 2,1,1,5.</ls> <ls n=\"ŚAT. BR.\">10,3,5,2.</ls> <ls n=\"ŚAT. BR.\">11,4,1,1.</ls> <ls n=\"ŚAT. BR. 11,\">6,2,1.</ls> <ls n=\"ŚAT. BR.\">12,4,1,10.</ls> Hierher vielleicht auch\n<ls>ṚV. 10,146,2.</ls> In der Stelle {#devakIstana DAvayantI#}\n<ls>Z. d. d. m. G. 6,93</ls> ist wohl {#˚stanaM DayantIm#} zu lesen.\n<div n=\"p\">— {#ati#} {%hinrinnen über, vorüberlaufen%}: {#(somaH) a\\ti hvarA^Msi DAvati#}\n<ls>ṚV. 9,3,2.</ls>\n<ls>AV. 5,8,4.</ls>\n<div n=\"p\">— {#anu#}\n<div n=\"1\"> 1) {%zufliessen, durchströmen%}: {#anveka^M DAvasi pU\\yamA^naH#}\n<ls>ṚV. 9,97,55.</ls> {#SarIram#}\n<ls>SUŚR. 1,43,8. 44,11.</ls> {#dozaM dozaH#}\n<ls n=\"SUŚR.\">83,4.</ls> {#vAyuH#}\n<ls n=\"SUŚR.\">328,16.</ls> {%durchdringen, sich verbreiten durch, über%}: {#kaccitte mantrito mantro na rAzwramanuDAvati#} (<ab>vgl.</ab> <ab>u.</ab> {#pari#} 2.\n) so <ab>v. a.</ab> {%im ganzen Reiche bekannt werden%}\n<ls>R. GORR. 2,109,13.</ls>\n<div n=\"1\">— 2) {%nachlaufen, verfolgen%} (in freundlicher oder feindlicher Absicht): {#a\\mitrA\\nanu^ DAvata#}\n<ls>AV. 11,10,1.</ls> <ls n=\"AV.\">5,21,10.</ls> <ls n=\"AV.\">20,136,11.</ls>\n<ls>ŚAT. BR. 2,3,4,11.</ls>\n<ls>MBH. 3,13178.</ls> <ls n=\"MBH.\">4,1260.</ls> {#vatsalatvAdyaTA DenuH svaputramanuDAvati#}\n<ls>R. GORR. 2,25,8.</ls> <ls n=\"R. GORR.\">3,51,27.</ls> <ls n=\"R. GORR. 3,\">58,39.</ls> <ls>KATHĀS. 13,28.</ls> {#hayArohAH sahasraDA . anvaDAvan#}\n<ls n=\"KATHĀS.\">18,93.</ls> <ls>BHĀG. P. 3,31,36.</ls> <ls n=\"BHĀG. P.\">4,11,20.</ls> <ls>DAŚAK.</ls> in <ls>BENF. Chr. 200,11.</ls> {#avijYAya PalaM yo hi karma tvevAnuDAvati#} {%nachgehen%}\n<ls>DAŚ. 1,8.</ls> <ab>med.</ab>: {#anvaDAvata pARqyeSaM jyotsneva rajanIkaram#}\n<ls>BHĀG. P. 4,28,34.</ls>\n<div n=\"1\">— 3) {%herbeieilen zu, Jmd zu Hülfe eilen%}\n<ls>MBH. 1,7095.</ls> {#mAmiha vane grasyamAnAm — graheRAnena vijane kimarTaM nAnuDAvasi#}\n<ls n=\"MBH.\">3,2384.</ls>\n<div n=\"v\">— <ab>Vgl.</ab> {#anuDAvana#}\n<ls n=\"MBH. 3,\">1.</ls>\n<div n=\"p\">— {#samanu#} {%nachlaufen, verfolgen%}: {#(DanaMjayam) samanvaDAvan#} (so ist zu\n[Page3-0954]\nlesen)\n<ls>MBH. 8,4086.</ls>\n<div n=\"p\">— {#apa#}\n<div n=\"1\"> 1) {%weglaufen%}: {#apa^ DAvatAmartyA\\ martyA\\nmA sa^caDvam#}\n<ls>AV. 4,37,12.</ls>\n<ls>ŚAT. BR. 4,1,1,26.</ls>\n<div n=\"1\">— 2) {%abgehen von einer früheren Aussage, Etwas aussagen was mit einer früheren Aussage nicht übereinstimmt%}: {#apadiSyApadeSyaM ca punaryastvapaDAvati#}\n<ls>M. 8,54.</ls>\n<div n=\"p\">— {#aBi#} {%zufliessen; herbeilaufen, zulaufen auf, hineilen zu, losrennen auf%} (in freundlicher oder feindlicher Absicht): {#(vfzA) a\\Bi droRA^ni DAvati#}\n<ls>ṚV. 9,28,4.</ls> <ls n=\"ṚV. 9,\">37,6.</ls> <ls n=\"ṚV. 9,\">60,3.</ls> {#kAnteva kftasaMketA samudramaBiDAvati (nadI)#}\n<ls>R. 4,41,24.</ls> {%rasch entgegengehen%}\n<ls>PĀR. GṚHY. 2,8.</ls> {#grAmaGAte hitABaNge paTi mozABidarSane . Saktito nABiDAvanto nirvAsyAH#}\n<ls>M. 9,274.</ls>\n<ls>DRAUP. 6,10. 27. 8,55.</ls> {#pradIpya yaH pradIptAgniM prAkciraM nABiDAvati . BasmApi na sa vindeta SizwaM kva ca na#}\n<ls>MBH. 2,2130.</ls> <ls n=\"MBH.\">3,427.</ls> <ls n=\"MBH. 3,\">2609.</ls> <ls n=\"MBH.\">4,193.</ls> <ls n=\"MBH.\">6,76.</ls> <ls n=\"MBH.\">16,47.</ls>\n<ls>R. 1,55,6.</ls> <ls n=\"R.\">3,26,8</ls> <ls n=\"R.\">6,18,7.</ls>\n<ls>VARĀH. BṚH. S. 88,19.</ls>\n<ls>KATHĀS. 15,50.</ls> <ls n=\"KATHĀS.\">26,173.</ls> <ls n=\"KATHĀS. 26,\">244.</ls>\n<ls>BHĀG. P. 1,8,8.</ls> <ls n=\"BHĀG. P.\">3,18,16.</ls> {#marIcitoyaprAyAMstAn (vizayAn) evABiDAvati#}\n<ls n=\"BHĀG. P.\">5,14,10.</ls> <ls n=\"BHĀG. P. 5,\">24,2.</ls> <ls n=\"BHĀG. P.\">8,2,32.</ls> <ab>med.</ab> <ls>ARJ. 3,24.</ls> <ls>MBH. 16,225.</ls> <ls>R. 1,41,27.</ls> <ls n=\"R.\">2,40,42.</ls> <ls n=\"R. 2,\">100,27.</ls> <ls n=\"R.\">3,51,4.</ls> <ls n=\"R.\">6,18,7.</ls> <ls>BHAṬṬ. 6,41.</ls> — In der Stelle {#yatsa^Mga\\rama^Bi\\DAvA^mi#}\n<ls>AV. 6,119,3</ls> würde die Bedeutung {%entgegenhandeln%} passen oder ist <ab>viell.</ab> {#atiDAvAmi#} {%überschreiten, übertreten%} zu lesen?\n<div n=\"v\">— <ab>Vgl.</ab> {#aBiDAvaka#} .\n<div n=\"p\">— {#pratyaBi#} {%hineilen zu%}: {#kOtUhalAjjanOGasya saBAM pratyaBiDAvataH (prati)#} (könnte auch mit {#saBAM#} verbunden werden)\n<ls>R. GORR. 2,82,13.</ls>\n<div n=\"p\">— {#samaBi#} {%herbeieilen, losrennen auf, fliegen gegen%}\n<ls>MBH. 6,3119.</ls> <ls n=\"MBH. 6,\">5588.</ls>\n<ls>R. 3,32,36.</ls> <ls n=\"R.\">5,61,10.</ls> {#adya tURISayA vARA nirmuktA iva pannagAH . rAmaM samaBiDAvantu#}\n<ls n=\"R.\">6,34,23.</ls> <ab>med.</ab> <ls n=\"R. 6,\">19,23.</ls>\n<div n=\"p\">— {#ava#} {%herabrinnen, herabträufeln%}: {#yatte\\ gAtrA^da\\gninA^ pa\\cyamA^nAda\\Bi SUla\\M niha^tasyAva\\DAva^ti#}\n<ls>ṚV. 1,162,11.</ls> {#a\\do yada^va\\DAva^tyava\\tkamaDi\\ parva^tAt#}\n<ls>AV. 2,3,1.</ls>\n<div n=\"p\">— {#vyava#} {%auseinander laufen, sich von einander trennen%}: {#evaM BAryASca putrASca jYAtayaSca vasUni . sametya vyavaDAvanti#}\n<ls>R. 2,105,25.</ls> {%weglaufen von%}: {#vyavaDAvettatastUrRaM sasarpAcCaraRAdiva#}\n<ls>MBH. 12,10599.</ls>\n<div n=\"p\">— {#A#}\n<div n=\"1\"> 1) {%herbeirinnen%}: {#A ka\\laSe^zu DAvati#}\n<ls>ṚV. 9,17,4.</ls> <ls n=\"ṚV. 9,\">67,14.</ls>\n<div n=\"1\">— 2) {%Etwas%} (<ab>acc.</ab>) {%herbeiströmen%}: {#A na^H sutAsa indavaH punA\\nA DA^vatA ra\\yim#}\n<ls>ṚV. 9,106,9.</ls>\n<div n=\"1\">— 3) {%herbeilaufen, herbeieilen zu, heimkehren; losrennen auf%}: {#a\\smA~ acCA^ suma\\tirvA\\mA De\\nuri^va DAvatu#}\n<ls>ṚV. 8,22,4.</ls>\n<ls>LĀṬY. 5,12,16.</ls>\n<ls>ŚAT. BR. 1,1,4,12.</ls> {#sa\\rvata^stvA\\ diSa\\ A^ DAvantu#}\n<ls>VS. 6,36.</ls> {#ADAvattadasaMKyeyaM SuSuBe sarvato balam#}\n<ls>HARIV. 10497.</ls>\n<ls>R. 4,18,20.</ls> {#ADAvanto BawAnmfDe#}\n<ls>BHĀG. P. 8,10,39.</ls> <ab>med.</ab>: {#BayAdADAvamAnAH#}\n<ls>MBH. 3,2544.</ls>\n<div n=\"p\">— {#anvA#} {%nach Jmd herlaufen%}\n<ls>KĀṬH. 13,4.</ls>\n<div n=\"p\">— {#upA#} {%hinlaufen zu%}: {#jalakAmyyA . mfgatfzRAmupADAvet#}\n<ls>BHĀG. P. 7,13,28.</ls> — <ab>caus.</ab> {%hinfahren zu%}: {#nirUQaSirasamagnimupADAvayAM cakruH#}\n<ls>ŚAT. BR. 10,5,5,8.</ls>\n<div n=\"p\">— {#samA#} {%in Gesellschaft herbeilaufen%}: {#tato mfgAH samADAvanyatra tizWati keSavaH#}\n<ls>HARIV. 14566.</ls> {%heranlaufen%}: {#sadaSvavatsamADAvat#} (lies {#˚van) baBAze tadanantaram#}\n<ls>MBH. 5,2763.</ls>\n<div n=\"p\">— {#upa#} {%herzulaufen, hineilen zu; die Zuflucht nehmen zu, um Hülfe angehen%}: {#upaDAvantyAH karO cicCeda#}\n<ls>R. 1,28,16.</ls>\n<ls>TS. 2,1,1,1.</ls> {#kvacidAtapodaniBAnvizayAnupaDAvati#}\n<ls>BHĀG. P. 5,14,6.</ls> {#prARaprepsurupADAvadvanam#}\n<ls>MBH. 3,15748.</ls>\n<ls>HARIV. 12235.</ls> {#taM yadyupa vA DaveyuraBayaM vecCeran#}\n<ls>AIT. BR. 1,30.</ls>\n[Page3-0955]\n{#varuRaM rAjAnamupaDAva#}\n<ls n=\"AIT. BR.\">7,14.</ls> <ls n=\"AIT. BR. 7,\">16.</ls> <ls n=\"AIT. BR.\">8,10.</ls> <ls>ŚAT. BR. 1,6,2,7. fgg.</ls> <ls n=\"ŚAT. BR. 1,\">7,4,8.</ls> <ls n=\"ŚAT. BR.\">3,2,3,3.</ls> <ls>PAÑCAV. BR. 12,13,4.</ls> <ls>ŚĀṄKH. ŚR. 14,7,4.</ls> <ls>CHĀND. UP. 1,3,8. fgg.</ls> <ls>BHĀG. P. 4,7,38.</ls> <ls n=\"BHĀG. P. 4,\">8,74.</ls> <ls n=\"BHĀG. P.\">5,3,13.</ls> <ls n=\"BHĀG. P. 5,\">18,1.</ls> <ls n=\"BHĀG. P.\">8,1,11.</ls> — <ab>med.</ab> {%laufen, gleiten%}: {#viSve^zA\\M tmanA\\ SoBi^zWa\\mupe^va di\\vi DAva^mAnam#}\n<ls>ṚV. 8,3,21.</ls>\n<div n=\"p\">— {#samupa#} {%heranlaufen an%}: {#damayantI tu yaM haMsaM samupADAvadantike#}\n<ls>MBH. 3,2097.</ls>\n<div n=\"p\">— {#nis#}\n<div n=\"1\"> 1) {%hervorströmen, entspringen%}: {#sadAnIretyuttarAdgirernirDAvati#}\n<ls>ŚAT. BR. 1,4,1,14.</ls>\n<div n=\"1\">— 2) {%hinauslaufen, hinauseilen, entrinnen aus%}\n<ls>HARIV. 11020.</ls> {#yaccAsmAdBagavaMstrEDAtukAnnirDAvitA nirvARasaMjYino vayaM ca jarAjIrRAH#}\n<ls>SADDH. P. 4,6,a.</ls>\n<div n=\"p\">— {#parA#} {%weglaufen%}: {#parA\\ hI^ndra\\ DAva^si vf\\zAka^pe\\rati\\ vyaTi^H#}\n<ls>ṚV. 10,86,2.</ls>\n<div n=\"p\">— {#pari#}\n<div n=\"1\"> 1) {%umherfliessen, umherrinnen um, in%}\n<ls>MBH. 5,7367.</ls> {#indro\\ yatpa\\vitra^M pari\\DAva^si#}\n<ls>ṚV. 9,24,5.</ls> {#avyo\\ vAre\\ pari^ DAva\\ maDu^ pri\\yam#}\n<ls n=\"ṚV. 9,\">86,48.</ls> {#pari^ te\\ DArA^ su\\tasya^ DAvati#}\n<ls n=\"ṚV. 9,\">100,4.</ls> {#pari taM sarasvatI samantaM paryaDAvat#}\n<ls>AIT. BR. 2,19.</ls> {#kupitAnAM dozARAM SarIraM pariDAvatAm#}\n<ls>SUŚR. 1,91,5.</ls>\n<div n=\"1\">— 2) {%herumlaufen%}: {#pariDAvannaTa nala itaScetaSca#}\n<ls>MBH. 3,2350.</ls> <ls n=\"MBH. 3,\">2597.</ls> <ls n=\"MBH.\">16,278.</ls>\n<ls>HARIV. 16004.</ls>\n<ls>R. 2,33,19.</ls> <ls n=\"R. 2,\">61,10.</ls> <ls n=\"R. 2,\">91,60.</ls> <ls n=\"R.\">3,75,40.</ls>\n<ls>PAÑCAT. 62,23.</ls>\n<ls>BHĀG. P. 3,17,11.</ls> <ls n=\"BHĀG. P.\">5,14,8.</ls> <ab>med.</ab> <ls>MBH. 1,6197.</ls> <ls n=\"MBH.\">3,2374.</ls> <ls>R. 4,47,16.</ls> {#Aruhya yAnaM pariDAvatAM BavAn#} {%herumfahren%}\n<ls>MBH. 4,302.</ls> {#mfgayAm#} {%auf der Jagd herumlaufen, jagen%}; <ab>act.</ab>\n<ls>MBH. 1,4596.</ls> <ls n=\"MBH.\">3,12373.</ls>\n<ls>R. 5,30,8.</ls> {%herumlaufen um%} (<ab>acc.</ab>), {%sich um Jmd herum bewegen, umlaufen%}\n<ls>AV. 20,136,10.</ls> {#(SukraH) BuvanaM pariDAvati#}\n<ls>MBH. 1,2607.</ls> {#tAM narAH pariDAvantaH#}\n<ls n=\"MBH.\">4,246.</ls> {#DruvaM meruM ca pradakziRena pariDAvatA saha pariDAvamAnAnAm#}\n<ls>BHĀG. P. 5,22,2.</ls> <ab>med.</ab> auch\n<ls>MBH. 3,437.</ls> <ls n=\"MBH. 3,\">8692.</ls> <ls n=\"MBH.\">5,4027.</ls> <ls n=\"MBH.\">13,1958.</ls>\n<ls>HARIV. 2053.</ls>\n<ls>R. 4,31,25.</ls> {%herumlaufen in, durchlaufen%}: {#dvArakAM pariDAvati#}\n<ls>MBH. 16,57.</ls>\n<ls>R. 6,11,38.</ls> {#kaccitte mantrito mantro na rAzwraM pariDAvati#} (<ab>vgl.</ab> <ab>u.</ab> {#anu#} 1)\n<ls>MBH. 2,163.</ls> <ab>med.</ab> <ls n=\"MBH.\">13,4091.</ls> <ls>R. 3,50,13.</ls>\n<div n=\"1\">— 2) {%herbeilaufen%}: {#pariDAvizyati#}\n<ls>PAÑCAT. 146,15.</ls> {%nachlaufen%}: {#AkASena gacCatastAnBUtalasTo lubDakaH paryaDAvat#}\n<ls n=\"PAÑCAT.\">106,7.</ls> {#paSoH padavIM tadanucarAH pariDAvantaH#}\n<ls>BHĀG. P. 5,9,14.</ls> — <ab>caus.</ab> {%umringen, umzingeln%}: {#asInAdAya SaktISca BArgavaM paryaDAvayan#}\n<ls>MBH. 14,828.</ls>\n<div n=\"p\">— {#vipari#} {%herumlaufen%}\n<ls>R. 5,36,38.</ls> {#saMtizWata praharata tUrRaM vipariDAvata#}\n<ls>MBH. 3,15716.</ls> <ls n=\"MBH.\">7,4374.</ls> <ls n=\"MBH. 7,\">4984.</ls> {#raTErvipariDAvadBirgajEraSvESca#}\n<ls n=\"MBH. 7,\">4711.</ls> <ls n=\"MBH. 7,\">4207.</ls> <ls n=\"MBH.\">9,1508.</ls> {%herumlaufen in, auf, durchlaufen%}: {#DAtrA vihitaBakzyARi sarvaBUtAni medinIm . loke vipariDAvanti rakzitAni svakarmaBiH ..#}\n<ls>MBH. 12,10629.</ls> {#dEtyo vfzaBarUpeRa gozWAnvipariDAvati#}\n<ls>HARIV. 4105.</ls>\n<div n=\"p\">— {#pra#} {%hervorrinnen, fortrinnen; fortlaufen, sich aufmachen, sich auf den Weg machen%}: {#pra nU\\naM DA^vatA\\ pfTa^k#}\n<ls>ṚV. 8,89,7.</ls> {#teByo\\ maDu^ pra\\DAva^ti#}\n<ls n=\"ṚV.\">10,154,1.</ls> {#retaH#}\n<ls>ŚĀṄKH. ŚR. 3,8,27.</ls> {#udakasaMcayaH sarvataH praDAvati#}\n<ls>SUŚR. 1,81,9.</ls> {#gfhRIDvaM kiM praDAvata#}\n<ls>MBH. 3,2548.</ls>\n<ls>R. GORR. 1,55,21.</ls>\n<ls>BHĀG. P. 6,10,30.</ls> {#yadBayAnmftyuH praDAvati#}\n<ls n=\"BHĀG. P.\">8,2,32.</ls> {#drupadaH kOravAndfzwvA prADAvata samantataH#}\n<ls>MBH. 1,5457.</ls> {#na praDAvecca varzati#} {%auch laufe er nicht beim Regen%}\n<ls>M. 4,38.</ls> {#samudrapAraM yadi vA praDAvasi . taTApi teByo na vimokzamarhasi#} {%laufen zu%}\n<ls>MBH. 4,428.</ls> {#punarDAtrIM punargarBamojastasya praDAvati#}\n<ls>YĀJÑ. 3,82.</ls> {#mfgatfzRAM praDAvati#}\n<ls>BHĀG. P. 4,29,20.</ls> {#sA SrIrnItividAM veSma caYcalApi praDAvati#}\n<ls>HIT. IV,49.</ls> {#mano hi me dUrataraM praDAvati#} {%in weite Fernen sich begeben%}\n<ls>MBH. 3,16787.</ls> {#nIlotpalasamo ganDo yasyAH kroSAtpraDAvati#} {%sich verbreiten%}\n<ls n=\"MBH.\">1,6400.</ls> {#praDAvya#} {%losstürzend%}\n<ls>KATHĀS. 18,333.</ls> {%durchlaufen, durchdringen%}: {#na vAsTApanavikziptamannamagniH praDAvati#}\n<ls>SUŚR. 2,220,2.</ls> <ab>partic.</ab>\n[Page3-0956]\n{#praDAvita#} {%davongelaufen, der sich aufgemacht hat%}: {#tataH praBagnA sahasA mahAcamUH sA pARqavI tena narADipena . diSaScatasraH sahasA praDApitA#} (sic) {#gajendravegaM tamapArayantI#}\n<ls>MBH. 9,1074.</ls>\n<ls>R. 6,79,37.</ls> {#jagmuryaTAsTAnaM praDAvitAH#}\n<ls n=\"R.\">2,103,36.</ls> {#vanAntare toyamiti praDAvitAH (mfgAH)#}\n<ls>ṚT. 1,11.</ls> {#krudDAnaSvArohAnpraDAvitAn#}\n<ls>KATHĀS. 10,124.</ls>\n<ls>PAÑCAT. 105,20.</ls>\n<ls>VET. 14,2. 26,12.</ls>\n<ls>PRAB. 112,16.</ls>\n<ls>RĀJA-TAR. 1,144.</ls> <ls n=\"RĀJA-TAR.\">3,205.</ls> {#praDAvitamahaM dEvaM pOruzeRa nivartaye#}\n<ls>R. 2,23,21.</ls> — <ab>caus.</ab> {%wegfahren, fahren%}: {#raTamAsTAya praDAvayAM cakAra#}\n<ls>ŚAT. BR. 11,6,2,4.</ls> <ls n=\"ŚAT. BR.\">2,4,1,6.</ls> {#pra ve\\yAt pra vA^ DAvayet#}\n<ls>TBR. 2,3,9,9.</ls>\n<div n=\"p\">— {#aDipra#} {%herbeieilen aus%} (<ab>abl.</ab>): {#a\\do gi\\riByo\\ aDi\\ yatpra\\DAva^si#}\n<ls>TBR. 2,5,6,4.</ls>\n<div n=\"p\">— {#anupra#} {%nachlaufen%}: {#mAmanu\\ pra te\\ mano^ va\\tsaM gOri^va DAvatu pa\\TA vAri^va DAvatu#}\n<ls>ṚV. 10,145,6.</ls> {#tamevAnupraDAvantaH#}\n<ls>HARIV. 13491.</ls> {#˚DAvita#}\n<ls>DAŚ.</ls> in <ls>BENF. Chr. 179,16.</ls> — <ab>caus.</ab> {%nachfahren%}\n<ls>ŚAT. BR. 11,6,2,5.</ls>\n<div n=\"p\">— {#vipra#} {%auseinanderlaufen%}: {#(senA) vipraDAvati vegena BImasyABihatA SarEH#}\n<ls>MBH. 8,3036.</ls>\n<div n=\"p\">— {#saMpra#} {%fortlaufen, forteilen%}: {#sEnyAnAM tvaratAM saMpraDAvatAm#}\n<ls>MBH. 5,5148.</ls> <ls n=\"MBH. 5,\">7631.</ls> {%fliehen%}\n<ls n=\"MBH.\">6,4291.</ls> <ls n=\"MBH. 6,\">5367.</ls> {#uBayatrApi Bagavanmano me saMpraDAvati#} {%hineilen zu, sich hingetrieben fühlen zu%}\n<ls>BHĀG. P. 3,7,15.</ls>\n<div n=\"p\">— {#prati#}\n<div n=\"1\"> 1) {%zurücklaufen%}: {#u\\duhya\\ prati^ DAvatAt#}\n<ls>AV. 19,25,1.</ls>\n<div n=\"1\">— 2) {%auf Jmd%} (<ab>acc.</ab>) {%losrennen%} (in feindlicher Absicht)\n<ls>R. 6,13,26.</ls> <ab>med.</ab> <ls n=\"R.\">5,56,9.</ls> <ls>MBH. 3,431.</ls>\n<div n=\"p\">— {#vi#}\n<div n=\"1\"> 1) {%hinrinnen durch, durchsickern%}: {#e\\za diva\\M vi DA^vati ti\\ro rajA^Msi\\ DAra^yA#}\n<ls>ṚV. 9,3,7.</ls> {#avyo\\ vAra^m#}\n<ls n=\"ṚV. 9,\">16,8.</ls> <ls n=\"ṚV. 9,\">28,1.</ls> <ls n=\"ṚV. 9,\">37,3.</ls> <ls n=\"ṚV. 9,\">74,9.</ls> {#romA^Ri#}\n<ls n=\"ṚV. 9,\">75,4.</ls> {#vi pa\\vitra^M DAva\\ DAra^yA#}\n<ls n=\"ṚV. 9,\">49,4.</ls> <ls n=\"ṚV. 9,\">14,4.</ls> <ls n=\"ṚV. 9,\">86,34.</ls> {%sich verlaufen%} (von Wasser): {#yaTodakaM durge vfzwaM parvatezu viDAvati#}\n<ls>KAṬHOP. 4,14.</ls>\n<div n=\"1\">— 2) {%auseinanderlaufen, zerstreut laufen, weglaufen%}\n<ls>ŚAT. BR. 4,5,10,1.</ls> {#sarvA diSo 'SvaraTAH somapravAkA viDAvanti#}\n<ls>PAÑCAV. BR. 16,13,10.</ls> {#yasasya dUtaH SvapAdviDAvasi#}\n<ls>TAITT. ĀR. 4,29,1.</ls> {#vi\\DAva^to va\\rAhU^n#}\n<ls>ṚV. 1,88,5.</ls>\n<ls>AV. 12,5,55.</ls> ({%zwischen) durch laufen%}: {#yadantarApaSca devayajanaM ca panTA viDAvet#}\n<ls>KĀṬH. 25,2.</ls> {%durchlaufen%}: {#AvAsamAdIpayatAM tIrTAni ca viDAvatAm#}\n<ls>R. GORR. 2,97,21.</ls> {#diSaH sarvA viDAvantam (kapim)#}\n<ls n=\"R. GORR.\">5,16,14.</ls> {%auf Jmd losrennen%}: {#vyaDAvizwa#} (<ab>v. l.</ab> {#vyabADizwa#})\n<ls>BHAṬṬ. 15,62.</ls>\n<div n=\"p\">— {#anuvi#} {%hineinrinnen, einsickern in%}: {#tasyemAM (pfTivIM) lohitamanuvyaDAvat#}\n<ls>KĀṬH. 31,8.</ls> {%durchströmen%}: {#anu\\ gAtrA\\ vi DA^vatu#}\n<ls>ṚV. 8,17,5.</ls> {%einem Andern nach auseinanderrinnen, — sich verlaufen%}: {#yaTodakaM durge vfzwaM parvatezu viDAvati evaM DarmAnpfTakpaSyaMstAnevAnuviDAvati#}\n<ls>KAṬHOP. 4,14.</ls>\n<div n=\"p\">— {#aBivi#} {%herbeieilen zu%}: {#duro\\giro^ a\\Byu1^\\gro vi DA^va#}\n<ls>ṚV. 10,29,3.</ls>\n<div n=\"p\">— {#parivi#} {%rings durchlaufen%}: {#pari\\ sapti\\rna vA^ja\\yuH pava^mAno\\ vi DA^vati#}\n<ls>ṚV. 9,103,6.</ls> {#tataH SAKAH praSAKASca skanDAMScottamaSAKinAm . SIGraM pariviDAvantaM yadA prAptuM na SaknuyuH ..#} {%von Ast zu Ast laufend%}\n<ls>R. 5,29,22.</ls>\n<div n=\"p\">— {#sam#} {%zusammenlaufen%}\n<ls>AV. 11,9,14.</ls> {#saMkrudDAH samaDAvanta#}\n<ls>MBH. 3,8879.</ls> {%losrennen auf%}: {#mattAviva mahAnAgAvanyo'nyaM samaDAvatAm#}\n<ls>HARIV. 5617.</ls> {%durchlaufen (?%})\n<ls>MBH. 12,10070.</ls>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "csl:recordNumber": "55351",
+      "csl:lineNumber": 227361,
+      "csl:pageColumn": "3-159-c",
+      "rdf:value": "<L>55351<pc>3-159-c<k1>DAv<k2>DAv<h>1\n<hom>1.</hom> √{#DAv#}¦, {#DA/vati, ˚te#} (selten)\n<div n=\"1\">— 1〉 {%rinnen, hervorströmen, rinnen nach oder in%} (<ab>Loc.</ab>), {%zu Jmd%} (<ab>Dat.</ab>).\n<div n=\"1\">— 2〉 {%rennen, laufen, umherlaufen, herbeilaufen%} (<ls n=\"Chr.\">133,4</ls>), {%zulaufen zu%} ({#˚aBimuKam#} <ls n=\"Chr.\">153,4</ls>), {%losrennen auf%} (<ab>Acc.</ab> oder {#˚saMmuKam#}), {%laufen in%} (<ab>Acc.</ab>), {%nachlaufen%} (mit <ab>Acc.</ab>). {#Aji/m#} {%einen Wettlauf anstellen,%} {#sarvajavam#} {%so schnell als möglich laufen%}. {#DAvitO#} in der <ab>Bed.</ab> des <ab>Verb.</ab> <ab>fin.</ab> {%fingen an zu laufen%}.\n<div n=\"1\">— 3〉 {%davonlaufen, fliehen%}.\n<div n=\"1\">— 4〉 {%sprengen, reiten, losreiten auf%} ({#prati#}).\n<div n=\"1\">— 5〉 {%schwimmen%} (vom Fisch).\n<div n=\"1\">— 6〉 von der Hand {%hingleiten über%} (<ab>Loc.</ab>).\n<div n=\"1\">— 7〉 {%laufen, nachlaufen%} (mit <ab>Loc.</ab>) von Unkörperlichem, <ab>insbes.</ab> vom Herzen.\n<div n=\"m\">— <ab>Caus.</ab> {#DAva/yati#}\n<div n=\"1\">— 1〉 {%laufen lassen, zum Laufen antreiben%}.\n<div n=\"1\">— 2〉 {%fahren, sich fahren lassen;%} mit <ab>Instr.</ab> des Vehikels und <ab>Acc.</ab> des Weges.\n<div n=\"1\">— 3〉 {%hüpfen, tanzen%} <ls>ṚV. 10,146,2</ls>.\n<div n=\"p\">— Mit {#ati#} {%hinrinnen über%} (<ab>Acc.</ab>) {%vorüberlaufen%}.\n<div n=\"p\">— Mit {#anu#}\n<div n=\"1\">— 1〉 {%zufliessen, durchströmen;%} mit <ab>Acc.</ab>\n<div n=\"1\">— 2〉 {%nachlaufen, verfolgen%} (in freundlicher oder feindlicher Absicht); mit <ab>Acc.</ab>\n<div n=\"1\">— 3〉 {%herbeieilen zu, Jmd%} (<ab>Acc.</ab>) {%zu Hülfe eilen%}.\n<div n=\"1\">— 4〉 einer Sache (<ab>Acc.</ab>) {%nachgehen%}.\n<div n=\"1\">— 5〉 {%sich verbreiten durch%} (<ab>Acc.</ab>), so <ab>v. a.</ab> {%allgemein bekannt werden in%}.\n<div n=\"m\">— <ab>Caus.</ab> {%durchfahren,%} mit <ab>Acc.</ab> <ls>AIT. ĀR. 148,15</ls>.\n<div n=\"p\">— Mit {#samanu#} {%nachlaufen, Jmd%} (<ab>Acc.</ab>) {%verfolgen%} <ls>MBH. 8,79,92</ls>.\n<div n=\"p\">— Mit {#apa#}\n<div n=\"1\">— 1〉 {%weglaufen%}.\n<div n=\"1\">— 2〉 {%abgehen von einer früheren [Page3-160-a] Aussage, hinterher etwas Anderes aussagen%}.\n<div n=\"p\">— Mit {#api#} {%hineinlaufen in%} (<ab>Acc.</ab>) <ls>VAITĀN.</ls>\n<div n=\"p\">— Mit {#aBi#}\n<div n=\"1\">— 1〉 {%hinströmen —, hinfliessen zu%} (<ab>Acc.</ab>).\n<div n=\"1\">— 2〉 {%herbeilaufen, zulaufen, hineilen zu, losrennen auf (in freundlicher oder feindlicher Absicht), beispringen, zu Hülfe eilen;%} mit <ab>Acc.</ab>\n<div n=\"1\">— 3〉 <ls>AV. 6,119,3</ls> viel leicht fehlerhaft für {#ati#} {%überschreiten, übertreten%}.\n<div n=\"p\">— Mit {#pratyaBi#} {%hineilen zu%} (<ab>Acc.</ab>).\n<div n=\"p\">— Mit {#samaBi#} {%herbeieilen, losrennen auf, fliegen gegen%} (<ab>Acc.</ab>).\n<div n=\"p\">— Mit {#ava#} {%herabrinnen, herabträufeln von%} (<ab>Abl.</ab>).\n<div n=\"p\">— Mit {#vyava#}\n<div n=\"1\">— 1〉 {%auseinander laufen, sich von einander trennen%}.\n<div n=\"1\">— 2〉 {%weglaufen von%} (<ab>Abl.</ab>).\n<div n=\"p\">— Mit {#A#}\n<div n=\"1\">— 1〉 {%herbeirinnen, hinströmen zu%} (<ab>Loc.</ab>).\n<div n=\"1\">— 2〉 {%herbeilaufen, herbeieilen zu, heimkehren; losrennen auf%} (<ab>Acc.</ab>).\n<div n=\"p\">— Mit {#anvA#} {%nach Jmd herlaufen%}.\n<div n=\"p\">— Mit {#upA#} {%hinlaufen zu%} (<ab>Acc.</ab>).\n<div n=\"m\">— <ab>Caus.</ab> {%hinfahren zu%} (<ab>Acc.</ab>).\n<div n=\"p\">— Mit {#samA#} {%zusammen herbeilaufen, heranlaufen%}.\n<div n=\"p\">— Mit {#upa#}\n<div n=\"1\">— 1〉 {%herzulaufen, hineilen —, die Zuflucht nehmen zu, um Hülfe angehen;%} mit <ab>Acc.</ab>\n<div n=\"1\">— 2〉 <ab>Med.</ab> {%laufen, gleiten%}.\n<div n=\"p\">— Mit {#samupa#} {%heranlaufen an%} (<ab>Acc.</ab>).\n<div n=\"p\">— Mit {#nis#}\n<div n=\"1\">— 1〉 {%hervorströmen —, entspringen aus%} (<ab>Abl.</ab>).\n<div n=\"1\">— 2〉 {%hinauslaufen, — eilen, entfahren%} (von Pfeilen), {%entrinnen aus%} (<ab>Abl.</ab>).\n<div n=\"p\">— Mit {#parA#} {%weglaufen%}.\n<div n=\"p\">— Mit {#pari#}\n<div n=\"1\">— 1〉 {%umherfliessen, umherrinnen um oder in, durchströmen%}.\n<div n=\"1\">— 2〉 {%herumlaufen%}. {#mfgayAm#} {%auf der Jagd,%} so <ab>v. a.</ab> {%jagen%}.\n<div n=\"1\">— 3〉 {%herumfahren%}.\n<div n=\"1\">— 4〉 {%herumlaufen —, sich herumbewegen um, umlaufen;%} mit <ab>Acc.</ab>\n<div n=\"1\">— 5〉 {%herumlaufen in, durchlaufen;%} in <ab>übertr.</ab> <ab>Bed.</ab> so <ab>v. a.</ab> {%allgemein bekannt werden in%} (<ab>Acc.</ab>).\n<div n=\"1\">— 6〉 {%herbeilaufen%}.\n<div n=\"1\">— 7〉 {%nachlaufen,%} mit <ab>Acc.</ab>\n<div n=\"m\">— <ab>Caus.</ab> {%umringen, umzingeln%}.\n<div n=\"p\">— Mit {#vipari#} {%herumlaufen, — in oder auf, durchlaufen%}.\n<div n=\"p\">— Mit {#pra#}\n<div n=\"1\">— 1〉 {%hervorrinnen, fortrinnen%}.\n<div n=\"1\">— 2〉 {%fortlaufen, sich aufmachen, sich auf den Weg machen%}. {#praDAvita#} {%davongelaufen, der sich auf den Weg gemacht hat%}.\n<div n=\"1\">— 3〉 {%losstürzen%}.\n<div n=\"1\">— 4〉 {%laufen%}.\n<div n=\"1\">— 5〉 {%laufen —, sich begeben zu%} (<ab>Acc.</ab>) <ls n=\"Chr.\">81,31</ls>. {#dUrataram#} {%in weite Fernen%} (vom Herzen).\n<div n=\"1\">— 6〉 {%sich verbreiten über, durchdringen%}. {#kroSAt#} {%einen%} <is>Krośa</is> {%weit sich verbreiten%} (von einem Geruch).\n<div n=\"m\">— <ab>Caus.</ab>\n<div n=\"1\">— 1〉 {%in die Flucht schlagen%}.\n<div n=\"1\">— 2〉 {%wegfahren, fahren%}.\n<div n=\"p\">— Mit {#aDipra#} {%herbeieilen aus%} (<ab>Abl.</ab>).\n<div n=\"p\">— Mit {#anupra#} {%nachlaufen,%} mit <ab>Acc.</ab> {#˚DAvita#} mit <ab>act.</ab> <ab>Bed.</ab>\n<div n=\"m\">— <ab>Caus.</ab> {%nachfahren%}.\n<div n=\"p\">— Mit {#vipra#} {%auseinanderlaufen%}.\n<div n=\"p\">— Mit {#saMpra#}\n<div n=\"1\">— 1〉 {%fortlaufen, forteilen, fliehen%}.\n<div n=\"1\">— 2〉 {%hineilen zu,%} so <ab>v. a.</ab> {%sich hingezogen fühlen zu%} (<ab>Loc.</ab>).\n<div n=\"p\">— Mit {#prati#}\n<div n=\"1\">— 1〉 {%zurücklaufen%}.\n<div n=\"1\">— 2〉 {%auf Jmd%} (<ab>Acc.</ab>) {%losrennen%} (in feindlicher Absicht).\n<div n=\"p\">— Mit {#vi#}\n<div n=\"1\">— 1〉 {%hinrinnen durch, durchsickern, sich verlaufen%} (vom Wasser) {%in%} (<ab>Loc.</ab>).\n<div n=\"1\">— 2〉 {%auseinanderlaufen, zerstreut [Page3-160-b] laufen, weglaufen%}. {#viDAvita#} {%auseinandergelaufen%} <ls>MBH. 9,20,9</ls>.\n<div n=\"1\">— 3〉 {%laufen von einem Wege,%} so <ab>v. a.</ab> {%gehen zwischen%} ({#antar#}).\n<div n=\"1\">— 4〉 {%durchlaufen%}.\n<div n=\"1\">— 5〉 {%auf Jmd losrennen%}.\n<div n=\"p\">— Mit {#anuvi#}\n<div n=\"1\">— 1〉 {%hineinrinnen —, einsickern in%} (<ab>Acc.</ab>).\n<div n=\"1\">— 2〉 {%durchströmen%}.\n<div n=\"1\">— 3〉 {%nach einem Andern%} (<ab>Acc.</ab>) {%auseinanderrinnen, — sich verlaufen%}.\n<div n=\"p\">— Mit {#aBivi#} {%herbeieilen zu%} (<ab>Acc.</ab>).\n<div n=\"p\">— Mit {#parivi#} {%rings durchlaufen%}. {#SAKAs#} {%von Ast zu Ast laufen%}.\n<div n=\"p\">— Mit {#sam#}\n<div n=\"1\">— 1〉 {%zusammenlaufen%}.\n<div n=\"1\">— 2〉 {%losrennen auf%}.\n<div n=\"1\">— 3〉 {%hinlaufen zu,%} so <ab>v. a.</ab> {%gelangen zu%} (<ab>Acc.</ab>) <ls>MBH. 12,280,45</ls>.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "Bhaṭṭ.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "RV. ix, 70, 8",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "Prab. iv, 23",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-4",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "Kauś.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-5",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "RV.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "Śiś.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-7",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "Br.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-8",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "Mn.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-9",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-mw-10",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "L.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-mw"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "generic-lexicographer-hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "DHĀTUP. 15,92",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "P. 7,3,78",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "NIR. 13,6.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-4",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "ṚV. 9,58,1.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-5",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "21,1.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "ṚV. 9,"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "54,2.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "ṚV. 9,"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-7",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "6,17,4.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "ṚV."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-8",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "AIT. BR. 3,33.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-9",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "KĀṬH. 23,6. 8.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-10",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "AV. 10,6,14.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-11",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "HARIV. 14516.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-12",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "SUŚR. 1,247,13.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-13",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "Journ. of the Am. Or. S. 7,9, Śl. 30.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-14",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "ṚV. 9,66,6.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-15",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "ṚV. 9,87,7.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-16",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "AV. 6,131,3.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-17",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "AIT. BR. 4,8.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-18",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "ŚAT. BR. 5,1,4,1.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-19",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "3,2,1,36.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "ŚAT. BR."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-20",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "ŚĀṄKH. BR. 18,1.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-21",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "VS. 16,20.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-22",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "AV. 10,3,6.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-23",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "TBR. 1,4,3,6.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-24",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "ĀŚV. GṚHY. 3,9.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-25",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "ṚV. 1,101,6.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-26",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "AV. 5,20,5.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-27",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "21,2.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "AV. 5,"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-28",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "8,8,19.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "AV."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-29",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "KATHOP. 6,3.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-30",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "AIT. UP. 2,8.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-31",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "KATHĀS. 3,51.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-32",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "ŚĀK. 8.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-33",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "SĀH. D. 11,22.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-34",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "13,4.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "SĀH. D."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-35",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "PRAB. 79,6.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-36",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "M. 8,314.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-37",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "MBH. 3,2380.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-38",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "HIT. I,136.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-39",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "SĀV. 6,5.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwg-40",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "R. GORR. 2,62,22.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "133,4",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "Chr."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "153,4",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "Chr."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "ṚV. 10,146,2",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-4",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "AIT. ĀR. 148,15",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-5",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "MBH. 8,79,92",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "VAITĀN.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-7",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "AV. 6,119,3",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-8",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "81,31",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation",
+      "csl:inheritedSiglum": "Chr."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-9",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "MBH. 9,20,9",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#attestation-pwk-10",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "frac:evidence": "MBH. 12,280,45",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv#root-relation",
+      "@type": "csl:RootRelation",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-atlas/id/case/mw-pwg-pwk%3ADAv"
+      },
+      "csl:whitneyRoot": "DAv2,82",
+      "csl:modelingNote": "Root is modeled as lexical entry plus derivational/grammatical relation."
+    }
+  ]
 }

@@ -8,12 +8,12 @@ title: SKD — Śabdakalpadrumaḥ (1822–1858)
 
 ## 1. Overview
 
-[*Śabdakalpadrumaḥ*](https://en.wikipedia.org/wiki/Shabdakalpadruma) ("the wishing-tree of words"), an encyclopedic Sanskrit-Sanskrit dictionary in five volumes compiled by Rājā Rādhākānta Deva and his circle, published Calcutta 1822–1858. SKD is the **first indigenous-Indian large-scale lexicon** in the modern Sanskrit-philological tradition: encyclopedic in scope, monolingual in language (Sanskrit headword + Sanskrit definitions), and rich with citations from literary works and prior *kośa* sources via **inline `iti <source>` prose**. Within CDSL, SKD marks the **genre boundary** of the present framework: where MW, PWG, PWK, AP, BEN, CAE, WIL are *structured bilingual* dictionaries amenable to the 18-block detector, SKD and [VCP](vcp) are *encyclopedic Sanskrit-Sanskrit* works whose source-discipline lives in prose, not in tags. The block apparatus developed for MW does not apply.
+[*Śabdakalpadrumaḥ*](https://en.wikipedia.org/wiki/Shabdakalpadruma) ("the wishing-tree of words"), an encyclopedic Sanskrit-Sanskrit dictionary in seven volumes compiled by Rājā Rādhākānta Deva and his circle, published Calcutta 1822–1858. SKD is the **first indigenous-Indian large-scale lexicon** in the modern Sanskrit-philological tradition: encyclopedic in scope, monolingual in language (Sanskrit headword + Sanskrit definitions), and rich with citations from literary works and prior *kośa* sources via **inline `iti <source>` prose**. Within CDSL, SKD marks the **genre boundary** of the present framework: where MW, PWG, PWK, AP, BEN, CAE, WIL are *structured bilingual* dictionaries amenable to the 18-block detector, SKD and [VCP](vcp) are *encyclopedic Sanskrit-Sanskrit* works whose source-discipline lives in prose, not in tags. The block apparatus developed for MW does not apply.
 
 | | |
 |---|---|
 | **Records** | 42,531 |
-| **Volumes** | 5 (multi-volume Calcutta print) |
+| **Volumes** | 7 (multi-volume Calcutta print) |
 | **Year** | 1822–1858 |
 | **Editor** | Rājā Rādhākānta Deva and circle |
 | **Publisher** | Various Calcutta presses |
@@ -78,7 +78,7 @@ A typical SKD entry quotes Manu, Amarakośa, *Bhagavad-Gītā*, *Yajurveda*, *L�
 
 ## 4. How indigenous-kosha citation differs from European source-tagging
 
-The European tradition (PWG, MW, etc.) treats every source citation as a *separable structural slot*: a `<ls>` tag occupies a fixed position in the entry, machine-distinguishable from the gloss it accompanies. The indigenous *kośa* tradition (SKD, VCP, and the prior Amarakośa / Medinīkośa / Hemacandra works SKD synthesises) treats every source citation as a *prose feature* of the gloss itself — the source is *part of what the gloss says*, not a tagged annotation about the gloss. This is not a technical limitation of the medium (SKD was printed in 5 large volumes with full typographic apparatus); it is a *design choice* rooted in the encyclopedic-kosha tradition's preference for woven, paragraph-length, citation-rich definitions over the European tradition's slot-and-block compactness.
+The European tradition (PWG, MW, etc.) treats every source citation as a *separable structural slot*: a `<ls>` tag occupies a fixed position in the entry, machine-distinguishable from the gloss it accompanies. The indigenous *kośa* tradition (SKD, VCP, and the prior Amarakośa / Medinīkośa / Hemacandra works SKD synthesises) treats every source citation as a *prose feature* of the gloss itself — the source is *part of what the gloss says*, not a tagged annotation about the gloss. This is not a technical limitation of the medium (SKD was printed in 7 large volumes with full typographic apparatus); it is a *design choice* rooted in the encyclopedic-kosha tradition's preference for woven, paragraph-length, citation-rich definitions over the European tradition's slot-and-block compactness.
 
 The implication for the present framework: the 18-block apparatus is **not a universal microanalysis tool**. It is a tool calibrated to structured bilingual dictionaries — the 7 CDSL works that MW, PWG, PWK, AP, BEN, CAE, WIL belong to. SKD and VCP require a *different* microanalysis tool, one that takes inline-`iti` as its citation unit and paragraph-prose-flow as its block unit. This work is not done in the present atlas; it would be a separate paper / future Phase-5 project.
 
@@ -107,8 +107,7 @@ PWG cites SKD as `<ls>ŚKDR.</ls>` 20,109 times — SKD's biggest impact on the 
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/SKD/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory (notes the absence of `<lex>` / `<ls>`)
 - **Source file**: [`csl-orig/v02/skd/skd.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py) (note: SKD output is the degenerate case — every column zero)
-- **Per-dict matrix JSON**: [`data/skd_blocks.json`](../data/skd_blocks.json) (per Sonnet S7 spec, should carry `{"applicable": false, "reason": "Sanskrit-Sanskrit lexicon; uses inline iti citation instead of tagged <ls>"}`)
-- **Cross-dict aggregate**: [`data/cross-dict.json`](../data/cross-dict.json)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes SKD metadata; SKD does not use tagged `<ls>` citation blocks)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/SKD/blob/master/LICENSE)
 
 ## See also (tools)

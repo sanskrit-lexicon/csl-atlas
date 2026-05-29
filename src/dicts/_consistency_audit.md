@@ -4,7 +4,7 @@ title: O9 — Cross-chapter consistency audit
 
 # O9 — Cross-chapter consistency audit (2026-05-28)
 
-Audit run after [O1–O8 chapter authoring](#) completed all 9 atlas chapters. Three checks:
+Audit run after O1–O8 chapter authoring completed all 9 atlas chapters. Three checks:
 
 ## 1. §6 cross-references bidirectional consistency
 
@@ -74,4 +74,4 @@ The 9 atlas chapters are internally consistent. Patches applied in this audit pa
 2. [`src/dicts/cae.md`](cae) — added D19 citation to §7
 3. [`src/dicts/pwk.md`](pwk) — added D21 citation to §7
 
-Atlas is ready for the [O10 landing-page refresh](#).
+Atlas is ready for the O10 landing-page refresh.

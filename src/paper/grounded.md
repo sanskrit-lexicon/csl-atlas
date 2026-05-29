@@ -22,7 +22,7 @@ MW reuses a small **~6-block kernel** (F01, F02, F04, F10, F12, F17) across 286,
 
 ![Heatmap: 18 blocks × 14 article types](https://raw.githubusercontent.com/sanskrit-lexicon/MWS/docs-pass/papers/microanalysis/figures/heatmap-en.svg)
 
-> **Audit note.** A [cross-dictionary check](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT.md) shows the economy *shape* (small modal kernel + long tail) is **common to all single-volume CDSL dictionaries**, not unique to MW (modal blocks/entry: MW 5, PWG 4, PWK 3, AP 2, WIL 3, Benfey 3, Cappeller 3). The claim is therefore stated as the property *characteristic of* single-volume scholarly dictionaries that MW instantiates; multi-volume PWG is ~4× denser in citation apparatus per entry. See [PAPER.md §9.3](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#9-methodological-limitations).
+> **Audit note.** A [cross-dictionary check](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT.md) shows the economy *shape* (small modal kernel + long tail) is **common across the structured-bilingual CDSL dictionaries**, not unique to MW (modal blocks/entry: MW 5, PWG 4, PWK 3, AP 2, WIL 3, Benfey 3, Cappeller 3). This should not be reduced to a simple "single-volume vs multi-volume" claim: PWG, PWK, SKD, and VCP are all seven-volume works, yet PWG is tagged-citation dense, PWK is compacted, and SKD/VCP are genre-bound prose lexica. See [PAPER.md §9.3](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#9-methodological-limitations) and the [all-dictionary coverage tool](../tools/dictionary-coverage).
 
 ## See also
 

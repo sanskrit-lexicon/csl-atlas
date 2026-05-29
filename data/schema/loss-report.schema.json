@@ -21,6 +21,10 @@
       "claim": { "type": "string" },
       "mappedAs": { "type": "string" },
       "loss": { "type": "string" },
+      "failureClassification": {
+        "type": "string",
+        "enum": ["none", "cdsl-markup-gap", "model-vocabulary-gap", "print-compression"]
+      },
       "extensionNeeded": { "type": "boolean" },
       "reviewStatus": { "type": "string", "enum": ["machine", "reviewed", "published"] }
     },

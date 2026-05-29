@@ -108,8 +108,8 @@
   "dictionary": {
     "mw": "MW (Monier-Williams 1899)",
     "pwg": "PWG (Böhtlingk-Roth 1855–75)",
-    "pw":  "PWK (Böhtlingk 1879–89)",
-    "ap":  "AP (Apte 1957)",
+    "pw": "PWK (Böhtlingk 1879–89)",
+    "ap": "AP (Apte 1957)",
     "wil": "WIL (Wilson 1832)",
     "skd": "SKD (Śabdakalpadruma 1822–58)",
     "vcp": "VCP (Vācaspatya 1873–84)"
@@ -145,12 +145,20 @@
     "loss-hints": "Подсказки о потере смысла",
     "machine-loss-reports": "Машинные отчеты о потере смысла",
     "source-records": "Исходные записи словарной статьи",
+    "review-slice": "Проверенный срез TEI/OntoLex",
+    "review-rank": "проверка",
     "links": {
       "neutral": "Нейтральная модель JSON",
-      "tei": "Шаблон TEI (.xml)",
-      "ontolex": "Шаблон OntoLex (.json)",
-      "loss": "Отчеты о потере JSON"
-    }
+      "tei": "Профиль TEI (.xml)",
+      "ontolex": "Профиль OntoLex/FrAC (.json)",
+      "loss": "Отчеты о потере JSON",
+      "rdf": "RDF Turtle (.ttl)",
+      "teiReview": "TEI review JSON",
+      "ontolexReview": "OntoLex/RDF review JSON"
+    },
+    "full-validation": "Полная машинная проверка 50 случаев",
+    "tei-status": "TEI ODD/profile",
+    "rdf-status": "OntoLex/RDF SHACL/profile"
   },
   "status": {
     "partial": "частичный",
@@ -159,7 +167,7 @@
   },
   "review": {
     "machine": "машинный",
-    "human-reviewed": "проверен человеком"
+    "reviewed": "проверен человеком"
   },
   "failure": {
     "model-vocabulary-gap": "пробел-в-словаре-модели",

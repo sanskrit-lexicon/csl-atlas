@@ -142,11 +142,19 @@
     "loss-hints": "Loss Hints",
     "machine-loss-reports": "Machine Loss Reports",
     "source-records": "Source Records",
+    "review-slice": "Validated TEI/OntoLex slice",
+    "review-rank": "review",
+    "full-validation": "Full 50-case machine validation",
+    "tei-status": "TEI ODD/profile",
+    "rdf-status": "OntoLex/RDF SHACL/profile",
     "links": {
       "neutral": "Neutral Model JSON",
-      "tei": "TEI Stub (.xml)",
-      "ontolex": "OntoLex Stub (.json)",
-      "loss": "Loss Reports JSON"
+      "tei": "TEI Profile (.xml)",
+      "ontolex": "OntoLex/FrAC Profile (.json)",
+      "rdf": "RDF Turtle (.ttl)",
+      "loss": "Loss Reports JSON",
+      "teiReview": "TEI Review JSON",
+      "ontolexReview": "OntoLex/RDF Review JSON"
     }
   },
   "status": {
@@ -156,7 +164,7 @@
   },
   "review": {
     "machine": "machine",
-    "human-reviewed": "human-reviewed"
+    "reviewed": "reviewed"
   },
   "failure": {
     "model-vocabulary-gap": "model-vocabulary-gap",

@@ -126,8 +126,7 @@ BEN occupies the **IE-comparative-philology position** in the European-Sanskrit-
 - **`DATA_DICTIONARY.md`** — tag inventory (BEN does not have a docs-pass branch as of 2026-05-27; tracked in Phase 4 wave 1 work)
 - **Source file**: [`csl-orig/v02/ben/ben.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
-- **Per-dict matrix JSON**: [`data/ben_blocks.json`](../data/ben_blocks.json)
-- **Cross-dict aggregate**: [`data/cross-dict.json`](../data/cross-dict.json)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes BEN block matrix data)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/BEN/blob/master/LICENSE)
 
 ## See also (tools)

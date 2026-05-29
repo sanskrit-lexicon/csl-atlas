@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="csl-tei-archival-profile-odd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CSL Atlas MW-PWG-PWK TEI Archival Profile ODD</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Project ODD for validating generated MW-PWG-PWK TEI archival profile files.</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change when="2026-05-29">Created for full 50-case machine review and profile validation.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <schemaSpec ident="csl-tei-archival-profile-v0.1" start="TEI">
+        <moduleRef key="tei"/>
+        <moduleRef key="header"/>
+        <moduleRef key="core"/>
+        <moduleRef key="textstructure"/>
+        <moduleRef key="dictionaries"/>
+        <moduleRef key="linking"/>
+        <moduleRef key="namesdates"/>
+        <moduleRef key="analysis"/>
+        <constraintSpec ident="csl-required-entry-shape" scheme="schematron">
+          <constraint>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:rule context="tei:TEI">
+                <sch:assert test="@xml:id">Every generated document has a stable case xml:id.</sch:assert>
+                <sch:assert test="tei:teiHeader">Every generated document has a teiHeader.</sch:assert>
+              </sch:rule>
+              <sch:rule context="tei:entry">
+                <sch:assert test="@xml:id">Each entry has a stable xml:id.</sch:assert>
+                <sch:assert test="tei:form/tei:orth[@notation='SLP1']">Each entry has an SLP1 orthographic form.</sch:assert>
+                <sch:assert test="count(tei:cit[@type='source-entry']) = 3">Each entry preserves MW, PWG, and PWK source records.</sch:assert>
+                <sch:assert test="tei:note[@type='profile-version'] = 'tei-archival-profile-v0.1'">Each entry declares the profile version.</sch:assert>
+                <sch:assert test="tei:note[@type='validation-scope'] = 'full-50-tei-odd-profile'">Each entry declares the full validation scope.</sch:assert>
+              </sch:rule>
+              <sch:rule context="tei:cit[@type='source-entry']">
+                <sch:assert test="@source">Each source-entry citation points to a source dictionary taxonomy id.</sch:assert>
+                <sch:assert test="tei:bibl/tei:idno[@type='L']">Each source-entry citation preserves the CDSL L number.</sch:assert>
+                <sch:assert test="tei:quote">Each source-entry citation preserves escaped raw CDSL text.</sch:assert>
+              </sch:rule>
+            </sch:pattern>
+          </constraint>
+        </constraintSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>

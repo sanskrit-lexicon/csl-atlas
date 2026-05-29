@@ -117,6 +117,9 @@ Sanskrit dictionaries are not edge cases to be normalized away. They reveal wher
 ## Minimum Submission Dataset
 
 - 50 generated hard cases.
-- 15 manually reviewed mappings.
+- 15 deterministic profile-validated review-slice mappings.
+- Full 50-case machine-reviewed TEI and OntoLex/FrAC outputs.
+- External validation report when the TEI/SHACL toolchain is available.
+- Human philological review status clearly separated from machine/profile validation.
 - 5 fully discussed paper cases.
 - Public archive of JSON, TEI, and OntoLex outputs.

@@ -1,8 +1,8 @@
 # csl-atlas — Atlas of the Cologne Digital Sanskrit Lexicons
 
-An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de/) — comparative microstructural analysis of nine Sanskrit dictionaries.
+An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de/) — comparative microstructural analysis of nine narrative Sanskrit-dictionary chapters, plus an all-dictionary coverage layer for every local CDSL v02 source dictionary.
 
-**Status:** scaffold (2026-05-23). Built locally by Claude during a 4-hour autonomous session. Awaiting [@gasyoun](https://github.com/gasyoun) review before push to `github.com/sanskrit-lexicon/csl-atlas`.
+**Status:** active public-atlas implementation. The main atlas chapters and interoperability pilot are reproducible from committed JSON plus local `csl-orig` source dictionaries.
 
 ---
 
@@ -10,38 +10,39 @@ An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de
 
 Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskrit-lexicon/MWS/tree/docs-pass/papers/microanalysis). Static + interactive. Two reader paths:
 
-- **Paper tour:** read along with each of the four framework papers ([Wiegand](src/papers/wiegand.md) · [Atkins-Rundell](src/papers/atkins-rundell.md) · [Hausmann](src/papers/hausmann.md) · [Grounded](src/papers/grounded.md))
-- **Tools:** explore standalone visualisations — [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md).
+- **Paper tour:** read the current atlas argument pages ([Grounded](src/paper/grounded.md) · [Triangulation](src/paper/triangulation.md) · [Appendices](src/paper/appendices.md)).
+- **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md), and [MW-PWG-PWK interoperability hard cases](src/tools/interoperability-hard-cases.md).
 
-URL structure (Decision 25): English at root, Russian under `/ru/`.
+Current URL structure:
 
 ```
 /                        landing (EN)
-/tools/heatmap           18×14 matrix explorer (EN)
-/tools/lineage-sankey    PWG→MW Sankey (EN)
-/papers/wiegand          Wiegand paper page (EN)
-/ru/                     landing (RU)
-/ru/tools/heatmap        Matrix explorer (RU)
-...
+/tools/dictionary-coverage
+/tools/matrix-explorer   18×8 block/type matrix explorer
+/tools/lineage-sankey    kosha → WIL/PWG/PWK/MW lineage Sankey
+/tools/interoperability-hard-cases
+/paper/grounded
+/paper/triangulation
+/dicts/mw
 ```
 
 ---
 
-## Coverage (Phase 4 atlas — 9 dicts)
+## Coverage (Phase 4 atlas — 9 narrative dicts + all-dictionary inventory)
 
-| Repo | Title | Date | Status |
-|---|---|---|---|
-| [MW](https://github.com/sanskrit-lexicon/MWS) | Monier-Williams Sanskrit-English Dictionary | 1899 | ✅ ready (this scaffold targets MW data) |
-| [PWG](https://github.com/sanskrit-lexicon/PWG) | Petersburg Sanskrit-Wörterbuch | 1855–75 | data ingested; chapter TODO |
-| [PWK](https://github.com/sanskrit-lexicon/PWK) | Petersburg *Kürzerer Fassung* | 1879–89 | data ingested; chapter TODO |
-| [AP](https://github.com/sanskrit-lexicon/AP) | Apte *Practical* Sanskrit-English | 1957 | data ingested; chapter TODO |
-| [WIL](https://github.com/sanskrit-lexicon/WIL) | Wilson Sanskrit-English | 1832 | data ingested; chapter TODO |
-| [SKD](https://github.com/sanskrit-lexicon/SKD) | *Śabdakalpadruma* (Sanskrit-Sanskrit) | 1822–58 | data ingested; chapter TODO |
-| [VCP](https://github.com/sanskrit-lexicon/vcp) | *Vācaspatya* (Sanskrit-Sanskrit) | 1873–84 | data ingested; chapter TODO |
-| [ARMH](https://github.com/sanskrit-lexicon/armh) | Halāyudha's *Abhidhānaratnamālā* | ~10th c. | data ingested; chapter TODO |
-| [ABCH](https://github.com/sanskrit-lexicon/abch) | Hemacandra's *Abhidhānacintāmaṇi* | ~12th c. | data ingested; chapter TODO |
+| Repo | Title | Date | Vols | Status |
+|---|---|---|---:|---|
+| [MW](https://github.com/sanskrit-lexicon/MWS) | Monier-Williams Sanskrit-English Dictionary | 1899 | 1 | chapter ready |
+| [PWG](https://github.com/sanskrit-lexicon/PWG) | Petersburg Sanskrit-Wörterbuch | 1855–75 | 7 | chapter ready |
+| [PWK](https://github.com/sanskrit-lexicon/PWK) | Petersburg *Kürzerer Fassung* | 1879–89 | 7 | chapter ready |
+| [AP](https://github.com/sanskrit-lexicon/AP) | Apte *Practical* Sanskrit-English | 1957 | 3 | chapter ready |
+| [WIL](https://github.com/sanskrit-lexicon/WIL) | Wilson Sanskrit-English | 1832 | 1 | chapter ready |
+| [SKD](https://github.com/sanskrit-lexicon/SKD) | *Śabdakalpadruma* (Sanskrit-Sanskrit) | 1822–58 | 7 | chapter ready |
+| [VCP](https://github.com/sanskrit-lexicon/vcp) | *Vācaspatya* (Sanskrit-Sanskrit) | 1873–84 | 7 | chapter ready |
+| [ARMH](https://github.com/sanskrit-lexicon/armh) | Halāyudha's *Abhidhānaratnamālā* | ~10th c. | 1 | chapter stub |
+| [ABCH](https://github.com/sanskrit-lexicon/abch) | Hemacandra's *Abhidhānacintāmaṇi* | ~12th c. | 1 | chapter stub |
 
-Each dictionary gets a chapter; each Tier-1 figure has a per-dictionary variant and a cross-dictionary comparative variant.
+Each narrative dictionary gets a chapter; each Tier-1 figure has a per-dictionary variant and a cross-dictionary comparative variant. The separate all-dictionary inventory is generated from local `../csl-orig/v02` and currently covers 43 dictionaries with main source files.
 
 ---
 
@@ -51,24 +52,35 @@ The interoperability track tests how difficult Sanskrit lexicographic cases move
 
 - [Implementation handoff](HANDOFF.md)
 - [Project specification](docs/PROJECT_SPEC.md)
+- [All-dictionary coverage and size layer](docs/ALL_DICTIONARY_COVERAGE.md)
 - [Interoperability model](docs/INTEROPERABILITY_MODEL.md)
+- [Validated TEI and OntoLex/FrAC profile](docs/VALIDATED_INTEROPERABILITY_PROFILE.md)
 - [Sampling strategy](docs/SAMPLING_STRATEGY.md)
 - [Loss-report schema](docs/LOSS_REPORT_SCHEMA.md)
 
-Generate the pilot hard-case sample with:
+Regenerate and validate the full pilot with:
 
 ```bash
-npm run sample-hard-cases
+npm run build-pilot
 ```
+
+Run the optional external validation harness with locally installed TEI/SHACL tools:
+
+```bash
+npm run validate-external-profiles
+npm run validate-external-profiles:strict
+```
+
+The external harness records TEI ODD/RELAX NG and SHACL-engine status in `data/pilot/external-validation-review.json`. It uses `teitorelaxng` from the TEI Stylesheets when available, validates TEI XML with `jing` or `xmllint`, and validates RDF/Turtle with `pyshacl`. Set `CSL_ATLAS_TEI_RNG` to reuse a precompiled TEI RELAX NG schema.
 
 ---
 
 ## Tech stack
 
 - [**Observable Framework**](https://observablehq.com/framework) (per [Decision 10](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/VISUALISATIONS.md#decision-10--microsite-stack-observable-framework))
-- Data: copies of the JSON exports from `MWS/papers/microanalysis/figures/data/` (regenerable via `scripts/sync-data.sh`)
-- Palette: copied from `MWS/papers/microanalysis/figures/palette-tokens.json`; rebuilt via `scripts/build-palette.sh`
-- i18n: locale-prefixed routes (`/`, `/ru/`); strings in `src/locales/{en,ru}.json`
+- Data: committed JSON exports in `src/data/`, plus generated pilot artifacts in `data/pilot/` and mirrored app JSON in `src/data/pilot/`.
+- Palette: committed `src/palette.css` and `src/data/palette-tokens.json`.
+- i18n: English/Russian strings in `src/locales-en.json` and `src/locales-ru.json`; the interoperability page exposes a language toggle.
 - Deployment: GitHub Pages on push to `main` (workflow in `.github/workflows/build-and-deploy.yml`)
 
 ---
@@ -77,6 +89,8 @@ npm run sample-hard-cases
 
 ```bash
 npm install
+npm run build-coverage
+npm run build-pilot
 npm run dev      # starts dev server on http://localhost:3000
 npm run build    # produces dist/ for GitHub Pages
 ```
@@ -87,15 +101,19 @@ npm run build    # produces dist/ for GitHub Pages
 
 ## Status checklist
 
-- [x] Repo scaffolded
-- [ ] `npm init` + `npm install @observablehq/framework`
-- [ ] Landing page (EN + RU)
-- [ ] Paper-tour pages (4 papers × 2 locales = 8 pages)
-- [ ] Tool pages: matrix-explorer (Tier 1), lineage-sankey (Tier 1), typology-treemap (Tier 1), timeline (Tier 1), type-comparator (Tier 3), citation-tracer (Tier 3)
-- [ ] Data sync from MWS
-- [ ] Palette + Mermaid theme
-- [ ] CI/CD: GitHub Actions
-- [ ] Push to `sanskrit-lexicon/csl-atlas` after [@gasyoun](https://github.com/gasyoun) approval
+- [x] Observable Framework atlas
+- [x] Landing page and dictionary chapters
+- [x] Interactive tools: matrix explorer, lineage Sankey, typology treemap, timeline, type comparator, citation tracer
+- [x] All-dictionary coverage and size inventory for local CDSL v02 source files
+- [x] MW-PWG-PWK hard-case interoperability page
+- [x] Pilot generators for hard cases, neutral model, loss reports, TEI profile XML, and OntoLex/FrAC JSON-LD
+- [x] 15-case validated TEI archival profile slice beyond stubs
+- [x] 15-case validated OntoLex/FrAC JSON-LD plus RDF/Turtle profile slice
+- [x] Full 50-case archival TEI machine review and project ODD/profile validation
+- [x] Full 50-case OntoLex/RDF machine review and project SHACL/profile validation
+- [x] Optional external TEI/SHACL validation harness with strict mode
+- [x] Build and link validation
+- [ ] Human philological review of all 50 TEI/OntoLex cases
 
 ---
 

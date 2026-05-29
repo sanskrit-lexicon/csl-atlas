@@ -21,8 +21,8 @@ const mwLTotal = 40212;
 ```
 
 ```js
-import {sankey, sankeyLinkHorizontal} from "https://cdn.jsdelivr.net/npm/d3-sankey@0/+esm";
-import * as d3 from "d3";
+import * as d3 from "npm:d3@7";
+import {sankey, sankeyLinkHorizontal} from "npm:d3-sankey@0.12.3";
 
 // Build nodes and links
 const nodes = [
@@ -72,7 +72,7 @@ svg.append("g")
     .attr("stroke", (d, i) => i < pwgFlows.length ? "rgba(51,160,44,0.4)" : "rgba(255,215,0,0.5)")
     .attr("stroke-width", d => Math.max(1, d.width));
 
-svg.append("g")
+const label = svg.append("g")
   .selectAll("text")
   .data(graph.nodes)
   .join("text")
@@ -81,12 +81,17 @@ svg.append("g")
     .attr("dy", "0.35em")
     .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
     .style("font-family", "Noto Sans, DejaVu Sans, sans-serif")
-    .style("font-size", "11px")
-    .selectAll("tspan")
-    .data(d => d.name.split("\n"))
-    .join("tspan")
-      .attr("x", d => d.parent ? d.parent.x : 0)
-      .text(d => d);
+    .style("font-size", "11px");
+
+label.selectAll("tspan")
+  .data(d => {
+    const x = d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6;
+    return d.name.split("\n").map((line, index) => ({line, x, index}));
+  })
+  .join("tspan")
+    .attr("x", d => d.x)
+    .attr("dy", d => d.index === 0 ? 0 : "1.2em")
+    .text(d => d.line);
 
 display(svg.node());
 ```

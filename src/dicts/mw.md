@@ -149,8 +149,7 @@ Per-dict editorial choices documented in this chapter:
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory, encoding policy, generation pipeline
 - **Source file**: [`csl-orig/v02/mw/mw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt) (commit at fetch time 2026-05-23)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py) (functions `classify_type`, `detect_blocks`)
-- **Per-dict matrix JSON**: [`data/mw_blocks.json`](../data/mw_blocks.json) (regenerable via `export_dict_blocks.py`)
-- **Cross-dict JSON**: [`data/cross-dict.json`](../data/cross-dict.json) (renders all 9 atlas chapters)
+- **Cross-dict JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (renders all 9 atlas chapters; MW block matrix is embedded there)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/LICENSE) (data); CC-BY-SA-4.0 (this chapter)
 
 ## See also (tools)

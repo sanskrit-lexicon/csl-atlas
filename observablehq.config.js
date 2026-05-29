@@ -21,6 +21,7 @@ export default {
       name: "Tools",
       pages: [
         { name: "Cross-dictionary comparison", path: "/tools/cross-dict" },
+        { name: "All-dictionary coverage", path: "/tools/dictionary-coverage" },
         { name: "Matrix explorer", path: "/tools/matrix-explorer" },
         { name: "Lineage Sankey", path: "/tools/lineage-sankey" },
         { name: "Typology treemap", path: "/tools/typology-treemap" },

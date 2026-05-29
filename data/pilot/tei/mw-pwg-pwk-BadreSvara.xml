@@ -1,9 +1,140 @@
-<entry xml:id="mw-pwg-pwk-BadreSvara">
-  <form type="compound">
-    <orth notation="SLP1">BadreSvara</orth>
-  </form>
-  <note type="source" target="mw">&lt;L&gt;148512&lt;pc&gt;746,3&lt;k1&gt;BadreSvara&lt;k2&gt;BadreSvara&lt;e&gt;3 &lt;s&gt;Badre&lt;srs/&gt;˚Svara&lt;/s&gt; ¦ See &lt;s&gt;Badre&lt;srs/&gt;Sa&lt;/s&gt; &amp;c. &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;BadrA&lt;/s&gt; below.&lt;info hui=&quot;a&quot;/&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwg">&lt;L&gt;54094&lt;pc&gt;5-0200&lt;k1&gt;BadreSvara&lt;k2&gt;BadreSvara {#BadreSvara#}¦ ({#Badra + I˚#}) &lt;lex&gt;m.&lt;/lex&gt; &lt;div n=&quot;1&quot;&gt; 1) Bez. verschiedener Statuen und &lt;is&gt;Liṅga&lt;/is&gt; des &lt;is&gt;Śiva&lt;/is&gt; &lt;ls&gt;ŚKDR.&lt;/ls&gt; nach den &lt;ls&gt;PURĀṆA.&lt;/ls&gt; &lt;div n=&quot;1&quot;&gt;— 2) N. pr. einer Oertlichkeit &lt;ls&gt;Verz. d. Oxf. H. 39,b,3.&lt;/ls&gt; &lt;div n=&quot;1&quot;&gt;— 3) N. pr. eines &lt;is&gt;Kāyastha&lt;/is&gt; &lt;ls&gt;RĀJA-TAR. 7,38.&lt;/ls&gt; &lt;ls n=&quot;RĀJA-TAR. 7,&quot;&gt;44. fg.&lt;/ls&gt; &lt;ls n=&quot;RĀJA-TAR. 7,&quot;&gt;106.&lt;/ls&gt; &lt;ls n=&quot;RĀJA-TAR. 7,&quot;&gt;121.&lt;/ls&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwk">&lt;L&gt;78802&lt;pc&gt;4-250-a&lt;k1&gt;BadreSvara&lt;k2&gt;BadreSvara {#BadreSvara#}¦ &lt;lex&gt;m.&lt;/lex&gt; &lt;ab&gt;N. pr.&lt;/ab&gt; &lt;div n=&quot;1&quot;&gt;— 1〉 verschiedener Statuen und &lt;is&gt;Liṅga&lt;/is&gt; des &lt;is&gt;Śiva&lt;/is&gt;. &lt;div n=&quot;1&quot;&gt;— 2〉 einer Oertlichkeit. &lt;div n=&quot;1&quot;&gt;— 3〉 eines &lt;is&gt;Kāyastha&lt;/is&gt;. &lt;LEND&gt;</note>
-  <note type="model-loss">Machine-generated stub; not reviewed.</note>
-</entry>
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-BadreSvara">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case BadreSvara</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-BadreSvara-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3ABadreSvara">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">BadreSvara</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-BadreSvara-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-BadreSvara-compound-relation" type="compound">
+      <note type="decomposition-status">Component segmentation requires philological review.</note>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-BadreSvara-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-BadreSvara-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BadreSvara-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-BadreSvara-record-pwg">
+        <abbr>PURĀṆA.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BadreSvara-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-BadreSvara-record-pwg">
+        <abbr>Verz. d. Oxf. H. 39,b,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BadreSvara-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-BadreSvara-record-pwg">
+        <abbr>RĀJA-TAR. 7,38.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BadreSvara-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-BadreSvara-record-pwg">
+        <abbr>44. fg.</abbr>
+        <ref type="inherited-siglum">RĀJA-TAR. 7,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BadreSvara-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-BadreSvara-record-pwg">
+        <abbr>106.</abbr>
+        <ref type="inherited-siglum">RĀJA-TAR. 7,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BadreSvara-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-BadreSvara-record-pwg">
+        <abbr>121.</abbr>
+        <ref type="inherited-siglum">RĀJA-TAR. 7,</ref>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-BadreSvara-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">148512</idno>
+        <idno type="line">497727</idno>
+        <idno type="pc">746,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;148512&lt;pc&gt;746,3&lt;k1&gt;BadreSvara&lt;k2&gt;BadreSvara&lt;e&gt;3
+&lt;s&gt;Badre&lt;srs/&gt;˚Svara&lt;/s&gt; ¦ See &lt;s&gt;Badre&lt;srs/&gt;Sa&lt;/s&gt; &amp;c. &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;BadrA&lt;/s&gt; below.&lt;info hui=&quot;a&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-BadreSvara-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">54094</idno>
+        <idno type="line">523289</idno>
+        <idno type="pc">5-0200</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;54094&lt;pc&gt;5-0200&lt;k1&gt;BadreSvara&lt;k2&gt;BadreSvara
+{#BadreSvara#}¦ ({#Badra + I˚#}) &lt;lex&gt;m.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt; 1) &lt;ab&gt;Bez.&lt;/ab&gt; verschiedener Statuen und &lt;is&gt;Liṅga&lt;/is&gt; des &lt;is&gt;Śiva&lt;/is&gt;
+&lt;ls&gt;ŚKDR.&lt;/ls&gt; nach den &lt;ls&gt;PURĀṆA.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) &lt;ab&gt;N. pr.&lt;/ab&gt; einer Oertlichkeit
+&lt;ls&gt;Verz. d. Oxf. H. 39,b,3.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) &lt;ab&gt;N. pr.&lt;/ab&gt; eines &lt;is&gt;Kāyastha&lt;/is&gt;
+&lt;ls&gt;RĀJA-TAR. 7,38.&lt;/ls&gt; &lt;ls n=&quot;RĀJA-TAR. 7,&quot;&gt;44. fg.&lt;/ls&gt; &lt;ls n=&quot;RĀJA-TAR. 7,&quot;&gt;106.&lt;/ls&gt; &lt;ls n=&quot;RĀJA-TAR. 7,&quot;&gt;121.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-BadreSvara-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">78802</idno>
+        <idno type="line">324560</idno>
+        <idno type="pc">4-250-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;78802&lt;pc&gt;4-250-a&lt;k1&gt;BadreSvara&lt;k2&gt;BadreSvara
+{#BadreSvara#}¦ &lt;lex&gt;m.&lt;/lex&gt; &lt;ab&gt;N. pr.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 verschiedener Statuen und &lt;is&gt;Liṅga&lt;/is&gt; des &lt;is&gt;Śiva&lt;/is&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 einer Oertlichkeit.
+&lt;div n=&quot;1&quot;&gt;— 3〉 eines &lt;is&gt;Kāyastha&lt;/is&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

@@ -1,9 +1,139 @@
-<entry xml:id="mw-pwg-pwk-arcya">
-  <form type="compound">
-    <orth notation="SLP1">arcya</orth>
-  </form>
-  <note type="source" target="mw">&lt;L&gt;15738&lt;pc&gt;90,1&lt;k1&gt;arcya&lt;k2&gt;arcya&lt;h&gt;2&lt;e&gt;3 &lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;arcya&lt;/s&gt; ¦ &lt;ab&gt;ind.p.&lt;/ab&gt; See √ &lt;s&gt;arc&lt;/s&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwg">&lt;L&gt;5841&lt;pc&gt;1-0426&lt;k1&gt;arcya&lt;k2&gt;arcya {#arcya#}¦ (wie eben) &lt;lex&gt;adj.&lt;/lex&gt; &lt;ls&gt;VOP. 26,17.&lt;/ls&gt; &lt;ls n=&quot;VOP. 26,&quot;&gt;18.&lt;/ls&gt; {%zu verehren, verehrungswürdig%} &lt;ls&gt;H. 446.&lt;/ls&gt; {#arcyo naH puruzopahArabaliBirdevo mahABEravaH#} &lt;ls&gt;PRAB. 54,4.&lt;/ls&gt; {#tvayA mama ca kfzRo &apos;rcyaH#} &lt;ls&gt;VOP. 5,10.&lt;/ls&gt; {#arcayizye &apos;hamarcyaM tvAm#} &lt;ls&gt;MBH. 1,3203.&lt;/ls&gt; &lt;ls&gt;RAGH. 2,10.&lt;/ls&gt; &lt;ls&gt;BHAṬṬ. 6,70.&lt;/ls&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwk">&lt;L&gt;9344&lt;pc&gt;1-109-b&lt;k1&gt;arcya&lt;k2&gt;arcya {#arcya#}¦ &lt;lex&gt;Adj.&lt;/lex&gt; {%zu verehren, verehrungswürdig%}. &lt;LEND&gt;</note>
-  <note type="model-loss">Machine-generated stub; not reviewed.</note>
-</entry>
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-arcya">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case arcya</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Selected for the first 15-case validated TEI profile slice.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-arcya-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3Aarcya">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">arcya</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-arcya-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-arcya-compound-relation" type="compound">
+      <note type="decomposition-status">Component segmentation requires philological review.</note>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-arcya-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-arcya-record-pwg">
+        <abbr>VOP. 26,17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arcya-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-arcya-record-pwg">
+        <abbr>18.</abbr>
+        <ref type="inherited-siglum">VOP. 26,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arcya-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-arcya-record-pwg">
+        <abbr>H. 446.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arcya-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-arcya-record-pwg">
+        <abbr>PRAB. 54,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arcya-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-arcya-record-pwg">
+        <abbr>VOP. 5,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arcya-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-arcya-record-pwg">
+        <abbr>MBH. 1,3203.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arcya-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-arcya-record-pwg">
+        <abbr>RAGH. 2,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arcya-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-arcya-record-pwg">
+        <abbr>BHAṬṬ. 6,70.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-arcya-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">15738</idno>
+        <idno type="line">56577</idno>
+        <idno type="pc">90,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;15738&lt;pc&gt;90,1&lt;k1&gt;arcya&lt;k2&gt;arcya&lt;h&gt;2&lt;e&gt;3
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;arcya&lt;/s&gt; ¦ &lt;ab&gt;ind.p.&lt;/ab&gt; See √ &lt;s&gt;arc&lt;/s&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-arcya-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">5841</idno>
+        <idno type="line">48338</idno>
+        <idno type="pc">1-0426</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;5841&lt;pc&gt;1-0426&lt;k1&gt;arcya&lt;k2&gt;arcya
+{#arcya#}¦ (wie eben) &lt;lex&gt;adj.&lt;/lex&gt;
+&lt;ls&gt;VOP. 26,17.&lt;/ls&gt; &lt;ls n=&quot;VOP. 26,&quot;&gt;18.&lt;/ls&gt; {%zu verehren, verehrungswürdig%}
+&lt;ls&gt;H. 446.&lt;/ls&gt; {#arcyo naH puruzopahArabaliBirdevo mahABEravaH#}
+&lt;ls&gt;PRAB. 54,4.&lt;/ls&gt; {#tvayA mama ca kfzRo &apos;rcyaH#}
+&lt;ls&gt;VOP. 5,10.&lt;/ls&gt; {#arcayizye &apos;hamarcyaM tvAm#}
+&lt;ls&gt;MBH. 1,3203.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 2,10.&lt;/ls&gt;
+&lt;ls&gt;BHAṬṬ. 6,70.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-arcya-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">9344</idno>
+        <idno type="line">34965</idno>
+        <idno type="pc">1-109-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;9344&lt;pc&gt;1-109-b&lt;k1&gt;arcya&lt;k2&gt;arcya
+{#arcya#}¦ &lt;lex&gt;Adj.&lt;/lex&gt; {%zu verehren, verehrungswürdig%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">validated-slice</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

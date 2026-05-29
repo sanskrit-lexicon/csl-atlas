@@ -91,7 +91,10 @@ function extractFormsAndRelations(item, id) {
 
 async function main() {
   const inputPath = path.resolve(process.cwd(), "data/pilot/hard-cases.json");
-  const outputPath = path.resolve(process.cwd(), "data/pilot/neutral-model.json");
+  const outputPaths = [
+    path.resolve(process.cwd(), "data/pilot/neutral-model.json"),
+    path.resolve(process.cwd(), "src/data/pilot/neutral-model.json")
+  ];
 
   const data = JSON.parse(await fs.readFile(inputPath, "utf-8"));
   
@@ -102,10 +105,11 @@ async function main() {
   }
 
   const models = data.items.map(item => {
-    let id = `mw-pwg-pwk:${item.key}`;
-    if (keyCounts[item.key] > 1) {
-      id = `mw-pwg-pwk:${item.key}-mw${item.records.mw.L}`;
-    }
+    const id = item.id || (
+      keyCounts[item.key] > 1
+        ? `mw-pwg-pwk:${item.key}-mw${item.records.mw.L}`
+        : `mw-pwg-pwk:${item.key}`
+    );
 
     const { forms, relations, citations } = extractFormsAndRelations(item, id);
 
@@ -141,9 +145,11 @@ async function main() {
     };
   });
 
-  await fs.writeFile(outputPath, JSON.stringify(models, null, 2), "utf-8");
-  console.log(`Generated neutral model for ${models.length} items at ${outputPath}`);
+  for (const outputPath of outputPaths) {
+    await fs.mkdir(path.dirname(outputPath), { recursive: true });
+    await fs.writeFile(outputPath, `${JSON.stringify(models, null, 2)}\n`, "utf-8");
+  }
+  console.log(`Generated neutral model for ${models.length} items at ${outputPaths.join(", ")}`);
 }
 
 main().catch(console.error);
-

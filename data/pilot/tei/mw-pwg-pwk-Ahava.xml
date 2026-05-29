@@ -1,9 +1,231 @@
-<entry xml:id="mw-pwg-pwk-Ahava">
-  <form type="lemma">
-    <orth notation="SLP1">Ahava</orth>
-  </form>
-  <note type="source" target="mw">&lt;L&gt;28341&lt;pc&gt;162,2&lt;k1&gt;Ahava&lt;k2&gt;A-hava&lt;h&gt;1&lt;e&gt;2 &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;A-hava&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; sacrificing, sacrifice, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m&quot;/&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwg">&lt;L&gt;9880&lt;pc&gt;1-0747&lt;k1&gt;Ahava&lt;k2&gt;Ahava/ {#Ahava/#}¦ &lt;lex&gt;m.&lt;/lex&gt; &lt;div n=&quot;1&quot;&gt; 1) (von {#hu = hvA#} mit {#A#}) {%Ausforderung; Kampf, Streit%} &lt;ls&gt;P. 3,3,73.&lt;/ls&gt; &lt;ls&gt;NAIGH. 2,17.&lt;/ls&gt; &lt;ls&gt;AK. 2,8,2,74.&lt;/ls&gt; &lt;ls&gt;TRIK. 3,3,412.&lt;/ls&gt; &lt;ls&gt;H. 796.&lt;/ls&gt; &lt;ls&gt;an. 3,694.&lt;/ls&gt; &lt;ls&gt;MED. v. 31.&lt;/ls&gt; {#a\nA\nu\do vf^za\Bo jagmi^rAha\vam#} &lt;ls&gt;ṚV. 2,23,11.&lt;/ls&gt; {#yuvAku^mAro\ pratye^tyAha\vam#} &lt;ls n=&quot;ṚV.&quot;&gt;1,155,6.&lt;/ls&gt; {#indra\M na kaSca\na sa^hata Aha\vezu^#} &lt;ls n=&quot;ṚV.&quot;&gt;6,47,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,150,5.&lt;/ls&gt; &lt;ls&gt;M. 5,95.&lt;/ls&gt; &lt;ls n=&quot;M. 5,&quot;&gt;98.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;7,89.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;11,119.&lt;/ls&gt; &lt;ls&gt;BHAG. 1,31.&lt;/ls&gt; &lt;ls&gt;ARJ. 10,67.&lt;/ls&gt; &lt;ls&gt;R. 1,1,68.&lt;/ls&gt; &lt;ls n=&quot;R. 1,1,&quot;&gt;79.&lt;/ls&gt; &lt;ls n=&quot;R. 1,&quot;&gt;23,9.&lt;/ls&gt; &lt;ls&gt;SUŚR. 1,7,18. 12,11.&lt;/ls&gt; &lt;ls&gt;MBH. 14,1791.&lt;/ls&gt; {#citrasenena cAhavaH#} &lt;ls n=&quot;MBH. 14,&quot;&gt;324.&lt;/ls&gt; {#na BAtyayaM mamAvAso hataDvaja ivAhavaH#} &lt;ls&gt;R. 3,68,27.&lt;/ls&gt; {#AhavaSoBin#} &lt;ls&gt;MBH. 3,15260.&lt;/ls&gt; {#evaMviDenAhavacezwitena#} &lt;ls&gt;RAGH. 7,64.&lt;/ls&gt; {#mahAhava#} &lt;ls&gt;MBH. 14,1772.&lt;/ls&gt; &lt;ls&gt;ARJ. 8,2.&lt;/ls&gt; Vgl. {#anuhava, parihava#} . &lt;div n=&quot;1&quot;&gt;— 2) (von {#hu#} mit {#A#}) {%Opfer%} &lt;ls&gt;TRIK.&lt;/ls&gt; &lt;ls&gt;H. an.&lt;/ls&gt; &lt;ls&gt;MED.&lt;/ls&gt; &lt;LEND&gt;</note>
-  <note type="source" target="pwk">&lt;L&gt;214488&lt;pc&gt;7-320-d&lt;k1&gt;Ahava&lt;k2&gt;Ahava&lt;h&gt;1 &lt;hom&gt;1.&lt;/hom&gt; {#Ahava#}¦ I. &lt;ls&gt;DAŚAK. 31,12&lt;/ls&gt;.&lt;info n=&quot;sup_7&quot;/&gt; &lt;LEND&gt;</note>
-  <note type="model-loss">Machine-generated stub; not reviewed.</note>
-</entry>
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-Ahava">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case Ahava</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei-stubs.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Atlas</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-atlas">Included in the full 50-case machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-Ahava-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-atlas/case/mw-pwg-pwk%3AAhava">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">Ahava</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-Ahava-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-Ahava-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>P. 3,3,73.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>NAIGH. 2,17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>AK. 2,8,2,74.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>TRIK. 3,3,412.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>H. 796.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>an. 3,694.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>MED. v. 31.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>ṚV. 2,23,11.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>1,155,6.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>6,47,1.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>10,150,5.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>M. 5,95.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>98.</abbr>
+        <ref type="inherited-siglum">M. 5,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>7,89.</abbr>
+        <ref type="inherited-siglum">M.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>11,119.</abbr>
+        <ref type="inherited-siglum">M.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>BHAG. 1,31.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>ARJ. 10,67.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>R. 1,1,68.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>79.</abbr>
+        <ref type="inherited-siglum">R. 1,1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>23,9.</abbr>
+        <ref type="inherited-siglum">R. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>SUŚR. 1,7,18. 12,11.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>MBH. 14,1791.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>324.</abbr>
+        <ref type="inherited-siglum">MBH. 14,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>R. 3,68,27.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>MBH. 3,15260.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>RAGH. 7,64.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>MBH. 14,1772.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>ARJ. 8,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>TRIK.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>H. an.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwg">
+        <abbr>MED.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Ahava-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-Ahava-record-pwk">
+        <abbr>DAŚAK. 31,12</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-Ahava-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">28341</idno>
+        <idno type="line">100205</idno>
+        <idno type="pc">162,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;28341&lt;pc&gt;162,2&lt;k1&gt;Ahava&lt;k2&gt;A-hava&lt;h&gt;1&lt;e&gt;2
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;A-hava&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; sacrificing, sacrifice, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Ahava-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">9880</idno>
+        <idno type="line">85161</idno>
+        <idno type="pc">1-0747</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;9880&lt;pc&gt;1-0747&lt;k1&gt;Ahava&lt;k2&gt;Ahava/
+{#Ahava/#}¦ &lt;lex&gt;m.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt; 1) (von {#hu = hvA#} mit {#A#}) {%Ausforderung; Kampf, Streit%}
+&lt;ls&gt;P. 3,3,73.&lt;/ls&gt;
+&lt;ls&gt;NAIGH. 2,17.&lt;/ls&gt;
+&lt;ls&gt;AK. 2,8,2,74.&lt;/ls&gt;
+&lt;ls&gt;TRIK. 3,3,412.&lt;/ls&gt;
+&lt;ls&gt;H. 796.&lt;/ls&gt;
+&lt;ls&gt;an. 3,694.&lt;/ls&gt;
+&lt;ls&gt;MED. v. 31.&lt;/ls&gt; {#a\nA\nu\do vf^za\Bo jagmi^rAha\vam#}
+&lt;ls&gt;ṚV. 2,23,11.&lt;/ls&gt; {#yuvAku^mAro\ pratye^tyAha\vam#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,155,6.&lt;/ls&gt; {#indra\M na kaSca\na sa^hata Aha\vezu^#}
+&lt;ls n=&quot;ṚV.&quot;&gt;6,47,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,150,5.&lt;/ls&gt; &lt;ls&gt;M. 5,95.&lt;/ls&gt; &lt;ls n=&quot;M. 5,&quot;&gt;98.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;7,89.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;11,119.&lt;/ls&gt; &lt;ls&gt;BHAG. 1,31.&lt;/ls&gt; &lt;ls&gt;ARJ. 10,67.&lt;/ls&gt; &lt;ls&gt;R. 1,1,68.&lt;/ls&gt; &lt;ls n=&quot;R. 1,1,&quot;&gt;79.&lt;/ls&gt; &lt;ls n=&quot;R. 1,&quot;&gt;23,9.&lt;/ls&gt; &lt;ls&gt;SUŚR. 1,7,18. 12,11.&lt;/ls&gt; &lt;ls&gt;MBH. 14,1791.&lt;/ls&gt; {#citrasenena cAhavaH#}
+&lt;ls n=&quot;MBH. 14,&quot;&gt;324.&lt;/ls&gt; {#na BAtyayaM mamAvAso hataDvaja ivAhavaH#}
+&lt;ls&gt;R. 3,68,27.&lt;/ls&gt; {#AhavaSoBin#}
+&lt;ls&gt;MBH. 3,15260.&lt;/ls&gt; {#evaMviDenAhavacezwitena#}
+&lt;ls&gt;RAGH. 7,64.&lt;/ls&gt; {#mahAhava#}
+&lt;ls&gt;MBH. 14,1772.&lt;/ls&gt;
+&lt;ls&gt;ARJ. 8,2.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#anuhava, parihava#} .
+&lt;div n=&quot;1&quot;&gt;— 2) (von {#hu#} mit {#A#}) {%Opfer%}
+&lt;ls&gt;TRIK.&lt;/ls&gt; &lt;ls&gt;H. an.&lt;/ls&gt; &lt;ls&gt;MED.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Ahava-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">214488</idno>
+        <idno type="line">615696</idno>
+        <idno type="pc">7-320-d</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;214488&lt;pc&gt;7-320-d&lt;k1&gt;Ahava&lt;k2&gt;Ahava&lt;h&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; {#Ahava#}¦ I. &lt;ls&gt;DAŚAK. 31,12&lt;/ls&gt;.&lt;info n=&quot;sup_7&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-50-machine-review</note>
+        <note type="validation-scope">full-50-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

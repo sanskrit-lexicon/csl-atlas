@@ -1,0 +1,397 @@
+{
+  "source": "../csl-orig/v02/mw/mw.txt",
+  "linkBase": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt",
+  "selection": "First three distinct k1 records per article type, classified with the same rules used for the treemap counts.",
+  "types": [
+    {
+      "type": "root",
+      "examples": [
+        {
+          "k1": "aMS",
+          "L": "9",
+          "pc": "1,1",
+          "line": 52,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L52"
+        },
+        {
+          "k1": "aMs",
+          "L": "87",
+          "pc": "1,2",
+          "line": 289,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L289"
+        },
+        {
+          "k1": "aMh",
+          "L": "107",
+          "pc": "1,2",
+          "line": 364,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L364"
+        }
+      ]
+    },
+    {
+      "type": "noun-m",
+      "examples": [
+        {
+          "k1": "akAra",
+          "L": "2",
+          "pc": "1,1",
+          "line": 7,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7"
+        },
+        {
+          "k1": "a",
+          "L": "7",
+          "pc": "1,1",
+          "line": 46,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L46"
+        },
+        {
+          "k1": "aMSa",
+          "L": "10",
+          "pc": "1,1",
+          "line": 55,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L55"
+        }
+      ]
+    },
+    {
+      "type": "noun-f",
+      "examples": [
+        {
+          "k1": "aMSakalpanA",
+          "L": "21",
+          "pc": "1,1",
+          "line": 88,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L88"
+        },
+        {
+          "k1": "aMSunadI",
+          "L": "61",
+          "pc": "1,2",
+          "line": 211,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L211"
+        },
+        {
+          "k1": "aMSumatI",
+          "L": "71",
+          "pc": "1,2",
+          "line": 241,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L241"
+        }
+      ]
+    },
+    {
+      "type": "noun-n",
+      "examples": [
+        {
+          "k1": "aMSakaraRa",
+          "L": "20",
+          "pc": "1,1",
+          "line": 85,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L85"
+        },
+        {
+          "k1": "aMSasavarRana",
+          "L": "29",
+          "pc": "1,1",
+          "line": 115,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L115"
+        },
+        {
+          "k1": "aMSAvataraRa",
+          "L": "35",
+          "pc": "1,1",
+          "line": 133,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L133"
+        }
+      ]
+    },
+    {
+      "type": "adjective-mfn",
+      "examples": [
+        {
+          "k1": "afRin",
+          "L": "8",
+          "pc": "1,1",
+          "line": 49,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L49"
+        },
+        {
+          "k1": "aMSaBAgin",
+          "L": "24",
+          "pc": "1,1",
+          "line": 97,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L97"
+        },
+        {
+          "k1": "aMSaBUta",
+          "L": "27",
+          "pc": "1,1",
+          "line": 106,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L106"
+        }
+      ]
+    },
+    {
+      "type": "indeclinable",
+      "examples": [
+        {
+          "k1": "aMSAMsi",
+          "L": "34",
+          "pc": "1,1",
+          "line": 130,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L130"
+        },
+        {
+          "k1": "akasmAt",
+          "L": "224",
+          "pc": "2,1",
+          "line": 771,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L771"
+        },
+        {
+          "k1": "akARqe",
+          "L": "228",
+          "pc": "2,1",
+          "line": 786,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L786"
+        }
+      ]
+    },
+    {
+      "type": "compound",
+      "examples": [
+        {
+          "k1": "aMSarUpiRI",
+          "L": "27.1",
+          "pc": "1308,1",
+          "line": 109,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L109"
+        },
+        {
+          "k1": "aMSIkf",
+          "L": "38",
+          "pc": "1,1",
+          "line": 142,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L142"
+        },
+        {
+          "k1": "aMSitA",
+          "L": "46",
+          "pc": "1,1",
+          "line": 166,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L166"
+        }
+      ]
+    },
+    {
+      "type": "derived",
+      "examples": [
+        {
+          "k1": "aMSaka",
+          "L": "39",
+          "pc": "1,1",
+          "line": 145,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L145"
+        },
+        {
+          "k1": "aMSala",
+          "L": "44",
+          "pc": "1,1",
+          "line": 160,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L160"
+        },
+        {
+          "k1": "aMSin",
+          "L": "45",
+          "pc": "1,1",
+          "line": 163,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L163"
+        }
+      ]
+    },
+    {
+      "type": "continuation",
+      "examples": [
+        {
+          "k1": "a",
+          "L": "1.1",
+          "pc": "1,1",
+          "line": 4,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4"
+        },
+        {
+          "k1": "aMSa",
+          "L": "11",
+          "pc": "1,1",
+          "line": 58,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L58"
+        },
+        {
+          "k1": "aMSu",
+          "L": "48",
+          "pc": "1,1",
+          "line": 172,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L172"
+        }
+      ]
+    },
+    {
+      "type": "lexicographer-only",
+      "examples": [
+        {
+          "k1": "a",
+          "L": "7",
+          "pc": "1,1",
+          "line": 46,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L46"
+        },
+        {
+          "k1": "afRin",
+          "L": "8",
+          "pc": "1,1",
+          "line": 49,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L49"
+        },
+        {
+          "k1": "aMS",
+          "L": "9",
+          "pc": "1,1",
+          "line": 52,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L52"
+        }
+      ]
+    },
+    {
+      "type": "etymological-ie",
+      "examples": [
+        {
+          "k1": "a",
+          "L": "4",
+          "pc": "1,1",
+          "line": 16,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L16"
+        },
+        {
+          "k1": "aMsa",
+          "L": "92.1",
+          "pc": "1,2",
+          "line": 307,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L307"
+        },
+        {
+          "k1": "aMh",
+          "L": "114",
+          "pc": "1,2",
+          "line": 392,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L392"
+        }
+      ]
+    },
+    {
+      "type": "botanical",
+      "examples": [
+        {
+          "k1": "aMSumatI",
+          "L": "72",
+          "pc": "1,2",
+          "line": 244,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L244"
+        },
+        {
+          "k1": "aMSumatPalA",
+          "L": "73",
+          "pc": "1,2",
+          "line": 247,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L247"
+        },
+        {
+          "k1": "akarA",
+          "L": "168",
+          "pc": "1,3",
+          "line": 576,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L576"
+        }
+      ]
+    },
+    {
+      "type": "biographical",
+      "examples": [
+        {
+          "k1": "agasti",
+          "L": "822",
+          "pc": "4,3",
+          "line": 2964,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2964"
+        },
+        {
+          "k1": "agastyacAra",
+          "L": "829",
+          "pc": "4,3",
+          "line": 2994,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2994"
+        },
+        {
+          "k1": "agastyamArga",
+          "L": "830",
+          "pc": "4,3",
+          "line": 2997,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2997"
+        }
+      ]
+    },
+    {
+      "type": "vedic-accented",
+      "examples": [
+        {
+          "k1": "aMSa",
+          "L": "10",
+          "pc": "1,1",
+          "line": 55,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L55"
+        },
+        {
+          "k1": "aMSaBU",
+          "L": "26",
+          "pc": "1,1",
+          "line": 103,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L103"
+        },
+        {
+          "k1": "aMSu",
+          "L": "47",
+          "pc": "1,1",
+          "line": 169,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L169"
+        }
+      ]
+    },
+    {
+      "type": "other",
+      "examples": [
+        {
+          "k1": "a",
+          "L": "1",
+          "pc": "1,1",
+          "line": 1,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1"
+        },
+        {
+          "k1": "aMSaprakalpanA",
+          "L": "22",
+          "pc": "1,1",
+          "line": 91,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L91"
+        },
+        {
+          "k1": "aMSapradAna",
+          "L": "23",
+          "pc": "1,1",
+          "line": 94,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L94"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-05-29T02:47:53.298Z",
+  "generator": "scripts/validate-external-profiles.mjs",
+  "strict": false,
+  "caveat": "External validation depends on locally installed TEI and SHACL tooling. Skipped checks are recorded explicitly and fail only in --strict mode.",
+  "tools": {
+    "teiOddCompiler": null,
+    "teiXmlValidator": null,
+    "shaclValidator": null
+  },
+  "totals": {
+    "checks": 2,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 2
+  },
+  "checks": [
+    {
+      "type": "tei-odd-compile",
+      "status": "skipped",
+      "message": "TEI Stylesheets command teitorelaxng is not available; install TEI Stylesheets or set CSL_ATLAS_TEI_RNG to a precompiled RELAX NG schema."
+    },
+    {
+      "type": "shacl-engine",
+      "status": "skipped",
+      "message": "pySHACL is not available; install pyshacl to run an external SHACL engine."
+    }
+  ]
+}
