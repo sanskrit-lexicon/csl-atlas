@@ -19,6 +19,7 @@
     "validate-mw-depth": "node scripts/validate-mw-depth.mjs",
     "build-dict-comparison": "node scripts/build-dictionary-comparison.mjs",
     "build-citation-apparatus": "node scripts/build-citation-apparatus.mjs",
+    "build-sense-depth": "node scripts/build-sense-depth.mjs",
     "validate-dict-comparison": "node scripts/validate-dictionary-comparison.mjs",
     "build-gender-review": "node scripts/build-gender-conflict-review.mjs",
     "build-source-layer-review": "node scripts/build-source-layer-review.mjs",
