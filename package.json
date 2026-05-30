@@ -20,6 +20,7 @@
     "build-dict-comparison": "node scripts/build-dictionary-comparison.mjs",
     "build-citation-apparatus": "node scripts/build-citation-apparatus.mjs",
     "build-sense-depth": "node scripts/build-sense-depth.mjs",
+    "build-dcs-corpus": "node scripts/build-dcs-corpus.mjs",
     "validate-dict-comparison": "node scripts/validate-dictionary-comparison.mjs",
     "build-gender-review": "node scripts/build-gender-conflict-review.mjs",
     "build-source-layer-review": "node scripts/build-source-layer-review.mjs",
