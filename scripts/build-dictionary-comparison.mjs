@@ -137,10 +137,12 @@ function main() {
     if (k >= 2) {
       const conf = lemmaConfidence(entry, codes);
       confidenceDist[conf] += 1;
-      if (conf === "medium" && lowConfidence.length < SAMPLE) {
+      if (conf === "medium") {
+        // Complete (not sampled): low-confidence alignments are intrinsically
+        // rare, and the review layer needs every one with a source link.
         lowConfidence.push({
           lemma: normalized,
-          dicts: codes.map(c => DICT_LABELS[c]),
+          dicts: codes.map(c => ({ dict: DICT_LABELS[c], href: entry[c].example.href })),
           variants: [...new Set(codes.flatMap(c => [...entry[c].raws]))]
         });
       }
@@ -269,7 +271,7 @@ function main() {
     writeJson(
       "alignment-confidence.json",
       envelope(
-        { distribution: confidenceDist, reviewQueueSample: lowConfidence },
+        { distribution: confidenceDist, lowConfidence },
         {
           assumptions: [
             "high = every contributing dictionary used the identical raw <k1>; medium = matched only after normalization.",

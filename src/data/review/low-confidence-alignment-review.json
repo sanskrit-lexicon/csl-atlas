@@ -1,0 +1,392 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-30T04:20:00.300Z",
+  "sourcePath": "src/data/dicts/alignment-confidence.json",
+  "recordCount": 7,
+  "queue": "low-confidence-alignment",
+  "confidenceDistribution": {
+    "high": 174787,
+    "medium": 7
+  },
+  "assumptions": [
+    "An item is a multi-dictionary lemma whose raw <k1> headwords differ but match after normalization (accent/digit stripping).",
+    "Confidence 'high' (identical raw headwords) is not queued; only 'medium' is.",
+    "evidenceLevel is inferred: the alignment is a heuristic match across non-identical surface forms.",
+    "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds."
+  ],
+  "warnings": [
+    "This queue is intrinsically small because SLP1 headwords align byte-identically; see the high vs medium distribution."
+  ],
+  "items": [
+    {
+      "reviewId": "low-confidence-alignment:GrA",
+      "queue": "low-confidence-alignment",
+      "subject": {
+        "kind": "alignment",
+        "lemma": "GrA",
+        "dictionaries": [
+          "MW",
+          "AP",
+          "PWG",
+          "PWK",
+          "WIL",
+          "VCP",
+          "SKD"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L237833"
+        },
+        {
+          "dictionary": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L179891"
+        },
+        {
+          "dictionary": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L229728"
+        },
+        {
+          "dictionary": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L154020"
+        },
+        {
+          "dictionary": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L112848"
+        },
+        {
+          "dictionary": "VCP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L254145"
+        },
+        {
+          "dictionary": "SKD",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L136957"
+        }
+      ],
+      "machineValue": {
+        "confidence": "medium",
+        "variants": [
+          "GrA",
+          "GrA~"
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "low-confidence-alignment:hU",
+      "queue": "low-confidence-alignment",
+      "subject": {
+        "kind": "alignment",
+        "lemma": "hU",
+        "dictionaries": [
+          "MW",
+          "AP",
+          "PWG",
+          "PWK",
+          "WIL",
+          "SKD"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L873146"
+        },
+        {
+          "dictionary": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L504635"
+        },
+        {
+          "dictionary": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1096596"
+        },
+        {
+          "dictionary": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L564557"
+        },
+        {
+          "dictionary": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L348136"
+        },
+        {
+          "dictionary": "SKD",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L577576"
+        }
+      ],
+      "machineValue": {
+        "confidence": "medium",
+        "variants": [
+          "hU",
+          "hU~"
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "low-confidence-alignment:kayya",
+      "queue": "low-confidence-alignment",
+      "subject": {
+        "kind": "alignment",
+        "lemma": "kayya",
+        "dictionaries": [
+          "MW",
+          "PWG",
+          "PWK"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L153504"
+        },
+        {
+          "dictionary": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L128035"
+        },
+        {
+          "dictionary": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L89715"
+        }
+      ],
+      "machineValue": {
+        "confidence": "medium",
+        "variants": [
+          "kayya",
+          "ka~yya"
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "low-confidence-alignment:o",
+      "queue": "low-confidence-alignment",
+      "subject": {
+        "kind": "alignment",
+        "lemma": "o",
+        "dictionaries": [
+          "MW",
+          "AP",
+          "PWG",
+          "PWK",
+          "WIL",
+          "VCP",
+          "SKD"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L142195"
+        },
+        {
+          "dictionary": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L124086"
+        },
+        {
+          "dictionary": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L123974"
+        },
+        {
+          "dictionary": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L87699"
+        },
+        {
+          "dictionary": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L64807"
+        },
+        {
+          "dictionary": "VCP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L140525"
+        },
+        {
+          "dictionary": "SKD",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L58735"
+        }
+      ],
+      "machineValue": {
+        "confidence": "medium",
+        "variants": [
+          "o",
+          "o~"
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "low-confidence-alignment:O",
+      "queue": "low-confidence-alignment",
+      "subject": {
+        "kind": "alignment",
+        "lemma": "O",
+        "dictionaries": [
+          "MW",
+          "AP",
+          "PWG",
+          "PWK",
+          "WIL",
+          "VCP",
+          "SKD"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L142940"
+        },
+        {
+          "dictionary": "AP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L124751"
+        },
+        {
+          "dictionary": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L124909"
+        },
+        {
+          "dictionary": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L88247"
+        },
+        {
+          "dictionary": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L65090"
+        },
+        {
+          "dictionary": "VCP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L141665"
+        },
+        {
+          "dictionary": "SKD",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L59250"
+        }
+      ],
+      "machineValue": {
+        "confidence": "medium",
+        "variants": [
+          "O",
+          "O~"
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "low-confidence-alignment:sArisTAKA",
+      "queue": "low-confidence-alignment",
+      "subject": {
+        "kind": "alignment",
+        "lemma": "sArisTAKA",
+        "dictionaries": [
+          "MW",
+          "PWG",
+          "PWK"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L807266"
+        },
+        {
+          "dictionary": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1011528"
+        },
+        {
+          "dictionary": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L519186"
+        }
+      ],
+      "machineValue": {
+        "confidence": "medium",
+        "variants": [
+          "sArisTAKA",
+          "sArisTAKA~"
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "low-confidence-alignment:U",
+      "queue": "low-confidence-alignment",
+      "subject": {
+        "kind": "alignment",
+        "lemma": "U",
+        "dictionaries": [
+          "MW",
+          "PWG",
+          "PWK",
+          "WIL",
+          "VCP",
+          "SKD"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L133109"
+        },
+        {
+          "dictionary": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L113993"
+        },
+        {
+          "dictionary": "PWK",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L67858"
+        },
+        {
+          "dictionary": "WIL",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L61306"
+        },
+        {
+          "dictionary": "VCP",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L125876"
+        },
+        {
+          "dictionary": "SKD",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L54288"
+        }
+      ],
+      "machineValue": {
+        "confidence": "medium",
+        "variants": [
+          "U",
+          "U~"
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    }
+  ]
+}
