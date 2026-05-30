@@ -158,6 +158,7 @@ npm run build-dcs-corpus           # DCS corpus inventory + grammar profile (Pha
 npm run build-gender-review        # gender-conflict review queue
 npm run build-source-layer-review  # unknown source-layer review queue
 npm run build-alignment-review     # low-confidence alignment review queue
+npm test         # unit tests for the deterministic libs (node --test)
 npm run dev      # starts dev server on http://localhost:3000
 npm run build    # produces dist/ for GitHub Pages
 ```
@@ -189,6 +190,7 @@ npm run build    # produces dist/ for GitHub Pages
 - [ ] Phase 3 later: dictionary↔DCS lemma coverage (needs IAST→SLP1; ~71% of DCS words have `?` diacritic loss); full passage-level corpus when available
 - [ ] Phase 2 follow-ups: sense-depth & citation-apparatus comparison, VCP/SKD prose gender, homonym-split, full-corpus lemma lookup (search backend)
 - [x] Build and link validation
+- [x] Unit tests (`npm test`, `node --test`) for the deterministic libs + CI test workflow
 - [ ] Human review of MW source-layer seed map (unmapped sources → `unknown`)
 - [ ] Human philological review of all 50 TEI/OntoLex cases
 
