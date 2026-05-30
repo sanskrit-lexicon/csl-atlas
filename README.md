@@ -13,7 +13,7 @@ Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskr
 - **Paper tour:** read the current atlas argument pages ([Grounded](src/paper/grounded.md) · [Triangulation](src/paper/triangulation.md) · [Appendices](src/paper/appendices.md)).
 - **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md), and [MW-PWG-PWK interoperability hard cases](src/tools/interoperability-hard-cases.md).
 - **MW Quantitative Depth (Phase 1):** [Depth dashboard](src/tools/mw-depth-dashboard.md), [Diachronic layers](src/tools/mw-diachronic-layers.md), [Family depth](src/tools/mw-family-depth.md).
-- **Comparative Dictionary Lab (Phase 2):** [Coverage matrix](src/tools/dictionary-coverage-matrix.md), [Pairwise overlap](src/tools/dictionary-overlap.md), [Gender conflicts](src/tools/dictionary-conflicts.md), [Homonym splits](src/tools/dictionary-homonyms.md), [Lemma dossier](src/tools/dictionary-dossier.md).
+- **Comparative Dictionary Lab (Phase 2):** [Coverage matrix](src/tools/dictionary-coverage-matrix.md), [Pairwise overlap](src/tools/dictionary-overlap.md), [Gender conflicts](src/tools/dictionary-conflicts.md), [Homonym splits](src/tools/dictionary-homonyms.md), [Citation apparatus](src/tools/dictionary-citations.md), [Lemma dossier](src/tools/dictionary-dossier.md).
 - **Review queues:** [Gender conflicts review](src/tools/review-gender-conflicts.md), [Source-layer review](src/tools/review-source-layers.md), [Alignment confidence](src/tools/review-alignment.md).
 
 Current URL structure:
@@ -108,7 +108,8 @@ npm run validate-dict-comparison
 - **POS/gender disagreement (5 tagged dicts):** lemmas where MW/AP/PWG/PWK/WIL assert disjoint genders, with source links and an alignment-confidence queue.
 - **Per-lemma dossier:** interactive lookup of the ~28.5k lemmas attested in ≥5 dictionaries — per-dictionary record counts, gender, and source links.
 - **Homonym splits (MW/PWG/PWK):** lemmas where the homonym-marking dictionaries disagree on homonym count (`<h>` index) — one splits what another merges.
-- **Deferred:** sense-depth and citation-apparatus comparison, VCP/SKD prose gender, and full-corpus (single-/low-coverage lemma) lookup (needs a search backend). No `LexemeHub` yet — per plan.
+- **Citation apparatus (MW/AP/PWG/PWK):** per-dictionary citation density, apparatus breadth, and most-cited sources (PWG is far the densest at ~6.3 citations/entry).
+- **Deferred:** sense-depth comparison, cross-dictionary source-siglum alignment (MW `MBh` vs PWG `MBH` needs a mapping table), VCP/SKD prose gender, and full-corpus lemma lookup (search backend). No `LexemeHub` yet — per plan.
 
 Pipeline: `scripts/lib/dict-{normalize,manifest,parser,align}.mjs` → `scripts/build-dictionary-comparison.mjs`. See [`docs/DICTIONARY_COMPARISON_PLAN.md`](docs/DICTIONARY_COMPARISON_PLAN.md).
 
@@ -149,6 +150,7 @@ npm run build-coverage
 npm run build-pilot
 npm run build-mw-depth         # MW quantitative depth (Phase 1)
 npm run build-dict-comparison  # comparative dictionary lab (Phase 2)
+npm run build-citation-apparatus   # citation density / apparatus comparison
 npm run build-gender-review        # gender-conflict review queue
 npm run build-source-layer-review  # unknown source-layer review queue
 npm run build-alignment-review     # low-confidence alignment review queue

@@ -5,17 +5,19 @@
 // extractable from <lex>; the prose Sanskrit-Sanskrit lexica (VCP, SKD)
 // are coverage-only in this first slice.
 
-// `homonymMarked` flags the dictionaries that record homonyms with an <h>
-// index (MW, PWG, PWK). The others do not, so homonym-split comparison is
-// restricted to these three.
+// Capability flags per dictionary:
+// - grammarReliable: gender extractable from <lex> (tagged bilingual dicts).
+// - homonymMarked: records homonyms with an <h> index (MW, PWG, PWK).
+// - citationTagged: cites sources with <ls> (MW, AP, PWG, PWK). WIL is
+//   essentially untagged for citations; VCP/SKD cite in prose via `iti`.
 export const DICTS = [
-  { code: "mw", label: "MW", grammarReliable: true, homonymMarked: true },
-  { code: "ap", label: "AP", grammarReliable: true, homonymMarked: false },
-  { code: "pwg", label: "PWG", grammarReliable: true, homonymMarked: true },
-  { code: "pw", label: "PWK", grammarReliable: true, homonymMarked: true },
-  { code: "wil", label: "WIL", grammarReliable: true, homonymMarked: false },
-  { code: "vcp", label: "VCP", grammarReliable: false, homonymMarked: false },
-  { code: "skd", label: "SKD", grammarReliable: false, homonymMarked: false }
+  { code: "mw", label: "MW", grammarReliable: true, homonymMarked: true, citationTagged: true },
+  { code: "ap", label: "AP", grammarReliable: true, homonymMarked: false, citationTagged: true },
+  { code: "pwg", label: "PWG", grammarReliable: true, homonymMarked: true, citationTagged: true },
+  { code: "pw", label: "PWK", grammarReliable: true, homonymMarked: true, citationTagged: true },
+  { code: "wil", label: "WIL", grammarReliable: true, homonymMarked: false, citationTagged: false },
+  { code: "vcp", label: "VCP", grammarReliable: false, homonymMarked: false, citationTagged: false },
+  { code: "skd", label: "SKD", grammarReliable: false, homonymMarked: false, citationTagged: false }
 ];
 
 export const DICT_LABELS = Object.fromEntries(DICTS.map(d => [d.code, d.label]));
