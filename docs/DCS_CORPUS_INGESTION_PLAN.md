@@ -36,6 +36,8 @@ Before any ingestion script:
 
 Write this up (e.g. extend this file or a `DCS_SCHEMA.md`) before writing a parser. This is the corpus equivalent of "inspect MW markup before classifying."
 
+> **Done (2026-05-30):** see [`docs/DCS_SCHEMA.md`](DCS_SCHEMA.md). Key finding: the local `../DCS/` export is **reference data** (a 184/189-text abbreviation list, a bibliography, and a 78k word→grammar-category list), **not** passage-level occurrences. So the `CorpusOccurrence` model and genre/period dashboards below are **not buildable from this export**; what is built (`npm run build-dcs-corpus`) is the text inventory + grammar-category profile. Dictionary↔corpus lemma coverage is deferred (needs IAST→SLP1 and ~71% of CSV words carry a `?` diacritic-loss artifact). The passage-level sections of this plan await the full corpus.
+
 ## Corpus Metadata Model
 
 Every ingested text must preserve the metadata listed in `ARCHITECTURE.md`:

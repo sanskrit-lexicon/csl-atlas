@@ -15,6 +15,7 @@ Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskr
 - **MW Quantitative Depth (Phase 1):** [Depth dashboard](src/tools/mw-depth-dashboard.md), [Diachronic layers](src/tools/mw-diachronic-layers.md), [Family depth](src/tools/mw-family-depth.md).
 - **Comparative Dictionary Lab (Phase 2):** [Coverage matrix](src/tools/dictionary-coverage-matrix.md), [Pairwise overlap](src/tools/dictionary-overlap.md), [Gender conflicts](src/tools/dictionary-conflicts.md), [Homonym splits](src/tools/dictionary-homonyms.md), [Citation apparatus](src/tools/dictionary-citations.md), [Sense depth](src/tools/dictionary-senses.md), [Lemma dossier](src/tools/dictionary-dossier.md).
 - **Review queues:** [Gender conflicts](src/tools/review-gender-conflicts.md), [Source-layer](src/tools/review-source-layers.md), [Alignment confidence](src/tools/review-alignment.md), [Source-siglum aliases](src/tools/review-source-siglum.md).
+- **Corpus (Phase 3):** [DCS corpus inventory](src/tools/dcs-corpus-inventory.md).
 
 Current URL structure:
 
@@ -153,6 +154,7 @@ npm run build-mw-depth         # MW quantitative depth (Phase 1)
 npm run build-dict-comparison  # comparative dictionary lab (Phase 2)
 npm run build-citation-apparatus   # citation density / apparatus comparison
 npm run build-sense-depth          # sense-division richness comparison
+npm run build-dcs-corpus           # DCS corpus inventory + grammar profile (Phase 3)
 npm run build-gender-review        # gender-conflict review queue
 npm run build-source-layer-review  # unknown source-layer review queue
 npm run build-alignment-review     # low-confidence alignment review queue
@@ -183,6 +185,8 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] Review layer (`scripts/lib/review-report.mjs`): gender-conflict (3,671) + unknown-source-layer (449) + low-confidence-alignment (7) + source-siglum-alias (151) queues, schema-conforming, human decisions preserved across rebuilds, 4 review pages
 - [x] Cross-dictionary source-siglum alignment: fold + reviewed alias table → working source × dictionary citation matrix
 - [x] Sense-depth comparison (AP/PWG/PWK): per-dictionary richness, deepest-treatment leaderboard, largest gaps
+- [x] Phase 3a (DCS): schema inspection (`docs/DCS_SCHEMA.md`) — export is reference data, not passages — + corpus text inventory (184 texts) and grammar-category profile
+- [ ] Phase 3 later: dictionary↔DCS lemma coverage (needs IAST→SLP1; ~71% of DCS words have `?` diacritic loss); full passage-level corpus when available
 - [ ] Phase 2 follow-ups: sense-depth & citation-apparatus comparison, VCP/SKD prose gender, homonym-split, full-corpus lemma lookup (search backend)
 - [x] Build and link validation
 - [ ] Human review of MW source-layer seed map (unmapped sources → `unknown`)
