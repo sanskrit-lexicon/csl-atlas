@@ -11,6 +11,32 @@ A comparative microstructural atlas of **nine narrative Sanskrit-dictionary chap
 
 ---
 
+## Evidence atlas — quantitative tracks
+
+Beyond the paper, the atlas is building deterministic, source-linked, evidence-labelled tracks over the CDSL dictionaries and corpus. Every count links back to a source record; uncertainty (`observed` / `derived` / `inferred`) is always visible. See [`ARCHITECTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/ARCHITECTURE.md) and the [reader guide](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md).
+
+<div class="card-grid">
+
+### MW quantitative depth · Phase 1
+
+Monier-Williams anatomy at scale: [depth dashboard](/tools/mw-depth-dashboard) (article types, citations, compound depth), [diachronic layers](/tools/mw-diachronic-layers) (conservative source-layer profile), [family depth](/tools/mw-family-depth) (deepest lexical families).
+
+### Dictionary comparison · Phase 2
+
+Seven dictionaries (MW, AP, PWG, PWK, WIL, VCP, SKD) compared: [coverage matrix](/tools/dictionary-coverage-matrix) · [pairwise overlap](/tools/dictionary-overlap) · [gender conflicts](/tools/dictionary-conflicts) · [homonym splits](/tools/dictionary-homonyms) · [citation apparatus](/tools/dictionary-citations) · [sense depth](/tools/dictionary-senses) · [**lemma dossier** (look up a word)](/tools/dictionary-dossier).
+
+### Corpus · Phase 3
+
+[DCS corpus inventory](/tools/dcs-corpus-inventory) — 184 texts and the word-grammar profile of the Digital Corpus of Sanskrit reference export.
+
+### Review queues
+
+Machine-flagged cases awaiting human judgement, schema-conforming and source-linked: [gender conflicts](/tools/review-gender-conflicts) · [source layers](/tools/review-source-layers) · [alignment confidence](/tools/review-alignment) · [source-siglum aliases](/tools/review-source-siglum).
+
+</div>
+
+---
+
 ## How to read this atlas
 
 Chapters are ordered to mirror the [paper's argument arc](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md) per [Decision 29](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27):
