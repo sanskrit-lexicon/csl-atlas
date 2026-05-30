@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-05-29T09:33:31.491Z",
+  "generatedAt": "2026-05-30T18:17:21.529Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -44,7 +44,7 @@
     "Counts are distinct normalized lemmas; homonym record counts are preserved per dictionary but not split here."
   ],
   "warnings": [],
-  "distinctLemmas": 298427,
+  "distinctLemmas": 298413,
   "recordsByDict": {
     "MW": 286560,
     "AP": 90654,
@@ -59,15 +59,15 @@
     "AP": 88701,
     "PWG": 106080,
     "PWK": 151346,
-    "WIL": 43938,
-    "VCP": 48636,
-    "SKD": 40814
+    "WIL": 43936,
+    "VCP": 48629,
+    "SKD": 40812
   },
   "coverageHistogram": {
-    "1": 123633,
-    "2": 67723,
-    "3": 54138,
-    "4": 24421,
+    "1": 123617,
+    "2": 67725,
+    "3": 54137,
+    "4": 24422,
     "5": 18563,
     "6": 8036,
     "7": 1913
@@ -78,7 +78,7 @@
         "MW"
       ],
       "size": 1,
-      "count": 45113
+      "count": 45112
     },
     {
       "dicts": [
@@ -87,14 +87,14 @@
         "PWK"
       ],
       "size": 3,
-      "count": 43793
+      "count": 43792
     },
     {
       "dicts": [
         "AP"
       ],
       "size": 1,
-      "count": 35767
+      "count": 35762
     },
     {
       "dicts": [
@@ -109,7 +109,7 @@
         "SKD"
       ],
       "size": 1,
-      "count": 17197
+      "count": 17192
     },
     {
       "dicts": [
@@ -124,7 +124,7 @@
         "SKD"
       ],
       "size": 2,
-      "count": 13010
+      "count": 13013
     },
     {
       "dicts": [
@@ -155,7 +155,7 @@
         "PWK"
       ],
       "size": 4,
-      "count": 8045
+      "count": 8046
     },
     {
       "dicts": [
@@ -171,7 +171,7 @@
         "AP"
       ],
       "size": 2,
-      "count": 6511
+      "count": 6512
     },
     {
       "dicts": [
@@ -190,7 +190,7 @@
         "VCP"
       ],
       "size": 1,
-      "count": 5196
+      "count": 5191
     },
     {
       "dicts": [
@@ -291,7 +291,7 @@
         "VCP"
       ],
       "size": 2,
-      "count": 1415
+      "count": 1413
     },
     {
       "dicts": [

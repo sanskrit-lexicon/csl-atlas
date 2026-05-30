@@ -5,14 +5,17 @@
 // extractable from <lex>; the prose Sanskrit-Sanskrit lexica (VCP, SKD)
 // are coverage-only in this first slice.
 
+// `homonymMarked` flags the dictionaries that record homonyms with an <h>
+// index (MW, PWG, PWK). The others do not, so homonym-split comparison is
+// restricted to these three.
 export const DICTS = [
-  { code: "mw", label: "MW", grammarReliable: true },
-  { code: "ap", label: "AP", grammarReliable: true },
-  { code: "pwg", label: "PWG", grammarReliable: true },
-  { code: "pw", label: "PWK", grammarReliable: true },
-  { code: "wil", label: "WIL", grammarReliable: true },
-  { code: "vcp", label: "VCP", grammarReliable: false },
-  { code: "skd", label: "SKD", grammarReliable: false }
+  { code: "mw", label: "MW", grammarReliable: true, homonymMarked: true },
+  { code: "ap", label: "AP", grammarReliable: true, homonymMarked: false },
+  { code: "pwg", label: "PWG", grammarReliable: true, homonymMarked: true },
+  { code: "pw", label: "PWK", grammarReliable: true, homonymMarked: true },
+  { code: "wil", label: "WIL", grammarReliable: true, homonymMarked: false },
+  { code: "vcp", label: "VCP", grammarReliable: false, homonymMarked: false },
+  { code: "skd", label: "SKD", grammarReliable: false, homonymMarked: false }
 ];
 
 export const DICT_LABELS = Object.fromEntries(DICTS.map(d => [d.code, d.label]));

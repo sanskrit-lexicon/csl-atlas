@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-05-29T09:46:21.169Z",
+  "generatedAt": "2026-05-30T18:17:22.336Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -41,7 +41,7 @@
   ],
   "assumptions": [],
   "warnings": [],
-  "distinctLemmas": 298427,
+  "distinctLemmas": 298413,
   "dossierEntries": 28512,
   "recordsByDict": {
     "MW": 286560,
@@ -53,5 +53,6 @@
     "SKD": 42531
   },
   "intersectionAll": 1913,
-  "genderConflicts": 3671
+  "genderConflicts": 3671,
+  "homonymSplits": 3586
 }

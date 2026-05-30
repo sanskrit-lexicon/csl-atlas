@@ -59,7 +59,8 @@ export function* iterateDict(code) {
     } else if (line.startsWith("<LEND>")) {
       if (header == null) continue;
       const k1 = headerField(header, "k1");
-      yield { k1, body: bodyLines.join("\n"), startLine, href: dictHref(code, startLine) };
+      const h = headerField(header, "h"); // homonym index, where the dictionary marks one
+      yield { k1, h, body: bodyLines.join("\n"), startLine, href: dictHref(code, startLine) };
       header = null;
       bodyLines = [];
     } else if (header != null) {
