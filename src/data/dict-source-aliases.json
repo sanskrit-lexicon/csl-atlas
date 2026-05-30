@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Cross-dictionary source-siglum aliases (reviewed seed)",
+  "description": "Maps fold-key variants of source sigla to a shared canonical id, for cross-dictionary citation comparison. The diacritic/case fold in source-siglum.mjs already aligns most variants (MBh/MBH -> mbh, RV/ṚV -> rv); this table only records the abbreviation-scheme differences the fold cannot catch. It is a SEED: grow it from the source-siglum review queue. Keys under 'aliases' are matched after folding.",
+  "canonical": {
+    "bhp": {
+      "name": "Bhāgavata-purāṇa",
+      "aliases": ["bhag"]
+    }
+  }
+}

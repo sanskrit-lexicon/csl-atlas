@@ -14,7 +14,7 @@ Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskr
 - **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md), and [MW-PWG-PWK interoperability hard cases](src/tools/interoperability-hard-cases.md).
 - **MW Quantitative Depth (Phase 1):** [Depth dashboard](src/tools/mw-depth-dashboard.md), [Diachronic layers](src/tools/mw-diachronic-layers.md), [Family depth](src/tools/mw-family-depth.md).
 - **Comparative Dictionary Lab (Phase 2):** [Coverage matrix](src/tools/dictionary-coverage-matrix.md), [Pairwise overlap](src/tools/dictionary-overlap.md), [Gender conflicts](src/tools/dictionary-conflicts.md), [Homonym splits](src/tools/dictionary-homonyms.md), [Citation apparatus](src/tools/dictionary-citations.md), [Lemma dossier](src/tools/dictionary-dossier.md).
-- **Review queues:** [Gender conflicts review](src/tools/review-gender-conflicts.md), [Source-layer review](src/tools/review-source-layers.md), [Alignment confidence](src/tools/review-alignment.md).
+- **Review queues:** [Gender conflicts](src/tools/review-gender-conflicts.md), [Source-layer](src/tools/review-source-layers.md), [Alignment confidence](src/tools/review-alignment.md), [Source-siglum aliases](src/tools/review-source-siglum.md).
 
 Current URL structure:
 
@@ -108,8 +108,8 @@ npm run validate-dict-comparison
 - **POS/gender disagreement (5 tagged dicts):** lemmas where MW/AP/PWG/PWK/WIL assert disjoint genders, with source links and an alignment-confidence queue.
 - **Per-lemma dossier:** interactive lookup of the ~28.5k lemmas attested in ≥5 dictionaries — per-dictionary record counts, gender, and source links.
 - **Homonym splits (MW/PWG/PWK):** lemmas where the homonym-marking dictionaries disagree on homonym count (`<h>` index) — one splits what another merges.
-- **Citation apparatus (MW/AP/PWG/PWK):** per-dictionary citation density, apparatus breadth, and most-cited sources (PWG is far the densest at ~6.3 citations/entry).
-- **Deferred:** sense-depth comparison, cross-dictionary source-siglum alignment (MW `MBh` vs PWG `MBH` needs a mapping table), VCP/SKD prose gender, and full-corpus lemma lookup (search backend). No `LexemeHub` yet — per plan.
+- **Citation apparatus (MW/AP/PWG/PWK):** per-dictionary citation density (PWG is far the densest at ~6.3/entry), apparatus breadth, most-cited sources, and a **cross-dictionary source matrix** aligned by canonical siglum (fold + reviewed alias table `src/data/dict-source-aliases.json`).
+- **Deferred:** sense-depth comparison, VCP/SKD prose gender, and full-corpus lemma lookup (search backend). No `LexemeHub` yet — per plan.
 
 Pipeline: `scripts/lib/dict-{normalize,manifest,parser,align}.mjs` → `scripts/build-dictionary-comparison.mjs`. See [`docs/DICTIONARY_COMPARISON_PLAN.md`](docs/DICTIONARY_COMPARISON_PLAN.md).
 
@@ -178,7 +178,8 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] MW Quantitative Depth Phase 1: parser, classifiers, source-layer + family-depth metrics, 3 dashboards
 - [x] Comparative Dictionary Lab Phase 2 (first slice): 7-dictionary coverage/overlap/intersection/unique + tagged-dict gender disagreement, 4 pages
 - [x] Per-lemma dossier: interactive lookup over ~28.5k lemmas in ≥5 dictionaries
-- [x] Review layer (`scripts/lib/review-report.mjs`): gender-conflict (3,671) + unknown-source-layer (449) + low-confidence-alignment (7) queues, schema-conforming, human decisions preserved across rebuilds, 3 review pages
+- [x] Review layer (`scripts/lib/review-report.mjs`): gender-conflict (3,671) + unknown-source-layer (449) + low-confidence-alignment (7) + source-siglum-alias (151) queues, schema-conforming, human decisions preserved across rebuilds, 4 review pages
+- [x] Cross-dictionary source-siglum alignment: fold + reviewed alias table → working source × dictionary citation matrix
 - [ ] Phase 2 follow-ups: sense-depth & citation-apparatus comparison, VCP/SKD prose gender, homonym-split, full-corpus lemma lookup (search backend)
 - [x] Build and link validation
 - [ ] Human review of MW source-layer seed map (unmapped sources → `unknown`)

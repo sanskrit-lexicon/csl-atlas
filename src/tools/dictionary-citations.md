@@ -71,8 +71,41 @@ display(Inputs.table(chosen.topSources.map((s, i) => ({ rank: i + 1, source: s.s
 }));
 ```
 
-<div class="warning" label="Deferred">
-A shared <b>source × dictionary</b> matrix and cross-dictionary source overlap are not shown: the dictionaries use different siglum conventions (MW <code>MBh</code> vs PWG <code>MBH</code>, <code>RV</code> vs <code>ṚV</code>), so naive matching is wrong. Aligning them needs a reviewed cross-dictionary siglum-mapping table — a scholarly task for a later slice. Each list above is therefore each dictionary's <i>own</i> sigla.
+## Shared sources across dictionaries
+
+Now aligned by a canonical siglum (diacritic/case fold + a [reviewed alias table](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dict-source-aliases.json)), so MW `MBh`, PWG `MBH` and `ṚV`/`RV` count together. Counts are citations of each source per dictionary.
+
+```js
+const matrix = data.sourceMatrix;
+const dictsCols = data.citationTaggedDicts;
+display(Inputs.table(matrix.map(s => ({ source: s.source, "in N dicts": s.dictsCiting, ...s.byDict })), {
+  columns: ["source", "in N dicts", ...dictsCols],
+  rows: 30,
+  sort: "in N dicts",
+  reverse: true
+}));
+```
+
+```js
+display(Plot.plot({
+  marginLeft: 60,
+  marginBottom: 50,
+  width: 520,
+  height: 360,
+  color: { scheme: "blues", label: "shared sigla (Jaccard)", legend: true },
+  x: { domain: dictsCols, label: null },
+  y: { domain: dictsCols, label: null },
+  marks: [
+    Plot.cell(data.sourceOverlap.flatMap(o => [{ a: o.a, b: o.b, j: o.jaccard }, { a: o.b, b: o.a, j: o.jaccard }]),
+      { x: "a", y: "b", fill: "j" }),
+    Plot.text(data.sourceOverlap.flatMap(o => [{ a: o.a, b: o.b, j: o.jaccard }, { a: o.b, b: o.a, j: o.jaccard }]),
+      { x: "a", y: "b", text: d => d.j.toFixed(2), fill: d => d.j > 0.12 ? "white" : "black", fontSize: 11 })
+  ]
+}));
+```
+
+<div class="note">
+Alignment is fold + a small reviewed alias table; sigla that still differ by abbreviation scheme (e.g. MW <code>Pāṇ</code> vs PWG <code>P</code>) are surfaced for review on the <a href="review-source-siglum">source-siglum review queue</a> and merged by adding an alias.
 </div>
 
 ---
