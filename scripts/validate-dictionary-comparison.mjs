@@ -18,6 +18,7 @@ const REQUIRED = [
   "pos-disagreement.json",
   "alignment-confidence.json",
   "homonym-split.json",
+  "sense-depth.json",
   "lemma-dossier.json",
   "dictionary-comparison-validation.json"
 ];
@@ -62,6 +63,14 @@ if (hom) {
   const missing = (hom.candidates || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
   if (missing.length) errors.push(`${missing.length} homonym-split candidates lack source links.`);
   else notes.push(`${hom.candidateCount} homonym-split candidates (${hom.shown} shown), all with source links.`);
+}
+
+const sense = docs["sense-depth.json"];
+if (sense) {
+  if (!Array.isArray(sense.perDict) || sense.perDict.length < 2) errors.push("sense-depth needs >=2 dictionaries.");
+  const missing = (sense.topDisparities || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
+  if (missing.length) errors.push(`${missing.length} sense-depth disparities lack source links.`);
+  else notes.push(`${sense.disparityCount} sense-depth disparities (${sense.shown} shown), all with source links.`);
 }
 
 const dossier = docs["lemma-dossier.json"];
