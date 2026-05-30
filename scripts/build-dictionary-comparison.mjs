@@ -27,6 +27,7 @@ const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02"
 
 const ORDER = DICTS.map(d => d.code);
 const TAGGED = DICTS.filter(d => d.grammarReliable).map(d => d.code);
+const HOMONYM_DICTS = DICTS.filter(d => d.homonymMarked).map(d => d.code);
 
 function envelope(extra, { assumptions = [], warnings = [] }) {
   return {
@@ -73,11 +74,12 @@ function buildIndex(warnings) {
       }
       let slot = entry[code];
       if (!slot) {
-        slot = { records: 0, raws: new Set(), genders: new Set(), example: null };
+        slot = { records: 0, raws: new Set(), genders: new Set(), homs: new Set(), example: null };
         entry[code] = slot;
       }
       slot.records += 1;
       slot.raws.add(rec.k1.trim());
+      if (rec.h) slot.homs.add(rec.h.trim());
       const g = genderFromLex(rec.body);
       if (g) slot.genders.add(g);
       if (!slot.example) slot.example = { k1: rec.k1, line: rec.startLine, href: rec.href };
@@ -109,6 +111,8 @@ function main() {
   let conflictCount = 0;
   const lowConfidence = [];
   const dossier = [];
+  const homonymSplits = [];
+  let homonymSplitCount = 0;
 
   for (const [normalized, entry] of index) {
     const codes = presentDicts(entry, ORDER);
@@ -162,6 +166,30 @@ function main() {
           [...entry[code].genders].filter(g => GENDER_TOKENS.has(g)).sort().join("")
         ])
       });
+    }
+
+    // homonym split: among the homonym-marking dicts (MW, PWG, PWK) that
+    // contain the lemma, do they disagree on how many homonyms it has?
+    // homonymCount = distinct <h> indices, or 1 when none are marked.
+    const homDicts = HOMONYM_DICTS.filter(c => entry[c]);
+    if (homDicts.length >= 2) {
+      const counts = {};
+      for (const c of homDicts) counts[c] = entry[c].homs.size || 1;
+      const vals = Object.values(counts);
+      const max = Math.max(...vals);
+      const min = Math.min(...vals);
+      if (max >= 2 && max !== min) {
+        homonymSplitCount += 1;
+        if (homonymSplits.length < 400) {
+          homonymSplits.push({
+            lemma: normalized,
+            byDict: Object.fromEntries(homDicts.map(c => [DICT_LABELS[c], counts[c]])),
+            maxHomonyms: max,
+            spread: max - min,
+            examples: homDicts.map(c => ({ dict: DICT_LABELS[c], href: entry[c].example.href }))
+          });
+        }
+      }
     }
 
     // gender conflict (tagged dicts)
@@ -266,6 +294,32 @@ function main() {
     )
   );
 
+  // 5b. Homonym split: where the homonym-marking dictionaries disagree on
+  // how many homonyms a lemma has (UC-LX-10). Sorted by spread then max.
+  homonymSplits.sort((a, b) => b.spread - a.spread || b.maxHomonyms - a.maxHomonyms || a.lemma.localeCompare(b.lemma));
+  written.push(
+    writeJson(
+      "homonym-split.json",
+      envelope(
+        {
+          homonymDicts: HOMONYM_DICTS.map(c => DICT_LABELS[c]),
+          candidateCount: homonymSplitCount,
+          shown: homonymSplits.length,
+          candidates: homonymSplits
+        },
+        {
+          assumptions: [
+            `Homonym counts use the <h> index; only the homonym-marking dictionaries carry it: ${HOMONYM_DICTS.map(c => DICT_LABELS[c]).join(", ")}.`,
+            "homonymCount = distinct <h> values for the lemma, or 1 when none are marked.",
+            "A candidate is a lemma present in >=2 of those dictionaries where the homonym count differs and the maximum is >=2 (one dictionary splits what another merges).",
+            "Differing homonymy is usually legitimate lexicographic practice, not an error; this is an analysis view, not a correction queue."
+          ],
+          warnings: ["AP, WIL, VCP, SKD do not mark homonyms with <h> and are excluded."]
+        }
+      )
+    )
+  );
+
   // 6. Alignment confidence + low-confidence review queue.
   written.push(
     writeJson(
@@ -314,6 +368,7 @@ function main() {
     recordsByDict: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], perDictRecords[c]])),
     intersectionAll: intersectionAll.count,
     genderConflicts: conflictCount,
+    homonymSplits: homonymSplitCount,
     warnings
   };
   written.push(writeJson("dictionary-comparison-validation.json", envelope(report, { warnings })));
