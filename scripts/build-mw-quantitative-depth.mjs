@@ -8,6 +8,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { parseMwFile, MW_SOURCE } from "./lib/mw-parser.mjs";
 import { classifyTypes, ARTICLE_TYPES } from "./lib/mw-classifiers.mjs";
 import {
@@ -319,4 +320,5 @@ export function compareCounts(typeCounts, expected, recordCount) {
   return { expectedSource: "src/data/article-type-counts.json", recordCount, typeDiffs, warnings };
 }
 
-main();
+// Run only when executed directly (`node scripts/...`), not when imported by tests.
+if (import.meta.url === pathToFileURL(process.argv[1]).href) main();
