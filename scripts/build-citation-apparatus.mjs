@@ -13,6 +13,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { extractCitations, normalizeSource } from "./lib/mw-classifiers.mjs";
@@ -67,7 +68,7 @@ function analyse(code, tagged) {
 }
 
 // Most frequent raw form for a canonical id within one dictionary.
-function topForm(sourceEntry) {
+export function topForm(sourceEntry) {
   let best = null;
   let bestN = -1;
   for (const [form, n] of sourceEntry.forms) {
@@ -243,4 +244,5 @@ function writeSiglumReviewQueue(perDictRaw) {
   console.log(`- ${path.relative(process.cwd(), REVIEW_OUT)}`);
 }
 
-main();
+// Run only when executed directly, not when imported by tests.
+if (import.meta.url === pathToFileURL(process.argv[1]).href) main();
