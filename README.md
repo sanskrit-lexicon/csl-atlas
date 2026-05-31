@@ -132,6 +132,7 @@ Architecture and planning:
 - [Dictionary comparison plan](docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
 - [DCS corpus ingestion plan](docs/DCS_CORPUS_INGESTION_PLAN.md) (Phase 3)
 - [Review reports](docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary
+- [Changelog](CHANGELOG.md) — what changed and when
 
 ---
 

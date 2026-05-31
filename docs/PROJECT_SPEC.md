@@ -2,6 +2,8 @@
 
 Date: 2026-05-28
 
+> Scope note: this is the specification for the **interoperability pilot track**. The broader evidence-atlas direction (MW depth, dictionary comparison, corpus, review layer) is specified in [`ARCHITECTURE.md`](../ARCHITECTURE.md); recent history is in [`CHANGELOG.md`](../CHANGELOG.md).
+
 ## Mission
 
 Build a public, bilingual research atlas that compares the lexicographic meaning encoded in three related Sanskrit dictionaries:
