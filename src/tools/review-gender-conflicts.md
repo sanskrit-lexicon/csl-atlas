@@ -12,7 +12,7 @@ const review = FileAttachment("../data/review/gender-conflicts-review.json").jso
 ```
 
 <div class="warning" label="Evidence: derived · review overlay">
-Gender is <b>derived</b> from <code>&lt;lex&gt;</code> tags; a conflict means two dictionaries assert disjoint specific genders. This page reads the review overlay (<code>src/data/review/gender-conflicts-review.json</code>, schema <code>data/schema/review-report.schema.json</code>). To record a decision, set an item's <code>reviewStatus</code> / <code>reviewedValue</code> / <code>reviewer</code> in that file; rebuilds preserve it by <code>reviewId</code>.
+Gender is <b>derived</b> from <code>&lt;lex&gt;</code> tags (MW, AP, PWG, PWK, WIL) and <b>prose markers</b> (VCP, SKD); a conflict means two dictionaries assert disjoint specific genders. This page reads the review overlay (<code>src/data/review/gender-conflicts-review.json</code>, schema <code>data/schema/review-report.schema.json</code>). To record a decision, set an item's <code>reviewStatus</code> / <code>reviewedValue</code> / <code>reviewer</code> in that file; rebuilds preserve it by <code>reviewId</code>.
 </div>
 
 ```js

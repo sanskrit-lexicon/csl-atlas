@@ -111,7 +111,8 @@ npm run validate-dict-comparison
 - **Homonym splits (MW/PWG/PWK):** lemmas where the homonym-marking dictionaries disagree on homonym count (`<h>` index) — one splits what another merges.
 - **Citation apparatus (MW/AP/PWG/PWK):** per-dictionary citation density (PWG is far the densest at ~6.3/entry), apparatus breadth, most-cited sources, and a **cross-dictionary source matrix** aligned by canonical siglum (fold + reviewed alias table `src/data/dict-source-aliases.json`).
 - **Sense depth (AP/PWG/PWK):** sense-division richness per dictionary and the deepest treatment per shared lemma (AP densest at ~1.74/entry; roots show the Petersburg dictionaries' exhaustive sense splitting). MW/WIL/VCP/SKD segment senses in prose and are excluded.
-- **Deferred:** VCP/SKD prose gender, and full-corpus lemma lookup (search backend). No `LexemeHub` yet — per plan.
+- **Gender (all 7):** the gender comparison and review queue now include VCP/SKD via prose markers (VCP under-marks f/n — documented), alongside the five `<lex>`-tagged dictionaries.
+- **Deferred:** full-corpus lemma lookup (search backend). No `LexemeHub` yet — per plan.
 
 Pipeline: `scripts/lib/dict-{normalize,manifest,parser,align}.mjs` → `scripts/build-dictionary-comparison.mjs`. See [`docs/DICTIONARY_COMPARISON_PLAN.md`](docs/DICTIONARY_COMPARISON_PLAN.md).
 
@@ -188,7 +189,7 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] Sense-depth comparison (AP/PWG/PWK): per-dictionary richness, deepest-treatment leaderboard, largest gaps
 - [x] Phase 3a (DCS): schema inspection (`docs/DCS_SCHEMA.md`) — export is reference data, not passages — + corpus text inventory (184 texts) and grammar-category profile
 - [ ] Phase 3 later: dictionary↔DCS lemma coverage (needs IAST→SLP1; ~71% of DCS words have `?` diacritic loss); full passage-level corpus when available
-- [ ] Phase 2 follow-ups: sense-depth & citation-apparatus comparison, VCP/SKD prose gender, homonym-split, full-corpus lemma lookup (search backend)
+- [ ] Phase 2 follow-ups: full-corpus lemma lookup (search backend); cross-dictionary siglum alias-table growth via review
 - [x] Build and link validation
 - [x] Unit tests (`npm test`, `node --test`) for the deterministic libs + CI test workflow
 - [ ] Human review of MW source-layer seed map (unmapped sources → `unknown`)

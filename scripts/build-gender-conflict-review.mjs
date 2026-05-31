@@ -14,7 +14,7 @@
 
 import path from "node:path";
 import { DICTS, DICT_LABELS, dictHref } from "./lib/dict-manifest.mjs";
-import { iterateDict, dictExists, genderFromLex } from "./lib/dict-parser.mjs";
+import { iterateDict, dictExists, genderForDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { genderConflict } from "./lib/dict-align.mjs";
 import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
@@ -24,18 +24,19 @@ import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/r
 // preserved by reviewId.
 const OUTPUT = path.resolve(process.cwd(), "src", "data", "review", "gender-conflicts-review.json");
 
-const TAGGED = DICTS.filter(d => d.grammarReliable).map(d => d.code);
+// All gender-bearing dictionaries: <lex> for the tagged set, prose markers for VCP/SKD.
+const GENDER_DICTS = DICTS.map(d => d.code);
 
-function buildTaggedIndex(warnings) {
+function buildGenderIndex(warnings) {
   const index = new Map(); // normalized -> { code -> { genders:Set, line } }
-  for (const code of TAGGED) {
+  for (const code of GENDER_DICTS) {
     if (!dictExists(code)) {
       warnings.push(`Missing source for ${code}; skipped.`);
       continue;
     }
     for (const rec of iterateDict(code)) {
       if (!rec.k1) continue;
-      const g = genderFromLex(rec.body);
+      const g = genderForDict(code, rec.body);
       if (!g) continue; // only entries that assert a gender/POS matter here
       const { normalized } = normalizeLemma(rec.k1);
       if (!normalized) continue;
@@ -59,13 +60,13 @@ function buildTaggedIndex(warnings) {
 function main() {
   const warnings = [];
   const preserved = loadPreserved(OUTPUT);
-  console.log(`Indexing tagged dictionaries (${TAGGED.map(c => DICT_LABELS[c]).join(", ")})...`);
-  const index = buildTaggedIndex(warnings);
+  console.log(`Indexing gender-bearing dictionaries (${GENDER_DICTS.map(c => DICT_LABELS[c]).join(", ")})...`);
+  const index = buildGenderIndex(warnings);
 
   const items = [];
   let preservedCount = 0;
   for (const [lemma, entry] of index) {
-    const gc = genderConflict(entry, TAGGED);
+    const gc = genderConflict(entry, GENDER_DICTS);
     if (!gc.conflict) continue;
 
     const reviewId = `gender-conflict:${lemma}`;
@@ -96,16 +97,16 @@ function main() {
 
   const payload = reviewPayload({
     queue: "pos-gender-conflict",
-    sourcePath: "../csl-orig/v02/{mw,ap,pwg,pw,wil}/*.txt",
+    sourcePath: "../csl-orig/v02/{mw,ap,pwg,pw,wil,vcp,skd}/*.txt",
     items,
     assumptions: [
-      "Conflicts are derived from <lex> gender tags in the grammar-reliable tagged dictionaries (MW, AP, PWG, PWK, WIL).",
+      "Gender is from <lex> for the tagged dictionaries (MW, AP, PWG, PWK, WIL) and from prose markers for VCP and SKD.",
       "A conflict means two dictionaries assert disjoint specific genders ({m,f,n}); adjective/indeclinable tags never trigger one.",
       "Within-dictionary polysemy (one lemma listed under several genders) does not count as a conflict.",
       "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds."
     ],
     warnings: [
-      "VCP and SKD encode gender in prose and are excluded.",
+      "VCP prose markers under-mark feminine/neuter at the anchor position, so some VCP f/n genders are absent (missed conflicts, never false ones).",
       ...warnings
     ]
   });
