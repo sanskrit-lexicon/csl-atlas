@@ -6,6 +6,7 @@
   "license": "CC-BY-SA-4.0",
   "scripts": {
     "dev": "observable preview",
+    "test": "node --test",
     "build": "observable build",
     "deploy": "observable deploy",
     "sample-hard-cases": "node scripts/sample-hard-cases.mjs",
