@@ -10,7 +10,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
-import { iterateDict, dictExists, genderFromLex } from "./lib/dict-parser.mjs";
+import { iterateDict, dictExists, genderForDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { presentDicts, lemmaConfidence, genderConflict } from "./lib/dict-align.mjs";
 
@@ -80,7 +80,7 @@ function buildIndex(warnings) {
       slot.records += 1;
       slot.raws.add(rec.k1.trim());
       if (rec.h) slot.homs.add(rec.h.trim());
-      const g = genderFromLex(rec.body);
+      const g = genderForDict(code, rec.body);
       if (g) slot.genders.add(g);
       if (!slot.example) slot.example = { k1: rec.k1, line: rec.startLine, href: rec.href };
     }
@@ -192,8 +192,8 @@ function main() {
       }
     }
 
-    // gender conflict (tagged dicts)
-    const gc = genderConflict(entry, TAGGED);
+    // gender conflict across all gender-bearing dicts (lex + prose)
+    const gc = genderConflict(entry, ORDER);
     if (gc.conflict) {
       conflictCount += 1;
       if (conflicts.length < SAMPLE * 4) {
@@ -284,11 +284,11 @@ function main() {
         { conflictCount, shown: conflicts.length, conflicts },
         {
           assumptions: [
-            `Gender conflicts are computed only across grammar-reliable tagged dictionaries: ${TAGGED.map(c => DICT_LABELS[c]).join(", ")}.`,
+            "Gender is taken from <lex> for the tagged dictionaries (MW, AP, PWG, PWK, WIL) and from prose markers for VCP and SKD.",
             "A conflict means two dictionaries assert disjoint specific genders ({m,f,n}); adjective/indeclinable tags never trigger one.",
             "Within-dictionary polysemy (a lemma listed under several genders) does not count as a conflict."
           ],
-          warnings: ["VCP and SKD encode gender in prose and are excluded from conflict detection in this slice."]
+          warnings: ["VCP prose markers reliably capture m/adj/ind but under-mark f/n at the anchor position, so some VCP feminine/neuter genders are absent (missed conflicts, never false ones)."]
         }
       )
     )

@@ -40,6 +40,43 @@ export function genderFromLex(body) {
   return null;
 }
 
+// Prose gender/POS markers for the Sanskrit-Sanskrit lexica (VCP, SKD).
+// VCP writes them as "<token>0" right after the headword separator ¦;
+// SKD writes them as a comma-delimited "<token>," token.
+const PROSE_GENDER = {
+  pu: "m", puM: "m",
+  strI: "f",
+  klI: "n", napuM: "n",
+  tri: "adj",
+  avya: "ind", vya: "ind"
+};
+
+/**
+ * Extract a coarse gender/POS from a prose lexicon entry (VCP, SKD), anchored
+ * to the first marker token after the headword separator ¦. Returns
+ * m / f / n / adj / ind, or null when the leading token is not a gender/POS
+ * marker (e.g. a verb-class marker or an unrecognized token).
+ */
+export function genderFromProse(body, code) {
+  const i = body.indexOf("¦");
+  if (i === -1) return null;
+  let s = body.slice(i + 1).replace(/^[\s,]+/, "");
+  s = s.replace(/^\[[^\]]*\]\s*,?\s*/, ""); // skip a leading bracket note like [n]
+  const m = code === "vcp" ? s.match(/^([A-Za-z]+)0/) : s.match(/^([A-Za-z]+)\s*,/);
+  if (!m) return null;
+  return PROSE_GENDER[m[1]] ?? null;
+}
+
+const PROSE_GENDER_DICTS = new Set(["vcp", "skd"]);
+
+/**
+ * Coarse gender/POS for any dictionary: from <lex> for the tagged dictionaries,
+ * from prose markers for the Sanskrit-Sanskrit lexica (VCP, SKD).
+ */
+export function genderForDict(code, body) {
+  return PROSE_GENDER_DICTS.has(code) ? genderFromProse(body, code) : genderFromLex(body);
+}
+
 /**
  * Iterate records of one dictionary file.
  * Yields { k1, body, startLine, href }.

@@ -13,7 +13,7 @@ const conf = FileAttachment("../data/dicts/alignment-confidence.json").json();
 ```
 
 <div class="warning" label="Evidence: derived">
-Gender is <b>derived</b> from <code>&lt;lex&gt;</code> tags in the grammar-reliable dictionaries (MW, AP, PWG, PWK, WIL). VCP and SKD encode gender in prose and are excluded from conflict detection in this slice. A conflict means the dictionaries disagree on a specific gender; adjective/indeclinable tags never trigger one.
+Gender is <b>derived</b> from <code>&lt;lex&gt;</code> tags in the tagged dictionaries (MW, AP, PWG, PWK, WIL) and from <b>prose markers</b> in VCP and SKD. A conflict means the dictionaries disagree on a specific gender; adjective/indeclinable tags never trigger one. VCP under-marks feminine/neuter at the anchor position, so some VCP f/n genders are simply absent (a missed conflict, never a false one).
 </div>
 
 ```js
@@ -26,7 +26,7 @@ display(Inputs.table(pos.conflicts.map(c => ({
   ...Object.fromEntries(Object.entries(c.byDict).map(([d, g]) => [d, g.join("/")])),
   sources: c.examples
 })), {
-  columns: ["lemma", "MW", "AP", "PWG", "PWK", "WIL", "sources"],
+  columns: ["lemma", "MW", "AP", "PWG", "PWK", "WIL", "VCP", "SKD", "sources"],
   format: {
     sources: examples => html`${examples.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}`
   }

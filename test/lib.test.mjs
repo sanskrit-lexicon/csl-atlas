@@ -16,7 +16,7 @@ import { classifyTypes, normalizeSource, isLexicographerOnly, extractCitations }
 import { baseForm, layerForSource, isEditorialReference, recordSourceLayers } from "../scripts/lib/mw-source-layers.mjs";
 import { compoundSegmentCount, familyBase } from "../scripts/lib/mw-depth-graph.mjs";
 import { normalizeLemma } from "../scripts/lib/dict-normalize.mjs";
-import { genderFromLex } from "../scripts/lib/dict-parser.mjs";
+import { genderFromLex, genderFromProse, genderForDict } from "../scripts/lib/dict-parser.mjs";
 import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/dict-align.mjs";
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
@@ -131,6 +131,28 @@ test("genderFromLex maps <lex> to coarse tokens", () => {
   assert.equal(genderFromLex("<lex>Adj.</lex>"), "adj");
   assert.equal(genderFromLex("<lex>ind.</lex>"), "ind");
   assert.equal(genderFromLex("no tag"), null);
+});
+
+test("genderFromProse: VCP markers (token + '0' after ¦)", () => {
+  assert.equal(genderFromProse("a¦ pu0 avati rakzati", "vcp"), "m");
+  assert.equal(genderFromProse("x¦ strI0 ...", "vcp"), "f");
+  assert.equal(genderFromProse("x¦ tri0 ...", "vcp"), "adj");
+  assert.equal(genderFromProse("x¦ avya0 ...", "vcp"), "ind");
+  assert.equal(genderFromProse("x¦ cu0 ...", "vcp"), null); // verb-class marker, not gender
+  assert.equal(genderFromProse("no separator", "vcp"), null);
+});
+
+test("genderFromProse: SKD markers (comma-delimited after ¦)", () => {
+  assert.equal(genderFromProse("a¦, puM, (atati...", "skd"), "m");
+  assert.equal(genderFromProse("x¦, klI, dinaM", "skd"), "n");
+  assert.equal(genderFromProse("x¦, strI, ...", "skd"), "f");
+  assert.equal(genderFromProse("x¦, [n], tri, (na...", "skd"), "adj"); // skips bracket note
+});
+
+test("genderForDict dispatches lex vs prose by code", () => {
+  assert.equal(genderForDict("mw", "<lex>m.</lex>"), "m");
+  assert.equal(genderForDict("vcp", "a¦ pu0 x"), "m");
+  assert.equal(genderForDict("skd", "a¦, klI, x"), "n");
 });
 
 // ---- dict-align ----
