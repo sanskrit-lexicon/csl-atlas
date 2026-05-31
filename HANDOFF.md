@@ -5,6 +5,8 @@ Repo: `sanskrit-lexicon/csl-atlas`
 Branch: `interoperability-handoff`
 Remote baseline: `origin/main` at `1d4a39c atlas: O10 landing-page refresh -- reflects all 9 chapters complete`
 
+> **Status note (2026-05-31):** this brief covers the **MW-PWG-PWK interoperability pilot**, which is complete and merged. The atlas has since grown well beyond it — MW Quantitative Depth (Phase 1), the 7-dictionary Comparative Dictionary Lab (Phase 2), DCS corpus reference inventory (Phase 3a), a review layer, unit tests, and navigation. For current state and history see [`CHANGELOG.md`](CHANGELOG.md); for the overall design see [`ARCHITECTURE.md`](ARCHITECTURE.md); for session continuity see `.ai_state.md`. This document remains accurate as provenance for the interoperability track.
+
 ## Read This First
 
 You are implementing the **CSL Atlas**, specifically the new **MW-PWG-PWK Interoperability Atlas** track.
