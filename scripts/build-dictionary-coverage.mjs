@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(process.cwd(), "..", "csl-orig", "v02");
 const OUT = [
@@ -53,17 +54,17 @@ const BLOCK_LABELS = {
   div: "division / paragraph marker"
 };
 
-function percent(n, d) {
+export function percent(n, d) {
   if (!d) return 0;
   return Number(((100 * n) / d).toFixed(2));
 }
 
-function mean(xs) {
+export function mean(xs) {
   if (!xs.length) return 0;
   return xs.reduce((a, b) => a + b, 0) / xs.length;
 }
 
-function median(xs) {
+export function median(xs) {
   if (!xs.length) return 0;
   const sorted = [...xs].sort((a, b) => a - b);
   const mid = Math.floor(sorted.length / 2);
@@ -139,7 +140,7 @@ function hasProper(entry) {
   return /<bio\b|<bot\b|<s1\b|<ab\b[^>]*>(?:N\.|Nom\. pr\.|Name)<\/ab>|\b(?:nAmA|iti nAma)\b/i.test(entry);
 }
 
-function classify(entry) {
+export function classify(entry) {
   const k1 = keyOf(entry);
   if (hasRootVerb(entry)) return "rootVerb";
   if (hasCompound(entry, k1)) return "compoundOrSubentry";
@@ -186,7 +187,7 @@ function blockSizes(entry) {
   };
 }
 
-function fitBand(score, records, pct, structuredSignals) {
+export function fitBand(score, records, pct, structuredSignals) {
   if (!records) return "empty";
   if (pct.head >= 90 && pct.body >= 90 && pct.gram >= 20 && structuredSignals >= 4) return "full structured fit";
   if (pct.head >= 80 && pct.body >= 80 && pct.citeTagged < 1 && pct.citeInlineIti >= 5) return "prose / iti fit";
@@ -308,4 +309,5 @@ function main() {
   for (const out of OUT) console.log(`- ${path.relative(process.cwd(), out)}`);
 }
 
-main();
+// Run only when executed directly, not when imported by tests.
+if (import.meta.url === pathToFileURL(process.argv[1]).href) main();

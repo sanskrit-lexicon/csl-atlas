@@ -12,6 +12,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { iterateRecords, MW_SOURCE } from "./lib/mw-parser.mjs";
 import { extractCitations, normalizeSource } from "./lib/mw-classifiers.mjs";
 import { layerForSource, isEditorialReference } from "./lib/mw-source-layers.mjs";
@@ -78,4 +79,5 @@ function main() {
   console.log(`- ${path.relative(process.cwd(), OUTPUT)}`);
 }
 
-main();
+// Run only when executed directly, not when imported by tests.
+if (import.meta.url === pathToFileURL(process.argv[1]).href) main();

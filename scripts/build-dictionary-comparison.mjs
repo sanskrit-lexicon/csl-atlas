@@ -9,6 +9,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
 import { iterateDict, dictExists, genderForDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
@@ -378,4 +379,5 @@ function main() {
   if (warnings.length) for (const w of warnings) console.log(`  ! ${w}`);
 }
 
-main();
+// Run only when executed directly, not when imported by tests.
+if (import.meta.url === pathToFileURL(process.argv[1]).href) main();

@@ -10,6 +10,8 @@ import assert from "node:assert/strict";
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { classifyGram } from "../scripts/build-dcs-corpus.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
+import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
+import { topForm } from "../scripts/build-citation-apparatus.mjs";
 
 // ---- MW depth: count-divergence validation ----
 test("compareCounts: no warnings when counts match", () => {
@@ -68,4 +70,39 @@ test("senseUnits is repeatable (does not leak regex lastIndex)", () => {
   const re = /<div\b/g;
   assert.equal(senseUnits("<div><div>", re), 2);
   assert.equal(senseUnits("<div><div>", re), 2); // second call must match the first
+});
+
+// ---- All-dictionary coverage: classify + fit bands ----
+test("coverage classify: priority root > compound > proper > gender", () => {
+  assert.equal(classify("<L>1<k1>aMS<lex></lex> <info verb=\"genuineroot\"/>"), "rootVerb");
+  assert.equal(classify("<L>1<k1>a-kAra body"), "compoundOrSubentry"); // hyphen in k1
+  assert.equal(classify("<L>1<k1>deva <lex>m.</lex>"), "nounMasculine");
+  assert.equal(classify("<L>1<k1>nadI <lex>f.</lex>"), "nounFeminine");
+  assert.equal(classify("<L>1<k1>vana <lex>n.</lex>"), "nounNeuter");
+  assert.equal(classify("<L>1<k1>x <lex>ind.</lex>"), "indeclinable");
+  assert.equal(classify("<L>1<k1>x plain body"), "other");
+});
+
+test("coverage fitBand thresholds", () => {
+  assert.equal(fitBand(0, 0, {}, 0), "empty");
+  assert.equal(fitBand(50, 100, { head: 95, body: 95, gram: 25 }, 4), "full structured fit");
+  assert.equal(fitBand(50, 100, { head: 85, body: 85, citeTagged: 0, citeInlineIti: 6 }, 1), "prose / iti fit");
+  assert.equal(fitBand(50, 100, { head: 95, body: 95, gram: 6 }, 2), "partial structured fit");
+  assert.equal(fitBand(10, 100, { head: 85, body: 85, citeTagged: 0, citeInlineIti: 0 }, 0), "entry-shell fit");
+  assert.equal(fitBand(25, 100, { head: 10, body: 10 }, 0), "weak fit");
+  assert.equal(fitBand(5, 100, { head: 10, body: 10 }, 0), "outside scheme");
+});
+
+test("coverage median and percent", () => {
+  assert.equal(median([3, 1, 2]), 2);
+  assert.equal(median([1, 2, 3, 4]), 2.5);
+  assert.equal(median([]), 0);
+  assert.equal(percent(1, 4), 25);
+  assert.equal(percent(1, 0), 0);
+});
+
+// ---- Citation apparatus: most-frequent raw form ----
+test("topForm picks the most frequent raw form for a canonical id", () => {
+  assert.equal(topForm({ count: 7, forms: new Map([["MBh", 5], ["Mbh", 2]]) }), "MBh");
+  assert.equal(topForm({ count: 1, forms: new Map([["RV", 1]]) }), "RV");
 });
