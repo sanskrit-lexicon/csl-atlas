@@ -13,6 +13,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { DICTS, DICT_LABELS, SENSE_MARKER } from "./lib/dict-manifest.mjs";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
@@ -23,7 +24,7 @@ const TOP_DISPARITIES = 200;
 
 const SENSE_DICTS = DICTS.filter(d => d.senseSegmented).map(d => d.code);
 
-function senseUnits(body, marker) {
+export function senseUnits(body, marker) {
   marker.lastIndex = 0;
   const n = (body.match(marker) || []).length;
   return Math.max(1, n);
@@ -127,4 +128,5 @@ function main() {
   console.log(`- ${path.relative(process.cwd(), path.join(OUT_DIR, "sense-depth.json"))}`);
 }
 
-main();
+// Run only when executed directly, not when imported by tests.
+if (import.meta.url === pathToFileURL(process.argv[1]).href) main();

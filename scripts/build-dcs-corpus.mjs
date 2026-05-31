@@ -10,6 +10,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const SCHEMA_VERSION = "1.0.0";
 const DCS_DIR = path.resolve(process.cwd(), "..", "DCS");
@@ -18,7 +19,7 @@ const BIBLIO = path.join(DCS_DIR, "DCS-Corpus-Bibliography");
 const GRAM_CSV = path.join(DCS_DIR, "DCS-72034-gramm-tag-stats.csv");
 const OUT = path.resolve(process.cwd(), "src", "data", "corpus", "dcs-manifest.json");
 
-function classifyGram(g) {
+export function classifyGram(g) {
   const v = (g || "").trim();
   if (v === "") return "unspecified";
   if (["m", "f", "n", "mn", "mf", "fn", "nm", "nf"].includes(v)) return "nominal";
@@ -140,4 +141,5 @@ function main() {
   if (warnings.length) for (const w of warnings) console.log(`  ! ${w}`);
 }
 
-main();
+// Run only when executed directly, not when imported by tests.
+if (import.meta.url === pathToFileURL(process.argv[1]).href) main();
