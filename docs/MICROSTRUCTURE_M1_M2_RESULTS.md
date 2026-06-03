@@ -94,9 +94,13 @@ preverb div because it promotes preverb-verbs to headwords.
   | `to` | MW (11,000) | sense block ("to approach…"), English-infinitive gloss |
   | `vp` | MW (3,792) | verbal-derivative block — *wraps* the `<ab>Caus./Desid.</ab>` M1 counts |
 
-- **AP encodes compound subtypes**: `Bah. comp.` (bahuvrīhi), `Tat. comp.` (tatpuruṣa),
-  `Avyayī. comp.` (avyayībhāva), PWG `copul. comp.` (dvandva) → a future **cat-14 compound-typology**
-  pass (m3) can recover samāsa subtypes directly.
+- **Compound subtypes are largely UNtagged** — a negative result for Article 10's premise.
+  Samāsa subtypes are sparse: AP `Bah./Tat./Avyayī. comp.` total ~24 (vs 5,051 generic `comp.`),
+  AP90 ~28, MW/BEN none. The one systematic distinction is **PWG `adj. comp.` (1,398)**
+  (adjectival vs nominal). So a samāsa-typology matrix is not recoverable from markup — CDSL
+  dicts record compounds generically; subtype is left to the reader.
+- **Cross-references (cat 24)** are a richer untapped seam: PWG `<div n="v">` (`Vgl.`, 14,624) and
+  PW likewise — a candidate v3 cross-reference-density pass.
 - **MW idioms** (object+verb, cat 11) remain **untagged prose** — no dedicated div — confirming
   MICROSTRUCTURE §2.3 that they are MW's prose signature, not machine-recoverable by a uniform marker.
 
