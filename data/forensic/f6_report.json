@@ -1,0 +1,294 @@
+{
+  "sample_per_stratum": 1500,
+  "strata": {
+    "ALL": {
+      "n": 1480,
+      "sim_mw": 0.1042,
+      "sim_ap": 0.1289,
+      "sim_random": 0.0005,
+      "mw_minus_ap": -0.0247
+    },
+    "VERB": {
+      "n": 1014,
+      "sim_mw": 0.0445,
+      "sim_ap": 0.0979,
+      "sim_random": 0.0005,
+      "mw_minus_ap": -0.0534
+    },
+    "PHIL": {
+      "n": 1496,
+      "sim_mw": 0.086,
+      "sim_ap": 0.0858,
+      "sim_random": 0.0007,
+      "mw_minus_ap": 0.0002
+    }
+  },
+  "n_shared": 19914,
+  "n_verb": 1036,
+  "n_phil": 2611,
+  "phil_sigils": [
+    "VEDANTA",
+    "SAMKHYA",
+    "NYAYA",
+    "TARKA",
+    "BHASAP",
+    "YOGAS",
+    "VAIS",
+    "KAPILA",
+    "MUKTAV",
+    "BRAHMAS",
+    "SANK",
+    "SARVAD",
+    "KUSUM",
+    "KARIKA",
+    "PRAB",
+    "SADANANDA",
+    "VEDANTAP",
+    "BHASAPARICCH",
+    "TATTVAS",
+    "SIDDHANTA"
+  ],
+  "top_mw_over_ap": [
+    {
+      "stratum": "PHIL",
+      "headword": "kAvyamImAMsA",
+      "sim_mw": 0.4,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.4
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "pIlu",
+      "sim_mw": 0.4103,
+      "sim_ap": 0.037,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.3732
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "BUtakft",
+      "sim_mw": 0.3333,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.3333
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "JallarI",
+      "sim_mw": 0.32,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.32
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "pakti",
+      "sim_mw": 0.2903,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2903
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "durvAsanA",
+      "sim_mw": 0.2857,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2857
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "BAsvara",
+      "sim_mw": 0.375,
+      "sim_ap": 0.1,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.275
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "kAkAdanI",
+      "sim_mw": 0.2727,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2727
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "svArAj",
+      "sim_mw": 0.25,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.25
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "pradeSinI",
+      "sim_mw": 0.25,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.25
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "AtmahatyA",
+      "sim_mw": 0.25,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.25
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "vijYAnamaya",
+      "sim_mw": 0.25,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.25
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "karta",
+      "sim_mw": 0.2308,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2308
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "aSakti",
+      "sim_mw": 0.3333,
+      "sim_ap": 0.1111,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2222
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "seSvara",
+      "sim_mw": 0.2222,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2222
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "anvayin",
+      "sim_mw": 0.2222,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2222
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "asu",
+      "sim_mw": 0.2222,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2222
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "pratyAtmam",
+      "sim_mw": 0.2222,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2222
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "prAsravaRa",
+      "sim_mw": 0.2143,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2143
+    },
+    {
+      "stratum": "VERB",
+      "headword": "GUr",
+      "sim_mw": 0.2,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2
+    },
+    {
+      "stratum": "VERB",
+      "headword": "maNK",
+      "sim_mw": 0.2,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "mfqAnI",
+      "sim_mw": 0.2,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "amBoja",
+      "sim_mw": 0.2,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "kAmapati",
+      "sim_mw": 0.2,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "nIrUpa",
+      "sim_mw": 0.2,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "damUnas",
+      "sim_mw": 0.2,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.2
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "nyUNKa",
+      "sim_mw": 0.1875,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.1875
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "pacata",
+      "sim_mw": 0.3077,
+      "sim_ap": 0.125,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.1827
+    },
+    {
+      "stratum": "VERB",
+      "headword": "pul",
+      "sim_mw": 0.1818,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.1818
+    },
+    {
+      "stratum": "PHIL",
+      "headword": "KalevAlI",
+      "sim_mw": 0.1818,
+      "sim_ap": 0.0,
+      "sim_random": 0.0,
+      "mw_minus_ap": 0.1818
+    }
+  ],
+  "method": "PWG German gloss translated offline (argos de->en); token-Jaccard vs MW, vs Apte (independent-English null), vs random MW gloss (floor). Stratified ALL / VERB (MW 'cl. N') / PHIL (cites a darsana text). Copying = MW>Apte; MW<=Apte = convergence on the fixed meaning. Reproducible (sorted+seeded)."
+}

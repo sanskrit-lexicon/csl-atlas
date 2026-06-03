@@ -42,7 +42,7 @@ _LS = re.compile(r"<ls>(.*?)</ls>", re.DOTALL)
 _TAG = re.compile(r"<[^>]*>")
 _WS = re.compile(r"\s+")
 _WORD = re.compile(r"[a-z]{3,}")
-_VERB = re.compile(r"\bcl\.\s*\d")                  # MW verb-class notation
+_VERB = re.compile(r"<ab>cl\.")                     # MW verb-class notation: <ab>cl.</ab> N. <ab>P.</ab>
 _DIGIT = re.compile(r"\d")
 STOP = set("the a an and or of to in for with as is are was on at by from that this it its be "
            "also more most see used name kind sort etc esp one two his her their which who whom "
@@ -131,13 +131,26 @@ def main():
     strata = {"ALL": shared, "VERB": verb, "PHIL": phil}
     samples = {name: random.sample(pool, min(SAMPLE, len(pool))) for name, pool in strata.items()}
     union = sorted(set().union(*samples.values()))
-    print(f"  translating {len(union):,} unique PWG German glosses (de->en)...")
+    print(f"  translating {len(union):,} unique PWG German glosses (de->en, cached)...")
 
-    tpwg = {}
+    cache_path = "data/forensic/_f6_tcache.json"
+    tcache = {}
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as f:
+            tcache = json.load(f)
+    tpwg, new = {}, 0
     for i, h in enumerate(union):
-        tpwg[h] = toks(tr.translate(pwg[h]["gloss"][:1500], "de", "en"))
-        if (i + 1) % 500 == 0:
-            print(f"    ...{i+1}/{len(union)}")
+        if h not in tcache:
+            tcache[h] = tr.translate(pwg[h]["gloss"][:1500], "de", "en")
+            new += 1
+            if new % 400 == 0:
+                print(f"    translated {new} new ({i+1}/{len(union)})")
+                with open(cache_path, "w", encoding="utf-8") as f:
+                    json.dump(tcache, f)
+        tpwg[h] = toks(tcache[h])
+    with open(cache_path, "w", encoding="utf-8") as f:
+        json.dump(tcache, f)
+    print(f"  ({new} newly translated, {len(union)-new} from cache)")
 
     pool_mw = list(mw.keys())
     rows = []
@@ -160,8 +173,13 @@ def main():
                 rows.append({"stratum": name, "headword": h, "sim_mw": round(jmw, 4),
                              "sim_ap": round(jap, 4), "sim_random": round(jr, 4),
                              "mw_minus_ap": round(jmw - jap, 4)})
-        summary[name] = {"n": cnt, "sim_mw": round(s_mw / cnt, 4), "sim_ap": round(s_ap / cnt, 4),
-                         "sim_random": round(s_rand / cnt, 4), "mw_minus_ap": round((s_mw - s_ap) / cnt, 4)}
+        if cnt:
+            summary[name] = {"n": cnt, "sim_mw": round(s_mw / cnt, 4), "sim_ap": round(s_ap / cnt, 4),
+                             "sim_random": round(s_rand / cnt, 4),
+                             "mw_minus_ap": round((s_mw - s_ap) / cnt, 4)}
+        else:
+            summary[name] = {"n": 0, "sim_mw": None, "sim_ap": None, "sim_random": None,
+                             "mw_minus_ap": None}
 
     rows.sort(key=lambda r: -r["mw_minus_ap"])
     with open("data/forensic/f6_gloss_translation.csv", "w", encoding="utf-8", newline="") as f:
@@ -175,6 +193,9 @@ def main():
     print(f"  {'stratum':6s} {'n':>5s} {'sim_MW':>7s} {'sim_Apte':>9s} {'sim_rand':>9s} {'MW-Apte':>8s}")
     for name in ("ALL", "VERB", "PHIL"):
         s = summary[name]
+        if not s["n"]:
+            print(f"  {name:6s}     0  (no entries in stratum)")
+            continue
         print(f"  {name:6s} {s['n']:>5} {s['sim_mw']:>7.4f} {s['sim_ap']:>9.4f} "
               f"{s['sim_random']:>9.4f} {s['mw_minus_ap']:>+8.4f}")
     print("\n  Δ (MW-Apte) > 0 in any stratum => MW's prose tracks PWG beyond convergence there.")

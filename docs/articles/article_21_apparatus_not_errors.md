@@ -48,6 +48,8 @@ in an untagged indigenous style, not for lack of citations — see
 | **F1** citation overlap | shared apparatus | `scripts/forensic/f1_citations.py` |
 | **F2** homonym-split concordance | shared structure | `scripts/forensic/f2_structure.py` |
 | **F3** gloss-length tracking | translation of prose | `scripts/forensic/f3_gloss.py` |
+| **F5** citation-order agreement | worked *from* the article | `scripts/forensic/f5_entry_comparison.py` |
+| **F6** gloss DE→EN (offline MT) | prose translated? | `scripts/forensic/f6_gloss_translation.py` |
 | **F4b** shared-error test | copied *mistakes* | `scripts/forensic/f4b_ahlborn_nulltest.py` |
 
 ## 3. What MW inherited — the apparatus
@@ -109,7 +111,14 @@ The direct test (4.1) settles what the null cannot.
 **4.3 Corroboration.** MW and PWG share **zero** documented print errors (24 PWG / 122 MW
 printchange records; F4a). And MW's English gloss *length* tracks PWG's German no more than
 it tracks Apte's independent English (Spearman 0.564 vs 0.576; differential −0.01; F3) — MW
-**recomposed** the definitions rather than translating Böhtlingk's prose.
+**recomposed** the definitions rather than translating Böhtlingk's prose. A direct test
+confirms it: translating PWG's German gloss to English (offline MT) and measuring token
+overlap, MW resembles translated-PWG **no more than the independent Apte does, in any
+stratum** — ALL 0.104 vs 0.129, VERB 0.044 vs 0.098, PHIL 0.086 vs 0.086 (against a ~0.001
+random-pair floor; F6, 1,500/stratum). The ~0.1 overlap is convergence on the fixed Sanskrit
+meaning, not derivation: even **philosophical** terms — where an independent compiler is most
+tempted to lean on a predecessor — sit at exact parity (Δ ≈ 0), and MW's terse **verb**-root
+glosses track PWG *least*. The prose is MW's own throughout, technical vocabulary included.
 
 ## 5. Discussion
 
