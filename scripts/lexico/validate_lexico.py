@@ -82,12 +82,32 @@ def validate_m2():
     return len(rows), len([a for a in agg.values() if a["preverb_subentries_total"]])
 
 
+def validate_m3():
+    rows = load_csv("xref_edges.csv")
+    agg = load_json("xref_by_dict.json")["dicts"]
+    pd_edges = collections.Counter()
+    pd_entries = collections.defaultdict(set)
+    for i, r in enumerate(rows):
+        check(r["kind"] in ("vgl", "cf"), f"m3 row {i}: kind={r['kind']}")
+        check(bool(r["target"]), f"m3 row {i}: empty target")
+        pd_edges[r["dict"]] += 1
+        pd_entries[r["dict"]].add(r["L"])
+    for code, a in agg.items():
+        check(pd_edges[code] == a["xref_edges"],
+              f"m3 {code}: CSV edges {pd_edges[code]} != aggregate {a['xref_edges']}")
+        check(len(pd_entries[code]) == a["entries_with_xref"],
+              f"m3 {code}: CSV entries {len(pd_entries[code])} != aggregate {a['entries_with_xref']}")
+    return len(rows), len(agg)
+
+
 def main():
     print("Validating data/lexico/ …")
     m1_rows, m1_dicts = validate_m1()
     m2_rows, m2_dicts = validate_m2()
+    m3_rows, m3_dicts = validate_m3()
     print(f"  m1: {m1_rows:,} rows / {m1_dicts} dicts")
     print(f"  m2: {m2_rows:,} rows / {m2_dicts} preverb dicts")
+    print(f"  m3: {m3_rows:,} rows / {m3_dicts} xref dicts")
     if _fail:
         print(f"\nFAIL — {len(_fail)} check(s):", file=sys.stderr)
         for m in _fail[:25]:
