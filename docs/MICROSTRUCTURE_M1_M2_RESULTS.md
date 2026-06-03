@@ -1,7 +1,7 @@
-# Microstructure subentry inventory — M1 + M2 results
+# Microstructure subentry inventory — M1–M3 results
 
 **Date**: 2026-06-03 · **Phase**: L0.6 (Subentry analysis) → Article 9 ("verb-derivation matrix")
-**Scripts**: [`scripts/lexico/m1_subentries.py`](../scripts/lexico/m1_subentries.py), [`scripts/lexico/m2_preverbs.py`](../scripts/lexico/m2_preverbs.py)
+**Scripts**: [`m1_subentries.py`](../scripts/lexico/m1_subentries.py) (derivative subentries), [`m2_preverbs.py`](../scripts/lexico/m2_preverbs.py) (preverbs), [`m3_xrefs.py`](../scripts/lexico/m3_xrefs.py) (cross-references), [`validate_lexico.py`](../scripts/lexico/validate_lexico.py)
 **Companion**: [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (the 15-category subentry typology this operationalises)
 
 Empirical first pass over **all 43 local csl-orig dicts (1,495,459 entries scanned)**.
@@ -58,27 +58,58 @@ they don't use the European `<ab>` apparatus:
 
 | Dict | entries w/ preverb sub | preverb subentries | distinct preverbs |
 |---|---|---|---|
-| PWG | 1,221 | **9,110** | 770 |
-| PW (PWK) | 1,178 | **8,428** | 395 |
-| CAE | 555 | 3,190 | 193 |
-| WIL | 186 | 689 | 50 |
+| PWG | 1,209 | **8,647** | 315 |
+| PW (PWK) | 1,178 | **8,429** | 395 |
+| CAE | 555 | 3,303 | 144 |
+| WIL | 186 | 702 | 41 |
+
+(A `<div n="p">` block is a preverb subentry only when it opens `— {#preverb#} {%gloss%}`;
+blocks that open `— <ab>caus./partic./desid.</ab> {#form#}` are secondary-conjugation forms
+already counted by m1, and are excluded — hence these are the *clean* preverb totals.)
 
 **Corpus-wide preverb productivity** (subentries across all dicts) — the canonical productive
 upasargas, ranked empirically:
 
-> **vi** (1,423) · **sam** (1,352) · **pra** (1,334) · **ā** (1,084) · **pari** (1,017) ·
-> **abhi** (971) · **ud** (821) · **upa** (758) · **anu** (752) · ava (720) · prati (707) · ni (705)
+> **vi** (1,439) · **sam** (1,364) · **pra** (1,354) · **ā** (1,098) · **pari** (1,033) ·
+> **abhi** (988) · **ud** (827) · **upa** (768) · **anu** (759) · ava (729) · prati (712) · ni (710)
 
-Validated against the canonical test case: **PWG `gam` = 66 preverb subentries, PW `gam` = 69**
-(ati-, adhi-, anu-, abhi-, vyapa-, abhyā-, samud-, upasaṃ-, …) — the "PWG is preverb-dominant"
+Validated against the canonical test case: **PWG `gam` = 62 preverb subentries**
+(accha-, ati-, adhi-, anu-, abhi-, vyapa-, abhyā-, samud-, upasaṃ-, …) — the "PWG is preverb-dominant"
 claim of MICROSTRUCTURE §1.4/§2.2, now a number.
 
 **Lineage cross-check.** **CAE** (Cappeller English, 1891) carries the Petersburg `<div n="p">`
-convention (3,190), but its sibling **CCS** (Cappeller German, 1887) reads **0** on both M1 and
+convention (3,303), but its sibling **CCS** (Cappeller German, 1887) reads **0** on both M1 and
 M2. So the Cappeller pair — near-identical on *headword* conventions in the L0 study — **diverges
 on microstructure markup**. Evidence that content-, convention-, and microstructure-inheritance
 are distinct axes (feeds Paper H §5 + the two-axis methods note). **MW = 0 by design**: it has no
 preverb div because it promotes preverb-verbs to headwords.
+
+---
+
+## M3 — cross-reference edges (cat 24): the internal link graph
+
+Cross-references (`see / cf. / vergleiche X`) split cleanly by tradition, both with an SLP1
+target so they are directly comparable:
+
+| Dict | entries w/ xref | edges | kind | distinct targets |
+|---|---|---|---|---|
+| PWG | 12,283 | **22,987** | `Vgl.` (`<div n="v">`) | 16,351 |
+| MW | 7,507 | **7,665** | `cf.` (`<ab>cf.</ab> <s>…</s>`) | 6,636 |
+
+PW/MW72/WIL/indigenous use neither pattern → 0 (a convention gap, not an absence of links).
+MW's `cf.` count (11,652) exceeds its captured edges (7,665) because `cf.` + `<lang>` (Western
+cognate) / + `<hom>` (homonym pointer) are deliberately skipped — only Sanskrit-lemma targets count.
+**Known gap:** AP/AP90/BEN also use `<ab>cf.</ab>` (1,660 / 1,038 / 2,867) but with non-`<s>`
+target markup not yet parsed — deferred.
+
+**Hub lemmas** — the most-referenced targets corpus-wide are compound/prefix *families*, not single
+lemmas: **a°** (320) · **mahā°** (254) · **su°** (160) · **vi°** (75) · **deva°** (72) · brahma° ·
+tri° · sa° · prati° · rāja°. Petersburg cross-references predominantly point "see the X-compounds"
+(the `°` = the compound series) — a macrostructural pointer, itself a finding.
+
+Validated: PWG `gam` = 24 atomic `Vgl.` edges (agata, evaṃgata, kaṇṭhagata, adhigantṛ, anugata, …);
+30,654 edges total. Feeds the lineage roadmap §3.1 ("shared cross-reference patterns") — a cross-dict
+graph-overlap (PWG `Vgl.` set vs MW `cf.` set) is the natural next step.
 
 ---
 
@@ -99,8 +130,8 @@ preverb div because it promotes preverb-verbs to headwords.
   AP90 ~28, MW/BEN none. The one systematic distinction is **PWG `adj. comp.` (1,398)**
   (adjectival vs nominal). So a samāsa-typology matrix is not recoverable from markup — CDSL
   dicts record compounds generically; subtype is left to the reader.
-- **Cross-references (cat 24)** are a richer untapped seam: PWG `<div n="v">` (`Vgl.`, 14,624) and
-  PW likewise — a candidate v3 cross-reference-density pass.
+- **Cross-references (cat 24)** — done as **M3** above (PWG `Vgl.` + MW `cf.`). Only PWG uses
+  `<div n="v">`; PW does not. Remaining: parse the AP/AP90/BEN `cf.` target markup (non-`<s>`).
 - **MW idioms** (object+verb, cat 11) remain **untagged prose** — no dedicated div — confirming
   MICROSTRUCTURE §2.3 that they are MW's prose signature, not machine-recoverable by a uniform marker.
 
@@ -118,7 +149,9 @@ preverb div because it promotes preverb-verbs to headwords.
 ## Reproduce
 
 ```sh
-python scripts/lexico/m1_subentries.py --all          # microstructure_subentries.csv
-python scripts/lexico/m2_preverbs.py   --all          # preverb_subentries.csv
+python scripts/lexico/m1_subentries.py --all          # microstructure_subentries.csv (derivative subentries)
+python scripts/lexico/m2_preverbs.py   --all          # preverb_subentries.csv (preverb subentries)
+python scripts/lexico/m3_xrefs.py      --all          # xref_edges.csv (cross-references)
+python scripts/lexico/validate_lexico.py              # consistency checks (m1 + m2 + m3)
 python scripts/lexico/m1_subentries.py --probe gam    # ground-truth check
 ```
