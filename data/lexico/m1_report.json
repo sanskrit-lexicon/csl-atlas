@@ -1,0 +1,270 @@
+{
+  "mode": "all",
+  "letter": null,
+  "n_dicts": 43,
+  "csv_rows_emitted": 34180,
+  "categories": [
+    "caus",
+    "pass",
+    "desid",
+    "intens",
+    "den",
+    "periphr",
+    "comp"
+  ],
+  "marker_tokens": {
+    "caus": "caus",
+    "pass": "pass",
+    "desid": "desid",
+    "desider": "desid",
+    "intens": "intens",
+    "frequent": "intens",
+    "freq": "intens",
+    "den": "den",
+    "denom": "den",
+    "periphr": "periphr",
+    "periph": "periphr",
+    "comp": "comp",
+    "compp": "comp"
+  },
+  "row_threshold": "per-entry rows emitted only where n_subentries > 0; zeros live in the aggregate",
+  "top_dicts_by_markers": [
+    {
+      "dict": "pwg",
+      "entries_scanned": 123366,
+      "verbal_entries": 2572,
+      "entries_with_subentries": 5620,
+      "subentry_markers_total": 9987,
+      "max_depth_max": 1,
+      "total_chars_subentries_sum": 10863495,
+      "div_type_codes": {
+        "1": 64325,
+        "2": 23939,
+        "v": 14624,
+        "p": 9227,
+        "3": 1498
+      },
+      "verbal_deriv_markers": 6048,
+      "verbal_deriv_per_verbal": 2.351,
+      "by_category": {
+        "caus": 3656,
+        "pass": 1185,
+        "desid": 763,
+        "intens": 440,
+        "den": 271,
+        "periphr": 4,
+        "comp": 3668
+      }
+    },
+    {
+      "dict": "pw",
+      "entries_scanned": 170556,
+      "verbal_entries": 1160,
+      "entries_with_subentries": 5059,
+      "subentry_markers_total": 9913,
+      "max_depth_max": 1,
+      "total_chars_subentries_sum": 3287593,
+      "div_type_codes": {
+        "1": 78332,
+        "2": 38148,
+        "p": 8438,
+        "3": 3863,
+        "m": 2641,
+        "o": 18,
+        "4": 2
+      },
+      "verbal_deriv_markers": 4369,
+      "verbal_deriv_per_verbal": 3.766,
+      "by_category": {
+        "caus": 2797,
+        "pass": 689,
+        "desid": 502,
+        "intens": 381,
+        "den": 49,
+        "periphr": 0,
+        "comp": 5495
+      }
+    },
+    {
+      "dict": "mw",
+      "entries_scanned": 286560,
+      "verbal_entries": 11491,
+      "entries_with_subentries": 7218,
+      "subentry_markers_total": 8909,
+      "max_depth_max": 2,
+      "total_chars_subentries_sum": 1243447,
+      "div_type_codes": {
+        "to": 11000,
+        "vp": 3792,
+        "P": 512,
+        "1": 4,
+        "p": 4
+      },
+      "verbal_deriv_markers": 5455,
+      "verbal_deriv_per_verbal": 0.475,
+      "by_category": {
+        "caus": 2989,
+        "pass": 944,
+        "desid": 918,
+        "intens": 602,
+        "den": 0,
+        "periphr": 2,
+        "comp": 3459
+      }
+    },
+    {
+      "dict": "ap",
+      "entries_scanned": 90654,
+      "verbal_entries": 975,
+      "entries_with_subentries": 6205,
+      "subentry_markers_total": 6632,
+      "max_depth_max": 1,
+      "total_chars_subentries_sum": 1105958,
+      "div_type_codes": {},
+      "verbal_deriv_markers": 1206,
+      "verbal_deriv_per_verbal": 1.237,
+      "by_category": {
+        "caus": 906,
+        "pass": 143,
+        "desid": 150,
+        "intens": 7,
+        "den": 350,
+        "periphr": 0,
+        "comp": 5076
+      }
+    },
+    {
+      "dict": "ben",
+      "entries_scanned": 17310,
+      "verbal_entries": 952,
+      "entries_with_subentries": 3740,
+      "subentry_markers_total": 5901,
+      "max_depth_max": 1,
+      "total_chars_subentries_sum": 1802575,
+      "div_type_codes": {},
+      "verbal_deriv_markers": 2424,
+      "verbal_deriv_per_verbal": 2.546,
+      "by_category": {
+        "caus": 1382,
+        "pass": 802,
+        "desid": 163,
+        "intens": 77,
+        "den": 0,
+        "periphr": 0,
+        "comp": 3477
+      }
+    },
+    {
+      "dict": "ap90",
+      "entries_scanned": 34882,
+      "verbal_entries": 930,
+      "entries_with_subentries": 1774,
+      "subentry_markers_total": 2060,
+      "max_depth_max": 1,
+      "total_chars_subentries_sum": 1095195,
+      "div_type_codes": {},
+      "verbal_deriv_markers": 1159,
+      "verbal_deriv_per_verbal": 1.246,
+      "by_category": {
+        "caus": 867,
+        "pass": 141,
+        "desid": 145,
+        "intens": 6,
+        "den": 309,
+        "periphr": 0,
+        "comp": 592
+      }
+    },
+    {
+      "dict": "stc",
+      "entries_scanned": 24574,
+      "verbal_entries": 1442,
+      "entries_with_subentries": 1472,
+      "subentry_markers_total": 1645,
+      "max_depth_max": 1,
+      "total_chars_subentries_sum": 252387,
+      "div_type_codes": {},
+      "verbal_deriv_markers": 1614,
+      "verbal_deriv_per_verbal": 1.119,
+      "by_category": {
+        "caus": 1283,
+        "pass": 331,
+        "desid": 0,
+        "intens": 0,
+        "den": 0,
+        "periphr": 0,
+        "comp": 31
+      }
+    },
+    {
+      "dict": "ae",
+      "entries_scanned": 11359,
+      "verbal_entries": 444,
+      "entries_with_subentries": 1144,
+      "subentry_markers_total": 1633,
+      "max_depth_max": 1,
+      "total_chars_subentries_sum": 635368,
+      "div_type_codes": {},
+      "verbal_deriv_markers": 590,
+      "verbal_deriv_per_verbal": 1.329,
+      "by_category": {
+        "caus": 0,
+        "pass": 518,
+        "desid": 70,
+        "intens": 2,
+        "den": 4,
+        "periphr": 0,
+        "comp": 1039
+      }
+    },
+    {
+      "dict": "gra",
+      "entries_scanned": 12785,
+      "verbal_entries": 390,
+      "entries_with_subentries": 404,
+      "subentry_markers_total": 1221,
+      "max_depth_max": 1,
+      "total_chars_subentries_sum": 907248,
+      "div_type_codes": {
+        "TS": 34044,
+        "H": 4819,
+        "Pf": 1917,
+        "P": 590,
+        "W": 168
+      },
+      "verbal_deriv_markers": 1200,
+      "verbal_deriv_per_verbal": 3.077,
+      "by_category": {
+        "caus": 658,
+        "pass": 185,
+        "desid": 134,
+        "intens": 223,
+        "den": 5,
+        "periphr": 0,
+        "comp": 16
+      }
+    },
+    {
+      "dict": "md",
+      "entries_scanned": 20749,
+      "verbal_entries": 1,
+      "entries_with_subentries": 523,
+      "subentry_markers_total": 527,
+      "max_depth_max": 1,
+      "total_chars_subentries_sum": 94208,
+      "div_type_codes": {},
+      "verbal_deriv_markers": 1,
+      "verbal_deriv_per_verbal": 1.0,
+      "by_category": {
+        "caus": 0,
+        "pass": 0,
+        "desid": 0,
+        "intens": 0,
+        "den": 526,
+        "periphr": 1,
+        "comp": 0
+      }
+    }
+  ],
+  "caveats": "Case-insensitive <ab> matching (PWG lowercases what MW capitalises). n_subentries=0 means 'no <ab> secondary-conjugation marker in this dict's convention', NOT a flat entry (cf. CITATION_TAGGING.md): SKD/VCP and specialised name/plant dicts read near-0 by design. Comparable WITHIN a dict. max_depth is a proxy (div-nesting where present, else multi-marker/binary). n_dash_segments is an EXPERIMENTAL PWG-family structural proxy, NOT in n_subentries. Preverb/participle/idiom subentries deferred to per-dict parsing."
+}
