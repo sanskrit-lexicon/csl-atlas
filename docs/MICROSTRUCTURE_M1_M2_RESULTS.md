@@ -99,8 +99,10 @@ target so they are directly comparable:
 PW/MW72/WIL/indigenous use neither pattern → 0 (a convention gap, not an absence of links).
 MW's `cf.` count (11,652) exceeds its captured edges (7,665) because `cf.` + `<lang>` (Western
 cognate) / + `<hom>` (homonym pointer) are deliberately skipped — only Sanskrit-lemma targets count.
-**Known gap:** AP/AP90/BEN also use `<ab>cf.</ab>` (1,660 / 1,038 / 2,867) but with non-`<s>`
-target markup not yet parsed — deferred.
+**Deliberately excluded:** AP/AP90/BEN use `<ab>cf.</ab>` (1,660 / 1,038 / 2,867) too, but there
+it is predominantly **cognate** (`<lang>Goth./Gr./L.</lang> {%…%}`) and **citation** (`<ls>`), with
+Sanskrit-lemma cross-refs entangled in quote `{#…#}` spans — not a clean seam, so left out rather
+than inject noise.
 
 **Hub lemmas** — the most-referenced targets corpus-wide are compound/prefix *families*, not single
 lemmas: **a°** (320) · **mahā°** (254) · **su°** (160) · **vi°** (75) · **deva°** (72) · brahma° ·
@@ -131,7 +133,7 @@ graph-overlap (PWG `Vgl.` set vs MW `cf.` set) is the natural next step.
   (adjectival vs nominal). So a samāsa-typology matrix is not recoverable from markup — CDSL
   dicts record compounds generically; subtype is left to the reader.
 - **Cross-references (cat 24)** — done as **M3** above (PWG `Vgl.` + MW `cf.`). Only PWG uses
-  `<div n="v">`; PW does not. Remaining: parse the AP/AP90/BEN `cf.` target markup (non-`<s>`).
+  `<div n="v">`; PW does not. AP/AP90/BEN `cf.` is mostly cognate/citation, not a clean seam (excluded).
 - **MW idioms** (object+verb, cat 11) remain **untagged prose** — no dedicated div — confirming
   MICROSTRUCTURE §2.3 that they are MW's prose signature, not machine-recoverable by a uniform marker.
 
