@@ -21,16 +21,16 @@ cae,5031,iz,7,anu|paryanu|samanu|aBi|pari|prati|vi
 cae,5077,Ikz,25,apa|aBi|ava|anvava|pratyava|samava|ud|samud|upa|samupa|nis|pari|pra|aBipra|utpra|upapra|aBisaMpra|prati|saMprati|vi|anuvi|aBivi|udvi|sam|aBisam
 cae,5087,INK,1,pra
 cae,5089,Ij,1,sam
-cae,5090,Iq,1,"pra, upapra, prati, sam"
-cae,5099,Ips,1,"aBi, pari"
+cae,5090,Iq,4,pra|upapra|prati|sam
+cae,5099,Ips,2,aBi|pari
 cae,5104,Ir,7,A|nyA|ud|aByud|samud|pra|sam
 cae,5135,Iz,3,apa|A|vi
-cae,5160,ukz,6,"anu, aBi, ava, A|pari|pra|saMpra|vi|sam"
+cae,5160,ukz,9,anu|aBi|ava|A|pari|pra|saMpra|vi|sam
 cae,5161,ukz,1,sam
 cae,5179,uc,2,ni|sam
 cae,5242,ujJ,1,pra
 cae,5270,utkaRW,2,pra|sam
-cae,5436,ud,3,"anu, aBi|ni|vi"
+cae,5436,ud,4,anu|aBi|ni|vi
 cae,5664,unmUl,1,sam
 cae,5975,ubj,2,ni|nis
 cae,5976,uB,2,ni|sam
@@ -53,7 +53,7 @@ cae,6932,kaTay,4,pari|pra|vi|sam
 cae,7064,kamp,5,anu|aBi|pra|vi|sam
 cae,7254,kal,5,A|upa|pari|pra|sam
 cae,7375,kaz,3,apa|ud|ni
-cae,7412,kANkz,5,"anu|A|pratyA|samA, pra|prati"
+cae,7412,kANkz,6,anu|A|pratyA|samA|pra|prati
 cae,7718,kAS,6,aBi|ava|nis|saMpra|vi|sam
 cae,7846,kIrtay,3,anu|pari|sam
 cae,7870,kuc,1,sam
@@ -71,7 +71,7 @@ cae,8350,kfpAy,1,anu
 cae,8372,kfz,19,ati|anu|apa|vyapa|ava|A|apA|vyA|samA|ud|ni|saMni|nis|pari|pra|vipra|saMpra|vi|sam
 cae,8407,kxp,8,aBi|ava|upa|pari|pra|vi|sam|upasam
 cae,8610,krand,6,aBi|ava|A|pra|vi|sam
-cae,8616,kram,28,"ati|aByati|vyati|aDi|anu|apa|aBi|samaBi|ava|aDyA|samA|ud|vyud|upa|samupa|ni|nis|aBinis, upanis|parA|pari|pra|saMpra|prati|vi|anuvi|nirvi|sam|anusam"
+cae,8616,kram,29,ati|aByati|vyati|aDi|anu|apa|aBi|samaBi|ava|aDyA|samA|ud|vyud|upa|samupa|ni|nis|aBinis|upanis|parA|pari|pra|saMpra|prati|vi|anuvi|nirvi|sam|anusam
 cae,8671,krI,8,apa|aBi|ava|A|nis|pari|vi|sam
 cae,8695,kruD,3,aBi|prati|sam
 cae,8701,kruS,8,anu|aBi|A|ud|upa|pra|vi|sam
@@ -86,7 +86,7 @@ cae,8827,kzA,2,pra|sam
 cae,8843,kzi,6,aDi|A|upa|pari|prati|sam
 cae,8844,kzi,2,apa|pari
 cae,8861,kzip,19,aDi|apa|aBi|ava|A|vyA|samA|ud|samud|upa|ni|upani|vini|pari|pra|prati|vi|pravi|sam
-cae,8901,kzud,1,"ava, pra"
+cae,8901,kzud,2,ava|pra
 cae,8907,kzuD,1,vi
 cae,8915,kzuB,1,pra vi
 cae,8985,kzRu,2,ava|sam
@@ -96,14 +96,14 @@ cae,9093,KAd,1,pra
 cae,9113,Kid,7,A|ud|ni|nis|pari|vi|sam
 cae,9186,gaRay,2,ava|pari
 cae,9240,gad,3,ni|praRi|vini
-cae,9285,gam,39,"acCa, acCA|ati|aDi|samaDi|anu|samanu|antar|apa|vyapa|api|aBi|ava|A|aDyA|anvA|aByA|upA|nyA|paryA|pratyA|samA|ud|apod|aByud|pratyud|upa|aByupa|samupa|ni|upani|nis|vinis|parA|pari|pra|pra/ti|vi|sam|aBisam"
+cae,9285,gam,40,acCa|acCA|ati|aDi|samaDi|anu|samanu|antar|apa|vyapa|api|aBi|ava|A|aDyA|anvA|aByA|upA|nyA|paryA|pratyA|samA|ud|apod|aByud|pratyud|upa|aByupa|samupa|ni|upani|nis|vinis|parA|pari|pra|pra/ti|vi|sam|aBisam
 cae,9314,garj,6,anu|aBi|pra|prati|vi|sam
 cae,9355,garh,2,*ni|vi
 cae,9362,gal,4,ava|pra|vi|pravi
 cae,9398,gA,19,acCa|ati|aDi|anu|antar|apa|api|aBi|ava|A|upA|paryA|ud|upa|nis|pari|pra|vi|sam
 cae,9399,gA,11,acCa|anu|aBi|A|ud|upa|ni|pra|aBipra|vi|sam
 cae,9458,gAh,7,ati|aBi|ava|ud|upa|pra|vi
-cae,9562,guRW,1,"ava, samava, A"
+cae,9562,guRW,3,ava|samava|A
 cae,9574,gur,4,apa|ava|A|ud
 cae,9614,guh,5,apa|ava|ud|upa|ni
 cae,9631,gf,8,anu|aBi|A|pratyA|upa|pra|prati|sam
@@ -112,13 +112,13 @@ cae,9654,gfBAya,3,anu|ud|sam
 cae,9772,gopAy,1,aBi
 cae,9865,graT,2,ud|vi
 cae,9881,graB,19,anu|apa|aBi|ava|A|ud|upa|ni|saMni|pari|saMpari|pra|saMpra|prati|vi|sam|anusam|upasam|pratisam
-cae,9884,gras,1,"A, upa, pari, pra, sam"
+cae,9884,gras,5,A|upa|pari|pra|sam
 cae,9951,glA,1,pra
 cae,9958,Gaw,4,ud|pra|vi|sam
 cae,9967,Gaww,4,ava|pari|vi|sam
 cae,10029,GAtay,4,vyA|ni|prati|vi
 cae,10039,Guz,5,ava|A|ud|vi|sam
-cae,10043,GUrR,1,"ava, A, pari, vi"
+cae,10043,GUrR,4,ava|A|pari|vi
 cae,10047,Gf,1,vyA
 cae,10077,Gfz,4,ava|ud|ni|nis
 cae,10103,GrA,3,ava|A|samA
@@ -147,7 +147,7 @@ cae,10957,jan,11,aDi|anu|aBi|A|ud|upa|samupa|pra|prati|vi|sam
 cae,11030,jap,3,A|upa|sam
 cae,11181,jalp,6,aBi|upa|pari|pra|vi|sam
 cae,11198,jas,2,ud|ni
-cae,11331,ji,11,"apa|aBi|ava|A|nis|vinis|parA|pari, pra|prati|vi|sam"
+cae,11331,ji,12,apa|aBi|ava|A|nis|vinis|parA|pari|pra|prati|vi|sam
 cae,11362,jinv,2,pra|upapra
 cae,11397,jIv,8,ati|anu|A|ud|upa|pratyupa|vi|sam
 cae,11465,juz,3,aBi|upa|prati
@@ -169,7 +169,7 @@ cae,11738,takz,8,anu|apa|A|ud|nis|pra|vi|sam
 cae,11752,taYc,1,A
 cae,11890,tan,13,aDi|anu|aBi|ava|A|anvA|vyA|samA|pari|pra|vi|sam|anusam
 cae,11956,tap,15,ati|anu|pratyanu|aBi|A|aByA|ud|upa|nis|pari|pra|prati|vi|sam|aBisam
-cae,12003,tam,2,"A, ud|pra"
+cae,12003,tam,3,A|ud|pra
 cae,12075,taruz,1,A
 cae,12082,tark,3,pari|vi|sam
 cae,12087,tarj,3,aBi|pari|sam
@@ -189,7 +189,7 @@ cae,12768,trap,1,apa
 cae,12788,tras,7,apa|ud|samud|nis|parA|pra|vi
 cae,12795,trA,1,pari
 cae,13071,tvar,3,ati|pari|pra
-cae,13112,daMS,2,"nis, pari|sam"
+cae,13112,daMS,3,nis|pari|sam
 cae,13179,daG,1,ati
 cae,13305,daB,2,A|upa
 cae,13336,day,2,ava|vi
@@ -197,7 +197,7 @@ cae,13394,dal,3,ava|ud|vi
 cae,13447,daSasy,1,A
 cae,13479,dah,11,ati|anu|upa|ni|nis|vinis|pari|pra|prati|vi|sam
 cae,13483,dA,18,anu|aBi|A|apA|aByA|upA|samupA|pratyA|vyA|samA|ud|parA|pari|pra|saMpra|prati|vi|sam
-cae,13485,dA,4,"ava|nis|samava|A, vi"
+cae,13485,dA,5,ava|nis|samava|A|vi
 cae,13486,dA,3,A|vi|sam
 cae,13706,div,3,ati|prati|vi
 cae,13707,div,1,pari
@@ -220,7 +220,7 @@ cae,14792,drA,2,ava|ni
 cae,14806,dru,15,ati|aDi|anu|apa|aBi|A|samA|ud|upa|nis|pari|pra|vipra|vi|sam
 cae,14823,druh,1,aBi
 cae,14995,dviz,2,pra|vi
-cae,15138,Danv,3,"acCa, anu|pra|sam"
+cae,15138,Danv,4,acCa|anu|pra|sam
 cae,15299,Dav,1,ava
 cae,15311,DA,43,aDi|anu|antar|apa|api|aBi|pratyaBi|ava|vyava|A|atyA|aDyA|anvA|aByA|upA|vyA|samA|upasamA|ud|upa|tiras|ni|aDini|apani|aBini|upani|praRi|vini|saMni|nis|pari|vipari|puras|pra|prati|vi|prativi|saMvi|sam|anusam|aBisam|upasam|pratisam
 cae,15313,DA,2,upa|nis
@@ -228,7 +228,7 @@ cae,15393,DAv,15,ati|anu|apa|api|aBi|ava|A|upa|nis|pari|pra|prati|vi|anuvi|sam
 cae,15394,DAv,5,A|ni|pra|vi|sam
 cae,15462,DU,12,apa|aBi|ava|vyava|A|ud|samud|nis|vinis|pra|vi|sam
 cae,15467,DUnay,1,ava
-cae,15471,DUpay,1,"ava, A, upa, pra"
+cae,15471,DUpay,4,ava|A|upa|pra
 cae,15541,Dfz,7,apa|aBi|A|pra|saMpra|prati|vi
 cae,15581,DyA,9,anu|samanu|apa|aBi|ava|ni|nis|pra|sam
 cae,15614,DvaMs,5,apa|ava|ni|vini|pra
@@ -249,7 +249,7 @@ cae,16381,nid,1,prati
 cae,17164,nI,30,acCa|ati|anu|pratyanu|apa|vyapa|aBi|ava|aByava|vyava|samava|A|udA|upA|paryA|pratyA|samA|ud|samud|upa|samupa|ni|nis|parA|pari|pra|saMpra|prati|vi|sam
 cae,17233,nu,7,acCa|anu|aBi|A|pra|aBipra|sam
 cae,17234,nu,2,apa|aBi
-cae,17237,nud,9,"apa, vyapa, apA|vyapA|nis|parA|pra|prati|vi|sam|upasam"
+cae,17237,nud,11,apa|vyapa|apA|vyapA|nis|parA|pra|prati|vi|sam|upasam
 cae,17252,nft,6,anu|A|upa|pari|pra|sam
 cae,17527,pac,2,pari|vi
 cae,17631,paw,3,ava|ud|vi
@@ -262,7 +262,7 @@ cae,17887,pan,2,A|vi
 cae,18568,palAy,2,pra|vi
 cae,18671,pA,6,A|ni|pari|pra|vi|sam
 cae,18673,pA,5,aBi|ni|nis|pari|pra
-cae,19029,pAlay,3,"anu, aBi, pari, pra|prati|sam"
+cae,19029,pAlay,6,anu|aBi|pari|pra|prati|sam
 cae,19189,pinv,1,pra
 cae,19216,piS,1,aBi
 cae,19233,piz,5,nis|pra|prati|vi|sam
@@ -304,7 +304,7 @@ cae,23018,Bur,1,pari
 cae,23040,BU,20,ati|anu|samanu|antar|apa|aBi|A|anvA|aByA|ud|samud|upa|tiras|nis|parA|pari|pra|prati|sam|aBisam
 cae,23194,BUz,5,A|upa|pari|prati|vi
 cae,23205,Bf,13,apa|ava|A|paryA|samA|ud|upa|nis|pari|pra|aBipra|vi|sam
-cae,23218,Bfjj,1,"ava, pari, sam"
+cae,23218,Bfjj,3,ava|pari|sam
 cae,23320,BraMS,3,pra|vi|sam
 cae,23325,Bram,5,ud|pari|pra|vi|sam
 cae,23458,majj,6,ud|upa|ni|saMni|nis|pra
@@ -331,22 +331,22 @@ cae,25085,muh,4,ati|vyA|pra|vi
 cae,25104,mUtray,1,ava
 cae,25113,mUrC,1,sam
 cae,25155,mf,3,anu|aBi|pari
-cae,25156,mf,2,"upa|ni, pra"
+cae,25156,mf,3,upa|ni|pra
 cae,25159,mfkz,2,aBi|ni
 cae,25174,mfgay,2,pari|vi
 cae,25217,mfj,12,anu|apa|ava|A|ud|upa|ni|nis|pari|pra|vi|sam
-cae,25227,mfR,1,"ni, pra, vi, sam"
+cae,25227,mfR,4,ni|pra|vi|sam
 cae,25265,mfd,7,aBi|ava|ud|ni|pari|pra|vi
 cae,25287,mfD,1,pari
 cae,25296,mfS,9,anu|aBi|ava|A|parA|pari|pra|vi|sam
 cae,25297,mfz,4,api|A|upa|pra
 cae,25417,mokzay,1,vi
 cae,25497,myakz,5,apa|A|ni|parA|sam
-cae,25507,mlA,1,"pari, pra, vi"
+cae,25507,mlA,3,pari|pra|vi
 cae,25513,mluc,4,anu|upa|ni|aBini
 cae,25546,yaj,8,anu|apa|api|ava|A|pari|pra|sam
 cae,25639,yat,12,aDi|A|anvA|upa|ni|nis|pratinis|pari|pra|prati|vi|sam
-cae,25828,yantray,1,"upa, ni, sam"
+cae,25828,yantray,3,upa|ni|sam
 cae,25833,yam,17,aDi|anu|antar|A|aByA|samA|ud|prod|samud|upa|ni|vini|pra|pratipra|saMpra|vi|sam
 cae,25929,yas,2,A|pra
 cae,25934,yA,35,acCa|ati|anu|apa|pratyapa|vyapa|aBi|ava|A|atyA|aByA|upA|pratyA|samA|ud|pratyud|upa|aByupa|pratyupa|samupa|ni|nis|aBinis|pari|pra|anupra|aBipra|pratipra|saMpra|prati|vi|sam|anusam|aBisam|pratisam
@@ -383,25 +383,25 @@ cae,27105,ruD,13,anu|apa|ava|samava|A|upa|ni|saMni|pari|pra|prati|vi|sam
 cae,27135,ruh,18,ati|aDi|anu|api|aBi|ava|A|atyA|aDyA|anvA|aByA|upA|samA|upa|pra|prati|vi|sam
 cae,27161,rUpay,1,ni
 cae,27186,rej,2,pra|sam
-cae,27335,lakzay,6,"aBi|A, upA|upa|samupa|vi|sam"
+cae,27335,lakzay,7,aBi|A|upA|upa|samupa|vi|sam
 cae,27354,lag,3,ava|A|vi
 cae,27393,laNG,4,ati|aBi|ud|vi
 cae,27398,lajj,1,vi
 cae,27425,lap,8,apa|aBi|A|ud|samud|pra|vi|sam
 cae,27443,laB,13,anu|aBi|A|anvA|upA|samA|upa|pratyupa|samupa|pra|vipra|vi|sam
 cae,27450,lamb,10,ava|A|vyA|samA|ud|pari|pra|prati|vi|pravi
-cae,27515,laz,1,"aBi, samaBi, A"
+cae,27515,laz,3,aBi|samaBi|A
 cae,27516,las,4,ud|prod|samud|vi
 cae,27573,liK,11,aBi|A|samA|ud|prod|samud|pari|pra|prati|vi|sam
-cae,27595,lip,6,"anu|ava|A|upa|ni|pra, vi, sam"
-cae,27606,lih,6,"ava, A, ud|upa|nis|pari|vi|sam"
+cae,27595,lip,8,anu|ava|A|upa|ni|pra|vi|sam
+cae,27606,lih,8,ava|A|ud|upa|nis|pari|vi|sam
 cae,27609,lI,12,aBi|ava|vyava|A|ni|saMni|pra|saMpra|prati|vi|pravi|sam
 cae,27629,luYc,1,ava
-cae,27632,luW,1,"ud, pari, pra"
+cae,27632,luW,3,ud|pari|pra
 cae,27633,luW,1,nis
 cae,27642,lup,10,apa|ava|A|vyA|ud|pari|pra|vipra|vi|sam
-cae,27650,luB,9,"anu|aBi|A|upa|pari|pra|vipra, saMpra|prati|sam"
-cae,27658,lU,3,"ava|A|nyA, vyA, nis, pari, pra, vipra, vi"
+cae,27650,luB,10,anu|aBi|A|upa|pari|pra|vipra|saMpra|prati|sam
+cae,27658,lU,9,ava|A|nyA|vyA|nis|pari|pra|vipra|vi
 cae,27695,lok,6,aBi|ava|A|pari|vi|pravi
 cae,27899,vac,14,acCa|aDi|anu|aByanu|aBi|A|upa|nis|pra|pratipra|saMpra|prati|vi|sam
 cae,27941,vaYc,7,acCa|aBi|A|upa|pari|pra|sam
@@ -412,17 +412,17 @@ cae,28124,vand,4,aBi|pari|pra|prati
 cae,28144,vap,2,pari|pra
 cae,28145,vap,12,anu|apa|api|A|ud|upa|ni|nis|parA|pari|pra|prati
 cae,28170,vam,2,aBi|ud
-cae,28319,varRay,6,"anu|samanu, aBi, vyA|upa|nis|vinis|sam"
+cae,28319,varRay,8,anu|samanu|aBi|vyA|upa|nis|vinis|sam
 cae,28409,val,1,vi
 cae,28439,valg,6,aBi|ava|A|vyA|pra|sam
 cae,28466,vaS,1,aBi
 cae,28494,vas,2,apa|vi
-cae,28495,vas,7,"aDi|anu|aBi|ni|pari, pra, prati|vi|sam"
+cae,28495,vas,9,aDi|anu|aBi|ni|pari|pra|prati|vi|sam
 cae,28496,vas,16,aDi|anu|A|aDyA|samA|ud|upa|ni|saMni|nis|pari|pra|vipra|prati|vi|sam
 cae,28602,vah,20,ati|anu|apa|aBi|A|anvA|udA|samA|ud|ud|upa|samupa|ni|nis|parA|pari|pra|prati|vi|sam
 cae,28629,vA,7,A|samA|ud|pari|pra|vi|sam
 cae,28630,vA,9,anu|aBi|ava|upa|nis|parA|pra|vi|sam
-cae,28730,vAYC,1,"aBi, samaBi, sam"
+cae,28730,vAYC,3,aBi|samaBi|sam
 cae,29016,vAsay,1,aDi
 cae,29257,viGnay,1,sam
 cae,29263,vic,2,apa|vi
@@ -433,17 +433,17 @@ cae,29547,viD,1,upa
 cae,29682,vip,5,ud|pari|pra|vi|sam
 cae,30370,viz,2,upa|pari
 cae,30616,vI,9,ati|apa|aBi|ava|A|upa|ni|pra|prati
-cae,30627,vIj,1,"anu, aBi, A, ud, upa, pari, sam"
+cae,30627,vIj,7,anu|aBi|A|ud|upa|pari|sam
 cae,30710,vf,18,anu|apa|api|aBi|A|apA|prA|samA|ni|vini|nis|pari|saMpari|pra|prati|vi|sam|aBisam
 cae,30741,vfj,12,apa|api|ava|A|vyA|samA|ud|ni|parA|pari|pra|sam
 cae,30744,vft,45,acCa|ati|vyati|aDi|anu|samanu|antar|apa|vyapa|aBi|samaBi|A|anvA|apA|aByA|upA|aByupA|paryA|anuparyA|aBiparyA|pratyA|vyA|samA|aBisamA|ud|upa|ni|aBini|upani|pratini|vini|saMni|nis|aBinis|parA|pari|vipari|saMpari|pra|atipra|aBipra|saMpra|vi|sam|aBisam
 cae,30809,vfD,11,ati|anu|aBi|A|pari|pra|atipra|saMpra|vi|saMvi|sam
-cae,30826,vfz,4,"aBi|ava|pra|prati, vi"
+cae,30826,vfz,5,aBi|ava|pra|prati|vi
 cae,31015,ven,2,anu|apa
-cae,31034,vell,1,"ud, vi"
+cae,31034,vell,2,ud|vi
 cae,31063,vezw,11,anu|apa|aBi|A|ud|upa|ni|nis|pari|vi|sam
 cae,31236,vyac,1,sam
-cae,31259,vyaT,1,"pra, saMpra, vi"
+cae,31259,vyaT,3,pra|saMpra|vi
 cae,31267,vyaD,15,ati|vyati|anu|apa|aBi|ava|A|ni|nis|parA|pari|pra|prati|vi|sam
 cae,31348,vyA,7,apa|api|A|upa|ni|pari|sam
 cae,31482,vraj,16,ati|anu|apa|aBi|A|pratyA|ud|pratyud|upa|pratyupa|pari|pra|aBipra|sam|anusam|upasam
@@ -454,9 +454,9 @@ cae,31581,Sakalay,1,vi
 cae,31629,SaNk,7,ati|aBi|A|upa|pari|vi|sam
 cae,31678,Sat,6,apa|vyava|ni|pra|vi|sam
 cae,31811,Sap,4,aBi|pari|prati|sam
-cae,31832,Sabday,2,"anu, aBi|sam"
+cae,31832,Sabday,3,anu|aBi|sam
 cae,31844,Sam,7,aBi|samava|upa|vyupa|ni|pra|sam
-cae,31846,Sam,1,"anuni, samanuni, aBini, upani, praRi, vini, saMni"
+cae,31846,Sam,7,anuni|samanuni|aBini|upani|praRi|vini|saMni
 cae,32117,Sas,1,vi
 cae,32144,SA,5,ati|ava|A|ni|sam
 cae,32337,SAs,10,anu|aByanu|samanu|aBi|A|ud|pra|saMpra|vi|sam
@@ -466,9 +466,9 @@ cae,32594,Siz,6,ati|apa|ava|Ud|vi|pravi
 cae,32610,SI,12,ati|vyati|aDi|anu|aBi|A|anvA|pratyA|upa|pari|pra|sam
 cae,32712,SIlay,1,pari
 cae,32758,Suc,12,anu|apa|aBi|A|ud|ni|nis|pari|pra|anupra|prati|sam
-cae,32819,SuD,3,"pari (SuDyati, ˚te|vi (SuDyati, ˚te|sam"
+cae,32819,SuD,5,pari (SuDyati|˚te|vi (SuDyati|˚te|sam
 cae,32836,SuB,1,pra
-cae,32838,SuB,4,"ati|aBi|upa, pari, prati, vi|sam"
+cae,32838,SuB,7,ati|aBi|upa|pari|prati|vi|sam
 cae,32904,Suz,1,A
 cae,32996,Sf,9,api|ava|ni|nis|parA|pari|pra|vi|sam
 cae,33193,SnaT,2,apa|ni
@@ -481,8 +481,8 @@ cae,33398,Sru,14,ati|anu|aBi|A|aByA|upa|samupa|pari|pra|prati|vi|sam|aBisam|prat
 cae,33495,SlAG,1,sam
 cae,33504,Sliz,8,A|upA|samA|upa|vi|sam|aBisam|upasam
 cae,33523,SvaYc,1,ud
-cae,33554,Svas,14,"aBi|A, paryA, pratyA|ud|proda|samud|ni|nis|vinis|pra|aBipra|vi|ativi|aBivi|parivi"
-cae,33562,SvA,1,"ud, pra, vi"
+cae,33554,Svas,16,aBi|A|paryA|pratyA|ud|proda|samud|ni|nis|vinis|pra|aBipra|vi|ativi|aBivi|parivi
+cae,33562,SvA,3,ud|pra|vi
 cae,33576,Svit,2,ava|vi
 cae,33715,zWiv,4,aBi|ni|aBini|prati
 cae,34241,sac,9,anu|apa|aBi|A|upa|ni|pra|prati|sam
@@ -493,34 +493,34 @@ cae,34928,sapary,1,vi
 cae,36189,sah,10,aBi|ud|aByud|prod|samud|pra|saMpra|prati|vi|sam
 cae,36414,sA,13,aBi|ava|aDyava|anvava|udava|upAva|nirava|paryava|prati|vyava|samava|ud|vi
 cae,36519,sAD,4,upa|pari|pra|sam
-cae,36593,sAntvay,1,"aBi, upa"
+cae,36593,sAntvay,2,aBi|upa
 cae,36847,sic,14,anu|aBi|samaBi|ava|A|samA|ud|upa|ni|nis|pari|pra|vi|sam
 cae,36908,siD,8,apa|vyA|ud|ni|nis|pra|prati|saMprati
 cae,36909,siD,3,aBi|pra|sam
 cae,36938,siv,7,vyati|ud|pari|pra|prati|vi|sam
 cae,36977,su,2,aDi|A
 cae,37831,sU,6,apa|aBi|A|nis|pra|saMpra
-cae,37852,sUcay,1,"aBi, A, upa, pra"
+cae,37852,sUcay,4,aBi|A|upa|pra
 cae,37882,sUtray,2,A|vi
-cae,37886,sUd,2,"aBi, ni|vini"
+cae,37886,sUd,3,aBi|ni|vini
 cae,37962,sf,22,anu|apa|vyapa|api|aBi|samava|A|ud|prod|samud|upa|nis|aBinis|pari|pra|vipra|saMpra|prati|vi|pravi|sam|aBisam
-cae,37977,sfj,20,"ati|anu|api|aBi|ava|aByava|upAva|vyava|samava|A|samA|ud|samud|upa|nis|pra|prati|vi|anuvi, aBivi|sam"
-cae,37987,sfp,26,"ati|aDi|anu|samanu|apa|aBi|ava|anvava|upAva, paryAva|vyava|A|upodA|ud|upod|samud|upa|samupa|nis|vinis|pari|pra|prati|vi|sam|anusam|upasam"
+cae,37977,sfj,21,ati|anu|api|aBi|ava|aByava|upAva|vyava|samava|A|samA|ud|samud|upa|nis|pra|prati|vi|anuvi|aBivi|sam
+cae,37987,sfp,27,ati|aDi|anu|samanu|apa|aBi|ava|anvava|upAva|paryAva|vyava|A|upodA|ud|upod|samud|upa|samupa|nis|vinis|pari|pra|prati|vi|sam|anusam|upasam
 cae,38024,sev,6,anu|A|upa|ni|pari|sam
 cae,38251,skand,9,ati|aBi|ava|aByava|samava|A|pari|pra|sam
 cae,38267,skamB,4,A|upa|prati|vi
-cae,38277,stan,1,"aBi, nis"
-cae,38313,stamB,10,"ava|paryava|samava|ud|upa|prati|vi|sam|aBisam, parisam|pratisam"
+cae,38277,stan,2,aBi|nis
+cae,38313,stamB,11,ava|paryava|samava|ud|upa|prati|vi|sam|aBisam|parisam|pratisam
 cae,38334,stiG,2,ati|pra
 cae,38341,stu,6,anu|aBi|upa|vi|sam|aBisam
 cae,38348,stuB,6,anu|aBi|vyava|pari|pra|prati
-cae,38352,stf,9,"aBi, ava|A|samA|upa|ni|pari|pra|vi|sam"
+cae,38352,stf,10,aBi|ava|A|samA|upa|ni|pari|pra|vi|sam
 cae,38460,sTA,48,ati|aDi|anu|antar|apa|api|aBi|ava|paryava|pratyava|vyava|samava|A|anvA|upA|samupA|samA|ud|anUd|aByud|upod|prod|pratyud|vyud|samud|upa|anUpa|aByupa|paryupa|pratyupa|samupa|ni|parini|nis|pari|pra|atipra|anupra|aBipra|vipra|saMpra|prati|saMprati|vi|anuvi|sam|anusam|aBisam
 cae,38558,snA,4,ud|ni|pra|sam
 cae,38596,snu,1,pra
-cae,38618,spand,1,"A, pari, pra, vi, sam"
+cae,38618,spand,5,A|pari|pra|vi|sam
 cae,38647,spf,5,apa|ava|A|nis|vi
-cae,38648,spfD,2,"aDi, pra, prati|vi"
+cae,38648,spfD,4,aDi|pra|prati|vi
 cae,38651,spfS,9,aDi|anu|aBi|A|ud|upa|samupa|pari|sam
 cae,38659,spfh,1,sam
 cae,38674,sPAy,2,A|vi
@@ -532,7 +532,7 @@ cae,38740,smf,7,anu|apa|upa|pra|prati|vi|sam
 cae,38753,syad,10,acCa|anu|aBi|ava|A|ni|pra|pari|vi|sam
 cae,38770,sraMs,3,ava|vyava|vi
 cae,38800,sru,13,ati|aDi|aBi|ava|A|ni|nis|pari|pra|aBipra|saMpra|vi|sam
-cae,38851,svaj,2,"aBi, pari, aBipari, saMpari|sam, aBisam"
+cae,38851,svaj,6,aBi|pari|aBipari|saMpari|sam|aBisam
 cae,38872,svad,1,A
 cae,38893,svan,6,ava|A|pari|pra|prati|vi
 cae,38903,svap,2,ni|pra
@@ -546,7 +546,7 @@ cae,39571,hA,10,apa|ava|ni|pari|pra|vipra|prati|vi|pravi|sam
 cae,39630,hiMs,1,upa
 cae,39794,hu,8,aDi|aBi|ava|A|upa|pra|prati|sam
 cae,39838,hUrC,2,anu|vi
-cae,39840,hf,41,"ati|vyati|aDi|anu|apa|aBi|ava|aByava|vyava|A|anvA|aByA|udA|samudA|upA|samupA|upanyA|paryA|pratyA|vyA|anuvyA|aBivyA|pravyA|samA|anusamA|ud|aByud|samaByud, prod|samud|nis|vinis|pari|vipari|pra|anupra|saMpra|prati|vi|sam|upasam|pratisam"
+cae,39840,hf,42,ati|vyati|aDi|anu|apa|aBi|ava|aByava|vyava|A|anvA|aByA|udA|samudA|upA|samupA|upanyA|paryA|pratyA|vyA|anuvyA|aBivyA|pravyA|samA|anusamA|ud|aByud|samaByud|prod|samud|nis|vinis|pari|vipari|pra|anupra|saMpra|prati|vi|sam|upasam|pratisam
 cae,39893,hfz,8,anu|aBi|ud|pari|pra|saMpra|prati|sam
 cae,39952,hez,1,aBi
 cae,40010,hnu,3,apa|ni|apani
@@ -722,7 +722,7 @@ pw,33683,KA,1,prod
 pw,33733,KAd,6,ava|A|prani|pra|vi|sam
 pw,33814,Kid,8,A|ud|ni|nis|pari|pra|vi|sam
 pw,33845,Kud,1,pra
-pw,33947,KyA,31,"ati|anu|antar|aBi|ava|A|anvA|aByA|udA|upA|pratyA|vyA|anuvyA|upavyA|samA|upa|parA|pari|saMpari|pra|prati|vi|aBivi|pravi, ˚KyAta|sam|anusam|aBisam|upasam|parisam|prasam|pratisam"
+pw,33947,KyA,32,ati|anu|antar|aBi|ava|A|anvA|aByA|udA|upA|pratyA|vyA|anuvyA|upavyA|samA|upa|parA|pari|saMpari|pra|prati|vi|aBivi|pravi|˚KyAta|sam|anusam|aBisam|upasam|parisam|prasam|pratisam
 pw,34238,gaRay,9,bahu|aDi|anu|ava|A|pari|pra|vi|sam
 pw,34408,gad,12,anu|praRyA|ni|aBini|pariRi|praRi|pratini|vini|pari|pra|prati|vi
 pw,34409,gad,1,pra
@@ -753,7 +753,7 @@ pw,36188,gfBAy,6,anu|samA|ud|prati|sam|Asam
 pw,36659,gopay,3,aBi|pra|sam
 pw,36679,gopAy,2,aBi|pari
 pw,37263,graT,9,anu|A|ud|samud|upa|ni|pra|vi|sam
-pw,37314,graB,42,"ati|anu|samanu|apa|api|aBi|ava|pratyava|vyava|A|upA|samA|ud|upod|pratyud|samud|upa|ni|upani|pratini|vini|saMni|nis|pratinis|pari|saMpari|pra|paripra|pratipra|saMpra|prati|upaprati|saMprati|vi|saha, sArDam|sam|anusam|apisam|aBisam|upasam|pratisam|saha"
+pw,37314,graB,43,ati|anu|samanu|apa|api|aBi|ava|pratyava|vyava|A|upA|samA|ud|upod|pratyud|samud|upa|ni|upani|pratini|vini|saMni|nis|pratinis|pari|saMpari|pra|paripra|pratipra|saMpra|prati|upaprati|saMprati|vi|saha|sArDam|sam|anusam|apisam|aBisam|upasam|pratisam|saha
 pw,37319,gras,6,aBi|A|upa|pari|pra|sam
 pw,37625,glA,4,ava|pari|aBipari|pra
 pw,37654,Gaw,8,apa|A|ud|samud|pari|pra|vi|sam
@@ -974,7 +974,7 @@ pw,61760,pac,13,anu|aBi|A|ud|ni|praRi|pari|pra|aBipra|saMpra|vi|sam|aBisam
 pw,62236,paw,7,ava|A|ud|samud|vini|vinis|vi
 pw,62354,paW,10,ati|vyati|anu|aBi|ud|ni|pari|pra|vi|sam
 pw,62374,paR,3,A|pra|vi
-pw,62448,pat,43,acCa|ati|anu|pra/|vi/|antar|aBi|samaBi|ava|aByava|A|aByA|paryA|samA|ud|anUd|aByud|prod|samud|upa|A/ — u/pa|ni|aBini|upani|pariRi|praRi|pratini|vini|saMni|saha|nis|aBinis|vinis|parA|anuparA|pari|vipari|pra|anupra|nizpra|prati|vi|sam
+pw,62448,pat,42,acCa|ati|anu|pra/|vi/|antar|aBi|samaBi|ava|aByava|A|aByA|paryA|samA|ud|anUd|aByud|prod|samud|upa|A/ — u/pa|ni|aBini|upani|pariRi|praRi|pratini|vini|saMni|nis|aBinis|vinis|parA|anuparA|pari|vipari|pra|anupra|nizpra|prati|vi|sam
 pw,62487,patay,4,acCa|antar|A|vi
 pw,62668,paty,1,aBi
 pw,62679,paT,1,api
@@ -1814,7 +1814,7 @@ pwg,14625,kaTay,3,anu|pra|sam
 pwg,14692,kan,2,A|sam
 pwg,14989,kam,3,anu|aBi|ni
 pwg,15024,kamp,12,anu|samanu|aBi|A|ud|pra|anupra|aBipra|saMpra|prati|vi|sam
-pwg,15071,kar,45,"kArayati, ˚te|ci/kIrzati|karikrati|ati|aDi|anu|apa|aBi|A|atyA|apA|aByA|avA|udA|upA|aByupA|samupA|nyA|nirA|paryA|vyA|samA|upasamA|is|ud|upa|pratyupa|ni|prani|vini|nis|aBinis|upanis|parA|pari|pra|vipra|saMpra|prati|vi|anuvi|sam|aBisam|upasam|pratisam"
+pwg,15071,kar,42,ati|aDi|anu|apa|aBi|A|atyA|apA|aByA|avA|udA|upA|aByupA|samupA|nyA|nirA|paryA|vyA|samA|upasamA|is|ud|upa|pratyupa|ni|prani|vini|nis|aBinis|upanis|parA|pari|pra|vipra|saMpra|prati|vi|anuvi|sam|aBisam|upasam|pratisam
 pwg,15073,kar,31,vyati|anu|apa|aBi|ava|anvava|aByava|paryava|samava|A|apA|avA|vyA|samA|ud|samud|upa|ni|vini|saMni|parA|pari|anupari|pra|vipra|saMpra|prati|vi|anuvi|pravi|sam
 pwg,15421,kart,16,samaDi|anu|apa|api|ava|ud|samud|upa|ni|vini|nis|pari|pra|vi|aDivi|sam
 pwg,15422,kart,2,ud|pari
@@ -1823,7 +1823,7 @@ pwg,15590,karz,29,ati|anu|apa|vyapa|aBi|ava|aByava|vyava|A|apA|vyapA|paryA|vyA|s
 pwg,15591,karz,3,pari|prati|vi
 pwg,15603,kal,8,ava|vyava|A|pratyA|ud|pari|sam|pratyAsam
 pwg,15604,kal,5,ud|pari|pra|sam|anusam
-pwg,15749,kalp,18,kxpta/|kalpa/yati|cikxpsti|anu|samanu|aBi|ava|A|ud|upa|samupa|pari|pra|sapraM|prati|vi|sam|upasam
+pwg,15749,kalp,15,anu|samanu|aBi|ava|A|ud|upa|samupa|pari|pra|sapraM|prati|vi|sam|upasam
 pwg,15914,kaz,4,apa|A|ud|ni
 pwg,15941,kas,7,ud|nis|pra|vi|anuvi|pravi|sam
 pwg,16114,kANkz,9,anu|aBi|A|aByA|pratyA|samA|pra|prati|vi
@@ -1891,7 +1891,7 @@ pwg,21311,KyA,31,ati|anu|antar|aBi|ava|A|anvA|aByA|udA|upA|pratyA|vyA|anuvyA|upa
 pwg,21498,gaRay,6,aDi|anu|ava|pari|pra|vi
 pwg,21607,gad,9,praRyA|ni|aBini|pariRi|praRi|pratini|pari|prati|vi
 pwg,21638,gaD,2,A|pari
-pwg,21814,gam,66,"gata/|gama/yati|jaNgamyate, jaNgamIti|ji/gamizati|acCa|ati|upAti|vyati|aDi|samaDi|anu|samanu|antar|apa|vyapa|api|aBi|samaBi|aram|ava|pratyava|samava|astam|A|aDyA|anvA|samanvA|aByA|samaByA|samudA|upA|aByupA|samupA|nyA|paryA|pratyA|saMpratyA|samA|aBisamA|ud|aByud|prod|pratyud|samud|upa|aByupa|samupa|ni|upani|saMni|nis|aBinis|vinis|saMnis|parA|pari|punar|pra|vipra|prati|vi|pravi|sam|aBisam|upasam|saha"
+pwg,21814,gam,62,acCa|ati|upAti|vyati|aDi|samaDi|anu|samanu|antar|apa|vyapa|api|aBi|samaBi|aram|ava|pratyava|samava|astam|A|aDyA|anvA|samanvA|aByA|samaByA|samudA|upA|aByupA|samupA|nyA|paryA|pratyA|saMpratyA|samA|aBisamA|ud|aByud|prod|pratyud|samud|upa|aByupa|samupa|ni|upani|saMni|nis|aBinis|vinis|saMnis|parA|pari|punar|pra|vipra|prati|vi|pravi|sam|aBisam|upasam|saha
 pwg,21847,gar,13,anu|apa|api|aBi|A|pratyA|upa|pra|saMpra|prati|aBiprati|sam|aBisam
 pwg,21848,gar,6,ava|ud|upa|ni|nis|sam
 pwg,21849,gar,3,anu|pra|prati
@@ -1913,7 +1913,7 @@ pwg,22745,guh,9,apa|ava|ud|upa|samupa|ni|vini|vi|sam
 pwg,23182,gopay,2,aBi|pra
 pwg,23196,gopAy,2,aBi|pari
 pwg,23621,graT,7,A|ud|samud|upa|ni|vi|sam
-pwg,23656,graB,40,jiGfkzati|jarIgfhyate|ati|anu|samanu|apa|api|aBi|ava|pratyava|vyava|A|upA|samA|ud|upod|pratyud|samud|upa|ni|upani|pratini|vini|saMni|nis|pari|saMpari|pra|paripra|pratipra|saMpra|prati|saMprati|vi|sam|anusam|aBisam|upasam|pratisam|saha
+pwg,23656,graB,38,ati|anu|samanu|apa|api|aBi|ava|pratyava|vyava|A|upA|samA|ud|upod|pratyud|samud|upa|ni|upani|pratini|vini|saMni|nis|pari|saMpari|pra|paripra|pratipra|saMpra|prati|saMprati|vi|sam|anusam|aBisam|upasam|pratisam|saha
 pwg,23661,gras,5,aBi|A|upa|pra|sam
 pwg,23861,glA,5,ava|pari|aBipari|pra|vi
 pwg,23883,Gaw,7,A|vyA|ud|pari|pra|vi|sam
@@ -1935,11 +1935,11 @@ pwg,24902,car,52,ati|vyati|aDi|anu|antar|apa|aBi|pratyaBi|vyaBi|ava|anvava|aByav
 pwg,24921,caraRy,2,A|ud
 pwg,24962,carc,1,anu
 pwg,24974,cart,10,ati|ava|A|upa|ni|nis|pari|pra|vi|sam
-pwg,25044,cal,12,cala/yati|caYcalyate|A|ud|samud|pari|pra|saMpra|vi|anuvi|pravi|sam
+pwg,25044,cal,10,A|ud|samud|pari|pra|saMpra|vi|anuvi|pravi|sam
 pwg,25297,ci,27,aDi|anu|apa|ava|A|anvA|avA|paryA|samA|ud|aByud|samud|upa|samupa|ni|Ani|pariRi|saMni|pari|pra|vipra|saMpra|vi|saMvi|sam|aBisam|parisam
 pwg,25298,ci,13,anu|apa|ava|upa|ni|nis|aBinis|avanis|vinis|pari|vi|pravi|sam
 pwg,25300,ci,2,apa|ni
-pwg,25362,cit,9,"cita/yati|ci/kitsati, ˚te|anu|apa|A|pra|atipra|vi|sam"
+pwg,25362,cit,7,anu|apa|A|pra|atipra|vi|sam
 pwg,25554,cint,16,anu|samanu|aBi|vyA|nis|pari|saMpari|pra|vipra|prati|vi|anuvi|pravi|sam|anusam|aBisam
 pwg,25655,cihnay,2,aBi|pari
 pwg,25746,cud,8,aBi|pari|pra|aBipra|saMpra|prati|sam|sama
@@ -1953,11 +1953,11 @@ pwg,26080,Cad,17,anu|aBi|samaBi|ava|samava|A|samA|ud|apod|samud|upa|samupa|pari|
 pwg,26081,Cad,4,ava|upa|vi|sam
 pwg,26132,Card,2,A|pra
 pwg,26160,CA,4,anu|ava|A|pra
-pwg,26237,Cid,23,Cedayati|cecCidIti|cicCitsu|anu|antar|apa|ava|paryava|vyava|A|avA|upA|samA|ud|vyud|samud|pari|vipari|pra|saMpra|prati|vi|sam
+pwg,26237,Cid,20,anu|antar|apa|ava|paryava|vyava|A|avA|upA|samA|ud|vyud|samud|pari|vipari|pra|saMpra|prati|vi|sam
 pwg,26278,Cur,3,ava|A|vi
 pwg,26309,jaMh,1,aBivi
 pwg,26313,jakz,3,apa|pra|vi
-pwg,26483,jan,29,"janize, janizva, janiDve, janiDvam|jijanizati|vyati|aDi|anu|samanu|apa|api|aBi|samaBi|ava|A|udA|ud|upa|samupa|nis|pari|pra|anupra|apapra|aBipra|upapra|saMpra|prati|vi|sam|aBisam|pratisam"
+pwg,26483,jan,27,vyati|aDi|anu|samanu|apa|api|aBi|samaBi|ava|A|udA|ud|upa|samupa|nis|pari|pra|anupra|apapra|aBipra|upapra|saMpra|prati|vi|sam|aBisam|pratisam
 pwg,26634,jap,8,anu|aBi|A|upa|pari|pra|prati|sam
 pwg,26652,jaB,1,aBi
 pwg,26655,jam,1,pra
@@ -1965,20 +1965,20 @@ pwg,26778,jar,4,anu|nis|pari|pra
 pwg,26780,jar,2,prati|sam
 pwg,27096,jalp,9,vyati|anu|aBi|upa|pari|pra|prati|vi|sam
 pwg,27128,jas,2,ud|ni
-pwg,27412,ji,24,jApayati|ji/gIzati|jejIyate|ati|vyati|aDi|anu|apa|aBi|ava|A|ud|anUd|nis|aBinis|parinis|pratinis|vinis|parA|pari|pra|prati|vi|sam
+pwg,27412,ji,21,ati|vyati|aDi|anu|apa|aBi|ava|A|ud|anUd|nis|aBinis|parinis|pratinis|vinis|parA|pari|pra|prati|vi|sam
 pwg,27485,jinv,2,pra|upapra
 pwg,27572,jIv,10,ati|anu|A|ud|aByud|pratyud|upa|vi|sam|pratisam
 pwg,27701,juz,9,anu|aBi|ava|samA|upa|nis|pra|prati|sam
 pwg,27722,jU,2,api|pra
 pwg,27744,jUrv,2,ni|sam
 pwg,27772,jeh,1,vi
-pwg,27838,jYA,36,jYApayati|jijYAsate|anu|aByanu|pratyaByanu|pratyanu|samanu|apa|aBi|pratyaBi|samaBi|ava|A|aByA|samA|upa|samupa|praRi|nis|vinis|pari|pra|anupra|aBipra|pratipra|saMpra|prati|saMprati|vi|aBivi|pravi|prativi|saMvi|sam|aBisam|pratisam
+pwg,27838,jYA,34,anu|aByanu|pratyaByanu|pratyanu|samanu|apa|aBi|pratyaBi|samaBi|ava|A|aByA|samA|upa|samupa|praRi|nis|vinis|pari|pra|anupra|aBipra|pratipra|saMpra|prati|saMprati|vi|aBivi|pravi|prativi|saMvi|sam|aBisam|pratisam
 pwg,27918,jyA,4,aDi|upa|pari|pra
 pwg,27942,jyut,1,ava
 pwg,28046,jramB,6,aBi|ud|samud|pra|vi|sam
 pwg,28050,jri,2,upa|pari
 pwg,28053,jvar,3,sam|anusam|aBisam
-pwg,28063,jval,14,jvalayati|jAjvalyate|aBi|ava|ud|prod|samud|upa|pra|aBipra|saMpra|prati|aBivi|sam
+pwg,28063,jval,12,aBi|ava|ud|prod|samud|upa|pra|aBipra|saMpra|prati|aBivi|sam
 pwg,28087,Jaw,1,ud
 pwg,28174,waNk,1,vi
 pwg,28216,wIk,1,A
@@ -1991,9 +1991,9 @@ pwg,28354,takz,9,anu|apa|ava|A|ud|nis|pra|vi|sam
 pwg,28380,taYc,2,A|aByA
 pwg,28392,taq,8,aBi|ava|A|pari|pra|prati|vi|sam
 pwg,28552,tan,30,ati|vyati|aDi|anu|apa|aBi|ava|aByava|A|anvA|aByA|udA|paryA|pratyA|vyA|samA|ud|ni|atinis|pari|pra|vi|anuvi|aBivi|Avi|pravi|sam|anusam|aBisam|upasam
-pwg,28717,tap,28,tApa/yati|ati|anu|pratyanu|samanu|aBi|ava|A|aByA|ud|upa|samupa|ni|nis|vinis|pari|vipari|paScAt|pra|aBipra|saMpra|prati|vi|pravi|sam|atisam|aBisam|parisam
+pwg,28717,tap,27,ati|anu|pratyanu|samanu|aBi|ava|A|aByA|ud|upa|samupa|ni|nis|vinis|pari|vipari|paScAt|pra|aBipra|saMpra|prati|vi|pravi|sam|atisam|aBisam|parisam
 pwg,28811,tam,6,A|ud|ni|pari|pra|sam
-pwg,28871,tar,27,"titIrzati, titarizati, titarIzati|tAtarti|ati|vyati|anu|apa|aBi|ava|samava|A|aByA|ud|aByud|prod|pratyud|samud|upa|ni|nis|pra|aBipra|upapra|vipra|vi|sam|anusam|aBisam"
+pwg,28871,tar,25,ati|vyati|anu|apa|aBi|ava|samava|A|aByA|ud|aByud|prod|pratyud|samud|upa|ni|nis|pra|aBipra|upapra|vipra|vi|sam|anusam|aBisam
 pwg,28981,tark,8,anu|nis|pari|pra|saMpra|vi|saMvi|sam
 pwg,29010,tarj,7,aBi|samaBi|A|ud|pari|vi|sam
 pwg,29018,tard,11,ati|anu|aBi|ava|A|ud|ni|pari|pra|vi|sam
@@ -2015,7 +2015,7 @@ pwg,30762,trap,2,apa|vyapa
 pwg,30811,tras,11,apa|ava|ud|samud|nis|parA|pari|pra|vi|sam|aBisam
 pwg,30821,trA,2,pari|sam
 pwg,31431,tvakz,1,pra
-pwg,31483,tvar,6,tvarayati; atatvarat|ati|aBi|pari|pra|sam
+pwg,31483,tvar,5,ati|aBi|pari|pra|sam
 pwg,31516,tviz,1,ava
 pwg,31538,tsar,3,aBi|ava|upa
 pwg,31564,daMS,9,ava|A|ud|upa|nis|pari|vi|sam|aBisam
@@ -2027,13 +2027,13 @@ pwg,32063,dar,12,anu|apa|ava|vyava|A|ud|ni|nis|pari|pra|aBipra|vi
 pwg,32064,dar,4,A|atyA|pratyA|samA
 pwg,32104,darp,2,ati|pra
 pwg,32116,darB,3,anu|api|sam
-pwg,32146,darS,23,darSa/yati (˚te)|di/dfkzate|ati|anu|vyapa|aBi|ava|A|vyA|ud|aByud|upa|ni|saMni|parA|pari|pra|upapra|saMpra|prati|vi|sam|anusam
+pwg,32146,darS,21,ati|anu|vyapa|aBi|ava|A|vyA|ud|aByud|upa|ni|saMni|parA|pari|pra|upapra|saMpra|prati|vi|sam|anusam
 pwg,32166,darh,2,ud|anUd
 pwg,32167,dal,5,ava|ud|nis|vi|sam
 pwg,32316,daSasy,2,A|sam
 pwg,32358,das,7,apa|ud|upa|anUpa|pra|vi|sam
-pwg,32377,dah,24,"dAhayati|diDakzati|dandahIti, dandahyate|ati|anu|apa|api|aBi|ava|A|upa|ni|nis|anunis|vinis|pari|saMpari|pra|saMpra|prati|vi|sam|vyatisam|anusam"
-pwg,32399,dA,40,dApayati|di/tsati|dedIyate|ati|anu|aBi|ava|A|anvA|apA|aByA|samaByA|udA|upA|aByupA|samupA|paryA|prA|pratyA|vyA|apavyA|aBivyA|samA|ud|upa|ni|pariRi|praRi|nis|parA|pari|pra|atipra|anupra|upapra|pratipra|saMpra|prati|vi|sam
+pwg,32377,dah,21,ati|anu|apa|api|aBi|ava|A|upa|ni|nis|anunis|vinis|pari|saMpari|pra|saMpra|prati|vi|sam|vyatisam|anusam
+pwg,32399,dA,37,ati|anu|aBi|ava|A|anvA|apA|aByA|samaByA|udA|upA|aByupA|samupA|paryA|prA|pratyA|vyA|apavyA|aBivyA|samA|ud|upa|ni|pariRi|praRi|nis|parA|pari|pra|atipra|anupra|upapra|pratipra|saMpra|prati|vi|sam
 pwg,32401,dA,14,api|ava|aByava|nirava|paryava|vyava|samava|A|pariRi|praRi|nis|pari|vi|sam
 pwg,32402,dA,5,A|ud|ni|vi|sam
 pwg,32403,dA,1,pariRi
@@ -2048,26 +2048,26 @@ pwg,33079,dI,2,nis|pari
 pwg,33080,dI,5,aBi|A|ni|pra|sam
 pwg,33082,dI,2,upa|pra
 pwg,33084,dIkz,2,upa|sam
-pwg,33120,dIp,18,dIpa/yati|ati|aBi|ava|A|upA|vyA|ud|pratyud|samud|upa|pari|pra|saMpra|prati|vi|aBivi|sam
+pwg,33120,dIp,17,ati|aBi|ava|A|upA|vyA|ud|pratyud|samud|upa|pari|pra|saMpra|prati|vi|aBivi|sam
 pwg,33323,du,5,aBi|A|pari|pra|vi
-pwg,33916,duz,12,duzwa|dUza/yati|anu|aBi|upa|pra|aBipra|vipra|saMpra|prati|vi|sam
-pwg,34073,duh,11,dohayati|ava|A|upa|nis|pra|vipra|prati|vi|pravi|sam
-pwg,35162,dyut,13,dyotayati|didyutizate|da/vidyutati|aBi|ava|A|ud|samud|nis|pra|vi|aBivi|sam
+pwg,33916,duz,10,anu|aBi|upa|pra|aBipra|vipra|saMpra|prati|vi|sam
+pwg,34073,duh,10,ava|A|upa|nis|pra|vipra|prati|vi|pravi|sam
+pwg,35162,dyut,10,aBi|ava|A|ud|samud|nis|pra|vi|aBivi|sam
 pwg,35164,dyut,1,A
-pwg,35320,drA,7,drApayati|daridrA/ti|apa|aBi|pra|aBipra|vi
+pwg,35320,drA,5,apa|aBi|pra|aBipra|vi
 pwg,35321,drA,4,ava|ni|pariRi|vi
 pwg,35335,drAq,1,ud
-pwg,35359,dru,41,drAva/yati|dudrAvayizati|ati|aDi|anu|samanu|apa|aBi|samaBi|vyava|samava|A|anvA|aByA|udA|upA|paryA|prA|saMprA|pratyA|samA|ud|anUd|aByud|samud|upa|pratyupa|samupa|nis|parA|pari|vipari|pra|aBipra|vipra|saMpra|prati|vi|aBivi|pravi|sam
+pwg,35359,dru,39,ati|aDi|anu|samanu|apa|aBi|samaBi|vyava|samava|A|anvA|aByA|udA|upA|paryA|prA|saMprA|pratyA|samA|ud|anUd|aByud|samud|upa|pratyupa|samupa|nis|parA|pari|vipari|pra|aBipra|vipra|saMpra|prati|vi|aBivi|pravi|sam
 pwg,35412,druh,3,aBi|prati|vi
 pwg,35428,drek,1,pra
 pwg,35846,dviz,4,anu|pra|vi|sam
 pwg,36005,Dan,1,pra
 pwg,36142,Danv,4,aBi|pra|paripra|sam
-pwg,36169,Dam,18,DmApayati|deDmIyate|anu|apa|api|aBi|A|atyA|upA|samA|ud|upa|nis|parA|pra|vi|sam|aBisam
-pwg,36186,Dar,17,Driyate) diDarizate|aDi|aBi|ava|A|nyA|ud|upa|anUpa|ni|nis|pari|pra|saMpra|prati|vi|sam
-pwg,36454,Darz,13,Darzayati (prasahane|apa|aBi|ava|A|ud|upa|pari|pra|saMpra|prati|vi|sam
+pwg,36169,Dam,16,anu|apa|api|aBi|A|atyA|upA|samA|ud|upa|nis|parA|pra|vi|sam|aBisam
+pwg,36186,Dar,16,aDi|aBi|ava|A|nyA|ud|upa|anUpa|ni|nis|pari|pra|saMpra|prati|vi|sam
+pwg,36454,Darz,12,apa|aBi|ava|A|ud|upa|pari|pra|saMpra|prati|vi|sam
 pwg,36464,Dav,1,ava
-pwg,36484,DA,85,DApayati|di/Dizati|deDIyate|ati|aDi|anu|vyanu|antar|apa|api|anvapi|samapi|aBi|pratyaBi|samaBi|ava|aByava|pratyava|vyava|saMvyava|samava|A|atyA|aDyA|antarA|anvA|apA|aByA|udA|upA|pratyupA|nyA|nirA|paryA|anuparyA|aBiparyA|vyA|samA|anusamA|aBisamA|upasamA|pratisamA|Avis|ud|upa|anUpa|aByupa|pratyupa|tiras|ni|aDini|apani|aBini|upani|pariRi|praRi|saMpraRi|pratini|vini|saMni|nis|pari|vipari|puras|pra|prati|anuprati|vi|ativi|aDivi|anuvi|aBivi|pravi|prativi|saMvi|Srat|sam|atisam|aDisam|anusam|aBisam|samaBisam|upasam|prasam|pratisam
+pwg,36484,DA,82,ati|aDi|anu|vyanu|antar|apa|api|anvapi|samapi|aBi|pratyaBi|samaBi|ava|aByava|pratyava|vyava|saMvyava|samava|A|atyA|aDyA|antarA|anvA|apA|aByA|udA|upA|pratyupA|nyA|nirA|paryA|anuparyA|aBiparyA|vyA|samA|anusamA|aBisamA|upasamA|pratisamA|Avis|ud|upa|anUpa|aByupa|pratyupa|tiras|ni|aDini|apani|aBini|upani|pariRi|praRi|saMpraRi|pratini|vini|saMni|nis|pari|vipari|puras|pra|prati|anuprati|vi|ativi|aDivi|anuvi|aBivi|pravi|prativi|saMvi|Srat|sam|atisam|aDisam|anusam|aBisam|samaBisam|upasam|prasam|pratisam
 pwg,36486,DA,5,anu|ud|upa|pariRi|nis
 pwg,36704,DAv,30,ati|anu|samanu|apa|aBi|pratyaBi|samaBi|ava|vyava|A|anvA|upA|samA|upa|samupa|nis|parA|pari|vipari|pra|aDipra|anupra|vipra|saMpra|prati|vi|anuvi|aBivi|parivi|sam
 pwg,36705,DAv,8,anu|A|vyud|ni|nis|pra|vi|sam
@@ -2075,25 +2075,24 @@ pwg,36722,Di,1,aBi
 pwg,36757,DI,11,anu|aBi|ava|A|anvA|upA|ud|ni|pra|prati|vi
 pwg,36802,Dukz,1,sam
 pwg,36804,Dunay,1,A
-pwg,36831,DU,22,DAvayati|doDavIti|do/Datas|apa|aBi|ava|vyava|A|vyA|samA|ud|samud|upa|ni|nis|vinis|pravinis|pari|pra|vi|pravi|sam
+pwg,36831,DU,19,apa|aBi|ava|vyava|A|vyA|samA|ud|samud|upa|ni|nis|vinis|pravinis|pari|pra|vi|pravi|sam
 pwg,36842,DUnay,2,ava|vi
 pwg,36849,DUpay,7,anu|ava|A|ud|upa|pra|vi
 pwg,36853,DUpAy,1,vi
 pwg,36876,DUmay,2,A|pra
 pwg,37095,DyA,20,ati|anu|samanu|apa|samapa|aBi|samaBi|ava|A|samA|upa|ni|aBini|praRi|nis|pari|pra|saMpra|prati|sam
-pwg,37174,DvaMs,17,"DvaMsayati|danIDvasyate, danIDvaMsIti|ati|apa|aBi|ava|A|ud|samud|upa|ni|vini|pari|pra|prati|vi|pravi"
+pwg,37174,DvaMs,15,ati|apa|aBi|ava|A|ud|samud|upa|ni|vini|pari|pra|prati|vi|pravi
 pwg,37209,Dvan,3,apa|aBi|pra
-pwg,37219,Dvar,1,dADvaryate
 pwg,37307,nakz,6,acCa|aBi|ava|pari|pra|aBipra
 pwg,37456,naw,1,ud
-pwg,37504,nad,21,nada/yati|anu|vyanu|aBi|A|ud|prod|samud|upa|ni|pariRi|pari|pra|aBipra|vipra|saMpra|prati|vi|anuvi|aBivi|sam
+pwg,37504,nad,20,anu|vyanu|aBi|A|ud|prod|samud|upa|ni|pariRi|pari|pra|aBipra|vipra|saMpra|prati|vi|anuvi|aBivi|sam
 pwg,37555,nand,9,anu|aBi|pratyaBi|samaBi|A|pari|prati|saMprati|vi
 pwg,37634,naB,2,ud|pra
-pwg,37694,nam,27,nama/yati|ati|aDi|anu|apa|aBi|ava|aByava|A|ud|aByud|samaByud|prod|samud|upa|ni|nis|pari|vipari|pra|aBipra|saMpra|prati|vi|sam|aBisam|upasam
+pwg,37694,nam,26,ati|aDi|anu|apa|aBi|ava|aByava|A|ud|aByud|samaByud|prod|samud|upa|ni|nis|pari|vipari|pra|aBipra|saMpra|prati|vi|sam|aBisam|upasam
 pwg,37710,namasy,1,sam
-pwg,37862,nart,15,"ninftsati|narnartti, narnftIti, narinartti, narinftIti, narInartti, narInftIti|aDi|anu|A|aByA|upa|ni|aBini|pari|pra|saMpra|prati|vi|sam"
-pwg,37873,nard,9,nAnardamAna|aBi|ava|A|ni|pra|prati|vi|anuvi
-pwg,38048,naS,16,"nASa/yati, anInaSat|ninaSizyati|anu|apa|vyapa|ava|nis|pari|pra|atipra|vipra|saMpra|vi|anuvi|pravi|sam"
+pwg,37862,nart,13,aDi|anu|A|aByA|upa|ni|aBini|pari|pra|saMpra|prati|vi|sam
+pwg,37873,nard,8,aBi|ava|A|ni|pra|prati|vi|anuvi
+pwg,38048,naS,14,anu|apa|vyapa|ava|nis|pari|pra|atipra|vipra|saMpra|vi|anuvi|pravi|sam
 pwg,38050,naS,7,acCa|aBi|ud|pari|pra|vi|sam
 pwg,38077,nas,1,sam
 pwg,38095,nah,21,apa|api|aBi|ava|paryava|prAva|A|nirA|paryA|pratyA|vyA|ud|samud|upa|ni|pari|pra|vi|sam|aBisam|upasam
@@ -2101,143 +2100,141 @@ pwg,38340,nAT,1,upa
 pwg,38728,nikz,3,anu|pra|vi
 pwg,38823,nij,7,ava|aByava|prAva|nis|parinis|pra|vi
 pwg,38876,nid,4,pari|pra|prati|vi
-pwg,40379,nI,67,nAyayati|acCa|ati|aByati|vyati|aDi|anu|paryanu|pratyanu|antar|apa|vyapa|api|aBi|ava|aByava|vyava|samava|A|anvA|aByA|samaByA|avA|udA|aByudA|samudA|upA|samupA|nyA|paryA|pratyA|vyA|samA|ud|anUd|aByud|upod|prod|samud|upa|vyupa|samupa|ni|aBini|avani|upani|saMni|nis|vinis|parA|pratiparA|upasaMparA|pari|anupari|vipari|pra|atipra|aBipra|paripra|vipra|saMpra|prati|vi|aBivi|saMvi|sam|aBisam
-pwg,40623,nu,12,"nunAvayizati|nonUyate, nonoti|acCa|anu|aBi|A|anvA|pari|pra|aBipra|sam|aBisam"
+pwg,40379,nI,66,acCa|ati|aByati|vyati|aDi|anu|paryanu|pratyanu|antar|apa|vyapa|api|aBi|ava|aByava|vyava|samava|A|anvA|aByA|samaByA|avA|udA|aByudA|samudA|upA|samupA|nyA|paryA|pratyA|vyA|samA|ud|anUd|aByud|upod|prod|samud|upa|vyupa|samupa|ni|aBini|avani|upani|saMni|nis|vinis|parA|pratiparA|upasaMparA|pari|anupari|vipari|pra|atipra|aBipra|paripra|vipra|saMpra|prati|vi|aBivi|saMvi|sam|aBisam
+pwg,40623,nu,10,acCa|anu|aBi|A|anvA|pari|pra|aBipra|sam|aBisam
 pwg,40624,nu,6,ati|anu|apa|aBi|ava|vi
-pwg,40628,nud,24,nodayati|ati|apa|vyapa|aBi|ava|paryava|apA|vyapA|upA|upa|nis|aBinis|parA|pari|pra|atipra|anupra|saMpra|prati|vi|aBivi|sam|upasam
+pwg,40628,nud,23,ati|apa|vyapa|aBi|ava|paryava|apA|vyapA|upA|upa|nis|aBinis|parA|pari|pra|atipra|anupra|saMpra|prati|vi|aBivi|sam|upasam
 pwg,40818,ned,1,ati
 pwg,41137,nyUNKay,1,prati
-pwg,41311,pac,17,"pAcayati, apIpacat|pipakzati|pApacyate, pApacIti|anu|aBi|A|ud|ni|praRi|nis|pari|pra|aBipra|saMpra|vi|sam|aBisam"
+pwg,41311,pac,14,anu|aBi|A|ud|ni|praRi|nis|pari|pra|aBipra|saMpra|vi|sam|aBisam
 pwg,41313,pac,1,pra
 pwg,41628,paw,6,ava|A|ud|samud|vini|vi
-pwg,41710,paW,10,"pAWayati, apIpaWat, apIpaWata|ati|vyati|anu|apa|aBi|ni|pari|pra|sam"
+pwg,41710,paW,9,ati|vyati|anu|apa|aBi|ni|pari|pra|sam
 pwg,41725,paR,2,A|vi
-pwg,41788,pat,45,"pata/yati|pAta/yati|pipatizati|panIpatyate, panIpatIti|acCA|ati|anu|antar|aBi|samaBi|ava|aByava|A|aByA|upA|paryA|samA|ud|anUd|aByud|prod|samud|upa|ni|aBini|upani|pariRi|praRi|vini|saMni|nis|aBinis|vinis|parA|anuparA|pari|vipari|pra|anupra|nizpra|prati|vi|anuvi|sam|aBisam"
+pwg,41788,pat,41,acCA|ati|anu|antar|aBi|samaBi|ava|aByava|A|aByA|upA|paryA|samA|ud|anUd|aByud|prod|samud|upa|ni|aBini|upani|pariRi|praRi|vini|saMni|nis|aBinis|vinis|parA|anuparA|pari|vipari|pra|anupra|nizpra|prati|vi|anuvi|sam|aBisam
 pwg,41790,pat,1,aBi
 pwg,41971,paT,1,api
-pwg,42000,pad,50,"pAda/yati|pitsate|panIpadyate, panIpadIti|ati|anu|samanu|apa|api|aBi|samaBi|ava|vyava|A|aByA|pratyA|vyA|samA|aBisamA|ud|upod|prod|pratyud|vyud|samud|upa|aByupa|pratyupa|samupa|ni|anuni|upani|pariRi|praRi|nis|aBinis|pari|pra|atipra|anupra|aBipra|saMpra|aBisaMpra|prati|aBiprati|viprati|saMprati|vi|sam|aBisam|upasam"
+pwg,42000,pad,47,ati|anu|samanu|apa|api|aBi|samaBi|ava|vyava|A|aByA|pratyA|vyA|samA|aBisamA|ud|upod|prod|pratyud|vyud|samud|upa|aByupa|pratyupa|samupa|ni|anuni|upani|pariRi|praRi|nis|aBinis|pari|pra|atipra|anupra|aBipra|saMpra|aBisaMpra|prati|aBiprati|viprati|saMprati|vi|sam|aBisam|upasam
 pwg,42215,pan,2,A|vi
-pwg,42307,par,20,pArayati|pUrayati|pupUrzati|ati|anu|aBi|samaBi|ava|A|samA|ud|upa|ni|nis|pari|saMpari|pra|aBipra|prati|sam
-pwg,42308,par,8,pAra/yati|ati|apa|ud|samud|nis|pra|sam
+pwg,42307,par,17,ati|anu|aBi|samaBi|ava|A|samA|ud|upa|ni|nis|pari|saMpari|pra|aBipra|prati|sam
+pwg,42308,par,7,ati|apa|ud|samud|nis|pra|sam
 pwg,42309,par,2,A|vyA
 pwg,43412,parc,8,anu|api|A|upa|nis|pra|vi|sam
 pwg,43685,palAy,1,pra
-pwg,43801,paS,19,apaspaSat|ati|anu|samanu|antar|aBi|ava|A|ud|parA|pari|pra|aBipra|saMpra|prati|vi|anuvi|aBivi|sam
-pwg,43920,pA,19,"pAya/yati, ˚te|pepIyate|ati|anu|antar|aBi|ava|anvava|A|samA|ud|anUd|ni|nis|pari|pra|anupra|vi|sam"
+pwg,43801,paS,18,ati|anu|samanu|antar|aBi|ava|A|ud|parA|pari|pra|aBipra|saMpra|prati|vi|anuvi|aBivi|sam
+pwg,43920,pA,17,ati|anu|antar|aBi|ava|anvava|A|samA|ud|anUd|ni|nis|pari|pra|anupra|vi|sam
 pwg,43922,pA,6,aDi|aBi|ni|nis|pari|pra
 pwg,44920,pAlay,11,ati|anu|samanu|aBi|samaBi|ni|pari|pra|prati|saMprati|sam
 pwg,44987,pASay,2,ava|vi
 pwg,45168,piRqay,1,sam
 pwg,45339,pinv,1,pra
 pwg,45384,pibd,1,A
-pwg,45397,piS,6,upa^ mA\ pepi^Sa\ttama^H kf\zRaM vya^ktamasTita|anu|aBi|A|nis|vi
-pwg,45431,piz,15,pezayati|anu|ava|A|ud|samud|ni|prani|nis|vinis|pari|pra|prati|aBiprati|sam
-pwg,45453,pI,5,pepIyate|aBi|A|samA|pra
+pwg,45397,piS,5,anu|aBi|A|nis|vi
+pwg,45431,piz,14,anu|ava|A|ud|samud|ni|prani|nis|vinis|pari|pra|prati|aBiprati|sam
+pwg,45453,pI,4,aBi|A|samA|pra
 pwg,45466,pIq,21,aBi|samaBi|ava|samava|A|ud|samud|upa|ni|aBini|upani|vini|nis|vinis|pari|pra|aBipra|saMpra|prati|vi|sam
 pwg,45565,pIy,2,ni|prati
 pwg,45669,puYjay,1,ud
 pwg,45680,puw,2,ud|pari
 pwg,45838,puT,7,aBi|ava|A|ni|pra|vi|sam
 pwg,46344,puz,5,anu|pari|pra|vi|sam
-pwg,46562,pU,16,pava/yati|pupUzati|ati|anu|aBi|A|samA|ud|ni|nis|pratinis|parA|pari|vi|sam|aBisam
+pwg,46562,pU,14,ati|anu|aBi|A|samA|ud|ni|nis|pratinis|parA|pari|vi|sam|aBisam
 pwg,46573,pUj,11,anu|aBi|samaBi|pari|saMpari|pra|saMpra|prati|saMprati|sam|aBisam
 pwg,46664,pUy,1,A
-pwg,47920,praC,18,pracCayati|pipfcCizati|parIpfcCyate|ati|anu|aByanu|samanu|aBi|A|upA|samA|upa|pari|saMpari|prati|vi|sam|upasam
-pwg,49080,praT,8,"praTa/yati, apapraTat|anu|aBi|A|ni|pari|vi|sam"
+pwg,47920,praC,15,ati|anu|aByanu|samanu|aBi|A|upA|samA|upa|pari|saMpari|prati|vi|sam|upasam
+pwg,49080,praT,7,anu|aBi|A|ni|pari|vi|sam
 pwg,50324,prA,1,A
-pwg,51077,prI,6,prIRayati|aBi|A|pari|anupra|sam
-pwg,51099,pru,9,prAvayati|puprAvayizati|ati|apa|aBi|A|ud|upa|vi
+pwg,51077,prI,5,aBi|A|pari|anupra|sam
+pwg,51099,pru,7,ati|apa|aBi|A|ud|upa|vi
 pwg,51101,pruT,2,apa|pra
 pwg,51102,pruz,5,aBi|A|ud|pari|vi
-pwg,51365,plu,28,plAvayati|piplAvayizati|anu|apa|aBi|samaBi|ava|samava|A|udA|upanyA|paryA|pratyA|samA|ud|samud|upa|samupa|upani|pari|aBipari|saMpari|pra|prati|vi|anuvi|sam|aBisam
+pwg,51365,plu,26,anu|apa|aBi|samaBi|ava|samava|A|udA|upanyA|paryA|pratyA|samA|ud|samud|upa|samupa|upani|pari|aBipari|saMpari|pra|prati|vi|anuvi|sam|aBisam
 pwg,51370,pluz,3,A|nis|vi
 pwg,51381,psA,2,pariRi|sam
-pwg,51399,PaR,3,PaRayati|A|vi
-pwg,51453,Pal,8,"pamPulyate, pamPulIti, pamPulti|ud|prod|ni|pra|prati|vi|sam"
+pwg,51399,PaR,2,A|vi
+pwg,51453,Pal,7,ud|prod|ni|pra|prati|vi|sam
 pwg,51454,Pal,1,vi
 pwg,51686,baMh,3,ava|ni|sam
-pwg,51753,banD,22,banDayati|anu|paryanu|api|ava|A|samA|ud|samud|upa|ni|upani|saMni|nis|pari|pra|prati|vi|sam|anusam|aBisam|upasam
+pwg,51753,banD,20,anu|paryanu|api|ava|A|samA|ud|samud|upa|ni|upani|saMni|nis|pari|pra|vi|sam|anusam|aBisam|upasam
 pwg,51853,barh,12,ati|A|ud|samud|ni|vini|saMni|nis|pra|upapra|vi|sam
 pwg,51854,barh,7,ati|aBi|upa|samupa|ni|pari|sam
-pwg,52395,bAD,19,ababADat|bIBatsate|ati|aDi|anu|apa|aBi|ava|A|ud|upa|ni|nis|pari|pra|saMpra|prati|vi|sam
-pwg,52927,buD,24,bubuDAna/|buButsate|biboDayizu|anu|ava|samava|A|ud|prod|samud|ni|saMni|pari|pra|anupra|vipra|saMpra|prati|saMprati|vi|aBivi|sam|aBisam|pratisam
+pwg,52395,bAD,17,ati|aDi|anu|apa|aBi|ava|A|ud|upa|ni|nis|pari|pra|saMpra|prati|vi|sam
+pwg,52927,buD,21,anu|ava|samava|A|ud|prod|samud|ni|saMni|pari|pra|anupra|vipra|saMpra|prati|saMprati|vi|aBivi|sam|aBisam|pratisam
 pwg,53686,brU,18,acCA|ati|aDi|anu|apa|aBi|ava|A|pratyA|ud|upa|nis|pari|pra|pratipra|prati|vi|sam
-pwg,53742,Bakz,6,Bakzayati|vyava|upa|pari|prati|sam
-pwg,53862,Baj,17,BAja/yati|anu|apa|aBi|A|anvA|upa|nis|pari|pra|prati|vi|aBivi|pravi|prativi|saMvi|sam
-pwg,53875,BaYj,17,"bamBajyate, bamBajIti|aBi|ava|vyA|ud|upa|ni|nis|vinis|pari|pra|aBipra|saMpra|prati|vi|sam|aBisam"
-pwg,53935,BaR,2,BARayati|prati
+pwg,53742,Bakz,5,vyava|upa|pari|prati|sam
+pwg,53862,Baj,16,anu|apa|aBi|A|anvA|upa|nis|pari|pra|prati|vi|aBivi|pravi|prativi|saMvi|sam
+pwg,53875,BaYj,16,aBi|ava|vyA|ud|upa|ni|nis|vinis|pari|pra|aBipra|saMpra|prati|vi|sam|aBisam
+pwg,53935,BaR,1,prati
 pwg,54099,Ban,1,A
-pwg,54144,Bar,27,buBUrzati|ati|anu|apa|aBi|ava|A|aDyA|upA|paryA|samA|ud|aDyud|paryud|upa|ni|saMni|nis|parA|pari|pra|aBipra|prati|vi|sam|aBisam|upasam
+pwg,54144,Bar,26,ati|anu|apa|aBi|ava|A|aDyA|upA|paryA|samA|ud|aDyud|paryud|upa|ni|saMni|nis|parA|pari|pra|aBipra|prati|vi|sam|aBisam|upasam
 pwg,54228,Barts,7,aBi|ava|ud|nis|aBinis|pari|sam
 pwg,54241,Bal,2,ni|sam
 pwg,54350,Bas,2,nis|pra
 pwg,54387,BA,21,ati|vyati|anu|aBi|ava|A|samA|ud|ni|nis|pra|anupra|saMpra|prati|viprati|saMprati|vi|aBivi|Avi|saMvi|sam
-pwg,54564,BAm,1,vABAmyate
-pwg,54756,BAz,21,abaBAzat|anu|apa|aBi|pratyaBi|samaBi|ava|A|vyA|samA|ud|pari|pra|saMpra|prati|saMprati|vi|saMvi|sam|upasam|prasam
-pwg,54780,BAs,10,abaBAsat|ava|A|ud|nis|pari|pra|prati|vi|nirvi
-pwg,54863,Bid,24,viBitsati|biBedayizu|beBidIti|anu|apa|ava|A|ud|prod|ni|prani|nis|vinis|parA|pari|pra|upapra|saMpra|prati|vi|pravi|sam|anusam|upasam
-pwg,54938,BI,8,BIza/yate|beBIyate|A|ni|pari|pra|vi|sam
+pwg,54756,BAz,20,anu|apa|aBi|pratyaBi|samaBi|ava|A|vyA|samA|ud|pari|pra|saMpra|prati|saMprati|vi|saMvi|sam|upasam|prasam
+pwg,54780,BAs,9,ava|A|ud|nis|pari|pra|prati|vi|nirvi
+pwg,54863,Bid,21,anu|apa|ava|A|ud|prod|ni|prani|nis|vinis|parA|pari|pra|upapra|saMpra|prati|vi|pravi|sam|anusam|upasam
+pwg,54938,BI,6,A|ni|pari|pra|vi|sam
 pwg,55048,Buj,11,ava|pratyava|A|vyA|nis|vinis|pari|pra|vi|pravi|sam
-pwg,55050,Buj,14,Bojayati|boBujyate|aDi|anu|aBi|A|upa|pratyupa|samupa|pari|pra|prati|vi|sam
+pwg,55050,Buj,12,aDi|anu|aBi|A|upa|pratyupa|samupa|pari|pra|prati|vi|sam
 pwg,55118,Bur,2,pari|sam
-pwg,55166,BU,44,BAvayati|bu/BUzati|biBAvayizati|boBUyate|ati|vyati|anu|pratyanu|samanu|antar|apa|api|aBi|atyaBi|pratyaBi|A|anvA|aByA|paryA|pratyA|Avis|ud|prod|samud|upa|ni|prani|nis|parA|anuparA|pari|saMpari|pra|anupra|aBipra|upapra|prati|vi|anuvi|sam|anusam|aBisam|parisam|pratisam
+pwg,55166,BU,40,ati|vyati|anu|pratyanu|samanu|antar|apa|api|aBi|atyaBi|pratyaBi|A|anvA|aByA|paryA|pratyA|Avis|ud|prod|samud|upa|ni|prani|nis|parA|anuparA|pari|saMpari|pra|anupra|aBipra|upapra|prati|vi|anuvi|sam|anusam|aBisam|parisam|pratisam
 pwg,55588,BUz,5,A|upA|upa|pari|vi
 pwg,55589,BUz,11,ati|A|upa|pari|pra|anupra|aBipra|upapra|prati|vi|sam
 pwg,55938,Byas,1,ud
-pwg,55940,BraMS,10,BraM Sayati|banIBraSyate|apa|A|ni|pari|saMpari|pra|vi|sam
-pwg,55954,Brajj,6,"Barjayati|biBrajjizati, biBrakzati, biBarjizati, biBarkzati|barIBfjjyate|ava|pari|sam"
-pwg,55960,Bram,9,Brama/yati|ud|samud|upa|pari|pra|vi|sam|upasam
-pwg,55999,BrAj,4,BrAjayati|pari|pra|vi
-pwg,56104,maMh,2,"maMha/yati, mAmahe/, mAmahAna/ (mamahe|vi"
+pwg,55940,BraMS,8,apa|A|ni|pari|saMpari|pra|vi|sam
+pwg,55954,Brajj,3,ava|pari|sam
+pwg,55960,Bram,8,ud|samud|upa|pari|pra|vi|sam|upasam
+pwg,55999,BrAj,3,pari|pra|vi
+pwg,56104,maMh,1,vi
 pwg,56233,maNg,1,pra
 pwg,56300,majj,13,ava|A|ud|samud|upa|ni|upani|vini|saMni|nis|pra|vi|sam
 pwg,56503,maRq,2,pari|prati
-pwg,56682,maT,19,manTayati|aDi|aBi|ava|A|ud|prod|samud|upa|ni|nis|vinis|saMnis|pra|aBipra|saMpra|vi|aBivi|sam
-pwg,56705,mad,14,"mAda/yati, mAdayate (tfptiyoge|anu|aBi|ava|ud|prod|upa|pari|pra|aBipra|vipra|saMpra|vi|sam"
+pwg,56682,maT,18,aDi|aBi|ava|A|ud|prod|samud|upa|ni|nis|vinis|saMnis|pra|aBipra|saMpra|vi|aBivi|sam
+pwg,56705,mad,13,anu|aBi|ava|ud|prod|upa|pari|pra|aBipra|vipra|saMpra|vi|sam
 pwg,56706,mad,2,ni|upani
-pwg,57252,man,21,mAna/yati|mI/mAMsate|mImAMsizate|ati|aDi|anu|samanu|apa|aBi|ava|aByava|A|upa|pari|pra|aBipra|prati|vi|sam|anusam|aBisam
+pwg,57252,man,18,ati|aDi|anu|samanu|apa|aBi|ava|aByava|A|upa|pari|pra|aBipra|prati|vi|sam|anusam|aBisam
 pwg,57292,manasy,1,aBi
 pwg,57513,mantray,14,anu|aBi|A|upA|samA|upa|aByupa|ni|aBini|upani|saMni|pari|prati|sam
-pwg,57784,mar,8,mArayati|mumUrzati|anu|aBi|A|upa|pari|pra
+pwg,57784,mar,6,anu|aBi|A|upa|pari|pra
 pwg,57785,mar,5,A|upa|pari|pra|aBipra
-pwg,57924,marj,23,"marmfjya/te, marmfjya/mAna|anu|apa|aBi|ava|A|apA|vyA|ud|samud|upa|ni|nis|parA|pari|pra|vipra|saMpra|prati|vi|anuvi|aBivi|sam"
+pwg,57924,marj,22,anu|apa|aBi|ava|A|apA|vyA|ud|samud|upa|ni|nis|parA|pari|pra|vipra|saMpra|prati|vi|anuvi|aBivi|sam
 pwg,57928,marq,1,aBi
 pwg,57930,marR,5,A|ni|pra|vi|sam
-pwg,57948,mard,18,mardayati|ati|apa|aBi|ava|A|aByA|vyA|ud|upa|ni|parA|pari|pra|saMpra|prati|vi|sam
+pwg,57948,mard,17,ati|apa|aBi|ava|A|aByA|vyA|ud|upa|ni|parA|pari|pra|saMpra|prati|vi|sam
 pwg,57955,marD,1,pari
 pwg,58004,marS,25,ati|vyati|anu|apa|aBi|pratyaBi|ava|anvava|pratyava|samava|A|ud|parA|anuparA|upaparA|pratiparA|pari|pra|aBipra|prati|vi|anuvi|pravi|saMvi|sam
 pwg,58007,marz,8,apa|api|A|paryA|upa|pari|pra|vi
-pwg,58151,mav,1,"mammavyate, mAmavyate"
 pwg,58231,mah,2,A|sam
 pwg,59391,mA,5,anu|A|pariRi|praRi|vi
-pwg,59392,mA,23,"mApayati, amImapat|mitsati|memIyate|anu|apa|aBi|ava|ud|upa|ni|pariRi|praRi|nis|aBinis|parinis|pratinis|vinis|saMnis|pari|pra|prati|vi|sam"
+pwg,59392,mA,20,anu|apa|aBi|ava|ud|upa|ni|pariRi|praRi|nis|aBinis|parinis|pratinis|vinis|saMnis|pari|pra|prati|vi|sam
 pwg,59394,mA,5,apa|ni|pariRi|praRi|vini
 pwg,60056,mArg,3,anu|pari|saMpari
-pwg,60352,mi,11,"mitsati, ˚te|apa|ud|upa|ni|praRi|pari|pra|prati|vi|sam"
-pwg,60353,mi,5,"mApayati, amImapat|mitsati, ˚te|A|ud|pra"
+pwg,60352,mi,10,apa|ud|upa|ni|praRi|pari|pra|prati|vi|sam
+pwg,60353,mi,3,A|ud|pra
 pwg,60355,mikz,2,A|sam
 pwg,60477,miT,2,aBi|pratyaBi
 pwg,60541,mid,2,anu|pra
 pwg,60565,mil,2,pari|sam
 pwg,60591,miSray,6,vyati|anu|vyA|vi|sam|pratisam
 pwg,60603,miz,4,ud|pratyud|samud|ni
-pwg,60618,mih,10,mehayati|ati|aBi|ava|upa|ni|pari|pra|prati|sam
-pwg,60662,mIl,13,mIlayati|anu|aBi|A|vyA|ud|prod|samud|ni|vini|saMni|pra|sam
+pwg,60618,mih,9,ati|aBi|ava|upa|ni|pari|pra|prati|sam
+pwg,60662,mIl,12,anu|aBi|A|vyA|ud|prod|samud|ni|vini|saMni|pra|sam
 pwg,60666,mIv,4,A|ni|pra|prati
-pwg,60883,muc,29,"mocayati|mumukzati, ˚te|ati|aDi|aBi|ava|vyava|A|paryA|vyA|ud|upa|nis|aDinis|aBinis|vinis|pari|vipari|pra|anupra|paripra|pratipra|vipra|saMpra|prati|saMprati|vi|pravi|sam"
+pwg,60883,muc,27,ati|aDi|aBi|ava|vyava|A|paryA|vyA|ud|upa|nis|aDinis|aBinis|vinis|pari|vipari|pra|anupra|paripra|pratipra|vipra|saMpra|prati|saMprati|vi|pravi|sam
 pwg,60923,muw,4,ava|ud|pari|prati
 pwg,60962,mud,11,anu|aByanu|aBi|A|ud|saMpari|pra|anupra|saMpra|prati|sam
 pwg,60993,mudray,2,ud|vi
-pwg,61106,muz,9,mumuzizati|ava|A|ud|nis|pari|pra|saMpra|vi
+pwg,61106,muz,8,ava|A|ud|nis|pari|pra|saMpra|vi
 pwg,61162,muh,16,vyati|anu|aBi|vyA|ud|nis|vinis|pari|pra|vipra|saMpra|prati|vi|sam|aBisam|visam
-pwg,61232,mUtray,3,momUtryate|ava|sam
+pwg,61232,mUtray,2,ava|sam
 pwg,61262,mUrC,7,aBi|ava|ud|pra|vi|sam|aBisam
 pwg,61307,mUl,3,ud|samunmUlay|nirmUlay
 pwg,61490,mfgay,3,pari|pra|vi
 pwg,62164,mokzay,7,A|pari|pra|saMpra|prati|vi|sam
 pwg,62360,mnA,5,anu|A|pratyA|samA|pari
 pwg,62361,myakz,4,apa|A|ni|sam
-pwg,62362,mrakz,4,mrakza/yati|aBi|ni|sam
+pwg,62362,mrakz,3,aBi|ni|sam
 pwg,62366,mrad,2,pra|vi
 pwg,62373,mrit,2,nis|vi
 pwg,62374,mruc,2,ni|aBini
@@ -2347,7 +2344,7 @@ pwg,72351,Kid,2,nis|vi
 pwg,72384,KyA,12,anvA|pratyA|vyA|anuvyA|samA|pari|pra|prati|vi|pravi|sam|parisam
 pwg,72486,gaRay,3,A|pari|vi
 pwg,72530,gad,5,anu|ni|praRi|vini|pra
-pwg,72578,gam,36,gata|ati|aDi|anu|vyapa|api|aBi|samaBi|ava|vyava|A|aDyA|anvA|samaByA|aByupA|paryupA|nyA|paryA|pratinyA|samA|ud|apod|upa|aByupa|samupa|ni|upani|saMni|nis|pari|vi|sam|anusam|aBisam|upasam|sama
+pwg,72578,gam,35,ati|aDi|anu|vyapa|api|aBi|samaBi|ava|vyava|A|aDyA|anvA|samaByA|aByupA|paryupA|nyA|paryA|pratinyA|samA|ud|apod|upa|aByupa|samupa|ni|upani|saMni|nis|pari|vi|sam|anusam|aBisam|upasam|sama
 pwg,72589,gar,4,aBi|aByA|prati|sam
 pwg,72590,gar,3,ud|pratyud|ni
 pwg,72591,gar,3,ud|pra|prati
@@ -2364,7 +2361,7 @@ pwg,72856,gup,2,aDi|anu
 pwg,72871,gur,1,ava
 pwg,72905,guh,5,samaBi|samava|upa|ni|pari
 pwg,73175,graT,2,ud|pra
-pwg,73181,graB,17,kareRa tu karaM tasyA grAhayitvA|tameva divasaM rAhurjiGfkzati divAkaram|anu|samanu|aBi|ava|upA|ud|upod|upa|ni|pari|pra|prati|upaprati|vi|sam
+pwg,73181,graB,15,anu|samanu|aBi|ava|upA|ud|upod|upa|ni|pari|pra|prati|upaprati|vi|sam
 pwg,73182,gras,2,A|pari
 pwg,73248,Gaw,4,vyA|ud|vi|sam
 pwg,73268,Gaww,5,ava|A|samud|pari|sam
@@ -2377,9 +2374,9 @@ pwg,73340,GrA,3,anu|ava|vyA
 pwg,73347,cakAs,1,sam
 pwg,73381,cakz,9,anu|A|nirA|vyA|pari|pra|saMpra|vi|udvi
 pwg,73447,cat,1,pra
-pwg,73618,car,22,caYcUryamARa|ati|aDi|aBi|vyaBi|ava|A|aByudA|samudA|samA|ud|pratyud|upa|ni|pari|saMpari|prati|vi|pravi|saMpravi|sam|parisam
+pwg,73618,car,21,ati|aDi|aBi|vyaBi|ava|A|aByudA|samudA|samA|ud|pratyud|upa|ni|pari|saMpari|prati|vi|pravi|saMpravi|sam|parisam
 pwg,73642,carc,1,vi
-pwg,73663,cal,5,na tezAM cAlyate budDiH|ud|prod|vi|sam
+pwg,73663,cal,4,ud|prod|vi|sam
 pwg,73735,ci,7,apa|avA|ud|upa|ni|pra|vi
 pwg,73736,ci,7,apa|ava|upa|nis|parinis|pari|vi
 pwg,73754,cit,3,vi|savi|sam
@@ -2398,10 +2395,10 @@ pwg,74139,jan,2,aBi|upa
 pwg,74225,jar,1,nis
 pwg,74284,jalp,1,pari
 pwg,74293,jas,2,prod|ni
-pwg,74383,ji,5,tvAM jigIzatA (mayA)|apa|vinis|parA|vi
+pwg,74383,ji,4,apa|vinis|parA|vi
 pwg,74434,jIv,6,A|aByud|pratyud|upa|pra|sam
 pwg,74482,juz,2,anu|upa
-pwg,74519,jYA,19,vidyAdijYApitESvarya|jijYAsitum — kuryAdiyadBirdInArEH kiM dvibAhurasAviti|ati|anu|pratyaByanu|apa|aBi|pratyaBi|ava|A|upa|nis|pari|pratipra|prati|vi|prativi|saMvi|sam
+pwg,74519,jYA,17,ati|anu|pratyaByanu|apa|aBi|pratyaBi|ava|A|upa|nis|pari|pratipra|prati|vi|prativi|saMvi|sam
 pwg,74568,jyut,1,ava
 pwg,74611,jramB,2,ud|vi
 pwg,74612,jvar,1,sam
@@ -2411,7 +2408,7 @@ pwg,74715,takz,1,anu
 pwg,74796,tan,7,A|samA|pra|vi|pravi|sam|parisam
 pwg,74844,tap,6,aBi|ud|upa|pari|pra|prati
 pwg,74860,tam,2,ava|ni
-pwg,74867,tar,12,Sara^dastartarIti|ava|ud|prod|nis|pari|pra|prati|vi|pravi|sam|anusam
+pwg,74867,tar,11,ava|ud|prod|nis|pari|pra|prati|vi|pravi|sam|anusam
 pwg,74892,tark,2,pari|prati
 pwg,74915,tarj,1,sam
 pwg,74920,tard,3,upa|pra|sam
@@ -2443,7 +2440,7 @@ pwg,76260,dyut,1,vi
 pwg,76320,dru,6,anu|aBi|aByud|upa|saMpra|vi
 pwg,76327,druh,1,pra
 pwg,76472,Dam,3,aBi|A|pratyA
-pwg,76478,Dar,10,diDIrzA|ava|paryava|ud|upa|ni|nis|pari|vi|sam
+pwg,76478,Dar,9,ava|paryava|ud|upa|ni|nis|pari|vi|sam
 pwg,76548,Darz,2,pari|sam
 pwg,76560,DA,25,antar|api|aBi|samaBi|ava|upAva|vyava|A|atyA|anvA|samA|upa|ni|unni|upani|praRi|saMni|pari|prati|vi|prativi|sam|anusam|aBisam|prasam
 pwg,76607,DAv,6,nis|parA|pari|pra|anupra|saMpra
@@ -2478,8 +2475,8 @@ pwg,78651,pI,1,ud
 pwg,78658,pIq,3,nis|pra|prati
 pwg,78840,pUj,1,pra
 pwg,79081,praC,2,A|sam
-pwg,79693,prI,2,prIRayya sUnftErvAkyEH|A
-pwg,79736,plu,10,samudraH saptame 'hnyetAM purIM ca plAvayizyati|aDi|anu|aBi|samaBi|A|ud|pari|vi|sam
+pwg,79693,prI,1,A
+pwg,79736,plu,9,aDi|anu|aBi|samaBi|A|ud|pari|vi|sam
 pwg,79737,pluz,1,vi
 pwg,79824,banD,6,anu|A|ud|ni|upani|pari
 pwg,79852,barh,1,upa
@@ -2495,7 +2492,7 @@ pwg,80183,BAz,3,samaBi|A|pari
 pwg,80190,BAs,3,vyava|ud|prati
 pwg,80199,Bid,4,ud|vi|pravi|sam
 pwg,80219,Buj,4,anu|samA|samupa|sam
-pwg,80224,BU,5,BAvita|anu|ud|pari|pra
+pwg,80224,BU,4,anu|ud|pari|pra
 pwg,80282,BraMS,1,vi
 pwg,80284,Brajj,1,ava
 pwg,80285,Bram,5,ud|pari|pra|vi|sam
@@ -2516,33 +2513,32 @@ pwg,80709,mud,1,pra
 pwg,80780,mokzay,1,vi
 pwg,80800,mluc,1,ni
 pwg,80813,yakz,1,pra
-pwg,80867,yaj,17,"yAjayati, ayIyajat|yiyakzati|yAyajyate, yAyajIti|ati|anu|apa|aBi|ava|nirava|A|samA|upa|atyupa|pari|pra|prati|sam"
-pwg,81094,yat,20,yAta/yati|aDi|anu|A|atyA|anvA|samA|upa|ni|nis|pratinis|pari|pra|saMpra|prati|vi|aDivi|sam|aBisam|pratisam
+pwg,80867,yaj,14,ati|anu|apa|aBi|ava|nirava|A|samA|upa|atyupa|pari|pra|prati|sam
+pwg,81094,yat,19,aDi|anu|A|atyA|anvA|samA|upa|ni|nis|pratinis|pari|pra|saMpra|prati|vi|aDivi|sam|aBisam|pratisam
 pwg,81508,yantray,3,upa|ni|sam
 pwg,81523,yaB,2,pra|prati
-pwg,81526,yam,38,"yamayati|yaMyamyate, yaMyamIti|aDi|anu|antar|A|aByA|udA|upA|nirA|paryA|vyA|samA|aBisamA|ud|aByud|upod|prod|pratyud|samud|upa|ni|pariRi|pratini|vini|saMni|pari|pra|atipra|anupra|Apra|upapra|pratipra|saMpra|prati|vi|sam|upasam"
+pwg,81526,yam,36,aDi|anu|antar|A|aByA|udA|upA|nirA|paryA|vyA|samA|aBisamA|ud|aByud|upod|prod|pratyud|samud|upa|ni|pariRi|pratini|vini|saMni|pari|pra|atipra|anupra|Apra|upapra|pratipra|saMpra|prati|vi|sam|upasam
 pwg,81807,yas,9,ava|A|samA|ud|ni|nis|pra|vi|sam
-pwg,81815,yA,74,yApayati|yiyAsati|IyAyate|acCa|ati|vyati|samati|aDi|anu|samanu|antar|apa|aByapa|pratyapa|vyapa|vyApa|api|aBi|pratyaBi|samaBi|ava|A|atyA|aByA|udA|upA|aByupA|samupA|paryA|anuparyA|prA|upaprA|pratiprA|pratyA|samA|aBisamA|ud|aByud|pratyud|samud|upa|aByupa|upopa|pratyupa|samupa|ni|pariRi|praRi|nis|aBinis|pratinis|vinis|parA|pari|anupari|pra|anupra|aBipra|upapra|paripra|pratipra|vipra|saMpra|anusaMpra|aBisaMpra|upasaMpra|prati|vi|aBivi|sam|anusam|aBisam|upasam|pratisam
-pwg,81827,yAc,13,"yAcayati, ayayAcat|yiyAcizate|anu|pratyanu|api|aBi|samaBi|A|upa|nis|pra|saMpra|sam"
-pwg,82108,yu,19,"yAvayati, ayIyavat|yiyavizati|yiyAvayizati|yoyoti|vyati|aBi|A|aByA|udA|samA|ud|ni|pari|pra|pratipra|prati|vi|pravi|sam"
-pwg,82109,yu,6,yava/yati|apa|ava|nis|pra|vi
+pwg,81815,yA,71,acCa|ati|vyati|samati|aDi|anu|samanu|antar|apa|aByapa|pratyapa|vyapa|vyApa|api|aBi|pratyaBi|samaBi|ava|A|atyA|aByA|udA|upA|aByupA|samupA|paryA|anuparyA|prA|upaprA|pratiprA|pratyA|samA|aBisamA|ud|aByud|pratyud|samud|upa|aByupa|upopa|pratyupa|samupa|ni|pariRi|praRi|nis|aBinis|pratinis|vinis|parA|pari|anupari|pra|anupra|aBipra|upapra|paripra|pratipra|vipra|saMpra|anusaMpra|aBisaMpra|upasaMpra|prati|vi|aBivi|sam|anusam|aBisam|upasam|pratisam
+pwg,81827,yAc,11,anu|pratyanu|api|aBi|samaBi|A|upa|nis|pra|saMpra|sam
+pwg,82108,yu,15,vyati|aBi|A|aByA|udA|samA|ud|ni|pari|pra|pratipra|prati|vi|pravi|sam
+pwg,82109,yu,5,apa|ava|nis|pra|vi
 pwg,82185,yucC,1,pra
-pwg,82186,yuj,43,"yojayati, ˚te|yuyukzati|aDi|anu|aByanu|paryanu|samanu|apa|aBi|pratyaBi|A|upA|samupA|vyA|samA|aBisamA|ud|samud|upa|vyupa|samupa|ni|anuni|upani|vini|saMni|nis|vinis|pra|atipra|anupra|aBipra|pratipra|vipra|saMpra|prati|vi|sam|anusam|aBisam|upasam|pratisam|visam"
-pwg,82233,yuD,12,yavIyuD|anu|aBi|A|prA|ud|ni|pra|saMpra|prati|sam|pratisam
-pwg,82252,yup,3,yoyupya/te|A|sam
+pwg,82186,yuj,41,aDi|anu|aByanu|paryanu|samanu|apa|aBi|pratyaBi|A|upA|samupA|vyA|samA|aBisamA|ud|samud|upa|vyupa|samupa|ni|anuni|upani|vini|saMni|nis|vinis|pra|atipra|anupra|aBipra|pratipra|vipra|saMpra|prati|vi|sam|anusam|aBisam|upasam|pratisam|visam
+pwg,82233,yuD,11,anu|aBi|A|prA|ud|ni|pra|saMpra|prati|sam|pratisam
+pwg,82252,yup,2,A|sam
 pwg,82366,yez,1,nis
-pwg,82647,raMh,2,vAje\ adri^M ra\Mhaya^ntaH|rArahARa/
-pwg,82848,rakz,15,"rakzayati, ararakzat|rirakzizati|rakzA^ Ro agne\ tava\ rakza^ReBI rAra\kzA\RaH su^maKa prIRA\naH|aDi|anu|aBi|ava|A|upa|pari|saMpari|pra|prati|vi|sam"
+pwg,82848,rakz,12,aDi|anu|aBi|ava|A|upa|pari|saMpari|pra|prati|vi|sam
 pwg,82999,rac,3,A|upa|vi
-pwg,83005,raj,12,rArajIti|anu|apa|aBi|samaBi|ud|upa|prati|vi|sam|anusam|aBisam
-pwg,83092,raw,3,rawa/yati|A|pari
+pwg,83005,raj,11,anu|apa|aBi|samaBi|ud|upa|prati|vi|sam|anusam|aBisam
+pwg,83092,raw,2,A|pari
 pwg,83494,rad,2,pra|vi
-pwg,83506,raD,4,ranDa/yati|upa|ni|pari
-pwg,83511,ran,3,"raRa/yati, ˚te, arIraRat|ni|vi"
-pwg,83534,rap,5,sa rI^M re\Bo na prati^ vasta u\srAH So\cizA^ rArapIti mi\trama^hAH|A|pari|pra|prati
+pwg,83506,raD,3,upa|ni|pari
+pwg,83511,ran,2,ni|vi
+pwg,83534,rap,4,A|pari|pra|prati
 pwg,83536,rapS,1,vi
-pwg,83542,raB,21,ramBayati|ripsate|aBi|A|anvA|vyanvA|samanvA|aByA|samupA|prA|pratyA|vyA|samA|anusamA|upasamA|pari|saMpari|sam|anusam|aBisam|prati
-pwg,83556,ram,23,"ramayati|riraMsA, riraMsu|raMramyate, raMramIti|ati|anu|apa|aBi|ava|upAva|A|upA|vyupA|samA|ud|upa|vyupa|ni|pari|pra|prati|vi|pravi|sam"
+pwg,83542,raB,19,aBi|A|anvA|vyanvA|samanvA|aByA|samupA|prA|pratyA|vyA|samA|anusamA|upasamA|pari|saMpari|sam|anusam|aBisam|prati
+pwg,83556,ram,20,ati|anu|apa|aBi|ava|upAva|A|upA|vyupA|samA|ud|upa|vyupa|ni|pari|pra|prati|vi|pravi|sam
 pwg,83584,ramb,2,ava|A
 pwg,83587,ramB,1,upa
 pwg,83704,ras,4,anu|aBi|A|vi
@@ -2550,88 +2546,86 @@ pwg,83873,rah,1,vi
 pwg,83892,rA,2,vyati|sam
 pwg,83894,rA,1,aBi
 pwg,83977,rAj,14,ati|anu|aBi|upa|nis|pari|prati|vi|ativi|aDivi|anuvi|aBivi|saMvi|sam
-pwg,84433,rAD,14,rADayati|anu|apa|aBi|ava|A|upA|samA|upa|pra|prati|vi|sam|aBisam
+pwg,84433,rAD,13,anu|apa|aBi|ava|A|upA|samA|upa|pra|prati|vi|sam|aBisam
 pwg,84683,rAs,1,pari
-pwg,84723,ri,8,repayati|anu|A|ni|nis|pra|vi|sam
+pwg,84723,ri,7,anu|A|ni|nis|pra|vi|sam
 pwg,84750,riK,1,A
-pwg,84758,ric,12,reca/yati viyojanasaMparcanayoH|ati|atyati|vyati|anu|aBi|A|ud|samud|ni|pra|vi
+pwg,84758,ric,11,ati|atyati|vyati|anu|aBi|A|ud|samud|ni|pra|vi
 pwg,84766,rip,1,api
 pwg,84777,riP,2,ava|A
 pwg,84778,riB,2,aBi|vi
 pwg,84795,riS,2,A|vi
-pwg,84799,riz,4,"reza/yati, rIrizat, rIrizata, ri˚|anu|aBi|A"
+pwg,84799,riz,3,anu|aBi|A
 pwg,84816,rih,4,A|pari|prati|sam
-pwg,84835,ru,11,"rAvayati, arIravat|rurUzati|rirAvayizati|ro/ravIti|anu|aBi|A|upa|prati|vi|sam"
-pwg,84837,ru,1,roru^va\dvanA^
-pwg,84873,ruc,17,"rocayati, ˚te, arUrucat|ati|anu|aBi|ava|A|ud|upa|nis|pari|pra|saMpra|prati|vi|ativi|aBivi|sam"
-pwg,84911,ruj,11,roja/yati|rurukzaRi|ava|A|samA|ud|samupa|pari|pra|vi|sam
-pwg,84934,rud,8,roda/yati|rurudizati|anu|aBi|ava|upA|pra|vi
+pwg,84835,ru,7,anu|aBi|A|upa|prati|vi|sam
+pwg,84873,ruc,16,ati|anu|aBi|ava|A|ud|upa|nis|pari|pra|saMpra|prati|vi|ativi|aBivi|sam
+pwg,84911,ruj,9,ava|A|samA|ud|samupa|pari|pra|vi|sam
+pwg,84934,rud,6,anu|aBi|ava|upA|pra|vi
 pwg,85041,ruD,4,ava|ud|pra|vi
 pwg,85042,ruD,28,anu|apa|vyapa|aBi|ava|paryava|pratyava|samava|A|samA|ud|upa|pratyupa|samupa|ni|upani|saMni|pari|pra|saMpra|prati|vi|prativi|sam|atisam|aBisam|upasam|pratisam
-pwg,85054,rup,1,"ropayAmi, arUrupat"
-pwg,85085,ruz,6,roza/yati|aBi|A|saMpra|vi|sam
-pwg,85093,ruh,49,roha/yati|rurukzati|ati|vyati|aDi|anvaDi|upADi|samaDi|anu|vyapa|api|samapi|aBi|samaBi|ava|aDyava|anvava|aByava|upAva|pratyava|aBipratyava|vyava|A|atyA|aDyA|anvA|upAnvA|samanvA|aByA|avA|udA|upA|samupA|paryA|prA|pratyA|samA|anusamA|aBisamA|upa|ni|nis|pra|anupra|aBipra|prati|vi|sam|upasam
+pwg,85085,ruz,5,aBi|A|saMpra|vi|sam
+pwg,85093,ruh,47,ati|vyati|aDi|anvaDi|upADi|samaDi|anu|vyapa|api|samapi|aBi|samaBi|ava|aDyava|anvava|aByava|upAva|pratyava|aBipratyava|vyava|A|atyA|aDyA|anvA|upAnvA|samanvA|aByA|avA|udA|upA|samupA|paryA|prA|pratyA|samA|anusamA|aBisamA|upa|ni|nis|pra|anupra|aBipra|prati|vi|sam|upasam
 pwg,85110,rUkzay,1,vi
 pwg,85148,rUpay,3,ni|pra|vi
 pwg,85183,rUz,1,sam
 pwg,85207,rej,2,pra|sam
 pwg,85641,lakzay,11,ati|aBi|A|upA|samA|upa|aByupa|samupa|saMprati|vi|sam
-pwg,85715,lag,8,lAga/yati|anu|ava|A|samA|pari|vi|sam
-pwg,85874,laNG,12,laNGa/yati|ati|aBi|ava|ud|samud|pari|prati|vi|ativi|saMvi|sam
-pwg,85886,lajj,4,lajjayati|aDi|vi|sam
-pwg,85971,lap,13,lApayati|lA/lapIti|anu|apa|aBi|A|samA|ud|pra|vipra|vi|pravi|sam
-pwg,85996,laB,20,lamBayati|lipsate (lIpsate|anu|aBi|A|anvA|upA|pratyA|samA|ud|upa|pratyupa|samupa|pari|pra|vipra|prati|vi|pravi|sam
+pwg,85715,lag,7,anu|ava|A|samA|pari|vi|sam
+pwg,85874,laNG,11,ati|aBi|ava|ud|samud|pari|prati|vi|ativi|saMvi|sam
+pwg,85886,lajj,3,aDi|vi|sam
+pwg,85971,lap,11,anu|apa|aBi|A|samA|ud|pra|vipra|vi|pravi|sam
+pwg,85996,laB,18,anu|aBi|A|anvA|upA|pratyA|samA|ud|upa|pratyupa|samupa|pari|pra|vipra|prati|vi|pravi|sam
 pwg,86010,lamb,15,ava|samava|A|aDyA|apA|vyA|samA|ud|samud|pari|pra|aBipra|prati|vi|pravi
-pwg,86045,lal,5,lAlayati|upA|ud|upa|sam
+pwg,86045,lal,4,upA|ud|upa|sam
 pwg,86156,laz,5,apa|aBi|samaBi|A|pari
-pwg,86163,las,9,lAsa/yati (Silpayoge|anu|aBi|ud|prod|samud|pari|vi|pravi
-pwg,86354,liK,19,leKayati|liliKizati|apa|aBi|ava|A|vyA|samA|ud|prod|samud|upa|nis|vinis|pari|pra|prati|vi|sam
+pwg,86163,las,8,anu|aBi|ud|prod|samud|pari|vi|pravi
+pwg,86354,liK,17,apa|aBi|ava|A|vyA|samA|ud|prod|samud|upa|nis|vinis|pari|pra|prati|vi|sam
 pwg,86381,liNgay,1,ud
-pwg,86404,lip,13,lepayati|anu|aBi|ava|A|samA|upa|paryupa|ni|pari|pra|vi|sam
-pwg,86437,lih,12,lehayati|ava|A|pratyA|ud|nis|pari|pra|prati|vi|sam|parisam
-pwg,86440,lI,24,lApayate|anu|apa|aBi|ava|vyava|samava|A|pratyA|ud|upa|ni|apani|aBini|saMni|pra|vipra|saMpra|prati|vi|anuvi|aBivi|pravi|sam
+pwg,86404,lip,12,anu|aBi|ava|A|samA|upa|paryupa|ni|pari|pra|vi|sam
+pwg,86437,lih,11,ava|A|pratyA|ud|nis|pari|pra|prati|vi|sam|parisam
+pwg,86440,lI,23,anu|apa|aBi|ava|vyava|samava|A|pratyA|ud|upa|ni|apani|aBini|saMni|pra|vipra|saMpra|prati|vi|anuvi|aBivi|pravi|sam
 pwg,86488,luYc,4,ava|A|ud|vi
-pwg,86494,luW,7,alUluWat|ud|nis|parinis|pari|pra|vi
+pwg,86494,luW,6,ud|nis|parinis|pari|pra|vi
 pwg,86495,luW,1,nis
-pwg,86499,luq,11,loqayati|A|vyA|samA|nis|pari|vipra|prati|vi|ativi|sam
+pwg,86499,luq,10,A|vyA|samA|nis|pari|vipra|prati|vi|ativi|sam
 pwg,86500,luRw,2,nis|vi
 pwg,86504,luRW,4,ava|ud|nis|vi
-pwg,86517,lup,19,lopayati|lolupyate|apa|aBi|ava|anvava|A|vyA|ud|samud|ni|pari|vipari|pra|vipra|saMpra|vi|pravi|sam
-pwg,86526,luB,14,loBayati|anu|aBi|ava|A|upa|pari|pra|upapra|vipra|saMpra|prati|vi|sam
+pwg,86517,lup,17,apa|aBi|ava|anvava|A|vyA|ud|samud|ni|pari|vipari|pra|vipra|saMpra|vi|pravi|sam
+pwg,86526,luB,13,anu|aBi|ava|A|upa|pari|pra|upapra|vipra|saMpra|prati|vi|sam
 pwg,86530,lul,5,aBi|A|ud|vi|sam
-pwg,86539,lU,13,"lAvayati, alIlavat, alIlavata|lulUzati|lolUyate|vyati|aBi|A|nyA|vyA|ud|nis|pra|vipra|vi"
-pwg,86635,lok,11,loka/yati|aBi|ava|samava|A|samA|ud|pari|vi|pravi|sam
-pwg,86785,loc,8,locaya/ti|A|anvA|avA|paryA|samA|ud|nis
-pwg,87302,vac,23,vAcayati|acCa|ati|aDi|anu|aByanu|apa|aBi|A|ud|upa|ni|nis|parA|pari|pra|anupra|paripra|pratipra|saMpra|prati|vi|sam
-pwg,87492,vaYc,10,"vanIvaYcIti, vanIvacyate|acCa|anu|aBi|A|ud|upa|nis|pari|sam"
-pwg,87647,vad,38,vAda/yati|vAvadIti|acCa|ati|aByati|aDi|anu|aByanu|apa|aBi|pratyaBi|samaBi|ava|vyava|A|samA|ud|pratyud|upa|pratyupa|ni|nis|aBinis|parA|aBiparA|pari|pra|anupra|upapra|vipra|saMpra|prati|vi|sam|upasam|parisam|pratisam|visam
-pwg,87675,vaD,14,bIBatsate|apa|aBi|samaBi|A|aByA|ud|upa|ni|nis|parA|pra|prati|vi
-pwg,87736,van,8,vana/yati|vanIvan|api|aBi|A|ni|pra|sam
+pwg,86539,lU,10,vyati|aBi|A|nyA|vyA|ud|nis|pra|vipra|vi
+pwg,86635,lok,10,aBi|ava|samava|A|samA|ud|pari|vi|pravi|sam
+pwg,86785,loc,7,A|anvA|avA|paryA|samA|ud|nis
+pwg,87302,vac,22,acCa|ati|aDi|anu|aByanu|apa|aBi|A|ud|upa|ni|nis|parA|pari|pra|anupra|paripra|pratipra|saMpra|prati|vi|sam
+pwg,87492,vaYc,9,acCa|anu|aBi|A|ud|upa|nis|pari|sam
+pwg,87647,vad,36,acCa|ati|aByati|aDi|anu|aByanu|apa|aBi|pratyaBi|samaBi|ava|vyava|A|samA|ud|pratyud|upa|pratyupa|ni|nis|aBinis|parA|aBiparA|pari|pra|anupra|upapra|vipra|saMpra|prati|vi|sam|upasam|parisam|pratisam|visam
+pwg,87675,vaD,13,apa|aBi|samaBi|A|aByA|ud|upa|ni|nis|parA|pra|prati|vi
+pwg,87736,van,6,api|aBi|A|ni|pra|sam
 pwg,87964,vand,6,anu|aBi|pari|pra|prati|sam
 pwg,88003,vap,2,pari|pra
 pwg,88004,vap,31,aDi|anu|apa|api|aBi|A|aDyA|anvA|paryA|pratyA|vyA|samA|ud|upa|ni|upani|pariRi|saMni|nis|anunis|aBinis|parinis|pratinis|saMnis|parA|pari|pra|aBipra|prati|vi|sam
-pwg,88042,vam,7,vAmayati|aBi|A|ud|nis|vinis|parA
-pwg,88101,var,31,vAra/yati|vivarizati|varvarmi|anu|apa|api|aBi|A|apA|upA|samupA|paryA|prA|vyA|samA|ud|ni|upani|pratini|vini|saMni|nis|pari|aBipari|saMpari|pra|prati|vi|sam|aBisam|samaBisam
-pwg,88102,var,12,"varayati, ˚te|apa|aBi|A|vyA|ud|nis|pari|pra|prati|vi|sam"
-pwg,88405,varj,28,varja/yati|varI^vfja\tsTavi^reBiH|karRO^ varIva\rjaya^ntI|aDi|anu|apa|vyapa|samapa|api|aBi|ava|A|apA|prA|vyA|parivyA|samA|ud|ni|anuni|parA|pari|saMpari|pra|anupra|prati|vi|sam
+pwg,88042,vam,6,aBi|A|ud|nis|vinis|parA
+pwg,88101,var,28,anu|apa|api|aBi|A|apA|upA|samupA|paryA|prA|vyA|samA|ud|ni|upani|pratini|vini|saMni|nis|pari|aBipari|saMpari|pra|prati|vi|sam|aBisam|samaBisam
+pwg,88102,var,11,apa|aBi|A|vyA|ud|nis|pari|pra|prati|vi|sam
+pwg,88405,varj,25,aDi|anu|apa|vyapa|samapa|api|aBi|ava|A|apA|prA|vyA|parivyA|samA|ud|ni|anuni|parA|pari|saMpari|pra|anupra|prati|vi|sam
 pwg,88455,varRay,10,anu|samanu|aBi|vyA|upa|ni|nis|vinis|pra|sam
-pwg,88503,vart,81,"varta/yati|vivartizate|varIvftyate, varIvftIti, varvftIti, varivftIti, varvartti, varivartti, varIvartti|acCa|ati|aByati|vyati|samati|aDi|anu|samanu|apa|vyapa|samapa|api|aBi|samaBi|ava|aByava|nyava|samava|A|anvA|apA|aByA|udA|upA|aByupA|paryupA|nyA|paryA|anuparyA|apaparyA|aBiparyA|upaparyA|pratiparyA|viparyA|prA|pratyA|vyA|samA|aBisamA|upasamA|ud|samud|upa|samupa|ni|anuni|aBini|upani|aByupani|parini|pratini|vini|saMni|nis|aBinis|upanis|vinis|parA|pari|anupari|vipari|saMpari|pra|atipra|anupra|aBipra|upapra|paripra|pratipra|saMpra|aBisaMpra|prati|vi|ativi|anuvi|sam|aDisam|aBisam"
-pwg,88549,varD,23,"varDa/yati, avIvfDat|vivarDizate|varIvfDyate, varIvfDIti|ati|aDi|anu|aBi|samaBi|A|ud|ni|pari|pra|aBipra|pratipra|saMpra|prati|vi|aBivi|pravi|saMvi|sam|aBisam"
+pwg,88503,vart,78,acCa|ati|aByati|vyati|samati|aDi|anu|samanu|apa|vyapa|samapa|api|aBi|samaBi|ava|aByava|nyava|samava|A|anvA|apA|aByA|udA|upA|aByupA|paryupA|nyA|paryA|anuparyA|apaparyA|aBiparyA|upaparyA|pratiparyA|viparyA|prA|pratyA|vyA|samA|aBisamA|upasamA|ud|samud|upa|samupa|ni|anuni|aBini|upani|aByupani|parini|pratini|vini|saMni|nis|aBinis|upanis|vinis|parA|pari|anupari|vipari|saMpari|pra|atipra|anupra|aBipra|upapra|paripra|pratipra|saMpra|aBisaMpra|prati|vi|ativi|anuvi|sam|aDisam|aBisam
+pwg,88549,varD,20,ati|aDi|anu|aBi|samaBi|A|ud|ni|pari|pra|aBipra|pratipra|saMpra|prati|vi|aBivi|pravi|saMvi|sam|aBisam
 pwg,88611,varz,15,ati|anu|aBi|samaBi|ava|A|ud|nis|pari|pra|aBipra|saMpra|prati|vi|sam
 pwg,88697,val,3,A|vi|sam
 pwg,88767,valg,7,aBi|A|vyA|parA|pra|vi|sam
 pwg,88834,valh,2,upa|pra
-pwg,88839,vaS,4,vaSayati|vAvaSyate|aBi|samA
+pwg,88839,vaS,2,aBi|samA
 pwg,88913,vas,5,aDi|apa|vi|aBivi|parivi
 pwg,88914,vas,13,aDi|anu|aBi|upa|ni|pratini|saMni|pari|pra|prati|vi|sam|aBisam
-pwg,88916,vas,31,"vAsayati, ˚te|vivatsati|aDi|anu|samanu|antar|aBi|A|aDyA|udA|upA|samA|ud|paryud|samud|upa|samupa|ni|aDini|saMni|nis|pari|pra|apapra|vipra|prati|vi|nirvi|sam|aDisam|aBisam"
+pwg,88916,vas,29,aDi|anu|samanu|antar|aBi|A|aDyA|udA|upA|samA|ud|paryud|samud|upa|samupa|ni|aDini|saMni|nis|pari|pra|apapra|vipra|prati|vi|nirvi|sam|aDisam|aBisam
 pwg,88918,vas,1,anu
 pwg,88919,vas,5,ud|ni|nis|pari|pra
-pwg,89199,vah,39,vAhayati|vanIvAhya/te|ati|vyati|samati|aDi|anu|apa|pratyapa|vyapa|aBi|A|anvA|aByA|udA|samudA|upA|nirA|samA|ud|prod|samud|upa|samupa|ni|pariRi|praRi|nis|parA|pari|pra|atipra|anupra|aBipra|prati|vi|nirvi|sam|anusam
+pwg,89199,vah,37,ati|vyati|samati|aDi|anu|apa|pratyapa|vyapa|aBi|A|anvA|aByA|udA|samudA|upA|nirA|samA|ud|prod|samud|upa|samupa|ni|pariRi|praRi|nis|parA|pari|pra|atipra|anupra|aBipra|prati|vi|nirvi|sam|anusam
 pwg,89277,vA,19,ati|anu|apa|aBi|ava|A|ud|anUd|upa|pariRi|nis|anunis|parinis|parA|pra|vi|anuvi|sam|anusam
 pwg,89278,vA,8,ati|aBi|ud|upa|nis|pra|atipra|vi
-pwg,89279,vA,3,vivAsati|aByA|upa
-pwg,89280,vA,14,vAyayati|apa|A|samA|ud|upa|nis|pari|pra|atipra|anupra|saMpra|vi|sam
+pwg,89279,vA,2,aByA|upa
+pwg,89280,vA,13,apa|A|samA|ud|upa|nis|pari|pra|atipra|anupra|saMpra|vi|sam
 pwg,89523,vAjay,1,upa
 pwg,89582,vAYC,4,aBi|samaBi|sam|aBisam
 pwg,90523,vAS,8,anu|pratyanu|aBi|ud|ni|pra|prati|sam
@@ -2640,191 +2634,186 @@ pwg,90701,vAh,1,pra
 pwg,91083,viGnay,1,sam
 pwg,91096,vic,5,apa|aTyapa|pra|vi|pravi
 pwg,91216,vij,10,aBi|A|samA|ud|paryud|prod|samud|pra|vi|sam
-pwg,91581,vid,25,vedayate|vividizati|vivedayizu|anu|samanu|aBi|vyava|A|samA|ni|atini|vini|saMni|nis|pari|pra|anupra|pratipra|prati|saMprati|vi|sam|anusam|aBisam|pratisam
+pwg,91581,vid,22,anu|samanu|aBi|vyava|A|samA|ni|atini|vini|saMni|nis|pari|pra|anupra|pratipra|prati|saMprati|vi|sam|anusam|aBisam|pratisam
 pwg,91583,vid,13,aDi|anu|aBi|A|upa|nis|parinis|pari|pra|prati|vi|sam|aBisam
 pwg,91835,viD,1,upa
-pwg,92152,vip,9,"vepayati, vipa/yati, avIvipat|ud|pari|pra|aBipra|saMpra|vi|pravi|sam"
-pwg,93196,viS,49,vivikzati|aDi|anu|apa|aBi|A|anvA|aByA|upA|samupA|nyA|nirA|prA|vyA|samA|upa|aDyupa|anUpa|aByupa|upopa|samupopa|paryupa|pratyupa|vyupa|samupa|ni|aDini|aBini|pratyaBini|upani|pariRi|praRi|pratini|vini|saMni|aBisaMni|nis|pari|pra|anupra|aBipra|pratipra|saMpra|vi|anuvi|sam|anusam|aBisam|upasam
+pwg,92152,vip,8,ud|pari|pra|aBipra|saMpra|vi|pravi|sam
+pwg,93196,viS,48,aDi|anu|apa|aBi|A|anvA|aByA|upA|samupA|nyA|nirA|prA|vyA|samA|upa|aDyupa|anUpa|aByupa|upopa|samupopa|paryupa|pratyupa|vyupa|samupa|ni|aDini|aBini|pratyaBini|upani|pariRi|praRi|pratini|vini|saMni|aBisaMni|nis|pari|pra|anupra|aBipra|pratipra|saMpra|vi|anuvi|sam|anusam|aBisam|upasam
 pwg,93713,viz,7,A|upa|ni|nis|pari|pra|sam
-pwg,94345,vI,11,vAyayati|ati|apa|aBi|ava|A|upA|upa|ni|pra|prati
+pwg,94345,vI,10,ati|apa|aBi|ava|A|upA|upa|ni|pra|prati
 pwg,94347,vI,5,apa|aBi|A|ud|pra
 pwg,94349,vI,1,A
 pwg,94370,vIj,7,anu|aBi|A|ud|upa|pari|sam
-pwg,95090,vfzAy,3,vAvfzARa/|A|ud
+pwg,95090,vfzAy,2,A|ud
 pwg,95452,ven,3,anu|apa|vi
 pwg,95474,vel,1,ud
 pwg,95487,vell,3,anu|ud|vi
-pwg,95554,vezw,19,avivezwat|anu|apa|aBi|A|samA|ud|upa|ni|upani|nis|pari|saMpari|pra|saMpra|prati|vi|sam|pratisam
-pwg,96220,vyac,3,vevicyate|ud|sam
-pwg,96268,vyaT,7,vyaTayati|vAvyaTyate|pari|pra|saMpra|vi|sam
-pwg,96281,vyaD,26,kAkamaveDayan|veviDyate|ati|vyati|anu|apa|vyapa|aBi|ava|A|upA|vyA|samA|ud|upa|ni|aDini|nis|parA|pari|pra|atipra|vipra|prati|vi|sam
-pwg,96461,vyA,15,vyAyayati|vevIyate|aDi|apa|api|aBi|ava|A|ud|upa|ni|pari|sam|anusam|upasam
+pwg,95554,vezw,18,anu|apa|aBi|A|samA|ud|upa|ni|upani|nis|pari|saMpari|pra|saMpra|prati|vi|sam|pratisam
+pwg,96220,vyac,2,ud|sam
+pwg,96268,vyaT,5,pari|pra|saMpra|vi|sam
+pwg,96281,vyaD,24,ati|vyati|anu|apa|vyapa|aBi|ava|A|upA|vyA|samA|ud|upa|ni|aDini|nis|parA|pari|pra|atipra|vipra|prati|vi|sam
+pwg,96461,vyA,13,aDi|apa|api|aBi|ava|A|ud|upa|ni|pari|sam|anusam|upasam
 pwg,96768,vyUh,1,prati
-pwg,96821,vraj,28,"vrAjayati (mArgasaMskAragatyoH, mArgaRasaMskAre, mArgaRasaMskArayoH; saMskAre, sarpaRe|vAvrajyate = kuwilaM vrajati|ati|vyati|anu|samanu|apa|aBi|A|udA|pratyudA|upA|pratyA|samA|ud|pratyud|upa|pratyupa|nis|pari|pra|anupra|aBipra|vipra|prati|sam|anusam|upasam"
+pwg,96821,vraj,26,ati|vyati|anu|samanu|apa|aBi|A|udA|pratyudA|upA|pratyA|samA|ud|pratyud|upa|pratyupa|nis|pari|pra|anupra|aBipra|vipra|prati|sam|anusam|upasam
 pwg,96864,vraRay,1,nis
 pwg,96901,vratay,1,upa
-pwg,96929,vraSc,10,varIvfScyate|api|ava|A|ni|nis|pari|pra|vi|sam
-pwg,96954,vrIq,1,vrIqayati
-pwg,96986,vlI,6,vlepayati|prajA varuRagfhItA avevlIyanteva|aBi|nis|pra|sam
+pwg,96929,vraSc,9,api|ava|A|ni|nis|pari|pra|vi|sam
+pwg,96986,vlI,4,aBi|nis|pra|sam
 pwg,97001,SaMs,22,ati|aDi|anu|aBi|ava|A|udA|upA|pratyA|samA|ud|nis|parA|pra|atipra|samatipra|aBipra|prati|vi|aBivi|sam|upasam
-pwg,97013,Sak,6,Sikz|anu|pari|pra|prati|sam
-pwg,97014,Sak,3,Sikz|A|upa
-pwg,97244,SaNk,12,SaNkayati|ati|vyati|aBi|A|upA|upa|pari|prati|vi|aBivi|sam
+pwg,97013,Sak,5,anu|pari|pra|prati|sam
+pwg,97014,Sak,2,A|upa
+pwg,97244,SaNk,11,ati|vyati|aBi|A|upA|upa|pari|prati|vi|aBivi|sam
 pwg,97434,Sat,7,apa|ava|ni|parA|pra|vi|sam
-pwg,97732,Sad,6,SAdayati|Sad|vyava|A|pari|pra
-pwg,97760,Sap,8,SApayati|SaMSapyate|anu|aBi|ava|pari|prati|sam
+pwg,97732,Sad,4,vyava|A|pari|pra
+pwg,97760,Sap,6,anu|aBi|ava|pari|prati|sam
 pwg,97843,Sabday,5,anu|aBi|pari|vi|sam
-pwg,97899,Sam,18,"Samayati|SaMSanti, SaMSAntas|anu|aBi|ava|samava|upa|aByupa|vyupa|samupa|ni|praRi|pari|pra|anupra|saMpra|prati|sam"
+pwg,97899,Sam,16,anu|aBi|ava|samava|upa|aByupa|vyupa|samupa|ni|praRi|pari|pra|anupra|saMpra|prati|sam
 pwg,97901,Sam,8,ni|anuni|samanuni|aBini|upani|praRi|vini|saMni
 pwg,98029,Sar,16,vyati|anu|api|ava|A|ni|nis|parA|pari|pra|prati|vi|aBivi|nirvi|pravi|sam
 pwg,98205,SarD,2,pra|atipra
-pwg,98206,SarD,4,SiSarDizate|SarISfDyate|ava|vi
+pwg,98206,SarD,2,ava|vi
 pwg,98258,Sal,3,ud|prod|samud
 pwg,98354,SaS,1,ud
 pwg,98457,Sas,6,api|aBi|A|pari|pra|vi
 pwg,98509,SA,3,ava|A|ni
 pwg,98510,SA,4,ati|ni|sam|visam
-pwg,99142,SAs,14,"SAsayati, aSaSAsat|anu|aByanu|samanu|aBi|A|saMprA|ud|ni|nis|pra|saMpra|prati|sam"
-pwg,99221,Sikz,6,Sikzayati|anu|aBi|A|upa|sam
+pwg,99142,SAs,13,anu|aByanu|samanu|aBi|A|saMprA|ud|ni|nis|pra|saMpra|prati|sam
+pwg,99221,Sikz,5,anu|aBi|A|upa|sam
 pwg,99222,Sikz,4,A|upa|prati|vi
 pwg,99302,SiNG,2,ud|upa
 pwg,99308,SiYj,4,A|pari|vi|sam
-pwg,99812,Siz,13,Seza/yati|ati|apa|ava|paryava|samava|ud|nis|pari|vi|pravi|prativi|sam
+pwg,99812,Siz,12,ati|apa|ava|paryava|samava|ud|nis|pari|vi|pravi|prativi|sam
 pwg,99827,SI,4,ati|aBi|ava|nis
-pwg,99828,SI,21,"SAyayati, aSISayat|SiSayizate|SASayyate|ati|vyati|aDi|samaDi|anu|aBi|A|anvA|pratyA|ud|upa|ni|nis|pari|pra|prati|vi|sam"
+pwg,99828,SI,18,ati|vyati|aDi|samaDi|anu|aBi|A|anvA|pratyA|ud|upa|ni|nis|pari|pra|prati|vi|sam
 pwg,100050,SIlay,4,ati|anu|pari|sam
-pwg,100213,Suc,13,SuSucizati|anu|samanu|apa|aBi|A|ud|ni|nis|pari|pra|anupra|sam
-pwg,100350,SuD,9,SunDayati|SuSutsadyajYa uttaraH|pari|pra|aBipra|vi|pravi|sam|parisam
+pwg,100213,Suc,12,anu|samanu|apa|aBi|A|ud|ni|nis|pari|pra|anupra|sam
+pwg,100350,SuD,7,pari|pra|aBipra|vi|pravi|sam|parisam
 pwg,100384,SuB,1,pra
-pwg,100386,SuB,14,"SuBayati, ˚te, SoBayati|SuSoBizamARa|SoSuByate|ati|anu|aBi|samaBi|upa|ni|pari|pra|prati|vi|sam"
-pwg,100516,Suz,11,Sozayati|anu|ava|ud|samud|upa|pari|pra|prati|vi|sam
+pwg,100386,SuB,11,ati|anu|aBi|samaBi|upa|ni|pari|pra|prati|vi|sam
+pwg,100516,Suz,10,anu|ava|ud|samud|upa|pari|pra|prati|vi|sam
 pwg,100518,Suz,1,A
-pwg,101272,Scut,7,cuScotizati|aBi|ava|vyava|A|ni|pra
-pwg,101276,SnaT,5,"SnaTa/yati, SiSnaTat, aSiSnat|apa|aBi|ni|parini"
+pwg,101272,Scut,6,aBi|ava|vyava|A|ni|pra
+pwg,101276,SnaT,4,apa|aBi|ni|parini
 pwg,101312,SyA,10,aBi|samaBi|ava|samava|A|pra|prati|sam|aBisam|avasam
 pwg,101414,SraR,1,vi
-pwg,101416,SraT,7,SraTayati|anu|ana|ud|ni|pra|vi
-pwg,101446,Sram,9,SrAmayati|A|upa|ni|pari|saMpari|vi|parivi|sam
+pwg,101416,SraT,6,anu|ana|ud|ni|pra|vi
+pwg,101446,Sram,8,A|upa|ni|pari|saMpari|vi|parivi|sam
 pwg,101467,SramB,6,ni|pra|vi|ativi|upavi|prativi
 pwg,101501,Sravasy,1,A
-pwg,101517,SrA,4,"Srapa/yati, aSiSrapat|aDi|A|ni"
-pwg,101574,Sri,45,SrApayati|SiSrayizati|aDi|pratyaDi|samaDi|anu|apa|aByapa|aBi|ava|upAva|A|anvA|apA|vyapA|saMvyapA|upA|samupA|pratyA|vyA|samA|pratisamA|ud|aByud|prod|pratyud|samud|upa|ni|aBini|upani|upanis|vinis|parA|pari|saMpari|pra|upapra|saMpra|prati|vi|sam|aBisam|upasam|pratisam
+pwg,101517,SrA,3,aDi|A|ni
+pwg,101574,Sri,43,aDi|pratyaDi|samaDi|anu|apa|aByapa|aBi|ava|upAva|A|anvA|apA|vyapA|saMvyapA|upA|samupA|pratyA|vyA|samA|pratisamA|ud|aByud|prod|pratyud|samud|upa|ni|aBini|upani|upanis|vinis|parA|pari|saMpari|pra|upapra|saMpra|prati|vi|sam|aBisam|upasam|pratisam
 pwg,101589,Sriz,3,aBi|A|sam
 pwg,101592,SrI,3,aBi|A|sam
-pwg,101797,Sru,20,Sravayati|Su/SrUzate|SiSrAvayizati|anu|aBi|A|pratyA|samA|upa|samupa|pari|pra|atipra|prati|saMprati|vi|aBivi|sam|aBisam|pratisam
+pwg,101797,Sru,17,anu|aBi|A|pratyA|samA|upa|samupa|pari|pra|atipra|prati|saMprati|vi|aBivi|sam|aBisam|pratisam
 pwg,101798,Sru,4,A|pra|vi|sam
 pwg,102014,SlakzRay,1,sam
-pwg,102019,SlaT,3,SlaTayati|A|vi
-pwg,102029,SlAG,2,SlAGayati|sam
-pwg,102040,Sliz,12,Slezayati|A|upA|samA|upa|ni|pra|vi|pravi|sam|aBisam|upasam
+pwg,102019,SlaT,2,A|vi
+pwg,102029,SlAG,1,sam
+pwg,102040,Sliz,11,A|upA|samA|upa|ni|pra|vi|pravi|sam|aBisam|upasam
 pwg,102076,Slokay,2,upa|sam
 pwg,102102,SvaYc,1,ud
-pwg,102166,Svas,28,SvAsayati|SA/Svasat|anu|apa|aBi|ava|A|paryA|prA|pratyA|samA|ud|prod|samud|upa|ni|vini|nis|atinis|vinis|parA|pra|aBipra|prati|vi|ativi|aBivi|parivi
-pwg,102183,SvA,7,aSUSavat|SuSAvayizati|SoSUyate|ud|pra|vi|sam
+pwg,102166,Svas,26,anu|apa|aBi|ava|A|paryA|prA|pratyA|samA|ud|prod|samud|upa|ni|vini|nis|atinis|vinis|parA|pra|aBipra|prati|vi|ativi|aBivi|parivi
+pwg,102183,SvA,4,ud|pra|vi|sam
 pwg,102224,Svit,2,ava|vi
 pwg,102712,zWiv,9,aBi|ava|ni|aBini|avani|vini|nis|pra|prati
 pwg,102721,zvazk,1,pari
 pwg,103700,sac,10,anu|apa|aBi|A|upa|ni|pra|prati|vi|sam
-pwg,103843,saYj,27,saYjayati|sizaNkzati|ati|vyati|anu|aBi|ava|A|aDyA|aByA|upA|nirA|pratyA|vyA|samA|ud|upa|ni|pari|pra|anupra|saMpra|prati|vi|aDivi|aBivi|sam
+pwg,103843,saYj,25,ati|vyati|anu|aBi|ava|A|aDyA|aByA|upA|nirA|pratyA|vyA|samA|ud|upa|ni|pari|pra|anupra|saMpra|prati|vi|aDivi|aBivi|sam
 pwg,103889,saMjYita,2,aBisaMjYita|AsaMjYita
-pwg,104247,sad,45,sAdayati|sAsadyate (BAvagarhAyAm)|anu|aBi|ava|pratyava|vyava|samava|A|atyA|aDyA|aByA|upA|nyA|pratyA|samA|ud|aByud|upod|prod|pratyud|vyud|samud|upa|aByupa|samupa|ni|aDini|aBini|upani|parini|vini|saMni|pari|pra|atipra|anupra|aBipra|upapra|saMpra|prati|vi|anuvi|pravi|sam
-pwg,104496,san,7,sisanizati|sisAnayizati|sansanyate|aBi|A|pra|sam
+pwg,104247,sad,43,anu|aBi|ava|pratyava|vyava|samava|A|atyA|aDyA|aByA|upA|nyA|pratyA|samA|ud|aByud|upod|prod|pratyud|vyud|samud|upa|aByupa|samupa|ni|aDini|aBini|upani|parini|vini|saMni|pari|pra|atipra|anupra|aBipra|upapra|saMpra|prati|vi|anuvi|pravi|sam
+pwg,104496,san,4,aBi|A|pra|sam
 pwg,104716,saMDay,4,ati|anu|aBi|prati
-pwg,104890,sap,2,te sI^zapanta\ joza\mA yaja^trA f\tasya\ DArA^|aBi
+pwg,104890,sap,1,aBi
 pwg,104930,sapary,1,vi
 pwg,105185,saBAjay,1,aDi
-pwg,106410,sar,56,sarayate|sa/rsfte|sisIrzati|acCA|ati|vyati|anu|atyanu|aByanu|vyanu|apa|vyapa|api|aBi|atyaBi|ava|aByava|samava|A|atyA|apA|pratyA|vyA|ud|anUd|prod|samud|upa|aByupa|pratyupa|samupa|ni|nis|aBinis|samaBinis|vinis|anuvinis|parA|upaparA|pari|pra|atipra|anupra|aBipra|upapra|vipra|saMpra|prati|viprati|vi|anuvi|pravi|sam|anusam|aBisam|upasam
+pwg,106410,sar,53,acCA|ati|vyati|anu|atyanu|aByanu|vyanu|apa|vyapa|api|aBi|atyaBi|ava|aByava|samava|A|atyA|apA|pratyA|vyA|ud|anUd|prod|samud|upa|aByupa|pratyupa|samupa|ni|nis|aBinis|samaBinis|vinis|anuvinis|parA|upaparA|pari|pra|atipra|anupra|aBipra|upapra|vipra|saMpra|prati|viprati|vi|anuvi|pravi|sam|anusam|aBisam|upasam
 pwg,106567,sarj,2,ud|aByud
-pwg,106569,sarj,53,sisfkzati|ati|aByati|samati|anu|aByanu|apa|vyapa|api|aBi|ava|atyava|anvava|aByava|upAva|nyava|pratyava|vyava|samava|A|aDyA|upA|samA|ud|anUd|aByud|paryud|vyud|samud|upa|nirupa|ni|pratini|saMni|nis|aBinis|pratinis|vinis|parA|pari|pra|prati|vi|anuvi|aBivi|udvi|prativi|saMvi|sam|anusam|upasam|parisam|pratisam
-pwg,106590,sarp,46,sarIsfpatam|ati|vyati|aDi|samaDi|anu|samanu|apa|pratyapa|vyapa|aBi|samaBi|ava|anvava|upAva|paryava|pratyava|vyava|A|udA|upodA|ud|upod|prod|vyud|samud|upa|samupa|vini|nis|aBinis|vinis|pari|pra|anupra|aBipra|pratipra|vipra|saMpra|prati|vi|anuvi|sam|anusam|upasam|visam
+pwg,106569,sarj,52,ati|aByati|samati|anu|aByanu|apa|vyapa|api|aBi|ava|atyava|anvava|aByava|upAva|nyava|pratyava|vyava|samava|A|aDyA|upA|samA|ud|anUd|aByud|paryud|vyud|samud|upa|nirupa|ni|pratini|saMni|nis|aBinis|pratinis|vinis|parA|pari|pra|prati|vi|anuvi|aBivi|udvi|prativi|saMvi|sam|anusam|upasam|parisam|pratisam
+pwg,106590,sarp,45,ati|vyati|aDi|samaDi|anu|samanu|apa|pratyapa|vyapa|aBi|samaBi|ava|anvava|upAva|paryava|pratyava|vyava|A|udA|upodA|ud|upod|prod|vyud|samud|upa|samupa|vini|nis|aBinis|vinis|pari|pra|anupra|aBipra|pratipra|vipra|saMpra|prati|vi|anuvi|sam|anusam|upasam|visam
 pwg,107420,sas,1,vi
-pwg,107462,sah,17,sAhayati (marzaRe)|sisAhayizati|sAsahyAma|aBi|ud|aByud|prod|samud|ni|nis|pari|pra|aBipra|saMpra|prati|vi|sam
+pwg,107462,sah,14,aBi|ud|aByud|prod|samud|ni|nis|pari|pra|aBipra|saMpra|prati|vi|sam
 pwg,107857,sA,22,aBi|ava|aDyava|anvava|udava|aByudava|upAva|nirava|paryava|prAva|pratyava|vyava|anuvyava|saMvyava|samava|ni|pariRi|praRi|pari|pra|vi|saM
-pwg,108179,sAD,7,"sADayati, ˚te|anu|upa|pari|pra|saMpra|sam"
+pwg,108179,sAD,6,anu|upa|pari|pra|saMpra|sam
 pwg,108327,sAntvay,3,aBi|upa|pari
 pwg,109003,si,6,ati|A|ud|pra|si|pra
-pwg,109138,sic,35,secayati|sisikzati|anvati|vyati|anu|apa|aBi|anvaBi|samaBi|ava|A|anvA|aByA|avA|aBiparyA|vyA|samA|aBisamA|ud|aByud|upod|prod|samud|upa|ni|saMni|nis|parA|pari|pra|saMpra|prati|vi|anuvi|sam
-pwg,109440,siD,20,sizeDayizati|seziDyate|anu|apa|aBi|ava|A|vyA|ud|samud|upa|ni|nis|parA|pari|pra|prati|viprati|saMprati|vi
-pwg,109441,siD,6,seDayati (pAralOkike)|anu|aBi|pra|saMpra|sam
-pwg,109668,sIv,11,sIvayati|anu|aBi|A|ud|ni|pari|pra|prati|vi|sam
+pwg,109138,sic,33,anvati|vyati|anu|apa|aBi|anvaBi|samaBi|ava|A|anvA|aByA|avA|aBiparyA|vyA|samA|aBisamA|ud|aByud|upod|prod|samud|upa|ni|saMni|nis|parA|pari|pra|saMpra|prati|vi|anuvi|sam
+pwg,109440,siD,18,anu|apa|aBi|ava|A|vyA|ud|samud|upa|ni|nis|parA|pari|pra|prati|viprati|saMprati|vi
+pwg,109441,siD,5,anu|aBi|pra|saMpra|sam
+pwg,109668,sIv,10,anu|aBi|A|ud|ni|pari|pra|prati|vi|sam
 pwg,109679,su,11,aDi|aBi|A|ud|ni|nis|pari|pra|vi|sam|aBisam
 pwg,109680,su,14,anu|apa|aBi|A|ud|ni|nis|parA|pari|pra|aDipra|aBipra|pratipra|vi
 pwg,109682,su,7,nis|pra|anupra|aBipra|saMpra|vi|sam
 pwg,112094,sUcay,4,aBi|upa|pra|sam
-pwg,112214,sUtray,2,sosUtryate|A
+pwg,112214,sUtray,1,A
 pwg,112232,sUd,5,aBi|ni|vini|saMni|pra
-pwg,112655,sev,19,sizevayizu|ati|vyati|anu|aBi|A|pratyA|samA|upa|aByupa|samupa|ni|upani|parini|saMni|pari|prati|vi|sam
-pwg,113425,skand,20,"skandayati|canIskadyate, canIskandIti|ati|aDi|anu|aBi|pratyaBi|ava|aByava|paryava|pratyava|samava|A|samA|ud|pari|pra|aBipra|vi|sam"
-pwg,113490,skaB,8,skaBA/yati|apa|aBi|A|upa|ni|prati|vi
-pwg,113505,sku,5,cozkUya/te|ava|A|nis|prati
+pwg,112655,sev,18,ati|vyati|anu|aBi|A|pratyA|samA|upa|aByupa|samupa|ni|upani|parini|saMni|pari|prati|vi|sam
+pwg,113425,skand,18,ati|aDi|anu|aBi|pratyaBi|ava|aByava|paryava|pratyava|samava|A|samA|ud|pari|pra|aBipra|vi|sam
+pwg,113490,skaB,7,apa|aBi|A|upa|ni|prati|vi
+pwg,113505,sku,4,ava|A|nis|prati
 pwg,113507,skuB,1,vi
-pwg,113514,sKal,7,sKalayati|apa|pari|pra|prati|vi|sam
-pwg,113519,stan,7,stana/yati|aBi|nis|aBinis|vinis|pra|vi
-pwg,113579,staB,22,staBAya/ti|anu|apa|aBi|ava|paryava|samava|ud|pratyud|upa|samupa|ni|parA|pari|pra|prati|vi|anuvi|sam|aBisam|parisam|pratisam
-pwg,113615,star,26,atastarat|tu/stUrzate|anu|aBi|ava|samava|A|upA|prA|pratyA|samA|upa|ni|nis|pari|pra|anupra|aBipra|upapra|vi|ativi|anuvi|pravi|sam|aBisam|parisam
-pwg,113665,stu,20,stavayati|tuzwUzati|tozwUyate|ati|anu|aBi|samaBi|A|upa|ni|nizwavan|pari|pra|aBipra|saMpra|prati|vi|sam|aBisam|parisam
+pwg,113514,sKal,6,apa|pari|pra|prati|vi|sam
+pwg,113519,stan,6,aBi|nis|aBinis|vinis|pra|vi
+pwg,113579,staB,21,anu|apa|aBi|ava|paryava|samava|ud|pratyud|upa|samupa|ni|parA|pari|pra|prati|vi|anuvi|sam|aBisam|parisam|pratisam
+pwg,113615,star,24,anu|aBi|ava|samava|A|upA|prA|pratyA|samA|upa|ni|nis|pari|pra|anupra|aBipra|upapra|vi|ativi|anuvi|pravi|sam|aBisam|parisam
+pwg,113665,stu,17,ati|anu|aBi|samaBi|A|upa|ni|nizwavan|pari|pra|aBipra|saMpra|prati|vi|sam|aBisam|parisam
 pwg,113688,stuB,9,anu|aBi|vyava|A|pari|pra|prati|vi|sam
 pwg,113754,styA,3,ni|pra|sam
-pwg,113928,sTA,76,"sTApayati, atizWipat|tizWAsati|tezWIyate|ati|vyati|aDi|samaDi|anu|samanu|antar|apa|api|aBi|samaBi|ava|anvava|aByava|paryava|pratyava|vyava|samava|A|anvA|apA|udA|upA|samupA|prA|pratyA|vyA|anuvyA|samA|ud|aDyud|anUd|aByud|samaByud|upod|paryud|prod|pratyud|vyud|samud|upa|anUpa|aByupa|paryupa|pratyupa|samupa|ni|parini|nis|parinis|pari|pra|atipra|anupra|aBipra|pratyaBipra|pratipra|vipra|saMpra|prati|anuprati|saMprati|vi|anuvi|aBivi|upavi|sam|anusam|aBisam|upasam|parisam|pratisam|visam"
-pwg,114231,snA,12,snapa/yati|sizRAsati|apa|aBi|ava|A|ud|ni|pra|prati|vi|sam
-pwg,114291,snih,5,sneha/yati|aBi|upa|pra|sam
-pwg,114295,snu,3,sisnAvayizati|pra|avapra
-pwg,114339,spand,10,pispandizate|panizpada|A|upa|ni|aBini|pari|pra|vi|sam
+pwg,113928,sTA,73,ati|vyati|aDi|samaDi|anu|samanu|antar|apa|api|aBi|samaBi|ava|anvava|aByava|paryava|pratyava|vyava|samava|A|anvA|apA|udA|upA|samupA|prA|pratyA|vyA|anuvyA|samA|ud|aDyud|anUd|aByud|samaByud|upod|paryud|prod|pratyud|vyud|samud|upa|anUpa|aByupa|paryupa|pratyupa|samupa|ni|parini|nis|parinis|pari|pra|atipra|anupra|aBipra|pratyaBipra|pratipra|vipra|saMpra|prati|anuprati|saMprati|vi|anuvi|aBivi|upavi|sam|anusam|aBisam|upasam|parisam|pratisam|visam
+pwg,114231,snA,10,apa|aBi|ava|A|ud|ni|pra|prati|vi|sam
+pwg,114291,snih,4,aBi|upa|pra|sam
+pwg,114295,snu,2,pra|avapra
+pwg,114339,spand,8,A|upa|ni|aBini|pari|pra|vi|sam
 pwg,114345,spar,5,apa|ava|A|nis|vi
-pwg,114351,sparD,7,apAspAH|aDi|pari|pra|prati|vi|sam
-pwg,114357,sparS,17,sparSayati|aDi|anu|apa|aBi|A|ud|upa|paryupa|pratyupa|samupa|ni|pari|sam|anusam|aBisam|parisam
+pwg,114351,sparD,6,aDi|pari|pra|prati|vi|sam
+pwg,114357,sparS,16,aDi|anu|apa|aBi|A|ud|upa|paryupa|pratyupa|samupa|ni|pari|sam|anusam|aBisam|parisam
 pwg,114391,sparh,1,sam
-pwg,114392,spaS,4,spASayati|prati|vi|sam
+pwg,114392,spaS,3,prati|vi|sam
 pwg,114408,spUrD,1,pra
 pwg,114447,sPar,3,ni|pari|vi
 pwg,114450,sPal,4,A|samud|vi|sam
-pwg,114463,sPAy,3,sPAvayati|A|sam
-pwg,114485,sPuw,6,sPowayati (sPuway|A|pari|pra|vi|sam
-pwg,114506,sPur,12,sPorayati = sPArayati|anu|apa|vyapa|ava|ni|nis|pari|pra|prati|vi|sam
+pwg,114463,sPAy,2,A|sam
+pwg,114485,sPuw,5,A|pari|pra|vi|sam
+pwg,114506,sPur,11,anu|apa|vyapa|ava|ni|nis|pari|pra|prati|vi|sam
 pwg,114512,sPul,1,vi
-pwg,114521,sPUrj,4,a\rcizA^ sPU\rjaya^n|aBi|ava|vi
-pwg,114561,smar,16,smArayati|susmUrzate|sAsmaryate|anu|pratyanu|samanu|apa|upa|vini|pra|prati|vi|sam|anusam|aBisam|pratisam
-pwg,114612,smi,14,smAyayati|sismayizate|sezmIyamARa|aBi|ava|ud|aByud|ku|upa|pari|pra|vi|anuvi|sam
-pwg,114658,syad,23,syandayati = srAvayati|sisyantsati|sanizyad|acCa|ati|anu|aBi|samaBi|ava|aByava|A|upA|ni|aBini|nis|pari|pra|paripra|vi|anuvi|aBivi|sam|anusam
-pwg,114704,sraMs,11,"sanIsrasyate, sanIsraMsIti|ati|aBi|ava|vyava|A|pari|pra|vi|anuvi|sam"
-pwg,114763,srIv,1,SrIvayati
-pwg,114765,sru,24,srAvayati|susrUpati|susrAvayizati|ati|samati|aDi|aBi|ava|anvava|vyava|A|upa|ni|nis|anuparA|pari|anupari|pra|aBipra|avapra|saMpra|vi|sam|aBisam
-pwg,114795,srotas,1,Srotas
+pwg,114521,sPUrj,3,aBi|ava|vi
+pwg,114561,smar,13,anu|pratyanu|samanu|apa|upa|vini|pra|prati|vi|sam|anusam|aBisam|pratisam
+pwg,114612,smi,11,aBi|ava|ud|aByud|ku|upa|pari|pra|vi|anuvi|sam
+pwg,114658,syad,20,acCa|ati|anu|aBi|samaBi|ava|aByava|A|upA|ni|aBini|nis|pari|pra|paripra|vi|anuvi|aBivi|sam|anusam
+pwg,114704,sraMs,10,ati|aBi|ava|vyava|A|pari|pra|vi|anuvi|sam
+pwg,114765,sru,21,ati|samati|aDi|aBi|ava|anvava|vyava|A|upa|ni|nis|anuparA|pari|anupari|pra|aBipra|avapra|saMpra|vi|sam|aBisam
 pwg,114872,svaj,8,aBi|ni|pari|aBipari|saMpari|vi|sam|aBisam
-pwg,114908,svad,6,"svadayati, sizvadat, svadayanta|sisvAdayizati|A|samA|prati|sam"
-pwg,114959,svan,11,svanayati|aDi|anu|ava|A|ni|nis|pari|pra|prati|vi
-pwg,114981,svap,15,"svApayati, sizvapat, si/zvap|suzupsati|suzvApayizati|sozupyate|anu|ava|dus|ni|nis|pra|aBipra|saMpra|prati|vi|sam"
-pwg,115159,svar,15,svarayati|sisvarizati|sAsvaryate|ati|anu|samanu|aBi|ava|upa|ni|nis|pari|pra|sam|aBisam
+pwg,114908,svad,4,A|samA|prati|sam
+pwg,114959,svan,10,aDi|anu|ava|A|ni|nis|pari|pra|prati|vi
+pwg,114981,svap,11,anu|ava|dus|ni|nis|pra|aBipra|saMpra|prati|vi|sam
+pwg,115159,svar,12,ati|anu|samanu|aBi|ava|upa|ni|nis|pari|pra|sam|aBisam
 pwg,115160,svar,2,pratyA|prati
-pwg,115773,svid,7,svedayati|sisvedayizati|A|upa|pari|pra|sam
+pwg,115773,svid,5,A|upa|pari|pra|sam
 pwg,115986,had,1,upa
-pwg,115989,han,60,"GAtayati|ji/GAMsati|jaNGa/nAni, ˚nat, ˚nAva, ja/NGananta, ja/NGnat|ati|vyati|anu|antar|apa|vyapa|api|aBi|ava|aDyava|anvava|pratyava|A|apA|aByA|udA|upA|pratyA|vyA|prativyA|samA|ud|upod|samud|upa|samupa|ni|aBini|upani|pariRi|praRi|pratini|vini|saMni|nis|atinis|aDinis|parinis|vinis|parA|pari|aBipari|pra|aBipra|nipra|vipra|prati|saMprati|vi|anuvi|Avi|pravi|prativi|sam|aBisam|pratisam|visam"
-pwg,116085,har,92,"hArayati, ajIharat|ji/hIrzati|jarharIti, jariharIti, jarIharIti, jarharti, jariharti, jarIharti|ati|pratyati|vyati|aDi|anu|apa|vyapa|aBi|pratyaBi|samaBi|ava|anvava|aByava|upAva|aByupAva|pratyava|vyava|saMvyava|samava|A|aDyA|anvA|apA|vyapA|apyA|aByA|udA|aByudA|upodA|pratyudA|samudA|upA|aByupA|pratyupA|samupA|upanyA|paryA|pratiparyA|pratyA|vyA|anuvyA|apavyA|aBivyA|samaBivyA|anusamaBivyA|pravyA|samA|anusamA|aBisamA|upasamA|ud|aDyud|anUd|apod|aByud|samaByud|upod|prod|pratyud|vyud|samud|upa|pratyupa|samupa|ni|nis|vinis|parA|pratiparA|pari|anupari|aBipari|vipari|saMpari|pra|anupra|pratipra|saMpra|prati|vi|aBivi|parivi|saMpravi|saMvi|sam|anusam|upasam|samupasam|pratisam"
+pwg,115989,han,57,ati|vyati|anu|antar|apa|vyapa|api|aBi|ava|aDyava|anvava|pratyava|A|apA|aByA|udA|upA|pratyA|vyA|prativyA|samA|ud|upod|samud|upa|samupa|ni|aBini|upani|pariRi|praRi|pratini|vini|saMni|nis|atinis|aDinis|parinis|vinis|parA|pari|aBipari|pra|aBipra|nipra|vipra|prati|saMprati|vi|anuvi|Avi|pravi|prativi|sam|aBisam|pratisam|visam
+pwg,116085,har,89,ati|pratyati|vyati|aDi|anu|apa|vyapa|aBi|pratyaBi|samaBi|ava|anvava|aByava|upAva|aByupAva|pratyava|vyava|saMvyava|samava|A|aDyA|anvA|apA|vyapA|apyA|aByA|udA|aByudA|upodA|pratyudA|samudA|upA|aByupA|pratyupA|samupA|upanyA|paryA|pratiparyA|pratyA|vyA|anuvyA|apavyA|aBivyA|samaBivyA|anusamaBivyA|pravyA|samA|anusamA|aBisamA|upasamA|ud|aDyud|anUd|apod|aByud|samaByud|upod|prod|pratyud|vyud|samud|upa|pratyupa|samupa|ni|nis|vinis|parA|pratiparA|pari|anupari|aBipari|vipari|saMpari|pra|anupra|pratipra|saMpra|prati|vi|aBivi|parivi|saMpravi|saMvi|sam|anusam|upasam|samupasam|pratisam
 pwg,116086,har,1,aBi
-pwg,116381,hary,6,"jAharyIti, jAharti, jAharyati|aBi|A|pra|prati|vi"
-pwg,116395,harz,18,harzayati|anu|aBi|samaBi|ava|A|ud|prod|samud|ni|pari|saMpari|pra|saMpra|prati|sam|parisam|pratisam
-pwg,116549,has,18,hAsayati|jakz|ati|vyati|apa|aBi|vyaBi|ava|vyava|samava|ud|upa|pari|pra|saMpra|prati|vi|saMvi
+pwg,116381,hary,5,aBi|A|pra|prati|vi
+pwg,116395,harz,17,anu|aBi|samaBi|ava|A|ud|prod|samud|ni|pari|saMpari|pra|saMpra|prati|sam|parisam|pratisam
+pwg,116549,has,16,ati|vyati|apa|aBi|vyaBi|ava|vyava|samava|ud|upa|pari|pra|saMpra|prati|vi|saMvi
 pwg,116718,hA,23,ati|anu|apa|aBi|ud|atyud|anUd|aByud|prod|pratyud|samud|upa|ni|nis|anunis|parA|pra|atipra|aBipra|vi|sam|parisam|pratisam
-pwg,116719,hA,23,hApayati|jihAsati|jehIyate|apa|vyapa|ava|vyava|samava|A|apA|samud|upa|ni|nis|pari|pra|vipra|saMpra|prati|vi|pravi|prativi|sam
-pwg,116886,hi,13,ajIhayat|jiGIzati|jeGIyate|apa|A|pari|pra|anupra|aBipra|upapra|pratipra|saMpra|sam
-pwg,116888,hiMs,8,hiMsayati|ji/hiMsizati|vyati|A|upa|ni|prati|vi
-pwg,116905,hikk,1,hikkayati
+pwg,116719,hA,20,apa|vyapa|ava|vyava|samava|A|apA|samud|upa|ni|nis|pari|pra|vipra|saMpra|prati|vi|pravi|prativi|sam
+pwg,116886,hi,10,apa|A|pari|pra|anupra|aBipra|upapra|pratipra|saMpra|sam
+pwg,116888,hiMs,6,vyati|A|upa|ni|prati|vi
 pwg,116934,hiRq,1,pari
 pwg,117209,hIq,2,ava|vi
-pwg,117242,hu,15,hAvayati|juhUzati|johavIti|aDi|apa|aBi|ava|A|ud|aByud|upa|nis|pra|prati|sam
-pwg,117248,huMkar,2,huMkArayati (hUM˚|anu
+pwg,117242,hu,12,aDi|apa|aBi|ava|A|ud|aByud|upa|nis|pra|prati|sam
+pwg,117248,huMkar,1,anu
 pwg,117322,hUrC,2,anu|vi
 pwg,117651,hez,2,aBi|prati
 pwg,117794,hnu,9,apa|api|ni|atini|apani|aBini|vini|pari|vi
-pwg,117814,hras,5,hrAsayati|apa|nis|pra|prati
+pwg,117814,hras,4,apa|nis|pra|prati
 pwg,117841,hrAd,5,anu|ni|nis|pra|sam
-pwg,117859,hrI,3,hrepayati|jehrIyate|sam
+pwg,117859,hrI,1,sam
 pwg,117876,hru,4,aBi|vyA|pari|vi
-pwg,117885,hrez,1,hrezayati
-pwg,117897,hlAd,4,hlAdayati|A|pra|sam
-pwg,117913,hvar,11,"jihvaratam, juhuras, juhuranta, juhurARa/|aBi|ava|A|upa|samupa|pari|pra|prati|vi|sam"
-pwg,117917,hval,5,hvalayati|pari|pra|vi|saMvi
-pwg,117919,hvA,31,hvAyayati|juhUzati|juhAvayizati|johUte|ati|anu|api|aBi|prABi|ava|A|anvA|aByA|upA|paryA|pratyA|vyA|samA|ud|upa|paryupa|pratyupa|samupa|ni|nis|pari|pra|pratipra|prati|vi|sam
+pwg,117897,hlAd,3,A|pra|sam
+pwg,117913,hvar,10,aBi|ava|A|upa|samupa|pari|pra|prati|vi|sam
+pwg,117917,hval,4,pari|pra|vi|saMvi
+pwg,117919,hvA,27,ati|anu|api|aBi|prABi|ava|A|anvA|aByA|upA|paryA|pratyA|vyA|samA|ud|upa|paryupa|pratyupa|samupa|ni|nis|pari|pra|pratipra|prati|vi|sam
 pwg,118037,ac,5,anu|A|ud|samud|ni
 pwg,118058,aYcay,1,samud
 pwg,118158,an,1,aBipra
@@ -2850,7 +2839,6 @@ pwg,119362,kal,2,upa|pra
 pwg,119491,kuc,1,sam
 pwg,119545,kuz,1,aBinis
 pwg,119634,kram,4,aByati|nis|sam|upasam
-pwg,119662,kzAray,1,kzi
 pwg,119664,kzip,2,pra|vi
 pwg,119669,kzud,1,vi
 pwg,119689,KaRqay,1,A
@@ -2963,7 +2951,7 @@ wil,3493,alam,1,alaYjIvikaH
 wil,3594,ava,2,avagantuM|avamaH
 wil,4195,aSa,1,pra
 wil,4449,asa,10,anu|apa|ni|nir|pari|pra|vi|vi|sama|sama
-wil,5485,Apa,5,"vi|aBi|pari|saM|upa, saM"
+wil,5485,Apa,6,vi|aBi|pari|saM|upa|saM
 wil,6028,Asa,6,aDi|aBi|ut|upa|nir|pra
 wil,6163,i,12,ut|aBi|ati|anu|aBi|apa|aBi|upa|nir|prati|vi|sama
 wil,6403,iza,3,aBi|prati|anu
@@ -2995,7 +2983,7 @@ wil,11458,kfza,6,apa|ava|AN|ut|sama|sama
 wil,11553,kF,7,apa|ava|AN|prati|vi|sama|aBi
 wil,11953,krama,14,ati|anu|aBi|apa|AN|ut|upa|nir|para|pra|pari|vi|vi|sam
 wil,12034,krI,1,vi
-wil,12035,krIqa,1,"anu, ava, AN, pari"
+wil,12035,krIqa,4,anu|ava|AN|pari
 wil,12059,kruSa,4,anu|AN|upa|pra
 wil,12266,kzara,2,saM|A
 wil,12337,kzipa,10,aDi|ava|AN|ut|ni|pra|vi|vi|sama|sam
@@ -3076,7 +3064,7 @@ wil,31496,yuja,11,anu|aBi|ut|upa|ni|pra|vi|vi|vi|sam|sam
 wil,31723,rakza,1,pari
 wil,31806,raYja,2,anu|apa
 wil,31937,raBa,1,pari
-wil,31939,rama,2,"AN, upa|upa"
+wil,31939,rama,3,AN|upa|upa
 wil,32048,raha,1,vi
 wil,32082,rAja,1,nir
 wil,32249,rADa,2,apa|AN
@@ -3108,12 +3096,12 @@ wil,36466,vfta,13,ati|anu|apa|AN|ni|ni|pari|pra|prati|vi|vi|vi|sama
 wil,37346,vraja,1,pari
 wil,37412,SaMsa,3,aBi|AN|pra
 wil,37419,Saka,1,AN
-wil,37684,Sabda,1,"pra, prati"
+wil,37684,Sabda,2,pra|prati
 wil,37706,Sama,3,upa|ni|pra
 wil,37937,Sasa,1,aBi
 wil,38184,SAsa,1,AN
 wil,38878,SF,1,vi
-wil,39170,Sri,4,"AN|apa|ut|vi, apa"
+wil,39170,Sri,5,AN|apa|ut|vi|apa
 wil,39229,Sru,2,prati|vi
 wil,39366,Svasa,4,AN|ut|nir|vi
 wil,39455,zaYja,3,ava|vi|AN
@@ -3136,6 +3124,6 @@ wil,43471,syanda,1,anu
 wil,43599,svana,1,vi
 wil,43827,svf,1,sam
 wil,43911,hana,8,aBi|AN|ni|pra|prati|vi|sam|Gan
-wil,44370,hf,29,"anu|apa|aBi|aBi|aBi|aBi, vi|ava|ut|ud|upa|upa|ni|nir|nir|pari|pra|prati|prati|prati|vi|vi|vi|sam|sam|sam, aBi, vi|sam, ut|sam|sam|vi"
+wil,44370,hf,33,anu|apa|aBi|aBi|aBi|aBi|vi|ava|ut|ud|upa|upa|ni|nir|nir|pari|pra|prati|prati|prati|vi|vi|vi|sam|sam|sam|aBi|vi|sam|ut|sam|sam|vi
 wil,44515,hnu,1,apa
-wil,44578,hve,2,"upa, ni, vi|AN"
+wil,44578,hve,4,upa|ni|vi|AN

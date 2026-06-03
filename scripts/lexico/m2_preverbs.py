@@ -43,14 +43,23 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 OUT_DIR = "data/lexico"
 
-# <div n="p"> opens a preverb block; the preverb is the first {#…#} after the em-dash.
-# Tolerates self-closing (MW-style "/>") though MW does not actually use n="p".
-_PREVERB = re.compile(r'<div n="p"\s*/?>[^{]*\{#([^#}]*)#\}')
+# A preverb block is <div n="p">— {#preverb#} {%gloss%} with NO <ab> before the preverb.
+# A <div n="p"> that leads with <ab>caus./partic./desid.</ab> {#form#} is a secondary-
+# conjugation block (already counted by m1), NOT a preverb — so [^{<]* (which stops at
+# '<') excludes it. Tolerates self-closing "/>" (MW-style) though MW does not use n="p".
+_PREVERB = re.compile(r'<div n="p"\s*/?>[^{<]*\{#([^#}]*)#\}')
+_PV_SPLIT = re.compile(r",| und | and | oder | or ")  # a block may group several preverbs
 
 
 def analyze_entry(body):
     """List the preverbs of each <div n='p'> subentry in one entry body (SLP1)."""
-    return [pv.strip() for pv in _PREVERB.findall(body) if pv.strip()]
+    out = []
+    for cap in _PREVERB.findall(body):
+        for pv in _PV_SPLIT.split(cap):
+            pv = pv.strip()
+            if pv:
+                out.append(pv)
+    return out
 
 
 def discover_dicts():
