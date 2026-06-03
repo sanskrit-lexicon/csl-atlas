@@ -44,10 +44,13 @@ headwords** (deep macrostructure, shallow microstructure); the Petersburg dicts 
 (shallow macrostructure, deep microstructure). Read the ratio *within* comparable dicts — MW's
 `<info verb=>` makes its "verbal" denominator generous.
 
-**"0 markers ≠ structureless"** (mirrors [`CITATION_TAGGING.md`](../data/forensic/CITATION_TAGGING.md)).
+**"0 markers ≠ structureless"** (mirrors [`CITATION_TAGGING.md`](../data/forensic/CITATION_TAGGING.md);
+**full account in [`MICROSTRUCTURE_ZERO_MEANING.md`](MICROSTRUCTURE_ZERO_MEANING.md)** — SKD has 0
+`<ab>`/`<div>`/`<s>`/`{#..#}` at all, yet marks thousands of verbs via `dhātuḥ`/`preraṇe`/`bhvādi`
+in prose; the detector is blind to it).
 **27 of 43 dicts emit zero** `<ab>` derivative markers — not because they are flat, but because
 they don't use the European `<ab>` apparatus:
-- **Indigenous** (SKD, VCP) — Sanskrit-Sanskrit, prose conventions;
+- **Indigenous** (SKD, VCP) — Sanskrit-Sanskrit; verbs marked in prose (`dhātuḥ`/`preraṇe`/`bhvādi`), zero Western markup;
 - **MW72** — the 1872 first edition predates MW's `<ab>` apparatus entirely (0 across 55k entries; "prose-heavy, transitional" per MICROSTRUCTURE §1.4, now quantified);
 - **Reverse / English-Sanskrit** (MWE), **specialised** (INM, PE, PGN, IEG, SNP, PUI, MCI — name/plant/epigraphy, few verb roots), **continuations** (SCH, CCS), and other bilinguals (BOP, LRV, YAT, …).
 - **WIL** is the instructive edge: it marks **desideratives** (`desid. v.`, 119) but essentially never causatives → vderiv/verb 0.11.
