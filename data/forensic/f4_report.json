@@ -1,0 +1,140 @@
+{
+  "source1_cross_issues": 13,
+  "issue_breakdown": [
+    {
+      "issue": "issue100fix",
+      "shared_headwords": 0,
+      "shared_citations": 0,
+      "hw_examples": "",
+      "cit_examples": ""
+    },
+    {
+      "issue": "issue101fix",
+      "shared_headwords": 0,
+      "shared_citations": 0,
+      "hw_examples": "",
+      "cit_examples": ""
+    },
+    {
+      "issue": "issue122fix",
+      "shared_headwords": 0,
+      "shared_citations": 0,
+      "hw_examples": "",
+      "cit_examples": ""
+    },
+    {
+      "issue": "issue124fix",
+      "shared_headwords": 3,
+      "shared_citations": 1,
+      "hw_examples": "Sukriya dAtyOha tij",
+      "cit_examples": "MAHĪDH"
+    },
+    {
+      "issue": "issue134fix",
+      "shared_headwords": 0,
+      "shared_citations": 0,
+      "hw_examples": "",
+      "cit_examples": ""
+    },
+    {
+      "issue": "issue135fix",
+      "shared_headwords": 2,
+      "shared_citations": 0,
+      "hw_examples": "qomba tantrin",
+      "cit_examples": ""
+    },
+    {
+      "issue": "issue144fix",
+      "shared_headwords": 0,
+      "shared_citations": 0,
+      "hw_examples": "",
+      "cit_examples": ""
+    },
+    {
+      "issue": "issue48fix",
+      "shared_headwords": 0,
+      "shared_citations": 2,
+      "hw_examples": "",
+      "cit_examples": "MBH NĪLAK"
+    },
+    {
+      "issue": "issue70fix",
+      "shared_headwords": 0,
+      "shared_citations": 0,
+      "hw_examples": "",
+      "cit_examples": ""
+    },
+    {
+      "issue": "issue75fix",
+      "shared_headwords": 0,
+      "shared_citations": 0,
+      "hw_examples": "",
+      "cit_examples": ""
+    },
+    {
+      "issue": "issue84fix",
+      "shared_headwords": 1,
+      "shared_citations": 2,
+      "hw_examples": "tryaNgula",
+      "cit_examples": "MBH SĀY"
+    },
+    {
+      "issue": "issue86fix",
+      "shared_headwords": 3,
+      "shared_citations": 0,
+      "hw_examples": "jihvAlOlya tIrTa vallaBa",
+      "cit_examples": ""
+    },
+    {
+      "issue": "issue92fix",
+      "shared_headwords": 5,
+      "shared_citations": 1,
+      "hw_examples": "aSvayuj durbali karawa truwi tvac",
+      "cit_examples": "HARIV. 9529"
+    }
+  ],
+  "source2_pet_corrected_hw": 10143,
+  "source2_mw_corrected_hw": 4593,
+  "shared_headwords_issue": [
+    "Sukriya",
+    "aSvayuj",
+    "alaMkAra",
+    "camUpati",
+    "cyu",
+    "dA",
+    "dAtyOha",
+    "dakziRAvft",
+    "durbali",
+    "gopITa",
+    "jalpa",
+    "jihvAlOlya",
+    "kalA",
+    "karawa",
+    "qomba",
+    "tIrTa",
+    "tantrin",
+    "tij",
+    "truwi",
+    "tryaNgula",
+    "tvac",
+    "vallaBa"
+  ],
+  "shared_headwords_corpus": 268,
+  "shared_citations_issue": [
+    "AV",
+    "HARIV. 9529",
+    "MAHĪDH",
+    "MBH",
+    "NĪLAK",
+    "SĀY",
+    "TBR",
+    "VP"
+  ],
+  "shared_citations_corpus": 1,
+  "print_errors_pet": 24,
+  "print_errors_mw": 122,
+  "shared_print_error_headwords": [],
+  "n_shared_correction_rows": 289,
+  "finding": "Using the editors' OWN corrections: the intentional shared signal is issue-bundled CITATION fixes (HARIV. 9529, MBH, SĀY, NĪLAK, MAHĪDH) = apparatus, corroborating F1. Headword-level 'corrected in both' (268) is ~chance for two correction sets this size over a shared vocabulary, so NOT evidence of inherited typos. SHARED documented PRINT errors = 0 (PWG 24 / MW 122, small + format-divergent). => MW inherited Böhtlingk's APPARATUS, not his mechanical errors — the books were independently typeset. Definitive error-copy test remains F4 vs DCS ground truth.",
+  "caveat": "The editors bundle fixes by ISSUE THEME (mostly citation/markup), and most are digitization fixes -> a shared correction corroborates shared apparatus (and the F1 finding), it is NOT by itself proof of a copied PRINT error. The strongest items are headwords/citations the editors corrected on BOTH the Petersburg side and MW. Airtight copied-error proof = F4 shared ERRONEOUS citations vs DCS ground truth."
+}

@@ -1,0 +1,210 @@
+{
+  "n_lemmas": 469844,
+  "real_min": 8,
+  "rare_max": 5,
+  "n_real": 39123,
+  "n_rare": 159953,
+  "n_candidate_anomalies": 42965,
+  "probes": {
+    "PWG/MW": {
+      "shared": 8195,
+      "doublet": 7714,
+      "excl_df2": 106,
+      "reading": "PWG->MW (cross-author, cross-lang)"
+    },
+    "PW/MW": {
+      "shared": 12113,
+      "doublet": 11506,
+      "excl_df2": 1872,
+      "reading": "PW->MW"
+    },
+    "MW72/MW": {
+      "shared": 5335,
+      "doublet": 4992,
+      "excl_df2": 723,
+      "reading": "MW72->MW (same author)"
+    },
+    "PWG/PW": {
+      "shared": 9451,
+      "doublet": 8685,
+      "excl_df2": 792,
+      "reading": "PWG<->PW (same author = BASELINE)"
+    },
+    "PWG/MW72": {
+      "shared": 2977,
+      "doublet": 2647,
+      "excl_df2": 86,
+      "reading": "PWG->MW72 (used PWG vols 1-4)"
+    },
+    "BOP/MW": {
+      "shared": 111,
+      "doublet": 77,
+      "excl_df2": 7,
+      "reading": "BOP->MW (unrelated = NULL)"
+    },
+    "SKD/BOP": {
+      "shared": 24,
+      "doublet": 5,
+      "excl_df2": 1,
+      "reading": "SKD<->BOP (unrelated = NULL)"
+    },
+    "AP/SKD": {
+      "shared": 11130,
+      "doublet": 271,
+      "excl_df2": 6193,
+      "reading": "AP<->SKD"
+    }
+  },
+  "top_doublet_pairs": [
+    {
+      "pair": "MW/PW",
+      "doublets": 11506,
+      "shared": 12113,
+      "per_1k": 80.034
+    },
+    {
+      "pair": "PW/PWG",
+      "doublets": 8685,
+      "shared": 9451,
+      "per_1k": 89.091
+    },
+    {
+      "pair": "MW/PWG",
+      "doublets": 7714,
+      "shared": 8195,
+      "per_1k": 77.251
+    },
+    {
+      "pair": "MW/MW72",
+      "doublets": 4992,
+      "shared": 5335,
+      "per_1k": 104.283
+    },
+    {
+      "pair": "MW72/PWG",
+      "doublets": 2647,
+      "shared": 2977,
+      "per_1k": 58.191
+    },
+    {
+      "pair": "MW72/PW",
+      "doublets": 2485,
+      "shared": 2787,
+      "per_1k": 54.477
+    },
+    {
+      "pair": "AP/MW",
+      "doublets": 2302,
+      "shared": 3466,
+      "per_1k": 39.09
+    },
+    {
+      "pair": "LRV/MW",
+      "doublets": 1412,
+      "shared": 1595,
+      "per_1k": 33.051
+    },
+    {
+      "pair": "MW/VCP",
+      "doublets": 1365,
+      "shared": 1618,
+      "per_1k": 33.268
+    },
+    {
+      "pair": "CAE/PW",
+      "doublets": 1304,
+      "shared": 1674,
+      "per_1k": 43.499
+    },
+    {
+      "pair": "SHS/WIL",
+      "doublets": 1270,
+      "shared": 2169,
+      "per_1k": 49.364
+    },
+    {
+      "pair": "MW/STC",
+      "doublets": 1242,
+      "shared": 1809,
+      "per_1k": 75.419
+    },
+    {
+      "pair": "CAE/MW",
+      "doublets": 1133,
+      "shared": 1440,
+      "per_1k": 37.418
+    },
+    {
+      "pair": "AP/AP90",
+      "doublets": 1119,
+      "shared": 6998,
+      "per_1k": 204.16
+    },
+    {
+      "pair": "PWG/VCP",
+      "doublets": 966,
+      "shared": 1145,
+      "per_1k": 23.542
+    },
+    {
+      "pair": "PW/VCP",
+      "doublets": 966,
+      "shared": 1165,
+      "per_1k": 23.953
+    },
+    {
+      "pair": "WIL/YAT",
+      "doublets": 865,
+      "shared": 1822,
+      "per_1k": 41.467
+    },
+    {
+      "pair": "CCS/PW",
+      "doublets": 858,
+      "shared": 1186,
+      "per_1k": 41.251
+    },
+    {
+      "pair": "SHS/YAT",
+      "doublets": 799,
+      "shared": 1624,
+      "per_1k": 36.315
+    },
+    {
+      "pair": "CAE/PWG",
+      "doublets": 796,
+      "shared": 1028,
+      "per_1k": 26.712
+    }
+  ],
+  "caveat": "MANUAL EYEBALL (2026-06-03): most ED1 candidates are LEGITIMATE Sanskrit morphology (privative a-, inflectional/derivational variants, distinct compounds) — NOT corruptions. F0 therefore measures shared rare near-core VOCABULARY (a lineage signal: ~100x the null for Petersburg->MW), not typos. sanhw1 is also normalized -> strict lower bound. True shared-typo/ghost-word detection needs raw <k1>/<k2> (F2). Read pair counts COMPARATIVELY vs the unrelated-pair null (BOP/MW=77, SKD/BOP=5), never as absolute error counts.",
+  "finding": "Petersburg<->MW lineage shares 7,700-11,500 rare near-duplicate headwords vs 5-77 for unrelated pairs (~100x). Corroborates descent; magnitude of true error-copying awaits F2.",
+  "mw_pwg_doublet_examples": [
+    "akarRaka~akarmaka",
+    "akalkala~akalkana",
+    "akavaca~kavaca",
+    "akARqe~akARqa",
+    "akAsAra~kAsAra",
+    "akfSASva~kfSASva",
+    "aklinnavartman~klinnavartman",
+    "akzakI~akzaka",
+    "agArin~aGArin",
+    "agnijA~agnija",
+    "agnidAha~agnivAha",
+    "agnidIpti~agnidIpta"
+  ],
+  "mw_pw_doublet_examples": [
+    "akaWora~kaWora",
+    "akarRaka~akarmaka",
+    "akarRIya~akarRya",
+    "akavaca~kavaca",
+    "akARa~akAla",
+    "akAsAra~kAsAra",
+    "akulaka~kulaka",
+    "akuhaka~kuhaka",
+    "akUjana~kUjana",
+    "akUwa~kUwa",
+    "akfSASva~kfSASva",
+    "akti~akzi"
+  ]
+}

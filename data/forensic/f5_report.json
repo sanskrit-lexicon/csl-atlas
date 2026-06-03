@@ -1,0 +1,70 @@
+{
+  "min_shared_sources_for_order": 3,
+  "pairs": [
+    {
+      "vs": "PWKVN",
+      "is_null": false,
+      "shared_headwords": 9758,
+      "entries_with_order_signal": 5,
+      "mean_citation_order_agreement": 0.8667,
+      "pct_identical_order": 80.0,
+      "mean_content_jaccard": 0.0991,
+      "apparatus_size_spearman": 0.2472
+    },
+    {
+      "vs": "SCH",
+      "is_null": false,
+      "shared_headwords": 14523,
+      "entries_with_order_signal": 5,
+      "mean_citation_order_agreement": 0.8667,
+      "pct_identical_order": 80.0,
+      "mean_content_jaccard": null,
+      "apparatus_size_spearman": 0.2518
+    },
+    {
+      "vs": "PWG",
+      "is_null": false,
+      "shared_headwords": 94777,
+      "entries_with_order_signal": 3593,
+      "mean_citation_order_agreement": 0.8107,
+      "pct_identical_order": 47.8,
+      "mean_content_jaccard": 0.1017,
+      "apparatus_size_spearman": 0.682
+    },
+    {
+      "vs": "PW",
+      "is_null": false,
+      "shared_headwords": 129003,
+      "entries_with_order_signal": 183,
+      "mean_citation_order_agreement": 0.7303,
+      "pct_identical_order": 46.4,
+      "mean_content_jaccard": 0.1417,
+      "apparatus_size_spearman": 0.4861
+    },
+    {
+      "vs": "BEN",
+      "is_null": true,
+      "shared_headwords": 15970,
+      "entries_with_order_signal": 154,
+      "mean_citation_order_agreement": 0.677,
+      "pct_identical_order": 27.9,
+      "mean_content_jaccard": 0.1791,
+      "apparatus_size_spearman": 0.5993
+    },
+    {
+      "vs": "AP",
+      "is_null": true,
+      "shared_headwords": 38145,
+      "entries_with_order_signal": 8,
+      "mean_citation_order_agreement": 0.4167,
+      "pct_identical_order": 12.5,
+      "mean_content_jaccard": 0.0947,
+      "apparatus_size_spearman": 0.5236
+    }
+  ],
+  "petersburg_mean_order": 0.8186,
+  "null_mean_order": 0.5469,
+  "n_order_examples_identical": 200,
+  "finding": "STRONG copying signal at the apparatus-ORDER level. Over 3,593 entries MW reproduces PWG's citation SEQUENCE at 0.811 concordance, 47.8% PERFECTLY identical — vs the random baseline 0.50 concordance / ~5-17% identical for >=3 shared sources, i.e. ~3-10x chance. MW didn't just inherit WHICH texts to cite (F1), but their ORDER, across thousands of entries — hard to explain except by working from PWG's article. The gradient PWG 0.81 > PW 0.73 > BEN 0.68 (Benfey, itself Petersburg-influenced) > AP 0.42 (Apte, independent) tracks Petersburg-relatedness, so it is NOT a shared scholarly ordering convention. CAVEAT: AP/BEN share few >=3-source entries with MW (AP n=8), so the clean independent null is thin; the robust baseline is the permutation 0.50 / chance-identical, which the 0.811 / 47.8% clears decisively. CONTENT (in-entry Sanskrit-token Jaccard ~0.10, nulls alike) and apparatus-size r (lemma-importance confounded, nulls ~0.5) do NOT show copying — MW's glosses are its own (cf. F3). NET: MW is a structural copycat of PWG's APPARATUS (citations, in PWG's order) but the author of its own prose; combined with F4b (~0% shared errors) — MW worked FROM PWG's articles but re-set and re-wrote them.",
+  "interpretation": "CITATION ORDER is the copycat test: MW reproducing PWG's citation SEQUENCE for the same headword, far above the AP/BEN independent null (and above the 0.50 random baseline), is hard to explain except by working from PWG's article. Content = shared in-entry Sanskrit cross-references (language-neutral; semantic DE->EN gloss MT deferred). apparatus_size_spearman = how tightly MW's per-entry citation count tracks the source's (structural proxy). Read Petersburg vs the AP/BEN null, not absolutely."
+}
