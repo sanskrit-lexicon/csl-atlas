@@ -15,7 +15,7 @@ Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskr
 - **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md).
 - **MW Quantitative Depth (Phase 1):** [Depth dashboard](src/tools/mw-depth-dashboard.md), [Diachronic layers](src/tools/mw-diachronic-layers.md), [Family depth](src/tools/mw-family-depth.md).
 - **Comparative Dictionary Lab (Phase 2):** [Coverage matrix](src/tools/dictionary-coverage-matrix.md), [Pairwise overlap](src/tools/dictionary-overlap.md), [Gender conflicts](src/tools/dictionary-conflicts.md), [Homonym splits](src/tools/dictionary-homonyms.md), [Citation apparatus](src/tools/dictionary-citations.md), [Sense depth](src/tools/dictionary-senses.md), [Lemma dossier](src/tools/dictionary-dossier.md).
-- **Dictionary structure:** [Dictionary genealogy](src/tools/lexicography.md), [Convention fingerprints](src/tools/lexicographic-conventions.md), [R2 sense explorer](src/tools/r2-explorer.html), [R2 sense granularity](src/tools/r2-h1.html).
+- **Dictionary structure:** [Dictionary genealogy](src/tools/lexicography.md), [Convention fingerprints](src/tools/lexicographic-conventions.md), [Structural register](src/tools/structural-register.md), [R2 sense explorer](src/tools/r2-explorer.html), [R2 sense granularity](src/tools/r2-h1.html).
 - **Review queues:** [Gender conflicts](src/tools/review-gender-conflicts.md), [Source-layer](src/tools/review-source-layers.md), [Alignment confidence](src/tools/review-alignment.md), [Source-siglum aliases](src/tools/review-source-siglum.md).
 
 Current URL structure:
@@ -117,7 +117,7 @@ Architecture and planning:
 - [Chart trust template](docs/CHART_TRUST_TEMPLATE.md) - required evidence/limitations/validation/owner block
 - [MW Quantitative Depth handoff](docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md) (Phase 1)
 - [Dictionary comparison plan](docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
-- [H6 structural-register scatter](docs/H6_STRUCTURAL_REGISTER_SCATTER.md) - next prioritized scholar-facing analysis page
+- [H6 structural-register scatter](docs/H6_STRUCTURAL_REGISTER_SCATTER.md) - implemented scholar-facing analysis page and chart spec
 - [Microstructure profile](docs/MICROSTRUCTURE_PROFILE.md) · [methods](docs/MICROSTRUCTURE_METHODS.md) · [findings](docs/MICROSTRUCTURE_FINDINGS.md)
 - DCS migration material now lives in `VisualDCS/docs/csl-atlas-migration/`; active corpus work belongs outside this repo
 - [Review reports](docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary

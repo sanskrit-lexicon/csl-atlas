@@ -12,7 +12,8 @@ targets before adding new analysis-method prose.
 - Make "Which dictionary should I use?" the first reader-facing page.
 - Every public tool, chart, or page gets a compact trust block: Evidence,
   Limitations, Validation, Owner repo.
-- Prioritize the H6 structural-register scatter before SKD anubandha review.
+- H6 structural-register scatter is implemented; next candidates can build on
+  that chart without mixing in corpus or standards evidence.
 - Treat the microstructure work as a scholar-facing doc family:
   `MICROSTRUCTURE_PROFILE.md`, `MICROSTRUCTURE_METHODS.md`, and
   `MICROSTRUCTURE_FINDINGS.md`.
@@ -28,7 +29,7 @@ targets before adding new analysis-method prose.
 | 1 | `DICTIONARY_USER_GUIDE.md` | UC-RD-02, UC-RD-07 | public readers | Answer which dictionary to start with and why. | active first page |
 | 2 | [`READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) | UC-RD-01, UC-RD-03, UC-RD-04, UC-RD-05 | public readers | Explain what a lookup result means, including no-result and ambiguous-result cases. | active second page |
 | 3 | [`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | active third page |
-| 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md) | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page spec. | active fourth page |
+| 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md) and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | implemented |
 | 5 | Microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Give the M1-M5 profile, methods, and findings one coherent entry point. | active scaffold |
 | 6 | H4 semantic-field package | UC-CD-06, UC-LX-04 | scholars, students | Build the Amarakosa-native semantic-field analysis after the above layers settle. | later |
 
@@ -61,7 +62,8 @@ For every queue, write the proof page first:
 
 1. Land the use-case page layer and trust template.
 2. Write the scholar-facing microstructure profile, methods, and findings docs.
-3. Specify and then build the H6 structural-register scatter.
+3. Use the implemented H6 structural-register scatter as the first chart-trust
+   example.
 4. Document review queues by proof value.
 5. Start H4 semantic-field analysis after the above items are stable.
 

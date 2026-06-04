@@ -28,11 +28,11 @@ already supports, what it refutes, and what it prepares for later analysis.
 
 ## Next Analysis Priority
 
-Build the H6 structural-register scatter before moving to SKD anubandha review
-or H4 semantic fields. H6 is already supported by prototype evidence and can
-serve as the first chart built under the chart trust template.
+Use the implemented H6 structural-register scatter as the first chart built
+under the chart trust template. It remains prototype-backed, but it now has a
+generated JSON input and public atlas page.
 
-After H6, the next scholar-facing candidates are:
+The next scholar-facing candidates are:
 
 1. Review queue proof pages.
 2. SKD anubandha verification.

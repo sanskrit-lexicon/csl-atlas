@@ -271,9 +271,9 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - Scholar-facing analysis docs come before public-facing analysis explanations.
 - Review queues should first document what each queue proves, then how to review
   it.
-- H6 structural-register scatter is the next prioritized analysis page; H4
-  semantic fields come after the use-case page layer, chart trust template, H6,
-  and microstructure doc family.
+- H6 structural-register scatter is now the implemented chart-trust example;
+  H4 semantic fields come after the use-case page layer and microstructure doc
+  family are stable.
 
 ## Related Docs
 
