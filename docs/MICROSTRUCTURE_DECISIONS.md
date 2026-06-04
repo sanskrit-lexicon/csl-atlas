@@ -155,3 +155,23 @@ cross-refs on the 2,538 lemmas both treat (Jaccard 0.069). A shared cross-refere
 (variant-form / cognate-root pointers, well above chance) plus large independent expansion
 — **not** wholesale inheritance. Write-up: `docs/MICROSTRUCTURE_XREF_LINEAGE.md`; outputs
 `xref_lineage.json` + `xref_shared_edges.csv`. Still ungated and open: AP/AP90/BEN `cf.` parsing.
+
+---
+
+## Round 7 — 2026-06-04: Apte `cf.` parsing (last ungated seam)
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 15 | How strict to parse the AP/AP90 `cf.{#…#}` slot (mixed lemma / quote / cognate / citation)? | **Lemma edges + quotes to a side file** | m3 captures lemma-like `cf.{#…#}` as cross-ref edges; multi-word / glued `{#…#}` → `xref_cf_quotes.csv`. |
+
+**Built** (m3 extended; m5/m6 regenerated; validated, m1–m6 pass): new cf-lemma edges
+**AP 609 / AP90 446 / CAE 196** (CAE a bonus — it also uses `cf.{#…#}`); **517 cf-quotes**
+to the side file (AP 432, AP90 79, CAE 5); **BEN = 0** (cf. purely cognate/citation — does
+no internal Sanskrit cross-referencing). MW unchanged (7,665) ⟹ MW×PWG headline unchanged.
+**New result — a positive control:** AP × AP90 (same dictionary, two editions) overlap
+**85.5%** vs MW × PWG **21.8%**, confirming the measure detects true descent and that MW×PWG
+is a shared core, not inheritance. Doc updated: `MICROSTRUCTURE_XREF_LINEAGE.md`.
+
+**With this, the ungated code-doable #30 seams are exhausted** — everything still open
+(SKD pada decode, ṛ-marker, `di0`/`sO0` gaṇa) waits on the one maintainer gate: verifying
+the proposed SKD anubandha key against the Kavikalpadruma.
