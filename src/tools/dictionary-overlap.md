@@ -3,12 +3,25 @@ title: Dictionary overlap
 toc: false
 ---
 
-# Pairwise dictionary overlap
-
+# ${t("phase2.overlap.title")}
 How much vocabulary each pair of dictionaries shares, by normalized lemma. Jaccard = shared / union.
 
 ```js
 const data = FileAttachment("../data/dicts/pairwise-overlap.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -38,12 +51,12 @@ display(Plot.plot({
 }));
 ```
 
-## Pairwise table
+## ${t("phase2.overlap.pairwise-table")}
 
 ```js
-display(Inputs.table(data.pairwise.map(p => ({ "dict A": p.a, "dict B": p.b, "shared lemmas": p.shared, jaccard: p.jaccard })), {
-  columns: ["dict A", "dict B", "shared lemmas", "jaccard"],
-  sort: "shared lemmas",
+display(Inputs.table(data.pairwise.map(p => ({ [t("phase2.overlap.dict-a")]: p.a, [t("phase2.overlap.dict-b")]: p.b, [t("phase2.overlap.shared-lemmas")]: p.shared, [t("phase2.overlap.jaccard")]: p.jaccard })), {
+  columns: [t("phase2.overlap.dict-a"), t("phase2.overlap.dict-b"), t("phase2.overlap.shared-lemmas"), t("phase2.overlap.jaccard")],
+  sort: t("phase2.overlap.shared-lemmas"),
   reverse: true
 }));
 ```

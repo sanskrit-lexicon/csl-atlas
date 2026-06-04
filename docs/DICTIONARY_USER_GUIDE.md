@@ -74,11 +74,11 @@ These words are real lexicographic data, but they are *weaker evidence* than a w
 
 ## Transliteration
 
-You can search in SLP1, IAST, Harvard-Kyoto, or Devanagari. The atlas normalizes your input, shows you the normalized form it used, and keeps your original query visible. If a transliteration is ambiguous, it warns you rather than guessing silently.
+Reader Lookup v1 supports SLP1 and IAST headword input. The atlas normalizes your input, shows the normalized candidate it used, and keeps your original query visible. Harvard-Kyoto, Devanagari, compound splitting, and sandhi recovery are later lookup improvements, not current guarantees.
 
 ## When A Lookup Fails
 
-If a word is not found, the atlas tries to help you recover:
+If a word is not found, the current lookup keeps the failure explicit and shows the normalized candidate. Later versions should add:
 
 - suggests transliteration variants;
 - suggests a normalized headword;
@@ -106,5 +106,5 @@ Each entry has a stable record ID and a source link. When you cite a word in you
 
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — what the certainty labels mean.
 - [`docs/DICTIONARY_COMPARISON_PLAN.md`](DICTIONARY_COMPARISON_PLAN.md) — how cross-dictionary comparison works (research mode).
-- `docs/USE_CASES.md` — the reader use cases this guide supports (UC-RD-01 through UC-RD-15).
+- `docs/USE_CASES.md` — the reader use cases this guide supports (UC-RD-01 through UC-RD-07).
 - `ARCHITECTURE.md` — the overall design and audience policy.

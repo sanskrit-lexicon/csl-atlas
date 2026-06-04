@@ -10,6 +10,13 @@ export default {
       path: "/"
     },
     {
+      name: "Reader mode",
+      pages: [
+        { name: "Reader lookup", path: "/tools/reader-lookup" },
+        { name: "Lemma dossier", path: "/tools/dictionary-dossier" }
+      ]
+    },
+    {
       name: "MW depth (Phase 1)",
       pages: [
         { name: "Depth dashboard", path: "/tools/mw-depth-dashboard" },
@@ -31,9 +38,12 @@ export default {
       ]
     },
     {
-      name: "Corpus (Phase 3)",
+      name: "Dictionary structure",
       pages: [
-        { name: "DCS corpus inventory", path: "/tools/dcs-corpus-inventory" }
+        { name: "Dictionary genealogy", path: "/tools/lexicography" },
+        { name: "Convention fingerprints", path: "/tools/lexicographic-conventions" },
+        { name: "R2 sense explorer", path: "/tools/r2-explorer" },
+        { name: "R2 sense granularity", path: "/tools/r2-h1" }
       ]
     },
     {
@@ -46,7 +56,7 @@ export default {
       ]
     },
     {
-      name: "Interoperability & figures",
+      name: "Atlas figures",
       pages: [
         { name: "Cross-dictionary comparison", path: "/tools/cross-dict" },
         { name: "All-dictionary coverage", path: "/tools/dictionary-coverage" },
@@ -54,8 +64,7 @@ export default {
         { name: "Lineage Sankey", path: "/tools/lineage-sankey" },
         { name: "Lexicographic timeline", path: "/tools/timeline" },
         { name: "Type comparator", path: "/tools/type-comparator" },
-        { name: "Citation tracer", path: "/tools/citation-tracer" },
-        { name: "Interoperability hard cases", path: "/tools/interoperability-hard-cases" }
+        { name: "Citation tracer", path: "/tools/citation-tracer" }
       ]
     },
     {
@@ -82,7 +91,7 @@ export default {
     }
   ],
   footer: "Source: CDSL · CC-BY-SA-4.0 · build {sha}",
-  head: '<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="palette.css">',
+  head: '<meta name="description" content="Atlas of the Cologne Digital Sanskrit Lexicons (CDSL). An interactive digital humanities exploration of historical Sanskrit dictionaries including Monier-Williams, PWG, and PWK."><meta name="theme-color" content="#1f78b4"><link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="favicon.svg"><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="palette.css"><link rel="stylesheet" href="premium.css"><script>if ("serviceWorker" in navigator) { window.addEventListener("load", () => { let swPath = "/sw.js"; if (window.location.hostname.includes("github.io")) { swPath = "/csl-atlas/sw.js"; } navigator.serviceWorker.register(swPath); }); }</script>',
   theme: "wide",
   toc: true,
   search: true

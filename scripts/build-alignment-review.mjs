@@ -1,7 +1,7 @@
 // Build the low-confidence alignment review queue (Phase 2 -> review layer).
 //
 // Reads the alignment-confidence output of the comparative dictionary build and
-// emits a review report (queue "low-confidence-alignment", UC-RV-01 / UC-CD-09)
+// emits a review report (queue "low-confidence-alignment", UC-CD-05 / UC-RV-03)
 // for every lemma that aligned across dictionaries only after normalization.
 //
 // In practice this queue is intrinsically tiny: CDSL headwords are SLP1 and

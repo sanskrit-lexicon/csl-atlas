@@ -18,7 +18,8 @@ We look for, between the Petersburg side (PWG/PW/SCH/PWKVN) and MW:
 Change-file format:  `; <L>..<k1>HW..` sets the headword; `LNUM old TEXT` / `LNUM new
 TEXT` are the fix. CAVEAT: these bundles are organized by issue THEME, and most fixes
 are digitization/markup, so a shared correction corroborates shared apparatus — it is
-not by itself proof of a copied PRINT error (that is F4/DCS).
+not by itself proof of a copied PRINT error (that requires external
+DCS/VisualDCS ground truth).
 
 Reads ../PWG/pwgissues and ../csl-corrections. Output: data/forensic/
 shared_corrections.csv, data/forensic/f4_report.json.
@@ -273,12 +274,12 @@ def main():
                     "correction sets this size over a shared vocabulary, so NOT evidence of inherited "
                     "typos. SHARED documented PRINT errors = 0 (PWG 24 / MW 122, small + format-divergent). "
                     "=> MW inherited Böhtlingk's APPARATUS, not his mechanical errors — the books were "
-                    "independently typeset. Definitive error-copy test remains F4 vs DCS ground truth."),
+                    "independently typeset. Definitive error-copy test remains external DCS/VisualDCS ground truth."),
         "caveat": ("The editors bundle fixes by ISSUE THEME (mostly citation/markup), and most are "
                    "digitization fixes -> a shared correction corroborates shared apparatus (and the "
                    "F1 finding), it is NOT by itself proof of a copied PRINT error. The strongest items "
                    "are headwords/citations the editors corrected on BOTH the Petersburg side and MW. "
-                   "Airtight copied-error proof = F4 shared ERRONEOUS citations vs DCS ground truth."),
+                   "Airtight copied-error proof = shared ERRONEOUS citations vs external DCS/VisualDCS ground truth."),
     }
     with open("data/forensic/f4_report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)

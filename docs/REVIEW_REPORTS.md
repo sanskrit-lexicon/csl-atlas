@@ -29,14 +29,11 @@ All review reports use this status set (from `ARCHITECTURE.md`):
 | `blocked` | Cannot be resolved yet (bad source data, missing evidence) |
 | `deferred` | Valid but postponed to a later phase |
 
-### Reconciliation With Existing Reports
+### Reconciliation With Standards Reports
 
-Two narrower status sets already exist in the pilot and must be read as subsets of the canonical vocabulary:
-
-- **Loss reports** (`docs/LOSS_REPORT_SCHEMA.md`) use `machine`, `reviewed`, `published`. Here `reviewed` corresponds to `reviewed-ok` / `reviewed-corrected`, and `published` is an additional downstream flag meaning "used in the paper/demo narrative."
-- **Pilot review files** (`data/pilot/*-review.json`, e.g. `tei-review.json`, `ontolex-review.json`, `external-validation-review.json`) predate this vocabulary. New reports should adopt the canonical set; old files may be migrated when next touched.
-
-When in doubt, use the canonical six-status set above and add `published` only as a separate boolean or downstream flag, not as a review status.
+TEI/OntoLex loss reports moved to `csl-standards`. They may use a narrower
+status vocabulary for standards validation, but atlas review queues should use
+the canonical six-status set above.
 
 ## What Gets A Review Report
 
@@ -44,13 +41,11 @@ Review reports back the review use cases in `docs/USE_CASES.md`:
 
 | Queue | Use case | Triggered by |
 |---|---|---|
-| Low-confidence dictionary alignment | UC-RV-01 | alignment confidence below threshold |
-| POS / gender conflict | UC-RV-02 | dictionaries disagree on grammar |
-| Unknown source layer | UC-RV-03 / UC-DIA-07 | source abbreviation maps to `unknown` |
-| Corpus lemma mismatch | UC-RV-04 | corpus lemma fails to align with a dictionary |
-| Encoding / OCR problem | UC-RV-05 | parser emits a source-quality warning |
-| Generated TEI / OntoLex review | UC-RV-06 / UC-RV-07 | loss report `status` is `partial`, `lossy`, or `failure` |
-| Over-broad inferred family | — | `inferred` family exceeds a size/divergence heuristic |
+| Low-confidence dictionary alignment | UC-CD-05 / UC-RV-03 | alignment confidence below threshold |
+| POS / gender conflict | UC-CD-04 / UC-RV-03 | dictionaries disagree on grammar |
+| Unknown source layer | UC-LX-05 / UC-RV-03 | source abbreviation maps to `unknown` |
+| Encoding / OCR problem | UC-DEV-02 / UC-RV-03 | parser emits a source-quality warning |
+| Over-broad inferred family | UC-LX-03 / UC-RV-03 | `inferred` family exceeds a size/divergence heuristic |
 
 A claim labeled `observed` rarely needs a queue. A claim labeled `inferred` almost always does. See [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md).
 
@@ -118,11 +113,10 @@ Follow the directory strategy in `ARCHITECTURE.md`:
 
 ```text
 src/data/review/        review reports consumed by Observable pages
-data/pilot/*-review.json existing pilot reviews (TEI, OntoLex, external validation)
 data/schema/review-report.schema.json   JSON Schema for review reports
 ```
 
-The schema lives at [`data/schema/review-report.schema.json`](../data/schema/review-report.schema.json), alongside the existing `loss-report.schema.json`, `hard-case.schema.json`, and `neutral-model.schema.json`. It is currently a stub (the review layer is built from Phase 2 onward); review-report generators should validate against it the same way the pilot profiles are validated.
+The schema lives at [`data/schema/review-report.schema.json`](../data/schema/review-report.schema.json). It is currently a stub (the review layer is built from Phase 2 onward); review-report generators should validate against it.
 
 ## Workflow
 
@@ -131,10 +125,10 @@ The schema lives at [`data/schema/review-report.schema.json`](../data/schema/rev
 2. select       a script collects low-confidence/conflicting cases into a queue
 3. review       a human sets reviewStatus and (if needed) reviewedValue
 4. apply        downstream builds prefer reviewedValue over machineValue
-5. report       a coverage dashboard shows machine vs reviewed counts (UC-RV-09)
+5. report       a coverage dashboard shows machine vs reviewed counts (UC-RV-02)
 ```
 
-Steps 2 already has precedent in `scripts/select-review-cases.mjs` (→ `data/pilot/review-cases.json`) and `scripts/sample-hard-cases.mjs`. New queues should reuse that pattern rather than inventing one-off report formats.
+New queues should follow the implemented review-report pattern rather than inventing one-off report formats.
 
 ## Implemented queues
 
@@ -155,15 +149,14 @@ To record a decision, edit the item's `reviewStatus` / `reviewedValue` / `review
 
 - A review never edits generated source data — it overlays it.
 - A rebuild must not discard reviews; reports are keyed by stable `reviewId`.
-- No lossy or low-confidence claim silently passes as trusted (mirrors the loss-report principle).
+- No lossy or low-confidence claim silently passes as trusted.
 - Every report points back to a source record so a reviewer can verify, not just accept.
-- Reviewed values flow downstream and their effect must be visible (UC-RV-09, Milestone D).
+- Reviewed values flow downstream and their effect must be visible (UC-RV-02, Milestone B).
 
 ## Related Documents
 
 - [`data/schema/review-report.schema.json`](../data/schema/review-report.schema.json) — the machine-checkable schema for this shape.
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — evidence labels vs review status.
-- `docs/LOSS_REPORT_SCHEMA.md` — the loss-report shape that review reports generalize.
 - `docs/DICTIONARY_COMPARISON_PLAN.md` — the alignment queues that produce most reviews.
-- `docs/USE_CASES.md` — UC-RV-01 through UC-RV-09 and Milestone D.
+- `docs/USE_CASES.md` — UC-RV-01 through UC-RV-03 and Milestone B.
 - `ARCHITECTURE.md` — the review architecture and status list.

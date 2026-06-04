@@ -3,13 +3,26 @@ title: MW diachronic layers
 toc: false
 ---
 
-# MW diachronic layers
-
+# ${t("phase1.diachronic.title")}
 A **conservative** view of which source layers MW entries cite. These are coarse comparison buckets, **not dates**.
 
 ```js
 const layers = FileAttachment("../data/mw/mw-source-layer-summary.json").json();
 const profile = FileAttachment("../data/mw/mw-diachronic-profile.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -20,7 +33,7 @@ import * as Plot from "npm:@observablehq/plot";
 Source-layer assignment is <b>derived</b> from a reviewable seed map and is deliberately incomplete. Unmapped sources fall to <code>unknown</code>. Do <b>not</b> read these layers as exact chronology.
 </div>
 
-## Records by layer membership
+## ${t("phase1.diachronic.records-by-layer")}
 
 A record can cite sources from several layers, so these bars overlap.
 
@@ -29,7 +42,7 @@ const layerRows = profile.layerOrder.map(l => ({ layer: l, records: layers.recor
 display(Plot.plot({
   marginLeft: 110,
   height: 320,
-  x: { label: "records", grid: true },
+  x: { label: t("phase1.diachronic.records"), grid: true },
   y: { domain: profile.layerOrder, label: null },
   marks: [
     Plot.barX(layerRows, { x: "records", y: "layer", fill: "layer" }),
@@ -38,7 +51,7 @@ display(Plot.plot({
 }));
 ```
 
-## Earliest cited layer per record
+## ${t("phase1.diachronic.earliest-layer")}
 
 Each record counted once, by its earliest cited layer (`unknown` ignored unless it is the only layer; `none` = no textual citation).
 
@@ -48,7 +61,7 @@ const earliestRows = order.map(l => ({ layer: l, records: profile.recordsByEarli
 display(Plot.plot({
   marginLeft: 110,
   height: 340,
-  x: { label: "records", grid: true },
+  x: { label: t("phase1.diachronic.records"), grid: true },
   y: { domain: order, label: null },
   marks: [
     Plot.barX(earliestRows, { x: "records", y: "layer", fill: "layer" }),
@@ -57,10 +70,10 @@ display(Plot.plot({
 }));
 ```
 
-## Unmapped sources — review queue
+## ${t("phase1.diachronic.unmapped-sources")}
 
 ```js
-display(html`<p><b>${layers.distinctUnknownSources.toLocaleString()}</b> distinct source abbreviations are not yet mapped to a layer (UC-DIA-07). The most frequent are below; mapping these in <code>src/data/mw-source-layers.json</code> improves coverage.</p>`);
+display(html`<p><b>${layers.distinctUnknownSources.toLocaleString()}</b> distinct source abbreviations are not yet mapped to a layer (UC-LX-05 / UC-RV-03). The most frequent are below; mapping these in <code>src/data/mw-source-layers.json</code> improves coverage.</p>`);
 ```
 
 ```js

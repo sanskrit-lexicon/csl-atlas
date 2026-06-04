@@ -3,12 +3,25 @@ title: Lemma dossier
 toc: false
 ---
 
-# Per-lemma dictionary dossier
-
+# ${t("phase2.dossier.title")}
 Look up a Sanskrit lemma (SLP1) and see which dictionaries record it, how many entries each has, the gender they tag, and a link to the source record.
 
 ```js
 const dossier = FileAttachment("../data/dicts/lemma-dossier.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -20,8 +33,8 @@ const hrefOf = (code, line) => `${dossier.hrefBase}/${code}/${code}.txt#L${line}
 
 ```js
 const query = view(Inputs.text({
-  label: "Lemma",
-  placeholder: "e.g. agni, deva, dharma (SLP1)",
+  label: t("phase2.dossier.lemma"),
+  placeholder: t("phase2.dossier.placeholder"),
   width: 320,
   submit: false
 }));
@@ -45,7 +58,7 @@ display(html`<p style="color:var(--theme-foreground-muted)">
 ```js
 display(html`<div class="dossier-grid">
   ${shown.map(e => html`<section class="lemma-card">
-    <h3>${e.l} <span class="cov">in ${e.c}/7</span></h3>
+    <h3>${e.l} <span class="cov">${t("phase2.dossier.in")} ${e.c}/7</span></h3>
     <div class="chips">
       ${e.d.map(([code, records, line, gender]) => html`<a class="chip" href=${hrefOf(code, line)} target="_blank" rel="noopener">
         <b>${labelOf.get(code) ?? code}</b>

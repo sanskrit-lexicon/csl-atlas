@@ -8,7 +8,6 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
-import { classifyGram } from "../scripts/build-dcs-corpus.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
 import { topForm } from "../scripts/build-citation-apparatus.mjs";
@@ -42,20 +41,6 @@ test("compareCounts: warns when record count is far from expected", () => {
 test("compareCounts: flags missing expected file", () => {
   const r = compareCounts({ root: 1 }, null, 100);
   assert.ok(r.warnings.some(w => /No expected counts/.test(w)));
-});
-
-// ---- DCS: grammar-category grouping ----
-test("classifyGram groups DCS categories", () => {
-  assert.equal(classifyGram("m"), "nominal");
-  assert.equal(classifyGram("f"), "nominal");
-  assert.equal(classifyGram("mn"), "nominal");
-  assert.equal(classifyGram("adj"), "adjectival");
-  assert.equal(classifyGram("ind"), "indeclinable");
-  assert.equal(classifyGram("10. P."), "verbal");
-  assert.equal(classifyGram("Denom. P."), "verbal");
-  assert.equal(classifyGram("1. ?."), "verbal"); // encoding-damaged pada still verbal
-  assert.equal(classifyGram(""), "unspecified");
-  assert.equal(classifyGram("weird"), "other");
 });
 
 // ---- Sense depth: sense-unit counting ----

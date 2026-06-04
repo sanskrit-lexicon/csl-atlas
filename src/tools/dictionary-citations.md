@@ -3,12 +3,25 @@ title: Citation apparatus
 toc: false
 ---
 
-# Citation apparatus
-
-How heavily each dictionary cites sources, how broad its source apparatus is, and what it cites most (UC-CD-07 / UC-LX-06).
+# ${t("phase2.citations.title")}
+How heavily each dictionary cites sources, how broad its source apparatus is, and what it cites most (UC-RD-06).
 
 ```js
 const data = FileAttachment("../data/dicts/citation-apparatus.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -19,13 +32,13 @@ import * as Plot from "npm:@observablehq/plot";
 Tagged dictionaries (MW, AP, PWG, PWK) cite with <code>&lt;ls&gt;</code>; density is citations per entry. WIL is essentially untagged for citations, and VCP/SKD cite in prose — for those, density uses an <code>iti</code> proxy and is <b>not</b> directly comparable to the <code>&lt;ls&gt;</code> counts.
 </div>
 
-## Citation density
+## ${t("phase2.citations.density")}
 
 ```js
 display(Plot.plot({
   marginLeft: 60,
   height: 300,
-  x: { label: "citations per entry", grid: true },
+  x: { label: t("phase2.citations.citations-per-entry"), grid: true },
   y: { label: null, domain: data.perDict.map(d => d.dict) },
   color: { legend: true, domain: ["ls", "iti"], range: ["var(--theme-foreground-focus)", "var(--theme-foreground-faint)"] },
   marks: [
@@ -38,7 +51,7 @@ display(Plot.plot({
 
 PWG stands out: a citation-dense, source-rich bilingual dictionary. MW is moderately cited; AP and PWK are leaner; the Petersburg compact (PWK) compresses PWG's apparatus.
 
-## Apparatus breadth (tagged dictionaries)
+## ${t("phase2.citations.apparatus-breadth")}
 
 Distinct source sigla (locus detail stripped).
 
@@ -47,7 +60,7 @@ const tagged = data.perDict.filter(d => d.method === "ls" && d.distinctSources);
 display(Plot.plot({
   marginLeft: 60,
   height: 220,
-  x: { label: "distinct source sigla", grid: true },
+  x: { label: t("phase2.citations.distinct-source-sigla"), grid: true },
   y: { label: null, sort: { y: "x", reverse: true } },
   marks: [
     Plot.barX(tagged, { x: "distinctSources", y: "dict", fill: "var(--theme-foreground-focus)" }),
@@ -57,31 +70,31 @@ display(Plot.plot({
 }));
 ```
 
-## Most-cited sources, per dictionary
+## ${t("phase2.citations.most-cited-sources")}
 
 ```js
-const pick = view(Inputs.select(tagged.map(d => d.dict), { label: "Dictionary" }));
+const pick = view(Inputs.select(tagged.map(d => d.dict), { label: t("phase2.citations.dictionary") }));
 ```
 
 ```js
 const chosen = data.perDict.find(d => d.dict === pick);
-display(Inputs.table(chosen.topSources.map((s, i) => ({ rank: i + 1, source: s.source, citations: s.count })), {
-  columns: ["rank", "source", "citations"],
+display(Inputs.table(chosen.topSources.map((s, i) => ({ [t("phase2.citations.rank")]: i + 1, [t("phase2.citations.source")]: s.source, [t("phase2.citations.citations")]: s.count })), {
+  columns: [t("phase2.citations.rank"), t("phase2.citations.source"), t("phase2.citations.citations")],
   rows: 20
 }));
 ```
 
-## Shared sources across dictionaries
+## ${t("phase2.citations.shared-sources")}
 
 Now aligned by a canonical siglum (diacritic/case fold + a [reviewed alias table](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dict-source-aliases.json)), so MW `MBh`, PWG `MBH` and `ṚV`/`RV` count together. Counts are citations of each source per dictionary.
 
 ```js
 const matrix = data.sourceMatrix;
 const dictsCols = data.citationTaggedDicts;
-display(Inputs.table(matrix.map(s => ({ source: s.source, "in N dicts": s.dictsCiting, ...s.byDict })), {
-  columns: ["source", "in N dicts", ...dictsCols],
+display(Inputs.table(matrix.map(s => ({ [t("phase2.citations.source")]: s.source, [t("phase2.citations.in-n-dicts")]: s.dictsCiting, ...s.byDict })), {
+  columns: [t("phase2.citations.source"), t("phase2.citations.in-n-dicts"), ...dictsCols],
   rows: 30,
-  sort: "in N dicts",
+  sort: t("phase2.citations.in-n-dicts"),
   reverse: true
 }));
 ```
@@ -92,7 +105,7 @@ display(Plot.plot({
   marginBottom: 50,
   width: 520,
   height: 360,
-  color: { scheme: "blues", label: "shared sigla (Jaccard)", legend: true },
+  color: { scheme: "blues", label: t("phase2.citations.shared-sigla-jaccard"), legend: true },
   x: { domain: dictsCols, label: null },
   y: { domain: dictsCols, label: null },
   marks: [

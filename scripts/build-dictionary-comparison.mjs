@@ -23,12 +23,14 @@ const SAMPLE = 50;
 // covering the well-attested shared vocabulary (full-corpus lookup over all
 // ~300k lemmas would need a search backend — see the comparison plan).
 const DOSSIER_MIN_DICTS = 5;
+const LOOKUP_MIN_DICTS = 4;
 const GENDER_TOKENS = new Set(["m", "f", "n", "adj", "ind"]);
 const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
 
 const ORDER = DICTS.map(d => d.code);
 const TAGGED = DICTS.filter(d => d.grammarReliable).map(d => d.code);
 const HOMONYM_DICTS = DICTS.filter(d => d.homonymMarked).map(d => d.code);
+const DICT_INDEX = Object.fromEntries(ORDER.map((code, index) => [code, index]));
 
 function envelope(extra, { assumptions = [], warnings = [] }) {
   return {
@@ -112,6 +114,7 @@ function main() {
   let conflictCount = 0;
   const lowConfidence = [];
   const dossier = [];
+  const lookup = [];
   const homonymSplits = [];
   let homonymSplitCount = 0;
 
@@ -167,6 +170,21 @@ function main() {
           [...entry[code].genders].filter(g => GENDER_TOKENS.has(g)).sort().join("")
         ])
       });
+    }
+
+    // Reader Lookup v1: exact/prefix lookup over cross-attested headwords. The
+    // low-coverage tail is intentionally omitted to keep the public page
+    // responsive without adding a backend search service.
+    if (k >= LOOKUP_MIN_DICTS) {
+      lookup.push([
+        normalized,
+        codes.map(code => {
+          const gender = [...entry[code].genders].filter(g => GENDER_TOKENS.has(g)).sort().join("");
+          const tuple = [DICT_INDEX[code], entry[code].records, entry[code].example.line];
+          if (gender) tuple.push(gender);
+          return tuple;
+        })
+      ]);
     }
 
     // homonym split: among the homonym-marking dicts (MW, PWG, PWK) that
@@ -296,7 +314,7 @@ function main() {
   );
 
   // 5b. Homonym split: where the homonym-marking dictionaries disagree on
-  // how many homonyms a lemma has (UC-LX-10). Sorted by spread then max.
+  // how many homonyms a lemma has. Sorted by spread then max.
   homonymSplits.sort((a, b) => b.spread - a.spread || b.maxHomonyms - a.maxHomonyms || a.lemma.localeCompare(b.lemma));
   written.push(
     writeJson(
@@ -362,10 +380,40 @@ function main() {
   fs.writeFileSync(path.join(OUT_DIR, "lemma-dossier.json"), `${JSON.stringify(dossierPayload)}\n`);
   written.push(path.relative(process.cwd(), path.join(OUT_DIR, "lemma-dossier.json")));
 
-  // 8. Validation report.
+  // 8. Reader lookup index. Written compactly like the dossier.
+  lookup.sort((a, b) => a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0);
+  const lookupPayload = envelope(
+    {
+      hrefBase: HREF_BASE,
+      minDicts: LOOKUP_MIN_DICTS,
+      tupleFields: ["lemma", "dicts"],
+      dictTupleFields: ["dictIndex", "records", "firstLine", "gender?"],
+      inputSchemes: ["SLP1", "IAST"],
+      count: lookup.length,
+      entries: lookup
+    },
+    {
+      assumptions: [
+        `Includes normalized lemmas attested in at least ${LOOKUP_MIN_DICTS} of the ${ORDER.length} target dictionaries.`,
+        "Each entry is [lemma, dictTuples]; each dict tuple is [dictIndex, records, firstLine, gender?].",
+        "Dictionary code is dictionaries[dictIndex].code; href = hrefBase + /code/code.txt#L firstLine.",
+        "Reader Lookup v1 is exact/prefix lookup over dictionary headwords, not full-text search and not a corpus lookup."
+      ],
+      warnings: [
+        "Lemmas below the coverage threshold are omitted from Reader Lookup v1; use dictionary source files or a future search backend for the long tail.",
+        "Search is static and client-side; very broad prefixes are capped in the page.",
+        "IAST input is transliterated deterministically, but ambiguous surface forms and sandhi are not resolved."
+      ]
+    }
+  );
+  fs.writeFileSync(path.join(OUT_DIR, "lemma-lookup.json"), `${JSON.stringify(lookupPayload)}\n`);
+  written.push(path.relative(process.cwd(), path.join(OUT_DIR, "lemma-lookup.json")));
+
+  // 9. Validation report.
   const report = {
     distinctLemmas,
     dossierEntries: dossier.length,
+    lookupEntries: lookup.length,
     recordsByDict: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], perDictRecords[c]])),
     intersectionAll: intersectionAll.count,
     genderConflicts: conflictCount,

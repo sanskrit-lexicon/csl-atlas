@@ -1,4 +1,4 @@
-// Build the citation-apparatus comparison (Phase 2, UC-CD-07 / UC-LX-06).
+// Build the citation-apparatus comparison (Phase 2, UC-RD-06).
 //
 // Compares how the dictionaries cite sources: citation density per entry,
 // apparatus breadth, each dictionary's most-cited sources, and — using the

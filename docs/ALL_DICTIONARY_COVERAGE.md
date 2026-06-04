@@ -85,6 +85,6 @@ The all-dictionary layer should become the bridge between the current paper and 
 2. Use all-dictionary coverage to find candidates beyond the original nine.
 3. Promote promising dictionaries into new chapters only after the coverage layer shows real structure.
 4. Build a separate Sanskrit-Sanskrit / `iti` parser for SKD, VCP, and related prose lexica.
-5. Feed the entry-type and block-size results into TEI archival modeling and OntoLex semantic modeling.
+5. Hand off entry-type and block-size results to `csl-standards` when TEI archival modeling or OntoLex semantic modeling needs atlas evidence.
 
 This turns Figure 6 from a structural heatmap into the first panel of a larger atlas: structure, size, type, fit, and model loss.

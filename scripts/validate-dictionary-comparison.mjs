@@ -20,6 +20,7 @@ const REQUIRED = [
   "homonym-split.json",
   "sense-depth.json",
   "lemma-dossier.json",
+  "lemma-lookup.json",
   "dictionary-comparison-validation.json"
 ];
 
@@ -81,6 +82,34 @@ if (dossier) {
     errors.push("lemma-dossier has malformed entries (missing lemma or too few dictionaries).");
   } else {
     notes.push(`Dossier covers ${dossier.count} lemmas (>= ${dossier.minDicts} dictionaries).`);
+  }
+}
+
+const lookup = docs["lemma-lookup.json"];
+if (lookup) {
+  if (!(lookup.count > 0) || !Array.isArray(lookup.entries) || lookup.entries.length === 0) {
+    errors.push("lemma-lookup has no entries.");
+  } else if (lookup.count !== lookup.entries.length) {
+    errors.push(`lemma-lookup count ${lookup.count} does not match entries length ${lookup.entries.length}.`);
+  } else {
+    const malformed = lookup.entries.filter(e =>
+      !Array.isArray(e) ||
+      typeof e[0] !== "string" ||
+      !Array.isArray(e[1]) ||
+      e[1].length === 0 ||
+      (lookup.minDicts && e[1].length < lookup.minDicts) ||
+      e[1].some(d =>
+        !Array.isArray(d) ||
+        d.length < 3 ||
+        !Number.isInteger(d[0]) ||
+        d[0] < 0 ||
+        d[0] >= (lookup.dictionaries || []).length ||
+        !(d[1] > 0) ||
+        !(d[2] > 0)
+      )
+    );
+    if (malformed.length) errors.push(`${malformed.length} malformed lemma-lookup entries.`);
+    else notes.push(`Reader lookup covers ${lookup.count} normalized lemmas (>= ${lookup.minDicts ?? 1} dictionaries).`);
   }
 }
 

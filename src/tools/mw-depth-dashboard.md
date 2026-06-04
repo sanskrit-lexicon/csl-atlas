@@ -3,14 +3,27 @@ title: MW depth dashboard
 toc: false
 ---
 
-# MW quantitative depth
-
+# ${t("phase1.mw-depth.title")}
 Synchronic anatomy of Monier-Williams (MW1899), generated deterministically from the CDSL source. Every count links back to source records; types **overlap** (a record can be both `noun-m` and `vedic-accented`), so counts are membership counts, not an exclusive partition.
 
 ```js
 const summary = FileAttachment("../data/mw/mw-quantitative-summary.json").json();
 const overlaps = FileAttachment("../data/mw/mw-type-overlaps.json").json();
 const depth = FileAttachment("../data/mw/mw-depth-distribution.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -20,10 +33,10 @@ import * as Plot from "npm:@observablehq/plot";
 ```js
 display(html`<div style="display:flex;gap:24px;flex-wrap:wrap;margin:8px 0 4px">
   ${[
-    ["Records", summary.recordCount.toLocaleString()],
-    ["Citations", summary.totalCitations.toLocaleString()],
-    ["Mean citations / record", summary.meanCitationsPerRecord.toFixed(2)],
-    ["Article types", summary.types.length]
+    [t("phase1.mw-depth.records"), summary.recordCount.toLocaleString()],
+    [t("phase1.mw-depth.citations"), summary.totalCitations.toLocaleString()],
+    [t("phase1.mw-depth.mean-citations"), summary.meanCitationsPerRecord.toFixed(2)],
+    [t("phase1.mw-depth.article-types"), summary.types.length]
   ].map(([label, value]) => html`<div>
     <div style="font-size:1.8rem;font-weight:700">${value}</div>
     <div style="color:var(--theme-foreground-muted);font-size:.85rem">${label}</div>
@@ -33,13 +46,13 @@ display(html`<div style="display:flex;gap:24px;flex-wrap:wrap;margin:8px 0 4px">
 
 <div class="note" label="Evidence">Type counts are <b>observed/derived</b> from MW markup (ecode, <code>&lt;k2&gt;</code>, <code>&lt;lex&gt;</code>, <code>&lt;ls&gt;</code>). Source date: ${summary.sourceDate ?? "unknown"}.</div>
 
-## Article types
+## ${t("phase1.mw-depth.article-types")}
 
 ```js
 display(Plot.plot({
   marginLeft: 130,
   height: 420,
-  x: { label: "records (membership)", grid: true },
+  x: { label: t("phase1.mw-depth.records-membership"), grid: true },
   y: { label: null },
   marks: [
     Plot.barX(summary.types, { x: "count", y: "type", sort: { y: "x", reverse: true }, fill: "var(--theme-foreground-focus)" }),
@@ -63,14 +76,14 @@ display(Inputs.table(summary.types.map(t => ({
 }));
 ```
 
-## Compound depth
+## ${t("phase1.mw-depth.compound-depth")}
 
 How many `<k2>` segments a record's headword has (1 = no compound marker).
 
 ```js
 display(Plot.plot({
   height: 300,
-  x: { label: "segments in <k2>", tickFormat: "d" },
+  x: { label: t("phase1.mw-depth.segments-k2"), tickFormat: "d" },
   y: { label: "records", grid: true, type: "log" },
   marks: [
     Plot.barY(depth.compoundSegmentDistribution, { x: "value", y: "count", fill: "var(--theme-foreground-focus)" }),
@@ -79,7 +92,7 @@ display(Plot.plot({
 }));
 ```
 
-## Strongest type overlaps
+## ${t("phase1.mw-depth.strongest-overlaps")}
 
 Pairs of types that most often co-occur in the same record.
 

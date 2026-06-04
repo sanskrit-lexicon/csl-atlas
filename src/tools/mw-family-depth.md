@@ -3,12 +3,25 @@ title: MW family depth
 toc: false
 ---
 
-# MW lexical-family depth
-
+# ${t("phase1.family.title")}
 The deepest lexical families in MW, ranked by a composite depth score. Families are grouped by the shared leading base of `<k2>`.
 
 ```js
 const data = FileAttachment("../data/mw/mw-deepest-families.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -23,14 +36,14 @@ Family grouping is <b>inferred</b> — MW has no explicit derivation link, so fa
 display(html`<p><b>${data.familyCount.toLocaleString()}</b> families with more than one member; showing the deepest <b>${data.shown}</b>.</p>`);
 ```
 
-## Depth vs breadth
+## ${t("phase1.family.depth-vs-breadth")}
 
 ```js
 display(Plot.plot({
   height: 420,
   grid: true,
-  x: { label: "members (breadth) →", type: "log" },
-  y: { label: "↑ max compound depth" },
+  x: { label: t("phase1.family.members-breadth"), type: "log" },
+  y: { label: t("phase1.family.max-compound-depth") },
   marks: [
     Plot.dot(data.families, {
       x: "memberCount",
@@ -44,7 +57,7 @@ display(Plot.plot({
 }));
 ```
 
-## Deepest families
+## ${t("phase1.family.deepest-families")}
 
 ```js
 display(Inputs.table(data.families.map(f => ({

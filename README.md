@@ -2,7 +2,7 @@
 
 An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de/) — comparative microstructural analysis of nine narrative Sanskrit-dictionary chapters, plus an all-dictionary coverage layer for every local CDSL v02 source dictionary.
 
-**Status:** active public-atlas implementation. The main atlas chapters and interoperability pilot are reproducible from committed JSON plus local `csl-orig` source dictionaries.
+**Status:** active public-atlas implementation. The dictionary-atlas chapters are reproducible from committed JSON plus local `csl-orig` source dictionaries. TEI/OntoLex standards work has moved to `csl-standards`.
 
 ---
 
@@ -11,11 +11,12 @@ An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de
 Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskrit-lexicon/MWS/tree/docs-pass/papers/microanalysis). Static + interactive. Two reader paths:
 
 - **Paper tour:** read the current atlas argument pages ([Grounded](src/paper/grounded.md) · [Triangulation](src/paper/triangulation.md) · [Appendices](src/paper/appendices.md)).
-- **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md), and [MW-PWG-PWK interoperability hard cases](src/tools/interoperability-hard-cases.md).
+- **Reader mode:** start with [Reader Lookup](src/tools/reader-lookup.md), then use the [Dictionary user guide](docs/DICTIONARY_USER_GUIDE.md) and [Evidence labels](docs/EVIDENCE_LABELS.md).
+- **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md).
 - **MW Quantitative Depth (Phase 1):** [Depth dashboard](src/tools/mw-depth-dashboard.md), [Diachronic layers](src/tools/mw-diachronic-layers.md), [Family depth](src/tools/mw-family-depth.md).
 - **Comparative Dictionary Lab (Phase 2):** [Coverage matrix](src/tools/dictionary-coverage-matrix.md), [Pairwise overlap](src/tools/dictionary-overlap.md), [Gender conflicts](src/tools/dictionary-conflicts.md), [Homonym splits](src/tools/dictionary-homonyms.md), [Citation apparatus](src/tools/dictionary-citations.md), [Sense depth](src/tools/dictionary-senses.md), [Lemma dossier](src/tools/dictionary-dossier.md).
+- **Dictionary structure:** [Dictionary genealogy](src/tools/lexicography.md), [Convention fingerprints](src/tools/lexicographic-conventions.md), [R2 sense explorer](src/tools/r2-explorer.html), [R2 sense granularity](src/tools/r2-h1.html).
 - **Review queues:** [Gender conflicts](src/tools/review-gender-conflicts.md), [Source-layer](src/tools/review-source-layers.md), [Alignment confidence](src/tools/review-alignment.md), [Source-siglum aliases](src/tools/review-source-siglum.md).
-- **Corpus (Phase 3):** [DCS corpus inventory](src/tools/dcs-corpus-inventory.md).
 
 Current URL structure:
 
@@ -24,7 +25,6 @@ Current URL structure:
 /tools/dictionary-coverage
 /tools/matrix-explorer   18×8 block/type matrix explorer
 /tools/lineage-sankey    kosha → WIL/PWG/PWK/MW lineage Sankey
-/tools/interoperability-hard-cases
 /paper/grounded
 /paper/triangulation
 /dicts/mw
@@ -50,32 +50,14 @@ Each narrative dictionary gets a chapter; each Tier-1 figure has a per-dictionar
 
 ---
 
-## MW-PWG-PWK interoperability track
+## Standards Work
 
-The interoperability track tests how difficult Sanskrit lexicographic cases move across CDSL source records, TEI archival encoding, and OntoLex semantic modeling.
+TEI, OntoLex, FrAC, SHACL, RDF, and related export/validation work now belongs in `csl-standards`:
 
-- [Implementation handoff](HANDOFF.md)
-- [Project specification](docs/PROJECT_SPEC.md)
-- [All-dictionary coverage and size layer](docs/ALL_DICTIONARY_COVERAGE.md)
-- [Interoperability model](docs/INTEROPERABILITY_MODEL.md)
-- [Validated TEI and OntoLex/FrAC profile](docs/VALIDATED_INTEROPERABILITY_PROFILE.md)
-- [Sampling strategy](docs/SAMPLING_STRATEGY.md)
-- [Loss-report schema](docs/LOSS_REPORT_SCHEMA.md)
+- local path: `C:\Users\user\Documents\GitHub\csl-standards`
+- migration note: [TEI/OntoLex migration note](docs/TEI_ONTOLEX_MIGRATION.md)
 
-Regenerate and validate the full pilot with:
-
-```bash
-npm run build-pilot
-```
-
-Run the optional external validation harness with locally installed TEI/SHACL tools:
-
-```bash
-npm run validate-external-profiles
-npm run validate-external-profiles:strict
-```
-
-The external harness records TEI ODD/RELAX NG and SHACL-engine status in `data/pilot/external-validation-review.json`. It uses `teitorelaxng` from the TEI Stylesheets when available, validates TEI XML with `jing` or `xmllint`, and validates RDF/Turtle with `pyshacl`. Set `CSL_ATLAS_TEI_RNG` to reuse a precompiled TEI RELAX NG schema.
+The atlas may link to standards outputs when they clarify dictionary evidence, but it no longer owns those generators, schemas, generated pilot data, or UI routes.
 
 ---
 
@@ -122,6 +104,8 @@ Pipeline: `scripts/lib/dict-{normalize,manifest,parser,align}.mjs` → `scripts/
 
 Reader-facing:
 
+- [TEI/OntoLex migration note](docs/TEI_ONTOLEX_MIGRATION.md) - why the standards pilot moved to `csl-standards`
+- [Boundary rules](docs/BOUNDARY_RULES.md) — what belongs in the dictionary atlas, and what must move elsewhere
 - [Dictionary user guide](docs/DICTIONARY_USER_GUIDE.md) — which dictionary to use and how to read an entry
 - [Evidence labels](docs/EVIDENCE_LABELS.md) — what the certainty labels mean
 
@@ -130,8 +114,9 @@ Architecture and planning:
 - [Architecture](ARCHITECTURE.md) · [Use cases](docs/USE_CASES.md) · [Reader/developer critique](docs/READER_DEVELOPER_CRITIQUE.md)
 - [MW Quantitative Depth handoff](docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md) (Phase 1)
 - [Dictionary comparison plan](docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
-- [DCS corpus ingestion plan](docs/DCS_CORPUS_INGESTION_PLAN.md) (Phase 3)
+- DCS migration material now lives in `VisualDCS/docs/csl-atlas-migration/`; active corpus work belongs outside this repo
 - [Review reports](docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary
+- [Review release roadmap](docs/REVIEW_RELEASE_ROADMAP.md) · [Release checklist](docs/RELEASE_CHECKLIST.md) · [Light review sprint](docs/LIGHT_REVIEW_SPRINT.md)
 - [Changelog](CHANGELOG.md) — what changed and when
 
 ---
@@ -139,9 +124,9 @@ Architecture and planning:
 ## Tech stack
 
 - [**Observable Framework**](https://observablehq.com/framework) (per [Decision 10](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/VISUALISATIONS.md#decision-10--microsite-stack-observable-framework))
-- Data: committed JSON exports in `src/data/`, plus generated pilot artifacts in `data/pilot/` and mirrored app JSON in `src/data/pilot/`.
+- Data: committed JSON exports in `src/data/`.
 - Palette: committed `src/palette.css` and `src/data/palette-tokens.json`.
-- i18n: English/Russian strings in `src/locales-en.json` and `src/locales-ru.json`; the interoperability page exposes a language toggle.
+- i18n: English/Russian strings in `src/locales-en.json` and `src/locales-ru.json`.
 - Deployment: GitHub Pages on push to `main` (workflow in `.github/workflows/build-and-deploy.yml`)
 
 ---
@@ -151,12 +136,10 @@ Architecture and planning:
 ```bash
 npm install
 npm run build-coverage
-npm run build-pilot
 npm run build-mw-depth         # MW quantitative depth (Phase 1)
 npm run build-dict-comparison  # comparative dictionary lab (Phase 2)
 npm run build-citation-apparatus   # citation density / apparatus comparison
 npm run build-sense-depth          # sense-division richness comparison
-npm run build-dcs-corpus           # DCS corpus inventory + grammar profile (Phase 3)
 npm run build-gender-review        # gender-conflict review queue
 npm run build-source-layer-review  # unknown source-layer review queue
 npm run build-alignment-review     # low-confidence alignment review queue
@@ -175,26 +158,21 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] Landing page and dictionary chapters
 - [x] Interactive tools: matrix explorer, lineage Sankey, typology treemap, timeline, type comparator, citation tracer
 - [x] All-dictionary coverage and size inventory for local CDSL v02 source files
-- [x] MW-PWG-PWK hard-case interoperability page
-- [x] Pilot generators for hard cases, neutral model, loss reports, TEI profile XML, and OntoLex/FrAC JSON-LD
-- [x] 15-case validated TEI archival profile slice beyond stubs
-- [x] 15-case validated OntoLex/FrAC JSON-LD plus RDF/Turtle profile slice
-- [x] Full 50-case archival TEI machine review and project ODD/profile validation
-- [x] Full 50-case OntoLex/RDF machine review and project SHACL/profile validation
-- [x] Optional external TEI/SHACL validation harness with strict mode
+- [x] TEI/OntoLex standards pilot moved to `csl-standards`
 - [x] MW Quantitative Depth Phase 1: parser, classifiers, source-layer + family-depth metrics, 3 dashboards
 - [x] Comparative Dictionary Lab Phase 2 (first slice): 7-dictionary coverage/overlap/intersection/unique + tagged-dict gender disagreement, 4 pages
 - [x] Per-lemma dossier: interactive lookup over ~28.5k lemmas in ≥5 dictionaries
-- [x] Review layer (`scripts/lib/review-report.mjs`): gender-conflict (3,671) + unknown-source-layer (449) + low-confidence-alignment (7) + source-siglum-alias (151) queues, schema-conforming, human decisions preserved across rebuilds, 4 review pages
+- [x] Review layer (`scripts/lib/review-report.mjs`): gender-conflict (4,556) + unknown-source-layer (449) + low-confidence-alignment (7) + source-siglum-alias (151) queues, schema-conforming, human decisions preserved across rebuilds, 4 review pages
 - [x] Cross-dictionary source-siglum alignment: fold + reviewed alias table → working source × dictionary citation matrix
 - [x] Sense-depth comparison (AP/PWG/PWK): per-dictionary richness, deepest-treatment leaderboard, largest gaps
-- [x] Phase 3a (DCS): schema inspection (`docs/DCS_SCHEMA.md`) — export is reference data, not passages — + corpus text inventory (184 texts) and grammar-category profile
-- [ ] Phase 3 later: dictionary↔DCS lemma coverage (needs IAST→SLP1; ~71% of DCS words have `?` diacritic loss); full passage-level corpus when available
-- [ ] Phase 2 follow-ups: full-corpus lemma lookup (search backend); cross-dictionary siglum alias-table growth via review
+- [x] DCS corpus slice moved out of the atlas; migration copies are preserved in `VisualDCS/docs/csl-atlas-migration/`
+- [x] Reader Lookup v1: static SLP1/IAST headword lookup over lemmas attested in >=4 of the 7 comparison dictionaries
+- [x] Review-release roadmap, release checklist, and light review sprint worklist
+- [ ] Future DCS/corpus work belongs in VisualDCS or a future grammar repo, not in this atlas
+- [ ] Phase 2 follow-ups: full-text dictionary search backend; cross-dictionary siglum alias-table growth via review
 - [x] Build and link validation
 - [x] Unit tests (`npm test`, `node --test`) for the deterministic libs + CI test workflow
 - [ ] Human review of MW source-layer seed map (unmapped sources → `unknown`)
-- [ ] Human philological review of all 50 TEI/OntoLex cases
 
 ---
 
