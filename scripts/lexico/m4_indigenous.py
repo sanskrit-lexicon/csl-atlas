@@ -17,18 +17,23 @@ ROOT DETECTION — two complementary signals (union), recorded per row in `root_
 The three indigenous/root dicts then converge on ~the dhātupāṭha's size: SKD 2,544, VCP 2,230,
 KRM 1,757 (KRM is a dedicated root dictionary), plus SHS 463 (Wilson tradition).
 
-FEATURES inside a root entry (the clean, low-ambiguity indigenous markers):
-  - causative   `preraRe` (preraṇe, "in the sense of impelling") / `Rijanta` / `RyantaH`
-  - seṭ / aniṭ  `sew` / `aniw`  (whether the root takes the iṭ augment)
-  - class-1     `BvAdi` (bhvādi) — the ONE gaṇa name safe to string-match; adādi/svādi/…
-                collide with the ubiquitous `-ādi` ("etc.") compound suffix, so are skipped.
-  - gloss       the raw snippet between `¦` and the dhātupāṭha citation (the locative
-                meaning + it-markers); kept verbatim, not parsed.
+FEATURES emitted per root entry (the dhātupāṭha annotation, as real columns):
+  - gana          bhvādi…curādi — the 10 conjugation classes. VCP's `0`-marked forms
+                  (`BvA0`/`BvAdi0`, `curA0`, …) carry the abbreviation marker, which
+                  disambiguates them from the ubiquitous `-ādi` ("etc.") suffix; SKD's
+                  visarga form (`curAdiH`) is also matched.
+  - pada          parasmaipada / ātmanepada / ubhayapada  (`para0` / `Atma0` / `uBa(ya)0`)
+  - transitivity  sakarmaka / akarmaka  (`saka0` / `aka0` — `aka0` is lookbehind-guarded
+                  so it does not match inside `saka0`)
+  - causative     `preraRe` (preraṇe) / `Rijanta` / `RyantaH`
+  - seṭ / aniṭ    `sew` / `aniw`  (whether the root takes the iṭ augment)
+  - gloss         raw snippet between `¦` and the citation (locative meaning + it-markers).
 
-PROTOTYPE limitations (documented, not hidden): meaning is a raw snippet; among the gaṇas
-only bhvādi is counted (the others collide with the `-ādi` "etc." suffix); pada/transitivity
-are used to gate the annotation signal but not yet emitted as their own fields; veṭ (optional
-seṭ) is not split out. A feasibility proof, deliberately conservative — not a finished parser.
+PROTOTYPE limitations (documented, not hidden): meaning is a raw snippet; the abbreviated gaṇa
+forms (`adA0`, `svA0`) carry mild noise; pada/transitivity/gaṇa take the FIRST match in the entry;
+SKD encodes pada/transitivity mostly via anubandha it-markers (NOT decoded), so SKD's gaṇa/pada/
+transitivity coverage is far lower than VCP's; veṭ (optional seṭ) is not split out. A feasibility
+proof, deliberately conservative — not a finished parser.
 
 Reads csl-orig via parse_cslorig. Run from repo root:
     python scripts/lexico/m4_indigenous.py --probe aka
@@ -68,7 +73,42 @@ _PADA_TRANS = re.compile(r"(?<![A-Za-z])(para|Atmane?|uBaya?|saka|akarmma|sakarm
 _CAUS = re.compile(r"preraRe|Rijanta|RyantaH")
 _SET = re.compile(r"(?<![A-Za-z])sew(?![A-Za-z])")
 _ANIT = re.compile(r"(?<![A-Za-z])aniw(?![A-Za-z])")
-_BHVADI = re.compile(r"(?<![A-Za-z])BvAdi")
+
+# Feature tables: (canonical label, regex). VCP marks each with a trailing `0` abbreviation
+# (`para0`, `saka0`, `BvA0`/`BvAdi0`) — the `0` disambiguates the gaṇa names from the ubiquitous
+# `-ādi` suffix; SKD states them with a visarga (`curAdiH`) or via anubandhas (not decoded here).
+# Boundaries matter: `aka0` (akarmaka) is a substring of `saka0` (sakarmaka), so it is lookbehind-
+# guarded. `_first` returns the first label whose pattern hits (ubhaya before para/ātma; gaṇa 1→10).
+# Surface forms (verified against VCP): ubhaya `uBa0`/`uBaya0`; parasmaipada `para0`/`pa0`;
+# ātmanepada `Atma0` (NOT `Atman0`). Check ubhaya first (it subsumes the others).
+_PADA = (
+    ("ubhayapada",   re.compile(r"(?<![A-Za-z])(?:uBa(?:ya)?0|uBayapad)")),
+    ("parasmaipada", re.compile(r"(?<![A-Za-z])(?:para0|pa0|parasmEpad)")),
+    ("atmanepada",   re.compile(r"(?<![A-Za-z])(?:Atma0|Atmanepad)")),
+)
+_TRANS = (
+    ("sakarmaka", re.compile(r"(?<![A-Za-z])(?:saka0|sakarmmaka|sakarmaka)")),
+    ("akarmaka",  re.compile(r"(?<![A-Za-z])(?:aka0|akarmmaka|akarmaka)")),
+)
+_GANA = tuple(
+    (label, re.compile(rf"(?<![A-Za-z])(?:{stem}A(?:di)?0|{stem}AdiH)"))
+    for label, stem in (
+        ("bhvadi", "Bv"), ("adadi", "ad"), ("juhotyadi", "juhoty"), ("divadi", "div"),
+        ("svadi", "sv"), ("tudadi", "tud"), ("rudhadi", "ruD"), ("tanadi", "tan"),
+        ("kryadi", "kry"), ("curadi", "cur"),
+    )
+)
+GANA_LABELS = {g for g, _ in _GANA}
+PADA_LABELS = {p for p, _ in _PADA}
+TRANS_LABELS = {t for t, _ in _TRANS}
+
+
+def _first(body, table):
+    """First canonical label in `table` whose pattern matches `body`, else ''."""
+    for label, rx in table:
+        if rx.search(body):
+            return label
+    return ""
 
 
 def analyze_entry(body):
@@ -95,10 +135,12 @@ def analyze_entry(body):
     return {
         "root_signal": signal,
         "dhatupatha_source": src,
+        "gana": _first(body, _GANA),
+        "pada": _first(body, _PADA),
+        "transitivity": _first(body, _TRANS),
         "causative": int(bool(_CAUS.search(body))),
         "set": int(bool(_SET.search(body))),
         "anit": int(bool(_ANIT.search(body))),
-        "bhvadi": int(bool(_BHVADI.search(body))),
         "gloss_snippet": snip,
     }
 
@@ -125,9 +167,9 @@ def probe(lemma, codes):
             a = analyze_entry(e["body"])
             if not a:
                 continue
-            feats = ",".join(f for f in ("causative", "set", "anit", "bhvadi") if a[f])
-            print(f"  {code.upper():5s} L{e['L']:<7s} sig={a['root_signal']:<10s} "
-                  f"src={a['dhatupatha_source']:<16s} [{feats or '-'}]  {a['gloss_snippet']!r}")
+            tags = [a["gana"], a["pada"], a["transitivity"]] + [f for f in ("causative", "set", "anit") if a[f]]
+            tags = ", ".join(t for t in tags if t)
+            print(f"  {code.upper():5s} L{e['L']:<7s} sig={a['root_signal']:<10s} [{tags or '-'}]  {a['gloss_snippet']!r}")
 
 
 def main():
@@ -155,7 +197,7 @@ def main():
     by_dict = {}
     csv_path = os.path.join(OUT_DIR, "indigenous_roots.csv")
     fields = ["dict", "L", "k1", "root_signal", "dhatupatha_source",
-              "causative", "set", "anit", "bhvadi", "gloss_snippet"]
+              "gana", "pada", "transitivity", "causative", "set", "anit", "gloss_snippet"]
     n_rows = 0
     with open(csv_path, "w", encoding="utf-8", newline="") as fcsv:
         w = csv.DictWriter(fcsv, fieldnames=fields)
@@ -165,24 +207,29 @@ def main():
             if not os.path.exists(path):
                 continue
             agg = {"entries": 0, "root_entries": 0, "causative": 0, "set": 0, "anit": 0,
-                   "bhvadi": 0, "by_source": {}, "by_signal": {}}
+                   "by_source": {}, "by_signal": {}, "by_gana": {}, "by_pada": {}, "by_transitivity": {}}
             for e in iter_entries(path):
                 agg["entries"] += 1
                 a = analyze_entry(e["body"])
                 if not a:
                     continue
                 agg["root_entries"] += 1
-                for f in ("causative", "set", "anit", "bhvadi"):
+                for f in ("causative", "set", "anit"):
                     agg[f] += a[f]
                 agg["by_source"][a["dhatupatha_source"]] = agg["by_source"].get(a["dhatupatha_source"], 0) + 1
                 agg["by_signal"][a["root_signal"]] = agg["by_signal"].get(a["root_signal"], 0) + 1
+                for col in ("gana", "pada", "transitivity"):
+                    if a[col]:
+                        agg["by_" + col][a[col]] = agg["by_" + col].get(a[col], 0) + 1
                 w.writerow({"dict": code, "L": e["L"], "k1": e["k1"] or "", **a})
                 n_rows += 1
             if agg["root_entries"]:
                 by_dict[code] = agg
-                print(f"  {code:6s} entries={agg['entries']:>7,} roots={agg['root_entries']:>6,} "
-                      f"caus={agg['causative']:>5,} seṭ={agg['set']:>5,} aniṭ={agg['anit']:>4,} "
-                      f"bhvādi={agg['bhvadi']:>4,}  signal={agg['by_signal']}")
+                tg = max(agg["by_gana"], key=agg["by_gana"].get) if agg["by_gana"] else "-"
+                print(f"  {code:6s} roots={agg['root_entries']:>6,} caus={agg['causative']:>4,} "
+                      f"seṭ={agg['set']:>5,} aniṭ={agg['anit']:>4,} "
+                      f"pada={sum(agg['by_pada'].values()):>5,} trans={sum(agg['by_transitivity'].values()):>5,} "
+                      f"gaṇa={sum(agg['by_gana'].values()):>5,}(top {tg})")
 
     by_dict_path = os.path.join(OUT_DIR, "indigenous_by_dict.json")
     with open(by_dict_path, "w", encoding="utf-8") as f:
@@ -194,13 +241,16 @@ def main():
         "dicts_with_roots": list(by_dict.keys()),
         "headline": {c: {"indigenous_roots_m4": a["root_entries"], "ab_markers_m1": 0}
                      for c, a in by_dict.items() if c in ("skd", "vcp")},
-        "method": ("Root entry = body cites a dhātupāṭha (kavikalpadruma/durgādāsa/mādhavīya/…). "
-                   "Features: preraṇe/ṇijanta=causative, sew/aniw=seṭ/aniṭ, BvAdi=class-1. The other "
-                   "gaṇa names collide with the -ādi suffix and are excluded."),
-        "caveats": ("PROTOTYPE. SKD cites kavikalpadruma consistently (clean ~2.1k roots); VCP cites "
-                    "its source by name far less, so VCP roots here are a LOWER BOUND (cf. 1,980 seṭ "
-                    "markers). The point: SKD/VCP read 0 under m1's <ab> apparatus but carry thousands "
-                    "of roots — the 0 was detector blindness (MICROSTRUCTURE_ZERO_MEANING.md)."),
+        "method": ("Root = (1) dhātupāṭha citation OR (2) the seṭ/aniṭ + pada/transitivity annotation "
+                   "(recorded in root_signal). Emitted columns: gaṇa (bhvādi…curādi, via VCP's 0-marked "
+                   "forms BvA0/curA0/…), pada (parasmaipada/ātmanepada/ubhayapada), transitivity "
+                   "(sakarmaka/akarmaka), causative (preraṇe/ṇijanta), seṭ/aniṭ."),
+        "caveats": ("PROTOTYPE. SKD/VCP read 0 under m1's <ab> apparatus but carry ~2k roots each — the "
+                    "0 was detector blindness (MICROSTRUCTURE_ZERO_MEANING.md). SKD encodes pada/"
+                    "transitivity mostly via undecoded anubandha it-markers, so its gaṇa/pada/transitivity "
+                    "coverage is lower than VCP's; gaṇa/pada/transitivity take the first match; abbreviated "
+                    "gaṇa forms (adA0/svA0) carry mild noise; veṭ not split. Sanity-checked: VCP pada "
+                    "parasmaipada>ubhaya>ātmane and gaṇa bhvādi≫rest are linguistically correct."),
     }
     with open(os.path.join(OUT_DIR, "m4_report.json"), "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)

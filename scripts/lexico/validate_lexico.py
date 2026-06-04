@@ -103,25 +103,38 @@ def validate_m3():
 def validate_m4():
     if not os.path.exists(os.path.join(DATA, "indigenous_roots.csv")):
         return 0, 0  # prototype output optional
+    GANA = {"bhvadi", "adadi", "juhotyadi", "divadi", "svadi", "tudadi", "rudhadi",
+            "tanadi", "kryadi", "curadi", ""}
+    PADA = {"parasmaipada", "atmanepada", "ubhayapada", ""}
+    TRANS = {"sakarmaka", "akarmaka", ""}
     rows = load_csv("indigenous_roots.csv")
     agg = load_json("indigenous_by_dict.json")["dicts"]
     pd_rows = collections.Counter()
     pd_feat = collections.defaultdict(collections.Counter)
+    pd_cat = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
     for i, r in enumerate(rows):
         check(r["root_signal"] in ("citation", "annotation", "both"),
               f"m4 row {i}: root_signal={r['root_signal']}")
         check(r["dhatupatha_source"] in ("kavikalpadruma", "madhaviya", "durgadasa",
                                          "dhatupatha", "(annotation-only)"),
               f"m4 row {i}: source={r['dhatupatha_source']}")
-        for f in ("causative", "set", "anit", "bhvadi"):
+        check(r["gana"] in GANA, f"m4 row {i}: gana={r['gana']}")
+        check(r["pada"] in PADA, f"m4 row {i}: pada={r['pada']}")
+        check(r["transitivity"] in TRANS, f"m4 row {i}: transitivity={r['transitivity']}")
+        for f in ("causative", "set", "anit"):
             check(r[f] in ("0", "1"), f"m4 row {i}: {f}={r[f]}")
             pd_feat[r["dict"]][f] += int(r[f])
+        for col in ("gana", "pada", "transitivity"):
+            if r[col]:
+                pd_cat[r["dict"]][col][r[col]] += 1
         pd_rows[r["dict"]] += 1
     for code, a in agg.items():
         check(pd_rows[code] == a["root_entries"],
               f"m4 {code}: CSV rows {pd_rows[code]} != aggregate root_entries {a['root_entries']}")
-        for f in ("causative", "set", "anit", "bhvadi"):
+        for f in ("causative", "set", "anit"):
             check(pd_feat[code][f] == a[f], f"m4 {code}: CSV {f} {pd_feat[code][f]} != aggregate {a[f]}")
+        for col in ("gana", "pada", "transitivity"):
+            check(dict(pd_cat[code][col]) == a["by_" + col], f"m4 {code}: by_{col} CSV != aggregate")
     return len(rows), len(agg)
 
 
