@@ -185,6 +185,29 @@ def validate_m6():
     return len(shared), len(lin.get("pairs", {}))
 
 
+def validate_m7():
+    """m7 root agreement: per-feature counts are internally consistent
+    (unanimous ≤ compatible ≤ opinions; conflict = opinions − compatible) and the
+    conflict CSV row count matches the JSON's summed conflict totals."""
+    jp = os.path.join(DATA, "root_agreement.json")
+    if not (os.path.exists(jp) and os.path.exists(os.path.join(DATA, "root_feature_conflicts.csv"))):
+        return 0, 0
+    with open(jp, encoding="utf-8") as f:
+        agr = json.load(f)
+    conflicts = load_csv("root_feature_conflicts.csv")
+    total_conf = 0
+    for feat, blk in agr.get("features", {}).items():
+        s = blk["agreement"]
+        check(s["unanimous"] <= s["compatible"] <= s["roots_with_2plus_opinions"],
+              f"m7 {feat}: unanimous ≤ compatible ≤ opinions violated")
+        check(s["conflict"] == s["roots_with_2plus_opinions"] - s["compatible"],
+              f"m7 {feat}: conflict != opinions - compatible")
+        total_conf += s["conflict"]
+    check(len(conflicts) == total_conf,
+          f"m7: conflict CSV rows {len(conflicts)} != summed json conflicts {total_conf}")
+    return len(conflicts), len(agr.get("features", {}))
+
+
 def main():
     print("Validating data/lexico/ …")
     m1_rows, m1_dicts = validate_m1()
@@ -193,12 +216,14 @@ def main():
     m4_rows, m4_dicts = validate_m4()
     m5_rows, m5_dicts = validate_m5()
     m6_rows, m6_pairs = validate_m6()
+    m7_rows, m7_feats = validate_m7()
     print(f"  m1: {m1_rows:,} rows / {m1_dicts} dicts")
     print(f"  m2: {m2_rows:,} rows / {m2_dicts} preverb dicts")
     print(f"  m3: {m3_rows:,} rows / {m3_dicts} xref dicts")
     print(f"  m4: {m4_rows:,} rows / {m4_dicts} indigenous-root dicts (prototype)")
     print(f"  m5: {m5_rows:,} rows / {m5_dicts} dicts (unified profile join)")
     print(f"  m6: {m6_rows:,} shared cross-ref edges / {m6_pairs} dict-pair(s) (lineage overlap)")
+    print(f"  m7: {m7_rows:,} feature-conflict rows / {m7_feats} features (root agreement)")
     if _fail:
         print(f"\nFAIL — {len(_fail)} check(s):", file=sys.stderr)
         for m in _fail[:25]:

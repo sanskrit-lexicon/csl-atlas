@@ -1,0 +1,181 @@
+{
+  "question": "When two root dicts classify the same root, do they agree on gaṇa / pada / transitivity? (Article 9)",
+  "root_dicts": [
+    "skd",
+    "vcp",
+    "krm",
+    "yat",
+    "shs"
+  ],
+  "distinct_roots": 3692,
+  "method": "Group m4 rows by SLP1 root; per (dict, root) collect the SET of labels (union over the dict's entries, so multi-class roots are not self-conflicts). unanimous = all dicts give one label; compatible = a single label is shared by every dict (tolerant of homonymous multi-class roots); conflict = otherwise.",
+  "caveat": "Conflicts conflate genuine cross-tradition disagreement with legitimate homonymy (same SLP1 spelling, different roots/classes). ANALYSIS, not a review queue. SKD/SHS feature coverage is lower than VCP/KRM/YAT, so they contribute fewer opinions.",
+  "features": {
+    "gana": {
+      "agreement": {
+        "roots_with_2plus_opinions": 1483,
+        "unanimous": 1025,
+        "compatible": 1275,
+        "conflict": 208,
+        "unanimous_rate": 0.6912,
+        "compatible_rate": 0.8597
+      },
+      "pairs": {
+        "skd-vcp": {
+          "shared_roots": 1022,
+          "agree": 948,
+          "rate": 0.9276
+        },
+        "vcp-krm": {
+          "shared_roots": 697,
+          "agree": 646,
+          "rate": 0.9268
+        },
+        "skd-krm": {
+          "shared_roots": 603,
+          "agree": 573,
+          "rate": 0.9502
+        },
+        "vcp-yat": {
+          "shared_roots": 397,
+          "agree": 359,
+          "rate": 0.9043
+        },
+        "skd-yat": {
+          "shared_roots": 386,
+          "agree": 344,
+          "rate": 0.8912
+        },
+        "vcp-shs": {
+          "shared_roots": 214,
+          "agree": 197,
+          "rate": 0.9206
+        },
+        "krm-yat": {
+          "shared_roots": 203,
+          "agree": 177,
+          "rate": 0.8719
+        },
+        "skd-shs": {
+          "shared_roots": 139,
+          "agree": 90,
+          "rate": 0.6475
+        },
+        "krm-shs": {
+          "shared_roots": 105,
+          "agree": 76,
+          "rate": 0.7238
+        },
+        "yat-shs": {
+          "shared_roots": 71,
+          "agree": 59,
+          "rate": 0.831
+        }
+      }
+    },
+    "pada": {
+      "agreement": {
+        "roots_with_2plus_opinions": 1402,
+        "unanimous": 878,
+        "compatible": 1055,
+        "conflict": 347,
+        "unanimous_rate": 0.6262,
+        "compatible_rate": 0.7525
+      },
+      "pairs": {
+        "skd-vcp": {
+          "shared_roots": 831,
+          "agree": 679,
+          "rate": 0.8171
+        },
+        "vcp-krm": {
+          "shared_roots": 621,
+          "agree": 588,
+          "rate": 0.9469
+        },
+        "skd-krm": {
+          "shared_roots": 390,
+          "agree": 273,
+          "rate": 0.7
+        },
+        "vcp-yat": {
+          "shared_roots": 367,
+          "agree": 263,
+          "rate": 0.7166
+        },
+        "skd-yat": {
+          "shared_roots": 333,
+          "agree": 282,
+          "rate": 0.8468
+        },
+        "vcp-shs": {
+          "shared_roots": 204,
+          "agree": 196,
+          "rate": 0.9608
+        },
+        "krm-yat": {
+          "shared_roots": 175,
+          "agree": 95,
+          "rate": 0.5429
+        },
+        "krm-shs": {
+          "shared_roots": 101,
+          "agree": 94,
+          "rate": 0.9307
+        },
+        "skd-shs": {
+          "shared_roots": 66,
+          "agree": 34,
+          "rate": 0.5152
+        },
+        "yat-shs": {
+          "shared_roots": 61,
+          "agree": 40,
+          "rate": 0.6557
+        }
+      }
+    },
+    "transitivity": {
+      "agreement": {
+        "roots_with_2plus_opinions": 1254,
+        "unanimous": 871,
+        "compatible": 1015,
+        "conflict": 239,
+        "unanimous_rate": 0.6946,
+        "compatible_rate": 0.8094
+      },
+      "pairs": {
+        "vcp-krm": {
+          "shared_roots": 722,
+          "agree": 572,
+          "rate": 0.7922
+        },
+        "skd-vcp": {
+          "shared_roots": 700,
+          "agree": 614,
+          "rate": 0.8771
+        },
+        "skd-krm": {
+          "shared_roots": 359,
+          "agree": 283,
+          "rate": 0.7883
+        },
+        "vcp-shs": {
+          "shared_roots": 229,
+          "agree": 214,
+          "rate": 0.9345
+        },
+        "krm-shs": {
+          "shared_roots": 102,
+          "agree": 86,
+          "rate": 0.8431
+        },
+        "skd-shs": {
+          "shared_roots": 17,
+          "agree": 15,
+          "rate": 0.8824
+        }
+      }
+    }
+  }
+}
