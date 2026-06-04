@@ -95,24 +95,33 @@ VCP (Vācaspatya) is the same indigenous style (`DAtuH` ×164, `parasmEpadI` ×8
 ## Measuring SKD/VCP verbal microstructure — prototyped (M4)
 
 [`scripts/lexico/m4_indigenous.py`](../scripts/lexico/m4_indigenous.py) is the indigenous-tradition
-counterpart to `m1`. It flags a **verbal-root entry** by its dhātupāṭha citation — the Kavikalpadruma
-(`iti kavikalpadrumaH`, 2,135× in SKD) is purely a root-list, so citing it ⟹ a root — and tallies the
-clean indigenous features inside: `preraṇe`/ṇijanta (causative), `seṭ`/`aniṭ`, `bhvādi` (class 1).
+counterpart to `m1`. It flags a **verbal-root entry** by **two complementary signals** (recorded per
+row in `root_signal`):
+- **citation** — the entry names a dhātupāṭha; the Kavikalpadruma (`iti kavikalpadrumaH`, 2,135× in
+  SKD) is purely a root-list, so citing it ⟹ a root. This carries **SKD**, which cites consistently.
+- **annotation** — the dhātupāṭha grammatical annotation itself: the seṭ/aniṭ token (`sew`/`aniw`)
+  together with a pada/transitivity abbreviation (`para0`/`Atma0`/`saka0`/…), as in VCP's
+  `aGa¦ … BvAdi0 Atma0 saka0 sew`. This carries **VCP**, which names its source rarely. The
+  pada/transitivity co-requirement keeps it from firing on a stray SLP1 substring in a European
+  `{#…#}` body (verified: European dicts stay ≈0 — MW72 1, the rest 0).
 
-**First results** — for the very dicts that read **0** under `m1`'s `<ab>` apparatus:
+Inside each root it tallies `preraṇe`/ṇijanta (causative), `seṭ`/`aniṭ`, `bhvādi` (class 1).
+
+**Results** — for the very dicts that read **0** under `m1`'s `<ab>` apparatus:
 
 | dict | indigenous roots (M4) | seṭ | aniṭ | causative | `<ab>` markers (M1) |
 |---|---|---|---|---|---|
-| **SKD** | **2,536** | 1,967 | 301 | 17 | **0** |
-| KRM (dedicated verb-root dict) | 203 | 154 | 3 | 4 | 0 |
-| **VCP** | 43 † | 21 | 6 | 1 | **0** |
+| **SKD** | **2,544** | 1,973 | 303 | 17 | **0** |
+| **VCP** | **2,230** | 1,950 | 276 | 24 | **0** |
+| KRM (dedicated verb-root dict) | 1,757 | 1,696 | 15 | 21 | 0 |
+| SHS (Wilson tradition) | 463 | 415 | 63 | 3 | 0 |
 
-† **lower bound** — VCP cites its dhātupāṭha source by name far less than SKD; its 1,980 corpus-wide
-`seṭ` markers imply a much larger root layer needing a non-citation root signal (the `seṭ`/`aniṭ` or
-anubandha annotation) — the next refinement.
+The two-signal union lifts VCP from **43 → 2,230**. All three indigenous/root dicts then converge on
+**~the size of the Sanskrit dhātupāṭha (~2,000 roots)** — independent corroboration that the signal is
+real, not an artifact.
 
-So SKD's "0" became **2,536 verbal roots** the moment the detector matched the dictionary's *own*
-convention. The prototype is deliberately conservative — the other gaṇa names collide with the `-ādi`
+So SKD's "0" became **2,544 verbal roots**, and VCP's **2,230**, the moment the detector matched the
+dictionary's *own* convention. The prototype is deliberately conservative — the other gaṇa names collide with the `-ādi`
 ("etc.") suffix and are excluded; meaning is a raw snippet; pada/transitivity abbreviations are
 omitted — a feasibility proof, not a finished parser. But it settles the methodological point:
 **the 0 was the detector, never the dictionary.**
