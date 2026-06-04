@@ -19,28 +19,33 @@ KRM 1,757 (KRM is a dedicated root dictionary), plus SHS 463 (Wilson tradition).
 
 FEATURES emitted per root entry (the dhātupāṭha annotation, as real columns):
   - gana          bhvādi…curādi — the 10 conjugation classes. VCP's `0`-marked forms
-                  (`BvA0`/`BvAdi0`, `curA0`, …) carry the abbreviation marker, which
-                  disambiguates them from the ubiquitous `-ādi` ("etc.") suffix; SKD's
-                  visarga form (`curAdiH`) is also matched.
+                  (`BvA0`/`BvAdi0`, `curA0`/`cu0`, `tu0`, `ju0`, …) carry the abbreviation
+                  marker, which disambiguates them from the ubiquitous `-ādi` ("etc.")
+                  suffix; SKD's visarga form (`curAdiH`) is also matched. (Ambiguous short
+                  forms `di0`/`sO0` are held out pending maintainer review.)
   - pada          parasmaipada / ātmanepada / ubhayapada  (`para0` / `Atma0` / `uBa(ya)0`)
-  - transitivity  sakarmaka / akarmaka  (`saka0` / `aka0` — `aka0` is lookbehind-guarded
+  - transitivity  sakarmaka / akarmaka  (`saka0` / `aka0`, plus the prose stems
+                  `sakarmmak`/`akarmmak` for SKD/Durgādāsa; `aka0` is lookbehind-guarded
                   so it does not match inside `saka0`)
   - causative     `preraRe` (preraṇe) / `Rijanta` / `RyantaH`
-  - seṭ / aniṭ    `sew` / `aniw`  (whether the root takes the iṭ augment)
+  - seṭ / aniṭ / veṭ  `sew` / `aniw` / `vew`  (iṭ-augment behavior; veṭ = optionally seṭ,
+                  a lossless refinement — `sew … vew` ⟹ set=1 AND vet=1)
   - gloss         raw snippet between `¦` and the citation (locative meaning + it-markers).
 
 PROTOTYPE limitations (documented, not hidden): meaning is a raw snippet; the abbreviated gaṇa
-forms (`adA0`, `svA0`) carry mild noise; pada/transitivity/gaṇa take the FIRST match in the entry;
-SKD encodes pada/transitivity mostly via anubandha it-markers (NOT decoded), so SKD's gaṇa/pada/
-transitivity coverage is far lower than VCP's; veṭ (optional seṭ) is not split out. A feasibility
-proof, deliberately conservative — not a finished parser.
+forms (`adA0`, `svA0`) carry mild noise; pada/transitivity/gaṇa take the FIRST match in the entry.
+SKD encodes PADA mostly via Vopadeva/Kavikalpadruma anubandhas (it-letters); a proposed decode key
+exists (docs/MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md, validated by the SKD∩VCP cross-walk) but is HELD
+pending the maintainer's verification, so this script does NOT yet infer SKD pada from anubandhas —
+SKD pada/trans here come only from prose. A feasibility proof, deliberately conservative.
 
 Reads csl-orig via parse_cslorig. Run from repo root:
     python scripts/lexico/m4_indigenous.py --probe aka
     python scripts/lexico/m4_indigenous.py --all
     python scripts/lexico/m4_indigenous.py --dicts skd vcp
 Outputs (data/lexico/):
-    indigenous_roots.csv       per root entry: dict, L, k1, source, causative, set, anit, bhvadi, gloss
+    indigenous_roots.csv       per root entry: dict, L, k1, signal, source, gana, pada, transitivity,
+                               causative, set, anit, vet, gloss
     indigenous_by_dict.json    per-dict root counts + feature tallies + m1-blindness comparison
     m4_report.json
 """
@@ -73,6 +78,12 @@ _PADA_TRANS = re.compile(r"(?<![A-Za-z])(para|Atmane?|uBaya?|saka|akarmma|sakarm
 _CAUS = re.compile(r"preraRe|Rijanta|RyantaH")
 _SET = re.compile(r"(?<![A-Za-z])sew(?![A-Za-z])")
 _ANIT = re.compile(r"(?<![A-Za-z])aniw(?![A-Za-z])")
+# veṭ (optionally seṭ) — VCP marks it explicitly as `vew` (98 entries), often as
+# `sew … ktvA vew` (generally seṭ, veṭ before ktvā). Per decision round 2 #7 this gets
+# its OWN column: `sew … vew` ⟹ set=1 AND vet=1 (a lossless refinement, not an override).
+# SKD marks veṭ via the `U`/ūdit anubandha, but that decode is HELD pending the maintainer's
+# Kavikalpadruma check (MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md), so SKD `vet` stays 0 for now.
+_VET = re.compile(r"(?<![A-Za-z])vew(?![A-Za-z])")
 
 # Feature tables: (canonical label, regex). VCP marks each with a trailing `0` abbreviation
 # (`para0`, `saka0`, `BvA0`/`BvAdi0`) — the `0` disambiguates the gaṇa names from the ubiquitous
@@ -86,16 +97,32 @@ _PADA = (
     ("parasmaipada", re.compile(r"(?<![A-Za-z])(?:para0|pa0|parasmEpad)")),
     ("atmanepada",   re.compile(r"(?<![A-Za-z])(?:Atma0|Atmanepad)")),
 )
+# Transitivity. VCP uses the `saka0`/`aka0` abbreviations; SKD/Durgādāsa state it in
+# PROSE — and in sandhi (`akarmmako'yaM`, `sakarmmakaH`), so we match the STEM
+# `sakarmmak`/`akarmmak` (not the full `…ka`) to catch -ka/-ko/-kaH (decision round 3 #10).
+# `aka0`/`akarmmak` stay lookbehind-guarded so they never fire inside `saka0`/`sakarmmak`.
 _TRANS = (
-    ("sakarmaka", re.compile(r"(?<![A-Za-z])(?:saka0|sakarmmaka|sakarmaka)")),
-    ("akarmaka",  re.compile(r"(?<![A-Za-z])(?:aka0|akarmmaka|akarmaka)")),
+    ("sakarmaka", re.compile(r"(?<![A-Za-z])(?:saka0|sakarmmak|sakarmak)")),
+    ("akarmaka",  re.compile(r"(?<![A-Za-z])(?:aka0|akarmmak|akarmak)")),
 )
+# Per gaṇa, the explicit surface forms. The base `{stem}A(?:di)?0|{stem}AdiH` is kept;
+# VCP also uses ultra-short forms (`cu0`/`tu0`/`ju0`) that the base misses — added here
+# (decision round 2). They are collision-safe. DELIBERATELY EXCLUDED pending maintainer
+# review (round 4): `di0` (collides with the `-Adi0` suffix inside BvAdi0/curAdi0/…) and
+# `sO0` (unclear expansion — svādi? sautra?). `ada0` (lowercase) is likewise left out.
 _GANA = tuple(
-    (label, re.compile(rf"(?<![A-Za-z])(?:{stem}A(?:di)?0|{stem}AdiH)"))
-    for label, stem in (
-        ("bhvadi", "Bv"), ("adadi", "ad"), ("juhotyadi", "juhoty"), ("divadi", "div"),
-        ("svadi", "sv"), ("tudadi", "tud"), ("rudhadi", "ruD"), ("tanadi", "tan"),
-        ("kryadi", "kry"), ("curadi", "cur"),
+    (label, re.compile(rf"(?<![A-Za-z])(?:{'|'.join(forms)})"))
+    for label, forms in (
+        ("bhvadi",    (r"BvA(?:di)?0", r"BvAdiH")),
+        ("adadi",     (r"adA(?:di)?0", r"adAdiH")),
+        ("juhotyadi", (r"juhotyA(?:di)?0", r"juhotyAdiH", r"ju0")),
+        ("divadi",    (r"divA(?:di)?0", r"divAdiH")),
+        ("svadi",     (r"svA(?:di)?0", r"svAdiH")),
+        ("tudadi",    (r"tudA(?:di)?0", r"tudAdiH", r"tu0")),
+        ("rudhadi",   (r"ruDA(?:di)?0", r"ruDAdiH")),
+        ("tanadi",    (r"tanA(?:di)?0", r"tanAdiH")),
+        ("kryadi",    (r"kryA(?:di)?0", r"kryAdiH")),
+        ("curadi",    (r"curA(?:di)?0", r"curAdiH", r"cu0")),
     )
 )
 GANA_LABELS = {g for g, _ in _GANA}
@@ -131,7 +158,7 @@ def analyze_entry(body):
     snip = ""
     if "¦" in body:                       # ¦ closes the headword
         after = body.split("¦", 1)[1]
-        snip = " ".join(after.split(" iti ", 1)[0].split())[:60]
+        snip = " ".join(after.split(" iti ", 1)[0].split())[:60].strip()
     return {
         "root_signal": signal,
         "dhatupatha_source": src,
@@ -141,6 +168,7 @@ def analyze_entry(body):
         "causative": int(bool(_CAUS.search(body))),
         "set": int(bool(_SET.search(body))),
         "anit": int(bool(_ANIT.search(body))),
+        "vet": int(bool(_VET.search(body))),
         "gloss_snippet": snip,
     }
 
@@ -197,7 +225,7 @@ def main():
     by_dict = {}
     csv_path = os.path.join(OUT_DIR, "indigenous_roots.csv")
     fields = ["dict", "L", "k1", "root_signal", "dhatupatha_source",
-              "gana", "pada", "transitivity", "causative", "set", "anit", "gloss_snippet"]
+              "gana", "pada", "transitivity", "causative", "set", "anit", "vet", "gloss_snippet"]
     n_rows = 0
     with open(csv_path, "w", encoding="utf-8", newline="") as fcsv:
         w = csv.DictWriter(fcsv, fieldnames=fields)
@@ -206,7 +234,7 @@ def main():
             path = src_path(code)
             if not os.path.exists(path):
                 continue
-            agg = {"entries": 0, "root_entries": 0, "causative": 0, "set": 0, "anit": 0,
+            agg = {"entries": 0, "root_entries": 0, "causative": 0, "set": 0, "anit": 0, "vet": 0,
                    "by_source": {}, "by_signal": {}, "by_gana": {}, "by_pada": {}, "by_transitivity": {}}
             for e in iter_entries(path):
                 agg["entries"] += 1
@@ -214,7 +242,7 @@ def main():
                 if not a:
                     continue
                 agg["root_entries"] += 1
-                for f in ("causative", "set", "anit"):
+                for f in ("causative", "set", "anit", "vet"):
                     agg[f] += a[f]
                 agg["by_source"][a["dhatupatha_source"]] = agg["by_source"].get(a["dhatupatha_source"], 0) + 1
                 agg["by_signal"][a["root_signal"]] = agg["by_signal"].get(a["root_signal"], 0) + 1
@@ -227,7 +255,7 @@ def main():
                 by_dict[code] = agg
                 tg = max(agg["by_gana"], key=agg["by_gana"].get) if agg["by_gana"] else "-"
                 print(f"  {code:6s} roots={agg['root_entries']:>6,} caus={agg['causative']:>4,} "
-                      f"seṭ={agg['set']:>5,} aniṭ={agg['anit']:>4,} "
+                      f"seṭ={agg['set']:>5,} aniṭ={agg['anit']:>4,} veṭ={agg['vet']:>4,} "
                       f"pada={sum(agg['by_pada'].values()):>5,} trans={sum(agg['by_transitivity'].values()):>5,} "
                       f"gaṇa={sum(agg['by_gana'].values()):>5,}(top {tg})")
 
@@ -246,11 +274,13 @@ def main():
                    "forms BvA0/curA0/…), pada (parasmaipada/ātmanepada/ubhayapada), transitivity "
                    "(sakarmaka/akarmaka), causative (preraṇe/ṇijanta), seṭ/aniṭ."),
         "caveats": ("PROTOTYPE. SKD/VCP read 0 under m1's <ab> apparatus but carry ~2k roots each — the "
-                    "0 was detector blindness (MICROSTRUCTURE_ZERO_MEANING.md). SKD encodes pada/"
-                    "transitivity mostly via undecoded anubandha it-markers, so its gaṇa/pada/transitivity "
-                    "coverage is lower than VCP's; gaṇa/pada/transitivity take the first match; abbreviated "
-                    "gaṇa forms (adA0/svA0) carry mild noise; veṭ not split. Sanity-checked: VCP pada "
-                    "parasmaipada>ubhaya>ātmane and gaṇa bhvādi≫rest are linguistically correct."),
+                    "0 was detector blindness (MICROSTRUCTURE_ZERO_MEANING.md). SKD encodes PADA via "
+                    "Vopadeva/Kavikalpadruma anubandhas; a cross-walk-validated decode key exists "
+                    "(MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md) but is HELD pending maintainer verification, so "
+                    "SKD pada/trans here are prose-only and lower than VCP's. gaṇa/pada/transitivity take "
+                    "the first match; abbreviated gaṇa forms (adA0/svA0) carry mild noise; veṭ (vew) now "
+                    "split into its own column. Sanity-checked: VCP pada parasmaipada>ubhaya>ātmane and "
+                    "gaṇa bhvādi≫rest are linguistically correct."),
     }
     with open(os.path.join(OUT_DIR, "m4_report.json"), "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)

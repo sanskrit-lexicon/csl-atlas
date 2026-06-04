@@ -6,6 +6,7 @@
       "causative": 0,
       "set": 0,
       "anit": 0,
+      "vet": 0,
       "by_source": {
         "kavikalpadruma": 6,
         "durgadasa": 4
@@ -23,6 +24,7 @@
       "causative": 0,
       "set": 0,
       "anit": 0,
+      "vet": 0,
       "by_source": {
         "durgadasa": 1
       },
@@ -39,6 +41,7 @@
       "causative": 21,
       "set": 1696,
       "anit": 15,
+      "vet": 12,
       "by_source": {
         "(annotation-only)": 1554,
         "dhatupatha": 190,
@@ -68,7 +71,7 @@
         "ubhayapada": 18
       },
       "by_transitivity": {
-        "sakarmaka": 28,
+        "sakarmaka": 40,
         "akarmaka": 10
       }
     },
@@ -78,6 +81,7 @@
       "causative": 0,
       "set": 1,
       "anit": 0,
+      "vet": 0,
       "by_source": {
         "(annotation-only)": 1
       },
@@ -94,6 +98,7 @@
       "causative": 0,
       "set": 0,
       "anit": 0,
+      "vet": 0,
       "by_source": {
         "kavikalpadruma": 1,
         "durgadasa": 2
@@ -111,6 +116,7 @@
       "causative": 0,
       "set": 0,
       "anit": 0,
+      "vet": 0,
       "by_source": {
         "kavikalpadruma": 3,
         "durgadasa": 3,
@@ -129,6 +135,7 @@
       "causative": 3,
       "set": 415,
       "anit": 63,
+      "vet": 1,
       "by_source": {
         "(annotation-only)": 463
       },
@@ -136,13 +143,13 @@
         "annotation": 463
       },
       "by_gana": {
+        "tudadi": 25,
         "bhvadi": 157,
         "divadi": 16,
-        "tudadi": 15,
-        "curadi": 23,
+        "curadi": 36,
         "svadi": 9,
         "adadi": 9,
-        "juhotyadi": 1
+        "juhotyadi": 2
       },
       "by_pada": {
         "ubhayapada": 96,
@@ -160,6 +167,7 @@
       "causative": 17,
       "set": 1973,
       "anit": 303,
+      "vet": 40,
       "by_source": {
         "durgadasa": 320,
         "kavikalpadruma": 2201,
@@ -172,7 +180,7 @@
         "annotation": 8
       },
       "by_gana": {
-        "curadi": 199,
+        "curadi": 200,
         "bhvadi": 658,
         "adadi": 42,
         "svadi": 18,
@@ -180,7 +188,8 @@
         "tudadi": 70,
         "kryadi": 28,
         "rudhadi": 12,
-        "tanadi": 5
+        "tanadi": 5,
+        "juhotyadi": 2
       },
       "by_pada": {
         "parasmaipada": 779,
@@ -188,8 +197,8 @@
         "atmanepada": 278
       },
       "by_transitivity": {
-        "sakarmaka": 839,
-        "akarmaka": 311
+        "sakarmaka": 843,
+        "akarmaka": 313
       }
     },
     "vcp": {
@@ -198,6 +207,7 @@
       "causative": 24,
       "set": 1950,
       "anit": 276,
+      "vet": 58,
       "by_source": {
         "dhatupatha": 12,
         "(annotation-only)": 2187,
@@ -211,14 +221,15 @@
       },
       "by_gana": {
         "bhvadi": 1152,
-        "curadi": 146,
+        "curadi": 396,
         "svadi": 38,
         "divadi": 85,
         "adadi": 63,
-        "kryadi": 29,
+        "kryadi": 28,
         "rudhadi": 12,
-        "tudadi": 58,
-        "tanadi": 10
+        "tudadi": 156,
+        "tanadi": 10,
+        "juhotyadi": 14
       },
       "by_pada": {
         "atmanepada": 248,
