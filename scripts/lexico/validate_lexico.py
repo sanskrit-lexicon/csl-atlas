@@ -113,10 +113,10 @@ def validate_m4():
     pd_feat = collections.defaultdict(collections.Counter)
     pd_cat = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
     for i, r in enumerate(rows):
-        check(r["root_signal"] in ("citation", "annotation", "both"),
+        check(r["root_signal"] in ("citation", "annotation", "both", "yat-conjugation"),
               f"m4 row {i}: root_signal={r['root_signal']}")
         check(r["dhatupatha_source"] in ("kavikalpadruma", "madhaviya", "durgadasa",
-                                         "dhatupatha", "(annotation-only)"),
+                                         "dhatupatha", "(annotation-only)", "(yat-conjugation)"),
               f"m4 row {i}: source={r['dhatupatha_source']}")
         check(r["gana"] in GANA, f"m4 row {i}: gana={r['gana']}")
         check(r["pada"] in PADA, f"m4 row {i}: pada={r['pada']}")

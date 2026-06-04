@@ -5,7 +5,7 @@ blind to SKD/VCP, which carry ZERO <ab>/<div>/<s> markup (see MICROSTRUCTURE_ZER
 yet hold thousands of verbal roots, marked the INDIGENOUS way — in romanized-Sanskrit
 prose, dhātupāṭha-style. This prototype recovers that layer.
 
-ROOT DETECTION — two complementary signals (union), recorded per row in `root_signal`:
+ROOT DETECTION — three complementary signals (union), recorded per row in `root_signal`:
   (1) CITATION: the entry cites a dhātupāṭha/dhātu-commentary — the Kavikalpadruma
       (`iti kavikalpadrumaH`, SKD 2,135×, a pure verb-list ⟹ root), Durgādāsa, the
       Mādhavīya-dhātuvṛtti, or generic `iti …dhātu…`. This carries SKD (cites consistently).
@@ -14,8 +14,11 @@ ROOT DETECTION — two complementary signals (union), recorded per row in `root_
       VCP names its source rarely but annotates its roots this way, so (2) is what recovers
       VCP (43 → ~2,230). The pada/transitivity co-requirement keeps it from firing on a stray
       SLP1 substring in a European `{#…#}` body — verified: European dicts stay ≈0.
-The three indigenous/root dicts then converge on ~the dhātupāṭha's size: SKD 2,544, VCP 2,230,
-KRM 1,757 (KRM is a dedicated root dictionary), plus SHS 463 (Wilson tradition).
+  (3) YAT-CONJUGATION: Yates' own compact conjugation block `{#(its) PRESENT-FORM#} <class>.
+      {%pada.%}` (see yat_features) — YAT cites no dhātupāṭha and marks no seṭ, so it read 0
+      under (1)+(2); this dict-specific signal recovers it (0 → 1,643).
+The root dicts then converge on ~the dhātupāṭha's size: SKD 2,544, VCP 2,230, KRM 1,757
+(a dedicated root dictionary), YAT 1,643 (Yates), plus SHS 463 (Wilson tradition).
 
 FEATURES emitted per root entry (the dhātupāṭha annotation, as real columns):
   - gana          bhvādi…curādi — the 10 conjugation classes. VCP marks them with `0`-forms
@@ -172,6 +175,35 @@ def krm_cluster(body):
                     if _KRM_GANA_NAMES.search(m.group(1)))
 
 
+# ── YAT (Yates) verbal-root parse — YAT reads 0 under BOTH the dhātupāṭha-citation and the
+#    seṭ/aniṭ-annotation signals (it cites no dhātupāṭha and marks no `sew`/`saka0`), so issue
+#    #30 flagged it as needing its own format probe. Yates encodes the conjugation compactly in
+#    its own English-tradition convention: `{#(anubandhas) PRESENT-FORM#} <class>. {%pada.%}`,
+#    e.g. `{#(O-x) gacCati#} 1. {%a.%}` = gam, present gacchati, cl.1 bhvādi, parasmaipada.
+#    The class digit (1–10) IS the gaṇa; the pada letter is `a`=parasmaipada (-ti), `d`=ātmanepada
+#    (-te, "deponent"), `c`=ubhayapada (both -ti/-te). The leading `(O-x)`/`(Na, wu)` are the same
+#    Pāṇinian it-letters SKD uses (recorded raw in `anubandhas`). Requiring a PRESENT form (ending
+#    in `ti`/`te`) before the class digit excludes Yates' gender-triple adjectives (`(vaH-vA-vaM)
+#    1. {%a.%}` "silent" — where `a.`=adjective, not parasmaipada). 1,643 roots; the gaṇa
+#    distribution (bhvādi 1,009 ≫ curādi 219 > tudādi 139 > divādi 117 …) and pada (para 1,162 >
+#    ātmane 369 > ubhaya 112) are linguistically correct — the same convergence-on-the-dhātupāṭha
+#    that validates SKD/VCP/KRM/SHS.
+_YAT_VB = re.compile(r"\{#(?:\(([^)#]*)\)\s*)?[^#]*?(?:ti|te)#\}\s*(10|[1-9])\.\s*\{%([adc])\.")
+_YAT_GANA = {"1": "bhvadi", "2": "adadi", "3": "juhotyadi", "4": "divadi", "5": "svadi",
+             "6": "tudadi", "7": "rudhadi", "8": "tanadi", "9": "kryadi", "10": "curadi"}
+_YAT_PADA = {"a": "parasmaipada", "d": "atmanepada", "c": "ubhayapada"}
+
+
+def yat_features(body):
+    """(gaṇa, pada, raw-anubandhas) from the first Yates conjugation block, or None if the
+    entry carries no finite-verb block (so it never fires on a noun/adjective)."""
+    m = _YAT_VB.search(body)
+    if not m:
+        return None
+    anu, cls, p = m.group(1), m.group(2), m.group(3)
+    return _YAT_GANA[cls], _YAT_PADA[p], " ".join((anu or "").replace(",", " ").split())
+
+
 # ── SKD anubandha decode — the Vopadeva/Kavikalpadruma key as given by Durgādāsa's
 #    Dhātudīpikā, reproduced in the Śabdakalpadruma front matter (46 anubandhas / 1754
 #    roots; docs/MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md). SKD writes the it-letters in a slot
@@ -244,7 +276,8 @@ def analyze_entry(body, code=None):
     other dicts use the `0`-marked / prose detectors."""
     cite = bool(_DHATU_SRC.search(body))
     annot = bool(_ANNOT.search(body)) and bool(_PADA_TRANS.search(body))
-    if not (cite or annot):
+    yat = yat_features(body) if code == "yat" else None
+    if not (cite or annot or yat):
         return None
     if "kavikalpadrum" in body:
         src = "kavikalpadruma"
@@ -254,9 +287,12 @@ def analyze_entry(body, code=None):
         src = "durgadasa"
     elif cite:
         src = "dhatupatha"
+    elif yat:
+        src = "(yat-conjugation)"
     else:
         src = "(annotation-only)"
-    signal = "both" if (cite and annot) else ("citation" if cite else "annotation")
+    signal = ("both" if (cite and annot) else "citation" if cite
+              else "annotation" if annot else "yat-conjugation")
     snip = ""
     if "¦" in body:                       # ¦ closes the headword
         after = body.split("¦", 1)[1]
@@ -283,6 +319,8 @@ def analyze_entry(body, code=None):
                 pada = k_pada
             if k_trans:
                 trans = k_trans
+    elif yat:                             # Yates encodes class+pada in its own conjugation block
+        gana, pada, anubandhas = yat[0], yat[1], yat[2]
     return {
         "root_signal": signal,
         "dhatupatha_source": src,
@@ -395,10 +433,12 @@ def main():
         "csv_rows": n_rows,
         "dicts_with_roots": list(by_dict.keys()),
         "headline": {c: {"indigenous_roots_m4": a["root_entries"], "ab_markers_m1": 0}
-                     for c, a in by_dict.items() if c in ("skd", "vcp")},
+                     for c, a in by_dict.items() if c in ("skd", "vcp", "krm", "yat", "shs")},
         "method": ("Root = (1) dhātupāṭha citation OR (2) the seṭ/aniṭ + pada/transitivity annotation "
+                   "OR (3) YAT's own conjugation block `(its) PRESENT-FORM <class>. {pada}` "
                    "(recorded in root_signal). Emitted columns: gaṇa (bhvādi…curādi, via VCP's 0-marked "
-                   "forms BvA0/curA0/…), pada (parasmaipada/ātmanepada/ubhayapada), transitivity "
+                   "forms BvA0/curA0/…, KRM's parenthesised cluster, YAT's class digit, or SKD's "
+                   "anubandha slot), pada (parasmaipada/ātmanepada/ubhayapada), transitivity "
                    "(sakarmaka/akarmaka), causative (preraṇe/ṇijanta), seṭ/aniṭ."),
         "caveats": ("PROTOTYPE. SKD/VCP read 0 under m1's <ab> apparatus but carry ~2k roots each — the "
                     "0 was detector blindness (MICROSTRUCTURE_ZERO_MEANING.md). SKD pada/gaṇa are now "

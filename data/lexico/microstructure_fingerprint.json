@@ -1123,14 +1123,16 @@
         "edges": 0
       },
       "root": {
-        "entries": 0,
-        "pada": 0,
-        "gana": 0,
+        "entries": 1643,
+        "pada": 1643,
+        "gana": 1643,
         "transitivity": 0,
         "vet": 0
       },
-      "layers_present": [],
-      "dominant_layer": ""
+      "layers_present": [
+        "root"
+      ],
+      "dominant_layer": "root"
     }
   }
 }
