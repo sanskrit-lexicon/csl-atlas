@@ -127,3 +127,31 @@ holds the intentional release-bucket changes; awaiting a commit decision).
 same gate — M.G.'s verification against the Kavikalpadruma / VCP abbreviation tables.
 Nothing more to build until then; the deliverables (A profile, B veṭ/gaṇa/transitivity)
 ship as-is via PR.
+
+**Shipped:** [csl-atlas#33](https://github.com/sanskrit-lexicon/csl-atlas/pull/33)
+— branch `feature/microstructure-profile` off `main`, lexico + docs only.
+
+## The single open gate
+
+Everything still pending in this line waits on **one** maintainer action: verify the
+proposed SKD anubandha→pada key (`MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md`) against the
+Kavikalpadruma. That unblocks (a) baking SKD pada into m4, (b) the ṛ-marker column,
+(c) the `di0`/`sO0` gaṇa forms. **Code-doable seams that do NOT need that gate** (open
+for a future round): m3 cross-dict cross-reference graph overlap (does MW `cf.` inherit
+PWG `Vgl.`? — lineage roadmap §3.1) and AP/AP90/BEN `cf.` target parsing.
+
+---
+
+## Round 5 — 2026-06-04: the next ungated seam
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 14 | Next on #30 while the SKD pada gate is open? | **m3 cross-dict cross-reference graph overlap** | Build the §3.1 lineage measure — does MW `cf.` inherit PWG `Vgl.`? |
+
+**Built — `scripts/lexico/m6_xref_lineage.py`** (validated, m6 check added): normalizes
+m3 edges (unify PWG `°` / MW `-`, drop SLP1 accents) and intersects the two edge sets.
+**Finding — PARTIAL overlap:** 641 shared directed edges; **MW 21.8% / PWG 9.1%** of
+cross-refs on the 2,538 lemmas both treat (Jaccard 0.069). A shared cross-reference CORE
+(variant-form / cognate-root pointers, well above chance) plus large independent expansion
+— **not** wholesale inheritance. Write-up: `docs/MICROSTRUCTURE_XREF_LINEAGE.md`; outputs
+`xref_lineage.json` + `xref_shared_edges.csv`. Still ungated and open: AP/AP90/BEN `cf.` parsing.
