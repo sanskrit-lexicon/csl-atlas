@@ -5,21 +5,26 @@ lineage signal (LEXICOGRAPHY_ROADMAP §3.1, "shared cross-reference patterns"). 
 two traditions encode them differently, both with an SLP1 target so they are
 directly comparable:
 
-  - German/Petersburg (PWG): `<div n="v">— <ab>Vgl.</ab> {#target#}`   (14,623)
-  - English (MW/AP/AP90/BEN): `<ab>cf.</ab> [also] [√] <s>target</s>`  (MW 11,652 …)
+  - German/Petersburg (PWG): `<div n="v">— <ab>Vgl.</ab> {#target#}`
+  - English MW:               `<ab>cf.</ab> [also] [√] <s>target</s>`
+  - Apte (AP/AP90):           `<ab>cf.</ab> {#target#}`  — SLP1 in {#…#}, NOT <s>
 
 We emit a directed edge (source headword -> referenced lemma) per cross-reference.
-`cf.` followed by `<lang>` (a Western cognate) or `<hom>` (a homonym pointer) rather
-than `<s>` is naturally skipped — only Sanskrit-lemma targets are captured. PW/MW72/
-WIL/indigenous dicts use neither pattern and contribute 0 (a convention gap, per the
-m1 "0 != structureless" rule). Targets are RAW SLP1 (accents/hyphens kept); joining a
-target back to a headword needs hwnorm1 normalisation — deferred.
+`cf.` followed by `<lang>` (a Western cognate) or `<hom>` (a homonym pointer) is
+skipped — only Sanskrit-lemma targets are captured. The Apte `cf. {#…#}` slot is
+ambiguous (lemma pointers, multi-word quotes, glued fragments); the round-7 rule keeps
+a {#…#} as an EDGE only if lemma-like (no space/period, each /,-split atom a SLP1 word
+≤24 chars) and routes everything else to the cf-quote side file. BEN's cf. is purely
+cognate/citation → 0 lemma edges. PW/MW72/WIL/indigenous use none (convention gap, per
+the m1 "0 != structureless" rule). Targets are RAW SLP1; the cross-dict join (hwnorm1-
+style) is done downstream by m6.
 
 Reads csl-orig bodies via parse_cslorig. Run from repo root:
     python scripts/lexico/m3_xrefs.py --probe gam        # MW gam cf. -> kzam; PWG gam Vgl. targets
     python scripts/lexico/m3_xrefs.py --all
 Outputs (data/lexico/; sample runs get a `.<letter>` infix):
     xref_edges[.<letter>].csv      one row per (dict, source_L, source_k1, kind, target)
+    xref_cf_quotes[.<letter>].csv  AP/AP90 multi-word {#…#} after cf. (sub-citations, not edges)
     xref_by_dict[.<letter>].json   per-dict density + in-degree leaderboard (hub lemmas)
     m3_report[.<letter>].json      run metadata + corpus-wide most-referenced targets
 """
@@ -43,13 +48,24 @@ OUT_DIR = "data/lexico"
 _VGL = re.compile(r'<div n="v">[^{<]*<ab>[vV]gl\.?</ab>\s*\{#([^#}]*)#\}')
 _CF = re.compile(r'<ab>[cC]f\.?</ab>\s*(?:also\s+|and\s+|or\s+)?(?:√\s*)?<s>([^<]*)</s>')
 _SPLIT = re.compile(r",| und | and | oder | or ")  # a single Vgl./cf. may list several targets
+# AP/AP90 put the cf. target in {#…#} (SLP1), not <s> — a mix of clean lemma pointers,
+# multi-word quotes, cognates and citations (BEN's cf. is purely cognate/citation → 0 lemmas).
+# Disambiguation (decision round 7): a {#…#} after cf. yields cross-ref EDGES only if it is
+# lemma-like — no space/period and each /,-split atom a single SLP1 word ≤ 24 chars; anything
+# else (phrases, glued quote-fragments) goes to the cf-quote SIDE FILE, not the graph.
+_CF_BRACE = re.compile(r'<ab>[cC]f\.?</ab>\s*(?:also\s+|and\s+|or\s+)?(?:√\s*)?\{#([^#}]*)#\}')
+_BRACE_SPLIT = re.compile(r"/|,")
+_LEMMA_TOK = re.compile(r"^[A-Za-z][A-Za-z'~]*$")
+_LEMMA_MAX = 24
 
 
 def analyze_entry(body):
-    """Yield atomic (kind, target) cross-reference edges from one entry body.
+    """Return (edges, quotes): atomic (kind, target) cross-reference edges, plus cf-quote
+    strings (multi-word {#…#} after cf. that are sub-citations, not lemma pointers).
 
     A capture span may group several lemmas (Vgl. {#a, b, c#} / cf. <s>x</s> and <s>y</s>);
-    each is split into its own directed edge.
+    each is split into its own directed edge. AP/AP90 cf-{#…#} are sorted lemma→edge,
+    phrase→quote by the round-7 rule.
     """
     edges = []
     for kind, rx in (("vgl", _VGL), ("cf", _CF)):
@@ -58,7 +74,20 @@ def analyze_entry(body):
                 t = t.strip()
                 if t:
                     edges.append((kind, t))
-    return edges
+    quotes = []
+    for cap in _CF_BRACE.findall(body):
+        cap = cap.strip()
+        if not cap:
+            continue
+        if " " in cap or "." in cap:                 # a multi-word quote / sentence
+            quotes.append(cap)
+            continue
+        toks = [t.strip() for t in _BRACE_SPLIT.split(cap) if t.strip()]
+        if toks and all(_LEMMA_TOK.match(t) and len(t) <= _LEMMA_MAX for t in toks):
+            edges.extend(("cf", t) for t in toks)    # clean lemma pointer(s)
+        else:
+            quotes.append(cap)                       # glued / non-lemma → side file
+    return edges, quotes
 
 
 def discover_dicts():
@@ -80,11 +109,12 @@ def probe(lemma, codes):
         for e in iter_entries(path):
             if e["k1"] != lemma:
                 continue
-            edges = analyze_entry(e["body"])
-            if not edges:
+            edges, quotes = analyze_entry(e["body"])
+            if not edges and not quotes:
                 continue
             shown = ", ".join(f"{k}:{t}" for k, t in edges[:12])
-            print(f"  {code.upper():6s} L{e['L']:<8s} h={e['h'] or '-':3s} n_xref={len(edges):<3d} [{shown}]")
+            qn = f" +{len(quotes)} cf-quote(s)" if quotes else ""
+            print(f"  {code.upper():6s} L{e['L']:<8s} h={e['h'] or '-':3s} n_xref={len(edges):<3d} [{shown}]{qn}")
 
 
 def main():
@@ -118,6 +148,8 @@ def main():
 
     by_dict = {}
     corpus_targets = collections.Counter()
+    quote_rows = []
+    quotes_by = collections.Counter()
     csv_path = os.path.join(OUT_DIR, f"xref_edges{infix}.csv")
     n_rows = 0
     with open(csv_path, "w", encoding="utf-8", newline="") as fcsv:
@@ -129,13 +161,16 @@ def main():
                 continue
             tgt = collections.Counter()
             kind = collections.Counter()
-            n_entries = n_with = n_edges = 0
+            n_entries = n_with = n_edges = n_q = 0
             for e in iter_entries(path):
                 k1 = e["k1"] or ""
                 if letter and not k1.startswith(letter):
                     continue
                 n_entries += 1
-                edges = analyze_entry(e["body"])
+                edges, quotes = analyze_entry(e["body"])
+                for q in quotes:
+                    quote_rows.append({"dict": code, "L": e["L"], "k1": k1, "quote": q})
+                    n_q += 1
                 if not edges:
                     continue
                 n_with += 1
@@ -145,6 +180,7 @@ def main():
                     kind[k] += 1
                     n_edges += 1
                     n_rows += 1
+            quotes_by[code] = n_q
             if n_edges:
                 corpus_targets.update(tgt)
                 by_dict[code] = {
@@ -153,11 +189,18 @@ def main():
                     "xref_edges": n_edges,
                     "by_kind": dict(kind),
                     "distinct_targets": len(tgt),
+                    "cf_quotes": n_q,
                     "top_referenced_targets": dict(tgt.most_common(20)),
                 }
                 print(f"  {code:8s} scanned={n_entries:>7,} with_xref={n_with:>6,} "
                       f"edges={n_edges:>7,} ({'/'.join(f'{k}:{v:,}' for k, v in kind.items())}) "
-                      f"distinct_targets={len(tgt):>6,}")
+                      f"distinct_targets={len(tgt):>6,} cf_quotes={n_q:>4,}")
+
+    quotes_path = os.path.join(OUT_DIR, f"xref_cf_quotes{infix}.csv")
+    with open(quotes_path, "w", encoding="utf-8", newline="") as fq:
+        wq = csv.DictWriter(fq, fieldnames=["dict", "L", "k1", "quote"])
+        wq.writeheader()
+        wq.writerows(quote_rows)
 
     by_dict_path = os.path.join(OUT_DIR, f"xref_by_dict{infix}.json")
     with open(by_dict_path, "w", encoding="utf-8") as f:
@@ -169,11 +212,15 @@ def main():
         "letter": letter,
         "csv_rows_emitted": n_rows,
         "dicts_with_xref": list(by_dict.keys()),
+        "cf_quotes_total": len(quote_rows),
+        "cf_quotes_by_dict": {c: n for c, n in quotes_by.most_common() if n},
         "corpus_most_referenced_targets": dict(corpus_targets.most_common(40)),
-        "caveats": ("Two formats, both SLP1: PWG <div n=v> Vgl. {#t#}; English <ab>cf.</ab> <s>t</s> "
-                    "(cf.+<lang> cognate / +<hom> homonym pointers skipped). PW/MW72/WIL/indigenous "
-                    "use neither (convention gap, not absence of cross-refs). Multi-target Vgl. blocks "
-                    "keep the FIRST target. Targets are RAW SLP1; headword-joining needs hwnorm1."),
+        "caveats": ("Three lemma-edge formats, all SLP1: PWG <div n=v> Vgl. {#t#}; English MW "
+                    "<ab>cf.</ab> <s>t</s>; AP/AP90 <ab>cf.</ab> {#t#} (round 7: lemma-like {#…#} → edge, "
+                    "multi-word/glued {#…#} → cf-quote side file xref_cf_quotes.csv). cf.+<lang> cognate / "
+                    "+<hom> homonym skipped; BEN cf. is purely cognate/citation → 0 lemma edges. "
+                    "PW/MW72/WIL/indigenous use none (convention gap, not absence). Targets RAW SLP1; "
+                    "cross-dict join (hwnorm1-style) is done downstream by m6."),
     }
     report_path = os.path.join(OUT_DIR, f"m3_report{infix}.json")
     with open(report_path, "w", encoding="utf-8") as f:
@@ -181,8 +228,10 @@ def main():
 
     print(f"\nCorpus-wide most-referenced targets (hub lemmas): "
           f"{', '.join(f'{t}({n})' for t, n in corpus_targets.most_common(10))}")
-    print(f"Wrote {csv_path} ({n_rows:,} rows), "
-          f"{os.path.basename(by_dict_path)}, {os.path.basename(report_path)}")
+    print(f"cf-quotes (AP/AP90 multi-word {{#…#}} after cf.): {len(quote_rows):,} "
+          f"({', '.join(f'{c}:{n}' for c, n in quotes_by.most_common(4) if n)})")
+    print(f"Wrote {csv_path} ({n_rows:,} rows), {os.path.basename(quotes_path)} "
+          f"({len(quote_rows):,} cf-quotes), {os.path.basename(by_dict_path)}, {os.path.basename(report_path)}")
     try:
         sys.path.insert(0, os.path.abspath("scripts/L0"))
         from _provenance import write_source

@@ -1,4 +1,4 @@
-"""Phase L0.6 — validator for the lexico microstructure outputs (m1, m2).
+"""Phase L0.6 — validator for the lexico microstructure outputs (m1–m5).
 
 Data-driven consistency checks (no deps), in the spirit of the project's
 validate-*.mjs. Asserts the per-entry CSVs agree with their per-dict aggregates
@@ -121,7 +121,7 @@ def validate_m4():
         check(r["gana"] in GANA, f"m4 row {i}: gana={r['gana']}")
         check(r["pada"] in PADA, f"m4 row {i}: pada={r['pada']}")
         check(r["transitivity"] in TRANS, f"m4 row {i}: transitivity={r['transitivity']}")
-        for f in ("causative", "set", "anit"):
+        for f in ("causative", "set", "anit", "vet"):
             check(r[f] in ("0", "1"), f"m4 row {i}: {f}={r[f]}")
             pd_feat[r["dict"]][f] += int(r[f])
         for col in ("gana", "pada", "transitivity"):
@@ -131,11 +131,58 @@ def validate_m4():
     for code, a in agg.items():
         check(pd_rows[code] == a["root_entries"],
               f"m4 {code}: CSV rows {pd_rows[code]} != aggregate root_entries {a['root_entries']}")
-        for f in ("causative", "set", "anit"):
+        for f in ("causative", "set", "anit", "vet"):
             check(pd_feat[code][f] == a[f], f"m4 {code}: CSV {f} {pd_feat[code][f]} != aggregate {a[f]}")
         for col in ("gana", "pada", "transitivity"):
             check(dict(pd_cat[code][col]) == a["by_" + col], f"m4 {code}: by_{col} CSV != aggregate")
     return len(rows), len(agg)
+
+
+def validate_m5():
+    """The m1–m4 join must be LOSSLESS: profile keys == union of source keys, and
+    folded xref_out totals == m3 edge counts."""
+    if not os.path.exists(os.path.join(DATA, "microstructure_profile.csv")):
+        return 0, 0
+    rows = load_csv("microstructure_profile.csv")
+    union = set()
+    for name in ("microstructure_subentries.csv", "preverb_subentries.csv",
+                 "xref_edges.csv", "indigenous_roots.csv"):
+        for r in load_csv(name):
+            union.add((r["dict"], r["L"]))
+    keys = set()
+    prof_xref = collections.Counter()
+    for i, r in enumerate(rows):
+        keys.add((r["dict"], r["L"]))
+        lyr = r["layers"].split("|")
+        check(r["layers"] != "", f"m5 row {i}: empty layers")
+        check((r["is_root"] == "1") == ("root" in lyr), f"m5 row {i}: is_root/root-layer mismatch")
+        check((int(r["xref_out"] or 0) > 0) == ("xref" in lyr), f"m5 row {i}: xref_out/xref-layer mismatch")
+        prof_xref[r["dict"]] += int(r["xref_out"] or 0)
+    check(keys == union,
+          f"m5: profile keys != union of m1–m4 keys (|profile|={len(keys)} |union|={len(union)})")
+    m3_edges = collections.Counter(r["dict"] for r in load_csv("xref_edges.csv"))
+    for code in m3_edges:
+        check(prof_xref[code] == m3_edges[code],
+              f"m5 {code}: profile xref_out {prof_xref[code]} != m3 edges {m3_edges[code]}")
+    return len(rows), len({k[0] for k in keys})
+
+
+def validate_m6():
+    """m6 lineage overlap: shared-edge CSV count matches the JSON, and the overlap
+    cannot exceed either dict's edges on the shared sources."""
+    jp = os.path.join(DATA, "xref_lineage.json")
+    if not (os.path.exists(jp) and os.path.exists(os.path.join(DATA, "xref_shared_edges.csv"))):
+        return 0, 0
+    with open(jp, encoding="utf-8") as f:
+        lin = json.load(f)
+    shared = load_csv("xref_shared_edges.csv")
+    mwpwg = lin.get("pairs", {}).get("mw-pwg")
+    if mwpwg:
+        check(len(shared) == mwpwg["overlapping_edges"],
+              f"m6: shared CSV rows {len(shared)} != json overlapping_edges {mwpwg['overlapping_edges']}")
+        check(mwpwg["overlapping_edges"] <= mwpwg["a_edges_on_shared_sources"], "m6: overlap > mw shared edges")
+        check(mwpwg["overlapping_edges"] <= mwpwg["b_edges_on_shared_sources"], "m6: overlap > pwg shared edges")
+    return len(shared), len(lin.get("pairs", {}))
 
 
 def main():
@@ -144,10 +191,14 @@ def main():
     m2_rows, m2_dicts = validate_m2()
     m3_rows, m3_dicts = validate_m3()
     m4_rows, m4_dicts = validate_m4()
+    m5_rows, m5_dicts = validate_m5()
+    m6_rows, m6_pairs = validate_m6()
     print(f"  m1: {m1_rows:,} rows / {m1_dicts} dicts")
     print(f"  m2: {m2_rows:,} rows / {m2_dicts} preverb dicts")
     print(f"  m3: {m3_rows:,} rows / {m3_dicts} xref dicts")
     print(f"  m4: {m4_rows:,} rows / {m4_dicts} indigenous-root dicts (prototype)")
+    print(f"  m5: {m5_rows:,} rows / {m5_dicts} dicts (unified profile join)")
+    print(f"  m6: {m6_rows:,} shared cross-ref edges / {m6_pairs} dict-pair(s) (lineage overlap)")
     if _fail:
         print(f"\nFAIL — {len(_fail)} check(s):", file=sys.stderr)
         for m in _fail[:25]:
