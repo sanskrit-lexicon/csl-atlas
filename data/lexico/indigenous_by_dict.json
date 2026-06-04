@@ -10,6 +10,9 @@
       "by_source": {
         "kavikalpadruma": 6,
         "durgadasa": 4
+      },
+      "by_signal": {
+        "citation": 10
       }
     },
     "cae": {
@@ -21,19 +24,42 @@
       "bhvadi": 0,
       "by_source": {
         "durgadasa": 1
+      },
+      "by_signal": {
+        "citation": 1
       }
     },
     "krm": {
       "entries": 2061,
-      "root_entries": 203,
-      "causative": 4,
-      "set": 154,
-      "anit": 3,
-      "bhvadi": 101,
+      "root_entries": 1757,
+      "causative": 21,
+      "set": 1696,
+      "anit": 15,
+      "bhvadi": 957,
       "by_source": {
+        "(annotation-only)": 1554,
         "dhatupatha": 190,
         "kavikalpadruma": 11,
         "durgadasa": 2
+      },
+      "by_signal": {
+        "annotation": 1554,
+        "both": 156,
+        "citation": 47
+      }
+    },
+    "mw72": {
+      "entries": 55388,
+      "root_entries": 1,
+      "causative": 0,
+      "set": 1,
+      "anit": 0,
+      "bhvadi": 0,
+      "by_source": {
+        "(annotation-only)": 1
+      },
+      "by_signal": {
+        "annotation": 1
       }
     },
     "pw": {
@@ -46,6 +72,9 @@
       "by_source": {
         "kavikalpadruma": 1,
         "durgadasa": 2
+      },
+      "by_signal": {
+        "citation": 3
       }
     },
     "pwg": {
@@ -59,32 +88,61 @@
         "kavikalpadruma": 3,
         "durgadasa": 3,
         "dhatupatha": 2
+      },
+      "by_signal": {
+        "citation": 8
+      }
+    },
+    "shs": {
+      "entries": 47326,
+      "root_entries": 463,
+      "causative": 3,
+      "set": 415,
+      "anit": 63,
+      "bhvadi": 6,
+      "by_source": {
+        "(annotation-only)": 463
+      },
+      "by_signal": {
+        "annotation": 463
       }
     },
     "skd": {
       "entries": 42531,
-      "root_entries": 2536,
+      "root_entries": 2544,
       "causative": 17,
-      "set": 1967,
-      "anit": 301,
+      "set": 1973,
+      "anit": 303,
       "bhvadi": 70,
       "by_source": {
         "durgadasa": 320,
         "kavikalpadruma": 2201,
-        "dhatupatha": 15
+        "dhatupatha": 15,
+        "(annotation-only)": 8
+      },
+      "by_signal": {
+        "citation": 1390,
+        "both": 1146,
+        "annotation": 8
       }
     },
     "vcp": {
       "entries": 50135,
-      "root_entries": 43,
-      "causative": 1,
-      "set": 21,
-      "anit": 6,
-      "bhvadi": 0,
+      "root_entries": 2230,
+      "causative": 24,
+      "set": 1950,
+      "anit": 276,
+      "bhvadi": 72,
       "by_source": {
         "dhatupatha": 12,
+        "(annotation-only)": 2187,
         "kavikalpadruma": 22,
         "durgadasa": 9
+      },
+      "by_signal": {
+        "citation": 17,
+        "annotation": 2187,
+        "both": 26
       }
     }
   }

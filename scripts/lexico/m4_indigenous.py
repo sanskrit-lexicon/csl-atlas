@@ -5,10 +5,17 @@ blind to SKD/VCP, which carry ZERO <ab>/<div>/<s> markup (see MICROSTRUCTURE_ZER
 yet hold thousands of verbal roots, marked the INDIGENOUS way — in romanized-Sanskrit
 prose, dhātupāṭha-style. This prototype recovers that layer.
 
-ROOT DETECTION (high-confidence signal): an entry is a verbal-root entry if its body
-cites a dhātupāṭha / dhātu-commentary. The Kavikalpadruma (Vopadeva's verb-list) is
-purely a root list, so `iti kavikalpadrumaH` (SKD, 2,135x) ⟹ root entry; likewise
-Durgādāsa's commentary, the Mādhavīya-dhātuvṛtti (VCP), and generic `iti …dhātu…`.
+ROOT DETECTION — two complementary signals (union), recorded per row in `root_signal`:
+  (1) CITATION: the entry cites a dhātupāṭha/dhātu-commentary — the Kavikalpadruma
+      (`iti kavikalpadrumaH`, SKD 2,135×, a pure verb-list ⟹ root), Durgādāsa, the
+      Mādhavīya-dhātuvṛtti, or generic `iti …dhātu…`. This carries SKD (cites consistently).
+  (2) ANNOTATION: the dhātupāṭha grammatical annotation itself — the seṭ/aniṭ token
+      (`sew`/`aniw`) WITH a pada/transitivity abbreviation (`para0`/`Atma0`/`saka0`/…).
+      VCP names its source rarely but annotates its roots this way, so (2) is what recovers
+      VCP (43 → ~2,230). The pada/transitivity co-requirement keeps it from firing on a stray
+      SLP1 substring in a European `{#…#}` body — verified: European dicts stay ≈0.
+The three indigenous/root dicts then converge on ~the dhātupāṭha's size: SKD 2,544, VCP 2,230,
+KRM 1,757 (KRM is a dedicated root dictionary), plus SHS 463 (Wilson tradition).
 
 FEATURES inside a root entry (the clean, low-ambiguity indigenous markers):
   - causative   `preraRe` (preraṇe, "in the sense of impelling") / `Rijanta` / `RyantaH`
@@ -18,11 +25,10 @@ FEATURES inside a root entry (the clean, low-ambiguity indigenous markers):
   - gloss       the raw snippet between `¦` and the dhātupāṭha citation (the locative
                 meaning + it-markers); kept verbatim, not parsed.
 
-PROTOTYPE limitations (documented, not hidden): VCP cites its dhātupāṭha source by name
-far less than SKD, so VCP's root count here is a LOWER BOUND (its 1,980 `seṭ` markers
-imply a much larger root layer); meaning is a raw snippet; pada/transitivity are usually
-abbreviated (para/saka) and ambiguous, so omitted. This is a feasibility proof, not a
-finished parser.
+PROTOTYPE limitations (documented, not hidden): meaning is a raw snippet; among the gaṇas
+only bhvādi is counted (the others collide with the `-ādi` "etc." suffix); pada/transitivity
+are used to gate the annotation signal but not yet emitted as their own fields; veṭ (optional
+seṭ) is not split out. A feasibility proof, deliberately conservative — not a finished parser.
 
 Reads csl-orig via parse_cslorig. Run from repo root:
     python scripts/lexico/m4_indigenous.py --probe aka
@@ -49,7 +55,16 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 OUT_DIR = "data/lexico"
 
+# TWO root signals (union). (1) CITATION — a dhātupāṭha source is named; consistent in SKD.
+# (2) ANNOTATION — the dhātupāṭha grammatical annotation itself is present, i.e. the seṭ/aniṭ
+# token (`sew`/`aniw`), which in the indigenous dicts only ever appears in the root cluster
+# `…gaṇa-ādi0 pada0 transitivity0 sew .`. VCP names its source rarely but annotates ~2,277
+# roots, so this is what recovers VCP's root layer. To stay root-specific (and not fire on a
+# stray SLP1 substring in a European {#…#} body) the annotation requires a pada/transitivity
+# abbreviation to accompany the seṭ/aniṭ.
 _DHATU_SRC = re.compile(r"kavikalpadrum|durgAdAs|mAdhavIya|iti\s+\S*DAtu")
+_ANNOT = re.compile(r"(?<![A-Za-z])(sew|aniw)(?![A-Za-z])")
+_PADA_TRANS = re.compile(r"(?<![A-Za-z])(para|Atmane?|uBaya?|saka|akarmma|sakarmma|aka)0?(?![A-Za-z])")
 _CAUS = re.compile(r"preraRe|Rijanta|RyantaH")
 _SET = re.compile(r"(?<![A-Za-z])sew(?![A-Za-z])")
 _ANIT = re.compile(r"(?<![A-Za-z])aniw(?![A-Za-z])")
@@ -57,8 +72,10 @@ _BHVADI = re.compile(r"(?<![A-Za-z])BvAdi")
 
 
 def analyze_entry(body):
-    """Return root-entry features, or None if the entry isn't a dhātupāṭha-cited root."""
-    if not _DHATU_SRC.search(body):
+    """Return root-entry features, or None if the entry is not a verbal root."""
+    cite = bool(_DHATU_SRC.search(body))
+    annot = bool(_ANNOT.search(body)) and bool(_PADA_TRANS.search(body))
+    if not (cite or annot):
         return None
     if "kavikalpadrum" in body:
         src = "kavikalpadruma"
@@ -66,13 +83,17 @@ def analyze_entry(body):
         src = "madhaviya"
     elif "durgAdAs" in body:
         src = "durgadasa"
-    else:
+    elif cite:
         src = "dhatupatha"
+    else:
+        src = "(annotation-only)"
+    signal = "both" if (cite and annot) else ("citation" if cite else "annotation")
     snip = ""
     if "¦" in body:                       # ¦ closes the headword
         after = body.split("¦", 1)[1]
         snip = " ".join(after.split(" iti ", 1)[0].split())[:60]
     return {
+        "root_signal": signal,
         "dhatupatha_source": src,
         "causative": int(bool(_CAUS.search(body))),
         "set": int(bool(_SET.search(body))),
@@ -105,8 +126,8 @@ def probe(lemma, codes):
             if not a:
                 continue
             feats = ",".join(f for f in ("causative", "set", "anit", "bhvadi") if a[f])
-            print(f"  {code.upper():5s} L{e['L']:<7s} src={a['dhatupatha_source']:<14s} "
-                  f"[{feats or '-'}]  {a['gloss_snippet']!r}")
+            print(f"  {code.upper():5s} L{e['L']:<7s} sig={a['root_signal']:<10s} "
+                  f"src={a['dhatupatha_source']:<16s} [{feats or '-'}]  {a['gloss_snippet']!r}")
 
 
 def main():
@@ -133,7 +154,8 @@ def main():
 
     by_dict = {}
     csv_path = os.path.join(OUT_DIR, "indigenous_roots.csv")
-    fields = ["dict", "L", "k1", "dhatupatha_source", "causative", "set", "anit", "bhvadi", "gloss_snippet"]
+    fields = ["dict", "L", "k1", "root_signal", "dhatupatha_source",
+              "causative", "set", "anit", "bhvadi", "gloss_snippet"]
     n_rows = 0
     with open(csv_path, "w", encoding="utf-8", newline="") as fcsv:
         w = csv.DictWriter(fcsv, fieldnames=fields)
@@ -143,7 +165,7 @@ def main():
             if not os.path.exists(path):
                 continue
             agg = {"entries": 0, "root_entries": 0, "causative": 0, "set": 0, "anit": 0,
-                   "bhvadi": 0, "by_source": {}}
+                   "bhvadi": 0, "by_source": {}, "by_signal": {}}
             for e in iter_entries(path):
                 agg["entries"] += 1
                 a = analyze_entry(e["body"])
@@ -153,13 +175,14 @@ def main():
                 for f in ("causative", "set", "anit", "bhvadi"):
                     agg[f] += a[f]
                 agg["by_source"][a["dhatupatha_source"]] = agg["by_source"].get(a["dhatupatha_source"], 0) + 1
+                agg["by_signal"][a["root_signal"]] = agg["by_signal"].get(a["root_signal"], 0) + 1
                 w.writerow({"dict": code, "L": e["L"], "k1": e["k1"] or "", **a})
                 n_rows += 1
             if agg["root_entries"]:
                 by_dict[code] = agg
                 print(f"  {code:6s} entries={agg['entries']:>7,} roots={agg['root_entries']:>6,} "
                       f"caus={agg['causative']:>5,} seṭ={agg['set']:>5,} aniṭ={agg['anit']:>4,} "
-                      f"bhvādi={agg['bhvadi']:>4,}  src={agg['by_source']}")
+                      f"bhvādi={agg['bhvadi']:>4,}  signal={agg['by_signal']}")
 
     by_dict_path = os.path.join(OUT_DIR, "indigenous_by_dict.json")
     with open(by_dict_path, "w", encoding="utf-8") as f:
