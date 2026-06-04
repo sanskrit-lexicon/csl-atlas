@@ -261,11 +261,31 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - Every chart has source data, assumptions, warnings, and validation commands.
 - Corpus, standards, and observatory claims point outside the atlas.
 
+## Documentation Layer Decisions
+
+- Use-case pages come before analysis method notes.
+- The first reader page is the dictionary chooser:
+  [`DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md).
+- Every public tool, chart, or page must carry a compact trust block:
+  Evidence, Limitations, Validation, Owner repo.
+- Scholar-facing analysis docs come before public-facing analysis explanations.
+- Review queues should first document what each queue proves, then how to review
+  it.
+- H6 structural-register scatter is the next prioritized analysis page; H4
+  semantic fields come after the use-case page layer, chart trust template, H6,
+  and microstructure doc family.
+
 ## Related Docs
 
 - `docs/BOUNDARY_RULES.md`
+- `docs/USE_CASE_PAGE_ROADMAP.md`
+- `docs/CHART_TRUST_TEMPLATE.md`
 - `docs/REVIEW_RELEASE_ROADMAP.md`
 - `docs/RELEASE_CHECKLIST.md`
 - `docs/DICTIONARY_USER_GUIDE.md`
 - `docs/EVIDENCE_LABELS.md`
+- `docs/H6_STRUCTURAL_REGISTER_SCATTER.md`
+- `docs/MICROSTRUCTURE_PROFILE.md`
+- `docs/MICROSTRUCTURE_METHODS.md`
+- `docs/MICROSTRUCTURE_FINDINGS.md`
 - `docs/USE_CASES_LEGACY_INTEGRATED_ATLAS.md`

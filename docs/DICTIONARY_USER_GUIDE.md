@@ -6,6 +6,16 @@ Audience: readers, students, and translators who want to look up a Sanskrit word
 
 This guide answers the question the architecture documents do not answer for a newcomer: **which dictionary should I use, and how do I read what it tells me?**
 
+## Trust Block
+
+- Evidence: dictionary metadata, dictionary records, source links, and the
+  comparison outputs used by reader-facing atlas pages.
+- Limitations: this guide chooses a first dictionary for a task; it does not
+  rank every dictionary globally or use corpus frequency.
+- Validation: reader lookup and dictionary-comparison outputs must keep source
+  links, evidence labels, and no-result messaging visible.
+- Owner repo: `csl-atlas`.
+
 ## Start Here
 
 The atlas exposes two entry modes:
@@ -105,6 +115,10 @@ Each entry has a stable record ID and a source link. When you cite a word in you
 ## Related Documents
 
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — what the certainty labels mean.
+- [`docs/USE_CASE_PAGE_ROADMAP.md`](USE_CASE_PAGE_ROADMAP.md) - how reader and
+  analysis pages are sequenced.
+- [`docs/CHART_TRUST_TEMPLATE.md`](CHART_TRUST_TEMPLATE.md) - the required trust
+  block for public pages and charts.
 - [`docs/DICTIONARY_COMPARISON_PLAN.md`](DICTIONARY_COMPARISON_PLAN.md) — how cross-dictionary comparison works (research mode).
 - `docs/USE_CASES.md` — the reader use cases this guide supports (UC-RD-01 through UC-RD-07).
 - `ARCHITECTURE.md` — the overall design and audience policy.
