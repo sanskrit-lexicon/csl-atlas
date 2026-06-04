@@ -175,3 +175,27 @@ is a shared core, not inheritance. Doc updated: `MICROSTRUCTURE_XREF_LINEAGE.md`
 **With this, the ungated code-doable #30 seams are exhausted** — everything still open
 (SKD pada decode, ṛ-marker, `di0`/`sO0` gaṇa) waits on the one maintainer gate: verifying
 the proposed SKD anubandha key against the Kavikalpadruma.
+
+---
+
+## Round 8 — 2026-06-04: the SKD key VERIFIED (gate cleared) + SKD re-decoded
+
+The maintainer supplied the **Śabdakalpadruma front matter** (`docs/refs/SKD_Front pages.docx`)
+— Durgādāsa's **Dhātudīpikā** 46-anubandha *phala* table. This **clears the round-3 #8 hold**
+and **corrects** the proposal.
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 16 | ṛ-anubandha meaning (round 4 #11, deferred)? | **Operation-it: caṅ a-hrasva** (Pāṇ 7.4.2) | ṛ never marked pada — explains the cross-walk's 50/39 split. |
+| 17 | Rewrite the key doc? | **Yes** | `MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md` is now the **authoritative** Dhātudīpikā key; the cross-walk is demoted to "empirical recovery, source-corrected." |
+| 18 | Re-decode SKD via the key? | **Yes** | m4 decodes the anubandha slot → gaṇa (10 classes) + pada (ṅ/ñ only) + operation-its; new `anubandhas` column. **SKD gaṇa 1,117→1,737, pada 1,167→1,498.** |
+| 19 | Trust the digitized slot first? | **Re-probed** | 1,925/2,544 SKD roots carry a faithful slot; near-total key coverage before wiring it in. |
+
+**Headline correction:** SKD anubandhas encode **gaṇa + morphophonemic operations, NOT pada.**
+The cross-walk's "pada" signals (`ka`/`Sa`/`ya`/`na`) were **gaṇa** markers (curādi/tudādi/
+divādi/svādi) whose pada was a downstream correlation; **only ṅ/ñ mark pada.** The
+hold-for-verification was vindicated. Also confirmed verbatim from the source: the
+**"0/bindu = no anubandha"** convention — primary-source footing for "0 ≠ absent content."
+
+### Open question feeding round 9
+- SKD slot token **`ma` (72×)** is not among the 46 Dhātudīpikā anubandhas — what does it mark?

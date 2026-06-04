@@ -18,34 +18,35 @@ The three indigenous/root dicts then converge on ~the dhātupāṭha's size: SKD
 KRM 1,757 (KRM is a dedicated root dictionary), plus SHS 463 (Wilson tradition).
 
 FEATURES emitted per root entry (the dhātupāṭha annotation, as real columns):
-  - gana          bhvādi…curādi — the 10 conjugation classes. VCP's `0`-marked forms
-                  (`BvA0`/`BvAdi0`, `curA0`/`cu0`, `tu0`, `ju0`, …) carry the abbreviation
-                  marker, which disambiguates them from the ubiquitous `-ādi` ("etc.")
-                  suffix; SKD's visarga form (`curAdiH`) is also matched. (Ambiguous short
-                  forms `di0`/`sO0` are held out pending maintainer review.)
-  - pada          parasmaipada / ātmanepada / ubhayapada  (`para0` / `Atma0` / `uBa(ya)0`)
+  - gana          bhvādi…curādi — the 10 conjugation classes. VCP marks them with `0`-forms
+                  (`BvA0`/`BvAdi0`, `curA0`/`cu0`, `tu0`, `ju0`, …); SKD via its visarga prose
+                  (`curAdiH`) AND its anubandha slot (see below). (Short forms `di0`/`sO0` held.)
+  - pada          parasmaipada / ātmanepada / ubhayapada  (`para0` / `Atma0` / `uBa(ya)0`,
+                  prose forms, and for SKD the ṅ/ñ anubandhas)
   - transitivity  sakarmaka / akarmaka  (`saka0` / `aka0`, plus the prose stems
                   `sakarmmak`/`akarmmak` for SKD/Durgādāsa; `aka0` is lookbehind-guarded
                   so it does not match inside `saka0`)
   - causative     `preraRe` (preraṇe) / `Rijanta` / `RyantaH`
   - seṭ / aniṭ / veṭ  `sew` / `aniw` / `vew`  (iṭ-augment behavior; veṭ = optionally seṭ,
                   a lossless refinement — `sew … vew` ⟹ set=1 AND vet=1)
+  - anubandhas    SKD only — the raw Vopadeva it-letter slot after `¦` (`i|ka` = idit+curādi),
+                  decoded to gaṇa/pada via the Dhātudīpikā key (decode_anubandhas).
   - gloss         raw snippet between `¦` and the citation (locative meaning + it-markers).
 
-PROTOTYPE limitations (documented, not hidden): meaning is a raw snippet; the abbreviated gaṇa
-forms (`adA0`, `svA0`) carry mild noise; pada/transitivity/gaṇa take the FIRST match in the entry.
-SKD encodes PADA mostly via Vopadeva/Kavikalpadruma anubandhas (it-letters); a proposed decode key
-exists (docs/MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md, validated by the SKD∩VCP cross-walk) but is HELD
-pending the maintainer's verification, so this script does NOT yet infer SKD pada from anubandhas —
-SKD pada/trans here come only from prose. A feasibility proof, deliberately conservative.
+SKD anubandha decode (verified against the Śabdakalpadruma front matter, the Dhātudīpikā's
+46-anubandha phala table — docs/MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md): the it-letters encode
+GAṆA + morphophonemic OPERATIONS, with only ṅ/ñ marking pada (parasmaipada is the unmarked
+default and is NOT asserted). For SKD, gaṇa = anubandha (primary) ∨ visarga-prose (fallback);
+pada = prose ∨ ṅ/ñ anubandha. PROTOTYPE limitations: the meaning is a raw snippet; abbreviated
+gaṇa forms (`adA0`) carry mild noise; gaṇa/pada take the first match; the SKD slot token `ma`
+(72×) is not among the 46 anubandhas and stays undecoded. Deliberately conservative.
 
 Reads csl-orig via parse_cslorig. Run from repo root:
-    python scripts/lexico/m4_indigenous.py --probe aka
+    python scripts/lexico/m4_indigenous.py --probe aka --dicts skd vcp
     python scripts/lexico/m4_indigenous.py --all
-    python scripts/lexico/m4_indigenous.py --dicts skd vcp
 Outputs (data/lexico/):
     indigenous_roots.csv       per root entry: dict, L, k1, signal, source, gana, pada, transitivity,
-                               causative, set, anit, vet, gloss
+                               causative, set, anit, vet, anubandhas, gloss
     indigenous_by_dict.json    per-dict root counts + feature tallies + m1-blindness comparison
     m4_report.json
 """
@@ -138,8 +139,75 @@ def _first(body, table):
     return ""
 
 
-def analyze_entry(body):
-    """Return root-entry features, or None if the entry is not a verbal root."""
+# ── SKD anubandha decode — the Vopadeva/Kavikalpadruma key as given by Durgādāsa's
+#    Dhātudīpikā, reproduced in the Śabdakalpadruma front matter (46 anubandhas / 1754
+#    roots; docs/MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md). SKD writes the it-letters in a slot
+#    right after `¦` (`aka¦, i ka` = idit + curādi). They encode GAṆA + morphophonemic
+#    OPERATIONS; only ṅ/ñ mark pada (parasmaipada is the unmarked default — NOT asserted).
+#    SLP1: ṅ=N ñ=Y ṇ=R ṭ=w ḍ=q ś=S ṣ=z ṛ=f ṝ=F ḷ=x ā=A ī=I ū=U ai=E au=O.
+_ANU_GANA = {  # → one of the 10 gaṇas (avāntara subclasses folded to their main gaṇa)
+    "ka": "curadi", "ki": "curadi", "ga": "kryadi", "gi": "kryadi", "Ga": "adadi",
+    "ja": "bhvadi", "Ja": "bhvadi", "Ra": "bhvadi", "Wa": "bhvadi", "da": "tanadi",
+    "Da": "rudhadi", "na": "svadi", "pa": "tudadi", "Ba": "divadi", "mi": "bhvadi",
+    "ya": "divadi", "la": "adadi", "li": "juhotyadi", "lu": "adadi", "va": "bhvadi",
+    "Sa": "tudadi", "Si": "tudadi", "kza": "adadi",
+}
+_ANU_PADA = {"Na": "atmanepada", "Ya": "ubhayapada"}
+_ANU_OP = {
+    "a": "none", "A": "nishtha-vet", "i": "num", "ir": "ad-aug", "I": "anit-nishtha",
+    "u": "ktva-vet", "U": "vet", "f": "cang-ahrasva", "F": "cang-ahrasva-va", "x": "ang",
+    "e": "sic-avrddhi", "E": "yajadi", "o": "nishtha-na", "O": "anit", "Yi": "present-nishtha",
+    "wu": "athu", "qu": "krtrima", "za": "krd-ang", "ta": "adanta", "ra": "vaidika",
+}
+_ANU_KEY = {}
+for _d, _kind in ((_ANU_GANA, "gana"), (_ANU_PADA, "pada"), (_ANU_OP, "op")):
+    for _k, _v in _d.items():
+        _ANU_KEY[_k] = (_kind, _v)
+for _two in list(_ANU_KEY):        # bare-consonant variant: the slot may drop inherent 'a' (`i N`=ṅ)
+    if len(_two) == 2 and _two.endswith("a") and _two[0].isalpha():
+        _ANU_KEY.setdefault(_two[0], _ANU_KEY[_two])
+_ANU_GENDER = {"puM,", "klI,", "strI,", "tri,", "puM", "klI", "strI", "tri", "avya0", "[n]"}
+
+
+def skd_anubandha_slot(body):
+    """SKD's anubandha slot: the leading it-letter tokens after `¦`, before the meaning.
+    Returns [] for gender-marked nominal entries (so it never fires on a noun)."""
+    if "¦" not in body:
+        return []
+    out = []
+    for t in body.split("¦", 1)[1].lstrip(" ,").split():
+        if t in _ANU_GENDER:
+            return []
+        if t in _ANU_KEY or (len(t) <= 2 and re.fullmatch(r"[A-Za-zfFxX]+", t)):
+            out.append(t)
+        else:
+            break
+    return out
+
+
+def decode_anubandhas(slot):
+    """(gaṇa, pada, [operations]) from a slot per the Dhātudīpikā key. First gaṇa/pada wins;
+    pada only from ṅ/ñ (parasmaipada = unmarked default, deliberately NOT asserted here)."""
+    gana = pada = ""
+    ops = []
+    for t in slot:
+        kv = _ANU_KEY.get(t)
+        if not kv:
+            continue
+        kind, val = kv
+        if kind == "gana" and not gana:
+            gana = val
+        elif kind == "pada" and not pada:
+            pada = val
+        elif kind == "op":
+            ops.append(val)
+    return gana, pada, ops
+
+
+def analyze_entry(body, code=None):
+    """Return root-entry features, or None if the entry is not a verbal root. For SKD the
+    gaṇa/pada come from the Vopadeva anubandha slot (the authoritative Dhātudīpikā key);
+    other dicts use the `0`-marked / prose detectors."""
     cite = bool(_DHATU_SRC.search(body))
     annot = bool(_ANNOT.search(body)) and bool(_PADA_TRANS.search(body))
     if not (cite or annot):
@@ -159,16 +227,29 @@ def analyze_entry(body):
     if "¦" in body:                       # ¦ closes the headword
         after = body.split("¦", 1)[1]
         snip = " ".join(after.split(" iti ", 1)[0].split())[:60].strip()
+    gana = _first(body, _GANA)
+    pada = _first(body, _PADA)
+    anubandhas = ""
+    if code == "skd":                     # decode the Vopadeva slot (authoritative for SKD)
+        slot = skd_anubandha_slot(body)
+        if slot:
+            anubandhas = "|".join(slot)
+            a_gana, a_pada, _ops = decode_anubandhas(slot)
+            if a_gana:                    # anubandha gaṇa supersedes the crude detector
+                gana = a_gana
+            if a_pada and not pada:        # ṅ/ñ pada where the prose is silent
+                pada = a_pada
     return {
         "root_signal": signal,
         "dhatupatha_source": src,
-        "gana": _first(body, _GANA),
-        "pada": _first(body, _PADA),
+        "gana": gana,
+        "pada": pada,
         "transitivity": _first(body, _TRANS),
         "causative": int(bool(_CAUS.search(body))),
         "set": int(bool(_SET.search(body))),
         "anit": int(bool(_ANIT.search(body))),
         "vet": int(bool(_VET.search(body))),
+        "anubandhas": anubandhas,
         "gloss_snippet": snip,
     }
 
@@ -192,12 +273,13 @@ def probe(lemma, codes):
         for e in iter_entries(path):
             if e["k1"] != lemma:
                 continue
-            a = analyze_entry(e["body"])
+            a = analyze_entry(e["body"], code)
             if not a:
                 continue
-            tags = [a["gana"], a["pada"], a["transitivity"]] + [f for f in ("causative", "set", "anit") if a[f]]
+            tags = [a["gana"], a["pada"], a["transitivity"]] + [f for f in ("causative", "set", "anit", "vet") if a[f]]
             tags = ", ".join(t for t in tags if t)
-            print(f"  {code.upper():5s} L{e['L']:<7s} sig={a['root_signal']:<10s} [{tags or '-'}]  {a['gloss_snippet']!r}")
+            anu = f" anu={a['anubandhas']}" if a["anubandhas"] else ""
+            print(f"  {code.upper():5s} L{e['L']:<7s} sig={a['root_signal']:<10s} [{tags or '-'}]{anu}  {a['gloss_snippet']!r}")
 
 
 def main():
@@ -225,7 +307,8 @@ def main():
     by_dict = {}
     csv_path = os.path.join(OUT_DIR, "indigenous_roots.csv")
     fields = ["dict", "L", "k1", "root_signal", "dhatupatha_source",
-              "gana", "pada", "transitivity", "causative", "set", "anit", "vet", "gloss_snippet"]
+              "gana", "pada", "transitivity", "causative", "set", "anit", "vet",
+              "anubandhas", "gloss_snippet"]
     n_rows = 0
     with open(csv_path, "w", encoding="utf-8", newline="") as fcsv:
         w = csv.DictWriter(fcsv, fieldnames=fields)
@@ -238,7 +321,7 @@ def main():
                    "by_source": {}, "by_signal": {}, "by_gana": {}, "by_pada": {}, "by_transitivity": {}}
             for e in iter_entries(path):
                 agg["entries"] += 1
-                a = analyze_entry(e["body"])
+                a = analyze_entry(e["body"], code)
                 if not a:
                     continue
                 agg["root_entries"] += 1
@@ -274,11 +357,12 @@ def main():
                    "forms BvA0/curA0/…), pada (parasmaipada/ātmanepada/ubhayapada), transitivity "
                    "(sakarmaka/akarmaka), causative (preraṇe/ṇijanta), seṭ/aniṭ."),
         "caveats": ("PROTOTYPE. SKD/VCP read 0 under m1's <ab> apparatus but carry ~2k roots each — the "
-                    "0 was detector blindness (MICROSTRUCTURE_ZERO_MEANING.md). SKD encodes PADA via "
-                    "Vopadeva/Kavikalpadruma anubandhas; a cross-walk-validated decode key exists "
-                    "(MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md) but is HELD pending maintainer verification, so "
-                    "SKD pada/trans here are prose-only and lower than VCP's. gaṇa/pada/transitivity take "
-                    "the first match; abbreviated gaṇa forms (adA0/svA0) carry mild noise; veṭ (vew) now "
+                    "0 was detector blindness (MICROSTRUCTURE_ZERO_MEANING.md). SKD pada/gaṇa are now "
+                    "decoded from its Vopadeva anubandha slot via the authoritative Dhātudīpikā 46-anubandha "
+                    "key (MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md, verified against the Śabdakalpadruma front "
+                    "matter): the it-letters encode GAṆA + operations, only ṅ/ñ mark pada (parasmaipada is "
+                    "the unmarked default, not asserted); the slot token `ma` (72×) is undecoded. gaṇa/pada "
+                    "take the first match; abbreviated gaṇa forms (adA0/svA0) carry mild noise; veṭ (vew) "
                     "split into its own column. Sanity-checked: VCP pada parasmaipada>ubhaya>ātmane and "
                     "gaṇa bhvādi≫rest are linguistically correct."),
     }
