@@ -113,6 +113,32 @@ def pair_concordance(byroot, feat):
             for k in sorted(pair_tot, key=lambda k: -pair_tot[k])}
 
 
+def yat_citation_convention(byroot):
+    """Observation (NOT folded into the agreement measure): YAT cites bare verbal stems
+    (`BAj`, `Bram`) where the Sanskrit kośa tradition (SKD/VCP/KRM) keeps Vopadeva's
+    uccāraṇārtha -a (`BAja`, `Brama`). Count YAT roots that match a Sanskrit-dict root only
+    after restoring a trailing -a. A uniform -a strip WOULD add these to the agreement set
+    but also collides homographs (gaṇa compatibility 86.0%→81.2% in testing), so the
+    normalization is left as a maintainer-gated decision, not applied."""
+    sv = set()
+    for root, dicts in byroot.items():
+        for d in ("skd", "vcp", "krm"):
+            if d in dicts:
+                sv.add(root)
+                break
+    yat = {r for r, dd in byroot.items() if "yat" in dd}
+    exact = len(yat & sv)
+    restorable = sum(1 for y in yat if y not in sv and (y + "a") in sv)
+    return {
+        "note": ("YAT cites bare stems; SKD/VCP/KRM keep the uccāraṇārtha -a. YAT cross-dict "
+                 "agreement is therefore CONSERVATIVE (undercounts). A -a normalization is "
+                 "maintainer-gated (it collides homographs: gaṇa 86.0%→81.2%)."),
+        "yat_roots": len(yat),
+        "match_sanskrit_dict_exact": exact,
+        "match_only_after_restoring_trailing_a": restorable,
+    }
+
+
 def probe(root, byroot):
     print(f"\n--probe {root}: per-dict grammar labels\n" + "-" * 60)
     dicts = byroot.get(root)
@@ -164,7 +190,12 @@ def main():
                    "queue. SKD/SHS feature coverage is lower than VCP/KRM/YAT, so they contribute "
                    "fewer opinions."),
         "features": per_feature,
+        "yat_citation_convention": yat_citation_convention(byroot),
     }
+    cc = out["yat_citation_convention"]
+    print(f"\n  YAT citation convention: {cc['match_sanskrit_dict_exact']:,} YAT roots match a "
+          f"Sanskrit-dict root exactly; +{cc['match_only_after_restoring_trailing_a']:,} more only "
+          f"after restoring the uccāraṇārtha -a (maintainer-gated, not applied).")
     with open(os.path.join(DATA, "root_agreement.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
 

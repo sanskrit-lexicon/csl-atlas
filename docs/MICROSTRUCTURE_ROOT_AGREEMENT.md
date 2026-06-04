@@ -57,6 +57,24 @@ the homonym-split work (differing classification is usually legitimate lexicogra
 full list is in `root_feature_conflicts.csv` (`feature, root, skd, vcp, krm, yat, shs`),
 with `|`-joined sets where a dict itself gives several labels.
 
+## Side finding — YAT cites bare stems, the kośa tradition keeps the *uccāraṇārtha* -a
+
+Aligning the root sets surfaced a citation-convention difference worth recording. The
+Sanskrit kośa tradition (SKD/VCP/KRM) cites a root **with** Vopadeva's *uccāraṇārtha* -a —
+the bare "for-pronunciation" vowel — so `bhāj` appears as `BAja`, `bhram` as `Brama`.
+**Yates strips it**, citing the bare stem `BAj`, `Bram`. Consequence:
+
+- **513** YAT roots match a Sanskrit-dict root exactly;
+- **+953** more match *only* after restoring a trailing -a.
+
+So YAT's cross-dict agreement above is **conservative** — it undercounts, because most
+YAT roots fail the exact-key match. A uniform -a strip would recover them, but it also
+**collides homographs** (gaṇa compatibility falls 86.0% → 81.2% in testing, i.e. it
+manufactures false conflicts). Normalising root identity across citation conventions is a
+lexicographic judgement, so it is **left to the maintainer** (the same gate applied to the
+`di0`/`sO0` gaṇa short-forms and the siglum-alias table) and is reported in
+`root_agreement.json → yat_citation_convention`, not folded into the measure.
+
 ## Method & caveats
 
 Group m4 rows by SLP1 root; per `(dict, root)` collect the **set** of labels (union over

@@ -177,5 +177,11 @@
         }
       }
     }
+  },
+  "yat_citation_convention": {
+    "note": "YAT cites bare stems; SKD/VCP/KRM keep the uccāraṇārtha -a. YAT cross-dict agreement is therefore CONSERVATIVE (undercounts). A -a normalization is maintainer-gated (it collides homographs: gaṇa 86.0%→81.2%).",
+    "yat_roots": 1608,
+    "match_sanskrit_dict_exact": 513,
+    "match_only_after_restoring_trailing_a": 953
   }
 }
