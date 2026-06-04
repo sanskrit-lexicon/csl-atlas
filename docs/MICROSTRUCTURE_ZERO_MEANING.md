@@ -92,10 +92,27 @@ VCP (Vācaspatya) is the same indigenous style (`DAtuH` ×164, `parasmEpadI` ×8
 (Identical to the citation lesson in [`../data/forensic/CITATION_TAGGING.md`](../data/forensic/CITATION_TAGGING.md):
 "0 `<ls>` ≠ citation-free.")
 
-## To actually measure SKD/VCP verbal microstructure
+## Measuring SKD/VCP verbal microstructure — prototyped (M4)
 
-It needs a **separate indigenous-marker parser** (`m-indigenous`, not a tweak to `m1`) keyed on the
-prose tokens above: `dhātuḥ` root detection, `preraṇe`/ṇic forms (causative), conjugation-class names
-(`bhvādi`, `adādi`, `curādi`, …), pada/voice, transitivity, and `iti`-source attribution. Until that
-exists, SKD/VCP/SHS/YAT must be reported as **out of scope for the `<ab>`/`<div>` detectors**, not as
-zero-structure dictionaries.
+[`scripts/lexico/m4_indigenous.py`](../scripts/lexico/m4_indigenous.py) is the indigenous-tradition
+counterpart to `m1`. It flags a **verbal-root entry** by its dhātupāṭha citation — the Kavikalpadruma
+(`iti kavikalpadrumaH`, 2,135× in SKD) is purely a root-list, so citing it ⟹ a root — and tallies the
+clean indigenous features inside: `preraṇe`/ṇijanta (causative), `seṭ`/`aniṭ`, `bhvādi` (class 1).
+
+**First results** — for the very dicts that read **0** under `m1`'s `<ab>` apparatus:
+
+| dict | indigenous roots (M4) | seṭ | aniṭ | causative | `<ab>` markers (M1) |
+|---|---|---|---|---|---|
+| **SKD** | **2,536** | 1,967 | 301 | 17 | **0** |
+| KRM (dedicated verb-root dict) | 203 | 154 | 3 | 4 | 0 |
+| **VCP** | 43 † | 21 | 6 | 1 | **0** |
+
+† **lower bound** — VCP cites its dhātupāṭha source by name far less than SKD; its 1,980 corpus-wide
+`seṭ` markers imply a much larger root layer needing a non-citation root signal (the `seṭ`/`aniṭ` or
+anubandha annotation) — the next refinement.
+
+So SKD's "0" became **2,536 verbal roots** the moment the detector matched the dictionary's *own*
+convention. The prototype is deliberately conservative — the other gaṇa names collide with the `-ādi`
+("etc.") suffix and are excluded; meaning is a raw snippet; pada/transitivity abbreviations are
+omitted — a feasibility proof, not a finished parser. But it settles the methodological point:
+**the 0 was the detector, never the dictionary.**
