@@ -1,0 +1,234 @@
+{
+  "dicts": {
+    "acc": {
+      "entries": 49822,
+      "root_entries": 10,
+      "causative": 0,
+      "set": 0,
+      "anit": 0,
+      "by_source": {
+        "kavikalpadruma": 6,
+        "durgadasa": 4
+      },
+      "by_signal": {
+        "citation": 10
+      },
+      "by_gana": {},
+      "by_pada": {},
+      "by_transitivity": {}
+    },
+    "cae": {
+      "entries": 40069,
+      "root_entries": 1,
+      "causative": 0,
+      "set": 0,
+      "anit": 0,
+      "by_source": {
+        "durgadasa": 1
+      },
+      "by_signal": {
+        "citation": 1
+      },
+      "by_gana": {},
+      "by_pada": {},
+      "by_transitivity": {}
+    },
+    "krm": {
+      "entries": 2061,
+      "root_entries": 1757,
+      "causative": 21,
+      "set": 1696,
+      "anit": 15,
+      "by_source": {
+        "(annotation-only)": 1554,
+        "dhatupatha": 190,
+        "kavikalpadruma": 11,
+        "durgadasa": 2
+      },
+      "by_signal": {
+        "annotation": 1554,
+        "both": 156,
+        "citation": 47
+      },
+      "by_gana": {
+        "bhvadi": 944,
+        "curadi": 441,
+        "adadi": 51,
+        "svadi": 20,
+        "tudadi": 127,
+        "divadi": 98,
+        "kryadi": 45,
+        "rudhadi": 11,
+        "tanadi": 8,
+        "juhotyadi": 10
+      },
+      "by_pada": {
+        "parasmaipada": 109,
+        "atmanepada": 43,
+        "ubhayapada": 18
+      },
+      "by_transitivity": {
+        "sakarmaka": 28,
+        "akarmaka": 10
+      }
+    },
+    "mw72": {
+      "entries": 55388,
+      "root_entries": 1,
+      "causative": 0,
+      "set": 1,
+      "anit": 0,
+      "by_source": {
+        "(annotation-only)": 1
+      },
+      "by_signal": {
+        "annotation": 1
+      },
+      "by_gana": {},
+      "by_pada": {},
+      "by_transitivity": {}
+    },
+    "pw": {
+      "entries": 170556,
+      "root_entries": 3,
+      "causative": 0,
+      "set": 0,
+      "anit": 0,
+      "by_source": {
+        "kavikalpadruma": 1,
+        "durgadasa": 2
+      },
+      "by_signal": {
+        "citation": 3
+      },
+      "by_gana": {},
+      "by_pada": {},
+      "by_transitivity": {}
+    },
+    "pwg": {
+      "entries": 123366,
+      "root_entries": 8,
+      "causative": 0,
+      "set": 0,
+      "anit": 0,
+      "by_source": {
+        "kavikalpadruma": 3,
+        "durgadasa": 3,
+        "dhatupatha": 2
+      },
+      "by_signal": {
+        "citation": 8
+      },
+      "by_gana": {},
+      "by_pada": {},
+      "by_transitivity": {}
+    },
+    "shs": {
+      "entries": 47326,
+      "root_entries": 463,
+      "causative": 3,
+      "set": 415,
+      "anit": 63,
+      "by_source": {
+        "(annotation-only)": 463
+      },
+      "by_signal": {
+        "annotation": 463
+      },
+      "by_gana": {
+        "bhvadi": 157,
+        "divadi": 16,
+        "tudadi": 15,
+        "curadi": 23,
+        "svadi": 9,
+        "adadi": 9,
+        "juhotyadi": 1
+      },
+      "by_pada": {
+        "ubhayapada": 96,
+        "parasmaipada": 130,
+        "atmanepada": 10
+      },
+      "by_transitivity": {
+        "sakarmaka": 204,
+        "akarmaka": 62
+      }
+    },
+    "skd": {
+      "entries": 42531,
+      "root_entries": 2544,
+      "causative": 17,
+      "set": 1973,
+      "anit": 303,
+      "by_source": {
+        "durgadasa": 320,
+        "kavikalpadruma": 2201,
+        "dhatupatha": 15,
+        "(annotation-only)": 8
+      },
+      "by_signal": {
+        "citation": 1390,
+        "both": 1146,
+        "annotation": 8
+      },
+      "by_gana": {
+        "curadi": 199,
+        "bhvadi": 658,
+        "adadi": 42,
+        "svadi": 18,
+        "divadi": 82,
+        "tudadi": 70,
+        "kryadi": 28,
+        "rudhadi": 12,
+        "tanadi": 5
+      },
+      "by_pada": {
+        "parasmaipada": 779,
+        "ubhayapada": 110,
+        "atmanepada": 278
+      },
+      "by_transitivity": {
+        "sakarmaka": 839,
+        "akarmaka": 311
+      }
+    },
+    "vcp": {
+      "entries": 50135,
+      "root_entries": 2230,
+      "causative": 24,
+      "set": 1950,
+      "anit": 276,
+      "by_source": {
+        "dhatupatha": 12,
+        "(annotation-only)": 2187,
+        "kavikalpadruma": 22,
+        "durgadasa": 9
+      },
+      "by_signal": {
+        "citation": 17,
+        "annotation": 2187,
+        "both": 26
+      },
+      "by_gana": {
+        "bhvadi": 1152,
+        "curadi": 146,
+        "svadi": 38,
+        "divadi": 85,
+        "adadi": 63,
+        "kryadi": 29,
+        "rudhadi": 12,
+        "tudadi": 58,
+        "tanadi": 10
+      },
+      "by_pada": {
+        "atmanepada": 248,
+        "ubhayapada": 525,
+        "parasmaipada": 1124
+      },
+      "by_transitivity": {
+        "sakarmaka": 1680,
+        "akarmaka": 503
+      }
+    }
+  }
+}

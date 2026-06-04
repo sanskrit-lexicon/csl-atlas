@@ -1,0 +1,27 @@
+{
+  "prototype": true,
+  "csv_rows": 7017,
+  "dicts_with_roots": [
+    "acc",
+    "cae",
+    "krm",
+    "mw72",
+    "pw",
+    "pwg",
+    "shs",
+    "skd",
+    "vcp"
+  ],
+  "headline": {
+    "skd": {
+      "indigenous_roots_m4": 2544,
+      "ab_markers_m1": 0
+    },
+    "vcp": {
+      "indigenous_roots_m4": 2230,
+      "ab_markers_m1": 0
+    }
+  },
+  "method": "Root = (1) dhātupāṭha citation OR (2) the seṭ/aniṭ + pada/transitivity annotation (recorded in root_signal). Emitted columns: gaṇa (bhvādi…curādi, via VCP's 0-marked forms BvA0/curA0/…), pada (parasmaipada/ātmanepada/ubhayapada), transitivity (sakarmaka/akarmaka), causative (preraṇe/ṇijanta), seṭ/aniṭ.",
+  "caveats": "PROTOTYPE. SKD/VCP read 0 under m1's <ab> apparatus but carry ~2k roots each — the 0 was detector blindness (MICROSTRUCTURE_ZERO_MEANING.md). SKD encodes pada/transitivity mostly via undecoded anubandha it-markers, so its gaṇa/pada/transitivity coverage is lower than VCP's; gaṇa/pada/transitivity take the first match; abbreviated gaṇa forms (adA0/svA0) carry mild noise; veṭ not split. Sanity-checked: VCP pada parasmaipada>ubhaya>ātmane and gaṇa bhvādi≫rest are linguistically correct."
+}
