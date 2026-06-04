@@ -248,7 +248,7 @@ Validation should fail if:
 Update:
 
 - `README.md`
-- `docs/PROJECT_SPEC.md`
+- `docs/BOUNDARY_RULES.md`
 - `HANDOFF.md`
 
 Document:

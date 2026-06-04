@@ -13,7 +13,7 @@
     "Every source not present in 'map' (after base-form fallback) resolves to 'unknown' and should enter the source-layer review queue."
   ],
   "warnings": [
-    "8293 distinct source abbreviations are unmapped and resolve to \"unknown\" (source-layer review queue, UC-DIA-07)."
+    "8293 distinct source abbreviations are unmapped and resolve to \"unknown\" (source-siglum review queue, UC-LX-05 / UC-RV-03)."
   ],
   "layerOrder": [
     "vedic",

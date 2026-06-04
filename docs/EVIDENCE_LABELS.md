@@ -18,7 +18,7 @@ These are the canonical labels used in all generated data (`evidenceLevels` fiel
 
 | Label | Reader-friendly name | Meaning | Example |
 |---|---|---|---|
-| `observed` | in the source | Directly present in a dictionary, corpus export, or source file | An MW record contains `<lex>m.</lex>` |
+| `observed` | in the source | Directly present in a dictionary source record | An MW record contains `<lex>m.</lex>` |
 | `derived` | computed | Produced by a fixed, reproducible rule from observed data | The record is classified as `noun-m` because of that `<lex>m.</lex>` |
 | `inferred` | probable | A useful heuristic that has not been verified; may be wrong | A lexical family inferred from a shared headword prefix |
 | `reviewed` | checked | A human has confirmed or corrected the value | A reviewer accepted a dictionary alignment |
@@ -44,7 +44,7 @@ Dictionary data can *look* more certain than it is. Three common traps:
 - **Diachronic / period layers.** The atlas maps source abbreviations to conservative period layers (`vedic`, `epic`, `classical`, …). This is `derived` at best and often `inferred`. It is **not** exact dating. See `ARCHITECTURE.md` for the period-layer policy.
 - **Lexicographer-only entries.** A word whose only citation is `L.` is genuine lexicographic evidence but weaker than a textual attestation. It is flagged so readers do not over-trust it.
 
-The project's anti-goals (`docs/USE_CASES.md`, AUC-05) state the rule plainly: **weak evidence must be visibly marked.** Inferred families, uncertain period layers, low-confidence alignments, and dictionary-only claims are never presented as if they were observed facts.
+The project's anti-goals (`docs/USE_CASES.md`, AUC-06) state the rule plainly: **weak evidence must be visibly marked.** Inferred families, uncertain period layers, low-confidence alignments, and dictionary-only claims are never presented as if they were observed facts.
 
 ## Where Labels Appear
 
@@ -71,4 +71,4 @@ For the full review-status vocabulary and how corrections are recorded, see [`do
 - [`docs/DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md) — the reader-facing lookup guide.
 - [`docs/REVIEW_REPORTS.md`](REVIEW_REPORTS.md) — how machine claims become reviewed claims.
 - `ARCHITECTURE.md` — the core certainty principle and the diachronic-scale caveats.
-- `docs/USE_CASES.md` — UC-RD-15, UC-TEACH-03, and the anti-goals on hiding weak evidence.
+- `docs/USE_CASES.md` — UC-RD-05 and the anti-use case on hiding weak evidence.

@@ -3,14 +3,27 @@ title: Dictionary coverage matrix
 toc: false
 ---
 
-# Dictionary coverage matrix
-
+# ${t("phase2.coverage-matrix.title")}
 Which of the seven target dictionaries (MW, AP, PWG, PWK, WIL, VCP, SKD) cover which lemmas. Lemmas are grouped by normalized SLP1 headword.
 
 ```js
 const cov = FileAttachment("../data/dicts/coverage-matrix.json").json();
 const unique = FileAttachment("../data/dicts/dictionary-unique.json").json();
 const intersection = FileAttachment("../data/dicts/all-intersection.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -20,21 +33,21 @@ import * as Plot from "npm:@observablehq/plot";
 ```js
 display(html`<div style="display:flex;gap:24px;flex-wrap:wrap;margin:8px 0">
   ${[
-    ["Distinct lemmas", cov.distinctLemmas.toLocaleString()],
-    ["Shared by all 7", intersection.count.toLocaleString()],
-    ["Dictionaries", Object.keys(cov.lemmasByDict).length]
+    [t("phase2.coverage-matrix.distinct-lemmas"), cov.distinctLemmas.toLocaleString()],
+    [t("phase2.coverage-matrix.shared-by-all"), intersection.count.toLocaleString()],
+    [t("phase2.coverage-matrix.dictionaries"), Object.keys(cov.lemmasByDict).length]
   ].map(([l, v]) => html`<div><div style="font-size:1.8rem;font-weight:700">${v}</div><div style="color:var(--theme-foreground-muted);font-size:.85rem">${l}</div></div>`)}
 </div>`);
 ```
 
-## Lemmas per dictionary
+## ${t("phase2.coverage-matrix.lemmas-per-dict")}
 
 ```js
 const byDict = Object.entries(cov.lemmasByDict).map(([dict, lemmas]) => ({ dict, lemmas, unique: unique.unique[dict]?.count ?? 0 }));
 display(Plot.plot({
   marginLeft: 60,
   height: 280,
-  x: { label: "distinct lemmas", grid: true },
+  x: { label: t("phase2.coverage-matrix.distinct-lemmas"), grid: true },
   y: { label: null, sort: { y: "x", reverse: true } },
   marks: [
     Plot.barX(byDict, { x: "lemmas", y: "dict", fill: "var(--theme-foreground-faint)" }),
@@ -46,23 +59,23 @@ display(Plot.plot({
 
 <div class="note">Dark bar = lemmas unique to that dictionary (present in no other target dictionary).</div>
 
-## How many dictionaries cover a lemma?
+## ${t("phase2.coverage-matrix.how-many-cover")}
 
 ```js
 const hist = Object.entries(cov.coverageHistogram).map(([n, count]) => ({ n: +n, count })).sort((a, b) => a.n - b.n);
 display(Plot.plot({
   height: 280,
-  x: { label: "in how many dictionaries", tickFormat: "d" },
-  y: { label: "lemmas", grid: true },
+  x: { label: t("phase2.coverage-matrix.in-how-many"), tickFormat: "d" },
+  y: { label: t("phase2.coverage-matrix.lemmas"), grid: true },
   marks: [Plot.barY(hist, { x: "n", y: "count", fill: "var(--theme-foreground-focus)" }), Plot.ruleY([0])]
 }));
 ```
 
-## Most common dictionary combinations
+## ${t("phase2.coverage-matrix.most-common-combinations")}
 
 ```js
-display(Inputs.table(cov.topCombinations.map(c => ({ combination: c.dicts.join(" + "), dictionaries: c.size, lemmas: c.count })), {
-  columns: ["combination", "dictionaries", "lemmas"],
+display(Inputs.table(cov.topCombinations.map(c => ({ [t("phase2.coverage-matrix.combination")]: c.dicts.join(" + "), [t("phase2.coverage-matrix.dictionaries")]: c.size, [t("phase2.coverage-matrix.lemmas")]: c.count })), {
+  columns: [t("phase2.coverage-matrix.combination"), t("phase2.coverage-matrix.dictionaries"), t("phase2.coverage-matrix.lemmas")],
   sort: "lemmas",
   reverse: true
 }));

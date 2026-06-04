@@ -1,0 +1,429 @@
+# Metalexicography roadmap — measuring digital-edition richness
+
+**Version**: 1.0 · **Date**: 2026-05-16 · **Owner**: M. Gasūns + Claude Code
+**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](L0_DESIGN.md)
+
+Boundary update 2026-06-04: atlas may measure dictionary markup richness and
+dictionary structure. TEI/OntoLex/FrAC/SHACL/RDF export, validation, and
+publication pipelines belong in `csl-standards`; GitHub/org dashboards belong in
+`csl-observatory`.
+
+This doc plans the measurement of **what each digital edition adds, omits, encodes, and exposes** — distinct from the historical comparison of source contents. It's the meta-layer: the dictionaries-as-software story.
+
+It addresses three large questions:
+
+1. **Are all 35 digital editions equally rich?** No. Quantify the differences.
+2. **Has MW received disproportionate attention** in the last 30 years? Prove with markup-richness data.
+3. **What features did CDSL ADD** that weren't in the printed originals? Inventory and quantify them.
+
+This stream produces material for **Paper M §4.1.6** (data-richness as KPI), **Paper L §6** (digital edition vs print), and a possible new **Paper E** (engineering/edition) covering the digital-edition history of CDSL.
+
+---
+
+## 1. The data richness typology (10 levels)
+
+A scaled framework. Each digital edition can be placed on this scale.
+
+| Level | Name | What's required | Example dicts at this level |
+|---|---|---|---|
+| **L0** | **Scan-only** | PDF page images; no text content | Patel-2016 scan-only set (PD, PE, PGN, IEG, MWE, AE, SNP, YAT) |
+| **L1** | **Plain text** | OCR'd or keyboarded UTF-8; no markup | early state of all dicts before triage |
+| **L2** | **Entry boundaries** | `<L>NNNN` … `<LEND>` markers separate entries | most dicts at minimum |
+| **L3** | **Headword / body separation** | `<k1>` for primary, `<k2>` for variants | most well-processed dicts |
+| **L4** | **Lexical metadata tags** | `<lex>` (category), `<gen>` (gender) | MW, AP, AP90, PWG, … |
+| **L5** | **Citation tagging** | `<ls>` for literary sources, structured | MW (gold), PWG (gold), AP (good), others (partial) |
+| **L6** | **Sense structure** | numbered or hierarchical senses; `<sense n="1">` or equivalent | MW (full), PWG (good), most others (partial) |
+| **L7** | **Cross-reference tagging** | entry-to-entry pointers as machine-readable links | MW (full), few others |
+| **L8** | **Scan-page linking** | each entry → page image of original print | major modern push (Dictionary-to-Book) — MW most complete |
+| **L9** | **Cross-dictionary integration** | each headword → corresponding entries in other CDSL dicts | nascent; alternateheadwords, csl-lslink |
+| **L10** | **Full structured semantic web** | external TEI/RDF publication via `csl-standards` | aspirational; not yet achieved by any CDSL dict |
+
+**Hypothesis**: MW is the only dict at L8+; most others sit at L4-L6; specialised ones at L3-L5; scan-only ones at L0.
+
+This typology becomes a **single ordinal metric per dict** (the *richness level*) and **multiple component metrics** (presence/absence per feature).
+
+---
+
+## 2. Measurable richness dimensions (~30 KPIs)
+
+Per-dictionary, computed from source XML.
+
+### 2.1 Markup density
+| KPI | Method | Why it matters |
+|---|---|---|
+| Distinct tag count | count `<X>` distinct tag names | richer schema = more semantic distinctions |
+| Total tag count | count all `<X>` occurrences | depth of encoding work |
+| Tags per entry (mean, median) | total tags / entry count | per-entry markup investment |
+| Max tag depth | max nesting level | hierarchical structure presence |
+| Tag/text ratio | tag chars / total chars | how "structured" vs "prose" the data is |
+
+### 2.2 Semantic tag presence (binary per dict)
+| Tag family | Presence indicates |
+|---|---|
+| `<lex>` | lexical category encoded |
+| `<gen>` | grammatical gender encoded |
+| `<num>` | number encoded |
+| `<ls>` | literary source citations machine-readable |
+| `<ab>` | abbreviation expansions encoded |
+| `{#…#}` | SLP1 boundaries marked |
+| `{%…%}` | display-italic semantics preserved |
+| `<k1>`/`<k2>` | primary/variant headword distinction |
+| `<sense>` or numbering | sense structure machine-readable |
+| `<bookref>` (or equivalent) | scan-page linking present |
+| `<dictlink>` (or equivalent) | cross-dictionary linking present |
+
+### 2.3 Citation richness (the truncation insight, applied at edition level)
+| KPI | Method |
+|---|---|
+| Mean citation depth (text→book→chapter→verse) | parse `<ls>` content, measure components |
+| Citation completeness | % of `<ls>` with full hierarchy vs truncated |
+| Distinct cited works | count unique text-name strings in `<ls>` content |
+| Citation density (per entry) | total `<ls>` / entry count |
+
+### 2.4 Cross-reference richness
+| KPI | Method |
+|---|---|
+| Internal references per entry | count `<k1>` recurrences inside body of other entries |
+| External/dict references | count refs that point to other CDSL dicts |
+| Bidirectional link count | refs that resolve in both directions |
+
+### 2.5 Print-source linking (the CDSL-added feature)
+| KPI | Method |
+|---|---|
+| Print-page coverage % | % of entries with `<page>` or `<bookref>` to scan |
+| Image-link presence | % of entries linked to scan image |
+| Pagination granularity | per-page, per-column, per-entry |
+
+### 2.6 Editorial overlay (corrections after digitisation)
+| KPI | Method |
+|---|---|
+| Correction issues filed | count from GitHub issues per dict |
+| Correction issues resolved | closed-issue count |
+| Editorial notes (`<note>`, `<corr>`) embedded in XML | count tags |
+| Patel-fingerprint normalisation conformance | how close to Patel's standard? |
+
+### 2.7 Metadata completeness
+| KPI | Method |
+|---|---|
+| CITATION.cff present + complete | check schema fields |
+| README richness | char count + section count |
+| Schema/DTD documentation | presence of formal schema file |
+| API exposure | does csl-apidev expose this dict? |
+| App exposure | does csl-app surface this dict? |
+
+---
+
+## 3. The "MW gets all the attention" hypothesis
+
+**Claim**: Monier-Williams (MW, 1899) has received disproportionate digital-edition attention in the last 30 years.
+
+**Operationalisation** (multiple converging evidence streams):
+
+| Evidence stream | Metric | How to measure |
+|---|---|---|
+| Markup richness | richness level (L0-L10) per dict | from §1 typology |
+| Per-entry markup density | tags per entry (mean) | from §2.1 |
+| Citation linking completeness | % of `<ls>` with full text→verse | from §2.3 |
+| Cross-reference density | refs per entry | from §2.4 |
+| Print-page link coverage % | from §2.5 |
+| GitHub issue volume | issues opened (lifetime, normalised by entry count) | from observatory snapshots |
+| Commit volume | commits (lifetime, normalised by entry count) | from observatory snapshots |
+| Contributor count | distinct contributors per dict | from observatory snapshots |
+| Multiple-edition presence | does MW have multiple parallel digital editions in CDSL? | yes: MW72 + MW(1899) + MWS variants |
+| Downstream surface area | # of CDSL tools that consume this dict | csl-apidev, csl-app, csl-inflect, csl-devanagari, alternateheadwords, etc. |
+| Citation in other CDSL repos | count cross-repo references | grep |
+
+**Visualisation**: a single radar chart per dict on these axes. MW's polygon should dominate. If it doesn't, we revise the hypothesis.
+
+**Counter-hypothesis to test**: maybe PWG or PWK has equal or greater digital investment, just less visible. Worth showing in the same chart.
+
+---
+
+## 4. CDSL-added features inventory (post-print enhancements)
+
+The user's insight: "We are adding features, like Dictionary to Book links, that were not present in the original dictionary."
+
+### 4.1 Catalogue of added features
+
+| Feature | What it does | When added | Coverage |
+|---|---|---|---|
+| **Dictionary→Book linking** | Entry → scan page of printed source | ongoing 2014-now | uneven (MW high, others lower) |
+| **Cross-dictionary lookup** | Same lemma → entries in other CDSL dicts | ongoing | partial via alternateheadwords |
+| **Devanagari rendering at runtime** | SLP1 → Devanagari display | mature | universal via csl-devanagari |
+| **Inflected-form lookup** | Surface forms → lemma | partial | csl-inflect (MW only mostly) |
+| **API access** | RESTful query over all dicts | mature | csl-apidev |
+| **Mobile/desktop app** | Native UI surfacing dicts | newer | csl-app (Flutter) |
+| **Search across dicts** | One query → many results | mature | csl-websanlexicon (web), csl-app (mobile) |
+| **Per-issue correction workflow** | Track + fix errors via GitHub issues | mature, formalised by runbook | universal across 35 dicts |
+| **Roundtrip-encoding validation** | SLP1 ↔ IAST ↔ Devanagari | partial | implemented for some dicts |
+| **JSON export** | Machine-readable dict export | mature | csl-json |
+| **SQLite distribution** | Compiled queryable DB | mature | csl-sqlite |
+| **Stardict / Babylon export** | Conversion for offline dict apps | mature | cologne-stardict |
+| **Lemma normalisation index** | Patel-style normalised headword index | new | hwnorm1, hwnorm2 |
+| **Headword variant index** | All known spelling variants per lemma | new | alternateheadwords |
+| **Literary-source link resolver** | `<ls>` → external scan of cited text | new | csl-lslink |
+| **Atharvaveda / Rigveda hymn pages** | Display individual hymns linked from dict citations | new | avlinks, rvlinks |
+| **Pipeline DAG** | Orchestrated data-flow for builds | mature | csl-pywork |
+| **Tooling-runbook** | Standardised issue taxonomy across all repos | new (2026, this project) | universal |
+| **Live observatory** | Cross-repo metrics dashboard | external sibling project | csl-observatory |
+
+### 4.2 Per-dict feature coverage matrix
+
+35 dicts × ~20 features = a presence/absence matrix. Compute coverage % per dict and per feature.
+
+**Expected patterns**:
+- MW = highest feature coverage (everything)
+- PWG/PWK/MD/AP = high coverage (most features)
+- Specialised dicts = lower (scope-limited)
+- Russian dicts (KNA, KOW) = currently lowest (recent additions, less integrated)
+
+This becomes a heatmap chart on the dashboard.
+
+---
+
+## 5. Roadmap for data-structure evolution
+
+**Where we are**: most dicts at L4-L6; MW at L8.
+**Where we want to be**: all dicts at L8+ minimum; flagship dicts at L9-L10.
+
+### 5.1 Target end-state (5-year horizon)
+
+For every CDSL dictionary:
+
+- [ ] **L8 minimum**: every entry linked to scan page
+- [ ] **L9 stretch**: cross-dict linking active for every shared lemma
+- [ ] **L10 aspirational**: external `csl-standards` export available; queryable via SPARQL
+
+### 5.2 Per-level uplift recipes
+
+| From → To | Required work | Effort estimate |
+|---|---|---|
+| L0 → L1 | OCR or keyboard the text | weeks per dict |
+| L1 → L2 | Add `<L>NNNN` boundaries via regex on source | hours per dict |
+| L2 → L3 | Identify and tag `<k1>` and `<k2>` headwords | days per dict |
+| L3 → L4 | Tag lexical categories (often present in source as abbreviations like `m.`, `f.`, `n.`) | days |
+| L4 → L5 | Identify literary-source citations and wrap in `<ls>` | weeks |
+| L5 → L6 | Detect and structure senses (often by `1.`, `;`, `2.` patterns) | weeks |
+| L6 → L7 | Detect cross-references and mark | days-weeks |
+| L7 → L8 | Match each entry to scan-page coordinates | months (MW already done) |
+| L8 → L9 | Build cross-dict lemma matching | new infrastructure |
+| L9 → L10 | external TEI/RDF conversion + SPARQL endpoint | `csl-standards` infrastructure |
+
+### 5.3 Recommended priority by dict family
+
+1. **First wave** (already at L7-L8): finish L8 for AP, AP90, PWG, PWK
+2. **Second wave** (at L4-L6): bring SCH, CCS, CAE, MD, WIL, BHS up to L7
+3. **Third wave** (at L2-L4): bring specialised dicts (VEI, INM, MCI) to L5
+4. **Fourth wave** (at L0-L1): ingest scan-only dicts (PD, MWE, etc.) and bring to L3
+
+### 5.4 Engineering investments needed
+
+- **Standard schema**: hand off atlas evidence to `csl-standards` for unified TEI/OntoLex profile work
+- **Migration scripts**: per-source-dict converters to the unified schema
+- **Validation harness**: continuous integration that flags schema violations
+- **Cross-dict link infrastructure**: new tooling for L9 (extending alternateheadwords + csl-lslink)
+- **SPARQL endpoint**: new infrastructure for L10
+- **Editorial UI**: more accessible than git+text for non-engineer contributors
+
+---
+
+## 6. Hypothesis: KOW = Russian translation of WIL
+
+**Claim** (M.G. domain knowledge): KOW (Kossowich, ~1854) is a Russian translation/adaptation of WIL (Wilson, 1832).
+
+**Temporal plausibility**: WIL 1832 → KOW ~1854 = 22-year gap. Plausible.
+
+### 6.1 Convergent evidence to gather
+
+| Evidence | Method | Strength |
+|---|---|---|
+| Lemma-set Jaccard (WIL ∩ KOW) | set comparison after Patel normalisation | strong if >0.95 |
+| Lemma-set order preservation | per-letter ordering | medium |
+| Sense-count parallelism | for shared lemmas, do KOW glosses match WIL sense-count? | strong if matches |
+| Translation correspondence | machine-translate WIL English → Russian, compare to KOW Russian | strong if >0.7 cosine |
+| Citation set similarity (language-neutral) | compare `<ls>` sets | medium |
+| Citation order preservation | `<ls>` sequence per entry | strong if matches |
+| Forensic typo / OCR-error sharing | rare cross-dict error pairs | strongest if found |
+| Page-correspondence | KOW's page numbering related to WIL's? | medium |
+| Editorial preface evidence | does KOW preface mention Wilson? | check Cologne scan |
+
+### 6.2 Phase L1.5 (KOW⇄WIL focused study)
+
+A targeted mini-study to test the WIL→KOW hypothesis:
+1. Parse both dicts to lemma → glosses → citations
+2. Compute the 8 evidence metrics above
+3. Bayesian combine into single posterior P(WIL → KOW | evidence)
+4. Publish: dashboard chart + paper paragraph in Paper L §6
+5. If confirmed: KOW becomes the test-case for cross-language inheritance methodology — applicable to other unknown pairs (e.g. is BUR a French translation of any specific source?)
+
+**Output**: `data/wil_kow_evidence.csv` + a side-by-side display widget on the dashboard.
+
+---
+
+## 7. The "MW gets all the attention" study (parallel to L0)
+
+A specific cross-cutting analysis using all the metalexicography KPIs from §2-§4.
+
+### 7.1 Charts to produce
+
+1. **Single radar chart per dict** with normalised KPIs (markup density, citation richness, cross-ref count, Dictionary-to-Book coverage, downstream surface area). MW's polygon should encompass others.
+2. **30-year attention timeline** for MW vs PWG vs AP: commits + issues per year, side-by-side
+3. **Feature coverage heatmap**: 35 dicts × 20 added-by-CDSL features
+4. **Investment-equivalent chart**: each dict's volunteer-hours estimate (from Phase A) divided by entry count → "minutes invested per entry"
+
+### 7.2 Expected paper findings
+
+- MW's per-entry investment is 5-10× the median dict
+- MW is the ONLY dict at L8 (full Dictionary→Book linking)
+- MW has the deepest XML markup
+- MW is referenced in the most other CDSL repos
+- BUT: PWG has comparable per-entry investment when normalised (it's foundational)
+
+This becomes the **opening paragraph of Paper L §6** — empirically substantiating an oft-stated but never-quantified claim.
+
+---
+
+## 8. Implementation phases (added to lexicography stream)
+
+| Phase | Name | Effort | Output |
+|---|---|---|---|
+| **L0** | Convention fingerprint cladogram | ~5d | first phylogenetic tree (already designed) |
+| **L1.5** | KOW⇄WIL focused study | ~3d | proof of WIL→KOW + cross-language methodology validation |
+| **M1** | Data-richness typology assignment | ~3d | every dict placed on L0-L10 scale |
+| **M2** | Markup density KPIs | ~3d | the 30 KPIs in §2 |
+| **M3** | "MW gets all the attention" study | ~2d | radar charts + investment timeline |
+| **M4** | Added-features inventory matrix | ~2d | 35×20 coverage heatmap |
+| **M5** | Data-structure evolution roadmap recommendations per dict | ~3d | actionable per-dict uplift plan |
+| **M6** | External standards handoff | ~5d | compact atlas evidence for `csl-standards` |
+
+Total metalexicography stream: ~21 days (3 weeks active work, spread across 6 months).
+
+---
+
+## 9. New paper opportunity: Paper E
+
+**Paper E** — *Engineering an open digital lexicographic infrastructure: the CDSL data-richness story*
+
+Audience: digital infrastructure venues (Dlib Magazine, IJDL, JCDL), TEI consortium, lexicography community.
+
+Contribution: Documenting the technical evolution of 35 dictionaries from scan-only PDFs to integrated digital infrastructure, with the data-richness typology as the measurement framework.
+
+Sections:
+1. Introduction — digital editions as data infrastructure (not just text)
+2. Related work — TEI Lex-0, FAIR principles for lexical data
+3. The 10-level data-richness typology (proposed)
+4. Application to CDSL: which dicts are at which level and why
+5. The MW exception: why one dict received disproportionate investment
+6. Added features inventory: what CDSL added beyond the printed originals
+7. The roadmap: where each dict should be in 5 years
+8. Discussion: lessons for other DH infrastructure projects
+9. Conclusion
+
+Length: 15-20 pages, fits IJDL well.
+
+---
+
+## 10. Decisions locked (2026-05-16 round 3)
+
+| Question | Decision |
+|---|---|
+| L10 target schema | Atlas keeps native dictionary evidence; `csl-standards` owns TEI Lex-0 and OntoLex-Lemon exports. |
+| L0 vs L1.5 ordering | **Parallel**: L0 (convention fingerprint, no XML needed) and L1.5 (KOW⇄WIL focused study, needs XML) run on independent code paths simultaneously |
+| Paper E status | **Merged into Paper M** as the data-quality treatment. Paper M expands to: KPI catalog + measurement framework + data-quality typology. One stronger methodological paper instead of two competing ones |
+| CDSL-added features inventory | **Augment via Cologne-site scrape**: GitHub repos miss runtime/UI-only features. New phase **M0a** (web scrape of sanskrit-lexicon.uni-koeln.de pages) feeds the §4 inventory |
+
+## 11. New Phase M0a — Cologne web feature scrape (~1 day)
+
+Discover runtime / UI / display-layer features not visible from GitHub source alone.
+
+### What to fetch
+- Top-level `https://www.sanskrit-lexicon.uni-koeln.de/`
+- Per-dict display URLs (e.g. `/scans/MWScan/2014/web/`, `/monier/indexcaller.php`)
+- API endpoints (`/scans/csl-apidev/...`)
+- Display-tool URLs (transcoder, search, simple-search)
+- Documentation pages (csldoc, where reachable)
+
+### What to extract
+- List of distinct dictionary display interfaces (each = one CDSL-added "display-layer feature")
+- Search-tool variants (simple-search, advanced, fuzzy, glob, etc.)
+- Mobile/desktop integration mentions
+- Acknowledged contributor list (for `people.yaml` enrichment)
+- Any documentation of dictionary derivation (lineage ground truth)
+
+### Output
+- `data/cologne_features.csv` — feature presence per dict from the live site
+- `data/cologne_acknowledgments.csv` — credited people from the site
+- Updates to §4.1 features inventory
+
+## 12. Updated Paper M outline (now incorporating Paper E content)
+
+**Paper M (revised)**: *A measurement framework for digital lexicography: KPI catalog, data-quality typology, and the CDSL case*
+
+The framework has now **two contributions** rolled into one paper:
+1. The KPI catalog (4 dimensions × 30+ metrics, original Paper M scope)
+2. The data-richness typology (L0-L10, originally Paper E scope) with worked example
+
+Total length: ~25 pages (longer than original M, but more substantive). Sections:
+- §1 Introduction (rolled hooks: measurement gap + data-richness story)
+- §2 Related work (added: TEI Lex-0, OntoLex-Lemon, CHAOSS, GHOST)
+- §3 Method part A — KPI catalog (the original Paper M)
+- §4 Method part B — Data richness typology L0-L10 (the original Paper E)
+- §5 Worked example: CDSL — KPIs + richness levels
+- §6 The MW exception (the §3 hypothesis from this doc)
+- §7 Discussion: how data quality conditions all measurement
+- §8 Recommendations + future work
+- §9 Conclusion
+
+## 13. Updated phase plan (parallel L0 + L1.5 + M0a)
+
+Three phases run in parallel from session 1:
+
+| Phase | Code path | Effort | Output |
+|---|---|---|---|
+| **L0** | `lexico/conventions.py` | ~5d | 27-tree cladogram + validation |
+| **L1.5** | `lexico/wil_kow.py` | ~3d | KOW⇄WIL evidence matrix + posterior |
+| **M0a** | `lexico/cologne_scrape.py` | ~1d | Cologne site features inventory |
+
+After all three complete:
+- **M1-M5** (richness KPIs, MW study, evolution roadmap) draw on L0 and M0a outputs
+- **L1-L9** (full corpus mining) is the next major branch
+- **Paper M** drafting begins after L0 + M1 + M3 produce data
+
+## 13b. Locked execution details (2026-05-16 round 4)
+
+| Question | Decision |
+|---|---|
+| L1.5 Russian-text handling | **All three signals combined** in Bayesian posterior: (a) lemma + citation set overlap (language-neutral); (b) machine-translate WIL English→Russian, cosine vs KOW; (c) machine-translate KOW Russian→English, cosine vs WIL |
+| Annotation provenance | **File-level metadata header** in each CSV: annotators (name + ORCID), date created, dimensions covered. No per-cell tracking |
+| First-cladogram sharing | **Commit + GH Actions redeploy + dashboard link**. Full pipeline, public viewing at `/lexicography/conventions/` |
+| Execution start | **HOLD** — more design pending |
+
+## 14. Dictionary-Schema Handoff Strategy (per decision §10)
+
+Atlas owns the native dictionary-evidence side only. External publication
+schemas are handoff targets for `csl-standards`, not atlas deliverables.
+
+### Native schema, external exports
+
+#### Native CDSL schema (`csl-schema/v1.xsd`)
+- Captures everything: Patel-normalised headwords, citation tags, sense structure, scan-page links, cross-dict refs, all CDSL-specific features
+- Authoritative; XML source files convert to this
+- Validation harness in CI
+
+#### TEI Lex-0 handoff (`csl-standards`)
+- Atlas may provide dictionary evidence and mapping notes.
+- `csl-standards` owns any TEI generator, validation profile, and publication
+  decision.
+
+#### OntoLex-Lemon handoff (`csl-standards`)
+- Atlas may provide dictionary evidence and loss-case examples.
+- `csl-standards` owns RDF/JSON-LD stress tests, SHACL validation, and any
+  future RDF publication.
+
+### Phase plan for atlas-side schema work (post-L0/L1.5)
+
+| Phase | Output |
+|---|---|
+| **M6a** — Native schema design | XSD + documentation + per-dict mapping notes |
+| **M6b** — Standards handoff notes | Dictionary evidence and known loss cases for `csl-standards` |
+| **M6c** — Boundary check | Confirm no TEI/OntoLex/RDF generation is added to atlas scripts |

@@ -2,7 +2,7 @@
 //
 // Emits review reports conforming to data/schema/review-report.schema.json for
 // the MW source abbreviations that do not yet map to a diachronic layer
-// (UC-DIA-07). A reviewer classifies each into a layer by adding it to
+// (UC-LX-05 / UC-RV-03). A reviewer classifies each into a layer by adding it to
 // src/data/mw-source-layers.json; once mapped it drops out of this queue.
 //
 // Reviews are an overlay preserved across rebuilds by reviewId (same contract

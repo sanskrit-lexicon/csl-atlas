@@ -11,9 +11,15 @@ A comparative microstructural atlas of **nine narrative Sanskrit-dictionary chap
 
 ---
 
+## Reader mode
+
+Start with the [Reader lookup](/tools/reader-lookup) for dictionary-first search across MW, AP, PWG, PWK, WIL, VCP, and SKD. It accepts SLP1 and IAST headwords, shows dictionary coverage and source links, and keeps machine-derived evidence visibly labeled. The [dictionary user guide](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md) explains which dictionary to start with; [evidence labels](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) explain `observed`, `derived`, `inferred`, and `reviewed`.
+
+---
+
 ## Evidence atlas — quantitative tracks
 
-Beyond the paper, the atlas is building deterministic, source-linked, evidence-labelled tracks over the CDSL dictionaries and corpus. Every count links back to a source record; uncertainty (`observed` / `derived` / `inferred`) is always visible. See [`ARCHITECTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/ARCHITECTURE.md) and the [reader guide](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md).
+Beyond the paper, the atlas is building deterministic, source-linked, evidence-labelled tracks over the CDSL dictionaries. Every count links back to a source record; uncertainty (`observed` / `derived` / `inferred`) is always visible. See [`ARCHITECTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/ARCHITECTURE.md) and the [reader guide](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md).
 
 <div class="card-grid">
 
@@ -25,9 +31,9 @@ Monier-Williams anatomy at scale: [depth dashboard](/tools/mw-depth-dashboard) (
 
 Seven dictionaries (MW, AP, PWG, PWK, WIL, VCP, SKD) compared: [coverage matrix](/tools/dictionary-coverage-matrix) · [pairwise overlap](/tools/dictionary-overlap) · [gender conflicts](/tools/dictionary-conflicts) · [homonym splits](/tools/dictionary-homonyms) · [citation apparatus](/tools/dictionary-citations) · [sense depth](/tools/dictionary-senses) · [**lemma dossier** (look up a word)](/tools/dictionary-dossier).
 
-### Corpus · Phase 3
+### Dictionary structure
 
-[DCS corpus inventory](/tools/dcs-corpus-inventory) — 184 texts and the word-grammar profile of the Digital Corpus of Sanskrit reference export.
+[Dictionary genealogy](/tools/lexicography), [convention fingerprints](/tools/lexicographic-conventions), and R2 [sense alignment](/tools/r2-explorer) / [sense granularity](/tools/r2-h1) move dictionary-structure research into the atlas path.
 
 ### Review queues
 
@@ -72,7 +78,6 @@ One consolidated study of Monier-Williams 1899 — a data-grounded body, triangu
 - **[Lexicographic timeline](/tools/timeline)** — 6th c. — 2024
 - **[Type comparator](/tools/type-comparator)** — pick two types, see block differences
 - **[Citation tracer](/tools/citation-tracer)** — click a source, see all entries
-- **[Interoperability hard cases](/tools/interoperability-hard-cases)** — 50 sampled MW-led hard cases
 
 ### Browse the 9 dictionaries (Decision 29 order)
 

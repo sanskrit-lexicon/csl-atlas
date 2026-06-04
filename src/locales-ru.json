@@ -136,30 +136,6 @@
     "HALĀY.": "Халаюдха",
     "H. an.": "Хемачандра Анекартха-санграха"
   },
-  "interop": {
-    "title": "Сложные случаи интероперабельности MW-PWG-PWK",
-    "description": "Этот инструмент показывает 50 автоматически отобранных сложных случаев для трека интероперабельности MW-PWG-PWK.",
-    "select-language": "Выберите язык",
-    "case-label": "Случай",
-    "phenomena": "Явления",
-    "loss-hints": "Подсказки о потере смысла",
-    "machine-loss-reports": "Машинные отчеты о потере смысла",
-    "source-records": "Исходные записи словарной статьи",
-    "review-slice": "Проверенный срез TEI/OntoLex",
-    "review-rank": "проверка",
-    "links": {
-      "neutral": "Нейтральная модель JSON",
-      "tei": "Профиль TEI (.xml)",
-      "ontolex": "Профиль OntoLex/FrAC (.json)",
-      "loss": "Отчеты о потере JSON",
-      "rdf": "RDF Turtle (.ttl)",
-      "teiReview": "TEI review JSON",
-      "ontolexReview": "OntoLex/RDF review JSON"
-    },
-    "full-validation": "Полная машинная проверка 50 случаев",
-    "tei-status": "TEI ODD/profile",
-    "rdf-status": "OntoLex/RDF SHACL/profile"
-  },
   "status": {
     "partial": "частичный",
     "lossy": "с потерей",
@@ -169,18 +145,131 @@
     "machine": "машинный",
     "reviewed": "проверен человеком"
   },
-  "failure": {
-    "model-vocabulary-gap": "пробел-в-словаре-модели",
-    "print-compression": "печатное-сжатие",
-    "cdsl-markup-gap": "пробел-в-разметке-cdsl",
-    "none": "отсутствует"
+  "reader": {
+    "lookup": {
+      "title": "Поиск для читателя",
+      "description": "Поиск по словарям MW, AP, PWG, PWK, WIL, VCP и SKD. Результаты сначала показывают ссылки на источники и предупреждения о данных.",
+      "indexed-lemmas": "Индексированные леммы",
+      "dictionaries": "Словари",
+      "minimum-coverage": "Минимальное покрытие",
+      "input-schemes": "Схемы ввода",
+      "query": "Заглавное слово",
+      "placeholder": "напр. agni, śiva, akṣa, aMSa",
+      "normalized": "Нормализованный запрос",
+      "exact-match": "точное совпадение",
+      "prefix-matches": "совпадений по началу",
+      "showing-examples": "Показаны примеры лемм",
+      "no-result": "Заглавное слово не найдено",
+      "no-result-note": "Попробуйте форму SLP1 или IAST. Леммы с малым покрытием опущены в этой статической версии; поиск не разбирает композиты, sandhi и полный текст статей.",
+      "coverage": "покрытие",
+      "record": "запись",
+      "records": "записи",
+      "gender": "род/POS",
+      "gender-unknown": "род/POS не извлечен",
+      "caveat": "Reader Lookup v1 - статический поиск по словарным леммам, засвидетельствованным минимум в четырех целевых словарях. Это не корпусный поиск, не поиск по пассажам и не LexemeHub. Научные термины должны быть проверены редактором."
+    }
   },
-  "phenomenon": {
-    "generic-lexicographer-hedge": "ограничитель-лексикографа",
-    "root-as-entry": "корень-как-статья",
-    "root-as-derivational-base": "корень-как-база-деривации",
-    "compound-subentry": "композит-подстатья",
-    "compound-decomposition": "декомпозиция-композита",
-    "continuation-parent": "продолжение-родитель"
+  "phase1": {
+    "mw-depth": {
+      "title": "Количественная глубина MW",
+      "article-types": "Типы статей",
+      "compound-depth": "Глубина композитов",
+      "strongest-overlaps": "Сильнейшие пересечения типов",
+      "records": "Записи",
+      "citations": "Цитаты",
+      "mean-citations": "Ср. цитат / запись",
+      "records-membership": "записи (принадлежность)",
+      "segments-k2": "сегменты в <k2>"
+    },
+    "diachronic": {
+      "title": "Диахронические слои MW",
+      "records-by-layer": "Записи по принадлежности к слою",
+      "earliest-layer": "Самый ранний слой на запись",
+      "unmapped-sources": "Неразмеченные источники — очередь на проверку",
+      "records": "записи"
+    },
+    "family": {
+      "title": "Глубина лексических семейств MW",
+      "depth-vs-breadth": "Глубина против широты",
+      "deepest-families": "Самые глубокие семейства",
+      "members-breadth": "члены (широта) →",
+      "max-compound-depth": "↑ макс. глубина композита"
+    },
+    "typology": {
+      "title": "Древовидная карта типологии",
+      "reading": "Чтение карты",
+      "examples": "Примеры статей"
+    }
+  },
+  "phase2": {
+    "coverage-matrix": {
+      "title": "Матрица покрытия словарей",
+      "distinct-lemmas": "Различные леммы",
+      "shared-by-all": "Общие для всех 7",
+      "dictionaries": "Словари",
+      "lemmas-per-dict": "Лемм в словаре",
+      "how-many-cover": "Сколько словарей содержат лемму?",
+      "most-common-combinations": "Самые частые комбинации словарей",
+      "combination": "комбинация",
+      "lemmas": "леммы",
+      "in-how-many": "в скольких словарях"
+    },
+    "overlap": {
+      "title": "Попарное пересечение словарей",
+      "pairwise-table": "Таблица попарного пересечения",
+      "dict-a": "словарь А",
+      "dict-b": "словарь Б",
+      "shared-lemmas": "общие леммы",
+      "jaccard": "коэфф. Жаккара"
+    },
+    "conflicts": {
+      "title": "Разногласия по роду между словарями",
+      "alignment-confidence": "Уверенность в выравнивании",
+      "lemma": "лемма",
+      "sources": "источники"
+    },
+    "homonyms": {
+      "title": "Разделение омонимов по словарям",
+      "spread-of-disagreement": "Разброс разногласий",
+      "widest-disagreements": "Самые большие разногласия",
+      "max-homonyms": "макс. омонимов в любом словаре",
+      "lemmas-shown": "леммы (показано)",
+      "lemma": "лемма",
+      "max": "макс.",
+      "spread": "разброс",
+      "sources": "источники"
+    },
+    "citations": {
+      "title": "Аппарат цитирования",
+      "density": "Плотность цитирования",
+      "citations-per-entry": "цитат на статью",
+      "apparatus-breadth": "Широта аппарата (словари с тегами)",
+      "distinct-source-sigla": "различные синглы источников",
+      "most-cited-sources": "Самые цитируемые источники по словарям",
+      "dictionary": "Словарь",
+      "rank": "ранг",
+      "source": "источник",
+      "citations": "цитаты",
+      "shared-sources": "Общие источники между словарями",
+      "in-n-dicts": "в N словарях",
+      "shared-sigla-jaccard": "общие синглы (Жаккар)"
+    },
+    "senses": {
+      "title": "Глубина значений",
+      "sense-richness": "Богатство значений по словарям",
+      "mean-sense-divisions": "ср. число делений значений на статью",
+      "deepest-treatment": "Самая глубокая проработка (для общих лемм)",
+      "largest-gaps": "Самые большие разрывы в глубине значений",
+      "lemma": "лемма",
+      "gap": "разрыв",
+      "deepest": "самый глубокий",
+      "sources": "источники"
+    },
+    "dossier": {
+      "title": "Словарное досье леммы",
+      "lemma": "Лемма",
+      "placeholder": "напр. agni, deva, dharma (SLP1)",
+      "in": "в"
+    }
   }
 }

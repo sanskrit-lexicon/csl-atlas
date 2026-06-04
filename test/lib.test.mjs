@@ -20,6 +20,7 @@ import { genderFromLex, genderFromProse, genderForDict } from "../scripts/lib/di
 import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/dict-align.mjs";
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
+import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma } from "../src/lib/lookup-normalize.js";
 
 // ---- mw-parser ----
 test("parseHeader extracts flat header fields", () => {
@@ -122,6 +123,29 @@ test("normalizeLemma strips accents and trailing digits", () => {
   assert.deepEqual(normalizeLemma("a/MSa"), { normalized: "aMSa", changed: true });
   assert.deepEqual(normalizeLemma("agni"), { normalized: "agni", changed: false });
   assert.equal(normalizeLemma("agni2").normalized, "agni");
+});
+
+test("normalizeSlp1Lemma mirrors dictionary headword normalization", () => {
+  assert.deepEqual(normalizeSlp1Lemma("a/MSa"), { normalized: "aMSa", changed: true });
+  assert.equal(normalizeSlp1Lemma("o~").normalized, "o");
+  assert.equal(normalizeSlp1Lemma("agni2").normalized, "agni");
+});
+
+test("iastToSlp1 transliterates common IAST queries", () => {
+  assert.equal(iastToSlp1("agni"), "agni");
+  assert.equal(iastToSlp1("śiva"), "Siva");
+  assert.equal(iastToSlp1("ṛta"), "fta");
+  assert.equal(iastToSlp1("mahābhārata"), "mahABArata");
+  assert.equal(iastToSlp1("saṃskṛta"), "saMskfta");
+});
+
+test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", () => {
+  assert.deepEqual(normalizeLookupQuery("aMSa").candidates, ["aMSa"]);
+  assert.deepEqual(normalizeLookupQuery("a/MSa").candidates, ["aMSa"]);
+  assert.deepEqual(normalizeLookupQuery("śiva").candidates, ["Siva"]);
+  assert.deepEqual(normalizeLookupQuery("dharma").candidates, ["dharma", "Darma"]);
+  assert.deepEqual(normalizeLookupQuery("Agni").candidates, ["Agni", "agni"]);
+  assert.deepEqual(normalizeLookupQuery("Dharma").candidates, ["Dharma", "dharma", "Darma"]);
 });
 
 // ---- dict-parser ----

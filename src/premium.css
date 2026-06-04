@@ -1,0 +1,161 @@
+/* Premium UI Enhancements */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  color: #1c1e21;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  background: linear-gradient(90deg, #1f78b4 0%, #6a3d9a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Glassmorphism Cards & Panels */
+.case-card, .summary-band, .dictionary-record {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Micro-animations */
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+  color: #1f78b4;
+}
+
+.metric-value {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #2a9d8f 0%, #1f78b4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-row span {
+  transition: all 0.2s ease;
+}
+
+.badge-row span:hover {
+  transform: scale(1.05);
+}
+
+/* Inputs and Forms */
+input[type="text"], select, .observablehq-input {
+  border-radius: 8px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.2s ease !important;
+  font-family: 'Inter', sans-serif;
+}
+
+input[type="text"]:focus, select:focus {
+  outline: none;
+  border-color: #1f78b4 !important;
+  box-shadow: 0 0 0 3px rgba(31, 120, 180, 0.15) !important;
+}
+
+/* Dark Mode Support via prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #e2e8f0;
+  }
+  
+  .case-card, .summary-band, .dictionary-record {
+    background: rgba(30, 41, 59, 0.65) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    background: linear-gradient(90deg, #60a5fa 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  input[type="text"], select, .observablehq-input {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #e2e8f0 !important;
+  }
+}
+
+/* 
+ * ----------------------------------------
+ * UX & Accessibility (A11y) Enhancements
+ * ----------------------------------------
+ */
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Premium Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.8);
+}
+
+/* Responsive Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.observablehq table, .table-container {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Focus States for Keyboard Navigation */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 2px solid #1f78b4 !important;
+  outline-offset: 2px !important;
+  border-radius: 4px;
+}
+
+/* Clickable affordances */
+summary {
+  cursor: pointer;
+  user-select: none;
+}
+button, label, select {
+  cursor: pointer;
+}

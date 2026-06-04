@@ -142,8 +142,8 @@ The curated error sample is small (123) and weighted toward scan-era artefacts a
 separately-keyed MW could not share in any case. The citation result proves shared
 *sources/editions*, not yet a shared *mistake*: independent use of the same edition can
 match. The airtight upgrade is a shared **erroneous** citation — a verse number wrong
-against the actual text, present in both — verifiable against a digital corpus
-(Digital Corpus of Sanskrit). That is the deferred Phase F4.
+against the actual text, present in both — verifiable against external
+DCS/VisualDCS corpus evidence. That test is outside `csl-atlas`.
 
 ## 7. Reproducibility
 

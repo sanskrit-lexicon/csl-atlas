@@ -18,7 +18,7 @@ question -> coverage / overlap / conflict view -> aligned entries -> source link
 
 - **MW Quantitative Depth (Phase 1) is stable.** The MW parser and classifiers are the reference implementation other dictionary parsers imitate.
 - **Coverage layer exists.** `npm run build-coverage` already scans every local `../csl-orig/v02/<code>/<code>.txt` and writes `dictionary-coverage.json` (43 dictionaries, ~1.5M entries; see `docs/ALL_DICTIONARY_COVERAGE.md`). That layer answers "how big / what fit band" per dictionary and is the entry point for comparison.
-- **Do not build `LexemeHub` yet.** Comparison must produce real conflicts *before* a universal alignment object is justified (`ARCHITECTURE.md`, AUC-08). The first pass aligns pairwise and by normalized headword only.
+- **Do not build `LexemeHub` yet.** Comparison must produce real conflicts *before* a universal alignment object is justified (`ARCHITECTURE.md`; `docs/USE_CASES.md`, AUC-05). The first pass aligns pairwise and by normalized headword only.
 
 ## Comparison Levels
 
@@ -67,11 +67,11 @@ Generate compact JSON under `src/data/dicts/`:
 - `coverage-matrix.json` — dictionary × normalized-lemma presence.
 - `pairwise-overlap.json` — MW↔AP, MW↔PWG, PWG↔PWK, etc. (UC-CD-02).
 - `all-intersection.json` — lemmas present in every target dictionary (UC-CD-03).
-- `pos-disagreement.json` — POS/gender conflicts with snippets (UC-CD-04 / UC-CD-05).
-- `sense-depth.json` — sense and gloss-depth ranking with caveats (UC-CD-06).
-- `citation-apparatus.json` — citation density / source overlap (UC-CD-07).
-- `dictionary-unique.json` — per-dictionary unique vocabulary (UC-LX-13).
-- `alignment-confidence.json` — confidence distribution and the review queue (UC-CD-09).
+- `pos-disagreement.json` — POS/gender conflicts with snippets (UC-CD-04).
+- `sense-depth.json` — sense and gloss-depth ranking with caveats (UC-LX-04).
+- `citation-apparatus.json` — citation density / source overlap (UC-RD-06).
+- `dictionary-unique.json` — per-dictionary unique vocabulary (UC-LX-03).
+- `alignment-confidence.json` — confidence distribution and the review queue (UC-CD-05).
 - `dictionary-comparison-validation.json` — validation report.
 
 Each file carries the standard envelope: `schemaVersion`, `generatedAt`, `sourcePath`, `recordCount`, `assumptions`, `warnings`, and per-finding `evidenceLevel`.
@@ -85,17 +85,18 @@ Following the Visualization Series in `ARCHITECTURE.md` and UC-VIZ-02/03:
 - `src/tools/dictionary-conflicts.md` — POS/gender disagreement tables with source links.
 - `src/tools/dictionary-dossier.md` — per-lemma side-by-side view (UC-RD-03, the reader-facing payoff).
 
-Every table keeps small examples with source links so any number can be debugged back to a record (UC-DEV-14).
+Every table keeps small examples with source links so any number can be debugged back to a record (UC-DEV-04).
 
 ## Review Queues
 
 Comparison is the largest producer of review work. Wire these into the shared review-report format ([`docs/REVIEW_REPORTS.md`](REVIEW_REPORTS.md)):
 
-- low-confidence alignment queue (UC-RV-01);
-- POS/gender conflict queue (UC-RV-02);
-- manual alignment correction (UC-LX-15 / UC-RV-08).
+- low-confidence alignment queue (UC-CD-05 / UC-RV-03);
+- POS/gender conflict queue (UC-CD-04 / UC-RV-03);
+- manual alignment correction (UC-RV-01).
 
-Do not scatter one-off report shapes; reuse `scripts/select-review-cases.mjs` precedent.
+Do not scatter one-off report shapes; reuse the shared review-report helpers in
+`scripts/lib/review-report.mjs`.
 
 ## Acceptance Criteria
 
@@ -109,14 +110,14 @@ Do not scatter one-off report shapes; reuse `scripts/select-review-cases.mjs` pr
 
 ## Non-Goals (Phase 2)
 
-- No `LexemeHub` universal object yet (AUC-08).
-- No corpus comparison — that is Phase 3 (`docs/DCS_CORPUS_INGESTION_PLAN.md`).
-- No exact dating from citations (AUC-01).
-- No flattening of German or Sanskrit-Sanskrit evidence into English-only summaries (AUC-09).
+- No `LexemeHub` universal object yet (AUC-05).
+- No corpus comparison; DCS/corpus work belongs in VisualDCS or a future grammar repo.
+- No exact dating from citations.
+- No flattening of German or Sanskrit-Sanskrit evidence into English-only summaries.
 
 ## Related Documents
 
 - `ARCHITECTURE.md` — Track 2, common data model, Comparative Dictionary Series.
 - `docs/ALL_DICTIONARY_COVERAGE.md` — the coverage/size/fit layer this builds on.
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) and [`docs/REVIEW_REPORTS.md`](REVIEW_REPORTS.md).
-- `docs/USE_CASES.md` — UC-CD-01 through UC-CD-10, UC-LX-09 through UC-LX-15.
+- `docs/USE_CASES.md` — UC-CD-01 through UC-CD-06 and UC-LX-01 through UC-LX-05.

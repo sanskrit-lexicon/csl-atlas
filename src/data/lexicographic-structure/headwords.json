@@ -1,0 +1,395 @@
+{
+  "abch": {
+    "dict_id": "ABCH",
+    "source_file": "csl-orig/v02/abch/abch.txt",
+    "L_count": 1965,
+    "LEND_count": 1965,
+    "balanced": true,
+    "bytes": 581805,
+    "lines": 13771
+  },
+  "acc": {
+    "dict_id": "ACC",
+    "source_file": "csl-orig/v02/acc/acc.txt",
+    "L_count": 49822,
+    "LEND_count": 49822,
+    "balanced": true,
+    "bytes": 8165272,
+    "lines": 214398
+  },
+  "acph": {
+    "dict_id": "ACPH",
+    "source_file": "csl-orig/v02/acph/acph.txt",
+    "L_count": 163,
+    "LEND_count": 163,
+    "balanced": true,
+    "bytes": 63631,
+    "lines": 1369
+  },
+  "acsj": {
+    "dict_id": "ACSJ",
+    "source_file": "csl-orig/v02/acsj/acsj.txt",
+    "L_count": 240,
+    "LEND_count": 240,
+    "balanced": true,
+    "bytes": 50122,
+    "lines": 1557
+  },
+  "ae": {
+    "dict_id": "AE",
+    "source_file": "csl-orig/v02/ae/ae.txt",
+    "L_count": 11364,
+    "LEND_count": 11364,
+    "balanced": true,
+    "bytes": 3414292,
+    "lines": 89612
+  },
+  "ap": {
+    "dict_id": "AP",
+    "source_file": "csl-orig/v02/ap/ap.txt",
+    "L_count": 90613,
+    "LEND_count": 90613,
+    "balanced": true,
+    "bytes": 18445932,
+    "lines": 506933
+  },
+  "ap90": {
+    "dict_id": "AP90",
+    "source_file": "csl-orig/v02/ap90/ap90.txt",
+    "L_count": 34882,
+    "LEND_count": 34882,
+    "balanced": true,
+    "bytes": 11728560,
+    "lines": 273716
+  },
+  "armh": {
+    "dict_id": "ARMH",
+    "source_file": "csl-orig/v02/armh/armh.txt",
+    "L_count": 7907,
+    "LEND_count": 7907,
+    "balanced": true,
+    "bytes": 1346702,
+    "lines": 47059
+  },
+  "ben": {
+    "dict_id": "BEN",
+    "source_file": "csl-orig/v02/ben/ben.txt",
+    "L_count": 17310,
+    "LEND_count": 17310,
+    "balanced": true,
+    "bytes": 5781850,
+    "lines": 129059
+  },
+  "bhs": {
+    "dict_id": "BHS",
+    "source_file": "csl-orig/v02/bhs/bhs.txt",
+    "L_count": 17839,
+    "LEND_count": 17839,
+    "balanced": true,
+    "bytes": 7594921,
+    "lines": 71445
+  },
+  "bop": {
+    "dict_id": "BOP",
+    "source_file": "csl-orig/v02/bop/bop.txt",
+    "L_count": 8961,
+    "LEND_count": 8961,
+    "balanced": true,
+    "bytes": 2116921,
+    "lines": 56283
+  },
+  "bor": {
+    "dict_id": "BOR",
+    "source_file": "csl-orig/v02/bor/bor.txt",
+    "L_count": 24609,
+    "LEND_count": 24609,
+    "balanced": true,
+    "bytes": 5651555,
+    "lines": 141021
+  },
+  "bur": {
+    "dict_id": "BUR",
+    "source_file": "csl-orig/v02/bur/bur.txt",
+    "L_count": 19776,
+    "LEND_count": 19776,
+    "balanced": true,
+    "bytes": 4832013,
+    "lines": 99481
+  },
+  "cae": {
+    "dict_id": "CAE",
+    "source_file": "csl-orig/v02/cae/cae.txt",
+    "L_count": 40069,
+    "LEND_count": 40069,
+    "balanced": true,
+    "bytes": 5274175,
+    "lines": 135797
+  },
+  "ccs": {
+    "dict_id": "CCS",
+    "source_file": "csl-orig/v02/ccs/ccs.txt",
+    "L_count": 30010,
+    "LEND_count": 30010,
+    "balanced": true,
+    "bytes": 3570845,
+    "lines": 139083
+  },
+  "fri": {
+    "dict_id": "FRI",
+    "source_file": "csl-orig/v02/fri/fri.txt",
+    "L_count": 8155,
+    "LEND_count": 8155,
+    "balanced": true,
+    "bytes": 2305509,
+    "lines": 47479
+  },
+  "gra": {
+    "dict_id": "GRA",
+    "source_file": "csl-orig/v02/gra/gra.txt",
+    "L_count": 12785,
+    "LEND_count": 12785,
+    "balanced": true,
+    "bytes": 6333655,
+    "lines": 79895
+  },
+  "gst": {
+    "dict_id": "GST",
+    "source_file": "csl-orig/v02/gst/gst.txt",
+    "L_count": 6780,
+    "LEND_count": 6780,
+    "balanced": true,
+    "bytes": 2648665,
+    "lines": 57037
+  },
+  "ieg": {
+    "dict_id": "IEG",
+    "source_file": "csl-orig/v02/ieg/ieg.txt",
+    "L_count": 7907,
+    "LEND_count": 7907,
+    "balanced": true,
+    "bytes": 1675107,
+    "lines": 53140
+  },
+  "inm": {
+    "dict_id": "INM",
+    "source_file": "csl-orig/v02/inm/inm.txt",
+    "L_count": 12647,
+    "LEND_count": 12647,
+    "balanced": true,
+    "bytes": 7012520,
+    "lines": 138243
+  },
+  "krm": {
+    "dict_id": "KRM",
+    "source_file": "csl-orig/v02/krm/krm.txt",
+    "L_count": 2061,
+    "LEND_count": 2061,
+    "balanced": true,
+    "bytes": 3362516,
+    "lines": 56231
+  },
+  "lan": {
+    "dict_id": "LAN",
+    "source_file": "csl-orig/v02/lan/lan.txt",
+    "L_count": 4944,
+    "LEND_count": 4944,
+    "balanced": true,
+    "bytes": 1402263,
+    "lines": 27921
+  },
+  "lrv": {
+    "dict_id": "LRV",
+    "source_file": "csl-orig/v02/lrv/lrv.txt",
+    "L_count": 53441,
+    "LEND_count": 53441,
+    "balanced": true,
+    "bytes": 7103308,
+    "lines": 160327
+  },
+  "mci": {
+    "dict_id": "MCI",
+    "source_file": "csl-orig/v02/mci/mci.txt",
+    "L_count": 2643,
+    "LEND_count": 2643,
+    "balanced": true,
+    "bytes": 3658873,
+    "lines": 87794
+  },
+  "md": {
+    "dict_id": "MD",
+    "source_file": "csl-orig/v02/md/md.txt",
+    "L_count": 20749,
+    "LEND_count": 20749,
+    "balanced": true,
+    "bytes": 6180592,
+    "lines": 83041
+  },
+  "mw": {
+    "dict_id": "MW",
+    "source_file": "csl-orig/v02/mw/mw.txt",
+    "L_count": 286558,
+    "LEND_count": 286558,
+    "balanced": true,
+    "bytes": 50164660,
+    "lines": 877335
+  },
+  "mw72": {
+    "dict_id": "MW72",
+    "source_file": "csl-orig/v02/mw72/mw72.txt",
+    "L_count": 55388,
+    "LEND_count": 55388,
+    "balanced": true,
+    "bytes": 17165090,
+    "lines": 443094
+  },
+  "mwe": {
+    "dict_id": "MWE",
+    "source_file": "csl-orig/v02/mwe/mwe.txt",
+    "L_count": 32378,
+    "LEND_count": 32378,
+    "balanced": true,
+    "bytes": 8404811,
+    "lines": 186990
+  },
+  "pe": {
+    "dict_id": "PE",
+    "source_file": "csl-orig/v02/pe/pe.txt",
+    "L_count": 8799,
+    "LEND_count": 8799,
+    "balanced": true,
+    "bytes": 6498341,
+    "lines": 144817
+  },
+  "pgn": {
+    "dict_id": "PGN",
+    "source_file": "csl-orig/v02/pgn/pgn.txt",
+    "L_count": 485,
+    "LEND_count": 485,
+    "balanced": true,
+    "bytes": 828990,
+    "lines": 17586
+  },
+  "pui": {
+    "dict_id": "PUI",
+    "source_file": "csl-orig/v02/pui/pui.txt",
+    "L_count": 17512,
+    "LEND_count": 17512,
+    "balanced": true,
+    "bytes": 3916209,
+    "lines": 120327
+  },
+  "pw": {
+    "dict_id": "PW",
+    "source_file": "csl-orig/v02/pw/pw.txt",
+    "L_count": 170556,
+    "LEND_count": 170556,
+    "balanced": true,
+    "bytes": 31336052,
+    "lines": 643112
+  },
+  "pwg": {
+    "dict_id": "PWG",
+    "source_file": "csl-orig/v02/pwg/pwg.txt",
+    "L_count": 123366,
+    "LEND_count": 123366,
+    "balanced": true,
+    "bytes": 51707124,
+    "lines": 1129106
+  },
+  "pwkvn": {
+    "dict_id": "PWKVN",
+    "source_file": "csl-orig/v02/pwkvn/pwkvn.txt",
+    "L_count": 24976,
+    "LEND_count": 24976,
+    "balanced": true,
+    "bytes": 3064754,
+    "lines": 74929
+  },
+  "sch": {
+    "dict_id": "SCH",
+    "source_file": "csl-orig/v02/sch/sch.txt",
+    "L_count": 29125,
+    "LEND_count": 29125,
+    "balanced": true,
+    "bytes": 4766113,
+    "lines": 88728
+  },
+  "shs": {
+    "dict_id": "SHS",
+    "source_file": "csl-orig/v02/shs/shs.txt",
+    "L_count": 47326,
+    "LEND_count": 47326,
+    "balanced": true,
+    "bytes": 9240899,
+    "lines": 195434
+  },
+  "skd": {
+    "dict_id": "SKD",
+    "source_file": "csl-orig/v02/skd/skd.txt",
+    "L_count": 42531,
+    "LEND_count": 42531,
+    "balanced": true,
+    "bytes": 22851362,
+    "lines": 579963
+  },
+  "snp": {
+    "dict_id": "SNP",
+    "source_file": "csl-orig/v02/snp/snp.txt",
+    "L_count": 453,
+    "LEND_count": 453,
+    "balanced": true,
+    "bytes": 294270,
+    "lines": 6055
+  },
+  "stc": {
+    "dict_id": "STC",
+    "source_file": "csl-orig/v02/stc/stc.txt",
+    "L_count": 24574,
+    "LEND_count": 24574,
+    "balanced": true,
+    "bytes": 5733711,
+    "lines": 164412
+  },
+  "vcp": {
+    "dict_id": "VCP",
+    "source_file": "csl-orig/v02/vcp/vcp.txt",
+    "L_count": 50135,
+    "LEND_count": 50135,
+    "balanced": true,
+    "bytes": 25101554,
+    "lines": 521157
+  },
+  "vei": {
+    "dict_id": "VEI",
+    "source_file": "csl-orig/v02/vei/vei.txt",
+    "L_count": 3834,
+    "LEND_count": 3834,
+    "balanced": true,
+    "bytes": 3130875,
+    "lines": 72608
+  },
+  "wil": {
+    "dict_id": "WIL",
+    "source_file": "csl-orig/v02/wil/wil.txt",
+    "L_count": 44578,
+    "LEND_count": 44578,
+    "balanced": true,
+    "bytes": 8817393,
+    "lines": 282708
+  },
+  "yat": {
+    "dict_id": "YAT",
+    "source_file": "csl-orig/v02/yat/yat.txt",
+    "L_count": 45206,
+    "LEND_count": 45206,
+    "balanced": true,
+    "bytes": 5234709,
+    "lines": 162362
+  },
+  "_summary": {
+    "snapshot_date": "2026-05-07",
+    "dict_count": 43,
+    "total_entries": 1495422,
+    "unbalanced_dicts": []
+  }
+}

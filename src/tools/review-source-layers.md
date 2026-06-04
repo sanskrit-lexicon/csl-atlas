@@ -5,7 +5,7 @@ toc: false
 
 # Review queue · unknown source layers
 
-MW `<ls>` source abbreviations that don't yet map to a diachronic layer (UC-DIA-07), cited at least 5 times. Classify each into a layer to improve the diachronic profile.
+MW `<ls>` source abbreviations that don't yet map to a diachronic layer (UC-LX-05 / UC-RV-03), cited at least 5 times. Classify each into a layer to improve the diachronic profile.
 
 ```js
 const review = FileAttachment("../data/review/unknown-source-layers-review.json").json();

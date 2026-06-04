@@ -3,13 +3,26 @@ title: Dictionary conflicts
 toc: false
 ---
 
-# Gender disagreements across dictionaries
-
+# ${t("phase2.conflicts.title")}
 Lemmas where two tagged dictionaries assert **disjoint** specific genders ({m, f, n}). These are review candidates, not verdicts — follow the source links to judge each case.
 
 ```js
 const pos = FileAttachment("../data/dicts/pos-disagreement.json").json();
 const conf = FileAttachment("../data/dicts/alignment-confidence.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 <div class="warning" label="Evidence: derived">
@@ -22,18 +35,18 @@ display(html`<p><b>${pos.conflictCount.toLocaleString()}</b> lemmas show a gende
 
 ```js
 display(Inputs.table(pos.conflicts.map(c => ({
-  lemma: c.lemma,
+  [t("phase2.conflicts.lemma")]: c.lemma,
   ...Object.fromEntries(Object.entries(c.byDict).map(([d, g]) => [d, g.join("/")])),
-  sources: c.examples
+  [t("phase2.conflicts.sources")]: c.examples
 })), {
-  columns: ["lemma", "MW", "AP", "PWG", "PWK", "WIL", "VCP", "SKD", "sources"],
+  columns: [t("phase2.conflicts.lemma"), "MW", "AP", "PWG", "PWK", "WIL", "VCP", "SKD", t("phase2.conflicts.sources")],
   format: {
-    sources: examples => html`${examples.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}`
+    [t("phase2.conflicts.sources")]: examples => html`${examples.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}`
   }
 }));
 ```
 
-## Alignment confidence
+## ${t("phase2.conflicts.alignment-confidence")}
 
 How confidently lemmas align across dictionaries.
 

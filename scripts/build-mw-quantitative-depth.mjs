@@ -236,7 +236,7 @@ function main() {
           recordCount,
           assumptions: SOURCE_LAYER_ASSUMPTIONS,
           warnings: [
-            `${unknownSourceFreq.size} distinct source abbreviations are unmapped and resolve to "unknown" (source-layer review queue, UC-DIA-07).`
+            `${unknownSourceFreq.size} distinct source abbreviations are unmapped and resolve to "unknown" (source-siglum review queue, UC-LX-05 / UC-RV-03).`
           ]
         }
       )
