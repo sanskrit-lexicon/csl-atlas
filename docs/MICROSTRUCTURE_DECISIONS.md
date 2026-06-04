@@ -139,3 +139,78 @@ Kavikalpadruma. That unblocks (a) baking SKD pada into m4, (b) the ṛ-marker co
 (c) the `di0`/`sO0` gaṇa forms. **Code-doable seams that do NOT need that gate** (open
 for a future round): m3 cross-dict cross-reference graph overlap (does MW `cf.` inherit
 PWG `Vgl.`? — lineage roadmap §3.1) and AP/AP90/BEN `cf.` target parsing.
+
+---
+
+## Round 5 — 2026-06-04: the next ungated seam
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 14 | Next on #30 while the SKD pada gate is open? | **m3 cross-dict cross-reference graph overlap** | Build the §3.1 lineage measure — does MW `cf.` inherit PWG `Vgl.`? |
+
+**Built — `scripts/lexico/m6_xref_lineage.py`** (validated, m6 check added): normalizes
+m3 edges (unify PWG `°` / MW `-`, drop SLP1 accents) and intersects the two edge sets.
+**Finding — PARTIAL overlap:** 641 shared directed edges; **MW 21.8% / PWG 9.1%** of
+cross-refs on the 2,538 lemmas both treat (Jaccard 0.069). A shared cross-reference CORE
+(variant-form / cognate-root pointers, well above chance) plus large independent expansion
+— **not** wholesale inheritance. Write-up: `docs/MICROSTRUCTURE_XREF_LINEAGE.md`; outputs
+`xref_lineage.json` + `xref_shared_edges.csv`. Still ungated and open: AP/AP90/BEN `cf.` parsing.
+
+---
+
+## Round 7 — 2026-06-04: Apte `cf.` parsing (last ungated seam)
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 15 | How strict to parse the AP/AP90 `cf.{#…#}` slot (mixed lemma / quote / cognate / citation)? | **Lemma edges + quotes to a side file** | m3 captures lemma-like `cf.{#…#}` as cross-ref edges; multi-word / glued `{#…#}` → `xref_cf_quotes.csv`. |
+
+**Built** (m3 extended; m5/m6 regenerated; validated, m1–m6 pass): new cf-lemma edges
+**AP 609 / AP90 446 / CAE 196** (CAE a bonus — it also uses `cf.{#…#}`); **517 cf-quotes**
+to the side file (AP 432, AP90 79, CAE 5); **BEN = 0** (cf. purely cognate/citation — does
+no internal Sanskrit cross-referencing). MW unchanged (7,665) ⟹ MW×PWG headline unchanged.
+**New result — a positive control:** AP × AP90 (same dictionary, two editions) overlap
+**85.5%** vs MW × PWG **21.8%**, confirming the measure detects true descent and that MW×PWG
+is a shared core, not inheritance. Doc updated: `MICROSTRUCTURE_XREF_LINEAGE.md`.
+
+**With this, the ungated code-doable #30 seams are exhausted** — everything still open
+(SKD pada decode, ṛ-marker, `di0`/`sO0` gaṇa) waits on the one maintainer gate: verifying
+the proposed SKD anubandha key against the Kavikalpadruma.
+
+---
+
+## Round 8 — 2026-06-04: the SKD key VERIFIED (gate cleared) + SKD re-decoded
+
+The maintainer supplied the **Śabdakalpadruma front matter** (`docs/refs/SKD_Front pages.docx`)
+— Durgādāsa's **Dhātudīpikā** 46-anubandha *phala* table. This **clears the round-3 #8 hold**
+and **corrects** the proposal.
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 16 | ṛ-anubandha meaning (round 4 #11, deferred)? | **Operation-it: caṅ a-hrasva** (Pāṇ 7.4.2) | ṛ never marked pada — explains the cross-walk's 50/39 split. |
+| 17 | Rewrite the key doc? | **Yes** | `MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md` is now the **authoritative** Dhātudīpikā key; the cross-walk is demoted to "empirical recovery, source-corrected." |
+| 18 | Re-decode SKD via the key? | **Yes** | m4 decodes the anubandha slot → gaṇa (10 classes) + pada (ṅ/ñ only) + operation-its; new `anubandhas` column. **SKD gaṇa 1,117→1,737, pada 1,167→1,498.** |
+| 19 | Trust the digitized slot first? | **Re-probed** | 1,925/2,544 SKD roots carry a faithful slot; near-total key coverage before wiring it in. |
+
+**Headline correction:** SKD anubandhas encode **gaṇa + morphophonemic operations, NOT pada.**
+The cross-walk's "pada" signals (`ka`/`Sa`/`ya`/`na`) were **gaṇa** markers (curādi/tudādi/
+divādi/svādi) whose pada was a downstream correlation; **only ṅ/ñ mark pada.** The
+hold-for-verification was vindicated. Also confirmed verbatim from the source: the
+**"0/bindu = no anubandha"** convention — primary-source footing for "0 ≠ absent content."
+
+### Open question feeding round 9
+- SKD slot token **`ma` (72×)** is not among the 46 Dhātudīpikā anubandhas — what does it mark?
+
+---
+
+## Round 9 — 2026-06-04: `ma` resolved (Palsule's Kavikalpadruma)
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 20 | What does SKD's `ma` (72×) mark? | **`m`/mit = nici-hrasva** (penultimate shortens before ṇic, Pāṇ 6.4.92), per Palsule's KKD App. III | Added `ma`→op `nici-hrasva` to m4's `_ANU_KEY`. `ma` is an operation-it (no gaṇa/pada), so the CSV is unchanged — the key is now **complete**. |
+
+Per G.B. Palsule (ed. *Kavikalpadruma*, Appendix III, pp. 95–100), `m` is one of the **17
+anubandhas Vopadeva keeps with their Pāṇinian significance**. His account independently
+**corroborates the whole key**: `k`/`ṇ`/`p` repurposed as gaṇa markers (= our curādi / phaṇādi
+(bhvādi) / mucādi (tudādi)); `au`=aniṭ borrowed from the Jainendra Dhātupāṭha (= our `O`→aniṭ).
+Palsule counts **43** code-letters vs the front matter's 46 — a tallying difference, not substance.
+**The SKD anubandha line is now complete.**

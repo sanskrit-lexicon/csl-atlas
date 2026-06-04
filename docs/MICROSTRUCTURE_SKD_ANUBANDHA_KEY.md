@@ -1,74 +1,93 @@
-# Proposed SKD anubandha → property key (PROPOSED — awaiting verification)
+# SKD anubandha key — the authoritative Dhātudīpikā decode (issue #30)
 
-> **Status: PROPOSED, not applied.** Per [issue #30](https://github.com/sanskrit-lexicon/csl-atlas/issues/30)
-> decision round 3 (`MICROSTRUCTURE_DECISIONS.md` #8), SKD pada decoding is **held**
-> until the maintainer verifies this key against Vopadeva's *Kavikalpadruma*
-> paribhāṣā and Durgādāsa's commentary. `m4_indigenous.py` does **not** yet infer
-> SKD pada/veṭ from anubandhas. This file is the artifact to verify.
+> **Status: VERIFIED & APPLIED.** This key is no longer a proposal. It is taken from
+> the **Śabdakalpadruma front matter** (`docs/refs/SKD_Front pages.docx`), which
+> reproduces **Durgādāsa Vidyāvāgīśa's *Dhātudīpikā*** — his commentary on Vopadeva's
+> *Kavikalpadruma* — listing the *phala* (effect) of each of the **46 anubandha-letters**
+> over SKD's **1754 roots**. `m4_indigenous.py` decodes SKD's per-entry anubandha slot
+> with this key (`decode_anubandhas`).
 
-## What this is
+## What SKD encodes, and where
 
-SKD records the dhātupāṭha annotation as **Vopadeva/Kavikalpadruma anubandhas** —
-single romanized it-letters immediately after the `¦` headword separator
-(`aka¦, i ka lakzmaRi .`). VCP records the **same** grammar explicitly in
-`0`-abbreviations (`aGa¦ idit … BvAdi0 Atma0 saka0 sew`). Where a root appears in
-**both** dictionaries, VCP tells us what SKD's it-letter *means*.
+SKD writes each root's it-letters in a **slot right after `¦`**, before the locative
+meaning: `aka¦, i ka lakzmaRi` = anubandhas `i`, `ka`. The front matter states the
+convention outright (the *grantha-paripāṭī*):
 
-## Method
+> *"प्रत्येक-धातोरनुबन्धञ्च निर्णीतवान्। येषां धातूनामनुबन्धो नास्ति तत्स्थानं बिन्दुयुक्तमथवा शून्यमास्ते।"*
+> — "the anubandha of each root is determined; **roots that have no anubandha get a dot or a zero**."
 
-`scripts/lexico/_xwalk_skd_vcp.py` aligns the **763 roots that occur exactly once
-in each** of SKD and VCP (unambiguous 1:1), and tallies — per SKD anubandha — the
-distribution of VCP's explicit pada / transitivity / idit / veṭ. Conservative by
-design: homonym sets (>1 entry either side) are excluded so no alignment is guessed.
+That is a **primary-source footing for the whole "0 ≠ absent content" methodology**
+([MICROSTRUCTURE_ZERO_MEANING.md](MICROSTRUCTURE_ZERO_MEANING.md)): a `0` in the slot is
+"no anubandha," never "no verb."
 
-## The result — it reproduces Pāṇini from raw co-occurrence
+## The key — anubandhas encode GAṆA + OPERATIONS, not pada
 
-This is the validation: four Pāṇinian sūtras fall out of dictionary co-occurrence
-without being told to.
+SLP1: ṅ=`N` ñ=`Y` ṇ=`R` ṭ=`w` ḍ=`q` ś=`S` ṣ=`z` ṛ=`f` ṝ=`F` ḷ=`x` ā=`A` ī=`I` ū=`U` ai=`E` au=`O`.
 
-| SKD anu | reading | n | VCP pada (para/ātma/ubha) | idit | veṭ | proposed property | basis |
-|---|---|---:|---|---:|---:|---|---|
-| `Na` | ṅ-it | 232 | 13 / **82** / 4 | 8% | 1% | **ātmanepada** | Pāṇ 1.3.12 anudāttaṅita |
-| `Ya` | ñ-it | 67 | 3 / 0 / **96** | 2% | 5% | **ubhayapada** | Pāṇ 1.3.72 svaritañitaḥ |
-| `ka` | — | 150 | 0 / 7 / **92** | 8% | 0% | **ubhayapada** | Vopadeva (empirical) |
-| `t` | — | 59 | 0 / 5 / **94** | 0% | 0% | **ubhayapada** | Vopadeva (empirical) |
-| `ki` | — | 23 | 13 / 0 / **86** | 30% | 0% | **ubhayapada** (+ idit) | empirical |
-| `Sa` | ś- | 63 | **90** / 0 / 10 | 0% | 1% | **parasmaipada** | empirical |
-| `Si` | ś-i | 15 | **92** / 0 / 7 | 0% | 0% | **parasmaipada** | empirical |
-| `ir` | — | 31 | **96** / 0 / 3 | 3% | 25% | **parasmaipada** + veṭ | irit (cf. Pāṇ 7.2.44) |
-| `ga` | — | 13 | **80** / 0 / 20 | 0% | 15% | parasmaipada | empirical (low n) |
-| `gi` | — | 13 | **75** / 0 / 25 | 0% | 0% | parasmaipada | empirical (low n) |
-| `ya` | — | 55 | **76** / 22 / 2 | 0% | 12% | parasmaipada | empirical |
-| `O` | au | 44 | **71** / 0 / 28 | 2% | 2% | parasmaipada | empirical |
-| `na` | — | 22 | **75** / 5 / 20 | 9% | 13% | parasmaipada | empirical |
-| `ma` | — | 23 | **70** / 20 / 10 | 0% | 0% | parasmaipada | empirical |
-| `la` | — | 28 | **68** / 13 / 18 | 7% | 3% | parasmaipada | empirical (mixed) |
-| `x` | ḷ | 12 | **70** / 0 / 30 | 0% | 8% | parasmaipada | empirical (low n) |
-| `i` | i-it | 82 | 60 / 14 / 25 | **90** | 0% | **idit** (num-infix) | Pāṇ 7.1.58 idito num |
-| `u` | ū-it | 40 | 69 / 8 / 22 | 0% | **40** | **veṭ** | Pāṇ 7.2.44 …ūdito veṭ |
+**Gaṇa markers** (the avāntara sub-gaṇas fold into the 10 main classes):
 
-### Markers this method does NOT resolve — need the maintainer
+| it-letter | gaṇa | | it-letter | gaṇa |
+|---|---|---|---|---|
+| `ka`, `ki` | curādi (10) | | `na` | svādi (5) |
+| `ga`, `gi` | kryādi (9) | | `ya`, `Ba`(bha) | divādi (4) |
+| `da` | tanādi (8) | | `li` | juhotyādi (3) |
+| `Da`(dha) | rudhādi (7) | | `la`, `lu`, `Ga`(gha), `kza`(kṣa) | adādi (2) |
+| `Sa`(śa), `Si`(śi), `pa` | tudādi (6) | | `ja`,`Ja`,`Ra`,`Wa`,`mi`,`va` | bhvādi (1) |
 
-| SKD anu | reading | n | observation | question |
-|---|---|---:|---|---|
-| `f` | ṛ-it | **133** | pada splits 50 / 39 / 10 — does **not** fix pada | round 3 #9: ṛ "marks something specific" — **what?** (reserve its own column) |
-| `I` | ī-it | 25 | ātma 55 / para 44 — weak ātmane lean | ī-it → ātmanepada? (cf. Pāṇ 1.3.12 set) |
-| `o` | au/o | 12 | the **only** transitivity-skewed marker (aka 66%) + idit 16% | does `o` mark akarmaka / a derivation? |
+**Pada markers — only two:** `N` (ṅ) → **ātmanepada**; `Y` (ñ) → **ubhayapada**
+(*ātmane* when the fruit accrues to the agent, else *parasmai*). **Parasmaipada is the
+unmarked default** and is deliberately *not* asserted by the decoder.
 
-## Transitivity is NOT in the anubandhas
+**Operation-its** (morphophonemic behaviour; no gaṇa/pada): `i`=num(idit) · `A`(ā)=niṣṭhā-veṭ ·
+`u`=ktvā-veṭ · `U`(ū)=veṭ · `I`(ī)/`O`(au)=aniṭ · `o`=niṣṭhā -na · `e`=sic a-vṛddhi ·
+`f`(ṛ)=caṅ a-hrasva (Pāṇ 7.4.2) · `F`(ṝ)=optional caṅ a-hrasva · `x`(ḷ)=aṅ aorist ·
+`m`(ma)=**mit / nici-hrasva** (penultimate shortens before ṇic, Pāṇ 6.4.92 *mitāṃ hrasvaḥ*) ·
+`ir`=āḍ · `E`(ai)=yajādi · `Yi`(ñi)=present-sense niṣṭhā · `wu`(ṭu)=athu · `qu`(ḍu)=kṛtrima ·
+`za`(ṣ)=kṛt-aṅ · `ta`(t)=adanta marker · `ra`=Vedic-only · `a`=ease of pronunciation only.
 
-`saka` (transitive) runs 60–95% across **every** marker — i.e. no anubandha
-selects transitivity; the corpus is simply transitive-dominant. SKD transitivity
-lives in the **Durgādāsa prose** (`sakarmmaka` / `akarmmaka`), handled by a
-separate prose detector, not this key.
+## How the cross-walk got it (and where the source corrected it)
 
-## How to verify (maintainer)
+The earlier SKD∩VCP cross-walk (`_xwalk_skd_vcp.py`) was an **empirical recovery** that
+the primary source then **refined** — a clean methodological arc, not a wasted step:
 
-1. Check `Na`→ātmane, `Ya`→ubhaya, `i`→idit, `u`→veṭ against the Kavikalpadruma's
-   own paribhāṣā verses (these are the Pāṇinian-anchored four — should be safe).
-2. Adjudicate the **Vopadeva-specific** `ka`/`t`/`ki`→ubhaya assignment — strong
-   empirically (86–94%) but not Pāṇinian; confirm it matches the Kavikalpadruma key.
-3. Tell me what `f` (ṛ) marks — it is the single most frequent it-letter (133×) and
-   currently yields no pada; it deserves its own column.
-4. Once confirmed/corrected, I bake the key into `m4_indigenous.py` to emit SKD pada
-   (with a `pada_confidence` flag) and lift SKD's coverage toward VCP's.
+| cross-walk found | Dhātudīpikā says | verdict |
+|---|---|---|
+| `N`→ātmane 82%, `Y`→ubhaya 96%, `i`→idit 90%, `u`/`U`→veṭ | ṅ→ātmane, ñ→ubhaya, i→num, ū/u→veṭ | **direct hits** — the four Pāṇinian-anchored markers, recovered exactly |
+| `ka`→"ubhaya" 92%, `Sa`→"para" 90%, `ya`→"para" 76%, `na`→"para" 75% | `ka`=curādi, `Sa`=tudādi, `ya`=divādi, `na`=svādi | **mis-attributed** — these are **gaṇa** markers; the pada % was a *shadow* of the gaṇa→pada correlation (curādi tends ubhaya; tudādi/divādi tend parasmai) |
+| `f`(ṛ) split 50/39 para/ātma — "no pada signal" | ṛ = caṅ a-hrasva (an operation) | **explained** — ṛ never marked pada |
+
+The maintainer's decision to **hold the key for verification** was exactly right: the
+cross-walk recovered the *structure*, the *Dhātudīpikā* corrected the *interpretation*.
+
+## Applied — SKD coverage gains
+
+`m4_indigenous.py` now decodes the slot for SKD (`gaṇa` = anubandha ∨ visarga-prose;
+`pada` = prose ∨ ṅ/ñ; raw slot kept in the new `anubandhas` column):
+
+| | before | after |
+|---|---:|---:|
+| SKD gaṇa resolved | 1,117 | **1,737** |
+| SKD pada resolved | 1,167 | **1,498** |
+
+1,925 of 2,544 SKD roots carry a slot; the gaṇa distribution is linguistically correct
+(bhvādi ≫ rest once the unmarked default is restored from the visarga prose).
+
+## `ma` — resolved (Palsule's KKD)
+
+The one residual slot token, **`ma` (72×)**, is the **`m` / mit anubandha**: per
+G.B. Palsule's edition of the *Kavikalpadruma* (Appendix III, pp. 95–100), `m` is one of
+the **17 anubandhas Vopadeva keeps with their Pāṇinian significance** — *mit* → the root's
+penultimate vowel **shortens before the causative ṇic** (Pāṇ 6.4.92 *mitāṃ hrasvaḥ*). It is
+an operation-it (now in `_ANU_OP`), which is exactly why it never resolved to a gaṇa or pada.
+
+Palsule's account also **corroborates this whole key**: he notes Vopadeva repurposes
+`k`, `ṇ`, `p` (Pāṇini used them differently) — matching our **k→curādi, ṇ→phaṇādi(bhvādi),
+p→mucādi(tudādi)** — and borrows `au`=aniṭ from the Jainendra Dhātupāṭha (our `O`→aniṭ).
+(Palsule counts **43** code-letters; the SKD front matter says 46 — a difference in how
+variants are tallied, not in substance.)
+
+## Provenance
+
+Key: `docs/refs/SKD_Front pages.docx` (Dhātudīpikā anubandha-phala table). Decode:
+`scripts/lexico/m4_indigenous.py` (`_ANU_KEY`, `decode_anubandhas`) → `indigenous_roots.csv`
+(`gana`, `pada`, `anubandhas`). Empirical antecedent: `scripts/lexico/_xwalk_skd_vcp.py`.

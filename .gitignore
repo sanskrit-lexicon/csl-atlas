@@ -4,7 +4,12 @@ src/.observablehq/cache/
 .observablehq/cache/
 .DS_Store
 *.log
+__pycache__/
+*.pyc
 
 # audit sidecars
 .contributing_old.md
 .contributing_audit.txt
+
+# local forensic caches
+data/forensic/_f6_tcache.json

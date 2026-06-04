@@ -167,6 +167,24 @@ def validate_m5():
     return len(rows), len({k[0] for k in keys})
 
 
+def validate_m6():
+    """m6 lineage overlap: shared-edge CSV count matches the JSON, and the overlap
+    cannot exceed either dict's edges on the shared sources."""
+    jp = os.path.join(DATA, "xref_lineage.json")
+    if not (os.path.exists(jp) and os.path.exists(os.path.join(DATA, "xref_shared_edges.csv"))):
+        return 0, 0
+    with open(jp, encoding="utf-8") as f:
+        lin = json.load(f)
+    shared = load_csv("xref_shared_edges.csv")
+    mwpwg = lin.get("pairs", {}).get("mw-pwg")
+    if mwpwg:
+        check(len(shared) == mwpwg["overlapping_edges"],
+              f"m6: shared CSV rows {len(shared)} != json overlapping_edges {mwpwg['overlapping_edges']}")
+        check(mwpwg["overlapping_edges"] <= mwpwg["a_edges_on_shared_sources"], "m6: overlap > mw shared edges")
+        check(mwpwg["overlapping_edges"] <= mwpwg["b_edges_on_shared_sources"], "m6: overlap > pwg shared edges")
+    return len(shared), len(lin.get("pairs", {}))
+
+
 def main():
     print("Validating data/lexico/ …")
     m1_rows, m1_dicts = validate_m1()
@@ -174,11 +192,13 @@ def main():
     m3_rows, m3_dicts = validate_m3()
     m4_rows, m4_dicts = validate_m4()
     m5_rows, m5_dicts = validate_m5()
+    m6_rows, m6_pairs = validate_m6()
     print(f"  m1: {m1_rows:,} rows / {m1_dicts} dicts")
     print(f"  m2: {m2_rows:,} rows / {m2_dicts} preverb dicts")
     print(f"  m3: {m3_rows:,} rows / {m3_dicts} xref dicts")
     print(f"  m4: {m4_rows:,} rows / {m4_dicts} indigenous-root dicts (prototype)")
     print(f"  m5: {m5_rows:,} rows / {m5_dicts} dicts (unified profile join)")
+    print(f"  m6: {m6_rows:,} shared cross-ref edges / {m6_pairs} dict-pair(s) (lineage overlap)")
     if _fail:
         print(f"\nFAIL — {len(_fail)} check(s):", file=sys.stderr)
         for m in _fail[:25]:
