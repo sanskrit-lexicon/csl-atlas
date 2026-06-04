@@ -26,7 +26,7 @@ targets before adding new analysis-method prose.
 | Order | Page | Primary use cases | Audience | Purpose | Status |
 |---|---|---|---|---|---|
 | 1 | `DICTIONARY_USER_GUIDE.md` | UC-RD-02, UC-RD-07 | public readers | Answer which dictionary to start with and why. | active first page |
-| 2 | Reader Lookup explainer | UC-RD-01, UC-RD-03, UC-RD-04, UC-RD-05 | public readers | Explain what a lookup result means, including no-result and ambiguous-result cases. | next reader page |
+| 2 | [`READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) | UC-RD-01, UC-RD-03, UC-RD-04, UC-RD-05 | public readers | Explain what a lookup result means, including no-result and ambiguous-result cases. | active second page |
 | 3 | Review queue proof pages | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | planned |
 | 4 | H6 structural-register scatter | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page spec. | planned before H4 |
 | 5 | Microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Give the M1-M5 profile, methods, and findings one coherent entry point. | active scaffold |

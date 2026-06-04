@@ -107,6 +107,7 @@ Reader-facing:
 - [TEI/OntoLex migration note](docs/TEI_ONTOLEX_MIGRATION.md) - why the standards pilot moved to `csl-standards`
 - [Boundary rules](docs/BOUNDARY_RULES.md) — what belongs in the dictionary atlas, and what must move elsewhere
 - [Dictionary user guide](docs/DICTIONARY_USER_GUIDE.md) — which dictionary to use and how to read an entry
+- [Reader lookup explainer](docs/READER_LOOKUP_EXPLAINER.md) - what a lookup result means and what it does not prove
 - [Evidence labels](docs/EVIDENCE_LABELS.md) — what the certainty labels mean
 
 Architecture and planning:

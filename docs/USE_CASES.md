@@ -283,6 +283,7 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - `docs/REVIEW_RELEASE_ROADMAP.md`
 - `docs/RELEASE_CHECKLIST.md`
 - `docs/DICTIONARY_USER_GUIDE.md`
+- `docs/READER_LOOKUP_EXPLAINER.md`
 - `docs/EVIDENCE_LABELS.md`
 - `docs/H6_STRUCTURAL_REGISTER_SCATTER.md`
 - `docs/MICROSTRUCTURE_PROFILE.md`

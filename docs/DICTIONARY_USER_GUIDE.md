@@ -54,6 +54,46 @@ Quick rule of thumb:
 - **Working inside the traditional Indian lexicographic frame?** Use VCP and SKD.
 - **Comparing how a word is treated across traditions?** Use the multi-dictionary lemma view (research mode).
 
+## Task-Based Starting Points
+
+| Task | Start with | Add next | Why |
+|---|---|---|---|
+| Fast English meaning | MW | AP | MW is broad; AP is often clearer for practical reading. |
+| Citation-heavy philology | PWG + MW | PW/PWK | PWG gives deep apparatus; MW is easier to navigate in English. |
+| Traditional Sanskrit-Sanskrit reading | VCP | SKD | These preserve indigenous glossing and citation conventions. |
+| Source-citation follow-through | PWG | MW, VCP, SKD | Start where source apparatus is densest, then compare traditions. |
+| Grammar or gender check | MW/AP | VCP/SKD when visible | Use visible grammar labels, but watch convention gaps and review status. |
+| Historical lexicography | PWG, PWK, WIL | SHS, KOW, AP/MW families | Compare lineage, condensation, and translation/copying patterns. |
+| Specialized topic | relevant specialized dictionary | general dictionaries | A specialized dictionary is strong evidence inside its domain, not a general baseline. |
+
+## Dictionary Personalities
+
+The atlas should present dictionaries as different instruments, not as a single
+ranked ladder:
+
+- **MW** is the broad English starting point and a major citation hub.
+- **AP** is often the most convenient English reader companion.
+- **PWG** is the deep apparatus dictionary, especially for source-heavy work.
+- **PW/PWK** help distinguish Petersburg depth from later condensation.
+- **WIL/SHS/KOW** matter for older English and translation-lineage questions.
+- **VCP/SKD** matter when Sanskrit-Sanskrit lexicography is the evidence, not
+  merely a supplement.
+- **Indexes and specialized dictionaries** answer narrower questions and should
+  not be treated as failed general dictionaries.
+
+## What A Dictionary Choice Does Not Prove
+
+A good first dictionary does not settle the word. It only gives a reliable
+starting point. Do not infer:
+
+- that no lookup result means the word is absent from Sanskrit;
+- that a dictionary with fewer visible tags has weaker content;
+- that English definitions are more authoritative than German or Sanskrit
+  definitions;
+- that `L.` or lexicographer-only evidence is the same as a textual citation;
+- that corpus frequency is part of the atlas unless a VisualDCS summary is
+  explicitly linked.
+
 ## The German Layer Is Evidence, Not Noise
 
 PWG and PWK are written in German because the Petersburg dictionaries are the backbone of modern Sanskrit lexicography. The atlas keeps their German wording intact rather than flattening it into English. If you do not read German, you can still use them for:
@@ -115,6 +155,8 @@ Each entry has a stable record ID and a source link. When you cite a word in you
 ## Related Documents
 
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — what the certainty labels mean.
+- [`docs/READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) - what a
+  lookup result means and what it does not prove.
 - [`docs/USE_CASE_PAGE_ROADMAP.md`](USE_CASE_PAGE_ROADMAP.md) - how reader and
   analysis pages are sequenced.
 - [`docs/CHART_TRUST_TEMPLATE.md`](CHART_TRUST_TEMPLATE.md) - the required trust
