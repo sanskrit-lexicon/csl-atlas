@@ -2,7 +2,7 @@
 
 An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de/) — comparative microstructural analysis of nine narrative Sanskrit-dictionary chapters, plus an all-dictionary coverage layer for every local CDSL v02 source dictionary.
 
-**Status:** active public-atlas implementation. The dictionary-atlas chapters are reproducible from committed JSON plus local `csl-orig` source dictionaries. TEI/OntoLex standards work has moved to `csl-standards`.
+**Status:** active public-atlas implementation. The dictionary-atlas chapters are reproducible from committed JSON plus local `csl-orig` source dictionaries. The 2026-06-04 boundary cleanup is merged: TEI/OntoLex standards work now lives in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), DCS/corpus handoff material now lives in [`VisualDCS`](https://github.com/gasyoun/VisualDCS), and GitHub/org observatory work stays in [`csl-observatory`](https://github.com/sanskrit-lexicon/csl-observatory).
 
 ---
 
@@ -54,6 +54,7 @@ Each narrative dictionary gets a chapter; each Tier-1 figure has a per-dictionar
 
 TEI, OntoLex, FrAC, SHACL, RDF, and related export/validation work now belongs in `csl-standards`:
 
+- public repo: [sanskrit-lexicon/csl-standards](https://github.com/sanskrit-lexicon/csl-standards)
 - local path: `C:\Users\user\Documents\GitHub\csl-standards`
 - migration note: [TEI/OntoLex migration note](docs/TEI_ONTOLEX_MIGRATION.md)
 
@@ -114,7 +115,7 @@ Architecture and planning:
 - [Architecture](ARCHITECTURE.md) · [Use cases](docs/USE_CASES.md) · [Reader/developer critique](docs/READER_DEVELOPER_CRITIQUE.md)
 - [MW Quantitative Depth handoff](docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md) (Phase 1)
 - [Dictionary comparison plan](docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
-- DCS migration material now lives in `VisualDCS/docs/csl-atlas-migration/`; active corpus work belongs outside this repo
+- DCS migration material now lives in [VisualDCS `docs/csl-atlas-migration/`](https://github.com/gasyoun/VisualDCS/tree/main/docs/csl-atlas-migration); active corpus work belongs outside this repo
 - [Review reports](docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary
 - [Review release roadmap](docs/REVIEW_RELEASE_ROADMAP.md) · [Release checklist](docs/RELEASE_CHECKLIST.md) · [Light review sprint](docs/LIGHT_REVIEW_SPRINT.md)
 - [Changelog](CHANGELOG.md) — what changed and when
@@ -168,7 +169,7 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] DCS corpus slice moved out of the atlas; migration copies are preserved in `VisualDCS/docs/csl-atlas-migration/`
 - [x] Reader Lookup v1: static SLP1/IAST headword lookup over lemmas attested in >=4 of the 7 comparison dictionaries
 - [x] Review-release roadmap, release checklist, and light review sprint worklist
-- [ ] Future DCS/corpus work belongs in VisualDCS or a future grammar repo, not in this atlas
+- [x] Boundary rule documented: future DCS/corpus work belongs in VisualDCS or a future grammar repo, not in this atlas
 - [ ] Phase 2 follow-ups: full-text dictionary search backend; cross-dictionary siglum alias-table growth via review
 - [x] Build and link validation
 - [x] Unit tests (`npm test`, `node --test`) for the deterministic libs + CI test workflow

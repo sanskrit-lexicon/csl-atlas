@@ -2,7 +2,7 @@
 
 Date: 2026-06-03
 
-Status: moved to `csl-standards`.
+Status: moved to `csl-standards`; public repository published on 2026-06-04.
 
 ## Decision
 
@@ -13,6 +13,12 @@ Destination:
 
 ```text
 C:\Users\user\Documents\GitHub\csl-standards
+```
+
+Public repository:
+
+```text
+https://github.com/sanskrit-lexicon/csl-standards
 ```
 
 ## Why It Moved
@@ -41,3 +47,6 @@ The active migration manifest is:
 ```text
 C:\Users\user\Documents\GitHub\csl-standards\docs\MIGRATION_PLAN.md
 ```
+
+The atlas-side removal and pointer update merged in
+[`csl-atlas` PR #32](https://github.com/sanskrit-lexicon/csl-atlas/pull/32).

@@ -1,6 +1,7 @@
 # Boundary Rules
 
 Date: 2026-06-03
+Last updated: 2026-06-04
 
 Status: human decision. These rules define the direction of `csl-atlas` and
 supersede older broad "Sanskrit evidence atlas" language wherever it conflicts.
@@ -65,18 +66,23 @@ workflow, or standards site.
 
 ## Boundary Cleanup Completed
 
-Completed on 2026-06-03:
+Completed on 2026-06-04 and merged in
+[`csl-atlas` PR #32](https://github.com/sanskrit-lexicon/csl-atlas/pull/32):
 
 - TEI/OntoLex/FrAC pilot exports and validation moved to `csl-standards`.
   TEI is for CDSL-markup validation and publication for other lexicographic
   projects; OntoLex is a stress test for now and real RDF publication later;
   FrAC is frozen until VisualDCS/corpus evidence is ready.
+- Public standards home:
+  `https://github.com/sanskrit-lexicon/csl-standards`.
 - DCS inventory page, generated manifest, and build script moved out of the
   active atlas. Migration copies live in
-  `VisualDCS/docs/csl-atlas-migration/`.
+  `https://github.com/gasyoun/VisualDCS/tree/main/docs/csl-atlas-migration`.
 - Lexicographic genealogy, Patel convention fingerprints, L0 cladogram,
   Paper H convention/content lineage, and R2 sense-structure material moved
   into `csl-atlas` from `csl-observatory`.
+  The observatory-side cleanup merged in
+  [`csl-observatory` PR #14](https://github.com/sanskrit-lexicon/csl-observatory/pull/14).
 
 ## Current Relocation Candidates
 
