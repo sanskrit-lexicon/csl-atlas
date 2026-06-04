@@ -105,7 +105,10 @@ row in `root_signal`):
   pada/transitivity co-requirement keeps it from firing on a stray SLP1 substring in a European
   `{#…#}` body (verified: European dicts stay ≈0 — MW72 1, the rest 0).
 
-Inside each root it tallies `preraṇe`/ṇijanta (causative), `seṭ`/`aniṭ`, `bhvādi` (class 1).
+Inside each root it **emits the dhātupāṭha annotation as columns** — `gaṇa` (the 10 conjugation
+classes), `pada` (parasmaipada/ātmanepada/ubhayapada), `transitivity` (sakarmaka/akarmaka),
+`causative` (preraṇe/ṇijanta), and `seṭ`/`aniṭ`. VCP's gaṇa names carry the `0` abbreviation marker
+(`BvA0`, `curA0`), which disambiguates them from the `-ādi` ("etc.") suffix.
 
 **Results** — for the very dicts that read **0** under `m1`'s `<ab>` apparatus:
 
@@ -120,8 +123,15 @@ The two-signal union lifts VCP from **43 → 2,230**. All three indigenous/root 
 **~the size of the Sanskrit dhātupāṭha (~2,000 roots)** — independent corroboration that the signal is
 real, not an artifact.
 
+**The emitted annotations are linguistically correct** — itself strong evidence the parse is real,
+not noise. VCP's roots break down as: **pada** parasmaipada 1,124 > ubhaya 525 > ātmanepada 248 (the
+natural ordering); **transitivity** sakarmaka 1,680 > akarmaka 503; **gaṇa** bhvādi 1,152 ≫ curādi
+146 > divādi 85 > adādi 63 > … — and bhvādi (class 1) *should* dwarf the rest, as the largest gaṇa.
+A detector inventing matches would not reproduce the known shape of the Sanskrit verb system.
+
 So SKD's "0" became **2,544 verbal roots**, and VCP's **2,230**, the moment the detector matched the
-dictionary's *own* convention. The prototype is deliberately conservative — the other gaṇa names collide with the `-ādi`
-("etc.") suffix and are excluded; meaning is a raw snippet; pada/transitivity abbreviations are
-omitted — a feasibility proof, not a finished parser. But it settles the methodological point:
+dictionary's *own* convention. The prototype stays conservative — SKD encodes pada/transitivity
+mostly via undecoded anubandha it-markers (so its coverage is lower than VCP's); the abbreviated gaṇa
+forms carry mild noise; gaṇa/pada/transitivity take the first match; veṭ (optional seṭ) is not split.
+A feasibility proof, not a finished parser. But it settles the methodological point:
 **the 0 was the detector, never the dictionary.**
