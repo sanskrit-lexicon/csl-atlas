@@ -49,6 +49,10 @@ Review reports back the review use cases in `docs/USE_CASES.md`:
 
 A claim labeled `observed` rarely needs a queue. A claim labeled `inferred` almost always does. See [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md).
 
+Before adding procedure for a queue, document what the queue proves and what it
+does not prove. The active proof-first guide is
+[`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md).
+
 ## JSON Shape
 
 Review reports are JSON-first and reproducible. A single review record:
@@ -157,6 +161,7 @@ To record a decision, edit the item's `reviewStatus` / `reviewedValue` / `review
 
 - [`data/schema/review-report.schema.json`](../data/schema/review-report.schema.json) — the machine-checkable schema for this shape.
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — evidence labels vs review status.
+- [`docs/REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) - what each queue proves before procedure.
 - `docs/DICTIONARY_COMPARISON_PLAN.md` — the alignment queues that produce most reviews.
 - `docs/USE_CASES.md` — UC-RV-01 through UC-RV-03 and Milestone B.
 - `ARCHITECTURE.md` — the review architecture and status list.

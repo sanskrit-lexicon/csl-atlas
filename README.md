@@ -121,6 +121,7 @@ Architecture and planning:
 - [Microstructure profile](docs/MICROSTRUCTURE_PROFILE.md) · [methods](docs/MICROSTRUCTURE_METHODS.md) · [findings](docs/MICROSTRUCTURE_FINDINGS.md)
 - DCS migration material now lives in `VisualDCS/docs/csl-atlas-migration/`; active corpus work belongs outside this repo
 - [Review reports](docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary
+- [Review queue proofs](docs/REVIEW_QUEUE_PROOFS.md) - what each review queue proves before procedure
 - [Review release roadmap](docs/REVIEW_RELEASE_ROADMAP.md) · [Release checklist](docs/RELEASE_CHECKLIST.md) · [Light review sprint](docs/LIGHT_REVIEW_SPRINT.md)
 - [Changelog](CHANGELOG.md) — what changed and when
 

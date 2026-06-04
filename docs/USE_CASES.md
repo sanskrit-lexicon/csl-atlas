@@ -282,6 +282,7 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - `docs/CHART_TRUST_TEMPLATE.md`
 - `docs/REVIEW_RELEASE_ROADMAP.md`
 - `docs/RELEASE_CHECKLIST.md`
+- `docs/REVIEW_QUEUE_PROOFS.md`
 - `docs/DICTIONARY_USER_GUIDE.md`
 - `docs/READER_LOOKUP_EXPLAINER.md`
 - `docs/EVIDENCE_LABELS.md`
