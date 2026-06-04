@@ -105,8 +105,8 @@
   "dictionary": {
     "mw": "MW (Monier-Williams 1899)",
     "pwg": "PWG (Böhtlingk-Roth 1855–75)",
-    "pw":  "PWK (Böhtlingk 1879–89)",
-    "ap":  "AP (Apte 1957)",
+    "pw": "PWK (Böhtlingk 1879–89)",
+    "ap": "AP (Apte 1957)",
     "wil": "WIL (Wilson 1832)",
     "skd": "SKD (Śabdakalpadruma 1822–58)",
     "vcp": "VCP (Vācaspatya 1873–84)"
@@ -133,30 +133,6 @@
     "HALĀY.": "Halāyudha",
     "H. an.": "Hemacandra Anekārthasaṃgraha"
   },
-  "interop": {
-    "title": "MW-PWG-PWK Interoperability Hard Cases",
-    "description": "This tool shows 50 automatically sampled hard cases for the MW-PWG-PWK interoperability track.",
-    "select-language": "Select Language",
-    "case-label": "Case",
-    "phenomena": "Phenomena",
-    "loss-hints": "Loss Hints",
-    "machine-loss-reports": "Machine Loss Reports",
-    "source-records": "Source Records",
-    "review-slice": "Validated TEI/OntoLex slice",
-    "review-rank": "review",
-    "full-validation": "Full 50-case machine validation",
-    "tei-status": "TEI ODD/profile",
-    "rdf-status": "OntoLex/RDF SHACL/profile",
-    "links": {
-      "neutral": "Neutral Model JSON",
-      "tei": "TEI Profile (.xml)",
-      "ontolex": "OntoLex/FrAC Profile (.json)",
-      "rdf": "RDF Turtle (.ttl)",
-      "loss": "Loss Reports JSON",
-      "teiReview": "TEI Review JSON",
-      "ontolexReview": "OntoLex/RDF Review JSON"
-    }
-  },
   "status": {
     "partial": "partial",
     "lossy": "lossy",
@@ -166,18 +142,131 @@
     "machine": "machine",
     "reviewed": "reviewed"
   },
-  "failure": {
-    "model-vocabulary-gap": "model-vocabulary-gap",
-    "print-compression": "print-compression",
-    "cdsl-markup-gap": "cdsl-markup-gap",
-    "none": "none"
+  "reader": {
+    "lookup": {
+      "title": "Reader lookup",
+      "description": "Dictionary-first lookup across MW, AP, PWG, PWK, WIL, VCP, and SKD. Results show source links and evidence caveats before research dashboards.",
+      "indexed-lemmas": "Indexed lemmas",
+      "dictionaries": "Dictionaries",
+      "minimum-coverage": "Minimum coverage",
+      "input-schemes": "Input schemes",
+      "query": "Headword",
+      "placeholder": "e.g. agni, śiva, akṣa, aMSa",
+      "normalized": "Normalized query",
+      "exact-match": "exact match",
+      "prefix-matches": "prefix matches",
+      "showing-examples": "Showing sample lemmas",
+      "no-result": "No dictionary headword found",
+      "no-result-note": "Try SLP1 or IAST headword form. Low-coverage lemmas are omitted from this static v1, and it does not split compounds, resolve sandhi, or search full entry text.",
+      "coverage": "coverage",
+      "record": "record",
+      "records": "records",
+      "gender": "gender/POS",
+      "gender-unknown": "gender/POS not extracted",
+      "caveat": "Reader Lookup v1 is static exact/prefix lookup over dictionary headwords attested in at least four target dictionaries. It is not a corpus lookup, not a passage search, and not LexemeHub. Evidence remains machine-derived unless a linked review queue says otherwise."
+    }
   },
-  "phenomenon": {
-    "generic-lexicographer-hedge": "generic-lexicographer-hedge",
-    "root-as-entry": "root-as-entry",
-    "root-as-derivational-base": "root-as-derivational-base",
-    "compound-subentry": "compound-subentry",
-    "compound-decomposition": "compound-decomposition",
-    "continuation-parent": "continuation-parent"
+  "phase1": {
+    "mw-depth": {
+      "title": "MW quantitative depth",
+      "article-types": "Article types",
+      "compound-depth": "Compound depth",
+      "strongest-overlaps": "Strongest type overlaps",
+      "records": "Records",
+      "citations": "Citations",
+      "mean-citations": "Mean citations / record",
+      "records-membership": "records (membership)",
+      "segments-k2": "segments in <k2>"
+    },
+    "diachronic": {
+      "title": "MW diachronic layers",
+      "records-by-layer": "Records by layer membership",
+      "earliest-layer": "Earliest cited layer per record",
+      "unmapped-sources": "Unmapped sources — review queue",
+      "records": "records"
+    },
+    "family": {
+      "title": "MW lexical-family depth",
+      "depth-vs-breadth": "Depth vs breadth",
+      "deepest-families": "Deepest families",
+      "members-breadth": "members (breadth) →",
+      "max-compound-depth": "↑ max compound depth"
+    },
+    "typology": {
+      "title": "Article-type treemap",
+      "reading": "Reading the treemap",
+      "examples": "Entry examples"
+    }
+  },
+  "phase2": {
+    "coverage-matrix": {
+      "title": "Dictionary coverage matrix",
+      "distinct-lemmas": "Distinct lemmas",
+      "shared-by-all": "Shared by all 7",
+      "dictionaries": "Dictionaries",
+      "lemmas-per-dict": "Lemmas per dictionary",
+      "how-many-cover": "How many dictionaries cover a lemma?",
+      "most-common-combinations": "Most common dictionary combinations",
+      "combination": "combination",
+      "lemmas": "lemmas",
+      "in-how-many": "in how many dictionaries"
+    },
+    "overlap": {
+      "title": "Pairwise dictionary overlap",
+      "pairwise-table": "Pairwise table",
+      "dict-a": "dict A",
+      "dict-b": "dict B",
+      "shared-lemmas": "shared lemmas",
+      "jaccard": "jaccard"
+    },
+    "conflicts": {
+      "title": "Gender disagreements across dictionaries",
+      "alignment-confidence": "Alignment confidence",
+      "lemma": "lemma",
+      "sources": "sources"
+    },
+    "homonyms": {
+      "title": "Homonym splits across dictionaries",
+      "spread-of-disagreement": "Spread of disagreement",
+      "widest-disagreements": "Widest disagreements",
+      "max-homonyms": "max homonyms in any dictionary",
+      "lemmas-shown": "lemmas (shown)",
+      "lemma": "lemma",
+      "max": "max",
+      "spread": "spread",
+      "sources": "sources"
+    },
+    "citations": {
+      "title": "Citation apparatus",
+      "density": "Citation density",
+      "citations-per-entry": "citations per entry",
+      "apparatus-breadth": "Apparatus breadth (tagged dictionaries)",
+      "distinct-source-sigla": "distinct source sigla",
+      "most-cited-sources": "Most-cited sources, per dictionary",
+      "dictionary": "Dictionary",
+      "rank": "rank",
+      "source": "source",
+      "citations": "citations",
+      "shared-sources": "Shared sources across dictionaries",
+      "in-n-dicts": "in N dicts",
+      "shared-sigla-jaccard": "shared sigla (Jaccard)"
+    },
+    "senses": {
+      "title": "Sense depth",
+      "sense-richness": "Sense richness per dictionary",
+      "mean-sense-divisions": "mean sense divisions per entry",
+      "deepest-treatment": "Deepest treatment (per shared lemma)",
+      "largest-gaps": "Largest sense-depth gaps",
+      "lemma": "lemma",
+      "gap": "gap",
+      "deepest": "deepest",
+      "sources": "sources"
+    },
+    "dossier": {
+      "title": "Per-lemma dictionary dossier",
+      "lemma": "Lemma",
+      "placeholder": "e.g. agni, deva, dharma (SLP1)",
+      "in": "in"
+    }
   }
 }

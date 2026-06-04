@@ -3,12 +3,25 @@ title: Sense depth
 toc: false
 ---
 
-# Sense depth
-
-Which dictionary treats a lemma's senses most richly (UC-CD-06 / UC-LX-09), measured by structural sense divisions.
+# ${t("phase2.senses.title")}
+Which dictionary treats a lemma's senses most richly (UC-LX-04), measured by structural sense divisions.
 
 ```js
 const data = FileAttachment("../data/dicts/sense-depth.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -19,13 +32,13 @@ import * as Plot from "npm:@observablehq/plot";
 Sense counts are <b>sense-division markers</b>, not curated sense inventories: AP <code>∙</code> bullets, PWG/PWK <code>&lt;div&gt;</code>. <b>MW is excluded</b> — it segments senses in prose (<code>&lt;div&gt;</code> ~0.05/entry), so a structural count would falsely make it sense-poor; WIL/VCP/SKD are prose too. AP's bullet unit differs from PWG/PWK's <code>&lt;div&gt;</code>, so AP-vs-Petersburg gaps partly reflect encoding — the most directly comparable pair is <b>PWG vs PWK</b>.
 </div>
 
-## Sense richness per dictionary
+## ${t("phase2.senses.sense-richness")}
 
 ```js
 display(Plot.plot({
   marginLeft: 60,
   height: 200,
-  x: { label: "mean sense divisions per entry", grid: true },
+  x: { label: t("phase2.senses.mean-sense-divisions"), grid: true },
   y: { label: null, domain: data.perDict.map(d => d.dict) },
   marks: [
     Plot.barX(data.perDict, { x: "meanSensesPerEntry", y: "dict", fill: "var(--theme-foreground-focus)" }),
@@ -35,7 +48,7 @@ display(Plot.plot({
 }));
 ```
 
-## Deepest treatment (per shared lemma)
+## ${t("phase2.senses.deepest-treatment")}
 
 For lemmas present in ≥2 sense-segmented dictionaries, which one has the most sense divisions.
 
@@ -43,20 +56,20 @@ For lemmas present in ≥2 sense-segmented dictionaries, which one has the most 
 display(html`<p>${Object.entries(data.leaderboard).map(([d, n]) => html`<b>${d}</b> deepest for ${n.toLocaleString()} lemmas &nbsp; `)} <span style="color:var(--theme-foreground-muted)">(${data.ties.toLocaleString()} ties, mostly single-sense)</span></p>`);
 ```
 
-## Largest sense-depth gaps
+## ${t("phase2.senses.largest-gaps")}
 
 ```js
 const cols = data.senseSegmentedDicts;
 display(Inputs.table(data.topDisparities.map(x => ({
-  lemma: x.lemma,
+  [t("phase2.senses.lemma")]: x.lemma,
   ...Object.fromEntries(cols.map(d => [d, x.byDict[d] ?? "—"])),
-  gap: x.gap,
-  deepest: x.deepest,
-  sources: x.examples
+  [t("phase2.senses.gap")]: x.gap,
+  [t("phase2.senses.deepest")]: x.deepest,
+  [t("phase2.senses.sources")]: x.examples
 })), {
-  columns: ["lemma", ...cols, "gap", "deepest", "sources"],
-  format: { sources: ex => html`${ex.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}` },
-  sort: "gap",
+  columns: [t("phase2.senses.lemma"), ...cols, t("phase2.senses.gap"), t("phase2.senses.deepest"), t("phase2.senses.sources")],
+  format: { [t("phase2.senses.sources")]: ex => html`${ex.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}` },
+  sort: t("phase2.senses.gap"),
   reverse: true
 }));
 ```

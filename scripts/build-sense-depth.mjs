@@ -1,4 +1,4 @@
-// Build the sense-depth comparison (Phase 2, UC-CD-06 / UC-LX-09).
+// Build the sense-depth comparison (Phase 2, UC-LX-04).
 //
 // Compares how richly dictionaries treat a lemma's senses. Sense segmentation
 // is structural only in AP (`∙` bullets) and PWG/PWK (<div>); MW segments

@@ -3,13 +3,26 @@ title: Typology treemap
 toc: false
 ---
 
-# Article-type treemap
-
+# ${t("phase1.typology.title")}
 The composition of MW1899's 286,561 records by article type, as a squarified treemap.
 
 ```js
 const data = FileAttachment("../data/article-type-counts.json").json();
 const articleExamples = FileAttachment("../data/article-type-examples.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -75,7 +88,7 @@ display(svg.node());
 
 ---
 
-## Reading the treemap
+## ${t("phase1.typology.reading")}
 
 - Largest tile: **compound sub-entries** (126,360, 44.1%) — half the dictionary is compound members.
 - Next: **derived forms** (72,119, 25.2%) — suffixed derivatives.
@@ -87,7 +100,7 @@ display(svg.node());
 
 ---
 
-## Entry examples
+## ${t("phase1.typology.examples")}
 
 Each group lists three MW source records matching the same classifier used for the treemap counts. Links open the `csl-orig` MW source line for that record.
 

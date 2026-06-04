@@ -3,12 +3,25 @@ title: Homonym splits
 toc: false
 ---
 
-# Homonym splits across dictionaries
-
-Where the homonym-marking dictionaries (MW, PWG, PWK) **disagree on how many homonyms** a lemma has — i.e. one dictionary splits a form into several entries that another keeps as one (UC-LX-10).
+# ${t("phase2.homonyms.title")}
+Where the homonym-marking dictionaries (MW, PWG, PWK) **disagree on how many homonyms** a lemma has — i.e. one dictionary splits a form into several entries that another keeps as one.
 
 ```js
 const data = FileAttachment("../data/dicts/homonym-split.json").json();
+const localesEn = FileAttachment("../locales-en.json").json();
+const localesRu = FileAttachment("../locales-ru.json").json();
+```
+
+```js
+const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
+const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
+const t = (key) => {
+  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+  const parts = key.split(".");
+  let result = currentLocale;
+  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
+  return result;
+};
 ```
 
 ```js
@@ -23,7 +36,7 @@ Homonym count = distinct <code>&lt;h&gt;</code> indices for the lemma (1 when no
 display(html`<p><b>${data.candidateCount.toLocaleString()}</b> lemmas where ${data.homonymDicts.join(", ")} disagree on homonym count; showing the <b>${data.shown}</b> with the widest spread.</p>`);
 ```
 
-## Spread of disagreement
+## ${t("phase2.homonyms.spread-of-disagreement")}
 
 ```js
 const byMax = {};
@@ -31,27 +44,27 @@ for (const c of data.candidates) byMax[c.maxHomonyms] = (byMax[c.maxHomonyms] ||
 const rows = Object.entries(byMax).map(([m, n]) => ({ maxHomonyms: +m, lemmas: n })).sort((a, b) => a.maxHomonyms - b.maxHomonyms);
 display(Plot.plot({
   height: 240,
-  x: { label: "max homonyms in any dictionary", tickFormat: "d" },
-  y: { label: "lemmas (shown)", grid: true },
+  x: { label: t("phase2.homonyms.max-homonyms"), tickFormat: "d" },
+  y: { label: t("phase2.homonyms.lemmas-shown"), grid: true },
   marks: [Plot.barY(rows, { x: "maxHomonyms", y: "lemmas", fill: "var(--theme-foreground-focus)" }), Plot.ruleY([0])]
 }));
 ```
 
-## Widest disagreements
+## ${t("phase2.homonyms.widest-disagreements")}
 
 ```js
 display(Inputs.table(data.candidates.map(c => ({
-  lemma: c.lemma,
+  [t("phase2.homonyms.lemma")]: c.lemma,
   ...Object.fromEntries(data.homonymDicts.map(d => [d, c.byDict[d] ?? "—"])),
-  max: c.maxHomonyms,
-  spread: c.spread,
-  sources: c.examples
+  [t("phase2.homonyms.max")]: c.maxHomonyms,
+  [t("phase2.homonyms.spread")]: c.spread,
+  [t("phase2.homonyms.sources")]: c.examples
 })), {
-  columns: ["lemma", ...data.homonymDicts, "max", "spread", "sources"],
+  columns: [t("phase2.homonyms.lemma"), ...data.homonymDicts, t("phase2.homonyms.max"), t("phase2.homonyms.spread"), t("phase2.homonyms.sources")],
   format: {
-    sources: ex => html`${ex.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}`
+    [t("phase2.homonyms.sources")]: ex => html`${ex.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}`
   },
-  sort: "spread",
+  sort: t("phase2.homonyms.spread"),
   reverse: true
 }));
 ```

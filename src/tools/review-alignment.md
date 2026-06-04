@@ -5,7 +5,7 @@ toc: false
 
 # Alignment confidence
 
-How confidently lemmas align across the seven dictionaries, and the review queue of the few that don't align cleanly (UC-CD-09 / UC-RV-01).
+How confidently lemmas align across the seven dictionaries, and the review queue of the few that don't align cleanly (UC-CD-05 / UC-RV-03).
 
 ```js
 const review = FileAttachment("../data/review/low-confidence-alignment-review.json").json();
