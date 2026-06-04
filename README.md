@@ -115,6 +115,7 @@ Architecture and planning:
 - [Architecture](ARCHITECTURE.md) · [Use cases](docs/USE_CASES.md) · [Reader/developer critique](docs/READER_DEVELOPER_CRITIQUE.md)
 - [MW Quantitative Depth handoff](docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md) (Phase 1)
 - [Dictionary comparison plan](docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
+- [Cross-repo hypothesis index](docs/HYPOTHESIS_INDEX.md) - evidence-backed findings, strong testable hypotheses, and external hypotheses routed by repository boundary
 - DCS migration material now lives in [VisualDCS `docs/csl-atlas-migration/`](https://github.com/gasyoun/VisualDCS/tree/main/docs/csl-atlas-migration); active corpus work belongs outside this repo
 - [Review reports](docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary
 - [Review release roadmap](docs/REVIEW_RELEASE_ROADMAP.md) · [Release checklist](docs/RELEASE_CHECKLIST.md) · [Light review sprint](docs/LIGHT_REVIEW_SPRINT.md)
