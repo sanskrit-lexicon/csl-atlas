@@ -7,7 +7,7 @@ and entry-level account of how microstructure differs across CDSL dictionaries.
 
 ## Trust Block
 
-- Evidence: M1-M5 generated outputs under `data/lexico/`, especially
+- Evidence: M1-M6 generated outputs under `data/lexico/`, especially
   `microstructure_profile.csv` and `microstructure_fingerprint.json`.
 - Limitations: marker counts measure recoverable conventions, not the full
   content of every dictionary.
@@ -23,7 +23,7 @@ dictionary entry:
 - M1 derivative subentry markers;
 - M2 preverb subentries;
 - M3 cross-reference edges, folded to outgoing degree;
-- M4 indigenous verbal-root evidence;
+- M4 verbal-root evidence from indigenous and dictionary-specific conventions;
 - M5 unified join and per-dictionary fingerprint.
 
 The row key is `(dict, L)`, the dictionary code and CDSL entry number. The
@@ -45,6 +45,7 @@ profile is meant to answer scholar-facing questions such as:
 | `data/lexico/preverb_subentries.csv` | M2 preverb-subentry rows. | `derived` |
 | `data/lexico/xref_edges.csv` | M3 cross-reference edges. | `derived` |
 | `data/lexico/indigenous_roots.csv` | M4 indigenous root rows. | `derived` |
+| `data/lexico/xref_lineage.json` | M6 shared cross-reference overlap. | `derived` |
 
 ## Use-Case Mapping
 
@@ -60,9 +61,9 @@ profile is meant to answer scholar-facing questions such as:
 The safest interpretation is comparative and convention-aware. A high M1 or M2
 count means a dictionary exposes a structure in a detectable CDSL markup
 convention. A low or zero count does not automatically mean the dictionary lacks
-that structure. Indigenous dictionaries such as SKD and VCP need M4 because
-their verbal apparatus is written in Sanskrit prose and root-list conventions,
-not European abbreviation tags.
+that structure. Indigenous and root-layer dictionaries such as SKD, VCP, KRM,
+and YAT need M4 because their verbal apparatus is written in source-specific
+conventions, not European abbreviation tags.
 
 ## Companion Docs
 
@@ -70,3 +71,5 @@ not European abbreviation tags.
 - [`MICROSTRUCTURE_FINDINGS.md`](MICROSTRUCTURE_FINDINGS.md)
 - [`MICROSTRUCTURE_M1_M2_RESULTS.md`](MICROSTRUCTURE_M1_M2_RESULTS.md)
 - [`MICROSTRUCTURE_ZERO_MEANING.md`](MICROSTRUCTURE_ZERO_MEANING.md)
+- [`MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md`](MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md)
+- [`MICROSTRUCTURE_XREF_LINEAGE.md`](MICROSTRUCTURE_XREF_LINEAGE.md)

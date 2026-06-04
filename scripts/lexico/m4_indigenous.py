@@ -451,6 +451,10 @@ def main():
                     "but spells the same Kavikalpadruma grammar in a parenthesised cluster "
                     "(`(I-BvAdiH-792 saka-sew-para)`); krm_cluster reads its short pada/trans forms "
                     "(para/A/uBa, saka/sa/aka) cluster-scoped — pada 170→1,378, trans 50→1,735. "
+                    "YAT's class digit and `a`/`d`/`c` pada marker are decoded, while its raw "
+                    "parenthesised it/anubandha material is preserved but not interpreted; "
+                    "YAT transitivity and seṭ/aniṭ are not systematically decoded pending "
+                    "source-specific review. "
                     "Sanity-checked: VCP pada parasmaipada>ubhaya>ātmane and "
                     "gaṇa bhvādi≫rest are linguistically correct."),
     }
