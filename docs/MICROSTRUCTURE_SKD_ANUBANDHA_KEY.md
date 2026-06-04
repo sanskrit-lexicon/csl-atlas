@@ -41,6 +41,7 @@ unmarked default** and is deliberately *not* asserted by the decoder.
 **Operation-its** (morphophonemic behaviour; no gaṇa/pada): `i`=num(idit) · `A`(ā)=niṣṭhā-veṭ ·
 `u`=ktvā-veṭ · `U`(ū)=veṭ · `I`(ī)/`O`(au)=aniṭ · `o`=niṣṭhā -na · `e`=sic a-vṛddhi ·
 `f`(ṛ)=caṅ a-hrasva (Pāṇ 7.4.2) · `F`(ṝ)=optional caṅ a-hrasva · `x`(ḷ)=aṅ aorist ·
+`m`(ma)=**mit / nici-hrasva** (penultimate shortens before ṇic, Pāṇ 6.4.92 *mitāṃ hrasvaḥ*) ·
 `ir`=āḍ · `E`(ai)=yajādi · `Yi`(ñi)=present-sense niṣṭhā · `wu`(ṭu)=athu · `qu`(ḍu)=kṛtrima ·
 `za`(ṣ)=kṛt-aṅ · `ta`(t)=adanta marker · `ra`=Vedic-only · `a`=ease of pronunciation only.
 
@@ -71,11 +72,19 @@ cross-walk recovered the *structure*, the *Dhātudīpikā* corrected the *interp
 1,925 of 2,544 SKD roots carry a slot; the gaṇa distribution is linguistically correct
 (bhvādi ≫ rest once the unmarked default is restored from the visarga prose).
 
-## Open question (for the maintainer)
+## `ma` — resolved (Palsule's KKD)
 
-The slot token **`ma` (72×)** is **not among the 46 Dhātudīpikā anubandhas** (all other
-unmapped tokens are 1–3× OCR noise). It is left undecoded. What does SKD's `ma` mark? —
-the one residual to pin down.
+The one residual slot token, **`ma` (72×)**, is the **`m` / mit anubandha**: per
+G.B. Palsule's edition of the *Kavikalpadruma* (Appendix III, pp. 95–100), `m` is one of
+the **17 anubandhas Vopadeva keeps with their Pāṇinian significance** — *mit* → the root's
+penultimate vowel **shortens before the causative ṇic** (Pāṇ 6.4.92 *mitāṃ hrasvaḥ*). It is
+an operation-it (now in `_ANU_OP`), which is exactly why it never resolved to a gaṇa or pada.
+
+Palsule's account also **corroborates this whole key**: he notes Vopadeva repurposes
+`k`, `ṇ`, `p` (Pāṇini used them differently) — matching our **k→curādi, ṇ→phaṇādi(bhvādi),
+p→mucādi(tudādi)** — and borrows `au`=aniṭ from the Jainendra Dhātupāṭha (our `O`→aniṭ).
+(Palsule counts **43** code-letters; the SKD front matter says 46 — a difference in how
+variants are tallied, not in substance.)
 
 ## Provenance
 

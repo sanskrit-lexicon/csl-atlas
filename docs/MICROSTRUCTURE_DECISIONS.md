@@ -199,3 +199,18 @@ hold-for-verification was vindicated. Also confirmed verbatim from the source: t
 
 ### Open question feeding round 9
 - SKD slot token **`ma` (72×)** is not among the 46 Dhātudīpikā anubandhas — what does it mark?
+
+---
+
+## Round 9 — 2026-06-04: `ma` resolved (Palsule's Kavikalpadruma)
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 20 | What does SKD's `ma` (72×) mark? | **`m`/mit = nici-hrasva** (penultimate shortens before ṇic, Pāṇ 6.4.92), per Palsule's KKD App. III | Added `ma`→op `nici-hrasva` to m4's `_ANU_KEY`. `ma` is an operation-it (no gaṇa/pada), so the CSV is unchanged — the key is now **complete**. |
+
+Per G.B. Palsule (ed. *Kavikalpadruma*, Appendix III, pp. 95–100), `m` is one of the **17
+anubandhas Vopadeva keeps with their Pāṇinian significance**. His account independently
+**corroborates the whole key**: `k`/`ṇ`/`p` repurposed as gaṇa markers (= our curādi / phaṇādi
+(bhvādi) / mucādi (tudādi)); `au`=aniṭ borrowed from the Jainendra Dhātupāṭha (= our `O`→aniṭ).
+Palsule counts **43** code-letters vs the front matter's 46 — a tallying difference, not substance.
+**The SKD anubandha line is now complete.**

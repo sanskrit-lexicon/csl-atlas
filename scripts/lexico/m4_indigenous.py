@@ -37,9 +37,9 @@ SKD anubandha decode (verified against the Śabdakalpadruma front matter, the Dh
 46-anubandha phala table — docs/MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md): the it-letters encode
 GAṆA + morphophonemic OPERATIONS, with only ṅ/ñ marking pada (parasmaipada is the unmarked
 default and is NOT asserted). For SKD, gaṇa = anubandha (primary) ∨ visarga-prose (fallback);
-pada = prose ∨ ṅ/ñ anubandha. PROTOTYPE limitations: the meaning is a raw snippet; abbreviated
-gaṇa forms (`adA0`) carry mild noise; gaṇa/pada take the first match; the SKD slot token `ma`
-(72×) is not among the 46 anubandhas and stays undecoded. Deliberately conservative.
+pada = prose ∨ ṅ/ñ anubandha; operation-its (incl. `ma` = mit / nici-hrasva, Pāṇ 6.4.92) live in
+the raw `anubandhas` column. PROTOTYPE limitations: the meaning is a raw snippet; abbreviated gaṇa
+forms (`adA0`) carry mild noise; gaṇa/pada take the first match. Deliberately conservative.
 
 Reads csl-orig via parse_cslorig. Run from repo root:
     python scripts/lexico/m4_indigenous.py --probe aka --dicts skd vcp
@@ -158,7 +158,8 @@ _ANU_OP = {
     "u": "ktva-vet", "U": "vet", "f": "cang-ahrasva", "F": "cang-ahrasva-va", "x": "ang",
     "e": "sic-avrddhi", "E": "yajadi", "o": "nishtha-na", "O": "anit", "Yi": "present-nishtha",
     "wu": "athu", "qu": "krtrima", "za": "krd-ang", "ta": "adanta", "ra": "vaidika",
-}
+    "ma": "nici-hrasva",   # m/mit — penultimate shortens before ṇic (Pāṇ 6.4.92 mitāṃ hrasvaḥ);
+}                          # one of the 17 anubandhas Vop. keeps with Pāṇinian sense (Palsule, KKD App. III)
 _ANU_KEY = {}
 for _d, _kind in ((_ANU_GANA, "gana"), (_ANU_PADA, "pada"), (_ANU_OP, "op")):
     for _k, _v in _d.items():
@@ -361,7 +362,7 @@ def main():
                     "decoded from its Vopadeva anubandha slot via the authoritative Dhātudīpikā 46-anubandha "
                     "key (MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md, verified against the Śabdakalpadruma front "
                     "matter): the it-letters encode GAṆA + operations, only ṅ/ñ mark pada (parasmaipada is "
-                    "the unmarked default, not asserted); the slot token `ma` (72×) is undecoded. gaṇa/pada "
+                    "the unmarked default, not asserted); `ma` = m/mit (nici-hrasva). gaṇa/pada "
                     "take the first match; abbreviated gaṇa forms (adA0/svA0) carry mild noise; veṭ (vew) "
                     "split into its own column. Sanity-checked: VCP pada parasmaipada>ubhaya>ātmane and "
                     "gaṇa bhvādi≫rest are linguistically correct."),
