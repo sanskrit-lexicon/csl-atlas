@@ -100,14 +100,38 @@ def validate_m3():
     return len(rows), len(agg)
 
 
+def validate_m4():
+    if not os.path.exists(os.path.join(DATA, "indigenous_roots.csv")):
+        return 0, 0  # prototype output optional
+    rows = load_csv("indigenous_roots.csv")
+    agg = load_json("indigenous_by_dict.json")["dicts"]
+    pd_rows = collections.Counter()
+    pd_feat = collections.defaultdict(collections.Counter)
+    for i, r in enumerate(rows):
+        check(r["dhatupatha_source"] in ("kavikalpadruma", "madhaviya", "durgadasa", "dhatupatha"),
+              f"m4 row {i}: source={r['dhatupatha_source']}")
+        for f in ("causative", "set", "anit", "bhvadi"):
+            check(r[f] in ("0", "1"), f"m4 row {i}: {f}={r[f]}")
+            pd_feat[r["dict"]][f] += int(r[f])
+        pd_rows[r["dict"]] += 1
+    for code, a in agg.items():
+        check(pd_rows[code] == a["root_entries"],
+              f"m4 {code}: CSV rows {pd_rows[code]} != aggregate root_entries {a['root_entries']}")
+        for f in ("causative", "set", "anit", "bhvadi"):
+            check(pd_feat[code][f] == a[f], f"m4 {code}: CSV {f} {pd_feat[code][f]} != aggregate {a[f]}")
+    return len(rows), len(agg)
+
+
 def main():
     print("Validating data/lexico/ …")
     m1_rows, m1_dicts = validate_m1()
     m2_rows, m2_dicts = validate_m2()
     m3_rows, m3_dicts = validate_m3()
+    m4_rows, m4_dicts = validate_m4()
     print(f"  m1: {m1_rows:,} rows / {m1_dicts} dicts")
     print(f"  m2: {m2_rows:,} rows / {m2_dicts} preverb dicts")
     print(f"  m3: {m3_rows:,} rows / {m3_dicts} xref dicts")
+    print(f"  m4: {m4_rows:,} rows / {m4_dicts} indigenous-root dicts (prototype)")
     if _fail:
         print(f"\nFAIL — {len(_fail)} check(s):", file=sys.stderr)
         for m in _fail[:25]:

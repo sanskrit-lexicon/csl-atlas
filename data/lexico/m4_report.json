@@ -1,0 +1,25 @@
+{
+  "prototype": true,
+  "csv_rows": 2804,
+  "dicts_with_roots": [
+    "acc",
+    "cae",
+    "krm",
+    "pw",
+    "pwg",
+    "skd",
+    "vcp"
+  ],
+  "headline": {
+    "skd": {
+      "indigenous_roots_m4": 2536,
+      "ab_markers_m1": 0
+    },
+    "vcp": {
+      "indigenous_roots_m4": 43,
+      "ab_markers_m1": 0
+    }
+  },
+  "method": "Root entry = body cites a dhātupāṭha (kavikalpadruma/durgādāsa/mādhavīya/…). Features: preraṇe/ṇijanta=causative, sew/aniw=seṭ/aniṭ, BvAdi=class-1. The other gaṇa names collide with the -ādi suffix and are excluded.",
+  "caveats": "PROTOTYPE. SKD cites kavikalpadruma consistently (clean ~2.1k roots); VCP cites its source by name far less, so VCP roots here are a LOWER BOUND (cf. 1,980 seṭ markers). The point: SKD/VCP read 0 under m1's <ab> apparatus but carry thousands of roots — the 0 was detector blindness (MICROSTRUCTURE_ZERO_MEANING.md)."
+}
