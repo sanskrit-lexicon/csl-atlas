@@ -74,6 +74,12 @@ Use small scholar-reviewed samples before making paper-level claims:
 | AP/AP90 delta sample | 20 AMAR lemmas covered by AP but not AP90. | Separate edition/revision differences from parser effects. |
 | Specialized baseline sample | 20 ARMH/FRI/BHS matches. | Confirm that field concentration reflects scope. |
 
+The review packet is now documented in
+[`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md). It adds sample
+selection rules, decision labels, review columns, and boundary rules for SKD
+false lows, VCP high coverage, AP/AP90 deltas, specialized baselines, and
+index/reverse controls.
+
 ## What Not To Claim Yet
 
 - Do not claim AMAR fields measure dictionary quality.
@@ -83,7 +89,7 @@ Use small scholar-reviewed samples before making paper-level claims:
 
 ## Next Test
 
-Use the family-profile artifact to choose the review samples above, then record
-which high/low clusters are true topical signals and which are convention or
-scope effects. This can become a paper figure only after those samples are
+Use the review packet to choose rows from the family-profile artifact, then
+record which high/low clusters are true topical signals and which are convention
+or scope effects. This can become a paper figure only after those samples are
 checked.

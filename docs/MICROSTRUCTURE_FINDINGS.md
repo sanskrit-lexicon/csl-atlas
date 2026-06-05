@@ -43,7 +43,7 @@ applicable. The remaining scholar-facing packages are now explicit:
 |---|---|---|
 | R2 rebuild | [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md), [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) | Use `data/lexico/r2_parser_diagnostics.json` to tighten PWG/PWK `div` scope, BEN/AP90/BHS marker scope, AE reverse rank filtering/review, and SKD/VCP `iti` labels before broadening H1R/H2/H3R. |
 | H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md) | Review the positive control, genealogy-structure tensions, and structural-convergence prompts in `data/lexico/structural_register_h6_review.json`. |
-| H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md) | Use `data/lexico/semantic_field_family_profiles.json` to review SKD false lows, AP/AP90 deltas, VCP high coverage, and specialized baselines. |
+| H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md), [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md) | Use the H4 review packet to adjudicate SKD false lows, VCP high coverage, AP/AP90 deltas, specialized baselines, and index/reverse controls. |
 | Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Use `data/lexico/xref_hub_review.json` to label shared-core, prefix-convention, and edition-continuity samples. |
 | H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md) | Review the 130-item proof-first queue and write the anomaly taxonomy. |
 

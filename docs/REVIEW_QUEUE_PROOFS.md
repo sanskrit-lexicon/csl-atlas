@@ -47,7 +47,7 @@ shape when implemented.
 | R2 parser-drift diagnostics | Whether source/archive row-count drift is a parser-family problem before it becomes a sense-alignment claim; see [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md). | `csl-atlas`; dictionary source rows and recovered R2 fixtures only. |
 | Cross-reference lineage candidates | Whether shared Sanskrit cross-reference targets preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md). | `csl-atlas`; dictionary graph evidence only; `data/lexico/xref_hub_review.json` built as the review-prompt artifact. |
 | SKD anubandha adjudication | Whether indigenous it-marker coding can be decoded safely enough to emit reviewed grammatical columns. | `csl-atlas`; philological review required. |
-| H4 semantic-field review | Whether Amarakosa-native fields classify dictionary evidence without importing corpus categories; see [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md). | `csl-atlas`; M8 data package, chart, and `data/lexico/semantic_field_family_profiles.json` built; scholar review samples next. |
+| H4 semantic-field review | Whether Amarakosa-native fields classify dictionary evidence without importing corpus categories; see [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md) and [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md). | `csl-atlas`; M8 data package, chart, family-profile artifact, and scholar review packet built. |
 
 ## Proof Types
 

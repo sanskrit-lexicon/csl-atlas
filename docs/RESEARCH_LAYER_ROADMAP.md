@@ -20,6 +20,8 @@ chart space with L0 known-edge support.*
 MW/PWG shared-core samples for scholar review.*
 *v1.9 R2 diagnostics update 2026-06-05: source/archive parser drift is now
 classified into rebuild work packages before the final splitter is restored.*
+*v2.0 H4 review update 2026-06-05: the semantic-field review packet now
+documents sample types, decision labels, review columns, and boundary rules.*
 **Companion to**: [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md), [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (genealogy/phylogeny), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (structure typology), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md).
 
 This stream is **additive**. The existing program is researcher-facing (papers M/L/H + a 50-viz catalog). This roadmap turns those analyses into a **practitioner layer** — usable tools for three audiences — and adds new testable hypotheses and visualizations. Two working prototypes ship with it.
@@ -71,7 +73,7 @@ working view below so old H1-H7 labels do not look equally open.
 | **H1R** | **Sense granularity is a family/marking-style trait, not pure temporal inflation.** | R2 sense-unit measurements by year and family | researchers, makers | negative finding for original H1; restore/rebuild R2 artifacts before broadening |
 | **H2** | **Citation density predicts a sense's survival** into later dictionaries. | cited vs uncited ancestor senses on measured inheritance edges | researchers | supported finding in R2; broaden panel next |
 | **H3R** | **Derivative dictionaries copy or condense more than they expand.** | net sense delta and gloss overlap along measured inheritance edges | researchers, historians | negative finding for original H3; no measured edge shows systematic net-addition |
-| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | map dictionary headword coverage onto **Amarakosa-native topical fields** -> per-dict and per-family field distribution | researchers, students | M8 data package, chart, interpretation note, and family-profile artifact built |
+| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | map dictionary headword coverage onto **Amarakosa-native topical fields** -> per-dict and per-family field distribution | researchers, students | M8 data package, chart, interpretation note, family-profile artifact, and review packet built |
 | **H5** | **"Ghost entries"** — shared OCR/typo anomalies — are both a lineage fingerprint **and** an editor QA flag. | rarity-weighted shared-anomaly detection (extends L3 forensic) | makers, historians | scoped as proof-first maker queue |
 | **H6** | **Structural register (citation × grammar-marking) predicts tradition family.** | cluster the macro profile (§1.2); compare to the genealogy tree | researchers | prototype supported, charted, and review-classed against L0 known edges |
 | **H7** | **First-N sampling materially biases structure metrics** (early-alphabet entries are shorter/sparser). | compare first-N vs random vs stratified samples on the same dicts | methodology | **✅ A7 resolved 2026-05-31** — full corpus chosen (bias moot for production); the §1.2 prototype already confirmed the first-N skew empirically |
@@ -131,7 +133,7 @@ need to be restored or rebuilt before the claims are broadened.
 | **R0** (done) | Two prototypes + this roadmap | — | proof of concept |
 | **R1** | Productize the micro explorer (any lemma, web) | parse + index headwords (have `sanhw1`) | students |
 | **R2** | **Sense splitter** per dict format → sense-level corpus — archived first-slice findings recorded in [R2_FINDINGS.md](R2_FINDINGS.md) | dict format study (have micro typology) | H1R, H2, H3R, sense-alignment, divergence map |
-| **R3** | Semantic-field coverage, chart, and family-profile artifact (Amarakosa-native) | Amarakosa topical hierarchy (`AMAR`) + dictionary headword sets | H4, semantic chart, scholar review samples |
+| **R3** | Semantic-field coverage, chart, family-profile artifact, and review packet (Amarakosa-native) | Amarakosa topical hierarchy (`AMAR`) + dictionary headword sets | H4, semantic chart, scholar review samples |
 | **R4** | Maker QA worklist | R2 + encoding guard + anomaly detectors | dictionary makers |
 | **R5** | Student learning paths + external corpus-frequency handoff | R1 + VisualDCS output contract | students |
 
@@ -209,9 +211,10 @@ H1 time-inflation.
 paper or a Paper-L section; co-author assignment for the sense-evolution work;
 completion of the R2 rebuild contract beyond the source-backed anchor
 prototype and parser diagnostics; scholar review of the H6 structural-register prompts and H4
-family-profile samples; and human review of the first H5 sample. H4
-interpretation, xref hub review, and H5 scope are documented in
+review-packet samples; and human review of the first H5 sample. H4
+interpretation/review, xref hub review, and H5 scope are documented in
 [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md),
+[`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md),
 [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md), and
 [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md).
 
