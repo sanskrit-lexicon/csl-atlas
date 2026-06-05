@@ -44,7 +44,7 @@ shape when implemented.
 | Future queue | What it should prove | Boundary |
 |---|---|---|
 | Sense divergence | Whether cross-dictionary sense disagreement reflects copying, condensation, family style, or parser weakness; see [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md). | `csl-atlas`; dictionary sense evidence only. |
-| Cross-reference lineage candidates | Whether shared Sanskrit cross-reference targets preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md). | `csl-atlas`; dictionary graph evidence only. |
+| Cross-reference lineage candidates | Whether shared Sanskrit cross-reference targets preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md). | `csl-atlas`; dictionary graph evidence only; `data/lexico/xref_hub_review.json` built as the review-prompt artifact. |
 | SKD anubandha adjudication | Whether indigenous it-marker coding can be decoded safely enough to emit reviewed grammatical columns. | `csl-atlas`; philological review required. |
 | H4 semantic-field review | Whether Amarakosa-native fields classify dictionary evidence without importing corpus categories; see [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md). | `csl-atlas`; M8 data package, chart, and `data/lexico/semantic_field_family_profiles.json` built; scholar review samples next. |
 

@@ -1,0 +1,1202 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "xref-hub-review-artifact",
+  "claim": "M6 xref hubs need separate review labels for prefix conventions, lexical shared cores, sparse pairs, and edition continuity.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-reviewed",
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "npm run build-xref-hub-review",
+  "sourceGeneratedAt": "2026-06-05T08:29:19.672Z",
+  "sourceFiles": [
+    "data/lexico/xref_by_dict.json",
+    "data/lexico/xref_shared_edges.csv",
+    "src/data/dicts/xref-lineage.json",
+    "scripts/lexico/m3_xrefs.py",
+    "scripts/lexico/m6_xref_lineage.py",
+    "scripts/build-xref-lineage.mjs",
+    "scripts/build-xref-hub-review.mjs"
+  ],
+  "counts": {
+    "dictionaryProfiles": 6,
+    "pairReviewRows": 10,
+    "sourceSharedEdges": 641,
+    "sharedCoreSample": 40,
+    "topTargetLimit": 25
+  },
+  "method": [
+    "Classify top referenced targets per dictionary as prefix-convention, lexical-target, or normalization-risk.",
+    "Carry xref-lineage pair readings into review labels: edition-continuity, lexical-shared-core, too-sparse, or normalization-risk.",
+    "Emit a deterministic 40-edge MW/PWG shared-core sample for scholar review.",
+    "Treat labels as review prompts, not automatic lineage claims."
+  ],
+  "hubProfiles": [
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "entriesScanned": 123366,
+      "entriesWithXref": 12283,
+      "xrefEdges": 22987,
+      "distinctTargets": 16351,
+      "cfQuotes": 0,
+      "kindCounts": {
+        "vgl": 22987
+      },
+      "topTargets": [
+        {
+          "target": "a˚",
+          "count": 320,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "mahA˚",
+          "count": 254,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "su˚",
+          "count": 160,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "vi˚",
+          "count": 75,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "deva˚",
+          "count": 72,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "brahma˚",
+          "count": 63,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "tri˚",
+          "count": 59,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "sa˚",
+          "count": 58,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "prati˚",
+          "count": 56,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "go˚",
+          "count": 49,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "rAja˚",
+          "count": 49,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "bahu˚",
+          "count": 42,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "pra˚",
+          "count": 42,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "ati˚",
+          "count": 41,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "ku˚",
+          "count": 40,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "eka˚",
+          "count": 39,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "maDu˚",
+          "count": 37,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "viSva˚",
+          "count": 37,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "pari˚",
+          "count": 35,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "jala˚",
+          "count": 34,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        }
+      ],
+      "hubClassCounts": {
+        "prefix-convention": 20
+      }
+    },
+    {
+      "code": "mw",
+      "label": "MW",
+      "entriesScanned": 286560,
+      "entriesWithXref": 7507,
+      "xrefEdges": 7665,
+      "distinctTargets": 6636,
+      "cfQuotes": 0,
+      "kindCounts": {
+        "cf": 7665
+      },
+      "topTargets": [
+        {
+          "target": "a-",
+          "count": 48,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "a/-",
+          "count": 32,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "A-",
+          "count": 15,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "a-s˚",
+          "count": 11,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "aBi-",
+          "count": 11,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "pra-",
+          "count": 10,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "tri-",
+          "count": 10,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "vi-",
+          "count": 10,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "agni-",
+          "count": 9,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "ati-",
+          "count": 9,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "ava-",
+          "count": 9,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "eka-",
+          "count": 9,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "karRa-",
+          "count": 9,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "sa-",
+          "count": 9,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "ut-",
+          "count": 9,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "anu-",
+          "count": 8,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "apa-",
+          "count": 8,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "go-",
+          "count": 8,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "nir-",
+          "count": 8,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        },
+        {
+          "target": "mahA-",
+          "count": 7,
+          "hubClass": "prefix-convention",
+          "interpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review."
+        }
+      ],
+      "hubClassCounts": {
+        "prefix-convention": 20
+      }
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "entriesScanned": 90654,
+      "entriesWithXref": 604,
+      "xrefEdges": 609,
+      "distinctTargets": 583,
+      "cfQuotes": 432,
+      "kindCounts": {
+        "cf": 609
+      },
+      "topTargets": [
+        {
+          "target": "devamAtfka",
+          "count": 3,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "narasiMha",
+          "count": 3,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "tawa",
+          "count": 3,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "akzapari",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "aNga",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "brahmabanDu",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "cAndrAyaRa",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "cirajIvin",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "cUqA",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "indragopa",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "javanikA",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "kUpamaRqUka",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "kuwIcaka",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "maDyamavyAyoga",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "narmasaciva",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "parivettf",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "paYcagavya",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "paYcatva",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "snAtaka",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "uttama",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        }
+      ],
+      "hubClassCounts": {
+        "lexical-target": 20
+      }
+    },
+    {
+      "code": "ap90",
+      "label": "AP90",
+      "entriesScanned": 34882,
+      "entriesWithXref": 432,
+      "xrefEdges": 446,
+      "distinctTargets": 429,
+      "cfQuotes": 79,
+      "kindCounts": {
+        "cf": 446
+      },
+      "topTargets": [
+        {
+          "target": "narasiMha",
+          "count": 3,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "akzapari",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "cirajIvin",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "cUqA",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "devamAtfka",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "kUpamaMqUka",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "kuwIcaka",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "lakzya",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "narmasaciva",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "paMcatva",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "parivettf",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "snAtaka",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "tawa",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "udDa",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "uttama",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "vrAtya",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "aMGri",
+          "count": 1,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "aMk",
+          "count": 1,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "CidrezvanarTA",
+          "count": 1,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "dAridryaM",
+          "count": 1,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        }
+      ],
+      "hubClassCounts": {
+        "lexical-target": 20
+      }
+    },
+    {
+      "code": "cae",
+      "label": "CAE",
+      "entriesScanned": 40069,
+      "entriesWithXref": 163,
+      "xrefEdges": 196,
+      "distinctTargets": 160,
+      "cfQuotes": 5,
+      "kindCounts": {
+        "cf": 196
+      },
+      "topTargets": [
+        {
+          "target": "aYjali",
+          "count": 6,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "Sa",
+          "count": 4,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "aTa",
+          "count": 3,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "BUpa",
+          "count": 3,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "ra",
+          "count": 3,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "aNgulitra",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "asta",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "Atma",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "gam",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "gaRa",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "guRa",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "ha",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "jas",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "kfSA",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "kiMnara",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "n",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "nasyA",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "nu",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "sa",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        },
+        {
+          "target": "tripaTa",
+          "count": 2,
+          "hubClass": "lexical-target",
+          "interpretation": "Potential lexical target; useful for shared-core or edition-continuity review."
+        }
+      ],
+      "hubClassCounts": {
+        "lexical-target": 20
+      }
+    },
+    {
+      "code": "ae",
+      "label": "AE",
+      "entriesScanned": 11359,
+      "entriesWithXref": 2,
+      "xrefEdges": 2,
+      "distinctTargets": 2,
+      "cfQuotes": 0,
+      "kindCounts": {
+        "cf": 2
+      },
+      "topTargets": [
+        {
+          "target": "bahUnAmapyasArARAM saMhatiH kAryasADikA",
+          "count": 1,
+          "hubClass": "normalization-risk",
+          "interpretation": "Target normalization may create or hide an edge; inspect raw source before using as evidence."
+        },
+        {
+          "target": "paropadeSe pAMqityaM",
+          "count": 1,
+          "hubClass": "normalization-risk",
+          "interpretation": "Target normalization may create or hide an edge; inspect raw source before using as evidence."
+        }
+      ],
+      "hubClassCounts": {
+        "normalization-risk": 2
+      }
+    }
+  ],
+  "pairReview": [
+    {
+      "pair": "mw-pwg",
+      "label": "MW x PWG",
+      "reading": "headline-shared-core",
+      "sharedSources": 2538,
+      "overlappingEdges": 641,
+      "jaccardOnSharedSources": 0.0687,
+      "aInheritanceRate": 0.2176,
+      "bInheritanceRate": 0.0913,
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Review shared lexical targets separately from prefix or normalization artifacts."
+    },
+    {
+      "pair": "ap-ap90",
+      "label": "AP x AP90",
+      "reading": "positive-control",
+      "sharedSources": 211,
+      "overlappingEdges": 182,
+      "jaccardOnSharedSources": 0.7398,
+      "aInheritanceRate": 0.8545,
+      "bInheritanceRate": 0.8465,
+      "reviewLabel": "edition-continuity",
+      "interpretation": "Use as edition-continuity calibration."
+    },
+    {
+      "pair": "ap-pwg",
+      "label": "AP x PWG",
+      "reading": "comparison",
+      "sharedSources": 67,
+      "overlappingEdges": 23,
+      "jaccardOnSharedSources": 0.065,
+      "aInheritanceRate": 0.3433,
+      "bInheritanceRate": 0.0742,
+      "reviewLabel": "normalization-risk",
+      "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
+    },
+    {
+      "pair": "ap-mw",
+      "label": "AP x MW",
+      "reading": "comparison",
+      "sharedSources": 66,
+      "overlappingEdges": 19,
+      "jaccardOnSharedSources": 0.1473,
+      "aInheritanceRate": 0.2879,
+      "bInheritanceRate": 0.2317,
+      "reviewLabel": "normalization-risk",
+      "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
+    },
+    {
+      "pair": "cae-mw",
+      "label": "CAE x MW",
+      "reading": "comparison",
+      "sharedSources": 40,
+      "overlappingEdges": 11,
+      "jaccardOnSharedSources": 0.1236,
+      "aInheritanceRate": 0.2444,
+      "bInheritanceRate": 0.2,
+      "reviewLabel": "normalization-risk",
+      "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
+    },
+    {
+      "pair": "ap90-pwg",
+      "label": "AP90 x PWG",
+      "reading": "comparison",
+      "sharedSources": 71,
+      "overlappingEdges": 11,
+      "jaccardOnSharedSources": 0.0242,
+      "aInheritanceRate": 0.1467,
+      "bInheritanceRate": 0.0281,
+      "reviewLabel": "normalization-risk",
+      "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
+    },
+    {
+      "pair": "ap90-mw",
+      "label": "AP90 x MW",
+      "reading": "comparison",
+      "sharedSources": 84,
+      "overlappingEdges": 10,
+      "jaccardOnSharedSources": 0.0513,
+      "aInheritanceRate": 0.1124,
+      "bInheritanceRate": 0.0862,
+      "reviewLabel": "normalization-risk",
+      "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
+    },
+    {
+      "pair": "cae-pwg",
+      "label": "CAE x PWG",
+      "reading": "comparison",
+      "sharedSources": 46,
+      "overlappingEdges": 7,
+      "jaccardOnSharedSources": 0.0158,
+      "aInheritanceRate": 0.125,
+      "bInheritanceRate": 0.0177,
+      "reviewLabel": "normalization-risk",
+      "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
+    },
+    {
+      "pair": "ap-cae",
+      "label": "AP x CAE",
+      "reading": "too-few-shared-sources",
+      "sharedSources": 1,
+      "overlappingEdges": 1,
+      "jaccardOnSharedSources": 1,
+      "aInheritanceRate": 1,
+      "bInheritanceRate": 1,
+      "reviewLabel": "too-sparse",
+      "interpretation": "Too sparse for lineage interpretation."
+    },
+    {
+      "pair": "ap90-cae",
+      "label": "AP90 x CAE",
+      "reading": "too-few-shared-sources",
+      "sharedSources": 2,
+      "overlappingEdges": 0,
+      "jaccardOnSharedSources": 0,
+      "aInheritanceRate": 0,
+      "bInheritanceRate": 0,
+      "reviewLabel": "too-sparse",
+      "interpretation": "Too sparse for lineage interpretation."
+    }
+  ],
+  "sharedCoreSample": [
+    {
+      "sampleId": "mw-pwg-shared:01",
+      "sourceLemma": "ARi",
+      "target": "aRi",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:02",
+      "sourceLemma": "Adinava",
+      "target": "AdInava",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:03",
+      "sourceLemma": "Akzit",
+      "target": "anAkzit",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:04",
+      "sourceLemma": "Ali",
+      "target": "ali",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:05",
+      "sourceLemma": "Alin",
+      "target": "alin",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:06",
+      "sourceLemma": "Anuzak",
+      "target": "anuzak",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:07",
+      "sourceLemma": "ArAt",
+      "target": "Are",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:08",
+      "sourceLemma": "AwIkana",
+      "target": "AwIlaka",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:09",
+      "sourceLemma": "Awi",
+      "target": "Aqi",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:10",
+      "sourceLemma": "Ayu",
+      "target": "Ayus",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:11",
+      "sourceLemma": "BAluka",
+      "target": "Balla",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:12",
+      "sourceLemma": "BAtu",
+      "target": "BAnu",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:13",
+      "sourceLemma": "BAvitra",
+      "target": "Bavitra",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:14",
+      "sourceLemma": "BI",
+      "target": "Byas",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:15",
+      "sourceLemma": "BUHKAra",
+      "target": "BuHKAra",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:16",
+      "sourceLemma": "BaMsas",
+      "target": "Basad",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:17",
+      "sourceLemma": "BakkikA",
+      "target": "PaqiNgA",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:18",
+      "sourceLemma": "Bakz",
+      "target": "biBakzayizu",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:19",
+      "sourceLemma": "Bala",
+      "target": "bal",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:20",
+      "sourceLemma": "Bas",
+      "target": "psA",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:21",
+      "sourceLemma": "BastrakA",
+      "target": "BastrAkA",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:22",
+      "sourceLemma": "Bavanti",
+      "target": "BavantI",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:23",
+      "sourceLemma": "Bavitra",
+      "target": "BAvitra",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:24",
+      "sourceLemma": "Bela",
+      "target": "Beqa",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:25",
+      "sourceLemma": "BfNgariwi",
+      "target": "BfNgin",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:26",
+      "sourceLemma": "BfRqi",
+      "target": "BaRqi",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:27",
+      "sourceLemma": "BogapAla",
+      "target": "Bogika",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:28",
+      "sourceLemma": "BojyA",
+      "target": "BojA",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:29",
+      "sourceLemma": "BrAS",
+      "target": "BlAS",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:30",
+      "sourceLemma": "BuHKAra",
+      "target": "BUHKAra",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:31",
+      "sourceLemma": "BuRq",
+      "target": "huRq",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:32",
+      "sourceLemma": "Buj",
+      "target": "buBukzA",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:33",
+      "sourceLemma": "Cadis",
+      "target": "CAdizeya",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:34",
+      "sourceLemma": "DUmana",
+      "target": "DUpana",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:35",
+      "sourceLemma": "DUr",
+      "target": "DUrv",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:36",
+      "sourceLemma": "Darmya",
+      "target": "DArmyAyaRa",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:37",
+      "sourceLemma": "DraR",
+      "target": "Dvan",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:38",
+      "sourceLemma": "GAwarI",
+      "target": "apaGAwilA",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:39",
+      "sourceLemma": "Ga",
+      "target": "pariGa",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:40",
+      "sourceLemma": "GaRqa",
+      "target": "GuRqa",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    }
+  ],
+  "limitations": [
+    "Top target counts are normalized xref targets, not full citation or sense evidence.",
+    "Prefix/convention hubs can dominate counts and must not be treated like rare lexical targets.",
+    "The MW/PWG sample is deterministic and source-facing, but still machine-labeled.",
+    "Sparse pair rows remain visible but should not drive lineage interpretation."
+  ],
+  "boundary": [
+    "This artifact uses dictionary-internal cross-reference evidence only.",
+    "No DCS, corpus, TEI/OntoLex, FrAC, GitHub, or organization-process evidence is used."
+  ]
+}

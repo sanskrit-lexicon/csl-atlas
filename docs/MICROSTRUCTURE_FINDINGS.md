@@ -44,7 +44,7 @@ applicable. The remaining scholar-facing packages are now explicit:
 | R2 rebuild | [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md) | Restore reproducible generator outputs before broadening H1R/H2/H3R. |
 | H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md) | Review the positive control, genealogy-structure tensions, and structural-convergence prompts in `data/lexico/structural_register_h6_review.json`. |
 | H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md) | Use `data/lexico/semantic_field_family_profiles.json` to review SKD false lows, AP/AP90 deltas, VCP high coverage, and specialized baselines. |
-| Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Label shared-core, prefix-convention, and edition-continuity samples. |
+| Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Use `data/lexico/xref_hub_review.json` to label shared-core, prefix-convention, and edition-continuity samples. |
 | H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md) | Review the 130-item proof-first queue and write the anomaly taxonomy. |
 
 ## What The Review Queues Prove
@@ -54,7 +54,7 @@ Before writing review procedure, each queue should state its proof value:
 | Queue | What it proves |
 |---|---|
 | SKD/YAT/SHS root-format checks | Whether dictionary-specific verbal-root coding can be decoded reliably enough to emit grammatical columns without forcing all dictionaries into one convention. |
-| Xref target overlap | Whether cross-reference graphs preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md). |
+| Xref target overlap | Whether cross-reference graphs preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) and `data/lexico/xref_hub_review.json`. |
 | Source-siglum aliases | Whether source citation normalization can improve dictionary evidence without hiding uncertainty. |
 | POS/gender conflicts | Which disagreements are dictionary disagreement, parser error, or convention mismatch. |
 | H5 anomaly review | Whether rare near-core and raw-headword forensic signals are lineage evidence, correction targets, parser artifacts, or legitimate morphology. |

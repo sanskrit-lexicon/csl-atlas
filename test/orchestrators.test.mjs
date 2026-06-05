@@ -13,6 +13,7 @@ import { jaccard, lookupKeysForLemma, splitExplicitMarkers } from "../scripts/bu
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
+import { classifyHubTarget } from "../scripts/build-xref-hub-review.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
 import { topForm } from "../scripts/build-citation-apparatus.mjs";
 
@@ -127,6 +128,14 @@ test("edgeReviewClass separates controls, tensions, and convergence", () => {
     edgeReviewClass({ consensus_support: 0.05 }, { structuralDistance01: 0.1 }, false, true),
     "structural-convergence"
   );
+});
+
+// ---- Xref hub review: target-class labels ----
+test("classifyHubTarget separates prefix hubs, lexical targets, and normalization risks", () => {
+  assert.equal(classifyHubTarget("a-"), "prefix-convention");
+  assert.equal(classifyHubTarget("mahA\u02da"), "prefix-convention");
+  assert.equal(classifyHubTarget("narasiMha"), "lexical-target");
+  assert.equal(classifyHubTarget("paropadeSe pAMqityaM"), "normalization-risk");
 });
 
 // ---- All-dictionary coverage: classify + fit bands ----
