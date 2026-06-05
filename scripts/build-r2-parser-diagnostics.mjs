@@ -68,8 +68,8 @@ export function priorityForClass(driftClass) {
 
 function nextActionFor(row, driftClass) {
   if (driftClass === "over-split-candidate") {
-    if (row.split === "div") return "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.";
-    if (row.split === "number-marker") return "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs.";
+    if (row.split === "div") return "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material.";
+    if (row.split === "number-marker") return "Use marker-run prefixes and source-record exact matches to separate main numbered sense runs from later derived or homonym material.";
     return "Tighten explicit marker scope before using rows as sense counts.";
   }
   if (driftClass === "reverse-overmatch") return "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments.";
@@ -139,6 +139,12 @@ export function markerRunPrefixMatch(row) {
   return null;
 }
 
+export function sourceRecordExactMatches(row) {
+  const archivedRows = Number(row.archivedSenseRows || 0);
+  if (!archivedRows || !row.sourceRecordCounts?.length) return [];
+  return row.sourceRecordCounts.filter(record => Number(record.rowCount || 0) === archivedRows);
+}
+
 function diagnosticRows(summary, senseRows) {
   const examples = groupExamples(senseRows);
   const rows = [];
@@ -148,6 +154,7 @@ function diagnosticRows(summary, senseRows) {
       const sourceRows = Number(row.sourceSenseRows || 0);
       const archivedRows = Number(row.archivedSenseRows || 0);
       const markerPrefix = markerRunPrefixMatch(row);
+      const sourceRecordMatches = sourceRecordExactMatches(row);
       rows.push({
         diagnosticId: `r2-drift:${lemma.lemma}:${row.dict}`,
         lemma: lemma.lemma,
@@ -163,6 +170,7 @@ function diagnosticRows(summary, senseRows) {
         sourceToArchiveRatio: ratio(sourceRows, archivedRows),
         splitConfidence: row.splitConfidence ?? [],
         ...(row.sourceRecordCounts?.length ? { sourceRecordCounts: row.sourceRecordCounts } : {}),
+        ...(sourceRecordMatches.length ? { sourceRecordExactMatches: sourceRecordMatches } : {}),
         ...(row.markerLabelCounts && Object.keys(row.markerLabelCounts).length ? { markerLabelCounts: row.markerLabelCounts } : {}),
         ...(row.markerRunCounts && Object.keys(row.markerRunCounts).length ? { markerRunCounts: row.markerRunCounts } : {}),
         ...(markerPrefix ? { markerRunPrefixMatch: markerPrefix } : {}),
@@ -198,6 +206,7 @@ function worklistRows(rows) {
       archivedSenseRows: row.archivedSenseRows,
       sourceToArchiveRatio: row.sourceToArchiveRatio,
       ...(row.sourceRecordCounts?.length ? { sourceRecordCounts: row.sourceRecordCounts } : {}),
+      ...(row.sourceRecordExactMatches?.length ? { sourceRecordExactMatches: row.sourceRecordExactMatches } : {}),
       ...(row.markerLabelCounts ? { markerLabelCounts: row.markerLabelCounts } : {}),
       ...(row.markerRunCounts ? { markerRunCounts: row.markerRunCounts } : {}),
       ...(row.markerRunPrefixMatch ? { markerRunPrefixMatch: row.markerRunPrefixMatch } : {}),

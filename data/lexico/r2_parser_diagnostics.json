@@ -96,7 +96,7 @@
         "3": 108,
         "4": 59
       },
-      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts."
+      "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material."
     },
     {
       "diagnosticId": "r2-drift:gam:ben",
@@ -182,7 +182,7 @@
         "runCount": 2,
         "countedRows": 23
       },
-      "nextAction": "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs."
+      "nextAction": "Use marker-run prefixes and source-record exact matches to separate main numbered sense runs from later derived or homonym material."
     },
     {
       "diagnosticId": "r2-drift:rama:pwg",
@@ -228,7 +228,7 @@
         "1": 8,
         "2": 4
       },
-      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts."
+      "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material."
     },
     {
       "diagnosticId": "r2-drift:dharma:pwg",
@@ -269,7 +269,7 @@
         "runCount": 1,
         "countedRows": 5
       },
-      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts."
+      "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material."
     },
     {
       "diagnosticId": "r2-drift:iti:pwg",
@@ -318,7 +318,7 @@
       "markerRunCounts": {
         "0": 11
       },
-      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts."
+      "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material."
     },
     {
       "diagnosticId": "r2-drift:rama:ben",
@@ -346,6 +346,15 @@
           "rowCount": 7
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "11986",
+          "rawHeadword": "rama",
+          "sourceLine": 87379,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379",
+          "rowCount": 7
+        }
+      ],
       "markerLabelCounts": {
         "1": 5,
         "2": 5,
@@ -357,7 +366,7 @@
         "1": 6,
         "2": 2
       },
-      "nextAction": "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs."
+      "nextAction": "Use marker-run prefixes and source-record exact matches to separate main numbered sense runs from later derived or homonym material."
     },
     {
       "diagnosticId": "r2-drift:gam:ae",
@@ -634,6 +643,15 @@
           "rowCount": 4
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "17667",
+          "rawHeadword": "DarmmaH",
+          "sourceLine": 206577,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+          "rowCount": 4
+        }
+      ],
       "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
     },
     {
@@ -732,6 +750,29 @@
           "rowCount": 1
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "39359",
+          "rawHeadword": "rama",
+          "sourceLine": 452114,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L452114",
+          "rowCount": 1
+        },
+        {
+          "blockId": "39360",
+          "rawHeadword": "rama",
+          "sourceLine": 452119,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L452119",
+          "rowCount": 1
+        },
+        {
+          "blockId": "39589",
+          "rawHeadword": "rAma",
+          "sourceLine": 453556,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L453556",
+          "rowCount": 1
+        }
+      ],
       "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
     },
     {
@@ -766,6 +807,15 @@
       "archivedSenseRows": 1,
       "sourceToArchiveRatio": 1,
       "sourceRecordCounts": [
+        {
+          "blockId": "35803",
+          "rawHeadword": "boDisattva",
+          "sourceLine": 428571,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L428571",
+          "rowCount": 1
+        }
+      ],
+      "sourceRecordExactMatches": [
         {
           "blockId": "35803",
           "rawHeadword": "boDisattva",
@@ -1187,7 +1237,7 @@
       ],
       "driftClass": "over-split-candidate",
       "priority": "high",
-      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.",
+      "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material.",
       "exampleRows": [
         {
           "rowId": "gam:pwg:21814:1",
@@ -1315,7 +1365,7 @@
       ],
       "driftClass": "over-split-candidate",
       "priority": "high",
-      "nextAction": "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs.",
+      "nextAction": "Use marker-run prefixes and source-record exact matches to separate main numbered sense runs from later derived or homonym material.",
       "exampleRows": [
         {
           "rowId": "gam:ben:4326:1",
@@ -1403,7 +1453,7 @@
       ],
       "driftClass": "over-split-candidate",
       "priority": "high",
-      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.",
+      "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material.",
       "exampleRows": [
         {
           "rowId": "rama:pwg:83557:1",
@@ -1486,7 +1536,7 @@
       ],
       "driftClass": "over-split-candidate",
       "priority": "high",
-      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.",
+      "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material.",
       "exampleRows": [
         {
           "rowId": "dharma:pwg:36241:1",
@@ -1577,7 +1627,7 @@
       ],
       "driftClass": "over-split-candidate",
       "priority": "high",
-      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.",
+      "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material.",
       "exampleRows": [
         {
           "rowId": "iti:pwg:10029:1",
@@ -1638,6 +1688,15 @@
           "rowCount": 7
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "11986",
+          "rawHeadword": "rama",
+          "sourceLine": 87379,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379",
+          "rowCount": 7
+        }
+      ],
       "markerLabelCounts": {
         "1": 5,
         "2": 5,
@@ -1658,7 +1717,7 @@
       ],
       "driftClass": "over-split-candidate",
       "priority": "high",
-      "nextAction": "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs.",
+      "nextAction": "Use marker-run prefixes and source-record exact matches to separate main numbered sense runs from later derived or homonym material.",
       "exampleRows": [
         {
           "rowId": "rama:ben:11986:1",
@@ -2164,6 +2223,15 @@
           "rowCount": 4
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "17667",
+          "rawHeadword": "DarmmaH",
+          "sourceLine": 206577,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+          "rowCount": 4
+        }
+      ],
       "sourceLines": [
         206577,
         206577,
@@ -2448,6 +2516,29 @@
           "rowCount": 1
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "39359",
+          "rawHeadword": "rama",
+          "sourceLine": 452114,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L452114",
+          "rowCount": 1
+        },
+        {
+          "blockId": "39360",
+          "rawHeadword": "rama",
+          "sourceLine": 452119,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L452119",
+          "rowCount": 1
+        },
+        {
+          "blockId": "39589",
+          "rawHeadword": "rAma",
+          "sourceLine": 453556,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L453556",
+          "rowCount": 1
+        }
+      ],
       "sourceLines": [
         452114,
         452119,
@@ -2564,6 +2655,15 @@
         "lumped-proxy"
       ],
       "sourceRecordCounts": [
+        {
+          "blockId": "35803",
+          "rawHeadword": "boDisattva",
+          "sourceLine": 428571,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L428571",
+          "rowCount": 1
+        }
+      ],
+      "sourceRecordExactMatches": [
         {
           "blockId": "35803",
           "rawHeadword": "boDisattva",
@@ -3922,6 +4022,15 @@
           "rowCount": 1
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "53245",
+          "rawHeadword": "boDisattva",
+          "sourceLine": 515286,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L515286",
+          "rowCount": 2
+        }
+      ],
       "markerLabelCounts": {
         "v": 1
       },
@@ -4599,6 +4708,22 @@
           "rowCount": 1
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "39171",
+          "rawHeadword": "rama",
+          "sourceLine": 311802,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L311802",
+          "rowCount": 1
+        },
+        {
+          "blockId": "39401",
+          "rawHeadword": "rAma",
+          "sourceLine": 314666,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L314666",
+          "rowCount": 1
+        }
+      ],
       "sourceLines": [
         311802,
         314666
@@ -4654,6 +4779,15 @@
           "rowCount": 1
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "11034",
+          "rawHeadword": "boDisattva",
+          "sourceLine": 44270,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L44270",
+          "rowCount": 1
+        }
+      ],
       "sourceLines": [
         44270
       ],
@@ -4690,6 +4824,15 @@
         "lumped-proxy"
       ],
       "sourceRecordCounts": [
+        {
+          "blockId": "22287",
+          "rawHeadword": "boDisattva",
+          "sourceLine": 75168,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L75168",
+          "rowCount": 1
+        }
+      ],
+      "sourceRecordExactMatches": [
         {
           "blockId": "22287",
           "rawHeadword": "boDisattva",
@@ -4822,6 +4965,15 @@
           "rowCount": 1
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "27972",
+          "rawHeadword": "boDisattva",
+          "sourceLine": 218160,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L218160",
+          "rowCount": 1
+        }
+      ],
       "sourceLines": [
         218160
       ],
@@ -4858,6 +5010,15 @@
         "lumped-proxy"
       ],
       "sourceRecordCounts": [
+        {
+          "blockId": "15186",
+          "rawHeadword": "Darma",
+          "sourceLine": 51058,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L51058",
+          "rowCount": 1
+        }
+      ],
+      "sourceRecordExactMatches": [
         {
           "blockId": "15186",
           "rawHeadword": "Darma",
@@ -4990,6 +5151,15 @@
           "rowCount": 1
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "16054",
+          "rawHeadword": "Darma",
+          "sourceLine": 49640,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L49640",
+          "rowCount": 1
+        }
+      ],
       "sourceLines": [
         49640
       ],
@@ -5112,6 +5282,15 @@
         "lumped-proxy"
       ],
       "sourceRecordCounts": [
+        {
+          "blockId": "9285",
+          "rawHeadword": "gam",
+          "sourceLine": 30959,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L30959",
+          "rowCount": 1
+        }
+      ],
+      "sourceRecordExactMatches": [
         {
           "blockId": "9285",
           "rawHeadword": "gam",
@@ -5306,6 +5485,15 @@
           "rowCount": 1
         }
       ],
+      "sourceRecordExactMatches": [
+        {
+          "blockId": "12127",
+          "rawHeadword": "gam",
+          "sourceLine": 37497,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L37497",
+          "rowCount": 1
+        }
+      ],
       "sourceLines": [
         37497
       ],
@@ -5343,6 +5531,15 @@
         "lumped-proxy"
       ],
       "sourceRecordCounts": [
+        {
+          "blockId": "7334",
+          "rawHeadword": "iti",
+          "sourceLine": 64140,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L64140",
+          "rowCount": 3
+        }
+      ],
+      "sourceRecordExactMatches": [
         {
           "blockId": "7334",
           "rawHeadword": "iti",
@@ -5668,6 +5865,15 @@
         "lumped-proxy"
       ],
       "sourceRecordCounts": [
+        {
+          "blockId": "12769",
+          "rawHeadword": "rAma",
+          "sourceLine": 51230,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L51230",
+          "rowCount": 1
+        }
+      ],
+      "sourceRecordExactMatches": [
         {
           "blockId": "12769",
           "rawHeadword": "rAma",

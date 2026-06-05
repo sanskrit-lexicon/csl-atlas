@@ -10,7 +10,7 @@ import assert from "node:assert/strict";
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { jaccard, lookupKeysForLemma, reverseMatchProfile, sourceRecordCounts, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
-import { classifyDrift, markerRunPrefixMatch, priorityForClass } from "../scripts/build-r2-parser-diagnostics.mjs";
+import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExactMatches } from "../scripts/build-r2-parser-diagnostics.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -169,6 +169,17 @@ test("R2 parser diagnostics detects marker-run prefixes that match archive count
     { maxRunIndex: 1, runCount: 2, countedRows: 23 }
   );
   assert.equal(markerRunPrefixMatch({ archivedSenseRows: 10, markerRunCounts: { 0: 9, 1: 14 } }), null);
+});
+
+test("R2 parser diagnostics detects source records that match archive counts", () => {
+  assert.deepEqual(sourceRecordExactMatches({
+    archivedSenseRows: 7,
+    sourceRecordCounts: [
+      { blockId: "1", rowCount: 8 },
+      { blockId: "2", rowCount: 7 }
+    ]
+  }), [{ blockId: "2", rowCount: 7 }]);
+  assert.deepEqual(sourceRecordExactMatches({ archivedSenseRows: 0, sourceRecordCounts: [{ blockId: "1", rowCount: 1 }] }), []);
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----

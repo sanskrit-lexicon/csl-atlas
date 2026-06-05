@@ -145,3 +145,16 @@ The next parser decision is therefore not just "count fewer `<div>` tags"; it
 must decide which source records represent the target headword sense series and
 which records are derivative, prefixed, cross-reference, or separately keyed
 material.
+
+The diagnostics also flag `sourceRecordExactMatches` when a single source
+record's row count equals the archived count. These are scope clues, not
+automatic filters:
+
+| Diagnostic row | Source rows | Archived rows | Exact source-record clue |
+|---|---:|---:|---|
+| `r2-drift:rama:ben` | 15 | 7 | `<L>11986` `rama` has 7 rows; `<L>12079` `rAma` adds 8 more. |
+| `r2-drift:dharma:skd` | 15 | 4 | `<L>17667` `DarmmaH` has 4 rows inside the SKD/VCP `iti` review class. |
+| `r2-drift:bodhisattva:pwg` | 3 | 2 | `<L>53245` `boDisattva` has 2 rows; the extra row is another source-backed block. |
+
+These matches identify candidate record-scope decisions for review. They do not
+prove that the excluded same-headword records are wrong or irrelevant.
