@@ -31,8 +31,8 @@ already supports, what it refutes, and what it prepares for later analysis.
 
 Use the implemented H6 structural-register scatter and H4 semantic-field page
 as the first chart-trust examples. Both remain prototype-backed, but both now
-have generated JSON inputs and public atlas pages. H4 also has a generated
-family-profile artifact that turns the next question into scholar review rather
+have generated JSON inputs and public atlas pages. H6 and H4 also have generated
+review-prompt artifacts that turn the next questions into scholar review rather
 than data assembly.
 
 The SKD anubandha key, cross-reference graph overlap, root-agreement, and H4
@@ -42,6 +42,7 @@ applicable. The remaining scholar-facing packages are now explicit:
 | Package | Doc | Next proof step |
 |---|---|---|
 | R2 rebuild | [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md) | Restore reproducible generator outputs before broadening H1R/H2/H3R. |
+| H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md) | Review the positive control, genealogy-structure tensions, and structural-convergence prompts in `data/lexico/structural_register_h6_review.json`. |
 | H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md) | Use `data/lexico/semantic_field_family_profiles.json` to review SKD false lows, AP/AP90 deltas, VCP high coverage, and specialized baselines. |
 | Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Label shared-core, prefix-convention, and edition-continuity samples. |
 | H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md) | Review the 130-item proof-first queue and write the anomaly taxonomy. |

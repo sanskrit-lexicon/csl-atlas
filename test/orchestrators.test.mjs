@@ -12,6 +12,7 @@ import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { jaccard, lookupKeysForLemma, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
+import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
 import { topForm } from "../scripts/build-citation-apparatus.mjs";
 
@@ -99,6 +100,33 @@ test("rankFamilyFields chooses high and low fields deterministically", () => {
   ];
   assert.deepEqual(rankFamilyFields(rows, "high", 2).map(row => row.fieldKey), ["b", "a"]);
   assert.deepEqual(rankFamilyFields(rows, "low", 2).map(row => row.fieldKey), ["c", "b"]);
+});
+
+// ---- H6 structural-register review: stable distance labels ----
+test("structuralDistance normalizes H6 chart coordinates", () => {
+  assert.deepEqual(
+    structuralDistance({ citationRegisterPct: 0, grammarPct: 0 }, { citationRegisterPct: 100, grammarPct: 100 }),
+    { citationDeltaPct: 100, grammarDeltaPct: 100, structuralDistance01: 1 }
+  );
+  assert.equal(
+    structuralDistance({ citationRegisterPct: 10, grammarPct: 20 }, { citationRegisterPct: 10, grammarPct: 20 }).structuralDistance01,
+    0
+  );
+});
+
+test("edgeReviewClass separates controls, tensions, and convergence", () => {
+  assert.equal(
+    edgeReviewClass({ consensus_support: 0.8 }, { structuralDistance01: 0.1 }, true, true),
+    "positive-control"
+  );
+  assert.equal(
+    edgeReviewClass({ consensus_support: 0.8 }, { structuralDistance01: 0.4 }, true, true),
+    "genealogy-structure-tension"
+  );
+  assert.equal(
+    edgeReviewClass({ consensus_support: 0.05 }, { structuralDistance01: 0.1 }, false, true),
+    "structural-convergence"
+  );
 });
 
 // ---- All-dictionary coverage: classify + fit bands ----

@@ -19,6 +19,8 @@ npm run build-coverage
 npm run build-mw-depth
 npm run build-dict-comparison
 npm run build-citation-apparatus
+npm run build-structural-register
+npm run build-h6-structural-review
 npm run build-sense-depth
 npm run build-gender-review
 npm run build-source-layer-review
