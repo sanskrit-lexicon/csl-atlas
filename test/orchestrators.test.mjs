@@ -11,7 +11,7 @@ import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { indigenousAuthorityHints, jaccard, lookupKeysForLemma, reverseMatchProfile, sourceRecordCounts, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
 import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExactMatches } from "../scripts/build-r2-parser-diagnostics.mjs";
-import { packetIdForDiagnostic } from "../scripts/build-r2-review-packets.mjs";
+import { packetIdForDiagnostic, scopeCluesForDiagnostic } from "../scripts/build-r2-review-packets.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -217,6 +217,24 @@ test("R2 review packets route diagnostics by parser decision", () => {
     driftClass: "over-split-candidate",
     parserFamily: "western"
   }), "marker-run-scope");
+});
+
+test("R2 review packets expose deterministic review clues", () => {
+  assert.deepEqual(scopeCluesForDiagnostic({
+    sourceRecordCounts: [{ blockId: "1" }, { blockId: "2" }],
+    sourceRecordExactMatches: [{ blockId: "2" }],
+    markerLabelCounts: { 1: 2 },
+    markerRunPrefixMatch: { countedRows: 2 },
+    reverseRankCounts: { high: 1 },
+    indigenousAuthorityHintCounts: { "auth:medini": 1 }
+  }), [
+    "multiple-source-records",
+    "source-record-exact-match",
+    "marker-label-counts",
+    "marker-run-prefix-match",
+    "reverse-rank-counts",
+    "indigenous-authority-hints"
+  ]);
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----

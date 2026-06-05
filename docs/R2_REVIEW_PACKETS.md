@@ -33,7 +33,9 @@ result.
 `npm run build-r2-review-packets` groups all 70 R2 diagnostic rows into five
 review packets. Each packet says what the queue proves, what it does not prove,
 and what decision is needed before rows can be promoted from parser diagnostics
-to stronger R2 evidence.
+to stronger R2 evidence. Packet rows also carry `scopeClues`, capped
+`sourceRecordCounts`, and example source rows with links where the upstream
+diagnostics provide them.
 
 | Packet | Rows | High | Medium | What this queue proves |
 |---|---:|---:|---:|---|
@@ -112,3 +114,15 @@ A future R2 parser rule can be promoted only when the packet records:
 - the source links or generated rows that support it;
 - the rows it deliberately excludes or labels as lower-confidence;
 - the caveat that row-count parity is not semantic proof.
+
+## Scope Clue Vocabulary
+
+| Clue | Meaning |
+|---|---|
+| `multiple-source-records` | More than one same-headword source record contributes rows. |
+| `source-record-exact-match` | One source record has the same row count as the archived fixture. |
+| `marker-label-counts` | Explicit marker labels are available for review. |
+| `marker-run-prefix-match` | A deterministic prefix of marker runs matches the archived count. |
+| `reverse-rank-counts` | AE equivalent-position rank counts are available. |
+| `indigenous-authority-hints` | SKD/VCP authority hints are available outside `<ls>` tagging. |
+| `archive-missing-from-source` | The archive has rows but the source-backed prototype found none. |

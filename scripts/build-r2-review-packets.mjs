@@ -62,7 +62,20 @@ export function packetIdForDiagnostic(row) {
   return "source-gap-controls";
 }
 
+export function scopeCluesForDiagnostic(row) {
+  const clues = [];
+  if (row.sourceRecordCounts?.length > 1) clues.push("multiple-source-records");
+  if (row.sourceRecordExactMatches?.length) clues.push("source-record-exact-match");
+  if (row.markerLabelCounts) clues.push("marker-label-counts");
+  if (row.markerRunPrefixMatch) clues.push("marker-run-prefix-match");
+  if (row.reverseRankCounts) clues.push("reverse-rank-counts");
+  if (row.indigenousAuthorityHintCounts) clues.push("indigenous-authority-hints");
+  if (row.sourceSenseRows === 0 && row.archivedSenseRows > 0) clues.push("archive-missing-from-source");
+  return clues;
+}
+
 function compactRow(row) {
+  const scopeClues = scopeCluesForDiagnostic(row);
   return {
     diagnosticId: row.diagnosticId,
     lemma: row.lemma,
@@ -75,12 +88,16 @@ function compactRow(row) {
     archivedSenseRows: row.archivedSenseRows,
     sourceToArchiveRatio: row.sourceToArchiveRatio,
     sourceRecordCount: row.sourceRecordCount,
+    ...(scopeClues.length ? { scopeClues } : {}),
+    ...(row.sourceRecordCounts?.length ? { sourceRecordCounts: row.sourceRecordCounts } : {}),
     ...(row.sourceRecordExactMatches?.length ? { sourceRecordExactMatches: row.sourceRecordExactMatches } : {}),
     ...(row.markerRunPrefixMatch ? { markerRunPrefixMatch: row.markerRunPrefixMatch } : {}),
     ...(row.markerLabelCounts ? { markerLabelCounts: row.markerLabelCounts } : {}),
     ...(row.markerRunCounts ? { markerRunCounts: row.markerRunCounts } : {}),
     ...(row.reverseRankCounts ? { reverseRankCounts: row.reverseRankCounts } : {}),
     ...(row.indigenousAuthorityHintCounts ? { indigenousAuthorityHintCounts: row.indigenousAuthorityHintCounts } : {}),
+    ...(row.sourceLines?.length ? { sourceLines: row.sourceLines } : {}),
+    ...(row.exampleRows?.length ? { exampleRows: row.exampleRows } : {}),
     nextAction: row.nextAction
   };
 }
