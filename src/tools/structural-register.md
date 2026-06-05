@@ -184,8 +184,8 @@ display(Inputs.table(rows.map(d => ({
 - A zero can be a convention gap. It does not automatically mean the dictionary
   lacks the feature.
 - `iti` and `<ls>` are different citation registers and should remain visible.
-- H4 semantic fields are later; this chart should not mix topical vocabulary
-  into the H6 structural-register claim.
+- H4 semantic fields live on `/tools/semantic-fields`; this chart should not
+  mix topical vocabulary into the H6 structural-register claim.
 
 ---
 

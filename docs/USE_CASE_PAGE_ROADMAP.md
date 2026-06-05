@@ -12,15 +12,17 @@ targets before adding new analysis-method prose.
 - Make "Which dictionary should I use?" the first reader-facing page.
 - Every public tool, chart, or page gets a compact trust block: Evidence,
   Limitations, Validation, Owner repo.
-- H6 structural-register scatter is implemented; next candidates can build on
-  that chart without mixing in corpus or standards evidence.
+- H6 structural-register scatter and H4 semantic-field chart are implemented;
+  next candidates can build on those chart-trust examples without mixing in
+  corpus or standards evidence.
 - Treat the microstructure work as a scholar-facing doc family:
   `MICROSTRUCTURE_PROFILE.md`, `MICROSTRUCTURE_METHODS.md`, and
   `MICROSTRUCTURE_FINDINGS.md`.
 - For review queues, first document what each queue proves; write procedural
   "how to review" notes only after that.
-- H4 semantic-field analysis comes after the page layer, trust template, H6
-  scatter, and microstructure doc family are in place.
+- H4 semantic-field analysis now has a data package and chart; review
+  interpretation comes after the page layer, trust template, H6 scatter, and
+  microstructure doc family are in place.
 
 ## Page Order
 
@@ -31,7 +33,7 @@ targets before adding new analysis-method prose.
 | 3 | [`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | active third page |
 | 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md) and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | implemented |
 | 5 | Microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Give the M1-M5 profile, methods, and findings one coherent entry point. | active scaffold |
-| 6 | H4 semantic-field package | UC-CD-06, UC-LX-04 | scholars, students | Build the Amarakosa-native semantic-field analysis after the above layers settle. | later |
+| 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Interpret the Amarakosa-native semantic-field analysis after the chart layer settles. | implemented chart; review next |
 
 ## Public Page Contract
 
@@ -62,10 +64,10 @@ For every queue, write the proof page first:
 
 1. Land the use-case page layer and trust template.
 2. Write the scholar-facing microstructure profile, methods, and findings docs.
-3. Use the implemented H6 structural-register scatter as the first chart-trust
-   example.
+3. Use the implemented H6 structural-register scatter and H4 semantic-field
+   chart as chart-trust examples.
 4. Document review queues by proof value.
-5. Start H4 semantic-field analysis after the above items are stable.
+5. Interpret H4 semantic-field samples after the above items are stable.
 
 ## Boundary Links
 

@@ -25,18 +25,19 @@ already supports, what it refutes, and what it prepares for later analysis.
 | MF-4 | Cross-reference edges form a lineage-ready graph signal. | supported prototype | PWG `Vgl.`, MW `cf.`, and Apte-family `cf.{#...#}` produce comparable Sanskrit target edges. |
 | MF-5 | Structural register can predict dictionary family. | supported/prototype-backed | Citation style plus grammar-marking separates Western-tagged, indigenous, and index traditions. |
 | MF-6 | Content, convention, and microstructure inheritance are separate axes. | strong testable | CAE/CCS and MW/PWG show that headword convention and entry structure can diverge. |
-| MF-7 | Amarakośa-native semantic-field bias is measurable. | supported prototype | M8 maps AMAR vargas to dictionary headword coverage without using corpus frequency. |
+| MF-7 | Amarakosa-native semantic-field bias is measurable. | supported prototype | M8 maps AMAR vargas to dictionary headword coverage without using corpus frequency. |
 
 ## Next Analysis Priority
 
-Use the implemented H6 structural-register scatter as the first chart built
-under the chart trust template. It remains prototype-backed, but it now has a
-generated JSON input and public atlas page.
+Use the implemented H6 structural-register scatter and H4 semantic-field page
+as the first chart-trust examples. Both remain prototype-backed, but both now
+have generated JSON inputs and public atlas pages.
 
 The SKD anubandha key, cross-reference graph overlap, root-agreement, and H4
-semantic-field packages are now implemented as data/docs layers. The next
-scholar-facing implementation should turn H4 into a chart with a trust block and
-visible SKD/VCP convention caveats.
+semantic-field packages are now implemented as data/docs/chart layers where
+applicable. The next
+scholar-facing implementation should interpret the H4 chart, select review
+samples, and keep SKD/VCP convention caveats visible.
 
 ## What The Review Queues Prove
 
@@ -51,6 +52,6 @@ Before writing review procedure, each queue should state its proof value:
 
 ## H4 Semantic Fields
 
-H4 is now built as M8. Its field scheme is Amarakośa-native and
+H4 is now built as M8. Its field scheme is Amarakosa-native and
 dictionary-first; corpus fields belong outside the atlas unless a compact
 external contract exists.

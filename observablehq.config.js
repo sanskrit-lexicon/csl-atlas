@@ -43,6 +43,7 @@ export default {
         { name: "Dictionary genealogy", path: "/tools/lexicography" },
         { name: "Convention fingerprints", path: "/tools/lexicographic-conventions" },
         { name: "Structural register", path: "/tools/structural-register" },
+        { name: "Semantic fields", path: "/tools/semantic-fields" },
         { name: "R2 sense explorer", path: "/tools/r2-explorer" },
         { name: "R2 sense granularity", path: "/tools/r2-h1" }
       ]

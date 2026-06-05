@@ -271,9 +271,10 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - Scholar-facing analysis docs come before public-facing analysis explanations.
 - Review queues should first document what each queue proves, then how to review
   it.
-- H6 structural-register scatter is the implemented chart-trust example.
-- H4 semantic fields are built as the M8 data layer; the chart/review layer is
-  the next UI-facing step.
+- H6 structural-register scatter and H4 semantic fields are implemented
+  chart-trust examples.
+- H4 semantic fields are built as the M8 data layer and `/tools/semantic-fields`;
+  review interpretation is the next scholar-facing step.
 
 ## Related Docs
 
