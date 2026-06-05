@@ -3,20 +3,24 @@
 Date: 2026-06-05
 
 Status: reconstruction contract for the archived R2 sense-alignment package.
-The archived page payload has been recovered as JSON fixtures, but the original
-splitter has not yet been restored. This document defines the minimum
-reproducible package needed before new H1R/H2/H3R claims are broadened or
-submitted.
+The archived page payload has been recovered as JSON fixtures, and the five
+anchor lemmas now have a source-backed prototype rebuild. The original splitter
+has not yet been fully restored. This document defines the minimum reproducible
+package needed before new H1R/H2/H3R claims are broadened or submitted.
 
 ## Trust Block
 
 - Evidence: archived findings in `R2_FINDINGS.md`, static pages
   `/tools/r2-h1` and `/tools/r2-explorer`, recovered fixtures
   `data/lexico/r2_archive_explorer.json` and
-  `data/lexico/r2_archive_h1.json`, and the paper draft
+  `data/lexico/r2_archive_h1.json`, source-backed prototype outputs
+  `data/lexico/r2_source_anchor_summary.json`,
+  `data/lexico/r2_source_anchor_senses.jsonl`, and
+  `data/lexico/r2_source_anchor_alignments.json`, and the paper draft
   `PAPER_SENSE_ALIGNMENT.md`.
 - Limitations: the old generator files and JSON outputs are not present in this
-  branch; static pages preserve results but are not a reproducibility package.
+  branch; static pages preserve results, and the source-backed anchor prototype
+  is not yet the final reproducibility package.
 - Validation target: restored scripts must run from current sibling `csl-orig`
   and reproduce the archived headline numbers or explicitly document drift.
 - Owner repo: `csl-atlas`.
@@ -34,6 +38,24 @@ dictionary analysis.
 
 Use these fixtures as tests and comparison targets while rebuilding the real
 R2 package from `csl-orig`.
+
+## Source-Backed Anchor Prototype
+
+`npm run build-r2-source-anchors` reads current local `../csl-orig/v02` sources
+and emits the next rebuild rung for the five archived anchor lemmas. It resolves
+source headword variants, aggregates all matching `<L>` blocks, writes compact
+sense rows, and builds provisional Sanskrit-anchor alignments.
+
+| Output | Role | Current content |
+|---|---|---|
+| `data/lexico/r2_source_anchor_summary.json` | Count and drift summary against archive fixtures. | 5 lemmas, 14 dictionaries, 1,811 source-backed rows versus 445 archived rows. |
+| `data/lexico/r2_source_anchor_senses.jsonl` | Minimal source-backed sense-row worklist. | One provisional row per split source span, with `<L>` ids, source links, anchors, and limitations. |
+| `data/lexico/r2_source_anchor_alignments.json` | Prototype alignment worklist. | Jaccard-ranked shared Sanskrit/citation anchors, capped to top rows per lemma. |
+
+The row-count drift is expected. The prototype includes PWK from source, exposes
+AE reverse-dictionary overmatching, and splits some PWG/PWK/BEN source markers
+more finely than the archived static explorer. Use the drift table in
+`r2_source_anchor_summary.json` to decide which parser family to tighten next.
 
 ## Required Outputs
 
@@ -73,8 +95,10 @@ Each sense row should be compact and deterministic:
 ## Rebuild Order
 
 0. Recover archived static fixtures with `npm run recover-r2-archive`.
-1. Restore or reimplement the entry loader and headword resolver.
+1. Restore or reimplement the entry loader and headword resolver. Prototype
+   evidence: `npm run build-r2-source-anchors`.
 2. Aggregate all homonym blocks for the requested lemma before splitting.
+   Prototype evidence: source rows carry `<L>` block IDs and source links.
 3. Rebuild parser families in this order: western explicit, western lumped,
    reverse, indigenous.
 4. Rebuild anchor extraction and strong-anchor filtering.
@@ -103,7 +127,9 @@ Each sense row should be compact and deterministic:
 
 ## Next Implementation Slice
 
-Use the recovered fixtures for the five archived anchor lemmas: `gam`,
-`dharma`, `rama`, `iti`, and `bodhisattva`. Reproduce those payloads from
-current `csl-orig` first; then broaden only after the generator can be rerun
-from source.
+Use the source-backed anchor prototype to tighten parser-family parity with the
+archive fixtures. Priority order: AP/AP90/BEN marker parity for nominal lemmas,
+PWG/PWK over-splitting, AE reverse ranking for common roots, then indigenous
+`iti` review labels. Broaden beyond `gam`, `dharma`, `rama`, `iti`, and
+`bodhisattva` only after the generator can explain or reproduce the archived
+payloads from source.

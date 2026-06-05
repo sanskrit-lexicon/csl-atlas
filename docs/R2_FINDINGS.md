@@ -6,7 +6,9 @@ generator files and JSONL/JSON outputs named below are not present in the
 current branch. `npm run recover-r2-archive` now extracts the static page
 payloads into `data/lexico/r2_archive_explorer.json` and
 `data/lexico/r2_archive_h1.json`; treat those as archive fixtures, not as a
-rebuilt splitter. The reconstruction contract is
+rebuilt splitter. `npm run build-r2-source-anchors` now emits source-backed
+anchor prototypes in `data/lexico/r2_source_anchor_*`; treat those as the next
+rebuild rung, not the final splitter. The reconstruction contract is
 [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
 
 First real build of **R2** (the per-dict sense splitter, RESEARCH_LAYER_ROADMAP

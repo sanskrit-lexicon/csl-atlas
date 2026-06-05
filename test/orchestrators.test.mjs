@@ -9,6 +9,7 @@ import assert from "node:assert/strict";
 
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
+import { jaccard, lookupKeysForLemma, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
 import { topForm } from "../scripts/build-citation-apparatus.mjs";
 
@@ -55,6 +56,24 @@ test("senseUnits is repeatable (does not leak regex lastIndex)", () => {
   const re = /<div\b/g;
   assert.equal(senseUnits("<div><div>", re), 2);
   assert.equal(senseUnits("<div><div>", re), 2); // second call must match the first
+});
+
+// ---- R2 source anchors: lookup keys, marker splitting, alignment score ----
+test("lookupKeysForLemma carries historical source spellings", () => {
+  assert.deepEqual(lookupKeysForLemma("dharma"), ["Darma", "DarmaH", "Darmma", "DarmmaH", "dharma"]);
+  assert.deepEqual(lookupKeysForLemma("bodhisattva"), ["boDisattva", "boDisattvaH", "boDisattvaM", "bodhisattva"]);
+});
+
+test("splitExplicitMarkers keeps preface and numbered parts stable", () => {
+  const parts = splitExplicitMarkers("grammar {@1@} first {@--2@} second", /\{@\s*(?:--)?(\d+)\.?\s*@\}/g);
+  assert.deepEqual(parts.map(part => part.localId), ["preface", "1", "2"]);
+  assert.equal(parts[0].splitConfidence, "lumped-proxy");
+  assert.equal(parts[1].splitConfidence, "explicit");
+});
+
+test("jaccard scores anchor overlap", () => {
+  assert.equal(jaccard(["a", "b"], ["b", "c"]), 1 / 3);
+  assert.equal(jaccard([], []), 0);
 });
 
 // ---- All-dictionary coverage: classify + fit bands ----

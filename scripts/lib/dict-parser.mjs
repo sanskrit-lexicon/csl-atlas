@@ -79,7 +79,7 @@ export function genderForDict(code, body) {
 
 /**
  * Iterate records of one dictionary file.
- * Yields { k1, body, startLine, href }.
+ * Yields { L, k1, body, startLine, href }.
  */
 export function* iterateDict(code) {
   const text = fs.readFileSync(dictFile(code), "utf8");
@@ -95,9 +95,10 @@ export function* iterateDict(code) {
       bodyLines = [];
     } else if (line.startsWith("<LEND>")) {
       if (header == null) continue;
+      const L = headerField(header, "L");
       const k1 = headerField(header, "k1");
       const h = headerField(header, "h"); // homonym index, where the dictionary marks one
-      yield { k1, h, body: bodyLines.join("\n"), startLine, href: dictHref(code, startLine) };
+      yield { L, k1, h, body: bodyLines.join("\n"), startLine, href: dictHref(code, startLine) };
       header = null;
       bodyLines = [];
     } else if (header != null) {

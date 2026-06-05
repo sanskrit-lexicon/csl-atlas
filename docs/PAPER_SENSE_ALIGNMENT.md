@@ -12,7 +12,9 @@ generator package so every result below is reproducible from current
 `csl-orig`. The minimum rebuild contract is
 [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md). The current archive
 fixtures `data/lexico/r2_archive_explorer.json` and
-`data/lexico/r2_archive_h1.json` are comparison targets only.
+`data/lexico/r2_archive_h1.json` are comparison targets only; the current
+`data/lexico/r2_source_anchor_*` outputs are a source-backed prototype, not the
+submission-ready splitter.
 
 ## Working title
 
@@ -93,6 +95,7 @@ Archive fixtures can be refreshed with:
 
 ```sh
 npm run recover-r2-archive
+npm run build-r2-source-anchors
 ```
 
 ## Open before submission

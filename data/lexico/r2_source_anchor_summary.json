@@ -1,0 +1,1269 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "source-backed-r2-prototype",
+  "claim": "R2 anchor lemmas resolved against current local csl-orig sources.",
+  "sourceRoot": "../csl-orig/v02",
+  "generatedBy": "npm run build-r2-source-anchors",
+  "outputs": [
+    "data/lexico/r2_source_anchor_summary.json",
+    "data/lexico/r2_source_anchor_senses.jsonl",
+    "data/lexico/r2_source_anchor_alignments.json"
+  ],
+  "limitations": [
+    "This is a prototype rebuild rung, not the restored final R2 package.",
+    "Western explicit markers are split where source markup is clear; MW-family and other lumped dictionaries remain source-block proxies.",
+    "Indigenous prose uses coarse iti-unit splitting and needs review labels.",
+    "AE reverse lookup is source-backed but noisy for common roots."
+  ],
+  "counts": {
+    "lemmaCount": 5,
+    "dictionaryCount": 14,
+    "sourceSenseRows": 1811,
+    "archivedSenseRows": 445
+  },
+  "lemmas": [
+    {
+      "lemma": "gam",
+      "lookupKeys": [
+        "gam"
+      ],
+      "sourceSenseRows": 1173,
+      "archivedSenseRows": 120,
+      "byDict": [
+        {
+          "dict": "mw",
+          "label": "MW 1899",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 3,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            215707,
+            215756,
+            216557
+          ]
+        },
+        {
+          "dict": "mw72",
+          "label": "MW 1872",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 2,
+          "archivedSenseRows": 2,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            116404,
+            116665
+          ]
+        },
+        {
+          "dict": "pwg",
+          "label": "PWG 1855",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 4,
+          "sourceSenseRows": 353,
+          "archivedSenseRows": 30,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            203360,
+            203360,
+            203360,
+            203360,
+            203360
+          ]
+        },
+        {
+          "dict": "pw",
+          "label": "PWK",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 4,
+          "sourceSenseRows": 367,
+          "archivedSenseRows": 0,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            138769,
+            138769,
+            138769,
+            138769,
+            138769
+          ]
+        },
+        {
+          "dict": "ap",
+          "label": "Apte 1957",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 16,
+          "archivedSenseRows": 16,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            165154,
+            167512,
+            167512,
+            167512,
+            167512
+          ]
+        },
+        {
+          "dict": "ap90",
+          "label": "Apte 1890",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 15,
+          "archivedSenseRows": 14,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            105357,
+            105357,
+            105357,
+            105357,
+            105357
+          ]
+        },
+        {
+          "dict": "ben",
+          "label": "Benfey 1866",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 172,
+          "archivedSenseRows": 23,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            29576,
+            29576,
+            29576,
+            29576,
+            29576
+          ]
+        },
+        {
+          "dict": "sch",
+          "label": "Schmidt 1928",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            37497
+          ]
+        },
+        {
+          "dict": "bhs",
+          "label": "Edgerton BHS 1953",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "wil",
+          "label": "Wilson 1832",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "cae",
+          "label": "Cappeller 1891",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            30959
+          ]
+        },
+        {
+          "dict": "vcp",
+          "label": "Vacaspatya 1873",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "skd",
+          "label": "Sabdakalpadruma 1822",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "ae",
+          "label": "Apte EN->SA 1884",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "sourceRecordCount": 243,
+          "sourceSenseRows": 243,
+          "archivedSenseRows": 30,
+          "splitConfidence": [
+            "reverse-equivalent"
+          ],
+          "sourceLines": [
+            218,
+            348,
+            483,
+            926,
+            1290
+          ]
+        }
+      ]
+    },
+    {
+      "lemma": "dharma",
+      "lookupKeys": [
+        "Darma",
+        "DarmaH",
+        "Darmma",
+        "DarmmaH",
+        "dharma"
+      ],
+      "sourceSenseRows": 275,
+      "archivedSenseRows": 163,
+      "byDict": [
+        {
+          "dict": "mw",
+          "label": "MW 1899",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 33,
+          "sourceSenseRows": 33,
+          "archivedSenseRows": 30,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            334919,
+            334922,
+            334925,
+            334928,
+            334931
+          ]
+        },
+        {
+          "dict": "mw72",
+          "label": "MW 1872",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 3,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            174006,
+            174521,
+            174615
+          ]
+        },
+        {
+          "dict": "pwg",
+          "label": "PWG 1855",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 21,
+          "archivedSenseRows": 5,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            350536,
+            350536,
+            350536,
+            350536,
+            350536
+          ]
+        },
+        {
+          "dict": "pw",
+          "label": "PWK",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 16,
+          "archivedSenseRows": 0,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            224195,
+            224195,
+            224195,
+            224195,
+            224195
+          ]
+        },
+        {
+          "dict": "ap",
+          "label": "Apte 1957",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 24,
+          "archivedSenseRows": 23,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            232784,
+            232784,
+            232784,
+            232784,
+            232784
+          ]
+        },
+        {
+          "dict": "ap90",
+          "label": "Apte 1890",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 23,
+          "archivedSenseRows": 22,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            137647,
+            137647,
+            137647,
+            137647,
+            137647
+          ]
+        },
+        {
+          "dict": "ben",
+          "label": "Benfey 1866",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 12,
+          "archivedSenseRows": 11,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            49805,
+            49805,
+            49805,
+            49805,
+            49805
+          ]
+        },
+        {
+          "dict": "sch",
+          "label": "Schmidt 1928",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            49640
+          ]
+        },
+        {
+          "dict": "bhs",
+          "label": "Edgerton BHS 1953",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 4,
+          "sourceSenseRows": 12,
+          "archivedSenseRows": 10,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            30930,
+            30930,
+            30930,
+            30930,
+            30930
+          ]
+        },
+        {
+          "dict": "wil",
+          "label": "Wilson 1832",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 21,
+          "archivedSenseRows": 20,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            158204,
+            158204,
+            158204,
+            158204,
+            158204
+          ]
+        },
+        {
+          "dict": "cae",
+          "label": "Cappeller 1891",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            51058
+          ]
+        },
+        {
+          "dict": "vcp",
+          "label": "Vacaspatya 1873",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 27,
+          "archivedSenseRows": 9,
+          "splitConfidence": [
+            "iti-unit"
+          ],
+          "sourceLines": [
+            352094,
+            352094,
+            352094,
+            352094,
+            352094
+          ]
+        },
+        {
+          "dict": "skd",
+          "label": "Sabdakalpadruma 1822",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 15,
+          "archivedSenseRows": 4,
+          "splitConfidence": [
+            "iti-unit"
+          ],
+          "sourceLines": [
+            206577,
+            206577,
+            206577,
+            206577,
+            206596
+          ]
+        },
+        {
+          "dict": "ae",
+          "label": "Apte EN->SA 1884",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "sourceRecordCount": 66,
+          "sourceSenseRows": 66,
+          "archivedSenseRows": 24,
+          "splitConfidence": [
+            "reverse-equivalent"
+          ],
+          "sourceLines": [
+            804,
+            1040,
+            3619,
+            9631,
+            10544
+          ]
+        }
+      ]
+    },
+    {
+      "lemma": "rama",
+      "lookupKeys": [
+        "rAma",
+        "rama"
+      ],
+      "sourceSenseRows": 202,
+      "archivedSenseRows": 81,
+      "byDict": [
+        {
+          "dict": "mw",
+          "label": "MW 1899",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 23,
+          "sourceSenseRows": 23,
+          "archivedSenseRows": 17,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            584533,
+            584536,
+            584539,
+            584542,
+            584545
+          ]
+        },
+        {
+          "dict": "mw72",
+          "label": "MW 1872",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 2,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            311802,
+            314666
+          ]
+        },
+        {
+          "dict": "pwg",
+          "label": "PWG 1855",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 3,
+          "sourceSenseRows": 44,
+          "archivedSenseRows": 6,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            754855,
+            754855,
+            754855,
+            754855,
+            754855
+          ]
+        },
+        {
+          "dict": "pw",
+          "label": "PWK",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 54,
+          "archivedSenseRows": 0,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            384342,
+            384342,
+            384342,
+            384342,
+            384342
+          ]
+        },
+        {
+          "dict": "ap",
+          "label": "Apte 1957",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 8,
+          "archivedSenseRows": 10,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            376348,
+            376348,
+            376348,
+            379737,
+            379737
+          ]
+        },
+        {
+          "dict": "ap90",
+          "label": "Apte 1890",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 20,
+          "archivedSenseRows": 12,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            209370,
+            209370,
+            209370,
+            209370,
+            209370
+          ]
+        },
+        {
+          "dict": "ben",
+          "label": "Benfey 1866",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 15,
+          "archivedSenseRows": 7,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            87379,
+            87379,
+            87379,
+            87379,
+            87379
+          ]
+        },
+        {
+          "dict": "sch",
+          "label": "Schmidt 1928",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "bhs",
+          "label": "Edgerton BHS 1953",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            51230
+          ]
+        },
+        {
+          "dict": "wil",
+          "label": "Wilson 1832",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "sourceRecordCount": 3,
+          "sourceSenseRows": 22,
+          "archivedSenseRows": 12,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            249261,
+            249272,
+            249272,
+            249272,
+            249272
+          ]
+        },
+        {
+          "dict": "cae",
+          "label": "Cappeller 1891",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 0,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            90073
+          ]
+        },
+        {
+          "dict": "vcp",
+          "label": "Vacaspatya 1873",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 3,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            452114,
+            452119,
+            453556
+          ]
+        },
+        {
+          "dict": "skd",
+          "label": "Sabdakalpadruma 1822",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 10,
+          "splitConfidence": [
+            "iti-unit"
+          ],
+          "sourceLines": [
+            390829,
+            390829,
+            390829
+          ]
+        },
+        {
+          "dict": "ae",
+          "label": "Apte EN->SA 1884",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "sourceRecordCount": 6,
+          "sourceSenseRows": 6,
+          "archivedSenseRows": 4,
+          "splitConfidence": [
+            "reverse-equivalent"
+          ],
+          "sourceLines": [
+            2647,
+            14897,
+            15562,
+            18262,
+            26241
+          ]
+        }
+      ]
+    },
+    {
+      "lemma": "iti",
+      "lookupKeys": [
+        "iti"
+      ],
+      "sourceSenseRows": 145,
+      "archivedSenseRows": 69,
+      "byDict": [
+        {
+          "dict": "mw",
+          "label": "MW 1899",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 4,
+          "sourceSenseRows": 4,
+          "archivedSenseRows": 4,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            100919,
+            100922,
+            101691,
+            101701
+          ]
+        },
+        {
+          "dict": "mw72",
+          "label": "MW 1872",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 4,
+          "sourceSenseRows": 4,
+          "archivedSenseRows": 4,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            61484,
+            61900,
+            61929,
+            61936
+          ]
+        },
+        {
+          "dict": "pwg",
+          "label": "PWG 1855",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 4,
+          "sourceSenseRows": 16,
+          "archivedSenseRows": 4,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            88592,
+            88592,
+            88592,
+            88592,
+            88592
+          ]
+        },
+        {
+          "dict": "pw",
+          "label": "PWK",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 6,
+          "sourceSenseRows": 8,
+          "archivedSenseRows": 0,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            64269,
+            64272,
+            64272,
+            64272,
+            64277
+          ]
+        },
+        {
+          "dict": "ap",
+          "label": "Apte 1957",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 5,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            92701,
+            92701,
+            92701
+          ]
+        },
+        {
+          "dict": "ap90",
+          "label": "Apte 1890",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            64140,
+            64140,
+            64140
+          ]
+        },
+        {
+          "dict": "ben",
+          "label": "Benfey 1866",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 6,
+          "archivedSenseRows": 5,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            11919,
+            11919,
+            11919,
+            11919,
+            11919
+          ]
+        },
+        {
+          "dict": "sch",
+          "label": "Schmidt 1928",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "bhs",
+          "label": "Edgerton BHS 1953",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "wil",
+          "label": "Wilson 1832",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 10,
+          "archivedSenseRows": 9,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            48403,
+            48403,
+            48403,
+            48403,
+            48403
+          ]
+        },
+        {
+          "dict": "cae",
+          "label": "Cappeller 1891",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 3,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            16108,
+            16117,
+            16120
+          ]
+        },
+        {
+          "dict": "vcp",
+          "label": "Vacaspatya 1873",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 5,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "iti-unit"
+          ],
+          "sourceLines": [
+            85845,
+            85845,
+            85845,
+            85845,
+            85845
+          ]
+        },
+        {
+          "dict": "skd",
+          "label": "Sabdakalpadruma 1822",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 7,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "iti-unit"
+          ],
+          "sourceLines": [
+            40325,
+            40325,
+            40325,
+            40325,
+            40325
+          ]
+        },
+        {
+          "dict": "ae",
+          "label": "Apte EN->SA 1884",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "sourceRecordCount": 76,
+          "sourceSenseRows": 76,
+          "archivedSenseRows": 30,
+          "splitConfidence": [
+            "reverse-equivalent"
+          ],
+          "sourceLines": [
+            518,
+            1484,
+            2300,
+            3121,
+            3152
+          ]
+        }
+      ]
+    },
+    {
+      "lemma": "bodhisattva",
+      "lookupKeys": [
+        "boDisattva",
+        "boDisattvaH",
+        "boDisattvaM",
+        "bodhisattva"
+      ],
+      "sourceSenseRows": 16,
+      "archivedSenseRows": 12,
+      "byDict": [
+        {
+          "dict": "mw",
+          "label": "MW 1899",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 3,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            488992,
+            488995,
+            488998
+          ]
+        },
+        {
+          "dict": "mw72",
+          "label": "MW 1872",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "pwg",
+          "label": "PWG 1855",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 2,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 2,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            515286,
+            515286,
+            719134
+          ]
+        },
+        {
+          "dict": "pw",
+          "label": "PWK",
+          "parserFamily": "western",
+          "split": "div",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 0,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            320159
+          ]
+        },
+        {
+          "dict": "ap",
+          "label": "Apte 1957",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 2,
+          "splitConfidence": [
+            "explicit",
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            325199,
+            325199,
+            325199
+          ]
+        },
+        {
+          "dict": "ap90",
+          "label": "Apte 1890",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "ben",
+          "label": "Benfey 1866",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "sch",
+          "label": "Schmidt 1928",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        },
+        {
+          "dict": "bhs",
+          "label": "Edgerton BHS 1953",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            44270
+          ]
+        },
+        {
+          "dict": "wil",
+          "label": "Wilson 1832",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            218160
+          ]
+        },
+        {
+          "dict": "cae",
+          "label": "Cappeller 1891",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            75168
+          ]
+        },
+        {
+          "dict": "vcp",
+          "label": "Vacaspatya 1873",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "lumped-proxy"
+          ],
+          "sourceLines": [
+            428571
+          ]
+        },
+        {
+          "dict": "skd",
+          "label": "Sabdakalpadruma 1822",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "sourceRecordCount": 1,
+          "sourceSenseRows": 2,
+          "archivedSenseRows": 1,
+          "splitConfidence": [
+            "iti-unit"
+          ],
+          "sourceLines": [
+            310375,
+            310375
+          ]
+        },
+        {
+          "dict": "ae",
+          "label": "Apte EN->SA 1884",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "sourceRecordCount": 0,
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "splitConfidence": [],
+          "sourceLines": []
+        }
+      ]
+    }
+  ]
+}

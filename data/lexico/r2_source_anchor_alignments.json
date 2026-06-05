@@ -1,0 +1,3698 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "source-backed-r2-prototype",
+  "claim": "Prototype R2 alignments regenerated from current csl-orig anchor rows.",
+  "limitations": [
+    "Rows are source-backed but the final R2 splitter is not restored.",
+    "Alignment ranking uses provisional anchors and should be treated as a review worklist.",
+    "AE reverse rows intentionally expose common-root overmatching."
+  ],
+  "lemmas": [
+    {
+      "lemma": "bodhisattva",
+      "rowCount": 16,
+      "alignmentCount": 8,
+      "crossTraditionAlignmentCount": 6,
+      "alignments": [
+        {
+          "a": "bodhisattva:mw:145897:bundle",
+          "b": "bodhisattva:wil:27972:bundle",
+          "dictA": "mw",
+          "dictB": "wil",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.25,
+          "shared": [
+            "s:boDi",
+            "s:sattva"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "bodhisattva:skd:24423:1",
+          "b": "bodhisattva:vcp:35803:1",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.2,
+          "shared": [
+            "s:boDi",
+            "s:sattvam"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "bodhisattva:skd:24423:1",
+          "b": "bodhisattva:wil:27972:bundle",
+          "dictA": "skd",
+          "dictB": "wil",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "western",
+          "jaccard": 0.143,
+          "shared": [
+            "s:boDi"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "bodhisattva:vcp:35803:1",
+          "b": "bodhisattva:wil:27972:bundle",
+          "dictA": "vcp",
+          "dictB": "wil",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "western",
+          "jaccard": 0.111,
+          "shared": [
+            "s:boDi"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "bodhisattva:mw:145897:bundle",
+          "b": "bodhisattva:skd:24423:1",
+          "dictA": "mw",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.091,
+          "shared": [
+            "s:boDi"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "bodhisattva:pwg:53245:preface",
+          "b": "bodhisattva:skd:24423:2",
+          "dictA": "pwg",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.091,
+          "shared": [
+            "s:dayAlurboDisattvAMSaH",
+            "s:jImUtavAhanAt",
+            "s:kalpadrumaM",
+            "s:kftI"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "bodhisattva:mw:145897:bundle",
+          "b": "bodhisattva:vcp:35803:1",
+          "dictA": "mw",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.077,
+          "shared": [
+            "s:boDi"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "bodhisattva:pwg:53245:preface",
+          "b": "bodhisattva:skd:24423:1",
+          "dictA": "pwg",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.024,
+          "shared": [
+            "s:budDa"
+          ],
+          "crossTradition": true
+        }
+      ]
+    },
+    {
+      "lemma": "dharma",
+      "rowCount": 275,
+      "alignmentCount": 121,
+      "crossTraditionAlignmentCount": 74,
+      "alignments": [
+        {
+          "a": "dharma:ap:17918:4",
+          "b": "dharma:ap90:15976:4",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "ls:Ms. 1. 114",
+            "ls:Ś. 5. 4",
+            "s:ezaH",
+            "s:zazWAMSavftterapi"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ap:17918:preface",
+          "b": "dharma:ap90:15976:preface",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "ls:Uṇ. 1. 137",
+            "s:Darati",
+            "s:Df",
+            "s:Driyate",
+            "s:lokaM",
+            "s:loko'nena",
+            "s:man",
+            "s:vA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ap:17918:9",
+          "b": "dharma:ap90:15976:9",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.556,
+          "shared": [
+            "ls:Pt. 1. 304",
+            "s:buDAH",
+            "s:DarmEkyaM",
+            "s:dIpakaM",
+            "s:varRyAvarRyAnAM"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:cae:15186:bundle",
+          "b": "dharma:pw:54669:1",
+          "dictA": "cae",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "s:Darme",
+            "s:DarmeRa",
+            "s:sTitaH"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:mw:99918:bundle",
+          "b": "dharma:pw:54669:10",
+          "dictA": "mw",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "s:upamA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:pw:54669:9",
+          "b": "dharma:pwg:36241:7",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "s:yoga"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ap:17918:3",
+          "b": "dharma:ap90:15976:3",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.467,
+          "shared": [
+            "ls:Ku. 5. 38",
+            "s:eka",
+            "s:eva",
+            "s:niDane'pyanuyAti",
+            "s:suhfdDarmo",
+            "s:trivarga",
+            "s:yaH"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ap:17918:8",
+          "b": "dharma:ap90:15976:8",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.429,
+          "shared": [
+            "ls:Māl. 1. 6",
+            "s:jIva",
+            "s:prARi"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:bhs:7705:4",
+          "b": "dharma:mw:100471:bundle",
+          "dictA": "bhs",
+          "dictB": "mw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.2,
+          "shared": [
+            "s:mati"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ap:17918:preface",
+          "b": "dharma:skd:17667:1",
+          "dictA": "ap",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.154,
+          "shared": [
+            "s:Darati",
+            "s:Driyate"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ap90:15976:preface",
+          "b": "dharma:skd:17667:1",
+          "dictA": "ap90",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.154,
+          "shared": [
+            "s:Darati",
+            "s:Driyate"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:mw:99906:bundle",
+          "b": "dharma:pw:54669:1",
+          "dictA": "mw",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.143,
+          "shared": [
+            "s:DarmeRa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ben:6960:7",
+          "b": "dharma:mw:99907:bundle",
+          "dictA": "ben",
+          "dictB": "mw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.125,
+          "shared": [
+            "ls:MBh"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ben:6960:9",
+          "b": "dharma:mw:99907:bundle",
+          "dictA": "ben",
+          "dictB": "mw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.125,
+          "shared": [
+            "ls:MBh"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:cae:15186:bundle",
+          "b": "dharma:mw:99906:bundle",
+          "dictA": "cae",
+          "dictB": "mw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.125,
+          "shared": [
+            "s:DarmeRa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:mw:99911:bundle",
+          "b": "dharma:pw:54669:3",
+          "dictA": "mw",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.118,
+          "shared": [
+            "s:BAva",
+            "s:daSa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:10",
+          "b": "dharma:vcp:27030:14",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.118,
+          "shared": [
+            "s:guRo",
+            "s:mataH",
+            "s:pratizidDakriyAsADyaH",
+            "s:sADyo",
+            "s:ucyate",
+            "s:vihitakriyayA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ben:6960:11",
+          "b": "dharma:pw:54669:1",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.083,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ap:17918:23",
+          "b": "dharma:vcp:27030:9",
+          "dictA": "ap",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.077,
+          "shared": [
+            "s:DarmaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ap:17918:preface",
+          "b": "dharma:vcp:27030:1",
+          "dictA": "ap",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.071,
+          "shared": [
+            "s:Darati",
+            "s:Driyate",
+            "s:loko'nena"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ap90:15976:preface",
+          "b": "dharma:vcp:27030:1",
+          "dictA": "ap90",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.071,
+          "shared": [
+            "s:Darati",
+            "s:Driyate",
+            "s:loko'nena"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:pw:54669:3",
+          "b": "dharma:pwg:76490:3",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.071,
+          "shared": [
+            "s:daSa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:7",
+          "b": "dharma:vcp:27030:27",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.068,
+          "shared": [
+            "s:ahaNkAramaSOcaYca",
+            "s:akArpaRyamanAyAsaM",
+            "s:BaktiH",
+            "s:BaktirdvAByAmapi",
+            "s:Baktireva",
+            "s:Baktirucyate",
+            "s:BAskare",
+            "s:BavAnyAM",
+            "s:brahmacaryyaM",
+            "s:brahmaRA",
+            "s:brahmavijYAnaM"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ap:17918:23",
+          "b": "dharma:pwg:76490:preface",
+          "dictA": "ap",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.063,
+          "shared": [
+            "s:DarmaM"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ben:6960:11",
+          "b": "dharma:mw:99907:bundle",
+          "dictA": "ben",
+          "dictB": "mw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.063,
+          "shared": [
+            "ls:MBh"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:mw:99911:bundle",
+          "b": "dharma:pwg:76490:3",
+          "dictA": "mw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.059,
+          "shared": [
+            "s:daSa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:8",
+          "b": "dharma:vcp:27030:7",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.059,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ae:4900:equiv",
+          "b": "dharma:mw:99903:bundle",
+          "dictA": "ae",
+          "dictB": "mw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.056,
+          "shared": [
+            "s:Darman"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:5128:equiv",
+          "b": "dharma:vcp:27030:5",
+          "dictA": "ae",
+          "dictB": "vcp",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.056,
+          "shared": [
+            "s:prati"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:pwg:76490:preface",
+          "b": "dharma:vcp:27030:9",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.056,
+          "shared": [
+            "s:DarmaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:8784:equiv",
+          "b": "dharma:pw:54669:14",
+          "dictA": "ae",
+          "dictB": "pw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.05,
+          "shared": [
+            "s:Darmya"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:pwg:36241:5",
+          "b": "dharma:skd:17667:2",
+          "dictA": "pwg",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.05,
+          "shared": [
+            "s:kftvA",
+            "s:pravargyaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:mw:99903:bundle",
+          "b": "dharma:pwg:36241:preface",
+          "dictA": "mw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.05,
+          "shared": [
+            "s:Darman"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:11",
+          "b": "dharma:vcp:27030:24",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.049,
+          "shared": [
+            "s:BAgavate",
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ae:5178:equiv",
+          "b": "dharma:pw:54669:14",
+          "dictA": "ae",
+          "dictB": "pw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.048,
+          "shared": [
+            "s:Darmya"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ap:17918:23",
+          "b": "dharma:vcp:27030:23",
+          "dictA": "ap",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.048,
+          "shared": [
+            "s:paraM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:skd:17667:1",
+          "b": "dharma:vcp:27030:1",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.048,
+          "shared": [
+            "s:Darati",
+            "s:Driyate"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:11",
+          "b": "dharma:vcp:27030:7",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.048,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17667:4",
+          "b": "dharma:vcp:27030:7",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.045,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:pwg:76490:preface",
+          "b": "dharma:vcp:27030:8",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.042,
+          "shared": [
+            "s:DarmARi"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:4338:equiv",
+          "b": "dharma:ap90:15976:22",
+          "dictA": "ae",
+          "dictB": "ap90",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.039,
+          "shared": [
+            "s:aDikAraH",
+            "s:aDikArin",
+            "s:anuzWAnaM",
+            "s:karman",
+            "s:kAryaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:skd:17668:8",
+          "b": "dharma:vcp:27030:11",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.038,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ae:4900:equiv",
+          "b": "dharma:pwg:36241:preface",
+          "dictA": "ae",
+          "dictB": "pwg",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.034,
+          "shared": [
+            "s:Darman"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:pwg:36241:preface",
+          "b": "dharma:vcp:27030:8",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.034,
+          "shared": [
+            "s:DarmARi"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ap:17918:23",
+          "b": "dharma:vcp:27030:4",
+          "dictA": "ap",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.033,
+          "shared": [
+            "s:DarmaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:skd:17668:11",
+          "b": "dharma:vcp:27030:11",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.033,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:3",
+          "b": "dharma:vcp:27030:11",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.033,
+          "shared": [
+            "s:tasya",
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:pwg:36241:11",
+          "b": "dharma:vcp:27030:26",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.032,
+          "shared": [
+            "s:tapaH",
+            "s:vidyA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:skd:17667:4",
+          "b": "dharma:vcp:27030:11",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.032,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:pw:54669:10",
+          "b": "dharma:skd:17667:2",
+          "dictA": "pw",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.031,
+          "shared": [
+            "s:upamA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:5128:equiv",
+          "b": "dharma:vcp:27030:4",
+          "dictA": "ae",
+          "dictB": "vcp",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.03,
+          "shared": [
+            "s:prati"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:mw:99918:bundle",
+          "b": "dharma:skd:17667:2",
+          "dictA": "mw",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.03,
+          "shared": [
+            "s:upamA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:6640:equiv",
+          "b": "dharma:vcp:27030:16",
+          "dictA": "ae",
+          "dictB": "vcp",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.029,
+          "shared": [
+            "s:puRyaM",
+            "s:sukftaM",
+            "s:vfzaH"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:8188:equiv",
+          "b": "dharma:ap:17918:23",
+          "dictA": "ae",
+          "dictB": "ap",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.029,
+          "shared": [
+            "s:DarmaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:pwg:76490:preface",
+          "b": "dharma:vcp:27030:4",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.029,
+          "shared": [
+            "s:DarmaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:6124:equiv",
+          "b": "dharma:pw:54669:14",
+          "dictA": "ae",
+          "dictB": "pw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.028,
+          "shared": [
+            "s:Darmya"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:skd:17668:3",
+          "b": "dharma:vcp:27030:13",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.028,
+          "shared": [
+            "s:Page",
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:3",
+          "b": "dharma:vcp:27030:24",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.028,
+          "shared": [
+            "s:tasya",
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ae:8188:equiv",
+          "b": "dharma:vcp:27030:9",
+          "dictA": "ae",
+          "dictB": "vcp",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.027,
+          "shared": [
+            "s:DarmaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:5128:equiv",
+          "b": "dharma:vcp:27030:13",
+          "dictA": "ae",
+          "dictB": "vcp",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.026,
+          "shared": [
+            "s:prati"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:5523:equiv",
+          "b": "dharma:vcp:27030:13",
+          "dictA": "ae",
+          "dictB": "vcp",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.026,
+          "shared": [
+            "s:viroDaH"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:6124:equiv",
+          "b": "dharma:mw:99906:bundle",
+          "dictA": "ae",
+          "dictB": "mw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.026,
+          "shared": [
+            "s:DarmeRa"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:6124:equiv",
+          "b": "dharma:pw:54669:1",
+          "dictA": "ae",
+          "dictB": "pw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.026,
+          "shared": [
+            "s:DarmeRa"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ap90:15976:3",
+          "b": "dharma:skd:17667:2",
+          "dictA": "ap90",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.026,
+          "shared": [
+            "s:niDane'pyanuyAti"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:pwg:36241:4",
+          "b": "dharma:skd:17667:4",
+          "dictA": "pwg",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.026,
+          "shared": [
+            "s:DAraRA",
+            "s:DyAnaM",
+            "s:prARAyAmastaTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:skd:17668:8",
+          "b": "dharma:vcp:27030:13",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.026,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:8",
+          "b": "dharma:vcp:27030:24",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.026,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ae:6124:equiv",
+          "b": "dharma:cae:15186:bundle",
+          "dictA": "ae",
+          "dictB": "cae",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.025,
+          "shared": [
+            "s:DarmeRa"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:8188:equiv",
+          "b": "dharma:pwg:76490:preface",
+          "dictA": "ae",
+          "dictB": "pwg",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.025,
+          "shared": [
+            "s:DarmaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ap:17918:9",
+          "b": "dharma:vcp:27030:6",
+          "dictA": "ap",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.024,
+          "shared": [
+            "s:vadanti"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:skd:17667:2",
+          "b": "dharma:vcp:27030:7",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.024,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:11",
+          "b": "dharma:vcp:27030:13",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.024,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ae:11058:equiv",
+          "b": "dharma:pw:54669:14",
+          "dictA": "ae",
+          "dictB": "pw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.023,
+          "shared": [
+            "s:Darmya"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:11058:equiv",
+          "b": "dharma:vcp:27030:16",
+          "dictA": "ae",
+          "dictB": "vcp",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.023,
+          "shared": [
+            "s:puRyaM",
+            "s:sukftaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:skd:17667:4",
+          "b": "dharma:vcp:27030:13",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.023,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17667:4",
+          "b": "dharma:vcp:27030:24",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.023,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:skd:17668:10",
+          "b": "dharma:vcp:27030:25",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.023,
+          "shared": [
+            "s:ucyate"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "dharma:ae:7265:equiv",
+          "b": "dharma:ap90:15976:22",
+          "dictA": "ae",
+          "dictB": "ap90",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "s:aDikAraH",
+            "s:aDikArin",
+            "s:aDizWAnaM",
+            "s:ASrita"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ae:7863:equiv",
+          "b": "dharma:ap90:15976:22",
+          "dictA": "ae",
+          "dictB": "ap90",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "s:Atman",
+            "s:Bft",
+            "s:caryA",
+            "s:kAyaH"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "dharma:ap:17918:3",
+          "b": "dharma:skd:17667:2",
+          "dictA": "ap",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.022,
+          "shared": [
+            "s:niDane'pyanuyAti"
+          ],
+          "crossTradition": true
+        }
+      ]
+    },
+    {
+      "lemma": "gam",
+      "rowCount": 1173,
+      "alignmentCount": 1455,
+      "crossTraditionAlignmentCount": 471,
+      "alignments": [
+        {
+          "a": "gam:ap:13831:4",
+          "b": "gam:ap90:12317:4",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:dvO",
+            "s:gamayataH",
+            "s:naYO",
+            "s:prakftArTaM"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ap:13831:6",
+          "b": "gam:ap90:12317:6",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "ls:Pt. 2. 107",
+            "ls:Y. 1. 80",
+            "s:gacCati",
+            "s:gamayati",
+            "s:guroH",
+            "s:pumAn",
+            "s:sutAM",
+            "s:te",
+            "s:yo"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:216783:2",
+          "b": "gam:pwg:21814:162",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:aByud"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:108",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:108",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:12",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:12",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:122",
+          "b": "gam:pwg:21814:97",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:aram"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:169",
+          "b": "gam:pwg:21814:125",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:aByA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:17",
+          "b": "gam:pwg:21814:226",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:prati"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:184",
+          "b": "gam:pwg:21814:137",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:samupA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:185",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:185",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:186",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:186",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:195",
+          "b": "gam:pwg:21814:145",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:pratyA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:199",
+          "b": "gam:pwg:21814:150",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:samA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:199",
+          "b": "gam:pwg:72578:52",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:samA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:2",
+          "b": "gam:pwg:21814:226",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:prati"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:205",
+          "b": "gam:pwg:21814:154",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:aBisamA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:218",
+          "b": "gam:pwg:21814:162",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:aByud"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:232",
+          "b": "gam:pwg:21814:176",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:upagata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:239",
+          "b": "gam:pwg:21814:176",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:upagata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:241",
+          "b": "gam:pwg:21814:176",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:upagata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:248",
+          "b": "gam:pwg:21814:181",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:aByupa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:248",
+          "b": "gam:pwg:72578:62",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:aByupa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:256",
+          "b": "gam:pwg:21814:140",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:samupa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:256",
+          "b": "gam:pwg:21814:185",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:samupa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:256",
+          "b": "gam:pwg:72578:64",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:samupa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:280",
+          "b": "gam:pwg:21814:202",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:vinis"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:286",
+          "b": "gam:pwg:21814:207",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:parA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:293",
+          "b": "gam:pwg:21814:211",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:pari"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:293",
+          "b": "gam:pwg:72578:73",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:pari"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:295",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:295",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:296",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:296",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:297",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:297",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:313",
+          "b": "gam:pwg:21814:226",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:prati"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:316",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:316",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:354",
+          "b": "gam:pwg:21814:248",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:upasam"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:354",
+          "b": "gam:pwg:72578:84",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:upasam"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:49",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:49",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:53",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:53",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:56",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:56",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:69",
+          "b": "gam:pwg:21814:61",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:samaDi"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:70",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:70",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:79",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:79",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:85",
+          "b": "gam:pwg:21814:12",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:85",
+          "b": "gam:pwg:72578:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:gata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:89",
+          "b": "gam:pwg:21814:76",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:samanu"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:pw:34676:95",
+          "b": "gam:pwg:21814:80",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:antargata"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ap:13831:5",
+          "b": "gam:ap90:12317:5",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.905,
+          "shared": [
+            "ls:Ku. 1. 26",
+            "ls:Ku. 2. 63",
+            "ls:Ku. 5. 80",
+            "ls:R. 1. 3",
+            "s:AnfRyaM",
+            "s:gacCataH",
+            "s:gacCati",
+            "s:gataH",
+            "s:jagAma",
+            "s:kopaM",
+            "s:manasA",
+            "s:na",
+            "s:paScAdumAKyAM",
+            "s:sumuKI",
+            "s:tA",
+            "s:tfptiM",
+            "s:tva",
+            "s:vfzeRa",
+            "s:vizAdaM"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ap:13831:1",
+          "b": "gam:ap90:12317:1",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.846,
+          "shared": [
+            "ls:V. 5",
+            "s:cetaH",
+            "s:DAvati",
+            "s:gacCati",
+            "s:gacCatvAryA",
+            "s:gamyate",
+            "s:kvADunA",
+            "s:paScAdasaMstutaM",
+            "s:punardarSanAya",
+            "s:puraH",
+            "s:SarIraM"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ap:13831:4",
+          "b": "gam:ap90:12317:4",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.692,
+          "shared": [
+            "ls:H. 1. 1",
+            "ls:R. 3. 8",
+            "s:dinezu",
+            "s:gacCatA",
+            "s:gacCati",
+            "s:gacCatsu",
+            "s:kAlena",
+            "s:kAlo",
+            "s:kAvyaSAstravinodena"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ap:13831:1",
+          "b": "gam:ap90:12317:1",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.667,
+          "shared": [
+            "ls:Bh. 3. 38",
+            "ls:Ki. 2. 7",
+            "ls:Ku. 4. 24",
+            "s:gamitaH"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ap:13831:3",
+          "b": "gam:ap90:12317:3",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.667,
+          "shared": [
+            "ls:Ms",
+            "ls:Ms. 8. 19",
+            "ls:Pt. 1. 7",
+            "s:DaraRiM",
+            "s:eno",
+            "s:gacCati",
+            "s:gamyate",
+            "s:mUrDnA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ap:13831:2",
+          "b": "gam:ap90:12317:2",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.6,
+          "shared": [
+            "s:jagAma",
+            "s:jyotirekaM",
+            "s:utkzipyEnAM"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:10",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:196",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:201",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:202",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:209",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:219",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:254",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:36",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:6",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:69",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "s:samaDi"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:82",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:93",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "s:antar"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pw:34676:96",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:2",
+          "b": "gam:pwg:21814:61",
+          "dictA": "ben",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "s:samaDi"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "gam:ben:4326:3",
+          "b": "gam:pw:34676:195",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.5,
+          "shared": [
+            "s:pratyA"
+          ],
+          "crossTradition": false
+        }
+      ]
+    },
+    {
+      "lemma": "iti",
+      "rowCount": 145,
+      "alignmentCount": 59,
+      "crossTraditionAlignmentCount": 37,
+      "alignments": [
+        {
+          "a": "iti:ap:8130:2",
+          "b": "iti:ap90:7334:2",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.504,
+          "shared": [
+            "ls:Hem",
+            "ls:K. 320",
+            "ls:K. P. 2",
+            "ls:Ki. 11. 80",
+            "ls:M. 1. 2",
+            "ls:Malli",
+            "ls:P. III. 3. 172",
+            "ls:R. 1. 37",
+            "ls:R. 13. 1",
+            "ls:Ś. 3",
+            "ls:T. S",
+            "s:Adi",
+            "s:aDyApaka",
+            "s:aTa",
+            "s:Bavet",
+            "s:BUditi",
+            "s:ca",
+            "s:digAtmA",
+            "s:dravyARi",
+            "s:evamarTe",
+            "s:gOH",
+            "s:gOraSvaH",
+            "s:harirityuvAca",
+            "s:hastIti"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ap:8130:1",
+          "b": "iti:ap90:7334:1",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.473,
+          "shared": [
+            "ls:Bg. 6. 2",
+            "ls:K. 151",
+            "ls:Ms. 10. 34",
+            "ls:R. 1. 12",
+            "ls:R. 14. 40",
+            "s:akzamAlAmupayAcitumAgatosmIti",
+            "s:ata",
+            "s:avEmi",
+            "s:cayastvizAmityavaDAritaM",
+            "s:cEnAmanaGeti",
+            "s:dilIpa",
+            "s:eva",
+            "s:gavityAha",
+            "s:ityaboDi",
+            "s:jYAsyasi",
+            "s:kEvartamiti",
+            "s:me",
+            "s:nArada",
+            "s:prAhuH",
+            "s:prAtipadikArTadyotaka",
+            "s:purA",
+            "s:rakzati",
+            "s:SabdasvarUpadyotaka",
+            "s:saH"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:cae:4911:bundle",
+          "b": "iti:pw:16765:bundle",
+          "dictA": "cae",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.333,
+          "shared": [
+            "s:ha",
+            "s:itIti",
+            "s:itIva",
+            "s:ityeva",
+            "s:ityevam",
+            "s:ityuta",
+            "s:kftvA",
+            "s:kim",
+            "s:kimiti",
+            "s:sma"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:pwg:10030:bundle",
+          "b": "iti:vcp:8142:5",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.154,
+          "shared": [
+            "s:catuzpadityE",
+            "s:prAsAvIddvipatpra"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pw:16765:bundle",
+          "b": "iti:pwg:10029:4",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.115,
+          "shared": [
+            "s:itIva",
+            "s:itIyaM",
+            "s:ityezA",
+            "s:karoti",
+            "s:sfzwirAditaH",
+            "s:taTA",
+            "s:vEdikI"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ben:1857:2",
+          "b": "iti:mw:28747.1:bundle",
+          "dictA": "ben",
+          "dictB": "mw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.111,
+          "shared": [
+            "ls:MBh"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:cae:4911:bundle",
+          "b": "iti:pwg:10029:5",
+          "dictA": "cae",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.08,
+          "shared": [
+            "s:kim",
+            "s:kimiti"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:pwg:10029:4",
+          "b": "iti:skd:4089:2",
+          "dictA": "pwg",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.068,
+          "shared": [
+            "s:itIyaM",
+            "s:SrutiH",
+            "s:taTA",
+            "s:vEdikI"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:mw:28747:bundle",
+          "b": "iti:pw:16765:bundle",
+          "dictA": "mw",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.067,
+          "shared": [
+            "s:karoti",
+            "s:kftvA",
+            "s:kim",
+            "s:taTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ap:8130:1",
+          "b": "iti:vcp:8142:2",
+          "dictA": "ap",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.066,
+          "shared": [
+            "s:cayastvizAmityavaDAritaM",
+            "s:gavityAha",
+            "s:ityaboDi",
+            "s:kUjantaM",
+            "s:maDuraM",
+            "s:nArada",
+            "s:purA",
+            "s:rAmarAmeti"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pw:16765:bundle",
+          "b": "iti:skd:4089:2",
+          "dictA": "pw",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.063,
+          "shared": [
+            "s:itIyaM",
+            "s:taTA",
+            "s:vEdikI"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pwg:10029:9",
+          "b": "iti:vcp:8142:2",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.061,
+          "shared": [
+            "s:hetO",
+            "s:mate",
+            "s:nidarSane",
+            "s:prakaraRe",
+            "s:prakAre",
+            "s:prakASane",
+            "s:samAptO"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ap90:7334:1",
+          "b": "iti:vcp:8142:2",
+          "dictA": "ap90",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.059,
+          "shared": [
+            "s:cayastvizAmityavaDAritaM",
+            "s:gavityAha",
+            "s:ityaboDi",
+            "s:kramAdamuM",
+            "s:nArada",
+            "s:purA",
+            "s:rAmeti"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pwg:10029:8",
+          "b": "iti:vcp:8142:4",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.059,
+          "shared": [
+            "s:itihari"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ap:8130:2",
+          "b": "iti:pwg:10029:9",
+          "dictA": "ap",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.059,
+          "shared": [
+            "s:ca",
+            "s:evamarTe",
+            "s:hetO",
+            "s:mate",
+            "s:samAptO",
+            "s:svarUpe",
+            "s:vivakzAniyame"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ap90:7334:2",
+          "b": "iti:pwg:10029:9",
+          "dictA": "ap90",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.057,
+          "shared": [
+            "s:ca",
+            "s:evamarTe",
+            "s:hetO",
+            "s:mate",
+            "s:samAptO",
+            "s:svarUpe",
+            "s:vivakzAniyame"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:mw:28747:bundle",
+          "b": "iti:pwg:10029:4",
+          "dictA": "mw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.056,
+          "shared": [
+            "s:evam",
+            "s:iva",
+            "s:karoti",
+            "s:taTA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ae:557:equiv",
+          "b": "iti:ap90:7334:2",
+          "dictA": "ae",
+          "dictB": "ap90",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.05,
+          "shared": [
+            "s:ca",
+            "s:ciMtanIyaM",
+            "s:mAtra",
+            "s:niBftamiti",
+            "s:piteti",
+            "s:sa",
+            "s:SIGramiti",
+            "s:sukaraM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pw:16765:bundle",
+          "b": "iti:pwg:10029:5",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.049,
+          "shared": [
+            "s:kim",
+            "s:kimiti"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:skd:4089:2",
+          "b": "iti:wil:6239:9",
+          "dictA": "skd",
+          "dictB": "wil",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "western",
+          "jaccard": 0.043,
+          "shared": [
+            "s:ktic"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:cae:4911:bundle",
+          "b": "iti:mw:28747:bundle",
+          "dictA": "cae",
+          "dictB": "mw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.043,
+          "shared": [
+            "s:kftvA",
+            "s:kim"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ae:6154:equiv",
+          "b": "iti:skd:4089:2",
+          "dictA": "ae",
+          "dictB": "skd",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.041,
+          "shared": [
+            "s:taTA",
+            "s:yaTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:cae:4911:bundle",
+          "b": "iti:pwg:10029:2",
+          "dictA": "cae",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.04,
+          "shared": [
+            "s:itIva",
+            "s:ityeva"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ae:557:equiv",
+          "b": "iti:ap:8130:2",
+          "dictA": "ae",
+          "dictB": "ap",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.037,
+          "shared": [
+            "s:ca",
+            "s:niBftamiti",
+            "s:piteti",
+            "s:sa",
+            "s:SIGramiti",
+            "s:sukaraM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ben:1857:5",
+          "b": "iti:pw:16765:bundle",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.034,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ae:5609:equiv",
+          "b": "iti:cae:4911:bundle",
+          "dictA": "ae",
+          "dictB": "cae",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.033,
+          "shared": [
+            "s:kimiti"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:cae:4911:bundle",
+          "b": "iti:pwg:10029:6",
+          "dictA": "cae",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.033,
+          "shared": [
+            "s:kftvA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ae:3112:equiv",
+          "b": "iti:skd:4089:2",
+          "dictA": "ae",
+          "dictB": "skd",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.031,
+          "shared": [
+            "s:taTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ben:1857:2",
+          "b": "iti:pw:16765:bundle",
+          "dictA": "ben",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.031,
+          "shared": [
+            "ls:Chr"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ae:5609:equiv",
+          "b": "iti:pwg:10029:5",
+          "dictA": "ae",
+          "dictB": "pwg",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.03,
+          "shared": [
+            "s:kimiti"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pw:16765:bundle",
+          "b": "iti:pwg:10029:2",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.03,
+          "shared": [
+            "s:itIva",
+            "s:ityeva"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ae:6208:equiv",
+          "b": "iti:ap90:7334:2",
+          "dictA": "ae",
+          "dictB": "ap90",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.029,
+          "shared": [
+            "s:ca",
+            "s:evaM",
+            "s:kiM",
+            "s:mA",
+            "s:na"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:9629:equiv",
+          "b": "iti:skd:4089:2",
+          "dictA": "ae",
+          "dictB": "skd",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.029,
+          "shared": [
+            "s:taTA",
+            "s:yaTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:10334:equiv",
+          "b": "iti:skd:4089:2",
+          "dictA": "ae",
+          "dictB": "skd",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.028,
+          "shared": [
+            "s:yaTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:9162:equiv",
+          "b": "iti:pw:16765:bundle",
+          "dictA": "ae",
+          "dictB": "pw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.028,
+          "shared": [
+            "s:ca",
+            "s:taTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:3112:equiv",
+          "b": "iti:pw:16765:bundle",
+          "dictA": "ae",
+          "dictB": "pw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.027,
+          "shared": [
+            "s:taTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:9629:equiv",
+          "b": "iti:pw:16765:bundle",
+          "dictA": "ae",
+          "dictB": "pw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.027,
+          "shared": [
+            "s:ca",
+            "s:taTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pwg:10029:9",
+          "b": "iti:vcp:8142:3",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.026,
+          "shared": [
+            "s:prakAre"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ap90:7334:1",
+          "b": "iti:ben:1857:4",
+          "dictA": "ap90",
+          "dictB": "ben",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.026,
+          "shared": [
+            "ls:Rām"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:mw:28747:bundle",
+          "b": "iti:pwg:10029:3",
+          "dictA": "mw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.026,
+          "shared": [
+            "s:aloBa",
+            "s:bAlo",
+            "s:Bavati",
+            "s:BUmipaH",
+            "s:damaH"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ae:4178:equiv",
+          "b": "iti:cae:4911:bundle",
+          "dictA": "ae",
+          "dictB": "cae",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.024,
+          "shared": [
+            "s:kftvA",
+            "s:tAvat"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:9629:equiv",
+          "b": "iti:mw:28747:bundle",
+          "dictA": "ae",
+          "dictB": "mw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.024,
+          "shared": [
+            "s:ityAdi",
+            "s:taTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:10906:equiv",
+          "b": "iti:ap90:7334:2",
+          "dictA": "ae",
+          "dictB": "ap90",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.023,
+          "shared": [
+            "s:arTaH",
+            "s:evaM",
+            "s:kiM",
+            "s:na"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ap:8130:2",
+          "b": "iti:vcp:8142:2",
+          "dictA": "ap",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.023,
+          "shared": [
+            "s:hetO",
+            "s:mate",
+            "s:samAptO",
+            "s:sAnniDye"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ap90:7334:2",
+          "b": "iti:vcp:8142:2",
+          "dictA": "ap90",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.023,
+          "shared": [
+            "s:hetO",
+            "s:mate",
+            "s:samAptO",
+            "s:sAnniDye"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:3112:equiv",
+          "b": "iti:mw:28747:bundle",
+          "dictA": "ae",
+          "dictB": "mw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "s:taTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:4178:equiv",
+          "b": "iti:pwg:10029:6",
+          "dictA": "ae",
+          "dictB": "pwg",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "s:kftvA",
+            "s:na"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:5102:equiv",
+          "b": "iti:cae:4911:bundle",
+          "dictA": "ae",
+          "dictB": "cae",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "s:kftvA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:5609:equiv",
+          "b": "iti:pw:16765:bundle",
+          "dictA": "ae",
+          "dictB": "pw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "s:kimiti"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pw:16765:bundle",
+          "b": "iti:pwg:10029:3",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "ls:M. 5,51",
+            "s:ca",
+            "s:ha",
+            "s:itIyaM"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:pw:16765:bundle",
+          "b": "iti:pwg:10029:6",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "s:kftvA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:pw:208656:bundle",
+          "b": "iti:pwg:10029:1",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "s:ca",
+            "s:ceti"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "iti:ae:557:equiv",
+          "b": "iti:skd:4089:2",
+          "dictA": "ae",
+          "dictB": "skd",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.021,
+          "shared": [
+            "s:taTA",
+            "s:yaTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pwg:10029:9",
+          "b": "iti:vcp:8142:4",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.021,
+          "shared": [
+            "s:prakaraRe"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:3112:equiv",
+          "b": "iti:pwg:10029:4",
+          "dictA": "ae",
+          "dictB": "pwg",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.02,
+          "shared": [
+            "s:taTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:8137:equiv",
+          "b": "iti:mw:28747:bundle",
+          "dictA": "ae",
+          "dictB": "mw",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.019,
+          "shared": [
+            "s:satyaM",
+            "s:taTA"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:3336:equiv",
+          "b": "iti:ap90:7334:2",
+          "dictA": "ae",
+          "dictB": "ap90",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.017,
+          "shared": [
+            "s:arTaH",
+            "s:dravyARi",
+            "s:na"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:pwg:10029:3",
+          "b": "iti:skd:4089:2",
+          "dictA": "pwg",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.017,
+          "shared": [
+            "s:cEva",
+            "s:dilIpa",
+            "s:itIyaM"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "iti:ae:8682:equiv",
+          "b": "iti:pwg:10029:3",
+          "dictA": "ae",
+          "dictB": "pwg",
+          "parserFamilyA": "reverse",
+          "parserFamilyB": "western",
+          "jaccard": 0.009,
+          "shared": [
+            "ls:M. 1",
+            "s:BavAn"
+          ],
+          "crossTradition": true
+        }
+      ]
+    },
+    {
+      "lemma": "rama",
+      "rowCount": 202,
+      "alignmentCount": 30,
+      "crossTraditionAlignmentCount": 10,
+      "alignments": [
+        {
+          "a": "rama:ap:27427:preface",
+          "b": "rama:ap90:24122:preface",
+          "dictA": "ap",
+          "dictB": "ap90",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 1,
+          "shared": [
+            "s:GaY",
+            "s:kartari",
+            "s:Ra",
+            "s:ram",
+            "s:vA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:mw:177292:bundle",
+          "b": "rama:pw:93849:40",
+          "dictA": "mw",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.333,
+          "shared": [
+            "s:kuzWa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:mw:177275:bundle",
+          "b": "rama:pw:93849:16",
+          "dictA": "mw",
+          "dictB": "pw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.286,
+          "shared": [
+            "s:izuH",
+            "s:rAmasya"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:pw:92728:12",
+          "b": "rama:pwg:83557:10",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.25,
+          "shared": [
+            "s:rAmA",
+            "s:ramaharzita",
+            "s:romaharzita"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:skd:29190:2",
+          "b": "rama:vcp:39359:1",
+          "dictA": "skd",
+          "dictB": "vcp",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.24,
+          "shared": [
+            "s:aniw",
+            "s:ramaH",
+            "s:rAmaH",
+            "s:ramate",
+            "sig:aka",
+            "sig:BvA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:mw:175086:bundle",
+          "b": "rama:pwg:83557:1",
+          "dictA": "mw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.2,
+          "shared": [
+            "s:mano"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:ben:12079:4",
+          "b": "rama:mw:177266:bundle",
+          "dictA": "ben",
+          "dictB": "mw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.143,
+          "shared": [
+            "ls:MBh"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:mw:177292:bundle",
+          "b": "rama:pwg:84468:17",
+          "dictA": "mw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.125,
+          "shared": [
+            "s:kuzWa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:pw:93849:40",
+          "b": "rama:pwg:84468:17",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.125,
+          "shared": [
+            "s:kuzWa"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:pw:93849:17",
+          "b": "rama:pwg:83557:10",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.111,
+          "shared": [
+            "s:rAmA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:vcp:39359:1",
+          "b": "rama:wil:31939:bundle",
+          "dictA": "vcp",
+          "dictB": "wil",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "western",
+          "jaccard": 0.091,
+          "shared": [
+            "s:ramate",
+            "s:uparamati"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "rama:ap90:24122:1",
+          "b": "rama:vcp:39589:1",
+          "dictA": "ap90",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.089,
+          "shared": [
+            "s:maScApISvaravAcakaH",
+            "s:rAmaH",
+            "s:rASabdo",
+            "s:tena",
+            "s:viSvavacano"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "rama:pw:93849:17",
+          "b": "rama:pwg:84469:3",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.05,
+          "shared": [
+            "s:rAmA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:mw:177264:bundle",
+          "b": "rama:skd:29190:2",
+          "dictA": "mw",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.045,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "rama:skd:29190:2",
+          "b": "rama:wil:31939:bundle",
+          "dictA": "skd",
+          "dictB": "wil",
+          "parserFamilyA": "indigenous",
+          "parserFamilyB": "western",
+          "jaccard": 0.045,
+          "shared": [
+            "s:ramate"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "rama:mw:177264:bundle",
+          "b": "rama:vcp:39359:1",
+          "dictA": "mw",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.043,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "rama:pw:93849:16",
+          "b": "rama:pwg:84469:3",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.043,
+          "shared": [
+            "s:rAmasya"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:mw:177275:bundle",
+          "b": "rama:pwg:84469:3",
+          "dictA": "mw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.042,
+          "shared": [
+            "s:rAmasya"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:pw:92728:12",
+          "b": "rama:pwg:84469:3",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.04,
+          "shared": [
+            "s:rAmA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:pw:93849:17",
+          "b": "rama:pwg:84468:1",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.037,
+          "shared": [
+            "s:rAmA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:ap90:24122:1",
+          "b": "rama:mw:177264:bundle",
+          "dictA": "ap90",
+          "dictB": "mw",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.036,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:mw:177264:bundle",
+          "b": "rama:pwg:84468:6",
+          "dictA": "mw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.031,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:pw:92728:12",
+          "b": "rama:pwg:84468:1",
+          "dictA": "pw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.031,
+          "shared": [
+            "s:rAmA"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:ap90:24122:1",
+          "b": "rama:skd:29190:2",
+          "dictA": "ap90",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.029,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "rama:mw:177264:bundle",
+          "b": "rama:pwg:84468:1",
+          "dictA": "mw",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.029,
+          "shared": [
+            "ls:AV"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:ap90:24122:1",
+          "b": "rama:vcp:39359:1",
+          "dictA": "ap90",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.028,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "rama:pwg:84468:6",
+          "b": "rama:skd:29190:2",
+          "dictA": "pwg",
+          "dictB": "skd",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.026,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "rama:pwg:84468:6",
+          "b": "rama:vcp:39359:1",
+          "dictA": "pwg",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.025,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": true
+        },
+        {
+          "a": "rama:ap90:24122:1",
+          "b": "rama:pwg:84468:6",
+          "dictA": "ap90",
+          "dictB": "pwg",
+          "parserFamilyA": "western",
+          "parserFamilyB": "western",
+          "jaccard": 0.022,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": false
+        },
+        {
+          "a": "rama:mw:177264:bundle",
+          "b": "rama:vcp:39589:1",
+          "dictA": "mw",
+          "dictB": "vcp",
+          "parserFamilyA": "western",
+          "parserFamilyB": "indigenous",
+          "jaccard": 0.021,
+          "shared": [
+            "s:rAmaH"
+          ],
+          "crossTradition": true
+        }
+      ]
+    }
+  ]
+}

@@ -24,6 +24,7 @@
     "build-semantic-fields": "node scripts/build-semantic-fields.mjs",
     "build-xref-lineage": "node scripts/build-xref-lineage.mjs",
     "recover-r2-archive": "node scripts/recover-r2-archive.mjs",
+    "build-r2-source-anchors": "node scripts/build-r2-source-anchors.mjs",
     "validate-review-reports": "node scripts/validate-review-reports.mjs"
   },
   "devDependencies": {
