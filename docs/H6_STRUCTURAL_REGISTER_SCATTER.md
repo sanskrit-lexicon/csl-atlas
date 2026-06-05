@@ -7,6 +7,9 @@ public atlas page is `/tools/structural-register`, generated from
 `src/data/dicts/structural-register.json`; the L0 comparison review artifact is
 `data/lexico/structural_register_h6_review.json`.
 
+The scholar-facing review packet is
+[`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md).
+
 ## Chart Trust Block
 
 - Claim: structural register predicts dictionary family.
@@ -45,7 +48,8 @@ It is a scholar-facing page first. Public reader language can come later.
 ## H6 Review Artifact
 
 `data/lexico/structural_register_h6_review.json` compares the H6 chart
-coordinates with L0 known-edge support. It keeps the interpretation cautious:
+coordinates with L0 known-edge support. The review packet turns these rows into
+decision labels. It keeps the interpretation cautious:
 close points are structural corroboration or convergence prompts, while distant
 points are reformatting, edition-policy, or detector-blindness prompts.
 

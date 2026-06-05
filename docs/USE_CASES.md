@@ -274,7 +274,8 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - Review queues should first document what each queue proves, then how to review
   it.
 - H6 structural-register scatter and H4 semantic fields are implemented
-  chart-trust examples with generated review-prompt artifacts.
+  chart-trust examples with generated review-prompt artifacts and review
+  packet docs.
 - H4 semantic fields are built as the M8 data layer, `/tools/semantic-fields`,
   `data/lexico/semantic_field_family_profiles.json`, an interpretation note,
   and a scholar review packet.
@@ -290,6 +291,7 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - `docs/R2_REBUILD_CONTRACT.md`
 - `docs/H4_SEMANTIC_FIELD_INTERPRETATION.md`
 - `docs/H4_SEMANTIC_FIELD_REVIEW.md`
+- `docs/H6_STRUCTURAL_REGISTER_REVIEW.md`
 - `docs/MICROSTRUCTURE_XREF_HUB_REVIEW.md`
 - `docs/H5_GHOST_ANOMALY_SCOPE.md`
 - `docs/REVIEW_RELEASE_ROADMAP.md`
