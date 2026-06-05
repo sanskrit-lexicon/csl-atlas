@@ -11,6 +11,7 @@ import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { indigenousAuthorityHints, jaccard, lookupKeysForLemma, reverseMatchProfile, sourceRecordCounts, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
 import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExactMatches } from "../scripts/build-r2-parser-diagnostics.mjs";
+import { packetIdForDiagnostic } from "../scripts/build-r2-review-packets.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -193,6 +194,29 @@ test("R2 parser diagnostics detects source records that match archive counts", (
     ]
   }), [{ blockId: "2", rowCount: 7 }]);
   assert.deepEqual(sourceRecordExactMatches({ archivedSenseRows: 0, sourceRecordCounts: [{ blockId: "1", rowCount: 1 }] }), []);
+});
+
+test("R2 review packets route diagnostics by parser decision", () => {
+  assert.equal(packetIdForDiagnostic({
+    split: "div",
+    driftClass: "over-split-candidate",
+    parserFamily: "western"
+  }), "div-source-scope");
+  assert.equal(packetIdForDiagnostic({
+    split: "reverse-equivalent",
+    driftClass: "reverse-overmatch",
+    parserFamily: "reverse"
+  }), "ae-reverse-bands");
+  assert.equal(packetIdForDiagnostic({
+    split: "iti-unit",
+    driftClass: "indigenous-coarse-review",
+    parserFamily: "indigenous"
+  }), "indigenous-iti-authority");
+  assert.equal(packetIdForDiagnostic({
+    split: "number-marker",
+    driftClass: "over-split-candidate",
+    parserFamily: "western"
+  }), "marker-run-scope");
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----

@@ -29,6 +29,7 @@
     "recover-r2-archive": "node scripts/recover-r2-archive.mjs",
     "build-r2-source-anchors": "node scripts/build-r2-source-anchors.mjs",
     "build-r2-parser-diagnostics": "node scripts/build-r2-parser-diagnostics.mjs",
+    "build-r2-review-packets": "node scripts/build-r2-review-packets.mjs",
     "build-h5-anomaly-review": "node scripts/build-h5-anomaly-review.mjs",
     "validate-review-reports": "node scripts/validate-review-reports.mjs"
   },

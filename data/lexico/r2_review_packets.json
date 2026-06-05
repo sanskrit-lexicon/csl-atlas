@@ -1,0 +1,1769 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "r2-review-packets",
+  "claim": "R2 parser diagnostics are grouped into review packets by parser decision.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-reviewed",
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "npm run build-r2-review-packets",
+  "sourceGeneratedBy": "npm run build-r2-parser-diagnostics",
+  "sourceFiles": [
+    "data/lexico/r2_parser_diagnostics.json",
+    "data/lexico/r2_source_anchor_summary.json",
+    "data/lexico/r2_source_anchor_senses.jsonl"
+  ],
+  "counts": {
+    "packetCount": 5,
+    "diagnosticRows": 70,
+    "highPriorityRows": 17,
+    "mediumPriorityRows": 7,
+    "byPacket": {
+      "marker-run-scope": 28,
+      "source-gap-controls": 17,
+      "div-source-scope": 10,
+      "indigenous-iti-authority": 10,
+      "ae-reverse-bands": 5
+    }
+  },
+  "packets": [
+    {
+      "packetId": "div-source-scope",
+      "ownerRepo": "csl-atlas",
+      "title": "PWG/PWK division and source-record scope",
+      "proves": "The current div splitter is counting several same-headword source records and marker classes together before sense-level review.",
+      "doesNotProve": "It does not prove that non-prefix source records are invalid or should be discarded.",
+      "nextDecision": "Decide which source records and div label classes represent the target sense series for each anchor lemma.",
+      "paperDashboardTarget": "R2 sense-structure methods; MW/Petersburg macro/micro trade-off.",
+      "counts": {
+        "diagnosticRows": 10,
+        "highPriorityRows": 4,
+        "mediumPriorityRows": 0,
+        "dictionaryCount": 2,
+        "lemmaCount": 5
+      },
+      "rows": [
+        {
+          "diagnosticId": "r2-drift:gam:pwg",
+          "lemma": "gam",
+          "dict": "pwg",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "over-split-candidate",
+          "priority": "high",
+          "sourceSenseRows": 353,
+          "archivedSenseRows": 30,
+          "sourceToArchiveRatio": 11.767,
+          "sourceRecordCount": 4,
+          "markerLabelCounts": {
+            "1": 180,
+            "2": 29,
+            "3": 8,
+            "p": 111,
+            "v": 21
+          },
+          "markerRunCounts": {
+            "0": 12,
+            "1": 31,
+            "2": 7,
+            "3": 108,
+            "4": 59
+          },
+          "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:pwg",
+          "lemma": "rama",
+          "dict": "pwg",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "over-split-candidate",
+          "priority": "high",
+          "sourceSenseRows": 44,
+          "archivedSenseRows": 6,
+          "sourceToArchiveRatio": 7.333,
+          "sourceRecordCount": 3,
+          "markerLabelCounts": {
+            "1": 10,
+            "2": 19,
+            "3": 10,
+            "v": 2
+          },
+          "markerRunCounts": {
+            "0": 27,
+            "1": 8,
+            "2": 4
+          },
+          "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:pwg",
+          "lemma": "dharma",
+          "dict": "pwg",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "over-split-candidate",
+          "priority": "high",
+          "sourceSenseRows": 21,
+          "archivedSenseRows": 5,
+          "sourceToArchiveRatio": 4.2,
+          "sourceRecordCount": 2,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 0,
+            "runCount": 1,
+            "countedRows": 5
+          },
+          "markerLabelCounts": {
+            "1": 16,
+            "2": 3
+          },
+          "markerRunCounts": {
+            "0": 5,
+            "1": 14
+          },
+          "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:pwg",
+          "lemma": "iti",
+          "dict": "pwg",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "over-split-candidate",
+          "priority": "high",
+          "sourceSenseRows": 16,
+          "archivedSenseRows": 4,
+          "sourceToArchiveRatio": 4,
+          "sourceRecordCount": 4,
+          "markerLabelCounts": {
+            "1": 11,
+            "v": 1
+          },
+          "markerRunCounts": {
+            "0": 11
+          },
+          "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:pw",
+          "lemma": "gam",
+          "dict": "pw",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "source-only-dictionary",
+          "priority": "low",
+          "sourceSenseRows": 367,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 4,
+          "markerLabelCounts": {
+            "1": 219,
+            "2": 41,
+            "3": 2,
+            "p": 74,
+            "m": 24,
+            "o": 3
+          },
+          "markerRunCounts": {
+            "0": 23,
+            "1": 3,
+            "2": 45,
+            "3": 14,
+            "4": 7,
+            "5": 34,
+            "6": 86,
+            "7": 32,
+            "8": 3,
+            "9": 15
+          },
+          "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:pw",
+          "lemma": "rama",
+          "dict": "pw",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "source-only-dictionary",
+          "priority": "low",
+          "sourceSenseRows": 54,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 2,
+          "markerLabelCounts": {
+            "1": 8,
+            "2": 38,
+            "3": 6
+          },
+          "markerRunCounts": {
+            "0": 9,
+            "1": 19,
+            "2": 18,
+            "3": 6
+          },
+          "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:pw",
+          "lemma": "dharma",
+          "dict": "pw",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "source-only-dictionary",
+          "priority": "low",
+          "sourceSenseRows": 16,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 2,
+          "markerLabelCounts": {
+            "1": 14
+          },
+          "markerRunCounts": {
+            "0": 14
+          },
+          "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:pw",
+          "lemma": "iti",
+          "dict": "pw",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "source-only-dictionary",
+          "priority": "low",
+          "sourceSenseRows": 8,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 6,
+          "markerLabelCounts": {
+            "1": 2
+          },
+          "markerRunCounts": {
+            "0": 2
+          },
+          "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:pw",
+          "lemma": "bodhisattva",
+          "dict": "pw",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "source-only-dictionary",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 1,
+          "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:pwg",
+          "lemma": "bodhisattva",
+          "dict": "pwg",
+          "parserFamily": "western",
+          "split": "div",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 2,
+          "sourceToArchiveRatio": 1.5,
+          "sourceRecordCount": 2,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "53245",
+              "rawHeadword": "boDisattva",
+              "sourceLine": 515286,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L515286",
+              "rowCount": 2
+            }
+          ],
+          "markerLabelCounts": {
+            "v": 1
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        }
+      ]
+    },
+    {
+      "packetId": "marker-run-scope",
+      "ownerRepo": "csl-atlas",
+      "title": "Numbered-marker run scope",
+      "proves": "Some archived counts match a prefix of deterministic marker runs, so later runs may be derived, prefixed, or separately keyed material.",
+      "doesNotProve": "It does not prove that matching prefixes are philologically complete senses.",
+      "nextDecision": "Review prefix matches and exact source-record matches before promoting a run boundary into parser logic.",
+      "paperDashboardTarget": "R2 sense-structure methods; dictionary-specific parser notes.",
+      "counts": {
+        "diagnosticRows": 28,
+        "highPriorityRows": 2,
+        "mediumPriorityRows": 3,
+        "dictionaryCount": 8,
+        "lemmaCount": 5
+      },
+      "rows": [
+        {
+          "diagnosticId": "r2-drift:gam:ben",
+          "lemma": "gam",
+          "dict": "ben",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "over-split-candidate",
+          "priority": "high",
+          "sourceSenseRows": 172,
+          "archivedSenseRows": 23,
+          "sourceToArchiveRatio": 7.478,
+          "sourceRecordCount": 1,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 1,
+            "runCount": 2,
+            "countedRows": 23
+          },
+          "markerLabelCounts": {
+            "1": 43,
+            "2": 42,
+            "3": 30,
+            "4": 17,
+            "5": 13,
+            "6": 9,
+            "7": 4,
+            "8": 3,
+            "9": 3,
+            "10": 2,
+            "11": 2,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "markerRunCounts": {
+            "0": 9,
+            "1": 14,
+            "2": 4,
+            "3": 6,
+            "4": 11,
+            "5": 2,
+            "6": 3,
+            "7": 5,
+            "8": 2,
+            "9": 2,
+            "10": 5,
+            "11": 6,
+            "12": 7,
+            "13": 2,
+            "14": 4,
+            "15": 6,
+            "16": 3,
+            "17": 2,
+            "18": 5,
+            "19": 3,
+            "20": 3,
+            "21": 2,
+            "22": 3,
+            "23": 5,
+            "24": 3,
+            "25": 2,
+            "26": 3,
+            "27": 6,
+            "28": 2,
+            "29": 2,
+            "30": 3,
+            "31": 2,
+            "32": 6,
+            "33": 2,
+            "34": 2,
+            "35": 2,
+            "36": 3,
+            "37": 6,
+            "38": 3,
+            "39": 4,
+            "40": 3,
+            "41": 3
+          },
+          "nextAction": "Use marker-run prefixes and source-record exact matches to separate main numbered sense runs from later derived or homonym material."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:ben",
+          "lemma": "rama",
+          "dict": "ben",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "over-split-candidate",
+          "priority": "high",
+          "sourceSenseRows": 15,
+          "archivedSenseRows": 7,
+          "sourceToArchiveRatio": 2.143,
+          "sourceRecordCount": 2,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "11986",
+              "rawHeadword": "rama",
+              "sourceLine": 87379,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379",
+              "rowCount": 7
+            }
+          ],
+          "markerLabelCounts": {
+            "1": 5,
+            "2": 5,
+            "3": 2,
+            "4": 1
+          },
+          "markerRunCounts": {
+            "0": 5,
+            "1": 6,
+            "2": 2
+          },
+          "nextAction": "Use marker-run prefixes and source-record exact matches to separate main numbered sense runs from later derived or homonym material."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:wil",
+          "lemma": "rama",
+          "dict": "wil",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "driftClass": "mild-drift",
+          "priority": "medium",
+          "sourceSenseRows": 22,
+          "archivedSenseRows": 12,
+          "sourceToArchiveRatio": 1.833,
+          "sourceRecordCount": 3,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 1,
+            "runCount": 2,
+            "countedRows": 12
+          },
+          "markerLabelCounts": {
+            "1": 7,
+            "2": 7,
+            "3": 4,
+            "4": 1
+          },
+          "markerRunCounts": {
+            "0": 5,
+            "1": 7,
+            "2": 5,
+            "3": 2
+          },
+          "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:ap90",
+          "lemma": "rama",
+          "dict": "ap90",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "mild-drift",
+          "priority": "medium",
+          "sourceSenseRows": 20,
+          "archivedSenseRows": 12,
+          "sourceToArchiveRatio": 1.667,
+          "sourceRecordCount": 2,
+          "markerLabelCounts": {
+            "1": 5,
+            "2": 5,
+            "3": 4,
+            "4": 3,
+            "5": 1
+          },
+          "markerRunCounts": {
+            "0": 6,
+            "1": 9,
+            "2": 3
+          },
+          "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:bhs",
+          "lemma": "dharma",
+          "dict": "bhs",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "mild-drift",
+          "priority": "medium",
+          "sourceSenseRows": 12,
+          "archivedSenseRows": 10,
+          "sourceToArchiveRatio": 1.2,
+          "sourceRecordCount": 4,
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 2,
+            "4": 2
+          },
+          "markerRunCounts": {
+            "0": 8
+          },
+          "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:ap",
+          "lemma": "bodhisattva",
+          "dict": "ap",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 2,
+          "sourceToArchiveRatio": 1.5,
+          "sourceRecordCount": 1,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 0,
+            "runCount": 1,
+            "countedRows": 2
+          },
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1
+          },
+          "markerRunCounts": {
+            "0": 2
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:ap",
+          "lemma": "dharma",
+          "dict": "ap",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 24,
+          "archivedSenseRows": 23,
+          "sourceToArchiveRatio": 1.043,
+          "sourceRecordCount": 1,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 0,
+            "runCount": 1,
+            "countedRows": 23
+          },
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
+          },
+          "markerRunCounts": {
+            "0": 23
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:ap90",
+          "lemma": "dharma",
+          "dict": "ap90",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 23,
+          "archivedSenseRows": 22,
+          "sourceToArchiveRatio": 1.045,
+          "sourceRecordCount": 1,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 0,
+            "runCount": 1,
+            "countedRows": 22
+          },
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1
+          },
+          "markerRunCounts": {
+            "0": 22
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:ben",
+          "lemma": "dharma",
+          "dict": "ben",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 12,
+          "archivedSenseRows": 11,
+          "sourceToArchiveRatio": 1.091,
+          "sourceRecordCount": 1,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 0,
+            "runCount": 1,
+            "countedRows": 11
+          },
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
+          "markerRunCounts": {
+            "0": 11
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:wil",
+          "lemma": "dharma",
+          "dict": "wil",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 21,
+          "archivedSenseRows": 20,
+          "sourceToArchiveRatio": 1.05,
+          "sourceRecordCount": 1,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 1,
+            "runCount": 2,
+            "countedRows": 20
+          },
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 2,
+            "4": 2,
+            "5": 2,
+            "6": 2,
+            "7": 2,
+            "8": 2,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1
+          },
+          "markerRunCounts": {
+            "0": 12,
+            "1": 8
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:ap90",
+          "lemma": "gam",
+          "dict": "ap90",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 15,
+          "archivedSenseRows": 14,
+          "sourceToArchiveRatio": 1.071,
+          "sourceRecordCount": 1,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 1,
+            "runCount": 2,
+            "countedRows": 14
+          },
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 2,
+            "4": 2,
+            "5": 2,
+            "6": 2,
+            "7": 1,
+            "8": 1
+          },
+          "markerRunCounts": {
+            "0": 6,
+            "1": 8
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:ben",
+          "lemma": "iti",
+          "dict": "ben",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 6,
+          "archivedSenseRows": 5,
+          "sourceToArchiveRatio": 1.2,
+          "sourceRecordCount": 1,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 0,
+            "runCount": 1,
+            "countedRows": 5
+          },
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1
+          },
+          "markerRunCounts": {
+            "0": 5
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:wil",
+          "lemma": "iti",
+          "dict": "wil",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 10,
+          "archivedSenseRows": 9,
+          "sourceToArchiveRatio": 1.111,
+          "sourceRecordCount": 1,
+          "markerRunPrefixMatch": {
+            "maxRunIndex": 0,
+            "runCount": 1,
+            "countedRows": 9
+          },
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1
+          },
+          "markerRunCounts": {
+            "0": 9
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:mw72",
+          "lemma": "rama",
+          "dict": "mw72",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 2,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 2,
+          "sourceRecordCount": 2,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "39171",
+              "rawHeadword": "rama",
+              "sourceLine": 311802,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L311802",
+              "rowCount": 1
+            },
+            {
+              "blockId": "39401",
+              "rawHeadword": "rAma",
+              "sourceLine": 314666,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L314666",
+              "rowCount": 1
+            }
+          ],
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:bhs",
+          "lemma": "bodhisattva",
+          "dict": "bhs",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "11034",
+              "rawHeadword": "boDisattva",
+              "sourceLine": 44270,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L44270",
+              "rowCount": 1
+            }
+          ],
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:cae",
+          "lemma": "bodhisattva",
+          "dict": "cae",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "22287",
+              "rawHeadword": "boDisattva",
+              "sourceLine": 75168,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L75168",
+              "rowCount": 1
+            }
+          ],
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:wil",
+          "lemma": "bodhisattva",
+          "dict": "wil",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "27972",
+              "rawHeadword": "boDisattva",
+              "sourceLine": 218160,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L218160",
+              "rowCount": 1
+            }
+          ],
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:cae",
+          "lemma": "dharma",
+          "dict": "cae",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "15186",
+              "rawHeadword": "Darma",
+              "sourceLine": 51058,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L51058",
+              "rowCount": 1
+            }
+          ],
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:sch",
+          "lemma": "dharma",
+          "dict": "sch",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "16054",
+              "rawHeadword": "Darma",
+              "sourceLine": 49640,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L49640",
+              "rowCount": 1
+            }
+          ],
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:cae",
+          "lemma": "gam",
+          "dict": "cae",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "9285",
+              "rawHeadword": "gam",
+              "sourceLine": 30959,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L30959",
+              "rowCount": 1
+            }
+          ],
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:sch",
+          "lemma": "gam",
+          "dict": "sch",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "12127",
+              "rawHeadword": "gam",
+              "sourceLine": 37497,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L37497",
+              "rowCount": 1
+            }
+          ],
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:ap90",
+          "lemma": "iti",
+          "dict": "ap90",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "7334",
+              "rawHeadword": "iti",
+              "sourceLine": 64140,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L64140",
+              "rowCount": 3
+            }
+          ],
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1
+          },
+          "markerRunCounts": {
+            "0": 2
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:bhs",
+          "lemma": "rama",
+          "dict": "bhs",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "12769",
+              "rawHeadword": "rAma",
+              "sourceLine": 51230,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L51230",
+              "rowCount": 1
+            }
+          ],
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:ap90",
+          "lemma": "bodhisattva",
+          "dict": "ap90",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:ben",
+          "lemma": "bodhisattva",
+          "dict": "ben",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:bhs",
+          "lemma": "gam",
+          "dict": "bhs",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:wil",
+          "lemma": "gam",
+          "dict": "wil",
+          "parserFamily": "western",
+          "split": "dot-squared",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:bhs",
+          "lemma": "iti",
+          "dict": "bhs",
+          "parserFamily": "western",
+          "split": "number-marker",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        }
+      ]
+    },
+    {
+      "packetId": "ae-reverse-bands",
+      "ownerRepo": "csl-atlas",
+      "title": "AE reverse-equivalent rank bands",
+      "proves": "AE overmatching is measurable by equivalent-position rank for common Sanskrit roots.",
+      "doesNotProve": "It does not prove that high-rank rows are automatically valid alignments or that tail rows are false.",
+      "nextDecision": "Choose review bands for high, medium, low, and tail rows before using AE as alignment evidence.",
+      "paperDashboardTarget": "Cross-language sense alignment caveats.",
+      "counts": {
+        "diagnosticRows": 5,
+        "highPriorityRows": 3,
+        "mediumPriorityRows": 1,
+        "dictionaryCount": 1,
+        "lemmaCount": 5
+      },
+      "rows": [
+        {
+          "diagnosticId": "r2-drift:gam:ae",
+          "lemma": "gam",
+          "dict": "ae",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "driftClass": "reverse-overmatch",
+          "priority": "high",
+          "sourceSenseRows": 243,
+          "archivedSenseRows": 30,
+          "sourceToArchiveRatio": 8.1,
+          "sourceRecordCount": 243,
+          "reverseRankCounts": {
+            "tail": 80,
+            "low": 72,
+            "medium": 54,
+            "high": 37
+          },
+          "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:ae",
+          "lemma": "iti",
+          "dict": "ae",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "driftClass": "reverse-overmatch",
+          "priority": "high",
+          "sourceSenseRows": 76,
+          "archivedSenseRows": 30,
+          "sourceToArchiveRatio": 2.533,
+          "sourceRecordCount": 76,
+          "reverseRankCounts": {
+            "tail": 37,
+            "low": 23,
+            "high": 9,
+            "medium": 7
+          },
+          "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:ae",
+          "lemma": "dharma",
+          "dict": "ae",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "driftClass": "reverse-overmatch",
+          "priority": "high",
+          "sourceSenseRows": 66,
+          "archivedSenseRows": 24,
+          "sourceToArchiveRatio": 2.75,
+          "sourceRecordCount": 66,
+          "reverseRankCounts": {
+            "tail": 25,
+            "high": 18,
+            "medium": 12,
+            "low": 11
+          },
+          "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:ae",
+          "lemma": "rama",
+          "dict": "ae",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "driftClass": "mild-drift",
+          "priority": "medium",
+          "sourceSenseRows": 6,
+          "archivedSenseRows": 4,
+          "sourceToArchiveRatio": 1.5,
+          "sourceRecordCount": 6,
+          "reverseRankCounts": {
+            "tail": 4,
+            "high": 1,
+            "low": 1
+          },
+          "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:ae",
+          "lemma": "bodhisattva",
+          "dict": "ae",
+          "parserFamily": "reverse",
+          "split": "reverse-equivalent",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "reverseRankCounts": {},
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        }
+      ]
+    },
+    {
+      "packetId": "indigenous-iti-authority",
+      "ownerRepo": "csl-atlas",
+      "title": "SKD/VCP iti-unit authority review",
+      "proves": "Indigenous prose rows can expose authority hints even where they are not encoded as `<ls>` citations.",
+      "doesNotProve": "It does not prove that the prose has been normalized into a citation apparatus or fully split into senses.",
+      "nextDecision": "Review iti-unit boundaries, authority quotations, and source-record scope for SKD/VCP rows.",
+      "paperDashboardTarget": "Indigenous lexicographic microstructure and citation-density caveats.",
+      "counts": {
+        "diagnosticRows": 10,
+        "highPriorityRows": 8,
+        "mediumPriorityRows": 0,
+        "dictionaryCount": 2,
+        "lemmaCount": 5
+      },
+      "rows": [
+        {
+          "diagnosticId": "r2-drift:dharma:vcp",
+          "lemma": "dharma",
+          "dict": "vcp",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "indigenous-coarse-review",
+          "priority": "high",
+          "sourceSenseRows": 27,
+          "archivedSenseRows": 9,
+          "sourceToArchiveRatio": 3,
+          "sourceRecordCount": 1,
+          "indigenousAuthorityHintCounts": {
+            "auth:arddarcca": 1,
+            "auth:ba": 1,
+            "auth:baga": 1,
+            "auth:bahu": 1,
+            "auth:bavizyapu": 1,
+            "auth:hemaca": 1,
+            "auth:je": 1,
+            "auth:manava": 1,
+            "auth:medi": 1,
+            "auth:ni": 1,
+            "auth:pa": 1,
+            "auth:su": 1,
+            "auth:ta": 1,
+            "auth:vamanapu": 1,
+            "auth:vamanapura": 1,
+            "auth:varahapu": 1
+          },
+          "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:skd",
+          "lemma": "dharma",
+          "dict": "skd",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "indigenous-coarse-review",
+          "priority": "high",
+          "sourceSenseRows": 15,
+          "archivedSenseRows": 4,
+          "sourceToArchiveRatio": 3.75,
+          "sourceRecordCount": 2,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "17667",
+              "rawHeadword": "DarmmaH",
+              "sourceLine": 206577,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+              "rowCount": 4
+            }
+          ],
+          "indigenousAuthorityHintCounts": {
+            "auth:hemacandra": 2,
+            "auth:matsyapurana": 2,
+            "auth:medini": 2,
+            "auth:sribhagavatam": 2,
+            "auth:amara": 1,
+            "auth:bhagavata": 1,
+            "auth:dharmadipika": 1,
+            "auth:hitopadesa": 1,
+            "auth:mahabharata": 1,
+            "auth:padmapurana": 1,
+            "auth:yogasara": 1
+          },
+          "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:skd",
+          "lemma": "rama",
+          "dict": "skd",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "indigenous-coarse-review",
+          "priority": "high",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 10,
+          "sourceToArchiveRatio": 0.3,
+          "sourceRecordCount": 1,
+          "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:skd",
+          "lemma": "iti",
+          "dict": "skd",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "indigenous-coarse-review",
+          "priority": "high",
+          "sourceSenseRows": 7,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 7,
+          "sourceRecordCount": 1,
+          "indigenousAuthorityHintCounts": {
+            "auth:manu": 2,
+            "auth:amara": 1,
+            "auth:medini": 1,
+            "auth:ramayana": 1
+          },
+          "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:vcp",
+          "lemma": "iti",
+          "dict": "vcp",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "indigenous-coarse-review",
+          "priority": "high",
+          "sourceSenseRows": 5,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 5,
+          "sourceRecordCount": 1,
+          "indigenousAuthorityHintCounts": {
+            "auth:neza": 2,
+            "auth:avyayi": 1,
+            "auth:barttf": 1,
+            "auth:kuma": 1,
+            "auth:mimamsaka": 1,
+            "auth:pura": 1,
+            "auth:rama": 1
+          },
+          "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:vcp",
+          "lemma": "rama",
+          "dict": "vcp",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "indigenous-coarse-review",
+          "priority": "high",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 3,
+          "sourceRecordCount": 3,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "39359",
+              "rawHeadword": "rama",
+              "sourceLine": 452114,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L452114",
+              "rowCount": 1
+            },
+            {
+              "blockId": "39360",
+              "rawHeadword": "rama",
+              "sourceLine": 452119,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L452119",
+              "rowCount": 1
+            },
+            {
+              "blockId": "39589",
+              "rawHeadword": "rAma",
+              "sourceLine": 453556,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L453556",
+              "rowCount": 1
+            }
+          ],
+          "indigenousAuthorityHintCounts": {
+            "auth:aka": 1,
+            "auth:brahmava": 1,
+            "auth:bva": 1,
+            "auth:ja": 1,
+            "auth:jvala": 1,
+            "auth:ka": 1,
+            "auth:medi": 1,
+            "auth:rajani": 1,
+            "auth:vahnipu": 1
+          },
+          "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:skd",
+          "lemma": "bodhisattva",
+          "dict": "skd",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "indigenous-coarse-review",
+          "priority": "high",
+          "sourceSenseRows": 2,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 2,
+          "sourceRecordCount": 1,
+          "indigenousAuthorityHintCounts": {
+            "auth:hemacandra": 1,
+            "auth:kathasaritsagara": 1
+          },
+          "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:vcp",
+          "lemma": "bodhisattva",
+          "dict": "vcp",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "indigenous-coarse-review",
+          "priority": "high",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 1,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 1,
+          "sourceRecordExactMatches": [
+            {
+              "blockId": "35803",
+              "rawHeadword": "boDisattva",
+              "sourceLine": 428571,
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L428571",
+              "rowCount": 1
+            }
+          ],
+          "indigenousAuthorityHintCounts": {
+            "auth:hemaca": 1
+          },
+          "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:skd",
+          "lemma": "gam",
+          "dict": "skd",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:vcp",
+          "lemma": "gam",
+          "dict": "vcp",
+          "parserFamily": "indigenous",
+          "split": "iti-unit",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        }
+      ]
+    },
+    {
+      "packetId": "source-gap-controls",
+      "ownerRepo": "csl-atlas",
+      "title": "Source gaps, mild drift, and parity controls",
+      "proves": "Lower-priority rows separate lookup/source gaps and positive parser controls from the highest-risk parser families.",
+      "doesNotProve": "It does not prove semantic equivalence for parity rows or missing content for source-gap rows.",
+      "nextDecision": "Use parity rows as controls and inspect source gaps after high-priority parser packets.",
+      "paperDashboardTarget": "R2 rebuild quality controls.",
+      "counts": {
+        "diagnosticRows": 17,
+        "highPriorityRows": 0,
+        "mediumPriorityRows": 3,
+        "dictionaryCount": 5,
+        "lemmaCount": 5
+      },
+      "rows": [
+        {
+          "diagnosticId": "r2-drift:rama:mw",
+          "lemma": "rama",
+          "dict": "mw",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "mild-drift",
+          "priority": "medium",
+          "sourceSenseRows": 23,
+          "archivedSenseRows": 17,
+          "sourceToArchiveRatio": 1.353,
+          "sourceRecordCount": 23,
+          "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:ap",
+          "lemma": "iti",
+          "dict": "ap",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "driftClass": "under-split-or-source-gap",
+          "priority": "medium",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 5,
+          "sourceToArchiveRatio": 0.6,
+          "sourceRecordCount": 1,
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1
+          },
+          "markerRunCounts": {
+            "0": 2
+          },
+          "nextAction": "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:ap",
+          "lemma": "rama",
+          "dict": "ap",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "driftClass": "under-split-or-source-gap",
+          "priority": "medium",
+          "sourceSenseRows": 8,
+          "archivedSenseRows": 10,
+          "sourceToArchiveRatio": 0.8,
+          "sourceRecordCount": 2,
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 1,
+            "4": 1
+          },
+          "markerRunCounts": {
+            "0": 6
+          },
+          "nextAction": "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:mw",
+          "lemma": "dharma",
+          "dict": "mw",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 33,
+          "archivedSenseRows": 30,
+          "sourceToArchiveRatio": 1.1,
+          "sourceRecordCount": 33,
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:cae",
+          "lemma": "rama",
+          "dict": "cae",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "source-only-dictionary",
+          "priority": "low",
+          "sourceSenseRows": 1,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 1,
+          "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:mw",
+          "lemma": "bodhisattva",
+          "dict": "mw",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 3,
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:dharma:mw72",
+          "lemma": "dharma",
+          "dict": "mw72",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 3,
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:ap",
+          "lemma": "gam",
+          "dict": "ap",
+          "parserFamily": "western",
+          "split": "ap-bullet",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 16,
+          "archivedSenseRows": 16,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 2,
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 2,
+            "4": 2,
+            "5": 2,
+            "6": 2,
+            "7": 1,
+            "8": 1
+          },
+          "markerRunCounts": {
+            "0": 6,
+            "1": 8
+          },
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:mw",
+          "lemma": "gam",
+          "dict": "mw",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 3,
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:gam:mw72",
+          "lemma": "gam",
+          "dict": "mw72",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 2,
+          "archivedSenseRows": 2,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 2,
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:cae",
+          "lemma": "iti",
+          "dict": "cae",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 3,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 3,
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:mw",
+          "lemma": "iti",
+          "dict": "mw",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 4,
+          "archivedSenseRows": 4,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 4,
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:mw72",
+          "lemma": "iti",
+          "dict": "mw72",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "archive-parity",
+          "priority": "low",
+          "sourceSenseRows": 4,
+          "archivedSenseRows": 4,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 4,
+          "nextAction": "Use as a positive parser-parity control while tightening higher-drift families."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:mw72",
+          "lemma": "bodhisattva",
+          "dict": "mw72",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        },
+        {
+          "diagnosticId": "r2-drift:bodhisattva:sch",
+          "lemma": "bodhisattva",
+          "dict": "sch",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        },
+        {
+          "diagnosticId": "r2-drift:iti:sch",
+          "lemma": "iti",
+          "dict": "sch",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        },
+        {
+          "diagnosticId": "r2-drift:rama:sch",
+          "lemma": "rama",
+          "dict": "sch",
+          "parserFamily": "western",
+          "split": "lumped-proxy",
+          "driftClass": "no-anchor-evidence",
+          "priority": "info",
+          "sourceSenseRows": 0,
+          "archivedSenseRows": 0,
+          "sourceToArchiveRatio": null,
+          "sourceRecordCount": 0,
+          "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Packets are work planning aids, not scholar-reviewed sense decisions.",
+    "Rows inherit the limitations of the source-backed R2 prototype and recovered archive fixtures.",
+    "Exact count matches and prefix matches are scope clues, not automatic filters."
+  ],
+  "boundary": [
+    "This artifact uses dictionary source rows and recovered atlas R2 fixtures only.",
+    "No DCS, corpus frequency, TEI/OntoLex, FrAC, GitHub, organization-process evidence, runtime LLM, database, or backend input is used."
+  ]
+}

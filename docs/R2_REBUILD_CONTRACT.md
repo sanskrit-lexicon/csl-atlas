@@ -53,6 +53,7 @@ sense rows, and builds provisional Sanskrit-anchor alignments.
 | `data/lexico/r2_source_anchor_senses.jsonl` | Minimal source-backed sense-row worklist. | One provisional row per split source span, with `<L>` ids, source links, anchors, limitations, explicit-marker labels/run indexes, indigenous authority hints, and AE reverse-match rank metadata where applicable. |
 | `data/lexico/r2_source_anchor_alignments.json` | Prototype alignment worklist. | Jaccard-ranked shared Sanskrit/citation anchors, capped to top rows per lemma. |
 | `data/lexico/r2_parser_diagnostics.json` | Parser-drift worklist for the next rebuild slice. | 70 lemma/dictionary diagnostics; 17 high-priority rows classify PWG/PWK div splitting, BEN/AP90/BHS marker/source-record scope, AE reverse overmatch, and SKD/VCP `iti` review. |
+| `data/lexico/r2_review_packets.json` | Reviewer-facing packet layer over diagnostics. | Five parser-decision packets: div/source-record scope, marker-run scope, AE reverse bands, indigenous `iti` authority review, and source-gap controls. |
 
 The row-count drift is expected. The prototype includes PWK from source, exposes
 AE reverse-dictionary overmatching with equivalent-position rank counts, and

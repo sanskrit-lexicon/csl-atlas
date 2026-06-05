@@ -24,6 +24,10 @@ alignment result.
 anchor lemmas against the recovered static R2 explorer counts and classifies
 each lemma/dictionary pair into a parser work package.
 
+`npm run build-r2-review-packets` groups the same diagnostics into
+reviewer-facing parser-decision packets. See
+[`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md).
+
 Current artifact:
 
 | Measure | Count |
