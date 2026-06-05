@@ -28,6 +28,8 @@ targets before adding new analysis-method prose.
   sense-divergence or sense-alignment claims are broadened.
 - The dictionary-comparison tool family now carries compact trust blocks for
   generated evidence, limitations, validation, and owner repo.
+- The remaining MW, typology, lexicographic-structure, timeline, and archived
+  R2 tools now carry compact trust blocks.
 
 ## Page Order
 

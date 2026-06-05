@@ -7,6 +7,13 @@ toc: false
 
 From the indigenous *kośa* tradition (~6th c.) through to the Cologne Digital Sanskrit Lexicon (2024).
 
+## Trust Block
+
+- Evidence: linked MWS timeline and dictionary-profile notes.
+- Limitations: dates are historical orientation for dictionary evidence, not exact diachronic dating of Sanskrit usage.
+- Validation: checked by `npm run build`; source references should be reviewed before paper-final use.
+- Owner repo: `csl-atlas`.
+
 The full Mermaid timeline:
 
 ```mermaid

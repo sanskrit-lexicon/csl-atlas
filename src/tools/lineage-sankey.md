@@ -7,6 +7,13 @@ toc: false
 
 The central visual evidence for the **kosha-collapse** finding: six PWG `<ls>` labels (left) flow through the actual kosha works they name (middle), then converge into MW's single `<ls>L.</ls>` hedge (right).
 
+## Trust Block
+
+- Evidence: hard-coded PWG and MW citation-flow counts from the documented kosha-collapse analysis.
+- Limitations: this is a focused explanatory visual, not a complete source graph or a generated review queue.
+- Validation: checked by `npm run build`; counts should be regenerated before paper-final use.
+- Owner repo: `csl-atlas`.
+
 ```js
 // Counts directly from PWG (1855-75) and MW (1899) data files
 const pwgFlows = [

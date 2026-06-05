@@ -20,6 +20,13 @@ headword index) and to the [Phase L0 design](https://github.com/sanskrit-lexicon
 The headline finding is that **convention-lineage and content-lineage are distinct signals**
 — see [the discussion below](#convention-lineage-is-not-content-lineage).
 
+## Trust Block
+
+- Evidence: L0 convention-fingerprint files under `src/data/lexicographic-structure/L0/`, Patel 2016 assignments, and validation reports.
+- Limitations: convention lineage measures house style and markup practice; it is separate from content inheritance.
+- Validation: checked by `npm run build`; L0 validation details are in `docs/L0_RESULTS.md` and `docs/L0_DESIGN.md`.
+- Owner repo: `csl-atlas`.
+
 ```js
 const patel = await FileAttachment("../data/lexicographic-structure/L0/patel2016_assignments.csv").csv({typed: true});
 const boot = await FileAttachment("../data/lexicographic-structure/L0/bootstrap_support.csv").csv({typed: true});

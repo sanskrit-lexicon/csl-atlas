@@ -9,6 +9,13 @@ First empirical findings from the **lexicography research stream**. Everything h
 
 This page is companion to the [Lexicography Roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md), which lays out the broader research plan (Phases L0-L10, Papers M, L, H).
 
+## Trust Block
+
+- Evidence: `src/data/lexicographic-structure/dictionary_inventory.csv`, `sanhw1_inheritance_edges.csv`, and `sanhw1_distance_matrix.csv`.
+- Limitations: headword containment and distance show content overlap, not full microstructure inheritance or direct copying by themselves.
+- Validation: source artifacts are compact committed research outputs; checked by `npm run build` and the linked lexicography roadmap.
+- Owner repo: `csl-atlas`.
+
 ```js
 const inv = await FileAttachment("../data/lexicographic-structure/dictionary_inventory.csv").csv({typed: true});
 const edges = await FileAttachment("../data/lexicographic-structure/sanhw1_inheritance_edges.csv").csv({typed: true});
