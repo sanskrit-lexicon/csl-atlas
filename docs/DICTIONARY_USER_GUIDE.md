@@ -6,6 +6,10 @@ Audience: readers, students, and translators who want to look up a Sanskrit word
 
 This guide answers the question the architecture documents do not answer for a newcomer: **which dictionary should I use, and how do I read what it tells me?**
 
+For the short task-based chooser, start with
+[`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md). This guide
+is the longer companion for reading entries, caveats, and evidence labels.
+
 ## Trust Block
 
 - Evidence: dictionary metadata, dictionary records, source links, and the
@@ -154,6 +158,8 @@ Each entry has a stable record ID and a source link. When you cite a word in you
 
 ## Related Documents
 
+- [`docs/UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md) -
+  the short "which dictionary should I use?" page.
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — what the certainty labels mean.
 - [`docs/READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) - what a
   lookup result means and what it does not prove.

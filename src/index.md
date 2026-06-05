@@ -13,7 +13,7 @@ A comparative microstructural atlas of **nine narrative Sanskrit-dictionary chap
 
 ## Reader mode
 
-Start with the [Reader lookup](/tools/reader-lookup) for dictionary-first search across MW, AP, PWG, PWK, WIL, VCP, and SKD. It accepts SLP1 and IAST headwords, shows dictionary coverage and source links, and keeps machine-derived evidence visibly labeled. The [dictionary user guide](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md) explains which dictionary to start with; [evidence labels](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) explain `observed`, `derived`, `inferred`, and `reviewed`.
+Start with the [Reader lookup](/tools/reader-lookup) for dictionary-first search across MW, AP, PWG, PWK, WIL, VCP, and SKD. It accepts SLP1 and IAST headwords, shows dictionary coverage and source links, and keeps machine-derived evidence visibly labeled. The [dictionary chooser](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/UC_RD_02_DICTIONARY_CHOOSER.md) explains which dictionary to start with; [evidence labels](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) explain `observed`, `derived`, `inferred`, and `reviewed`.
 
 ---
 

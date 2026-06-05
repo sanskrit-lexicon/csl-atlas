@@ -55,6 +55,7 @@ The atlas must keep uncertainty visible.
 - Goal: understand whether MW, AP, PWG, PWK, WIL, VCP, SKD, or another
   dictionary is the best first stop for a task.
 - Evidence: dictionary scope, language, source density, coverage, caveats.
+- Page: [`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md).
 
 ### UC-RD-03 Multi-Dictionary Lemma View `P0`
 
@@ -266,7 +267,7 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 
 - Use-case pages come before analysis method notes.
 - The first reader page is the dictionary chooser:
-  [`DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md).
+  [`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md).
 - Every public tool, chart, or page must carry a compact trust block:
   Evidence, Limitations, Validation, Owner repo.
 - Scholar-facing analysis docs come before public-facing analysis explanations.
@@ -294,6 +295,7 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - `docs/RELEASE_CHECKLIST.md`
 - `docs/REVIEW_QUEUE_PROOFS.md`
 - `docs/DICTIONARY_USER_GUIDE.md`
+- `docs/UC_RD_02_DICTIONARY_CHOOSER.md`
 - `docs/READER_LOOKUP_EXPLAINER.md`
 - `docs/EVIDENCE_LABELS.md`
 - `docs/H6_STRUCTURAL_REGISTER_SCATTER.md`
