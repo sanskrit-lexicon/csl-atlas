@@ -26,6 +26,8 @@ targets before adding new analysis-method prose.
   packages; the xref hub review also has a generated review-prompt artifact.
 - R2 parser diagnostics now classify source/archive drift before any new
   sense-divergence or sense-alignment claims are broadened.
+- The dictionary-comparison tool family now carries compact trust blocks for
+  generated evidence, limitations, validation, and owner repo.
 
 ## Page Order
 
