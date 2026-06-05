@@ -34,6 +34,7 @@ The proof question comes first. The procedure question comes second.
 | Unknown MW source layer | `src/data/review/unknown-source-layers-review.json` | Frequency-ranked unknown sigla show where MW diachronic/source-layer coverage is blocked by missing source metadata. | It does not prove the source is unknowable; it proves the atlas has not yet mapped it. | Review top 50 by frequency. |
 | Source-siglum alias candidates | `src/data/review/source-siglum-review.json` | Repeated alias candidates show where citation normalization can improve cross-dictionary source evidence. | It does not prove an alias is valid across every dictionary; scope must remain source- and dictionary-aware. | Review top 50 by citation frequency. |
 | POS/gender conflicts | `src/data/review/gender-conflicts-review.json` | Conflicts reveal dictionary disagreement, parser convention gaps, and cases where prose extraction needs review. | It does not prove one dictionary is wrong; many conflicts are legitimate convention differences. | Review a representative 25-item sample and document conflict types. |
+| H5 anomaly review | `src/data/review/h5-anomaly-review.json` | F0/F2 forensic candidates can be separated into lineage signals, correction targets, parser artifacts, null controls, and legitimate morphology. | It does not prove any queued headword is wrong; every item remains a review candidate until classified. | Review the 130-item proof-first sample and record the conflict taxonomy. |
 
 ## Future Queue Proofs
 
@@ -46,7 +47,6 @@ shape when implemented.
 | Cross-reference lineage candidates | Whether shared Sanskrit cross-reference targets preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md). | `csl-atlas`; dictionary graph evidence only. |
 | SKD anubandha adjudication | Whether indigenous it-marker coding can be decoded safely enough to emit reviewed grammatical columns. | `csl-atlas`; philological review required. |
 | H4 semantic-field review | Whether Amarakosa-native fields classify dictionary evidence without importing corpus categories; see [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md). | `csl-atlas`; M8 data package and chart built, scholar review samples next. |
-| H5 anomaly review | Whether forensic anomaly candidates are lineage signals, correction targets, parser artifacts, or legitimate morphology; see [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md). | `csl-atlas`; dictionary headword evidence only. |
 
 ## Proof Types
 
@@ -100,6 +100,7 @@ npm run build-gender-review
 npm run build-source-layer-review
 npm run build-alignment-review
 npm run build-citation-apparatus
+npm run build-h5-anomaly-review
 npm run validate-review-reports
 ```
 

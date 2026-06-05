@@ -191,8 +191,9 @@ H1 time-inflation.
 
 **Still open:** whether the H1R/H2/H3R sense-alignment study is its own short
 paper or a Paper-L section; co-author assignment for the sense-evolution work;
-implementation of the R2 rebuild contract; and the first reviewed H5 sample.
-H4 interpretation, xref hub review, and H5 scope are documented in
+completion of the R2 rebuild contract beyond the source-backed anchor
+prototype; and human review of the first H5 sample. H4 interpretation, xref hub
+review, and H5 scope are documented in
 [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md),
 [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md), and
 [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md).

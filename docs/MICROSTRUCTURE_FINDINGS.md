@@ -42,7 +42,7 @@ applicable. The remaining scholar-facing packages are now explicit:
 | R2 rebuild | [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md) | Restore reproducible generator outputs before broadening H1R/H2/H3R. |
 | H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md) | Review SKD false lows, AP/AP90 deltas, VCP high coverage, and specialized baselines. |
 | Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Label shared-core, prefix-convention, and edition-continuity samples. |
-| H5 anomaly scope | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md) | Build a compact proof-first maker QA queue from F0/F2 samples. |
+| H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md) | Review the 130-item proof-first queue and write the anomaly taxonomy. |
 
 ## What The Review Queues Prove
 
@@ -54,6 +54,7 @@ Before writing review procedure, each queue should state its proof value:
 | Xref target overlap | Whether cross-reference graphs preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md). |
 | Source-siglum aliases | Whether source citation normalization can improve dictionary evidence without hiding uncertainty. |
 | POS/gender conflicts | Which disagreements are dictionary disagreement, parser error, or convention mismatch. |
+| H5 anomaly review | Whether rare near-core and raw-headword forensic signals are lineage evidence, correction targets, parser artifacts, or legitimate morphology. |
 
 ## H4 Semantic Fields
 

@@ -25,6 +25,7 @@
     "build-xref-lineage": "node scripts/build-xref-lineage.mjs",
     "recover-r2-archive": "node scripts/recover-r2-archive.mjs",
     "build-r2-source-anchors": "node scripts/build-r2-source-anchors.mjs",
+    "build-h5-anomaly-review": "node scripts/build-h5-anomaly-review.mjs",
     "validate-review-reports": "node scripts/validate-review-reports.mjs"
   },
   "devDependencies": {

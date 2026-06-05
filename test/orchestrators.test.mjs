@@ -10,6 +10,7 @@ import assert from "node:assert/strict";
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { jaccard, lookupKeysForLemma, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
+import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
 import { topForm } from "../scripts/build-citation-apparatus.mjs";
 
@@ -74,6 +75,12 @@ test("splitExplicitMarkers keeps preface and numbered parts stable", () => {
 test("jaccard scores anchor overlap", () => {
   assert.equal(jaccard(["a", "b"], ["b", "c"]), 1 / 3);
   assert.equal(jaccard([], []), 0);
+});
+
+// ---- H5 anomaly queue: quoted CSV parsing ----
+test("parseCsv handles quoted commas and escaped quotes", () => {
+  const rows = parseCsv('a,b,c\nx,"y, z","q ""quoted"""\n');
+  assert.deepEqual(rows, [{ a: "x", b: "y, z", c: 'q "quoted"' }]);
 });
 
 // ---- All-dictionary coverage: classify + fit bands ----

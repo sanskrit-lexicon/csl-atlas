@@ -1,0 +1,5550 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-05T13:09:44.108Z",
+  "sourcePath": "data/forensic/{shared_headword_anomalies.csv,raw_headword_pool.csv,shared_corrections.csv}",
+  "recordCount": 130,
+  "queue": "encoding-ocr",
+  "reviewFamily": "h5-ghost-anomaly",
+  "targetTotal": 130,
+  "classCounts": {
+    "mw-pwg-shared-doublet": 30,
+    "mw-pw-shared-doublet": 30,
+    "raw-headword-exclusive": 30,
+    "null-control": 20,
+    "known-correction": 20
+  },
+  "assumptions": [
+    "H5 rows are review candidates, not error claims.",
+    "F0 rows are rare near-core forms one edit from common lemmas; most may be legitimate Sanskrit or morphology.",
+    "F2 raw-headword rows preserve raw <k1> forms shared by MW and one Petersburg dictionary.",
+    "Known-correction rows calibrate reviewer labels against already observed edits.",
+    "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds."
+  ],
+  "warnings": [
+    "Queue type is encoding-ocr to keep the canonical review-report schema unchanged; reviewFamily identifies this as H5.",
+    "Rows without at least one source href are omitted, so class counts may be below target.",
+    "Null controls must remain in the queue; they estimate false-positive morphology rate."
+  ],
+  "items": [
+    {
+      "reviewId": "h5:known-correction:MW-PW:ABoga:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ABoga",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "25336",
+          "line": 89829,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L89829"
+        },
+        {
+          "dictionary": "PW",
+          "L": "15112",
+          "line": 57167,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L57167"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "ABoga",
+        "petDict": "pw",
+        "inPwgIssues": false,
+        "petOld": "<div n=\"1\">— 3〉 {%Umfänglichkeit, Ausgedehntheit%} <ls>MBH. 3,178,25. 15,38,21. 16,4,14</l…",
+        "petNew": "<div n=\"1\">— 3〉 {%Umfänglichkeit, Ausgedehntheit%} <ls>MBH. 3,178,25.</ls> <ls n=\"MBH.\">15…",
+        "mwOld": "¦ the expanded hood of the <bio>Cobra Capella </bio> (used by <s1>Varuṇa</s1> as his umbre…",
+        "mwNew": "¦ the expanded hood of the <bio>Cobra Capella</bio> (used by <s1>Varuṇa</s1> as his umbrel…",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Adya:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Adya",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "23892",
+          "line": 84962,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L84962"
+        },
+        {
+          "dictionary": "PW",
+          "L": "14507",
+          "line": 54733,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L54733"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Adya",
+        "petDict": "pw",
+        "inPwgIssues": false,
+        "petOld": "¯BIG4AG.",
+        "petNew": "¯BI7G4AG.",
+        "mwOld": "Adya, m.",
+        "mwNew": "AdyA, f.",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Akara:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Akara",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "22044",
+          "line": 78654,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L78654"
+        },
+        {
+          "dictionary": "PW",
+          "L": "13348",
+          "line": 50332,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L50332"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Akara",
+        "petDict": "pw",
+        "inPwgIssues": false,
+        "petOld": "¯SPR.845.",
+        "petNew": "¯Spr.845.",
+        "mwOld": "one who scatters i.e. distributes",
+        "mwNew": "one who scatters, i.e. distributes",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Akenipa:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Akenipa",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "22292",
+          "line": 79513,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L79513"
+        },
+        {
+          "dictionary": "PW",
+          "L": "13484",
+          "line": 50861,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L50861"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Akenipa",
+        "petDict": "pw",
+        "inPwgIssues": false,
+        "petOld": "<div n=\"1\">— 2〉 *= {#goDAvin#}.",
+        "petNew": "<div n=\"1\">— 2〉 *= {#meDAvin#}.",
+        "mwOld": "<s>Ake—nipa/</s> ¦ <lex>mfn.</lex> (said of the horses of the <s1>Aśvin</s1>s) protecting …",
+        "mwNew": "<s>Ake—nipa/</s> ¦ <lex>mfn.</lex> (said of the horses of the <s1>Aśvin</s1>s) protecting …",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:Ap:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Ap",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "24743",
+          "line": 87788,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L87788"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "8712",
+          "line": 73957,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L73957"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Ap",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls n=\"ŚAT. BR. 1,\">1,1,14. 15.</ls> {#Apta/kAma#}",
+        "petNew": "<ls n=\"ŚAT. BR. 1,\">1,1,14.</ls> <ls n=\"ŚAT. BR. 1,1,1,\">15.</ls> {#Apta/kAma#}",
+        "mwOld": "<hom>1.</hom> <s>Ap</s> ¦ <ab>cl.</ab> 5. <ab>P.</ab> <s>Apno/ti</s> [<ls>AV. ix, 5, 22</l…",
+        "mwNew": "<hom>1.</hom> <s>Ap</s> ¦ <ab>cl.</ab> 5. <ab>P.</ab> <s>Apno/ti</s> [<ls>AV. ix, 5, 22</l…",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Bavamanyu:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Bavamanyu",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "149044",
+          "line": 499440,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499440"
+        },
+        {
+          "dictionary": "PW",
+          "L": "79073",
+          "line": 325800,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L325800"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Bavamanyu",
+        "petDict": "pw",
+        "inPwgIssues": false,
+        "petOld": "¯NI7LAK.UP.4,",
+        "petNew": "¯NI7LAR.UP.4,",
+        "mwOld": "<s>Bava—manyu</s> ¦ <lex>m.</lex> resentment against the world, <ls>NīlarUp.</ls> (<ab>cf.…",
+        "mwNew": "<s>Bava—manyu</s> ¦ <lex>m.</lex> resentment against the world, <ls>NīlarUp.</ls> (<ab>cf.…",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:BI:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "150969",
+          "line": 505614,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L505614"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "54938",
+          "line": 533051,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L533051"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "BI",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls n=\"AV.\">5,21,2.</ls> <ls>VS. 1,23.</ls> <ls>ŚAT. BR. 1,8,1,16. 6,1,11. 7,3,28. 3,1,2,1…",
+        "petNew": "<ls n=\"AV.\">5,21,2.</ls> <ls>VS. 1,23.</ls> <ls>ŚAT. BR. 1,8,1,16.</ls> <ls n=\"ŚAT. BR. 1,…",
+        "mwOld": "<ab>aor.</ab> <s>aBEzIt</s>, <s>°zma</s>, <s>°zuH</s>, <ls>RV.</ls>; <ls>AV.</ls> &c., 2. …",
+        "mwNew": "<ab>aor.</ab> <s>aBEzIt</s>, <s>°zma</s>, <s>°zuH</s>, <ls>RV.</ls>; <ls>AV.</ls> &c., 2. …",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:Buvana:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Buvana",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "151472",
+          "line": 507336,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L507336"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "55131",
+          "line": 535257,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L535257"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Buvana",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls n=\"ṚV. 10,\">120,1.</ls> <ls n=\"ṚV. 10,\">125,7.</ls> <ls>AV. 2,2,1.</ls> <ls n=\"AV.\">12…",
+        "petNew": "<ls n=\"ṚV. 10,\">120,1.</ls> <ls n=\"ṚV. 10,\">125,7.</ls> <ls>AV. 2,2,1.</ls> <ls n=\"AV.\">12…",
+        "mwOld": "(rarely m.) the world",
+        "mwNew": "(rarely <lex type=\"hwalt\">m.</lex>) the world",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:Cala:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Cala",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "75713",
+          "line": 255694,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L255694"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "26145",
+          "line": 250440,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L250440"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Cala",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls n=\"SĀH. D.\">525. 521.</ls> <ls>PRATĀPAR. 23,b,3.</ls> In Comp. mit dem, {%was die Täus…",
+        "petNew": "<ls n=\"SĀH. D.\">525.</ls> <ls n=\"SĀH. D.\">521.</ls> <ls>PRATĀPAR. 23,b,3.</ls> In Comp. mi…",
+        "mwOld": "m. form",
+        "mwNew": "Should be a separate record for m. form",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:DA:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "DA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "99233",
+          "line": 332818,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L332818"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "36484",
+          "line": 352629,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L352629"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "DA",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls>VS. 11. 39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
+        "petNew": "<ls>VS. 11,39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
+        "mwOld": "<ab>Impv.</ab> <s>dADAtu</s> <ab>pl.</ab> <s>°Datu</s>;",
+        "mwNew": "<ab>Impv.</ab> <s>da/DAtu</s>, <ab>pl.</ab> <s>°Datu</s>;",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:DAv:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "DAv",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "101159",
+          "line": 339031,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L339031"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "36704",
+          "line": 357002,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L357002"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "DAv",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls>RĀJA-TAR. 1,144. 3,205.</ls> {#praDAvitamahaM dEvaM pOruzeRa nivartaye#}",
+        "petNew": "<ls>RĀJA-TAR. 1,144.</ls> <ls n=\"RĀJA-TAR.\">3,205.</ls> {#praDAvitamahaM dEvaM pOruzeRa ni…",
+        "mwOld": "<div n=\"vp\"/> run towards (<s>-aBimuKam</s>), <ls>Hit.</ls> run a race (<s>Ajim</s>), <ls>…",
+        "mwNew": "<div n=\"vp\"/> run towards (<s>aBimuKam</s>), <ls>Hit.</ls> run a race (<s>Ajim</s>), <ls>B…",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:DU:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "DU",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "101481",
+          "line": 340065,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340065"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "36831",
+          "line": 358847,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L358847"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "DU",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls n=\"AV. 19,46,\">5.</ls> <ls n=\"AV. 19,\">19,7.</ls> <ls n=\"AV.\">19,36,4.</ls> <ls>ŚAT. B…",
+        "petNew": "<ls n=\"AV. 19,46,\">5.</ls> <ls n=\"AV. 19,\">19,7.</ls> <ls n=\"AV.\">19,36,4.</ls> <ls>ŚAT. B…",
+        "mwOld": "<div n=\"vp\"/> <ab>cl.</ab> 2. <ab>Ā.</ab>, 3. <ab>pl.</ab> <s>Duvate</s> (<s>Dunva/te</s>?…",
+        "mwNew": "<div n=\"vp\"/> <ab>cl.</ab> 2. <ab>Ā.</ab>, 3. <ab>pl.</ab> <s>Duva/te</s> (<s>Dunva/te</s>…",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:Dur:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Dur",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "101420",
+          "line": 339882,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L339882"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "36813",
+          "line": 358586,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L358586"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Dur",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls>ŚAT. BR. 1,4,4,13. 1,2,10.</ls>",
+        "petNew": "<ls>ŚAT. BR. 1,4,4,13.</ls> <ls n=\"ŚAT. BR. 1,\">1,2,10.</ls>",
+        "mwOld": "a yoke (fig.) burden, load",
+        "mwNew": "a yoke ; (fig.) burden, load",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Ekzava:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Ekzava",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "40350",
+          "line": 141447,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L141447"
+        },
+        {
+          "dictionary": "PW",
+          "L": "22442",
+          "line": 87059,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L87059"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Ekzava",
+        "petDict": "pw",
+        "inPwgIssues": false,
+        "petOld": "<div n=\"1\">— 1〉 <lex>Adj.</lex> (<lex>f.</lex> {#I/#}) {%aus Zuckerrohr gemacht, vom <ab n…",
+        "petNew": "<div n=\"1\">— 1〉 <lex>Adj.</lex> (<lex>f.</lex> {#I/#}) {%aus Zuckerrohr gemacht, vom <ab n…",
+        "mwOld": "<s>Ekzava/</s> and <s>Ekzavya^</s>, ¦ <lex>mf(<s>I</s>)n.</lex> (<ab>fr.</ab> <s>ikzu</s>)…",
+        "mwNew": "<s>Ekzava/</s> and <s>Ekzavya^</s>, ¦ <lex>mf(<s>I</s>)n.</lex> (<ab>fr.</ab> <s>ikzu</s>)…",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:KaYjana:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "KaYjana",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "60897",
+          "line": 207602,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L207602"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "20802",
+          "line": 194200,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L194200"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "KaYjana",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls>VARĀH. BṚH. S. 45,3. 6. 10. 15.</ls> <ls>Verz. d. Oxf. H. 86,b,39. 92,b,39.</ls>",
+        "petNew": "<ls>VARĀH. BṚH. S. 45,3.</ls> <ls n=\"VARĀH. BṚH. S. 45,\">6.</ls> <ls n=\"VARĀH. BṚH. S. 45,…",
+        "mwOld": "Montacilla alba",
+        "mwNew": "<bio>Montacilla alba</bio>",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Kewa:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Kewa",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "60843",
+          "line": 207421,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L207421"
+        },
+        {
+          "dictionary": "PW",
+          "L": "33883",
+          "line": 135350,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L135350"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Kewa",
+        "petDict": "pw",
+        "inPwgIssues": false,
+        "petOld": "¯BHA7G.P.)",
+        "petNew": "¯BHA7G.P. )",
+        "mwOld": "Missing homonymy codes",
+        "mwNew": "Add homonymy codes of 1,2 respectively",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:KyA:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "KyA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "62110",
+          "line": 211491,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L211491"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "21311",
+          "line": 198436,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L198436"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "KyA",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls>TS. 3,2,10,2. 5,1.</ls> — caus. {%ansehen lassen%}",
+        "petNew": "<ls>TS. 3,2,10,2.</ls> <ls n=\"TS. 3,2,\">5,1.</ls> — caus. {%ansehen lassen%}",
+        "mwOld": "<s>KyA</s> ¦ <ab>cl.</ab> 2. <ab>P.</ab> <s>KyAti</s> (in the non-conjugational tenses als…",
+        "mwNew": "<s>KyA</s> ¦ <ab>cl.</ab> 2. <ab>P.</ab> <s>KyAti</s> (in the non-conjugational tenses als…",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Opala:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Opala",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "41088",
+          "line": 143942,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L143942"
+        },
+        {
+          "dictionary": "PW",
+          "L": "22961",
+          "line": 89073,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L89073"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Opala",
+        "petDict": "pw",
+        "inPwgIssues": false,
+        "petOld": "¯NR2S.UP.*RIB. ‹ind.)› ¯66.",
+        "petNew": "¯NR2S.UP.(Bibl.ind.)66.",
+        "mwOld": "Opala",
+        "mwNew": "OpalA",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Pala:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Pala",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "141720",
+          "line": 475539,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L475539"
+        },
+        {
+          "dictionary": "PW",
+          "L": "75297",
+          "line": 310170,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L310170"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "Pala",
+        "petDict": "pw",
+        "inPwgIssues": false,
+        "petOld": "<div n=\"2\">— i〉 bei den Rhetorikern {%der Ausgang einer Handlung%} <ls>DAŚAR. 1,13</ls>. <…",
+        "petNew": "<div n=\"2\">— i〉 bei den Rhetorikern {%der Ausgang einer Handlung%} <ls>DAŚAR. 1,13</ls>. <…",
+        "mwOld": "Pala",
+        "mwNew": "PalA",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:SOrya:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "SOrya",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "221881",
+          "line": 736131,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L736131"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "101242",
+          "line": 936355,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L936355"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "known-correction",
+        "headword": "SOrya",
+        "petDict": "pwg",
+        "inPwgIssues": false,
+        "petOld": "<ls n=\"Spr.\">(II) 2632.</ls> <ls n=\"Spr. (II)\">2760.</ls> <ls n=\"Spr. (II)\">3502.</ls> <ls…",
+        "petNew": "<ls n=\"Spr.\">(II) 2632.</ls> <ls n=\"Spr. (II)\">2760.</ls> <ls n=\"Spr. (II)\">3502.</ls> <ls…",
+        "mwOld": "Vārtt. 2.",
+        "mwNew": "Underlined, but no tool tip",
+        "interpretation": "Already observed correction pair for reviewer calibration."
+      },
+      "evidenceLevel": "observed",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:abadDamUla:badDamUla",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "abadDamUla",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10930",
+          "line": 39860,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39860"
+        },
+        {
+          "dictionary": "PW",
+          "L": "7068",
+          "line": 26110,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L26110"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "abadDamUla",
+        "nearestReal": "badDamUla",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:abaRqa:aKaRqa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "abaRqa",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10926",
+          "line": 39845,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39845"
+        },
+        {
+          "dictionary": "PW",
+          "L": "7064",
+          "line": 26096,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L26096"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "abaRqa",
+        "nearestReal": "aKaRqa",
+        "nRealNeighbours": 4,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aDvaras:aDvara",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "aDvaras",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "4769.1",
+          "line": 17251,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L17251"
+        },
+        {
+          "dictionary": "PW",
+          "L": "3156",
+          "line": 11879,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L11879"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "aDvaras",
+        "nearestReal": "aDvara",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:ajamI_a:ajamIQa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ajamI|a",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "1979.1",
+          "line": 7169,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7169"
+        },
+        {
+          "dictionary": "PW",
+          "L": "1260.1",
+          "line": 4821,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4821"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "ajamI|a",
+        "nearestReal": "ajamIQa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:antaHsAma:antaHsAra",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "antaHsAma",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "8036.5",
+          "line": 29114,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L29114"
+        },
+        {
+          "dictionary": "PW",
+          "L": "5426",
+          "line": 20095,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L20095"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "antaHsAma",
+        "nearestReal": "antaHsAra",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:anugeya:anumeya",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "anugeya",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "6228.1",
+          "line": 22498,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L22498"
+        },
+        {
+          "dictionary": "PW",
+          "L": "4346",
+          "line": 16096,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L16096"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "anugeya",
+        "nearestReal": "anumeya",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apadasTa:padasTa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apadasTa",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "9224",
+          "line": 33647,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L33647"
+        },
+        {
+          "dictionary": "PW",
+          "L": "5944",
+          "line": 22050,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22050"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apadasTa",
+        "nearestReal": "padasTa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apanIti:apanIta",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apanIti",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "9307",
+          "line": 33952,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L33952"
+        },
+        {
+          "dictionary": "PW",
+          "L": "5975",
+          "line": 22167,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22167"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apanIti",
+        "nearestReal": "apanIta",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aparaSvas:paraSvas",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "aparaSvas",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "9455",
+          "line": 34529,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L34529"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6079",
+          "line": 22536,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22536"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "aparaSvas",
+        "nearestReal": "paraSvas",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aparivIta:parivIta",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "aparivIta",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "9585",
+          "line": 35014,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L35014"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6159",
+          "line": 22816,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22816"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "aparivIta",
+        "nearestReal": "parivIta",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apasvAna:apasnAna",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apasvAna",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "9887",
+          "line": 36209,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L36209"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6332",
+          "line": 23465,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L23465"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apasvAna",
+        "nearestReal": "apasnAna",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apawutva:pawutva",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apawutva",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "9160",
+          "line": 33410,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L33410"
+        },
+        {
+          "dictionary": "PW",
+          "L": "5897",
+          "line": 21868,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L21868"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apawutva",
+        "nearestReal": "pawutva",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apayasya:payasya",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apayasya",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "9397.1",
+          "line": 34293,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L34293"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6029",
+          "line": 22355,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L22355"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apayasya",
+        "nearestReal": "payasya",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apaYcama:paYcama",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apaYcama",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "9150.2",
+          "line": 33374,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L33374"
+        },
+        {
+          "dictionary": "PW",
+          "L": "5890",
+          "line": 21839,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L21839"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apaYcama",
+        "nearestReal": "paYcama",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apraBraMSa:apaBraMSa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apraBraMSa",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10679",
+          "line": 39041,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39041"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6885",
+          "line": 25483,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25483"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apraBraMSa",
+        "nearestReal": "apaBraMSa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apracyuti:apracyuta",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apracyuti",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10515",
+          "line": 38495,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38495"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6709",
+          "line": 24885,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24885"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apracyuti",
+        "nearestReal": "apracyuta",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apradagDa:apradugDa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apradagDa",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10657",
+          "line": 38972,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38972"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6860",
+          "line": 25401,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25401"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apradagDa",
+        "nearestReal": "apradugDa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprahfta:aprahata",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "aprahfta",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10795",
+          "line": 39416,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39416"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6965",
+          "line": 25763,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25763"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "aprahfta",
+        "nearestReal": "aprahata",
+        "nRealNeighbours": 5,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprajana:prajana",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "aprajana",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10526.1",
+          "line": 38528,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38528"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6713",
+          "line": 24899,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24899"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "aprajana",
+        "nearestReal": "prajana",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprakampin:prakampin",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "aprakampin",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10469",
+          "line": 38333,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38333"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6679",
+          "line": 24781,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24781"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "aprakampin",
+        "nearestReal": "prakampin",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprapAda:apramAda",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "aprapAda",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10669",
+          "line": 39008,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39008"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6875",
+          "line": 25451,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25451"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "aprapAda",
+        "nearestReal": "apramAda",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apraRASa:aprakASa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apraRASa",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10530",
+          "line": 38543,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38543"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6722",
+          "line": 24932,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24932"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apraRASa",
+        "nearestReal": "aprakASa",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprArTaka:prArTaka",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "aprArTaka",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10841",
+          "line": 39563,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39563"
+        },
+        {
+          "dictionary": "PW",
+          "L": "7002",
+          "line": 25883,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25883"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "aprArTaka",
+        "nearestReal": "prArTaka",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apratIBA:apratiBA",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apratIBA",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10637.1",
+          "line": 38903,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38903"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6836",
+          "line": 25322,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25322"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apratIBA",
+        "nearestReal": "apratiBA",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apratiboDa:pratiboDa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apratiboDa",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10577",
+          "line": 38696,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38696"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6768",
+          "line": 25084,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25084"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apratiboDa",
+        "nearestReal": "pratiboDa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apratihAra:pratihAra",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apratihAra",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10623",
+          "line": 38858,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38858"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6825",
+          "line": 25282,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25282"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apratihAra",
+        "nearestReal": "pratihAra",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprativAdin:prativAdin",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "aprativAdin",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10598",
+          "line": 38771,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38771"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6787",
+          "line": 25157,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25157"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "aprativAdin",
+        "nearestReal": "prativAdin",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apreta:preta",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apreta",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10863",
+          "line": 39635,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39635"
+        },
+        {
+          "dictionary": "PW",
+          "L": "7019",
+          "line": 25939,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25939"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apreta",
+        "nearestReal": "preta",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apUpikA:pUpikA",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apUpikA",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10313.2",
+          "line": 37774,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L37774"
+        },
+        {
+          "dictionary": "PW",
+          "L": "6573.1",
+          "line": 24362,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24362"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "apUpikA",
+        "nearestReal": "pUpikA",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:awawyA:awAwyA",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "awawyA",
+        "dictionaries": [
+          "MW",
+          "PW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "2338.1",
+          "line": 8346,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8346"
+        },
+        {
+          "dictionary": "PW",
+          "L": "1486.2",
+          "line": 5737,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5737"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pw-shared-doublet",
+        "pair": "MW/PW",
+        "typoForm": "awawyA",
+        "nearestReal": "awAwyA",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:AcamanI:Acamana",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "AcamanI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "22872",
+          "line": 81502,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L81502"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "66195",
+          "line": 629195,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L629195"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "AcamanI",
+        "nearestReal": "Acamana",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:ADUmana:ADamana",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ADUmana",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "24211",
+          "line": 86058,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86058"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "66450",
+          "line": 630721,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L630721"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "ADUmana",
+        "nearestReal": "ADamana",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:akalkala:akalkana",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "akalkala",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "207.1",
+          "line": 711,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L711"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "86",
+          "line": 739,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L739"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "akalkala",
+        "nearestReal": "akalkana",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:apAzWi:apAzWa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apAzWi",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10106",
+          "line": 37021,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L37021"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "4117",
+          "line": 34000,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L34000"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "apAzWi",
+        "nearestReal": "apAzWa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:apiDAnI:apiDAna",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "apiDAnI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "10177",
+          "line": 37299,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L37299"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "118404",
+          "line": 1104911,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1104911"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "apiDAnI",
+        "nearestReal": "apiDAna",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:arcanas:arcana",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "arcanas",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "15713",
+          "line": 56487,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L56487"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "118543",
+          "line": 1105651,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1105651"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "arcanas",
+        "nearestReal": "arcana",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:arizwakA:arizwaka",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "arizwakA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "15389",
+          "line": 55349,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L55349"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "64997",
+          "line": 621508,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L621508"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "arizwakA",
+        "nearestReal": "arizwaka",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:atimarSa:aBimarSa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "atimarSa",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "2723",
+          "line": 9693,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L9693"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "1366",
+          "line": 11554,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11554"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "atimarSa",
+        "nearestReal": "aBimarSa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:AvantI:avantI",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "AvantI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "26960",
+          "line": 95393,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L95393"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "66912",
+          "line": 633649,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L633649"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "AvantI",
+        "nearestReal": "avantI",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:cApaqa:cApala",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "cApaqa",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "72974",
+          "line": 246846,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246846"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "73703",
+          "line": 679249,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L679249"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "cApaqa",
+        "nearestReal": "cApala",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:catuzpAdI:catuzpAd",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "catuzpAdI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "71429.4",
+          "line": 241959,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L241959"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "73508",
+          "line": 677885,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L677885"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "catuzpAdI",
+        "nearestReal": "catuzpAd",
+        "nRealNeighbours": 4,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:dIkzaRA:dIkzaRa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "dIkzaRA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "92695",
+          "line": 311442,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L311442"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "75769",
+          "line": 692530,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L692530"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "dIkzaRA",
+        "nearestReal": "dIkzaRa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "divaraTa",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "92243",
+          "line": 309870,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309870"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "32945",
+          "line": 321032,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L321032"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "divaraTa",
+        "nearestReal": "devaraTa",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:golikA:polikA",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "golikA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "68030",
+          "line": 230690,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L230690"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "119820",
+          "line": 1112822,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1112822"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "golikA",
+        "nearestReal": "polikA",
+        "nRealNeighbours": 6,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:jalaDitA:jalaDigA",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "jalaDitA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "77921",
+          "line": 262761,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262761"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "74253",
+          "line": 682945,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L682945"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "jalaDitA",
+        "nearestReal": "jalaDigA",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kAlakaYjya:kAlakaYja",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kAlakaYjya",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "49068",
+          "line": 169849,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L169849"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "16734",
+          "line": 155491,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L155491"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "kAlakaYjya",
+        "nearestReal": "kAlakaYja",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kanInika:kanInaka",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kanInika",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "43062",
+          "line": 150393,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L150393"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "69561",
+          "line": 651281,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L651281"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "kanInika",
+        "nearestReal": "kanInaka",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:karkowI:karkowa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "karkowI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "44755",
+          "line": 155973,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L155973"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "119346",
+          "line": 1110106,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1110106"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "karkowI",
+        "nearestReal": "karkowa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kASmIrikA:kASmIrika",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kASmIrikA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "49949",
+          "line": 172670,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L172670"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "119466",
+          "line": 1110804,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1110804"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "kASmIrikA",
+        "nearestReal": "kASmIrika",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kAYcanapraBA:kAYcanapraBa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kAYcanapraBA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "47377",
+          "line": 164430,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L164430"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "70250",
+          "line": 656225,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L656225"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "kAYcanapraBA",
+        "nearestReal": "kAYcanapraBa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kftAlaka:mftAlaka",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kftAlaka",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "54495",
+          "line": 187262,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L187262"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "18671",
+          "line": 172936,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L172936"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "kftAlaka",
+        "nearestReal": "mftAlaka",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kfzikA:kfzRikA",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kfzikA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "55089",
+          "line": 189200,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L189200"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "71414",
+          "line": 663600,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L663600"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "kfzikA",
+        "nearestReal": "kfzRikA",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kullUkA:kullUka",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kullUkA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "53232",
+          "line": 183148,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L183148"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "71177",
+          "line": 662032,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L662032"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "kullUkA",
+        "nearestReal": "kullUka",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kyat:yat",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kyat",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "57615",
+          "line": 197118,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L197118"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "71822",
+          "line": 666161,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L666161"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "kyat",
+        "nearestReal": "yat",
+        "nRealNeighbours": 4,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:takrA:takra",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "takrA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "81592",
+          "line": 274783,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L274783"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "120074",
+          "line": 1114299,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1114299"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "takrA",
+        "nearestReal": "takra",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:ulleKA:ulleKa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ulleKA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "37624",
+          "line": 132100,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132100"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "119148",
+          "line": 1108987,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1108987"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "ulleKA",
+        "nearestReal": "ulleKa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:utpAra:utpAta",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "utpAra",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "31732",
+          "line": 112097,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L112097"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "67725",
+          "line": 639468,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L639468"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "utpAra",
+        "nearestReal": "utpAta",
+        "nRealNeighbours": 7,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:utsAdin:utpAdin",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "utsAdin",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "31874",
+          "line": 112615,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L112615"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "67760",
+          "line": 639715,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L639715"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "utsAdin",
+        "nearestReal": "utpAdin",
+        "nRealNeighbours": 2,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:uttarakAlam:uttarakAla",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "uttarakAlam",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "31187",
+          "line": 110188,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L110188"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "118976",
+          "line": 1108054,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1108054"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "uttarakAlam",
+        "nearestReal": "uttarakAla",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:uzmopagama:uzRopagama",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "uzmopagama",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "37850",
+          "line": 132839,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132839"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "12684",
+          "line": 113851,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L113851"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "mw-pwg-shared-doublet",
+        "pair": "MW/PWG",
+        "typoForm": "uzmopagama",
+        "nearestReal": "uzRopagama",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "MW PWG",
+        "nDictsWithBoth": 2,
+        "interpretation": "Candidate shared rare near-core doublet; lineage signal before error claim."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:avicAritam:avicArita",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "avicAritam",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "701",
+          "line": 3681,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L3681"
+        },
+        {
+          "dictionary": "MW",
+          "L": "18728",
+          "line": 67031,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L67031"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "avicAritam",
+        "nearestReal": "avicArita",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "BOP MW",
+        "nDictsWithBoth": 1,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:Baktftva:Boktftva",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Baktftva",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "5761",
+          "line": 34682,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L34682"
+        },
+        {
+          "dictionary": "MW",
+          "L": "147750",
+          "line": 495243,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L495243"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "Baktftva",
+        "nearestReal": "Boktftva",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "BOP MW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:duHKatara:duHKakara",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "duHKatara",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "4124",
+          "line": 24720,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L24720"
+        },
+        {
+          "dictionary": "MW",
+          "L": "93419",
+          "line": 313720,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L313720"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "duHKatara",
+        "nearestReal": "duHKakara",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "BOP MW",
+        "nDictsWithBoth": 1,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:ekAntam:ekAnta",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ekAntam",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1651",
+          "line": 9132,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L9132"
+        },
+        {
+          "dictionary": "MW",
+          "L": "39813",
+          "line": 139488,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L139488"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "ekAntam",
+        "nearestReal": "ekAnta",
+        "nRealNeighbours": 1,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "AP BOP MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:etat:eta",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "etat",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1666",
+          "line": 9203,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L9203"
+        },
+        {
+          "dictionary": "MW",
+          "L": "40062",
+          "line": 140368,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L140368"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "etat",
+        "nearestReal": "eta",
+        "nRealNeighbours": 3,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "BOP BUR MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:gfYj:guYj",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "gfYj",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "2877",
+          "line": 16325,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L16325"
+        },
+        {
+          "dictionary": "MW",
+          "L": "66413.1",
+          "line": 225305,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L225305"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "gfYj",
+        "nearestReal": "guYj",
+        "nRealNeighbours": 2,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "AP BOP MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:Il:I",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Il",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1199",
+          "line": 6696,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L6696"
+        },
+        {
+          "dictionary": "MW",
+          "L": "29820",
+          "line": 105482,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L105482"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "Il",
+        "nearestReal": "I",
+        "nRealNeighbours": 18,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "BOP BUR MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:IYj:aYj",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "IYj",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1179",
+          "line": 6580,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L6580"
+        },
+        {
+          "dictionary": "MW",
+          "L": "29717.1",
+          "line": 105138,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L105138"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "IYj",
+        "nearestReal": "aYj",
+        "nRealNeighbours": 2,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "AP BOP MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:kalahaMsI:kalahaMsa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kalahaMsI",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1962",
+          "line": 10770,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L10770"
+        },
+        {
+          "dictionary": "MW",
+          "L": "45674",
+          "line": 158954,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L158954"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "kalahaMsI",
+        "nearestReal": "kalahaMsa",
+        "nRealNeighbours": 1,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "BOP MW SCH",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:kalyam:kalya",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kalyam",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1980",
+          "line": 10864,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L10864"
+        },
+        {
+          "dictionary": "MW",
+          "L": "46267",
+          "line": 160942,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L160942"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "kalyam",
+        "nearestReal": "kalya",
+        "nRealNeighbours": 1,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "AP BOP MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:karuRam:karuRa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "karuRam",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1906",
+          "line": 10489,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L10489"
+        },
+        {
+          "dictionary": "MW",
+          "L": "44559",
+          "line": 155346,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L155346"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "karuRam",
+        "nearestReal": "karuRa",
+        "nRealNeighbours": 1,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "AP BOP MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:kat:ka",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kat",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1809",
+          "line": 9965,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L9965"
+        },
+        {
+          "dictionary": "MW",
+          "L": "42855",
+          "line": 149727,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L149727"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "kat",
+        "nearestReal": "ka",
+        "nRealNeighbours": 40,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "BOP BUR MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:kIrt:kIrti",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "kIrt",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "2167",
+          "line": 11835,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L11835"
+        },
+        {
+          "dictionary": "MW",
+          "L": "50788",
+          "line": 175378,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L175378"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "kIrt",
+        "nearestReal": "kIrti",
+        "nRealNeighbours": 4,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "BOP MW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:klIv:klIva",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "klIv",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "2520",
+          "line": 14055,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L14055"
+        },
+        {
+          "dictionary": "MW",
+          "L": "58670",
+          "line": 200445,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L200445"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "klIv",
+        "nearestReal": "klIva",
+        "nRealNeighbours": 4,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "BOP MW YAT",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:saktimat:Baktimat",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "saktimat",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "8158",
+          "line": 50710,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L50710"
+        },
+        {
+          "dictionary": "MW",
+          "L": "229234",
+          "line": 760580,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L760580"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "saktimat",
+        "nearestReal": "Baktimat",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "BOP MW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:tApasI:tApasa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "tApasI",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "3706",
+          "line": 22049,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L22049"
+        },
+        {
+          "dictionary": "MW",
+          "L": "83936",
+          "line": 282492,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L282492"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "tApasI",
+        "nearestReal": "tApasa",
+        "nRealNeighbours": 1,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "BOP LRV MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:tatraBavatI:tatraBavat",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "tatraBavatI",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "3627",
+          "line": 21516,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L21516"
+        },
+        {
+          "dictionary": "MW",
+          "L": "81984",
+          "line": 276113,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276113"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "tatraBavatI",
+        "nearestReal": "tatraBavat",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "BOP MW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:UM:Uh",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "UM",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1554",
+          "line": 8530,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L8530"
+        },
+        {
+          "dictionary": "MW",
+          "L": "37964",
+          "line": 133208,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L133208"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "UM",
+        "nearestReal": "Uh",
+        "nRealNeighbours": 5,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "BOP MW PW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:uttarottaram:uttarottara",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "uttarottaram",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "1283",
+          "line": 7165,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L7165"
+        },
+        {
+          "dictionary": "MW",
+          "L": "31340",
+          "line": 110707,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L110707"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "uttarottaram",
+        "nearestReal": "uttarottara",
+        "nRealNeighbours": 1,
+        "dfTypo": 3,
+        "nDicts": 3,
+        "dicts": "AP BOP MW",
+        "nDictsWithBoth": 3,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:null-control:BOP-MW:wiwwiBI:wiwwiBa",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "wiwwiBI",
+        "dictionaries": [
+          "BOP",
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BOP",
+          "L": "3572",
+          "line": 21178,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L21178"
+        },
+        {
+          "dictionary": "MW",
+          "L": "81248",
+          "line": 273567,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L273567"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "null-control",
+        "pair": "BOP/MW",
+        "typoForm": "wiwwiBI",
+        "nearestReal": "wiwwiBa",
+        "nRealNeighbours": 1,
+        "dfTypo": 2,
+        "nDicts": 2,
+        "dicts": "BOP MW",
+        "nDictsWithBoth": 2,
+        "interpretation": "Control sample for false-positive morphology rate."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:ABUtasaMplavam:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ABUtasaMplavam",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "25352",
+          "line": 89885,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L89885"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "118787",
+          "line": 1106998,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1106998"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "ABUtasaMplavam",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:AcamanI:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "AcamanI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "22872",
+          "line": 81502,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L81502"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "66195",
+          "line": 629195,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L629195"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "AcamanI",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:ADUmana:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ADUmana",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "24211",
+          "line": 86058,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86058"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "66450",
+          "line": 630721,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L630721"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "ADUmana",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:AhatavisargatA:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "AhatavisargatA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "28298",
+          "line": 100055,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L100055"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "67107",
+          "line": 635036,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L635036"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "AhatavisargatA",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:AlokagadADarI:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "AlokagadADarI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "26912",
+          "line": 95215,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L95215"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "66898",
+          "line": 633571,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L633571"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "AlokagadADarI",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:AnakAyani:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "AnakAyani",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "24332",
+          "line": 86441,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86441"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "8552",
+          "line": 72916,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L72916"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "AnakAyani",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:ApUyita:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ApUyita",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "25013",
+          "line": 88735,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L88735"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "8782",
+          "line": 75168,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L75168"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "ApUyita",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:ASArEzin:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ASArEzin",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "27452",
+          "line": 97094,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L97094"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "9565",
+          "line": 81998,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L81998"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "ASArEzin",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:ASuPala:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "ASuPala",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "27542",
+          "line": 97411,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L97411"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "9605",
+          "line": 82372,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L82372"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "ASuPala",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:AvantI:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "AvantI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "26960",
+          "line": 95393,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L95393"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "66912",
+          "line": 633649,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L633649"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "AvantI",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:AvartanamaRi:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "AvartanamaRi",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "27244",
+          "line": 96390,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L96390"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "9450",
+          "line": 80907,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L80907"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "AvartanamaRi",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:Badantavarman:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Badantavarman",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "148260",
+          "line": 496941,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L496941"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "53969",
+          "line": 522248,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L522248"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "Badantavarman",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BagnatAla:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BagnatAla",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "147939",
+          "line": 496008,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L496008"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "80060",
+          "line": 719508,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L719508"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BagnatAla",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BAgurI:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BAgurI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "149741",
+          "line": 501666,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L501666"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "121356",
+          "line": 1121338,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1121338"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BAgurI",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BAjanIBUta:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BAjanIBUta",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "149719",
+          "line": 501600,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L501600"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "54470",
+          "line": 527741,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L527741"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BAjanIBUta",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BARasTAna:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BARasTAna",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "149784",
+          "line": 501816,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L501816"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "54492",
+          "line": 527872,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L527872"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BARasTAna",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BartfGna:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BartfGna",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "148807",
+          "line": 498693,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L498693"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "80111",
+          "line": 719874,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L719874"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BartfGna",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BAryApatitva:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BAryApatitva",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "150122",
+          "line": 502860,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L502860"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "80174",
+          "line": 720279,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L720279"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BAryApatitva",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BavicArin:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BavicArin",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "147521",
+          "line": 494456,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L494456"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "54320",
+          "line": 525889,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L525889"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BavicArin",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BayanASin:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BayanASin",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "148611",
+          "line": 498036,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L498036"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "54129",
+          "line": 523635,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L523635"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BayanASin",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BfSIBU:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BfSIBU",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "152754",
+          "line": 511456,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511456"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "55698",
+          "line": 541587,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L541587"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BfSIBU",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BujaMgadamanI:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BujaMgadamanI",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "151308",
+          "line": 506702,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506702"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "55069",
+          "line": 534772,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L534772"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BujaMgadamanI",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BuktvAsuhita:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BuktvAsuhita",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "151383",
+          "line": 506983,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506983"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "55046",
+          "line": 534104,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L534104"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BuktvAsuhita",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BUmIyARa:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BUmIyARa",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "152454.1",
+          "line": 510471,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510471"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "55475",
+          "line": 539504,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L539504"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BUmIyARa",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BUrilagnA:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BUrilagnA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "152411",
+          "line": 510333,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510333"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "55546",
+          "line": 540146,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L540146"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BUrilagnA",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:Buvadvasu:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "Buvadvasu",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "151471",
+          "line": 507333,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L507333"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "55130",
+          "line": 535250,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L535250"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "Buvadvasu",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:BUyastarAm:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "BUyastarAm",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "152311",
+          "line": 510009,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510009"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "55492",
+          "line": 539698,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L539698"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "BUyastarAm",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:CandonAman:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "CandonAman",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "75648",
+          "line": 255498,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L255498"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "26114",
+          "line": 250194,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L250194"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "CandonAman",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:DarmakAra:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "DarmakAra",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "99949",
+          "line": 335072,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L335072"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "36248",
+          "line": 350734,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350734"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "DarmakAra",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "h5:raw-headword-exclusive:MW-PWG:DItIkA:",
+      "queue": "encoding-ocr",
+      "subject": {
+        "kind": "entry",
+        "lemma": "DItIkA",
+        "dictionaries": [
+          "MW",
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "101326",
+          "line": 339583,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L339583"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "120438",
+          "line": 1116275,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1116275"
+        }
+      ],
+      "machineValue": {
+        "sampleClass": "raw-headword-exclusive",
+        "rawHeadword": "DItIkA",
+        "sharedWith": "PWG",
+        "interpretation": "Raw <k1> appears only in MW plus one Petersburg dictionary among parsed sources."
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    }
+  ]
+}
