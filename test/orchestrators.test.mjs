@@ -10,6 +10,7 @@ import assert from "node:assert/strict";
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { jaccard, lookupKeysForLemma, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
+import { classifyDrift, priorityForClass } from "../scripts/build-r2-parser-diagnostics.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -78,6 +79,36 @@ test("splitExplicitMarkers keeps preface and numbered parts stable", () => {
 test("jaccard scores anchor overlap", () => {
   assert.equal(jaccard(["a", "b"], ["b", "c"]), 1 / 3);
   assert.equal(jaccard([], []), 0);
+});
+
+test("R2 parser diagnostics classify drift by rebuild work package", () => {
+  assert.equal(
+    classifyDrift({ parserFamily: "western", split: "ap-bullet", sourceSenseRows: 16, archivedSenseRows: 16 }),
+    "archive-parity"
+  );
+  assert.equal(
+    classifyDrift({ parserFamily: "western", split: "number-marker", sourceSenseRows: 172, archivedSenseRows: 23 }),
+    "over-split-candidate"
+  );
+  assert.equal(
+    classifyDrift({ parserFamily: "western", split: "div", sourceSenseRows: 367, archivedSenseRows: 0 }),
+    "source-only-dictionary"
+  );
+  assert.equal(
+    classifyDrift({ parserFamily: "reverse", split: "reverse-equivalent", sourceSenseRows: 243, archivedSenseRows: 30 }),
+    "reverse-overmatch"
+  );
+  assert.equal(
+    classifyDrift({ parserFamily: "indigenous", split: "iti-unit", sourceSenseRows: 27, archivedSenseRows: 9 }),
+    "indigenous-coarse-review"
+  );
+});
+
+test("R2 parser diagnostics keep parser priorities stable", () => {
+  assert.equal(priorityForClass("over-split-candidate"), "high");
+  assert.equal(priorityForClass("mild-drift"), "medium");
+  assert.equal(priorityForClass("archive-parity"), "low");
+  assert.equal(priorityForClass("no-anchor-evidence"), "info");
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----

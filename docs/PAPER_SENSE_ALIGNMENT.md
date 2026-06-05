@@ -96,6 +96,7 @@ Archive fixtures can be refreshed with:
 ```sh
 npm run recover-r2-archive
 npm run build-r2-source-anchors
+npm run build-r2-parser-diagnostics
 ```
 
 ## Open before submission
@@ -104,5 +105,5 @@ npm run build-r2-source-anchors
   *r* = 0.01; archived `h1_panel.py` output `r2_h1_panel.{json,html}`). Restore
   or rebuild before submission.
 - Introduction (§1) + Limitations (§7) prose; the two figures (H1 panel scatter, explorer screenshot).
-- Finer indigenous (VCP/SKD) splitting + verb grammar for completeness of the cross-tradition claim.
+- Use [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) to resolve PWG/PWK div scope, BEN/AP90/BHS marker scope, AE reverse overmatch, and indigenous VCP/SKD `iti` splitting before broadening the cross-tradition claim.
 - Co-author (per the PUBLICATIONS Russian-co-author convention) + target venue.

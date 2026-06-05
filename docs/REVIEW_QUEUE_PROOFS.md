@@ -44,6 +44,7 @@ shape when implemented.
 | Future queue | What it should prove | Boundary |
 |---|---|---|
 | Sense divergence | Whether cross-dictionary sense disagreement reflects copying, condensation, family style, or parser weakness; see [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md). | `csl-atlas`; dictionary sense evidence only. |
+| R2 parser-drift diagnostics | Whether source/archive row-count drift is a parser-family problem before it becomes a sense-alignment claim; see [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md). | `csl-atlas`; dictionary source rows and recovered R2 fixtures only. |
 | Cross-reference lineage candidates | Whether shared Sanskrit cross-reference targets preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md). | `csl-atlas`; dictionary graph evidence only; `data/lexico/xref_hub_review.json` built as the review-prompt artifact. |
 | SKD anubandha adjudication | Whether indigenous it-marker coding can be decoded safely enough to emit reviewed grammatical columns. | `csl-atlas`; philological review required. |
 | H4 semantic-field review | Whether Amarakosa-native fields classify dictionary evidence without importing corpus categories; see [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md). | `csl-atlas`; M8 data package, chart, and `data/lexico/semantic_field_family_profiles.json` built; scholar review samples next. |
@@ -55,7 +56,7 @@ shape when implemented.
 | Boundary proof | Unknown source layers, source-siglum aliases | Shows where a generated claim needs clearer source authority. |
 | Disagreement proof | POS/gender conflicts, sense divergence | Shows where dictionaries disagree or encode the same fact differently. |
 | Lineage proof | Low-confidence alignments, xref lineage candidates, H5 rare-anomaly samples | Shows where inheritance or copying needs direct evidence. |
-| Parser proof | POS/gender conflicts involving SKD/VCP, SKD anubandha | Shows where a detector is blind to a dictionary convention. |
+| Parser proof | POS/gender conflicts involving SKD/VCP, SKD anubandha, R2 parser-drift diagnostics | Shows where a detector is blind to a dictionary convention. |
 
 ## How To Read Review Counts
 
@@ -101,6 +102,7 @@ npm run build-source-layer-review
 npm run build-alignment-review
 npm run build-citation-apparatus
 npm run build-h5-anomaly-review
+npm run build-r2-parser-diagnostics
 npm run validate-review-reports
 ```
 

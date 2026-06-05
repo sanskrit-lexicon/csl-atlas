@@ -24,6 +24,8 @@ targets before adding new analysis-method prose.
   and family-profile artifact; scholar review samples remain next.
 - Xref hub review and H5 anomaly scope now have proof-first documentation
   packages; the xref hub review also has a generated review-prompt artifact.
+- R2 parser diagnostics now classify source/archive drift before any new
+  sense-divergence or sense-alignment claims are broadened.
 
 ## Page Order
 
@@ -73,7 +75,9 @@ For every queue, write the proof page first:
 5. Review H6 structural-register prompts and H4 semantic-field samples selected
    from their generated artifacts.
 6. Review xref hub-family samples from `data/lexico/xref_hub_review.json`.
-7. Build the first H5 anomaly review report from F0/F2 samples.
+7. Use `data/lexico/r2_parser_diagnostics.json` to tighten the R2 splitter
+   before building sense-divergence pages.
+8. Build the first H5 anomaly review report from F0/F2 samples.
 
 ## Boundary Links
 

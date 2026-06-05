@@ -31,6 +31,7 @@ npm run build-xref-lineage
 npm run build-xref-hub-review
 npm run recover-r2-archive
 npm run build-r2-source-anchors
+npm run build-r2-parser-diagnostics
 npm run build-h5-anomaly-review
 ```
 

@@ -1,0 +1,3587 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "r2-parser-diagnostics",
+  "claim": "R2 source/archive row-count drift is classified by parser family before the final splitter is restored.",
+  "evidenceLabel": "source-vs-archive",
+  "reviewStatus": "machine-reviewed",
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "npm run build-r2-parser-diagnostics",
+  "sourceGeneratedBy": "npm run build-r2-source-anchors",
+  "sourceFiles": [
+    "data/lexico/r2_source_anchor_summary.json",
+    "data/lexico/r2_source_anchor_senses.jsonl",
+    "data/lexico/r2_archive_explorer.json",
+    "scripts/build-r2-source-anchors.mjs",
+    "scripts/build-r2-parser-diagnostics.mjs"
+  ],
+  "counts": {
+    "lemmaCount": 5,
+    "dictionaryCount": 14,
+    "diagnosticRows": 70,
+    "highPriorityRows": 17,
+    "mediumPriorityRows": 7,
+    "byDriftClass": {
+      "archive-parity": 28,
+      "no-anchor-evidence": 12,
+      "indigenous-coarse-review": 8,
+      "over-split-candidate": 6,
+      "source-only-dictionary": 6,
+      "mild-drift": 5,
+      "reverse-overmatch": 3,
+      "under-split-or-source-gap": 2
+    },
+    "byParserFamily": {
+      "western": 55,
+      "indigenous": 10,
+      "reverse": 5
+    }
+  },
+  "method": [
+    "Compare source-backed anchor row counts with recovered archived static-page counts for each lemma/dictionary pair.",
+    "Classify drift into parser-work packages: explicit-marker over-splitting, reverse overmatching, indigenous iti review, source/archive gaps, source-only rebuild expansion, or parity controls.",
+    "Rank rows by rebuild priority without changing the canonical R2 review-report schema or treating drift labels as philological decisions."
+  ],
+  "priorityWorklist": [
+    {
+      "diagnosticId": "r2-drift:gam:pwg",
+      "lemma": "gam",
+      "dict": "pwg",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "over-split-candidate",
+      "sourceSenseRows": 353,
+      "archivedSenseRows": 30,
+      "sourceToArchiveRatio": 11.767,
+      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts."
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ben",
+      "lemma": "gam",
+      "dict": "ben",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "over-split-candidate",
+      "sourceSenseRows": 172,
+      "archivedSenseRows": 23,
+      "sourceToArchiveRatio": 7.478,
+      "nextAction": "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows."
+    },
+    {
+      "diagnosticId": "r2-drift:rama:pwg",
+      "lemma": "rama",
+      "dict": "pwg",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "over-split-candidate",
+      "sourceSenseRows": 44,
+      "archivedSenseRows": 6,
+      "sourceToArchiveRatio": 7.333,
+      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts."
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:pwg",
+      "lemma": "dharma",
+      "dict": "pwg",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "over-split-candidate",
+      "sourceSenseRows": 21,
+      "archivedSenseRows": 5,
+      "sourceToArchiveRatio": 4.2,
+      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts."
+    },
+    {
+      "diagnosticId": "r2-drift:iti:pwg",
+      "lemma": "iti",
+      "dict": "pwg",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "over-split-candidate",
+      "sourceSenseRows": 16,
+      "archivedSenseRows": 4,
+      "sourceToArchiveRatio": 4,
+      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts."
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ben",
+      "lemma": "rama",
+      "dict": "ben",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "over-split-candidate",
+      "sourceSenseRows": 15,
+      "archivedSenseRows": 7,
+      "sourceToArchiveRatio": 2.143,
+      "nextAction": "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows."
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ae",
+      "lemma": "gam",
+      "dict": "ae",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "driftClass": "reverse-overmatch",
+      "sourceSenseRows": 243,
+      "archivedSenseRows": 30,
+      "sourceToArchiveRatio": 8.1,
+      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments."
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ae",
+      "lemma": "iti",
+      "dict": "ae",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "driftClass": "reverse-overmatch",
+      "sourceSenseRows": 76,
+      "archivedSenseRows": 30,
+      "sourceToArchiveRatio": 2.533,
+      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments."
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ae",
+      "lemma": "dharma",
+      "dict": "ae",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "driftClass": "reverse-overmatch",
+      "sourceSenseRows": 66,
+      "archivedSenseRows": 24,
+      "sourceToArchiveRatio": 2.75,
+      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments."
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:vcp",
+      "lemma": "dharma",
+      "dict": "vcp",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "sourceSenseRows": 27,
+      "archivedSenseRows": 9,
+      "sourceToArchiveRatio": 3,
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:skd",
+      "lemma": "dharma",
+      "dict": "skd",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "sourceSenseRows": 15,
+      "archivedSenseRows": 4,
+      "sourceToArchiveRatio": 3.75,
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+    },
+    {
+      "diagnosticId": "r2-drift:rama:skd",
+      "lemma": "rama",
+      "dict": "skd",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 10,
+      "sourceToArchiveRatio": 0.3,
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+    },
+    {
+      "diagnosticId": "r2-drift:iti:skd",
+      "lemma": "iti",
+      "dict": "skd",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "sourceSenseRows": 7,
+      "archivedSenseRows": 1,
+      "sourceToArchiveRatio": 7,
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+    },
+    {
+      "diagnosticId": "r2-drift:iti:vcp",
+      "lemma": "iti",
+      "dict": "vcp",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "sourceSenseRows": 5,
+      "archivedSenseRows": 1,
+      "sourceToArchiveRatio": 5,
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+    },
+    {
+      "diagnosticId": "r2-drift:rama:vcp",
+      "lemma": "rama",
+      "dict": "vcp",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 1,
+      "sourceToArchiveRatio": 3,
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:skd",
+      "lemma": "bodhisattva",
+      "dict": "skd",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "sourceSenseRows": 2,
+      "archivedSenseRows": 1,
+      "sourceToArchiveRatio": 2,
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:vcp",
+      "lemma": "bodhisattva",
+      "dict": "vcp",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceToArchiveRatio": 1,
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses."
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ap",
+      "lemma": "iti",
+      "dict": "ap",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "driftClass": "under-split-or-source-gap",
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 5,
+      "sourceToArchiveRatio": 0.6,
+      "nextAction": "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows."
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ap",
+      "lemma": "rama",
+      "dict": "ap",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "driftClass": "under-split-or-source-gap",
+      "sourceSenseRows": 8,
+      "archivedSenseRows": 10,
+      "sourceToArchiveRatio": 0.8,
+      "nextAction": "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows."
+    },
+    {
+      "diagnosticId": "r2-drift:rama:wil",
+      "lemma": "rama",
+      "dict": "wil",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "driftClass": "mild-drift",
+      "sourceSenseRows": 22,
+      "archivedSenseRows": 12,
+      "sourceToArchiveRatio": 1.833,
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ap90",
+      "lemma": "rama",
+      "dict": "ap90",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "mild-drift",
+      "sourceSenseRows": 20,
+      "archivedSenseRows": 12,
+      "sourceToArchiveRatio": 1.667,
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+    },
+    {
+      "diagnosticId": "r2-drift:rama:mw",
+      "lemma": "rama",
+      "dict": "mw",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "mild-drift",
+      "sourceSenseRows": 23,
+      "archivedSenseRows": 17,
+      "sourceToArchiveRatio": 1.353,
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:bhs",
+      "lemma": "dharma",
+      "dict": "bhs",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "mild-drift",
+      "sourceSenseRows": 12,
+      "archivedSenseRows": 10,
+      "sourceToArchiveRatio": 1.2,
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ae",
+      "lemma": "rama",
+      "dict": "ae",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "driftClass": "mild-drift",
+      "sourceSenseRows": 6,
+      "archivedSenseRows": 4,
+      "sourceToArchiveRatio": 1.5,
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
+    }
+  ],
+  "diagnostics": [
+    {
+      "diagnosticId": "r2-drift:gam:pwg",
+      "lemma": "gam",
+      "dict": "pwg",
+      "label": "PWG 1855",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 4,
+      "sourceSenseRows": 353,
+      "archivedSenseRows": 30,
+      "sourceMinusArchive": 323,
+      "sourceToArchiveRatio": 11.767,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        203360,
+        203360,
+        203360,
+        203360,
+        203360
+      ],
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.",
+      "exampleRows": [
+        {
+          "rowId": "gam:pwg:21814:1",
+          "senseId": "21814:1",
+          "sourceLine": 203360,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "gam:pwg:21814:10",
+          "senseId": "21814:10",
+          "sourceLine": 203360,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "gam:pwg:21814:100",
+          "senseId": "21814:100",
+          "sourceLine": 203360,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ben",
+      "lemma": "gam",
+      "dict": "ben",
+      "label": "Benfey 1866",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 172,
+      "archivedSenseRows": 23,
+      "sourceMinusArchive": 149,
+      "sourceToArchiveRatio": 7.478,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        29576,
+        29576,
+        29576,
+        29576,
+        29576
+      ],
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "nextAction": "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows.",
+      "exampleRows": [
+        {
+          "rowId": "gam:ben:4326:1",
+          "senseId": "4326:1",
+          "sourceLine": 29576,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L29576",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "gam:ben:4326:1",
+          "senseId": "4326:1",
+          "sourceLine": 29576,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L29576",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "gam:ben:4326:1",
+          "senseId": "4326:1",
+          "sourceLine": 29576,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L29576",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:pwg",
+      "lemma": "rama",
+      "dict": "pwg",
+      "label": "PWG 1855",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 3,
+      "sourceSenseRows": 44,
+      "archivedSenseRows": 6,
+      "sourceMinusArchive": 38,
+      "sourceToArchiveRatio": 7.333,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        754855,
+        754855,
+        754855,
+        754855,
+        754855
+      ],
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.",
+      "exampleRows": [
+        {
+          "rowId": "rama:pwg:83557:1",
+          "senseId": "83557:1",
+          "sourceLine": 754855,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L754855",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:pwg:83557:10",
+          "senseId": "83557:10",
+          "sourceLine": 754855,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L754855",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:pwg:83557:2",
+          "senseId": "83557:2",
+          "sourceLine": 754855,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L754855",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:pwg",
+      "lemma": "dharma",
+      "dict": "pwg",
+      "label": "PWG 1855",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 21,
+      "archivedSenseRows": 5,
+      "sourceMinusArchive": 16,
+      "sourceToArchiveRatio": 4.2,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        350536,
+        350536,
+        350536,
+        350536,
+        350536
+      ],
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:pwg:36241:1",
+          "senseId": "36241:1",
+          "sourceLine": 350536,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:pwg:36241:10",
+          "senseId": "36241:10",
+          "sourceLine": 350536,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:pwg:36241:11",
+          "senseId": "36241:11",
+          "sourceLine": 350536,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:pwg",
+      "lemma": "iti",
+      "dict": "pwg",
+      "label": "PWG 1855",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 4,
+      "sourceSenseRows": 16,
+      "archivedSenseRows": 4,
+      "sourceMinusArchive": 12,
+      "sourceToArchiveRatio": 4,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        88592,
+        88592,
+        88592,
+        88592,
+        88592
+      ],
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "nextAction": "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.",
+      "exampleRows": [
+        {
+          "rowId": "iti:pwg:10029:1",
+          "senseId": "10029:1",
+          "sourceLine": 88592,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L88592",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:pwg:10029:2",
+          "senseId": "10029:2",
+          "sourceLine": 88592,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L88592",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:pwg:10029:3",
+          "senseId": "10029:3",
+          "sourceLine": 88592,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L88592",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ben",
+      "lemma": "rama",
+      "dict": "ben",
+      "label": "Benfey 1866",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 15,
+      "archivedSenseRows": 7,
+      "sourceMinusArchive": 8,
+      "sourceToArchiveRatio": 2.143,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        87379,
+        87379,
+        87379,
+        87379,
+        87379
+      ],
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "nextAction": "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows.",
+      "exampleRows": [
+        {
+          "rowId": "rama:ben:11986:1",
+          "senseId": "11986:1",
+          "sourceLine": 87379,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:ben:11986:1",
+          "senseId": "11986:1",
+          "sourceLine": 87379,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:ben:11986:1",
+          "senseId": "11986:1",
+          "sourceLine": 87379,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ae",
+      "lemma": "gam",
+      "dict": "ae",
+      "label": "Apte EN->SA 1884",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "sourceRecordCount": 243,
+      "sourceSenseRows": 243,
+      "archivedSenseRows": 30,
+      "sourceMinusArchive": 213,
+      "sourceToArchiveRatio": 8.1,
+      "splitConfidence": [
+        "reverse-equivalent"
+      ],
+      "sourceLines": [
+        218,
+        348,
+        483,
+        926,
+        1290
+      ],
+      "driftClass": "reverse-overmatch",
+      "priority": "high",
+      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments.",
+      "exampleRows": [
+        {
+          "rowId": "gam:ae:39:equiv",
+          "senseId": "39:equiv",
+          "sourceLine": 218,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L218",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        },
+        {
+          "rowId": "gam:ae:60:equiv",
+          "senseId": "60:equiv",
+          "sourceLine": 348,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L348",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        },
+        {
+          "rowId": "gam:ae:81:equiv",
+          "senseId": "81:equiv",
+          "sourceLine": 483,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L483",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ae",
+      "lemma": "iti",
+      "dict": "ae",
+      "label": "Apte EN->SA 1884",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "sourceRecordCount": 76,
+      "sourceSenseRows": 76,
+      "archivedSenseRows": 30,
+      "sourceMinusArchive": 46,
+      "sourceToArchiveRatio": 2.533,
+      "splitConfidence": [
+        "reverse-equivalent"
+      ],
+      "sourceLines": [
+        518,
+        1484,
+        2300,
+        3121,
+        3152
+      ],
+      "driftClass": "reverse-overmatch",
+      "priority": "high",
+      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments.",
+      "exampleRows": [
+        {
+          "rowId": "iti:ae:88:equiv",
+          "senseId": "88:equiv",
+          "sourceLine": 518,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L518",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        },
+        {
+          "rowId": "iti:ae:253:equiv",
+          "senseId": "253:equiv",
+          "sourceLine": 1484,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1484",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        },
+        {
+          "rowId": "iti:ae:409:equiv",
+          "senseId": "409:equiv",
+          "sourceLine": 2300,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L2300",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ae",
+      "lemma": "dharma",
+      "dict": "ae",
+      "label": "Apte EN->SA 1884",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "sourceRecordCount": 66,
+      "sourceSenseRows": 66,
+      "archivedSenseRows": 24,
+      "sourceMinusArchive": 42,
+      "sourceToArchiveRatio": 2.75,
+      "splitConfidence": [
+        "reverse-equivalent"
+      ],
+      "sourceLines": [
+        804,
+        1040,
+        3619,
+        9631,
+        10544
+      ],
+      "driftClass": "reverse-overmatch",
+      "priority": "high",
+      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:ae:136:equiv",
+          "senseId": "136:equiv",
+          "sourceLine": 804,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L804",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        },
+        {
+          "rowId": "dharma:ae:173:equiv",
+          "senseId": "173:equiv",
+          "sourceLine": 1040,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1040",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        },
+        {
+          "rowId": "dharma:ae:644:equiv",
+          "senseId": "644:equiv",
+          "sourceLine": 3619,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L3619",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:vcp",
+      "lemma": "dharma",
+      "dict": "vcp",
+      "label": "Vacaspatya 1873",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 27,
+      "archivedSenseRows": 9,
+      "sourceMinusArchive": 18,
+      "sourceToArchiveRatio": 3,
+      "splitConfidence": [
+        "iti-unit"
+      ],
+      "sourceLines": [
+        352094,
+        352094,
+        352094,
+        352094,
+        352094
+      ],
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:vcp:27030:1",
+          "senseId": "27030:1",
+          "sourceLine": 352094,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "dharma:vcp:27030:10",
+          "senseId": "27030:10",
+          "sourceLine": 352094,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "dharma:vcp:27030:11",
+          "senseId": "27030:11",
+          "sourceLine": 352094,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:skd",
+      "lemma": "dharma",
+      "dict": "skd",
+      "label": "Sabdakalpadruma 1822",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 15,
+      "archivedSenseRows": 4,
+      "sourceMinusArchive": 11,
+      "sourceToArchiveRatio": 3.75,
+      "splitConfidence": [
+        "iti-unit"
+      ],
+      "sourceLines": [
+        206577,
+        206577,
+        206577,
+        206577,
+        206596
+      ],
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:skd:17667:1",
+          "senseId": "17667:1",
+          "sourceLine": 206577,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "dharma:skd:17667:2",
+          "senseId": "17667:2",
+          "sourceLine": 206577,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "dharma:skd:17667:3",
+          "senseId": "17667:3",
+          "sourceLine": 206577,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:skd",
+      "lemma": "rama",
+      "dict": "skd",
+      "label": "Sabdakalpadruma 1822",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 10,
+      "sourceMinusArchive": -7,
+      "sourceToArchiveRatio": 0.3,
+      "splitConfidence": [
+        "iti-unit"
+      ],
+      "sourceLines": [
+        390829,
+        390829,
+        390829
+      ],
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+      "exampleRows": [
+        {
+          "rowId": "rama:skd:29190:1",
+          "senseId": "29190:1",
+          "sourceLine": 390829,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L390829",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "rama:skd:29190:2",
+          "senseId": "29190:2",
+          "sourceLine": 390829,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L390829",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "rama:skd:29190:3",
+          "senseId": "29190:3",
+          "sourceLine": 390829,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L390829",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:skd",
+      "lemma": "iti",
+      "dict": "skd",
+      "label": "Sabdakalpadruma 1822",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 7,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 6,
+      "sourceToArchiveRatio": 7,
+      "splitConfidence": [
+        "iti-unit"
+      ],
+      "sourceLines": [
+        40325,
+        40325,
+        40325,
+        40325,
+        40325
+      ],
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+      "exampleRows": [
+        {
+          "rowId": "iti:skd:4089:1",
+          "senseId": "4089:1",
+          "sourceLine": 40325,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L40325",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "iti:skd:4089:2",
+          "senseId": "4089:2",
+          "sourceLine": 40325,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L40325",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "iti:skd:4089:3",
+          "senseId": "4089:3",
+          "sourceLine": 40325,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L40325",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:vcp",
+      "lemma": "iti",
+      "dict": "vcp",
+      "label": "Vacaspatya 1873",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 5,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 4,
+      "sourceToArchiveRatio": 5,
+      "splitConfidence": [
+        "iti-unit"
+      ],
+      "sourceLines": [
+        85845,
+        85845,
+        85845,
+        85845,
+        85845
+      ],
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+      "exampleRows": [
+        {
+          "rowId": "iti:vcp:8142:1",
+          "senseId": "8142:1",
+          "sourceLine": 85845,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L85845",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "iti:vcp:8142:2",
+          "senseId": "8142:2",
+          "sourceLine": 85845,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L85845",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "iti:vcp:8142:3",
+          "senseId": "8142:3",
+          "sourceLine": 85845,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L85845",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:vcp",
+      "lemma": "rama",
+      "dict": "vcp",
+      "label": "Vacaspatya 1873",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 3,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 2,
+      "sourceToArchiveRatio": 3,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        452114,
+        452119,
+        453556
+      ],
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+      "exampleRows": [
+        {
+          "rowId": "rama:vcp:39359:1",
+          "senseId": "39359:1",
+          "sourceLine": 452114,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L452114",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy.",
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "rama:vcp:39360:1",
+          "senseId": "39360:1",
+          "sourceLine": 452119,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L452119",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy.",
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "rama:vcp:39589:1",
+          "senseId": "39589:1",
+          "sourceLine": 453556,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L453556",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy.",
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:skd",
+      "lemma": "bodhisattva",
+      "dict": "skd",
+      "label": "Sabdakalpadruma 1822",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 2,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 2,
+      "splitConfidence": [
+        "iti-unit"
+      ],
+      "sourceLines": [
+        310375,
+        310375
+      ],
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+      "exampleRows": [
+        {
+          "rowId": "bodhisattva:skd:24423:1",
+          "senseId": "24423:1",
+          "sourceLine": 310375,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L310375",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        },
+        {
+          "rowId": "bodhisattva:skd:24423:2",
+          "senseId": "24423:2",
+          "sourceLine": 310375,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L310375",
+          "splitConfidence": "iti-unit",
+          "limitations": [
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:vcp",
+      "lemma": "bodhisattva",
+      "dict": "vcp",
+      "label": "Vacaspatya 1873",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        428571
+      ],
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+      "exampleRows": [
+        {
+          "rowId": "bodhisattva:vcp:35803:1",
+          "senseId": "35803:1",
+          "sourceLine": 428571,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L428571",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy.",
+            "Indigenous prose split on coarse iti-units; requires philological review."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ap",
+      "lemma": "iti",
+      "dict": "ap",
+      "label": "Apte 1957",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 5,
+      "sourceMinusArchive": -2,
+      "sourceToArchiveRatio": 0.6,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        92701,
+        92701,
+        92701
+      ],
+      "driftClass": "under-split-or-source-gap",
+      "priority": "medium",
+      "nextAction": "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows.",
+      "exampleRows": [
+        {
+          "rowId": "iti:ap:8130:1",
+          "senseId": "8130:1",
+          "sourceLine": 92701,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:ap:8130:2",
+          "senseId": "8130:2",
+          "sourceLine": 92701,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:ap:8130:preface",
+          "senseId": "8130:preface",
+          "sourceLine": 92701,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ap",
+      "lemma": "rama",
+      "dict": "ap",
+      "label": "Apte 1957",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 8,
+      "archivedSenseRows": 10,
+      "sourceMinusArchive": -2,
+      "sourceToArchiveRatio": 0.8,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        376348,
+        376348,
+        376348,
+        379737,
+        379737
+      ],
+      "driftClass": "under-split-or-source-gap",
+      "priority": "medium",
+      "nextAction": "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows.",
+      "exampleRows": [
+        {
+          "rowId": "rama:ap:27296:1",
+          "senseId": "27296:1",
+          "sourceLine": 376348,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L376348",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:ap:27296:2",
+          "senseId": "27296:2",
+          "sourceLine": 376348,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L376348",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:ap:27296:preface",
+          "senseId": "27296:preface",
+          "sourceLine": 376348,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L376348",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:wil",
+      "lemma": "rama",
+      "dict": "wil",
+      "label": "Wilson 1832",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "sourceRecordCount": 3,
+      "sourceSenseRows": 22,
+      "archivedSenseRows": 12,
+      "sourceMinusArchive": 10,
+      "sourceToArchiveRatio": 1.833,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        249261,
+        249272,
+        249272,
+        249272,
+        249272
+      ],
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking.",
+      "exampleRows": [
+        {
+          "rowId": "rama:wil:31939:bundle",
+          "senseId": "31939:bundle",
+          "sourceLine": 249261,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L249261",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "rama:wil:31940:1",
+          "senseId": "31940:1",
+          "sourceLine": 249272,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L249272",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:wil:31940:1",
+          "senseId": "31940:1",
+          "sourceLine": 249272,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L249272",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ap90",
+      "lemma": "rama",
+      "dict": "ap90",
+      "label": "Apte 1890",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 20,
+      "archivedSenseRows": 12,
+      "sourceMinusArchive": 8,
+      "sourceToArchiveRatio": 1.667,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        209370,
+        209370,
+        209370,
+        209370,
+        209370
+      ],
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking.",
+      "exampleRows": [
+        {
+          "rowId": "rama:ap90:24017:1",
+          "senseId": "24017:1",
+          "sourceLine": 209370,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L209370",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:ap90:24017:1",
+          "senseId": "24017:1",
+          "sourceLine": 209370,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L209370",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:ap90:24017:2",
+          "senseId": "24017:2",
+          "sourceLine": 209370,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L209370",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:mw",
+      "lemma": "rama",
+      "dict": "mw",
+      "label": "MW 1899",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 23,
+      "sourceSenseRows": 23,
+      "archivedSenseRows": 17,
+      "sourceMinusArchive": 6,
+      "sourceToArchiveRatio": 1.353,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        584533,
+        584536,
+        584539,
+        584542,
+        584545
+      ],
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking.",
+      "exampleRows": [
+        {
+          "rowId": "rama:mw:175086:bundle",
+          "senseId": "175086:bundle",
+          "sourceLine": 584533,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L584533",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "rama:mw:175087:bundle",
+          "senseId": "175087:bundle",
+          "sourceLine": 584536,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L584536",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "rama:mw:175088:bundle",
+          "senseId": "175088:bundle",
+          "sourceLine": 584539,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L584539",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:bhs",
+      "lemma": "dharma",
+      "dict": "bhs",
+      "label": "Edgerton BHS 1953",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 4,
+      "sourceSenseRows": 12,
+      "archivedSenseRows": 10,
+      "sourceMinusArchive": 2,
+      "sourceToArchiveRatio": 1.2,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        30930,
+        30930,
+        30930,
+        30930,
+        30930
+      ],
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:bhs:7705:1",
+          "senseId": "7705:1",
+          "sourceLine": 30930,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L30930",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:bhs:7705:2",
+          "senseId": "7705:2",
+          "sourceLine": 30930,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L30930",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:bhs:7705:3",
+          "senseId": "7705:3",
+          "sourceLine": 30930,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L30930",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ae",
+      "lemma": "rama",
+      "dict": "ae",
+      "label": "Apte EN->SA 1884",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "sourceRecordCount": 6,
+      "sourceSenseRows": 6,
+      "archivedSenseRows": 4,
+      "sourceMinusArchive": 2,
+      "sourceToArchiveRatio": 1.5,
+      "splitConfidence": [
+        "reverse-equivalent"
+      ],
+      "sourceLines": [
+        2647,
+        14897,
+        15562,
+        18262,
+        26241
+      ],
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking.",
+      "exampleRows": [
+        {
+          "rowId": "rama:ae:477:equiv",
+          "senseId": "477:equiv",
+          "sourceLine": 2647,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L2647",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        },
+        {
+          "rowId": "rama:ae:2578:equiv",
+          "senseId": "2578:equiv",
+          "sourceLine": 14897,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L14897",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        },
+        {
+          "rowId": "rama:ae:2684:equiv",
+          "senseId": "2684:equiv",
+          "sourceLine": 15562,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L15562",
+          "splitConfidence": "reverse-equivalent",
+          "limitations": [
+            "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
+            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:gam:pw",
+      "lemma": "gam",
+      "dict": "pw",
+      "label": "PWK",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 4,
+      "sourceSenseRows": 367,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 367,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        138769,
+        138769,
+        138769,
+        138769,
+        138769
+      ],
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair.",
+      "exampleRows": [
+        {
+          "rowId": "gam:pw:34676:1",
+          "senseId": "34676:1",
+          "sourceLine": 138769,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L138769",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "gam:pw:34676:10",
+          "senseId": "34676:10",
+          "sourceLine": 138769,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L138769",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "gam:pw:34676:100",
+          "senseId": "34676:100",
+          "sourceLine": 138769,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L138769",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:pw",
+      "lemma": "rama",
+      "dict": "pw",
+      "label": "PWK",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 54,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 54,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        384342,
+        384342,
+        384342,
+        384342,
+        384342
+      ],
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair.",
+      "exampleRows": [
+        {
+          "rowId": "rama:pw:92728:1",
+          "senseId": "92728:1",
+          "sourceLine": 384342,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L384342",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:pw:92728:10",
+          "senseId": "92728:10",
+          "sourceLine": 384342,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L384342",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "rama:pw:92728:11",
+          "senseId": "92728:11",
+          "sourceLine": 384342,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L384342",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:pw",
+      "lemma": "dharma",
+      "dict": "pw",
+      "label": "PWK",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 16,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 16,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        224195,
+        224195,
+        224195,
+        224195,
+        224195
+      ],
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:pw:54669:1",
+          "senseId": "54669:1",
+          "sourceLine": 224195,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L224195",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:pw:54669:10",
+          "senseId": "54669:10",
+          "sourceLine": 224195,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L224195",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:pw:54669:11",
+          "senseId": "54669:11",
+          "sourceLine": 224195,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L224195",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:pw",
+      "lemma": "iti",
+      "dict": "pw",
+      "label": "PWK",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 6,
+      "sourceSenseRows": 8,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 8,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        64269,
+        64272,
+        64272,
+        64272,
+        64277
+      ],
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair.",
+      "exampleRows": [
+        {
+          "rowId": "iti:pw:16765:bundle",
+          "senseId": "16765:bundle",
+          "sourceLine": 64269,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L64269",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "iti:pw:16766:1",
+          "senseId": "16766:1",
+          "sourceLine": 64272,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L64272",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:pw:16766:2",
+          "senseId": "16766:2",
+          "sourceLine": 64272,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L64272",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:pw",
+      "lemma": "bodhisattva",
+      "dict": "pw",
+      "label": "PWK",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        320159
+      ],
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair.",
+      "exampleRows": [
+        {
+          "rowId": "bodhisattva:pw:77744:bundle",
+          "senseId": "77744:bundle",
+          "sourceLine": 320159,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L320159",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:cae",
+      "lemma": "rama",
+      "dict": "cae",
+      "label": "Cappeller 1891",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        90073
+      ],
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "nextAction": "Keep as source-backed rebuild expansion; no archived baseline exists for this dictionary/lemma pair.",
+      "exampleRows": [
+        {
+          "rowId": "rama:cae:26601:bundle",
+          "senseId": "26601:bundle",
+          "sourceLine": 90073,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L90073",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:mw",
+      "lemma": "dharma",
+      "dict": "mw",
+      "label": "MW 1899",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 33,
+      "sourceSenseRows": 33,
+      "archivedSenseRows": 30,
+      "sourceMinusArchive": 3,
+      "sourceToArchiveRatio": 1.1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        334919,
+        334922,
+        334925,
+        334928,
+        334931
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:mw:99903:bundle",
+          "senseId": "99903:bundle",
+          "sourceLine": 334919,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L334919",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "dharma:mw:99904:bundle",
+          "senseId": "99904:bundle",
+          "sourceLine": 334922,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L334922",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "dharma:mw:99905:bundle",
+          "senseId": "99905:bundle",
+          "sourceLine": 334925,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L334925",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:ap",
+      "lemma": "bodhisattva",
+      "dict": "ap",
+      "label": "Apte 1957",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 2,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 1.5,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        325199,
+        325199,
+        325199
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "bodhisattva:ap:24781.032:1",
+          "senseId": "24781.032:1",
+          "sourceLine": 325199,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L325199",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "bodhisattva:ap:24781.032:2",
+          "senseId": "24781.032:2",
+          "sourceLine": 325199,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L325199",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "bodhisattva:ap:24781.032:preface",
+          "senseId": "24781.032:preface",
+          "sourceLine": 325199,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L325199",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:pwg",
+      "lemma": "bodhisattva",
+      "dict": "pwg",
+      "label": "PWG 1855",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "div",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 2,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 1.5,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        515286,
+        515286,
+        719134
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "bodhisattva:pwg:53245:1",
+          "senseId": "53245:1",
+          "sourceLine": 515286,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L515286",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "bodhisattva:pwg:53245:preface",
+          "senseId": "53245:preface",
+          "sourceLine": 515286,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L515286",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "bodhisattva:pwg:79997:bundle",
+          "senseId": "79997:bundle",
+          "sourceLine": 719134,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L719134",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ap",
+      "lemma": "dharma",
+      "dict": "ap",
+      "label": "Apte 1957",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 24,
+      "archivedSenseRows": 23,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 1.043,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        232784,
+        232784,
+        232784,
+        232784,
+        232784
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:ap:17918:1",
+          "senseId": "17918:1",
+          "sourceLine": 232784,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L232784",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:ap:17918:10",
+          "senseId": "17918:10",
+          "sourceLine": 232784,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L232784",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:ap:17918:11",
+          "senseId": "17918:11",
+          "sourceLine": 232784,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L232784",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ap90",
+      "lemma": "dharma",
+      "dict": "ap90",
+      "label": "Apte 1890",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 23,
+      "archivedSenseRows": 22,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 1.045,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        137647,
+        137647,
+        137647,
+        137647,
+        137647
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:ap90:15976:1",
+          "senseId": "15976:1",
+          "sourceLine": 137647,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L137647",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:ap90:15976:10",
+          "senseId": "15976:10",
+          "sourceLine": 137647,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L137647",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:ap90:15976:11",
+          "senseId": "15976:11",
+          "sourceLine": 137647,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L137647",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ben",
+      "lemma": "dharma",
+      "dict": "ben",
+      "label": "Benfey 1866",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 12,
+      "archivedSenseRows": 11,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 1.091,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        49805,
+        49805,
+        49805,
+        49805,
+        49805
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:ben:6960:1",
+          "senseId": "6960:1",
+          "sourceLine": 49805,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L49805",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:ben:6960:10",
+          "senseId": "6960:10",
+          "sourceLine": 49805,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L49805",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:ben:6960:11",
+          "senseId": "6960:11",
+          "sourceLine": 49805,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L49805",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:wil",
+      "lemma": "dharma",
+      "dict": "wil",
+      "label": "Wilson 1832",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 21,
+      "archivedSenseRows": 20,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 1.05,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        158204,
+        158204,
+        158204,
+        158204,
+        158204
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:wil:20414:1",
+          "senseId": "20414:1",
+          "sourceLine": 158204,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L158204",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:wil:20414:1",
+          "senseId": "20414:1",
+          "sourceLine": 158204,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L158204",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "dharma:wil:20414:10",
+          "senseId": "20414:10",
+          "sourceLine": 158204,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L158204",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ap90",
+      "lemma": "gam",
+      "dict": "ap90",
+      "label": "Apte 1890",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 15,
+      "archivedSenseRows": 14,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 1.071,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        105357,
+        105357,
+        105357,
+        105357,
+        105357
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "gam:ap90:12317:1",
+          "senseId": "12317:1",
+          "sourceLine": 105357,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L105357",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "gam:ap90:12317:1",
+          "senseId": "12317:1",
+          "sourceLine": 105357,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L105357",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "gam:ap90:12317:2",
+          "senseId": "12317:2",
+          "sourceLine": 105357,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L105357",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ben",
+      "lemma": "iti",
+      "dict": "ben",
+      "label": "Benfey 1866",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 6,
+      "archivedSenseRows": 5,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 1.2,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        11919,
+        11919,
+        11919,
+        11919,
+        11919
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "iti:ben:1857:1",
+          "senseId": "1857:1",
+          "sourceLine": 11919,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L11919",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:ben:1857:2",
+          "senseId": "1857:2",
+          "sourceLine": 11919,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L11919",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:ben:1857:3",
+          "senseId": "1857:3",
+          "sourceLine": 11919,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L11919",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:wil",
+      "lemma": "iti",
+      "dict": "wil",
+      "label": "Wilson 1832",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 10,
+      "archivedSenseRows": 9,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 1.111,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        48403,
+        48403,
+        48403,
+        48403,
+        48403
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "iti:wil:6239:1",
+          "senseId": "6239:1",
+          "sourceLine": 48403,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L48403",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:wil:6239:2",
+          "senseId": "6239:2",
+          "sourceLine": 48403,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L48403",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:wil:6239:3",
+          "senseId": "6239:3",
+          "sourceLine": 48403,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L48403",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:mw72",
+      "lemma": "rama",
+      "dict": "mw72",
+      "label": "MW 1872",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 2,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 1,
+      "sourceToArchiveRatio": 2,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        311802,
+        314666
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "rama:mw72:39171:bundle",
+          "senseId": "39171:bundle",
+          "sourceLine": 311802,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L311802",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "rama:mw72:39401:bundle",
+          "senseId": "39401:bundle",
+          "sourceLine": 314666,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L314666",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:bhs",
+      "lemma": "bodhisattva",
+      "dict": "bhs",
+      "label": "Edgerton BHS 1953",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        44270
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "bodhisattva:bhs:11034:bundle",
+          "senseId": "11034:bundle",
+          "sourceLine": 44270,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L44270",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:cae",
+      "lemma": "bodhisattva",
+      "dict": "cae",
+      "label": "Cappeller 1891",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        75168
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "bodhisattva:cae:22287:bundle",
+          "senseId": "22287:bundle",
+          "sourceLine": 75168,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L75168",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:mw",
+      "lemma": "bodhisattva",
+      "dict": "mw",
+      "label": "MW 1899",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 3,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 3,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        488992,
+        488995,
+        488998
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "bodhisattva:mw:145897:bundle",
+          "senseId": "145897:bundle",
+          "sourceLine": 488992,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L488992",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "bodhisattva:mw:145898:bundle",
+          "senseId": "145898:bundle",
+          "sourceLine": 488995,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L488995",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "bodhisattva:mw:145899:bundle",
+          "senseId": "145899:bundle",
+          "sourceLine": 488998,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L488998",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:wil",
+      "lemma": "bodhisattva",
+      "dict": "wil",
+      "label": "Wilson 1832",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        218160
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "bodhisattva:wil:27972:bundle",
+          "senseId": "27972:bundle",
+          "sourceLine": 218160,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt#L218160",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:cae",
+      "lemma": "dharma",
+      "dict": "cae",
+      "label": "Cappeller 1891",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        51058
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:cae:15186:bundle",
+          "senseId": "15186:bundle",
+          "sourceLine": 51058,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L51058",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:mw72",
+      "lemma": "dharma",
+      "dict": "mw72",
+      "label": "MW 1872",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 3,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 3,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        174006,
+        174521,
+        174615
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:mw72:23240:bundle",
+          "senseId": "23240:bundle",
+          "sourceLine": 174006,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L174006",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "dharma:mw72:23241:bundle",
+          "senseId": "23241:bundle",
+          "sourceLine": 174521,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L174521",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "dharma:mw72:23254:bundle",
+          "senseId": "23254:bundle",
+          "sourceLine": 174615,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L174615",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:sch",
+      "lemma": "dharma",
+      "dict": "sch",
+      "label": "Schmidt 1928",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        49640
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "dharma:sch:16054:bundle",
+          "senseId": "16054:bundle",
+          "sourceLine": 49640,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L49640",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ap",
+      "lemma": "gam",
+      "dict": "ap",
+      "label": "Apte 1957",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 16,
+      "archivedSenseRows": 16,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        165154,
+        167512,
+        167512,
+        167512,
+        167512
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "gam:ap:13731.006:bundle",
+          "senseId": "13731.006:bundle",
+          "sourceLine": 165154,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L165154",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "gam:ap:13831:1",
+          "senseId": "13831:1",
+          "sourceLine": 167512,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L167512",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "gam:ap:13831:1",
+          "senseId": "13831:1",
+          "sourceLine": 167512,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L167512",
+          "splitConfidence": "explicit",
+          "limitations": []
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:gam:cae",
+      "lemma": "gam",
+      "dict": "cae",
+      "label": "Cappeller 1891",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        30959
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "gam:cae:9285:bundle",
+          "senseId": "9285:bundle",
+          "sourceLine": 30959,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L30959",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:gam:mw",
+      "lemma": "gam",
+      "dict": "mw",
+      "label": "MW 1899",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 3,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 3,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        215707,
+        215756,
+        216557
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "gam:mw:63409:bundle",
+          "senseId": "63409:bundle",
+          "sourceLine": 215707,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L215707",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "gam:mw:63409.1:bundle",
+          "senseId": "63409.1:bundle",
+          "sourceLine": 215756,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L215756",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "gam:mw:63672:bundle",
+          "senseId": "63672:bundle",
+          "sourceLine": 216557,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L216557",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:gam:mw72",
+      "lemma": "gam",
+      "dict": "mw72",
+      "label": "MW 1872",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 2,
+      "sourceSenseRows": 2,
+      "archivedSenseRows": 2,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        116404,
+        116665
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "gam:mw72:17092:bundle",
+          "senseId": "17092:bundle",
+          "sourceLine": 116404,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L116404",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "gam:mw72:17107:bundle",
+          "senseId": "17107:bundle",
+          "sourceLine": 116665,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L116665",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:gam:sch",
+      "lemma": "gam",
+      "dict": "sch",
+      "label": "Schmidt 1928",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        37497
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "gam:sch:12127:bundle",
+          "senseId": "12127:bundle",
+          "sourceLine": 37497,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L37497",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ap90",
+      "lemma": "iti",
+      "dict": "ap90",
+      "label": "Apte 1890",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 3,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "explicit",
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        64140,
+        64140,
+        64140
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "iti:ap90:7334:1",
+          "senseId": "7334:1",
+          "sourceLine": 64140,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L64140",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:ap90:7334:2",
+          "senseId": "7334:2",
+          "sourceLine": 64140,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L64140",
+          "splitConfidence": "explicit",
+          "limitations": []
+        },
+        {
+          "rowId": "iti:ap90:7334:preface",
+          "senseId": "7334:preface",
+          "sourceLine": 64140,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt#L64140",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:cae",
+      "lemma": "iti",
+      "dict": "cae",
+      "label": "Cappeller 1891",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 3,
+      "sourceSenseRows": 3,
+      "archivedSenseRows": 3,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        16108,
+        16117,
+        16120
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "iti:cae:4911:bundle",
+          "senseId": "4911:bundle",
+          "sourceLine": 16108,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L16108",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "iti:cae:4912:bundle",
+          "senseId": "4912:bundle",
+          "sourceLine": 16117,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L16117",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "iti:cae:4913:bundle",
+          "senseId": "4913:bundle",
+          "sourceLine": 16120,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt#L16120",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:mw",
+      "lemma": "iti",
+      "dict": "mw",
+      "label": "MW 1899",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 4,
+      "sourceSenseRows": 4,
+      "archivedSenseRows": 4,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        100919,
+        100922,
+        101691,
+        101701
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "iti:mw:28547:bundle",
+          "senseId": "28547:bundle",
+          "sourceLine": 100919,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L100919",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "iti:mw:28548:bundle",
+          "senseId": "28548:bundle",
+          "sourceLine": 100922,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L100922",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "iti:mw:28747:bundle",
+          "senseId": "28747:bundle",
+          "sourceLine": 101691,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L101691",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:iti:mw72",
+      "lemma": "iti",
+      "dict": "mw72",
+      "label": "MW 1872",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 4,
+      "sourceSenseRows": 4,
+      "archivedSenseRows": 4,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        61484,
+        61900,
+        61929,
+        61936
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "iti:mw72:9830:bundle",
+          "senseId": "9830:bundle",
+          "sourceLine": 61484,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L61484",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "iti:mw72:9883:bundle",
+          "senseId": "9883:bundle",
+          "sourceLine": 61900,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L61900",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        },
+        {
+          "rowId": "iti:mw72:9884:bundle",
+          "senseId": "9884:bundle",
+          "sourceLine": 61929,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw72/mw72.txt#L61929",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:rama:bhs",
+      "lemma": "rama",
+      "dict": "bhs",
+      "label": "Edgerton BHS 1953",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 1,
+      "sourceSenseRows": 1,
+      "archivedSenseRows": 1,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": 1,
+      "splitConfidence": [
+        "lumped-proxy"
+      ],
+      "sourceLines": [
+        51230
+      ],
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+      "exampleRows": [
+        {
+          "rowId": "rama:bhs:12769:bundle",
+          "senseId": "12769:bundle",
+          "sourceLine": 51230,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L51230",
+          "splitConfidence": "lumped-proxy",
+          "limitations": [
+            "No explicit sense marker in this source span; row is a source block proxy."
+          ]
+        }
+      ]
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:ae",
+      "lemma": "bodhisattva",
+      "dict": "ae",
+      "label": "Apte EN->SA 1884",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:ap90",
+      "lemma": "bodhisattva",
+      "dict": "ap90",
+      "label": "Apte 1890",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:ben",
+      "lemma": "bodhisattva",
+      "dict": "ben",
+      "label": "Benfey 1866",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:mw72",
+      "lemma": "bodhisattva",
+      "dict": "mw72",
+      "label": "MW 1872",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:sch",
+      "lemma": "bodhisattva",
+      "dict": "sch",
+      "label": "Schmidt 1928",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:gam:bhs",
+      "lemma": "gam",
+      "dict": "bhs",
+      "label": "Edgerton BHS 1953",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:gam:skd",
+      "lemma": "gam",
+      "dict": "skd",
+      "label": "Sabdakalpadruma 1822",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:gam:vcp",
+      "lemma": "gam",
+      "dict": "vcp",
+      "label": "Vacaspatya 1873",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:gam:wil",
+      "lemma": "gam",
+      "dict": "wil",
+      "label": "Wilson 1832",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:iti:bhs",
+      "lemma": "iti",
+      "dict": "bhs",
+      "label": "Edgerton BHS 1953",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:iti:sch",
+      "lemma": "iti",
+      "dict": "sch",
+      "label": "Schmidt 1928",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    },
+    {
+      "diagnosticId": "r2-drift:rama:sch",
+      "lemma": "rama",
+      "dict": "sch",
+      "label": "Schmidt 1928",
+      "ownerRepo": "csl-atlas",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "sourceRecordCount": 0,
+      "sourceSenseRows": 0,
+      "archivedSenseRows": 0,
+      "sourceMinusArchive": 0,
+      "sourceToArchiveRatio": null,
+      "splitConfidence": [],
+      "sourceLines": [],
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "nextAction": "No current anchor evidence; revisit only when broadening R2 coverage.",
+      "exampleRows": []
+    }
+  ],
+  "limitations": [
+    "This artifact diagnoses the prototype R2 rebuild; it is not the final sense corpus.",
+    "Archived static pages are comparison fixtures, not regenerated source truth.",
+    "Row-count parity does not prove semantic sense equivalence.",
+    "Drift classes are machine labels for parser work, not scholar-reviewed sense decisions."
+  ],
+  "boundary": [
+    "This artifact uses dictionary source rows and recovered atlas R2 fixtures only.",
+    "No DCS, corpus frequency, TEI/OntoLex, FrAC, GitHub, organization-process evidence, runtime LLM, database, or backend input is used."
+  ]
+}

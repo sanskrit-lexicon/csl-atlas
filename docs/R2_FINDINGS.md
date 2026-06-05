@@ -8,8 +8,10 @@ payloads into `data/lexico/r2_archive_explorer.json` and
 `data/lexico/r2_archive_h1.json`; treat those as archive fixtures, not as a
 rebuilt splitter. `npm run build-r2-source-anchors` now emits source-backed
 anchor prototypes in `data/lexico/r2_source_anchor_*`; treat those as the next
-rebuild rung, not the final splitter. The reconstruction contract is
-[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
+rebuild rung, not the final splitter. `npm run build-r2-parser-diagnostics`
+classifies source/archive drift into parser work packages. The reconstruction
+contract is [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md), with the
+diagnostic note in [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md).
 
 First real build of **R2** (the per-dict sense splitter, RESEARCH_LAYER_ROADMAP
 §5.1), run on the 5 anchor lemmas (`gam`, `dharma`, `rāma`, `iti`,
@@ -123,7 +125,9 @@ The headline is **forensic**: Śabda-Sāgara's sense glosses are **82% word-iden
 
 - Rebuild the reproducible package defined in
   [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
-- Tighten the AE reverse index (rank by equivalent-position); verb-marker grammar; finer indigenous splitting.
+- Use [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) to tighten PWG/PWK
+  division scope, BEN/AP90/BHS marker scope, AE reverse ranking, and finer
+  indigenous splitting.
 - Archived result — H1 de-confounded on a fixed 30-noun panel: the year-trend
   stays flat (Pearson *r* = 0.01) after removing the headword-splitting
   artifact, confirming H1 is unsupported. A weak *r* = 0.56 among the 5
