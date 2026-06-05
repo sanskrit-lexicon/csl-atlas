@@ -22,6 +22,7 @@
     "build-source-layer-review": "node scripts/build-source-layer-review.mjs",
     "build-alignment-review": "node scripts/build-alignment-review.mjs",
     "build-semantic-fields": "node scripts/build-semantic-fields.mjs",
+    "build-xref-lineage": "node scripts/build-xref-lineage.mjs",
     "validate-review-reports": "node scripts/validate-review-reports.mjs"
   },
   "devDependencies": {

@@ -281,6 +281,7 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - `docs/BOUNDARY_RULES.md`
 - `docs/USE_CASE_PAGE_ROADMAP.md`
 - `docs/CHART_TRUST_TEMPLATE.md`
+- `docs/HYPOTHESIS_INDEX.md`
 - `docs/REVIEW_RELEASE_ROADMAP.md`
 - `docs/RELEASE_CHECKLIST.md`
 - `docs/REVIEW_QUEUE_PROOFS.md`
@@ -288,6 +289,7 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - `docs/READER_LOOKUP_EXPLAINER.md`
 - `docs/EVIDENCE_LABELS.md`
 - `docs/H6_STRUCTURAL_REGISTER_SCATTER.md`
+- `docs/MICROSTRUCTURE_XREF_LINEAGE.md`
 - `docs/MICROSTRUCTURE_PROFILE.md`
 - `docs/MICROSTRUCTURE_SEMANTIC_FIELDS.md`
 - `docs/MICROSTRUCTURE_METHODS.md`

@@ -2,9 +2,9 @@
 
 Date: 2026-06-04
 
-Status: next analysis-page specification. This is the first prioritized chart
-after the use-case page layer because H6 is already supported by prototype
-evidence.
+Status: implemented chart specification and trust block. The public atlas page
+is `/tools/structural-register`, generated from
+`src/data/dicts/structural-register.json`.
 
 ## Chart Trust Block
 
@@ -29,7 +29,7 @@ evidence.
 
 ## Page Purpose
 
-The page should show whether citation style and grammar-marking separate
+The page shows whether citation style and grammar-marking separate
 dictionary families:
 
 - Western-tagged citation apparatus;
@@ -39,7 +39,7 @@ dictionary families:
 
 It is a scholar-facing page first. Public reader language can come later.
 
-## Minimal Chart
+## Implemented Minimal Chart
 
 | Axis | Meaning | Data source |
 |---|---|---|
@@ -51,8 +51,8 @@ It is a scholar-facing page first. Public reader language can come later.
 
 ## Chart Input Contract
 
-The first build should emit a compact chart-ready file, for example
-`src/data/dicts/structural-register.json`, with one row per dictionary.
+The build emits `src/data/dicts/structural-register.json`, with one row per
+dictionary.
 
 | Field | Type | Source | Meaning |
 |---|---|---|---|
@@ -107,6 +107,9 @@ The chart may later compare these labels with the L0 genealogy tree, but the
 scatter itself does not prove descent.
 
 ## Build Plan
+
+Implemented by `scripts/build-structural-register.mjs`; keep this plan as the
+maintenance contract for future changes.
 
 1. Read `data/dictionary-coverage.json`.
 2. Read `data/lexico/microstructure_fingerprint.json`.
@@ -189,14 +192,15 @@ The page must say:
 - a cluster is evidence for structural similarity, not direct proof of descent;
 - zeros must be read as convention-sensitive;
 - DCS/corpus frequency is not part of this chart;
-- H4 semantic fields are separate M8 data/chart work and should not be mixed into H6.
+- H4 semantic fields live at `/tools/semantic-fields` and should not be mixed
+  into H6.
 
 ## Acceptance
 
-- Every plotted dictionary has source rows and a dictionary code.
-- The chart includes the trust block above.
-- H6 is stated as prototype-backed, not fully settled.
-- The page links to the microstructure findings and methods docs.
-- The page does not import corpus, standards/export, or observatory metrics.
-- Tooltips expose both tagged and prose citation components.
-- Zeros are accompanied by convention warnings where relevant.
+- [x] Every plotted dictionary has source rows and a dictionary code.
+- [x] The chart includes the trust block above.
+- [x] H6 is stated as prototype-backed, not fully settled.
+- [x] The page links to the microstructure findings and methods docs.
+- [x] The page does not import corpus, standards/export, or observatory metrics.
+- [x] Tooltips expose both tagged and prose citation components.
+- [x] Zeros are accompanied by convention warnings where relevant.

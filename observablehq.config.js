@@ -44,6 +44,7 @@ export default {
         { name: "Convention fingerprints", path: "/tools/lexicographic-conventions" },
         { name: "Structural register", path: "/tools/structural-register" },
         { name: "Semantic fields", path: "/tools/semantic-fields" },
+        { name: "Cross-reference lineage", path: "/tools/xref-lineage" },
         { name: "R2 sense explorer", path: "/tools/r2-explorer" },
         { name: "R2 sense granularity", path: "/tools/r2-h1" }
       ]

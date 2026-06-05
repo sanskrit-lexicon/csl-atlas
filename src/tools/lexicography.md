@@ -121,7 +121,7 @@ Plot.plot({
 
 ## Sense-level structure (R2)
 
-Beyond shared *headwords*, the [R2 sense splitter](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/sense_split.py) breaks each entry into individual **senses** and aligns them across dictionaries by the **Sanskrit material they share** — SLP1 forms, `<ls>` citations, indigenous `…0` sigla — with **no translation**. This aligns a German PWG sense to an English Apte sense, and a Western sense to an indigenous *Vācaspatya* one, through Sanskrit alone (the "anchor on Sanskrit" method).
+Beyond shared *headwords*, the [archived R2 sense-alignment findings](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md) split entries into individual **senses** and align them across dictionaries by the **Sanskrit material they share** — SLP1 forms, `<ls>` citations, indigenous `…0` sigla — with **no translation**. This aligns a German PWG sense to an English Apte sense, and a Western sense to an indigenous *Vācaspatya* one, through Sanskrit alone (the "anchor on Sanskrit" method). The current branch keeps this as archived evidence until the R2 generator package is restored or rebuilt.
 
 **[Open the interactive sense-alignment explorer](/tools/r2-explorer)** — pick a headword (`dharma`, `rāma`, …) and browse its senses across up to 13 dictionaries, with the Sanskrit-anchored cross-tradition alignments highlighted.
 

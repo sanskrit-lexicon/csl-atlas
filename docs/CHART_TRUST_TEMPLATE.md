@@ -66,7 +66,7 @@ Use the atlas labels from [`EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md):
 |---|---|---|
 | Dictionary chooser | `csl-atlas` | Uses dictionary metadata and caveats only. |
 | Reader lookup | `csl-atlas` | Static dictionary lookup, no corpus passage search. |
-| DCS frequency join | `VisualDCS` | Atlas may later consume a compact dictionary-facing summary. |
+| Corpus-facing dictionary summary | `VisualDCS` | Atlas may later consume a compact dictionary-facing summary. |
 | TEI/OntoLex loss report | `csl-standards` | Standards/export work, not atlas implementation. |
 | GitHub activity chart | `csl-observatory` | Org-process evidence, not dictionary evidence. |
 
