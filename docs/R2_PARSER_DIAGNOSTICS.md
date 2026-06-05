@@ -158,3 +158,20 @@ automatic filters:
 
 These matches identify candidate record-scope decisions for review. They do not
 prove that the excluded same-headword records are wrong or irrelevant.
+
+## Indigenous Authority Hints
+
+SKD/VCP `iti` rows now carry `indigenousAuthorityHints` as review aids. These
+are not `<ls>` citations and are not used as alignment anchors. SKD hints come
+from a conservative list of prose authority names; VCP hints come from `...0`
+markers after excluding obvious grammar labels.
+
+| Diagnostic row | Source rows | Archived rows | Authority hints |
+|---|---:|---:|---|
+| `r2-drift:dharma:skd` | 15 | 4 | `hemacandra`, `matsyapurana`, `medini`, `sribhagavatam` x2; plus `amara`, `bhagavata`, `dharmadipika`, `hitopadesa`, `mahabharata`, `padmapurana`, `yogasara`. |
+| `r2-drift:iti:skd` | 7 | 1 | `manu` x2; plus `amara`, `medini`, `ramayana`. |
+| `r2-drift:bodhisattva:skd` | 2 | 1 | `hemacandra`, `kathasaritsagara`. |
+| `r2-drift:dharma:vcp` | 27 | 9 | Raw VCP hint codes include `hemaca`, `medi`, `manava`, `vamanapu`, `varahapu`, and others for review. |
+
+This makes the indigenous review class more informative without claiming that
+SKD/VCP prose has been fully parsed into a normalized citation apparatus.

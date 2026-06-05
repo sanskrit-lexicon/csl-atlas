@@ -173,6 +173,7 @@ function diagnosticRows(summary, senseRows) {
         ...(sourceRecordMatches.length ? { sourceRecordExactMatches: sourceRecordMatches } : {}),
         ...(row.markerLabelCounts && Object.keys(row.markerLabelCounts).length ? { markerLabelCounts: row.markerLabelCounts } : {}),
         ...(row.markerRunCounts && Object.keys(row.markerRunCounts).length ? { markerRunCounts: row.markerRunCounts } : {}),
+        ...(row.indigenousAuthorityHintCounts && Object.keys(row.indigenousAuthorityHintCounts).length ? { indigenousAuthorityHintCounts: row.indigenousAuthorityHintCounts } : {}),
         ...(markerPrefix ? { markerRunPrefixMatch: markerPrefix } : {}),
         ...(row.reverseRankCounts ? { reverseRankCounts: row.reverseRankCounts } : {}),
         sourceLines: row.sourceLines ?? [],
@@ -209,6 +210,7 @@ function worklistRows(rows) {
       ...(row.sourceRecordExactMatches?.length ? { sourceRecordExactMatches: row.sourceRecordExactMatches } : {}),
       ...(row.markerLabelCounts ? { markerLabelCounts: row.markerLabelCounts } : {}),
       ...(row.markerRunCounts ? { markerRunCounts: row.markerRunCounts } : {}),
+      ...(row.indigenousAuthorityHintCounts ? { indigenousAuthorityHintCounts: row.indigenousAuthorityHintCounts } : {}),
       ...(row.markerRunPrefixMatch ? { markerRunPrefixMatch: row.markerRunPrefixMatch } : {}),
       ...(row.reverseRankCounts ? { reverseRankCounts: row.reverseRankCounts } : {}),
       nextAction: row.nextAction

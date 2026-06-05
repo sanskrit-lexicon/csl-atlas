@@ -58,6 +58,25 @@ const MARKED_SANSKRIT = [
   /<s>([\s\S]*?)<\/s>/g
 ];
 const LS_TAG = /<ls(?:\s+n=["']([^"']+)["'])?[^>]*>([\s\S]*?)<\/ls>/g;
+const SKD_AUTHORITY_HINTS = new Map([
+  ["BAgavate", "bhagavata"],
+  ["BAgavatam", "bhagavata"],
+  ["DarmmadIpikA", "dharmadipika"],
+  ["hemacandraH", "hemacandra"],
+  ["hitodeSe", "hitopadesa"],
+  ["ityamaraH", "amara"],
+  ["kaTAsaritsAgare", "kathasaritsagara"],
+  ["mahABAratam", "mahabharata"],
+  ["manuH", "manu"],
+  ["matsyapurARe", "matsyapurana"],
+  ["medinI", "medini"],
+  ["pAdmaBUmiKaRqe", "padmapurana"],
+  ["pAdmottaraKaRqam", "padmapurana"],
+  ["rAmAyaRe", "ramayana"],
+  ["SrIBAgavatam", "sribhagavatam"],
+  ["yogasAre", "yogasara"]
+]);
+const VCP_AUTHORITY_EXCLUDE = new Set(["avya", "klI", "na", "pu", "strI", "tri", "vya"]);
 
 export function lookupKeysForLemma(lemma) {
   return R2_ANCHOR_LEMMAS.find(row => row.lemma === lemma)?.lookupKeys ?? [lemma];
@@ -277,6 +296,26 @@ function extractAuthoritySigla(body) {
   return sigla;
 }
 
+function escapeRegex(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+export function indigenousAuthorityHints(body, dictCode) {
+  if (dictCode === "vcp") {
+    return uniqueSorted([...body.matchAll(/\b([A-Za-z][A-Za-z]+)0\b/g)]
+      .map(match => match[1].toLowerCase())
+      .filter(token => !VCP_AUTHORITY_EXCLUDE.has(token))
+      .map(token => `auth:${token}`));
+  }
+  if (dictCode !== "skd") return [];
+
+  const hints = [];
+  for (const [raw, canonical] of SKD_AUTHORITY_HINTS) {
+    if (new RegExp(`\\b${escapeRegex(raw)}\\b`).test(body)) hints.push(`auth:${canonical}`);
+  }
+  return uniqueSorted(hints);
+}
+
 function anchorSets(text, dict, lookupKeySet) {
   const citationAnchors = extractCitationAnchors(text);
   if (dict.parserFamily === "indigenous") citationAnchors.push(...extractAuthoritySigla(text));
@@ -302,6 +341,7 @@ function rowFromPart(target, dict, rec, part, extra = {}) {
   const lookupKeySet = new Set(target.lookupKeys.map(normalizeAnchor));
   const blockId = rec.L || `line:${rec.startLine}`;
   const anchors = anchorSets(part.text, dict, lookupKeySet);
+  const authorityHints = dict.parserFamily === "indigenous" ? indigenousAuthorityHints(part.text, dict.code) : [];
   return {
     rowId: `${target.lemma}:${dict.code}:${blockId}:${part.localId}`,
     dict: dict.code,
@@ -319,6 +359,7 @@ function rowFromPart(target, dict, rec, part, extra = {}) {
     ...(part.markerRunIndex != null ? { markerRunIndex: part.markerRunIndex } : {}),
     text: cleanText(part.text),
     ...anchors,
+    ...(authorityHints.length ? { indigenousAuthorityHints: authorityHints } : {}),
     ...extra,
     limitations: limitationsFor(dict, part)
   };
@@ -469,6 +510,7 @@ function summarize(rows, sourceRecordsByLemmaDict) {
         splitConfidence: uniqueSorted(here.map(row => row.splitConfidence)),
         markerLabelCounts: countValues(here.map(row => row.markerLabel)),
         markerRunCounts: countValues(here.map(row => row.markerRunIndex)),
+        indigenousAuthorityHintCounts: countValues(here.flatMap(row => row.indigenousAuthorityHints ?? [])),
         sourceLines: here.slice(0, 5).map(row => row.sourceLine),
         ...(dict.parserFamily === "reverse" ? {
           reverseRankCounts: countValues(here.map(row => row.reverseMatch?.rank))

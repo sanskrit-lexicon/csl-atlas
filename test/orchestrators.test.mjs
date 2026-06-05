@@ -9,7 +9,7 @@ import assert from "node:assert/strict";
 
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
-import { jaccard, lookupKeysForLemma, reverseMatchProfile, sourceRecordCounts, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
+import { indigenousAuthorityHints, jaccard, lookupKeysForLemma, reverseMatchProfile, sourceRecordCounts, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
 import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExactMatches } from "../scripts/build-r2-parser-diagnostics.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
@@ -110,6 +110,19 @@ test("sourceRecordCounts keeps the largest source records first", () => {
     { blockId: "2", rawHeadword: "b", sourceLine: 20, href: "b", rowCount: 2 },
     { blockId: "1", rawHeadword: "a", sourceLine: 10, href: "a", rowCount: 1 }
   ]);
+});
+
+test("indigenousAuthorityHints keeps SKD and VCP authority evidence separate from citations", () => {
+  assert.deepEqual(indigenousAuthorityHints("medinI . hemacandraH .. hitodeSe .", "skd"), [
+    "auth:hemacandra",
+    "auth:hitopadesa",
+    "auth:medini"
+  ]);
+  assert.deepEqual(indigenousAuthorityHints("hemaca0 na0 pu0 medi0", "vcp"), [
+    "auth:hemaca",
+    "auth:medi"
+  ]);
+  assert.deepEqual(indigenousAuthorityHints("medinI .", "mw"), []);
 });
 
 test("reverseMatchProfile ranks AE equivalents by first matching group", () => {
