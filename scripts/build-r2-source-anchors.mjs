@@ -45,7 +45,7 @@ const R2_DICTS = [
 ];
 
 const MARKERS = {
-  div: /<div\b[^>]*(?:\bn=["']?([^"'>\s]+))?[^>]*>/g,
+  div: /<div\b(?:[^>]*?\bn=["']?([^"'>\s]+))?[^>]*>/g,
   "ap-bullet": /\u2219\u00B2\s*(\d+)/g,
   "number-marker": /\{@\s*(?:--)?(\d+)\.?\s*@\}/g,
   "dot-squared": /\.\u00B2\s*(\d+)/g
@@ -72,7 +72,8 @@ export function jaccard(left, right) {
   return intersection / (a.size + b.size - intersection);
 }
 
-export function splitExplicitMarkers(body, marker) {
+export function splitExplicitMarkers(body, marker, options = {}) {
+  const { useMarkerLabelAsLocalId = true } = options;
   marker.lastIndex = 0;
   const matches = [...body.matchAll(marker)];
   if (!matches.length) {
@@ -90,8 +91,9 @@ export function splitExplicitMarkers(body, marker) {
   for (let i = 0; i < matches.length; i++) {
     const start = matches[i].index;
     const end = i + 1 < matches.length ? matches[i + 1].index : body.length;
-    const localId = String(matches[i][1] || i + 1).replace(/[^\w.-]+/g, "_");
-    const markerNumber = Number(matches[i][1]);
+    const markerLabel = matches[i][1] ? String(matches[i][1]).replace(/[^\w.-]+/g, "_") : null;
+    const localId = useMarkerLabelAsLocalId && markerLabel ? markerLabel : String(i + 1);
+    const markerNumber = Number(markerLabel);
     if (
       Number.isFinite(markerNumber) &&
       Number.isFinite(previousMarkerNumber) &&
@@ -105,6 +107,7 @@ export function splitExplicitMarkers(body, marker) {
     if (text) {
       parts.push({
         localId,
+        ...(markerLabel ? { markerLabel } : {}),
         ...(Number.isFinite(markerNumber) ? { markerRunIndex } : {}),
         splitConfidence: "explicit",
         text
@@ -139,6 +142,7 @@ function splitIndigenous(body) {
 function splitRecord(body, dict) {
   if (dict.split === "iti-unit") return splitIndigenous(body);
   const marker = MARKERS[dict.split];
+  if (dict.split === "div" && marker) return splitExplicitMarkers(body, marker, { useMarkerLabelAsLocalId: false });
   return marker ? splitExplicitMarkers(body, marker) : [{ localId: "bundle", splitConfidence: dict.split, text: body }];
 }
 
@@ -292,6 +296,7 @@ function rowFromPart(target, dict, rec, part, extra = {}) {
     senseId: `${blockId}:${part.localId}`,
     parserFamily: dict.parserFamily,
     splitConfidence: part.splitConfidence,
+    ...(part.markerLabel != null ? { markerLabel: part.markerLabel } : {}),
     ...(part.markerRunIndex != null ? { markerRunIndex: part.markerRunIndex } : {}),
     text: cleanText(part.text),
     ...anchors,
@@ -442,6 +447,7 @@ function summarize(rows, sourceRecordsByLemmaDict) {
         sourceSenseRows: here.length,
         archivedSenseRows: archiveSenseRows,
         splitConfidence: uniqueSorted(here.map(row => row.splitConfidence)),
+        markerLabelCounts: countValues(here.map(row => row.markerLabel)),
         markerRunCounts: countValues(here.map(row => row.markerRunIndex)),
         sourceLines: here.slice(0, 5).map(row => row.sourceLine),
         ...(dict.parserFamily === "reverse" ? {

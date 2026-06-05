@@ -41,6 +41,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             215707,
@@ -59,6 +60,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             116404,
@@ -77,7 +79,20 @@
             "explicit",
             "lumped-proxy"
           ],
-          "markerRunCounts": {},
+          "markerLabelCounts": {
+            "1": 180,
+            "2": 29,
+            "3": 8,
+            "p": 111,
+            "v": 21
+          },
+          "markerRunCounts": {
+            "0": 12,
+            "1": 31,
+            "2": 7,
+            "3": 108,
+            "4": 59
+          },
           "sourceLines": [
             203360,
             203360,
@@ -98,7 +113,26 @@
             "explicit",
             "lumped-proxy"
           ],
-          "markerRunCounts": {},
+          "markerLabelCounts": {
+            "1": 219,
+            "2": 41,
+            "3": 2,
+            "p": 74,
+            "m": 24,
+            "o": 3
+          },
+          "markerRunCounts": {
+            "0": 23,
+            "1": 3,
+            "2": 45,
+            "3": 14,
+            "4": 7,
+            "5": 34,
+            "6": 86,
+            "7": 32,
+            "8": 3,
+            "9": 15
+          },
           "sourceLines": [
             138769,
             138769,
@@ -119,6 +153,16 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 2,
+            "4": 2,
+            "5": 2,
+            "6": 2,
+            "7": 1,
+            "8": 1
+          },
           "markerRunCounts": {
             "0": 6,
             "1": 8
@@ -143,6 +187,16 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 2,
+            "4": 2,
+            "5": 2,
+            "6": 2,
+            "7": 1,
+            "8": 1
+          },
           "markerRunCounts": {
             "0": 6,
             "1": 8
@@ -167,6 +221,22 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 43,
+            "2": 42,
+            "3": 30,
+            "4": 17,
+            "5": 13,
+            "6": 9,
+            "7": 4,
+            "8": 3,
+            "9": 3,
+            "10": 2,
+            "11": 2,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
           "markerRunCounts": {
             "0": 9,
             "1": 14,
@@ -230,6 +300,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             37497
@@ -244,6 +315,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -256,6 +328,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -270,6 +343,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             30959
@@ -284,6 +358,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -296,6 +371,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -310,6 +386,7 @@
           "splitConfidence": [
             "reverse-equivalent"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             218,
@@ -350,6 +427,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             334919,
@@ -370,6 +448,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             174006,
@@ -389,7 +468,14 @@
             "explicit",
             "lumped-proxy"
           ],
-          "markerRunCounts": {},
+          "markerLabelCounts": {
+            "1": 16,
+            "2": 3
+          },
+          "markerRunCounts": {
+            "0": 5,
+            "1": 14
+          },
           "sourceLines": [
             350536,
             350536,
@@ -410,7 +496,12 @@
             "explicit",
             "lumped-proxy"
           ],
-          "markerRunCounts": {},
+          "markerLabelCounts": {
+            "1": 14
+          },
+          "markerRunCounts": {
+            "0": 14
+          },
           "sourceLines": [
             224195,
             224195,
@@ -431,6 +522,31 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
+          },
           "markerRunCounts": {
             "0": 23
           },
@@ -454,6 +570,30 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1
+          },
           "markerRunCounts": {
             "0": 22
           },
@@ -477,6 +617,19 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
           "markerRunCounts": {
             "0": 11
           },
@@ -499,6 +652,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             49640
@@ -516,6 +670,12 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 2,
+            "4": 2
+          },
           "markerRunCounts": {
             "0": 8
           },
@@ -539,6 +699,20 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 2,
+            "4": 2,
+            "5": 2,
+            "6": 2,
+            "7": 2,
+            "8": 2,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1
+          },
           "markerRunCounts": {
             "0": 12,
             "1": 8
@@ -562,6 +736,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             51058
@@ -578,6 +753,7 @@
           "splitConfidence": [
             "iti-unit"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             352094,
@@ -598,6 +774,7 @@
           "splitConfidence": [
             "iti-unit"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             206577,
@@ -618,6 +795,7 @@
           "splitConfidence": [
             "reverse-equivalent"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             804,
@@ -655,6 +833,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             584533,
@@ -675,6 +854,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             311802,
@@ -693,7 +873,17 @@
             "explicit",
             "lumped-proxy"
           ],
-          "markerRunCounts": {},
+          "markerLabelCounts": {
+            "1": 10,
+            "2": 19,
+            "3": 10,
+            "v": 2
+          },
+          "markerRunCounts": {
+            "0": 27,
+            "1": 8,
+            "2": 4
+          },
           "sourceLines": [
             754855,
             754855,
@@ -714,7 +904,17 @@
             "explicit",
             "lumped-proxy"
           ],
-          "markerRunCounts": {},
+          "markerLabelCounts": {
+            "1": 8,
+            "2": 38,
+            "3": 6
+          },
+          "markerRunCounts": {
+            "0": 9,
+            "1": 19,
+            "2": 18,
+            "3": 6
+          },
           "sourceLines": [
             384342,
             384342,
@@ -735,6 +935,12 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 2,
+            "2": 2,
+            "3": 1,
+            "4": 1
+          },
           "markerRunCounts": {
             "0": 6
           },
@@ -758,6 +964,13 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 5,
+            "2": 5,
+            "3": 4,
+            "4": 3,
+            "5": 1
+          },
           "markerRunCounts": {
             "0": 6,
             "1": 9,
@@ -783,6 +996,12 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 5,
+            "2": 5,
+            "3": 2,
+            "4": 1
+          },
           "markerRunCounts": {
             "0": 5,
             "1": 6,
@@ -805,6 +1024,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -819,6 +1039,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             51230
@@ -836,6 +1057,12 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 7,
+            "2": 7,
+            "3": 4,
+            "4": 1
+          },
           "markerRunCounts": {
             "0": 5,
             "1": 7,
@@ -861,6 +1088,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             90073
@@ -877,6 +1105,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             452114,
@@ -895,6 +1124,7 @@
           "splitConfidence": [
             "iti-unit"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             390829,
@@ -913,6 +1143,7 @@
           "splitConfidence": [
             "reverse-equivalent"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             2647,
@@ -948,6 +1179,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             100919,
@@ -967,6 +1199,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             61484,
@@ -987,7 +1220,13 @@
             "explicit",
             "lumped-proxy"
           ],
-          "markerRunCounts": {},
+          "markerLabelCounts": {
+            "1": 11,
+            "v": 1
+          },
+          "markerRunCounts": {
+            "0": 11
+          },
           "sourceLines": [
             88592,
             88592,
@@ -1008,7 +1247,12 @@
             "explicit",
             "lumped-proxy"
           ],
-          "markerRunCounts": {},
+          "markerLabelCounts": {
+            "1": 2
+          },
+          "markerRunCounts": {
+            "0": 2
+          },
           "sourceLines": [
             64269,
             64272,
@@ -1029,6 +1273,10 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1
+          },
           "markerRunCounts": {
             "0": 2
           },
@@ -1050,6 +1298,10 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1
+          },
           "markerRunCounts": {
             "0": 2
           },
@@ -1071,6 +1323,13 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1
+          },
           "markerRunCounts": {
             "0": 5
           },
@@ -1091,6 +1350,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -1103,6 +1363,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -1118,6 +1379,17 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1
+          },
           "markerRunCounts": {
             "0": 9
           },
@@ -1140,6 +1412,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             16108,
@@ -1158,6 +1431,7 @@
           "splitConfidence": [
             "iti-unit"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             85845,
@@ -1178,6 +1452,7 @@
           "splitConfidence": [
             "iti-unit"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             40325,
@@ -1198,6 +1473,7 @@
           "splitConfidence": [
             "reverse-equivalent"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             518,
@@ -1237,6 +1513,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             488992,
@@ -1253,6 +1530,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -1268,6 +1546,9 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "v": 1
+          },
           "markerRunCounts": {},
           "sourceLines": [
             515286,
@@ -1286,6 +1567,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             320159
@@ -1303,6 +1585,10 @@
             "explicit",
             "lumped-proxy"
           ],
+          "markerLabelCounts": {
+            "1": 1,
+            "2": 1
+          },
           "markerRunCounts": {
             "0": 2
           },
@@ -1321,6 +1607,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -1333,6 +1620,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -1345,6 +1633,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": []
         },
@@ -1359,6 +1648,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             44270
@@ -1375,6 +1665,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             218160
@@ -1391,6 +1682,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             75168
@@ -1407,6 +1699,7 @@
           "splitConfidence": [
             "lumped-proxy"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             428571
@@ -1423,6 +1716,7 @@
           "splitConfidence": [
             "iti-unit"
           ],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [
             310375,
@@ -1438,6 +1732,7 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
+          "markerLabelCounts": {},
           "markerRunCounts": {},
           "sourceLines": [],
           "reverseRankCounts": {}

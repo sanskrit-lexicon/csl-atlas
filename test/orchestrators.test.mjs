@@ -74,6 +74,7 @@ test("splitExplicitMarkers keeps preface and numbered parts stable", () => {
   assert.deepEqual(parts.map(part => part.localId), ["preface", "1", "2"]);
   assert.equal(parts[0].splitConfidence, "lumped-proxy");
   assert.equal(parts[1].splitConfidence, "explicit");
+  assert.deepEqual(parts.map(part => part.markerLabel ?? null), [null, "1", "2"]);
   assert.deepEqual(parts.map(part => part.markerRunIndex ?? null), [null, 0, 0]);
 });
 
@@ -81,6 +82,16 @@ test("splitExplicitMarkers records numeric marker-run resets", () => {
   const parts = splitExplicitMarkers("grammar {@1@} first {@2@} second {@1@} derived", /\{@\s*(?:--)?(\d+)\.?\s*@\}/g);
   assert.deepEqual(parts.map(part => part.localId), ["preface", "1", "2", "1"]);
   assert.deepEqual(parts.map(part => part.markerRunIndex ?? null), [null, 0, 0, 1]);
+});
+
+test("splitExplicitMarkers captures div n labels while keeping ordinal ids", () => {
+  const marker = /<div\b(?:[^>]*?\bn=["']?([^"'>\s]+))?[^>]*>/g;
+  const parts = splitExplicitMarkers("lead <div n=\"1\"> first <div type=\"x\" n=\"p\"> preverb <div n=\"2\"> second", marker, {
+    useMarkerLabelAsLocalId: false
+  });
+  assert.deepEqual(parts.map(part => part.localId), ["preface", "1", "2", "3"]);
+  assert.deepEqual(parts.map(part => part.markerLabel ?? null), [null, "1", "p", "2"]);
+  assert.deepEqual(parts.map(part => part.markerRunIndex ?? null), [null, 0, null, 0]);
 });
 
 test("jaccard scores anchor overlap", () => {

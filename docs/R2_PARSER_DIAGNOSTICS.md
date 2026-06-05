@@ -51,9 +51,9 @@ Current artifact:
 
 The top worklist points to four concrete parser tasks:
 
-1. **PWG/PWK top-level division scope.** `gam`, `dharma`, `rama`, and `iti`
-   show that the current `<div>` splitter is counting nested divisions as
-   sense rows.
+1. **PWG/PWK division marker scope.** `gam`, `dharma`, `rama`, and `iti`
+   now expose `<div n>` labels and numeric runs, but still need source-record
+   grouping and marker-class review before row counts are treated as senses.
 2. **Numbered-marker run scope.** BEN `gam`, AP90 `gam`, and several nominal
    rows show that archived counts can match a prefix of numbered marker runs,
    while later runs represent participles, derived forms, or preverb material.
@@ -108,3 +108,21 @@ prefix matches are:
 These prefix matches are parser evidence, not automatic filters. They identify
 where a future splitter can separate main sense runs from later derived or
 preverb runs without discarding the latter from the worklist.
+
+## PWG/PWK Div Marker Labels
+
+The `<div>` splitter now captures the `n` label while keeping row identifiers
+ordinal. This fixes the previous tag-loss bug and records whether a span came
+from numeric labels (`1`, `2`, `3`) or lettered labels such as `p`, `v`, `m`,
+and `o`.
+
+| Diagnostic row | Source rows | Archived rows | Label counts | Numeric run counts |
+|---|---:|---:|---|---|
+| `r2-drift:gam:pwg` | 353 | 30 | `1`: 180, `2`: 29, `3`: 8, `p`: 111, `v`: 21 | Runs 0-4: 12, 31, 7, 108, 59. |
+| `r2-drift:rama:pwg` | 44 | 6 | `1`: 10, `2`: 19, `3`: 10, `v`: 2 | Runs 0-2: 27, 8, 4. |
+| `r2-drift:dharma:pwg` | 21 | 5 | `1`: 16, `2`: 3 | Run 0: 5 rows matches archive. |
+| `r2-drift:iti:pwg` | 16 | 4 | `1`: 11, `v`: 1 | Run 0: 11 rows; no archive prefix match. |
+
+For PWK, the archive has no baseline rows for these lemma/dictionary pairs, so
+the same labels are retained as source-backed rebuild evidence rather than
+drift evidence.
