@@ -41,7 +41,7 @@ Current artifact:
 | `archive-parity` | 28 | Source-backed rows are close to the archived static count. | Use as positive parser controls. |
 | `no-anchor-evidence` | 12 | Neither source-backed nor archived row exists for that pair. | Ignore until coverage broadens. |
 | `indigenous-coarse-review` | 8 | SKD/VCP `iti` units are source-backed but too coarse for sense claims. | Review boundaries and authority quotations. |
-| `over-split-candidate` | 6 | Explicit-marker parser emits far more rows than the archive. | Tighten PWG/PWK `div` and BEN/AP90/BHS number-marker scope. |
+| `over-split-candidate` | 6 | Explicit-marker parser emits far more rows than the archive. | Tighten PWG/PWK `div` scope and use marker-run prefixes for BEN/AP90/BHS-style numbered markers. |
 | `source-only-dictionary` | 6 | Source-backed rows exist where no archived baseline exists. | Treat as rebuild expansion, not drift. |
 | `mild-drift` | 5 | Visible but lower-priority count drift. | Inspect after high-priority parser families. |
 | `reverse-overmatch` | 3 | AE reverse lookup overmatches common Sanskrit equivalents. | Use rank counts to choose review/filter bands. |
@@ -54,8 +54,9 @@ The top worklist points to four concrete parser tasks:
 1. **PWG/PWK top-level division scope.** `gam`, `dharma`, `rama`, and `iti`
    show that the current `<div>` splitter is counting nested divisions as
    sense rows.
-2. **BEN numbered-marker scope.** `gam` and `rama` show number-marker inflation
-   and should be checked before BEN is used in H1R/H2/H3R row counts.
+2. **Numbered-marker run scope.** BEN `gam`, AP90 `gam`, and several nominal
+   rows show that archived counts can match a prefix of numbered marker runs,
+   while later runs represent participles, derived forms, or preverb material.
 3. **AE reverse filtering/review.** `gam`, `dharma`, and `iti` now carry
    equivalent-position rank metadata; the next step is deciding which rank bands
    are safe enough for alignment use.
@@ -83,3 +84,27 @@ queried Sanskrit equivalent first appears among marked equivalent groups:
 High-rank rows are not automatically accepted, and tail rows are not discarded.
 The rank is a deterministic review and filtering aid for the reverse dictionary
 only.
+
+## Explicit Marker Run Counts
+
+Explicit numbered markers now carry `markerRunIndex`. A new run starts when a
+numeric sequence resets after a higher number. This exposes cases where the old
+archive appears to have counted only a prefix of the marked runs. Current exact
+prefix matches are:
+
+| Diagnostic row | Source rows | Archived rows | Matching prefix |
+|---|---:|---:|---|
+| `r2-drift:gam:ben` | 172 | 23 | Runs 0-1: 9 + 14 rows = 23. |
+| `r2-drift:rama:wil` | 22 | 12 | Runs 0-1: 5 + 7 rows = 12. |
+| `r2-drift:bodhisattva:ap` | 3 | 2 | Run 0: 2 rows. |
+| `r2-drift:dharma:ap` | 24 | 23 | Run 0: 23 rows. |
+| `r2-drift:dharma:ap90` | 23 | 22 | Run 0: 22 rows. |
+| `r2-drift:dharma:ben` | 12 | 11 | Run 0: 11 rows. |
+| `r2-drift:dharma:wil` | 21 | 20 | Runs 0-1: 12 + 8 rows = 20. |
+| `r2-drift:gam:ap90` | 15 | 14 | Runs 0-1: 6 + 8 rows = 14. |
+| `r2-drift:iti:ben` | 6 | 5 | Run 0: 5 rows. |
+| `r2-drift:iti:wil` | 10 | 9 | Run 0: 9 rows. |
+
+These prefix matches are parser evidence, not automatic filters. They identify
+where a future splitter can separate main sense runs from later derived or
+preverb runs without discarding the latter from the worklist.

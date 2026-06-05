@@ -10,7 +10,7 @@ import assert from "node:assert/strict";
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { jaccard, lookupKeysForLemma, reverseMatchProfile, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
-import { classifyDrift, priorityForClass } from "../scripts/build-r2-parser-diagnostics.mjs";
+import { classifyDrift, markerRunPrefixMatch, priorityForClass } from "../scripts/build-r2-parser-diagnostics.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -74,6 +74,13 @@ test("splitExplicitMarkers keeps preface and numbered parts stable", () => {
   assert.deepEqual(parts.map(part => part.localId), ["preface", "1", "2"]);
   assert.equal(parts[0].splitConfidence, "lumped-proxy");
   assert.equal(parts[1].splitConfidence, "explicit");
+  assert.deepEqual(parts.map(part => part.markerRunIndex ?? null), [null, 0, 0]);
+});
+
+test("splitExplicitMarkers records numeric marker-run resets", () => {
+  const parts = splitExplicitMarkers("grammar {@1@} first {@2@} second {@1@} derived", /\{@\s*(?:--)?(\d+)\.?\s*@\}/g);
+  assert.deepEqual(parts.map(part => part.localId), ["preface", "1", "2", "1"]);
+  assert.deepEqual(parts.map(part => part.markerRunIndex ?? null), [null, 0, 0, 1]);
 });
 
 test("jaccard scores anchor overlap", () => {
@@ -130,6 +137,14 @@ test("R2 parser diagnostics keep parser priorities stable", () => {
   assert.equal(priorityForClass("mild-drift"), "medium");
   assert.equal(priorityForClass("archive-parity"), "low");
   assert.equal(priorityForClass("no-anchor-evidence"), "info");
+});
+
+test("R2 parser diagnostics detects marker-run prefixes that match archive counts", () => {
+  assert.deepEqual(
+    markerRunPrefixMatch({ archivedSenseRows: 23, markerRunCounts: { 0: 9, 1: 14, 2: 4 } }),
+    { maxRunIndex: 1, runCount: 2, countedRows: 23 }
+  );
+  assert.equal(markerRunPrefixMatch({ archivedSenseRows: 10, markerRunCounts: { 0: 9, 1: 14 } }), null);
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----

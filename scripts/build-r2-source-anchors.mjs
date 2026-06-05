@@ -85,12 +85,31 @@ export function splitExplicitMarkers(body, marker) {
     parts.push({ localId: "preface", splitConfidence: "lumped-proxy", text: preface });
   }
 
+  let markerRunIndex = 0;
+  let previousMarkerNumber = null;
   for (let i = 0; i < matches.length; i++) {
     const start = matches[i].index;
     const end = i + 1 < matches.length ? matches[i + 1].index : body.length;
     const localId = String(matches[i][1] || i + 1).replace(/[^\w.-]+/g, "_");
+    const markerNumber = Number(matches[i][1]);
+    if (
+      Number.isFinite(markerNumber) &&
+      Number.isFinite(previousMarkerNumber) &&
+      markerNumber === 1 &&
+      previousMarkerNumber > 1
+    ) {
+      markerRunIndex += 1;
+    }
+    if (Number.isFinite(markerNumber)) previousMarkerNumber = markerNumber;
     const text = body.slice(start, end).trim();
-    if (text) parts.push({ localId, splitConfidence: "explicit", text });
+    if (text) {
+      parts.push({
+        localId,
+        ...(Number.isFinite(markerNumber) ? { markerRunIndex } : {}),
+        splitConfidence: "explicit",
+        text
+      });
+    }
   }
   return parts;
 }
@@ -152,7 +171,9 @@ function uniqueSorted(values) {
 
 function countValues(values) {
   const counts = {};
-  for (const value of values.filter(Boolean)) counts[value] = (counts[value] || 0) + 1;
+  for (const value of values.filter(value => value !== undefined && value !== null && value !== "")) {
+    counts[value] = (counts[value] || 0) + 1;
+  }
   return Object.fromEntries(Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])));
 }
 
@@ -271,6 +292,7 @@ function rowFromPart(target, dict, rec, part, extra = {}) {
     senseId: `${blockId}:${part.localId}`,
     parserFamily: dict.parserFamily,
     splitConfidence: part.splitConfidence,
+    ...(part.markerRunIndex != null ? { markerRunIndex: part.markerRunIndex } : {}),
     text: cleanText(part.text),
     ...anchors,
     ...extra,
@@ -420,6 +442,7 @@ function summarize(rows, sourceRecordsByLemmaDict) {
         sourceSenseRows: here.length,
         archivedSenseRows: archiveSenseRows,
         splitConfidence: uniqueSorted(here.map(row => row.splitConfidence)),
+        markerRunCounts: countValues(here.map(row => row.markerRunIndex)),
         sourceLines: here.slice(0, 5).map(row => row.sourceLine),
         ...(dict.parserFamily === "reverse" ? {
           reverseRankCounts: countValues(here.map(row => row.reverseMatch?.rank))

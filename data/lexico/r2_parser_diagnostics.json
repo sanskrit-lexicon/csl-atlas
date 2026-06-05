@@ -64,7 +64,56 @@
       "sourceSenseRows": 172,
       "archivedSenseRows": 23,
       "sourceToArchiveRatio": 7.478,
-      "nextAction": "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows."
+      "markerRunCounts": {
+        "0": 9,
+        "1": 14,
+        "2": 4,
+        "3": 6,
+        "4": 11,
+        "5": 2,
+        "6": 3,
+        "7": 5,
+        "8": 2,
+        "9": 2,
+        "10": 5,
+        "11": 6,
+        "12": 7,
+        "13": 2,
+        "14": 4,
+        "15": 6,
+        "16": 3,
+        "17": 2,
+        "18": 5,
+        "19": 3,
+        "20": 3,
+        "21": 2,
+        "22": 3,
+        "23": 5,
+        "24": 3,
+        "25": 2,
+        "26": 3,
+        "27": 6,
+        "28": 2,
+        "29": 2,
+        "30": 3,
+        "31": 2,
+        "32": 6,
+        "33": 2,
+        "34": 2,
+        "35": 2,
+        "36": 3,
+        "37": 6,
+        "38": 3,
+        "39": 4,
+        "40": 3,
+        "41": 3
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 1,
+        "runCount": 2,
+        "countedRows": 23
+      },
+      "nextAction": "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs."
     },
     {
       "diagnosticId": "r2-drift:rama:pwg",
@@ -112,7 +161,12 @@
       "sourceSenseRows": 15,
       "archivedSenseRows": 7,
       "sourceToArchiveRatio": 2.143,
-      "nextAction": "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows."
+      "markerRunCounts": {
+        "0": 5,
+        "1": 6,
+        "2": 2
+      },
+      "nextAction": "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs."
     },
     {
       "diagnosticId": "r2-drift:gam:ae",
@@ -274,6 +328,9 @@
       "sourceSenseRows": 3,
       "archivedSenseRows": 5,
       "sourceToArchiveRatio": 0.6,
+      "markerRunCounts": {
+        "0": 2
+      },
       "nextAction": "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows."
     },
     {
@@ -286,6 +343,9 @@
       "sourceSenseRows": 8,
       "archivedSenseRows": 10,
       "sourceToArchiveRatio": 0.8,
+      "markerRunCounts": {
+        "0": 6
+      },
       "nextAction": "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows."
     },
     {
@@ -298,6 +358,17 @@
       "sourceSenseRows": 22,
       "archivedSenseRows": 12,
       "sourceToArchiveRatio": 1.833,
+      "markerRunCounts": {
+        "0": 5,
+        "1": 7,
+        "2": 5,
+        "3": 2
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 1,
+        "runCount": 2,
+        "countedRows": 12
+      },
       "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
     },
     {
@@ -310,6 +381,11 @@
       "sourceSenseRows": 20,
       "archivedSenseRows": 12,
       "sourceToArchiveRatio": 1.667,
+      "markerRunCounts": {
+        "0": 6,
+        "1": 9,
+        "2": 3
+      },
       "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
     },
     {
@@ -334,6 +410,9 @@
       "sourceSenseRows": 12,
       "archivedSenseRows": 10,
       "sourceToArchiveRatio": 1.2,
+      "markerRunCounts": {
+        "0": 8
+      },
       "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
     },
     {
@@ -426,6 +505,55 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 9,
+        "1": 14,
+        "2": 4,
+        "3": 6,
+        "4": 11,
+        "5": 2,
+        "6": 3,
+        "7": 5,
+        "8": 2,
+        "9": 2,
+        "10": 5,
+        "11": 6,
+        "12": 7,
+        "13": 2,
+        "14": 4,
+        "15": 6,
+        "16": 3,
+        "17": 2,
+        "18": 5,
+        "19": 3,
+        "20": 3,
+        "21": 2,
+        "22": 3,
+        "23": 5,
+        "24": 3,
+        "25": 2,
+        "26": 3,
+        "27": 6,
+        "28": 2,
+        "29": 2,
+        "30": 3,
+        "31": 2,
+        "32": 6,
+        "33": 2,
+        "34": 2,
+        "35": 2,
+        "36": 3,
+        "37": 6,
+        "38": 3,
+        "39": 4,
+        "40": 3,
+        "41": 3
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 1,
+        "runCount": 2,
+        "countedRows": 23
+      },
       "sourceLines": [
         29576,
         29576,
@@ -435,7 +563,7 @@
       ],
       "driftClass": "over-split-candidate",
       "priority": "high",
-      "nextAction": "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows.",
+      "nextAction": "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs.",
       "exampleRows": [
         {
           "rowId": "gam:ben:4326:1",
@@ -642,6 +770,11 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 5,
+        "1": 6,
+        "2": 2
+      },
       "sourceLines": [
         87379,
         87379,
@@ -651,7 +784,7 @@
       ],
       "driftClass": "over-split-candidate",
       "priority": "high",
-      "nextAction": "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows.",
+      "nextAction": "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs.",
       "exampleRows": [
         {
           "rowId": "rama:ben:11986:1",
@@ -1335,6 +1468,9 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 2
+      },
       "sourceLines": [
         92701,
         92701,
@@ -1389,6 +1525,9 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 6
+      },
       "sourceLines": [
         376348,
         376348,
@@ -1445,6 +1584,17 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 5,
+        "1": 7,
+        "2": 5,
+        "3": 2
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 1,
+        "runCount": 2,
+        "countedRows": 12
+      },
       "sourceLines": [
         249261,
         249272,
@@ -1501,6 +1651,11 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 6,
+        "1": 9,
+        "2": 3
+      },
       "sourceLines": [
         209370,
         209370,
@@ -1614,6 +1769,9 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 8
+      },
       "sourceLines": [
         30930,
         30930,
@@ -2082,6 +2240,14 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 2
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 0,
+        "runCount": 1,
+        "countedRows": 2
+      },
       "sourceLines": [
         325199,
         325199,
@@ -2192,6 +2358,14 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 23
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 0,
+        "runCount": 1,
+        "countedRows": 23
+      },
       "sourceLines": [
         232784,
         232784,
@@ -2246,6 +2420,14 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 22
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 0,
+        "runCount": 1,
+        "countedRows": 22
+      },
       "sourceLines": [
         137647,
         137647,
@@ -2300,6 +2482,14 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 11
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 0,
+        "runCount": 1,
+        "countedRows": 11
+      },
       "sourceLines": [
         49805,
         49805,
@@ -2354,6 +2544,15 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 12,
+        "1": 8
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 1,
+        "runCount": 2,
+        "countedRows": 20
+      },
       "sourceLines": [
         158204,
         158204,
@@ -2408,6 +2607,15 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 6,
+        "1": 8
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 1,
+        "runCount": 2,
+        "countedRows": 14
+      },
       "sourceLines": [
         105357,
         105357,
@@ -2462,6 +2670,14 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 5
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 0,
+        "runCount": 1,
+        "countedRows": 5
+      },
       "sourceLines": [
         11919,
         11919,
@@ -2516,6 +2732,14 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 9
+      },
+      "markerRunPrefixMatch": {
+        "maxRunIndex": 0,
+        "runCount": 1,
+        "countedRows": 9
+      },
       "sourceLines": [
         48403,
         48403,
@@ -2905,6 +3129,10 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 6,
+        "1": 8
+      },
       "sourceLines": [
         165154,
         167512,
@@ -3134,6 +3362,9 @@
         "explicit",
         "lumped-proxy"
       ],
+      "markerRunCounts": {
+        "0": 2
+      },
       "sourceLines": [
         64140,
         64140,

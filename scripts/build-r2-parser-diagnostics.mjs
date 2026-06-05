@@ -69,7 +69,7 @@ export function priorityForClass(driftClass) {
 function nextActionFor(row, driftClass) {
   if (driftClass === "over-split-candidate") {
     if (row.split === "div") return "Tighten PWG/PWK div splitting to top-level sense divisions before using rows as sense counts.";
-    if (row.split === "number-marker") return "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows.";
+    if (row.split === "number-marker") return "Use marker-run prefix matches to separate main numbered sense runs from later derived or preverb runs.";
     return "Tighten explicit marker scope before using rows as sense counts.";
   }
   if (driftClass === "reverse-overmatch") return "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments.";
@@ -119,6 +119,26 @@ function groupExamples(rows) {
   return grouped;
 }
 
+export function markerRunPrefixMatch(row) {
+  const counts = row.markerRunCounts ?? {};
+  const archivedRows = Number(row.archivedSenseRows || 0);
+  if (!archivedRows || !Object.keys(counts).length) return null;
+
+  let cumulativeRows = 0;
+  for (const runIndex of Object.keys(counts).map(Number).sort((a, b) => a - b)) {
+    cumulativeRows += Number(counts[runIndex] || 0);
+    if (cumulativeRows === archivedRows) {
+      return {
+        maxRunIndex: runIndex,
+        runCount: runIndex + 1,
+        countedRows: cumulativeRows
+      };
+    }
+    if (cumulativeRows > archivedRows) return null;
+  }
+  return null;
+}
+
 function diagnosticRows(summary, senseRows) {
   const examples = groupExamples(senseRows);
   const rows = [];
@@ -127,6 +147,7 @@ function diagnosticRows(summary, senseRows) {
       const driftClass = classifyDrift(row);
       const sourceRows = Number(row.sourceSenseRows || 0);
       const archivedRows = Number(row.archivedSenseRows || 0);
+      const markerPrefix = markerRunPrefixMatch(row);
       rows.push({
         diagnosticId: `r2-drift:${lemma.lemma}:${row.dict}`,
         lemma: lemma.lemma,
@@ -141,6 +162,8 @@ function diagnosticRows(summary, senseRows) {
         sourceMinusArchive: sourceRows - archivedRows,
         sourceToArchiveRatio: ratio(sourceRows, archivedRows),
         splitConfidence: row.splitConfidence ?? [],
+        ...(row.markerRunCounts && Object.keys(row.markerRunCounts).length ? { markerRunCounts: row.markerRunCounts } : {}),
+        ...(markerPrefix ? { markerRunPrefixMatch: markerPrefix } : {}),
         ...(row.reverseRankCounts ? { reverseRankCounts: row.reverseRankCounts } : {}),
         sourceLines: row.sourceLines ?? [],
         driftClass,
@@ -172,6 +195,8 @@ function worklistRows(rows) {
       sourceSenseRows: row.sourceSenseRows,
       archivedSenseRows: row.archivedSenseRows,
       sourceToArchiveRatio: row.sourceToArchiveRatio,
+      ...(row.markerRunCounts ? { markerRunCounts: row.markerRunCounts } : {}),
+      ...(row.markerRunPrefixMatch ? { markerRunPrefixMatch: row.markerRunPrefixMatch } : {}),
       ...(row.reverseRankCounts ? { reverseRankCounts: row.reverseRankCounts } : {}),
       nextAction: row.nextAction
     }));
