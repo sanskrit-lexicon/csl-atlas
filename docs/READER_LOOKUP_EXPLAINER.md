@@ -34,6 +34,7 @@ Each lookup result should expose these parts:
 
 | Part | Meaning | Evidence label |
 |---|---|---|
+| Trust block | Evidence, limitations, validation, and owner repo for the page. | `machine-reviewed` page contract |
 | Original query | What the user typed. | `observed` user input |
 | Normalized query | The deterministic form used for matching. | `derived` |
 | Dictionary coverage | Which dictionaries have a matching headword. | `derived` from dictionary indexes |

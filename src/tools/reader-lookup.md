@@ -76,6 +76,23 @@ display(html`<div class="lookup-metrics">
 ```
 
 ```js
+display(html`<section class="trust-block" aria-labelledby="reader-lookup-trust-title">
+  <h2 id="reader-lookup-trust-title">${t("reader.lookup.trust-title")}</h2>
+  <dl>
+    ${[
+      [t("reader.lookup.trust-evidence-label"), t("reader.lookup.trust-evidence")],
+      [t("reader.lookup.trust-limitations-label"), t("reader.lookup.trust-limitations")],
+      [t("reader.lookup.trust-validation-label"), t("reader.lookup.trust-validation")],
+      [t("reader.lookup.trust-owner-label"), t("reader.lookup.trust-owner")]
+    ].map(([label, value]) => html`<div>
+      <dt>${label}</dt>
+      <dd>${value}</dd>
+    </div>`)}
+  </dl>
+</section>`);
+```
+
+```js
 const query = view(Inputs.text({
   label: t("reader.lookup.query"),
   placeholder: t("reader.lookup.placeholder"),
@@ -168,6 +185,32 @@ display(html`<div class="lookup-results">
   gap: 10px 18px;
   margin: 12px 0;
 }
+.trust-block {
+  border-left: 4px solid color-mix(in srgb, var(--theme-foreground), transparent 55%);
+  padding: 4px 0 4px 14px;
+  margin: 10px 0 18px;
+}
+.trust-block h2 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+.trust-block dl {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+.trust-block div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.24fr) 1fr;
+  gap: 10px;
+}
+.trust-block dt {
+  font-weight: 700;
+}
+.trust-block dd {
+  margin: 0;
+  color: var(--theme-foreground-muted);
+}
 .lookup-empty {
   border: 1px solid var(--theme-foreground-faint);
   border-radius: 8px;
@@ -222,6 +265,12 @@ display(html`<div class="lookup-results">
 }
 .lookup-dict small {
   font-size: .8rem;
+}
+@media (max-width: 640px) {
+  .trust-block div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
 }
 </style>
 

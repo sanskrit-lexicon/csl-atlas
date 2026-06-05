@@ -166,6 +166,15 @@
       "records": "записи",
       "gender": "род/POS",
       "gender-unknown": "род/POS не извлечен",
+      "trust-title": "Блок доверия",
+      "trust-evidence-label": "Данные",
+      "trust-evidence": "Словарные заглавные слова, компактное покрытие поиска, ссылки на источники и машинно извлеченные род/POS, где они доступны.",
+      "trust-limitations-label": "Ограничения",
+      "trust-limitations": "Только статический точный поиск и поиск по началу слова. Нет корпусного поиска, разбора sandhi, анализа композитов, backend-поиска или LexemeHub.",
+      "trust-validation-label": "Проверка",
+      "trust-validation": "Генерируется командой npm run build-dict-comparison; проверяется npm test и npm run build.",
+      "trust-owner-label": "Репозиторий",
+      "trust-owner": "csl-atlas",
       "caveat": "Reader Lookup v1 - статический поиск по словарным леммам, засвидетельствованным минимум в четырех целевых словарях. Это не корпусный поиск, не поиск по пассажам и не LexemeHub. Научные термины должны быть проверены редактором."
     }
   },
