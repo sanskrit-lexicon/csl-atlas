@@ -126,3 +126,22 @@ and `o`.
 For PWK, the archive has no baseline rows for these lemma/dictionary pairs, so
 the same labels are retained as source-backed rebuild evidence rather than
 drift evidence.
+
+## PWG Source-Record Scope
+
+The diagnostics now include `sourceRecordCounts`, capped to the largest source
+records for each lemma/dictionary pair. For PWG, the main over-split rows are
+not single-record problems; several same-headword `<L>` blocks are being
+aggregated before splitting:
+
+| Diagnostic row | Source records | Largest source records |
+|---|---:|---|
+| `r2-drift:gam:pwg` | 4 | `<L>21814` `gam`: 252 rows; `<L>72578` `gam`: 88 rows; `<L>119742` `gam`: 12 rows; `<L>21815` `gam`: 1 row. |
+| `r2-drift:rama:pwg` | 3 | `<L>84468` `rAma`: 19 rows; `<L>84469` `rAma`: 14 rows; `<L>83557` `rama`: 11 rows. |
+| `r2-drift:dharma:pwg` | 2 | `<L>36241` `Darma`: 14 rows; `<L>76490` `Darma`: 7 rows. |
+| `r2-drift:iti:pwg` | 4 | `<L>10029` `iti`: 10 rows; `<L>67185` `iti`: 3 rows; `<L>67186` `iti`: 2 rows; `<L>10030` `iti`: 1 row. |
+
+The next parser decision is therefore not just "count fewer `<div>` tags"; it
+must decide which source records represent the target headword sense series and
+which records are derivative, prefixed, cross-reference, or separately keyed
+material.

@@ -181,6 +181,25 @@ function countValues(values) {
   return Object.fromEntries(Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])));
 }
 
+export function sourceRecordCounts(rows, limit = 8) {
+  const counts = new Map();
+  for (const row of rows) {
+    const blockId = row.blockIds?.[0] ?? "";
+    const sourceLine = row.sourceLine ?? "";
+    const key = `${blockId}\t${sourceLine}\t${row.href ?? ""}`;
+    const current = counts.get(key) ?? { blockId, rawHeadword: row.rawHeadword, sourceLine, href: row.href, rowCount: 0 };
+    current.rowCount += 1;
+    counts.set(key, current);
+  }
+  return [...counts.values()]
+    .sort((a, b) =>
+      b.rowCount - a.rowCount ||
+      String(a.blockId).localeCompare(String(b.blockId), undefined, { numeric: true }) ||
+      Number(a.sourceLine || 0) - Number(b.sourceLine || 0)
+    )
+    .slice(0, limit);
+}
+
 function extractMarkedSanskritGroups(body) {
   const matches = [];
   for (const pattern of MARKED_SANSKRIT) {
@@ -444,6 +463,7 @@ function summarize(rows, sourceRecordsByLemmaDict) {
         parserFamily: dict.parserFamily,
         split: dict.split,
         sourceRecordCount: sourceRecordsByLemmaDict.get(`${target.lemma}:${dict.code}`) ?? 0,
+        sourceRecordCounts: sourceRecordCounts(here),
         sourceSenseRows: here.length,
         archivedSenseRows: archiveSenseRows,
         splitConfidence: uniqueSorted(here.map(row => row.splitConfidence)),

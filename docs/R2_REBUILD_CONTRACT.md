@@ -49,7 +49,7 @@ sense rows, and builds provisional Sanskrit-anchor alignments.
 
 | Output | Role | Current content |
 |---|---|---|
-| `data/lexico/r2_source_anchor_summary.json` | Count and drift summary against archive fixtures. | 5 lemmas, 14 dictionaries, 1,811 source-backed rows versus 445 archived rows. |
+| `data/lexico/r2_source_anchor_summary.json` | Count and drift summary against archive fixtures. | 5 lemmas, 14 dictionaries, 1,811 source-backed rows versus 445 archived rows, with top source-record counts per lemma/dictionary. |
 | `data/lexico/r2_source_anchor_senses.jsonl` | Minimal source-backed sense-row worklist. | One provisional row per split source span, with `<L>` ids, source links, anchors, limitations, explicit-marker labels/run indexes, and AE reverse-match rank metadata where applicable. |
 | `data/lexico/r2_source_anchor_alignments.json` | Prototype alignment worklist. | Jaccard-ranked shared Sanskrit/citation anchors, capped to top rows per lemma. |
 | `data/lexico/r2_parser_diagnostics.json` | Parser-drift worklist for the next rebuild slice. | 70 lemma/dictionary diagnostics; 17 high-priority rows classify PWG/PWK div splitting, BEN/AP90/BHS marker scope, AE reverse overmatch, and SKD/VCP `iti` review. |

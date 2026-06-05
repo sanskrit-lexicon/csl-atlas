@@ -9,7 +9,7 @@ import assert from "node:assert/strict";
 
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
-import { jaccard, lookupKeysForLemma, reverseMatchProfile, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
+import { jaccard, lookupKeysForLemma, reverseMatchProfile, sourceRecordCounts, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
 import { classifyDrift, markerRunPrefixMatch, priorityForClass } from "../scripts/build-r2-parser-diagnostics.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
@@ -97,6 +97,19 @@ test("splitExplicitMarkers captures div n labels while keeping ordinal ids", () 
 test("jaccard scores anchor overlap", () => {
   assert.equal(jaccard(["a", "b"], ["b", "c"]), 1 / 3);
   assert.equal(jaccard([], []), 0);
+});
+
+test("sourceRecordCounts keeps the largest source records first", () => {
+  const rows = [
+    { blockIds: ["2"], rawHeadword: "b", sourceLine: 20, href: "b" },
+    { blockIds: ["1"], rawHeadword: "a", sourceLine: 10, href: "a" },
+    { blockIds: ["2"], rawHeadword: "b", sourceLine: 20, href: "b" },
+    { blockIds: ["3"], rawHeadword: "c", sourceLine: 30, href: "c" }
+  ];
+  assert.deepEqual(sourceRecordCounts(rows, 2), [
+    { blockId: "2", rawHeadword: "b", sourceLine: 20, href: "b", rowCount: 2 },
+    { blockId: "1", rawHeadword: "a", sourceLine: 10, href: "a", rowCount: 1 }
+  ]);
 });
 
 test("reverseMatchProfile ranks AE equivalents by first matching group", () => {
