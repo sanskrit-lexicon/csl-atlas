@@ -189,7 +189,7 @@ The page must say:
 - a cluster is evidence for structural similarity, not direct proof of descent;
 - zeros must be read as convention-sensitive;
 - DCS/corpus frequency is not part of this chart;
-- H4 semantic fields are later and should not be mixed into H6.
+- H4 semantic fields are separate M8 data/chart work and should not be mixed into H6.
 
 ## Acceptance
 

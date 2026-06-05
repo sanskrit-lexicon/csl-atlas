@@ -45,7 +45,7 @@ shape when implemented.
 | Sense divergence | Whether cross-dictionary sense disagreement reflects copying, condensation, family style, or parser weakness. | `csl-atlas`; dictionary sense evidence only. |
 | Cross-reference lineage candidates | Whether shared Sanskrit cross-reference targets preserve lineage beyond headword overlap. | `csl-atlas`; dictionary graph evidence only. |
 | SKD anubandha adjudication | Whether indigenous it-marker coding can be decoded safely enough to emit reviewed grammatical columns. | `csl-atlas`; philological review required. |
-| H4 semantic-field review | Whether Amarakosa-native fields classify dictionary evidence without importing corpus categories. | `csl-atlas`; after H6 and microstructure docs. |
+| H4 semantic-field review | Whether Amarakosa-native fields classify dictionary evidence without importing corpus categories. | `csl-atlas`; M8 data package built, chart/review next. |
 
 ## Proof Types
 

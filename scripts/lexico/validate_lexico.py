@@ -208,6 +208,39 @@ def validate_m7():
     return len(conflicts), len(agr.get("features", {}))
 
 
+def validate_m8():
+    """m8 semantic fields: AMAR field rows and per-dict coverage matrix agree
+    with the report counts, and coverage never exceeds the field denominator."""
+    fp = os.path.join(DATA, "semantic_fields.csv")
+    cp = os.path.join(DATA, "semantic_field_coverage.csv")
+    jp = os.path.join(DATA, "semantic_field_report.json")
+    if not (os.path.exists(fp) and os.path.exists(cp) and os.path.exists(jp)):
+        return 0, 0
+    fields = load_csv("semantic_fields.csv")
+    coverage = load_csv("semantic_field_coverage.csv")
+    report = load_json("semantic_field_report.json")
+    counts = report.get("counts", {})
+    check(len(fields) == counts.get("semantic_field_rows"),
+          f"m8: semantic field CSV rows {len(fields)} != report {counts.get('semantic_field_rows')}")
+    check(len(coverage) == counts.get("coverage_rows"),
+          f"m8: coverage CSV rows {len(coverage)} != report {counts.get('coverage_rows')}")
+    field_sizes = collections.Counter()
+    for r in fields:
+        check(bool(r["lemma"]), "m8: empty AMAR lemma")
+        check(bool(r["field_key"]), f"m8 {r['lemma']}: empty field_key")
+        field_sizes[r["field_key"]] += 1
+    for i, r in enumerate(coverage):
+        denom = int(r["amar_lemmas"])
+        covered = int(r["covered_lemmas"])
+        pct = float(r["coverage_pct"])
+        check(r["field_key"] in field_sizes, f"m8 coverage row {i}: unknown field {r['field_key']}")
+        check(denom == field_sizes[r["field_key"]],
+              f"m8 coverage row {i}: denom {denom} != semantic rows {field_sizes[r['field_key']]}")
+        check(0 <= covered <= denom, f"m8 coverage row {i}: covered {covered} outside 0..{denom}")
+        check(0.0 <= pct <= 1.0, f"m8 coverage row {i}: pct {pct} outside 0..1")
+    return len(fields), len(coverage)
+
+
 def main():
     print("Validating data/lexico/ …")
     m1_rows, m1_dicts = validate_m1()
@@ -217,6 +250,7 @@ def main():
     m5_rows, m5_dicts = validate_m5()
     m6_rows, m6_pairs = validate_m6()
     m7_rows, m7_feats = validate_m7()
+    m8_rows, m8_cov = validate_m8()
     print(f"  m1: {m1_rows:,} rows / {m1_dicts} dicts")
     print(f"  m2: {m2_rows:,} rows / {m2_dicts} preverb dicts")
     print(f"  m3: {m3_rows:,} rows / {m3_dicts} xref dicts")
@@ -224,6 +258,7 @@ def main():
     print(f"  m5: {m5_rows:,} rows / {m5_dicts} dicts (unified profile join)")
     print(f"  m6: {m6_rows:,} shared cross-ref edges / {m6_pairs} dict-pair(s) (lineage overlap)")
     print(f"  m7: {m7_rows:,} feature-conflict rows / {m7_feats} features (root agreement)")
+    print(f"  m8: {m8_rows:,} AMAR lemma-field rows / {m8_cov:,} coverage rows (semantic fields)")
     if _fail:
         print(f"\nFAIL — {len(_fail)} check(s):", file=sys.stderr)
         for m in _fail[:25]:

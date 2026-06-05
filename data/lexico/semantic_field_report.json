@@ -1,0 +1,2989 @@
+{
+  "schema": "h4-semantic-fields-v1",
+  "question": "Which dictionaries cover which Amarakośa-native semantic fields?",
+  "source": {
+    "amar": "../AMAR/amar.txt",
+    "csl_orig": "../csl-orig/v02"
+  },
+  "method": "Parse AMAR <info kvvv> kāṇḍa/varga/upavarga labels and <syns> synonym lists, normalize AMAR lemmas and csl-orig <k1> by removing accents and trailing homonym digits, then compute dictionary coverage per field.",
+  "caveats": "Dictionary-first headword coverage only. This does not measure corpus frequency, passage attestation, sense coverage, or non-headword mentions. AMAR is a taxonomy seed, not a claim that every dictionary organises meaning by Amarakośa categories.",
+  "fields": [
+    {
+      "field_key": "praTamaM kARqam|svargavargaH|",
+      "field_order": 1,
+      "kanda": "praTamaM kARqam",
+      "varga": "svargavargaH",
+      "upavarga": "",
+      "amar_entries": 52,
+      "amar_lemmas": 674
+    },
+    {
+      "field_key": "praTamaM kARqam|vyomavargaH|",
+      "field_order": 2,
+      "kanda": "praTamaM kARqam",
+      "varga": "vyomavargaH",
+      "upavarga": "",
+      "amar_entries": 1,
+      "amar_lemmas": 23
+    },
+    {
+      "field_key": "praTamaM kARqam|digvargaH|",
+      "field_order": 3,
+      "kanda": "praTamaM kARqam",
+      "varga": "digvargaH",
+      "upavarga": "",
+      "amar_entries": 43,
+      "amar_lemmas": 343
+    },
+    {
+      "field_key": "praTamaM kARqam|kAlavargaH|",
+      "field_order": 4,
+      "kanda": "praTamaM kARqam",
+      "varga": "kAlavargaH",
+      "upavarga": "",
+      "amar_entries": 49,
+      "amar_lemmas": 246
+    },
+    {
+      "field_key": "praTamaM kARqam|DIvargaH|",
+      "field_order": 5,
+      "kanda": "praTamaM kARqam",
+      "varga": "DIvargaH",
+      "upavarga": "",
+      "amar_entries": 27,
+      "amar_lemmas": 157
+    },
+    {
+      "field_key": "praTamaM kARqam|SabdAdivargaH|",
+      "field_order": 6,
+      "kanda": "praTamaM kARqam",
+      "varga": "SabdAdivargaH",
+      "upavarga": "",
+      "amar_entries": 44,
+      "amar_lemmas": 207
+    },
+    {
+      "field_key": "praTamaM kARqam|nAwyavargaH|",
+      "field_order": 7,
+      "kanda": "praTamaM kARqam",
+      "varga": "nAwyavargaH",
+      "upavarga": "",
+      "amar_entries": 55,
+      "amar_lemmas": 304
+    },
+    {
+      "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+      "field_order": 8,
+      "kanda": "praTamaM kARqam",
+      "varga": "pAtAlaBogivargaH",
+      "upavarga": "",
+      "amar_entries": 14,
+      "amar_lemmas": 103
+    },
+    {
+      "field_key": "praTamaM kARqam|narakavargaH|",
+      "field_order": 9,
+      "kanda": "praTamaM kARqam",
+      "varga": "narakavargaH",
+      "upavarga": "",
+      "amar_entries": 3,
+      "amar_lemmas": 29
+    },
+    {
+      "field_key": "praTamaM kARqam|vArivargaH|",
+      "field_order": 10,
+      "kanda": "praTamaM kARqam",
+      "varga": "vArivargaH",
+      "upavarga": "",
+      "amar_entries": 66,
+      "amar_lemmas": 344
+    },
+    {
+      "field_key": "dvitIyaM kARqam|BUmivargaH|",
+      "field_order": 11,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "BUmivargaH",
+      "upavarga": "",
+      "amar_entries": 28,
+      "amar_lemmas": 145
+    },
+    {
+      "field_key": "dvitIyaM kARqam|puravargaH|",
+      "field_order": 12,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "puravargaH",
+      "upavarga": "",
+      "amar_entries": 34,
+      "amar_lemmas": 149
+    },
+    {
+      "field_key": "dvitIyaM kARqam|SElavargaH|",
+      "field_order": 13,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "SElavargaH",
+      "upavarga": "",
+      "amar_entries": 14,
+      "amar_lemmas": 67
+    },
+    {
+      "field_key": "dvitIyaM kARqam|vanOzaDivargaH|",
+      "field_order": 14,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "vanOzaDivargaH",
+      "upavarga": "",
+      "amar_entries": 248,
+      "amar_lemmas": 1307
+    },
+    {
+      "field_key": "dvitIyaM kARqam|siMhAdivargaH|",
+      "field_order": 15,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "siMhAdivargaH",
+      "upavarga": "",
+      "amar_entries": 60,
+      "amar_lemmas": 396
+    },
+    {
+      "field_key": "dvitIyaM kARqam|manuzyavargaH|",
+      "field_order": 16,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "manuzyavargaH",
+      "upavarga": "",
+      "amar_entries": 241,
+      "amar_lemmas": 1086
+    },
+    {
+      "field_key": "dvitIyaM kARqam|brahmavargaH|",
+      "field_order": 17,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "brahmavargaH",
+      "upavarga": "",
+      "amar_entries": 106,
+      "amar_lemmas": 385
+    },
+    {
+      "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+      "field_order": 18,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "kzatriyavargaH",
+      "upavarga": "",
+      "amar_entries": 194,
+      "amar_lemmas": 864
+    },
+    {
+      "field_key": "dvitIyaM kARqam|vESyavargaH|",
+      "field_order": 19,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "vESyavargaH",
+      "upavarga": "",
+      "amar_entries": 186,
+      "amar_lemmas": 845
+    },
+    {
+      "field_key": "dvitIyaM kARqam|SUdravargaH|",
+      "field_order": 20,
+      "kanda": "dvitIyaM kARqam",
+      "varga": "SUdravargaH",
+      "upavarga": "",
+      "amar_entries": 76,
+      "amar_lemmas": 349
+    },
+    {
+      "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+      "field_order": 21,
+      "kanda": "tftIyaM sAmAnyakARqam",
+      "varga": "viSezyaniGnavargaH",
+      "upavarga": "",
+      "amar_entries": 194,
+      "amar_lemmas": 1017
+    },
+    {
+      "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+      "field_order": 22,
+      "kanda": "tftIyaM sAmAnyakARqam",
+      "varga": "saNkIrRavargaH",
+      "upavarga": "",
+      "amar_entries": 80,
+      "amar_lemmas": 353
+    },
+    {
+      "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+      "field_order": 23,
+      "kanda": "tftIyaM sAmAnyakARqam",
+      "varga": "nAnArTavargaH",
+      "upavarga": "",
+      "amar_entries": 501,
+      "amar_lemmas": 2150
+    },
+    {
+      "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+      "field_order": 24,
+      "kanda": "tftIyaM sAmAnyakARqam",
+      "varga": "avyayavargaH",
+      "upavarga": "",
+      "amar_entries": 43,
+      "amar_lemmas": 268
+    }
+  ],
+  "dictionaries": {
+    "abch": {
+      "records": 1965,
+      "distinct_headwords": 0,
+      "covered_amar_lemmas": 0,
+      "coverage_pct": 0.0,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 207
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 103
+        }
+      ]
+    },
+    "acc": {
+      "records": 49822,
+      "distinct_headwords": 32576,
+      "covered_amar_lemmas": 546,
+      "coverage_pct": 0.0559,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.1944,
+          "covered_lemmas": 131,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.172,
+          "covered_lemmas": 59,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.1304,
+          "covered_lemmas": 3,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.1179,
+          "covered_lemmas": 29,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.1117,
+          "covered_lemmas": 43,
+          "amar_lemmas": 385
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.1034,
+          "covered_lemmas": 3,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.0955,
+          "covered_lemmas": 15,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.0896,
+          "covered_lemmas": 6,
+          "amar_lemmas": 67
+        }
+      ]
+    },
+    "acph": {
+      "records": 163,
+      "distinct_headwords": 0,
+      "covered_amar_lemmas": 0,
+      "coverage_pct": 0.0,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 207
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 103
+        }
+      ]
+    },
+    "acsj": {
+      "records": 240,
+      "distinct_headwords": 0,
+      "covered_amar_lemmas": 0,
+      "coverage_pct": 0.0,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 207
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.0,
+          "covered_lemmas": 0,
+          "amar_lemmas": 103
+        }
+      ]
+    },
+    "ae": {
+      "records": 11359,
+      "distinct_headwords": 11343,
+      "covered_amar_lemmas": 14,
+      "coverage_pct": 0.0014,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.0224,
+          "covered_lemmas": 6,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.0069,
+          "covered_lemmas": 1,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.0064,
+          "covered_lemmas": 1,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.0041,
+          "covered_lemmas": 1,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.003,
+          "covered_lemmas": 2,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.0028,
+          "covered_lemmas": 1,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "dvitIyaM kARqam|vESyavargaH|",
+          "varga": "vESyavargaH",
+          "coverage_pct": 0.0024,
+          "covered_lemmas": 2,
+          "amar_lemmas": 845
+        },
+        {
+          "field_key": "dvitIyaM kARqam|manuzyavargaH|",
+          "varga": "manuzyavargaH",
+          "coverage_pct": 0.0018,
+          "covered_lemmas": 2,
+          "amar_lemmas": 1086
+        }
+      ]
+    },
+    "ap": {
+      "records": 90654,
+      "distinct_headwords": 88701,
+      "covered_amar_lemmas": 4634,
+      "coverage_pct": 0.4748,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.885,
+          "covered_lemmas": 900,
+          "amar_lemmas": 1017
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.7015,
+          "covered_lemmas": 188,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.6369,
+          "covered_lemmas": 100,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.5862,
+          "covered_lemmas": 17,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.5655,
+          "covered_lemmas": 82,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.565,
+          "covered_lemmas": 139,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.5091,
+          "covered_lemmas": 196,
+          "amar_lemmas": 385
+        },
+        {
+          "field_key": "dvitIyaM kARqam|manuzyavargaH|",
+          "varga": "manuzyavargaH",
+          "coverage_pct": 0.5046,
+          "covered_lemmas": 548,
+          "amar_lemmas": 1086
+        }
+      ]
+    },
+    "ap90": {
+      "records": 34882,
+      "distinct_headwords": 34277,
+      "covered_amar_lemmas": 3162,
+      "coverage_pct": 0.324,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.7139,
+          "covered_lemmas": 726,
+          "amar_lemmas": 1017
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.5597,
+          "covered_lemmas": 150,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.4959,
+          "covered_lemmas": 122,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.4904,
+          "covered_lemmas": 77,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.4483,
+          "covered_lemmas": 13,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.403,
+          "covered_lemmas": 27,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.3898,
+          "covered_lemmas": 838,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.3724,
+          "covered_lemmas": 54,
+          "amar_lemmas": 145
+        }
+      ]
+    },
+    "armh": {
+      "records": 7907,
+      "distinct_headwords": 6673,
+      "covered_amar_lemmas": 4438,
+      "coverage_pct": 0.4548,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.7476,
+          "covered_lemmas": 77,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.7114,
+          "covered_lemmas": 106,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.6957,
+          "covered_lemmas": 16,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.6716,
+          "covered_lemmas": 45,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.6365,
+          "covered_lemmas": 429,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.6301,
+          "covered_lemmas": 155,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "dvitIyaM kARqam|siMhAdivargaH|",
+          "varga": "siMhAdivargaH",
+          "coverage_pct": 0.6288,
+          "covered_lemmas": 249,
+          "amar_lemmas": 396
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.6242,
+          "covered_lemmas": 98,
+          "amar_lemmas": 157
+        }
+      ]
+    },
+    "ben": {
+      "records": 17310,
+      "distinct_headwords": 17036,
+      "covered_amar_lemmas": 4523,
+      "coverage_pct": 0.4635,
+      "top_fields": [
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.7164,
+          "covered_lemmas": 48,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.6829,
+          "covered_lemmas": 168,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.6815,
+          "covered_lemmas": 107,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.6711,
+          "covered_lemmas": 204,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.6465,
+          "covered_lemmas": 1390,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.6232,
+          "covered_lemmas": 220,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.6087,
+          "covered_lemmas": 14,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.604,
+          "covered_lemmas": 90,
+          "amar_lemmas": 149
+        }
+      ]
+    },
+    "bhs": {
+      "records": 17839,
+      "distinct_headwords": 17777,
+      "covered_amar_lemmas": 1313,
+      "coverage_pct": 0.1345,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.3121,
+          "covered_lemmas": 49,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.2759,
+          "covered_lemmas": 8,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.2265,
+          "covered_lemmas": 487,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.2239,
+          "covered_lemmas": 15,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.2174,
+          "covered_lemmas": 5,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.2062,
+          "covered_lemmas": 139,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.1983,
+          "covered_lemmas": 68,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.1911,
+          "covered_lemmas": 47,
+          "amar_lemmas": 246
+        }
+      ]
+    },
+    "bop": {
+      "records": 8961,
+      "distinct_headwords": 8504,
+      "covered_amar_lemmas": 3616,
+      "coverage_pct": 0.3705,
+      "top_fields": [
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.7164,
+          "covered_lemmas": 48,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.6522,
+          "covered_lemmas": 15,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.622,
+          "covered_lemmas": 153,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.5884,
+          "covered_lemmas": 1265,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.5822,
+          "covered_lemmas": 177,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.5732,
+          "covered_lemmas": 90,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.5224,
+          "covered_lemmas": 140,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.5172,
+          "covered_lemmas": 15,
+          "amar_lemmas": 29
+        }
+      ]
+    },
+    "bor": {
+      "records": 24609,
+      "distinct_headwords": 22013,
+      "covered_amar_lemmas": 11,
+      "coverage_pct": 0.0011,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.0187,
+          "covered_lemmas": 5,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.0069,
+          "covered_lemmas": 1,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.0041,
+          "covered_lemmas": 1,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.0028,
+          "covered_lemmas": 1,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.0026,
+          "covered_lemmas": 1,
+          "amar_lemmas": 385
+        },
+        {
+          "field_key": "dvitIyaM kARqam|vESyavargaH|",
+          "varga": "vESyavargaH",
+          "coverage_pct": 0.0024,
+          "covered_lemmas": 2,
+          "amar_lemmas": 845
+        },
+        {
+          "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+          "varga": "kzatriyavargaH",
+          "coverage_pct": 0.0012,
+          "covered_lemmas": 1,
+          "amar_lemmas": 864
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.001,
+          "covered_lemmas": 1,
+          "amar_lemmas": 1017
+        }
+      ]
+    },
+    "bur": {
+      "records": 19776,
+      "distinct_headwords": 19146,
+      "covered_amar_lemmas": 4702,
+      "coverage_pct": 0.4818,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.6957,
+          "covered_lemmas": 16,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.6897,
+          "covered_lemmas": 20,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.6716,
+          "covered_lemmas": 45,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.6626,
+          "covered_lemmas": 163,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.6561,
+          "covered_lemmas": 103,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.6102,
+          "covered_lemmas": 1312,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.5921,
+          "covered_lemmas": 180,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.5896,
+          "covered_lemmas": 158,
+          "amar_lemmas": 268
+        }
+      ]
+    },
+    "cae": {
+      "records": 40069,
+      "distinct_headwords": 38484,
+      "covered_amar_lemmas": 5502,
+      "coverage_pct": 0.5638,
+      "top_fields": [
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.8209,
+          "covered_lemmas": 55,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.7561,
+          "covered_lemmas": 186,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.7516,
+          "covered_lemmas": 118,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.7377,
+          "covered_lemmas": 1586,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.7171,
+          "covered_lemmas": 218,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.7013,
+          "covered_lemmas": 270,
+          "amar_lemmas": 385
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.6957,
+          "covered_lemmas": 16,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+          "varga": "kzatriyavargaH",
+          "coverage_pct": 0.6678,
+          "covered_lemmas": 577,
+          "amar_lemmas": 864
+        }
+      ]
+    },
+    "ccs": {
+      "records": 30010,
+      "distinct_headwords": 28751,
+      "covered_amar_lemmas": 4993,
+      "coverage_pct": 0.5116,
+      "top_fields": [
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.791,
+          "covered_lemmas": 53,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.7452,
+          "covered_lemmas": 117,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.7195,
+          "covered_lemmas": 177,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.6974,
+          "covered_lemmas": 212,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.694,
+          "covered_lemmas": 1492,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.6522,
+          "covered_lemmas": 15,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.6408,
+          "covered_lemmas": 66,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.6309,
+          "covered_lemmas": 94,
+          "amar_lemmas": 149
+        }
+      ]
+    },
+    "fri": {
+      "records": 8155,
+      "distinct_headwords": 7775,
+      "covered_amar_lemmas": 2424,
+      "coverage_pct": 0.2484,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.5652,
+          "covered_lemmas": 13,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.4925,
+          "covered_lemmas": 132,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.4715,
+          "covered_lemmas": 116,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.4702,
+          "covered_lemmas": 1011,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.4375,
+          "covered_lemmas": 133,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.4328,
+          "covered_lemmas": 29,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.4268,
+          "covered_lemmas": 67,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.3793,
+          "covered_lemmas": 11,
+          "amar_lemmas": 29
+        }
+      ]
+    },
+    "gra": {
+      "records": 12785,
+      "distinct_headwords": 11108,
+      "covered_amar_lemmas": 1637,
+      "coverage_pct": 0.1677,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.5652,
+          "covered_lemmas": 13,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.374,
+          "covered_lemmas": 92,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.3582,
+          "covered_lemmas": 24,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.3209,
+          "covered_lemmas": 86,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.3065,
+          "covered_lemmas": 659,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.3003,
+          "covered_lemmas": 103,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.2675,
+          "covered_lemmas": 42,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.2468,
+          "covered_lemmas": 95,
+          "amar_lemmas": 385
+        }
+      ]
+    },
+    "gst": {
+      "records": 6780,
+      "distinct_headwords": 6761,
+      "covered_amar_lemmas": 503,
+      "coverage_pct": 0.0515,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.0896,
+          "covered_lemmas": 24,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.087,
+          "covered_lemmas": 2,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.0836,
+          "covered_lemmas": 85,
+          "amar_lemmas": 1017
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.0821,
+          "covered_lemmas": 17,
+          "amar_lemmas": 207
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.0724,
+          "covered_lemmas": 22,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+          "varga": "kzatriyavargaH",
+          "coverage_pct": 0.0706,
+          "covered_lemmas": 61,
+          "amar_lemmas": 864
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.0701,
+          "covered_lemmas": 27,
+          "amar_lemmas": 385
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.068,
+          "covered_lemmas": 24,
+          "amar_lemmas": 353
+        }
+      ]
+    },
+    "ieg": {
+      "records": 7907,
+      "distinct_headwords": 7575,
+      "covered_amar_lemmas": 1104,
+      "coverage_pct": 0.1131,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.5217,
+          "covered_lemmas": 12,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.3087,
+          "covered_lemmas": 46,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.2836,
+          "covered_lemmas": 19,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.2828,
+          "covered_lemmas": 41,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.2276,
+          "covered_lemmas": 56,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.2172,
+          "covered_lemmas": 467,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+          "varga": "kzatriyavargaH",
+          "coverage_pct": 0.1875,
+          "covered_lemmas": 162,
+          "amar_lemmas": 864
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.1844,
+          "covered_lemmas": 71,
+          "amar_lemmas": 385
+        }
+      ]
+    },
+    "inm": {
+      "records": 12647,
+      "distinct_headwords": 9454,
+      "covered_amar_lemmas": 1585,
+      "coverage_pct": 0.1624,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.5237,
+          "covered_lemmas": 353,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.3499,
+          "covered_lemmas": 120,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.3496,
+          "covered_lemmas": 86,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.3478,
+          "covered_lemmas": 8,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.3439,
+          "covered_lemmas": 54,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.2985,
+          "covered_lemmas": 20,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.2759,
+          "covered_lemmas": 8,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "dvitIyaM kARqam|siMhAdivargaH|",
+          "varga": "siMhAdivargaH",
+          "coverage_pct": 0.2449,
+          "covered_lemmas": 97,
+          "amar_lemmas": 396
+        }
+      ]
+    },
+    "krm": {
+      "records": 2061,
+      "distinct_headwords": 1698,
+      "covered_amar_lemmas": 233,
+      "coverage_pct": 0.0239,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.0528,
+          "covered_lemmas": 13,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.0526,
+          "covered_lemmas": 113,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.051,
+          "covered_lemmas": 8,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.0485,
+          "covered_lemmas": 5,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.047,
+          "covered_lemmas": 7,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.0435,
+          "covered_lemmas": 1,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|siMhAdivargaH|",
+          "varga": "siMhAdivargaH",
+          "coverage_pct": 0.0429,
+          "covered_lemmas": 17,
+          "amar_lemmas": 396
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.0428,
+          "covered_lemmas": 13,
+          "amar_lemmas": 304
+        }
+      ]
+    },
+    "lan": {
+      "records": 4944,
+      "distinct_headwords": 4726,
+      "covered_amar_lemmas": 1767,
+      "coverage_pct": 0.1811,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.4783,
+          "covered_lemmas": 11,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.4627,
+          "covered_lemmas": 31,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.4472,
+          "covered_lemmas": 110,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.403,
+          "covered_lemmas": 108,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.3688,
+          "covered_lemmas": 793,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.2994,
+          "covered_lemmas": 47,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.2961,
+          "covered_lemmas": 114,
+          "amar_lemmas": 385
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.2829,
+          "covered_lemmas": 86,
+          "amar_lemmas": 304
+        }
+      ]
+    },
+    "lrv": {
+      "records": 53441,
+      "distinct_headwords": 48259,
+      "covered_amar_lemmas": 7169,
+      "coverage_pct": 0.7346,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.913,
+          "covered_lemmas": 21,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.8943,
+          "covered_lemmas": 220,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.8725,
+          "covered_lemmas": 308,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.8657,
+          "covered_lemmas": 58,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.8647,
+          "covered_lemmas": 179,
+          "amar_lemmas": 207
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.8621,
+          "covered_lemmas": 25,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.8571,
+          "covered_lemmas": 330,
+          "amar_lemmas": 385
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.8523,
+          "covered_lemmas": 127,
+          "amar_lemmas": 149
+        }
+      ]
+    },
+    "mci": {
+      "records": 2643,
+      "distinct_headwords": 2325,
+      "covered_amar_lemmas": 481,
+      "coverage_pct": 0.0493,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.1739,
+          "covered_lemmas": 4,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.1642,
+          "covered_lemmas": 11,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.1338,
+          "covered_lemmas": 21,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.1312,
+          "covered_lemmas": 45,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|vArivargaH|",
+          "varga": "vArivargaH",
+          "coverage_pct": 0.1308,
+          "covered_lemmas": 45,
+          "amar_lemmas": 344
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.1165,
+          "covered_lemmas": 12,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.1083,
+          "covered_lemmas": 73,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.1057,
+          "covered_lemmas": 26,
+          "amar_lemmas": 246
+        }
+      ]
+    },
+    "md": {
+      "records": 20749,
+      "distinct_headwords": 20102,
+      "covered_amar_lemmas": 4369,
+      "coverage_pct": 0.4477,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.687,
+          "covered_lemmas": 169,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.6624,
+          "covered_lemmas": 104,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.6418,
+          "covered_lemmas": 43,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.6353,
+          "covered_lemmas": 1366,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.6087,
+          "covered_lemmas": 14,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.6086,
+          "covered_lemmas": 185,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.6082,
+          "covered_lemmas": 163,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.5862,
+          "covered_lemmas": 17,
+          "amar_lemmas": 29
+        }
+      ]
+    },
+    "mw": {
+      "records": 286560,
+      "distinct_headwords": 194084,
+      "covered_amar_lemmas": 8955,
+      "coverage_pct": 0.9176,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 1.0,
+          "covered_lemmas": 23,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.9851,
+          "covered_lemmas": 66,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.9732,
+          "covered_lemmas": 145,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.9682,
+          "covered_lemmas": 152,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.9655,
+          "covered_lemmas": 140,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.9605,
+          "covered_lemmas": 292,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+          "varga": "kzatriyavargaH",
+          "coverage_pct": 0.9595,
+          "covered_lemmas": 829,
+          "amar_lemmas": 864
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.9567,
+          "covered_lemmas": 973,
+          "amar_lemmas": 1017
+        }
+      ]
+    },
+    "mw72": {
+      "records": 55388,
+      "distinct_headwords": 51159,
+      "covered_amar_lemmas": 6068,
+      "coverage_pct": 0.6218,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.8782,
+          "covered_lemmas": 310,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.8269,
+          "covered_lemmas": 841,
+          "amar_lemmas": 1017
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.7961,
+          "covered_lemmas": 242,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.7886,
+          "covered_lemmas": 194,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.7826,
+          "covered_lemmas": 18,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.7771,
+          "covered_lemmas": 122,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.7391,
+          "covered_lemmas": 153,
+          "amar_lemmas": 207
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.7377,
+          "covered_lemmas": 1586,
+          "amar_lemmas": 2150
+        }
+      ]
+    },
+    "mwe": {
+      "records": 32378,
+      "distinct_headwords": 28238,
+      "covered_amar_lemmas": 27,
+      "coverage_pct": 0.0028,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.0224,
+          "covered_lemmas": 6,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.0191,
+          "covered_lemmas": 3,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.0087,
+          "covered_lemmas": 3,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.0074,
+          "covered_lemmas": 5,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.0069,
+          "covered_lemmas": 1,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.0067,
+          "covered_lemmas": 1,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.0057,
+          "covered_lemmas": 2,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.0052,
+          "covered_lemmas": 2,
+          "amar_lemmas": 385
+        }
+      ]
+    },
+    "pe": {
+      "records": 8799,
+      "distinct_headwords": 6623,
+      "covered_amar_lemmas": 1239,
+      "coverage_pct": 0.127,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.3412,
+          "covered_lemmas": 230,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.3103,
+          "covered_lemmas": 9,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.2886,
+          "covered_lemmas": 71,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.2687,
+          "covered_lemmas": 18,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.2611,
+          "covered_lemmas": 41,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.2536,
+          "covered_lemmas": 87,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "dvitIyaM kARqam|siMhAdivargaH|",
+          "varga": "siMhAdivargaH",
+          "coverage_pct": 0.2197,
+          "covered_lemmas": 87,
+          "amar_lemmas": 396
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.2174,
+          "covered_lemmas": 5,
+          "amar_lemmas": 23
+        }
+      ]
+    },
+    "pgn": {
+      "records": 485,
+      "distinct_headwords": 470,
+      "covered_amar_lemmas": 68,
+      "coverage_pct": 0.007,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.0435,
+          "covered_lemmas": 1,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.0414,
+          "covered_lemmas": 6,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.0318,
+          "covered_lemmas": 5,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.0282,
+          "covered_lemmas": 19,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.0175,
+          "covered_lemmas": 6,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|vArivargaH|",
+          "varga": "vArivargaH",
+          "coverage_pct": 0.0174,
+          "covered_lemmas": 6,
+          "amar_lemmas": 344
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.0163,
+          "covered_lemmas": 4,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.0149,
+          "covered_lemmas": 1,
+          "amar_lemmas": 67
+        }
+      ]
+    },
+    "pui": {
+      "records": 17512,
+      "distinct_headwords": 11730,
+      "covered_amar_lemmas": 1898,
+      "coverage_pct": 0.1945,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.4828,
+          "covered_lemmas": 14,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.4792,
+          "covered_lemmas": 323,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.4634,
+          "covered_lemmas": 114,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.4111,
+          "covered_lemmas": 141,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.3822,
+          "covered_lemmas": 60,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.3134,
+          "covered_lemmas": 21,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.3103,
+          "covered_lemmas": 45,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.3059,
+          "covered_lemmas": 93,
+          "amar_lemmas": 304
+        }
+      ]
+    },
+    "pw": {
+      "records": 170556,
+      "distinct_headwords": 151346,
+      "covered_amar_lemmas": 7790,
+      "coverage_pct": 0.7982,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.9565,
+          "covered_lemmas": 22,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.9254,
+          "covered_lemmas": 62,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.906,
+          "covered_lemmas": 135,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.9029,
+          "covered_lemmas": 93,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.8895,
+          "covered_lemmas": 314,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+          "varga": "kzatriyavargaH",
+          "coverage_pct": 0.8877,
+          "covered_lemmas": 767,
+          "amar_lemmas": 864
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.8854,
+          "covered_lemmas": 139,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.8821,
+          "covered_lemmas": 217,
+          "amar_lemmas": 246
+        }
+      ]
+    },
+    "pwg": {
+      "records": 123366,
+      "distinct_headwords": 106080,
+      "covered_amar_lemmas": 7648,
+      "coverage_pct": 0.7837,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.913,
+          "covered_lemmas": 21,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.9126,
+          "covered_lemmas": 94,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.9037,
+          "covered_lemmas": 319,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.8981,
+          "covered_lemmas": 141,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.8955,
+          "covered_lemmas": 60,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.8926,
+          "covered_lemmas": 133,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.878,
+          "covered_lemmas": 216,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+          "varga": "kzatriyavargaH",
+          "coverage_pct": 0.8715,
+          "covered_lemmas": 753,
+          "amar_lemmas": 864
+        }
+      ]
+    },
+    "pwkvn": {
+      "records": 24976,
+      "distinct_headwords": 14995,
+      "covered_amar_lemmas": 994,
+      "coverage_pct": 0.1019,
+      "top_fields": [
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.1946,
+          "covered_lemmas": 29,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.194,
+          "covered_lemmas": 13,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.1739,
+          "covered_lemmas": 4,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.1707,
+          "covered_lemmas": 42,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.1691,
+          "covered_lemmas": 58,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.1619,
+          "covered_lemmas": 348,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.1553,
+          "covered_lemmas": 16,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.1465,
+          "covered_lemmas": 23,
+          "amar_lemmas": 157
+        }
+      ]
+    },
+    "sch": {
+      "records": 29125,
+      "distinct_headwords": 28455,
+      "covered_amar_lemmas": 2382,
+      "coverage_pct": 0.2441,
+      "top_fields": [
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.4925,
+          "covered_lemmas": 33,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.4348,
+          "covered_lemmas": 10,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.3826,
+          "covered_lemmas": 57,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.3689,
+          "covered_lemmas": 38,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "dvitIyaM kARqam|siMhAdivargaH|",
+          "varga": "siMhAdivargaH",
+          "coverage_pct": 0.3611,
+          "covered_lemmas": 143,
+          "amar_lemmas": 396
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.3312,
+          "covered_lemmas": 52,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.3211,
+          "covered_lemmas": 79,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.3178,
+          "covered_lemmas": 109,
+          "amar_lemmas": 343
+        }
+      ]
+    },
+    "shs": {
+      "records": 47326,
+      "distinct_headwords": 46728,
+      "covered_amar_lemmas": 7728,
+      "coverage_pct": 0.7919,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.9223,
+          "covered_lemmas": 938,
+          "amar_lemmas": 1017
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.8981,
+          "covered_lemmas": 141,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.8966,
+          "covered_lemmas": 26,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.8806,
+          "covered_lemmas": 59,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.8782,
+          "covered_lemmas": 310,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.8738,
+          "covered_lemmas": 90,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.8696,
+          "covered_lemmas": 180,
+          "amar_lemmas": 207
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.8696,
+          "covered_lemmas": 20,
+          "amar_lemmas": 23
+        }
+      ]
+    },
+    "skd": {
+      "records": 42531,
+      "distinct_headwords": 40812,
+      "covered_amar_lemmas": 2028,
+      "coverage_pct": 0.2078,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|avyayavargaH|",
+          "varga": "avyayavargaH",
+          "coverage_pct": 0.4515,
+          "covered_lemmas": 121,
+          "amar_lemmas": 268
+        },
+        {
+          "field_key": "dvitIyaM kARqam|vanOzaDivargaH|",
+          "varga": "vanOzaDivargaH",
+          "coverage_pct": 0.42,
+          "covered_lemmas": 549,
+          "amar_lemmas": 1307
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.3448,
+          "covered_lemmas": 50,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "dvitIyaM kARqam|manuzyavargaH|",
+          "varga": "manuzyavargaH",
+          "coverage_pct": 0.2781,
+          "covered_lemmas": 302,
+          "amar_lemmas": 1086
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.2759,
+          "covered_lemmas": 8,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "dvitIyaM kARqam|puravargaH|",
+          "varga": "puravargaH",
+          "coverage_pct": 0.2617,
+          "covered_lemmas": 39,
+          "amar_lemmas": 149
+        },
+        {
+          "field_key": "praTamaM kARqam|vArivargaH|",
+          "varga": "vArivargaH",
+          "coverage_pct": 0.2587,
+          "covered_lemmas": 89,
+          "amar_lemmas": 344
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.25,
+          "covered_lemmas": 76,
+          "amar_lemmas": 304
+        }
+      ]
+    },
+    "snp": {
+      "records": 453,
+      "distinct_headwords": 448,
+      "covered_amar_lemmas": 273,
+      "coverage_pct": 0.028,
+      "top_fields": [
+        {
+          "field_key": "dvitIyaM kARqam|vanOzaDivargaH|",
+          "varga": "vanOzaDivargaH",
+          "coverage_pct": 0.1599,
+          "covered_lemmas": 209,
+          "amar_lemmas": 1307
+        },
+        {
+          "field_key": "dvitIyaM kARqam|vESyavargaH|",
+          "varga": "vESyavargaH",
+          "coverage_pct": 0.0604,
+          "covered_lemmas": 51,
+          "amar_lemmas": 845
+        },
+        {
+          "field_key": "praTamaM kARqam|vArivargaH|",
+          "varga": "vArivargaH",
+          "coverage_pct": 0.0203,
+          "covered_lemmas": 7,
+          "amar_lemmas": 344
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.0195,
+          "covered_lemmas": 42,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.0163,
+          "covered_lemmas": 4,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "dvitIyaM kARqam|manuzyavargaH|",
+          "varga": "manuzyavargaH",
+          "coverage_pct": 0.0157,
+          "covered_lemmas": 17,
+          "amar_lemmas": 1086
+        },
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.0148,
+          "covered_lemmas": 10,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.0138,
+          "covered_lemmas": 2,
+          "amar_lemmas": 145
+        }
+      ]
+    },
+    "stc": {
+      "records": 24574,
+      "distinct_headwords": 23986,
+      "covered_amar_lemmas": 4433,
+      "coverage_pct": 0.4542,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.707,
+          "covered_lemmas": 111,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.6941,
+          "covered_lemmas": 211,
+          "amar_lemmas": 304
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.687,
+          "covered_lemmas": 169,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.6866,
+          "covered_lemmas": 46,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|nAnArTavargaH|",
+          "varga": "nAnArTavargaH",
+          "coverage_pct": 0.6628,
+          "covered_lemmas": 1425,
+          "amar_lemmas": 2150
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.6522,
+          "covered_lemmas": 15,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.6207,
+          "covered_lemmas": 18,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.6135,
+          "covered_lemmas": 127,
+          "amar_lemmas": 207
+        }
+      ]
+    },
+    "vcp": {
+      "records": 50135,
+      "distinct_headwords": 48629,
+      "covered_amar_lemmas": 7729,
+      "coverage_pct": 0.792,
+      "top_fields": [
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.9655,
+          "covered_lemmas": 28,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.9104,
+          "covered_lemmas": 61,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.8981,
+          "covered_lemmas": 141,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.8932,
+          "covered_lemmas": 92,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.8862,
+          "covered_lemmas": 218,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.8732,
+          "covered_lemmas": 888,
+          "amar_lemmas": 1017
+        },
+        {
+          "field_key": "praTamaM kARqam|svargavargaH|",
+          "varga": "svargavargaH",
+          "coverage_pct": 0.8591,
+          "covered_lemmas": 579,
+          "amar_lemmas": 674
+        },
+        {
+          "field_key": "praTamaM kARqam|nAwyavargaH|",
+          "varga": "nAwyavargaH",
+          "coverage_pct": 0.8586,
+          "covered_lemmas": 261,
+          "amar_lemmas": 304
+        }
+      ]
+    },
+    "vei": {
+      "records": 3834,
+      "distinct_headwords": 3704,
+      "covered_amar_lemmas": 1041,
+      "coverage_pct": 0.1067,
+      "top_fields": [
+        {
+          "field_key": "dvitIyaM kARqam|siMhAdivargaH|",
+          "varga": "siMhAdivargaH",
+          "coverage_pct": 0.2247,
+          "covered_lemmas": 89,
+          "amar_lemmas": 396
+        },
+        {
+          "field_key": "praTamaM kARqam|kAlavargaH|",
+          "varga": "kAlavargaH",
+          "coverage_pct": 0.2195,
+          "covered_lemmas": 54,
+          "amar_lemmas": 246
+        },
+        {
+          "field_key": "praTamaM kARqam|vyomavargaH|",
+          "varga": "vyomavargaH",
+          "coverage_pct": 0.2174,
+          "covered_lemmas": 5,
+          "amar_lemmas": 23
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.194,
+          "covered_lemmas": 13,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "dvitIyaM kARqam|BUmivargaH|",
+          "varga": "BUmivargaH",
+          "coverage_pct": 0.1793,
+          "covered_lemmas": 26,
+          "amar_lemmas": 145
+        },
+        {
+          "field_key": "praTamaM kARqam|digvargaH|",
+          "varga": "digvargaH",
+          "coverage_pct": 0.1749,
+          "covered_lemmas": 60,
+          "amar_lemmas": 343
+        },
+        {
+          "field_key": "dvitIyaM kARqam|vESyavargaH|",
+          "varga": "vESyavargaH",
+          "coverage_pct": 0.174,
+          "covered_lemmas": 147,
+          "amar_lemmas": 845
+        },
+        {
+          "field_key": "dvitIyaM kARqam|brahmavargaH|",
+          "varga": "brahmavargaH",
+          "coverage_pct": 0.174,
+          "covered_lemmas": 67,
+          "amar_lemmas": 385
+        }
+      ]
+    },
+    "wil": {
+      "records": 44577,
+      "distinct_headwords": 43936,
+      "covered_amar_lemmas": 7753,
+      "coverage_pct": 0.7944,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.9253,
+          "covered_lemmas": 941,
+          "amar_lemmas": 1017
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.8981,
+          "covered_lemmas": 141,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.8895,
+          "covered_lemmas": 314,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.8835,
+          "covered_lemmas": 91,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+          "varga": "kzatriyavargaH",
+          "coverage_pct": 0.8808,
+          "covered_lemmas": 761,
+          "amar_lemmas": 864
+        },
+        {
+          "field_key": "dvitIyaM kARqam|siMhAdivargaH|",
+          "varga": "siMhAdivargaH",
+          "coverage_pct": 0.8662,
+          "covered_lemmas": 343,
+          "amar_lemmas": 396
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.8657,
+          "covered_lemmas": 58,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.8647,
+          "covered_lemmas": 179,
+          "amar_lemmas": 207
+        }
+      ]
+    },
+    "yat": {
+      "records": 45206,
+      "distinct_headwords": 44718,
+      "covered_amar_lemmas": 7774,
+      "coverage_pct": 0.7966,
+      "top_fields": [
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|viSezyaniGnavargaH|",
+          "varga": "viSezyaniGnavargaH",
+          "coverage_pct": 0.9164,
+          "covered_lemmas": 932,
+          "amar_lemmas": 1017
+        },
+        {
+          "field_key": "praTamaM kARqam|DIvargaH|",
+          "varga": "DIvargaH",
+          "coverage_pct": 0.8981,
+          "covered_lemmas": 141,
+          "amar_lemmas": 157
+        },
+        {
+          "field_key": "praTamaM kARqam|narakavargaH|",
+          "varga": "narakavargaH",
+          "coverage_pct": 0.8966,
+          "covered_lemmas": 26,
+          "amar_lemmas": 29
+        },
+        {
+          "field_key": "praTamaM kARqam|pAtAlaBogivargaH|",
+          "varga": "pAtAlaBogivargaH",
+          "coverage_pct": 0.8932,
+          "covered_lemmas": 92,
+          "amar_lemmas": 103
+        },
+        {
+          "field_key": "tftIyaM sAmAnyakARqam|saNkIrRavargaH|",
+          "varga": "saNkIrRavargaH",
+          "coverage_pct": 0.8895,
+          "covered_lemmas": 314,
+          "amar_lemmas": 353
+        },
+        {
+          "field_key": "dvitIyaM kARqam|SElavargaH|",
+          "varga": "SElavargaH",
+          "coverage_pct": 0.8806,
+          "covered_lemmas": 59,
+          "amar_lemmas": 67
+        },
+        {
+          "field_key": "dvitIyaM kARqam|kzatriyavargaH|",
+          "varga": "kzatriyavargaH",
+          "coverage_pct": 0.875,
+          "covered_lemmas": 756,
+          "amar_lemmas": 864
+        },
+        {
+          "field_key": "praTamaM kARqam|SabdAdivargaH|",
+          "varga": "SabdAdivargaH",
+          "coverage_pct": 0.8744,
+          "covered_lemmas": 181,
+          "amar_lemmas": 207
+        }
+      ]
+    }
+  },
+  "counts": {
+    "field_count": 24,
+    "semantic_field_rows": 11811,
+    "distinct_amar_lemmas": 9759,
+    "coverage_rows": 1032,
+    "dict_count": 43
+  }
+}

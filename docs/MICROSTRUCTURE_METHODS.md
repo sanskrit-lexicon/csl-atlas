@@ -25,6 +25,8 @@ microstructure extractor counts.
 | M4 | `scripts/lexico/m4_indigenous.py` | Verbal-root evidence from dhatupatha citations, SKD anubandha slots, KRM clusters, SHS dash clusters, VCP annotation, and YAT conjugation blocks. | Dictionary-specific verbal formats not explicitly modeled yet. | `indigenous_roots.csv` |
 | M5 | `scripts/lexico/m5_profile.py` | Lossless join of M1-M4 on `(dict, L)`, with M3 folded to `xref_out`. | Corpus-level in-degree and hub analysis. | `microstructure_profile.csv` |
 | M6 | `scripts/lexico/m6_xref_lineage.py` | Shared cross-reference edges across parsed dictionaries. | Unparsed xref conventions and non-lemma citation targets. | `xref_lineage.json` |
+| M7 | `scripts/lexico/m7_root_agreement.py` | Cross-dictionary agreement and conflict in root gaṇa, pada, and transitivity. | Root identity normalization across citation conventions. | `root_agreement.json` |
+| M8 | `scripts/lexico/m8_semantic_fields.py` | Amarakośa varga/upavarga field coverage by dictionary headwords. | Corpus frequency, sense coverage, and prose-only AMAR knowledge. | `semantic_field_report.json` |
 
 ## Method Rule
 
@@ -65,5 +67,7 @@ python scripts/lexico/m3_xrefs.py --all
 python scripts/lexico/m4_indigenous.py --all
 python scripts/lexico/m5_profile.py
 python scripts/lexico/m6_xref_lineage.py
+python scripts/lexico/m7_root_agreement.py
+python scripts/lexico/m8_semantic_fields.py
 python scripts/lexico/validate_lexico.py
 ```

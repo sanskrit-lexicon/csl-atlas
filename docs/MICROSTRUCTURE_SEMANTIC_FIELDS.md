@@ -1,0 +1,84 @@
+# H4 Semantic Fields
+
+Date: 2026-06-05
+
+Audience: scholars who want to test topical bias across dictionaries without
+mixing dictionary evidence with corpus frequency.
+
+## Trust Block
+
+- Evidence: `data/lexico/semantic_fields.csv`,
+  `data/lexico/semantic_field_coverage.csv`,
+  `data/lexico/semantic_field_report.json`, and
+  `scripts/lexico/m8_semantic_fields.py`.
+- Limitations: headword coverage only; no corpus frequency, passage attestation,
+  sense coverage, or non-headword mentions.
+- Validation: `python scripts/lexico/validate_lexico.py`.
+- Owner repo: `csl-atlas`.
+
+## What Was Built
+
+M8 parses the local sibling `AMAR/amar.txt` into an Amarakośa-native field
+taxonomy. Each synonym is assigned to its kāṇḍa/varga/upavarga context, then
+matched against local `csl-orig` dictionary `<k1>` headword sets.
+
+Outputs:
+
+| File | Role |
+|---|---|
+| `semantic_fields.csv` | AMAR lemma-to-field rows. |
+| `semantic_field_coverage.csv` | Per-dictionary coverage for each AMAR field. |
+| `semantic_field_report.json` | Compact counts, caveats, and per-dictionary top fields. |
+
+Current build:
+
+| Measure | Count |
+|---|---:|
+| Amarakośa fields | 24 |
+| AMAR lemma-field rows | 11,811 |
+| Distinct AMAR lemmas | 9,759 |
+| Dictionary-field coverage rows | 1,032 |
+| Local dictionaries compared | 43 |
+
+## First Findings
+
+| Dictionary | AMAR lemmas covered | Coverage |
+|---|---:|---:|
+| MW | 8,955 | 91.8% |
+| PW | 7,790 | 79.8% |
+| YAT | 7,774 | 79.7% |
+| WIL | 7,753 | 79.4% |
+| VCP | 7,729 | 79.2% |
+| SHS | 7,728 | 79.2% |
+| PWG | 7,648 | 78.4% |
+| AP | 4,634 | 47.5% |
+| SKD | 2,028 | 20.8% |
+
+The strongest immediate result is not a final topical claim, but a working
+measurement layer: MW covers nearly all of the normalized Amarakośa synonym
+inventory, while the Petersburg/Wilson/VCP/YAT/SHS cluster sits around
+78-80%. AP and AP90 are much lower in this strict headword test.
+
+SKD's low coverage must be read as a convention warning. SKD often cites,
+inflects, or embeds kosha material in prose rather than exposing every synonym as
+a raw `<k1>` headword comparable to AMAR. So this layer measures **dictionary
+headword coverage of AMAR fields**, not total knowledge of Amarakośa material.
+
+## Method
+
+1. Parse AMAR `<info kvvv="...">` labels into kāṇḍa, varga, and optional
+   upavarga.
+2. Parse `<syns>` synonym lists into normalized SLP1 lemmas plus AMAR gender
+   tags.
+3. Build local headword sets from `../csl-orig/v02/<dict>/<dict>.txt`.
+4. Compute per-field coverage for every local dictionary.
+
+Normalization is deliberately conservative: strip AMAR gender suffixes, remove
+accent marks and trailing homonym digits. It does not strip final vowels,
+collapse inflected forms, or apply a full `hwnorm1` transform.
+
+## Next Use
+
+This package is ready to support a chart trust block or a scholar-facing
+semantic-field dashboard. The next implementation should visualize field
+coverage by dictionary family and keep SKD/VCP-style convention caveats visible.
