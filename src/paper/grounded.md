@@ -8,6 +8,13 @@ The single consolidated paper builds its analytic apparatus **from MW's own data
 
 📄 **Canonical paper:** [PAPER.md in MWS `docs-pass`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md) (§3–§6 are the body summarised here).
 
+## Trust Block
+
+- Evidence: canonical paper in `sanskrit-lexicon/MWS` `docs-pass` and linked atlas tools.
+- Limitations: tour page only; the canonical paper text and submission package live outside this repo.
+- Validation: checked by `npm run build`; paper-final claims should be reviewed in the canonical MWS paper before citation.
+- Owner repo: `csl-atlas`.
+
 ## Five core constructs
 
 1. **Block** — a discriminable structural component (18 in MW).

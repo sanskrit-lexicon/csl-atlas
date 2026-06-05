@@ -6,6 +6,13 @@ title: CAE — Cappeller 1891
 
 *Chapter authored per [Decision 29 Tier B](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 6 in the atlas ordering — the **first systematic typographic implementation** of the lexicographer-only hedge that MW 1899 would scale and tag.*
 
+## Trust Block
+
+- Evidence: CDSL v02 `cae.txt`, `src/data/cross-dict.json`, and linked dictionary-profile/audit notes.
+- Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
+- Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
+- Owner repo: `csl-atlas`.
+
 ## 1. Overview
 
 [Carl Cappeller](https://en.wikipedia.org/wiki/Carl_Cappeller)'s *A Sanskrit-English Dictionary, Based Upon the St. Petersburg Lexicons*, published Strassburg 1891 by Karl J. Trübner. A single-volume reduction of PWG + PWK aimed at English-reading Sanskritists, intended as a practical reference rather than a research instrument. **Cappeller went on to co-edit MW 1899** (with Ernst Leumann), making the lineage from CAE 1891's typographic asterisk to MW 1899's tagged `<ls>L.</ls>` direct rather than merely parallel. CAE's record count (40,069) is close to a tenth of MW's (286,561) — it is deliberately compact, omitting most of MW's encyclopedic apparatus and all of PWG's named-kosha citations.

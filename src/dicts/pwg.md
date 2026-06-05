@@ -6,6 +6,13 @@ title: PWG — Boehtlingk-Roth Grosses PW (1855–1875)
 
 *Chapter authored per [Decision 29 Tier A](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 2 in the atlas ordering — the multi-volume German philological apparatus that MW collapsed.*
 
+## Trust Block
+
+- Evidence: CDSL v02 `pwg.txt`, `src/data/cross-dict.json`, and linked dictionary-profile/audit notes.
+- Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
+- Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
+- Owner repo: `csl-atlas`.
+
 ## 1. Overview
 
 The seven-volume *Sanskrit-Wörterbuch*, compiled by [Otto von Böhtlingk](https://en.wikipedia.org/wiki/Otto_von_B%C3%B6htlingk) and [Rudolph Roth](https://en.wikipedia.org/wiki/Rudolph_von_Roth) under the auspices of the Imperial Russian Academy of Sciences in Saint Petersburg (hence "Petersburger Wörterbuch", PW). Published in seven folio volumes 1855–1875, ~9,500 columns total. The reference Sanskrit-German dictionary of the 19th century, exceeding all predecessors in both lemma coverage and citation density. PWG is the **proximate source** for MW 1899: Monier-Williams worked from PWG (and its shorter seven-part counterpart PWK) as the German philological base, applying his own editorial reduction to produce a single-volume English-language work. Within CDSL, PWG carries the **densest citation apparatus** of any dictionary (4.6 `<ls>` per record, ~4× MW's 1.09) and a **fully differentiated named-kosha apparatus** (821 distinct `<ls>` sigla including 238,271 distinct values overall) — what MW collapsed into the single `<ls>L.</ls>` hedge.

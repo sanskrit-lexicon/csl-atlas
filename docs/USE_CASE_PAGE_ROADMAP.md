@@ -30,6 +30,8 @@ targets before adding new analysis-method prose.
   generated evidence, limitations, validation, and owner repo.
 - The remaining MW, typology, lexicographic-structure, timeline, and archived
   R2 tools now carry compact trust blocks.
+- The public Observable page set now has trust blocks across the landing page,
+  dictionary chapters, paper tour pages, audit page, and tool pages.
 
 ## Page Order
 

@@ -6,6 +6,13 @@ title: MW — Monier-Williams 1899
 
 *Chapter authored per [Decision 29 Tier A](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 1 in the atlas ordering — the framework's home dictionary.*
 
+## Trust Block
+
+- Evidence: CDSL v02 `mw.txt`, `src/data/cross-dict.json`, and linked dictionary-profile/audit notes.
+- Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
+- Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
+- Owner repo: `csl-atlas`.
+
 ## 1. Overview
 
 The standard single-volume Sanskrit–English reference, edited by [Monier Monier-Williams](https://en.wikipedia.org/wiki/Monier_Monier-Williams) (Boden Professor of Sanskrit at Oxford 1860–88) with contributions from [Ernst Leumann](https://en.wikipedia.org/wiki/Ernst_Leumann) and [Carl Cappeller](https://en.wikipedia.org/wiki/Carl_Cappeller). Published 1899 (Clarendon Press, Oxford) as a substantial revision of the 1872 first edition. 286,561 records in the CDSL digital edition (compared to ~180,000 entries in PWG, the proximate German predecessor; ~44,000 in [WIL 1832](wil)). Single-volume format, ~1,333 pages, alphabetical macrostructure. MW is the **reference dictionary for this atlas** — all microanalytic constructs (block, slot, profile, hedge, infrastructure) were developed on MW first; the other 8 chapters test how far each construct generalises.

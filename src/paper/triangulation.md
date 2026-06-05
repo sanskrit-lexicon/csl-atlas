@@ -8,6 +8,13 @@ The study was originally drafted as **four parallel framework papers**. Per [DOU
 
 📄 **Canonical:** [PAPER.md §7](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#7-triangulation-three-external-frameworks-converge).
 
+## Trust Block
+
+- Evidence: canonical paper in `sanskrit-lexicon/MWS` `docs-pass` and linked atlas tools.
+- Limitations: tour page only; the canonical paper text and submission package live outside this repo.
+- Validation: checked by `npm run build`; paper-final claims should be reviewed in the canonical MWS paper before citation.
+- Owner repo: `csl-atlas`.
+
 ## Three findings every framework reaches
 
 1. **Kernel-plus-enrichment.** Wiegand's *modal-6-block microstructure*, Atkins-Rundell's *retrieval-dictionary economy*, Hausmann's *form-comment economy*, and the grounded *block economy* are one fact in four terminologies.

@@ -6,6 +6,13 @@ title: PWK — Böhtlingk Kürzeres PW (1879–1889)
 
 *Chapter authored per [Decision 29 Tier A](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 3 in the atlas ordering — the **missing link** between PWG's kosha-rich apparatus and MW's hedge-collapsed apparatus.*
 
+## Trust Block
+
+- Evidence: CDSL v02 `pwk.txt`, `src/data/cross-dict.json`, and linked dictionary-profile/audit notes.
+- Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
+- Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
+- Owner repo: `csl-atlas`.
+
 ## 1. Overview
 
 [Otto von Böhtlingk](https://en.wikipedia.org/wiki/Otto_von_B%C3%B6htlingk)'s own shorter counterpart to PWG, published St. Petersburg 1879–1889 in seven slim *Lieferungen* / volumes. Where PWG (1855–1875) ran to seven folio volumes and 570,817 source citations, PWK condenses the same lexical material into a smaller seven-part reference by **dropping nearly all of PWG's indigenous-kosha apparatus**: the top PWG sigla `ŚKDR.` (20,109×), `MED.` (7,176×), and `H. an.` (6,619×) all collapse to zero in PWK. The result is a dictionary with *more headwords than PWG* (170,556 vs 123,366 — Böhtlingk added new material in 14 years of intervening scholarship) but *fewer citations per headword* (0.51 vs PWG's 4.63 — an order-of-magnitude reduction). PWK is therefore the **missing link** in the European-Sanskrit-lexicography lineage: the editorial moves that MW 1899 would complete (collapse named-kosha sigla, compact the citation apparatus) are first attempted by PWG's own editor, here.

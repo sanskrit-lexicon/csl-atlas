@@ -5,6 +5,13 @@ toc: false
 
 # Atlas of the Cologne Digital Sanskrit Lexicons
 
+## Trust Block
+
+- Evidence: committed atlas pages, generated data under `src/data/`, and linked roadmap/guide documents.
+- Limitations: landing/navigation page; it routes readers to dictionary evidence but is not itself a generated analysis result.
+- Validation: checked by `npm test`, `npm run build`, and Observable link validation.
+- Owner repo: `csl-atlas`.
+
 A comparative microstructural atlas of **nine narrative Sanskrit-dictionary chapters plus an all-dictionary coverage layer** spanning the indigenous *kośa* tradition (~6th c.) through to the [Cologne Digital Sanskrit Lexicon](https://www.sanskrit-lexicon.uni-koeln.de/) (2024). Each chapter analyses one dictionary under an [18-block formal apparatus](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#3-the-five-grounded-constructs) developed for MW; the coverage layer asks which parts of that apparatus transfer, and how large those parts are, across every available CDSL v02 dictionary.
 
 <!-- Русская версия → /ru/ — re-enable once the RU locale routes are wired (see I18N.md / DOUBTS D11). -->

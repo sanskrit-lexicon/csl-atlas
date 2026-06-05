@@ -6,6 +6,13 @@ title: VCP — Vācaspatyam (1873–1884)
 
 *Chapter authored per [Decision 29 Tier C](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 9 in the original atlas chapter ordering — the **second Sanskrit-Sanskrit lexicon** and the framework's outer limit for the structured-bilingual block model.*
 
+## Trust Block
+
+- Evidence: CDSL v02 `vcp.txt`, `src/data/cross-dict.json`, and linked dictionary-profile/audit notes.
+- Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
+- Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
+- Owner repo: `csl-atlas`.
+
 ## 1. Overview
 
 [*Vācaspatyam*](https://en.wikipedia.org/wiki/Vachaspatya) ("the work of Vācaspati", named after the editor's epithet), an encyclopedic Sanskrit-Sanskrit dictionary compiled by **Tārānātha Tarkavācaspati**, published Calcutta 1873–1884 in seven volumes. VCP is the **second indigenous-Indian large-scale Sanskrit-Sanskrit lexicon** in CDSL, contemporary with PWG's later volumes and PWK's beginning, and one of the major CDSL Sanskrit-Sanskrit works (50,135 records). VCP is structurally similar to [SKD](skd) — encyclopedic, monolingual, prose-paragraph entries with inline `iti` citation — but with a *much sparser* inline citation density (0.26 *iti* / record vs SKD's 1.70). In the nine-chapter atlas path, VCP confirms the genre boundary discovered at SKD; the all-dictionary coverage layer extends beyond this chapter path by measuring partial framework fit across every available CDSL v02 dictionary.

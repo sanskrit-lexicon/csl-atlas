@@ -8,6 +8,13 @@ The classical Sanskrit synonymic kosha by [Hemacandra](https://en.wikipedia.org/
 
 **[Source: csl-orig v02/abch/abch.txt](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/abch/abch.txt) · [ABCH GitHub](https://github.com/sanskrit-lexicon/abch)**
 
+## Trust Block
+
+- Evidence: CDSL v02 `abch.txt`, the ABCH dictionary repo, and atlas lineage notes.
+- Limitations: kosha context page; this is not a full bilingual microstructure chapter and not a passage corpus.
+- Validation: checked by `npm run build`; page links are covered by Observable link validation.
+- Owner repo: `csl-atlas`.
+
 ## At a glance
 
 | | |

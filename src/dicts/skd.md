@@ -6,6 +6,13 @@ title: SKD — Śabdakalpadrumaḥ (1822–1858)
 
 *Chapter authored per [Decision 29 Tier C](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 8 in the atlas ordering — the **first Sanskrit-Sanskrit lexicon**, where the 18-block framework stops applying.*
 
+## Trust Block
+
+- Evidence: CDSL v02 `skd.txt`, `src/data/cross-dict.json`, and linked dictionary-profile/audit notes.
+- Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
+- Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
+- Owner repo: `csl-atlas`.
+
 ## 1. Overview
 
 [*Śabdakalpadrumaḥ*](https://en.wikipedia.org/wiki/Shabdakalpadruma) ("the wishing-tree of words"), an encyclopedic Sanskrit-Sanskrit dictionary in seven volumes compiled by Rājā Rādhākānta Deva and his circle, published Calcutta 1822–1858. SKD is the **first indigenous-Indian large-scale lexicon** in the modern Sanskrit-philological tradition: encyclopedic in scope, monolingual in language (Sanskrit headword + Sanskrit definitions), and rich with citations from literary works and prior *kośa* sources via **inline `iti <source>` prose**. Within CDSL, SKD marks the **genre boundary** of the present framework: where MW, PWG, PWK, AP, BEN, CAE, WIL are *structured bilingual* dictionaries amenable to the 18-block detector, SKD and [VCP](vcp) are *encyclopedic Sanskrit-Sanskrit* works whose source-discipline lives in prose, not in tags. The block apparatus developed for MW does not apply.
