@@ -4,7 +4,8 @@ Current artifact note, 2026-06-05: this document preserves the R2 findings and
 the static atlas pages `/tools/r2-h1` and `/tools/r2-explorer`. The old R2
 generator files and JSONL/JSON outputs named below are not present in the
 current branch. Treat this as archived evidence until the R2 generator package
-is restored or rebuilt against current `csl-orig`.
+is restored or rebuilt against current `csl-orig`. The reconstruction contract is
+[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
 
 First real build of **R2** (the per-dict sense splitter, RESEARCH_LAYER_ROADMAP
 §5.1), run on the 5 anchor lemmas (`gam`, `dharma`, `rāma`, `iti`,
@@ -116,6 +117,8 @@ The headline is **forensic**: Śabda-Sāgara's sense glosses are **82% word-iden
 
 ## Next
 
+- Rebuild the reproducible package defined in
+  [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
 - Tighten the AE reverse index (rank by equivalent-position); verb-marker grammar; finer indigenous splitting.
 - Archived result — H1 de-confounded on a fixed 30-noun panel: the year-trend
   stays flat (Pearson *r* = 0.01) after removing the headword-splitting

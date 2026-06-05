@@ -152,7 +152,8 @@ The atlas must keep uncertainty visible.
 
 - Actor: researcher.
 - Goal: compare deterministic sense segmentation across dictionary families.
-- Evidence: R2 sense-splitter outputs and documented parser caveats.
+- Evidence: archived R2 sense-splitter outputs, documented parser caveats, and
+  the rebuild contract in `docs/R2_REBUILD_CONTRACT.md`.
 
 ### UC-LX-05 Source-Siglum Review `P1`
 
@@ -274,7 +275,8 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - H6 structural-register scatter and H4 semantic fields are implemented
   chart-trust examples.
 - H4 semantic fields are built as the M8 data layer and `/tools/semantic-fields`;
-  review interpretation is the next scholar-facing step.
+  interpretation is documented, and scholar review samples are next.
+- Xref hub review and H5 anomaly scope are documented as proof-first packages.
 
 ## Related Docs
 
@@ -282,6 +284,10 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - `docs/USE_CASE_PAGE_ROADMAP.md`
 - `docs/CHART_TRUST_TEMPLATE.md`
 - `docs/HYPOTHESIS_INDEX.md`
+- `docs/R2_REBUILD_CONTRACT.md`
+- `docs/H4_SEMANTIC_FIELD_INTERPRETATION.md`
+- `docs/MICROSTRUCTURE_XREF_HUB_REVIEW.md`
+- `docs/H5_GHOST_ANOMALY_SCOPE.md`
 - `docs/REVIEW_RELEASE_ROADMAP.md`
 - `docs/RELEASE_CHECKLIST.md`
 - `docs/REVIEW_QUEUE_PROOFS.md`

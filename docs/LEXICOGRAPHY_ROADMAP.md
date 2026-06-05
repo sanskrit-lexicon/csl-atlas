@@ -211,7 +211,8 @@ Each phase is independently shippable; each produces dashboard pages and paper m
 
 ### Phase L3 — Forensic analysis (1-2 weeks, hardest)
 - Build typo / abbreviation / unusual-citation extractor
-- Run pairwise rarity-weighted shared-anomaly count
+- Run pairwise rarity-weighted shared-anomaly count; the current H5 scope and
+  review labels live in [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md)
 - Citation truncation analysis (PWG ↔ MW especially)
 - New dashboard page: `/lexicography/forensic.md`
 - **Paper M Section**: §4.2 (forensic signals); **Paper H Section**: §5 (PWG → MW textual evidence)

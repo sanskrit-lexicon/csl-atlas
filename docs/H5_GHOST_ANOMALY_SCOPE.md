@@ -1,0 +1,88 @@
+# H5 Ghost Entry And Anomaly Scope
+
+Date: 2026-06-05
+
+Status: scope note for the next maker QA package. H5 remains a strong testable
+hypothesis, not a release claim.
+
+## Trust Block
+
+- Evidence: `scripts/forensic/f0_shared_headword_typos.py`,
+  `scripts/forensic/f2_structure.py`, `data/forensic/f0_report.json`, and
+  related forensic outputs under `data/forensic/`.
+- Limitations: most edit-distance-1 candidates are legitimate Sanskrit
+  morphology or rare vocabulary, not proven errors. A ghost/anomaly queue needs
+  human review before it can label any item as an error.
+- Validation target: rerun the relevant forensic script, then validate any
+  future review report with `npm run validate-review-reports`.
+- Owner repo: `csl-atlas`.
+
+## Scope Decision
+
+H5 should not begin as "find all ghost entries." That would over-claim. It
+should begin as a proof-first maker queue:
+
+```text
+rare shared anomaly signal -> candidate class -> human review -> QA target or lineage signal
+```
+
+## Candidate Classes
+
+| Class | Source | Meaning | First use |
+|---|---|---|---|
+| `rare-near-core` | F0 normalized sanhw1 edit-distance candidates. | Rare lemma near a common lemma and shared by dictionaries. | Lineage signal; not an error claim. |
+| `shared-doublet` | F0 pairs where both dictionaries carry rare form and common neighbor. | Stronger lineage signal because both forms coexist. | Review sample for possible inherited oddity. |
+| `raw-headword-exclusive` | F2 raw `<k1>` pool shared only by MW plus one Petersburg dictionary. | Candidate raw spelling or headword anomaly. | Maker QA triage. |
+| `homonym-concordance` | F2 homonym split agreement. | Structural inheritance signal, not a ghost entry. | Separate from anomaly review. |
+| `known-correction` | `data/forensic/shared_corrections.csv`. | Already observed correction or editorial anomaly. | Seed examples and reviewer calibration. |
+
+## Current Evidence
+
+F0 reports 42,965 candidate rare near-core anomalies. The strongest lineage
+counts are comparative, not absolute:
+
+| Pair | Shared | Shared doublets | Reading |
+|---|---:|---:|---|
+| MW/PW | 12,113 | 11,506 | Petersburg-to-MW lineage signal. |
+| MW/PWG | 8,195 | 7,714 | Petersburg-to-MW shared rare vocabulary signal. |
+| PWG/PW | 9,451 | 8,685 | Same-author Petersburg baseline. |
+| BOP/MW | 111 | 77 | Unrelated/null comparison. |
+| SKD/BOP | 24 | 5 | Unrelated/null comparison. |
+
+The manual caveat in `f0_report.json` is decisive: F0 measures shared rare
+near-core vocabulary more safely than true typos. True ghost-entry work should
+start from raw forms and reviewed samples.
+
+## First Review Queue Shape
+
+| Queue slice | Size | Purpose |
+|---|---:|---|
+| MW/PWG shared doublets | 30 | Separate inherited rare vocabulary from possible raw errors. |
+| MW/PW shared doublets | 30 | Compare shorter Petersburg source against MW. |
+| Raw MW+PWG exclusive pool | 30 | Find true spelling/headword anomalies from raw `<k1>`. |
+| Null pair controls | 20 | Estimate false-positive morphology rate. |
+| Known corrections | 20 | Calibrate reviewer labels against already observed edits. |
+
+## Review Labels
+
+| Label | Meaning |
+|---|---|
+| `legitimate-form` | Real Sanskrit form or normal morphology. |
+| `variant-convention` | Orthographic or editorial convention, not an error. |
+| `possible-typo` | Plausible source error, needs source inspection. |
+| `ghost-candidate` | Plausible non-word or inherited bad headword. |
+| `lineage-only` | Useful inheritance signal but not a correction target. |
+| `parser-artifact` | Produced by normalization or extraction behavior. |
+
+## Non-Goals
+
+- No runtime LLM classification.
+- No atlas-owned corpus or DCS frequency work.
+- No automatic correction of dictionary data.
+- No claim that F0 candidates are errors without review.
+
+## Acceptance For H5 v1
+
+H5 v1 is complete only when it has a compact review report, preserved review
+fields, and a written conflict taxonomy. Until then H5 stays Type 2 in the
+hypothesis index.

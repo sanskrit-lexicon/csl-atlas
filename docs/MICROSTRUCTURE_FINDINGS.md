@@ -35,9 +35,14 @@ have generated JSON inputs and public atlas pages.
 
 The SKD anubandha key, cross-reference graph overlap, root-agreement, and H4
 semantic-field packages are now implemented as data/docs/chart layers where
-applicable. The next
-scholar-facing implementation should interpret the H4 chart, select review
-samples, and keep SKD/VCP convention caveats visible.
+applicable. The remaining scholar-facing packages are now explicit:
+
+| Package | Doc | Next proof step |
+|---|---|---|
+| R2 rebuild | [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md) | Restore reproducible generator outputs before broadening H1R/H2/H3R. |
+| H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md) | Review SKD false lows, AP/AP90 deltas, VCP high coverage, and specialized baselines. |
+| Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Label shared-core, prefix-convention, and edition-continuity samples. |
+| H5 anomaly scope | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md) | Build a compact proof-first maker QA queue from F0/F2 samples. |
 
 ## What The Review Queues Prove
 
@@ -46,7 +51,7 @@ Before writing review procedure, each queue should state its proof value:
 | Queue | What it proves |
 |---|---|
 | SKD/YAT/SHS root-format checks | Whether dictionary-specific verbal-root coding can be decoded reliably enough to emit grammatical columns without forcing all dictionaries into one convention. |
-| Xref target overlap | Whether cross-reference graphs preserve lineage beyond headword overlap. |
+| Xref target overlap | Whether cross-reference graphs preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md). |
 | Source-siglum aliases | Whether source citation normalization can improve dictionary evidence without hiding uncertainty. |
 | POS/gender conflicts | Which disagreements are dictionary disagreement, parser error, or convention mismatch. |
 
@@ -54,4 +59,5 @@ Before writing review procedure, each queue should state its proof value:
 
 H4 is now built as M8. Its field scheme is Amarakosa-native and
 dictionary-first; corpus fields belong outside the atlas unless a compact
-external contract exists.
+external contract exists. The interpretation package is
+[`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md).

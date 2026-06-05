@@ -15,6 +15,9 @@ Date: 2026-06-05
   `npm run build-xref-lineage`, and `npm run build`.
 - Owner repo: `csl-atlas`.
 
+Hub-family interpretation and review labels are in
+[`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md).
+
 m3 captured each dictionary's internal cross-reference edges (source lemma → target
 lemma) but left targets raw SLP1 and deferred the cross-dict join. **m6**
 (`scripts/lexico/m6_xref_lineage.py`) does that join and answers the

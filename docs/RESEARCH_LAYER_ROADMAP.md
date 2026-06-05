@@ -10,6 +10,8 @@ VisualDCS work, not atlas generation work.*
 *v1.4 hypothesis update 2026-06-05: H1/H3 are negative findings, H2 is
 supported, and the canonical cross-repo hypothesis routing lives in
 [`HYPOTHESIS_INDEX.md`](HYPOTHESIS_INDEX.md).*
+*v1.5 remaining-priority update 2026-06-05: R2 rebuild, H4 interpretation,
+xref hub review, and H5 anomaly scope now have explicit work packages.*
 **Companion to**: [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md), [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (genealogy/phylogeny), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (structure typology), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md).
 
 This stream is **additive**. The existing program is researcher-facing (papers M/L/H + a 50-viz catalog). This roadmap turns those analyses into a **practitioner layer** — usable tools for three audiences — and adds new testable hypotheses and visualizations. Two working prototypes ship with it.
@@ -61,8 +63,8 @@ working view below so old H1-H7 labels do not look equally open.
 | **H1R** | **Sense granularity is a family/marking-style trait, not pure temporal inflation.** | R2 sense-unit measurements by year and family | researchers, makers | negative finding for original H1; restore/rebuild R2 artifacts before broadening |
 | **H2** | **Citation density predicts a sense's survival** into later dictionaries. | cited vs uncited ancestor senses on measured inheritance edges | researchers | supported finding in R2; broaden panel next |
 | **H3R** | **Derivative dictionaries copy or condense more than they expand.** | net sense delta and gloss overlap along measured inheritance edges | researchers, historians | negative finding for original H3; no measured edge shows systematic net-addition |
-| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | map dictionary headword coverage onto **Amarakosa-native topical fields** → per-dict field distribution | researchers, students | M8 data package and chart built |
-| **H5** | **"Ghost entries"** — shared OCR/typo anomalies — are both a lineage fingerprint **and** an editor QA flag. | rarity-weighted shared-anomaly detection (extends L3 forensic) | makers, historians | proposed |
+| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | map dictionary headword coverage onto **Amarakosa-native topical fields** -> per-dict field distribution | researchers, students | M8 data package, chart, and interpretation note built |
+| **H5** | **"Ghost entries"** — shared OCR/typo anomalies — are both a lineage fingerprint **and** an editor QA flag. | rarity-weighted shared-anomaly detection (extends L3 forensic) | makers, historians | scoped as proof-first maker queue |
 | **H6** | **Structural register (citation × grammar-marking) predicts tradition family.** | cluster the macro profile (§1.2); compare to the genealogy tree | researchers | prototype supported and charted |
 | **H7** | **First-N sampling materially biases structure metrics** (early-alphabet entries are shorter/sparser). | compare first-N vs random vs stratified samples on the same dicts | methodology | **✅ A7 resolved 2026-05-31** — full corpus chosen (bias moot for production); the §1.2 prototype already confirmed the first-N skew empirically |
 
@@ -123,7 +125,8 @@ need to be restored or rebuilt before the claims are broadened.
 The **sense splitter (R2)** remains a critical dependency for broadening H1R,
 H2, H3R, the sense-alignment/divergence views, and the maker worklist. Current
 R2 pages are static snapshots; a reproducible generator/data package should be
-restored or rebuilt before new R2 claims are added.
+restored or rebuilt under the contract before new R2 claims are added:
+[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
 
 ### 5.1 R2 — decided design (2026-05-31)
 
@@ -186,10 +189,13 @@ H1 time-inflation.
   inflation.
 - **Semantic-field scheme (H4 / R3)** → **Amarakosa-native**: use the Amarakosa's own topical hierarchy (from the `AMAR` repo) as the field taxonomy — indigenous, culturally grounded, and self-validating against a classical Sanskrit thesaurus. Data package and chart built 2026-06-05 as M8 headword-field coverage plus `/tools/semantic-fields`.
 
-**Still open:** anomaly/ghost-entry detector scope (H5); whether the H1R/H2/H3R
-sense-alignment study is its own short paper or a Paper-L section; co-author
-assignment for the sense-evolution work; restoration or rebuild of the R2
-generator/data package.
+**Still open:** whether the H1R/H2/H3R sense-alignment study is its own short
+paper or a Paper-L section; co-author assignment for the sense-evolution work;
+implementation of the R2 rebuild contract; and the first reviewed H5 sample.
+H4 interpretation, xref hub review, and H5 scope are documented in
+[`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md),
+[`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md), and
+[`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md).
 
 ---
 *Prototypes: `scripts/lexico/micro_entry.py`, `scripts/lexico/macro_profile.py`.

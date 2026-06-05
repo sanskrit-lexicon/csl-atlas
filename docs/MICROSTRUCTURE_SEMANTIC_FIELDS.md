@@ -83,6 +83,6 @@ collapse inflected forms, or apply a full `hwnorm1` transform.
 ## Next Use
 
 This package now supports `/tools/semantic-fields`, a scholar-facing chart page
-with a compact trust block. The next implementation should interpret field
-families, choose review samples, and keep SKD/VCP-style convention caveats
-visible.
+with a compact trust block. The interpretation and review-sample plan is
+[`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md).
+Keep SKD/VCP-style convention caveats visible before making paper-level claims.

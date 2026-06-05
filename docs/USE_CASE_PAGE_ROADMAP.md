@@ -20,9 +20,10 @@ targets before adding new analysis-method prose.
   `MICROSTRUCTURE_FINDINGS.md`.
 - For review queues, first document what each queue proves; write procedural
   "how to review" notes only after that.
-- H4 semantic-field analysis now has a data package and chart; review
-  interpretation comes after the page layer, trust template, H6 scatter, and
-  microstructure doc family are in place.
+- H4 semantic-field analysis now has a data package, chart, and interpretation
+  note; scholar review samples remain next.
+- Xref hub review and H5 anomaly scope now have proof-first documentation
+  packages.
 
 ## Page Order
 
@@ -33,7 +34,9 @@ targets before adding new analysis-method prose.
 | 3 | [`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | active third page |
 | 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md) and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | implemented |
 | 5 | Microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Give the M1-M5 profile, methods, and findings one coherent entry point. | active scaffold |
-| 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Interpret the Amarakosa-native semantic-field analysis after the chart layer settles. | implemented chart; review next |
+| 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Interpret the Amarakosa-native semantic-field analysis after the chart layer settles. | interpretation doc built; review next |
+| 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label cross-reference hub families before paper use. | scoped |
+| 8 | H5 anomaly scope package | UC-CD-05, UC-RV-03 | makers, reviewers | Turn forensic anomaly signals into a proof-first review queue. | scoped |
 
 ## Public Page Contract
 
@@ -67,7 +70,9 @@ For every queue, write the proof page first:
 3. Use the implemented H6 structural-register scatter and H4 semantic-field
    chart as chart-trust examples.
 4. Document review queues by proof value.
-5. Interpret H4 semantic-field samples after the above items are stable.
+5. Review H4 semantic-field samples.
+6. Review xref hub-family samples.
+7. Build the first H5 anomaly review report from F0/F2 samples.
 
 ## Boundary Links
 

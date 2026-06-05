@@ -9,7 +9,8 @@ atlas pages `/tools/r2-h1` and `/tools/r2-explorer`.
 Artifact note, 2026-06-05: the R2 scripts/data named in this draft are not
 present in the current branch. Before submission, restore or rebuild the R2
 generator package so every result below is reproducible from current
-`csl-orig`.
+`csl-orig`. The minimum rebuild contract is
+[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
 
 ## Working title
 
@@ -84,7 +85,7 @@ Target reproducibility: deterministic, stdlib-only, reading sibling `csl-orig`.
 The archived package included `sense_split.py` (splitter + alignment),
 `h1_analysis.py` (granularity x year), `h2h3_analysis.py` (survival + drift),
 and `r2_explorer.py` (interactive figure). Rebuild or restore these before
-submission.
+submission using [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
 
 ## Open before submission
 
