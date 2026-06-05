@@ -50,13 +50,14 @@ sense rows, and builds provisional Sanskrit-anchor alignments.
 | Output | Role | Current content |
 |---|---|---|
 | `data/lexico/r2_source_anchor_summary.json` | Count and drift summary against archive fixtures. | 5 lemmas, 14 dictionaries, 1,811 source-backed rows versus 445 archived rows. |
-| `data/lexico/r2_source_anchor_senses.jsonl` | Minimal source-backed sense-row worklist. | One provisional row per split source span, with `<L>` ids, source links, anchors, and limitations. |
+| `data/lexico/r2_source_anchor_senses.jsonl` | Minimal source-backed sense-row worklist. | One provisional row per split source span, with `<L>` ids, source links, anchors, limitations, and AE reverse-match rank metadata where applicable. |
 | `data/lexico/r2_source_anchor_alignments.json` | Prototype alignment worklist. | Jaccard-ranked shared Sanskrit/citation anchors, capped to top rows per lemma. |
 | `data/lexico/r2_parser_diagnostics.json` | Parser-drift worklist for the next rebuild slice. | 70 lemma/dictionary diagnostics; 17 high-priority rows classify PWG/PWK div splitting, BEN/AP90/BHS marker scope, AE reverse overmatch, and SKD/VCP `iti` review. |
 
 The row-count drift is expected. The prototype includes PWK from source, exposes
-AE reverse-dictionary overmatching, and splits some PWG/PWK/BEN source markers
-more finely than the archived static explorer. Use the drift table in
+AE reverse-dictionary overmatching with equivalent-position rank counts, and
+splits some PWG/PWK/BEN source markers more finely than the archived static
+explorer. Use the drift table in
 `r2_source_anchor_summary.json` and the classified worklist in
 [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) to decide which parser
 family to tighten next.
@@ -135,7 +136,7 @@ Use the source-backed anchor prototype to tighten parser-family parity with the
 archive fixtures. Run `npm run build-r2-parser-diagnostics` after
 `npm run build-r2-source-anchors` and use the high-priority rows to drive the
 next parser changes. Current priority order: PWG/PWK top-level `div` scope,
-BEN/AP90/BHS numbered-marker scope, AE reverse ranking for common roots, then
-indigenous `iti` review labels. Broaden beyond `gam`, `dharma`, `rama`, `iti`,
+BEN/AP90/BHS numbered-marker scope, AE reverse rank filtering/review for common
+roots, then indigenous `iti` review labels. Broaden beyond `gam`, `dharma`, `rama`, `iti`,
 and `bodhisattva` only after the generator can explain or reproduce the
 archived payloads from source.

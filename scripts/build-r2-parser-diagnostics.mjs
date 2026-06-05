@@ -72,7 +72,7 @@ function nextActionFor(row, driftClass) {
     if (row.split === "number-marker") return "Constrain numbered-marker parsing so references or submarkers do not inflate BEN/AP90/BHS sense rows.";
     return "Tighten explicit marker scope before using rows as sense counts.";
   }
-  if (driftClass === "reverse-overmatch") return "Add AE equivalent-position and exactness ranking before using reverse rows as alignments.";
+  if (driftClass === "reverse-overmatch") return "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments.";
   if (driftClass === "indigenous-coarse-review") return "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.";
   if (driftClass === "archive-missing-from-source") return "Resolve lookup-key, source-availability, or homonym-aggregation gap against the archived fixture.";
   if (driftClass === "under-split-or-source-gap") return "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows.";
@@ -141,6 +141,7 @@ function diagnosticRows(summary, senseRows) {
         sourceMinusArchive: sourceRows - archivedRows,
         sourceToArchiveRatio: ratio(sourceRows, archivedRows),
         splitConfidence: row.splitConfidence ?? [],
+        ...(row.reverseRankCounts ? { reverseRankCounts: row.reverseRankCounts } : {}),
         sourceLines: row.sourceLines ?? [],
         driftClass,
         priority: priorityForClass(driftClass),
@@ -171,6 +172,7 @@ function worklistRows(rows) {
       sourceSenseRows: row.sourceSenseRows,
       archivedSenseRows: row.archivedSenseRows,
       sourceToArchiveRatio: row.sourceToArchiveRatio,
+      ...(row.reverseRankCounts ? { reverseRankCounts: row.reverseRankCounts } : {}),
       nextAction: row.nextAction
     }));
 }

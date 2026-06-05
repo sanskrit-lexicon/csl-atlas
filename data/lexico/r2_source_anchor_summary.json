@@ -254,7 +254,13 @@
             483,
             926,
             1290
-          ]
+          ],
+          "reverseRankCounts": {
+            "tail": 80,
+            "low": 72,
+            "medium": 54,
+            "high": 37
+          }
         }
       ]
     },
@@ -531,7 +537,13 @@
             3619,
             9631,
             10544
-          ]
+          ],
+          "reverseRankCounts": {
+            "tail": 25,
+            "high": 18,
+            "medium": 12,
+            "low": 11
+          }
         }
       ]
     },
@@ -791,7 +803,12 @@
             15562,
             18262,
             26241
-          ]
+          ],
+          "reverseRankCounts": {
+            "tail": 4,
+            "high": 1,
+            "low": 1
+          }
         }
       ]
     },
@@ -1049,7 +1066,13 @@
             2300,
             3121,
             3152
-          ]
+          ],
+          "reverseRankCounts": {
+            "tail": 37,
+            "low": 23,
+            "high": 9,
+            "medium": 7
+          }
         }
       ]
     },
@@ -1261,7 +1284,8 @@
           "sourceSenseRows": 0,
           "archivedSenseRows": 0,
           "splitConfidence": [],
-          "sourceLines": []
+          "sourceLines": [],
+          "reverseRankCounts": {}
         }
       ]
     }

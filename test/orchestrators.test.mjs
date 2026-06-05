@@ -9,7 +9,7 @@ import assert from "node:assert/strict";
 
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
-import { jaccard, lookupKeysForLemma, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
+import { jaccard, lookupKeysForLemma, reverseMatchProfile, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
 import { classifyDrift, priorityForClass } from "../scripts/build-r2-parser-diagnostics.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
@@ -79,6 +79,27 @@ test("splitExplicitMarkers keeps preface and numbered parts stable", () => {
 test("jaccard scores anchor overlap", () => {
   assert.equal(jaccard(["a", "b"], ["b", "c"]), 1 / 3);
   assert.equal(jaccard([], []), 0);
+});
+
+test("reverseMatchProfile ranks AE equivalents by first matching group", () => {
+  const lookup = new Set(["gam"]);
+  assert.deepEqual(
+    reverseMatchProfile("{@Approach@} {#upa gam#} {#yA#}", lookup),
+    { rank: "high", firstGroupIndex: 1, matchGroupCount: 1, equivalentGroupCount: 3, score: 0.5 }
+  );
+  assert.equal(
+    reverseMatchProfile("{@A@} {#foo#} {#bar#} {#baz#} {#gam#}", lookup).rank,
+    "medium"
+  );
+  assert.equal(
+    reverseMatchProfile("{@A@} {#one#} {#two#} {#three#} {#four#} {#five#} {#six#} {#gam#}", lookup).rank,
+    "low"
+  );
+  assert.equal(
+    reverseMatchProfile("{@A@} {#one#} {#two#} {#three#} {#four#} {#five#} {#six#} {#seven#} {#eight#} {#nine#} {#ten#} {#gam#}", lookup).rank,
+    "tail"
+  );
+  assert.equal(reverseMatchProfile("{@No match@} {#yA#}", lookup).rank, "no-match");
 });
 
 test("R2 parser diagnostics classify drift by rebuild work package", () => {

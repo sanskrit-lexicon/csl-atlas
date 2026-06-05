@@ -124,7 +124,13 @@
       "sourceSenseRows": 243,
       "archivedSenseRows": 30,
       "sourceToArchiveRatio": 8.1,
-      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments."
+      "reverseRankCounts": {
+        "tail": 80,
+        "low": 72,
+        "medium": 54,
+        "high": 37
+      },
+      "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments."
     },
     {
       "diagnosticId": "r2-drift:iti:ae",
@@ -136,7 +142,13 @@
       "sourceSenseRows": 76,
       "archivedSenseRows": 30,
       "sourceToArchiveRatio": 2.533,
-      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments."
+      "reverseRankCounts": {
+        "tail": 37,
+        "low": 23,
+        "high": 9,
+        "medium": 7
+      },
+      "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments."
     },
     {
       "diagnosticId": "r2-drift:dharma:ae",
@@ -148,7 +160,13 @@
       "sourceSenseRows": 66,
       "archivedSenseRows": 24,
       "sourceToArchiveRatio": 2.75,
-      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments."
+      "reverseRankCounts": {
+        "tail": 25,
+        "high": 18,
+        "medium": 12,
+        "low": 11
+      },
+      "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments."
     },
     {
       "diagnosticId": "r2-drift:dharma:vcp",
@@ -328,6 +346,11 @@
       "sourceSenseRows": 6,
       "archivedSenseRows": 4,
       "sourceToArchiveRatio": 1.5,
+      "reverseRankCounts": {
+        "tail": 4,
+        "high": 1,
+        "low": 1
+      },
       "nextAction": "Inspect after high-priority parser families; drift is visible but not currently blocking."
     }
   ],
@@ -672,6 +695,12 @@
       "splitConfidence": [
         "reverse-equivalent"
       ],
+      "reverseRankCounts": {
+        "tail": 80,
+        "low": 72,
+        "medium": 54,
+        "high": 37
+      },
       "sourceLines": [
         218,
         348,
@@ -681,7 +710,7 @@
       ],
       "driftClass": "reverse-overmatch",
       "priority": "high",
-      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments.",
+      "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments.",
       "exampleRows": [
         {
           "rowId": "gam:ae:39:equiv",
@@ -691,7 +720,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         },
         {
@@ -702,7 +731,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         },
         {
@@ -713,7 +742,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         }
       ]
@@ -734,6 +763,12 @@
       "splitConfidence": [
         "reverse-equivalent"
       ],
+      "reverseRankCounts": {
+        "tail": 37,
+        "low": 23,
+        "high": 9,
+        "medium": 7
+      },
       "sourceLines": [
         518,
         1484,
@@ -743,7 +778,7 @@
       ],
       "driftClass": "reverse-overmatch",
       "priority": "high",
-      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments.",
+      "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments.",
       "exampleRows": [
         {
           "rowId": "iti:ae:88:equiv",
@@ -753,7 +788,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         },
         {
@@ -764,7 +799,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         },
         {
@@ -775,7 +810,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         }
       ]
@@ -796,6 +831,12 @@
       "splitConfidence": [
         "reverse-equivalent"
       ],
+      "reverseRankCounts": {
+        "tail": 25,
+        "high": 18,
+        "medium": 12,
+        "low": 11
+      },
       "sourceLines": [
         804,
         1040,
@@ -805,7 +846,7 @@
       ],
       "driftClass": "reverse-overmatch",
       "priority": "high",
-      "nextAction": "Add AE equivalent-position and exactness ranking before using reverse rows as alignments.",
+      "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments.",
       "exampleRows": [
         {
           "rowId": "dharma:ae:136:equiv",
@@ -815,7 +856,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         },
         {
@@ -826,7 +867,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         },
         {
@@ -837,7 +878,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         }
       ]
@@ -1626,6 +1667,11 @@
       "splitConfidence": [
         "reverse-equivalent"
       ],
+      "reverseRankCounts": {
+        "tail": 4,
+        "high": 1,
+        "low": 1
+      },
       "sourceLines": [
         2647,
         14897,
@@ -1645,7 +1691,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         },
         {
@@ -1656,7 +1702,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         },
         {
@@ -1667,7 +1713,7 @@
           "splitConfidence": "reverse-equivalent",
           "limitations": [
             "Reverse dictionary row selected by Sanskrit equivalent, not by headword.",
-            "Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work."
+            "Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work."
           ]
         }
       ]
@@ -3347,6 +3393,7 @@
       "sourceMinusArchive": 0,
       "sourceToArchiveRatio": null,
       "splitConfidence": [],
+      "reverseRankCounts": {},
       "sourceLines": [],
       "driftClass": "no-anchor-evidence",
       "priority": "info",

@@ -126,8 +126,8 @@ The headline is **forensic**: Śabda-Sāgara's sense glosses are **82% word-iden
 - Rebuild the reproducible package defined in
   [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
 - Use [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) to tighten PWG/PWK
-  division scope, BEN/AP90/BHS marker scope, AE reverse ranking, and finer
-  indigenous splitting.
+  division scope, BEN/AP90/BHS marker scope, AE reverse rank filtering/review,
+  and finer indigenous splitting.
 - Archived result — H1 de-confounded on a fixed 30-noun panel: the year-trend
   stays flat (Pearson *r* = 0.01) after removing the headword-splitting
   artifact, confirming H1 is unsupported. A weak *r* = 0.56 among the 5

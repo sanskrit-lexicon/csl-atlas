@@ -150,16 +150,67 @@ function uniqueSorted(values) {
   return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 }
 
-function extractMarkedSanskrit(body) {
-  const tokens = [];
+function countValues(values) {
+  const counts = {};
+  for (const value of values.filter(Boolean)) counts[value] = (counts[value] || 0) + 1;
+  return Object.fromEntries(Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])));
+}
+
+function extractMarkedSanskritGroups(body) {
+  const matches = [];
   for (const pattern of MARKED_SANSKRIT) {
     pattern.lastIndex = 0;
     for (const match of body.matchAll(pattern)) {
       if (/^\s*(?:--)?\d+\.?\s*$/.test(match[1])) continue;
-      tokens.push(...tokenList(match[1]));
+      matches.push({ index: match.index, text: match[1] });
     }
   }
+
+  const groups = [];
+  matches.sort((a, b) => a.index - b.index);
+  for (const match of matches) {
+    const tokens = tokenList(match.text);
+    if (tokens.length) groups.push(tokens);
+  }
+  return groups;
+}
+function extractMarkedSanskrit(body) {
+  const tokens = [];
+  for (const group of extractMarkedSanskritGroups(body)) tokens.push(...group);
   return tokens;
+}
+
+export function reverseMatchProfile(body, lookupKeySet) {
+  const groups = extractMarkedSanskritGroups(body);
+  const matchingGroupIndexes = [];
+  for (let index = 0; index < groups.length; index++) {
+    if (groups[index].some(token => lookupKeySet.has(normalizeAnchor(token)))) matchingGroupIndexes.push(index);
+  }
+  if (!matchingGroupIndexes.length) {
+    return {
+      rank: "no-match",
+      firstGroupIndex: null,
+      matchGroupCount: 0,
+      equivalentGroupCount: groups.length,
+      score: 0
+    };
+  }
+
+  const firstGroupIndex = matchingGroupIndexes[0];
+  const rank = firstGroupIndex <= 2
+    ? "high"
+    : firstGroupIndex <= 4
+      ? "medium"
+      : firstGroupIndex <= 9
+        ? "low"
+        : "tail";
+  return {
+    rank,
+    firstGroupIndex,
+    matchGroupCount: matchingGroupIndexes.length,
+    equivalentGroupCount: groups.length,
+    score: Number((1 / (firstGroupIndex + 1)).toFixed(3))
+  };
 }
 
 function extractIndigenousTokens(body) {
@@ -203,7 +254,7 @@ function hasEquivalent(body, lookupKeySet) {
   return extractMarkedSanskrit(body).some(token => lookupKeySet.has(normalizeAnchor(token)));
 }
 
-function rowFromPart(target, dict, rec, part) {
+function rowFromPart(target, dict, rec, part, extra = {}) {
   const lookupKeySet = new Set(target.lookupKeys.map(normalizeAnchor));
   const blockId = rec.L || `line:${rec.startLine}`;
   const anchors = anchorSets(part.text, dict, lookupKeySet);
@@ -222,6 +273,7 @@ function rowFromPart(target, dict, rec, part) {
     splitConfidence: part.splitConfidence,
     text: cleanText(part.text),
     ...anchors,
+    ...extra,
     limitations: limitationsFor(dict, part)
   };
 }
@@ -231,7 +283,7 @@ function limitationsFor(dict, part) {
   if (part.splitConfidence === "lumped-proxy") limitations.push("No explicit sense marker in this source span; row is a source block proxy.");
   if (dict.split === "iti-unit") limitations.push("Indigenous prose split on coarse iti-units; requires philological review.");
   if (dict.split === "reverse-equivalent") limitations.push("Reverse dictionary row selected by Sanskrit equivalent, not by headword.");
-  if (dict.code === "ae") limitations.push("Common roots over-match in reverse lookup; rank and equivalent-position filters remain future work.");
+  if (dict.code === "ae") limitations.push("Common roots over-match in reverse lookup; equivalent-position rank is provided but filtering remains future work.");
   return limitations;
 }
 
@@ -253,10 +305,11 @@ function buildReverseRows(target, dict) {
   const rows = [];
   let sourceRecordCount = 0;
   for (const rec of iterateDict(dict.code)) {
-    if (!hasEquivalent(rec.body || "", lookupKeySet)) continue;
+    const reverseMatch = reverseMatchProfile(rec.body || "", lookupKeySet);
+    if (reverseMatch.rank === "no-match") continue;
     sourceRecordCount += 1;
     const part = { localId: "equiv", splitConfidence: "reverse-equivalent", text: rec.body || "" };
-    rows.push(rowFromPart(target, dict, rec, part));
+    rows.push(rowFromPart(target, dict, rec, part, { reverseMatch }));
   }
   return { rows, sourceRecordCount };
 }
@@ -333,7 +386,7 @@ function buildAlignments(rows) {
     limitations: [
       "Rows are source-backed but the final R2 splitter is not restored.",
       "Alignment ranking uses provisional anchors and should be treated as a review worklist.",
-      "AE reverse rows intentionally expose common-root overmatching."
+      "AE reverse rows intentionally expose common-root overmatching and now carry equivalent-position rank metadata."
     ],
     lemmas: lemmas.sort((a, b) => a.lemma.localeCompare(b.lemma))
   };
@@ -367,7 +420,10 @@ function summarize(rows, sourceRecordsByLemmaDict) {
         sourceSenseRows: here.length,
         archivedSenseRows: archiveSenseRows,
         splitConfidence: uniqueSorted(here.map(row => row.splitConfidence)),
-        sourceLines: here.slice(0, 5).map(row => row.sourceLine)
+        sourceLines: here.slice(0, 5).map(row => row.sourceLine),
+        ...(dict.parserFamily === "reverse" ? {
+          reverseRankCounts: countValues(here.map(row => row.reverseMatch?.rank))
+        } : {})
       });
     }
     lemmaRows.push({

@@ -5,7 +5,7 @@
   "limitations": [
     "Rows are source-backed but the final R2 splitter is not restored.",
     "Alignment ranking uses provisional anchors and should be treated as a review worklist.",
-    "AE reverse rows intentionally expose common-root overmatching."
+    "AE reverse rows intentionally expose common-root overmatching and now carry equivalent-position rank metadata."
   ],
   "lemmas": [
     {

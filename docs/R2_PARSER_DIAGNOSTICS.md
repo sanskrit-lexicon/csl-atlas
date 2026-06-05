@@ -44,7 +44,7 @@ Current artifact:
 | `over-split-candidate` | 6 | Explicit-marker parser emits far more rows than the archive. | Tighten PWG/PWK `div` and BEN/AP90/BHS number-marker scope. |
 | `source-only-dictionary` | 6 | Source-backed rows exist where no archived baseline exists. | Treat as rebuild expansion, not drift. |
 | `mild-drift` | 5 | Visible but lower-priority count drift. | Inspect after high-priority parser families. |
-| `reverse-overmatch` | 3 | AE reverse lookup overmatches common Sanskrit equivalents. | Add equivalent-position and exactness ranking. |
+| `reverse-overmatch` | 3 | AE reverse lookup overmatches common Sanskrit equivalents. | Use rank counts to choose review/filter bands. |
 | `under-split-or-source-gap` | 2 | Source rows fall below the archived static count. | Check lookup variants, source availability, and homonym aggregation. |
 
 ## Highest-Priority Parser Work
@@ -56,8 +56,9 @@ The top worklist points to four concrete parser tasks:
    sense rows.
 2. **BEN numbered-marker scope.** `gam` and `rama` show number-marker inflation
    and should be checked before BEN is used in H1R/H2/H3R row counts.
-3. **AE reverse ranking.** `gam`, `dharma`, and `iti` need equivalent-position
-   and exactness ranking before reverse rows are treated as alignment evidence.
+3. **AE reverse filtering/review.** `gam`, `dharma`, and `iti` now carry
+   equivalent-position rank metadata; the next step is deciding which rank bands
+   are safe enough for alignment use.
 4. **Indigenous `iti` review.** SKD/VCP rows remain useful, but the artifact
    labels them as review prompts rather than sense decisions.
 
@@ -66,3 +67,19 @@ The top worklist points to four concrete parser tasks:
 This diagnostic layer is dictionary evidence only. It does not import DCS,
 corpus frequency, TEI/OntoLex, FrAC, GitHub, organization-process evidence,
 runtime LLM classification, a database, or a backend.
+
+## AE Reverse Rank Counts
+
+AE rows are preserved, but the source-backed prototype now records where the
+queried Sanskrit equivalent first appears among marked equivalent groups:
+
+| Lemma | Source rows | Archived rows | High | Medium | Low | Tail |
+|---|---:|---:|---:|---:|---:|---:|
+| `gam` | 243 | 30 | 37 | 54 | 72 | 80 |
+| `dharma` | 66 | 24 | 18 | 12 | 11 | 25 |
+| `iti` | 76 | 30 | 9 | 7 | 23 | 37 |
+| `rama` | 6 | 4 | 1 | 0 | 1 | 4 |
+
+High-rank rows are not automatically accepted, and tail rows are not discarded.
+The rank is a deterministic review and filtering aid for the reverse dictionary
+only.
