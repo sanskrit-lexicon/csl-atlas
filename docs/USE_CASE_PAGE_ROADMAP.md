@@ -34,7 +34,7 @@ targets before adding new analysis-method prose.
 | 1 | [`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md) | UC-RD-02 | public readers | Answer which dictionary to start with and why. | active first page |
 | 1a | [`DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md) | UC-RD-02, UC-RD-07 | public readers | Explain the chooser in broader reader-guide context. | active companion |
 | 2 | [`READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) | UC-RD-01, UC-RD-03, UC-RD-04, UC-RD-05 | public readers | Explain what a lookup result means, including no-result and ambiguous-result cases. | active second page |
-| 3 | [`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | active third page |
+| 3 | [`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | proof doc active; four public queue pages carry proof/trust blocks |
 | 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md) and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | review artifact built |
 | 5 | Microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Give the M1-M5 profile, methods, and findings one coherent entry point. | active scaffold |
 | 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Interpret the Amarakosa-native semantic-field analysis after the chart layer settles. | family profile built; review next |

@@ -94,6 +94,18 @@ Every review queue page should include:
 Then link to the procedure in [`REVIEW_REPORTS.md`](REVIEW_REPORTS.md) or
 [`LIGHT_REVIEW_SPRINT.md`](LIGHT_REVIEW_SPRINT.md).
 
+## Public Queue Page Coverage
+
+These public queue pages now carry the required proof-first text and trust
+block:
+
+| Page | Queue proof covered |
+|---|---|
+| `/tools/review-alignment` | low-confidence dictionary alignment |
+| `/tools/review-source-layers` | unknown MW source-layer sigla |
+| `/tools/review-source-siglum` | source-siglum alias candidates |
+| `/tools/review-gender-conflicts` | POS/gender conflicts |
+
 ## Validation Commands
 
 ```sh
