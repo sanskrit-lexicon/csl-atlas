@@ -11,6 +11,7 @@ import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { jaccard, lookupKeysForLemma, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
+import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
 import { topForm } from "../scripts/build-citation-apparatus.mjs";
 
@@ -81,6 +82,23 @@ test("jaccard scores anchor overlap", () => {
 test("parseCsv handles quoted commas and escaped quotes", () => {
   const rows = parseCsv('a,b,c\nx,"y, z","q ""quoted"""\n');
   assert.deepEqual(rows, [{ a: "x", b: "y, z", c: 'q "quoted"' }]);
+});
+
+// ---- H4 family profiles: stable ranking helpers ----
+test("H4 mean and percentage rounding are stable", () => {
+  assert.ok(Math.abs(h4Mean([0.1, 0.2, Number.NaN, 0.3]) - 0.2) < 1e-12);
+  assert.equal(h4Mean([]), 0);
+  assert.equal(roundPct(1 / 3), 0.3333);
+});
+
+test("rankFamilyFields chooses high and low fields deterministically", () => {
+  const rows = [
+    { fieldKey: "a", fieldOrder: 2, meanCoveragePct: 0.5, dictionariesWithCoverage: 1 },
+    { fieldKey: "b", fieldOrder: 1, meanCoveragePct: 0.5, dictionariesWithCoverage: 3 },
+    { fieldKey: "c", fieldOrder: 3, meanCoveragePct: 0.1, dictionariesWithCoverage: 1 }
+  ];
+  assert.deepEqual(rankFamilyFields(rows, "high", 2).map(row => row.fieldKey), ["b", "a"]);
+  assert.deepEqual(rankFamilyFields(rows, "low", 2).map(row => row.fieldKey), ["c", "b"]);
 });
 
 // ---- All-dictionary coverage: classify + fit bands ----

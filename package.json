@@ -22,6 +22,7 @@
     "build-source-layer-review": "node scripts/build-source-layer-review.mjs",
     "build-alignment-review": "node scripts/build-alignment-review.mjs",
     "build-semantic-fields": "node scripts/build-semantic-fields.mjs",
+    "build-h4-family-profiles": "node scripts/build-h4-family-profiles.mjs",
     "build-xref-lineage": "node scripts/build-xref-lineage.mjs",
     "recover-r2-archive": "node scripts/recover-r2-archive.mjs",
     "build-r2-source-anchors": "node scripts/build-r2-source-anchors.mjs",

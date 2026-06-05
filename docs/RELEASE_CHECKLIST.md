@@ -24,6 +24,7 @@ npm run build-gender-review
 npm run build-source-layer-review
 npm run build-alignment-review
 npm run build-semantic-fields
+npm run build-h4-family-profiles
 npm run build-xref-lineage
 npm run recover-r2-archive
 npm run build-r2-source-anchors

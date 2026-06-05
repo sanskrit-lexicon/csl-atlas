@@ -10,20 +10,38 @@ and `/tools/semantic-fields`.
 - Evidence: `data/lexico/semantic_fields.csv`,
   `data/lexico/semantic_field_coverage.csv`,
   `data/lexico/semantic_field_report.json`,
+  `data/lexico/semantic_field_family_profiles.json`,
   `src/data/dicts/semantic-fields.json`,
   `scripts/lexico/m8_semantic_fields.py`, and
-  `scripts/build-semantic-fields.mjs`.
+  `scripts/build-semantic-fields.mjs`,
+  `scripts/build-h4-family-profiles.mjs`.
 - Limitations: headword coverage only; no corpus frequency, passage
   attestation, sense coverage, or non-headword mentions.
 - Validation: `python scripts/lexico/validate_lexico.py`,
-  `npm run build-semantic-fields`, and `npm run build`.
+  `npm run build-semantic-fields`, `npm run build-h4-family-profiles`,
+  and `npm run build`.
 - Owner repo: `csl-atlas`.
 
 ## Current Reading
 
 H4 is now stronger than "can we measure fields?" The answer is yes: AMAR vargas
-produce a stable dictionary-first coverage layer. The next question is whether
-coverage profiles differ by dictionary family rather than only by gross size.
+produce a stable dictionary-first coverage layer. The family-profile artifact
+now shows that coverage profiles can be compared by dictionary family rather
+than only by gross size.
+
+## Family Profile Artifact
+
+`data/lexico/semantic_field_family_profiles.json` groups the 43 compared
+dictionaries into 5 evidence-bearing family profiles across 24 AMAR fields. It
+emits top fields, low fields, distinctive high/low fields, and 12 high-spread
+field contrasts as review prompts. Each family cluster includes a convention
+explanation so low coverage is not mistaken for absence of knowledge.
+
+The strongest current aggregate contrast is still a convention contrast:
+Western-tagged dictionaries average 52.5% AMAR headword coverage across the
+family, while reverse-bilingual works average 0.2% under this strict Sanskrit
+headword test. That spread is not a quality ranking; it tells us which lookup
+and headword conventions the review samples must control for.
 
 ## Family-Level Signals
 
@@ -65,6 +83,7 @@ Use small scholar-reviewed samples before making paper-level claims:
 
 ## Next Test
 
-Build a family-profile table that compares top AMAR fields within each family,
-then annotate each high/low cluster with its likely convention explanation.
-This can become a paper figure only after the review samples above are checked.
+Use the family-profile artifact to choose the review samples above, then record
+which high/low clusters are true topical signals and which are convention or
+scope effects. This can become a paper figure only after those samples are
+checked.

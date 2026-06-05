@@ -31,7 +31,9 @@ already supports, what it refutes, and what it prepares for later analysis.
 
 Use the implemented H6 structural-register scatter and H4 semantic-field page
 as the first chart-trust examples. Both remain prototype-backed, but both now
-have generated JSON inputs and public atlas pages.
+have generated JSON inputs and public atlas pages. H4 also has a generated
+family-profile artifact that turns the next question into scholar review rather
+than data assembly.
 
 The SKD anubandha key, cross-reference graph overlap, root-agreement, and H4
 semantic-field packages are now implemented as data/docs/chart layers where
@@ -40,7 +42,7 @@ applicable. The remaining scholar-facing packages are now explicit:
 | Package | Doc | Next proof step |
 |---|---|---|
 | R2 rebuild | [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md) | Restore reproducible generator outputs before broadening H1R/H2/H3R. |
-| H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md) | Review SKD false lows, AP/AP90 deltas, VCP high coverage, and specialized baselines. |
+| H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md) | Use `data/lexico/semantic_field_family_profiles.json` to review SKD false lows, AP/AP90 deltas, VCP high coverage, and specialized baselines. |
 | Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Label shared-core, prefix-convention, and edition-continuity samples. |
 | H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md) | Review the 130-item proof-first queue and write the anomaly taxonomy. |
 
@@ -60,5 +62,7 @@ Before writing review procedure, each queue should state its proof value:
 
 H4 is now built as M8. Its field scheme is Amarakosa-native and
 dictionary-first; corpus fields belong outside the atlas unless a compact
-external contract exists. The interpretation package is
+external contract exists. The family-profile artifact is
+`data/lexico/semantic_field_family_profiles.json`, and the interpretation
+package is
 [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md).

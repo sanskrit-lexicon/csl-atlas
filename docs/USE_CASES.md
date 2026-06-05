@@ -274,8 +274,9 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
   it.
 - H6 structural-register scatter and H4 semantic fields are implemented
   chart-trust examples.
-- H4 semantic fields are built as the M8 data layer and `/tools/semantic-fields`;
-  interpretation is documented, and scholar review samples are next.
+- H4 semantic fields are built as the M8 data layer, `/tools/semantic-fields`,
+  and `data/lexico/semantic_field_family_profiles.json`; interpretation is
+  documented, and scholar review samples are next.
 - Xref hub review and H5 anomaly scope are documented as proof-first packages.
 
 ## Related Docs
