@@ -25,6 +25,7 @@ npm run build-source-layer-review
 npm run build-alignment-review
 npm run build-semantic-fields
 npm run build-xref-lineage
+npm run recover-r2-archive
 ```
 
 ## Validation Gates

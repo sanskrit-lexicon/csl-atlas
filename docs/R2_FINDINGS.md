@@ -3,8 +3,10 @@
 Current artifact note, 2026-06-05: this document preserves the R2 findings and
 the static atlas pages `/tools/r2-h1` and `/tools/r2-explorer`. The old R2
 generator files and JSONL/JSON outputs named below are not present in the
-current branch. Treat this as archived evidence until the R2 generator package
-is restored or rebuilt against current `csl-orig`. The reconstruction contract is
+current branch. `npm run recover-r2-archive` now extracts the static page
+payloads into `data/lexico/r2_archive_explorer.json` and
+`data/lexico/r2_archive_h1.json`; treat those as archive fixtures, not as a
+rebuilt splitter. The reconstruction contract is
 [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
 
 First real build of **R2** (the per-dict sense splitter, RESEARCH_LAYER_ROADMAP

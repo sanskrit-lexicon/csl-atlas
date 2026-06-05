@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "archived-static-page-recovery",
+  "claim": "Archived H1R sense-granularity scatter data recovered from the static atlas page.",
+  "sourceFiles": [
+    "src/tools/r2-h1.md"
+  ],
+  "sourceHashes": {
+    "src/tools/r2-h1.md": "0f6a87fd89915d1af1bb5d9f21629a6655fe20187c5c3aec05a268b2dc74738d"
+  },
+  "limitations": [
+    "This payload is recovered from SVG titles, not rebuilt from csl-orig.",
+    "Use it as a fixture while restoring the real R2 H1 generator.",
+    "It preserves the plotted per-dictionary points only."
+  ],
+  "counts": {
+    "dictionaryRows": 11,
+    "familyRows": 7
+  },
+  "rows": [
+    {
+      "dict": "skd",
+      "year": 1822,
+      "family": "indigenous",
+      "senseUnitsPerEntry": 1.109,
+      "entries": 42531
+    },
+    {
+      "dict": "wil",
+      "year": 1832,
+      "family": "Wilson",
+      "senseUnitsPerEntry": 1.8,
+      "entries": 44577
+    },
+    {
+      "dict": "pwg",
+      "year": 1855,
+      "family": "Petersburg",
+      "senseUnitsPerEntry": 1.161,
+      "entries": 123366
+    },
+    {
+      "dict": "ben",
+      "year": 1866,
+      "family": "Benfey",
+      "senseUnitsPerEntry": 2.529,
+      "entries": 17310
+    },
+    {
+      "dict": "mw72",
+      "year": 1872,
+      "family": "Monier-Williams",
+      "senseUnitsPerEntry": 2.903,
+      "entries": 55388
+    },
+    {
+      "dict": "vcp",
+      "year": 1873,
+      "family": "indigenous",
+      "senseUnitsPerEntry": 1.08,
+      "entries": 50135
+    },
+    {
+      "dict": "ap90",
+      "year": 1890,
+      "family": "Apte",
+      "senseUnitsPerEntry": 2.721,
+      "entries": 34882
+    },
+    {
+      "dict": "cae",
+      "year": 1891,
+      "family": "Cappeller",
+      "senseUnitsPerEntry": 1.355,
+      "entries": 40069
+    },
+    {
+      "dict": "mw",
+      "year": 1899,
+      "family": "Monier-Williams",
+      "senseUnitsPerEntry": 1.22,
+      "entries": 286560
+    },
+    {
+      "dict": "sch",
+      "year": 1928,
+      "family": "Petersburg",
+      "senseUnitsPerEntry": 1.135,
+      "entries": 29125
+    },
+    {
+      "dict": "ap",
+      "year": 1957,
+      "family": "Apte",
+      "senseUnitsPerEntry": 1.978,
+      "entries": 90654
+    }
+  ],
+  "familyMeans": [
+    {
+      "family": "Benfey",
+      "dictionaryCount": 1,
+      "meanSenseUnitsPerEntry": 2.529
+    },
+    {
+      "family": "Apte",
+      "dictionaryCount": 2,
+      "meanSenseUnitsPerEntry": 2.349
+    },
+    {
+      "family": "Monier-Williams",
+      "dictionaryCount": 2,
+      "meanSenseUnitsPerEntry": 2.062
+    },
+    {
+      "family": "Wilson",
+      "dictionaryCount": 1,
+      "meanSenseUnitsPerEntry": 1.8
+    },
+    {
+      "family": "Cappeller",
+      "dictionaryCount": 1,
+      "meanSenseUnitsPerEntry": 1.355
+    },
+    {
+      "family": "Petersburg",
+      "dictionaryCount": 2,
+      "meanSenseUnitsPerEntry": 1.148
+    },
+    {
+      "family": "indigenous",
+      "dictionaryCount": 2,
+      "meanSenseUnitsPerEntry": 1.095
+    }
+  ]
+}

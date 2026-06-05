@@ -10,7 +10,9 @@ Artifact note, 2026-06-05: the R2 scripts/data named in this draft are not
 present in the current branch. Before submission, restore or rebuild the R2
 generator package so every result below is reproducible from current
 `csl-orig`. The minimum rebuild contract is
-[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
+[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md). The current archive
+fixtures `data/lexico/r2_archive_explorer.json` and
+`data/lexico/r2_archive_h1.json` are comparison targets only.
 
 ## Working title
 
@@ -86,6 +88,12 @@ The archived package included `sense_split.py` (splitter + alignment),
 `h1_analysis.py` (granularity x year), `h2h3_analysis.py` (survival + drift),
 and `r2_explorer.py` (interactive figure). Rebuild or restore these before
 submission using [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
+
+Archive fixtures can be refreshed with:
+
+```sh
+npm run recover-r2-archive
+```
 
 ## Open before submission
 

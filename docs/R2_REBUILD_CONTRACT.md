@@ -3,20 +3,37 @@
 Date: 2026-06-05
 
 Status: reconstruction contract for the archived R2 sense-alignment package.
-This document does not claim the generator has been restored. It defines the
-minimum reproducible package needed before new H1R/H2/H3R claims are broadened
-or submitted.
+The archived page payload has been recovered as JSON fixtures, but the original
+splitter has not yet been restored. This document defines the minimum
+reproducible package needed before new H1R/H2/H3R claims are broadened or
+submitted.
 
 ## Trust Block
 
 - Evidence: archived findings in `R2_FINDINGS.md`, static pages
-  `/tools/r2-h1` and `/tools/r2-explorer`, and the paper draft
+  `/tools/r2-h1` and `/tools/r2-explorer`, recovered fixtures
+  `data/lexico/r2_archive_explorer.json` and
+  `data/lexico/r2_archive_h1.json`, and the paper draft
   `PAPER_SENSE_ALIGNMENT.md`.
 - Limitations: the old generator files and JSON outputs are not present in this
   branch; static pages preserve results but are not a reproducibility package.
 - Validation target: restored scripts must run from current sibling `csl-orig`
   and reproduce the archived headline numbers or explicitly document drift.
 - Owner repo: `csl-atlas`.
+
+## Recovered Archive Fixtures
+
+`npm run recover-r2-archive` extracts machine-readable fixtures from the two
+static R2 pages. These files are source-page recoveries, not regenerated
+dictionary analysis.
+
+| Output | Source | Recovered content |
+|---|---|---|
+| `data/lexico/r2_archive_explorer.json` | `src/tools/r2-explorer.md` | 5 lemmas, 445 sense rows, 104 alignment rows, 46 cross-tradition alignments. |
+| `data/lexico/r2_archive_h1.json` | `src/tools/r2-h1.md` | 11 plotted dictionary rows and 7 family means for the H1R static scatter. |
+
+Use these fixtures as tests and comparison targets while rebuilding the real
+R2 package from `csl-orig`.
 
 ## Required Outputs
 
@@ -55,6 +72,7 @@ Each sense row should be compact and deterministic:
 
 ## Rebuild Order
 
+0. Recover archived static fixtures with `npm run recover-r2-archive`.
 1. Restore or reimplement the entry loader and headword resolver.
 2. Aggregate all homonym blocks for the requested lemma before splitting.
 3. Rebuild parser families in this order: western explicit, western lumped,
@@ -85,6 +103,7 @@ Each sense row should be compact and deterministic:
 
 ## Next Implementation Slice
 
-Start with the five archived anchor lemmas: `gam`, `dharma`, `rama`, `iti`, and
-`bodhisattva`. Reproduce the old explorer payload first; then broaden only
-after the generator can be rerun from current `csl-orig`.
+Use the recovered fixtures for the five archived anchor lemmas: `gam`,
+`dharma`, `rama`, `iti`, and `bodhisattva`. Reproduce those payloads from
+current `csl-orig` first; then broaden only after the generator can be rerun
+from source.
