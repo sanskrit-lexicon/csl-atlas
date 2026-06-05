@@ -16,7 +16,7 @@ conventions:
 | VCP | `0`-marked forms (`BvA0`, `para0`, `saka0`) |
 | KRM | parenthesised grammar cluster (`(I-BvAdiH-792 saka-sew-para)`) |
 | YAT | class-digit conjugation block (`{#(O-x) gacCati#} 1. {%a.%}`) |
-| SHS | Wilson-tradition prose |
+| SHS | Wilson-tradition dash cluster plus English class ordinal |
 
 If those five independent extractors, over five independent source traditions, **agree**
 on a root's grammar where they overlap, that is strong end-to-end evidence the parses are
@@ -24,27 +24,27 @@ real and not artifacts of any one regex. m7 measures it.
 
 ## Result — the traditions broadly agree
 
-Over **3,692** distinct roots (SLP1 headword); a root counts toward a feature when **≥2**
+Over **3,703** distinct roots (SLP1 headword); a root counts toward a feature when **≥2**
 dicts give it a label:
 
 | feature | roots ≥2 opinions | unanimous (one label) | **compatible** (multi-class-tolerant) | conflict |
 |---|---:|---:|---:|---:|
-| **gaṇa** | 1,483 | 1,025 (69.1%) | **1,275 (86.0%)** | 208 |
-| **pada** | 1,402 | 878 (62.6%) | **1,055 (75.2%)** | 347 |
-| **transitivity** | 1,254 | 871 (69.5%) | **1,015 (80.9%)** | 239 |
+| **gaṇa** | 1,526 | 1,067 (69.9%) | **1,305 (85.5%)** | 221 |
+| **pada** | 1,439 | 907 (63.0%) | **1,083 (75.3%)** | 356 |
+| **transitivity** | 1,333 | 945 (70.9%) | **1,085 (81.4%)** | 248 |
 
 - **unanimous** — every dict gives the *same single* label.
 - **compatible** — a single label is shared by *every* dict, tolerating roots a dict
   legitimately lists in more than one class (Sanskrit `BUza` is bhvādi *and* curādi). This
   is the fair measure of cross-tradition consensus.
 
-**86% gaṇa compatibility across five independent traditions** is the headline: the
+**85.5% gaṇa compatibility across five independent traditions** is the headline: the
 dhātupāṭha class of a root is highly stable across the lexicographic record, and the m4
 parses corroborate one another.
 
 ## The conflicts are an artifact worth keeping
 
-The 208 / 347 / 239 incompatible roots are **not** flagged as errors. They conflate two
+The 221 / 356 / 248 incompatible roots are **not** flagged as errors. They conflate two
 things, both interesting:
 
 1. **Genuine cross-tradition disagreement** — e.g. `BAja` SKD parasmaipada vs VCP/KRM
@@ -80,5 +80,6 @@ lexicographic judgement, so it is **left to the maintainer** (the same gate appl
 Group m4 rows by SLP1 root; per `(dict, root)` collect the **set** of labels (union over
 that dict's entries, so a multi-class root is never a self-conflict). `compatible` =
 intersection across the participating dicts is non-empty. SKD/SHS contribute fewer
-opinions than VCP/KRM/YAT because their feature coverage is lower (SKD pada from the
-anubandha slot; SHS prose). Deterministic, no LLM; provenance-stamped.
+opinions than VCP/KRM/YAT because their feature coverage is still lower, though SHS now
+fills most gaṇa/pada/transitivity slots from its dash cluster and English class ordinal.
+Deterministic, no LLM; provenance-stamped.

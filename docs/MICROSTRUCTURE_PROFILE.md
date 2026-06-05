@@ -62,7 +62,7 @@ The safest interpretation is comparative and convention-aware. A high M1 or M2
 count means a dictionary exposes a structure in a detectable CDSL markup
 convention. A low or zero count does not automatically mean the dictionary lacks
 that structure. Indigenous and root-layer dictionaries such as SKD, VCP, KRM,
-and YAT need M4 because their verbal apparatus is written in source-specific
+SHS, and YAT need M4 because their verbal apparatus is written in source-specific
 conventions, not European abbreviation tags.
 
 ## Companion Docs

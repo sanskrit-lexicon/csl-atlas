@@ -7,18 +7,18 @@
     "yat",
     "shs"
   ],
-  "distinct_roots": 3692,
+  "distinct_roots": 3703,
   "method": "Group m4 rows by SLP1 root; per (dict, root) collect the SET of labels (union over the dict's entries, so multi-class roots are not self-conflicts). unanimous = all dicts give one label; compatible = a single label is shared by every dict (tolerant of homonymous multi-class roots); conflict = otherwise.",
   "caveat": "Conflicts conflate genuine cross-tradition disagreement with legitimate homonymy (same SLP1 spelling, different roots/classes). ANALYSIS, not a review queue. SKD/SHS feature coverage is lower than VCP/KRM/YAT, so they contribute fewer opinions.",
   "features": {
     "gana": {
       "agreement": {
-        "roots_with_2plus_opinions": 1483,
-        "unanimous": 1025,
-        "compatible": 1275,
-        "conflict": 208,
-        "unanimous_rate": 0.6912,
-        "compatible_rate": 0.8597
+        "roots_with_2plus_opinions": 1526,
+        "unanimous": 1067,
+        "compatible": 1305,
+        "conflict": 221,
+        "unanimous_rate": 0.6992,
+        "compatible_rate": 0.8552
       },
       "pairs": {
         "skd-vcp": {
@@ -47,40 +47,40 @@
           "rate": 0.8912
         },
         "vcp-shs": {
-          "shared_roots": 214,
-          "agree": 197,
-          "rate": 0.9206
+          "shared_roots": 377,
+          "agree": 356,
+          "rate": 0.9443
+        },
+        "skd-shs": {
+          "shared_roots": 229,
+          "agree": 148,
+          "rate": 0.6463
+        },
+        "krm-shs": {
+          "shared_roots": 205,
+          "agree": 161,
+          "rate": 0.7854
         },
         "krm-yat": {
           "shared_roots": 203,
           "agree": 177,
           "rate": 0.8719
         },
-        "skd-shs": {
-          "shared_roots": 139,
-          "agree": 90,
-          "rate": 0.6475
-        },
-        "krm-shs": {
-          "shared_roots": 105,
-          "agree": 76,
-          "rate": 0.7238
-        },
         "yat-shs": {
-          "shared_roots": 71,
-          "agree": 59,
-          "rate": 0.831
+          "shared_roots": 125,
+          "agree": 109,
+          "rate": 0.872
         }
       }
     },
     "pada": {
       "agreement": {
-        "roots_with_2plus_opinions": 1402,
-        "unanimous": 878,
-        "compatible": 1055,
-        "conflict": 347,
-        "unanimous_rate": 0.6262,
-        "compatible_rate": 0.7525
+        "roots_with_2plus_opinions": 1439,
+        "unanimous": 907,
+        "compatible": 1083,
+        "conflict": 356,
+        "unanimous_rate": 0.6303,
+        "compatible_rate": 0.7526
       },
       "pairs": {
         "skd-vcp": {
@@ -109,9 +109,9 @@
           "rate": 0.8468
         },
         "vcp-shs": {
-          "shared_roots": 204,
-          "agree": 196,
-          "rate": 0.9608
+          "shared_roots": 332,
+          "agree": 315,
+          "rate": 0.9488
         },
         "krm-yat": {
           "shared_roots": 175,
@@ -119,30 +119,30 @@
           "rate": 0.5429
         },
         "krm-shs": {
-          "shared_roots": 101,
-          "agree": 94,
-          "rate": 0.9307
+          "shared_roots": 163,
+          "agree": 144,
+          "rate": 0.8834
         },
         "skd-shs": {
-          "shared_roots": 66,
-          "agree": 34,
-          "rate": 0.5152
+          "shared_roots": 146,
+          "agree": 108,
+          "rate": 0.7397
         },
         "yat-shs": {
-          "shared_roots": 61,
-          "agree": 40,
-          "rate": 0.6557
+          "shared_roots": 111,
+          "agree": 75,
+          "rate": 0.6757
         }
       }
     },
     "transitivity": {
       "agreement": {
-        "roots_with_2plus_opinions": 1254,
-        "unanimous": 871,
-        "compatible": 1015,
-        "conflict": 239,
-        "unanimous_rate": 0.6946,
-        "compatible_rate": 0.8094
+        "roots_with_2plus_opinions": 1333,
+        "unanimous": 945,
+        "compatible": 1085,
+        "conflict": 248,
+        "unanimous_rate": 0.7089,
+        "compatible_rate": 0.814
       },
       "pairs": {
         "vcp-krm": {
@@ -155,25 +155,25 @@
           "agree": 614,
           "rate": 0.8771
         },
+        "vcp-shs": {
+          "shared_roots": 391,
+          "agree": 373,
+          "rate": 0.954
+        },
         "skd-krm": {
           "shared_roots": 359,
           "agree": 283,
           "rate": 0.7883
         },
-        "vcp-shs": {
-          "shared_roots": 229,
-          "agree": 214,
-          "rate": 0.9345
-        },
         "krm-shs": {
-          "shared_roots": 102,
-          "agree": 86,
-          "rate": 0.8431
+          "shared_roots": 201,
+          "agree": 165,
+          "rate": 0.8209
         },
         "skd-shs": {
-          "shared_roots": 17,
+          "shared_roots": 18,
           "agree": 15,
-          "rate": 0.8824
+          "rate": 0.8333
         }
       }
     }

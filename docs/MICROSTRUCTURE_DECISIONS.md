@@ -237,3 +237,26 @@ dictionary in `microstructure_fingerprint.json`.
 `anubandhas` column, but it is **not decoded** into the SKD key. Transitivity and
 seṭ/aniṭ are not systematically decoded for YAT until a source-specific key is
 reviewed.
+
+---
+
+## Round 11 - 2026-06-05: SHS feature fill, not new SHS detection
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 22 | Should SHS remain partly under-read in M4 because its grammar cluster uses dash separators? | **No. Parse SHS features inside already-detected root rows.** | Keep SHS root detection unchanged, but fill gaṇa/pada/transitivity from the SHS dash-joined cluster and English class ordinal. |
+
+SHS was already present in M4 with **463 root rows**, but many feature columns
+were blank because its compact grammar block uses forms such as
+`{#BvA-para-saka-sew .#}` rather than the VCP-style `BvA0` / `para0`
+conventions. The SHS parser is deliberately scoped to rows already detected by
+the existing seṭ/aniṭ + pada/transitivity rule; it does not broaden the root
+detector.
+
+**Built:** `scripts/lexico/m4_indigenous.py` now reads SHS dash-joined gaṇa,
+pada, and transitivity markers, with a fallback to the English `r. Nth cl.`
+class notation for gaṇa.
+
+**Caveat:** SHS feature fill is deterministic and useful for cross-dictionary
+root agreement, but it is still a convention parser. It should be reviewed from
+sample entries before being treated as philologically final.

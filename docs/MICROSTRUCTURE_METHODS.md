@@ -22,7 +22,7 @@ microstructure extractor counts.
 | M1 | `scripts/lexico/m1_subentries.py` | `<ab>` derivative markers such as causative, passive, desiderative, intensive, denominative, periphrastic, compound. | Equivalent information not wrapped in `<ab>`. | `microstructure_subentries.csv` |
 | M2 | `scripts/lexico/m2_preverbs.py` | `<div n="p">` preverb subentry blocks. | Preverb evidence expressed without this division marker. | `preverb_subentries.csv` |
 | M3 | `scripts/lexico/m3_xrefs.py` | PWG `Vgl.`, MW `cf.`, and Apte-family `cf.{#...#}` Sanskrit target edges. | Cross-references expressed in other markup or mixed with cognates/citations. | `xref_edges.csv` |
-| M4 | `scripts/lexico/m4_indigenous.py` | Verbal-root evidence from dhatupatha citations, SKD anubandha slots, KRM clusters, VCP annotation, and YAT conjugation blocks. | Dictionary-specific verbal formats not explicitly modeled yet. | `indigenous_roots.csv` |
+| M4 | `scripts/lexico/m4_indigenous.py` | Verbal-root evidence from dhatupatha citations, SKD anubandha slots, KRM clusters, SHS dash clusters, VCP annotation, and YAT conjugation blocks. | Dictionary-specific verbal formats not explicitly modeled yet. | `indigenous_roots.csv` |
 | M5 | `scripts/lexico/m5_profile.py` | Lossless join of M1-M4 on `(dict, L)`, with M3 folded to `xref_out`. | Corpus-level in-degree and hub analysis. | `microstructure_profile.csv` |
 | M6 | `scripts/lexico/m6_xref_lineage.py` | Shared cross-reference edges across parsed dictionaries. | Unparsed xref conventions and non-lemma citation targets. | `xref_lineage.json` |
 
@@ -41,7 +41,7 @@ not:
 This dictionary lacks the phenomenon.
 ```
 
-This rule is central to the SKD/VCP/YAT correction: they are rich in verbal
+This rule is central to the SKD/VCP/YAT/SHS correction: they are rich in verbal
 apparatus despite scoring low or zero under European `<ab>` and `<div>`
 detectors.
 
@@ -51,6 +51,7 @@ Current outputs are deterministic and machine-checked. Human review is still
 needed for:
 
 - YAT raw it/anubandha interpretation;
+- SHS dash-cluster and English-ordinal sample review;
 - ambiguous VCP gana abbreviations;
 - cross-reference target classes outside the parsed `Vgl.` / `cf.` seam;
 - interpretation of rare or mixed conventions.
