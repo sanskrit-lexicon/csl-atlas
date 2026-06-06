@@ -24,7 +24,9 @@ result.
 - Review status: `machine-reviewed`.
 - Owner repo: `csl-atlas`.
 - Next use: start with `div-source-scope`; record source-reviewed parser
-  decisions before promoting any packet into the restored R2 splitter.
+  decisions before promoting any packet into the restored R2 splitter. The
+  first source-inspected proposal layer is
+  [`R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md).
 - External dependencies: local dictionary source rows already used by the R2
   source-anchor prototype.
 - Boundary note: dictionary evidence only; no DCS, corpus frequency,
@@ -63,7 +65,10 @@ diagnostics provide them.
 The first non-human-blocked implementation slice is therefore not a new public
 page. It is a parser-decision pass over the `div-source-scope` rows, preserving
 every excluded or lower-confidence source record as evidence rather than
-dropping it from the worklist.
+dropping it from the worklist. The starting label vocabulary and per-source
+record proposals are recorded in
+[`R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md); they are
+machine-proposed labels, not scholar-reviewed `reviewedValue`.
 
 ## Packet Boundaries
 
@@ -76,6 +81,10 @@ It does not prove that additional source records are invalid, derivative, or
 safe to discard. The next decision is whether each source record and `div n`
 label belongs to the target sense series, a derived/prefixed series, or a
 separately keyed block.
+
+Current proposed labels: `target-primary-series`, `same-headword-supplement`,
+`separate-homonym`, `prefixed-or-derived-series`, `cross-reference-only`,
+`source-expansion-control`, and `lookup-bundle-split`.
 
 ### Marker Run Scope
 
