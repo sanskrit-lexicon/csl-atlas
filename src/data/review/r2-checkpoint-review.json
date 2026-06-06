@@ -1,0 +1,1203 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-06T16:35:22.492Z",
+  "sourcePath": "data/lexico/r2_checkpoint_review_packet.json",
+  "recordCount": 10,
+  "queue": "r2-checkpoint",
+  "reviewFamily": "r2-checkpoint",
+  "sourceGeneratedBy": "npm run build-r2-checkpoint-packet",
+  "checkpointCounts": {
+    "checkpointRows": 10,
+    "sourcePointers": 56,
+    "byPacket": {
+      "ae-reverse-bands": 2,
+      "div-source-scope": 2,
+      "indigenous-iti-authority": 2,
+      "marker-run-scope": 2,
+      "source-gap-controls": 2
+    },
+    "byPriority": {
+      "high": 8,
+      "low": 1,
+      "medium": 1
+    },
+    "byDriftClass": {
+      "over-split-candidate": 4,
+      "indigenous-coarse-review": 2,
+      "reverse-overmatch": 2,
+      "archive-parity": 1,
+      "under-split-or-source-gap": 1
+    }
+  },
+  "packetContext": {
+    "div-source-scope": {
+      "packetId": "div-source-scope",
+      "title": "PWG/PWK division and source-record scope",
+      "vocabularyDoc": "docs/R2_DIV_SOURCE_SCOPE_LABELS.md",
+      "proposedLabelsInCheckpoint": [
+        "target-primary-series",
+        "same-headword-supplement",
+        "prefixed-or-derived-series",
+        "separate-homonym",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ]
+    },
+    "marker-run-scope": {
+      "packetId": "marker-run-scope",
+      "title": "Numbered-marker run scope",
+      "vocabularyDoc": "docs/R2_MARKER_RUN_SCOPE_LABELS.md",
+      "proposedLabelsInCheckpoint": [
+        "archive-prefix-runs",
+        "reset-run-expansion",
+        "source-record-exact-target",
+        "lookup-bundle-split"
+      ]
+    },
+    "ae-reverse-bands": {
+      "packetId": "ae-reverse-bands",
+      "title": "AE reverse-equivalent rank bands",
+      "vocabularyDoc": "docs/R2_AE_REVERSE_BAND_LABELS.md",
+      "proposedLabelsInCheckpoint": [
+        "reverse-high-candidate",
+        "reverse-medium-review",
+        "reverse-low-context",
+        "reverse-tail-overmatch",
+        "phrase-or-collocation-match",
+        "broad-headword-overmatch",
+        "direct-equivalent-candidate"
+      ]
+    },
+    "indigenous-iti-authority": {
+      "packetId": "indigenous-iti-authority",
+      "title": "SKD/VCP iti-unit authority review",
+      "vocabularyDoc": "docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md",
+      "proposedLabelsInCheckpoint": [
+        "definition-iti-unit",
+        "authority-siglum-unit",
+        "commentarial-discussion-unit",
+        "source-record-exact-control",
+        "same-headword-record-split",
+        "authority-quotation-unit"
+      ]
+    },
+    "source-gap-controls": {
+      "packetId": "source-gap-controls",
+      "title": "Source gaps, mild drift, and parity controls",
+      "vocabularyDoc": "docs/R2_SOURCE_GAP_CONTROL_LABELS.md",
+      "proposedLabelsInCheckpoint": [
+        "under-split-marker-gap",
+        "nested-marker-gap",
+        "preface-proxy-extra",
+        "archive-parity-control",
+        "continuation-proxy-row"
+      ]
+    }
+  },
+  "archiveParityPolicy": "Archive parity is a comparison signal and regression-control cue for review; it is not the optimization target.",
+  "boundaryNote": "Dictionary source rows, existing R2 source anchors, recovered archive fixtures, and machine label proposals only.",
+  "decisionValueSchema": {
+    "acceptedParserLabels": "array<string>",
+    "parserDisposition": [
+      "promote-parser-candidate",
+      "retain-side-evidence",
+      "control-only",
+      "defer",
+      "block"
+    ]
+  },
+  "assumptions": [
+    "This report is seeded from the generated 10-row R2 checkpoint packet.",
+    "Each reviewId is the stable diagnosticId from the checkpoint packet.",
+    "Human decisions are an overlay: reviewStatus, reviewedValue, reviewer, reviewedAt, and note are preserved across rebuilds.",
+    "Future reviewedValue objects should contain acceptedParserLabels and parserDisposition.",
+    "Parser promotion remains deferred until human decisions exist."
+  ],
+  "warnings": [
+    "This report intentionally records no human decisions.",
+    "Proposed parser labels are review prompts, not accepted sense decisions.",
+    "Archive parity is a comparison/control signal, not the optimization target."
+  ],
+  "items": [
+    {
+      "reviewId": "r2-drift:gam:pwg",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "gam",
+        "dictionaries": [
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "PWG",
+          "L": "21814",
+          "line": 203360,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360",
+          "kind": "source-record",
+          "rawHeadword": "gam",
+          "rowCount": 252,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "PWG",
+          "L": "72578",
+          "line": 671452,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L671452",
+          "kind": "source-record",
+          "rawHeadword": "gam",
+          "rowCount": 88,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "PWG",
+          "L": "119742",
+          "line": 1112351,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1112351",
+          "kind": "source-record",
+          "rawHeadword": "gam",
+          "rowCount": 12,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "PWG",
+          "L": "21815",
+          "line": 205058,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L205058",
+          "kind": "source-record",
+          "rawHeadword": "gam",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "PWG",
+          "L": "gam:pwg:21814:1",
+          "line": 203360,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "gam:pwg:21814:10",
+          "line": 203360,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "gam:pwg:21814:100",
+          "line": 203360,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:gam:pwg",
+        "checkpointId": "checkpoint:r2-drift:gam:pwg",
+        "packetId": "div-source-scope",
+        "packetTitle": "PWG/PWK division and source-record scope",
+        "driftClass": "over-split-candidate",
+        "priority": "high",
+        "archiveComparison": {
+          "sourceSenseRows": 353,
+          "archivedSenseRows": 30,
+          "sourceToArchiveRatio": 11.767,
+          "sourceRecordCount": 4
+        },
+        "proposedParserLabels": [
+          "target-primary-series",
+          "same-headword-supplement",
+          "prefixed-or-derived-series",
+          "separate-homonym",
+          "candidate-sense-marker",
+          "supplement-marker"
+        ],
+        "reviewQuestion": "Which PWG source record(s) should define the target gam primary series, and which should remain retained side evidence?",
+        "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "r2-drift:dharma:pwg",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "dharma",
+        "dictionaries": [
+          "PWG"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "PWG",
+          "L": "36241",
+          "line": 350536,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536",
+          "kind": "source-record",
+          "rawHeadword": "Darma",
+          "rowCount": 14,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "PWG",
+          "L": "76490",
+          "line": 696945,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L696945",
+          "kind": "source-record",
+          "rawHeadword": "Darma",
+          "rowCount": 7,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "PWG",
+          "L": "dharma:pwg:36241:1",
+          "line": 350536,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "dharma:pwg:36241:10",
+          "line": 350536,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "dharma:pwg:36241:11",
+          "line": 350536,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:dharma:pwg",
+        "checkpointId": "checkpoint:r2-drift:dharma:pwg",
+        "packetId": "div-source-scope",
+        "packetTitle": "PWG/PWK division and source-record scope",
+        "driftClass": "over-split-candidate",
+        "priority": "high",
+        "archiveComparison": {
+          "sourceSenseRows": 21,
+          "archivedSenseRows": 5,
+          "sourceToArchiveRatio": 4.2,
+          "sourceRecordCount": 2
+        },
+        "proposedParserLabels": [
+          "target-primary-series",
+          "same-headword-supplement",
+          "candidate-sense-marker",
+          "supplement-marker"
+        ],
+        "reviewQuestion": "Which PWG source record(s) should define the target dharma primary series, and which should remain retained side evidence?",
+        "nextAction": "Use source-record counts and div marker labels to separate target sense series from derivative or prefixed material.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "r2-drift:gam:ben",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "gam",
+        "dictionaries": [
+          "BEN"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BEN",
+          "L": "4326",
+          "line": 29576,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L29576",
+          "kind": "source-record",
+          "rawHeadword": "gam",
+          "rowCount": 172,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "BEN",
+          "L": "gam:ben:4326:1",
+          "line": 29576,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L29576",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:gam:ben",
+        "checkpointId": "checkpoint:r2-drift:gam:ben",
+        "packetId": "marker-run-scope",
+        "packetTitle": "Numbered-marker run scope",
+        "driftClass": "over-split-candidate",
+        "priority": "high",
+        "archiveComparison": {
+          "sourceSenseRows": 172,
+          "archivedSenseRows": 23,
+          "sourceToArchiveRatio": 7.478,
+          "sourceRecordCount": 1
+        },
+        "proposedParserLabels": [
+          "archive-prefix-runs",
+          "reset-run-expansion"
+        ],
+        "reviewQuestion": "Do the proposed marker-run or source-record labels identify the parser window for gam in BEN while retaining non-target rows?",
+        "nextAction": "Use marker-run prefixes and source-record exact matches to separate main numbered sense runs from later derived or homonym material.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "r2-drift:rama:ben",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "rama",
+        "dictionaries": [
+          "BEN"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BEN",
+          "L": "12079",
+          "line": 88260,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L88260",
+          "kind": "source-record",
+          "rawHeadword": "rAma",
+          "rowCount": 8,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "BEN",
+          "L": "11986",
+          "line": 87379,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379",
+          "kind": "source-record",
+          "rawHeadword": "rama",
+          "rowCount": 7,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "BEN",
+          "L": "rama:ben:11986:1",
+          "line": 87379,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:rama:ben",
+        "checkpointId": "checkpoint:r2-drift:rama:ben",
+        "packetId": "marker-run-scope",
+        "packetTitle": "Numbered-marker run scope",
+        "driftClass": "over-split-candidate",
+        "priority": "high",
+        "archiveComparison": {
+          "sourceSenseRows": 15,
+          "archivedSenseRows": 7,
+          "sourceToArchiveRatio": 2.143,
+          "sourceRecordCount": 2
+        },
+        "proposedParserLabels": [
+          "source-record-exact-target",
+          "lookup-bundle-split"
+        ],
+        "reviewQuestion": "Do the proposed marker-run or source-record labels identify the parser window for rama in BEN while retaining non-target rows?",
+        "nextAction": "Use marker-run prefixes and source-record exact matches to separate main numbered sense runs from later derived or homonym material.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "r2-drift:gam:ae",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "gam",
+        "dictionaries": [
+          "AE"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "AE",
+          "L": "39",
+          "line": 218,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L218",
+          "kind": "source-record",
+          "rawHeadword": "abroad",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "60",
+          "line": 348,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L348",
+          "kind": "source-record",
+          "rawHeadword": "accede",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "81",
+          "line": 483,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L483",
+          "kind": "source-record",
+          "rawHeadword": "accrue",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "156",
+          "line": 926,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L926",
+          "kind": "source-record",
+          "rawHeadword": "advance",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "217",
+          "line": 1290,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1290",
+          "kind": "source-record",
+          "rawHeadword": "agree",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "230",
+          "line": 1370,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1370",
+          "kind": "source-record",
+          "rawHeadword": "air",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "477",
+          "line": 2647,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L2647",
+          "kind": "source-record",
+          "rawHeadword": "apply",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "484",
+          "line": 2701,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L2701",
+          "kind": "source-record",
+          "rawHeadword": "apprehend",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "gam:ae:39:equiv",
+          "line": 218,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L218",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "reverse-equivalent"
+        },
+        {
+          "dictionary": "AE",
+          "L": "gam:ae:60:equiv",
+          "line": 348,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L348",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "reverse-equivalent"
+        },
+        {
+          "dictionary": "AE",
+          "L": "gam:ae:81:equiv",
+          "line": 483,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L483",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "reverse-equivalent"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:gam:ae",
+        "checkpointId": "checkpoint:r2-drift:gam:ae",
+        "packetId": "ae-reverse-bands",
+        "packetTitle": "AE reverse-equivalent rank bands",
+        "driftClass": "reverse-overmatch",
+        "priority": "high",
+        "archiveComparison": {
+          "sourceSenseRows": 243,
+          "archivedSenseRows": 30,
+          "sourceToArchiveRatio": 8.1,
+          "sourceRecordCount": 243
+        },
+        "proposedParserLabels": [
+          "reverse-high-candidate",
+          "reverse-medium-review",
+          "reverse-low-context",
+          "reverse-tail-overmatch",
+          "phrase-or-collocation-match",
+          "broad-headword-overmatch"
+        ],
+        "reviewQuestion": "Which AE reverse rank bands for gam should be reviewed as direct equivalents, and which should remain context or overmatch evidence?",
+        "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "r2-drift:dharma:ae",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "dharma",
+        "dictionaries": [
+          "AE"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "AE",
+          "L": "136",
+          "line": 804,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L804",
+          "kind": "source-record",
+          "rawHeadword": "administer",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "173",
+          "line": 1040,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1040",
+          "kind": "source-record",
+          "rawHeadword": "affect",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "644",
+          "line": 3619,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L3619",
+          "kind": "source-record",
+          "rawHeadword": "attribute",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "1731",
+          "line": 9631,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L9631",
+          "kind": "source-record",
+          "rawHeadword": "church",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "1885",
+          "line": 10544,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L10544",
+          "kind": "source-record",
+          "rawHeadword": "code",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "1972",
+          "line": 11051,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L11051",
+          "kind": "source-record",
+          "rawHeadword": "command",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "2217",
+          "line": 12784,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L12784",
+          "kind": "source-record",
+          "rawHeadword": "convert",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "2341",
+          "line": 13487,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L13487",
+          "kind": "source-record",
+          "rawHeadword": "court",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AE",
+          "L": "dharma:ae:136:equiv",
+          "line": 804,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L804",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "reverse-equivalent"
+        },
+        {
+          "dictionary": "AE",
+          "L": "dharma:ae:173:equiv",
+          "line": 1040,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1040",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "reverse-equivalent"
+        },
+        {
+          "dictionary": "AE",
+          "L": "dharma:ae:644:equiv",
+          "line": 3619,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L3619",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "reverse-equivalent"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:dharma:ae",
+        "checkpointId": "checkpoint:r2-drift:dharma:ae",
+        "packetId": "ae-reverse-bands",
+        "packetTitle": "AE reverse-equivalent rank bands",
+        "driftClass": "reverse-overmatch",
+        "priority": "high",
+        "archiveComparison": {
+          "sourceSenseRows": 66,
+          "archivedSenseRows": 24,
+          "sourceToArchiveRatio": 2.75,
+          "sourceRecordCount": 66
+        },
+        "proposedParserLabels": [
+          "reverse-high-candidate",
+          "direct-equivalent-candidate",
+          "reverse-medium-review",
+          "reverse-low-context",
+          "reverse-tail-overmatch",
+          "phrase-or-collocation-match",
+          "broad-headword-overmatch"
+        ],
+        "reviewQuestion": "Which AE reverse rank bands for dharma should be reviewed as direct equivalents, and which should remain context or overmatch evidence?",
+        "nextAction": "Use AE equivalent-position rank counts to choose review/filter bands before using reverse rows as alignments.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "r2-drift:dharma:vcp",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "dharma",
+        "dictionaries": [
+          "VCP"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "VCP",
+          "L": "27030",
+          "line": 352094,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094",
+          "kind": "source-record",
+          "rawHeadword": "Darmma",
+          "rowCount": 27,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "VCP",
+          "L": "dharma:vcp:27030:1",
+          "line": 352094,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "iti-unit"
+        },
+        {
+          "dictionary": "VCP",
+          "L": "dharma:vcp:27030:10",
+          "line": 352094,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "iti-unit"
+        },
+        {
+          "dictionary": "VCP",
+          "L": "dharma:vcp:27030:11",
+          "line": 352094,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "iti-unit"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:dharma:vcp",
+        "checkpointId": "checkpoint:r2-drift:dharma:vcp",
+        "packetId": "indigenous-iti-authority",
+        "packetTitle": "SKD/VCP iti-unit authority review",
+        "driftClass": "indigenous-coarse-review",
+        "priority": "high",
+        "archiveComparison": {
+          "sourceSenseRows": 27,
+          "archivedSenseRows": 9,
+          "sourceToArchiveRatio": 3,
+          "sourceRecordCount": 1
+        },
+        "proposedParserLabels": [
+          "definition-iti-unit",
+          "authority-siglum-unit",
+          "commentarial-discussion-unit"
+        ],
+        "reviewQuestion": "Which VCP iti units for dharma are definition, authority, grammar, or discussion evidence rather than reviewed senses?",
+        "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "r2-drift:dharma:skd",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "dharma",
+        "dictionaries": [
+          "SKD"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "SKD",
+          "L": "17668",
+          "line": 206596,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206596",
+          "kind": "source-record",
+          "rawHeadword": "DarmmaH",
+          "rowCount": 11,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "SKD",
+          "L": "17667",
+          "line": 206577,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+          "kind": "source-record",
+          "rawHeadword": "DarmmaH",
+          "rowCount": 4,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "SKD",
+          "L": "dharma:skd:17667:1",
+          "line": 206577,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "iti-unit"
+        },
+        {
+          "dictionary": "SKD",
+          "L": "dharma:skd:17667:2",
+          "line": 206577,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "iti-unit"
+        },
+        {
+          "dictionary": "SKD",
+          "L": "dharma:skd:17667:3",
+          "line": 206577,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "iti-unit"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:dharma:skd",
+        "checkpointId": "checkpoint:r2-drift:dharma:skd",
+        "packetId": "indigenous-iti-authority",
+        "packetTitle": "SKD/VCP iti-unit authority review",
+        "driftClass": "indigenous-coarse-review",
+        "priority": "high",
+        "archiveComparison": {
+          "sourceSenseRows": 15,
+          "archivedSenseRows": 4,
+          "sourceToArchiveRatio": 3.75,
+          "sourceRecordCount": 2
+        },
+        "proposedParserLabels": [
+          "source-record-exact-control",
+          "same-headword-record-split",
+          "definition-iti-unit",
+          "authority-quotation-unit"
+        ],
+        "reviewQuestion": "Which SKD iti units for dharma are definition, authority, grammar, or discussion evidence rather than reviewed senses?",
+        "nextAction": "Review iti-unit boundaries and authority quotations before treating rows as dictionary senses.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "r2-drift:iti:ap",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "iti",
+        "dictionaries": [
+          "AP"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "AP",
+          "L": "8130",
+          "line": 92701,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701",
+          "kind": "source-record",
+          "rawHeadword": "iti",
+          "rowCount": 3,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AP",
+          "L": "iti:ap:8130:1",
+          "line": 92701,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        },
+        {
+          "dictionary": "AP",
+          "L": "iti:ap:8130:2",
+          "line": 92701,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        },
+        {
+          "dictionary": "AP",
+          "L": "iti:ap:8130:preface",
+          "line": 92701,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "lumped-proxy"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:iti:ap",
+        "checkpointId": "checkpoint:r2-drift:iti:ap",
+        "packetId": "source-gap-controls",
+        "packetTitle": "Source gaps, mild drift, and parity controls",
+        "driftClass": "under-split-or-source-gap",
+        "priority": "medium",
+        "archiveComparison": {
+          "sourceSenseRows": 3,
+          "archivedSenseRows": 5,
+          "sourceToArchiveRatio": 0.6,
+          "sourceRecordCount": 1
+        },
+        "proposedParserLabels": [
+          "under-split-marker-gap",
+          "nested-marker-gap",
+          "preface-proxy-extra"
+        ],
+        "reviewQuestion": "Should iti in AP remain a parser control or follow-up row, and do the source pointers explain the archive comparison drift?",
+        "nextAction": "Check lookup variants, homonym aggregation, and marker coverage against the archived sense rows.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "r2-drift:gam:ap",
+      "queue": "r2-checkpoint",
+      "subject": {
+        "kind": "entry",
+        "lemma": "gam",
+        "dictionaries": [
+          "AP"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "AP",
+          "L": "13831",
+          "line": 167512,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L167512",
+          "kind": "source-record",
+          "rawHeadword": "gam",
+          "rowCount": 15,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AP",
+          "L": "13731.006",
+          "line": 165154,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L165154",
+          "kind": "source-record",
+          "rawHeadword": "gam",
+          "rowCount": 1,
+          "splitConfidence": null
+        },
+        {
+          "dictionary": "AP",
+          "L": "gam:ap:13731.006:bundle",
+          "line": 165154,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L165154",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "lumped-proxy"
+        },
+        {
+          "dictionary": "AP",
+          "L": "gam:ap:13831:1",
+          "line": 167512,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L167512",
+          "kind": "example-row",
+          "rawHeadword": null,
+          "rowCount": null,
+          "splitConfidence": "explicit"
+        }
+      ],
+      "machineValue": {
+        "diagnosticId": "r2-drift:gam:ap",
+        "checkpointId": "checkpoint:r2-drift:gam:ap",
+        "packetId": "source-gap-controls",
+        "packetTitle": "Source gaps, mild drift, and parity controls",
+        "driftClass": "archive-parity",
+        "priority": "low",
+        "archiveComparison": {
+          "sourceSenseRows": 16,
+          "archivedSenseRows": 16,
+          "sourceToArchiveRatio": 1,
+          "sourceRecordCount": 2
+        },
+        "proposedParserLabels": [
+          "archive-parity-control",
+          "continuation-proxy-row",
+          "nested-marker-gap"
+        ],
+        "reviewQuestion": "Should gam in AP remain a parser control or follow-up row, and do the source pointers explain the archive comparison drift?",
+        "nextAction": "Use as a positive parser-parity control while tightening higher-drift families.",
+        "allowedParserDispositions": [
+          "promote-parser-candidate",
+          "retain-side-evidence",
+          "control-only",
+          "defer",
+          "block"
+        ],
+        "reviewedValueShape": {
+          "acceptedParserLabels": "Array of accepted labels from proposedParserLabels, or an empty array when none are accepted.",
+          "parserDisposition": "One of allowedParserDispositions."
+        }
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    }
+  ]
+}

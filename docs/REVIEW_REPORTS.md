@@ -143,10 +143,16 @@ New queues should follow the implemented review-report pattern rather than inven
 | `low-confidence-alignment` | `scripts/build-alignment-review.mjs` (`npm run build-alignment-review`) | `src/data/review/low-confidence-alignment-review.json` | `src/tools/review-alignment.md` |
 | `source-siglum-alias` | `scripts/build-citation-apparatus.mjs` (`npm run build-citation-apparatus`) | `src/data/review/source-siglum-review.json` | `src/tools/review-source-siglum.md` |
 | `encoding-ocr` / H5 | `scripts/build-h5-anomaly-review.mjs` (`npm run build-h5-anomaly-review`) | `src/data/review/h5-anomaly-review.json` | none yet |
+| `r2-checkpoint` | `scripts/build-r2-checkpoint-review.mjs` (`npm run build-r2-checkpoint-review`) | `src/data/review/r2-checkpoint-review.json` | none yet |
 
 The H5 report uses the existing `encoding-ocr` queue type and carries
 `reviewFamily: h5-ghost-anomaly` so the canonical schema vocabulary stays
 unchanged.
+
+The R2 checkpoint report carries `reviewFamily: r2-checkpoint` and is seeded
+from `data/lexico/r2_checkpoint_review_packet.json`. It records parser-scope
+checkpoint decisions only; parser promotion remains deferred until human fields
+are filled.
 
 Each generator implements steps 1–5 for its queue: it derives the cases, emits schema-conforming reports with `reviewStatus: needs-review`, and **preserves human decisions across rebuilds** by `reviewId` (human-set statuses `reviewed-ok` / `reviewed-corrected` / `blocked` / `deferred`, or any item with a `reviewer`, are carried forward; only machine fields refresh). The shared contract — `loadPreserved` / `reviewFields` / `reviewPayload` / `writeReport` — lives in `scripts/lib/review-report.mjs`, so a generator only describes its own machine fields. `npm run validate-review-reports` checks every `src/data/review/*.json` against the schema.
 
