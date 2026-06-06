@@ -22,9 +22,11 @@ package needed before new H1R/H2/H3R claims are broadened or submitted.
 - Limitations: the old generator files and JSON outputs are not present in this
   branch; static pages preserve results, and the source-backed anchor prototype
   is not yet the final reproducibility package.
-- Validation target: restored scripts must run from current sibling `csl-orig`
+- Validation: restored scripts must run from current sibling `csl-orig`
   and reproduce the archived headline numbers or explicitly document drift.
 - Owner repo: `csl-atlas`.
+- Next use: use `R2_REVIEW_PACKETS.md` as the implementation queue; start with
+  PWG/PWK `div` source-record scope before broadening sense-alignment claims.
 
 ## Recovered Archive Fixtures
 
@@ -112,6 +114,19 @@ Each sense row should be compact and deterministic:
 6. Reproduce `/tools/r2-h1` from `r2_h1.json`.
 7. Rebuild H2/H3R inheritance-edge reports from `r2_h2h3.json`.
 
+## Current Decision Queue
+
+The generated packet layer in [`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md)
+is the current implementation queue:
+
+| Order | Packet | Rows | High priority | Decision before code promotion |
+|---:|---|---:|---:|---|
+| 1 | `div-source-scope` | 10 | 4 | Decide which PWG/PWK source records and `<div n>` label classes belong to the target sense series. |
+| 2 | `marker-run-scope` | 28 | 2 | Decide whether marker-run prefix matches identify main sense runs or only archive-parity clues. |
+| 3 | `ae-reverse-bands` | 5 | 3 | Choose rank bands for AE reverse rows before using them as alignment evidence. |
+| 4 | `indigenous-iti-authority` | 10 | 8 | Review SKD/VCP `iti` boundaries and authority hints before promoting indigenous rows. |
+| 5 | `source-gap-controls` | 17 | 0 | Use parity/source-gap rows as controls after the blocking parser families are handled. |
+
 ## Acceptance Gates
 
 | Gate | Expected evidence |
@@ -134,10 +149,9 @@ Each sense row should be compact and deterministic:
 ## Next Implementation Slice
 
 Use the source-backed anchor prototype to tighten parser-family parity with the
-archive fixtures. Run `npm run build-r2-parser-diagnostics` after
-`npm run build-r2-source-anchors` and use the high-priority rows to drive the
-next parser changes. Current priority order: PWG/PWK `div` marker-label and
-source-record scope, BEN/AP90/BHS marker-run prefix filtering/review, AE reverse rank
-filtering/review for common roots, then indigenous `iti` review labels. Broaden beyond `gam`, `dharma`, `rama`, `iti`,
-and `bodhisattva` only after the generator can explain or reproduce the
-archived payloads from source.
+archive fixtures. Run `npm run build-r2-source-anchors`,
+`npm run build-r2-parser-diagnostics`, and
+`npm run build-r2-review-packets`, then use the packet order above to drive the
+next parser changes. Broaden beyond `gam`, `dharma`, `rama`, `iti`, and
+`bodhisattva` only after the generator can explain or reproduce the archived
+payloads from source.

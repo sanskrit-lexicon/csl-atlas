@@ -44,6 +44,9 @@ prefix conventions, lexical targets, edition continuity, normalization risk,
 too-sparse pairs, and MW/PWG lexical shared-core samples.*
 *v2.8 H5 taxonomy update 2026-06-06: the H5 anomaly queue now has an explicit
 review order and expected label set while all rows remain `needs-review`.*
+*v2.9 R2 packet update 2026-06-06: R2 parser diagnostics now route the next
+implementation slice through `R2_REVIEW_PACKETS.md`, starting with
+`div-source-scope`.*
 **Companion to**: [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md), [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (genealogy/phylogeny), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (structure typology), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md).
 
 This stream is **additive**. The existing program is researcher-facing (papers M/L/H + a 50-viz catalog). This roadmap turns those analyses into a **practitioner layer** — usable tools for three audiences — and adds new testable hypotheses and visualizations. Two working prototypes ship with it.
@@ -163,10 +166,11 @@ The **sense splitter (R2)** remains a critical dependency for broadening H1R,
 H2, H3R, the sense-alignment/divergence views, and the maker worklist. Current
 R2 pages are static snapshots; a reproducible generator/data package should be
 restored or rebuilt under the contract before new R2 claims are added. The
-source-backed prototype now has parser-drift diagnostics that rank which
-splitter families must be tightened first:
+source-backed prototype now has parser-drift diagnostics and review packets
+that rank which splitter families must be tightened first:
 [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md),
-[`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md).
+[`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md),
+[`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md).
 
 ### 5.1 R2 — decided design (2026-05-31)
 

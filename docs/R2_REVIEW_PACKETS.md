@@ -23,6 +23,8 @@ result.
   until R2 coverage broadens beyond the five anchor lemmas.
 - Review status: `machine-reviewed`.
 - Owner repo: `csl-atlas`.
+- Next use: start with `div-source-scope`; record source-reviewed parser
+  decisions before promoting any packet into the restored R2 splitter.
 - External dependencies: local dictionary source rows already used by the R2
   source-anchor prototype.
 - Boundary note: dictionary evidence only; no DCS, corpus frequency,
@@ -57,6 +59,11 @@ diagnostics provide them.
    quotations in SKD/VCP.
 5. `source-gap-controls`: use parity rows as controls and source gaps as later
    lookup/source-availability checks.
+
+The first non-human-blocked implementation slice is therefore not a new public
+page. It is a parser-decision pass over the `div-source-scope` rows, preserving
+every excluded or lower-confidence source record as evidence rather than
+dropping it from the worklist.
 
 ## Packet Boundaries
 

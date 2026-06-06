@@ -17,6 +17,8 @@ alignment result.
 - Validation: `npm run build-r2-source-anchors`,
   `npm run build-r2-parser-diagnostics`, `npm test`.
 - Owner repo: `csl-atlas`.
+- Next use: feed the generated review packets; do not broaden H1R/H2/H3R until
+  high-priority parser families have source-reviewed decisions.
 
 ## What The Artifact Does
 
@@ -66,6 +68,16 @@ The top worklist points to four concrete parser tasks:
    are safe enough for alignment use.
 4. **Indigenous `iti` review.** SKD/VCP rows remain useful, but the artifact
    labels them as review prompts rather than sense decisions.
+
+## Current Implementation Order
+
+| Order | Packet | Why it comes here | Promotion rule |
+|---:|---|---|---|
+| 1 | `div-source-scope` | Largest row-count drift is PWG/PWK source-record and `<div n>` scope. | Promote only after source records and label classes are marked target series, derivative/prefixed series, or separate block. |
+| 2 | `marker-run-scope` | Prefix matches explain several archived counts but may hide later derived runs. | Promote only when dictionary-specific marker-run rules preserve excluded/lower-confidence runs as worklist rows. |
+| 3 | `ae-reverse-bands` | Reverse lookup overmatches common Sanskrit equivalents. | Promote only after rank bands are chosen and tail rows are not silently discarded. |
+| 4 | `indigenous-iti-authority` | SKD/VCP rows carry authority hints but not normalized `<ls>` citations. | Promote only after `iti` boundaries and authority hints have source-facing review labels. |
+| 5 | `source-gap-controls` | Parity rows and gaps are useful controls, not current blockers. | Use after high-priority parser decisions are documented. |
 
 ## Boundary
 

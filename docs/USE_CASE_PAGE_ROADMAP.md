@@ -55,7 +55,8 @@ targets before adding new analysis-method prose.
 
 | Bucket | Package | Next action | Done when |
 |---|---|---|---|
-| Next | H5 sample review | Classify known corrections and null controls first, then raw-headword-exclusive and shared-doublet rows. | The 130-item queue has human `reviewedValue` labels and a summarized taxonomy. |
+| Next | R2 parser decision packet | Use `R2_REVIEW_PACKETS.md` to start with `div-source-scope`, then marker runs, AE reverse bands, indigenous `iti`, and source-gap controls. | R2 has source-reviewed parser decisions before broader sense-divergence pages. |
+| Waiting | H5 sample review | Classify known corrections and null controls first, then raw-headword-exclusive and shared-doublet rows. | The 130-item queue has human `reviewedValue` labels and a summarized taxonomy. |
 | Done | H5 anomaly taxonomy | Keep the review order and expected label set in `H5_GHOST_ANOMALY_SCOPE.md`. | Reviewers can start without treating F0/F2 rows as automatic error claims. |
 | Done | H4 semantic fields | Keep H4 active with `false-low-risk`, `high-coverage-check`, `edition-delta-check`, `scope-baseline-check`, and `direction-index-control` starting labels. | H4 review samples can be interpreted without outrunning the structural/microstructure docs. |
 | Done | Xref hub review | Keep `prefix-convention`, `lexical-target`, `edition-continuity`, `normalization-risk`, `too-sparse`, and `lexical-shared-core` visible in the xref review docs. | Xref hub labels reuse the same review-label discipline after H4 activation. |
