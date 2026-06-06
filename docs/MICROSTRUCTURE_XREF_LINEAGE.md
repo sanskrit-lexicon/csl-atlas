@@ -17,9 +17,14 @@ Date: 2026-06-05
   `npm run build-xref-lineage`, `npm run build-xref-hub-review`, and
   `npm run build`.
 - Owner repo: `csl-atlas`.
+- Next use: read the graph as a floor for structural overlap, then use
+  `MICROSTRUCTURE_XREF_HUB_REVIEW.md` to separate prefix conventions,
+  lexical shared cores, sparse pairs, and edition continuity.
 
 Hub-family interpretation and review labels are in
 [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md).
+That review note now carries the active xref starting labels from
+`data/lexico/xref_hub_review.json`.
 
 m3 captured each dictionary's internal cross-reference edges (source lemma → target
 lemma) but left targets raw SLP1 and deferred the cross-dict join. **m6**

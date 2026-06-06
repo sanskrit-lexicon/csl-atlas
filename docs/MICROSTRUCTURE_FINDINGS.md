@@ -51,9 +51,9 @@ applicable. The remaining scholar-facing packages are now explicit:
 |---|---|---|
 | R2 rebuild | [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md), [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) | Use `data/lexico/r2_parser_diagnostics.json` to tighten PWG/PWK `div` scope, BEN/AP90/BHS marker scope, AE reverse rank filtering/review, and SKD/VCP `iti` labels before broadening H1R/H2/H3R. |
 | Sense segmentation | [`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md) | Use the AP/PWG/PWK sense-depth chart as a structural proxy, then use R2 diagnostics before citing broad sense-alignment claims. |
-| H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md) | Edge labels are done; label family outliers before presenting the full H6 family-level claim. |
+| H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md) | Edge and family-outlier labels are documented; source-read selected examples before paper use. |
 | H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md), [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md) | Use the H4 review packet to adjudicate SKD false lows, VCP high coverage, AP/AP90 deltas, specialized baselines, and index/reverse controls. |
-| Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Use `data/lexico/xref_hub_review.json` to label shared-core, prefix-convention, and edition-continuity samples. |
+| Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Starting labels are documented for shared-core, prefix-convention, edition-continuity, normalization-risk, lexical-target, and too-sparse samples. |
 | H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md) | Review the 130-item proof-first queue and write the anomaly taxonomy. |
 
 ## What The Review Queues Prove

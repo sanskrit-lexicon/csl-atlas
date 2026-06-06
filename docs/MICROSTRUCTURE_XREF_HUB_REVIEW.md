@@ -20,6 +20,8 @@ Status: scholar-facing review note for the M6 xref lineage package and
   `npm run build-xref-lineage`, `npm run build-xref-hub-review`, and
   `npm run build`.
 - Owner repo: `csl-atlas`.
+- Next use: use the artifact labels as the active xref review package; source
+  check MW/PWG shared-core samples before making paper-level lineage claims.
 
 ## Current Reading
 
@@ -38,6 +40,10 @@ deterministic artifact: 6 dictionary hub profiles, 10 pair review rows, and a
 are dominated by prefix/convention hubs, while AP/AP90/CAE top targets are
 lexical-target hubs. AE is kept as a normalization-risk control.
 
+The artifact now carries the review starting labels. These are not completed
+source readings; they say what kind of evidence each row is allowed to become
+after source checking.
+
 ## Hub Families To Review
 
 | Hub family | Evidence | Review question |
@@ -55,6 +61,19 @@ lexical-target hubs. AE is kept as a normalization-risk control.
 | MW prefix hubs | top targets | `data/lexico/xref_hub_review.json` | Separate prefix/convention hubs from content inheritance. |
 | PWG `Vgl.` hubs | top targets | `data/lexico/xref_hub_review.json` | Identify whether PWG hub behavior is mostly compound-marker style. |
 | AP/AP90 control | pair row | `data/lexico/xref_hub_review.json` | Confirm the positive-control interpretation. |
+
+## Artifact-Carried Labels
+
+| Evidence slice | Artifact signal | Starting label | Use |
+|---|---|---|---|
+| PWG top targets | 20/20 top targets are compound or prefix-style hubs (`a˚`, `mahA˚`, `su˚`, `vi˚`, etc.). | `prefix-convention` | Treat PWG hubs as structural convention until a source sample proves rare lexical inheritance. |
+| MW top targets | 20/20 top targets are prefix-style hubs (`a-`, `a/-`, `A-`, `aBi-`, `pra-`, `vi-`, etc.). | `prefix-convention` | Keep MW/PWG hub overlap separate from the 40-edge lexical shared-core sample. |
+| AP/AP90/CAE top targets | Top targets are lexical targets rather than prefix hubs. | `lexical-target` | Use these as a different xref style, not as evidence that AP-style graphs behave like PWG/MW. |
+| AE top targets | Only 2 xref edges, both proverb-like strings. | `normalization-risk` | Keep AE as a control for target extraction risk. |
+| AP/AP90 pair | 211 shared sources, 182 overlapping edges, about 85% match on both sides. | `edition-continuity` | Positive-control ceiling for what same-family xref inheritance looks like. |
+| MW/PWG pair | 2,538 shared sources, 641 overlapping edges, 21.8% MW-side and 9.1% PWG-side match. | `lexical-shared-core` | Real shared core, not wholesale xref inheritance. |
+| AP/CAE and AP90/CAE pairs | 1 or 2 shared source lemmas. | `too-sparse` | Keep visible, but do not use for lineage interpretation. |
+| Other AP/MW/PWG/CAE pairs | Modest overlap with normalization and convention exposure. | `normalization-risk` | Review only as controls unless a rare shared target is source-confirmed. |
 
 ## Review Labels
 
@@ -78,6 +97,8 @@ Use these labels in notes or a future review queue:
 
 ## Next Test
 
-Use `data/lexico/xref_hub_review.json` for scholar review. The next human step
-is to confirm whether the MW/PWG shared-core sample is truly lexical, and
-whether the MW/PWG top hubs are convention hubs rather than content inheritance.
+Use `data/lexico/xref_hub_review.json` for scholar review. Start with the
+MW/PWG 40-edge shared-core sample, then source-check a small PWG/MW prefix-hub
+sample. The package can move from machine labels to reviewed interpretation
+only after those source checks confirm which edges are lexical and which are
+convention artifacts.
