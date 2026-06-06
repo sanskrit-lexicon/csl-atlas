@@ -178,3 +178,8 @@ The experiment should emit a drift explanation artifact before any public R2
 claim changes. Broaden beyond `gam`, `dharma`, `rama`, `iti`, and
 `bodhisattva` only after the generator can explain or reproduce the archived
 payloads from source.
+
+The current baseline experiment note is
+[`R2_REBUILD_EXPERIMENT.md`](R2_REBUILD_EXPERIMENT.md). It records the stable
+rerun baseline, the packet gates, and the promotion rule for the first parser
+pass.
