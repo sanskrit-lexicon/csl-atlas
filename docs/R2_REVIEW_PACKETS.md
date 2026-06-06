@@ -80,6 +80,11 @@ The third source-inspected proposal layer is
 reverse-equivalent rank bands, direct-equivalent candidates, phrase/collocation
 matches, broad-headword overmatches, and no-anchor controls.
 
+The fourth source-inspected proposal layer is
+[`R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md),
+covering SKD/VCP `iti` units, authority quotation hints, raw VCP authority
+sigla, grammar/commentary units, record splits, and controls.
+
 ## Packet Boundaries
 
 ### Div Source Scope
@@ -132,6 +137,13 @@ when the source does not encode them as `<ls>` citations.
 It does not prove that indigenous prose has been normalized into a citation
 apparatus. These hints are review aids for `iti` boundaries and quotation
 scope, not final citation anchors.
+
+Current proposed labels: `definition-iti-unit`, `authority-quotation-unit`,
+`authority-siglum-unit`, `commentarial-discussion-unit`,
+`morphology-grammar-unit`, `headword-stub-unit`,
+`same-headword-record-split`, `raw-headword-split`,
+`source-record-exact-control`, `lumped-indigenous-proxy`, and
+`no-anchor-control`.
 
 ### Source Gap Controls
 
