@@ -85,6 +85,12 @@ The fourth source-inspected proposal layer is
 covering SKD/VCP `iti` units, authority quotation hints, raw VCP authority
 sigla, grammar/commentary units, record splits, and controls.
 
+The fifth source-inspected proposal layer is
+[`R2_SOURCE_GAP_CONTROL_LABELS.md`](R2_SOURCE_GAP_CONTROL_LABELS.md), covering
+R2 mild drift follow-ups, under-split marker gaps, archive-parity controls,
+source-only expansion rows, homonym/continuation controls, and no-anchor
+controls.
+
 ## Packet Boundaries
 
 ### Div Source Scope
@@ -153,6 +159,12 @@ parity rows can be kept apart from the main parser blockers.
 It does not prove semantic equivalence for parity rows or absence for source
 gaps. Use this packet to check lookup variants and source availability after
 the higher-risk packets.
+
+Current proposed labels: `mild-drift-follow-up`,
+`under-split-marker-gap`, `nested-marker-gap`, `preface-proxy-extra`,
+`lookup-bundle-split`, `archive-parity-control`, `homonym-record-control`,
+`continuation-proxy-row`, `source-only-expansion`, and
+`no-anchor-control`.
 
 ## Acceptance Rule
 
