@@ -4,7 +4,8 @@ Date: 2026-06-06
 
 Audience: scholars who need the first, easiest-to-parse layer of dictionary
 microstructure before moving to citation practice, grammar/gender marking,
-cross-references, or sense segmentation.
+sense segmentation, citation practice, grammar/gender marking, or
+cross-references.
 
 ## Trust Block
 
@@ -21,8 +22,8 @@ cross-references, or sense segmentation.
   public pages are checked by `npm run build`.
 - Owner repo: `csl-atlas`.
 - Next use: use this page as the first microstructure reading layer, then move
-  to citation practice, grammar/gender marking, cross-references, and sense
-  segmentation.
+  to sense segmentation before citation practice, grammar/gender marking, and
+  cross-references.
 
 ## Why This Comes First
 
@@ -134,10 +135,10 @@ npm run build
 This page should be the first in the scholar-facing sequence:
 
 1. Headword/subentry structure.
-2. Citation practice.
-3. Grammar/gender marking.
-4. Cross-references.
-5. Sense segmentation.
+2. Sense segmentation.
+3. Citation practice.
+4. Grammar/gender marking.
+5. Cross-references.
 
 The sequence is intentionally parse-first: start with visible layout, then move
 toward interpretation-heavy layers.
@@ -147,6 +148,7 @@ toward interpretation-heavy layers.
 - [`MICROSTRUCTURE_PROFILE.md`](MICROSTRUCTURE_PROFILE.md)
 - [`MICROSTRUCTURE_METHODS.md`](MICROSTRUCTURE_METHODS.md)
 - [`MICROSTRUCTURE_FINDINGS.md`](MICROSTRUCTURE_FINDINGS.md)
+- [`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md)
 - [`MICROSTRUCTURE_M1_M2_RESULTS.md`](MICROSTRUCTURE_M1_M2_RESULTS.md)
 - [`MICROSTRUCTURE_ZERO_MEANING.md`](MICROSTRUCTURE_ZERO_MEANING.md)
 - [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md)

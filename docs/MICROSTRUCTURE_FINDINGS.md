@@ -20,8 +20,9 @@ already supports, what it refutes, and what it prepares for later analysis.
 The first reading layer is headword/subentry structure:
 [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md).
 It explains the MW vs Petersburg macro/micro trade-off before the reader moves
-to citation practice, grammar/gender marking, cross-references, and sense
-segmentation.
+to
+[`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md),
+citation practice, grammar/gender marking, and cross-references.
 
 | ID | Finding | Strength | Why it matters |
 |---|---|---|---|
@@ -32,6 +33,7 @@ segmentation.
 | MF-5 | Structural register can predict dictionary family. | supported/prototype-backed | Citation style plus grammar-marking separates Western-tagged, indigenous, and index traditions. |
 | MF-6 | Content, convention, and microstructure inheritance are separate axes. | strong testable | CAE/CCS and MW/PWG show that headword convention and entry structure can diverge. |
 | MF-7 | Amarakosa-native semantic-field bias is measurable. | supported prototype | M8 maps AMAR vargas to dictionary headword coverage without using corpus frequency. |
+| MF-8 | Sense segmentation is reliable only where the division convention is explicit or reviewed. | supported documentation layer | AP/PWG/PWK expose countable structural divisions; MW/WIL/VCP/SKD require prose-aware R2 review before raw sense-count comparison. |
 
 ## Next Analysis Priority
 
@@ -48,7 +50,8 @@ applicable. The remaining scholar-facing packages are now explicit:
 | Package | Doc | Next proof step |
 |---|---|---|
 | R2 rebuild | [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md), [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) | Use `data/lexico/r2_parser_diagnostics.json` to tighten PWG/PWK `div` scope, BEN/AP90/BHS marker scope, AE reverse rank filtering/review, and SKD/VCP `iti` labels before broadening H1R/H2/H3R. |
-| H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md) | Review the positive control, genealogy-structure tensions, and structural-convergence prompts in `data/lexico/structural_register_h6_review.json`. |
+| Sense segmentation | [`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md) | Use the AP/PWG/PWK sense-depth chart as a structural proxy, then use R2 diagnostics before citing broad sense-alignment claims. |
+| H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md) | Edge labels are done; label family outliers before presenting the full H6 family-level claim. |
 | H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md), [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md) | Use the H4 review packet to adjudicate SKD false lows, VCP high coverage, AP/AP90 deltas, specialized baselines, and index/reverse controls. |
 | Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Use `data/lexico/xref_hub_review.json` to label shared-core, prefix-convention, and edition-continuity samples. |
 | H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md) | Review the 130-item proof-first queue and write the anomaly taxonomy. |

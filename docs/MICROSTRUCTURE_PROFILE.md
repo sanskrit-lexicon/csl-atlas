@@ -28,8 +28,9 @@ dictionary entry:
 
 Read the doc family in parse order. Start with
 [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md),
-then move to citation practice, grammar/gender marking, cross-references, and
-sense segmentation.
+then move to
+[`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md)
+before citation practice, grammar/gender marking, and cross-references.
 
 The row key is `(dict, L)`, the dictionary code and CDSL entry number. The
 profile is meant to answer scholar-facing questions such as:
@@ -75,6 +76,7 @@ conventions, not European abbreviation tags.
 - [`MICROSTRUCTURE_METHODS.md`](MICROSTRUCTURE_METHODS.md)
 - [`MICROSTRUCTURE_FINDINGS.md`](MICROSTRUCTURE_FINDINGS.md)
 - [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md)
+- [`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md)
 - [`MICROSTRUCTURE_M1_M2_RESULTS.md`](MICROSTRUCTURE_M1_M2_RESULTS.md)
 - [`MICROSTRUCTURE_ZERO_MEANING.md`](MICROSTRUCTURE_ZERO_MEANING.md)
 - [`MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md`](MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md)

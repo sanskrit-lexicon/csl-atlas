@@ -19,8 +19,10 @@ microstructure extractor counts.
 
 For scholar-facing reading, start with the easiest visible layer:
 [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md).
-It explains why M1/M2 headword and subentry structure comes before citation,
-grammar, cross-reference, and sense-segmentation interpretation.
+It explains why M1/M2 headword and subentry structure comes first. Then use
+[`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md)
+to decide which sense divisions are structural proxies and which require R2
+review before interpretation.
 
 | Method | Script | Counts | Blind to | Main output |
 |---|---|---|---|---|
@@ -32,6 +34,10 @@ grammar, cross-reference, and sense-segmentation interpretation.
 | M6 | `scripts/lexico/m6_xref_lineage.py` | Shared cross-reference edges across parsed dictionaries. | Unparsed xref conventions and non-lemma citation targets. | `xref_lineage.json` |
 | M7 | `scripts/lexico/m7_root_agreement.py` | Cross-dictionary agreement and conflict in root gaṇa, pada, and transitivity. | Root identity normalization across citation conventions. | `root_agreement.json` |
 | M8 | `scripts/lexico/m8_semantic_fields.py` | Amarakośa varga/upavarga field coverage by dictionary headwords. | Corpus frequency, sense coverage, and prose-only AMAR knowledge. | `semantic_field_report.json` |
+
+Sense segmentation is documented separately because the current countable chart
+is produced by `scripts/build-sense-depth.mjs`, while broader sense-alignment
+claims depend on the R2 rebuild contract and review packets.
 
 ## Method Rule
 
