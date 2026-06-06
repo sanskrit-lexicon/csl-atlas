@@ -15,6 +15,8 @@ claim, and not a scholar-reviewed sense decision layer.
   `data/lexico/r2_review_packets.json`,
   `data/lexico/r2_packet_label_proposals.json`,
   `data/lexico/r2_checkpoint_review_packet.json`,
+  `src/data/review/r2-checkpoint-review.json`,
+  `docs/R2_CHECKPOINT_DECISIONS.md`,
   `docs/R2_CHECKPOINT_REVIEW.md`, and the five source-inspected proposal docs
   linked from `R2_REVIEW_PACKETS.md`.
 - Evidence label: `source-vs-archive`.
@@ -25,7 +27,8 @@ claim, and not a scholar-reviewed sense decision layer.
   `npm run build-r2-parser-diagnostics`,
   `npm run build-r2-review-packets`,
   `npm run build-r2-label-proposals`,
-  `npm run build-r2-checkpoint-packet`, `git diff --check`, `npm test`,
+  `npm run build-r2-checkpoint-packet`,
+  `npm run build-r2-checkpoint-review`, `git diff --check`, `npm test`,
   `npm run validate-review-reports`, and `npm run build`.
 - Review status: `machine-proposed`.
 - Owner repo: `csl-atlas`.
@@ -94,18 +97,16 @@ The machine-readable labels + checkpoint step keeps the packet order fixed:
 
 ## Next Accepted Step
 
-The next accepted step is **review the checkpoint packet**, not parser
-promotion. The packet package must:
+The next accepted step is **record checkpoint decisions in the shared review
+report**, not parser promotion. The decision-capture package must:
 
-1. generate `data/lexico/r2_checkpoint_review_packet.json` and
-   `docs/R2_CHECKPOINT_REVIEW.md` from
-   `data/lexico/r2_packet_label_proposals.json`;
-2. preserve the exact ten checkpoint rows and their order;
-3. expose source pointers, packet context, proposed parser labels, and review
-   questions for each row;
-4. keep `reviewedValue`, `reviewer`, `reviewedAt`, and `note` empty until a
-   human reviewer supplies decisions;
-5. keep all proposed row labels inside the packet vocabulary;
+1. generate `src/data/review/r2-checkpoint-review.json` from
+   `data/lexico/r2_checkpoint_review_packet.json`;
+2. preserve the exact ten checkpoint rows and their order by `diagnosticId`;
+3. use canonical shared review-report fields with `queue: "r2-checkpoint"`;
+4. keep `reviewedValue`, `reviewer`, `reviewedAt`, and `note` empty/null until
+   a human reviewer supplies decisions;
+5. preserve future human fields across rebuilds while refreshing machine fields;
 6. keep H5 review rows, public R2 pages, source-anchor generation, and splitter
    behavior untouched.
 
@@ -121,7 +122,8 @@ decisions. A future parser-change pass should:
 
 1. rerun the R2 generator commands plus
    `npm run build-r2-label-proposals` and
-   `npm run build-r2-checkpoint-packet`;
+   `npm run build-r2-checkpoint-packet` and
+   `npm run build-r2-checkpoint-review`;
 2. record changed row counts by packet, drift class, and parser family;
 3. explain every high-priority diagnostic row whose source/archive comparison
    changes;

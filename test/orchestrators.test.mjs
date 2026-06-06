@@ -17,6 +17,7 @@ import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExac
 import { packetIdForDiagnostic, scopeCluesForDiagnostic } from "../scripts/build-r2-review-packets.mjs";
 import { CHECKPOINT_DIAGNOSTIC_IDS, buildPayload as buildR2LabelProposalPayload, labelsForPacket } from "../scripts/build-r2-label-proposals.mjs";
 import { buildMarkdown as buildR2CheckpointMarkdown, buildPayload as buildR2CheckpointPayload } from "../scripts/build-r2-checkpoint-packet.mjs";
+import { PARSER_DISPOSITIONS, buildPayload as buildR2CheckpointReviewPayload } from "../scripts/build-r2-checkpoint-review.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -29,6 +30,7 @@ const r2ReviewPackets = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "
 const r2LabelProposals = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_packet_label_proposals.json"), "utf8"));
 const r2CheckpointPacket = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_checkpoint_review_packet.json"), "utf8"));
 const r2CheckpointReviewMd = fs.readFileSync(path.join(repoRoot, "docs", "R2_CHECKPOINT_REVIEW.md"), "utf8");
+const r2CheckpointReviewReport = JSON.parse(fs.readFileSync(path.join(repoRoot, "src", "data", "review", "r2-checkpoint-review.json"), "utf8"));
 
 // ---- MW depth: count-divergence validation ----
 test("compareCounts: no warnings when counts match", () => {
@@ -331,6 +333,83 @@ test("R2 checkpoint worksheet contains all checkpoint diagnostic ids", () => {
   for (const diagnosticId of CHECKPOINT_DIAGNOSTIC_IDS) {
     assert.ok(r2CheckpointReviewMd.includes(diagnosticId), `${diagnosticId} missing from worksheet`);
   }
+});
+
+test("R2 checkpoint review report is generated from the checkpoint packet", () => {
+  assert.deepEqual(
+    r2CheckpointReviewReport,
+    buildR2CheckpointReviewPayload(r2CheckpointPacket, new Map(), r2CheckpointReviewReport.generatedAt)
+  );
+});
+
+test("R2 checkpoint review report preserves stable ids and canonical empty fields", () => {
+  assert.equal(r2CheckpointReviewReport.queue, "r2-checkpoint");
+  assert.equal(r2CheckpointReviewReport.recordCount, 10);
+  assert.deepEqual(r2CheckpointReviewReport.items.map(item => item.reviewId), CHECKPOINT_DIAGNOSTIC_IDS);
+  for (const item of r2CheckpointReviewReport.items) {
+    assert.equal(item.queue, "r2-checkpoint");
+    assert.equal(item.subject.kind, "entry");
+    assert.equal(item.reviewStatus, "needs-review");
+    assert.equal(item.reviewedValue, null);
+    assert.equal(item.reviewer, null);
+    assert.equal(item.reviewedAt, null);
+    assert.equal(item.note, "");
+  }
+});
+
+test("R2 checkpoint review report carries reviewer-ready machine values", () => {
+  for (const item of r2CheckpointReviewReport.items) {
+    assert.ok(item.sourcePointers.length, `${item.reviewId} lacks source pointers`);
+    assert.ok(item.sourcePointers.every(pointer => pointer.href), `${item.reviewId} has a source pointer without href`);
+    assert.ok(item.machineValue.proposedParserLabels.length, `${item.reviewId} lacks proposed labels`);
+    assert.ok(item.machineValue.reviewQuestion, `${item.reviewId} lacks review question`);
+    assert.deepEqual(item.machineValue.allowedParserDispositions, PARSER_DISPOSITIONS);
+  }
+});
+
+test("R2 checkpoint review report preserves future human fields by diagnostic id", () => {
+  const preserved = new Map([[
+    "r2-drift:gam:pwg",
+    {
+      reviewStatus: "reviewed-corrected",
+      reviewedValue: {
+        acceptedParserLabels: ["target-primary-series"],
+        parserDisposition: "promote-parser-candidate"
+      },
+      reviewer: "mg",
+      reviewedAt: "2026-06-06",
+      note: "Test decision."
+    }
+  ]]);
+  const payload = buildR2CheckpointReviewPayload(r2CheckpointPacket, preserved, "2026-06-06T00:00:00.000Z");
+  const item = payload.items.find(row => row.reviewId === "r2-drift:gam:pwg");
+  assert.equal(item.reviewStatus, "reviewed-corrected");
+  assert.deepEqual(item.reviewedValue, {
+    acceptedParserLabels: ["target-primary-series"],
+    parserDisposition: "promote-parser-candidate"
+  });
+  assert.equal(item.reviewer, "mg");
+  assert.equal(item.reviewedAt, "2026-06-06");
+  assert.equal(item.note, "Test decision.");
+  assert.equal(item.machineValue.packetId, "div-source-scope");
+});
+
+test("R2 checkpoint review report rejects dirty checkpoint source rows", () => {
+  const dirty = JSON.parse(JSON.stringify(r2CheckpointPacket));
+  dirty.checkpointRows[0].reviewer = "mg";
+  assert.throws(
+    () => buildR2CheckpointReviewPayload(dirty, new Map(), "2026-06-06T00:00:00.000Z"),
+    /checkpoint reviewer must be empty string/
+  );
+});
+
+test("R2 checkpoint review report rejects source pointers without links", () => {
+  const dirty = JSON.parse(JSON.stringify(r2CheckpointPacket));
+  delete dirty.checkpointRows[0].sourcePointers[0].href;
+  assert.throws(
+    () => buildR2CheckpointReviewPayload(dirty, new Map(), "2026-06-06T00:00:00.000Z"),
+    /source pointer is missing href/
+  );
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----
