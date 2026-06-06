@@ -21,6 +21,9 @@ and `/tools/semantic-fields`.
   `npm run build-semantic-fields`, `npm run build-h4-family-profiles`,
   and `npm run build`.
 - Owner repo: `csl-atlas`.
+- Next use: hold H4 as the next continuity package until H6 and
+  headword/subentry structure are documented, then review the selected
+  convention samples.
 
 ## Current Reading
 
@@ -28,6 +31,11 @@ H4 is now stronger than "can we measure fields?" The answer is yes: AMAR vargas
 produce a stable dictionary-first coverage layer. The family-profile artifact
 now shows that coverage profiles can be compared by dictionary family rather
 than only by gross size.
+
+For the current documentation package, H4 is intentionally a placeholder for
+continuity rather than the next analysis focus. It remains visible so the
+roadmap is not broken, but the next concrete writing/review work is H6 and
+headword/subentry microstructure.
 
 ## Family Profile Artifact
 

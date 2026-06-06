@@ -13,6 +13,7 @@ The atlas's original core comparison: nine CDSL dictionaries on a **format-robus
 - Limitations: this page compares recoverable common blocks, not full semantic content or every dictionary convention.
 - Validation: checked by `npm run build`; source data remains a compact committed comparison artifact.
 - Owner repo: `csl-atlas`.
+- Next use: inspect highlighted rows, then open exact dictionary source records before citing the pattern.
 
 ```js
 const cross = FileAttachment("../data/cross-dict.json").json();

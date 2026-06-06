@@ -14,6 +14,7 @@ The classical Sanskrit synonymic kosha by [Halāyudha](https://en.wikipedia.org/
 - Limitations: kosha context page; this is not a full bilingual microstructure chapter and not a passage corpus.
 - Validation: checked by `npm run build`; page links are covered by Observable link validation.
 - Owner repo: `csl-atlas`.
+- Next use: use this dictionary profile as context, then open source-linked records or compare the lemma in Reader Lookup.
 
 ## At a glance
 

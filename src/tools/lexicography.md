@@ -15,6 +15,7 @@ This page is companion to the [Lexicography Roadmap](https://github.com/sanskrit
 - Limitations: headword containment and distance show content overlap, not full microstructure inheritance or direct copying by themselves.
 - Validation: source artifacts are compact committed research outputs; checked by `npm run build` and the linked lexicography roadmap.
 - Owner repo: `csl-atlas`.
+- Next use: treat the chart as structural evidence, then check companion docs before making a lineage claim.
 
 ```js
 const inv = await FileAttachment("../data/lexicographic-structure/dictionary_inventory.csv").csv({typed: true});

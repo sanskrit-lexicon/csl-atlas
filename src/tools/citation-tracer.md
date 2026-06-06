@@ -16,6 +16,7 @@ The plan: click an `<ls>` source (e.g. `RV.`, `MBh.`, `L.`), see all MW entries 
 - Limitations: placeholder only. It does not expose source-to-entry lookup and does not support passage cross-reference.
 - Validation: checked by `npm run build`; data export remains future work.
 - Owner repo: `csl-atlas`.
+- Next use: follow citation rows back to dictionary source records before interpreting a source abbreviation.
 
 ## See also
 

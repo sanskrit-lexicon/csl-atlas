@@ -21,8 +21,15 @@ mixing dictionary evidence with corpus frequency.
   `npm run build-semantic-fields`, `npm run build-h4-family-profiles`,
   and `npm run build`.
 - Owner repo: `csl-atlas`.
+- Next use: keep H4 visible as the next continuity package, but review it only
+  after H6 structural register and headword/subentry structure are documented.
 
 ## What Was Built
+
+This package is already implemented as M8, but it is not the next writing
+focus. In the current documentation sequence, H4 is a continuity placeholder:
+it tells readers what comes after H6 and the first microstructure layer without
+pulling corpus frequency or passage evidence into the atlas.
 
 M8 parses the local sibling `AMAR/amar.txt` into an Amarakosa-native field
 taxonomy. Each synonym is assigned to its kāṇḍa/varga/upavarga context, then

@@ -20,6 +20,8 @@ Status: scholar-facing review packet for the H6 structural-register artifact.
   `python scripts/lexico/validate_lexico.py`, `npm test`, and
   `npm run build`.
 - Owner repo: `csl-atlas`.
+- Next use: label the 13 edge-comparison rows and family outliers before
+  presenting H6 as a reviewed paper claim.
 
 ## Purpose
 

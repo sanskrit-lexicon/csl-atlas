@@ -26,6 +26,11 @@ dictionary entry:
 - M4 verbal-root evidence from indigenous and dictionary-specific conventions;
 - M5 unified join and per-dictionary fingerprint.
 
+Read the doc family in parse order. Start with
+[`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md),
+then move to citation practice, grammar/gender marking, cross-references, and
+sense segmentation.
+
 The row key is `(dict, L)`, the dictionary code and CDSL entry number. The
 profile is meant to answer scholar-facing questions such as:
 
@@ -69,6 +74,7 @@ conventions, not European abbreviation tags.
 
 - [`MICROSTRUCTURE_METHODS.md`](MICROSTRUCTURE_METHODS.md)
 - [`MICROSTRUCTURE_FINDINGS.md`](MICROSTRUCTURE_FINDINGS.md)
+- [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md)
 - [`MICROSTRUCTURE_M1_M2_RESULTS.md`](MICROSTRUCTURE_M1_M2_RESULTS.md)
 - [`MICROSTRUCTURE_ZERO_MEANING.md`](MICROSTRUCTURE_ZERO_MEANING.md)
 - [`MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md`](MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md)

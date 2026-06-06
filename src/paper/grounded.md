@@ -14,6 +14,7 @@ The single consolidated paper builds its analytic apparatus **from MW's own data
 - Limitations: tour page only; the canonical paper text and submission package live outside this repo.
 - Validation: checked by `npm run build`; paper-final claims should be reviewed in the canonical MWS paper before citation.
 - Owner repo: `csl-atlas`.
+- Next use: use this paper tour as orientation, then inspect the linked atlas tools and source-linked evidence.
 
 ## Five core constructs
 

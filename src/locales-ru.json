@@ -175,6 +175,8 @@
       "trust-validation": "Генерируется командой npm run build-dict-comparison; проверяется npm test и npm run build.",
       "trust-owner-label": "Репозиторий",
       "trust-owner": "csl-atlas",
+      "trust-next-use-label": "Следующий шаг",
+      "trust-next-use": "Откройте точные словарные записи-источники; если MW неясен, сравните AP, PWG/PWK, VCP/SKD или досье леммы.",
       "caveat": "Reader Lookup v1 - статический поиск по словарным леммам, засвидетельствованным минимум в четырех целевых словарях. Это не корпусный поиск, не поиск по пассажам и не LexemeHub. Научные термины должны быть проверены редактором."
     }
   },

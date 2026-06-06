@@ -10,6 +10,10 @@ export default {
       path: "/"
     },
     {
+      name: "Which dictionary?",
+      path: "/dictionary-chooser"
+    },
+    {
       name: "Reader mode",
       pages: [
         { name: "Reader lookup", path: "/tools/reader-lookup" },

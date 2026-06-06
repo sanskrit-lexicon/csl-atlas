@@ -19,6 +19,8 @@ is the longer companion for reading entries, caveats, and evidence labels.
 - Validation: reader lookup and dictionary-comparison outputs must keep source
   links, evidence labels, and no-result messaging visible.
 - Owner repo: `csl-atlas`.
+- Next use: send public readers to `/dictionary-chooser`, then Reader Lookup,
+  then the exact source-linked dictionary record.
 
 ## Start Here
 
@@ -39,7 +41,11 @@ You always end at a real dictionary record you can inspect, not at a summary you
 
 ## Which Dictionary First
 
-There is no single "best" Sanskrit dictionary. Each was built for a different purpose. Use this table as a starting point, not a verdict.
+There is no single "best" Sanskrit dictionary. Each was built for a different
+purpose. For public atlas use, however, the default first stop is **MW**: it is
+broad, English-facing, source-linked in the atlas, and usually gets the reader
+to a usable record fastest. Use the table below to decide what to open after
+MW, or when another dictionary should be first because the task is specialized.
 
 | Dictionary | Language of definitions | Best for | Watch out for |
 |---|---|---|---|
@@ -54,7 +60,8 @@ There is no single "best" Sanskrit dictionary. Each was built for a different pu
 Quick rule of thumb:
 
 - **Just need an English meaning?** Start with MW, then check AP.
-- **Doing philology or chasing a source citation?** Use MW and PWG together.
+- **Doing philology or chasing a source citation?** Start with MW, then open
+  PWG/PWK for apparatus and variants.
 - **Working inside the traditional Indian lexicographic frame?** Use VCP and SKD.
 - **Comparing how a word is treated across traditions?** Use the multi-dictionary lemma view (research mode).
 
@@ -63,9 +70,9 @@ Quick rule of thumb:
 | Task | Start with | Add next | Why |
 |---|---|---|---|
 | Fast English meaning | MW | AP | MW is broad; AP is often clearer for practical reading. |
-| Citation-heavy philology | PWG + MW | PW/PWK | PWG gives deep apparatus; MW is easier to navigate in English. |
+| Citation-heavy philology | MW | PWG/PWK | MW gets you oriented; PWG/PWK preserve dense source trail, variants, and nested apparatus. |
 | Traditional Sanskrit-Sanskrit reading | VCP | SKD | These preserve indigenous glossing and citation conventions. |
-| Source-citation follow-through | PWG | MW, VCP, SKD | Start where source apparatus is densest, then compare traditions. |
+| Source-citation follow-through | MW | PWG, VCP, SKD | Start with a familiar record, then compare the source apparatus and indigenous citation conventions. |
 | Grammar or gender check | MW/AP | VCP/SKD when visible | Use visible grammar labels, but watch convention gaps and review status. |
 | Historical lexicography | PWG, PWK, WIL | SHS, KOW, AP/MW families | Compare lineage, condensation, and translation/copying patterns. |
 | Specialized topic | relevant specialized dictionary | general dictionaries | A specialized dictionary is strong evidence inside its domain, not a general baseline. |
@@ -77,8 +84,8 @@ ranked ladder:
 
 - **MW** is the broad English starting point and a major citation hub.
 - **AP** is often the most convenient English reader companion.
-- **PWG** is the deep apparatus dictionary, especially for source-heavy work.
-- **PW/PWK** help distinguish Petersburg depth from later condensation.
+- **PWG** is the deep apparatus dictionary, especially when MW is too compact.
+- **PW/PWK** help recover source trail, variants, and nested entry structure.
 - **WIL/SHS/KOW** matter for older English and translation-lineage questions.
 - **VCP/SKD** matter when Sanskrit-Sanskrit lexicography is the evidence, not
   merely a supplement.

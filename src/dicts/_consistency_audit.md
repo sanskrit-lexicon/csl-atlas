@@ -12,6 +12,7 @@ Audit run after O1–O8 chapter authoring completed all 9 atlas chapters. Three 
 - Limitations: audit snapshot from 2026-05-28; it does not rerun numeric extraction or source parsing.
 - Validation: checked by `npm run build`; update this page when chapter order, counts, or generated chapter data changes.
 - Owner repo: `csl-atlas`.
+- Next use: resolve chapter consistency issues before changing release status or public wording.
 
 ## 1. §6 cross-references bidirectional consistency
 

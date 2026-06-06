@@ -12,6 +12,7 @@ title: AP — Apte Practical Sanskrit-English Dictionary (1890 / 1957)
 - Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
 - Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
 - Owner repo: `csl-atlas`.
+- Next use: use this dictionary profile as context, then open source-linked records or compare the lemma in Reader Lookup.
 
 ## 1. Overview
 

@@ -13,6 +13,7 @@ The central visual evidence for the **kosha-collapse** finding: six PWG `<ls>` l
 - Limitations: this is a focused explanatory visual, not a complete source graph or a generated review queue.
 - Validation: checked by `npm run build`; counts should be regenerated before paper-final use.
 - Owner repo: `csl-atlas`.
+- Next use: treat the chart as structural evidence, then check companion docs before making a lineage claim.
 
 ```js
 // Counts directly from PWG (1855-75) and MW (1899) data files

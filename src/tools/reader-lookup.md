@@ -83,7 +83,8 @@ display(html`<section class="trust-block" aria-labelledby="reader-lookup-trust-t
       [t("reader.lookup.trust-evidence-label"), t("reader.lookup.trust-evidence")],
       [t("reader.lookup.trust-limitations-label"), t("reader.lookup.trust-limitations")],
       [t("reader.lookup.trust-validation-label"), t("reader.lookup.trust-validation")],
-      [t("reader.lookup.trust-owner-label"), t("reader.lookup.trust-owner")]
+      [t("reader.lookup.trust-owner-label"), t("reader.lookup.trust-owner")],
+      [t("reader.lookup.trust-next-use-label"), t("reader.lookup.trust-next-use")]
     ].map(([label, value]) => html`<div>
       <dt>${label}</dt>
       <dd>${value}</dd>

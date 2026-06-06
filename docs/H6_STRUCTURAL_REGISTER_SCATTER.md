@@ -28,6 +28,8 @@ The scholar-facing review packet is
   undercounted if only Western tags are used.
 - Review status: chart interpretation needs scholar review before paper use.
 - Owner repo: `csl-atlas`.
+- Next action: rerun the commands below, confirm the invariants, then label the
+  H6 edge/outlier review prompts before using the chart in a paper argument.
 - External dependencies: none for v1; VisualDCS, standards, and observatory data
   are out of scope.
 - Boundary note: this chart uses dictionary structure only, not corpus passages
@@ -44,6 +46,90 @@ dictionary families:
 - specialized dictionaries with narrow structural signatures.
 
 It is a scholar-facing page first. Public reader language can come later.
+
+## Reproducible Method Note
+
+H6 is a rerunnable dictionary-structure test. It should be read as a method
+package, not only as a scatterplot.
+
+### Research Question
+
+```text
+Do recoverable citation-register and grammar-marking signals separate
+dictionary families?
+```
+
+The answer is currently prototype-supported. The chart shows structural
+clusters; the review artifact asks whether those clusters corroborate lineage,
+show convention convergence, or expose detector limits.
+
+### Input Inventory
+
+| Input | Produced by | Used for |
+|---|---|---|
+| `data/dictionary-coverage.json` | `npm run build-coverage` | Entry counts, grammar share, tagged citation share, inline `iti` citation share. |
+| `data/lexico/microstructure_fingerprint.json` | `python scripts/lexico/m5_profile.py` | Dominant M1-M5 layer, subentry density, xref edges, root entries. |
+| `src/data/lexicographic-structure/L0/bootstrap_support.csv` | L0 lexicographic-structure package | Known-edge comparison for review prompts. |
+| `data/lexico/structural_register_h6_review.json` | `npm run build-h6-structural-review` | Edge classes and family outliers for scholar review. |
+| `src/data/dicts/structural-register.json` | `npm run build-structural-register` | Public Observable chart input. |
+
+### Rerun Order
+
+Run H6 from source artifacts to public page:
+
+```sh
+npm run build-coverage
+python scripts/lexico/m1_subentries.py --all
+python scripts/lexico/m2_preverbs.py --all
+python scripts/lexico/m3_xrefs.py --all
+python scripts/lexico/m4_indigenous.py --all
+python scripts/lexico/m5_profile.py
+python scripts/lexico/validate_lexico.py
+npm run build-structural-register
+npm run build-h6-structural-review
+npm test
+npm run build
+```
+
+If a local environment already has current M1-M5 outputs, the shorter audit
+path is:
+
+```sh
+python scripts/lexico/validate_lexico.py
+npm run build-structural-register
+npm run build-h6-structural-review
+npm test
+npm run build
+```
+
+### Invariants
+
+| Check | Expected result |
+|---|---|
+| Every public chart row has `code`, `sourceCode`, `records`, `grammarPct`, and `citationRegisterPct`. | yes |
+| `citationRegisterPct` is `max(taggedCitationPct, inlineItiPct)`. | yes |
+| Percentages remain inside `0..100`. | yes |
+| `citationRegisterMode` is one of `tagged`, `iti`, `mixed`, or `low`. | yes |
+| Every row has exactly one `familyLabel`. | yes |
+| H6 review rows keep structural distance separate from L0 consensus support. | yes |
+| No corpus, DCS, TEI/OntoLex, FrAC, or GitHub/org data is required. | yes |
+
+### Review Action
+
+Use [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md) as
+the next-action queue. For each edge or family outlier, record whether the
+chart is showing:
+
+- lineage corroboration;
+- format shift;
+- citation truncation;
+- grammar-policy shift;
+- structural convergence;
+- detector blindness;
+- genre outlier.
+
+That review is what upgrades the chart from prototype-supported to
+paper-ready interpretation.
 
 ## H6 Review Artifact
 

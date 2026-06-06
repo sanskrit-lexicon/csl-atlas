@@ -15,6 +15,8 @@ dictionary for a Sanskrit lookup task.
   `DICTIONARY_USER_GUIDE.md`, Reader Lookup v1 coverage, and visible source
   links.
 - Owner repo: `csl-atlas`.
+- Next use: make the public site route `/dictionary-chooser` the first reader
+  decision page, then send users to Reader Lookup or a dictionary source link.
 
 ## Use Case
 
@@ -28,27 +30,54 @@ The atlas answer should be a route, not a verdict. A good route starts from a
 dictionary suited to the task, then asks the reader to verify the original
 source record.
 
+## Public Default
+
+Use **MW** as the public default. It is not "the best Sanskrit dictionary" in a
+global sense; it is the best first stop for most public atlas readers because it
+is broad, English-facing, heavily linked, and familiar enough to make the first
+lookup succeed.
+
+The chooser should then help the reader decide what the second dictionary is
+for:
+
+- AP clarifies ordinary English reading.
+- PWG/PWK recover source trail, nested structure, and variant detail.
+- VCP/SKD recover Sanskrit-Sanskrit and indigenous authority conventions.
+- WIL recovers older English-line wording.
+- Specialized dictionaries answer scope-specific questions.
+
 ## Quick Choice
 
 | Task | Start with | Then check | Why |
 |---|---|---|---|
-| Fast English meaning | MW | AP | MW is broad; AP is often clearer for practical reading. |
-| Classroom or translation aid | AP | MW | AP is compact and readable; MW adds breadth and citations. |
-| Citation-heavy philology | PWG | MW, PWK | PWG has dense source apparatus; MW is easier to navigate in English. |
+| Fast English meaning | MW | AP | MW is broad; AP is often clearer for practical reading after MW. |
+| Classroom or translation aid | MW | AP | MW is the default atlas route; AP gives a compact reader-facing check. |
+| Citation-heavy philology | MW | PWG, PWK | PWG/PWK can show source trail, variants, and nested structure that MW may compress. |
 | Traditional Sanskrit-Sanskrit evidence | VCP | SKD | These preserve indigenous glossing and authority conventions. |
 | Older English tradition | WIL | SHS/KOW when available | Wilson-line evidence helps lineage and translation questions. |
-| German lexicographic tradition | PWG | PWK, SCH, CAE, CCS | German dictionaries are primary evidence, not secondary noise. |
+| German dictionary evidence | MW | PWG, PWK | Open them for evidence trail and structural detail, not because a newcomer needs the history first. |
 | Grammar or gender check | MW/AP | VCP/SKD where visible | Compare visible grammar labels and keep review status in view. |
 | Dictionary comparison | Reader Lookup | Dossier and comparison tools | Start with coverage, then inspect per-dictionary records. |
 
 ## Decision Path
 
-1. Need an English gloss quickly? Start with MW or AP.
-2. Need source citations? Start with PWG, then compare MW.
+1. Need an English gloss quickly? Start with MW, then compare AP.
+2. Need source citations? Start with MW, then open PWG/PWK for apparatus.
 3. Need indigenous lexicographic evidence? Start with VCP and SKD.
 4. Need to compare traditions? Use Reader Lookup, then open the source links.
 5. Need corpus frequency or passage usage? Leave the atlas path; that belongs
    to VisualDCS first.
+
+## PWG/PWK Public Wording
+
+Avoid telling a newcomer "use PWG/PWK for Petersburg lineage" as the reason.
+That is true for researchers, but it is not a useful public action. Use this
+wording instead:
+
+```text
+Use PWG/PWK when MW is not enough: source trail, variant forms, nested
+preverb/derivative structure, and fuller apparatus.
+```
 
 ## What The Choice Means
 

@@ -2,9 +2,9 @@
 
 Date: 2026-06-04
 
-Status: required template for public atlas tools, charts, and use-case pages.
-The short block is mandatory everywhere. The extended block is mandatory for
-research charts and generated-data pages.
+Status: required template for public atlas tools, charts, use-case pages, and
+research dashboards. The short block is mandatory everywhere. The extended
+block is mandatory for research charts and generated-data pages.
 
 ## Short Block
 
@@ -17,6 +17,8 @@ Use this on every public page:
 - Limitations:
 - Validation:
 - Owner repo:
+- Next use:
+
 ```
 
 Rules:
@@ -27,6 +29,14 @@ Rules:
 - Validation names the command, invariant, or manual check used.
 - Owner repo must be exactly one repository: `csl-atlas`, `VisualDCS`,
   `csl-standards`, or `csl-observatory`.
+- Next use is the GTD-style next action: what a reader, scholar, reviewer, or
+  maintainer should do with the page after seeing it.
+
+Keep the order stable:
+
+```text
+Evidence -> Limitations -> Validation -> Owner repo -> Next use
+```
 
 ## Extended Block
 
@@ -44,9 +54,14 @@ Use this on charts, research pages, and generated-data documentation:
 - Known false negatives:
 - Review status:
 - Owner repo:
+- Next action:
 - External dependencies:
 - Boundary note:
 ```
+
+The extended `Next action` field is deliberately operational. It should name a
+concrete next check, review sample, source read, rerun command, or follow-on
+page. Avoid vague phrases such as "continue research."
 
 ## Evidence Labels
 
@@ -66,6 +81,8 @@ Use the atlas labels from [`EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md):
 |---|---|---|
 | Dictionary chooser | `csl-atlas` | Uses dictionary metadata and caveats only. |
 | Reader lookup | `csl-atlas` | Static dictionary lookup, no corpus passage search. |
+| Structural-register dashboard | `csl-atlas` | Dictionary structure only; next action is H6 edge/outlier review. |
+| Semantic-field dashboard | `csl-atlas` | AMAR headword coverage only; next action is H4 convention-review sampling. |
 | Corpus-facing dictionary summary | `VisualDCS` | Atlas may later consume a compact dictionary-facing summary. |
 | TEI/OntoLex loss report | `csl-standards` | Standards/export work, not atlas implementation. |
 | GitHub activity chart | `csl-observatory` | Org-process evidence, not dictionary evidence. |

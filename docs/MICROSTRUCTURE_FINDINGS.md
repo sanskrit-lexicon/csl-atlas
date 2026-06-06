@@ -17,6 +17,12 @@ already supports, what it refutes, and what it prepares for later analysis.
 
 ## Findings
 
+The first reading layer is headword/subentry structure:
+[`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md).
+It explains the MW vs Petersburg macro/micro trade-off before the reader moves
+to citation practice, grammar/gender marking, cross-references, and sense
+segmentation.
+
 | ID | Finding | Strength | Why it matters |
 |---|---|---|---|
 | MF-1 | MW and the Petersburg dictionaries differ by macro/micro trade-off. | supported | MW promotes many forms to headwords; Petersburg dictionaries nest more inside entries. |

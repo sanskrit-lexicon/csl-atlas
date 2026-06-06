@@ -17,6 +17,11 @@ microstructure extractor counts.
 
 ## Method Inventory
 
+For scholar-facing reading, start with the easiest visible layer:
+[`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md).
+It explains why M1/M2 headword and subentry structure comes before citation,
+grammar, cross-reference, and sense-segmentation interpretation.
+
 | Method | Script | Counts | Blind to | Main output |
 |---|---|---|---|---|
 | M1 | `scripts/lexico/m1_subentries.py` | `<ab>` derivative markers such as causative, passive, desiderative, intensive, denominative, periphrastic, compound. | Equivalent information not wrapped in `<ab>`. | `microstructure_subentries.csv` |

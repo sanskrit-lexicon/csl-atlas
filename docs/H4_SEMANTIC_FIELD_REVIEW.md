@@ -19,6 +19,8 @@ Status: scholar-facing review packet for H4/M8 semantic-field evidence.
   `npm run build-semantic-fields`, `npm run build-h4-family-profiles`, and
   `npm run build`.
 - Owner repo: `csl-atlas`.
+- Next use: return to this packet after H6 edge/outlier review and
+  headword/subentry structure documentation are stable.
 
 ## Purpose
 

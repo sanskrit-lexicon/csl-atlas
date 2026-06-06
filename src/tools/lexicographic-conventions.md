@@ -26,6 +26,7 @@ The headline finding is that **convention-lineage and content-lineage are distin
 - Limitations: convention lineage measures house style and markup practice; it is separate from content inheritance.
 - Validation: checked by `npm run build`; L0 validation details are in `docs/L0_RESULTS.md` and `docs/L0_DESIGN.md`.
 - Owner repo: `csl-atlas`.
+- Next use: treat the chart as structural evidence, then check companion docs before making a lineage claim.
 
 ```js
 const patel = await FileAttachment("../data/lexicographic-structure/L0/patel2016_assignments.csv").csv({typed: true});
