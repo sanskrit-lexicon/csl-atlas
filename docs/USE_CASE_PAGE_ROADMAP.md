@@ -49,13 +49,14 @@ targets before adding new analysis-method prose.
 | 5 | [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md) plus the microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Start with the easiest parsed structure: headwords vs nested subentries. | active first microstructure page |
 | 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Use AMAR-native fields as the active dictionary-first semantic review package. | interpretation and review packet active |
 | 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label cross-reference hub families before paper use. | active labels documented |
-| 8 | H5 anomaly scope package | UC-CD-05, UC-RV-03 | makers, reviewers | Turn forensic anomaly signals into a proof-first review queue. | next after xref |
+| 8 | H5 anomaly scope package | UC-CD-05, UC-RV-03 | makers, reviewers | Turn forensic anomaly signals into a proof-first review queue. | taxonomy active; human review pending |
 
 ## GTD Documentation Board
 
 | Bucket | Package | Next action | Done when |
 |---|---|---|---|
-| Next | H5 anomaly review | Use `src/data/review/h5-anomaly-review.json` to turn F0/F2/known-correction samples into a first reviewed taxonomy. | The maker queue can distinguish legitimate forms, variants, typos, ghost candidates, lineage-only signals, and parser artifacts. |
+| Next | H5 sample review | Classify known corrections and null controls first, then raw-headword-exclusive and shared-doublet rows. | The 130-item queue has human `reviewedValue` labels and a summarized taxonomy. |
+| Done | H5 anomaly taxonomy | Keep the review order and expected label set in `H5_GHOST_ANOMALY_SCOPE.md`. | Reviewers can start without treating F0/F2 rows as automatic error claims. |
 | Done | H4 semantic fields | Keep H4 active with `false-low-risk`, `high-coverage-check`, `edition-delta-check`, `scope-baseline-check`, and `direction-index-control` starting labels. | H4 review samples can be interpreted without outrunning the structural/microstructure docs. |
 | Done | Xref hub review | Keep `prefix-convention`, `lexical-target`, `edition-continuity`, `normalization-risk`, `too-sparse`, and `lexical-shared-core` visible in the xref review docs. | Xref hub labels reuse the same review-label discipline after H4 activation. |
 | Done | Public trust blocks | Keep `Evidence`, `Limitations`, `Validation`, `Owner repo`, and `Next use` visible on public pages. | Trust-block audit finds no public Markdown page missing the required fields. |
@@ -105,7 +106,7 @@ For every queue, write the proof page first:
 5. Document review queues by proof value.
 6. Use `data/lexico/r2_parser_diagnostics.json` to tighten the R2 splitter
    before building sense-divergence pages.
-7. Build the first H5 anomaly review report from F0/F2 samples.
+7. Review the first H5 anomaly sample and summarize the taxonomy.
 
 ## Boundary Links
 
