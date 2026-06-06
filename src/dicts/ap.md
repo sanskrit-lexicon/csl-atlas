@@ -6,6 +6,14 @@ title: AP — Apte Practical Sanskrit-English Dictionary (1890 / 1957)
 
 *Chapter authored per [Decision 29 Tier A](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 4 in the atlas ordering — the **modern successor** that shows how the 18-block apparatus reads on a 20th-century artefact.*
 
+## Trust Block
+
+- Evidence: CDSL v02 `ap.txt`, `src/data/cross-dict.json`, and linked dictionary-profile/audit notes.
+- Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
+- Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
+- Owner repo: `csl-atlas`.
+- Next use: use this dictionary profile as context, then open source-linked records or compare the lemma in Reader Lookup.
+
 ## 1. Overview
 
 [Vaman Shivaram Apte](https://en.wikipedia.org/wiki/Vaman_Shivaram_Apte)'s *Practical Sanskrit-English Dictionary*, first published 1890, revised and enlarged in the 1957 three-volume edition digitised in CDSL. A practical reference designed for active reading of classical Sanskrit literature, particularly the *kāvya* and *śāstra* corpora, with substantial coverage of the [Aṣṭādhyāyī](https://en.wikipedia.org/wiki/A%E1%B9%A3%E1%B9%AD%C4%81dhy%C4%81y%C4%AB) terminology. The most recent dictionary in the CDSL bilingual set and the only modern (post-1899) work in the atlas. AP's distinguishing structural feature is its **maximum type-citation differentiation** (spread 15.2 pts — the largest in CDSL): Apte chose to cite the literary apparatus heavily for adjectives and indeclinables and lightly for nouns, reflecting his pedagogical orientation toward reading rather than reference.

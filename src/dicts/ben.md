@@ -6,6 +6,14 @@ title: BEN — Benfey 1866
 
 *Chapter authored per [Decision 29 Tier B](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 5 in the atlas ordering — the **earliest typographic precedent** for the lexicographer-only mark, in a weaker methodological form.*
 
+## Trust Block
+
+- Evidence: CDSL v02 `ben.txt`, `src/data/cross-dict.json`, and linked dictionary-profile/audit notes.
+- Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
+- Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
+- Owner repo: `csl-atlas`.
+- Next use: use this dictionary profile as context, then open source-linked records or compare the lemma in Reader Lookup.
+
 ## 1. Overview
 
 [Theodor Benfey](https://en.wikipedia.org/wiki/Theodor_Benfey)'s *A Sanskrit-English Dictionary, with References to the Best Editions of Sanskrit Authors and Etymologies and Comparisons of Cognate Words, chiefly in Greek, Latin, Gothic, and Anglo-Saxon*, published London 1866 by Longmans, Green, Reader, and Dyer. A compact one-volume work aimed at university-level Sanskritists with comparative-philology training, distinctive for two design choices: (1) a heavy investment in **Indo-European cognate comparisons** (the subtitle's "chiefly in Greek, Latin, Gothic, and Anglo-Saxon") and (2) a **typographic source-discipline** that anticipates the kind of source-marking convention MW would systematise 33 years later. Benfey's record count in the CDSL digitisation is small (5,186) relative to PWG (123,366) or MW (286,561), reflecting the compact print volume rather than incomplete digitisation.

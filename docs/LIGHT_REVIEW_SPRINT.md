@@ -10,6 +10,10 @@ Review decisions are overlays. A reviewer edits the review fields in the queue f
 
 Do not edit generated source data directly.
 
+For the proof value of each queue, see
+[`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md). This sprint records reviewer
+actions; the proof page records why each queue matters.
+
 ## Worklists
 
 | Sprint item | Scope | File | Reviewer action |

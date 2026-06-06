@@ -9,6 +9,13 @@ import assert from "node:assert/strict";
 
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
+import { indigenousAuthorityHints, jaccard, lookupKeysForLemma, reverseMatchProfile, sourceRecordCounts, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
+import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExactMatches } from "../scripts/build-r2-parser-diagnostics.mjs";
+import { packetIdForDiagnostic, scopeCluesForDiagnostic } from "../scripts/build-r2-review-packets.mjs";
+import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
+import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
+import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
+import { classifyHubTarget } from "../scripts/build-xref-hub-review.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
 import { topForm } from "../scripts/build-citation-apparatus.mjs";
 
@@ -55,6 +62,237 @@ test("senseUnits is repeatable (does not leak regex lastIndex)", () => {
   const re = /<div\b/g;
   assert.equal(senseUnits("<div><div>", re), 2);
   assert.equal(senseUnits("<div><div>", re), 2); // second call must match the first
+});
+
+// ---- R2 source anchors: lookup keys, marker splitting, alignment score ----
+test("lookupKeysForLemma carries historical source spellings", () => {
+  assert.deepEqual(lookupKeysForLemma("dharma"), ["Darma", "DarmaH", "Darmma", "DarmmaH", "dharma"]);
+  assert.deepEqual(lookupKeysForLemma("bodhisattva"), ["boDisattva", "boDisattvaH", "boDisattvaM", "bodhisattva"]);
+});
+
+test("splitExplicitMarkers keeps preface and numbered parts stable", () => {
+  const parts = splitExplicitMarkers("grammar {@1@} first {@--2@} second", /\{@\s*(?:--)?(\d+)\.?\s*@\}/g);
+  assert.deepEqual(parts.map(part => part.localId), ["preface", "1", "2"]);
+  assert.equal(parts[0].splitConfidence, "lumped-proxy");
+  assert.equal(parts[1].splitConfidence, "explicit");
+  assert.deepEqual(parts.map(part => part.markerLabel ?? null), [null, "1", "2"]);
+  assert.deepEqual(parts.map(part => part.markerRunIndex ?? null), [null, 0, 0]);
+});
+
+test("splitExplicitMarkers records numeric marker-run resets", () => {
+  const parts = splitExplicitMarkers("grammar {@1@} first {@2@} second {@1@} derived", /\{@\s*(?:--)?(\d+)\.?\s*@\}/g);
+  assert.deepEqual(parts.map(part => part.localId), ["preface", "1", "2", "1"]);
+  assert.deepEqual(parts.map(part => part.markerRunIndex ?? null), [null, 0, 0, 1]);
+});
+
+test("splitExplicitMarkers captures div n labels while keeping ordinal ids", () => {
+  const marker = /<div\b(?:[^>]*?\bn=["']?([^"'>\s]+))?[^>]*>/g;
+  const parts = splitExplicitMarkers("lead <div n=\"1\"> first <div type=\"x\" n=\"p\"> preverb <div n=\"2\"> second", marker, {
+    useMarkerLabelAsLocalId: false
+  });
+  assert.deepEqual(parts.map(part => part.localId), ["preface", "1", "2", "3"]);
+  assert.deepEqual(parts.map(part => part.markerLabel ?? null), [null, "1", "p", "2"]);
+  assert.deepEqual(parts.map(part => part.markerRunIndex ?? null), [null, 0, null, 0]);
+});
+
+test("jaccard scores anchor overlap", () => {
+  assert.equal(jaccard(["a", "b"], ["b", "c"]), 1 / 3);
+  assert.equal(jaccard([], []), 0);
+});
+
+test("sourceRecordCounts keeps the largest source records first", () => {
+  const rows = [
+    { blockIds: ["2"], rawHeadword: "b", sourceLine: 20, href: "b" },
+    { blockIds: ["1"], rawHeadword: "a", sourceLine: 10, href: "a" },
+    { blockIds: ["2"], rawHeadword: "b", sourceLine: 20, href: "b" },
+    { blockIds: ["3"], rawHeadword: "c", sourceLine: 30, href: "c" }
+  ];
+  assert.deepEqual(sourceRecordCounts(rows, 2), [
+    { blockId: "2", rawHeadword: "b", sourceLine: 20, href: "b", rowCount: 2 },
+    { blockId: "1", rawHeadword: "a", sourceLine: 10, href: "a", rowCount: 1 }
+  ]);
+});
+
+test("indigenousAuthorityHints keeps SKD and VCP authority evidence separate from citations", () => {
+  assert.deepEqual(indigenousAuthorityHints("medinI . hemacandraH .. hitodeSe .", "skd"), [
+    "auth:hemacandra",
+    "auth:hitopadesa",
+    "auth:medini"
+  ]);
+  assert.deepEqual(indigenousAuthorityHints("hemaca0 na0 pu0 medi0", "vcp"), [
+    "auth:hemaca",
+    "auth:medi"
+  ]);
+  assert.deepEqual(indigenousAuthorityHints("medinI .", "mw"), []);
+});
+
+test("reverseMatchProfile ranks AE equivalents by first matching group", () => {
+  const lookup = new Set(["gam"]);
+  assert.deepEqual(
+    reverseMatchProfile("{@Approach@} {#upa gam#} {#yA#}", lookup),
+    { rank: "high", firstGroupIndex: 1, matchGroupCount: 1, equivalentGroupCount: 3, score: 0.5 }
+  );
+  assert.equal(
+    reverseMatchProfile("{@A@} {#foo#} {#bar#} {#baz#} {#gam#}", lookup).rank,
+    "medium"
+  );
+  assert.equal(
+    reverseMatchProfile("{@A@} {#one#} {#two#} {#three#} {#four#} {#five#} {#six#} {#gam#}", lookup).rank,
+    "low"
+  );
+  assert.equal(
+    reverseMatchProfile("{@A@} {#one#} {#two#} {#three#} {#four#} {#five#} {#six#} {#seven#} {#eight#} {#nine#} {#ten#} {#gam#}", lookup).rank,
+    "tail"
+  );
+  assert.equal(reverseMatchProfile("{@No match@} {#yA#}", lookup).rank, "no-match");
+});
+
+test("R2 parser diagnostics classify drift by rebuild work package", () => {
+  assert.equal(
+    classifyDrift({ parserFamily: "western", split: "ap-bullet", sourceSenseRows: 16, archivedSenseRows: 16 }),
+    "archive-parity"
+  );
+  assert.equal(
+    classifyDrift({ parserFamily: "western", split: "number-marker", sourceSenseRows: 172, archivedSenseRows: 23 }),
+    "over-split-candidate"
+  );
+  assert.equal(
+    classifyDrift({ parserFamily: "western", split: "div", sourceSenseRows: 367, archivedSenseRows: 0 }),
+    "source-only-dictionary"
+  );
+  assert.equal(
+    classifyDrift({ parserFamily: "reverse", split: "reverse-equivalent", sourceSenseRows: 243, archivedSenseRows: 30 }),
+    "reverse-overmatch"
+  );
+  assert.equal(
+    classifyDrift({ parserFamily: "indigenous", split: "iti-unit", sourceSenseRows: 27, archivedSenseRows: 9 }),
+    "indigenous-coarse-review"
+  );
+});
+
+test("R2 parser diagnostics keep parser priorities stable", () => {
+  assert.equal(priorityForClass("over-split-candidate"), "high");
+  assert.equal(priorityForClass("mild-drift"), "medium");
+  assert.equal(priorityForClass("archive-parity"), "low");
+  assert.equal(priorityForClass("no-anchor-evidence"), "info");
+});
+
+test("R2 parser diagnostics detects marker-run prefixes that match archive counts", () => {
+  assert.deepEqual(
+    markerRunPrefixMatch({ archivedSenseRows: 23, markerRunCounts: { 0: 9, 1: 14, 2: 4 } }),
+    { maxRunIndex: 1, runCount: 2, countedRows: 23 }
+  );
+  assert.equal(markerRunPrefixMatch({ archivedSenseRows: 10, markerRunCounts: { 0: 9, 1: 14 } }), null);
+});
+
+test("R2 parser diagnostics detects source records that match archive counts", () => {
+  assert.deepEqual(sourceRecordExactMatches({
+    archivedSenseRows: 7,
+    sourceRecordCounts: [
+      { blockId: "1", rowCount: 8 },
+      { blockId: "2", rowCount: 7 }
+    ]
+  }), [{ blockId: "2", rowCount: 7 }]);
+  assert.deepEqual(sourceRecordExactMatches({ archivedSenseRows: 0, sourceRecordCounts: [{ blockId: "1", rowCount: 1 }] }), []);
+});
+
+test("R2 review packets route diagnostics by parser decision", () => {
+  assert.equal(packetIdForDiagnostic({
+    split: "div",
+    driftClass: "over-split-candidate",
+    parserFamily: "western"
+  }), "div-source-scope");
+  assert.equal(packetIdForDiagnostic({
+    split: "reverse-equivalent",
+    driftClass: "reverse-overmatch",
+    parserFamily: "reverse"
+  }), "ae-reverse-bands");
+  assert.equal(packetIdForDiagnostic({
+    split: "iti-unit",
+    driftClass: "indigenous-coarse-review",
+    parserFamily: "indigenous"
+  }), "indigenous-iti-authority");
+  assert.equal(packetIdForDiagnostic({
+    split: "number-marker",
+    driftClass: "over-split-candidate",
+    parserFamily: "western"
+  }), "marker-run-scope");
+});
+
+test("R2 review packets expose deterministic review clues", () => {
+  assert.deepEqual(scopeCluesForDiagnostic({
+    sourceRecordCounts: [{ blockId: "1" }, { blockId: "2" }],
+    sourceRecordExactMatches: [{ blockId: "2" }],
+    markerLabelCounts: { 1: 2 },
+    markerRunPrefixMatch: { countedRows: 2 },
+    reverseRankCounts: { high: 1 },
+    indigenousAuthorityHintCounts: { "auth:medini": 1 }
+  }), [
+    "multiple-source-records",
+    "source-record-exact-match",
+    "marker-label-counts",
+    "marker-run-prefix-match",
+    "reverse-rank-counts",
+    "indigenous-authority-hints"
+  ]);
+});
+
+// ---- H5 anomaly queue: quoted CSV parsing ----
+test("parseCsv handles quoted commas and escaped quotes", () => {
+  const rows = parseCsv('a,b,c\nx,"y, z","q ""quoted"""\n');
+  assert.deepEqual(rows, [{ a: "x", b: "y, z", c: 'q "quoted"' }]);
+});
+
+// ---- H4 family profiles: stable ranking helpers ----
+test("H4 mean and percentage rounding are stable", () => {
+  assert.ok(Math.abs(h4Mean([0.1, 0.2, Number.NaN, 0.3]) - 0.2) < 1e-12);
+  assert.equal(h4Mean([]), 0);
+  assert.equal(roundPct(1 / 3), 0.3333);
+});
+
+test("rankFamilyFields chooses high and low fields deterministically", () => {
+  const rows = [
+    { fieldKey: "a", fieldOrder: 2, meanCoveragePct: 0.5, dictionariesWithCoverage: 1 },
+    { fieldKey: "b", fieldOrder: 1, meanCoveragePct: 0.5, dictionariesWithCoverage: 3 },
+    { fieldKey: "c", fieldOrder: 3, meanCoveragePct: 0.1, dictionariesWithCoverage: 1 }
+  ];
+  assert.deepEqual(rankFamilyFields(rows, "high", 2).map(row => row.fieldKey), ["b", "a"]);
+  assert.deepEqual(rankFamilyFields(rows, "low", 2).map(row => row.fieldKey), ["c", "b"]);
+});
+
+// ---- H6 structural-register review: stable distance labels ----
+test("structuralDistance normalizes H6 chart coordinates", () => {
+  assert.deepEqual(
+    structuralDistance({ citationRegisterPct: 0, grammarPct: 0 }, { citationRegisterPct: 100, grammarPct: 100 }),
+    { citationDeltaPct: 100, grammarDeltaPct: 100, structuralDistance01: 1 }
+  );
+  assert.equal(
+    structuralDistance({ citationRegisterPct: 10, grammarPct: 20 }, { citationRegisterPct: 10, grammarPct: 20 }).structuralDistance01,
+    0
+  );
+});
+
+test("edgeReviewClass separates controls, tensions, and convergence", () => {
+  assert.equal(
+    edgeReviewClass({ consensus_support: 0.8 }, { structuralDistance01: 0.1 }, true, true),
+    "positive-control"
+  );
+  assert.equal(
+    edgeReviewClass({ consensus_support: 0.8 }, { structuralDistance01: 0.4 }, true, true),
+    "genealogy-structure-tension"
+  );
+  assert.equal(
+    edgeReviewClass({ consensus_support: 0.05 }, { structuralDistance01: 0.1 }, false, true),
+    "structural-convergence"
+  );
+});
+
+// ---- Xref hub review: target-class labels ----
+test("classifyHubTarget separates prefix hubs, lexical targets, and normalization risks", () => {
+  assert.equal(classifyHubTarget("a-"), "prefix-convention");
+  assert.equal(classifyHubTarget("mahA\u02da"), "prefix-convention");
+  assert.equal(classifyHubTarget("narasiMha"), "lexical-target");
+  assert.equal(classifyHubTarget("paropadeSe pAMqityaM"), "normalization-risk");
 });
 
 // ---- All-dictionary coverage: classify + fit bands ----

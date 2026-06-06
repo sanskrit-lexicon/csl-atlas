@@ -55,6 +55,7 @@ The atlas must keep uncertainty visible.
 - Goal: understand whether MW, AP, PWG, PWK, WIL, VCP, SKD, or another
   dictionary is the best first stop for a task.
 - Evidence: dictionary scope, language, source density, coverage, caveats.
+- Page: [`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md).
 
 ### UC-RD-03 Multi-Dictionary Lemma View `P0`
 
@@ -152,7 +153,8 @@ The atlas must keep uncertainty visible.
 
 - Actor: researcher.
 - Goal: compare deterministic sense segmentation across dictionary families.
-- Evidence: R2 sense-splitter outputs and documented parser caveats.
+- Evidence: archived R2 sense-splitter outputs, documented parser caveats, and
+  the rebuild contract in `docs/R2_REBUILD_CONTRACT.md`.
 
 ### UC-LX-05 Source-Siglum Review `P1`
 
@@ -261,11 +263,48 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - Every chart has source data, assumptions, warnings, and validation commands.
 - Corpus, standards, and observatory claims point outside the atlas.
 
+## Documentation Layer Decisions
+
+- Use-case pages come before analysis method notes.
+- The first reader page is the dictionary chooser:
+  [`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md).
+- Every public tool, chart, or page must carry a compact trust block:
+  Evidence, Limitations, Validation, Owner repo.
+- Scholar-facing analysis docs come before public-facing analysis explanations.
+- Review queues should first document what each queue proves, then how to review
+  it.
+- H6 structural-register scatter and H4 semantic fields are implemented
+  chart-trust examples with generated review-prompt artifacts and review
+  packet docs.
+- H4 semantic fields are built as the M8 data layer, `/tools/semantic-fields`,
+  `data/lexico/semantic_field_family_profiles.json`, an interpretation note,
+  and a scholar review packet.
+- Xref hub review has a generated review-prompt artifact, and H5 anomaly scope
+  is documented as a proof-first package.
+
 ## Related Docs
 
 - `docs/BOUNDARY_RULES.md`
+- `docs/USE_CASE_PAGE_ROADMAP.md`
+- `docs/CHART_TRUST_TEMPLATE.md`
+- `docs/HYPOTHESIS_INDEX.md`
+- `docs/R2_REBUILD_CONTRACT.md`
+- `docs/H4_SEMANTIC_FIELD_INTERPRETATION.md`
+- `docs/H4_SEMANTIC_FIELD_REVIEW.md`
+- `docs/H6_STRUCTURAL_REGISTER_REVIEW.md`
+- `docs/MICROSTRUCTURE_XREF_HUB_REVIEW.md`
+- `docs/H5_GHOST_ANOMALY_SCOPE.md`
 - `docs/REVIEW_RELEASE_ROADMAP.md`
 - `docs/RELEASE_CHECKLIST.md`
+- `docs/REVIEW_QUEUE_PROOFS.md`
 - `docs/DICTIONARY_USER_GUIDE.md`
+- `docs/UC_RD_02_DICTIONARY_CHOOSER.md`
+- `docs/READER_LOOKUP_EXPLAINER.md`
 - `docs/EVIDENCE_LABELS.md`
+- `docs/H6_STRUCTURAL_REGISTER_SCATTER.md`
+- `docs/MICROSTRUCTURE_XREF_LINEAGE.md`
+- `docs/MICROSTRUCTURE_PROFILE.md`
+- `docs/MICROSTRUCTURE_SEMANTIC_FIELDS.md`
+- `docs/MICROSTRUCTURE_METHODS.md`
+- `docs/MICROSTRUCTURE_FINDINGS.md`
 - `docs/USE_CASES_LEGACY_INTEGRATED_ATLAS.md`

@@ -19,10 +19,20 @@ npm run build-coverage
 npm run build-mw-depth
 npm run build-dict-comparison
 npm run build-citation-apparatus
+npm run build-structural-register
+npm run build-h6-structural-review
 npm run build-sense-depth
 npm run build-gender-review
 npm run build-source-layer-review
 npm run build-alignment-review
+npm run build-semantic-fields
+npm run build-h4-family-profiles
+npm run build-xref-lineage
+npm run build-xref-hub-review
+npm run recover-r2-archive
+npm run build-r2-source-anchors
+npm run build-r2-parser-diagnostics
+npm run build-h5-anomaly-review
 ```
 
 ## Validation Gates
@@ -50,7 +60,7 @@ npm run build
 - [ ] Lookup exact examples work: `agni`, `dharma`, `śiva`, `aMSa`.
 - [ ] Lookup no-result state is explicit and does not imply corpus or sandhi search.
 - [ ] Review queues expose machine vs reviewed status.
-- [ ] Dictionary structure pages open: genealogy, convention fingerprints, R2 sense explorer.
+- [ ] Dictionary structure pages open: genealogy, convention fingerprints, structural register, semantic fields, cross-reference lineage, R2 sense explorer.
 - [ ] Mobile viewport has no incoherent text overlap.
 - [ ] GitHub Pages assets copied by `postbuild`: `manifest.json`, `sw.js`, `favicon.svg`.
 
@@ -61,3 +71,6 @@ npm run build
 - Source-layer mappings are conservative review seeds, not exact chronology.
 - VCP/SKD gender extraction is useful but incomplete for feminine/neuter cases.
 - TEI/OntoLex full 50-case validation lives in `csl-standards`, not this atlas.
+- R2 sense-alignment pages are archived snapshots until the rebuild contract is
+  implemented.
+- H5 anomaly candidates are review seeds, not automatic ghost-entry claims.

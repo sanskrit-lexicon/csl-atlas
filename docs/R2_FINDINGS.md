@@ -1,6 +1,27 @@
 # R2 sense-splitter — first-slice findings (2026-05-31)
 
-First real build of **R2** (the per-dict sense splitter, RESEARCH_LAYER_ROADMAP §5.1), run on the 5 anchor lemmas (`gam`, `dharma`, `rāma`, `iti`, `bodhisattva`) across the 8 Western-tagged dictionaries. Script: [`scripts/lexico/sense_split.py`](../scripts/lexico/sense_split.py). Data: `data/lexico/senses_<dict>.jsonl`, `r2_align_<lemma>.json`, `r2_summary.json`. Deterministic, stdlib-only, reads sibling `csl-orig`.
+Current artifact note, 2026-06-05: this document preserves the R2 findings and
+the static atlas pages `/tools/r2-h1` and `/tools/r2-explorer`. The old R2
+generator files and JSONL/JSON outputs named below are not present in the
+current branch. `npm run recover-r2-archive` now extracts the static page
+payloads into `data/lexico/r2_archive_explorer.json` and
+`data/lexico/r2_archive_h1.json`; treat those as archive fixtures, not as a
+rebuilt splitter. `npm run build-r2-source-anchors` now emits source-backed
+anchor prototypes in `data/lexico/r2_source_anchor_*`; treat those as the next
+rebuild rung, not the final splitter. `npm run build-r2-parser-diagnostics`
+classifies source/archive drift into parser work packages, and
+`npm run build-r2-review-packets` groups those diagnostics into reviewer-facing
+packets. The reconstruction contract is
+[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md), with the diagnostic note in
+[`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) and packet guide in
+[`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md).
+
+First real build of **R2** (the per-dict sense splitter, RESEARCH_LAYER_ROADMAP
+§5.1), run on the 5 anchor lemmas (`gam`, `dharma`, `rāma`, `iti`,
+`bodhisattva`) across the 8 Western-tagged dictionaries. Archived generator:
+`scripts/lexico/sense_split.py`. Archived data: `data/lexico/senses_<dict>.jsonl`,
+`r2_align_<lemma>.json`, `r2_summary.json`. Deterministic, stdlib-only, reads
+sibling `csl-orig`.
 
 ## What it does
 
@@ -60,7 +81,11 @@ The **Apte family** (AP/AP90) enumerates finely (~22); the **Petersburg/MW famil
 
 ## H1 — does sense granularity inflate over time? (family-controlled, full corpus)
 
-[`scripts/lexico/h1_analysis.py`](../scripts/lexico/h1_analysis.py) → [`data/lexico/r2_h1.json`](../data/lexico/r2_h1.json) + `r2_h1.html` (SVG scatter, a Paper-L figure). Metric: **sense-units per entry** over each dictionary's *whole* corpus (explicit markers for enumerating dicts; `;`-meaning-clauses, citations stripped, for lumpers).
+Archived generator `scripts/lexico/h1_analysis.py` produced
+`data/lexico/r2_h1.json` + `r2_h1.html` (the static `/tools/r2-h1` figure).
+Metric: **sense-units per entry** over each dictionary's *whole* corpus
+(explicit markers for enumerating dicts; `;`-meaning-clauses, citations
+stripped, for lumpers).
 
 **Result: H1 (pure temporal inflation) is NOT supported.** Across 11 general dictionaries 1822–1957, the year-trend is essentially flat — **Pearson r = 0.06** (slope ≈ 0.001 units/year). The variance is captured by **lexicographic family**:
 
@@ -80,11 +105,16 @@ The **Apte family** (AP/AP90) enumerates finely (~22); the **Petersburg/MW famil
 
 ## H2 / H3 — sense survival & polysemy drift on inheritance edges (2026-05-31)
 
-[`scripts/lexico/h2h3_analysis.py`](../scripts/lexico/h2h3_analysis.py) → [`data/lexico/r2_h2h3.json`](../data/lexico/r2_h2h3.json). A 28-noun panel across three documented, *sense-countable* inheritance edges (added SHS/YAT `N.` sense markers). Survival uses gloss-text overlap (the Wilson-line glosses are English with few per-sense Sanskrit anchors).
+Archived generator `scripts/lexico/h2h3_analysis.py` produced
+`data/lexico/r2_h2h3.json`. A 28-noun panel across three documented,
+*sense-countable* inheritance edges (added SHS/YAT `N.` sense markers).
+Survival uses gloss-text overlap (the Wilson-line glosses are English with few
+per-sense Sanskrit anchors).
 
 **H2 — citation density predicts sense survival: SUPPORTED.** Ancestor senses carrying ≥1 `<ls>` citation survive into the descendant at **70%** (n=96); uncited senses at **54%** (n=715) — a 16-point gap. Well-sourced senses are stickier.
 
-**H3 — derivatives net-ADD senses: NOT supported.** They copy or condense:
+**H3R — derivatives do not systematically add senses: NOT supported in the
+original form.** They copy or condense:
 
 | Edge | mean senses (anc → des) | drift | gloss overlap | pattern |
 |---|---|---|---|---|
@@ -96,7 +126,16 @@ The headline is **forensic**: Śabda-Sāgara's sense glosses are **82% word-iden
 
 ## Next
 
-- Tighten the AE reverse index (rank by equivalent-position); verb-marker grammar; finer indigenous splitting.
-- ✅ **Done** — H1 de-confounded on a fixed 30-noun panel (`h1_panel.py` → `r2_h1_panel.{json,html}`): the year-trend stays flat (Pearson *r* = 0.01) after removing the headword-splitting artifact, confirming H1 is unsupported. (A weak *r* = 0.56 among the 5 explicit-marking dicts is n=5 non-significant + convention-confounded.)
+- Rebuild the reproducible package defined in
+  [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
+- Use [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) to tighten PWG/PWK
+  division scope, BEN/AP90/BHS marker scope, AE reverse rank filtering/review,
+  and finer indigenous splitting.
+- Use [`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md) to review parser decisions
+  by packet before changing splitter rules.
+- Archived result — H1 de-confounded on a fixed 30-noun panel: the year-trend
+  stays flat (Pearson *r* = 0.01) after removing the headword-splitting
+  artifact, confirming H1 is unsupported. A weak *r* = 0.56 among the 5
+  explicit-marking dicts is n=5 non-significant + convention-confounded.
 - These results (H1 tradition-effect, H2 citation-survival, H3 verbatim-copy) are the empirical core of the **standalone methods paper** ([PUBLICATIONS.md](PUBLICATIONS.md)) on Sanskrit-anchored cross-language sense alignment.
 - The cross-language + cross-cluster alignment feeds the **sense-alignment view** (R1 dashboard page) and the **divergence map** (maker worklist); the granularity-by-family result is the empirical seed for **H1** (Paper L), measured family-controlled next.

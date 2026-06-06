@@ -7,6 +7,14 @@ toc: false
 
 The atlas's original core comparison: nine CDSL dictionaries on a **format-robust common-block vocabulary** (blocks detectable regardless of each dict's markup). It shows source-citation density and the population of each structural block, per dictionary. For size, block mass, entry lengths, and all CDSL v02 dictionaries, use the [all-dictionary coverage tool](dictionary-coverage). Data: the [cross-dict audit](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT.md) in the MWS docs-pass branch.
 
+## Trust Block
+
+- Evidence: `src/data/cross-dict.json` and the linked MWS cross-dictionary audit.
+- Limitations: this page compares recoverable common blocks, not full semantic content or every dictionary convention.
+- Validation: checked by `npm run build`; source data remains a compact committed comparison artifact.
+- Owner repo: `csl-atlas`.
+- Next use: inspect highlighted rows, then open exact dictionary source records before citing the pattern.
+
 ```js
 const cross = FileAttachment("../data/cross-dict.json").json();
 ```

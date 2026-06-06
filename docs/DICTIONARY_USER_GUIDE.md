@@ -6,6 +6,22 @@ Audience: readers, students, and translators who want to look up a Sanskrit word
 
 This guide answers the question the architecture documents do not answer for a newcomer: **which dictionary should I use, and how do I read what it tells me?**
 
+For the short task-based chooser, start with
+[`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md). This guide
+is the longer companion for reading entries, caveats, and evidence labels.
+
+## Trust Block
+
+- Evidence: dictionary metadata, dictionary records, source links, and the
+  comparison outputs used by reader-facing atlas pages.
+- Limitations: this guide chooses a first dictionary for a task; it does not
+  rank every dictionary globally or use corpus frequency.
+- Validation: reader lookup and dictionary-comparison outputs must keep source
+  links, evidence labels, and no-result messaging visible.
+- Owner repo: `csl-atlas`.
+- Next use: send public readers to `/dictionary-chooser`, then Reader Lookup,
+  then the exact source-linked dictionary record.
+
 ## Start Here
 
 The atlas exposes two entry modes:
@@ -25,7 +41,11 @@ You always end at a real dictionary record you can inspect, not at a summary you
 
 ## Which Dictionary First
 
-There is no single "best" Sanskrit dictionary. Each was built for a different purpose. Use this table as a starting point, not a verdict.
+There is no single "best" Sanskrit dictionary. Each was built for a different
+purpose. For public atlas use, however, the default first stop is **MW**: it is
+broad, English-facing, source-linked in the atlas, and usually gets the reader
+to a usable record fastest. Use the table below to decide what to open after
+MW, or when another dictionary should be first because the task is specialized.
 
 | Dictionary | Language of definitions | Best for | Watch out for |
 |---|---|---|---|
@@ -40,9 +60,51 @@ There is no single "best" Sanskrit dictionary. Each was built for a different pu
 Quick rule of thumb:
 
 - **Just need an English meaning?** Start with MW, then check AP.
-- **Doing philology or chasing a source citation?** Use MW and PWG together.
-- **Working inside the traditional Indian lexicographic frame?** Use VCP and SKD.
+- **Doing philology or chasing a source citation?** Start with MW, then open
+  PWG/PWK for apparatus and variants.
+- **Working inside the traditional Indian lexicographic frame?** Start with MW,
+  then use VCP and SKD.
 - **Comparing how a word is treated across traditions?** Use the multi-dictionary lemma view (research mode).
+
+## Task-Based Starting Points
+
+| Task | Start with | Add next | Why |
+|---|---|---|---|
+| Fast English meaning | MW | AP | MW is broad; AP is often clearer for practical reading. |
+| Citation-heavy philology | MW | PWG/PWK | MW gets you oriented; PWG/PWK preserve dense source trail, variants, and nested apparatus. |
+| Traditional Sanskrit-Sanskrit reading | MW | VCP/SKD | Start from the public default, then inspect indigenous glossing and citation conventions. |
+| Source-citation follow-through | MW | PWG, VCP, SKD | Start with a familiar record, then compare the source apparatus and indigenous citation conventions. |
+| Grammar or gender check | MW/AP | VCP/SKD when visible | Use visible grammar labels, but watch convention gaps and review status. |
+| Historical lexicography | MW | PWG, PWK, WIL, SHS, KOW, AP/MW families | Start from the public default, then compare lineage, condensation, and translation/copying patterns. |
+| Specialized topic | MW | relevant specialized dictionary | A specialized dictionary is strong evidence inside its domain, not a general baseline. |
+
+## Dictionary Personalities
+
+The atlas should present dictionaries as different instruments, not as a single
+ranked ladder:
+
+- **MW** is the broad English starting point and a major citation hub.
+- **AP** is often the most convenient English reader companion.
+- **PWG** is the deep apparatus dictionary, especially when MW is too compact.
+- **PW/PWK** help recover source trail, variants, and nested entry structure.
+- **WIL/SHS/KOW** matter for older English and translation-lineage questions.
+- **VCP/SKD** matter when Sanskrit-Sanskrit lexicography is the evidence, not
+  merely a supplement.
+- **Indexes and specialized dictionaries** answer narrower questions and should
+  not be treated as failed general dictionaries.
+
+## What A Dictionary Choice Does Not Prove
+
+A good first dictionary does not settle the word. It only gives a reliable
+starting point. Do not infer:
+
+- that no lookup result means the word is absent from Sanskrit;
+- that a dictionary with fewer visible tags has weaker content;
+- that English definitions are more authoritative than German or Sanskrit
+  definitions;
+- that `L.` or lexicographer-only evidence is the same as a textual citation;
+- that corpus frequency is part of the atlas unless a VisualDCS summary is
+  explicitly linked.
 
 ## The German Layer Is Evidence, Not Noise
 
@@ -104,7 +166,15 @@ Each entry has a stable record ID and a source link. When you cite a word in you
 
 ## Related Documents
 
+- [`docs/UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md) -
+  the short "which dictionary should I use?" page.
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — what the certainty labels mean.
+- [`docs/READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) - what a
+  lookup result means and what it does not prove.
+- [`docs/USE_CASE_PAGE_ROADMAP.md`](USE_CASE_PAGE_ROADMAP.md) - how reader and
+  analysis pages are sequenced.
+- [`docs/CHART_TRUST_TEMPLATE.md`](CHART_TRUST_TEMPLATE.md) - the required trust
+  block for public pages and charts.
 - [`docs/DICTIONARY_COMPARISON_PLAN.md`](DICTIONARY_COMPARISON_PLAN.md) — how cross-dictionary comparison works (research mode).
 - `docs/USE_CASES.md` — the reader use cases this guide supports (UC-RD-01 through UC-RD-07).
 - `ARCHITECTURE.md` — the overall design and audience policy.

@@ -6,6 +6,14 @@ title: WIL — Wilson Sanskrit-English Dictionary (1832)
 
 *Chapter authored per [Decision 29 Tier B](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#decision-29--phase-4-dictionary-ordering-chapter-templates-minimum-data-added-2026-05-27). Position 7 in the atlas ordering — the **base** from which the European Sanskrit-lexicography tradition departs; no systematic hedge convention.*
 
+## Trust Block
+
+- Evidence: CDSL v02 `wil.txt`, `src/data/cross-dict.json`, and linked dictionary-profile/audit notes.
+- Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
+- Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
+- Owner repo: `csl-atlas`.
+- Next use: use this dictionary profile as context, then open source-linked records or compare the lemma in Reader Lookup.
+
 ## 1. Overview
 
 [Horace Hayman Wilson](https://en.wikipedia.org/wiki/Horace_Hayman_Wilson)'s *A Dictionary in Sanscrit and English; translated, amended, and enlarged, from an original compilation prepared by learned natives for the College of Fort William*, 2nd edition Calcutta 1832 (the first dictionary in Devanāgarī printed in India; 1st edn 1819, also Calcutta). The **earliest CDSL dictionary** and the **base** from which the European Sanskrit-lexicography tradition departs. Wilson's compilation rests on an indigenous-Indian word list prepared by Calcutta College *paṇḍits* (chiefly an Amarakośa-derived inventory) which Wilson then translated, annotated, and supplemented with citations from the Roxburgh botanical catalogue. The structural-features story is therefore *inverted* compared to MW: where MW has 18 blocks and a 6-block kernel, WIL has effectively *one* citation source (Roxburgh) and otherwise relies on bare glosses. WIL is what comes *before* the European editorial apparatus is layered on.

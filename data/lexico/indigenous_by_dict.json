@@ -66,13 +66,13 @@
         "juhotyadi": 10
       },
       "by_pada": {
-        "parasmaipada": 109,
-        "atmanepada": 43,
-        "ubhayapada": 18
+        "parasmaipada": 885,
+        "atmanepada": 30,
+        "ubhayapada": 463
       },
       "by_transitivity": {
-        "sakarmaka": 40,
-        "akarmaka": 10
+        "sakarmaka": 1170,
+        "akarmaka": 565
       }
     },
     "mw72": {
@@ -143,22 +143,25 @@
         "annotation": 463
       },
       "by_gana": {
-        "tudadi": 25,
-        "bhvadi": 157,
-        "divadi": 16,
-        "curadi": 36,
-        "svadi": 9,
-        "adadi": 9,
-        "juhotyadi": 2
+        "bhvadi": 288,
+        "curadi": 60,
+        "tanadi": 3,
+        "divadi": 31,
+        "adadi": 14,
+        "svadi": 13,
+        "tudadi": 38,
+        "rudhadi": 2,
+        "kryadi": 4,
+        "juhotyadi": 3
       },
       "by_pada": {
-        "ubhayapada": 96,
-        "parasmaipada": 130,
-        "atmanepada": 10
+        "atmanepada": 76,
+        "ubhayapada": 129,
+        "parasmaipada": 202
       },
       "by_transitivity": {
-        "sakarmaka": 204,
-        "akarmaka": 62
+        "sakarmaka": 347,
+        "akarmaka": 107
       }
     },
     "skd": {
@@ -240,6 +243,38 @@
         "sakarmaka": 1680,
         "akarmaka": 503
       }
+    },
+    "yat": {
+      "entries": 45206,
+      "root_entries": 1643,
+      "causative": 0,
+      "set": 1,
+      "anit": 0,
+      "vet": 0,
+      "by_source": {
+        "(yat-conjugation)": 1643
+      },
+      "by_signal": {
+        "yat-conjugation": 1643
+      },
+      "by_gana": {
+        "curadi": 219,
+        "bhvadi": 1009,
+        "svadi": 29,
+        "divadi": 117,
+        "adadi": 54,
+        "kryadi": 42,
+        "tudadi": 139,
+        "rudhadi": 8,
+        "tanadi": 12,
+        "juhotyadi": 14
+      },
+      "by_pada": {
+        "parasmaipada": 1162,
+        "atmanepada": 369,
+        "ubhayapada": 112
+      },
+      "by_transitivity": {}
     }
   }
 }

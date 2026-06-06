@@ -2,7 +2,19 @@
 
 **Status**: Methods (§3) + Validation/Results (§4–5) drafted 2026-05-31 · feeds Paper L.
 **Type**: short computational-lexicography / digital-humanities methods paper.
-**Owner**: M. Gasūns + Claude. **Evidence base**: [R2_FINDINGS.md](R2_FINDINGS.md), `scripts/lexico/`, `data/lexico/`.
+**Owner**: M. Gasūns + Claude. **Evidence base**:
+[R2_FINDINGS.md](R2_FINDINGS.md), archived R2 generator outputs, and the static
+atlas pages `/tools/r2-h1` and `/tools/r2-explorer`.
+
+Artifact note, 2026-06-05: the R2 scripts/data named in this draft are not
+present in the current branch. Before submission, restore or rebuild the R2
+generator package so every result below is reproducible from current
+`csl-orig`. The minimum rebuild contract is
+[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md). The current archive
+fixtures `data/lexico/r2_archive_explorer.json` and
+`data/lexico/r2_archive_h1.json` are comparison targets only; the current
+`data/lexico/r2_source_anchor_*` outputs are a source-backed prototype, not the
+submission-ready splitter.
 
 ## Working title
 
@@ -73,13 +85,25 @@ On the three inheritance edges where both ends mark senses, the derivative never
 
 ## Reproducibility
 
-All deterministic, stdlib-only, reads sibling `csl-orig`:
-`sense_split.py` (splitter + alignment), `h1_analysis.py` (granularity×year), `h2h3_analysis.py`
-(survival + drift), `r2_explorer.py` (interactive figure). Data: `data/lexico/`.
+Target reproducibility: deterministic, stdlib-only, reading sibling `csl-orig`.
+The archived package included `sense_split.py` (splitter + alignment),
+`h1_analysis.py` (granularity x year), `h2h3_analysis.py` (survival + drift),
+and `r2_explorer.py` (interactive figure). Rebuild or restore these before
+submission using [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
+
+Archive fixtures can be refreshed with:
+
+```sh
+npm run recover-r2-archive
+npm run build-r2-source-anchors
+npm run build-r2-parser-diagnostics
+```
 
 ## Open before submission
 
-- ✅ **Done** — fixed 30-noun panel de-confounds H1 (panel year-trend *r* = 0.01; `scripts/lexico/h1_panel.py` → `r2_h1_panel.{json,html}`). Methods §3 + Validation/Results §4–5 drafted above.
+- Archived result — fixed 30-noun panel de-confounds H1 (panel year-trend
+  *r* = 0.01; archived `h1_panel.py` output `r2_h1_panel.{json,html}`). Restore
+  or rebuild before submission.
 - Introduction (§1) + Limitations (§7) prose; the two figures (H1 panel scatter, explorer screenshot).
-- Finer indigenous (VCP/SKD) splitting + verb grammar for completeness of the cross-tradition claim.
+- Use [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) to resolve PWG/PWK div scope, BEN/AP90/BHS marker scope, AE reverse rank filtering/review, and indigenous VCP/SKD `iti` splitting before broadening the cross-tradition claim.
 - Co-author (per the PUBLICATIONS Russian-co-author convention) + target venue.

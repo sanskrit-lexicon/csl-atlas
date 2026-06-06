@@ -214,3 +214,49 @@ anubandhas Vopadeva keeps with their Pāṇinian significance**. His account ind
 (bhvādi) / mucādi (tudādi)); `au`=aniṭ borrowed from the Jainendra Dhātupāṭha (= our `O`→aniṭ).
 Palsule counts **43** code-letters vs the front matter's 46 — a tallying difference, not substance.
 **The SKD anubandha line is now complete.**
+
+---
+
+## Round 10 - 2026-06-04: YAT conjugation blocks added to M4
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 21 | Should YAT remain a zero under M4 because it lacks dhatupatha citation and seṭ/aniṭ annotation? | **No. Treat Yates as a dictionary-specific verbal-root format.** | Add a YAT-only parser for its compact conjugation block; keep the signal separate as `yat-conjugation`. |
+
+Yates encodes many verbal roots with a compact block of the form
+`{#(raw-it) present-form#} <class>. {%pada.%}`. The class digit supplies the
+conjugation class, and the `a`/`d`/`c` marker supplies parasmaipada,
+atmanepada, or ubhayapada. This recovers **1,643 YAT root rows** without
+pretending that YAT cites a dhatupatha or uses the SKD/VCP convention.
+
+**Built:** `scripts/lexico/m4_indigenous.py` now emits the YAT signal,
+`scripts/lexico/validate_lexico.py` accepts it, and M5 marks YAT as a root-layer
+dictionary in `microstructure_fingerprint.json`.
+
+**Caveat:** YAT's parenthesized raw it/anubandha material is preserved in the
+`anubandhas` column, but it is **not decoded** into the SKD key. Transitivity and
+seṭ/aniṭ are not systematically decoded for YAT until a source-specific key is
+reviewed.
+
+---
+
+## Round 11 - 2026-06-05: SHS feature fill, not new SHS detection
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 22 | Should SHS remain partly under-read in M4 because its grammar cluster uses dash separators? | **No. Parse SHS features inside already-detected root rows.** | Keep SHS root detection unchanged, but fill gaṇa/pada/transitivity from the SHS dash-joined cluster and English class ordinal. |
+
+SHS was already present in M4 with **463 root rows**, but many feature columns
+were blank because its compact grammar block uses forms such as
+`{#BvA-para-saka-sew .#}` rather than the VCP-style `BvA0` / `para0`
+conventions. The SHS parser is deliberately scoped to rows already detected by
+the existing seṭ/aniṭ + pada/transitivity rule; it does not broaden the root
+detector.
+
+**Built:** `scripts/lexico/m4_indigenous.py` now reads SHS dash-joined gaṇa,
+pada, and transitivity markers, with a fallback to the English `r. Nth cl.`
+class notation for gaṇa.
+
+**Caveat:** SHS feature fill is deterministic and useful for cross-dictionary
+root agreement, but it is still a convention parser. It should be reviewed from
+sample entries before being treated as philologically final.

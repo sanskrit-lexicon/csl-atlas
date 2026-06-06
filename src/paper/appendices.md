@@ -8,6 +8,14 @@ The three external-framework treatments, condensed as appendices to the [grounde
 
 📄 **Canonical:** [PAPER.md Appendices A–C](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#appendix-a--the-wiegand-theoretic-reading-condensed).
 
+## Trust Block
+
+- Evidence: canonical paper in `sanskrit-lexicon/MWS` `docs-pass` and linked atlas tools.
+- Limitations: tour page only; the canonical paper text and submission package live outside this repo.
+- Validation: checked by `npm run build`; paper-final claims should be reviewed in the canonical MWS paper before citation.
+- Owner repo: `csl-atlas`.
+- Next use: use this paper tour as orientation, then inspect the linked atlas tools and source-linked evidence.
+
 ## Appendix A — Wiegand microstructure
 
 MW has a **fully integrated microstructure at the macro level, additive at the micro level** for thin entries. Three maximally-discriminative structural indicators (`genuineroot`, `<ls>L.</ls>`, `<lang>`); an 18-indicator inventory consistent with a *scholarly all-information dictionary* (the Grimm class). The `L.`-hedge is a deliberate *Strukturveränderung* of PWG's source-attribution system. — [§A](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#appendix-a--the-wiegand-theoretic-reading-condensed)

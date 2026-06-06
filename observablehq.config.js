@@ -10,6 +10,10 @@ export default {
       path: "/"
     },
     {
+      name: "Which dictionary?",
+      path: "/dictionary-chooser"
+    },
+    {
       name: "Reader mode",
       pages: [
         { name: "Reader lookup", path: "/tools/reader-lookup" },
@@ -42,6 +46,9 @@ export default {
       pages: [
         { name: "Dictionary genealogy", path: "/tools/lexicography" },
         { name: "Convention fingerprints", path: "/tools/lexicographic-conventions" },
+        { name: "Structural register", path: "/tools/structural-register" },
+        { name: "Semantic fields", path: "/tools/semantic-fields" },
+        { name: "Cross-reference lineage", path: "/tools/xref-lineage" },
         { name: "R2 sense explorer", path: "/tools/r2-explorer" },
         { name: "R2 sense granularity", path: "/tools/r2-h1" }
       ]

@@ -1,0 +1,2809 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-05T08:29:19.672Z",
+  "claim": "M6: cross-reference graphs preserve lineage signals as a shared core, not wholesale descent.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-reviewed",
+  "sourceFiles": [
+    "data/lexico/xref_lineage.json",
+    "data/lexico/xref_shared_edges.csv",
+    "scripts/lexico/m6_xref_lineage.py",
+    "scripts/build-xref-lineage.mjs"
+  ],
+  "question": "Does MW cf. inherit PWG Vgl.? (LEXICOGRAPHY_ROADMAP §3.1)",
+  "method": "Normalize both ends of every m3 edge (strip compound marker °/-, SLP1 accents, stray hyphens), dedupe per dict, then intersect edge sets restricted to source lemmas both dicts cross-reference. Overlap is a FLOOR (messy targets fail to match).",
+  "verdictMwPwg": "PARTIAL overlap — a shared cross-reference CORE (MW 22% / PWG 9% of cross-refs on lemmas both treat, well above chance) plus large independent expansion in each tradition; NOT wholesale inheritance",
+  "counts": {
+    "pairRows": 10,
+    "sharedEdges": 641
+  },
+  "pairs": [
+    {
+      "pair": "mw-pwg",
+      "a": "mw",
+      "b": "pwg",
+      "aLabel": "MW",
+      "bLabel": "PWG",
+      "label": "MW x PWG",
+      "reading": "headline-shared-core",
+      "aEdges": 7637,
+      "bEdges": 22937,
+      "aSources": 6974,
+      "bSources": 11857,
+      "sharedSources": 2538,
+      "aEdgesOnSharedSources": 2946,
+      "bEdgesOnSharedSources": 7022,
+      "overlappingEdges": 641,
+      "jaccardOnSharedSources": 0.0687,
+      "aInheritanceRate": 0.2176,
+      "bInheritanceRate": 0.0913,
+      "sharedSourcesWithSharedTarget": 640
+    },
+    {
+      "pair": "ap-ap90",
+      "a": "ap",
+      "b": "ap90",
+      "aLabel": "AP",
+      "bLabel": "AP90",
+      "label": "AP x AP90",
+      "reading": "positive-control",
+      "aEdges": 609,
+      "bEdges": 444,
+      "aSources": 604,
+      "bSources": 432,
+      "sharedSources": 211,
+      "aEdgesOnSharedSources": 213,
+      "bEdgesOnSharedSources": 215,
+      "overlappingEdges": 182,
+      "jaccardOnSharedSources": 0.7398,
+      "aInheritanceRate": 0.8545,
+      "bInheritanceRate": 0.8465,
+      "sharedSourcesWithSharedTarget": 182
+    },
+    {
+      "pair": "ap-pwg",
+      "a": "ap",
+      "b": "pwg",
+      "aLabel": "AP",
+      "bLabel": "PWG",
+      "label": "AP x PWG",
+      "reading": "comparison",
+      "aEdges": 609,
+      "bEdges": 22937,
+      "aSources": 604,
+      "bSources": 11857,
+      "sharedSources": 67,
+      "aEdgesOnSharedSources": 67,
+      "bEdgesOnSharedSources": 310,
+      "overlappingEdges": 23,
+      "jaccardOnSharedSources": 0.065,
+      "aInheritanceRate": 0.3433,
+      "bInheritanceRate": 0.0742,
+      "sharedSourcesWithSharedTarget": 23
+    },
+    {
+      "pair": "ap-mw",
+      "a": "ap",
+      "b": "mw",
+      "aLabel": "AP",
+      "bLabel": "MW",
+      "label": "AP x MW",
+      "reading": "comparison",
+      "aEdges": 609,
+      "bEdges": 7637,
+      "aSources": 604,
+      "bSources": 6974,
+      "sharedSources": 66,
+      "aEdgesOnSharedSources": 66,
+      "bEdgesOnSharedSources": 82,
+      "overlappingEdges": 19,
+      "jaccardOnSharedSources": 0.1473,
+      "aInheritanceRate": 0.2879,
+      "bInheritanceRate": 0.2317,
+      "sharedSourcesWithSharedTarget": 19
+    },
+    {
+      "pair": "cae-mw",
+      "a": "cae",
+      "b": "mw",
+      "aLabel": "CAE",
+      "bLabel": "MW",
+      "label": "CAE x MW",
+      "reading": "comparison",
+      "aEdges": 190,
+      "bEdges": 7637,
+      "aSources": 160,
+      "bSources": 6974,
+      "sharedSources": 40,
+      "aEdgesOnSharedSources": 45,
+      "bEdgesOnSharedSources": 55,
+      "overlappingEdges": 11,
+      "jaccardOnSharedSources": 0.1236,
+      "aInheritanceRate": 0.2444,
+      "bInheritanceRate": 0.2,
+      "sharedSourcesWithSharedTarget": 11
+    },
+    {
+      "pair": "ap90-pwg",
+      "a": "ap90",
+      "b": "pwg",
+      "aLabel": "AP90",
+      "bLabel": "PWG",
+      "label": "AP90 x PWG",
+      "reading": "comparison",
+      "aEdges": 444,
+      "bEdges": 22937,
+      "aSources": 432,
+      "bSources": 11857,
+      "sharedSources": 71,
+      "aEdgesOnSharedSources": 75,
+      "bEdgesOnSharedSources": 391,
+      "overlappingEdges": 11,
+      "jaccardOnSharedSources": 0.0242,
+      "aInheritanceRate": 0.1467,
+      "bInheritanceRate": 0.0281,
+      "sharedSourcesWithSharedTarget": 11
+    },
+    {
+      "pair": "ap90-mw",
+      "a": "ap90",
+      "b": "mw",
+      "aLabel": "AP90",
+      "bLabel": "MW",
+      "label": "AP90 x MW",
+      "reading": "comparison",
+      "aEdges": 444,
+      "bEdges": 7637,
+      "aSources": 432,
+      "bSources": 6974,
+      "sharedSources": 84,
+      "aEdgesOnSharedSources": 89,
+      "bEdgesOnSharedSources": 116,
+      "overlappingEdges": 10,
+      "jaccardOnSharedSources": 0.0513,
+      "aInheritanceRate": 0.1124,
+      "bInheritanceRate": 0.0862,
+      "sharedSourcesWithSharedTarget": 10
+    },
+    {
+      "pair": "cae-pwg",
+      "a": "cae",
+      "b": "pwg",
+      "aLabel": "CAE",
+      "bLabel": "PWG",
+      "label": "CAE x PWG",
+      "reading": "comparison",
+      "aEdges": 190,
+      "bEdges": 22937,
+      "aSources": 160,
+      "bSources": 11857,
+      "sharedSources": 46,
+      "aEdgesOnSharedSources": 56,
+      "bEdgesOnSharedSources": 395,
+      "overlappingEdges": 7,
+      "jaccardOnSharedSources": 0.0158,
+      "aInheritanceRate": 0.125,
+      "bInheritanceRate": 0.0177,
+      "sharedSourcesWithSharedTarget": 7
+    },
+    {
+      "pair": "ap-cae",
+      "a": "ap",
+      "b": "cae",
+      "aLabel": "AP",
+      "bLabel": "CAE",
+      "label": "AP x CAE",
+      "reading": "too-few-shared-sources",
+      "aEdges": 609,
+      "bEdges": 190,
+      "aSources": 604,
+      "bSources": 160,
+      "sharedSources": 1,
+      "aEdgesOnSharedSources": 1,
+      "bEdgesOnSharedSources": 1,
+      "overlappingEdges": 1,
+      "jaccardOnSharedSources": 1,
+      "aInheritanceRate": 1,
+      "bInheritanceRate": 1,
+      "sharedSourcesWithSharedTarget": 1
+    },
+    {
+      "pair": "ap90-cae",
+      "a": "ap90",
+      "b": "cae",
+      "aLabel": "AP90",
+      "bLabel": "CAE",
+      "label": "AP90 x CAE",
+      "reading": "too-few-shared-sources",
+      "aEdges": 444,
+      "bEdges": 190,
+      "aSources": 432,
+      "bSources": 160,
+      "sharedSources": 2,
+      "aEdgesOnSharedSources": 2,
+      "bEdgesOnSharedSources": 2,
+      "overlappingEdges": 0,
+      "jaccardOnSharedSources": 0,
+      "aInheritanceRate": 0,
+      "bInheritanceRate": 0,
+      "sharedSourcesWithSharedTarget": 0
+    }
+  ],
+  "sharedEdges": [
+    {
+      "src": "ARi",
+      "target": "aRi"
+    },
+    {
+      "src": "Adinava",
+      "target": "AdInava"
+    },
+    {
+      "src": "Akzit",
+      "target": "anAkzit"
+    },
+    {
+      "src": "Ali",
+      "target": "ali"
+    },
+    {
+      "src": "Alin",
+      "target": "alin"
+    },
+    {
+      "src": "Anuzak",
+      "target": "anuzak"
+    },
+    {
+      "src": "ArAt",
+      "target": "Are"
+    },
+    {
+      "src": "AwIkana",
+      "target": "AwIlaka"
+    },
+    {
+      "src": "Awi",
+      "target": "Aqi"
+    },
+    {
+      "src": "Ayu",
+      "target": "Ayus"
+    },
+    {
+      "src": "BAluka",
+      "target": "Balla"
+    },
+    {
+      "src": "BAtu",
+      "target": "BAnu"
+    },
+    {
+      "src": "BAvitra",
+      "target": "Bavitra"
+    },
+    {
+      "src": "BI",
+      "target": "Byas"
+    },
+    {
+      "src": "BUHKAra",
+      "target": "BuHKAra"
+    },
+    {
+      "src": "BaMsas",
+      "target": "Basad"
+    },
+    {
+      "src": "BakkikA",
+      "target": "PaqiNgA"
+    },
+    {
+      "src": "Bakz",
+      "target": "biBakzayizu"
+    },
+    {
+      "src": "Bala",
+      "target": "bal"
+    },
+    {
+      "src": "Bas",
+      "target": "psA"
+    },
+    {
+      "src": "BastrakA",
+      "target": "BastrAkA"
+    },
+    {
+      "src": "Bavanti",
+      "target": "BavantI"
+    },
+    {
+      "src": "Bavitra",
+      "target": "BAvitra"
+    },
+    {
+      "src": "Bela",
+      "target": "Beqa"
+    },
+    {
+      "src": "BfNgariwi",
+      "target": "BfNgin"
+    },
+    {
+      "src": "BfRqi",
+      "target": "BaRqi"
+    },
+    {
+      "src": "BogapAla",
+      "target": "Bogika"
+    },
+    {
+      "src": "BojyA",
+      "target": "BojA"
+    },
+    {
+      "src": "BrAS",
+      "target": "BlAS"
+    },
+    {
+      "src": "BuHKAra",
+      "target": "BUHKAra"
+    },
+    {
+      "src": "BuRq",
+      "target": "huRq"
+    },
+    {
+      "src": "Buj",
+      "target": "buBukzA"
+    },
+    {
+      "src": "Cadis",
+      "target": "CAdizeya"
+    },
+    {
+      "src": "DUmana",
+      "target": "DUpana"
+    },
+    {
+      "src": "DUr",
+      "target": "DUrv"
+    },
+    {
+      "src": "Darmya",
+      "target": "DArmyAyaRa"
+    },
+    {
+      "src": "DraR",
+      "target": "Dvan"
+    },
+    {
+      "src": "GAwarI",
+      "target": "apaGAwilA"
+    },
+    {
+      "src": "Ga",
+      "target": "pariGa"
+    },
+    {
+      "src": "GaRqa",
+      "target": "GuRqa"
+    },
+    {
+      "src": "GagG",
+      "target": "kaK"
+    },
+    {
+      "src": "Gas",
+      "target": "jakz"
+    },
+    {
+      "src": "Gasi",
+      "target": "GAsi"
+    },
+    {
+      "src": "Gaww",
+      "target": "Gaw"
+    },
+    {
+      "src": "GiRR",
+      "target": "GuRR"
+    },
+    {
+      "src": "GuR",
+      "target": "GUrR"
+    },
+    {
+      "src": "Int",
+      "target": "ant"
+    },
+    {
+      "src": "JallarI",
+      "target": "JalarI"
+    },
+    {
+      "src": "KEmaKA",
+      "target": "KaRvaKA"
+    },
+    {
+      "src": "KaRqu",
+      "target": "KARqava"
+    },
+    {
+      "src": "KadikA",
+      "target": "KAjika"
+    },
+    {
+      "src": "KakKara",
+      "target": "hikkala"
+    },
+    {
+      "src": "Kal",
+      "target": "Kall"
+    },
+    {
+      "src": "KalUrikA",
+      "target": "KuralI"
+    },
+    {
+      "src": "Kalati",
+      "target": "kulva"
+    },
+    {
+      "src": "Kaq",
+      "target": "KaRq"
+    },
+    {
+      "src": "Karpara",
+      "target": "karpara"
+    },
+    {
+      "src": "Kaz",
+      "target": "kaz"
+    },
+    {
+      "src": "Koqa",
+      "target": "Kora"
+    },
+    {
+      "src": "Kuqaka",
+      "target": "Kulaka"
+    },
+    {
+      "src": "KuralI",
+      "target": "KalUrikA"
+    },
+    {
+      "src": "OGa",
+      "target": "oGa"
+    },
+    {
+      "src": "OtaTya",
+      "target": "OcaTya"
+    },
+    {
+      "src": "PalAyozit",
+      "target": "PaqiNgA"
+    },
+    {
+      "src": "SAK",
+      "target": "SlAK"
+    },
+    {
+      "src": "SAPeya",
+      "target": "SApeya"
+    },
+    {
+      "src": "SArvarin",
+      "target": "Sarvarin"
+    },
+    {
+      "src": "SUlaka",
+      "target": "SUkala"
+    },
+    {
+      "src": "SaRqila",
+      "target": "SARqila"
+    },
+    {
+      "src": "SalAtura",
+      "target": "SAlAturIya"
+    },
+    {
+      "src": "Salka",
+      "target": "Sakala"
+    },
+    {
+      "src": "Samba",
+      "target": "Sambin"
+    },
+    {
+      "src": "Samira",
+      "target": "SamIra"
+    },
+    {
+      "src": "Sarkowa",
+      "target": "SArkowa"
+    },
+    {
+      "src": "SarzIkA",
+      "target": "sarzIkA"
+    },
+    {
+      "src": "SatruMtapa",
+      "target": "SAtruMtapi"
+    },
+    {
+      "src": "SatvarI",
+      "target": "SarvarI"
+    },
+    {
+      "src": "SayA",
+      "target": "SayyA"
+    },
+    {
+      "src": "SayARqa",
+      "target": "SayaRqa"
+    },
+    {
+      "src": "SevalinI",
+      "target": "SEvalinI"
+    },
+    {
+      "src": "SfNKalatodin",
+      "target": "SArNKalatodi"
+    },
+    {
+      "src": "SilUza",
+      "target": "SElUza"
+    },
+    {
+      "src": "SitAman",
+      "target": "SitIman"
+    },
+    {
+      "src": "SlAK",
+      "target": "SAK"
+    },
+    {
+      "src": "SlaNg",
+      "target": "SraNg"
+    },
+    {
+      "src": "SlaNk",
+      "target": "SraNk"
+    },
+    {
+      "src": "SrOzaw",
+      "target": "vazaw"
+    },
+    {
+      "src": "SraT",
+      "target": "SlaT"
+    },
+    {
+      "src": "Srutarvan",
+      "target": "SrOtarvaRa"
+    },
+    {
+      "src": "Sudi",
+      "target": "vadi"
+    },
+    {
+      "src": "Suj",
+      "target": "Svaj"
+    },
+    {
+      "src": "SulkaSAlA",
+      "target": "SOlkaSAlika"
+    },
+    {
+      "src": "Suzkala",
+      "target": "SOzkala"
+    },
+    {
+      "src": "Svitya",
+      "target": "SvEtya"
+    },
+    {
+      "src": "Turv",
+      "target": "turv"
+    },
+    {
+      "src": "UrDvaMdama",
+      "target": "OrDvaMdamika"
+    },
+    {
+      "src": "Uzman",
+      "target": "uzman"
+    },
+    {
+      "src": "aBilApa",
+      "target": "aBIlApalap"
+    },
+    {
+      "src": "aMhaspati",
+      "target": "AMhaspatya"
+    },
+    {
+      "src": "aMhri",
+      "target": "aNGri"
+    },
+    {
+      "src": "aNGri",
+      "target": "aMhri"
+    },
+    {
+      "src": "aNg",
+      "target": "aNk"
+    },
+    {
+      "src": "aNgati",
+      "target": "aNkati"
+    },
+    {
+      "src": "aSna",
+      "target": "aSan"
+    },
+    {
+      "src": "aSri",
+      "target": "aSra"
+    },
+    {
+      "src": "aSvaka",
+      "target": "aSmaka"
+    },
+    {
+      "src": "aSvala",
+      "target": "ASvalAyana"
+    },
+    {
+      "src": "aSvameDika",
+      "target": "ASvameDika"
+    },
+    {
+      "src": "abliNga",
+      "target": "abdEvata"
+    },
+    {
+      "src": "agAra",
+      "target": "AgAra"
+    },
+    {
+      "src": "agarI",
+      "target": "garI"
+    },
+    {
+      "src": "agaru",
+      "target": "aguru"
+    },
+    {
+      "src": "ak",
+      "target": "ag"
+    },
+    {
+      "src": "akzadyUta",
+      "target": "AkzadyUtika"
+    },
+    {
+      "src": "amAvAsya",
+      "target": "AmAvAsya"
+    },
+    {
+      "src": "amBas",
+      "target": "aBra"
+    },
+    {
+      "src": "ama",
+      "target": "amu"
+    },
+    {
+      "src": "amahIyu",
+      "target": "AmahIyava"
+    },
+    {
+      "src": "ant",
+      "target": "and"
+    },
+    {
+      "src": "antra",
+      "target": "Antra"
+    },
+    {
+      "src": "anuzak",
+      "target": "Anuzak"
+    },
+    {
+      "src": "apAzWa",
+      "target": "apazWa"
+    },
+    {
+      "src": "apUpa",
+      "target": "pUpa"
+    },
+    {
+      "src": "apazWa",
+      "target": "apAzWa"
+    },
+    {
+      "src": "arDagaNgA",
+      "target": "arDajAhnavI"
+    },
+    {
+      "src": "aratni",
+      "target": "ratni"
+    },
+    {
+      "src": "are",
+      "target": "arare"
+    },
+    {
+      "src": "avaSyam",
+      "target": "AvaSyaka"
+    },
+    {
+      "src": "bAlIvardineya",
+      "target": "balIvardineya"
+    },
+    {
+      "src": "bAlandana",
+      "target": "BAlandana"
+    },
+    {
+      "src": "bAlbajika",
+      "target": "balbajika"
+    },
+    {
+      "src": "bODeya",
+      "target": "boDeya"
+    },
+    {
+      "src": "baDyoga",
+      "target": "bADyoga"
+    },
+    {
+      "src": "bahutarakaRiSa",
+      "target": "gucCakaRiSa"
+    },
+    {
+      "src": "balIha",
+      "target": "balhika"
+    },
+    {
+      "src": "banDitra",
+      "target": "vaDitra"
+    },
+    {
+      "src": "biboDayizu",
+      "target": "buboDayizu"
+    },
+    {
+      "src": "bilvakIyA",
+      "target": "bElvaka"
+    },
+    {
+      "src": "bilvaka",
+      "target": "bElvaki"
+    },
+    {
+      "src": "boDitavya",
+      "target": "boDayitavya"
+    },
+    {
+      "src": "buD",
+      "target": "uzarbuD"
+    },
+    {
+      "src": "buboDayizu",
+      "target": "biboDayizu"
+    },
+    {
+      "src": "cAwu",
+      "target": "cawu"
+    },
+    {
+      "src": "cElaka",
+      "target": "celuka"
+    },
+    {
+      "src": "cEtyaSEla",
+      "target": "cEtika"
+    },
+    {
+      "src": "cOqi",
+      "target": "cOli"
+    },
+    {
+      "src": "cUqa",
+      "target": "cUla"
+    },
+    {
+      "src": "caR",
+      "target": "can"
+    },
+    {
+      "src": "cak",
+      "target": "kan"
+    },
+    {
+      "src": "cal",
+      "target": "car"
+    },
+    {
+      "src": "camp",
+      "target": "kamp"
+    },
+    {
+      "src": "ced",
+      "target": "ned"
+    },
+    {
+      "src": "celaka",
+      "target": "cElaki"
+    },
+    {
+      "src": "ci",
+      "target": "apaciti"
+    },
+    {
+      "src": "cikina",
+      "target": "cikka"
+    },
+    {
+      "src": "cikkira",
+      "target": "cikura"
+    },
+    {
+      "src": "cirBiwa",
+      "target": "indracirBiwI"
+    },
+    {
+      "src": "ciri",
+      "target": "jiri"
+    },
+    {
+      "src": "citravana",
+      "target": "citraka"
+    },
+    {
+      "src": "cuww",
+      "target": "puww"
+    },
+    {
+      "src": "dAlmi",
+      "target": "dalmi"
+    },
+    {
+      "src": "dAqI",
+      "target": "doqI"
+    },
+    {
+      "src": "dAqaka",
+      "target": "dAQA"
+    },
+    {
+      "src": "dArvan",
+      "target": "darvA"
+    },
+    {
+      "src": "dArvawa",
+      "target": "darBawa"
+    },
+    {
+      "src": "dESika",
+      "target": "deSika"
+    },
+    {
+      "src": "dEvatya",
+      "target": "devatya"
+    },
+    {
+      "src": "dIvana",
+      "target": "devana"
+    },
+    {
+      "src": "dOlmi",
+      "target": "dalmi"
+    },
+    {
+      "src": "dUrSa",
+      "target": "dUSya"
+    },
+    {
+      "src": "daNG",
+      "target": "daG"
+    },
+    {
+      "src": "dalmi",
+      "target": "darma"
+    },
+    {
+      "src": "dava",
+      "target": "dAva"
+    },
+    {
+      "src": "dfQadasyu",
+      "target": "dfQasyu"
+    },
+    {
+      "src": "dfgBU",
+      "target": "dfnPU"
+    },
+    {
+      "src": "diRqi",
+      "target": "QuRQi"
+    },
+    {
+      "src": "dihlA",
+      "target": "dilha"
+    },
+    {
+      "src": "dohya",
+      "target": "duhya"
+    },
+    {
+      "src": "doqI",
+      "target": "qodI"
+    },
+    {
+      "src": "drANkz",
+      "target": "DrANkz"
+    },
+    {
+      "src": "drAq",
+      "target": "DrAq"
+    },
+    {
+      "src": "drek",
+      "target": "Drek"
+    },
+    {
+      "src": "duRquBa",
+      "target": "dunduBa"
+    },
+    {
+      "src": "duh",
+      "target": "duDukzu"
+    },
+    {
+      "src": "dul",
+      "target": "tul"
+    },
+    {
+      "src": "durv",
+      "target": "Durv"
+    },
+    {
+      "src": "dvEtIyaka",
+      "target": "dvitIyaka"
+    },
+    {
+      "src": "dvIpikA",
+      "target": "dvIpaSatru"
+    },
+    {
+      "src": "dyUna",
+      "target": "dyuta"
+    },
+    {
+      "src": "ekAtmya",
+      "target": "EkAtmya"
+    },
+    {
+      "src": "fkzalA",
+      "target": "fcCarA"
+    },
+    {
+      "src": "gAh",
+      "target": "gAD"
+    },
+    {
+      "src": "gArgI",
+      "target": "gargI"
+    },
+    {
+      "src": "gaRakAri",
+      "target": "gARagAri"
+    },
+    {
+      "src": "gaRanIya",
+      "target": "gaReya"
+    },
+    {
+      "src": "gavalgaRa",
+      "target": "gAvalgaRi"
+    },
+    {
+      "src": "gaya",
+      "target": "SaMgaya"
+    },
+    {
+      "src": "gfhakanyA",
+      "target": "kanyakA"
+    },
+    {
+      "src": "glev",
+      "target": "gev"
+    },
+    {
+      "src": "gluc",
+      "target": "gluYc"
+    },
+    {
+      "src": "goDenu",
+      "target": "gODenuka"
+    },
+    {
+      "src": "goRI",
+      "target": "gORika"
+    },
+    {
+      "src": "gopA",
+      "target": "gopa"
+    },
+    {
+      "src": "gotama",
+      "target": "gOtama"
+    },
+    {
+      "src": "gud",
+      "target": "gUrd"
+    },
+    {
+      "src": "guq",
+      "target": "guRq"
+    },
+    {
+      "src": "guwikA",
+      "target": "guqa"
+    },
+    {
+      "src": "hAlAhala",
+      "target": "halAhala"
+    },
+    {
+      "src": "hEraRvatI",
+      "target": "hiraRvatI"
+    },
+    {
+      "src": "hasira",
+      "target": "haMsira"
+    },
+    {
+      "src": "havizkft",
+      "target": "hAvizkfta"
+    },
+    {
+      "src": "helA",
+      "target": "avahelA"
+    },
+    {
+      "src": "hfdika",
+      "target": "hArdikya"
+    },
+    {
+      "src": "hintAla",
+      "target": "tAla"
+    },
+    {
+      "src": "hiruk",
+      "target": "huruk"
+    },
+    {
+      "src": "hlag",
+      "target": "hrag"
+    },
+    {
+      "src": "hmal",
+      "target": "hval"
+    },
+    {
+      "src": "hrag",
+      "target": "hlag"
+    },
+    {
+      "src": "indUra",
+      "target": "undura"
+    },
+    {
+      "src": "irA",
+      "target": "iqA"
+    },
+    {
+      "src": "jEvAtfka",
+      "target": "jIvAtu"
+    },
+    {
+      "src": "jaja",
+      "target": "jAjin"
+    },
+    {
+      "src": "jalAladInAhakavarasAha",
+      "target": "jallAladIndra"
+    },
+    {
+      "src": "janaSruta",
+      "target": "jAnaSruti"
+    },
+    {
+      "src": "jaza",
+      "target": "Jaza"
+    },
+    {
+      "src": "jiri",
+      "target": "ciri"
+    },
+    {
+      "src": "juNg",
+      "target": "yuNg"
+    },
+    {
+      "src": "kANguka",
+      "target": "kaNgu"
+    },
+    {
+      "src": "kARUka",
+      "target": "kARa"
+    },
+    {
+      "src": "kARvya",
+      "target": "kARva"
+    },
+    {
+      "src": "kAYc",
+      "target": "kac"
+    },
+    {
+      "src": "kAcana",
+      "target": "kacela"
+    },
+    {
+      "src": "kAhakA",
+      "target": "kAhalA"
+    },
+    {
+      "src": "kAkAla",
+      "target": "kAka"
+    },
+    {
+      "src": "kAkud",
+      "target": "kakud"
+    },
+    {
+      "src": "kAlakIla",
+      "target": "kalakala"
+    },
+    {
+      "src": "kAtalAyana",
+      "target": "kAtarAyaRa"
+    },
+    {
+      "src": "kAtala",
+      "target": "kAtara"
+    },
+    {
+      "src": "kAtfRa",
+      "target": "kattfRa"
+    },
+    {
+      "src": "kAtu",
+      "target": "kAwa"
+    },
+    {
+      "src": "kAvawa",
+      "target": "karvawa"
+    },
+    {
+      "src": "kIna",
+      "target": "kIra"
+    },
+    {
+      "src": "kORakutsya",
+      "target": "kURakucCa"
+    },
+    {
+      "src": "kOWuma",
+      "target": "kOTuma"
+    },
+    {
+      "src": "kaDapriya",
+      "target": "aDapriya"
+    },
+    {
+      "src": "kaRIci",
+      "target": "kanIci"
+    },
+    {
+      "src": "kaRa",
+      "target": "kanizWa"
+    },
+    {
+      "src": "kaRq",
+      "target": "kaq"
+    },
+    {
+      "src": "kaRqIra",
+      "target": "gaRqIra"
+    },
+    {
+      "src": "kaRqikA",
+      "target": "kARqa"
+    },
+    {
+      "src": "kaSIkA",
+      "target": "kaSa"
+    },
+    {
+      "src": "kaSmIra",
+      "target": "kASmIra"
+    },
+    {
+      "src": "kaSya",
+      "target": "kASya"
+    },
+    {
+      "src": "kaWara",
+      "target": "kaWina"
+    },
+    {
+      "src": "kaYc",
+      "target": "kac"
+    },
+    {
+      "src": "kab",
+      "target": "kav"
+    },
+    {
+      "src": "kac",
+      "target": "kaYc"
+    },
+    {
+      "src": "kadaka",
+      "target": "kandaka"
+    },
+    {
+      "src": "kadvara",
+      "target": "kaNkara"
+    },
+    {
+      "src": "kakuYjala",
+      "target": "kapiYjala"
+    },
+    {
+      "src": "kakzapa",
+      "target": "kacCapa"
+    },
+    {
+      "src": "kalAkula",
+      "target": "halAhala"
+    },
+    {
+      "src": "kalAmaka",
+      "target": "kalama"
+    },
+    {
+      "src": "kalAvikala",
+      "target": "kalaviNka"
+    },
+    {
+      "src": "kalala",
+      "target": "kalana"
+    },
+    {
+      "src": "kalamba",
+      "target": "kaqamba"
+    },
+    {
+      "src": "kalawa",
+      "target": "kuwala"
+    },
+    {
+      "src": "kalka",
+      "target": "kaluza"
+    },
+    {
+      "src": "kanIci",
+      "target": "kaRIci"
+    },
+    {
+      "src": "kaq",
+      "target": "kaRq"
+    },
+    {
+      "src": "karPara",
+      "target": "karkara"
+    },
+    {
+      "src": "karakAyu",
+      "target": "kanakAyu"
+    },
+    {
+      "src": "karavI",
+      "target": "karvarI"
+    },
+    {
+      "src": "karawu",
+      "target": "karewavyA"
+    },
+    {
+      "src": "karcUra",
+      "target": "karbura"
+    },
+    {
+      "src": "karkawu",
+      "target": "karawu"
+    },
+    {
+      "src": "karowaka",
+      "target": "karkowaka"
+    },
+    {
+      "src": "karv",
+      "target": "Karv"
+    },
+    {
+      "src": "karvawa",
+      "target": "kAvawa"
+    },
+    {
+      "src": "katr",
+      "target": "kart"
+    },
+    {
+      "src": "kavaqa",
+      "target": "kavala"
+    },
+    {
+      "src": "kavarakI",
+      "target": "vandi"
+    },
+    {
+      "src": "kavasa",
+      "target": "kavaca"
+    },
+    {
+      "src": "kavayI",
+      "target": "kavikA"
+    },
+    {
+      "src": "kavela",
+      "target": "kavAra"
+    },
+    {
+      "src": "kavi",
+      "target": "kavikA"
+    },
+    {
+      "src": "kawvara",
+      "target": "kawura"
+    },
+    {
+      "src": "kekara",
+      "target": "kedara"
+    },
+    {
+      "src": "kep",
+      "target": "gep"
+    },
+    {
+      "src": "kev",
+      "target": "sev"
+    },
+    {
+      "src": "kevawa",
+      "target": "avawa"
+    },
+    {
+      "src": "kfka",
+      "target": "kfkAwa"
+    },
+    {
+      "src": "kfmuka",
+      "target": "kArmuka"
+    },
+    {
+      "src": "kfpaRa",
+      "target": "kArpaRya"
+    },
+    {
+      "src": "kfvi",
+      "target": "krivi"
+    },
+    {
+      "src": "kfzRa",
+      "target": "kArzRa"
+    },
+    {
+      "src": "kiMSuka",
+      "target": "palASa"
+    },
+    {
+      "src": "kiRvin",
+      "target": "kinDin"
+    },
+    {
+      "src": "kis",
+      "target": "nakis"
+    },
+    {
+      "src": "kiwi",
+      "target": "kira"
+    },
+    {
+      "src": "klind",
+      "target": "kland"
+    },
+    {
+      "src": "knaMs",
+      "target": "kuMS"
+    },
+    {
+      "src": "knaT",
+      "target": "kraT"
+    },
+    {
+      "src": "knas",
+      "target": "knaMs"
+    },
+    {
+      "src": "knasa",
+      "target": "caknasa"
+    },
+    {
+      "src": "koNka",
+      "target": "kONka"
+    },
+    {
+      "src": "koWara",
+      "target": "kowara"
+    },
+    {
+      "src": "kolUka",
+      "target": "ulUka"
+    },
+    {
+      "src": "kollaka",
+      "target": "konva"
+    },
+    {
+      "src": "konvaSira",
+      "target": "kolvagireya"
+    },
+    {
+      "src": "kraMS",
+      "target": "knaMs"
+    },
+    {
+      "src": "kraT",
+      "target": "knaT"
+    },
+    {
+      "src": "krakaRa",
+      "target": "kfkaRa"
+    },
+    {
+      "src": "krumuka",
+      "target": "kfmuka"
+    },
+    {
+      "src": "kuRqapAyin",
+      "target": "kORqapAyina"
+    },
+    {
+      "src": "kuTumin",
+      "target": "kuWumi"
+    },
+    {
+      "src": "kuYjala",
+      "target": "kAYjika"
+    },
+    {
+      "src": "kujamBala",
+      "target": "kumBila"
+    },
+    {
+      "src": "kujjiSa",
+      "target": "kuqiSa"
+    },
+    {
+      "src": "kumodaka",
+      "target": "kOmodakI"
+    },
+    {
+      "src": "kunAla",
+      "target": "kuRAla"
+    },
+    {
+      "src": "kundr",
+      "target": "kud"
+    },
+    {
+      "src": "kuru",
+      "target": "kOrava"
+    },
+    {
+      "src": "kutsa",
+      "target": "kOtsa"
+    },
+    {
+      "src": "kuva",
+      "target": "kuvala"
+    },
+    {
+      "src": "kuwuNgaka",
+      "target": "kuwaNka"
+    },
+    {
+      "src": "kuwwAra",
+      "target": "kuwIra"
+    },
+    {
+      "src": "kuzumBa",
+      "target": "kusumBa"
+    },
+    {
+      "src": "kziv",
+      "target": "zWiv"
+    },
+    {
+      "src": "kzmIl",
+      "target": "mIl"
+    },
+    {
+      "src": "kzomaka",
+      "target": "kzema"
+    },
+    {
+      "src": "kzow",
+      "target": "Kow"
+    },
+    {
+      "src": "lANgulinI",
+      "target": "lANgUlinI"
+    },
+    {
+      "src": "lAkzA",
+      "target": "rAkzA"
+    },
+    {
+      "src": "lAlasiMha",
+      "target": "lalla"
+    },
+    {
+      "src": "lAlika",
+      "target": "lAvika"
+    },
+    {
+      "src": "lOhitya",
+      "target": "lohitya"
+    },
+    {
+      "src": "lOq",
+      "target": "low"
+    },
+    {
+      "src": "lUma",
+      "target": "lUna"
+    },
+    {
+      "src": "lUz",
+      "target": "luz"
+    },
+    {
+      "src": "laK",
+      "target": "laNK"
+    },
+    {
+      "src": "laRq",
+      "target": "olaRq"
+    },
+    {
+      "src": "lagAlikA",
+      "target": "nagAnikA"
+    },
+    {
+      "src": "lagaqa",
+      "target": "laqaha"
+    },
+    {
+      "src": "laguqa",
+      "target": "lakuwa"
+    },
+    {
+      "src": "lahika",
+      "target": "kahika"
+    },
+    {
+      "src": "lahoqa",
+      "target": "kahoqa"
+    },
+    {
+      "src": "lamPa",
+      "target": "Jampa"
+    },
+    {
+      "src": "laq",
+      "target": "lal"
+    },
+    {
+      "src": "laqqa",
+      "target": "lawwa"
+    },
+    {
+      "src": "latu",
+      "target": "lAtavya"
+    },
+    {
+      "src": "law",
+      "target": "raw"
+    },
+    {
+      "src": "lawwa",
+      "target": "laqqa"
+    },
+    {
+      "src": "leRqa",
+      "target": "laRqa"
+    },
+    {
+      "src": "leta",
+      "target": "lota"
+    },
+    {
+      "src": "liNK",
+      "target": "laK"
+    },
+    {
+      "src": "limpawa",
+      "target": "lampawa"
+    },
+    {
+      "src": "loca",
+      "target": "lota"
+    },
+    {
+      "src": "luh",
+      "target": "luB"
+    },
+    {
+      "src": "mAWa",
+      "target": "mAca"
+    },
+    {
+      "src": "mAca",
+      "target": "mAWa"
+    },
+    {
+      "src": "mAhA",
+      "target": "mahA"
+    },
+    {
+      "src": "mAlavarti",
+      "target": "mAnavartika"
+    },
+    {
+      "src": "mAmuKI",
+      "target": "mAmakI"
+    },
+    {
+      "src": "mAn",
+      "target": "man"
+    },
+    {
+      "src": "mAnTAla",
+      "target": "manTAvala"
+    },
+    {
+      "src": "mAnasottara",
+      "target": "uttaramAnasa"
+    },
+    {
+      "src": "mArgava",
+      "target": "mArgAra"
+    },
+    {
+      "src": "mArza",
+      "target": "mAriza"
+    },
+    {
+      "src": "mOkali",
+      "target": "mOkuli"
+    },
+    {
+      "src": "mU",
+      "target": "mav"
+    },
+    {
+      "src": "mUrvA",
+      "target": "mOrva"
+    },
+    {
+      "src": "maDyama",
+      "target": "maDya"
+    },
+    {
+      "src": "maK",
+      "target": "maNK"
+    },
+    {
+      "src": "maNK",
+      "target": "maK"
+    },
+    {
+      "src": "maNg",
+      "target": "maNk"
+    },
+    {
+      "src": "maNgalapura",
+      "target": "maNgala"
+    },
+    {
+      "src": "maNkzaRa",
+      "target": "maNKuRa"
+    },
+    {
+      "src": "maRqalavawa",
+      "target": "maRqalin"
+    },
+    {
+      "src": "maRqika",
+      "target": "maRqaka"
+    },
+    {
+      "src": "maS",
+      "target": "miS"
+    },
+    {
+      "src": "mac",
+      "target": "maYc"
+    },
+    {
+      "src": "mahAkalyARa",
+      "target": "kalyARaka"
+    },
+    {
+      "src": "mahIyatva",
+      "target": "mAhIyatva"
+    },
+    {
+      "src": "maha",
+      "target": "maKa"
+    },
+    {
+      "src": "majjA",
+      "target": "nirmajja"
+    },
+    {
+      "src": "makk",
+      "target": "mask"
+    },
+    {
+      "src": "makula",
+      "target": "mukula"
+    },
+    {
+      "src": "makura",
+      "target": "mukura"
+    },
+    {
+      "src": "makz",
+      "target": "mrakz"
+    },
+    {
+      "src": "mal",
+      "target": "mall"
+    },
+    {
+      "src": "mall",
+      "target": "mal"
+    },
+    {
+      "src": "mallavAstu",
+      "target": "mAllavAstava"
+    },
+    {
+      "src": "mallu",
+      "target": "Balla"
+    },
+    {
+      "src": "malva",
+      "target": "mAlvya"
+    },
+    {
+      "src": "manAyI",
+      "target": "manAvI"
+    },
+    {
+      "src": "manTya",
+      "target": "maTya"
+    },
+    {
+      "src": "manti",
+      "target": "mati"
+    },
+    {
+      "src": "marc",
+      "target": "mfc"
+    },
+    {
+      "src": "maruka",
+      "target": "marUka"
+    },
+    {
+      "src": "marula",
+      "target": "marAla"
+    },
+    {
+      "src": "mastakaluNga",
+      "target": "mastuluNga"
+    },
+    {
+      "src": "matavacas",
+      "target": "mAtavacasa"
+    },
+    {
+      "src": "matsyaGaRwa",
+      "target": "matsagaRwa"
+    },
+    {
+      "src": "mav",
+      "target": "mavy"
+    },
+    {
+      "src": "miS",
+      "target": "maS"
+    },
+    {
+      "src": "miSara",
+      "target": "misara"
+    },
+    {
+      "src": "mihilAropya",
+      "target": "mahilAropya"
+    },
+    {
+      "src": "mimata",
+      "target": "mEmata"
+    },
+    {
+      "src": "minv",
+      "target": "ninv"
+    },
+    {
+      "src": "misara",
+      "target": "miSara"
+    },
+    {
+      "src": "misi",
+      "target": "miSi"
+    },
+    {
+      "src": "mitravarDa",
+      "target": "mEtravarDaka"
+    },
+    {
+      "src": "mruc",
+      "target": "mluc"
+    },
+    {
+      "src": "muraRqa",
+      "target": "muruRqa"
+    },
+    {
+      "src": "murv",
+      "target": "mUrvA"
+    },
+    {
+      "src": "nAkra",
+      "target": "nakra"
+    },
+    {
+      "src": "nIDra",
+      "target": "nIvra"
+    },
+    {
+      "src": "nIcEs",
+      "target": "uccEs"
+    },
+    {
+      "src": "nIkzaRa",
+      "target": "nekzaRa"
+    },
+    {
+      "src": "nIv",
+      "target": "tIv"
+    },
+    {
+      "src": "naBaga",
+      "target": "naBAga"
+    },
+    {
+      "src": "naq",
+      "target": "naw"
+    },
+    {
+      "src": "naqa",
+      "target": "nala"
+    },
+    {
+      "src": "narANga",
+      "target": "naraNga"
+    },
+    {
+      "src": "narb",
+      "target": "namb"
+    },
+    {
+      "src": "narizwA",
+      "target": "narma"
+    },
+    {
+      "src": "narma",
+      "target": "narman"
+    },
+    {
+      "src": "nas",
+      "target": "nAsA"
+    },
+    {
+      "src": "nega",
+      "target": "nEgeya"
+    },
+    {
+      "src": "nekzaRa",
+      "target": "nIkzaRa"
+    },
+    {
+      "src": "niDruva",
+      "target": "nEDruva"
+    },
+    {
+      "src": "niMs",
+      "target": "nikz"
+    },
+    {
+      "src": "niScapraca",
+      "target": "AcaparAca"
+    },
+    {
+      "src": "nicCavi",
+      "target": "licCavi"
+    },
+    {
+      "src": "nicaka",
+      "target": "nEcakya"
+    },
+    {
+      "src": "nidrAyoga",
+      "target": "yoganidrA"
+    },
+    {
+      "src": "nigut",
+      "target": "nEguta"
+    },
+    {
+      "src": "nikoSya",
+      "target": "koSya"
+    },
+    {
+      "src": "nirRara",
+      "target": "nirJara"
+    },
+    {
+      "src": "nirvyUha",
+      "target": "niryUha"
+    },
+    {
+      "src": "nisunda",
+      "target": "sunda"
+    },
+    {
+      "src": "nivapana",
+      "target": "nirvapaRa"
+    },
+    {
+      "src": "niziDa",
+      "target": "nEziDa"
+    },
+    {
+      "src": "oGa",
+      "target": "OGa"
+    },
+    {
+      "src": "pAMsuva",
+      "target": "pAMsura"
+    },
+    {
+      "src": "pARqUka",
+      "target": "pARquka"
+    },
+    {
+      "src": "pApapurI",
+      "target": "pApApurI"
+    },
+    {
+      "src": "pArAruka",
+      "target": "pArawIwa"
+    },
+    {
+      "src": "pArGawa",
+      "target": "pArpara"
+    },
+    {
+      "src": "pArawIwa",
+      "target": "pArAruka"
+    },
+    {
+      "src": "pAruzaka",
+      "target": "parUzaka"
+    },
+    {
+      "src": "pAzARa",
+      "target": "pASI"
+    },
+    {
+      "src": "pER",
+      "target": "peR"
+    },
+    {
+      "src": "pEYjUza",
+      "target": "piYjUza"
+    },
+    {
+      "src": "pIlukuRa",
+      "target": "pElukuRa"
+    },
+    {
+      "src": "pOtava",
+      "target": "potu"
+    },
+    {
+      "src": "pUR",
+      "target": "puR"
+    },
+    {
+      "src": "pUpa",
+      "target": "apUpa"
+    },
+    {
+      "src": "pUtIka",
+      "target": "pUtika"
+    },
+    {
+      "src": "paT",
+      "target": "panT"
+    },
+    {
+      "src": "pakvaSa",
+      "target": "pakkaRa"
+    },
+    {
+      "src": "panT",
+      "target": "paT"
+    },
+    {
+      "src": "parAYja",
+      "target": "paraYja"
+    },
+    {
+      "src": "paraspara",
+      "target": "anyo'nya"
+    },
+    {
+      "src": "parikalkana",
+      "target": "kalkana"
+    },
+    {
+      "src": "parila",
+      "target": "pArila"
+    },
+    {
+      "src": "paru",
+      "target": "parus"
+    },
+    {
+      "src": "patama",
+      "target": "patasa"
+    },
+    {
+      "src": "patatra",
+      "target": "pattra"
+    },
+    {
+      "src": "pawAlukA",
+      "target": "jalukA"
+    },
+    {
+      "src": "peR",
+      "target": "pER"
+    },
+    {
+      "src": "pfTI",
+      "target": "pfTi"
+    },
+    {
+      "src": "pfkTa",
+      "target": "rikTa"
+    },
+    {
+      "src": "pfkkA",
+      "target": "spfkkA"
+    },
+    {
+      "src": "piRqala",
+      "target": "piRqana"
+    },
+    {
+      "src": "piWInas",
+      "target": "pEWInasi"
+    },
+    {
+      "src": "piYjewa",
+      "target": "piYjawa"
+    },
+    {
+      "src": "pijavana",
+      "target": "pEjavana"
+    },
+    {
+      "src": "pil",
+      "target": "pel"
+    },
+    {
+      "src": "pinyAsa",
+      "target": "piRyAka"
+    },
+    {
+      "src": "pippikA",
+      "target": "piwwaka"
+    },
+    {
+      "src": "piwwaka",
+      "target": "kiwwa"
+    },
+    {
+      "src": "plev",
+      "target": "peb"
+    },
+    {
+      "src": "pluz",
+      "target": "pruz"
+    },
+    {
+      "src": "poTakI",
+      "target": "powika"
+    },
+    {
+      "src": "polikA",
+      "target": "pUlikA"
+    },
+    {
+      "src": "polinda",
+      "target": "padAra"
+    },
+    {
+      "src": "prARihitA",
+      "target": "prARahitA"
+    },
+    {
+      "src": "prAjika",
+      "target": "prAcikA"
+    },
+    {
+      "src": "prakuYca",
+      "target": "kuYci"
+    },
+    {
+      "src": "pramATa",
+      "target": "pramaTa"
+    },
+    {
+      "src": "pramaRas",
+      "target": "pramanas"
+    },
+    {
+      "src": "prasAtikA",
+      "target": "prasADikA"
+    },
+    {
+      "src": "pratyagraTa",
+      "target": "prAtyagraTi"
+    },
+    {
+      "src": "pravahli",
+      "target": "pravalha"
+    },
+    {
+      "src": "puNga",
+      "target": "puYja"
+    },
+    {
+      "src": "pucCawi",
+      "target": "mucuwI"
+    },
+    {
+      "src": "puruda",
+      "target": "purawa"
+    },
+    {
+      "src": "pust",
+      "target": "bust"
+    },
+    {
+      "src": "puzpalaka",
+      "target": "puzkalaka"
+    },
+    {
+      "src": "puzpasa",
+      "target": "pupPusa"
+    },
+    {
+      "src": "qAmBiwwa",
+      "target": "qavitTa"
+    },
+    {
+      "src": "rADi",
+      "target": "kfzwarADi"
+    },
+    {
+      "src": "rAG",
+      "target": "lAG"
+    },
+    {
+      "src": "rAK",
+      "target": "lAK"
+    },
+    {
+      "src": "rAyaBAwI",
+      "target": "raya"
+    },
+    {
+      "src": "rEkva",
+      "target": "rayikva"
+    },
+    {
+      "src": "rIQA",
+      "target": "avalIQA"
+    },
+    {
+      "src": "rIjyA",
+      "target": "rIQA"
+    },
+    {
+      "src": "rOhiz",
+      "target": "rohiz"
+    },
+    {
+      "src": "rUvuka",
+      "target": "ruvuka"
+    },
+    {
+      "src": "raK",
+      "target": "raNK"
+    },
+    {
+      "src": "raNK",
+      "target": "raK"
+    },
+    {
+      "src": "raW",
+      "target": "raw"
+    },
+    {
+      "src": "ramb",
+      "target": "lamb"
+    },
+    {
+      "src": "rap",
+      "target": "lap"
+    },
+    {
+      "src": "rePas",
+      "target": "repas"
+    },
+    {
+      "src": "rerihARa",
+      "target": "lelihAna"
+    },
+    {
+      "src": "riBvan",
+      "target": "rihvan"
+    },
+    {
+      "src": "riNg",
+      "target": "riNK"
+    },
+    {
+      "src": "riP",
+      "target": "rePa"
+    },
+    {
+      "src": "rirI",
+      "target": "rIrI"
+    },
+    {
+      "src": "rohidaSva",
+      "target": "rOhidaSva"
+    },
+    {
+      "src": "rohita",
+      "target": "lohita"
+    },
+    {
+      "src": "romaSa",
+      "target": "lomaSa"
+    },
+    {
+      "src": "roq",
+      "target": "loq"
+    },
+    {
+      "src": "roq",
+      "target": "rOq"
+    },
+    {
+      "src": "rup",
+      "target": "lup"
+    },
+    {
+      "src": "ruru",
+      "target": "rOrava"
+    },
+    {
+      "src": "ruvuka",
+      "target": "rUvuka"
+    },
+    {
+      "src": "sASikya",
+      "target": "SASika"
+    },
+    {
+      "src": "sUpat",
+      "target": "kUpat"
+    },
+    {
+      "src": "sUtranaqa",
+      "target": "sOtranAqi"
+    },
+    {
+      "src": "saMSakalA",
+      "target": "SakalA"
+    },
+    {
+      "src": "sag",
+      "target": "sTag"
+    },
+    {
+      "src": "sama",
+      "target": "samaha"
+    },
+    {
+      "src": "saraRqa",
+      "target": "SaraRqa"
+    },
+    {
+      "src": "saratni",
+      "target": "ratni"
+    },
+    {
+      "src": "sarira",
+      "target": "salila"
+    },
+    {
+      "src": "sasa",
+      "target": "sasya"
+    },
+    {
+      "src": "savara",
+      "target": "Sabara"
+    },
+    {
+      "src": "sela",
+      "target": "selu"
+    },
+    {
+      "src": "sigfqI",
+      "target": "SimfqI"
+    },
+    {
+      "src": "siw",
+      "target": "Siw"
+    },
+    {
+      "src": "somApa",
+      "target": "sOmApa"
+    },
+    {
+      "src": "srakva",
+      "target": "sfkva"
+    },
+    {
+      "src": "staBa",
+      "target": "stuBa"
+    },
+    {
+      "src": "stim",
+      "target": "tim"
+    },
+    {
+      "src": "stip",
+      "target": "step"
+    },
+    {
+      "src": "stunaka",
+      "target": "stuBa"
+    },
+    {
+      "src": "suKAvala",
+      "target": "suKInala"
+    },
+    {
+      "src": "suKInala",
+      "target": "suKAvala"
+    },
+    {
+      "src": "suKasupti",
+      "target": "sOKasuptika"
+    },
+    {
+      "src": "suSama",
+      "target": "sOSami"
+    },
+    {
+      "src": "surURqa",
+      "target": "muruRqa"
+    },
+    {
+      "src": "sussala",
+      "target": "sOssala"
+    },
+    {
+      "src": "sutaMgama",
+      "target": "sOtaMgami"
+    },
+    {
+      "src": "svard",
+      "target": "svad"
+    },
+    {
+      "src": "sya",
+      "target": "tya"
+    },
+    {
+      "src": "syagavi",
+      "target": "segava"
+    },
+    {
+      "src": "syumna",
+      "target": "syUmaka"
+    },
+    {
+      "src": "tUtuma",
+      "target": "tumra"
+    },
+    {
+      "src": "taRqu",
+      "target": "tARqava"
+    },
+    {
+      "src": "tacCIla",
+      "target": "tAcCIlika"
+    },
+    {
+      "src": "tadDarman",
+      "target": "tAdDarmya"
+    },
+    {
+      "src": "takz",
+      "target": "tvakz"
+    },
+    {
+      "src": "talka",
+      "target": "tala"
+    },
+    {
+      "src": "talukza",
+      "target": "tarukza"
+    },
+    {
+      "src": "taratamatas",
+      "target": "tAratamya"
+    },
+    {
+      "src": "tarukza",
+      "target": "talukza"
+    },
+    {
+      "src": "tas",
+      "target": "taMs"
+    },
+    {
+      "src": "tata",
+      "target": "tAta"
+    },
+    {
+      "src": "tati",
+      "target": "tanti"
+    },
+    {
+      "src": "taya",
+      "target": "tAya"
+    },
+    {
+      "src": "tiniSa",
+      "target": "timiSa"
+    },
+    {
+      "src": "trinavaha",
+      "target": "triRava"
+    },
+    {
+      "src": "tuB",
+      "target": "stuB"
+    },
+    {
+      "src": "tud",
+      "target": "tottra"
+    },
+    {
+      "src": "tumra",
+      "target": "tUtuma"
+    },
+    {
+      "src": "tutAta",
+      "target": "tOtAtika"
+    },
+    {
+      "src": "udvana",
+      "target": "pravaRa"
+    },
+    {
+      "src": "uraBra",
+      "target": "OraBra"
+    },
+    {
+      "src": "utkuRa",
+      "target": "matkuRa"
+    },
+    {
+      "src": "uza",
+      "target": "Uza"
+    },
+    {
+      "src": "vANkz",
+      "target": "kANkz"
+    },
+    {
+      "src": "vARI",
+      "target": "vARi"
+    },
+    {
+      "src": "vAhyakI",
+      "target": "vAhaka"
+    },
+    {
+      "src": "vAlvaNgiri",
+      "target": "vAluka"
+    },
+    {
+      "src": "vAralA",
+      "target": "vArawA"
+    },
+    {
+      "src": "vArtantavIya",
+      "target": "vAratantavIya"
+    },
+    {
+      "src": "vAtIka",
+      "target": "vAtika"
+    },
+    {
+      "src": "vAvuwa",
+      "target": "vArbawa"
+    },
+    {
+      "src": "vEBAra",
+      "target": "vEhAra"
+    },
+    {
+      "src": "vENki",
+      "target": "vEki"
+    },
+    {
+      "src": "vEhAra",
+      "target": "vEBAra"
+    },
+    {
+      "src": "vaDryaSva",
+      "target": "vADryaSva"
+    },
+    {
+      "src": "vaK",
+      "target": "vaNK"
+    },
+    {
+      "src": "vaNK",
+      "target": "vaK"
+    },
+    {
+      "src": "vaNkzu",
+      "target": "vakzu"
+    },
+    {
+      "src": "vaRwa",
+      "target": "baRqa"
+    },
+    {
+      "src": "vaSIra",
+      "target": "vasira"
+    },
+    {
+      "src": "vaSa",
+      "target": "vasA"
+    },
+    {
+      "src": "vaSika",
+      "target": "vaSin"
+    },
+    {
+      "src": "vaWara",
+      "target": "vawara"
+    },
+    {
+      "src": "vah",
+      "target": "vanIvAhana"
+    },
+    {
+      "src": "vakti",
+      "target": "ukti"
+    },
+    {
+      "src": "vakzu",
+      "target": "vaNkzu"
+    },
+    {
+      "src": "vasika",
+      "target": "vaSika"
+    },
+    {
+      "src": "veR",
+      "target": "ven"
+    },
+    {
+      "src": "veRa",
+      "target": "vERa"
+    },
+    {
+      "src": "veSika",
+      "target": "vESika"
+    },
+    {
+      "src": "veT",
+      "target": "viT"
+    },
+    {
+      "src": "vedaRqa",
+      "target": "vitaRqa"
+    },
+    {
+      "src": "vegasara",
+      "target": "vesara"
+    },
+    {
+      "src": "vehAra",
+      "target": "vihAra"
+    },
+    {
+      "src": "velli",
+      "target": "valli"
+    },
+    {
+      "src": "vennA",
+      "target": "veRA"
+    },
+    {
+      "src": "vezka",
+      "target": "vezwa"
+    },
+    {
+      "src": "vfzazaRqa",
+      "target": "vfkaKaRqa"
+    },
+    {
+      "src": "viKAnasa",
+      "target": "vEKAnasa"
+    },
+    {
+      "src": "viT",
+      "target": "veT"
+    },
+    {
+      "src": "vidaBft",
+      "target": "vEdaBfta"
+    },
+    {
+      "src": "vidaTin",
+      "target": "vEdaTina"
+    },
+    {
+      "src": "vipraSna",
+      "target": "vEpraSnika"
+    },
+    {
+      "src": "viq",
+      "target": "biw"
+    },
+    {
+      "src": "vokkARa",
+      "target": "bokaRa"
+    },
+    {
+      "src": "voraka",
+      "target": "volaka"
+    },
+    {
+      "src": "vuq",
+      "target": "vruq"
+    },
+    {
+      "src": "vyaqa",
+      "target": "vyAqi"
+    },
+    {
+      "src": "wik",
+      "target": "wIk"
+    },
+    {
+      "src": "yAmavatI",
+      "target": "yAminI"
+    },
+    {
+      "src": "yOw",
+      "target": "yowaka"
+    },
+    {
+      "src": "yOziRya",
+      "target": "yozan"
+    },
+    {
+      "src": "yUz",
+      "target": "jUz"
+    },
+    {
+      "src": "yadu",
+      "target": "yAdava"
+    },
+    {
+      "src": "yazwinivAsa",
+      "target": "vAsayazwi"
+    },
+    {
+      "src": "yuzmAka",
+      "target": "yuzmAkam"
+    },
+    {
+      "src": "zaww",
+      "target": "saww"
+    },
+    {
+      "src": "zazk",
+      "target": "zvazk"
+    },
+    {
+      "src": "zazwipaTika",
+      "target": "zAzwipaTa"
+    }
+  ],
+  "assumptions": [
+    "Edges are dictionary-internal cross-reference links from M3.",
+    "M6 compares normalized source-target edge sets only where both dictionaries cross-reference the same source lemma.",
+    "Overlap is a floor because messy multi-part targets fail to match.",
+    "No DCS, corpus, standards/export, GitHub, or organization metrics are inputs."
+  ],
+  "warnings": [
+    "A shared edge is a lineage signal, not proof of direct copying by itself.",
+    "Pairs with very few shared source lemmas are not interpretable as lineage evidence.",
+    "MW x PWG shows a shared core plus independent expansion, not wholesale inheritance."
+  ]
+}

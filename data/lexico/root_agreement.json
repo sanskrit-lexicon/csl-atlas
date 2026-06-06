@@ -1,0 +1,187 @@
+{
+  "question": "When two root dicts classify the same root, do they agree on gaṇa / pada / transitivity? (Article 9)",
+  "root_dicts": [
+    "skd",
+    "vcp",
+    "krm",
+    "yat",
+    "shs"
+  ],
+  "distinct_roots": 3703,
+  "method": "Group m4 rows by SLP1 root; per (dict, root) collect the SET of labels (union over the dict's entries, so multi-class roots are not self-conflicts). unanimous = all dicts give one label; compatible = a single label is shared by every dict (tolerant of homonymous multi-class roots); conflict = otherwise.",
+  "caveat": "Conflicts conflate genuine cross-tradition disagreement with legitimate homonymy (same SLP1 spelling, different roots/classes). ANALYSIS, not a review queue. SKD/SHS feature coverage is lower than VCP/KRM/YAT, so they contribute fewer opinions.",
+  "features": {
+    "gana": {
+      "agreement": {
+        "roots_with_2plus_opinions": 1526,
+        "unanimous": 1067,
+        "compatible": 1305,
+        "conflict": 221,
+        "unanimous_rate": 0.6992,
+        "compatible_rate": 0.8552
+      },
+      "pairs": {
+        "skd-vcp": {
+          "shared_roots": 1022,
+          "agree": 948,
+          "rate": 0.9276
+        },
+        "vcp-krm": {
+          "shared_roots": 697,
+          "agree": 646,
+          "rate": 0.9268
+        },
+        "skd-krm": {
+          "shared_roots": 603,
+          "agree": 573,
+          "rate": 0.9502
+        },
+        "vcp-yat": {
+          "shared_roots": 397,
+          "agree": 359,
+          "rate": 0.9043
+        },
+        "skd-yat": {
+          "shared_roots": 386,
+          "agree": 344,
+          "rate": 0.8912
+        },
+        "vcp-shs": {
+          "shared_roots": 377,
+          "agree": 356,
+          "rate": 0.9443
+        },
+        "skd-shs": {
+          "shared_roots": 229,
+          "agree": 148,
+          "rate": 0.6463
+        },
+        "krm-shs": {
+          "shared_roots": 205,
+          "agree": 161,
+          "rate": 0.7854
+        },
+        "krm-yat": {
+          "shared_roots": 203,
+          "agree": 177,
+          "rate": 0.8719
+        },
+        "yat-shs": {
+          "shared_roots": 125,
+          "agree": 109,
+          "rate": 0.872
+        }
+      }
+    },
+    "pada": {
+      "agreement": {
+        "roots_with_2plus_opinions": 1439,
+        "unanimous": 907,
+        "compatible": 1083,
+        "conflict": 356,
+        "unanimous_rate": 0.6303,
+        "compatible_rate": 0.7526
+      },
+      "pairs": {
+        "skd-vcp": {
+          "shared_roots": 831,
+          "agree": 679,
+          "rate": 0.8171
+        },
+        "vcp-krm": {
+          "shared_roots": 621,
+          "agree": 588,
+          "rate": 0.9469
+        },
+        "skd-krm": {
+          "shared_roots": 390,
+          "agree": 273,
+          "rate": 0.7
+        },
+        "vcp-yat": {
+          "shared_roots": 367,
+          "agree": 263,
+          "rate": 0.7166
+        },
+        "skd-yat": {
+          "shared_roots": 333,
+          "agree": 282,
+          "rate": 0.8468
+        },
+        "vcp-shs": {
+          "shared_roots": 332,
+          "agree": 315,
+          "rate": 0.9488
+        },
+        "krm-yat": {
+          "shared_roots": 175,
+          "agree": 95,
+          "rate": 0.5429
+        },
+        "krm-shs": {
+          "shared_roots": 163,
+          "agree": 144,
+          "rate": 0.8834
+        },
+        "skd-shs": {
+          "shared_roots": 146,
+          "agree": 108,
+          "rate": 0.7397
+        },
+        "yat-shs": {
+          "shared_roots": 111,
+          "agree": 75,
+          "rate": 0.6757
+        }
+      }
+    },
+    "transitivity": {
+      "agreement": {
+        "roots_with_2plus_opinions": 1333,
+        "unanimous": 945,
+        "compatible": 1085,
+        "conflict": 248,
+        "unanimous_rate": 0.7089,
+        "compatible_rate": 0.814
+      },
+      "pairs": {
+        "vcp-krm": {
+          "shared_roots": 722,
+          "agree": 572,
+          "rate": 0.7922
+        },
+        "skd-vcp": {
+          "shared_roots": 700,
+          "agree": 614,
+          "rate": 0.8771
+        },
+        "vcp-shs": {
+          "shared_roots": 391,
+          "agree": 373,
+          "rate": 0.954
+        },
+        "skd-krm": {
+          "shared_roots": 359,
+          "agree": 283,
+          "rate": 0.7883
+        },
+        "krm-shs": {
+          "shared_roots": 201,
+          "agree": 165,
+          "rate": 0.8209
+        },
+        "skd-shs": {
+          "shared_roots": 18,
+          "agree": 15,
+          "rate": 0.8333
+        }
+      }
+    }
+  },
+  "yat_citation_convention": {
+    "note": "YAT cites bare stems; SKD/VCP/KRM keep the uccāraṇārtha -a. YAT cross-dict agreement is therefore CONSERVATIVE (undercounts). A -a normalization is maintainer-gated (it collides homographs: gaṇa 86.0%→81.2%).",
+    "yat_roots": 1608,
+    "match_sanskrit_dict_exact": 513,
+    "match_only_after_restoring_trailing_a": 953
+  }
+}

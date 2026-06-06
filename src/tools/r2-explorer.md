@@ -22,8 +22,10 @@ Below, the <b>Sanskrit-anchored cross-dictionary alignments</b>: two senses link
 Sanskrit material (SLP1 forms <span class="chip">s:…</span>, citations <span class="chip cite">ls:…</span>,
 or indigenous sigla <span class="chip sig">sig:…</span>) — <b>no translation used</b>.
 <span class="crosslbl">Highlighted</span> rows align senses <i>across</i> traditions/languages.
-Built by <code>scripts/lexico/r2_explorer.py</code> from R2 data
-(<a href="https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md">R2_FINDINGS.md</a>).</p>
+Static archived R2 snapshot; see
+<a href="https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md">R2_FINDINGS.md</a>.
+The old generator is not present in this branch.</p>
+<p class="note"><b>Trust Block.</b> Evidence: archived static R2 snapshot embedded in this page and <code>docs/R2_FINDINGS.md</code>. Limitations: this is a preserved exploratory sense-alignment view, not the current review-report pipeline. Validation: checked by <code>npm run build</code>; rebuild work belongs to R2 parser diagnostics and review packets. Owner repo: <code>csl-atlas</code>.</p>
 <div class="controls">Headword: <select id="sel"></select></div>
 <h2>Senses by dictionary</h2><div class="grid" id="senses"></div>
 <h2>Cross-dictionary sense alignments (Sanskrit-anchored)</h2><div id="aligns"></div>

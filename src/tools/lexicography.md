@@ -9,6 +9,14 @@ First empirical findings from the **lexicography research stream**. Everything h
 
 This page is companion to the [Lexicography Roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md), which lays out the broader research plan (Phases L0-L10, Papers M, L, H).
 
+## Trust Block
+
+- Evidence: `src/data/lexicographic-structure/dictionary_inventory.csv`, `sanhw1_inheritance_edges.csv`, and `sanhw1_distance_matrix.csv`.
+- Limitations: headword containment and distance show content overlap, not full microstructure inheritance or direct copying by themselves.
+- Validation: source artifacts are compact committed research outputs; checked by `npm run build` and the linked lexicography roadmap.
+- Owner repo: `csl-atlas`.
+- Next use: treat the chart as structural evidence, then check companion docs before making a lineage claim.
+
 ```js
 const inv = await FileAttachment("../data/lexicographic-structure/dictionary_inventory.csv").csv({typed: true});
 const edges = await FileAttachment("../data/lexicographic-structure/sanhw1_inheritance_edges.csv").csv({typed: true});
@@ -121,7 +129,7 @@ Plot.plot({
 
 ## Sense-level structure (R2)
 
-Beyond shared *headwords*, the [R2 sense splitter](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/sense_split.py) breaks each entry into individual **senses** and aligns them across dictionaries by the **Sanskrit material they share** — SLP1 forms, `<ls>` citations, indigenous `…0` sigla — with **no translation**. This aligns a German PWG sense to an English Apte sense, and a Western sense to an indigenous *Vācaspatya* one, through Sanskrit alone (the "anchor on Sanskrit" method).
+Beyond shared *headwords*, the [archived R2 sense-alignment findings](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md) split entries into individual **senses** and align them across dictionaries by the **Sanskrit material they share** — SLP1 forms, `<ls>` citations, indigenous `…0` sigla — with **no translation**. This aligns a German PWG sense to an English Apte sense, and a Western sense to an indigenous *Vācaspatya* one, through Sanskrit alone (the "anchor on Sanskrit" method). The current branch keeps this as archived evidence until the R2 generator package is restored or rebuilt.
 
 **[Open the interactive sense-alignment explorer](/tools/r2-explorer)** — pick a headword (`dharma`, `rāma`, …) and browse its senses across up to 13 dictionaries, with the Sanskrit-anchored cross-tradition alignments highlighted.
 

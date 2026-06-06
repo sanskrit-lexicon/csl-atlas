@@ -541,9 +541,9 @@
       },
       "root": {
         "entries": 1757,
-        "pada": 170,
+        "pada": 1378,
         "gana": 1755,
-        "transitivity": 50,
+        "transitivity": 1735,
         "vet": 12
       },
       "layers_present": [
@@ -938,9 +938,9 @@
       },
       "root": {
         "entries": 463,
-        "pada": 236,
-        "gana": 254,
-        "transitivity": 266,
+        "pada": 407,
+        "gana": 456,
+        "transitivity": 454,
         "vet": 1
       },
       "layers_present": [
@@ -1123,14 +1123,16 @@
         "edges": 0
       },
       "root": {
-        "entries": 0,
-        "pada": 0,
-        "gana": 0,
+        "entries": 1643,
+        "pada": 1643,
+        "gana": 1643,
         "transitivity": 0,
         "vet": 0
       },
-      "layers_present": [],
-      "dominant_layer": ""
+      "layers_present": [
+        "root"
+      ],
+      "dominant_layer": "root"
     }
   }
 }

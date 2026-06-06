@@ -5,6 +5,14 @@ toc: false
 
 # Atlas of the Cologne Digital Sanskrit Lexicons
 
+## Trust Block
+
+- Evidence: committed atlas pages, generated data under `src/data/`, and linked roadmap/guide documents.
+- Limitations: landing/navigation page; it routes readers to dictionary evidence but is not itself a generated analysis result.
+- Validation: checked by `npm test`, `npm run build`, and Observable link validation.
+- Owner repo: `csl-atlas`.
+- Next use: start with `/dictionary-chooser` or Reader Lookup, then inspect source-linked dictionary records.
+
 A comparative microstructural atlas of **nine narrative Sanskrit-dictionary chapters plus an all-dictionary coverage layer** spanning the indigenous *kośa* tradition (~6th c.) through to the [Cologne Digital Sanskrit Lexicon](https://www.sanskrit-lexicon.uni-koeln.de/) (2024). Each chapter analyses one dictionary under an [18-block formal apparatus](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#3-the-five-grounded-constructs) developed for MW; the coverage layer asks which parts of that apparatus transfer, and how large those parts are, across every available CDSL v02 dictionary.
 
 <!-- Русская версия → /ru/ — re-enable once the RU locale routes are wired (see I18N.md / DOUBTS D11). -->
@@ -13,7 +21,14 @@ A comparative microstructural atlas of **nine narrative Sanskrit-dictionary chap
 
 ## Reader mode
 
-Start with the [Reader lookup](/tools/reader-lookup) for dictionary-first search across MW, AP, PWG, PWK, WIL, VCP, and SKD. It accepts SLP1 and IAST headwords, shows dictionary coverage and source links, and keeps machine-derived evidence visibly labeled. The [dictionary user guide](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md) explains which dictionary to start with; [evidence labels](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) explain `observed`, `derived`, `inferred`, and `reviewed`.
+Start with [Which dictionary should I use?](/dictionary-chooser) if you need a
+first stop: MW is the default public route, with task-specific checks in AP,
+PWG/PWK, VCP/SKD, WIL, and specialized dictionaries. Then use the [Reader
+lookup](/tools/reader-lookup) for dictionary-first search across MW, AP, PWG,
+PWK, WIL, VCP, and SKD. It accepts SLP1 and IAST headwords, shows dictionary
+coverage and source links, and keeps machine-derived evidence visibly labeled.
+[Evidence labels](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md)
+explain `observed`, `derived`, `inferred`, and `reviewed`.
 
 ---
 
@@ -33,7 +48,7 @@ Seven dictionaries (MW, AP, PWG, PWK, WIL, VCP, SKD) compared: [coverage matrix]
 
 ### Dictionary structure
 
-[Dictionary genealogy](/tools/lexicography), [convention fingerprints](/tools/lexicographic-conventions), and R2 [sense alignment](/tools/r2-explorer) / [sense granularity](/tools/r2-h1) move dictionary-structure research into the atlas path.
+[Dictionary genealogy](/tools/lexicography), [convention fingerprints](/tools/lexicographic-conventions), [structural register](/tools/structural-register), and R2 [sense alignment](/tools/r2-explorer) / [sense granularity](/tools/r2-h1) move dictionary-structure research into the atlas path.
 
 ### Review queues
 

@@ -2,7 +2,7 @@
 
 An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de/) — comparative microstructural analysis of nine narrative Sanskrit-dictionary chapters, plus an all-dictionary coverage layer for every local CDSL v02 source dictionary.
 
-**Status:** active public-atlas implementation. The dictionary-atlas chapters are reproducible from committed JSON plus local `csl-orig` source dictionaries. The 2026-06-04 boundary cleanup is merged: TEI/OntoLex standards work now lives in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), DCS/corpus handoff material now lives in [`VisualDCS`](https://github.com/gasyoun/VisualDCS), and GitHub/org observatory work stays in [`csl-observatory`](https://github.com/sanskrit-lexicon/csl-observatory).
+**Status:** active public-atlas implementation. The dictionary-atlas chapters are reproducible from committed JSON plus local `csl-orig` source dictionaries. TEI/OntoLex standards work has moved to `csl-standards`.
 
 ---
 
@@ -15,7 +15,7 @@ Companion microsite to the [MW microanalysis paper(s)](https://github.com/sanskr
 - **Tools:** explore standalone visualisations — [Cross-Dictionary Comparison](src/tools/cross-dict.md), [All-Dictionary Coverage](src/tools/dictionary-coverage.md), [Matrix Explorer](src/tools/matrix-explorer.md), [Lineage Sankey](src/tools/lineage-sankey.md), [Typology Treemap](src/tools/typology-treemap.md), [Lexicographic Timeline](src/tools/timeline.md), [Type Comparator](src/tools/type-comparator.md), [Citation Tracer](src/tools/citation-tracer.md).
 - **MW Quantitative Depth (Phase 1):** [Depth dashboard](src/tools/mw-depth-dashboard.md), [Diachronic layers](src/tools/mw-diachronic-layers.md), [Family depth](src/tools/mw-family-depth.md).
 - **Comparative Dictionary Lab (Phase 2):** [Coverage matrix](src/tools/dictionary-coverage-matrix.md), [Pairwise overlap](src/tools/dictionary-overlap.md), [Gender conflicts](src/tools/dictionary-conflicts.md), [Homonym splits](src/tools/dictionary-homonyms.md), [Citation apparatus](src/tools/dictionary-citations.md), [Sense depth](src/tools/dictionary-senses.md), [Lemma dossier](src/tools/dictionary-dossier.md).
-- **Dictionary structure:** [Dictionary genealogy](src/tools/lexicography.md), [Convention fingerprints](src/tools/lexicographic-conventions.md), [R2 sense explorer](src/tools/r2-explorer.html), [R2 sense granularity](src/tools/r2-h1.html).
+- **Dictionary structure:** [Dictionary genealogy](src/tools/lexicography.md), [Convention fingerprints](src/tools/lexicographic-conventions.md), [Structural register](src/tools/structural-register.md), [R2 sense explorer](src/tools/r2-explorer.html), [R2 sense granularity](src/tools/r2-h1.html).
 - **Review queues:** [Gender conflicts](src/tools/review-gender-conflicts.md), [Source-layer](src/tools/review-source-layers.md), [Alignment confidence](src/tools/review-alignment.md), [Source-siglum aliases](src/tools/review-source-siglum.md).
 
 Current URL structure:
@@ -54,7 +54,6 @@ Each narrative dictionary gets a chapter; each Tier-1 figure has a per-dictionar
 
 TEI, OntoLex, FrAC, SHACL, RDF, and related export/validation work now belongs in `csl-standards`:
 
-- public repo: [sanskrit-lexicon/csl-standards](https://github.com/sanskrit-lexicon/csl-standards)
 - local path: `C:\Users\user\Documents\GitHub\csl-standards`
 - migration note: [TEI/OntoLex migration note](docs/TEI_ONTOLEX_MIGRATION.md)
 
@@ -108,16 +107,21 @@ Reader-facing:
 - [TEI/OntoLex migration note](docs/TEI_ONTOLEX_MIGRATION.md) - why the standards pilot moved to `csl-standards`
 - [Boundary rules](docs/BOUNDARY_RULES.md) — what belongs in the dictionary atlas, and what must move elsewhere
 - [Dictionary user guide](docs/DICTIONARY_USER_GUIDE.md) — which dictionary to use and how to read an entry
+- [Reader lookup explainer](docs/READER_LOOKUP_EXPLAINER.md) - what a lookup result means and what it does not prove
 - [Evidence labels](docs/EVIDENCE_LABELS.md) — what the certainty labels mean
 
 Architecture and planning:
 
 - [Architecture](ARCHITECTURE.md) · [Use cases](docs/USE_CASES.md) · [Reader/developer critique](docs/READER_DEVELOPER_CRITIQUE.md)
+- [Use-case page roadmap](docs/USE_CASE_PAGE_ROADMAP.md) - page order, trust block policy, and analysis sequence
+- [Chart trust template](docs/CHART_TRUST_TEMPLATE.md) - required evidence/limitations/validation/owner block
 - [MW Quantitative Depth handoff](docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md) (Phase 1)
 - [Dictionary comparison plan](docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
-- [Cross-repo hypothesis index](docs/HYPOTHESIS_INDEX.md) - evidence-backed findings, strong testable hypotheses, and external hypotheses routed by repository boundary
-- DCS migration material now lives in [VisualDCS `docs/csl-atlas-migration/`](https://github.com/gasyoun/VisualDCS/tree/main/docs/csl-atlas-migration); active corpus work belongs outside this repo
+- [H6 structural-register scatter](docs/H6_STRUCTURAL_REGISTER_SCATTER.md) - implemented scholar-facing analysis page and chart spec
+- [Microstructure profile](docs/MICROSTRUCTURE_PROFILE.md) · [methods](docs/MICROSTRUCTURE_METHODS.md) · [findings](docs/MICROSTRUCTURE_FINDINGS.md)
+- DCS migration material now lives in `VisualDCS/docs/csl-atlas-migration/`; active corpus work belongs outside this repo
 - [Review reports](docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary
+- [Review queue proofs](docs/REVIEW_QUEUE_PROOFS.md) - what each review queue proves before procedure
 - [Review release roadmap](docs/REVIEW_RELEASE_ROADMAP.md) · [Release checklist](docs/RELEASE_CHECKLIST.md) · [Light review sprint](docs/LIGHT_REVIEW_SPRINT.md)
 - [Changelog](CHANGELOG.md) — what changed and when
 
@@ -170,7 +174,7 @@ npm run build    # produces dist/ for GitHub Pages
 - [x] DCS corpus slice moved out of the atlas; migration copies are preserved in `VisualDCS/docs/csl-atlas-migration/`
 - [x] Reader Lookup v1: static SLP1/IAST headword lookup over lemmas attested in >=4 of the 7 comparison dictionaries
 - [x] Review-release roadmap, release checklist, and light review sprint worklist
-- [x] Boundary rule documented: future DCS/corpus work belongs in VisualDCS or a future grammar repo, not in this atlas
+- [ ] Future DCS/corpus work belongs in VisualDCS or a future grammar repo, not in this atlas
 - [ ] Phase 2 follow-ups: full-text dictionary search backend; cross-dictionary siglum alias-table growth via review
 - [x] Build and link validation
 - [x] Unit tests (`npm test`, `node --test`) for the deterministic libs + CI test workflow
