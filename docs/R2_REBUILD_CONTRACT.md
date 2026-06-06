@@ -25,8 +25,9 @@ package needed before new H1R/H2/H3R claims are broadened or submitted.
 - Validation: restored scripts must run from current sibling `csl-orig`
   and reproduce the archived headline numbers or explicitly document drift.
 - Owner repo: `csl-atlas`.
-- Next use: use `R2_REVIEW_PACKETS.md` as the implementation queue; start with
-  PWG/PWK `div` source-record scope before broadening sense-alignment claims.
+- Next use: use the five source-inspected packet proposal layers as the first
+  non-final rebuild experiment plan; record drift explanations before
+  broadening sense-alignment claims.
 
 ## Recovered Archive Fixtures
 
@@ -55,7 +56,7 @@ sense rows, and builds provisional Sanskrit-anchor alignments.
 | `data/lexico/r2_source_anchor_senses.jsonl` | Minimal source-backed sense-row worklist. | One provisional row per split source span, with `<L>` ids, source links, anchors, limitations, explicit-marker labels/run indexes, indigenous authority hints, and AE reverse-match rank metadata where applicable. |
 | `data/lexico/r2_source_anchor_alignments.json` | Prototype alignment worklist. | Jaccard-ranked shared Sanskrit/citation anchors, capped to top rows per lemma. |
 | `data/lexico/r2_parser_diagnostics.json` | Parser-drift worklist for the next rebuild slice. | 70 lemma/dictionary diagnostics; 17 high-priority rows classify PWG/PWK div splitting, BEN/AP90/BHS marker/source-record scope, AE reverse overmatch, and SKD/VCP `iti` review. |
-| `data/lexico/r2_review_packets.json` | Reviewer-facing packet layer over diagnostics. | Five parser-decision packets: div/source-record scope, marker-run scope, AE reverse bands, indigenous `iti` authority review, and source-gap controls. |
+| `data/lexico/r2_review_packets.json` | Reviewer-facing packet layer over diagnostics. | Five parser-decision packets: div/source-record scope, marker-run scope, AE reverse bands, indigenous `iti` authority review, and source-gap controls. Source-inspected proposal docs now label all five packets. |
 
 The row-count drift is expected. The prototype includes PWK from source, exposes
 AE reverse-dictionary overmatching with equivalent-position rank counts, and
@@ -117,7 +118,9 @@ Each sense row should be compact and deterministic:
 ## Current Decision Queue
 
 The generated packet layer in [`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md)
-is the current implementation queue:
+is the current implementation queue. All five packets now have
+source-inspected proposal layers. These labels are machine-proposed parser
+labels, not scholar-reviewed sense decisions or `reviewedValue` fields.
 
 | Order | Packet | Rows | High priority | Decision before code promotion |
 |---:|---|---:|---:|---|
@@ -126,6 +129,14 @@ is the current implementation queue:
 | 3 | `ae-reverse-bands` | 5 | 3 | Choose rank bands for AE reverse rows before using them as alignment evidence. |
 | 4 | `indigenous-iti-authority` | 10 | 8 | Review SKD/VCP `iti` boundaries and authority hints before promoting indigenous rows. |
 | 5 | `source-gap-controls` | 17 | 0 | Use parity/source-gap rows as controls after the blocking parser families are handled. |
+
+Proposal layers:
+
+- [`R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md)
+- [`R2_MARKER_RUN_SCOPE_LABELS.md`](R2_MARKER_RUN_SCOPE_LABELS.md)
+- [`R2_AE_REVERSE_BAND_LABELS.md`](R2_AE_REVERSE_BAND_LABELS.md)
+- [`R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md)
+- [`R2_SOURCE_GAP_CONTROL_LABELS.md`](R2_SOURCE_GAP_CONTROL_LABELS.md)
 
 ## Acceptance Gates
 
@@ -148,10 +159,22 @@ is the current implementation queue:
 
 ## Next Implementation Slice
 
-Use the source-backed anchor prototype to tighten parser-family parity with the
-archive fixtures. Run `npm run build-r2-source-anchors`,
-`npm run build-r2-parser-diagnostics`, and
-`npm run build-r2-review-packets`, then use the packet order above to drive the
-next parser changes. Broaden beyond `gam`, `dharma`, `rama`, `iti`, and
+Use the source-backed anchor prototype to run a non-final rebuild experiment
+against the archived fixtures. Run `npm run build-r2-source-anchors`,
+`npm run build-r2-parser-diagnostics`, and `npm run build-r2-review-packets`,
+then test parser changes in this order:
+
+1. Apply `div-source-scope` labels to PWG/PWK source-record and `<div n>`
+   boundaries.
+2. Apply `marker-run-scope` labels to BEN/AP90/BHS western marker runs.
+3. Apply `ae-reverse-bands` labels before accepting AE reverse rows as
+   alignment evidence.
+4. Apply `indigenous-iti-authority` labels to SKD/VCP `iti` units without
+   treating authority quotations as reviewed senses.
+5. Use `source-gap-controls` labels as parity, source-only, and no-anchor
+   controls while the high-risk parser families change.
+
+The experiment should emit a drift explanation artifact before any public R2
+claim changes. Broaden beyond `gam`, `dharma`, `rama`, `iti`, and
 `bodhisattva` only after the generator can explain or reproduce the archived
 payloads from source.
