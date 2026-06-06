@@ -47,16 +47,16 @@ targets before adding new analysis-method prose.
 | 3 | [`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | proof doc active; four public queue pages carry proof/trust blocks |
 | 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md), and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | edge labels done |
 | 5 | [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md) plus the microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Start with the easiest parsed structure: headwords vs nested subentries. | active first microstructure page |
-| 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Keep H4 visible as the next continuity package after H6 and headword/subentry structure. | short placeholder on public chart; review packet documented |
-| 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label cross-reference hub families before paper use. | review artifact built |
+| 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Use AMAR-native fields as the active dictionary-first semantic review package. | interpretation and review packet active |
+| 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label cross-reference hub families before paper use. | next after H4 |
 | 8 | H5 anomaly scope package | UC-CD-05, UC-RV-03 | makers, reviewers | Turn forensic anomaly signals into a proof-first review queue. | scoped |
 
 ## GTD Documentation Board
 
 | Bucket | Package | Next action | Done when |
 |---|---|---|---|
-| Next | H4 semantic fields | Use the H4 review packet to turn semantic-field samples into reviewed interpretations. | H4 review samples can be interpreted without outrunning the structural/microstructure docs. |
-| Waiting | Xref hub review | Wait until the H4 review package is updated. | Xref hub labels can reuse the same review-label discipline after H4. |
+| Next | Xref hub review | Use `data/lexico/xref_hub_review.json` to label MW/PWG shared-core samples and top target families. | Xref hub labels reuse the same review-label discipline after H4 activation. |
+| Done | H4 semantic fields | Keep H4 active with `false-low-risk`, `high-coverage-check`, `edition-delta-check`, `scope-baseline-check`, and `direction-index-control` starting labels. | H4 review samples can be interpreted without outrunning the structural/microstructure docs. |
 | Done | Public trust blocks | Keep `Evidence`, `Limitations`, `Validation`, `Owner repo`, and `Next use` visible on public pages. | Trust-block audit finds no public Markdown page missing the required fields. |
 | Done | MW public default | MW remains the public first stop in chooser, landing, reader guide, and lookup caveats. | Search finds no public-reader route that tells newcomers to start elsewhere for ordinary lookup. |
 | Done | Public dictionary chooser polish | Keep MW as the public default, maintain the decision-card route, and test `/dictionary-chooser` after public wording changes. | A reader can choose MW first and understand the second dictionary without learning lexicographic history first. |
@@ -99,15 +99,13 @@ For every queue, write the proof page first:
    beginning with headword/subentry structure.
 3. Use the implemented H6 structural-register scatter as the first full
    chart-trust/method example.
-4. Keep H4 semantic fields visible as the next continuity package, but do not
-   let H4 outrun H6 and headword/subentry documentation.
+4. Use H4 semantic fields as the active AMAR-native semantic review package,
+   beginning with SKD false-low checks.
 5. Document review queues by proof value.
-6. Review H6 structural-register prompts and H4 semantic-field samples selected
-   from their generated artifacts and review-packet docs.
-7. Review xref hub-family samples from `data/lexico/xref_hub_review.json`.
-8. Use `data/lexico/r2_parser_diagnostics.json` to tighten the R2 splitter
+6. Review xref hub-family samples from `data/lexico/xref_hub_review.json`.
+7. Use `data/lexico/r2_parser_diagnostics.json` to tighten the R2 splitter
    before building sense-divergence pages.
-9. Build the first H5 anomaly review report from F0/F2 samples.
+8. Build the first H5 anomaly review report from F0/F2 samples.
 
 ## Boundary Links
 

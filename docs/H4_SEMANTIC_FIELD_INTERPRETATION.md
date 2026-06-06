@@ -21,9 +21,8 @@ and `/tools/semantic-fields`.
   `npm run build-semantic-fields`, `npm run build-h4-family-profiles`,
   and `npm run build`.
 - Owner repo: `csl-atlas`.
-- Next use: hold H4 as the next continuity package until H6 and
-  headword/subentry structure are documented, then review the selected
-  convention samples.
+- Next use: active H4 review package. Start with the selected convention
+  samples before making topical or paper-level claims.
 
 ## Current Reading
 
@@ -32,10 +31,12 @@ produce a stable dictionary-first coverage layer. The family-profile artifact
 now shows that coverage profiles can be compared by dictionary family rather
 than only by gross size.
 
-For the current documentation package, H4 is intentionally a placeholder for
-continuity rather than the next analysis focus. It remains visible so the
-roadmap is not broken, but the next concrete writing/review work is H6 and
-headword/subentry microstructure.
+H4 is now the active semantic-field documentation package because the H6
+structural-register edge and family-outlier reviews are labeled, and the first
+microstructure layers document headword/subentry structure plus sense
+segmentation. The next step is not another generated chart; it is a small
+scholar-reviewed interpretation layer that separates true topical signal from
+headword convention, genre, and parser loss.
 
 ## Family Profile Artifact
 
@@ -81,6 +82,17 @@ Use small scholar-reviewed samples before making paper-level claims:
 | VCP high-coverage sample | 20 covered AMAR lemmas across high fields. | Check whether high coverage reflects true headword exposure. |
 | AP/AP90 delta sample | 20 AMAR lemmas covered by AP but not AP90. | Separate edition/revision differences from parser effects. |
 | Specialized baseline sample | 20 ARMH/FRI/BHS matches. | Confirm that field concentration reflects scope. |
+| Index/reverse control sample | 20 AE/MWE or index-family exceptions. | Confirm lookup-direction and index artifacts before treating low coverage as meaningful. |
+
+## Active Review Order
+
+| Order | Packet | Why first | Current machine reading |
+|---:|---|---|---|
+| 1 | H4-R1 SKD false-low | SKD has low exposed `<k1>` coverage but known prose/citation conventions. | `false-low-risk`; source review decides `true-low`, `variant-headword`, `prose-present`, or `parser-gap`. |
+| 2 | H4-R2 VCP high coverage | VCP sits in the broad 78-80% band but belongs to the indigenous-prose family. | `high-coverage-check`; review decides whether exposed headwords are usable entries. |
+| 3 | H4-R3 AP/AP90 delta | AP and AP90 test edition and parser effects without leaving dictionary evidence. | `edition-delta-check`; review separates revision history from normalization loss. |
+| 4 | H4-R4 specialized baseline | ARMH, FRI, and BHS need scope-aware baselines. | `scope-baseline-check`; review decides `scope-match`, `incidental-match`, or `scope-mismatch`. |
+| 5 | H4-R5 index/reverse controls | The largest spreads are western-tagged versus reverse-bilingual controls. | `direction-index-control`; review prevents quality-ranking claims. |
 
 The review packet is now documented in
 [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md). It adds sample

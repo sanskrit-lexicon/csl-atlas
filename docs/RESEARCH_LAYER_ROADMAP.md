@@ -32,8 +32,11 @@ has a scholar-facing sense-segmentation layer; H4 waits on H6 family outliers.*
 reviewed interpretation labels; H4 is the next documentation package.*
 *v2.2 use-case documentation update 2026-06-06: `/dictionary-chooser` is the
 top-level public route with MW as the default first stop; H6 now has a
-rerunnable method note, and H4 remains the continuity package queued after H6
-and the microstructure parse-order docs.*
+rerunnable method note, and H4 is the next AMAR-native semantic review package.*
+*v2.6 H4 activation update 2026-06-06: H4 is now active; the semantic-field
+interpretation and review packet now define active starting
+labels for SKD false lows, VCP high coverage, AP/AP90 deltas, specialized
+baselines, and index/reverse controls.*
 **Companion to**: [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md), [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (genealogy/phylogeny), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (structure typology), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md).
 
 This stream is **additive**. The existing program is researcher-facing (papers M/L/H + a 50-viz catalog). This roadmap turns those analyses into a **practitioner layer** — usable tools for three audiences — and adds new testable hypotheses and visualizations. Two working prototypes ship with it.
@@ -85,7 +88,7 @@ working view below so old H1-H7 labels do not look equally open.
 | **H1R** | **Sense granularity is a family/marking-style trait, not pure temporal inflation.** | R2 sense-unit measurements by year and family | researchers, makers | negative finding for original H1; restore/rebuild R2 artifacts before broadening |
 | **H2** | **Citation density predicts a sense's survival** into later dictionaries. | cited vs uncited ancestor senses on measured inheritance edges | researchers | supported finding in R2; broaden panel next |
 | **H3R** | **Derivative dictionaries copy or condense more than they expand.** | net sense delta and gloss overlap along measured inheritance edges | researchers, historians | negative finding for original H3; no measured edge shows systematic net-addition |
-| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | map dictionary headword coverage onto **Amarakosa-native topical fields** -> per-dict and per-family field distribution | researchers, students | M8 data package, chart, interpretation note, family-profile artifact, and review packet built; next documentation package |
+| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | map dictionary headword coverage onto **Amarakosa-native topical fields** -> per-dict and per-family field distribution | researchers, students | M8 data package, chart, interpretation note, family-profile artifact, and active review packet built |
 | **H5** | **"Ghost entries"** — shared OCR/typo anomalies — are both a lineage fingerprint **and** an editor QA flag. | rarity-weighted shared-anomaly detection (extends L3 forensic) | makers, historians | scoped as proof-first maker queue |
 | **H6** | **Structural register (citation × grammar-marking) predicts tradition family.** | cluster the macro profile (§1.2); compare to the genealogy tree | researchers | prototype supported, charted, review-classed, edge-labeled, family-outlier-labeled, and documented as a rerunnable method note |
 | **H7** | **First-N sampling materially biases structure metrics** (early-alphabet entries are shorter/sparser). | compare first-N vs random vs stratified samples on the same dicts | methodology | **✅ A7 resolved 2026-05-31** — full corpus chosen (bias moot for production); the §1.2 prototype already confirmed the first-N skew empirically |
@@ -131,8 +134,8 @@ A **QA worklist** that turns analysis into action: the sense-divergence map + an
 
 ### 4.3 For researchers / DH
 The macro profile and hypotheses feed the existing **Papers L / M / H**
-directly. H6 and H4 are ready chart-trust examples with generated review-prompt
-artifacts. H1R, H2, and H3R are the
+directly. H6 is edge/family labeled, and H4 is the active AMAR-native semantic
+review package with generated review-prompt artifacts. H1R, H2, and H3R are the
 archived empirical core of the sense-alignment line, but their generators/data
 need to be restored or rebuilt before the claims are broadened.
 
@@ -222,9 +225,9 @@ H1 time-inflation.
 **Still open:** whether the H1R/H2/H3R sense-alignment study is its own short
 paper or a Paper-L section; co-author assignment for the sense-evolution work;
 completion of the R2 rebuild contract beyond the source-backed anchor
-prototype and parser diagnostics; scholar review of the H6 structural-register
-review-packet prompts and H4 review-packet samples; and human review of the
-first H5 sample. H4 interpretation/review, H6 review, xref hub review, and H5
+prototype and parser diagnostics; scholar review of H4 review-packet samples
+and selected H6 source examples before paper use; and human review of the first
+H5 sample. H4 interpretation/review, H6 review, xref hub review, and H5
 scope are documented in
 [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md),
 [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md),

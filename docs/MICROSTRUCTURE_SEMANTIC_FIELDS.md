@@ -21,15 +21,15 @@ mixing dictionary evidence with corpus frequency.
   `npm run build-semantic-fields`, `npm run build-h4-family-profiles`,
   and `npm run build`.
 - Owner repo: `csl-atlas`.
-- Next use: keep H4 visible as the next continuity package, but review it only
-  after H6 structural register and headword/subentry structure are documented.
+- Next use: use H4 as the active semantic-field review package; start with
+  SKD false-low checks before making topical claims.
 
 ## What Was Built
 
-This package is already implemented as M8, but it is not the next writing
-focus. In the current documentation sequence, H4 is a continuity placeholder:
-it tells readers what comes after H6 and the first microstructure layer without
-pulling corpus frequency or passage evidence into the atlas.
+This package is implemented as M8 and is now the active semantic-field
+documentation package. It follows H6 structural-register labeling and the first
+microstructure layers, and it keeps the atlas boundary intact by avoiding corpus
+frequency or passage evidence.
 
 M8 parses the local sibling `AMAR/amar.txt` into an Amarakosa-native field
 taxonomy. Each synonym is assigned to its kāṇḍa/varga/upavarga context, then
@@ -94,9 +94,9 @@ collapse inflected forms, or apply a full `hwnorm1` transform.
 
 ## Next Use
 
-This package now supports `/tools/semantic-fields`, a scholar-facing chart page
+This package supports `/tools/semantic-fields`, a scholar-facing chart page
 with a compact trust block. It also supports the generated family-profile
-artifact used by the interpretation note. The interpretation and review-sample
-plan is
+artifact used by the interpretation note. The active interpretation and
+review-sample plan is
 [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md).
 Keep SKD/VCP-style convention caveats visible before making paper-level claims.

@@ -19,8 +19,8 @@ Status: scholar-facing review packet for H4/M8 semantic-field evidence.
   `npm run build-semantic-fields`, `npm run build-h4-family-profiles`, and
   `npm run build`.
 - Owner repo: `csl-atlas`.
-- Next use: return to this packet after H6 edge/outlier review and
-  headword/subentry structure documentation are stable.
+- Next use: active review packet. Begin with H4-R1 SKD false-low rows, then
+  proceed through VCP, AP/AP90, specialized, and index/reverse controls.
 
 ## Purpose
 
@@ -29,6 +29,11 @@ machine result is already useful: AMAR fields can be mapped to 43 dictionary
 headword sets, grouped into 5 family profiles, and summarized as 12 high-spread
 field contrasts. The review step asks which of those contrasts are true topical
 signals and which are caused by headword convention, genre, or source scope.
+
+This packet is now active. H6 structural-register prompts have reviewed edge
+and family-outlier labels, and the microstructure docs now explain the
+headword/subentry and sense-segmentation limits that H4 depends on. Do not mark
+H4 as reviewed until the source checks below have been sampled.
 
 ## What This Review Proves
 
@@ -67,6 +72,18 @@ For row-level review, join back to:
 | H4-R3 | AMAR lemmas covered by AP but not AP90, across several fields. | Is the delta edition history, parser coverage, or headword normalization? | `edition-delta`, `parser-gap`, `normalization-risk`, `true-delta` |
 | H4-R4 | ARMH/FRI/BHS matches from their strongest fields and from one weak field. | Does concentration follow the dictionary's stated scope? | `scope-match`, `incidental-match`, `scope-mismatch` |
 | H4-R5 | AE/MWE and index-family exceptions in their top fields. | Are non-zero matches meaningful, or just lookup-direction/index artifacts? | `direction-artifact`, `index-artifact`, `meaningful-exception` |
+
+## Starting Machine Labels
+
+These labels describe the review reason, not a completed human decision:
+
+| ID | Starting label | Use |
+|---|---|---|
+| H4-R1 | `false-low-risk` | SKD's low strict headword coverage may hide prose, citation, or variant-headword evidence. |
+| H4-R2 | `high-coverage-check` | VCP's high coverage should be checked as exposed, usable headword coverage. |
+| H4-R3 | `edition-delta-check` | AP/AP90 differences need edition, parser, and normalization separation. |
+| H4-R4 | `scope-baseline-check` | Specialized dictionaries should be judged against their own domains. |
+| H4-R5 | `direction-index-control` | Reverse-bilingual and index works are controls for lookup direction and genre. |
 
 ## Strongest Contrast Prompts
 
