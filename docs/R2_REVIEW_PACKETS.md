@@ -75,6 +75,11 @@ The second source-inspected proposal layer is
 numbered-marker prefix runs, preface/proxy rows, raw-headword bundles, and
 archive-parity controls.
 
+The third source-inspected proposal layer is
+[`R2_AE_REVERSE_BAND_LABELS.md`](R2_AE_REVERSE_BAND_LABELS.md), covering AE
+reverse-equivalent rank bands, direct-equivalent candidates, phrase/collocation
+matches, broad-headword overmatches, and no-anchor controls.
+
 ## Packet Boundaries
 
 ### Div Source Scope
@@ -113,6 +118,11 @@ equivalent list.
 
 It does not prove that high-rank rows are true alignments or that tail rows are
 false. AE needs review/filter bands before it becomes alignment evidence.
+
+Current proposed labels: `reverse-high-candidate`, `reverse-medium-review`,
+`reverse-low-context`, `reverse-tail-overmatch`,
+`direct-equivalent-candidate`, `phrase-or-collocation-match`,
+`broad-headword-overmatch`, and `reverse-no-anchor-control`.
 
 ### Indigenous Iti Authority
 
