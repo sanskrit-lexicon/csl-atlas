@@ -6,18 +6,26 @@
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 import { compareCounts } from "../scripts/build-mw-quantitative-depth.mjs";
 import { senseUnits } from "../scripts/build-sense-depth.mjs";
 import { indigenousAuthorityHints, jaccard, lookupKeysForLemma, reverseMatchProfile, sourceRecordCounts, splitExplicitMarkers } from "../scripts/build-r2-source-anchors.mjs";
 import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExactMatches } from "../scripts/build-r2-parser-diagnostics.mjs";
 import { packetIdForDiagnostic, scopeCluesForDiagnostic } from "../scripts/build-r2-review-packets.mjs";
+import { CHECKPOINT_DIAGNOSTIC_IDS, buildPayload as buildR2LabelProposalPayload, labelsForPacket } from "../scripts/build-r2-label-proposals.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
 import { classifyHubTarget } from "../scripts/build-xref-hub-review.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
 import { topForm } from "../scripts/build-citation-apparatus.mjs";
+
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const r2ReviewPackets = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_review_packets.json"), "utf8"));
+const r2LabelProposals = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_packet_label_proposals.json"), "utf8"));
 
 // ---- MW depth: count-divergence validation ----
 test("compareCounts: no warnings when counts match", () => {
@@ -235,6 +243,54 @@ test("R2 review packets expose deterministic review clues", () => {
     "reverse-rank-counts",
     "indigenous-authority-hints"
   ]);
+});
+
+test("R2 label proposal artifact is generated from review packets", () => {
+  assert.deepEqual(r2LabelProposals, buildR2LabelProposalPayload(r2ReviewPackets));
+});
+
+test("R2 label proposals cover every diagnostic id", () => {
+  const diagnosticIds = r2ReviewPackets.packets.flatMap(packet => packet.rows.map(row => row.diagnosticId));
+  assert.equal(Object.keys(r2LabelProposals.rowProposals).length, diagnosticIds.length);
+  for (const diagnosticId of diagnosticIds) {
+    assert.ok(r2LabelProposals.rowProposals[diagnosticId], `${diagnosticId} lacks a proposal`);
+    assert.ok(r2LabelProposals.rowProposals[diagnosticId].proposedParserLabels.length, `${diagnosticId} lacks labels`);
+  }
+});
+
+test("R2 label proposals use only packet vocabulary labels", () => {
+  for (const proposal of Object.values(r2LabelProposals.rowProposals)) {
+    const allowed = labelsForPacket(proposal.packetId, r2LabelProposals.packetLabelVocabulary);
+    for (const label of proposal.proposedParserLabels) {
+      assert.ok(allowed.has(label), `${proposal.diagnosticId} has out-of-vocabulary label ${label}`);
+    }
+  }
+});
+
+test("R2 label proposal checkpoint rows are stable with empty human fields", () => {
+  assert.equal(r2LabelProposals.checkpointRows.length, 10);
+  assert.deepEqual(r2LabelProposals.checkpointRows.map(row => row.diagnosticId), CHECKPOINT_DIAGNOSTIC_IDS);
+  for (const row of r2LabelProposals.checkpointRows) {
+    assert.ok(row.sourcePointers.length, `${row.diagnosticId} lacks source pointers`);
+    assert.ok(row.proposedParserLabels.length, `${row.diagnosticId} lacks proposed parser labels`);
+    assert.ok(row.reviewQuestion, `${row.diagnosticId} lacks a review question`);
+    assert.equal(row.reviewedValue, null);
+    assert.equal(row.reviewer, "");
+    assert.equal(row.reviewedAt, "");
+    assert.equal(row.note, "");
+  }
+});
+
+test("R2 label proposal counts match the current review packet fixture", () => {
+  assert.equal(r2LabelProposals.counts.diagnosticRows, 70);
+  assert.equal(r2LabelProposals.counts.packetCount, 5);
+  assert.deepEqual(r2LabelProposals.counts.byPacket, {
+    "marker-run-scope": 28,
+    "source-gap-controls": 17,
+    "div-source-scope": 10,
+    "indigenous-iti-authority": 10,
+    "ae-reverse-bands": 5
+  });
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----

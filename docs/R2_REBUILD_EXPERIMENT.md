@@ -12,15 +12,17 @@ claim, and not a scholar-reviewed sense decision layer.
   `data/lexico/r2_source_anchor_senses.jsonl`,
   `data/lexico/r2_source_anchor_alignments.json`,
   `data/lexico/r2_parser_diagnostics.json`,
-  `data/lexico/r2_review_packets.json`, and the five source-inspected proposal
-  docs linked from `R2_REVIEW_PACKETS.md`.
+  `data/lexico/r2_review_packets.json`,
+  `data/lexico/r2_packet_label_proposals.json`, and the five
+  source-inspected proposal docs linked from `R2_REVIEW_PACKETS.md`.
 - Evidence label: `source-vs-archive`.
 - Limitations: the experiment is restricted to the five anchor lemmas and 14
   dictionaries already present in the prototype. It records parser drift and
   packet routing, not final sense equivalence.
 - Validation: `npm run build-r2-source-anchors`,
   `npm run build-r2-parser-diagnostics`,
-  `npm run build-r2-review-packets`, `git diff --check`, `npm test`,
+  `npm run build-r2-review-packets`,
+  `npm run build-r2-label-proposals`, `git diff --check`, `npm test`,
   `npm run validate-review-reports`, and `npm run build`.
 - Review status: `machine-proposed`.
 - Owner repo: `csl-atlas`.
@@ -77,7 +79,7 @@ Parser-family distribution:
 
 ## Packet Gates
 
-The next parser-change pass should keep the packet order fixed:
+The machine-readable labels + checkpoint step keeps the packet order fixed:
 
 | Order | Packet | Rows | High priority | Proposal layer | Gate |
 |---:|---|---:|---:|---|---|
@@ -87,30 +89,40 @@ The next parser-change pass should keep the packet order fixed:
 | 4 | `indigenous-iti-authority` | 10 | 8 | `R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md` | Keep SKD/VCP `iti` units, authority quotations, raw sigla, and grammar/commentary units visible; do not flatten them into reviewed senses. |
 | 5 | `source-gap-controls` | 17 | 0 | `R2_SOURCE_GAP_CONTROL_LABELS.md` | Use archive-parity rows as regression controls and keep source-only, no-anchor, homonym, lookup-bundle, and continuation rows separate. |
 
-## Promotion Rule
+## Next Accepted Step
 
-A parser change can be tested in the next non-final R2 rebuild only if it:
+The next accepted step is **machine-readable labels + checkpoint**, not parser
+promotion. The package must:
 
-1. reruns the three R2 generator commands above;
-2. records changed row counts by packet, drift class, and parser family;
-3. explains every high-priority diagnostic row that moves toward archive parity;
-4. leaves proposal labels as parser metadata, not `reviewedValue`;
-5. keeps H5 review rows untouched unless a human reviewer supplies decisions;
-6. does not broaden beyond `gam`, `dharma`, `rama`, `iti`, and `bodhisattva`
+1. generate `data/lexico/r2_packet_label_proposals.json` from
+   `data/lexico/r2_review_packets.json`;
+2. provide one proposal entry for every `diagnosticId`;
+3. keep packet vocabularies machine-readable and keep row labels inside the
+   packet vocabulary;
+4. expose the ten-row human checkpoint with source pointers, proposed parser
+   labels, review questions, and empty `reviewedValue`, `reviewer`,
+   `reviewedAt`, and `note` fields;
+5. report counts by packet, drift class, and priority;
+6. keep H5 review rows, public R2 pages, source-anchor generation, and splitter
+   behavior untouched.
+
+Archive parity remains a comparison signal and regression-control cue. It is
+not the optimization target; labels should explain source scope, marker scope,
+reverse-rank risk, indigenous prose units, and controls without collapsing
+source evidence just to match archived counts.
+
+## Deferred Parser Pass
+
+Parser promotion can be reconsidered only after the checkpoint rows have human
+decisions. A future parser-change pass should:
+
+1. rerun the R2 generator commands plus
+   `npm run build-r2-label-proposals`;
+2. record changed row counts by packet, drift class, and parser family;
+3. explain every high-priority diagnostic row whose source/archive comparison
+   changes;
+4. leave proposal labels as parser metadata, not `reviewedValue`;
+5. keep H5 review rows untouched unless a human reviewer supplies decisions;
+6. keep archive parity as a comparison signal rather than a row-count target;
+7. avoid broadening beyond `gam`, `dharma`, `rama`, `iti`, and `bodhisattva`
    until the anchor run explains or reproduces the archived payloads.
-
-## First Parser Pass
-
-Start with the lowest-risk promoted behavior:
-
-1. Treat `archive-parity-control` and exact marker/source-record matches as
-   regression controls.
-2. Apply `div-source-scope` target labels before changing PWG/PWK row counts.
-3. Apply `marker-run-scope` archive-parity labels before changing BEN/AP90/BHS.
-4. Apply AE rank bands before using reverse rows as alignment evidence.
-5. Keep indigenous and source-gap rows as review/control layers until the
-   western and reverse parser changes are measurable.
-
-The expected next artifact is a drift-explanation table: before/after counts by
-diagnostic row, with a packet label explaining why each changed row moved or
-stayed fixed.
