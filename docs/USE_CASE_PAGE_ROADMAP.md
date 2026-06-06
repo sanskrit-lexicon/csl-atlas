@@ -30,6 +30,9 @@ targets before adding new analysis-method prose.
   packages; the xref hub review also has a generated review-prompt artifact.
 - R2 parser diagnostics now classify source/archive drift before any new
   sense-divergence or sense-alignment claims are broadened.
+- All five R2 parser decision packets now have source-inspected proposal
+  layers; the next R2 action is a non-final source-backed rebuild experiment,
+  not a broader sense-alignment claim.
 - The dictionary-comparison tool family now carries compact trust blocks for
   generated evidence, limitations, validation, and owner repo.
 - The remaining MW, typology, lexicographic-structure, timeline, and archived
@@ -55,8 +58,9 @@ targets before adding new analysis-method prose.
 
 | Bucket | Package | Next action | Done when |
 |---|---|---|---|
-| Next | R2 parser decision packet | Use `R2_REVIEW_PACKETS.md` to start with `div-source-scope`, then marker runs, AE reverse bands, indigenous `iti`, and source-gap controls. | R2 has source-reviewed parser decisions before broader sense-divergence pages. |
+| Next | R2 non-final rebuild experiment | Use the five R2 proposal layers to run a source-backed anchor rebuild experiment: div/source-record scope, marker-run scope, AE reverse bands, indigenous `iti`, then source-gap controls. | The rebuild records which packet labels explain drift and which rows still need review before any broader sense-divergence page. |
 | Waiting | H5 sample review | Classify known corrections and null controls first, then raw-headword-exclusive and shared-doublet rows. | The 130-item queue has human `reviewedValue` labels and a summarized taxonomy. |
+| Done | R2 parser decision packets | Keep `R2_REVIEW_PACKETS.md` linked to the five proposal layers: `R2_DIV_SOURCE_SCOPE_LABELS.md`, `R2_MARKER_RUN_SCOPE_LABELS.md`, `R2_AE_REVERSE_BAND_LABELS.md`, `R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`, and `R2_SOURCE_GAP_CONTROL_LABELS.md`. | The R2 splitter has source-inspected packet labels to guide the next rebuild experiment; the labels are not scholar-reviewed sense decisions. |
 | Done | H5 anomaly taxonomy | Keep the review order and expected label set in `H5_GHOST_ANOMALY_SCOPE.md`. | Reviewers can start without treating F0/F2 rows as automatic error claims. |
 | Done | H4 semantic fields | Keep H4 active with `false-low-risk`, `high-coverage-check`, `edition-delta-check`, `scope-baseline-check`, and `direction-index-control` starting labels. | H4 review samples can be interpreted without outrunning the structural/microstructure docs. |
 | Done | Xref hub review | Keep `prefix-convention`, `lexical-target`, `edition-continuity`, `normalization-risk`, `too-sparse`, and `lexical-shared-core` visible in the xref review docs. | Xref hub labels reuse the same review-label discipline after H4 activation. |
@@ -105,8 +109,8 @@ For every queue, write the proof page first:
 4. Use H4 semantic fields as the active AMAR-native semantic review package,
    beginning with SKD false-low checks.
 5. Document review queues by proof value.
-6. Use `data/lexico/r2_parser_diagnostics.json` to tighten the R2 splitter
-   before building sense-divergence pages.
+6. Use the R2 packet proposal layers to run a non-final source-backed rebuild
+   experiment before building sense-divergence pages.
 7. Review the first H5 anomaly sample and summarize the taxonomy.
 
 ## Boundary Links
