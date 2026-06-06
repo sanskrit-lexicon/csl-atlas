@@ -70,6 +70,11 @@ record proposals are recorded in
 [`R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md); they are
 machine-proposed labels, not scholar-reviewed `reviewedValue`.
 
+The second source-inspected proposal layer is
+[`R2_MARKER_RUN_SCOPE_LABELS.md`](R2_MARKER_RUN_SCOPE_LABELS.md), covering
+numbered-marker prefix runs, preface/proxy rows, raw-headword bundles, and
+archive-parity controls.
+
 ## Packet Boundaries
 
 ### Div Source Scope
@@ -94,6 +99,11 @@ runs, and some source records exactly match archived counts.
 It does not prove that matching prefixes are philologically complete. Treat
 prefix and exact-record matches as review prompts until a dictionary-specific
 rule has been checked against source links.
+
+Current proposed labels: `archive-prefix-runs`, `reset-run-expansion`,
+`preface-proxy-extra`, `lookup-bundle-split`, `source-record-exact-target`,
+`single-run-parity-control`, `preface-retained-control`,
+`lumped-parity-control`, and `no-anchor-control`.
 
 ### AE Reverse Bands
 
