@@ -23,10 +23,9 @@ result.
   until R2 coverage broadens beyond the five anchor lemmas.
 - Review status: `machine-reviewed`.
 - Owner repo: `csl-atlas`.
-- Next use: start with `div-source-scope`; record source-reviewed parser
-  decisions before promoting any packet into the restored R2 splitter. The
-  first source-inspected proposal layer is
-  [`R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md).
+- Next use: review the generated ten-row checkpoint worksheet in
+  [`R2_CHECKPOINT_REVIEW.md`](R2_CHECKPOINT_REVIEW.md); keep parser promotion
+  deferred until human decisions exist.
 - External dependencies: local dictionary source rows already used by the R2
   source-anchor prototype.
 - Boundary note: dictionary evidence only; no DCS, corpus frequency,
@@ -90,6 +89,12 @@ The fifth source-inspected proposal layer is
 R2 mild drift follow-ups, under-split marker gaps, archive-parity controls,
 source-only expansion rows, homonym/continuation controls, and no-anchor
 controls.
+
+The generated checkpoint review packet is
+[`R2_CHECKPOINT_REVIEW.md`](R2_CHECKPOINT_REVIEW.md), backed by
+`data/lexico/r2_checkpoint_review_packet.json`. It selects two rows from each
+packet for human review, preserves source links and proposed parser labels, and
+keeps all human-decision fields empty.
 
 ## Packet Boundaries
 
