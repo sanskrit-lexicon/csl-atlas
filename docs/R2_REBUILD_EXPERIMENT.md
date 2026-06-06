@@ -13,8 +13,10 @@ claim, and not a scholar-reviewed sense decision layer.
   `data/lexico/r2_source_anchor_alignments.json`,
   `data/lexico/r2_parser_diagnostics.json`,
   `data/lexico/r2_review_packets.json`,
-  `data/lexico/r2_packet_label_proposals.json`, and the five
-  source-inspected proposal docs linked from `R2_REVIEW_PACKETS.md`.
+  `data/lexico/r2_packet_label_proposals.json`,
+  `data/lexico/r2_checkpoint_review_packet.json`,
+  `docs/R2_CHECKPOINT_REVIEW.md`, and the five source-inspected proposal docs
+  linked from `R2_REVIEW_PACKETS.md`.
 - Evidence label: `source-vs-archive`.
 - Limitations: the experiment is restricted to the five anchor lemmas and 14
   dictionaries already present in the prototype. It records parser drift and
@@ -22,7 +24,8 @@ claim, and not a scholar-reviewed sense decision layer.
 - Validation: `npm run build-r2-source-anchors`,
   `npm run build-r2-parser-diagnostics`,
   `npm run build-r2-review-packets`,
-  `npm run build-r2-label-proposals`, `git diff --check`, `npm test`,
+  `npm run build-r2-label-proposals`,
+  `npm run build-r2-checkpoint-packet`, `git diff --check`, `npm test`,
   `npm run validate-review-reports`, and `npm run build`.
 - Review status: `machine-proposed`.
 - Owner repo: `csl-atlas`.
@@ -91,18 +94,18 @@ The machine-readable labels + checkpoint step keeps the packet order fixed:
 
 ## Next Accepted Step
 
-The next accepted step is **machine-readable labels + checkpoint**, not parser
-promotion. The package must:
+The next accepted step is **review the checkpoint packet**, not parser
+promotion. The packet package must:
 
-1. generate `data/lexico/r2_packet_label_proposals.json` from
-   `data/lexico/r2_review_packets.json`;
-2. provide one proposal entry for every `diagnosticId`;
-3. keep packet vocabularies machine-readable and keep row labels inside the
-   packet vocabulary;
-4. expose the ten-row human checkpoint with source pointers, proposed parser
-   labels, review questions, and empty `reviewedValue`, `reviewer`,
-   `reviewedAt`, and `note` fields;
-5. report counts by packet, drift class, and priority;
+1. generate `data/lexico/r2_checkpoint_review_packet.json` and
+   `docs/R2_CHECKPOINT_REVIEW.md` from
+   `data/lexico/r2_packet_label_proposals.json`;
+2. preserve the exact ten checkpoint rows and their order;
+3. expose source pointers, packet context, proposed parser labels, and review
+   questions for each row;
+4. keep `reviewedValue`, `reviewer`, `reviewedAt`, and `note` empty until a
+   human reviewer supplies decisions;
+5. keep all proposed row labels inside the packet vocabulary;
 6. keep H5 review rows, public R2 pages, source-anchor generation, and splitter
    behavior untouched.
 
@@ -117,7 +120,8 @@ Parser promotion can be reconsidered only after the checkpoint rows have human
 decisions. A future parser-change pass should:
 
 1. rerun the R2 generator commands plus
-   `npm run build-r2-label-proposals`;
+   `npm run build-r2-label-proposals` and
+   `npm run build-r2-checkpoint-packet`;
 2. record changed row counts by packet, drift class, and parser family;
 3. explain every high-priority diagnostic row whose source/archive comparison
    changes;

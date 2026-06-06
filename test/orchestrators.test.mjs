@@ -16,6 +16,7 @@ import { indigenousAuthorityHints, jaccard, lookupKeysForLemma, reverseMatchProf
 import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExactMatches } from "../scripts/build-r2-parser-diagnostics.mjs";
 import { packetIdForDiagnostic, scopeCluesForDiagnostic } from "../scripts/build-r2-review-packets.mjs";
 import { CHECKPOINT_DIAGNOSTIC_IDS, buildPayload as buildR2LabelProposalPayload, labelsForPacket } from "../scripts/build-r2-label-proposals.mjs";
+import { buildMarkdown as buildR2CheckpointMarkdown, buildPayload as buildR2CheckpointPayload } from "../scripts/build-r2-checkpoint-packet.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -26,6 +27,8 @@ import { topForm } from "../scripts/build-citation-apparatus.mjs";
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const r2ReviewPackets = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_review_packets.json"), "utf8"));
 const r2LabelProposals = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_packet_label_proposals.json"), "utf8"));
+const r2CheckpointPacket = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_checkpoint_review_packet.json"), "utf8"));
+const r2CheckpointReviewMd = fs.readFileSync(path.join(repoRoot, "docs", "R2_CHECKPOINT_REVIEW.md"), "utf8");
 
 // ---- MW depth: count-divergence validation ----
 test("compareCounts: no warnings when counts match", () => {
@@ -291,6 +294,43 @@ test("R2 label proposal counts match the current review packet fixture", () => {
     "indigenous-iti-authority": 10,
     "ae-reverse-bands": 5
   });
+});
+
+test("R2 checkpoint packet artifact is generated from label proposals", () => {
+  assert.deepEqual(r2CheckpointPacket, buildR2CheckpointPayload(r2LabelProposals));
+});
+
+test("R2 checkpoint worksheet is generated from the checkpoint packet", () => {
+  assert.equal(r2CheckpointReviewMd, buildR2CheckpointMarkdown(r2CheckpointPacket));
+});
+
+test("R2 checkpoint packet preserves the stable 10-row order", () => {
+  assert.equal(r2CheckpointPacket.counts.checkpointRows, 10);
+  assert.deepEqual(r2CheckpointPacket.checkpointRows.map(row => row.diagnosticId), CHECKPOINT_DIAGNOSTIC_IDS);
+});
+
+test("R2 checkpoint packet keeps human decision fields empty", () => {
+  for (const row of r2CheckpointPacket.checkpointRows) {
+    assert.equal(row.reviewedValue, null);
+    assert.equal(row.reviewer, "");
+    assert.equal(row.reviewedAt, "");
+    assert.equal(row.note, "");
+  }
+});
+
+test("R2 checkpoint packet rows are reviewer-ready", () => {
+  for (const row of r2CheckpointPacket.checkpointRows) {
+    assert.ok(row.sourcePointers.length, `${row.diagnosticId} lacks source pointers`);
+    assert.ok(row.proposedParserLabels.length, `${row.diagnosticId} lacks proposed labels`);
+    assert.ok(row.reviewQuestion, `${row.diagnosticId} lacks a review question`);
+    assert.ok(row.packetTitle, `${row.diagnosticId} lacks packet context`);
+  }
+});
+
+test("R2 checkpoint worksheet contains all checkpoint diagnostic ids", () => {
+  for (const diagnosticId of CHECKPOINT_DIAGNOSTIC_IDS) {
+    assert.ok(r2CheckpointReviewMd.includes(diagnosticId), `${diagnosticId} missing from worksheet`);
+  }
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----
