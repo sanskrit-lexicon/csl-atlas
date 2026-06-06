@@ -53,8 +53,8 @@ for:
 | Fast English meaning | MW | AP | MW is broad; AP is often clearer for practical reading after MW. |
 | Classroom or translation aid | MW | AP | MW is the default atlas route; AP gives a compact reader-facing check. |
 | Citation-heavy philology | MW | PWG, PWK | PWG/PWK can show source trail, variants, and nested structure that MW may compress. |
-| Traditional Sanskrit-Sanskrit evidence | VCP | SKD | These preserve indigenous glossing and authority conventions. |
-| Older English tradition | WIL | SHS/KOW when available | Wilson-line evidence helps lineage and translation questions. |
+| Traditional Sanskrit-Sanskrit evidence | MW | VCP, SKD | Start from the public default, then inspect indigenous glossing and authority conventions. |
+| Older English tradition | MW | WIL, SHS/KOW when available | Start from the public default, then compare Wilson-line wording and translation history. |
 | German dictionary evidence | MW | PWG, PWK | Open them for evidence trail and structural detail, not because a newcomer needs the history first. |
 | Grammar or gender check | MW/AP | VCP/SKD where visible | Compare visible grammar labels and keep review status in view. |
 | Dictionary comparison | Reader Lookup | Dossier and comparison tools | Start with coverage, then inspect per-dictionary records. |
@@ -63,7 +63,7 @@ for:
 
 1. Need an English gloss quickly? Start with MW, then compare AP.
 2. Need source citations? Start with MW, then open PWG/PWK for apparatus.
-3. Need indigenous lexicographic evidence? Start with VCP and SKD.
+3. Need indigenous lexicographic evidence? Start with MW, then open VCP and SKD.
 4. Need to compare traditions? Use Reader Lookup, then open the source links.
 5. Need corpus frequency or passage usage? Leave the atlas path; that belongs
    to VisualDCS first.

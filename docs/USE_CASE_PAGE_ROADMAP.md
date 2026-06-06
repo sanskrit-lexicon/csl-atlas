@@ -51,6 +51,20 @@ targets before adding new analysis-method prose.
 | 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label cross-reference hub families before paper use. | review artifact built |
 | 8 | H5 anomaly scope package | UC-CD-05, UC-RV-03 | makers, reviewers | Turn forensic anomaly signals into a proof-first review queue. | scoped |
 
+## GTD Documentation Board
+
+| Bucket | Package | Next action | Done when |
+|---|---|---|---|
+| Next | Public dictionary chooser polish | Keep MW as the public default, maintain the decision-card route, and test `/dictionary-chooser` after public wording changes. | A reader can choose MW first and understand the second dictionary without learning lexicographic history first. |
+| Next | H6 review labels | Assign actual labels to the 13 edge-comparison rows in `H6_STRUCTURAL_REGISTER_REVIEW.md`. | Each H6 edge has a reviewed interpretation such as `format-shift`, `citation-truncation`, `structural-convergence`, or `positive-control-confirmed`. |
+| Next | Microstructure sense segmentation | Continue the microstructure doc sequence after headword/subentry structure with sense segmentation. | A scholar can tell where sense counts are reliable, where prose segmentation blocks counting, and which dictionaries need R2 rebuild work. |
+| Waiting | H4 semantic fields | Wait until H6 review labels and the sense-segmentation note are stable. | H4 review samples can be interpreted without outrunning the structural/microstructure docs. |
+| Waiting | Xref hub review | Wait until the public reader path and H6 review labels settle. | Xref hub labels can reuse the same review-label discipline. |
+| Done | Public trust blocks | Keep `Evidence`, `Limitations`, `Validation`, `Owner repo`, and `Next use` visible on public pages. | Trust-block audit finds no public Markdown page missing the required fields. |
+| Done | MW public default | MW remains the public first stop in chooser, landing, reader guide, and lookup caveats. | Search finds no public-reader route that tells newcomers to start elsewhere for ordinary lookup. |
+| Done | First microstructure layer | Use `MICROSTRUCTURE_HEADWORD_SUBENTRY.md` as the first scholar-facing microstructure page. | The next layer is explicitly sense segmentation. |
+| Blocked | Corpus frequency joins | Keep out of atlas until VisualDCS supplies a compact dictionary-facing contract. | A VisualDCS output contract exists and can be consumed without importing passage dashboards. |
+
 ## Public Page Contract
 
 Every public atlas page or tool must include the short form of

@@ -62,7 +62,8 @@ Quick rule of thumb:
 - **Just need an English meaning?** Start with MW, then check AP.
 - **Doing philology or chasing a source citation?** Start with MW, then open
   PWG/PWK for apparatus and variants.
-- **Working inside the traditional Indian lexicographic frame?** Use VCP and SKD.
+- **Working inside the traditional Indian lexicographic frame?** Start with MW,
+  then use VCP and SKD.
 - **Comparing how a word is treated across traditions?** Use the multi-dictionary lemma view (research mode).
 
 ## Task-Based Starting Points
@@ -71,11 +72,11 @@ Quick rule of thumb:
 |---|---|---|---|
 | Fast English meaning | MW | AP | MW is broad; AP is often clearer for practical reading. |
 | Citation-heavy philology | MW | PWG/PWK | MW gets you oriented; PWG/PWK preserve dense source trail, variants, and nested apparatus. |
-| Traditional Sanskrit-Sanskrit reading | VCP | SKD | These preserve indigenous glossing and citation conventions. |
+| Traditional Sanskrit-Sanskrit reading | MW | VCP/SKD | Start from the public default, then inspect indigenous glossing and citation conventions. |
 | Source-citation follow-through | MW | PWG, VCP, SKD | Start with a familiar record, then compare the source apparatus and indigenous citation conventions. |
 | Grammar or gender check | MW/AP | VCP/SKD when visible | Use visible grammar labels, but watch convention gaps and review status. |
-| Historical lexicography | PWG, PWK, WIL | SHS, KOW, AP/MW families | Compare lineage, condensation, and translation/copying patterns. |
-| Specialized topic | relevant specialized dictionary | general dictionaries | A specialized dictionary is strong evidence inside its domain, not a general baseline. |
+| Historical lexicography | MW | PWG, PWK, WIL, SHS, KOW, AP/MW families | Start from the public default, then compare lineage, condensation, and translation/copying patterns. |
+| Specialized topic | MW | relevant specialized dictionary | A specialized dictionary is strong evidence inside its domain, not a general baseline. |
 
 ## Dictionary Personalities
 

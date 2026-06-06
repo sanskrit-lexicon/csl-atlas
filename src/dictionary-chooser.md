@@ -31,6 +31,39 @@ word -> MW -> source link -> second dictionary if the task needs one
 Use MW first for ordinary lookup, translation support, and public reading. Then
 choose the second dictionary by the job you are doing:
 
+<div class="decision-cards">
+  <a class="decision-card primary" href="/dicts/mw">
+    <span>Default</span>
+    <strong>Open MW first</strong>
+    <small>Broad English lookup, source links, and the fastest public route from headword to record.</small>
+  </a>
+  <a class="decision-card" href="/dicts/ap">
+    <span>Meaning</span>
+    <strong>Then AP</strong>
+    <small>Use AP when the MW entry is long and you need a compact reader-facing English gloss.</small>
+  </a>
+  <a class="decision-card" href="/dicts/pwg">
+    <span>Source trail</span>
+    <strong>Then PWG/PWK</strong>
+    <small>Use the Petersburg dictionaries when MW compresses citations, variants, or nested structure.</small>
+  </a>
+  <a class="decision-card" href="/dicts/vcp">
+    <span>Sanskrit frame</span>
+    <strong>Then VCP/SKD</strong>
+    <small>Use Sanskrit-Sanskrit dictionaries when indigenous glossing and authority conventions matter.</small>
+  </a>
+  <a class="decision-card" href="/dicts/wil">
+    <span>Older wording</span>
+    <strong>Then WIL</strong>
+    <small>Use Wilson-line evidence when older English wording or translation inheritance matters.</small>
+  </a>
+  <a class="decision-card" href="/tools/reader-lookup">
+    <span>Compare</span>
+    <strong>Then Reader Lookup</strong>
+    <small>Use coverage and source links when you need to compare dictionary records side by side.</small>
+  </a>
+</div>
+
 | Your task | Start | Then open | Why the second step matters |
 |---|---|---|---|
 | I need a quick English meaning. | MW | AP | AP is often shorter and clearer for reading after MW gives breadth. |
@@ -95,3 +128,41 @@ grammar analysis outside dictionary records.
 - [PWK](/dicts/pwk)
 - [VCP](/dicts/vcp)
 - [SKD](/dicts/skd)
+
+<style>
+.decision-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 16px 0 22px;
+}
+.decision-card {
+  display: grid;
+  gap: 6px;
+  min-height: 132px;
+  border: 1px solid color-mix(in srgb, var(--theme-foreground), transparent 82%);
+  border-radius: 8px;
+  padding: 14px;
+  text-decoration: none;
+  background: color-mix(in srgb, var(--theme-background), var(--theme-foreground) 3%);
+}
+.decision-card:hover {
+  border-color: color-mix(in srgb, var(--theme-foreground), transparent 55%);
+}
+.decision-card.primary {
+  background: color-mix(in srgb, var(--theme-background), #2f6f9f 11%);
+}
+.decision-card span {
+  color: var(--theme-foreground-muted);
+  font-size: .82rem;
+  text-transform: uppercase;
+}
+.decision-card strong {
+  color: var(--theme-foreground);
+  font-size: 1.06rem;
+}
+.decision-card small {
+  color: var(--theme-foreground-muted);
+  line-height: 1.35;
+}
+</style>
