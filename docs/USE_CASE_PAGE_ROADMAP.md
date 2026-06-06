@@ -45,7 +45,7 @@ targets before adding new analysis-method prose.
 | 1a | [`DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md) | UC-RD-02, UC-RD-07 | public readers | Explain the chooser in broader reader-guide context. | active companion |
 | 2 | [`READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) | UC-RD-01, UC-RD-03, UC-RD-04, UC-RD-05 | public readers | Explain what a lookup result means, including no-result and ambiguous-result cases. | active second page |
 | 3 | [`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | proof doc active; four public queue pages carry proof/trust blocks |
-| 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md), and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | review packet documented |
+| 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md), and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | edge labels done |
 | 5 | [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md) plus the microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Start with the easiest parsed structure: headwords vs nested subentries. | active first microstructure page |
 | 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Keep H4 visible as the next continuity package after H6 and headword/subentry structure. | short placeholder on public chart; review packet documented |
 | 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label cross-reference hub families before paper use. | review artifact built |
@@ -55,13 +55,14 @@ targets before adding new analysis-method prose.
 
 | Bucket | Package | Next action | Done when |
 |---|---|---|---|
-| Next | Public dictionary chooser polish | Keep MW as the public default, maintain the decision-card route, and test `/dictionary-chooser` after public wording changes. | A reader can choose MW first and understand the second dictionary without learning lexicographic history first. |
-| Next | H6 review labels | Assign actual labels to the 13 edge-comparison rows in `H6_STRUCTURAL_REGISTER_REVIEW.md`. | Each H6 edge has a reviewed interpretation such as `format-shift`, `citation-truncation`, `structural-convergence`, or `positive-control-confirmed`. |
 | Next | Microstructure sense segmentation | Continue the microstructure doc sequence after headword/subentry structure with sense segmentation. | A scholar can tell where sense counts are reliable, where prose segmentation blocks counting, and which dictionaries need R2 rebuild work. |
-| Waiting | H4 semantic fields | Wait until H6 review labels and the sense-segmentation note are stable. | H4 review samples can be interpreted without outrunning the structural/microstructure docs. |
-| Waiting | Xref hub review | Wait until the public reader path and H6 review labels settle. | Xref hub labels can reuse the same review-label discipline. |
+| Next | H6 family outlier labels | Assign labels to the family outliers listed in `H6_STRUCTURAL_REGISTER_REVIEW.md`. | Each outlier family has an interpretation such as `genre-outlier`, `detector-blindness`, `citation-truncation`, or `grammar-policy-shift`. |
+| Waiting | H4 semantic fields | Wait until H6 family outliers and the sense-segmentation note are stable. | H4 review samples can be interpreted without outrunning the structural/microstructure docs. |
+| Waiting | Xref hub review | Wait until H6 family outlier labels settle. | Xref hub labels can reuse the same review-label discipline. |
 | Done | Public trust blocks | Keep `Evidence`, `Limitations`, `Validation`, `Owner repo`, and `Next use` visible on public pages. | Trust-block audit finds no public Markdown page missing the required fields. |
 | Done | MW public default | MW remains the public first stop in chooser, landing, reader guide, and lookup caveats. | Search finds no public-reader route that tells newcomers to start elsewhere for ordinary lookup. |
+| Done | Public dictionary chooser polish | Keep MW as the public default, maintain the decision-card route, and test `/dictionary-chooser` after public wording changes. | A reader can choose MW first and understand the second dictionary without learning lexicographic history first. |
+| Done | H6 review labels | Keep the 13 edge-comparison labels in `H6_STRUCTURAL_REGISTER_REVIEW.md` as the reviewed interpretation layer. | Each H6 edge has a reviewed interpretation such as `format-shift`, `citation-truncation`, `structural-convergence`, or `positive-control-confirmed`. |
 | Done | First microstructure layer | Use `MICROSTRUCTURE_HEADWORD_SUBENTRY.md` as the first scholar-facing microstructure page. | The next layer is explicitly sense segmentation. |
 | Blocked | Corpus frequency joins | Keep out of atlas until VisualDCS supplies a compact dictionary-facing contract. | A VisualDCS output contract exists and can be consumed without importing passage dashboards. |
 

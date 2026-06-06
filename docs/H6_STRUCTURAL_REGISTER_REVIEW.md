@@ -2,7 +2,8 @@
 
 Date: 2026-06-05
 
-Status: scholar-facing review packet for the H6 structural-register artifact.
+Status: scholar-facing review packet with reviewed edge labels for the H6
+structural-register artifact.
 
 ## Trust Block
 
@@ -20,14 +21,15 @@ Status: scholar-facing review packet for the H6 structural-register artifact.
   `python scripts/lexico/validate_lexico.py`, `npm test`, and
   `npm run build`.
 - Owner repo: `csl-atlas`.
-- Next use: label the 13 edge-comparison rows and family outliers before
-  presenting H6 as a reviewed paper claim.
+- Next use: use the 13 reviewed edge labels below for H6 interpretation, then
+  review family outliers before presenting the full family-level claim.
 
 ## Purpose
 
 H6 is already supported as a prototype: citation register plus grammar marking
 separate several dictionary traditions. This packet turns the L0 edge-comparison
-artifact into review work. The review question is not "which dictionary descends
+artifact into review work and records the first reviewed interpretation for all
+13 edge-comparison rows. The review question is not "which dictionary descends
 from which?" It is: when H6 agrees or disagrees with L0 known-edge evidence,
 what kind of structural explanation is visible?
 
@@ -43,21 +45,25 @@ what kind of structural explanation is visible?
 
 ## Edge Review Rows
 
-| Class | Edge | Structural distance | L0 consensus | Main question |
-|---|---|---:|---:|---|
-| positive-control | AP90 -> AP | 0.0861 | 0.581 | Does close structure confirm the known edition pair? |
-| genealogy-structure-tension | WIL -> SHS | 0.7056 | 0.806 | Is SHS structurally reformatted despite Wilson-line content? |
-| genealogy-structure-tension | PWG -> PW | 0.3924 | 0.806 | Does citation truncation explain the distance? |
-| genealogy-structure-tension | CCS -> CAE | 0.6663 | 0.683 | Is grammar-marking policy the distance driver? |
-| genealogy-structure-tension | PWG -> SCH | 0.5675 | 0.676 | Is SCH a structurally simplified Petersburg descendant? |
-| structural-convergence | YAT -> SHS | 0.0009 | 0.045 | Are they close because both expose similar low-register structure? |
-| structural-convergence | PWG -> MW | 0.1177 | 0.013 | Is MW structurally close to PWG while content/convention axes diverge? |
-| review | PW -> CCS | 0.6304 | 0.294 | Which part is inheritance and which part is convention shift? |
-| review | MW72 -> MW | 0.7615 | 0.310 | Is the 1899 tagging layer responsible for the distance? |
-| review | BOP -> MW | 0.7601 | 0.319 | Is BOP close in content but structurally far under H6? |
-| review | BEN -> MW | 0.1359 | 0.236 | Is this meaningful structural resemblance or broad tagged-register convergence? |
-| expected-separation | WIL -> YAT | 0.7057 | 0.073 | Does distance match weak L0 support? |
-| expected-separation | PWG -> MW72 | 0.8739 | 0.018 | Does the pre-1899 MW layer lack the later tagged register? |
+Reviewed labels below are interpretive labels over the generated machine fields,
+not edits to `data/lexico/structural_register_h6_review.json`. They explain how
+to read H6 distance against L0 edge support.
+
+| Class | Edge | Structural distance | L0 consensus | Reviewed label | Reviewed interpretation |
+|---|---|---:|---:|---|---|
+| positive-control | AP90 -> AP | 0.0861 | 0.581 | `positive-control-confirmed` | Same family and tagged citation mode, tiny citation delta, and only modest grammar delta confirm that H6 recognizes the close Apte edition pair. |
+| genealogy-structure-tension | WIL -> SHS | 0.7056 | 0.806 | `grammar-policy-shift` | The edge is strongly supported by L0, but H6 distance is almost entirely grammar delta; SHS exposes root/prose conventions where WIL exposes grammar marking. |
+| genealogy-structure-tension | PWG -> PW | 0.3924 | 0.806 | `citation-truncation` | Strong lineage support remains compatible with H6 distance because the citation delta is large while grammar delta is effectively zero. |
+| genealogy-structure-tension | CCS -> CAE | 0.6663 | 0.683 | `grammar-policy-shift` | The same-author pair keeps low citation register but changes grammar marking sharply, so H6 reads the editorial policy shift rather than a content break. |
+| genealogy-structure-tension | PWG -> SCH | 0.5675 | 0.676 | `detector-blindness` | Citation mode stays tagged and close, but grammar delta is high and SCH has no detected M1-M5 layer; treat this as simplified/detector-limited Petersburg structure. |
+| structural-convergence | YAT -> SHS | 0.0009 | 0.045 | `structural-convergence` | Near-zero H6 distance with weak L0 support is low-register convergence, not hidden descent. |
+| structural-convergence | PWG -> MW | 0.1177 | 0.013 | `structural-convergence` | MW and PWG are close in tagged citation/grammar register, but low L0 support keeps this as structural resemblance, not a lineage claim. |
+| review | PW -> CCS | 0.6304 | 0.294 | `format-shift` | Mixed support plus large citation and grammar deltas mark an editorial-format shift; H6 should not decide inheritance without separate content evidence. |
+| review | MW72 -> MW | 0.7615 | 0.310 | `format-shift` | The 1899 MW tagging layer changes both citation and grammar register, explaining why a known edition relation is structurally far in H6. |
+| review | BOP -> MW | 0.7601 | 0.319 | `format-shift` | BOP is low-register/minimal while MW is highly tagged; H6 captures the later MW format rather than judging BOP content proximity. |
+| review | BEN -> MW | 0.1359 | 0.236 | `structural-convergence` | Both are high tagged-register dictionaries with close H6 coordinates; the support level is too low for a descent claim. |
+| expected-separation | WIL -> YAT | 0.7057 | 0.073 | `expected-separation-confirmed` | Weak L0 support and high grammar-policy distance agree; H6 separation is expected even inside the Wilson-line neighborhood. |
+| expected-separation | PWG -> MW72 | 0.8739 | 0.018 | `expected-separation-confirmed` | The pre-1899 MW layer lacks the later tagged register and is far from PWG on both citation and grammar axes. |
 
 ## Family Outlier Checks
 
@@ -85,6 +91,7 @@ Use these labels in notes or future review reports:
 | `detector-blindness` | Missing M1-M5 layer or convention gap likely distorts the position. |
 | `genre-outlier` | Narrow or index genre explains the position. |
 | `needs-source-read` | The chart cannot explain the edge without direct chapter/source reading. |
+| `expected-separation-confirmed` | Weak L0 support and large structural distance point in the same direction. |
 
 ## Review Columns
 
@@ -117,6 +124,7 @@ and status vocabulary unchanged. Suggested machine fields:
 
 ## Acceptance
 
-H6 can move from prototype-backed to reviewed interpretation when the 13 L0 edge
-comparison rows and family outliers have labels explaining whether the chart
-shows lineage corroboration, format shift, convergence, or detector limitation.
+H6 edge comparisons now have reviewed interpretation labels. H6 can move from
+edge-reviewed to full reviewed interpretation when the family outliers also have
+labels explaining whether the chart shows lineage corroboration, format shift,
+convergence, genre outliers, or detector limitation.
