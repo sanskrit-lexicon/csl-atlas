@@ -28,6 +28,8 @@ documents edge classes, outlier checks, decision labels, and boundary rules.*
 have reviewed interpretation labels; family outlier checks remain.*
 *v2.4 sense-segmentation update 2026-06-06: the microstructure doc family now
 has a scholar-facing sense-segmentation layer; H4 waits on H6 family outliers.*
+*v2.5 H6 family-outlier update 2026-06-06: H6 family outliers now have
+reviewed interpretation labels; H4 is the next documentation package.*
 *v2.2 use-case documentation update 2026-06-06: `/dictionary-chooser` is the
 top-level public route with MW as the default first stop; H6 now has a
 rerunnable method note, and H4 remains the continuity package queued after H6
@@ -83,9 +85,9 @@ working view below so old H1-H7 labels do not look equally open.
 | **H1R** | **Sense granularity is a family/marking-style trait, not pure temporal inflation.** | R2 sense-unit measurements by year and family | researchers, makers | negative finding for original H1; restore/rebuild R2 artifacts before broadening |
 | **H2** | **Citation density predicts a sense's survival** into later dictionaries. | cited vs uncited ancestor senses on measured inheritance edges | researchers | supported finding in R2; broaden panel next |
 | **H3R** | **Derivative dictionaries copy or condense more than they expand.** | net sense delta and gloss overlap along measured inheritance edges | researchers, historians | negative finding for original H3; no measured edge shows systematic net-addition |
-| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | map dictionary headword coverage onto **Amarakosa-native topical fields** -> per-dict and per-family field distribution | researchers, students | M8 data package, chart, interpretation note, family-profile artifact, and review packet built; queued behind H6 family outlier labels |
+| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | map dictionary headword coverage onto **Amarakosa-native topical fields** -> per-dict and per-family field distribution | researchers, students | M8 data package, chart, interpretation note, family-profile artifact, and review packet built; next documentation package |
 | **H5** | **"Ghost entries"** — shared OCR/typo anomalies — are both a lineage fingerprint **and** an editor QA flag. | rarity-weighted shared-anomaly detection (extends L3 forensic) | makers, historians | scoped as proof-first maker queue |
-| **H6** | **Structural register (citation × grammar-marking) predicts tradition family.** | cluster the macro profile (§1.2); compare to the genealogy tree | researchers | prototype supported, charted, review-classed and edge-labeled against L0 known edges, and documented as a rerunnable method note |
+| **H6** | **Structural register (citation × grammar-marking) predicts tradition family.** | cluster the macro profile (§1.2); compare to the genealogy tree | researchers | prototype supported, charted, review-classed, edge-labeled, family-outlier-labeled, and documented as a rerunnable method note |
 | **H7** | **First-N sampling materially biases structure metrics** (early-alphabet entries are shorter/sparser). | compare first-N vs random vs stratified samples on the same dicts | methodology | **✅ A7 resolved 2026-05-31** — full corpus chosen (bias moot for production); the §1.2 prototype already confirmed the first-N skew empirically |
 
 ---

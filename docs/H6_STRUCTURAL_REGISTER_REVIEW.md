@@ -21,8 +21,8 @@ structural-register artifact.
   `python scripts/lexico/validate_lexico.py`, `npm test`, and
   `npm run build`.
 - Owner repo: `csl-atlas`.
-- Next use: use the 13 reviewed edge labels below for H6 interpretation, then
-  review family outliers before presenting the full family-level claim.
+- Next use: use the reviewed edge and family-outlier labels below for H6
+  interpretation; source-read selected examples before paper use.
 
 ## Purpose
 
@@ -67,15 +67,16 @@ to read H6 distance against L0 edge support.
 
 ## Family Outlier Checks
 
-Use `familyProfiles[*].outliers` from the artifact:
+Use `familyProfiles[*].outliers` from the artifact. These labels explain why a
+dictionary sits far from its family centroid; they are not error labels.
 
-| Family | First checks | Review question |
-|---|---|---|
-| western-tagged | SCH, PWG, BEN | Are outliers caused by citation density, grammar marking, or a missing M1-M5 layer? |
-| indigenous-prose | VCP, SKD, KRM | Are prose/iti citation and root layers being counted correctly? |
-| reverse-bilingual | AE, MWE | Is lookup direction creating a structural split inside the family? |
-| specialized | BHS, PGN, PE | Does narrow scope or small source size explain the outlier? |
-| index-catalogue | MCI, ACC, PUI | Is the index/catalogue warning sufficient, or does the family need subtypes? |
+| Family | Representative outliers | Reviewed labels | Reviewed interpretation |
+|---|---|---|---|
+| western-tagged | SCH, PWG, BEN, WIL, MW, YAT, CCS, SHS, MW72, BOP, CAE, LRV | `citation-register-outlier`, `grammar-policy-shift`, `detector-blindness` | The family is intentionally broad: high tagged apparatus (PWG, BEN, MW), high grammar with low citation (WIL, CAE), and low/prose/minimal conventions (YAT, CCS, SHS, MW72, BOP, LRV) all belong to the western lineage neighborhood but occupy different H6 registers. |
+| specialized | BHS, PGN, PE, ABCH, ARMH, ACPH | `genre-outlier`, `detector-blindness` | BHS behaves like a full structured narrative dictionary despite being specialized; most other specialized sources are low-register or small-source cases where missing M1-M5 layers should not be read as lack of content. |
+| index-catalogue | MCI, ACC, PUI, IEG, VEI, INM, SNP | `genre-outlier` | The index/catalogue warning is sufficient for the current atlas layer: the family is low-register and cohesive, and should not be compared directly with narrative dictionaries. |
+| indigenous-prose | VCP, SKD, KRM | `indigenous-prose-register`, `detector-blindness` | All three use prose/`iti` and root layers rather than `<ls>` citation. VCP's lower detected citation share is a convention/recovery warning, not evidence that it lacks indigenous citation structure. |
+| reverse-bilingual | AE, MWE | `lookup-direction-split`, `detector-blindness` | Lookup direction creates a real split: AE exposes tagged grammar/subentry structure, while MWE is low/minimal under H6. Treat the family as reverse-bilingual genre evidence, not Sanskrit-to-European dictionary evidence. |
 
 ## Decision Labels
 
@@ -92,6 +93,9 @@ Use these labels in notes or future review reports:
 | `genre-outlier` | Narrow or index genre explains the position. |
 | `needs-source-read` | The chart cannot explain the edge without direct chapter/source reading. |
 | `expected-separation-confirmed` | Weak L0 support and large structural distance point in the same direction. |
+| `citation-register-outlier` | Citation density/register places a dictionary far from its family centroid. |
+| `indigenous-prose-register` | Prose/`iti` and root conventions explain the H6 position. |
+| `lookup-direction-split` | Reverse-bilingual lookup direction explains the structural split. |
 
 ## Review Columns
 
@@ -124,7 +128,8 @@ and status vocabulary unchanged. Suggested machine fields:
 
 ## Acceptance
 
-H6 edge comparisons now have reviewed interpretation labels. H6 can move from
-edge-reviewed to full reviewed interpretation when the family outliers also have
-labels explaining whether the chart shows lineage corroboration, format shift,
-convergence, genre outliers, or detector limitation.
+H6 edge comparisons and family outliers now have reviewed interpretation labels.
+Before paper use, source-read any individual edge or outlier that will be cited
+as an example, but the documentation layer now distinguishes lineage
+corroboration, format shift, convergence, genre outliers, lookup-direction
+splits, prose-register effects, and detector limitation.
