@@ -1,0 +1,867 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "three-axis-comparison-packet",
+  "claim": "THREE-AXES: content, convention, and microstructure inheritance must be compared as separate atlas evidence axes.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-reviewed",
+  "ownerRepo": "csl-atlas",
+  "generatedAt": "2026-06-07T13:34:42.697Z",
+  "generatedBy": "npm run build-three-axis-comparison",
+  "sourceFiles": [
+    "src/data/lexicographic-structure/L0/bootstrap_support.csv",
+    "src/data/lexicographic-structure/sanhw1_jaccard.csv",
+    "src/data/lexicographic-structure/L0/content_convention_scatter.csv",
+    "src/data/dicts/structural-register.json",
+    "data/lexico/microstructure_fingerprint.json",
+    "scripts/build-three-axis-comparison.mjs"
+  ],
+  "sourceGeneratedAt": {
+    "structuralRegister": "2026-06-04T19:55:29.440Z"
+  },
+  "counts": {
+    "comparisonRows": 13,
+    "focusRows": 4,
+    "byAxisReading": {
+      "content-overlap-needs-axis-review": 4,
+      "mixed-axis-review": 4,
+      "content-and-convention-aligned-register-shift": 3,
+      "content-carried-with-convention-and-register-recoding": 2
+    },
+    "byContentBand": {
+      "high-content-overlap": 9,
+      "low-content-overlap": 3,
+      "medium-content-overlap": 1
+    },
+    "byConventionBand": {
+      "medium-convention-overlap": 7,
+      "high-convention-overlap": 3,
+      "low-convention-overlap": 3
+    },
+    "byMicrostructureBand": {
+      "divergent-register-and-layers": 8,
+      "partial-register-or-layer-overlap": 3,
+      "close-register-and-layers": 2
+    },
+    "highContentLowConventionRows": 2
+  },
+  "axisDefinitions": [
+    "Content axis: directed sanhw1 parent-in-child headword containment, with pairwise Jaccard retained as a size-aware caveat signal.",
+    "Convention axis: L0 convention-fingerprint similarity and bootstrap support over known dictionary edges.",
+    "Microstructure axis: H6 citation/grammar register distance plus M1-M5 layer overlap from the microstructure fingerprint.",
+    "Axis readings are machine interpretation prompts, not human-reviewed lineage decisions."
+  ],
+  "comparisonRows": [
+    {
+      "rowId": "three-axis:WIL:YAT",
+      "parent": "WIL",
+      "child": "YAT",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.073,
+      "nnKnnSupport": 0.026,
+      "contentAxis": {
+        "parentInChild": 0.9264,
+        "childInParent": 0.9102,
+        "jaccard": 0.8488,
+        "intersection": 40703,
+        "parentSize": 43939,
+        "childSize": 44720,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.3901,
+        "conventionDistance": 0.6099,
+        "bootstrapSupport": 0.073,
+        "band": "low-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "low",
+        "childCitationMode": "low",
+        "citationDeltaPct": 0.49,
+        "grammarDeltaPct": 99.8,
+        "structuralDistance01": 0.7057,
+        "structuralRegisterSimilarity01": 0.2943,
+        "parentDominantLayer": "subentry",
+        "childDominantLayer": "root",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.1472,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "content-carried-with-convention-and-register-recoding",
+      "interpretation": "High lexical containment is paired with recoded convention and shifted register; do not collapse this into a simple descent score.",
+      "sourceKeys": {
+        "contentPairKey": "WIL|YAT",
+        "conventionPairKey": "WIL|YAT",
+        "bootstrapPairKey": "WIL|YAT"
+      }
+    },
+    {
+      "rowId": "three-axis:WIL:SHS",
+      "parent": "WIL",
+      "child": "SHS",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.806,
+      "nnKnnSupport": 0.962,
+      "contentAxis": {
+        "parentInChild": 0.9525,
+        "childInParent": 0.8957,
+        "jaccard": 0.8574,
+        "intersection": 41854,
+        "parentSize": 43939,
+        "childSize": 46730,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.7781,
+        "conventionDistance": 0.2219,
+        "bootstrapSupport": 0.806,
+        "band": "high-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "low",
+        "childCitationMode": "low",
+        "citationDeltaPct": 0.37,
+        "grammarDeltaPct": 99.78,
+        "structuralDistance01": 0.7056,
+        "structuralRegisterSimilarity01": 0.2944,
+        "parentDominantLayer": "subentry",
+        "childDominantLayer": "root",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.1472,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "content-and-convention-aligned-register-shift",
+      "interpretation": "Content and convention align, but register/microstructure changed enough to need a separate reading.",
+      "sourceKeys": {
+        "contentPairKey": "SHS|WIL",
+        "conventionPairKey": "SHS|WIL",
+        "bootstrapPairKey": "WIL|SHS"
+      }
+    },
+    {
+      "rowId": "three-axis:YAT:SHS",
+      "parent": "YAT",
+      "child": "SHS",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.045,
+      "nnKnnSupport": 0.123,
+      "contentAxis": {
+        "parentInChild": 0.8941,
+        "childInParent": 0.8556,
+        "jaccard": 0.7769,
+        "intersection": 39984,
+        "parentSize": 44720,
+        "childSize": 46730,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.4766,
+        "conventionDistance": 0.5234,
+        "bootstrapSupport": 0.045,
+        "band": "medium-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "low",
+        "childCitationMode": "low",
+        "citationDeltaPct": 0.12,
+        "grammarDeltaPct": 0.02,
+        "structuralDistance01": 0.0009,
+        "structuralRegisterSimilarity01": 0.9991,
+        "parentDominantLayer": "root",
+        "childDominantLayer": "root",
+        "sameDominantLayer": true,
+        "layerJaccard": 1,
+        "microstructureSimilarity01": 0.9995,
+        "band": "close-register-and-layers"
+      },
+      "axisReading": "content-overlap-needs-axis-review",
+      "interpretation": "Content overlap is high, but the other axes do not form a single stable reading.",
+      "sourceKeys": {
+        "contentPairKey": "SHS|YAT",
+        "conventionPairKey": "SHS|YAT",
+        "bootstrapPairKey": "YAT|SHS"
+      }
+    },
+    {
+      "rowId": "three-axis:PWG:PW",
+      "parent": "PWG",
+      "child": "PW",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.806,
+      "nnKnnSupport": 0.93,
+      "contentAxis": {
+        "parentInChild": 0.9375,
+        "childInParent": 0.6571,
+        "jaccard": 0.6295,
+        "intersection": 99454,
+        "parentSize": 106083,
+        "childSize": 151349,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.7466,
+        "conventionDistance": 0.2534,
+        "bootstrapSupport": 0.806,
+        "band": "high-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "tagged",
+        "childCitationMode": "tagged",
+        "citationDeltaPct": 55.49,
+        "grammarDeltaPct": 0.19,
+        "structuralDistance01": 0.3924,
+        "structuralRegisterSimilarity01": 0.6076,
+        "parentDominantLayer": "xref",
+        "childDominantLayer": "subentry",
+        "sameDominantLayer": false,
+        "layerJaccard": 0.75,
+        "microstructureSimilarity01": 0.6788,
+        "band": "partial-register-or-layer-overlap"
+      },
+      "axisReading": "content-and-convention-aligned-register-shift",
+      "interpretation": "Content and convention align, but register/microstructure changed enough to need a separate reading.",
+      "sourceKeys": {
+        "contentPairKey": "PW|PWG",
+        "conventionPairKey": "PW|PWG",
+        "bootstrapPairKey": "PWG|PW"
+      }
+    },
+    {
+      "rowId": "three-axis:PW:CCS",
+      "parent": "PW",
+      "child": "CCS",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.294,
+      "nnKnnSupport": 0.213,
+      "contentAxis": {
+        "parentInChild": 0.1796,
+        "childInParent": 0.9452,
+        "jaccard": 0.1777,
+        "intersection": 27176,
+        "parentSize": 151349,
+        "childSize": 28751,
+        "band": "low-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.5724,
+        "conventionDistance": 0.4276,
+        "bootstrapSupport": 0.294,
+        "band": "medium-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "tagged",
+        "childCitationMode": "low",
+        "citationDeltaPct": 38.78,
+        "grammarDeltaPct": 80.28,
+        "structuralDistance01": 0.6304,
+        "structuralRegisterSimilarity01": 0.3696,
+        "parentDominantLayer": "subentry",
+        "childDominantLayer": "none",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.1848,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "mixed-axis-review",
+      "interpretation": "The three axes disagree or remain weak; keep as a review/control row.",
+      "sourceKeys": {
+        "contentPairKey": "CCS|PW",
+        "conventionPairKey": "CCS|PW",
+        "bootstrapPairKey": "PW|CCS"
+      }
+    },
+    {
+      "rowId": "three-axis:CCS:CAE",
+      "parent": "CCS",
+      "child": "CAE",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.683,
+      "nnKnnSupport": 0.767,
+      "contentAxis": {
+        "parentInChild": 0.9396,
+        "childInParent": 0.702,
+        "jaccard": 0.6716,
+        "intersection": 27014,
+        "parentSize": 28751,
+        "childSize": 38484,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.7074,
+        "conventionDistance": 0.2926,
+        "bootstrapSupport": 0.683,
+        "band": "high-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "low",
+        "childCitationMode": "low",
+        "citationDeltaPct": 0.04,
+        "grammarDeltaPct": 94.23,
+        "structuralDistance01": 0.6663,
+        "structuralRegisterSimilarity01": 0.3337,
+        "parentDominantLayer": "none",
+        "childDominantLayer": "preverb",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.1668,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "content-and-convention-aligned-register-shift",
+      "interpretation": "Content and convention align, but register/microstructure changed enough to need a separate reading.",
+      "sourceKeys": {
+        "contentPairKey": "CAE|CCS",
+        "conventionPairKey": "CAE|CCS",
+        "bootstrapPairKey": "CCS|CAE"
+      }
+    },
+    {
+      "rowId": "three-axis:MW72:MW",
+      "parent": "MW72",
+      "child": "MW",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.31,
+      "nnKnnSupport": 0.235,
+      "contentAxis": {
+        "parentInChild": 0.8963,
+        "childInParent": 0.2363,
+        "jaccard": 0.23,
+        "intersection": 45855,
+        "parentSize": 51159,
+        "childSize": 194084,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.5619,
+        "conventionDistance": 0.4381,
+        "bootstrapSupport": 0.31,
+        "band": "medium-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "low",
+        "childCitationMode": "tagged",
+        "citationDeltaPct": 78.94,
+        "grammarDeltaPct": 73.26,
+        "structuralDistance01": 0.7615,
+        "structuralRegisterSimilarity01": 0.2385,
+        "parentDominantLayer": "root",
+        "childDominantLayer": "xref",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.1192,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "content-overlap-needs-axis-review",
+      "interpretation": "Content overlap is high, but the other axes do not form a single stable reading.",
+      "sourceKeys": {
+        "contentPairKey": "MW|MW72",
+        "conventionPairKey": "MW|MW72",
+        "bootstrapPairKey": "MW72|MW"
+      }
+    },
+    {
+      "rowId": "three-axis:AP90:AP",
+      "parent": "AP90",
+      "child": "AP",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.581,
+      "nnKnnSupport": 0.859,
+      "contentAxis": {
+        "parentInChild": 0.7601,
+        "childInParent": 0.2939,
+        "jaccard": 0.2689,
+        "intersection": 26055,
+        "parentSize": 34277,
+        "childSize": 88667,
+        "band": "medium-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.6163,
+        "conventionDistance": 0.3837,
+        "bootstrapSupport": 0.581,
+        "band": "medium-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "tagged",
+        "childCitationMode": "tagged",
+        "citationDeltaPct": 0.48,
+        "grammarDeltaPct": 12.16,
+        "structuralDistance01": 0.0861,
+        "structuralRegisterSimilarity01": 0.9139,
+        "parentDominantLayer": "subentry",
+        "childDominantLayer": "subentry",
+        "sameDominantLayer": true,
+        "layerJaccard": 1,
+        "microstructureSimilarity01": 0.9569,
+        "band": "close-register-and-layers"
+      },
+      "axisReading": "mixed-axis-review",
+      "interpretation": "The three axes disagree or remain weak; keep as a review/control row.",
+      "sourceKeys": {
+        "contentPairKey": "AP|AP90",
+        "conventionPairKey": "AP|AP90",
+        "bootstrapPairKey": "AP90|AP"
+      }
+    },
+    {
+      "rowId": "three-axis:PWG:MW72",
+      "parent": "PWG",
+      "child": "MW72",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.018,
+      "nnKnnSupport": 0.001,
+      "contentAxis": {
+        "parentInChild": 0.3299,
+        "childInParent": 0.6841,
+        "jaccard": 0.2863,
+        "intersection": 34999,
+        "parentSize": 106083,
+        "childSize": 51159,
+        "band": "low-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.2474,
+        "conventionDistance": 0.7526,
+        "bootstrapSupport": 0.018,
+        "band": "low-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "tagged",
+        "childCitationMode": "low",
+        "citationDeltaPct": 94.11,
+        "grammarDeltaPct": 80.1,
+        "structuralDistance01": 0.8739,
+        "structuralRegisterSimilarity01": 0.1261,
+        "parentDominantLayer": "xref",
+        "childDominantLayer": "root",
+        "sameDominantLayer": false,
+        "layerJaccard": 0.25,
+        "microstructureSimilarity01": 0.188,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "mixed-axis-review",
+      "interpretation": "The three axes disagree or remain weak; keep as a review/control row.",
+      "sourceKeys": {
+        "contentPairKey": "MW72|PWG",
+        "conventionPairKey": "MW72|PWG",
+        "bootstrapPairKey": "PWG|MW72"
+      }
+    },
+    {
+      "rowId": "three-axis:PWG:MW",
+      "parent": "PWG",
+      "child": "MW",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.013,
+      "nnKnnSupport": 0.023,
+      "contentAxis": {
+        "parentInChild": 0.8934,
+        "childInParent": 0.4883,
+        "jaccard": 0.4614,
+        "intersection": 94776,
+        "parentSize": 106083,
+        "childSize": 194084,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.3708,
+        "conventionDistance": 0.6292,
+        "bootstrapSupport": 0.013,
+        "band": "low-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "tagged",
+        "childCitationMode": "tagged",
+        "citationDeltaPct": 15.17,
+        "grammarDeltaPct": 6.84,
+        "structuralDistance01": 0.1177,
+        "structuralRegisterSimilarity01": 0.8823,
+        "parentDominantLayer": "xref",
+        "childDominantLayer": "xref",
+        "sameDominantLayer": true,
+        "layerJaccard": 0.5,
+        "microstructureSimilarity01": 0.6911,
+        "band": "partial-register-or-layer-overlap"
+      },
+      "axisReading": "content-carried-with-convention-and-register-recoding",
+      "interpretation": "High lexical containment is paired with recoded convention and shifted register; do not collapse this into a simple descent score.",
+      "sourceKeys": {
+        "contentPairKey": "MW|PWG",
+        "conventionPairKey": "MW|PWG",
+        "bootstrapPairKey": "PWG|MW"
+      }
+    },
+    {
+      "rowId": "three-axis:PWG:SCH",
+      "parent": "PWG",
+      "child": "SCH",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.676,
+      "nnKnnSupport": 0.795,
+      "contentAxis": {
+        "parentInChild": 0.0734,
+        "childInParent": 0.2735,
+        "jaccard": 0.0614,
+        "intersection": 7782,
+        "parentSize": 106083,
+        "childSize": 28455,
+        "band": "low-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.682,
+        "conventionDistance": 0.318,
+        "bootstrapSupport": 0.676,
+        "band": "medium-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "tagged",
+        "childCitationMode": "tagged",
+        "citationDeltaPct": 4.91,
+        "grammarDeltaPct": 80.1,
+        "structuralDistance01": 0.5675,
+        "structuralRegisterSimilarity01": 0.4325,
+        "parentDominantLayer": "xref",
+        "childDominantLayer": "none",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.2162,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "mixed-axis-review",
+      "interpretation": "The three axes disagree or remain weak; keep as a review/control row.",
+      "sourceKeys": {
+        "contentPairKey": "PWG|SCH",
+        "conventionPairKey": "PWG|SCH",
+        "bootstrapPairKey": "PWG|SCH"
+      }
+    },
+    {
+      "rowId": "three-axis:BOP:MW",
+      "parent": "BOP",
+      "child": "MW",
+      "tier": "B",
+      "conventionBootstrapSupport": 0.319,
+      "nnKnnSupport": 0.326,
+      "contentAxis": {
+        "parentInChild": 0.94,
+        "childInParent": 0.0412,
+        "jaccard": 0.0411,
+        "intersection": 7995,
+        "parentSize": 8505,
+        "childSize": 194084,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.6312,
+        "conventionDistance": 0.3688,
+        "bootstrapSupport": 0.319,
+        "band": "medium-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "low",
+        "childCitationMode": "tagged",
+        "citationDeltaPct": 78.76,
+        "grammarDeltaPct": 73.15,
+        "structuralDistance01": 0.7601,
+        "structuralRegisterSimilarity01": 0.2399,
+        "parentDominantLayer": "none",
+        "childDominantLayer": "xref",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.12,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "content-overlap-needs-axis-review",
+      "interpretation": "Content overlap is high, but the other axes do not form a single stable reading.",
+      "sourceKeys": {
+        "contentPairKey": "BOP|MW",
+        "conventionPairKey": "BOP|MW",
+        "bootstrapPairKey": "BOP|MW"
+      }
+    },
+    {
+      "rowId": "three-axis:BEN:MW",
+      "parent": "BEN",
+      "child": "MW",
+      "tier": "B",
+      "conventionBootstrapSupport": 0.236,
+      "nnKnnSupport": 0.199,
+      "contentAxis": {
+        "parentInChild": 0.9374,
+        "childInParent": 0.0823,
+        "jaccard": 0.0818,
+        "intersection": 15969,
+        "parentSize": 17036,
+        "childSize": 194084,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.5297,
+        "conventionDistance": 0.4703,
+        "bootstrapSupport": 0.236,
+        "band": "medium-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "tagged",
+        "childCitationMode": "tagged",
+        "citationDeltaPct": 3.13,
+        "grammarDeltaPct": 18.96,
+        "structuralDistance01": 0.1359,
+        "structuralRegisterSimilarity01": 0.8641,
+        "parentDominantLayer": "subentry",
+        "childDominantLayer": "xref",
+        "sameDominantLayer": false,
+        "layerJaccard": 0.5,
+        "microstructureSimilarity01": 0.6821,
+        "band": "partial-register-or-layer-overlap"
+      },
+      "axisReading": "content-overlap-needs-axis-review",
+      "interpretation": "Content overlap is high, but the other axes do not form a single stable reading.",
+      "sourceKeys": {
+        "contentPairKey": "BEN|MW",
+        "conventionPairKey": "BEN|MW",
+        "bootstrapPairKey": "BEN|MW"
+      }
+    }
+  ],
+  "focusRows": [
+    {
+      "rowId": "three-axis:PWG:MW",
+      "parent": "PWG",
+      "child": "MW",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.013,
+      "nnKnnSupport": 0.023,
+      "contentAxis": {
+        "parentInChild": 0.8934,
+        "childInParent": 0.4883,
+        "jaccard": 0.4614,
+        "intersection": 94776,
+        "parentSize": 106083,
+        "childSize": 194084,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.3708,
+        "conventionDistance": 0.6292,
+        "bootstrapSupport": 0.013,
+        "band": "low-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "tagged",
+        "childCitationMode": "tagged",
+        "citationDeltaPct": 15.17,
+        "grammarDeltaPct": 6.84,
+        "structuralDistance01": 0.1177,
+        "structuralRegisterSimilarity01": 0.8823,
+        "parentDominantLayer": "xref",
+        "childDominantLayer": "xref",
+        "sameDominantLayer": true,
+        "layerJaccard": 0.5,
+        "microstructureSimilarity01": 0.6911,
+        "band": "partial-register-or-layer-overlap"
+      },
+      "axisReading": "content-carried-with-convention-and-register-recoding",
+      "interpretation": "High lexical containment is paired with recoded convention and shifted register; do not collapse this into a simple descent score.",
+      "sourceKeys": {
+        "contentPairKey": "MW|PWG",
+        "conventionPairKey": "MW|PWG",
+        "bootstrapPairKey": "PWG|MW"
+      }
+    },
+    {
+      "rowId": "three-axis:CCS:CAE",
+      "parent": "CCS",
+      "child": "CAE",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.683,
+      "nnKnnSupport": 0.767,
+      "contentAxis": {
+        "parentInChild": 0.9396,
+        "childInParent": 0.702,
+        "jaccard": 0.6716,
+        "intersection": 27014,
+        "parentSize": 28751,
+        "childSize": 38484,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.7074,
+        "conventionDistance": 0.2926,
+        "bootstrapSupport": 0.683,
+        "band": "high-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "low",
+        "childCitationMode": "low",
+        "citationDeltaPct": 0.04,
+        "grammarDeltaPct": 94.23,
+        "structuralDistance01": 0.6663,
+        "structuralRegisterSimilarity01": 0.3337,
+        "parentDominantLayer": "none",
+        "childDominantLayer": "preverb",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.1668,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "content-and-convention-aligned-register-shift",
+      "interpretation": "Content and convention align, but register/microstructure changed enough to need a separate reading.",
+      "sourceKeys": {
+        "contentPairKey": "CAE|CCS",
+        "conventionPairKey": "CAE|CCS",
+        "bootstrapPairKey": "CCS|CAE"
+      }
+    },
+    {
+      "rowId": "three-axis:WIL:SHS",
+      "parent": "WIL",
+      "child": "SHS",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.806,
+      "nnKnnSupport": 0.962,
+      "contentAxis": {
+        "parentInChild": 0.9525,
+        "childInParent": 0.8957,
+        "jaccard": 0.8574,
+        "intersection": 41854,
+        "parentSize": 43939,
+        "childSize": 46730,
+        "band": "high-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.7781,
+        "conventionDistance": 0.2219,
+        "bootstrapSupport": 0.806,
+        "band": "high-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "low",
+        "childCitationMode": "low",
+        "citationDeltaPct": 0.37,
+        "grammarDeltaPct": 99.78,
+        "structuralDistance01": 0.7056,
+        "structuralRegisterSimilarity01": 0.2944,
+        "parentDominantLayer": "subentry",
+        "childDominantLayer": "root",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.1472,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "content-and-convention-aligned-register-shift",
+      "interpretation": "Content and convention align, but register/microstructure changed enough to need a separate reading.",
+      "sourceKeys": {
+        "contentPairKey": "SHS|WIL",
+        "conventionPairKey": "SHS|WIL",
+        "bootstrapPairKey": "WIL|SHS"
+      }
+    },
+    {
+      "rowId": "three-axis:PWG:SCH",
+      "parent": "PWG",
+      "child": "SCH",
+      "tier": "A",
+      "conventionBootstrapSupport": 0.676,
+      "nnKnnSupport": 0.795,
+      "contentAxis": {
+        "parentInChild": 0.0734,
+        "childInParent": 0.2735,
+        "jaccard": 0.0614,
+        "intersection": 7782,
+        "parentSize": 106083,
+        "childSize": 28455,
+        "band": "low-content-overlap"
+      },
+      "conventionAxis": {
+        "conventionSimilarity": 0.682,
+        "conventionDistance": 0.318,
+        "bootstrapSupport": 0.676,
+        "band": "medium-convention-overlap"
+      },
+      "microstructureAxis": {
+        "parentFamily": "western-tagged",
+        "childFamily": "western-tagged",
+        "sameFamily": true,
+        "parentCitationMode": "tagged",
+        "childCitationMode": "tagged",
+        "citationDeltaPct": 4.91,
+        "grammarDeltaPct": 80.1,
+        "structuralDistance01": 0.5675,
+        "structuralRegisterSimilarity01": 0.4325,
+        "parentDominantLayer": "xref",
+        "childDominantLayer": "none",
+        "sameDominantLayer": false,
+        "layerJaccard": 0,
+        "microstructureSimilarity01": 0.2162,
+        "band": "divergent-register-and-layers"
+      },
+      "axisReading": "mixed-axis-review",
+      "interpretation": "The three axes disagree or remain weak; keep as a review/control row.",
+      "sourceKeys": {
+        "contentPairKey": "PWG|SCH",
+        "conventionPairKey": "PWG|SCH",
+        "bootstrapPairKey": "PWG|SCH"
+      }
+    }
+  ],
+  "limitations": [
+    "Raw headword containment is size-confounded; use it as content presence, not proof of content copying.",
+    "Convention similarity measures documented house style, not lexical content.",
+    "Microstructure similarity can reflect genre, source format, or detector coverage rather than descent.",
+    "Rows remain review prompts; the packet records no human decisions and promotes no public claim."
+  ],
+  "boundary": [
+    "Atlas dictionary evidence only.",
+    "No R2 parser behavior, public page, source-anchor generation, H5 review row, backend/runtime LLM, DCS/corpus, standards, or GitHub-process work is changed.",
+    "DCS/corpus frequency and external maker decisions remain outside this artifact."
+  ]
+}
