@@ -16,12 +16,14 @@ strong testable hypothesis, not a release claim or automatic correction feed.
   separates correction targets, conventions, lineage signals, parser artifacts,
   and ordinary forms; it does not edit dictionary data.
 - Validation: rerun `npm run build-h5-anomaly-review`, then
-  `npm run build-h5-maker-qa-candidates`, then `npm run validate-review-reports`.
+  `npm run build-h5-maker-qa-candidates`, then
+  `npm run build-h5-maker-correction-proposal`, then
+  `npm run validate-review-reports`.
 - Owner repo: `csl-atlas`.
-- Next use: turn the source-declared `divaraTa -> diviraTa` finding in
-  [`H5_MAKER_QA_CANDIDATES.md`](H5_MAKER_QA_CANDIDATES.md) into a maker-facing
-  correction proposal; do not promote any automatic correction or broader
-  ghost-entry claim from H5 alone.
+- Next use: hand off the generated
+  [`H5_MAKER_CORRECTION_PROPOSAL.md`](H5_MAKER_CORRECTION_PROPOSAL.md) row for
+  maker review; do not promote any automatic correction or broader ghost-entry
+  claim from H5 alone.
 
 ## Scope Decision
 
@@ -127,6 +129,19 @@ rows `source-supported-variant`, and 1 row
 `source-declared-correction-candidate`: `divaraTa -> diviraTa`. These
 source-check dispositions are review metadata only; they do not edit dictionary
 data or accept a ghost-entry claim.
+
+## Maker Correction Proposal
+
+Implemented output: `data/lexico/h5_maker_correction_proposal.json` and
+[`H5_MAKER_CORRECTION_PROPOSAL.md`](H5_MAKER_CORRECTION_PROPOSAL.md), generated
+by `npm run build-h5-maker-correction-proposal`.
+
+The proposal packet reads only `data/lexico/h5_maker_qa_candidates.json`,
+selects the single `source-declared-correction-candidate` row, and cites the
+MW/PWG source rows for `divaraTa`, the correction target `diviraTa`, and the
+rejected detector neighbor `devaraTa`. The nine source-supported rows remain
+excluded from correction flow. Maker decision fields stay empty/null; this is a
+proposal for separate maker review, not an atlas dictionary edit.
 
 ## Review Order
 

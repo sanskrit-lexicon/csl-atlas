@@ -61,7 +61,8 @@ targets before adding new analysis-method prose.
 | Bucket | Package | Next action | Done when |
 |---|---|---|---|
 | Waiting | R2 checkpoint review | Use `R2_DRIFT_EXPLANATION.md`, `R2_CHECKPOINT_REVIEW.md`, and `R2_CHECKPOINT_DECISIONS.md` to review the ten checkpoint rows before any parser promotion. | The 10 `r2-checkpoint` rows have human decisions in `src/data/review/r2-checkpoint-review.json`. |
-| Next | H5 maker correction proposal | Use the source-checked `divaraTa -> diviraTa` row to draft a maker-facing correction proposal without editing dictionary source data automatically. | The proposal cites MW/PWG source pointers and keeps the nine source-supported rows out of correction flow. |
+| Waiting | H5 maker correction review | Submit or track the generated `divaraTa -> diviraTa` proposal with dictionary makers; do not edit dictionary source data automatically. | A maker decision or external issue link is recorded outside the generated proposal packet. |
+| Done | H5 maker correction proposal | Keep `data/lexico/h5_maker_correction_proposal.json` and `H5_MAKER_CORRECTION_PROPOSAL.md` generated from the source-checked maker-QA packet. | The proposal cites MW/PWG source pointers for `divaraTa`, `diviraTa`, and rejected neighbor `devaraTa`, while the nine source-supported rows stay out of correction flow. |
 | Done | R2 drift explanation/control packet | Keep `data/lexico/r2_drift_explanation.json` and `docs/R2_DRIFT_EXPLANATION.md` generated from the label proposals, checkpoint packet, and empty checkpoint review report. | All 70 diagnostics are explained by machine proposal labels, and all 10 checkpoint rows remain `needs-review`. |
 | Done | H5 sample review | Keep the 130 reviewed rows in `src/data/review/h5-anomaly-review.json` and use the summary in `H5_GHOST_ANOMALY_SCOPE.md` before choosing maker QA follow-up rows. | The 130-item queue has `reviewedValue` labels and a summarized taxonomy. |
 | Done | H5 maker QA source check | Keep `data/lexico/h5_maker_qa_candidates.json` and `H5_MAKER_QA_CANDIDATES.md` generated from the reviewed H5 report. | The first source-check worksheet has 10 checked candidate rows, 6 calibration rows, 9 source-supported non-correction rows, and 1 source-declared correction candidate. |
@@ -116,8 +117,8 @@ For every queue, write the proof page first:
 5. Document review queues by proof value.
 6. Use the R2 drift explanation and checkpoint review gate before any
    non-final parser experiment or sense-divergence page.
-7. Draft the single source-declared H5 maker correction proposal before any
-   dictionary source edit.
+7. Submit or track the single source-declared H5 maker correction proposal
+   before any dictionary source edit.
 
 ## Boundary Links
 
