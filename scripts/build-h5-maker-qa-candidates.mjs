@@ -367,8 +367,12 @@ export function buildPayload(reviewReport, generatedAt = new Date().toISOString(
   return payload;
 }
 
+function markdownTableCell(value) {
+  return String(value ?? "").replace(/\\/g, "\\\\").replace(/\|/g, "\\|");
+}
+
 function pointerMd(pointer) {
-  const excerpt = pointer.bodyExcerpt ? ` - ${pointer.bodyExcerpt.replace(/\|/g, "\\|")}` : "";
+  const excerpt = pointer.bodyExcerpt ? ` - ${markdownTableCell(pointer.bodyExcerpt)}` : "";
   return `[${pointer.dictionary} L${pointer.L}](${pointer.href})${excerpt}`;
 }
 
