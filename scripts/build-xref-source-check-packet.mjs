@@ -339,6 +339,7 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
   const sharedCoreRows = buildSharedCoreRows(hubReview, exactEdgeIndex, sourceRecordIndex, preservedSourcePointers);
   const prefixControlRows = buildPrefixControlRows(prefixSpecs, sourceRecordIndex, preservedSourcePointers);
   const allRows = [...sharedCoreRows, ...prefixControlRows];
+  const unresolvedSourcePointers = allRows.flatMap(row => row.sourcePointers).filter(pointer => !pointer.href);
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     status: "xref-source-check-packet",
@@ -392,7 +393,7 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
       "No R2 splitter behavior, source-anchor generation, H5 review row, public page, backend/runtime LLM, corpus, DCS, or standards work is changed."
     ],
     boundaryNote: "Atlas xref artifacts plus dictionary source pointers only; source checking is deferred to human review and does not promote parser or public-lineage behavior.",
-    warnings
+    warnings: unresolvedSourcePointers.length ? warnings : []
   };
   validatePayload(payload);
   return payload;
