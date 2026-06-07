@@ -23,7 +23,7 @@ import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { buildMarkdown as buildH5MakerQaMarkdown, buildPayload as buildH5MakerQaPayload, preservedSourceCheckMap } from "../scripts/build-h5-maker-qa-candidates.mjs";
 import { buildMarkdown as buildH5MakerCorrectionMarkdown, buildPayload as buildH5MakerCorrectionPayload, preservedCorrectionTargetMap } from "../scripts/build-h5-maker-correction-proposal.mjs";
 import { EXPECTED_EDGE_IDS as THREE_AXIS_EDGE_IDS, axisReadingForScores, buildMarkdown as buildThreeAxisMarkdown, buildPayload as buildThreeAxisPayload } from "../scripts/build-three-axis-comparison.mjs";
-import { EXPECTED_PREFIX_CONTROL_IDS as XREF_PREFIX_CONTROL_IDS, EXPECTED_SHARED_CORE_SAMPLE_IDS as XREF_SHARED_CORE_IDS, XREF_LABEL_VOCABULARY, buildMarkdown as buildXrefSourceCheckMarkdown, buildPayload as buildXrefSourceCheckPayload } from "../scripts/build-xref-source-check-packet.mjs";
+import { EXPECTED_PREFIX_CONTROL_IDS as XREF_PREFIX_CONTROL_IDS, EXPECTED_SHARED_CORE_SAMPLE_IDS as XREF_SHARED_CORE_IDS, XREF_LABEL_VOCABULARY, buildMarkdown as buildXrefSourceCheckMarkdown, buildPayload as buildXrefSourceCheckPayload, preservedSourcePointerMap as preservedXrefSourcePointerMap } from "../scripts/build-xref-source-check-packet.mjs";
 import { loadPreserved } from "../scripts/lib/review-report.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -884,7 +884,12 @@ test("classifyHubTarget separates prefix hubs, lexical targets, and normalizatio
 test("xref source-check packet is generated from hub review and xref edges", () => {
   assert.deepEqual(
     xrefSourceCheckPacket,
-    buildXrefSourceCheckPayload(xrefHubReview, xrefEdgeRows, xrefSourceCheckPacket.generatedAt)
+    buildXrefSourceCheckPayload(
+      xrefHubReview,
+      xrefEdgeRows,
+      xrefSourceCheckPacket.generatedAt,
+      preservedXrefSourcePointerMap(xrefSourceCheckPacket)
+    )
   );
   assert.equal(normalizeLineEndings(xrefSourceCheckMd), buildXrefSourceCheckMarkdown(xrefSourceCheckPacket));
 });

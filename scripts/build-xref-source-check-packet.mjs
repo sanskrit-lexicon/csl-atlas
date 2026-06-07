@@ -88,6 +88,10 @@ function recordKey(dict, L) {
   return `${String(dict).toLowerCase()}\u0000${L}`;
 }
 
+function pointerKey(edge, role) {
+  return `${role}\u0000${String(edge.dict).toLowerCase()}\u0000${edge.L}\u0000${edge.k1}\u0000${edge.target}`;
+}
+
 function labelSet() {
   return new Set(XREF_LABEL_VOCABULARY.map(row => row.label));
 }
@@ -169,20 +173,46 @@ function buildSourceRecordIndex(edgeRows) {
   return { index, warnings };
 }
 
-function pointerForEdge(edge, sourceRecordIndex, role) {
+export function preservedSourcePointerMap(packet) {
+  const preserved = new Map();
+  for (const row of [...(packet.sharedCoreRows ?? []), ...(packet.prefixControlRows ?? [])]) {
+    for (const pointer of row.sourcePointers ?? []) {
+      preserved.set(pointerKey({
+        dict: pointer.dict,
+        L: pointer.L,
+        k1: pointer.sourceLemma,
+        target: pointer.target
+      }, pointer.role), pointer);
+    }
+  }
+  return preserved;
+}
+
+function loadPreservedSourcePointers(outputPath) {
+  if (!fs.existsSync(outputPath)) return new Map();
+  try {
+    return preservedSourcePointerMap(JSON.parse(fs.readFileSync(outputPath, "utf8")));
+  } catch {
+    return new Map();
+  }
+}
+
+function pointerForEdge(edge, sourceRecordIndex, role, preservedSourcePointers = new Map()) {
   const source = sourceRecordIndex.get(recordKey(edge.dict, edge.L));
+  const preserved = preservedSourcePointers.get(pointerKey(edge, role));
+  if (!source && preserved) return preserved;
   return {
     role,
     dictionary: String(edge.dict).toUpperCase(),
     dict: edge.dict,
     L: edge.L,
-    line: source?.line ?? null,
-    href: source?.href ?? null,
+    line: source?.line ?? preserved?.line ?? null,
+    href: source?.href ?? preserved?.href ?? null,
     sourceLemma: edge.k1,
-    sourceRecordLemma: source?.sourceLemma ?? null,
+    sourceRecordLemma: source?.sourceLemma ?? preserved?.sourceRecordLemma ?? null,
     target: edge.target,
     kind: edge.kind,
-    bodyExcerpt: source?.bodyExcerpt ?? ""
+    bodyExcerpt: source?.bodyExcerpt ?? preserved?.bodyExcerpt ?? ""
   };
 }
 
@@ -204,7 +234,7 @@ function prefixReviewQuestion(row) {
   return `Do the sampled ${row.dictionary.toUpperCase()} references to ${row.target} behave as prefix/compound convention rather than lexical lineage evidence?`;
 }
 
-function buildSharedCoreRows(hubReview, exactEdgeIndex, sourceRecordIndex) {
+function buildSharedCoreRows(hubReview, exactEdgeIndex, sourceRecordIndex, preservedSourcePointers = new Map()) {
   return (hubReview.sharedCoreSample ?? []).slice(0, SHARED_CORE_LIMIT).map(sample => {
     const sourceEdges = sourceEdgesForSharedSample(sample, exactEdgeIndex);
     const matched = new Set(sourceEdges.map(row => row.dict.toUpperCase()));
@@ -216,7 +246,7 @@ function buildSharedCoreRows(hubReview, exactEdgeIndex, sourceRecordIndex) {
       hubClass: sample.hubClass,
       proposedLabels: [sample.reviewLabel],
       machineInterpretation: sample.interpretation,
-      sourcePointers: sourceEdges.map(edge => pointerForEdge(edge, sourceRecordIndex, "exact-shared-edge")),
+      sourcePointers: sourceEdges.map(edge => pointerForEdge(edge, sourceRecordIndex, "exact-shared-edge", preservedSourcePointers)),
       matchedDictionaries: [...matched].sort(),
       missingExactEdgeDictionaries: ["MW", "PWG"].filter(dict => !matched.has(dict)),
       reviewQuestion: sharedReviewQuestion(sample),
@@ -226,7 +256,7 @@ function buildSharedCoreRows(hubReview, exactEdgeIndex, sourceRecordIndex) {
   });
 }
 
-function buildPrefixControlRows(prefixSpecs, sourceRecordIndex) {
+function buildPrefixControlRows(prefixSpecs, sourceRecordIndex, preservedSourcePointers = new Map()) {
   return prefixSpecs.map(spec => ({
     controlId: spec.controlId,
     sampleClass: "prefix-control",
@@ -238,7 +268,7 @@ function buildPrefixControlRows(prefixSpecs, sourceRecordIndex) {
     hubClass: spec.hubClass,
     proposedLabels: ["prefix-convention"],
     machineInterpretation: spec.interpretation,
-    sourcePointers: spec.sampleEdges.map(edge => pointerForEdge(edge, sourceRecordIndex, "prefix-control-example")),
+    sourcePointers: spec.sampleEdges.map(edge => pointerForEdge(edge, sourceRecordIndex, "prefix-control-example", preservedSourcePointers)),
     reviewQuestion: prefixReviewQuestion(spec),
     ...emptyHumanFields()
   }));
@@ -298,7 +328,7 @@ function validatePayload(payload) {
   }
 }
 
-export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISOString()) {
+export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISOString(), preservedSourcePointers = new Map()) {
   const exactEdgeIndex = indexExactEdges(edgeRows);
   const sharedSourceEdges = (hubReview.sharedCoreSample ?? [])
     .slice(0, SHARED_CORE_LIMIT)
@@ -306,8 +336,8 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
   const prefixSpecs = selectPrefixControlSpecs(hubReview, edgeRows);
   const prefixSourceEdges = prefixSpecs.flatMap(spec => spec.sampleEdges);
   const { index: sourceRecordIndex, warnings } = buildSourceRecordIndex([...sharedSourceEdges, ...prefixSourceEdges]);
-  const sharedCoreRows = buildSharedCoreRows(hubReview, exactEdgeIndex, sourceRecordIndex);
-  const prefixControlRows = buildPrefixControlRows(prefixSpecs, sourceRecordIndex);
+  const sharedCoreRows = buildSharedCoreRows(hubReview, exactEdgeIndex, sourceRecordIndex, preservedSourcePointers);
+  const prefixControlRows = buildPrefixControlRows(prefixSpecs, sourceRecordIndex, preservedSourcePointers);
   const allRows = [...sharedCoreRows, ...prefixControlRows];
   const payload = {
     schemaVersion: SCHEMA_VERSION,
@@ -460,7 +490,8 @@ function main() {
   try {
     const hubReview = JSON.parse(fs.readFileSync(HUB_REVIEW_PATH, "utf8"));
     const edgeRows = parseCsv(fs.readFileSync(XREF_EDGES_PATH, "utf8"));
-    const payload = buildPayload(hubReview, edgeRows);
+    const preservedSourcePointers = loadPreservedSourcePointers(JSON_OUT);
+    const payload = buildPayload(hubReview, edgeRows, undefined, preservedSourcePointers);
     fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
     fs.writeFileSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`);
     fs.writeFileSync(MARKDOWN_OUT, buildMarkdown(payload));
