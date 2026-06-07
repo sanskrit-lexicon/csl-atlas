@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-06T16:35:22.492Z",
+  "generatedAt": "2026-06-07T04:24:05.873Z",
   "sourcePath": "data/lexico/r2_checkpoint_review_packet.json",
   "recordCount": 10,
   "queue": "r2-checkpoint",
@@ -109,12 +109,12 @@
   "assumptions": [
     "This report is seeded from the generated 10-row R2 checkpoint packet.",
     "Each reviewId is the stable diagnosticId from the checkpoint packet.",
-    "Human decisions are an overlay: reviewStatus, reviewedValue, reviewer, reviewedAt, and note are preserved across rebuilds.",
+    "Human decisions are intentionally absent in this machine-only package.",
     "Future reviewedValue objects should contain acceptedParserLabels and parserDisposition.",
     "Parser promotion remains deferred until human decisions exist."
   ],
   "warnings": [
-    "This report intentionally records no human decisions.",
+    "This generator creates no human decisions and does not preserve prior R2 checkpoint decisions.",
     "Proposed parser labels are review prompts, not accepted sense decisions.",
     "Archive parity is a comparison/control signal, not the optimization target."
   ],

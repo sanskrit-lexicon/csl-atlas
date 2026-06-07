@@ -1,14 +1,15 @@
 // Build the shared review-report overlay for the 10-row R2 checkpoint.
 //
-// This records no human decisions. It seeds src/data/review/ with canonical
-// empty review fields so future reviewer edits can be preserved across rebuilds.
+// This creates no human decisions. It seeds src/data/review/ with canonical
+// empty review fields and intentionally does not preserve old decisions; parser
+// promotion remains blocked until a separate human review pass is authorized.
 //
 // Usage: npm run build-r2-checkpoint-review
 
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
+import { reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
 
 const INPUT = path.resolve(process.cwd(), "data", "lexico", "r2_checkpoint_review_packet.json");
 const OUTPUT = path.resolve(process.cwd(), "src", "data", "review", "r2-checkpoint-review.json");
@@ -115,6 +116,11 @@ function validateReportPayload(payload) {
     if (!item.machineValue.allowedParserDispositions?.length) {
       errors.push(`${item.reviewId}: missing parser disposition vocabulary`);
     }
+    if (item.reviewStatus !== "needs-review") errors.push(`${item.reviewId}: reviewStatus must remain needs-review`);
+    if (item.reviewedValue !== null) errors.push(`${item.reviewId}: reviewedValue must remain null`);
+    if (item.reviewer !== null) errors.push(`${item.reviewId}: reviewer must remain null`);
+    if (item.reviewedAt !== null) errors.push(`${item.reviewId}: reviewedAt must remain null`);
+    if (item.note !== "") errors.push(`${item.reviewId}: note must remain empty`);
   }
   if (errors.length) {
     const error = new Error(`R2 checkpoint review payload failed with ${errors.length} error(s):\n${errors.map(e => `  - ${e}`).join("\n")}`);
@@ -123,7 +129,7 @@ function validateReportPayload(payload) {
   }
 }
 
-function reviewItemForRow(row, preserved) {
+function reviewItemForRow(row) {
   const reviewId = row.diagnosticId;
   return {
     reviewId,
@@ -152,13 +158,13 @@ function reviewItemForRow(row, preserved) {
       }
     },
     evidenceLevel: "derived",
-    ...reviewFields(preserved, reviewId)
+    ...reviewFields(new Map(), reviewId)
   };
 }
 
-export function buildPayload(checkpointPacket, preserved = new Map(), generatedAt = new Date().toISOString()) {
+export function buildPayload(checkpointPacket, _preserved = new Map(), generatedAt = new Date().toISOString()) {
   validateCheckpointPacket(checkpointPacket);
-  const items = checkpointPacket.checkpointRows.map(row => reviewItemForRow(row, preserved));
+  const items = checkpointPacket.checkpointRows.map(row => reviewItemForRow(row));
   const payload = reviewPayload({
     queue: QUEUE,
     sourcePath: "data/lexico/r2_checkpoint_review_packet.json",
@@ -178,12 +184,12 @@ export function buildPayload(checkpointPacket, preserved = new Map(), generatedA
     assumptions: [
       "This report is seeded from the generated 10-row R2 checkpoint packet.",
       "Each reviewId is the stable diagnosticId from the checkpoint packet.",
-      "Human decisions are an overlay: reviewStatus, reviewedValue, reviewer, reviewedAt, and note are preserved across rebuilds.",
+      "Human decisions are intentionally absent in this machine-only package.",
       "Future reviewedValue objects should contain acceptedParserLabels and parserDisposition.",
       "Parser promotion remains deferred until human decisions exist."
     ],
     warnings: [
-      "This report intentionally records no human decisions.",
+      "This generator creates no human decisions and does not preserve prior R2 checkpoint decisions.",
       "Proposed parser labels are review prompts, not accepted sense decisions.",
       "Archive parity is a comparison/control signal, not the optimization target."
     ]
@@ -200,11 +206,9 @@ function main() {
   }
   try {
     const checkpointPacket = JSON.parse(fs.readFileSync(INPUT, "utf8"));
-    const preserved = loadPreserved(OUTPUT);
-    const payload = buildPayload(checkpointPacket, preserved);
-    const preservedCount = payload.items.filter(item => preserved.has(item.reviewId)).length;
+    const payload = buildPayload(checkpointPacket);
     writeReport(OUTPUT, payload);
-    console.log(`Wrote ${payload.items.length} R2 checkpoint review items (${preservedCount} human reviews preserved) to:`);
+    console.log(`Wrote ${payload.items.length} R2 checkpoint review items with empty human fields to:`);
     console.log(`- ${path.relative(process.cwd(), OUTPUT)}`);
   } catch (error) {
     console.error(error.message);

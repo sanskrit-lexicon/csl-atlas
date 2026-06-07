@@ -147,7 +147,8 @@ New queues should follow the implemented review-report pattern rather than inven
 
 The H5 report uses the existing `encoding-ocr` queue type and carries
 `reviewFamily: h5-ghost-anomaly` so the canonical schema vocabulary stays
-unchanged.
+unchanged. The first H5 review pass classifies all 130 rows in the canonical
+human fields and is preserved by `npm run build-h5-anomaly-review`.
 
 The R2 checkpoint report carries `reviewFamily: r2-checkpoint` and is seeded
 from `data/lexico/r2_checkpoint_review_packet.json`. It records parser-scope

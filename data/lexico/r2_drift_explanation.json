@@ -1,0 +1,3334 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "r2-drift-explanation-packet",
+  "claim": "Existing R2 machine proposal labels explain current source/archive drift classes and identify checkpoint rows blocked on human review without accepting labels or promoting parser behavior.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-explained",
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "npm run build-r2-drift-explanation",
+  "sourceGeneratedBy": {
+    "labelProposals": "npm run build-r2-label-proposals",
+    "checkpointPacket": "npm run build-r2-checkpoint-packet",
+    "checkpointReview": "npm run build-r2-checkpoint-review"
+  },
+  "sourceFiles": [
+    "data/lexico/r2_packet_label_proposals.json",
+    "data/lexico/r2_checkpoint_review_packet.json",
+    "src/data/review/r2-checkpoint-review.json"
+  ],
+  "counts": {
+    "packetCount": 5,
+    "diagnosticRows": 70,
+    "checkpointRows": 10,
+    "checkpointNeedsReview": 10,
+    "proposedLabelAssignments": 183,
+    "byPacket": {
+      "marker-run-scope": 28,
+      "source-gap-controls": 17,
+      "div-source-scope": 10,
+      "indigenous-iti-authority": 10,
+      "ae-reverse-bands": 5
+    },
+    "byDriftClass": {
+      "archive-parity": 28,
+      "no-anchor-evidence": 12,
+      "indigenous-coarse-review": 8,
+      "over-split-candidate": 6,
+      "source-only-dictionary": 6,
+      "mild-drift": 5,
+      "reverse-overmatch": 3,
+      "under-split-or-source-gap": 2
+    },
+    "byPriority": {
+      "low": 34,
+      "high": 17,
+      "info": 12,
+      "medium": 7
+    },
+    "byProposedLabel": {
+      "preface-proxy-extra": 12,
+      "no-anchor-control": 11,
+      "target-primary-series": 10,
+      "archive-parity-control": 9,
+      "homonym-record-control": 9,
+      "lookup-bundle-split": 9,
+      "lumped-parity-control": 9,
+      "candidate-sense-marker": 8,
+      "same-headword-supplement": 7,
+      "definition-iti-unit": 6,
+      "single-run-parity-control": 6,
+      "supplement-marker": 6,
+      "authority-quotation-unit": 5,
+      "separate-homonym": 5,
+      "source-expansion-control": 5,
+      "archive-prefix-runs": 4,
+      "authority-siglum-unit": 4,
+      "broad-headword-overmatch": 4,
+      "phrase-or-collocation-match": 4,
+      "reverse-high-candidate": 4,
+      "reverse-low-context": 4,
+      "reverse-tail-overmatch": 4,
+      "morphology-grammar-unit": 3,
+      "prefixed-or-derived-series": 3,
+      "reset-run-expansion": 3,
+      "reverse-medium-review": 3,
+      "source-record-exact-control": 3,
+      "continuation-proxy-row": 2,
+      "cross-reference-only": 2,
+      "direct-equivalent-candidate": 2,
+      "headword-stub-unit": 2,
+      "lumped-indigenous-proxy": 2,
+      "nested-marker-gap": 2,
+      "same-headword-record-split": 2,
+      "under-split-marker-gap": 2,
+      "commentarial-discussion-unit": 1,
+      "mild-drift-follow-up": 1,
+      "preface-retained-control": 1,
+      "raw-headword-split": 1,
+      "reverse-no-anchor-control": 1,
+      "source-only-expansion": 1,
+      "source-record-exact-target": 1
+    }
+  },
+  "packetContext": {
+    "div-source-scope": {
+      "packetId": "div-source-scope",
+      "title": "PWG/PWK division and source-record scope",
+      "vocabularyDoc": "docs/R2_DIV_SOURCE_SCOPE_LABELS.md",
+      "diagnosticRows": 10,
+      "checkpointRows": 2,
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "byDriftClass": {
+        "source-only-dictionary": 5,
+        "over-split-candidate": 4,
+        "archive-parity": 1
+      },
+      "byPriority": {
+        "low": 6,
+        "high": 4
+      },
+      "byProposedLabel": {
+        "target-primary-series": 10,
+        "candidate-sense-marker": 8,
+        "same-headword-supplement": 7,
+        "supplement-marker": 6,
+        "separate-homonym": 5,
+        "source-expansion-control": 5,
+        "prefixed-or-derived-series": 3,
+        "cross-reference-only": 2,
+        "lookup-bundle-split": 2
+      }
+    },
+    "marker-run-scope": {
+      "packetId": "marker-run-scope",
+      "title": "Numbered-marker run scope",
+      "vocabularyDoc": "docs/R2_MARKER_RUN_SCOPE_LABELS.md",
+      "diagnosticRows": 28,
+      "checkpointRows": 2,
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "byDriftClass": {
+        "archive-parity": 18,
+        "no-anchor-evidence": 5,
+        "mild-drift": 3,
+        "over-split-candidate": 2
+      },
+      "byPriority": {
+        "low": 18,
+        "info": 5,
+        "medium": 3,
+        "high": 2
+      },
+      "byProposedLabel": {
+        "preface-proxy-extra": 10,
+        "lumped-parity-control": 9,
+        "single-run-parity-control": 6,
+        "lookup-bundle-split": 5,
+        "no-anchor-control": 5,
+        "archive-prefix-runs": 4,
+        "reset-run-expansion": 3,
+        "preface-retained-control": 1,
+        "source-record-exact-target": 1
+      }
+    },
+    "ae-reverse-bands": {
+      "packetId": "ae-reverse-bands",
+      "title": "AE reverse-equivalent rank bands",
+      "vocabularyDoc": "docs/R2_AE_REVERSE_BAND_LABELS.md",
+      "diagnosticRows": 5,
+      "checkpointRows": 2,
+      "explanationRole": "Explains reverse-dictionary drift by equivalent-position rank, direct-equivalent cues, phrase/collocation matches, and broad-headword overmatch controls.",
+      "byDriftClass": {
+        "reverse-overmatch": 3,
+        "mild-drift": 1,
+        "no-anchor-evidence": 1
+      },
+      "byPriority": {
+        "high": 3,
+        "info": 1,
+        "medium": 1
+      },
+      "byProposedLabel": {
+        "broad-headword-overmatch": 4,
+        "phrase-or-collocation-match": 4,
+        "reverse-high-candidate": 4,
+        "reverse-low-context": 4,
+        "reverse-tail-overmatch": 4,
+        "reverse-medium-review": 3,
+        "direct-equivalent-candidate": 2,
+        "reverse-no-anchor-control": 1
+      }
+    },
+    "indigenous-iti-authority": {
+      "packetId": "indigenous-iti-authority",
+      "title": "SKD/VCP iti-unit authority review",
+      "vocabularyDoc": "docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md",
+      "diagnosticRows": 10,
+      "checkpointRows": 2,
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "byDriftClass": {
+        "indigenous-coarse-review": 8,
+        "no-anchor-evidence": 2
+      },
+      "byPriority": {
+        "high": 8,
+        "info": 2
+      },
+      "byProposedLabel": {
+        "definition-iti-unit": 6,
+        "authority-quotation-unit": 5,
+        "authority-siglum-unit": 4,
+        "morphology-grammar-unit": 3,
+        "source-record-exact-control": 3,
+        "headword-stub-unit": 2,
+        "lumped-indigenous-proxy": 2,
+        "no-anchor-control": 2,
+        "same-headword-record-split": 2,
+        "commentarial-discussion-unit": 1,
+        "raw-headword-split": 1
+      }
+    },
+    "source-gap-controls": {
+      "packetId": "source-gap-controls",
+      "title": "Source gaps, mild drift, and parity controls",
+      "vocabularyDoc": "docs/R2_SOURCE_GAP_CONTROL_LABELS.md",
+      "diagnosticRows": 17,
+      "checkpointRows": 2,
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "byDriftClass": {
+        "archive-parity": 9,
+        "no-anchor-evidence": 4,
+        "under-split-or-source-gap": 2,
+        "mild-drift": 1,
+        "source-only-dictionary": 1
+      },
+      "byPriority": {
+        "low": 10,
+        "info": 4,
+        "medium": 3
+      },
+      "byProposedLabel": {
+        "archive-parity-control": 9,
+        "homonym-record-control": 9,
+        "no-anchor-control": 4,
+        "continuation-proxy-row": 2,
+        "lookup-bundle-split": 2,
+        "nested-marker-gap": 2,
+        "preface-proxy-extra": 2,
+        "under-split-marker-gap": 2,
+        "mild-drift-follow-up": 1,
+        "source-only-expansion": 1
+      }
+    }
+  },
+  "checkpointRows": [
+    {
+      "diagnosticId": "r2-drift:gam:pwg",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "gam",
+      "dict": "pwg",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "reviewId": "r2-drift:gam:pwg",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 7,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "same-headword-supplement",
+        "prefixed-or-derived-series",
+        "separate-homonym",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "reviewQuestion": "Which PWG source record(s) should define the target gam primary series, and which should remain retained side evidence?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:pwg",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "dharma",
+      "dict": "pwg",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "reviewId": "r2-drift:dharma:pwg",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "same-headword-supplement",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "reviewQuestion": "Which PWG source record(s) should define the target dharma primary series, and which should remain retained side evidence?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ben",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "gam",
+      "dict": "ben",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "reviewId": "r2-drift:gam:ben",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "archive-prefix-runs",
+        "reset-run-expansion"
+      ],
+      "reviewQuestion": "Do the proposed marker-run or source-record labels identify the parser window for gam in BEN while retaining non-target rows?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ben",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "rama",
+      "dict": "ben",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "reviewId": "r2-drift:rama:ben",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 3,
+      "proposedParserLabels": [
+        "source-record-exact-target",
+        "lookup-bundle-split"
+      ],
+      "reviewQuestion": "Do the proposed marker-run or source-record labels identify the parser window for rama in BEN while retaining non-target rows?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ae",
+      "packetId": "ae-reverse-bands",
+      "packetTitle": "AE reverse-equivalent rank bands",
+      "lemma": "gam",
+      "dict": "ae",
+      "driftClass": "reverse-overmatch",
+      "priority": "high",
+      "reviewId": "r2-drift:gam:ae",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 11,
+      "proposedParserLabels": [
+        "reverse-high-candidate",
+        "reverse-medium-review",
+        "reverse-low-context",
+        "reverse-tail-overmatch",
+        "phrase-or-collocation-match",
+        "broad-headword-overmatch"
+      ],
+      "reviewQuestion": "Which AE reverse rank bands for gam should be reviewed as direct equivalents, and which should remain context or overmatch evidence?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ae",
+      "packetId": "ae-reverse-bands",
+      "packetTitle": "AE reverse-equivalent rank bands",
+      "lemma": "dharma",
+      "dict": "ae",
+      "driftClass": "reverse-overmatch",
+      "priority": "high",
+      "reviewId": "r2-drift:dharma:ae",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 11,
+      "proposedParserLabels": [
+        "reverse-high-candidate",
+        "direct-equivalent-candidate",
+        "reverse-medium-review",
+        "reverse-low-context",
+        "reverse-tail-overmatch",
+        "phrase-or-collocation-match",
+        "broad-headword-overmatch"
+      ],
+      "reviewQuestion": "Which AE reverse rank bands for dharma should be reviewed as direct equivalents, and which should remain context or overmatch evidence?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:vcp",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "dharma",
+      "dict": "vcp",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "reviewId": "r2-drift:dharma:vcp",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "definition-iti-unit",
+        "authority-siglum-unit",
+        "commentarial-discussion-unit"
+      ],
+      "reviewQuestion": "Which VCP iti units for dharma are definition, authority, grammar, or discussion evidence rather than reviewed senses?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:skd",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "dharma",
+      "dict": "skd",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "reviewId": "r2-drift:dharma:skd",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "source-record-exact-control",
+        "same-headword-record-split",
+        "definition-iti-unit",
+        "authority-quotation-unit"
+      ],
+      "reviewQuestion": "Which SKD iti units for dharma are definition, authority, grammar, or discussion evidence rather than reviewed senses?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ap",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "iti",
+      "dict": "ap",
+      "driftClass": "under-split-or-source-gap",
+      "priority": "medium",
+      "reviewId": "r2-drift:iti:ap",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "under-split-marker-gap",
+        "nested-marker-gap",
+        "preface-proxy-extra"
+      ],
+      "reviewQuestion": "Should iti in AP remain a parser control or follow-up row, and do the source pointers explain the archive comparison drift?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ap",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "gam",
+      "dict": "ap",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "reviewId": "r2-drift:gam:ap",
+      "reviewStatus": "needs-review",
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "continuation-proxy-row",
+        "nested-marker-gap"
+      ],
+      "reviewQuestion": "Should gam in AP remain a parser control or follow-up row, and do the source pointers explain the archive comparison drift?",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    }
+  ],
+  "explanationRows": [
+    {
+      "diagnosticId": "r2-drift:gam:pwg",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "gam",
+      "dict": "pwg",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 353,
+        "archivedSenseRows": 30,
+        "sourceToArchiveRatio": 11.767,
+        "sourceRecordCount": 4
+      },
+      "sourcePointerCount": 7,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "same-headword-supplement",
+        "prefixed-or-derived-series",
+        "separate-homonym",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "same-headword-supplement",
+          "meaning": "Later addendum or continuation keyed to the same headword or homonym.",
+          "parserConsequence": "Keep as evidence, but do not merge into the main count until a supplement-folding rule is approved."
+        },
+        {
+          "label": "prefixed-or-derived-series",
+          "meaning": "Prefixed verbs, participles, compounds, or derivative subseries under a root or headword.",
+          "parserConsequence": "Keep nested or lower-confidence unless the target is explicitly that subseries."
+        },
+        {
+          "label": "separate-homonym",
+          "meaning": "Explicit homonym or distinct raw headword caught by the lookup bundle.",
+          "parserConsequence": "Track separately; do not count as the target series."
+        },
+        {
+          "label": "candidate-sense-marker",
+          "meaning": "Explicit nested semantic numbering in a target-primary source record.",
+          "parserConsequence": "Count only after depth and parent/child rules are chosen."
+        },
+        {
+          "label": "supplement-marker",
+          "meaning": "An addendum continues or corrects earlier numbering.",
+          "parserConsequence": "Keep outside target count until supplement folding is reviewed."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": {
+        "reviewId": "r2-drift:gam:pwg",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:rama:pwg",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "rama",
+      "dict": "pwg",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 44,
+        "archivedSenseRows": 6,
+        "sourceToArchiveRatio": 7.333,
+        "sourceRecordCount": 3
+      },
+      "sourcePointerCount": 6,
+      "proposedParserLabels": [
+        "lookup-bundle-split",
+        "target-primary-series",
+        "separate-homonym",
+        "candidate-sense-marker"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lookup-bundle-split",
+          "meaning": "The anchor lookup deliberately includes multiple historical spellings or raw headwords.",
+          "parserConsequence": "Split by raw headword or homonym before comparing row counts."
+        },
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "separate-homonym",
+          "meaning": "Explicit homonym or distinct raw headword caught by the lookup bundle.",
+          "parserConsequence": "Track separately; do not count as the target series."
+        },
+        {
+          "label": "candidate-sense-marker",
+          "meaning": "Explicit nested semantic numbering in a target-primary source record.",
+          "parserConsequence": "Count only after depth and parent/child rules are chosen."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:pwg",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "dharma",
+      "dict": "pwg",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 21,
+        "archivedSenseRows": 5,
+        "sourceToArchiveRatio": 4.2,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "same-headword-supplement",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "same-headword-supplement",
+          "meaning": "Later addendum or continuation keyed to the same headword or homonym.",
+          "parserConsequence": "Keep as evidence, but do not merge into the main count until a supplement-folding rule is approved."
+        },
+        {
+          "label": "candidate-sense-marker",
+          "meaning": "Explicit nested semantic numbering in a target-primary source record.",
+          "parserConsequence": "Count only after depth and parent/child rules are chosen."
+        },
+        {
+          "label": "supplement-marker",
+          "meaning": "An addendum continues or corrects earlier numbering.",
+          "parserConsequence": "Keep outside target count until supplement folding is reviewed."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": {
+        "reviewId": "r2-drift:dharma:pwg",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:iti:pwg",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "iti",
+      "dict": "pwg",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 16,
+        "archivedSenseRows": 4,
+        "sourceToArchiveRatio": 4,
+        "sourceRecordCount": 4
+      },
+      "sourcePointerCount": 7,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "same-headword-supplement",
+        "separate-homonym",
+        "cross-reference-only",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "same-headword-supplement",
+          "meaning": "Later addendum or continuation keyed to the same headword or homonym.",
+          "parserConsequence": "Keep as evidence, but do not merge into the main count until a supplement-folding rule is approved."
+        },
+        {
+          "label": "separate-homonym",
+          "meaning": "Explicit homonym or distinct raw headword caught by the lookup bundle.",
+          "parserConsequence": "Track separately; do not count as the target series."
+        },
+        {
+          "label": "cross-reference-only",
+          "meaning": "Comparison or see-also material without an independent sense series.",
+          "parserConsequence": "Preserve as source evidence; no default sense-count contribution."
+        },
+        {
+          "label": "candidate-sense-marker",
+          "meaning": "Explicit nested semantic numbering in a target-primary source record.",
+          "parserConsequence": "Count only after depth and parent/child rules are chosen."
+        },
+        {
+          "label": "supplement-marker",
+          "meaning": "An addendum continues or corrects earlier numbering.",
+          "parserConsequence": "Keep outside target count until supplement folding is reviewed."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:pw",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "gam",
+      "dict": "pw",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 367,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 4
+      },
+      "sourcePointerCount": 7,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "source-expansion-control",
+        "same-headword-supplement",
+        "prefixed-or-derived-series",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "source-expansion-control",
+          "meaning": "Source-backed PW/PWK row with no archived R2 baseline.",
+          "parserConsequence": "Useful for parser design, but not archive parity evidence."
+        },
+        {
+          "label": "same-headword-supplement",
+          "meaning": "Later addendum or continuation keyed to the same headword or homonym.",
+          "parserConsequence": "Keep as evidence, but do not merge into the main count until a supplement-folding rule is approved."
+        },
+        {
+          "label": "prefixed-or-derived-series",
+          "meaning": "Prefixed verbs, participles, compounds, or derivative subseries under a root or headword.",
+          "parserConsequence": "Keep nested or lower-confidence unless the target is explicitly that subseries."
+        },
+        {
+          "label": "candidate-sense-marker",
+          "meaning": "Explicit nested semantic numbering in a target-primary source record.",
+          "parserConsequence": "Count only after depth and parent/child rules are chosen."
+        },
+        {
+          "label": "supplement-marker",
+          "meaning": "An addendum continues or corrects earlier numbering.",
+          "parserConsequence": "Keep outside target count until supplement folding is reviewed."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:rama:pw",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "rama",
+      "dict": "pw",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 54,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "lookup-bundle-split",
+        "target-primary-series",
+        "separate-homonym",
+        "source-expansion-control",
+        "candidate-sense-marker"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lookup-bundle-split",
+          "meaning": "The anchor lookup deliberately includes multiple historical spellings or raw headwords.",
+          "parserConsequence": "Split by raw headword or homonym before comparing row counts."
+        },
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "separate-homonym",
+          "meaning": "Explicit homonym or distinct raw headword caught by the lookup bundle.",
+          "parserConsequence": "Track separately; do not count as the target series."
+        },
+        {
+          "label": "source-expansion-control",
+          "meaning": "Source-backed PW/PWK row with no archived R2 baseline.",
+          "parserConsequence": "Useful for parser design, but not archive parity evidence."
+        },
+        {
+          "label": "candidate-sense-marker",
+          "meaning": "Explicit nested semantic numbering in a target-primary source record.",
+          "parserConsequence": "Count only after depth and parent/child rules are chosen."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:pw",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "dharma",
+      "dict": "pw",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 16,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "source-expansion-control",
+        "same-headword-supplement",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "source-expansion-control",
+          "meaning": "Source-backed PW/PWK row with no archived R2 baseline.",
+          "parserConsequence": "Useful for parser design, but not archive parity evidence."
+        },
+        {
+          "label": "same-headword-supplement",
+          "meaning": "Later addendum or continuation keyed to the same headword or homonym.",
+          "parserConsequence": "Keep as evidence, but do not merge into the main count until a supplement-folding rule is approved."
+        },
+        {
+          "label": "candidate-sense-marker",
+          "meaning": "Explicit nested semantic numbering in a target-primary source record.",
+          "parserConsequence": "Count only after depth and parent/child rules are chosen."
+        },
+        {
+          "label": "supplement-marker",
+          "meaning": "An addendum continues or corrects earlier numbering.",
+          "parserConsequence": "Keep outside target count until supplement folding is reviewed."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:pw",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "iti",
+      "dict": "pw",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 8,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 6
+      },
+      "sourcePointerCount": 9,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "source-expansion-control",
+        "separate-homonym",
+        "same-headword-supplement",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "source-expansion-control",
+          "meaning": "Source-backed PW/PWK row with no archived R2 baseline.",
+          "parserConsequence": "Useful for parser design, but not archive parity evidence."
+        },
+        {
+          "label": "separate-homonym",
+          "meaning": "Explicit homonym or distinct raw headword caught by the lookup bundle.",
+          "parserConsequence": "Track separately; do not count as the target series."
+        },
+        {
+          "label": "same-headword-supplement",
+          "meaning": "Later addendum or continuation keyed to the same headword or homonym.",
+          "parserConsequence": "Keep as evidence, but do not merge into the main count until a supplement-folding rule is approved."
+        },
+        {
+          "label": "candidate-sense-marker",
+          "meaning": "Explicit nested semantic numbering in a target-primary source record.",
+          "parserConsequence": "Count only after depth and parent/child rules are chosen."
+        },
+        {
+          "label": "supplement-marker",
+          "meaning": "An addendum continues or corrects earlier numbering.",
+          "parserConsequence": "Keep outside target count until supplement folding is reviewed."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:pw",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "bodhisattva",
+      "dict": "pw",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "source-expansion-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "source-expansion-control",
+          "meaning": "Source-backed PW/PWK row with no archived R2 baseline.",
+          "parserConsequence": "Useful for parser design, but not archive parity evidence."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:pwg",
+      "packetId": "div-source-scope",
+      "packetTitle": "PWG/PWK division and source-record scope",
+      "lemma": "bodhisattva",
+      "dict": "pwg",
+      "parserFamily": "western",
+      "split": "div",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 2,
+        "sourceToArchiveRatio": 1.5,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "target-primary-series",
+        "cross-reference-only",
+        "same-headword-supplement",
+        "prefixed-or-derived-series"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "target-primary-series",
+          "meaning": "Main source record for the requested lookup or homonym.",
+          "parserConsequence": "Candidate for R2 sense splitting after marker-depth rules are reviewed."
+        },
+        {
+          "label": "cross-reference-only",
+          "meaning": "Comparison or see-also material without an independent sense series.",
+          "parserConsequence": "Preserve as source evidence; no default sense-count contribution."
+        },
+        {
+          "label": "same-headword-supplement",
+          "meaning": "Later addendum or continuation keyed to the same headword or homonym.",
+          "parserConsequence": "Keep as evidence, but do not merge into the main count until a supplement-folding rule is approved."
+        },
+        {
+          "label": "prefixed-or-derived-series",
+          "meaning": "Prefixed verbs, participles, compounds, or derivative subseries under a root or headword.",
+          "parserConsequence": "Keep nested or lower-confidence unless the target is explicitly that subseries."
+        }
+      ],
+      "explanationRole": "Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ben",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "gam",
+      "dict": "ben",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 172,
+        "archivedSenseRows": 23,
+        "sourceToArchiveRatio": 7.478,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "archive-prefix-runs",
+        "reset-run-expansion"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-prefix-runs",
+          "meaning": "The archived count equals the first one or more explicit marker runs.",
+          "parserConsequence": "Candidate main parser window; later rows stay in retained side tables."
+        },
+        {
+          "label": "reset-run-expansion",
+          "meaning": "Later numeric marker sequences restart after a completed run.",
+          "parserConsequence": "Preserve as derived or later expansion until dictionary-specific rules are reviewed."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": {
+        "reviewId": "r2-drift:gam:ben",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ben",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "rama",
+      "dict": "ben",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "over-split-candidate",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 15,
+        "archivedSenseRows": 7,
+        "sourceToArchiveRatio": 2.143,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "source-record-exact-target",
+        "lookup-bundle-split"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "source-record-exact-target",
+          "meaning": "One source record's row count equals the archive count.",
+          "parserConsequence": "Candidate target record, not proof that sibling records are irrelevant."
+        },
+        {
+          "label": "lookup-bundle-split",
+          "meaning": "The anchor lookup aggregates raw headwords such as rama and rAma.",
+          "parserConsequence": "Split by raw headword or homonym before marker-run comparison."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": {
+        "reviewId": "r2-drift:rama:ben",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:rama:wil",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "rama",
+      "dict": "wil",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "archiveComparison": {
+        "sourceSenseRows": 22,
+        "archivedSenseRows": 12,
+        "sourceToArchiveRatio": 1.833,
+        "sourceRecordCount": 3
+      },
+      "sourcePointerCount": 6,
+      "proposedParserLabels": [
+        "archive-prefix-runs",
+        "lookup-bundle-split",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-prefix-runs",
+          "meaning": "The archived count equals the first one or more explicit marker runs.",
+          "parserConsequence": "Candidate main parser window; later rows stay in retained side tables."
+        },
+        {
+          "label": "lookup-bundle-split",
+          "meaning": "The anchor lookup aggregates raw headwords such as rama and rAma.",
+          "parserConsequence": "Split by raw headword or homonym before marker-run comparison."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ap90",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "rama",
+      "dict": "ap90",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "archiveComparison": {
+        "sourceSenseRows": 20,
+        "archivedSenseRows": 12,
+        "sourceToArchiveRatio": 1.667,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "lookup-bundle-split",
+        "reset-run-expansion"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lookup-bundle-split",
+          "meaning": "The anchor lookup aggregates raw headwords such as rama and rAma.",
+          "parserConsequence": "Split by raw headword or homonym before marker-run comparison."
+        },
+        {
+          "label": "reset-run-expansion",
+          "meaning": "Later numeric marker sequences restart after a completed run.",
+          "parserConsequence": "Preserve as derived or later expansion until dictionary-specific rules are reviewed."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:bhs",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "dharma",
+      "dict": "bhs",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "archiveComparison": {
+        "sourceSenseRows": 12,
+        "archivedSenseRows": 10,
+        "sourceToArchiveRatio": 1.2,
+        "sourceRecordCount": 4
+      },
+      "sourcePointerCount": 7,
+      "proposedParserLabels": [
+        "lookup-bundle-split",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lookup-bundle-split",
+          "meaning": "The anchor lookup aggregates raw headwords such as rama and rAma.",
+          "parserConsequence": "Split by raw headword or homonym before marker-run comparison."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:ap",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "bodhisattva",
+      "dict": "ap",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 2,
+        "sourceToArchiveRatio": 1.5,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "single-run-parity-control",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "single-run-parity-control",
+          "meaning": "One explicit marker run matches the archive after dropping the preface row.",
+          "parserConsequence": "Positive parser control, not a blocking decision."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ap",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "dharma",
+      "dict": "ap",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 24,
+        "archivedSenseRows": 23,
+        "sourceToArchiveRatio": 1.043,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "single-run-parity-control",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "single-run-parity-control",
+          "meaning": "One explicit marker run matches the archive after dropping the preface row.",
+          "parserConsequence": "Positive parser control, not a blocking decision."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ap90",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "dharma",
+      "dict": "ap90",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 23,
+        "archivedSenseRows": 22,
+        "sourceToArchiveRatio": 1.045,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "single-run-parity-control",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "single-run-parity-control",
+          "meaning": "One explicit marker run matches the archive after dropping the preface row.",
+          "parserConsequence": "Positive parser control, not a blocking decision."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ben",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "dharma",
+      "dict": "ben",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 12,
+        "archivedSenseRows": 11,
+        "sourceToArchiveRatio": 1.091,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "single-run-parity-control",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "single-run-parity-control",
+          "meaning": "One explicit marker run matches the archive after dropping the preface row.",
+          "parserConsequence": "Positive parser control, not a blocking decision."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:wil",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "dharma",
+      "dict": "wil",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 21,
+        "archivedSenseRows": 20,
+        "sourceToArchiveRatio": 1.05,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "archive-prefix-runs",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-prefix-runs",
+          "meaning": "The archived count equals the first one or more explicit marker runs.",
+          "parserConsequence": "Candidate main parser window; later rows stay in retained side tables."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ap90",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "gam",
+      "dict": "ap90",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 15,
+        "archivedSenseRows": 14,
+        "sourceToArchiveRatio": 1.071,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "archive-prefix-runs",
+        "reset-run-expansion",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-prefix-runs",
+          "meaning": "The archived count equals the first one or more explicit marker runs.",
+          "parserConsequence": "Candidate main parser window; later rows stay in retained side tables."
+        },
+        {
+          "label": "reset-run-expansion",
+          "meaning": "Later numeric marker sequences restart after a completed run.",
+          "parserConsequence": "Preserve as derived or later expansion until dictionary-specific rules are reviewed."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ben",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "iti",
+      "dict": "ben",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 6,
+        "archivedSenseRows": 5,
+        "sourceToArchiveRatio": 1.2,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "single-run-parity-control",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "single-run-parity-control",
+          "meaning": "One explicit marker run matches the archive after dropping the preface row.",
+          "parserConsequence": "Positive parser control, not a blocking decision."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:wil",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "iti",
+      "dict": "wil",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 10,
+        "archivedSenseRows": 9,
+        "sourceToArchiveRatio": 1.111,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "single-run-parity-control",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "single-run-parity-control",
+          "meaning": "One explicit marker run matches the archive after dropping the preface row.",
+          "parserConsequence": "Positive parser control, not a blocking decision."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from sense counts by default unless a reviewed dictionary rule keeps it."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:rama:mw72",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "rama",
+      "dict": "mw72",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 2,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 2,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "lookup-bundle-split",
+        "lumped-parity-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lookup-bundle-split",
+          "meaning": "The anchor lookup aggregates raw headwords such as rama and rAma.",
+          "parserConsequence": "Split by raw headword or homonym before marker-run comparison."
+        },
+        {
+          "label": "lumped-parity-control",
+          "meaning": "Source and archive both have one unsplit row.",
+          "parserConsequence": "Useful coverage control, not evidence for marker-run logic."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:bhs",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "bodhisattva",
+      "dict": "bhs",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "lumped-parity-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-parity-control",
+          "meaning": "Source and archive both have one unsplit row.",
+          "parserConsequence": "Useful coverage control, not evidence for marker-run logic."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:cae",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "bodhisattva",
+      "dict": "cae",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "lumped-parity-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-parity-control",
+          "meaning": "Source and archive both have one unsplit row.",
+          "parserConsequence": "Useful coverage control, not evidence for marker-run logic."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:wil",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "bodhisattva",
+      "dict": "wil",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "lumped-parity-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-parity-control",
+          "meaning": "Source and archive both have one unsplit row.",
+          "parserConsequence": "Useful coverage control, not evidence for marker-run logic."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:cae",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "dharma",
+      "dict": "cae",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "lumped-parity-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-parity-control",
+          "meaning": "Source and archive both have one unsplit row.",
+          "parserConsequence": "Useful coverage control, not evidence for marker-run logic."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:sch",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "dharma",
+      "dict": "sch",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "lumped-parity-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-parity-control",
+          "meaning": "Source and archive both have one unsplit row.",
+          "parserConsequence": "Useful coverage control, not evidence for marker-run logic."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:cae",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "gam",
+      "dict": "cae",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "lumped-parity-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-parity-control",
+          "meaning": "Source and archive both have one unsplit row.",
+          "parserConsequence": "Useful coverage control, not evidence for marker-run logic."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:sch",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "gam",
+      "dict": "sch",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "lumped-parity-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-parity-control",
+          "meaning": "Source and archive both have one unsplit row.",
+          "parserConsequence": "Useful coverage control, not evidence for marker-run logic."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ap90",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "iti",
+      "dict": "ap90",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 3,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "preface-retained-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "preface-retained-control",
+          "meaning": "The exact archive/source count includes a preface or header proxy.",
+          "parserConsequence": "Low-priority cue; decide whether the header carries content."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:rama:bhs",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "rama",
+      "dict": "bhs",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "lumped-parity-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-parity-control",
+          "meaning": "Source and archive both have one unsplit row.",
+          "parserConsequence": "Useful coverage control, not evidence for marker-run logic."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:ap90",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "bodhisattva",
+      "dict": "ap90",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "Neither source-backed nor archived row exists.",
+          "parserConsequence": "Keep as a control; no parser decision now."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:ben",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "bodhisattva",
+      "dict": "ben",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "Neither source-backed nor archived row exists.",
+          "parserConsequence": "Keep as a control; no parser decision now."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:bhs",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "gam",
+      "dict": "bhs",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "Neither source-backed nor archived row exists.",
+          "parserConsequence": "Keep as a control; no parser decision now."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:wil",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "gam",
+      "dict": "wil",
+      "parserFamily": "western",
+      "split": "dot-squared",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "Neither source-backed nor archived row exists.",
+          "parserConsequence": "Keep as a control; no parser decision now."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:bhs",
+      "packetId": "marker-run-scope",
+      "packetTitle": "Numbered-marker run scope",
+      "lemma": "iti",
+      "dict": "bhs",
+      "parserFamily": "western",
+      "split": "number-marker",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "Neither source-backed nor archived row exists.",
+          "parserConsequence": "Keep as a control; no parser decision now."
+        }
+      ],
+      "explanationRole": "Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ae",
+      "packetId": "ae-reverse-bands",
+      "packetTitle": "AE reverse-equivalent rank bands",
+      "lemma": "gam",
+      "dict": "ae",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "driftClass": "reverse-overmatch",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 243,
+        "archivedSenseRows": 30,
+        "sourceToArchiveRatio": 8.1,
+        "sourceRecordCount": 243
+      },
+      "sourcePointerCount": 11,
+      "proposedParserLabels": [
+        "reverse-high-candidate",
+        "reverse-medium-review",
+        "reverse-low-context",
+        "reverse-tail-overmatch",
+        "phrase-or-collocation-match",
+        "broad-headword-overmatch"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "reverse-high-candidate",
+          "meaning": "The first matching Sanskrit equivalent is in AE equivalent group 0-2.",
+          "parserConsequence": "Keep in the first AE review band; do not count as final alignment without source-role review."
+        },
+        {
+          "label": "reverse-medium-review",
+          "meaning": "The first matching Sanskrit equivalent is in group 3-4.",
+          "parserConsequence": "Keep as a secondary review band; useful for distinctive lemmas, risky for common roots."
+        },
+        {
+          "label": "reverse-low-context",
+          "meaning": "The first matching Sanskrit equivalent is in group 5-9.",
+          "parserConsequence": "Retain as context, but exclude from default cross-dictionary alignment counts."
+        },
+        {
+          "label": "reverse-tail-overmatch",
+          "meaning": "The first matching Sanskrit equivalent is in group 10 or later.",
+          "parserConsequence": "Retain only as overmatch evidence unless a reviewer promotes the row."
+        },
+        {
+          "label": "phrase-or-collocation-match",
+          "meaning": "The queried form appears inside a phrase, compound, quoted example, or idiom.",
+          "parserConsequence": "Preserve as dictionary evidence, but do not treat as headword-level equivalence by default."
+        },
+        {
+          "label": "broad-headword-overmatch",
+          "meaning": "The English headword has many equivalent groups and the queried form appears deep in a broad list.",
+          "parserConsequence": "Use as a noise-control row; exclude from default alignment counts."
+        }
+      ],
+      "explanationRole": "Explains reverse-dictionary drift by equivalent-position rank, direct-equivalent cues, phrase/collocation matches, and broad-headword overmatch controls.",
+      "checkpoint": {
+        "reviewId": "r2-drift:gam:ae",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ae",
+      "packetId": "ae-reverse-bands",
+      "packetTitle": "AE reverse-equivalent rank bands",
+      "lemma": "iti",
+      "dict": "ae",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "driftClass": "reverse-overmatch",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 76,
+        "archivedSenseRows": 30,
+        "sourceToArchiveRatio": 2.533,
+        "sourceRecordCount": 76
+      },
+      "sourcePointerCount": 11,
+      "proposedParserLabels": [
+        "reverse-high-candidate",
+        "direct-equivalent-candidate",
+        "reverse-medium-review",
+        "reverse-low-context",
+        "phrase-or-collocation-match",
+        "reverse-tail-overmatch",
+        "broad-headword-overmatch"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "reverse-high-candidate",
+          "meaning": "The first matching Sanskrit equivalent is in AE equivalent group 0-2.",
+          "parserConsequence": "Keep in the first AE review band; do not count as final alignment without source-role review."
+        },
+        {
+          "label": "direct-equivalent-candidate",
+          "meaning": "The queried Sanskrit form is a direct equivalent for the English headword.",
+          "parserConsequence": "Eligible for AE alignment review within its rank band."
+        },
+        {
+          "label": "reverse-medium-review",
+          "meaning": "The first matching Sanskrit equivalent is in group 3-4.",
+          "parserConsequence": "Keep as a secondary review band; useful for distinctive lemmas, risky for common roots."
+        },
+        {
+          "label": "reverse-low-context",
+          "meaning": "The first matching Sanskrit equivalent is in group 5-9.",
+          "parserConsequence": "Retain as context, but exclude from default cross-dictionary alignment counts."
+        },
+        {
+          "label": "phrase-or-collocation-match",
+          "meaning": "The queried form appears inside a phrase, compound, quoted example, or idiom.",
+          "parserConsequence": "Preserve as dictionary evidence, but do not treat as headword-level equivalence by default."
+        },
+        {
+          "label": "reverse-tail-overmatch",
+          "meaning": "The first matching Sanskrit equivalent is in group 10 or later.",
+          "parserConsequence": "Retain only as overmatch evidence unless a reviewer promotes the row."
+        },
+        {
+          "label": "broad-headword-overmatch",
+          "meaning": "The English headword has many equivalent groups and the queried form appears deep in a broad list.",
+          "parserConsequence": "Use as a noise-control row; exclude from default alignment counts."
+        }
+      ],
+      "explanationRole": "Explains reverse-dictionary drift by equivalent-position rank, direct-equivalent cues, phrase/collocation matches, and broad-headword overmatch controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:ae",
+      "packetId": "ae-reverse-bands",
+      "packetTitle": "AE reverse-equivalent rank bands",
+      "lemma": "dharma",
+      "dict": "ae",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "driftClass": "reverse-overmatch",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 66,
+        "archivedSenseRows": 24,
+        "sourceToArchiveRatio": 2.75,
+        "sourceRecordCount": 66
+      },
+      "sourcePointerCount": 11,
+      "proposedParserLabels": [
+        "reverse-high-candidate",
+        "direct-equivalent-candidate",
+        "reverse-medium-review",
+        "reverse-low-context",
+        "reverse-tail-overmatch",
+        "phrase-or-collocation-match",
+        "broad-headword-overmatch"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "reverse-high-candidate",
+          "meaning": "The first matching Sanskrit equivalent is in AE equivalent group 0-2.",
+          "parserConsequence": "Keep in the first AE review band; do not count as final alignment without source-role review."
+        },
+        {
+          "label": "direct-equivalent-candidate",
+          "meaning": "The queried Sanskrit form is a direct equivalent for the English headword.",
+          "parserConsequence": "Eligible for AE alignment review within its rank band."
+        },
+        {
+          "label": "reverse-medium-review",
+          "meaning": "The first matching Sanskrit equivalent is in group 3-4.",
+          "parserConsequence": "Keep as a secondary review band; useful for distinctive lemmas, risky for common roots."
+        },
+        {
+          "label": "reverse-low-context",
+          "meaning": "The first matching Sanskrit equivalent is in group 5-9.",
+          "parserConsequence": "Retain as context, but exclude from default cross-dictionary alignment counts."
+        },
+        {
+          "label": "reverse-tail-overmatch",
+          "meaning": "The first matching Sanskrit equivalent is in group 10 or later.",
+          "parserConsequence": "Retain only as overmatch evidence unless a reviewer promotes the row."
+        },
+        {
+          "label": "phrase-or-collocation-match",
+          "meaning": "The queried form appears inside a phrase, compound, quoted example, or idiom.",
+          "parserConsequence": "Preserve as dictionary evidence, but do not treat as headword-level equivalence by default."
+        },
+        {
+          "label": "broad-headword-overmatch",
+          "meaning": "The English headword has many equivalent groups and the queried form appears deep in a broad list.",
+          "parserConsequence": "Use as a noise-control row; exclude from default alignment counts."
+        }
+      ],
+      "explanationRole": "Explains reverse-dictionary drift by equivalent-position rank, direct-equivalent cues, phrase/collocation matches, and broad-headword overmatch controls.",
+      "checkpoint": {
+        "reviewId": "r2-drift:dharma:ae",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ae",
+      "packetId": "ae-reverse-bands",
+      "packetTitle": "AE reverse-equivalent rank bands",
+      "lemma": "rama",
+      "dict": "ae",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "archiveComparison": {
+        "sourceSenseRows": 6,
+        "archivedSenseRows": 4,
+        "sourceToArchiveRatio": 1.5,
+        "sourceRecordCount": 6
+      },
+      "sourcePointerCount": 9,
+      "proposedParserLabels": [
+        "reverse-high-candidate",
+        "phrase-or-collocation-match",
+        "reverse-low-context",
+        "reverse-tail-overmatch",
+        "broad-headword-overmatch"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "reverse-high-candidate",
+          "meaning": "The first matching Sanskrit equivalent is in AE equivalent group 0-2.",
+          "parserConsequence": "Keep in the first AE review band; do not count as final alignment without source-role review."
+        },
+        {
+          "label": "phrase-or-collocation-match",
+          "meaning": "The queried form appears inside a phrase, compound, quoted example, or idiom.",
+          "parserConsequence": "Preserve as dictionary evidence, but do not treat as headword-level equivalence by default."
+        },
+        {
+          "label": "reverse-low-context",
+          "meaning": "The first matching Sanskrit equivalent is in group 5-9.",
+          "parserConsequence": "Retain as context, but exclude from default cross-dictionary alignment counts."
+        },
+        {
+          "label": "reverse-tail-overmatch",
+          "meaning": "The first matching Sanskrit equivalent is in group 10 or later.",
+          "parserConsequence": "Retain only as overmatch evidence unless a reviewer promotes the row."
+        },
+        {
+          "label": "broad-headword-overmatch",
+          "meaning": "The English headword has many equivalent groups and the queried form appears deep in a broad list.",
+          "parserConsequence": "Use as a noise-control row; exclude from default alignment counts."
+        }
+      ],
+      "explanationRole": "Explains reverse-dictionary drift by equivalent-position rank, direct-equivalent cues, phrase/collocation matches, and broad-headword overmatch controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:ae",
+      "packetId": "ae-reverse-bands",
+      "packetTitle": "AE reverse-equivalent rank bands",
+      "lemma": "bodhisattva",
+      "dict": "ae",
+      "parserFamily": "reverse",
+      "split": "reverse-equivalent",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "reverse-no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "reverse-no-anchor-control",
+          "meaning": "AE has no source-backed reverse row for the anchor lemma.",
+          "parserConsequence": "Keep as a coverage control; no parser decision now."
+        }
+      ],
+      "explanationRole": "Explains reverse-dictionary drift by equivalent-position rank, direct-equivalent cues, phrase/collocation matches, and broad-headword overmatch controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:vcp",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "dharma",
+      "dict": "vcp",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 27,
+        "archivedSenseRows": 9,
+        "sourceToArchiveRatio": 3,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "definition-iti-unit",
+        "authority-siglum-unit",
+        "commentarial-discussion-unit"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "definition-iti-unit",
+          "meaning": "An iti split carries a definition, synonym list, or semantic function list.",
+          "parserConsequence": "Candidate indigenous source unit; not automatically one dictionary sense."
+        },
+        {
+          "label": "authority-siglum-unit",
+          "meaning": "The unit carries VCP-style abbreviated authority tokens.",
+          "parserConsequence": "Preserve as raw authority hints; do not normalize into citations without review."
+        },
+        {
+          "label": "commentarial-discussion-unit",
+          "meaning": "The unit is prose discussion of doctrine, lakshana, or commentary rather than a compact meaning.",
+          "parserConsequence": "Keep as explanatory evidence; group before sense-count comparison."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": {
+        "reviewId": "r2-drift:dharma:vcp",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:skd",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "dharma",
+      "dict": "skd",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 15,
+        "archivedSenseRows": 4,
+        "sourceToArchiveRatio": 3.75,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "source-record-exact-control",
+        "same-headword-record-split",
+        "definition-iti-unit",
+        "authority-quotation-unit"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "source-record-exact-control",
+          "meaning": "One source record row count equals the archived count.",
+          "parserConsequence": "Useful parser control, not semantic proof."
+        },
+        {
+          "label": "same-headword-record-split",
+          "meaning": "Multiple source records with the same headword contribute rows.",
+          "parserConsequence": "Split records before comparing with archived counts."
+        },
+        {
+          "label": "definition-iti-unit",
+          "meaning": "An iti split carries a definition, synonym list, or semantic function list.",
+          "parserConsequence": "Candidate indigenous source unit; not automatically one dictionary sense."
+        },
+        {
+          "label": "authority-quotation-unit",
+          "meaning": "The unit carries a quotation or named authority phrase in SKD prose.",
+          "parserConsequence": "Preserve authority evidence separately from sense counting."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": {
+        "reviewId": "r2-drift:dharma:skd",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:rama:skd",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "rama",
+      "dict": "skd",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 10,
+        "sourceToArchiveRatio": 0.3,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "morphology-grammar-unit",
+        "definition-iti-unit",
+        "authority-quotation-unit"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "morphology-grammar-unit",
+          "meaning": "The unit carries derivation, root class, grammatical function, or form inventory.",
+          "parserConsequence": "Keep outside default semantic sense counts."
+        },
+        {
+          "label": "definition-iti-unit",
+          "meaning": "An iti split carries a definition, synonym list, or semantic function list.",
+          "parserConsequence": "Candidate indigenous source unit; not automatically one dictionary sense."
+        },
+        {
+          "label": "authority-quotation-unit",
+          "meaning": "The unit carries a quotation or named authority phrase in SKD prose.",
+          "parserConsequence": "Preserve authority evidence separately from sense counting."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:skd",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "iti",
+      "dict": "skd",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 7,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 7,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "headword-stub-unit",
+        "definition-iti-unit",
+        "authority-quotation-unit",
+        "morphology-grammar-unit"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "headword-stub-unit",
+          "meaning": "The split produces only the headword or a very small preface fragment.",
+          "parserConsequence": "Treat as parser artifact unless reviewed as content-bearing."
+        },
+        {
+          "label": "definition-iti-unit",
+          "meaning": "An iti split carries a definition, synonym list, or semantic function list.",
+          "parserConsequence": "Candidate indigenous source unit; not automatically one dictionary sense."
+        },
+        {
+          "label": "authority-quotation-unit",
+          "meaning": "The unit carries a quotation or named authority phrase in SKD prose.",
+          "parserConsequence": "Preserve authority evidence separately from sense counting."
+        },
+        {
+          "label": "morphology-grammar-unit",
+          "meaning": "The unit carries derivation, root class, grammatical function, or form inventory.",
+          "parserConsequence": "Keep outside default semantic sense counts."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:vcp",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "iti",
+      "dict": "vcp",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 5,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 5,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "headword-stub-unit",
+        "definition-iti-unit",
+        "authority-siglum-unit",
+        "authority-quotation-unit",
+        "morphology-grammar-unit"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "headword-stub-unit",
+          "meaning": "The split produces only the headword or a very small preface fragment.",
+          "parserConsequence": "Treat as parser artifact unless reviewed as content-bearing."
+        },
+        {
+          "label": "definition-iti-unit",
+          "meaning": "An iti split carries a definition, synonym list, or semantic function list.",
+          "parserConsequence": "Candidate indigenous source unit; not automatically one dictionary sense."
+        },
+        {
+          "label": "authority-siglum-unit",
+          "meaning": "The unit carries VCP-style abbreviated authority tokens.",
+          "parserConsequence": "Preserve as raw authority hints; do not normalize into citations without review."
+        },
+        {
+          "label": "authority-quotation-unit",
+          "meaning": "The unit carries a quotation or named authority phrase in SKD prose.",
+          "parserConsequence": "Preserve authority evidence separately from sense counting."
+        },
+        {
+          "label": "morphology-grammar-unit",
+          "meaning": "The unit carries derivation, root class, grammatical function, or form inventory.",
+          "parserConsequence": "Keep outside default semantic sense counts."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:rama:vcp",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "rama",
+      "dict": "vcp",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 3,
+        "sourceRecordCount": 3
+      },
+      "sourcePointerCount": 6,
+      "proposedParserLabels": [
+        "lumped-indigenous-proxy",
+        "same-headword-record-split",
+        "raw-headword-split",
+        "source-record-exact-control",
+        "authority-siglum-unit"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-indigenous-proxy",
+          "meaning": "A source record has no explicit iti split and is represented by one proxy row.",
+          "parserConsequence": "Preserve as source evidence; do not infer internal sense boundaries."
+        },
+        {
+          "label": "same-headword-record-split",
+          "meaning": "Multiple source records with the same headword contribute rows.",
+          "parserConsequence": "Split records before comparing with archived counts."
+        },
+        {
+          "label": "raw-headword-split",
+          "meaning": "Lookup gathers distinct raw headwords such as rama and rAma.",
+          "parserConsequence": "Keep raw headwords separate unless the reviewed target merges them."
+        },
+        {
+          "label": "source-record-exact-control",
+          "meaning": "One source record row count equals the archived count.",
+          "parserConsequence": "Useful parser control, not semantic proof."
+        },
+        {
+          "label": "authority-siglum-unit",
+          "meaning": "The unit carries VCP-style abbreviated authority tokens.",
+          "parserConsequence": "Preserve as raw authority hints; do not normalize into citations without review."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:skd",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "bodhisattva",
+      "dict": "skd",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 2,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 2,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 3,
+      "proposedParserLabels": [
+        "definition-iti-unit",
+        "authority-quotation-unit"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "definition-iti-unit",
+          "meaning": "An iti split carries a definition, synonym list, or semantic function list.",
+          "parserConsequence": "Candidate indigenous source unit; not automatically one dictionary sense."
+        },
+        {
+          "label": "authority-quotation-unit",
+          "meaning": "The unit carries a quotation or named authority phrase in SKD prose.",
+          "parserConsequence": "Preserve authority evidence separately from sense counting."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:vcp",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "bodhisattva",
+      "dict": "vcp",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "indigenous-coarse-review",
+      "priority": "high",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 1,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "lumped-indigenous-proxy",
+        "source-record-exact-control",
+        "authority-siglum-unit"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "lumped-indigenous-proxy",
+          "meaning": "A source record has no explicit iti split and is represented by one proxy row.",
+          "parserConsequence": "Preserve as source evidence; do not infer internal sense boundaries."
+        },
+        {
+          "label": "source-record-exact-control",
+          "meaning": "One source record row count equals the archived count.",
+          "parserConsequence": "Useful parser control, not semantic proof."
+        },
+        {
+          "label": "authority-siglum-unit",
+          "meaning": "The unit carries VCP-style abbreviated authority tokens.",
+          "parserConsequence": "Preserve as raw authority hints; do not normalize into citations without review."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:skd",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "gam",
+      "dict": "skd",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "No SKD/VCP source-backed row exists for the anchor in this prototype.",
+          "parserConsequence": "Keep as a coverage control; no parser decision now."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:vcp",
+      "packetId": "indigenous-iti-authority",
+      "packetTitle": "SKD/VCP iti-unit authority review",
+      "lemma": "gam",
+      "dict": "vcp",
+      "parserFamily": "indigenous",
+      "split": "iti-unit",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "No SKD/VCP source-backed row exists for the anchor in this prototype.",
+          "parserConsequence": "Keep as a coverage control; no parser decision now."
+        }
+      ],
+      "explanationRole": "Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:rama:mw",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "rama",
+      "dict": "mw",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "mild-drift",
+      "priority": "medium",
+      "archiveComparison": {
+        "sourceSenseRows": 23,
+        "archivedSenseRows": 17,
+        "sourceToArchiveRatio": 1.353,
+        "sourceRecordCount": 23
+      },
+      "sourcePointerCount": 11,
+      "proposedParserLabels": [
+        "mild-drift-follow-up",
+        "lookup-bundle-split",
+        "homonym-record-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "mild-drift-follow-up",
+          "meaning": "Drift is visible but lower-risk than the high-priority parser families.",
+          "parserConsequence": "Queue after promoted parser rules; do not block the current R2 slice."
+        },
+        {
+          "label": "lookup-bundle-split",
+          "meaning": "The lookup includes multiple raw headwords or homonyms.",
+          "parserConsequence": "Split raw headword or homonym records before count comparison."
+        },
+        {
+          "label": "homonym-record-control",
+          "meaning": "Parity depends on preserving separate homonym or source records.",
+          "parserConsequence": "Do not collapse homonyms just to satisfy row-count checks."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:ap",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "iti",
+      "dict": "ap",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "driftClass": "under-split-or-source-gap",
+      "priority": "medium",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 5,
+        "sourceToArchiveRatio": 0.6,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "under-split-marker-gap",
+        "nested-marker-gap",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "under-split-marker-gap",
+          "meaning": "Source rows are fewer than archived rows because marker coverage is coarser than the archived fixture.",
+          "parserConsequence": "Review nested marker coverage and lookup variants after high-risk packets."
+        },
+        {
+          "label": "nested-marker-gap",
+          "meaning": "Source text contains submarkers or subpoints not yet split as separate rows.",
+          "parserConsequence": "Preserve as a targeted parser follow-up, not a source absence claim."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from default sense counts unless a reviewed rule keeps it."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": {
+        "reviewId": "r2-drift:iti:ap",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:rama:ap",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "rama",
+      "dict": "ap",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "driftClass": "under-split-or-source-gap",
+      "priority": "medium",
+      "archiveComparison": {
+        "sourceSenseRows": 8,
+        "archivedSenseRows": 10,
+        "sourceToArchiveRatio": 0.8,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "under-split-marker-gap",
+        "lookup-bundle-split",
+        "preface-proxy-extra"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "under-split-marker-gap",
+          "meaning": "Source rows are fewer than archived rows because marker coverage is coarser than the archived fixture.",
+          "parserConsequence": "Review nested marker coverage and lookup variants after high-risk packets."
+        },
+        {
+          "label": "lookup-bundle-split",
+          "meaning": "The lookup includes multiple raw headwords or homonyms.",
+          "parserConsequence": "Split raw headword or homonym records before count comparison."
+        },
+        {
+          "label": "preface-proxy-extra",
+          "meaning": "A source-backed row carries headword, POS, or header text rather than an explicit sense marker.",
+          "parserConsequence": "Exclude from default sense counts unless a reviewed rule keeps it."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:mw",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "dharma",
+      "dict": "mw",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 33,
+        "archivedSenseRows": 30,
+        "sourceToArchiveRatio": 1.1,
+        "sourceRecordCount": 33
+      },
+      "sourcePointerCount": 11,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "homonym-record-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-parity-control",
+          "meaning": "Source and archive counts match, or are close enough to be a positive parser control.",
+          "parserConsequence": "Use as a regression check while changing higher-risk parser rules."
+        },
+        {
+          "label": "homonym-record-control",
+          "meaning": "Parity depends on preserving separate homonym or source records.",
+          "parserConsequence": "Do not collapse homonyms just to satisfy row-count checks."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:rama:cae",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "rama",
+      "dict": "cae",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "source-only-dictionary",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 1,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 1
+      },
+      "sourcePointerCount": 2,
+      "proposedParserLabels": [
+        "source-only-expansion"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "source-only-expansion",
+          "meaning": "Source-backed row exists where the archived fixture has no baseline.",
+          "parserConsequence": "Keep as rebuild expansion evidence; no archive regression implied."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:mw",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "bodhisattva",
+      "dict": "mw",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 3,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 3
+      },
+      "sourcePointerCount": 6,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "homonym-record-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-parity-control",
+          "meaning": "Source and archive counts match, or are close enough to be a positive parser control.",
+          "parserConsequence": "Use as a regression check while changing higher-risk parser rules."
+        },
+        {
+          "label": "homonym-record-control",
+          "meaning": "Parity depends on preserving separate homonym or source records.",
+          "parserConsequence": "Do not collapse homonyms just to satisfy row-count checks."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:dharma:mw72",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "dharma",
+      "dict": "mw72",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 3,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 3
+      },
+      "sourcePointerCount": 6,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "homonym-record-control",
+        "continuation-proxy-row"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-parity-control",
+          "meaning": "Source and archive counts match, or are close enough to be a positive parser control.",
+          "parserConsequence": "Use as a regression check while changing higher-risk parser rules."
+        },
+        {
+          "label": "homonym-record-control",
+          "meaning": "Parity depends on preserving separate homonym or source records.",
+          "parserConsequence": "Do not collapse homonyms just to satisfy row-count checks."
+        },
+        {
+          "label": "continuation-proxy-row",
+          "meaning": "A source row points at a continuation or body proxy rather than an independent sense.",
+          "parserConsequence": "Preserve as a parser artifact; inspect before counting."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:ap",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "gam",
+      "dict": "ap",
+      "parserFamily": "western",
+      "split": "ap-bullet",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 16,
+        "archivedSenseRows": 16,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 5,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "continuation-proxy-row",
+        "nested-marker-gap"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-parity-control",
+          "meaning": "Source and archive counts match, or are close enough to be a positive parser control.",
+          "parserConsequence": "Use as a regression check while changing higher-risk parser rules."
+        },
+        {
+          "label": "continuation-proxy-row",
+          "meaning": "A source row points at a continuation or body proxy rather than an independent sense.",
+          "parserConsequence": "Preserve as a parser artifact; inspect before counting."
+        },
+        {
+          "label": "nested-marker-gap",
+          "meaning": "Source text contains submarkers or subpoints not yet split as separate rows.",
+          "parserConsequence": "Preserve as a targeted parser follow-up, not a source absence claim."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": {
+        "reviewId": "r2-drift:gam:ap",
+        "reviewStatus": "needs-review",
+        "reviewedValue": null,
+        "reviewer": null,
+        "reviewedAt": null,
+        "note": ""
+      }
+    },
+    {
+      "diagnosticId": "r2-drift:gam:mw",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "gam",
+      "dict": "mw",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 3,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 3
+      },
+      "sourcePointerCount": 6,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "homonym-record-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-parity-control",
+          "meaning": "Source and archive counts match, or are close enough to be a positive parser control.",
+          "parserConsequence": "Use as a regression check while changing higher-risk parser rules."
+        },
+        {
+          "label": "homonym-record-control",
+          "meaning": "Parity depends on preserving separate homonym or source records.",
+          "parserConsequence": "Do not collapse homonyms just to satisfy row-count checks."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:gam:mw72",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "gam",
+      "dict": "mw72",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 2,
+        "archivedSenseRows": 2,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 2
+      },
+      "sourcePointerCount": 4,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "homonym-record-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-parity-control",
+          "meaning": "Source and archive counts match, or are close enough to be a positive parser control.",
+          "parserConsequence": "Use as a regression check while changing higher-risk parser rules."
+        },
+        {
+          "label": "homonym-record-control",
+          "meaning": "Parity depends on preserving separate homonym or source records.",
+          "parserConsequence": "Do not collapse homonyms just to satisfy row-count checks."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:cae",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "iti",
+      "dict": "cae",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 3,
+        "archivedSenseRows": 3,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 3
+      },
+      "sourcePointerCount": 6,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "homonym-record-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-parity-control",
+          "meaning": "Source and archive counts match, or are close enough to be a positive parser control.",
+          "parserConsequence": "Use as a regression check while changing higher-risk parser rules."
+        },
+        {
+          "label": "homonym-record-control",
+          "meaning": "Parity depends on preserving separate homonym or source records.",
+          "parserConsequence": "Do not collapse homonyms just to satisfy row-count checks."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:mw",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "iti",
+      "dict": "mw",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 4,
+        "archivedSenseRows": 4,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 4
+      },
+      "sourcePointerCount": 7,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "homonym-record-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-parity-control",
+          "meaning": "Source and archive counts match, or are close enough to be a positive parser control.",
+          "parserConsequence": "Use as a regression check while changing higher-risk parser rules."
+        },
+        {
+          "label": "homonym-record-control",
+          "meaning": "Parity depends on preserving separate homonym or source records.",
+          "parserConsequence": "Do not collapse homonyms just to satisfy row-count checks."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:mw72",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "iti",
+      "dict": "mw72",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "archive-parity",
+      "priority": "low",
+      "archiveComparison": {
+        "sourceSenseRows": 4,
+        "archivedSenseRows": 4,
+        "sourceToArchiveRatio": 1,
+        "sourceRecordCount": 4
+      },
+      "sourcePointerCount": 7,
+      "proposedParserLabels": [
+        "archive-parity-control",
+        "homonym-record-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "archive-parity-control",
+          "meaning": "Source and archive counts match, or are close enough to be a positive parser control.",
+          "parserConsequence": "Use as a regression check while changing higher-risk parser rules."
+        },
+        {
+          "label": "homonym-record-control",
+          "meaning": "Parity depends on preserving separate homonym or source records.",
+          "parserConsequence": "Do not collapse homonyms just to satisfy row-count checks."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:mw72",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "bodhisattva",
+      "dict": "mw72",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "No source-backed row and no archived row exist for the anchor pair.",
+          "parserConsequence": "Keep as a coverage control; revisit only when lookup coverage broadens."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:bodhisattva:sch",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "bodhisattva",
+      "dict": "sch",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "No source-backed row and no archived row exist for the anchor pair.",
+          "parserConsequence": "Keep as a coverage control; revisit only when lookup coverage broadens."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:iti:sch",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "iti",
+      "dict": "sch",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "No source-backed row and no archived row exist for the anchor pair.",
+          "parserConsequence": "Keep as a coverage control; revisit only when lookup coverage broadens."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    },
+    {
+      "diagnosticId": "r2-drift:rama:sch",
+      "packetId": "source-gap-controls",
+      "packetTitle": "Source gaps, mild drift, and parity controls",
+      "lemma": "rama",
+      "dict": "sch",
+      "parserFamily": "western",
+      "split": "lumped-proxy",
+      "driftClass": "no-anchor-evidence",
+      "priority": "info",
+      "archiveComparison": {
+        "sourceSenseRows": 0,
+        "archivedSenseRows": 0,
+        "sourceToArchiveRatio": null,
+        "sourceRecordCount": 0
+      },
+      "sourcePointerCount": 0,
+      "proposedParserLabels": [
+        "no-anchor-control"
+      ],
+      "proposedLabelExplanations": [
+        {
+          "label": "no-anchor-control",
+          "meaning": "No source-backed row and no archived row exist for the anchor pair.",
+          "parserConsequence": "Keep as a coverage control; revisit only when lookup coverage broadens."
+        }
+      ],
+      "explanationRole": "Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.",
+      "checkpoint": null
+    }
+  ],
+  "archiveParityPolicy": "Archive parity is a comparison/control signal for drift review and regression checks, not the optimization target.",
+  "limitations": [
+    "This artifact is machine-only and records no human checkpoint decisions.",
+    "Proposed parser labels explain drift classes and review scope; they are not accepted labels or reviewedValue.",
+    "All 10 checkpoint rows remain needs-review with empty human fields.",
+    "Parser promotion remains deferred until human checkpoint decisions exist.",
+    "No R2 splitter behavior, source-anchor generation, H5 review rows, public R2 pages, backend, runtime LLM, corpus, DCS, or standards work is changed."
+  ],
+  "boundaryNote": "Dictionary source rows, existing R2 source anchors, recovered archive fixtures, machine label proposals, and the empty R2 checkpoint review overlay only."
+}

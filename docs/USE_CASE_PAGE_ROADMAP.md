@@ -27,12 +27,14 @@ targets before adding new analysis-method prose.
 - H4 semantic-field analysis now has a data package, chart, interpretation note,
   family-profile artifact, and scholar review packet.
 - Xref hub review and H5 anomaly scope now have proof-first documentation
-  packages; the xref hub review also has a generated review-prompt artifact.
+  packages; H5 also has a first 130-row reviewed taxonomy plus a generated
+  maker-QA candidate packet, and the xref hub review has a generated
+  review-prompt artifact.
 - R2 parser diagnostics now classify source/archive drift before any new
   sense-divergence or sense-alignment claims are broadened.
 - All five R2 parser decision packets now have source-inspected proposal
-  layers; the next R2 action is a non-final source-backed rebuild experiment,
-  not a broader sense-alignment claim.
+  layers, and the R2 drift explanation/control packet explains all 70 current
+  diagnostics while the checkpoint rows remain blocked on human review.
 - The dictionary-comparison tool family now carries compact trust blocks for
   generated evidence, limitations, validation, and owner repo.
 - The remaining MW, typology, lexicographic-structure, timeline, and archived
@@ -52,14 +54,17 @@ targets before adding new analysis-method prose.
 | 5 | [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md) plus the microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Start with the easiest parsed structure: headwords vs nested subentries. | active first microstructure page |
 | 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Use AMAR-native fields as the active dictionary-first semantic review package. | interpretation and review packet active |
 | 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label cross-reference hub families before paper use. | active labels documented |
-| 8 | H5 anomaly scope package | UC-CD-05, UC-RV-03 | makers, reviewers | Turn forensic anomaly signals into a proof-first review queue. | taxonomy active; human review pending |
+| 8 | H5 anomaly scope package | UC-CD-05, UC-RV-03 | makers, reviewers | Turn forensic anomaly signals into a proof-first review queue. | maker-QA packet active |
 
 ## GTD Documentation Board
 
 | Bucket | Package | Next action | Done when |
 |---|---|---|---|
-| Next | R2 non-final rebuild experiment | Use the five R2 proposal layers to run a source-backed anchor rebuild experiment: div/source-record scope, marker-run scope, AE reverse bands, indigenous `iti`, then source-gap controls. | The rebuild records which packet labels explain drift and which rows still need review before any broader sense-divergence page. |
-| Waiting | H5 sample review | Classify known corrections and null controls first, then raw-headword-exclusive and shared-doublet rows. | The 130-item queue has human `reviewedValue` labels and a summarized taxonomy. |
+| Waiting | R2 checkpoint review | Use `R2_DRIFT_EXPLANATION.md`, `R2_CHECKPOINT_REVIEW.md`, and `R2_CHECKPOINT_DECISIONS.md` to review the ten checkpoint rows before any parser promotion. | The 10 `r2-checkpoint` rows have human decisions in `src/data/review/r2-checkpoint-review.json`. |
+| Next | H5 maker correction proposal | Use the source-checked `divaraTa -> diviraTa` row to draft a maker-facing correction proposal without editing dictionary source data automatically. | The proposal cites MW/PWG source pointers and keeps the nine source-supported rows out of correction flow. |
+| Done | R2 drift explanation/control packet | Keep `data/lexico/r2_drift_explanation.json` and `docs/R2_DRIFT_EXPLANATION.md` generated from the label proposals, checkpoint packet, and empty checkpoint review report. | All 70 diagnostics are explained by machine proposal labels, and all 10 checkpoint rows remain `needs-review`. |
+| Done | H5 sample review | Keep the 130 reviewed rows in `src/data/review/h5-anomaly-review.json` and use the summary in `H5_GHOST_ANOMALY_SCOPE.md` before choosing maker QA follow-up rows. | The 130-item queue has `reviewedValue` labels and a summarized taxonomy. |
+| Done | H5 maker QA source check | Keep `data/lexico/h5_maker_qa_candidates.json` and `H5_MAKER_QA_CANDIDATES.md` generated from the reviewed H5 report. | The first source-check worksheet has 10 checked candidate rows, 6 calibration rows, 9 source-supported non-correction rows, and 1 source-declared correction candidate. |
 | Done | R2 parser decision packets | Keep `R2_REVIEW_PACKETS.md` linked to the five proposal layers: `R2_DIV_SOURCE_SCOPE_LABELS.md`, `R2_MARKER_RUN_SCOPE_LABELS.md`, `R2_AE_REVERSE_BAND_LABELS.md`, `R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`, and `R2_SOURCE_GAP_CONTROL_LABELS.md`. | The R2 splitter has source-inspected packet labels to guide the next rebuild experiment; the labels are not scholar-reviewed sense decisions. |
 | Done | H5 anomaly taxonomy | Keep the review order and expected label set in `H5_GHOST_ANOMALY_SCOPE.md`. | Reviewers can start without treating F0/F2 rows as automatic error claims. |
 | Done | H4 semantic fields | Keep H4 active with `false-low-risk`, `high-coverage-check`, `edition-delta-check`, `scope-baseline-check`, and `direction-index-control` starting labels. | H4 review samples can be interpreted without outrunning the structural/microstructure docs. |
@@ -109,9 +114,10 @@ For every queue, write the proof page first:
 4. Use H4 semantic fields as the active AMAR-native semantic review package,
    beginning with SKD false-low checks.
 5. Document review queues by proof value.
-6. Use the R2 packet proposal layers to run a non-final source-backed rebuild
-   experiment before building sense-divergence pages.
-7. Review the first H5 anomaly sample and summarize the taxonomy.
+6. Use the R2 drift explanation and checkpoint review gate before any
+   non-final parser experiment or sense-divergence page.
+7. Draft the single source-declared H5 maker correction proposal before any
+   dictionary source edit.
 
 ## Boundary Links
 

@@ -18,7 +18,10 @@ import { packetIdForDiagnostic, scopeCluesForDiagnostic } from "../scripts/build
 import { CHECKPOINT_DIAGNOSTIC_IDS, buildPayload as buildR2LabelProposalPayload, labelsForPacket } from "../scripts/build-r2-label-proposals.mjs";
 import { buildMarkdown as buildR2CheckpointMarkdown, buildPayload as buildR2CheckpointPayload } from "../scripts/build-r2-checkpoint-packet.mjs";
 import { PARSER_DISPOSITIONS, buildPayload as buildR2CheckpointReviewPayload } from "../scripts/build-r2-checkpoint-review.mjs";
+import { buildMarkdown as buildR2DriftExplanationMarkdown, buildPayload as buildR2DriftExplanationPayload } from "../scripts/build-r2-drift-explanation.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
+import { buildMarkdown as buildH5MakerQaMarkdown, buildPayload as buildH5MakerQaPayload, preservedSourceCheckMap } from "../scripts/build-h5-maker-qa-candidates.mjs";
+import { loadPreserved } from "../scripts/lib/review-report.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
 import { classifyHubTarget } from "../scripts/build-xref-hub-review.mjs";
@@ -31,6 +34,72 @@ const r2LabelProposals = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", 
 const r2CheckpointPacket = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_checkpoint_review_packet.json"), "utf8"));
 const r2CheckpointReviewMd = fs.readFileSync(path.join(repoRoot, "docs", "R2_CHECKPOINT_REVIEW.md"), "utf8");
 const r2CheckpointReviewReport = JSON.parse(fs.readFileSync(path.join(repoRoot, "src", "data", "review", "r2-checkpoint-review.json"), "utf8"));
+const r2DriftExplanation = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_drift_explanation.json"), "utf8"));
+const r2DriftExplanationMd = fs.readFileSync(path.join(repoRoot, "docs", "R2_DRIFT_EXPLANATION.md"), "utf8");
+const h5AnomalyReviewReportPath = path.join(repoRoot, "src", "data", "review", "h5-anomaly-review.json");
+const h5AnomalyReviewReport = JSON.parse(fs.readFileSync(h5AnomalyReviewReportPath, "utf8"));
+const h5MakerQaCandidates = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "h5_maker_qa_candidates.json"), "utf8"));
+const h5MakerQaCandidatesMd = fs.readFileSync(path.join(repoRoot, "docs", "H5_MAKER_QA_CANDIDATES.md"), "utf8");
+
+const H5_REVIEW_LABELS = new Set([
+  "legitimate-form",
+  "variant-convention",
+  "possible-typo",
+  "ghost-candidate",
+  "lineage-only",
+  "parser-artifact"
+]);
+
+const H5_EXPECTED_CLASS_COUNTS = {
+  "known-correction": 20,
+  "mw-pw-shared-doublet": 30,
+  "mw-pwg-shared-doublet": 30,
+  "null-control": 20,
+  "raw-headword-exclusive": 30
+};
+
+const H5_EXPECTED_REVIEWED_VALUE_COUNTS = {
+  "legitimate-form": 58,
+  "lineage-only": 15,
+  "parser-artifact": 12,
+  "possible-typo": 22,
+  "variant-convention": 23
+};
+
+const H5_MAKER_QA_REVIEW_IDS = Object.freeze([
+  "h5:mw-pw-shared-doublet:MW-PW:ajamI_a:ajamIQa",
+  "h5:mw-pw-shared-doublet:MW-PW:awawyA:awAwyA",
+  "h5:mw-pwg-shared-doublet:MW-PWG:akalkala:akalkana",
+  "h5:mw-pwg-shared-doublet:MW-PWG:cApaqa:cApala",
+  "h5:mw-pwg-shared-doublet:MW-PWG:uzmopagama:uzRopagama",
+  "h5:mw-pw-shared-doublet:MW-PW:aprapAda:apramAda",
+  "h5:mw-pw-shared-doublet:MW-PW:apraRASa:aprakASa",
+  "h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa",
+  "h5:mw-pwg-shared-doublet:MW-PWG:jalaDitA:jalaDigA",
+  "h5:mw-pwg-shared-doublet:MW-PWG:kftAlaka:mftAlaka"
+]);
+
+function preservedReviewMap(report) {
+  return new Map(report.items.map(item => [
+    item.reviewId,
+    {
+      reviewStatus: item.reviewStatus,
+      reviewedValue: item.reviewedValue,
+      reviewer: item.reviewer,
+      reviewedAt: item.reviewedAt,
+      note: item.note
+    }
+  ]));
+}
+
+function countBy(rows, keyFn) {
+  const out = {};
+  for (const row of rows) {
+    const key = keyFn(row);
+    out[key] = (out[key] || 0) + 1;
+  }
+  return Object.fromEntries(Object.entries(out).sort(([a], [b]) => a.localeCompare(b)));
+}
 
 // ---- MW depth: count-divergence validation ----
 test("compareCounts: no warnings when counts match", () => {
@@ -342,7 +411,7 @@ test("R2 checkpoint review report is generated from the checkpoint packet", () =
   );
 });
 
-test("R2 checkpoint review report preserves stable ids and canonical empty fields", () => {
+test("R2 checkpoint review report preserves stable ids and empty human fields", () => {
   assert.equal(r2CheckpointReviewReport.queue, "r2-checkpoint");
   assert.equal(r2CheckpointReviewReport.recordCount, 10);
   assert.deepEqual(r2CheckpointReviewReport.items.map(item => item.reviewId), CHECKPOINT_DIAGNOSTIC_IDS);
@@ -367,7 +436,7 @@ test("R2 checkpoint review report carries reviewer-ready machine values", () => 
   }
 });
 
-test("R2 checkpoint review report preserves future human fields by diagnostic id", () => {
+test("R2 checkpoint review report ignores preserved human fields in machine-only mode", () => {
   const preserved = new Map([[
     "r2-drift:gam:pwg",
     {
@@ -383,14 +452,11 @@ test("R2 checkpoint review report preserves future human fields by diagnostic id
   ]]);
   const payload = buildR2CheckpointReviewPayload(r2CheckpointPacket, preserved, "2026-06-06T00:00:00.000Z");
   const item = payload.items.find(row => row.reviewId === "r2-drift:gam:pwg");
-  assert.equal(item.reviewStatus, "reviewed-corrected");
-  assert.deepEqual(item.reviewedValue, {
-    acceptedParserLabels: ["target-primary-series"],
-    parserDisposition: "promote-parser-candidate"
-  });
-  assert.equal(item.reviewer, "mg");
-  assert.equal(item.reviewedAt, "2026-06-06");
-  assert.equal(item.note, "Test decision.");
+  assert.equal(item.reviewStatus, "needs-review");
+  assert.equal(item.reviewedValue, null);
+  assert.equal(item.reviewer, null);
+  assert.equal(item.reviewedAt, null);
+  assert.equal(item.note, "");
   assert.equal(item.machineValue.packetId, "div-source-scope");
 });
 
@@ -412,10 +478,196 @@ test("R2 checkpoint review report rejects source pointers without links", () => 
   );
 });
 
+test("R2 drift explanation generator rejects reviewed checkpoint decisions", () => {
+  const dirty = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
+  dirty.items[0].reviewStatus = "reviewed-ok";
+  dirty.items[0].reviewedValue = {
+    acceptedParserLabels: dirty.items[0].machineValue.proposedParserLabels,
+    parserDisposition: "promote-parser-candidate"
+  };
+  dirty.items[0].reviewer = "codex";
+  dirty.items[0].reviewedAt = "2026-06-06";
+  dirty.items[0].note = "Dirty reviewed decision.";
+  assert.throws(
+    () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, dirty),
+    /checkpoint review item must remain needs-review with empty human fields/
+  );
+});
+
+test("R2 drift explanation doc is generated from the artifact", () => {
+  assert.equal(r2DriftExplanationMd, buildR2DriftExplanationMarkdown(r2DriftExplanation));
+});
+
+test("R2 drift explanation rows cover every diagnostic id", () => {
+  const proposalIds = Object.keys(r2LabelProposals.rowProposals);
+  assert.equal(r2DriftExplanation.explanationRows.length, 70);
+  assert.deepEqual(r2DriftExplanation.explanationRows.map(row => row.diagnosticId), proposalIds);
+});
+
+test("R2 drift explanation labels stay inside packet vocabularies", () => {
+  for (const row of r2DriftExplanation.explanationRows) {
+    const allowed = labelsForPacket(row.packetId, r2LabelProposals.packetLabelVocabulary);
+    assert.ok(row.proposedParserLabels.length, `${row.diagnosticId} lacks proposed labels`);
+    for (const label of row.proposedParserLabels) {
+      assert.ok(allowed.has(label), `${row.diagnosticId} has out-of-vocabulary label ${label}`);
+    }
+    for (const explanation of row.proposedLabelExplanations) {
+      assert.ok(explanation.meaning, `${row.diagnosticId} lacks meaning for ${explanation.label}`);
+      assert.ok(explanation.parserConsequence, `${row.diagnosticId} lacks parser consequence for ${explanation.label}`);
+    }
+  }
+});
+
+test("R2 drift explanation keeps checkpoint rows stable and needs-review", () => {
+  assert.equal(r2DriftExplanation.counts.checkpointRows, 10);
+  assert.equal(r2DriftExplanation.counts.checkpointNeedsReview, 10);
+  assert.deepEqual(r2DriftExplanation.checkpointRows.map(row => row.diagnosticId), CHECKPOINT_DIAGNOSTIC_IDS);
+  for (const row of r2DriftExplanation.checkpointRows) {
+    assert.equal(row.reviewStatus, "needs-review");
+    assert.ok(row.sourcePointerCount > 0, `${row.diagnosticId} lacks source pointers`);
+    assert.ok(row.proposedParserLabels.length, `${row.diagnosticId} lacks proposed labels`);
+    assert.ok(row.reviewQuestion, `${row.diagnosticId} lacks review question`);
+    assert.equal(row.reviewedValue, null);
+    assert.equal(row.reviewer, null);
+    assert.equal(row.reviewedAt, null);
+    assert.equal(row.note, "");
+  }
+});
+
+test("R2 drift explanation counts match current R2 artifacts", () => {
+  assert.equal(r2DriftExplanation.counts.packetCount, 5);
+  assert.equal(r2DriftExplanation.counts.diagnosticRows, 70);
+  assert.deepEqual(r2DriftExplanation.counts.byPacket, r2LabelProposals.counts.byPacket);
+  assert.deepEqual(r2DriftExplanation.counts.byDriftClass, r2LabelProposals.counts.byDriftClass);
+  assert.deepEqual(r2DriftExplanation.counts.byPriority, r2LabelProposals.counts.byPriority);
+  assert.equal(
+    r2DriftExplanation.counts.proposedLabelAssignments,
+    r2DriftExplanation.explanationRows.reduce((sum, row) => sum + row.proposedParserLabels.length, 0)
+  );
+});
+
+test("R2 drift explanation doc names all checkpoint diagnostic ids", () => {
+  for (const diagnosticId of CHECKPOINT_DIAGNOSTIC_IDS) {
+    assert.ok(r2DriftExplanationMd.includes(diagnosticId), `${diagnosticId} missing from drift explanation doc`);
+  }
+  assert.ok(r2DriftExplanationMd.includes("Parser promotion remains deferred"));
+});
+
 // ---- H5 anomaly queue: quoted CSV parsing ----
 test("parseCsv handles quoted commas and escaped quotes", () => {
   const rows = parseCsv('a,b,c\nx,"y, z","q ""quoted"""\n');
   assert.deepEqual(rows, [{ a: "x", b: "y, z", c: 'q "quoted"' }]);
+});
+
+test("H5 anomaly review has the classified 130-row sample", () => {
+  assert.equal(h5AnomalyReviewReport.recordCount, 130);
+  assert.equal(h5AnomalyReviewReport.items.length, 130);
+  assert.equal(h5AnomalyReviewReport.reviewFamily, "h5-ghost-anomaly");
+  assert.equal(h5AnomalyReviewReport.queue, "encoding-ocr");
+  assert.deepEqual(
+    countBy(h5AnomalyReviewReport.items, item => item.machineValue.sampleClass),
+    H5_EXPECTED_CLASS_COUNTS
+  );
+});
+
+test("H5 anomaly review values are stable and stay in the documented taxonomy", () => {
+  assert.deepEqual(
+    countBy(h5AnomalyReviewReport.items, item => item.reviewedValue),
+    H5_EXPECTED_REVIEWED_VALUE_COUNTS
+  );
+  for (const item of h5AnomalyReviewReport.items) {
+    assert.ok(H5_REVIEW_LABELS.has(item.reviewedValue), `${item.reviewId} has unexpected label ${item.reviewedValue}`);
+    assert.equal(item.reviewStatus, "reviewed-ok", `${item.reviewId} should be reviewed-ok`);
+    assert.equal(item.reviewer, "codex", `${item.reviewId} should retain reviewer`);
+    assert.equal(item.reviewedAt, "2026-06-07", `${item.reviewId} should retain reviewedAt`);
+    assert.ok(item.note, `${item.reviewId} should keep an audit note`);
+  }
+});
+
+test("H5 anomaly review rows keep source pointers and generator-preserved human fields", () => {
+  const preserved = loadPreserved(h5AnomalyReviewReportPath);
+  assert.equal(preserved.size, 130);
+  for (const item of h5AnomalyReviewReport.items) {
+    assert.ok(item.sourcePointers.length >= 1, `${item.reviewId} missing source pointer`);
+    const saved = preserved.get(item.reviewId);
+    assert.ok(saved, `${item.reviewId} missing from generator preservation map`);
+    assert.deepEqual(saved, {
+      reviewStatus: item.reviewStatus,
+      reviewedValue: item.reviewedValue,
+      reviewer: item.reviewer,
+      reviewedAt: item.reviewedAt,
+      note: item.note
+    });
+  }
+});
+
+test("H5 maker QA packet is generated from the reviewed H5 report", () => {
+  assert.deepEqual(
+    h5MakerQaCandidates,
+    buildH5MakerQaPayload(
+      h5AnomalyReviewReport,
+      h5MakerQaCandidates.generatedAt,
+      preservedSourceCheckMap(h5MakerQaCandidates)
+    )
+  );
+  assert.equal(h5MakerQaCandidatesMd, buildH5MakerQaMarkdown(h5MakerQaCandidates));
+});
+
+test("H5 maker QA packet keeps the stable 10-row source-check order", () => {
+  assert.equal(h5MakerQaCandidates.status, "h5-maker-qa-candidate-packet");
+  assert.equal(h5MakerQaCandidates.generatedBy, "npm run build-h5-maker-qa-candidates");
+  assert.equal(h5MakerQaCandidates.counts.reviewRows, 130);
+  assert.equal(h5MakerQaCandidates.counts.possibleTypoRows, 22);
+  assert.equal(h5MakerQaCandidates.counts.inferredPossibleTypoRows, 16);
+  assert.equal(h5MakerQaCandidates.counts.knownCorrectionCalibrationRows, 6);
+  assert.equal(h5MakerQaCandidates.counts.qaCandidateRows, 10);
+  assert.deepEqual(
+    h5MakerQaCandidates.qaCandidateRows.map(row => row.reviewId),
+    H5_MAKER_QA_REVIEW_IDS
+  );
+});
+
+test("H5 maker QA packet rows keep source-check decisions without editing dictionary data", () => {
+  assert.deepEqual(h5MakerQaCandidates.counts.byPair, { "MW/PWG": 6, "MW/PW": 4 });
+  assert.deepEqual(h5MakerQaCandidates.counts.byNRealNeighbours, { "1": 5, "2": 5 });
+  assert.equal(h5MakerQaCandidates.counts.sourceCheckedRows, 10);
+  assert.equal(h5MakerQaCandidates.counts.acceptedCorrectionRows, 1);
+  assert.deepEqual(h5MakerQaCandidates.counts.bySourceCheckStatus, {
+    "source-supported-distinct": 5,
+    "source-supported-variant": 4,
+    "source-declared-correction-candidate": 1
+  });
+  for (const row of h5MakerQaCandidates.qaCandidateRows) {
+    assert.equal(row.reviewDecision.reviewStatus, "reviewed-ok");
+    assert.equal(row.reviewDecision.reviewedValue, "possible-typo");
+    assert.notEqual(row.sampleClass, "known-correction");
+    assert.ok(row.candidateSourcePointers.length >= 1, `${row.reviewId} missing candidate pointers`);
+    assert.ok(row.contrastSourcePointers.length >= 1, `${row.reviewId} missing contrast pointers`);
+    assert.notEqual(row.sourceCheckStatus, "needs-source-check");
+    assert.equal(row.checkedBy, "codex");
+    assert.equal(row.checkedAt, "2026-06-07");
+    assert.ok(row.sourceCheckNote, `${row.reviewId} missing source-check note`);
+    if (row.reviewId === "h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa") {
+      assert.equal(row.sourceCheckStatus, "source-declared-correction-candidate");
+      assert.equal(row.acceptedCorrection, "diviraTa");
+    } else {
+      assert.notEqual(row.sourceCheckStatus, "source-declared-correction-candidate");
+      assert.equal(row.acceptedCorrection, null);
+    }
+  }
+  for (const row of h5MakerQaCandidates.calibrationRows) {
+    assert.equal(row.sampleClass, "known-correction");
+    assert.equal(row.reviewDecision.reviewedValue, "possible-typo");
+  }
+});
+
+test("H5 maker QA worksheet names every selected candidate", () => {
+  for (const reviewId of H5_MAKER_QA_REVIEW_IDS) {
+    assert.ok(h5MakerQaCandidatesMd.includes(reviewId), `${reviewId} missing from H5 maker QA worksheet`);
+  }
+  assert.ok(h5MakerQaCandidatesMd.includes("Current review status: `source-checked`"));
+  assert.ok(h5MakerQaCandidatesMd.includes("source-declared-correction-candidate"));
+  assert.ok(h5MakerQaCandidatesMd.includes("accepted correction: `diviraTa`"));
 });
 
 // ---- H4 family profiles: stable ranking helpers ----
