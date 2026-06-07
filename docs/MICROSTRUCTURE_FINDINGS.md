@@ -31,7 +31,7 @@ citation practice, grammar/gender marking, and cross-references.
 | MF-3 | Indigenous verbal-root evidence is recoverable. | supported prototype | M4 recovers SKD/VCP/KRM/YAT/SHS root layers by using their own grammatical conventions. |
 | MF-4 | Cross-reference edges form a lineage-ready graph signal. | supported prototype | PWG `Vgl.`, MW `cf.`, and Apte-family `cf.{#...#}` produce comparable Sanskrit target edges. |
 | MF-5 | Structural register can predict dictionary family. | supported/prototype-backed | Citation style plus grammar-marking separates Western-tagged, indigenous, and index traditions. |
-| MF-6 | Content, convention, and microstructure inheritance are separate axes. | strong testable | CAE/CCS and MW/PWG show that headword convention and entry structure can diverge. |
+| MF-6 | Content, convention, and microstructure inheritance are separate axes. | machine comparison packet | [`THREE_AXIS_COMPARISON.md`](THREE_AXIS_COMPARISON.md) keeps content containment, convention similarity, and microstructure/register similarity separate for the 13 L0 known edges, including CAE/CCS and MW/PWG focus rows. |
 | MF-7 | Amarakosa-native semantic-field bias is measurable. | supported prototype | M8 maps AMAR vargas to dictionary headword coverage without using corpus frequency. |
 | MF-8 | Sense segmentation is reliable only where the division convention is explicit or reviewed. | supported documentation layer | AP/PWG/PWK expose countable structural divisions; MW/WIL/VCP/SKD require prose-aware R2 review before raw sense-count comparison. |
 
@@ -54,6 +54,7 @@ applicable. The remaining scholar-facing packages are now explicit:
 | H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md) | Edge and family-outlier labels are documented; source-read selected examples before paper use. |
 | H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md), [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md) | Use the H4 review packet to adjudicate SKD false lows, VCP high coverage, AP/AP90 deltas, specialized baselines, and index/reverse controls. |
 | Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Starting labels are documented for shared-core, prefix-convention, edition-continuity, normalization-risk, lexical-target, and too-sparse samples. |
+| Three-axis comparison | [`THREE_AXIS_COMPARISON.md`](THREE_AXIS_COMPARISON.md) | Source-read the MW/PWG, CCS/CAE, WIL/SHS, and PWG/SCH focus rows before turning the machine packet into a methods-note claim. |
 | H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md), [`H5_MAKER_QA_CANDIDATES.md`](H5_MAKER_QA_CANDIDATES.md), [`H5_MAKER_CORRECTION_PROPOSAL.md`](H5_MAKER_CORRECTION_PROPOSAL.md) | The 130-item first sample is classified, the 10-row maker-QA worksheet is source-checked, and the single source-declared correction candidate is now isolated as a maker-facing `divaraTa -> diviraTa` proposal. |
 
 ## What The Review Queues Prove

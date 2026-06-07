@@ -22,6 +22,7 @@ import { buildMarkdown as buildR2DriftExplanationMarkdown, buildPayload as build
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { buildMarkdown as buildH5MakerQaMarkdown, buildPayload as buildH5MakerQaPayload, preservedSourceCheckMap } from "../scripts/build-h5-maker-qa-candidates.mjs";
 import { buildMarkdown as buildH5MakerCorrectionMarkdown, buildPayload as buildH5MakerCorrectionPayload, preservedCorrectionTargetMap } from "../scripts/build-h5-maker-correction-proposal.mjs";
+import { EXPECTED_EDGE_IDS as THREE_AXIS_EDGE_IDS, axisReadingForScores, buildMarkdown as buildThreeAxisMarkdown, buildPayload as buildThreeAxisPayload } from "../scripts/build-three-axis-comparison.mjs";
 import { loadPreserved } from "../scripts/lib/review-report.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -43,6 +44,15 @@ const h5MakerQaCandidates = JSON.parse(fs.readFileSync(path.join(repoRoot, "data
 const h5MakerQaCandidatesMd = fs.readFileSync(path.join(repoRoot, "docs", "H5_MAKER_QA_CANDIDATES.md"), "utf8");
 const h5MakerCorrectionProposal = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "h5_maker_correction_proposal.json"), "utf8"));
 const h5MakerCorrectionProposalMd = fs.readFileSync(path.join(repoRoot, "docs", "H5_MAKER_CORRECTION_PROPOSAL.md"), "utf8");
+const threeAxisComparison = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "three_axis_comparison.json"), "utf8"));
+const threeAxisComparisonMd = fs.readFileSync(path.join(repoRoot, "docs", "THREE_AXIS_COMPARISON.md"), "utf8");
+const threeAxisSourceInputs = {
+  bootstrapRows: parseCsv(fs.readFileSync(path.join(repoRoot, "src", "data", "lexicographic-structure", "L0", "bootstrap_support.csv"), "utf8")),
+  jaccardRows: parseCsv(fs.readFileSync(path.join(repoRoot, "src", "data", "lexicographic-structure", "sanhw1_jaccard.csv"), "utf8")),
+  conventionRows: parseCsv(fs.readFileSync(path.join(repoRoot, "src", "data", "lexicographic-structure", "L0", "content_convention_scatter.csv"), "utf8")),
+  structural: JSON.parse(fs.readFileSync(path.join(repoRoot, "src", "data", "dicts", "structural-register.json"), "utf8")),
+  microstructure: JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "microstructure_fingerprint.json"), "utf8"))
+};
 
 const H5_REVIEW_LABELS = new Set([
   "legitimate-form",
@@ -737,6 +747,80 @@ test("H5 maker correction proposal keeps maker decision fields empty", () => {
   assert.ok(h5MakerCorrectionProposalMd.includes("Proposed correction: `divaraTa` -> `diviraTa`"));
   assert.ok(h5MakerCorrectionProposalMd.includes("Rejected detector neighbor: `devaraTa`"));
   assert.ok(h5MakerCorrectionProposalMd.includes("submittedBy = null"));
+});
+
+// ---- THREE-AXES comparison packet: content, convention, microstructure ----
+test("three-axis comparison packet is generated from existing atlas artifacts", () => {
+  assert.deepEqual(
+    threeAxisComparison,
+    buildThreeAxisPayload(threeAxisSourceInputs, threeAxisComparison.generatedAt)
+  );
+  assert.equal(normalizeLineEndings(threeAxisComparisonMd), buildThreeAxisMarkdown(threeAxisComparison));
+});
+
+test("three-axis comparison keeps the stable L0 known-edge order", () => {
+  assert.equal(threeAxisComparison.status, "three-axis-comparison-packet");
+  assert.equal(threeAxisComparison.generatedBy, "npm run build-three-axis-comparison");
+  assert.equal(threeAxisComparison.counts.comparisonRows, 13);
+  assert.deepEqual(threeAxisComparison.comparisonRows.map(row => row.rowId), THREE_AXIS_EDGE_IDS);
+  assert.deepEqual(threeAxisComparison.focusRows.map(row => row.rowId), [
+    "three-axis:PWG:MW",
+    "three-axis:CCS:CAE",
+    "three-axis:WIL:SHS",
+    "three-axis:PWG:SCH"
+  ]);
+});
+
+test("three-axis comparison rows carry all three bounded axes", () => {
+  for (const row of threeAxisComparison.comparisonRows) {
+    assert.notEqual(row.contentAxis.parentInChild, null, `${row.rowId} missing content axis`);
+    assert.notEqual(row.conventionAxis.conventionSimilarity, null, `${row.rowId} missing convention axis`);
+    assert.notEqual(row.microstructureAxis.microstructureSimilarity01, null, `${row.rowId} missing microstructure axis`);
+    for (const value of [
+      row.contentAxis.parentInChild,
+      row.contentAxis.jaccard,
+      row.conventionAxis.conventionSimilarity,
+      row.microstructureAxis.microstructureSimilarity01
+    ]) {
+      assert.ok(value >= 0 && value <= 1, `${row.rowId} axis value out of range: ${value}`);
+    }
+    assert.ok(row.contentAxis.band, `${row.rowId} missing content band`);
+    assert.ok(row.conventionAxis.band, `${row.rowId} missing convention band`);
+    assert.ok(row.microstructureAxis.band, `${row.rowId} missing microstructure band`);
+    assert.ok(row.axisReading, `${row.rowId} missing axis reading`);
+    assert.ok(row.interpretation, `${row.rowId} missing interpretation`);
+  }
+});
+
+test("three-axis focus rows preserve the roadmap comparison signals", () => {
+  const byId = new Map(threeAxisComparison.comparisonRows.map(row => [row.rowId, row]));
+  const pwgMw = byId.get("three-axis:PWG:MW");
+  assert.equal(pwgMw.contentAxis.band, "high-content-overlap");
+  assert.equal(pwgMw.conventionAxis.band, "low-convention-overlap");
+  assert.equal(pwgMw.axisReading, "content-carried-with-convention-and-register-recoding");
+  const ccsCae = byId.get("three-axis:CCS:CAE");
+  assert.equal(ccsCae.contentAxis.band, "high-content-overlap");
+  assert.equal(ccsCae.conventionAxis.band, "high-convention-overlap");
+  assert.equal(ccsCae.axisReading, "content-and-convention-aligned-register-shift");
+  assert.equal(threeAxisComparison.counts.highContentLowConventionRows, 2);
+  for (const rowId of THREE_AXIS_EDGE_IDS) {
+    assert.ok(threeAxisComparisonMd.includes(rowId.replace("three-axis:", "").replace(":", " -> ")), `${rowId} missing from markdown table`);
+  }
+});
+
+test("axisReadingForScores separates recoding and aligned-register cases", () => {
+  assert.equal(
+    axisReadingForScores({ parentInChild: 0.9, conventionSimilarity: 0.3, microstructureSimilarity: 0.4 }),
+    "content-carried-with-convention-and-register-recoding"
+  );
+  assert.equal(
+    axisReadingForScores({ parentInChild: 0.9, conventionSimilarity: 0.8, microstructureSimilarity: 0.9 }),
+    "aligned-content-convention-register"
+  );
+  assert.equal(
+    axisReadingForScores({ parentInChild: 0.2, conventionSimilarity: 0.8, microstructureSimilarity: 0.4 }),
+    "shared-convention-with-narrow-content-overlap"
+  );
 });
 
 // ---- H4 family profiles: stable ranking helpers ----
