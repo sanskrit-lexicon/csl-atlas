@@ -26,6 +26,7 @@
     "build-h4-family-profiles": "node scripts/build-h4-family-profiles.mjs",
     "build-xref-lineage": "node scripts/build-xref-lineage.mjs",
     "build-xref-hub-review": "node scripts/build-xref-hub-review.mjs",
+    "build-xref-source-check-packet": "node scripts/build-xref-source-check-packet.mjs",
     "recover-r2-archive": "node scripts/recover-r2-archive.mjs",
     "build-r2-source-anchors": "node scripts/build-r2-source-anchors.mjs",
     "build-r2-parser-diagnostics": "node scripts/build-r2-parser-diagnostics.mjs",

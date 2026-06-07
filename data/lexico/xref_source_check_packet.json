@@ -1,0 +1,2653 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "xref-source-check-packet",
+  "claim": "XREF-CORE source checking must keep MW/PWG lexical shared-core rows separate from PWG/MW prefix-convention hub controls.",
+  "evidenceLabel": "derived-source-pointers",
+  "reviewStatus": "needs-source-check",
+  "ownerRepo": "csl-atlas",
+  "generatedAt": "2026-06-07T14:27:43.582Z",
+  "generatedBy": "npm run build-xref-source-check-packet",
+  "sourceFiles": [
+    "data/lexico/xref_hub_review.json",
+    "data/lexico/xref_edges.csv",
+    "scripts/build-xref-hub-review.mjs",
+    "scripts/build-xref-source-check-packet.mjs",
+    "../csl-orig/v02/mw/mw.txt",
+    "../csl-orig/v02/pwg/pwg.txt"
+  ],
+  "sourceArtifact": {
+    "path": "data/lexico/xref_hub_review.json",
+    "generatedBy": "npm run build-xref-hub-review",
+    "sourceGeneratedAt": "2026-06-05T08:29:19.672Z",
+    "sharedCoreSample": 40
+  },
+  "packetLabelVocabulary": [
+    {
+      "label": "lexical-shared-core",
+      "meaning": "The same source lemma points to the same meaningful Sanskrit target in MW and PWG."
+    },
+    {
+      "label": "prefix-convention",
+      "meaning": "The target is primarily a prefix or compound-reference convention, not rare lexical inheritance."
+    },
+    {
+      "label": "edition-continuity",
+      "meaning": "A stable edge across editions of the same dictionary family."
+    },
+    {
+      "label": "lexical-target",
+      "meaning": "A top xref target that behaves like an ordinary lexical target rather than a convention hub."
+    },
+    {
+      "label": "normalization-risk",
+      "meaning": "A target string where normalization may create or hide an edge."
+    },
+    {
+      "label": "too-sparse",
+      "meaning": "A pair has too few shared sources for lineage interpretation."
+    }
+  ],
+  "counts": {
+    "sourceCheckRows": 50,
+    "sharedCoreRows": 40,
+    "prefixControlRows": 10,
+    "sourcePointerRows": 106,
+    "exactSharedCorePointers": 76,
+    "sharedCoreRowsWithMissingExactEdge": 4,
+    "prefixControlPointers": 30,
+    "bySampleClass": {
+      "shared-core": 40,
+      "prefix-control": 10
+    },
+    "byProposedLabel": {
+      "lexical-shared-core": 40,
+      "prefix-convention": 10
+    },
+    "prefixControlsByDictionary": {
+      "mw": 5,
+      "pwg": 5
+    }
+  },
+  "selectionPolicy": [
+    "Read the existing xref hub review artifact and xref edge CSV.",
+    "Keep the established 40-row MW/PWG shared-core sample in its current order.",
+    "Select the first five prefix-convention top targets for PWG and MW as controls.",
+    "Attach up to three dictionary source pointers per prefix target from xref_edges.csv order.",
+    "Record labels as source-check prompts, not accepted lineage decisions."
+  ],
+  "sharedCoreRows": [
+    {
+      "sampleId": "mw-pwg-shared:01",
+      "sampleClass": "shared-core",
+      "sourceLemma": "ARi",
+      "target": "aRi",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "23311",
+          "line": 82985,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L82985",
+          "sourceLemma": "ARi",
+          "sourceRecordLemma": "ARi",
+          "target": "aRi",
+          "kind": "cf",
+          "bodyExcerpt": "<s>ARi/</s> ¦ <s>is</s>, <lex>m.</lex> (<ab>cf.</ab> <s>aRi</s>) the pin of the axle of a cart, <ls>RV. i, 35, 6</ls>; <ls n=\"RV. i,\">63, 3</ls> [‘battle’, <ls>Naigh. ii, 17</ls>], and <ls n=\"RV.\">v, 43, 8</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "8208",
+          "line": 69917,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L69917",
+          "sourceLemma": "ARi",
+          "sourceRecordLemma": "ARi",
+          "target": "aRi",
+          "kind": "vgl",
+          "bodyExcerpt": "{#ARi/#}¦ <div n=\"1\"> 1) <lex>m.</lex> {%der Zapfen der Achse%} (der Theil, welcher in der Nabe läuft): {#A\\RiM na raTya^ma\\mftADi^ tasTuH#} <ls>ṚV. 1,35,6.</ls> {#ga\\ntaM ni\\DiM Dura^mA\\Rirna nABi^m#} <ls n=\"ṚV.\">5,43,8.</ls> {#tvaM SuzRa^M vf\\jane^ pf\\kza A..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support ARi -> aRi as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:02",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Adinava",
+      "target": "AdInava",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "23968",
+          "line": 85247,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L85247",
+          "sourceLemma": "Adinava",
+          "sourceRecordLemma": "Adinava",
+          "target": "AdInava",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Adinava/</s> ¦ <lex>n.</lex> (probably) misfortune, want of luck in dice, <ls>AV. vii, 109, 4</ls> (<ab>cf.</ab> <s>AdInava</s>.)<info lex=\"n\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "8440",
+          "line": 72016,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L72016",
+          "sourceLemma": "Adinava",
+          "sourceRecordLemma": "Adinava",
+          "target": "AdInava",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Adinava/#}¦ {%Unglück, Hinderniss%} (im Würfelspiel): {#A\\di\\na\\vaM pra^ti\\dIvne^ Gf\\tenA\\smA~ a\\Bi kza^ra#} <ls>AV. 7,110,4.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#AdInava#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Adinava -> AdInava as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:03",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Akzit",
+      "target": "anAkzit",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "7882",
+          "line": 67188,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L67188",
+          "sourceLemma": "Akzit",
+          "sourceRecordLemma": "Akzit",
+          "target": "anAkzit",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Akzi/t#}¦ (von {#kzi#} mit {#A#}) <lex>adj.</lex> {%sich aufhaltend, wohnend%} <ls>ṚV. 3,55,5.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#anAkzit#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [
+        "MW"
+      ],
+      "reviewQuestion": "Do the MW/PWG source records support Akzit -> anAkzit as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:04",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Ali",
+      "target": "ali",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "26790",
+          "line": 94804,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L94804",
+          "sourceLemma": "Ali",
+          "sourceRecordLemma": "Ali",
+          "target": "ali",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Ali</s> ¦ <lex>m.</lex> (<ab>cf.</ab> <s>ali</s>), a scorpion<info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "9388",
+          "line": 80265,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L80265",
+          "sourceLemma": "Ali",
+          "sourceRecordLemma": "Ali",
+          "target": "ali",
+          "kind": "vgl",
+          "bodyExcerpt": "1. {#Ali#}¦ <lex>m.</lex> <div n=\"1\"> 1) {%Scorpion%} <ls>H. 1211.</ls> <ls>Ind. St. 2,260.</ls> <div n=\"1\">— 2) {%Biene%} <ab>Sch.</ab> zu <ls>AK.</ls> und angeblich <ls>HĀR.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#ali, Alin#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Ali -> ali as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:05",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Alin",
+      "target": "alin",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "26803",
+          "line": 94846,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L94846",
+          "sourceLemma": "Alin",
+          "sourceRecordLemma": "Alin",
+          "target": "alin",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Alin</s> ¦ <lex>m.</lex> a scorpion, <ls>L.</ls> (<ab>cf.</ab> <s>alin</s>.)<info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "9401",
+          "line": 80421,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L80421",
+          "sourceLemma": "Alin",
+          "sourceRecordLemma": "Alin",
+          "target": "alin",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Alin#}¦ <lex>m.</lex> {%Scorpion%} <ls>H. 1211.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#alin#} und 1. {#Ali#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Alin -> alin as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:06",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Anuzak",
+      "target": "anuzak",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "24620",
+          "line": 87378,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L87378",
+          "sourceLemma": "Anuzak",
+          "sourceRecordLemma": "Anuzak",
+          "target": "anuzak",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Anuza/k</s> ¦ <lex>ind.</lex> (<ab>fr.</ab> <s>anu-√ saYj</s> [<s1>gaṇa</s1> <s>svarA<srs/>di</s>]), in continuous order, uninterruptedly, one after the other, <ls>RV. v, 16, 2</ls>, &c. (<ab>cf.</ab> <s>anuzak</s>). <info lex=\"ind\"/><listinfo n=\"sup\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "8661",
+          "line": 73649,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L73649",
+          "sourceLemma": "Anuzak",
+          "sourceRecordLemma": "Anuzak",
+          "target": "anuzak",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Anuza/k#}¦ (von {#saYj#} mit {#anu#}) <lex>adv.</lex> <is>gaṇa</is> {#svarAdi#} zu <ls>P. 1,1,37.</ls> <is>gaṇa</is> {#cAdi#} zu <ls n=\"P.\">1,4,57.</ls> {%in stätiger Folge, unausgesetzt, Einer nach dem Andern%}: {#vi ha\\vyama\\gnirA^nu\\zagBago\\ na vAra^mfRv..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Anuzak -> anuzak as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:07",
+      "sampleClass": "shared-core",
+      "sourceLemma": "ArAt",
+      "target": "Are",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "9148",
+          "line": 78258,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L78258",
+          "sourceLemma": "ArAt",
+          "sourceRecordLemma": "ArAt",
+          "target": "Are",
+          "kind": "vgl",
+          "bodyExcerpt": "{#ArA/t#}¦ (<ab>abl.</ab> von 1. {#Ara#}) <is>gaṇa</is> {#svarAdi#} zu <ls>P. 1,1,37.</ls> <div n=\"1\"> 1) {%aus der Ferne, von fern; fern, fernhin; fern von%}, mit dem <ab>abl.</ab> (<ls>P. 2,2,29</ls>) <ls>AK. 3,4,32,4.</ls> <ls>H. an. 7,21.</ls> <ls>MED. av..."
+        }
+      ],
+      "matchedDictionaries": [
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [
+        "MW"
+      ],
+      "reviewQuestion": "Do the MW/PWG source records support ArAt -> Are as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:08",
+      "sampleClass": "shared-core",
+      "sourceLemma": "AwIkana",
+      "target": "AwIlaka",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "23251",
+          "line": 82778,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L82778",
+          "sourceLemma": "AwIkana",
+          "sourceRecordLemma": "AwIkana",
+          "target": "AwIlaka",
+          "kind": "cf",
+          "bodyExcerpt": "<s>A-wIkana</s> ¦ <lex>n.</lex> (√ <s>wIk</s>), the leaping motion of a calf, <ls>L.</ls> (<ab>cf.</ab> <s>AwIlaka</s> and <s>AQIl˚</s>.)<info lex=\"n\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "8180",
+          "line": 69689,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L69689",
+          "sourceLemma": "AwIkana",
+          "sourceRecordLemma": "AwIkana",
+          "target": "AwIlaka",
+          "kind": "vgl",
+          "bodyExcerpt": "{#AwIkana#}¦ (von {#wIk#} mit {#A#}) <lex>n.</lex> {%das Springen der Kälber%} <ls>TRIK. 2,9,20.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#AwIlaka, AlIQaka#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support AwIkana -> AwIlaka as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:09",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Awi",
+      "target": "Aqi",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "23247",
+          "line": 82763,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L82763",
+          "sourceLemma": "Awi",
+          "sourceRecordLemma": "Awi",
+          "target": "Aqi",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Awi</s> ¦ <lex>f.</lex> <ab>N.</ab> of the bird <bot>Turdus Ginginianus</bot>, <ls>PārGṛ.</ls> (<ab>cf.</ab> <s>Aqi</s> and <s>Ati</s>.)<info lex=\"f\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "8176",
+          "line": 69661,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L69661",
+          "sourceLemma": "Awi",
+          "sourceRecordLemma": "Awi",
+          "target": "Aqi",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Awi#}¦ <is>gaṇa</is> {#CAtryAdi#} zu <ls>P. 6,2,86.</ls> <lex>f.</lex> ein <ab>bes.</ab> Vogel, {%Turdus Ginginianus%}, <ls>AK. 2,5,25.</ls> <ls>H. 1338.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Aqi#} und {#Ati#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Awi -> Aqi as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:10",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Ayu",
+      "target": "Ayus",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "25866",
+          "line": 91671,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L91671",
+          "sourceLemma": "Ayu",
+          "sourceRecordLemma": "Ayu",
+          "target": "Ayus",
+          "kind": "cf",
+          "bodyExcerpt": "¦ <ab>N.</ab> of fire (as the son of <s1>Purūravas</s1> and <s1>Urvaśī</s1>), <ls>VS.</ls>; <ls>MBh.</ls>; <ls>Hariv.</ls> (<ab>cf.</ab> <s>Ayus</s>)<info lex=\"inh\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "9050",
+          "line": 77316,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L77316",
+          "sourceLemma": "Ayu",
+          "sourceRecordLemma": "Ayu",
+          "target": "Ayus",
+          "kind": "vgl",
+          "bodyExcerpt": "2. {#A/yu#}¦ (wie eben) {%Leben, Lebenszeit%}: {#va\\tsaM na pUrva\\ Ayu^ni jA\\taM ri^hanti mA\\tara^H#} <ls>ṚV. 9,100,1.</ls> {#agne\\ jara^sva svapa\\tya Ayu^ni#} <ls n=\"ṚV.\">3,3,6.</ls> {#AyuSezatA#} ({#AyuHSe˚?#}) <ls>PAÑCAT. 127,3.</ls> Nach den <ab>Sch.</ab>..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Ayu -> Ayus as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:11",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BAluka",
+      "target": "Balla",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "150156",
+          "line": 502962,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L502962",
+          "sourceLemma": "BAluka",
+          "sourceRecordLemma": "BAluka",
+          "target": "Balla",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BAluka</s> ¦ <lex>m.</lex> a bear, <ls>L.</ls> (<ab>cf.</ab> <s>Balla</s> and <s>BAlluka</s>). <info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54677",
+          "line": 529575,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L529575",
+          "sourceLemma": "BAluka",
+          "sourceRecordLemma": "BAluka",
+          "target": "Balla",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BAluka#}¦ <lex>m.</lex> {%Bär%} <ab>Cit.</ab> bei <ls>BHAR.</ls> zu <ls>AK.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BAlUka, Balla#} <ab>u. s. w.</ab>"
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BAluka -> Balla as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:12",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BAtu",
+      "target": "BAnu",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "149443",
+          "line": 500702,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L500702",
+          "sourceLemma": "BAtu",
+          "sourceRecordLemma": "BAtu",
+          "target": "BAnu",
+          "kind": "cf",
+          "bodyExcerpt": "¦ = <s>dIpta</s>, <ls>L.</ls> (<ab>cf.</ab> <s>BAnu</s>). <info lex=\"inh\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54526",
+          "line": 528157,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L528157",
+          "sourceLemma": "BAtu",
+          "sourceRecordLemma": "BAtu",
+          "target": "BAnu",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BAtu/#}¦ (wie eben) <ls>UṆĀDIS. 1,73.</ls> <lex>m.</lex> {%die Sonne%} <ls>TRIK. 1,1,98.</ls> <ls>UJJVAL.</ls> = {#dIpta#} <ls>UṆĀDIVṚ.</ls> im <ls>SAṂKṢIPTAS.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BAnu#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BAtu -> BAnu as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:13",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BAvitra",
+      "target": "Bavitra",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "150435",
+          "line": 503847,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L503847",
+          "sourceLemma": "BAvitra",
+          "sourceRecordLemma": "BAvitra",
+          "target": "Bavitra",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BAvitra</s> ¦ <lex>n.</lex> the three worlds (<ab>viz.</ab> earth, heaven, and the lower regions or the atmosphere), the universe, <ls>Uṇ. iv, 1, 170</ls>, <ab>Sch.</ab>, (<ab>cf.</ab> <s>Bavitra</s>). <info lex=\"n\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54748",
+          "line": 530319,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L530319",
+          "sourceLemma": "BAvitra",
+          "sourceRecordLemma": "BAvitra",
+          "target": "Bavitra",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BA/vitra#}¦ (von 1. {#BU)#} <ls>UṆĀDIS. 4,170.</ls> <lex>n.</lex> {%die drei Welten%} <ls>UJJVAL.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Bavitra#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BAvitra -> Bavitra as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:14",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BI",
+      "target": "Byas",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "150969.1",
+          "line": 505640,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L505640",
+          "sourceLemma": "BI",
+          "sourceRecordLemma": "BI",
+          "target": "Byas",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BI</s> ¦ [<ab>cf.</ab> √ <s>Byas</s>; <lang>Lith.</lang> <etym>bijótis</etym>; <lang>Slav.</lang> <etym>bojati</etym>; <lang>Germ.</lang> <etym>biben</etym>, <etym>beben</etym>.]"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54938",
+          "line": 533051,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L533051",
+          "sourceLemma": "BI",
+          "sourceRecordLemma": "BI",
+          "target": "Byas",
+          "kind": "vgl",
+          "bodyExcerpt": "1. {#BI#}¦, {#Ba/yate#} (die im <is>Veda</is> herrschende Form), {#Ba/yamAna; biBe/ti#} <ls>DHĀTUP. 25,2.</ls> <ls>P. 6,1,192.</ls> {#biBItas#} und {#biBitas#} <ab>u. s. w.</ab> <ls n=\"P.\">6,4,115.</ls> <ls>VOP. 9,31.</ls> [Page5-0292] {#biByati; biBIyA/t#} u..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BI -> Byas as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:15",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BUHKAra",
+      "target": "BuHKAra",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "152444",
+          "line": 510438,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510438",
+          "sourceLemma": "BUHKAra",
+          "sourceRecordLemma": "BUHKAra",
+          "target": "BuHKAra",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BUHKAra</s> ¦ <lex>mfn.</lex> coming from <ns>Bokhāra</ns> (as horses &c.), <ls>Rājat.</ls> (<ab>cf.</ab> <s>BuHKAra</s>). <info lex=\"m:f:n\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "55168",
+          "line": 536956,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L536956",
+          "sourceLemma": "BUHKAra",
+          "sourceRecordLemma": "BUHKAra",
+          "target": "BuHKAra",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BUHKAra#}¦ <lex>adj.</lex> {%bucharisch%}: {#vAjinaH#} <ls>RĀJA-TAR. 4,166.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BuHKAra#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BUHKAra -> BuHKAra as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:16",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BaMsas",
+      "target": "Basad",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "53690",
+          "line": 519120,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L519120",
+          "sourceLemma": "BaMsas",
+          "sourceRecordLemma": "BaMsas",
+          "target": "Basad",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Ba/Msas#}¦ <lex>n.</lex> {%ein <ab>best.</ab> Theil des Unterleibes%}: {#yakzma\\M SroRi^ByA\\M BAsa^dA\\dBaMsa^so\\ vi vf^hAmi te#} <ls>ṚV. 10,163,4.</ls> {#a\\rAyA^~ asyA mu\\zkAByA\\M BaMsa\\so 'pa^ harAmasi#} <ls>AV. 8,6,5.</ls> <ls n=\"AV.\">9,8,21.</ls> <div n=..."
+        }
+      ],
+      "matchedDictionaries": [
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [
+        "MW"
+      ],
+      "reviewQuestion": "Do the MW/PWG source records support BaMsas -> Basad as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:17",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BakkikA",
+      "target": "PaqiNgA",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "147531",
+          "line": 494486,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L494486",
+          "sourceLemma": "BakkikA",
+          "sourceRecordLemma": "BakkikA",
+          "target": "PaqiNgA",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BakkikA</s> ¦ <lex>f.</lex> a cricket, <ls>L.</ls> (<ab>cf.</ab> <s>PaqiNgA</s>). <info lex=\"f\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "53692",
+          "line": 519132,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L519132",
+          "sourceLemma": "BakkikA",
+          "sourceRecordLemma": "BakkikA",
+          "target": "PaqiNgA",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BakkikA#}¦ <lex>f.</lex> {%Grille, Heimchen%} <ls>ŚABDĀRTHAK.</ls> bei <ls>WILSON.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#PaqiNgA#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BakkikA -> PaqiNgA as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:18",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Bakz",
+      "target": "biBakzayizu",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "147534",
+          "line": 494498,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L494498",
+          "sourceLemma": "Bakz",
+          "sourceRecordLemma": "Bakz",
+          "target": "biBakzayizu",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Bakz</s> ¦ (<ab>prob.</ab> a secondary form <ab>fr.</ab> √ <s>Baj</s>, or <ab>Nom.</ab> <ab>fr.</ab> <s>Bakza/</s>; <ab>cf.</ab> also √ <s>Bikz</s> and <s>BaYj</s>) <ab>cl.</ab> 10. <ab>P.</ab> (<ls>Dhātup. xxxii, 22</ls>) <s>Bakza/yati</s> (rarely <ab>Ā.<..."
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "53742",
+          "line": 519546,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L519546",
+          "sourceLemma": "Bakz",
+          "sourceRecordLemma": "Bakz",
+          "target": "biBakzayizu",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Bakz#}¦, {#Bakza/yati#} <ls>DHĀTUP. 32,22.</ls> {#BakzayAmAsa, Bakzayizyati#}; bisweilen auch <ab>med.</ab>; in der späteren Sprache hier und da auch {#Ba/kzati, ˚te#} <ls>DHĀTUP. 21,27.</ls> <ab>partic.</ab> <ab>pass.</ab> {#Bakzita#}; {%geniessen, verzehr..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Bakz -> biBakzayizu as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:19",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Bala",
+      "target": "bal",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "148924",
+          "line": 499080,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499080",
+          "sourceLemma": "Bala",
+          "sourceRecordLemma": "Bala",
+          "target": "bal",
+          "kind": "cf",
+          "bodyExcerpt": "<hom>1.</hom> <s>Bala</s> ¦ <lex>ind.</lex> certainly, indeed, <ls>RV.</ls>; <ls>AV.</ls> (<ab>cf.</ab> <s>bal</s>, <s>baw</s>, and <lang>Marāṭhī</lang> <i>bhalla</i>, ‘well’)<info lex=\"ind\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54242",
+          "line": 525182,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L525182",
+          "sourceLemma": "Bala",
+          "sourceRecordLemma": "Bala",
+          "target": "bal",
+          "kind": "vgl",
+          "bodyExcerpt": "1. {#Bala#}¦ <ab>enklit.</ab> <ab>Part.</ab> {%gewiss%}: {#Ba\\draM Ba^la\\ tyasyA^ aBU\\dyasyA^ u\\dara\\mAma^yat#} <ls>ṚV. 10,86,23.</ls> {#sarve^ Bala bravATa#} <ls>AV. 7,56,7.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#bal, baw#} und mahr. {#Balla#} {%well!%}"
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Bala -> bal as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:20",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Bas",
+      "target": "psA",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "149289",
+          "line": 500211,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L500211",
+          "sourceLemma": "Bas",
+          "sourceRecordLemma": "Bas",
+          "target": "psA",
+          "kind": "cf",
+          "bodyExcerpt": "<hom>1.</hom> <s>Bas</s> ¦ <ab>cl.</ab> 3. <ab>P.</ab> (<ls>Dhātup. xxv, 18</ls>) <s>ba/Basti</s> or (3. <ab>sg.</ab> and <ab>pl.</ab>) <s>ba/psati</s> (2. <ab>du.</ab> <s>BasaTas</s>, <ls>RV.</ls>; <ab>Subj.</ab> <s>baBasat</s> or <s>Ba/sat</s>, <ls>ib.</ls>..."
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54350",
+          "line": 526206,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L526206",
+          "sourceLemma": "Bas",
+          "sourceRecordLemma": "Bas",
+          "target": "psA",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Bas#}¦, {#ba/Basti, bapsati, babDAm#} <ls>NAIGH. 2,8.</ls> <ls>P. 6,4,100.</ls> <ab>partic.</ab> {#ba/psatH Ba/sat, Basa/Tas#} <ls>NAIGH.</ls>; {#BasitA, Basitum#} <ls>P. 7,2,8.</ls> <ab>Sch.</ab> {%kauen, zerkauen, zermalmen; verzehren%}: {#da\\dBirvanA^ni ..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Bas -> psA as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:21",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BastrakA",
+      "target": "BastrAkA",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "149303",
+          "line": 500259,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L500259",
+          "sourceLemma": "BastrakA",
+          "sourceRecordLemma": "BastrakA",
+          "target": "BastrAkA",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BastrakA</s> ¦ <lex>f.</lex> <ab>dimin.</ab> <ab>fr.</ab> <s>BastrA</s>, <ls>Vop.</ls> (<ab>cf.</ab> <s>BastrAkA</s> and <s>BastrikA</s>, <ls>Pāṇ. vii, 3, 47</ls>). <info lex=\"f\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54358",
+          "line": 526289,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L526289",
+          "sourceLemma": "BastrakA",
+          "sourceRecordLemma": "BastrakA",
+          "target": "BastrAkA",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BastrakA#}¦ <lex>f.</lex> <ab>demin.</ab> von {#BastrA#} <ls>VOP. 4,7.</ls> <ls>ŚABDAR.</ls> im <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BastrAkA, BastrikA#} und <ls>P. 7,3,47.</ls>"
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BastrakA -> BastrAkA as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:22",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Bavanti",
+      "target": "BavantI",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "149155",
+          "line": 499794,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499794",
+          "sourceLemma": "Bavanti",
+          "sourceRecordLemma": "Bavanti",
+          "target": "BavantI",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Bavanti</s> ¦ <lex>m.</lex> (?) time being, present time, <ls>Uṇ. iii, 50</ls> (<ab>cf.</ab> <s>BavantI</s> under <s>Bavat</s>). <info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54294",
+          "line": 525720,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L525720",
+          "sourceLemma": "Bavanti",
+          "sourceRecordLemma": "Bavanti",
+          "target": "BavantI",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Bavanti/#}¦ (wie eben) <ls>UṆĀDIS. 3,50.</ls> {%Gegenwart%} <ls>UJJVAL.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BavantI#} <ab>u.</ab> {#Bavant#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Bavanti -> BavantI as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:23",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Bavitra",
+      "target": "BAvitra",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "149200",
+          "line": 499935,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499935",
+          "sourceLemma": "Bavitra",
+          "sourceRecordLemma": "Bavitra",
+          "target": "BAvitra",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Bavi/tra</s> ¦ <lex>n.</lex> (<ab>prob.</ab>) the earth or the world, <ls>RV. vii, 35, 9</ls> (<s>Buvanam antarikzam udakaM vA</s>, <ls>Sāy.</ls>; <ab>cf.</ab> <s>BAvitra</s>). <info lex=\"n\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54325",
+          "line": 525943,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L525943",
+          "sourceLemma": "Bavitra",
+          "sourceRecordLemma": "Bavitra",
+          "target": "BAvitra",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Bavi/tra#}¦ (von 1. {#BU)#} <lex>n.</lex> nach <ls>SĀY.</ls> {#BuvanamantarikzamudakaM vA#}.{# SaM no^ Ba\\vitra\\M Samva^stu vA\\yuH#} <ls>ṚV. 7,35,9.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BAvitra#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Bavitra -> BAvitra as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:24",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Bela",
+      "target": "Beqa",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "152923",
+          "line": 511993,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511993",
+          "sourceLemma": "Bela",
+          "sourceRecordLemma": "Bela",
+          "target": "Beqa",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Bela</s> ¦ <lex>m.</lex> <ab>N.</ab> of a physician, <ls>L.</ls> (<ab>cf.</ab> <s>Beqa</s>). <info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "55746",
+          "line": 542214,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L542214",
+          "sourceLemma": "Bela",
+          "sourceRecordLemma": "Bela",
+          "target": "Beqa",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Be/la#}¦ <ls>UJJVAL.</ls> zu <ls>UṆĀDIS. 2,28.</ls> <div n=\"1\"> 1) <lex>adj.</lex> <div n=\"2\"> a) {%furchtsam%} (<ab>vgl.</ab> {#BI)#} <ls>TRIK. 2,8,58.</ls> <ls n=\"TRIK.\">3,3,403.</ls> <ls>H. an. 2,504.</ls> <ls>MED. 1. 43.</ls> <ls>VIŚVA</ls> bei <ls>UJJV..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Bela -> Beqa as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:25",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BfNgariwi",
+      "target": "BfNgin",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "152682",
+          "line": 511228,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511228",
+          "sourceLemma": "BfNgariwi",
+          "sourceRecordLemma": "BfNgariwi",
+          "target": "BfNgin",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BfNgariwi</s> or <s>BfNga˚rIwa</s> (<ls>Cat.</ls>) or <s>BfNga˚rIwi</s> (<ls>Hariv.</ls>), ¦ <lex>m.</lex> <ab>N.</ab> of one of <s1>Śiva</s1>'s attendants (<ab>cf.</ab> <s>BfNgin</s>, <s>BfNgiriwa</s> &c.)<info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "55644",
+          "line": 541101,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L541101",
+          "sourceLemma": "BfNgariwi",
+          "sourceRecordLemma": "BfNgariwi",
+          "target": "BfNgin",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BfNgariwi#}¦ <lex>m.</lex> <ab>N. pr.</ab> eines Wesens im Gefolge des <is>Śiva</is> <ls>BHŪRIPR.</ls> im <ls>ŚKDR.</ls> <ls>Verz. d. Oxf. H. 191,a,12.</ls> {#BfNgarIwa#} <ab>ebend.</ab> <ls n=\"Verz. d. Oxf. H.\">191,a,11.</ls> <ls>TRIK. 1,1,49.</ls> <ls>BHŪ..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BfNgariwi -> BfNgin as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:26",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BfRqi",
+      "target": "BaRqi",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "152722",
+          "line": 511356,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511356",
+          "sourceLemma": "BfRqi",
+          "sourceRecordLemma": "BfRqi",
+          "target": "BaRqi",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BfRqi</s> ¦ a wave, <ls>L.</ls> (<ab>cf.</ab> <s>BaRqi</s>)."
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "55673",
+          "line": 541290,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L541290",
+          "sourceLemma": "BfRqi",
+          "sourceRecordLemma": "BfRqi",
+          "target": "BaRqi",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BfRqi#}¦ {%Welle%} <ls>HĀR. 205.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BaRqi#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BfRqi -> BaRqi as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:27",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BogapAla",
+      "target": "Bogika",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "153144",
+          "line": 512680,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L512680",
+          "sourceLemma": "BogapAla",
+          "sourceRecordLemma": "BogapAla",
+          "target": "Bogika",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Boga—pAla</s> ¦ <lex>m.</lex> a groom, <ls>L.</ls> (<ab>cf.</ab> <s>Bogika</s>). <info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "55816",
+          "line": 542988,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L542988",
+          "sourceLemma": "BogapAla",
+          "sourceRecordLemma": "BogapAla",
+          "target": "Bogika",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BogapAla#}¦ (2. {#Boga + pAla)#} <lex>m.</lex> {%Pferdeknecht%} <ls>ŚABDAM.</ls> im <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Bogika#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BogapAla -> Bogika as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:28",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BojyA",
+      "target": "BojA",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "153325",
+          "line": 513238,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L513238",
+          "sourceLemma": "BojyA",
+          "sourceRecordLemma": "BojyA",
+          "target": "BojA",
+          "kind": "cf",
+          "bodyExcerpt": "¦ a princess of the <s1>Bhoja</s1>s, <ls>MBh.</ls>; <ls>Hariv.</ls>; <ls>Ragh.</ls>; <ls>BhP.</ls> (<ab>cf.</ab> <s>BojA</s>)<info lex=\"inh\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "55892",
+          "line": 543766,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L543766",
+          "sourceLemma": "BojyA",
+          "sourceRecordLemma": "BojyA",
+          "target": "BojA",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BojyA/#}¦ (von {#Boja)#} <lex>f.</lex> {%eine Prinzessin der%} <is>Bhoja</is> <is>gaṇa</is> {#krOqyAdi#} zu <ls>P. 4,1,80.</ls> <ls>MBH. 3,490.</ls> <ls>HARIV. 1922.</ls> <ls n=\"HARIV.\">7003.</ls> <ls n=\"HARIV.\">9136</ls> (die ältere <ab>Ausg.</ab> {#BojA)#..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BojyA -> BojA as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:29",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BrAS",
+      "target": "BlAS",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "153761",
+          "line": 514651,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L514651",
+          "sourceLemma": "BrAS",
+          "sourceRecordLemma": "BrAS",
+          "target": "BlAS",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BrAS</s> (<ab>v.l.</ab> <s>BrAs</s>; <ab>cf.</ab> √ <s>BlAS</s>) ¦ <ab>cl.</ab> 1. 4. <ab>Ā.</ab> <s>BrASate</s>, <s>˚Syate</s>, <ls>Pāṇ. iii, 1, 70</ls> (<s>˚Syati</s>, <ls>Naigh.</ls>; <ab>pf.</ab> <s>baBrASe</s> and <s>BreSe</s>, <ls>Pāṇ. vi, 4, 125</ls..."
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "56053",
+          "line": 545828,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L545828",
+          "sourceLemma": "BrAS",
+          "sourceRecordLemma": "BrAS",
+          "target": "BlAS",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BrAS#}¦, {#BrA/Sate#} {%flammen, leuchten%} <ls>NAIGH. 1,16.</ls> <ls>DHĀTUP. 19,76.</ls> <ls>P. 3,1,70.</ls> <ls>VOP. 8,67.</ls> [Page5-0411] {#BrA/Syati#} <ls>NAIGH.</ls> {#BrASyate#} <ls>P.</ls> <ls>VOP.</ls> {#baBrASe#} und {#BreSe, baBrASire#} und {#Br..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BrAS -> BlAS as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:30",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BuHKAra",
+      "target": "BUHKAra",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "151210",
+          "line": 506384,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506384",
+          "sourceLemma": "BuHKAra",
+          "sourceRecordLemma": "BuHKAra",
+          "target": "BUHKAra",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BuHKAra</s> ¦ <lex>m.</lex> a country in <ns>Tartary</ns>, <ns>Bokhāra</ns>, <ls>Rājat.</ls> (<ab>cf.</ab> <s>BUHKAra</s>). <info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "55031",
+          "line": 533987,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L533987",
+          "sourceLemma": "BuHKAra",
+          "sourceRecordLemma": "BuHKAra",
+          "target": "BUHKAra",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BuHKAra#}¦ {%die Bucharei%} <ls>RĀJA-TAR. 4,246.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BUHKAra#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BuHKAra -> BUHKAra as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:31",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BuRq",
+      "target": "huRq",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "151430",
+          "line": 507127,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L507127",
+          "sourceLemma": "BuRq",
+          "sourceRecordLemma": "BuRq",
+          "target": "huRq",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BuRq</s> ¦ <ab>cl.</ab> 1. <ab>Ā.</ab> <s>BuRqate</s>, to support, <ls>Dhātup. viii, 24</ls>; <div n=\"to\"/>to select, <ls>Vop.</ls> (<ab>cf.</ab> √ <s>huRq</s>). <info westergaard=\"Buqi,8.24,01.0180\"/><info verb=\"root\" cp=\"1Ā\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "55115",
+          "line": 535106,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L535106",
+          "sourceLemma": "BuRq",
+          "sourceRecordLemma": "BuRq",
+          "target": "huRq",
+          "kind": "vgl",
+          "bodyExcerpt": "{#BuRq#}¦, {#Bu/Rqate#} <ls>DHĀTUP. 8,24</ls> {#(BaraRe#}; <ls>VOP.</ls> : {#BftO, vftO)#} . <div n=\"v\">— <ab>Vgl.</ab> {#huRq#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BuRq -> huRq as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:32",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Buj",
+      "target": "buBukzA",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "151348",
+          "line": 506843,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506843",
+          "sourceLemma": "Buj",
+          "sourceRecordLemma": "Buj",
+          "target": "buBukzA",
+          "kind": "cf",
+          "bodyExcerpt": "<hom>3.</hom> <s>Buj</s> ¦ <ab>cl.</ab> 7. <ab>P.</ab> <ab>Ā.</ab> (<ls>Dhātup. xxix, 17</ls>) <s>Buna/kti</s>, <s>BuNkte/</s> (rarely <ab>cl.</ab> 6. <ab>P.</ab> <ab>Ā.</ab> <s>BuYjati</s>, <s>˚te</s>, <ls>Up.</ls>; <ls>MBh.</ls>; 3. <ab>pl.</ab> <ab>Ā.</ab>..."
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "55050",
+          "line": 534179,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L534179",
+          "sourceLemma": "Buj",
+          "sourceRecordLemma": "Buj",
+          "target": "buBukzA",
+          "kind": "vgl",
+          "bodyExcerpt": "3. {#Buj#}¦, {#Bunakti (BuYjati#} <ls>GṚHYASAṂGR. 2,30.</ls> <ls>Spr. 4059.</ls> <ls n=\"Spr.\">4844</ls>) und {#BuNkte (upaBuYjase#} <ls>MBH. 3,15118.</ls> {#BuYjate#} 3. <ab>sg.</ab> <ls n=\"MBH. 3,\">8085.</ls> <ls>HARIV. 1173</ls> [die neuere <ab>Ausg.</ab> {..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Buj -> buBukzA as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:33",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Cadis",
+      "target": "CAdizeya",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "75482",
+          "line": 254981,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L254981",
+          "sourceLemma": "Cadis",
+          "sourceRecordLemma": "Cadis",
+          "target": "CAdizeya",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Cadi/s</s> ¦ <lex>n.</lex> (<ls>Pāṇ. vi, 4, 97</ls>) a cover, roof of a carriage, roof (<s>gfha</s>, <ls>Naigh. iii, 4</ls>), <ls>RV. x, 85, 10</ls>; <ls>AV. iii, 7, 3</ls>; <ls>VS. v, 28</ls>; <ls>TS. vi</ls>; <ls>AitBr. i, 29</ls>; <ls>ŚBr. iii</ls>; <ls..."
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "26089",
+          "line": 249857,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L249857",
+          "sourceLemma": "Cadis",
+          "sourceRecordLemma": "Cadis",
+          "target": "CAdizeya",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Cadi/s#}¦ (von 1. {#Cad#}) <ls>Uṇ. 2,104.</ls> <ls>P. 3,4,97.</ls> <lex>n.</lex> (<lex>f.</lex> <ls>SIDDH. K. 250,b,1</ls>) {%Decke, Verdeck eines Wagens; Dach%} <ls>NAIGH. 3,4</ls> ( = {#gfha#}). <ls>AK. 2,2,14.</ls> <ls n=\"AK.\">3,4,26,203.</ls> <ls>H. 101..."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Cadis -> CAdizeya as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:34",
+      "sampleClass": "shared-core",
+      "sourceLemma": "DUmana",
+      "target": "DUpana",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "101620",
+          "line": 340556,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340556",
+          "sourceLemma": "DUmana",
+          "sourceRecordLemma": "DUmana",
+          "target": "DUpana",
+          "kind": "cf",
+          "bodyExcerpt": "<s>DUmana</s> ¦ <lex>n.</lex> (<ab>astrol.</ab>) the obscuration (of a comet; <ab>cf.</ab> <s>DUpana</s>). <info lex=\"n\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "76649",
+          "line": 698077,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L698077",
+          "sourceLemma": "DUmana",
+          "sourceRecordLemma": "DUmana",
+          "target": "DUpana",
+          "kind": "vgl",
+          "bodyExcerpt": "{#DUmana#}¦ (von {#DUmay)#} <lex>n.</lex> {%das Umnebeln%} (eines Kometen) <ls>Ind. St. 10,209.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#DUpana#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support DUmana -> DUpana as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:35",
+      "sampleClass": "shared-core",
+      "sourceLemma": "DUr",
+      "target": "DUrv",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "101737",
+          "line": 340911,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340911",
+          "sourceLemma": "DUr",
+          "sourceRecordLemma": "DUr",
+          "target": "DUrv",
+          "kind": "cf",
+          "bodyExcerpt": "<hom>1.</hom> <s>DUr</s> ¦ <ab>cl.</ab> 4. <ab>Ā.</ab> <s>DUryate</s>, to hurt or kill (<ab>cf.</ab> <s>DUrv</s>); <div n=\"to\"/>to move or approach, <ls>Dhātup. xxvi, 44.</ls><info westergaard=\"DUrI,26.44,04.0047\"/><info verb=\"root\" cp=\"4Ā\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "36925",
+          "line": 360030,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L360030",
+          "sourceLemma": "DUr",
+          "sourceRecordLemma": "DUr",
+          "target": "DUrv",
+          "kind": "vgl",
+          "bodyExcerpt": "{#DUr#}¦, {#DU/ryate#} {%verletzen, schaden; sich bewegen%} <ls>DHĀTUP. 26,44.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#DUrv#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support DUr -> DUrv as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:36",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Darmya",
+      "target": "DArmyAyaRa",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "36453",
+          "line": 352174,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L352174",
+          "sourceLemma": "Darmya",
+          "sourceRecordLemma": "Darmya",
+          "target": "DArmyAyaRa",
+          "kind": "vgl",
+          "bodyExcerpt": "{#Da/rmya#}¦ (von {#Darma#}) <lex>adj.</lex> = {#DarmeRa prApyam#} und {#DarmAdanapetam#} <ls>P. 4,4,91.</ls> <ls n=\"P. 4,4,\">92.</ls> <div n=\"1\"> 1) {%gesetzmässig, gesetzlich, rechtmässig, mit dem Gesetze —, dem Rechte —, dem Brauche in Einklang stehend, zu..."
+        }
+      ],
+      "matchedDictionaries": [
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [
+        "MW"
+      ],
+      "reviewQuestion": "Do the MW/PWG source records support Darmya -> DArmyAyaRa as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:37",
+      "sampleClass": "shared-core",
+      "sourceLemma": "DraR",
+      "target": "Dvan",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "102265",
+          "line": 342663,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L342663",
+          "sourceLemma": "DraR",
+          "sourceRecordLemma": "DraR",
+          "target": "Dvan",
+          "kind": "cf",
+          "bodyExcerpt": "<s>DraR</s> ¦ <ab>cl.</ab> 1. <ab>P.</ab> <s>˚Rati</s>, to sound, <ls>Dhātup. xiii, 16</ls> (<ab>cf.</ab> <s>Dvan</s>, <s>DvraR</s>). <info westergaard=\"DraRa,13.16,01.0303\"/><info verb=\"root\" cp=\"1P\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "37128",
+          "line": 361908,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L361908",
+          "sourceLemma": "DraR",
+          "sourceRecordLemma": "DraR",
+          "target": "Dvan",
+          "kind": "vgl",
+          "bodyExcerpt": "{#DraR#}¦, {#Dra/Rati#} {%tönen%} <ls>DHĀTUP. 13,16.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Dvan#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support DraR -> Dvan as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:38",
+      "sampleClass": "shared-core",
+      "sourceLemma": "GAwarI",
+      "target": "apaGAwilA",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "69725",
+          "line": 236198,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L236198",
+          "sourceLemma": "GAwarI",
+          "sourceRecordLemma": "GAwarI",
+          "target": "apaGAwilA",
+          "kind": "cf",
+          "bodyExcerpt": "<s>GAwarI</s> ¦ <lex>f.</lex> a kind of lute, 15 f. (<ab>cf.</ab> <s>apaGAwilA</s>, <s>avaGawarikA</s>, <s>AGAwa</s>.)<info lex=\"f\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "24050",
+          "line": 227826,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L227826",
+          "sourceLemma": "GAwarI",
+          "sourceRecordLemma": "GAwarI",
+          "target": "apaGAwilA",
+          "kind": "vgl",
+          "bodyExcerpt": "{#GAwarI#}¦ <lex>f.</lex> <ab>dass.</ab> <ls>ŚĀṄKH. ŚR. 17,3,15. 16.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#apaGAwilA#} <ls>LĀṬY. 4,2,8. 9.</ls> {#avaGawarikA#} <ls>ŚĀṄKH. ŚR. 17,3,12.</ls>"
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support GAwarI -> apaGAwilA as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:39",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Ga",
+      "target": "pariGa",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "69210",
+          "line": 234597,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L234597",
+          "sourceLemma": "Ga",
+          "sourceRecordLemma": "Ga",
+          "target": "pariGa",
+          "kind": "cf",
+          "bodyExcerpt": "<hom>3.</hom> <s>Ga</s> ¦ <lex>mfn.</lex> (√ <s>han</s>) <ab>ifc.</ab> ‘striking, killing’, <ab>cf.</ab> <s>jIva-</s>, <s>tAqa-</s>, <s>pARi-</s>, <s>rAja-</s>, &c. (<ab>cf.</ab> also <s>pariGa</s>)<info lex=\"m:f:n\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "23879",
+          "line": 226034,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L226034",
+          "sourceLemma": "Ga",
+          "sourceRecordLemma": "Ga",
+          "target": "pariGa",
+          "kind": "vgl",
+          "bodyExcerpt": "2. {#Ga#}¦ (von {#han#}) <div n=\"1\"> 1) <lex>adj.</lex> {%schlagend, tödtend%} in {#jIvaGa, tAqaGa, pARiGa, rAjaGa#} <ab>u. s. w.</ab> <div n=\"1\">— 2) <lex>f.</lex> {#GA#} {%Schlag%} <ls>MED. gh. 1.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#pariGa#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Ga -> pariGa as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "sampleId": "mw-pwg-shared:40",
+      "sampleClass": "shared-core",
+      "sourceLemma": "GaRqa",
+      "target": "GuRqa",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "69421",
+          "line": 235266,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L235266",
+          "sourceLemma": "GaRqa",
+          "sourceRecordLemma": "GaRqa",
+          "target": "GuRqa",
+          "kind": "cf",
+          "bodyExcerpt": "<s>GaRqa</s> ¦ <lex>m.</lex> a bee (<ab>cf.</ab> <s>GuRqa</s>), <ls>L.</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "23946",
+          "line": 226797,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L226797",
+          "sourceLemma": "GaRqa",
+          "sourceRecordLemma": "GaRqa",
+          "target": "GuRqa",
+          "kind": "vgl",
+          "bodyExcerpt": "{#GaRqa#}¦ <lex>m.</lex> {%Biene%} <ls>UṆĀDIVṚ.</ls> im <ls>SAṂKṢIPTAS.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#GuRqa#} ."
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support GaRqa -> GuRqa as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    }
+  ],
+  "prefixControlRows": [
+    {
+      "controlId": "xref-prefix-control:pwg:01",
+      "sampleClass": "prefix-control",
+      "dictionary": "PWG",
+      "dict": "pwg",
+      "target": "a˚",
+      "targetRank": 1,
+      "targetCount": 320,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "24415",
+          "line": 231738,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L231738",
+          "sourceLemma": "cakzus",
+          "sourceRecordLemma": "cakzus",
+          "target": "a˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#ca/kzus#}¦ (von {#cakz#}) <ls>Uṇ. 2,115.</ls> <ls>VOP. 26,68.</ls> <div n=\"1\"> 1) <lex>adj.</lex> {%sehend%}: {#BAsva^nta\\M cakzu^ze cakzuze\\ maya^H#} <ls>ṚV. 10,37,8.</ls> {#Buva\\Scakzu^rma\\ha f\\tasya^ go\\pAH#} <ls n=\"ṚV. 10,\">8,5.</ls> {#a\\kzI i^va\\ cakzu..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "27114",
+          "line": 260950,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L260950",
+          "sourceLemma": "javas",
+          "sourceRecordLemma": "javas",
+          "target": "a˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#ja/vas#}¦ (von {#jU#}) <lex>n.</lex> {%Raschheit, Schnelligkeit%}: {#Sye\\nasya^#} <ls>ṚV. 1,118,11.</ls> <ls n=\"ṚV.\">4,27,1.</ls> <ls n=\"ṚV.\">5,78,4.</ls> des Rosses <ls n=\"ṚV.\">3,50,2.</ls> Wassers <ls n=\"ṚV.\">4,21,8.</ls> <ls n=\"ṚV. 4,\">17,3.</ls> {#pra s..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "27303",
+          "line": 262882,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L262882",
+          "sourceLemma": "jAmi",
+          "sourceRecordLemma": "jAmi",
+          "target": "a˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#jAmi/#}¦ (von {#jan#}) <div n=\"1\"> 1) <lex>adj.</lex> <div n=\"2\"> a) {%leiblich verschwistert%}; seltener vom {%Bruder%} ({#jAmirBrAtA#}), häufig von der {%Schwester%} gebraucht und zwar sowohl {#svasA jAmiH#} ( <ls>ṚV. 1,123,5.</ls> <ls n=\"ṚV. 1,\">185,5.</..."
+        }
+      ],
+      "reviewQuestion": "Do the sampled PWG references to a˚ behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "controlId": "xref-prefix-control:pwg:02",
+      "sampleClass": "prefix-control",
+      "dictionary": "PWG",
+      "dict": "pwg",
+      "target": "mahA˚",
+      "targetRank": 2,
+      "targetCount": 254,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "19382",
+          "line": 179189,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L179189",
+          "sourceLemma": "koSa",
+          "sourceRecordLemma": "koSa",
+          "target": "mahA˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#ko/Sa#}¦ (so alle älteren Bücher; die neueren bald {#koSa#}, bald {#koza#} . <ls>AK. 3,4,29,223</ls> steht {#koza#} unter denjenigen Wörtern, welche {#za#} zum letzten Consonanten haben; <ls>H. an.</ls> und <ls>MED.</ls> führen ausdrucklich beide Formen auf..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "21460",
+          "line": 199874,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L199874",
+          "sourceLemma": "gaRa",
+          "sourceRecordLemma": "gaRa",
+          "target": "mahA˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#gaRa/#}¦ <lex>m.</lex> am Ende eines <ab>adj. comp.</ab> <lex>f.</lex> {#A#} <ls>MBH. 3,16608.</ls> <ls>R. 2,41,18.</ls> <ls n=\"R.\">5,51,1.</ls> <div n=\"1\"> 1) {%Schaar, Reihe%} (von Lebendigem und Leblosem); {%Gefolge, Anhang%} <ls>AK. 2,5,40.</ls> <ls n=\"..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "23729",
+          "line": 224483,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L224483",
+          "sourceLemma": "grAma",
+          "sourceRecordLemma": "grAma",
+          "target": "mahA˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#grA/ma#}¦ <lex>m.</lex> <ls>Uṇ. 1,141.</ls> <ls>ŚĀNT. 2,15.</ls> <div n=\"1\"> 1) {%bewohnter Platz, Dorfschaft, Dorf%} (<ab>Gegens.</ab> {#araRya#} und später auch {#pura, nagara, pattana#}) <ls>AK. 2,2,19.</ls> <ls>TRIK. 3,3,295.</ls> <ls>H. 961.</ls> <ls>a..."
+        }
+      ],
+      "reviewQuestion": "Do the sampled PWG references to mahA˚ behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "controlId": "xref-prefix-control:pwg:03",
+      "sampleClass": "prefix-control",
+      "dictionary": "PWG",
+      "dict": "pwg",
+      "target": "su˚",
+      "targetRank": 3,
+      "targetCount": 160,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "20108",
+          "line": 187220,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L187220",
+          "sourceLemma": "kzatra",
+          "sourceRecordLemma": "kzatra",
+          "target": "su˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#kzatra/#}¦ <lex>n.</lex> <ls>Uṇ. 4,168.</ls> <ls>SIDDH. K. 249,b,2.</ls> <lex>m.</lex> (dieses nicht zu belegen) und <lex>n.</lex> <is>gaṇa</is> {#arDarcAdi#} zu <ls>P. 2,4,31.</ls> <div n=\"1\"> 1) {%Herrschaft, Obergewalt, Macht, imperium%}; sowohl von mens..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "20179",
+          "line": 188098,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L188098",
+          "sourceLemma": "kzaya",
+          "sourceRecordLemma": "kzaya",
+          "target": "su˚",
+          "kind": "vgl",
+          "bodyExcerpt": "1. {#kza/ya#}¦ (von 1. {#kzi#}) <lex>m.</lex> {%Wohnung, Wohnsitz, Aufenthalt%} <ls>P. 6,1,201.</ls> <ls>AK. 3,4,24,147.</ls> <ls>H. 991.</ls> <ls>an. 2,348.</ls> <ls>MED. y. 7.</ls> {#nf\\vati\\ kzaye^#} <ls>ṚV. 6,25,6.</ls> {#gi\\ripu\\ kzaya^M daDe#} <ls n=\"ṚV..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "20280",
+          "line": 189333,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L189333",
+          "sourceLemma": "kziti",
+          "sourceRecordLemma": "kziti",
+          "target": "su˚",
+          "kind": "vgl",
+          "bodyExcerpt": "1. {#kziti/#}¦ (von 1. {#kzi#}) <lex>f.</lex> <div n=\"1\"> 1) {%Wohnsitz, Niederlassung%} <ls>AK. 3,4,14,73.</ls> <ls>H. an. 2,162.</ls> <ls>MED. t. 10.</ls> {#Dru\\vAsu^ kzi\\tizu^ kzi\\yanta^H#} <ls>ṚV. 7,88,7.</ls> <ls n=\"ṚV.\">1,73,4.</ls> {#kzeti^ kzi\\tIH su\\..."
+        }
+      ],
+      "reviewQuestion": "Do the sampled PWG references to su˚ behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "controlId": "xref-prefix-control:pwg:04",
+      "sampleClass": "prefix-control",
+      "dictionary": "PWG",
+      "dict": "pwg",
+      "target": "vi˚",
+      "targetRank": 4,
+      "targetCount": 75,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "19101",
+          "line": 176702,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L176702",
+          "sourceLemma": "keSa",
+          "sourceRecordLemma": "keSa",
+          "target": "vi˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#ke/Sa#}¦ <div n=\"1\"> 1) <lex>m.</lex> <ls>Uṇ. 5,33.</ls> <div n=\"2\"> a) {%Haupthaar%} (neben {#loman#} {%pilus%} und {#SmaSru#} {%Bart%}) <ls>AK. 2,6,2,46.</ls> <ls>TRIK. 3,3,426.</ls> <ls>H. 567.</ls> <ls>an. 2,546.</ls> <ls>MED. ś. 4.</ls> {#yaste\\ keSo^ ..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "25039",
+          "line": 238504,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L238504",
+          "sourceLemma": "carzaRi",
+          "sourceRecordLemma": "carzaRi",
+          "target": "vi˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#carzaRi/#}¦. Die alten Erklärer suchten in diesem Worte den Begriff {%sehend%}, wie die Umschreibung <ls>NIR. 5,24</ls> und die Zusammenstellung <ls>NAIGH. 3,11</ls> zeigen, und nahmen wahrscheinlich eine Abstammung von {#cakz#} <ab>an.</ab> Ihnen folgen di..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "25410",
+          "line": 242723,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L242723",
+          "sourceLemma": "citra",
+          "sourceRecordLemma": "citra",
+          "target": "vi˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#citra/#}¦ (von 4. {#cit#}) <ls>Uṇ. 4,165.</ls> <div n=\"1\"> 1) <lex>adj.</lex> <lex>f.</lex> {#A#} <div n=\"2\"> a) {%augenfällig; sichtbar, ausgezeichnet%}: {#Uti#} <ls>ṚV. 2,17,8.</ls> <ls n=\"ṚV.\">4,32,5.</ls> <ls n=\"ṚV.\">5,40,3.</ls> {#aBizwi#} <ls n=\"ṚV.\">..."
+        }
+      ],
+      "reviewQuestion": "Do the sampled PWG references to vi˚ behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "controlId": "xref-prefix-control:pwg:05",
+      "sampleClass": "prefix-control",
+      "dictionary": "PWG",
+      "dict": "pwg",
+      "target": "deva˚",
+      "targetRank": 5,
+      "targetCount": 72,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "17309",
+          "line": 160386,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L160386",
+          "sourceLemma": "kilbiza",
+          "sourceRecordLemma": "kilbiza",
+          "target": "deva˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#ki/lbiza#}¦ und {#ki/lviza (kilviza/#} <ls>Uṇ. 1,50</ls>) <lex>n.</lex> <ls>SIDDH. K. 249,b,5.</ls> <div n=\"1\"> 1) {%Fehler, Vergehen, Schuld, Sünde%}, = {#pApa#} <ls>AK. 1,1,4,1.</ls> <ls>H. 1381.</ls> = {#pApa#} und {#aparADa#} <ls>an. 3,732.</ls> <ls>MED..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "20108",
+          "line": 187220,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L187220",
+          "sourceLemma": "kzatra",
+          "sourceRecordLemma": "kzatra",
+          "target": "deva˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#kzatra/#}¦ <lex>n.</lex> <ls>Uṇ. 4,168.</ls> <ls>SIDDH. K. 249,b,2.</ls> <lex>m.</lex> (dieses nicht zu belegen) und <lex>n.</lex> <is>gaṇa</is> {#arDarcAdi#} zu <ls>P. 2,4,31.</ls> <div n=\"1\"> 1) {%Herrschaft, Obergewalt, Macht, imperium%}; sowohl von mens..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "20580",
+          "line": 192169,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L192169",
+          "sourceLemma": "kzetra",
+          "sourceRecordLemma": "kzetra",
+          "target": "deva˚",
+          "kind": "vgl",
+          "bodyExcerpt": "{#kze/tra#}¦ (von 1. 2. {#kzi#}) <lex>n.</lex> <ls>SIDDH. K. 249,b,2.</ls> <div n=\"1\"> 1) {%Grundbesitz, Grundstück; Grund und Boden, Feld%} (<ls>AK. 2,9,11.</ls> <ls>H. 965.</ls> <ls>an. 2,406.</ls> <ls>MED. r. 20).</ls> {#sana\\tkzetra\\M saKi^BiH Svi\\tnyeBi\\..."
+        }
+      ],
+      "reviewQuestion": "Do the sampled PWG references to deva˚ behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "controlId": "xref-prefix-control:mw:01",
+      "sampleClass": "prefix-control",
+      "dictionary": "MW",
+      "dict": "mw",
+      "target": "a-",
+      "targetRank": 1,
+      "targetCount": 48,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "56436",
+          "line": 193423,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L193423",
+          "sourceLemma": "kowa",
+          "sourceRecordLemma": "kowa",
+          "target": "a-",
+          "kind": "cf",
+          "bodyExcerpt": "<s>kowa</s> ¦ <ab>cf.</ab> <s>a-</s>, <s>amara-</s>, <s>devI-</s>."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "57662",
+          "line": 197259,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L197259",
+          "sourceLemma": "kratu",
+          "sourceRecordLemma": "kratu",
+          "target": "a-",
+          "kind": "cf",
+          "bodyExcerpt": "<s>kra/tu</s> ¦ <lex>m.</lex> or <lex type=\"hw\">f.</lex> (?), <ab>N.</ab> of a river in <s1>Plakṣa-dvīpa</s1> (<ab>v.l.</ab> <s>kramu</s>), <ls>VP.</ls> [<ab>cf.</ab> <s>a-</s>, <s>a/dButa-</s>, <s>aBi/-</s>, &c.; <ab>cf.</ab> also <gk>κράτος</gk>.]<info lex=..."
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "62152",
+          "line": 211629,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L211629",
+          "sourceLemma": "ga",
+          "sourceRecordLemma": "ga",
+          "target": "a-",
+          "kind": "cf",
+          "bodyExcerpt": "¦ relating to or standing in connection with, <ls>R. vi, 70, 59</ls>; <ls>BhP.</ls> &c. (<ab>cf.</ab> <s>a-</s>, <s>agra-</s>, <s>a-jihma-</s>, <s>atyanta-</s>, &c.; <s>agre-ga/</s>, &c.)<info lex=\"inh\"/>"
+        }
+      ],
+      "reviewQuestion": "Do the sampled MW references to a- behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "controlId": "xref-prefix-control:mw:02",
+      "sampleClass": "prefix-control",
+      "dictionary": "MW",
+      "dict": "mw",
+      "target": "a/-",
+      "targetRank": 2,
+      "targetCount": 32,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "59445",
+          "line": 203008,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L203008",
+          "sourceLemma": "kziti",
+          "sourceRecordLemma": "kziti",
+          "target": "a/-",
+          "kind": "cf",
+          "bodyExcerpt": "¦ the period of the destruction of the universe, end of the world, <ls>L.</ls> (<ab>cf.</ab> <s>a/-</s>, <s>a/sura-</s>.)<info lex=\"inh\"/>"
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "61566",
+          "line": 209782,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L209782",
+          "sourceLemma": "Karva",
+          "sourceRecordLemma": "Karva",
+          "target": "a/-",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Karva/</s> ¦ <lex>mfn.</lex> (<ab>cf.</ab> <s>a/-</s>, <s>tri-</s>) mutilated, crippled, injured, imperfect, <ls>TS. ii, 5, 1, 7</ls><info lex=\"m:f:n\"/>"
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "73490",
+          "line": 248523,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L248523",
+          "sourceLemma": "cikitvas",
+          "sourceRecordLemma": "cikitvas",
+          "target": "a/-",
+          "kind": "cf",
+          "bodyExcerpt": "¦ <ab>cf.</ab> <s>a/-</s>.<info lex=\"inh\"/>"
+        }
+      ],
+      "reviewQuestion": "Do the sampled MW references to a/- behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "controlId": "xref-prefix-control:mw:03",
+      "sampleClass": "prefix-control",
+      "dictionary": "MW",
+      "dict": "mw",
+      "target": "A-",
+      "targetRank": 3,
+      "targetCount": 15,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "71341",
+          "line": 241602,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L241602",
+          "sourceLemma": "caturam",
+          "sourceRecordLemma": "caturam",
+          "target": "A-",
+          "kind": "cf",
+          "bodyExcerpt": "<s>caturam</s> ¦ <lex>ind.</lex> (<ab>g.</ab> <s>Sarad-Adi</s>) <ab>cf.</ab> <s>A-</s>, <s>upa-</s>.<info lex=\"ind\"/><info hui=\"a\"/>"
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "72289",
+          "line": 244702,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L244702",
+          "sourceLemma": "caraRya",
+          "sourceRecordLemma": "caraRya",
+          "target": "A-",
+          "kind": "cf",
+          "bodyExcerpt": "<hom>1.</hom> <s>caraRya</s> ¦ <ab>Nom.</ab> <s>˚Ryati</s>, to move <ab>g.</ab> <s>kaRqvAdi</s> (<ab>cf.</ab> <s>A-</s>, <s>uc-</s>). <info verb=\"nom\" cp=\"\"/>"
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "74876",
+          "line": 253072,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L253072",
+          "sourceLemma": "cUzaRa",
+          "sourceRecordLemma": "cUzaRa",
+          "target": "A-",
+          "kind": "cf",
+          "bodyExcerpt": "¦ <ab>cf.</ab> <s>A-</s>.<info lex=\"inh\"/>"
+        }
+      ],
+      "reviewQuestion": "Do the sampled MW references to A- behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "controlId": "xref-prefix-control:mw:04",
+      "sampleClass": "prefix-control",
+      "dictionary": "MW",
+      "dict": "mw",
+      "target": "a-s˚",
+      "targetRank": 4,
+      "targetCount": 11,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "228280",
+          "line": 757261,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L757261",
+          "sourceLemma": "saMkrAnta",
+          "sourceRecordLemma": "saMkrAnta",
+          "target": "a-s˚",
+          "kind": "cf",
+          "bodyExcerpt": "¦ (in <ab>astron.</ab>) having a <s1>Saṃkrānti</s1> (as a mouth, <ab>cf.</ab> <s>a-s˚</s>), <ls>MW.</ls><info lex=\"inh\"/>"
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "228456",
+          "line": 757899,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L757899",
+          "sourceLemma": "saMKyeya",
+          "sourceRecordLemma": "saMKyeya",
+          "target": "a-s˚",
+          "kind": "cf",
+          "bodyExcerpt": "<s>saM-Kyeya</s> ¦ <lex>mfn.</lex> to be numbered or enumerated, definite in number, calculable, not numerous, <ls>Pāṇ.</ls>; <ls>MBh.</ls> (<ab>cf.</ab> <s>a-s˚</s>)<info lex=\"m:f:n\"/>"
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "231997",
+          "line": 769902,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L769902",
+          "sourceLemma": "saMniDAna",
+          "sourceRecordLemma": "saMniDAna",
+          "target": "a-s˚",
+          "kind": "cf",
+          "bodyExcerpt": "¦ presence = existence (<ab>cf.</ab> <s>a-s˚</s>), <ls>Rājat.</ls><info lex=\"inh\"/>"
+        }
+      ],
+      "reviewQuestion": "Do the sampled MW references to a-s˚ behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    },
+    {
+      "controlId": "xref-prefix-control:mw:05",
+      "sampleClass": "prefix-control",
+      "dictionary": "MW",
+      "dict": "mw",
+      "target": "aBi-",
+      "targetRank": 5,
+      "targetCount": 11,
+      "hubClass": "prefix-convention",
+      "proposedLabels": [
+        "prefix-convention"
+      ],
+      "machineInterpretation": "Likely compound or prefix reference convention; do not read as rare lexical inheritance without review.",
+      "sourcePointers": [
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "11990",
+          "line": 43603,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L43603",
+          "sourceLemma": "aBimad",
+          "sourceRecordLemma": "aBimad",
+          "target": "aBi-",
+          "kind": "cf",
+          "bodyExcerpt": "<s>aBi-√ mad</s> ¦ (<ab>p.</ab> <s>-mA/dyat</s>) to be inebriated, <ls>ŚBr.</ls> (<ab>cf.</ab> <s>aBi-</s> √ <hom>1.</hom> <s>mand</s> below.)<info verb=\"pre\" cp=\"\" parse=\"aBi+mad\"/>"
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "66863",
+          "line": 226808,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L226808",
+          "sourceLemma": "gezRa",
+          "sourceRecordLemma": "gezRa",
+          "target": "aBi-",
+          "kind": "cf",
+          "bodyExcerpt": "¦ a chanter of the <ls>SV.</ls>; <ls>L.</ls> (<ab>cf.</ab> <s>aBi-</s>.)<info lex=\"inh\"/>"
+        },
+        {
+          "role": "prefix-control-example",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "67940",
+          "line": 230412,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L230412",
+          "sourceLemma": "gopaya",
+          "sourceRecordLemma": "gopaya",
+          "target": "aBi-",
+          "kind": "cf",
+          "bodyExcerpt": "<s>gopaya</s> ¦ <ab>caus.</ab> <ab>fr.</ab> √ <s>gup</s> or <ab>Nom.</ab> <ab>P.</ab> <ab>Ā.</ab> (<ab>fr.</ab> <s>gopa/</s>; <ab>cf.</ab> √ <s>gup</s>) <s>˚yati</s>, <s>˚yate</s> (<ab>aor.</ab> <lang>Ved.</lang> 2. <ab>du.</ab> <s>ajUgupatam</s>, <ls>Pāṇ. ii..."
+        }
+      ],
+      "reviewQuestion": "Do the sampled MW references to aBi- behave as prefix/compound convention rather than lexical lineage evidence?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": ""
+    }
+  ],
+  "limitations": [
+    "Machine labels are review prompts only; this packet records no source-check decisions.",
+    "Some shared-core sample rows are present in the shared-edge sample but lack an exact MW edge row in xref_edges.csv; those rows remain visible with missing-exact-edge metadata.",
+    "Prefix controls test convention pressure and are not optimization targets for lineage claims.",
+    "Cross-reference overlap remains dictionary-internal evidence and must not be mixed with DCS/corpus co-occurrence.",
+    "No R2 splitter behavior, source-anchor generation, H5 review row, public page, backend/runtime LLM, corpus, DCS, or standards work is changed."
+  ],
+  "boundaryNote": "Atlas xref artifacts plus dictionary source pointers only; source checking is deferred to human review and does not promote parser or public-lineage behavior.",
+  "warnings": []
+}

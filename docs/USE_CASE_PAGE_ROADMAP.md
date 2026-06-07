@@ -28,8 +28,8 @@ targets before adding new analysis-method prose.
   family-profile artifact, and scholar review packet.
 - Xref hub review and H5 anomaly scope now have proof-first documentation
   packages; H5 also has a first 130-row reviewed taxonomy plus a generated
-  maker-QA candidate packet, and the xref hub review has a generated
-  review-prompt artifact.
+  maker-QA candidate packet, and xref has a generated source-check packet
+  with shared-core rows and prefix controls.
 - R2 parser diagnostics now classify source/archive drift before any new
   sense-divergence or sense-alignment claims are broadened.
 - All five R2 parser decision packets now have source-inspected proposal
@@ -53,7 +53,7 @@ targets before adding new analysis-method prose.
 | 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md), and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | edge and family labels done |
 | 5 | [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md) plus the microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Start with the easiest parsed structure: headwords vs nested subentries. | active first microstructure page |
 | 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Use AMAR-native fields as the active dictionary-first semantic review package. | interpretation and review packet active |
-| 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label cross-reference hub families before paper use. | active labels documented |
+| 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label and source-check cross-reference hub families before paper use. | source-check packet active |
 | 8 | H5 anomaly scope package | UC-CD-05, UC-RV-03 | makers, reviewers | Turn forensic anomaly signals into a proof-first review queue. | maker-QA packet active |
 
 ## GTD Documentation Board
@@ -62,6 +62,8 @@ targets before adding new analysis-method prose.
 |---|---|---|---|
 | Waiting | R2 checkpoint review | Use `R2_DRIFT_EXPLANATION.md`, `R2_CHECKPOINT_REVIEW.md`, and `R2_CHECKPOINT_DECISIONS.md` to review the ten checkpoint rows before any parser promotion. | The 10 `r2-checkpoint` rows have human decisions in `src/data/review/r2-checkpoint-review.json`. |
 | Waiting | H5 maker correction review | Submit or track the generated `divaraTa -> diviraTa` proposal with dictionary makers; do not edit dictionary source data automatically. | A maker decision or external issue link is recorded outside the generated proposal packet. |
+| Waiting | Xref source-check adjudication | Use `MICROSTRUCTURE_XREF_SOURCE_CHECK.md` and `data/lexico/xref_source_check_packet.json` to review the 40 shared-core rows and 10 prefix controls. | Source-check decisions distinguish lexical evidence, prefix convention, and normalization risk before paper use. |
+| Done | Xref source-check packet | Keep `data/lexico/xref_source_check_packet.json` and `MICROSTRUCTURE_XREF_SOURCE_CHECK.md` generated from `xref_hub_review.json` and `xref_edges.csv`. | The packet carries 50 `needs-source-check` rows, 106 source pointers, and empty human fields. |
 | Done | THREE-AXES comparison packet | Keep `data/lexico/three_axis_comparison.json` and `THREE_AXIS_COMPARISON.md` generated from L0 known edges, sanhw1 overlap, convention scatter, and structural-register evidence. | The 13 known-edge rows expose content, convention, and microstructure/register axes separately, with focus rows ready for source-reading before a methods-note claim. |
 | Done | H5 maker correction proposal | Keep `data/lexico/h5_maker_correction_proposal.json` and `H5_MAKER_CORRECTION_PROPOSAL.md` generated from the source-checked maker-QA packet. | The proposal cites MW/PWG source pointers for `divaraTa`, `diviraTa`, and rejected neighbor `devaraTa`, while the nine source-supported rows stay out of correction flow. |
 | Done | R2 drift explanation/control packet | Keep `data/lexico/r2_drift_explanation.json` and `docs/R2_DRIFT_EXPLANATION.md` generated from the label proposals, checkpoint packet, and empty checkpoint review report. | All 70 diagnostics are explained by machine proposal labels, and all 10 checkpoint rows remain `needs-review`. |
@@ -122,6 +124,8 @@ For every queue, write the proof page first:
    before any dictionary source edit.
 8. Source-read the THREE-AXES focus rows before expanding the content vs
    convention method note into a three-axis claim.
+9. Source-read the xref source-check packet before turning hub labels into
+   paper-level lineage evidence.
 
 ## Boundary Links
 
