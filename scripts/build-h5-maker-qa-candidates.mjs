@@ -310,6 +310,9 @@ export function buildPayload(reviewReport, generatedAt = new Date().toISOString(
   const qaCandidateRows = selectedRows.map((row, indexInList) =>
     compactQaRow(row, index, indexInList + 1, preservedSourceChecks)
   );
+  const pointerWarnings = qaCandidateRows.some(row =>
+    row.candidateSourcePointers.length === 0 || row.contrastSourcePointers.length === 0
+  ) ? warnings : [];
   const sourceCheckedRows = qaCandidateRows.filter(row => row.sourceCheckStatus !== "needs-source-check").length;
   const payload = {
     schemaVersion: SCHEMA_VERSION,
@@ -358,7 +361,7 @@ export function buildPayload(reviewReport, generatedAt = new Date().toISOString(
       "No parser behavior, source-anchor generation, public page, backend/runtime LLM, corpus, DCS, or standards work is changed."
     ],
     boundaryNote: "Dictionary source pointers and the reviewed H5 anomaly report only; source-check dispositions are review metadata, not automatic dictionary edits.",
-    warnings
+    warnings: pointerWarnings
   };
   validatePayload(payload);
   return payload;
