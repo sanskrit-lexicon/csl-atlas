@@ -1,0 +1,251 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "h5-maker-correction-proposal-packet",
+  "claim": "The source-checked H5 maker-QA packet yields one maker-facing correction proposal and no automatic dictionary edit.",
+  "evidenceLabel": "source-check-derived",
+  "proposalStatus": "proposal-ready",
+  "ownerRepo": "csl-atlas",
+  "generatedAt": "2026-06-07T04:58:03.049Z",
+  "generatedBy": "npm run build-h5-maker-correction-proposal",
+  "sourceFiles": [
+    "data/lexico/h5_maker_qa_candidates.json"
+  ],
+  "sourcePacket": {
+    "path": "data/lexico/h5_maker_qa_candidates.json",
+    "generatedAt": "2026-06-07T04:55:15.504Z",
+    "status": "h5-maker-qa-candidate-packet",
+    "reviewStatus": "source-checked",
+    "counts": {
+      "reviewRows": 130,
+      "possibleTypoRows": 22,
+      "inferredPossibleTypoRows": 16,
+      "knownCorrectionCalibrationRows": 6,
+      "qaCandidateRows": 10,
+      "sourceCheckedRows": 10,
+      "acceptedCorrectionRows": 1,
+      "bySampleClass": {
+        "mw-pwg-shared-doublet": 6,
+        "mw-pw-shared-doublet": 4
+      },
+      "byPair": {
+        "MW/PWG": 6,
+        "MW/PW": 4
+      },
+      "byNRealNeighbours": {
+        "1": 5,
+        "2": 5
+      },
+      "bySourceCheckStatus": {
+        "source-supported-distinct": 5,
+        "source-supported-variant": 4,
+        "source-declared-correction-candidate": 1
+      },
+      "calibrationByPair": {
+        "MW/PW": 4,
+        "MW/PWG": 2
+      }
+    }
+  },
+  "counts": {
+    "qaCandidateRows": 10,
+    "proposalRows": 1,
+    "excludedSourceSupportedRows": 9,
+    "byProposalAction": {
+      "maker-correction-review": 1
+    },
+    "byPair": {
+      "MW/PWG": 1
+    },
+    "excludedBySourceCheckStatus": {
+      "source-supported-distinct": 5,
+      "source-supported-variant": 4
+    }
+  },
+  "selectionPolicy": [
+    "Read only data/lexico/h5_maker_qa_candidates.json.",
+    "Select only rows with sourceCheckStatus = source-declared-correction-candidate.",
+    "Require acceptedCorrection, candidate source pointers, correction-target source pointers, and rejected-neighbor control pointers.",
+    "Keep source-supported distinct/variant rows out of the maker correction proposal.",
+    "Do not edit dictionary source data or record a maker decision."
+  ],
+  "proposalRows": [
+    {
+      "proposalId": "h5-maker-correction:01:h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa",
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa",
+      "qaCandidateId": "h5-maker-qa:08:h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa",
+      "proposalStatus": "proposal-ready",
+      "proposalAction": "maker-correction-review",
+      "lemma": "divaraTa",
+      "proposedCorrection": "diviraTa",
+      "rejectedNearestNeighbor": "devaraTa",
+      "pair": "MW/PWG",
+      "dictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "sourceCheckStatus": "source-declared-correction-candidate",
+      "sourceCheckNote": "MW marks divaraTa as a wrong reading for divi-, and PWG says falsche Form fuer diviraTa. Accept as a source-declared correction candidate to diviraTa, not to nearest-neighbor devaraTa.",
+      "sourceCheckQuestion": "Do the MW/PWG source records support `divaraTa` as a real headword, or should it be treated as a correction candidate against `devaraTa`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "divaraTa",
+          "dictionary": "MW",
+          "L": "92243",
+          "line": 309870,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309870",
+          "bodyExcerpt": "<s>diva—raTa</s> ¦ <ab>w.r.</ab> for <s>divi-</s> (<ab>q.v.</ab>)"
+        },
+        {
+          "role": "candidate-form",
+          "form": "divaraTa",
+          "dictionary": "PWG",
+          "L": "32945",
+          "line": 321032,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L321032",
+          "bodyExcerpt": "{#divaraTa#}¦ <ls>VP. 445</ls> falsche Form für {#diviraTa#} ."
+        }
+      ],
+      "correctionTargetSourcePointers": [
+        {
+          "role": "accepted-correction-form",
+          "form": "diviraTa",
+          "dictionary": "MW",
+          "L": "92364",
+          "line": 310284,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L310284",
+          "bodyExcerpt": "<s>divi—raTa</s> ¦ <lex>m.</lex> <ab>N.</ab> of several men (<ab>v.l.</ab> <s>diva-</s>), <ls>MBh.</ls>; <ls>Hariv.</ls>; <ls>Pur.</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "accepted-correction-form",
+          "form": "diviraTa",
+          "dictionary": "PWG",
+          "L": "33004",
+          "line": 321459,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L321459",
+          "bodyExcerpt": "{#diviraTa#}¦ ({#divi#} <ab>loc.</ab> + {#raTa#}) <lex>m.</lex> <ab>N. pr.</ab> eines Sohnes des <is>Bhumanyu</is> <ls>MBH. 1,3714.</ls> des <is>Dadhivāhana</is> <ls n=\"MBH.\">12,1796.</ls> <ls>HARIV. 1694.</ls> des <is>Khanapāna</is> (der wie <is>Dadhivāhana</is> der Grossvater ..."
+        }
+      ],
+      "rejectedNearestNeighborSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "devaraTa",
+          "dictionary": "MW",
+          "L": "95965",
+          "line": 322005,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L322005",
+          "bodyExcerpt": "<s>deva—raTa/</s> ¦ <lex>m.</lex> the car or vehicle of a god, <ls>AV.</ls>; <ls>TS.</ls>; <ls>Br.</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "devaraTa",
+          "dictionary": "PWG",
+          "L": "34621",
+          "line": 336136,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L336136",
+          "bodyExcerpt": "{#devaraTa#}¦ ({#deva + raTa#}) <lex>m.</lex> <div n=\"1\"> 1) <ab>oxyt.</ab> {%Götterwagen%} <ls>AV. 8,8,22.</ls> <ls>TS. 2,5,6,1.</ls> <ls>TBR. 1,3,6,4.</ls> <ls>AIT. BR. 2,37.</ls> <ls>ŚĀṄKH. BR. 2,6.</ls> {#devaraTAhnya/#} <lex>n.</lex> {%Tagefahrt für einen Götterwagen (für d..."
+        }
+      ],
+      "makerDecision": {
+        "submittedBy": null,
+        "submittedAt": null,
+        "externalIssueUrl": null,
+        "makerDisposition": null,
+        "note": ""
+      },
+      "proposalText": "Review whether MW/PWG should treat divaraTa as a source-declared wrong-reading/cross-reference candidate for diviraTa; devaraTa is retained only as the detector's nearest-neighbor control."
+    }
+  ],
+  "excludedRows": [
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:ajamI_a:ajamIQa",
+      "qaCandidateId": "h5-maker-qa:01:h5:mw-pw-shared-doublet:MW-PW:ajamI_a:ajamIQa",
+      "lemma": "ajamI|a",
+      "nearestReal": "ajamIQa",
+      "pair": "MW/PW",
+      "sourceCheckStatus": "source-supported-variant",
+      "exclusionReason": "source-supported-non-correction"
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:awawyA:awAwyA",
+      "qaCandidateId": "h5-maker-qa:02:h5:mw-pw-shared-doublet:MW-PW:awawyA:awAwyA",
+      "lemma": "awawyA",
+      "nearestReal": "awAwyA",
+      "pair": "MW/PW",
+      "sourceCheckStatus": "source-supported-variant",
+      "exclusionReason": "source-supported-non-correction"
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:akalkala:akalkana",
+      "qaCandidateId": "h5-maker-qa:03:h5:mw-pwg-shared-doublet:MW-PWG:akalkala:akalkana",
+      "lemma": "akalkala",
+      "nearestReal": "akalkana",
+      "pair": "MW/PWG",
+      "sourceCheckStatus": "source-supported-variant",
+      "exclusionReason": "source-supported-non-correction"
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:cApaqa:cApala",
+      "qaCandidateId": "h5-maker-qa:04:h5:mw-pwg-shared-doublet:MW-PWG:cApaqa:cApala",
+      "lemma": "cApaqa",
+      "nearestReal": "cApala",
+      "pair": "MW/PWG",
+      "sourceCheckStatus": "source-supported-distinct",
+      "exclusionReason": "source-supported-non-correction"
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:uzmopagama:uzRopagama",
+      "qaCandidateId": "h5-maker-qa:05:h5:mw-pwg-shared-doublet:MW-PWG:uzmopagama:uzRopagama",
+      "lemma": "uzmopagama",
+      "nearestReal": "uzRopagama",
+      "pair": "MW/PWG",
+      "sourceCheckStatus": "source-supported-variant",
+      "exclusionReason": "source-supported-non-correction"
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprapAda:apramAda",
+      "qaCandidateId": "h5-maker-qa:06:h5:mw-pw-shared-doublet:MW-PW:aprapAda:apramAda",
+      "lemma": "aprapAda",
+      "nearestReal": "apramAda",
+      "pair": "MW/PW",
+      "sourceCheckStatus": "source-supported-distinct",
+      "exclusionReason": "source-supported-non-correction"
+    },
+    {
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apraRASa:aprakASa",
+      "qaCandidateId": "h5-maker-qa:07:h5:mw-pw-shared-doublet:MW-PW:apraRASa:aprakASa",
+      "lemma": "apraRASa",
+      "nearestReal": "aprakASa",
+      "pair": "MW/PW",
+      "sourceCheckStatus": "source-supported-distinct",
+      "exclusionReason": "source-supported-non-correction"
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:jalaDitA:jalaDigA",
+      "qaCandidateId": "h5-maker-qa:09:h5:mw-pwg-shared-doublet:MW-PWG:jalaDitA:jalaDigA",
+      "lemma": "jalaDitA",
+      "nearestReal": "jalaDigA",
+      "pair": "MW/PWG",
+      "sourceCheckStatus": "source-supported-distinct",
+      "exclusionReason": "source-supported-non-correction"
+    },
+    {
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kftAlaka:mftAlaka",
+      "qaCandidateId": "h5-maker-qa:10:h5:mw-pwg-shared-doublet:MW-PWG:kftAlaka:mftAlaka",
+      "lemma": "kftAlaka",
+      "nearestReal": "mftAlaka",
+      "pair": "MW/PWG",
+      "sourceCheckStatus": "source-supported-distinct",
+      "exclusionReason": "source-supported-non-correction"
+    }
+  ],
+  "limitations": [
+    "This packet is a maker-facing proposal, not a dictionary edit.",
+    "The proposal is based on dictionary source pointers and the H5 source-check pass only.",
+    "The nearest-neighbor detector suggested devaraTa, but the source-check pass identifies diviraTa as the source-declared correction target.",
+    "The other nine source-checked H5 rows are retained as non-correction evidence.",
+    "No parser behavior, source-anchor generation, public page, backend/runtime LLM, corpus, DCS, or standards work is changed."
+  ],
+  "boundaryNote": "Atlas evidence only: this packet drafts a correction proposal for maker review and leaves csl-orig/source edits to a separate human-maintained workflow.",
+  "warnings": []
+}

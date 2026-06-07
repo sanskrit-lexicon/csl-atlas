@@ -54,7 +54,7 @@ applicable. The remaining scholar-facing packages are now explicit:
 | H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md) | Edge and family-outlier labels are documented; source-read selected examples before paper use. |
 | H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md), [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md) | Use the H4 review packet to adjudicate SKD false lows, VCP high coverage, AP/AP90 deltas, specialized baselines, and index/reverse controls. |
 | Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Starting labels are documented for shared-core, prefix-convention, edition-continuity, normalization-risk, lexical-target, and too-sparse samples. |
-| H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md), [`H5_MAKER_QA_CANDIDATES.md`](H5_MAKER_QA_CANDIDATES.md) | The 130-item first sample is classified, and the generated 10-row maker-QA worksheet is source-checked: 9 rows are source-supported non-correction rows, and `divaraTa -> diviraTa` is the only source-declared correction candidate. |
+| H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md), [`H5_MAKER_QA_CANDIDATES.md`](H5_MAKER_QA_CANDIDATES.md), [`H5_MAKER_CORRECTION_PROPOSAL.md`](H5_MAKER_CORRECTION_PROPOSAL.md) | The 130-item first sample is classified, the 10-row maker-QA worksheet is source-checked, and the single source-declared correction candidate is now isolated as a maker-facing `divaraTa -> diviraTa` proposal. |
 
 ## What The Review Queues Prove
 

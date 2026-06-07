@@ -62,6 +62,9 @@ known corrections as calibration controls and recording no dictionary edits.*
 *v3.4 H5 source-check update 2026-06-07: all 10 maker-QA rows are
 source-checked; 9 are source-supported non-correction rows, and
 `divaraTa -> diviraTa` is the single source-declared correction candidate.*
+*v3.5 H5 maker-proposal update 2026-06-07: a generated maker-facing proposal
+packet now cites MW/PWG source pointers for `divaraTa`, `diviraTa`, and
+rejected neighbor `devaraTa`, while leaving dictionary source edits external.*
 **Companion to**: [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md), [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (genealogy/phylogeny), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (structure typology), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md).
 
 This stream is **additive**. The existing program is researcher-facing (papers M/L/H + a 50-viz catalog). This roadmap turns those analyses into a **practitioner layer** — usable tools for three audiences — and adds new testable hypotheses and visualizations. Two working prototypes ship with it.
@@ -114,7 +117,7 @@ working view below so old H1-H7 labels do not look equally open.
 | **H2** | **Citation density predicts a sense's survival** into later dictionaries. | cited vs uncited ancestor senses on measured inheritance edges | researchers | supported finding in R2; broaden panel next |
 | **H3R** | **Derivative dictionaries copy or condense more than they expand.** | net sense delta and gloss overlap along measured inheritance edges | researchers, historians | negative finding for original H3; no measured edge shows systematic net-addition |
 | **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | map dictionary headword coverage onto **Amarakosa-native topical fields** -> per-dict and per-family field distribution | researchers, students | M8 data package, chart, interpretation note, family-profile artifact, and active review packet built |
-| **H5** | **"Ghost entries"** — shared OCR/typo anomalies — are both a lineage fingerprint **and** an editor QA flag. | rarity-weighted shared-anomaly detection (extends L3 forensic) | makers, historians | proof-first maker queue classified; 10-row source-check worksheet done, with one source-declared correction candidate |
+| **H5** | **"Ghost entries"** — shared OCR/typo anomalies — are both a lineage fingerprint **and** an editor QA flag. | rarity-weighted shared-anomaly detection (extends L3 forensic) | makers, historians | proof-first maker queue classified; 10-row source-check worksheet done; maker proposal drafted for `divaraTa -> diviraTa` |
 | **H6** | **Structural register (citation × grammar-marking) predicts tradition family.** | cluster the macro profile (§1.2); compare to the genealogy tree | researchers | prototype supported, charted, review-classed, edge-labeled, family-outlier-labeled, and documented as a rerunnable method note |
 | **H7** | **First-N sampling materially biases structure metrics** (early-alphabet entries are shorter/sparser). | compare first-N vs random vs stratified samples on the same dicts | methodology | **✅ A7 resolved 2026-05-31** — full corpus chosen (bias moot for production); the §1.2 prototype already confirmed the first-N skew empirically |
 
@@ -257,8 +260,8 @@ completion of the R2 rebuild contract beyond the source-backed anchor
 prototype, parser diagnostics, and machine drift explanation; human review of
 the R2 checkpoint rows before parser promotion; scholar review of H4 and xref
 review-packet samples and selected H6 source examples before paper use; and
-drafting a maker-facing proposal for the single source-declared H5 correction
-candidate after the 10-row source-check pass.
+submitting or tracking maker review for the generated `divaraTa -> diviraTa`
+H5 correction proposal after the 10-row source-check pass.
 H4 interpretation/review, H6 review, xref hub review, and H5 scope are
 documented in
 [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md),

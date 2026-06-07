@@ -21,6 +21,7 @@ import { PARSER_DISPOSITIONS, buildPayload as buildR2CheckpointReviewPayload } f
 import { buildMarkdown as buildR2DriftExplanationMarkdown, buildPayload as buildR2DriftExplanationPayload } from "../scripts/build-r2-drift-explanation.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { buildMarkdown as buildH5MakerQaMarkdown, buildPayload as buildH5MakerQaPayload, preservedSourceCheckMap } from "../scripts/build-h5-maker-qa-candidates.mjs";
+import { buildMarkdown as buildH5MakerCorrectionMarkdown, buildPayload as buildH5MakerCorrectionPayload, preservedCorrectionTargetMap } from "../scripts/build-h5-maker-correction-proposal.mjs";
 import { loadPreserved } from "../scripts/lib/review-report.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
@@ -40,6 +41,8 @@ const h5AnomalyReviewReportPath = path.join(repoRoot, "src", "data", "review", "
 const h5AnomalyReviewReport = JSON.parse(fs.readFileSync(h5AnomalyReviewReportPath, "utf8"));
 const h5MakerQaCandidates = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "h5_maker_qa_candidates.json"), "utf8"));
 const h5MakerQaCandidatesMd = fs.readFileSync(path.join(repoRoot, "docs", "H5_MAKER_QA_CANDIDATES.md"), "utf8");
+const h5MakerCorrectionProposal = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "h5_maker_correction_proposal.json"), "utf8"));
+const h5MakerCorrectionProposalMd = fs.readFileSync(path.join(repoRoot, "docs", "H5_MAKER_CORRECTION_PROPOSAL.md"), "utf8");
 
 const H5_REVIEW_LABELS = new Set([
   "legitimate-form",
@@ -90,6 +93,10 @@ function preservedReviewMap(report) {
       note: item.note
     }
   ]));
+}
+
+function normalizeLineEndings(text) {
+  return text.replace(/\r\n/g, "\n");
 }
 
 function countBy(rows, keyFn) {
@@ -372,7 +379,7 @@ test("R2 checkpoint packet artifact is generated from label proposals", () => {
 });
 
 test("R2 checkpoint worksheet is generated from the checkpoint packet", () => {
-  assert.equal(r2CheckpointReviewMd, buildR2CheckpointMarkdown(r2CheckpointPacket));
+  assert.equal(normalizeLineEndings(r2CheckpointReviewMd), buildR2CheckpointMarkdown(r2CheckpointPacket));
 });
 
 test("R2 checkpoint packet preserves the stable 10-row order", () => {
@@ -495,7 +502,7 @@ test("R2 drift explanation generator rejects reviewed checkpoint decisions", () 
 });
 
 test("R2 drift explanation doc is generated from the artifact", () => {
-  assert.equal(r2DriftExplanationMd, buildR2DriftExplanationMarkdown(r2DriftExplanation));
+  assert.equal(normalizeLineEndings(r2DriftExplanationMd), buildR2DriftExplanationMarkdown(r2DriftExplanation));
 });
 
 test("R2 drift explanation rows cover every diagnostic id", () => {
@@ -610,7 +617,7 @@ test("H5 maker QA packet is generated from the reviewed H5 report", () => {
       preservedSourceCheckMap(h5MakerQaCandidates)
     )
   );
-  assert.equal(h5MakerQaCandidatesMd, buildH5MakerQaMarkdown(h5MakerQaCandidates));
+  assert.equal(normalizeLineEndings(h5MakerQaCandidatesMd), buildH5MakerQaMarkdown(h5MakerQaCandidates));
 });
 
 test("H5 maker QA packet keeps the stable 10-row source-check order", () => {
@@ -668,6 +675,68 @@ test("H5 maker QA worksheet names every selected candidate", () => {
   assert.ok(h5MakerQaCandidatesMd.includes("Current review status: `source-checked`"));
   assert.ok(h5MakerQaCandidatesMd.includes("source-declared-correction-candidate"));
   assert.ok(h5MakerQaCandidatesMd.includes("accepted correction: `diviraTa`"));
+});
+
+test("H5 maker correction proposal is generated from the source-checked QA packet", () => {
+  assert.deepEqual(
+    h5MakerCorrectionProposal,
+    buildH5MakerCorrectionPayload(
+      h5MakerQaCandidates,
+      h5MakerCorrectionProposal.generatedAt,
+      preservedCorrectionTargetMap(h5MakerCorrectionProposal)
+    )
+  );
+  assert.equal(normalizeLineEndings(h5MakerCorrectionProposalMd), buildH5MakerCorrectionMarkdown(h5MakerCorrectionProposal));
+});
+
+test("H5 maker correction proposal keeps exactly the source-declared row", () => {
+  assert.equal(h5MakerCorrectionProposal.status, "h5-maker-correction-proposal-packet");
+  assert.equal(h5MakerCorrectionProposal.generatedBy, "npm run build-h5-maker-correction-proposal");
+  assert.equal(h5MakerCorrectionProposal.counts.qaCandidateRows, 10);
+  assert.equal(h5MakerCorrectionProposal.counts.proposalRows, 1);
+  assert.equal(h5MakerCorrectionProposal.counts.excludedSourceSupportedRows, 9);
+  assert.deepEqual(h5MakerCorrectionProposal.counts.excludedBySourceCheckStatus, {
+    "source-supported-distinct": 5,
+    "source-supported-variant": 4
+  });
+  assert.deepEqual(
+    h5MakerCorrectionProposal.excludedRows.map(row => row.reviewId),
+    H5_MAKER_QA_REVIEW_IDS.filter(reviewId => reviewId !== "h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa")
+  );
+});
+
+test("H5 maker correction proposal cites candidate, target, and rejected-neighbor sources", () => {
+  const [row] = h5MakerCorrectionProposal.proposalRows;
+  assert.equal(row.reviewId, "h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa");
+  assert.equal(row.lemma, "divaraTa");
+  assert.equal(row.proposedCorrection, "diviraTa");
+  assert.equal(row.rejectedNearestNeighbor, "devaraTa");
+  assert.equal(row.sourceCheckStatus, "source-declared-correction-candidate");
+  assert.deepEqual(row.dictionaries, ["MW", "PWG"]);
+  assert.deepEqual(row.candidateSourcePointers.map(pointer => pointer.dictionary), ["MW", "PWG"]);
+  assert.deepEqual(row.correctionTargetSourcePointers.map(pointer => pointer.dictionary), ["MW", "PWG"]);
+  assert.deepEqual(row.correctionTargetSourcePointers.map(pointer => pointer.form), ["diviraTa", "diviraTa"]);
+  assert.deepEqual(row.rejectedNearestNeighborSourcePointers.map(pointer => pointer.dictionary), ["MW", "PWG"]);
+  for (const pointer of [
+    ...row.candidateSourcePointers,
+    ...row.correctionTargetSourcePointers,
+    ...row.rejectedNearestNeighborSourcePointers
+  ]) {
+    assert.ok(pointer.href, `${pointer.dictionary} ${pointer.form} missing href`);
+    assert.ok(pointer.L, `${pointer.dictionary} ${pointer.form} missing L`);
+  }
+});
+
+test("H5 maker correction proposal keeps maker decision fields empty", () => {
+  const [row] = h5MakerCorrectionProposal.proposalRows;
+  assert.equal(row.makerDecision.submittedBy, null);
+  assert.equal(row.makerDecision.submittedAt, null);
+  assert.equal(row.makerDecision.externalIssueUrl, null);
+  assert.equal(row.makerDecision.makerDisposition, null);
+  assert.equal(row.makerDecision.note, "");
+  assert.ok(h5MakerCorrectionProposalMd.includes("Proposed correction: `divaraTa` -> `diviraTa`"));
+  assert.ok(h5MakerCorrectionProposalMd.includes("Rejected detector neighbor: `devaraTa`"));
+  assert.ok(h5MakerCorrectionProposalMd.includes("submittedBy = null"));
 });
 
 // ---- H4 family profiles: stable ranking helpers ----
