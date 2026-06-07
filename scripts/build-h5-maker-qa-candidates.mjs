@@ -146,7 +146,14 @@ function defaultSourceCheckFields() {
 }
 
 function sourceCheckFields(preserved, qaCandidateId) {
-  return preserved?.get(qaCandidateId) ?? defaultSourceCheckFields();
+  const fields = preserved?.get(qaCandidateId) ?? defaultSourceCheckFields();
+  return {
+    sourceCheckStatus: fields.sourceCheckStatus,
+    acceptedCorrection: fields.acceptedCorrection,
+    checkedBy: fields.checkedBy,
+    checkedAt: fields.checkedAt,
+    sourceCheckNote: fields.sourceCheckNote
+  };
 }
 
 export function preservedSourceCheckMap(packet) {
@@ -157,7 +164,9 @@ export function preservedSourceCheckMap(packet) {
       acceptedCorrection: row.acceptedCorrection ?? null,
       checkedBy: row.checkedBy ?? "",
       checkedAt: row.checkedAt ?? "",
-      sourceCheckNote: row.sourceCheckNote ?? ""
+      sourceCheckNote: row.sourceCheckNote ?? "",
+      candidateSourcePointers: row.candidateSourcePointers ?? [],
+      contrastSourcePointers: row.contrastSourcePointers ?? []
     };
     const isDefault = fields.sourceCheckStatus === "needs-source-check"
       && fields.acceptedCorrection === null
@@ -191,6 +200,7 @@ function compactQaRow(row, index, rank, preservedSourceChecks = new Map()) {
     .map(dict => pointerFor(index, dict, row.machineValue.nearestReal, "nearest-real-form"))
     .filter(Boolean);
   const qaCandidateId = `h5-maker-qa:${String(rank).padStart(2, "0")}:${row.reviewId}`;
+  const preserved = preservedSourceChecks.get(qaCandidateId);
   return {
     qaCandidateId,
     rank,
@@ -203,8 +213,8 @@ function compactQaRow(row, index, rank, preservedSourceChecks = new Map()) {
     dictionaries,
     reviewDecision: compactReviewFields(row),
     sourceCheckQuestion: sourceCheckQuestion(row),
-    candidateSourcePointers: candidatePointers,
-    contrastSourcePointers: contrastPointers,
+    candidateSourcePointers: candidatePointers.length ? candidatePointers : preserved?.candidateSourcePointers ?? [],
+    contrastSourcePointers: contrastPointers.length ? contrastPointers : preserved?.contrastSourcePointers ?? [],
     ...sourceCheckFields(preservedSourceChecks, qaCandidateId)
   };
 }
