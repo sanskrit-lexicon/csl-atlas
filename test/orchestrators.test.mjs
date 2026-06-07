@@ -26,6 +26,7 @@ import { EXPECTED_EDGE_IDS as THREE_AXIS_EDGE_IDS, axisReadingForScores, buildMa
 import { EXPECTED_PREFIX_CONTROL_IDS as XREF_PREFIX_CONTROL_IDS, EXPECTED_SHARED_CORE_SAMPLE_IDS as XREF_SHARED_CORE_IDS, XREF_LABEL_VOCABULARY, buildMarkdown as buildXrefSourceCheckMarkdown, buildPayload as buildXrefSourceCheckPayload, preservedSourcePointerMap as preservedXrefSourcePointerMap } from "../scripts/build-xref-source-check-packet.mjs";
 import { loadPreserved } from "../scripts/lib/review-report.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
+import { EXPECTED_H4_SAMPLE_COUNTS, H4_MACHINE_LABEL_VOCABULARY, buildMarkdown as buildH4ReviewPacketMarkdown, buildPayload as buildH4ReviewPacketPayload, preservedSourcePointerMap as preservedH4SourcePointerMap } from "../scripts/build-h4-review-packet.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
 import { classifyHubTarget, parseCsv as parseXrefCsv } from "../scripts/build-xref-hub-review.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
@@ -51,6 +52,11 @@ const xrefHubReview = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "le
 const xrefEdgeRows = parseXrefCsv(fs.readFileSync(path.join(repoRoot, "data", "lexico", "xref_edges.csv"), "utf8"));
 const xrefSourceCheckPacket = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "xref_source_check_packet.json"), "utf8"));
 const xrefSourceCheckMd = fs.readFileSync(path.join(repoRoot, "docs", "MICROSTRUCTURE_XREF_SOURCE_CHECK.md"), "utf8");
+const h4SemanticFields = JSON.parse(fs.readFileSync(path.join(repoRoot, "src", "data", "dicts", "semantic-fields.json"), "utf8"));
+const h4FamilyProfiles = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "semantic_field_family_profiles.json"), "utf8"));
+const h4SemanticRows = parseCsv(fs.readFileSync(path.join(repoRoot, "data", "lexico", "semantic_fields.csv"), "utf8"));
+const h4ReviewPacket = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "h4_semantic_field_review_packet.json"), "utf8"));
+const h4ReviewPacketMd = fs.readFileSync(path.join(repoRoot, "docs", "H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md"), "utf8");
 const threeAxisSourceInputs = {
   bootstrapRows: parseCsv(fs.readFileSync(path.join(repoRoot, "src", "data", "lexicographic-structure", "L0", "bootstrap_support.csv"), "utf8")),
   jaccardRows: parseCsv(fs.readFileSync(path.join(repoRoot, "src", "data", "lexicographic-structure", "sanhw1_jaccard.csv"), "utf8")),
@@ -843,6 +849,74 @@ test("rankFamilyFields chooses high and low fields deterministically", () => {
   ];
   assert.deepEqual(rankFamilyFields(rows, "high", 2).map(row => row.fieldKey), ["b", "a"]);
   assert.deepEqual(rankFamilyFields(rows, "low", 2).map(row => row.fieldKey), ["c", "b"]);
+});
+
+// ---- H4 semantic-field review packet: stable machine-only samples ----
+test("H4 review packet is generated from semantic field artifacts", () => {
+  assert.deepEqual(
+    h4ReviewPacket,
+    buildH4ReviewPacketPayload(
+      h4SemanticFields,
+      h4FamilyProfiles,
+      h4SemanticRows,
+      h4ReviewPacket.generatedAt,
+      preservedH4SourcePointerMap(h4ReviewPacket)
+    )
+  );
+  assert.equal(normalizeLineEndings(h4ReviewPacketMd), buildH4ReviewPacketMarkdown(h4ReviewPacket));
+});
+
+test("H4 review packet keeps stable sample counts and order", () => {
+  assert.equal(h4ReviewPacket.status, "h4-semantic-field-review-packet");
+  assert.equal(h4ReviewPacket.generatedBy, "npm run build-h4-review-packet");
+  assert.equal(h4ReviewPacket.counts.sampleRows, 105);
+  assert.deepEqual(h4ReviewPacket.counts.bySampleType, EXPECTED_H4_SAMPLE_COUNTS);
+  assert.deepEqual(countBy(h4ReviewPacket.sampleRows, row => row.sampleType), EXPECTED_H4_SAMPLE_COUNTS);
+  assert.equal(h4ReviewPacket.sampleRows[0].reviewId, "h4-skd-false-low:skd:01:viSezyaniGnavargaH:sukftin");
+  assert.equal(h4ReviewPacket.sampleRows[24].reviewId, "h4-skd-false-low:skd:25:SUdravargaH:SUdra");
+  assert.equal(h4ReviewPacket.sampleRows[25].reviewId, "h4-vcp-high-coverage:vcp:01:narakavargaH:nAraka");
+  assert.equal(h4ReviewPacket.sampleRows[45].reviewId, "h4-ap-ap90-delta:ap:01:vanOzaDivargaH:vipina");
+  assert.equal(h4ReviewPacket.sampleRows[65].reviewId, "h4-specialized-baseline:armh:01:pAtAlaBogivargaH:aDoBuvana");
+  assert.equal(h4ReviewPacket.sampleRows[85].reviewId, "h4-index-reverse-control:ae:01:avyayavargaH:cit");
+});
+
+test("H4 review rows keep human fields empty and labels valid", () => {
+  const labels = new Set(H4_MACHINE_LABEL_VOCABULARY.map(row => row.label));
+  const decisionLabels = new Set(Object.values(h4ReviewPacket.decisionVocabulary).flat());
+  for (const row of h4ReviewPacket.sampleRows) {
+    assert.equal(row.reviewStatus, "needs-review", `${row.reviewId} should remain needs-review`);
+    assert.equal(row.reviewedValue, null, `${row.reviewId} reviewedValue should stay null`);
+    assert.equal(row.reviewer, "", `${row.reviewId} reviewer should stay empty`);
+    assert.equal(row.reviewedAt, "", `${row.reviewId} reviewedAt should stay empty`);
+    assert.equal(row.note, "", `${row.reviewId} note should stay empty`);
+    assert.ok(row.reviewQuestion, `${row.reviewId} lacks review question`);
+    assert.ok(row.sourcePointers.length >= 2, `${row.reviewId} lacks source pointers`);
+    assert.ok(row.sourcePointers.some(pointer => pointer.role === "amar-field-lemma"), `${row.reviewId} lacks AMAR pointer`);
+    assert.ok(row.sourcePointers.some(pointer => pointer.role === "semantic-coverage-row"), `${row.reviewId} lacks coverage pointer`);
+    assert.ok(labels.has(row.proposedLabel), `${row.reviewId} has unknown label`);
+    assert.ok(row.expectedDecisionLabels.length, `${row.reviewId} lacks expected decision labels`);
+    for (const label of row.expectedDecisionLabels) {
+      assert.ok(decisionLabels.has(label), `${row.reviewId} has unknown decision label ${label}`);
+    }
+  }
+});
+
+test("H4 review packet counts match current semantic-field artifacts", () => {
+  assert.equal(h4ReviewPacket.counts.familyProfiles, 5);
+  assert.equal(h4ReviewPacket.counts.fieldContrasts, 12);
+  assert.equal(h4ReviewPacket.counts.dictionaryCount, 43);
+  assert.equal(h4ReviewPacket.counts.fieldCount, 24);
+  assert.equal(h4ReviewPacket.counts.byDictionary.skd, 25);
+  assert.equal(h4ReviewPacket.counts.byDictionary.vcp, 20);
+  assert.equal(h4ReviewPacket.counts.byDictionary.ap, 20);
+  assert.equal(h4ReviewPacket.counts.exactDictionaryPointers, 80);
+});
+
+test("H4 review worksheet names every review row", () => {
+  for (const row of h4ReviewPacket.sampleRows) {
+    assert.ok(h4ReviewPacketMd.includes(row.reviewId), `${row.reviewId} missing from markdown`);
+  }
+  assert.ok(h4ReviewPacketMd.includes("Archive/corpus parity is not an H4 optimization target"));
 });
 
 // ---- H6 structural-register review: stable distance labels ----

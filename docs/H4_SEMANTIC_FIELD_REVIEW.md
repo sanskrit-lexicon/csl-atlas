@@ -7,20 +7,24 @@ Status: scholar-facing review packet for H4/M8 semantic-field evidence.
 ## Trust Block
 
 - Evidence: `data/lexico/semantic_field_family_profiles.json`,
+  `data/lexico/h4_semantic_field_review_packet.json`,
   `data/lexico/semantic_field_coverage.csv`,
   `data/lexico/semantic_fields.csv`,
   `src/data/dicts/semantic-fields.json`,
   `scripts/lexico/m8_semantic_fields.py`,
   `scripts/build-semantic-fields.mjs`, and
-  `scripts/build-h4-family-profiles.mjs`.
+  `scripts/build-h4-family-profiles.mjs`,
+  `scripts/build-h4-review-packet.mjs`, and
+  `docs/H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`.
 - Limitations: headword coverage only; no corpus frequency, passage evidence,
   sense coverage, or prose-only knowledge is counted.
 - Validation: `python scripts/lexico/validate_lexico.py`,
-  `npm run build-semantic-fields`, `npm run build-h4-family-profiles`, and
-  `npm run build`.
+  `npm run build-semantic-fields`, `npm run build-h4-family-profiles`,
+  `npm run build-h4-review-packet`, and `npm run build`.
 - Owner repo: `csl-atlas`.
-- Next use: active review packet. Begin with H4-R1 SKD false-low rows, then
-  proceed through VCP, AP/AP90, specialized, and index/reverse controls.
+- Next use: review the generated worksheet
+  [`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md)
+  before treating H4 family contrasts as paper-level claims.
 
 ## Purpose
 
@@ -34,6 +38,13 @@ This packet is now active. H6 structural-register prompts have reviewed edge
 and family-outlier labels, and the microstructure docs now explain the
 headword/subentry and sense-segmentation limits that H4 depends on. Do not mark
 H4 as reviewed until the source checks below have been sampled.
+
+`data/lexico/h4_semantic_field_review_packet.json` and
+[`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md)
+now turn the priority samples below into 105 stable machine-only rows: 25 SKD
+false-low rows, then 20 rows each for VCP high coverage, AP/AP90 deltas,
+specialized baselines, and index/reverse controls. All `reviewedValue`,
+`reviewer`, `reviewedAt`, and `note` fields remain empty/null.
 
 ## What This Review Proves
 
@@ -62,6 +73,8 @@ For row-level review, join back to:
 - `data/lexico/semantic_fields.csv` for AMAR lemma-to-field rows;
 - dictionary source links from the relevant CDSL repo or atlas source-link
   conventions.
+- `data/lexico/h4_semantic_field_review_packet.json` for the stable generated
+  row order, machine labels, review questions, and empty human fields.
 
 ## Priority Samples
 
