@@ -33,7 +33,9 @@
     "build-r2-label-proposals": "node scripts/build-r2-label-proposals.mjs",
     "build-r2-checkpoint-packet": "node scripts/build-r2-checkpoint-packet.mjs",
     "build-r2-checkpoint-review": "node scripts/build-r2-checkpoint-review.mjs",
+    "build-r2-drift-explanation": "node scripts/build-r2-drift-explanation.mjs",
     "build-h5-anomaly-review": "node scripts/build-h5-anomaly-review.mjs",
+    "build-h5-maker-qa-candidates": "node scripts/build-h5-maker-qa-candidates.mjs",
     "validate-review-reports": "node scripts/validate-review-reports.mjs"
   },
   "devDependencies": {

@@ -16,9 +16,10 @@ claim, and not a scholar-reviewed sense decision layer.
   `data/lexico/r2_packet_label_proposals.json`,
   `data/lexico/r2_checkpoint_review_packet.json`,
   `src/data/review/r2-checkpoint-review.json`,
+  `data/lexico/r2_drift_explanation.json`,
   `docs/R2_CHECKPOINT_DECISIONS.md`,
-  `docs/R2_CHECKPOINT_REVIEW.md`, and the five source-inspected proposal docs
-  linked from `R2_REVIEW_PACKETS.md`.
+  `docs/R2_CHECKPOINT_REVIEW.md`, `docs/R2_DRIFT_EXPLANATION.md`, and the five
+  source-inspected proposal docs linked from `R2_REVIEW_PACKETS.md`.
 - Evidence label: `source-vs-archive`.
 - Limitations: the experiment is restricted to the five anchor lemmas and 14
   dictionaries already present in the prototype. It records parser drift and
@@ -28,9 +29,10 @@ claim, and not a scholar-reviewed sense decision layer.
   `npm run build-r2-review-packets`,
   `npm run build-r2-label-proposals`,
   `npm run build-r2-checkpoint-packet`,
-  `npm run build-r2-checkpoint-review`, `git diff --check`, `npm test`,
+  `npm run build-r2-checkpoint-review`,
+  `npm run build-r2-drift-explanation`, `git diff --check`, `npm test`,
   `npm run validate-review-reports`, and `npm run build`.
-- Review status: `machine-proposed`.
+- Review status: `machine-explained`.
 - Owner repo: `csl-atlas`.
 - Boundary note: dictionary source rows and recovered R2 archive fixtures only;
   no DCS, corpus frequency, TEI/OntoLex, FrAC, backend, database,
@@ -97,18 +99,23 @@ The machine-readable labels + checkpoint step keeps the packet order fixed:
 
 ## Next Accepted Step
 
-The next accepted step is **record checkpoint decisions in the shared review
-report**, not parser promotion. The decision-capture package must:
+The next accepted no-human step is **the machine-only drift explanation/control
+packet**, not parser promotion. The package must:
 
-1. generate `src/data/review/r2-checkpoint-review.json` from
-   `data/lexico/r2_checkpoint_review_packet.json`;
-2. preserve the exact ten checkpoint rows and their order by `diagnosticId`;
-3. use canonical shared review-report fields with `queue: "r2-checkpoint"`;
-4. keep `reviewedValue`, `reviewer`, `reviewedAt`, and `note` empty/null until
-   a human reviewer supplies decisions;
-5. preserve future human fields across rebuilds while refreshing machine fields;
-6. keep H5 review rows, public R2 pages, source-anchor generation, and splitter
+1. generate `data/lexico/r2_drift_explanation.json` and
+   `docs/R2_DRIFT_EXPLANATION.md` from the label proposals, checkpoint packet,
+   and shared checkpoint review report;
+2. cover all 70 diagnostic rows and retain the five packet buckets;
+3. count rows by packet, drift class, priority, and proposed label;
+4. identify the exact ten checkpoint rows as `needs-review`;
+5. keep `reviewedValue`, `reviewer`, `reviewedAt`, and `note` empty/null;
+6. explain proposed labels as drift metadata, not accepted decisions;
+7. keep H5 review rows, public R2 pages, source-anchor generation, and splitter
    behavior untouched.
+
+After this control packet, the next human action is checkpoint review in the
+shared report. Parser promotion remains deferred until those human decisions
+exist.
 
 Archive parity remains a comparison signal and regression-control cue. It is
 not the optimization target; labels should explain source scope, marker scope,
@@ -123,7 +130,8 @@ decisions. A future parser-change pass should:
 1. rerun the R2 generator commands plus
    `npm run build-r2-label-proposals` and
    `npm run build-r2-checkpoint-packet` and
-   `npm run build-r2-checkpoint-review`;
+   `npm run build-r2-checkpoint-review` and
+   `npm run build-r2-drift-explanation`;
 2. record changed row counts by packet, drift class, and parser family;
 3. explain every high-priority diagnostic row whose source/archive comparison
    changes;

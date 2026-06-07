@@ -1,0 +1,937 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "h5-maker-qa-candidate-packet",
+  "claim": "The reviewed H5 anomaly sample yields a small source-checkable maker QA subset without editing dictionary data or accepting ghost-entry claims.",
+  "evidenceLabel": "review-derived",
+  "reviewStatus": "source-checked",
+  "ownerRepo": "csl-atlas",
+  "generatedAt": "2026-06-07T04:37:31.707Z",
+  "generatedBy": "npm run build-h5-maker-qa-candidates",
+  "sourceFiles": [
+    "src/data/review/h5-anomaly-review.json"
+  ],
+  "sourceReviewReport": {
+    "path": "src/data/review/h5-anomaly-review.json",
+    "generatedAt": "2026-06-07T04:24:27.219Z",
+    "recordCount": 130,
+    "reviewFamily": "h5-ghost-anomaly"
+  },
+  "counts": {
+    "reviewRows": 130,
+    "possibleTypoRows": 22,
+    "inferredPossibleTypoRows": 16,
+    "knownCorrectionCalibrationRows": 6,
+    "qaCandidateRows": 10,
+    "sourceCheckedRows": 10,
+    "acceptedCorrectionRows": 1,
+    "bySampleClass": {
+      "mw-pwg-shared-doublet": 6,
+      "mw-pw-shared-doublet": 4
+    },
+    "byPair": {
+      "MW/PWG": 6,
+      "MW/PW": 4
+    },
+    "byNRealNeighbours": {
+      "1": 5,
+      "2": 5
+    },
+    "bySourceCheckStatus": {
+      "source-supported-distinct": 5,
+      "source-supported-variant": 4,
+      "source-declared-correction-candidate": 1
+    },
+    "calibrationByPair": {
+      "MW/PW": 4,
+      "MW/PWG": 2
+    }
+  },
+  "selectionPolicy": [
+    "Read only the reviewed H5 anomaly report.",
+    "Use rows with reviewedValue = possible-typo as the source pool.",
+    "Keep known-correction possible-typo rows as calibration controls, not new maker QA candidates.",
+    "Rank inferred shared-doublet rows by fewer nRealNeighbours, then sample class, lemma, and reviewId.",
+    "Emit the first 10 rows as a compact source-check worksheet."
+  ],
+  "calibrationRows": [
+    {
+      "reviewId": "h5:known-correction:MW-PW:Adya:",
+      "sampleClass": "known-correction",
+      "lemma": "Adya",
+      "pair": "MW/PW",
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Known-correction calibration: observed old/new strings change source text or headword content, so this stays a possible source correction target."
+      },
+      "oldNewEvidence": {
+        "petOld": "¯BIG4AG.",
+        "petNew": "¯BI7G4AG.",
+        "mwOld": "Adya, m.",
+        "mwNew": "AdyA, f."
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "23892",
+          "line": 84962,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L84962"
+        },
+        {
+          "dictionary": "PW",
+          "L": "14507",
+          "line": 54733,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L54733"
+        }
+      ]
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Akenipa:",
+      "sampleClass": "known-correction",
+      "lemma": "Akenipa",
+      "pair": "MW/PW",
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Known-correction calibration: observed old/new strings change source text or headword content, so this stays a possible source correction target."
+      },
+      "oldNewEvidence": {
+        "petOld": "<div n=\"1\">— 2〉 *= {#goDAvin#}.",
+        "petNew": "<div n=\"1\">— 2〉 *= {#meDAvin#}.",
+        "mwOld": "<s>Ake—nipa/</s> ¦ <lex>mfn.</lex> (said of the horses of the <s1>Aśvin</s1>s) protecting …",
+        "mwNew": "<s>Ake—nipa/</s> ¦ <lex>mfn.</lex> (said of the horses of the <s1>Aśvin</s1>s) protecting …"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "22292",
+          "line": 79513,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L79513"
+        },
+        {
+          "dictionary": "PW",
+          "L": "13484",
+          "line": 50861,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L50861"
+        }
+      ]
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Bavamanyu:",
+      "sampleClass": "known-correction",
+      "lemma": "Bavamanyu",
+      "pair": "MW/PW",
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Known-correction calibration: observed old/new strings change source text or headword content, so this stays a possible source correction target."
+      },
+      "oldNewEvidence": {
+        "petOld": "¯NI7LAK.UP.4,",
+        "petNew": "¯NI7LAR.UP.4,",
+        "mwOld": "<s>Bava—manyu</s> ¦ <lex>m.</lex> resentment against the world, <ls>NīlarUp.</ls> (<ab>cf.…",
+        "mwNew": "<s>Bava—manyu</s> ¦ <lex>m.</lex> resentment against the world, <ls>NīlarUp.</ls> (<ab>cf.…"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "149044",
+          "line": 499440,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499440"
+        },
+        {
+          "dictionary": "PW",
+          "L": "79073",
+          "line": 325800,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L325800"
+        }
+      ]
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:DA:",
+      "sampleClass": "known-correction",
+      "lemma": "DA",
+      "pair": "MW/PWG",
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Known-correction calibration: observed old/new strings change source text or headword content, so this stays a possible source correction target."
+      },
+      "oldNewEvidence": {
+        "petOld": "<ls>VS. 11. 39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
+        "petNew": "<ls>VS. 11,39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
+        "mwOld": "<ab>Impv.</ab> <s>dADAtu</s> <ab>pl.</ab> <s>°Datu</s>;",
+        "mwNew": "<ab>Impv.</ab> <s>da/DAtu</s>, <ab>pl.</ab> <s>°Datu</s>;"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "99233",
+          "line": 332818,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L332818"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "36484",
+          "line": 352629,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L352629"
+        }
+      ]
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PWG:DU:",
+      "sampleClass": "known-correction",
+      "lemma": "DU",
+      "pair": "MW/PWG",
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Known-correction calibration: observed old/new strings change source text or headword content, so this stays a possible source correction target."
+      },
+      "oldNewEvidence": {
+        "petOld": "<ls n=\"AV. 19,46,\">5.</ls> <ls n=\"AV. 19,\">19,7.</ls> <ls n=\"AV.\">19,36,4.</ls> <ls>ŚAT. B…",
+        "petNew": "<ls n=\"AV. 19,46,\">5.</ls> <ls n=\"AV. 19,\">19,7.</ls> <ls n=\"AV.\">19,36,4.</ls> <ls>ŚAT. B…",
+        "mwOld": "<div n=\"vp\"/> <ab>cl.</ab> 2. <ab>Ā.</ab>, 3. <ab>pl.</ab> <s>Duvate</s> (<s>Dunva/te</s>?…",
+        "mwNew": "<div n=\"vp\"/> <ab>cl.</ab> 2. <ab>Ā.</ab>, 3. <ab>pl.</ab> <s>Duva/te</s> (<s>Dunva/te</s>…"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "101481",
+          "line": 340065,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340065"
+        },
+        {
+          "dictionary": "PWG",
+          "L": "36831",
+          "line": 358847,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L358847"
+        }
+      ]
+    },
+    {
+      "reviewId": "h5:known-correction:MW-PW:Opala:",
+      "sampleClass": "known-correction",
+      "lemma": "Opala",
+      "pair": "MW/PW",
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Known-correction calibration: observed old/new strings change source text or headword content, so this stays a possible source correction target."
+      },
+      "oldNewEvidence": {
+        "petOld": "¯NR2S.UP.*RIB. ‹ind.)› ¯66.",
+        "petNew": "¯NR2S.UP.(Bibl.ind.)66.",
+        "mwOld": "Opala",
+        "mwNew": "OpalA"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "L": "41088",
+          "line": 143942,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L143942"
+        },
+        {
+          "dictionary": "PW",
+          "L": "22961",
+          "line": 89073,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L89073"
+        }
+      ]
+    }
+  ],
+  "qaCandidateRows": [
+    {
+      "qaCandidateId": "h5-maker-qa:01:h5:mw-pw-shared-doublet:MW-PW:ajamI_a:ajamIQa",
+      "rank": 1,
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:ajamI_a:ajamIQa",
+      "sampleClass": "mw-pw-shared-doublet",
+      "pair": "MW/PW",
+      "lemma": "ajamI|a",
+      "nearestReal": "ajamIQa",
+      "nRealNeighbours": 1,
+      "dictionaries": [
+        "MW",
+        "PW"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PW source records support `ajamI|a` as a real headword, or should it be treated as a correction candidate against `ajamIQa`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "ajamI|a",
+          "dictionary": "MW",
+          "L": "1979.1",
+          "line": 7169,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7169",
+          "bodyExcerpt": "{{Lbody=1979}}"
+        },
+        {
+          "role": "candidate-form",
+          "form": "ajamI|a",
+          "dictionary": "PW",
+          "L": "1260.1",
+          "line": 4821,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4821",
+          "bodyExcerpt": "{{Lbody=1260}}"
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "ajamIQa",
+          "dictionary": "MW",
+          "L": "1979",
+          "line": 7164,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7164",
+          "bodyExcerpt": "<s>aja—mIQa</s> or <s>aja—mI|a</s>, ¦ <lex>m.</lex> <ab>N.</ab> of a son of <s1>Suhotra</s1> (author of some Vedic hymns, <ls>RV. iv, 43</ls> and <ls n=\"RV. iv,\">44</ls>) <div n=\"P\"/> of a grandson of <s1>Suhotra</s1>; <div n=\"P\"/> of <s1>Yudhiṣṭhira</s1>.<info lex=\"m\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "ajamIQa",
+          "dictionary": "PW",
+          "L": "1260",
+          "line": 4818,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4818",
+          "bodyExcerpt": "{#ajamIQa#} und {#˚mI|a#}¦ <lex>m.</lex> <ab>N. pr.</ab> eines Mannes. Angeblich auch ein <ab>Bein.</ab> <is>Yudhiṣṭhira</is>ʼs. <ab>Pl.</ab> Name einer Völkerschaft."
+        }
+      ],
+      "sourceCheckStatus": "source-supported-variant",
+      "acceptedCorrection": null,
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW and PW both present ajamI|a as an alternate form under ajamIQa/ajamI|a; source-supported variant, not a correction candidate."
+    },
+    {
+      "qaCandidateId": "h5-maker-qa:02:h5:mw-pw-shared-doublet:MW-PW:awawyA:awAwyA",
+      "rank": 2,
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:awawyA:awAwyA",
+      "sampleClass": "mw-pw-shared-doublet",
+      "pair": "MW/PW",
+      "lemma": "awawyA",
+      "nearestReal": "awAwyA",
+      "nRealNeighbours": 1,
+      "dictionaries": [
+        "MW",
+        "PW"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PW source records support `awawyA` as a real headword, or should it be treated as a correction candidate against `awAwyA`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "awawyA",
+          "dictionary": "MW",
+          "L": "2338.1",
+          "line": 8346,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8346",
+          "bodyExcerpt": "<s>awawyA</s> ¦ <lex>f.</lex> constant roaming (= <s>awAtyA</s>), <ls>Subh.</ls><info n=\"sup\"/><info lex=\"f\"/>"
+        },
+        {
+          "role": "candidate-form",
+          "form": "awawyA",
+          "dictionary": "PW",
+          "L": "1486.2",
+          "line": 5737,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5737",
+          "bodyExcerpt": "{{Lbody=1486}}"
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "awAwyA",
+          "dictionary": "MW",
+          "L": "2352",
+          "line": 8388,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8388",
+          "bodyExcerpt": "<s>awAwyA</s> ¦ <lex>f.</lex> (habit of) roaming, <ls>L.</ls><info lex=\"f\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "awAwyA",
+          "dictionary": "PW",
+          "L": "206047",
+          "line": 587348,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L587348",
+          "bodyExcerpt": "{#awAwyA#}¦ <lex>f.</lex> {%das Herumwandern%} <ls>SUBHĀṢITĀV. 574</ls>.<info n=\"sup_5\"/>"
+        }
+      ],
+      "sourceCheckStatus": "source-supported-variant",
+      "acceptedCorrection": null,
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW has an awawyA entry glossed as constant roaming and cross-referenced to awAtyA; PW carries the row as an Lbody continuation. Treat as supported variant/equivalent evidence, not a correction to awAwyA."
+    },
+    {
+      "qaCandidateId": "h5-maker-qa:03:h5:mw-pwg-shared-doublet:MW-PWG:akalkala:akalkana",
+      "rank": 3,
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:akalkala:akalkana",
+      "sampleClass": "mw-pwg-shared-doublet",
+      "pair": "MW/PWG",
+      "lemma": "akalkala",
+      "nearestReal": "akalkana",
+      "nRealNeighbours": 1,
+      "dictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PWG source records support `akalkala` as a real headword, or should it be treated as a correction candidate against `akalkana`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "akalkala",
+          "dictionary": "MW",
+          "L": "207.1",
+          "line": 711,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L711",
+          "bodyExcerpt": "{{Lbody=207}}"
+        },
+        {
+          "role": "candidate-form",
+          "form": "akalkala",
+          "dictionary": "PWG",
+          "L": "86",
+          "line": 739,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L739",
+          "bodyExcerpt": "{#akalkala#}¦ <lex>adj.</lex> <ab>Var.</ab> von {#akalkana#} <ls>ŚKDR.</ls> <ab>u.</ab> {#akalkana#} ."
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "akalkana",
+          "dictionary": "MW",
+          "L": "207",
+          "line": 708,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L708",
+          "bodyExcerpt": "<s>a-kalkana</s> or <s>a-kalkala</s> ¦ <lex>mfn.</lex> not deceitful, honourable, (<ls>T.</ls>), <ls>Bhag.</ls><info lex=\"m:f:n\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "akalkana",
+          "dictionary": "PWG",
+          "L": "85",
+          "line": 734,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L734",
+          "bodyExcerpt": "{#akalkana#}¦ (3. {#a + kalkana#}) <lex>adj.</lex> {%frei von Hochmuth, bescheiden%} <ls>H. 490.</ls>"
+        }
+      ],
+      "sourceCheckStatus": "source-supported-variant",
+      "acceptedCorrection": null,
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW gives a-kalkana or a-kalkala; PWG explicitly marks akalkala as a variant of akalkana. Source-supported variant, not a correction candidate."
+    },
+    {
+      "qaCandidateId": "h5-maker-qa:04:h5:mw-pwg-shared-doublet:MW-PWG:cApaqa:cApala",
+      "rank": 4,
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:cApaqa:cApala",
+      "sampleClass": "mw-pwg-shared-doublet",
+      "pair": "MW/PWG",
+      "lemma": "cApaqa",
+      "nearestReal": "cApala",
+      "nRealNeighbours": 1,
+      "dictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PWG source records support `cApaqa` as a real headword, or should it be treated as a correction candidate against `cApala`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "cApaqa",
+          "dictionary": "MW",
+          "L": "72974",
+          "line": 246846,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246846",
+          "bodyExcerpt": "<s>cApaqa</s> ¦ <ab>N.</ab> of a village, <ls>Kṣitīś. iv.</ls>"
+        },
+        {
+          "role": "candidate-form",
+          "form": "cApaqa",
+          "dictionary": "PWG",
+          "L": "73703",
+          "line": 679249,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L679249",
+          "bodyExcerpt": "{#cApaqa#}¦ <ab>N. pr.</ab> eines Dorfes <ls>KṢITĪŚ. 13,19. 16,15.</ls>"
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "cApala",
+          "dictionary": "MW",
+          "L": "72975",
+          "line": 246849,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246849",
+          "bodyExcerpt": "<s>cApala</s> ¦ <lex>n.</lex> (<ab>fr.</ab> <s>cap˚</s>, <ab>g.</ab> <s>yuvA<srs/>di</s>) mobility, swiftness, <ls>Ragh. iii, 42</ls>; <ls>BhP. vii, 12, 20</ls><info lex=\"n\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "cApala",
+          "dictionary": "PWG",
+          "L": "25182",
+          "line": 240031,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L240031",
+          "bodyExcerpt": "{#cApala/#}¦ (<ab>nom. abstr.</ab> von {#capala#}) <lex>n.</lex> <is>gaṇa</is> {#yuvAdi#} zu <ls>P. 5,1,130.</ls> <div n=\"1\"> 1) {%Beweglichkeit, rasche Bewegung, Geschwindigkeit%}: {#sUtanizidDacApala (aSva)#} <ls>RAGH. 3,42.</ls> {#BramatkandukacApalEH#} <ls>BHĀG. P. 8,12,20.<..."
+        }
+      ],
+      "sourceCheckStatus": "source-supported-distinct",
+      "acceptedCorrection": null,
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW and PWG both define cApaqa as a village/proper-name row, while cApala is a separate abstract noun for mobility. Source-supported distinct headword."
+    },
+    {
+      "qaCandidateId": "h5-maker-qa:05:h5:mw-pwg-shared-doublet:MW-PWG:uzmopagama:uzRopagama",
+      "rank": 5,
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:uzmopagama:uzRopagama",
+      "sampleClass": "mw-pwg-shared-doublet",
+      "pair": "MW/PWG",
+      "lemma": "uzmopagama",
+      "nearestReal": "uzRopagama",
+      "nRealNeighbours": 1,
+      "dictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PWG source records support `uzmopagama` as a real headword, or should it be treated as a correction candidate against `uzRopagama`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "uzmopagama",
+          "dictionary": "MW",
+          "L": "37850",
+          "line": 132839,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132839",
+          "bodyExcerpt": "<s>uzmo<srs/>pagama</s> ¦ <lex>m.</lex> beginning of the hot season, <ls>L.</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "candidate-form",
+          "form": "uzmopagama",
+          "dictionary": "PWG",
+          "L": "12684",
+          "line": 113851,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L113851",
+          "bodyExcerpt": "{#uzmopagama#}¦ <lex>m.</lex> = {#uzRopagama#} <ls>AK. 1,1,3,19</ls>, <ab>Sch.</ab>"
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "uzRopagama",
+          "dictionary": "MW",
+          "L": "37807",
+          "line": 132701,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132701",
+          "bodyExcerpt": "<s>uzRo<srs/>pagama</s> ¦ <lex>m.</lex> the beginning of the hot season, <ls>L.</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "uzRopagama",
+          "dictionary": "PWG",
+          "L": "12673",
+          "line": 113772,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L113772",
+          "bodyExcerpt": "{#uzRopagama#}¦ ({#u˚ + u˚#}) <lex>m.</lex> = {#uzRAgama#} <ls>AK. 1,1,3,19.</ls>"
+        }
+      ],
+      "sourceCheckStatus": "source-supported-variant",
+      "acceptedCorrection": null,
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW lists uzmopagama as beginning of the hot season and PWG equates it with uzRopagama. Source-supported equivalent/variant, not a correction candidate."
+    },
+    {
+      "qaCandidateId": "h5-maker-qa:06:h5:mw-pw-shared-doublet:MW-PW:aprapAda:apramAda",
+      "rank": 6,
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprapAda:apramAda",
+      "sampleClass": "mw-pw-shared-doublet",
+      "pair": "MW/PW",
+      "lemma": "aprapAda",
+      "nearestReal": "apramAda",
+      "nRealNeighbours": 2,
+      "dictionaries": [
+        "MW",
+        "PW"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PW source records support `aprapAda` as a real headword, or should it be treated as a correction candidate against `apramAda`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "aprapAda",
+          "dictionary": "MW",
+          "L": "10669",
+          "line": 39008,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39008",
+          "bodyExcerpt": "<s>a/-prapAda</s> ¦ <lex>m.</lex> non-abortiveness, <ls>TS.</ls>; <ls>TBr.</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "candidate-form",
+          "form": "aprapAda",
+          "dictionary": "PW",
+          "L": "6875",
+          "line": 25451,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25451",
+          "bodyExcerpt": "{#a/prapAda#}¦ <lex>m.</lex> {%kein vorzeitiges Abgehen des Fötus%}."
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "apramAda",
+          "dictionary": "MW",
+          "L": "10682",
+          "line": 39050,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39050",
+          "bodyExcerpt": "<s>a-pramAda</s> ¦ <lex>m.</lex> care, vigilance, <ls>MBh.</ls> &c.<info lex=\"m\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "apramAda",
+          "dictionary": "PW",
+          "L": "6893",
+          "line": 25510,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25510",
+          "bodyExcerpt": "<hom>1.</hom> {#apramAda#}¦ <lex>m.</lex> {%Aufmerksamkeit, Sorgsamkeit%} <ls>MBH. 14,1,14</ls>."
+        }
+      ],
+      "sourceCheckStatus": "source-supported-distinct",
+      "acceptedCorrection": null,
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW/PW define aprapAda as non-abortiveness, while apramAda is care/vigilance. Source-supported distinct headword."
+    },
+    {
+      "qaCandidateId": "h5-maker-qa:07:h5:mw-pw-shared-doublet:MW-PW:apraRASa:aprakASa",
+      "rank": 7,
+      "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apraRASa:aprakASa",
+      "sampleClass": "mw-pw-shared-doublet",
+      "pair": "MW/PW",
+      "lemma": "apraRASa",
+      "nearestReal": "aprakASa",
+      "nRealNeighbours": 2,
+      "dictionaries": [
+        "MW",
+        "PW"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PW source records support `apraRASa` as a real headword, or should it be treated as a correction candidate against `aprakASa`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "apraRASa",
+          "dictionary": "MW",
+          "L": "10530",
+          "line": 38543,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38543",
+          "bodyExcerpt": "<s>a/-praRASa</s> ¦ <lex>m.</lex> not perishing, <ls>ŚBr.</ls>; <ls>PBr.</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "candidate-form",
+          "form": "apraRASa",
+          "dictionary": "PW",
+          "L": "6722",
+          "line": 24932,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24932",
+          "bodyExcerpt": "{#a/praRASa#}¦ <lex>m.</lex> <div n=\"1\">— 1〉 {%das Nichtverschwinden%} <ls>TĀṆḌYA-BR. 14,2,6</ls>. <div n=\"1\">— 2〉 {%das Nichtzugrundegehen%}."
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "aprakASa",
+          "dictionary": "MW",
+          "L": "10484",
+          "line": 38381,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38381",
+          "bodyExcerpt": "<s>a-prakASa</s> ¦ <lex>mf(<s>A</s>)n.</lex> not shining, dark<info lex=\"m:f#A:n\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "aprakASa",
+          "dictionary": "PW",
+          "L": "6683",
+          "line": 24793,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24793",
+          "bodyExcerpt": "{#aprakASa#}¦ <div n=\"1\">— 1〉 <lex>Adj.</lex> (<lex>f.</lex> {#A#}) <div n=\"2\">— a〉 {%nicht hell, dunkel%}. <div n=\"2\">— b〉 {%versteckt, heimlich, von Andern nicht gesehen%} <ls>MṚCCH. 61,8</ls> <ab>v. l.</ab> <div n=\"1\">— 2〉 {#˚m#} <lex>Adv.</lex> {%im Geheimen%}. <div n=\"1\">— ..."
+        }
+      ],
+      "sourceCheckStatus": "source-supported-distinct",
+      "acceptedCorrection": null,
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW/PW define apraRASa as non-perishing/non-disappearance, while aprakASa is dark/hidden. Source-supported distinct headword."
+    },
+    {
+      "qaCandidateId": "h5-maker-qa:08:h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa",
+      "rank": 8,
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa",
+      "sampleClass": "mw-pwg-shared-doublet",
+      "pair": "MW/PWG",
+      "lemma": "divaraTa",
+      "nearestReal": "devaraTa",
+      "nRealNeighbours": 2,
+      "dictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PWG source records support `divaraTa` as a real headword, or should it be treated as a correction candidate against `devaraTa`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "divaraTa",
+          "dictionary": "MW",
+          "L": "92243",
+          "line": 309870,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309870",
+          "bodyExcerpt": "<s>diva—raTa</s> ¦ <ab>w.r.</ab> for <s>divi-</s> (<ab>q.v.</ab>)"
+        },
+        {
+          "role": "candidate-form",
+          "form": "divaraTa",
+          "dictionary": "PWG",
+          "L": "32945",
+          "line": 321032,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L321032",
+          "bodyExcerpt": "{#divaraTa#}¦ <ls>VP. 445</ls> falsche Form für {#diviraTa#} ."
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "devaraTa",
+          "dictionary": "MW",
+          "L": "95965",
+          "line": 322005,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L322005",
+          "bodyExcerpt": "<s>deva—raTa/</s> ¦ <lex>m.</lex> the car or vehicle of a god, <ls>AV.</ls>; <ls>TS.</ls>; <ls>Br.</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "devaraTa",
+          "dictionary": "PWG",
+          "L": "34621",
+          "line": 336136,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L336136",
+          "bodyExcerpt": "{#devaraTa#}¦ ({#deva + raTa#}) <lex>m.</lex> <div n=\"1\"> 1) <ab>oxyt.</ab> {%Götterwagen%} <ls>AV. 8,8,22.</ls> <ls>TS. 2,5,6,1.</ls> <ls>TBR. 1,3,6,4.</ls> <ls>AIT. BR. 2,37.</ls> <ls>ŚĀṄKH. BR. 2,6.</ls> {#devaraTAhnya/#} <lex>n.</lex> {%Tagefahrt für einen Götterwagen (für d..."
+        }
+      ],
+      "sourceCheckStatus": "source-declared-correction-candidate",
+      "acceptedCorrection": "diviraTa",
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW marks divaraTa as a wrong reading for divi-, and PWG says falsche Form fuer diviraTa. Accept as a source-declared correction candidate to diviraTa, not to nearest-neighbor devaraTa."
+    },
+    {
+      "qaCandidateId": "h5-maker-qa:09:h5:mw-pwg-shared-doublet:MW-PWG:jalaDitA:jalaDigA",
+      "rank": 9,
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:jalaDitA:jalaDigA",
+      "sampleClass": "mw-pwg-shared-doublet",
+      "pair": "MW/PWG",
+      "lemma": "jalaDitA",
+      "nearestReal": "jalaDigA",
+      "nRealNeighbours": 2,
+      "dictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PWG source records support `jalaDitA` as a real headword, or should it be treated as a correction candidate against `jalaDigA`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "jalaDitA",
+          "dictionary": "MW",
+          "L": "77921",
+          "line": 262761,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262761",
+          "bodyExcerpt": "<s>jala—Di—tA</s> ¦ <lex>f.</lex> the state of the ocean, <ls>ŚārṅgP. xxix, 12</ls><info lex=\"f\"/>"
+        },
+        {
+          "role": "candidate-form",
+          "form": "jalaDitA",
+          "dictionary": "PWG",
+          "L": "74253",
+          "line": 682945,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L682945",
+          "bodyExcerpt": "{#jalaDitA#}¦ <lex>f.</lex> {%der Zustand des Oceans%} <ls>Spr. 3572.</ls>"
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "jalaDigA",
+          "dictionary": "MW",
+          "L": "77919",
+          "line": 262755,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262755",
+          "bodyExcerpt": "<s>jala—Di—gA</s> ¦ <lex>f.</lex> a river flowing into the ocean, <ls>L.</ls><info lex=\"f\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "jalaDigA",
+          "dictionary": "PWG",
+          "L": "26915",
+          "line": 259464,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L259464",
+          "bodyExcerpt": "{#jalaDigA#}¦ ({#jalaDi + gA#} von 1. {#ga#}) <lex>f.</lex> {%ein sich in's Meer ergiessender Fluss%} <ls>H. 1080.</ls>"
+        }
+      ],
+      "sourceCheckStatus": "source-supported-distinct",
+      "acceptedCorrection": null,
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW/PWG define jalaDitA as the state of the ocean, while jalaDigA is a river flowing into the ocean. Source-supported distinct headword."
+    },
+    {
+      "qaCandidateId": "h5-maker-qa:10:h5:mw-pwg-shared-doublet:MW-PWG:kftAlaka:mftAlaka",
+      "rank": 10,
+      "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kftAlaka:mftAlaka",
+      "sampleClass": "mw-pwg-shared-doublet",
+      "pair": "MW/PWG",
+      "lemma": "kftAlaka",
+      "nearestReal": "mftAlaka",
+      "nRealNeighbours": 2,
+      "dictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "reviewDecision": {
+        "reviewStatus": "reviewed-ok",
+        "reviewedValue": "possible-typo",
+        "reviewer": "codex",
+        "reviewedAt": "2026-06-07",
+        "note": "Shared-doublet pass: one-edit neighbor is suspicious enough to keep as a possible typo for maker QA, without automatic correction."
+      },
+      "sourceCheckQuestion": "Do the MW/PWG source records support `kftAlaka` as a real headword, or should it be treated as a correction candidate against `mftAlaka`?",
+      "candidateSourcePointers": [
+        {
+          "role": "candidate-form",
+          "form": "kftAlaka",
+          "dictionary": "MW",
+          "L": "54495",
+          "line": 187262,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L187262",
+          "bodyExcerpt": "<s>kftA<srs/>laka</s> ¦ <lex>m.</lex> <ab>N.</ab> of one of <s1>Śiva</s1>'s attendants <ab>Comm.</ab> on <ls>L.</ls><info lex=\"m\"/>"
+        },
+        {
+          "role": "candidate-form",
+          "form": "kftAlaka",
+          "dictionary": "PWG",
+          "L": "18671",
+          "line": 172936,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L172936",
+          "bodyExcerpt": "{#kftAlaka#}¦ ({#kfta + alaka#}) <lex>m.</lex> <ab>N. pr.</ab> eines Wesens im Gefolge von <is>Śiva</is> <ls>VYĀḌI</ls> zu <ls>H. 210.</ls>"
+        }
+      ],
+      "contrastSourcePointers": [
+        {
+          "role": "nearest-real-form",
+          "form": "mftAlaka",
+          "dictionary": "MW",
+          "L": "167215",
+          "line": 558573,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L558573",
+          "bodyExcerpt": "<s>mftAlaka</s>, <s>mfttAla</s> and <s>mfttA˚laka</s>, ¦ <lex>n.</lex> a kind of loam or clay, <ls>L.</ls><info lex=\"n\"/>"
+        },
+        {
+          "role": "nearest-real-form",
+          "form": "mftAlaka",
+          "dictionary": "PWG",
+          "L": "61635",
+          "line": 599269,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L599269",
+          "bodyExcerpt": "{#mftAlaka#}¦ <lex>n.</lex> {%eine <ab>best.</ab> Lehmart%} <ls>AK. 2,4,4,19.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#mfttAla, mfttAlaka#} ."
+        }
+      ],
+      "sourceCheckStatus": "source-supported-distinct",
+      "acceptedCorrection": null,
+      "checkedBy": "codex",
+      "checkedAt": "2026-06-07",
+      "sourceCheckNote": "MW/PWG define kftAlaka as a proper name in Siva context, while mftAlaka is a kind of loam/clay. Source-supported distinct headword."
+    }
+  ],
+  "limitations": [
+    "This packet records source-check dispositions when present, but it does not edit dictionary data.",
+    "Rows are candidates for maker QA; they are not proven errors.",
+    "No ghost-candidate label is accepted by this packet.",
+    "The packet is intentionally small and ranked for a first source-check session, not a complete H5 inventory.",
+    "No parser behavior, source-anchor generation, public page, backend/runtime LLM, corpus, DCS, or standards work is changed."
+  ],
+  "boundaryNote": "Dictionary source pointers and the reviewed H5 anomaly report only; source-check dispositions are review metadata, not automatic dictionary edits.",
+  "warnings": []
+}
