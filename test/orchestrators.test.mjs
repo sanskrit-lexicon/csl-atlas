@@ -23,10 +23,11 @@ import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { buildMarkdown as buildH5MakerQaMarkdown, buildPayload as buildH5MakerQaPayload, preservedSourceCheckMap } from "../scripts/build-h5-maker-qa-candidates.mjs";
 import { buildMarkdown as buildH5MakerCorrectionMarkdown, buildPayload as buildH5MakerCorrectionPayload, preservedCorrectionTargetMap } from "../scripts/build-h5-maker-correction-proposal.mjs";
 import { EXPECTED_EDGE_IDS as THREE_AXIS_EDGE_IDS, axisReadingForScores, buildMarkdown as buildThreeAxisMarkdown, buildPayload as buildThreeAxisPayload } from "../scripts/build-three-axis-comparison.mjs";
+import { EXPECTED_PREFIX_CONTROL_IDS as XREF_PREFIX_CONTROL_IDS, EXPECTED_SHARED_CORE_SAMPLE_IDS as XREF_SHARED_CORE_IDS, XREF_LABEL_VOCABULARY, buildMarkdown as buildXrefSourceCheckMarkdown, buildPayload as buildXrefSourceCheckPayload } from "../scripts/build-xref-source-check-packet.mjs";
 import { loadPreserved } from "../scripts/lib/review-report.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
-import { classifyHubTarget } from "../scripts/build-xref-hub-review.mjs";
+import { classifyHubTarget, parseCsv as parseXrefCsv } from "../scripts/build-xref-hub-review.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
 import { topForm } from "../scripts/build-citation-apparatus.mjs";
 
@@ -46,6 +47,10 @@ const h5MakerCorrectionProposal = JSON.parse(fs.readFileSync(path.join(repoRoot,
 const h5MakerCorrectionProposalMd = fs.readFileSync(path.join(repoRoot, "docs", "H5_MAKER_CORRECTION_PROPOSAL.md"), "utf8");
 const threeAxisComparison = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "three_axis_comparison.json"), "utf8"));
 const threeAxisComparisonMd = fs.readFileSync(path.join(repoRoot, "docs", "THREE_AXIS_COMPARISON.md"), "utf8");
+const xrefHubReview = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "xref_hub_review.json"), "utf8"));
+const xrefEdgeRows = parseXrefCsv(fs.readFileSync(path.join(repoRoot, "data", "lexico", "xref_edges.csv"), "utf8"));
+const xrefSourceCheckPacket = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "xref_source_check_packet.json"), "utf8"));
+const xrefSourceCheckMd = fs.readFileSync(path.join(repoRoot, "docs", "MICROSTRUCTURE_XREF_SOURCE_CHECK.md"), "utf8");
 const threeAxisSourceInputs = {
   bootstrapRows: parseCsv(fs.readFileSync(path.join(repoRoot, "src", "data", "lexicographic-structure", "L0", "bootstrap_support.csv"), "utf8")),
   jaccardRows: parseCsv(fs.readFileSync(path.join(repoRoot, "src", "data", "lexicographic-structure", "sanhw1_jaccard.csv"), "utf8")),
@@ -873,6 +878,76 @@ test("classifyHubTarget separates prefix hubs, lexical targets, and normalizatio
   assert.equal(classifyHubTarget("mahA\u02da"), "prefix-convention");
   assert.equal(classifyHubTarget("narasiMha"), "lexical-target");
   assert.equal(classifyHubTarget("paropadeSe pAMqityaM"), "normalization-risk");
+});
+
+// ---- Xref source-check packet: shared-core rows and prefix controls ----
+test("xref source-check packet is generated from hub review and xref edges", () => {
+  assert.deepEqual(
+    xrefSourceCheckPacket,
+    buildXrefSourceCheckPayload(xrefHubReview, xrefEdgeRows, xrefSourceCheckPacket.generatedAt)
+  );
+  assert.equal(normalizeLineEndings(xrefSourceCheckMd), buildXrefSourceCheckMarkdown(xrefSourceCheckPacket));
+});
+
+test("xref source-check packet keeps stable shared-core and prefix-control order", () => {
+  assert.equal(xrefSourceCheckPacket.status, "xref-source-check-packet");
+  assert.equal(xrefSourceCheckPacket.generatedBy, "npm run build-xref-source-check-packet");
+  assert.equal(xrefSourceCheckPacket.counts.sharedCoreRows, 40);
+  assert.equal(xrefSourceCheckPacket.counts.prefixControlRows, 10);
+  assert.deepEqual(xrefSourceCheckPacket.sharedCoreRows.map(row => row.sampleId), XREF_SHARED_CORE_IDS);
+  assert.deepEqual(xrefSourceCheckPacket.prefixControlRows.map(row => row.controlId), XREF_PREFIX_CONTROL_IDS);
+});
+
+test("xref source-check rows keep human fields empty and reviewer-ready", () => {
+  const vocabulary = new Set(XREF_LABEL_VOCABULARY.map(row => row.label));
+  const rows = [...xrefSourceCheckPacket.sharedCoreRows, ...xrefSourceCheckPacket.prefixControlRows];
+  assert.equal(rows.length, 50);
+  for (const row of rows) {
+    const id = row.sampleId ?? row.controlId;
+    assert.equal(row.reviewStatus, "needs-source-check", `${id} should remain needs-source-check`);
+    assert.equal(row.reviewedValue, null, `${id} reviewedValue should stay null`);
+    assert.equal(row.reviewer, "", `${id} reviewer should stay empty`);
+    assert.equal(row.reviewedAt, "", `${id} reviewedAt should stay empty`);
+    assert.equal(row.note, "", `${id} note should stay empty`);
+    assert.ok(row.reviewQuestion, `${id} lacks review question`);
+    assert.ok(row.sourcePointers.length, `${id} lacks source pointers`);
+    assert.ok(row.sourcePointers.every(pointer => pointer.href), `${id} has source pointer without href`);
+    assert.ok(row.proposedLabels.length, `${id} lacks proposed labels`);
+    for (const label of row.proposedLabels) {
+      assert.ok(vocabulary.has(label), `${id} has out-of-vocabulary label ${label}`);
+    }
+  }
+});
+
+test("xref source-check counts match current generated artifacts", () => {
+  assert.equal(xrefHubReview.counts.sharedCoreSample, 40);
+  assert.equal(xrefSourceCheckPacket.counts.sourceCheckRows, 50);
+  assert.equal(xrefSourceCheckPacket.counts.sourcePointerRows, 106);
+  assert.equal(xrefSourceCheckPacket.counts.exactSharedCorePointers, 76);
+  assert.equal(xrefSourceCheckPacket.counts.sharedCoreRowsWithMissingExactEdge, 4);
+  assert.equal(xrefSourceCheckPacket.counts.prefixControlPointers, 30);
+  assert.deepEqual(xrefSourceCheckPacket.counts.bySampleClass, {
+    "shared-core": 40,
+    "prefix-control": 10
+  });
+  assert.deepEqual(xrefSourceCheckPacket.counts.byProposedLabel, {
+    "lexical-shared-core": 40,
+    "prefix-convention": 10
+  });
+  assert.deepEqual(xrefSourceCheckPacket.counts.prefixControlsByDictionary, {
+    "mw": 5,
+    "pwg": 5
+  });
+});
+
+test("xref source-check worksheet names all stable row ids", () => {
+  for (const sampleId of XREF_SHARED_CORE_IDS) {
+    assert.ok(xrefSourceCheckMd.includes(sampleId), `${sampleId} missing from source-check worksheet`);
+  }
+  for (const controlId of XREF_PREFIX_CONTROL_IDS) {
+    assert.ok(xrefSourceCheckMd.includes(controlId), `${controlId} missing from source-check worksheet`);
+  }
+  assert.ok(xrefSourceCheckMd.includes("Prefix controls test convention pressure"));
 });
 
 // ---- All-dictionary coverage: classify + fit bands ----

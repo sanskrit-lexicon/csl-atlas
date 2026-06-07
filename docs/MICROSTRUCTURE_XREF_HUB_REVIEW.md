@@ -10,18 +10,20 @@ Status: scholar-facing review note for the M6 xref lineage package and
 - Evidence: `data/lexico/xref_edges.csv`, `data/lexico/xref_by_dict.json`,
   `data/lexico/xref_lineage.json`, `data/lexico/xref_shared_edges.csv`,
   `data/lexico/xref_hub_review.json`,
+  `data/lexico/xref_source_check_packet.json`,
   `src/data/dicts/xref-lineage.json`, `scripts/lexico/m3_xrefs.py`,
   `scripts/lexico/m6_xref_lineage.py`, and
-  `scripts/build-xref-lineage.mjs`, `scripts/build-xref-hub-review.mjs`.
+  `scripts/build-xref-lineage.mjs`, `scripts/build-xref-hub-review.mjs`,
+  `scripts/build-xref-source-check-packet.mjs`.
 - Limitations: normalized source-target overlap is a floor; raw target strings
   are messy, and shared xrefs are lineage signals rather than proof of direct
   copying by themselves.
 - Validation: `python scripts/lexico/validate_lexico.py`,
-  `npm run build-xref-lineage`, `npm run build-xref-hub-review`, and
-  `npm run build`.
+  `npm run build-xref-lineage`, `npm run build-xref-hub-review`,
+  `npm run build-xref-source-check-packet`, and `npm run build`.
 - Owner repo: `csl-atlas`.
-- Next use: use the artifact labels as the active xref review package; source
-  check MW/PWG shared-core samples before making paper-level lineage claims.
+- Next use: use `MICROSTRUCTURE_XREF_SOURCE_CHECK.md` as the active xref
+  source-check packet before making paper-level lineage claims.
 
 ## Current Reading
 
@@ -34,11 +36,14 @@ matched edges on both sides. MW/PWG is different: 641 overlapping edges on
 That means MW/PWG has a real shared core, but each tradition also expands its
 xref graph independently.
 
-`data/lexico/xref_hub_review.json` now turns the next review step into a
-deterministic artifact: 6 dictionary hub profiles, 10 pair review rows, and a
-40-edge MW/PWG shared-core sample. In the current top-target lists, MW and PWG
-are dominated by prefix/convention hubs, while AP/AP90/CAE top targets are
-lexical-target hubs. AE is kept as a normalization-risk control.
+`data/lexico/xref_hub_review.json` turns the review labels into a deterministic
+artifact: 6 dictionary hub profiles, 10 pair review rows, and a 40-edge MW/PWG
+shared-core sample. `data/lexico/xref_source_check_packet.json` now adds the
+source-check layer: the same 40 shared-core rows plus 10 PWG/MW prefix-control
+rows, with source pointers and empty human fields. In the current top-target
+lists, MW and PWG are dominated by prefix/convention hubs, while AP/AP90/CAE
+top targets are lexical-target hubs. AE is kept as a normalization-risk
+control.
 
 The artifact now carries the review starting labels. These are not completed
 source readings; they say what kind of evidence each row is allowed to become
@@ -57,9 +62,9 @@ after source checking.
 
 | Sample | Size | Source | Purpose |
 |---|---:|---|---|
-| MW/PWG shared core | 40 edges | `data/lexico/xref_hub_review.json` | Classify true shared lexical xrefs vs normalization artifacts. |
-| MW prefix hubs | top targets | `data/lexico/xref_hub_review.json` | Separate prefix/convention hubs from content inheritance. |
-| PWG `Vgl.` hubs | top targets | `data/lexico/xref_hub_review.json` | Identify whether PWG hub behavior is mostly compound-marker style. |
+| MW/PWG shared core | 40 edges | `data/lexico/xref_source_check_packet.json` | Classify true shared lexical xrefs vs normalization artifacts. |
+| MW prefix hubs | 5 controls | `data/lexico/xref_source_check_packet.json` | Separate prefix/convention hubs from content inheritance. |
+| PWG `Vgl.` hubs | 5 controls | `data/lexico/xref_source_check_packet.json` | Identify whether PWG hub behavior is mostly compound-marker style. |
 | AP/AP90 control | pair row | `data/lexico/xref_hub_review.json` | Confirm the positive-control interpretation. |
 
 ## Artifact-Carried Labels
@@ -97,8 +102,9 @@ Use these labels in notes or a future review queue:
 
 ## Next Test
 
-Use `data/lexico/xref_hub_review.json` for scholar review. Start with the
-MW/PWG 40-edge shared-core sample, then source-check a small PWG/MW prefix-hub
-sample. The package can move from machine labels to reviewed interpretation
+Use `MICROSTRUCTURE_XREF_SOURCE_CHECK.md` and
+`data/lexico/xref_source_check_packet.json` for scholar review. Start with the
+MW/PWG 40-edge shared-core sample, then adjudicate the 10 PWG/MW prefix
+controls. The package can move from machine labels to reviewed interpretation
 only after those source checks confirm which edges are lexical and which are
 convention artifacts.

@@ -53,7 +53,7 @@ applicable. The remaining scholar-facing packages are now explicit:
 | Sense segmentation | [`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md) | Use the AP/PWG/PWK sense-depth chart as a structural proxy, then use R2 diagnostics before citing broad sense-alignment claims. |
 | H6 structural register | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md) | Edge and family-outlier labels are documented; source-read selected examples before paper use. |
 | H4 interpretation | [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md), [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md) | Use the H4 review packet to adjudicate SKD false lows, VCP high coverage, AP/AP90 deltas, specialized baselines, and index/reverse controls. |
-| Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) | Starting labels are documented for shared-core, prefix-convention, edition-continuity, normalization-risk, lexical-target, and too-sparse samples. |
+| Xref hubs | [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md), [`MICROSTRUCTURE_XREF_SOURCE_CHECK.md`](MICROSTRUCTURE_XREF_SOURCE_CHECK.md) | Source-check packet exists for 40 MW/PWG shared-core rows and 10 PWG/MW prefix controls; next proof step is human adjudication before paper use. |
 | Three-axis comparison | [`THREE_AXIS_COMPARISON.md`](THREE_AXIS_COMPARISON.md) | Source-read the MW/PWG, CCS/CAE, WIL/SHS, and PWG/SCH focus rows before turning the machine packet into a methods-note claim. |
 | H5 anomaly review | [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md), [`H5_MAKER_QA_CANDIDATES.md`](H5_MAKER_QA_CANDIDATES.md), [`H5_MAKER_CORRECTION_PROPOSAL.md`](H5_MAKER_CORRECTION_PROPOSAL.md) | The 130-item first sample is classified, the 10-row maker-QA worksheet is source-checked, and the single source-declared correction candidate is now isolated as a maker-facing `divaraTa -> diviraTa` proposal. |
 
@@ -64,7 +64,7 @@ Before writing review procedure, each queue should state its proof value:
 | Queue | What it proves |
 |---|---|
 | SKD/YAT/SHS root-format checks | Whether dictionary-specific verbal-root coding can be decoded reliably enough to emit grammatical columns without forcing all dictionaries into one convention. |
-| Xref target overlap | Whether cross-reference graphs preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md) and `data/lexico/xref_hub_review.json`. |
+| Xref target overlap | Whether cross-reference graphs preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md), [`MICROSTRUCTURE_XREF_SOURCE_CHECK.md`](MICROSTRUCTURE_XREF_SOURCE_CHECK.md), `data/lexico/xref_hub_review.json`, and `data/lexico/xref_source_check_packet.json`. |
 | Source-siglum aliases | Whether source citation normalization can improve dictionary evidence without hiding uncertainty. |
 | POS/gender conflicts | Which disagreements are dictionary disagreement, parser error, or convention mismatch. |
 | H5 anomaly review | Whether rare near-core and raw-headword forensic signals are lineage evidence, correction targets, parser artifacts, or legitimate morphology. |
