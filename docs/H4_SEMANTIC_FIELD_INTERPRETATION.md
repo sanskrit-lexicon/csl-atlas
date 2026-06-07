@@ -11,18 +11,20 @@ and `/tools/semantic-fields`.
   `data/lexico/semantic_field_coverage.csv`,
   `data/lexico/semantic_field_report.json`,
   `data/lexico/semantic_field_family_profiles.json`,
+  `data/lexico/h4_semantic_field_review_packet.json`,
   `src/data/dicts/semantic-fields.json`,
   `scripts/lexico/m8_semantic_fields.py`, and
   `scripts/build-semantic-fields.mjs`,
-  `scripts/build-h4-family-profiles.mjs`.
+  `scripts/build-h4-family-profiles.mjs`,
+  `scripts/build-h4-review-packet.mjs`.
 - Limitations: headword coverage only; no corpus frequency, passage
   attestation, sense coverage, or non-headword mentions.
 - Validation: `python scripts/lexico/validate_lexico.py`,
   `npm run build-semantic-fields`, `npm run build-h4-family-profiles`,
-  and `npm run build`.
+  `npm run build-h4-review-packet`, and `npm run build`.
 - Owner repo: `csl-atlas`.
-- Next use: active H4 review package. Start with the selected convention
-  samples before making topical or paper-level claims.
+- Next use: review the generated H4 sample worksheet before making topical or
+  paper-level claims.
 
 ## Current Reading
 
@@ -74,7 +76,11 @@ and headword conventions the review samples must control for.
 
 ## Review Samples
 
-Use small scholar-reviewed samples before making paper-level claims:
+Use the generated review packet before making paper-level claims:
+`data/lexico/h4_semantic_field_review_packet.json` and
+[`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md)
+contain 105 machine-selected rows with source/coverage pointers, proposed
+machine labels, review questions, and empty human fields.
 
 | Sample | Size | Purpose |
 |---|---:|---|
