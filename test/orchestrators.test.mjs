@@ -1149,3 +1149,63 @@ test("h1SenseUnits strips ls citations before semicolon-splitting for lumped dic
   const units = h1SenseUnits(body, CAE_DICT);
   assert.equal(units, 1, "ls-internal semicolons should not inflate sense count");
 });
+
+// ---- R2 H2H3: splitInlineNumber / glossOverlap ----
+import { splitInlineNumber, glossOverlap } from "../scripts/build-r2-h2h3.mjs";
+
+test("splitInlineNumber returns single sense for body with no markers", () => {
+  const parts = splitInlineNumber("A simple definition.");
+  assert.equal(parts.length, 1);
+  assert.ok(parts[0].includes("simple definition"));
+});
+
+test("splitInlineNumber splits SHS-style N. markers correctly", () => {
+  const body = "{#yoga#}¦ m. ({#-gaH#}) 1. Junction, joining, union. 2. Combination, association. 3. Meditation.";
+  const parts = splitInlineNumber(body);
+  assert.equal(parts.length, 3);
+  assert.ok(parts[0].includes("Junction"), `expected Junction in part[0], got "${parts[0]}"`);
+  assert.ok(parts[1].includes("Combination"));
+  assert.ok(parts[2].includes("Meditation"));
+});
+
+test("splitInlineNumber strips XML tags before splitting", () => {
+  const body = "<entry>1. First sense. 2. Second sense.</entry>";
+  const parts = splitInlineNumber(body);
+  assert.equal(parts.length, 2);
+});
+
+test("splitInlineNumber strips curly-brace markup before splitting", () => {
+  const body = "{#foo#}¦ m. 1. A thing. 2. Another thing.";
+  const parts = splitInlineNumber(body);
+  assert.equal(parts.length, 2);
+  assert.ok(parts[0].includes("thing"));
+});
+
+test("glossOverlap returns 1 for identical texts", () => {
+  const ov = glossOverlap("Junction joining union", "Junction joining union");
+  assert.equal(ov, 1);
+});
+
+test("glossOverlap returns 0 for empty texts", () => {
+  assert.equal(glossOverlap("", ""), 0);
+  assert.equal(glossOverlap("abc", ""), 0);
+});
+
+test("glossOverlap is symmetric", () => {
+  const a = "a share or portion of land";
+  const b = "a portion of property";
+  assert.equal(glossOverlap(a, b), glossOverlap(b, a));
+});
+
+test("glossOverlap gives high score for near-identical senses (WIL→SHS pattern)", () => {
+  const wil = "Junction, joining, union.";
+  const shs = "Junction, joining, union.";
+  assert.ok(glossOverlap(wil, shs) >= 0.9, "near-verbatim copy should score >= 0.9");
+});
+
+test("glossOverlap gives low score for condensed YAT-style senses", () => {
+  const wil = "Religious and abstract meditation, devotion, spiritual worship.";
+  const yat = "Junction; meeting; devotion; fitness.";
+  const ov = glossOverlap(wil, yat);
+  assert.ok(ov < 0.4, `condensed sense should score below 0.4, got ${ov}`);
+});

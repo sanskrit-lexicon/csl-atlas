@@ -88,7 +88,7 @@ named successor directory:
 | `r2_align_<lemma>.json` | Sense-alignment payload for selected anchor lemmas. | **restored** (`npm run build-r2-explorer`) |
 | `r2_summary.json` | Corpus-level parser and coverage summary. | **restored** (`npm run build-r2-explorer`) |
 | `r2_h1.json` | Sense-granularity by dictionary/family/year. | **restored** (`npm run build-r2-h1`) |
-| `r2_h2h3.json` | Citation-survival and drift results on inheritance edges. | required (deferred — next slice) |
+| `r2_h2h3.json` | Citation-survival and drift results on inheritance edges. | **restored** (`npm run build-r2-h2h3`) |
 | `r2_h1_panel.json` | Fixed-panel deconfounding check. | recommended (deferred — next slice) |
 
 The public pages may remain static until the data contract stabilizes, but they
@@ -103,6 +103,19 @@ J=1 preserved); Preservation: pages marked archived with live-data pointers;
 finer splitting); alignmentRows 128 vs 104 (24-row PWK residual); per-dict
 H1 values within ≤13% with family ordering identical. Parser-rule changes are
 still deferred to checkpoint review (unchanged).
+
+**Restored (2026-06-09) — H2/H3R slice.** `r2_h2h3.json` generated from
+`csl-orig` across three inheritance edges on a reconstructed 28-noun panel.
+Acceptance gates met: H2 reproduced (cited 0.762 vs 0.70 archived; uncited
+0.591 vs 0.54; direction H2 SUPPORTED); H3R reproduced (WIL→SHS verbatim copy
+0.906 overlap vs 0.82 archived; WIL→YAT condensation des=1.0 vs 1.1;
+AP90→AP revision -3.1 drift vs -4.5); 130 unit tests pass.
+Documented drift sources: panel reconstructed from nouns present in all 5 dicts
+with 3–9 WIL senses (original panel from deleted h2h3_analysis.py); WIL mean
+senses 9.0 vs 7.9 archived (panel boundary effect); WIL→YAT overlap 0.075 vs
+0.15 (word-Jaccard vs archived metric); AP90→AP overlap 0.498 vs 0.61
+(split-method differences). Key findings — verbatim copy and drastic
+condensation on H3R, citation-survival gap on H2 — reproduce across all edges.
 
 ## Minimal Record Schema
 
