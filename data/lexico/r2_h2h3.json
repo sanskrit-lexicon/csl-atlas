@@ -1,0 +1,629 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedBy": "npm run build-r2-h2h3",
+  "panel": [
+    "avazwabDa",
+    "avi",
+    "Aroha",
+    "ASraya",
+    "udAtta",
+    "udGAta",
+    "udvega",
+    "upacAra",
+    "upasaMhAra",
+    "ErAvata",
+    "ojas",
+    "kalka",
+    "kirAta",
+    "koRa",
+    "kzAra",
+    "kzepa",
+    "Goza",
+    "calana",
+    "cUqA",
+    "tapasvin",
+    "taruRa",
+    "tilaka",
+    "trika",
+    "divya",
+    "dIpana",
+    "Dara",
+    "DAtf",
+    "Dvajin"
+  ],
+  "panelSize": 28,
+  "survivedThreshold": 0.15,
+  "h2": {
+    "survivalThreshold": 0.15,
+    "cited": {
+      "n": 84,
+      "survived": 64,
+      "rate": 0.762
+    },
+    "uncited": {
+      "n": 723,
+      "survived": 427,
+      "rate": 0.591
+    },
+    "supported": true,
+    "archivedCited": {
+      "n": 96,
+      "rate": 0.7
+    },
+    "archivedUncited": {
+      "n": 715,
+      "rate": 0.54
+    }
+  },
+  "h3r": [
+    {
+      "edge": "wil→shs",
+      "ancDict": "wil",
+      "desDict": "shs",
+      "nLemmas": 28,
+      "meanAncSenses": 9,
+      "meanDesSenses": 9,
+      "drift": 0,
+      "meanGlossOverlap": 0.906,
+      "pattern": "near-verbatim copy",
+      "archived": {
+        "meanAncSenses": 7.9,
+        "meanDesSenses": 8.5,
+        "drift": 0.6,
+        "meanGlossOverlap": 0.82
+      },
+      "lemmaResults": [
+        {
+          "stem": "avazwabDa",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.972
+        },
+        {
+          "stem": "avi",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 1
+        },
+        {
+          "stem": "Aroha",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.892
+        },
+        {
+          "stem": "ASraya",
+          "ancSenses": 9,
+          "desSenses": 10,
+          "meanOverlap": 0.972
+        },
+        {
+          "stem": "udAtta",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.992
+        },
+        {
+          "stem": "udGAta",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.97
+        },
+        {
+          "stem": "udvega",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.916
+        },
+        {
+          "stem": "upacAra",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.966
+        },
+        {
+          "stem": "upasaMhAra",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.66
+        },
+        {
+          "stem": "ErAvata",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.88
+        },
+        {
+          "stem": "ojas",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.878
+        },
+        {
+          "stem": "kalka",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.878
+        },
+        {
+          "stem": "kirAta",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.875
+        },
+        {
+          "stem": "koRa",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.956
+        },
+        {
+          "stem": "kzAra",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.952
+        },
+        {
+          "stem": "kzepa",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.909
+        },
+        {
+          "stem": "Goza",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.889
+        },
+        {
+          "stem": "calana",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.878
+        },
+        {
+          "stem": "cUqA",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.961
+        },
+        {
+          "stem": "tapasvin",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.771
+        },
+        {
+          "stem": "taruRa",
+          "ancSenses": 9,
+          "desSenses": 8,
+          "meanOverlap": 0.862
+        },
+        {
+          "stem": "tilaka",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.956
+        },
+        {
+          "stem": "trika",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.942
+        },
+        {
+          "stem": "divya",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.917
+        },
+        {
+          "stem": "dIpana",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.888
+        },
+        {
+          "stem": "Dara",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.921
+        },
+        {
+          "stem": "DAtf",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.819
+        },
+        {
+          "stem": "Dvajin",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.889
+        }
+      ]
+    },
+    {
+      "edge": "wil→yat",
+      "ancDict": "wil",
+      "desDict": "yat",
+      "nLemmas": 28,
+      "meanAncSenses": 9,
+      "meanDesSenses": 1,
+      "drift": -8,
+      "meanGlossOverlap": 0.075,
+      "pattern": "drastic condensation",
+      "archived": {
+        "meanAncSenses": 7.9,
+        "meanDesSenses": 1.1,
+        "drift": -6.75,
+        "meanGlossOverlap": 0.15
+      },
+      "lemmaResults": [
+        {
+          "stem": "avazwabDa",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.031
+        },
+        {
+          "stem": "avi",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.069
+        },
+        {
+          "stem": "Aroha",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.099
+        },
+        {
+          "stem": "ASraya",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.056
+        },
+        {
+          "stem": "udAtta",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.072
+        },
+        {
+          "stem": "udGAta",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.083
+        },
+        {
+          "stem": "udvega",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.071
+        },
+        {
+          "stem": "upacAra",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.09
+        },
+        {
+          "stem": "upasaMhAra",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.064
+        },
+        {
+          "stem": "ErAvata",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.011
+        },
+        {
+          "stem": "ojas",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.054
+        },
+        {
+          "stem": "kalka",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.077
+        },
+        {
+          "stem": "kirAta",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.079
+        },
+        {
+          "stem": "koRa",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.106
+        },
+        {
+          "stem": "kzAra",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.086
+        },
+        {
+          "stem": "kzepa",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.08
+        },
+        {
+          "stem": "Goza",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.043
+        },
+        {
+          "stem": "calana",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.061
+        },
+        {
+          "stem": "cUqA",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.124
+        },
+        {
+          "stem": "tapasvin",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.07
+        },
+        {
+          "stem": "taruRa",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.1
+        },
+        {
+          "stem": "tilaka",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.082
+        },
+        {
+          "stem": "trika",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.158
+        },
+        {
+          "stem": "divya",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.104
+        },
+        {
+          "stem": "dIpana",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.057
+        },
+        {
+          "stem": "Dara",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.048
+        },
+        {
+          "stem": "DAtf",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.079
+        },
+        {
+          "stem": "Dvajin",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0.043
+        }
+      ]
+    },
+    {
+      "edge": "ap90→ap",
+      "ancDict": "ap90",
+      "desDict": "ap",
+      "nLemmas": 28,
+      "meanAncSenses": 10.821,
+      "meanDesSenses": 7.75,
+      "drift": -3.071,
+      "meanGlossOverlap": 0.565,
+      "pattern": "revision, no expansion",
+      "archived": {
+        "meanAncSenses": 15.5,
+        "meanDesSenses": 11,
+        "drift": -4.5,
+        "meanGlossOverlap": 0.61
+      },
+      "lemmaResults": [
+        {
+          "stem": "avazwabDa",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.798
+        },
+        {
+          "stem": "avi",
+          "ancSenses": 15,
+          "desSenses": 1,
+          "meanOverlap": 0.002
+        },
+        {
+          "stem": "Aroha",
+          "ancSenses": 10,
+          "desSenses": 10,
+          "meanOverlap": 0.913
+        },
+        {
+          "stem": "ASraya",
+          "ancSenses": 22,
+          "desSenses": 22,
+          "meanOverlap": 0.854
+        },
+        {
+          "stem": "udAtta",
+          "ancSenses": 10,
+          "desSenses": 6,
+          "meanOverlap": 0.473
+        },
+        {
+          "stem": "udGAta",
+          "ancSenses": 10,
+          "desSenses": 10,
+          "meanOverlap": 0.989
+        },
+        {
+          "stem": "udvega",
+          "ancSenses": 9,
+          "desSenses": 4,
+          "meanOverlap": 0.416
+        },
+        {
+          "stem": "upacAra",
+          "ancSenses": 17,
+          "desSenses": 18,
+          "meanOverlap": 0.888
+        },
+        {
+          "stem": "upasaMhAra",
+          "ancSenses": 11,
+          "desSenses": 12,
+          "meanOverlap": 0.831
+        },
+        {
+          "stem": "ErAvata",
+          "ancSenses": 15,
+          "desSenses": 7,
+          "meanOverlap": 0.378
+        },
+        {
+          "stem": "ojas",
+          "ancSenses": 10,
+          "desSenses": 11,
+          "meanOverlap": 0.835
+        },
+        {
+          "stem": "kalka",
+          "ancSenses": 9,
+          "desSenses": 1,
+          "meanOverlap": 0
+        },
+        {
+          "stem": "kirAta",
+          "ancSenses": 5,
+          "desSenses": 7,
+          "meanOverlap": 0.768
+        },
+        {
+          "stem": "koRa",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.836
+        },
+        {
+          "stem": "kzAra",
+          "ancSenses": 11,
+          "desSenses": 2,
+          "meanOverlap": 0.163
+        },
+        {
+          "stem": "kzepa",
+          "ancSenses": 14,
+          "desSenses": 15,
+          "meanOverlap": 0.964
+        },
+        {
+          "stem": "Goza",
+          "ancSenses": 11,
+          "desSenses": 13,
+          "meanOverlap": 0.64
+        },
+        {
+          "stem": "calana",
+          "ancSenses": 7,
+          "desSenses": 1,
+          "meanOverlap": 0.02
+        },
+        {
+          "stem": "cUqA",
+          "ancSenses": 9,
+          "desSenses": 9,
+          "meanOverlap": 0.916
+        },
+        {
+          "stem": "tapasvin",
+          "ancSenses": 8,
+          "desSenses": 7,
+          "meanOverlap": 0.801
+        },
+        {
+          "stem": "taruRa",
+          "ancSenses": 9,
+          "desSenses": 4,
+          "meanOverlap": 0.398
+        },
+        {
+          "stem": "tilaka",
+          "ancSenses": 11,
+          "desSenses": 3,
+          "meanOverlap": 0.205
+        },
+        {
+          "stem": "trika",
+          "ancSenses": 11,
+          "desSenses": 4,
+          "meanOverlap": 0.288
+        },
+        {
+          "stem": "divya",
+          "ancSenses": 16,
+          "desSenses": 4,
+          "meanOverlap": 0.187
+        },
+        {
+          "stem": "dIpana",
+          "ancSenses": 9,
+          "desSenses": 3,
+          "meanOverlap": 0.483
+        },
+        {
+          "stem": "Dara",
+          "ancSenses": 5,
+          "desSenses": 1,
+          "meanOverlap": 0
+        },
+        {
+          "stem": "DAtf",
+          "ancSenses": 10,
+          "desSenses": 12,
+          "meanOverlap": 0.854
+        },
+        {
+          "stem": "Dvajin",
+          "ancSenses": 11,
+          "desSenses": 12,
+          "meanOverlap": 0.914
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "28-noun panel reconstructed from nouns present in all 5 dicts with ≥3 WIL senses; original panel from deleted h2h3_analysis.py.",
+    "SHS/YAT senses extracted by inline '\\b\\d+\\.\\s+' split; no XML tags preserved for per-sense citation check in SHS/YAT.",
+    "Survival threshold is word-level Jaccard ≥ 0.15 (configurable).",
+    "Gloss overlap uses word-level Jaccard after removing stop-words and short tokens.",
+    "AP entries may include a 'lumped-proxy' header part; explicit sense parts are used for counting.",
+    "Archive parity is a regression signal, not an optimization target."
+  ]
+}

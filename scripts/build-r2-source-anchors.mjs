@@ -27,7 +27,7 @@ export const R2_ANCHOR_LEMMAS = [
   { lemma: "bodhisattva", lookupKeys: ["boDisattva", "boDisattvaH", "boDisattvaM", "bodhisattva"] }
 ];
 
-const R2_DICTS = [
+export const R2_DICTS = [
   { code: "mw", label: "MW 1899", parserFamily: "western", cluster: "western", split: "lumped-proxy" },
   { code: "mw72", label: "MW 1872", parserFamily: "western", cluster: "western", split: "lumped-proxy" },
   { code: "pwg", label: "PWG 1855", parserFamily: "western", cluster: "western", split: "div" },
@@ -158,14 +158,14 @@ function splitIndigenous(body) {
   return parts.length ? parts : [{ localId: "bundle", splitConfidence: "iti-unit", text: body }];
 }
 
-function splitRecord(body, dict) {
+export function splitRecord(body, dict) {
   if (dict.split === "iti-unit") return splitIndigenous(body);
   const marker = MARKERS[dict.split];
   if (dict.split === "div" && marker) return splitExplicitMarkers(body, marker, { useMarkerLabelAsLocalId: false });
   return marker ? splitExplicitMarkers(body, marker) : [{ localId: "bundle", splitConfidence: dict.split, text: body }];
 }
 
-function cleanText(text, max = 220) {
+export function cleanText(text, max = 220) {
   const cleaned = (text ?? "")
     .replace(/<[^>]+>/g, " ")
     .replace(/\{[#%@]?/g, " ")
@@ -316,7 +316,7 @@ export function indigenousAuthorityHints(body, dictCode) {
   return uniqueSorted(hints);
 }
 
-function anchorSets(text, dict, lookupKeySet) {
+export function anchorSets(text, dict, lookupKeySet) {
   const citationAnchors = extractCitationAnchors(text);
   if (dict.parserFamily === "indigenous") citationAnchors.push(...extractAuthoritySigla(text));
 
@@ -374,7 +374,7 @@ function limitationsFor(dict, part) {
   return limitations;
 }
 
-function buildNormalRows(target, dict) {
+export function buildNormalRows(target, dict) {
   const lookupKeySet = new Set(target.lookupKeys.map(normalizeAnchor));
   const rows = [];
   let sourceRecordCount = 0;
@@ -387,7 +387,7 @@ function buildNormalRows(target, dict) {
   return { rows, sourceRecordCount };
 }
 
-function buildReverseRows(target, dict) {
+export function buildReverseRows(target, dict) {
   const lookupKeySet = new Set(target.lookupKeys.map(normalizeAnchor));
   const rows = [];
   let sourceRecordCount = 0;

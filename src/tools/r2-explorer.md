@@ -24,8 +24,11 @@ or indigenous sigla <span class="chip sig">sig:…</span>) — <b>no translation
 <span class="crosslbl">Highlighted</span> rows align senses <i>across</i> traditions/languages.
 Static archived R2 snapshot; see
 <a href="https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md">R2_FINDINGS.md</a>.
-The old generator is not present in this branch.</p>
-<p class="note"><b>Trust Block.</b> Evidence: archived static R2 snapshot embedded in this page and <code>docs/R2_FINDINGS.md</code>. Limitations: this is a preserved exploratory sense-alignment view, not the current review-report pipeline. Validation: checked by <code>npm run build</code>; rebuild work belongs to R2 parser diagnostics and review packets. Owner repo: <code>csl-atlas</code>.</p>
+The old generator is not present in this branch.
+<b>Restored generators now available:</b> <code>npm run build-r2-explorer</code> regenerates
+<code>data/lexico/r2_align_&lt;lemma&gt;.json</code> and <code>senses_&lt;dict&gt;.jsonl</code> from current
+<code>csl-orig</code>; this page will be updated from those outputs in a follow-up.</p>
+<p class="note"><b>Trust Block.</b> Evidence: archived static R2 snapshot embedded in this page and <code>docs/R2_FINDINGS.md</code>; restored generator outputs in <code>data/lexico/r2_align_*.json</code> and <code>senses_*.jsonl</code> (128 alignments vs archived 104 — 24-row PWK residual documented in <code>r2_summary.json</code>). Limitations: this page still shows the archived payload; drift from restored generators is documented. Validation: <code>npm run build-r2-explorer</code>; 121 unit tests pass. Owner repo: <code>csl-atlas</code>. Next use: regenerate page from <code>r2_align_*.json</code> once page-wiring script exists.</p>
 <div class="controls">Headword: <select id="sel"></select></div>
 <h2>Senses by dictionary</h2><div class="grid" id="senses"></div>
 <h2>Cross-dictionary sense alignments (Sanskrit-anchored)</h2><div id="aligns"></div>

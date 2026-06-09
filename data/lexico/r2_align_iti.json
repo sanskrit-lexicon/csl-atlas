@@ -1,0 +1,1305 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "source-backed-r2-explorer",
+  "claim": "R2 explorer payload regenerated from current csl-orig; archive parity is a comparison signal.",
+  "lemma": "iti",
+  "lookupKeys": [
+    "iti"
+  ],
+  "counts": {
+    "senseRows": 145,
+    "alignmentRows": 30,
+    "crossAlignmentRows": 14,
+    "archivedSenseRows": 69,
+    "archivedAlignmentRows": 30
+  },
+  "senses": {
+    "mw": [
+      {
+        "sense": "bundle",
+        "text": "1. iti ¦ f. ityE/ ( dat. ) See √ i above",
+        "cluster": "western",
+        "n_anchor": 1
+      },
+      {
+        "sense": "bundle",
+        "text": "¦ (for 2. iti See s.v. )",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "bundle",
+        "text": "2. i/ti ¦ ind. ( fr. pronominal base 3. i ), in this manner, thus (in its original signification i/ti refers to something that has been said or thoug...",
+        "cluster": "western",
+        "n_anchor": 34
+      },
+      {
+        "sense": "bundle",
+        "text": "¦ ‘and so forth’ ( iti ce ti ca , ‘thus and thus’, ‘in this and that manner’), MBh.",
+        "cluster": "western",
+        "n_anchor": 4
+      }
+    ],
+    "mw72": [
+      {
+        "sense": "bundle",
+        "text": "1. iti, is, ¦ f., Ved. going, moving.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "bundle",
+        "text": "iti 2¦. iti, ind. (fr. pronominal base 3. i ), in this manner, thus. In its original signification iti refers to something that has been said or thou...",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "bundle",
+        "text": "Iti ¦ is sometimes followed by evam, iva, or a demonstrative pronoun pleonastically (e. g. tām brūyād bhavatīty evam, her he may call ‘lady,’ thus).",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "bundle",
+        "text": "Iti ¦ may form an adverbial compound with the name of an author (e. g. itipāṇini, thus according to Pāṇini). It may also express manifestation (lo! b...",
+        "cluster": "western",
+        "n_anchor": 0
+      }
+    ],
+    "pwg": [
+      {
+        "sense": "preface",
+        "text": "1. i/ti ¦ (von 2. i ) adv. euphonische Regeln in Betreff eines vorangehenden Vocals P. 1,1,16 — 18 . 6,1,129. VOP. 2,21. 22. auf diese Weise, so ; ei...",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "1",
+        "text": "1) in der ursprünglichen kräftigeren Bedeutung auf etwas Gesprochenes oder Gedachtes hinweisend: iti\\ vA iti^ me\\ mano\\ gAmaSva^M sanuyA\\miti^ ja so!...",
+        "cluster": "western",
+        "n_anchor": 74
+      },
+      {
+        "sense": "2",
+        "text": "— 2) in den BRĀHMAṆA häufig hinweisend auf einen bestimmten Gebrauch, Gebärde, Zustand u. s. w. , welche bei dem Zuhörer oder Leser als bekannt vorau...",
+        "cluster": "western",
+        "n_anchor": 30
+      },
+      {
+        "sense": "3",
+        "text": "— 3) bei Anführungen aller Art, um das Gesprochene, Gedachte, Gewusste, Beabsichtigte als Jmdes verba ipsissima, die er wirklich gesprochen oder unte...",
+        "cluster": "western",
+        "n_anchor": 80
+      },
+      {
+        "sense": "4",
+        "text": "— 4) zum Ueberfluss schliesst sich an iti bisweilen noch evam, iva oder ein demonstr. pron. an: tAM brUyAdBagavatItyevam M. 2,129. 3,88. 251. N. 15,1...",
+        "cluster": "western",
+        "n_anchor": 18
+      },
+      {
+        "sense": "5",
+        "text": "— 5) kimiti ist gleichbedeutend mit kim weshalb, woher PAÑCAT. 257,2. HIT. 27,16. ŚĀK. 177. 66,16. KUMĀRAS. 2,19. 5,44. AMAR. 56. 76. ŚṚṄGĀRAT. 5. 16...",
+        "cluster": "western",
+        "n_anchor": 2
+      },
+      {
+        "sense": "6",
+        "text": "— 6) iti kftvA aus diesem Grunde; in Betracht dessen, dass : saKeti kftvA tu saKe pfzwo vakzyAmyahaM tvayA da du mein Freund bist MBH. 1,1522. gurupu...",
+        "cluster": "western",
+        "n_anchor": 13
+      },
+      {
+        "sense": "7",
+        "text": "— 7) iti ha so viel als das einf. itiH iti ha smAha ŚĀṄKH. BR. in Ind. St. 2,309. aDyApayAmAsa pitFn SiSurANgirasaH kaviH . putrakA iti hovAca jYAnen...",
+        "cluster": "western",
+        "n_anchor": 21
+      },
+      {
+        "sense": "8",
+        "text": "— 8) iti verbindet sich mit dem Namen des Gewährsmannes zu einem adv. comp. : itipARini so nach Pāṇini P. 2,1,6 , Sch. itihari VOP. 6,61.",
+        "cluster": "western",
+        "n_anchor": 2
+      },
+      {
+        "sense": "9",
+        "text": "— 9) eine verstümmelte Form ti findet sich ŚAT. BR. 11,6,1,3. fgg. : astIha prAyaScittirastIti kAti (kA + ti für keti) pitA te vedeti ; vgl. die Prāk...",
+        "cluster": "western",
+        "n_anchor": 29
+      },
+      {
+        "sense": "bundle",
+        "text": "2. iti/ ¦ (von 3. i ) f. das Gehen, Sichbewegen : prAsA^vIddvi\\patpra catu^zpadi\\tyE ṚV. 1,124,1. im comp. s. Duneti, vAriti .",
+        "cluster": "western",
+        "n_anchor": 4
+      },
+      {
+        "sense": "preface",
+        "text": "1. iti ¦",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "1",
+        "text": "3) Beispiele, in denen iti aus metrischen Rücksichten nicht [Page5-1140] an der ihm gebührenden Stelle steht: manyante vE pApakfto na kaScitpaSyatIti...",
+        "cluster": "western",
+        "n_anchor": 27
+      },
+      {
+        "sense": "2",
+        "text": "— 7) iti hovAca rAGavam (es folgen nun die Worte) R. 7,96,14.",
+        "cluster": "western",
+        "n_anchor": 2
+      },
+      {
+        "sense": "preface",
+        "text": "2. i/ti ¦ TS. 4,7,5,2. dakziRetO gegenüber udaggatO WEBER, JYOT. 29.",
+        "cluster": "western",
+        "n_anchor": 2
+      },
+      {
+        "sense": "1",
+        "text": "— Vgl. duriti .",
+        "cluster": "western",
+        "n_anchor": 1
+      }
+    ],
+    "pw": [
+      {
+        "sense": "bundle",
+        "text": "1. i/ti ¦ Adv. so, auf Ausgesprochenes oder Gedachtes hinweisend und am Ende oder Anfange stehend. In gebundener Rede bleibt es nicht selten dem Höre...",
+        "cluster": "western",
+        "n_anchor": 20
+      },
+      {
+        "sense": "preface",
+        "text": "2. iti ¦ f.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "1",
+        "text": "— 1〉 das Gehen, Sich bewegen; oxyt. VS. , parox. TS.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "2",
+        "text": "— 2〉 das einer Sache ( Acc. ) Nachgehen ṚV. 1,113,6 ( oxyt. ).",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "bundle",
+        "text": "3. iti ¦ m. N. pr. eines Sohnes des Babhru VP.² 4,67 . v. l. Dfti .",
+        "cluster": "western",
+        "n_anchor": 1
+      },
+      {
+        "sense": "bundle",
+        "text": "1. iti ¦, iti ceti ca so und so, auf diese und jene Weise MBH. 1,38,1 .",
+        "cluster": "western",
+        "n_anchor": 2
+      },
+      {
+        "sense": "bundle",
+        "text": "1. iti ¦ I. 6. Vgl. auch Z. d. d. m. G. 41,516. fgg. KNAUER in Festgr. 62. fgg. iti — iti so v. a. man heisse (sei) — oder — JĀTAKAM. 20 .",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "bundle",
+        "text": "2. iti ¦ I. Gang VIṢṆUS. 99,2 , wenn ˚sadAsTitete „ die du stets den Gang einschlugst ( AsTita ) zu “ gelesen wird.",
+        "cluster": "western",
+        "n_anchor": 2
+      }
+    ],
+    "ap": [
+      {
+        "sense": "preface",
+        "text": "iti ¦ ind.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "1",
+        "text": "∙²1 this particle is most generally used to report the very words spoken or supposed to be spoken by some one, as represented by quotation marks in E...",
+        "cluster": "western",
+        "n_anchor": 32
+      },
+      {
+        "sense": "2",
+        "text": "∙²2 Besides this general sense iti has the following senses:− ∙³( a ) Cause, as expressed by ‘because’, ‘since’, ‘on the ground that’, in English ; v...",
+        "cluster": "western",
+        "n_anchor": 78
+      }
+    ],
+    "ap90": [
+      {
+        "sense": "preface",
+        "text": "iti ¦ ind.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "1",
+        "text": "1 This particle is most generally used to report the very words spoken or supposed to be spoken by some one, as represented by the quotation marks in...",
+        "cluster": "western",
+        "n_anchor": 30
+      },
+      {
+        "sense": "2",
+        "text": "--2 Besides this general sense iti has the following senses:-- ( a ) Cause, [Page0275-c+ 57] as expressed by ‘because’, ‘since’, ‘on the ground that’...",
+        "cluster": "western",
+        "n_anchor": 80
+      }
+    ],
+    "ben": [
+      {
+        "sense": "preface",
+        "text": "iti ¦ iti (probably a case of an original i + tya, see idam ), adv.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "1",
+        "text": "1. Thus, Man. 2, 237.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "2",
+        "text": "2. It is used in quoting words or thoughts of one's self or some other: Man. 2, 129, tāṃ brūyād bhavatīti, He may address her thus ( i. e. by the wor...",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "3",
+        "text": "3. It often follows a question without expressing a dis- tinct meaning, e. g. Hit. 53, 18.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "4",
+        "text": "4. It is used to denote the conclusion of a book or chapter, Rām. 1, end.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "5",
+        "text": "5. With preceding kim, Why, Daśak. in Chr. 197, 22.",
+        "cluster": "western",
+        "n_anchor": 0
+      }
+    ],
+    "wil": [
+      {
+        "sense": "preface",
+        "text": "iti ¦ ind. A particle implying,",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "1",
+        "text": ".²1 Cause, (thus, therefore.)",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "2",
+        "text": ".²2 Manifestation, (lo! behold!)",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "3",
+        "text": ".²3 Something additional, (et cetera.)",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "4",
+        "text": ".²4 The meanings of eva , (so thus, even, in this manner)",
+        "cluster": "western",
+        "n_anchor": 1
+      },
+      {
+        "sense": "5",
+        "text": ".²5 Conclusion, enough, (finis.)",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "6",
+        "text": ".²6 Reference, (so says, this is, &c. ) It also implies,",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "7",
+        "text": ".²7 Order, arrangement, specific or distinctive, and",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "8",
+        "text": ".²8 Identity (of this or similar form.)",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "9",
+        "text": ".²9 A grammatical copulative, indicating a preceding sound or sense, to be again intended. E. i to go, ktic aff.",
+        "cluster": "western",
+        "n_anchor": 1
+      }
+    ],
+    "cae": [
+      {
+        "sense": "bundle",
+        "text": "1 i/ti ¦ adv. thus, so. It refers to something said or thought, which it follows (rarely precedes), and is often = with these words, here endeth ( cf...",
+        "cluster": "western",
+        "n_anchor": 12
+      },
+      {
+        "sense": "bundle",
+        "text": "2 i/ti ¦ iti/ f. going, pursuing.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "bundle",
+        "text": "iti/ ¦ f. going, pursuing.",
+        "cluster": "western",
+        "n_anchor": 0
+      }
+    ],
+    "vcp": [
+      {
+        "sense": "1",
+        "text": "iti",
+        "cluster": "indigenous",
+        "n_anchor": 0
+      },
+      {
+        "sense": "2",
+        "text": "¦ avya0 iRa--ktic . 1 hetO, 2 prakASane, 3 nidarSane, 4 prakAre, 5 anukarze, 6 samAptO, 7 prakaraRe, 8 svarUpe, 9 sAnniDye, 10 vivakzAniyame, 11 mate...",
+        "cluster": "indigenous",
+        "n_anchor": 80
+      },
+      {
+        "sense": "3",
+        "text": "sma sA kArutareRa leKitam” nEza0 . prakAre “iti",
+        "cluster": "indigenous",
+        "n_anchor": 4
+      },
+      {
+        "sense": "4",
+        "text": "madamadanAByAM rAgiRaH spazwarAgAH” mAGaH prakASArTe itihari ityAdO avyayI0 idamarTe “viroDisidDamiti- karttumudyatam” prakaraRe itikftyamitikarttavy...",
+        "cluster": "indigenous",
+        "n_anchor": 13
+      },
+      {
+        "sense": "5",
+        "text": "- vfttam . BAve ktin . 20 gatO 21 jYAne ca strI “prAsAvIddvipatpra catuzpadityE” f0 1, 124, 1” . 22 fziBede pu0 .",
+        "cluster": "indigenous",
+        "n_anchor": 9
+      }
+    ],
+    "skd": [
+      {
+        "sense": "1",
+        "text": "iti",
+        "cluster": "indigenous",
+        "n_anchor": 0
+      },
+      {
+        "sense": "2",
+        "text": "¦, vya, (iR + ktic .) hetuH . (yaTA, raGuH . 2 . 22 . “vatsotsukApi stimitA saparyyAM, pratyagrahItseti nanandatustO” .) prakaraRam . (yaTA, manuH . ...",
+        "cluster": "indigenous",
+        "n_anchor": 23
+      },
+      {
+        "sense": "3",
+        "text": "rAjendurinduH kzIraniDAviva” ..) AdiH . samAptiH . ityamaraH .. nidarSanam . (“Apo nArA iti",
+        "cluster": "indigenous",
+        "n_anchor": 7
+      },
+      {
+        "sense": "4",
+        "text": "proktA Apo vE narasUnavaH” . iti",
+        "cluster": "indigenous",
+        "n_anchor": 2
+      },
+      {
+        "sense": "5",
+        "text": "manuH . 1 . 10 .) prakAraH . anukarzaH . para- kftiH . iti",
+        "cluster": "indigenous",
+        "n_anchor": 5
+      },
+      {
+        "sense": "6",
+        "text": "medinI .. (vivakzAniyamaH . pratyakzaM . avaDAraRaM . parAmarSaH . mAnam . itTamarTaH . evArTaH . “guRAnityeva tAn vidDi” . iti",
+        "cluster": "indigenous",
+        "n_anchor": 10
+      },
+      {
+        "sense": "7",
+        "text": "rAmAyaRe . 1 ma kARqe .)",
+        "cluster": "indigenous",
+        "n_anchor": 2
+      }
+    ],
+    "ae": [
+      {
+        "sense": "equiv",
+        "text": "Accuse ¦,Ⓒ v. t. Ⓓ aBiyuj 7 A , 10, apavad 1 A , aBiSaMs 1 P , aDikzip 6 P , duz c. nArhasi kAmAparADErdevaM dUzayituM ( Ka. 235 ); GAtakaH ayaM iti ...",
+        "cluster": "reverse",
+        "n_anchor": 19
+      },
+      {
+        "sense": "equiv",
+        "text": "Alias ¦,Ⓒ adv. Ⓓ anyaTA ( aBihita a. ); ex. by iti aparanAmaDeya a.",
+        "cluster": "reverse",
+        "n_anchor": 4
+      },
+      {
+        "sense": "equiv",
+        "text": "Answer ¦,Ⓒ v. i. Ⓓ uttaraM dA 3 U or pratipad 4 A , prativac 2 P , pratiBAz 1 A ; ‘he a(nswer)ed in the affirmative’ bAQaM-taTA-iti sa pratyuvAca . Ⓑ...",
+        "cluster": "reverse",
+        "n_anchor": 40
+      },
+      {
+        "sense": "equiv",
+        "text": "As ¦,Ⓒ conj. , adv. Ⓓ Ex. by vat, iva ; mAtfvat-mAtaramiva-paradArAn paSya . Ⓑ 2 yaTA, yadvat, anurUpaM-peRa ; yaTA in comp. ( yaToktaM kaTaya ); ‘as...",
+        "cluster": "reverse",
+        "n_anchor": 73
+      },
+      {
+        "sense": "equiv",
+        "text": "Ascribe ¦,Ⓒ v. t. Ⓓ nikzip 6 P , aDyA-A-ruh c. , ( ropayati ), kAraRatvena saMbaMD 9 P ; ‘a(scribe) the defeat to my weakness’ mama dOrbalyAt parAjay...",
+        "cluster": "reverse",
+        "n_anchor": 30
+      },
+      {
+        "sense": "equiv",
+        "text": "Assume ¦,Ⓒ v. t. Ⓓ grah 9 P , Df 10, AdA 3 A . Ⓑ 2 Arrogate , q. v. Ⓑ 3 grah, sidDa a. man 4 A ; pramARaM vinA vad 1 P ; ‘a(ssum)ing to be true’ tats...",
+        "cluster": "reverse",
+        "n_anchor": 25
+      },
+      {
+        "sense": "equiv",
+        "text": "Assure ¦,Ⓒ v. t. Ⓓ prati-i c. , pratItiM kf 8 U , viSvas c. Ⓑ 2 dfQIkf, saMstaMB 9 P or c. , suniScita a. kf . (Oneself) prati-i 2 P ; viSvas 2 P , n...",
+        "cluster": "reverse",
+        "n_anchor": 33
+      },
+      {
+        "sense": "equiv",
+        "text": "Bargain ¦,Ⓒ s. Ⓓ saMvid f. , samayaH, aByupagamaH , ‘a b(argain) was struck’ iti samayaH kftaH ; ‘buy the horse, it is a good b(argain)’ stokamUlyena...",
+        "cluster": "reverse",
+        "n_anchor": 16
+      },
+      {
+        "sense": "equiv",
+        "text": "Because ¦,Ⓒ conj. Ⓓ iti, hi (not at the beginning of a statement); yataH, yat ; more oft. ex. by kutaH, kasmAt with abl. ; by abl. or instr. ; ‘b(eca...",
+        "cluster": "reverse",
+        "n_anchor": 12
+      },
+      {
+        "sense": "equiv",
+        "text": "Believe ¦,Ⓒ v. t. Ⓓ viSvas 2 P , (with loc. ). SradDA 3 U (with loc. of person and acc. of thing); prati-i 2 P , (with acc. ). Ⓑ 2 saMBU c. , tark 10...",
+        "cluster": "reverse",
+        "n_anchor": 22
+      },
+      {
+        "sense": "equiv",
+        "text": "Bold ¦,Ⓒ a. Ⓓ SUra, sAhasika ( kI f. ), sAhasapara , Ⓑ 2 (Of things) sAhasABAsa, sAhasaM , ( iti vacanaM sAhasamAtraM S. B. 79 ). Ⓑ 3 (Rude) Dfzwa, n...",
+        "cluster": "reverse",
+        "n_anchor": 30
+      },
+      {
+        "sense": "equiv",
+        "text": "Capacity ¦,Ⓒ s. Ⓓ DAraRaSakti f. , grahaRasAmarTyaM ( lit. &c. fig. ); ‘c(apacity) for all knowledge’ aSezavidyAgrahaRasAmarTyaM . Ⓑ 2 balaM, Sakti f...",
+        "cluster": "reverse",
+        "n_anchor": 21
+      },
+      {
+        "sense": "equiv",
+        "text": "Care ¦,Ⓒ s. Ⓓ ciMtA, OtsukyaM, udvegaH ; See Anxiety . Ⓑ 2 yatnaH, prayatnaH, AdaraH, manoyogaH ; ‘brought up with c(are)’ prayatnasaMvarDitaH, sAdar...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Caution ¦,Ⓒ s. Ⓓ dakzatA, sAvaDAnatA, apramAdaH, samIkzA, avekzA, avaDAnaM . Ⓑ 2 prAtiBAvyaM, ADiH . Ⓑ 3 pratyAdeSanaM, prAk sUcanA or upadeSaH, prAk...",
+        "cluster": "reverse",
+        "n_anchor": 32
+      },
+      {
+        "sense": "equiv",
+        "text": "Certain ¦,Ⓒ a. Ⓓ Ex. by cit-cana and api with forms of kiM . Ⓑ 2 niScita, Druva, asaMdigDa, asaMSaya, niHsaMSaya ; avaSya, niyata ; ‘I feel c(ertain)...",
+        "cluster": "reverse",
+        "n_anchor": 40
+      },
+      {
+        "sense": "equiv",
+        "text": "Claim ¦,Ⓒ v. t. Ⓓ svIya-AtmIya- a. iti pratipad c. or yAc 1 A or brU 2 U or vac 2 P ; ‘he c(laim)s that property’ tadDanaM madIyamiti sa BAzate or pr...",
+        "cluster": "reverse",
+        "n_anchor": 33
+      },
+      {
+        "sense": "equiv",
+        "text": "Conform ¦,Ⓒ v. i. Ⓓ(to) anuvft 1 A , anusf 1 P , anuruD 4 A , pramARIkf 8 U , ( iti sujanacaritaM pramARIkuru M. 3 ), anuviDA 3 U . Ⓑ 2 yuj pass. , s...",
+        "cluster": "reverse",
+        "n_anchor": 41
+      },
+      {
+        "sense": "equiv",
+        "text": "Consequence ¦,Ⓒ s. Ⓓ PalaM, pariRAmaH, udarkaH, uttaraM, uttaraPalaM . Ⓑ 2 gOrava, mahiman m. , gurutA, pratizWA, praBAvaH ; ‘of no c(onsequence)’ ni...",
+        "cluster": "reverse",
+        "n_anchor": 44
+      },
+      {
+        "sense": "equiv",
+        "text": "Convince ¦,Ⓒ v. t. Ⓓ prati-i c. , pratItiM kf 8 U , urIkartuM AnI 1 P , aBijYA c. ( jYApayati ); ‘he was c(onvinc)ed of his mistake’ svaBramamuddiSya...",
+        "cluster": "reverse",
+        "n_anchor": 41
+      },
+      {
+        "sense": "equiv",
+        "text": "Current ¦,Ⓒ a. Ⓓ pracalita, pracala, sarvasaMmata ; ‘languages c(urrent) in India’ BarataKaMqe pracalitA BAzAH . Ⓑ 2 vartamAna, vidyamAna ; ‘c(urrent...",
+        "cluster": "reverse",
+        "n_anchor": 39
+      },
+      {
+        "sense": "equiv",
+        "text": "Ditto ¦,Ⓒ adv. Ⓓ taTA ; ‘says d(itto)’ taTEva mamABi-prAya iti vadati . Ⓔ a. Ⓓ pUrvokta, prAg liKita, prAgukta .",
+        "cluster": "reverse",
+        "n_anchor": 10
+      },
+      {
+        "sense": "equiv",
+        "text": "Effect ¦,Ⓒ s. Ⓓ kAryaM, nEmittikaM ; utpannaM, nizpannaM, sidDi f. Ⓑ 2 PalaM, pariRAmaH ; PalodayaH, uttara-PalaM, aMtaH . Ⓑ 3 arTaH, prayojanaM, guR...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Encore ¦,Ⓒ v. t. Ⓓ praSaMsAsUcanArTaM punaH iti utkruS 1 P , punaruktatAM prArT 10 A .",
+        "cluster": "reverse",
+        "n_anchor": 6
+      },
+      {
+        "sense": "equiv",
+        "text": "Except ¦,Ⓒ v. t. Ⓓ vfj 10, parivfj, apa-vi-hA 3 P , tyaj 1 P , apAs 4 U , muc 6 P . Ⓑ 2 vyAvft c. (a rule &c. ), saMkuc 1 P or c. prep. Ⓝ [Except]ing...",
+        "cluster": "reverse",
+        "n_anchor": 68
+      },
+      {
+        "sense": "equiv",
+        "text": "Execute ¦,Ⓒ v. t. Ⓓ anuzWA 1 P , saM-niH-pad c. , kf 8 U , vi-DA 3 U , A-car 1 P , nirvah c. , sAD 5 P or c. , nirvft c. ; ‘e(xecute) thy business’ s...",
+        "cluster": "reverse",
+        "n_anchor": 59
+      },
+      {
+        "sense": "equiv",
+        "text": "Expose ¦,Ⓒ v. t. Ⓓ( lit. ) ucCad 10, upA-vf 5 U , vivastrIkf 8 U , prakAS c. , pradfS c. Ⓑ 2 vya-ktIkf, pratyakzIkf, Avizkf, satyasvarUpaM Avizkf ; [...",
+        "cluster": "reverse",
+        "n_anchor": 56
+      },
+      {
+        "sense": "equiv",
+        "text": "Far ¦,Ⓒ a. Ⓓ dUra (with abl. or gen. ), viprakfzwa ; See Distant ; ‘f(ar) from comfort’ suKAdapeta . Ⓔ adv. Ⓓ dUraM-re ArAt (with abl. ), vidUrataH, ...",
+        "cluster": "reverse",
+        "n_anchor": 53
+      },
+      {
+        "sense": "equiv",
+        "text": "Follow ¦,Ⓒ v. t. Ⓓ anu-gam-vraj-sf 1 P , anubaMD 9 P , anu-i-yA 2 P , anucar 1 P , anukram 1 U , 4 P . Ⓑ 3 sev 1 A , anuzWA 1 P , AsTA 1 A ; anuvft 1...",
+        "cluster": "reverse",
+        "n_anchor": 79
+      },
+      {
+        "sense": "equiv",
+        "text": "For ¦,Ⓒ prep. Ⓓ(On account of) ex. by instr. or abl. ; arTe-rTaM, hetunA, hetoH, kfte, kAraRAt, nimittAt, nimittaM , in comp. ; ‘for his deliverance’...",
+        "cluster": "reverse",
+        "n_anchor": 72
+      },
+      {
+        "sense": "equiv",
+        "text": "Forbid ¦,Ⓒ v. t. Ⓓ prati-ni-ziD 1 P or c. , pratyAKyA 2 P , pratyAdiS 6 P , nirA-apA-kf 8 U . Ⓑ 2 niruD 7 U , ni-vf c. or vAr 10; ‘God f(orbid)’ SAMt...",
+        "cluster": "reverse",
+        "n_anchor": 25
+      },
+      {
+        "sense": "equiv",
+        "text": "Force ¦,Ⓒ s. Ⓓ balaM, Sakti f. , sAmarTyaM ( fig. also); ‘the f(orce) of this word’ asya Sabdasya SaktiH &c. Ⓑ 2 praBAvaH ; vIryaM, SOryaM, vi-parA-k...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Give ¦,Ⓒ v. t. Ⓓ dA 1 P , 3 U , f c. ( arpayati ), pratipad c. , dad 1 A , viSraR 10, ut-vi-sfj 6 P , (with dat. of person); nikzip 6 P , saMkram c. ...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Go ¦,Ⓒ v. i. Ⓓ gam 1 P , yA-i 2 P , vraj 1 P , cal-car 1 P , pad 4 A , f 1, 3 P ; sf 1, 1 P ; kram 1 U , 4 P ; (as water) vah 1 P , sru 1 P , syaMd 1...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Hear ¦,Ⓒ v. t. Ⓓ Sru 5 P , samA-A-kaR 10, niSam 4 P or c. ( SAmayati ); ‘h(ear) cases’ vyavahArAn dfS 1 P , kAryARi avekz 1 A or vicar c. or anusaM-D...",
+        "cluster": "reverse",
+        "n_anchor": 44
+      },
+      {
+        "sense": "equiv",
+        "text": "Humble ¦,Ⓒ a. Ⓓ nIca, apakfzwa, aDama . Ⓑ 2 kzudra, alpamati . Ⓑ 3 (In good sense) namra, vinIta, niraBimAna, vinata, savinaya, nirahaMkAra , anudDat...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Idea ¦,Ⓒ s. Ⓓ mati f. , budDi f. Ⓑ 2 mataM, aBiprAyaH, ASayaH, manogataM, BAvaH . Ⓑ 3 kalpaH, saMkalpaH, kalpanA, BAvanA, vAsanA, boDaH ; ‘with the i...",
+        "cluster": "reverse",
+        "n_anchor": 34
+      },
+      {
+        "sense": "equiv",
+        "text": "Identical ¦,Ⓒ a. Ⓓ tad ( pron. a. ) with eva, ananya, ananyarUpa, nirviSeza, aBinna, avyati-rikta, aBinnarUpa, sama, samAna, nirastaBeda , Atman-rUpa...",
+        "cluster": "reverse",
+        "n_anchor": 58
+      },
+      {
+        "sense": "equiv",
+        "text": "Insist ¦,Ⓒ v. i. Ⓓ grahaM na muc 6 P , nirbaMDena vad 1 P or kaT 10, atinirbaMDena avasTA 1 A or avalaMb 1 A , dfQoktyA vad or sUc 10; ‘I i(nsist)ed ...",
+        "cluster": "reverse",
+        "n_anchor": 19
+      },
+      {
+        "sense": "equiv",
+        "text": "Instead (of)¦,Ⓒ prep. , adv. Ⓓ(Before nouns) ex. by sTAne, sTale, BUmO, vini-mayena , in comp. ; ‘i(nstead) of my brother’ BrAtfsTAne ; tilavinimayen...",
+        "cluster": "reverse",
+        "n_anchor": 17
+      },
+      {
+        "sense": "equiv",
+        "text": "Just ¦,Ⓒ a. Ⓓ(Of persons) nyAyavartin, nyAyin, nyAyaSIla-para, sADuvftti, fju, vimalAtman, nizkapawa, nirvyAja, Suci, nyAyaparAyaRa, Darmika-sAttvika...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Lest ¦,Ⓒ conj. Ⓓ nocet, anyaTA ; ‘love not sleep l(est) thou come to want’ taMdrAsakto mA Bava nocet akiMcano Bavizyasi ; sometimes ex. by na iti or ...",
+        "cluster": "reverse",
+        "n_anchor": 25
+      },
+      {
+        "sense": "equiv",
+        "text": "Like ¦,Ⓒ a. Ⓓ sadfSa ( SI f. ), tulya, sama ; samAna, sanniBa, anukArin (with gen. or instr. ); oft. by upama, niBa, rUpa, viDa, pratima, saMkASa, nI...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Notion ¦,Ⓒ s. Ⓓ mati f. , budDi f. , boDaH, manogataM, mataM, kalpanA, BAvaH, aBiprAyaH, BAvanA , ASayaH, vAsanA ; ‘under the n(otion) that’ iti budD...",
+        "cluster": "reverse",
+        "n_anchor": 19
+      },
+      {
+        "sense": "equiv",
+        "text": "Object ¦,Ⓒ s. Ⓓ dravyaM, vastu n. , arTaH, vizayaH, iMdri-yArTaH ; ‘visible o(bject)’ cakzurvizayaH ; ( fig. ) pAtraM, padaM, sTAnaM, AspadaM, BAjana...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Occur ¦,Ⓒ v. i. Ⓓ vft 1 A , vid 4 A ; jan 4 A , utpad 4 A , saM-BU 1 P . Ⓑ 2 upasTA 1 U , Agam 1 P , upa-nam 1 P ; See Befall . Ⓑ 3 saM-, vft, samA-p...",
+        "cluster": "reverse",
+        "n_anchor": 53
+      },
+      {
+        "sense": "equiv",
+        "text": "Opine ¦,Ⓒ v. i. Ⓓ man 4 A , tark 10; See Think . Ⓝ Opinion ,Ⓒ s. Ⓓ mataM, mati f. , tarkaH, budDi f. , boDaH, aBiprAyaH, ASayaH ; ‘such is my o(pinio...",
+        "cluster": "reverse",
+        "n_anchor": 27
+      },
+      {
+        "sense": "equiv",
+        "text": "Own ¦,Ⓒ a. Ⓓ svIya, svakIya, AtmIya, svaka, nija, AtmaBUta ; sva, Atman in gen. or in comp. ; ‘my o(wn)’ madIya- so tvadIya, tadIya, yuzma-dIya, asma...",
+        "cluster": "reverse",
+        "n_anchor": 56
+      },
+      {
+        "sense": "equiv",
+        "text": "Pass ¦,Ⓒ v. t. Ⓓ ati-vyati-i 2 P , atikram 1 U , 4 P ; ‘they two p(ass)ed each other’ parasparamatItya-ullaMGyatO nirgatO ; tF 1 P , saM-ut-niH-°, ut...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Persuade ¦,Ⓒ v. t. Ⓓ anu-nI 1 P , prabuD c. , anu-SAs 2 P , pra-vft c. , niyuj 10, protsah c. , Akfz 1 P ; ‘ oft. by causal of roots’. Ⓑ 2 prati-i c....",
+        "cluster": "reverse",
+        "n_anchor": 63
+      },
+      {
+        "sense": "equiv",
+        "text": "Positive ¦,Ⓒ a. Ⓓ spazwa, asaMdigDa, agUQa, pratyakza, vyakta, avakra, parisPuwa, sAkzAt ind. ; ‘reply in the p(ositive)’ Bavatu-bAQaM-taTA-iti vad 1...",
+        "cluster": "reverse",
+        "n_anchor": 74
+      },
+      {
+        "sense": "equiv",
+        "text": "Protest ¦,Ⓒ v. i. Ⓓ vfQaM-dfQokti pUrvaM-vad 1 P or AKyA 2 P ; ‘p(rotest) against’ dfQaM virudDaM vad, dfQaM-dfQoktipUrvaM ni-prati-ziD 1 P , dfQaM a...",
+        "cluster": "reverse",
+        "n_anchor": 34
+      },
+      {
+        "sense": "equiv",
+        "text": "Question ¦,Ⓒ s. Ⓓ praSnaH, anuyogaH, pfcCA ; ‘put a question to’ pracC 6 P , anuyuj 7 A ; ‘you have put me a good q(uestion)’ samyak pfzwosmi BavatA ...",
+        "cluster": "reverse",
+        "n_anchor": 69
+      },
+      {
+        "sense": "equiv",
+        "text": "Read ¦,Ⓒ v. Ⓓ paW 1 P , vac c. ; aDi-i 2 A , aDi-gam 1 P ; ‘r(ead) out’ nirvac c. , Sru c. ; ‘r(ead) to oneself’ anuvac c. ; ‘r(ead) through’ aSezata...",
+        "cluster": "reverse",
+        "n_anchor": 44
+      },
+      {
+        "sense": "equiv",
+        "text": "Recommend ¦,Ⓒ v. t. Ⓓ SlAG 1 A , praSas 1 P ; See Praise . Ⓑ 2 nikzip 6 P , saM-, f c. ( arpayati ); See Entrust ; stutipUrvakaM ni-kzip or upanyas 4...",
+        "cluster": "reverse",
+        "n_anchor": 53
+      },
+      {
+        "sense": "equiv",
+        "text": "Report ¦,Ⓒ v. t. Ⓓ A-ni-vid c. , AKyA 2 P or c. ( KyApayati ), vijYA c. ( jYApayati ), buD c. , ( vfttAMtaM liK ) 6 P , Sru c. ; ‘he is r(eport)ed to...",
+        "cluster": "reverse",
+        "n_anchor": 42
+      },
+      {
+        "sense": "equiv",
+        "text": "Require ¦,Ⓒ v. t. Ⓓ prArT 10 A , pracC 6 P , yAc 1 A . Ⓑ 2 (Need) vi-, apekz 1 A , AkAMkz 1 P ; oft. ex. by upayogaH, prayojanaM, kAryaM , with instr...",
+        "cluster": "reverse",
+        "n_anchor": 37
+      },
+      {
+        "sense": "equiv",
+        "text": "Rumour ¦,Ⓒ s. Ⓓ janapravAdaH, kiMvadaMtI, pravAdaH, janaSruti f. , lokavAdaH-vArtA ; See Report . Ⓔ v. t. Ⓓ Ex. by ( s. ); ‘it is r(umour)ed’ iti kiM...",
+        "cluster": "reverse",
+        "n_anchor": 9
+      },
+      {
+        "sense": "equiv",
+        "text": "Sanguine ¦,Ⓒ a. Ⓓ gAQa, utkawa ; See Intense ; caMqa, tIkzRa, caMqa-tIkzRa-svaBAva . Ⓑ 2 (Of persons) ASAvat, supratyASin, atyA-SAnvita, dfQapratyaya...",
+        "cluster": "reverse",
+        "n_anchor": 19
+      },
+      {
+        "sense": "equiv",
+        "text": "Say ¦,Ⓒ v. t. Ⓓ vad-gad-BaR 1 P , vac 2 P , brU 2 U , BAz 1 A , udA-vyA-hf 1 P ; uccar c. , udIr c. , Alap 1 P (words &c. ); maMtr 10 A ; (tell) kaT ...",
+        "cluster": "reverse",
+        "n_anchor": 45
+      },
+      {
+        "sense": "equiv",
+        "text": "Seem ¦,Ⓒ v. i. Ⓓ BA 2 P , A-prati-°, dfS-lakz pass. , ABAs 1 A ; See Appear ; ‘it s(eem)s to me’ manye, SaMke, iti me matiH . Ⓝ [Seem]ing ,Ⓒ a. Ⓓ bAh...",
+        "cluster": "reverse",
+        "n_anchor": 29
+      },
+      {
+        "sense": "equiv",
+        "text": "Sentence ¦,Ⓒ s. Ⓓ nirRayaH, daMqAjYA, daMqAdeSaH, ADarzaRaM ; ‘s(entence) of death’ prARadaMqAjYA . Ⓑ 2 vicAraH, niScayaH, nirRayaH, saMkalpaH . Ⓑ 3 ...",
+        "cluster": "reverse",
+        "n_anchor": 30
+      },
+      {
+        "sense": "equiv",
+        "text": "Shake ¦,Ⓒ v. i. Ⓓ pra-, kaMp-vep- 1 A , vi-pra-cal 1 P , vell 1 P , saM-pra-kzuB 4 P , 1 A ; ( fig. ) aBiBU-bAD- pass. Ⓔ v. t. Ⓓ kaMp c. , DU 5, 9 U ...",
+        "cluster": "reverse",
+        "n_anchor": 51
+      },
+      {
+        "sense": "equiv",
+        "text": "Should ¦,Ⓐ Ex. by pot. pass. part. ‘I s(hould) think so’ ahaM tAvadevaM manye, iti mama matiH .",
+        "cluster": "reverse",
+        "n_anchor": 6
+      },
+      {
+        "sense": "equiv",
+        "text": "So ¦,Ⓒ adv. Ⓓ taTA, evaM, tadvat, evaMviDaM ; iti, itTaM . Ⓑ 2 Idfk, etAvat, iyat, taTA, etAdfSaM . Ⓑ 3 tat, tena, tasmAt, tataH ‘as-s(o)’ yaTA-taTA ...",
+        "cluster": "reverse",
+        "n_anchor": 47
+      },
+      {
+        "sense": "equiv",
+        "text": "Sorrow ¦,Ⓒ s. Ⓓ SokaH, Suc f. , duHKaM, KedaH, kleSaH, ADiH, saMtApaH, Arti f. , vyaTA ; See Grief . Ⓔ v. i. Ⓓ Suc 1 P , Kid pass. , vyaT 1 A ; See G...",
+        "cluster": "reverse",
+        "n_anchor": 60
+      },
+      {
+        "sense": "equiv",
+        "text": "Suffice ¦,Ⓒ v. i. Ⓓ kxp 1 A (with dat. ). paryApta a. BU 1 P ; See below; ‘s(uffice) it to say’ iti kaTanaM paryAptaM Bavet . Ⓝ Sufficient ,Ⓒ a. Ⓓ pa...",
+        "cluster": "reverse",
+        "n_anchor": 33
+      },
+      {
+        "sense": "equiv",
+        "text": "Suggest ¦,Ⓒ v. t. Ⓓ sUc 10, upanyas 4 U , upa-kzip 6 P , uddiS 6 P , prastu c. , samupasTA c. ( sTApayati ); vyaMj c. Ⓑ 2 upadiS, prabuD c. , maMtr 1...",
+        "cluster": "reverse",
+        "n_anchor": 33
+      },
+      {
+        "sense": "equiv",
+        "text": "Thank ¦,Ⓒ v. t. Ⓓ upakfta-anugrahIta . Ⓔ a. Ⓓ asmi iti vad 1 P , (‘Say’, q. v. ); kftajYatAM dfS c. or Avizkf 8 U , kftopakAraM stu 2 U or praSaMs 1 ...",
+        "cluster": "reverse",
+        "n_anchor": 33
+      },
+      {
+        "sense": "equiv",
+        "text": "That ¦,Ⓒ s. Ⓓ tad ( saH-sA-tat ). Ⓑ 2 yat ( yaH-yA-yat ), oft. by comp. ; ‘he t(hat) has strength’ sabala, balin &c. Ⓔ conj. Ⓓ iti (after assertions)...",
+        "cluster": "reverse",
+        "n_anchor": 14
+      },
+      {
+        "sense": "equiv",
+        "text": "There ¦,Ⓒ adv. Ⓓ tatra, tasminsTAne, tatsTale . Ⓑ 2 (Expletive) by asti . Ⓔ interj. Ⓓ paSya, paSya ; ‘here and t(here)’ itastataH ; ‘t(here)about’ (‘...",
+        "cluster": "reverse",
+        "n_anchor": 39
+      },
+      {
+        "sense": "equiv",
+        "text": "Think ¦,Ⓒ v. Ⓓ ciMt 10, DyE 1 P , vimfS 6 P , A-paryA-loc 10, vi-, tark 10, vi-car c. , manasA kxp c. , saM-, BU c. Ⓑ 2 man 4 A , gaR 10; See Conside...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Thus ¦,Ⓒ adv. Ⓓ evaM, itTaM, iti, anena prakAreRa, anayA rItyA .",
+        "cluster": "reverse",
+        "n_anchor": 7
+      },
+      {
+        "sense": "equiv",
+        "text": "Tradition ¦,Ⓒ s. Ⓓ saMpradAyaH, AmnAyaH . Ⓑ 2 EtihyaM, lokakaTA, pAraMparIyakaTA, pAraMparyaM ; ‘there runs a t(radition) to this effect’ iti EtihyaM...",
+        "cluster": "reverse",
+        "n_anchor": 23
+      },
+      {
+        "sense": "equiv",
+        "text": "Use ¦,Ⓒ v. t. Ⓓ pra- up-yuj->upa-yuj||20161220||| 7 A , 10, vyava-hf c. , vyApf c. , upa-, Buj 7 U , sev 1 A ; Df 10 (clothes &c. ). Ⓑ 2 pra-yuj ; ‘i...",
+        "cluster": "reverse",
+        "n_anchor": 80
+      },
+      {
+        "sense": "equiv",
+        "text": "Venture ¦,Ⓒ s. Ⓓ sAhasaM, sAhasakriyA . Ⓑ 2 saMkawa, saMSayaH ; See Danger . Ⓔ v. i. Ⓓ saMSaye nikzip 6 P . Ⓑ 2 utsah 1 A , sAhasaM kf 8 U , Dfz 5 P ...",
+        "cluster": "reverse",
+        "n_anchor": 23
+      },
+      {
+        "sense": "equiv",
+        "text": "Vest ¦,Ⓒ s. Ⓓ vastraM, veSaH-zaH, vasanaM . Ⓔ v. t. Ⓓ vez c. , pari-DA c. ; See Dress . Ⓝ [Vest]ed ,Ⓒ a. Ⓓ(in) vyavasTita ; ‘are warlike qualities v(...",
+        "cluster": "reverse",
+        "n_anchor": 18
+      }
+    ]
+  },
+  "alignments": [
+    {
+      "a": "ap#2",
+      "b": "ap90#2",
+      "j": 0.504,
+      "shared": [
+        "ls:Hem",
+        "ls:K. 320",
+        "ls:K. P. 2",
+        "ls:Ki. 11. 80",
+        "ls:M. 1. 2",
+        "ls:Malli",
+        "ls:P. III. 3. 172",
+        "ls:R. 1. 37",
+        "ls:R. 13. 1",
+        "ls:T. S",
+        "ls:Ś. 3",
+        "s:Adi",
+        "s:BUditi",
+        "s:Bavet",
+        "s:SIGramiti",
+        "s:Saki",
+        "s:SakyArTe",
+        "s:SarIrasya",
+        "s:SrImAnityAdO",
+        "s:SuklaScalo",
+        "s:aDyApaka",
+        "s:aTa",
+        "s:ca",
+        "s:digAtmA"
+      ],
+      "cross": false
+    },
+    {
+      "a": "ap#1",
+      "b": "ap90#1",
+      "j": 0.473,
+      "shared": [
+        "ls:Bg. 6. 2",
+        "ls:K. 151",
+        "ls:Ms. 10. 34",
+        "ls:R. 1. 12",
+        "ls:R. 14. 40",
+        "s:SabdasvarUpadyotaka",
+        "s:akzamAlAmupayAcitumAgatosmIti",
+        "s:ata",
+        "s:avEmi",
+        "s:cEnAmanaGeti",
+        "s:cayastvizAmityavaDAritaM",
+        "s:dilIpa",
+        "s:eva",
+        "s:gavityAha",
+        "s:ityaboDi",
+        "s:jYAsyasi",
+        "s:kEvartamiti",
+        "s:me",
+        "s:nArada",
+        "s:prAhuH",
+        "s:prAtipadikArTadyotaka",
+        "s:purA",
+        "s:rakzati",
+        "s:saH"
+      ],
+      "cross": false
+    },
+    {
+      "a": "pw#bundle",
+      "b": "cae#bundle",
+      "j": 0.333,
+      "shared": [
+        "s:ha",
+        "s:itIti",
+        "s:itIva",
+        "s:ityeva",
+        "s:ityevam",
+        "s:ityuta",
+        "s:kftvA",
+        "s:kim",
+        "s:kimiti",
+        "s:sma"
+      ],
+      "cross": false
+    },
+    {
+      "a": "pwg#bundle",
+      "b": "vcp#5",
+      "j": 0.154,
+      "shared": [
+        "s:catuzpadityE",
+        "s:prAsAvIddvipatpra"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pwg#4",
+      "b": "pw#bundle",
+      "j": 0.115,
+      "shared": [
+        "s:itIva",
+        "s:itIyaM",
+        "s:ityezA",
+        "s:karoti",
+        "s:sfzwirAditaH",
+        "s:taTA",
+        "s:vEdikI"
+      ],
+      "cross": false
+    },
+    {
+      "a": "mw#bundle",
+      "b": "ben#2",
+      "j": 0.111,
+      "shared": [
+        "ls:MBh"
+      ],
+      "cross": false
+    },
+    {
+      "a": "pwg#5",
+      "b": "cae#bundle",
+      "j": 0.08,
+      "shared": [
+        "s:kim",
+        "s:kimiti"
+      ],
+      "cross": false
+    },
+    {
+      "a": "pwg#4",
+      "b": "skd#2",
+      "j": 0.068,
+      "shared": [
+        "s:SrutiH",
+        "s:itIyaM",
+        "s:taTA",
+        "s:vEdikI"
+      ],
+      "cross": true
+    },
+    {
+      "a": "mw#bundle",
+      "b": "pw#bundle",
+      "j": 0.067,
+      "shared": [
+        "s:karoti",
+        "s:kftvA",
+        "s:kim",
+        "s:taTA"
+      ],
+      "cross": false
+    },
+    {
+      "a": "ap#1",
+      "b": "vcp#2",
+      "j": 0.066,
+      "shared": [
+        "s:cayastvizAmityavaDAritaM",
+        "s:gavityAha",
+        "s:ityaboDi",
+        "s:kUjantaM",
+        "s:maDuraM",
+        "s:nArada",
+        "s:purA",
+        "s:rAmarAmeti"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pw#bundle",
+      "b": "skd#2",
+      "j": 0.063,
+      "shared": [
+        "s:itIyaM",
+        "s:taTA",
+        "s:vEdikI"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pwg#9",
+      "b": "vcp#2",
+      "j": 0.061,
+      "shared": [
+        "s:hetO",
+        "s:mate",
+        "s:nidarSane",
+        "s:prakASane",
+        "s:prakAre",
+        "s:prakaraRe",
+        "s:samAptO"
+      ],
+      "cross": true
+    },
+    {
+      "a": "ap90#1",
+      "b": "vcp#2",
+      "j": 0.059,
+      "shared": [
+        "s:cayastvizAmityavaDAritaM",
+        "s:gavityAha",
+        "s:ityaboDi",
+        "s:kramAdamuM",
+        "s:nArada",
+        "s:purA",
+        "s:rAmeti"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pwg#8",
+      "b": "vcp#4",
+      "j": 0.059,
+      "shared": [
+        "s:itihari"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pwg#9",
+      "b": "ap#2",
+      "j": 0.059,
+      "shared": [
+        "s:ca",
+        "s:evamarTe",
+        "s:hetO",
+        "s:mate",
+        "s:samAptO",
+        "s:svarUpe",
+        "s:vivakzAniyame"
+      ],
+      "cross": false
+    },
+    {
+      "a": "pwg#9",
+      "b": "ap90#2",
+      "j": 0.057,
+      "shared": [
+        "s:ca",
+        "s:evamarTe",
+        "s:hetO",
+        "s:mate",
+        "s:samAptO",
+        "s:svarUpe",
+        "s:vivakzAniyame"
+      ],
+      "cross": false
+    },
+    {
+      "a": "mw#bundle",
+      "b": "pwg#4",
+      "j": 0.056,
+      "shared": [
+        "s:evam",
+        "s:iva",
+        "s:karoti",
+        "s:taTA"
+      ],
+      "cross": false
+    },
+    {
+      "a": "ap90#2",
+      "b": "ae#equiv",
+      "j": 0.05,
+      "shared": [
+        "s:SIGramiti",
+        "s:ca",
+        "s:ciMtanIyaM",
+        "s:mAtra",
+        "s:niBftamiti",
+        "s:piteti",
+        "s:sa",
+        "s:sukaraM"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pwg#5",
+      "b": "pw#bundle",
+      "j": 0.049,
+      "shared": [
+        "s:kim",
+        "s:kimiti"
+      ],
+      "cross": false
+    },
+    {
+      "a": "wil#9",
+      "b": "skd#2",
+      "j": 0.043,
+      "shared": [
+        "s:ktic"
+      ],
+      "cross": true
+    },
+    {
+      "a": "mw#bundle",
+      "b": "cae#bundle",
+      "j": 0.043,
+      "shared": [
+        "s:kftvA",
+        "s:kim"
+      ],
+      "cross": false
+    },
+    {
+      "a": "skd#2",
+      "b": "ae#equiv",
+      "j": 0.041,
+      "shared": [
+        "s:taTA",
+        "s:yaTA"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pwg#2",
+      "b": "cae#bundle",
+      "j": 0.04,
+      "shared": [
+        "s:itIva",
+        "s:ityeva"
+      ],
+      "cross": false
+    },
+    {
+      "a": "ap#2",
+      "b": "ae#equiv",
+      "j": 0.037,
+      "shared": [
+        "s:SIGramiti",
+        "s:ca",
+        "s:niBftamiti",
+        "s:piteti",
+        "s:sa",
+        "s:sukaraM"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pw#bundle",
+      "b": "ben#5",
+      "j": 0.034,
+      "shared": [
+        "ls:Chr"
+      ],
+      "cross": false
+    },
+    {
+      "a": "cae#bundle",
+      "b": "ae#equiv",
+      "j": 0.033,
+      "shared": [
+        "s:kimiti"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pwg#6",
+      "b": "cae#bundle",
+      "j": 0.033,
+      "shared": [
+        "s:kftvA"
+      ],
+      "cross": false
+    },
+    {
+      "a": "skd#2",
+      "b": "ae#equiv",
+      "j": 0.031,
+      "shared": [
+        "s:taTA"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pw#bundle",
+      "b": "ben#2",
+      "j": 0.031,
+      "shared": [
+        "ls:Chr"
+      ],
+      "cross": false
+    },
+    {
+      "a": "pwg#5",
+      "b": "ae#equiv",
+      "j": 0.03,
+      "shared": [
+        "s:kimiti"
+      ],
+      "cross": true
+    }
+  ]
+}

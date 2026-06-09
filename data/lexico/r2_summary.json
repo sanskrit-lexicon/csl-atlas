@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "source-backed-r2-explorer",
+  "claim": "R2 explorer coverage rebuilt from current local csl-orig anchor rows.",
+  "sourceRoot": "../csl-orig/v02",
+  "generatedBy": "npm run build-r2-explorer",
+  "limitations": [
+    "Restored explorer slice for the five anchor lemmas; h2h3 inheritance edges are a separate slice.",
+    "Split heuristics are reused unchanged from build-r2-source-anchors.mjs; no parser rule is promoted.",
+    "PWK (pw) is present in source but absent from the archived explorer; counts may drift accordingly.",
+    "Archive parity is a regression signal, not an optimization target."
+  ],
+  "counts": {
+    "lemmaCount": 5,
+    "senseRows": 1811,
+    "alignmentRows": 128,
+    "archivedSenseRows": 445,
+    "archivedAlignmentRows": 104
+  },
+  "lemmas": [
+    {
+      "lemma": "gam",
+      "senseRows": 1173,
+      "alignmentRows": 30,
+      "archivedSenseRows": 120,
+      "archivedAlignmentRows": 30,
+      "dicts": [
+        "ae",
+        "ap",
+        "ap90",
+        "ben",
+        "cae",
+        "mw",
+        "mw72",
+        "pw",
+        "pwg",
+        "sch"
+      ]
+    },
+    {
+      "lemma": "dharma",
+      "senseRows": 275,
+      "alignmentRows": 30,
+      "archivedSenseRows": 163,
+      "archivedAlignmentRows": 30,
+      "dicts": [
+        "ae",
+        "ap",
+        "ap90",
+        "ben",
+        "bhs",
+        "cae",
+        "mw",
+        "mw72",
+        "pw",
+        "pwg",
+        "sch",
+        "skd",
+        "vcp",
+        "wil"
+      ]
+    },
+    {
+      "lemma": "rama",
+      "senseRows": 202,
+      "alignmentRows": 30,
+      "archivedSenseRows": 81,
+      "archivedAlignmentRows": 13,
+      "dicts": [
+        "ae",
+        "ap",
+        "ap90",
+        "ben",
+        "bhs",
+        "cae",
+        "mw",
+        "mw72",
+        "pw",
+        "pwg",
+        "skd",
+        "vcp",
+        "wil"
+      ]
+    },
+    {
+      "lemma": "iti",
+      "senseRows": 145,
+      "alignmentRows": 30,
+      "archivedSenseRows": 69,
+      "archivedAlignmentRows": 30,
+      "dicts": [
+        "ae",
+        "ap",
+        "ap90",
+        "ben",
+        "cae",
+        "mw",
+        "mw72",
+        "pw",
+        "pwg",
+        "skd",
+        "vcp",
+        "wil"
+      ]
+    },
+    {
+      "lemma": "bodhisattva",
+      "senseRows": 16,
+      "alignmentRows": 8,
+      "archivedSenseRows": 12,
+      "archivedAlignmentRows": 1,
+      "dicts": [
+        "ap",
+        "bhs",
+        "cae",
+        "mw",
+        "pw",
+        "pwg",
+        "skd",
+        "vcp",
+        "wil"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedBy": "npm run build-r2-h1-panel",
+  "claim": "Fixed-lemma panel removes headword-splitting confound; year-trend stays flat (H1 not supported).",
+  "panel": [
+    "atyaya",
+    "apara",
+    "aBiyoga",
+    "upayoga",
+    "kakzya",
+    "kacCa",
+    "kaRika",
+    "kalpa",
+    "kAma",
+    "kAya",
+    "kAhala",
+    "kftya",
+    "keSa",
+    "kesara",
+    "jaqa",
+    "jIvaka",
+    "jIvana",
+    "tAmasa",
+    "DAtu",
+    "nyubja",
+    "parikara",
+    "pariGa",
+    "palASa",
+    "pAda",
+    "pAvaka",
+    "pravaRa",
+    "maRi",
+    "madana",
+    "mAla",
+    "yati"
+  ],
+  "panelSize": 30,
+  "minDictCoverage": 7,
+  "stats": {
+    "pearsonYearVsUnits": 0.093,
+    "pearsonExplicitMarkerDicts": -0.035,
+    "nDictsInPearson": 11,
+    "nExplicitMarkerDicts": 5,
+    "archivedPearsonAll": 0.01,
+    "archivedPearsonExplicit": 0.56
+  },
+  "rows": [
+    {
+      "dict": "skd",
+      "year": 1822,
+      "family": "indigenous",
+      "meanPanelUnits": 1.767,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "wil",
+      "year": 1832,
+      "family": "Wilson",
+      "meanPanelUnits": 8,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "pwg",
+      "year": 1855,
+      "family": "Petersburg",
+      "meanPanelUnits": 5.167,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "ben",
+      "year": 1866,
+      "family": "Benfey",
+      "meanPanelUnits": 4.767,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "mw72",
+      "year": 1872,
+      "family": "Monier-Williams",
+      "meanPanelUnits": 24.333,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "vcp",
+      "year": 1873,
+      "family": "indigenous",
+      "meanPanelUnits": 1.033,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "ap90",
+      "year": 1890,
+      "family": "Apte",
+      "meanPanelUnits": 10.667,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "cae",
+      "year": 1891,
+      "family": "Cappeller",
+      "meanPanelUnits": 2.9,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "mw",
+      "year": 1899,
+      "family": "Monier-Williams",
+      "meanPanelUnits": 14.9,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "sch",
+      "year": 1928,
+      "family": "Petersburg",
+      "meanPanelUnits": 1.567,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    },
+    {
+      "dict": "ap",
+      "year": 1957,
+      "family": "Apte",
+      "meanPanelUnits": 8.867,
+      "panelLemmasFound": 30,
+      "panelLemmasTotal": 30
+    }
+  ],
+  "limitations": [
+    "Panel selected from WIL nominal entries (m./f./n./mfn.) present in ≥7 of the 11 H1 dicts.",
+    "Indigenous dicts (skd, vcp) use different headword conventions; stem-key matching may miss some panel lemmas.",
+    "senseUnits() uses the same proxy as r2_h1 (unchanged); calibration drift documented there.",
+    "r_explicit = 0.56 among 5 explicit-marker dicts is n=5 non-significant and convention-confounded.",
+    "Archive parity is a regression signal, not an optimization target."
+  ]
+}

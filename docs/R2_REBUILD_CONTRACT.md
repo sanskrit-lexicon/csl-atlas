@@ -84,15 +84,47 @@ named successor directory:
 
 | Output | Role | Required status |
 |---|---|---|
-| `senses_<dict>.jsonl` | One sense-unit record per dictionary sense. | required |
-| `r2_align_<lemma>.json` | Sense-alignment payload for selected anchor lemmas. | required |
-| `r2_summary.json` | Corpus-level parser and coverage summary. | required |
-| `r2_h1.json` | Sense-granularity by dictionary/family/year. | required |
-| `r2_h2h3.json` | Citation-survival and drift results on inheritance edges. | required |
-| `r2_h1_panel.json` | Fixed-panel deconfounding check. | recommended |
+| `senses_<dict>.jsonl` | One sense-unit record per dictionary sense. | **restored** (`npm run build-r2-explorer`) |
+| `r2_align_<lemma>.json` | Sense-alignment payload for selected anchor lemmas. | **restored** (`npm run build-r2-explorer`) |
+| `r2_summary.json` | Corpus-level parser and coverage summary. | **restored** (`npm run build-r2-explorer`) |
+| `r2_h1.json` | Sense-granularity by dictionary/family/year. | **restored** (`npm run build-r2-h1`) |
+| `r2_h2h3.json` | Citation-survival and drift results on inheritance edges. | **restored** (`npm run build-r2-h2h3`) |
+| `r2_h1_panel.json` | Fixed-panel deconfounding check. | **restored** (`npm run build-r2-h1-panel`) |
 
 The public pages may remain static until the data contract stabilizes, but they
 must be regenerated from the restored outputs before paper submission.
+
+**Restored (2026-06-09) — Explorer + H1 slice.** `senses_<dict>.jsonl`,
+`r2_align_<lemma>.json`, `r2_summary.json`, `r2_h1.json` are now generated from
+`csl-orig`. Acceptance gates met: H1R reproduced (Pearson 0.036, archived 0.06;
+same conclusion); Explorer reproduced (cross-tradition AP↔SKD/VCP, ap#4~ap90#4
+J=1 preserved); Preservation: pages marked archived with live-data pointers;
+121 unit tests pass. Documented drift: senseRows 1,811 vs 445 (PWK added,
+finer splitting); alignmentRows 128 vs 104 (24-row PWK residual); per-dict
+H1 values within ≤13% with family ordering identical. Parser-rule changes are
+still deferred to checkpoint review (unchanged).
+
+**Restored (2026-06-09) — H1 fixed-lemma panel.** `r2_h1_panel.json` generated.
+Acceptance gates met: H1R deconfounded (Pearson r=0.093 vs archived 0.01; both
+effectively zero; conclusion unchanged — H1 NOT supported); MW per-lemma units
+rise from 1.15 (full corpus) to 14.9 (panel) after aggregating all L-blocks,
+removing headword-splitting artifact; 134 unit tests pass. Documented drift:
+panel r=0.093 vs 0.01 (panel selection from 2077 candidate nouns, not
+the original deleted h1_analysis.py panel); explicit-marker r=-0.035 vs
+archived 0.56 (archived r was non-significant n=5, conclusion identical).
+
+**Restored (2026-06-09) — H2/H3R slice.** `r2_h2h3.json` generated from
+`csl-orig` across three inheritance edges on a reconstructed 28-noun panel.
+Acceptance gates met: H2 reproduced (cited 0.762 vs 0.70 archived; uncited
+0.591 vs 0.54; direction H2 SUPPORTED); H3R reproduced (WIL→SHS verbatim copy
+0.906 overlap vs 0.82 archived; WIL→YAT condensation des=1.0 vs 1.1;
+AP90→AP revision -3.1 drift vs -4.5); 130 unit tests pass.
+Documented drift sources: panel reconstructed from nouns present in all 5 dicts
+with 3–9 WIL senses (original panel from deleted h2h3_analysis.py); WIL mean
+senses 9.0 vs 7.9 archived (panel boundary effect); WIL→YAT overlap 0.075 vs
+0.15 (word-Jaccard vs archived metric); AP90→AP overlap 0.498 vs 0.61
+(split-method differences). Key findings — verbatim copy and drastic
+condensation on H3R, citation-survival gap on H2 — reproduce across all edges.
 
 ## Minimal Record Schema
 
