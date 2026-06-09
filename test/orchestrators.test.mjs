@@ -1209,3 +1209,27 @@ test("glossOverlap gives low score for condensed YAT-style senses", () => {
   const ov = glossOverlap(wil, yat);
   assert.ok(ov < 0.4, `condensed sense should score below 0.4, got ${ov}`);
 });
+
+// ---- R2 H1 panel: stemKey ----
+import { stemKey } from "../scripts/build-r2-h1-panel.mjs";
+
+test("stemKey strips trailing H (masculine nominative)", () => {
+  assert.equal(stemKey("yogaH"), "yoga");
+  assert.equal(stemKey("DarmaH"), "Darma");
+});
+
+test("stemKey strips trailing M (neuter nominative)", () => {
+  assert.equal(stemKey("karmaN"), "karmaN"); // N not stripped (only H/M)
+  assert.equal(stemKey("manaM"), "mana");
+});
+
+test("stemKey is idempotent on stems without endings", () => {
+  assert.equal(stemKey("yoga"), "yoga");
+  assert.equal(stemKey("kAla"), "kAla");
+  assert.equal(stemKey("hari"), "hari");
+});
+
+test("stemKey does not strip mid-word H or M", () => {
+  assert.equal(stemKey("dharma"), "dharma");
+  assert.equal(stemKey("brahman"), "brahman");
+});

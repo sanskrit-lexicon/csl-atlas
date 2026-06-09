@@ -89,7 +89,7 @@ named successor directory:
 | `r2_summary.json` | Corpus-level parser and coverage summary. | **restored** (`npm run build-r2-explorer`) |
 | `r2_h1.json` | Sense-granularity by dictionary/family/year. | **restored** (`npm run build-r2-h1`) |
 | `r2_h2h3.json` | Citation-survival and drift results on inheritance edges. | **restored** (`npm run build-r2-h2h3`) |
-| `r2_h1_panel.json` | Fixed-panel deconfounding check. | recommended (deferred — next slice) |
+| `r2_h1_panel.json` | Fixed-panel deconfounding check. | **restored** (`npm run build-r2-h1-panel`) |
 
 The public pages may remain static until the data contract stabilizes, but they
 must be regenerated from the restored outputs before paper submission.
@@ -103,6 +103,15 @@ J=1 preserved); Preservation: pages marked archived with live-data pointers;
 finer splitting); alignmentRows 128 vs 104 (24-row PWK residual); per-dict
 H1 values within ≤13% with family ordering identical. Parser-rule changes are
 still deferred to checkpoint review (unchanged).
+
+**Restored (2026-06-09) — H1 fixed-lemma panel.** `r2_h1_panel.json` generated.
+Acceptance gates met: H1R deconfounded (Pearson r=0.093 vs archived 0.01; both
+effectively zero; conclusion unchanged — H1 NOT supported); MW per-lemma units
+rise from 1.15 (full corpus) to 14.9 (panel) after aggregating all L-blocks,
+removing headword-splitting artifact; 134 unit tests pass. Documented drift:
+panel r=0.093 vs 0.01 (panel selection from 2077 candidate nouns, not
+the original deleted h1_analysis.py panel); explicit-marker r=-0.035 vs
+archived 0.56 (archived r was non-significant n=5, conclusion identical).
 
 **Restored (2026-06-09) — H2/H3R slice.** `r2_h2h3.json` generated from
 `csl-orig` across three inheritance edges on a reconstructed 28-noun panel.
