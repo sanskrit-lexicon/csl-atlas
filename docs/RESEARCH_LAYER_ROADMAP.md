@@ -259,7 +259,11 @@ H1 time-inflation.
 - **Frequency/difficulty corpus** → external **DCS/VisualDCS** work, joined on
   SLP1 headword through a future compact output contract. The atlas may consume
   a stable dictionary-facing summary later, but it must not own DCS ingestion,
-  passage dashboards, or corpus chronology.
+  passage dashboards, or corpus chronology. *(2026-06-09: that output contract
+  is now specified — see
+  [`VISUALDCS_CONSUMPTION_CONTRACT.md`](VISUALDCS_CONSUMPTION_CONTRACT.md). It is
+  the input requirement for VisualDCS; the atlas-side adapter is deferred until
+  VisualDCS publishes the file.)*
 - **Practitioner-layer hosting** → a **page in the main Observable dashboard** (client-side interactive; the ~10 MB `sanhw1` index loads in-browser). No new infra — leverages the existing static-site stack. (Cologne integration deferred to DNS item C3.)
 - **First hypothesis after R2** → the original H1 is now **H1R**, a negative
   finding: sense granularity is a family/marking-style trait, not pure temporal

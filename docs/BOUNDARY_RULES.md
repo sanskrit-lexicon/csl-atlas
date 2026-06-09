@@ -47,6 +47,10 @@ If it does not start from dictionary evidence, it does not belong here.
 - DCS corpus data, corpus dashboards, corpus grammar, passage evidence, and
   dictionary-vs-corpus joins. DCS data belongs at
   `https://github.com/gasyoun/VisualDCS`; grammar needs a separate future repo.
+  The atlas may *consume* one stable dictionary-facing summary from VisualDCS
+  (band-level frequency keyed on SLP1 headword) without importing corpus scope —
+  the requirement is specified in
+  [`VISUALDCS_CONSUMPTION_CONTRACT.md`](VISUALDCS_CONSUMPTION_CONTRACT.md).
 - GitHub organization analytics, repo metrics, issues, PRs, contributors,
   tooling runbooks, workflow health, and ecosystem observability.
 - Publication planning unless it is directly tied to dictionary-atlas pages or
