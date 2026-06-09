@@ -45,13 +45,30 @@ function dictMeta() {
     }));
 }
 
-const EXPLICIT_MODES = new Set(["div", "ap-bullet", "number-marker", "dot-squared"]);
+// Explicit-marker modes used for H1 sense counting. "div" (PWG/PWK) is
+// intentionally excluded here: the <div> tags are structural markers at
+// multiple nesting depths; treating them as sense boundaries over-counts by
+// ~40%. PWG is therefore counted via the semi-clause proxy, giving 1.127 vs
+// archived 1.161 (3% drift). See R2_REBUILD_CONTRACT.md "document drift" rule.
+const EXPLICIT_MODES = new Set(["ap-bullet", "number-marker", "dot-squared"]);
 
 // Sense-units for one entry body under the dictionary's convention.
-// TODO(calibrate): match archived senseUnitsPerEntry. Current first-cut:
-//   - explicit-marker dicts: number of explicit marker parts (>=1)
-//   - lumped / indigenous: `;`-delimited meaning clauses after stripping
-//     tags and <ls> citations (>=1) — the documented "implicit-sense" proxy.
+// For explicit-marker dicts: count explicit marker hits (>=1).
+// For lumped / indigenous / div-structural dicts: `;`-delimited meaning clauses
+// after stripping tags and <ls> citations (>=1) — the documented proxy.
+//
+// Calibration notes (computed vs archived):
+//   pwg   1.127 vs 1.161  — div excluded; semi-clause closest (3% under)
+//   ben   2.420 vs 2.529  — numeric {@ N. @} only; ~5% under
+//     (BEN Roman {@I.@}/{@II.@} are POS-class markers in compound blocks, not senses)
+//   wil   1.706 vs 1.800  — dot-squared markers; ~5% under
+//   ap90  2.517 vs 2.721  — number-marker; ~8% under
+//   ap    1.726 vs 1.978  — bullet markers; ~13% under (sub-bullet ∙³ unclear)
+//   cae   1.355 vs 1.355  — exact
+//   sch   1.139 vs 1.135  — near-exact
+//   mw72  2.852 vs 2.903  — near-exact
+// Key results hold despite drift: Pearson(year, units) ≈ 0; family ordering
+// preserved (Benfey > Apte > MW ≈ Wilson > Cappeller > Petersburg > indigenous).
 export function senseUnits(body, dict) {
   if (EXPLICIT_MODES.has(dict.split)) {
     const parts = splitRecord(body || "", dict).filter(p => p.splitConfidence === "explicit");

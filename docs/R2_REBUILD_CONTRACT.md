@@ -84,15 +84,25 @@ named successor directory:
 
 | Output | Role | Required status |
 |---|---|---|
-| `senses_<dict>.jsonl` | One sense-unit record per dictionary sense. | required |
-| `r2_align_<lemma>.json` | Sense-alignment payload for selected anchor lemmas. | required |
-| `r2_summary.json` | Corpus-level parser and coverage summary. | required |
-| `r2_h1.json` | Sense-granularity by dictionary/family/year. | required |
-| `r2_h2h3.json` | Citation-survival and drift results on inheritance edges. | required |
-| `r2_h1_panel.json` | Fixed-panel deconfounding check. | recommended |
+| `senses_<dict>.jsonl` | One sense-unit record per dictionary sense. | **restored** (`npm run build-r2-explorer`) |
+| `r2_align_<lemma>.json` | Sense-alignment payload for selected anchor lemmas. | **restored** (`npm run build-r2-explorer`) |
+| `r2_summary.json` | Corpus-level parser and coverage summary. | **restored** (`npm run build-r2-explorer`) |
+| `r2_h1.json` | Sense-granularity by dictionary/family/year. | **restored** (`npm run build-r2-h1`) |
+| `r2_h2h3.json` | Citation-survival and drift results on inheritance edges. | required (deferred — next slice) |
+| `r2_h1_panel.json` | Fixed-panel deconfounding check. | recommended (deferred — next slice) |
 
 The public pages may remain static until the data contract stabilizes, but they
 must be regenerated from the restored outputs before paper submission.
+
+**Restored (2026-06-09) — Explorer + H1 slice.** `senses_<dict>.jsonl`,
+`r2_align_<lemma>.json`, `r2_summary.json`, `r2_h1.json` are now generated from
+`csl-orig`. Acceptance gates met: H1R reproduced (Pearson 0.036, archived 0.06;
+same conclusion); Explorer reproduced (cross-tradition AP↔SKD/VCP, ap#4~ap90#4
+J=1 preserved); Preservation: pages marked archived with live-data pointers;
+121 unit tests pass. Documented drift: senseRows 1,811 vs 445 (PWK added,
+finer splitting); alignmentRows 128 vs 104 (24-row PWK residual); per-dict
+H1 values within ≤13% with family ordering identical. Parser-rule changes are
+still deferred to checkpoint review (unchanged).
 
 ## Minimal Record Schema
 

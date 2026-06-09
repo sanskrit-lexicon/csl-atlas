@@ -1063,3 +1063,89 @@ test("topForm picks the most frequent raw form for a canonical id", () => {
   assert.equal(topForm({ count: 7, forms: new Map([["MBh", 5], ["Mbh", 2]]) }), "MBh");
   assert.equal(topForm({ count: 1, forms: new Map([["RV", 1]]) }), "RV");
 });
+
+// ---- R2 explorer: buildLemmaPayload ----
+import { buildLemmaPayload } from "../scripts/build-r2-explorer.mjs";
+const FAKE_ROWS = [
+  { dict: "ap", parserFamily: "western", senseId: "L1:1", splitConfidence: "explicit", sanskritAnchors: ["dharma", "pARini"], citationAnchors: ["ls:MBh"], text: "Duty" },
+  { dict: "ap90", parserFamily: "western", senseId: "L2:1", splitConfidence: "explicit", sanskritAnchors: ["dharma", "pARini"], citationAnchors: ["ls:MBh"], text: "Duty (1890)" },
+  { dict: "pwg", parserFamily: "western", senseId: "L3:1", splitConfidence: "explicit", sanskritAnchors: ["Darman"], citationAnchors: [], text: "Sitte" },
+  { dict: "vcp", parserFamily: "indigenous", senseId: "L4:1", splitConfidence: "iti-unit", sanskritAnchors: ["dharma", "pARini"], citationAnchors: [], text: "Sanskrit text" }
+];
+
+test("buildLemmaPayload groups senses by dict and builds alignments", () => {
+  const payload = buildLemmaPayload(FAKE_ROWS);
+  assert.equal(Object.keys(payload.senses).length, 4);
+  assert.ok(payload.senses.ap.length >= 1);
+  assert.equal(payload.senses.ap[0].sense, "1");
+  assert.ok(payload.alignments.length >= 1, "should produce at least one alignment");
+  // alignment keys are "dict#localId" strings
+  const apAp90 = payload.alignments.find(a => a.a.startsWith("ap#") && a.b.startsWith("ap90#"));
+  assert.ok(apAp90, "ap~ap90 alignment expected");
+  assert.equal(apAp90.j, 1, "ap~ap90 should be Jaccard 1 (identical anchors)");
+  assert.equal(apAp90.cross, false);
+});
+
+test("buildLemmaPayload marks cross-tradition alignments", () => {
+  const payload = buildLemmaPayload(FAKE_ROWS);
+  const crossAlign = payload.alignments.find(a => a.cross);
+  assert.ok(crossAlign, "cross-tradition alignment expected (western~indigenous)");
+});
+
+test("buildLemmaPayload caps alignments at 30 per lemma", () => {
+  // Generate many rows for two dicts with different anchors to force many pairs
+  const rows = [];
+  for (let i = 0; i < 10; i++) {
+    rows.push({ dict: "ap", parserFamily: "western", senseId: `L${i}:1`, splitConfidence: "explicit", sanskritAnchors: [`w${i}`, "shared"], citationAnchors: [], text: `sense ${i}` });
+    rows.push({ dict: "pwg", parserFamily: "western", senseId: `L${100+i}:1`, splitConfidence: "explicit", sanskritAnchors: [`w${i}`, "shared"], citationAnchors: [], text: `sinn ${i}` });
+    rows.push({ dict: "vcp", parserFamily: "indigenous", senseId: `L${200+i}:1`, splitConfidence: "iti-unit", sanskritAnchors: [`w${i}`, "shared"], citationAnchors: [], text: `sk ${i}` });
+  }
+  const payload = buildLemmaPayload(rows);
+  assert.ok(payload.alignments.length <= 30, `cap should be 30, got ${payload.alignments.length}`);
+});
+
+// ---- R2 H1: h1SenseUnits (aliased to avoid collision with build-sense-depth senseUnits) ----
+import { senseUnits as h1SenseUnits } from "../scripts/build-r2-h1.mjs";
+const CAE_DICT = { code: "cae", split: "lumped-proxy" };
+const BEN_DICT = { code: "ben", split: "number-marker" };
+const AP_DICT  = { code: "ap",  split: "ap-bullet" };
+const WIL_DICT = { code: "wil", split: "dot-squared" };
+const PWG_DICT = { code: "pwg", split: "div" };
+const SKD_DICT = { code: "skd", split: "iti-unit" };
+
+test("h1SenseUnits returns 1 for empty body", () => {
+  assert.equal(h1SenseUnits("", CAE_DICT), 1);
+  assert.equal(h1SenseUnits("", BEN_DICT), 1);
+});
+
+test("h1SenseUnits counts number-marker senses for ben", () => {
+  const body = "{@1.@} first sense; {@2.@} second sense; {@3.@} third sense.";
+  assert.equal(h1SenseUnits(body, BEN_DICT), 3);
+});
+
+test("h1SenseUnits uses semicolons for lumped/div dicts (cae, pwg)", () => {
+  const body = "meaning one; meaning two; meaning three";
+  assert.equal(h1SenseUnits(body, CAE_DICT), 3);
+  assert.equal(h1SenseUnits(body, PWG_DICT), 3);
+});
+
+test("h1SenseUnits counts ap-bullet markers", () => {
+  const body = "∙²1 first; ∙²2 second.";
+  assert.equal(h1SenseUnits(body, AP_DICT), 2);
+});
+
+test("h1SenseUnits counts dot-squared markers for wil", () => {
+  const body = ".²1 first meaning .²2 second meaning";
+  assert.equal(h1SenseUnits(body, WIL_DICT), 2);
+});
+
+test("h1SenseUnits falls back to 1 for single-sense entries", () => {
+  assert.equal(h1SenseUnits("A simple definition with no markers.", BEN_DICT), 1);
+  assert.equal(h1SenseUnits("Ein einfacher Satz.", PWG_DICT), 1);
+});
+
+test("h1SenseUnits strips ls citations before semicolon-splitting for lumped dicts", () => {
+  const body = "some meaning <ls n='MBh'>iii,1;2;3</ls> more text";
+  const units = h1SenseUnits(body, CAE_DICT);
+  assert.equal(units, 1, "ls-internal semicolons should not inflate sense count");
+});

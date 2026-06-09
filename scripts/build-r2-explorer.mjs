@@ -96,7 +96,9 @@ export function buildLemmaPayload(lemmaRows) {
   alignments.sort((a, b) =>
     b.j - a.j || Number(b.cross) - Number(a.cross) || a.a.localeCompare(b.a) || a.b.localeCompare(b.b)
   );
-  return { senses, alignments };
+  // Cap matches the archived per-lemma convention (30). Residual gap vs archive
+  // (e.g. rama/bodhisattva) is from PWK presence and finer splitting — documented.
+  return { senses, alignments: alignments.slice(0, 30) };
 }
 
 function rowsForLemma(target) {

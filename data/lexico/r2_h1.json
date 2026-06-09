@@ -10,7 +10,7 @@
     "Archive parity is a regression signal, not an optimization target."
   ],
   "stats": {
-    "pearsonYearVsUnits": -0.016,
+    "pearsonYearVsUnits": 0.036,
     "archivedPearson": 0.06,
     "dictRows": 11,
     "familyRows": 7
@@ -38,7 +38,7 @@
       "dict": "pwg",
       "year": 1855,
       "family": "Petersburg",
-      "senseUnitsPerEntry": 1.66,
+      "senseUnitsPerEntry": 1.127,
       "entries": 123366,
       "archivedSenseUnitsPerEntry": 1.161,
       "archivedEntries": 123366
@@ -138,14 +138,14 @@
       "dicts": 1
     },
     {
-      "family": "Petersburg",
-      "meanSenseUnitsPerEntry": 1.399,
-      "dicts": 2
-    },
-    {
       "family": "Cappeller",
       "meanSenseUnitsPerEntry": 1.355,
       "dicts": 1
+    },
+    {
+      "family": "Petersburg",
+      "meanSenseUnitsPerEntry": 1.133,
+      "dicts": 2
     },
     {
       "family": "indigenous",
