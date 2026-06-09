@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "source-backed-r2-h1",
+  "claim": "H1R sense-granularity rebuilt from current csl-orig: pure temporal inflation is not supported; family captures the variance.",
+  "generatedBy": "npm run build-r2-h1",
+  "sourceRoot": "../csl-orig/v02",
+  "limitations": [
+    "senseUnits() is a first-cut proxy; lumped-proxy `;`-clause counting needs calibration against the archived fixture.",
+    "Per-entry metric is confounded by headword-splitting policy (MW splits compounds into many short entries); a fixed-lemma panel removes it (r2_h1_panel.json, future slice).",
+    "Archive parity is a regression signal, not an optimization target."
+  ],
+  "stats": {
+    "pearsonYearVsUnits": -0.016,
+    "archivedPearson": 0.06,
+    "dictRows": 11,
+    "familyRows": 7
+  },
+  "rows": [
+    {
+      "dict": "skd",
+      "year": 1822,
+      "family": "indigenous",
+      "senseUnitsPerEntry": 1.002,
+      "entries": 42531,
+      "archivedSenseUnitsPerEntry": 1.109,
+      "archivedEntries": 42531
+    },
+    {
+      "dict": "wil",
+      "year": 1832,
+      "family": "Wilson",
+      "senseUnitsPerEntry": 1.706,
+      "entries": 44577,
+      "archivedSenseUnitsPerEntry": 1.8,
+      "archivedEntries": 44577
+    },
+    {
+      "dict": "pwg",
+      "year": 1855,
+      "family": "Petersburg",
+      "senseUnitsPerEntry": 1.66,
+      "entries": 123366,
+      "archivedSenseUnitsPerEntry": 1.161,
+      "archivedEntries": 123366
+    },
+    {
+      "dict": "ben",
+      "year": 1866,
+      "family": "Benfey",
+      "senseUnitsPerEntry": 2.42,
+      "entries": 17310,
+      "archivedSenseUnitsPerEntry": 2.529,
+      "archivedEntries": 17310
+    },
+    {
+      "dict": "mw72",
+      "year": 1872,
+      "family": "Monier-Williams",
+      "senseUnitsPerEntry": 2.852,
+      "entries": 55388,
+      "archivedSenseUnitsPerEntry": 2.903,
+      "archivedEntries": 55388
+    },
+    {
+      "dict": "vcp",
+      "year": 1873,
+      "family": "indigenous",
+      "senseUnitsPerEntry": 1,
+      "entries": 50135,
+      "archivedSenseUnitsPerEntry": 1.08,
+      "archivedEntries": 50135
+    },
+    {
+      "dict": "ap90",
+      "year": 1890,
+      "family": "Apte",
+      "senseUnitsPerEntry": 2.517,
+      "entries": 34882,
+      "archivedSenseUnitsPerEntry": 2.721,
+      "archivedEntries": 34882
+    },
+    {
+      "dict": "cae",
+      "year": 1891,
+      "family": "Cappeller",
+      "senseUnitsPerEntry": 1.355,
+      "entries": 40069,
+      "archivedSenseUnitsPerEntry": 1.355,
+      "archivedEntries": 40069
+    },
+    {
+      "dict": "mw",
+      "year": 1899,
+      "family": "Monier-Williams",
+      "senseUnitsPerEntry": 1.15,
+      "entries": 286560,
+      "archivedSenseUnitsPerEntry": 1.22,
+      "archivedEntries": 286560
+    },
+    {
+      "dict": "sch",
+      "year": 1928,
+      "family": "Petersburg",
+      "senseUnitsPerEntry": 1.139,
+      "entries": 29125,
+      "archivedSenseUnitsPerEntry": 1.135,
+      "archivedEntries": 29125
+    },
+    {
+      "dict": "ap",
+      "year": 1957,
+      "family": "Apte",
+      "senseUnitsPerEntry": 1.726,
+      "entries": 90654,
+      "archivedSenseUnitsPerEntry": 1.978,
+      "archivedEntries": 90654
+    }
+  ],
+  "families": [
+    {
+      "family": "Benfey",
+      "meanSenseUnitsPerEntry": 2.42,
+      "dicts": 1
+    },
+    {
+      "family": "Apte",
+      "meanSenseUnitsPerEntry": 2.122,
+      "dicts": 2
+    },
+    {
+      "family": "Monier-Williams",
+      "meanSenseUnitsPerEntry": 2.001,
+      "dicts": 2
+    },
+    {
+      "family": "Wilson",
+      "meanSenseUnitsPerEntry": 1.706,
+      "dicts": 1
+    },
+    {
+      "family": "Petersburg",
+      "meanSenseUnitsPerEntry": 1.399,
+      "dicts": 2
+    },
+    {
+      "family": "Cappeller",
+      "meanSenseUnitsPerEntry": 1.355,
+      "dicts": 1
+    },
+    {
+      "family": "indigenous",
+      "meanSenseUnitsPerEntry": 1.001,
+      "dicts": 2
+    }
+  ]
+}

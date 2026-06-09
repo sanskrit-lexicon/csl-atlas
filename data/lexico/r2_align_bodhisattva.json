@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "source-backed-r2-explorer",
+  "claim": "R2 explorer payload regenerated from current csl-orig; archive parity is a comparison signal.",
+  "lemma": "bodhisattva",
+  "lookupKeys": [
+    "boDisattva",
+    "boDisattvaH",
+    "boDisattvaM",
+    "bodhisattva"
+  ],
+  "counts": {
+    "senseRows": 16,
+    "alignmentRows": 8,
+    "crossAlignmentRows": 6,
+    "archivedSenseRows": 12,
+    "archivedAlignmentRows": 1
+  },
+  "senses": {
+    "mw": [
+      {
+        "sense": "bundle",
+        "text": "boDi—sattva ¦ m. ‘one whose essence is perfect knowledge’, one who is on the way to the attainment of p˚ k˚ ( i.e. a Buddhist saint when he has only ...",
+        "cluster": "western",
+        "n_anchor": 2
+      },
+      {
+        "sense": "bundle",
+        "text": "¦ N. of the principal Buddha of the present era (before he became a Buddha ), Śiś. , Sch. ; L.",
+        "cluster": "western",
+        "n_anchor": 0
+      },
+      {
+        "sense": "bundle",
+        "text": "¦ of a poet, Cat.",
+        "cluster": "western",
+        "n_anchor": 0
+      }
+    ],
+    "pwg": [
+      {
+        "sense": "preface",
+        "text": "boDisattva ¦ ( bo˚ + sa˚ ) adj. dessen Wesen Erkenntniss ist ; m. der im Besitz des Wesens der Bodhi Seiende , bei den Buddhisten ein Mensch in dem l...",
+        "cluster": "western",
+        "n_anchor": 28
+      },
+      {
+        "sense": "1",
+        "text": "— Vgl. deva˚ .",
+        "cluster": "western",
+        "n_anchor": 1
+      },
+      {
+        "sense": "bundle",
+        "text": "boDisattva ¦, ˚sattvAMSa KATHĀS. 65,2. 45. ˚sattvatA 72,235.",
+        "cluster": "western",
+        "n_anchor": 2
+      }
+    ],
+    "pw": [
+      {
+        "sense": "bundle",
+        "text": "boDisattva ¦ n. bei den Buddhisten ein Mann in dem letzten Stadium auf dem Wege zur Erlangung der vollkommenen Erkenntniss, — der Buddha - Würde . No...",
+        "cluster": "western",
+        "n_anchor": 1
+      }
+    ],
+    "ap": [
+      {
+        "sense": "preface",
+        "text": "boDiH + -sattvaH ¦",
+        "cluster": "western",
+        "n_anchor": 2
+      },
+      {
+        "sense": "1",
+        "text": "∙²1 a Buddhist saint, one who is on the way to the attainment of perfect knowledge and has only a certain number of births to undergo before attainin...",
+        "cluster": "western",
+        "n_anchor": 2
+      },
+      {
+        "sense": "2",
+        "text": "∙²2 N. of the principal Buddha of the present era.",
+        "cluster": "western",
+        "n_anchor": 0
+      }
+    ],
+    "bhs": [
+      {
+        "sense": "bundle",
+        "text": "bodhisattva ¦ (= Pali ˚satta), person destined for enlightenment, Buddha-to-be , passim ; Mvy 〔625〕, followed by list of standard epithets of such pe...",
+        "cluster": "western",
+        "n_anchor": 3
+      }
+    ],
+    "wil": [
+      {
+        "sense": "bundle",
+        "text": "boDisattva ¦ m. ( -ttvaH ) A Buddha , or Bauddha saint. E. boDi intellect, sattva truth.",
+        "cluster": "western",
+        "n_anchor": 3
+      }
+    ],
+    "cae": [
+      {
+        "sense": "bundle",
+        "text": "boDisattva ¦ m. a Buddha immediately before the attainment of perfect knowledge.",
+        "cluster": "western",
+        "n_anchor": 0
+      }
+    ],
+    "vcp": [
+      {
+        "sense": "1",
+        "text": "boDisattva¦ na0 boDi boDayutaM sattvam . budDaBede hemaca0 .",
+        "cluster": "indigenous",
+        "n_anchor": 5
+      }
+    ],
+    "skd": [
+      {
+        "sense": "1",
+        "text": "boDisattvaM¦, klI, (boDi boDavat sattvam .) budDa- viSezaH . iti",
+        "cluster": "indigenous",
+        "n_anchor": 5
+      },
+      {
+        "sense": "2",
+        "text": "hemacandraH . 2 . 146 .. (yaTA, kaTAsaritsAgare . 22 . 35 . “dayAlurboDisattvAMSaH ko'nyo jImUtavAhanAt . SaknuyAdarTisAt karttumapi kalpadrumaM kftI...",
+        "cluster": "indigenous",
+        "n_anchor": 10
+      }
+    ]
+  },
+  "alignments": [
+    {
+      "a": "mw#bundle",
+      "b": "wil#bundle",
+      "j": 0.25,
+      "shared": [
+        "s:boDi",
+        "s:sattva"
+      ],
+      "cross": false
+    },
+    {
+      "a": "vcp#1",
+      "b": "skd#1",
+      "j": 0.2,
+      "shared": [
+        "s:boDi",
+        "s:sattvam"
+      ],
+      "cross": false
+    },
+    {
+      "a": "wil#bundle",
+      "b": "skd#1",
+      "j": 0.143,
+      "shared": [
+        "s:boDi"
+      ],
+      "cross": true
+    },
+    {
+      "a": "wil#bundle",
+      "b": "vcp#1",
+      "j": 0.111,
+      "shared": [
+        "s:boDi"
+      ],
+      "cross": true
+    },
+    {
+      "a": "mw#bundle",
+      "b": "skd#1",
+      "j": 0.091,
+      "shared": [
+        "s:boDi"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pwg#preface",
+      "b": "skd#2",
+      "j": 0.091,
+      "shared": [
+        "s:dayAlurboDisattvAMSaH",
+        "s:jImUtavAhanAt",
+        "s:kalpadrumaM",
+        "s:kftI"
+      ],
+      "cross": true
+    },
+    {
+      "a": "mw#bundle",
+      "b": "vcp#1",
+      "j": 0.077,
+      "shared": [
+        "s:boDi"
+      ],
+      "cross": true
+    },
+    {
+      "a": "pwg#preface",
+      "b": "skd#1",
+      "j": 0.024,
+      "shared": [
+        "s:budDa"
+      ],
+      "cross": true
+    }
+  ]
+}
