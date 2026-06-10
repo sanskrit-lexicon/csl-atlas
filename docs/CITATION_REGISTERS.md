@@ -41,9 +41,20 @@ resolvability band.
 
 Densest `<ls>` citers: PWG 4.63/entry (570,830), BEN 2.81, BHS 2.71, MW 1.09
 (311,933), AP 0.69. Big variant merges: `MBH.`+`MBh.` = 75,548; `ṚV.`+`RV.` =
-32,316. The central engineering is **abbreviation-family merging**
-(`R.` = `Rām.` = `Rāmāy.` → Rāmāyaṇa), which collapses 9,180 much further toward
-the ~2,166 established works.
+32,316 — these are already handled by the diacritic/case `foldSiglum()` layer in
+[`scripts/lib/source-siglum.mjs`](../scripts/lib/source-siglum.mjs).
+
+The remaining engineering is **abbreviation-family merging** — `R.` = `Rām.` =
+`Rāmāy.` → Rāmāyaṇa — which the fold cannot catch.
+[`scripts/obs/siglum_families.py`](../scripts/obs/siglum_families.py) generates
+**review candidates** for this (it does not auto-merge, respecting the curated
+[`dict-source-aliases.json`](../src/data/dict-source-aliases.json) discipline):
+folding gives 8,922 fold-keys; 265 prefix-clustered families (e.g. `kathas`/
+`kath`/`kathop` → Kathāsaritsāgara; `susr`/`susri` → Suśruta) would collapse to
+~8,238 if accepted. The tool deliberately surfaces false merges too (`rajan`
+Rājanighaṇṭu vs `rajatar` Rājataraṅgiṇī cluster on the `raja` prefix) — exactly
+why merges feed the human-reviewed alias table rather than apply automatically.
+The fully reviewed true-source count converges toward the ~2,166 works cited ≥10×.
 
 ## Register B — indigenous `iti`/`ity` quotative (Sanskrit-Sanskrit kośas)
 
@@ -77,9 +88,12 @@ normaliser covers Register A, while Register B needs the indigenous
 ## Reproduction
 
 ```sh
+# Per-dict register counts (<ls> vs iti):
 awk '/^<L>/{ent++}
   { s=$0; while(match(s,/<ls>[^<]*<\/ls>/)){ls++; s=substr(s,RSTART+RLENGTH)}
     c=gsub(/[ ”"(]it[iy]/,"&",$0); iti+=c }' ../csl-orig/v02/<dict>/<dict>.txt
+# Register-A abbreviation-family merge candidates (review worklist):
+python scripts/obs/siglum_families.py    # -> data/obs/siglum_family_candidates.csv
 ```
 
 _Cross-repo provenance: `csl-observatory/reports/obs_rc_atlas_bridge.md`._
