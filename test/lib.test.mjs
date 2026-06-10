@@ -11,6 +11,7 @@ import os from "node:os";
 import fs from "node:fs";
 import path from "node:path";
 
+import { injectMarker, generateExplorerScript } from "../scripts/build-r2-pages.mjs";
 import { parseHeader, iterateRecords } from "../scripts/lib/mw-parser.mjs";
 import { classifyTypes, normalizeSource, isLexicographerOnly, extractCitations } from "../scripts/lib/mw-classifiers.mjs";
 import { baseForm, layerForSource, isEditorialReference, recordSourceLayers } from "../scripts/lib/mw-source-layers.mjs";
@@ -21,6 +22,28 @@ import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/di
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
 import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma } from "../src/lib/lookup-normalize.js";
+
+// ---- build-r2-pages ----
+test("injectMarker is idempotent: inject twice gives identical result", () => {
+  const scaffold = `before\n<!-- R2-GEN:START foo -->\nold\n<!-- R2-GEN:END foo -->\nafter`;
+  const once = injectMarker(scaffold, "foo", "new content");
+  const twice = injectMarker(once, "foo", "new content");
+  assert.equal(once, twice);
+});
+
+test("generateExplorerScript defaults to dharma, lists all lemmas", () => {
+  const mockAlign = {
+    dharma: { senses: { mw: [{ sense: "1", text: "law", cluster: "western", n_anchor: 1 }] }, alignments: [] },
+    gam:    { senses: { mw: [{ sense: "1", text: "go",  cluster: "western", n_anchor: 2 }] }, alignments: [] }
+  };
+  const lemmaList = ["dharma", "gam"];
+  const script = generateExplorerScript(mockAlign, lemmaList);
+  assert.ok(script.includes('render(sel.value="dharma")'), "default lemma must be dharma");
+  assert.ok(script.includes('"dharma"'), "dharma must appear in DATA");
+  assert.ok(script.includes('"gam"'),    "gam must appear in DATA");
+  assert.ok(script.startsWith("<script>"), "must open <script>");
+  assert.ok(script.endsWith("</script>"), "must close </script>");
+});
 
 // ---- mw-parser ----
 test("parseHeader extracts flat header fields", () => {

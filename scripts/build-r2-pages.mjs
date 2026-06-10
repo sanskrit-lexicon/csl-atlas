@@ -307,9 +307,113 @@ export function h3rDumbbells(h2h3Json) {
   return svg;
 }
 
+// ---- H2H3 prose helpers ----
+
+function h2h3TrustBlock(h2h3Data) {
+  const { h2 } = h2h3Data;
+  return `<p class="note"><b>Trust Block.</b> Generated from <code>data/lexico/r2_h2h3.json</code> ` +
+    `(H2: cited ${h2.cited.rate} vs uncited ${h2.uncited.rate}; archived ${h2.archivedCited.rate}/${h2.archivedUncited.rate}). ` +
+    `Limitations: panel reconstructed from nouns in all 5 dicts (documented drift in R2_REBUILD_CONTRACT.md); SHS/YAT senses split by inline \`N.\` markers. ` +
+    `Validation: <code>npm test</code>; all unit tests pass. Owner repo: <code>csl-atlas</code>.</p>`;
+}
+
+function h2h3DataTable(h2h3Data) {
+  const { h3r } = h2h3Data;
+  const rows = h3r.map(edge => {
+    const arch = edge.archived;
+    return `<tr><td>${edgeLabel(edge.ancDict, edge.desDict)}</td>` +
+      `<td>${edge.meanAncSenses}→${edge.meanDesSenses}</td>` +
+      `<td>${edge.drift}</td>` +
+      `<td>${edge.meanGlossOverlap.toFixed(2)}</td>` +
+      `<td>${escapeXml(edge.pattern)}</td>` +
+      `<td>${arch.meanAncSenses}→${arch.meanDesSenses} (overlap ${arch.meanGlossOverlap.toFixed(2)})</td></tr>`;
+  }).join("\n");
+  return `<table>\n<tr><th>Edge</th><th>Senses anc→des</th><th>Drift</th><th>Gloss overlap</th><th>Pattern</th><th>Archived</th></tr>\n${rows}\n</table>`;
+}
+
+function h2h3SummaryHtml(h2h3Data) {
+  const { h2, h3r } = h2h3Data;
+  const gap = (h2.cited.rate - h2.uncited.rate).toFixed(2);
+  const h2oneLine = `<b>H2 supported:</b> Cited senses survive at ${(h2.cited.rate * 100).toFixed(0)}% (n=${h2.cited.n}) ` +
+    `vs uncited at ${(h2.uncited.rate * 100).toFixed(0)}% (n=${h2.uncited.n}); gap = ${gap}. Well-sourced senses are stickier.`;
+  let h3rLines = `<b>H3R not supported (no net-addition):</b> Derivatives copy or condense.`;
+  for (const edge of h3r) {
+    h3rLines += `\n${edgeLabel(edge.ancDict, edge.desDict)}: ${escapeXml(edge.pattern)} (overlap ${edge.meanGlossOverlap.toFixed(2)}).`;
+  }
+  return `<p class="note">${h2oneLine}</p>\n<p class="note">${h3rLines}</p>`;
+}
+
+// ---- Explorer script generator ----
+
+function explorerTrustBlock(alignDataMap) {
+  const lemmaCount = Object.keys(alignDataMap).length;
+  const totalAligns = Object.values(alignDataMap)
+    .reduce((s, d) => s + (d.alignments || []).length, 0);
+  return `<p class="note"><b>Trust Block.</b> Generated from <code>data/lexico/r2_align_*.json</code> ` +
+    `(${lemmaCount} lemmas, ${totalAligns} alignments total). ` +
+    `Runs idempotently; re-running with unchanged JSON produces no git diff. ` +
+    `Validation: <code>npm test</code>; all unit tests pass. Owner repo: <code>csl-atlas</code>.</p>`;
+}
+
+const EXPLORER_LABEL = {
+  "mw": "MW 1899", "mw72": "MW 1872", "pwg": "PWG 1855", "pw": "PW 1875",
+  "pwk": "PWK 1887", "ap": "Apte 1957", "ap90": "Apte 1890",
+  "ben": "Benfey 1866", "sch": "Schmidt 1928", "bhs": "Edgerton BHS 1953",
+  "wil": "Wilson 1832", "cae": "Cappeller 1891",
+  "vcp": "Vācaspatya 1873", "skd": "Śabdakalpadruma 1822",
+  "ae": "Apte En→Skt 1920", "shs": "Śabda-Sāgara 1900", "yat": "Yates 1846"
+};
+
+export function generateExplorerScript(alignDataMap, lemmaList) {
+  const data = {};
+  for (const lemma of lemmaList) {
+    const d = alignDataMap[lemma];
+    if (!d) continue;
+    const aligns = (d.alignments || []).map(
+      ({ a, b, j, shared, cross }) => ({ a, b, j, shared, cross })
+    );
+    data[lemma] = { senses: d.senses, aligns };
+  }
+  const dataJson = JSON.stringify(data);
+  const lemmaOrderJson = JSON.stringify(lemmaList);
+  const defaultLemma = lemmaList.includes("dharma") ? "dharma" : lemmaList[0];
+
+  return `<script>
+const DATA = ${dataJson};
+const LABEL = ${JSON.stringify(EXPLORER_LABEL)};
+const sel = document.getElementById('sel');
+${lemmaOrderJson}.forEach(l => { const o=document.createElement('option'); o.value=l; o.textContent=l; sel.appendChild(o); });
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+function chip(t){let c='chip';if(t.startsWith('ls:'))c+=' cite';else if(t.startsWith('sig:'))c+=' sig';
+  return '<span class="'+c+'">'+esc(t)+'</span>';}
+function render(lemma){
+  const d=DATA[lemma]; const S=document.getElementById('senses'); S.innerHTML='';
+  if(!d){S.innerHTML='<p class="note">No data for this lemma.</p>';return;}
+  const order=Object.keys(d.senses).sort((a,b)=>(LABEL[a]||a).slice(-4).localeCompare((LABEL[b]||b).slice(-4)));
+  for(const code of order){
+    const recs=d.senses[code]; const cl=recs[0].cluster;
+    let h='<div class="dict"><h3>'+esc(LABEL[code]||code)+
+          ' <span class="pill '+cl+'">'+cl+'</span></h3>';
+    for(const r of recs) h+='<div class="sense"><span class="num">'+esc(String(r.sense))+'</span>'+esc(r.text||'')+'</div>';
+    h+='</div>'; S.insertAdjacentHTML('beforeend',h);
+  }
+  const A=document.getElementById('aligns');
+  if(!d.aligns.length){A.innerHTML='<p class="note">No fingerprint-backed alignments for this lemma.</p>';return;}
+  let t='<table><tr><th>sense A</th><th>sense B</th><th>Jaccard</th><th>shared Sanskrit anchors</th></tr>';
+  for(const p of d.aligns){
+    t+='<tr class="'+(p.cross?'cross':'')+'"><td>'+esc(p.a)+(p.cross?' <span class="crosslbl">cross-tradition</span>':'')+
+       '</td><td>'+esc(p.b)+'</td><td>'+p.j+'</td><td>'+p.shared.map(chip).join(' ')+'</td></tr>';
+  }
+  A.innerHTML=t+'</table>';
+}
+sel.addEventListener('change',()=>render(sel.value));
+render(sel.value=${JSON.stringify(defaultLemma)});
+</script>`;
+}
+
 // ---- Marker injection (idempotent) ----
 
-function injectMarker(fileContent, markerName, newContent) {
+export function injectMarker(fileContent, markerName, newContent) {
   const startMarker = `<!-- R2-GEN:START ${markerName} -->`;
   const endMarker = `<!-- R2-GEN:END ${markerName} -->`;
 
@@ -336,7 +440,7 @@ async function main() {
   const h1Data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "r2_h1.json"), "utf-8"));
   const h2h3Data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "r2_h2h3.json"), "utf-8"));
 
-  // Generate h1 SVG
+  // Page 1 (r2-h1): inject scatter SVG
   const h1Svg = h1Points(h1Data);
   const h1Path = path.join(TOOLS_DIR, "r2-h1.md");
   let h1Content = fs.readFileSync(h1Path, "utf-8");
@@ -344,62 +448,39 @@ async function main() {
   fs.writeFileSync(h1Path, h1Content, { encoding: "utf-8" });
   console.log(`Updated ${h1Path}`);
 
-  // Generate h2h3 SVG (both charts) + page
-  const h2Svg = h2Bars(h2h3Data);
-  const h3Svg = h3rDumbbells(h2h3Data);
-
-  // TODO: Create r2-h2h3.md with charts and table
-
-  // Generate h2h3 page
-  let h2h3Page = `<style>
-body{font-family:system-ui,sans-serif;margin:1.5rem;max-width:900px;color:#1b1b1b}
-h1{font-size:1.3rem}
-.note{color:#555;font-size:13px}
-table{border-collapse:collapse;font-size:12px;width:100%}
-td,th{border-bottom:1px solid #eee;padding:.3rem .4rem;text-align:left;vertical-align:top}
-</style>
-
-<h1>H2/H3R — sense survival & drift on inheritance edges</h1>
-
-<p class="note">
-A 28-noun panel across three measured inheritance edges (WIL→SHS, WIL→YAT, AP90→AP).
-H2 tests whether cited ancestor senses survive more often than uncited ones (gloss-word overlap ≥ ${h2h3Data.survivedThreshold}).
-H3R measures sense-unit drift (copy, condense, revise) along each edge using mean senses per lemma and gloss overlap.
-Static archived R2 snapshot; see <code>docs/R2_FINDINGS.md</code>.
-Restored generator now available: <code>npm run build-r2-h2h3</code> regenerates <code>data/lexico/r2_h2h3.json</code> from current <code>csl-orig</code>;
-this page will be updated from that output in a follow-up.
-</p>
-
-<p class="note"><b>Trust Block.</b> Evidence: archived static snapshot embedded in this page; restored generator output in <code>data/lexico/r2_h2h3.json</code>
-(H2: cited ${h2h3Data.h2.cited.rate} vs uncited ${h2h3Data.h2.uncited.rate}; archived 0.70/0.54).
-Limitations: panel reconstructed from nouns in all 5 dicts (documented drift in R2_REBUILD_CONTRACT.md); SHS/YAT senses split by inline \`N.\` markers.
-Validation: <code>npm test</code>; 134 unit tests pass. Owner repo: <code>csl-atlas</code>. Next use: regenerate SVG from r2_h2h3.json rows once page-wiring script exists.</p>
-
-<h2>H2 — Citation-survival (Supported)</h2>
-
-${h2Svg}
-
-<h2>H3R — Sense-drift per edge</h2>
-
-${h3Svg}
-
-<h2>Summary</h2>
-
-<p class="note">
-<b>H2 supported:</b> Cited ancestor senses survive at ${(h2h3Data.h2.cited.rate * 100).toFixed(0)}% (n=${h2h3Data.h2.cited.n}) vs uncited at ${(h2h3Data.h2.uncited.rate * 100).toFixed(0)}% (n=${h2h3Data.h2.uncited.n}); gap = ${(h2h3Data.h2.cited.rate - h2h3Data.h2.uncited.rate).toFixed(2)}. Well-sourced senses are stickier.
-</p>
-
-<p class="note">
-<b>H3R not supported (no net-addition):</b> Derivatives copy or condense.
-WIL→SHS: near-verbatim copy (overlap ${h2h3Data.h3r[0].meanGlossOverlap.toFixed(2)}).
-WIL→YAT: drastic condensation (${h2h3Data.h3r[1].meanDesSenses} vs ${h2h3Data.h3r[1].meanAncSenses} senses).
-AP90→AP: revision (no expansion).
-</p>
-`;
-
+  // Page 3 (r2-h2h3): inject trust block, charts, data table, summary via markers
   const h2h3Path = path.join(TOOLS_DIR, "r2-h2h3.md");
-  fs.writeFileSync(h2h3Path, h2h3Page, { encoding: "utf-8" });
-  console.log(`Created ${h2h3Path}`);
+  let h2h3Content = fs.readFileSync(h2h3Path, "utf-8");
+  h2h3Content = injectMarker(h2h3Content, "h2h3-trust", h2h3TrustBlock(h2h3Data));
+  h2h3Content = injectMarker(h2h3Content, "h2h3-h2-chart", h2Bars(h2h3Data));
+  h2h3Content = injectMarker(h2h3Content, "h2h3-h3r-chart", h3rDumbbells(h2h3Data));
+  h2h3Content = injectMarker(h2h3Content, "h2h3-table", h2h3DataTable(h2h3Data));
+  h2h3Content = injectMarker(h2h3Content, "h2h3-summary", h2h3SummaryHtml(h2h3Data));
+  fs.writeFileSync(h2h3Path, h2h3Content, { encoding: "utf-8" });
+  console.log(`Updated ${h2h3Path}`);
+
+  // Page 2 (r2-explorer): load all r2_align_<lemma>.json files, inject trust + script
+  const DEFAULT_LEMMA = "dharma";
+  const alignFiles = fs.readdirSync(DATA_DIR)
+    .filter(f => /^r2_align_\w+\.json$/.test(f))
+    .map(f => f.replace(/^r2_align_/, "").replace(/\.json$/, ""))
+    .sort();
+  const lemmaList = [
+    DEFAULT_LEMMA,
+    ...alignFiles.filter(l => l !== DEFAULT_LEMMA)
+  ];
+  const alignDataMap = {};
+  for (const lemma of lemmaList) {
+    alignDataMap[lemma] = JSON.parse(
+      fs.readFileSync(path.join(DATA_DIR, `r2_align_${lemma}.json`), "utf-8")
+    );
+  }
+  const explorerPath = path.join(TOOLS_DIR, "r2-explorer.md");
+  let explorerContent = fs.readFileSync(explorerPath, "utf-8");
+  explorerContent = injectMarker(explorerContent, "explorer-trust", explorerTrustBlock(alignDataMap));
+  explorerContent = injectMarker(explorerContent, "explorer-script", generateExplorerScript(alignDataMap, lemmaList));
+  fs.writeFileSync(explorerPath, explorerContent, { encoding: "utf-8" });
+  console.log(`Updated ${explorerPath}`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) main();
