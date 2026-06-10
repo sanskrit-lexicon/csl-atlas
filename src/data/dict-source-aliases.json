@@ -2,10 +2,115 @@
   "schemaVersion": "1.0.0",
   "title": "Cross-dictionary source-siglum aliases (reviewed seed)",
   "description": "Maps fold-key variants of source sigla to a shared canonical id, for cross-dictionary citation comparison. The diacritic/case fold in source-siglum.mjs already aligns most variants (MBh/MBH -> mbh, RV/ṚV -> rv); this table only records the abbreviation-scheme differences the fold cannot catch. It is a SEED: grow it from the source-siglum review queue. Keys under 'aliases' are matched after folding.",
+  "reviewedNote": "Grown 2026-06-10 by adjudicating the top frequency families from scripts/obs/siglum_families.py; see docs/SIGLUM_ALIAS_ADJUDICATION.md for accept/partial/reject reasoning. Only single-work families were merged; clusters that mixed distinct works (e.g. Rājanighaṇṭu vs Rājataraṅgiṇī) were split or left in the queue.",
   "canonical": {
     "bhp": {
       "name": "Bhāgavata-purāṇa",
-      "aliases": ["bhag"]
+      "aliases": ["bhag", "bhagp", "bhagpedbomb"]
+    },
+    "mbh": {
+      "name": "Mahābhārata",
+      "aliases": ["mbhi", "mbhii", "mbhiii", "mbhiv", "mbhix"]
+    },
+    "ragh": {
+      "name": "Raghuvaṃśa",
+      "aliases": ["raghedcalc", "raghi", "raghii", "raghiii", "raghiv", "raghv", "raghvi", "raghvii", "raghviii", "raghix", "raghx", "raghxi", "raghxii", "raghxiii", "raghxiv", "raghxv", "raghxvi", "raghxvii", "raghxviii", "raghxix"]
+    },
+    "susr": {
+      "name": "Suśruta-saṃhitā",
+      "aliases": ["susri", "susriv", "susrii", "susrvi", "susrv"]
+    },
+    "aitbr": {
+      "name": "Aitareya-brāhmaṇa",
+      "aliases": ["aitbri", "aitbrii", "aitbriii", "aitbriv", "aitbrv", "aitbrvi", "aitbrvii", "aitbrviii"]
+    },
+    "dhatup": {
+      "name": "Dhātupāṭha",
+      "aliases": ["dhatupii", "dhatupiii", "dhatupiv", "dhatupv", "dhatupvi", "dhatupvii", "dhatupviii", "dhatupix", "dhatupx", "dhatupxi", "dhatupxiii", "dhatupxiv", "dhatupxv", "dhatupxvi", "dhatupxvii", "dhatupxix", "dhatupxx", "dhatupxxi", "dhatupxxii", "dhatupxxiii", "dhatupxxiv", "dhatupxxvi", "dhatupxxvii", "dhatupxxviii", "dhatupxxxi", "dhatupxxxii", "dhatupxxxiii", "dhatupxxxiv", "dhatupxxxv"]
+    },
+    "yajn": {
+      "name": "Yājñavalkya-smṛti",
+      "aliases": ["yajni", "yajnii", "yajniii", "yajnsch"]
+    },
+    "divy": {
+      "name": "Divyāvadāna",
+      "aliases": ["divyavad", "divyav"]
+    },
+    "indst": {
+      "name": "Indische Studien (Weber)",
+      "aliases": ["indsti", "indstii"]
+    },
+    "katysr": {
+      "name": "Kātyāyana-śrautasūtra",
+      "aliases": ["katysri", "katysriv", "katysrxxii", "katysrxxv"]
+    },
+    "kathas": {
+      "name": "Kathāsaritsāgara",
+      "aliases": ["kathaslxi", "kathasxviii", "kathaslxxii", "kathasvi"]
+    },
+    "rajatar": {
+      "name": "Rājataraṅgiṇī",
+      "aliases": ["rajat", "rajatv", "rajati", "rajatiii", "rajativ", "rajatvi", "rajatvii", "rajatviii"]
+    },
+    "pancat": {
+      "name": "Pañcatantra",
+      "aliases": ["pancatii", "pancatiii", "pancativ", "pancatv", "pancatedorn", "pancatedorni", "pancatedbomb", "pancatpr", "panch"]
+    },
+    "varahbrhs": {
+      "name": "Bṛhatsaṃhitā (Varāhamihira)",
+      "aliases": ["varahbrh", "varahbrhss", "varbrs", "varbr", "varbrsxiv"]
+    },
+    "maitrs": {
+      "name": "Maitrāyaṇī-saṃhitā",
+      "aliases": ["maitrsi", "maitrsii", "maitrsiii"]
+    },
+    "asvgrhy": {
+      "name": "Āśvalāyana-gṛhyasūtra",
+      "aliases": ["asvgr", "asvgri", "asvgriii", "asvgriv"]
+    },
+    "sankhgrhy": {
+      "name": "Śāṅkhāyana-gṛhyasūtra",
+      "aliases": ["sankhgr", "sankhgri"]
+    },
+    "gobh": {
+      "name": "Gobhila-gṛhyasūtra",
+      "aliases": ["gobhi", "gobhii", "gobhiii"]
+    },
+    "laty": {
+      "name": "Lāṭyāyana-śrautasūtra",
+      "aliases": ["latyi", "latyviii"]
+    },
+    "naigh": {
+      "name": "Naighaṇṭuka",
+      "aliases": ["naighi", "naighii", "naighiii"]
+    },
+    "nais": {
+      "name": "Naiṣadhacarita",
+      "aliases": ["naisi", "naisvi", "naisviii"]
+    },
+    "mrcch": {
+      "name": "Mṛcchakaṭikā",
+      "aliases": ["mrcchi", "mrcchiii"]
+    },
+    "balar": {
+      "name": "Bālarāmāyaṇa",
+      "aliases": ["balarii", "balariii", "balariv", "balarv"]
+    },
+    "chandup": {
+      "name": "Chāndogya-upaniṣad",
+      "aliases": ["chandups"]
+    },
+    "sabdarthak": {
+      "name": "Śabdārthakalpataru",
+      "aliases": ["sabdarthakalpataru"]
+    },
+    "markp": {
+      "name": "Mārkaṇḍeya-purāṇa",
+      "aliases": ["markps"]
+    },
+    "halay": {
+      "name": "Halāyudha",
+      "aliases": ["hala"]
     }
   }
 }
