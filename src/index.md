@@ -133,6 +133,12 @@ The [Lineage Sankey](/tools/lineage-sankey) visualises this collapse — MW's 40
 
 ---
 
+## Corpus frequency data
+
+[VisualDCS](https://github.com/gasyoun/VisualDCS) provides DCS corpus dashboards and per-lemma frequency data (M1–M8 CoNLL-U→SQLite pipeline). Once VisualDCS emits `dcs_lemma_summary.json` (see [`docs/VISUALDCS_CONSUMPTION_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/VISUALDCS_CONSUMPTION_CONTRACT.md)), this atlas will display per-lemma corpus frequency bands inline on lemma pages. Until then, follow the link above for DCS-derived evidence.
+
+---
+
 ## Companion documents on GitHub
 
 - [PAPER.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md) — the full IJL paper draft (~8,700 words; [submission-v1 tag](https://github.com/sanskrit-lexicon/MWS/releases/tag/submission-v1))
