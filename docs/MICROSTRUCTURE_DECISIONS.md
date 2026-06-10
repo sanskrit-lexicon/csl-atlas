@@ -260,3 +260,33 @@ class notation for gaṇa.
 **Caveat:** SHS feature fill is deterministic and useful for cross-dictionary
 root agreement, but it is still a convention parser. It should be reviewed from
 sample entries before being treated as philologically final.
+
+---
+
+## Round 12 — 2026-06-05: KRM cluster parse (Kavikalpadruma pada / transitivity)
+
+| # | Question | Decision | Consequence |
+|---|---|---|---|
+| 23 | KRM has 1,757 root rows but pada = 170 and trans = 50 — why under-read, and is it fixable? | **Parse KRM's parenthesised grammar cluster with cluster-scoped short forms** | `krm_cluster()` selects parenthetical groups bearing a gaṇa name and reads `para`/`A`/`uBa` (pada) and `saka`/`sa`/`aka` (trans) from there. **KRM pada 170 → 1,378, trans 50 → 1,735.** |
+
+The Kavikalpadruma's **anubandha slot is empty for all 1,757 roots** (`slot = 0`
+universally). Vopadeva's grammar instead lives in a **parenthesised cluster** right
+after the headword, e.g.:
+
+```
+(I-BvAdiH-792  sakarmakaH-sew-parasmEpadI)
+```
+
+= bhvādi cl. I, root 792, sakarmaka (transitive), seṭ, parasmaipada.
+
+The old code matched only VCP-style `0`-suffix forms (`para0`, `AtmanepadI0`) and full
+prose stems (`sakarmmak…` / `akarmmak…`). KRM uses **bare short forms** — `para`,
+`A`, `uBa` for pada and `saka`, `sa`, `aka` for transitivity — which never fired.
+Inside the gaṇa-bearing parenthetical they are unambiguous (bare `A` = ātmanepada
+cannot be confused with a preverb or short word in free prose, but cluster-scoped
+the inference is safe). Gaṇa was already captured correctly by the general `_GANA`
+detector matching `BvAdiH` / `curAdiH` etc. anywhere in the body.
+
+**Built:** `_KRM_GANA_NAMES` / `_KRM_PADA` / `_KRM_TRANS` + `krm_cluster()` in
+`scripts/lexico/m4_indigenous.py`. Root detection unchanged. Coverage after fix:
+pada 1,378 / 1,757 (78 %); trans 1,735 / 1,757 (99 %). Part of PR #34.
