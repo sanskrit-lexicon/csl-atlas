@@ -18,6 +18,7 @@ Look up a Sanskrit lemma (SLP1) and see which dictionaries record it, how many e
 const dossier = FileAttachment("../data/dicts/lemma-dossier.json").json();
 const localesEn = FileAttachment("../locales-en.json").json();
 const localesRu = FileAttachment("../locales-ru.json").json();
+const dcsSummary = FileAttachment("../data/dcs/dcs_lemma_summary.json").json();
 ```
 
 ```js
@@ -35,6 +36,7 @@ const t = (key) => {
 ```js
 const labelOf = new Map(dossier.dictionaries.map(d => [d.code, d.label]));
 const hrefOf = (code, line) => `${dossier.hrefBase}/${code}/${code}.txt#L${line}`;
+const dcsMap = dcsSummary?.lemmas ?? {};
 ```
 
 <div class="note">Covers the <b>${dossier.count.toLocaleString()}</b> lemmas attested in at least <b>${dossier.minDicts}</b> of the 7 target dictionaries (MW, AP, PWG, PWK, WIL, VCP, SKD). Rarer or single-dictionary lemmas are not in this static dossier — full-corpus lookup needs a search backend (deferred). Gender is shown only where a <code>&lt;lex&gt;</code> tag is present; VCP and SKD are prose and show none.</div>
@@ -65,15 +67,19 @@ display(html`<p style="color:var(--theme-foreground-muted)">
 
 ```js
 display(html`<div class="dossier-grid">
-  ${shown.map(e => html`<section class="lemma-card">
-    <h3>${e.l} <span class="cov">${t("phase2.dossier.in")} ${e.c}/7</span></h3>
-    <div class="chips">
-      ${e.d.map(([code, records, line, gender]) => html`<a class="chip" href=${hrefOf(code, line)} target="_blank" rel="noopener">
-        <b>${labelOf.get(code) ?? code}</b>
-        <span>${records}×${gender ? " · " + gender : ""}</span>
-      </a>`)}
-    </div>
-  </section>`)}
+  ${shown.map(e => {
+    const dcs = dcsMap[e.l];
+    return html`<section class="lemma-card">
+      <h3>${e.l} <span class="cov">${t("phase2.dossier.in")} ${e.c}/7</span></h3>
+      <div class="chips">
+        ${e.d.map(([code, records, line, gender]) => html`<a class="chip" href=${hrefOf(code, line)} target="_blank" rel="noopener">
+          <b>${labelOf.get(code) ?? code}</b>
+          <span>${records}×${gender ? " · " + gender : ""}</span>
+        </a>`)}
+        ${dcs ? html`<a class="chip chip-dcs" href="https://github.com/gasyoun/VisualDCS" target="_blank" rel="noopener"><b>DCS</b><span>band ${dcs.freqBand}/5</span></a>` : ""}
+      </div>
+    </section>`;
+  })}
 </div>`);
 ```
 
@@ -85,6 +91,9 @@ display(html`<div class="dossier-grid">
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { display: inline-flex; gap: 5px; align-items: baseline; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--theme-foreground-faint); text-decoration: none; font-size: .82rem; }
 .chip span { color: var(--theme-foreground-muted); }
+.chip-dcs { border-color: #2ca02c; }
+.chip-dcs b { color: #2ca02c; }
+.chip-dcs span { color: #2ca02c; opacity: .75; }
 </style>
 
 ---
