@@ -1233,3 +1233,60 @@ test("stemKey does not strip mid-word H or M", () => {
   assert.equal(stemKey("dharma"), "dharma");
   assert.equal(stemKey("brahman"), "brahman");
 });
+
+// ---- R2 page generation: build-r2-pages.mjs ----
+import { yearToX, rateToY, patternColor, h1Points, h2Bars, h3rDumbbells } from "../scripts/build-r2-pages.mjs";
+
+test("patternColor maps patterns to hex colors", () => {
+  assert.equal(patternColor("copy"), "#2ca02c"); // green
+  assert.equal(patternColor("verbatim copy"), "#2ca02c");
+  assert.equal(patternColor("condensation"), "#d62728"); // red
+  assert.equal(patternColor("revision"), "#ff7f0e"); // orange
+  assert.equal(patternColor("unknown"), "#1f77b4"); // default
+});
+
+test("yearToX maps years to x coordinates per spec", () => {
+  assert.equal(yearToX(1820), 60);
+  assert.equal(yearToX(1960), 550);
+  const y1832 = yearToX(1832);
+  assert.ok(y1832 > 60 && y1832 < 150, `1832 should map between 60 and 150, got ${y1832}`);
+});
+
+test("rateToY maps rates to y coordinates", () => {
+  assert.equal(rateToY(0), 250);
+  assert.equal(rateToY(1), 40);
+  const mid = rateToY(0.5);
+  assert.ok(mid > 40 && mid < 250, `0.5 should map between 40 and 250, got ${mid}`);
+});
+
+test("h1Points generates SVG with 11 data points plus legend", () => {
+  const h1Data = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_h1.json"), "utf-8"));
+  const svg = h1Points(h1Data);
+  assert.ok(svg.includes("<svg"), "output should contain SVG tag");
+  assert.ok(svg.includes("skd"), "should contain dict label skd");
+  assert.ok(svg.includes("ap"), "should contain dict label ap");
+  assert.ok(svg.includes("Pearson"), "should contain Pearson-r annotation");
+  assert.ok(svg.includes("indigenous"), "should contain legend");
+});
+
+test("h2Bars generates SVG with 4 bars and percentage labels", () => {
+  const h2h3Data = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_h2h3.json"), "utf-8"));
+  const svg = h2Bars(h2h3Data);
+  assert.ok(svg.includes("<svg"), "output should contain SVG tag");
+  assert.ok(svg.includes("76%"), "should contain cited rate as 76% (0.762)");
+  assert.ok(svg.includes("59%"), "should contain uncited rate as 59% (0.591)");
+  assert.ok(svg.includes("Cited"), "should have Cited group label");
+  assert.ok(svg.includes("Uncited"), "should have Uncited group label");
+});
+
+test("h3rDumbbells generates SVG with 3 edges and pattern colors", () => {
+  const h2h3Data = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_h2h3.json"), "utf-8"));
+  const svg = h3rDumbbells(h2h3Data);
+  assert.ok(svg.includes("<svg"), "output should contain SVG tag");
+  const lineCount = (svg.match(/<line/g) || []).length;
+  assert.ok(lineCount >= 3, `should have ≥3 lines for dumbbells, got ${lineCount}`);
+  // Check that the 3 edges are represented
+  assert.ok(svg.includes("Wilson 1832"), "should contain Wilson 1832");
+  assert.ok(svg.includes("Śabda-Sāgara"), "should contain Śabda-Sāgara");
+  assert.ok(svg.includes("Apte"), "should contain Apte");
+});

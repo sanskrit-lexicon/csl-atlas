@@ -50,7 +50,8 @@ export default {
         { name: "Semantic fields", path: "/tools/semantic-fields" },
         { name: "Cross-reference lineage", path: "/tools/xref-lineage" },
         { name: "R2 sense explorer", path: "/tools/r2-explorer" },
-        { name: "R2 sense granularity", path: "/tools/r2-h1" }
+        { name: "R2 sense granularity", path: "/tools/r2-h1" },
+        { name: "R2 survival and drift", path: "/tools/r2-h2h3" }
       ]
     },
     {
