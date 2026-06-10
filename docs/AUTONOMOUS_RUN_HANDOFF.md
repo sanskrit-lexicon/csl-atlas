@@ -16,8 +16,9 @@ You are mid-run, continuing unattended work. Each iteration:
 
 1. ORIENT. `git fetch origin`. Never trust the local checkout or HEAD — an external
    bot moves it. Read docs/AUTONOMOUS_RUN_CHARTER.md, docs/AUTONOMOUS_RUN_ROADMAP.md,
-   docs/AUTONOMOUS_RUN_HANDOFF.md (on origin/main or PR #57) and recall memory
-   'project-autonomous-run-2026-06'. Follow them exactly.
+   docs/AUTONOMOUS_RUN_HANDOFF.md (on origin/main). These three repo docs are
+   self-contained and authoritative — follow them exactly. (No external memory or
+   prior chat context is required; everything you need is in this repo.)
 
 2. PICK NEXT. From .ai_state.md + open PRs, find the next incomplete roadmap cell.
    Keep the four streams balanced across the week (atlas viz · Cologne tooling ·
@@ -26,8 +27,10 @@ You are mid-run, continuing unattended work. Each iteration:
 
 3. DO IT in a fresh worktree off origin/main, production-ready (generator + JSON with
    empty human fields + page/tests + docs, idempotent — rerun must give no git diff).
-   STAY OUT OF THE BOT'S LANE: never touch feature/dcs-summary-adapter or siglum-alias
-   files. On collision risk, switch to a different queue item.
+   STAY OUT OF THE BOT'S LANE: a parallel automation also commits to this repo (it
+   recently merged PR #55 siglum-aliases and PR #58 dcs-summary-adapter). Before
+   editing any file, `git fetch` and check it isn't being worked on another open
+   branch/PR; on collision risk, switch to a different queue item.
 
 4. SHIP. Feature branch; open the PR with `gh api -X POST repos/.../pulls` (REST —
    GraphQL / `gh pr create` has been TLS-timing-out). Auto-merge on green CI ONLY for
