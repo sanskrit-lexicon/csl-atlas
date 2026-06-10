@@ -60,7 +60,8 @@ export default {
         { name: "Gender conflicts", path: "/tools/review-gender-conflicts" },
         { name: "Source layers", path: "/tools/review-source-layers" },
         { name: "Alignment confidence", path: "/tools/review-alignment" },
-        { name: "Source-siglum aliases", path: "/tools/review-source-siglum" }
+        { name: "Source-siglum aliases", path: "/tools/review-source-siglum" },
+        { name: "Cross-dict divergence", path: "/tools/sense-divergence" }
       ]
     },
     {
