@@ -145,6 +145,66 @@ export function h1Points(h1Json) {
   return svg;
 }
 
+// ---- H1 panel scatter SVG (deconfounded 30-lemma panel) ----
+
+export function h1PanelPoints(panelJson) {
+  const { rows, stats } = panelJson;
+  const r = stats.pearsonYearVsUnits || 0.093;
+  const archivedR = stats.archivedPearsonAll || 0.01;
+  const MAX_UNITS = 25;
+
+  function panelRateToY(rate) {
+    return 250 - (rate / MAX_UNITS) * 210;
+  }
+
+  let svg = `<svg width="720" height="440" font-family="system-ui,sans-serif" font-size="12">`;
+
+  // Axes
+  svg += svgLine(60, 390, 550, 390, "#999", 1);
+  svg += svgLine(60, 30, 60, 390, "#999", 1);
+
+  // X ticks
+  for (const yr of [1820, 1840, 1860, 1880, 1900, 1920, 1940, 1960]) {
+    svg += svgText(yearToX(yr), 406, yr.toString(), "middle", "#555", 11);
+  }
+
+  // Y ticks (0, 5, 10, 15, 20, 25)
+  for (const u of [0, 5, 10, 15, 20, 25]) {
+    const y = panelRateToY(u);
+    svg += svgLine(60, y, 550, y, "#eee", 1);
+    svg += svgText(52, y + 4, u.toString(), "end", "#555", 11);
+  }
+
+  // Data points
+  for (const row of rows) {
+    const x = yearToX(row.year);
+    const y = panelRateToY(Math.min(row.meanPanelUnits, MAX_UNITS));
+    const color = FAMILY_COLORS[row.family] || "#999";
+    const title = `${row.dict} (${row.year}, ${row.family}): ${row.meanPanelUnits} panel-units/lemma (${row.panelLemmasFound}/${row.panelLemmasTotal} panel lemmas found)`;
+    svg += `<circle cx="${x}" cy="${y}" r="6" fill="${color}" fill-opacity="0.85"><title>${escapeXml(title)}</title></circle>`;
+    svg += svgText(x + 8, y + 4, row.dict, "start", "#333", 11);
+  }
+
+  // Family legend (right side)
+  const legendX = 564;
+  let legendY = 30;
+  for (const family of ["Apte", "Benfey", "Cappeller", "Monier-Williams", "Petersburg", "Wilson", "indigenous"]) {
+    svg += svgCircle(legendX, legendY, 6, FAMILY_COLORS[family] || "#999");
+    svg += svgText(legendX + 10, legendY + 4, family, "start", "#333", 10);
+    legendY += 18;
+  }
+
+  // Axis labels
+  svg += svgText(305, 432, "publication year", "middle", "#333", 11);
+  svg += `<text x="16" y="220" transform="rotate(-90 16 220)" text-anchor="middle" fill="#333" font-size="11">panel sense-units / lemma</text>`;
+
+  // Pearson annotation
+  svg += svgText(305, 425, `Pearson r = ${r.toFixed(3)} vs archived ${archivedR.toFixed(3)}`, "middle", "#555", 10);
+
+  svg += `</svg>`;
+  return svg;
+}
+
 // ---- H2 survival bars SVG ----
 
 export function h2Bars(h2h3Json) {
@@ -438,13 +498,16 @@ export function injectMarker(fileContent, markerName, newContent) {
 
 async function main() {
   const h1Data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "r2_h1.json"), "utf-8"));
+  const h1PanelData = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "r2_h1_panel.json"), "utf-8"));
   const h2h3Data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "r2_h2h3.json"), "utf-8"));
 
-  // Page 1 (r2-h1): inject scatter SVG
+  // Page 1 (r2-h1): inject scatter SVG + panel SVG
   const h1Svg = h1Points(h1Data);
+  const h1PanelSvg = h1PanelPoints(h1PanelData);
   const h1Path = path.join(TOOLS_DIR, "r2-h1.md");
   let h1Content = fs.readFileSync(h1Path, "utf-8");
   h1Content = injectMarker(h1Content, "h1-scatter", h1Svg);
+  h1Content = injectMarker(h1Content, "h1-panel", h1PanelSvg);
   fs.writeFileSync(h1Path, h1Content, { encoding: "utf-8" });
   console.log(`Updated ${h1Path}`);
 

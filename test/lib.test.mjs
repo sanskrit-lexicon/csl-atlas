@@ -11,7 +11,7 @@ import os from "node:os";
 import fs from "node:fs";
 import path from "node:path";
 
-import { injectMarker, generateExplorerScript } from "../scripts/build-r2-pages.mjs";
+import { injectMarker, generateExplorerScript, h1PanelPoints } from "../scripts/build-r2-pages.mjs";
 import { parseHeader, iterateRecords } from "../scripts/lib/mw-parser.mjs";
 import { classifyTypes, normalizeSource, isLexicographerOnly, extractCitations } from "../scripts/lib/mw-classifiers.mjs";
 import { baseForm, layerForSource, isEditorialReference, recordSourceLayers } from "../scripts/lib/mw-source-layers.mjs";
@@ -307,4 +307,34 @@ test("parseDcsSummaryFile returns {} when lemmas key is absent", () => {
   const map = parseDcsSummaryFile(file);
   fs.unlinkSync(file);
   assert.deepEqual(map, {});
+});
+
+// ---- h1PanelPoints ----
+test("h1PanelPoints returns a valid SVG string from panel JSON", () => {
+  const mockPanel = {
+    rows: [
+      { dict: "mw",  year: 1899, family: "Monier-Williams", meanPanelUnits: 14.9, panelLemmasFound: 30, panelLemmasTotal: 30 },
+      { dict: "wil", year: 1832, family: "Wilson",          meanPanelUnits: 8.0,  panelLemmasFound: 30, panelLemmasTotal: 30 },
+      { dict: "skd", year: 1822, family: "indigenous",      meanPanelUnits: 1.767,panelLemmasFound: 30, panelLemmasTotal: 30 },
+    ],
+    stats: { pearsonYearVsUnits: 0.093, archivedPearsonAll: 0.01 }
+  };
+  const svg = h1PanelPoints(mockPanel);
+  assert.ok(svg.startsWith("<svg"), "must start with <svg");
+  assert.ok(svg.endsWith("</svg>"), "must end with </svg>");
+  assert.ok(svg.includes("mw"), "must include dict label");
+  assert.ok(svg.includes("Pearson r = 0.093"), "must include Pearson r");
+  assert.ok(!svg.includes("NaN"), "must not contain NaN coordinates");
+});
+
+test("h1PanelPoints clips values above MAX_UNITS without NaN", () => {
+  const mockPanel = {
+    rows: [
+      { dict: "mw72", year: 1872, family: "Monier-Williams", meanPanelUnits: 24.333, panelLemmasFound: 30, panelLemmasTotal: 30 },
+    ],
+    stats: { pearsonYearVsUnits: 0.05, archivedPearsonAll: 0.01 }
+  };
+  const svg = h1PanelPoints(mockPanel);
+  assert.ok(!svg.includes("NaN"), "clipped outlier must not produce NaN");
+  assert.ok(svg.includes("mw72"), "dict label must be present");
 });
