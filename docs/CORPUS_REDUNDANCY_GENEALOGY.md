@@ -21,8 +21,11 @@ derivation notes already recorded in [`../data/dictionary_inventory.csv`](../dat
   canonical SLP1 — light normalisation moved only 7 of 343,460 lemmas, so the
   lower-redundancy bound needs anusvāra/visarga folding). **Containment is a floor
   for structural overlap, not proof of direct copying** (same caution as
-  `MICROSTRUCTURE_XREF_LINEAGE.md`). `abch` is excluded pending a `<k1>` parser
-  tweak (its `<L>` lines do not expose `<k1>` the same way).
+  `MICROSTRUCTURE_XREF_LINEAGE.md`). All 43 dictionaries are now included: the
+  three Hemacandra kośas (abch, acph, acsj) carry no `<k1>` and are read from
+  their `<syns><s>…</s>` synonym format by
+  [`scripts/obs/headword_multiplicity.py`](../scripts/obs/headword_multiplicity.py),
+  validated to reproduce the sanhw1 lemma counts exactly.
 - Validation: re-run the extraction (command at foot); the entry total must
   reconcile with the canonical 1,495,459 and with `data/headwords.json` per-dict
   `<L>` counts.
@@ -35,8 +38,8 @@ derivation notes already recorded in [`../data/dictionary_inventory.csv`](../dat
 | Measure | Value |
 |---|---|
 | Raw `<L>` entries (43 dicts) | 1,495,459 |
-| Distinct lemmas (`<k1>`) | 409,011 |
-| **Collapse ratio** | **3.66 : 1** |
+| Distinct lemmas (`<k1>` + kośa `<syns>`) | 409,649 |
+| **Collapse ratio** | **3.65 : 1** |
 | Lemmas in ≥2 dicts (redundant) | **57.9 %** |
 | Lemmas in exactly 1 dict (independent) | 42.1 % |
 | Independence band (18-dict core+kosha, surface→aggressive norm) | 42.4 % → 36.5 % |
@@ -61,6 +64,12 @@ two populations:
 The metric validates itself: the dictionaries we *expect* to be derivative score
 low unique%, the specialised/indigenous ones score high. This is the
 content-axis evidence behind `XREF-CORE` ("shared core, not wholesale descent").
+
+A third pattern emerges once the kośas are parsed: the **thesaurus kośas are not
+independent vocabulary**. Abhidhānacintāmaṇi (abch) supplies 11,584 synonym lemmas
+but only **3.3 % are unique** (acph 14.2 %, acsj 7.6 %) — a synonym dictionary
+re-groups already-attested common words rather than adding new ones, the opposite
+of the citation-driven specialised lexica (bhs/ieg) above.
 
 ## 3. Inheritance stemma (containment + year + size asymmetry)
 
@@ -91,9 +100,8 @@ rare-term tests can be layered for proof of direct copying.
 ## Reproduction
 
 ```sh
-# Entry→lemma collapse + per-dict unique contribution (43 dicts):
-#   awk over ../csl-orig/v02/*/<code>.txt: dedupe <k1> per dict, build a
-#   lemma→{dicts} multiplicity map, count mult==1 per owner dict.
+# Entry→lemma collapse + per-dict unique contribution (all 43 dicts, format-aware):
+python scripts/obs/headword_multiplicity.py     # -> data/obs/headword_multiplicity.csv
 # Stemma edges: read a_in_b / b_in_a from data/sanhw1_jaccard.csv;
 #   assign direction by data/dictionary_inventory.csv `year`.
 ```
