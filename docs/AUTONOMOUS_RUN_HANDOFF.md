@@ -20,10 +20,10 @@ You are mid-run, continuing unattended work. Each iteration:
    self-contained and authoritative — follow them exactly. (No external memory or
    prior chat context is required; everything you need is in this repo.)
 
-2. PICK NEXT. From .ai_state.md + open PRs, find the next incomplete roadmap cell.
-   Keep the four streams balanced across the week (atlas viz · Cologne tooling ·
-   decision-support · research). Starting position: Week 1, item 1 = sense-divergence
-   map (Stream 1 viz).
+2. PICK NEXT. From .ai_state.md + merged/open PRs, find the next incomplete roadmap
+   cell — do not assume a fixed starting item; the run is already in progress and a
+   parallel automation may have shipped some cells. Keep the four streams balanced
+   across the week (atlas viz · Cologne tooling · decision-support · research).
 
 3. DO IT in a fresh worktree off origin/main, production-ready (generator + JSON with
    empty human fields + page/tests + docs, idempotent — rerun must give no git diff).
@@ -52,5 +52,7 @@ or maker calls. Intensity: no ceiling. Continue draining the queue.
 
 ## Status pointers (updated by the run)
 - Shipped pre-Week-1: R2 page regeneration → PR #56.
-- Setup PR (charter + roadmap + this handoff): PR #57.
-- Current position: **Week 1, item 1 — sense-divergence map** (not yet started).
+- Setup PR (charter + roadmap + this handoff): PR #57; handoff made portable in PR #62.
+- Run is in progress: Week 1 viz items began landing via PR #61 (incl. the
+  sense-divergence map). **Derive the current position from .ai_state.md + PRs** — do
+  not trust a hardcoded position here.
