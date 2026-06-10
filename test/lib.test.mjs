@@ -22,6 +22,7 @@ import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/di
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
 import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma } from "../src/lib/lookup-normalize.js";
+import { parseDcsSummaryFile } from "../scripts/lib/dcs-summary.mjs";
 
 // ---- build-r2-pages ----
 test("injectMarker is idempotent: inject twice gives identical result", () => {
@@ -273,4 +274,37 @@ test("loadPreserved carries only human-decided items", () => {
   assert.equal(m.has("a"), false);
   assert.equal(m.has("b"), true);
   assert.equal(m.has("c"), true);
+});
+
+// ---- dcs-summary ----
+test("parseDcsSummaryFile returns {} for a missing file", () => {
+  const p = path.join(os.tmpdir(), `dcs-nope-${Date.now()}.json`);
+  assert.deepEqual(parseDcsSummaryFile(p), {});
+});
+
+test("parseDcsSummaryFile resolves anchor lemmas from a present file", () => {
+  const file = path.join(os.tmpdir(), `dcs-${Date.now()}.json`);
+  fs.writeFileSync(file, JSON.stringify({
+    schemaVersion: "1.0.0", generatedBy: "VisualDCS",
+    lemmas: {
+      gam:        { freqBand: 5, attested: true, formCount: 144 },
+      Darma:      { freqBand: 5, attested: true },
+      boDisattva: { freqBand: 2, attested: true, formCount: 7, firstAttestationEra: "late" }
+    }
+  }));
+  const map = parseDcsSummaryFile(file);
+  fs.unlinkSync(file);
+  assert.equal(map.gam?.freqBand, 5);
+  assert.equal(map.gam?.formCount, 144);
+  assert.equal(map.Darma?.attested, true);
+  assert.equal(map.boDisattva?.firstAttestationEra, "late");
+  assert.equal(map.xyz, undefined);
+});
+
+test("parseDcsSummaryFile returns {} when lemmas key is absent", () => {
+  const file = path.join(os.tmpdir(), `dcs-empty-${Date.now()}.json`);
+  fs.writeFileSync(file, JSON.stringify({ schemaVersion: "1.0.0", generatedBy: "VisualDCS" }));
+  const map = parseDcsSummaryFile(file);
+  fs.unlinkSync(file);
+  assert.deepEqual(map, {});
 });
