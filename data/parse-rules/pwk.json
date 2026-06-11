@@ -1,0 +1,489 @@
+{
+  "schema": "mudidi-parse-rules/0.1",
+  "dict": "pwk",
+  "title": "Petersburg Woerterbuch, kuerzere Fassung (1879-89)",
+  "source_file": "csl-orig/v02/pw/pw.txt",
+  "target_language": "German",
+  "record_count": 170556,
+  "field_inventory": [
+    {
+      "tag": "lex",
+      "count": 177783,
+      "mdf": "\\ps",
+      "adequacy": "clean",
+      "role": "grammar/gender"
+    },
+    {
+      "tag": "k1",
+      "count": 170556,
+      "mdf": "\\lx",
+      "adequacy": "clean",
+      "role": "headword"
+    },
+    {
+      "tag": "k2",
+      "count": 170556,
+      "mdf": "\\lc",
+      "adequacy": "partial",
+      "role": "segmented/sort key"
+    },
+    {
+      "tag": "pc",
+      "count": 170556,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "page-column coordinate (archival)"
+    },
+    {
+      "tag": "div",
+      "count": 131442,
+      "mdf": "\\sn",
+      "adequacy": "clean",
+      "role": "sense division"
+    },
+    {
+      "tag": "ab",
+      "count": 107807,
+      "mdf": "\\cf",
+      "adequacy": "partial",
+      "role": "abbreviation (q.v. -> cross-ref)"
+    },
+    {
+      "tag": "ls",
+      "count": 98476,
+      "mdf": "\\bb",
+      "adequacy": "lossy",
+      "role": "literary source / L. hedge"
+    },
+    {
+      "tag": "info",
+      "count": 22611,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "machine annotation (infrastructure)"
+    },
+    {
+      "tag": "hom",
+      "count": 10052,
+      "mdf": "\\hm",
+      "adequacy": "clean",
+      "role": "homonym display"
+    },
+    {
+      "tag": "h",
+      "count": 8012,
+      "mdf": "\\hm",
+      "adequacy": "clean",
+      "role": "homonym number"
+    },
+    {
+      "tag": "lang",
+      "count": 265,
+      "mdf": "\\es",
+      "adequacy": "partial",
+      "role": "source language"
+    },
+    {
+      "tag": "gk",
+      "count": 90,
+      "mdf": "\\et",
+      "adequacy": "partial",
+      "role": "Greek inline (etymology)"
+    }
+  ],
+  "unmapped_tags": [
+    {
+      "tag": "is",
+      "count": 32667
+    },
+    {
+      "tag": "bot",
+      "count": 7987
+    },
+    {
+      "tag": "zoo",
+      "count": 364
+    },
+    {
+      "tag": "arab",
+      "count": 48
+    },
+    {
+      "tag": "iw",
+      "count": 31
+    },
+    {
+      "tag": "sic",
+      "count": 27
+    },
+    {
+      "tag": "span",
+      "count": 4
+    },
+    {
+      "tag": "F",
+      "count": 1
+    },
+    {
+      "tag": "mong",
+      "count": 1
+    },
+    {
+      "tag": "rus",
+      "count": 1
+    }
+  ],
+  "abbreviations": {
+    "ab_distinct": 296,
+    "ab_top": [
+      {
+        "value": "N. pr.",
+        "count": 19158
+      },
+      {
+        "value": "best.",
+        "count": 10544
+      },
+      {
+        "value": "Acc.",
+        "count": 4893
+      },
+      {
+        "value": "v. a.",
+        "count": 4875
+      },
+      {
+        "value": "Pl.",
+        "count": 4795
+      },
+      {
+        "value": "Comp.",
+        "count": 3560
+      },
+      {
+        "value": "Bein.",
+        "count": 3504
+      },
+      {
+        "value": "Nom. abstr.",
+        "count": 2974
+      },
+      {
+        "value": "Loc.",
+        "count": 2809
+      },
+      {
+        "value": "Caus.",
+        "count": 2797
+      },
+      {
+        "value": "v. l.",
+        "count": 2732
+      },
+      {
+        "value": "Vgl.",
+        "count": 2471
+      },
+      {
+        "value": "Bez.",
+        "count": 2458
+      },
+      {
+        "value": "Instr.",
+        "count": 2253
+      },
+      {
+        "value": "Patron.",
+        "count": 2044
+      },
+      {
+        "value": "Gen.",
+        "count": 2037
+      },
+      {
+        "value": "u. s. w.",
+        "count": 2006
+      },
+      {
+        "value": "dass.",
+        "count": 1917
+      },
+      {
+        "value": "adj. Comp.",
+        "count": 1884
+      },
+      {
+        "value": "Abl.",
+        "count": 1438
+      },
+      {
+        "value": "Med.",
+        "count": 1356
+      },
+      {
+        "value": "s. u.",
+        "count": 1236
+      },
+      {
+        "value": "Comm.",
+        "count": 1016
+      },
+      {
+        "value": "Dat.",
+        "count": 990
+      },
+      {
+        "value": "Nom. ag.",
+        "count": 977
+      },
+      {
+        "value": "vgl.",
+        "count": 872
+      },
+      {
+        "value": "Partic.",
+        "count": 852
+      },
+      {
+        "value": "s.",
+        "count": 839
+      },
+      {
+        "value": "Bed.",
+        "count": 800
+      },
+      {
+        "value": "buddh.",
+        "count": 782
+      },
+      {
+        "value": "insbes.",
+        "count": 778
+      },
+      {
+        "value": "Sg.",
+        "count": 776
+      },
+      {
+        "value": "Act.",
+        "count": 629
+      },
+      {
+        "value": "desgl.",
+        "count": 608
+      },
+      {
+        "value": "Du.",
+        "count": 582
+      },
+      {
+        "value": "überh.",
+        "count": 556
+      },
+      {
+        "value": "Nom.",
+        "count": 529
+      },
+      {
+        "value": "Desid.",
+        "count": 502
+      },
+      {
+        "value": "Beiw.",
+        "count": 502
+      },
+      {
+        "value": "Infin.",
+        "count": 489
+      }
+    ],
+    "ls_siglum_distinct": 56234,
+    "ls_siglum_top": [
+      {
+        "value": "GAL.",
+        "count": 1736
+      },
+      {
+        "value": "OPP. CAT. 1",
+        "count": 1727
+      },
+      {
+        "value": "BURNELL, T.",
+        "count": 971
+      },
+      {
+        "value": "ĀPAST.",
+        "count": 622
+      },
+      {
+        "value": "NIGH. PR.",
+        "count": 577
+      },
+      {
+        "value": "GAUT.",
+        "count": 539
+      },
+      {
+        "value": "ĀRṢ. BR.",
+        "count": 418
+      },
+      {
+        "value": "ebend.",
+        "count": 387
+      },
+      {
+        "value": "VAITĀN.",
+        "count": 375
+      },
+      {
+        "value": "NĪLAK.",
+        "count": 291
+      },
+      {
+        "value": "ṚV.",
+        "count": 288
+      },
+      {
+        "value": "PAÑCAD.",
+        "count": 282
+      },
+      {
+        "value": "SĀY.",
+        "count": 272
+      },
+      {
+        "value": "OPP. Cat. 1",
+        "count": 272
+      },
+      {
+        "value": "KĀŚ.",
+        "count": 260
+      },
+      {
+        "value": "BHAṬṬ.",
+        "count": 259
+      },
+      {
+        "value": "AV.",
+        "count": 162
+      },
+      {
+        "value": "BHĀG. P.",
+        "count": 148
+      },
+      {
+        "value": "ZACH. Beitr.",
+        "count": 132
+      },
+      {
+        "value": "<ab>ebend.</ab>",
+        "count": 102
+      },
+      {
+        "value": "Nachtr. 5",
+        "count": 101
+      },
+      {
+        "value": "Nachtr. 3",
+        "count": 99
+      },
+      {
+        "value": "ŚAT. BR.",
+        "count": 97
+      },
+      {
+        "value": "CARAKA. 1,27",
+        "count": 96
+      },
+      {
+        "value": "CARAKA. 3,8",
+        "count": 82
+      },
+      {
+        "value": "AUFRECHT",
+        "count": 82
+      },
+      {
+        "value": "Nachtr. 4",
+        "count": 81
+      },
+      {
+        "value": "Nachtr. 1",
+        "count": 79
+      },
+      {
+        "value": "MBH.",
+        "count": 78
+      },
+      {
+        "value": "Nachtr. 2",
+        "count": 77
+      },
+      {
+        "value": "Nachtr. 6",
+        "count": 73
+      },
+      {
+        "value": "MAHĪDH.",
+        "count": 64
+      },
+      {
+        "value": "TS. PRĀT.",
+        "count": 63
+      },
+      {
+        "value": "CARAKA. 6,18",
+        "count": 59
+      },
+      {
+        "value": "TS.",
+        "count": 58
+      },
+      {
+        "value": "Comm. zu TS. PRĀT.",
+        "count": 57
+      },
+      {
+        "value": "VS.",
+        "count": 53
+      },
+      {
+        "value": "VP.²",
+        "count": 53
+      },
+      {
+        "value": "HALL",
+        "count": 52
+      },
+      {
+        "value": "CARAKA. 6,3",
+        "count": 47
+      }
+    ],
+    "expansions": "not linked; see MWS/mwabbreviations/abbr.html and per-dict intro pages"
+  },
+  "entry_structure": {
+    "record_open": "<L>",
+    "record_close": "<LEND>",
+    "field_separator": "¦",
+    "headword_marker": "k1",
+    "homonym_marker": "h",
+    "sense_division_marker": "div",
+    "entry_code_marker": null,
+    "continuation_entries": 0,
+    "dominant_microstructure_layer": "subentry",
+    "microstructure_layers_present": [
+      "subentry",
+      "preverb",
+      "root"
+    ]
+  },
+  "caveats": [],
+  "evidence": {
+    "field_inventory.count": "observed",
+    "field_inventory.mdf": "derived (csl-standards MDF_EXPORT_MAPPING.md)",
+    "abbreviations": "observed",
+    "dominant_microstructure_layer": "derived"
+  },
+  "generated_by": "scripts/parse_rules/build_parse_rules.py"
+}

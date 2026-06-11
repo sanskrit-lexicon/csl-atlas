@@ -1,0 +1,124 @@
+{
+  "schema": "mudidi-parse-rules/0.1",
+  "dict": "skd",
+  "title": "Sabdakalpadruma (1822-58)",
+  "source_file": "csl-orig/v02/skd/skd.txt",
+  "target_language": "Sanskrit",
+  "record_count": 42531,
+  "field_inventory": [
+    {
+      "tag": "k1",
+      "count": 42531,
+      "mdf": "\\lx",
+      "adequacy": "clean",
+      "role": "headword"
+    },
+    {
+      "tag": "k2",
+      "count": 42531,
+      "mdf": "\\lc",
+      "adequacy": "partial",
+      "role": "segmented/sort key"
+    },
+    {
+      "tag": "pc",
+      "count": 42531,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "page-column coordinate (archival)"
+    }
+  ],
+  "unmapped_tags": [
+    {
+      "tag": "P",
+      "count": 1130
+    },
+    {
+      "tag": "C2",
+      "count": 926
+    },
+    {
+      "tag": "C1",
+      "count": 921
+    },
+    {
+      "tag": "C4",
+      "count": 825
+    },
+    {
+      "tag": "C3",
+      "count": 824
+    },
+    {
+      "tag": "C5",
+      "count": 789
+    },
+    {
+      "tag": "H",
+      "count": 109
+    },
+    {
+      "tag": "C6",
+      "count": 55
+    },
+    {
+      "tag": "C7",
+      "count": 46
+    },
+    {
+      "tag": "C8",
+      "count": 46
+    },
+    {
+      "tag": "C9",
+      "count": 42
+    },
+    {
+      "tag": "C10",
+      "count": 24
+    },
+    {
+      "tag": "C11",
+      "count": 12
+    },
+    {
+      "tag": "F",
+      "count": 5
+    },
+    {
+      "tag": "Picture",
+      "count": 5
+    }
+  ],
+  "abbreviations": {
+    "ab_distinct": 0,
+    "ab_top": [],
+    "ls_siglum_distinct": 0,
+    "ls_siglum_top": [],
+    "expansions": "not linked; see MWS/mwabbreviations/abbr.html and per-dict intro pages"
+  },
+  "entry_structure": {
+    "record_open": "<L>",
+    "record_close": "<LEND>",
+    "field_separator": "¦",
+    "headword_marker": "k1",
+    "homonym_marker": null,
+    "sense_division_marker": null,
+    "entry_code_marker": null,
+    "continuation_entries": 0,
+    "dominant_microstructure_layer": "root",
+    "microstructure_layers_present": [
+      "root"
+    ]
+  },
+  "caveats": [
+    "Western-markup field inventory is ~empty by construction: this dictionary encodes citations / verbs / senses in indigenous prose (iti+authority, quotes, dhatuh / preraNe / conjugation-class names), not European tags. A zero here is detector blindness, NOT absence of content. See docs/MICROSTRUCTURE_ZERO_MEANING.md."
+  ],
+  "evidence": {
+    "field_inventory.count": "observed",
+    "field_inventory.mdf": "derived (csl-standards MDF_EXPORT_MAPPING.md)",
+    "abbreviations": "observed",
+    "dominant_microstructure_layer": "derived"
+  },
+  "generated_by": "scripts/parse_rules/build_parse_rules.py"
+}

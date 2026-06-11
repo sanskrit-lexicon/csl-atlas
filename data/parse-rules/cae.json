@@ -1,0 +1,272 @@
+{
+  "schema": "mudidi-parse-rules/0.1",
+  "dict": "cae",
+  "title": "Cappeller Sanskrit-English (1891)",
+  "source_file": "csl-orig/v02/cae/cae.txt",
+  "target_language": "English",
+  "record_count": 40069,
+  "field_inventory": [
+    {
+      "tag": "lex",
+      "count": 44925,
+      "mdf": "\\ps",
+      "adequacy": "clean",
+      "role": "grammar/gender"
+    },
+    {
+      "tag": "k1",
+      "count": 40069,
+      "mdf": "\\lx",
+      "adequacy": "clean",
+      "role": "headword"
+    },
+    {
+      "tag": "k2",
+      "count": 40069,
+      "mdf": "\\lc",
+      "adequacy": "partial",
+      "role": "segmented/sort key"
+    },
+    {
+      "tag": "pc",
+      "count": 40069,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "page-column coordinate (archival)"
+    },
+    {
+      "tag": "ab",
+      "count": 25564,
+      "mdf": "\\cf",
+      "adequacy": "partial",
+      "role": "abbreviation (q.v. -> cross-ref)"
+    },
+    {
+      "tag": "div",
+      "count": 3190,
+      "mdf": "\\sn",
+      "adequacy": "clean",
+      "role": "sense division"
+    },
+    {
+      "tag": "e",
+      "count": 2670,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "entry-structure code (structural)"
+    },
+    {
+      "tag": "h",
+      "count": 2560,
+      "mdf": "\\hm",
+      "adequacy": "clean",
+      "role": "homonym number"
+    },
+    {
+      "tag": "lang",
+      "count": 3,
+      "mdf": "\\es",
+      "adequacy": "partial",
+      "role": "source language"
+    }
+  ],
+  "unmapped_tags": [
+    {
+      "tag": "vlex",
+      "count": 1078
+    }
+  ],
+  "abbreviations": {
+    "ab_distinct": 95,
+    "ab_top": [
+      {
+        "value": "acc.",
+        "count": 1709
+      },
+      {
+        "value": "N.",
+        "count": 1707
+      },
+      {
+        "value": "adv.",
+        "count": 1607
+      },
+      {
+        "value": "loc.",
+        "count": 1225
+      },
+      {
+        "value": "C.",
+        "count": 1151
+      },
+      {
+        "value": "prec.",
+        "count": 1141
+      },
+      {
+        "value": "instr.",
+        "count": 1011
+      },
+      {
+        "value": "abstr.",
+        "count": 858
+      },
+      {
+        "value": "lit.",
+        "count": 848
+      },
+      {
+        "value": "pl.",
+        "count": 792
+      },
+      {
+        "value": "gen.",
+        "count": 759
+      },
+      {
+        "value": "pp.",
+        "count": 680
+      },
+      {
+        "value": "esp.",
+        "count": 666
+      },
+      {
+        "value": "abl.",
+        "count": 654
+      },
+      {
+        "value": "w.",
+        "count": 650
+      },
+      {
+        "value": "E.",
+        "count": 590
+      },
+      {
+        "value": "i.e.",
+        "count": 550
+      },
+      {
+        "value": "etc.",
+        "count": 532
+      },
+      {
+        "value": "cert.",
+        "count": 503
+      },
+      {
+        "value": "M.",
+        "count": 483
+      },
+      {
+        "value": "adj.",
+        "count": 482
+      },
+      {
+        "value": "seq.",
+        "count": 452
+      },
+      {
+        "value": "v.",
+        "count": 425
+      },
+      {
+        "value": "dat.",
+        "count": 419
+      },
+      {
+        "value": "q.v.",
+        "count": 384
+      },
+      {
+        "value": "cf.",
+        "count": 317
+      },
+      {
+        "value": "s.",
+        "count": 313
+      },
+      {
+        "value": "P.",
+        "count": 248
+      },
+      {
+        "value": "S.",
+        "count": 248
+      },
+      {
+        "value": "sev.",
+        "count": 244
+      },
+      {
+        "value": "du.",
+        "count": 232
+      },
+      {
+        "value": "g.",
+        "count": 221
+      },
+      {
+        "value": "i.g.",
+        "count": 220
+      },
+      {
+        "value": "fig.",
+        "count": 187
+      },
+      {
+        "value": "A.",
+        "count": 175
+      },
+      {
+        "value": "nom.",
+        "count": 174
+      },
+      {
+        "value": "pers.",
+        "count": 158
+      },
+      {
+        "value": "poss.",
+        "count": 144
+      },
+      {
+        "value": "superl.",
+        "count": 143
+      },
+      {
+        "value": "inf.",
+        "count": 118
+      }
+    ],
+    "ls_siglum_distinct": 0,
+    "ls_siglum_top": [],
+    "expansions": "not linked; see MWS/mwabbreviations/abbr.html and per-dict intro pages"
+  },
+  "entry_structure": {
+    "record_open": "<L>",
+    "record_close": "<LEND>",
+    "field_separator": "¦",
+    "headword_marker": "k1",
+    "homonym_marker": "h",
+    "sense_division_marker": "div",
+    "entry_code_marker": "e",
+    "continuation_entries": 0,
+    "dominant_microstructure_layer": "preverb",
+    "microstructure_layers_present": [
+      "subentry",
+      "preverb",
+      "xref",
+      "root"
+    ]
+  },
+  "caveats": [],
+  "evidence": {
+    "field_inventory.count": "observed",
+    "field_inventory.mdf": "derived (csl-standards MDF_EXPORT_MAPPING.md)",
+    "abbreviations": "observed",
+    "dominant_microstructure_layer": "derived"
+  },
+  "generated_by": "scripts/parse_rules/build_parse_rules.py"
+}

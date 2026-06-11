@@ -1,0 +1,70 @@
+{
+  "schema": "mudidi-parse-rules/0.1",
+  "dict": "abch",
+  "title": "Hemacandra Abhidhanacintamani",
+  "source_file": "csl-orig/v02/abch/abch.txt",
+  "target_language": "Sanskrit",
+  "record_count": 1965,
+  "field_inventory": [
+    {
+      "tag": "s",
+      "count": 8565,
+      "mdf": null,
+      "adequacy": "partial",
+      "role": "inline Sanskrit (context-dependent)"
+    },
+    {
+      "tag": "info",
+      "count": 1965,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "machine annotation (infrastructure)"
+    },
+    {
+      "tag": "pc",
+      "count": 1965,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "page-column coordinate (archival)"
+    }
+  ],
+  "unmapped_tags": [
+    {
+      "tag": "eid",
+      "count": 4619
+    },
+    {
+      "tag": "syns",
+      "count": 4619
+    }
+  ],
+  "abbreviations": {
+    "ab_distinct": 0,
+    "ab_top": [],
+    "ls_siglum_distinct": 0,
+    "ls_siglum_top": [],
+    "expansions": "not linked; see MWS/mwabbreviations/abbr.html and per-dict intro pages"
+  },
+  "entry_structure": {
+    "record_open": "<L>",
+    "record_close": "<LEND>",
+    "field_separator": "¦",
+    "headword_marker": null,
+    "homonym_marker": null,
+    "sense_division_marker": null,
+    "entry_code_marker": null,
+    "continuation_entries": 0,
+    "dominant_microstructure_layer": null,
+    "microstructure_layers_present": []
+  },
+  "caveats": [
+    "Western-markup field inventory is ~empty by construction: this dictionary encodes citations / verbs / senses in indigenous prose (iti+authority, quotes, dhatuh / preraNe / conjugation-class names), not European tags. A zero here is detector blindness, NOT absence of content. See docs/MICROSTRUCTURE_ZERO_MEANING.md."
+  ],
+  "evidence": {
+    "field_inventory.count": "observed",
+    "field_inventory.mdf": "derived (csl-standards MDF_EXPORT_MAPPING.md)",
+    "abbreviations": "observed",
+    "dominant_microstructure_layer": "derived"
+  },
+  "generated_by": "scripts/parse_rules/build_parse_rules.py"
+}
