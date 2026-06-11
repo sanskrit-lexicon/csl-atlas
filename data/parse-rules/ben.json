@@ -1,0 +1,409 @@
+{
+  "schema": "mudidi-parse-rules/0.1",
+  "dict": "ben",
+  "title": "Benfey Sanskrit-English (1866)",
+  "source_file": "csl-orig/v02/ben/ben.txt",
+  "target_language": "English",
+  "record_count": 17310,
+  "field_inventory": [
+    {
+      "tag": "ab",
+      "count": 65514,
+      "mdf": "\\cf",
+      "adequacy": "partial",
+      "role": "abbreviation (q.v. -> cross-ref)"
+    },
+    {
+      "tag": "ls",
+      "count": 48603,
+      "mdf": "\\bb",
+      "adequacy": "lossy",
+      "role": "literary source / L. hedge"
+    },
+    {
+      "tag": "k1",
+      "count": 17310,
+      "mdf": "\\lx",
+      "adequacy": "clean",
+      "role": "headword"
+    },
+    {
+      "tag": "k2",
+      "count": 17310,
+      "mdf": "\\lc",
+      "adequacy": "partial",
+      "role": "segmented/sort key"
+    },
+    {
+      "tag": "pc",
+      "count": 17310,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "page-column coordinate (archival)"
+    },
+    {
+      "tag": "lang",
+      "count": 1243,
+      "mdf": "\\es",
+      "adequacy": "partial",
+      "role": "source language"
+    }
+  ],
+  "unmapped_tags": [
+    {
+      "tag": "pic",
+      "count": 1
+    }
+  ],
+  "abbreviations": {
+    "ab_distinct": 107,
+    "ab_top": [
+      {
+        "value": "m.",
+        "count": 9438
+      },
+      {
+        "value": "i. e.",
+        "count": 9167
+      },
+      {
+        "value": "adj.",
+        "count": 8512
+      },
+      {
+        "value": "f.",
+        "count": 6510
+      },
+      {
+        "value": "n.",
+        "count": 5673
+      },
+      {
+        "value": "d.",
+        "count": 4539
+      },
+      {
+        "value": "Comp.",
+        "count": 3056
+      },
+      {
+        "value": "Par.",
+        "count": 1801
+      },
+      {
+        "value": "cf.",
+        "count": 1658
+      },
+      {
+        "value": "Caus.",
+        "count": 1382
+      },
+      {
+        "value": "Cf.",
+        "count": 1209
+      },
+      {
+        "value": "Ātm.",
+        "count": 1098
+      },
+      {
+        "value": "adv.",
+        "count": 1042
+      },
+      {
+        "value": "vb.",
+        "count": 972
+      },
+      {
+        "value": "pass.",
+        "count": 726
+      },
+      {
+        "value": "Lat.",
+        "count": 700
+      },
+      {
+        "value": "A.S.",
+        "count": 601
+      },
+      {
+        "value": "M.M.",
+        "count": 537
+      },
+      {
+        "value": "prep.",
+        "count": 523
+      },
+      {
+        "value": "pf.",
+        "count": 443
+      },
+      {
+        "value": "Goth.",
+        "count": 428
+      },
+      {
+        "value": "comp.",
+        "count": 421
+      },
+      {
+        "value": "Ptcple.",
+        "count": 413
+      },
+      {
+        "value": "ved.",
+        "count": 408
+      },
+      {
+        "value": "acc.",
+        "count": 366
+      },
+      {
+        "value": "O.H.G.",
+        "count": 346
+      },
+      {
+        "value": "pl.",
+        "count": 290
+      },
+      {
+        "value": "v. r.",
+        "count": 288
+      },
+      {
+        "value": "ptcple.",
+        "count": 283
+      },
+      {
+        "value": "sing.",
+        "count": 199
+      },
+      {
+        "value": "fut.",
+        "count": 188
+      },
+      {
+        "value": "denomin.",
+        "count": 180
+      },
+      {
+        "value": "abl.",
+        "count": 170
+      },
+      {
+        "value": "instr.",
+        "count": 169
+      },
+      {
+        "value": "pres.",
+        "count": 150
+      },
+      {
+        "value": "loc.",
+        "count": 134
+      },
+      {
+        "value": "gen.",
+        "count": 122
+      },
+      {
+        "value": "anomal.",
+        "count": 92
+      },
+      {
+        "value": "desider.",
+        "count": 84
+      },
+      {
+        "value": "Pass.",
+        "count": 76
+      }
+    ],
+    "ls_siglum_distinct": 112,
+    "ls_siglum_top": [
+      {
+        "value": "MBh.",
+        "count": 7382
+      },
+      {
+        "value": "Man.",
+        "count": 6038
+      },
+      {
+        "value": "Rām.",
+        "count": 5146
+      },
+      {
+        "value": "Pañc.",
+        "count": 4787
+      },
+      {
+        "value": "Chr.",
+        "count": 3009
+      },
+      {
+        "value": "Bhāg. P.",
+        "count": 1884
+      },
+      {
+        "value": "Hit.",
+        "count": 1829
+      },
+      {
+        "value": "Rājat.",
+        "count": 1308
+      },
+      {
+        "value": "Vikr.",
+        "count": 1161
+      },
+      {
+        "value": "Śāk.",
+        "count": 1092
+      },
+      {
+        "value": "Daśak.",
+        "count": 1041
+      },
+      {
+        "value": "Ragh.",
+        "count": 926
+      },
+      {
+        "value": "Bhartṛ.",
+        "count": 791
+      },
+      {
+        "value": "Suśr.",
+        "count": 775
+      },
+      {
+        "value": "Rigv.",
+        "count": 768
+      },
+      {
+        "value": "Lass.",
+        "count": 750
+      },
+      {
+        "value": "Utt. Rāmac.",
+        "count": 716
+      },
+      {
+        "value": "Kathās.",
+        "count": 692
+      },
+      {
+        "value": "Hariv.",
+        "count": 690
+      },
+      {
+        "value": "Megh.",
+        "count": 501
+      },
+      {
+        "value": "Nal.",
+        "count": 478
+      },
+      {
+        "value": "Yājñ.",
+        "count": 477
+      },
+      {
+        "value": "Śiś.",
+        "count": 457
+      },
+      {
+        "value": "Kir.",
+        "count": 420
+      },
+      {
+        "value": "Bhag.",
+        "count": 414
+      },
+      {
+        "value": "Böhtl. Ind. Spr.",
+        "count": 403
+      },
+      {
+        "value": "Vedāntas.",
+        "count": 384
+      },
+      {
+        "value": "Mālat.",
+        "count": 349
+      },
+      {
+        "value": "Gorr.",
+        "count": 347
+      },
+      {
+        "value": "Bhāṣāp.",
+        "count": 312
+      },
+      {
+        "value": "Ṛt.",
+        "count": 242
+      },
+      {
+        "value": "Mṛcch.",
+        "count": 230
+      },
+      {
+        "value": "Johns. Sel.",
+        "count": 228
+      },
+      {
+        "value": "Prab.",
+        "count": 216
+      },
+      {
+        "value": "Mālav.",
+        "count": 193
+      },
+      {
+        "value": "Bhaṭṭ.",
+        "count": 171
+      },
+      {
+        "value": "Mārk. P.",
+        "count": 158
+      },
+      {
+        "value": "Kumāras.",
+        "count": 152
+      },
+      {
+        "value": "Draup.",
+        "count": 142
+      },
+      {
+        "value": "Indr.",
+        "count": 130
+      }
+    ],
+    "expansions": "not linked; see MWS/mwabbreviations/abbr.html and per-dict intro pages"
+  },
+  "entry_structure": {
+    "record_open": "<L>",
+    "record_close": "<LEND>",
+    "field_separator": "¦",
+    "headword_marker": "k1",
+    "homonym_marker": null,
+    "sense_division_marker": null,
+    "entry_code_marker": null,
+    "continuation_entries": 0,
+    "dominant_microstructure_layer": "subentry",
+    "microstructure_layers_present": [
+      "subentry"
+    ]
+  },
+  "caveats": [],
+  "evidence": {
+    "field_inventory.count": "observed",
+    "field_inventory.mdf": "derived (csl-standards MDF_EXPORT_MAPPING.md)",
+    "abbreviations": "observed",
+    "dominant_microstructure_layer": "derived"
+  },
+  "generated_by": "scripts/parse_rules/build_parse_rules.py"
+}
