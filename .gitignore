@@ -13,3 +13,6 @@ __pycache__/
 
 # local forensic caches
 data/forensic/_f6_tcache.json
+
+# local reference PDFs dropped into src/ (not site sources; keep refs under docs/refs/)
+src/*.pdf
