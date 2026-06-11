@@ -37,6 +37,18 @@ scope document.
 - Broad publication scheduling, career planning, and quarterly trend tracking
   unless rewritten as dictionary-atlas evidence notes.
 
+## Current Drafts (`docs/articles/`)
+
+| Draft | Starts from | Evidence | Status |
+|---|---|---|---|
+| [`paper_redundancy_and_descent.md`](articles/paper_redundancy_and_descent.md) — *Redundancy and Descent* (OBS-R) | headword overlap + dictionary inheritance | `CORPUS_REDUNDANCY_GENEALOGY.md`; `scripts/obs/headword_multiplicity.py`; `data/sanhw1_jaccard.csv` | working draft (IJL target); secondary refs + byline to finalise |
+| [`paper_citation_registers.md`](articles/paper_citation_registers.md) — *Two Citation Registers* (OBS-C) | source-citation apparatus + abbreviation behaviour | `CITATION_REGISTERS.md`; `scripts/lib/source-siglum.mjs`; `src/data/dict-source-aliases.json` | working draft (IJL target); secondary refs + byline to finalise |
+| [`paper_H_convention_vs_content_lineage.md`](articles/paper_H_convention_vs_content_lineage.md) — Paper H | convention vs content lineage | Phase L0 / `data/L0/` | draft section |
+
+Both OBS drafts start from a dictionary research object (headword, citation, source
+siglum) and are in scope per the rule below; each treats overlap as a *floor* for
+relatedness, not proof of copying.
+
 ## Rule For New Publication Files
 
 Before adding a publication draft to `csl-atlas`, check its first research
