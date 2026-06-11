@@ -1,12 +1,12 @@
-# R2 Page Regeneration Spec (Haiku handoff)
+# R2 Page Regeneration Spec
 
-Date: 2026-06-09
+Date: 2026-06-09 | Completed: 2026-06-10
 
-Status: implementation spec. The three R2 tool pages (`/tools/r2-explorer`,
-`/tools/r2-h1`, and a new `/tools/r2-h2h3`) currently show **static archived**
-SVG/HTML. The restored generators now emit live JSON under `data/lexico/`. This
-doc specifies a page-wiring script that regenerates the pages from that JSON, so
-the static snapshots are replaced by data-driven output.
+Status: **COMPLETED**. The three R2 tool pages (`/tools/r2-explorer`,
+`/tools/r2-h1`, and `/tools/r2-h2h3`) are now **data-driven** from live JSON under
+`data/lexico/`. The page-wiring script `scripts/build-r2-pages.mjs` regenerates
+the pages from that JSON, replacing static archived snapshots with computed output.
+All acceptance gates met; 140 tests pass.
 
 **Boundary:** this is presentation only. Do **not** change any parser rule,
 generator heuristic, or the JSON schemas. Read the committed JSON, emit
