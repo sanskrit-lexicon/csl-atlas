@@ -432,25 +432,46 @@ test("R2 checkpoint worksheet contains all checkpoint diagnostic ids", () => {
   }
 });
 
-test("R2 checkpoint review report is generated from the checkpoint packet", () => {
-  assert.deepEqual(
-    r2CheckpointReviewReport,
-    buildR2CheckpointReviewPayload(r2CheckpointPacket, new Map(), r2CheckpointReviewReport.generatedAt)
-  );
+test("R2 checkpoint review report machine fields match the checkpoint packet", () => {
+  // The on-disk report carries human decisions (reviewed 2026-06-12); compare
+  // machine fields only against a freshly generated machine-only payload.
+  const machine = buildR2CheckpointReviewPayload(r2CheckpointPacket, new Map(), r2CheckpointReviewReport.generatedAt);
+  const stripHuman = payload => ({
+    ...payload,
+    items: payload.items.map(item => ({
+      ...item,
+      reviewStatus: null,
+      reviewedValue: null,
+      reviewer: null,
+      reviewedAt: null,
+      note: null
+    }))
+  });
+  assert.deepEqual(stripHuman(r2CheckpointReviewReport), stripHuman(machine));
 });
 
-test("R2 checkpoint review report preserves stable ids and empty human fields", () => {
+test("R2 checkpoint review report carries complete human decisions", () => {
   assert.equal(r2CheckpointReviewReport.queue, "r2-checkpoint");
   assert.equal(r2CheckpointReviewReport.recordCount, 10);
   assert.deepEqual(r2CheckpointReviewReport.items.map(item => item.reviewId), CHECKPOINT_DIAGNOSTIC_IDS);
   for (const item of r2CheckpointReviewReport.items) {
     assert.equal(item.queue, "r2-checkpoint");
     assert.equal(item.subject.kind, "entry");
-    assert.equal(item.reviewStatus, "needs-review");
-    assert.equal(item.reviewedValue, null);
-    assert.equal(item.reviewer, null);
-    assert.equal(item.reviewedAt, null);
-    assert.equal(item.note, "");
+    assert.equal(item.reviewStatus, "reviewed-ok", `${item.reviewId} should be reviewed-ok`);
+    assert.ok(item.reviewer, `${item.reviewId} lacks reviewer`);
+    assert.ok(item.reviewedAt, `${item.reviewId} lacks reviewedAt`);
+    assert.ok(item.note, `${item.reviewId} lacks a review note`);
+    assert.ok(Array.isArray(item.reviewedValue?.acceptedParserLabels), `${item.reviewId} lacks acceptedParserLabels`);
+    assert.ok(
+      item.machineValue.allowedParserDispositions.includes(item.reviewedValue?.parserDisposition),
+      `${item.reviewId} has an out-of-vocabulary parserDisposition`
+    );
+    for (const label of item.reviewedValue.acceptedParserLabels) {
+      assert.ok(
+        item.machineValue.proposedParserLabels.includes(label),
+        `${item.reviewId} accepted label "${label}" is outside the proposed vocabulary`
+      );
+    }
   }
 });
 
