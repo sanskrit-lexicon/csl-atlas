@@ -41,6 +41,7 @@
     "build-r2-checkpoint-packet": "node scripts/build-r2-checkpoint-packet.mjs",
     "build-r2-checkpoint-review": "node scripts/build-r2-checkpoint-review.mjs",
     "build-r2-drift-explanation": "node scripts/build-r2-drift-explanation.mjs",
+    "build-r2-promotion-experiment": "node scripts/build-r2-promotion-experiment.mjs",
     "build-h5-anomaly-review": "node scripts/build-h5-anomaly-review.mjs",
     "build-h5-maker-qa-candidates": "node scripts/build-h5-maker-qa-candidates.mjs",
     "build-h5-maker-correction-proposal": "node scripts/build-h5-maker-correction-proposal.mjs",
