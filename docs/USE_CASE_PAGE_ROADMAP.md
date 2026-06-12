@@ -61,7 +61,7 @@ targets before adding new analysis-method prose.
 
 | Bucket | Package | Next action | Done when |
 |---|---|---|---|
-| Waiting | R2 checkpoint review | Use `R2_DRIFT_EXPLANATION.md`, `R2_CHECKPOINT_REVIEW.md`, and `R2_CHECKPOINT_DECISIONS.md` to review the ten checkpoint rows before any parser promotion. | The 10 `r2-checkpoint` rows have human decisions in `src/data/review/r2-checkpoint-review.json`. |
+| Done (2026-06-12) | R2 checkpoint review | All 10 rows decided in `src/data/review/r2-checkpoint-review.json` (7 promote-parser-candidate, 2 retain-side-evidence, 1 control-only; reviewer gasyoun, source-verified against local csl-orig). | The 10 `r2-checkpoint` rows have human decisions in `src/data/review/r2-checkpoint-review.json`. |
 | Waiting | H4 semantic-field source review | Use `H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md` and `data/lexico/h4_semantic_field_review_packet.json` to source-review the 105 SKD/VCP/AP/AP90/specialized/index-control rows. | Decisions separate topical signal from convention, scope, parser, and lookup-direction effects before paper use. |
 | Waiting | H5 maker correction review | Submit or track the generated `divaraTa -> diviraTa` proposal with dictionary makers; do not edit dictionary source data automatically. | A maker decision or external issue link is recorded outside the generated proposal packet. |
 | Waiting | Xref source-check adjudication | Use `MICROSTRUCTURE_XREF_SOURCE_CHECK.md` and `data/lexico/xref_source_check_packet.json` to review the 40 shared-core rows and 10 prefix controls. | Source-check decisions distinguish lexical evidence, prefix convention, and normalization risk before paper use. |
