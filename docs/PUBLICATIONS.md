@@ -44,6 +44,7 @@ scope document.
 | [`paper_redundancy_and_descent.md`](articles/paper_redundancy_and_descent.md) — *Redundancy and Descent* (OBS-R) | headword overlap + dictionary inheritance | `CORPUS_REDUNDANCY_GENEALOGY.md`; `scripts/obs/headword_multiplicity.py`; `data/sanhw1_jaccard.csv` | working draft (IJL target); secondary refs + byline to finalise |
 | [`paper_citation_registers.md`](articles/paper_citation_registers.md) — *Two Citation Registers* (OBS-C) | source-citation apparatus + abbreviation behaviour | `CITATION_REGISTERS.md`; `scripts/lib/source-siglum.mjs`; `src/data/dict-source-aliases.json` | working draft (IJL target); secondary refs + byline to finalise |
 | [`paper_H_convention_vs_content_lineage.md`](articles/paper_H_convention_vs_content_lineage.md) — Paper H | convention vs content lineage | Phase L0 / `data/L0/` | draft section |
+| [`paper_sense_inheritance.md`](articles/paper_sense_inheritance.md) — *Condensation, Not Inflation* (R2/P2) | sense granularity, survival, inheritance edges | `r2_h1.json`, `r2_h1_panel.json`, `r2_h2h3.json`, `r2_promotion_experiment.json`, reviewed checkpoint | working draft (Lexicographica target, IJL alternate); secondary refs + byline to finalise |
 
 Both OBS drafts start from a dictionary research object (headword, citation, source
 siglum) and are in scope per the rule below; each treats overlap as a *floor* for
