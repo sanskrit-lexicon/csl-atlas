@@ -22,19 +22,37 @@ test("classifyItiUnit labels long plain prose as commentarial discussion", () =>
   assert.equal(classifyItiUnit(long, "vcp"), "commentarial-discussion-unit");
 });
 
-test("divSourceWindow keeps target-primary rows and labels supplements", () => {
+test("divSourceWindow keeps numbered top-level senses and labels supplements", () => {
   const roles = DIV_SOURCE_RECORD_ROLES["r2-drift:gam:pwg"];
   const rows = [
-    { blockIds: ["21814"], markerLabel: "1" },
-    { blockIds: ["21814"], markerLabel: "p" },
-    { blockIds: ["72578"], markerLabel: "1" },
-    { blockIds: ["21815"], markerLabel: null }
+    { blockIds: ["21814"], markerLabel: "1", splitConfidence: "explicit", text: "— 1) gehen, sich bewegen" },
+    { blockIds: ["21814"], markerLabel: "2", splitConfidence: "explicit", text: "a) mit dem acc." },
+    { blockIds: ["21814"], markerLabel: "p", splitConfidence: "explicit", text: "— partic. gata" },
+    { blockIds: ["21814"], markerLabel: "1", splitConfidence: "explicit", text: "1) adj. gegangen" },
+    { blockIds: ["72578"], markerLabel: "1", splitConfidence: "explicit", text: "— 3) a) gacCasva" },
+    { blockIds: ["21815"], markerLabel: null, splitConfidence: "lumped-proxy", text: "2. gam = kzam Erde" }
   ];
   const labeled = divSourceWindow(rows, roles, ["target-primary-series", "prefixed-or-derived-series"]);
-  assert.deepEqual(labeled.map(item => item.inWindow), [true, false, false, false]);
-  assert.equal(labeled[1].windowLabel, "prefixed-or-derived-series");
-  assert.equal(labeled[2].windowLabel, "same-headword-supplement");
-  assert.equal(labeled[3].windowLabel, "separate-homonym");
+  assert.deepEqual(labeled.map(item => item.inWindow), [true, false, false, false, false, false]);
+  assert.equal(labeled[1].windowLabel, "candidate-sense-marker");
+  assert.equal(labeled[2].windowLabel, "prefixed-or-derived-series");
+  // numbered n="1" AFTER the first preverb block stays derived material
+  assert.equal(labeled[3].windowLabel, "prefixed-or-derived-series");
+  assert.equal(labeled[4].windowLabel, "same-headword-supplement");
+  assert.equal(labeled[5].windowLabel, "separate-homonym");
+});
+
+test("divSourceWindow excludes unnumbered prefaces and counts dharma-style enumeration", () => {
+  const roles = DIV_SOURCE_RECORD_ROLES["r2-drift:dharma:pwg"];
+  const rows = [
+    { blockIds: ["36241"], markerLabel: null, splitConfidence: "lumped-proxy", text: "Da/rma (von Dar) m. n." },
+    { blockIds: ["36241"], markerLabel: "1", splitConfidence: "explicit", text: "1) Satzung, Ordnung" },
+    { blockIds: ["36241"], markerLabel: "2", splitConfidence: "explicit", text: "a) Sitte, Recht" },
+    { blockIds: ["36241"], markerLabel: "1", splitConfidence: "explicit", text: "— 11) in der Astrol." }
+  ];
+  const labeled = divSourceWindow(rows, roles, ["target-primary-series", "same-headword-supplement"]);
+  assert.deepEqual(labeled.map(item => item.inWindow), [false, true, false, true]);
+  assert.equal(labeled[0].windowLabel, "preface-or-proxy");
 });
 
 test("markerRunWindow keeps only first-run explicit rows", () => {

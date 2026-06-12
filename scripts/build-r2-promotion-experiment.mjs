@@ -83,22 +83,41 @@ export function classifyItiUnit(text, dictCode) {
   return "definition-iti-unit";
 }
 
-/** Window for the PWG div-source-scope packet: target-primary records only,
- *  excluding div n="p" preverb segments when prefixed-or-derived-series was
- *  accepted. Non-window rows are labeled, not dropped. */
+// PWG prints its own sense enumeration in the entry text ("— 1)", "— 2)" at
+// <div n="1">, letters at n="2", Greek at n="3"); the <div n> attribute is a
+// DEPTH marker, not a sense number. The promoted window therefore follows the
+// print's enumeration: numbered top-level divisions of the target-primary
+// record, before the first <div n="p"> preverb block.
+const PWG_NUMBERED_SENSE = /^[—–-]?\s*\d+\)/;
+
+/** Window for the PWG div-source-scope packet: the target-primary record's
+ *  own numbered top-level senses. Subdivisions, preverb/derived blocks,
+ *  supplements and homonyms are labeled, not dropped. Rows must be in
+ *  record/source order (as emitted by buildNormalRows). */
 export function divSourceWindow(rows, recordRoles, acceptedLabels) {
   const excludePreverbs = acceptedLabels.includes("prefixed-or-derived-series");
-  const labeled = rows.map(row => {
-    const role = recordRoles[Number(row.blockIds?.[0])] ?? "unassigned";
-    let windowLabel = role;
-    let inWindow = role === "target-primary-series";
-    if (inWindow && excludePreverbs && row.markerLabel === "p") {
-      windowLabel = "prefixed-or-derived-series";
-      inWindow = false;
+  const afterPreverbByRecord = new Map();
+  return rows.map(row => {
+    const recordId = Number(row.blockIds?.[0]);
+    const role = recordRoles[recordId] ?? "unassigned";
+    if (role !== "target-primary-series") {
+      return { row, inWindow: false, windowLabel: role };
     }
-    return { row, inWindow, windowLabel };
+    if (excludePreverbs && row.markerLabel === "p") {
+      afterPreverbByRecord.set(recordId, true);
+      return { row, inWindow: false, windowLabel: "prefixed-or-derived-series" };
+    }
+    if (excludePreverbs && afterPreverbByRecord.get(recordId)) {
+      return { row, inWindow: false, windowLabel: "prefixed-or-derived-series" };
+    }
+    if (row.splitConfidence !== "explicit") {
+      return { row, inWindow: false, windowLabel: "preface-or-proxy" };
+    }
+    if (row.markerLabel === "1" && PWG_NUMBERED_SENSE.test(row.text ?? "")) {
+      return { row, inWindow: true, windowLabel: "target-primary-series" };
+    }
+    return { row, inWindow: false, windowLabel: "candidate-sense-marker" };
   });
-  return labeled;
 }
 
 /** Window for the BEN marker-run-scope packet. */
@@ -315,6 +334,7 @@ function buildPayload(results, warnings) {
     assumptions: [
       "Only rows with reviewStatus reviewed-ok are processed; dispositions gate every rule.",
       "div-source-scope record roles come verbatim from the reviewed checkpoint notes (DIV_SOURCE_RECORD_ROLES).",
+      "The PWG window follows the print's own sense enumeration: numbered top-level divisions (\"— N)\" at div n=\"1\") of the target-primary record before the first div n=\"p\" preverb block; <div n> depth values are never counted as senses.",
       "Indigenous iti-unit classification is heuristic (authority hints/quotation markers, then >350-char prose as discussion) and is a labeling experiment, not a scholar-reviewed sense decision.",
       "AE windows apply to the reviewed nominal lemma only; verbal reverse rows remain side evidence per r2-drift:gam:ae.",
       "No existing R2 output (senses, H1, H2H3, explorer) is modified; this artifact is additive."
