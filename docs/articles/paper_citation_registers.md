@@ -252,11 +252,14 @@ the prerequisite for a corpus-wide, register-neutral citation graph.
 ## 7. Conclusion
 
 The Cologne Digital Sanskrit Lexicon contains over 1.2 million explicit source
-citations, of which a tight majority — about 59 % — are resolvable in principle to a
-passage, leaving a measured dictionary-to-book gap of some 496,000 bare
-abbreviations, all drawing on a working apparatus of roughly two thousand sources.
+citations, of which **up to** a tight majority — 59.1–59.8 %, the locator-bearing
+upper bound — are resolvable in principle to a passage, leaving a measured
+dictionary-to-book gap of at least some 496,000 bare abbreviations, all drawing on a
+working apparatus of roughly two thousand sources.
 But this European apparatus is only one of two citation registers: the indigenous
-*kośa*s cite as densely again through *iti*-quotation and are wholly invisible to it.
+*kośa*s cite densely through *iti*-quotation — on an indicator that includes some
+grammatical *iti* and so bounds their citation rate from above — and are wholly
+invisible to an `<ls>`-based measure.
 Citation density, resolvability, and source inventory are all well-defined only once
 register is fixed. Recognising the two registers — and building a reviewed source
 registry for each — is the precondition for turning a digitised dictionary corpus into
