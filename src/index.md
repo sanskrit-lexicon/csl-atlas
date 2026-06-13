@@ -21,10 +21,10 @@ A comparative microstructural atlas of **nine narrative Sanskrit-dictionary chap
 
 ## Reader mode
 
-Start with [Which dictionary should I use?](/dictionary-chooser) if you need a
+Start with [Which dictionary should I use?](dictionary-chooser) if you need a
 first stop: MW is the default public route, with task-specific checks in AP,
 PWG/PWK, VCP/SKD, WIL, and specialized dictionaries. Then use the [Reader
-lookup](/tools/reader-lookup) for dictionary-first search across MW, AP, PWG,
+lookup](tools/reader-lookup) for dictionary-first search across MW, AP, PWG,
 PWK, WIL, VCP, and SKD. It accepts SLP1 and IAST headwords, shows dictionary
 coverage and source links, and keeps machine-derived evidence visibly labeled.
 [Evidence labels](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md)
@@ -40,19 +40,19 @@ Beyond the paper, the atlas is building deterministic, source-linked, evidence-l
 
 ### MW quantitative depth · Phase 1
 
-Monier-Williams anatomy at scale: [depth dashboard](/tools/mw-depth-dashboard) (article types, citations, compound depth), [diachronic layers](/tools/mw-diachronic-layers) (conservative source-layer profile), [family depth](/tools/mw-family-depth) (deepest lexical families).
+Monier-Williams anatomy at scale: [depth dashboard](tools/mw-depth-dashboard) (article types, citations, compound depth), [diachronic layers](tools/mw-diachronic-layers) (conservative source-layer profile), [family depth](tools/mw-family-depth) (deepest lexical families).
 
 ### Dictionary comparison · Phase 2
 
-Seven dictionaries (MW, AP, PWG, PWK, WIL, VCP, SKD) compared: [coverage matrix](/tools/dictionary-coverage-matrix) · [pairwise overlap](/tools/dictionary-overlap) · [gender conflicts](/tools/dictionary-conflicts) · [homonym splits](/tools/dictionary-homonyms) · [citation apparatus](/tools/dictionary-citations) · [sense depth](/tools/dictionary-senses) · [**lemma dossier** (look up a word)](/tools/dictionary-dossier).
+Seven dictionaries (MW, AP, PWG, PWK, WIL, VCP, SKD) compared: [coverage matrix](tools/dictionary-coverage-matrix) · [pairwise overlap](tools/dictionary-overlap) · [gender conflicts](tools/dictionary-conflicts) · [homonym splits](tools/dictionary-homonyms) · [citation apparatus](tools/dictionary-citations) · [sense depth](tools/dictionary-senses) · [**lemma dossier** (look up a word)](tools/dictionary-dossier).
 
 ### Dictionary structure
 
-[Dictionary genealogy](/tools/lexicography), [convention fingerprints](/tools/lexicographic-conventions), [structural register](/tools/structural-register), and R2 [sense alignment](/tools/r2-explorer) / [sense granularity](/tools/r2-h1) move dictionary-structure research into the atlas path.
+[Dictionary genealogy](tools/lexicography), [convention fingerprints](tools/lexicographic-conventions), [structural register](tools/structural-register), and R2 [sense alignment](tools/r2-explorer) / [sense granularity](tools/r2-h1) move dictionary-structure research into the atlas path.
 
 ### Review queues
 
-Machine-flagged cases awaiting human judgement, schema-conforming and source-linked: [gender conflicts](/tools/review-gender-conflicts) · [source layers](/tools/review-source-layers) · [alignment confidence](/tools/review-alignment) · [source-siglum aliases](/tools/review-source-siglum).
+Machine-flagged cases awaiting human judgement, schema-conforming and source-linked: [gender conflicts](tools/review-gender-conflicts) · [source layers](tools/review-source-layers) · [alignment confidence](tools/review-alignment) · [source-siglum aliases](tools/review-source-siglum).
 
 </div>
 
@@ -79,36 +79,36 @@ The arc — framework-fit → precedent → base → genre-limit — is the same
 
 One consolidated study of Monier-Williams 1899 — a data-grounded body, triangulated against three external frameworks:
 
-- **[Grounded framework (body)](/paper/grounded)** — five constructs built from MW outward (block, slot, profile, hedge, infrastructure) + the block-economy thesis
-- **[Triangulation (§7)](/paper/triangulation)** — how Wiegand, Atkins–Rundell and Hausmann converge as three witnesses to one analysis
-- **[Framework appendices A·B·C](/paper/appendices)** — the condensed Wiegand / Atkins–Rundell / Hausmann readings (incl. the proposed *Provenienz-Komment*)
+- **[Grounded framework (body)](paper/grounded)** — five constructs built from MW outward (block, slot, profile, hedge, infrastructure) + the block-economy thesis
+- **[Triangulation (§7)](paper/triangulation)** — how Wiegand, Atkins–Rundell and Hausmann converge as three witnesses to one analysis
+- **[Framework appendices A·B·C](paper/appendices)** — the condensed Wiegand / Atkins–Rundell / Hausmann readings (incl. the proposed *Provenienz-Komment*)
 
 ### Explore the tools
 
-- **[Cross-dictionary comparison](/tools/cross-dict)** — nine narrative dicts: citation density + common-block population
-- **[All-dictionary coverage](/tools/dictionary-coverage)** — every CDSL v02 dictionary with a main text file: fit score, size, block mass, and entry-type inventory
-- **[Matrix explorer](/tools/matrix-explorer)** — 18 formal blocks × primary article types
-- **[Lineage Sankey](/tools/lineage-sankey)** — PWG → PWK → MW kosha-citation collapse
-- **[Typology treemap](/tools/typology-treemap)** — 286,561 MW entries by article type
-- **[Lexicographic timeline](/tools/timeline)** — 6th c. — 2024
-- **[Type comparator](/tools/type-comparator)** — pick two types, see block differences
-- **[Citation tracer](/tools/citation-tracer)** — click a source, see all entries
+- **[Cross-dictionary comparison](tools/cross-dict)** — nine narrative dicts: citation density + common-block population
+- **[All-dictionary coverage](tools/dictionary-coverage)** — every CDSL v02 dictionary with a main text file: fit score, size, block mass, and entry-type inventory
+- **[Matrix explorer](tools/matrix-explorer)** — 18 formal blocks × primary article types
+- **[Lineage Sankey](tools/lineage-sankey)** — PWG → PWK → MW kosha-citation collapse
+- **[Typology treemap](tools/typology-treemap)** — 286,561 MW entries by article type
+- **[Lexicographic timeline](tools/timeline)** — 6th c. — 2024
+- **[Type comparator](tools/type-comparator)** — pick two types, see block differences
+- **[Citation tracer](tools/citation-tracer)** — click a source, see all entries
 
 ### Browse the 9 dictionaries (Decision 29 order)
 
 | # | Code | Year | Tier | One-line summary |
 |--:|---|---|---|---|
-| 1 | **[MW](/dicts/mw)** | 1899 | A | Standard single-volume Sanskrit-English reference; 286,561 records; framework's home dictionary |
-| 2 | **[PWG](/dicts/pwg)** | 1855–75 | A | 7-volume Sanskrit-German *Grosses PW*; densest `<ls>` apparatus (4.63/record); 0 hedges |
-| 3 | **[PWK](/dicts/pwk)** | 1879–89 | A | Böhtlingk's own compact 7-volume / 7-*Lieferung* abridgement; dropped PWG's kosha apparatus *before* MW |
-| 4 | **[AP](/dicts/ap)** | 1890 / 1957 | A | Apte's *Practical Sanskrit-English Dictionary*; only post-MW dict with any `<ls>L.</ls>` (1×) |
-| 5 | **[BEN](/dicts/ben)** | 1866 | B | Benfey 1866; earliest typographic hedge precedent (`†` = "no authoritative references") |
-| 6 | **[CAE](/dicts/cae)** | 1891 | B | Cappeller 1891; **first systematic typographic precedent** (`*` for kosha-only); MW 1899 co-editor |
-| 7 | **[WIL](/dicts/wil)** | 1832 | B | Wilson 1832; earliest CDSL dict; the base from which the European tradition departs |
-| 8 | **[SKD](/dicts/skd)** | 1822–58 | C | 7-volume *Śabdakalpadruma*; first Sanskrit-Sanskrit *kośa*; **the genre boundary** — framework changes here |
-| 9 | **[VCP](/dicts/vcp)** | 1873–84 | C | 7-volume *Vācaspatyam*; confirms the genre boundary and motivates the all-dictionary coverage layer |
+| 1 | **[MW](dicts/mw)** | 1899 | A | Standard single-volume Sanskrit-English reference; 286,561 records; framework's home dictionary |
+| 2 | **[PWG](dicts/pwg)** | 1855–75 | A | 7-volume Sanskrit-German *Grosses PW*; densest `<ls>` apparatus (4.63/record); 0 hedges |
+| 3 | **[PWK](dicts/pwk)** | 1879–89 | A | Böhtlingk's own compact 7-volume / 7-*Lieferung* abridgement; dropped PWG's kosha apparatus *before* MW |
+| 4 | **[AP](dicts/ap)** | 1890 / 1957 | A | Apte's *Practical Sanskrit-English Dictionary*; only post-MW dict with any `<ls>L.</ls>` (1×) |
+| 5 | **[BEN](dicts/ben)** | 1866 | B | Benfey 1866; earliest typographic hedge precedent (`†` = "no authoritative references") |
+| 6 | **[CAE](dicts/cae)** | 1891 | B | Cappeller 1891; **first systematic typographic precedent** (`*` for kosha-only); MW 1899 co-editor |
+| 7 | **[WIL](dicts/wil)** | 1832 | B | Wilson 1832; earliest CDSL dict; the base from which the European tradition departs |
+| 8 | **[SKD](dicts/skd)** | 1822–58 | C | 7-volume *Śabdakalpadruma*; first Sanskrit-Sanskrit *kośa*; **the genre boundary** — framework changes here |
+| 9 | **[VCP](dicts/vcp)** | 1873–84 | C | 7-volume *Vācaspatyam*; confirms the genre boundary and motivates the all-dictionary coverage layer |
 
-Tier A = full template (8 sections); Tier B = compact + typography section; Tier C = genre-bound, prose-pattern analysis. Audit report: [`_consistency_audit.md`](/dicts/_consistency_audit).
+Tier A = full template (8 sections); Tier B = compact + typography section; Tier C = genre-bound, prose-pattern analysis. Audit report: [`_consistency_audit.md`](dicts/_consistency_audit).
 
 **Kośa-resolution repos** (sources MW's `<ls>L.</ls>` hedge points back to, *not* atlas chapters): [ARMH](https://github.com/sanskrit-lexicon/armh) (Halāyudha) · [ABCH](https://github.com/sanskrit-lexicon/abch) (Hemacandra) · [ACPH](https://github.com/sanskrit-lexicon/acph) · [ACSJ](https://github.com/sanskrit-lexicon/acsj). A future Phase-5 project would extend the framework to these.
 
@@ -122,14 +122,14 @@ The single most striking pattern in the atlas is the **three-stage lineage** of 
 
 | Year | Source | Marker | Meaning | Scale |
 |--:|---|---|---|--:|
-| 1866 | **[Benfey](/dicts/ben)** | `†` | "no authoritative references" (weaker, methodological) | ~900 typographic |
+| 1866 | **[Benfey](dicts/ben)** | `†` | "no authoritative references" (weaker, methodological) | ~900 typographic |
 | 1872 | **MW 1st edn** | declares L. in preface § II | "*only in native lexicons*" | preface-only; ≈ 0 in body |
-| 1891 | **[Cappeller](/dicts/cae)** | `*` | "*taught only by grammarians or lexicographers*" | **1,370 typographic — first systematic** |
-| 1899 | **[MW 2nd edn](/dicts/mw)** (w/ Cappeller as co-editor) | `<ls>L.</ls>` | "*lexicographer-only attestation*" | **40,212 tagged + scaled** |
+| 1891 | **[Cappeller](dicts/cae)** | `*` | "*taught only by grammarians or lexicographers*" | **1,370 typographic — first systematic** |
+| 1899 | **[MW 2nd edn](dicts/mw)** (w/ Cappeller as co-editor) | `<ls>L.</ls>` | "*lexicographer-only attestation*" | **40,212 tagged + scaled** |
 
-None of the four stages is fully derivative of the others. MW 1872 is first with the *concept* (declared in MW's own preface, in his own words); Cappeller 1891 is first with the *systematic typographic implementation*; MW 1899 is first with the *tagged + scaled* implementation. [PWG](/dicts/pwg), the other major 19th-century dictionary, sits *outside* this lineage — it kept the named-kosha apparatus (top 5 sigla all named indigenous Sanskrit lexicons: `<ls>ŚKDR.</ls>`, `<ls>MED.</ls>`, `<ls>H. an.</ls>`, etc.) and never used a hedge.
+None of the four stages is fully derivative of the others. MW 1872 is first with the *concept* (declared in MW's own preface, in his own words); Cappeller 1891 is first with the *systematic typographic implementation*; MW 1899 is first with the *tagged + scaled* implementation. [PWG](dicts/pwg), the other major 19th-century dictionary, sits *outside* this lineage — it kept the named-kosha apparatus (top 5 sigla all named indigenous Sanskrit lexicons: `<ls>ŚKDR.</ls>`, `<ls>MED.</ls>`, `<ls>H. an.</ls>`, etc.) and never used a hedge.
 
-The [Lineage Sankey](/tools/lineage-sankey) visualises this collapse — MW's 40,212 hedges *summarise* what PWG distributed across 821 named-kosha sigla.
+The [Lineage Sankey](tools/lineage-sankey) visualises this collapse — MW's 40,212 hedges *summarise* what PWG distributed across 821 named-kosha sigla.
 
 ---
 

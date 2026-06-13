@@ -42,9 +42,11 @@ const dcsMap = dcsSummary?.lemmas ?? {};
 <div class="note">Covers the <b>${dossier.count.toLocaleString()}</b> lemmas attested in at least <b>${dossier.minDicts}</b> of the 7 target dictionaries (MW, AP, PWG, PWK, WIL, VCP, SKD). Rarer or single-dictionary lemmas are not in this static dossier — full-corpus lookup needs a search backend (deferred). Gender is shown only where a <code>&lt;lex&gt;</code> tag is present; VCP and SKD are prose and show none.</div>
 
 ```js
+const initialQuery = new URLSearchParams(globalThis.location?.search ?? "").get("q") ?? "";
 const query = view(Inputs.text({
   label: t("phase2.dossier.lemma"),
   placeholder: t("phase2.dossier.placeholder"),
+  value: initialQuery,
   width: 320,
   submit: false
 }));

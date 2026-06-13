@@ -70,7 +70,7 @@ display(html`<table class="div-table">
   </thead>
   <tbody>
     ${shown.map(r => {
-      const href = `/tools/dictionary-dossier?q=${encodeURIComponent(r.k1)}`;
+      const href = `dictionary-dossier?q=${encodeURIComponent(r.k1)}`;
       return html`<tr class="${r.range >= 5 ? "high" : r.range >= 2 ? "med" : ""}">
         <td><a href="${href}" target="_blank" rel="noopener">${r.k1}</a></td>
         <td class="num">${r.nDicts}</td>
