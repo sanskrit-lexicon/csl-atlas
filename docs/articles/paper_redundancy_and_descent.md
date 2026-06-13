@@ -168,9 +168,13 @@ dictionaries nest them.
 (≈172,000 lemmas) are unique to a single dictionary.** The multiplicity
 distribution has a long high-frequency tail — a pan-lexical core of common words
 recorded by almost every dictionary — and a large body of singletons. The headline
-re-framing is therefore: the CDSL's ~1.5 million entries represent on the order of
-**170,000 independently attested Sanskrit lemmas** behind a majority of
-re-lexicalisation.
+re-framing is therefore: the CDSL's ~1.5 million entries reduce to ~410,000 distinct
+headwords, of which only some **170,000 are dictionary-unique**, the rest being
+re-lexicalisation of a shared core. "Dictionary-unique" is a floor for novelty, not a
+count of independent attestation: a headword shared by several dictionaries may be
+independently recorded in each rather than copied (§3.3), so the count of
+*independently attested* lemmas lies somewhere above 170,000 — its exact value is a
+copying-level question, not a headword-level one.
 
 ### 4.3 Redundancy is structured, not uniform
 
@@ -198,10 +202,13 @@ vs. independent lexica).
 The general bilingual dictionaries we expect on philological grounds to be
 derivative score very low; the specialised and corpus-bound lexica score high. The
 metric thus validates itself against prior knowledge and supplies a quantitative
-criterion: *a dictionary's documentary value is indexed by its independent
-contribution, not by its entry count.* Edgerton's Buddhist Hybrid Sanskrit
-dictionary and the epigraphical glossary, modest in size, are the corpus's most
-irreplaceable members.
+criterion: *a dictionary's independent contribution to the aggregate is indexed by
+its unique headwords, not by its entry count.* This indexes independence, not worth:
+a comprehensive general dictionary scores low unique-% precisely because it records
+the shared core that other dictionaries also record, which is a service, not a
+defect. What the metric does isolate is irreplaceability — Edgerton's Buddhist
+Hybrid Sanskrit dictionary and the epigraphical glossary, modest in size, hold
+vocabulary no other CDSL member supplies.
 
 ### 4.4 An inheritance stemma rooted in Monier-Williams
 
