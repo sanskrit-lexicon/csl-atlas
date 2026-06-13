@@ -9,6 +9,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const COVERAGE_PATH = path.resolve(process.cwd(), "data", "dictionary-coverage.json");
@@ -190,6 +191,7 @@ function main() {
 
   const payload = {
     schemaVersion: SCHEMA_VERSION,
+    ...licenseFields(),
     generatedAt: new Date().toISOString(),
     claim: "H6: structural register predicts dictionary family.",
     evidenceLabel: "derived",
