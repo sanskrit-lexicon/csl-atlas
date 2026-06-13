@@ -4,6 +4,7 @@ import {
   classifyItiUnit,
   divSourceWindow,
   markerRunWindow,
+  benBoundaryFromParts,
   aeReverseWindow,
   DIV_SOURCE_RECORD_ROLES
 } from "../scripts/build-r2-promotion-experiment.mjs";
@@ -55,15 +56,30 @@ test("divSourceWindow excludes unnumbered prefaces and counts dharma-style enume
   assert.equal(labeled[0].windowLabel, "preface-or-proxy");
 });
 
-test("markerRunWindow keeps only first-run explicit rows", () => {
+test("markerRunWindow keeps the bare root and splits derivative vs preverb runs", () => {
   const rows = [
-    { rawHeadword: "gam", splitConfidence: "lumped-proxy" },
-    { rawHeadword: "gam", splitConfidence: "explicit", markerRunIndex: 0 },
-    { rawHeadword: "gam", splitConfidence: "explicit", markerRunIndex: 2 }
+    { splitConfidence: "lumped-proxy" },                          // preface
+    { splitConfidence: "explicit", markerRunIndex: 0 },           // bare finite root
+    { splitConfidence: "explicit", markerRunIndex: 2 },           // primary derivative (gamya)
+    { splitConfidence: "explicit", markerRunIndex: 4 }            // preverb lexeme (adhi-gam)
   ];
-  const labeled = markerRunWindow(rows, ["archive-prefix-runs", "reset-run-expansion"]);
-  assert.deepEqual(labeled.map(item => item.inWindow), [false, true, false]);
-  assert.equal(labeled[2].windowLabel, "reset-run-expansion");
+  const labeled = markerRunWindow(rows, ["archive-prefix-runs", "reset-run-expansion"], null, 4);
+  assert.deepEqual(labeled.map(item => item.inWindow), [false, true, false, false]);
+  assert.equal(labeled[0].windowLabel, "preface-or-proxy");
+  assert.equal(labeled[1].windowLabel, "bare-root-run");
+  assert.equal(labeled[2].windowLabel, "primary-derivative-run");
+  assert.equal(labeled[3].windowLabel, "preverb-lexeme-run");
+});
+
+test("benBoundaryFromParts locates the preverb zone one run after the cue", () => {
+  const parts = [
+    { markerRunIndex: 0, text: "1. To go, Man." },
+    { markerRunIndex: 3, text: "gamayām āsa. -- With aDi adhi," },  // cue in run-3 tail
+    { markerRunIndex: 4, text: "1. To go to, MBh." }
+  ];
+  assert.equal(benBoundaryFromParts(parts), 4);
+  // lowercase "(with acc.)" in a gloss must not trigger a boundary
+  assert.equal(benBoundaryFromParts([{ markerRunIndex: 0, text: "To go to (with acc.)" }]), Infinity);
 });
 
 test("markerRunWindow splits lookup bundles on exact headword", () => {

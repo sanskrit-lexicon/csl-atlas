@@ -1,6 +1,6 @@
 # R2 Parser-Promotion Experiment
 
-Date: 2026-06-12
+Date: 2026-06-13
 
 Status: generated experiment report. This applies the reviewed checkpoint
 window rules to the source-backed anchor rows. It is not a splitter change,
@@ -61,8 +61,9 @@ not a public R2 page update, and not a scholar-reviewed sense decision layer.
 
 ### `r2-drift:gam:ben`
 
-- `reset-run-expansion`: 162
-- `target-run`: 9
+- `preverb-lexeme-run`: 138
+- `primary-derivative-run`: 24
+- `bare-root-run`: 9
 - `preface-or-proxy`: 1
 
 ### `r2-drift:gam:pwg`
@@ -84,6 +85,7 @@ not a public R2 page update, and not a scholar-reviewed sense decision layer.
 - Only rows with reviewStatus reviewed-ok are processed; dispositions gate every rule.
 - div-source-scope record roles come verbatim from the reviewed checkpoint notes (DIV_SOURCE_RECORD_ROLES).
 - The PWG window follows the print's own sense enumeration: numbered top-level divisions ("— N)" at div n="1") of the target-primary record before the first div n="p" preverb block; <div n> depth values are never counted as senses.
+- The Benfey (gam:ben) window is the bare finite root (marker run 0); primary derivatives (participles, causative — runs 1..k) and preverb-combined lexemes (introduced by "-- With <preverb>", runs k+1..) are separate lexical items, retained as labeled side evidence. The archived count (root + first participle) is itself an artifact, not the optimization target.
 - Indigenous iti-unit classification is heuristic (authority hints/quotation markers, then >350-char prose as discussion) and is a labeling experiment, not a scholar-reviewed sense decision.
 - AE windows apply to the reviewed nominal lemma only; verbal reverse rows remain side evidence per r2-drift:gam:ae.
 - No existing R2 output (senses, H1, H2H3, explorer) is modified; this artifact is additive.
