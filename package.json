@@ -26,6 +26,8 @@
     "build-source-layer-anchoring-review": "node scripts/build-source-layer-anchoring-review.mjs",
     "build-compound-depth-crosscheck": "node scripts/build-compound-depth-crosscheck.mjs",
     "import-dharmamitra-segmentation": "python scripts/import-dharmamitra-segmentation.py",
+    "build-lemma-normalization-crosscheck": "node scripts/build-lemma-normalization-crosscheck.mjs",
+    "import-dharmamitra-lemma": "python scripts/import-dharmamitra-lemma.py",
     "build-alignment-review": "node scripts/build-alignment-review.mjs",
     "build-semantic-fields": "node scripts/build-semantic-fields.mjs",
     "build-h4-family-profiles": "node scripts/build-h4-family-profiles.mjs",
