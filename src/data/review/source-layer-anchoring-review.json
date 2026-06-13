@@ -1,0 +1,383 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedAt": "2026-06-13T17:33:44.093Z",
+  "sourcePath": "src/data/mw-source-layers.json + src/data/external/dharmamitra-chronology.json",
+  "recordCount": 6,
+  "queue": "source-layer-anchoring",
+  "chronology": {
+    "generatedAt": "2026-06-13T17:31:43.368Z",
+    "workCount": 1618
+  },
+  "crosswalk": {
+    "vedic": {
+      "eras": [
+        "vedic"
+      ],
+      "confidence": "high"
+    },
+    "epic": {
+      "eras": [
+        "epic-sutra"
+      ],
+      "confidence": "high"
+    },
+    "classical": {
+      "eras": [
+        "classical"
+      ],
+      "confidence": "high"
+    },
+    "puranic": {
+      "eras": [
+        "early-medieval"
+      ],
+      "confidence": "judgment"
+    },
+    "technical": {
+      "eras": [
+        "epic-sutra",
+        "classical"
+      ],
+      "confidence": "judgment"
+    },
+    "lexicographic": {
+      "eras": [
+        "late-medieval"
+      ],
+      "confidence": "high"
+    }
+  },
+  "assumptions": [
+    "Date bands are computed over Dharmamitra ANCHOR works only (externally-dated), not inferred ones.",
+    "The atlas layer <-> Dharmamitra era crosswalk is explicit and small; crosswalkConfidence flags arguable mappings.",
+    "Years are CE; negative = BCE. A band describes the spread of cited-work dates in a layer, not a single layer date.",
+    "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds."
+  ],
+  "warnings": [
+    "Dharmamitra dates are posterior model estimates, not established facts; ratify before the atlas cites any band.",
+    "This queue never rewrites mw-source-layers.json; it proposes external date evidence for the existing coarse layers."
+  ],
+  "items": [
+    {
+      "reviewId": "source-layer-anchoring:vedic",
+      "queue": "source-layer-anchoring",
+      "subject": {
+        "kind": "source-layer",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra Sanskrit Dating",
+          "line": null,
+          "href": "https://dharmamitra.github.io/sanskrit-dating/sanskrit_chronology_interactive.html"
+        }
+      ],
+      "machineValue": {
+        "atlasLayer": "vedic",
+        "dharmamitraEras": [
+          "vedic"
+        ],
+        "crosswalkConfidence": "high",
+        "anchorWorkCount": 57,
+        "dateBand": {
+          "lo": -1125,
+          "p10": -1124,
+          "median": -779,
+          "p90": -578,
+          "hi": -567
+        },
+        "exemplars": [
+          {
+            "title": "Gopathabrāhmaṇa",
+            "postMedian": -779
+          },
+          {
+            "title": "Gopatha-Brāhmaṇa",
+            "postMedian": -780
+          },
+          {
+            "title": "Kauṣītaki-Brāhmaṇa [Śāṅkhāyana-Brāhmaṇa]",
+            "postMedian": -774
+          }
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-layer-anchoring:epic",
+      "queue": "source-layer-anchoring",
+      "subject": {
+        "kind": "source-layer",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra Sanskrit Dating",
+          "line": null,
+          "href": "https://dharmamitra.github.io/sanskrit-dating/sanskrit_chronology_interactive.html"
+        }
+      ],
+      "machineValue": {
+        "atlasLayer": "epic",
+        "dharmamitraEras": [
+          "epic-sutra"
+        ],
+        "crosswalkConfidence": "high",
+        "anchorWorkCount": 120,
+        "dateBand": {
+          "lo": -487,
+          "p10": -341,
+          "median": 102,
+          "p90": 172,
+          "hi": 195
+        },
+        "exemplars": [
+          {
+            "title": "Rāmāyaṇa: 1. Bālakāṇḍa",
+            "postMedian": 105
+          },
+          {
+            "title": "Brahmabindu-Upaniṣad",
+            "postMedian": 98
+          },
+          {
+            "title": "Madhyamakaśālistambasūtra",
+            "postMedian": 98
+          }
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-layer-anchoring:classical",
+      "queue": "source-layer-anchoring",
+      "subject": {
+        "kind": "source-layer",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra Sanskrit Dating",
+          "line": null,
+          "href": "https://dharmamitra.github.io/sanskrit-dating/sanskrit_chronology_interactive.html"
+        }
+      ],
+      "machineValue": {
+        "atlasLayer": "classical",
+        "dharmamitraEras": [
+          "classical"
+        ],
+        "crosswalkConfidence": "high",
+        "anchorWorkCount": 368,
+        "dateBand": {
+          "lo": 200,
+          "p10": 232,
+          "median": 419,
+          "p90": 613,
+          "hi": 649
+        },
+        "exemplars": [
+          {
+            "title": "Abhijñānaśākuntala",
+            "postMedian": 419
+          },
+          {
+            "title": "Devatāsūtra",
+            "postMedian": 419
+          },
+          {
+            "title": "Raghuvaṃśa",
+            "postMedian": 419
+          }
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-layer-anchoring:puranic",
+      "queue": "source-layer-anchoring",
+      "subject": {
+        "kind": "source-layer",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra Sanskrit Dating",
+          "line": null,
+          "href": "https://dharmamitra.github.io/sanskrit-dating/sanskrit_chronology_interactive.html"
+        }
+      ],
+      "machineValue": {
+        "atlasLayer": "puranic",
+        "dharmamitraEras": [
+          "early-medieval"
+        ],
+        "crosswalkConfidence": "judgment",
+        "anchorWorkCount": 527,
+        "dateBand": {
+          "lo": 650,
+          "p10": 721,
+          "median": 965,
+          "p90": 1113,
+          "hi": 1199
+        },
+        "exemplars": [
+          {
+            "title": "Nārada-Purāṇa 2 [Nāradīya-Purāṇa 2]",
+            "postMedian": 965
+          },
+          {
+            "title": "Rasādhyāya",
+            "postMedian": 964
+          },
+          {
+            "title": "Nārada-Purāṇa 1 [Nāradīya-Purāṇa 1]",
+            "postMedian": 968
+          }
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-layer-anchoring:technical",
+      "queue": "source-layer-anchoring",
+      "subject": {
+        "kind": "source-layer",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra Sanskrit Dating",
+          "line": null,
+          "href": "https://dharmamitra.github.io/sanskrit-dating/sanskrit_chronology_interactive.html"
+        }
+      ],
+      "machineValue": {
+        "atlasLayer": "technical",
+        "dharmamitraEras": [
+          "epic-sutra",
+          "classical"
+        ],
+        "crosswalkConfidence": "judgment",
+        "anchorWorkCount": 488,
+        "dateBand": {
+          "lo": -487,
+          "p10": 65,
+          "median": 361,
+          "p90": 609,
+          "hi": 649
+        },
+        "exemplars": [
+          {
+            "title": "Nāmaliṅgānuśāsana [Amarakoṣa, Amarakośa], Kāṇḍa 1",
+            "postMedian": 361
+          },
+          {
+            "title": "Viṃśatikā vijñaptimātratāsiddhi [Viṃśikāvṛtti] kārikā",
+            "postMedian": 360
+          },
+          {
+            "title": "Brahmasūtra: Adhyāya 3 (with Govindānanda's Ratnaprabhā)",
+            "postMedian": 362
+          }
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-layer-anchoring:lexicographic",
+      "queue": "source-layer-anchoring",
+      "subject": {
+        "kind": "source-layer",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra Sanskrit Dating",
+          "line": null,
+          "href": "https://dharmamitra.github.io/sanskrit-dating/sanskrit_chronology_interactive.html"
+        }
+      ],
+      "machineValue": {
+        "atlasLayer": "lexicographic",
+        "dharmamitraEras": [
+          "late-medieval"
+        ],
+        "crosswalkConfidence": "high",
+        "anchorWorkCount": 210,
+        "dateBand": {
+          "lo": 1200,
+          "p10": 1289,
+          "median": 1536,
+          "p90": 1689,
+          "hi": 1892
+        },
+        "exemplars": [
+          {
+            "title": "Cinmantramālinī",
+            "postMedian": 1534
+          },
+          {
+            "title": "Haribhaktirasāmṛtasindhu",
+            "postMedian": 1538
+          },
+          {
+            "title": "Haribhaktivilāsa 1–11",
+            "postMedian": 1540
+          }
+        ]
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    }
+  ]
+}
