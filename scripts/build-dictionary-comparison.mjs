@@ -1,9 +1,8 @@
 // Build Comparative Dictionary Lab outputs (Phase 2, first slice).
 //
 // Deterministic cross-dictionary comparison of MW, AP, PWG, PWK, WIL, VCP, SKD.
-// Coverage / overlap / intersection / unique use lemma presence across all 7.
-// POS/gender disagreement uses the 5 grammar-reliable tagged dictionaries.
-// Sense depth and citation apparatus are deferred (see DICTIONARY_COMPARISON_PLAN).
+// Coverage / overlap / intersection / unique use broad headword presence by default.
+// Deep metrics use validated feature adapters and never count unavailable markup as zero.
 //
 // Usage: npm run build-dict-comparison. No LLM inference.
 
@@ -12,10 +11,11 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
 import { iterateHeadwords } from "./lib/dict-headwords.mjs";
-import { iterateDict, dictExists, genderForDict } from "./lib/dict-parser.mjs";
+import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { presentDicts, lemmaConfidence, genderConflict } from "./lib/dict-align.mjs";
 import { buildBroadHeadwordDictionaries, coreComparisonDictionaries } from "./lib/dict-scope.mjs";
+import { extractGrammar, featureSupport, supportedFeatureCodes } from "./lib/dict-feature-adapters.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
@@ -30,8 +30,8 @@ const GENDER_TOKENS = new Set(["m", "f", "n", "adj", "ind"]);
 const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
 
 const ORDER = DICTS.map(d => d.code);
-const TAGGED = DICTS.filter(d => d.grammarReliable).map(d => d.code);
-const HOMONYM_DICTS = DICTS.filter(d => d.homonymMarked).map(d => d.code);
+const GRAMMAR_DICTS = supportedFeatureCodes("grammar", { scope: "coreComparison" });
+const HOMONYM_DICTS = supportedFeatureCodes("homonyms", { scope: "coreComparison" });
 const DICT_INDEX = Object.fromEntries(ORDER.map((code, index) => [code, index]));
 const COVERAGE_SCOPES = {
   broadHeadword: {
@@ -235,8 +235,8 @@ function buildIndex(warnings) {
       slot.records += 1;
       slot.raws.add(rec.k1.trim());
       if (rec.h) slot.homs.add(rec.h.trim());
-      const g = genderForDict(code, rec.body);
-      if (g) slot.genders.add(g);
+      const g = extractGrammar(code, rec.body);
+      if (g) slot.genders.add(g.value);
       if (!slot.example) slot.example = { k1: rec.k1, line: rec.startLine, href: rec.href };
     }
     perDictRecords[code] = records;
@@ -337,8 +337,8 @@ function main() {
       }
     }
 
-    // gender conflict across all gender-bearing dicts (lex + prose)
-    const gc = genderConflict(entry, ORDER);
+    // gender conflict across dictionaries with supported grammar/POS adapters.
+    const gc = genderConflict(entry, GRAMMAR_DICTS);
     if (gc.conflict) {
       conflictCount += 1;
       if (conflicts.length < SAMPLE * 4) {
@@ -355,6 +355,28 @@ function main() {
 
   const distinctLemmas = index.size;
   const written = [];
+  const grammarSupport = featureSupport("grammar", { scope: "broadHeadword" });
+  const homonymSupport = featureSupport("homonyms", { scope: "broadHeadword" });
+  const headwordAlignmentSupport = {
+    feature: "headwordAlignment",
+    featureLabel: "Headword alignment",
+    adapterScope: "coreComparison",
+    includedDictionaries: DICTS.map(d => ({
+      code: d.code,
+      label: d.label,
+      fullName: d.fullName ?? d.label,
+      methodId: "cdsl-k1-normalized-headword",
+      methodLabel: "CDSL <k1> normalized headword",
+      status: "supported",
+      confidence: "validated",
+      fixtureCoverage: "unit"
+    })),
+    unavailableDictionaries: [],
+    methodNotes: [
+      "Alignment confidence is a neutral headword metric over Core 7 <k1> entries.",
+      "Broad coverage/overlap uses the separate broadHeadword layer; this compact alignment review remains Core 7."
+    ]
+  };
 
   // 1-4. Neutral headword coverage outputs. Top-level fields mirror the broad
   // default, while `scopes.coreComparison` preserves the legacy Core 7 view.
@@ -518,12 +540,23 @@ function main() {
     writeJson(
       "pos-disagreement.json",
       envelope(
-        { conflictCount, shown: conflicts.length, conflicts },
+        {
+          feature: grammarSupport.feature,
+          featureLabel: grammarSupport.featureLabel,
+          adapterScope: grammarSupport.adapterScope,
+          includedDictionaries: grammarSupport.includedDictionaries,
+          unavailableDictionaries: grammarSupport.unavailableDictionaries,
+          methodNotes: grammarSupport.methodNotes,
+          conflictCount,
+          shown: conflicts.length,
+          conflicts
+        },
         {
           assumptions: [
-            "Gender is taken from <lex> for the tagged dictionaries (MW, AP, PWG, PWK, WIL) and from prose markers for VCP and SKD.",
+            "Gender/POS evidence comes only from supported feature adapters.",
             "A conflict means two dictionaries assert disjoint specific genders ({m,f,n}); adjective/indeclinable tags never trigger one.",
-            "Within-dictionary polysemy (a lemma listed under several genders) does not count as a conflict."
+            "Within-dictionary polysemy (a lemma listed under several genders) does not count as a conflict.",
+            "Unavailable dictionaries are excluded from this metric, never counted as zero evidence."
           ],
           warnings: ["VCP prose markers reliably capture m/adj/ind but under-mark f/n at the anchor position, so some VCP feminine/neuter genders are absent (missed conflicts, never false ones)."]
         }
@@ -539,6 +572,12 @@ function main() {
       "homonym-split.json",
       envelope(
         {
+          feature: homonymSupport.feature,
+          featureLabel: homonymSupport.featureLabel,
+          adapterScope: homonymSupport.adapterScope,
+          includedDictionaries: homonymSupport.includedDictionaries,
+          unavailableDictionaries: homonymSupport.unavailableDictionaries,
+          methodNotes: homonymSupport.methodNotes,
           homonymDicts: HOMONYM_DICTS.map(c => DICT_LABELS[c]),
           candidateCount: homonymSplitCount,
           shown: homonymSplits.length,
@@ -549,7 +588,8 @@ function main() {
             `Homonym counts use the <h> index; only the homonym-marking dictionaries carry it: ${HOMONYM_DICTS.map(c => DICT_LABELS[c]).join(", ")}.`,
             "homonymCount = distinct <h> values for the lemma, or 1 when none are marked.",
             "A candidate is a lemma present in >=2 of those dictionaries where the homonym count differs and the maximum is >=2 (one dictionary splits what another merges).",
-            "Differing homonymy is usually legitimate lexicographic practice, not an error; this is an analysis view, not a correction queue."
+            "Differing homonymy is usually legitimate lexicographic practice, not an error; this is an analysis view, not a correction queue.",
+            "Unavailable dictionaries are excluded from this metric, never counted as one or zero evidence."
           ],
           warnings: ["AP, WIL, VCP, SKD do not mark homonyms with <h> and are excluded."]
         }
@@ -562,7 +602,16 @@ function main() {
     writeJson(
       "alignment-confidence.json",
       envelope(
-        { distribution: confidenceDist, lowConfidence },
+        {
+          feature: headwordAlignmentSupport.feature,
+          featureLabel: headwordAlignmentSupport.featureLabel,
+          adapterScope: headwordAlignmentSupport.adapterScope,
+          includedDictionaries: headwordAlignmentSupport.includedDictionaries,
+          unavailableDictionaries: headwordAlignmentSupport.unavailableDictionaries,
+          methodNotes: headwordAlignmentSupport.methodNotes,
+          distribution: confidenceDist,
+          lowConfidence
+        },
         {
           assumptions: [
             "high = every contributing dictionary used the identical raw <k1>; medium = matched only after normalization.",
@@ -639,6 +688,20 @@ function main() {
       intersectionAll: data.intersectionAll.count,
       pairwiseRows: data.pairwise.length
     }])),
+    featureAdapters: {
+      grammar: {
+        included: grammarSupport.includedDictionaries.length,
+        unavailable: grammarSupport.unavailableDictionaries.length
+      },
+      homonyms: {
+        included: homonymSupport.includedDictionaries.length,
+        unavailable: homonymSupport.unavailableDictionaries.length
+      },
+      headwordAlignment: {
+        included: headwordAlignmentSupport.includedDictionaries.length,
+        unavailable: headwordAlignmentSupport.unavailableDictionaries.length
+      }
+    },
     intersectionAll: coverageScopes.coreComparison.intersectionAll.count,
     genderConflicts: conflictCount,
     homonymSplits: homonymSplitCount,

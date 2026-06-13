@@ -20,6 +20,7 @@ import { extractCitations, normalizeSource } from "./lib/mw-classifiers.mjs";
 import { baseForm } from "./lib/mw-source-layers.mjs";
 import { canonicalSiglum, canonicalName } from "./lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
+import { citationAdapterForDict, featureSupport, supportedFeatureCodes } from "./lib/dict-feature-adapters.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
@@ -29,7 +30,7 @@ const TOP_SOURCES = 60;
 // for the cross-dictionary alias table (it may equal another dict's siglum).
 const ALIAS_REVIEW_MIN = 100;
 
-const TAGGED = DICTS.filter(d => d.citationTagged).map(d => d.code);
+const TAGGED = supportedFeatureCodes("citations", { scope: "coreComparison" });
 
 function analyse(code, tagged) {
   let recordCount = 0;
@@ -106,20 +107,26 @@ function main() {
       warnings.push(`Missing source for ${d.code}; skipped.`);
       continue;
     }
-    perDictRaw[d.code] = analyse(d.code, d.citationTagged);
-    console.log(`  ${d.code}: ${perDictRaw[d.code].totalCitations} citations (${d.citationTagged ? "ls" : "iti"})`);
+    const adapter = citationAdapterForDict(d.code);
+    const tagged = adapter?.status === "supported" && adapter.methodId === "ls-source-citation";
+    perDictRaw[d.code] = analyse(d.code, tagged);
+    console.log(`  ${d.code}: ${perDictRaw[d.code].totalCitations} citations (${tagged ? "ls" : "iti"})`);
   }
 
   // Per-dictionary apparatus.
   const perDict = DICTS.filter(d => perDictRaw[d.code]).map(d => {
     const r = perDictRaw[d.code];
-    const topSources = d.citationTagged
+    const adapter = citationAdapterForDict(d.code);
+    const tagged = adapter?.status === "supported" && adapter.methodId === "ls-source-citation";
+    const topSources = tagged
       ? [...r.sources.entries()].sort((a, b) => b[1].count - a[1].count).slice(0, TOP_SOURCES)
           .map(([id, e]) => ({ source: canonicalName(id) ?? topForm(e), count: e.count }))
       : [];
     return {
       dict: d.label,
-      method: d.citationTagged ? "ls" : "iti",
+      method: tagged ? "ls" : "iti",
+      methodId: adapter?.methodId ?? null,
+      methodStatus: adapter?.status ?? "missing",
       recordCount: r.recordCount,
       recordsWithCitations: r.recordsWithCitations,
       totalCitations: r.totalCitations,
@@ -165,18 +172,28 @@ function main() {
   }
   sourceOverlap.sort((x, y) => y.sharedSources - x.sharedSources);
 
+  const citationSupport = featureSupport("citations", { scope: "broadHeadword" });
+
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     generatedAt: new Date().toISOString(),
     sourceRoot: "../csl-orig/v02",
+    feature: citationSupport.feature,
+    featureLabel: citationSupport.featureLabel,
+    adapterScope: citationSupport.adapterScope,
+    includedDictionaries: citationSupport.includedDictionaries,
+    unavailableDictionaries: citationSupport.unavailableDictionaries,
+    diagnosticDictionaries: citationSupport.diagnosticDictionaries,
+    methodNotes: citationSupport.methodNotes,
     citationTaggedDicts: TAGGED.map(c => DICT_LABELS[c]),
     perDict,
     sourceMatrix,
     sourceOverlap,
     assumptions: [
-      "Source-level comparison covers the <ls>-tagged dictionaries (MW, AP, PWG, PWK).",
+      "Source-level comparison covers dictionaries with supported <ls> citation adapters (MW, AP, PWG, PWK).",
       "citationsPerRecord uses <ls> count for tagged dicts and `iti` count for prose dicts (VCP, SKD); the two methods are not directly comparable.",
       "WIL is essentially untagged for citations (<ls> almost absent), so its density is near zero by encoding, not by content.",
+      "Diagnostic prose/source-hint proxies are not included in source matrix/overlap until a validated citation adapter is added.",
       "Sigla are reduced to base form (loci stripped: 'MBh. iii,5' -> 'MBh') then canonicalized across dictionaries by diacritic/case fold plus the reviewed alias table src/data/dict-source-aliases.json.",
       "The fold aligns MBh/MBH and RV/ṚV automatically; abbreviation-scheme differences (BhP vs Bhāg) need an alias entry. Unaliased differences still under-count cross-dictionary overlap — see the source-siglum review queue."
     ],

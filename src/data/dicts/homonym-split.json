@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-13T19:25:09.692Z",
+  "generatedAt": "2026-06-13T20:04:37.162Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -43,10 +43,388 @@
     "Homonym counts use the <h> index; only the homonym-marking dictionaries carry it: MW, PWG, PWK.",
     "homonymCount = distinct <h> values for the lemma, or 1 when none are marked.",
     "A candidate is a lemma present in >=2 of those dictionaries where the homonym count differs and the maximum is >=2 (one dictionary splits what another merges).",
-    "Differing homonymy is usually legitimate lexicographic practice, not an error; this is an analysis view, not a correction queue."
+    "Differing homonymy is usually legitimate lexicographic practice, not an error; this is an analysis view, not a correction queue.",
+    "Unavailable dictionaries are excluded from this metric, never counted as one or zero evidence."
   ],
   "warnings": [
     "AP, WIL, VCP, SKD do not mark homonyms with <h> and are excluded."
+  ],
+  "feature": "homonyms",
+  "featureLabel": "Homonyms",
+  "adapterScope": "broadHeadword",
+  "includedDictionaries": [
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "fullName": "Böhtlingk and Roth Grosses Petersburger Wörterbuch",
+      "methodId": "h-homonym-index",
+      "methodLabel": "<h> homonym index",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "fullName": "Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung",
+      "methodId": "h-homonym-index",
+      "methodLabel": "<h> homonym index",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "mw",
+      "label": "MW",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary",
+      "methodId": "h-homonym-index",
+      "methodLabel": "<h> homonym index",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    }
+  ],
+  "unavailableDictionaries": [
+    {
+      "code": "skd",
+      "label": "SKD",
+      "fullName": "Śabda-kalpadruma",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "fullName": "Wilson Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "yat",
+      "label": "YAT",
+      "fullName": "Yates Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "bop",
+      "label": "BOP",
+      "fullName": "Bopp Glossarium Sanscritum",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "gst",
+      "label": "GST",
+      "fullName": "Goldstücker Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "armh",
+      "label": "ARMH",
+      "fullName": "Abhidhānaratnamālā of Halāyudha",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "bur",
+      "label": "BUR",
+      "fullName": "Burnouf Dictionnaire Sanscrit-Français",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "ben",
+      "label": "BEN",
+      "fullName": "Benfey Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "mw72",
+      "label": "MW72",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary (1st edition)",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "gra",
+      "label": "GRA",
+      "fullName": "Grassmann Wörterbuch zum Rig Veda",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "fullName": "Vacaspatyam",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "pwkvn",
+      "label": "PWKVN",
+      "fullName": "Petersburger Wörterbuch (PW) Nachträge und Verbesserungen",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "lan",
+      "label": "LAN",
+      "fullName": "Lanman's Sanskrit Reader Vocabulary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "ccs",
+      "label": "CCS",
+      "fullName": "Cappeller Sanskrit Wörterbuch",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "lrv",
+      "label": "LRV",
+      "fullName": "Vaidya Standard Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "ap90",
+      "label": "AP90",
+      "fullName": "Apte Practical Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "cae",
+      "label": "CAE",
+      "fullName": "Cappeller Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "md",
+      "label": "MD",
+      "fullName": "Macdonell Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "abch",
+      "label": "ABCH",
+      "fullName": "Abhidhānacintāmaṇi of Hemacandrācārya",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "acph",
+      "label": "ACPH",
+      "fullName": "Abhidhānacintāmaṇipariśiṣṭa of Hemacandrācārya",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "acsj",
+      "label": "ACSJ",
+      "fullName": "Abhidhānacintāmaṇiśiloñcha of Jinadeva",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "shs",
+      "label": "SHS",
+      "fullName": "Shabda-Sagara Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "inm",
+      "label": "INM",
+      "fullName": "Index to the Names in the Mahabharata",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "vei",
+      "label": "VEI",
+      "fullName": "The Vedic Index of Names and Subjects",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "sch",
+      "label": "SCH",
+      "fullName": "Schmidt Nachträge zum Sanskrit-Wörterbuch",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "stc",
+      "label": "STC",
+      "fullName": "Stchoupak Dictionnaire Sanscrit-Français",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "pui",
+      "label": "PUI",
+      "fullName": "The Purana Index",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "bhs",
+      "label": "BHS",
+      "fullName": "Edgerton Buddhist Hybrid Sanskrit Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "fri",
+      "label": "FRI",
+      "fullName": "Friš Sanskrit Reader Vocabulary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "fullName": "Practical Sanskrit-English Dictionary (revised edition)",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "acc",
+      "label": "ACC",
+      "fullName": "Aufrecht's Catalogus Catalogorum",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "pe",
+      "label": "PE",
+      "fullName": "Puranic Encyclopedia",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "krm",
+      "label": "KRM",
+      "fullName": "Kṛdantarūpamālā",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "ieg",
+      "label": "IEG",
+      "fullName": "Indian Epigraphical Glossary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "snp",
+      "label": "SNP",
+      "fullName": "Meulenbeld's Sanskrit Names of Plants",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "mci",
+      "label": "MCI",
+      "fullName": "Mahabharata Cultural Index",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    },
+    {
+      "code": "pgn",
+      "label": "PGN",
+      "fullName": "Personal and Geographical Names in the Gupta Inscriptions",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated homonym-index adapter for this dictionary yet."
+    }
+  ],
+  "methodNotes": [
+    "Supported homonym adapters use dictionary-specific <h> indices after validating that <h> encodes homonym splitting.",
+    "Unavailable dictionaries are excluded from homonym split counts, never counted as one or zero evidence."
   ],
   "homonymDicts": [
     "MW",

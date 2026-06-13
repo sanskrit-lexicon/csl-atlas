@@ -42,6 +42,12 @@ import * as Plot from "npm:@observablehq/plot";
 Sense counts are <b>sense-division markers</b>, not curated sense inventories: AP <code>∙</code> bullets, PWG/PWK <code>&lt;div&gt;</code>. <b>MW is excluded</b> — it segments senses in prose (<code>&lt;div&gt;</code> ~0.05/entry), so a structural count would falsely make it sense-poor; WIL/VCP/SKD are prose too. AP's bullet unit differs from PWG/PWK's <code>&lt;div&gt;</code>, so AP-vs-Petersburg gaps partly reflect encoding — the most directly comparable pair is <b>PWG vs PWK</b>.
 </div>
 
+```js
+const includedSenses = data.includedDictionaries ?? [];
+const unavailableSenses = data.unavailableDictionaries ?? [];
+display(html`<div class="note"><b>Validated sense adapters:</b> ${includedSenses.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. <b>Unavailable for this metric:</b> ${unavailableSenses.length.toLocaleString()} broad dictionaries; they are excluded, not counted as single-sense or zero evidence.</div>`);
+```
+
 ## ${t("phase2.senses.sense-richness")}
 
 ```js

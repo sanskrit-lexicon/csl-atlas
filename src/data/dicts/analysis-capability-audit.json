@@ -1,22 +1,22 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-13T19:25:31.306Z",
+  "generatedAt": "2026-06-13T20:05:58.953Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
   "summary": {
     "grammar": {
-      "supported": 5,
+      "supported": 7,
       "candidate": 7,
-      "partial": 2,
+      "partial": 0,
       "weak": 0,
       "missing": 26
     },
     "citations": {
       "supported": 4,
-      "candidate": 12,
-      "partial": 0,
-      "weak": 23,
+      "candidate": 9,
+      "partial": 2,
+      "weak": 24,
       "missing": 1
     },
     "homonyms": {
@@ -84,12 +84,12 @@
       },
       "capabilities": {
         "grammar": {
-          "status": "partial",
-          "method": "existing-prose-marker"
+          "status": "supported",
+          "method": "skd-prose-gender-pos"
         },
         "citations": {
-          "status": "candidate",
-          "method": "iti-prose"
+          "status": "partial",
+          "method": "iti-prose-proxy"
         },
         "homonyms": {
           "status": "missing",
@@ -151,11 +151,11 @@
       "capabilities": {
         "grammar": {
           "status": "supported",
-          "method": "existing-core"
+          "method": "lex-gender-pos"
         },
         "citations": {
-          "status": "candidate",
-          "method": "ls-tag"
+          "status": "weak",
+          "method": "iti-prose-proxy"
         },
         "homonyms": {
           "status": "missing",
@@ -349,19 +349,19 @@
       "capabilities": {
         "grammar": {
           "status": "supported",
-          "method": "existing-core"
+          "method": "lex-gender-pos"
         },
         "citations": {
           "status": "supported",
-          "method": "ls-tag"
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "supported",
-          "method": "h-tag"
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "supported",
-          "method": "div"
+          "method": "pwg-div-sense-marker"
         }
       }
     },
@@ -810,12 +810,12 @@
       },
       "capabilities": {
         "grammar": {
-          "status": "partial",
-          "method": "existing-prose-marker"
+          "status": "supported",
+          "method": "vcp-prose-gender-pos"
         },
         "citations": {
-          "status": "candidate",
-          "method": "iti-prose"
+          "status": "partial",
+          "method": "iti-prose-proxy"
         },
         "homonyms": {
           "status": "missing",
@@ -877,19 +877,19 @@
       "capabilities": {
         "grammar": {
           "status": "supported",
-          "method": "existing-core"
+          "method": "lex-gender-pos"
         },
         "citations": {
           "status": "supported",
-          "method": "ls-tag"
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "supported",
-          "method": "h-tag"
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "supported",
-          "method": "div"
+          "method": "pwk-div-sense-marker"
         }
       }
     },
@@ -1603,15 +1603,15 @@
       "capabilities": {
         "grammar": {
           "status": "supported",
-          "method": "existing-core"
+          "method": "lex-gender-pos"
         },
         "citations": {
           "status": "supported",
-          "method": "ls-tag"
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "supported",
-          "method": "h-tag"
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -2197,11 +2197,11 @@
       "capabilities": {
         "grammar": {
           "status": "supported",
-          "method": "existing-core"
+          "method": "lex-gender-pos"
         },
         "citations": {
           "status": "supported",
-          "method": "ls-tag"
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "weak",
@@ -2209,7 +2209,7 @@
         },
         "senses": {
           "status": "supported",
-          "method": "bullet"
+          "method": "ap-bullet-sense-marker"
         }
       }
     },
@@ -2697,8 +2697,8 @@
     }
   ],
   "statusMeanings": {
-    "supported": "Already used by the current core analysis code.",
-    "partial": "Used today with known limitations.",
+    "supported": "A validated feature adapter exists and public deep metrics may include it.",
+    "partial": "Diagnostic evidence exists, but it is not yet a supported public deep-metric adapter.",
     "candidate": "Enough encoded evidence exists to build or validate a parser.",
     "weak": "Some markers exist, but not enough to treat as reliable without inspection.",
     "missing": "No useful marker evidence found by this audit."

@@ -42,6 +42,23 @@ function scope(doc, id) {
   return doc?.scopes?.[id] ?? doc;
 }
 
+function validateFeatureSupport(doc, name) {
+  if (!Array.isArray(doc.includedDictionaries)) {
+    errors.push(`${name} missing includedDictionaries.`);
+    return new Set();
+  }
+  if (!Array.isArray(doc.unavailableDictionaries)) {
+    errors.push(`${name} missing unavailableDictionaries.`);
+    return new Set();
+  }
+  if (!Array.isArray(doc.methodNotes) || doc.methodNotes.length === 0) {
+    errors.push(`${name} missing methodNotes.`);
+  }
+  if (!doc.includedDictionaries.length) errors.push(`${name} has no included feature adapters.`);
+  notes.push(`${name} uses ${doc.includedDictionaries.length} adapter(s); ${doc.unavailableDictionaries.length} unavailable in this feature.`);
+  return new Set(doc.unavailableDictionaries.map(d => d.label));
+}
+
 const cov = docs["coverage-matrix.json"];
 if (cov) {
   const broad = scope(cov, "broadHeadword");
@@ -78,25 +95,34 @@ if (pairDoc) {
 
 const pos = docs["pos-disagreement.json"];
 if (pos) {
+  const unavailableLabels = validateFeatureSupport(pos, "pos-disagreement");
   const missing = (pos.conflicts || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
   if (missing.length) errors.push(`${missing.length} gender conflicts lack source links.`);
-  else notes.push(`${pos.conflictCount} gender conflicts (${pos.shown} sampled), all with source links.`);
+  const unavailableEvidence = (pos.conflicts || []).filter(c => Object.keys(c.byDict || {}).some(label => unavailableLabels.has(label)));
+  if (unavailableEvidence.length) errors.push(`${unavailableEvidence.length} gender conflicts include unavailable dictionaries.`);
+  if (!missing.length && !unavailableEvidence.length) notes.push(`${pos.conflictCount} gender conflicts (${pos.shown} sampled), all with source links.`);
 }
 
 const hom = docs["homonym-split.json"];
 if (hom) {
+  const unavailableLabels = validateFeatureSupport(hom, "homonym-split");
   if (typeof hom.candidateCount !== "number") errors.push("homonym-split missing candidateCount.");
   const missing = (hom.candidates || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
   if (missing.length) errors.push(`${missing.length} homonym-split candidates lack source links.`);
-  else notes.push(`${hom.candidateCount} homonym-split candidates (${hom.shown} shown), all with source links.`);
+  const unavailableEvidence = (hom.candidates || []).filter(c => Object.keys(c.byDict || {}).some(label => unavailableLabels.has(label)));
+  if (unavailableEvidence.length) errors.push(`${unavailableEvidence.length} homonym-split candidates include unavailable dictionaries.`);
+  if (!missing.length && !unavailableEvidence.length) notes.push(`${hom.candidateCount} homonym-split candidates (${hom.shown} shown), all with source links.`);
 }
 
 const sense = docs["sense-depth.json"];
 if (sense) {
+  const unavailableLabels = validateFeatureSupport(sense, "sense-depth");
   if (!Array.isArray(sense.perDict) || sense.perDict.length < 2) errors.push("sense-depth needs >=2 dictionaries.");
   const missing = (sense.topDisparities || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
   if (missing.length) errors.push(`${missing.length} sense-depth disparities lack source links.`);
-  else notes.push(`${sense.disparityCount} sense-depth disparities (${sense.shown} shown), all with source links.`);
+  const unavailableEvidence = (sense.topDisparities || []).filter(c => Object.keys(c.byDict || {}).some(label => unavailableLabels.has(label)));
+  if (unavailableEvidence.length) errors.push(`${unavailableEvidence.length} sense-depth disparities include unavailable dictionaries.`);
+  if (!missing.length && !unavailableEvidence.length) notes.push(`${sense.disparityCount} sense-depth disparities (${sense.shown} shown), all with source links.`);
 }
 
 const dossier = docs["lemma-dossier.json"];

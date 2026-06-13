@@ -42,6 +42,13 @@ import * as Plot from "npm:@observablehq/plot";
 Tagged dictionaries (MW, AP, PWG, PWK) cite with <code>&lt;ls&gt;</code>; density is citations per entry. WIL is essentially untagged for citations, and VCP/SKD cite in prose — for those, density uses an <code>iti</code> proxy and is <b>not</b> directly comparable to the <code>&lt;ls&gt;</code> counts.
 </div>
 
+```js
+const includedCitations = data.includedDictionaries ?? [];
+const unavailableCitations = data.unavailableDictionaries ?? [];
+const diagnosticCitations = data.diagnosticDictionaries ?? [];
+display(html`<div class="note"><b>Validated citation adapters:</b> ${includedCitations.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. <b>Diagnostic proxy rows:</b> ${diagnosticCitations.map(d => `${d.label} (${d.methodLabel})`).join(", ") || "none"}. <b>Unavailable for source overlap:</b> ${unavailableCitations.length.toLocaleString()} broad dictionaries; they are excluded, not counted as zero evidence.</div>`);
+```
+
 ## ${t("phase2.citations.density")}
 
 ```js

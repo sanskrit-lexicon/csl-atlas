@@ -14,15 +14,16 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { DICTS, DICT_LABELS, SENSE_MARKER } from "./lib/dict-manifest.mjs";
+import { DICT_LABELS } from "./lib/dict-manifest.mjs";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
+import { featureSupport, senseMethodForDict, senseUnitsForDict, supportedFeatureCodes } from "./lib/dict-feature-adapters.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
 const TOP_DISPARITIES = 200;
 
-const SENSE_DICTS = DICTS.filter(d => d.senseSegmented).map(d => d.code);
+const SENSE_DICTS = supportedFeatureCodes("senses", { scope: "coreComparison" });
 
 export function senseUnits(body, marker) {
   marker.lastIndex = 0;
@@ -43,14 +44,14 @@ function main() {
       warnings.push(`Missing source for ${code}; skipped.`);
       continue;
     }
-    const marker = SENSE_MARKER[code];
+    const adapter = senseMethodForDict(code);
     let recordCount = 0;
     let multiSense = 0;
     let totalSenses = 0;
     for (const rec of iterateDict(code)) {
       if (!rec.k1) continue;
       recordCount += 1;
-      const s = senseUnits(rec.body || "", marker);
+      const s = senseUnitsForDict(code, rec.body || "");
       totalSenses += s;
       if (s > 1) multiSense += 1;
 
@@ -65,7 +66,9 @@ function main() {
     }
     perDict[code] = {
       dict: DICT_LABELS[code],
-      method: code === "ap" ? "bullet (∙)" : "div",
+      method: adapter?.methodLabel ?? "unavailable",
+      methodId: adapter?.methodId ?? null,
+      methodStatus: adapter?.status ?? "missing",
       recordCount,
       meanSensesPerEntry: recordCount ? Number((totalSenses / recordCount).toFixed(3)) : 0,
       multiSensePct: recordCount ? Number(((100 * multiSense) / recordCount).toFixed(1)) : 0
@@ -103,10 +106,18 @@ function main() {
   }
   disparities.sort((a, b) => b.gap - a.gap || a.lemma.localeCompare(b.lemma));
 
+  const senseSupport = featureSupport("senses", { scope: "broadHeadword" });
+
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     generatedAt: new Date().toISOString(),
     sourceRoot: "../csl-orig/v02",
+    feature: senseSupport.feature,
+    featureLabel: senseSupport.featureLabel,
+    adapterScope: senseSupport.adapterScope,
+    includedDictionaries: senseSupport.includedDictionaries,
+    unavailableDictionaries: senseSupport.unavailableDictionaries,
+    methodNotes: senseSupport.methodNotes,
     senseSegmentedDicts: present.map(c => DICT_LABELS[c]),
     perDict: present.map(c => perDict[c]),
     leaderboard,
@@ -117,6 +128,7 @@ function main() {
     assumptions: [
       "Sense segmentation is structural only in AP (∙ bullets) and PWG/PWK (<div>); senseUnits = max(1, marker count).",
       "MW is excluded: it segments senses in prose (<div> ~0.05/entry), so a structural count would falsely make it sense-poor. WIL/VCP/SKD are prose too.",
+      "Unavailable dictionaries are excluded from this metric, never counted as single-sense or zero evidence.",
       "Per lemma per dictionary the richest entry (max senseUnits) is used; the leaderboard counts lemmas where one dictionary is strictly deepest.",
       "These are sense-division proxies, not curated sense inventories; PWG/PWK <div> mixes major and sub-senses."
     ],

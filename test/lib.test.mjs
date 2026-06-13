@@ -18,6 +18,14 @@ import { baseForm, layerForSource, isEditorialReference, recordSourceLayers } fr
 import { compoundSegmentCount, familyBase } from "../scripts/lib/mw-depth-graph.mjs";
 import { normalizeLemma } from "../scripts/lib/dict-normalize.mjs";
 import { genderFromLex, genderFromProse, genderForDict } from "../scripts/lib/dict-parser.mjs";
+import {
+  citationAdapterForDict,
+  extractGrammar,
+  featureSupport,
+  homonymFeatureCodes,
+  senseUnitsForDict,
+  supportedFeatureCodes
+} from "../scripts/lib/dict-feature-adapters.mjs";
 import { iterateKoshaHeadwordsFromText, parseKoshaSynonymToken } from "../scripts/lib/dict-headwords.mjs";
 import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/dict-align.mjs";
 import { CORE_COMPARISON_DICTS, buildBroadHeadwordDictionaries, isBroadHeadwordEligible, shardIdForLemma } from "../scripts/lib/dict-scope.mjs";
@@ -268,6 +276,44 @@ test("coverage artifacts expose broad default and stable core scope", () => {
   assert.equal(typeof intersection.scopes.broadHeadword.count, "number");
 });
 
+test("deep analysis artifacts declare included and unavailable adapters", () => {
+  const artifacts = [
+    ["pos-disagreement.json", "grammar"],
+    ["citation-apparatus.json", "citations"],
+    ["homonym-split.json", "homonyms"],
+    ["sense-depth.json", "senses"]
+  ];
+  for (const [file, feature] of artifacts) {
+    const data = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts", file), "utf8"));
+    assert.equal(data.feature, feature);
+    assert.equal(data.adapterScope, "broadHeadword");
+    assert.ok(Array.isArray(data.includedDictionaries) && data.includedDictionaries.length > 0, `${file} must include supported adapters`);
+    assert.ok(Array.isArray(data.unavailableDictionaries), `${file} must include unavailable dictionaries`);
+    assert.ok(Array.isArray(data.methodNotes) && data.methodNotes.length > 0, `${file} must include method notes`);
+  }
+});
+
+test("deep analysis artifacts never put unavailable dictionaries in evidence cells", () => {
+  const pos = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/pos-disagreement.json"), "utf8"));
+  const citations = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/citation-apparatus.json"), "utf8"));
+  const hom = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/homonym-split.json"), "utf8"));
+  const sense = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/sense-depth.json"), "utf8"));
+
+  for (const data of [pos, hom, sense]) {
+    const unavailable = new Set(data.unavailableDictionaries.map(dict => dict.label));
+    const rows = data.conflicts ?? data.candidates ?? data.topDisparities ?? [];
+    for (const row of rows) {
+      assert.ok(
+        Object.keys(row.byDict ?? {}).every(label => !unavailable.has(label)),
+        `${data.feature} evidence must not include unavailable dictionaries`
+      );
+    }
+  }
+
+  assert.ok(citations.diagnosticDictionaries.some(dict => dict.code === "vcp"));
+  assert.ok(citations.sourceMatrix.every(row => Object.keys(row.byDict).every(label => !new Set(citations.unavailableDictionaries.map(dict => dict.label)).has(label))));
+});
+
 test("iastToSlp1 transliterates common IAST queries", () => {
   assert.equal(iastToSlp1("agni"), "agni");
   assert.equal(iastToSlp1("śiva"), "Siva");
@@ -322,6 +368,39 @@ test("genderForDict dispatches lex vs prose by code", () => {
   assert.equal(genderForDict("mw", "<lex>m.</lex>"), "m");
   assert.equal(genderForDict("vcp", "a¦ pu0 x"), "m");
   assert.equal(genderForDict("skd", "a¦, klI, x"), "n");
+});
+
+// ---- dict-feature-adapters ----
+test("feature adapter registry preserves supported Core 7 grammar extraction", () => {
+  assert.deepEqual(
+    supportedFeatureCodes("grammar", { scope: "coreComparison" }),
+    ["mw", "ap", "pwg", "pw", "wil", "vcp", "skd"]
+  );
+  assert.deepEqual(extractGrammar("mw", "<lex>f.</lex>"), { value: "f", methodId: "lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("vcp", "a¦ pu0 x"), { value: "m", methodId: "vcp-prose-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("skd", "a¦, klI, x"), { value: "n", methodId: "skd-prose-gender-pos", status: "supported" });
+});
+
+test("feature support exposes broad unavailable dictionaries without promoting them", () => {
+  const grammar = featureSupport("grammar", { scope: "broadHeadword" });
+  assert.equal(grammar.adapterScope, "broadHeadword");
+  assert.equal(grammar.includedDictionaries.length, 7);
+  assert.equal(grammar.unavailableDictionaries.length, 33);
+  assert.ok(grammar.unavailableDictionaries.some(dict => dict.code === "bhs"));
+});
+
+test("citation adapters separate supported <ls> from diagnostic prose proxies", () => {
+  assert.deepEqual(supportedFeatureCodes("citations", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
+  assert.equal(citationAdapterForDict("mw").status, "supported");
+  assert.equal(citationAdapterForDict("vcp").status, "partial");
+  assert.equal(citationAdapterForDict("wil").status, "weak");
+});
+
+test("homonym and sense adapter scopes stay validated-only", () => {
+  assert.deepEqual(homonymFeatureCodes({ scope: "coreComparison" }), ["mw", "pwg", "pw"]);
+  assert.deepEqual(supportedFeatureCodes("senses", { scope: "coreComparison" }), ["ap", "pwg", "pw"]);
+  assert.equal(senseUnitsForDict("ap", "one ∙ two ∙ three"), 2);
+  assert.equal(senseUnitsForDict("mw", "<div>not validated for depth</div>"), null);
 });
 
 // ---- dict-align ----

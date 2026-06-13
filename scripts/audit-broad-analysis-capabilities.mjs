@@ -17,10 +17,10 @@ import { KOSHA_SYNONYM_CODES, iterateHeadwords } from "./lib/dict-headwords.mjs"
 import { dictExists, genderForDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { extractCitations } from "./lib/mw-classifiers.mjs";
+import { featureAdapter } from "./lib/dict-feature-adapters.mjs";
 
 const OUT = path.resolve(process.cwd(), "src", "data", "dicts", "analysis-capability-audit.json");
 const SCHEMA_VERSION = "1.0.0";
-const CORE_BY_CODE = new Map(CORE_COMPARISON_DICTS.map(dict => [dict.code, dict]));
 
 const NUMBERED_SENSE_RE = /\{@\d+\.@\}/g;
 const BULLET_RE = /∙/g;
@@ -43,9 +43,8 @@ function familyUsesSanskritProse(dict) {
 }
 
 function classifyGrammar(dict, stats) {
-  const core = CORE_BY_CODE.get(dict.code);
-  if (core?.grammarReliable) return { status: "supported", method: "existing-core" };
-  if (dict.code === "vcp" || dict.code === "skd") return { status: "partial", method: "existing-prose-marker" };
+  const adapter = featureAdapter("grammar", dict.code);
+  if (adapter?.status === "supported") return { status: "supported", method: adapter.methodId };
   if (KOSHA_SYNONYM_CODES.has(dict.code) && stats.genderRecords >= 100) {
     return { status: "candidate", method: "kosha-synonym-suffix" };
   }
@@ -56,8 +55,9 @@ function classifyGrammar(dict, stats) {
 }
 
 function classifyCitations(dict, stats) {
-  const core = CORE_BY_CODE.get(dict.code);
-  if (core?.citationTagged) return { status: "supported", method: "ls-tag" };
+  const adapter = featureAdapter("citations", dict.code);
+  if (adapter?.status === "supported") return { status: "supported", method: adapter.methodId };
+  if (adapter) return { status: adapter.status, method: adapter.methodId };
   if (stats.lsCount >= 100) return { status: "candidate", method: "ls-tag" };
   if (familyUsesSanskritProse(dict) && stats.itiCount >= 100) {
     return { status: "candidate", method: "iti-prose" };
@@ -67,16 +67,16 @@ function classifyCitations(dict, stats) {
 }
 
 function classifyHomonyms(dict, stats) {
-  const core = CORE_BY_CODE.get(dict.code);
-  if (core?.homonymMarked) return { status: "supported", method: "h-tag" };
+  const adapter = featureAdapter("homonyms", dict.code);
+  if (adapter?.status === "supported") return { status: "supported", method: adapter.methodId };
   if (stats.hRecords >= 20) return { status: "candidate", method: "h-tag" };
   if (stats.hRecords) return { status: "weak", method: "h-tag" };
   return { status: "missing", method: null };
 }
 
 function classifySenses(dict, stats) {
-  const core = CORE_BY_CODE.get(dict.code);
-  if (core?.senseSegmented) return { status: "supported", method: dict.code === "ap" ? "bullet" : "div" };
+  const adapter = featureAdapter("senses", dict.code);
+  if (adapter?.status === "supported") return { status: "supported", method: adapter.methodId };
   if (stats.divCount >= 100) return { status: "candidate", method: "div" };
   if (stats.numberedSenseCount >= 100) return { status: "candidate", method: "numbered-brace" };
   if (stats.bulletCount >= 100) return { status: "candidate", method: "bullet" };
@@ -214,8 +214,8 @@ function main() {
     dictionaries: rows,
     excludedFromSanskritHeadwordLookup: excludedBroadHeadwordDictionaries(),
     statusMeanings: {
-      supported: "Already used by the current core analysis code.",
-      partial: "Used today with known limitations.",
+      supported: "A validated feature adapter exists and public deep metrics may include it.",
+      partial: "Diagnostic evidence exists, but it is not yet a supported public deep-metric adapter.",
       candidate: "Enough encoded evidence exists to build or validate a parser.",
       weak: "Some markers exist, but not enough to treat as reliable without inspection.",
       missing: "No useful marker evidence found by this audit."

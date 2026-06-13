@@ -4,8 +4,8 @@ Broad headword coverage is a public lookup layer for Reader lookup and Lemma dos
 
 ## Scopes
 
-- `coreComparison`: MW, AP, PWG, PWK, WIL, VCP, SKD. This remains the source for gender conflicts, homonym splits, citation apparatus, sense depth, divergence, and the existing coverage/overlap pages.
-- `broadHeadword`: eligible local Sanskrit/BHS headword dictionaries from `../csl-orig/v02`. This is used for broad Reader and Dossier lookup only.
+- `broadHeadword`: eligible local Sanskrit/BHS headword dictionaries from `../csl-orig/v02`. This is the public default for neutral headword analyses: coverage, overlap, unique lemmas, Reader broad lookup, and Dossier broad lookup.
+- `coreComparison`: MW, AP, PWG, PWK, WIL, VCP, SKD. This remains the legacy deep-analysis baseline until individual feature adapters are validated.
 
 ## Inclusion Rules
 
@@ -32,4 +32,4 @@ The broad manifest exposes `sourceLinkMode` per dictionary:
 
 Broad mode reports headword presence, record count, and first source line where linkable. It does not imply reliable gender extraction, citation tagging, homonym markup, sense segmentation, semantic agreement, or editorial priority.
 
-Full analytical parity for all dictionaries is a later phase and requires dictionary-specific parsing and validation.
+Full analytical parity is adapter-driven: a broad dictionary participates in a deep feature only after `scripts/lib/dict-feature-adapters.mjs` contains a supported adapter for that dictionary and feature. Missing deep markup is shown as unavailable, never as zero evidence.

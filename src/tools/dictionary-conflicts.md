@@ -40,6 +40,12 @@ Gender is <b>derived</b> from <code>&lt;lex&gt;</code> tags in the tagged dictio
 </div>
 
 ```js
+const includedGrammar = pos.includedDictionaries ?? [];
+const unavailableGrammar = pos.unavailableDictionaries ?? [];
+display(html`<div class="note"><b>Validated grammar/POS adapters:</b> ${includedGrammar.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. <b>Unavailable for this metric:</b> ${unavailableGrammar.length.toLocaleString()} broad dictionaries; they are excluded, not counted as zero evidence.</div>`);
+```
+
+```js
 display(html`<p><b>${pos.conflictCount.toLocaleString()}</b> lemmas show a gender disagreement; showing a sample of <b>${pos.shown}</b>.</p>`);
 ```
 

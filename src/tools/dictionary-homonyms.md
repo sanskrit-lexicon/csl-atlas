@@ -43,6 +43,12 @@ Homonym count = distinct <code>&lt;h&gt;</code> indices for the lemma (1 when no
 </div>
 
 ```js
+const includedHomonyms = data.includedDictionaries ?? [];
+const unavailableHomonyms = data.unavailableDictionaries ?? [];
+display(html`<div class="note"><b>Validated homonym adapters:</b> ${includedHomonyms.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. <b>Unavailable for this metric:</b> ${unavailableHomonyms.length.toLocaleString()} broad dictionaries; they are excluded, not counted as one or zero evidence.</div>`);
+```
+
+```js
 display(html`<p><b>${data.candidateCount.toLocaleString()}</b> lemmas where ${data.homonymDicts.join(", ")} disagree on homonym count; showing the <b>${data.shown}</b> with the widest spread.</p>`);
 ```
 

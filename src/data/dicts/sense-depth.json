@@ -1,7 +1,385 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-05-30T21:26:26.076Z",
+  "generatedAt": "2026-06-13T20:05:47.683Z",
   "sourceRoot": "../csl-orig/v02",
+  "feature": "senses",
+  "featureLabel": "Senses",
+  "adapterScope": "broadHeadword",
+  "includedDictionaries": [
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "fullName": "Böhtlingk and Roth Grosses Petersburger Wörterbuch",
+      "methodId": "pwg-div-sense-marker",
+      "methodLabel": "PWG <div> sense marker",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "fullName": "Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung",
+      "methodId": "pwk-div-sense-marker",
+      "methodLabel": "PWK <div> sense marker",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "fullName": "Practical Sanskrit-English Dictionary (revised edition)",
+      "methodId": "ap-bullet-sense-marker",
+      "methodLabel": "AP bullet sense marker",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    }
+  ],
+  "unavailableDictionaries": [
+    {
+      "code": "skd",
+      "label": "SKD",
+      "fullName": "Śabda-kalpadruma",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "fullName": "Wilson Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "yat",
+      "label": "YAT",
+      "fullName": "Yates Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "bop",
+      "label": "BOP",
+      "fullName": "Bopp Glossarium Sanscritum",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "gst",
+      "label": "GST",
+      "fullName": "Goldstücker Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "armh",
+      "label": "ARMH",
+      "fullName": "Abhidhānaratnamālā of Halāyudha",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "bur",
+      "label": "BUR",
+      "fullName": "Burnouf Dictionnaire Sanscrit-Français",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "ben",
+      "label": "BEN",
+      "fullName": "Benfey Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "mw72",
+      "label": "MW72",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary (1st edition)",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "gra",
+      "label": "GRA",
+      "fullName": "Grassmann Wörterbuch zum Rig Veda",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "fullName": "Vacaspatyam",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "pwkvn",
+      "label": "PWKVN",
+      "fullName": "Petersburger Wörterbuch (PW) Nachträge und Verbesserungen",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "lan",
+      "label": "LAN",
+      "fullName": "Lanman's Sanskrit Reader Vocabulary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "ccs",
+      "label": "CCS",
+      "fullName": "Cappeller Sanskrit Wörterbuch",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "lrv",
+      "label": "LRV",
+      "fullName": "Vaidya Standard Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "ap90",
+      "label": "AP90",
+      "fullName": "Apte Practical Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "cae",
+      "label": "CAE",
+      "fullName": "Cappeller Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "md",
+      "label": "MD",
+      "fullName": "Macdonell Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "abch",
+      "label": "ABCH",
+      "fullName": "Abhidhānacintāmaṇi of Hemacandrācārya",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "acph",
+      "label": "ACPH",
+      "fullName": "Abhidhānacintāmaṇipariśiṣṭa of Hemacandrācārya",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "acsj",
+      "label": "ACSJ",
+      "fullName": "Abhidhānacintāmaṇiśiloñcha of Jinadeva",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "mw",
+      "label": "MW",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "shs",
+      "label": "SHS",
+      "fullName": "Shabda-Sagara Sanskrit-English Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "inm",
+      "label": "INM",
+      "fullName": "Index to the Names in the Mahabharata",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "vei",
+      "label": "VEI",
+      "fullName": "The Vedic Index of Names and Subjects",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "sch",
+      "label": "SCH",
+      "fullName": "Schmidt Nachträge zum Sanskrit-Wörterbuch",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "stc",
+      "label": "STC",
+      "fullName": "Stchoupak Dictionnaire Sanscrit-Français",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "pui",
+      "label": "PUI",
+      "fullName": "The Purana Index",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "bhs",
+      "label": "BHS",
+      "fullName": "Edgerton Buddhist Hybrid Sanskrit Dictionary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "fri",
+      "label": "FRI",
+      "fullName": "Friš Sanskrit Reader Vocabulary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "acc",
+      "label": "ACC",
+      "fullName": "Aufrecht's Catalogus Catalogorum",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "pe",
+      "label": "PE",
+      "fullName": "Puranic Encyclopedia",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "krm",
+      "label": "KRM",
+      "fullName": "Kṛdantarūpamālā",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "ieg",
+      "label": "IEG",
+      "fullName": "Indian Epigraphical Glossary",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "snp",
+      "label": "SNP",
+      "fullName": "Meulenbeld's Sanskrit Names of Plants",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "mci",
+      "label": "MCI",
+      "fullName": "Mahabharata Cultural Index",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    },
+    {
+      "code": "pgn",
+      "label": "PGN",
+      "fullName": "Personal and Geographical Names in the Gupta Inscriptions",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+    }
+  ],
+  "methodNotes": [
+    "Supported sense adapters count structural sense-division markers; the count is a proxy, not a curated sense inventory.",
+    "AP uses bullet divisions; PWG/PWK use <div>. Prose-segmented dictionaries stay unavailable until separately validated.",
+    "Unavailable dictionaries are excluded from depth/divergence counts, never counted as single-sense or zero evidence."
+  ],
   "senseSegmentedDicts": [
     "AP",
     "PWG",
@@ -10,21 +388,27 @@
   "perDict": [
     {
       "dict": "AP",
-      "method": "bullet (∙)",
+      "method": "AP bullet sense marker",
+      "methodId": "ap-bullet-sense-marker",
+      "methodStatus": "supported",
       "recordCount": 90654,
       "meanSensesPerEntry": 1.738,
       "multiSensePct": 28.1
     },
     {
       "dict": "PWG",
-      "method": "div",
+      "method": "PWG <div> sense marker",
+      "methodId": "pwg-div-sense-marker",
+      "methodStatus": "supported",
       "recordCount": 123366,
       "meanSensesPerEntry": 1.66,
       "multiSensePct": 17
     },
     {
       "dict": "PWK",
-      "method": "div",
+      "method": "PWK <div> sense marker",
+      "methodId": "pwk-div-sense-marker",
+      "methodStatus": "supported",
       "recordCount": 170556,
       "meanSensesPerEntry": 1.619,
       "multiSensePct": 14.9
@@ -5341,6 +5725,7 @@
   "assumptions": [
     "Sense segmentation is structural only in AP (∙ bullets) and PWG/PWK (<div>); senseUnits = max(1, marker count).",
     "MW is excluded: it segments senses in prose (<div> ~0.05/entry), so a structural count would falsely make it sense-poor. WIL/VCP/SKD are prose too.",
+    "Unavailable dictionaries are excluded from this metric, never counted as single-sense or zero evidence.",
     "Per lemma per dictionary the richest entry (max senseUnits) is used; the leaderboard counts lemmas where one dictionary is strictly deepest.",
     "These are sense-division proxies, not curated sense inventories; PWG/PWK <div> mixes major and sub-senses."
   ],

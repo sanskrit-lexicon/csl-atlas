@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-13T19:25:10.375Z",
+  "generatedAt": "2026-06-13T20:04:38.099Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -65,6 +65,20 @@
       "distinctLemmas": 298413,
       "intersectionAll": 1913,
       "pairwiseRows": 21
+    }
+  },
+  "featureAdapters": {
+    "grammar": {
+      "included": 7,
+      "unavailable": 33
+    },
+    "homonyms": {
+      "included": 3,
+      "unavailable": 37
+    },
+    "headwordAlignment": {
+      "included": 7,
+      "unavailable": 0
     }
   },
   "intersectionAll": 1913,
