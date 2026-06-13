@@ -17,7 +17,7 @@ import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExac
 import { packetIdForDiagnostic, scopeCluesForDiagnostic } from "../scripts/build-r2-review-packets.mjs";
 import { CHECKPOINT_DIAGNOSTIC_IDS, buildPayload as buildR2LabelProposalPayload, labelsForPacket } from "../scripts/build-r2-label-proposals.mjs";
 import { buildMarkdown as buildR2CheckpointMarkdown, buildPayload as buildR2CheckpointPayload } from "../scripts/build-r2-checkpoint-packet.mjs";
-import { PARSER_DISPOSITIONS, buildPayload as buildR2CheckpointReviewPayload } from "../scripts/build-r2-checkpoint-review.mjs";
+import { PARSER_DISPOSITIONS, applyPreservedDecisions as applyR2CheckpointPreserved, buildPayload as buildR2CheckpointReviewPayload } from "../scripts/build-r2-checkpoint-review.mjs";
 import { buildMarkdown as buildR2DriftExplanationMarkdown, buildPayload as buildR2DriftExplanationPayload } from "../scripts/build-r2-drift-explanation.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { buildMarkdown as buildH5MakerQaMarkdown, buildPayload as buildH5MakerQaPayload, preservedSourceCheckMap } from "../scripts/build-h5-maker-qa-candidates.mjs";
@@ -507,6 +507,31 @@ test("R2 checkpoint review report ignores preserved human fields in machine-only
   assert.equal(item.reviewedAt, null);
   assert.equal(item.note, "");
   assert.equal(item.machineValue.packetId, "div-source-scope");
+});
+
+test("applyPreservedDecisions re-applies the human overlay onto a machine-only payload", () => {
+  // Regression guard for the CLI footgun: a plain rebuild must preserve human
+  // decisions by reviewId, not blank them. main() overlays loadPreserved() via
+  // this function; here we feed it the committed report's own decisions.
+  const machine = buildR2CheckpointReviewPayload(r2CheckpointPacket, new Map(), r2CheckpointReviewReport.generatedAt);
+  const preserved = preservedReviewMap(r2CheckpointReviewReport);
+  const merged = applyR2CheckpointPreserved(machine, preserved);
+
+  // The committed report is fully human-reviewed, so every row is carried forward.
+  for (const item of merged.items) {
+    const source = r2CheckpointReviewReport.items.find(row => row.reviewId === item.reviewId);
+    assert.equal(item.reviewStatus, source.reviewStatus, `${item.reviewId} reviewStatus not preserved`);
+    assert.deepEqual(item.reviewedValue, source.reviewedValue, `${item.reviewId} reviewedValue not preserved`);
+    assert.equal(item.reviewer, source.reviewer, `${item.reviewId} reviewer not preserved`);
+    assert.equal(item.reviewedAt, source.reviewedAt, `${item.reviewId} reviewedAt not preserved`);
+    assert.equal(item.note, source.note, `${item.reviewId} note not preserved`);
+    // Machine fields stay exactly as generated.
+    assert.deepEqual(item.machineValue, machine.items.find(m => m.reviewId === item.reviewId).machineValue);
+  }
+
+  // Pure: the machine payload is not mutated, and an empty overlay is a no-op.
+  assert.equal(machine.items[0].reviewStatus, "needs-review");
+  assert.equal(applyR2CheckpointPreserved(machine, new Map()), machine);
 });
 
 test("R2 checkpoint review report rejects dirty checkpoint source rows", () => {

@@ -1,15 +1,22 @@
 // Build the shared review-report overlay for the 10-row R2 checkpoint.
 //
-// This creates no human decisions. It seeds src/data/review/ with canonical
-// empty review fields and intentionally does not preserve old decisions; parser
-// promotion remains blocked until a separate human review pass is authorized.
+// The MACHINE layer (buildPayload) creates no human decisions: it seeds the
+// 10 rows with canonical empty review fields, deterministically, ignoring any
+// prior decisions. The CLI wrapper (main) then re-applies the human overlay —
+// every other review queue in this repo "treats human decisions as an overlay
+// preserved across rebuilds by reviewId" (see lib/review-report.mjs), and the
+// committed report carries a human review pass; a plain rebuild MUST NOT wipe
+// it. So main preserves any reviewed-ok/blocked/deferred rows (and any row
+// carrying a reviewer) from the existing file by default. Pass --reseed to
+// deliberately blank the human overlay back to the machine-only seed.
 //
-// Usage: npm run build-r2-checkpoint-review
+// Usage: npm run build-r2-checkpoint-review            (preserves human overlay)
+//        npm run build-r2-checkpoint-review -- --reseed (blanks human overlay)
 
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
+import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
 
 const INPUT = path.resolve(process.cwd(), "data", "lexico", "r2_checkpoint_review_packet.json");
 const OUTPUT = path.resolve(process.cwd(), "src", "data", "review", "r2-checkpoint-review.json");
@@ -199,16 +206,48 @@ export function buildPayload(checkpointPacket, _preserved = new Map(), generated
   return payload;
 }
 
+/**
+ * Overlay preserved human decisions onto a machine-only payload by reviewId,
+ * returning a new payload (the input is not mutated). The five human review
+ * fields are taken from `preserved` when an entry exists for the reviewId;
+ * machine fields are always left as generated. With an empty map this is a
+ * no-op, so a first run or an explicit --reseed yields the machine-only seed.
+ */
+export function applyPreservedDecisions(payload, preserved) {
+  if (!preserved || preserved.size === 0) return payload;
+  return {
+    ...payload,
+    items: payload.items.map(item => {
+      const decision = preserved.get(item.reviewId);
+      if (!decision) return item;
+      return {
+        ...item,
+        reviewStatus: decision.reviewStatus ?? "needs-review",
+        reviewedValue: decision.reviewedValue ?? null,
+        reviewer: decision.reviewer ?? null,
+        reviewedAt: decision.reviewedAt ?? null,
+        note: decision.note ?? ""
+      };
+    })
+  };
+}
+
 function main() {
   if (!fs.existsSync(INPUT)) {
     console.error(`Missing ${path.relative(process.cwd(), INPUT)}; run "npm run build-r2-checkpoint-packet" first.`);
     process.exit(1);
   }
   try {
+    const reseed = process.argv.includes("--reseed");
     const checkpointPacket = JSON.parse(fs.readFileSync(INPUT, "utf8"));
-    const payload = buildPayload(checkpointPacket);
+    const machinePayload = buildPayload(checkpointPacket);
+    const preserved = reseed ? new Map() : loadPreserved(OUTPUT);
+    const payload = applyPreservedDecisions(machinePayload, preserved);
     writeReport(OUTPUT, payload);
-    console.log(`Wrote ${payload.items.length} R2 checkpoint review items with empty human fields to:`);
+    const note = reseed
+      ? "--reseed: human overlay blanked to machine seed"
+      : `${preserved.size} human review${preserved.size === 1 ? "" : "s"} preserved`;
+    console.log(`Wrote ${payload.items.length} R2 checkpoint review items (${note}) to:`);
     console.log(`- ${path.relative(process.cwd(), OUTPUT)}`);
   } catch (error) {
     console.error(error.message);
