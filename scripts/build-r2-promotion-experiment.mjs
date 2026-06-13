@@ -120,26 +120,60 @@ export function divSourceWindow(rows, recordRoles, acceptedLabels) {
   });
 }
 
-/** Window for the BEN marker-run-scope packet. */
-export function markerRunWindow(rows, acceptedLabels, exactHeadword = null) {
-  return rows.map(row => {
-    let inWindow = true;
-    let windowLabel = "target-run";
-    if (acceptedLabels.includes("source-record-exact-target") && exactHeadword !== null) {
-      if (row.rawHeadword !== exactHeadword) {
-        return { row, inWindow: false, windowLabel: "lookup-bundle-split" };
-      }
-    }
-    if (acceptedLabels.includes("archive-prefix-runs")) {
+// Benfey introduces a preverb (upasarga) section with "-- With <preverb>".
+const BEN_PREVERB_CUE = /--\s*With\s+/;
+
+/** Pure: given a record's split parts in order, return the first marker-run
+ *  index that begins Benfey's preverb zone. The "-- With <preverb>" cue sits
+ *  in the tail segment of the run preceding the first preverb section, so the
+ *  zone begins at that run index + 1. Infinity when no preverb zone exists. */
+export function benBoundaryFromParts(parts) {
+  for (const part of parts) {
+    if (BEN_PREVERB_CUE.test(part.text || "")) return (part.markerRunIndex ?? 0) + 1;
+  }
+  return Infinity;
+}
+
+/** Find the first preverb-zone marker-run for a Benfey lemma from source.
+ *  Benfey nests, in one record: the bare finite root (run 0), its primary
+ *  derivatives — participles and causative (runs 1..k) — and preverb-combined
+ *  lexemes (runs k+1..). Reads untruncated source text. */
+export function benPreverbBoundary(lemma, dictCode) {
+  const target = anchorTarget(lemma);
+  const dict = dictConfig(dictCode);
+  const lookupKeySet = new Set(target.lookupKeys.map(normalizeAnchor));
+  let boundary = Infinity;
+  for (const rec of iterateDict(dictCode)) {
+    if (!lookupKeySet.has(normalizeAnchor(rec.k1 || ""))) continue;
+    boundary = Math.min(boundary, benBoundaryFromParts(splitRecord(rec.body || "", dict)));
+  }
+  return boundary;
+}
+
+/** Window for the BEN marker-run-scope packet. The lemma window is the bare
+ *  finite root (marker run 0); primary derivatives and preverb-combined
+ *  lexemes are separate lexical items, retained as labeled side evidence.
+ *  `firstPreverbRun` separates derivative runs from preverb runs. */
+export function markerRunWindow(rows, acceptedLabels, exactHeadword = null, firstPreverbRun = Infinity) {
+  if (acceptedLabels.includes("source-record-exact-target") && exactHeadword !== null) {
+    return rows.map(row =>
+      row.rawHeadword === exactHeadword
+        ? { row, inWindow: true, windowLabel: "target-run" }
+        : { row, inWindow: false, windowLabel: "lookup-bundle-split" }
+    );
+  }
+  if (acceptedLabels.includes("archive-prefix-runs")) {
+    return rows.map(row => {
       if (row.splitConfidence !== "explicit") {
         return { row, inWindow: false, windowLabel: "preface-or-proxy" };
       }
-      if ((row.markerRunIndex ?? 0) > 0) {
-        return { row, inWindow: false, windowLabel: "reset-run-expansion" };
-      }
-    }
-    return { row, inWindow, windowLabel };
-  });
+      const runIndex = row.markerRunIndex ?? 0;
+      if (runIndex === 0) return { row, inWindow: true, windowLabel: "bare-root-run" };
+      if (runIndex >= firstPreverbRun) return { row, inWindow: false, windowLabel: "preverb-lexeme-run" };
+      return { row, inWindow: false, windowLabel: "primary-derivative-run" };
+    });
+  }
+  return rows.map(row => ({ row, inWindow: true, windowLabel: "target-run" }));
 }
 
 /** Window for the AE reverse-band packet (nominal lemmas only). */
@@ -289,7 +323,10 @@ function runExperiment() {
       labeled = divSourceWindow(rows, DIV_SOURCE_RECORD_ROLES[decision.reviewId] ?? {}, decision.acceptedParserLabels);
     } else if (decision.packetId === "marker-run-scope") {
       const exact = decision.acceptedParserLabels.includes("source-record-exact-target") ? decision.lemma : null;
-      labeled = markerRunWindow(rows, decision.acceptedParserLabels, exact);
+      const firstPreverbRun = decision.acceptedParserLabels.includes("archive-prefix-runs")
+        ? benPreverbBoundary(decision.lemma, decision.dict)
+        : Infinity;
+      labeled = markerRunWindow(rows, decision.acceptedParserLabels, exact, firstPreverbRun);
     } else if (decision.packetId === "ae-reverse-bands") {
       labeled = aeReverseWindow(rows);
     } else if (decision.packetId === "indigenous-iti-authority") {
@@ -335,6 +372,7 @@ function buildPayload(results, warnings) {
       "Only rows with reviewStatus reviewed-ok are processed; dispositions gate every rule.",
       "div-source-scope record roles come verbatim from the reviewed checkpoint notes (DIV_SOURCE_RECORD_ROLES).",
       "The PWG window follows the print's own sense enumeration: numbered top-level divisions (\"— N)\" at div n=\"1\") of the target-primary record before the first div n=\"p\" preverb block; <div n> depth values are never counted as senses.",
+      "The Benfey (gam:ben) window is the bare finite root (marker run 0); primary derivatives (participles, causative — runs 1..k) and preverb-combined lexemes (introduced by \"-- With <preverb>\", runs k+1..) are separate lexical items, retained as labeled side evidence. The archived count (root + first participle) is itself an artifact, not the optimization target.",
       "Indigenous iti-unit classification is heuristic (authority hints/quotation markers, then >350-char prose as discussion) and is a labeling experiment, not a scholar-reviewed sense decision.",
       "AE windows apply to the reviewed nominal lemma only; verbal reverse rows remain side evidence per r2-drift:gam:ae.",
       "No existing R2 output (senses, H1, H2H3, explorer) is modified; this artifact is additive."
