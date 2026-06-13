@@ -1,8 +1,8 @@
 # Changelog
 
-All notable changes to csl-atlas. Format loosely follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO. The atlas is unversioned (static site); entries are grouped by date.
+All notable changes to wt-r2-checkpoint are documented here. Format loosely follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO. The atlas is unversioned (static site); entries are grouped by date.
 
-## [Unreleased]
+## [1.0.0] - 2026-06-13
 
 ### 2026-06-11 — OBS corpus-evidence layer and two manuscripts
 
