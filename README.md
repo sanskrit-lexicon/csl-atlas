@@ -213,3 +213,17 @@ Follows the [Cologne tooling-repo taxonomy](https://github.com/sanskrit-lexicon/
 CC-BY-SA-4.0, matching [MWS](https://github.com/sanskrit-lexicon/MWS).
 
 Source data: [CDSL csl-orig](https://github.com/sanskrit-lexicon/csl-orig), `mw.txt` 2026-05-23 and sibling dict files. All figures regenerate from JSON data via Python scripts in [MWS papers/microanalysis/figures/scripts/](https://github.com/sanskrit-lexicon/MWS/tree/docs-pass/papers/microanalysis/figures/scripts).
+
+---
+
+## How to cite
+
+Citation metadata lives in [`CITATION.cff`](CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](.zenodo.json) pre-stages a Zenodo software deposit so that, once the repository is connected to [Zenodo](https://zenodo.org), a tagged release mints an archival **DOI** automatically.
+
+Until that first DOI is minted, cite the repository directly:
+
+> Gasūns, M., Funderburk, J., & Andhrabharati. *csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon* (version 0.1.0). Cologne Digital Sanskrit Dictionaries project. https://github.com/sanskrit-lexicon/csl-atlas
+
+When citing a specific dataset rather than the repository, use that dataset's own provenance envelope (`sourcePath`, `generatedBy`, `generatedAt`) so the exact source records and build step are recoverable. The meaning of each per-claim evidence label is defined in [`docs/EVIDENCE_LABELS.md`](docs/EVIDENCE_LABELS.md).
+
+> **Pending author actions (FAIR):** register [ORCID](https://orcid.org) iDs and add them to `CITATION.cff` and `.zenodo.json`; confirm the preferred legal name for the `Andhrabharati` contributor; connect the repository to Zenodo and cut a release to mint the first DOI.
