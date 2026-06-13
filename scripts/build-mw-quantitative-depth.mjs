@@ -21,6 +21,7 @@ import {
   compoundSegmentCount,
   FAMILY_ASSUMPTIONS
 } from "./lib/mw-depth-graph.mjs";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "mw");
@@ -39,6 +40,7 @@ function sourceDate() {
 function envelope(extra, { assumptions = [], warnings = [], recordCount }) {
   return {
     schemaVersion: SCHEMA_VERSION,
+    ...licenseFields(),
     generatedAt: new Date().toISOString(),
     sourcePath: "../csl-orig/v02/mw/mw.txt",
     sourceDate: sourceDate(),
