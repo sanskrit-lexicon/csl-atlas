@@ -22,6 +22,8 @@
     "validate-dict-comparison": "node scripts/validate-dictionary-comparison.mjs",
     "build-gender-review": "node scripts/build-gender-conflict-review.mjs",
     "build-source-layer-review": "node scripts/build-source-layer-review.mjs",
+    "import-dharmamitra-chronology": "node scripts/import-dharmamitra-chronology.mjs",
+    "build-source-layer-anchoring-review": "node scripts/build-source-layer-anchoring-review.mjs",
     "build-compound-depth-crosscheck": "node scripts/build-compound-depth-crosscheck.mjs",
     "import-dharmamitra-segmentation": "python scripts/import-dharmamitra-segmentation.py",
     "build-alignment-review": "node scripts/build-alignment-review.mjs",
