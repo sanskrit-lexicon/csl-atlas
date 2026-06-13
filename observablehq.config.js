@@ -17,6 +17,7 @@ export default {
       name: "Reader mode",
       pages: [
         { name: "Reader lookup", path: "/tools/reader-lookup" },
+        { name: "Learner's reading layer", path: "/tools/learner-reading-layer" },
         { name: "Lemma dossier", path: "/tools/dictionary-dossier" }
       ]
     },
