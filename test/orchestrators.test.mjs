@@ -573,6 +573,24 @@ test("R2 drift explanation generator accepts decided and empty checkpoint overla
   assert.equal(machineOnly.reviewStatus, "machine-explained");
 });
 
+test("R2 drift explanation generator reports a partially-human-decided mixed overlay", () => {
+  const mixed = {
+    ...r2CheckpointReviewReport,
+    items: r2CheckpointReviewReport.items.map((item, index) => index === 0 ? {
+      ...item,
+      reviewStatus: "needs-review",
+      reviewedValue: null,
+      reviewer: null,
+      reviewedAt: null,
+      note: ""
+    } : item)
+  };
+  const payload = buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, mixed);
+  assert.equal(payload.counts.checkpointNeedsReview, 1);
+  assert.equal(payload.counts.checkpointDecided, 9);
+  assert.equal(payload.reviewStatus, "partially-human-decided");
+});
+
 test("R2 drift explanation doc is generated from the artifact", () => {
   assert.equal(normalizeLineEndings(r2DriftExplanationMd), buildR2DriftExplanationMarkdown(r2DriftExplanation));
 });
