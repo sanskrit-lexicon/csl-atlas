@@ -14,6 +14,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { extractCitations, normalizeSource } from "./lib/mw-classifiers.mjs";
@@ -167,6 +168,7 @@ function main() {
 
   const payload = {
     schemaVersion: SCHEMA_VERSION,
+    ...licenseFields(),
     generatedAt: new Date().toISOString(),
     sourceRoot: "../csl-orig/v02",
     citationTaggedDicts: TAGGED.map(c => DICT_LABELS[c]),

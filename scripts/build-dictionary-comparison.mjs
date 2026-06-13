@@ -14,6 +14,7 @@ import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
 import { iterateDict, dictExists, genderForDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { presentDicts, lemmaConfidence, genderConflict } from "./lib/dict-align.mjs";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
@@ -35,6 +36,7 @@ const DICT_INDEX = Object.fromEntries(ORDER.map((code, index) => [code, index]))
 function envelope(extra, { assumptions = [], warnings = [] }) {
   return {
     schemaVersion: SCHEMA_VERSION,
+    ...licenseFields(),
     generatedAt: new Date().toISOString(),
     sourceRoot: "../csl-orig/v02",
     dictionaries: DICTS.map(d => ({ code: d.code, label: d.label, grammarReliable: d.grammarReliable })),
