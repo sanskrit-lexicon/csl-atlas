@@ -2,9 +2,9 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-05-30T21:26:21.830Z",
+  "generatedAt": "2026-06-13T08:14:27.126Z",
   "sourcePath": "../csl-orig/v02/{mw,ap,pwg,pw}/*.txt",
-  "recordCount": 151,
+  "recordCount": 149,
   "queue": "source-siglum-alias",
   "minCitations": 100,
   "assumptions": [
@@ -61,32 +61,6 @@
         "siglum": "Pāṇ",
         "citedOnlyBy": "MW",
         "citations": 8527
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:rajatar",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "RĀJA-TAR",
-        "canonicalId": "rajatar"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1359"
-        }
-      ],
-      "machineValue": {
-        "siglum": "RĀJA-TAR",
-        "citedOnlyBy": "PWG",
-        "citations": 7132
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -174,23 +148,23 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:varbrs",
+      "reviewId": "source-siglum-alias:varahbrhs",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
         "source": "VarBṛS",
-        "canonicalId": "varbrs"
+        "canonicalId": "varahbrhs"
       },
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3537"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2907"
         }
       ],
       "machineValue": {
         "siglum": "VarBṛS",
         "citedOnlyBy": "MW",
-        "citations": 3470
+        "citations": 3716
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -902,6 +876,32 @@
       "note": ""
     },
     {
+      "reviewId": "source-siglum-alias:sabdarthak",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "ŚABDĀRTHAK",
+        "canonicalId": "sabdarthak"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "PWG",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L280075"
+        }
+      ],
+      "machineValue": {
+        "siglum": "ŚABDĀRTHAK",
+        "citedOnlyBy": "PWG",
+        "citations": 745
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
       "reviewId": "source-siglum-alias:asvsr",
       "queue": "source-siglum-alias",
       "subject": {
@@ -945,32 +945,6 @@
         "siglum": "ŚrS",
         "citedOnlyBy": "MW",
         "citations": 738
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:sabdarthak",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "ŚABDĀRTHAK",
-        "canonicalId": "sabdarthak"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L316739"
-        }
-      ],
-      "machineValue": {
-        "siglum": "ŚABDĀRTHAK",
-        "citedOnlyBy": "PWG",
-        "citations": 707
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1110,12 +1084,12 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:asvgr",
+      "reviewId": "source-siglum-alias:asvgrhy",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
         "source": "ĀśvGṛ",
-        "canonicalId": "asvgr"
+        "canonicalId": "asvgrhy"
       },
       "sourcePointers": [
         {
@@ -1578,12 +1552,12 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:sankhgr",
+      "reviewId": "source-siglum-alias:sankhgrhy",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
         "source": "ŚāṅkhGṛ",
-        "canonicalId": "sankhgr"
+        "canonicalId": "sankhgrhy"
       },
       "sourcePointers": [
         {
@@ -2193,32 +2167,6 @@
         "siglum": "MACK",
         "citedOnlyBy": "PWG",
         "citations": 247
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:varbr",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "VarBṛ",
-        "canonicalId": "varbr"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2907"
-        }
-      ],
-      "machineValue": {
-        "siglum": "VarBṛ",
-        "citedOnlyBy": "MW",
-        "citations": 246
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
