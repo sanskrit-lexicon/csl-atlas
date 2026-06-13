@@ -21,6 +21,7 @@
             "enum": [
               "low-confidence-alignment",
               "pos-gender-conflict",
+              "pos-gender-model-crosscheck",
               "unknown-source-layer",
               "corpus-lemma-mismatch",
               "encoding-ocr",
