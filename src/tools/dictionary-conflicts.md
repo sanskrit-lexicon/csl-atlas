@@ -6,6 +6,8 @@ toc: false
 # ${t("phase2.conflicts.title")}
 Lemmas where two tagged dictionaries assert **disjoint** specific genders ({m, f, n}). These are review candidates, not verdicts — follow the source links to judge each case.
 
+> Deep comparison uses validated feature adapters only. Broad coverage/overlap covers eligible local Sanskrit/BHS headwords; missing deep markup is not counted as zero evidence.
+
 ## Trust Block
 
 - Evidence: `src/data/dicts/pos-disagreement.json`, `src/data/dicts/alignment-confidence.json`, and dictionary source links.

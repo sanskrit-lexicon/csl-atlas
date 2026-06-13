@@ -18,10 +18,12 @@ import { baseForm, layerForSource, isEditorialReference, recordSourceLayers } fr
 import { compoundSegmentCount, familyBase } from "../scripts/lib/mw-depth-graph.mjs";
 import { normalizeLemma } from "../scripts/lib/dict-normalize.mjs";
 import { genderFromLex, genderFromProse, genderForDict } from "../scripts/lib/dict-parser.mjs";
+import { iterateKoshaHeadwordsFromText, parseKoshaSynonymToken } from "../scripts/lib/dict-headwords.mjs";
 import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/dict-align.mjs";
+import { CORE_COMPARISON_DICTS, buildBroadHeadwordDictionaries, isBroadHeadwordEligible, shardIdForLemma } from "../scripts/lib/dict-scope.mjs";
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
-import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma } from "../src/lib/lookup-normalize.js";
+import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma, slp1ToIast } from "../src/lib/lookup-normalize.js";
 import { parseDcsSummaryFile } from "../scripts/lib/dcs-summary.mjs";
 
 // ---- build-r2-pages ----
@@ -155,12 +157,131 @@ test("normalizeSlp1Lemma mirrors dictionary headword normalization", () => {
   assert.equal(normalizeSlp1Lemma("agni2").normalized, "agni");
 });
 
+// ---- dict-scope ----
+test("core comparison dictionaries remain stable in order and labels", () => {
+  assert.deepEqual(
+    CORE_COMPARISON_DICTS.map(({ code, label }) => [code, label]),
+    [["mw", "MW"], ["ap", "AP"], ["pwg", "PWG"], ["pw", "PWK"], ["wil", "WIL"], ["vcp", "VCP"], ["skd", "SKD"]]
+  );
+});
+
+test("broad headword scope includes local Sanskrit/BHS and excludes reverse dictionaries", () => {
+  const inventoryRows = [
+    { code: "MW", full_name: "Monier-Williams", language_pair: "Skt-Eng", family: "Sanskrit-English", year: 1899, start_year: 1899, deprecated: false, in_github: true },
+    { code: "BHS", full_name: "Buddhist Hybrid Sanskrit", language_pair: "BHS-Eng", family: "Buddhist Hybrid Sanskrit", year: 1953, start_year: 1953, deprecated: false, in_github: true },
+    { code: "ABCH", full_name: "Abhidhana Chintamani", language_pair: "Skt-Skt", family: "Sanskrit-Sanskrit", year: 1200, start_year: 1200, deprecated: false, in_github: false },
+    { code: "AE", full_name: "Apte English-Sanskrit", language_pair: "Eng-Skt", family: "English-Sanskrit", year: 1920, start_year: 1920, deprecated: false, in_github: true },
+    { code: "BOR", full_name: "Borooah English-Sanskrit", language_pair: "Eng-Skt", family: "English-Sanskrit", year: 1877, start_year: 1877, deprecated: false, in_github: true }
+  ];
+  const localCodes = new Set(["mw", "bhs", "abch", "ae", "bor"]);
+  const broad = buildBroadHeadwordDictionaries({ inventoryRows, localCodes });
+  assert.deepEqual(broad.map(dict => dict.code), ["abch", "mw", "bhs"]);
+  assert.equal(broad.find(dict => dict.code === "abch").sourceLinkMode, "local-only");
+  assert.equal(broad.find(dict => dict.code === "mw").sourceLinkMode, "github");
+  assert.equal(isBroadHeadwordEligible(inventoryRows[3], localCodes), false);
+});
+
+test("broad shard ids preserve SLP1 case distinctions", () => {
+  assert.equal(shardIdForLemma("aMSa"), "61");
+  assert.equal(shardIdForLemma("Agni"), "41");
+  assert.notEqual(shardIdForLemma("aMSa"), shardIdForLemma("Agni"));
+});
+
+test("parseKoshaSynonymToken separates headword and gender suffix", () => {
+  assert.deepEqual(parseKoshaSynonymToken("arhan-puM"), { k1: "arhan", genderSuffix: "puM", genders: ["m"] });
+  assert.deepEqual(parseKoshaSynonymToken("rajobala-klI"), { k1: "rajobala", genderSuffix: "klI", genders: ["n"] });
+  assert.deepEqual(parseKoshaSynonymToken("peyUza-puMklI"), { k1: "peyUza", genderSuffix: "puMklI", genders: ["m", "n"] });
+  assert.deepEqual(parseKoshaSynonymToken("naktam-a"), { k1: "naktam", genderSuffix: "a", genders: ["adj"] });
+});
+
+test("iterateKoshaHeadwordsFromText extracts <syns> headwords and source lines", () => {
+  const text = [
+    ";METADATA",
+    "<L>1<pc>5",
+    "<info kvvv=\"<s>x</s>\"/>",
+    "<eid>1<syns><s>arhan-puM,jina-puM,rajobala-klI</s>",
+    "<s>verse text</s>",
+    "<LEND>"
+  ].join("\n");
+  const rows = [...iterateKoshaHeadwordsFromText("abch", text, { sourceLinkMode: "local-only" })];
+  assert.deepEqual(rows.map(row => row.k1), ["arhan", "jina", "rajobala"]);
+  assert.deepEqual(rows.map(row => row.genderHint), ["m", "m", "n"]);
+  assert.equal(rows[0].startLine, 2);
+  assert.equal(rows[0].href, null);
+  assert.equal(rows[0].adapter, "kosha-syns");
+});
+
+test("broad headword manifest and shards are internally consistent", () => {
+  const base = path.resolve("src/data/dicts/broad-headword");
+  const manifest = JSON.parse(fs.readFileSync(path.join(base, "manifest.json"), "utf8"));
+  assert.equal(manifest.scope, "broadHeadword");
+  assert.equal(manifest.dictionaryCount, 40);
+  assert.ok(manifest.dictionaries.some(dict => dict.code === "bhs"), "BHS must be included as Sanskrit-family coverage");
+  assert.ok(manifest.dictionaries.some(dict => dict.sourceLinkMode === "local-only"), "local-only dictionaries must be represented");
+  for (const code of ["abch", "acph", "acsj"]) {
+    assert.ok(manifest.lemmasByDict[code] > 0, `${code} must contribute kosha synonym headwords`);
+  }
+  assert.ok(manifest.excluded.some(dict => dict.code === "ae" && /reverse/.test(dict.reason)), "AE must be excluded as reverse lookup");
+  assert.ok(manifest.excluded.some(dict => dict.code === "bor" && /reverse/.test(dict.reason)), "BOR must be excluded as reverse lookup");
+  assert.ok(manifest.excluded.some(dict => dict.code === "mwe" && /reverse/.test(dict.reason)), "MWE must be excluded as reverse lookup");
+
+  let shardTotal = 0;
+  for (const shardInfo of manifest.shards) {
+    const shard = JSON.parse(fs.readFileSync(path.join(base, shardInfo.path), "utf8"));
+    assert.equal(shard.scope, "broadHeadword");
+    assert.equal(shard.shard, shardInfo.id);
+    assert.equal(shard.count, shard.entries.length);
+    assert.equal(shardInfo.count, shard.entries.length);
+    shardTotal += shard.entries.length;
+    for (let i = 1; i < shard.entries.length; i++) {
+      assert.ok(shard.entries[i - 1][0] <= shard.entries[i][0], `${shard.shard} shard must be sorted`);
+    }
+    for (const [, dictTuples] of shard.entries) {
+      for (const [dictIndex, records, firstLine] of dictTuples) {
+        assert.ok(dictIndex >= 0 && dictIndex < manifest.dictionaries.length, "dict index must resolve to manifest metadata");
+        assert.ok(records >= 1, "record count must be positive");
+        assert.ok(firstLine >= 1, "first source line must be positive");
+      }
+    }
+  }
+  assert.equal(shardTotal, manifest.count);
+});
+
+test("coverage artifacts expose broad default and stable core scope", () => {
+  const coverage = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/coverage-matrix.json"), "utf8"));
+  const overlap = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/pairwise-overlap.json"), "utf8"));
+  const intersection = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/all-intersection.json"), "utf8"));
+
+  assert.equal(coverage.defaultScope, "broadHeadword");
+  assert.equal(coverage.scopes.broadHeadword.dictionaryCount, 40);
+  assert.equal(coverage.scopes.coreComparison.dictionaryCount, 7);
+  assert.deepEqual(
+    coverage.scopes.coreComparison.dictionaries.map(({ code, label }) => [code, label]),
+    [["mw", "MW"], ["ap", "AP"], ["pwg", "PWG"], ["pw", "PWK"], ["wil", "WIL"], ["vcp", "VCP"], ["skd", "SKD"]]
+  );
+  for (const [label, count] of Object.entries(coverage.scopes.broadHeadword.lemmasByDict)) {
+    assert.ok(count > 0, `${label} must contribute broad headwords`);
+  }
+  assert.equal(overlap.scopes.broadHeadword.pairwise.length, 780);
+  assert.equal(overlap.scopes.coreComparison.pairwise.length, 21);
+  assert.ok(intersection.scopes.coreComparison.count > 0, "core all-dictionary intersection must remain non-empty");
+  assert.equal(typeof intersection.scopes.broadHeadword.count, "number");
+});
+
 test("iastToSlp1 transliterates common IAST queries", () => {
   assert.equal(iastToSlp1("agni"), "agni");
   assert.equal(iastToSlp1("śiva"), "Siva");
   assert.equal(iastToSlp1("ṛta"), "fta");
   assert.equal(iastToSlp1("mahābhārata"), "mahABArata");
   assert.equal(iastToSlp1("saṃskṛta"), "saMskfta");
+});
+
+test("slp1ToIast renders public headwords in IAST", () => {
+  assert.equal(slp1ToIast("aMSa"), "aṃśa");
+  assert.equal(slp1ToIast("Siva"), "śiva");
+  assert.equal(slp1ToIast("akza"), "akṣa");
+  assert.equal(slp1ToIast("mahABArata"), "mahābhārata");
+  assert.equal(slp1ToIast("dA"), "dā");
 });
 
 test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", () => {

@@ -38,18 +38,43 @@ function read(name) {
 
 const docs = Object.fromEntries(REQUIRED.map(n => [n, read(n)]));
 
+function scope(doc, id) {
+  return doc?.scopes?.[id] ?? doc;
+}
+
 const cov = docs["coverage-matrix.json"];
 if (cov) {
-  if (!(cov.distinctLemmas > 0)) errors.push("coverage-matrix has no lemmas.");
-  for (const [label, n] of Object.entries(cov.lemmasByDict || {})) {
+  const broad = scope(cov, "broadHeadword");
+  const core = scope(cov, "coreComparison");
+  if (cov.defaultScope && cov.defaultScope !== "broadHeadword") errors.push(`coverage-matrix defaultScope is ${cov.defaultScope}, expected broadHeadword.`);
+  if (broad.dictionaryCount !== 40) errors.push(`Broad coverage has ${broad.dictionaryCount} dictionaries, expected 40.`);
+  if (core.dictionaryCount !== 7) errors.push(`Core coverage has ${core.dictionaryCount} dictionaries, expected 7.`);
+  if (!(broad.distinctLemmas > 0)) errors.push("broad coverage-matrix has no lemmas.");
+  for (const [label, n] of Object.entries(broad.lemmasByDict || {})) {
     if (!(n > 0)) errors.push(`Dictionary ${label} contributed 0 lemmas.`);
   }
-  notes.push(`Indexed ${cov.distinctLemmas} distinct lemmas across ${Object.keys(cov.lemmasByDict || {}).length} dictionaries.`);
+  notes.push(`Indexed ${broad.distinctLemmas} broad distinct lemmas across ${Object.keys(broad.lemmasByDict || {}).length} dictionaries.`);
+  notes.push(`Core coverage keeps ${core.distinctLemmas} distinct lemmas across ${Object.keys(core.lemmasByDict || {}).length} dictionaries.`);
 }
 
 const inter = docs["all-intersection.json"];
-if (inter && !(inter.count > 0)) errors.push("all-dictionary intersection is empty.");
-else if (inter) notes.push(`${inter.count} lemmas shared by all target dictionaries.`);
+if (inter) {
+  const broad = scope(inter, "broadHeadword");
+  const core = scope(inter, "coreComparison");
+  if (typeof broad.count !== "number") errors.push("broad all-dictionary intersection missing numeric count.");
+  if (!(core.count > 0)) errors.push("core all-dictionary intersection is empty.");
+  else notes.push(`${core.count} lemmas shared by all core target dictionaries.`);
+  notes.push(`${broad.count} lemmas shared by all broad target dictionaries (zero is allowed).`);
+}
+
+const pairDoc = docs["pairwise-overlap.json"];
+if (pairDoc) {
+  const broad = scope(pairDoc, "broadHeadword");
+  const core = scope(pairDoc, "coreComparison");
+  if ((broad.pairwise || []).length !== 780) errors.push(`Broad pairwise overlap has ${(broad.pairwise || []).length} rows, expected 780.`);
+  if ((core.pairwise || []).length !== 21) errors.push(`Core pairwise overlap has ${(core.pairwise || []).length} rows, expected 21.`);
+  else notes.push("Pairwise overlap has broad 40 and core 7 row counts.");
+}
 
 const pos = docs["pos-disagreement.json"];
 if (pos) {

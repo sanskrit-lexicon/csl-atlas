@@ -44,7 +44,7 @@ Monier-Williams anatomy at scale: [depth dashboard](tools/mw-depth-dashboard) (a
 
 ### Dictionary comparison · Phase 2
 
-Seven dictionaries (MW, AP, PWG, PWK, WIL, VCP, SKD) compared: [coverage matrix](tools/dictionary-coverage-matrix) · [pairwise overlap](tools/dictionary-overlap) · [gender conflicts](tools/dictionary-conflicts) · [homonym splits](tools/dictionary-homonyms) · [citation apparatus](tools/dictionary-citations) · [sense depth](tools/dictionary-senses) · [**lemma dossier** (look up a word)](tools/dictionary-dossier).
+Broad Sanskrit/BHS headword coverage across eligible local dictionaries, with Core 7 deep comparison where adapters are validated: [coverage matrix](tools/dictionary-coverage-matrix) · [pairwise overlap](tools/dictionary-overlap) · [gender conflicts](tools/dictionary-conflicts) · [homonym splits](tools/dictionary-homonyms) · [citation apparatus](tools/dictionary-citations) · [sense depth](tools/dictionary-senses) · [**lemma dossier** (look up a word)](tools/dictionary-dossier).
 
 ### Dictionary structure
 

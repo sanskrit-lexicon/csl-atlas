@@ -6,6 +6,8 @@ toc: false
 # ${t("phase2.citations.title")}
 How heavily each dictionary cites sources, how broad its source apparatus is, and what it cites most (UC-RD-06).
 
+> Deep comparison uses validated feature adapters only. Broad coverage/overlap covers eligible local Sanskrit/BHS headwords; missing deep markup is not counted as zero evidence.
+
 ## Trust Block
 
 - Evidence: `src/data/dicts/citation-apparatus.json`, tagged `<ls>` citations, prose `iti` proxies, and dictionary source links.

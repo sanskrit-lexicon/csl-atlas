@@ -6,6 +6,8 @@ toc: false
 # ${t("phase2.homonyms.title")}
 Where the homonym-marking dictionaries (MW, PWG, PWK) **disagree on how many homonyms** a lemma has — i.e. one dictionary splits a form into several entries that another keeps as one.
 
+> Deep comparison uses validated feature adapters only. Broad coverage/overlap covers eligible local Sanskrit/BHS headwords; missing deep markup is not counted as zero evidence.
+
 ## Trust Block
 
 - Evidence: `src/data/dicts/homonym-split.json` and source links for MW, PWG, and PWK.

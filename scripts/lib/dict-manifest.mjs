@@ -5,6 +5,8 @@
 // extractable from <lex>; the prose Sanskrit-Sanskrit lexica (VCP, SKD)
 // are coverage-only in this first slice.
 
+import { CORE_COMPARISON_DICTS } from "./dict-scope.mjs";
+
 // Capability flags per dictionary:
 // - grammarReliable: gender extractable from <lex> (tagged bilingual dicts).
 // - homonymMarked: records homonyms with an <h> index (MW, PWG, PWK).
@@ -13,15 +15,7 @@
 // - senseSegmented: marks senses structurally — AP with `∙` bullets, PWG/PWK
 //   with <div>. MW segments senses in prose (<div> is rare, ~0.05/entry), so a
 //   structural sense count is unreliable for it; WIL/VCP/SKD are prose too.
-export const DICTS = [
-  { code: "mw", label: "MW", grammarReliable: true, homonymMarked: true, citationTagged: true, senseSegmented: false },
-  { code: "ap", label: "AP", grammarReliable: true, homonymMarked: false, citationTagged: true, senseSegmented: true },
-  { code: "pwg", label: "PWG", grammarReliable: true, homonymMarked: true, citationTagged: true, senseSegmented: true },
-  { code: "pw", label: "PWK", grammarReliable: true, homonymMarked: true, citationTagged: true, senseSegmented: true },
-  { code: "wil", label: "WIL", grammarReliable: true, homonymMarked: false, citationTagged: false, senseSegmented: false },
-  { code: "vcp", label: "VCP", grammarReliable: false, homonymMarked: false, citationTagged: false, senseSegmented: false },
-  { code: "skd", label: "SKD", grammarReliable: false, homonymMarked: false, citationTagged: false, senseSegmented: false }
-];
+export const DICTS = CORE_COMPARISON_DICTS;
 
 // Sense-division marker per sense-segmented dictionary.
 export const SENSE_MARKER = { ap: /∙/g, pwg: /<div\b/g, pw: /<div\b/g };

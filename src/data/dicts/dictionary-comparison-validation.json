@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-03T09:59:20.600Z",
+  "generatedAt": "2026-06-13T19:25:10.375Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -52,6 +52,20 @@
     "WIL": 44577,
     "VCP": 50135,
     "SKD": 42531
+  },
+  "coverageScopes": {
+    "broadHeadword": {
+      "dictionaryCount": 40,
+      "distinctLemmas": 376943,
+      "intersectionAll": 0,
+      "pairwiseRows": 780
+    },
+    "coreComparison": {
+      "dictionaryCount": 7,
+      "distinctLemmas": 298413,
+      "intersectionAll": 1913,
+      "pairwiseRows": 21
+    }
   },
   "intersectionAll": 1913,
   "genderConflicts": 4556,

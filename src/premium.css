@@ -79,6 +79,7 @@ input[type="text"]:focus, select:focus {
   box-shadow: 0 0 0 3px rgba(31, 120, 180, 0.15) !important;
 }
 
+
 /* Dark Mode Support via prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
   body {

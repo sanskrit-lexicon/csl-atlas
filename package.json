@@ -23,6 +23,8 @@
     "build-h6-structural-review": "node scripts/build-h6-structural-review.mjs",
     "build-sense-depth": "node scripts/build-sense-depth.mjs",
     "validate-dict-comparison": "node scripts/validate-dictionary-comparison.mjs",
+    "build-broad-headword-lookup": "node scripts/build-broad-headword-lookup.mjs",
+    "audit-analysis-capabilities": "node scripts/audit-broad-analysis-capabilities.mjs",
     "build-gender-review": "node scripts/build-gender-conflict-review.mjs",
     "build-source-layer-review": "node scripts/build-source-layer-review.mjs",
     "build-alignment-review": "node scripts/build-alignment-review.mjs",

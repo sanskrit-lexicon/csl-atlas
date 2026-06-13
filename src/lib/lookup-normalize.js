@@ -33,6 +33,37 @@ const IAST_TO_SLP1 = [
   ["ḥ", "H"]
 ];
 
+const SLP1_TO_IAST = {
+  A: "ā",
+  I: "ī",
+  U: "ū",
+  f: "ṛ",
+  F: "ṝ",
+  x: "ḷ",
+  X: "ḹ",
+  E: "ai",
+  O: "au",
+  M: "ṃ",
+  H: "ḥ",
+  K: "kh",
+  G: "gh",
+  N: "ṅ",
+  C: "ch",
+  J: "jh",
+  Y: "ñ",
+  w: "ṭ",
+  W: "ṭh",
+  q: "ḍ",
+  Q: "ḍh",
+  R: "ṇ",
+  T: "th",
+  D: "dh",
+  P: "ph",
+  B: "bh",
+  S: "ś",
+  z: "ṣ"
+};
+
 export function normalizeSlp1Lemma(value) {
   const raw = (value ?? "").trim();
   let normalized = raw.replace(SLP1_ACCENTS, "");
@@ -45,6 +76,10 @@ export function iastToSlp1(value) {
   let out = (value ?? "").normalize("NFC").trim().toLowerCase();
   for (const [from, to] of IAST_TO_SLP1) out = out.replaceAll(from, to);
   return out;
+}
+
+export function slp1ToIast(value) {
+  return [...(value ?? "")].map(ch => SLP1_TO_IAST[ch] ?? ch).join("");
 }
 
 export function normalizeLookupQuery(value) {

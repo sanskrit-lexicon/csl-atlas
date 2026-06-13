@@ -6,6 +6,8 @@ toc: false
 # ${t("phase2.senses.title")}
 Which dictionary treats a lemma's senses most richly (UC-LX-04), measured by structural sense divisions.
 
+> Deep comparison uses validated feature adapters only. Broad coverage/overlap covers eligible local Sanskrit/BHS headwords; missing deep markup is not counted as zero evidence.
+
 ## Trust Block
 
 - Evidence: `src/data/dicts/sense-depth.json` generated from structural sense-division markers.

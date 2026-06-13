@@ -1,0 +1,2711 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-13T19:25:31.306Z",
+  "sourceRoot": "../csl-orig/v02",
+  "dictionaryCount": 40,
+  "coreComparisonCount": 7,
+  "summary": {
+    "grammar": {
+      "supported": 5,
+      "candidate": 7,
+      "partial": 2,
+      "weak": 0,
+      "missing": 26
+    },
+    "citations": {
+      "supported": 4,
+      "candidate": 12,
+      "partial": 0,
+      "weak": 23,
+      "missing": 1
+    },
+    "homonyms": {
+      "supported": 3,
+      "candidate": 17,
+      "partial": 0,
+      "weak": 2,
+      "missing": 18
+    },
+    "senses": {
+      "supported": 3,
+      "candidate": 18,
+      "partial": 0,
+      "weak": 1,
+      "missing": 18
+    }
+  },
+  "dictionaries": [
+    {
+      "code": "skd",
+      "label": "SKD",
+      "fullName": "Śabda-kalpadruma",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1886,
+      "startYear": 1822,
+      "endYear": 1886,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 40817,
+      "notes": "Original publication 1822; Cologne digitisation based on later 1886 edition",
+      "records": 42531,
+      "sourceRecords": 42531,
+      "distinctLemmas": 40812,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 39217,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 37757,
+      "itiCount": 80164,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 92.21,
+        "lsRecordPct": 0,
+        "itiRecordPct": 88.78,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "partial",
+          "method": "existing-prose-marker"
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "fullName": "Wilson Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1832,
+      "startYear": 1832,
+      "endYear": 1832,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 43939,
+      "notes": "Deprecated by Cologne; oldest English-tradition dict",
+      "records": 44577,
+      "sourceRecords": 44577,
+      "distinctLemmas": 43936,
+      "hRecords": 0,
+      "lexRecords": 44483,
+      "genderRecords": 42249,
+      "lsRecords": 221,
+      "lsCount": 230,
+      "itiRecords": 12,
+      "itiCount": 13,
+      "divRecords": 193,
+      "divCount": 700,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 99.79,
+        "genderRecordPct": 94.78,
+        "lsRecordPct": 0.5,
+        "itiRecordPct": 0.03,
+        "divRecordPct": 0.43,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "supported",
+          "method": "existing-core"
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "yat",
+      "label": "YAT",
+      "fullName": "Yates Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1846,
+      "startYear": 1846,
+      "endYear": 1846,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 44720,
+      "notes": "WIL⇄YAT mutual containment ~91% suggests YAT derived from WIL",
+      "records": 45206,
+      "sourceRecords": 45206,
+      "distinctLemmas": 44718,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 5,
+      "itiCount": 5,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.01,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "bop",
+      "label": "BOP",
+      "fullName": "Bopp Glossarium Sanscritum",
+      "languagePair": "Skt-Lat",
+      "family": "Sanskrit-Latin",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1847,
+      "startYear": 1847,
+      "endYear": 1847,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 8505,
+      "notes": "",
+      "records": 8961,
+      "sourceRecords": 8961,
+      "distinctLemmas": 8504,
+      "hRecords": 793,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 32,
+      "itiCount": 38,
+      "divRecords": 454,
+      "divCount": 1942,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 8.85,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.36,
+        "divRecordPct": 5.07,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "fullName": "Böhtlingk and Roth Grosses Petersburger Wörterbuch",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": true,
+      "senseSegmented": true,
+      "homonymMarked": true,
+      "year": 1855,
+      "startYear": 1855,
+      "endYear": 1875,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 106083,
+      "notes": "7 volumes published 1855-1875; vol1 1855 (a-)",
+      "records": 123366,
+      "sourceRecords": 123366,
+      "distinctLemmas": 106080,
+      "hRecords": 6499,
+      "lexRecords": 98488,
+      "genderRecords": 98401,
+      "lsRecords": 116332,
+      "lsCount": 772567,
+      "itiRecords": 821,
+      "itiCount": 1141,
+      "divRecords": 32132,
+      "divCount": 113613,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 5.27,
+        "lexRecordPct": 79.83,
+        "genderRecordPct": 79.76,
+        "lsRecordPct": 94.3,
+        "itiRecordPct": 0.67,
+        "divRecordPct": 26.05,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "supported",
+          "method": "existing-core"
+        },
+        "citations": {
+          "status": "supported",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "supported",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "supported",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "gst",
+      "label": "GST",
+      "fullName": "Goldstücker Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1856,
+      "startYear": 1856,
+      "endYear": 1856,
+      "letterCoverage": "partial-a-only",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 6761,
+      "notes": "Incomplete: only letter 'a-' published",
+      "records": 6780,
+      "sourceRecords": 6780,
+      "distinctLemmas": 6761,
+      "hRecords": 25,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 120,
+      "itiCount": 166,
+      "divRecords": 846,
+      "divCount": 1139,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0.37,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 1.77,
+        "divRecordPct": 12.48,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "armh",
+      "label": "ARMH",
+      "fullName": "Abhidhānaratnamālā of Halāyudha",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1861,
+      "startYear": 1861,
+      "endYear": 1861,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 6673,
+      "notes": "Indigenous Skt-Skt kośa",
+      "records": 7907,
+      "sourceRecords": 7907,
+      "distinctLemmas": 6673,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 69,
+      "itiCount": 69,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.87,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "bur",
+      "label": "BUR",
+      "fullName": "Burnouf Dictionnaire Sanscrit-Français",
+      "languagePair": "Skt-Fra",
+      "family": "Sanskrit-French",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1866,
+      "startYear": 1863,
+      "endYear": 1866,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 19146,
+      "notes": "",
+      "records": 19776,
+      "sourceRecords": 19776,
+      "distinctLemmas": 19146,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 23,
+      "itiCount": 31,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.12,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "ben",
+      "label": "BEN",
+      "fullName": "Benfey Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1866,
+      "startYear": 1866,
+      "endYear": 1866,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 17036,
+      "notes": "",
+      "records": 17310,
+      "sourceRecords": 17310,
+      "distinctLemmas": 17036,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 13155,
+      "lsCount": 48603,
+      "itiRecords": 28,
+      "itiCount": 37,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 6371,
+      "numberedSenseCount": 30933,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 76,
+        "itiRecordPct": 0.16,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 36.81
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "numbered-brace"
+        }
+      }
+    },
+    {
+      "code": "mw72",
+      "label": "MW72",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary (1st edition)",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1872,
+      "startYear": 1872,
+      "endYear": 1872,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 51159,
+      "notes": "Predecessor to MW (1899); preface notes use of early PWG volumes (1855-1865 fascicles)",
+      "records": 55388,
+      "sourceRecords": 55388,
+      "distinctLemmas": 51159,
+      "hRecords": 3657,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 102,
+      "itiCount": 186,
+      "divRecords": 39,
+      "divCount": 64,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 6.6,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.18,
+        "divRecordPct": 0.07,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "weak",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "gra",
+      "label": "GRA",
+      "fullName": "Grassmann Wörterbuch zum Rig Veda",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1873,
+      "startYear": 1873,
+      "endYear": 1873,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 11108,
+      "notes": "Specialized: Rigveda only",
+      "records": 12785,
+      "sourceRecords": 12785,
+      "distinctLemmas": 11108,
+      "hRecords": 502,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 1539,
+      "lsCount": 2341,
+      "itiRecords": 15,
+      "itiCount": 15,
+      "divRecords": 10336,
+      "divCount": 41538,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 3.93,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 12.04,
+        "itiRecordPct": 0.12,
+        "divRecordPct": 80.84,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "fullName": "Vacaspatyam",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1873,
+      "startYear": 1873,
+      "endYear": 1884,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 48636,
+      "notes": "Multi-fascicle publication 1873-1884; indigenous Skt-Skt",
+      "records": 50135,
+      "sourceRecords": 50135,
+      "distinctLemmas": 48629,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 28333,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 5055,
+      "itiCount": 15618,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 56.51,
+        "lsRecordPct": 0,
+        "itiRecordPct": 10.08,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "partial",
+          "method": "existing-prose-marker"
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "fullName": "Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": true,
+      "senseSegmented": true,
+      "homonymMarked": true,
+      "year": 1879,
+      "startYear": 1879,
+      "endYear": 1889,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 151349,
+      "notes": "7 volumes 1879-1889; same as PWK in github; deprecated by Cologne",
+      "records": 170556,
+      "sourceRecords": 170556,
+      "distinctLemmas": 151346,
+      "hRecords": 8012,
+      "lexRecords": 136934,
+      "genderRecords": 136844,
+      "lsRecords": 66188,
+      "lsCount": 98474,
+      "itiRecords": 90,
+      "itiCount": 113,
+      "divRecords": 25826,
+      "divCount": 131442,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 4.7,
+        "lexRecordPct": 80.29,
+        "genderRecordPct": 80.23,
+        "lsRecordPct": 38.81,
+        "itiRecordPct": 0.05,
+        "divRecordPct": 15.14,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "supported",
+          "method": "existing-core"
+        },
+        "citations": {
+          "status": "supported",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "supported",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "supported",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "pwkvn",
+      "label": "PWKVN",
+      "fullName": "Petersburger Wörterbuch (PW) Nachträge und Verbesserungen",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": null,
+      "startYear": 1879,
+      "endYear": 1889,
+      "letterCoverage": "partial",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 14995,
+      "notes": "Sub-portion: digitization of the Nachträge und Verbesserungen sections of PW; 99.9% subset of PW",
+      "records": 24976,
+      "sourceRecords": 24976,
+      "distinctLemmas": 14995,
+      "hRecords": 916,
+      "lexRecords": 10483,
+      "genderRecords": 10483,
+      "lsRecords": 13576,
+      "lsCount": 17627,
+      "itiRecords": 10,
+      "itiCount": 13,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 3.67,
+        "lexRecordPct": 41.97,
+        "genderRecordPct": 41.97,
+        "lsRecordPct": 54.36,
+        "itiRecordPct": 0.04,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "candidate",
+          "method": "lex-tag"
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "lan",
+      "label": "LAN",
+      "fullName": "Lanman's Sanskrit Reader Vocabulary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1884,
+      "startYear": 1884,
+      "endYear": 1884,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 4726,
+      "notes": "Specialized vocabulary for Lanman's reader; in sanhw1 not GitHub",
+      "records": 4944,
+      "sourceRecords": 4944,
+      "distinctLemmas": 4726,
+      "hRecords": 209,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 2546,
+      "lsCount": 5912,
+      "itiRecords": 8,
+      "itiCount": 20,
+      "divRecords": 806,
+      "divCount": 2959,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 4.23,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 51.5,
+        "itiRecordPct": 0.16,
+        "divRecordPct": 16.3,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "ccs",
+      "label": "CCS",
+      "fullName": "Cappeller Sanskrit Wörterbuch",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1887,
+      "startYear": 1887,
+      "endYear": 1887,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 28751,
+      "notes": "Same author as CAE; CCS⊆PW 0.945 confirms PWK→CCS derivation",
+      "records": 30010,
+      "sourceRecords": 30010,
+      "distinctLemmas": 28751,
+      "hRecords": 1796,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 8,
+      "itiCount": 8,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 5.98,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.03,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "lrv",
+      "label": "LRV",
+      "fullName": "Vaidya Standard Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1889,
+      "startYear": 1889,
+      "endYear": 1889,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 48259,
+      "notes": "Indian Skt-Eng; HathiTrust 008693928",
+      "records": 53441,
+      "sourceRecords": 53441,
+      "distinctLemmas": 48259,
+      "hRecords": 8065,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 9086,
+      "lsCount": 16650,
+      "itiRecords": 94,
+      "itiCount": 99,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 15.09,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 17,
+        "itiRecordPct": 0.18,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "ap90",
+      "label": "AP90",
+      "fullName": "Apte Practical Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1890,
+      "startYear": 1890,
+      "endYear": 1890,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 34277,
+      "notes": "Original 1890 Apte; AP90→AP grew 2.6x",
+      "records": 34882,
+      "sourceRecords": 34882,
+      "distinctLemmas": 34277,
+      "hRecords": 9,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 10867,
+      "lsCount": 43892,
+      "itiRecords": 277,
+      "itiCount": 306,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0.03,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 31.15,
+        "itiRecordPct": 0.79,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "weak",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "cae",
+      "label": "CAE",
+      "fullName": "Cappeller Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1891,
+      "startYear": 1891,
+      "endYear": 1891,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 38484,
+      "notes": "Same author as CCS",
+      "records": 40069,
+      "sourceRecords": 40069,
+      "distinctLemmas": 38484,
+      "hRecords": 2560,
+      "lexRecords": 36486,
+      "genderRecords": 36486,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 26,
+      "itiCount": 33,
+      "divRecords": 555,
+      "divCount": 3190,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 6.39,
+        "lexRecordPct": 91.06,
+        "genderRecordPct": 91.06,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.06,
+        "divRecordPct": 1.39,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "candidate",
+          "method": "lex-tag"
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "md",
+      "label": "MD",
+      "fullName": "Macdonell Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1893,
+      "startYear": 1893,
+      "endYear": 1893,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 20103,
+      "notes": "",
+      "records": 20749,
+      "sourceRecords": 20749,
+      "distinctLemmas": 20102,
+      "hRecords": 920,
+      "lexRecords": 18623,
+      "genderRecords": 16757,
+      "lsRecords": 53,
+      "lsCount": 58,
+      "itiRecords": 77,
+      "itiCount": 102,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 4.43,
+        "lexRecordPct": 89.75,
+        "genderRecordPct": 80.76,
+        "lsRecordPct": 0.26,
+        "itiRecordPct": 0.37,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "candidate",
+          "method": "lex-tag"
+        },
+        "citations": {
+          "status": "weak",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "abch",
+      "label": "ABCH",
+      "fullName": "Abhidhānacintāmaṇi of Hemacandrācārya",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1896,
+      "startYear": 1896,
+      "endYear": 1896,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 11584,
+      "notes": "Classical Indian kośa; in sanhw1 not GitHub",
+      "records": 13596,
+      "sourceRecords": 1965,
+      "distinctLemmas": 11584,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 13351,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 4,
+      "itiCount": 4,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 98.2,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.2,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "candidate",
+          "method": "kosha-synonym-suffix"
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "acph",
+      "label": "ACPH",
+      "fullName": "Abhidhānacintāmaṇipariśiṣṭa of Hemacandrācārya",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1896,
+      "startYear": 1896,
+      "endYear": 1896,
+      "letterCoverage": "supplemental",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 1453,
+      "notes": "Supplement to ABCH; in sanhw1 not GitHub",
+      "records": 1532,
+      "sourceRecords": 163,
+      "distinctLemmas": 1453,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 1521,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 1,
+      "itiCount": 1,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 99.28,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.61,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "candidate",
+          "method": "kosha-synonym-suffix"
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "acsj",
+      "label": "ACSJ",
+      "fullName": "Abhidhānacintāmaṇiśiloñcha of Jinadeva",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1896,
+      "startYear": 1896,
+      "endYear": 1896,
+      "letterCoverage": "supplemental",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 634,
+      "notes": "Hemacandra commentary tradition; in sanhw1 not GitHub",
+      "records": 640,
+      "sourceRecords": 240,
+      "distinctLemmas": 634,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 636,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 4,
+      "itiCount": 4,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 99.38,
+        "lsRecordPct": 0,
+        "itiRecordPct": 1.67,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "candidate",
+          "method": "kosha-synonym-suffix"
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "mw",
+      "label": "MW",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": true,
+      "senseSegmented": false,
+      "homonymMarked": true,
+      "year": 1899,
+      "startYear": 1899,
+      "endYear": 1899,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 194084,
+      "notes": "LARGEST CDSL dict; has S1+S2+Markup+Inflected-forms displays; gets most attention",
+      "records": 286560,
+      "sourceRecords": 286560,
+      "distinctLemmas": 194084,
+      "hRecords": 5738,
+      "lexRecords": 184229,
+      "genderRecords": 184212,
+      "lsRecords": 226746,
+      "lsCount": 320828,
+      "itiRecords": 138,
+      "itiCount": 158,
+      "divRecords": 4250,
+      "divCount": 15312,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 2,
+        "lexRecordPct": 64.29,
+        "genderRecordPct": 64.28,
+        "lsRecordPct": 79.13,
+        "itiRecordPct": 0.05,
+        "divRecordPct": 1.48,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "supported",
+          "method": "existing-core"
+        },
+        "citations": {
+          "status": "supported",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "supported",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "shs",
+      "label": "SHS",
+      "fullName": "Shabda-Sagara Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1900,
+      "startYear": 1900,
+      "endYear": 1900,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 46730,
+      "notes": "WIL⊆SHS 0.953 confirms SHS derives from WIL",
+      "records": 47326,
+      "sourceRecords": 47326,
+      "distinctLemmas": 46728,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 58,
+      "itiCount": 59,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.12,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "inm",
+      "label": "INM",
+      "fullName": "Index to the Names in the Mahabharata",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1904,
+      "startYear": 1904,
+      "endYear": 1904,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 9454,
+      "notes": "Specialized index",
+      "records": 12647,
+      "sourceRecords": 12647,
+      "distinctLemmas": 9454,
+      "hRecords": 4298,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 54,
+      "itiCount": 58,
+      "divRecords": 119,
+      "divCount": 1688,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 33.98,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.43,
+        "divRecordPct": 0.94,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "vei",
+      "label": "VEI",
+      "fullName": "The Vedic Index of Names and Subjects",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1912,
+      "startYear": 1912,
+      "endYear": 1912,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 3704,
+      "notes": "Specialized: Vedic only",
+      "records": 3834,
+      "sourceRecords": 3834,
+      "distinctLemmas": 3704,
+      "hRecords": 314,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 9,
+      "itiCount": 9,
+      "divRecords": 866,
+      "divCount": 1321,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 8.19,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.23,
+        "divRecordPct": 22.59,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "sch",
+      "label": "SCH",
+      "fullName": "Schmidt Nachträge zum Sanskrit-Wörterbuch",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1928,
+      "startYear": 1928,
+      "endYear": 1928,
+      "letterCoverage": "supplemental",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 28455,
+      "notes": "Continuation of PWG/PWK",
+      "records": 29125,
+      "sourceRecords": 29125,
+      "distinctLemmas": 28455,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 26034,
+      "lsCount": 31041,
+      "itiRecords": 51,
+      "itiCount": 57,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 89.39,
+        "itiRecordPct": 0.18,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "stc",
+      "label": "STC",
+      "fullName": "Stchoupak Dictionnaire Sanscrit-Français",
+      "languagePair": "Skt-Fra",
+      "family": "Sanskrit-French",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1932,
+      "startYear": 1932,
+      "endYear": 1932,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 23986,
+      "notes": "Has SD display",
+      "records": 24574,
+      "sourceRecords": 24574,
+      "distinctLemmas": 23986,
+      "hRecords": 1150,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 31,
+      "itiCount": 37,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 4.68,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.13,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "pui",
+      "label": "PUI",
+      "fullName": "The Purana Index",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1951,
+      "startYear": 1951,
+      "endYear": 1951,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 11730,
+      "notes": "",
+      "records": 17512,
+      "sourceRecords": 17512,
+      "distinctLemmas": 11730,
+      "hRecords": 7339,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 5,
+      "itiCount": 5,
+      "divRecords": 15058,
+      "divCount": 15247,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 41.91,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.03,
+        "divRecordPct": 85.99,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "bhs",
+      "label": "BHS",
+      "fullName": "Edgerton Buddhist Hybrid Sanskrit Dictionary",
+      "languagePair": "BHS-Eng",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1953,
+      "startYear": 1953,
+      "endYear": 1953,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 17777,
+      "notes": "Specialized: Buddhist Hybrid Sanskrit",
+      "records": 17839,
+      "sourceRecords": 17839,
+      "distinctLemmas": 17777,
+      "hRecords": 94,
+      "lexRecords": 8742,
+      "genderRecords": 5165,
+      "lsRecords": 16291,
+      "lsCount": 48419,
+      "itiRecords": 137,
+      "itiCount": 171,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0.53,
+        "lexRecordPct": 49,
+        "genderRecordPct": 28.95,
+        "lsRecordPct": 91.32,
+        "itiRecordPct": 0.77,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "candidate",
+          "method": "lex-tag"
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "fri",
+      "label": "FRI",
+      "fullName": "Friš Sanskrit Reader Vocabulary",
+      "languagePair": "Skt-Cze",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1956,
+      "startYear": 1956,
+      "endYear": 1956,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 7775,
+      "notes": "Czech reader vocabulary; the 2015 Russian-edition link in github is a later derivation",
+      "records": 8155,
+      "sourceRecords": 8155,
+      "distinctLemmas": 7775,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 312,
+      "itiCount": 374,
+      "divRecords": 7671,
+      "divCount": 23013,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 3.83,
+        "divRecordPct": 94.06,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "fullName": "Practical Sanskrit-English Dictionary (revised edition)",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": true,
+      "senseSegmented": true,
+      "homonymMarked": false,
+      "year": 1957,
+      "startYear": 1957,
+      "endYear": 1959,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 88667,
+      "notes": "3-volume Pune revised edition; major expansion of AP90",
+      "records": 90654,
+      "sourceRecords": 90654,
+      "distinctLemmas": 88701,
+      "hRecords": 10,
+      "lexRecords": 26950,
+      "genderRecords": 26903,
+      "lsRecords": 28676,
+      "lsCount": 68272,
+      "itiRecords": 635,
+      "itiCount": 682,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 25749,
+      "bulletCount": 92690,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0.01,
+        "lexRecordPct": 29.73,
+        "genderRecordPct": 29.68,
+        "lsRecordPct": 31.63,
+        "itiRecordPct": 0.7,
+        "divRecordPct": 0,
+        "bulletRecordPct": 28.4,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "supported",
+          "method": "existing-core"
+        },
+        "citations": {
+          "status": "supported",
+          "method": "ls-tag"
+        },
+        "homonyms": {
+          "status": "weak",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "supported",
+          "method": "bullet"
+        }
+      }
+    },
+    {
+      "code": "acc",
+      "label": "ACC",
+      "fullName": "Aufrecht's Catalogus Catalogorum",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1962,
+      "startYear": 1962,
+      "endYear": 1962,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 32576,
+      "notes": "Bibliographic catalog",
+      "records": 49822,
+      "sourceRecords": 49822,
+      "distinctLemmas": 32576,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 4,
+      "itiCount": 4,
+      "divRecords": 0,
+      "divCount": 0,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.01,
+        "divRecordPct": 0,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "missing",
+          "method": null
+        }
+      }
+    },
+    {
+      "code": "pe",
+      "label": "PE",
+      "fullName": "Puranic Encyclopedia",
+      "languagePair": "Skt-Eng",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1975,
+      "startYear": 1964,
+      "endYear": 1975,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 6623,
+      "notes": "Cologne scan-only; Malayalam original 1964 (Puranic Encyclopaedia); English version 1975 (Motilal); 8-vol structure",
+      "records": 8799,
+      "sourceRecords": 8799,
+      "distinctLemmas": 6623,
+      "hRecords": 2909,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 6,
+      "itiCount": 6,
+      "divRecords": 1318,
+      "divCount": 10523,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 33.06,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.07,
+        "divRecordPct": 14.98,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "krm",
+      "label": "KRM",
+      "fullName": "Kṛdantarūpamālā",
+      "languagePair": "Skt-Skt",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1965,
+      "startYear": 1965,
+      "endYear": 1965,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 1698,
+      "notes": "Verbs only",
+      "records": 2061,
+      "sourceRecords": 2061,
+      "distinctLemmas": 1698,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 1816,
+      "itiCount": 12359,
+      "divRecords": 1914,
+      "divCount": 2150,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 88.11,
+        "divRecordPct": 92.87,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "candidate",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "ieg",
+      "label": "IEG",
+      "fullName": "Indian Epigraphical Glossary",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1966,
+      "startYear": 1966,
+      "endYear": 1966,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 7575,
+      "notes": "Cologne scan-only",
+      "records": 7907,
+      "sourceRecords": 7907,
+      "distinctLemmas": 7575,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 7,
+      "itiCount": 7,
+      "divRecords": 607,
+      "divCount": 1016,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.09,
+        "divRecordPct": 7.68,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "snp",
+      "label": "SNP",
+      "fullName": "Meulenbeld's Sanskrit Names of Plants",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1974,
+      "startYear": 1974,
+      "endYear": 1974,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 448,
+      "notes": "Cologne scan-only",
+      "records": 453,
+      "sourceRecords": 453,
+      "distinctLemmas": 448,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 2,
+      "itiCount": 4,
+      "divRecords": 439,
+      "divCount": 1742,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0.44,
+        "divRecordPct": 96.91,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "mci",
+      "label": "MCI",
+      "fullName": "Mahabharata Cultural Index",
+      "languagePair": "Skt-Eng",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1993,
+      "startYear": 1976,
+      "endYear": 1993,
+      "letterCoverage": "partial-by-letter",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 2325,
+      "notes": "Partial publication; ongoing series",
+      "records": 2643,
+      "sourceRecords": 2643,
+      "distinctLemmas": 2325,
+      "hRecords": 319,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 123,
+      "itiCount": 183,
+      "divRecords": 1859,
+      "divCount": 1879,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 4,
+      "numberedSenseCount": 7,
+      "markerRates": {
+        "hRecordPct": 12.07,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 4.65,
+        "divRecordPct": 70.34,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0.15
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "weak",
+          "method": "iti-prose"
+        },
+        "homonyms": {
+          "status": "candidate",
+          "method": "h-tag"
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    },
+    {
+      "code": "pgn",
+      "label": "PGN",
+      "fullName": "Personal and Geographical Names in the Gupta Inscriptions",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1978,
+      "startYear": 1978,
+      "endYear": 1978,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 470,
+      "notes": "Cologne scan-only",
+      "records": 485,
+      "sourceRecords": 485,
+      "distinctLemmas": 470,
+      "hRecords": 0,
+      "lexRecords": 0,
+      "genderRecords": 0,
+      "lsRecords": 0,
+      "lsCount": 0,
+      "itiRecords": 0,
+      "itiCount": 0,
+      "divRecords": 163,
+      "divCount": 582,
+      "bulletRecords": 0,
+      "bulletCount": 0,
+      "numberedSenseRecords": 0,
+      "numberedSenseCount": 0,
+      "markerRates": {
+        "hRecordPct": 0,
+        "lexRecordPct": 0,
+        "genderRecordPct": 0,
+        "lsRecordPct": 0,
+        "itiRecordPct": 0,
+        "divRecordPct": 33.61,
+        "bulletRecordPct": 0,
+        "numberedSenseRecordPct": 0
+      },
+      "capabilities": {
+        "grammar": {
+          "status": "missing",
+          "method": null
+        },
+        "citations": {
+          "status": "missing",
+          "method": null
+        },
+        "homonyms": {
+          "status": "missing",
+          "method": null
+        },
+        "senses": {
+          "status": "candidate",
+          "method": "div"
+        }
+      }
+    }
+  ],
+  "excludedFromSanskritHeadwordLookup": [
+    {
+      "code": "ae",
+      "label": "AE",
+      "languagePair": "Eng-Skt",
+      "reason": "reverse English-headword dictionary"
+    },
+    {
+      "code": "bor",
+      "label": "BOR",
+      "languagePair": "Eng-Skt",
+      "reason": "reverse English-headword dictionary"
+    },
+    {
+      "code": "mwe",
+      "label": "MWE",
+      "languagePair": "Eng-Skt",
+      "reason": "reverse English-headword dictionary"
+    }
+  ],
+  "statusMeanings": {
+    "supported": "Already used by the current core analysis code.",
+    "partial": "Used today with known limitations.",
+    "candidate": "Enough encoded evidence exists to build or validate a parser.",
+    "weak": "Some markers exist, but not enough to treat as reliable without inspection.",
+    "missing": "No useful marker evidence found by this audit."
+  },
+  "assumptions": [
+    "This audit measures encoded evidence, not philological quality.",
+    "A candidate result means the dictionary deserves an adapter or parser validation pass before it is promoted.",
+    "Equal-depth analysis requires dictionary-specific parsing for grammar, citations, homonymy, and sense segmentation; headword coverage alone is insufficient."
+  ]
+}

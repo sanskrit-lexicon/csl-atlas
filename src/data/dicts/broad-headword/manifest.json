@@ -1,0 +1,2057 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-13T19:24:44.014Z",
+  "generatedBy": "npm run build-broad-headword-lookup",
+  "scope": "broadHeadword",
+  "sourceRoot": "../csl-orig/v02",
+  "hrefBase": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02",
+  "minDicts": 1,
+  "inputSchemes": [
+    "IAST"
+  ],
+  "count": 376943,
+  "dictionaryCount": 40,
+  "dictionaries": [
+    {
+      "code": "skd",
+      "label": "SKD",
+      "fullName": "Śabda-kalpadruma",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1886,
+      "startYear": 1822,
+      "endYear": 1886,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 40817,
+      "notes": "Original publication 1822; Cologne digitisation based on later 1886 edition"
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "fullName": "Wilson Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1832,
+      "startYear": 1832,
+      "endYear": 1832,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 43939,
+      "notes": "Deprecated by Cologne; oldest English-tradition dict"
+    },
+    {
+      "code": "yat",
+      "label": "YAT",
+      "fullName": "Yates Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1846,
+      "startYear": 1846,
+      "endYear": 1846,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 44720,
+      "notes": "WIL⇄YAT mutual containment ~91% suggests YAT derived from WIL"
+    },
+    {
+      "code": "bop",
+      "label": "BOP",
+      "fullName": "Bopp Glossarium Sanscritum",
+      "languagePair": "Skt-Lat",
+      "family": "Sanskrit-Latin",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1847,
+      "startYear": 1847,
+      "endYear": 1847,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 8505,
+      "notes": ""
+    },
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "fullName": "Böhtlingk and Roth Grosses Petersburger Wörterbuch",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": true,
+      "senseSegmented": true,
+      "homonymMarked": true,
+      "year": 1855,
+      "startYear": 1855,
+      "endYear": 1875,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 106083,
+      "notes": "7 volumes published 1855-1875; vol1 1855 (a-)"
+    },
+    {
+      "code": "gst",
+      "label": "GST",
+      "fullName": "Goldstücker Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1856,
+      "startYear": 1856,
+      "endYear": 1856,
+      "letterCoverage": "partial-a-only",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 6761,
+      "notes": "Incomplete: only letter 'a-' published"
+    },
+    {
+      "code": "armh",
+      "label": "ARMH",
+      "fullName": "Abhidhānaratnamālā of Halāyudha",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1861,
+      "startYear": 1861,
+      "endYear": 1861,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 6673,
+      "notes": "Indigenous Skt-Skt kośa"
+    },
+    {
+      "code": "bur",
+      "label": "BUR",
+      "fullName": "Burnouf Dictionnaire Sanscrit-Français",
+      "languagePair": "Skt-Fra",
+      "family": "Sanskrit-French",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1866,
+      "startYear": 1863,
+      "endYear": 1866,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 19146,
+      "notes": ""
+    },
+    {
+      "code": "ben",
+      "label": "BEN",
+      "fullName": "Benfey Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1866,
+      "startYear": 1866,
+      "endYear": 1866,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 17036,
+      "notes": ""
+    },
+    {
+      "code": "mw72",
+      "label": "MW72",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary (1st edition)",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1872,
+      "startYear": 1872,
+      "endYear": 1872,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 51159,
+      "notes": "Predecessor to MW (1899); preface notes use of early PWG volumes (1855-1865 fascicles)"
+    },
+    {
+      "code": "gra",
+      "label": "GRA",
+      "fullName": "Grassmann Wörterbuch zum Rig Veda",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1873,
+      "startYear": 1873,
+      "endYear": 1873,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 11108,
+      "notes": "Specialized: Rigveda only"
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "fullName": "Vacaspatyam",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1873,
+      "startYear": 1873,
+      "endYear": 1884,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 48636,
+      "notes": "Multi-fascicle publication 1873-1884; indigenous Skt-Skt"
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "fullName": "Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": true,
+      "senseSegmented": true,
+      "homonymMarked": true,
+      "year": 1879,
+      "startYear": 1879,
+      "endYear": 1889,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 151349,
+      "notes": "7 volumes 1879-1889; same as PWK in github; deprecated by Cologne"
+    },
+    {
+      "code": "pwkvn",
+      "label": "PWKVN",
+      "fullName": "Petersburger Wörterbuch (PW) Nachträge und Verbesserungen",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": null,
+      "startYear": 1879,
+      "endYear": 1889,
+      "letterCoverage": "partial",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 14995,
+      "notes": "Sub-portion: digitization of the Nachträge und Verbesserungen sections of PW; 99.9% subset of PW"
+    },
+    {
+      "code": "lan",
+      "label": "LAN",
+      "fullName": "Lanman's Sanskrit Reader Vocabulary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1884,
+      "startYear": 1884,
+      "endYear": 1884,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 4726,
+      "notes": "Specialized vocabulary for Lanman's reader; in sanhw1 not GitHub"
+    },
+    {
+      "code": "ccs",
+      "label": "CCS",
+      "fullName": "Cappeller Sanskrit Wörterbuch",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1887,
+      "startYear": 1887,
+      "endYear": 1887,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 28751,
+      "notes": "Same author as CAE; CCS⊆PW 0.945 confirms PWK→CCS derivation"
+    },
+    {
+      "code": "lrv",
+      "label": "LRV",
+      "fullName": "Vaidya Standard Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1889,
+      "startYear": 1889,
+      "endYear": 1889,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 48259,
+      "notes": "Indian Skt-Eng; HathiTrust 008693928"
+    },
+    {
+      "code": "ap90",
+      "label": "AP90",
+      "fullName": "Apte Practical Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1890,
+      "startYear": 1890,
+      "endYear": 1890,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 34277,
+      "notes": "Original 1890 Apte; AP90→AP grew 2.6x"
+    },
+    {
+      "code": "cae",
+      "label": "CAE",
+      "fullName": "Cappeller Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1891,
+      "startYear": 1891,
+      "endYear": 1891,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 38484,
+      "notes": "Same author as CCS"
+    },
+    {
+      "code": "md",
+      "label": "MD",
+      "fullName": "Macdonell Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1893,
+      "startYear": 1893,
+      "endYear": 1893,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 20103,
+      "notes": ""
+    },
+    {
+      "code": "abch",
+      "label": "ABCH",
+      "fullName": "Abhidhānacintāmaṇi of Hemacandrācārya",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1896,
+      "startYear": 1896,
+      "endYear": 1896,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 11584,
+      "notes": "Classical Indian kośa; in sanhw1 not GitHub"
+    },
+    {
+      "code": "acph",
+      "label": "ACPH",
+      "fullName": "Abhidhānacintāmaṇipariśiṣṭa of Hemacandrācārya",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1896,
+      "startYear": 1896,
+      "endYear": 1896,
+      "letterCoverage": "supplemental",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 1453,
+      "notes": "Supplement to ABCH; in sanhw1 not GitHub"
+    },
+    {
+      "code": "acsj",
+      "label": "ACSJ",
+      "fullName": "Abhidhānacintāmaṇiśiloñcha of Jinadeva",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1896,
+      "startYear": 1896,
+      "endYear": 1896,
+      "letterCoverage": "supplemental",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 634,
+      "notes": "Hemacandra commentary tradition; in sanhw1 not GitHub"
+    },
+    {
+      "code": "mw",
+      "label": "MW",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": true,
+      "senseSegmented": false,
+      "homonymMarked": true,
+      "year": 1899,
+      "startYear": 1899,
+      "endYear": 1899,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 194084,
+      "notes": "LARGEST CDSL dict; has S1+S2+Markup+Inflected-forms displays; gets most attention"
+    },
+    {
+      "code": "shs",
+      "label": "SHS",
+      "fullName": "Shabda-Sagara Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1900,
+      "startYear": 1900,
+      "endYear": 1900,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 46730,
+      "notes": "WIL⊆SHS 0.953 confirms SHS derives from WIL"
+    },
+    {
+      "code": "inm",
+      "label": "INM",
+      "fullName": "Index to the Names in the Mahabharata",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1904,
+      "startYear": 1904,
+      "endYear": 1904,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 9454,
+      "notes": "Specialized index"
+    },
+    {
+      "code": "vei",
+      "label": "VEI",
+      "fullName": "The Vedic Index of Names and Subjects",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1912,
+      "startYear": 1912,
+      "endYear": 1912,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 3704,
+      "notes": "Specialized: Vedic only"
+    },
+    {
+      "code": "sch",
+      "label": "SCH",
+      "fullName": "Schmidt Nachträge zum Sanskrit-Wörterbuch",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1928,
+      "startYear": 1928,
+      "endYear": 1928,
+      "letterCoverage": "supplemental",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 28455,
+      "notes": "Continuation of PWG/PWK"
+    },
+    {
+      "code": "stc",
+      "label": "STC",
+      "fullName": "Stchoupak Dictionnaire Sanscrit-Français",
+      "languagePair": "Skt-Fra",
+      "family": "Sanskrit-French",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1932,
+      "startYear": 1932,
+      "endYear": 1932,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 23986,
+      "notes": "Has SD display"
+    },
+    {
+      "code": "pui",
+      "label": "PUI",
+      "fullName": "The Purana Index",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1951,
+      "startYear": 1951,
+      "endYear": 1951,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 11730,
+      "notes": ""
+    },
+    {
+      "code": "bhs",
+      "label": "BHS",
+      "fullName": "Edgerton Buddhist Hybrid Sanskrit Dictionary",
+      "languagePair": "BHS-Eng",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1953,
+      "startYear": 1953,
+      "endYear": 1953,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 17777,
+      "notes": "Specialized: Buddhist Hybrid Sanskrit"
+    },
+    {
+      "code": "fri",
+      "label": "FRI",
+      "fullName": "Friš Sanskrit Reader Vocabulary",
+      "languagePair": "Skt-Cze",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1956,
+      "startYear": 1956,
+      "endYear": 1956,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 7775,
+      "notes": "Czech reader vocabulary; the 2015 Russian-edition link in github is a later derivation"
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "fullName": "Practical Sanskrit-English Dictionary (revised edition)",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": true,
+      "citationTagged": true,
+      "senseSegmented": true,
+      "homonymMarked": false,
+      "year": 1957,
+      "startYear": 1957,
+      "endYear": 1959,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 88667,
+      "notes": "3-volume Pune revised edition; major expansion of AP90"
+    },
+    {
+      "code": "acc",
+      "label": "ACC",
+      "fullName": "Aufrecht's Catalogus Catalogorum",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1962,
+      "startYear": 1962,
+      "endYear": 1962,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 32576,
+      "notes": "Bibliographic catalog"
+    },
+    {
+      "code": "pe",
+      "label": "PE",
+      "fullName": "Puranic Encyclopedia",
+      "languagePair": "Skt-Eng",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1975,
+      "startYear": 1964,
+      "endYear": 1975,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 6623,
+      "notes": "Cologne scan-only; Malayalam original 1964 (Puranic Encyclopaedia); English version 1975 (Motilal); 8-vol structure"
+    },
+    {
+      "code": "krm",
+      "label": "KRM",
+      "fullName": "Kṛdantarūpamālā",
+      "languagePair": "Skt-Skt",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1965,
+      "startYear": 1965,
+      "endYear": 1965,
+      "letterCoverage": "full",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 1698,
+      "notes": "Verbs only"
+    },
+    {
+      "code": "ieg",
+      "label": "IEG",
+      "fullName": "Indian Epigraphical Glossary",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1966,
+      "startYear": 1966,
+      "endYear": 1966,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 7575,
+      "notes": "Cologne scan-only"
+    },
+    {
+      "code": "snp",
+      "label": "SNP",
+      "fullName": "Meulenbeld's Sanskrit Names of Plants",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1974,
+      "startYear": 1974,
+      "endYear": 1974,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 448,
+      "notes": "Cologne scan-only"
+    },
+    {
+      "code": "mci",
+      "label": "MCI",
+      "fullName": "Mahabharata Cultural Index",
+      "languagePair": "Skt-Eng",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1993,
+      "startYear": 1976,
+      "endYear": 1993,
+      "letterCoverage": "partial-by-letter",
+      "inGithub": true,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 2325,
+      "notes": "Partial publication; ongoing series"
+    },
+    {
+      "code": "pgn",
+      "label": "PGN",
+      "fullName": "Personal and Geographical Names in the Gupta Inscriptions",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "grammarReliable": false,
+      "citationTagged": false,
+      "senseSegmented": false,
+      "homonymMarked": false,
+      "year": 1978,
+      "startYear": 1978,
+      "endYear": 1978,
+      "letterCoverage": "full",
+      "inGithub": false,
+      "inSanhw1": true,
+      "sanhw1Lemmas": 470,
+      "notes": "Cologne scan-only"
+    }
+  ],
+  "recordsByDict": {
+    "skd": 42531,
+    "wil": 44577,
+    "yat": 45206,
+    "bop": 8961,
+    "pwg": 123366,
+    "gst": 6780,
+    "armh": 7907,
+    "bur": 19776,
+    "ben": 17310,
+    "mw72": 55388,
+    "gra": 12785,
+    "vcp": 50135,
+    "pw": 170556,
+    "pwkvn": 24976,
+    "lan": 4944,
+    "ccs": 30010,
+    "lrv": 53441,
+    "ap90": 34882,
+    "cae": 40069,
+    "md": 20749,
+    "abch": 13596,
+    "acph": 1532,
+    "acsj": 640,
+    "mw": 286560,
+    "shs": 47326,
+    "inm": 12647,
+    "vei": 3834,
+    "sch": 29125,
+    "stc": 24574,
+    "pui": 17512,
+    "bhs": 17839,
+    "fri": 8155,
+    "ap": 90654,
+    "acc": 49822,
+    "pe": 8799,
+    "krm": 2061,
+    "ieg": 7907,
+    "snp": 453,
+    "mci": 2643,
+    "pgn": 485
+  },
+  "lemmasByDict": {
+    "skd": 40812,
+    "wil": 43936,
+    "yat": 44718,
+    "bop": 8504,
+    "pwg": 106080,
+    "gst": 6761,
+    "armh": 6673,
+    "bur": 19146,
+    "ben": 17036,
+    "mw72": 51159,
+    "gra": 11108,
+    "vcp": 48629,
+    "pw": 151346,
+    "pwkvn": 14995,
+    "lan": 4726,
+    "ccs": 28751,
+    "lrv": 48259,
+    "ap90": 34277,
+    "cae": 38484,
+    "md": 20102,
+    "abch": 11584,
+    "acph": 1453,
+    "acsj": 634,
+    "mw": 194084,
+    "shs": 46728,
+    "inm": 9454,
+    "vei": 3704,
+    "sch": 28455,
+    "stc": 23986,
+    "pui": 11730,
+    "bhs": 17777,
+    "fri": 7775,
+    "ap": 88701,
+    "acc": 32576,
+    "pe": 6623,
+    "krm": 1698,
+    "ieg": 7575,
+    "snp": 448,
+    "mci": 2325,
+    "pgn": 470
+  },
+  "shards": [
+    {
+      "id": "61",
+      "prefix": "a",
+      "path": "shards/61.json",
+      "count": 43771
+    },
+    {
+      "id": "41",
+      "prefix": "A",
+      "path": "shards/41.json",
+      "count": 10322
+    },
+    {
+      "id": "69",
+      "prefix": "i",
+      "path": "shards/69.json",
+      "count": 2138
+    },
+    {
+      "id": "49",
+      "prefix": "I",
+      "path": "shards/49.json",
+      "count": 580
+    },
+    {
+      "id": "75",
+      "prefix": "u",
+      "path": "shards/75.json",
+      "count": 11127
+    },
+    {
+      "id": "55",
+      "prefix": "U",
+      "path": "shards/55.json",
+      "count": 863
+    },
+    {
+      "id": "66",
+      "prefix": "f",
+      "path": "shards/66.json",
+      "count": 1058
+    },
+    {
+      "id": "46",
+      "prefix": "F",
+      "path": "shards/46.json",
+      "count": 3
+    },
+    {
+      "id": "78",
+      "prefix": "x",
+      "path": "shards/78.json",
+      "count": 7
+    },
+    {
+      "id": "58",
+      "prefix": "X",
+      "path": "shards/58.json",
+      "count": 2
+    },
+    {
+      "id": "65",
+      "prefix": "e",
+      "path": "shards/65.json",
+      "count": 1863
+    },
+    {
+      "id": "45",
+      "prefix": "E",
+      "path": "shards/45.json",
+      "count": 531
+    },
+    {
+      "id": "6f",
+      "prefix": "o",
+      "path": "shards/6f.json",
+      "count": 465
+    },
+    {
+      "id": "4f",
+      "prefix": "O",
+      "path": "shards/4f.json",
+      "count": 923
+    },
+    {
+      "id": "6b",
+      "prefix": "k",
+      "path": "shards/6b.json",
+      "count": 27879
+    },
+    {
+      "id": "4b",
+      "prefix": "K",
+      "path": "shards/4b.json",
+      "count": 2161
+    },
+    {
+      "id": "67",
+      "prefix": "g",
+      "path": "shards/67.json",
+      "count": 10499
+    },
+    {
+      "id": "47",
+      "prefix": "G",
+      "path": "shards/47.json",
+      "count": 1420
+    },
+    {
+      "id": "4e",
+      "prefix": "N",
+      "path": "shards/4e.json",
+      "count": 6
+    },
+    {
+      "id": "63",
+      "prefix": "c",
+      "path": "shards/63.json",
+      "count": 7597
+    },
+    {
+      "id": "43",
+      "prefix": "C",
+      "path": "shards/43.json",
+      "count": 1124
+    },
+    {
+      "id": "6a",
+      "prefix": "j",
+      "path": "shards/6a.json",
+      "count": 6960
+    },
+    {
+      "id": "4a",
+      "prefix": "J",
+      "path": "shards/4a.json",
+      "count": 360
+    },
+    {
+      "id": "59",
+      "prefix": "Y",
+      "path": "shards/59.json",
+      "count": 5
+    },
+    {
+      "id": "77",
+      "prefix": "w",
+      "path": "shards/77.json",
+      "count": 286
+    },
+    {
+      "id": "57",
+      "prefix": "W",
+      "path": "shards/57.json",
+      "count": 41
+    },
+    {
+      "id": "71",
+      "prefix": "q",
+      "path": "shards/71.json",
+      "count": 296
+    },
+    {
+      "id": "51",
+      "prefix": "Q",
+      "path": "shards/51.json",
+      "count": 86
+    },
+    {
+      "id": "52",
+      "prefix": "R",
+      "path": "shards/52.json",
+      "count": 90
+    },
+    {
+      "id": "74",
+      "prefix": "t",
+      "path": "shards/74.json",
+      "count": 11344
+    },
+    {
+      "id": "54",
+      "prefix": "T",
+      "path": "shards/54.json",
+      "count": 70
+    },
+    {
+      "id": "64",
+      "prefix": "d",
+      "path": "shards/64.json",
+      "count": 15004
+    },
+    {
+      "id": "44",
+      "prefix": "D",
+      "path": "shards/44.json",
+      "count": 4575
+    },
+    {
+      "id": "6e",
+      "prefix": "n",
+      "path": "shards/6e.json",
+      "count": 15219
+    },
+    {
+      "id": "70",
+      "prefix": "p",
+      "path": "shards/70.json",
+      "count": 39309
+    },
+    {
+      "id": "50",
+      "prefix": "P",
+      "path": "shards/50.json",
+      "count": 1030
+    },
+    {
+      "id": "62",
+      "prefix": "b",
+      "path": "shards/62.json",
+      "count": 7427
+    },
+    {
+      "id": "42",
+      "prefix": "B",
+      "path": "shards/42.json",
+      "count": 8477
+    },
+    {
+      "id": "6d",
+      "prefix": "m",
+      "path": "shards/6d.json",
+      "count": 20469
+    },
+    {
+      "id": "79",
+      "prefix": "y",
+      "path": "shards/79.json",
+      "count": 5224
+    },
+    {
+      "id": "72",
+      "prefix": "r",
+      "path": "shards/72.json",
+      "count": 9520
+    },
+    {
+      "id": "6c",
+      "prefix": "l",
+      "path": "shards/6c.json",
+      "count": 5016
+    },
+    {
+      "id": "76",
+      "prefix": "v",
+      "path": "shards/76.json",
+      "count": 33341
+    },
+    {
+      "id": "53",
+      "prefix": "S",
+      "path": "shards/53.json",
+      "count": 17660
+    },
+    {
+      "id": "7a",
+      "prefix": "z",
+      "path": "shards/7a.json",
+      "count": 1204
+    },
+    {
+      "id": "73",
+      "prefix": "s",
+      "path": "shards/73.json",
+      "count": 43238
+    },
+    {
+      "id": "68",
+      "prefix": "h",
+      "path": "shards/68.json",
+      "count": 6351
+    },
+    {
+      "id": "other",
+      "prefix": "",
+      "path": "shards/other.json",
+      "count": 2
+    }
+  ],
+  "sampleLemmas": [
+    "agni",
+    "Siva",
+    "aMSa",
+    "akza",
+    "dA"
+  ],
+  "sampleEntries": [
+    [
+      "agni",
+      [
+        [
+          1,
+          1,
+          1881
+        ],
+        [
+          2,
+          1,
+          823
+        ],
+        [
+          3,
+          1,
+          288
+        ],
+        [
+          4,
+          4,
+          2941
+        ],
+        [
+          5,
+          1,
+          2216
+        ],
+        [
+          6,
+          3,
+          5820
+        ],
+        [
+          7,
+          1,
+          408
+        ],
+        [
+          8,
+          1,
+          269
+        ],
+        [
+          9,
+          1,
+          3322
+        ],
+        [
+          10,
+          3,
+          412
+        ],
+        [
+          11,
+          1,
+          1557
+        ],
+        [
+          12,
+          3,
+          1891
+        ],
+        [
+          13,
+          2,
+          19585
+        ],
+        [
+          14,
+          1,
+          153
+        ],
+        [
+          15,
+          1,
+          575
+        ],
+        [
+          16,
+          1,
+          799
+        ],
+        [
+          18,
+          1,
+          650
+        ],
+        [
+          19,
+          1,
+          1059
+        ],
+        [
+          20,
+          2,
+          1383
+        ],
+        [
+          23,
+          10,
+          3240
+        ],
+        [
+          24,
+          1,
+          991
+        ],
+        [
+          25,
+          1,
+          2996
+        ],
+        [
+          27,
+          1,
+          1300
+        ],
+        [
+          28,
+          1,
+          1164
+        ],
+        [
+          29,
+          13,
+          493
+        ],
+        [
+          30,
+          1,
+          430
+        ],
+        [
+          31,
+          1,
+          241
+        ],
+        [
+          33,
+          1,
+          141539
+        ],
+        [
+          34,
+          1,
+          1410
+        ],
+        [
+          36,
+          1,
+          1124
+        ]
+      ]
+    ],
+    [
+      "Siva",
+      [
+        [
+          1,
+          1,
+          300993
+        ],
+        [
+          2,
+          1,
+          135709
+        ],
+        [
+          3,
+          1,
+          48888
+        ],
+        [
+          4,
+          1,
+          920630
+        ],
+        [
+          6,
+          2,
+          649
+        ],
+        [
+          7,
+          1,
+          84816
+        ],
+        [
+          8,
+          1,
+          108918
+        ],
+        [
+          9,
+          1,
+          375427
+        ],
+        [
+          10,
+          1,
+          60878
+        ],
+        [
+          11,
+          1,
+          485626
+        ],
+        [
+          12,
+          1,
+          470270
+        ],
+        [
+          14,
+          1,
+          23342
+        ],
+        [
+          15,
+          1,
+          114258
+        ],
+        [
+          16,
+          4,
+          138748
+        ],
+        [
+          17,
+          1,
+          242431
+        ],
+        [
+          18,
+          1,
+          110441
+        ],
+        [
+          19,
+          1,
+          71686
+        ],
+        [
+          20,
+          4,
+          572
+        ],
+        [
+          23,
+          46,
+          722303
+        ],
+        [
+          24,
+          1,
+          166987
+        ],
+        [
+          25,
+          5,
+          33829
+        ],
+        [
+          26,
+          1,
+          56820
+        ],
+        [
+          28,
+          1,
+          135112
+        ],
+        [
+          29,
+          8,
+          100125
+        ],
+        [
+          31,
+          1,
+          39784
+        ],
+        [
+          32,
+          1,
+          442767
+        ],
+        [
+          33,
+          15,
+          114535
+        ],
+        [
+          34,
+          2,
+          114363
+        ],
+        [
+          36,
+          2,
+          29665
+        ],
+        [
+          38,
+          2,
+          52799
+        ]
+      ]
+    ],
+    [
+      "aMSa",
+      [
+        [
+          0,
+          1,
+          64
+        ],
+        [
+          1,
+          2,
+          29
+        ],
+        [
+          2,
+          2,
+          102
+        ],
+        [
+          3,
+          1,
+          17
+        ],
+        [
+          4,
+          5,
+          124
+        ],
+        [
+          5,
+          1,
+          185
+        ],
+        [
+          7,
+          1,
+          8595
+        ],
+        [
+          8,
+          1,
+          9
+        ],
+        [
+          9,
+          1,
+          1784
+        ],
+        [
+          10,
+          1,
+          10
+        ],
+        [
+          11,
+          2,
+          47
+        ],
+        [
+          12,
+          3,
+          21
+        ],
+        [
+          13,
+          2,
+          4
+        ],
+        [
+          14,
+          1,
+          8
+        ],
+        [
+          15,
+          1,
+          17
+        ],
+        [
+          16,
+          1,
+          22
+        ],
+        [
+          18,
+          1,
+          8
+        ],
+        [
+          19,
+          1,
+          15
+        ],
+        [
+          20,
+          1,
+          12808
+        ],
+        [
+          23,
+          10,
+          55
+        ],
+        [
+          24,
+          2,
+          18
+        ],
+        [
+          25,
+          1,
+          5400
+        ],
+        [
+          27,
+          1,
+          10
+        ],
+        [
+          28,
+          1,
+          341
+        ],
+        [
+          29,
+          3,
+          5151
+        ],
+        [
+          30,
+          1,
+          11
+        ],
+        [
+          31,
+          1,
+          13
+        ],
+        [
+          34,
+          1,
+          4843
+        ],
+        [
+          36,
+          1,
+          1949
+        ]
+      ]
+    ],
+    [
+      "akza",
+      [
+        [
+          0,
+          2,
+          757
+        ],
+        [
+          1,
+          2,
+          940
+        ],
+        [
+          2,
+          1,
+          414
+        ],
+        [
+          3,
+          1,
+          152
+        ],
+        [
+          4,
+          9,
+          1340
+        ],
+        [
+          5,
+          1,
+          1158
+        ],
+        [
+          6,
+          6,
+          22071
+        ],
+        [
+          7,
+          1,
+          191
+        ],
+        [
+          8,
+          2,
+          147
+        ],
+        [
+          9,
+          5,
+          2604
+        ],
+        [
+          10,
+          3,
+          216
+        ],
+        [
+          11,
+          2,
+          724
+        ],
+        [
+          12,
+          11,
+          916
+        ],
+        [
+          13,
+          5,
+          175
+        ],
+        [
+          14,
+          3,
+          66
+        ],
+        [
+          15,
+          3,
+          337
+        ],
+        [
+          16,
+          2,
+          409
+        ],
+        [
+          18,
+          4,
+          372
+        ],
+        [
+          19,
+          4,
+          643
+        ],
+        [
+          20,
+          6,
+          4070
+        ],
+        [
+          23,
+          30,
+          1559
+        ],
+        [
+          24,
+          2,
+          491
+        ],
+        [
+          25,
+          2,
+          4656
+        ],
+        [
+          26,
+          3,
+          38
+        ],
+        [
+          27,
+          3,
+          665
+        ],
+        [
+          28,
+          3,
+          850
+        ],
+        [
+          29,
+          3,
+          244
+        ],
+        [
+          31,
+          3,
+          118
+        ],
+        [
+          34,
+          2,
+          3296
+        ],
+        [
+          36,
+          2,
+          1544
+        ],
+        [
+          37,
+          1,
+          95
+        ]
+      ]
+    ],
+    [
+      "dA",
+      [
+        [
+          0,
+          4,
+          190041
+        ],
+        [
+          1,
+          1,
+          145365
+        ],
+        [
+          3,
+          2,
+          24014
+        ],
+        [
+          4,
+          16,
+          315254
+        ],
+        [
+          7,
+          2,
+          41167
+        ],
+        [
+          8,
+          3,
+          45268
+        ],
+        [
+          9,
+          8,
+          160315
+        ],
+        [
+          10,
+          5,
+          27008
+        ],
+        [
+          11,
+          3,
+          320728
+        ],
+        [
+          12,
+          14,
+          203297
+        ],
+        [
+          13,
+          6,
+          16015
+        ],
+        [
+          14,
+          4,
+          9639
+        ],
+        [
+          15,
+          5,
+          43789
+        ],
+        [
+          16,
+          4,
+          59875
+        ],
+        [
+          17,
+          2,
+          130688
+        ],
+        [
+          18,
+          5,
+          45366
+        ],
+        [
+          19,
+          4,
+          36658
+        ],
+        [
+          23,
+          13,
+          299626
+        ],
+        [
+          24,
+          1,
+          77695
+        ],
+        [
+          27,
+          3,
+          47171
+        ],
+        [
+          28,
+          4,
+          61124
+        ],
+        [
+          31,
+          3,
+          17332
+        ],
+        [
+          32,
+          3,
+          213110
+        ]
+      ]
+    ]
+  ],
+  "tupleFields": [
+    "lemma",
+    "dicts"
+  ],
+  "dictTupleFields": [
+    "dictIndex",
+    "records",
+    "firstLine"
+  ],
+  "assumptions": [
+    "Broad mode indexes local Sanskrit/BHS headword dictionaries only.",
+    "Reverse English-Sanskrit dictionaries are excluded from Sanskrit-headword lookup.",
+    "This layer records headword presence, record count, and first source line only."
+  ],
+  "warnings": [
+    "Deep comparison remains limited to the core 7 dictionaries.",
+    "10 dictionaries are local-only or not linkable from GitHub: ARMH, PWKVN, LAN, ABCH, ACPH, ACSJ, PE, IEG, SNP, PGN."
+  ],
+  "excluded": [
+    {
+      "code": "ae",
+      "label": "AE",
+      "languagePair": "Eng-Skt",
+      "reason": "reverse English-headword dictionary"
+    },
+    {
+      "code": "bor",
+      "label": "BOR",
+      "languagePair": "Eng-Skt",
+      "reason": "reverse English-headword dictionary"
+    },
+    {
+      "code": "mwe",
+      "label": "MWE",
+      "languagePair": "Eng-Skt",
+      "reason": "reverse English-headword dictionary"
+    }
+  ]
+}

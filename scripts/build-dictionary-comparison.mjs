@@ -11,9 +11,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
+import { iterateHeadwords } from "./lib/dict-headwords.mjs";
 import { iterateDict, dictExists, genderForDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { presentDicts, lemmaConfidence, genderConflict } from "./lib/dict-align.mjs";
+import { buildBroadHeadwordDictionaries, coreComparisonDictionaries } from "./lib/dict-scope.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
@@ -31,6 +33,16 @@ const ORDER = DICTS.map(d => d.code);
 const TAGGED = DICTS.filter(d => d.grammarReliable).map(d => d.code);
 const HOMONYM_DICTS = DICTS.filter(d => d.homonymMarked).map(d => d.code);
 const DICT_INDEX = Object.fromEntries(ORDER.map((code, index) => [code, index]));
+const COVERAGE_SCOPES = {
+  broadHeadword: {
+    label: "Broad 40",
+    dictionaries: buildBroadHeadwordDictionaries()
+  },
+  coreComparison: {
+    label: "Core 7",
+    dictionaries: coreComparisonDictionaries()
+  }
+};
 
 function envelope(extra, { assumptions = [], warnings = [] }) {
   return {
@@ -47,6 +59,146 @@ function envelope(extra, { assumptions = [], warnings = [] }) {
 function writeJson(name, payload) {
   fs.writeFileSync(path.join(OUT_DIR, name), `${JSON.stringify(payload, null, 2)}\n`);
   return path.relative(process.cwd(), path.join(OUT_DIR, name));
+}
+
+function neutralEnvelope(extra, { assumptions = [], warnings = [] } = {}) {
+  return {
+    schemaVersion: SCHEMA_VERSION,
+    generatedAt: new Date().toISOString(),
+    sourceRoot: "../csl-orig/v02",
+    assumptions,
+    warnings,
+    ...extra
+  };
+}
+
+function coverageLabelMap(dictionaries) {
+  return Object.fromEntries(dictionaries.map(d => [d.code, d.label]));
+}
+
+function emptyCounts(dictionaries) {
+  return Object.fromEntries(dictionaries.map(d => [d.code, 0]));
+}
+
+function sourcePointer(dict, line) {
+  return dict?.sourceLinkMode === "github" && line ? `${HREF_BASE}/${dict.code}/${dict.code}.txt#L${line}` : null;
+}
+
+function buildCoverageScope(scope, warnings) {
+  const { label, dictionaries } = scope;
+  const order = dictionaries.map(d => d.code);
+  const labels = coverageLabelMap(dictionaries);
+  const index = new Map();
+  const recordsByCode = emptyCounts(dictionaries);
+  const lemmasByCode = emptyCounts(dictionaries);
+
+  for (const dict of dictionaries) {
+    if (!dictExists(dict.code)) {
+      warnings.push(`${label}: missing source for ${dict.code}; skipped.`);
+      continue;
+    }
+    const lemmaSet = new Set();
+    let records = 0;
+    for (const rec of iterateHeadwords(dict)) {
+      if (!rec.k1) continue;
+      const { normalized } = normalizeLemma(rec.k1);
+      if (!normalized) continue;
+      records += 1;
+      lemmaSet.add(normalized);
+
+      let entry = index.get(normalized);
+      if (!entry) {
+        entry = {};
+        index.set(normalized, entry);
+      }
+      let slot = entry[dict.code];
+      if (!slot) {
+        slot = { records: 0, raws: new Set(), example: null };
+        entry[dict.code] = slot;
+      }
+      slot.records += 1;
+      slot.raws.add(rec.k1.trim());
+      if (!slot.example) {
+        slot.example = { k1: rec.k1, line: rec.startLine, href: sourcePointer(dict, rec.startLine) };
+      }
+    }
+    recordsByCode[dict.code] = records;
+    lemmasByCode[dict.code] = lemmaSet.size;
+    console.log(`  ${label} ${dict.code}: ${records.toLocaleString()} headword records, ${lemmaSet.size.toLocaleString()} distinct lemmas`);
+  }
+
+  const pair = {};
+  for (let i = 0; i < order.length; i++)
+    for (let j = i + 1; j < order.length; j++) pair[`${order[i]}|${order[j]}`] = 0;
+
+  const comboCounts = new Map();
+  const coverageHistogram = {};
+  const uniqueByCode = Object.fromEntries(order.map(c => [c, { count: 0, examples: [] }]));
+  const intersectionAll = { count: 0, examples: [] };
+
+  for (const [normalized, entry] of index) {
+    const codes = presentDicts(entry, order);
+    const k = codes.length;
+    coverageHistogram[k] = (coverageHistogram[k] || 0) + 1;
+    const comboKey = codes.join("+");
+    comboCounts.set(comboKey, (comboCounts.get(comboKey) || 0) + 1);
+
+    if (k === 1) {
+      const u = uniqueByCode[codes[0]];
+      u.count += 1;
+      if (u.examples.length < SAMPLE) u.examples.push({ lemma: normalized, href: entry[codes[0]].example.href });
+    }
+
+    if (k === order.length) {
+      intersectionAll.count += 1;
+      if (intersectionAll.examples.length < SAMPLE) intersectionAll.examples.push({ lemma: normalized });
+    }
+
+    for (let i = 0; i < codes.length; i++)
+      for (let j = i + 1; j < codes.length; j++) pair[`${codes[i]}|${codes[j]}`] += 1;
+  }
+
+  const topCombinations = [...comboCounts.entries()]
+    .map(([key, count]) => ({ dicts: key.split("+").map(c => labels[c]), size: key.split("+").length, count }))
+    .sort((a, b) => b.count - a.count);
+
+  const pairwise = [];
+  for (let i = 0; i < order.length; i++) {
+    for (let j = i + 1; j < order.length; j++) {
+      const a = order[i], b = order[j];
+      const shared = pair[`${a}|${b}`];
+      const union = lemmasByCode[a] + lemmasByCode[b] - shared;
+      pairwise.push({
+        a: labels[a],
+        b: labels[b],
+        aCode: a,
+        bCode: b,
+        shared,
+        jaccard: union ? Number((shared / union).toFixed(4)) : 0
+      });
+    }
+  }
+  pairwise.sort((x, y) => y.shared - x.shared);
+
+  return {
+    scope: scope.id,
+    scopeLabel: label,
+    dictionaryCount: dictionaries.length,
+    dictionaries,
+    distinctLemmas: index.size,
+    recordsByDict: Object.fromEntries(order.map(c => [labels[c], recordsByCode[c]])),
+    lemmasByDict: Object.fromEntries(order.map(c => [labels[c], lemmasByCode[c]])),
+    coverageHistogram,
+    topCombinations: topCombinations.slice(0, 60),
+    unique: Object.fromEntries(order.map(c => [labels[c], uniqueByCode[c]])),
+    intersectionAll,
+    pairwise
+  };
+}
+
+function buildCoverageScopes(warnings) {
+  console.log("Indexing broad/core coverage scopes...");
+  return Object.fromEntries(Object.entries(COVERAGE_SCOPES).map(([id, scope]) => [id, buildCoverageScope({ ...scope, id }, warnings)]));
 }
 
 function buildIndex(warnings) {
@@ -97,18 +249,11 @@ function buildIndex(warnings) {
 function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const warnings = [];
-  console.log("Indexing dictionaries...");
-  const { index, perDictRecords, perDictLemmas } = buildIndex(warnings);
+  const coverageScopes = buildCoverageScopes(warnings);
+  console.log("Indexing core deep-analysis dictionaries...");
+  const { index, perDictRecords } = buildIndex(warnings);
 
   // Accumulators, single pass over the index.
-  const pair = {}; // "a|b" -> shared count
-  for (let i = 0; i < ORDER.length; i++)
-    for (let j = i + 1; j < ORDER.length; j++) pair[`${ORDER[i]}|${ORDER[j]}`] = 0;
-
-  const comboCounts = new Map(); // dict-set key -> count
-  const coverageHistogram = {}; // number-of-dicts -> count
-  const uniqueByDict = Object.fromEntries(ORDER.map(c => [c, { count: 0, examples: [] }]));
-  const intersectionAll = { count: 0, examples: [] };
   const confidenceDist = { high: 0, medium: 0 };
   const conflicts = [];
   let conflictCount = 0;
@@ -121,25 +266,6 @@ function main() {
   for (const [normalized, entry] of index) {
     const codes = presentDicts(entry, ORDER);
     const k = codes.length;
-    coverageHistogram[k] = (coverageHistogram[k] || 0) + 1;
-
-    const comboKey = codes.join("+");
-    comboCounts.set(comboKey, (comboCounts.get(comboKey) || 0) + 1);
-
-    if (k === 1) {
-      const u = uniqueByDict[codes[0]];
-      u.count += 1;
-      if (u.examples.length < SAMPLE) u.examples.push({ lemma: normalized, href: entry[codes[0]].example.href });
-    }
-
-    if (k === ORDER.length) {
-      intersectionAll.count += 1;
-      if (intersectionAll.examples.length < SAMPLE) intersectionAll.examples.push({ lemma: normalized });
-    }
-
-    // pairwise
-    for (let i = 0; i < codes.length; i++)
-      for (let j = i + 1; j < codes.length; j++) pair[`${codes[i]}|${codes[j]}`] += 1;
 
     // confidence (multi-dict lemmas only)
     if (k >= 2) {
@@ -230,67 +356,159 @@ function main() {
   const distinctLemmas = index.size;
   const written = [];
 
-  // 1. Coverage matrix (UpSet-style combination summary).
-  const combos = [...comboCounts.entries()]
-    .map(([key, count]) => ({ dicts: key.split("+").map(c => DICT_LABELS[c]), size: key.split("+").length, count }))
-    .sort((a, b) => b.count - a.count);
+  // 1-4. Neutral headword coverage outputs. Top-level fields mirror the broad
+  // default, while `scopes.coreComparison` preserves the legacy Core 7 view.
+  const defaultScope = "broadHeadword";
+  const broadCoverage = coverageScopes[defaultScope];
+  const coreCoverage = coverageScopes.coreComparison;
   written.push(
     writeJson(
       "coverage-matrix.json",
-      envelope(
+      neutralEnvelope(
         {
-          distinctLemmas,
-          recordsByDict: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], perDictRecords[c]])),
-          lemmasByDict: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], perDictLemmas[c]])),
-          coverageHistogram,
-          topCombinations: combos.slice(0, 60)
+          defaultScope,
+          scopeLabels: { broadHeadword: broadCoverage.scopeLabel, coreComparison: coreCoverage.scopeLabel },
+          distinctLemmas: broadCoverage.distinctLemmas,
+          dictionaryCount: broadCoverage.dictionaryCount,
+          dictionaries: broadCoverage.dictionaries,
+          recordsByDict: broadCoverage.recordsByDict,
+          lemmasByDict: broadCoverage.lemmasByDict,
+          coverageHistogram: broadCoverage.coverageHistogram,
+          topCombinations: broadCoverage.topCombinations,
+          scopes: {
+            broadHeadword: {
+              scope: broadCoverage.scope,
+              scopeLabel: broadCoverage.scopeLabel,
+              dictionaryCount: broadCoverage.dictionaryCount,
+              dictionaries: broadCoverage.dictionaries,
+              distinctLemmas: broadCoverage.distinctLemmas,
+              recordsByDict: broadCoverage.recordsByDict,
+              lemmasByDict: broadCoverage.lemmasByDict,
+              coverageHistogram: broadCoverage.coverageHistogram,
+              topCombinations: broadCoverage.topCombinations
+            },
+            coreComparison: {
+              scope: coreCoverage.scope,
+              scopeLabel: coreCoverage.scopeLabel,
+              dictionaryCount: coreCoverage.dictionaryCount,
+              dictionaries: coreCoverage.dictionaries,
+              distinctLemmas: coreCoverage.distinctLemmas,
+              recordsByDict: coreCoverage.recordsByDict,
+              lemmasByDict: coreCoverage.lemmasByDict,
+              coverageHistogram: coreCoverage.coverageHistogram,
+              topCombinations: coreCoverage.topCombinations
+            }
+          }
         },
         {
           assumptions: [
-            "Lemmas are grouped by normalized SLP1 <k1> (accents and trailing homonym digits stripped).",
-            "Counts are distinct normalized lemmas; homonym record counts are preserved per dictionary but not split here."
-          ]
+            "Lemmas are grouped by normalized SLP1 headword forms; kosha synonym dictionaries use validated <syns> headword extraction.",
+            "Broad coverage is headword coverage only. Deep analyses use validated feature adapters and do not treat missing markup as zero evidence."
+          ],
+          warnings
         }
       )
     )
   );
 
-  // 2. Pairwise overlap (+ jaccard).
-  const pairwise = [];
-  for (let i = 0; i < ORDER.length; i++) {
-    for (let j = i + 1; j < ORDER.length; j++) {
-      const a = ORDER[i], b = ORDER[j];
-      const shared = pair[`${a}|${b}`];
-      const union = perDictLemmas[a] + perDictLemmas[b] - shared;
-      pairwise.push({
-        a: DICT_LABELS[a],
-        b: DICT_LABELS[b],
-        shared,
-        jaccard: union ? Number((shared / union).toFixed(4)) : 0
-      });
-    }
-  }
-  written.push(
-    writeJson("pairwise-overlap.json", envelope({ pairwise: pairwise.sort((x, y) => y.shared - x.shared) }, {}))
-  );
-
-  // 3. All-dictionary intersection.
   written.push(
     writeJson(
-      "all-intersection.json",
-      envelope({ count: intersectionAll.count, examples: intersectionAll.examples }, {
-        assumptions: [`Lemmas present in all ${ORDER.length} target dictionaries.`]
-      })
+      "pairwise-overlap.json",
+      neutralEnvelope(
+        {
+          defaultScope,
+          scopeLabels: { broadHeadword: broadCoverage.scopeLabel, coreComparison: coreCoverage.scopeLabel },
+          dictionaries: broadCoverage.dictionaries,
+          pairwise: broadCoverage.pairwise,
+          scopes: {
+            broadHeadword: {
+              scope: broadCoverage.scope,
+              scopeLabel: broadCoverage.scopeLabel,
+              dictionaryCount: broadCoverage.dictionaryCount,
+              dictionaries: broadCoverage.dictionaries,
+              pairwise: broadCoverage.pairwise
+            },
+            coreComparison: {
+              scope: coreCoverage.scope,
+              scopeLabel: coreCoverage.scopeLabel,
+              dictionaryCount: coreCoverage.dictionaryCount,
+              dictionaries: coreCoverage.dictionaries,
+              pairwise: coreCoverage.pairwise
+            }
+          }
+        },
+        {
+          assumptions: ["Jaccard = shared normalized headwords / union of normalized headwords."],
+          warnings
+        }
+      )
     )
   );
 
-  // 4. Dictionary-unique vocabulary.
+  written.push(
+    writeJson(
+      "all-intersection.json",
+      neutralEnvelope(
+        {
+          defaultScope,
+          scopeLabels: { broadHeadword: broadCoverage.scopeLabel, coreComparison: coreCoverage.scopeLabel },
+          count: broadCoverage.intersectionAll.count,
+          examples: broadCoverage.intersectionAll.examples,
+          scopes: {
+            broadHeadword: {
+              scope: broadCoverage.scope,
+              scopeLabel: broadCoverage.scopeLabel,
+              dictionaryCount: broadCoverage.dictionaryCount,
+              count: broadCoverage.intersectionAll.count,
+              examples: broadCoverage.intersectionAll.examples
+            },
+            coreComparison: {
+              scope: coreCoverage.scope,
+              scopeLabel: coreCoverage.scopeLabel,
+              dictionaryCount: coreCoverage.dictionaryCount,
+              count: coreCoverage.intersectionAll.count,
+              examples: coreCoverage.intersectionAll.examples
+            }
+          }
+        },
+        {
+          assumptions: [
+            "Broad all-dictionary intersection may be zero because the 40-dictionary set includes specialized and genre-specific dictionaries.",
+            "Core 7 intersection remains the legacy non-empty comparison invariant."
+          ],
+          warnings
+        }
+      )
+    )
+  );
+
   written.push(
     writeJson(
       "dictionary-unique.json",
-      envelope(
-        { unique: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], uniqueByDict[c]])) },
-        { assumptions: ["A lemma is 'unique' when it appears in exactly one target dictionary (after normalization)."] }
+      neutralEnvelope(
+        {
+          defaultScope,
+          scopeLabels: { broadHeadword: broadCoverage.scopeLabel, coreComparison: coreCoverage.scopeLabel },
+          unique: broadCoverage.unique,
+          scopes: {
+            broadHeadword: {
+              scope: broadCoverage.scope,
+              scopeLabel: broadCoverage.scopeLabel,
+              dictionaryCount: broadCoverage.dictionaryCount,
+              unique: broadCoverage.unique
+            },
+            coreComparison: {
+              scope: coreCoverage.scope,
+              scopeLabel: coreCoverage.scopeLabel,
+              dictionaryCount: coreCoverage.dictionaryCount,
+              unique: coreCoverage.unique
+            }
+          }
+        },
+        {
+          assumptions: ["A lemma is unique when it appears in exactly one dictionary within the selected scope."],
+          warnings
+        }
       )
     )
   );
@@ -415,7 +633,13 @@ function main() {
     dossierEntries: dossier.length,
     lookupEntries: lookup.length,
     recordsByDict: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], perDictRecords[c]])),
-    intersectionAll: intersectionAll.count,
+    coverageScopes: Object.fromEntries(Object.entries(coverageScopes).map(([scope, data]) => [scope, {
+      dictionaryCount: data.dictionaryCount,
+      distinctLemmas: data.distinctLemmas,
+      intersectionAll: data.intersectionAll.count,
+      pairwiseRows: data.pairwise.length
+    }])),
+    intersectionAll: coverageScopes.coreComparison.intersectionAll.count,
     genderConflicts: conflictCount,
     homonymSplits: homonymSplitCount,
     warnings
