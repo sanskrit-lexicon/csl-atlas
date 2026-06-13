@@ -5,6 +5,8 @@
   "type": "object",
   "properties": {
     "schemaVersion": { "type": "string" },
+    "license": { "type": "string", "description": "SPDX licence identifier for this dataset; see scripts/lib/dataset-meta.mjs" },
+    "licenseUrl": { "type": "string" },
     "generatedAt": { "type": "string" },
     "sourcePath": { "type": "string" },
     "recordCount": { "type": "integer" },
@@ -73,5 +75,5 @@
       }
     }
   },
-  "required": ["items"]
+  "required": ["license", "items"]
 }
