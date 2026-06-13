@@ -33,64 +33,57 @@ Concretely, every integration follows the **two-step pattern**:
 
 ## Already wired
 
-| Capability | Source repo | Import step | Consumer |
-|---|---|---|---|
-| **Gender cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`scripts/import-dharmamitra-morphology.py`](../scripts/import-dharmamitra-morphology.py) → `src/data/external/dharmamitra-morphology.json` | [`scripts/build-gender-model-crosscheck.mjs`](../scripts/build-gender-model-crosscheck.mjs) → `pos-gender-model-crosscheck` review queue |
+Each is isolated in its own PR off `main` and composes with the others on merge. (File links
+are relative to the merged-to-`main` layout; until all three merge, the per-PR code lives on
+its feature branch — follow the PR link.)
 
-> **Prior art:** a chronology importer (`import-dharmamitra-chronology.mjs` →
-> `src/data/external/dharmamitra-chronology.json`, from [sanskrit-dating](https://github.com/dharmamitra/sanskrit-dating))
-> was prototyped earlier and established the two-step pattern, but is **not currently in the
-> tree**. Opportunity 1 below is the path to reinstating it.
+| Capability | Source repo | Import step | Consumer | PR |
+|---|---|---|---|---|
+| **Gender cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-morphology.py`](../scripts/import-dharmamitra-morphology.py) → `dharmamitra-morphology.json` | [`build-gender-model-crosscheck.mjs`](../scripts/build-gender-model-crosscheck.mjs) → `pos-gender-model-crosscheck` | [#89](https://github.com/sanskrit-lexicon/csl-atlas/pull/89) |
+| **Source-layer anchoring** | [sanskrit-dating](https://github.com/dharmamitra/sanskrit-dating) | [`import-dharmamitra-chronology.mjs`](../scripts/import-dharmamitra-chronology.mjs) → `dharmamitra-chronology.json` | [`build-source-layer-anchoring-review.mjs`](../scripts/build-source-layer-anchoring-review.mjs) → `source-layer-anchoring` | [#90](https://github.com/sanskrit-lexicon/csl-atlas/pull/90) |
+| **Compound-depth cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-segmentation.py`](../scripts/import-dharmamitra-segmentation.py) → `dharmamitra-segmentation.json` | [`build-compound-depth-crosscheck.mjs`](../scripts/build-compound-depth-crosscheck.mjs) → `compound-depth-crosscheck` | [#91](https://github.com/sanskrit-lexicon/csl-atlas/pull/91) |
 
-The gender cross-check adds an **independent third vote** to the existing cross-dictionary
-gender-conflict queue: for each conflicted headword, the ByT5 morphosyntax model's predicted
-gender is compared against each dictionary's asserted gender (`model-favors` / `model-diverges`
-/ `model-concurs` / `model-pending`). It runs `chronbmm/sanskrit5-multitask` either via the
-PyPI `dharmamitra-sanskrit-grammar` remote API or a pinned local HF model, with
+**Gender cross-check** ([#89](https://github.com/sanskrit-lexicon/csl-atlas/pull/89)) — adds an
+**independent third vote** to the existing cross-dictionary gender-conflict queue: for each
+conflicted headword, the ByT5 morphosyntax model's predicted gender is compared against each
+dictionary's asserted gender (`model-favors` / `model-diverges` / `model-concurs` /
+`model-pending`). It runs `chronbmm/sanskrit5-multitask` either via the PyPI
+`dharmamitra-sanskrit-grammar` remote API or a pinned local HF model, with
 [`scripts/sanskrit_tags.tsv`](../scripts/sanskrit_tags.tsv) vendored for fully offline tag
-expansion. (Currently isolated in its own PR off `main`.)
+expansion.
+
+**Source-layer anchoring** ([#90](https://github.com/sanskrit-lexicon/csl-atlas/pull/90)) —
+reinstates the chronology importer (a real snapshot of **1,618 dated works, 1,283 anchors**)
+and calibrates the atlas's coarse MW source layers against Dharmamitra date bands via a small
+explicit layer↔era crosswalk, emitting a per-layer band (e.g. vedic ≈1125–567 BCE …
+lexicographic ≈1200–1892 CE) as review evidence. The only step with **real, non-pending data**
+today — its input is an HTTP TSV, not a model run.
+
+**Compound-depth cross-check** ([#91](https://github.com/sanskrit-lexicon/csl-atlas/pull/91)) —
+pits the markup-based `compoundSegmentCount` against ByT5 `unsandhied` segmentation over deep
+compounds (markup depth ≥ 4: **3,496 distinct surfaces** of 182k total), flagging markup that
+over- or under-splits — e.g. counting the privative `a-` or suffixes `-tva`/`-tā` as members.
 
 ---
 
 ## Opportunities (not yet built)
 
 Ordered roughly by value-to-effort. Each maps a Dharmamitra asset to a *specific* atlas or
-Cologne structure, with the caveat that matters.
+Cologne structure, with the caveat that matters. (Source-layer anchoring and compound-depth
+validation, formerly the top two here, are now implemented — see Already wired.)
 
-### 1. Anchor source layers with `sanskrit-dating` — highest value
-
-**Maps to:** the MW source-layer seed map [`src/data/mw-source-layers.json`](../src/data/mw-source-layers.json)
-and its `unknown` review queue (`build-source-layer-review.mjs`).
-
-The atlas currently buckets MW citation sources into coarse diachronic layers from a
-hand-seeded map; everything unmapped falls to `unknown`. [sanskrit-dating](https://github.com/dharmamitra/sanskrit-dating)
-produces `dated_gibbs_full.tsv` — Gibbs-sampled posterior dates for ~1,600 texts, anchored on
-externally-dated works, with archive.org links. Two steps: (a) reinstate the chronology
-`import-*` step (see Prior art above) to snapshot the TSV into `src/data/external/`, then
-(b) a `build-source-layer-anchoring-review.mjs` that joins it to the `unknown` sources by
-siglum and proposes anchored dates as a review queue.
-
-**Caveat (theirs, and it's the right one):** a dictionary citation mixes *authorial*
-chronology (when the cited text was composed) with *editorial* compilation (when MW wrote the
-entry). Keep those two axes separate; the dates anchor the *cited source*, not the entry.
-
-### 2. Validate compound-segment depth with ByT5 `unsandhied`
-
-**Maps to:** the MW compound-segment-depth metric in
-[`scripts/lib/mw-parser.mjs`](../scripts/lib/mw-parser.mjs) / `mw-classifiers.mjs`.
-
-The atlas splits compounds heuristically. Running `mode="unsandhied"` (segmentation) over the
-same `<k2>` bases gives the model's segment count; disagreements become a review queue —
-exactly the pattern of the gender cross-check, reusing the same importer with a different mode.
-
-### 3. Cross-check lemma normalization with ByT5 `lemma`
+### 1. Cross-check lemma normalization with ByT5 `lemma` — next build
 
 **Maps to:** [`src/lib/lookup-normalize.js`](../src/lib/lookup-normalize.js).
 
 Run `mode="lemma"` over inflected forms found in citations to validate the deterministic
 SLP1 normalizer against an independent lemmatizer. Flag disagreements; do not auto-apply.
+This is the natural next step: it reuses the ByT5 importer pattern already written twice (gender
+morphosyntax, compound segmentation). Once those land, **factor the shared SLP1↔IAST table and
+local HF-inference skeleton into a `scripts/lib/` module** so this importer reuses them instead
+of duplicating a third copy.
 
-### 4. Separate German metalanguage in PWG/PWK with `detect-language`
+### 2. Separate German metalanguage in PWG/PWK with `detect-language`
 
 **Maps to:** the Petersburg parsers ([`scripts/lib/dict-parser.mjs`](../scripts/lib/dict-parser.mjs)
 for `pwg`/`pw`).
@@ -101,7 +94,7 @@ SentencePiece classifier (English / Sanskrit / IAST); retrained or extended for 
 would cleanly separate metalanguage tokens from object-language tokens during parsing —
 improving citation and gender extraction quality for the two densest dictionaries.
 
-### 5. Automate DTB link-targets with `mitra-aligner`
+### 3. Automate DTB link-targets with `mitra-aligner`
 
 **Maps to:** the org-wide **Dictionary-to-Book** milestone (`link-target` / `link-splitting`),
 i.e. linking `<ls>` abbreviations to scanned source pages.
@@ -111,7 +104,7 @@ Dharmamitra's archive.org scan metadata is a citation→passage alignment engine
 automated half of the link-target work. This is a Cologne-wide opportunity, not atlas-specific;
 outputs would feed the `csl-corrections` audit-trail workflow, reviewed before commit.
 
-### 6. Ship a StarDict / GoldenDict distribution
+### 4. Ship a StarDict / GoldenDict distribution
 
 **Lesson from:** [dharmamitra-stardict-dictionaries](https://github.com/dharmamitra/dharmamitra-stardict-dictionaries).
 
@@ -121,12 +114,12 @@ cheap, high-reach distribution format the CDSL could also emit from existing dat
 caution-labeling validates our own [evidence-labels](EVIDENCE_LABELS.md) discipline — provenance
 honesty is the norm in this space.
 
-### 7. Benchmark with `dharmamitra-leaderboard`
+### 5. Benchmark with `dharmamitra-leaderboard`
 
 A benchmarking harness that could evaluate dictionary-lookup / segmentation quality against a
 shared baseline, if we ever expose a lookup or segmentation service.
 
-### 8. Read the agentic starter
+### 6. Read the agentic starter
 
 [dharmamitra-claude-code-agent](https://github.com/dharmamitra/dharmamitra-claude-code-agent)
 ("starter pack for agentic translation") is worth reading given this repo is already worked
