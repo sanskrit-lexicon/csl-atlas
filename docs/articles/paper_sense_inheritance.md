@@ -43,12 +43,16 @@ descendants **copy or condense; they do not expand**: gloss overlap of 0.906 on 
 Wilson → Śabda-Sāgara edge (near-verbatim copy, drift 0), drastic condensation on
 Wilson → Yates (9 → 1 senses per lemma), contraction on Apte 1890 → 1957 (drift
 −3.07) — no measured edge adds senses systematically. A reviewed ten-row parser
-checkpoint and a promotion experiment ground the method: two reviewed window rules
-reproduce archived sense counts exactly without being tuned to them, and the same
-experiment shows that in the indigenous *Śabdakalpadruma* the sense list and the
-authority citation are **structurally inseparable** — the synonym run *ends in* the
-citation (*ity Amaraḥ*) — so the European sense/apparatus distinction cannot be
-imposed on the *kośa* tradition without loss.
+checkpoint and a promotion experiment ground the method: some reviewed windows
+reproduce the legacy static sense counts exactly without being tuned to them, while
+in every case where a window and the legacy count diverge sharply, inspection of the
+printed dictionary shows the **legacy count to be the artifact** — Petersburg's
+`<div>` nesting counted as senses, Benfey's root truncated mid-derivative — and the
+source-faithful window verifiable against the page. The same experiment shows that in
+the indigenous *Śabdakalpadruma* the sense list and the authority citation are
+**structurally inseparable** — the synonym run *ends in* the citation (*ity Amaraḥ*) —
+so the European sense/apparatus distinction cannot be imposed on the *kośa* tradition
+without loss.
 
 **Keywords:** historical lexicography; Sanskrit; sense granularity; dictionary
 inheritance; sense survival; polysemy; citation apparatus; microstructure; digital
@@ -162,21 +166,62 @@ context ("go abroad" → *prakāśatāṃ gam*), not sense equivalents.
 ### 3.3 The promotion experiment
 
 The promoted rules were then applied to the source-backed anchor rows as an
-**additive experiment** — non-window rows retained as labelled side evidence, archive
-counts used as a comparison signal and never as an optimisation target. Two results
-validate the method and one exposes its limit:
+**additive experiment** — non-window rows retained as labelled side evidence, the
+archived sense counts (the first-pass splitter's static output, here called the
+*legacy counts*) used only as a comparison signal, never as an optimisation target.
+The outcomes fall into three classes.
 
-- The Benfey *rama* rule (exact-headword record, lookup bundle split) reproduces the
-  archived sense count **exactly** (7 = 7), as does the *Vācaspatya dharma*
-  definition-unit window (9 = 9) — neither was tuned to do so.
-- The parity control (Apte *gam*, 16 = 16) held unchanged.
-- In **SKD the experiment under-counts by design**: the synonym run for *dharma*
-  (*puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ*) **ends in** *ity Amaraḥ*. The unit is
-  simultaneously the sense list and the citation. A classifier that routes
-  authority-marked units out of the sense window therefore removes the senses
-  themselves. The European sense/apparatus distinction is not wrong for SKD — it is
-  **inapplicable**: in the *kośa* register, attestation and enumeration are one
-  construction. We return to this in §7.
+**Exact reproduction, untuned.** Two windows recover the legacy sense count exactly
+without being fitted to it: the Benfey *rama* rule (exact-headword record plus
+lookup-bundle split) gives 7 = 7, and the *Vācaspatya dharma* definition-unit window
+gives 9 = 9. The positive control — Apte *gam*, where source and legacy count already
+agree — held at 16 = 16.
+
+**The legacy count is the artifact.** In the high-drift cases, where the
+source-faithful window and the legacy count diverge sharply, inspection of the
+printed dictionary vindicates the window, not the count (Table 2). For the Petersburg
+*gam* and *dharma*, the `<div n>` attribute that the first-pass splitter counted is a
+*depth* marker, not a sense number; Böhtlingk prints his own enumeration in the entry
+text ("— 1) … — 7)" for ¹*gam*, "1) … — 11)" for *dharma*), giving seven and eleven
+top-level senses — each directly checkable against the page. The legacy 30 and 5 had
+counted nesting depth and preverb material, or under-read the enumeration, not the
+senses. For the Benfey *gam*, the single record nests forty-two numbered runs: the
+bare finite root (nine senses), its primary derivatives — the participles
+*gata* / *gamya* and the causative *gamaya* (twenty-four) — and thirty-eight
+preverb-combined lexemes, each headed "-- With *preverb*" (one hundred thirty-eight).
+The legacy 23 is the root plus the first participle alone, an arbitrary cut stopping
+in the middle of the derivative block. In every high-drift row the legacy static
+count, not the source window, proves to be the artifact, and the window is faithful
+to the printed text in a way the count it "diverges" from is not.
+
+**The register limit.** One high-drift case is not a counting error but a property of
+the source. In *Śabdakalpadruma* the experiment under-counts *by design*: the synonym
+run for *dharma* (*puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ*) **ends in** *ity Amaraḥ*, so the
+unit is simultaneously the sense list and its citation. A classifier that routes
+authority-marked units out of the sense window therefore removes the senses
+themselves. The European sense/apparatus distinction is not wrong for SKD — it is
+**inapplicable**: in the *kośa* register, attestation and enumeration are one
+construction. We return to this in §7.
+
+**Table 2. Source-faithful windows versus the legacy static counts on the high-drift
+checkpoint rows.**
+
+| Row | Source window | Legacy count | What the legacy count actually was |
+|---|---:|---:|---|
+| PWG ¹*gam* | 7 | 30 | `<div>` nesting depth + preverb blocks |
+| PWG *dharma* | 11 | 5 | under-read enumeration ("3 divisions") |
+| BEN *gam* | 9 | 23 | root + first participle (arbitrary cut) |
+| SKD *dharma* | 1\* | 4 | register limit: sense and citation are one *iti*-unit (§7) |
+
+*\*The SKD figure is the definition-unit residue once authority-marked units are
+removed; it is an under-count by construction, not a legacy-count error.*
+
+This reframes the experiment's contribution. The method does not merely *reproduce*
+the legacy sense counts; where the two disagree, it is **demonstrably more faithful to
+the printed dictionary** than the counts it is checked against — and the disagreement
+is itself diagnostic of how each dictionary marks (or fuses) its senses. That is the
+same lesson H1 draws at the corpus scale (§4): a sense count is only meaningful
+relative to a dictionary's own marking convention.
 
 ## 4. H1: granularity is a family trait, not a function of time
 
@@ -215,7 +260,7 @@ quantitative result for any dictionary family.
 
 ## 6. H3: descendants copy or condense — none expand
 
-**Table 2. Inheritance edges (28-noun panel).**
+**Table 3. Inheritance edges (28-noun panel).**
 
 | Edge | Mean senses (anc → desc) | Drift | Gloss overlap | Pattern |
 |---|---|---:|---:|---|
