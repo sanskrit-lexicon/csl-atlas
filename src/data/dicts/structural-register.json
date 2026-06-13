@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-04T19:55:29.440Z",
+  "generatedAt": "2026-06-13T08:14:35.244Z",
   "claim": "H6: structural register predicts dictionary family.",
   "evidenceLabel": "derived",
   "reviewStatus": "machine-reviewed",
@@ -205,7 +205,7 @@
       "fitScore": 50,
       "dominantLayer": "preverb",
       "subentryPer1k": 0.67,
-      "xrefEdges": 0,
+      "xrefEdges": 196,
       "rootEntries": 1,
       "familyLabel": "western-tagged",
       "warnings": []
@@ -224,7 +224,7 @@
       "fitScore": 49,
       "dominantLayer": "subentry",
       "subentryPer1k": 50.86,
-      "xrefEdges": 0,
+      "xrefEdges": 446,
       "rootEntries": 0,
       "familyLabel": "western-tagged",
       "warnings": []
@@ -319,7 +319,7 @@
       "fitScore": 44,
       "dominantLayer": "subentry",
       "subentryPer1k": 68.45,
-      "xrefEdges": 0,
+      "xrefEdges": 609,
       "rootEntries": 0,
       "familyLabel": "western-tagged",
       "warnings": []
@@ -787,13 +787,13 @@
       "citationRegisterMode": "low",
       "fitBand": "entry-shell fit",
       "fitScore": 30,
-      "dominantLayer": "",
+      "dominantLayer": "root",
       "subentryPer1k": 0,
       "xrefEdges": 0,
-      "rootEntries": 0,
+      "rootEntries": 1643,
       "familyLabel": "western-tagged",
       "warnings": [
-        "No M1-M5 microstructure layer detected; this may be a convention gap."
+        "Grammar may live in indigenous root/prose conventions."
       ]
     },
     {
