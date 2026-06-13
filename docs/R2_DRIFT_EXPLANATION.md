@@ -101,22 +101,30 @@ Status: generated drift explanation/control packet in post-decision mode. It exp
 | `source-only-expansion` | 1 | `source-gap-controls` |
 | `source-record-exact-target` | 1 | `marker-run-scope` |
 
+## Counts By Disposition
+
+| Key | Rows |
+|---|---:|
+| `promote-parser-candidate` | 7 |
+| `retain-side-evidence` | 2 |
+| `control-only` | 1 |
+
 ## Checkpoint Rows With Recorded Decisions
 
-| Diagnostic ID | Packet | Drift class | Priority | Review status | Disposition | Accepted labels |
-|---|---|---|---|---|---|---|
-| `r2-drift:gam:pwg` | `div-source-scope` | `over-split-candidate` | `high` | `reviewed-ok` | `promote-parser-candidate` | `target-primary-series`, `same-headword-supplement`, `prefixed-or-derived-series`, `separate-homonym`, `candidate-sense-marker`, `supplement-marker` |
-| `r2-drift:dharma:pwg` | `div-source-scope` | `over-split-candidate` | `high` | `reviewed-ok` | `promote-parser-candidate` | `target-primary-series`, `same-headword-supplement`, `candidate-sense-marker`, `supplement-marker` |
-| `r2-drift:gam:ben` | `marker-run-scope` | `over-split-candidate` | `high` | `reviewed-ok` | `promote-parser-candidate` | `archive-prefix-runs`, `reset-run-expansion` |
-| `r2-drift:rama:ben` | `marker-run-scope` | `over-split-candidate` | `high` | `reviewed-ok` | `promote-parser-candidate` | `source-record-exact-target`, `lookup-bundle-split` |
-| `r2-drift:gam:ae` | `ae-reverse-bands` | `reverse-overmatch` | `high` | `reviewed-ok` | `retain-side-evidence` | `reverse-high-candidate`, `reverse-medium-review`, `reverse-low-context`, `reverse-tail-overmatch`, `phrase-or-collocation-match`, `broad-headword-overmatch` |
-| `r2-drift:dharma:ae` | `ae-reverse-bands` | `reverse-overmatch` | `high` | `reviewed-ok` | `promote-parser-candidate` | `reverse-high-candidate`, `direct-equivalent-candidate`, `reverse-medium-review`, `reverse-low-context`, `reverse-tail-overmatch`, `phrase-or-collocation-match`, `broad-headword-overmatch` |
-| `r2-drift:dharma:vcp` | `indigenous-iti-authority` | `indigenous-coarse-review` | `high` | `reviewed-ok` | `promote-parser-candidate` | `definition-iti-unit`, `authority-siglum-unit`, `commentarial-discussion-unit` |
-| `r2-drift:dharma:skd` | `indigenous-iti-authority` | `indigenous-coarse-review` | `high` | `reviewed-ok` | `promote-parser-candidate` | `source-record-exact-control`, `same-headword-record-split`, `definition-iti-unit`, `authority-quotation-unit` |
-| `r2-drift:iti:ap` | `source-gap-controls` | `under-split-or-source-gap` | `medium` | `reviewed-ok` | `retain-side-evidence` | `under-split-marker-gap`, `nested-marker-gap`, `preface-proxy-extra` |
-| `r2-drift:gam:ap` | `source-gap-controls` | `archive-parity` | `low` | `reviewed-ok` | `control-only` | `archive-parity-control`, `continuation-proxy-row` |
+| Diagnostic ID | Packet | Review status | Disposition | Reviewer | Reviewed | Accepted labels | Note |
+|---|---|---|---|---|---|---|---|
+| `r2-drift:gam:pwg` | `div-source-scope` | `reviewed-ok` | `promote-parser-candidate` | `gasyoun` | `2026-06-12` | `target-primary-series`, `same-headword-supplement`, `prefixed-or-derived-series`, `separate-homonym`, `candidate-sense-marker`, `supplement-marker` | Source lines verified in local csl-orig. L21814 (pc 2-0666) is the vol-2 primar… |
+| `r2-drift:dharma:pwg` | `div-source-scope` | `reviewed-ok` | `promote-parser-candidate` | `gasyoun` | `2026-06-12` | `target-primary-series`, `same-headword-supplement`, `candidate-sense-marker`, `supplement-marker` | Source lines verified. L36241 (pc 3-0882) is the vol-3 primary Da/rma article =… |
+| `r2-drift:gam:ben` | `marker-run-scope` | `reviewed-ok` | `promote-parser-candidate` | `gasyoun` | `2026-06-12` | `archive-prefix-runs`, `reset-run-expansion` | Single source record L4326 (172 rows). Benfey's numbered {@1.@} runs restart at… |
+| `r2-drift:rama:ben` | `marker-run-scope` | `reviewed-ok` | `promote-parser-candidate` | `gasyoun` | `2026-06-12` | `source-record-exact-target`, `lookup-bundle-split` | L11986 (rama, 'Pleasing; husband; Lakshmi') and L12079 (rAma, 'Beautiful; hero … |
+| `r2-drift:gam:ae` | `ae-reverse-bands` | `reviewed-ok` | `retain-side-evidence` | `gasyoun` | `2026-06-12` | `reverse-high-candidate`, `reverse-medium-review`, `reverse-low-context`, `reverse-tail-overmatch`, `phrase-or-collocation-match`, `broad-headword-overmatch` | Band vocabulary accepted, but every sampled reverse row for gam is a phrase/col… |
+| `r2-drift:dharma:ae` | `ae-reverse-bands` | `reviewed-ok` | `promote-parser-candidate` | `gasyoun` | `2026-06-12` | `reverse-high-candidate`, `direct-equivalent-candidate`, `reverse-medium-review`, `reverse-low-context`, `reverse-tail-overmatch`, `phrase-or-collocation-match`, `broad-headword-overmatch` | dharma is nominal: AE contains genuine direct equivalents alongside collocation… |
+| `r2-drift:dharma:vcp` | `indigenous-iti-authority` | `reviewed-ok` | `promote-parser-candidate` | `gasyoun` | `2026-06-12` | `definition-iti-unit`, `authority-siglum-unit`, `commentarial-discussion-unit` | Record L27030 verified: opens with derivation (Df--man, ardDarccA0), then the M… |
+| `r2-drift:dharma:skd` | `indigenous-iti-authority` | `reviewed-ok` | `promote-parser-candidate` | `gasyoun` | `2026-06-12` | `source-record-exact-control`, `same-headword-record-split`, `definition-iti-unit`, `authority-quotation-unit` | Records L17667 (puM klI) and L17668 (puM) verified: SKD genuinely splits Darmma… |
+| `r2-drift:iti:ap` | `source-gap-controls` | `reviewed-ok` | `retain-side-evidence` | `gasyoun` | `2026-06-12` | `under-split-marker-gap`, `nested-marker-gap`, `preface-proxy-extra` | Record L8130 verified: the long first sense block under one marker contains nes… |
+| `r2-drift:gam:ap` | `source-gap-controls` | `reviewed-ok` | `control-only` | `gasyoun` | `2026-06-12` | `archive-parity-control`, `continuation-proxy-row` | Exact archive parity (16=16) verified: L13831 is the main gam article; L13731.0… |
 
-10 of 10 checkpoint rows record `reviewer`, `reviewedAt`, a review note, and a `reviewedValue` with accepted labels and a parser disposition.
+10 of 10 checkpoint rows record `reviewer`, `reviewedAt`, a review note, and a `reviewedValue` with accepted labels and a parser disposition. Notes are truncated here; full text lives in `src/data/review/r2-checkpoint-review.json`.
 
 ## Packet Explanation Roles
 
@@ -163,8 +171,8 @@ Status: generated drift explanation/control packet in post-decision mode. It exp
 ## Limitations
 
 - This artifact mirrors the recorded human checkpoint decisions; it does not itself promote parser behavior.
-- Proposed parser labels explain drift classes and review scope; the accepted subset for each checkpoint row lives in reviewedValue.acceptedParserLabels.
-- 10 of 10 checkpoint rows carry complete human decisions; 0 remain needs-review with empty human fields.
-- Parser promotion is gated by each checkpoint row's recorded parserDisposition and stays scoped to the documented promotion experiment.
+- Proposed parser labels explain drift classes and review scope; the accepted subset for each checkpoint row lives in `reviewedValue.acceptedParserLabels`.
+- 10 of 10 checkpoint rows carry complete human decisions; 0 remain `needs-review` with empty human fields.
+- Parser promotion is gated by each checkpoint row's recorded `parserDisposition` and stays scoped to the documented promotion experiment.
 - No R2 splitter behavior, source-anchor generation, H5 review rows, public R2 pages, backend, runtime LLM, corpus, DCS, or standards work is changed.
 

@@ -557,21 +557,21 @@ test("R2 drift explanation generator rejects incomplete or out-of-vocabulary che
   outOfVocab.items[0].reviewedValue.acceptedParserLabels = ["not-a-proposed-label"];
   assert.throws(
     () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, outOfVocab),
-    /must be empty needs-review or a complete human checkpoint decision/
+    /accepted label "not-a-proposed-label" is outside the proposed labels/
   );
 
   const missingReviewer = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
   missingReviewer.items[1].reviewer = null;
   assert.throws(
     () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, missingReviewer),
-    /must be empty needs-review or a complete human checkpoint decision/
+    /reviewer is empty/
   );
 
   const badDisposition = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
   badDisposition.items[2].reviewedValue.parserDisposition = "not-a-disposition";
   assert.throws(
     () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, badDisposition),
-    /must be empty needs-review or a complete human checkpoint decision/
+    /parserDisposition "not-a-disposition" is not an allowed disposition/
   );
 });
 
@@ -580,6 +580,11 @@ test("R2 drift explanation generator accepts decided and empty checkpoint overla
   assert.equal(decided.counts.checkpointNeedsReview, 0);
   assert.equal(decided.counts.checkpointDecided, 10);
   assert.equal(decided.reviewStatus, "human-decided");
+  const dispositionTotal = Object.values(decided.counts.checkpointByDisposition).reduce((sum, n) => sum + n, 0);
+  assert.equal(dispositionTotal, 10);
+  for (const disposition of Object.keys(decided.counts.checkpointByDisposition)) {
+    assert.ok(PARSER_DISPOSITIONS.includes(disposition), `unexpected disposition ${disposition}`);
+  }
 
   const emptied = {
     ...r2CheckpointReviewReport,
