@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "status": "promotion-experiment",
   "claim": "Reviewed checkpoint window rules applied to source-backed R2 anchor rows; non-window rows retained as labeled side evidence.",
-  "generatedAt": "2026-06-12T18:00:57.641Z",
+  "generatedAt": "2026-06-12T20:26:08.143Z",
   "generatedBy": "npm run build-r2-promotion-experiment",
   "sourcePath": "src/data/review/r2-checkpoint-review.json",
   "inputs": [
@@ -14,6 +14,7 @@
   "assumptions": [
     "Only rows with reviewStatus reviewed-ok are processed; dispositions gate every rule.",
     "div-source-scope record roles come verbatim from the reviewed checkpoint notes (DIV_SOURCE_RECORD_ROLES).",
+    "The PWG window follows the print's own sense enumeration: numbered top-level divisions (\"— N)\" at div n=\"1\") of the target-primary record before the first div n=\"p\" preverb block; <div n> depth values are never counted as senses.",
     "Indigenous iti-unit classification is heuristic (authority hints/quotation markers, then >350-char prose as discussion) and is a labeling experiment, not a scholar-reviewed sense decision.",
     "AE windows apply to the reviewed nominal lemma only; verbal reverse rows remain side evidence per r2-drift:gam:ae.",
     "No existing R2 output (senses, H1, H2H3, explorer) is modified; this artifact is additive."
@@ -69,15 +70,17 @@
       ],
       "archivedSenseRows": 5,
       "sourceSenseRows": 21,
-      "windowRows": 14,
-      "sideEvidenceRows": 7,
+      "windowRows": 11,
+      "sideEvidenceRows": 10,
       "windowLabelCounts": {
-        "target-primary-series": 14,
-        "same-headword-supplement": 7
+        "target-primary-series": 11,
+        "same-headword-supplement": 7,
+        "candidate-sense-marker": 2,
+        "preface-or-proxy": 1
       },
       "outcome": "window-applied",
       "ratioBefore": 4.2,
-      "ratioAfter": 2.8
+      "ratioAfter": 2.2
     },
     {
       "reviewId": "r2-drift:dharma:skd",
@@ -209,17 +212,19 @@
       ],
       "archivedSenseRows": 30,
       "sourceSenseRows": 353,
-      "windowRows": 186,
-      "sideEvidenceRows": 167,
+      "windowRows": 7,
+      "sideEvidenceRows": 346,
       "windowLabelCounts": {
-        "target-primary-series": 186,
+        "prefixed-or-derived-series": 240,
         "same-headword-supplement": 100,
-        "prefixed-or-derived-series": 66,
+        "target-primary-series": 7,
+        "candidate-sense-marker": 4,
+        "preface-or-proxy": 1,
         "separate-homonym": 1
       },
       "outcome": "window-applied",
       "ratioBefore": 11.767,
-      "ratioAfter": 6.2
+      "ratioAfter": 0.233
     },
     {
       "reviewId": "r2-drift:iti:ap",

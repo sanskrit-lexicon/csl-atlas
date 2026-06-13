@@ -21,13 +21,13 @@ not a public R2 page update, and not a scholar-reviewed sense decision layer.
 | Row | Disposition | Source rows | Window rows | Archive | Ratio before | Ratio after | Outcome |
 |---|---|---:|---:|---:|---:|---:|---|
 | `r2-drift:dharma:ae` | promote-parser-candidate | 66 | 18 | 24 | 2.750 | 0.750 | window-applied |
-| `r2-drift:dharma:pwg` | promote-parser-candidate | 21 | 14 | 5 | 4.200 | 2.800 | window-applied |
+| `r2-drift:dharma:pwg` | promote-parser-candidate | 21 | 11 | 5 | 4.200 | 2.200 | window-applied |
 | `r2-drift:dharma:skd` | promote-parser-candidate | 15 | 1 | 4 | 3.750 | 0.250 | window-applied |
 | `r2-drift:dharma:vcp` | promote-parser-candidate | 27 | 9 | 9 | 3.000 | 1.000 | window-applied |
 | `r2-drift:gam:ae` | retain-side-evidence | 243 | — | 30 | 8.100 | — | side-evidence-retained |
 | `r2-drift:gam:ap` | control-only | 16 | 16 | 16 | 1.000 | 1.000 | parity-confirmed |
 | `r2-drift:gam:ben` | promote-parser-candidate | 172 | 9 | 23 | 7.478 | 0.391 | window-applied |
-| `r2-drift:gam:pwg` | promote-parser-candidate | 353 | 186 | 30 | 11.767 | 6.200 | window-applied |
+| `r2-drift:gam:pwg` | promote-parser-candidate | 353 | 7 | 30 | 11.767 | 0.233 | window-applied |
 | `r2-drift:iti:ap` | retain-side-evidence | 3 | — | 5 | 0.600 | — | side-evidence-retained |
 | `r2-drift:rama:ben` | promote-parser-candidate | 15 | 7 | 7 | 2.143 | 1.000 | window-applied |
 
@@ -42,8 +42,10 @@ not a public R2 page update, and not a scholar-reviewed sense decision layer.
 
 ### `r2-drift:dharma:pwg`
 
-- `target-primary-series`: 14
+- `target-primary-series`: 11
 - `same-headword-supplement`: 7
+- `candidate-sense-marker`: 2
+- `preface-or-proxy`: 1
 
 ### `r2-drift:dharma:skd`
 
@@ -65,9 +67,11 @@ not a public R2 page update, and not a scholar-reviewed sense decision layer.
 
 ### `r2-drift:gam:pwg`
 
-- `target-primary-series`: 186
+- `prefixed-or-derived-series`: 240
 - `same-headword-supplement`: 100
-- `prefixed-or-derived-series`: 66
+- `target-primary-series`: 7
+- `candidate-sense-marker`: 4
+- `preface-or-proxy`: 1
 - `separate-homonym`: 1
 
 ### `r2-drift:rama:ben`
@@ -79,6 +83,7 @@ not a public R2 page update, and not a scholar-reviewed sense decision layer.
 
 - Only rows with reviewStatus reviewed-ok are processed; dispositions gate every rule.
 - div-source-scope record roles come verbatim from the reviewed checkpoint notes (DIV_SOURCE_RECORD_ROLES).
+- The PWG window follows the print's own sense enumeration: numbered top-level divisions ("— N)" at div n="1") of the target-primary record before the first div n="p" preverb block; <div n> depth values are never counted as senses.
 - Indigenous iti-unit classification is heuristic (authority hints/quotation markers, then >350-char prose as discussion) and is a labeling experiment, not a scholar-reviewed sense decision.
 - AE windows apply to the reviewed nominal lemma only; verbal reverse rows remain side evidence per r2-drift:gam:ae.
 - No existing R2 output (senses, H1, H2H3, explorer) is modified; this artifact is additive.
