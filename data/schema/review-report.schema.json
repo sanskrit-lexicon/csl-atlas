@@ -30,6 +30,7 @@
               "tei-ontolex-review",
               "over-broad-family",
               "source-siglum-alias",
+              "source-layer-anchoring",
               "r2-checkpoint"
             ]
           },
@@ -38,7 +39,7 @@
             "properties": {
               "kind": {
                 "type": "string",
-                "enum": ["alignment", "entry", "source-abbreviation", "family", "construction", "corpus-lemma"]
+                "enum": ["alignment", "entry", "source-abbreviation", "source-layer", "family", "construction", "corpus-lemma"]
               },
               "lemma": { "type": ["string", "null"] },
               "dictionaries": { "type": "array", "items": { "type": "string" } }
