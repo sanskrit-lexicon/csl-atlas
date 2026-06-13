@@ -37,8 +37,9 @@ packs 1.13, the indigenous lexica 1.00 by construction — so any diachronic cla
 about "richer" later dictionaries must control for lexicographic school. Second,
 **citation predicts survival**: on a 28-noun panel of Wilson-line descent, ancestor
 senses carrying at least one source citation survive into the descendant at **0.762**
-(n = 84) against **0.591** for uncited senses (n = 723), a 17-point advantage —
-the apparatus is not decoration but a predictor of lexicographic persistence. Third,
+(n = 84) against **0.591** for uncited senses (n = 723), a significant 17-point
+advantage (*p* ≈ 0.002) — the apparatus is not decoration but a predictor of
+lexicographic persistence. Third,
 descendants **copy or condense; they do not expand**: gloss overlap of 0.906 on the
 Wilson → Śabda-Sāgara edge (near-verbatim copy, drift 0), drastic condensation on
 Wilson → Yates (9 → 1 senses per lemma), contraction on Apte 1890 → 1957 (drift
@@ -238,6 +239,9 @@ dilute its ratio (1.15) far below its own 1872 edition (2.85), a headword-policy
 artefact, not a temporal one. A fixed panel of 28–30 simple nouns present across
 the corpus removes the artefact; the panel correlation is **r = 0.093**
 ([`r2_h1_panel.json`](../../data/lexico/r2_h1_panel.json)) — the conclusion stands.
+Neither correlation is significant (corpus *r* = 0.036, *t* = 0.11, df = 9; panel
+*r* = 0.093, *t* = 0.49, df = 28; both *p* ≫ 0.05), which is the point: there is no
+year trend to detect once family is allowed for.
 Within a single family the revision edge shows the same: Apte 1957 does not enumerate
 more finely than Apte 1890.
 
@@ -250,11 +254,13 @@ this corpus, false.
 
 On the 28-noun Wilson-line panel, each ancestor sense was traced into the descendant
 by gloss-text overlap (threshold 0.15). Ancestor senses carrying at least one `<ls>`
-source citation survived at **0.762** (64 of 84); uncited senses at **0.591** (427
-of 723) — a 17-point gap, direction stable against the archived baseline (0.70 vs
-0.54). The citation apparatus, whose register-dependence is the subject of the
-companion paper, here acquires a diachronic function: **a citation is a survival
-predictor**. Senses on textual authority are the ones successor lexicographers keep;
+source citation survived at **0.762** (64 of 84; Wilson 95 % CI [0.661, 0.840]);
+uncited senses at **0.591** (427 of 723; CI [0.554, 0.626]) — a 17-point gap whose
+confidence intervals do not overlap and which is significant on a two-proportion
+test (*z* = 3.0, *p* ≈ 0.002; χ² = 9.3, df = 1). The direction is stable against the
+archived baseline (0.70 vs 0.54). The citation apparatus, whose register-dependence
+is the subject of the companion paper, here acquires a diachronic function:
+**a citation is a survival predictor**. Senses on textual authority are the ones successor lexicographers keep;
 unattested senses are where condensation cuts first. We know of no comparable
 quantitative result for any dictionary family.
 
@@ -295,10 +301,13 @@ definition and attestation occupy a single *iti*-unit. Sense segmentation in SKD
 therefore requires a unit grammar of its own — enumeration-internal citation — and
 any future sense inventory for the indigenous register must treat the authority
 formula as a *boundary* of the sense unit, not as extraneous apparatus to be
-filtered. This is, to our knowledge, the first corpus-scale demonstration that the
-two Sanskrit lexicographic civilisations differ not merely in citation style (the
-companion paper's result) but in whether *sense* and *citation* are separable
-categories at all.
+filtered. The evidence here is an exemplar — *dharma* in SKD versus VCP — not yet a
+count; a source *kośa* parser that segments SKD records on their closing authorities
+now exists, so scaling this contrast to the indigenous corpus is the immediate next
+step. On that exemplar basis it is, to our knowledge, the first explicit
+demonstration that the two Sanskrit lexicographic civilisations differ not merely in
+citation style (the companion paper's result) but in whether *sense* and *citation*
+are separable categories at all.
 
 ## 8. Limitations
 
@@ -314,6 +323,13 @@ categories at all.
 - The three measurable inheritance edges are few; the Petersburg → Monier-Williams
   edge, philologically certain, is not yet sense-countable because MW marks no
   senses. Extending survival measurement to lumped descendants is the next slice.
+- The §7 sense/citation-fusion contrast rests on a single lemma (*dharma*) in two
+  indigenous lexica; it is an exemplar, not a frequency. A corpus-scale count over
+  SKD/VCP is needed before the "two civilisations" claim is quantitative rather than
+  demonstrative.
+- The H2 survival panel (84 cited vs 723 uncited ancestor senses) is significant but
+  drawn from 28 hand-chosen nouns on the Wilson line; replication on an independent,
+  larger panel — and on a non-Wilson edge — would harden the citation-survival result.
 - Ten checkpoint rows were reviewed by a single reviewer against the sources; the
   review packets are designed for multi-reviewer adjudication with agreement
   statistics, which is planned but not yet done.
