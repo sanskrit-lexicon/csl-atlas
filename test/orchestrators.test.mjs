@@ -527,20 +527,68 @@ test("R2 checkpoint review report rejects source pointers without links", () => 
   );
 });
 
-test("R2 drift explanation generator rejects reviewed checkpoint decisions", () => {
-  const dirty = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
-  dirty.items[0].reviewStatus = "reviewed-ok";
-  dirty.items[0].reviewedValue = {
-    acceptedParserLabels: dirty.items[0].machineValue.proposedParserLabels,
-    parserDisposition: "promote-parser-candidate"
-  };
-  dirty.items[0].reviewer = "codex";
-  dirty.items[0].reviewedAt = "2026-06-06";
-  dirty.items[0].note = "Dirty reviewed decision.";
+test("R2 drift explanation generator rejects incomplete or out-of-vocabulary checkpoint decisions", () => {
+  const outOfVocab = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
+  outOfVocab.items[0].reviewedValue.acceptedParserLabels = ["not-a-proposed-label"];
   assert.throws(
-    () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, dirty),
-    /checkpoint review item must remain needs-review with empty human fields/
+    () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, outOfVocab),
+    /must be empty needs-review or a complete human checkpoint decision/
   );
+
+  const missingReviewer = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
+  missingReviewer.items[1].reviewer = null;
+  assert.throws(
+    () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, missingReviewer),
+    /must be empty needs-review or a complete human checkpoint decision/
+  );
+
+  const badDisposition = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
+  badDisposition.items[2].reviewedValue.parserDisposition = "not-a-disposition";
+  assert.throws(
+    () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, badDisposition),
+    /must be empty needs-review or a complete human checkpoint decision/
+  );
+});
+
+test("R2 drift explanation generator accepts decided and empty checkpoint overlays", () => {
+  const decided = buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, r2CheckpointReviewReport);
+  assert.equal(decided.counts.checkpointNeedsReview, 0);
+  assert.equal(decided.counts.checkpointDecided, 10);
+  assert.equal(decided.reviewStatus, "human-decided");
+
+  const emptied = {
+    ...r2CheckpointReviewReport,
+    items: r2CheckpointReviewReport.items.map(item => ({
+      ...item,
+      reviewStatus: "needs-review",
+      reviewedValue: null,
+      reviewer: null,
+      reviewedAt: null,
+      note: ""
+    }))
+  };
+  const machineOnly = buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, emptied);
+  assert.equal(machineOnly.counts.checkpointNeedsReview, 10);
+  assert.equal(machineOnly.counts.checkpointDecided, 0);
+  assert.equal(machineOnly.reviewStatus, "machine-explained");
+});
+
+test("R2 drift explanation generator reports a partially-human-decided mixed overlay", () => {
+  const mixed = {
+    ...r2CheckpointReviewReport,
+    items: r2CheckpointReviewReport.items.map((item, index) => index === 0 ? {
+      ...item,
+      reviewStatus: "needs-review",
+      reviewedValue: null,
+      reviewer: null,
+      reviewedAt: null,
+      note: ""
+    } : item)
+  };
+  const payload = buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, mixed);
+  assert.equal(payload.counts.checkpointNeedsReview, 1);
+  assert.equal(payload.counts.checkpointDecided, 9);
+  assert.equal(payload.reviewStatus, "partially-human-decided");
 });
 
 test("R2 drift explanation doc is generated from the artifact", () => {
@@ -567,19 +615,30 @@ test("R2 drift explanation labels stay inside packet vocabularies", () => {
   }
 });
 
-test("R2 drift explanation keeps checkpoint rows stable and needs-review", () => {
+test("R2 drift explanation keeps checkpoint rows stable and carries the recorded decisions", () => {
   assert.equal(r2DriftExplanation.counts.checkpointRows, 10);
-  assert.equal(r2DriftExplanation.counts.checkpointNeedsReview, 10);
+  assert.equal(r2DriftExplanation.counts.checkpointNeedsReview, 0);
+  assert.equal(r2DriftExplanation.counts.checkpointDecided, 10);
   assert.deepEqual(r2DriftExplanation.checkpointRows.map(row => row.diagnosticId), CHECKPOINT_DIAGNOSTIC_IDS);
   for (const row of r2DriftExplanation.checkpointRows) {
-    assert.equal(row.reviewStatus, "needs-review");
+    assert.ok(
+      ["reviewed-ok", "reviewed-corrected", "deferred", "blocked"].includes(row.reviewStatus),
+      `${row.diagnosticId} has unexpected reviewStatus ${row.reviewStatus}`
+    );
     assert.ok(row.sourcePointerCount > 0, `${row.diagnosticId} lacks source pointers`);
     assert.ok(row.proposedParserLabels.length, `${row.diagnosticId} lacks proposed labels`);
     assert.ok(row.reviewQuestion, `${row.diagnosticId} lacks review question`);
-    assert.equal(row.reviewedValue, null);
-    assert.equal(row.reviewer, null);
-    assert.equal(row.reviewedAt, null);
-    assert.equal(row.note, "");
+    assert.ok(row.reviewer, `${row.diagnosticId} lacks reviewer`);
+    assert.ok(row.reviewedAt, `${row.diagnosticId} lacks reviewedAt`);
+    assert.ok(row.note, `${row.diagnosticId} lacks a review note`);
+    assert.ok(Array.isArray(row.reviewedValue?.acceptedParserLabels), `${row.diagnosticId} lacks acceptedParserLabels`);
+    for (const label of row.reviewedValue.acceptedParserLabels) {
+      assert.ok(row.proposedParserLabels.includes(label), `${row.diagnosticId} accepted out-of-vocabulary label ${label}`);
+    }
+    assert.ok(
+      PARSER_DISPOSITIONS.includes(row.reviewedValue.parserDisposition),
+      `${row.diagnosticId} has unexpected parserDisposition ${row.reviewedValue.parserDisposition}`
+    );
   }
 });
 
@@ -599,7 +658,7 @@ test("R2 drift explanation doc names all checkpoint diagnostic ids", () => {
   for (const diagnosticId of CHECKPOINT_DIAGNOSTIC_IDS) {
     assert.ok(r2DriftExplanationMd.includes(diagnosticId), `${diagnosticId} missing from drift explanation doc`);
   }
-  assert.ok(r2DriftExplanationMd.includes("Parser promotion remains deferred"));
+  assert.ok(r2DriftExplanationMd.includes("Parser promotion is gated by each checkpoint row's recorded `parserDisposition`"));
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----
