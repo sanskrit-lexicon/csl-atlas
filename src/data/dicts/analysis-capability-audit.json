@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T08:42:57.402Z",
+  "generatedAt": "2026-06-14T08:54:38.416Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
@@ -13,10 +13,10 @@
       "missing": 26
     },
     "citations": {
-      "supported": 12,
+      "supported": 13,
       "candidate": 0,
       "partial": 3,
-      "weak": 24,
+      "weak": 23,
       "missing": 1
     },
     "homonyms": {
@@ -1342,8 +1342,8 @@
           "method": "md-lex-gender-pos"
         },
         "citations": {
-          "status": "weak",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "supported",

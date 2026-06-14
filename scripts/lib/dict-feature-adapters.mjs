@@ -27,7 +27,7 @@ const FEATURE_METHOD_NOTES = {
   ],
   citations: [
     "Supported citation adapters use tagged <ls> source citations and feed the source matrix/overlap.",
-    "BEN, GRA, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
+    "BEN, GRA, MD, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
     "Prose/source-hint adapters such as VCP/SKD/KRM iti proxies are tracked separately and stay out of source overlap.",
     "Unavailable dictionaries are excluded from source overlap, never counted as zero evidence."
   ],
@@ -225,6 +225,9 @@ export const FEATURE_ADAPTERS = {
       notes: ["Lanman's reader references are encoded as <ls> labels and compared as source labels."]
     }),
     lrv: supportedAdapter("ls-source-citation", "<ls> source citation"),
+    md: supportedAdapter("ls-source-citation", "<ls> source citation", {
+      notes: ["MD has sparse but validated textual <ls> references; included in source overlap as tagged source evidence."]
+    }),
     ap90: supportedAdapter("ls-source-citation", "<ls> source citation"),
     sch: supportedAdapter("ls-source-citation", "<ls> source citation"),
     bhs: supportedAdapter("ls-source-citation", "<ls> source citation"),

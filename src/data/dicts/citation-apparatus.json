@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-14T08:42:51.335Z",
+  "generatedAt": "2026-06-14T08:54:19.884Z",
   "sourceRoot": "../csl-orig/v02",
   "feature": "citations",
   "featureLabel": "Citations",
@@ -139,6 +139,24 @@
       "confidence": "validated",
       "fixtureCoverage": "unit",
       "notes": []
+    },
+    {
+      "code": "md",
+      "label": "MD",
+      "fullName": "Macdonell Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": [
+        "MD has sparse but validated textual <ls> references; included in source overlap as tagged source evidence."
+      ]
     },
     {
       "code": "mw",
@@ -350,20 +368,6 @@
       "code": "cae",
       "label": "CAE",
       "fullName": "Cappeller Sanskrit-English Dictionary",
-      "languagePair": "Skt-Eng",
-      "family": "Sanskrit-English",
-      "deprecated": false,
-      "sourceExists": true,
-      "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated source-citation adapter for public citation overlap yet."
-    },
-    {
-      "code": "md",
-      "label": "MD",
-      "fullName": "Macdonell Sanskrit-English Dictionary",
       "languagePair": "Skt-Eng",
       "family": "Sanskrit-English",
       "deprecated": false,
@@ -659,7 +663,7 @@
   ],
   "methodNotes": [
     "Supported citation adapters use tagged <ls> source citations and feed the source matrix/overlap.",
-    "BEN, GRA, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
+    "BEN, GRA, MD, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
     "Prose/source-hint adapters such as VCP/SKD/KRM iti proxies are tracked separately and stay out of source overlap.",
     "Unavailable dictionaries are excluded from source overlap, never counted as zero evidence."
   ],
@@ -674,6 +678,7 @@
     "LAN",
     "LRV",
     "AP90",
+    "MD",
     "SCH",
     "BHS"
   ],
@@ -3219,6 +3224,72 @@
       ]
     },
     {
+      "dict": "MD",
+      "code": "md",
+      "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
+      "recordCount": 20749,
+      "recordsWithCitations": 53,
+      "totalCitations": 58,
+      "citationsPerRecord": 0.003,
+      "distinctSources": 13,
+      "topSources": [
+        {
+          "source": "RV",
+          "count": 42
+        },
+        {
+          "source": "Kirātārjunīya XV",
+          "count": 3
+        },
+        {
+          "source": "AV",
+          "count": 2
+        },
+        {
+          "source": "VS",
+          "count": 2
+        },
+        {
+          "source": "XX",
+          "count": 1
+        },
+        {
+          "source": "TB",
+          "count": 1
+        },
+        {
+          "source": "Bṛhaddevatā",
+          "count": 1
+        },
+        {
+          "source": "TS",
+          "count": 1
+        },
+        {
+          "source": "Śisupāla-vadha XIX",
+          "count": 1
+        },
+        {
+          "source": "Kathāsaritsāgara 70",
+          "count": 1
+        },
+        {
+          "source": "Vāsav",
+          "count": 1
+        },
+        {
+          "source": "Manu VIII",
+          "count": 1
+        },
+        {
+          "source": "Meghadūta 90",
+          "count": 1
+        }
+      ]
+    },
+    {
       "dict": "SCH",
       "code": "sch",
       "method": "ls",
@@ -3795,6 +3866,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 52,
+        "MD": 0,
         "SCH": 821,
         "BHS": 81
       }
@@ -3814,6 +3886,7 @@
         "LAN": 0,
         "LRV": 4159,
         "AP90": 5362,
+        "MD": 0,
         "SCH": 565,
         "BHS": 1
       }
@@ -3833,14 +3906,15 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 1,
+        "MD": 0,
         "SCH": 0,
         "BHS": 0
       }
     },
     {
       "source": "ṚV",
-      "total": 39727,
-      "dictsCiting": 10,
+      "total": 39769,
+      "dictsCiting": 11,
       "byDict": {
         "MW": 15918,
         "AP": 1456,
@@ -3852,6 +3926,7 @@
         "LAN": 0,
         "LRV": 2,
         "AP90": 203,
+        "MD": 42,
         "SCH": 149,
         "BHS": 22
       }
@@ -3871,6 +3946,7 @@
         "LAN": 0,
         "LRV": 3,
         "AP90": 51,
+        "MD": 0,
         "SCH": 235,
         "BHS": 18
       }
@@ -3890,6 +3966,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 653,
+        "MD": 0,
         "SCH": 329,
         "BHS": 2
       }
@@ -3909,6 +3986,7 @@
         "LAN": 0,
         "LRV": 9,
         "AP90": 677,
+        "MD": 0,
         "SCH": 146,
         "BHS": 12
       }
@@ -3928,14 +4006,15 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 147,
         "BHS": 4
       }
     },
     {
       "source": "AV",
-      "total": 20186,
-      "dictsCiting": 9,
+      "total": 20188,
+      "dictsCiting": 10,
       "byDict": {
         "MW": 7238,
         "AP": 419,
@@ -3947,6 +4026,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 4,
+        "MD": 2,
         "SCH": 103,
         "BHS": 1119
       }
@@ -3966,6 +4046,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 6,
         "BHS": 0
       }
@@ -3985,6 +4066,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 21,
+        "MD": 0,
         "SCH": 119,
         "BHS": 3
       }
@@ -4004,6 +4086,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 144,
         "BHS": 0
       }
@@ -4023,6 +4106,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 84,
+        "MD": 0,
         "SCH": 99,
         "BHS": 5
       }
@@ -4042,6 +4126,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 33,
         "BHS": 0
       }
@@ -4061,6 +4146,7 @@
         "LAN": 0,
         "LRV": 2089,
         "AP90": 621,
+        "MD": 0,
         "SCH": 159,
         "BHS": 2
       }
@@ -4080,6 +4166,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 125,
+        "MD": 0,
         "SCH": 7,
         "BHS": 0
       }
@@ -4099,6 +4186,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 328,
+        "MD": 0,
         "SCH": 11,
         "BHS": 0
       }
@@ -4118,6 +4206,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 4,
+        "MD": 0,
         "SCH": 34,
         "BHS": 0
       }
@@ -4137,6 +4226,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 52,
         "BHS": 0
       }
@@ -4156,6 +4246,7 @@
         "LAN": 0,
         "LRV": 3,
         "AP90": 0,
+        "MD": 0,
         "SCH": 73,
         "BHS": 15
       }
@@ -4175,6 +4266,7 @@
         "LAN": 0,
         "LRV": 2,
         "AP90": 63,
+        "MD": 0,
         "SCH": 117,
         "BHS": 0
       }
@@ -4194,6 +4286,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 318,
+        "MD": 0,
         "SCH": 15,
         "BHS": 0
       }
@@ -4213,6 +4306,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 60,
         "BHS": 1
       }
@@ -4232,6 +4326,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 256,
+        "MD": 0,
         "SCH": 11,
         "BHS": 0
       }
@@ -4251,6 +4346,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 238,
+        "MD": 0,
         "SCH": 13,
         "BHS": 0
       }
@@ -4270,6 +4366,7 @@
         "LAN": 0,
         "LRV": 108,
         "AP90": 0,
+        "MD": 0,
         "SCH": 35,
         "BHS": 1
       }
@@ -4289,6 +4386,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 0,
         "BHS": 0
       }
@@ -4308,6 +4406,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 244,
+        "MD": 0,
         "SCH": 5,
         "BHS": 0
       }
@@ -4327,6 +4426,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 241,
+        "MD": 0,
         "SCH": 10,
         "BHS": 0
       }
@@ -4346,14 +4446,15 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 54,
         "BHS": 1
       }
     },
     {
       "source": "TS",
-      "total": 9227,
-      "dictsCiting": 8,
+      "total": 9228,
+      "dictsCiting": 9,
       "byDict": {
         "MW": 3207,
         "AP": 19,
@@ -4365,14 +4466,15 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 1,
         "SCH": 166,
         "BHS": 2
       }
     },
     {
       "source": "VS",
-      "total": 9141,
-      "dictsCiting": 7,
+      "total": 9143,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 2998,
         "AP": 0,
@@ -4384,6 +4486,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 2,
         "SCH": 13,
         "BHS": 4
       }
@@ -4403,6 +4506,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 188,
+        "MD": 0,
         "SCH": 9,
         "BHS": 0
       }
@@ -4422,6 +4526,7 @@
         "LAN": 0,
         "LRV": 694,
         "AP90": 0,
+        "MD": 0,
         "SCH": 24,
         "BHS": 1
       }
@@ -4441,6 +4546,7 @@
         "LAN": 0,
         "LRV": 28,
         "AP90": 0,
+        "MD": 0,
         "SCH": 0,
         "BHS": 23
       }
@@ -4460,6 +4566,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 110,
         "BHS": 11
       }
@@ -4479,6 +4586,7 @@
         "LAN": 0,
         "LRV": 2,
         "AP90": 10,
+        "MD": 0,
         "SCH": 31,
         "BHS": 16
       }
@@ -4498,6 +4606,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 0,
         "BHS": 0
       }
@@ -4517,6 +4626,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 150,
+        "MD": 0,
         "SCH": 11,
         "BHS": 0
       }
@@ -4536,6 +4646,7 @@
         "LAN": 0,
         "LRV": 54,
         "AP90": 435,
+        "MD": 0,
         "SCH": 0,
         "BHS": 7174
       }
@@ -4555,6 +4666,7 @@
         "LAN": 0,
         "LRV": 55,
         "AP90": 356,
+        "MD": 0,
         "SCH": 0,
         "BHS": 15
       }
@@ -4574,6 +4686,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 2079,
+        "MD": 0,
         "SCH": 3320,
         "BHS": 0
       }
@@ -4593,6 +4706,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 35,
         "BHS": 0
       }
@@ -4612,6 +4726,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 2685,
+        "MD": 0,
         "SCH": 0,
         "BHS": 2
       }
@@ -4631,6 +4746,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 0,
         "BHS": 118
       }
@@ -4650,6 +4766,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 0,
         "BHS": 0
       }
@@ -4669,6 +4786,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 253,
+        "MD": 0,
         "SCH": 12,
         "BHS": 0
       }
@@ -4688,6 +4806,7 @@
         "LAN": 0,
         "LRV": 116,
         "AP90": 0,
+        "MD": 0,
         "SCH": 11,
         "BHS": 0
       }
@@ -4707,6 +4826,7 @@
         "LAN": 0,
         "LRV": 204,
         "AP90": 2814,
+        "MD": 0,
         "SCH": 31,
         "BHS": 3
       }
@@ -4726,6 +4846,7 @@
         "LAN": 0,
         "LRV": 750,
         "AP90": 0,
+        "MD": 0,
         "SCH": 488,
         "BHS": 0
       }
@@ -4745,6 +4866,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 94,
         "BHS": 1
       }
@@ -4764,6 +4886,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 62,
         "BHS": 1
       }
@@ -4783,6 +4906,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 183,
+        "MD": 0,
         "SCH": 3,
         "BHS": 0
       }
@@ -4802,6 +4926,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 712,
         "BHS": 3176
       }
@@ -4821,6 +4946,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 27,
+        "MD": 0,
         "SCH": 95,
         "BHS": 1
       }
@@ -4840,6 +4966,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 14,
+        "MD": 0,
         "SCH": 2,
         "BHS": 0
       }
@@ -4859,6 +4986,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 0,
         "BHS": 12
       }
@@ -4878,6 +5006,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 8,
+        "MD": 0,
         "SCH": 36,
         "BHS": 2
       }
@@ -4897,6 +5026,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 37,
         "BHS": 0
       }
@@ -4916,6 +5046,7 @@
         "LAN": 0,
         "LRV": 0,
         "AP90": 0,
+        "MD": 0,
         "SCH": 0,
         "BHS": 0
       }
@@ -5295,10 +5426,64 @@
       "jaccard": 0.0024
     },
     {
+      "a": "MW",
+      "b": "MD",
+      "sharedSources": 7,
+      "jaccard": 0.0042
+    },
+    {
+      "a": "PWG",
+      "b": "MD",
+      "sharedSources": 7,
+      "jaccard": 0.0005
+    },
+    {
+      "a": "PWK",
+      "b": "MD",
+      "sharedSources": 5,
+      "jaccard": 0.0027
+    },
+    {
       "a": "BEN",
       "b": "GRA",
       "sharedSources": 5,
       "jaccard": 0.0181
+    },
+    {
+      "a": "PWKVN",
+      "b": "MD",
+      "sharedSources": 5,
+      "jaccard": 0.0044
+    },
+    {
+      "a": "MD",
+      "b": "SCH",
+      "sharedSources": 5,
+      "jaccard": 0.0069
+    },
+    {
+      "a": "MD",
+      "b": "BHS",
+      "sharedSources": 5,
+      "jaccard": 0.0079
+    },
+    {
+      "a": "AP",
+      "b": "MD",
+      "sharedSources": 4,
+      "jaccard": 0.0038
+    },
+    {
+      "a": "GRA",
+      "b": "MD",
+      "sharedSources": 4,
+      "jaccard": 0.0212
+    },
+    {
+      "a": "AP90",
+      "b": "MD",
+      "sharedSources": 2,
+      "jaccard": 0.0032
     },
     {
       "a": "LAN",
@@ -5307,14 +5492,32 @@
       "jaccard": 0.0003
     },
     {
+      "a": "LRV",
+      "b": "MD",
+      "sharedSources": 1,
+      "jaccard": 0.006
+    },
+    {
       "a": "BEN",
       "b": "LAN",
       "sharedSources": 0,
       "jaccard": 0
     },
     {
+      "a": "BEN",
+      "b": "MD",
+      "sharedSources": 0,
+      "jaccard": 0
+    },
+    {
       "a": "LAN",
       "b": "LRV",
+      "sharedSources": 0,
+      "jaccard": 0
+    },
+    {
+      "a": "LAN",
+      "b": "MD",
       "sharedSources": 0,
       "jaccard": 0
     }

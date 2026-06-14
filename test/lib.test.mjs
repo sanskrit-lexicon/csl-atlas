@@ -319,14 +319,15 @@ test("deep analysis artifacts never put unavailable dictionaries in evidence cel
 test("citation apparatus promotes broad <ls> adapters into source overlap", () => {
   const citations = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/citation-apparatus.json"), "utf8"));
   const included = citations.includedDictionaries.map(dict => dict.code);
-  assert.equal(citations.includedDictionaries.length, 12);
-  for (const code of ["ben", "gra", "pwkvn", "lan", "lrv", "ap90", "sch", "bhs"]) {
+  assert.equal(citations.includedDictionaries.length, 13);
+  for (const code of ["ben", "gra", "pwkvn", "lan", "lrv", "ap90", "md", "sch", "bhs"]) {
     assert.ok(included.includes(code), `${code} must be included in validated citation adapters`);
   }
-  assert.equal(citations.unavailableDictionaries.length, 28);
-  assert.equal(citations.citationTaggedDicts.length, 12);
-  assert.equal(citations.sourceOverlap.length, 66);
+  assert.equal(citations.unavailableDictionaries.length, 27);
+  assert.equal(citations.citationTaggedDicts.length, 13);
+  assert.equal(citations.sourceOverlap.length, 78);
   assert.ok(citations.perDict.some(dict => dict.code === "pwkvn" && dict.method === "ls"));
+  assert.ok(citations.perDict.some(dict => dict.code === "md" && dict.method === "ls" && dict.methodStatus === "supported"));
   assert.ok(citations.perDict.some(dict => dict.code === "vcp" && dict.method === "iti" && dict.methodStatus === "partial"));
   assert.ok(citations.perDict.some(dict => dict.code === "krm" && dict.method === "iti" && dict.methodId === "krm-iti-authority-proxy" && dict.methodStatus === "partial"));
   assert.ok(citations.sourceOverlap.every(pair => pair.a !== "KRM" && pair.b !== "KRM"));
@@ -480,9 +481,11 @@ test("feature support exposes broad unavailable dictionaries without promoting t
 
 test("citation adapters separate supported <ls> from diagnostic prose proxies", broadScopeTestOpts, () => {
   assert.deepEqual(supportedFeatureCodes("citations", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
-  assert.equal(supportedFeatureCodes("citations", { scope: "broadHeadword" }).length, 12);
+  assert.equal(supportedFeatureCodes("citations", { scope: "broadHeadword" }).length, 13);
   assert.equal(citationAdapterForDict("mw").status, "supported");
   assert.equal(citationAdapterForDict("ben").status, "supported");
+  assert.equal(citationAdapterForDict("md").status, "supported");
+  assert.equal(citationAdapterForDict("md").methodId, "ls-source-citation");
   assert.equal(citationAdapterForDict("bhs").status, "supported");
   assert.equal(citationAdapterForDict("krm").status, "partial");
   assert.equal(citationAdapterForDict("krm").methodId, "krm-iti-authority-proxy");
