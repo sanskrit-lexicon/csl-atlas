@@ -60,7 +60,7 @@ Latest broad-set audit:
 
 | Feature | Already supported | Partial | Parser candidates | Weak marker evidence | Missing marker evidence |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Grammar/POS | 7 | 0 | 7 | 0 | 26 |
+| Grammar/POS | 10 | 0 | 4 | 0 | 26 |
 | Citations | 4 | 2 | 9 | 24 | 1 |
 | Homonyms | 3 | 0 | 17 | 2 | 18 |
 | Senses | 3 | 0 | 18 | 1 | 18 |
@@ -79,6 +79,11 @@ as a supported feature adapter.
    Keep existing MW/AP/PWG/PWK/WIL `<lex>` extraction, existing SKD/VCP prose
    markers, then validate candidates such as PWKVN, CAE, MD, and BHS before
    including them in gender conflicts.
+   Current status: CAE, MD, and BHS are promoted through validated `<lex>`
+   adapters. PWKVN remains a parser candidate until local-only source evidence
+   can be displayed without broken GitHub links. ABCH, ACPH, and ACSJ remain
+   Kosha suffix candidates because synonym-headword gender evidence needs a
+   separate conflict model.
 
 3. **Add citation adapters.**
    Extend `<ls>` apparatus handling beyond MW/AP/PWG/PWK, then build separate

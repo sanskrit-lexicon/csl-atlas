@@ -30,17 +30,30 @@ const GENDER_TOKENS = new Set(["m", "f", "n", "adj", "ind"]);
 const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
 
 const ORDER = DICTS.map(d => d.code);
-const GRAMMAR_DICTS = supportedFeatureCodes("grammar", { scope: "coreComparison" });
+const BROAD_HEADWORD_DICTS = buildBroadHeadwordDictionaries();
+const CORE_COMPARISON_DICTS = coreComparisonDictionaries();
+const BROAD_BY_CODE = new Map(BROAD_HEADWORD_DICTS.map(d => [d.code, d]));
+const CORE_BY_CODE = new Map(CORE_COMPARISON_DICTS.map(d => [d.code, d]));
+const ALL_LABELS = {
+  ...Object.fromEntries(BROAD_HEADWORD_DICTS.map(d => [d.code, d.label])),
+  ...DICT_LABELS
+};
+const BROAD_GRAMMAR_DICTS = supportedFeatureCodes("grammar", { scope: "broadHeadword" });
+const GRAMMAR_DICTS = [
+  ...ORDER.filter(code => BROAD_GRAMMAR_DICTS.includes(code)),
+  ...BROAD_GRAMMAR_DICTS.filter(code => !ORDER.includes(code))
+];
+const GRAMMAR_DICTIONARIES = GRAMMAR_DICTS.map(code => BROAD_BY_CODE.get(code) ?? CORE_BY_CODE.get(code) ?? { code, label: ALL_LABELS[code] ?? code.toUpperCase() });
 const HOMONYM_DICTS = supportedFeatureCodes("homonyms", { scope: "coreComparison" });
 const DICT_INDEX = Object.fromEntries(ORDER.map((code, index) => [code, index]));
 const COVERAGE_SCOPES = {
   broadHeadword: {
     label: "Broad 40",
-    dictionaries: buildBroadHeadwordDictionaries()
+    dictionaries: BROAD_HEADWORD_DICTS
   },
   coreComparison: {
     label: "Core 7",
-    dictionaries: coreComparisonDictionaries()
+    dictionaries: CORE_COMPARISON_DICTS
   }
 };
 
@@ -201,12 +214,20 @@ function buildCoverageScopes(warnings) {
   return Object.fromEntries(Object.entries(COVERAGE_SCOPES).map(([id, scope]) => [id, buildCoverageScope({ ...scope, id }, warnings)]));
 }
 
-function buildIndex(warnings) {
+function orderIncludedDictionaries(support, codes) {
+  const byCode = new Map(support.includedDictionaries.map(dict => [dict.code, dict]));
+  return {
+    ...support,
+    includedDictionaries: codes.map(code => byCode.get(code)).filter(Boolean)
+  };
+}
+
+function buildIndex(warnings, dictionaries = DICTS) {
   const index = new Map();
   const perDictRecords = {};
   const perDictLemmas = {};
 
-  for (const { code } of DICTS) {
+  for (const { code } of dictionaries) {
     if (!dictExists(code)) {
       warnings.push(`Missing source for ${code}; skipped.`);
       perDictRecords[code] = 0;
@@ -251,7 +272,9 @@ function main() {
   const warnings = [];
   const coverageScopes = buildCoverageScopes(warnings);
   console.log("Indexing core deep-analysis dictionaries...");
-  const { index, perDictRecords } = buildIndex(warnings);
+  const { index, perDictRecords } = buildIndex(warnings, DICTS);
+  console.log("Indexing grammar/POS feature dictionaries...");
+  const { index: grammarIndex } = buildIndex(warnings, GRAMMAR_DICTIONARIES);
 
   // Accumulators, single pass over the index.
   const confidenceDist = { high: 0, medium: 0 };
@@ -337,7 +360,9 @@ function main() {
       }
     }
 
-    // gender conflict across dictionaries with supported grammar/POS adapters.
+  }
+
+  for (const [normalized, entry] of grammarIndex) {
     const gc = genderConflict(entry, GRAMMAR_DICTS);
     if (gc.conflict) {
       conflictCount += 1;
@@ -345,9 +370,12 @@ function main() {
         conflicts.push({
           lemma: normalized,
           byDict: Object.fromEntries(
-            Object.entries(gc.byDict).map(([c, g]) => [DICT_LABELS[c], g])
+            Object.entries(gc.byDict).map(([c, g]) => [ALL_LABELS[c] ?? c.toUpperCase(), g])
           ),
-          examples: Object.keys(gc.byDict).map(c => ({ dict: DICT_LABELS[c], href: entry[c].example.href }))
+          examples: Object.keys(gc.byDict).map(c => ({
+            dict: ALL_LABELS[c] ?? c.toUpperCase(),
+            href: entry[c].example.href
+          }))
         });
       }
     }
@@ -355,7 +383,7 @@ function main() {
 
   const distinctLemmas = index.size;
   const written = [];
-  const grammarSupport = featureSupport("grammar", { scope: "broadHeadword" });
+  const grammarSupport = orderIncludedDictionaries(featureSupport("grammar", { scope: "broadHeadword" }), GRAMMAR_DICTS);
   const homonymSupport = featureSupport("homonyms", { scope: "broadHeadword" });
   const headwordAlignmentSupport = {
     feature: "headwordAlignment",

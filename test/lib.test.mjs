@@ -381,12 +381,24 @@ test("feature adapter registry preserves supported Core 7 grammar extraction", (
   assert.deepEqual(extractGrammar("skd", "a¦, klI, x"), { value: "n", methodId: "skd-prose-gender-pos", status: "supported" });
 });
 
+test("feature adapter registry promotes validated broad <lex> grammar candidates", () => {
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("cae"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("md"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("bhs"));
+  assert.deepEqual(extractGrammar("cae", "<lex>a.</lex>"), { value: "adj", methodId: "cae-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("md", "<lex>ad.</lex>"), { value: "ind", methodId: "md-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("md", "<lex>m.¹</lex>"), { value: "m", methodId: "md-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("bhs", "<lex>subst.</lex> <lex>nt.</lex>"), { value: "n", methodId: "bhs-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("bhs", "<lex>fem.</lex>"), { value: "f", methodId: "bhs-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("bhs", "<lex>indecl.</lex>"), { value: "ind", methodId: "bhs-lex-gender-pos", status: "supported" });
+});
+
 test("feature support exposes broad unavailable dictionaries without promoting them", () => {
   const grammar = featureSupport("grammar", { scope: "broadHeadword" });
   assert.equal(grammar.adapterScope, "broadHeadword");
-  assert.equal(grammar.includedDictionaries.length, 7);
-  assert.equal(grammar.unavailableDictionaries.length, 33);
-  assert.ok(grammar.unavailableDictionaries.some(dict => dict.code === "bhs"));
+  assert.equal(grammar.includedDictionaries.length, 10);
+  assert.equal(grammar.unavailableDictionaries.length, 30);
+  assert.ok(grammar.unavailableDictionaries.some(dict => dict.code === "pwkvn"));
 });
 
 test("citation adapters separate supported <ls> from diagnostic prose proxies", () => {

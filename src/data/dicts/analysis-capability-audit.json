@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-13T20:05:58.953Z",
+  "generatedAt": "2026-06-14T00:27:03.699Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
   "summary": {
     "grammar": {
-      "supported": 7,
-      "candidate": 7,
+      "supported": 10,
+      "candidate": 4,
       "partial": 0,
       "weak": 0,
       "missing": 26
@@ -1272,8 +1272,8 @@
       },
       "capabilities": {
         "grammar": {
-          "status": "candidate",
-          "method": "lex-tag"
+          "status": "supported",
+          "method": "cae-lex-gender-pos"
         },
         "citations": {
           "status": "weak",
@@ -1338,8 +1338,8 @@
       },
       "capabilities": {
         "grammar": {
-          "status": "candidate",
-          "method": "lex-tag"
+          "status": "supported",
+          "method": "md-lex-gender-pos"
         },
         "citations": {
           "status": "weak",
@@ -2064,8 +2064,8 @@
       },
       "capabilities": {
         "grammar": {
-          "status": "candidate",
-          "method": "lex-tag"
+          "status": "supported",
+          "method": "bhs-lex-gender-pos"
         },
         "citations": {
           "status": "candidate",

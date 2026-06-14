@@ -42,6 +42,7 @@ Gender is <b>derived</b> from <code>&lt;lex&gt;</code> tags in the tagged dictio
 ```js
 const includedGrammar = pos.includedDictionaries ?? [];
 const unavailableGrammar = pos.unavailableDictionaries ?? [];
+const grammarColumns = includedGrammar.map(d => d.label);
 display(html`<div class="note"><b>Validated grammar/POS adapters:</b> ${includedGrammar.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. <b>Unavailable for this metric:</b> ${unavailableGrammar.length.toLocaleString()} broad dictionaries; they are excluded, not counted as zero evidence.</div>`);
 ```
 
@@ -55,7 +56,7 @@ display(Inputs.table(pos.conflicts.map(c => ({
   ...Object.fromEntries(Object.entries(c.byDict).map(([d, g]) => [d, g.join("/")])),
   [t("phase2.conflicts.sources")]: c.examples
 })), {
-  columns: [t("phase2.conflicts.lemma"), "MW", "AP", "PWG", "PWK", "WIL", "VCP", "SKD", t("phase2.conflicts.sources")],
+  columns: [t("phase2.conflicts.lemma"), ...grammarColumns, t("phase2.conflicts.sources")],
   format: {
     [t("phase2.conflicts.sources")]: examples => html`${examples.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}`
   }

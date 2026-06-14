@@ -44,6 +44,64 @@ function lexGender(body) {
   return genderFromLex(body);
 }
 
+function lexValues(body) {
+  return [...String(body ?? "").matchAll(/<lex>([^<]{1,32})<\/lex>/g)].map(match => match[1].trim());
+}
+
+function normalizeLexValue(value) {
+  return String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/[.]+$/u, "")
+    .replace(/[¹²³0-9]+$/u, "")
+    .replace(/[.]+$/u, "");
+}
+
+function firstMappedLexGender(body, valueMap) {
+  for (const value of lexValues(body)) {
+    const mapped = valueMap[normalizeLexValue(value)];
+    if (mapped) return mapped;
+  }
+  return null;
+}
+
+const STANDARD_LEX_VALUES = {
+  m: "m",
+  f: "f",
+  n: "n",
+  a: "adj",
+  adj: "adj",
+  ind: "ind",
+  adv: "ind",
+  pron: "ind"
+};
+
+const MD_LEX_VALUES = {
+  ...STANDARD_LEX_VALUES,
+  ad: "ind",
+  prn: "ind"
+};
+
+const BHS_LEX_VALUES = {
+  ...STANDARD_LEX_VALUES,
+  nt: "n",
+  fem: "f",
+  indecl: "ind",
+  ppp: "adj"
+};
+
+function standardLexGender(body) {
+  return firstMappedLexGender(body, STANDARD_LEX_VALUES);
+}
+
+function mdLexGender(body) {
+  return firstMappedLexGender(body, MD_LEX_VALUES);
+}
+
+function bhsLexGender(body) {
+  return firstMappedLexGender(body, BHS_LEX_VALUES);
+}
+
 function vcpGender(body) {
   return genderFromProse(body, "vcp");
 }
@@ -81,6 +139,15 @@ export const FEATURE_ADAPTERS = {
     pwg: supportedAdapter("lex-gender-pos", "<lex> gender/POS", { extract: lexGender }),
     pw: supportedAdapter("lex-gender-pos", "<lex> gender/POS", { extract: lexGender }),
     wil: supportedAdapter("lex-gender-pos", "<lex> gender/POS", { extract: lexGender }),
+    cae: supportedAdapter("cae-lex-gender-pos", "CAE <lex> gender/POS", { extract: standardLexGender }),
+    md: supportedAdapter("md-lex-gender-pos", "MD <lex> gender/POS", {
+      extract: mdLexGender,
+      notes: ["MD verb voice tags such as P. and Ā. are ignored; adverb/pronoun tags are normalized to indeclinable."]
+    }),
+    bhs: supportedAdapter("bhs-lex-gender-pos", "BHS <lex> gender/POS", {
+      extract: bhsLexGender,
+      notes: ["BHS nt./fem./indecl. are normalized; ppp. is treated as adjectival evidence."]
+    }),
     vcp: supportedAdapter("vcp-prose-gender-pos", "VCP prose gender/POS marker", {
       confidence: "validated-with-limitations",
       extract: vcpGender,
