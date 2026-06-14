@@ -150,7 +150,8 @@ function main() {
       "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds."
     ],
     warnings: [
-      "verdict=model-pending means the surface is not in the segmentation snapshot yet, not that the model abstained.",
+      "verdict=model-pending means the surface is either not in the snapshot yet OR the model returned degenerate/junk output (filtered). The first ByT5 pass used the remote dharmamitra.org API in a degraded state (~38% failed/filtered); re-run on a healthy API or a local GPU for fuller, reproducible coverage.",
+      "model-splits-fewer with model=1 (no split) may be a soft model failure rather than a linguistic judgment; weight it accordingly.",
       "Expect systematic disagreement on bound morphemes (e.g. privative a-, -tva, -tA): the markup often counts them as members; the model may attach them. That is signal, not noise.",
       ...warnings
     ]
