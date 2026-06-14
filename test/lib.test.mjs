@@ -28,7 +28,7 @@ import {
 } from "../scripts/lib/dict-feature-adapters.mjs";
 import { iterateKoshaHeadwordsFromText, parseKoshaSynonymToken } from "../scripts/lib/dict-headwords.mjs";
 import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/dict-align.mjs";
-import { CORE_COMPARISON_DICTS, buildBroadHeadwordDictionaries, isBroadHeadwordEligible, shardIdForLemma } from "../scripts/lib/dict-scope.mjs";
+import { CORE_COMPARISON_DICTS, SOURCE_ROOT, buildBroadHeadwordDictionaries, isBroadHeadwordEligible, shardIdForLemma } from "../scripts/lib/dict-scope.mjs";
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
 import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma, slp1ToIast } from "../src/lib/lookup-normalize.js";
@@ -403,6 +403,16 @@ test("genderForDict dispatches lex vs prose by code", () => {
 });
 
 // ---- dict-feature-adapters ----
+// The "broadHeadword" scope is discovered from the sibling csl-orig checkout
+// (SOURCE_ROOT = ../csl-orig/v02), present in local dev but not on the csl-atlas
+// CI runner. Guard the broad-scope assertions so they skip when those sources
+// are absent; they still run fully in local development.
+const broadScopeSourcesPresent = (() => {
+  try { return fs.existsSync(SOURCE_ROOT) && fs.readdirSync(SOURCE_ROOT).length > 0; }
+  catch { return false; }
+})();
+const broadScopeTestOpts = { skip: broadScopeSourcesPresent ? false : "requires sibling ../csl-orig/v02 checkout (local-only integration test)" };
+
 test("feature adapter registry preserves supported Core 7 grammar extraction", () => {
   assert.deepEqual(
     supportedFeatureCodes("grammar", { scope: "coreComparison" }),
@@ -413,7 +423,7 @@ test("feature adapter registry preserves supported Core 7 grammar extraction", (
   assert.deepEqual(extractGrammar("skd", "a¦, klI, x"), { value: "n", methodId: "skd-prose-gender-pos", status: "supported" });
 });
 
-test("feature adapter registry promotes validated broad <lex> grammar candidates", () => {
+test("feature adapter registry promotes validated broad <lex> grammar candidates", broadScopeTestOpts, () => {
   assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("cae"));
   assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("md"));
   assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("bhs"));
@@ -428,7 +438,7 @@ test("feature adapter registry promotes validated broad <lex> grammar candidates
   assert.deepEqual(extractGrammar("pwkvn", "<lex>Adv.</lex>"), { value: "ind", methodId: "pwkvn-lex-gender-pos", status: "supported" });
 });
 
-test("feature adapter registry promotes validated kosha suffix grammar candidates", () => {
+test("feature adapter registry promotes validated kosha suffix grammar candidates", broadScopeTestOpts, () => {
   assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("abch"));
   assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("acph"));
   assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("acsj"));
@@ -437,7 +447,7 @@ test("feature adapter registry promotes validated kosha suffix grammar candidate
   assert.deepEqual(extractGrammar("acsj", "", { genderHint: "mf" }), { value: "m", values: ["m", "f"], methodId: "kosha-synonym-gender-suffix", status: "supported" });
 });
 
-test("feature support exposes broad unavailable dictionaries without promoting them", () => {
+test("feature support exposes broad unavailable dictionaries without promoting them", broadScopeTestOpts, () => {
   const grammar = featureSupport("grammar", { scope: "broadHeadword" });
   assert.equal(grammar.adapterScope, "broadHeadword");
   assert.equal(grammar.includedDictionaries.length, 14);
@@ -447,7 +457,7 @@ test("feature support exposes broad unavailable dictionaries without promoting t
   assert.ok(grammar.unavailableDictionaries.some(dict => dict.code === "lan"));
 });
 
-test("citation adapters separate supported <ls> from diagnostic prose proxies", () => {
+test("citation adapters separate supported <ls> from diagnostic prose proxies", broadScopeTestOpts, () => {
   assert.deepEqual(supportedFeatureCodes("citations", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
   assert.equal(supportedFeatureCodes("citations", { scope: "broadHeadword" }).length, 12);
   assert.equal(citationAdapterForDict("mw").status, "supported");
@@ -458,7 +468,7 @@ test("citation adapters separate supported <ls> from diagnostic prose proxies", 
   assert.equal(citationAdapterForDict("wil").status, "weak");
 });
 
-test("homonym and sense adapter scopes stay validated-only", () => {
+test("homonym and sense adapter scopes stay validated-only", broadScopeTestOpts, () => {
   assert.deepEqual(homonymFeatureCodes({ scope: "coreComparison" }), ["mw", "pwg", "pw"]);
   assert.equal(homonymFeatureCodes({ scope: "broadHeadword" }).length, 20);
   assert.ok(homonymFeatureCodes({ scope: "broadHeadword" }).includes("pwkvn"));
