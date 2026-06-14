@@ -1,0 +1,467 @@
+{
+  "schema": "mudidi-parse-rules/0.1",
+  "dict": "pwg",
+  "title": "Petersburg Woerterbuch, grosse Fassung (1855-75)",
+  "source_file": "csl-orig/v02/pwg/pwg.txt",
+  "target_language": "German",
+  "record_count": 123366,
+  "field_inventory": [
+    {
+      "tag": "ls",
+      "count": 772567,
+      "mdf": "\\bb",
+      "adequacy": "lossy",
+      "role": "literary source / L. hedge"
+    },
+    {
+      "tag": "ab",
+      "count": 185563,
+      "mdf": "\\cf",
+      "adequacy": "partial",
+      "role": "abbreviation (q.v. -> cross-ref)"
+    },
+    {
+      "tag": "lex",
+      "count": 131189,
+      "mdf": "\\ps",
+      "adequacy": "clean",
+      "role": "grammar/gender"
+    },
+    {
+      "tag": "k1",
+      "count": 123366,
+      "mdf": "\\lx",
+      "adequacy": "clean",
+      "role": "headword"
+    },
+    {
+      "tag": "k2",
+      "count": 123366,
+      "mdf": "\\lc",
+      "adequacy": "partial",
+      "role": "segmented/sort key"
+    },
+    {
+      "tag": "pc",
+      "count": 123366,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "page-column coordinate (archival)"
+    },
+    {
+      "tag": "div",
+      "count": 113613,
+      "mdf": "\\sn",
+      "adequacy": "clean",
+      "role": "sense division"
+    },
+    {
+      "tag": "h",
+      "count": 6499,
+      "mdf": "\\hm",
+      "adequacy": "clean",
+      "role": "homonym number"
+    },
+    {
+      "tag": "info",
+      "count": 628,
+      "mdf": null,
+      "adequacy": "n/a",
+      "role": "machine annotation (infrastructure)"
+    },
+    {
+      "tag": "lang",
+      "count": 550,
+      "mdf": "\\es",
+      "adequacy": "partial",
+      "role": "source language"
+    },
+    {
+      "tag": "hom",
+      "count": 82,
+      "mdf": "\\hm",
+      "adequacy": "clean",
+      "role": "homonym display"
+    }
+  ],
+  "unmapped_tags": [
+    {
+      "tag": "is",
+      "count": 53947
+    },
+    {
+      "tag": "span",
+      "count": 88
+    },
+    {
+      "tag": "H",
+      "count": 76
+    },
+    {
+      "tag": "F",
+      "count": 38
+    },
+    {
+      "tag": "VN",
+      "count": 3
+    },
+    {
+      "tag": "fr",
+      "count": 1
+    }
+  ],
+  "abbreviations": {
+    "ab_distinct": 785,
+    "ab_top": [
+      {
+        "value": "Vgl.",
+        "count": 18304
+      },
+      {
+        "value": "N. pr.",
+        "count": 17791
+      },
+      {
+        "value": "vgl.",
+        "count": 11538
+      },
+      {
+        "value": "Sch.",
+        "count": 6847
+      },
+      {
+        "value": "best.",
+        "count": 6591
+      },
+      {
+        "value": "v. a.",
+        "count": 6520
+      },
+      {
+        "value": "Schol.",
+        "count": 6279
+      },
+      {
+        "value": "N.",
+        "count": 5372
+      },
+      {
+        "value": "v. l.",
+        "count": 4965
+      },
+      {
+        "value": "s.",
+        "count": 4638
+      },
+      {
+        "value": "u. s. w.",
+        "count": 4342
+      },
+      {
+        "value": "Bez.",
+        "count": 4263
+      },
+      {
+        "value": "pl.",
+        "count": 3857
+      },
+      {
+        "value": "dass.",
+        "count": 3827
+      },
+      {
+        "value": "caus.",
+        "count": 3646
+      },
+      {
+        "value": "s. u.",
+        "count": 3417
+      },
+      {
+        "value": "Bein.",
+        "count": 2625
+      },
+      {
+        "value": "acc.",
+        "count": 2622
+      },
+      {
+        "value": "ebend.",
+        "count": 2412
+      },
+      {
+        "value": "st.",
+        "count": 2401
+      },
+      {
+        "value": "partic.",
+        "count": 2331
+      },
+      {
+        "value": "u.",
+        "count": 2270
+      },
+      {
+        "value": "patron.",
+        "count": 2094
+      },
+      {
+        "value": "comp.",
+        "count": 2082
+      },
+      {
+        "value": "Comm.",
+        "count": 2058
+      },
+      {
+        "value": "Bed.",
+        "count": 1978
+      },
+      {
+        "value": "med.",
+        "count": 1933
+      },
+      {
+        "value": "Z.",
+        "count": 1667
+      },
+      {
+        "value": "nom. abstr.",
+        "count": 1442
+      },
+      {
+        "value": "Ausg.",
+        "count": 1442
+      },
+      {
+        "value": "d. i.",
+        "count": 1441
+      },
+      {
+        "value": "v. u.",
+        "count": 1434
+      },
+      {
+        "value": "adj. comp.",
+        "count": 1398
+      },
+      {
+        "value": "loc.",
+        "count": 1249
+      },
+      {
+        "value": "Gegens.",
+        "count": 1235
+      },
+      {
+        "value": "pass.",
+        "count": 1162
+      },
+      {
+        "value": "gen.",
+        "count": 1101
+      },
+      {
+        "value": "instr.",
+        "count": 981
+      },
+      {
+        "value": "nom. ag.",
+        "count": 965
+      },
+      {
+        "value": "act.",
+        "count": 955
+      }
+    ],
+    "ls_siglum_distinct": 238569,
+    "ls_siglum_top": [
+      {
+        "value": "ŚKDR.",
+        "count": 20109
+      },
+      {
+        "value": "MED.",
+        "count": 7178
+      },
+      {
+        "value": "H. an.",
+        "count": 6619
+      },
+      {
+        "value": "RĀJAN.",
+        "count": 5905
+      },
+      {
+        "value": "ŚABDAR.",
+        "count": 3125
+      },
+      {
+        "value": "ed. Bomb.",
+        "count": 2662
+      },
+      {
+        "value": "WILS.",
+        "count": 2014
+      },
+      {
+        "value": "GORR.",
+        "count": 1586
+      },
+      {
+        "value": "UJJVAL.",
+        "count": 1520
+      },
+      {
+        "value": "ŚABDAC.",
+        "count": 1427
+      },
+      {
+        "value": "KULL.",
+        "count": 1417
+      },
+      {
+        "value": "SĀY.",
+        "count": 1254
+      },
+      {
+        "value": "AK.",
+        "count": 1138
+      },
+      {
+        "value": "ŚAṂK.",
+        "count": 1137
+      },
+      {
+        "value": "TRIK.",
+        "count": 1105
+      },
+      {
+        "value": "JAṬĀDH.",
+        "count": 1029
+      },
+      {
+        "value": "NIGH. PR.",
+        "count": 914
+      },
+      {
+        "value": "NĪLAK.",
+        "count": 912
+      },
+      {
+        "value": "WILSON",
+        "count": 812
+      },
+      {
+        "value": "ŚABDAM.",
+        "count": 783
+      },
+      {
+        "value": "WILSON.",
+        "count": 771
+      },
+      {
+        "value": "DAŚAK.",
+        "count": 741
+      },
+      {
+        "value": "ŚABDĀRTHAK.",
+        "count": 706
+      },
+      {
+        "value": "SIDDH. K.",
+        "count": 690
+      },
+      {
+        "value": "ed. Calc.",
+        "count": 675
+      },
+      {
+        "value": "RATNAM.",
+        "count": 664
+      },
+      {
+        "value": "VIŚVA",
+        "count": 657
+      },
+      {
+        "value": "BHAR.",
+        "count": 636
+      },
+      {
+        "value": "P. 4,2,80.",
+        "count": 462
+      },
+      {
+        "value": "PRAVARĀDHY.",
+        "count": 437
+      },
+      {
+        "value": "KĀŚ.",
+        "count": 426
+      },
+      {
+        "value": "MBH.",
+        "count": 414
+      },
+      {
+        "value": "PAT.",
+        "count": 412
+      },
+      {
+        "value": "ŚIV.",
+        "count": 409
+      },
+      {
+        "value": "BHĀVAPR.",
+        "count": 406
+      },
+      {
+        "value": "MALLIN.",
+        "count": 350
+      },
+      {
+        "value": "MAHĪDH.",
+        "count": 349
+      },
+      {
+        "value": "HALĀY.",
+        "count": 346
+      },
+      {
+        "value": "HEM.",
+        "count": 340
+      },
+      {
+        "value": "MADHUS.",
+        "count": 333
+      }
+    ],
+    "expansions": "not linked; see MWS/mwabbreviations/abbr.html and per-dict intro pages"
+  },
+  "entry_structure": {
+    "record_open": "<L>",
+    "record_close": "<LEND>",
+    "field_separator": "¦",
+    "headword_marker": "k1",
+    "homonym_marker": "h",
+    "sense_division_marker": "div",
+    "entry_code_marker": null,
+    "continuation_entries": 0,
+    "dominant_microstructure_layer": "xref",
+    "microstructure_layers_present": [
+      "subentry",
+      "preverb",
+      "xref",
+      "root"
+    ]
+  },
+  "caveats": [],
+  "evidence": {
+    "field_inventory.count": "observed",
+    "field_inventory.mdf": "derived (csl-standards MDF_EXPORT_MAPPING.md)",
+    "abbreviations": "observed",
+    "dominant_microstructure_layer": "derived"
+  },
+  "generated_by": "scripts/parse_rules/build_parse_rules.py"
+}

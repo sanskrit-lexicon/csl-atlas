@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "promotion-experiment",
+  "claim": "Reviewed checkpoint window rules applied to source-backed R2 anchor rows; non-window rows retained as labeled side evidence.",
+  "generatedAt": "2026-06-13T06:56:27.400Z",
+  "generatedBy": "npm run build-r2-promotion-experiment",
+  "sourcePath": "src/data/review/r2-checkpoint-review.json",
+  "inputs": [
+    "src/data/review/r2-checkpoint-review.json",
+    "data/lexico/r2_source_anchor_summary.json",
+    "../csl-orig/v02 (anchor-lemma records)"
+  ],
+  "archiveParityPolicy": "Archive parity is a comparison signal and regression-control cue; ratios are reported, never optimized.",
+  "assumptions": [
+    "Only rows with reviewStatus reviewed-ok are processed; dispositions gate every rule.",
+    "div-source-scope record roles come verbatim from the reviewed checkpoint notes (DIV_SOURCE_RECORD_ROLES).",
+    "The PWG window follows the print's own sense enumeration: numbered top-level divisions (\"— N)\" at div n=\"1\") of the target-primary record before the first div n=\"p\" preverb block; <div n> depth values are never counted as senses.",
+    "The Benfey (gam:ben) window is the bare finite root (marker run 0); primary derivatives (participles, causative — runs 1..k) and preverb-combined lexemes (introduced by \"-- With <preverb>\", runs k+1..) are separate lexical items, retained as labeled side evidence. The archived count (root + first participle) is itself an artifact, not the optimization target.",
+    "Indigenous iti-unit classification is heuristic (authority hints/quotation markers, then >350-char prose as discussion) and is a labeling experiment, not a scholar-reviewed sense decision.",
+    "AE windows apply to the reviewed nominal lemma only; verbal reverse rows remain side evidence per r2-drift:gam:ae.",
+    "No existing R2 output (senses, H1, H2H3, explorer) is modified; this artifact is additive."
+  ],
+  "warnings": [],
+  "counts": {
+    "checkpointRows": 10,
+    "promoted": 7,
+    "sideEvidence": 2,
+    "controls": 1
+  },
+  "results": [
+    {
+      "reviewId": "r2-drift:dharma:ae",
+      "lemma": "dharma",
+      "dict": "ae",
+      "packetId": "ae-reverse-bands",
+      "parserDisposition": "promote-parser-candidate",
+      "acceptedParserLabels": [
+        "reverse-high-candidate",
+        "direct-equivalent-candidate",
+        "reverse-medium-review",
+        "reverse-low-context",
+        "reverse-tail-overmatch",
+        "phrase-or-collocation-match",
+        "broad-headword-overmatch"
+      ],
+      "archivedSenseRows": 24,
+      "sourceSenseRows": 66,
+      "windowRows": 18,
+      "sideEvidenceRows": 48,
+      "windowLabelCounts": {
+        "reverse-tail-overmatch": 25,
+        "reverse-high-candidate": 18,
+        "reverse-medium-review": 12,
+        "reverse-low-context": 11
+      },
+      "outcome": "window-applied",
+      "ratioBefore": 2.75,
+      "ratioAfter": 0.75
+    },
+    {
+      "reviewId": "r2-drift:dharma:pwg",
+      "lemma": "dharma",
+      "dict": "pwg",
+      "packetId": "div-source-scope",
+      "parserDisposition": "promote-parser-candidate",
+      "acceptedParserLabels": [
+        "target-primary-series",
+        "same-headword-supplement",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "archivedSenseRows": 5,
+      "sourceSenseRows": 21,
+      "windowRows": 11,
+      "sideEvidenceRows": 10,
+      "windowLabelCounts": {
+        "target-primary-series": 11,
+        "same-headword-supplement": 7,
+        "candidate-sense-marker": 2,
+        "preface-or-proxy": 1
+      },
+      "outcome": "window-applied",
+      "ratioBefore": 4.2,
+      "ratioAfter": 2.2
+    },
+    {
+      "reviewId": "r2-drift:dharma:skd",
+      "lemma": "dharma",
+      "dict": "skd",
+      "packetId": "indigenous-iti-authority",
+      "parserDisposition": "promote-parser-candidate",
+      "acceptedParserLabels": [
+        "source-record-exact-control",
+        "same-headword-record-split",
+        "definition-iti-unit",
+        "authority-quotation-unit"
+      ],
+      "archivedSenseRows": 4,
+      "sourceSenseRows": 15,
+      "windowRows": 1,
+      "sideEvidenceRows": 14,
+      "windowLabelCounts": {
+        "authority-quotation-unit": 10,
+        "authority-siglum-unit": 4,
+        "definition-iti-unit": 1
+      },
+      "outcome": "window-applied",
+      "ratioBefore": 3.75,
+      "ratioAfter": 0.25
+    },
+    {
+      "reviewId": "r2-drift:dharma:vcp",
+      "lemma": "dharma",
+      "dict": "vcp",
+      "packetId": "indigenous-iti-authority",
+      "parserDisposition": "promote-parser-candidate",
+      "acceptedParserLabels": [
+        "definition-iti-unit",
+        "authority-siglum-unit",
+        "commentarial-discussion-unit"
+      ],
+      "archivedSenseRows": 9,
+      "sourceSenseRows": 27,
+      "windowRows": 9,
+      "sideEvidenceRows": 18,
+      "windowLabelCounts": {
+        "authority-siglum-unit": 14,
+        "definition-iti-unit": 9,
+        "authority-quotation-unit": 4
+      },
+      "outcome": "window-applied",
+      "ratioBefore": 3,
+      "ratioAfter": 1
+    },
+    {
+      "reviewId": "r2-drift:gam:ae",
+      "lemma": "gam",
+      "dict": "ae",
+      "packetId": "ae-reverse-bands",
+      "parserDisposition": "retain-side-evidence",
+      "acceptedParserLabels": [
+        "reverse-high-candidate",
+        "reverse-medium-review",
+        "reverse-low-context",
+        "reverse-tail-overmatch",
+        "phrase-or-collocation-match",
+        "broad-headword-overmatch"
+      ],
+      "archivedSenseRows": 30,
+      "sourceSenseRows": 243,
+      "windowRows": null,
+      "sideEvidenceRows": 243,
+      "windowLabelCounts": null,
+      "outcome": "side-evidence-retained",
+      "ratioBefore": 8.1,
+      "ratioAfter": null
+    },
+    {
+      "reviewId": "r2-drift:gam:ap",
+      "lemma": "gam",
+      "dict": "ap",
+      "packetId": "source-gap-controls",
+      "parserDisposition": "control-only",
+      "acceptedParserLabels": [
+        "archive-parity-control",
+        "continuation-proxy-row"
+      ],
+      "archivedSenseRows": 16,
+      "sourceSenseRows": 16,
+      "windowRows": 16,
+      "sideEvidenceRows": 0,
+      "windowLabelCounts": null,
+      "outcome": "parity-confirmed",
+      "ratioBefore": 1,
+      "ratioAfter": 1
+    },
+    {
+      "reviewId": "r2-drift:gam:ben",
+      "lemma": "gam",
+      "dict": "ben",
+      "packetId": "marker-run-scope",
+      "parserDisposition": "promote-parser-candidate",
+      "acceptedParserLabels": [
+        "archive-prefix-runs",
+        "reset-run-expansion"
+      ],
+      "archivedSenseRows": 23,
+      "sourceSenseRows": 172,
+      "windowRows": 9,
+      "sideEvidenceRows": 163,
+      "windowLabelCounts": {
+        "preverb-lexeme-run": 138,
+        "primary-derivative-run": 24,
+        "bare-root-run": 9,
+        "preface-or-proxy": 1
+      },
+      "outcome": "window-applied",
+      "ratioBefore": 7.478,
+      "ratioAfter": 0.391
+    },
+    {
+      "reviewId": "r2-drift:gam:pwg",
+      "lemma": "gam",
+      "dict": "pwg",
+      "packetId": "div-source-scope",
+      "parserDisposition": "promote-parser-candidate",
+      "acceptedParserLabels": [
+        "target-primary-series",
+        "same-headword-supplement",
+        "prefixed-or-derived-series",
+        "separate-homonym",
+        "candidate-sense-marker",
+        "supplement-marker"
+      ],
+      "archivedSenseRows": 30,
+      "sourceSenseRows": 353,
+      "windowRows": 7,
+      "sideEvidenceRows": 346,
+      "windowLabelCounts": {
+        "prefixed-or-derived-series": 240,
+        "same-headword-supplement": 100,
+        "target-primary-series": 7,
+        "candidate-sense-marker": 4,
+        "preface-or-proxy": 1,
+        "separate-homonym": 1
+      },
+      "outcome": "window-applied",
+      "ratioBefore": 11.767,
+      "ratioAfter": 0.233
+    },
+    {
+      "reviewId": "r2-drift:iti:ap",
+      "lemma": "iti",
+      "dict": "ap",
+      "packetId": "source-gap-controls",
+      "parserDisposition": "retain-side-evidence",
+      "acceptedParserLabels": [
+        "under-split-marker-gap",
+        "nested-marker-gap",
+        "preface-proxy-extra"
+      ],
+      "archivedSenseRows": 5,
+      "sourceSenseRows": 3,
+      "windowRows": null,
+      "sideEvidenceRows": 3,
+      "windowLabelCounts": null,
+      "outcome": "side-evidence-retained",
+      "ratioBefore": 0.6,
+      "ratioAfter": null
+    },
+    {
+      "reviewId": "r2-drift:rama:ben",
+      "lemma": "rama",
+      "dict": "ben",
+      "packetId": "marker-run-scope",
+      "parserDisposition": "promote-parser-candidate",
+      "acceptedParserLabels": [
+        "source-record-exact-target",
+        "lookup-bundle-split"
+      ],
+      "archivedSenseRows": 7,
+      "sourceSenseRows": 15,
+      "windowRows": 7,
+      "sideEvidenceRows": 8,
+      "windowLabelCounts": {
+        "lookup-bundle-split": 8,
+        "target-run": 7
+      },
+      "outcome": "window-applied",
+      "ratioBefore": 2.143,
+      "ratioAfter": 1
+    }
+  ]
+}

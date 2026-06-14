@@ -8,6 +8,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const REPORT_PATH = path.resolve(process.cwd(), "data", "lexico", "semantic_field_report.json");
@@ -189,6 +190,7 @@ function main() {
 
   const payload = {
     schemaVersion: SCHEMA_VERSION,
+    ...licenseFields(),
     generatedAt: new Date().toISOString(),
     claim: "H4: dictionaries have measurable Amarakosa-native semantic-field coverage profiles.",
     evidenceLabel: "derived",

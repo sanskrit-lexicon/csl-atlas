@@ -7,6 +7,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { licenseFields } from "./dataset-meta.mjs";
 
 export const SCHEMA_VERSION = "1.0.0";
 
@@ -61,6 +62,7 @@ export function reviewFields(preserved, reviewId) {
 export function reviewPayload({ queue, sourcePath, items, assumptions = [], warnings = [], extra = {} }) {
   return {
     schemaVersion: SCHEMA_VERSION,
+    ...licenseFields(),
     generatedAt: new Date().toISOString(),
     sourcePath,
     recordCount: items.length,

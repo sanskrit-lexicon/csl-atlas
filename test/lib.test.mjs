@@ -524,6 +524,13 @@ test("reviewPayload assembles envelope with recordCount = items.length", () => {
   assert.ok(Array.isArray(p.items) && Array.isArray(p.assumptions) && Array.isArray(p.warnings));
 });
 
+test("reviewPayload declares the dataset licence after schemaVersion", () => {
+  const p = reviewPayload({ queue: "pos-gender-conflict", sourcePath: "x", items: [] });
+  assert.equal(p.license, "CC-BY-SA-4.0");
+  assert.equal(p.licenseUrl, "https://creativecommons.org/licenses/by-sa/4.0/");
+  assert.deepEqual(Object.keys(p).slice(0, 3), ["schemaVersion", "license", "licenseUrl"]);
+});
+
 test("loadPreserved returns empty map for a missing file", () => {
   const p = path.join(os.tmpdir(), `nope-${Date.now()}.json`);
   assert.equal(loadPreserved(p).size, 0);

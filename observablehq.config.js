@@ -17,6 +17,7 @@ export default {
       name: "Reader mode",
       pages: [
         { name: "Reader lookup", path: "/tools/reader-lookup" },
+        { name: "Learner's reading layer", path: "/tools/learner-reading-layer" },
         { name: "Lemma dossier", path: "/tools/dictionary-dossier" }
       ]
     },
@@ -81,7 +82,8 @@ export default {
       pages: [
         { name: "Grounded framework (body)", path: "/paper/grounded" },
         { name: "Triangulation (§7)", path: "/paper/triangulation" },
-        { name: "Framework appendices A·B·C", path: "/paper/appendices" }
+        { name: "Framework appendices A·B·C", path: "/paper/appendices" },
+        { name: "Related work & positioning", path: "/paper/related-work" }
       ]
     },
     {
@@ -92,6 +94,8 @@ export default {
         { name: "PWK (Kürzerer Fassung)", path: "/dicts/pwk" },
         { name: "AP (Apte 1957)", path: "/dicts/ap" },
         { name: "WIL (Wilson 1832)", path: "/dicts/wil" },
+        { name: "BEN (Benfey 1866)", path: "/dicts/ben" },
+        { name: "CAE (Cappeller 1891)", path: "/dicts/cae" },
         { name: "SKD (Śabdakalpadruma)", path: "/dicts/skd" },
         { name: "VCP (Vācaspatya)", path: "/dicts/vcp" },
         { name: "ARMH (Halāyudha)", path: "/dicts/armh" },

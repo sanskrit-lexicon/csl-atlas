@@ -1,0 +1,7662 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-13T18:54:45.786Z",
+  "generatedBy": "npm run build-lemma-normalization-crosscheck",
+  "note": "Atlas lemma keys (SLP1) for Dharmamitra `lemma`; consumed by import-dharmamitra-lemma.py.",
+  "minDicts": 7,
+  "count": 1913,
+  "candidates": [
+    {
+      "key": "a",
+      "lemmaSlp1": "a"
+    },
+    {
+      "key": "A",
+      "lemmaSlp1": "A"
+    },
+    {
+      "key": "ABA",
+      "lemmaSlp1": "ABA"
+    },
+    {
+      "key": "abDidvIpA",
+      "lemmaSlp1": "abDidvIpA"
+    },
+    {
+      "key": "abDimaRqUkI",
+      "lemmaSlp1": "abDimaRqUkI"
+    },
+    {
+      "key": "abDinagarI",
+      "lemmaSlp1": "abDinagarI"
+    },
+    {
+      "key": "ABerI",
+      "lemmaSlp1": "ABerI"
+    },
+    {
+      "key": "aBi",
+      "lemmaSlp1": "aBi"
+    },
+    {
+      "key": "aBiDA",
+      "lemmaSlp1": "aBiDA"
+    },
+    {
+      "key": "aBiDyA",
+      "lemmaSlp1": "aBiDyA"
+    },
+    {
+      "key": "aBijit",
+      "lemmaSlp1": "aBijit"
+    },
+    {
+      "key": "aBiKyA",
+      "lemmaSlp1": "aBiKyA"
+    },
+    {
+      "key": "ABIrapallI",
+      "lemmaSlp1": "ABIrapallI"
+    },
+    {
+      "key": "aBirUpa",
+      "lemmaSlp1": "aBirUpa"
+    },
+    {
+      "key": "aBisArikA",
+      "lemmaSlp1": "aBisArikA"
+    },
+    {
+      "key": "abja",
+      "lemmaSlp1": "abja"
+    },
+    {
+      "key": "abjinI",
+      "lemmaSlp1": "abjinI"
+    },
+    {
+      "key": "aByAnta",
+      "lemmaSlp1": "aByAnta"
+    },
+    {
+      "key": "acalakIlA",
+      "lemmaSlp1": "acalakIlA"
+    },
+    {
+      "key": "acirapraBA",
+      "lemmaSlp1": "acirapraBA"
+    },
+    {
+      "key": "ada",
+      "lemmaSlp1": "ada"
+    },
+    {
+      "key": "aDaramaDu",
+      "lemmaSlp1": "aDaramaDu"
+    },
+    {
+      "key": "aDarastAt",
+      "lemmaSlp1": "aDarastAt"
+    },
+    {
+      "key": "aDarAt",
+      "lemmaSlp1": "aDarAt"
+    },
+    {
+      "key": "aDastAt",
+      "lemmaSlp1": "aDastAt"
+    },
+    {
+      "key": "aDi",
+      "lemmaSlp1": "aDi"
+    },
+    {
+      "key": "aDityakA",
+      "lemmaSlp1": "aDityakA"
+    },
+    {
+      "key": "AdityapuzpikA",
+      "lemmaSlp1": "AdityapuzpikA"
+    },
+    {
+      "key": "aDojihvikA",
+      "lemmaSlp1": "aDojihvikA"
+    },
+    {
+      "key": "adriBid",
+      "lemmaSlp1": "adriBid"
+    },
+    {
+      "key": "adrikIlA",
+      "lemmaSlp1": "adrikIlA"
+    },
+    {
+      "key": "adritanayA",
+      "lemmaSlp1": "adritanayA"
+    },
+    {
+      "key": "aDunA",
+      "lemmaSlp1": "aDunA"
+    },
+    {
+      "key": "adya",
+      "lemmaSlp1": "adya"
+    },
+    {
+      "key": "ADyA",
+      "lemmaSlp1": "ADyA"
+    },
+    {
+      "key": "aDyagni",
+      "lemmaSlp1": "aDyagni"
+    },
+    {
+      "key": "aDyaRqA",
+      "lemmaSlp1": "aDyaRqA"
+    },
+    {
+      "key": "aga",
+      "lemmaSlp1": "aga"
+    },
+    {
+      "key": "aGa",
+      "lemmaSlp1": "aGa"
+    },
+    {
+      "key": "agarI",
+      "lemmaSlp1": "agarI"
+    },
+    {
+      "key": "agaru",
+      "lemmaSlp1": "agaru"
+    },
+    {
+      "key": "agnAyI",
+      "lemmaSlp1": "agnAyI"
+    },
+    {
+      "key": "agnicit",
+      "lemmaSlp1": "agnicit"
+    },
+    {
+      "key": "agnidamanI",
+      "lemmaSlp1": "agnidamanI"
+    },
+    {
+      "key": "agnijvAlA",
+      "lemmaSlp1": "agnijvAlA"
+    },
+    {
+      "key": "agnikArikA",
+      "lemmaSlp1": "agnikArikA"
+    },
+    {
+      "key": "agniruhA",
+      "lemmaSlp1": "agniruhA"
+    },
+    {
+      "key": "agrajaNGA",
+      "lemmaSlp1": "agrajaNGA"
+    },
+    {
+      "key": "agraparRI",
+      "lemmaSlp1": "agraparRI"
+    },
+    {
+      "key": "aguru",
+      "lemmaSlp1": "aguru"
+    },
+    {
+      "key": "aha",
+      "lemmaSlp1": "aha"
+    },
+    {
+      "key": "Aha",
+      "lemmaSlp1": "Aha"
+    },
+    {
+      "key": "ahaha",
+      "lemmaSlp1": "ahaha"
+    },
+    {
+      "key": "ahahA",
+      "lemmaSlp1": "ahahA"
+    },
+    {
+      "key": "ahamahamikA",
+      "lemmaSlp1": "ahamahamikA"
+    },
+    {
+      "key": "ahe",
+      "lemmaSlp1": "ahe"
+    },
+    {
+      "key": "aho",
+      "lemmaSlp1": "aho"
+    },
+    {
+      "key": "Aho",
+      "lemmaSlp1": "Aho"
+    },
+    {
+      "key": "AhopuruzikA",
+      "lemmaSlp1": "AhopuruzikA"
+    },
+    {
+      "key": "aja",
+      "lemmaSlp1": "aja"
+    },
+    {
+      "key": "ajAdanI",
+      "lemmaSlp1": "ajAdanI"
+    },
+    {
+      "key": "ajaganDikA",
+      "lemmaSlp1": "ajaganDikA"
+    },
+    {
+      "key": "ajaganDinI",
+      "lemmaSlp1": "ajaganDinI"
+    },
+    {
+      "key": "ajAjI",
+      "lemmaSlp1": "ajAjI"
+    },
+    {
+      "key": "ajamodA",
+      "lemmaSlp1": "ajamodA"
+    },
+    {
+      "key": "ajAntrI",
+      "lemmaSlp1": "ajAntrI"
+    },
+    {
+      "key": "ajaSfNgI",
+      "lemmaSlp1": "ajaSfNgI"
+    },
+    {
+      "key": "ajaTyA",
+      "lemmaSlp1": "ajaTyA"
+    },
+    {
+      "key": "ajawA",
+      "lemmaSlp1": "ajawA"
+    },
+    {
+      "key": "ajJawA",
+      "lemmaSlp1": "ajJawA"
+    },
+    {
+      "key": "AjYA",
+      "lemmaSlp1": "AjYA"
+    },
+    {
+      "key": "aka",
+      "lemmaSlp1": "aka"
+    },
+    {
+      "key": "AkASamAMsI",
+      "lemmaSlp1": "AkASamAMsI"
+    },
+    {
+      "key": "AkASamUlI",
+      "lemmaSlp1": "AkASamUlI"
+    },
+    {
+      "key": "AkASavallI",
+      "lemmaSlp1": "AkASavallI"
+    },
+    {
+      "key": "AkASavARI",
+      "lemmaSlp1": "AkASavARI"
+    },
+    {
+      "key": "akasmAt",
+      "lemmaSlp1": "akasmAt"
+    },
+    {
+      "key": "akkA",
+      "lemmaSlp1": "akkA"
+    },
+    {
+      "key": "AKukarRI",
+      "lemmaSlp1": "AKukarRI"
+    },
+    {
+      "key": "akUpAra",
+      "lemmaSlp1": "akUpAra"
+    },
+    {
+      "key": "AKuparRikA",
+      "lemmaSlp1": "AKuparRikA"
+    },
+    {
+      "key": "AKuvizahA",
+      "lemmaSlp1": "AKuvizahA"
+    },
+    {
+      "key": "AKyA",
+      "lemmaSlp1": "AKyA"
+    },
+    {
+      "key": "akzamAlA",
+      "lemmaSlp1": "akzamAlA"
+    },
+    {
+      "key": "akzarajananI",
+      "lemmaSlp1": "akzarajananI"
+    },
+    {
+      "key": "akzaratUlikA",
+      "lemmaSlp1": "akzaratUlikA"
+    },
+    {
+      "key": "akzayatftIyA",
+      "lemmaSlp1": "akzayatftIyA"
+    },
+    {
+      "key": "akzi",
+      "lemmaSlp1": "akzi"
+    },
+    {
+      "key": "akzOhiRI",
+      "lemmaSlp1": "akzOhiRI"
+    },
+    {
+      "key": "alakanandA",
+      "lemmaSlp1": "alakanandA"
+    },
+    {
+      "key": "alakapraBA",
+      "lemmaSlp1": "alakapraBA"
+    },
+    {
+      "key": "alam",
+      "lemmaSlp1": "alam"
+    },
+    {
+      "key": "alijihvA",
+      "lemmaSlp1": "alijihvA"
+    },
+    {
+      "key": "allA",
+      "lemmaSlp1": "allA"
+    },
+    {
+      "key": "alpakeSI",
+      "lemmaSlp1": "alpakeSI"
+    },
+    {
+      "key": "Alu",
+      "lemmaSlp1": "Alu"
+    },
+    {
+      "key": "ama",
+      "lemmaSlp1": "ama"
+    },
+    {
+      "key": "amA",
+      "lemmaSlp1": "amA"
+    },
+    {
+      "key": "AmaganDi",
+      "lemmaSlp1": "AmaganDi"
+    },
+    {
+      "key": "amAmasI",
+      "lemmaSlp1": "amAmasI"
+    },
+    {
+      "key": "amarAvatI",
+      "lemmaSlp1": "amarAvatI"
+    },
+    {
+      "key": "amAvasI",
+      "lemmaSlp1": "amAvasI"
+    },
+    {
+      "key": "amba",
+      "lemmaSlp1": "amba"
+    },
+    {
+      "key": "ambA",
+      "lemmaSlp1": "ambA"
+    },
+    {
+      "key": "ambAlikA",
+      "lemmaSlp1": "ambAlikA"
+    },
+    {
+      "key": "ambazWakI",
+      "lemmaSlp1": "ambazWakI"
+    },
+    {
+      "key": "ambikA",
+      "lemmaSlp1": "ambikA"
+    },
+    {
+      "key": "amBojinI",
+      "lemmaSlp1": "amBojinI"
+    },
+    {
+      "key": "ambu",
+      "lemmaSlp1": "ambu"
+    },
+    {
+      "key": "ambuBft",
+      "lemmaSlp1": "ambuBft"
+    },
+    {
+      "key": "ambusarpiRI",
+      "lemmaSlp1": "ambusarpiRI"
+    },
+    {
+      "key": "ambusecanI",
+      "lemmaSlp1": "ambusecanI"
+    },
+    {
+      "key": "ambuvAcI",
+      "lemmaSlp1": "ambuvAcI"
+    },
+    {
+      "key": "ambuvAsI",
+      "lemmaSlp1": "ambuvAsI"
+    },
+    {
+      "key": "AmikzA",
+      "lemmaSlp1": "AmikzA"
+    },
+    {
+      "key": "amlaloRikA",
+      "lemmaSlp1": "amlaloRikA"
+    },
+    {
+      "key": "aMSumatPalA",
+      "lemmaSlp1": "aMSumatPalA"
+    },
+    {
+      "key": "amutra",
+      "lemmaSlp1": "amutra"
+    },
+    {
+      "key": "anakzi",
+      "lemmaSlp1": "anakzi"
+    },
+    {
+      "key": "analapriyA",
+      "lemmaSlp1": "analapriyA"
+    },
+    {
+      "key": "anaMSumatPalA",
+      "lemmaSlp1": "anaMSumatPalA"
+    },
+    {
+      "key": "anantajit",
+      "lemmaSlp1": "anantajit"
+    },
+    {
+      "key": "anantaSIrzA",
+      "lemmaSlp1": "anantaSIrzA"
+    },
+    {
+      "key": "anDamUzikA",
+      "lemmaSlp1": "anDamUzikA"
+    },
+    {
+      "key": "anekaDA",
+      "lemmaSlp1": "anekaDA"
+    },
+    {
+      "key": "aNga",
+      "lemmaSlp1": "aNga"
+    },
+    {
+      "key": "aNgAraSakawI",
+      "lemmaSlp1": "aNgAraSakawI"
+    },
+    {
+      "key": "aNgAravallI",
+      "lemmaSlp1": "aNgAravallI"
+    },
+    {
+      "key": "aNgikA",
+      "lemmaSlp1": "aNgikA"
+    },
+    {
+      "key": "aNGrivallikA",
+      "lemmaSlp1": "aNGrivallikA"
+    },
+    {
+      "key": "aNgulI",
+      "lemmaSlp1": "aNgulI"
+    },
+    {
+      "key": "aNgulimudrA",
+      "lemmaSlp1": "aNgulimudrA"
+    },
+    {
+      "key": "anIkinI",
+      "lemmaSlp1": "anIkinI"
+    },
+    {
+      "key": "anirudDaBAvinI",
+      "lemmaSlp1": "anirudDaBAvinI"
+    },
+    {
+      "key": "aNkapAlI",
+      "lemmaSlp1": "aNkapAlI"
+    },
+    {
+      "key": "ano",
+      "lemmaSlp1": "ano"
+    },
+    {
+      "key": "antar",
+      "lemmaSlp1": "antar"
+    },
+    {
+      "key": "antarA",
+      "lemmaSlp1": "antarA"
+    },
+    {
+      "key": "antarApatyA",
+      "lemmaSlp1": "antarApatyA"
+    },
+    {
+      "key": "antareRa",
+      "lemmaSlp1": "antareRa"
+    },
+    {
+      "key": "antaSayyA",
+      "lemmaSlp1": "antaSayyA"
+    },
+    {
+      "key": "AntikA",
+      "lemmaSlp1": "AntikA"
+    },
+    {
+      "key": "anu",
+      "lemmaSlp1": "anu"
+    },
+    {
+      "key": "anujYA",
+      "lemmaSlp1": "anujYA"
+    },
+    {
+      "key": "anukampA",
+      "lemmaSlp1": "anukampA"
+    },
+    {
+      "key": "anukramaRikA",
+      "lemmaSlp1": "anukramaRikA"
+    },
+    {
+      "key": "anumA",
+      "lemmaSlp1": "anumA"
+    },
+    {
+      "key": "anupadInA",
+      "lemmaSlp1": "anupadInA"
+    },
+    {
+      "key": "anvazwakA",
+      "lemmaSlp1": "anvazwakA"
+    },
+    {
+      "key": "AnvIkzikI",
+      "lemmaSlp1": "AnvIkzikI"
+    },
+    {
+      "key": "anyaBft",
+      "lemmaSlp1": "anyaBft"
+    },
+    {
+      "key": "anyadA",
+      "lemmaSlp1": "anyadA"
+    },
+    {
+      "key": "anyaTA",
+      "lemmaSlp1": "anyaTA"
+    },
+    {
+      "key": "anyatra",
+      "lemmaSlp1": "anyatra"
+    },
+    {
+      "key": "apa",
+      "lemmaSlp1": "apa"
+    },
+    {
+      "key": "Apad",
+      "lemmaSlp1": "Apad"
+    },
+    {
+      "key": "apagA",
+      "lemmaSlp1": "apagA"
+    },
+    {
+      "key": "ApagA",
+      "lemmaSlp1": "ApagA"
+    },
+    {
+      "key": "apakriyA",
+      "lemmaSlp1": "apakriyA"
+    },
+    {
+      "key": "apalAzikA",
+      "lemmaSlp1": "apalAzikA"
+    },
+    {
+      "key": "apasalavi",
+      "lemmaSlp1": "apasalavi"
+    },
+    {
+      "key": "apawI",
+      "lemmaSlp1": "apawI"
+    },
+    {
+      "key": "ApfcCA",
+      "lemmaSlp1": "ApfcCA"
+    },
+    {
+      "key": "api",
+      "lemmaSlp1": "api"
+    },
+    {
+      "key": "arare",
+      "lemmaSlp1": "arare"
+    },
+    {
+      "key": "araRyakadalI",
+      "lemmaSlp1": "araRyakadalI"
+    },
+    {
+      "key": "araRyamakzikA",
+      "lemmaSlp1": "araRyamakzikA"
+    },
+    {
+      "key": "ArAt",
+      "lemmaSlp1": "ArAt"
+    },
+    {
+      "key": "aravindinI",
+      "lemmaSlp1": "aravindinI"
+    },
+    {
+      "key": "ArdramAzA",
+      "lemmaSlp1": "ArdramAzA"
+    },
+    {
+      "key": "are",
+      "lemmaSlp1": "are"
+    },
+    {
+      "key": "arere",
+      "lemmaSlp1": "arere"
+    },
+    {
+      "key": "ArGA",
+      "lemmaSlp1": "ArGA"
+    },
+    {
+      "key": "arha",
+      "lemmaSlp1": "arha"
+    },
+    {
+      "key": "arka",
+      "lemmaSlp1": "arka"
+    },
+    {
+      "key": "arTanA",
+      "lemmaSlp1": "arTanA"
+    },
+    {
+      "key": "aRu",
+      "lemmaSlp1": "aRu"
+    },
+    {
+      "key": "aRuBA",
+      "lemmaSlp1": "aRuBA"
+    },
+    {
+      "key": "arunDatI",
+      "lemmaSlp1": "arunDatI"
+    },
+    {
+      "key": "aRurevatI",
+      "lemmaSlp1": "aRurevatI"
+    },
+    {
+      "key": "ASA",
+      "lemmaSlp1": "ASA"
+    },
+    {
+      "key": "asakft",
+      "lemmaSlp1": "asakft"
+    },
+    {
+      "key": "ASaMsA",
+      "lemmaSlp1": "ASaMsA"
+    },
+    {
+      "key": "asanaparRI",
+      "lemmaSlp1": "asanaparRI"
+    },
+    {
+      "key": "aSanAyA",
+      "lemmaSlp1": "aSanAyA"
+    },
+    {
+      "key": "asfgDarA",
+      "lemmaSlp1": "asfgDarA"
+    },
+    {
+      "key": "ASI",
+      "lemmaSlp1": "ASI"
+    },
+    {
+      "key": "asiDenukA",
+      "lemmaSlp1": "asiDenukA"
+    },
+    {
+      "key": "asiknI",
+      "lemmaSlp1": "asiknI"
+    },
+    {
+      "key": "asiputrikA",
+      "lemmaSlp1": "asiputrikA"
+    },
+    {
+      "key": "aSlezA",
+      "lemmaSlp1": "aSlezA"
+    },
+    {
+      "key": "aSokarohiRI",
+      "lemmaSlp1": "aSokarohiRI"
+    },
+    {
+      "key": "AsPujit",
+      "lemmaSlp1": "AsPujit"
+    },
+    {
+      "key": "asramAtfkA",
+      "lemmaSlp1": "asramAtfkA"
+    },
+    {
+      "key": "asraroDinI",
+      "lemmaSlp1": "asraroDinI"
+    },
+    {
+      "key": "aSru",
+      "lemmaSlp1": "aSru"
+    },
+    {
+      "key": "AsTA",
+      "lemmaSlp1": "AsTA"
+    },
+    {
+      "key": "asti",
+      "lemmaSlp1": "asti"
+    },
+    {
+      "key": "asTi",
+      "lemmaSlp1": "asTi"
+    },
+    {
+      "key": "asTikft",
+      "lemmaSlp1": "asTikft"
+    },
+    {
+      "key": "asu",
+      "lemmaSlp1": "asu"
+    },
+    {
+      "key": "ASu",
+      "lemmaSlp1": "ASu"
+    },
+    {
+      "key": "asuBft",
+      "lemmaSlp1": "asuBft"
+    },
+    {
+      "key": "asurasA",
+      "lemmaSlp1": "asurasA"
+    },
+    {
+      "key": "aSvadaMzwrA",
+      "lemmaSlp1": "aSvadaMzwrA"
+    },
+    {
+      "key": "aSvaganDA",
+      "lemmaSlp1": "aSvaganDA"
+    },
+    {
+      "key": "aSvakinI",
+      "lemmaSlp1": "aSvakinI"
+    },
+    {
+      "key": "aSvamahizikA",
+      "lemmaSlp1": "aSvamahizikA"
+    },
+    {
+      "key": "aSvaSAlA",
+      "lemmaSlp1": "aSvaSAlA"
+    },
+    {
+      "key": "aTa",
+      "lemmaSlp1": "aTa"
+    },
+    {
+      "key": "ati",
+      "lemmaSlp1": "ati"
+    },
+    {
+      "key": "atiguhA",
+      "lemmaSlp1": "atiguhA"
+    },
+    {
+      "key": "atimodA",
+      "lemmaSlp1": "atimodA"
+    },
+    {
+      "key": "atisAmyA",
+      "lemmaSlp1": "atisAmyA"
+    },
+    {
+      "key": "atIva",
+      "lemmaSlp1": "atIva"
+    },
+    {
+      "key": "ativyaTA",
+      "lemmaSlp1": "ativyaTA"
+    },
+    {
+      "key": "AtmahatyA",
+      "lemmaSlp1": "AtmahatyA"
+    },
+    {
+      "key": "AtmamUlI",
+      "lemmaSlp1": "AtmamUlI"
+    },
+    {
+      "key": "aTo",
+      "lemmaSlp1": "aTo"
+    },
+    {
+      "key": "atra",
+      "lemmaSlp1": "atra"
+    },
+    {
+      "key": "attA",
+      "lemmaSlp1": "attA"
+    },
+    {
+      "key": "ava",
+      "lemmaSlp1": "ava"
+    },
+    {
+      "key": "avadaMSa",
+      "lemmaSlp1": "avadaMSa"
+    },
+    {
+      "key": "avaguRWikA",
+      "lemmaSlp1": "avaguRWikA"
+    },
+    {
+      "key": "avahAlikA",
+      "lemmaSlp1": "avahAlikA"
+    },
+    {
+      "key": "avajYA",
+      "lemmaSlp1": "avajYA"
+    },
+    {
+      "key": "avAkpuzpI",
+      "lemmaSlp1": "avAkpuzpI"
+    },
+    {
+      "key": "avalIlA",
+      "lemmaSlp1": "avalIlA"
+    },
+    {
+      "key": "avanI",
+      "lemmaSlp1": "avanI"
+    },
+    {
+      "key": "avarastAt",
+      "lemmaSlp1": "avarastAt"
+    },
+    {
+      "key": "avArikA",
+      "lemmaSlp1": "avArikA"
+    },
+    {
+      "key": "avasakTikA",
+      "lemmaSlp1": "avasakTikA"
+    },
+    {
+      "key": "avastAt",
+      "lemmaSlp1": "avastAt"
+    },
+    {
+      "key": "avastu",
+      "lemmaSlp1": "avastu"
+    },
+    {
+      "key": "avekzA",
+      "lemmaSlp1": "avekzA"
+    },
+    {
+      "key": "Avft",
+      "lemmaSlp1": "Avft"
+    },
+    {
+      "key": "avI",
+      "lemmaSlp1": "avI"
+    },
+    {
+      "key": "avilA",
+      "lemmaSlp1": "avilA"
+    },
+    {
+      "key": "awavI",
+      "lemmaSlp1": "awavI"
+    },
+    {
+      "key": "awwa",
+      "lemmaSlp1": "awwa"
+    },
+    {
+      "key": "awwawwa",
+      "lemmaSlp1": "awwawwa"
+    },
+    {
+      "key": "aya",
+      "lemmaSlp1": "aya"
+    },
+    {
+      "key": "AyatacCadA",
+      "lemmaSlp1": "AyatacCadA"
+    },
+    {
+      "key": "aye",
+      "lemmaSlp1": "aye"
+    },
+    {
+      "key": "ayi",
+      "lemmaSlp1": "ayi"
+    },
+    {
+      "key": "aYjanADikA",
+      "lemmaSlp1": "aYjanADikA"
+    },
+    {
+      "key": "aYjanAvatI",
+      "lemmaSlp1": "aYjanAvatI"
+    },
+    {
+      "key": "BA",
+      "lemmaSlp1": "BA"
+    },
+    {
+      "key": "BadradAru",
+      "lemmaSlp1": "BadradAru"
+    },
+    {
+      "key": "BadrakAlI",
+      "lemmaSlp1": "BadrakAlI"
+    },
+    {
+      "key": "BadrasomA",
+      "lemmaSlp1": "BadrasomA"
+    },
+    {
+      "key": "BagnI",
+      "lemmaSlp1": "BagnI"
+    },
+    {
+      "key": "bahu",
+      "lemmaSlp1": "bahu"
+    },
+    {
+      "key": "bAhUbAhavi",
+      "lemmaSlp1": "bAhUbAhavi"
+    },
+    {
+      "key": "bAhuBUzA",
+      "lemmaSlp1": "bAhuBUzA"
+    },
+    {
+      "key": "bahuDA",
+      "lemmaSlp1": "bahuDA"
+    },
+    {
+      "key": "bAhudA",
+      "lemmaSlp1": "bAhudA"
+    },
+    {
+      "key": "bAhusahasraBft",
+      "lemmaSlp1": "bAhusahasraBft"
+    },
+    {
+      "key": "bahutra",
+      "lemmaSlp1": "bahutra"
+    },
+    {
+      "key": "Bala",
+      "lemmaSlp1": "Bala"
+    },
+    {
+      "key": "bAlamUzikA",
+      "lemmaSlp1": "bAlamUzikA"
+    },
+    {
+      "key": "bAlapuzpI",
+      "lemmaSlp1": "bAlapuzpI"
+    },
+    {
+      "key": "BalatA",
+      "lemmaSlp1": "BalatA"
+    },
+    {
+      "key": "balAtmikA",
+      "lemmaSlp1": "balAtmikA"
+    },
+    {
+      "key": "balAYcitA",
+      "lemmaSlp1": "balAYcitA"
+    },
+    {
+      "key": "Balla",
+      "lemmaSlp1": "Balla"
+    },
+    {
+      "key": "banDutA",
+      "lemmaSlp1": "banDutA"
+    },
+    {
+      "key": "BaNgArI",
+      "lemmaSlp1": "BaNgArI"
+    },
+    {
+      "key": "BaNgavAsA",
+      "lemmaSlp1": "BaNgavAsA"
+    },
+    {
+      "key": "BAnuPalA",
+      "lemmaSlp1": "BAnuPalA"
+    },
+    {
+      "key": "BaRqahAsinI",
+      "lemmaSlp1": "BaRqahAsinI"
+    },
+    {
+      "key": "BaRwAkI",
+      "lemmaSlp1": "BaRwAkI"
+    },
+    {
+      "key": "BastrA",
+      "lemmaSlp1": "BastrA"
+    },
+    {
+      "key": "BavAnI",
+      "lemmaSlp1": "BavAnI"
+    },
+    {
+      "key": "BavitavyatA",
+      "lemmaSlp1": "BavitavyatA"
+    },
+    {
+      "key": "BawwinI",
+      "lemmaSlp1": "BawwinI"
+    },
+    {
+      "key": "BAzA",
+      "lemmaSlp1": "BAzA"
+    },
+    {
+      "key": "BEkzajIvikA",
+      "lemmaSlp1": "BEkzajIvikA"
+    },
+    {
+      "key": "BfSa",
+      "lemmaSlp1": "BfSa"
+    },
+    {
+      "key": "BI",
+      "lemmaSlp1": "BI"
+    },
+    {
+      "key": "BidA",
+      "lemmaSlp1": "BidA"
+    },
+    {
+      "key": "BikzA",
+      "lemmaSlp1": "BikzA"
+    },
+    {
+      "key": "BissawA",
+      "lemmaSlp1": "BissawA"
+    },
+    {
+      "key": "BogapiSAcikA",
+      "lemmaSlp1": "BogapiSAcikA"
+    },
+    {
+      "key": "BogAvalI",
+      "lemmaSlp1": "BogAvalI"
+    },
+    {
+      "key": "brahmadarBA",
+      "lemmaSlp1": "brahmadarBA"
+    },
+    {
+      "key": "brahmahatyA",
+      "lemmaSlp1": "brahmahatyA"
+    },
+    {
+      "key": "brahmARI",
+      "lemmaSlp1": "brahmARI"
+    },
+    {
+      "key": "brahmavidyA",
+      "lemmaSlp1": "brahmavidyA"
+    },
+    {
+      "key": "brahmI",
+      "lemmaSlp1": "brahmI"
+    },
+    {
+      "key": "BrAtfjAyA",
+      "lemmaSlp1": "BrAtfjAyA"
+    },
+    {
+      "key": "brU",
+      "lemmaSlp1": "brU"
+    },
+    {
+      "key": "BU",
+      "lemmaSlp1": "BU"
+    },
+    {
+      "key": "BUBft",
+      "lemmaSlp1": "BUBft"
+    },
+    {
+      "key": "buBukzA",
+      "lemmaSlp1": "buBukzA"
+    },
+    {
+      "key": "buDa",
+      "lemmaSlp1": "buDa"
+    },
+    {
+      "key": "BUlatA",
+      "lemmaSlp1": "BUlatA"
+    },
+    {
+      "key": "BUmikA",
+      "lemmaSlp1": "BUmikA"
+    },
+    {
+      "key": "BUmyAmalakI",
+      "lemmaSlp1": "BUmyAmalakI"
+    },
+    {
+      "key": "BUri",
+      "lemmaSlp1": "BUri"
+    },
+    {
+      "key": "BUriPenA",
+      "lemmaSlp1": "BUriPenA"
+    },
+    {
+      "key": "BUruRqI",
+      "lemmaSlp1": "BUruRqI"
+    },
+    {
+      "key": "BUtaDAtrI",
+      "lemmaSlp1": "BUtaDAtrI"
+    },
+    {
+      "key": "BUtapUrRimA",
+      "lemmaSlp1": "BUtapUrRimA"
+    },
+    {
+      "key": "BUzA",
+      "lemmaSlp1": "BUzA"
+    },
+    {
+      "key": "ca",
+      "lemmaSlp1": "ca"
+    },
+    {
+      "key": "Ca",
+      "lemmaSlp1": "Ca"
+    },
+    {
+      "key": "CA",
+      "lemmaSlp1": "CA"
+    },
+    {
+      "key": "cakraBedinI",
+      "lemmaSlp1": "cakraBedinI"
+    },
+    {
+      "key": "cakraBft",
+      "lemmaSlp1": "cakraBft"
+    },
+    {
+      "key": "cakrANkI",
+      "lemmaSlp1": "cakrANkI"
+    },
+    {
+      "key": "cala",
+      "lemmaSlp1": "cala"
+    },
+    {
+      "key": "CallI",
+      "lemmaSlp1": "CallI"
+    },
+    {
+      "key": "campAvatI",
+      "lemmaSlp1": "campAvatI"
+    },
+    {
+      "key": "cAmpilA",
+      "lemmaSlp1": "cAmpilA"
+    },
+    {
+      "key": "cana",
+      "lemmaSlp1": "cana"
+    },
+    {
+      "key": "cAndraBAgA",
+      "lemmaSlp1": "cAndraBAgA"
+    },
+    {
+      "key": "candragolikA",
+      "lemmaSlp1": "candragolikA"
+    },
+    {
+      "key": "candrakalA",
+      "lemmaSlp1": "candrakalA"
+    },
+    {
+      "key": "candrareKA",
+      "lemmaSlp1": "candrareKA"
+    },
+    {
+      "key": "candraSAlA",
+      "lemmaSlp1": "candraSAlA"
+    },
+    {
+      "key": "candravallarI",
+      "lemmaSlp1": "candravallarI"
+    },
+    {
+      "key": "cara",
+      "lemmaSlp1": "cara"
+    },
+    {
+      "key": "caRa",
+      "lemmaSlp1": "caRa"
+    },
+    {
+      "key": "caramakzmABft",
+      "lemmaSlp1": "caramakzmABft"
+    },
+    {
+      "key": "caRqAlavallakI",
+      "lemmaSlp1": "caRqAlavallakI"
+    },
+    {
+      "key": "caRqAlikA",
+      "lemmaSlp1": "caRqAlikA"
+    },
+    {
+      "key": "caRqanAyikA",
+      "lemmaSlp1": "caRqanAyikA"
+    },
+    {
+      "key": "caRqikA",
+      "lemmaSlp1": "caRqikA"
+    },
+    {
+      "key": "cAruDArA",
+      "lemmaSlp1": "cAruDArA"
+    },
+    {
+      "key": "cAruPalA",
+      "lemmaSlp1": "cAruPalA"
+    },
+    {
+      "key": "cAruSilA",
+      "lemmaSlp1": "cAruSilA"
+    },
+    {
+      "key": "cAruvratA",
+      "lemmaSlp1": "cAruvratA"
+    },
+    {
+      "key": "catuzpAwI",
+      "lemmaSlp1": "catuzpAwI"
+    },
+    {
+      "key": "catuzpAWI",
+      "lemmaSlp1": "catuzpAWI"
+    },
+    {
+      "key": "CawA",
+      "lemmaSlp1": "CawA"
+    },
+    {
+      "key": "CawABA",
+      "lemmaSlp1": "CawABA"
+    },
+    {
+      "key": "caYcuBft",
+      "lemmaSlp1": "caYcuBft"
+    },
+    {
+      "key": "ci",
+      "lemmaSlp1": "ci"
+    },
+    {
+      "key": "Cidra",
+      "lemmaSlp1": "Cidra"
+    },
+    {
+      "key": "cikitsA",
+      "lemmaSlp1": "cikitsA"
+    },
+    {
+      "key": "cikka",
+      "lemmaSlp1": "cikka"
+    },
+    {
+      "key": "CikkA",
+      "lemmaSlp1": "CikkA"
+    },
+    {
+      "key": "cilamIlikA",
+      "lemmaSlp1": "cilamIlikA"
+    },
+    {
+      "key": "cIlikA",
+      "lemmaSlp1": "cIlikA"
+    },
+    {
+      "key": "cilla",
+      "lemmaSlp1": "cilla"
+    },
+    {
+      "key": "cillaBakzyA",
+      "lemmaSlp1": "cillaBakzyA"
+    },
+    {
+      "key": "cintA",
+      "lemmaSlp1": "cintA"
+    },
+    {
+      "key": "cintiqI",
+      "lemmaSlp1": "cintiqI"
+    },
+    {
+      "key": "cintiyA",
+      "lemmaSlp1": "cintiyA"
+    },
+    {
+      "key": "ciraRwI",
+      "lemmaSlp1": "ciraRwI"
+    },
+    {
+      "key": "cirasUtA",
+      "lemmaSlp1": "cirasUtA"
+    },
+    {
+      "key": "ciri",
+      "lemmaSlp1": "ciri"
+    },
+    {
+      "key": "cIrikA",
+      "lemmaSlp1": "cIrikA"
+    },
+    {
+      "key": "cita",
+      "lemmaSlp1": "cita"
+    },
+    {
+      "key": "citikA",
+      "lemmaSlp1": "citikA"
+    },
+    {
+      "key": "citra",
+      "lemmaSlp1": "citra"
+    },
+    {
+      "key": "citrakft",
+      "lemmaSlp1": "citrakft"
+    },
+    {
+      "key": "citraleKA",
+      "lemmaSlp1": "citraleKA"
+    },
+    {
+      "key": "citralocanA",
+      "lemmaSlp1": "citralocanA"
+    },
+    {
+      "key": "citranetrA",
+      "lemmaSlp1": "citranetrA"
+    },
+    {
+      "key": "citrapAdA",
+      "lemmaSlp1": "citrapAdA"
+    },
+    {
+      "key": "cittaprasannatA",
+      "lemmaSlp1": "cittaprasannatA"
+    },
+    {
+      "key": "ciYcA",
+      "lemmaSlp1": "ciYcA"
+    },
+    {
+      "key": "cOrikA",
+      "lemmaSlp1": "cOrikA"
+    },
+    {
+      "key": "CowikA",
+      "lemmaSlp1": "CowikA"
+    },
+    {
+      "key": "culla",
+      "lemmaSlp1": "culla"
+    },
+    {
+      "key": "Cupa",
+      "lemmaSlp1": "Cupa"
+    },
+    {
+      "key": "curA",
+      "lemmaSlp1": "curA"
+    },
+    {
+      "key": "CurA",
+      "lemmaSlp1": "CurA"
+    },
+    {
+      "key": "curI",
+      "lemmaSlp1": "curI"
+    },
+    {
+      "key": "CurI",
+      "lemmaSlp1": "CurI"
+    },
+    {
+      "key": "CurikA",
+      "lemmaSlp1": "CurikA"
+    },
+    {
+      "key": "cuYcurI",
+      "lemmaSlp1": "cuYcurI"
+    },
+    {
+      "key": "cUzA",
+      "lemmaSlp1": "cUzA"
+    },
+    {
+      "key": "cyu",
+      "lemmaSlp1": "cyu"
+    },
+    {
+      "key": "Cyu",
+      "lemmaSlp1": "Cyu"
+    },
+    {
+      "key": "da",
+      "lemmaSlp1": "da"
+    },
+    {
+      "key": "dA",
+      "lemmaSlp1": "dA"
+    },
+    {
+      "key": "Da",
+      "lemmaSlp1": "Da"
+    },
+    {
+      "key": "DA",
+      "lemmaSlp1": "DA"
+    },
+    {
+      "key": "dada",
+      "lemmaSlp1": "dada"
+    },
+    {
+      "key": "daDa",
+      "lemmaSlp1": "daDa"
+    },
+    {
+      "key": "daDi",
+      "lemmaSlp1": "daDi"
+    },
+    {
+      "key": "dahanapriyA",
+      "lemmaSlp1": "dahanapriyA"
+    },
+    {
+      "key": "dakza",
+      "lemmaSlp1": "dakza"
+    },
+    {
+      "key": "dakzajA",
+      "lemmaSlp1": "dakzajA"
+    },
+    {
+      "key": "dakzakanyA",
+      "lemmaSlp1": "dakzakanyA"
+    },
+    {
+      "key": "dakziRakAlikA",
+      "lemmaSlp1": "dakziRakAlikA"
+    },
+    {
+      "key": "dakziRAt",
+      "lemmaSlp1": "dakziRAt"
+    },
+    {
+      "key": "dakziRena",
+      "lemmaSlp1": "dakziRena"
+    },
+    {
+      "key": "dalasnasA",
+      "lemmaSlp1": "dalasnasA"
+    },
+    {
+      "key": "Dama",
+      "lemmaSlp1": "Dama"
+    },
+    {
+      "key": "dAmanI",
+      "lemmaSlp1": "dAmanI"
+    },
+    {
+      "key": "DanASA",
+      "lemmaSlp1": "DanASA"
+    },
+    {
+      "key": "DAnDA",
+      "lemmaSlp1": "DAnDA"
+    },
+    {
+      "key": "dantAlikA",
+      "lemmaSlp1": "dantAlikA"
+    },
+    {
+      "key": "dantaSarkarA",
+      "lemmaSlp1": "dantaSarkarA"
+    },
+    {
+      "key": "DanurBft",
+      "lemmaSlp1": "DanurBft"
+    },
+    {
+      "key": "DanurlatA",
+      "lemmaSlp1": "DanurlatA"
+    },
+    {
+      "key": "dAQA",
+      "lemmaSlp1": "dAQA"
+    },
+    {
+      "key": "dara",
+      "lemmaSlp1": "dara"
+    },
+    {
+      "key": "DaritrI",
+      "lemmaSlp1": "DaritrI"
+    },
+    {
+      "key": "daRqaBft",
+      "lemmaSlp1": "daRqaBft"
+    },
+    {
+      "key": "daRqAdaRqi",
+      "lemmaSlp1": "daRqAdaRqi"
+    },
+    {
+      "key": "daRqaQakkA",
+      "lemmaSlp1": "daRqaQakkA"
+    },
+    {
+      "key": "daRqayAtrA",
+      "lemmaSlp1": "daRqayAtrA"
+    },
+    {
+      "key": "darSayAminI",
+      "lemmaSlp1": "darSayAminI"
+    },
+    {
+      "key": "dAru",
+      "lemmaSlp1": "dAru"
+    },
+    {
+      "key": "dArugarBA",
+      "lemmaSlp1": "dArugarBA"
+    },
+    {
+      "key": "dAruharidrA",
+      "lemmaSlp1": "dAruharidrA"
+    },
+    {
+      "key": "dAruniSA",
+      "lemmaSlp1": "dAruniSA"
+    },
+    {
+      "key": "daSA",
+      "lemmaSlp1": "daSA"
+    },
+    {
+      "key": "daSaDA",
+      "lemmaSlp1": "daSaDA"
+    },
+    {
+      "key": "daSarUpaBft",
+      "lemmaSlp1": "daSarUpaBft"
+    },
+    {
+      "key": "dasradevatA",
+      "lemmaSlp1": "dasradevatA"
+    },
+    {
+      "key": "DAtreyI",
+      "lemmaSlp1": "DAtreyI"
+    },
+    {
+      "key": "DAva",
+      "lemmaSlp1": "DAva"
+    },
+    {
+      "key": "DavalamfttikA",
+      "lemmaSlp1": "DavalamfttikA"
+    },
+    {
+      "key": "DAwI",
+      "lemmaSlp1": "DAwI"
+    },
+    {
+      "key": "dehaBft",
+      "lemmaSlp1": "dehaBft"
+    },
+    {
+      "key": "dehalA",
+      "lemmaSlp1": "dehalA"
+    },
+    {
+      "key": "dehayAtrA",
+      "lemmaSlp1": "dehayAtrA"
+    },
+    {
+      "key": "dehikA",
+      "lemmaSlp1": "dehikA"
+    },
+    {
+      "key": "DenuzyA",
+      "lemmaSlp1": "DenuzyA"
+    },
+    {
+      "key": "deSakArI",
+      "lemmaSlp1": "deSakArI"
+    },
+    {
+      "key": "deva",
+      "lemmaSlp1": "deva"
+    },
+    {
+      "key": "devadAru",
+      "lemmaSlp1": "devadAru"
+    },
+    {
+      "key": "devadroRI",
+      "lemmaSlp1": "devadroRI"
+    },
+    {
+      "key": "devakirI",
+      "lemmaSlp1": "devakirI"
+    },
+    {
+      "key": "devAlA",
+      "lemmaSlp1": "devAlA"
+    },
+    {
+      "key": "devalatA",
+      "lemmaSlp1": "devalatA"
+    },
+    {
+      "key": "devatA",
+      "lemmaSlp1": "devatA"
+    },
+    {
+      "key": "devawwI",
+      "lemmaSlp1": "devawwI"
+    },
+    {
+      "key": "devayAtrA",
+      "lemmaSlp1": "devayAtrA"
+    },
+    {
+      "key": "dfkpriyA",
+      "lemmaSlp1": "dfkpriyA"
+    },
+    {
+      "key": "dfQagAtrikA",
+      "lemmaSlp1": "dfQagAtrikA"
+    },
+    {
+      "key": "dfzwikft",
+      "lemmaSlp1": "dfzwikft"
+    },
+    {
+      "key": "dI",
+      "lemmaSlp1": "dI"
+    },
+    {
+      "key": "Di",
+      "lemmaSlp1": "Di"
+    },
+    {
+      "key": "DI",
+      "lemmaSlp1": "DI"
+    },
+    {
+      "key": "DIdA",
+      "lemmaSlp1": "DIdA"
+    },
+    {
+      "key": "dIDI",
+      "lemmaSlp1": "dIDI"
+    },
+    {
+      "key": "Dik",
+      "lemmaSlp1": "Dik"
+    },
+    {
+      "key": "dIkzA",
+      "lemmaSlp1": "dIkzA"
+    },
+    {
+      "key": "dinikA",
+      "lemmaSlp1": "dinikA"
+    },
+    {
+      "key": "dIpaKorI",
+      "lemmaSlp1": "dIpaKorI"
+    },
+    {
+      "key": "dIpakUpI",
+      "lemmaSlp1": "dIpakUpI"
+    },
+    {
+      "key": "dIpaSfNKalA",
+      "lemmaSlp1": "dIpaSfNKalA"
+    },
+    {
+      "key": "dIpaSiKA",
+      "lemmaSlp1": "dIpaSiKA"
+    },
+    {
+      "key": "dIptajihvA",
+      "lemmaSlp1": "dIptajihvA"
+    },
+    {
+      "key": "dIrGanidrA",
+      "lemmaSlp1": "dIrGanidrA"
+    },
+    {
+      "key": "dIrGikA",
+      "lemmaSlp1": "dIrGikA"
+    },
+    {
+      "key": "divA",
+      "lemmaSlp1": "divA"
+    },
+    {
+      "key": "DmA",
+      "lemmaSlp1": "DmA"
+    },
+    {
+      "key": "dohadavatI",
+      "lemmaSlp1": "dohadavatI"
+    },
+    {
+      "key": "dozA",
+      "lemmaSlp1": "dozA"
+    },
+    {
+      "key": "drA",
+      "lemmaSlp1": "drA"
+    },
+    {
+      "key": "drAk",
+      "lemmaSlp1": "drAk"
+    },
+    {
+      "key": "drAkzA",
+      "lemmaSlp1": "drAkzA"
+    },
+    {
+      "key": "droRaduGA",
+      "lemmaSlp1": "droRaduGA"
+    },
+    {
+      "key": "droRadugDA",
+      "lemmaSlp1": "droRadugDA"
+    },
+    {
+      "key": "droRaGA",
+      "lemmaSlp1": "droRaGA"
+    },
+    {
+      "key": "droRaganDikA",
+      "lemmaSlp1": "droRaganDikA"
+    },
+    {
+      "key": "dru",
+      "lemmaSlp1": "dru"
+    },
+    {
+      "key": "drU",
+      "lemmaSlp1": "drU"
+    },
+    {
+      "key": "Dru",
+      "lemmaSlp1": "Dru"
+    },
+    {
+      "key": "du",
+      "lemmaSlp1": "du"
+    },
+    {
+      "key": "dU",
+      "lemmaSlp1": "dU"
+    },
+    {
+      "key": "Du",
+      "lemmaSlp1": "Du"
+    },
+    {
+      "key": "DU",
+      "lemmaSlp1": "DU"
+    },
+    {
+      "key": "dugDikA",
+      "lemmaSlp1": "dugDikA"
+    },
+    {
+      "key": "duHKa",
+      "lemmaSlp1": "duHKa"
+    },
+    {
+      "key": "duHKadohyA",
+      "lemmaSlp1": "duHKadohyA"
+    },
+    {
+      "key": "DUlikA",
+      "lemmaSlp1": "DUlikA"
+    },
+    {
+      "key": "DUmamahizI",
+      "lemmaSlp1": "DUmamahizI"
+    },
+    {
+      "key": "DUmorRA",
+      "lemmaSlp1": "DUmorRA"
+    },
+    {
+      "key": "DUmyA",
+      "lemmaSlp1": "DUmyA"
+    },
+    {
+      "key": "DunI",
+      "lemmaSlp1": "DunI"
+    },
+    {
+      "key": "durIzaRA",
+      "lemmaSlp1": "durIzaRA"
+    },
+    {
+      "key": "duzWu",
+      "lemmaSlp1": "duzWu"
+    },
+    {
+      "key": "dvAdaSa",
+      "lemmaSlp1": "dvAdaSa"
+    },
+    {
+      "key": "DvaninAlA",
+      "lemmaSlp1": "DvaninAlA"
+    },
+    {
+      "key": "dvArapiRqI",
+      "lemmaSlp1": "dvArapiRqI"
+    },
+    {
+      "key": "dvArAvatI",
+      "lemmaSlp1": "dvArAvatI"
+    },
+    {
+      "key": "dviDA",
+      "lemmaSlp1": "dviDA"
+    },
+    {
+      "key": "dvidAmnI",
+      "lemmaSlp1": "dvidAmnI"
+    },
+    {
+      "key": "dvivAhikA",
+      "lemmaSlp1": "dvivAhikA"
+    },
+    {
+      "key": "dyu",
+      "lemmaSlp1": "dyu"
+    },
+    {
+      "key": "dyUtakft",
+      "lemmaSlp1": "dyUtakft"
+    },
+    {
+      "key": "dyUtapUrRimA",
+      "lemmaSlp1": "dyUtapUrRimA"
+    },
+    {
+      "key": "e",
+      "lemmaSlp1": "e"
+    },
+    {
+      "key": "E",
+      "lemmaSlp1": "E"
+    },
+    {
+      "key": "ekAbdA",
+      "lemmaSlp1": "ekAbdA"
+    },
+    {
+      "key": "ekAnaMSA",
+      "lemmaSlp1": "ekAnaMSA"
+    },
+    {
+      "key": "ekapatnI",
+      "lemmaSlp1": "ekapatnI"
+    },
+    {
+      "key": "ekAvalI",
+      "lemmaSlp1": "ekAvalI"
+    },
+    {
+      "key": "ekavarzikA",
+      "lemmaSlp1": "ekavarzikA"
+    },
+    {
+      "key": "ekayazwikA",
+      "lemmaSlp1": "ekayazwikA"
+    },
+    {
+      "key": "elA",
+      "lemmaSlp1": "elA"
+    },
+    {
+      "key": "elIkA",
+      "lemmaSlp1": "elIkA"
+    },
+    {
+      "key": "eRaBft",
+      "lemmaSlp1": "eRaBft"
+    },
+    {
+      "key": "eraRqaPalA",
+      "lemmaSlp1": "eraRqaPalA"
+    },
+    {
+      "key": "etad",
+      "lemmaSlp1": "etad"
+    },
+    {
+      "key": "etarhi",
+      "lemmaSlp1": "etarhi"
+    },
+    {
+      "key": "eva",
+      "lemmaSlp1": "eva"
+    },
+    {
+      "key": "f",
+      "lemmaSlp1": "f"
+    },
+    {
+      "key": "F",
+      "lemmaSlp1": "F"
+    },
+    {
+      "key": "fcCarA",
+      "lemmaSlp1": "fcCarA"
+    },
+    {
+      "key": "fju",
+      "lemmaSlp1": "fju"
+    },
+    {
+      "key": "fkzaganDA",
+      "lemmaSlp1": "fkzaganDA"
+    },
+    {
+      "key": "fRa",
+      "lemmaSlp1": "fRa"
+    },
+    {
+      "key": "fta",
+      "lemmaSlp1": "fta"
+    },
+    {
+      "key": "fte",
+      "lemmaSlp1": "fte"
+    },
+    {
+      "key": "ftIyA",
+      "lemmaSlp1": "ftIyA"
+    },
+    {
+      "key": "fzikulyA",
+      "lemmaSlp1": "fzikulyA"
+    },
+    {
+      "key": "fziproktA",
+      "lemmaSlp1": "fziproktA"
+    },
+    {
+      "key": "ga",
+      "lemmaSlp1": "ga"
+    },
+    {
+      "key": "gA",
+      "lemmaSlp1": "gA"
+    },
+    {
+      "key": "Ga",
+      "lemmaSlp1": "Ga"
+    },
+    {
+      "key": "gaBIrikA",
+      "lemmaSlp1": "gaBIrikA"
+    },
+    {
+      "key": "gADa",
+      "lemmaSlp1": "gADa"
+    },
+    {
+      "key": "gadABft",
+      "lemmaSlp1": "gadABft"
+    },
+    {
+      "key": "gAha",
+      "lemmaSlp1": "gAha"
+    },
+    {
+      "key": "gajacCAyA",
+      "lemmaSlp1": "gajacCAyA"
+    },
+    {
+      "key": "gajaQakkA",
+      "lemmaSlp1": "gajaQakkA"
+    },
+    {
+      "key": "gajatA",
+      "lemmaSlp1": "gajatA"
+    },
+    {
+      "key": "galameKalA",
+      "lemmaSlp1": "galameKalA"
+    },
+    {
+      "key": "galantikA",
+      "lemmaSlp1": "galantikA"
+    },
+    {
+      "key": "galastanI",
+      "lemmaSlp1": "galastanI"
+    },
+    {
+      "key": "galaSuRqikA",
+      "lemmaSlp1": "galaSuRqikA"
+    },
+    {
+      "key": "galBa",
+      "lemmaSlp1": "galBa"
+    },
+    {
+      "key": "gallacAturI",
+      "lemmaSlp1": "gallacAturI"
+    },
+    {
+      "key": "galyA",
+      "lemmaSlp1": "galyA"
+    },
+    {
+      "key": "gama",
+      "lemmaSlp1": "gama"
+    },
+    {
+      "key": "gamBArI",
+      "lemmaSlp1": "gamBArI"
+    },
+    {
+      "key": "GanajvAlA",
+      "lemmaSlp1": "GanajvAlA"
+    },
+    {
+      "key": "GanavallI",
+      "lemmaSlp1": "GanavallI"
+    },
+    {
+      "key": "GanavallikA",
+      "lemmaSlp1": "GanavallikA"
+    },
+    {
+      "key": "ganDacelikA",
+      "lemmaSlp1": "ganDacelikA"
+    },
+    {
+      "key": "ganDahArikA",
+      "lemmaSlp1": "ganDahArikA"
+    },
+    {
+      "key": "ganDajYA",
+      "lemmaSlp1": "ganDajYA"
+    },
+    {
+      "key": "ganDakuwI",
+      "lemmaSlp1": "ganDakuwI"
+    },
+    {
+      "key": "ganDAlI",
+      "lemmaSlp1": "ganDAlI"
+    },
+    {
+      "key": "ganDamohinI",
+      "lemmaSlp1": "ganDamohinI"
+    },
+    {
+      "key": "ganDanilayA",
+      "lemmaSlp1": "ganDanilayA"
+    },
+    {
+      "key": "ganDapalASI",
+      "lemmaSlp1": "ganDapalASI"
+    },
+    {
+      "key": "ganDapalASikA",
+      "lemmaSlp1": "ganDapalASikA"
+    },
+    {
+      "key": "ganDaSuRqinI",
+      "lemmaSlp1": "ganDaSuRqinI"
+    },
+    {
+      "key": "gAndinI",
+      "lemmaSlp1": "gAndinI"
+    },
+    {
+      "key": "ganDottamA",
+      "lemmaSlp1": "ganDottamA"
+    },
+    {
+      "key": "gaNgA",
+      "lemmaSlp1": "gaNgA"
+    },
+    {
+      "key": "gaNgAcillI",
+      "lemmaSlp1": "gaNgAcillI"
+    },
+    {
+      "key": "gaRatA",
+      "lemmaSlp1": "gaRatA"
+    },
+    {
+      "key": "garBaSayyA",
+      "lemmaSlp1": "garBaSayyA"
+    },
+    {
+      "key": "garBavatI",
+      "lemmaSlp1": "garBavatI"
+    },
+    {
+      "key": "garBopaGAtinI",
+      "lemmaSlp1": "garBopaGAtinI"
+    },
+    {
+      "key": "garhA",
+      "lemmaSlp1": "garhA"
+    },
+    {
+      "key": "gaRikArikA",
+      "lemmaSlp1": "gaRikArikA"
+    },
+    {
+      "key": "gaRqAlI",
+      "lemmaSlp1": "gaRqAlI"
+    },
+    {
+      "key": "garut",
+      "lemmaSlp1": "garut"
+    },
+    {
+      "key": "gatilA",
+      "lemmaSlp1": "gatilA"
+    },
+    {
+      "key": "gAtrAnulepanI",
+      "lemmaSlp1": "gAtrAnulepanI"
+    },
+    {
+      "key": "gaveza",
+      "lemmaSlp1": "gaveza"
+    },
+    {
+      "key": "GawadAsI",
+      "lemmaSlp1": "GawadAsI"
+    },
+    {
+      "key": "gfDrasI",
+      "lemmaSlp1": "gfDrasI"
+    },
+    {
+      "key": "gfhagoDA",
+      "lemmaSlp1": "gfhagoDA"
+    },
+    {
+      "key": "gfhakanyA",
+      "lemmaSlp1": "gfhakanyA"
+    },
+    {
+      "key": "gfhamAcikA",
+      "lemmaSlp1": "gfhamAcikA"
+    },
+    {
+      "key": "gfhaRI",
+      "lemmaSlp1": "gfhaRI"
+    },
+    {
+      "key": "gfhatawI",
+      "lemmaSlp1": "gfhatawI"
+    },
+    {
+      "key": "gfhavAwikA",
+      "lemmaSlp1": "gfhavAwikA"
+    },
+    {
+      "key": "gfholikA",
+      "lemmaSlp1": "gfholikA"
+    },
+    {
+      "key": "GftAcI",
+      "lemmaSlp1": "GftAcI"
+    },
+    {
+      "key": "GftelI",
+      "lemmaSlp1": "GftelI"
+    },
+    {
+      "key": "gIrdevI",
+      "lemmaSlp1": "gIrdevI"
+    },
+    {
+      "key": "girimallikA",
+      "lemmaSlp1": "girimallikA"
+    },
+    {
+      "key": "godA",
+      "lemmaSlp1": "godA"
+    },
+    {
+      "key": "godAvarI",
+      "lemmaSlp1": "godAvarI"
+    },
+    {
+      "key": "gohatyA",
+      "lemmaSlp1": "gohatyA"
+    },
+    {
+      "key": "gojihvA",
+      "lemmaSlp1": "gojihvA"
+    },
+    {
+      "key": "gokirAwikA",
+      "lemmaSlp1": "gokirAwikA"
+    },
+    {
+      "key": "gomakzikA",
+      "lemmaSlp1": "gomakzikA"
+    },
+    {
+      "key": "gomatallikA",
+      "lemmaSlp1": "gomatallikA"
+    },
+    {
+      "key": "gomayotTA",
+      "lemmaSlp1": "gomayotTA"
+    },
+    {
+      "key": "gopAnasI",
+      "lemmaSlp1": "gopAnasI"
+    },
+    {
+      "key": "GoRA",
+      "lemmaSlp1": "GoRA"
+    },
+    {
+      "key": "gorocanA",
+      "lemmaSlp1": "gorocanA"
+    },
+    {
+      "key": "GoRwA",
+      "lemmaSlp1": "GoRwA"
+    },
+    {
+      "key": "goSakft",
+      "lemmaSlp1": "goSakft"
+    },
+    {
+      "key": "govaSA",
+      "lemmaSlp1": "govaSA"
+    },
+    {
+      "key": "GrA",
+      "lemmaSlp1": "GrA"
+    },
+    {
+      "key": "grAmamadgurikA",
+      "lemmaSlp1": "grAmamadgurikA"
+    },
+    {
+      "key": "gu",
+      "lemmaSlp1": "gu"
+    },
+    {
+      "key": "gU",
+      "lemmaSlp1": "gU"
+    },
+    {
+      "key": "Gu",
+      "lemmaSlp1": "Gu"
+    },
+    {
+      "key": "guqa",
+      "lemmaSlp1": "guqa"
+    },
+    {
+      "key": "guqadAru",
+      "lemmaSlp1": "guqadAru"
+    },
+    {
+      "key": "guqAkA",
+      "lemmaSlp1": "guqAkA"
+    },
+    {
+      "key": "guqakarI",
+      "lemmaSlp1": "guqakarI"
+    },
+    {
+      "key": "guqodBavA",
+      "lemmaSlp1": "guqodBavA"
+    },
+    {
+      "key": "guqucI",
+      "lemmaSlp1": "guqucI"
+    },
+    {
+      "key": "guqUcI",
+      "lemmaSlp1": "guqUcI"
+    },
+    {
+      "key": "guRa",
+      "lemmaSlp1": "guRa"
+    },
+    {
+      "key": "guRanikA",
+      "lemmaSlp1": "guRanikA"
+    },
+    {
+      "key": "guRqicA",
+      "lemmaSlp1": "guRqicA"
+    },
+    {
+      "key": "guwikA",
+      "lemmaSlp1": "guwikA"
+    },
+    {
+      "key": "guYjakft",
+      "lemmaSlp1": "guYjakft"
+    },
+    {
+      "key": "Guza",
+      "lemmaSlp1": "Guza"
+    },
+    {
+      "key": "gUzaRA",
+      "lemmaSlp1": "gUzaRA"
+    },
+    {
+      "key": "ha",
+      "lemmaSlp1": "ha"
+    },
+    {
+      "key": "hA",
+      "lemmaSlp1": "hA"
+    },
+    {
+      "key": "halA",
+      "lemmaSlp1": "halA"
+    },
+    {
+      "key": "halaBft",
+      "lemmaSlp1": "halaBft"
+    },
+    {
+      "key": "hAlinI",
+      "lemmaSlp1": "hAlinI"
+    },
+    {
+      "key": "hamBA",
+      "lemmaSlp1": "hamBA"
+    },
+    {
+      "key": "haMho",
+      "lemmaSlp1": "haMho"
+    },
+    {
+      "key": "haMsagAminI",
+      "lemmaSlp1": "haMsagAminI"
+    },
+    {
+      "key": "haMsamAlA",
+      "lemmaSlp1": "haMsamAlA"
+    },
+    {
+      "key": "hanta",
+      "lemmaSlp1": "hanta"
+    },
+    {
+      "key": "hAPikA",
+      "lemmaSlp1": "hAPikA"
+    },
+    {
+      "key": "haraSeKarA",
+      "lemmaSlp1": "haraSeKarA"
+    },
+    {
+      "key": "harit",
+      "lemmaSlp1": "harit"
+    },
+    {
+      "key": "hastiparRI",
+      "lemmaSlp1": "hastiparRI"
+    },
+    {
+      "key": "haWaparRI",
+      "lemmaSlp1": "haWaparRI"
+    },
+    {
+      "key": "hawwavilAsinI",
+      "lemmaSlp1": "hawwavilAsinI"
+    },
+    {
+      "key": "he",
+      "lemmaSlp1": "he"
+    },
+    {
+      "key": "hE",
+      "lemmaSlp1": "hE"
+    },
+    {
+      "key": "hekkA",
+      "lemmaSlp1": "hekkA"
+    },
+    {
+      "key": "hemaganDinI",
+      "lemmaSlp1": "hemaganDinI"
+    },
+    {
+      "key": "hemarAgiRI",
+      "lemmaSlp1": "hemarAgiRI"
+    },
+    {
+      "key": "herambajananI",
+      "lemmaSlp1": "herambajananI"
+    },
+    {
+      "key": "hetutA",
+      "lemmaSlp1": "hetutA"
+    },
+    {
+      "key": "hezA",
+      "lemmaSlp1": "hezA"
+    },
+    {
+      "key": "hfd",
+      "lemmaSlp1": "hfd"
+    },
+    {
+      "key": "hfRIyA",
+      "lemmaSlp1": "hfRIyA"
+    },
+    {
+      "key": "hi",
+      "lemmaSlp1": "hi"
+    },
+    {
+      "key": "hI",
+      "lemmaSlp1": "hI"
+    },
+    {
+      "key": "hikkA",
+      "lemmaSlp1": "hikkA"
+    },
+    {
+      "key": "himAnI",
+      "lemmaSlp1": "himAnI"
+    },
+    {
+      "key": "hiNgu",
+      "lemmaSlp1": "hiNgu"
+    },
+    {
+      "key": "hiRqI",
+      "lemmaSlp1": "hiRqI"
+    },
+    {
+      "key": "hiruk",
+      "lemmaSlp1": "hiruk"
+    },
+    {
+      "key": "hnu",
+      "lemmaSlp1": "hnu"
+    },
+    {
+      "key": "ho",
+      "lemmaSlp1": "ho"
+    },
+    {
+      "key": "hO",
+      "lemmaSlp1": "hO"
+    },
+    {
+      "key": "horA",
+      "lemmaSlp1": "horA"
+    },
+    {
+      "key": "hrasvagaveDukA",
+      "lemmaSlp1": "hrasvagaveDukA"
+    },
+    {
+      "key": "hrezA",
+      "lemmaSlp1": "hrezA"
+    },
+    {
+      "key": "hrI",
+      "lemmaSlp1": "hrI"
+    },
+    {
+      "key": "hu",
+      "lemmaSlp1": "hu"
+    },
+    {
+      "key": "hum",
+      "lemmaSlp1": "hum"
+    },
+    {
+      "key": "hUm",
+      "lemmaSlp1": "hUm"
+    },
+    {
+      "key": "i",
+      "lemmaSlp1": "i"
+    },
+    {
+      "key": "I",
+      "lemmaSlp1": "I"
+    },
+    {
+      "key": "iBadantA",
+      "lemmaSlp1": "iBadantA"
+    },
+    {
+      "key": "iBakaRA",
+      "lemmaSlp1": "iBakaRA"
+    },
+    {
+      "key": "icCA",
+      "lemmaSlp1": "icCA"
+    },
+    {
+      "key": "iha",
+      "lemmaSlp1": "iha"
+    },
+    {
+      "key": "ikzubAlikA",
+      "lemmaSlp1": "ikzubAlikA"
+    },
+    {
+      "key": "ikzudarBA",
+      "lemmaSlp1": "ikzudarBA"
+    },
+    {
+      "key": "ikzutulyA",
+      "lemmaSlp1": "ikzutulyA"
+    },
+    {
+      "key": "ila",
+      "lemmaSlp1": "ila"
+    },
+    {
+      "key": "ilA",
+      "lemmaSlp1": "ilA"
+    },
+    {
+      "key": "ilI",
+      "lemmaSlp1": "ilI"
+    },
+    {
+      "key": "inDa",
+      "lemmaSlp1": "inDa"
+    },
+    {
+      "key": "indirA",
+      "lemmaSlp1": "indirA"
+    },
+    {
+      "key": "indrajit",
+      "lemmaSlp1": "indrajit"
+    },
+    {
+      "key": "indrARI",
+      "lemmaSlp1": "indrARI"
+    },
+    {
+      "key": "indravfdDA",
+      "lemmaSlp1": "indravfdDA"
+    },
+    {
+      "key": "induBft",
+      "lemmaSlp1": "induBft"
+    },
+    {
+      "key": "indukalikA",
+      "lemmaSlp1": "indukalikA"
+    },
+    {
+      "key": "induleKA",
+      "lemmaSlp1": "induleKA"
+    },
+    {
+      "key": "induvallI",
+      "lemmaSlp1": "induvallI"
+    },
+    {
+      "key": "iqA",
+      "lemmaSlp1": "iqA"
+    },
+    {
+      "key": "IqA",
+      "lemmaSlp1": "IqA"
+    },
+    {
+      "key": "iqAcikA",
+      "lemmaSlp1": "iqAcikA"
+    },
+    {
+      "key": "irA",
+      "lemmaSlp1": "irA"
+    },
+    {
+      "key": "ISa",
+      "lemmaSlp1": "ISa"
+    },
+    {
+      "key": "ISitA",
+      "lemmaSlp1": "ISitA"
+    },
+    {
+      "key": "ita",
+      "lemmaSlp1": "ita"
+    },
+    {
+      "key": "iti",
+      "lemmaSlp1": "iti"
+    },
+    {
+      "key": "itkilA",
+      "lemmaSlp1": "itkilA"
+    },
+    {
+      "key": "iva",
+      "lemmaSlp1": "iva"
+    },
+    {
+      "key": "iyattA",
+      "lemmaSlp1": "iyattA"
+    },
+    {
+      "key": "IzA",
+      "lemmaSlp1": "IzA"
+    },
+    {
+      "key": "Izat",
+      "lemmaSlp1": "Izat"
+    },
+    {
+      "key": "izikA",
+      "lemmaSlp1": "izikA"
+    },
+    {
+      "key": "izIkA",
+      "lemmaSlp1": "izIkA"
+    },
+    {
+      "key": "IzikA",
+      "lemmaSlp1": "IzikA"
+    },
+    {
+      "key": "izwakA",
+      "lemmaSlp1": "izwakA"
+    },
+    {
+      "key": "izwikA",
+      "lemmaSlp1": "izwikA"
+    },
+    {
+      "key": "ja",
+      "lemmaSlp1": "ja"
+    },
+    {
+      "key": "Ja",
+      "lemmaSlp1": "Ja"
+    },
+    {
+      "key": "jagadambA",
+      "lemmaSlp1": "jagadambA"
+    },
+    {
+      "key": "jagadvahA",
+      "lemmaSlp1": "jagadvahA"
+    },
+    {
+      "key": "jagat",
+      "lemmaSlp1": "jagat"
+    },
+    {
+      "key": "jAgriyA",
+      "lemmaSlp1": "jAgriyA"
+    },
+    {
+      "key": "jala",
+      "lemmaSlp1": "jala"
+    },
+    {
+      "key": "JalA",
+      "lemmaSlp1": "JalA"
+    },
+    {
+      "key": "jalajantukA",
+      "lemmaSlp1": "jalajantukA"
+    },
+    {
+      "key": "jAlakinI",
+      "lemmaSlp1": "jAlakinI"
+    },
+    {
+      "key": "jalakUpI",
+      "lemmaSlp1": "jalakUpI"
+    },
+    {
+      "key": "jalalatA",
+      "lemmaSlp1": "jalalatA"
+    },
+    {
+      "key": "jalamakzikA",
+      "lemmaSlp1": "jalamakzikA"
+    },
+    {
+      "key": "jalAmbikA",
+      "lemmaSlp1": "jalAmbikA"
+    },
+    {
+      "key": "jalapfzWajA",
+      "lemmaSlp1": "jalapfzWajA"
+    },
+    {
+      "key": "jAlaprAyA",
+      "lemmaSlp1": "jAlaprAyA"
+    },
+    {
+      "key": "jalasarpiRI",
+      "lemmaSlp1": "jalasarpiRI"
+    },
+    {
+      "key": "jalatrA",
+      "lemmaSlp1": "jalatrA"
+    },
+    {
+      "key": "jalAyukA",
+      "lemmaSlp1": "jalAyukA"
+    },
+    {
+      "key": "jalikA",
+      "lemmaSlp1": "jalikA"
+    },
+    {
+      "key": "jalukA",
+      "lemmaSlp1": "jalukA"
+    },
+    {
+      "key": "jambAlinI",
+      "lemmaSlp1": "jambAlinI"
+    },
+    {
+      "key": "jambu",
+      "lemmaSlp1": "jambu"
+    },
+    {
+      "key": "jampatI",
+      "lemmaSlp1": "jampatI"
+    },
+    {
+      "key": "janatA",
+      "lemmaSlp1": "janatA"
+    },
+    {
+      "key": "jaNgamakuwI",
+      "lemmaSlp1": "jaNgamakuwI"
+    },
+    {
+      "key": "janmAzwamI",
+      "lemmaSlp1": "janmAzwamI"
+    },
+    {
+      "key": "jAnu",
+      "lemmaSlp1": "jAnu"
+    },
+    {
+      "key": "japa",
+      "lemmaSlp1": "japa"
+    },
+    {
+      "key": "jaqatA",
+      "lemmaSlp1": "jaqatA"
+    },
+    {
+      "key": "jarA",
+      "lemmaSlp1": "jarA"
+    },
+    {
+      "key": "jatru",
+      "lemmaSlp1": "jatru"
+    },
+    {
+      "key": "jatu",
+      "lemmaSlp1": "jatu"
+    },
+    {
+      "key": "jAtu",
+      "lemmaSlp1": "jAtu"
+    },
+    {
+      "key": "jatUkA",
+      "lemmaSlp1": "jatUkA"
+    },
+    {
+      "key": "jatunI",
+      "lemmaSlp1": "jatunI"
+    },
+    {
+      "key": "javanikA",
+      "lemmaSlp1": "javanikA"
+    },
+    {
+      "key": "jawa",
+      "lemmaSlp1": "jawa"
+    },
+    {
+      "key": "Jawiti",
+      "lemmaSlp1": "Jawiti"
+    },
+    {
+      "key": "jAyA",
+      "lemmaSlp1": "jAyA"
+    },
+    {
+      "key": "jayaQakkA",
+      "lemmaSlp1": "jayaQakkA"
+    },
+    {
+      "key": "jayavAhinI",
+      "lemmaSlp1": "jayavAhinI"
+    },
+    {
+      "key": "JaYJA",
+      "lemmaSlp1": "JaYJA"
+    },
+    {
+      "key": "JazodarI",
+      "lemmaSlp1": "JazodarI"
+    },
+    {
+      "key": "ji",
+      "lemmaSlp1": "ji"
+    },
+    {
+      "key": "jiGatsA",
+      "lemmaSlp1": "jiGatsA"
+    },
+    {
+      "key": "jigIzA",
+      "lemmaSlp1": "jigIzA"
+    },
+    {
+      "key": "jijYAsA",
+      "lemmaSlp1": "jijYAsA"
+    },
+    {
+      "key": "JillI",
+      "lemmaSlp1": "JillI"
+    },
+    {
+      "key": "JiNginI",
+      "lemmaSlp1": "JiNginI"
+    },
+    {
+      "key": "jiri",
+      "lemmaSlp1": "jiri"
+    },
+    {
+      "key": "JiRwI",
+      "lemmaSlp1": "JiRwI"
+    },
+    {
+      "key": "jIva",
+      "lemmaSlp1": "jIva"
+    },
+    {
+      "key": "jIvattokA",
+      "lemmaSlp1": "jIvattokA"
+    },
+    {
+      "key": "jIvikA",
+      "lemmaSlp1": "jIvikA"
+    },
+    {
+      "key": "jIvitajYA",
+      "lemmaSlp1": "jIvitajYA"
+    },
+    {
+      "key": "jozikA",
+      "lemmaSlp1": "jozikA"
+    },
+    {
+      "key": "jri",
+      "lemmaSlp1": "jri"
+    },
+    {
+      "key": "ju",
+      "lemmaSlp1": "ju"
+    },
+    {
+      "key": "jugupsA",
+      "lemmaSlp1": "jugupsA"
+    },
+    {
+      "key": "jvala",
+      "lemmaSlp1": "jvala"
+    },
+    {
+      "key": "jvalakA",
+      "lemmaSlp1": "jvalakA"
+    },
+    {
+      "key": "jvara",
+      "lemmaSlp1": "jvara"
+    },
+    {
+      "key": "jyA",
+      "lemmaSlp1": "jyA"
+    },
+    {
+      "key": "jYA",
+      "lemmaSlp1": "jYA"
+    },
+    {
+      "key": "jyezWAmbu",
+      "lemmaSlp1": "jyezWAmbu"
+    },
+    {
+      "key": "jyo",
+      "lemmaSlp1": "jyo"
+    },
+    {
+      "key": "jyotsnA",
+      "lemmaSlp1": "jyotsnA"
+    },
+    {
+      "key": "jyotsnI",
+      "lemmaSlp1": "jyotsnI"
+    },
+    {
+      "key": "jyu",
+      "lemmaSlp1": "jyu"
+    },
+    {
+      "key": "Jyu",
+      "lemmaSlp1": "Jyu"
+    },
+    {
+      "key": "ka",
+      "lemmaSlp1": "ka"
+    },
+    {
+      "key": "kacAku",
+      "lemmaSlp1": "kacAku"
+    },
+    {
+      "key": "kAcasTAlI",
+      "lemmaSlp1": "kAcasTAlI"
+    },
+    {
+      "key": "kacCawikA",
+      "lemmaSlp1": "kacCawikA"
+    },
+    {
+      "key": "kacCowikA",
+      "lemmaSlp1": "kacCowikA"
+    },
+    {
+      "key": "kada",
+      "lemmaSlp1": "kada"
+    },
+    {
+      "key": "kadA",
+      "lemmaSlp1": "kadA"
+    },
+    {
+      "key": "KAda",
+      "lemmaSlp1": "KAda"
+    },
+    {
+      "key": "kAdambinI",
+      "lemmaSlp1": "kAdambinI"
+    },
+    {
+      "key": "kAhakA",
+      "lemmaSlp1": "kAhakA"
+    },
+    {
+      "key": "kaja",
+      "lemmaSlp1": "kaja"
+    },
+    {
+      "key": "Kajit",
+      "lemmaSlp1": "Kajit"
+    },
+    {
+      "key": "kAkaciYcA",
+      "lemmaSlp1": "kAkaciYcA"
+    },
+    {
+      "key": "kAkAdanI",
+      "lemmaSlp1": "kAkAdanI"
+    },
+    {
+      "key": "kAkajaNGA",
+      "lemmaSlp1": "kAkajaNGA"
+    },
+    {
+      "key": "kAkakalA",
+      "lemmaSlp1": "kAkakalA"
+    },
+    {
+      "key": "kAkaruhA",
+      "lemmaSlp1": "kAkaruhA"
+    },
+    {
+      "key": "kAkatiktA",
+      "lemmaSlp1": "kAkatiktA"
+    },
+    {
+      "key": "kAkAYcI",
+      "lemmaSlp1": "kAkAYcI"
+    },
+    {
+      "key": "kAkinI",
+      "lemmaSlp1": "kAkinI"
+    },
+    {
+      "key": "kakuB",
+      "lemmaSlp1": "kakuB"
+    },
+    {
+      "key": "kakuBAdanI",
+      "lemmaSlp1": "kakuBAdanI"
+    },
+    {
+      "key": "kakzaruhA",
+      "lemmaSlp1": "kakzaruhA"
+    },
+    {
+      "key": "kakzotTA",
+      "lemmaSlp1": "kakzotTA"
+    },
+    {
+      "key": "kala",
+      "lemmaSlp1": "kala"
+    },
+    {
+      "key": "kAla",
+      "lemmaSlp1": "kAla"
+    },
+    {
+      "key": "kalABft",
+      "lemmaSlp1": "kalABft"
+    },
+    {
+      "key": "kalahAntaritA",
+      "lemmaSlp1": "kalahAntaritA"
+    },
+    {
+      "key": "kAlakft",
+      "lemmaSlp1": "kAlakft"
+    },
+    {
+      "key": "kAlamezI",
+      "lemmaSlp1": "kAlamezI"
+    },
+    {
+      "key": "kAlavelA",
+      "lemmaSlp1": "kAlavelA"
+    },
+    {
+      "key": "kAlAYjanI",
+      "lemmaSlp1": "kAlAYjanI"
+    },
+    {
+      "key": "KaleDAnI",
+      "lemmaSlp1": "KaleDAnI"
+    },
+    {
+      "key": "kAlIcI",
+      "lemmaSlp1": "kAlIcI"
+    },
+    {
+      "key": "kalikA",
+      "lemmaSlp1": "kalikA"
+    },
+    {
+      "key": "kalla",
+      "lemmaSlp1": "kalla"
+    },
+    {
+      "key": "Kalu",
+      "lemmaSlp1": "Kalu"
+    },
+    {
+      "key": "KalUrikA",
+      "lemmaSlp1": "KalUrikA"
+    },
+    {
+      "key": "kam",
+      "lemmaSlp1": "kam"
+    },
+    {
+      "key": "kamA",
+      "lemmaSlp1": "kamA"
+    },
+    {
+      "key": "kAmadUtI",
+      "lemmaSlp1": "kAmadUtI"
+    },
+    {
+      "key": "kAmakalA",
+      "lemmaSlp1": "kAmakalA"
+    },
+    {
+      "key": "kAmalatA",
+      "lemmaSlp1": "kAmalatA"
+    },
+    {
+      "key": "kamalinI",
+      "lemmaSlp1": "kamalinI"
+    },
+    {
+      "key": "kAmam",
+      "lemmaSlp1": "kAmam"
+    },
+    {
+      "key": "kAmareKA",
+      "lemmaSlp1": "kAmareKA"
+    },
+    {
+      "key": "kAmavfntA",
+      "lemmaSlp1": "kAmavfntA"
+    },
+    {
+      "key": "kamBArI",
+      "lemmaSlp1": "kamBArI"
+    },
+    {
+      "key": "kamBu",
+      "lemmaSlp1": "kamBu"
+    },
+    {
+      "key": "kaMsAsTi",
+      "lemmaSlp1": "kaMsAsTi"
+    },
+    {
+      "key": "kaMsodBavA",
+      "lemmaSlp1": "kaMsodBavA"
+    },
+    {
+      "key": "kanakAlukA",
+      "lemmaSlp1": "kanakAlukA"
+    },
+    {
+      "key": "kaNgunI",
+      "lemmaSlp1": "kaNgunI"
+    },
+    {
+      "key": "kanI",
+      "lemmaSlp1": "kanI"
+    },
+    {
+      "key": "kaNkamAlA",
+      "lemmaSlp1": "kaNkamAlA"
+    },
+    {
+      "key": "kanTA",
+      "lemmaSlp1": "kanTA"
+    },
+    {
+      "key": "kanyAkA",
+      "lemmaSlp1": "kanyAkA"
+    },
+    {
+      "key": "kapa",
+      "lemmaSlp1": "kapa"
+    },
+    {
+      "key": "KApagA",
+      "lemmaSlp1": "KApagA"
+    },
+    {
+      "key": "kapAlanAlikA",
+      "lemmaSlp1": "kapAlanAlikA"
+    },
+    {
+      "key": "kapiSIkA",
+      "lemmaSlp1": "kapiSIkA"
+    },
+    {
+      "key": "kapotacaraRA",
+      "lemmaSlp1": "kapotacaraRA"
+    },
+    {
+      "key": "kapotapAlI",
+      "lemmaSlp1": "kapotapAlI"
+    },
+    {
+      "key": "kapotapAlikA",
+      "lemmaSlp1": "kapotapAlikA"
+    },
+    {
+      "key": "kaqa",
+      "lemmaSlp1": "kaqa"
+    },
+    {
+      "key": "KaradalA",
+      "lemmaSlp1": "KaradalA"
+    },
+    {
+      "key": "kAramihikA",
+      "lemmaSlp1": "kAramihikA"
+    },
+    {
+      "key": "karaSAKA",
+      "lemmaSlp1": "karaSAKA"
+    },
+    {
+      "key": "kAraskarAwikA",
+      "lemmaSlp1": "kAraskarAwikA"
+    },
+    {
+      "key": "karatoyA",
+      "lemmaSlp1": "karatoyA"
+    },
+    {
+      "key": "karAyikA",
+      "lemmaSlp1": "karAyikA"
+    },
+    {
+      "key": "kArAyikA",
+      "lemmaSlp1": "kArAyikA"
+    },
+    {
+      "key": "karhi",
+      "lemmaSlp1": "karhi"
+    },
+    {
+      "key": "kArikA",
+      "lemmaSlp1": "kArikA"
+    },
+    {
+      "key": "KarikA",
+      "lemmaSlp1": "KarikA"
+    },
+    {
+      "key": "karka",
+      "lemmaSlp1": "karka"
+    },
+    {
+      "key": "kArpAsanAsikA",
+      "lemmaSlp1": "kArpAsanAsikA"
+    },
+    {
+      "key": "KaRqaDArA",
+      "lemmaSlp1": "KaRqaDArA"
+    },
+    {
+      "key": "KaRqakAlu",
+      "lemmaSlp1": "KaRqakAlu"
+    },
+    {
+      "key": "KaRqakaTA",
+      "lemmaSlp1": "KaRqakaTA"
+    },
+    {
+      "key": "kaRqarA",
+      "lemmaSlp1": "kaRqarA"
+    },
+    {
+      "key": "kaRqolavIRA",
+      "lemmaSlp1": "kaRqolavIRA"
+    },
+    {
+      "key": "kaRqUyA",
+      "lemmaSlp1": "kaRqUyA"
+    },
+    {
+      "key": "karRajalUkA",
+      "lemmaSlp1": "karRajalUkA"
+    },
+    {
+      "key": "karRajit",
+      "lemmaSlp1": "karRajit"
+    },
+    {
+      "key": "karRArA",
+      "lemmaSlp1": "karRArA"
+    },
+    {
+      "key": "karRaveDanI",
+      "lemmaSlp1": "karRaveDanI"
+    },
+    {
+      "key": "kAruRqI",
+      "lemmaSlp1": "kAruRqI"
+    },
+    {
+      "key": "kaRWaBUzA",
+      "lemmaSlp1": "kaRWaBUzA"
+    },
+    {
+      "key": "kaRWakURikA",
+      "lemmaSlp1": "kaRWakURikA"
+    },
+    {
+      "key": "kaRWatalAsikA",
+      "lemmaSlp1": "kaRWatalAsikA"
+    },
+    {
+      "key": "kAsanASinI",
+      "lemmaSlp1": "kAsanASinI"
+    },
+    {
+      "key": "kASmarI",
+      "lemmaSlp1": "kASmarI"
+    },
+    {
+      "key": "KastanI",
+      "lemmaSlp1": "KastanI"
+    },
+    {
+      "key": "kASvarI",
+      "lemmaSlp1": "kASvarI"
+    },
+    {
+      "key": "kaTA",
+      "lemmaSlp1": "kaTA"
+    },
+    {
+      "key": "kaTam",
+      "lemmaSlp1": "kaTam"
+    },
+    {
+      "key": "kati",
+      "lemmaSlp1": "kati"
+    },
+    {
+      "key": "kavarakI",
+      "lemmaSlp1": "kavarakI"
+    },
+    {
+      "key": "KavAri",
+      "lemmaSlp1": "KavAri"
+    },
+    {
+      "key": "kavawI",
+      "lemmaSlp1": "kavawI"
+    },
+    {
+      "key": "kavayI",
+      "lemmaSlp1": "kavayI"
+    },
+    {
+      "key": "kavitA",
+      "lemmaSlp1": "kavitA"
+    },
+    {
+      "key": "kawamAlinI",
+      "lemmaSlp1": "kawamAlinI"
+    },
+    {
+      "key": "kawaSarkarA",
+      "lemmaSlp1": "kawaSarkarA"
+    },
+    {
+      "key": "kawI",
+      "lemmaSlp1": "kawI"
+    },
+    {
+      "key": "KawI",
+      "lemmaSlp1": "KawI"
+    },
+    {
+      "key": "KawinI",
+      "lemmaSlp1": "KawinI"
+    },
+    {
+      "key": "kawiSfNKalA",
+      "lemmaSlp1": "kawiSfNKalA"
+    },
+    {
+      "key": "kawu",
+      "lemmaSlp1": "kawu"
+    },
+    {
+      "key": "kawugranTi",
+      "lemmaSlp1": "kawugranTi"
+    },
+    {
+      "key": "kawutumbI",
+      "lemmaSlp1": "kawutumbI"
+    },
+    {
+      "key": "KawvA",
+      "lemmaSlp1": "KawvA"
+    },
+    {
+      "key": "kAYcI",
+      "lemmaSlp1": "kAYcI"
+    },
+    {
+      "key": "kaYcikA",
+      "lemmaSlp1": "kaYcikA"
+    },
+    {
+      "key": "kaYculikA",
+      "lemmaSlp1": "kaYculikA"
+    },
+    {
+      "key": "kaYjikA",
+      "lemmaSlp1": "kaYjikA"
+    },
+    {
+      "key": "kaza",
+      "lemmaSlp1": "kaza"
+    },
+    {
+      "key": "kAzWakadalI",
+      "lemmaSlp1": "kAzWakadalI"
+    },
+    {
+      "key": "kAzWamaWI",
+      "lemmaSlp1": "kAzWamaWI"
+    },
+    {
+      "key": "kekA",
+      "lemmaSlp1": "kekA"
+    },
+    {
+      "key": "Kela",
+      "lemmaSlp1": "Kela"
+    },
+    {
+      "key": "keRikA",
+      "lemmaSlp1": "keRikA"
+    },
+    {
+      "key": "keta",
+      "lemmaSlp1": "keta"
+    },
+    {
+      "key": "Kewa",
+      "lemmaSlp1": "Kewa"
+    },
+    {
+      "key": "kfSa",
+      "lemmaSlp1": "kfSa"
+    },
+    {
+      "key": "kfSalA",
+      "lemmaSlp1": "kfSalA"
+    },
+    {
+      "key": "kftasApatnikA",
+      "lemmaSlp1": "kftasApatnikA"
+    },
+    {
+      "key": "kfttikA",
+      "lemmaSlp1": "kfttikA"
+    },
+    {
+      "key": "kfzRAguru",
+      "lemmaSlp1": "kfzRAguru"
+    },
+    {
+      "key": "kfzRatrivftA",
+      "lemmaSlp1": "kfzRatrivftA"
+    },
+    {
+      "key": "ki",
+      "lemmaSlp1": "ki"
+    },
+    {
+      "key": "kila",
+      "lemmaSlp1": "kila"
+    },
+    {
+      "key": "kim",
+      "lemmaSlp1": "kim"
+    },
+    {
+      "key": "kirAtinI",
+      "lemmaSlp1": "kirAtinI"
+    },
+    {
+      "key": "kIwa",
+      "lemmaSlp1": "kIwa"
+    },
+    {
+      "key": "kiyadetikA",
+      "lemmaSlp1": "kiyadetikA"
+    },
+    {
+      "key": "klItakikA",
+      "lemmaSlp1": "klItakikA"
+    },
+    {
+      "key": "Kola",
+      "lemmaSlp1": "Kola"
+    },
+    {
+      "key": "komAsikA",
+      "lemmaSlp1": "komAsikA"
+    },
+    {
+      "key": "kOmodakI",
+      "lemmaSlp1": "kOmodakI"
+    },
+    {
+      "key": "kOpodakI",
+      "lemmaSlp1": "kOpodakI"
+    },
+    {
+      "key": "Koqa",
+      "lemmaSlp1": "Koqa"
+    },
+    {
+      "key": "Kora",
+      "lemmaSlp1": "Kora"
+    },
+    {
+      "key": "kOSalikA",
+      "lemmaSlp1": "kOSalikA"
+    },
+    {
+      "key": "kowavI",
+      "lemmaSlp1": "kowavI"
+    },
+    {
+      "key": "kowijit",
+      "lemmaSlp1": "kowijit"
+    },
+    {
+      "key": "kowwavI",
+      "lemmaSlp1": "kowwavI"
+    },
+    {
+      "key": "krakacapfzWI",
+      "lemmaSlp1": "krakacapfzWI"
+    },
+    {
+      "key": "krI",
+      "lemmaSlp1": "krI"
+    },
+    {
+      "key": "krIqa",
+      "lemmaSlp1": "krIqa"
+    },
+    {
+      "key": "kriyA",
+      "lemmaSlp1": "kriyA"
+    },
+    {
+      "key": "ku",
+      "lemmaSlp1": "ku"
+    },
+    {
+      "key": "kU",
+      "lemmaSlp1": "kU"
+    },
+    {
+      "key": "Ku",
+      "lemmaSlp1": "Ku"
+    },
+    {
+      "key": "kUhA",
+      "lemmaSlp1": "kUhA"
+    },
+    {
+      "key": "kukuBA",
+      "lemmaSlp1": "kukuBA"
+    },
+    {
+      "key": "kulaBftyA",
+      "lemmaSlp1": "kulaBftyA"
+    },
+    {
+      "key": "kulanAyikA",
+      "lemmaSlp1": "kulanAyikA"
+    },
+    {
+      "key": "kulastrI",
+      "lemmaSlp1": "kulastrI"
+    },
+    {
+      "key": "kulAyikA",
+      "lemmaSlp1": "kulAyikA"
+    },
+    {
+      "key": "kulukkaguYjA",
+      "lemmaSlp1": "kulukkaguYjA"
+    },
+    {
+      "key": "kumAraBftyA",
+      "lemmaSlp1": "kumAraBftyA"
+    },
+    {
+      "key": "kumBaSAlA",
+      "lemmaSlp1": "kumBaSAlA"
+    },
+    {
+      "key": "kumudikA",
+      "lemmaSlp1": "kumudikA"
+    },
+    {
+      "key": "kumudinI",
+      "lemmaSlp1": "kumudinI"
+    },
+    {
+      "key": "kundinI",
+      "lemmaSlp1": "kundinI"
+    },
+    {
+      "key": "kuntalikA",
+      "lemmaSlp1": "kuntalikA"
+    },
+    {
+      "key": "kupinI",
+      "lemmaSlp1": "kupinI"
+    },
+    {
+      "key": "KuralI",
+      "lemmaSlp1": "KuralI"
+    },
+    {
+      "key": "kurI",
+      "lemmaSlp1": "kurI"
+    },
+    {
+      "key": "kURikA",
+      "lemmaSlp1": "kURikA"
+    },
+    {
+      "key": "kuSa",
+      "lemmaSlp1": "kuSa"
+    },
+    {
+      "key": "kustumbarI",
+      "lemmaSlp1": "kustumbarI"
+    },
+    {
+      "key": "kutra",
+      "lemmaSlp1": "kutra"
+    },
+    {
+      "key": "kutsA",
+      "lemmaSlp1": "kutsA"
+    },
+    {
+      "key": "kutsalA",
+      "lemmaSlp1": "kutsalA"
+    },
+    {
+      "key": "kuvalayinI",
+      "lemmaSlp1": "kuvalayinI"
+    },
+    {
+      "key": "kuveRI",
+      "lemmaSlp1": "kuveRI"
+    },
+    {
+      "key": "kUwa",
+      "lemmaSlp1": "kUwa"
+    },
+    {
+      "key": "kuwahArikA",
+      "lemmaSlp1": "kuwahArikA"
+    },
+    {
+      "key": "kUwakft",
+      "lemmaSlp1": "kUwakft"
+    },
+    {
+      "key": "kuwwa",
+      "lemmaSlp1": "kuwwa"
+    },
+    {
+      "key": "kuYcikA",
+      "lemmaSlp1": "kuYcikA"
+    },
+    {
+      "key": "kva",
+      "lemmaSlp1": "kva"
+    },
+    {
+      "key": "KyA",
+      "lemmaSlp1": "KyA"
+    },
+    {
+      "key": "kzama",
+      "lemmaSlp1": "kzama"
+    },
+    {
+      "key": "kzapA",
+      "lemmaSlp1": "kzapA"
+    },
+    {
+      "key": "kzara",
+      "lemmaSlp1": "kzara"
+    },
+    {
+      "key": "kzi",
+      "lemmaSlp1": "kzi"
+    },
+    {
+      "key": "kzI",
+      "lemmaSlp1": "kzI"
+    },
+    {
+      "key": "kzipa",
+      "lemmaSlp1": "kzipa"
+    },
+    {
+      "key": "kzIrAvI",
+      "lemmaSlp1": "kzIrAvI"
+    },
+    {
+      "key": "kzIreyI",
+      "lemmaSlp1": "kzIreyI"
+    },
+    {
+      "key": "kzIva",
+      "lemmaSlp1": "kzIva"
+    },
+    {
+      "key": "kziyA",
+      "lemmaSlp1": "kziyA"
+    },
+    {
+      "key": "kzmA",
+      "lemmaSlp1": "kzmA"
+    },
+    {
+      "key": "kzmABft",
+      "lemmaSlp1": "kzmABft"
+    },
+    {
+      "key": "kzRu",
+      "lemmaSlp1": "kzRu"
+    },
+    {
+      "key": "kzu",
+      "lemmaSlp1": "kzu"
+    },
+    {
+      "key": "kzudradaMSikA",
+      "lemmaSlp1": "kzudradaMSikA"
+    },
+    {
+      "key": "kzudraGaRwikA",
+      "lemmaSlp1": "kzudraGaRwikA"
+    },
+    {
+      "key": "kzumA",
+      "lemmaSlp1": "kzumA"
+    },
+    {
+      "key": "kzut",
+      "lemmaSlp1": "kzut"
+    },
+    {
+      "key": "lA",
+      "lemmaSlp1": "lA"
+    },
+    {
+      "key": "laGaw",
+      "lemmaSlp1": "laGaw"
+    },
+    {
+      "key": "lagnikA",
+      "lemmaSlp1": "lagnikA"
+    },
+    {
+      "key": "laGu",
+      "lemmaSlp1": "laGu"
+    },
+    {
+      "key": "lajjA",
+      "lemmaSlp1": "lajjA"
+    },
+    {
+      "key": "lAkzA",
+      "lemmaSlp1": "lAkzA"
+    },
+    {
+      "key": "lAlA",
+      "lemmaSlp1": "lAlA"
+    },
+    {
+      "key": "lalAma",
+      "lemmaSlp1": "lalAma"
+    },
+    {
+      "key": "lalantikA",
+      "lemmaSlp1": "lalantikA"
+    },
+    {
+      "key": "latA",
+      "lemmaSlp1": "latA"
+    },
+    {
+      "key": "latAkastUrikA",
+      "lemmaSlp1": "latAkastUrikA"
+    },
+    {
+      "key": "lavalI",
+      "lemmaSlp1": "lavalI"
+    },
+    {
+      "key": "lI",
+      "lemmaSlp1": "lI"
+    },
+    {
+      "key": "likzA",
+      "lemmaSlp1": "likzA"
+    },
+    {
+      "key": "lIlA",
+      "lemmaSlp1": "lIlA"
+    },
+    {
+      "key": "lipsA",
+      "lemmaSlp1": "lipsA"
+    },
+    {
+      "key": "lohitamfttikA",
+      "lemmaSlp1": "lohitamfttikA"
+    },
+    {
+      "key": "lokajit",
+      "lemmaSlp1": "lokajit"
+    },
+    {
+      "key": "lolikA",
+      "lemmaSlp1": "lolikA"
+    },
+    {
+      "key": "lomahft",
+      "lemmaSlp1": "lomahft"
+    },
+    {
+      "key": "lopAmudrA",
+      "lemmaSlp1": "lopAmudrA"
+    },
+    {
+      "key": "lpI",
+      "lemmaSlp1": "lpI"
+    },
+    {
+      "key": "lU",
+      "lemmaSlp1": "lU"
+    },
+    {
+      "key": "lUtA",
+      "lemmaSlp1": "lUtA"
+    },
+    {
+      "key": "lvI",
+      "lemmaSlp1": "lvI"
+    },
+    {
+      "key": "mA",
+      "lemmaSlp1": "mA"
+    },
+    {
+      "key": "mAcikA",
+      "lemmaSlp1": "mAcikA"
+    },
+    {
+      "key": "madanaSalAkA",
+      "lemmaSlp1": "madanaSalAkA"
+    },
+    {
+      "key": "mADavIlatA",
+      "lemmaSlp1": "mADavIlatA"
+    },
+    {
+      "key": "madayantI",
+      "lemmaSlp1": "madayantI"
+    },
+    {
+      "key": "madayitnu",
+      "lemmaSlp1": "madayitnu"
+    },
+    {
+      "key": "madgurasI",
+      "lemmaSlp1": "madgurasI"
+    },
+    {
+      "key": "maDu",
+      "lemmaSlp1": "maDu"
+    },
+    {
+      "key": "maDumakzikA",
+      "lemmaSlp1": "maDumakzikA"
+    },
+    {
+      "key": "maDumallI",
+      "lemmaSlp1": "maDumallI"
+    },
+    {
+      "key": "maDuparRI",
+      "lemmaSlp1": "maDuparRI"
+    },
+    {
+      "key": "maDuyazwikA",
+      "lemmaSlp1": "maDuyazwikA"
+    },
+    {
+      "key": "madyavAsinI",
+      "lemmaSlp1": "madyavAsinI"
+    },
+    {
+      "key": "mahAdAru",
+      "lemmaSlp1": "mahAdAru"
+    },
+    {
+      "key": "mahAjAlI",
+      "lemmaSlp1": "mahAjAlI"
+    },
+    {
+      "key": "mahAmAyA",
+      "lemmaSlp1": "mahAmAyA"
+    },
+    {
+      "key": "mahAnidrA",
+      "lemmaSlp1": "mahAnidrA"
+    },
+    {
+      "key": "mahAniSA",
+      "lemmaSlp1": "mahAniSA"
+    },
+    {
+      "key": "mahASyAmA",
+      "lemmaSlp1": "mahASyAmA"
+    },
+    {
+      "key": "mahAtArA",
+      "lemmaSlp1": "mahAtArA"
+    },
+    {
+      "key": "mahAvallI",
+      "lemmaSlp1": "mahAvallI"
+    },
+    {
+      "key": "mahAvarA",
+      "lemmaSlp1": "mahAvarA"
+    },
+    {
+      "key": "mahI",
+      "lemmaSlp1": "mahI"
+    },
+    {
+      "key": "mahikA",
+      "lemmaSlp1": "mahikA"
+    },
+    {
+      "key": "mahIkzit",
+      "lemmaSlp1": "mahIkzit"
+    },
+    {
+      "key": "mahilA",
+      "lemmaSlp1": "mahilA"
+    },
+    {
+      "key": "mahIlatA",
+      "lemmaSlp1": "mahIlatA"
+    },
+    {
+      "key": "majjA",
+      "lemmaSlp1": "majjA"
+    },
+    {
+      "key": "majjakft",
+      "lemmaSlp1": "majjakft"
+    },
+    {
+      "key": "majjUzA",
+      "lemmaSlp1": "majjUzA"
+    },
+    {
+      "key": "maKa",
+      "lemmaSlp1": "maKa"
+    },
+    {
+      "key": "mala",
+      "lemmaSlp1": "mala"
+    },
+    {
+      "key": "malAkA",
+      "lemmaSlp1": "malAkA"
+    },
+    {
+      "key": "mAlasI",
+      "lemmaSlp1": "mAlasI"
+    },
+    {
+      "key": "mAlatI",
+      "lemmaSlp1": "mAlatI"
+    },
+    {
+      "key": "malla",
+      "lemmaSlp1": "malla"
+    },
+    {
+      "key": "mamatA",
+      "lemmaSlp1": "mamatA"
+    },
+    {
+      "key": "mAMsahAsA",
+      "lemmaSlp1": "mAMsahAsA"
+    },
+    {
+      "key": "manAk",
+      "lemmaSlp1": "manAk"
+    },
+    {
+      "key": "manAkA",
+      "lemmaSlp1": "manAkA"
+    },
+    {
+      "key": "manAyI",
+      "lemmaSlp1": "manAyI"
+    },
+    {
+      "key": "mandAkinI",
+      "lemmaSlp1": "mandAkinI"
+    },
+    {
+      "key": "mandodarI",
+      "lemmaSlp1": "mandodarI"
+    },
+    {
+      "key": "mandurA",
+      "lemmaSlp1": "mandurA"
+    },
+    {
+      "key": "maNginI",
+      "lemmaSlp1": "maNginI"
+    },
+    {
+      "key": "manIzA",
+      "lemmaSlp1": "manIzA"
+    },
+    {
+      "key": "manohvA",
+      "lemmaSlp1": "manohvA"
+    },
+    {
+      "key": "mantrakft",
+      "lemmaSlp1": "mantrakft"
+    },
+    {
+      "key": "manyA",
+      "lemmaSlp1": "manyA"
+    },
+    {
+      "key": "mArajit",
+      "lemmaSlp1": "mArajit"
+    },
+    {
+      "key": "mArga",
+      "lemmaSlp1": "mArga"
+    },
+    {
+      "key": "maRikarRikA",
+      "lemmaSlp1": "maRikarRikA"
+    },
+    {
+      "key": "maRimAlA",
+      "lemmaSlp1": "maRimAlA"
+    },
+    {
+      "key": "marka",
+      "lemmaSlp1": "marka"
+    },
+    {
+      "key": "markawapippalI",
+      "lemmaSlp1": "markawapippalI"
+    },
+    {
+      "key": "marUdBavA",
+      "lemmaSlp1": "marUdBavA"
+    },
+    {
+      "key": "marut",
+      "lemmaSlp1": "marut"
+    },
+    {
+      "key": "mAs",
+      "lemmaSlp1": "mAs"
+    },
+    {
+      "key": "maSaharI",
+      "lemmaSlp1": "maSaharI"
+    },
+    {
+      "key": "masInA",
+      "lemmaSlp1": "masInA"
+    },
+    {
+      "key": "matallikA",
+      "lemmaSlp1": "matallikA"
+    },
+    {
+      "key": "matsyaDAnI",
+      "lemmaSlp1": "matsyaDAnI"
+    },
+    {
+      "key": "matsyakaraRqikA",
+      "lemmaSlp1": "matsyakaraRqikA"
+    },
+    {
+      "key": "matsyapittA",
+      "lemmaSlp1": "matsyapittA"
+    },
+    {
+      "key": "matsyodarI",
+      "lemmaSlp1": "matsyodarI"
+    },
+    {
+      "key": "mattakASinI",
+      "lemmaSlp1": "mattakASinI"
+    },
+    {
+      "key": "maTUrA",
+      "lemmaSlp1": "maTUrA"
+    },
+    {
+      "key": "maya",
+      "lemmaSlp1": "maya"
+    },
+    {
+      "key": "mAyAkft",
+      "lemmaSlp1": "mAyAkft"
+    },
+    {
+      "key": "maYjA",
+      "lemmaSlp1": "maYjA"
+    },
+    {
+      "key": "maYjikA",
+      "lemmaSlp1": "maYjikA"
+    },
+    {
+      "key": "maYjiPalA",
+      "lemmaSlp1": "maYjiPalA"
+    },
+    {
+      "key": "maYju",
+      "lemmaSlp1": "maYju"
+    },
+    {
+      "key": "maYjUzA",
+      "lemmaSlp1": "maYjUzA"
+    },
+    {
+      "key": "meGAsTi",
+      "lemmaSlp1": "meGAsTi"
+    },
+    {
+      "key": "mekalakanyakA",
+      "lemmaSlp1": "mekalakanyakA"
+    },
+    {
+      "key": "menakA",
+      "lemmaSlp1": "menakA"
+    },
+    {
+      "key": "menakAtmajA",
+      "lemmaSlp1": "menakAtmajA"
+    },
+    {
+      "key": "meQraSfNgI",
+      "lemmaSlp1": "meQraSfNgI"
+    },
+    {
+      "key": "mewulA",
+      "lemmaSlp1": "mewulA"
+    },
+    {
+      "key": "mfd",
+      "lemmaSlp1": "mfd"
+    },
+    {
+      "key": "mfdA",
+      "lemmaSlp1": "mfdA"
+    },
+    {
+      "key": "mfdvIkA",
+      "lemmaSlp1": "mfdvIkA"
+    },
+    {
+      "key": "mfgAkzI",
+      "lemmaSlp1": "mfgAkzI"
+    },
+    {
+      "key": "mfgARqajA",
+      "lemmaSlp1": "mfgARqajA"
+    },
+    {
+      "key": "mfgatfzRA",
+      "lemmaSlp1": "mfgatfzRA"
+    },
+    {
+      "key": "mfgayA",
+      "lemmaSlp1": "mfgayA"
+    },
+    {
+      "key": "mftPalI",
+      "lemmaSlp1": "mftPalI"
+    },
+    {
+      "key": "mftsA",
+      "lemmaSlp1": "mftsA"
+    },
+    {
+      "key": "mfttikA",
+      "lemmaSlp1": "mfttikA"
+    },
+    {
+      "key": "mfzA",
+      "lemmaSlp1": "mfzA"
+    },
+    {
+      "key": "mi",
+      "lemmaSlp1": "mi"
+    },
+    {
+      "key": "mI",
+      "lemmaSlp1": "mI"
+    },
+    {
+      "key": "mihikA",
+      "lemmaSlp1": "mihikA"
+    },
+    {
+      "key": "mImAMsA",
+      "lemmaSlp1": "mImAMsA"
+    },
+    {
+      "key": "miSra",
+      "lemmaSlp1": "miSra"
+    },
+    {
+      "key": "miSreyA",
+      "lemmaSlp1": "miSreyA"
+    },
+    {
+      "key": "miTyA",
+      "lemmaSlp1": "miTyA"
+    },
+    {
+      "key": "mnA",
+      "lemmaSlp1": "mnA"
+    },
+    {
+      "key": "mOktikaprasavA",
+      "lemmaSlp1": "mOktikaprasavA"
+    },
+    {
+      "key": "mU",
+      "lemmaSlp1": "mU"
+    },
+    {
+      "key": "muDA",
+      "lemmaSlp1": "muDA"
+    },
+    {
+      "key": "mudrA",
+      "lemmaSlp1": "mudrA"
+    },
+    {
+      "key": "mudrikA",
+      "lemmaSlp1": "mudrikA"
+    },
+    {
+      "key": "muKavizWA",
+      "lemmaSlp1": "muKavizWA"
+    },
+    {
+      "key": "muktAlatA",
+      "lemmaSlp1": "muktAlatA"
+    },
+    {
+      "key": "muktAvalI",
+      "lemmaSlp1": "muktAvalI"
+    },
+    {
+      "key": "muSawI",
+      "lemmaSlp1": "muSawI"
+    },
+    {
+      "key": "muzA",
+      "lemmaSlp1": "muzA"
+    },
+    {
+      "key": "na",
+      "lemmaSlp1": "na"
+    },
+    {
+      "key": "nA",
+      "lemmaSlp1": "nA"
+    },
+    {
+      "key": "Na",
+      "lemmaSlp1": "Na"
+    },
+    {
+      "key": "naBaHsarit",
+      "lemmaSlp1": "naBaHsarit"
+    },
+    {
+      "key": "naBonadI",
+      "lemmaSlp1": "naBonadI"
+    },
+    {
+      "key": "nAgajihvikA",
+      "lemmaSlp1": "nAgajihvikA"
+    },
+    {
+      "key": "nAgalatA",
+      "lemmaSlp1": "nAgalatA"
+    },
+    {
+      "key": "naganandinI",
+      "lemmaSlp1": "naganandinI"
+    },
+    {
+      "key": "nAgavITI",
+      "lemmaSlp1": "nAgavITI"
+    },
+    {
+      "key": "nAgAYcalA",
+      "lemmaSlp1": "nAgAYcalA"
+    },
+    {
+      "key": "nagnajit",
+      "lemmaSlp1": "nagnajit"
+    },
+    {
+      "key": "nahi",
+      "lemmaSlp1": "nahi"
+    },
+    {
+      "key": "naKaraYjanI",
+      "lemmaSlp1": "naKaraYjanI"
+    },
+    {
+      "key": "naktamuKA",
+      "lemmaSlp1": "naktamuKA"
+    },
+    {
+      "key": "nakulezwA",
+      "lemmaSlp1": "nakulezwA"
+    },
+    {
+      "key": "nakzatramAlA",
+      "lemmaSlp1": "nakzatramAlA"
+    },
+    {
+      "key": "nalakinI",
+      "lemmaSlp1": "nalakinI"
+    },
+    {
+      "key": "nalapawwikA",
+      "lemmaSlp1": "nalapawwikA"
+    },
+    {
+      "key": "nAma",
+      "lemmaSlp1": "nAma"
+    },
+    {
+      "key": "nAmadvAdaSI",
+      "lemmaSlp1": "nAmadvAdaSI"
+    },
+    {
+      "key": "nAnA",
+      "lemmaSlp1": "nAnA"
+    },
+    {
+      "key": "nAndI",
+      "lemmaSlp1": "nAndI"
+    },
+    {
+      "key": "nanu",
+      "lemmaSlp1": "nanu"
+    },
+    {
+      "key": "naqyA",
+      "lemmaSlp1": "naqyA"
+    },
+    {
+      "key": "narakadevatA",
+      "lemmaSlp1": "narakadevatA"
+    },
+    {
+      "key": "narakajit",
+      "lemmaSlp1": "narakajit"
+    },
+    {
+      "key": "naramAlA",
+      "lemmaSlp1": "naramAlA"
+    },
+    {
+      "key": "naramAlinI",
+      "lemmaSlp1": "naramAlinI"
+    },
+    {
+      "key": "naramAninI",
+      "lemmaSlp1": "naramAninI"
+    },
+    {
+      "key": "nAsA",
+      "lemmaSlp1": "nAsA"
+    },
+    {
+      "key": "nAsikA",
+      "lemmaSlp1": "nAsikA"
+    },
+    {
+      "key": "naSyatprasUtikA",
+      "lemmaSlp1": "naSyatprasUtikA"
+    },
+    {
+      "key": "nava",
+      "lemmaSlp1": "nava"
+    },
+    {
+      "key": "navaDA",
+      "lemmaSlp1": "navaDA"
+    },
+    {
+      "key": "navadurgA",
+      "lemmaSlp1": "navadurgA"
+    },
+    {
+      "key": "navakArikA",
+      "lemmaSlp1": "navakArikA"
+    },
+    {
+      "key": "navamAlikA",
+      "lemmaSlp1": "navamAlikA"
+    },
+    {
+      "key": "navamallikA",
+      "lemmaSlp1": "navamallikA"
+    },
+    {
+      "key": "navanI",
+      "lemmaSlp1": "navanI"
+    },
+    {
+      "key": "navaPalikA",
+      "lemmaSlp1": "navaPalikA"
+    },
+    {
+      "key": "navatikA",
+      "lemmaSlp1": "navatikA"
+    },
+    {
+      "key": "navavarikA",
+      "lemmaSlp1": "navavarikA"
+    },
+    {
+      "key": "navoQA",
+      "lemmaSlp1": "navoQA"
+    },
+    {
+      "key": "nawAntikA",
+      "lemmaSlp1": "nawAntikA"
+    },
+    {
+      "key": "naY",
+      "lemmaSlp1": "naY"
+    },
+    {
+      "key": "naya",
+      "lemmaSlp1": "naya"
+    },
+    {
+      "key": "nayapIWI",
+      "lemmaSlp1": "nayapIWI"
+    },
+    {
+      "key": "nazwendukalA",
+      "lemmaSlp1": "nazwendukalA"
+    },
+    {
+      "key": "netrAmbu",
+      "lemmaSlp1": "netrAmbu"
+    },
+    {
+      "key": "ni",
+      "lemmaSlp1": "ni"
+    },
+    {
+      "key": "nicikI",
+      "lemmaSlp1": "nicikI"
+    },
+    {
+      "key": "nidrA",
+      "lemmaSlp1": "nidrA"
+    },
+    {
+      "key": "nihAkA",
+      "lemmaSlp1": "nihAkA"
+    },
+    {
+      "key": "niHSrayaRI",
+      "lemmaSlp1": "niHSrayaRI"
+    },
+    {
+      "key": "nikazA",
+      "lemmaSlp1": "nikazA"
+    },
+    {
+      "key": "nIlamfttikA",
+      "lemmaSlp1": "nIlamfttikA"
+    },
+    {
+      "key": "nIlAYjasA",
+      "lemmaSlp1": "nIlAYjasA"
+    },
+    {
+      "key": "nindA",
+      "lemmaSlp1": "nindA"
+    },
+    {
+      "key": "nipatyA",
+      "lemmaSlp1": "nipatyA"
+    },
+    {
+      "key": "niSA",
+      "lemmaSlp1": "niSA"
+    },
+    {
+      "key": "niSAhvA",
+      "lemmaSlp1": "niSAhvA"
+    },
+    {
+      "key": "niSITinI",
+      "lemmaSlp1": "niSITinI"
+    },
+    {
+      "key": "nistanI",
+      "lemmaSlp1": "nistanI"
+    },
+    {
+      "key": "nityadA",
+      "lemmaSlp1": "nityadA"
+    },
+    {
+      "key": "nIvft",
+      "lemmaSlp1": "nIvft"
+    },
+    {
+      "key": "nizadyA",
+      "lemmaSlp1": "nizadyA"
+    },
+    {
+      "key": "no",
+      "lemmaSlp1": "no"
+    },
+    {
+      "key": "nu",
+      "lemmaSlp1": "nu"
+    },
+    {
+      "key": "Nu",
+      "lemmaSlp1": "Nu"
+    },
+    {
+      "key": "nyAyasAriRI",
+      "lemmaSlp1": "nyAyasAriRI"
+    },
+    {
+      "key": "o",
+      "lemmaSlp1": "o"
+    },
+    {
+      "key": "O",
+      "lemmaSlp1": "O"
+    },
+    {
+      "key": "oja",
+      "lemmaSlp1": "oja"
+    },
+    {
+      "key": "om",
+      "lemmaSlp1": "om"
+    },
+    {
+      "key": "oqikA",
+      "lemmaSlp1": "oqikA"
+    },
+    {
+      "key": "pa",
+      "lemmaSlp1": "pa"
+    },
+    {
+      "key": "pA",
+      "lemmaSlp1": "pA"
+    },
+    {
+      "key": "Pa",
+      "lemmaSlp1": "Pa"
+    },
+    {
+      "key": "paca",
+      "lemmaSlp1": "paca"
+    },
+    {
+      "key": "padaBaYjikA",
+      "lemmaSlp1": "padaBaYjikA"
+    },
+    {
+      "key": "pAdAt",
+      "lemmaSlp1": "pAdAt"
+    },
+    {
+      "key": "padmapriyA",
+      "lemmaSlp1": "padmapriyA"
+    },
+    {
+      "key": "padmavAsA",
+      "lemmaSlp1": "padmavAsA"
+    },
+    {
+      "key": "padmAvatI",
+      "lemmaSlp1": "padmAvatI"
+    },
+    {
+      "key": "pAkapuwI",
+      "lemmaSlp1": "pAkapuwI"
+    },
+    {
+      "key": "pAkaSAlA",
+      "lemmaSlp1": "pAkaSAlA"
+    },
+    {
+      "key": "pAkaSuklA",
+      "lemmaSlp1": "pAkaSuklA"
+    },
+    {
+      "key": "PakkikA",
+      "lemmaSlp1": "PakkikA"
+    },
+    {
+      "key": "pakvakft",
+      "lemmaSlp1": "pakvakft"
+    },
+    {
+      "key": "pakvavAri",
+      "lemmaSlp1": "pakvavAri"
+    },
+    {
+      "key": "pakzatA",
+      "lemmaSlp1": "pakzatA"
+    },
+    {
+      "key": "pakziSAlA",
+      "lemmaSlp1": "pakziSAlA"
+    },
+    {
+      "key": "palaBA",
+      "lemmaSlp1": "palaBA"
+    },
+    {
+      "key": "Palgu",
+      "lemmaSlp1": "Palgu"
+    },
+    {
+      "key": "pAlikA",
+      "lemmaSlp1": "pAlikA"
+    },
+    {
+      "key": "paliknI",
+      "lemmaSlp1": "paliknI"
+    },
+    {
+      "key": "PalottamA",
+      "lemmaSlp1": "PalottamA"
+    },
+    {
+      "key": "pampA",
+      "lemmaSlp1": "pampA"
+    },
+    {
+      "key": "pAnagozWikA",
+      "lemmaSlp1": "pAnagozWikA"
+    },
+    {
+      "key": "pannadDA",
+      "lemmaSlp1": "pannadDA"
+    },
+    {
+      "key": "pApakft",
+      "lemmaSlp1": "pApakft"
+    },
+    {
+      "key": "PaqiNgA",
+      "lemmaSlp1": "PaqiNgA"
+    },
+    {
+      "key": "parA",
+      "lemmaSlp1": "parA"
+    },
+    {
+      "key": "paraBft",
+      "lemmaSlp1": "paraBft"
+    },
+    {
+      "key": "parama",
+      "lemmaSlp1": "parama"
+    },
+    {
+      "key": "parAnasA",
+      "lemmaSlp1": "parAnasA"
+    },
+    {
+      "key": "paRANganA",
+      "lemmaSlp1": "paRANganA"
+    },
+    {
+      "key": "parAri",
+      "lemmaSlp1": "parAri"
+    },
+    {
+      "key": "paRAyA",
+      "lemmaSlp1": "paRAyA"
+    },
+    {
+      "key": "paredyavi",
+      "lemmaSlp1": "paredyavi"
+    },
+    {
+      "key": "pari",
+      "lemmaSlp1": "pari"
+    },
+    {
+      "key": "pariBAzA",
+      "lemmaSlp1": "pariBAzA"
+    },
+    {
+      "key": "pariKA",
+      "lemmaSlp1": "pariKA"
+    },
+    {
+      "key": "parikaTA",
+      "lemmaSlp1": "parikaTA"
+    },
+    {
+      "key": "parikriyA",
+      "lemmaSlp1": "parikriyA"
+    },
+    {
+      "key": "parIkzA",
+      "lemmaSlp1": "parIkzA"
+    },
+    {
+      "key": "parikzit",
+      "lemmaSlp1": "parikzit"
+    },
+    {
+      "key": "parisrut",
+      "lemmaSlp1": "parisrut"
+    },
+    {
+      "key": "pAritaTyA",
+      "lemmaSlp1": "pAritaTyA"
+    },
+    {
+      "key": "parozRI",
+      "lemmaSlp1": "parozRI"
+    },
+    {
+      "key": "pARqu",
+      "lemmaSlp1": "pARqu"
+    },
+    {
+      "key": "parRaBedinI",
+      "lemmaSlp1": "parRaBedinI"
+    },
+    {
+      "key": "parRalatA",
+      "lemmaSlp1": "parRalatA"
+    },
+    {
+      "key": "parRaSAlA",
+      "lemmaSlp1": "parRaSAlA"
+    },
+    {
+      "key": "parSukA",
+      "lemmaSlp1": "parSukA"
+    },
+    {
+      "key": "parut",
+      "lemmaSlp1": "parut"
+    },
+    {
+      "key": "paRyANganA",
+      "lemmaSlp1": "paRyANganA"
+    },
+    {
+      "key": "paRyaSAlA",
+      "lemmaSlp1": "paRyaSAlA"
+    },
+    {
+      "key": "parza",
+      "lemmaSlp1": "parza"
+    },
+    {
+      "key": "paScAt",
+      "lemmaSlp1": "paScAt"
+    },
+    {
+      "key": "paSu",
+      "lemmaSlp1": "paSu"
+    },
+    {
+      "key": "paSya",
+      "lemmaSlp1": "paSya"
+    },
+    {
+      "key": "pata",
+      "lemmaSlp1": "pata"
+    },
+    {
+      "key": "pAtilI",
+      "lemmaSlp1": "pAtilI"
+    },
+    {
+      "key": "pativatnI",
+      "lemmaSlp1": "pativatnI"
+    },
+    {
+      "key": "pativratA",
+      "lemmaSlp1": "pativratA"
+    },
+    {
+      "key": "patnI",
+      "lemmaSlp1": "patnI"
+    },
+    {
+      "key": "pavAkA",
+      "lemmaSlp1": "pavAkA"
+    },
+    {
+      "key": "pAw",
+      "lemmaSlp1": "pAw"
+    },
+    {
+      "key": "Paw",
+      "lemmaSlp1": "Paw"
+    },
+    {
+      "key": "pawAlukA",
+      "lemmaSlp1": "pawAlukA"
+    },
+    {
+      "key": "paWamaYjarI",
+      "lemmaSlp1": "paWamaYjarI"
+    },
+    {
+      "key": "pAWamaYjarI",
+      "lemmaSlp1": "pAWamaYjarI"
+    },
+    {
+      "key": "pawu",
+      "lemmaSlp1": "pawu"
+    },
+    {
+      "key": "pawwadevI",
+      "lemmaSlp1": "pawwadevI"
+    },
+    {
+      "key": "pawwolikA",
+      "lemmaSlp1": "pawwolikA"
+    },
+    {
+      "key": "paYcanI",
+      "lemmaSlp1": "paYcanI"
+    },
+    {
+      "key": "paYcarasA",
+      "lemmaSlp1": "paYcarasA"
+    },
+    {
+      "key": "paYcASat",
+      "lemmaSlp1": "paYcASat"
+    },
+    {
+      "key": "paYcatA",
+      "lemmaSlp1": "paYcatA"
+    },
+    {
+      "key": "paYjikA",
+      "lemmaSlp1": "paYjikA"
+    },
+    {
+      "key": "PaYjikA",
+      "lemmaSlp1": "PaYjikA"
+    },
+    {
+      "key": "payozRI",
+      "lemmaSlp1": "payozRI"
+    },
+    {
+      "key": "peqA",
+      "lemmaSlp1": "peqA"
+    },
+    {
+      "key": "peSI",
+      "lemmaSlp1": "peSI"
+    },
+    {
+      "key": "pfcCA",
+      "lemmaSlp1": "pfcCA"
+    },
+    {
+      "key": "pfSnI",
+      "lemmaSlp1": "pfSnI"
+    },
+    {
+      "key": "pfSnikA",
+      "lemmaSlp1": "pfSnikA"
+    },
+    {
+      "key": "pfSniparRI",
+      "lemmaSlp1": "pfSniparRI"
+    },
+    {
+      "key": "pfTagAtmatA",
+      "lemmaSlp1": "pfTagAtmatA"
+    },
+    {
+      "key": "pfTagAtmikA",
+      "lemmaSlp1": "pfTagAtmikA"
+    },
+    {
+      "key": "pfTak",
+      "lemmaSlp1": "pfTak"
+    },
+    {
+      "key": "pfTakparRI",
+      "lemmaSlp1": "pfTakparRI"
+    },
+    {
+      "key": "pfTavI",
+      "lemmaSlp1": "pfTavI"
+    },
+    {
+      "key": "pfTikA",
+      "lemmaSlp1": "pfTikA"
+    },
+    {
+      "key": "pfTvI",
+      "lemmaSlp1": "pfTvI"
+    },
+    {
+      "key": "pfzAkarA",
+      "lemmaSlp1": "pfzAkarA"
+    },
+    {
+      "key": "pi",
+      "lemmaSlp1": "pi"
+    },
+    {
+      "key": "pI",
+      "lemmaSlp1": "pI"
+    },
+    {
+      "key": "pIluparRI",
+      "lemmaSlp1": "pIluparRI"
+    },
+    {
+      "key": "piNgakapiSA",
+      "lemmaSlp1": "piNgakapiSA"
+    },
+    {
+      "key": "pipAsA",
+      "lemmaSlp1": "pipAsA"
+    },
+    {
+      "key": "pippikA",
+      "lemmaSlp1": "pippikA"
+    },
+    {
+      "key": "pIqA",
+      "lemmaSlp1": "pIqA"
+    },
+    {
+      "key": "piSa",
+      "lemmaSlp1": "piSa"
+    },
+    {
+      "key": "pItadAru",
+      "lemmaSlp1": "pItadAru"
+    },
+    {
+      "key": "pItadugDA",
+      "lemmaSlp1": "pItadugDA"
+    },
+    {
+      "key": "pItakadalI",
+      "lemmaSlp1": "pItakadalI"
+    },
+    {
+      "key": "pItapAdA",
+      "lemmaSlp1": "pItapAdA"
+    },
+    {
+      "key": "pItasAri",
+      "lemmaSlp1": "pItasAri"
+    },
+    {
+      "key": "pItayUTI",
+      "lemmaSlp1": "pItayUTI"
+    },
+    {
+      "key": "pIva",
+      "lemmaSlp1": "pIva"
+    },
+    {
+      "key": "piYjikA",
+      "lemmaSlp1": "piYjikA"
+    },
+    {
+      "key": "plava",
+      "lemmaSlp1": "plava"
+    },
+    {
+      "key": "plu",
+      "lemmaSlp1": "plu"
+    },
+    {
+      "key": "polikA",
+      "lemmaSlp1": "polikA"
+    },
+    {
+      "key": "pOzkariRI",
+      "lemmaSlp1": "pOzkariRI"
+    },
+    {
+      "key": "pra",
+      "lemmaSlp1": "pra"
+    },
+    {
+      "key": "prA",
+      "lemmaSlp1": "prA"
+    },
+    {
+      "key": "praBA",
+      "lemmaSlp1": "praBA"
+    },
+    {
+      "key": "prAcikA",
+      "lemmaSlp1": "prAcikA"
+    },
+    {
+      "key": "pradeSinI",
+      "lemmaSlp1": "pradeSinI"
+    },
+    {
+      "key": "pragalBatA",
+      "lemmaSlp1": "pragalBatA"
+    },
+    {
+      "key": "prage",
+      "lemmaSlp1": "prage"
+    },
+    {
+      "key": "prahelikA",
+      "lemmaSlp1": "prahelikA"
+    },
+    {
+      "key": "prajanikA",
+      "lemmaSlp1": "prajanikA"
+    },
+    {
+      "key": "prakriyA",
+      "lemmaSlp1": "prakriyA"
+    },
+    {
+      "key": "pramA",
+      "lemmaSlp1": "pramA"
+    },
+    {
+      "key": "pramIlA",
+      "lemmaSlp1": "pramIlA"
+    },
+    {
+      "key": "prapA",
+      "lemmaSlp1": "prapA"
+    },
+    {
+      "key": "prasahya",
+      "lemmaSlp1": "prasahya"
+    },
+    {
+      "key": "praSaMsA",
+      "lemmaSlp1": "praSaMsA"
+    },
+    {
+      "key": "prasannerA",
+      "lemmaSlp1": "prasannerA"
+    },
+    {
+      "key": "prasavasTalI",
+      "lemmaSlp1": "prasavasTalI"
+    },
+    {
+      "key": "prasedikA",
+      "lemmaSlp1": "prasedikA"
+    },
+    {
+      "key": "praSnadUtI",
+      "lemmaSlp1": "praSnadUtI"
+    },
+    {
+      "key": "prastAvanA",
+      "lemmaSlp1": "prastAvanA"
+    },
+    {
+      "key": "prati",
+      "lemmaSlp1": "prati"
+    },
+    {
+      "key": "pratIcI",
+      "lemmaSlp1": "pratIcI"
+    },
+    {
+      "key": "pratijaNGA",
+      "lemmaSlp1": "pratijaNGA"
+    },
+    {
+      "key": "pratijihvA",
+      "lemmaSlp1": "pratijihvA"
+    },
+    {
+      "key": "prAtikA",
+      "lemmaSlp1": "prAtikA"
+    },
+    {
+      "key": "pratisIrA",
+      "lemmaSlp1": "pratisIrA"
+    },
+    {
+      "key": "pratiSrut",
+      "lemmaSlp1": "pratiSrut"
+    },
+    {
+      "key": "pratiSyA",
+      "lemmaSlp1": "pratiSyA"
+    },
+    {
+      "key": "pratolI",
+      "lemmaSlp1": "pratolI"
+    },
+    {
+      "key": "pratyASA",
+      "lemmaSlp1": "pratyASA"
+    },
+    {
+      "key": "pratyuta",
+      "lemmaSlp1": "pratyuta"
+    },
+    {
+      "key": "pravizA",
+      "lemmaSlp1": "pravizA"
+    },
+    {
+      "key": "prekzA",
+      "lemmaSlp1": "prekzA"
+    },
+    {
+      "key": "pretanadI",
+      "lemmaSlp1": "pretanadI"
+    },
+    {
+      "key": "pretya",
+      "lemmaSlp1": "pretya"
+    },
+    {
+      "key": "prI",
+      "lemmaSlp1": "prI"
+    },
+    {
+      "key": "priyatA",
+      "lemmaSlp1": "priyatA"
+    },
+    {
+      "key": "priyavarRI",
+      "lemmaSlp1": "priyavarRI"
+    },
+    {
+      "key": "proTa",
+      "lemmaSlp1": "proTa"
+    },
+    {
+      "key": "pru",
+      "lemmaSlp1": "pru"
+    },
+    {
+      "key": "psA",
+      "lemmaSlp1": "psA"
+    },
+    {
+      "key": "pU",
+      "lemmaSlp1": "pU"
+    },
+    {
+      "key": "pUjA",
+      "lemmaSlp1": "pUjA"
+    },
+    {
+      "key": "pula",
+      "lemmaSlp1": "pula"
+    },
+    {
+      "key": "Pulla",
+      "lemmaSlp1": "Pulla"
+    },
+    {
+      "key": "punaHpunA",
+      "lemmaSlp1": "punaHpunA"
+    },
+    {
+      "key": "pUpAlI",
+      "lemmaSlp1": "pUpAlI"
+    },
+    {
+      "key": "pUpikA",
+      "lemmaSlp1": "pUpikA"
+    },
+    {
+      "key": "pura",
+      "lemmaSlp1": "pura"
+    },
+    {
+      "key": "purA",
+      "lemmaSlp1": "purA"
+    },
+    {
+      "key": "puratawI",
+      "lemmaSlp1": "puratawI"
+    },
+    {
+      "key": "purItat",
+      "lemmaSlp1": "purItat"
+    },
+    {
+      "key": "pUrRamA",
+      "lemmaSlp1": "pUrRamA"
+    },
+    {
+      "key": "pUrRimA",
+      "lemmaSlp1": "pUrRimA"
+    },
+    {
+      "key": "puRyakft",
+      "lemmaSlp1": "puRyakft"
+    },
+    {
+      "key": "Put",
+      "lemmaSlp1": "Put"
+    },
+    {
+      "key": "PUt",
+      "lemmaSlp1": "PUt"
+    },
+    {
+      "key": "pUti",
+      "lemmaSlp1": "pUti"
+    },
+    {
+      "key": "pUtiSArijA",
+      "lemmaSlp1": "pUtiSArijA"
+    },
+    {
+      "key": "puttikA",
+      "lemmaSlp1": "puttikA"
+    },
+    {
+      "key": "puzpaSakawI",
+      "lemmaSlp1": "puzpaSakawI"
+    },
+    {
+      "key": "puzpavAwI",
+      "lemmaSlp1": "puzpavAwI"
+    },
+    {
+      "key": "pyAw",
+      "lemmaSlp1": "pyAw"
+    },
+    {
+      "key": "qAkinI",
+      "lemmaSlp1": "qAkinI"
+    },
+    {
+      "key": "QakkArI",
+      "lemmaSlp1": "QakkArI"
+    },
+    {
+      "key": "QAmarA",
+      "lemmaSlp1": "QAmarA"
+    },
+    {
+      "key": "qI",
+      "lemmaSlp1": "qI"
+    },
+    {
+      "key": "qimbikA",
+      "lemmaSlp1": "qimbikA"
+    },
+    {
+      "key": "rA",
+      "lemmaSlp1": "rA"
+    },
+    {
+      "key": "Ra",
+      "lemmaSlp1": "Ra"
+    },
+    {
+      "key": "rAkA",
+      "lemmaSlp1": "rAkA"
+    },
+    {
+      "key": "raktavawI",
+      "lemmaSlp1": "raktavawI"
+    },
+    {
+      "key": "raktikA",
+      "lemmaSlp1": "raktikA"
+    },
+    {
+      "key": "rAkzA",
+      "lemmaSlp1": "rAkzA"
+    },
+    {
+      "key": "rama",
+      "lemmaSlp1": "rama"
+    },
+    {
+      "key": "ramya",
+      "lemmaSlp1": "ramya"
+    },
+    {
+      "key": "raNgaSAlA",
+      "lemmaSlp1": "raNgaSAlA"
+    },
+    {
+      "key": "rAQA",
+      "lemmaSlp1": "rAQA"
+    },
+    {
+      "key": "raSanA",
+      "lemmaSlp1": "raSanA"
+    },
+    {
+      "key": "rasanetrikA",
+      "lemmaSlp1": "rasanetrikA"
+    },
+    {
+      "key": "rAsnA",
+      "lemmaSlp1": "rAsnA"
+    },
+    {
+      "key": "raTayAtrA",
+      "lemmaSlp1": "raTayAtrA"
+    },
+    {
+      "key": "rawantI",
+      "lemmaSlp1": "rawantI"
+    },
+    {
+      "key": "re",
+      "lemmaSlp1": "re"
+    },
+    {
+      "key": "rE",
+      "lemmaSlp1": "rE"
+    },
+    {
+      "key": "reBa",
+      "lemmaSlp1": "reBa"
+    },
+    {
+      "key": "repa",
+      "lemmaSlp1": "repa"
+    },
+    {
+      "key": "ri",
+      "lemmaSlp1": "ri"
+    },
+    {
+      "key": "rI",
+      "lemmaSlp1": "rI"
+    },
+    {
+      "key": "rIQA",
+      "lemmaSlp1": "rIQA"
+    },
+    {
+      "key": "rirI",
+      "lemmaSlp1": "rirI"
+    },
+    {
+      "key": "riza",
+      "lemmaSlp1": "riza"
+    },
+    {
+      "key": "roDavakrA",
+      "lemmaSlp1": "roDavakrA"
+    },
+    {
+      "key": "romalatA",
+      "lemmaSlp1": "romalatA"
+    },
+    {
+      "key": "romAlI",
+      "lemmaSlp1": "romAlI"
+    },
+    {
+      "key": "romAvalI",
+      "lemmaSlp1": "romAvalI"
+    },
+    {
+      "key": "roqa",
+      "lemmaSlp1": "roqa"
+    },
+    {
+      "key": "ru",
+      "lemmaSlp1": "ru"
+    },
+    {
+      "key": "rudrapatnI",
+      "lemmaSlp1": "rudrapatnI"
+    },
+    {
+      "key": "rudrapriyA",
+      "lemmaSlp1": "rudrapriyA"
+    },
+    {
+      "key": "rudrARI",
+      "lemmaSlp1": "rudrARI"
+    },
+    {
+      "key": "ruha",
+      "lemmaSlp1": "ruha"
+    },
+    {
+      "key": "rukpratikriyA",
+      "lemmaSlp1": "rukpratikriyA"
+    },
+    {
+      "key": "rUkza",
+      "lemmaSlp1": "rUkza"
+    },
+    {
+      "key": "rUpa",
+      "lemmaSlp1": "rUpa"
+    },
+    {
+      "key": "sa",
+      "lemmaSlp1": "sa"
+    },
+    {
+      "key": "sA",
+      "lemmaSlp1": "sA"
+    },
+    {
+      "key": "saBA",
+      "lemmaSlp1": "saBA"
+    },
+    {
+      "key": "saBAsad",
+      "lemmaSlp1": "saBAsad"
+    },
+    {
+      "key": "sAci",
+      "lemmaSlp1": "sAci"
+    },
+    {
+      "key": "sadA",
+      "lemmaSlp1": "sadA"
+    },
+    {
+      "key": "sadAnIrA",
+      "lemmaSlp1": "sadAnIrA"
+    },
+    {
+      "key": "sADizWa",
+      "lemmaSlp1": "sADizWa"
+    },
+    {
+      "key": "saha",
+      "lemmaSlp1": "saha"
+    },
+    {
+      "key": "sahAyatA",
+      "lemmaSlp1": "sahAyatA"
+    },
+    {
+      "key": "SAKASiPA",
+      "lemmaSlp1": "SAKASiPA"
+    },
+    {
+      "key": "SakawAhvA",
+      "lemmaSlp1": "SakawAhvA"
+    },
+    {
+      "key": "sakft",
+      "lemmaSlp1": "sakft"
+    },
+    {
+      "key": "Sakft",
+      "lemmaSlp1": "Sakft"
+    },
+    {
+      "key": "SAkinI",
+      "lemmaSlp1": "SAkinI"
+    },
+    {
+      "key": "SakraBUBavA",
+      "lemmaSlp1": "SakraBUBavA"
+    },
+    {
+      "key": "Sakrajit",
+      "lemmaSlp1": "Sakrajit"
+    },
+    {
+      "key": "SakrARI",
+      "lemmaSlp1": "SakrARI"
+    },
+    {
+      "key": "SakrasfzwA",
+      "lemmaSlp1": "SakrasfzwA"
+    },
+    {
+      "key": "saktuPalA",
+      "lemmaSlp1": "saktuPalA"
+    },
+    {
+      "key": "SakulAdanI",
+      "lemmaSlp1": "SakulAdanI"
+    },
+    {
+      "key": "SakuniprapA",
+      "lemmaSlp1": "SakuniprapA"
+    },
+    {
+      "key": "SakuntalA",
+      "lemmaSlp1": "SakuntalA"
+    },
+    {
+      "key": "sAkzAt",
+      "lemmaSlp1": "sAkzAt"
+    },
+    {
+      "key": "SAla",
+      "lemmaSlp1": "SAla"
+    },
+    {
+      "key": "SAlaBaYjikA",
+      "lemmaSlp1": "SAlaBaYjikA"
+    },
+    {
+      "key": "SalAkApari",
+      "lemmaSlp1": "SalAkApari"
+    },
+    {
+      "key": "sallakI",
+      "lemmaSlp1": "sallakI"
+    },
+    {
+      "key": "SAlu",
+      "lemmaSlp1": "SAlu"
+    },
+    {
+      "key": "sam",
+      "lemmaSlp1": "sam"
+    },
+    {
+      "key": "sAma",
+      "lemmaSlp1": "sAma"
+    },
+    {
+      "key": "samajyA",
+      "lemmaSlp1": "samajyA"
+    },
+    {
+      "key": "samAKyA",
+      "lemmaSlp1": "samAKyA"
+    },
+    {
+      "key": "samAMsamInA",
+      "lemmaSlp1": "samAMsamInA"
+    },
+    {
+      "key": "samantadugDA",
+      "lemmaSlp1": "samantadugDA"
+    },
+    {
+      "key": "samayA",
+      "lemmaSlp1": "samayA"
+    },
+    {
+      "key": "Samba",
+      "lemmaSlp1": "Samba"
+    },
+    {
+      "key": "sAmi",
+      "lemmaSlp1": "sAmi"
+    },
+    {
+      "key": "samInikA",
+      "lemmaSlp1": "samInikA"
+    },
+    {
+      "key": "samit",
+      "lemmaSlp1": "samit"
+    },
+    {
+      "key": "SampA",
+      "lemmaSlp1": "SampA"
+    },
+    {
+      "key": "saMsad",
+      "lemmaSlp1": "saMsad"
+    },
+    {
+      "key": "saMScat",
+      "lemmaSlp1": "saMScat"
+    },
+    {
+      "key": "saMSvat",
+      "lemmaSlp1": "saMSvat"
+    },
+    {
+      "key": "samudrakAntA",
+      "lemmaSlp1": "samudrakAntA"
+    },
+    {
+      "key": "samudrAmbarA",
+      "lemmaSlp1": "samudrAmbarA"
+    },
+    {
+      "key": "samudrameKalA",
+      "lemmaSlp1": "samudrameKalA"
+    },
+    {
+      "key": "saMyat",
+      "lemmaSlp1": "saMyat"
+    },
+    {
+      "key": "sanA",
+      "lemmaSlp1": "sanA"
+    },
+    {
+      "key": "sanAt",
+      "lemmaSlp1": "sanAt"
+    },
+    {
+      "key": "sAneyI",
+      "lemmaSlp1": "sAneyI"
+    },
+    {
+      "key": "sAnikA",
+      "lemmaSlp1": "sAnikA"
+    },
+    {
+      "key": "SaNKaBft",
+      "lemmaSlp1": "SaNKaBft"
+    },
+    {
+      "key": "SaNKacarI",
+      "lemmaSlp1": "SaNKacarI"
+    },
+    {
+      "key": "SaNkulA",
+      "lemmaSlp1": "SaNkulA"
+    },
+    {
+      "key": "sapadi",
+      "lemmaSlp1": "sapadi"
+    },
+    {
+      "key": "saptaDA",
+      "lemmaSlp1": "saptaDA"
+    },
+    {
+      "key": "sAra",
+      "lemmaSlp1": "sAra"
+    },
+    {
+      "key": "SAra",
+      "lemmaSlp1": "SAra"
+    },
+    {
+      "key": "Sarad",
+      "lemmaSlp1": "Sarad"
+    },
+    {
+      "key": "sAradA",
+      "lemmaSlp1": "sAradA"
+    },
+    {
+      "key": "saraGA",
+      "lemmaSlp1": "saraGA"
+    },
+    {
+      "key": "saramA",
+      "lemmaSlp1": "saramA"
+    },
+    {
+      "key": "sarat",
+      "lemmaSlp1": "sarat"
+    },
+    {
+      "key": "SarAvatI",
+      "lemmaSlp1": "SarAvatI"
+    },
+    {
+      "key": "saraw",
+      "lemmaSlp1": "saraw"
+    },
+    {
+      "key": "saridvarA",
+      "lemmaSlp1": "saridvarA"
+    },
+    {
+      "key": "SAriSfNKalA",
+      "lemmaSlp1": "SAriSfNKalA"
+    },
+    {
+      "key": "sarit",
+      "lemmaSlp1": "sarit"
+    },
+    {
+      "key": "sarpaganDA",
+      "lemmaSlp1": "sarpaganDA"
+    },
+    {
+      "key": "SaSasTalI",
+      "lemmaSlp1": "SaSasTalI"
+    },
+    {
+      "key": "SaSileKA",
+      "lemmaSlp1": "SaSileKA"
+    },
+    {
+      "key": "sAsnA",
+      "lemmaSlp1": "sAsnA"
+    },
+    {
+      "key": "Sasta",
+      "lemmaSlp1": "Sasta"
+    },
+    {
+      "key": "SAstrakft",
+      "lemmaSlp1": "SAstrakft"
+    },
+    {
+      "key": "sAta",
+      "lemmaSlp1": "sAta"
+    },
+    {
+      "key": "SataDA",
+      "lemmaSlp1": "SataDA"
+    },
+    {
+      "key": "SataGnI",
+      "lemmaSlp1": "SataGnI"
+    },
+    {
+      "key": "sAtalA",
+      "lemmaSlp1": "sAtalA"
+    },
+    {
+      "key": "SatAvarI",
+      "lemmaSlp1": "SatAvarI"
+    },
+    {
+      "key": "satkriyA",
+      "lemmaSlp1": "satkriyA"
+    },
+    {
+      "key": "sattA",
+      "lemmaSlp1": "sattA"
+    },
+    {
+      "key": "sattraSAlA",
+      "lemmaSlp1": "sattraSAlA"
+    },
+    {
+      "key": "satyaBAmA",
+      "lemmaSlp1": "satyaBAmA"
+    },
+    {
+      "key": "Sawa",
+      "lemmaSlp1": "Sawa"
+    },
+    {
+      "key": "SaWa",
+      "lemmaSlp1": "SaWa"
+    },
+    {
+      "key": "SayanEkAdaSI",
+      "lemmaSlp1": "SayanEkAdaSI"
+    },
+    {
+      "key": "saYcat",
+      "lemmaSlp1": "saYcat"
+    },
+    {
+      "key": "SayyA",
+      "lemmaSlp1": "SayyA"
+    },
+    {
+      "key": "SemuzI",
+      "lemmaSlp1": "SemuzI"
+    },
+    {
+      "key": "senA",
+      "lemmaSlp1": "senA"
+    },
+    {
+      "key": "SePAlikA",
+      "lemmaSlp1": "SePAlikA"
+    },
+    {
+      "key": "seva",
+      "lemmaSlp1": "seva"
+    },
+    {
+      "key": "sevA",
+      "lemmaSlp1": "sevA"
+    },
+    {
+      "key": "Si",
+      "lemmaSlp1": "Si"
+    },
+    {
+      "key": "SI",
+      "lemmaSlp1": "SI"
+    },
+    {
+      "key": "sidDagaNgA",
+      "lemmaSlp1": "sidDagaNgA"
+    },
+    {
+      "key": "SiKA",
+      "lemmaSlp1": "SiKA"
+    },
+    {
+      "key": "sikatA",
+      "lemmaSlp1": "sikatA"
+    },
+    {
+      "key": "SikzA",
+      "lemmaSlp1": "SikzA"
+    },
+    {
+      "key": "SilAjatu",
+      "lemmaSlp1": "SilAjatu"
+    },
+    {
+      "key": "SilAtmikA",
+      "lemmaSlp1": "SilAtmikA"
+    },
+    {
+      "key": "SilAvalkA",
+      "lemmaSlp1": "SilAvalkA"
+    },
+    {
+      "key": "sImA",
+      "lemmaSlp1": "sImA"
+    },
+    {
+      "key": "siMhayAnA",
+      "lemmaSlp1": "siMhayAnA"
+    },
+    {
+      "key": "siMhikA",
+      "lemmaSlp1": "siMhikA"
+    },
+    {
+      "key": "sinIvAlI",
+      "lemmaSlp1": "sinIvAlI"
+    },
+    {
+      "key": "SirorujA",
+      "lemmaSlp1": "SirorujA"
+    },
+    {
+      "key": "SirovallI",
+      "lemmaSlp1": "SirovallI"
+    },
+    {
+      "key": "SiSuganDA",
+      "lemmaSlp1": "SiSuganDA"
+    },
+    {
+      "key": "sItA",
+      "lemmaSlp1": "sItA"
+    },
+    {
+      "key": "sitAlatA",
+      "lemmaSlp1": "sitAlatA"
+    },
+    {
+      "key": "SivacaturdaSI",
+      "lemmaSlp1": "SivacaturdaSI"
+    },
+    {
+      "key": "SivadAru",
+      "lemmaSlp1": "SivadAru"
+    },
+    {
+      "key": "SivadUtI",
+      "lemmaSlp1": "SivadUtI"
+    },
+    {
+      "key": "SivAnI",
+      "lemmaSlp1": "SivAnI"
+    },
+    {
+      "key": "skanDaSAKA",
+      "lemmaSlp1": "skanDaSAKA"
+    },
+    {
+      "key": "SlaTa",
+      "lemmaSlp1": "SlaTa"
+    },
+    {
+      "key": "sma",
+      "lemmaSlp1": "sma"
+    },
+    {
+      "key": "smaraleKanI",
+      "lemmaSlp1": "smaraleKanI"
+    },
+    {
+      "key": "smarapriyA",
+      "lemmaSlp1": "smarapriyA"
+    },
+    {
+      "key": "smaravITikA",
+      "lemmaSlp1": "smaravITikA"
+    },
+    {
+      "key": "SmaSru",
+      "lemmaSlp1": "SmaSru"
+    },
+    {
+      "key": "SmaSrumuKI",
+      "lemmaSlp1": "SmaSrumuKI"
+    },
+    {
+      "key": "smi",
+      "lemmaSlp1": "smi"
+    },
+    {
+      "key": "snigDatA",
+      "lemmaSlp1": "snigDatA"
+    },
+    {
+      "key": "snuzA",
+      "lemmaSlp1": "snuzA"
+    },
+    {
+      "key": "sOdAmanI",
+      "lemmaSlp1": "sOdAmanI"
+    },
+    {
+      "key": "somaDArA",
+      "lemmaSlp1": "somaDArA"
+    },
+    {
+      "key": "somalatA",
+      "lemmaSlp1": "somalatA"
+    },
+    {
+      "key": "somarAjI",
+      "lemmaSlp1": "somarAjI"
+    },
+    {
+      "key": "somasut",
+      "lemmaSlp1": "somasut"
+    },
+    {
+      "key": "somavallI",
+      "lemmaSlp1": "somavallI"
+    },
+    {
+      "key": "SoRa",
+      "lemmaSlp1": "SoRa"
+    },
+    {
+      "key": "SoTahft",
+      "lemmaSlp1": "SoTahft"
+    },
+    {
+      "key": "SoTajit",
+      "lemmaSlp1": "SoTajit"
+    },
+    {
+      "key": "sparSalajjA",
+      "lemmaSlp1": "sparSalajjA"
+    },
+    {
+      "key": "spfhA",
+      "lemmaSlp1": "spfhA"
+    },
+    {
+      "key": "spfkkA",
+      "lemmaSlp1": "spfkkA"
+    },
+    {
+      "key": "sPuliNginI",
+      "lemmaSlp1": "sPuliNginI"
+    },
+    {
+      "key": "sPuwa",
+      "lemmaSlp1": "sPuwa"
+    },
+    {
+      "key": "SrA",
+      "lemmaSlp1": "SrA"
+    },
+    {
+      "key": "srAk",
+      "lemmaSlp1": "srAk"
+    },
+    {
+      "key": "Sri",
+      "lemmaSlp1": "Sri"
+    },
+    {
+      "key": "SrI",
+      "lemmaSlp1": "SrI"
+    },
+    {
+      "key": "SrIhastinI",
+      "lemmaSlp1": "SrIhastinI"
+    },
+    {
+      "key": "SroRa",
+      "lemmaSlp1": "SroRa"
+    },
+    {
+      "key": "srotasvinI",
+      "lemmaSlp1": "srotasvinI"
+    },
+    {
+      "key": "SrOzaw",
+      "lemmaSlp1": "SrOzaw"
+    },
+    {
+      "key": "sru",
+      "lemmaSlp1": "sru"
+    },
+    {
+      "key": "Sru",
+      "lemmaSlp1": "Sru"
+    },
+    {
+      "key": "SrutijIvikA",
+      "lemmaSlp1": "SrutijIvikA"
+    },
+    {
+      "key": "sTaga",
+      "lemmaSlp1": "sTaga"
+    },
+    {
+      "key": "sTagu",
+      "lemmaSlp1": "sTagu"
+    },
+    {
+      "key": "sTalapadminI",
+      "lemmaSlp1": "sTalapadminI"
+    },
+    {
+      "key": "sTAnacaYcalA",
+      "lemmaSlp1": "sTAnacaYcalA"
+    },
+    {
+      "key": "starI",
+      "lemmaSlp1": "starI"
+    },
+    {
+      "key": "sTiraraNgA",
+      "lemmaSlp1": "sTiraraNgA"
+    },
+    {
+      "key": "strI",
+      "lemmaSlp1": "strI"
+    },
+    {
+      "key": "strIgavI",
+      "lemmaSlp1": "strIgavI"
+    },
+    {
+      "key": "sTUla",
+      "lemmaSlp1": "sTUla"
+    },
+    {
+      "key": "sTUladalA",
+      "lemmaSlp1": "sTUladalA"
+    },
+    {
+      "key": "sTUlaSIrzikA",
+      "lemmaSlp1": "sTUlaSIrzikA"
+    },
+    {
+      "key": "su",
+      "lemmaSlp1": "su"
+    },
+    {
+      "key": "SuBa",
+      "lemmaSlp1": "SuBa"
+    },
+    {
+      "key": "suDA",
+      "lemmaSlp1": "suDA"
+    },
+    {
+      "key": "sUdaSAlA",
+      "lemmaSlp1": "sUdaSAlA"
+    },
+    {
+      "key": "suganDi",
+      "lemmaSlp1": "suganDi"
+    },
+    {
+      "key": "suKa",
+      "lemmaSlp1": "suKa"
+    },
+    {
+      "key": "suKadohyA",
+      "lemmaSlp1": "suKadohyA"
+    },
+    {
+      "key": "sukaRwakA",
+      "lemmaSlp1": "sukaRwakA"
+    },
+    {
+      "key": "SUkaSimbA",
+      "lemmaSlp1": "SUkaSimbA"
+    },
+    {
+      "key": "sukft",
+      "lemmaSlp1": "sukft"
+    },
+    {
+      "key": "SuklopalA",
+      "lemmaSlp1": "SuklopalA"
+    },
+    {
+      "key": "SUlahft",
+      "lemmaSlp1": "SUlahft"
+    },
+    {
+      "key": "sumadAtmajA",
+      "lemmaSlp1": "sumadAtmajA"
+    },
+    {
+      "key": "supratiBA",
+      "lemmaSlp1": "supratiBA"
+    },
+    {
+      "key": "SUra",
+      "lemmaSlp1": "SUra"
+    },
+    {
+      "key": "suraBi",
+      "lemmaSlp1": "suraBi"
+    },
+    {
+      "key": "suraBisravA",
+      "lemmaSlp1": "suraBisravA"
+    },
+    {
+      "key": "suralA",
+      "lemmaSlp1": "suralA"
+    },
+    {
+      "key": "suranadI",
+      "lemmaSlp1": "suranadI"
+    },
+    {
+      "key": "suranimnagA",
+      "lemmaSlp1": "suranimnagA"
+    },
+    {
+      "key": "surApagA",
+      "lemmaSlp1": "surApagA"
+    },
+    {
+      "key": "SuSrUzA",
+      "lemmaSlp1": "SuSrUzA"
+    },
+    {
+      "key": "sutaSreRI",
+      "lemmaSlp1": "sutaSreRI"
+    },
+    {
+      "key": "sutavaskarA",
+      "lemmaSlp1": "sutavaskarA"
+    },
+    {
+      "key": "sUtraBid",
+      "lemmaSlp1": "sUtraBid"
+    },
+    {
+      "key": "sUtragaRqikA",
+      "lemmaSlp1": "sUtragaRqikA"
+    },
+    {
+      "key": "sUtralA",
+      "lemmaSlp1": "sUtralA"
+    },
+    {
+      "key": "sUtrAlI",
+      "lemmaSlp1": "sUtrAlI"
+    },
+    {
+      "key": "sUtratarkuwI",
+      "lemmaSlp1": "sUtratarkuwI"
+    },
+    {
+      "key": "suvarRayUTI",
+      "lemmaSlp1": "suvarRayUTI"
+    },
+    {
+      "key": "suvid",
+      "lemmaSlp1": "suvid"
+    },
+    {
+      "key": "suvidat",
+      "lemmaSlp1": "suvidat"
+    },
+    {
+      "key": "suvidatra",
+      "lemmaSlp1": "suvidatra"
+    },
+    {
+      "key": "suzavI",
+      "lemmaSlp1": "suzavI"
+    },
+    {
+      "key": "suzWu",
+      "lemmaSlp1": "suzWu"
+    },
+    {
+      "key": "svaDA",
+      "lemmaSlp1": "svaDA"
+    },
+    {
+      "key": "SvadaMzwrA",
+      "lemmaSlp1": "SvadaMzwrA"
+    },
+    {
+      "key": "svAhA",
+      "lemmaSlp1": "svAhA"
+    },
+    {
+      "key": "svapnakft",
+      "lemmaSlp1": "svapnakft"
+    },
+    {
+      "key": "svar",
+      "lemmaSlp1": "svar"
+    },
+    {
+      "key": "svara",
+      "lemmaSlp1": "svara"
+    },
+    {
+      "key": "svaralAsikA",
+      "lemmaSlp1": "svaralAsikA"
+    },
+    {
+      "key": "svaramaRqalikA",
+      "lemmaSlp1": "svaramaRqalikA"
+    },
+    {
+      "key": "svarApagA",
+      "lemmaSlp1": "svarApagA"
+    },
+    {
+      "key": "svargaNgA",
+      "lemmaSlp1": "svargaNgA"
+    },
+    {
+      "key": "svarRakft",
+      "lemmaSlp1": "svarRakft"
+    },
+    {
+      "key": "svarRayUTI",
+      "lemmaSlp1": "svarRayUTI"
+    },
+    {
+      "key": "svasti",
+      "lemmaSlp1": "svasti"
+    },
+    {
+      "key": "svecCA",
+      "lemmaSlp1": "svecCA"
+    },
+    {
+      "key": "Svetagarut",
+      "lemmaSlp1": "Svetagarut"
+    },
+    {
+      "key": "SvetapAwalA",
+      "lemmaSlp1": "SvetapAwalA"
+    },
+    {
+      "key": "Svi",
+      "lemmaSlp1": "Svi"
+    },
+    {
+      "key": "tadA",
+      "lemmaSlp1": "tadA"
+    },
+    {
+      "key": "taka",
+      "lemmaSlp1": "taka"
+    },
+    {
+      "key": "tAlaBft",
+      "lemmaSlp1": "tAlaBft"
+    },
+    {
+      "key": "talAcI",
+      "lemmaSlp1": "talAcI"
+    },
+    {
+      "key": "talodA",
+      "lemmaSlp1": "talodA"
+    },
+    {
+      "key": "tAlu",
+      "lemmaSlp1": "tAlu"
+    },
+    {
+      "key": "tama",
+      "lemmaSlp1": "tama"
+    },
+    {
+      "key": "tambA",
+      "lemmaSlp1": "tambA"
+    },
+    {
+      "key": "tampA",
+      "lemmaSlp1": "tampA"
+    },
+    {
+      "key": "tantratA",
+      "lemmaSlp1": "tantratA"
+    },
+    {
+      "key": "tantuSAlA",
+      "lemmaSlp1": "tantuSAlA"
+    },
+    {
+      "key": "tantuvigrahA",
+      "lemmaSlp1": "tantuvigrahA"
+    },
+    {
+      "key": "tanuBastrA",
+      "lemmaSlp1": "tanuBastrA"
+    },
+    {
+      "key": "tapa",
+      "lemmaSlp1": "tapa"
+    },
+    {
+      "key": "tapanAtmajA",
+      "lemmaSlp1": "tapanAtmajA"
+    },
+    {
+      "key": "tapatI",
+      "lemmaSlp1": "tapatI"
+    },
+    {
+      "key": "taqit",
+      "lemmaSlp1": "taqit"
+    },
+    {
+      "key": "tArABUzA",
+      "lemmaSlp1": "tArABUzA"
+    },
+    {
+      "key": "tArakajit",
+      "lemmaSlp1": "tArakajit"
+    },
+    {
+      "key": "taraRqapAdA",
+      "lemmaSlp1": "taraRqapAdA"
+    },
+    {
+      "key": "tAravimalA",
+      "lemmaSlp1": "tAravimalA"
+    },
+    {
+      "key": "tarkavidyA",
+      "lemmaSlp1": "tarkavidyA"
+    },
+    {
+      "key": "taRqulAmbu",
+      "lemmaSlp1": "taRqulAmbu"
+    },
+    {
+      "key": "taruruhA",
+      "lemmaSlp1": "taruruhA"
+    },
+    {
+      "key": "tarutUlikA",
+      "lemmaSlp1": "tarutUlikA"
+    },
+    {
+      "key": "taTA",
+      "lemmaSlp1": "taTA"
+    },
+    {
+      "key": "tati",
+      "lemmaSlp1": "tati"
+    },
+    {
+      "key": "tatra",
+      "lemmaSlp1": "tatra"
+    },
+    {
+      "key": "tawinI",
+      "lemmaSlp1": "tawinI"
+    },
+    {
+      "key": "tElamAlI",
+      "lemmaSlp1": "tElamAlI"
+    },
+    {
+      "key": "tElAmbukA",
+      "lemmaSlp1": "tElAmbukA"
+    },
+    {
+      "key": "tElapAyikA",
+      "lemmaSlp1": "tElapAyikA"
+    },
+    {
+      "key": "tElapipIlikA",
+      "lemmaSlp1": "tElapipIlikA"
+    },
+    {
+      "key": "tElAwI",
+      "lemmaSlp1": "tElAwI"
+    },
+    {
+      "key": "tena",
+      "lemmaSlp1": "tena"
+    },
+    {
+      "key": "tfRagoDA",
+      "lemmaSlp1": "tfRagoDA"
+    },
+    {
+      "key": "tfRakuwI",
+      "lemmaSlp1": "tfRakuwI"
+    },
+    {
+      "key": "tfRatA",
+      "lemmaSlp1": "tfRatA"
+    },
+    {
+      "key": "tfRyA",
+      "lemmaSlp1": "tfRyA"
+    },
+    {
+      "key": "tfzA",
+      "lemmaSlp1": "tfzA"
+    },
+    {
+      "key": "tfzRA",
+      "lemmaSlp1": "tfzRA"
+    },
+    {
+      "key": "tIkzRataRqulA",
+      "lemmaSlp1": "tIkzRataRqulA"
+    },
+    {
+      "key": "tilottamA",
+      "lemmaSlp1": "tilottamA"
+    },
+    {
+      "key": "tintiqikA",
+      "lemmaSlp1": "tintiqikA"
+    },
+    {
+      "key": "tiraskriyA",
+      "lemmaSlp1": "tiraskriyA"
+    },
+    {
+      "key": "tIrTarAjI",
+      "lemmaSlp1": "tIrTarAjI"
+    },
+    {
+      "key": "tomarikA",
+      "lemmaSlp1": "tomarikA"
+    },
+    {
+      "key": "toyADivAsinI",
+      "lemmaSlp1": "toyADivAsinI"
+    },
+    {
+      "key": "toyapuzpI",
+      "lemmaSlp1": "toyapuzpI"
+    },
+    {
+      "key": "toyaSuktikA",
+      "lemmaSlp1": "toyaSuktikA"
+    },
+    {
+      "key": "trA",
+      "lemmaSlp1": "trA"
+    },
+    {
+      "key": "trapAraRqA",
+      "lemmaSlp1": "trapAraRqA"
+    },
+    {
+      "key": "trapu",
+      "lemmaSlp1": "trapu"
+    },
+    {
+      "key": "trasa",
+      "lemmaSlp1": "trasa"
+    },
+    {
+      "key": "treDA",
+      "lemmaSlp1": "treDA"
+    },
+    {
+      "key": "trElokyavijayA",
+      "lemmaSlp1": "trElokyavijayA"
+    },
+    {
+      "key": "tretA",
+      "lemmaSlp1": "tretA"
+    },
+    {
+      "key": "triDA",
+      "lemmaSlp1": "triDA"
+    },
+    {
+      "key": "trikawu",
+      "lemmaSlp1": "trikawu"
+    },
+    {
+      "key": "trimaDu",
+      "lemmaSlp1": "trimaDu"
+    },
+    {
+      "key": "triMSat",
+      "lemmaSlp1": "triMSat"
+    },
+    {
+      "key": "triveRI",
+      "lemmaSlp1": "triveRI"
+    },
+    {
+      "key": "trivft",
+      "lemmaSlp1": "trivft"
+    },
+    {
+      "key": "tu",
+      "lemmaSlp1": "tu"
+    },
+    {
+      "key": "tuda",
+      "lemmaSlp1": "tuda"
+    },
+    {
+      "key": "tuja",
+      "lemmaSlp1": "tuja"
+    },
+    {
+      "key": "tUlanAlI",
+      "lemmaSlp1": "tUlanAlI"
+    },
+    {
+      "key": "tulasAriRI",
+      "lemmaSlp1": "tulasAriRI"
+    },
+    {
+      "key": "tUlaSarkarA",
+      "lemmaSlp1": "tUlaSarkarA"
+    },
+    {
+      "key": "tulasI",
+      "lemmaSlp1": "tulasI"
+    },
+    {
+      "key": "tulikA",
+      "lemmaSlp1": "tulikA"
+    },
+    {
+      "key": "tUlinI",
+      "lemmaSlp1": "tUlinI"
+    },
+    {
+      "key": "tura",
+      "lemmaSlp1": "tura"
+    },
+    {
+      "key": "tUra",
+      "lemmaSlp1": "tUra"
+    },
+    {
+      "key": "turI",
+      "lemmaSlp1": "turI"
+    },
+    {
+      "key": "tvac",
+      "lemmaSlp1": "tvac"
+    },
+    {
+      "key": "tvizA",
+      "lemmaSlp1": "tvizA"
+    },
+    {
+      "key": "u",
+      "lemmaSlp1": "u"
+    },
+    {
+      "key": "uBa",
+      "lemmaSlp1": "uBa"
+    },
+    {
+      "key": "uccawA",
+      "lemmaSlp1": "uccawA"
+    },
+    {
+      "key": "ud",
+      "lemmaSlp1": "ud"
+    },
+    {
+      "key": "udaSvit",
+      "lemmaSlp1": "udaSvit"
+    },
+    {
+      "key": "ugraSeKarA",
+      "lemmaSlp1": "ugraSeKarA"
+    },
+    {
+      "key": "Uha",
+      "lemmaSlp1": "Uha"
+    },
+    {
+      "key": "ujjayinI",
+      "lemmaSlp1": "ujjayinI"
+    },
+    {
+      "key": "ukza",
+      "lemmaSlp1": "ukza"
+    },
+    {
+      "key": "um",
+      "lemmaSlp1": "um"
+    },
+    {
+      "key": "Una",
+      "lemmaSlp1": "Una"
+    },
+    {
+      "key": "upa",
+      "lemmaSlp1": "upa"
+    },
+    {
+      "key": "upaBft",
+      "lemmaSlp1": "upaBft"
+    },
+    {
+      "key": "upadA",
+      "lemmaSlp1": "upadA"
+    },
+    {
+      "key": "upaDA",
+      "lemmaSlp1": "upaDA"
+    },
+    {
+      "key": "upadehikA",
+      "lemmaSlp1": "upadehikA"
+    },
+    {
+      "key": "upadI",
+      "lemmaSlp1": "upadI"
+    },
+    {
+      "key": "upajihvA",
+      "lemmaSlp1": "upajihvA"
+    },
+    {
+      "key": "upajYA",
+      "lemmaSlp1": "upajYA"
+    },
+    {
+      "key": "upakulyA",
+      "lemmaSlp1": "upakulyA"
+    },
+    {
+      "key": "upakuYcikA",
+      "lemmaSlp1": "upakuYcikA"
+    },
+    {
+      "key": "upAMSu",
+      "lemmaSlp1": "upAMSu"
+    },
+    {
+      "key": "upapuzpikA",
+      "lemmaSlp1": "upapuzpikA"
+    },
+    {
+      "key": "upari",
+      "lemmaSlp1": "upari"
+    },
+    {
+      "key": "uparizwAt",
+      "lemmaSlp1": "uparizwAt"
+    },
+    {
+      "key": "uqu",
+      "lemmaSlp1": "uqu"
+    },
+    {
+      "key": "uraHsUtrikA",
+      "lemmaSlp1": "uraHsUtrikA"
+    },
+    {
+      "key": "UrarI",
+      "lemmaSlp1": "UrarI"
+    },
+    {
+      "key": "urI",
+      "lemmaSlp1": "urI"
+    },
+    {
+      "key": "UrI",
+      "lemmaSlp1": "UrI"
+    },
+    {
+      "key": "ururI",
+      "lemmaSlp1": "ururI"
+    },
+    {
+      "key": "UrurI",
+      "lemmaSlp1": "UrurI"
+    },
+    {
+      "key": "UrzA",
+      "lemmaSlp1": "UrzA"
+    },
+    {
+      "key": "uSI",
+      "lemmaSlp1": "uSI"
+    },
+    {
+      "key": "ut",
+      "lemmaSlp1": "ut"
+    },
+    {
+      "key": "uta",
+      "lemmaSlp1": "uta"
+    },
+    {
+      "key": "utAho",
+      "lemmaSlp1": "utAho"
+    },
+    {
+      "key": "utkAkA",
+      "lemmaSlp1": "utkAkA"
+    },
+    {
+      "key": "utkalikA",
+      "lemmaSlp1": "utkalikA"
+    },
+    {
+      "key": "utkatA",
+      "lemmaSlp1": "utkatA"
+    },
+    {
+      "key": "utkziptikA",
+      "lemmaSlp1": "utkziptikA"
+    },
+    {
+      "key": "utpAlI",
+      "lemmaSlp1": "utpAlI"
+    },
+    {
+      "key": "utplavA",
+      "lemmaSlp1": "utplavA"
+    },
+    {
+      "key": "utprekzA",
+      "lemmaSlp1": "utprekzA"
+    },
+    {
+      "key": "uttamaPalinI",
+      "lemmaSlp1": "uttamaPalinI"
+    },
+    {
+      "key": "utTAnEkAdaSI",
+      "lemmaSlp1": "utTAnEkAdaSI"
+    },
+    {
+      "key": "uttarA",
+      "lemmaSlp1": "uttarA"
+    },
+    {
+      "key": "uttarakriyA",
+      "lemmaSlp1": "uttarakriyA"
+    },
+    {
+      "key": "uttarAt",
+      "lemmaSlp1": "uttarAt"
+    },
+    {
+      "key": "uttarAzAQA",
+      "lemmaSlp1": "uttarAzAQA"
+    },
+    {
+      "key": "uttareRa",
+      "lemmaSlp1": "uttareRa"
+    },
+    {
+      "key": "uza",
+      "lemmaSlp1": "uza"
+    },
+    {
+      "key": "uzRanadI",
+      "lemmaSlp1": "uzRanadI"
+    },
+    {
+      "key": "uzRikA",
+      "lemmaSlp1": "uzRikA"
+    },
+    {
+      "key": "uzwrakARqI",
+      "lemmaSlp1": "uzwrakARqI"
+    },
+    {
+      "key": "uzwrapAdikA",
+      "lemmaSlp1": "uzwrapAdikA"
+    },
+    {
+      "key": "va",
+      "lemmaSlp1": "va"
+    },
+    {
+      "key": "vA",
+      "lemmaSlp1": "vA"
+    },
+    {
+      "key": "vAcA",
+      "lemmaSlp1": "vAcA"
+    },
+    {
+      "key": "vada",
+      "lemmaSlp1": "vada"
+    },
+    {
+      "key": "vAgdevatA",
+      "lemmaSlp1": "vAgdevatA"
+    },
+    {
+      "key": "vAgujI",
+      "lemmaSlp1": "vAgujI"
+    },
+    {
+      "key": "vAgurA",
+      "lemmaSlp1": "vAgurA"
+    },
+    {
+      "key": "vAha",
+      "lemmaSlp1": "vAha"
+    },
+    {
+      "key": "vAkucI",
+      "lemmaSlp1": "vAkucI"
+    },
+    {
+      "key": "vala",
+      "lemmaSlp1": "vala"
+    },
+    {
+      "key": "valgA",
+      "lemmaSlp1": "valgA"
+    },
+    {
+      "key": "vallakI",
+      "lemmaSlp1": "vallakI"
+    },
+    {
+      "key": "vaMSakzIrI",
+      "lemmaSlp1": "vaMSakzIrI"
+    },
+    {
+      "key": "vaMSalocanA",
+      "lemmaSlp1": "vaMSalocanA"
+    },
+    {
+      "key": "vaMSarocanA",
+      "lemmaSlp1": "vaMSarocanA"
+    },
+    {
+      "key": "vaMSaSalAkA",
+      "lemmaSlp1": "vaMSaSalAkA"
+    },
+    {
+      "key": "vanAlikA",
+      "lemmaSlp1": "vanAlikA"
+    },
+    {
+      "key": "vanamAlA",
+      "lemmaSlp1": "vanamAlA"
+    },
+    {
+      "key": "vanamallI",
+      "lemmaSlp1": "vanamallI"
+    },
+    {
+      "key": "vanasarojinI",
+      "lemmaSlp1": "vanasarojinI"
+    },
+    {
+      "key": "vandA",
+      "lemmaSlp1": "vandA"
+    },
+    {
+      "key": "vaqA",
+      "lemmaSlp1": "vaqA"
+    },
+    {
+      "key": "vAr",
+      "lemmaSlp1": "vAr"
+    },
+    {
+      "key": "vara",
+      "lemmaSlp1": "vara"
+    },
+    {
+      "key": "varAhakrAntA",
+      "lemmaSlp1": "varAhakrAntA"
+    },
+    {
+      "key": "varAlikA",
+      "lemmaSlp1": "varAlikA"
+    },
+    {
+      "key": "vArARasI",
+      "lemmaSlp1": "vArARasI"
+    },
+    {
+      "key": "vAraRavallaBA",
+      "lemmaSlp1": "vAraRavallaBA"
+    },
+    {
+      "key": "varatrA",
+      "lemmaSlp1": "varatrA"
+    },
+    {
+      "key": "vAri",
+      "lemmaSlp1": "vAri"
+    },
+    {
+      "key": "vAritrA",
+      "lemmaSlp1": "vAritrA"
+    },
+    {
+      "key": "varivasyA",
+      "lemmaSlp1": "varivasyA"
+    },
+    {
+      "key": "varRamAlA",
+      "lemmaSlp1": "varRamAlA"
+    },
+    {
+      "key": "varRamAtfkA",
+      "lemmaSlp1": "varRamAtfkA"
+    },
+    {
+      "key": "varRANkA",
+      "lemmaSlp1": "varRANkA"
+    },
+    {
+      "key": "varRareKA",
+      "lemmaSlp1": "varRareKA"
+    },
+    {
+      "key": "varuRAnI",
+      "lemmaSlp1": "varuRAnI"
+    },
+    {
+      "key": "varuRAtmajA",
+      "lemmaSlp1": "varuRAtmajA"
+    },
+    {
+      "key": "vaRwa",
+      "lemmaSlp1": "vaRwa"
+    },
+    {
+      "key": "vasA",
+      "lemmaSlp1": "vasA"
+    },
+    {
+      "key": "vaSa",
+      "lemmaSlp1": "vaSa"
+    },
+    {
+      "key": "vAsakarRI",
+      "lemmaSlp1": "vAsakarRI"
+    },
+    {
+      "key": "vAsakasajjA",
+      "lemmaSlp1": "vAsakasajjA"
+    },
+    {
+      "key": "vaSakriyA",
+      "lemmaSlp1": "vaSakriyA"
+    },
+    {
+      "key": "vastu",
+      "lemmaSlp1": "vastu"
+    },
+    {
+      "key": "vAstu",
+      "lemmaSlp1": "vAstu"
+    },
+    {
+      "key": "vasu",
+      "lemmaSlp1": "vasu"
+    },
+    {
+      "key": "vasuDA",
+      "lemmaSlp1": "vasuDA"
+    },
+    {
+      "key": "vasuDArA",
+      "lemmaSlp1": "vasuDArA"
+    },
+    {
+      "key": "vAsurA",
+      "lemmaSlp1": "vAsurA"
+    },
+    {
+      "key": "vat",
+      "lemmaSlp1": "vat"
+    },
+    {
+      "key": "vAta",
+      "lemmaSlp1": "vAta"
+    },
+    {
+      "key": "vAtAmodA",
+      "lemmaSlp1": "vAtAmodA"
+    },
+    {
+      "key": "vatokA",
+      "lemmaSlp1": "vatokA"
+    },
+    {
+      "key": "vatsAkzI",
+      "lemmaSlp1": "vatsAkzI"
+    },
+    {
+      "key": "vAtyA",
+      "lemmaSlp1": "vAtyA"
+    },
+    {
+      "key": "vAYCA",
+      "lemmaSlp1": "vAYCA"
+    },
+    {
+      "key": "vAyuvAhinI",
+      "lemmaSlp1": "vAyuvAhinI"
+    },
+    {
+      "key": "vazaw",
+      "lemmaSlp1": "vazaw"
+    },
+    {
+      "key": "vE",
+      "lemmaSlp1": "vE"
+    },
+    {
+      "key": "vecA",
+      "lemmaSlp1": "vecA"
+    },
+    {
+      "key": "vedijA",
+      "lemmaSlp1": "vedijA"
+    },
+    {
+      "key": "vedikA",
+      "lemmaSlp1": "vedikA"
+    },
+    {
+      "key": "vehat",
+      "lemmaSlp1": "vehat"
+    },
+    {
+      "key": "vennA",
+      "lemmaSlp1": "vennA"
+    },
+    {
+      "key": "vevI",
+      "lemmaSlp1": "vevI"
+    },
+    {
+      "key": "vfkzavAwikA",
+      "lemmaSlp1": "vfkzavAwikA"
+    },
+    {
+      "key": "vfta",
+      "lemmaSlp1": "vfta"
+    },
+    {
+      "key": "vfTA",
+      "lemmaSlp1": "vfTA"
+    },
+    {
+      "key": "vfzAkapAyI",
+      "lemmaSlp1": "vfzAkapAyI"
+    },
+    {
+      "key": "vfzaRvasu",
+      "lemmaSlp1": "vfzaRvasu"
+    },
+    {
+      "key": "vfzI",
+      "lemmaSlp1": "vfzI"
+    },
+    {
+      "key": "vi",
+      "lemmaSlp1": "vi"
+    },
+    {
+      "key": "vI",
+      "lemmaSlp1": "vI"
+    },
+    {
+      "key": "viBA",
+      "lemmaSlp1": "viBA"
+    },
+    {
+      "key": "viBAvarI",
+      "lemmaSlp1": "viBAvarI"
+    },
+    {
+      "key": "viBAzA",
+      "lemmaSlp1": "viBAzA"
+    },
+    {
+      "key": "viBUzA",
+      "lemmaSlp1": "viBUzA"
+    },
+    {
+      "key": "vicikitsA",
+      "lemmaSlp1": "vicikitsA"
+    },
+    {
+      "key": "vidA",
+      "lemmaSlp1": "vidA"
+    },
+    {
+      "key": "viDavA",
+      "lemmaSlp1": "viDavA"
+    },
+    {
+      "key": "viDivat",
+      "lemmaSlp1": "viDivat"
+    },
+    {
+      "key": "vidrumalatA",
+      "lemmaSlp1": "vidrumalatA"
+    },
+    {
+      "key": "vidyA",
+      "lemmaSlp1": "vidyA"
+    },
+    {
+      "key": "vidyut",
+      "lemmaSlp1": "vidyut"
+    },
+    {
+      "key": "viGawikA",
+      "lemmaSlp1": "viGawikA"
+    },
+    {
+      "key": "vihA",
+      "lemmaSlp1": "vihA"
+    },
+    {
+      "key": "vijigIzA",
+      "lemmaSlp1": "vijigIzA"
+    },
+    {
+      "key": "vikriyA",
+      "lemmaSlp1": "vikriyA"
+    },
+    {
+      "key": "vikURikA",
+      "lemmaSlp1": "vikURikA"
+    },
+    {
+      "key": "vilalA",
+      "lemmaSlp1": "vilalA"
+    },
+    {
+      "key": "vinA",
+      "lemmaSlp1": "vinA"
+    },
+    {
+      "key": "vINKA",
+      "lemmaSlp1": "vINKA"
+    },
+    {
+      "key": "vipad",
+      "lemmaSlp1": "vipad"
+    },
+    {
+      "key": "vipadA",
+      "lemmaSlp1": "vipadA"
+    },
+    {
+      "key": "vipaScit",
+      "lemmaSlp1": "vipaScit"
+    },
+    {
+      "key": "vipaYcI",
+      "lemmaSlp1": "vipaYcI"
+    },
+    {
+      "key": "vIra",
+      "lemmaSlp1": "vIra"
+    },
+    {
+      "key": "vIRA",
+      "lemmaSlp1": "vIRA"
+    },
+    {
+      "key": "viraladravA",
+      "lemmaSlp1": "viraladravA"
+    },
+    {
+      "key": "vIrapatnI",
+      "lemmaSlp1": "vIrapatnI"
+    },
+    {
+      "key": "viSAlatA",
+      "lemmaSlp1": "viSAlatA"
+    },
+    {
+      "key": "visrasA",
+      "lemmaSlp1": "visrasA"
+    },
+    {
+      "key": "visUcikA",
+      "lemmaSlp1": "visUcikA"
+    },
+    {
+      "key": "viSvAcI",
+      "lemmaSlp1": "viSvAcI"
+    },
+    {
+      "key": "viSvajit",
+      "lemmaSlp1": "viSvajit"
+    },
+    {
+      "key": "viSvakft",
+      "lemmaSlp1": "viSvakft"
+    },
+    {
+      "key": "vitta",
+      "lemmaSlp1": "vitta"
+    },
+    {
+      "key": "vivaranAlikA",
+      "lemmaSlp1": "vivaranAlikA"
+    },
+    {
+      "key": "viwsArikA",
+      "lemmaSlp1": "viwsArikA"
+    },
+    {
+      "key": "viyadgaNgA",
+      "lemmaSlp1": "viyadgaNgA"
+    },
+    {
+      "key": "viyat",
+      "lemmaSlp1": "viyat"
+    },
+    {
+      "key": "viYjolI",
+      "lemmaSlp1": "viYjolI"
+    },
+    {
+      "key": "vizA",
+      "lemmaSlp1": "vizA"
+    },
+    {
+      "key": "vizavidyA",
+      "lemmaSlp1": "vizavidyA"
+    },
+    {
+      "key": "vizu",
+      "lemmaSlp1": "vizu"
+    },
+    {
+      "key": "vizWA",
+      "lemmaSlp1": "vizWA"
+    },
+    {
+      "key": "vlI",
+      "lemmaSlp1": "vlI"
+    },
+    {
+      "key": "vOzaw",
+      "lemmaSlp1": "vOzaw"
+    },
+    {
+      "key": "vrajyA",
+      "lemmaSlp1": "vrajyA"
+    },
+    {
+      "key": "vraRakft",
+      "lemmaSlp1": "vraRakft"
+    },
+    {
+      "key": "vrI",
+      "lemmaSlp1": "vrI"
+    },
+    {
+      "key": "vyAjanindA",
+      "lemmaSlp1": "vyAjanindA"
+    },
+    {
+      "key": "vyAKyA",
+      "lemmaSlp1": "vyAKyA"
+    },
+    {
+      "key": "vyaTA",
+      "lemmaSlp1": "vyaTA"
+    },
+    {
+      "key": "vyAtyukzI",
+      "lemmaSlp1": "vyAtyukzI"
+    },
+    {
+      "key": "vyavaDA",
+      "lemmaSlp1": "vyavaDA"
+    },
+    {
+      "key": "vyavahAramAtfkA",
+      "lemmaSlp1": "vyavahAramAtfkA"
+    },
+    {
+      "key": "vyAvahAsI",
+      "lemmaSlp1": "vyAvahAsI"
+    },
+    {
+      "key": "vyAvakroSI",
+      "lemmaSlp1": "vyAvakroSI"
+    },
+    {
+      "key": "vyavasTA",
+      "lemmaSlp1": "vyavasTA"
+    },
+    {
+      "key": "vyaya",
+      "lemmaSlp1": "vyaya"
+    },
+    {
+      "key": "wawwanI",
+      "lemmaSlp1": "wawwanI"
+    },
+    {
+      "key": "wawwarI",
+      "lemmaSlp1": "wawwarI"
+    },
+    {
+      "key": "wIkA",
+      "lemmaSlp1": "wIkA"
+    },
+    {
+      "key": "wippanI",
+      "lemmaSlp1": "wippanI"
+    },
+    {
+      "key": "x",
+      "lemmaSlp1": "x"
+    },
+    {
+      "key": "X",
+      "lemmaSlp1": "X"
+    },
+    {
+      "key": "yA",
+      "lemmaSlp1": "yA"
+    },
+    {
+      "key": "yAcYA",
+      "lemmaSlp1": "yAcYA"
+    },
+    {
+      "key": "yadA",
+      "lemmaSlp1": "yadA"
+    },
+    {
+      "key": "yadfcCA",
+      "lemmaSlp1": "yadfcCA"
+    },
+    {
+      "key": "yadi",
+      "lemmaSlp1": "yadi"
+    },
+    {
+      "key": "yakfdAtmikA",
+      "lemmaSlp1": "yakfdAtmikA"
+    },
+    {
+      "key": "yakft",
+      "lemmaSlp1": "yakft"
+    },
+    {
+      "key": "yakzmaGnI",
+      "lemmaSlp1": "yakzmaGnI"
+    },
+    {
+      "key": "yama",
+      "lemmaSlp1": "yama"
+    },
+    {
+      "key": "yamAnI",
+      "lemmaSlp1": "yamAnI"
+    },
+    {
+      "key": "yAmavatI",
+      "lemmaSlp1": "yAmavatI"
+    },
+    {
+      "key": "yAminI",
+      "lemmaSlp1": "yAminI"
+    },
+    {
+      "key": "yamunA",
+      "lemmaSlp1": "yamunA"
+    },
+    {
+      "key": "yantrapezaRI",
+      "lemmaSlp1": "yantrapezaRI"
+    },
+    {
+      "key": "yaTA",
+      "lemmaSlp1": "yaTA"
+    },
+    {
+      "key": "yaTASakti",
+      "lemmaSlp1": "yaTASakti"
+    },
+    {
+      "key": "yati",
+      "lemmaSlp1": "yati"
+    },
+    {
+      "key": "yatra",
+      "lemmaSlp1": "yatra"
+    },
+    {
+      "key": "yAtrA",
+      "lemmaSlp1": "yAtrA"
+    },
+    {
+      "key": "yavanikA",
+      "lemmaSlp1": "yavanikA"
+    },
+    {
+      "key": "yAvat",
+      "lemmaSlp1": "yAvat"
+    },
+    {
+      "key": "yazwimaDu",
+      "lemmaSlp1": "yazwimaDu"
+    },
+    {
+      "key": "yoganidrA",
+      "lemmaSlp1": "yoganidrA"
+    },
+    {
+      "key": "yogyatA",
+      "lemmaSlp1": "yogyatA"
+    },
+    {
+      "key": "yozA",
+      "lemmaSlp1": "yozA"
+    },
+    {
+      "key": "yozit",
+      "lemmaSlp1": "yozit"
+    },
+    {
+      "key": "yu",
+      "lemmaSlp1": "yu"
+    },
+    {
+      "key": "yuta",
+      "lemmaSlp1": "yuta"
+    },
+    {
+      "key": "yUTikA",
+      "lemmaSlp1": "yUTikA"
+    },
+    {
+      "key": "za",
+      "lemmaSlp1": "za"
+    },
+    {
+      "key": "zaqDA",
+      "lemmaSlp1": "zaqDA"
+    },
+    {
+      "key": "zAw",
+      "lemmaSlp1": "zAw"
+    },
+    {
+      "key": "zawtriMSat",
+      "lemmaSlp1": "zawtriMSat"
+    },
+    {
+      "key": "zoqaSa",
+      "lemmaSlp1": "zoqaSa"
+    }
+  ]
+}

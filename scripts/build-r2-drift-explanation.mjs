@@ -1,8 +1,9 @@
-// Build a machine-only R2 drift explanation/control packet.
+// Build an R2 drift explanation/control packet.
 //
 // This reads the existing machine label proposals, checkpoint packet, and
-// checkpoint review overlay. It records no human decisions and does not promote
-// parser behavior.
+// checkpoint review overlay. Before human review it runs machine-only (all
+// checkpoint rows empty needs-review); after review it mirrors the recorded
+// human checkpoint decisions. In neither mode does it promote parser behavior.
 //
 // Usage: npm run build-r2-drift-explanation
 
@@ -10,6 +11,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { CHECKPOINT_DIAGNOSTIC_IDS } from "./build-r2-label-proposals.mjs";
+import { PARSER_DISPOSITIONS } from "./build-r2-checkpoint-review.mjs";
+import { HUMAN_STATUSES } from "./lib/review-report.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const LABEL_PROPOSALS_PATH = path.resolve(process.cwd(), "data", "lexico", "r2_packet_label_proposals.json");
@@ -82,6 +85,22 @@ function hasEmptyReviewReportHumanFields(item) {
     && item.reviewer === null
     && item.reviewedAt === null
     && item.note === "";
+}
+
+// A complete post-review decision: a human status plus reviewer, reviewedAt,
+// a note, and a reviewedValue whose accepted labels and parser disposition stay
+// inside the machine-proposed vocabulary for that row.
+function isCompleteReviewDecision(item) {
+  if (!HUMAN_STATUSES.has(item.reviewStatus)) return false;
+  if (typeof item.reviewer !== "string" || !item.reviewer) return false;
+  if (typeof item.reviewedAt !== "string" || !item.reviewedAt) return false;
+  if (typeof item.note !== "string" || !item.note) return false;
+  const accepted = item.reviewedValue?.acceptedParserLabels;
+  if (!Array.isArray(accepted)) return false;
+  const proposed = new Set(item.machineValue?.proposedParserLabels ?? []);
+  if (!accepted.every(label => proposed.has(label))) return false;
+  const allowed = item.machineValue?.allowedParserDispositions ?? [];
+  return allowed.includes(item.reviewedValue?.parserDisposition);
 }
 
 function compactCheckpointRow(row, reviewItem) {
@@ -212,8 +231,8 @@ function validateInputs(labelPayload, checkpointPacket, checkpointReview) {
   }
 
   for (const item of reviewItems) {
-    if (!hasEmptyReviewReportHumanFields(item)) {
-      errors.push(`${item.reviewId}: checkpoint review item must remain needs-review with empty human fields`);
+    if (!hasEmptyReviewReportHumanFields(item) && !isCompleteReviewDecision(item)) {
+      errors.push(`${item.reviewId}: checkpoint review item must be empty needs-review or a complete human checkpoint decision`);
     }
     if (!item.sourcePointers?.length) errors.push(`${item.reviewId}: checkpoint review item lacks source pointers`);
     if (!item.machineValue?.reviewQuestion) errors.push(`${item.reviewId}: checkpoint review item lacks review question`);
@@ -236,8 +255,16 @@ function validatePayload(payload, labelPayload) {
   }
   if (payload.counts.diagnosticRows !== 70) errors.push(`diagnostic row count must be 70, got ${payload.counts.diagnosticRows}`);
   if (payload.counts.checkpointRows !== 10) errors.push(`checkpoint row count must be 10, got ${payload.counts.checkpointRows}`);
-  if (payload.counts.checkpointNeedsReview !== 10) {
-    errors.push(`checkpoint needs-review count must be 10, got ${payload.counts.checkpointNeedsReview}`);
+  const needsReviewRows = payload.checkpointRows.filter(row => row.reviewStatus === "needs-review").length;
+  const decidedRows = payload.checkpointRows.filter(row => HUMAN_STATUSES.has(row.reviewStatus)).length;
+  if (payload.counts.checkpointNeedsReview !== needsReviewRows) {
+    errors.push(`checkpoint needs-review count must match checkpoint rows (${needsReviewRows}), got ${payload.counts.checkpointNeedsReview}`);
+  }
+  if (payload.counts.checkpointDecided !== decidedRows) {
+    errors.push(`checkpoint decided count must match checkpoint rows (${decidedRows}), got ${payload.counts.checkpointDecided}`);
+  }
+  if (needsReviewRows + decidedRows !== payload.checkpointRows.length) {
+    errors.push(`every checkpoint row must be needs-review or human-decided (${needsReviewRows} + ${decidedRows} != ${payload.checkpointRows.length})`);
   }
   for (const key of ["byPacket", "byDriftClass", "byPriority"]) {
     if (JSON.stringify(payload.counts[key]) !== JSON.stringify(labelPayload.counts?.[key])) {
@@ -249,11 +276,33 @@ function validatePayload(payload, labelPayload) {
     errors.push(`output checkpoint row order changed: ${checkpointIds.join(", ")}`);
   }
   for (const row of payload.checkpointRows) {
-    if (row.reviewStatus !== "needs-review") errors.push(`${row.diagnosticId}: checkpoint status must be needs-review`);
-    if (row.reviewedValue !== null) errors.push(`${row.diagnosticId}: reviewedValue must stay null`);
-    if (row.reviewer !== null) errors.push(`${row.diagnosticId}: reviewer must stay null`);
-    if (row.reviewedAt !== null) errors.push(`${row.diagnosticId}: reviewedAt must stay null`);
-    if (row.note !== "") errors.push(`${row.diagnosticId}: note must stay empty`);
+    if (row.reviewStatus === "needs-review") {
+      if (row.reviewedValue !== null) errors.push(`${row.diagnosticId}: reviewedValue must stay null until review`);
+      if (row.reviewer !== null) errors.push(`${row.diagnosticId}: reviewer must stay null until review`);
+      if (row.reviewedAt !== null) errors.push(`${row.diagnosticId}: reviewedAt must stay null until review`);
+      if (row.note !== "") errors.push(`${row.diagnosticId}: note must stay empty until review`);
+      continue;
+    }
+    if (!HUMAN_STATUSES.has(row.reviewStatus)) {
+      errors.push(`${row.diagnosticId}: checkpoint status must be needs-review or a human decision status`);
+      continue;
+    }
+    if (!row.reviewer) errors.push(`${row.diagnosticId}: decided checkpoint row lacks reviewer`);
+    if (!row.reviewedAt) errors.push(`${row.diagnosticId}: decided checkpoint row lacks reviewedAt`);
+    if (!row.note) errors.push(`${row.diagnosticId}: decided checkpoint row lacks a review note`);
+    const accepted = row.reviewedValue?.acceptedParserLabels;
+    if (!Array.isArray(accepted)) {
+      errors.push(`${row.diagnosticId}: decided checkpoint row lacks reviewedValue.acceptedParserLabels`);
+    } else {
+      for (const label of accepted) {
+        if (!row.proposedParserLabels.includes(label)) {
+          errors.push(`${row.diagnosticId}: accepted label "${label}" is outside the proposed labels`);
+        }
+      }
+    }
+    if (!PARSER_DISPOSITIONS.includes(row.reviewedValue?.parserDisposition)) {
+      errors.push(`${row.diagnosticId}: parserDisposition must be one of ${PARSER_DISPOSITIONS.join(", ")}`);
+    }
   }
   for (const row of payload.explanationRows) {
     const allowed = labelsForPacket(labelPayload, row.packetId);
@@ -278,12 +327,19 @@ export function buildPayload(labelPayload, checkpointPacket, checkpointReview) {
   const checkpointRows = CHECKPOINT_DIAGNOSTIC_IDS.map(id =>
     compactCheckpointRow(checkpointById.get(id), reviewById.get(id))
   );
+  const checkpointNeedsReview = checkpointRows.filter(row => row.reviewStatus === "needs-review").length;
+  const checkpointDecided = checkpointRows.filter(row => HUMAN_STATUSES.has(row.reviewStatus)).length;
+  const postDecision = checkpointDecided > 0;
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     status: "r2-drift-explanation-packet",
-    claim: "Existing R2 machine proposal labels explain current source/archive drift classes and identify checkpoint rows blocked on human review without accepting labels or promoting parser behavior.",
+    claim: postDecision
+      ? "Existing R2 machine proposal labels explain current source/archive drift classes and the checkpoint rows carry recorded human review decisions; this packet itself promotes no parser behavior."
+      : "Existing R2 machine proposal labels explain current source/archive drift classes and identify checkpoint rows blocked on human review without accepting labels or promoting parser behavior.",
     evidenceLabel: "derived",
-    reviewStatus: "machine-explained",
+    reviewStatus: checkpointNeedsReview === 0 ? "human-decided"
+      : postDecision ? "partially-human-decided"
+      : "machine-explained",
     ownerRepo: "csl-atlas",
     generatedBy: "npm run build-r2-drift-explanation",
     sourceGeneratedBy: {
@@ -296,7 +352,8 @@ export function buildPayload(labelPayload, checkpointPacket, checkpointReview) {
       packetCount: new Set(explanationRows.map(row => row.packetId)).size,
       diagnosticRows: explanationRows.length,
       checkpointRows: checkpointRows.length,
-      checkpointNeedsReview: checkpointRows.filter(row => row.reviewStatus === "needs-review").length,
+      checkpointNeedsReview,
+      checkpointDecided,
       proposedLabelAssignments: explanationRows.reduce((sum, row) => sum + row.proposedParserLabels.length, 0),
       byPacket: countBy(explanationRows, row => row.packetId),
       byDriftClass: countBy(explanationRows, row => row.driftClass),
@@ -307,14 +364,22 @@ export function buildPayload(labelPayload, checkpointPacket, checkpointReview) {
     checkpointRows,
     explanationRows,
     archiveParityPolicy: "Archive parity is a comparison/control signal for drift review and regression checks, not the optimization target.",
-    limitations: [
+    limitations: postDecision ? [
+      "This artifact mirrors the recorded human checkpoint decisions; it does not itself promote parser behavior.",
+      "Proposed parser labels explain drift classes and review scope; the accepted subset for each checkpoint row lives in reviewedValue.acceptedParserLabels.",
+      `${checkpointDecided} of ${checkpointRows.length} checkpoint rows carry complete human decisions; ${checkpointNeedsReview} remain needs-review with empty human fields.`,
+      "Parser promotion is gated by each checkpoint row's recorded parserDisposition and stays scoped to the documented promotion experiment.",
+      "No R2 splitter behavior, source-anchor generation, H5 review rows, public R2 pages, backend, runtime LLM, corpus, DCS, or standards work is changed."
+    ] : [
       "This artifact is machine-only and records no human checkpoint decisions.",
       "Proposed parser labels explain drift classes and review scope; they are not accepted labels or reviewedValue.",
       "All 10 checkpoint rows remain needs-review with empty human fields.",
       "Parser promotion remains deferred until human checkpoint decisions exist.",
       "No R2 splitter behavior, source-anchor generation, H5 review rows, public R2 pages, backend, runtime LLM, corpus, DCS, or standards work is changed."
     ],
-    boundaryNote: "Dictionary source rows, existing R2 source anchors, recovered archive fixtures, machine label proposals, and the empty R2 checkpoint review overlay only."
+    boundaryNote: postDecision
+      ? "Dictionary source rows, existing R2 source anchors, recovered archive fixtures, machine label proposals, and the human-decided R2 checkpoint review overlay only."
+      : "Dictionary source rows, existing R2 source anchors, recovered archive fixtures, machine label proposals, and the empty R2 checkpoint review overlay only."
   };
   validatePayload(payload, labelPayload);
   return payload;
@@ -354,17 +419,35 @@ function labelCountTable(payload) {
 }
 
 function checkpointTable(payload) {
+  const decided = payload.counts.checkpointDecided ?? 0;
+  if (decided === 0) {
+    return [
+      "## Checkpoint Rows Still Needs-Review",
+      "",
+      "| Diagnostic ID | Packet | Drift class | Priority | Proposed labels |",
+      "|---|---|---|---|---|",
+      ...payload.checkpointRows.map(row => {
+        const labels = row.proposedParserLabels.map(label => `\`${label}\``).join(", ");
+        return `| \`${row.diagnosticId}\` | \`${row.packetId}\` | \`${row.driftClass}\` | \`${row.priority}\` | ${labels} |`;
+      }),
+      "",
+      "All checkpoint rows keep `reviewedValue = null`, `reviewer = null`, `reviewedAt = null`, and `note = \"\"`.",
+      ""
+    ].join("\n");
+  }
   return [
-    "## Checkpoint Rows Still Needs-Review",
+    "## Checkpoint Rows With Recorded Decisions",
     "",
-    "| Diagnostic ID | Packet | Drift class | Priority | Proposed labels |",
-    "|---|---|---|---|---|",
+    "| Diagnostic ID | Packet | Drift class | Priority | Review status | Disposition | Accepted labels |",
+    "|---|---|---|---|---|---|---|",
     ...payload.checkpointRows.map(row => {
-      const labels = row.proposedParserLabels.map(label => `\`${label}\``).join(", ");
-      return `| \`${row.diagnosticId}\` | \`${row.packetId}\` | \`${row.driftClass}\` | \`${row.priority}\` | ${labels} |`;
+      const accepted = (row.reviewedValue?.acceptedParserLabels ?? [])
+        .map(label => `\`${label}\``).join(", ") || "—";
+      const disposition = row.reviewedValue?.parserDisposition ? `\`${row.reviewedValue.parserDisposition}\`` : "—";
+      return `| \`${row.diagnosticId}\` | \`${row.packetId}\` | \`${row.driftClass}\` | \`${row.priority}\` | \`${row.reviewStatus}\` | ${disposition} | ${accepted} |`;
     }),
     "",
-    "All checkpoint rows keep `reviewedValue = null`, `reviewer = null`, `reviewedAt = null`, and `note = \"\"`.",
+    `${decided} of ${payload.checkpointRows.length} checkpoint rows record \`reviewer\`, \`reviewedAt\`, a review note, and a \`reviewedValue\` with accepted labels and a parser disposition.`,
     ""
   ].join("\n");
 }
@@ -387,12 +470,18 @@ function packetContextSections(payload) {
 }
 
 export function buildMarkdown(payload) {
+  const decided = payload.counts.checkpointDecided ?? 0;
+  const postDecision = decided > 0;
+  const decisionDates = payload.checkpointRows.map(row => row.reviewedAt).filter(Boolean).sort();
+  const decisionDate = decisionDates[decisionDates.length - 1] ?? null;
   const lines = [
     "# R2 Drift Explanation Packet",
     "",
-    "Date: 2026-06-06",
+    `Date: 2026-06-06${decisionDate ? ` (checkpoint decisions recorded ${decisionDate})` : ""}`,
     "",
-    "Status: generated machine-only drift explanation/control packet. It explains current source/archive drift with machine proposal labels, marks the checkpoint rows still blocked on human review, and keeps parser promotion deferred.",
+    postDecision
+      ? "Status: generated drift explanation/control packet in post-decision mode. It explains current source/archive drift with machine proposal labels and mirrors the recorded human checkpoint decisions; parser behavior changes stay gated by each row's parser disposition."
+      : "Status: generated machine-only drift explanation/control packet. It explains current source/archive drift with machine proposal labels, marks the checkpoint rows still blocked on human review, and keeps parser promotion deferred.",
     "",
     "## Trust Block",
     "",
@@ -401,15 +490,20 @@ export function buildMarkdown(payload) {
     `- Review status: \`${payload.reviewStatus}\`.`,
     `- Generated by: \`${payload.generatedBy}\`.`,
     `- Source files: ${payload.sourceFiles.map(file => `\`${file}\``).join(", ")}.`,
-    `- Counts: ${payload.counts.diagnosticRows} diagnostic rows, ${payload.counts.packetCount} packets, ${payload.counts.checkpointRows} checkpoint rows, ${payload.counts.checkpointNeedsReview} still \`needs-review\`.`,
+    `- Counts: ${payload.counts.diagnosticRows} diagnostic rows, ${payload.counts.packetCount} packets, ${payload.counts.checkpointRows} checkpoint rows, ${decided} with recorded decisions, ${payload.counts.checkpointNeedsReview} still \`needs-review\`.`,
     `- Boundary note: ${payload.boundaryNote}`,
     `- Archive parity policy: ${payload.archiveParityPolicy}`,
     "",
     "## Interpretation Rules",
     "",
     "- Proposed parser labels explain why rows drift by source scope, marker scope, reverse-rank risk, indigenous prose segmentation, and control/gap status.",
-    "- The labels are explanatory metadata only; they are not accepted decisions and they do not populate `reviewedValue`.",
-    "- Parser promotion remains deferred until a human reviewer records checkpoint decisions.",
+    ...(postDecision ? [
+      "- Proposed parser labels stay explanatory metadata; the accepted subset for each checkpoint row is recorded in `reviewedValue.acceptedParserLabels`.",
+      "- Parser promotion is gated by each checkpoint row's recorded `parserDisposition`; this packet itself changes no parser behavior."
+    ] : [
+      "- The labels are explanatory metadata only; they are not accepted decisions and they do not populate `reviewedValue`.",
+      "- Parser promotion remains deferred until a human reviewer records checkpoint decisions."
+    ]),
     "- Archive parity stays a comparison/control signal rather than a row-count optimization target.",
     "",
     countTable("Counts By Packet", payload.counts.byPacket),

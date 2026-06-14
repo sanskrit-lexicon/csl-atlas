@@ -5,6 +5,8 @@
   "type": "object",
   "properties": {
     "schemaVersion": { "type": "string" },
+    "license": { "type": "string", "description": "SPDX licence identifier for this dataset; see scripts/lib/dataset-meta.mjs" },
+    "licenseUrl": { "type": "string" },
     "generatedAt": { "type": "string" },
     "sourcePath": { "type": "string" },
     "recordCount": { "type": "integer" },
@@ -28,6 +30,9 @@
               "tei-ontolex-review",
               "over-broad-family",
               "source-siglum-alias",
+              "source-layer-anchoring",
+              "compound-depth-crosscheck",
+              "lemma-normalization-crosscheck",
               "r2-checkpoint"
             ]
           },
@@ -36,7 +41,7 @@
             "properties": {
               "kind": {
                 "type": "string",
-                "enum": ["alignment", "entry", "source-abbreviation", "family", "construction", "corpus-lemma"]
+                "enum": ["alignment", "entry", "source-abbreviation", "source-layer", "family", "construction", "corpus-lemma"]
               },
               "lemma": { "type": ["string", "null"] },
               "dictionaries": { "type": "array", "items": { "type": "string" } }
@@ -76,5 +81,5 @@
       }
     }
   },
-  "required": ["items"]
+  "required": ["license", "items"]
 }

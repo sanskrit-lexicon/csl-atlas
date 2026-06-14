@@ -12,6 +12,7 @@
 // Usage: npm run build-sense-depth. No LLM inference.
 
 import fs from "node:fs";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { DICT_LABELS } from "./lib/dict-manifest.mjs";
@@ -110,6 +111,7 @@ function main() {
 
   const payload = {
     schemaVersion: SCHEMA_VERSION,
+    ...licenseFields(),
     generatedAt: new Date().toISOString(),
     sourceRoot: "../csl-orig/v02",
     feature: senseSupport.feature,

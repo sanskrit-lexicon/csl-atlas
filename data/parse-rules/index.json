@@ -1,0 +1,126 @@
+{
+  "schema": "mudidi-parse-rules/0.1",
+  "dicts": [
+    {
+      "dict": "mw",
+      "title": "Monier-Williams Sanskrit-English (1899)",
+      "record_count": 286560,
+      "field_count": 20,
+      "ls_siglum_distinct": 38773,
+      "ab_distinct": 308,
+      "continuation_entries": 92670,
+      "dominant_microstructure_layer": "xref",
+      "has_caveats": false
+    },
+    {
+      "dict": "pwg",
+      "title": "Petersburg Woerterbuch, grosse Fassung (1855-75)",
+      "record_count": 123366,
+      "field_count": 11,
+      "ls_siglum_distinct": 238569,
+      "ab_distinct": 785,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": "xref",
+      "has_caveats": false
+    },
+    {
+      "dict": "pwk",
+      "title": "Petersburg Woerterbuch, kuerzere Fassung (1879-89)",
+      "record_count": 170556,
+      "field_count": 12,
+      "ls_siglum_distinct": 56234,
+      "ab_distinct": 296,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": "subentry",
+      "has_caveats": false
+    },
+    {
+      "dict": "ap",
+      "title": "Apte Practical Sanskrit-English (1957)",
+      "record_count": 90654,
+      "field_count": 10,
+      "ls_siglum_distinct": 27763,
+      "ab_distinct": 180,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": "subentry",
+      "has_caveats": false
+    },
+    {
+      "dict": "wil",
+      "title": "Wilson Sanskrit-English (1832)",
+      "record_count": 44577,
+      "field_count": 8,
+      "ls_siglum_distinct": 7,
+      "ab_distinct": 102,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": "subentry",
+      "has_caveats": false
+    },
+    {
+      "dict": "ben",
+      "title": "Benfey Sanskrit-English (1866)",
+      "record_count": 17310,
+      "field_count": 6,
+      "ls_siglum_distinct": 112,
+      "ab_distinct": 107,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": "subentry",
+      "has_caveats": false
+    },
+    {
+      "dict": "cae",
+      "title": "Cappeller Sanskrit-English (1891)",
+      "record_count": 40069,
+      "field_count": 9,
+      "ls_siglum_distinct": 0,
+      "ab_distinct": 95,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": "preverb",
+      "has_caveats": false
+    },
+    {
+      "dict": "skd",
+      "title": "Sabdakalpadruma (1822-58)",
+      "record_count": 42531,
+      "field_count": 3,
+      "ls_siglum_distinct": 0,
+      "ab_distinct": 0,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": "root",
+      "has_caveats": true
+    },
+    {
+      "dict": "vcp",
+      "title": "Vacaspatya (1873-84)",
+      "record_count": 50135,
+      "field_count": 3,
+      "ls_siglum_distinct": 0,
+      "ab_distinct": 0,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": "root",
+      "has_caveats": true
+    },
+    {
+      "dict": "armh",
+      "title": "Halayudha Abhidhanaratnamala",
+      "record_count": 7907,
+      "field_count": 3,
+      "ls_siglum_distinct": 0,
+      "ab_distinct": 0,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": null,
+      "has_caveats": true
+    },
+    {
+      "dict": "abch",
+      "title": "Hemacandra Abhidhanacintamani",
+      "record_count": 1965,
+      "field_count": 3,
+      "ls_siglum_distinct": 0,
+      "ab_distinct": 0,
+      "continuation_entries": 0,
+      "dominant_microstructure_layer": null,
+      "has_caveats": true
+    }
+  ]
+}

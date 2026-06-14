@@ -118,6 +118,8 @@ Generated files use the standard envelope:
 
 ```text
 schemaVersion
+license            SPDX id (CC-BY-SA-4.0); see scripts/lib/dataset-meta.mjs
+licenseUrl
 generatedAt
 sourcePath
 recordCount

@@ -16,7 +16,7 @@ docs, idempotent). Git/isolation/blocker rules: see charter.
 | Git | feature branches + auto-merge on green CI, **scoped**: auto-merge mechanical batches + own-repo (csl-atlas); hold feature PRs on other org repos for review |
 | Blocked | default + record in `DECISIONS_NEEDED.md`, keep moving |
 | Notify | only on no-default blocker / unfixable red CI; else silent + weekly doc |
-| Isolation | worktree off `origin/main` per item; **stay out of the parallel bot's lane** (no `feature/dcs-summary-adapter`, no siglum-alias files) |
+| Isolation | worktree off `origin/main` per item; **stay out of the parallel bot's lane** — a parallel automation also commits/merges here; `git fetch` and check before editing any file |
 | Scholar line | suggest value + confidence in a **separate** field; human field stays `needs-review` |
 
 ## The matrix
@@ -54,7 +54,7 @@ At each week's close, in a worktree off `origin/main`:
 4. Re-evaluate: if a stream is blocked or a priority shifted, rebalance the next week's row.
 
 ## Standing guards
-- **Stay out of the bot's lane.** Before touching any csl-atlas file, `git fetch` and check it's not in `feature/dcs-summary-adapter` or siglum-alias scope. On collision risk, switch queue items.
+- **Stay out of the bot's lane.** A parallel automation actively commits/merges to this repo. Before touching any csl-atlas file, `git fetch` and check it isn't being worked on another open branch/PR. On collision risk, switch queue items.
 - **Never make a final scholarly/maker call.** Suggestions only; humans decide.
 - **No parser/JSON-schema changes for viz** (presentation only) unless a packet's contract explicitly calls for a new suggestion field (Stream 3).
 - **Idempotent or it isn't done.** Re-running any generator must produce no git diff.

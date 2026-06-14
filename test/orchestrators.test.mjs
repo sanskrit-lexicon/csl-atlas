@@ -17,7 +17,7 @@ import { classifyDrift, markerRunPrefixMatch, priorityForClass, sourceRecordExac
 import { packetIdForDiagnostic, scopeCluesForDiagnostic } from "../scripts/build-r2-review-packets.mjs";
 import { CHECKPOINT_DIAGNOSTIC_IDS, buildPayload as buildR2LabelProposalPayload, labelsForPacket } from "../scripts/build-r2-label-proposals.mjs";
 import { buildMarkdown as buildR2CheckpointMarkdown, buildPayload as buildR2CheckpointPayload } from "../scripts/build-r2-checkpoint-packet.mjs";
-import { PARSER_DISPOSITIONS, buildPayload as buildR2CheckpointReviewPayload } from "../scripts/build-r2-checkpoint-review.mjs";
+import { PARSER_DISPOSITIONS, applyPreservedDecisions as applyR2CheckpointPreserved, buildPayload as buildR2CheckpointReviewPayload } from "../scripts/build-r2-checkpoint-review.mjs";
 import { buildMarkdown as buildR2DriftExplanationMarkdown, buildPayload as buildR2DriftExplanationPayload } from "../scripts/build-r2-drift-explanation.mjs";
 import { parseCsv } from "../scripts/build-h5-anomaly-review.mjs";
 import { buildMarkdown as buildH5MakerQaMarkdown, buildPayload as buildH5MakerQaPayload, preservedSourceCheckMap } from "../scripts/build-h5-maker-qa-candidates.mjs";
@@ -432,25 +432,46 @@ test("R2 checkpoint worksheet contains all checkpoint diagnostic ids", () => {
   }
 });
 
-test("R2 checkpoint review report is generated from the checkpoint packet", () => {
-  assert.deepEqual(
-    r2CheckpointReviewReport,
-    buildR2CheckpointReviewPayload(r2CheckpointPacket, new Map(), r2CheckpointReviewReport.generatedAt)
-  );
+test("R2 checkpoint review report machine fields match the checkpoint packet", () => {
+  // The on-disk report carries human decisions (reviewed 2026-06-12); compare
+  // machine fields only against a freshly generated machine-only payload.
+  const machine = buildR2CheckpointReviewPayload(r2CheckpointPacket, new Map(), r2CheckpointReviewReport.generatedAt);
+  const stripHuman = payload => ({
+    ...payload,
+    items: payload.items.map(item => ({
+      ...item,
+      reviewStatus: null,
+      reviewedValue: null,
+      reviewer: null,
+      reviewedAt: null,
+      note: null
+    }))
+  });
+  assert.deepEqual(stripHuman(r2CheckpointReviewReport), stripHuman(machine));
 });
 
-test("R2 checkpoint review report preserves stable ids and empty human fields", () => {
+test("R2 checkpoint review report carries complete human decisions", () => {
   assert.equal(r2CheckpointReviewReport.queue, "r2-checkpoint");
   assert.equal(r2CheckpointReviewReport.recordCount, 10);
   assert.deepEqual(r2CheckpointReviewReport.items.map(item => item.reviewId), CHECKPOINT_DIAGNOSTIC_IDS);
   for (const item of r2CheckpointReviewReport.items) {
     assert.equal(item.queue, "r2-checkpoint");
     assert.equal(item.subject.kind, "entry");
-    assert.equal(item.reviewStatus, "needs-review");
-    assert.equal(item.reviewedValue, null);
-    assert.equal(item.reviewer, null);
-    assert.equal(item.reviewedAt, null);
-    assert.equal(item.note, "");
+    assert.equal(item.reviewStatus, "reviewed-ok", `${item.reviewId} should be reviewed-ok`);
+    assert.ok(item.reviewer, `${item.reviewId} lacks reviewer`);
+    assert.ok(item.reviewedAt, `${item.reviewId} lacks reviewedAt`);
+    assert.ok(item.note, `${item.reviewId} lacks a review note`);
+    assert.ok(Array.isArray(item.reviewedValue?.acceptedParserLabels), `${item.reviewId} lacks acceptedParserLabels`);
+    assert.ok(
+      item.machineValue.allowedParserDispositions.includes(item.reviewedValue?.parserDisposition),
+      `${item.reviewId} has an out-of-vocabulary parserDisposition`
+    );
+    for (const label of item.reviewedValue.acceptedParserLabels) {
+      assert.ok(
+        item.machineValue.proposedParserLabels.includes(label),
+        `${item.reviewId} accepted label "${label}" is outside the proposed vocabulary`
+      );
+    }
   }
 });
 
@@ -488,6 +509,31 @@ test("R2 checkpoint review report ignores preserved human fields in machine-only
   assert.equal(item.machineValue.packetId, "div-source-scope");
 });
 
+test("applyPreservedDecisions re-applies the human overlay onto a machine-only payload", () => {
+  // Regression guard for the CLI footgun: a plain rebuild must preserve human
+  // decisions by reviewId, not blank them. main() overlays loadPreserved() via
+  // this function; here we feed it the committed report's own decisions.
+  const machine = buildR2CheckpointReviewPayload(r2CheckpointPacket, new Map(), r2CheckpointReviewReport.generatedAt);
+  const preserved = preservedReviewMap(r2CheckpointReviewReport);
+  const merged = applyR2CheckpointPreserved(machine, preserved);
+
+  // The committed report is fully human-reviewed, so every row is carried forward.
+  for (const item of merged.items) {
+    const source = r2CheckpointReviewReport.items.find(row => row.reviewId === item.reviewId);
+    assert.equal(item.reviewStatus, source.reviewStatus, `${item.reviewId} reviewStatus not preserved`);
+    assert.deepEqual(item.reviewedValue, source.reviewedValue, `${item.reviewId} reviewedValue not preserved`);
+    assert.equal(item.reviewer, source.reviewer, `${item.reviewId} reviewer not preserved`);
+    assert.equal(item.reviewedAt, source.reviewedAt, `${item.reviewId} reviewedAt not preserved`);
+    assert.equal(item.note, source.note, `${item.reviewId} note not preserved`);
+    // Machine fields stay exactly as generated.
+    assert.deepEqual(item.machineValue, machine.items.find(m => m.reviewId === item.reviewId).machineValue);
+  }
+
+  // Pure: the machine payload is not mutated, and an empty overlay is a no-op.
+  assert.equal(machine.items[0].reviewStatus, "needs-review");
+  assert.equal(applyR2CheckpointPreserved(machine, new Map()), machine);
+});
+
 test("R2 checkpoint review report rejects dirty checkpoint source rows", () => {
   const dirty = JSON.parse(JSON.stringify(r2CheckpointPacket));
   dirty.checkpointRows[0].reviewer = "mg";
@@ -506,20 +552,68 @@ test("R2 checkpoint review report rejects source pointers without links", () => 
   );
 });
 
-test("R2 drift explanation generator rejects reviewed checkpoint decisions", () => {
-  const dirty = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
-  dirty.items[0].reviewStatus = "reviewed-ok";
-  dirty.items[0].reviewedValue = {
-    acceptedParserLabels: dirty.items[0].machineValue.proposedParserLabels,
-    parserDisposition: "promote-parser-candidate"
-  };
-  dirty.items[0].reviewer = "codex";
-  dirty.items[0].reviewedAt = "2026-06-06";
-  dirty.items[0].note = "Dirty reviewed decision.";
+test("R2 drift explanation generator rejects incomplete or out-of-vocabulary checkpoint decisions", () => {
+  const outOfVocab = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
+  outOfVocab.items[0].reviewedValue.acceptedParserLabels = ["not-a-proposed-label"];
   assert.throws(
-    () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, dirty),
-    /checkpoint review item must remain needs-review with empty human fields/
+    () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, outOfVocab),
+    /must be empty needs-review or a complete human checkpoint decision/
   );
+
+  const missingReviewer = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
+  missingReviewer.items[1].reviewer = null;
+  assert.throws(
+    () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, missingReviewer),
+    /must be empty needs-review or a complete human checkpoint decision/
+  );
+
+  const badDisposition = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
+  badDisposition.items[2].reviewedValue.parserDisposition = "not-a-disposition";
+  assert.throws(
+    () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, badDisposition),
+    /must be empty needs-review or a complete human checkpoint decision/
+  );
+});
+
+test("R2 drift explanation generator accepts decided and empty checkpoint overlays", () => {
+  const decided = buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, r2CheckpointReviewReport);
+  assert.equal(decided.counts.checkpointNeedsReview, 0);
+  assert.equal(decided.counts.checkpointDecided, 10);
+  assert.equal(decided.reviewStatus, "human-decided");
+
+  const emptied = {
+    ...r2CheckpointReviewReport,
+    items: r2CheckpointReviewReport.items.map(item => ({
+      ...item,
+      reviewStatus: "needs-review",
+      reviewedValue: null,
+      reviewer: null,
+      reviewedAt: null,
+      note: ""
+    }))
+  };
+  const machineOnly = buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, emptied);
+  assert.equal(machineOnly.counts.checkpointNeedsReview, 10);
+  assert.equal(machineOnly.counts.checkpointDecided, 0);
+  assert.equal(machineOnly.reviewStatus, "machine-explained");
+});
+
+test("R2 drift explanation generator reports a partially-human-decided mixed overlay", () => {
+  const mixed = {
+    ...r2CheckpointReviewReport,
+    items: r2CheckpointReviewReport.items.map((item, index) => index === 0 ? {
+      ...item,
+      reviewStatus: "needs-review",
+      reviewedValue: null,
+      reviewer: null,
+      reviewedAt: null,
+      note: ""
+    } : item)
+  };
+  const payload = buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, mixed);
+  assert.equal(payload.counts.checkpointNeedsReview, 1);
+  assert.equal(payload.counts.checkpointDecided, 9);
+  assert.equal(payload.reviewStatus, "partially-human-decided");
 });
 
 test("R2 drift explanation doc is generated from the artifact", () => {
@@ -546,19 +640,30 @@ test("R2 drift explanation labels stay inside packet vocabularies", () => {
   }
 });
 
-test("R2 drift explanation keeps checkpoint rows stable and needs-review", () => {
+test("R2 drift explanation keeps checkpoint rows stable and carries the recorded decisions", () => {
   assert.equal(r2DriftExplanation.counts.checkpointRows, 10);
-  assert.equal(r2DriftExplanation.counts.checkpointNeedsReview, 10);
+  assert.equal(r2DriftExplanation.counts.checkpointNeedsReview, 0);
+  assert.equal(r2DriftExplanation.counts.checkpointDecided, 10);
   assert.deepEqual(r2DriftExplanation.checkpointRows.map(row => row.diagnosticId), CHECKPOINT_DIAGNOSTIC_IDS);
   for (const row of r2DriftExplanation.checkpointRows) {
-    assert.equal(row.reviewStatus, "needs-review");
+    assert.ok(
+      ["reviewed-ok", "reviewed-corrected", "deferred", "blocked"].includes(row.reviewStatus),
+      `${row.diagnosticId} has unexpected reviewStatus ${row.reviewStatus}`
+    );
     assert.ok(row.sourcePointerCount > 0, `${row.diagnosticId} lacks source pointers`);
     assert.ok(row.proposedParserLabels.length, `${row.diagnosticId} lacks proposed labels`);
     assert.ok(row.reviewQuestion, `${row.diagnosticId} lacks review question`);
-    assert.equal(row.reviewedValue, null);
-    assert.equal(row.reviewer, null);
-    assert.equal(row.reviewedAt, null);
-    assert.equal(row.note, "");
+    assert.ok(row.reviewer, `${row.diagnosticId} lacks reviewer`);
+    assert.ok(row.reviewedAt, `${row.diagnosticId} lacks reviewedAt`);
+    assert.ok(row.note, `${row.diagnosticId} lacks a review note`);
+    assert.ok(Array.isArray(row.reviewedValue?.acceptedParserLabels), `${row.diagnosticId} lacks acceptedParserLabels`);
+    for (const label of row.reviewedValue.acceptedParserLabels) {
+      assert.ok(row.proposedParserLabels.includes(label), `${row.diagnosticId} accepted out-of-vocabulary label ${label}`);
+    }
+    assert.ok(
+      PARSER_DISPOSITIONS.includes(row.reviewedValue.parserDisposition),
+      `${row.diagnosticId} has unexpected parserDisposition ${row.reviewedValue.parserDisposition}`
+    );
   }
 });
 
@@ -578,7 +683,7 @@ test("R2 drift explanation doc names all checkpoint diagnostic ids", () => {
   for (const diagnosticId of CHECKPOINT_DIAGNOSTIC_IDS) {
     assert.ok(r2DriftExplanationMd.includes(diagnosticId), `${diagnosticId} missing from drift explanation doc`);
   }
-  assert.ok(r2DriftExplanationMd.includes("Parser promotion remains deferred"));
+  assert.ok(r2DriftExplanationMd.includes("Parser promotion is gated by each checkpoint row's recorded `parserDisposition`"));
 });
 
 // ---- H5 anomaly queue: quoted CSV parsing ----

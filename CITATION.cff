@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use csl-atlas, please cite it using the metadata below."
+title: "csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon"
+abstract: >-
+  An interactive companion to the Cologne Digital Sanskrit Lexicon (CDSL):
+  comparative microstructural analysis of nine narrative Sanskrit-dictionary
+  chapters plus an all-dictionary coverage layer for every local CDSL v02
+  source dictionary. Every public claim carries an explicit evidence label
+  (observed / derived / inferred / reviewed) and every dataset is reproducible
+  from committed JSON plus the csl-orig source dictionaries.
+type: software
+authors:
+  - family-names: "Gasūns"
+    given-names: "Mikhail"
+    alias: "gasyoun"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # TODO: register an ORCID and add it
+  - family-names: "Funderburk"
+    given-names: "Jim"
+    alias: "funderburkjim"
+    # orcid: ...  # TODO
+  - alias: "Andhrabharati"  # TODO: confirm preferred legal name and ORCID
+version: "0.1.0"
+date-released: "2026-06-13"
+license: "CC-BY-SA-4.0"
+repository-code: "https://github.com/sanskrit-lexicon/csl-atlas"
+url: "https://sanskrit-lexicon.github.io/csl-atlas/"
+keywords:
+  - "Sanskrit lexicography"
+  - "digital humanities"
+  - "historical dictionaries"
+  - "dictionary microstructure"
+  - "metalexicography"
+  - "Cologne Digital Sanskrit Lexicon"
+  - "FAIR data"
+  - "evidence-graded data"
+references:
+  - type: data
+    title: "Cologne Digital Sanskrit Lexicon — source dictionaries (csl-orig v02)"
+    authors:
+      - name: "Cologne Digital Sanskrit Dictionaries project"
+    repository-code: "https://github.com/sanskrit-lexicon/csl-orig"
+    notes: >-
+      Upstream source data. csl-atlas data products are derived from the v02
+      plain-text dictionary files (e.g. mw.txt); see each dataset's
+      sourcePath / generatedBy envelope fields for the exact provenance.

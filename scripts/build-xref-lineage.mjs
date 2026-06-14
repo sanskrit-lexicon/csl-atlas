@@ -8,6 +8,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const REPORT_PATH = path.resolve(process.cwd(), "data", "lexico", "xref_lineage.json");
@@ -107,6 +108,7 @@ function main() {
 
   const payload = {
     schemaVersion: SCHEMA_VERSION,
+    ...licenseFields(),
     generatedAt: new Date().toISOString(),
     claim: "M6: cross-reference graphs preserve lineage signals as a shared core, not wholesale descent.",
     evidenceLabel: "derived",

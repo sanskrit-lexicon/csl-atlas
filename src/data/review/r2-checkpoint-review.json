@@ -1,5 +1,7 @@
 {
   "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "generatedAt": "2026-06-07T04:24:05.873Z",
   "sourcePath": "data/lexico/r2_checkpoint_review_packet.json",
   "recordCount": 10,
@@ -237,11 +239,21 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "target-primary-series",
+          "same-headword-supplement",
+          "prefixed-or-derived-series",
+          "separate-homonym",
+          "candidate-sense-marker",
+          "supplement-marker"
+        ],
+        "parserDisposition": "promote-parser-candidate"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "Source lines verified in local csl-orig. L21814 (pc 2-0666) is the vol-2 primary article of 1. gam = target-primary-series; L72578 (5-1369) and L119742 (7-1737) are vol-5/7 Nachtraege ('streiche', 'lies' correction language) = same-headword-supplement, with L119742 carrying div n=\"p\" preverb material = prefixed-or-derived-series; L21815 (2-0685, h=2) is 2. gam 'Erde' = separate-homonym. div n=\"1\"/\"2\" runs = candidate-sense-marker; supplement records flagged via supplement-marker."
     },
     {
       "reviewId": "r2-drift:dharma:pwg",
@@ -339,11 +351,19 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "target-primary-series",
+          "same-headword-supplement",
+          "candidate-sense-marker",
+          "supplement-marker"
+        ],
+        "parserDisposition": "promote-parser-candidate"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "Source lines verified. L36241 (pc 3-0882) is the vol-3 primary Da/rma article = target-primary-series; L76490 (5-1520) is a vol-5 Nachtrag ('fuege noch ... hinzu', 'liest die ed. Bomb.') = same-headword-supplement. div n=\"1\"/\"2\" markers = candidate-sense-marker."
     },
     {
       "reviewId": "r2-drift:gam:ben",
@@ -409,11 +429,17 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "archive-prefix-runs",
+          "reset-run-expansion"
+        ],
+        "parserDisposition": "promote-parser-candidate"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "Single source record L4326 (172 rows). Benfey's numbered {@1.@} runs restart at each preverb section, so the 172 rows are an expansion of reset runs; the archived 23 senses correspond to the main (pre-preverb) numbered run. archive-prefix-runs defines the target window; reset-run-expansion explains the drift. Later preverb runs stay retained, not counted."
     },
     {
       "reviewId": "r2-drift:rama:ben",
@@ -489,11 +515,17 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "source-record-exact-target",
+          "lookup-bundle-split"
+        ],
+        "parserDisposition": "promote-parser-candidate"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "L11986 (rama, 'Pleasing; husband; Lakshmi') and L12079 (rAma, 'Beautiful; hero of the Ramayana') are distinct lemmas bundled by lookup normalization. Exact-headword record L11986 = target for lemma rama; rAma record split out of the bundle as its own lemma, retained as evidence only."
     },
     {
       "reviewId": "r2-drift:gam:ae",
@@ -653,11 +685,21 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "reverse-high-candidate",
+          "reverse-medium-review",
+          "reverse-low-context",
+          "reverse-tail-overmatch",
+          "phrase-or-collocation-match",
+          "broad-headword-overmatch"
+        ],
+        "parserDisposition": "retain-side-evidence"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "Band vocabulary accepted, but every sampled reverse row for gam is a phrase/collocation match ('go abroad' -> prakASatAM gam under Abroad; similarly accede, accrue, advance, agree). For verbal lemmas AE reverse rows are context evidence, not sense alignments; the 243-row set stays side evidence under the band labels. See dharma:ae for the nominal counterpart where banding is promoted."
     },
     {
       "reviewId": "r2-drift:dharma:ae",
@@ -818,11 +860,22 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "reverse-high-candidate",
+          "direct-equivalent-candidate",
+          "reverse-medium-review",
+          "reverse-low-context",
+          "reverse-tail-overmatch",
+          "phrase-or-collocation-match",
+          "broad-headword-overmatch"
+        ],
+        "parserDisposition": "promote-parser-candidate"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "dharma is nominal: AE contains genuine direct equivalents alongside collocational uses (Administer -> Darma-nyAya-vivecanaM kf is collocational; Law/Duty/Religion-type headwords carry direct equivalents). Promote the rank-band scheme for nominal lemmas: high band -> direct-equivalent review, tail bands remain context/overmatch evidence. Verb lemmas stay side evidence per gam:ae."
     },
     {
       "reviewId": "r2-drift:dharma:vcp",
@@ -909,11 +962,18 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "definition-iti-unit",
+          "authority-siglum-unit",
+          "commentarial-discussion-unit"
+        ],
+        "parserDisposition": "promote-parser-candidate"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "Record L27030 verified: opens with derivation (Df--man, ardDarccA0), then the Mimamsa definition 'codanAlakzaRo'rTo DarmaH' with Jaimini siglum (jE0 sUtra), followed by extended Sabara-bhasya discussion (aTAto DarmajijYAsA passage). The three unit labels map exactly: definition units, authority-siglum units, and long commentarial discussion that must not be counted as senses. Archive 9 vs source 27 is commentary inflation, as expected."
     },
     {
       "reviewId": "r2-drift:dharma:skd",
@@ -1011,11 +1071,19 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "source-record-exact-control",
+          "same-headword-record-split",
+          "definition-iti-unit",
+          "authority-quotation-unit"
+        ],
+        "parserDisposition": "promote-parser-candidate"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "Records L17667 (puM klI) and L17668 (puM) verified: SKD genuinely splits DarmmaH into two consecutive gender-based records = same-headword-record-split. L17667 carries definition (SuBAdfzwam), the Amara paryaya run (puRyam, SreyaH, sukftam, vfzaH ityamaraH), and Medini/Hemacandra authority units with yaTA quotations (Hitopadesa, Mahabharata, Yogasara) = definition-iti-unit + authority-quotation-unit."
     },
     {
       "reviewId": "r2-drift:iti:ap",
@@ -1102,11 +1170,18 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "under-split-marker-gap",
+          "nested-marker-gap",
+          "preface-proxy-extra"
+        ],
+        "parserDisposition": "retain-side-evidence"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "Record L8130 verified: the long first sense block under one marker contains nested (1), (2)... subdivisions the splitter does not open = nested-marker-gap, explaining the 3-vs-5 under-split; the :preface lumped-proxy row = preface-proxy-extra. Real marker-coverage gap; keep visible as side evidence for a later nested-marker pass, not in the target window."
     },
     {
       "reviewId": "r2-drift:gam:ap",
@@ -1193,11 +1268,17 @@
         }
       },
       "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": {
+        "acceptedParserLabels": [
+          "archive-parity-control",
+          "continuation-proxy-row"
+        ],
+        "parserDisposition": "control-only"
+      },
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-12",
+      "note": "Exact archive parity (16=16) verified: L13831 is the main gam article; L13731.006 is an empty {{Lbody=13731.004}} continuation pointer = continuation-proxy-row. Use as positive parser-parity regression control. nested-marker-gap dropped from the accepted set: parity at ratio 1.0 demonstrates no gap on this row."
     }
   ]
 }
