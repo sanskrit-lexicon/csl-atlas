@@ -34,6 +34,7 @@
               "compound-depth-crosscheck",
               "lemma-normalization-crosscheck",
               "langdetect-markup-crosscheck",
+              "citation-link-target",
               "r2-checkpoint"
             ]
           },
@@ -42,7 +43,7 @@
             "properties": {
               "kind": {
                 "type": "string",
-                "enum": ["alignment", "entry", "source-abbreviation", "source-layer", "markup-span", "family", "construction", "corpus-lemma"]
+                "enum": ["alignment", "entry", "source-abbreviation", "source-layer", "markup-span", "citation", "family", "construction", "corpus-lemma"]
               },
               "lemma": { "type": ["string", "null"] },
               "dictionaries": { "type": "array", "items": { "type": "string" } }
