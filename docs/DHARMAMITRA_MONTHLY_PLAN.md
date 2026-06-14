@@ -76,6 +76,21 @@ highest-value month.
 **Objective:** prove the citation→passage pipeline end-to-end for **one** source. Driven by
 [MITRA_ALIGNER_HANDOFF.md](MITRA_ALIGNER_HANDOFF.md).
 
+> **Pilot DONE (2026-06-14, PR #102) — and it reframed the problem.** The first source (Ṛgveda)
+> showed that the *high-value* link-target path needs **no alignment at all**: MW cites RV with
+> an **explicit locus** (`<ls>RV. v, 86, 5</ls>` = 5.86.5), so the link is just locus-parsing →
+> a stable digital-edition URL. [`build-citation-link-pilot.mjs`](../scripts/build-citation-link-pilot.mjs)
+> parses MW's 15,916 RV citations and emits **3,996 distinct verse links** to **VedaWeb**
+> (`vedaweb.uni-koeln.de`, zero-padded `MMHHHVV` stanza id; a sampled link resolves 200) as a
+> `citation-link-target` review queue, range-checked against the RV maṇḍala/hymn structure.
+> Breakdown of the 15,916: 5,738 explicit-verse, 9,707 bare `RV.` (work-level), 354 hymn-level,
+> 79 maṇḍala-only, ~38 malformed/out-of-range. **So mitra-aligner is NOT needed for
+> explicit-locus citations** — it is for the *residual* (quote-only / vague citations) and for
+> sources without a clean locus scheme, which still need the source corpus + the alignment API
+> below. Remaining pilot work: a per-hymn verse-count table (tighten verse validation),
+> link-splitting for combined refs, and extending to a non-explicit-locus source to exercise
+> mitra-aligner proper.
+
 **Tasks**
 - Resolve the open question: does Dharmamitra expose a retrieval/embedding endpoint or only
   pairwise bertalign? Choose the importer design accordingly.
