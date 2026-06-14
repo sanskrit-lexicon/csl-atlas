@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedAt": "2026-06-14T16:07:06.762Z",
+  "sourcePath": "../csl-orig/v02/mw/mw.txt (combined <ls> references)",
+  "recordCount": 2,
+  "queue": "citation-link-target",
+  "subTask": "link-splitting",
+  "totalCitations": 311933,
+  "combinedCount": 2,
+  "combinedFraction": 0.00000641,
+  "breakdown": {
+    "semicolon": 1,
+    "range": 1,
+    "open-sequence": 0
+  },
+  "finding": "MW <ls> citations are already atomised by the digitizers; link-splitting is a near-empty sub-task.",
+  "assumptions": [
+    "Scope: Monier-Williams. A citation is 'combined' if it carries a semicolon, a digit range (N-M), or an open sequence (sq./foll./&c).",
+    "splitParts is a best-effort split for human review; inherited sub-refs re-attach the leading source siglum; ranges expand to endpoints (capped at 50).",
+    "This proposes splits; it never edits csl-orig. Reviews preserved by reviewId across rebuilds."
+  ],
+  "warnings": [
+    "Headline: only 2 of 311933 MW citations (6.4e-4%) are combined — the corpus is already atomised, so link-splitting needs no pipeline, only manual handling of these exceptions.",
+    "Best-effort splits must be verified (e.g. a range may be inclusive vs a span; an open sequence (sq.) has no explicit upper bound).",
+    "PWG carries a few more semicolon-combined refs (~4) — extend this scan to PWG/PWK if their link-targets are tackled."
+  ],
+  "items": [
+    {
+      "reviewId": "citation-link-target:split:199634:Bālar. iv, 11; x.",
+      "queue": "citation-link-target",
+      "subject": {
+        "kind": "citation",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 199634,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L199634"
+        }
+      ],
+      "machineValue": {
+        "citation": "Bālar. iv, 11; x.",
+        "splitKind": "semicolon",
+        "splitParts": [
+          "Bālar. iv, 11",
+          "Bālar. x"
+        ],
+        "partCount": 2,
+        "verdict": "split-proposed"
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "citation-link-target:split:702988:PadmaP., Svargakh. 1-5.",
+      "queue": "citation-link-target",
+      "subject": {
+        "kind": "citation",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 702988,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L702988"
+        }
+      ],
+      "machineValue": {
+        "citation": "PadmaP., Svargakh. 1-5.",
+        "splitKind": "range",
+        "splitParts": [
+          "PadmaP., Svargakh. 1",
+          "PadmaP., Svargakh. 2",
+          "PadmaP., Svargakh. 3",
+          "PadmaP., Svargakh. 4",
+          "PadmaP., Svargakh. 5"
+        ],
+        "partCount": 5,
+        "verdict": "split-proposed"
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    }
+  ]
+}
