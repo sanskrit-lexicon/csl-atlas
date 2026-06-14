@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T01:06:59.019Z",
+  "generatedAt": "2026-06-14T01:21:50.628Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
@@ -13,8 +13,8 @@
       "missing": 26
     },
     "citations": {
-      "supported": 4,
-      "candidate": 9,
+      "supported": 12,
+      "candidate": 1,
       "partial": 2,
       "weak": 24,
       "missing": 1
@@ -616,8 +616,8 @@
           "method": null
         },
         "citations": {
-          "status": "candidate",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "missing",
@@ -748,8 +748,8 @@
           "method": null
         },
         "citations": {
-          "status": "candidate",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "candidate",
@@ -946,8 +946,8 @@
           "method": "pwkvn-lex-gender-pos"
         },
         "citations": {
-          "status": "candidate",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "candidate",
@@ -1012,8 +1012,8 @@
           "method": null
         },
         "citations": {
-          "status": "candidate",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "candidate",
@@ -1144,8 +1144,8 @@
           "method": null
         },
         "citations": {
-          "status": "candidate",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "candidate",
@@ -1210,8 +1210,8 @@
           "method": null
         },
         "citations": {
-          "status": "candidate",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "weak",
@@ -1870,8 +1870,8 @@
           "method": null
         },
         "citations": {
-          "status": "candidate",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "missing",
@@ -2068,8 +2068,8 @@
           "method": "bhs-lex-gender-pos"
         },
         "citations": {
-          "status": "candidate",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "candidate",

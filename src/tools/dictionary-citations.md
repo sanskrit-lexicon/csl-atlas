@@ -39,7 +39,7 @@ import * as Plot from "npm:@observablehq/plot";
 ```
 
 <div class="note">
-Tagged dictionaries (MW, AP, PWG, PWK) cite with <code>&lt;ls&gt;</code>; density is citations per entry. WIL is essentially untagged for citations, and VCP/SKD cite in prose — for those, density uses an <code>iti</code> proxy and is <b>not</b> directly comparable to the <code>&lt;ls&gt;</code> counts.
+Validated <code>&lt;ls&gt;</code> adapters feed source overlap; density is citations per entry. WIL is essentially untagged for citations, and VCP/SKD cite in prose — for those, density uses an <code>iti</code> proxy and is <b>not</b> directly comparable to the <code>&lt;ls&gt;</code> counts.
 </div>
 
 ```js
@@ -108,6 +108,7 @@ Now aligned by a canonical siglum (diacritic/case fold + a [reviewed alias table
 ```js
 const matrix = data.sourceMatrix;
 const dictsCols = data.citationTaggedDicts;
+const showHeatmapLabels = dictsCols.length <= 7;
 display(Inputs.table(matrix.map(s => ({ [t("phase2.citations.source")]: s.source, [t("phase2.citations.in-n-dicts")]: s.dictsCiting, ...s.byDict })), {
   columns: [t("phase2.citations.source"), t("phase2.citations.in-n-dicts"), ...dictsCols],
   rows: 30,
@@ -120,16 +121,18 @@ display(Inputs.table(matrix.map(s => ({ [t("phase2.citations.source")]: s.source
 display(Plot.plot({
   marginLeft: 60,
   marginBottom: 50,
-  width: 520,
-  height: 360,
+  width: Math.max(520, dictsCols.length * 48),
+  height: Math.max(360, dictsCols.length * 34),
   color: { scheme: "blues", label: t("phase2.citations.shared-sigla-jaccard"), legend: true },
   x: { domain: dictsCols, label: null },
   y: { domain: dictsCols, label: null },
   marks: [
     Plot.cell(data.sourceOverlap.flatMap(o => [{ a: o.a, b: o.b, j: o.jaccard }, { a: o.b, b: o.a, j: o.jaccard }]),
       { x: "a", y: "b", fill: "j" }),
+    ...(showHeatmapLabels ? [
     Plot.text(data.sourceOverlap.flatMap(o => [{ a: o.a, b: o.b, j: o.jaccard }, { a: o.b, b: o.a, j: o.jaccard }]),
       { x: "a", y: "b", text: d => d.j.toFixed(2), fill: d => d.j > 0.12 ? "white" : "black", fontSize: 11 })
+    ] : [])
   ]
 }));
 ```

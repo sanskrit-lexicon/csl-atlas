@@ -27,6 +27,7 @@ const FEATURE_METHOD_NOTES = {
   ],
   citations: [
     "Supported citation adapters use tagged <ls> source citations and feed the source matrix/overlap.",
+    "BEN, GRA, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
     "Prose/source-hint adapters such as iti proxies are tracked separately until validated for source-level comparison.",
     "Unavailable dictionaries are excluded from source overlap, never counted as zero evidence."
   ],
@@ -188,6 +189,18 @@ export const FEATURE_ADAPTERS = {
     ap: supportedAdapter("ls-source-citation", "<ls> source citation"),
     pwg: supportedAdapter("ls-source-citation", "<ls> source citation"),
     pw: supportedAdapter("ls-source-citation", "<ls> source citation"),
+    ben: supportedAdapter("ls-source-citation", "<ls> source citation"),
+    gra: supportedAdapter("ls-source-citation", "<ls> source citation"),
+    pwkvn: supportedAdapter("ls-source-citation", "<ls> source citation", {
+      notes: ["Local-only dictionary; source evidence uses line pointers without GitHub hrefs."]
+    }),
+    lan: supportedAdapter("ls-source-citation", "<ls> source citation", {
+      notes: ["Lanman's reader references are encoded as <ls> labels and compared as source labels."]
+    }),
+    lrv: supportedAdapter("ls-source-citation", "<ls> source citation"),
+    ap90: supportedAdapter("ls-source-citation", "<ls> source citation"),
+    sch: supportedAdapter("ls-source-citation", "<ls> source citation"),
+    bhs: supportedAdapter("ls-source-citation", "<ls> source citation"),
     wil: partialAdapter("weak", "iti-prose-proxy", "iti prose proxy"),
     vcp: partialAdapter("partial", "iti-prose-proxy", "iti prose proxy"),
     skd: partialAdapter("partial", "iti-prose-proxy", "iti prose proxy")

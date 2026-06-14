@@ -5,9 +5,9 @@
 // cross-dictionary canonical siglum (fold + reviewed alias table) — a shared
 // source x dictionary matrix and pairwise source overlap.
 //
-// Source-level comparison covers the <ls>-tagged dictionaries (MW, AP, PWG,
-// PWK). WIL is essentially untagged and VCP/SKD cite in prose via `iti`, so
-// for those only a density proxy is reported.
+// Source-level comparison covers dictionaries with validated <ls> adapters.
+// WIL is essentially untagged and VCP/SKD cite in prose via `iti`, so those
+// remain diagnostic density proxy rows and stay out of source overlap.
 //
 // Usage: npm run build-citation-apparatus. No LLM inference.
 
@@ -21,6 +21,7 @@ import { baseForm } from "./lib/mw-source-layers.mjs";
 import { canonicalSiglum, canonicalName } from "./lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
 import { citationAdapterForDict, featureSupport, supportedFeatureCodes } from "./lib/dict-feature-adapters.mjs";
+import { buildBroadHeadwordDictionaries } from "./lib/dict-scope.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
@@ -30,16 +31,54 @@ const TOP_SOURCES = 60;
 // for the cross-dictionary alias table (it may equal another dict's siglum).
 const ALIAS_REVIEW_MIN = 100;
 
-const TAGGED = supportedFeatureCodes("citations", { scope: "coreComparison" });
+const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
+const BROAD_DICTIONARIES = buildBroadHeadwordDictionaries();
+const BROAD_BY_CODE = new Map(BROAD_DICTIONARIES.map(dict => [dict.code, dict]));
+const LABELS = {
+  ...Object.fromEntries(BROAD_DICTIONARIES.map(dict => [dict.code, dict.label])),
+  ...DICT_LABELS
+};
+const BROAD_TAGGED = supportedFeatureCodes("citations", { scope: "broadHeadword" });
+const CORE_TAGGED = supportedFeatureCodes("citations", { scope: "coreComparison" });
+const TAGGED = [
+  ...CORE_TAGGED.filter(code => BROAD_TAGGED.includes(code)),
+  ...BROAD_TAGGED.filter(code => !CORE_TAGGED.includes(code))
+];
+const ANALYSIS_DICTIONARIES = [
+  ...TAGGED.map(code => BROAD_BY_CODE.get(code) ?? DICTS.find(d => d.code === code) ?? { code, label: LABELS[code] ?? code.toUpperCase(), sourceLinkMode: "github" }),
+  ...BROAD_DICTIONARIES.filter(dict => {
+    const adapter = citationAdapterForDict(dict.code);
+    return adapter && adapter.status !== "supported";
+  })
+];
 
-function analyse(code, tagged) {
+function sourcePath(dict) {
+  return `../csl-orig/v02/${dict.code}/${dict.code}.txt`;
+}
+
+function sourceHref(dict, line) {
+  return dict.sourceLinkMode === "github" && line ? `${HREF_BASE}/${dict.code}/${dict.code}.txt#L${line}` : null;
+}
+
+function sourcePointer(dict, rec) {
+  return {
+    dictionary: dict.label ?? LABELS[dict.code] ?? dict.code.toUpperCase(),
+    L: rec.L ?? null,
+    line: rec.startLine,
+    href: sourceHref(dict, rec.startLine),
+    sourceLinkMode: dict.sourceLinkMode ?? "github",
+    sourcePath: sourcePath(dict)
+  };
+}
+
+function analyse(dict, tagged) {
   let recordCount = 0;
   let recordsWithCitations = 0;
   let totalCitations = 0;
   // canonical id -> { count, forms: Map<rawBaseForm, count> }
   const sources = new Map();
 
-  for (const rec of iterateDict(code)) {
+  for (const rec of iterateDict(dict.code)) {
     if (!rec.k1) continue;
     recordCount += 1;
     const body = rec.body || "";
@@ -53,7 +92,7 @@ function analyse(code, tagged) {
         const id = canonicalSiglum(form); // fold + alias: "MBh"/"MBH" -> "mbh"
         let s = sources.get(id);
         if (!s) {
-          s = { count: 0, forms: new Map(), href: rec.href };
+          s = { count: 0, forms: new Map(), sourcePointer: sourcePointer(dict, rec) };
           sources.set(id, s);
         }
         s.count += 1;
@@ -102,19 +141,19 @@ function main() {
   const warnings = [];
   const perDictRaw = {};
 
-  for (const d of DICTS) {
+  for (const d of ANALYSIS_DICTIONARIES) {
     if (!dictExists(d.code)) {
       warnings.push(`Missing source for ${d.code}; skipped.`);
       continue;
     }
     const adapter = citationAdapterForDict(d.code);
     const tagged = adapter?.status === "supported" && adapter.methodId === "ls-source-citation";
-    perDictRaw[d.code] = analyse(d.code, tagged);
+    perDictRaw[d.code] = analyse(d, tagged);
     console.log(`  ${d.code}: ${perDictRaw[d.code].totalCitations} citations (${tagged ? "ls" : "iti"})`);
   }
 
   // Per-dictionary apparatus.
-  const perDict = DICTS.filter(d => perDictRaw[d.code]).map(d => {
+  const perDict = ANALYSIS_DICTIONARIES.filter(d => perDictRaw[d.code]).map(d => {
     const r = perDictRaw[d.code];
     const adapter = citationAdapterForDict(d.code);
     const tagged = adapter?.status === "supported" && adapter.methodId === "ls-source-citation";
@@ -123,7 +162,8 @@ function main() {
           .map(([id, e]) => ({ source: canonicalName(id) ?? topForm(e), count: e.count }))
       : [];
     return {
-      dict: d.label,
+      dict: d.label ?? LABELS[d.code] ?? d.code.toUpperCase(),
+      code: d.code,
       method: tagged ? "ls" : "iti",
       methodId: adapter?.methodId ?? null,
       methodStatus: adapter?.status ?? "missing",
@@ -131,7 +171,7 @@ function main() {
       recordsWithCitations: r.recordsWithCitations,
       totalCitations: r.totalCitations,
       citationsPerRecord: r.recordCount ? Number((r.totalCitations / r.recordCount).toFixed(3)) : 0,
-      distinctSources: d.citationTagged ? r.sources.size : null,
+      distinctSources: tagged ? r.sources.size : null,
       topSources
     };
   });
@@ -150,7 +190,7 @@ function main() {
       source: displayLabel(id, perDictRaw),
       total,
       dictsCiting: taggedPresent.filter(c => perDictRaw[c].sources.has(id)).length,
-      byDict: Object.fromEntries(taggedPresent.map(c => [DICT_LABELS[c], perDictRaw[c].sources.get(id)?.count || 0]))
+      byDict: Object.fromEntries(taggedPresent.map(c => [LABELS[c] ?? c.toUpperCase(), perDictRaw[c].sources.get(id)?.count || 0]))
     }));
 
   // Pairwise canonical source-set overlap (Jaccard).
@@ -163,8 +203,8 @@ function main() {
       for (const s of a) if (b.has(s)) shared += 1;
       const union = a.size + b.size - shared;
       sourceOverlap.push({
-        a: DICT_LABELS[taggedPresent[i]],
-        b: DICT_LABELS[taggedPresent[j]],
+        a: LABELS[taggedPresent[i]] ?? taggedPresent[i].toUpperCase(),
+        b: LABELS[taggedPresent[j]] ?? taggedPresent[j].toUpperCase(),
         sharedSources: shared,
         jaccard: union ? Number((shared / union).toFixed(4)) : 0
       });
@@ -185,12 +225,12 @@ function main() {
     unavailableDictionaries: citationSupport.unavailableDictionaries,
     diagnosticDictionaries: citationSupport.diagnosticDictionaries,
     methodNotes: citationSupport.methodNotes,
-    citationTaggedDicts: TAGGED.map(c => DICT_LABELS[c]),
+    citationTaggedDicts: TAGGED.map(c => LABELS[c] ?? c.toUpperCase()),
     perDict,
     sourceMatrix,
     sourceOverlap,
     assumptions: [
-      "Source-level comparison covers dictionaries with supported <ls> citation adapters (MW, AP, PWG, PWK).",
+      "Source-level comparison covers dictionaries with supported <ls> citation adapters across broadHeadword.",
       "citationsPerRecord uses <ls> count for tagged dicts and `iti` count for prose dicts (VCP, SKD); the two methods are not directly comparable.",
       "WIL is essentially untagged for citations (<ls> almost absent), so its density is near zero by encoding, not by content.",
       "Diagnostic prose/source-hint proxies are not included in source matrix/overlap until a validated citation adapter is added.",
@@ -235,8 +275,8 @@ function writeSiglumReviewQueue(perDictRaw) {
       reviewId,
       queue: "source-siglum-alias",
       subject: { kind: "source-abbreviation", source: topForm(e), canonicalId: id },
-      sourcePointers: [{ dictionary: DICT_LABELS[code], href: e.href }],
-      machineValue: { siglum: topForm(e), citedOnlyBy: DICT_LABELS[code], citations: e.count },
+      sourcePointers: [e.sourcePointer],
+      machineValue: { siglum: topForm(e), citedOnlyBy: LABELS[code] ?? code.toUpperCase(), citations: e.count },
       evidenceLevel: "derived",
       ...reviewFields(preserved, reviewId)
     });
@@ -245,7 +285,7 @@ function writeSiglumReviewQueue(perDictRaw) {
 
   const payload = reviewPayload({
     queue: "source-siglum-alias",
-    sourcePath: "../csl-orig/v02/{mw,ap,pwg,pw}/*.txt",
+    sourcePath: `../csl-orig/v02/{${present.join(",")}}/*.txt`,
     items,
     extra: { minCitations: ALIAS_REVIEW_MIN },
     assumptions: [

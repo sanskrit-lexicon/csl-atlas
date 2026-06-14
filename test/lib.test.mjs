@@ -315,6 +315,20 @@ test("deep analysis artifacts never put unavailable dictionaries in evidence cel
   assert.ok(citations.sourceMatrix.every(row => Object.keys(row.byDict).every(label => !new Set(citations.unavailableDictionaries.map(dict => dict.label)).has(label))));
 });
 
+test("citation apparatus promotes broad <ls> adapters into source overlap", () => {
+  const citations = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/citation-apparatus.json"), "utf8"));
+  const included = citations.includedDictionaries.map(dict => dict.code);
+  assert.equal(citations.includedDictionaries.length, 12);
+  for (const code of ["ben", "gra", "pwkvn", "lan", "lrv", "ap90", "sch", "bhs"]) {
+    assert.ok(included.includes(code), `${code} must be included in validated citation adapters`);
+  }
+  assert.equal(citations.unavailableDictionaries.length, 28);
+  assert.equal(citations.citationTaggedDicts.length, 12);
+  assert.equal(citations.sourceOverlap.length, 66);
+  assert.ok(citations.perDict.some(dict => dict.code === "pwkvn" && dict.method === "ls"));
+  assert.ok(citations.perDict.some(dict => dict.code === "vcp" && dict.method === "iti" && dict.methodStatus === "partial"));
+});
+
 test("iastToSlp1 transliterates common IAST queries", () => {
   assert.equal(iastToSlp1("agni"), "agni");
   assert.equal(iastToSlp1("śiva"), "Siva");
@@ -418,7 +432,11 @@ test("feature support exposes broad unavailable dictionaries without promoting t
 
 test("citation adapters separate supported <ls> from diagnostic prose proxies", () => {
   assert.deepEqual(supportedFeatureCodes("citations", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
+  assert.equal(supportedFeatureCodes("citations", { scope: "broadHeadword" }).length, 12);
   assert.equal(citationAdapterForDict("mw").status, "supported");
+  assert.equal(citationAdapterForDict("ben").status, "supported");
+  assert.equal(citationAdapterForDict("bhs").status, "supported");
+  assert.equal(citationAdapterForDict("krm"), null);
   assert.equal(citationAdapterForDict("vcp").status, "partial");
   assert.equal(citationAdapterForDict("wil").status, "weak");
 });
