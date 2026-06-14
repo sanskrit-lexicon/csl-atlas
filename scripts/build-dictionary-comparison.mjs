@@ -16,7 +16,8 @@ import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { presentDicts, lemmaConfidence, genderConflict } from "./lib/dict-align.mjs";
 import { buildBroadHeadwordDictionaries, coreComparisonDictionaries } from "./lib/dict-scope.mjs";
 import { extractGrammar, featureSupport, supportedFeatureCodes } from "./lib/dict-feature-adapters.mjs";
-import { licenseFields } from "./lib/dataset-meta.mjs";
+import { generatedAtForPayload, generatedAtNow, licenseFields, readJsonIfExists } from "./lib/dataset-meta.mjs";
+import { CSL_ORIG_GITHUB_BASE, dictSourcePath, sourceHrefForDict } from "./lib/source-links.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
@@ -28,7 +29,6 @@ const SAMPLE = 50;
 const DOSSIER_MIN_DICTS = 5;
 const LOOKUP_MIN_DICTS = 4;
 const GENDER_TOKENS = new Set(["m", "f", "n", "adj", "ind"]);
-const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
 
 const ORDER = DICTS.map(d => d.code);
 const BROAD_HEADWORD_DICTS = buildBroadHeadwordDictionaries();
@@ -67,7 +67,7 @@ function envelope(extra, { assumptions = [], warnings = [] }) {
   return {
     schemaVersion: SCHEMA_VERSION,
     ...licenseFields(),
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAtNow(),
     sourceRoot: "../csl-orig/v02",
     dictionaries: DICTS.map(d => ({ code: d.code, label: d.label, grammarReliable: d.grammarReliable })),
     assumptions,
@@ -77,14 +77,29 @@ function envelope(extra, { assumptions = [], warnings = [] }) {
 }
 
 function writeJson(name, payload) {
-  fs.writeFileSync(path.join(OUT_DIR, name), `${JSON.stringify(payload, null, 2)}\n`);
-  return path.relative(process.cwd(), path.join(OUT_DIR, name));
+  const filePath = path.join(OUT_DIR, name);
+  const previous = readJsonIfExists(filePath, fs);
+  const finalPayload = payload?.generatedAt
+    ? { ...payload, generatedAt: generatedAtForPayload(previous, payload) }
+    : payload;
+  fs.writeFileSync(filePath, `${JSON.stringify(finalPayload, null, 2)}\n`);
+  return path.relative(process.cwd(), filePath);
+}
+
+function writeCompactJson(name, payload) {
+  const filePath = path.join(OUT_DIR, name);
+  const previous = readJsonIfExists(filePath, fs);
+  const finalPayload = payload?.generatedAt
+    ? { ...payload, generatedAt: generatedAtForPayload(previous, payload) }
+    : payload;
+  fs.writeFileSync(filePath, `${JSON.stringify(finalPayload)}\n`);
+  return path.relative(process.cwd(), filePath);
 }
 
 function neutralEnvelope(extra, { assumptions = [], warnings = [] } = {}) {
   return {
     schemaVersion: SCHEMA_VERSION,
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAtNow(),
     sourceRoot: "../csl-orig/v02",
     assumptions,
     warnings,
@@ -101,11 +116,11 @@ function emptyCounts(dictionaries) {
 }
 
 function sourcePointer(dict, line) {
-  return dict?.sourceLinkMode === "github" && line ? `${HREF_BASE}/${dict.code}/${dict.code}.txt#L${line}` : null;
+  return sourceHrefForDict(dict, line);
 }
 
 function sourcePath(dict) {
-  return `../csl-orig/v02/${dict.code}/${dict.code}.txt`;
+  return dictSourcePath(dict.code);
 }
 
 function sourceExample(dict, rec) {
@@ -331,7 +346,7 @@ function main() {
 
     // per-lemma dossier (well-attested vocabulary only). Compact tuple form
     // [code, records, firstLine, gender] keeps the static dataset small; the
-    // page reconstructs the source href from HREF_BASE + code.
+    // The page reconstructs the source href from hrefBase + code.
     if (k >= DOSSIER_MIN_DICTS) {
       dossier.push({
         l: normalized,
@@ -701,7 +716,7 @@ function main() {
   const dossierPayload = envelope(
     {
       minDicts: DOSSIER_MIN_DICTS,
-      hrefBase: HREF_BASE,
+      hrefBase: CSL_ORIG_GITHUB_BASE,
       tupleFields: ["code", "records", "firstLine", "gender"],
       count: dossier.length,
       entries: dossier
@@ -717,14 +732,13 @@ function main() {
       ]
     }
   );
-  fs.writeFileSync(path.join(OUT_DIR, "lemma-dossier.json"), `${JSON.stringify(dossierPayload)}\n`);
-  written.push(path.relative(process.cwd(), path.join(OUT_DIR, "lemma-dossier.json")));
+  written.push(writeCompactJson("lemma-dossier.json", dossierPayload));
 
   // 8. Reader lookup index. Written compactly like the dossier.
   lookup.sort((a, b) => a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0);
   const lookupPayload = envelope(
     {
-      hrefBase: HREF_BASE,
+      hrefBase: CSL_ORIG_GITHUB_BASE,
       minDicts: LOOKUP_MIN_DICTS,
       tupleFields: ["lemma", "dicts"],
       dictTupleFields: ["dictIndex", "records", "firstLine", "gender?"],
@@ -746,8 +760,7 @@ function main() {
       ]
     }
   );
-  fs.writeFileSync(path.join(OUT_DIR, "lemma-lookup.json"), `${JSON.stringify(lookupPayload)}\n`);
-  written.push(path.relative(process.cwd(), path.join(OUT_DIR, "lemma-lookup.json")));
+  written.push(writeCompactJson("lemma-lookup.json", lookupPayload));
 
   // 9. Validation report.
   const report = {

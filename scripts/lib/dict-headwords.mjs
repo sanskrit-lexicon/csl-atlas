@@ -1,5 +1,5 @@
 import { dictFile, iterateDict } from "./dict-parser.mjs";
-import { dictHref } from "./dict-manifest.mjs";
+import { sourceHrefForDict } from "./source-links.mjs";
 import fs from "node:fs";
 
 export const KOSHA_SYNONYM_CODES = new Set(["abch", "acph", "acsj"]);
@@ -28,7 +28,7 @@ function dictMeta(input) {
 }
 
 function linkFor(dict, line) {
-  return dict?.sourceLinkMode === "github" ? dictHref(dict.code, line) : null;
+  return sourceHrefForDict(dict, line);
 }
 
 function headerField(headerLine, tag) {

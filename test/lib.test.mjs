@@ -31,9 +31,21 @@ import {
 import { iterateKoshaHeadwordsFromText, parseKoshaSynonymToken } from "../scripts/lib/dict-headwords.mjs";
 import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/dict-align.mjs";
 import { CORE_COMPARISON_DICTS, SOURCE_ROOT, buildBroadHeadwordDictionaries, isBroadHeadwordEligible, shardIdForLemma } from "../scripts/lib/dict-scope.mjs";
+import { dictGithubHref, sourceHrefForDict } from "../scripts/lib/source-links.mjs";
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
+import { generatedAtForPayload } from "../scripts/lib/dataset-meta.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
 import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma, slp1ToIast } from "../src/lib/lookup-normalize.js";
+import {
+  findLemma as findLookupLemma,
+  findPrefix as findLookupPrefix,
+  initialModeFromUrl,
+  initialQueryFromUrl,
+  loadCandidateShards,
+  normalizeLanguageChoice,
+  normalizeLookupMode,
+  sourceHref as lookupSourceHref
+} from "../src/lib/lookup-ui.js";
 import { parseDcsSummaryFile } from "../scripts/lib/dcs-summary.mjs";
 
 function leafKeys(value, prefix = "") {
@@ -426,6 +438,68 @@ test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", ()
   assert.deepEqual(normalizeLookupQuery("dharma").candidates, ["dharma", "Darma"]);
   assert.deepEqual(normalizeLookupQuery("Agni").candidates, ["Agni", "agni"]);
   assert.deepEqual(normalizeLookupQuery("Dharma").candidates, ["Dharma", "dharma", "Darma"]);
+});
+
+test("lookup UI helpers support deep links, locales, and sorted lemma lookup", () => {
+  assert.equal(initialQueryFromUrl("?q=%C5%9Biva&scope=broad"), "śiva");
+  assert.equal(initialModeFromUrl("?q=akza&scope=broad"), "broad");
+  assert.equal(initialModeFromUrl("?q=akza&mode=core"), "core");
+  assert.equal(normalizeLookupMode("BroadHeadword"), "broad");
+  assert.equal(normalizeLanguageChoice("Русский"), "ru");
+  assert.equal(normalizeLanguageChoice("en"), "en");
+
+  const entries = [["Siva", 4], ["aMSa", 3], ["agni", 1], ["akza", 2]];
+  assert.deepEqual(findLookupLemma(entries, "akza"), ["akza", 2]);
+  assert.deepEqual(findLookupPrefix(entries, "a", 2).map(e => e[0]), ["aMSa", "agni"]);
+});
+
+test("lookup shard loading stays demand-driven", async () => {
+  let calls = 0;
+  const loaders = new Map([
+    ["61", async () => {
+      calls += 1;
+      return { shard: "61", entries: [["akza", []]] };
+    }]
+  ]);
+
+  assert.equal((await loadCandidateShards([], loaders)).size, 0);
+  assert.equal(calls, 0);
+  assert.equal((await loadCandidateShards(["akza"], loaders)).get("61").length, 1);
+  assert.equal(calls, 1);
+});
+
+test("source href helpers handle trailing slash bases and local-only fallbacks", () => {
+  assert.equal(
+    dictGithubHref("mw", 123, "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/"),
+    "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L123"
+  );
+  assert.equal(
+    sourceHrefForDict({ code: "pwkvn", sourceLinkMode: "local-only" }, 456),
+    null
+  );
+  assert.equal(
+    lookupSourceHref({ code: "mw", sourceLinkMode: "github" }, 123, "https://example.test/base/"),
+    "https://example.test/base/mw/mw.txt#L123"
+  );
+  assert.equal(
+    lookupSourceHref({ code: "mw", sourceLinkMode: "github" }, 123),
+    "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L123"
+  );
+});
+
+test("generatedAtForPayload preserves timestamps on content-identical rebuilds", () => {
+  const previous = { schemaVersion: "1.0.0", generatedAt: "2026-06-14T00:00:00.000Z", count: 3 };
+  const nextSame = { schemaVersion: "1.0.0", generatedAt: "2026-06-14T12:00:00.000Z", count: 3 };
+  assert.equal(generatedAtForPayload(previous, nextSame), previous.generatedAt);
+
+  const old = process.env.CSL_ATLAS_GENERATED_AT;
+  process.env.CSL_ATLAS_GENERATED_AT = "2026-06-14T13:00:00.000Z";
+  try {
+    assert.equal(generatedAtForPayload(previous, { ...nextSame, count: 4 }), "2026-06-14T13:00:00.000Z");
+  } finally {
+    if (old === undefined) delete process.env.CSL_ATLAS_GENERATED_AT;
+    else process.env.CSL_ATLAS_GENERATED_AT = old;
+  }
 });
 
 test("reader and dossier Russian locales cover every English UI key", () => {

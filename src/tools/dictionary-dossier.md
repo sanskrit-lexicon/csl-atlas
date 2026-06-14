@@ -5,6 +5,18 @@ toc: false
 
 ```js
 import { normalizeLookupQuery, slp1ToIast } from "../lib/lookup-normalize.js";
+import {
+  findLemma,
+  findPrefix,
+  initialModeFromUrl,
+  initialQueryFromUrl,
+  loadCandidateShards,
+  localeTranslator,
+  normalizeLanguageChoice,
+  normalizeLookupMode,
+  shardIdForLemma,
+  sourceHref
+} from "../lib/lookup-ui.js";
 ```
 
 ```js
@@ -77,15 +89,9 @@ const lang = view(Inputs.select(["en", "ru"], {
 ```
 
 ```js
-const languageValue = String(lang ?? "").toLowerCase();
-const currentLanguage = lang === 1 || languageValue === "1" || languageValue === "ru" || languageValue === "russian" || languageValue === "русский" ? "ru" : "en";
+const currentLanguage = normalizeLanguageChoice(lang);
 const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
-const t = ((locale) => (key) => {
-  const parts = key.split(".");
-  let result = locale;
-  for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
-  return result;
-})(currentLocale);
+const t = localeTranslator(currentLocale);
 ```
 
 ```js
@@ -96,11 +102,10 @@ display(html`<h1>${t("phase2.dossier.title")}</h1>
 ```js
 const rawLookupMode = view(Inputs.select(["core", "broad"], {
   label: t("phase2.dossier.scope"),
-  value: "core",
+  value: initialModeFromUrl(),
   format: value => value === "broad" ? t("phase2.dossier.scope-broad") : t("phase2.dossier.scope-core")
 }));
-const lookupModeValue = String(rawLookupMode ?? "").toLowerCase();
-const lookupMode = rawLookupMode === 1 || lookupModeValue === "1" || lookupModeValue === "broad" ? "broad" : "core";
+const lookupMode = normalizeLookupMode(rawLookupMode);
 ```
 
 ```js
@@ -140,37 +145,8 @@ display(html`<div class="note">
 ```
 
 ```js
-function shardIdForLemma(lemma) {
-  const first = String(lemma ?? "")[0];
-  if (!first) return "other";
-  const id = first.charCodeAt(0).toString(16);
-  return broadShardLoaders.has(id) ? id : "other";
-}
-function lowerBoundLemma(entries, lemma) {
-  let lo = 0, hi = entries.length;
-  while (lo < hi) {
-    const mid = (lo + hi) >> 1;
-    if (entries[mid][0] < lemma) lo = mid + 1;
-    else hi = mid;
-  }
-  return lo;
-}
-function findLemma(entries, lemma) {
-  const i = lowerBoundLemma(entries, lemma);
-  return entries[i]?.[0] === lemma ? entries[i] : null;
-}
-function findPrefix(entries, prefix, limit = 200) {
-  const out = [];
-  for (let i = lowerBoundLemma(entries, prefix); i < entries.length && out.length < limit; i++) {
-    const entry = entries[i];
-    if (!entry[0].startsWith(prefix)) break;
-    out.push(entry);
-  }
-  return out;
-}
 function hrefOf(dict, line) {
-  const sourceMode = dict?.sourceLinkMode ?? "github";
-  return dict && line && sourceMode === "github" ? `${activeManifest.hrefBase}/${dict.code}/${dict.code}.txt#L${line}` : null;
+  return sourceHref(dict, line, activeManifest.hrefBase);
 }
 function dictBadges(dict, line) {
   const badges = [];
@@ -212,11 +188,10 @@ function broadEntry(entry) {
 ```
 
 ```js
-const initialQuery = new URLSearchParams(globalThis.location?.search ?? "").get("q") ?? "";
 const query = view(Inputs.text({
   label: t("phase2.dossier.lemma"),
   placeholder: t("phase2.dossier.placeholder"),
-  value: initialQuery,
+  value: initialQueryFromUrl(),
   width: 320,
   submit: false
 }));
@@ -227,18 +202,12 @@ const q = (query ?? "").trim();
 const normalizedQuery = normalizeLookupQuery(q);
 const internalQueries = normalizedQuery.candidates;
 const displayQuery = slp1ToIast(normalizedQuery.normalized) || q;
-const broadShardIdsForQuery = lookupMode === "broad"
-  ? [...new Set(internalQueries.filter(candidate => candidate.length >= 1).map(shardIdForLemma))]
-  : [];
-const broadShards = broadShardIdsForQuery.length
-  ? await Promise.all(broadShardIdsForQuery.map(id => broadShardLoaders.get(id)?.()).filter(Boolean))
-  : [];
-const broadEntriesByShard = new Map(broadShards.map(shard => [shard.shard, shard.entries]));
-const broadEntriesForCandidate = candidate => broadEntriesByShard.get(shardIdForLemma(candidate)) ?? [];
+const broadEntriesByShard = lookupMode === "broad" ? await loadCandidateShards(internalQueries, broadShardLoaders) : new Map();
+const broadEntriesForCandidate = candidate => broadEntriesByShard.get(shardIdForLemma(candidate, broadShardLoaders)) ?? [];
 const broadExact = internalQueries.map(candidate => findLemma(broadEntriesForCandidate(candidate), candidate)).find(Boolean) ?? null;
 const broadPrefixBase = internalQueries.find(candidate => candidate.length >= 1) ?? "";
 const broadMatches = q
-  ? (broadExact ? [broadExact] : broadPrefixBase ? findPrefix(broadEntriesForCandidate(broadPrefixBase), broadPrefixBase) : [])
+  ? (broadExact ? [broadExact] : broadPrefixBase ? findPrefix(broadEntriesForCandidate(broadPrefixBase), broadPrefixBase, 200) : [])
   : broadManifest.sampleEntries;
 const coreMatches = q
   ? dossier.entries.filter(e => internalQueries.some(candidate => e.l.includes(candidate)))

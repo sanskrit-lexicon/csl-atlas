@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { generatedAtForPayload, generatedAtNow, readJsonIfExists } from "./lib/dataset-meta.mjs";
 import {
   CORE_COMPARISON_DICTS,
   buildBroadHeadwordDictionaries,
@@ -208,7 +209,7 @@ function main() {
   const rows = dictionaries.map(auditDict);
   const payload = {
     schemaVersion: SCHEMA_VERSION,
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAtNow(),
     sourceRoot: "../csl-orig/v02",
     dictionaryCount: rows.length,
     coreComparisonCount: CORE_COMPARISON_DICTS.length,
@@ -230,6 +231,7 @@ function main() {
   };
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(OUT, fs), payload);
   fs.writeFileSync(OUT, `${JSON.stringify(payload, null, 2)}\n`);
 
   console.log(`Audited ${rows.length} broad Sanskrit/BHS dictionaries.`);
