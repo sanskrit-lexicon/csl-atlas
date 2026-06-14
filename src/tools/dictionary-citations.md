@@ -39,7 +39,7 @@ import * as Plot from "npm:@observablehq/plot";
 ```
 
 <div class="note">
-Validated <code>&lt;ls&gt;</code> adapters feed source overlap; density is citations per entry. WIL is essentially untagged for citations, and VCP/SKD cite in prose — for those, density uses an <code>iti</code> proxy and is <b>not</b> directly comparable to the <code>&lt;ls&gt;</code> counts.
+Validated <code>&lt;ls&gt;</code> adapters feed source overlap; density is citations per entry. WIL is essentially untagged for citations, and VCP/SKD/KRM cite in prose or source hints — for those, density uses an <code>iti</code> proxy and is <b>not</b> directly comparable to the <code>&lt;ls&gt;</code> counts.
 </div>
 
 ```js

@@ -312,6 +312,7 @@ test("deep analysis artifacts never put unavailable dictionaries in evidence cel
   }
 
   assert.ok(citations.diagnosticDictionaries.some(dict => dict.code === "vcp"));
+  assert.ok(citations.diagnosticDictionaries.some(dict => dict.code === "krm"));
   assert.ok(citations.sourceMatrix.every(row => Object.keys(row.byDict).every(label => !new Set(citations.unavailableDictionaries.map(dict => dict.label)).has(label))));
 });
 
@@ -327,6 +328,8 @@ test("citation apparatus promotes broad <ls> adapters into source overlap", () =
   assert.equal(citations.sourceOverlap.length, 66);
   assert.ok(citations.perDict.some(dict => dict.code === "pwkvn" && dict.method === "ls"));
   assert.ok(citations.perDict.some(dict => dict.code === "vcp" && dict.method === "iti" && dict.methodStatus === "partial"));
+  assert.ok(citations.perDict.some(dict => dict.code === "krm" && dict.method === "iti" && dict.methodId === "krm-iti-authority-proxy" && dict.methodStatus === "partial"));
+  assert.ok(citations.sourceOverlap.every(pair => pair.a !== "KRM" && pair.b !== "KRM"));
 });
 
 test("homonym split promotes validated broad <h> adapters only", () => {
@@ -481,7 +484,9 @@ test("citation adapters separate supported <ls> from diagnostic prose proxies", 
   assert.equal(citationAdapterForDict("mw").status, "supported");
   assert.equal(citationAdapterForDict("ben").status, "supported");
   assert.equal(citationAdapterForDict("bhs").status, "supported");
-  assert.equal(citationAdapterForDict("krm"), null);
+  assert.equal(citationAdapterForDict("krm").status, "partial");
+  assert.equal(citationAdapterForDict("krm").methodId, "krm-iti-authority-proxy");
+  assert.ok(!supportedFeatureCodes("citations", { scope: "broadHeadword" }).includes("krm"));
   assert.equal(citationAdapterForDict("vcp").status, "partial");
   assert.equal(citationAdapterForDict("wil").status, "weak");
 });

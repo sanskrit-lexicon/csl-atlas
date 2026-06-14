@@ -1,6 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T01:21:32.416Z",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedAt": "2026-06-14T08:42:51.335Z",
   "sourceRoot": "../csl-orig/v02",
   "feature": "citations",
   "featureLabel": "Citations",
@@ -535,10 +537,10 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated source-citation adapter for public citation overlap yet."
+      "methodId": "krm-iti-authority-proxy",
+      "methodLabel": "KRM iti authority/source-hint proxy",
+      "status": "partial",
+      "reason": "partial adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "ieg",
@@ -639,12 +641,26 @@
       "methodLabel": "iti prose proxy",
       "status": "partial",
       "reason": "partial adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "krm",
+      "label": "KRM",
+      "fullName": "Kṛdantarūpamālā",
+      "languagePair": "Skt-Skt",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "krm-iti-authority-proxy",
+      "methodLabel": "KRM iti authority/source-hint proxy",
+      "status": "partial",
+      "reason": "partial adapter evidence is diagnostic only; not included in public deep metrics."
     }
   ],
   "methodNotes": [
     "Supported citation adapters use tagged <ls> source citations and feed the source matrix/overlap.",
     "BEN, GRA, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
-    "Prose/source-hint adapters such as iti proxies are tracked separately until validated for source-level comparison.",
+    "Prose/source-hint adapters such as VCP/SKD/KRM iti proxies are tracked separately and stay out of source overlap.",
     "Unavailable dictionaries are excluded from source overlap, never counted as zero evidence."
   ],
   "citationTaggedDicts": [
@@ -3748,6 +3764,19 @@
       "citationsPerRecord": 0.312,
       "distinctSources": null,
       "topSources": []
+    },
+    {
+      "dict": "KRM",
+      "code": "krm",
+      "method": "iti",
+      "methodId": "krm-iti-authority-proxy",
+      "methodStatus": "partial",
+      "recordCount": 2061,
+      "recordsWithCitations": 1816,
+      "totalCitations": 12359,
+      "citationsPerRecord": 5.997,
+      "distinctSources": null,
+      "topSources": []
     }
   ],
   "sourceMatrix": [
@@ -5292,7 +5321,7 @@
   ],
   "assumptions": [
     "Source-level comparison covers dictionaries with supported <ls> citation adapters across broadHeadword.",
-    "citationsPerRecord uses <ls> count for tagged dicts and `iti` count for prose dicts (VCP, SKD); the two methods are not directly comparable.",
+    "citationsPerRecord uses <ls> count for tagged dicts and `iti` count for prose/source-hint dicts (VCP, SKD, KRM); the two methods are not directly comparable.",
     "WIL is essentially untagged for citations (<ls> almost absent), so its density is near zero by encoding, not by content.",
     "Diagnostic prose/source-hint proxies are not included in source matrix/overlap until a validated citation adapter is added.",
     "Sigla are reduced to base form (loci stripped: 'MBh. iii,5' -> 'MBh') then canonicalized across dictionaries by diacritic/case fold plus the reviewed alias table src/data/dict-source-aliases.json.",

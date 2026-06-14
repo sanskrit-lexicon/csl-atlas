@@ -6,7 +6,7 @@
 // source x dictionary matrix and pairwise source overlap.
 //
 // Source-level comparison covers dictionaries with validated <ls> adapters.
-// WIL is essentially untagged and VCP/SKD cite in prose via `iti`, so those
+// WIL is essentially untagged and VCP/SKD/KRM cite in prose via `iti`, so those
 // remain diagnostic density proxy rows and stay out of source overlap.
 //
 // Usage: npm run build-citation-apparatus. No LLM inference.
@@ -233,7 +233,7 @@ function main() {
     sourceOverlap,
     assumptions: [
       "Source-level comparison covers dictionaries with supported <ls> citation adapters across broadHeadword.",
-      "citationsPerRecord uses <ls> count for tagged dicts and `iti` count for prose dicts (VCP, SKD); the two methods are not directly comparable.",
+      "citationsPerRecord uses <ls> count for tagged dicts and `iti` count for prose/source-hint dicts (VCP, SKD, KRM); the two methods are not directly comparable.",
       "WIL is essentially untagged for citations (<ls> almost absent), so its density is near zero by encoding, not by content.",
       "Diagnostic prose/source-hint proxies are not included in source matrix/overlap until a validated citation adapter is added.",
       "Sigla are reduced to base form (loci stripped: 'MBh. iii,5' -> 'MBh') then canonicalized across dictionaries by diacritic/case fold plus the reviewed alias table src/data/dict-source-aliases.json.",

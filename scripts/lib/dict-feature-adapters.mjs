@@ -28,7 +28,7 @@ const FEATURE_METHOD_NOTES = {
   citations: [
     "Supported citation adapters use tagged <ls> source citations and feed the source matrix/overlap.",
     "BEN, GRA, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
-    "Prose/source-hint adapters such as iti proxies are tracked separately until validated for source-level comparison.",
+    "Prose/source-hint adapters such as VCP/SKD/KRM iti proxies are tracked separately and stay out of source overlap.",
     "Unavailable dictionaries are excluded from source overlap, never counted as zero evidence."
   ],
   homonyms: [
@@ -230,7 +230,10 @@ export const FEATURE_ADAPTERS = {
     bhs: supportedAdapter("ls-source-citation", "<ls> source citation"),
     wil: partialAdapter("weak", "iti-prose-proxy", "iti prose proxy"),
     vcp: partialAdapter("partial", "iti-prose-proxy", "iti prose proxy"),
-    skd: partialAdapter("partial", "iti-prose-proxy", "iti prose proxy")
+    skd: partialAdapter("partial", "iti-prose-proxy", "iti prose proxy"),
+    krm: partialAdapter("partial", "krm-iti-authority-proxy", "KRM iti authority/source-hint proxy", {
+      notes: ["Counts standalone iti authority/source-hint markers for diagnostic density only; KRM is not included in <ls> source overlap."]
+    })
   },
   homonyms: {
     bop: supportedAdapter("h-homonym-index", "<h> homonym index"),
