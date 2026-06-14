@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T01:21:50.628Z",
+  "generatedAt": "2026-06-14T01:34:28.098Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
@@ -20,8 +20,8 @@
       "missing": 1
     },
     "homonyms": {
-      "supported": 3,
-      "candidate": 17,
+      "supported": 20,
+      "candidate": 0,
       "partial": 0,
       "weak": 2,
       "missing": 18
@@ -290,8 +290,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -422,8 +422,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -686,8 +686,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "weak",
@@ -752,8 +752,8 @@
           "method": "ls-source-citation"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -950,8 +950,8 @@
           "method": "ls-source-citation"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "missing",
@@ -1016,8 +1016,8 @@
           "method": "ls-source-citation"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -1082,8 +1082,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "missing",
@@ -1148,8 +1148,8 @@
           "method": "ls-source-citation"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "missing",
@@ -1280,8 +1280,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -1346,8 +1346,8 @@
           "method": "ls-tag"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "missing",
@@ -1742,8 +1742,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -1808,8 +1808,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -1940,8 +1940,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "missing",
@@ -2006,8 +2006,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -2072,8 +2072,8 @@
           "method": "ls-source-citation"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "missing",
@@ -2336,8 +2336,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",
@@ -2600,8 +2600,8 @@
           "method": "iti-prose"
         },
         "homonyms": {
-          "status": "candidate",
-          "method": "h-tag"
+          "status": "supported",
+          "method": "h-homonym-index"
         },
         "senses": {
           "status": "candidate",

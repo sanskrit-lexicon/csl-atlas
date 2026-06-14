@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T01:03:51.829Z",
+  "generatedAt": "2026-06-14T01:33:59.718Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -73,8 +73,8 @@
       "unavailable": 26
     },
     "homonyms": {
-      "included": 3,
-      "unavailable": 37
+      "included": 20,
+      "unavailable": 20
     },
     "headwordAlignment": {
       "included": 7,
@@ -83,5 +83,5 @@
   },
   "intersectionAll": 1913,
   "genderConflicts": 6681,
-  "homonymSplits": 3586
+  "homonymSplits": 9839
 }

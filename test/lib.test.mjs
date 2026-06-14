@@ -329,6 +329,23 @@ test("citation apparatus promotes broad <ls> adapters into source overlap", () =
   assert.ok(citations.perDict.some(dict => dict.code === "vcp" && dict.method === "iti" && dict.methodStatus === "partial"));
 });
 
+test("homonym split promotes validated broad <h> adapters only", () => {
+  const hom = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/homonym-split.json"), "utf8"));
+  const included = hom.includedDictionaries.map(dict => dict.code);
+  assert.equal(hom.includedDictionaries.length, 20);
+  assert.equal(hom.unavailableDictionaries.length, 20);
+  assert.equal(hom.homonymDicts.length, 20);
+  for (const code of ["bop", "gst", "mw72", "gra", "pwkvn", "lan", "ccs", "lrv", "cae", "md", "inm", "vei", "stc", "pui", "bhs", "pe", "mci"]) {
+    assert.ok(included.includes(code), `${code} must be included in validated homonym adapters`);
+  }
+  assert.ok(!included.includes("ap"), "AP sparse <h> traces must remain unavailable");
+  assert.ok(!included.includes("ap90"), "AP90 sparse <h> traces must remain unavailable");
+  assert.ok(hom.candidateCount > 0);
+  assert.ok(hom.candidates.flatMap(c => c.examples).every(e =>
+    e.href || (e.sourceLinkMode === "local-only" && e.sourcePath && e.line > 0)
+  ));
+});
+
 test("iastToSlp1 transliterates common IAST queries", () => {
   assert.equal(iastToSlp1("agni"), "agni");
   assert.equal(iastToSlp1("śiva"), "Siva");
@@ -443,6 +460,11 @@ test("citation adapters separate supported <ls> from diagnostic prose proxies", 
 
 test("homonym and sense adapter scopes stay validated-only", () => {
   assert.deepEqual(homonymFeatureCodes({ scope: "coreComparison" }), ["mw", "pwg", "pw"]);
+  assert.equal(homonymFeatureCodes({ scope: "broadHeadword" }).length, 20);
+  assert.ok(homonymFeatureCodes({ scope: "broadHeadword" }).includes("pwkvn"));
+  assert.ok(homonymFeatureCodes({ scope: "broadHeadword" }).includes("pe"));
+  assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap"));
+  assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap90"));
   assert.deepEqual(supportedFeatureCodes("senses", { scope: "coreComparison" }), ["ap", "pwg", "pw"]);
   assert.equal(senseUnitsForDict("ap", "one ∙ two ∙ three"), 2);
   assert.equal(senseUnitsForDict("mw", "<div>not validated for depth</div>"), null);

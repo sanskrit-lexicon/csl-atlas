@@ -44,7 +44,12 @@ const GRAMMAR_DICTS = [
   ...BROAD_GRAMMAR_DICTS.filter(code => !ORDER.includes(code))
 ];
 const GRAMMAR_DICTIONARIES = GRAMMAR_DICTS.map(code => BROAD_BY_CODE.get(code) ?? CORE_BY_CODE.get(code) ?? { code, label: ALL_LABELS[code] ?? code.toUpperCase() });
-const HOMONYM_DICTS = supportedFeatureCodes("homonyms", { scope: "coreComparison" });
+const BROAD_HOMONYM_DICTS = supportedFeatureCodes("homonyms", { scope: "broadHeadword" });
+const HOMONYM_DICTS = [
+  ...ORDER.filter(code => BROAD_HOMONYM_DICTS.includes(code)),
+  ...BROAD_HOMONYM_DICTS.filter(code => !ORDER.includes(code))
+];
+const HOMONYM_DICTIONARIES = HOMONYM_DICTS.map(code => BROAD_BY_CODE.get(code) ?? CORE_BY_CODE.get(code) ?? { code, label: ALL_LABELS[code] ?? code.toUpperCase() });
 const DICT_INDEX = Object.fromEntries(ORDER.map((code, index) => [code, index]));
 const COVERAGE_SCOPES = {
   broadHeadword: {
@@ -289,9 +294,9 @@ function main() {
   const warnings = [];
   const coverageScopes = buildCoverageScopes(warnings);
   console.log("Indexing core deep-analysis dictionaries...");
-  const { index, perDictRecords } = buildIndex(warnings, DICTS);
+  let { index, perDictRecords } = buildIndex(warnings, DICTS);
   console.log("Indexing grammar/POS feature dictionaries...");
-  const { index: grammarIndex } = buildIndex(warnings, GRAMMAR_DICTIONARIES, { useHeadwordLayer: true });
+  let { index: grammarIndex } = buildIndex(warnings, GRAMMAR_DICTIONARIES, { useHeadwordLayer: true });
 
   // Accumulators, single pass over the index.
   const confidenceDist = { high: 0, medium: 0 };
@@ -353,31 +358,10 @@ function main() {
       ]);
     }
 
-    // homonym split: among the homonym-marking dicts (MW, PWG, PWK) that
-    // contain the lemma, do they disagree on how many homonyms it has?
-    // homonymCount = distinct <h> indices, or 1 when none are marked.
-    const homDicts = HOMONYM_DICTS.filter(c => entry[c]);
-    if (homDicts.length >= 2) {
-      const counts = {};
-      for (const c of homDicts) counts[c] = entry[c].homs.size || 1;
-      const vals = Object.values(counts);
-      const max = Math.max(...vals);
-      const min = Math.min(...vals);
-      if (max >= 2 && max !== min) {
-        homonymSplitCount += 1;
-        if (homonymSplits.length < 400) {
-          homonymSplits.push({
-            lemma: normalized,
-            byDict: Object.fromEntries(homDicts.map(c => [DICT_LABELS[c], counts[c]])),
-            maxHomonyms: max,
-            spread: max - min,
-            examples: homDicts.map(c => ({ dict: DICT_LABELS[c], href: entry[c].example.href }))
-          });
-        }
-      }
-    }
-
   }
+
+  const distinctLemmas = index.size;
+  index = null;
 
   for (const [normalized, entry] of grammarIndex) {
     const gc = genderConflict(entry, GRAMMAR_DICTS);
@@ -403,11 +387,46 @@ function main() {
       }
     }
   }
+  grammarIndex = null;
 
-  const distinctLemmas = index.size;
+  console.log("Indexing homonym feature dictionaries...");
+  let { index: homonymIndex } = buildIndex(warnings, HOMONYM_DICTIONARIES);
+  for (const [normalized, entry] of homonymIndex) {
+    const homDicts = HOMONYM_DICTS.filter(c => entry[c]);
+    if (homDicts.length < 2) continue;
+
+    const counts = {};
+    for (const c of homDicts) counts[c] = entry[c].homs.size || 1;
+    const vals = Object.values(counts);
+    const max = Math.max(...vals);
+    const min = Math.min(...vals);
+    if (max < 2 || max === min) continue;
+
+    homonymSplitCount += 1;
+    if (homonymSplits.length < 400) {
+      homonymSplits.push({
+        lemma: normalized,
+        byDict: Object.fromEntries(homDicts.map(c => [ALL_LABELS[c] ?? c.toUpperCase(), counts[c]])),
+        maxHomonyms: max,
+        spread: max - min,
+        examples: homDicts.map(c => {
+          const example = entry[c].example;
+          return {
+            dict: ALL_LABELS[c] ?? c.toUpperCase(),
+            href: example.href,
+            line: example.line,
+            sourceLinkMode: example.sourceLinkMode,
+            sourcePath: example.sourcePath
+          };
+        })
+      });
+    }
+  }
+  homonymIndex = null;
+
   const written = [];
   const grammarSupport = orderIncludedDictionaries(featureSupport("grammar", { scope: "broadHeadword" }), GRAMMAR_DICTS);
-  const homonymSupport = featureSupport("homonyms", { scope: "broadHeadword" });
+  const homonymSupport = orderIncludedDictionaries(featureSupport("homonyms", { scope: "broadHeadword" }), HOMONYM_DICTS);
   const headwordAlignmentSupport = {
     feature: "headwordAlignment",
     featureLabel: "Headword alignment",
@@ -615,8 +634,8 @@ function main() {
     )
   );
 
-  // 5b. Homonym split: where the homonym-marking dictionaries disagree on
-  // how many homonyms a lemma has. Sorted by spread then max.
+  // 5b. Homonym split: where validated homonym adapters disagree on how many
+  // homonyms a lemma has. Sorted by spread then max.
   homonymSplits.sort((a, b) => b.spread - a.spread || b.maxHomonyms - a.maxHomonyms || a.lemma.localeCompare(b.lemma));
   written.push(
     writeJson(
@@ -629,20 +648,20 @@ function main() {
           includedDictionaries: homonymSupport.includedDictionaries,
           unavailableDictionaries: homonymSupport.unavailableDictionaries,
           methodNotes: homonymSupport.methodNotes,
-          homonymDicts: HOMONYM_DICTS.map(c => DICT_LABELS[c]),
+          homonymDicts: HOMONYM_DICTS.map(c => ALL_LABELS[c] ?? c.toUpperCase()),
           candidateCount: homonymSplitCount,
           shown: homonymSplits.length,
           candidates: homonymSplits
         },
         {
           assumptions: [
-            `Homonym counts use the <h> index; only the homonym-marking dictionaries carry it: ${HOMONYM_DICTS.map(c => DICT_LABELS[c]).join(", ")}.`,
+            `Homonym counts use validated <h> index adapters: ${HOMONYM_DICTS.map(c => ALL_LABELS[c] ?? c.toUpperCase()).join(", ")}.`,
             "homonymCount = distinct <h> values for the lemma, or 1 when none are marked.",
             "A candidate is a lemma present in >=2 of those dictionaries where the homonym count differs and the maximum is >=2 (one dictionary splits what another merges).",
             "Differing homonymy is usually legitimate lexicographic practice, not an error; this is an analysis view, not a correction queue.",
             "Unavailable dictionaries are excluded from this metric, never counted as one or zero evidence."
           ],
-          warnings: ["AP, WIL, VCP, SKD do not mark homonyms with <h> and are excluded."]
+          warnings: ["AP and AP90 have only sparse <h> traces and remain unavailable until a dictionary-specific adapter can prove missing <h> is safe to interpret."]
         }
       )
     )

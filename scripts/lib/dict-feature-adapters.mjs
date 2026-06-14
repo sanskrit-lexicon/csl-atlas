@@ -33,6 +33,8 @@ const FEATURE_METHOD_NOTES = {
   ],
   homonyms: [
     "Supported homonym adapters use dictionary-specific <h> indices after validating that <h> encodes homonym splitting.",
+    "BOP, GST, MW72, GRA, PWKVN, LAN, CCS, LRV, CAE, MD, INM, VEI, STC, PUI, BHS, PE, and MCI are promoted from the broad audit queue.",
+    "AP and AP90 have only sparse <h> traces and remain unavailable until a dictionary-specific adapter can prove missing <h> is safe to interpret.",
     "Unavailable dictionaries are excluded from homonym split counts, never counted as one or zero evidence."
   ],
   senses: [
@@ -206,9 +208,36 @@ export const FEATURE_ADAPTERS = {
     skd: partialAdapter("partial", "iti-prose-proxy", "iti prose proxy")
   },
   homonyms: {
+    bop: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    gst: supportedAdapter("h-homonym-index", "<h> homonym index", {
+      notes: ["GST has a small but systematic <h> set; only marked homonym groups contribute split evidence."]
+    }),
     mw: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    mw72: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    gra: supportedAdapter("h-homonym-index", "<h> homonym index"),
     pwg: supportedAdapter("h-homonym-index", "<h> homonym index"),
-    pw: supportedAdapter("h-homonym-index", "<h> homonym index")
+    pw: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    pwkvn: supportedAdapter("h-homonym-index", "<h> homonym index", {
+      notes: ["Local-only dictionary; examples use line pointers without GitHub hrefs."]
+    }),
+    lan: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    ccs: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    lrv: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    cae: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    md: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    inm: supportedAdapter("h-homonym-index", "<h> homonym index", {
+      notes: ["Validated as distinct named-entity/referent homonym grouping."]
+    }),
+    vei: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    stc: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    pui: supportedAdapter("h-homonym-index", "<h> homonym index", {
+      notes: ["Uses Roman <h> labels for distinct puranic-person records."]
+    }),
+    bhs: supportedAdapter("h-homonym-index", "<h> homonym index"),
+    pe: supportedAdapter("h-homonym-index", "<h> homonym index", {
+      notes: ["Local-only dictionary with Roman <h> labels; examples use line pointers without GitHub hrefs."]
+    }),
+    mci: supportedAdapter("h-homonym-index", "<h> homonym index")
   },
   senses: {
     ap: supportedAdapter("ap-bullet-sense-marker", "AP bullet sense marker", { marker: SENSE_MARKER.ap }),

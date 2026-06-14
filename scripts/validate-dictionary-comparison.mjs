@@ -116,11 +116,11 @@ const hom = docs["homonym-split.json"];
 if (hom) {
   const unavailableLabels = validateFeatureSupport(hom, "homonym-split");
   if (typeof hom.candidateCount !== "number") errors.push("homonym-split missing candidateCount.");
-  const missing = (hom.candidates || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
-  if (missing.length) errors.push(`${missing.length} homonym-split candidates lack source links.`);
+  const missing = (hom.candidates || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !hasSourcePointer(e)));
+  if (missing.length) errors.push(`${missing.length} homonym-split candidates lack link-safe source pointers.`);
   const unavailableEvidence = (hom.candidates || []).filter(c => Object.keys(c.byDict || {}).some(label => unavailableLabels.has(label)));
   if (unavailableEvidence.length) errors.push(`${unavailableEvidence.length} homonym-split candidates include unavailable dictionaries.`);
-  if (!missing.length && !unavailableEvidence.length) notes.push(`${hom.candidateCount} homonym-split candidates (${hom.shown} shown), all with source links.`);
+  if (!missing.length && !unavailableEvidence.length) notes.push(`${hom.candidateCount} homonym-split candidates (${hom.shown} shown), all with link-safe source pointers.`);
 }
 
 const sense = docs["sense-depth.json"];
