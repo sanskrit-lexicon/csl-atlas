@@ -77,6 +77,7 @@ function classifyHomonyms(dict, stats) {
 function classifySenses(dict, stats) {
   const adapter = featureAdapter("senses", dict.code);
   if (adapter?.status === "supported") return { status: "supported", method: adapter.methodId };
+  if (adapter) return { status: adapter.status, method: adapter.methodId };
   if (stats.divCount >= 100) return { status: "candidate", method: "div" };
   if (stats.numberedSenseCount >= 100) return { status: "candidate", method: "numbered-brace" };
   if (stats.bulletCount >= 100) return { status: "candidate", method: "bullet" };

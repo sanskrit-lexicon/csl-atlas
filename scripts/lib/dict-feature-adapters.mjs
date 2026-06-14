@@ -40,7 +40,7 @@ const FEATURE_METHOD_NOTES = {
   senses: [
     "Supported sense adapters count structural sense-division markers; the count is a proxy, not a curated sense inventory.",
     "AP uses bullet divisions; MW, PWG/PWK, BEN, GST, LAN, INM, VEI, PE, IEG, SNP, MCI, and PGN use validated dictionary-specific numbered/section markers.",
-    "Candidate <div> markers that encode prefix blocks, source examples, parallel language translations, or citation paragraphs stay unavailable until a separate metric is defined.",
+    "Diagnostic <div> markers that encode prefix blocks, source examples, parallel language translations, inflection tables, or citation paragraphs stay unavailable for sense depth until a separate metric is defined.",
     "Unavailable dictionaries are excluded from depth/divergence counts, never counted as single-sense or zero evidence."
   ]
 };
@@ -316,6 +316,30 @@ export const FEATURE_ADAPTERS = {
     pgn: supportedAdapter("pgn-article-section-div", "PGN article section <div>", {
       extract: markerSenseUnits(NAMED_INDEX_SECTION_MARKER),
       notes: ["Local-only dictionary; counts article paragraph/heading section markers in the Gupta names index."]
+    }),
+    wil: partialAdapter("weak", "wil-prefix-subentry-div", "WIL prefix subentry <div>", {
+      notes: ["WIL <div n=\"p\"> blocks mark prefixed-root subentries, not validated semantic sense divisions."]
+    }),
+    bop: partialAdapter("weak", "bop-prefix-subentry-div", "BOP prefix subentry <div>", {
+      notes: ["BOP <div n=\"pfx\"> blocks mark prefixed-root subentries and remain unavailable for sense depth."]
+    }),
+    mw72: partialAdapter("weak", "mw72-paragraph-div", "MW72 paragraph <div>", {
+      notes: ["MW72 has sparse <div n=\"P\"/> paragraph blocks; they are not yet validated as a sense-depth adapter."]
+    }),
+    gra: partialAdapter("weak", "gra-text-stem-attestation-div", "GRA text-stem attestation <div>", {
+      notes: ["GRA <div> blocks mark text stems, headword forms, and attestation labels rather than sense divisions."]
+    }),
+    cae: partialAdapter("weak", "cae-prefix-subentry-div", "CAE prefix subentry <div>", {
+      notes: ["CAE <div n=\"p\"> blocks mark prefixed-root subentries, not validated semantic sense divisions."]
+    }),
+    pui: partialAdapter("weak", "pui-source-reference-div", "PUI source reference <div>", {
+      notes: ["PUI <div n=\"P\"/> blocks primarily introduce Purāṇic source references, so they stay outside sense depth."]
+    }),
+    fri: partialAdapter("weak", "fri-parallel-language-div", "FRI parallel-language <div>", {
+      notes: ["FRI <div n=\"1\"/> blocks separate Czech, Russian, and English translation rows, not multiple Sanskrit senses."]
+    }),
+    krm: partialAdapter("weak", "krm-inflection-section-div", "KRM inflection/reference <div>", {
+      notes: ["KRM <div n=\"NI\"/>/<div n=\"P\"/> sections group inflectional and authority material, not semantic sense depth."]
     })
   }
 };

@@ -23,6 +23,7 @@ import {
   extractGrammar,
   featureSupport,
   homonymFeatureCodes,
+  senseMethodForDict,
   senseUnitsForDict,
   supportedFeatureCodes
 } from "../scripts/lib/dict-feature-adapters.mjs";
@@ -361,6 +362,16 @@ test("sense depth promotes validated broad structural adapters only", () => {
   for (const code of ["wil", "bop", "gra", "fri", "pui", "krm", "cae"]) {
     assert.ok(!included.includes(code), `${code} candidate markers must remain unavailable until validated for sense depth`);
   }
+  const diagnostic = new Map((sense.diagnosticDictionaries ?? []).map(dict => [dict.code, dict.methodId]));
+  assert.equal(sense.diagnosticDictionaries.length, 8);
+  assert.equal(diagnostic.get("wil"), "wil-prefix-subentry-div");
+  assert.equal(diagnostic.get("bop"), "bop-prefix-subentry-div");
+  assert.equal(diagnostic.get("mw72"), "mw72-paragraph-div");
+  assert.equal(diagnostic.get("gra"), "gra-text-stem-attestation-div");
+  assert.equal(diagnostic.get("cae"), "cae-prefix-subentry-div");
+  assert.equal(diagnostic.get("pui"), "pui-source-reference-div");
+  assert.equal(diagnostic.get("fri"), "fri-parallel-language-div");
+  assert.equal(diagnostic.get("krm"), "krm-inflection-section-div");
   assert.equal(sense.senseSegmentedDicts.length, 14);
   assert.ok(sense.disparityCount > 0);
   assert.ok(sense.topDisparities.flatMap(c => c.examples).every(e =>
@@ -509,6 +520,10 @@ test("homonym and sense adapter scopes stay validated-only", broadScopeTestOpts,
   assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("pe"));
   assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("pgn"));
   assert.ok(!supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("fri"));
+  assert.equal(senseMethodForDict("fri").status, "weak");
+  assert.equal(senseMethodForDict("krm").status, "weak");
+  assert.equal(senseUnitsForDict("fri", "<div n=\"1\"/>1 Czech <div n=\"1\"/>2 Russian <div n=\"1\"/>3 English"), null);
+  assert.equal(senseUnitsForDict("krm", "<div n=\"NI\"/>forms <div n=\"P\"/>authority"), null);
   assert.equal(senseUnitsForDict("ap", "one ∙ two ∙ three"), 2);
   assert.equal(senseUnitsForDict("mw", "to go <div n=\"to\"/>to approach <div n=\"P\"/>a noun sense <div n=\"vp\"/>ignored"), 3);
   assert.equal(senseUnitsForDict("ben", "{@1.@} one {@2.@} two"), 2);

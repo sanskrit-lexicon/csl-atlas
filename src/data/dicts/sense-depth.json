@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-14T07:41:43.415Z",
+  "generatedAt": "2026-06-14T09:01:17.674Z",
   "sourceRoot": "../csl-orig/v02",
   "feature": "senses",
   "featureLabel": "Senses",
@@ -277,10 +277,10 @@
       "deprecated": true,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+      "methodId": "wil-prefix-subentry-div",
+      "methodLabel": "WIL prefix subentry <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "yat",
@@ -305,10 +305,10 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+      "methodId": "bop-prefix-subentry-div",
+      "methodLabel": "BOP prefix subentry <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "armh",
@@ -347,10 +347,10 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+      "methodId": "mw72-paragraph-div",
+      "methodLabel": "MW72 paragraph <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "gra",
@@ -361,10 +361,10 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+      "methodId": "gra-text-stem-attestation-div",
+      "methodLabel": "GRA text-stem attestation <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "vcp",
@@ -445,10 +445,10 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+      "methodId": "cae-prefix-subentry-div",
+      "methodLabel": "CAE prefix subentry <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "md",
@@ -557,10 +557,10 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+      "methodId": "pui-source-reference-div",
+      "methodLabel": "PUI source reference <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "bhs",
@@ -585,10 +585,10 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+      "methodId": "fri-parallel-language-div",
+      "methodLabel": "FRI parallel-language <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "acc",
@@ -613,16 +613,130 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated structural sense-marker adapter for this dictionary yet."
+      "methodId": "krm-inflection-section-div",
+      "methodLabel": "KRM inflection/reference <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    }
+  ],
+  "diagnosticDictionaries": [
+    {
+      "code": "wil",
+      "label": "WIL",
+      "fullName": "Wilson Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "wil-prefix-subentry-div",
+      "methodLabel": "WIL prefix subentry <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "bop",
+      "label": "BOP",
+      "fullName": "Bopp Glossarium Sanscritum",
+      "languagePair": "Skt-Lat",
+      "family": "Sanskrit-Latin",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "bop-prefix-subentry-div",
+      "methodLabel": "BOP prefix subentry <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "mw72",
+      "label": "MW72",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary (1st edition)",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "mw72-paragraph-div",
+      "methodLabel": "MW72 paragraph <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "gra",
+      "label": "GRA",
+      "fullName": "Grassmann Wörterbuch zum Rig Veda",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "gra-text-stem-attestation-div",
+      "methodLabel": "GRA text-stem attestation <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "cae",
+      "label": "CAE",
+      "fullName": "Cappeller Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "cae-prefix-subentry-div",
+      "methodLabel": "CAE prefix subentry <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "pui",
+      "label": "PUI",
+      "fullName": "The Purana Index",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "pui-source-reference-div",
+      "methodLabel": "PUI source reference <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "fri",
+      "label": "FRI",
+      "fullName": "Friš Sanskrit Reader Vocabulary",
+      "languagePair": "Skt-Cze",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "fri-parallel-language-div",
+      "methodLabel": "FRI parallel-language <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "krm",
+      "label": "KRM",
+      "fullName": "Kṛdantarūpamālā",
+      "languagePair": "Skt-Skt",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "krm-inflection-section-div",
+      "methodLabel": "KRM inflection/reference <div>",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     }
   ],
   "methodNotes": [
     "Supported sense adapters count structural sense-division markers; the count is a proxy, not a curated sense inventory.",
     "AP uses bullet divisions; MW, PWG/PWK, BEN, GST, LAN, INM, VEI, PE, IEG, SNP, MCI, and PGN use validated dictionary-specific numbered/section markers.",
-    "Candidate <div> markers that encode prefix blocks, source examples, parallel language translations, or citation paragraphs stay unavailable until a separate metric is defined.",
+    "Diagnostic <div> markers that encode prefix blocks, source examples, parallel language translations, inflection tables, or citation paragraphs stay unavailable for sense depth until a separate metric is defined.",
     "Unavailable dictionaries are excluded from depth/divergence counts, never counted as single-sense or zero evidence."
   ],
   "senseSegmentedDicts": [

@@ -164,6 +164,7 @@ function main() {
     adapterScope: senseSupport.adapterScope,
     includedDictionaries: senseSupport.includedDictionaries,
     unavailableDictionaries: senseSupport.unavailableDictionaries,
+    diagnosticDictionaries: senseSupport.diagnosticDictionaries,
     methodNotes: senseSupport.methodNotes,
     senseSegmentedDicts: present.map(c => SENSE_LABELS[c] ?? c.toUpperCase()),
     perDict: present.map(c => perDict[c]),

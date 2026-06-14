@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T08:54:38.416Z",
+  "generatedAt": "2026-06-14T09:01:24.407Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
@@ -28,9 +28,9 @@
     },
     "senses": {
       "supported": 14,
-      "candidate": 7,
+      "candidate": 0,
       "partial": 0,
-      "weak": 1,
+      "weak": 8,
       "missing": 18
     }
   },
@@ -162,8 +162,8 @@
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "wil-prefix-subentry-div"
         }
       }
     },
@@ -294,8 +294,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "bop-prefix-subentry-div"
         }
       }
     },
@@ -691,7 +691,7 @@
         },
         "senses": {
           "status": "weak",
-          "method": "div"
+          "method": "mw72-paragraph-div"
         }
       }
     },
@@ -756,8 +756,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "gra-text-stem-attestation-div"
         }
       }
     },
@@ -1284,8 +1284,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "cae-prefix-subentry-div"
         }
       }
     },
@@ -2010,8 +2010,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "pui-source-reference-div"
         }
       }
     },
@@ -2142,8 +2142,8 @@
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "fri-parallel-language-div"
         }
       }
     },
@@ -2406,8 +2406,8 @@
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "krm-inflection-section-div"
         }
       }
     },

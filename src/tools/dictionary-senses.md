@@ -49,7 +49,12 @@ Sense counts are <b>validated structural markers</b>, not curated sense inventor
 ```js
 const includedSenses = data.includedDictionaries ?? [];
 const unavailableSenses = data.unavailableDictionaries ?? [];
+const diagnosticSenses = data.diagnosticDictionaries ?? [];
 display(html`<div class="note"><b>Validated sense adapters:</b> ${includedSenses.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. <b>Unavailable for this metric:</b> ${unavailableSenses.length.toLocaleString()} broad dictionaries; they are excluded, not counted as single-sense or zero evidence.</div>`);
+```
+
+```js
+display(diagnosticSenses.length ? html`<div class="warning" label="Diagnostic-only markers"><b>Diagnostic-only, excluded from sense depth:</b> ${diagnosticSenses.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. These markers encode prefix blocks, source/reference sections, parallel translations, inflection tables, or sparse paragraphs rather than validated sense divisions.</div>` : null);
 ```
 
 ```js
