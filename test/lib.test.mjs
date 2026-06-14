@@ -290,6 +290,7 @@ test("deep analysis artifacts declare included and unavailable adapters", () => 
     assert.ok(Array.isArray(data.includedDictionaries) && data.includedDictionaries.length > 0, `${file} must include supported adapters`);
     assert.ok(Array.isArray(data.unavailableDictionaries), `${file} must include unavailable dictionaries`);
     assert.ok(Array.isArray(data.methodNotes) && data.methodNotes.length > 0, `${file} must include method notes`);
+    assert.ok(data.includedDictionaries.every(dict => dict.sourceLinkMode), `${file} included dictionaries must expose source link mode`);
   }
 });
 
@@ -385,20 +386,34 @@ test("feature adapter registry promotes validated broad <lex> grammar candidates
   assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("cae"));
   assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("md"));
   assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("bhs"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("pwkvn"));
   assert.deepEqual(extractGrammar("cae", "<lex>a.</lex>"), { value: "adj", methodId: "cae-lex-gender-pos", status: "supported" });
   assert.deepEqual(extractGrammar("md", "<lex>ad.</lex>"), { value: "ind", methodId: "md-lex-gender-pos", status: "supported" });
   assert.deepEqual(extractGrammar("md", "<lex>m.¹</lex>"), { value: "m", methodId: "md-lex-gender-pos", status: "supported" });
   assert.deepEqual(extractGrammar("bhs", "<lex>subst.</lex> <lex>nt.</lex>"), { value: "n", methodId: "bhs-lex-gender-pos", status: "supported" });
   assert.deepEqual(extractGrammar("bhs", "<lex>fem.</lex>"), { value: "f", methodId: "bhs-lex-gender-pos", status: "supported" });
   assert.deepEqual(extractGrammar("bhs", "<lex>indecl.</lex>"), { value: "ind", methodId: "bhs-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("pwkvn", "<lex>Adj.</lex>"), { value: "adj", methodId: "pwkvn-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("pwkvn", "<lex>Adv.</lex>"), { value: "ind", methodId: "pwkvn-lex-gender-pos", status: "supported" });
+});
+
+test("feature adapter registry promotes validated kosha suffix grammar candidates", () => {
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("abch"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("acph"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("acsj"));
+  assert.deepEqual(extractGrammar("abch", "", { genderHint: "m" }), { value: "m", methodId: "kosha-synonym-gender-suffix", status: "supported" });
+  assert.deepEqual(extractGrammar("acph", "", { genderHint: "adj" }), { value: "adj", methodId: "kosha-synonym-gender-suffix", status: "supported" });
+  assert.deepEqual(extractGrammar("acsj", "", { genderHint: "mf" }), { value: "m", values: ["m", "f"], methodId: "kosha-synonym-gender-suffix", status: "supported" });
 });
 
 test("feature support exposes broad unavailable dictionaries without promoting them", () => {
   const grammar = featureSupport("grammar", { scope: "broadHeadword" });
   assert.equal(grammar.adapterScope, "broadHeadword");
-  assert.equal(grammar.includedDictionaries.length, 10);
-  assert.equal(grammar.unavailableDictionaries.length, 30);
-  assert.ok(grammar.unavailableDictionaries.some(dict => dict.code === "pwkvn"));
+  assert.equal(grammar.includedDictionaries.length, 14);
+  assert.equal(grammar.unavailableDictionaries.length, 26);
+  assert.ok(grammar.includedDictionaries.some(dict => dict.code === "pwkvn" && dict.sourceLinkMode === "local-only"));
+  assert.ok(grammar.includedDictionaries.some(dict => dict.code === "abch" && dict.sourceLinkMode === "local-only"));
+  assert.ok(grammar.unavailableDictionaries.some(dict => dict.code === "lan"));
 });
 
 test("citation adapters separate supported <ls> from diagnostic prose proxies", () => {

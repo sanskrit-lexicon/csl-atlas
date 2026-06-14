@@ -2,7 +2,7 @@
 //
 // Fails (exit 1) when a required output is missing/unparseable, the index is
 // empty, a present dictionary contributed no lemmas, the all-dictionary
-// intersection is empty, or gender conflicts lack source links.
+// intersection is empty, or deep examples lack link-safe source pointers.
 //
 // Usage: npm run validate-dict-comparison (after build-dict-comparison)
 
@@ -59,6 +59,15 @@ function validateFeatureSupport(doc, name) {
   return new Set(doc.unavailableDictionaries.map(d => d.label));
 }
 
+function hasSourcePointer(example) {
+  if (example?.href) return true;
+  return example?.sourceLinkMode === "local-only" &&
+    typeof example?.sourcePath === "string" &&
+    example.sourcePath.length > 0 &&
+    Number.isFinite(example?.line) &&
+    example.line > 0;
+}
+
 const cov = docs["coverage-matrix.json"];
 if (cov) {
   const broad = scope(cov, "broadHeadword");
@@ -96,11 +105,11 @@ if (pairDoc) {
 const pos = docs["pos-disagreement.json"];
 if (pos) {
   const unavailableLabels = validateFeatureSupport(pos, "pos-disagreement");
-  const missing = (pos.conflicts || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
-  if (missing.length) errors.push(`${missing.length} gender conflicts lack source links.`);
+  const missing = (pos.conflicts || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !hasSourcePointer(e)));
+  if (missing.length) errors.push(`${missing.length} gender conflicts lack link-safe source pointers.`);
   const unavailableEvidence = (pos.conflicts || []).filter(c => Object.keys(c.byDict || {}).some(label => unavailableLabels.has(label)));
   if (unavailableEvidence.length) errors.push(`${unavailableEvidence.length} gender conflicts include unavailable dictionaries.`);
-  if (!missing.length && !unavailableEvidence.length) notes.push(`${pos.conflictCount} gender conflicts (${pos.shown} sampled), all with source links.`);
+  if (!missing.length && !unavailableEvidence.length) notes.push(`${pos.conflictCount} gender conflicts (${pos.shown} sampled), all with link-safe source pointers.`);
 }
 
 const hom = docs["homonym-split.json"];

@@ -97,6 +97,20 @@ function sourcePointer(dict, line) {
   return dict?.sourceLinkMode === "github" && line ? `${HREF_BASE}/${dict.code}/${dict.code}.txt#L${line}` : null;
 }
 
+function sourcePath(dict) {
+  return `../csl-orig/v02/${dict.code}/${dict.code}.txt`;
+}
+
+function sourceExample(dict, rec) {
+  return {
+    k1: rec.k1,
+    line: rec.startLine,
+    href: sourcePointer(dict, rec.startLine),
+    sourceLinkMode: dict.sourceLinkMode,
+    sourcePath: sourcePath(dict)
+  };
+}
+
 function buildCoverageScope(scope, warnings) {
   const { label, dictionaries } = scope;
   const order = dictionaries.map(d => d.code);
@@ -222,12 +236,14 @@ function orderIncludedDictionaries(support, codes) {
   };
 }
 
-function buildIndex(warnings, dictionaries = DICTS) {
+function buildIndex(warnings, dictionaries = DICTS, { useHeadwordLayer = false } = {}) {
   const index = new Map();
   const perDictRecords = {};
   const perDictLemmas = {};
 
-  for (const { code } of dictionaries) {
+  for (const input of dictionaries) {
+    const dict = { sourceLinkMode: "github", ...input };
+    const { code } = dict;
     if (!dictExists(code)) {
       warnings.push(`Missing source for ${code}; skipped.`);
       perDictRecords[code] = 0;
@@ -236,7 +252,8 @@ function buildIndex(warnings, dictionaries = DICTS) {
     }
     let records = 0;
     const lemmaSet = new Set();
-    for (const rec of iterateDict(code)) {
+    const recordsForDict = useHeadwordLayer ? iterateHeadwords(dict) : iterateDict(code);
+    for (const rec of recordsForDict) {
       if (!rec.k1) continue;
       records += 1;
       const { normalized } = normalizeLemma(rec.k1);
@@ -256,9 +273,9 @@ function buildIndex(warnings, dictionaries = DICTS) {
       slot.records += 1;
       slot.raws.add(rec.k1.trim());
       if (rec.h) slot.homs.add(rec.h.trim());
-      const g = extractGrammar(code, rec.body);
-      if (g) slot.genders.add(g.value);
-      if (!slot.example) slot.example = { k1: rec.k1, line: rec.startLine, href: rec.href };
+      const g = extractGrammar(code, rec.body, rec);
+      if (g) for (const value of g.values ?? [g.value]) slot.genders.add(value);
+      if (!slot.example) slot.example = sourceExample(dict, rec);
     }
     perDictRecords[code] = records;
     perDictLemmas[code] = lemmaSet.size;
@@ -274,7 +291,7 @@ function main() {
   console.log("Indexing core deep-analysis dictionaries...");
   const { index, perDictRecords } = buildIndex(warnings, DICTS);
   console.log("Indexing grammar/POS feature dictionaries...");
-  const { index: grammarIndex } = buildIndex(warnings, GRAMMAR_DICTIONARIES);
+  const { index: grammarIndex } = buildIndex(warnings, GRAMMAR_DICTIONARIES, { useHeadwordLayer: true });
 
   // Accumulators, single pass over the index.
   const confidenceDist = { high: 0, medium: 0 };
@@ -372,10 +389,16 @@ function main() {
           byDict: Object.fromEntries(
             Object.entries(gc.byDict).map(([c, g]) => [ALL_LABELS[c] ?? c.toUpperCase(), g])
           ),
-          examples: Object.keys(gc.byDict).map(c => ({
-            dict: ALL_LABELS[c] ?? c.toUpperCase(),
-            href: entry[c].example.href
-          }))
+          examples: Object.keys(gc.byDict).map(c => {
+            const example = entry[c].example;
+            return {
+              dict: ALL_LABELS[c] ?? c.toUpperCase(),
+              href: example.href,
+              line: example.line,
+              sourceLinkMode: example.sourceLinkMode,
+              sourcePath: example.sourcePath
+            };
+          })
         });
       }
     }

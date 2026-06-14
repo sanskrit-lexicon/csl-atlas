@@ -36,7 +36,7 @@ const t = (key) => {
 ```
 
 <div class="warning" label="Evidence: derived">
-Gender is <b>derived</b> from <code>&lt;lex&gt;</code> tags in the tagged dictionaries (MW, AP, PWG, PWK, WIL) and from <b>prose markers</b> in VCP and SKD. A conflict means the dictionaries disagree on a specific gender; adjective/indeclinable tags never trigger one. VCP under-marks feminine/neuter at the anchor position, so some VCP f/n genders are simply absent (a missed conflict, never a false one).
+Gender is <b>derived</b> from validated adapters: <code>&lt;lex&gt;</code> tags, dictionary-specific prose markers, and parsed kosha synonym suffixes where tested. A conflict means the dictionaries disagree on a specific gender; adjective/indeclinable tags never trigger one. VCP under-marks feminine/neuter at the anchor position, so some VCP f/n genders are simply absent (a missed conflict, never a false one).
 </div>
 
 ```js
@@ -44,6 +44,16 @@ const includedGrammar = pos.includedDictionaries ?? [];
 const unavailableGrammar = pos.unavailableDictionaries ?? [];
 const grammarColumns = includedGrammar.map(d => d.label);
 display(html`<div class="note"><b>Validated grammar/POS adapters:</b> ${includedGrammar.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. <b>Unavailable for this metric:</b> ${unavailableGrammar.length.toLocaleString()} broad dictionaries; they are excluded, not counted as zero evidence.</div>`);
+```
+
+```js
+function sourceChip(e) {
+  if (e.href) {
+    return html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`;
+  }
+  const pointer = [e.sourcePath, e.line ? `L${e.line}` : ""].filter(Boolean).join(":");
+  return html`<span title=${pointer} style="display:inline-block;margin-right:6px;color:#555;border-bottom:1px dotted #888">${e.dict}${e.line ? ` L${e.line}` : ""}</span>`;
+}
 ```
 
 ```js
@@ -58,7 +68,7 @@ display(Inputs.table(pos.conflicts.map(c => ({
 })), {
   columns: [t("phase2.conflicts.lemma"), ...grammarColumns, t("phase2.conflicts.sources")],
   format: {
-    [t("phase2.conflicts.sources")]: examples => html`${examples.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}`
+    [t("phase2.conflicts.sources")]: examples => html`${examples.map(sourceChip)}`
   }
 }));
 ```

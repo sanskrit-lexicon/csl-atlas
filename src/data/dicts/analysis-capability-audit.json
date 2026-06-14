@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T00:27:03.699Z",
+  "generatedAt": "2026-06-14T01:06:59.019Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
   "summary": {
     "grammar": {
-      "supported": 10,
-      "candidate": 4,
+      "supported": 14,
+      "candidate": 0,
       "partial": 0,
       "weak": 0,
       "missing": 26
@@ -942,8 +942,8 @@
       },
       "capabilities": {
         "grammar": {
-          "status": "candidate",
-          "method": "lex-tag"
+          "status": "supported",
+          "method": "pwkvn-lex-gender-pos"
         },
         "citations": {
           "status": "candidate",
@@ -1404,8 +1404,8 @@
       },
       "capabilities": {
         "grammar": {
-          "status": "candidate",
-          "method": "kosha-synonym-suffix"
+          "status": "supported",
+          "method": "kosha-synonym-gender-suffix"
         },
         "citations": {
           "status": "weak",
@@ -1470,8 +1470,8 @@
       },
       "capabilities": {
         "grammar": {
-          "status": "candidate",
-          "method": "kosha-synonym-suffix"
+          "status": "supported",
+          "method": "kosha-synonym-gender-suffix"
         },
         "citations": {
           "status": "weak",
@@ -1536,8 +1536,8 @@
       },
       "capabilities": {
         "grammar": {
-          "status": "candidate",
-          "method": "kosha-synonym-suffix"
+          "status": "supported",
+          "method": "kosha-synonym-gender-suffix"
         },
         "citations": {
           "status": "weak",

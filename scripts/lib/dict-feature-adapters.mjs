@@ -21,7 +21,8 @@ const FEATURE_UNAVAILABLE_REASONS = {
 const FEATURE_METHOD_NOTES = {
   grammar: [
     "Supported grammar/POS adapters emit coarse m/f/n/adj/ind evidence only.",
-    "MW, AP, PWG, PWK, and WIL use <lex>; VCP and SKD use dictionary-specific prose markers near the headword separator.",
+    "MW, AP, PWG, PWK, WIL, CAE, MD, BHS, and PWKVN use validated <lex> adapters; VCP and SKD use dictionary-specific prose markers near the headword separator.",
+    "ABCH, ACPH, and ACSJ use validated kosha synonym suffixes parsed by the headword layer.",
     "Unavailable dictionaries are excluded from gender conflict counts, never counted as zero evidence."
   ],
   citations: [
@@ -102,6 +103,14 @@ function bhsLexGender(body) {
   return firstMappedLexGender(body, BHS_LEX_VALUES);
 }
 
+function koshaSuffixGender(_body, record = {}) {
+  const hint = String(record?.genderHint ?? "");
+  if (!hint) return null;
+  if (hint === "adj") return "adj";
+  const genders = [...hint].filter(value => value === "m" || value === "f" || value === "n");
+  return genders.length ? genders : null;
+}
+
 function vcpGender(body) {
   return genderFromProse(body, "vcp");
 }
@@ -147,6 +156,22 @@ export const FEATURE_ADAPTERS = {
     bhs: supportedAdapter("bhs-lex-gender-pos", "BHS <lex> gender/POS", {
       extract: bhsLexGender,
       notes: ["BHS nt./fem./indecl. are normalized; ppp. is treated as adjectival evidence."]
+    }),
+    pwkvn: supportedAdapter("pwkvn-lex-gender-pos", "PWKVN <lex> gender/POS", {
+      extract: standardLexGender,
+      notes: ["PWKVN Adj./Adv. tags are normalized to adjective/indeclinable evidence."]
+    }),
+    abch: supportedAdapter("kosha-synonym-gender-suffix", "Kosha synonym gender suffix", {
+      extract: koshaSuffixGender,
+      notes: ["Uses the parsed -puM/-strI/-klI/-a suffix on <syns> synonym headwords."]
+    }),
+    acph: supportedAdapter("kosha-synonym-gender-suffix", "Kosha synonym gender suffix", {
+      extract: koshaSuffixGender,
+      notes: ["Uses the parsed -puM/-strI/-klI/-a suffix on <syns> synonym headwords."]
+    }),
+    acsj: supportedAdapter("kosha-synonym-gender-suffix", "Kosha synonym gender suffix", {
+      extract: koshaSuffixGender,
+      notes: ["Uses the parsed -puM/-strI/-klI/-a suffix on <syns> synonym headwords."]
     }),
     vcp: supportedAdapter("vcp-prose-gender-pos", "VCP prose gender/POS marker", {
       confidence: "validated-with-limitations",
@@ -197,6 +222,11 @@ function adapterMetadata(dict, adapter) {
     code: dict.code,
     label: dict.label ?? labelFor(dict.code),
     fullName: dict.fullName ?? dict.label ?? labelFor(dict.code),
+    languagePair: dict.languagePair ?? "",
+    family: dict.family ?? "",
+    deprecated: Boolean(dict.deprecated),
+    sourceExists: dict.sourceExists ?? true,
+    sourceLinkMode: dict.sourceLinkMode ?? "github",
     methodId: adapter.methodId,
     methodLabel: adapter.methodLabel,
     status: adapter.status,
@@ -211,6 +241,11 @@ function unavailableMetadata(dict, feature, adapter) {
     code: dict.code,
     label: dict.label ?? labelFor(dict.code),
     fullName: dict.fullName ?? dict.label ?? labelFor(dict.code),
+    languagePair: dict.languagePair ?? "",
+    family: dict.family ?? "",
+    deprecated: Boolean(dict.deprecated),
+    sourceExists: dict.sourceExists ?? true,
+    sourceLinkMode: dict.sourceLinkMode ?? "github",
     methodId: adapter?.methodId ?? null,
     methodLabel: adapter?.methodLabel ?? null,
     status: adapter?.status ?? "missing",
@@ -258,11 +293,19 @@ export function featureSupport(feature, { scope = "broadHeadword" } = {}) {
   };
 }
 
-export function extractGrammar(code, body) {
+function grammarValues(value) {
+  if (Array.isArray(value)) return value.filter(Boolean);
+  return value ? [value] : [];
+}
+
+export function extractGrammar(code, body, record = {}) {
   const adapter = adapterFor("grammar", code);
   if (adapter?.status !== "supported" || typeof adapter.extract !== "function") return null;
-  const value = adapter.extract(body || "");
-  return value ? { value, methodId: adapter.methodId, status: adapter.status } : null;
+  const values = grammarValues(adapter.extract(body || "", record));
+  if (!values.length) return null;
+  return values.length === 1
+    ? { value: values[0], methodId: adapter.methodId, status: adapter.status }
+    : { value: values[0], values, methodId: adapter.methodId, status: adapter.status };
 }
 
 export function citationAdapterForDict(code) {
