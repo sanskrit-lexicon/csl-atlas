@@ -87,9 +87,15 @@ highest-value month.
 > 79 maṇḍala-only, ~38 malformed/out-of-range. **So mitra-aligner is NOT needed for
 > explicit-locus citations** — it is for the *residual* (quote-only / vague citations) and for
 > sources without a clean locus scheme, which still need the source corpus + the alignment API
-> below. Remaining pilot work: a per-hymn verse-count table (tighten verse validation),
-> link-splitting for combined refs, and extending to a non-explicit-locus source to exercise
-> mitra-aligner proper.
+> below. Remaining pilot work: a per-hymn verse-count table (tighten verse validation) and
+> extending to a non-explicit-locus source to exercise mitra-aligner proper.
+>
+> **link-splitting sub-task DONE (2026-06-14, PR #104) — near-empty.** [`build-citation-link-split.mjs`](../scripts/build-citation-link-split.mjs)
+> audited all **311,933** MW `<ls>` citations: only **2** carry a combined-reference signal
+> (`Bālar. iv, 11; x.` semicolon; `PadmaP., Svargakh. 1-5.` range) — the Cologne digitizers
+> already atomised citations into one `<ls>` per reference. So link-splitting needs **no
+> pipeline**, just manual handling of those exceptions (queued, split correctly). PWG has ~4
+> more semicolon refs — extend the scan there if PWG link-targets are tackled.
 
 **Tasks**
 - Resolve the open question: does Dharmamitra expose a retrieval/embedding endpoint or only
