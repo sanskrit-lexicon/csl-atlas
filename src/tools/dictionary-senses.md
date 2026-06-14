@@ -17,6 +17,10 @@ Which dictionary treats a lemma's senses most richly (UC-LX-04), measured by str
 - Next use: inspect highlighted rows, then open exact dictionary source records before citing the pattern.
 
 ```js
+import { slp1ToIast } from "../lib/lookup-normalize.js";
+```
+
+```js
 const data = FileAttachment("../data/dicts/sense-depth.json").json();
 const localesEn = FileAttachment("../locales-en.json").json();
 const localesRu = FileAttachment("../locales-ru.json").json();
@@ -39,13 +43,23 @@ import * as Plot from "npm:@observablehq/plot";
 ```
 
 <div class="warning" label="Evidence: derived proxy">
-Sense counts are <b>sense-division markers</b>, not curated sense inventories: AP <code>∙</code> bullets, PWG/PWK <code>&lt;div&gt;</code>. <b>MW is excluded</b> — it segments senses in prose (<code>&lt;div&gt;</code> ~0.05/entry), so a structural count would falsely make it sense-poor; WIL/VCP/SKD are prose too. AP's bullet unit differs from PWG/PWK's <code>&lt;div&gt;</code>, so AP-vs-Petersburg gaps partly reflect encoding — the most directly comparable pair is <b>PWG vs PWK</b>.
+Sense counts are <b>validated structural markers</b>, not curated sense inventories. Some adapters count semantic sense divisions; specialized dictionaries may count article sections. Dictionaries without validated adapters are excluded, not counted as single-sense or zero evidence.
 </div>
 
 ```js
 const includedSenses = data.includedDictionaries ?? [];
 const unavailableSenses = data.unavailableDictionaries ?? [];
 display(html`<div class="note"><b>Validated sense adapters:</b> ${includedSenses.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. <b>Unavailable for this metric:</b> ${unavailableSenses.length.toLocaleString()} broad dictionaries; they are excluded, not counted as single-sense or zero evidence.</div>`);
+```
+
+```js
+function sourceChip(e) {
+  if (e.href) {
+    return html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`;
+  }
+  const pointer = [e.sourcePath, e.line ? `L${e.line}` : ""].filter(Boolean).join(":");
+  return html`<span title=${pointer} style="display:inline-block;margin-right:6px;color:var(--theme-foreground-muted);border-bottom:1px dotted var(--theme-foreground-muted)">${e.dict}${e.line ? ` L${e.line}` : ""}</span>`;
+}
 ```
 
 ## ${t("phase2.senses.sense-richness")}
@@ -77,20 +91,20 @@ display(html`<p>${Object.entries(data.leaderboard).map(([d, n]) => html`<b>${d}<
 ```js
 const cols = data.senseSegmentedDicts;
 display(Inputs.table(data.topDisparities.map(x => ({
-  [t("phase2.senses.lemma")]: x.lemma,
+  [t("phase2.senses.lemma")]: slp1ToIast(x.lemma),
   ...Object.fromEntries(cols.map(d => [d, x.byDict[d] ?? "—"])),
   [t("phase2.senses.gap")]: x.gap,
   [t("phase2.senses.deepest")]: x.deepest,
   [t("phase2.senses.sources")]: x.examples
 })), {
   columns: [t("phase2.senses.lemma"), ...cols, t("phase2.senses.gap"), t("phase2.senses.deepest"), t("phase2.senses.sources")],
-  format: { [t("phase2.senses.sources")]: ex => html`${ex.map(e => html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`)}` },
+  format: { [t("phase2.senses.sources")]: ex => html`${ex.map(sourceChip)}` },
   sort: t("phase2.senses.gap"),
   reverse: true
 }));
 ```
 
-<div class="note">The widest gaps are verbal roots (e.g. <code>sTā</code>, <code>gam</code>, <code>han</code>): the Petersburg dictionaries give them exhaustive sense divisions where AP is compact. Some of that gap is the <code>&lt;div&gt;</code>-vs-bullet unit difference.</div>
+<div class="note">Large gaps usually reflect real editorial granularity plus dictionary-specific encoding units. Read the source rows before treating a gap as semantic divergence.</div>
 
 ---
 

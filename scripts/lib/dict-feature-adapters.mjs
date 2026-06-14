@@ -39,7 +39,8 @@ const FEATURE_METHOD_NOTES = {
   ],
   senses: [
     "Supported sense adapters count structural sense-division markers; the count is a proxy, not a curated sense inventory.",
-    "AP uses bullet divisions; PWG/PWK use <div>. Prose-segmented dictionaries stay unavailable until separately validated.",
+    "AP uses bullet divisions; PWG/PWK use numbered <div> divisions; BEN, GST, LAN, INM, VEI, PE, IEG, SNP, and MCI use validated dictionary-specific numbered/section markers.",
+    "Candidate <div> markers that encode prefix blocks, source examples, parallel language translations, or citation paragraphs stay unavailable until a separate metric is defined.",
     "Unavailable dictionaries are excluded from depth/divergence counts, never counted as single-sense or zero evidence."
   ]
 };
@@ -132,6 +133,29 @@ function supportedAdapter(methodId, methodLabel, extra = {}) {
     ...extra
   };
 }
+
+function markerSenseUnits(marker) {
+  return body => {
+    marker.lastIndex = 0;
+    const n = (body || "").match(marker)?.length ?? 0;
+    return Math.max(1, n);
+  };
+}
+
+function leadingTextPlusMarkedUnits(marker) {
+  return body => {
+    marker.lastIndex = 0;
+    const n = (body || "").match(marker)?.length ?? 0;
+    return n ? n + 1 : 1;
+  };
+}
+
+const NUMBERED_BRACE_SENSE_MARKER = /\{@\d+\.@\}/g;
+const GST_SECTION_MARKER = /<div n="P"\/?>/g;
+const LAN_NUMBERED_SENSE_MARKER = /<div n="2"\/?>/g;
+const ENCYCLOPEDIC_PARAGRAPH_MARKER = /<div n="P"\/?>/g;
+const NAMED_INDEX_SECTION_MARKER = /<div n="(?:P|HI)"\/?>/g;
+const NUMBERED_INDEX_SECTION_MARKER = /<div n="NI"\/?>/g;
 
 function partialAdapter(status, methodId, methodLabel, extra = {}) {
   return {
@@ -242,7 +266,42 @@ export const FEATURE_ADAPTERS = {
   senses: {
     ap: supportedAdapter("ap-bullet-sense-marker", "AP bullet sense marker", { marker: SENSE_MARKER.ap }),
     pwg: supportedAdapter("pwg-div-sense-marker", "PWG <div> sense marker", { marker: SENSE_MARKER.pwg }),
-    pw: supportedAdapter("pwk-div-sense-marker", "PWK <div> sense marker", { marker: SENSE_MARKER.pw })
+    pw: supportedAdapter("pwk-div-sense-marker", "PWK <div> sense marker", { marker: SENSE_MARKER.pw }),
+    gst: supportedAdapter("gst-roman-section-div", "GST Roman section <div>", {
+      extract: leadingTextPlusMarkedUnits(GST_SECTION_MARKER),
+      notes: ["GST marks sections II+ with <div n=\"P\"> after an unmarked leading Roman section."]
+    }),
+    ben: supportedAdapter("ben-numbered-brace-sense", "BEN numbered brace sense", {
+      extract: markerSenseUnits(NUMBERED_BRACE_SENSE_MARKER)
+    }),
+    lan: supportedAdapter("lan-numbered-div-sense", "LAN numbered sense <div>", {
+      extract: markerSenseUnits(LAN_NUMBERED_SENSE_MARKER),
+      notes: ["Counts <div n=\"2\"/> numbered definition divisions; prefix paragraphs stay outside this adapter."]
+    }),
+    inm: supportedAdapter("inm-article-section-div", "INM article section <div>", {
+      extract: markerSenseUnits(NAMED_INDEX_SECTION_MARKER),
+      notes: ["Validated as article-section depth for index entries, not a curated semantic sense inventory."]
+    }),
+    vei: supportedAdapter("vei-article-section-div", "VEI article section <div>", {
+      extract: markerSenseUnits(ENCYCLOPEDIC_PARAGRAPH_MARKER),
+      notes: ["Validated as encyclopedic article-section depth for Vedic Index entries."]
+    }),
+    pe: supportedAdapter("pe-numbered-section-div", "PE numbered section <div>", {
+      extract: markerSenseUnits(NUMBERED_INDEX_SECTION_MARKER),
+      notes: ["Local-only dictionary; examples use line pointers without GitHub hrefs."]
+    }),
+    ieg: supportedAdapter("ieg-article-section-div", "IEG article section <div>", {
+      extract: markerSenseUnits(ENCYCLOPEDIC_PARAGRAPH_MARKER),
+      notes: ["Local-only dictionary; examples use line pointers without GitHub hrefs."]
+    }),
+    snp: supportedAdapter("snp-botanical-section-div", "SNP botanical section <div>", {
+      extract: markerSenseUnits(ENCYCLOPEDIC_PARAGRAPH_MARKER),
+      notes: ["Local-only dictionary; counts numbered botanical equivalence sections."]
+    }),
+    mci: supportedAdapter("mci-article-section-div", "MCI article section <div>", {
+      extract: markerSenseUnits(ENCYCLOPEDIC_PARAGRAPH_MARKER),
+      notes: ["Validated as article-section depth for Mahābhārata cultural index entries."]
+    })
   }
 };
 
@@ -360,10 +419,10 @@ export function homonymFeatureCodes(options = {}) {
 
 export function senseUnitsForDict(code, body) {
   const adapter = adapterFor("senses", code);
-  if (adapter?.status !== "supported" || !adapter.marker) return null;
-  adapter.marker.lastIndex = 0;
-  const n = (body || "").match(adapter.marker)?.length ?? 0;
-  return Math.max(1, n);
+  if (adapter?.status !== "supported") return null;
+  if (typeof adapter.extract === "function") return adapter.extract(body || "");
+  if (!adapter.marker) return null;
+  return markerSenseUnits(adapter.marker)(body || "");
 }
 
 export function senseMethodForDict(code) {

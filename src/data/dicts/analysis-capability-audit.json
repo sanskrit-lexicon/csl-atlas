@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T01:34:28.098Z",
+  "generatedAt": "2026-06-14T06:44:45.372Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
@@ -27,8 +27,8 @@
       "missing": 18
     },
     "senses": {
-      "supported": 3,
-      "candidate": 18,
+      "supported": 12,
+      "candidate": 9,
       "partial": 0,
       "weak": 1,
       "missing": 18
@@ -426,8 +426,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "gst-roman-section-div"
         }
       }
     },
@@ -624,8 +624,8 @@
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "numbered-brace"
+          "status": "supported",
+          "method": "ben-numbered-brace-sense"
         }
       }
     },
@@ -1020,8 +1020,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "lan-numbered-div-sense"
         }
       }
     },
@@ -1746,8 +1746,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "inm-article-section-div"
         }
       }
     },
@@ -1812,8 +1812,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "vei-article-section-div"
         }
       }
     },
@@ -2340,8 +2340,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "pe-numbered-section-div"
         }
       }
     },
@@ -2472,8 +2472,8 @@
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "ieg-article-section-div"
         }
       }
     },
@@ -2538,8 +2538,8 @@
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "snp-botanical-section-div"
         }
       }
     },
@@ -2604,8 +2604,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "mci-article-section-div"
         }
       }
     },
