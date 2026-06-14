@@ -42,6 +42,8 @@ its feature branch — follow the PR link.)
 | **Gender cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-morphology.py`](../scripts/import-dharmamitra-morphology.py) → `dharmamitra-morphology.json` | [`build-gender-model-crosscheck.mjs`](../scripts/build-gender-model-crosscheck.mjs) → `pos-gender-model-crosscheck` | [#89](https://github.com/sanskrit-lexicon/csl-atlas/pull/89) |
 | **Source-layer anchoring** | [sanskrit-dating](https://github.com/dharmamitra/sanskrit-dating) | [`import-dharmamitra-chronology.mjs`](../scripts/import-dharmamitra-chronology.mjs) → `dharmamitra-chronology.json` | [`build-source-layer-anchoring-review.mjs`](../scripts/build-source-layer-anchoring-review.mjs) → `source-layer-anchoring` | [#90](https://github.com/sanskrit-lexicon/csl-atlas/pull/90) |
 | **Compound-depth cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-segmentation.py`](../scripts/import-dharmamitra-segmentation.py) → `dharmamitra-segmentation.json` | [`build-compound-depth-crosscheck.mjs`](../scripts/build-compound-depth-crosscheck.mjs) → `compound-depth-crosscheck` | [#91](https://github.com/sanskrit-lexicon/csl-atlas/pull/91) |
+| **Lemma-normalization cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-lemma.py`](../scripts/import-dharmamitra-lemma.py) → `dharmamitra-lemma.json` | [`build-lemma-normalization-crosscheck.mjs`](../scripts/build-lemma-normalization-crosscheck.mjs) → `lemma-normalization-crosscheck` | [#92](https://github.com/sanskrit-lexicon/csl-atlas/pull/92) |
+| **PWG markup cross-check** | [detect-language](https://github.com/dharmamitra/detect-language) | [`import-dharmamitra-langdetect.py`](../scripts/import-dharmamitra-langdetect.py) → `dharmamitra-langdetect.json` | [`build-langdetect-crosscheck.mjs`](../scripts/build-langdetect-crosscheck.mjs) → `langdetect-markup-crosscheck` | [#95](https://github.com/sanskrit-lexicon/csl-atlas/pull/95) |
 
 **Gender cross-check** ([#89](https://github.com/sanskrit-lexicon/csl-atlas/pull/89)) — adds an
 **independent third vote** to the existing cross-dictionary gender-conflict queue: for each
@@ -64,37 +66,32 @@ pits the markup-based `compoundSegmentCount` against ByT5 `unsandhied` segmentat
 compounds (markup depth ≥ 4: **3,496 distinct surfaces** of 182k total), flagging markup that
 over- or under-splits — e.g. counting the privative `a-` or suffixes `-tva`/`-tā` as members.
 
+**Lemma-normalization cross-check** ([#92](https://github.com/sanskrit-lexicon/csl-atlas/pull/92)) —
+validates the atlas's orthographic key (`normalizeSlp1Lemma`) against ByT5 `lemma` over the
+**1,913 lemmas attested in all 7 dictionaries**, normalizing the model lemma back through
+`lookup-normalize.js`. Also added the shared [`scripts/lib/dharmamitra_infer.py`](../scripts/lib/dharmamitra_infer.py)
+the other ByT5 importers were refactored onto ([#94](https://github.com/sanskrit-lexicon/csl-atlas/pull/94)).
+
+**PWG markup cross-check** ([#95](https://github.com/sanskrit-lexicon/csl-atlas/pull/95)) — runs
+the detect-language SentencePiece classifier (eng vs skt fertility, CPU-only — **real data**)
+over the **183k distinct single-word `{#...#}` Sanskrit spans** in PWG, transliterating SLP1→IAST,
+and flags spans that don't read as Sanskrit (foreign/OCR content in Sanskrit markup), after
+dropping spans that are PWG headwords. **Signal-quality caveat:** detect-language models only
+English-vs-Sanskrit, so precision is limited — inflected Sanskrit forms and Sanskrit loanwords
+English has absorbed still misfire (the 1,449 flags are review *candidates*, not confirmed
+errors). It is shipped as reusable infrastructure; a German/Sanskrit-tuned model would sharpen
+it materially. The German-gloss `{%...%}` direction was tried first and abandoned (~95% false
+positives — German is not modelled).
+
 ---
 
 ## Opportunities (not yet built)
 
 Ordered roughly by value-to-effort. Each maps a Dharmamitra asset to a *specific* atlas or
-Cologne structure, with the caveat that matters. (Source-layer anchoring and compound-depth
-validation, formerly the top two here, are now implemented — see Already wired.)
+Cologne structure, with the caveat that matters. (Lemma normalization, source-layer anchoring,
+compound-depth, and the PWG markup check are now implemented — see Already wired.)
 
-### 1. Cross-check lemma normalization with ByT5 `lemma` — next build
-
-**Maps to:** [`src/lib/lookup-normalize.js`](../src/lib/lookup-normalize.js).
-
-Run `mode="lemma"` over inflected forms found in citations to validate the deterministic
-SLP1 normalizer against an independent lemmatizer. Flag disagreements; do not auto-apply.
-This is the natural next step: it reuses the ByT5 importer pattern already written twice (gender
-morphosyntax, compound segmentation). Once those land, **factor the shared SLP1↔IAST table and
-local HF-inference skeleton into a `scripts/lib/` module** so this importer reuses them instead
-of duplicating a third copy.
-
-### 2. Separate German metalanguage in PWG/PWK with `detect-language`
-
-**Maps to:** the Petersburg parsers ([`scripts/lib/dict-parser.mjs`](../scripts/lib/dict-parser.mjs)
-for `pwg`/`pw`).
-
-PWG/PWK interleave German metalanguage with Sanskrit headwords and citations.
-[detect-language](https://github.com/dharmamitra/detect-language) is a lightweight
-SentencePiece classifier (English / Sanskrit / IAST); retrained or extended for German it
-would cleanly separate metalanguage tokens from object-language tokens during parsing —
-improving citation and gender extraction quality for the two densest dictionaries.
-
-### 3. Automate DTB link-targets with `mitra-aligner`
+### 1. Automate DTB link-targets with `mitra-aligner`
 
 **Maps to:** the org-wide **Dictionary-to-Book** milestone (`link-target` / `link-splitting`),
 i.e. linking `<ls>` abbreviations to scanned source pages.
@@ -104,7 +101,7 @@ Dharmamitra's archive.org scan metadata is a citation→passage alignment engine
 automated half of the link-target work. This is a Cologne-wide opportunity, not atlas-specific;
 outputs would feed the `csl-corrections` audit-trail workflow, reviewed before commit.
 
-### 4. Ship a StarDict / GoldenDict distribution
+### 2. Ship a StarDict / GoldenDict distribution
 
 **Lesson from:** [dharmamitra-stardict-dictionaries](https://github.com/dharmamitra/dharmamitra-stardict-dictionaries).
 
@@ -114,12 +111,12 @@ cheap, high-reach distribution format the CDSL could also emit from existing dat
 caution-labeling validates our own [evidence-labels](EVIDENCE_LABELS.md) discipline — provenance
 honesty is the norm in this space.
 
-### 5. Benchmark with `dharmamitra-leaderboard`
+### 3. Benchmark with `dharmamitra-leaderboard`
 
 A benchmarking harness that could evaluate dictionary-lookup / segmentation quality against a
 shared baseline, if we ever expose a lookup or segmentation service.
 
-### 6. Read the agentic starter
+### 4. Read the agentic starter
 
 [dharmamitra-claude-code-agent](https://github.com/dharmamitra/dharmamitra-claude-code-agent)
 ("starter pack for agentic translation") is worth reading given this repo is already worked
