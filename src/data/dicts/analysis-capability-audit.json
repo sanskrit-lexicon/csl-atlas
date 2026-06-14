@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T07:41:51.505Z",
+  "generatedAt": "2026-06-14T11:40:47.169Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
@@ -13,10 +13,10 @@
       "missing": 26
     },
     "citations": {
-      "supported": 12,
-      "candidate": 1,
-      "partial": 2,
-      "weak": 24,
+      "supported": 13,
+      "candidate": 0,
+      "partial": 3,
+      "weak": 23,
       "missing": 1
     },
     "homonyms": {
@@ -28,9 +28,9 @@
     },
     "senses": {
       "supported": 14,
-      "candidate": 7,
+      "candidate": 0,
       "partial": 0,
-      "weak": 1,
+      "weak": 8,
       "missing": 18
     }
   },
@@ -162,8 +162,8 @@
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "wil-prefix-subentry-div"
         }
       }
     },
@@ -294,8 +294,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "bop-prefix-subentry-div"
         }
       }
     },
@@ -691,7 +691,7 @@
         },
         "senses": {
           "status": "weak",
-          "method": "div"
+          "method": "mw72-paragraph-div"
         }
       }
     },
@@ -756,8 +756,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "gra-text-stem-attestation-div"
         }
       }
     },
@@ -1215,7 +1215,7 @@
         },
         "homonyms": {
           "status": "weak",
-          "method": "h-tag"
+          "method": "ap90-sparse-homonym-index"
         },
         "senses": {
           "status": "missing",
@@ -1284,8 +1284,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "cae-prefix-subentry-div"
         }
       }
     },
@@ -1342,8 +1342,8 @@
           "method": "md-lex-gender-pos"
         },
         "citations": {
-          "status": "weak",
-          "method": "ls-tag"
+          "status": "supported",
+          "method": "ls-source-citation"
         },
         "homonyms": {
           "status": "supported",
@@ -1381,7 +1381,7 @@
       "distinctLemmas": 11584,
       "hRecords": 0,
       "lexRecords": 0,
-      "genderRecords": 13351,
+      "genderRecords": 13459,
       "lsRecords": 0,
       "lsCount": 0,
       "itiRecords": 4,
@@ -1395,7 +1395,7 @@
       "markerRates": {
         "hRecordPct": 0,
         "lexRecordPct": 0,
-        "genderRecordPct": 98.2,
+        "genderRecordPct": 98.99,
         "lsRecordPct": 0,
         "itiRecordPct": 0.2,
         "divRecordPct": 0,
@@ -1447,7 +1447,7 @@
       "distinctLemmas": 1453,
       "hRecords": 0,
       "lexRecords": 0,
-      "genderRecords": 1521,
+      "genderRecords": 1532,
       "lsRecords": 0,
       "lsCount": 0,
       "itiRecords": 1,
@@ -1461,7 +1461,7 @@
       "markerRates": {
         "hRecordPct": 0,
         "lexRecordPct": 0,
-        "genderRecordPct": 99.28,
+        "genderRecordPct": 100,
         "lsRecordPct": 0,
         "itiRecordPct": 0.61,
         "divRecordPct": 0,
@@ -1513,7 +1513,7 @@
       "distinctLemmas": 634,
       "hRecords": 0,
       "lexRecords": 0,
-      "genderRecords": 636,
+      "genderRecords": 640,
       "lsRecords": 0,
       "lsCount": 0,
       "itiRecords": 4,
@@ -1527,7 +1527,7 @@
       "markerRates": {
         "hRecordPct": 0,
         "lexRecordPct": 0,
-        "genderRecordPct": 99.38,
+        "genderRecordPct": 100,
         "lsRecordPct": 0,
         "itiRecordPct": 1.67,
         "divRecordPct": 0,
@@ -2010,8 +2010,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "pui-source-reference-div"
         }
       }
     },
@@ -2142,8 +2142,8 @@
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "fri-parallel-language-div"
         }
       }
     },
@@ -2205,7 +2205,7 @@
         },
         "homonyms": {
           "status": "weak",
-          "method": "h-tag"
+          "method": "ap-sparse-homonym-index"
         },
         "senses": {
           "status": "supported",
@@ -2398,16 +2398,16 @@
           "method": null
         },
         "citations": {
-          "status": "candidate",
-          "method": "iti-prose"
+          "status": "partial",
+          "method": "krm-iti-authority-proxy"
         },
         "homonyms": {
           "status": "missing",
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "weak",
+          "method": "krm-inflection-section-div"
         }
       }
     },

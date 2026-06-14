@@ -1,5 +1,5 @@
 import { dictFile, iterateDict } from "./dict-parser.mjs";
-import { dictHref } from "./dict-manifest.mjs";
+import { sourceHrefForDict } from "./source-links.mjs";
 import fs from "node:fs";
 
 export const KOSHA_SYNONYM_CODES = new Set(["abch", "acph", "acsj"]);
@@ -28,12 +28,39 @@ function dictMeta(input) {
 }
 
 function linkFor(dict, line) {
-  return dict?.sourceLinkMode === "github" ? dictHref(dict.code, line) : null;
+  return sourceHrefForDict(dict, line);
 }
 
 function headerField(headerLine, tag) {
   const m = headerLine.match(new RegExp(`<${tag}>([^<\\r\\n]*)`));
   return m ? m[1] : null;
+}
+
+const KOSHA_GENDER_TOKENS = [
+  ["puM", "m"],
+  ["strI", "f"],
+  ["klI", "n"]
+];
+
+// Resolve the gender(s) encoded in a kosha synonym suffix. Several attested
+// suffixes are combinations or carry trailing modifiers (e.g. "puMdvi",
+// "strIklI", "puMklIba", "strIdvi") that are absent verbatim from
+// KOSHA_GENDER_SUFFIXES; scan for the puM/strI/klI gender tokens in order so
+// their gender evidence is not silently dropped.
+function gendersFromKoshaSuffix(suffix) {
+  const exact = KOSHA_GENDER_SUFFIXES.get(suffix);
+  if (exact) return exact;
+  const out = [];
+  for (let i = 0; i < suffix.length; ) {
+    const hit = KOSHA_GENDER_TOKENS.find(([token]) => suffix.startsWith(token, i));
+    if (hit) {
+      out.push(hit[1]);
+      i += hit[0].length;
+    } else {
+      i++;
+    }
+  }
+  return out;
 }
 
 export function parseKoshaSynonymToken(token) {
@@ -42,7 +69,7 @@ export function parseKoshaSynonymToken(token) {
   const m = raw.match(/^(.+)-([A-Za-z]+)$/);
   if (!m) return { k1: raw, genderSuffix: null, genders: [] };
   const [, k1, suffix] = m;
-  const genders = KOSHA_GENDER_SUFFIXES.get(suffix) ?? [];
+  const genders = gendersFromKoshaSuffix(suffix);
   return { k1, genderSuffix: suffix, genders };
 }
 

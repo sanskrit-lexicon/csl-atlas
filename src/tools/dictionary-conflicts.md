@@ -17,6 +17,10 @@ Lemmas where two tagged dictionaries assert **disjoint** specific genders ({m, f
 - Next use: inspect highlighted rows, then open exact dictionary source records before citing the pattern.
 
 ```js
+import { slp1ToIast } from "../lib/lookup-normalize.js";
+```
+
+```js
 const pos = FileAttachment("../data/dicts/pos-disagreement.json").json();
 const conf = FileAttachment("../data/dicts/alignment-confidence.json").json();
 const localesEn = FileAttachment("../locales-en.json").json();
@@ -52,7 +56,7 @@ function sourceChip(e) {
     return html`<a href=${e.href} target="_blank" rel="noopener" style="margin-right:6px">${e.dict}</a>`;
   }
   const pointer = [e.sourcePath, e.line ? `L${e.line}` : ""].filter(Boolean).join(":");
-  return html`<span title=${pointer} style="display:inline-block;margin-right:6px;color:#555;border-bottom:1px dotted #888">${e.dict}${e.line ? ` L${e.line}` : ""}</span>`;
+  return html`<span title=${pointer} style="display:inline-block;margin-right:6px;color:var(--theme-foreground-muted);border-bottom:1px dotted var(--theme-foreground-muted)">${e.dict}${e.line ? ` L${e.line}` : ""}</span>`;
 }
 ```
 
@@ -62,7 +66,7 @@ display(html`<p><b>${pos.conflictCount.toLocaleString()}</b> lemmas show a gende
 
 ```js
 display(Inputs.table(pos.conflicts.map(c => ({
-  [t("phase2.conflicts.lemma")]: c.lemma,
+  [t("phase2.conflicts.lemma")]: slp1ToIast(c.lemma),
   ...Object.fromEntries(Object.entries(c.byDict).map(([d, g]) => [d, g.join("/")])),
   [t("phase2.conflicts.sources")]: c.examples
 })), {

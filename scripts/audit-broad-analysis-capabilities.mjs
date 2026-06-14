@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { generatedAtForPayload, generatedAtNow, readJsonIfExists } from "./lib/dataset-meta.mjs";
 import {
   CORE_COMPARISON_DICTS,
   buildBroadHeadwordDictionaries,
@@ -69,6 +70,7 @@ function classifyCitations(dict, stats) {
 function classifyHomonyms(dict, stats) {
   const adapter = featureAdapter("homonyms", dict.code);
   if (adapter?.status === "supported") return { status: "supported", method: adapter.methodId };
+  if (adapter) return { status: adapter.status, method: adapter.methodId };
   if (stats.hRecords >= 20) return { status: "candidate", method: "h-tag" };
   if (stats.hRecords) return { status: "weak", method: "h-tag" };
   return { status: "missing", method: null };
@@ -77,6 +79,7 @@ function classifyHomonyms(dict, stats) {
 function classifySenses(dict, stats) {
   const adapter = featureAdapter("senses", dict.code);
   if (adapter?.status === "supported") return { status: "supported", method: adapter.methodId };
+  if (adapter) return { status: adapter.status, method: adapter.methodId };
   if (stats.divCount >= 100) return { status: "candidate", method: "div" };
   if (stats.numberedSenseCount >= 100) return { status: "candidate", method: "numbered-brace" };
   if (stats.bulletCount >= 100) return { status: "candidate", method: "bullet" };
@@ -206,7 +209,7 @@ function main() {
   const rows = dictionaries.map(auditDict);
   const payload = {
     schemaVersion: SCHEMA_VERSION,
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAtNow(),
     sourceRoot: "../csl-orig/v02",
     dictionaryCount: rows.length,
     coreComparisonCount: CORE_COMPARISON_DICTS.length,
@@ -228,6 +231,7 @@ function main() {
   };
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(OUT, fs), payload);
   fs.writeFileSync(OUT, `${JSON.stringify(payload, null, 2)}\n`);
 
   console.log(`Audited ${rows.length} broad Sanskrit/BHS dictionaries.`);

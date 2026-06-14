@@ -39,7 +39,7 @@ import * as Plot from "npm:@observablehq/plot";
 ```
 
 <div class="note">
-Validated <code>&lt;ls&gt;</code> adapters feed source overlap; density is citations per entry. WIL is essentially untagged for citations, and VCP/SKD cite in prose — for those, density uses an <code>iti</code> proxy and is <b>not</b> directly comparable to the <code>&lt;ls&gt;</code> counts.
+Validated <code>&lt;ls&gt;</code> adapters feed source overlap; density is citations per entry. WIL is essentially untagged for citations, and VCP/SKD/KRM cite in prose or source hints — for those, density uses an <code>iti</code> proxy and is <b>not</b> directly comparable to the <code>&lt;ls&gt;</code> counts.
 </div>
 
 ```js
@@ -119,8 +119,8 @@ display(Inputs.table(matrix.map(s => ({ [t("phase2.citations.source")]: s.source
 
 ```js
 display(Plot.plot({
-  marginLeft: 60,
-  marginBottom: 50,
+  marginLeft: dictsCols.length > 7 ? 90 : 60,
+  marginBottom: dictsCols.length > 7 ? 90 : 50,
   width: Math.max(520, dictsCols.length * 48),
   height: Math.max(360, dictsCols.length * 34),
   color: { scheme: "blues", label: t("phase2.citations.shared-sigla-jaccard"), legend: true },

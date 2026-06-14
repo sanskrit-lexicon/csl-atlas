@@ -21,18 +21,47 @@ import { genderFromLex, genderFromProse, genderForDict } from "../scripts/lib/di
 import {
   citationAdapterForDict,
   extractGrammar,
+  featureAdapter,
   featureSupport,
   homonymFeatureCodes,
+  senseMethodForDict,
   senseUnitsForDict,
   supportedFeatureCodes
 } from "../scripts/lib/dict-feature-adapters.mjs";
 import { iterateKoshaHeadwordsFromText, parseKoshaSynonymToken } from "../scripts/lib/dict-headwords.mjs";
 import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/dict-align.mjs";
 import { CORE_COMPARISON_DICTS, SOURCE_ROOT, buildBroadHeadwordDictionaries, isBroadHeadwordEligible, shardIdForLemma } from "../scripts/lib/dict-scope.mjs";
+import { dictGithubHref, sourceHrefForDict } from "../scripts/lib/source-links.mjs";
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
+import { generatedAtForPayload } from "../scripts/lib/dataset-meta.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
 import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma, slp1ToIast } from "../src/lib/lookup-normalize.js";
+import {
+  findLemma as findLookupLemma,
+  findPrefix as findLookupPrefix,
+  initialModeFromUrl,
+  initialQueryFromUrl,
+  loadCandidateShards,
+  normalizeLanguageChoice,
+  normalizeLookupMode,
+  sourceHref as lookupSourceHref
+} from "../src/lib/lookup-ui.js";
 import { parseDcsSummaryFile } from "../scripts/lib/dcs-summary.mjs";
+
+function leafKeys(value, prefix = "") {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return [];
+  const out = [];
+  for (const [key, child] of Object.entries(value)) {
+    const pathKey = prefix ? `${prefix}.${key}` : key;
+    if (child && typeof child === "object" && !Array.isArray(child)) out.push(...leafKeys(child, pathKey));
+    else out.push(pathKey);
+  }
+  return out;
+}
+
+function valueAtPath(root, pathKey) {
+  return pathKey.split(".").reduce((value, key) => value?.[key], root);
+}
 
 // ---- build-r2-pages ----
 test("injectMarker is idempotent: inject twice gives identical result", () => {
@@ -200,6 +229,10 @@ test("parseKoshaSynonymToken separates headword and gender suffix", () => {
   assert.deepEqual(parseKoshaSynonymToken("rajobala-klI"), { k1: "rajobala", genderSuffix: "klI", genders: ["n"] });
   assert.deepEqual(parseKoshaSynonymToken("peyUza-puMklI"), { k1: "peyUza", genderSuffix: "puMklI", genders: ["m", "n"] });
   assert.deepEqual(parseKoshaSynonymToken("naktam-a"), { k1: "naktam", genderSuffix: "a", genders: ["adj"] });
+  // Combined / modifier-bearing suffixes must not drop gender evidence.
+  assert.deepEqual(parseKoshaSynonymToken("arcis-strIklI"), { k1: "arcis", genderSuffix: "strIklI", genders: ["f", "n"] });
+  assert.deepEqual(parseKoshaSynonymToken("amba-puMdvi"), { k1: "amba", genderSuffix: "puMdvi", genders: ["m"] });
+  assert.deepEqual(parseKoshaSynonymToken("nara-puMklIba"), { k1: "nara", genderSuffix: "puMklIba", genders: ["m", "n"] });
 });
 
 test("iterateKoshaHeadwordsFromText extracts <syns> headwords and source lines", () => {
@@ -312,21 +345,25 @@ test("deep analysis artifacts never put unavailable dictionaries in evidence cel
   }
 
   assert.ok(citations.diagnosticDictionaries.some(dict => dict.code === "vcp"));
+  assert.ok(citations.diagnosticDictionaries.some(dict => dict.code === "krm"));
   assert.ok(citations.sourceMatrix.every(row => Object.keys(row.byDict).every(label => !new Set(citations.unavailableDictionaries.map(dict => dict.label)).has(label))));
 });
 
 test("citation apparatus promotes broad <ls> adapters into source overlap", () => {
   const citations = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/citation-apparatus.json"), "utf8"));
   const included = citations.includedDictionaries.map(dict => dict.code);
-  assert.equal(citations.includedDictionaries.length, 12);
-  for (const code of ["ben", "gra", "pwkvn", "lan", "lrv", "ap90", "sch", "bhs"]) {
+  assert.equal(citations.includedDictionaries.length, 13);
+  for (const code of ["ben", "gra", "pwkvn", "lan", "lrv", "ap90", "md", "sch", "bhs"]) {
     assert.ok(included.includes(code), `${code} must be included in validated citation adapters`);
   }
-  assert.equal(citations.unavailableDictionaries.length, 28);
-  assert.equal(citations.citationTaggedDicts.length, 12);
-  assert.equal(citations.sourceOverlap.length, 66);
+  assert.equal(citations.unavailableDictionaries.length, 27);
+  assert.equal(citations.citationTaggedDicts.length, 13);
+  assert.equal(citations.sourceOverlap.length, 78);
   assert.ok(citations.perDict.some(dict => dict.code === "pwkvn" && dict.method === "ls"));
+  assert.ok(citations.perDict.some(dict => dict.code === "md" && dict.method === "ls" && dict.methodStatus === "supported"));
   assert.ok(citations.perDict.some(dict => dict.code === "vcp" && dict.method === "iti" && dict.methodStatus === "partial"));
+  assert.ok(citations.perDict.some(dict => dict.code === "krm" && dict.method === "iti" && dict.methodId === "krm-iti-authority-proxy" && dict.methodStatus === "partial"));
+  assert.ok(citations.sourceOverlap.every(pair => pair.a !== "KRM" && pair.b !== "KRM"));
 });
 
 test("homonym split promotes validated broad <h> adapters only", () => {
@@ -340,6 +377,10 @@ test("homonym split promotes validated broad <h> adapters only", () => {
   }
   assert.ok(!included.includes("ap"), "AP sparse <h> traces must remain unavailable");
   assert.ok(!included.includes("ap90"), "AP90 sparse <h> traces must remain unavailable");
+  const diagnostic = new Map((hom.diagnosticDictionaries ?? []).map(dict => [dict.code, dict.methodId]));
+  assert.equal(hom.diagnosticDictionaries.length, 2);
+  assert.equal(diagnostic.get("ap"), "ap-sparse-homonym-index");
+  assert.equal(diagnostic.get("ap90"), "ap90-sparse-homonym-index");
   assert.ok(hom.candidateCount > 0);
   assert.ok(hom.candidates.flatMap(c => c.examples).every(e =>
     e.href || (e.sourceLinkMode === "local-only" && e.sourcePath && e.line > 0)
@@ -357,6 +398,16 @@ test("sense depth promotes validated broad structural adapters only", () => {
   for (const code of ["wil", "bop", "gra", "fri", "pui", "krm", "cae"]) {
     assert.ok(!included.includes(code), `${code} candidate markers must remain unavailable until validated for sense depth`);
   }
+  const diagnostic = new Map((sense.diagnosticDictionaries ?? []).map(dict => [dict.code, dict.methodId]));
+  assert.equal(sense.diagnosticDictionaries.length, 8);
+  assert.equal(diagnostic.get("wil"), "wil-prefix-subentry-div");
+  assert.equal(diagnostic.get("bop"), "bop-prefix-subentry-div");
+  assert.equal(diagnostic.get("mw72"), "mw72-paragraph-div");
+  assert.equal(diagnostic.get("gra"), "gra-text-stem-attestation-div");
+  assert.equal(diagnostic.get("cae"), "cae-prefix-subentry-div");
+  assert.equal(diagnostic.get("pui"), "pui-source-reference-div");
+  assert.equal(diagnostic.get("fri"), "fri-parallel-language-div");
+  assert.equal(diagnostic.get("krm"), "krm-inflection-section-div");
   assert.equal(sense.senseSegmentedDicts.length, 14);
   assert.ok(sense.disparityCount > 0);
   assert.ok(sense.topDisparities.flatMap(c => c.examples).every(e =>
@@ -387,6 +438,79 @@ test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", ()
   assert.deepEqual(normalizeLookupQuery("dharma").candidates, ["dharma", "Darma"]);
   assert.deepEqual(normalizeLookupQuery("Agni").candidates, ["Agni", "agni"]);
   assert.deepEqual(normalizeLookupQuery("Dharma").candidates, ["Dharma", "dharma", "Darma"]);
+});
+
+test("lookup UI helpers support deep links, locales, and sorted lemma lookup", () => {
+  assert.equal(initialQueryFromUrl("?q=%C5%9Biva&scope=broad"), "śiva");
+  assert.equal(initialModeFromUrl("?q=akza&scope=broad"), "broad");
+  assert.equal(initialModeFromUrl("?q=akza&mode=core"), "core");
+  assert.equal(normalizeLookupMode("BroadHeadword"), "broad");
+  assert.equal(normalizeLanguageChoice("Русский"), "ru");
+  assert.equal(normalizeLanguageChoice("en"), "en");
+
+  const entries = [["Siva", 4], ["aMSa", 3], ["agni", 1], ["akza", 2]];
+  assert.deepEqual(findLookupLemma(entries, "akza"), ["akza", 2]);
+  assert.deepEqual(findLookupPrefix(entries, "a", 2).map(e => e[0]), ["aMSa", "agni"]);
+});
+
+test("lookup shard loading stays demand-driven", async () => {
+  let calls = 0;
+  const loaders = new Map([
+    ["61", async () => {
+      calls += 1;
+      return { shard: "61", entries: [["akza", []]] };
+    }]
+  ]);
+
+  assert.equal((await loadCandidateShards([], loaders)).size, 0);
+  assert.equal(calls, 0);
+  assert.equal((await loadCandidateShards(["akza"], loaders)).get("61").length, 1);
+  assert.equal(calls, 1);
+});
+
+test("source href helpers handle trailing slash bases and local-only fallbacks", () => {
+  assert.equal(
+    dictGithubHref("mw", 123, "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/"),
+    "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L123"
+  );
+  assert.equal(
+    sourceHrefForDict({ code: "pwkvn", sourceLinkMode: "local-only" }, 456),
+    null
+  );
+  assert.equal(
+    lookupSourceHref({ code: "mw", sourceLinkMode: "github" }, 123, "https://example.test/base/"),
+    "https://example.test/base/mw/mw.txt#L123"
+  );
+  assert.equal(
+    lookupSourceHref({ code: "mw", sourceLinkMode: "github" }, 123),
+    "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L123"
+  );
+});
+
+test("generatedAtForPayload preserves timestamps on content-identical rebuilds", () => {
+  const previous = { schemaVersion: "1.0.0", generatedAt: "2026-06-14T00:00:00.000Z", count: 3 };
+  const nextSame = { schemaVersion: "1.0.0", generatedAt: "2026-06-14T12:00:00.000Z", count: 3 };
+  assert.equal(generatedAtForPayload(previous, nextSame), previous.generatedAt);
+
+  const old = process.env.CSL_ATLAS_GENERATED_AT;
+  process.env.CSL_ATLAS_GENERATED_AT = "2026-06-14T13:00:00.000Z";
+  try {
+    assert.equal(generatedAtForPayload(previous, { ...nextSame, count: 4 }), "2026-06-14T13:00:00.000Z");
+  } finally {
+    if (old === undefined) delete process.env.CSL_ATLAS_GENERATED_AT;
+    else process.env.CSL_ATLAS_GENERATED_AT = old;
+  }
+});
+
+test("reader and dossier Russian locales cover every English UI key", () => {
+  const en = JSON.parse(fs.readFileSync(path.resolve("src/locales-en.json"), "utf8"));
+  const ru = JSON.parse(fs.readFileSync(path.resolve("src/locales-ru.json"), "utf8"));
+
+  for (const root of ["reader.lookup", "phase2.dossier"]) {
+    const enKeys = new Set(leafKeys(valueAtPath(en, root)));
+    const ruKeys = new Set(leafKeys(valueAtPath(ru, root)));
+    assert.deepEqual([...ruKeys].sort(), [...enKeys].sort(), `${root} Russian locale keys must match English`);
+  }
 });
 
 // ---- dict-parser ----
@@ -477,11 +601,15 @@ test("feature support exposes broad unavailable dictionaries without promoting t
 
 test("citation adapters separate supported <ls> from diagnostic prose proxies", broadScopeTestOpts, () => {
   assert.deepEqual(supportedFeatureCodes("citations", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
-  assert.equal(supportedFeatureCodes("citations", { scope: "broadHeadword" }).length, 12);
+  assert.equal(supportedFeatureCodes("citations", { scope: "broadHeadword" }).length, 13);
   assert.equal(citationAdapterForDict("mw").status, "supported");
   assert.equal(citationAdapterForDict("ben").status, "supported");
+  assert.equal(citationAdapterForDict("md").status, "supported");
+  assert.equal(citationAdapterForDict("md").methodId, "ls-source-citation");
   assert.equal(citationAdapterForDict("bhs").status, "supported");
-  assert.equal(citationAdapterForDict("krm"), null);
+  assert.equal(citationAdapterForDict("krm").status, "partial");
+  assert.equal(citationAdapterForDict("krm").methodId, "krm-iti-authority-proxy");
+  assert.ok(!supportedFeatureCodes("citations", { scope: "broadHeadword" }).includes("krm"));
   assert.equal(citationAdapterForDict("vcp").status, "partial");
   assert.equal(citationAdapterForDict("wil").status, "weak");
 });
@@ -493,6 +621,10 @@ test("homonym and sense adapter scopes stay validated-only", broadScopeTestOpts,
   assert.ok(homonymFeatureCodes({ scope: "broadHeadword" }).includes("pe"));
   assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap"));
   assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap90"));
+  assert.equal(featureAdapter("homonyms", "ap").status, "weak");
+  assert.equal(featureAdapter("homonyms", "ap").methodId, "ap-sparse-homonym-index");
+  assert.equal(featureAdapter("homonyms", "ap90").status, "weak");
+  assert.equal(featureAdapter("homonyms", "ap90").methodId, "ap90-sparse-homonym-index");
   assert.deepEqual(supportedFeatureCodes("senses", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
   assert.equal(supportedFeatureCodes("senses", { scope: "broadHeadword" }).length, 14);
   assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("mw"));
@@ -501,6 +633,10 @@ test("homonym and sense adapter scopes stay validated-only", broadScopeTestOpts,
   assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("pe"));
   assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("pgn"));
   assert.ok(!supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("fri"));
+  assert.equal(senseMethodForDict("fri").status, "weak");
+  assert.equal(senseMethodForDict("krm").status, "weak");
+  assert.equal(senseUnitsForDict("fri", "<div n=\"1\"/>1 Czech <div n=\"1\"/>2 Russian <div n=\"1\"/>3 English"), null);
+  assert.equal(senseUnitsForDict("krm", "<div n=\"NI\"/>forms <div n=\"P\"/>authority"), null);
   assert.equal(senseUnitsForDict("ap", "one ∙ two ∙ three"), 2);
   assert.equal(senseUnitsForDict("mw", "to go <div n=\"to\"/>to approach <div n=\"P\"/>a noun sense <div n=\"vp\"/>ignored"), 3);
   assert.equal(senseUnitsForDict("ben", "{@1.@} one {@2.@} two"), 2);

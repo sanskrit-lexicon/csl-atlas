@@ -6,6 +6,7 @@
 // are coverage-only in this first slice.
 
 import { CORE_COMPARISON_DICTS } from "./dict-scope.mjs";
+import { dictGithubHref } from "./source-links.mjs";
 
 // Capability flags per dictionary:
 // - grammarReliable: gender extractable from <lex> (tagged bilingual dicts).
@@ -23,5 +24,5 @@ export const SENSE_MARKER = { ap: /∙/g, pwg: /<div\b/g, pw: /<div\b/g };
 export const DICT_LABELS = Object.fromEntries(DICTS.map(d => [d.code, d.label]));
 
 export function dictHref(code, line) {
-  return `https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/${code}/${code}.txt#L${line}`;
+  return dictGithubHref(code, line);
 }

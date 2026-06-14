@@ -7,7 +7,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { licenseFields } from "./dataset-meta.mjs";
+import { generatedAtForPayload, generatedAtNow, licenseFields, readJsonIfExists } from "./dataset-meta.mjs";
 
 export const SCHEMA_VERSION = "1.0.0";
 
@@ -63,7 +63,7 @@ export function reviewPayload({ queue, sourcePath, items, assumptions = [], warn
   return {
     schemaVersion: SCHEMA_VERSION,
     ...licenseFields(),
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAtNow(),
     sourcePath,
     recordCount: items.length,
     queue,
@@ -76,5 +76,9 @@ export function reviewPayload({ queue, sourcePath, items, assumptions = [], warn
 
 export function writeReport(outputPath, payload) {
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  fs.writeFileSync(outputPath, `${JSON.stringify(payload, null, 2)}\n`);
+  const previous = readJsonIfExists(outputPath, fs);
+  const finalPayload = payload?.generatedAt
+    ? { ...payload, generatedAt: generatedAtForPayload(previous, payload) }
+    : payload;
+  fs.writeFileSync(outputPath, `${JSON.stringify(finalPayload, null, 2)}\n`);
 }

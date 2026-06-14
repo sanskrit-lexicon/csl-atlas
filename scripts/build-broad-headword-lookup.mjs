@@ -7,6 +7,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
+import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 import { iterateHeadwords } from "./lib/dict-headwords.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import {
@@ -16,10 +17,11 @@ import {
   shardIdForLemma,
   shardPrefixForId
 } from "./lib/dict-scope.mjs";
+import { CSL_ORIG_GITHUB_BASE } from "./lib/source-links.mjs";
 
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts", "broad-headword");
 const SHARD_DIR = path.join(OUT_DIR, "shards");
-const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
+const MANIFEST_PATH = path.join(OUT_DIR, "manifest.json");
 const SAMPLE_LEMMAS = ["agni", "Siva", "aMSa", "akza", "dA"];
 
 function ensureCleanOutput() {
@@ -68,6 +70,7 @@ function build() {
   const recordsByDict = emptyCountObject(dictionaries);
   const lemmasByDict = emptyCountObject(dictionaries);
   const index = new Map();
+  const previousManifest = readJsonIfExists(MANIFEST_PATH, fs);
 
   console.log(`Building broad headword coverage for ${dictionaries.length} dictionaries...`);
   for (const [dictIndex, dict] of dictionaries.entries()) {
@@ -127,13 +130,12 @@ function build() {
     shardSummary.push({ id, prefix: payload.prefix, path: `shards/${id}.json`, count: entries.length });
   }
 
-  const manifest = {
+  const manifestBase = {
     schemaVersion: "1.0.0",
-    generatedAt: new Date().toISOString(),
     generatedBy: "npm run build-broad-headword-lookup",
     scope: "broadHeadword",
     sourceRoot: "../csl-orig/v02",
-    hrefBase: HREF_BASE,
+    hrefBase: CSL_ORIG_GITHUB_BASE,
     minDicts: 1,
     inputSchemes: ["IAST"],
     count: index.size,
@@ -158,7 +160,13 @@ function build() {
     ],
     excluded
   };
-  writeJson(path.join(OUT_DIR, "manifest.json"), manifest, 2);
+  const { schemaVersion, ...manifestRest } = manifestBase;
+  const manifest = {
+    schemaVersion,
+    generatedAt: generatedAtForPayload(previousManifest, manifestBase),
+    ...manifestRest
+  };
+  writeJson(MANIFEST_PATH, manifest, 2);
 
   const recordTotal = Object.values(recordsByDict).reduce((sum, n) => sum + n, 0);
   console.log(`Wrote ${index.size.toLocaleString()} broad lemmas from ${recordTotal.toLocaleString()} records to ${OUT_DIR}`);

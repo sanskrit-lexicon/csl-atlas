@@ -12,18 +12,19 @@
 // Usage: npm run build-sense-depth. No LLM inference.
 
 import fs from "node:fs";
-import { licenseFields } from "./lib/dataset-meta.mjs";
+import { generatedAtForPayload, generatedAtNow, licenseFields, readJsonIfExists } from "./lib/dataset-meta.mjs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { buildBroadHeadwordDictionaries, coreComparisonDictionaries } from "./lib/dict-scope.mjs";
 import { featureSupport, senseMethodForDict, senseUnitsForDict, supportedFeatureCodes } from "./lib/dict-feature-adapters.mjs";
+import { dictSourcePath, sourceHrefForDict } from "./lib/source-links.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
+const OUT_FILE = path.join(OUT_DIR, "sense-depth.json");
 const TOP_DISPARITIES = 200;
-const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
 
 const CORE_ORDER = coreComparisonDictionaries().map(d => d.code);
 const BROAD_HEADWORD_DICTS = buildBroadHeadwordDictionaries();
@@ -43,11 +44,11 @@ export function senseUnits(body, marker) {
 }
 
 function sourcePointer(dict, line) {
-  return dict?.sourceLinkMode === "github" && line ? `${HREF_BASE}/${dict.code}/${dict.code}.txt#L${line}` : null;
+  return sourceHrefForDict(dict, line);
 }
 
 function sourcePath(dict) {
-  return `../csl-orig/v02/${dict.code}/${dict.code}.txt`;
+  return dictSourcePath(dict.code);
 }
 
 function sourceExample(dict, rec) {
@@ -157,13 +158,14 @@ function main() {
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     ...licenseFields(),
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAtNow(),
     sourceRoot: "../csl-orig/v02",
     feature: senseSupport.feature,
     featureLabel: senseSupport.featureLabel,
     adapterScope: senseSupport.adapterScope,
     includedDictionaries: senseSupport.includedDictionaries,
     unavailableDictionaries: senseSupport.unavailableDictionaries,
+    diagnosticDictionaries: senseSupport.diagnosticDictionaries,
     methodNotes: senseSupport.methodNotes,
     senseSegmentedDicts: present.map(c => SENSE_LABELS[c] ?? c.toUpperCase()),
     perDict: present.map(c => perDict[c]),
@@ -181,9 +183,10 @@ function main() {
     warnings
   };
 
-  fs.writeFileSync(path.join(OUT_DIR, "sense-depth.json"), `${JSON.stringify(payload, null, 2)}\n`);
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(OUT_FILE, fs), payload);
+  fs.writeFileSync(OUT_FILE, `${JSON.stringify(payload, null, 2)}\n`);
   console.log(`\nWrote sense depth (${present.length} dicts, ${disparities.length} disparities) to:`);
-  console.log(`- ${path.relative(process.cwd(), path.join(OUT_DIR, "sense-depth.json"))}`);
+  console.log(`- ${path.relative(process.cwd(), OUT_FILE)}`);
 }
 
 // Run only when executed directly, not when imported by tests.

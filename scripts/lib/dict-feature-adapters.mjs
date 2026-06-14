@@ -27,20 +27,20 @@ const FEATURE_METHOD_NOTES = {
   ],
   citations: [
     "Supported citation adapters use tagged <ls> source citations and feed the source matrix/overlap.",
-    "BEN, GRA, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
-    "Prose/source-hint adapters such as iti proxies are tracked separately until validated for source-level comparison.",
+    "BEN, GRA, MD, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
+    "Prose/source-hint adapters such as VCP/SKD/KRM iti proxies are tracked separately and stay out of source overlap.",
     "Unavailable dictionaries are excluded from source overlap, never counted as zero evidence."
   ],
   homonyms: [
     "Supported homonym adapters use dictionary-specific <h> indices after validating that <h> encodes homonym splitting.",
     "BOP, GST, MW72, GRA, PWKVN, LAN, CCS, LRV, CAE, MD, INM, VEI, STC, PUI, BHS, PE, and MCI are promoted from the broad audit queue.",
-    "AP and AP90 have only sparse <h> traces and remain unavailable until a dictionary-specific adapter can prove missing <h> is safe to interpret.",
+    "Diagnostic AP/AP90 <h> traces encode real homonym splits for a few lemmas, but remain unavailable because the metric treats unmarked lemmas as merged.",
     "Unavailable dictionaries are excluded from homonym split counts, never counted as one or zero evidence."
   ],
   senses: [
     "Supported sense adapters count structural sense-division markers; the count is a proxy, not a curated sense inventory.",
     "AP uses bullet divisions; MW, PWG/PWK, BEN, GST, LAN, INM, VEI, PE, IEG, SNP, MCI, and PGN use validated dictionary-specific numbered/section markers.",
-    "Candidate <div> markers that encode prefix blocks, source examples, parallel language translations, or citation paragraphs stay unavailable until a separate metric is defined.",
+    "Diagnostic <div> markers that encode prefix blocks, source examples, parallel language translations, inflection tables, or citation paragraphs stay unavailable for sense depth until a separate metric is defined.",
     "Unavailable dictionaries are excluded from depth/divergence counts, never counted as single-sense or zero evidence."
   ]
 };
@@ -225,14 +225,23 @@ export const FEATURE_ADAPTERS = {
       notes: ["Lanman's reader references are encoded as <ls> labels and compared as source labels."]
     }),
     lrv: supportedAdapter("ls-source-citation", "<ls> source citation"),
+    md: supportedAdapter("ls-source-citation", "<ls> source citation", {
+      notes: ["MD has sparse but validated textual <ls> references; included in source overlap as tagged source evidence."]
+    }),
     ap90: supportedAdapter("ls-source-citation", "<ls> source citation"),
     sch: supportedAdapter("ls-source-citation", "<ls> source citation"),
     bhs: supportedAdapter("ls-source-citation", "<ls> source citation"),
     wil: partialAdapter("weak", "iti-prose-proxy", "iti prose proxy"),
     vcp: partialAdapter("partial", "iti-prose-proxy", "iti prose proxy"),
-    skd: partialAdapter("partial", "iti-prose-proxy", "iti prose proxy")
+    skd: partialAdapter("partial", "iti-prose-proxy", "iti prose proxy"),
+    krm: partialAdapter("partial", "krm-iti-authority-proxy", "KRM iti authority/source-hint proxy", {
+      notes: ["Counts standalone iti authority/source-hint markers for diagnostic density only; KRM is not included in <ls> source overlap."]
+    })
   },
   homonyms: {
+    ap: partialAdapter("weak", "ap-sparse-homonym-index", "AP sparse <h> homonym traces", {
+      notes: ["AP marks only a handful of homonym groups; keeping it diagnostic avoids treating every unmarked lemma as merged evidence."]
+    }),
     bop: supportedAdapter("h-homonym-index", "<h> homonym index"),
     gst: supportedAdapter("h-homonym-index", "<h> homonym index", {
       notes: ["GST has a small but systematic <h> set; only marked homonym groups contribute split evidence."]
@@ -244,6 +253,9 @@ export const FEATURE_ADAPTERS = {
     pw: supportedAdapter("h-homonym-index", "<h> homonym index"),
     pwkvn: supportedAdapter("h-homonym-index", "<h> homonym index", {
       notes: ["Local-only dictionary; examples use line pointers without GitHub hrefs."]
+    }),
+    ap90: partialAdapter("weak", "ap90-sparse-homonym-index", "AP90 sparse <h> homonym traces", {
+      notes: ["AP90 marks only a handful of homonym groups; keeping it diagnostic avoids treating every unmarked lemma as merged evidence."]
     }),
     lan: supportedAdapter("h-homonym-index", "<h> homonym index"),
     ccs: supportedAdapter("h-homonym-index", "<h> homonym index"),
@@ -310,6 +322,30 @@ export const FEATURE_ADAPTERS = {
     pgn: supportedAdapter("pgn-article-section-div", "PGN article section <div>", {
       extract: markerSenseUnits(NAMED_INDEX_SECTION_MARKER),
       notes: ["Local-only dictionary; counts article paragraph/heading section markers in the Gupta names index."]
+    }),
+    wil: partialAdapter("weak", "wil-prefix-subentry-div", "WIL prefix subentry <div>", {
+      notes: ["WIL <div n=\"p\"> blocks mark prefixed-root subentries, not validated semantic sense divisions."]
+    }),
+    bop: partialAdapter("weak", "bop-prefix-subentry-div", "BOP prefix subentry <div>", {
+      notes: ["BOP <div n=\"pfx\"> blocks mark prefixed-root subentries and remain unavailable for sense depth."]
+    }),
+    mw72: partialAdapter("weak", "mw72-paragraph-div", "MW72 paragraph <div>", {
+      notes: ["MW72 has sparse <div n=\"P\"/> paragraph blocks; they are not yet validated as a sense-depth adapter."]
+    }),
+    gra: partialAdapter("weak", "gra-text-stem-attestation-div", "GRA text-stem attestation <div>", {
+      notes: ["GRA <div> blocks mark text stems, headword forms, and attestation labels rather than sense divisions."]
+    }),
+    cae: partialAdapter("weak", "cae-prefix-subentry-div", "CAE prefix subentry <div>", {
+      notes: ["CAE <div n=\"p\"> blocks mark prefixed-root subentries, not validated semantic sense divisions."]
+    }),
+    pui: partialAdapter("weak", "pui-source-reference-div", "PUI source reference <div>", {
+      notes: ["PUI <div n=\"P\"/> blocks primarily introduce Purāṇic source references, so they stay outside sense depth."]
+    }),
+    fri: partialAdapter("weak", "fri-parallel-language-div", "FRI parallel-language <div>", {
+      notes: ["FRI <div n=\"1\"/> blocks separate Czech, Russian, and English translation rows, not multiple Sanskrit senses."]
+    }),
+    krm: partialAdapter("weak", "krm-inflection-section-div", "KRM inflection/reference <div>", {
+      notes: ["KRM <div n=\"NI\"/>/<div n=\"P\"/> sections group inflectional and authority material, not semantic sense depth."]
     })
   }
 };

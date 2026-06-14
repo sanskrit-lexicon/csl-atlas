@@ -6,7 +6,7 @@
 // source x dictionary matrix and pairwise source overlap.
 //
 // Source-level comparison covers dictionaries with validated <ls> adapters.
-// WIL is essentially untagged and VCP/SKD cite in prose via `iti`, so those
+// WIL is essentially untagged and VCP/SKD/KRM cite in prose via `iti`, so those
 // remain diagnostic density proxy rows and stay out of source overlap.
 //
 // Usage: npm run build-citation-apparatus. No LLM inference.
@@ -14,7 +14,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { licenseFields } from "./lib/dataset-meta.mjs";
+import { generatedAtForPayload, generatedAtNow, licenseFields, readJsonIfExists } from "./lib/dataset-meta.mjs";
 import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { extractCitations, normalizeSource } from "./lib/mw-classifiers.mjs";
@@ -23,16 +23,17 @@ import { canonicalSiglum, canonicalName } from "./lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
 import { citationAdapterForDict, featureSupport, supportedFeatureCodes } from "./lib/dict-feature-adapters.mjs";
 import { buildBroadHeadwordDictionaries } from "./lib/dict-scope.mjs";
+import { dictSourcePath, sourceHrefForDict } from "./lib/source-links.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
+const OUT_FILE = path.join(OUT_DIR, "citation-apparatus.json");
 const REVIEW_OUT = path.resolve(process.cwd(), "src", "data", "review", "source-siglum-review.json");
 const TOP_SOURCES = 60;
 // A single-dictionary source siglum cited at least this often is a candidate
 // for the cross-dictionary alias table (it may equal another dict's siglum).
 const ALIAS_REVIEW_MIN = 100;
 
-const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
 const BROAD_DICTIONARIES = buildBroadHeadwordDictionaries();
 const BROAD_BY_CODE = new Map(BROAD_DICTIONARIES.map(dict => [dict.code, dict]));
 const LABELS = {
@@ -54,11 +55,11 @@ const ANALYSIS_DICTIONARIES = [
 ];
 
 function sourcePath(dict) {
-  return `../csl-orig/v02/${dict.code}/${dict.code}.txt`;
+  return dictSourcePath(dict.code);
 }
 
 function sourceHref(dict, line) {
-  return dict.sourceLinkMode === "github" && line ? `${HREF_BASE}/${dict.code}/${dict.code}.txt#L${line}` : null;
+  return sourceHrefForDict(dict, line);
 }
 
 function sourcePointer(dict, rec) {
@@ -218,7 +219,7 @@ function main() {
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     ...licenseFields(),
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAtNow(),
     sourceRoot: "../csl-orig/v02",
     feature: citationSupport.feature,
     featureLabel: citationSupport.featureLabel,
@@ -233,7 +234,7 @@ function main() {
     sourceOverlap,
     assumptions: [
       "Source-level comparison covers dictionaries with supported <ls> citation adapters across broadHeadword.",
-      "citationsPerRecord uses <ls> count for tagged dicts and `iti` count for prose dicts (VCP, SKD); the two methods are not directly comparable.",
+      "citationsPerRecord uses <ls> count for tagged dicts and `iti` count for prose/source-hint dicts (VCP, SKD, KRM); the two methods are not directly comparable.",
       "WIL is essentially untagged for citations (<ls> almost absent), so its density is near zero by encoding, not by content.",
       "Diagnostic prose/source-hint proxies are not included in source matrix/overlap until a validated citation adapter is added.",
       "Sigla are reduced to base form (loci stripped: 'MBh. iii,5' -> 'MBh') then canonicalized across dictionaries by diacritic/case fold plus the reviewed alias table src/data/dict-source-aliases.json.",
@@ -242,9 +243,10 @@ function main() {
     warnings
   };
 
-  fs.writeFileSync(path.join(OUT_DIR, "citation-apparatus.json"), `${JSON.stringify(payload, null, 2)}\n`);
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(OUT_FILE, fs), payload);
+  fs.writeFileSync(OUT_FILE, `${JSON.stringify(payload, null, 2)}\n`);
   console.log(`\nWrote citation apparatus for ${perDict.length} dictionaries to:`);
-  console.log(`- ${path.relative(process.cwd(), path.join(OUT_DIR, "citation-apparatus.json"))}`);
+  console.log(`- ${path.relative(process.cwd(), OUT_FILE)}`);
 
   writeSiglumReviewQueue(perDictRaw);
 }
