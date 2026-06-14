@@ -193,6 +193,7 @@ function coreEntry(e) {
 }
 function broadEntry(entry) {
   const dicts = entry[1].map(([dictIndex, records, line]) => ({
+    dictIndex,
     dict: broadDictByIndex.get(dictIndex),
     records,
     line,
@@ -266,10 +267,10 @@ display(html`<div class="dossier-grid">
     return html`<section class="lemma-card">
       <h3>${slp1ToIast(e.l)} <span class="cov">${t("phase2.dossier.in")} ${e.c}/${activeDictionaryCount}</span></h3>
       <div class="chips">
-        ${e.dicts.map(({ dict, records, line, gender }) => {
+        ${e.dicts.map(({ dictIndex, dict, records, line, gender }) => {
           const link = hrefOf(dict, line);
           const badges = dictBadges(dict, line);
-          const content = html`<b>${dict?.label ?? dict?.code}</b>
+          const content = html`<b>${dict?.label ?? dict?.code ?? `#${dictIndex}`}</b>
             <span>${records}×${gender ? " · " + gender : lookupMode === "broad" ? " · " + t("phase2.dossier.headword-only") : ""}</span>
             ${badges.length ? html`<em>${badges.join(" · ")}</em>` : ""}`;
           return link

@@ -649,6 +649,7 @@ function main() {
           adapterScope: homonymSupport.adapterScope,
           includedDictionaries: homonymSupport.includedDictionaries,
           unavailableDictionaries: homonymSupport.unavailableDictionaries,
+          diagnosticDictionaries: homonymSupport.diagnosticDictionaries,
           methodNotes: homonymSupport.methodNotes,
           homonymDicts: HOMONYM_DICTS.map(c => ALL_LABELS[c] ?? c.toUpperCase()),
           candidateCount: homonymSplitCount,
@@ -663,7 +664,7 @@ function main() {
             "Differing homonymy is usually legitimate lexicographic practice, not an error; this is an analysis view, not a correction queue.",
             "Unavailable dictionaries are excluded from this metric, never counted as one or zero evidence."
           ],
-          warnings: ["AP and AP90 have only sparse <h> traces and remain unavailable until a dictionary-specific adapter can prove missing <h> is safe to interpret."]
+          warnings: ["AP and AP90 have sparse validated <h> traces, but stay diagnostic-only because this metric treats unmarked lemmas as merged evidence."]
         }
       )
     )

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T09:01:24.407Z",
+  "generatedAt": "2026-06-14T11:40:47.169Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
@@ -1215,7 +1215,7 @@
         },
         "homonyms": {
           "status": "weak",
-          "method": "h-tag"
+          "method": "ap90-sparse-homonym-index"
         },
         "senses": {
           "status": "missing",
@@ -1381,7 +1381,7 @@
       "distinctLemmas": 11584,
       "hRecords": 0,
       "lexRecords": 0,
-      "genderRecords": 13351,
+      "genderRecords": 13459,
       "lsRecords": 0,
       "lsCount": 0,
       "itiRecords": 4,
@@ -1395,7 +1395,7 @@
       "markerRates": {
         "hRecordPct": 0,
         "lexRecordPct": 0,
-        "genderRecordPct": 98.2,
+        "genderRecordPct": 98.99,
         "lsRecordPct": 0,
         "itiRecordPct": 0.2,
         "divRecordPct": 0,
@@ -1447,7 +1447,7 @@
       "distinctLemmas": 1453,
       "hRecords": 0,
       "lexRecords": 0,
-      "genderRecords": 1521,
+      "genderRecords": 1532,
       "lsRecords": 0,
       "lsCount": 0,
       "itiRecords": 1,
@@ -1461,7 +1461,7 @@
       "markerRates": {
         "hRecordPct": 0,
         "lexRecordPct": 0,
-        "genderRecordPct": 99.28,
+        "genderRecordPct": 100,
         "lsRecordPct": 0,
         "itiRecordPct": 0.61,
         "divRecordPct": 0,
@@ -1513,7 +1513,7 @@
       "distinctLemmas": 634,
       "hRecords": 0,
       "lexRecords": 0,
-      "genderRecords": 636,
+      "genderRecords": 640,
       "lsRecords": 0,
       "lsCount": 0,
       "itiRecords": 4,
@@ -1527,7 +1527,7 @@
       "markerRates": {
         "hRecordPct": 0,
         "lexRecordPct": 0,
-        "genderRecordPct": 99.38,
+        "genderRecordPct": 100,
         "lsRecordPct": 0,
         "itiRecordPct": 1.67,
         "divRecordPct": 0,
@@ -2205,7 +2205,7 @@
         },
         "homonyms": {
           "status": "weak",
-          "method": "h-tag"
+          "method": "ap-sparse-homonym-index"
         },
         "senses": {
           "status": "supported",

@@ -69,6 +69,7 @@ function classifyCitations(dict, stats) {
 function classifyHomonyms(dict, stats) {
   const adapter = featureAdapter("homonyms", dict.code);
   if (adapter?.status === "supported") return { status: "supported", method: adapter.methodId };
+  if (adapter) return { status: adapter.status, method: adapter.methodId };
   if (stats.hRecords >= 20) return { status: "candidate", method: "h-tag" };
   if (stats.hRecords) return { status: "weak", method: "h-tag" };
   return { status: "missing", method: null };

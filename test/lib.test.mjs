@@ -21,6 +21,7 @@ import { genderFromLex, genderFromProse, genderForDict } from "../scripts/lib/di
 import {
   citationAdapterForDict,
   extractGrammar,
+  featureAdapter,
   featureSupport,
   homonymFeatureCodes,
   senseMethodForDict,
@@ -349,6 +350,10 @@ test("homonym split promotes validated broad <h> adapters only", () => {
   }
   assert.ok(!included.includes("ap"), "AP sparse <h> traces must remain unavailable");
   assert.ok(!included.includes("ap90"), "AP90 sparse <h> traces must remain unavailable");
+  const diagnostic = new Map((hom.diagnosticDictionaries ?? []).map(dict => [dict.code, dict.methodId]));
+  assert.equal(hom.diagnosticDictionaries.length, 2);
+  assert.equal(diagnostic.get("ap"), "ap-sparse-homonym-index");
+  assert.equal(diagnostic.get("ap90"), "ap90-sparse-homonym-index");
   assert.ok(hom.candidateCount > 0);
   assert.ok(hom.candidates.flatMap(c => c.examples).every(e =>
     e.href || (e.sourceLinkMode === "local-only" && e.sourcePath && e.line > 0)
@@ -516,6 +521,10 @@ test("homonym and sense adapter scopes stay validated-only", broadScopeTestOpts,
   assert.ok(homonymFeatureCodes({ scope: "broadHeadword" }).includes("pe"));
   assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap"));
   assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap90"));
+  assert.equal(featureAdapter("homonyms", "ap").status, "weak");
+  assert.equal(featureAdapter("homonyms", "ap").methodId, "ap-sparse-homonym-index");
+  assert.equal(featureAdapter("homonyms", "ap90").status, "weak");
+  assert.equal(featureAdapter("homonyms", "ap90").methodId, "ap90-sparse-homonym-index");
   assert.deepEqual(supportedFeatureCodes("senses", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
   assert.equal(supportedFeatureCodes("senses", { scope: "broadHeadword" }).length, 14);
   assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("mw"));

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-14T07:43:39.741Z",
+  "generatedAt": "2026-06-14T11:41:18.265Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -49,7 +49,7 @@
     "Unavailable dictionaries are excluded from this metric, never counted as one or zero evidence."
   ],
   "warnings": [
-    "AP and AP90 have only sparse <h> traces and remain unavailable until a dictionary-specific adapter can prove missing <h> is safe to interpret."
+    "AP and AP90 have sparse validated <h> traces, but stay diagnostic-only because this metric treats unmarked lemmas as merged evidence."
   ],
   "feature": "homonyms",
   "featureLabel": "Homonyms",
@@ -494,10 +494,10 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated homonym-index adapter for this dictionary yet."
+      "methodId": "ap90-sparse-homonym-index",
+      "methodLabel": "AP90 sparse <h> homonym traces",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "abch",
@@ -592,10 +592,10 @@
       "deprecated": false,
       "sourceExists": true,
       "sourceLinkMode": "github",
-      "methodId": null,
-      "methodLabel": null,
-      "status": "missing",
-      "reason": "No validated homonym-index adapter for this dictionary yet."
+      "methodId": "ap-sparse-homonym-index",
+      "methodLabel": "AP sparse <h> homonym traces",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
     },
     {
       "code": "acc",
@@ -668,10 +668,40 @@
       "reason": "No validated homonym-index adapter for this dictionary yet."
     }
   ],
+  "diagnosticDictionaries": [
+    {
+      "code": "ap90",
+      "label": "AP90",
+      "fullName": "Apte Practical Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ap90-sparse-homonym-index",
+      "methodLabel": "AP90 sparse <h> homonym traces",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "fullName": "Practical Sanskrit-English Dictionary (revised edition)",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ap-sparse-homonym-index",
+      "methodLabel": "AP sparse <h> homonym traces",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    }
+  ],
   "methodNotes": [
     "Supported homonym adapters use dictionary-specific <h> indices after validating that <h> encodes homonym splitting.",
     "BOP, GST, MW72, GRA, PWKVN, LAN, CCS, LRV, CAE, MD, INM, VEI, STC, PUI, BHS, PE, and MCI are promoted from the broad audit queue.",
-    "AP and AP90 have only sparse <h> traces and remain unavailable until a dictionary-specific adapter can prove missing <h> is safe to interpret.",
+    "Diagnostic AP/AP90 <h> traces encode real homonym splits for a few lemmas, but remain unavailable because the metric treats unmarked lemmas as merged.",
     "Unavailable dictionaries are excluded from homonym split counts, never counted as one or zero evidence."
   ],
   "homonymDicts": [

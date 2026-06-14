@@ -34,7 +34,7 @@ const FEATURE_METHOD_NOTES = {
   homonyms: [
     "Supported homonym adapters use dictionary-specific <h> indices after validating that <h> encodes homonym splitting.",
     "BOP, GST, MW72, GRA, PWKVN, LAN, CCS, LRV, CAE, MD, INM, VEI, STC, PUI, BHS, PE, and MCI are promoted from the broad audit queue.",
-    "AP and AP90 have only sparse <h> traces and remain unavailable until a dictionary-specific adapter can prove missing <h> is safe to interpret.",
+    "Diagnostic AP/AP90 <h> traces encode real homonym splits for a few lemmas, but remain unavailable because the metric treats unmarked lemmas as merged.",
     "Unavailable dictionaries are excluded from homonym split counts, never counted as one or zero evidence."
   ],
   senses: [
@@ -239,6 +239,9 @@ export const FEATURE_ADAPTERS = {
     })
   },
   homonyms: {
+    ap: partialAdapter("weak", "ap-sparse-homonym-index", "AP sparse <h> homonym traces", {
+      notes: ["AP marks only a handful of homonym groups; keeping it diagnostic avoids treating every unmarked lemma as merged evidence."]
+    }),
     bop: supportedAdapter("h-homonym-index", "<h> homonym index"),
     gst: supportedAdapter("h-homonym-index", "<h> homonym index", {
       notes: ["GST has a small but systematic <h> set; only marked homonym groups contribute split evidence."]
@@ -250,6 +253,9 @@ export const FEATURE_ADAPTERS = {
     pw: supportedAdapter("h-homonym-index", "<h> homonym index"),
     pwkvn: supportedAdapter("h-homonym-index", "<h> homonym index", {
       notes: ["Local-only dictionary; examples use line pointers without GitHub hrefs."]
+    }),
+    ap90: partialAdapter("weak", "ap90-sparse-homonym-index", "AP90 sparse <h> homonym traces", {
+      notes: ["AP90 marks only a handful of homonym groups; keeping it diagnostic avoids treating every unmarked lemma as merged evidence."]
     }),
     lan: supportedAdapter("h-homonym-index", "<h> homonym index"),
     ccs: supportedAdapter("h-homonym-index", "<h> homonym index"),

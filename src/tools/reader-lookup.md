@@ -252,7 +252,7 @@ display(html`<div class="lookup-results">
         const dict = activeDictionaries[dictIndex];
         const link = hrefOf(tuple);
         const badges = dictBadges(dict);
-        const content = html`<strong>${dict?.label ?? dict?.code}</strong>
+        const content = html`<strong>${dict?.label ?? dict?.code ?? `#${dictIndex}`}</strong>
           <span>${records} ${records === 1 ? t("reader.lookup.record") : t("reader.lookup.records")}</span>
           ${lookupMode === "broad"
             ? html`<small>${t("reader.lookup.headword-only")}</small>`

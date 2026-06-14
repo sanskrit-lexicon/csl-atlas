@@ -49,7 +49,12 @@ Homonym count = distinct <code>&lt;h&gt;</code> indices for the lemma in support
 ```js
 const includedHomonyms = data.includedDictionaries ?? [];
 const unavailableHomonyms = data.unavailableDictionaries ?? [];
+const diagnosticHomonyms = data.diagnosticDictionaries ?? [];
 display(html`<div class="note"><b>Validated homonym adapters:</b> ${includedHomonyms.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. <b>Unavailable for this metric:</b> ${unavailableHomonyms.length.toLocaleString()} broad dictionaries; they are excluded, not counted as one or zero evidence.</div>`);
+```
+
+```js
+display(diagnosticHomonyms.length ? html`<div class="warning" label="Diagnostic-only markers"><b>Diagnostic-only, excluded from homonym splits:</b> ${diagnosticHomonyms.map(d => `${d.label} (${d.methodLabel})`).join(", ")}. These traces encode real sparse homonym groups, but the current metric would also treat every unmarked lemma as merged evidence.</div>` : null);
 ```
 
 ```js
