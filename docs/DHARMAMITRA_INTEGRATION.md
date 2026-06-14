@@ -8,7 +8,9 @@ our deterministic source analysis interoperate cleanly — *as long as we keep t
 below.*
 
 This document records what we have already wired in, the rule that governs any further
-integration, and the remaining opportunities mapped to concrete atlas structures.
+integration, and the remaining opportunities mapped to concrete atlas structures. For the
+sequenced delivery programme see [DHARMAMITRA_MONTHLY_PLAN.md](DHARMAMITRA_MONTHLY_PLAN.md); for
+the DTB link-target spec see [MITRA_ALIGNER_HANDOFF.md](MITRA_ALIGNER_HANDOFF.md).
 
 ---
 
@@ -100,6 +102,9 @@ i.e. linking `<ls>` abbreviations to scanned source pages.
 Dharmamitra's archive.org scan metadata is a citation→passage alignment engine — the missing
 automated half of the link-target work. This is a Cologne-wide opportunity, not atlas-specific;
 outputs would feed the `csl-corrections` audit-trail workflow, reviewed before commit.
+
+**Full specification:** [MITRA_ALIGNER_HANDOFF.md](MITRA_ALIGNER_HANDOFF.md) — architecture,
+data contracts, the source-corpus dependency, recommended first slice, and definition of done.
 
 ### 2. Ship a StarDict / GoldenDict distribution
 
