@@ -58,7 +58,9 @@
                 "corpusId": { "type": ["string", "null"] },
                 "L": { "type": ["string", "null"] },
                 "line": { "type": ["integer", "null"] },
-                "href": { "type": ["string", "null"] }
+                "href": { "type": ["string", "null"] },
+                "sourceLinkMode": { "type": ["string", "null"] },
+                "sourcePath": { "type": ["string", "null"] }
               }
             }
           },

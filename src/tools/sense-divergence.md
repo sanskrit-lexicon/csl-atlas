@@ -7,6 +7,8 @@ toc: false
 
 Which headwords does each dictionary treat very differently from its peers? This page ranks lemmas by the spread in how many main entries each of the 7 core dictionaries devotes to the same headword — a structural proxy for editorial disagreement. High divergence = worth inspecting before citing across dictionaries.
 
+> Deep comparison uses validated feature adapters only. Broad coverage/overlap covers eligible local Sanskrit/BHS headwords; missing deep markup is not counted as zero evidence.
+
 ## Trust Block
 
 - Evidence: `data/lexico/sense_divergence.json`, generated from `data/lexico/microstructure_profile.csv` by `python scripts/lexico/build_divergence_map.py`. Core dicts: MW, AP, PWG, PWK, WIL, VCP, SKD.
@@ -70,7 +72,7 @@ display(html`<table class="div-table">
   </thead>
   <tbody>
     ${shown.map(r => {
-      const href = `/tools/dictionary-dossier?q=${encodeURIComponent(r.k1)}`;
+      const href = `dictionary-dossier?q=${encodeURIComponent(r.k1)}`;
       return html`<tr class="${r.range >= 5 ? "high" : r.range >= 2 ? "med" : ""}">
         <td><a href="${href}" target="_blank" rel="noopener">${r.k1}</a></td>
         <td class="num">${r.nDicts}</td>

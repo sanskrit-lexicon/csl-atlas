@@ -32,32 +32,32 @@ Use MW first for ordinary lookup, translation support, and public reading. Then
 choose the second dictionary by the job you are doing:
 
 <div class="decision-cards">
-  <a class="decision-card primary" href="/dicts/mw">
+  <a class="decision-card primary" href="dicts/mw">
     <span>Default</span>
     <strong>Open MW first</strong>
     <small>Broad English lookup, source links, and the fastest public route from headword to record.</small>
   </a>
-  <a class="decision-card" href="/dicts/ap">
+  <a class="decision-card" href="dicts/ap">
     <span>Meaning</span>
     <strong>Then AP</strong>
     <small>Use AP when the MW entry is long and you need a compact reader-facing English gloss.</small>
   </a>
-  <a class="decision-card" href="/dicts/pwg">
+  <a class="decision-card" href="dicts/pwg">
     <span>Source trail</span>
     <strong>Then PWG/PWK</strong>
     <small>Use the Petersburg dictionaries when MW compresses citations, variants, or nested structure.</small>
   </a>
-  <a class="decision-card" href="/dicts/vcp">
+  <a class="decision-card" href="dicts/vcp">
     <span>Sanskrit frame</span>
     <strong>Then VCP/SKD</strong>
     <small>Use Sanskrit-Sanskrit dictionaries when indigenous glossing and authority conventions matter.</small>
   </a>
-  <a class="decision-card" href="/dicts/wil">
+  <a class="decision-card" href="dicts/wil">
     <span>Older wording</span>
     <strong>Then WIL</strong>
     <small>Use Wilson-line evidence when older English wording or translation inheritance matters.</small>
   </a>
-  <a class="decision-card" href="/tools/reader-lookup">
+  <a class="decision-card" href="tools/reader-lookup">
     <span>Compare</span>
     <strong>Then Reader Lookup</strong>
     <small>Use coverage and source links when you need to compare dictionary records side by side.</small>
@@ -121,13 +121,13 @@ grammar analysis outside dictionary records.
 
 ## Related
 
-- [Reader Lookup](/tools/reader-lookup)
-- [MW](/dicts/mw)
-- [AP](/dicts/ap)
-- [PWG](/dicts/pwg)
-- [PWK](/dicts/pwk)
-- [VCP](/dicts/vcp)
-- [SKD](/dicts/skd)
+- [Reader Lookup](tools/reader-lookup)
+- [MW](dicts/mw)
+- [AP](dicts/ap)
+- [PWG](dicts/pwg)
+- [PWK](dicts/pwk)
+- [VCP](dicts/vcp)
+- [SKD](dicts/skd)
 
 <style>
 .decision-cards {

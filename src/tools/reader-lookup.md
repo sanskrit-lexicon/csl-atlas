@@ -3,11 +3,8 @@ title: Reader lookup
 toc: false
 ---
 
-# ${t("reader.lookup.title")}
-${t("reader.lookup.description")}
-
 ```js
-import { normalizeLookupQuery } from "../lib/lookup-normalize.js";
+import { normalizeLookupQuery, slp1ToIast } from "../lib/lookup-normalize.js";
 ```
 
 ```js
@@ -17,57 +14,156 @@ const localesRu = FileAttachment("../locales-ru.json").json();
 
 ```js
 const lookup = FileAttachment("../data/dicts/lemma-lookup.json").json();
+const broadManifest = FileAttachment("../data/dicts/broad-headword/manifest.json").json();
 ```
 
 ```js
-const lang = view(Inputs.radio(["en", "ru"], { label: "Language", value: "en", format: d => d === "ru" ? "Russian" : "English" }));
-const currentLanguage = lang === "ru" || lang === 1 || lang === "1" ? "ru" : "en";
-const t = (key) => {
-  const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+const broadShardLoaders = new Map([
+  ["61", () => FileAttachment("../data/dicts/broad-headword/shards/61.json").json()],
+  ["41", () => FileAttachment("../data/dicts/broad-headword/shards/41.json").json()],
+  ["69", () => FileAttachment("../data/dicts/broad-headword/shards/69.json").json()],
+  ["49", () => FileAttachment("../data/dicts/broad-headword/shards/49.json").json()],
+  ["75", () => FileAttachment("../data/dicts/broad-headword/shards/75.json").json()],
+  ["55", () => FileAttachment("../data/dicts/broad-headword/shards/55.json").json()],
+  ["66", () => FileAttachment("../data/dicts/broad-headword/shards/66.json").json()],
+  ["46", () => FileAttachment("../data/dicts/broad-headword/shards/46.json").json()],
+  ["78", () => FileAttachment("../data/dicts/broad-headword/shards/78.json").json()],
+  ["58", () => FileAttachment("../data/dicts/broad-headword/shards/58.json").json()],
+  ["65", () => FileAttachment("../data/dicts/broad-headword/shards/65.json").json()],
+  ["45", () => FileAttachment("../data/dicts/broad-headword/shards/45.json").json()],
+  ["6f", () => FileAttachment("../data/dicts/broad-headword/shards/6f.json").json()],
+  ["4f", () => FileAttachment("../data/dicts/broad-headword/shards/4f.json").json()],
+  ["6b", () => FileAttachment("../data/dicts/broad-headword/shards/6b.json").json()],
+  ["4b", () => FileAttachment("../data/dicts/broad-headword/shards/4b.json").json()],
+  ["67", () => FileAttachment("../data/dicts/broad-headword/shards/67.json").json()],
+  ["47", () => FileAttachment("../data/dicts/broad-headword/shards/47.json").json()],
+  ["4e", () => FileAttachment("../data/dicts/broad-headword/shards/4e.json").json()],
+  ["63", () => FileAttachment("../data/dicts/broad-headword/shards/63.json").json()],
+  ["43", () => FileAttachment("../data/dicts/broad-headword/shards/43.json").json()],
+  ["6a", () => FileAttachment("../data/dicts/broad-headword/shards/6a.json").json()],
+  ["4a", () => FileAttachment("../data/dicts/broad-headword/shards/4a.json").json()],
+  ["59", () => FileAttachment("../data/dicts/broad-headword/shards/59.json").json()],
+  ["77", () => FileAttachment("../data/dicts/broad-headword/shards/77.json").json()],
+  ["57", () => FileAttachment("../data/dicts/broad-headword/shards/57.json").json()],
+  ["71", () => FileAttachment("../data/dicts/broad-headword/shards/71.json").json()],
+  ["51", () => FileAttachment("../data/dicts/broad-headword/shards/51.json").json()],
+  ["52", () => FileAttachment("../data/dicts/broad-headword/shards/52.json").json()],
+  ["74", () => FileAttachment("../data/dicts/broad-headword/shards/74.json").json()],
+  ["54", () => FileAttachment("../data/dicts/broad-headword/shards/54.json").json()],
+  ["64", () => FileAttachment("../data/dicts/broad-headword/shards/64.json").json()],
+  ["44", () => FileAttachment("../data/dicts/broad-headword/shards/44.json").json()],
+  ["6e", () => FileAttachment("../data/dicts/broad-headword/shards/6e.json").json()],
+  ["70", () => FileAttachment("../data/dicts/broad-headword/shards/70.json").json()],
+  ["50", () => FileAttachment("../data/dicts/broad-headword/shards/50.json").json()],
+  ["62", () => FileAttachment("../data/dicts/broad-headword/shards/62.json").json()],
+  ["42", () => FileAttachment("../data/dicts/broad-headword/shards/42.json").json()],
+  ["6d", () => FileAttachment("../data/dicts/broad-headword/shards/6d.json").json()],
+  ["79", () => FileAttachment("../data/dicts/broad-headword/shards/79.json").json()],
+  ["72", () => FileAttachment("../data/dicts/broad-headword/shards/72.json").json()],
+  ["6c", () => FileAttachment("../data/dicts/broad-headword/shards/6c.json").json()],
+  ["76", () => FileAttachment("../data/dicts/broad-headword/shards/76.json").json()],
+  ["53", () => FileAttachment("../data/dicts/broad-headword/shards/53.json").json()],
+  ["7a", () => FileAttachment("../data/dicts/broad-headword/shards/7a.json").json()],
+  ["73", () => FileAttachment("../data/dicts/broad-headword/shards/73.json").json()],
+  ["68", () => FileAttachment("../data/dicts/broad-headword/shards/68.json").json()],
+  ["other", () => FileAttachment("../data/dicts/broad-headword/shards/other.json").json()]
+]);
+```
+
+```js
+const lang = view(Inputs.select(["en", "ru"], {
+  label: "Language",
+  value: "en",
+  format: value => value === "ru" ? "Russian" : "English"
+}));
+```
+
+```js
+const languageValue = String(lang ?? "").toLowerCase();
+const currentLanguage = lang === 1 || languageValue === "1" || languageValue === "ru" || languageValue === "russian" || languageValue === "русский" ? "ru" : "en";
+const currentLocale = currentLanguage === "ru" ? localesRu : localesEn;
+const t = ((locale) => (key) => {
   const parts = key.split(".");
-  let result = currentLocale;
+  let result = locale;
   for (const part of parts) { if (result && result[part] !== undefined) result = result[part]; else return key; }
   return result;
-};
+})(currentLocale);
 ```
 
 ```js
-const hrefOf = ([dictIndex, records, line]) => {
-  const code = lookup.dictionaries[dictIndex].code;
-  return `${lookup.hrefBase}/${code}/${code}.txt#L${line}`;
-};
-const coverageText = entry => `${entry[1].length}/7`;
-function lowerBoundLemma(lemma) {
-  let lo = 0, hi = lookup.entries.length;
+display(html`<h1>${t("reader.lookup.title")}</h1>
+<p>${t("reader.lookup.description")}</p>`);
+```
+
+```js
+const rawLookupMode = view(Inputs.select(["core", "broad"], {
+  label: t("reader.lookup.scope"),
+  value: "core",
+  format: value => value === "broad" ? t("reader.lookup.scope-broad") : t("reader.lookup.scope-core")
+}));
+const lookupModeValue = String(rawLookupMode ?? "").toLowerCase();
+const lookupMode = rawLookupMode === 1 || lookupModeValue === "1" || lookupModeValue === "broad" ? "broad" : "core";
+```
+
+```js
+const activeManifest = lookupMode === "broad" ? broadManifest : lookup;
+const activeDictionaries = activeManifest.dictionaries;
+const publicInputSchemes = (activeManifest.inputSchemes ?? []).filter(scheme => scheme !== "SLP1");
+const scopeNote = lookupMode === "broad" ? t("reader.lookup.scope-note-broad") : t("reader.lookup.scope-note-core");
+```
+
+```js
+function shardIdForLemma(lemma) {
+  const first = String(lemma ?? "")[0];
+  if (!first) return "other";
+  const id = first.charCodeAt(0).toString(16);
+  return broadShardLoaders.has(id) ? id : "other";
+}
+function hrefOf(tuple, dictionaries = activeDictionaries, hrefBase = activeManifest.hrefBase) {
+  const [dictIndex, , line] = tuple;
+  const dict = dictionaries[dictIndex];
+  const sourceMode = dict?.sourceLinkMode ?? "github";
+  return dict && line && sourceMode === "github" ? `${hrefBase}/${dict.code}/${dict.code}.txt#L${line}` : null;
+}
+const coverageText = entry => `${entry[1].length}/${activeDictionaries.length}`;
+function lowerBoundLemma(entries, lemma) {
+  let lo = 0, hi = entries.length;
   while (lo < hi) {
     const mid = (lo + hi) >> 1;
-    if (lookup.entries[mid][0] < lemma) lo = mid + 1;
+    if (entries[mid][0] < lemma) lo = mid + 1;
     else hi = mid;
   }
   return lo;
 }
-function findLemma(lemma) {
-  const i = lowerBoundLemma(lemma);
-  return lookup.entries[i]?.[0] === lemma ? lookup.entries[i] : null;
+function findLemma(entries, lemma) {
+  const i = lowerBoundLemma(entries, lemma);
+  return entries[i]?.[0] === lemma ? entries[i] : null;
 }
-function findPrefix(prefix, limit = 80) {
+function findPrefix(entries, prefix, limit = 80) {
   const out = [];
-  for (let i = lowerBoundLemma(prefix); i < lookup.entries.length && out.length < limit; i++) {
-    const entry = lookup.entries[i];
+  for (let i = lowerBoundLemma(entries, prefix); i < entries.length && out.length < limit; i++) {
+    const entry = entries[i];
     if (!entry[0].startsWith(prefix)) break;
     out.push(entry);
   }
   return out;
 }
+function dictBadges(dict) {
+  const badges = [];
+  if (dict?.deprecated) badges.push(t("reader.lookup.deprecated"));
+  if (dict?.sourceLinkMode === "local-only") badges.push(t("reader.lookup.local-only"));
+  return badges;
+}
 ```
 
 ```js
-display(html`<div class="lookup-metrics">
+display(html`<p class="lookup-scope-note">${scopeNote}</p>
+<div class="lookup-metrics">
   ${[
-    [t("reader.lookup.indexed-lemmas"), lookup.count.toLocaleString()],
-    [t("reader.lookup.dictionaries"), lookup.dictionaries.length],
-    [t("reader.lookup.minimum-coverage"), `${lookup.minDicts}/7`],
-    [t("reader.lookup.input-schemes"), lookup.inputSchemes.join(" + ")]
+    [t("reader.lookup.indexed-lemmas"), activeManifest.count.toLocaleString()],
+    [t("reader.lookup.dictionaries"), activeDictionaries.length],
+    [t("reader.lookup.minimum-coverage"), `${activeManifest.minDicts}/${activeDictionaries.length}`],
+    [t("reader.lookup.input-schemes"), publicInputSchemes.join(" + ")]
   ].map(([label, value]) => html`<div class="lookup-metric">
     <strong>${value}</strong>
     <span>${label}</span>
@@ -104,20 +200,33 @@ const query = view(Inputs.text({
 
 ```js
 const normalizedQuery = normalizeLookupQuery(query);
-const exact = normalizedQuery.candidates.map(candidate => findLemma(candidate)).find(Boolean) ?? null;
+const broadShardIdsForQuery = lookupMode === "broad"
+  ? [...new Set(normalizedQuery.candidates.filter(candidate => candidate.length >= 2).map(shardIdForLemma))]
+  : [];
+const broadShards = broadShardIdsForQuery.length
+  ? await Promise.all(broadShardIdsForQuery.map(id => broadShardLoaders.get(id)?.()).filter(Boolean))
+  : [];
+const broadEntriesByShard = new Map(broadShards.map(shard => [shard.shard, shard.entries]));
+const entriesForCandidate = candidate => lookupMode === "broad"
+  ? broadEntriesByShard.get(shardIdForLemma(candidate)) ?? []
+  : lookup.entries;
+const exact = normalizedQuery.candidates.map(candidate => findLemma(entriesForCandidate(candidate), candidate)).find(Boolean) ?? null;
 const prefixBase = normalizedQuery.candidates.find(candidate => candidate.length >= 2) ?? "";
-const prefixMatches = prefixBase ? findPrefix(prefixBase) : [];
+const prefixMatches = prefixBase ? findPrefix(entriesForCandidate(prefixBase), prefixBase) : [];
 const starterLemmas = ["agni", "Siva", "deva", "aMSa", "akza"];
-const starterEntries = starterLemmas.map(lemma => findLemma(lemma)).filter(Boolean);
+const starterEntries = lookupMode === "broad"
+  ? broadManifest.sampleEntries
+  : starterLemmas.map(lemma => findLemma(lookup.entries, lemma)).filter(Boolean);
 const shownEntries = exact ? [exact] : (query ? prefixMatches : starterEntries);
+const displayQuery = slp1ToIast(normalizedQuery.normalized) || query;
 ```
 
 ```js
 display(html`<div class="lookup-status">
   ${query
-    ? html`<span>${t("reader.lookup.normalized")}: <code>${normalizedQuery.candidates.join(" / ") || "none"}</code></span>
+    ? html`<span>${t("reader.lookup.normalized")}: <code>${displayQuery || "none"}</code></span>
         <span>${exact ? t("reader.lookup.exact-match") : `${prefixMatches.length.toLocaleString()} ${t("reader.lookup.prefix-matches")}`}</span>`
-    : html`<span>${t("reader.lookup.showing-examples")}</span>`}
+    : html`<span>${lookupMode === "broad" ? t("reader.lookup.showing-broad-examples") : t("reader.lookup.showing-examples")}</span>`}
 </div>`);
 ```
 
@@ -134,27 +243,37 @@ if (query && !exact && !prefixMatches.length) {
 display(html`<div class="lookup-results">
   ${shownEntries.map(entry => html`<section class="lookup-entry">
     <div class="lookup-entry-head">
-      <h2>${entry[0]}</h2>
+      <h2>${slp1ToIast(entry[0])}</h2>
       <span>${t("reader.lookup.coverage")} ${coverageText(entry)}</span>
     </div>
     <div class="lookup-dicts">
       ${entry[1].map(tuple => {
-        const [dictIndex, records, line, gender] = tuple;
-        const dict = lookup.dictionaries[dictIndex];
-        return html`<a class="lookup-dict" href=${hrefOf(tuple)} target="_blank" rel="noopener">
-          <strong>${dict.label}</strong>
+        const [dictIndex, records, , gender] = tuple;
+        const dict = activeDictionaries[dictIndex];
+        const link = hrefOf(tuple);
+        const badges = dictBadges(dict);
+        const content = html`<strong>${dict.label}</strong>
           <span>${records} ${records === 1 ? t("reader.lookup.record") : t("reader.lookup.records")}</span>
-          ${gender ? html`<small>${t("reader.lookup.gender")}: ${gender}</small>` : html`<small>${t("reader.lookup.gender-unknown")}</small>`}
-        </a>`;
+          ${lookupMode === "broad"
+            ? html`<small>${t("reader.lookup.headword-only")}</small>`
+            : gender ? html`<small>${t("reader.lookup.gender")}: ${gender}</small>` : html`<small>${t("reader.lookup.gender-unknown")}</small>`}
+          ${badges.length ? html`<em>${badges.join(" · ")}</em>` : ""}`;
+        return link
+          ? html`<a class="lookup-dict" href=${link} target="_blank" rel="noopener">${content}</a>`
+          : html`<span class="lookup-dict lookup-dict-muted">${content}</span>`;
       })}
     </div>
   </section>`)}
 </div>`);
 ```
 
-<div class="note">${t("reader.lookup.caveat")}</div>
+<div class="note">${lookupMode === "broad" ? t("reader.lookup.broad-caveat") : t("reader.lookup.caveat")}</div>
 
 <style>
+.lookup-scope-note {
+  color: var(--theme-foreground-muted);
+  margin: 8px 0 12px;
+}
 .lookup-metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -177,7 +296,8 @@ display(html`<div class="lookup-results">
 .lookup-empty span,
 .lookup-entry-head span,
 .lookup-dict span,
-.lookup-dict small {
+.lookup-dict small,
+.lookup-dict em {
   color: var(--theme-foreground-muted);
 }
 .lookup-status {
@@ -261,11 +381,16 @@ display(html`<div class="lookup-results">
   text-decoration: none;
   min-height: 72px;
 }
+.lookup-dict-muted {
+  background: color-mix(in srgb, var(--theme-background), var(--theme-foreground) 4%);
+}
 .lookup-dict strong {
   color: var(--theme-foreground);
 }
-.lookup-dict small {
+.lookup-dict small,
+.lookup-dict em {
   font-size: .8rem;
+  font-style: normal;
 }
 @media (max-width: 640px) {
   .trust-block div {
@@ -277,4 +402,4 @@ display(html`<div class="lookup-results">
 
 ---
 
-Generated by `npm run build-dict-comparison`. CC-BY-SA-4.0.
+Generated by `npm run build-dict-comparison` and `npm run build-broad-headword-lookup`. CC-BY-SA-4.0.

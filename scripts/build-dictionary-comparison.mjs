@@ -1,9 +1,8 @@
 // Build Comparative Dictionary Lab outputs (Phase 2, first slice).
 //
 // Deterministic cross-dictionary comparison of MW, AP, PWG, PWK, WIL, VCP, SKD.
-// Coverage / overlap / intersection / unique use lemma presence across all 7.
-// POS/gender disagreement uses the 5 grammar-reliable tagged dictionaries.
-// Sense depth and citation apparatus are deferred (see DICTIONARY_COMPARISON_PLAN).
+// Coverage / overlap / intersection / unique use broad headword presence by default.
+// Deep metrics use validated feature adapters and never count unavailable markup as zero.
 //
 // Usage: npm run build-dict-comparison. No LLM inference.
 
@@ -11,9 +10,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
-import { iterateDict, dictExists, genderForDict } from "./lib/dict-parser.mjs";
+import { iterateHeadwords } from "./lib/dict-headwords.mjs";
+import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { presentDicts, lemmaConfidence, genderConflict } from "./lib/dict-align.mjs";
+import { buildBroadHeadwordDictionaries, coreComparisonDictionaries } from "./lib/dict-scope.mjs";
+import { extractGrammar, featureSupport, supportedFeatureCodes } from "./lib/dict-feature-adapters.mjs";
 import { licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
@@ -29,9 +31,37 @@ const GENDER_TOKENS = new Set(["m", "f", "n", "adj", "ind"]);
 const HREF_BASE = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02";
 
 const ORDER = DICTS.map(d => d.code);
-const TAGGED = DICTS.filter(d => d.grammarReliable).map(d => d.code);
-const HOMONYM_DICTS = DICTS.filter(d => d.homonymMarked).map(d => d.code);
+const BROAD_HEADWORD_DICTS = buildBroadHeadwordDictionaries();
+const CORE_COMPARISON_DICTS = coreComparisonDictionaries();
+const BROAD_BY_CODE = new Map(BROAD_HEADWORD_DICTS.map(d => [d.code, d]));
+const CORE_BY_CODE = new Map(CORE_COMPARISON_DICTS.map(d => [d.code, d]));
+const ALL_LABELS = {
+  ...Object.fromEntries(BROAD_HEADWORD_DICTS.map(d => [d.code, d.label])),
+  ...DICT_LABELS
+};
+const BROAD_GRAMMAR_DICTS = supportedFeatureCodes("grammar", { scope: "broadHeadword" });
+const GRAMMAR_DICTS = [
+  ...ORDER.filter(code => BROAD_GRAMMAR_DICTS.includes(code)),
+  ...BROAD_GRAMMAR_DICTS.filter(code => !ORDER.includes(code))
+];
+const GRAMMAR_DICTIONARIES = GRAMMAR_DICTS.map(code => BROAD_BY_CODE.get(code) ?? CORE_BY_CODE.get(code) ?? { code, label: ALL_LABELS[code] ?? code.toUpperCase() });
+const BROAD_HOMONYM_DICTS = supportedFeatureCodes("homonyms", { scope: "broadHeadword" });
+const HOMONYM_DICTS = [
+  ...ORDER.filter(code => BROAD_HOMONYM_DICTS.includes(code)),
+  ...BROAD_HOMONYM_DICTS.filter(code => !ORDER.includes(code))
+];
+const HOMONYM_DICTIONARIES = HOMONYM_DICTS.map(code => BROAD_BY_CODE.get(code) ?? CORE_BY_CODE.get(code) ?? { code, label: ALL_LABELS[code] ?? code.toUpperCase() });
 const DICT_INDEX = Object.fromEntries(ORDER.map((code, index) => [code, index]));
+const COVERAGE_SCOPES = {
+  broadHeadword: {
+    label: "Broad 40",
+    dictionaries: BROAD_HEADWORD_DICTS
+  },
+  coreComparison: {
+    label: "Core 7",
+    dictionaries: CORE_COMPARISON_DICTS
+  }
+};
 
 function envelope(extra, { assumptions = [], warnings = [] }) {
   return {
@@ -51,12 +81,176 @@ function writeJson(name, payload) {
   return path.relative(process.cwd(), path.join(OUT_DIR, name));
 }
 
-function buildIndex(warnings) {
+function neutralEnvelope(extra, { assumptions = [], warnings = [] } = {}) {
+  return {
+    schemaVersion: SCHEMA_VERSION,
+    generatedAt: new Date().toISOString(),
+    sourceRoot: "../csl-orig/v02",
+    assumptions,
+    warnings,
+    ...extra
+  };
+}
+
+function coverageLabelMap(dictionaries) {
+  return Object.fromEntries(dictionaries.map(d => [d.code, d.label]));
+}
+
+function emptyCounts(dictionaries) {
+  return Object.fromEntries(dictionaries.map(d => [d.code, 0]));
+}
+
+function sourcePointer(dict, line) {
+  return dict?.sourceLinkMode === "github" && line ? `${HREF_BASE}/${dict.code}/${dict.code}.txt#L${line}` : null;
+}
+
+function sourcePath(dict) {
+  return `../csl-orig/v02/${dict.code}/${dict.code}.txt`;
+}
+
+function sourceExample(dict, rec) {
+  return {
+    k1: rec.k1,
+    line: rec.startLine,
+    href: sourcePointer(dict, rec.startLine),
+    sourceLinkMode: dict.sourceLinkMode,
+    sourcePath: sourcePath(dict)
+  };
+}
+
+function buildCoverageScope(scope, warnings) {
+  const { label, dictionaries } = scope;
+  const order = dictionaries.map(d => d.code);
+  const labels = coverageLabelMap(dictionaries);
+  const index = new Map();
+  const recordsByCode = emptyCounts(dictionaries);
+  const lemmasByCode = emptyCounts(dictionaries);
+
+  for (const dict of dictionaries) {
+    if (!dictExists(dict.code)) {
+      warnings.push(`${label}: missing source for ${dict.code}; skipped.`);
+      continue;
+    }
+    const lemmaSet = new Set();
+    let records = 0;
+    for (const rec of iterateHeadwords(dict)) {
+      if (!rec.k1) continue;
+      const { normalized } = normalizeLemma(rec.k1);
+      if (!normalized) continue;
+      records += 1;
+      lemmaSet.add(normalized);
+
+      let entry = index.get(normalized);
+      if (!entry) {
+        entry = {};
+        index.set(normalized, entry);
+      }
+      let slot = entry[dict.code];
+      if (!slot) {
+        slot = { records: 0, raws: new Set(), example: null };
+        entry[dict.code] = slot;
+      }
+      slot.records += 1;
+      slot.raws.add(rec.k1.trim());
+      if (!slot.example) {
+        slot.example = { k1: rec.k1, line: rec.startLine, href: sourcePointer(dict, rec.startLine) };
+      }
+    }
+    recordsByCode[dict.code] = records;
+    lemmasByCode[dict.code] = lemmaSet.size;
+    console.log(`  ${label} ${dict.code}: ${records.toLocaleString()} headword records, ${lemmaSet.size.toLocaleString()} distinct lemmas`);
+  }
+
+  const pair = {};
+  for (let i = 0; i < order.length; i++)
+    for (let j = i + 1; j < order.length; j++) pair[`${order[i]}|${order[j]}`] = 0;
+
+  const comboCounts = new Map();
+  const coverageHistogram = {};
+  const uniqueByCode = Object.fromEntries(order.map(c => [c, { count: 0, examples: [] }]));
+  const intersectionAll = { count: 0, examples: [] };
+
+  for (const [normalized, entry] of index) {
+    const codes = presentDicts(entry, order);
+    const k = codes.length;
+    coverageHistogram[k] = (coverageHistogram[k] || 0) + 1;
+    const comboKey = codes.join("+");
+    comboCounts.set(comboKey, (comboCounts.get(comboKey) || 0) + 1);
+
+    if (k === 1) {
+      const u = uniqueByCode[codes[0]];
+      u.count += 1;
+      if (u.examples.length < SAMPLE) u.examples.push({ lemma: normalized, href: entry[codes[0]].example.href });
+    }
+
+    if (k === order.length) {
+      intersectionAll.count += 1;
+      if (intersectionAll.examples.length < SAMPLE) intersectionAll.examples.push({ lemma: normalized });
+    }
+
+    for (let i = 0; i < codes.length; i++)
+      for (let j = i + 1; j < codes.length; j++) pair[`${codes[i]}|${codes[j]}`] += 1;
+  }
+
+  const topCombinations = [...comboCounts.entries()]
+    .map(([key, count]) => ({ dicts: key.split("+").map(c => labels[c]), size: key.split("+").length, count }))
+    .sort((a, b) => b.count - a.count);
+
+  const pairwise = [];
+  for (let i = 0; i < order.length; i++) {
+    for (let j = i + 1; j < order.length; j++) {
+      const a = order[i], b = order[j];
+      const shared = pair[`${a}|${b}`];
+      const union = lemmasByCode[a] + lemmasByCode[b] - shared;
+      pairwise.push({
+        a: labels[a],
+        b: labels[b],
+        aCode: a,
+        bCode: b,
+        shared,
+        jaccard: union ? Number((shared / union).toFixed(4)) : 0
+      });
+    }
+  }
+  pairwise.sort((x, y) => y.shared - x.shared);
+
+  return {
+    scope: scope.id,
+    scopeLabel: label,
+    dictionaryCount: dictionaries.length,
+    dictionaries,
+    distinctLemmas: index.size,
+    recordsByDict: Object.fromEntries(order.map(c => [labels[c], recordsByCode[c]])),
+    lemmasByDict: Object.fromEntries(order.map(c => [labels[c], lemmasByCode[c]])),
+    coverageHistogram,
+    topCombinations: topCombinations.slice(0, 60),
+    unique: Object.fromEntries(order.map(c => [labels[c], uniqueByCode[c]])),
+    intersectionAll,
+    pairwise
+  };
+}
+
+function buildCoverageScopes(warnings) {
+  console.log("Indexing broad/core coverage scopes...");
+  return Object.fromEntries(Object.entries(COVERAGE_SCOPES).map(([id, scope]) => [id, buildCoverageScope({ ...scope, id }, warnings)]));
+}
+
+function orderIncludedDictionaries(support, codes) {
+  const byCode = new Map(support.includedDictionaries.map(dict => [dict.code, dict]));
+  return {
+    ...support,
+    includedDictionaries: codes.map(code => byCode.get(code)).filter(Boolean)
+  };
+}
+
+function buildIndex(warnings, dictionaries = DICTS, { useHeadwordLayer = false } = {}) {
   const index = new Map();
   const perDictRecords = {};
   const perDictLemmas = {};
 
-  for (const { code } of DICTS) {
+  for (const input of dictionaries) {
+    const dict = { sourceLinkMode: "github", ...input };
+    const { code } = dict;
     if (!dictExists(code)) {
       warnings.push(`Missing source for ${code}; skipped.`);
       perDictRecords[code] = 0;
@@ -65,7 +259,8 @@ function buildIndex(warnings) {
     }
     let records = 0;
     const lemmaSet = new Set();
-    for (const rec of iterateDict(code)) {
+    const recordsForDict = useHeadwordLayer ? iterateHeadwords(dict) : iterateDict(code);
+    for (const rec of recordsForDict) {
       if (!rec.k1) continue;
       records += 1;
       const { normalized } = normalizeLemma(rec.k1);
@@ -85,9 +280,9 @@ function buildIndex(warnings) {
       slot.records += 1;
       slot.raws.add(rec.k1.trim());
       if (rec.h) slot.homs.add(rec.h.trim());
-      const g = genderForDict(code, rec.body);
-      if (g) slot.genders.add(g);
-      if (!slot.example) slot.example = { k1: rec.k1, line: rec.startLine, href: rec.href };
+      const g = extractGrammar(code, rec.body, rec);
+      if (g) for (const value of g.values ?? [g.value]) slot.genders.add(value);
+      if (!slot.example) slot.example = sourceExample(dict, rec);
     }
     perDictRecords[code] = records;
     perDictLemmas[code] = lemmaSet.size;
@@ -99,18 +294,13 @@ function buildIndex(warnings) {
 function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const warnings = [];
-  console.log("Indexing dictionaries...");
-  const { index, perDictRecords, perDictLemmas } = buildIndex(warnings);
+  const coverageScopes = buildCoverageScopes(warnings);
+  console.log("Indexing core deep-analysis dictionaries...");
+  let { index, perDictRecords } = buildIndex(warnings, DICTS);
+  console.log("Indexing grammar/POS feature dictionaries...");
+  let { index: grammarIndex } = buildIndex(warnings, GRAMMAR_DICTIONARIES, { useHeadwordLayer: true });
 
   // Accumulators, single pass over the index.
-  const pair = {}; // "a|b" -> shared count
-  for (let i = 0; i < ORDER.length; i++)
-    for (let j = i + 1; j < ORDER.length; j++) pair[`${ORDER[i]}|${ORDER[j]}`] = 0;
-
-  const comboCounts = new Map(); // dict-set key -> count
-  const coverageHistogram = {}; // number-of-dicts -> count
-  const uniqueByDict = Object.fromEntries(ORDER.map(c => [c, { count: 0, examples: [] }]));
-  const intersectionAll = { count: 0, examples: [] };
   const confidenceDist = { high: 0, medium: 0 };
   const conflicts = [];
   let conflictCount = 0;
@@ -123,25 +313,6 @@ function main() {
   for (const [normalized, entry] of index) {
     const codes = presentDicts(entry, ORDER);
     const k = codes.length;
-    coverageHistogram[k] = (coverageHistogram[k] || 0) + 1;
-
-    const comboKey = codes.join("+");
-    comboCounts.set(comboKey, (comboCounts.get(comboKey) || 0) + 1);
-
-    if (k === 1) {
-      const u = uniqueByDict[codes[0]];
-      u.count += 1;
-      if (u.examples.length < SAMPLE) u.examples.push({ lemma: normalized, href: entry[codes[0]].example.href });
-    }
-
-    if (k === ORDER.length) {
-      intersectionAll.count += 1;
-      if (intersectionAll.examples.length < SAMPLE) intersectionAll.examples.push({ lemma: normalized });
-    }
-
-    // pairwise
-    for (let i = 0; i < codes.length; i++)
-      for (let j = i + 1; j < codes.length; j++) pair[`${codes[i]}|${codes[j]}`] += 1;
 
     // confidence (multi-dict lemmas only)
     if (k >= 2) {
@@ -189,110 +360,249 @@ function main() {
       ]);
     }
 
-    // homonym split: among the homonym-marking dicts (MW, PWG, PWK) that
-    // contain the lemma, do they disagree on how many homonyms it has?
-    // homonymCount = distinct <h> indices, or 1 when none are marked.
-    const homDicts = HOMONYM_DICTS.filter(c => entry[c]);
-    if (homDicts.length >= 2) {
-      const counts = {};
-      for (const c of homDicts) counts[c] = entry[c].homs.size || 1;
-      const vals = Object.values(counts);
-      const max = Math.max(...vals);
-      const min = Math.min(...vals);
-      if (max >= 2 && max !== min) {
-        homonymSplitCount += 1;
-        if (homonymSplits.length < 400) {
-          homonymSplits.push({
-            lemma: normalized,
-            byDict: Object.fromEntries(homDicts.map(c => [DICT_LABELS[c], counts[c]])),
-            maxHomonyms: max,
-            spread: max - min,
-            examples: homDicts.map(c => ({ dict: DICT_LABELS[c], href: entry[c].example.href }))
-          });
-        }
-      }
-    }
+  }
 
-    // gender conflict across all gender-bearing dicts (lex + prose)
-    const gc = genderConflict(entry, ORDER);
+  const distinctLemmas = index.size;
+  index = null;
+
+  for (const [normalized, entry] of grammarIndex) {
+    const gc = genderConflict(entry, GRAMMAR_DICTS);
     if (gc.conflict) {
       conflictCount += 1;
       if (conflicts.length < SAMPLE * 4) {
         conflicts.push({
           lemma: normalized,
           byDict: Object.fromEntries(
-            Object.entries(gc.byDict).map(([c, g]) => [DICT_LABELS[c], g])
+            Object.entries(gc.byDict).map(([c, g]) => [ALL_LABELS[c] ?? c.toUpperCase(), g])
           ),
-          examples: Object.keys(gc.byDict).map(c => ({ dict: DICT_LABELS[c], href: entry[c].example.href }))
+          examples: Object.keys(gc.byDict).map(c => {
+            const example = entry[c].example;
+            return {
+              dict: ALL_LABELS[c] ?? c.toUpperCase(),
+              href: example.href,
+              line: example.line,
+              sourceLinkMode: example.sourceLinkMode,
+              sourcePath: example.sourcePath
+            };
+          })
         });
       }
     }
   }
+  grammarIndex = null;
 
-  const distinctLemmas = index.size;
+  console.log("Indexing homonym feature dictionaries...");
+  let { index: homonymIndex } = buildIndex(warnings, HOMONYM_DICTIONARIES);
+  for (const [normalized, entry] of homonymIndex) {
+    const homDicts = HOMONYM_DICTS.filter(c => entry[c]);
+    if (homDicts.length < 2) continue;
+
+    const counts = {};
+    for (const c of homDicts) counts[c] = entry[c].homs.size || 1;
+    const vals = Object.values(counts);
+    const max = Math.max(...vals);
+    const min = Math.min(...vals);
+    if (max < 2 || max === min) continue;
+
+    homonymSplitCount += 1;
+    if (homonymSplits.length < 400) {
+      homonymSplits.push({
+        lemma: normalized,
+        byDict: Object.fromEntries(homDicts.map(c => [ALL_LABELS[c] ?? c.toUpperCase(), counts[c]])),
+        maxHomonyms: max,
+        spread: max - min,
+        examples: homDicts.map(c => {
+          const example = entry[c].example;
+          return {
+            dict: ALL_LABELS[c] ?? c.toUpperCase(),
+            href: example.href,
+            line: example.line,
+            sourceLinkMode: example.sourceLinkMode,
+            sourcePath: example.sourcePath
+          };
+        })
+      });
+    }
+  }
+  homonymIndex = null;
+
   const written = [];
+  const grammarSupport = orderIncludedDictionaries(featureSupport("grammar", { scope: "broadHeadword" }), GRAMMAR_DICTS);
+  const homonymSupport = orderIncludedDictionaries(featureSupport("homonyms", { scope: "broadHeadword" }), HOMONYM_DICTS);
+  const headwordAlignmentSupport = {
+    feature: "headwordAlignment",
+    featureLabel: "Headword alignment",
+    adapterScope: "coreComparison",
+    includedDictionaries: DICTS.map(d => ({
+      code: d.code,
+      label: d.label,
+      fullName: d.fullName ?? d.label,
+      methodId: "cdsl-k1-normalized-headword",
+      methodLabel: "CDSL <k1> normalized headword",
+      status: "supported",
+      confidence: "validated",
+      fixtureCoverage: "unit"
+    })),
+    unavailableDictionaries: [],
+    methodNotes: [
+      "Alignment confidence is a neutral headword metric over Core 7 <k1> entries.",
+      "Broad coverage/overlap uses the separate broadHeadword layer; this compact alignment review remains Core 7."
+    ]
+  };
 
-  // 1. Coverage matrix (UpSet-style combination summary).
-  const combos = [...comboCounts.entries()]
-    .map(([key, count]) => ({ dicts: key.split("+").map(c => DICT_LABELS[c]), size: key.split("+").length, count }))
-    .sort((a, b) => b.count - a.count);
+  // 1-4. Neutral headword coverage outputs. Top-level fields mirror the broad
+  // default, while `scopes.coreComparison` preserves the legacy Core 7 view.
+  const defaultScope = "broadHeadword";
+  const broadCoverage = coverageScopes[defaultScope];
+  const coreCoverage = coverageScopes.coreComparison;
   written.push(
     writeJson(
       "coverage-matrix.json",
-      envelope(
+      neutralEnvelope(
         {
-          distinctLemmas,
-          recordsByDict: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], perDictRecords[c]])),
-          lemmasByDict: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], perDictLemmas[c]])),
-          coverageHistogram,
-          topCombinations: combos.slice(0, 60)
+          defaultScope,
+          scopeLabels: { broadHeadword: broadCoverage.scopeLabel, coreComparison: coreCoverage.scopeLabel },
+          distinctLemmas: broadCoverage.distinctLemmas,
+          dictionaryCount: broadCoverage.dictionaryCount,
+          dictionaries: broadCoverage.dictionaries,
+          recordsByDict: broadCoverage.recordsByDict,
+          lemmasByDict: broadCoverage.lemmasByDict,
+          coverageHistogram: broadCoverage.coverageHistogram,
+          topCombinations: broadCoverage.topCombinations,
+          scopes: {
+            broadHeadword: {
+              scope: broadCoverage.scope,
+              scopeLabel: broadCoverage.scopeLabel,
+              dictionaryCount: broadCoverage.dictionaryCount,
+              dictionaries: broadCoverage.dictionaries,
+              distinctLemmas: broadCoverage.distinctLemmas,
+              recordsByDict: broadCoverage.recordsByDict,
+              lemmasByDict: broadCoverage.lemmasByDict,
+              coverageHistogram: broadCoverage.coverageHistogram,
+              topCombinations: broadCoverage.topCombinations
+            },
+            coreComparison: {
+              scope: coreCoverage.scope,
+              scopeLabel: coreCoverage.scopeLabel,
+              dictionaryCount: coreCoverage.dictionaryCount,
+              dictionaries: coreCoverage.dictionaries,
+              distinctLemmas: coreCoverage.distinctLemmas,
+              recordsByDict: coreCoverage.recordsByDict,
+              lemmasByDict: coreCoverage.lemmasByDict,
+              coverageHistogram: coreCoverage.coverageHistogram,
+              topCombinations: coreCoverage.topCombinations
+            }
+          }
         },
         {
           assumptions: [
-            "Lemmas are grouped by normalized SLP1 <k1> (accents and trailing homonym digits stripped).",
-            "Counts are distinct normalized lemmas; homonym record counts are preserved per dictionary but not split here."
-          ]
+            "Lemmas are grouped by normalized SLP1 headword forms; kosha synonym dictionaries use validated <syns> headword extraction.",
+            "Broad coverage is headword coverage only. Deep analyses use validated feature adapters and do not treat missing markup as zero evidence."
+          ],
+          warnings
         }
       )
     )
   );
 
-  // 2. Pairwise overlap (+ jaccard).
-  const pairwise = [];
-  for (let i = 0; i < ORDER.length; i++) {
-    for (let j = i + 1; j < ORDER.length; j++) {
-      const a = ORDER[i], b = ORDER[j];
-      const shared = pair[`${a}|${b}`];
-      const union = perDictLemmas[a] + perDictLemmas[b] - shared;
-      pairwise.push({
-        a: DICT_LABELS[a],
-        b: DICT_LABELS[b],
-        shared,
-        jaccard: union ? Number((shared / union).toFixed(4)) : 0
-      });
-    }
-  }
-  written.push(
-    writeJson("pairwise-overlap.json", envelope({ pairwise: pairwise.sort((x, y) => y.shared - x.shared) }, {}))
-  );
-
-  // 3. All-dictionary intersection.
   written.push(
     writeJson(
-      "all-intersection.json",
-      envelope({ count: intersectionAll.count, examples: intersectionAll.examples }, {
-        assumptions: [`Lemmas present in all ${ORDER.length} target dictionaries.`]
-      })
+      "pairwise-overlap.json",
+      neutralEnvelope(
+        {
+          defaultScope,
+          scopeLabels: { broadHeadword: broadCoverage.scopeLabel, coreComparison: coreCoverage.scopeLabel },
+          dictionaries: broadCoverage.dictionaries,
+          pairwise: broadCoverage.pairwise,
+          scopes: {
+            broadHeadword: {
+              scope: broadCoverage.scope,
+              scopeLabel: broadCoverage.scopeLabel,
+              dictionaryCount: broadCoverage.dictionaryCount,
+              dictionaries: broadCoverage.dictionaries,
+              pairwise: broadCoverage.pairwise
+            },
+            coreComparison: {
+              scope: coreCoverage.scope,
+              scopeLabel: coreCoverage.scopeLabel,
+              dictionaryCount: coreCoverage.dictionaryCount,
+              dictionaries: coreCoverage.dictionaries,
+              pairwise: coreCoverage.pairwise
+            }
+          }
+        },
+        {
+          assumptions: ["Jaccard = shared normalized headwords / union of normalized headwords."],
+          warnings
+        }
+      )
     )
   );
 
-  // 4. Dictionary-unique vocabulary.
+  written.push(
+    writeJson(
+      "all-intersection.json",
+      neutralEnvelope(
+        {
+          defaultScope,
+          scopeLabels: { broadHeadword: broadCoverage.scopeLabel, coreComparison: coreCoverage.scopeLabel },
+          count: broadCoverage.intersectionAll.count,
+          examples: broadCoverage.intersectionAll.examples,
+          scopes: {
+            broadHeadword: {
+              scope: broadCoverage.scope,
+              scopeLabel: broadCoverage.scopeLabel,
+              dictionaryCount: broadCoverage.dictionaryCount,
+              count: broadCoverage.intersectionAll.count,
+              examples: broadCoverage.intersectionAll.examples
+            },
+            coreComparison: {
+              scope: coreCoverage.scope,
+              scopeLabel: coreCoverage.scopeLabel,
+              dictionaryCount: coreCoverage.dictionaryCount,
+              count: coreCoverage.intersectionAll.count,
+              examples: coreCoverage.intersectionAll.examples
+            }
+          }
+        },
+        {
+          assumptions: [
+            "Broad all-dictionary intersection may be zero because the 40-dictionary set includes specialized and genre-specific dictionaries.",
+            "Core 7 intersection remains the legacy non-empty comparison invariant."
+          ],
+          warnings
+        }
+      )
+    )
+  );
+
   written.push(
     writeJson(
       "dictionary-unique.json",
-      envelope(
-        { unique: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], uniqueByDict[c]])) },
-        { assumptions: ["A lemma is 'unique' when it appears in exactly one target dictionary (after normalization)."] }
+      neutralEnvelope(
+        {
+          defaultScope,
+          scopeLabels: { broadHeadword: broadCoverage.scopeLabel, coreComparison: coreCoverage.scopeLabel },
+          unique: broadCoverage.unique,
+          scopes: {
+            broadHeadword: {
+              scope: broadCoverage.scope,
+              scopeLabel: broadCoverage.scopeLabel,
+              dictionaryCount: broadCoverage.dictionaryCount,
+              unique: broadCoverage.unique
+            },
+            coreComparison: {
+              scope: coreCoverage.scope,
+              scopeLabel: coreCoverage.scopeLabel,
+              dictionaryCount: coreCoverage.dictionaryCount,
+              unique: coreCoverage.unique
+            }
+          }
+        },
+        {
+          assumptions: ["A lemma is unique when it appears in exactly one dictionary within the selected scope."],
+          warnings
+        }
       )
     )
   );
@@ -302,12 +612,23 @@ function main() {
     writeJson(
       "pos-disagreement.json",
       envelope(
-        { conflictCount, shown: conflicts.length, conflicts },
+        {
+          feature: grammarSupport.feature,
+          featureLabel: grammarSupport.featureLabel,
+          adapterScope: grammarSupport.adapterScope,
+          includedDictionaries: grammarSupport.includedDictionaries,
+          unavailableDictionaries: grammarSupport.unavailableDictionaries,
+          methodNotes: grammarSupport.methodNotes,
+          conflictCount,
+          shown: conflicts.length,
+          conflicts
+        },
         {
           assumptions: [
-            "Gender is taken from <lex> for the tagged dictionaries (MW, AP, PWG, PWK, WIL) and from prose markers for VCP and SKD.",
+            "Gender/POS evidence comes only from supported feature adapters.",
             "A conflict means two dictionaries assert disjoint specific genders ({m,f,n}); adjective/indeclinable tags never trigger one.",
-            "Within-dictionary polysemy (a lemma listed under several genders) does not count as a conflict."
+            "Within-dictionary polysemy (a lemma listed under several genders) does not count as a conflict.",
+            "Unavailable dictionaries are excluded from this metric, never counted as zero evidence."
           ],
           warnings: ["VCP prose markers reliably capture m/adj/ind but under-mark f/n at the anchor position, so some VCP feminine/neuter genders are absent (missed conflicts, never false ones)."]
         }
@@ -315,27 +636,34 @@ function main() {
     )
   );
 
-  // 5b. Homonym split: where the homonym-marking dictionaries disagree on
-  // how many homonyms a lemma has. Sorted by spread then max.
+  // 5b. Homonym split: where validated homonym adapters disagree on how many
+  // homonyms a lemma has. Sorted by spread then max.
   homonymSplits.sort((a, b) => b.spread - a.spread || b.maxHomonyms - a.maxHomonyms || a.lemma.localeCompare(b.lemma));
   written.push(
     writeJson(
       "homonym-split.json",
       envelope(
         {
-          homonymDicts: HOMONYM_DICTS.map(c => DICT_LABELS[c]),
+          feature: homonymSupport.feature,
+          featureLabel: homonymSupport.featureLabel,
+          adapterScope: homonymSupport.adapterScope,
+          includedDictionaries: homonymSupport.includedDictionaries,
+          unavailableDictionaries: homonymSupport.unavailableDictionaries,
+          methodNotes: homonymSupport.methodNotes,
+          homonymDicts: HOMONYM_DICTS.map(c => ALL_LABELS[c] ?? c.toUpperCase()),
           candidateCount: homonymSplitCount,
           shown: homonymSplits.length,
           candidates: homonymSplits
         },
         {
           assumptions: [
-            `Homonym counts use the <h> index; only the homonym-marking dictionaries carry it: ${HOMONYM_DICTS.map(c => DICT_LABELS[c]).join(", ")}.`,
+            `Homonym counts use validated <h> index adapters: ${HOMONYM_DICTS.map(c => ALL_LABELS[c] ?? c.toUpperCase()).join(", ")}.`,
             "homonymCount = distinct <h> values for the lemma, or 1 when none are marked.",
             "A candidate is a lemma present in >=2 of those dictionaries where the homonym count differs and the maximum is >=2 (one dictionary splits what another merges).",
-            "Differing homonymy is usually legitimate lexicographic practice, not an error; this is an analysis view, not a correction queue."
+            "Differing homonymy is usually legitimate lexicographic practice, not an error; this is an analysis view, not a correction queue.",
+            "Unavailable dictionaries are excluded from this metric, never counted as one or zero evidence."
           ],
-          warnings: ["AP, WIL, VCP, SKD do not mark homonyms with <h> and are excluded."]
+          warnings: ["AP and AP90 have only sparse <h> traces and remain unavailable until a dictionary-specific adapter can prove missing <h> is safe to interpret."]
         }
       )
     )
@@ -346,7 +674,16 @@ function main() {
     writeJson(
       "alignment-confidence.json",
       envelope(
-        { distribution: confidenceDist, lowConfidence },
+        {
+          feature: headwordAlignmentSupport.feature,
+          featureLabel: headwordAlignmentSupport.featureLabel,
+          adapterScope: headwordAlignmentSupport.adapterScope,
+          includedDictionaries: headwordAlignmentSupport.includedDictionaries,
+          unavailableDictionaries: headwordAlignmentSupport.unavailableDictionaries,
+          methodNotes: headwordAlignmentSupport.methodNotes,
+          distribution: confidenceDist,
+          lowConfidence
+        },
         {
           assumptions: [
             "high = every contributing dictionary used the identical raw <k1>; medium = matched only after normalization.",
@@ -417,7 +754,27 @@ function main() {
     dossierEntries: dossier.length,
     lookupEntries: lookup.length,
     recordsByDict: Object.fromEntries(ORDER.map(c => [DICT_LABELS[c], perDictRecords[c]])),
-    intersectionAll: intersectionAll.count,
+    coverageScopes: Object.fromEntries(Object.entries(coverageScopes).map(([scope, data]) => [scope, {
+      dictionaryCount: data.dictionaryCount,
+      distinctLemmas: data.distinctLemmas,
+      intersectionAll: data.intersectionAll.count,
+      pairwiseRows: data.pairwise.length
+    }])),
+    featureAdapters: {
+      grammar: {
+        included: grammarSupport.includedDictionaries.length,
+        unavailable: grammarSupport.unavailableDictionaries.length
+      },
+      homonyms: {
+        included: homonymSupport.includedDictionaries.length,
+        unavailable: homonymSupport.unavailableDictionaries.length
+      },
+      headwordAlignment: {
+        included: headwordAlignmentSupport.includedDictionaries.length,
+        unavailable: headwordAlignmentSupport.unavailableDictionaries.length
+      }
+    },
+    intersectionAll: coverageScopes.coreComparison.intersectionAll.count,
     genderConflicts: conflictCount,
     homonymSplits: homonymSplitCount,
     warnings

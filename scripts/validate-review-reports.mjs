@@ -2,7 +2,9 @@
 //
 // Lightweight, data-driven check (no external validator dependency): it reads
 // the schema's required lists and enums and verifies every report file under
-// src/data/review/ conforms. Also confirms each item carries a source link.
+// src/data/review/ conforms. Also confirms each item carries a link-safe source
+// pointer: GitHub href when linkable, or local source path + line for local-only
+// dictionaries.
 //
 // Usage: npm run validate-review-reports
 
@@ -38,7 +40,7 @@ function validateFile(file) {
     errors.push(`${rel}: missing required "items" array`);
     return;
   }
-  let withLinks = 0;
+  let withSourcePointers = 0;
   doc.items.forEach((item, i) => {
     const at = `${rel}[${i}]`;
     for (const req of itemRequired) {
@@ -51,14 +53,23 @@ function validateFile(file) {
       errors.push(`${at}: invalid evidenceLevel "${item.evidenceLevel}"`);
     if (item.reviewStatus && !enums.reviewStatus.includes(item.reviewStatus))
       errors.push(`${at}: invalid reviewStatus "${item.reviewStatus}"`);
-    if (Array.isArray(item.sourcePointers) && item.sourcePointers.some(p => p.href)) withLinks += 1;
+    if (Array.isArray(item.sourcePointers) && item.sourcePointers.some(hasSourcePointer)) withSourcePointers += 1;
   });
-  if (withLinks < doc.items.length) {
-    errors.push(`${rel}: ${doc.items.length - withLinks} items lack a source link`);
+  if (withSourcePointers < doc.items.length) {
+    errors.push(`${rel}: ${doc.items.length - withSourcePointers} items lack a link-safe source pointer`);
   }
   const statuses = {};
   for (const item of doc.items) statuses[item.reviewStatus] = (statuses[item.reviewStatus] || 0) + 1;
   notes.push(`${rel}: ${doc.items.length} items, status breakdown ${JSON.stringify(statuses)}`);
+}
+
+function hasSourcePointer(pointer) {
+  if (pointer?.href) return true;
+  return pointer?.sourceLinkMode === "local-only" &&
+    typeof pointer?.sourcePath === "string" &&
+    pointer.sourcePath.length > 0 &&
+    Number.isFinite(pointer?.line) &&
+    pointer.line > 0;
 }
 
 if (!fs.existsSync(REVIEW_DIR)) {

@@ -1,19 +1,673 @@
 {
   "schemaVersion": "1.0.0",
-  "license": "CC-BY-SA-4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-13T08:14:27.109Z",
+  "generatedAt": "2026-06-14T01:21:32.416Z",
   "sourceRoot": "../csl-orig/v02",
+  "feature": "citations",
+  "featureLabel": "Citations",
+  "adapterScope": "broadHeadword",
+  "includedDictionaries": [
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "fullName": "Böhtlingk and Roth Grosses Petersburger Wörterbuch",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "ben",
+      "label": "BEN",
+      "fullName": "Benfey Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "gra",
+      "label": "GRA",
+      "fullName": "Grassmann Wörterbuch zum Rig Veda",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "fullName": "Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "pwkvn",
+      "label": "PWKVN",
+      "fullName": "Petersburger Wörterbuch (PW) Nachträge und Verbesserungen",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": [
+        "Local-only dictionary; source evidence uses line pointers without GitHub hrefs."
+      ]
+    },
+    {
+      "code": "lan",
+      "label": "LAN",
+      "fullName": "Lanman's Sanskrit Reader Vocabulary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": [
+        "Lanman's reader references are encoded as <ls> labels and compared as source labels."
+      ]
+    },
+    {
+      "code": "lrv",
+      "label": "LRV",
+      "fullName": "Vaidya Standard Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "ap90",
+      "label": "AP90",
+      "fullName": "Apte Practical Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "mw",
+      "label": "MW",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "sch",
+      "label": "SCH",
+      "fullName": "Schmidt Nachträge zum Sanskrit-Wörterbuch",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "bhs",
+      "label": "BHS",
+      "fullName": "Edgerton Buddhist Hybrid Sanskrit Dictionary",
+      "languagePair": "BHS-Eng",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "fullName": "Practical Sanskrit-English Dictionary (revised edition)",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "ls-source-citation",
+      "methodLabel": "<ls> source citation",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit",
+      "notes": []
+    }
+  ],
+  "unavailableDictionaries": [
+    {
+      "code": "skd",
+      "label": "SKD",
+      "fullName": "Śabda-kalpadruma",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "iti-prose-proxy",
+      "methodLabel": "iti prose proxy",
+      "status": "partial",
+      "reason": "partial adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "fullName": "Wilson Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "iti-prose-proxy",
+      "methodLabel": "iti prose proxy",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "yat",
+      "label": "YAT",
+      "fullName": "Yates Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "bop",
+      "label": "BOP",
+      "fullName": "Bopp Glossarium Sanscritum",
+      "languagePair": "Skt-Lat",
+      "family": "Sanskrit-Latin",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "gst",
+      "label": "GST",
+      "fullName": "Goldstücker Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "armh",
+      "label": "ARMH",
+      "fullName": "Abhidhānaratnamālā of Halāyudha",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "bur",
+      "label": "BUR",
+      "fullName": "Burnouf Dictionnaire Sanscrit-Français",
+      "languagePair": "Skt-Fra",
+      "family": "Sanskrit-French",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "mw72",
+      "label": "MW72",
+      "fullName": "Monier-Williams Sanskrit-English Dictionary (1st edition)",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "fullName": "Vacaspatyam",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "iti-prose-proxy",
+      "methodLabel": "iti prose proxy",
+      "status": "partial",
+      "reason": "partial adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "ccs",
+      "label": "CCS",
+      "fullName": "Cappeller Sanskrit Wörterbuch",
+      "languagePair": "Skt-Ger",
+      "family": "Sanskrit-German",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "cae",
+      "label": "CAE",
+      "fullName": "Cappeller Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "md",
+      "label": "MD",
+      "fullName": "Macdonell Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "abch",
+      "label": "ABCH",
+      "fullName": "Abhidhānacintāmaṇi of Hemacandrācārya",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "acph",
+      "label": "ACPH",
+      "fullName": "Abhidhānacintāmaṇipariśiṣṭa of Hemacandrācārya",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "acsj",
+      "label": "ACSJ",
+      "fullName": "Abhidhānacintāmaṇiśiloñcha of Jinadeva",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "shs",
+      "label": "SHS",
+      "fullName": "Shabda-Sagara Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "inm",
+      "label": "INM",
+      "fullName": "Index to the Names in the Mahabharata",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "vei",
+      "label": "VEI",
+      "fullName": "The Vedic Index of Names and Subjects",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "stc",
+      "label": "STC",
+      "fullName": "Stchoupak Dictionnaire Sanscrit-Français",
+      "languagePair": "Skt-Fra",
+      "family": "Sanskrit-French",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "pui",
+      "label": "PUI",
+      "fullName": "The Purana Index",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "fri",
+      "label": "FRI",
+      "fullName": "Friš Sanskrit Reader Vocabulary",
+      "languagePair": "Skt-Cze",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "acc",
+      "label": "ACC",
+      "fullName": "Aufrecht's Catalogus Catalogorum",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "pe",
+      "label": "PE",
+      "fullName": "Puranic Encyclopedia",
+      "languagePair": "Skt-Eng",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "krm",
+      "label": "KRM",
+      "fullName": "Kṛdantarūpamālā",
+      "languagePair": "Skt-Skt",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "ieg",
+      "label": "IEG",
+      "fullName": "Indian Epigraphical Glossary",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "snp",
+      "label": "SNP",
+      "fullName": "Meulenbeld's Sanskrit Names of Plants",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "mci",
+      "label": "MCI",
+      "fullName": "Mahabharata Cultural Index",
+      "languagePair": "Skt-Eng",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    },
+    {
+      "code": "pgn",
+      "label": "PGN",
+      "fullName": "Personal and Geographical Names in the Gupta Inscriptions",
+      "languagePair": "Skt-meta",
+      "family": "Specialized",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "local-only",
+      "methodId": null,
+      "methodLabel": null,
+      "status": "missing",
+      "reason": "No validated source-citation adapter for public citation overlap yet."
+    }
+  ],
+  "diagnosticDictionaries": [
+    {
+      "code": "skd",
+      "label": "SKD",
+      "fullName": "Śabda-kalpadruma",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "iti-prose-proxy",
+      "methodLabel": "iti prose proxy",
+      "status": "partial",
+      "reason": "partial adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "fullName": "Wilson Sanskrit-English Dictionary",
+      "languagePair": "Skt-Eng",
+      "family": "Sanskrit-English",
+      "deprecated": true,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "iti-prose-proxy",
+      "methodLabel": "iti prose proxy",
+      "status": "weak",
+      "reason": "weak adapter evidence is diagnostic only; not included in public deep metrics."
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "fullName": "Vacaspatyam",
+      "languagePair": "Skt-Skt",
+      "family": "Sanskrit-Sanskrit",
+      "deprecated": false,
+      "sourceExists": true,
+      "sourceLinkMode": "github",
+      "methodId": "iti-prose-proxy",
+      "methodLabel": "iti prose proxy",
+      "status": "partial",
+      "reason": "partial adapter evidence is diagnostic only; not included in public deep metrics."
+    }
+  ],
+  "methodNotes": [
+    "Supported citation adapters use tagged <ls> source citations and feed the source matrix/overlap.",
+    "BEN, GRA, PWKVN, LAN, LRV, AP90, SCH, and BHS have validated <ls> adapters in addition to the Core 4.",
+    "Prose/source-hint adapters such as iti proxies are tracked separately until validated for source-level comparison.",
+    "Unavailable dictionaries are excluded from source overlap, never counted as zero evidence."
+  ],
   "citationTaggedDicts": [
     "MW",
     "AP",
     "PWG",
-    "PWK"
+    "PWK",
+    "BEN",
+    "GRA",
+    "PWKVN",
+    "LAN",
+    "LRV",
+    "AP90",
+    "SCH",
+    "BHS"
   ],
   "perDict": [
     {
       "dict": "MW",
+      "code": "mw",
       "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
       "recordCount": 286560,
       "recordsWithCitations": 226746,
       "totalCitations": 320828,
@@ -264,7 +918,10 @@
     },
     {
       "dict": "AP",
+      "code": "ap",
       "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
       "recordCount": 90654,
       "recordsWithCitations": 28676,
       "totalCitations": 68272,
@@ -515,7 +1172,10 @@
     },
     {
       "dict": "PWG",
+      "code": "pwg",
       "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
       "recordCount": 123366,
       "recordsWithCitations": 116332,
       "totalCitations": 772567,
@@ -766,7 +1426,10 @@
     },
     {
       "dict": "PWK",
+      "code": "pw",
       "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
       "recordCount": 170556,
       "recordsWithCitations": 66188,
       "totalCitations": 98474,
@@ -1016,8 +1679,2056 @@
       ]
     },
     {
-      "dict": "WIL",
+      "dict": "BEN",
+      "code": "ben",
+      "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
+      "recordCount": 17310,
+      "recordsWithCitations": 13155,
+      "totalCitations": 48603,
+      "citationsPerRecord": 2.808,
+      "distinctSources": 101,
+      "topSources": [
+        {
+          "source": "Mahābhārata",
+          "count": 7382
+        },
+        {
+          "source": "Man",
+          "count": 6038
+        },
+        {
+          "source": "Rām",
+          "count": 5146
+        },
+        {
+          "source": "Pañc",
+          "count": 4787
+        },
+        {
+          "source": "Chr",
+          "count": 3009
+        },
+        {
+          "source": "Bhāgavata-purāṇa",
+          "count": 2298
+        },
+        {
+          "source": "Hit",
+          "count": 1829
+        },
+        {
+          "source": "Rājataraṅgiṇī",
+          "count": 1308
+        },
+        {
+          "source": "Vikr",
+          "count": 1161
+        },
+        {
+          "source": "Śāk",
+          "count": 1092
+        },
+        {
+          "source": "Daśak",
+          "count": 1041
+        },
+        {
+          "source": "Raghuvaṃśa",
+          "count": 927
+        },
+        {
+          "source": "Bhartṛ",
+          "count": 791
+        },
+        {
+          "source": "Suśruta-saṃhitā",
+          "count": 775
+        },
+        {
+          "source": "Rigv",
+          "count": 768
+        },
+        {
+          "source": "Lass",
+          "count": 756
+        },
+        {
+          "source": "Utt",
+          "count": 716
+        },
+        {
+          "source": "Kathāsaritsāgara",
+          "count": 692
+        },
+        {
+          "source": "Hariv",
+          "count": 690
+        },
+        {
+          "source": "Megh",
+          "count": 501
+        },
+        {
+          "source": "Nal",
+          "count": 478
+        },
+        {
+          "source": "Yājñavalkya-smṛti",
+          "count": 477
+        },
+        {
+          "source": "Śiś",
+          "count": 457
+        },
+        {
+          "source": "Kir",
+          "count": 420
+        },
+        {
+          "source": "Böhtl",
+          "count": 409
+        },
+        {
+          "source": "Vedāntas",
+          "count": 384
+        },
+        {
+          "source": "Mālat",
+          "count": 349
+        },
+        {
+          "source": "Gorr",
+          "count": 347
+        },
+        {
+          "source": "Bhāṣāp",
+          "count": 312
+        },
+        {
+          "source": "Ṛt",
+          "count": 242
+        },
+        {
+          "source": "Mṛcchakaṭikā",
+          "count": 230
+        },
+        {
+          "source": "Johns",
+          "count": 228
+        },
+        {
+          "source": "Prab",
+          "count": 216
+        },
+        {
+          "source": "Mālav",
+          "count": 193
+        },
+        {
+          "source": "Bhaṭṭ",
+          "count": 171
+        },
+        {
+          "source": "Mārk",
+          "count": 158
+        },
+        {
+          "source": "Kumāras",
+          "count": 152
+        },
+        {
+          "source": "Draup",
+          "count": 142
+        },
+        {
+          "source": "Indr",
+          "count": 130
+        },
+        {
+          "source": "Arj",
+          "count": 128
+        },
+        {
+          "source": "Sāv",
+          "count": 122
+        },
+        {
+          "source": "Gīt",
+          "count": 119
+        },
+        {
+          "source": "Hiḍ",
+          "count": 97
+        },
+        {
+          "source": "Kām",
+          "count": 85
+        },
+        {
+          "source": "Amar",
+          "count": 78
+        },
+        {
+          "source": "Cāṇ",
+          "count": 68
+        },
+        {
+          "source": "Nalod",
+          "count": 67
+        },
+        {
+          "source": "Sund",
+          "count": 62
+        },
+        {
+          "source": "Sāh",
+          "count": 56
+        },
+        {
+          "source": "Dev",
+          "count": 52
+        },
+        {
+          "source": "Pāṇ",
+          "count": 46
+        },
+        {
+          "source": "Śṛṅgārat",
+          "count": 35
+        },
+        {
+          "source": "Naiṣadhacarita",
+          "count": 30
+        },
+        {
+          "source": "Brāhmaṇav",
+          "count": 27
+        },
+        {
+          "source": "Caurap",
+          "count": 27
+        },
+        {
+          "source": "Kull",
+          "count": 26
+        },
+        {
+          "source": "ŚKD",
+          "count": 26
+        },
+        {
+          "source": "Matsyop",
+          "count": 21
+        },
+        {
+          "source": "Varāh",
+          "count": 20
+        },
+        {
+          "source": "Śatr",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "dict": "GRA",
+      "code": "gra",
+      "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
+      "recordCount": 12785,
+      "recordsWithCitations": 1539,
+      "totalCitations": 2341,
+      "citationsPerRecord": 0.183,
+      "distinctSources": 180,
+      "topSources": [
+        {
+          "source": "Cu",
+          "count": 355
+        },
+        {
+          "source": "BR",
+          "count": 308
+        },
+        {
+          "source": "AV",
+          "count": 296
+        },
+        {
+          "source": "SV",
+          "count": 190
+        },
+        {
+          "source": "Prāt",
+          "count": 142
+        },
+        {
+          "source": "RV",
+          "count": 124
+        },
+        {
+          "source": "Pad",
+          "count": 115
+        },
+        {
+          "source": "Sāy",
+          "count": 75
+        },
+        {
+          "source": "Pada",
+          "count": 73
+        },
+        {
+          "source": "Fi",
+          "count": 71
+        },
+        {
+          "source": "VS",
+          "count": 67
+        },
+        {
+          "source": "Ku",
+          "count": 67
+        },
+        {
+          "source": "Text",
+          "count": 49
+        },
+        {
+          "source": "Aufr",
+          "count": 30
+        },
+        {
+          "source": "P",
+          "count": 25
+        },
+        {
+          "source": "Naighaṇṭuka",
+          "count": 21
+        },
+        {
+          "source": "Śat",
+          "count": 18
+        },
+        {
+          "source": "TS",
+          "count": 17
+        },
+        {
+          "source": "Pāṇ",
+          "count": 16
+        },
+        {
+          "source": "Nir",
+          "count": 12
+        },
+        {
+          "source": "Bugge in Ku",
+          "count": 10
+        },
+        {
+          "source": "Fick",
+          "count": 7
+        },
+        {
+          "source": "Padap",
+          "count": 7
+        },
+        {
+          "source": "Bollensen",
+          "count": 6
+        },
+        {
+          "source": "Be",
+          "count": 6
+        },
+        {
+          "source": "Kuhnʼs Zeitschr",
+          "count": 5
+        },
+        {
+          "source": "Aufrecht",
+          "count": 5
+        },
+        {
+          "source": "〔465〕",
+          "count": 5
+        },
+        {
+          "source": "Roth in Ku",
+          "count": 5
+        },
+        {
+          "source": "M",
+          "count": 4
+        },
+        {
+          "source": "〔11",
+          "count": 4
+        },
+        {
+          "source": "TBr",
+          "count": 4
+        },
+        {
+          "source": "Ait",
+          "count": 4
+        },
+        {
+          "source": "7",
+          "count": 4
+        },
+        {
+          "source": "Chambers 60",
+          "count": 4
+        },
+        {
+          "source": "〔466〕",
+          "count": 4
+        },
+        {
+          "source": "Roth",
+          "count": 4
+        },
+        {
+          "source": "Max Müller the sixth hymn 〔p",
+          "count": 3
+        },
+        {
+          "source": "Deutsche Pflanzennamen 〔S",
+          "count": 3
+        },
+        {
+          "source": "dhātupāṭha",
+          "count": 3
+        },
+        {
+          "source": "〔581〕",
+          "count": 3
+        },
+        {
+          "source": "〔587〕",
+          "count": 3
+        },
+        {
+          "source": "6",
+          "count": 3
+        },
+        {
+          "source": "Cod",
+          "count": 3
+        },
+        {
+          "source": "Roth zu Nir",
+          "count": 3
+        },
+        {
+          "source": "Aufrecht in Kuhnʼs Zeitschr",
+          "count": 2
+        },
+        {
+          "source": "Boll",
+          "count": 2
+        },
+        {
+          "source": "Bollensen (O",
+          "count": 2
+        },
+        {
+          "source": "〔10",
+          "count": 2
+        },
+        {
+          "source": "Bollensen in Orient und Occ",
+          "count": 2
+        },
+        {
+          "source": "Bollens",
+          "count": 2
+        },
+        {
+          "source": "Delbr",
+          "count": 2
+        },
+        {
+          "source": "Curt",
+          "count": 2
+        },
+        {
+          "source": "〔12",
+          "count": 2
+        },
+        {
+          "source": "Zeitschr",
+          "count": 2
+        },
+        {
+          "source": "Fick (〔p",
+          "count": 2
+        },
+        {
+          "source": "Padapāṭha",
+          "count": 2
+        },
+        {
+          "source": "C",
+          "count": 2
+        },
+        {
+          "source": "〔483〕",
+          "count": 2
+        },
+        {
+          "source": "Sonne in Ku",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "dict": "PWKVN",
+      "code": "pwkvn",
+      "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
+      "recordCount": 24976,
+      "recordsWithCitations": 13576,
+      "totalCitations": 17627,
+      "citationsPerRecord": 0.706,
+      "distinctSources": 1128,
+      "topSources": [
+        {
+          "source": "MAHĀVY",
+          "count": 831
+        },
+        {
+          "source": "Mahābhārata",
+          "count": 825
+        },
+        {
+          "source": "ĀPAST",
+          "count": 716
+        },
+        {
+          "source": "Divyāvadāna",
+          "count": 698
+        },
+        {
+          "source": "JĀTAKAM",
+          "count": 651
+        },
+        {
+          "source": "R",
+          "count": 561
+        },
+        {
+          "source": "MAITR",
+          "count": 520
+        },
+        {
+          "source": "ŚIŚ",
+          "count": 464
+        },
+        {
+          "source": "<ab>ebend",
+          "count": 381
+        },
+        {
+          "source": "<ab>Comm",
+          "count": 314
+        },
+        {
+          "source": "OPP",
+          "count": 278
+        },
+        {
+          "source": "Naiṣadhacarita",
+          "count": 236
+        },
+        {
+          "source": "Bhāgavata-purāṇa",
+          "count": 233
+        },
+        {
+          "source": "KIR",
+          "count": 230
+        },
+        {
+          "source": "HEM",
+          "count": 223
+        },
+        {
+          "source": "KAUŚ",
+          "count": 212
+        },
+        {
+          "source": "DAŚAK",
+          "count": 202
+        },
+        {
+          "source": "HEMĀDRI 1",
+          "count": 188
+        },
+        {
+          "source": "DHARMAŚARM",
+          "count": 184
+        },
+        {
+          "source": "TS",
+          "count": 158
+        },
+        {
+          "source": "ZACH",
+          "count": 154
+        },
+        {
+          "source": "M",
+          "count": 153
+        },
+        {
+          "source": "Nachtr",
+          "count": 152
+        },
+        {
+          "source": "ṚV",
+          "count": 147
+        },
+        {
+          "source": "Kathāsaritsāgara",
+          "count": 144
+        },
+        {
+          "source": "ŚĀṄKH",
+          "count": 143
+        },
+        {
+          "source": "Spr",
+          "count": 140
+        },
+        {
+          "source": "P",
+          "count": 136
+        },
+        {
+          "source": "VIṢṆUS",
+          "count": 129
+        },
+        {
+          "source": "DAMAYANTĪK",
+          "count": 128
+        },
+        {
+          "source": "HARIV",
+          "count": 119
+        },
+        {
+          "source": "MAHĀVĪRAC",
+          "count": 117
+        },
+        {
+          "source": "ŚAT",
+          "count": 113
+        },
+        {
+          "source": "SĀṂKHYAS",
+          "count": 110
+        },
+        {
+          "source": "Ind",
+          "count": 104
+        },
+        {
+          "source": "HARṢAC",
+          "count": 103
+        },
+        {
+          "source": "AV",
+          "count": 103
+        },
+        {
+          "source": "Suśruta-saṃhitā",
+          "count": 101
+        },
+        {
+          "source": "MĀN",
+          "count": 96
+        },
+        {
+          "source": "VĀSAV",
+          "count": 92
+        },
+        {
+          "source": "BHĀM",
+          "count": 86
+        },
+        {
+          "source": "ANIRUDDHA",
+          "count": 86
+        },
+        {
+          "source": "KĀŚĪKH",
+          "count": 78
+        },
+        {
+          "source": "AUFRECHT",
+          "count": 74
+        },
+        {
+          "source": "MĀLATĪM",
+          "count": 73
+        },
+        {
+          "source": "SĀY",
+          "count": 71
+        },
+        {
+          "source": "TĀṆḌYA-BR",
+          "count": 70
+        },
+        {
+          "source": "KĀTY",
+          "count": 69
+        },
+        {
+          "source": "BAUDH",
+          "count": 69
+        },
+        {
+          "source": "SUBHĀṢITĀV",
+          "count": 68
+        },
+        {
+          "source": "Z",
+          "count": 67
+        },
+        {
+          "source": "Festgr",
+          "count": 65
+        },
+        {
+          "source": "KAP",
+          "count": 63
+        },
+        {
+          "source": "Yājñavalkya-smṛti",
+          "count": 63
+        },
+        {
+          "source": "2",
+          "count": 63
+        },
+        {
+          "source": "VAJRACCH",
+          "count": 61
+        },
+        {
+          "source": "7",
+          "count": 59
+        },
+        {
+          "source": "Raghuvaṃśa",
+          "count": 58
+        },
+        {
+          "source": "6",
+          "count": 57
+        },
+        {
+          "source": "NĪLAK",
+          "count": 57
+        }
+      ]
+    },
+    {
+      "dict": "LAN",
+      "code": "lan",
+      "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
+      "recordCount": 4944,
+      "recordsWithCitations": 2546,
+      "totalCitations": 5912,
+      "citationsPerRecord": 1.196,
+      "distinctSources": 2573,
+      "topSources": [
+        {
+          "source": "1150",
+          "count": 47
+        },
+        {
+          "source": "1211",
+          "count": 33
+        },
+        {
+          "source": "1157",
+          "count": 32
+        },
+        {
+          "source": "216",
+          "count": 30
+        },
+        {
+          "source": "1208f",
+          "count": 28
+        },
+        {
+          "source": "1148",
+          "count": 24
+        },
+        {
+          "source": "1302c",
+          "count": 24
+        },
+        {
+          "source": "1176a",
+          "count": 24
+        },
+        {
+          "source": "1041<sup>2</sup>",
+          "count": 22
+        },
+        {
+          "source": "1183<sup>3</sup>",
+          "count": 21
+        },
+        {
+          "source": "125",
+          "count": 21
+        },
+        {
+          "source": "1310a",
+          "count": 19
+        },
+        {
+          "source": "352]",
+          "count": 19
+        },
+        {
+          "source": "1280b",
+          "count": 19
+        },
+        {
+          "source": "1249a",
+          "count": 18
+        },
+        {
+          "source": "1155",
+          "count": 18
+        },
+        {
+          "source": "1305",
+          "count": 17
+        },
+        {
+          "source": "1151",
+          "count": 17
+        },
+        {
+          "source": "1233",
+          "count": 15
+        },
+        {
+          "source": "333",
+          "count": 15
+        },
+        {
+          "source": "334<sup>2</sup>",
+          "count": 15
+        },
+        {
+          "source": "491",
+          "count": 15
+        },
+        {
+          "source": "1249a<sup>2</sup>",
+          "count": 15
+        },
+        {
+          "source": "1253b",
+          "count": 14
+        },
+        {
+          "source": "1239",
+          "count": 14
+        },
+        {
+          "source": "1212d",
+          "count": 14
+        },
+        {
+          "source": "1208c",
+          "count": 14
+        },
+        {
+          "source": "955a",
+          "count": 14
+        },
+        {
+          "source": "1304a",
+          "count": 13
+        },
+        {
+          "source": "1208a",
+          "count": 13
+        },
+        {
+          "source": "1302",
+          "count": 13
+        },
+        {
+          "source": "1168",
+          "count": 13
+        },
+        {
+          "source": "1304b",
+          "count": 13
+        },
+        {
+          "source": "1058",
+          "count": 12
+        },
+        {
+          "source": "954c",
+          "count": 12
+        },
+        {
+          "source": "1315c",
+          "count": 12
+        },
+        {
+          "source": "761d",
+          "count": 12
+        },
+        {
+          "source": "1304c",
+          "count": 12
+        },
+        {
+          "source": "108g",
+          "count": 11
+        },
+        {
+          "source": "252",
+          "count": 11
+        },
+        {
+          "source": "1188a",
+          "count": 11
+        },
+        {
+          "source": "1107",
+          "count": 10
+        },
+        {
+          "source": "1289a",
+          "count": 10
+        },
+        {
+          "source": "1237",
+          "count": 10
+        },
+        {
+          "source": "1177a",
+          "count": 10
+        },
+        {
+          "source": "1222e",
+          "count": 10
+        },
+        {
+          "source": "1166",
+          "count": 10
+        },
+        {
+          "source": "1264",
+          "count": 10
+        },
+        {
+          "source": "1267a",
+          "count": 10
+        },
+        {
+          "source": "1311]",
+          "count": 10
+        },
+        {
+          "source": "794e",
+          "count": 10
+        },
+        {
+          "source": "1279",
+          "count": 10
+        },
+        {
+          "source": "1313b",
+          "count": 10
+        },
+        {
+          "source": "1298c",
+          "count": 10
+        },
+        {
+          "source": "1098b",
+          "count": 9
+        },
+        {
+          "source": "474",
+          "count": 9
+        },
+        {
+          "source": "1130]",
+          "count": 9
+        },
+        {
+          "source": "1307",
+          "count": 9
+        },
+        {
+          "source": "1111d",
+          "count": 9
+        },
+        {
+          "source": "628]",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "dict": "LRV",
+      "code": "lrv",
+      "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
+      "recordCount": 53441,
+      "recordsWithCitations": 9086,
+      "totalCitations": 16650,
+      "citationsPerRecord": 0.312,
+      "distinctSources": 156,
+      "topSources": [
+        {
+          "source": "R",
+          "count": 4159
+        },
+        {
+          "source": "M",
+          "count": 2089
+        },
+        {
+          "source": "K",
+          "count": 1694
+        },
+        {
+          "source": "Megh",
+          "count": 904
+        },
+        {
+          "source": "Sis",
+          "count": 750
+        },
+        {
+          "source": "Sak",
+          "count": 694
+        },
+        {
+          "source": "Bt",
+          "count": 689
+        },
+        {
+          "source": "Bg",
+          "count": 688
+        },
+        {
+          "source": "Yaj",
+          "count": 407
+        },
+        {
+          "source": "Kir",
+          "count": 386
+        },
+        {
+          "source": "Bh",
+          "count": 382
+        },
+        {
+          "source": "Bhartr",
+          "count": 381
+        },
+        {
+          "source": "Git",
+          "count": 340
+        },
+        {
+          "source": "Am",
+          "count": 285
+        },
+        {
+          "source": "Rt",
+          "count": 231
+        },
+        {
+          "source": "S",
+          "count": 204
+        },
+        {
+          "source": "Mrich",
+          "count": 204
+        },
+        {
+          "source": "Vikr",
+          "count": 184
+        },
+        {
+          "source": "Ut",
+          "count": 181
+        },
+        {
+          "source": "Ve",
+          "count": 179
+        },
+        {
+          "source": "Na",
+          "count": 159
+        },
+        {
+          "source": "Hit",
+          "count": 116
+        },
+        {
+          "source": "Pañcatantra",
+          "count": 108
+        },
+        {
+          "source": "Mal",
+          "count": 89
+        },
+        {
+          "source": "Mall",
+          "count": 83
+        },
+        {
+          "source": "Mud",
+          "count": 80
+        },
+        {
+          "source": "Sant",
+          "count": 76
+        },
+        {
+          "source": "Kad",
+          "count": 74
+        },
+        {
+          "source": "D",
+          "count": 67
+        },
+        {
+          "source": "Ud",
+          "count": 64
+        },
+        {
+          "source": "G",
+          "count": 58
+        },
+        {
+          "source": "Sr",
+          "count": 57
+        },
+        {
+          "source": "Ram",
+          "count": 55
+        },
+        {
+          "source": "Mv",
+          "count": 54
+        },
+        {
+          "source": "Ch",
+          "count": 47
+        },
+        {
+          "source": "Ghat",
+          "count": 32
+        },
+        {
+          "source": "Pan",
+          "count": 28
+        },
+        {
+          "source": "Cāṇakya",
+          "count": 23
+        },
+        {
+          "source": "Pr",
+          "count": 18
+        },
+        {
+          "source": "Mit",
+          "count": 16
+        },
+        {
+          "source": "Rat",
+          "count": 16
+        },
+        {
+          "source": "Vas",
+          "count": 16
+        },
+        {
+          "source": "Nal",
+          "count": 15
+        },
+        {
+          "source": "Kull",
+          "count": 14
+        },
+        {
+          "source": "Jag",
+          "count": 12
+        },
+        {
+          "source": "T",
+          "count": 11
+        },
+        {
+          "source": "Asv",
+          "count": 10
+        },
+        {
+          "source": "P",
+          "count": 9
+        },
+        {
+          "source": "Śankara",
+          "count": 8
+        },
+        {
+          "source": "Sank",
+          "count": 8
+        },
+        {
+          "source": "Kat",
+          "count": 7
+        },
+        {
+          "source": "Kāśikā",
+          "count": 7
+        },
+        {
+          "source": "Suśruta",
+          "count": 7
+        },
+        {
+          "source": "Mahimastotra",
+          "count": 5
+        },
+        {
+          "source": "Bṛhaspati",
+          "count": 5
+        },
+        {
+          "source": "Chandrāloka",
+          "count": 5
+        },
+        {
+          "source": "Katho",
+          "count": 4
+        },
+        {
+          "source": "Uśanas",
+          "count": 4
+        },
+        {
+          "source": "Śikshā",
+          "count": 4
+        },
+        {
+          "source": "Govardhana",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "dict": "AP90",
+      "code": "ap90",
+      "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
+      "recordCount": 34882,
+      "recordsWithCitations": 10867,
+      "totalCitations": 43892,
+      "citationsPerRecord": 1.258,
+      "distinctSources": 607,
+      "topSources": [
+        {
+          "source": "R",
+          "count": 5362
+        },
+        {
+          "source": "Ś",
+          "count": 2814
+        },
+        {
+          "source": "Ms",
+          "count": 2685
+        },
+        {
+          "source": "Ku",
+          "count": 2298
+        },
+        {
+          "source": "Śi",
+          "count": 2079
+        },
+        {
+          "source": "Pt",
+          "count": 1508
+        },
+        {
+          "source": "U",
+          "count": 1464
+        },
+        {
+          "source": "K",
+          "count": 1384
+        },
+        {
+          "source": "Māl",
+          "count": 1286
+        },
+        {
+          "source": "Ki",
+          "count": 1224
+        },
+        {
+          "source": "Me",
+          "count": 1047
+        },
+        {
+          "source": "Bk",
+          "count": 1012
+        },
+        {
+          "source": "Bg",
+          "count": 885
+        },
+        {
+          "source": "Bh",
+          "count": 877
+        },
+        {
+          "source": "V",
+          "count": 818
+        },
+        {
+          "source": "Y",
+          "count": 809
+        },
+        {
+          "source": "P",
+          "count": 677
+        },
+        {
+          "source": "H",
+          "count": 653
+        },
+        {
+          "source": "Mu",
+          "count": 645
+        },
+        {
+          "source": "M",
+          "count": 621
+        },
+        {
+          "source": "Mk",
+          "count": 525
+        },
+        {
+          "source": "Bv",
+          "count": 522
+        },
+        {
+          "source": "Dk",
+          "count": 507
+        },
+        {
+          "source": "Uṇ",
+          "count": 485
+        },
+        {
+          "source": "Sk",
+          "count": 456
+        },
+        {
+          "source": "Gīt",
+          "count": 451
+        },
+        {
+          "source": "Mv",
+          "count": 435
+        },
+        {
+          "source": "Mb",
+          "count": 406
+        },
+        {
+          "source": "Ve",
+          "count": 387
+        },
+        {
+          "source": "Rām",
+          "count": 356
+        },
+        {
+          "source": "3",
+          "count": 328
+        },
+        {
+          "source": "5",
+          "count": 318
+        },
+        {
+          "source": "Tv",
+          "count": 308
+        },
+        {
+          "source": "N",
+          "count": 296
+        },
+        {
+          "source": "4",
+          "count": 256
+        },
+        {
+          "source": "9",
+          "count": 253
+        },
+        {
+          "source": "2",
+          "count": 244
+        },
+        {
+          "source": "7",
+          "count": 241
+        },
+        {
+          "source": "6",
+          "count": 238
+        },
+        {
+          "source": "Amaru",
+          "count": 224
+        },
+        {
+          "source": "12",
+          "count": 215
+        },
+        {
+          "source": "Rs",
+          "count": 204
+        },
+        {
+          "source": "Rv",
+          "count": 203
+        },
+        {
+          "source": "8",
+          "count": 188
+        },
+        {
+          "source": "Subhāṣ",
+          "count": 187
+        },
+        {
+          "source": "1",
+          "count": 183
+        },
+        {
+          "source": "14",
+          "count": 177
+        },
+        {
+          "source": "11",
+          "count": 176
+        },
+        {
+          "source": "Ratn",
+          "count": 168
+        },
+        {
+          "source": "15",
+          "count": 156
+        },
+        {
+          "source": "10",
+          "count": 150
+        },
+        {
+          "source": "16",
+          "count": 137
+        },
+        {
+          "source": "Malli",
+          "count": 133
+        },
+        {
+          "source": "Ak",
+          "count": 125
+        },
+        {
+          "source": "13",
+          "count": 121
+        },
+        {
+          "source": "17",
+          "count": 118
+        },
+        {
+          "source": "18",
+          "count": 117
+        },
+        {
+          "source": "Śānti",
+          "count": 86
+        },
+        {
+          "source": "Vikr",
+          "count": 85
+        },
+        {
+          "source": "Suśruta-saṃhitā",
+          "count": 84
+        }
+      ]
+    },
+    {
+      "dict": "SCH",
+      "code": "sch",
+      "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
+      "recordCount": 29125,
+      "recordsWithCitations": 26034,
+      "totalCitations": 31041,
+      "citationsPerRecord": 1.066,
+      "distinctSources": 716,
+      "topSources": [
+        {
+          "source": "S I",
+          "count": 3320
+        },
+        {
+          "source": "S II",
+          "count": 1945
+        },
+        {
+          "source": "Kauṭ",
+          "count": 1368
+        },
+        {
+          "source": "Śrīk",
+          "count": 1080
+        },
+        {
+          "source": "Harṣac",
+          "count": 884
+        },
+        {
+          "source": "Mahāvy",
+          "count": 884
+        },
+        {
+          "source": "Āpast",
+          "count": 853
+        },
+        {
+          "source": "Mahābhārata",
+          "count": 821
+        },
+        {
+          "source": "Divyāvadāna",
+          "count": 712
+        },
+        {
+          "source": "Prabandh",
+          "count": 691
+        },
+        {
+          "source": "Jātakam",
+          "count": 657
+        },
+        {
+          "source": "Yudh",
+          "count": 615
+        },
+        {
+          "source": "R",
+          "count": 565
+        },
+        {
+          "source": "Maitr",
+          "count": 521
+        },
+        {
+          "source": "Kir",
+          "count": 501
+        },
+        {
+          "source": "Śiś",
+          "count": 488
+        },
+        {
+          "source": "Opp",
+          "count": 464
+        },
+        {
+          "source": "Kauś",
+          "count": 446
+        },
+        {
+          "source": "Padyac",
+          "count": 378
+        },
+        {
+          "source": "H",
+          "count": 329
+        },
+        {
+          "source": "Hem",
+          "count": 282
+        },
+        {
+          "source": "J",
+          "count": 265
+        },
+        {
+          "source": "H 43",
+          "count": 264
+        },
+        {
+          "source": "Vās",
+          "count": 252
+        },
+        {
+          "source": "Naiṣadhacarita",
+          "count": 246
+        },
+        {
+          "source": "Śuk",
+          "count": 239
+        },
+        {
+          "source": "Bhāgavata-purāṇa",
+          "count": 235
+        },
+        {
+          "source": "Daśak",
+          "count": 216
+        },
+        {
+          "source": "Viṣṇubh",
+          "count": 206
+        },
+        {
+          "source": "Dharmaśarm",
+          "count": 192
+        },
+        {
+          "source": "Rasas",
+          "count": 176
+        },
+        {
+          "source": "Damayantīk",
+          "count": 174
+        },
+        {
+          "source": "Daśar",
+          "count": 169
+        },
+        {
+          "source": "TS",
+          "count": 166
+        },
+        {
+          "source": "Śṛṅgt",
+          "count": 163
+        },
+        {
+          "source": "M",
+          "count": 159
+        },
+        {
+          "source": "Muk",
+          "count": 150
+        },
+        {
+          "source": "ṚV",
+          "count": 149
+        },
+        {
+          "source": "Zach",
+          "count": 148
+        },
+        {
+          "source": "Kathāsaritsāgara",
+          "count": 147
+        },
+        {
+          "source": "P",
+          "count": 146
+        },
+        {
+          "source": "Spr",
+          "count": 144
+        },
+        {
+          "source": "Śāṅkh",
+          "count": 143
+        },
+        {
+          "source": "Govardh",
+          "count": 138
+        },
+        {
+          "source": "Praty",
+          "count": 133
+        },
+        {
+          "source": "Viṣṇus",
+          "count": 132
+        },
+        {
+          "source": "Mahāvīrac",
+          "count": 122
+        },
+        {
+          "source": "Hariv",
+          "count": 119
+        },
+        {
+          "source": "Śat",
+          "count": 117
+        },
+        {
+          "source": "Sūryaś",
+          "count": 117
+        },
+        {
+          "source": "Gopāl",
+          "count": 116
+        },
+        {
+          "source": "Kaṃs",
+          "count": 114
+        },
+        {
+          "source": "Sāṃkhyas",
+          "count": 111
+        },
+        {
+          "source": "Ind",
+          "count": 110
+        },
+        {
+          "source": "Pūrṇabh",
+          "count": 107
+        },
+        {
+          "source": "AV",
+          "count": 103
+        },
+        {
+          "source": "Suśruta-saṃhitā",
+          "count": 99
+        },
+        {
+          "source": "Vāsav",
+          "count": 98
+        },
+        {
+          "source": "Uttarar",
+          "count": 97
+        },
+        {
+          "source": "Kuṭṭ",
+          "count": 96
+        }
+      ]
+    },
+    {
+      "dict": "BHS",
+      "code": "bhs",
+      "method": "ls",
+      "methodId": "ls-source-citation",
+      "methodStatus": "supported",
+      "recordCount": 17839,
+      "recordsWithCitations": 16291,
+      "totalCitations": 48419,
+      "citationsPerRecord": 2.714,
+      "distinctSources": 622,
+      "topSources": [
+        {
+          "source": "Mv",
+          "count": 7174
+        },
+        {
+          "source": "Mvy",
+          "count": 4110
+        },
+        {
+          "source": "LV",
+          "count": 4052
+        },
+        {
+          "source": "Divyāvadāna",
+          "count": 3176
+        },
+        {
+          "source": "Gv",
+          "count": 3174
+        },
+        {
+          "source": "SP",
+          "count": 2206
+        },
+        {
+          "source": "Śikṣ",
+          "count": 1593
+        },
+        {
+          "source": "Senart",
+          "count": 1568
+        },
+        {
+          "source": "MSV",
+          "count": 1378
+        },
+        {
+          "source": "Bbh",
+          "count": 1217
+        },
+        {
+          "source": "Av",
+          "count": 1119
+        },
+        {
+          "source": "Mmk",
+          "count": 981
+        },
+        {
+          "source": "Māy",
+          "count": 746
+        },
+        {
+          "source": "Dbh",
+          "count": 670
+        },
+        {
+          "source": "Laṅk",
+          "count": 638
+        },
+        {
+          "source": "Kv",
+          "count": 556
+        },
+        {
+          "source": "BR",
+          "count": 525
+        },
+        {
+          "source": "RP",
+          "count": 470
+        },
+        {
+          "source": "Sukh",
+          "count": 464
+        },
+        {
+          "source": "Mironov",
+          "count": 435
+        },
+        {
+          "source": "PTSD",
+          "count": 429
+        },
+        {
+          "source": "Suv",
+          "count": 429
+        },
+        {
+          "source": "ŚsP",
+          "count": 420
+        },
+        {
+          "source": "Sādh",
+          "count": 420
+        },
+        {
+          "source": "Dharmas",
+          "count": 382
+        },
+        {
+          "source": "pw",
+          "count": 372
+        },
+        {
+          "source": "Jm",
+          "count": 345
+        },
+        {
+          "source": "Karmav",
+          "count": 325
+        },
+        {
+          "source": "AsP",
+          "count": 318
+        },
+        {
+          "source": "KP",
+          "count": 318
+        },
+        {
+          "source": "Lefm",
+          "count": 311
+        },
+        {
+          "source": "Vin",
+          "count": 264
+        },
+        {
+          "source": "CPD",
+          "count": 256
+        },
+        {
+          "source": "Ud",
+          "count": 239
+        },
+        {
+          "source": "Bhīk",
+          "count": 235
+        },
+        {
+          "source": "Samādh",
+          "count": 231
+        },
+        {
+          "source": "Childers",
+          "count": 211
+        },
+        {
+          "source": "Jāt",
+          "count": 204
+        },
+        {
+          "source": "Prāt",
+          "count": 202
+        },
+        {
+          "source": "Das",
+          "count": 192
+        },
+        {
+          "source": "Burnouf",
+          "count": 176
+        },
+        {
+          "source": "WT",
+          "count": 170
+        },
+        {
+          "source": "Kashgar rec",
+          "count": 167
+        },
+        {
+          "source": "DPPN",
+          "count": 161
+        },
+        {
+          "source": "DN",
+          "count": 157
+        },
+        {
+          "source": "Sn",
+          "count": 157
+        },
+        {
+          "source": "Schmidt",
+          "count": 157
+        },
+        {
+          "source": "Sheth",
+          "count": 146
+        },
+        {
+          "source": "Lévi",
+          "count": 145
+        },
+        {
+          "source": "Foucaux",
+          "count": 142
+        },
+        {
+          "source": "AbhidhK",
+          "count": 140
+        },
+        {
+          "source": "Kern",
+          "count": 137
+        },
+        {
+          "source": "Ratnach",
+          "count": 135
+        },
+        {
+          "source": "Dhp",
+          "count": 127
+        },
+        {
+          "source": "Suzuki",
+          "count": 125
+        },
+        {
+          "source": "MPS",
+          "count": 119
+        },
+        {
+          "source": "MN",
+          "count": 118
+        },
+        {
+          "source": "Speyer",
+          "count": 108
+        },
+        {
+          "source": "Vaj",
+          "count": 98
+        },
+        {
+          "source": "Sūtrāl",
+          "count": 92
+        }
+      ]
+    },
+    {
+      "dict": "SKD",
+      "code": "skd",
       "method": "iti",
+      "methodId": "iti-prose-proxy",
+      "methodStatus": "partial",
+      "recordCount": 42531,
+      "recordsWithCitations": 37757,
+      "totalCitations": 80164,
+      "citationsPerRecord": 1.885,
+      "distinctSources": null,
+      "topSources": []
+    },
+    {
+      "dict": "WIL",
+      "code": "wil",
+      "method": "iti",
+      "methodId": "iti-prose-proxy",
+      "methodStatus": "weak",
       "recordCount": 44577,
       "recordsWithCitations": 12,
       "totalCitations": 13,
@@ -1027,21 +3738,14 @@
     },
     {
       "dict": "VCP",
+      "code": "vcp",
       "method": "iti",
+      "methodId": "iti-prose-proxy",
+      "methodStatus": "partial",
       "recordCount": 50135,
       "recordsWithCitations": 5055,
       "totalCitations": 15618,
       "citationsPerRecord": 0.312,
-      "distinctSources": null,
-      "topSources": []
-    },
-    {
-      "dict": "SKD",
-      "method": "iti",
-      "recordCount": 42531,
-      "recordsWithCitations": 37757,
-      "totalCitations": 80164,
-      "citationsPerRecord": 1.885,
       "distinctSources": null,
       "topSources": []
     }
@@ -1049,277 +3753,496 @@
   "sourceMatrix": [
     {
       "source": "Mahābhārata",
-      "total": 71597,
-      "dictsCiting": 4,
+      "total": 80759,
+      "dictsCiting": 10,
       "byDict": {
         "MW": 28058,
         "AP": 241,
         "PWG": 39124,
-        "PWK": 4174
+        "PWK": 4174,
+        "BEN": 7382,
+        "GRA": 1,
+        "PWKVN": 825,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 52,
+        "SCH": 821,
+        "BHS": 81
       }
     },
     {
       "source": "R",
-      "total": 45890,
-      "dictsCiting": 4,
+      "total": 56538,
+      "dictsCiting": 9,
       "byDict": {
         "MW": 10815,
         "AP": 5594,
         "PWG": 27747,
-        "PWK": 1734
+        "PWK": 1734,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 561,
+        "LAN": 0,
+        "LRV": 4159,
+        "AP90": 5362,
+        "SCH": 565,
+        "BHS": 1
       }
     },
     {
       "source": "L",
-      "total": 40628,
-      "dictsCiting": 3,
+      "total": 40629,
+      "dictsCiting": 4,
       "byDict": {
         "MW": 40213,
         "AP": 397,
         "PWG": 0,
-        "PWK": 18
+        "PWK": 18,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 1,
+        "SCH": 0,
+        "BHS": 0
       }
     },
     {
       "source": "ṚV",
-      "total": 39080,
-      "dictsCiting": 4,
+      "total": 39727,
+      "dictsCiting": 10,
       "byDict": {
         "MW": 15918,
         "AP": 1456,
         "PWG": 20122,
-        "PWK": 1584
+        "PWK": 1584,
+        "BEN": 0,
+        "GRA": 124,
+        "PWKVN": 147,
+        "LAN": 0,
+        "LRV": 2,
+        "AP90": 203,
+        "SCH": 149,
+        "BHS": 22
       }
     },
     {
       "source": "Bhāgavata-purāṇa",
-      "total": 34227,
-      "dictsCiting": 4,
+      "total": 37065,
+      "dictsCiting": 10,
       "byDict": {
         "MW": 9006,
         "AP": 2915,
         "PWG": 21239,
-        "PWK": 1067
+        "PWK": 1067,
+        "BEN": 2298,
+        "GRA": 0,
+        "PWKVN": 233,
+        "LAN": 0,
+        "LRV": 3,
+        "AP90": 51,
+        "SCH": 235,
+        "BHS": 18
       }
     },
     {
       "source": "H",
-      "total": 28046,
-      "dictsCiting": 3,
+      "total": 29058,
+      "dictsCiting": 7,
       "byDict": {
         "MW": 0,
         "AP": 730,
         "PWG": 27108,
-        "PWK": 208
+        "PWK": 208,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 28,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 653,
+        "SCH": 329,
+        "BHS": 2
       }
     },
     {
       "source": "P",
-      "total": 23308,
-      "dictsCiting": 3,
+      "total": 24313,
+      "dictsCiting": 9,
       "byDict": {
         "MW": 0,
         "AP": 1279,
         "PWG": 21498,
-        "PWK": 531
+        "PWK": 531,
+        "BEN": 0,
+        "GRA": 25,
+        "PWKVN": 136,
+        "LAN": 0,
+        "LRV": 9,
+        "AP90": 677,
+        "SCH": 146,
+        "BHS": 12
       }
     },
     {
       "source": "Kathāsaritsāgara",
-      "total": 22420,
-      "dictsCiting": 3,
+      "total": 23407,
+      "dictsCiting": 7,
       "byDict": {
         "MW": 6757,
         "AP": 0,
         "PWG": 14940,
-        "PWK": 723
-      }
-    },
-    {
-      "source": "ŚKDR",
-      "total": 20146,
-      "dictsCiting": 2,
-      "byDict": {
-        "MW": 0,
-        "AP": 0,
-        "PWG": 20129,
-        "PWK": 17
-      }
-    },
-    {
-      "source": "HARIV",
-      "total": 19044,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 6314,
-        "AP": 59,
-        "PWG": 11630,
-        "PWK": 1041
+        "PWK": 723,
+        "BEN": 692,
+        "GRA": 0,
+        "PWKVN": 144,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 147,
+        "BHS": 4
       }
     },
     {
       "source": "AV",
-      "total": 18561,
-      "dictsCiting": 4,
+      "total": 20186,
+      "dictsCiting": 9,
       "byDict": {
         "MW": 7238,
         "AP": 419,
         "PWG": 9965,
-        "PWK": 939
+        "PWK": 939,
+        "BEN": 0,
+        "GRA": 296,
+        "PWKVN": 103,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 4,
+        "SCH": 103,
+        "BHS": 1119
+      }
+    },
+    {
+      "source": "ŚKDR",
+      "total": 20159,
+      "dictsCiting": 4,
+      "byDict": {
+        "MW": 0,
+        "AP": 0,
+        "PWG": 20129,
+        "PWK": 17,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 7,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 6,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "HARIV",
+      "total": 19996,
+      "dictsCiting": 9,
+      "byDict": {
+        "MW": 6314,
+        "AP": 59,
+        "PWG": 11630,
+        "PWK": 1041,
+        "BEN": 690,
+        "GRA": 0,
+        "PWKVN": 119,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 21,
+        "SCH": 119,
+        "BHS": 3
       }
     },
     {
       "source": "Spr",
-      "total": 17874,
-      "dictsCiting": 2,
+      "total": 18159,
+      "dictsCiting": 5,
       "byDict": {
         "MW": 0,
         "AP": 0,
         "PWG": 14803,
-        "PWK": 3071
-      }
-    },
-    {
-      "source": "Verz",
-      "total": 16783,
-      "dictsCiting": 2,
-      "byDict": {
-        "MW": 0,
-        "AP": 0,
-        "PWG": 16535,
-        "PWK": 248
+        "PWK": 3071,
+        "BEN": 0,
+        "GRA": 1,
+        "PWKVN": 140,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 144,
+        "BHS": 0
       }
     },
     {
       "source": "Suśruta-saṃhitā",
-      "total": 16728,
-      "dictsCiting": 4,
+      "total": 17792,
+      "dictsCiting": 9,
       "byDict": {
         "MW": 6224,
         "AP": 180,
         "PWG": 9694,
-        "PWK": 630
+        "PWK": 630,
+        "BEN": 775,
+        "GRA": 0,
+        "PWKVN": 101,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 84,
+        "SCH": 99,
+        "BHS": 5
       }
     },
     {
-      "source": "AK",
-      "total": 14713,
-      "dictsCiting": 3,
-      "byDict": {
-        "MW": 0,
-        "AP": 187,
-        "PWG": 14475,
-        "PWK": 51
-      }
-    },
-    {
-      "source": "3",
-      "total": 14134,
+      "source": "Verz",
+      "total": 16849,
       "dictsCiting": 4,
       "byDict": {
-        "MW": 66,
-        "AP": 346,
-        "PWG": 13563,
-        "PWK": 159
+        "MW": 0,
+        "AP": 0,
+        "PWG": 16535,
+        "PWK": 248,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 33,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 33,
+        "BHS": 0
       }
     },
     {
       "source": "M",
-      "total": 13518,
-      "dictsCiting": 4,
+      "total": 16546,
+      "dictsCiting": 10,
       "byDict": {
         "MW": 1,
         "AP": 631,
         "PWG": 12362,
-        "PWK": 524
+        "PWK": 524,
+        "BEN": 0,
+        "GRA": 4,
+        "PWKVN": 153,
+        "LAN": 0,
+        "LRV": 2089,
+        "AP90": 621,
+        "SCH": 159,
+        "BHS": 2
+      }
+    },
+    {
+      "source": "AK",
+      "total": 14854,
+      "dictsCiting": 7,
+      "byDict": {
+        "MW": 0,
+        "AP": 187,
+        "PWG": 14475,
+        "PWK": 51,
+        "BEN": 0,
+        "GRA": 1,
+        "PWKVN": 8,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 125,
+        "SCH": 7,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "3",
+      "total": 14524,
+      "dictsCiting": 8,
+      "byDict": {
+        "MW": 66,
+        "AP": 346,
+        "PWG": 13563,
+        "PWK": 159,
+        "BEN": 0,
+        "GRA": 1,
+        "PWKVN": 50,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 328,
+        "SCH": 11,
+        "BHS": 0
       }
     },
     {
       "source": "MED",
-      "total": 13178,
-      "dictsCiting": 3,
+      "total": 13222,
+      "dictsCiting": 6,
       "byDict": {
         "MW": 0,
         "AP": 56,
         "PWG": 13057,
-        "PWK": 65
+        "PWK": 65,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 6,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 4,
+        "SCH": 34,
+        "BHS": 0
       }
     },
     {
       "source": "RĀJAN",
-      "total": 12553,
-      "dictsCiting": 3,
+      "total": 12658,
+      "dictsCiting": 5,
       "byDict": {
         "MW": 1,
         "AP": 0,
         "PWG": 6667,
-        "PWK": 5885
-      }
-    },
-    {
-      "source": "ŚAT",
-      "total": 11877,
-      "dictsCiting": 3,
-      "byDict": {
-        "MW": 0,
-        "AP": 98,
-        "PWG": 10608,
-        "PWK": 1171
-      }
-    },
-    {
-      "source": "5",
-      "total": 11666,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 63,
-        "AP": 342,
-        "PWG": 11105,
-        "PWK": 156
+        "PWK": 5885,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 53,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 52,
+        "BHS": 0
       }
     },
     {
       "source": "Rājataraṅgiṇī",
-      "total": 10988,
-      "dictsCiting": 3,
+      "total": 12436,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 3410,
         "AP": 0,
         "PWG": 7132,
-        "PWK": 446
+        "PWK": 446,
+        "BEN": 1308,
+        "GRA": 0,
+        "PWKVN": 49,
+        "LAN": 0,
+        "LRV": 3,
+        "AP90": 0,
+        "SCH": 73,
+        "BHS": 15
       }
     },
     {
-      "source": "4",
-      "total": 10966,
-      "dictsCiting": 4,
+      "source": "ŚAT",
+      "total": 12190,
+      "dictsCiting": 8,
       "byDict": {
-        "MW": 67,
-        "AP": 270,
-        "PWG": 10512,
-        "PWK": 117
+        "MW": 0,
+        "AP": 98,
+        "PWG": 10608,
+        "PWK": 1171,
+        "BEN": 0,
+        "GRA": 18,
+        "PWKVN": 113,
+        "LAN": 0,
+        "LRV": 2,
+        "AP90": 63,
+        "SCH": 117,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "5",
+      "total": 12051,
+      "dictsCiting": 8,
+      "byDict": {
+        "MW": 63,
+        "AP": 342,
+        "PWG": 11105,
+        "PWK": 156,
+        "BEN": 0,
+        "GRA": 1,
+        "PWKVN": 51,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 318,
+        "SCH": 15,
+        "BHS": 0
       }
     },
     {
       "source": "Raghuvaṃśa",
-      "total": 10680,
-      "dictsCiting": 3,
+      "total": 11726,
+      "dictsCiting": 7,
       "byDict": {
         "MW": 2655,
         "AP": 0,
         "PWG": 7738,
-        "PWK": 287
+        "PWK": 287,
+        "BEN": 927,
+        "GRA": 0,
+        "PWKVN": 58,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 60,
+        "BHS": 1
+      }
+    },
+    {
+      "source": "4",
+      "total": 11268,
+      "dictsCiting": 8,
+      "byDict": {
+        "MW": 67,
+        "AP": 270,
+        "PWG": 10512,
+        "PWK": 117,
+        "BEN": 0,
+        "GRA": 1,
+        "PWKVN": 34,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 256,
+        "SCH": 11,
+        "BHS": 0
       }
     },
     {
       "source": "6",
-      "total": 10374,
-      "dictsCiting": 4,
+      "total": 10685,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 61,
         "AP": 269,
         "PWG": 9869,
-        "PWK": 175
+        "PWK": 175,
+        "BEN": 0,
+        "GRA": 3,
+        "PWKVN": 57,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 238,
+        "SCH": 13,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "Pañcatantra",
+      "total": 10279,
+      "dictsCiting": 7,
+      "byDict": {
+        "MW": 2670,
+        "AP": 0,
+        "PWG": 7084,
+        "PWK": 346,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 35,
+        "LAN": 0,
+        "LRV": 108,
+        "AP90": 0,
+        "SCH": 35,
+        "BHS": 1
       }
     },
     {
@@ -1330,106 +4253,205 @@
         "MW": 10100,
         "AP": 0,
         "PWG": 0,
-        "PWK": 0
-      }
-    },
-    {
-      "source": "Pañcatantra",
-      "total": 10100,
-      "dictsCiting": 3,
-      "byDict": {
-        "MW": 2670,
-        "AP": 0,
-        "PWG": 7084,
-        "PWK": 346
-      }
-    },
-    {
-      "source": "VARĀH",
-      "total": 9448,
-      "dictsCiting": 2,
-      "byDict": {
-        "MW": 0,
-        "AP": 0,
-        "PWG": 8788,
-        "PWK": 660
+        "PWK": 0,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 0,
+        "BHS": 0
       }
     },
     {
       "source": "2",
-      "total": 9434,
-      "dictsCiting": 4,
+      "total": 9747,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 56,
         "AP": 274,
         "PWG": 8912,
-        "PWK": 192
+        "PWK": 192,
+        "BEN": 0,
+        "GRA": 1,
+        "PWKVN": 63,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 244,
+        "SCH": 5,
+        "BHS": 0
       }
     },
     {
       "source": "7",
-      "total": 9355,
-      "dictsCiting": 4,
+      "total": 9669,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 45,
         "AP": 267,
         "PWG": 8889,
-        "PWK": 154
+        "PWK": 154,
+        "BEN": 0,
+        "GRA": 4,
+        "PWKVN": 59,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 241,
+        "SCH": 10,
+        "BHS": 0
       }
     },
     {
-      "source": "VS",
-      "total": 9044,
-      "dictsCiting": 3,
+      "source": "VARĀH",
+      "total": 9574,
+      "dictsCiting": 6,
       "byDict": {
-        "MW": 2998,
+        "MW": 0,
         "AP": 0,
-        "PWG": 5811,
-        "PWK": 235
+        "PWG": 8788,
+        "PWK": 660,
+        "BEN": 20,
+        "GRA": 0,
+        "PWKVN": 51,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 54,
+        "BHS": 1
       }
     },
     {
       "source": "TS",
-      "total": 8884,
-      "dictsCiting": 4,
+      "total": 9227,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 3207,
         "AP": 19,
         "PWG": 4928,
-        "PWK": 730
+        "PWK": 730,
+        "BEN": 0,
+        "GRA": 17,
+        "PWKVN": 158,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 166,
+        "BHS": 2
+      }
+    },
+    {
+      "source": "VS",
+      "total": 9141,
+      "dictsCiting": 7,
+      "byDict": {
+        "MW": 2998,
+        "AP": 0,
+        "PWG": 5811,
+        "PWK": 235,
+        "BEN": 0,
+        "GRA": 67,
+        "PWKVN": 13,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 13,
+        "BHS": 4
       }
     },
     {
       "source": "8",
-      "total": 8650,
-      "dictsCiting": 4,
+      "total": 8894,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 48,
         "AP": 201,
         "PWG": 8282,
-        "PWK": 119
+        "PWK": 119,
+        "BEN": 0,
+        "GRA": 2,
+        "PWKVN": 45,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 188,
+        "SCH": 9,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "ŚĀK",
+      "total": 8728,
+      "dictsCiting": 8,
+      "byDict": {
+        "MW": 1498,
+        "AP": 0,
+        "PWG": 5210,
+        "PWK": 187,
+        "BEN": 1092,
+        "GRA": 0,
+        "PWKVN": 22,
+        "LAN": 0,
+        "LRV": 694,
+        "AP90": 0,
+        "SCH": 24,
+        "BHS": 1
       }
     },
     {
       "source": "Pāṇ",
-      "total": 8527,
-      "dictsCiting": 1,
+      "total": 8640,
+      "dictsCiting": 5,
       "byDict": {
         "MW": 8527,
         "AP": 0,
         "PWG": 0,
-        "PWK": 0
+        "PWK": 0,
+        "BEN": 46,
+        "GRA": 16,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 28,
+        "AP90": 0,
+        "SCH": 0,
+        "BHS": 23
+      }
+    },
+    {
+      "source": "Ind",
+      "total": 8512,
+      "dictsCiting": 8,
+      "byDict": {
+        "MW": 1,
+        "AP": 3,
+        "PWG": 6076,
+        "PWK": 2196,
+        "BEN": 11,
+        "GRA": 0,
+        "PWKVN": 104,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 110,
+        "BHS": 11
       }
     },
     {
       "source": "TRIK",
-      "total": 8426,
-      "dictsCiting": 3,
+      "total": 8489,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 0,
         "AP": 13,
         "PWG": 8365,
-        "PWK": 48
+        "PWK": 48,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 4,
+        "LAN": 0,
+        "LRV": 2,
+        "AP90": 10,
+        "SCH": 31,
+        "BHS": 16
       }
     },
     {
@@ -1440,40 +4462,148 @@
         "MW": 8286,
         "AP": 0,
         "PWG": 1,
-        "PWK": 0
-      }
-    },
-    {
-      "source": "Ind",
-      "total": 8276,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 1,
-        "AP": 3,
-        "PWG": 6076,
-        "PWK": 2196
+        "PWK": 0,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 0,
+        "BHS": 0
       }
     },
     {
       "source": "10",
-      "total": 8068,
-      "dictsCiting": 4,
+      "total": 8279,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 42,
         "AP": 170,
         "PWG": 7747,
-        "PWK": 109
+        "PWK": 109,
+        "BEN": 0,
+        "GRA": 2,
+        "PWKVN": 48,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 150,
+        "SCH": 11,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "Mv",
+      "total": 8253,
+      "dictsCiting": 4,
+      "byDict": {
+        "MW": 0,
+        "AP": 590,
+        "PWG": 0,
+        "PWK": 0,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 54,
+        "AP90": 435,
+        "SCH": 0,
+        "BHS": 7174
+      }
+    },
+    {
+      "source": "Rām",
+      "total": 7982,
+      "dictsCiting": 8,
+      "byDict": {
+        "MW": 1,
+        "AP": 2407,
+        "PWG": 1,
+        "PWK": 1,
+        "BEN": 5146,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 55,
+        "AP90": 356,
+        "SCH": 0,
+        "BHS": 15
+      }
+    },
+    {
+      "source": "S I",
+      "total": 7971,
+      "dictsCiting": 3,
+      "byDict": {
+        "MW": 0,
+        "AP": 2572,
+        "PWG": 0,
+        "PWK": 0,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 2079,
+        "SCH": 3320,
+        "BHS": 0
       }
     },
     {
       "source": "VP",
-      "total": 7321,
-      "dictsCiting": 4,
+      "total": 7393,
+      "dictsCiting": 6,
       "byDict": {
         "MW": 2167,
         "AP": 1,
         "PWG": 3630,
-        "PWK": 1523
+        "PWK": 1523,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 37,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 35,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "Ms",
+      "total": 7167,
+      "dictsCiting": 4,
+      "byDict": {
+        "MW": 0,
+        "AP": 4479,
+        "PWG": 0,
+        "PWK": 0,
+        "BEN": 0,
+        "GRA": 1,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 2685,
+        "SCH": 0,
+        "BHS": 2
+      }
+    },
+    {
+      "source": "Mn",
+      "total": 7128,
+      "dictsCiting": 2,
+      "byDict": {
+        "MW": 7010,
+        "AP": 0,
+        "PWG": 0,
+        "PWK": 0,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 0,
+        "BHS": 118
       }
     },
     {
@@ -1484,231 +4614,291 @@
         "MW": 7029,
         "AP": 0,
         "PWG": 0,
-        "PWK": 0
-      }
-    },
-    {
-      "source": "Mn",
-      "total": 7010,
-      "dictsCiting": 1,
-      "byDict": {
-        "MW": 7010,
-        "AP": 0,
-        "PWG": 0,
-        "PWK": 0
-      }
-    },
-    {
-      "source": "ŚĀK",
-      "total": 6895,
-      "dictsCiting": 3,
-      "byDict": {
-        "MW": 1498,
-        "AP": 0,
-        "PWG": 5210,
-        "PWK": 187
+        "PWK": 0,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 0,
+        "BHS": 0
       }
     },
     {
       "source": "9",
-      "total": 6609,
-      "dictsCiting": 4,
+      "total": 6914,
+      "dictsCiting": 8,
       "byDict": {
         "MW": 40,
         "AP": 267,
         "PWG": 6182,
-        "PWK": 120
-      }
-    },
-    {
-      "source": "1",
-      "total": 6350,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 18,
-        "AP": 206,
-        "PWG": 6055,
-        "PWK": 71
-      }
-    },
-    {
-      "source": "Yājñavalkya-smṛti",
-      "total": 6000,
-      "dictsCiting": 3,
-      "byDict": {
-        "MW": 2249,
-        "AP": 0,
-        "PWG": 3555,
-        "PWK": 196
-      }
-    },
-    {
-      "source": "VOP",
-      "total": 5870,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 763,
-        "AP": 17,
-        "PWG": 5041,
-        "PWK": 49
-      }
-    },
-    {
-      "source": "KĀTY",
-      "total": 5846,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 95,
-        "AP": 36,
-        "PWG": 5168,
-        "PWK": 547
-      }
-    },
-    {
-      "source": "MW",
-      "total": 5733,
-      "dictsCiting": 2,
-      "byDict": {
-        "MW": 5711,
-        "AP": 22,
-        "PWG": 0,
-        "PWK": 0
-      }
-    },
-    {
-      "source": "SĀH",
-      "total": 5522,
-      "dictsCiting": 3,
-      "byDict": {
-        "MW": 1790,
-        "AP": 0,
-        "PWG": 3541,
-        "PWK": 191
-      }
-    },
-    {
-      "source": "MĀRK",
-      "total": 5413,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 2,
-        "AP": 28,
-        "PWG": 5212,
-        "PWK": 171
-      }
-    },
-    {
-      "source": "Cat",
-      "total": 5397,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 5302,
-        "AP": 4,
-        "PWG": 61,
-        "PWK": 30
-      }
-    },
-    {
-      "source": "Halāyudha",
-      "total": 5149,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 3,
-        "AP": 6,
-        "PWG": 5116,
-        "PWK": 24
-      }
-    },
-    {
-      "source": "12",
-      "total": 5028,
-      "dictsCiting": 4,
-      "byDict": {
-        "MW": 44,
-        "AP": 233,
-        "PWG": 4636,
-        "PWK": 115
+        "PWK": 120,
+        "BEN": 0,
+        "GRA": 1,
+        "PWKVN": 39,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 253,
+        "SCH": 12,
+        "BHS": 0
       }
     },
     {
       "source": "HIT",
-      "total": 4847,
-      "dictsCiting": 3,
+      "total": 6813,
+      "dictsCiting": 7,
       "byDict": {
         "MW": 1512,
         "AP": 0,
         "PWG": 3276,
-        "PWK": 59
+        "PWK": 59,
+        "BEN": 1829,
+        "GRA": 0,
+        "PWKVN": 10,
+        "LAN": 0,
+        "LRV": 116,
+        "AP90": 0,
+        "SCH": 11,
+        "BHS": 0
       }
     },
     {
-      "source": "13",
-      "total": 4825,
-      "dictsCiting": 4,
+      "source": "Ś",
+      "total": 6789,
+      "dictsCiting": 8,
       "byDict": {
-        "MW": 26,
-        "AP": 133,
-        "PWG": 4559,
-        "PWK": 107
-      }
-    },
-    {
-      "source": "Kāv",
-      "total": 4763,
-      "dictsCiting": 2,
-      "byDict": {
-        "MW": 4667,
-        "AP": 96,
-        "PWG": 0,
-        "PWK": 0
+        "MW": 0,
+        "AP": 2925,
+        "PWG": 36,
+        "PWK": 759,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 17,
+        "LAN": 0,
+        "LRV": 204,
+        "AP90": 2814,
+        "SCH": 31,
+        "BHS": 3
       }
     },
     {
       "source": "Śiś",
-      "total": 4573,
-      "dictsCiting": 3,
+      "total": 6732,
+      "dictsCiting": 7,
       "byDict": {
         "MW": 1718,
         "AP": 0,
         "PWG": 1275,
-        "PWK": 1580
+        "PWK": 1580,
+        "BEN": 457,
+        "GRA": 0,
+        "PWKVN": 464,
+        "LAN": 0,
+        "LRV": 750,
+        "AP90": 0,
+        "SCH": 488,
+        "BHS": 0
       }
     },
     {
-      "source": "TBR",
-      "total": 4508,
-      "dictsCiting": 3,
-      "byDict": {
-        "MW": 1413,
-        "AP": 0,
-        "PWG": 2789,
-        "PWK": 306
-      }
-    },
-    {
-      "source": "Ms",
-      "total": 4479,
-      "dictsCiting": 1,
+      "source": "Man",
+      "total": 6620,
+      "dictsCiting": 6,
       "byDict": {
         "MW": 0,
-        "AP": 4479,
-        "PWG": 0,
-        "PWK": 0
+        "AP": 0,
+        "PWG": 10,
+        "PWK": 381,
+        "BEN": 6038,
+        "GRA": 0,
+        "PWKVN": 96,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 94,
+        "BHS": 1
       }
     },
     {
-      "source": "NIR",
-      "total": 4445,
-      "dictsCiting": 4,
+      "source": "Yājñavalkya-smṛti",
+      "total": 6603,
+      "dictsCiting": 7,
       "byDict": {
-        "MW": 1184,
-        "AP": 100,
-        "PWG": 3037,
-        "PWK": 124
+        "MW": 2249,
+        "AP": 0,
+        "PWG": 3555,
+        "PWK": 196,
+        "BEN": 477,
+        "GRA": 0,
+        "PWKVN": 63,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 62,
+        "BHS": 1
+      }
+    },
+    {
+      "source": "1",
+      "total": 6548,
+      "dictsCiting": 7,
+      "byDict": {
+        "MW": 18,
+        "AP": 206,
+        "PWG": 6055,
+        "PWK": 71,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 12,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 183,
+        "SCH": 3,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "Divyāvadāna",
+      "total": 6478,
+      "dictsCiting": 6,
+      "byDict": {
+        "MW": 1066,
+        "AP": 0,
+        "PWG": 13,
+        "PWK": 813,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 698,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 712,
+        "BHS": 3176
+      }
+    },
+    {
+      "source": "KĀTY",
+      "total": 6038,
+      "dictsCiting": 8,
+      "byDict": {
+        "MW": 95,
+        "AP": 36,
+        "PWG": 5168,
+        "PWK": 547,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 69,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 27,
+        "SCH": 95,
+        "BHS": 1
+      }
+    },
+    {
+      "source": "VOP",
+      "total": 5891,
+      "dictsCiting": 9,
+      "byDict": {
+        "MW": 763,
+        "AP": 17,
+        "PWG": 5041,
+        "PWK": 49,
+        "BEN": 1,
+        "GRA": 2,
+        "PWKVN": 2,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 14,
+        "SCH": 2,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "MW",
+      "total": 5745,
+      "dictsCiting": 3,
+      "byDict": {
+        "MW": 5711,
+        "AP": 22,
+        "PWG": 0,
+        "PWK": 0,
+        "BEN": 0,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 0,
+        "BHS": 12
+      }
+    },
+    {
+      "source": "MĀRK",
+      "total": 5653,
+      "dictsCiting": 9,
+      "byDict": {
+        "MW": 2,
+        "AP": 28,
+        "PWG": 5212,
+        "PWK": 171,
+        "BEN": 158,
+        "GRA": 0,
+        "PWKVN": 36,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 8,
+        "SCH": 36,
+        "BHS": 2
+      }
+    },
+    {
+      "source": "SĀH",
+      "total": 5651,
+      "dictsCiting": 6,
+      "byDict": {
+        "MW": 1790,
+        "AP": 0,
+        "PWG": 3541,
+        "PWK": 191,
+        "BEN": 56,
+        "GRA": 0,
+        "PWKVN": 36,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 37,
+        "BHS": 0
+      }
+    },
+    {
+      "source": "Cat",
+      "total": 5400,
+      "dictsCiting": 5,
+      "byDict": {
+        "MW": 5302,
+        "AP": 4,
+        "PWG": 61,
+        "PWK": 30,
+        "BEN": 3,
+        "GRA": 0,
+        "PWKVN": 0,
+        "LAN": 0,
+        "LRV": 0,
+        "AP90": 0,
+        "SCH": 0,
+        "BHS": 0
       }
     }
   ],
   "sourceOverlap": [
+    {
+      "a": "PWK",
+      "b": "PWKVN",
+      "sharedSources": 1103,
+      "jaccard": 0.5892
+    },
     {
       "a": "PWG",
       "b": "PWK",
@@ -1722,10 +4912,22 @@
       "jaccard": 0.0667
     },
     {
+      "a": "PWG",
+      "b": "PWKVN",
+      "sharedSources": 711,
+      "jaccard": 0.0506
+    },
+    {
       "a": "MW",
       "b": "PWK",
       "sharedSources": 595,
       "jaccard": 0.2055
+    },
+    {
+      "a": "AP",
+      "b": "AP90",
+      "sharedSources": 530,
+      "jaccard": 0.4715
     },
     {
       "a": "AP",
@@ -1734,22 +4936,365 @@
       "jaccard": 0.0372
     },
     {
+      "a": "PWG",
+      "b": "AP90",
+      "sharedSources": 477,
+      "jaccard": 0.0347
+    },
+    {
+      "a": "MW",
+      "b": "PWKVN",
+      "sharedSources": 469,
+      "jaccard": 0.2036
+    },
+    {
+      "a": "PWK",
+      "b": "SCH",
+      "sharedSources": 450,
+      "jaccard": 0.213
+    },
+    {
+      "a": "PWKVN",
+      "b": "SCH",
+      "sharedSources": 444,
+      "jaccard": 0.3171
+    },
+    {
       "a": "AP",
       "b": "PWK",
       "sharedSources": 422,
       "jaccard": 0.1707
     },
     {
+      "a": "PWK",
+      "b": "AP90",
+      "sharedSources": 392,
+      "jaccard": 0.1901
+    },
+    {
       "a": "MW",
       "b": "AP",
       "sharedSources": 387,
       "jaccard": 0.168
+    },
+    {
+      "a": "MW",
+      "b": "AP90",
+      "sharedSources": 344,
+      "jaccard": 0.1804
+    },
+    {
+      "a": "AP",
+      "b": "PWKVN",
+      "sharedSources": 339,
+      "jaccard": 0.1846
+    },
+    {
+      "a": "PWG",
+      "b": "LAN",
+      "sharedSources": 329,
+      "jaccard": 0.0207
+    },
+    {
+      "a": "PWKVN",
+      "b": "AP90",
+      "sharedSources": 329,
+      "jaccard": 0.234
+    },
+    {
+      "a": "PWG",
+      "b": "SCH",
+      "sharedSources": 326,
+      "jaccard": 0.0233
+    },
+    {
+      "a": "MW",
+      "b": "SCH",
+      "sharedSources": 282,
+      "jaccard": 0.1357
+    },
+    {
+      "a": "AP",
+      "b": "SCH",
+      "sharedSources": 159,
+      "jaccard": 0.0991
+    },
+    {
+      "a": "AP90",
+      "b": "SCH",
+      "sharedSources": 143,
+      "jaccard": 0.1212
+    },
+    {
+      "a": "PWG",
+      "b": "BHS",
+      "sharedSources": 109,
+      "jaccard": 0.0077
+    },
+    {
+      "a": "PWG",
+      "b": "GRA",
+      "sharedSources": 101,
+      "jaccard": 0.0074
+    },
+    {
+      "a": "PWK",
+      "b": "LAN",
+      "sharedSources": 101,
+      "jaccard": 0.0234
+    },
+    {
+      "a": "PWK",
+      "b": "BHS",
+      "sharedSources": 93,
+      "jaccard": 0.0391
+    },
+    {
+      "a": "MW",
+      "b": "LAN",
+      "sharedSources": 89,
+      "jaccard": 0.0216
+    },
+    {
+      "a": "PWG",
+      "b": "LRV",
+      "sharedSources": 88,
+      "jaccard": 0.0064
+    },
+    {
+      "a": "MW",
+      "b": "BHS",
+      "sharedSources": 87,
+      "jaccard": 0.0399
+    },
+    {
+      "a": "PWG",
+      "b": "BEN",
+      "sharedSources": 87,
+      "jaccard": 0.0064
+    },
+    {
+      "a": "PWKVN",
+      "b": "BHS",
+      "sharedSources": 81,
+      "jaccard": 0.0485
+    },
+    {
+      "a": "PWKVN",
+      "b": "LAN",
+      "sharedSources": 71,
+      "jaccard": 0.0196
+    },
+    {
+      "a": "PWK",
+      "b": "GRA",
+      "sharedSources": 69,
+      "jaccard": 0.0352
+    },
+    {
+      "a": "LRV",
+      "b": "AP90",
+      "sharedSources": 68,
+      "jaccard": 0.0978
+    },
+    {
+      "a": "PWK",
+      "b": "BEN",
+      "sharedSources": 66,
+      "jaccard": 0.0351
+    },
+    {
+      "a": "SCH",
+      "b": "BHS",
+      "sharedSources": 66,
+      "jaccard": 0.0519
+    },
+    {
+      "a": "MW",
+      "b": "BEN",
+      "sharedSources": 63,
+      "jaccard": 0.0375
+    },
+    {
+      "a": "GRA",
+      "b": "PWKVN",
+      "sharedSources": 63,
+      "jaccard": 0.0506
+    },
+    {
+      "a": "AP",
+      "b": "LRV",
+      "sharedSources": 60,
+      "jaccard": 0.0525
+    },
+    {
+      "a": "AP",
+      "b": "LAN",
+      "sharedSources": 59,
+      "jaccard": 0.0166
+    },
+    {
+      "a": "LAN",
+      "b": "AP90",
+      "sharedSources": 58,
+      "jaccard": 0.0186
+    },
+    {
+      "a": "AP",
+      "b": "BHS",
+      "sharedSources": 51,
+      "jaccard": 0.0315
+    },
+    {
+      "a": "BEN",
+      "b": "SCH",
+      "sharedSources": 50,
+      "jaccard": 0.0652
+    },
+    {
+      "a": "BEN",
+      "b": "PWKVN",
+      "sharedSources": 48,
+      "jaccard": 0.0406
+    },
+    {
+      "a": "PWK",
+      "b": "LRV",
+      "sharedSources": 47,
+      "jaccard": 0.024
+    },
+    {
+      "a": "MW",
+      "b": "GRA",
+      "sharedSources": 45,
+      "jaccard": 0.0253
+    },
+    {
+      "a": "AP",
+      "b": "GRA",
+      "sharedSources": 45,
+      "jaccard": 0.0381
+    },
+    {
+      "a": "MW",
+      "b": "LRV",
+      "sharedSources": 43,
+      "jaccard": 0.0245
+    },
+    {
+      "a": "AP90",
+      "b": "BHS",
+      "sharedSources": 41,
+      "jaccard": 0.0345
+    },
+    {
+      "a": "GRA",
+      "b": "AP90",
+      "sharedSources": 39,
+      "jaccard": 0.0521
+    },
+    {
+      "a": "PWKVN",
+      "b": "LRV",
+      "sharedSources": 39,
+      "jaccard": 0.0313
+    },
+    {
+      "a": "GRA",
+      "b": "SCH",
+      "sharedSources": 35,
+      "jaccard": 0.0407
+    },
+    {
+      "a": "AP",
+      "b": "BEN",
+      "sharedSources": 34,
+      "jaccard": 0.0305
+    },
+    {
+      "a": "LRV",
+      "b": "SCH",
+      "sharedSources": 31,
+      "jaccard": 0.0369
+    },
+    {
+      "a": "LRV",
+      "b": "BHS",
+      "sharedSources": 29,
+      "jaccard": 0.0387
+    },
+    {
+      "a": "BEN",
+      "b": "AP90",
+      "sharedSources": 26,
+      "jaccard": 0.0381
+    },
+    {
+      "a": "BEN",
+      "b": "BHS",
+      "sharedSources": 25,
+      "jaccard": 0.0358
+    },
+    {
+      "a": "GRA",
+      "b": "BHS",
+      "sharedSources": 21,
+      "jaccard": 0.0269
+    },
+    {
+      "a": "BEN",
+      "b": "LRV",
+      "sharedSources": 19,
+      "jaccard": 0.0798
+    },
+    {
+      "a": "GRA",
+      "b": "LAN",
+      "sharedSources": 13,
+      "jaccard": 0.0047
+    },
+    {
+      "a": "GRA",
+      "b": "LRV",
+      "sharedSources": 9,
+      "jaccard": 0.0275
+    },
+    {
+      "a": "LAN",
+      "b": "SCH",
+      "sharedSources": 8,
+      "jaccard": 0.0024
+    },
+    {
+      "a": "BEN",
+      "b": "GRA",
+      "sharedSources": 5,
+      "jaccard": 0.0181
+    },
+    {
+      "a": "LAN",
+      "b": "BHS",
+      "sharedSources": 1,
+      "jaccard": 0.0003
+    },
+    {
+      "a": "BEN",
+      "b": "LAN",
+      "sharedSources": 0,
+      "jaccard": 0
+    },
+    {
+      "a": "LAN",
+      "b": "LRV",
+      "sharedSources": 0,
+      "jaccard": 0
     }
   ],
   "assumptions": [
-    "Source-level comparison covers the <ls>-tagged dictionaries (MW, AP, PWG, PWK).",
+    "Source-level comparison covers dictionaries with supported <ls> citation adapters across broadHeadword.",
     "citationsPerRecord uses <ls> count for tagged dicts and `iti` count for prose dicts (VCP, SKD); the two methods are not directly comparable.",
     "WIL is essentially untagged for citations (<ls> almost absent), so its density is near zero by encoding, not by content.",
+    "Diagnostic prose/source-hint proxies are not included in source matrix/overlap until a validated citation adapter is added.",
     "Sigla are reduced to base form (loci stripped: 'MBh. iii,5' -> 'MBh') then canonicalized across dictionaries by diacritic/case fold plus the reviewed alias table src/data/dict-source-aliases.json.",
     "The fold aligns MBh/MBH and RV/ṚV automatically; abbreviation-scheme differences (BhP vs Bhāg) need an alias entry. Unaliased differences still under-count cross-dictionary overlap — see the source-siglum review queue."
   ],

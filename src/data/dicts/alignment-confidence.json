@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-03T09:59:20.419Z",
+  "generatedAt": "2026-06-14T07:43:39.753Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -46,6 +46,86 @@
     "Only lemmas present in >=2 dictionaries are scored."
   ],
   "warnings": [],
+  "feature": "headwordAlignment",
+  "featureLabel": "Headword alignment",
+  "adapterScope": "coreComparison",
+  "includedDictionaries": [
+    {
+      "code": "mw",
+      "label": "MW",
+      "fullName": "MW",
+      "methodId": "cdsl-k1-normalized-headword",
+      "methodLabel": "CDSL <k1> normalized headword",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit"
+    },
+    {
+      "code": "ap",
+      "label": "AP",
+      "fullName": "AP",
+      "methodId": "cdsl-k1-normalized-headword",
+      "methodLabel": "CDSL <k1> normalized headword",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit"
+    },
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "fullName": "PWG",
+      "methodId": "cdsl-k1-normalized-headword",
+      "methodLabel": "CDSL <k1> normalized headword",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit"
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "fullName": "PWK",
+      "methodId": "cdsl-k1-normalized-headword",
+      "methodLabel": "CDSL <k1> normalized headword",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit"
+    },
+    {
+      "code": "wil",
+      "label": "WIL",
+      "fullName": "WIL",
+      "methodId": "cdsl-k1-normalized-headword",
+      "methodLabel": "CDSL <k1> normalized headword",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit"
+    },
+    {
+      "code": "vcp",
+      "label": "VCP",
+      "fullName": "VCP",
+      "methodId": "cdsl-k1-normalized-headword",
+      "methodLabel": "CDSL <k1> normalized headword",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit"
+    },
+    {
+      "code": "skd",
+      "label": "SKD",
+      "fullName": "SKD",
+      "methodId": "cdsl-k1-normalized-headword",
+      "methodLabel": "CDSL <k1> normalized headword",
+      "status": "supported",
+      "confidence": "validated",
+      "fixtureCoverage": "unit"
+    }
+  ],
+  "unavailableDictionaries": [],
+  "methodNotes": [
+    "Alignment confidence is a neutral headword metric over Core 7 <k1> entries.",
+    "Broad coverage/overlap uses the separate broadHeadword layer; this compact alignment review remains Core 7."
+  ],
   "distribution": {
     "high": 174789,
     "medium": 7

@@ -14,7 +14,7 @@ populated from Patel's **own per-dictionary classification** (ground truth from 
 convention author). The remaining dimensions are auto-extracted from each dictionary's
 source markup.
 
-Companion to [Dictionary genealogy](/tools/lexicography) (which measures shared *content* via the sanhw1
+Companion to [Dictionary genealogy](lexicography) (which measures shared *content* via the sanhw1
 headword index) and to the [Phase L0 design](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_DESIGN.md) /
 [results](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md).
 The headline finding is that **convention-lineage and content-lineage are distinct signals**
@@ -197,7 +197,7 @@ result. Edges that score high are *formatting* inheritances, where an heir adopt
 predecessor's house style: **WIL→SHS (0.81)**, **PWG→PW (0.79)**, **PWG→SCH (0.70)**,
 **CCS→CAE (0.64)**. Edges that score low are *content* inheritances where the heir
 **reformatted**: **PWG→MW (0.02)**, **MW72→MW (0.29)** — even though, by the
-[sanhw1 content measure](/tools/lexicography), 89–94% of those sources' lemmas recur in MW.
+[sanhw1 content measure](lexicography), 89–94% of those sources' lemmas recur in MW.
 
 Monier-Williams absorbed the Petersburg *lexicon* while imposing its own orthographic
 standard (ṛ-stems as `-ṛ` not `-ar`; śatṛ as `-at` not `-ant`; `-vas` not `-vaṃs`). The
@@ -267,4 +267,4 @@ Inputs.table(residual, {
 - **Canonical tree**: 1000× dimension-bootstrap consensus UPGMA; full Bayesian MCMC deferred (design §9). Config `B_whamming` is pre-registered, not tuned to recovery.
 - **Reproduce**: `scripts/L0/s2_fingerprint.py` → `s2b_patel_auto.py` → `s2d_patel_gold.py` → `s3_cladogram.py`. Taxonomy & numbering in [`refs/fingerprint_conventions.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/fingerprint_conventions.md) + [`refs/concordance.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/concordance.md).
 
-[← back to Dictionary genealogy](/tools/lexicography) · [overview](/)
+[← back to Dictionary genealogy](lexicography) · [overview](../)

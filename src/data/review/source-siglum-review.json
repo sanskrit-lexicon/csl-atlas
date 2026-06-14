@@ -1,10 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "license": "CC-BY-SA-4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-13T08:14:27.126Z",
-  "sourcePath": "../csl-orig/v02/{mw,ap,pwg,pw}/*.txt",
-  "recordCount": 149,
+  "generatedAt": "2026-06-14T01:21:32.436Z",
+  "sourcePath": "../csl-orig/v02/{mw,ap,pwg,pw,ben,gra,pwkvn,lan,lrv,ap90,sch,bhs}/*.txt",
+  "recordCount": 158,
   "queue": "source-siglum-alias",
   "minCitations": 100,
   "assumptions": [
@@ -28,39 +26,17 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L346"
+          "L": "102",
+          "line": 346,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L346",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "ib",
         "citedOnlyBy": "MW",
         "citations": 10100
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:pan",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Pāṇ",
-        "canonicalId": "pan"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L31"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Pāṇ",
-        "citedOnlyBy": "MW",
-        "citations": 8527
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -80,7 +56,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L172"
+          "L": "48",
+          "line": 172,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L172",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -96,23 +76,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:mn",
+      "reviewId": "source-siglum-alias:mvy",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Mn",
-        "canonicalId": "mn"
+        "source": "Mvy",
+        "canonicalId": "mvy"
       },
       "sourcePointers": [
         {
-          "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L537"
+          "dictionary": "BHS",
+          "L": "2",
+          "line": 11,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L11",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Mn",
-        "citedOnlyBy": "MW",
-        "citations": 7010
+        "siglum": "Mvy",
+        "citedOnlyBy": "BHS",
+        "citations": 4110
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -122,75 +106,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:ms",
+      "reviewId": "source-siglum-alias:gv",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Ms",
-        "canonicalId": "ms"
+        "source": "Gv",
+        "canonicalId": "gv"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L91"
+          "dictionary": "BHS",
+          "L": "13",
+          "line": 55,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L55",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Ms",
-        "citedOnlyBy": "AP",
-        "citations": 4479
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:varahbrhs",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "VarBṛS",
-        "canonicalId": "varahbrhs"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2907"
-        }
-      ],
-      "machineValue": {
-        "siglum": "VarBṛS",
-        "citedOnlyBy": "MW",
-        "citations": 3716
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:si",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Śi",
-        "canonicalId": "si"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L212"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Śi",
-        "citedOnlyBy": "AP",
-        "citations": 2572
+        "siglum": "Gv",
+        "citedOnlyBy": "BHS",
+        "citations": 3174
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -210,39 +146,17 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1428"
+          "L": "391.3",
+          "line": 1428,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1428",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "KātyŚr",
         "citedOnlyBy": "MW",
         "citations": 2549
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:ku",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Ku",
-        "canonicalId": "ku"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L212"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Ku",
-        "citedOnlyBy": "AP",
-        "citations": 2361
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -262,39 +176,17 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L610215"
+          "L": "63118",
+          "line": 610215,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L610215",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "SARVADARŚANAS",
         "citedOnlyBy": "PWG",
         "citations": 2272
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:opp",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "OPP",
-        "canonicalId": "opp"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L174078"
-        }
-      ],
-      "machineValue": {
-        "siglum": "OPP",
-        "citedOnlyBy": "PWK",
-        "citations": 2057
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -314,7 +206,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1359"
+          "L": "167",
+          "line": 1359,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1359",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -330,49 +226,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:an",
+      "reviewId": "source-siglum-alias:sii",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "an",
-        "canonicalId": "an"
+        "source": "S II",
+        "canonicalId": "sii"
       },
       "sourcePointers": [
         {
-          "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L21"
+          "dictionary": "SCH",
+          "L": "24.1",
+          "line": 80,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L80",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
         }
       ],
       "machineValue": {
-        "siglum": "an",
-        "citedOnlyBy": "PWG",
-        "citations": 1999
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:ki",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Ki",
-        "canonicalId": "ki"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L287"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Ki",
-        "citedOnlyBy": "AP",
-        "citations": 1703
+        "siglum": "S II",
+        "citedOnlyBy": "SCH",
+        "citations": 1945
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -392,7 +266,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13916"
+          "L": "1664",
+          "line": 13916,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13916",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -418,65 +296,17 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L437"
+          "L": "126",
+          "line": 437,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L437",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "AitBr",
         "citedOnlyBy": "MW",
         "citations": 1658
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:pt",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Pt",
-        "canonicalId": "pt"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L836"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Pt",
-        "citedOnlyBy": "AP",
-        "citations": 1591
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:hemadri1",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "HEMĀDRI 1",
-        "canonicalId": "hemadri1"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L70424"
-        }
-      ],
-      "machineValue": {
-        "siglum": "HEMĀDRI 1",
-        "citedOnlyBy": "PWK",
-        "citations": 1590
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -496,7 +326,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4717"
+          "L": "1291",
+          "line": 4717,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4717",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -512,23 +346,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:u",
+      "reviewId": "source-siglum-alias:senart",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "U",
-        "canonicalId": "u"
+        "source": "Senart",
+        "canonicalId": "senart"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L848"
+          "dictionary": "BHS",
+          "L": "22",
+          "line": 93,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L93",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "U",
-        "citedOnlyBy": "AP",
-        "citations": 1508
+        "siglum": "Senart",
+        "citedOnlyBy": "BHS",
+        "citations": 1568
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -548,7 +386,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L265"
+          "L": "79",
+          "line": 265,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L265",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -564,49 +406,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:mal",
+      "reviewId": "source-siglum-alias:msv",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Māl",
-        "canonicalId": "mal"
+        "source": "MSV",
+        "canonicalId": "msv"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L848"
+          "dictionary": "BHS",
+          "L": "6",
+          "line": 27,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L27",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Māl",
-        "citedOnlyBy": "AP",
-        "citations": 1368
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:bg",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Bg",
-        "canonicalId": "bg"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L3"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Bg",
-        "citedOnlyBy": "AP",
-        "citations": 1343
+        "siglum": "MSV",
+        "citedOnlyBy": "BHS",
+        "citations": 1378
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -626,13 +446,47 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2581"
+          "L": "720.2",
+          "line": 2581,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2581",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "Hcat",
         "citedOnlyBy": "MW",
         "citations": 1292
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:bbh",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Bbh",
+        "canonicalId": "bbh"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "11",
+          "line": 47,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L47",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Bbh",
+        "citedOnlyBy": "BHS",
+        "citations": 1217
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -652,7 +506,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L774"
+          "L": "224.1",
+          "line": 774,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L774",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -668,23 +526,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:vid",
+      "reviewId": "source-siglum-alias:srik",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "VID",
-        "canonicalId": "vid"
+        "source": "Śrīk",
+        "canonicalId": "srik"
       },
       "sourcePointers": [
         {
-          "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L264"
+          "dictionary": "SCH",
+          "L": "338",
+          "line": 1066,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L1066",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
         }
       ],
       "machineValue": {
-        "siglum": "VID",
-        "citedOnlyBy": "PWG",
-        "citations": 1109
+        "siglum": "Śrīk",
+        "citedOnlyBy": "SCH",
+        "citations": 1080
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -694,23 +556,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:me",
+      "reviewId": "source-siglum-alias:mmk",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Me",
-        "canonicalId": "me"
+        "source": "Mmk",
+        "canonicalId": "mmk"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L308"
+          "dictionary": "BHS",
+          "L": "11",
+          "line": 47,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L47",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Me",
-        "citedOnlyBy": "AP",
-        "citations": 1087
+        "siglum": "Mmk",
+        "citedOnlyBy": "BHS",
+        "citations": 981
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -730,7 +596,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3795"
+          "L": "1038",
+          "line": 3795,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3795",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -756,7 +626,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L355"
+          "L": "104.1",
+          "line": 355,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L355",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -782,39 +656,17 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L9058"
+          "L": "2537.1",
+          "line": 9058,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L9058",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "Kum",
         "citedOnlyBy": "MW",
         "citations": 876
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:harsac",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "HARṢAC",
-        "canonicalId": "harsac"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L74705"
-        }
-      ],
-      "machineValue": {
-        "siglum": "HARṢAC",
-        "citedOnlyBy": "PWK",
-        "citations": 837
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -834,7 +686,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4891"
+          "L": "1339.1",
+          "line": 4891,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4891",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -860,13 +716,77 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L919"
+          "L": "111",
+          "line": 919,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L919",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "ŚABDAM",
         "citedOnlyBy": "PWG",
         "citations": 783
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:rigv",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Rigv",
+        "canonicalId": "rigv"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BEN",
+          "L": "24",
+          "line": 136,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L136",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/ben/ben.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Rigv",
+        "citedOnlyBy": "BEN",
+        "citations": 768
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:may",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Māy",
+        "canonicalId": "may"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "106",
+          "line": 430,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L430",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Māy",
+        "citedOnlyBy": "BHS",
+        "citations": 746
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -886,7 +806,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L280075"
+          "L": "28811",
+          "line": 280075,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L280075",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -912,7 +836,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3603"
+          "L": "989",
+          "line": 3603,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3603",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -938,7 +866,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L16041"
+          "L": "4436.1",
+          "line": 16041,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L16041",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -954,23 +886,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:mu",
+      "reviewId": "source-siglum-alias:prabandh",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Mu",
-        "canonicalId": "mu"
+        "source": "Prabandh",
+        "canonicalId": "prabandh"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L995"
+          "dictionary": "SCH",
+          "L": "13016",
+          "line": 40253,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L40253",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Mu",
-        "citedOnlyBy": "AP",
-        "citations": 698
+        "siglum": "Prabandh",
+        "citedOnlyBy": "SCH",
+        "citations": 691
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -980,23 +916,57 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:dk",
+      "reviewId": "source-siglum-alias:bt",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Dk",
-        "canonicalId": "dk"
+        "source": "Bt",
+        "canonicalId": "bt"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L118"
+          "dictionary": "LRV",
+          "L": "00749",
+          "line": 2782,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/lrv/lrv.txt#L2782",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/lrv/lrv.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Dk",
-        "citedOnlyBy": "AP",
-        "citations": 674
+        "siglum": "Bt",
+        "citedOnlyBy": "LRV",
+        "citations": 689
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:dbh",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Dbh",
+        "canonicalId": "dbh"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "57",
+          "line": 234,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L234",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Dbh",
+        "citedOnlyBy": "BHS",
+        "citations": 670
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1016,7 +986,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L28397"
+          "L": "7871.1",
+          "line": 28397,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L28397",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1032,23 +1006,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:mk",
+      "reviewId": "source-siglum-alias:lank",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Mk",
-        "canonicalId": "mk"
+        "source": "Laṅk",
+        "canonicalId": "lank"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L974"
+          "dictionary": "BHS",
+          "L": "4",
+          "line": 19,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L19",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Mk",
-        "citedOnlyBy": "AP",
-        "citations": 609
+        "siglum": "Laṅk",
+        "citedOnlyBy": "BHS",
+        "citations": 638
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1058,23 +1036,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:mv",
+      "reviewId": "source-siglum-alias:yudh",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Mv",
-        "canonicalId": "mv"
+        "source": "Yudh",
+        "canonicalId": "yudh"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L836"
+          "dictionary": "SCH",
+          "L": "29",
+          "line": 95,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L95",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Mv",
-        "citedOnlyBy": "AP",
-        "citations": 590
+        "siglum": "Yudh",
+        "citedOnlyBy": "SCH",
+        "citations": 615
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1094,7 +1076,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1098"
+          "L": "305.2",
+          "line": 1098,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1098",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1120,7 +1106,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L14027"
+          "L": "3928.1",
+          "line": 14027,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L14027",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1136,49 +1126,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:bv",
+      "reviewId": "source-siglum-alias:kv",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Bv",
-        "canonicalId": "bv"
+        "source": "Kv",
+        "canonicalId": "kv"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L7223"
+          "dictionary": "BHS",
+          "L": "32",
+          "line": 134,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L134",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Bv",
-        "citedOnlyBy": "AP",
-        "citations": 558
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:nachtr",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Nachtr",
-        "canonicalId": "nachtr"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L199423"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Nachtr",
-        "citedOnlyBy": "PWK",
-        "citations": 528
+        "siglum": "Kv",
+        "citedOnlyBy": "BHS",
+        "citations": 556
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1198,7 +1166,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L15295"
+          "L": "4251.2",
+          "line": 15295,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L15295",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1224,7 +1196,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L109"
+          "L": "27.1",
+          "line": 109,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L109",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1250,13 +1226,47 @@
       "sourcePointers": [
         {
           "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L4341"
+          "L": "243.316",
+          "line": 4341,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L4341",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/ap/ap.txt"
         }
       ],
       "machineValue": {
         "siglum": "Kau",
         "citedOnlyBy": "AP",
         "citations": 480
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:rp",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "RP",
+        "canonicalId": "rp"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "11",
+          "line": 47,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L47",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "RP",
+        "citedOnlyBy": "BHS",
+        "citations": 470
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1276,7 +1286,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1191"
+          "L": "330.1",
+          "line": 1191,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1191",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1302,65 +1316,17 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2127"
+          "L": "592.1",
+          "line": 2127,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2127",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "ĀrṣBr",
         "citedOnlyBy": "MW",
         "citations": 456
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:ve",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Ve",
-        "canonicalId": "ve"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L995"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Ve",
-        "citedOnlyBy": "AP",
-        "citations": 455
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:ars",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "ĀRṢ",
-        "canonicalId": "ars"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5613"
-        }
-      ],
-      "machineValue": {
-        "siglum": "ĀRṢ",
-        "citedOnlyBy": "PWK",
-        "citations": 453
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1380,13 +1346,107 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L89475"
+          "L": "10093",
+          "line": 89475,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L89475",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "PRAVARĀDHY",
         "citedOnlyBy": "PWG",
         "citations": 440
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:mironov",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Mironov",
+        "canonicalId": "mironov"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "15",
+          "line": 63,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L63",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Mironov",
+        "citedOnlyBy": "BHS",
+        "citations": 435
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:ptsd",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "PTSD",
+        "canonicalId": "ptsd"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "2",
+          "line": 11,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L11",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "PTSD",
+        "citedOnlyBy": "BHS",
+        "citations": 429
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:suv",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Suv",
+        "canonicalId": "suv"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "57",
+          "line": 234,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L234",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Suv",
+        "citedOnlyBy": "BHS",
+        "citations": 429
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1406,13 +1466,47 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5081"
+          "L": "1394.1",
+          "line": 5081,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5081",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "IW",
         "citedOnlyBy": "MW",
         "citations": 428
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:ssp",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "ŚsP",
+        "canonicalId": "ssp"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "64",
+          "line": 262,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L262",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "ŚsP",
+        "citedOnlyBy": "BHS",
+        "citations": 420
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1432,65 +1526,17 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L156610"
+          "L": "44956",
+          "line": 156610,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L156610",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "Npr",
         "citedOnlyBy": "MW",
         "citations": 418
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:siv",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "ŚIV",
-        "canonicalId": "siv"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L995"
-        }
-      ],
-      "machineValue": {
-        "siglum": "ŚIV",
-        "citedOnlyBy": "PWG",
-        "citations": 409
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:vikramankac",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "VIKRAMĀṄKAC",
-        "canonicalId": "vikramankac"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L6704"
-        }
-      ],
-      "machineValue": {
-        "siglum": "VIKRAMĀṄKAC",
-        "citedOnlyBy": "PWK",
-        "citations": 408
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1510,7 +1556,11 @@
       "sourcePointers": [
         {
           "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L1209"
+          "L": "99.002",
+          "line": 1209,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L1209",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/ap/ap.txt"
         }
       ],
       "machineValue": {
@@ -1536,7 +1586,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3087"
+          "L": "850",
+          "line": 3087,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3087",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1562,7 +1616,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5266"
+          "L": "1447.1",
+          "line": 5266,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5266",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1578,49 +1636,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:sk",
+      "reviewId": "source-siglum-alias:padyac",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Sk",
-        "canonicalId": "sk"
+        "source": "Padyac",
+        "canonicalId": "padyac"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L622"
+          "dictionary": "SCH",
+          "L": "9077",
+          "line": 28017,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L28017",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Sk",
-        "citedOnlyBy": "AP",
-        "citations": 395
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:abebend",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "<ab>ebend",
-        "canonicalId": "abebend"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L569158"
-        }
-      ],
-      "machineValue": {
-        "siglum": "<ab>ebend",
-        "citedOnlyBy": "PWK",
-        "citations": 381
+        "siglum": "Padyac",
+        "citedOnlyBy": "SCH",
+        "citations": 378
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1640,12 +1676,46 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L327026"
+          "L": "97531",
+          "line": 327026,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L327026",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "GṛŚrS",
         "citedOnlyBy": "MW",
+        "citations": 372
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:pw",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "pw",
+        "canonicalId": "pw"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "37",
+          "line": 154,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L154",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "pw",
+        "citedOnlyBy": "BHS",
         "citations": 372
       },
       "evidenceLevel": "derived",
@@ -1666,13 +1736,47 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L34547"
+          "L": "9459.1",
+          "line": 34547,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L34547",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "Vcar",
         "citedOnlyBy": "MW",
         "citations": 359
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:cu",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Cu",
+        "canonicalId": "cu"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "GRA",
+          "L": "7",
+          "line": 33,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gra/gra.txt#L33",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/gra/gra.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Cu",
+        "citedOnlyBy": "GRA",
+        "citations": 355
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1692,7 +1796,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L990"
+          "L": "283.1",
+          "line": 990,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L990",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1708,23 +1816,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:indr",
+      "reviewId": "source-siglum-alias:jm",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "INDR",
-        "canonicalId": "indr"
+        "source": "Jm",
+        "canonicalId": "jm"
       },
       "sourcePointers": [
         {
-          "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5054"
+          "dictionary": "BHS",
+          "L": "39",
+          "line": 162,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L162",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "INDR",
-        "citedOnlyBy": "PWG",
-        "citations": 338
+        "siglum": "Jm",
+        "citedOnlyBy": "BHS",
+        "citations": 345
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1744,7 +1856,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4495"
+          "L": "1232.1",
+          "line": 4495,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4495",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1760,22 +1876,26 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:vasavad",
+      "reviewId": "source-siglum-alias:karmav",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "VĀSAVAD",
-        "canonicalId": "vasavad"
+        "source": "Karmav",
+        "canonicalId": "karmav"
       },
       "sourcePointers": [
         {
-          "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L339549"
+          "dictionary": "BHS",
+          "L": "12",
+          "line": 51,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L51",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "VĀSAVAD",
-        "citedOnlyBy": "PWG",
+        "siglum": "Karmav",
+        "citedOnlyBy": "BHS",
         "citations": 325
       },
       "evidenceLevel": "derived",
@@ -1796,7 +1916,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2943"
+          "L": "817",
+          "line": 2943,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2943",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1812,23 +1936,57 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:abcomm",
+      "reviewId": "source-siglum-alias:asp",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "<ab>Comm",
-        "canonicalId": "abcomm"
+        "source": "AsP",
+        "canonicalId": "asp"
       },
       "sourcePointers": [
         {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L290441"
+          "dictionary": "BHS",
+          "L": "35",
+          "line": 146,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L146",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "<ab>Comm",
-        "citedOnlyBy": "PWK",
-        "citations": 315
+        "siglum": "AsP",
+        "citedOnlyBy": "BHS",
+        "citations": 318
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:kp",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "KP",
+        "canonicalId": "kp"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "305",
+          "line": 1226,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L1226",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "KP",
+        "citedOnlyBy": "BHS",
+        "citations": 318
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1848,7 +2006,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2871"
+          "L": "798.2",
+          "line": 2871,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2871",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1864,23 +2026,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:tv",
+      "reviewId": "source-siglum-alias:lefm",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Tv",
-        "canonicalId": "tv"
+        "source": "Lefm",
+        "canonicalId": "lefm"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L6"
+          "dictionary": "BHS",
+          "L": "154",
+          "line": 622,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L622",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Tv",
-        "citedOnlyBy": "AP",
-        "citations": 304
+        "siglum": "Lefm",
+        "citedOnlyBy": "BHS",
+        "citations": 311
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1900,39 +2066,17 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L30811"
+          "L": "8494.1",
+          "line": 30811,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L30811",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "ŚārṅgS",
         "citedOnlyBy": "MW",
         "citations": 292
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:ks",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Ks",
-        "canonicalId": "ks"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L865"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Ks",
-        "citedOnlyBy": "AP",
-        "citations": 289
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -1952,7 +2096,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L29084"
+          "L": "8033.1",
+          "line": 29084,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L29084",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -1978,38 +2126,16 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2719"
+          "L": "756",
+          "line": 2719,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2719",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "Jain",
         "citedOnlyBy": "MW",
-        "citations": 277
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:sund",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "SUND",
-        "canonicalId": "sund"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L910"
-        }
-      ],
-      "machineValue": {
-        "siglum": "SUND",
-        "citedOnlyBy": "PWG",
         "citations": 277
       },
       "evidenceLevel": "derived",
@@ -2030,7 +2156,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5054"
+          "L": "625",
+          "line": 5054,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5054",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -2046,23 +2176,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:sp",
+      "reviewId": "source-siglum-alias:h43",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Sp",
-        "canonicalId": "sp"
+        "source": "H 43",
+        "canonicalId": "h43"
       },
       "sourcePointers": [
         {
-          "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L433711"
+          "dictionary": "SCH",
+          "L": "3",
+          "line": 13,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L13",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Sp",
-        "citedOnlyBy": "PWG",
-        "citations": 274
+        "siglum": "H 43",
+        "citedOnlyBy": "SCH",
+        "citations": 264
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -2072,23 +2206,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:zach",
+      "reviewId": "source-siglum-alias:vin",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "ZACH",
-        "canonicalId": "zach"
+        "source": "Vin",
+        "canonicalId": "vin"
       },
       "sourcePointers": [
         {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L381850"
+          "dictionary": "BHS",
+          "L": "159",
+          "line": 642,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L642",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "ZACH",
-        "citedOnlyBy": "PWK",
-        "citations": 262
+        "siglum": "Vin",
+        "citedOnlyBy": "BHS",
+        "citations": 264
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -2108,13 +2246,47 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1095"
+          "L": "305.1",
+          "line": 1095,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1095",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "MWB",
         "citedOnlyBy": "MW",
         "citations": 257
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:cpd",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "CPD",
+        "canonicalId": "cpd"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "1",
+          "line": 7,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L7",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "CPD",
+        "citedOnlyBy": "BHS",
+        "citations": 256
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -2134,7 +2306,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L91542"
+          "L": "25830.1",
+          "line": 91542,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L91542",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2160,7 +2336,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L247799"
+          "L": "25914",
+          "line": 247799,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L247799",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -2186,38 +2366,16 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L234"
+          "L": "20",
+          "line": 234,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L234",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "DHAR",
         "citedOnlyBy": "PWG",
-        "citations": 246
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:hemadri2",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "HEMĀDRI 2",
-        "canonicalId": "hemadri2"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L90675"
-        }
-      ],
-      "machineValue": {
-        "siglum": "HEMĀDRI 2",
-        "citedOnlyBy": "PWK",
         "citations": 246
       },
       "evidenceLevel": "derived",
@@ -2238,7 +2396,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2097"
+          "L": "585",
+          "line": 2097,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2097",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2264,7 +2426,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L208"
+          "L": "60",
+          "line": 208,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L208",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2290,7 +2456,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1492"
+          "L": "172",
+          "line": 1492,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1492",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -2306,23 +2476,57 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:amaru",
+      "reviewId": "source-siglum-alias:bhik",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Amaru",
-        "canonicalId": "amaru"
+        "source": "Bhīk",
+        "canonicalId": "bhik"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L39803"
+          "dictionary": "BHS",
+          "L": "144",
+          "line": 582,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L582",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Amaru",
-        "citedOnlyBy": "AP",
+        "siglum": "Bhīk",
+        "citedOnlyBy": "BHS",
         "citations": 235
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:samadh",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Samādh",
+        "canonicalId": "samadh"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "107",
+          "line": 434,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L434",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Samādh",
+        "citedOnlyBy": "BHS",
+        "citations": 231
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -2342,7 +2546,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L58474"
+          "L": "6917",
+          "line": 58474,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L58474",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -2368,7 +2576,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2215"
+          "L": "617.3",
+          "line": 2215,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2215",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2394,39 +2606,17 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L21690"
+          "L": "5998.3",
+          "line": 21690,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L21690",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "VPrāt",
         "citedOnlyBy": "MW",
         "citations": 226
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:rs",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Ṛs",
-        "canonicalId": "rs"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L15677"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Ṛs",
-        "citedOnlyBy": "AP",
-        "citations": 225
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -2446,7 +2636,11 @@
       "sourcePointers": [
         {
           "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L6"
+          "L": "1.002",
+          "line": 6,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L6",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/ap/ap.txt"
         }
       ],
       "machineValue": {
@@ -2472,7 +2666,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L15743"
+          "L": "4360.11",
+          "line": 15743,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L15743",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2498,7 +2696,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L176555"
+          "L": "19090",
+          "line": 176555,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L176555",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -2524,7 +2726,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3171"
+          "L": "873.1",
+          "line": 3171,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3171",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2550,7 +2756,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5389"
+          "L": "1474.1",
+          "line": 5389,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5389",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2576,7 +2786,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15130"
+          "L": "1804",
+          "line": 15130,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15130",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -2602,13 +2816,77 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3708"
+          "L": "1018.2",
+          "line": 3708,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3708",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "Vām",
         "citedOnlyBy": "MW",
         "citations": 206
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:visnubh",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Viṣṇubh",
+        "canonicalId": "visnubh"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "SCH",
+          "L": "15782",
+          "line": 48802,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L48802",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Viṣṇubh",
+        "citedOnlyBy": "SCH",
+        "citations": 206
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:mrich",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Mrich",
+        "canonicalId": "mrich"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "LRV",
+          "L": "00541",
+          "line": 2026,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/lrv/lrv.txt#L2026",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/lrv/lrv.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Mrich",
+        "citedOnlyBy": "LRV",
+        "citations": 204
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -2628,7 +2906,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L55809"
+          "L": "15519",
+          "line": 55809,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L55809",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2654,7 +2936,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L186376"
+          "L": "20043",
+          "line": 186376,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L186376",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -2680,7 +2966,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5365"
+          "L": "1472.3",
+          "line": 5365,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5365",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2706,7 +2996,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L193830"
+          "L": "20754",
+          "line": 193830,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L193830",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -2732,7 +3026,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L168450"
+          "L": "48624",
+          "line": 168450,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L168450",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2758,7 +3056,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3051"
+          "L": "843.2",
+          "line": 3051,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3051",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2784,7 +3086,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7823"
+          "L": "2182.1",
+          "line": 7823,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7823",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2810,13 +3116,47 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1359"
+          "L": "167",
+          "line": 1359,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1359",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "LOIS",
         "citedOnlyBy": "PWG",
         "citations": 182
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:ut",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Ut",
+        "canonicalId": "ut"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "LRV",
+          "L": "00081",
+          "line": 328,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/lrv/lrv.txt#L328",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/lrv/lrv.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Ut",
+        "citedOnlyBy": "LRV",
+        "citations": 181
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -2836,7 +3176,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L24393"
+          "L": "6758",
+          "line": 24393,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L24393",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2862,7 +3206,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L14243"
+          "L": "3980.1",
+          "line": 14243,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L14243",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2888,7 +3236,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L321356"
+          "L": "95762",
+          "line": 321356,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L321356",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -2904,23 +3256,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:bu",
+      "reviewId": "source-siglum-alias:rasas",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Bu",
-        "canonicalId": "bu"
+        "source": "Rasas",
+        "canonicalId": "rasas"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L1923"
+          "dictionary": "SCH",
+          "L": "400",
+          "line": 1257,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L1257",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Bu",
-        "citedOnlyBy": "AP",
-        "citations": 175
+        "siglum": "Rasas",
+        "citedOnlyBy": "SCH",
+        "citations": 176
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -2930,22 +3286,26 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:udb",
+      "reviewId": "source-siglum-alias:wt",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "Udb",
-        "canonicalId": "udb"
+        "source": "WT",
+        "canonicalId": "wt"
       },
       "sourcePointers": [
         {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L1350"
+          "dictionary": "BHS",
+          "L": "209",
+          "line": 842,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L842",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "Udb",
-        "citedOnlyBy": "AP",
+        "siglum": "WT",
+        "citedOnlyBy": "BHS",
         "citations": 170
       },
       "evidenceLevel": "derived",
@@ -2966,13 +3326,47 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L20791"
+          "L": "5760",
+          "line": 20791,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L20791",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "APrāt",
         "citedOnlyBy": "MW",
         "citations": 169
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:kashgarrec",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kashgar rec",
+        "canonicalId": "kashgarrec"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "280",
+          "line": 1126,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L1126",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kashgar rec",
+        "citedOnlyBy": "BHS",
+        "citations": 167
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -2992,13 +3386,77 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2272"
+          "L": "632",
+          "line": 2272,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2272",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "VarYogay",
         "citedOnlyBy": "MW",
         "citations": 163
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:srngt",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Śṛṅgt",
+        "canonicalId": "srngt"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "SCH",
+          "L": "609",
+          "line": 1912,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L1912",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Śṛṅgt",
+        "citedOnlyBy": "SCH",
+        "citations": 163
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:dppn",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "DPPN",
+        "canonicalId": "dppn"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "1449",
+          "line": 5830,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L5830",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "DPPN",
+        "citedOnlyBy": "BHS",
+        "citations": 161
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -3018,7 +3476,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L867004"
+          "L": "94005",
+          "line": 867004,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L867004",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -3044,12 +3506,46 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3329"
+          "L": "915",
+          "line": 3329,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3329",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "BṛĀrUp",
         "citedOnlyBy": "MW",
+        "citations": 159
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:na",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Na",
+        "canonicalId": "na"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "LRV",
+          "L": "00158",
+          "line": 610,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/lrv/lrv.txt#L610",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/lrv/lrv.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Na",
+        "citedOnlyBy": "LRV",
         "citations": 159
       },
       "evidenceLevel": "derived",
@@ -3070,7 +3566,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6379"
+          "L": "1758.1",
+          "line": 6379,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6379",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3086,23 +3586,57 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:pbr",
+      "reviewId": "source-siglum-alias:dn",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "PBr",
-        "canonicalId": "pbr"
+        "source": "DN",
+        "canonicalId": "dn"
       },
       "sourcePointers": [
         {
-          "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L1143"
+          "dictionary": "BHS",
+          "L": "22",
+          "line": 93,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L93",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "PBr",
-        "citedOnlyBy": "MW",
-        "citations": 147
+        "siglum": "DN",
+        "citedOnlyBy": "BHS",
+        "citations": 157
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:sn",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Sn",
+        "canonicalId": "sn"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "44",
+          "line": 182,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L182",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Sn",
+        "citedOnlyBy": "BHS",
+        "citations": 157
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -3122,7 +3656,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L35226"
+          "L": "9629.4",
+          "line": 35226,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L35226",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3148,13 +3686,77 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L219"
+          "L": "17",
+          "line": 219,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L219",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "WEST",
         "citedOnlyBy": "PWG",
         "citations": 146
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:sheth",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Sheth",
+        "canonicalId": "sheth"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "525",
+          "line": 2106,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L2106",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Sheth",
+        "citedOnlyBy": "BHS",
+        "citations": 146
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:levi",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Lévi",
+        "canonicalId": "levi"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "57",
+          "line": 234,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L234",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Lévi",
+        "citedOnlyBy": "BHS",
+        "citations": 145
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -3174,7 +3776,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1580"
+          "L": "181",
+          "line": 1580,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1580",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -3200,7 +3806,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L72583"
+          "L": "20291.2",
+          "line": 72583,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L72583",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3216,49 +3826,27 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:kausup",
+      "reviewId": "source-siglum-alias:abhidhk",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "KauṣUp",
-        "canonicalId": "kausup"
+        "source": "AbhidhK",
+        "canonicalId": "abhidhk"
       },
       "sourcePointers": [
         {
-          "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3816"
+          "dictionary": "BHS",
+          "L": "1036",
+          "line": 4178,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L4178",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
         }
       ],
       "machineValue": {
-        "siglum": "KauṣUp",
-        "citedOnlyBy": "MW",
-        "citations": 137
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:malli",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Malli",
-        "canonicalId": "malli"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L4964"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Malli",
-        "citedOnlyBy": "AP",
-        "citations": 135
+        "siglum": "AbhidhK",
+        "citedOnlyBy": "BHS",
+        "citations": 140
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -3278,12 +3866,46 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12742"
+          "L": "1549",
+          "line": 12742,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12742",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "DVIRŪPAK",
         "citedOnlyBy": "PWG",
+        "citations": 135
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:ratnach",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Ratnach",
+        "canonicalId": "ratnach"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "350",
+          "line": 1406,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L1406",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Ratnach",
+        "citedOnlyBy": "BHS",
         "citations": 135
       },
       "evidenceLevel": "derived",
@@ -3304,7 +3926,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L11411"
+          "L": "3218.2",
+          "line": 11411,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L11411",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3330,12 +3956,46 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L69476"
+          "L": "8154",
+          "line": 69476,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L69476",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "GṚHYASAṂGR",
         "citedOnlyBy": "PWG",
+        "citations": 133
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:praty",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Praty",
+        "canonicalId": "praty"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "SCH",
+          "L": "336",
+          "line": 1060,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L1060",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Praty",
+        "citedOnlyBy": "SCH",
         "citations": 133
       },
       "evidenceLevel": "derived",
@@ -3356,7 +4016,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L12278"
+          "L": "3460.1",
+          "line": 12278,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L12278",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3382,7 +4046,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L43486"
+          "L": "5291",
+          "line": 43486,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L43486",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -3408,7 +4076,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L215704"
+          "L": "22845",
+          "line": 215704,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L215704",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -3434,13 +4106,47 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L18687"
+          "L": "5161",
+          "line": 18687,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L18687",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "GopBr",
         "citedOnlyBy": "MW",
         "citations": 130
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:dhp",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Dhp",
+        "canonicalId": "dhp"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "48",
+          "line": 198,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L198",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Dhp",
+        "citedOnlyBy": "BHS",
+        "citations": 127
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -3460,12 +4166,46 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L795126"
+          "L": "87346",
+          "line": 795126,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L795126",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "AUSH",
         "citedOnlyBy": "PWG",
+        "citations": 125
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:suzuki",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Suzuki",
+        "canonicalId": "suzuki"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "47",
+          "line": 194,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L194",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Suzuki",
+        "citedOnlyBy": "BHS",
         "citations": 125
       },
       "evidenceLevel": "derived",
@@ -3486,7 +4226,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4807"
+          "L": "1318",
+          "line": 4807,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L4807",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3512,13 +4256,47 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L10317"
+          "L": "2909.2",
+          "line": 10317,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L10317",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "Hir",
         "citedOnlyBy": "MW",
         "citations": 121
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:mps",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "MPS",
+        "canonicalId": "mps"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "BHS",
+          "L": "29",
+          "line": 122,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L122",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/bhs/bhs.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "MPS",
+        "citedOnlyBy": "BHS",
+        "citations": 119
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -3538,7 +4316,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3408"
+          "L": "938",
+          "line": 3408,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3408",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3564,7 +4346,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L10654"
+          "L": "3000",
+          "line": 10654,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L10654",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3580,48 +4366,26 @@
       "note": ""
     },
     {
-      "reviewId": "source-siglum-alias:samhitopan",
+      "reviewId": "source-siglum-alias:gopal",
       "queue": "source-siglum-alias",
       "subject": {
         "kind": "source-abbreviation",
-        "source": "SAṂHITOPAN",
-        "canonicalId": "samhitopan"
+        "source": "Gopāl",
+        "canonicalId": "gopal"
       },
       "sourcePointers": [
         {
-          "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L30816"
+          "dictionary": "SCH",
+          "L": "11247",
+          "line": 34778,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L34778",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
         }
       ],
       "machineValue": {
-        "siglum": "SAṂHITOPAN",
-        "citedOnlyBy": "PWK",
-        "citations": 117
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "source-siglum-alias:sukra",
-      "queue": "source-siglum-alias",
-      "subject": {
-        "kind": "source-abbreviation",
-        "source": "Śukra",
-        "canonicalId": "sukra"
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "AP",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L3282"
-        }
-      ],
-      "machineValue": {
-        "siglum": "Śukra",
-        "citedOnlyBy": "AP",
+        "siglum": "Gopāl",
+        "citedOnlyBy": "SCH",
         "citations": 116
       },
       "evidenceLevel": "derived",
@@ -3642,12 +4406,46 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2338"
+          "L": "282",
+          "line": 2338,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2338",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
         "siglum": "As",
         "citedOnlyBy": "PWG",
+        "citations": 114
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:kams",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kaṃs",
+        "canonicalId": "kams"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "SCH",
+          "L": "14030",
+          "line": 43402,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L43402",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kaṃs",
+        "citedOnlyBy": "SCH",
         "citations": 114
       },
       "evidenceLevel": "derived",
@@ -3668,7 +4466,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L78893"
+          "L": "22116.1",
+          "line": 78893,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L78893",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3694,7 +4496,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWK",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L347999"
+          "L": "84096",
+          "line": 347999,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L347999",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pw/pw.txt"
         }
       ],
       "machineValue": {
@@ -3720,7 +4526,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2191"
+          "L": "612.1",
+          "line": 2191,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2191",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3746,7 +4556,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L18825"
+          "L": "5194.1",
+          "line": 18825,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L18825",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3772,7 +4586,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L42230"
+          "L": "11602",
+          "line": 42230,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L42230",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3798,13 +4616,47 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L52681"
+          "L": "14602",
+          "line": 52681,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L52681",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
         "siglum": "RAnukr",
         "citedOnlyBy": "MW",
         "citations": 108
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-alias:purnabh",
+      "queue": "source-siglum-alias",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Pūrṇabh",
+        "canonicalId": "purnabh"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "SCH",
+          "L": "246",
+          "line": 780,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/sch/sch.txt#L780",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/sch/sch.txt"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Pūrṇabh",
+        "citedOnlyBy": "SCH",
+        "citations": 107
       },
       "evidenceLevel": "derived",
       "reviewStatus": "needs-review",
@@ -3824,7 +4676,11 @@
       "sourcePointers": [
         {
           "dictionary": "PWG",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2338"
+          "L": "282",
+          "line": 2338,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2338",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/pwg/pwg.txt"
         }
       ],
       "machineValue": {
@@ -3850,7 +4706,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8646"
+          "L": "2416.1",
+          "line": 8646,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8646",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
@@ -3876,7 +4736,11 @@
       "sourcePointers": [
         {
           "dictionary": "MW",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5973"
+          "L": "1641.1",
+          "line": 5973,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L5973",
+          "sourceLinkMode": "github",
+          "sourcePath": "../csl-orig/v02/mw/mw.txt"
         }
       ],
       "machineValue": {
