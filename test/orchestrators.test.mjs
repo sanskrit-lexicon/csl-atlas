@@ -40,6 +40,7 @@ const r2CheckpointReviewMd = fs.readFileSync(path.join(repoRoot, "docs", "R2_CHE
 const r2CheckpointReviewReport = JSON.parse(fs.readFileSync(path.join(repoRoot, "src", "data", "review", "r2-checkpoint-review.json"), "utf8"));
 const r2DriftExplanation = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_drift_explanation.json"), "utf8"));
 const r2DriftExplanationMd = fs.readFileSync(path.join(repoRoot, "docs", "R2_DRIFT_EXPLANATION.md"), "utf8");
+const r2DriftExplanationMachineOnlyMd = fs.readFileSync(path.join(repoRoot, "test", "fixtures", "R2_DRIFT_EXPLANATION.machine-only.md"), "utf8");
 const h5AnomalyReviewReportPath = path.join(repoRoot, "src", "data", "review", "h5-anomaly-review.json");
 const h5AnomalyReviewReport = JSON.parse(fs.readFileSync(h5AnomalyReviewReportPath, "utf8"));
 const h5MakerQaCandidates = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "h5_maker_qa_candidates.json"), "utf8"));
@@ -557,21 +558,21 @@ test("R2 drift explanation generator rejects incomplete or out-of-vocabulary che
   outOfVocab.items[0].reviewedValue.acceptedParserLabels = ["not-a-proposed-label"];
   assert.throws(
     () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, outOfVocab),
-    /must be empty needs-review or a complete human checkpoint decision/
+    /accepted label "not-a-proposed-label" is outside the proposed labels/
   );
 
   const missingReviewer = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
   missingReviewer.items[1].reviewer = null;
   assert.throws(
     () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, missingReviewer),
-    /must be empty needs-review or a complete human checkpoint decision/
+    /reviewer is empty/
   );
 
   const badDisposition = JSON.parse(JSON.stringify(r2CheckpointReviewReport));
   badDisposition.items[2].reviewedValue.parserDisposition = "not-a-disposition";
   assert.throws(
     () => buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, badDisposition),
-    /must be empty needs-review or a complete human checkpoint decision/
+    /parserDisposition "not-a-disposition" is not an allowed disposition/
   );
 });
 
@@ -580,6 +581,11 @@ test("R2 drift explanation generator accepts decided and empty checkpoint overla
   assert.equal(decided.counts.checkpointNeedsReview, 0);
   assert.equal(decided.counts.checkpointDecided, 10);
   assert.equal(decided.reviewStatus, "human-decided");
+  const dispositionTotal = Object.values(decided.counts.checkpointByDisposition).reduce((sum, n) => sum + n, 0);
+  assert.equal(dispositionTotal, 10);
+  for (const disposition of Object.keys(decided.counts.checkpointByDisposition)) {
+    assert.ok(PARSER_DISPOSITIONS.includes(disposition), `unexpected disposition ${disposition}`);
+  }
 
   const emptied = {
     ...r2CheckpointReviewReport,
@@ -618,6 +624,31 @@ test("R2 drift explanation generator reports a partially-human-decided mixed ove
 
 test("R2 drift explanation doc is generated from the artifact", () => {
   assert.equal(normalizeLineEndings(r2DriftExplanationMd), buildR2DriftExplanationMarkdown(r2DriftExplanation));
+});
+
+// The committed doc is the post-decision form, so the machine-only markdown
+// branch has no live doc to guard it. Snapshot it against a golden fixture
+// generated from an emptied checkpoint overlay. Regenerate the fixture after an
+// intentional change with:
+//   node --input-type=module -e 'import fs from "node:fs";import {buildPayload,buildMarkdown} from "./scripts/build-r2-drift-explanation.mjs";const r=p=>JSON.parse(fs.readFileSync(p,"utf8"));const rev=r("src/data/review/r2-checkpoint-review.json");const e={...rev,items:rev.items.map(i=>({...i,reviewStatus:"needs-review",reviewedValue:null,reviewer:null,reviewedAt:null,note:""}))};fs.writeFileSync("test/fixtures/R2_DRIFT_EXPLANATION.machine-only.md",buildMarkdown(buildPayload(r("data/lexico/r2_packet_label_proposals.json"),r("data/lexico/r2_checkpoint_review_packet.json"),e)))'
+test("R2 drift explanation machine-only doc matches its golden fixture", () => {
+  const emptied = {
+    ...r2CheckpointReviewReport,
+    items: r2CheckpointReviewReport.items.map(item => ({
+      ...item,
+      reviewStatus: "needs-review",
+      reviewedValue: null,
+      reviewer: null,
+      reviewedAt: null,
+      note: ""
+    }))
+  };
+  const payload = buildR2DriftExplanationPayload(r2LabelProposals, r2CheckpointPacket, emptied);
+  const markdown = buildR2DriftExplanationMarkdown(payload);
+  assert.equal(payload.reviewStatus, "machine-explained");
+  assert.ok(!markdown.includes("## Counts By Disposition"), "machine-only doc must omit the disposition summary");
+  assert.ok(markdown.includes("## Checkpoint Rows Still Needs-Review"), "machine-only doc must use the needs-review checkpoint header");
+  assert.equal(normalizeLineEndings(r2DriftExplanationMachineOnlyMd), markdown);
 });
 
 test("R2 drift explanation rows cover every diagnostic id", () => {
