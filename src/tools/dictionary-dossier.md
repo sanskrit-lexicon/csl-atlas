@@ -227,7 +227,7 @@ const normalizedQuery = normalizeLookupQuery(q);
 const internalQueries = normalizedQuery.candidates;
 const displayQuery = slp1ToIast(normalizedQuery.normalized) || q;
 const broadShardIdsForQuery = lookupMode === "broad"
-  ? [...new Set(internalQueries.filter(candidate => candidate.length >= 2).map(shardIdForLemma))]
+  ? [...new Set(internalQueries.filter(candidate => candidate.length >= 1).map(shardIdForLemma))]
   : [];
 const broadShards = broadShardIdsForQuery.length
   ? await Promise.all(broadShardIdsForQuery.map(id => broadShardLoaders.get(id)?.()).filter(Boolean))
@@ -235,7 +235,7 @@ const broadShards = broadShardIdsForQuery.length
 const broadEntriesByShard = new Map(broadShards.map(shard => [shard.shard, shard.entries]));
 const broadEntriesForCandidate = candidate => broadEntriesByShard.get(shardIdForLemma(candidate)) ?? [];
 const broadExact = internalQueries.map(candidate => findLemma(broadEntriesForCandidate(candidate), candidate)).find(Boolean) ?? null;
-const broadPrefixBase = internalQueries.find(candidate => candidate.length >= 2) ?? "";
+const broadPrefixBase = internalQueries.find(candidate => candidate.length >= 1) ?? "";
 const broadMatches = q
   ? (broadExact ? [broadExact] : broadPrefixBase ? findPrefix(broadEntriesForCandidate(broadPrefixBase), broadPrefixBase) : [])
   : broadManifest.sampleEntries;

@@ -201,6 +201,10 @@ test("parseKoshaSynonymToken separates headword and gender suffix", () => {
   assert.deepEqual(parseKoshaSynonymToken("rajobala-klI"), { k1: "rajobala", genderSuffix: "klI", genders: ["n"] });
   assert.deepEqual(parseKoshaSynonymToken("peyUza-puMklI"), { k1: "peyUza", genderSuffix: "puMklI", genders: ["m", "n"] });
   assert.deepEqual(parseKoshaSynonymToken("naktam-a"), { k1: "naktam", genderSuffix: "a", genders: ["adj"] });
+  // Combined / modifier-bearing suffixes must not drop gender evidence.
+  assert.deepEqual(parseKoshaSynonymToken("arcis-strIklI"), { k1: "arcis", genderSuffix: "strIklI", genders: ["f", "n"] });
+  assert.deepEqual(parseKoshaSynonymToken("amba-puMdvi"), { k1: "amba", genderSuffix: "puMdvi", genders: ["m"] });
+  assert.deepEqual(parseKoshaSynonymToken("nara-puMklIba"), { k1: "nara", genderSuffix: "puMklIba", genders: ["m", "n"] });
 });
 
 test("iterateKoshaHeadwordsFromText extracts <syns> headwords and source lines", () => {

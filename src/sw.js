@@ -40,13 +40,22 @@ self.addEventListener('fetch', (event) => {
         const networkResponse = await fetch(event.request);
         if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
           await cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        }
+        // Network is reachable but the response is unusable (server error or
+        // opaque). Prefer a cached copy when we have one rather than handing
+        // back a 5xx/error page in place of content we already hold.
+        if (!networkResponse || networkResponse.status >= 500) {
+          const cachedResponse = await caches.match(event.request);
+          if (cachedResponse) return cachedResponse;
         }
         return networkResponse;
       } catch {
         const cachedResponse = await caches.match(event.request);
         if (cachedResponse) return cachedResponse;
         if (event.request.mode === 'navigate') {
-          return caches.match(scopedUrl('./index.html'));
+          const cachedIndex = await caches.match(scopedUrl('./index.html'));
+          if (cachedIndex) return cachedIndex;
         }
         return new Response('', { status: 504, statusText: 'Offline' });
       }

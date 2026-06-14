@@ -201,7 +201,7 @@ const query = view(Inputs.text({
 ```js
 const normalizedQuery = normalizeLookupQuery(query);
 const broadShardIdsForQuery = lookupMode === "broad"
-  ? [...new Set(normalizedQuery.candidates.filter(candidate => candidate.length >= 2).map(shardIdForLemma))]
+  ? [...new Set(normalizedQuery.candidates.filter(candidate => candidate.length >= 1).map(shardIdForLemma))]
   : [];
 const broadShards = broadShardIdsForQuery.length
   ? await Promise.all(broadShardIdsForQuery.map(id => broadShardLoaders.get(id)?.()).filter(Boolean))
@@ -211,7 +211,7 @@ const entriesForCandidate = candidate => lookupMode === "broad"
   ? broadEntriesByShard.get(shardIdForLemma(candidate)) ?? []
   : lookup.entries;
 const exact = normalizedQuery.candidates.map(candidate => findLemma(entriesForCandidate(candidate), candidate)).find(Boolean) ?? null;
-const prefixBase = normalizedQuery.candidates.find(candidate => candidate.length >= 2) ?? "";
+const prefixBase = normalizedQuery.candidates.find(candidate => candidate.length >= 1) ?? "";
 const prefixMatches = prefixBase ? findPrefix(entriesForCandidate(prefixBase), prefixBase) : [];
 const starterLemmas = ["agni", "Siva", "deva", "aMSa", "akza"];
 const starterEntries = lookupMode === "broad"
@@ -252,7 +252,7 @@ display(html`<div class="lookup-results">
         const dict = activeDictionaries[dictIndex];
         const link = hrefOf(tuple);
         const badges = dictBadges(dict);
-        const content = html`<strong>${dict.label}</strong>
+        const content = html`<strong>${dict?.label ?? dict?.code}</strong>
           <span>${records} ${records === 1 ? t("reader.lookup.record") : t("reader.lookup.records")}</span>
           ${lookupMode === "broad"
             ? html`<small>${t("reader.lookup.headword-only")}</small>`

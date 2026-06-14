@@ -119,8 +119,8 @@ display(Inputs.table(matrix.map(s => ({ [t("phase2.citations.source")]: s.source
 
 ```js
 display(Plot.plot({
-  marginLeft: 60,
-  marginBottom: 50,
+  marginLeft: dictsCols.length > 7 ? 90 : 60,
+  marginBottom: dictsCols.length > 7 ? 90 : 50,
   width: Math.max(520, dictsCols.length * 48),
   height: Math.max(360, dictsCols.length * 34),
   color: { scheme: "blues", label: t("phase2.citations.shared-sigla-jaccard"), legend: true },

@@ -61,7 +61,7 @@ function coveragePanel(scope, panelClass) {
     <div style="display:flex;gap:24px;flex-wrap:wrap;margin:8px 0">
       ${[
         [t("phase2.coverage-matrix.distinct-lemmas"), activeCov.distinctLemmas.toLocaleString()],
-        [t("phase2.coverage-matrix.shared-by-all"), activeIntersection.count.toLocaleString()],
+        ...(activeIntersection.count > 0 ? [[t("phase2.coverage-matrix.shared-by-all"), activeIntersection.count.toLocaleString()]] : []),
         [t("phase2.coverage-matrix.dictionaries"), Object.keys(activeCov.lemmasByDict).length]
       ].map(([l, v]) => html`<div><div style="font-size:1.8rem;font-weight:700">${v}</div><div style="color:var(--theme-foreground-muted);font-size:.85rem">${l}</div></div>`)}
     </div>
