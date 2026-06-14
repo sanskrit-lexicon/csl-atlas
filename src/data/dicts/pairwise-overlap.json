@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T06:46:11.474Z",
+  "generatedAt": "2026-06-14T07:43:39.720Z",
   "sourceRoot": "../csl-orig/v02",
   "assumptions": [
     "Jaccard = shared normalized headwords / union of normalized headwords."
@@ -529,7 +529,7 @@
       "sourceLinkMode": "github",
       "grammarReliable": true,
       "citationTagged": true,
-      "senseSegmented": false,
+      "senseSegmented": true,
       "homonymMarked": true,
       "year": 1899,
       "startYear": 1899,
@@ -7658,7 +7658,7 @@
           "sourceLinkMode": "github",
           "grammarReliable": true,
           "citationTagged": true,
-          "senseSegmented": false,
+          "senseSegmented": true,
           "homonymMarked": true,
           "year": 1899,
           "startYear": 1899,
@@ -14281,7 +14281,7 @@
           "sourceLinkMode": "github",
           "grammarReliable": true,
           "citationTagged": true,
-          "senseSegmented": false,
+          "senseSegmented": true,
           "homonymMarked": true,
           "year": 1899,
           "startYear": 1899,

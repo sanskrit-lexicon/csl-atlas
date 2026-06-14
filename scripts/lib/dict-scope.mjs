@@ -5,7 +5,7 @@ export const SOURCE_ROOT = path.resolve(process.cwd(), "..", "csl-orig", "v02");
 export const INVENTORY_PATH = path.resolve(process.cwd(), "src", "data", "lexicographic-structure", "dictionary_inventory.csv");
 
 export const CORE_COMPARISON_DICTS = [
-  { code: "mw", label: "MW", grammarReliable: true, homonymMarked: true, citationTagged: true, senseSegmented: false },
+  { code: "mw", label: "MW", grammarReliable: true, homonymMarked: true, citationTagged: true, senseSegmented: true },
   { code: "ap", label: "AP", grammarReliable: true, homonymMarked: false, citationTagged: true, senseSegmented: true },
   { code: "pwg", label: "PWG", grammarReliable: true, homonymMarked: true, citationTagged: true, senseSegmented: true },
   { code: "pw", label: "PWK", grammarReliable: true, homonymMarked: true, citationTagged: true, senseSegmented: true },

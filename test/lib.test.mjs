@@ -349,15 +349,15 @@ test("homonym split promotes validated broad <h> adapters only", () => {
 test("sense depth promotes validated broad structural adapters only", () => {
   const sense = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/sense-depth.json"), "utf8"));
   const included = sense.includedDictionaries.map(dict => dict.code);
-  assert.equal(sense.includedDictionaries.length, 12);
-  assert.equal(sense.unavailableDictionaries.length, 28);
-  for (const code of ["gst", "ben", "lan", "inm", "vei", "pe", "ieg", "snp", "mci"]) {
+  assert.equal(sense.includedDictionaries.length, 14);
+  assert.equal(sense.unavailableDictionaries.length, 26);
+  for (const code of ["mw", "gst", "ben", "lan", "inm", "vei", "pe", "ieg", "snp", "mci", "pgn"]) {
     assert.ok(included.includes(code), `${code} must be included in validated sense adapters`);
   }
-  for (const code of ["wil", "bop", "gra", "mw", "fri", "pui", "krm"]) {
+  for (const code of ["wil", "bop", "gra", "fri", "pui", "krm", "cae"]) {
     assert.ok(!included.includes(code), `${code} candidate markers must remain unavailable until validated for sense depth`);
   }
-  assert.equal(sense.senseSegmentedDicts.length, 12);
+  assert.equal(sense.senseSegmentedDicts.length, 14);
   assert.ok(sense.disparityCount > 0);
   assert.ok(sense.topDisparities.flatMap(c => c.examples).every(e =>
     e.href || (e.sourceLinkMode === "local-only" && e.sourcePath && e.line > 0)
@@ -493,18 +493,21 @@ test("homonym and sense adapter scopes stay validated-only", broadScopeTestOpts,
   assert.ok(homonymFeatureCodes({ scope: "broadHeadword" }).includes("pe"));
   assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap"));
   assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap90"));
-  assert.deepEqual(supportedFeatureCodes("senses", { scope: "coreComparison" }), ["ap", "pwg", "pw"]);
-  assert.equal(supportedFeatureCodes("senses", { scope: "broadHeadword" }).length, 12);
+  assert.deepEqual(supportedFeatureCodes("senses", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
+  assert.equal(supportedFeatureCodes("senses", { scope: "broadHeadword" }).length, 14);
+  assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("mw"));
   assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("ben"));
   assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("lan"));
   assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("pe"));
+  assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("pgn"));
   assert.ok(!supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("fri"));
   assert.equal(senseUnitsForDict("ap", "one ∙ two ∙ three"), 2);
-  assert.equal(senseUnitsForDict("mw", "<div>not validated for depth</div>"), null);
+  assert.equal(senseUnitsForDict("mw", "to go <div n=\"to\"/>to approach <div n=\"P\"/>a noun sense <div n=\"vp\"/>ignored"), 3);
   assert.equal(senseUnitsForDict("ben", "{@1.@} one {@2.@} two"), 2);
   assert.equal(senseUnitsForDict("gst", "I. one <div n=\"P\">II. two <div n=\"P\">III. three"), 3);
   assert.equal(senseUnitsForDict("lan", "<div n=\"2\"/>{@—1.@} one <div n=\"2\"/>{@—2.@} two <div n=\"p\"/> prefix"), 2);
   assert.equal(senseUnitsForDict("pe", "intro <div n=\"NI\"/>1) one <div n=\"NI\"/>2) two"), 2);
+  assert.equal(senseUnitsForDict("pgn", "first paragraph <div n=\"P\"/>second <div n=\"HI\"/>heading"), 2);
 });
 
 // ---- dict-align ----

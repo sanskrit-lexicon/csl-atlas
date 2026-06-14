@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T06:44:45.372Z",
+  "generatedAt": "2026-06-14T07:41:51.505Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaryCount": 40,
   "coreComparisonCount": 7,
@@ -27,8 +27,8 @@
       "missing": 18
     },
     "senses": {
-      "supported": 12,
-      "candidate": 9,
+      "supported": 14,
+      "candidate": 7,
       "partial": 0,
       "weak": 1,
       "missing": 18
@@ -1564,7 +1564,7 @@
       "sourceLinkMode": "github",
       "grammarReliable": true,
       "citationTagged": true,
-      "senseSegmented": false,
+      "senseSegmented": true,
       "homonymMarked": true,
       "year": 1899,
       "startYear": 1899,
@@ -1614,8 +1614,8 @@
           "method": "h-homonym-index"
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "mw-sense-section-div"
         }
       }
     },
@@ -2670,8 +2670,8 @@
           "method": null
         },
         "senses": {
-          "status": "candidate",
-          "method": "div"
+          "status": "supported",
+          "method": "pgn-article-section-div"
         }
       }
     }

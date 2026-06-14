@@ -39,7 +39,7 @@ const FEATURE_METHOD_NOTES = {
   ],
   senses: [
     "Supported sense adapters count structural sense-division markers; the count is a proxy, not a curated sense inventory.",
-    "AP uses bullet divisions; PWG/PWK use numbered <div> divisions; BEN, GST, LAN, INM, VEI, PE, IEG, SNP, and MCI use validated dictionary-specific numbered/section markers.",
+    "AP uses bullet divisions; MW, PWG/PWK, BEN, GST, LAN, INM, VEI, PE, IEG, SNP, MCI, and PGN use validated dictionary-specific numbered/section markers.",
     "Candidate <div> markers that encode prefix blocks, source examples, parallel language translations, or citation paragraphs stay unavailable until a separate metric is defined.",
     "Unavailable dictionaries are excluded from depth/divergence counts, never counted as single-sense or zero evidence."
   ]
@@ -153,6 +153,7 @@ function leadingTextPlusMarkedUnits(marker) {
 const NUMBERED_BRACE_SENSE_MARKER = /\{@\d+\.@\}/g;
 const GST_SECTION_MARKER = /<div n="P"\/?>/g;
 const LAN_NUMBERED_SENSE_MARKER = /<div n="2"\/?>/g;
+const MW_SENSE_SECTION_MARKER = /<div n="(?:to|P|1)"\/?>/g;
 const ENCYCLOPEDIC_PARAGRAPH_MARKER = /<div n="P"\/?>/g;
 const NAMED_INDEX_SECTION_MARKER = /<div n="(?:P|HI)"\/?>/g;
 const NUMBERED_INDEX_SECTION_MARKER = /<div n="NI"\/?>/g;
@@ -264,6 +265,10 @@ export const FEATURE_ADAPTERS = {
     mci: supportedAdapter("h-homonym-index", "<h> homonym index")
   },
   senses: {
+    mw: supportedAdapter("mw-sense-section-div", "MW sense/section <div>", {
+      extract: leadingTextPlusMarkedUnits(MW_SENSE_SECTION_MARKER),
+      notes: ["Counts MW <div n=\"to\"> gloss dividers plus major <div n=\"P\">/<div n=\"1\"> sense sections; verb-prefix/table markers stay outside this adapter."]
+    }),
     ap: supportedAdapter("ap-bullet-sense-marker", "AP bullet sense marker", { marker: SENSE_MARKER.ap }),
     pwg: supportedAdapter("pwg-div-sense-marker", "PWG <div> sense marker", { marker: SENSE_MARKER.pwg }),
     pw: supportedAdapter("pwk-div-sense-marker", "PWK <div> sense marker", { marker: SENSE_MARKER.pw }),
@@ -301,6 +306,10 @@ export const FEATURE_ADAPTERS = {
     mci: supportedAdapter("mci-article-section-div", "MCI article section <div>", {
       extract: markerSenseUnits(ENCYCLOPEDIC_PARAGRAPH_MARKER),
       notes: ["Validated as article-section depth for Mahābhārata cultural index entries."]
+    }),
+    pgn: supportedAdapter("pgn-article-section-div", "PGN article section <div>", {
+      extract: markerSenseUnits(NAMED_INDEX_SECTION_MARKER),
+      notes: ["Local-only dictionary; counts article paragraph/heading section markers in the Gupta names index."]
     })
   }
 };

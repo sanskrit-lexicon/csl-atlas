@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T01:35:03.164Z",
+  "generatedAt": "2026-06-14T07:42:39.223Z",
   "generatedBy": "npm run build-broad-headword-lookup",
   "scope": "broadHeadword",
   "sourceRoot": "../csl-orig/v02",
@@ -529,7 +529,7 @@
       "sourceLinkMode": "github",
       "grammarReliable": true,
       "citationTagged": true,
-      "senseSegmented": false,
+      "senseSegmented": true,
       "homonymMarked": true,
       "year": 1899,
       "startYear": 1899,
