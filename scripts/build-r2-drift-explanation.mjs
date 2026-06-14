@@ -89,18 +89,28 @@ function hasEmptyReviewReportHumanFields(item) {
 
 // A complete post-review decision: a human status plus reviewer, reviewedAt,
 // a note, and a reviewedValue whose accepted labels and parser disposition stay
-// inside the machine-proposed vocabulary for that row.
-function isCompleteReviewDecision(item) {
-  if (!HUMAN_STATUSES.has(item.reviewStatus)) return false;
-  if (typeof item.reviewer !== "string" || !item.reviewer) return false;
-  if (typeof item.reviewedAt !== "string" || !item.reviewedAt) return false;
-  if (typeof item.note !== "string" || !item.note) return false;
+// inside the machine-proposed vocabulary for that row. Returns the specific
+// failing condition as a string, or null when the decision is complete — so the
+// CLI can tell a hand-editor which field tripped, not just that one did.
+function reviewDecisionProblem(item) {
+  if (!HUMAN_STATUSES.has(item.reviewStatus)) return `reviewStatus "${item.reviewStatus}" is not a human decision status`;
+  if (typeof item.reviewer !== "string" || !item.reviewer) return "reviewer is empty";
+  if (typeof item.reviewedAt !== "string" || !item.reviewedAt) return "reviewedAt is empty";
+  if (typeof item.note !== "string" || !item.note) return "note is empty";
   const accepted = item.reviewedValue?.acceptedParserLabels;
-  if (!Array.isArray(accepted)) return false;
+  if (!Array.isArray(accepted)) return "reviewedValue.acceptedParserLabels is missing";
   const proposed = new Set(item.machineValue?.proposedParserLabels ?? []);
-  if (!accepted.every(label => proposed.has(label))) return false;
+  const stray = accepted.find(label => !proposed.has(label));
+  if (stray) return `accepted label "${stray}" is outside the proposed labels`;
   const allowed = item.machineValue?.allowedParserDispositions ?? [];
-  return allowed.includes(item.reviewedValue?.parserDisposition);
+  if (!allowed.includes(item.reviewedValue?.parserDisposition)) {
+    return `parserDisposition "${item.reviewedValue?.parserDisposition}" is not an allowed disposition`;
+  }
+  return null;
+}
+
+function isCompleteReviewDecision(item) {
+  return reviewDecisionProblem(item) === null;
 }
 
 function compactCheckpointRow(row, reviewItem) {
@@ -232,7 +242,7 @@ function validateInputs(labelPayload, checkpointPacket, checkpointReview) {
 
   for (const item of reviewItems) {
     if (!hasEmptyReviewReportHumanFields(item) && !isCompleteReviewDecision(item)) {
-      errors.push(`${item.reviewId}: checkpoint review item must be empty needs-review or a complete human checkpoint decision`);
+      errors.push(`${item.reviewId}: checkpoint review item must be empty needs-review or a complete human checkpoint decision (${reviewDecisionProblem(item)})`);
     }
     if (!item.sourcePointers?.length) errors.push(`${item.reviewId}: checkpoint review item lacks source pointers`);
     if (!item.machineValue?.reviewQuestion) errors.push(`${item.reviewId}: checkpoint review item lacks review question`);
@@ -328,7 +338,9 @@ export function buildPayload(labelPayload, checkpointPacket, checkpointReview) {
     compactCheckpointRow(checkpointById.get(id), reviewById.get(id))
   );
   const checkpointNeedsReview = checkpointRows.filter(row => row.reviewStatus === "needs-review").length;
-  const checkpointDecided = checkpointRows.filter(row => HUMAN_STATUSES.has(row.reviewStatus)).length;
+  const decidedCheckpointRows = checkpointRows.filter(row => HUMAN_STATUSES.has(row.reviewStatus));
+  const checkpointDecided = decidedCheckpointRows.length;
+  const checkpointByDisposition = countBy(decidedCheckpointRows, row => row.reviewedValue?.parserDisposition ?? "unspecified");
   const postDecision = checkpointDecided > 0;
   const payload = {
     schemaVersion: SCHEMA_VERSION,
@@ -354,6 +366,7 @@ export function buildPayload(labelPayload, checkpointPacket, checkpointReview) {
       checkpointRows: checkpointRows.length,
       checkpointNeedsReview,
       checkpointDecided,
+      checkpointByDisposition,
       proposedLabelAssignments: explanationRows.reduce((sum, row) => sum + row.proposedParserLabels.length, 0),
       byPacket: countBy(explanationRows, row => row.packetId),
       byDriftClass: countBy(explanationRows, row => row.driftClass),
@@ -366,14 +379,14 @@ export function buildPayload(labelPayload, checkpointPacket, checkpointReview) {
     archiveParityPolicy: "Archive parity is a comparison/control signal for drift review and regression checks, not the optimization target.",
     limitations: postDecision ? [
       "This artifact mirrors the recorded human checkpoint decisions; it does not itself promote parser behavior.",
-      "Proposed parser labels explain drift classes and review scope; the accepted subset for each checkpoint row lives in reviewedValue.acceptedParserLabels.",
-      `${checkpointDecided} of ${checkpointRows.length} checkpoint rows carry complete human decisions; ${checkpointNeedsReview} remain needs-review with empty human fields.`,
-      "Parser promotion is gated by each checkpoint row's recorded parserDisposition and stays scoped to the documented promotion experiment.",
+      "Proposed parser labels explain drift classes and review scope; the accepted subset for each checkpoint row lives in `reviewedValue.acceptedParserLabels`.",
+      `${checkpointDecided} of ${checkpointRows.length} checkpoint rows carry complete human decisions; ${checkpointNeedsReview} remain \`needs-review\` with empty human fields.`,
+      "Parser promotion is gated by each checkpoint row's recorded `parserDisposition` and stays scoped to the documented promotion experiment.",
       "No R2 splitter behavior, source-anchor generation, H5 review rows, public R2 pages, backend, runtime LLM, corpus, DCS, or standards work is changed."
     ] : [
       "This artifact is machine-only and records no human checkpoint decisions.",
-      "Proposed parser labels explain drift classes and review scope; they are not accepted labels or reviewedValue.",
-      "All 10 checkpoint rows remain needs-review with empty human fields.",
+      "Proposed parser labels explain drift classes and review scope; they are not accepted labels or `reviewedValue`.",
+      "All 10 checkpoint rows remain `needs-review` with empty human fields.",
       "Parser promotion remains deferred until human checkpoint decisions exist.",
       "No R2 splitter behavior, source-anchor generation, H5 review rows, public R2 pages, backend, runtime LLM, corpus, DCS, or standards work is changed."
     ],
@@ -418,6 +431,12 @@ function labelCountTable(payload) {
   ].join("\n");
 }
 
+function compactNote(note, max = 80) {
+  const oneLine = String(note ?? "").replace(/\s+/g, " ").trim();
+  const clipped = oneLine.length > max ? `${oneLine.slice(0, max - 1)}…` : oneLine;
+  return clipped.replace(/\|/g, "\\|") || "—";
+}
+
 function checkpointTable(payload) {
   const decided = payload.counts.checkpointDecided ?? 0;
   if (decided === 0) {
@@ -438,16 +457,18 @@ function checkpointTable(payload) {
   return [
     "## Checkpoint Rows With Recorded Decisions",
     "",
-    "| Diagnostic ID | Packet | Drift class | Priority | Review status | Disposition | Accepted labels |",
-    "|---|---|---|---|---|---|---|",
+    "| Diagnostic ID | Packet | Review status | Disposition | Reviewer | Reviewed | Accepted labels | Note |",
+    "|---|---|---|---|---|---|---|---|",
     ...payload.checkpointRows.map(row => {
       const accepted = (row.reviewedValue?.acceptedParserLabels ?? [])
         .map(label => `\`${label}\``).join(", ") || "—";
       const disposition = row.reviewedValue?.parserDisposition ? `\`${row.reviewedValue.parserDisposition}\`` : "—";
-      return `| \`${row.diagnosticId}\` | \`${row.packetId}\` | \`${row.driftClass}\` | \`${row.priority}\` | \`${row.reviewStatus}\` | ${disposition} | ${accepted} |`;
+      const reviewer = row.reviewer ? `\`${row.reviewer}\`` : "—";
+      const reviewedAt = row.reviewedAt ? `\`${row.reviewedAt}\`` : "—";
+      return `| \`${row.diagnosticId}\` | \`${row.packetId}\` | \`${row.reviewStatus}\` | ${disposition} | ${reviewer} | ${reviewedAt} | ${accepted} | ${compactNote(row.note)} |`;
     }),
     "",
-    `${decided} of ${payload.checkpointRows.length} checkpoint rows record \`reviewer\`, \`reviewedAt\`, a review note, and a \`reviewedValue\` with accepted labels and a parser disposition.`,
+    `${decided} of ${payload.checkpointRows.length} checkpoint rows record \`reviewer\`, \`reviewedAt\`, a review note, and a \`reviewedValue\` with accepted labels and a parser disposition. Notes are truncated here; full text lives in \`src/data/review/r2-checkpoint-review.json\`.`,
     ""
   ].join("\n");
 }
@@ -510,6 +531,7 @@ export function buildMarkdown(payload) {
     countTable("Counts By Drift Class", payload.counts.byDriftClass),
     countTable("Counts By Priority", payload.counts.byPriority),
     labelCountTable(payload),
+    ...(postDecision ? [countTable("Counts By Disposition", payload.counts.checkpointByDisposition)] : []),
     checkpointTable(payload),
     packetContextSections(payload),
     "## Limitations",

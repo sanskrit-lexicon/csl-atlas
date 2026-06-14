@@ -22,6 +22,11 @@
     "checkpointRows": 10,
     "checkpointNeedsReview": 0,
     "checkpointDecided": 10,
+    "checkpointByDisposition": {
+      "promote-parser-candidate": 7,
+      "retain-side-evidence": 2,
+      "control-only": 1
+    },
     "proposedLabelAssignments": 183,
     "byPacket": {
       "marker-run-scope": 28,
@@ -3484,9 +3489,9 @@
   "archiveParityPolicy": "Archive parity is a comparison/control signal for drift review and regression checks, not the optimization target.",
   "limitations": [
     "This artifact mirrors the recorded human checkpoint decisions; it does not itself promote parser behavior.",
-    "Proposed parser labels explain drift classes and review scope; the accepted subset for each checkpoint row lives in reviewedValue.acceptedParserLabels.",
-    "10 of 10 checkpoint rows carry complete human decisions; 0 remain needs-review with empty human fields.",
-    "Parser promotion is gated by each checkpoint row's recorded parserDisposition and stays scoped to the documented promotion experiment.",
+    "Proposed parser labels explain drift classes and review scope; the accepted subset for each checkpoint row lives in `reviewedValue.acceptedParserLabels`.",
+    "10 of 10 checkpoint rows carry complete human decisions; 0 remain `needs-review` with empty human fields.",
+    "Parser promotion is gated by each checkpoint row's recorded `parserDisposition` and stays scoped to the documented promotion experiment.",
     "No R2 splitter behavior, source-anchor generation, H5 review rows, public R2 pages, backend, runtime LLM, corpus, DCS, or standards work is changed."
   ],
   "boundaryNote": "Dictionary source rows, existing R2 source anchors, recovered archive fixtures, machine label proposals, and the human-decided R2 checkpoint review overlay only."
