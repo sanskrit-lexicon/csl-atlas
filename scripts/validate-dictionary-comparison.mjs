@@ -2,7 +2,7 @@
 //
 // Fails (exit 1) when a required output is missing/unparseable, the index is
 // empty, a present dictionary contributed no lemmas, the all-dictionary
-// intersection is empty, or gender conflicts lack source links.
+// intersection is empty, or deep examples lack link-safe source pointers.
 //
 // Usage: npm run validate-dict-comparison (after build-dict-comparison)
 
@@ -38,40 +38,100 @@ function read(name) {
 
 const docs = Object.fromEntries(REQUIRED.map(n => [n, read(n)]));
 
+function scope(doc, id) {
+  return doc?.scopes?.[id] ?? doc;
+}
+
+function validateFeatureSupport(doc, name) {
+  if (!Array.isArray(doc.includedDictionaries)) {
+    errors.push(`${name} missing includedDictionaries.`);
+    return new Set();
+  }
+  if (!Array.isArray(doc.unavailableDictionaries)) {
+    errors.push(`${name} missing unavailableDictionaries.`);
+    return new Set();
+  }
+  if (!Array.isArray(doc.methodNotes) || doc.methodNotes.length === 0) {
+    errors.push(`${name} missing methodNotes.`);
+  }
+  if (!doc.includedDictionaries.length) errors.push(`${name} has no included feature adapters.`);
+  notes.push(`${name} uses ${doc.includedDictionaries.length} adapter(s); ${doc.unavailableDictionaries.length} unavailable in this feature.`);
+  return new Set(doc.unavailableDictionaries.map(d => d.label));
+}
+
+function hasSourcePointer(example) {
+  if (example?.href) return true;
+  return example?.sourceLinkMode === "local-only" &&
+    typeof example?.sourcePath === "string" &&
+    example.sourcePath.length > 0 &&
+    Number.isFinite(example?.line) &&
+    example.line > 0;
+}
+
 const cov = docs["coverage-matrix.json"];
 if (cov) {
-  if (!(cov.distinctLemmas > 0)) errors.push("coverage-matrix has no lemmas.");
-  for (const [label, n] of Object.entries(cov.lemmasByDict || {})) {
+  const broad = scope(cov, "broadHeadword");
+  const core = scope(cov, "coreComparison");
+  if (cov.defaultScope && cov.defaultScope !== "broadHeadword") errors.push(`coverage-matrix defaultScope is ${cov.defaultScope}, expected broadHeadword.`);
+  if (broad.dictionaryCount !== 40) errors.push(`Broad coverage has ${broad.dictionaryCount} dictionaries, expected 40.`);
+  if (core.dictionaryCount !== 7) errors.push(`Core coverage has ${core.dictionaryCount} dictionaries, expected 7.`);
+  if (!(broad.distinctLemmas > 0)) errors.push("broad coverage-matrix has no lemmas.");
+  for (const [label, n] of Object.entries(broad.lemmasByDict || {})) {
     if (!(n > 0)) errors.push(`Dictionary ${label} contributed 0 lemmas.`);
   }
-  notes.push(`Indexed ${cov.distinctLemmas} distinct lemmas across ${Object.keys(cov.lemmasByDict || {}).length} dictionaries.`);
+  notes.push(`Indexed ${broad.distinctLemmas} broad distinct lemmas across ${Object.keys(broad.lemmasByDict || {}).length} dictionaries.`);
+  notes.push(`Core coverage keeps ${core.distinctLemmas} distinct lemmas across ${Object.keys(core.lemmasByDict || {}).length} dictionaries.`);
 }
 
 const inter = docs["all-intersection.json"];
-if (inter && !(inter.count > 0)) errors.push("all-dictionary intersection is empty.");
-else if (inter) notes.push(`${inter.count} lemmas shared by all target dictionaries.`);
+if (inter) {
+  const broad = scope(inter, "broadHeadword");
+  const core = scope(inter, "coreComparison");
+  if (typeof broad.count !== "number") errors.push("broad all-dictionary intersection missing numeric count.");
+  if (!(core.count > 0)) errors.push("core all-dictionary intersection is empty.");
+  else notes.push(`${core.count} lemmas shared by all core target dictionaries.`);
+  notes.push(`${broad.count} lemmas shared by all broad target dictionaries (zero is allowed).`);
+}
+
+const pairDoc = docs["pairwise-overlap.json"];
+if (pairDoc) {
+  const broad = scope(pairDoc, "broadHeadword");
+  const core = scope(pairDoc, "coreComparison");
+  if ((broad.pairwise || []).length !== 780) errors.push(`Broad pairwise overlap has ${(broad.pairwise || []).length} rows, expected 780.`);
+  if ((core.pairwise || []).length !== 21) errors.push(`Core pairwise overlap has ${(core.pairwise || []).length} rows, expected 21.`);
+  else notes.push("Pairwise overlap has broad 40 and core 7 row counts.");
+}
 
 const pos = docs["pos-disagreement.json"];
 if (pos) {
-  const missing = (pos.conflicts || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
-  if (missing.length) errors.push(`${missing.length} gender conflicts lack source links.`);
-  else notes.push(`${pos.conflictCount} gender conflicts (${pos.shown} sampled), all with source links.`);
+  const unavailableLabels = validateFeatureSupport(pos, "pos-disagreement");
+  const missing = (pos.conflicts || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !hasSourcePointer(e)));
+  if (missing.length) errors.push(`${missing.length} gender conflicts lack link-safe source pointers.`);
+  const unavailableEvidence = (pos.conflicts || []).filter(c => Object.keys(c.byDict || {}).some(label => unavailableLabels.has(label)));
+  if (unavailableEvidence.length) errors.push(`${unavailableEvidence.length} gender conflicts include unavailable dictionaries.`);
+  if (!missing.length && !unavailableEvidence.length) notes.push(`${pos.conflictCount} gender conflicts (${pos.shown} sampled), all with link-safe source pointers.`);
 }
 
 const hom = docs["homonym-split.json"];
 if (hom) {
+  const unavailableLabels = validateFeatureSupport(hom, "homonym-split");
   if (typeof hom.candidateCount !== "number") errors.push("homonym-split missing candidateCount.");
-  const missing = (hom.candidates || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
-  if (missing.length) errors.push(`${missing.length} homonym-split candidates lack source links.`);
-  else notes.push(`${hom.candidateCount} homonym-split candidates (${hom.shown} shown), all with source links.`);
+  const missing = (hom.candidates || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !hasSourcePointer(e)));
+  if (missing.length) errors.push(`${missing.length} homonym-split candidates lack link-safe source pointers.`);
+  const unavailableEvidence = (hom.candidates || []).filter(c => Object.keys(c.byDict || {}).some(label => unavailableLabels.has(label)));
+  if (unavailableEvidence.length) errors.push(`${unavailableEvidence.length} homonym-split candidates include unavailable dictionaries.`);
+  if (!missing.length && !unavailableEvidence.length) notes.push(`${hom.candidateCount} homonym-split candidates (${hom.shown} shown), all with link-safe source pointers.`);
 }
 
 const sense = docs["sense-depth.json"];
 if (sense) {
+  const unavailableLabels = validateFeatureSupport(sense, "sense-depth");
   if (!Array.isArray(sense.perDict) || sense.perDict.length < 2) errors.push("sense-depth needs >=2 dictionaries.");
-  const missing = (sense.topDisparities || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !e.href));
-  if (missing.length) errors.push(`${missing.length} sense-depth disparities lack source links.`);
-  else notes.push(`${sense.disparityCount} sense-depth disparities (${sense.shown} shown), all with source links.`);
+  const missing = (sense.topDisparities || []).filter(c => !Array.isArray(c.examples) || c.examples.some(e => !hasSourcePointer(e)));
+  if (missing.length) errors.push(`${missing.length} sense-depth disparities lack link-safe source pointers.`);
+  const unavailableEvidence = (sense.topDisparities || []).filter(c => Object.keys(c.byDict || {}).some(label => unavailableLabels.has(label)));
+  if (unavailableEvidence.length) errors.push(`${unavailableEvidence.length} sense-depth disparities include unavailable dictionaries.`);
+  if (!missing.length && !unavailableEvidence.length) notes.push(`${sense.disparityCount} sense-depth disparities (${sense.shown} shown), all with link-safe source pointers.`);
 }
 
 const dossier = docs["lemma-dossier.json"];

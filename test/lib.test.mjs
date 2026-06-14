@@ -18,10 +18,20 @@ import { baseForm, layerForSource, isEditorialReference, recordSourceLayers } fr
 import { compoundSegmentCount, familyBase } from "../scripts/lib/mw-depth-graph.mjs";
 import { normalizeLemma } from "../scripts/lib/dict-normalize.mjs";
 import { genderFromLex, genderFromProse, genderForDict } from "../scripts/lib/dict-parser.mjs";
+import {
+  citationAdapterForDict,
+  extractGrammar,
+  featureSupport,
+  homonymFeatureCodes,
+  senseUnitsForDict,
+  supportedFeatureCodes
+} from "../scripts/lib/dict-feature-adapters.mjs";
+import { iterateKoshaHeadwordsFromText, parseKoshaSynonymToken } from "../scripts/lib/dict-headwords.mjs";
 import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/dict-align.mjs";
+import { CORE_COMPARISON_DICTS, SOURCE_ROOT, buildBroadHeadwordDictionaries, isBroadHeadwordEligible, shardIdForLemma } from "../scripts/lib/dict-scope.mjs";
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
-import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma } from "../src/lib/lookup-normalize.js";
+import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma, slp1ToIast } from "../src/lib/lookup-normalize.js";
 import { parseDcsSummaryFile } from "../scripts/lib/dcs-summary.mjs";
 
 // ---- build-r2-pages ----
@@ -155,12 +165,219 @@ test("normalizeSlp1Lemma mirrors dictionary headword normalization", () => {
   assert.equal(normalizeSlp1Lemma("agni2").normalized, "agni");
 });
 
+// ---- dict-scope ----
+test("core comparison dictionaries remain stable in order and labels", () => {
+  assert.deepEqual(
+    CORE_COMPARISON_DICTS.map(({ code, label }) => [code, label]),
+    [["mw", "MW"], ["ap", "AP"], ["pwg", "PWG"], ["pw", "PWK"], ["wil", "WIL"], ["vcp", "VCP"], ["skd", "SKD"]]
+  );
+});
+
+test("broad headword scope includes local Sanskrit/BHS and excludes reverse dictionaries", () => {
+  const inventoryRows = [
+    { code: "MW", full_name: "Monier-Williams", language_pair: "Skt-Eng", family: "Sanskrit-English", year: 1899, start_year: 1899, deprecated: false, in_github: true },
+    { code: "BHS", full_name: "Buddhist Hybrid Sanskrit", language_pair: "BHS-Eng", family: "Buddhist Hybrid Sanskrit", year: 1953, start_year: 1953, deprecated: false, in_github: true },
+    { code: "ABCH", full_name: "Abhidhana Chintamani", language_pair: "Skt-Skt", family: "Sanskrit-Sanskrit", year: 1200, start_year: 1200, deprecated: false, in_github: false },
+    { code: "AE", full_name: "Apte English-Sanskrit", language_pair: "Eng-Skt", family: "English-Sanskrit", year: 1920, start_year: 1920, deprecated: false, in_github: true },
+    { code: "BOR", full_name: "Borooah English-Sanskrit", language_pair: "Eng-Skt", family: "English-Sanskrit", year: 1877, start_year: 1877, deprecated: false, in_github: true }
+  ];
+  const localCodes = new Set(["mw", "bhs", "abch", "ae", "bor"]);
+  const broad = buildBroadHeadwordDictionaries({ inventoryRows, localCodes });
+  assert.deepEqual(broad.map(dict => dict.code), ["abch", "mw", "bhs"]);
+  assert.equal(broad.find(dict => dict.code === "abch").sourceLinkMode, "local-only");
+  assert.equal(broad.find(dict => dict.code === "mw").sourceLinkMode, "github");
+  assert.equal(isBroadHeadwordEligible(inventoryRows[3], localCodes), false);
+});
+
+test("broad shard ids preserve SLP1 case distinctions", () => {
+  assert.equal(shardIdForLemma("aMSa"), "61");
+  assert.equal(shardIdForLemma("Agni"), "41");
+  assert.notEqual(shardIdForLemma("aMSa"), shardIdForLemma("Agni"));
+});
+
+test("parseKoshaSynonymToken separates headword and gender suffix", () => {
+  assert.deepEqual(parseKoshaSynonymToken("arhan-puM"), { k1: "arhan", genderSuffix: "puM", genders: ["m"] });
+  assert.deepEqual(parseKoshaSynonymToken("rajobala-klI"), { k1: "rajobala", genderSuffix: "klI", genders: ["n"] });
+  assert.deepEqual(parseKoshaSynonymToken("peyUza-puMklI"), { k1: "peyUza", genderSuffix: "puMklI", genders: ["m", "n"] });
+  assert.deepEqual(parseKoshaSynonymToken("naktam-a"), { k1: "naktam", genderSuffix: "a", genders: ["adj"] });
+});
+
+test("iterateKoshaHeadwordsFromText extracts <syns> headwords and source lines", () => {
+  const text = [
+    ";METADATA",
+    "<L>1<pc>5",
+    "<info kvvv=\"<s>x</s>\"/>",
+    "<eid>1<syns><s>arhan-puM,jina-puM,rajobala-klI</s>",
+    "<s>verse text</s>",
+    "<LEND>"
+  ].join("\n");
+  const rows = [...iterateKoshaHeadwordsFromText("abch", text, { sourceLinkMode: "local-only" })];
+  assert.deepEqual(rows.map(row => row.k1), ["arhan", "jina", "rajobala"]);
+  assert.deepEqual(rows.map(row => row.genderHint), ["m", "m", "n"]);
+  assert.equal(rows[0].startLine, 2);
+  assert.equal(rows[0].href, null);
+  assert.equal(rows[0].adapter, "kosha-syns");
+});
+
+test("broad headword manifest and shards are internally consistent", () => {
+  const base = path.resolve("src/data/dicts/broad-headword");
+  const manifest = JSON.parse(fs.readFileSync(path.join(base, "manifest.json"), "utf8"));
+  assert.equal(manifest.scope, "broadHeadword");
+  assert.equal(manifest.dictionaryCount, 40);
+  assert.ok(manifest.dictionaries.some(dict => dict.code === "bhs"), "BHS must be included as Sanskrit-family coverage");
+  assert.ok(manifest.dictionaries.some(dict => dict.sourceLinkMode === "local-only"), "local-only dictionaries must be represented");
+  for (const code of ["abch", "acph", "acsj"]) {
+    assert.ok(manifest.lemmasByDict[code] > 0, `${code} must contribute kosha synonym headwords`);
+  }
+  assert.ok(manifest.excluded.some(dict => dict.code === "ae" && /reverse/.test(dict.reason)), "AE must be excluded as reverse lookup");
+  assert.ok(manifest.excluded.some(dict => dict.code === "bor" && /reverse/.test(dict.reason)), "BOR must be excluded as reverse lookup");
+  assert.ok(manifest.excluded.some(dict => dict.code === "mwe" && /reverse/.test(dict.reason)), "MWE must be excluded as reverse lookup");
+
+  let shardTotal = 0;
+  for (const shardInfo of manifest.shards) {
+    const shard = JSON.parse(fs.readFileSync(path.join(base, shardInfo.path), "utf8"));
+    assert.equal(shard.scope, "broadHeadword");
+    assert.equal(shard.shard, shardInfo.id);
+    assert.equal(shard.count, shard.entries.length);
+    assert.equal(shardInfo.count, shard.entries.length);
+    shardTotal += shard.entries.length;
+    for (let i = 1; i < shard.entries.length; i++) {
+      assert.ok(shard.entries[i - 1][0] <= shard.entries[i][0], `${shard.shard} shard must be sorted`);
+    }
+    for (const [, dictTuples] of shard.entries) {
+      for (const [dictIndex, records, firstLine] of dictTuples) {
+        assert.ok(dictIndex >= 0 && dictIndex < manifest.dictionaries.length, "dict index must resolve to manifest metadata");
+        assert.ok(records >= 1, "record count must be positive");
+        assert.ok(firstLine >= 1, "first source line must be positive");
+      }
+    }
+  }
+  assert.equal(shardTotal, manifest.count);
+});
+
+test("coverage artifacts expose broad default and stable core scope", () => {
+  const coverage = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/coverage-matrix.json"), "utf8"));
+  const overlap = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/pairwise-overlap.json"), "utf8"));
+  const intersection = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/all-intersection.json"), "utf8"));
+
+  assert.equal(coverage.defaultScope, "broadHeadword");
+  assert.equal(coverage.scopes.broadHeadword.dictionaryCount, 40);
+  assert.equal(coverage.scopes.coreComparison.dictionaryCount, 7);
+  assert.deepEqual(
+    coverage.scopes.coreComparison.dictionaries.map(({ code, label }) => [code, label]),
+    [["mw", "MW"], ["ap", "AP"], ["pwg", "PWG"], ["pw", "PWK"], ["wil", "WIL"], ["vcp", "VCP"], ["skd", "SKD"]]
+  );
+  for (const [label, count] of Object.entries(coverage.scopes.broadHeadword.lemmasByDict)) {
+    assert.ok(count > 0, `${label} must contribute broad headwords`);
+  }
+  assert.equal(overlap.scopes.broadHeadword.pairwise.length, 780);
+  assert.equal(overlap.scopes.coreComparison.pairwise.length, 21);
+  assert.ok(intersection.scopes.coreComparison.count > 0, "core all-dictionary intersection must remain non-empty");
+  assert.equal(typeof intersection.scopes.broadHeadword.count, "number");
+});
+
+test("deep analysis artifacts declare included and unavailable adapters", () => {
+  const artifacts = [
+    ["pos-disagreement.json", "grammar"],
+    ["citation-apparatus.json", "citations"],
+    ["homonym-split.json", "homonyms"],
+    ["sense-depth.json", "senses"]
+  ];
+  for (const [file, feature] of artifacts) {
+    const data = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts", file), "utf8"));
+    assert.equal(data.feature, feature);
+    assert.equal(data.adapterScope, "broadHeadword");
+    assert.ok(Array.isArray(data.includedDictionaries) && data.includedDictionaries.length > 0, `${file} must include supported adapters`);
+    assert.ok(Array.isArray(data.unavailableDictionaries), `${file} must include unavailable dictionaries`);
+    assert.ok(Array.isArray(data.methodNotes) && data.methodNotes.length > 0, `${file} must include method notes`);
+    assert.ok(data.includedDictionaries.every(dict => dict.sourceLinkMode), `${file} included dictionaries must expose source link mode`);
+  }
+});
+
+test("deep analysis artifacts never put unavailable dictionaries in evidence cells", () => {
+  const pos = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/pos-disagreement.json"), "utf8"));
+  const citations = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/citation-apparatus.json"), "utf8"));
+  const hom = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/homonym-split.json"), "utf8"));
+  const sense = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/sense-depth.json"), "utf8"));
+
+  for (const data of [pos, hom, sense]) {
+    const unavailable = new Set(data.unavailableDictionaries.map(dict => dict.label));
+    const rows = data.conflicts ?? data.candidates ?? data.topDisparities ?? [];
+    for (const row of rows) {
+      assert.ok(
+        Object.keys(row.byDict ?? {}).every(label => !unavailable.has(label)),
+        `${data.feature} evidence must not include unavailable dictionaries`
+      );
+    }
+  }
+
+  assert.ok(citations.diagnosticDictionaries.some(dict => dict.code === "vcp"));
+  assert.ok(citations.sourceMatrix.every(row => Object.keys(row.byDict).every(label => !new Set(citations.unavailableDictionaries.map(dict => dict.label)).has(label))));
+});
+
+test("citation apparatus promotes broad <ls> adapters into source overlap", () => {
+  const citations = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/citation-apparatus.json"), "utf8"));
+  const included = citations.includedDictionaries.map(dict => dict.code);
+  assert.equal(citations.includedDictionaries.length, 12);
+  for (const code of ["ben", "gra", "pwkvn", "lan", "lrv", "ap90", "sch", "bhs"]) {
+    assert.ok(included.includes(code), `${code} must be included in validated citation adapters`);
+  }
+  assert.equal(citations.unavailableDictionaries.length, 28);
+  assert.equal(citations.citationTaggedDicts.length, 12);
+  assert.equal(citations.sourceOverlap.length, 66);
+  assert.ok(citations.perDict.some(dict => dict.code === "pwkvn" && dict.method === "ls"));
+  assert.ok(citations.perDict.some(dict => dict.code === "vcp" && dict.method === "iti" && dict.methodStatus === "partial"));
+});
+
+test("homonym split promotes validated broad <h> adapters only", () => {
+  const hom = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/homonym-split.json"), "utf8"));
+  const included = hom.includedDictionaries.map(dict => dict.code);
+  assert.equal(hom.includedDictionaries.length, 20);
+  assert.equal(hom.unavailableDictionaries.length, 20);
+  assert.equal(hom.homonymDicts.length, 20);
+  for (const code of ["bop", "gst", "mw72", "gra", "pwkvn", "lan", "ccs", "lrv", "cae", "md", "inm", "vei", "stc", "pui", "bhs", "pe", "mci"]) {
+    assert.ok(included.includes(code), `${code} must be included in validated homonym adapters`);
+  }
+  assert.ok(!included.includes("ap"), "AP sparse <h> traces must remain unavailable");
+  assert.ok(!included.includes("ap90"), "AP90 sparse <h> traces must remain unavailable");
+  assert.ok(hom.candidateCount > 0);
+  assert.ok(hom.candidates.flatMap(c => c.examples).every(e =>
+    e.href || (e.sourceLinkMode === "local-only" && e.sourcePath && e.line > 0)
+  ));
+});
+
+test("sense depth promotes validated broad structural adapters only", () => {
+  const sense = JSON.parse(fs.readFileSync(path.resolve("src/data/dicts/sense-depth.json"), "utf8"));
+  const included = sense.includedDictionaries.map(dict => dict.code);
+  assert.equal(sense.includedDictionaries.length, 14);
+  assert.equal(sense.unavailableDictionaries.length, 26);
+  for (const code of ["mw", "gst", "ben", "lan", "inm", "vei", "pe", "ieg", "snp", "mci", "pgn"]) {
+    assert.ok(included.includes(code), `${code} must be included in validated sense adapters`);
+  }
+  for (const code of ["wil", "bop", "gra", "fri", "pui", "krm", "cae"]) {
+    assert.ok(!included.includes(code), `${code} candidate markers must remain unavailable until validated for sense depth`);
+  }
+  assert.equal(sense.senseSegmentedDicts.length, 14);
+  assert.ok(sense.disparityCount > 0);
+  assert.ok(sense.topDisparities.flatMap(c => c.examples).every(e =>
+    e.href || (e.sourceLinkMode === "local-only" && e.sourcePath && e.line > 0)
+  ));
+});
+
 test("iastToSlp1 transliterates common IAST queries", () => {
   assert.equal(iastToSlp1("agni"), "agni");
   assert.equal(iastToSlp1("śiva"), "Siva");
   assert.equal(iastToSlp1("ṛta"), "fta");
   assert.equal(iastToSlp1("mahābhārata"), "mahABArata");
   assert.equal(iastToSlp1("saṃskṛta"), "saMskfta");
+});
+
+test("slp1ToIast renders public headwords in IAST", () => {
+  assert.equal(slp1ToIast("aMSa"), "aṃśa");
+  assert.equal(slp1ToIast("Siva"), "śiva");
+  assert.equal(slp1ToIast("akza"), "akṣa");
+  assert.equal(slp1ToIast("mahABArata"), "mahābhārata");
+  assert.equal(slp1ToIast("dA"), "dā");
 });
 
 test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", () => {
@@ -201,6 +418,96 @@ test("genderForDict dispatches lex vs prose by code", () => {
   assert.equal(genderForDict("mw", "<lex>m.</lex>"), "m");
   assert.equal(genderForDict("vcp", "a¦ pu0 x"), "m");
   assert.equal(genderForDict("skd", "a¦, klI, x"), "n");
+});
+
+// ---- dict-feature-adapters ----
+// The "broadHeadword" scope is discovered from the sibling csl-orig checkout
+// (SOURCE_ROOT = ../csl-orig/v02), present in local dev but not on the csl-atlas
+// CI runner. Guard the broad-scope assertions so they skip when those sources
+// are absent; they still run fully in local development.
+const broadScopeSourcesPresent = (() => {
+  try { return fs.existsSync(SOURCE_ROOT) && fs.readdirSync(SOURCE_ROOT).length > 0; }
+  catch { return false; }
+})();
+const broadScopeTestOpts = { skip: broadScopeSourcesPresent ? false : "requires sibling ../csl-orig/v02 checkout (local-only integration test)" };
+
+test("feature adapter registry preserves supported Core 7 grammar extraction", () => {
+  assert.deepEqual(
+    supportedFeatureCodes("grammar", { scope: "coreComparison" }),
+    ["mw", "ap", "pwg", "pw", "wil", "vcp", "skd"]
+  );
+  assert.deepEqual(extractGrammar("mw", "<lex>f.</lex>"), { value: "f", methodId: "lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("vcp", "a¦ pu0 x"), { value: "m", methodId: "vcp-prose-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("skd", "a¦, klI, x"), { value: "n", methodId: "skd-prose-gender-pos", status: "supported" });
+});
+
+test("feature adapter registry promotes validated broad <lex> grammar candidates", broadScopeTestOpts, () => {
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("cae"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("md"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("bhs"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("pwkvn"));
+  assert.deepEqual(extractGrammar("cae", "<lex>a.</lex>"), { value: "adj", methodId: "cae-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("md", "<lex>ad.</lex>"), { value: "ind", methodId: "md-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("md", "<lex>m.¹</lex>"), { value: "m", methodId: "md-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("bhs", "<lex>subst.</lex> <lex>nt.</lex>"), { value: "n", methodId: "bhs-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("bhs", "<lex>fem.</lex>"), { value: "f", methodId: "bhs-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("bhs", "<lex>indecl.</lex>"), { value: "ind", methodId: "bhs-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("pwkvn", "<lex>Adj.</lex>"), { value: "adj", methodId: "pwkvn-lex-gender-pos", status: "supported" });
+  assert.deepEqual(extractGrammar("pwkvn", "<lex>Adv.</lex>"), { value: "ind", methodId: "pwkvn-lex-gender-pos", status: "supported" });
+});
+
+test("feature adapter registry promotes validated kosha suffix grammar candidates", broadScopeTestOpts, () => {
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("abch"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("acph"));
+  assert.ok(supportedFeatureCodes("grammar", { scope: "broadHeadword" }).includes("acsj"));
+  assert.deepEqual(extractGrammar("abch", "", { genderHint: "m" }), { value: "m", methodId: "kosha-synonym-gender-suffix", status: "supported" });
+  assert.deepEqual(extractGrammar("acph", "", { genderHint: "adj" }), { value: "adj", methodId: "kosha-synonym-gender-suffix", status: "supported" });
+  assert.deepEqual(extractGrammar("acsj", "", { genderHint: "mf" }), { value: "m", values: ["m", "f"], methodId: "kosha-synonym-gender-suffix", status: "supported" });
+});
+
+test("feature support exposes broad unavailable dictionaries without promoting them", broadScopeTestOpts, () => {
+  const grammar = featureSupport("grammar", { scope: "broadHeadword" });
+  assert.equal(grammar.adapterScope, "broadHeadword");
+  assert.equal(grammar.includedDictionaries.length, 14);
+  assert.equal(grammar.unavailableDictionaries.length, 26);
+  assert.ok(grammar.includedDictionaries.some(dict => dict.code === "pwkvn" && dict.sourceLinkMode === "local-only"));
+  assert.ok(grammar.includedDictionaries.some(dict => dict.code === "abch" && dict.sourceLinkMode === "local-only"));
+  assert.ok(grammar.unavailableDictionaries.some(dict => dict.code === "lan"));
+});
+
+test("citation adapters separate supported <ls> from diagnostic prose proxies", broadScopeTestOpts, () => {
+  assert.deepEqual(supportedFeatureCodes("citations", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
+  assert.equal(supportedFeatureCodes("citations", { scope: "broadHeadword" }).length, 12);
+  assert.equal(citationAdapterForDict("mw").status, "supported");
+  assert.equal(citationAdapterForDict("ben").status, "supported");
+  assert.equal(citationAdapterForDict("bhs").status, "supported");
+  assert.equal(citationAdapterForDict("krm"), null);
+  assert.equal(citationAdapterForDict("vcp").status, "partial");
+  assert.equal(citationAdapterForDict("wil").status, "weak");
+});
+
+test("homonym and sense adapter scopes stay validated-only", broadScopeTestOpts, () => {
+  assert.deepEqual(homonymFeatureCodes({ scope: "coreComparison" }), ["mw", "pwg", "pw"]);
+  assert.equal(homonymFeatureCodes({ scope: "broadHeadword" }).length, 20);
+  assert.ok(homonymFeatureCodes({ scope: "broadHeadword" }).includes("pwkvn"));
+  assert.ok(homonymFeatureCodes({ scope: "broadHeadword" }).includes("pe"));
+  assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap"));
+  assert.ok(!homonymFeatureCodes({ scope: "broadHeadword" }).includes("ap90"));
+  assert.deepEqual(supportedFeatureCodes("senses", { scope: "coreComparison" }), ["mw", "ap", "pwg", "pw"]);
+  assert.equal(supportedFeatureCodes("senses", { scope: "broadHeadword" }).length, 14);
+  assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("mw"));
+  assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("ben"));
+  assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("lan"));
+  assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("pe"));
+  assert.ok(supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("pgn"));
+  assert.ok(!supportedFeatureCodes("senses", { scope: "broadHeadword" }).includes("fri"));
+  assert.equal(senseUnitsForDict("ap", "one ∙ two ∙ three"), 2);
+  assert.equal(senseUnitsForDict("mw", "to go <div n=\"to\"/>to approach <div n=\"P\"/>a noun sense <div n=\"vp\"/>ignored"), 3);
+  assert.equal(senseUnitsForDict("ben", "{@1.@} one {@2.@} two"), 2);
+  assert.equal(senseUnitsForDict("gst", "I. one <div n=\"P\">II. two <div n=\"P\">III. three"), 3);
+  assert.equal(senseUnitsForDict("lan", "<div n=\"2\"/>{@—1.@} one <div n=\"2\"/>{@—2.@} two <div n=\"p\"/> prefix"), 2);
+  assert.equal(senseUnitsForDict("pe", "intro <div n=\"NI\"/>1) one <div n=\"NI\"/>2) two"), 2);
+  assert.equal(senseUnitsForDict("pgn", "first paragraph <div n=\"P\"/>second <div n=\"HI\"/>heading"), 2);
 });
 
 // ---- dict-align ----

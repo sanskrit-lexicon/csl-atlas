@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-03T09:59:20.600Z",
+  "generatedAt": "2026-06-14T07:43:39.948Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -55,7 +55,35 @@
     "VCP": 50135,
     "SKD": 42531
   },
+  "coverageScopes": {
+    "broadHeadword": {
+      "dictionaryCount": 40,
+      "distinctLemmas": 376943,
+      "intersectionAll": 0,
+      "pairwiseRows": 780
+    },
+    "coreComparison": {
+      "dictionaryCount": 7,
+      "distinctLemmas": 298413,
+      "intersectionAll": 1913,
+      "pairwiseRows": 21
+    }
+  },
+  "featureAdapters": {
+    "grammar": {
+      "included": 14,
+      "unavailable": 26
+    },
+    "homonyms": {
+      "included": 20,
+      "unavailable": 20
+    },
+    "headwordAlignment": {
+      "included": 7,
+      "unavailable": 0
+    }
+  },
   "intersectionAll": 1913,
-  "genderConflicts": 4556,
-  "homonymSplits": 3586
+  "genderConflicts": 6681,
+  "homonymSplits": 9839
 }

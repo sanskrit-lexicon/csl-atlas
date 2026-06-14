@@ -1,201 +1,184 @@
 {
   "schemaVersion": "1.0.0",
-  "license": "CC-BY-SA-4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-03T09:59:20.401Z",
+  "generatedAt": "2026-06-14T07:43:39.724Z",
   "sourceRoot": "../csl-orig/v02",
-  "dictionaries": [
-    {
-      "code": "mw",
-      "label": "MW",
-      "grammarReliable": true
-    },
-    {
-      "code": "ap",
-      "label": "AP",
-      "grammarReliable": true
-    },
-    {
-      "code": "pwg",
-      "label": "PWG",
-      "grammarReliable": true
-    },
-    {
-      "code": "pw",
-      "label": "PWK",
-      "grammarReliable": true
-    },
-    {
-      "code": "wil",
-      "label": "WIL",
-      "grammarReliable": true
-    },
-    {
-      "code": "vcp",
-      "label": "VCP",
-      "grammarReliable": false
-    },
-    {
-      "code": "skd",
-      "label": "SKD",
-      "grammarReliable": false
-    }
-  ],
   "assumptions": [
-    "Lemmas present in all 7 target dictionaries."
+    "Broad all-dictionary intersection may be zero because the 40-dictionary set includes specialized and genre-specific dictionaries.",
+    "Core 7 intersection remains the legacy non-empty comparison invariant."
   ],
   "warnings": [],
-  "count": 1913,
-  "examples": [
-    {
-      "lemma": "a"
+  "defaultScope": "broadHeadword",
+  "scopeLabels": {
+    "broadHeadword": "Broad 40",
+    "coreComparison": "Core 7"
+  },
+  "count": 0,
+  "examples": [],
+  "scopes": {
+    "broadHeadword": {
+      "scope": "broadHeadword",
+      "scopeLabel": "Broad 40",
+      "dictionaryCount": 40,
+      "count": 0,
+      "examples": []
     },
-    {
-      "lemma": "aMSumatPalA"
-    },
-    {
-      "lemma": "aka"
-    },
-    {
-      "lemma": "akasmAt"
-    },
-    {
-      "lemma": "akUpAra"
-    },
-    {
-      "lemma": "akkA"
-    },
-    {
-      "lemma": "akzamAlA"
-    },
-    {
-      "lemma": "akzayatftIyA"
-    },
-    {
-      "lemma": "akzarajananI"
-    },
-    {
-      "lemma": "akzaratUlikA"
-    },
-    {
-      "lemma": "akzi"
-    },
-    {
-      "lemma": "akzOhiRI"
-    },
-    {
-      "lemma": "aga"
-    },
-    {
-      "lemma": "agarI"
-    },
-    {
-      "lemma": "agaru"
-    },
-    {
-      "lemma": "aguru"
-    },
-    {
-      "lemma": "agnAyI"
-    },
-    {
-      "lemma": "agnikArikA"
-    },
-    {
-      "lemma": "agnicit"
-    },
-    {
-      "lemma": "agnijvAlA"
-    },
-    {
-      "lemma": "agnidamanI"
-    },
-    {
-      "lemma": "agniruhA"
-    },
-    {
-      "lemma": "agrajaNGA"
-    },
-    {
-      "lemma": "agraparRI"
-    },
-    {
-      "lemma": "aGa"
-    },
-    {
-      "lemma": "aNkapAlI"
-    },
-    {
-      "lemma": "aNga"
-    },
-    {
-      "lemma": "aNgikA"
-    },
-    {
-      "lemma": "aNgAravallI"
-    },
-    {
-      "lemma": "aNgAraSakawI"
-    },
-    {
-      "lemma": "aNgulI"
-    },
-    {
-      "lemma": "aNgulimudrA"
-    },
-    {
-      "lemma": "aNGrivallikA"
-    },
-    {
-      "lemma": "acalakIlA"
-    },
-    {
-      "lemma": "acirapraBA"
-    },
-    {
-      "lemma": "aja"
-    },
-    {
-      "lemma": "ajaganDikA"
-    },
-    {
-      "lemma": "ajaganDinI"
-    },
-    {
-      "lemma": "ajamodA"
-    },
-    {
-      "lemma": "ajaSfNgI"
-    },
-    {
-      "lemma": "ajAdanI"
-    },
-    {
-      "lemma": "ajAntrI"
-    },
-    {
-      "lemma": "ajawA"
-    },
-    {
-      "lemma": "ajaTyA"
-    },
-    {
-      "lemma": "ajAjI"
-    },
-    {
-      "lemma": "ajJawA"
-    },
-    {
-      "lemma": "aYjanADikA"
-    },
-    {
-      "lemma": "aYjanAvatI"
-    },
-    {
-      "lemma": "awavI"
-    },
-    {
-      "lemma": "awwa"
+    "coreComparison": {
+      "scope": "coreComparison",
+      "scopeLabel": "Core 7",
+      "dictionaryCount": 7,
+      "count": 1913,
+      "examples": [
+        {
+          "lemma": "a"
+        },
+        {
+          "lemma": "aMSumatPalA"
+        },
+        {
+          "lemma": "aka"
+        },
+        {
+          "lemma": "akasmAt"
+        },
+        {
+          "lemma": "akUpAra"
+        },
+        {
+          "lemma": "akkA"
+        },
+        {
+          "lemma": "akzamAlA"
+        },
+        {
+          "lemma": "akzayatftIyA"
+        },
+        {
+          "lemma": "akzarajananI"
+        },
+        {
+          "lemma": "akzaratUlikA"
+        },
+        {
+          "lemma": "akzi"
+        },
+        {
+          "lemma": "akzOhiRI"
+        },
+        {
+          "lemma": "aga"
+        },
+        {
+          "lemma": "agarI"
+        },
+        {
+          "lemma": "agaru"
+        },
+        {
+          "lemma": "aguru"
+        },
+        {
+          "lemma": "agnAyI"
+        },
+        {
+          "lemma": "agnikArikA"
+        },
+        {
+          "lemma": "agnicit"
+        },
+        {
+          "lemma": "agnijvAlA"
+        },
+        {
+          "lemma": "agnidamanI"
+        },
+        {
+          "lemma": "agniruhA"
+        },
+        {
+          "lemma": "agrajaNGA"
+        },
+        {
+          "lemma": "agraparRI"
+        },
+        {
+          "lemma": "aGa"
+        },
+        {
+          "lemma": "aNkapAlI"
+        },
+        {
+          "lemma": "aNga"
+        },
+        {
+          "lemma": "aNgikA"
+        },
+        {
+          "lemma": "aNgAravallI"
+        },
+        {
+          "lemma": "aNgAraSakawI"
+        },
+        {
+          "lemma": "aNgulI"
+        },
+        {
+          "lemma": "aNgulimudrA"
+        },
+        {
+          "lemma": "aNGrivallikA"
+        },
+        {
+          "lemma": "acalakIlA"
+        },
+        {
+          "lemma": "acirapraBA"
+        },
+        {
+          "lemma": "aja"
+        },
+        {
+          "lemma": "ajaganDikA"
+        },
+        {
+          "lemma": "ajaganDinI"
+        },
+        {
+          "lemma": "ajamodA"
+        },
+        {
+          "lemma": "ajaSfNgI"
+        },
+        {
+          "lemma": "ajAdanI"
+        },
+        {
+          "lemma": "ajAntrI"
+        },
+        {
+          "lemma": "ajawA"
+        },
+        {
+          "lemma": "ajaTyA"
+        },
+        {
+          "lemma": "ajAjI"
+        },
+        {
+          "lemma": "ajJawA"
+        },
+        {
+          "lemma": "aYjanADikA"
+        },
+        {
+          "lemma": "aYjanAvatI"
+        },
+        {
+          "lemma": "awavI"
+        },
+        {
+          "lemma": "awwa"
+        }
+      ]
     }
-  ]
+  }
 }

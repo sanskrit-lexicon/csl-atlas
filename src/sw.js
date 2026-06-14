@@ -1,9 +1,10 @@
-const CACHE_NAME = 'csl-atlas-v1';
+const CACHE_NAME = 'csl-atlas-v2';
+const scopedUrl = (path) => new URL(path, self.registration.scope).toString();
 const ASSETS_TO_CACHE = [
-  './',
-  './index.html',
-  './favicon.svg',
-  './manifest.json'
+  scopedUrl('./'),
+  scopedUrl('./index.html'),
+  scopedUrl('./favicon.svg'),
+  scopedUrl('./manifest.json')
 ];
 
 self.addEventListener('install', (event) => {
@@ -31,27 +32,24 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
-  
+
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).then((networkResponse) => {
-        // Cache dynamic responses for offline support
+    (async () => {
+      const cache = await caches.open(CACHE_NAME);
+      try {
+        const networkResponse = await fetch(event.request);
         if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
+          await cache.put(event.request, networkResponse.clone());
         }
         return networkResponse;
-      }).catch(() => {
-        // Fallback for offline navigation
+      } catch {
+        const cachedResponse = await caches.match(event.request);
+        if (cachedResponse) return cachedResponse;
         if (event.request.mode === 'navigate') {
-          return caches.match('/index.html');
+          return caches.match(scopedUrl('./index.html'));
         }
-      });
-    })
+        return new Response('', { status: 504, statusText: 'Offline' });
+      }
+    })()
   );
 });
