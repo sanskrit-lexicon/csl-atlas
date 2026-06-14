@@ -36,6 +36,21 @@ import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/revie
 import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma, slp1ToIast } from "../src/lib/lookup-normalize.js";
 import { parseDcsSummaryFile } from "../scripts/lib/dcs-summary.mjs";
 
+function leafKeys(value, prefix = "") {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return [];
+  const out = [];
+  for (const [key, child] of Object.entries(value)) {
+    const pathKey = prefix ? `${prefix}.${key}` : key;
+    if (child && typeof child === "object" && !Array.isArray(child)) out.push(...leafKeys(child, pathKey));
+    else out.push(pathKey);
+  }
+  return out;
+}
+
+function valueAtPath(root, pathKey) {
+  return pathKey.split(".").reduce((value, key) => value?.[key], root);
+}
+
 // ---- build-r2-pages ----
 test("injectMarker is idempotent: inject twice gives identical result", () => {
   const scaffold = `before\n<!-- R2-GEN:START foo -->\nold\n<!-- R2-GEN:END foo -->\nafter`;
@@ -411,6 +426,17 @@ test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", ()
   assert.deepEqual(normalizeLookupQuery("dharma").candidates, ["dharma", "Darma"]);
   assert.deepEqual(normalizeLookupQuery("Agni").candidates, ["Agni", "agni"]);
   assert.deepEqual(normalizeLookupQuery("Dharma").candidates, ["Dharma", "dharma", "Darma"]);
+});
+
+test("reader and dossier Russian locales cover every English UI key", () => {
+  const en = JSON.parse(fs.readFileSync(path.resolve("src/locales-en.json"), "utf8"));
+  const ru = JSON.parse(fs.readFileSync(path.resolve("src/locales-ru.json"), "utf8"));
+
+  for (const root of ["reader.lookup", "phase2.dossier"]) {
+    const enKeys = new Set(leafKeys(valueAtPath(en, root)));
+    const ruKeys = new Set(leafKeys(valueAtPath(ru, root)));
+    assert.deepEqual([...ruKeys].sort(), [...enKeys].sort(), `${root} Russian locale keys must match English`);
+  }
 });
 
 // ---- dict-parser ----
