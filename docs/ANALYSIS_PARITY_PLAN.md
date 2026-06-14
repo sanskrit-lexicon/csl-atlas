@@ -40,6 +40,8 @@ Deep-analysis JSON files must publish:
 
 - `includedDictionaries`: dictionaries used by the metric, with method ids.
 - `unavailableDictionaries`: broad dictionaries excluded from the metric.
+- `diagnosticDictionaries`: partial/weak adapters shown for method transparency
+  but excluded from the metric.
 - `methodNotes`: the method caveats displayed by public pages.
 
 Coverage, overlap, unique lemmas, Reader broad lookup, and Dossier broad lookup
@@ -60,45 +62,56 @@ Latest broad-set audit:
 
 | Feature | Already supported | Partial | Parser candidates | Weak marker evidence | Missing marker evidence |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Grammar/POS | 10 | 0 | 4 | 0 | 26 |
-| Citations | 4 | 2 | 9 | 24 | 1 |
-| Homonyms | 3 | 0 | 17 | 2 | 18 |
-| Senses | 3 | 0 | 18 | 1 | 18 |
+| Grammar/POS | 14 | 0 | 0 | 0 | 26 |
+| Citations | 13 | 3 | 0 | 23 | 1 |
+| Homonyms | 20 | 0 | 0 | 2 | 18 |
+| Senses | 14 | 0 | 0 | 8 | 18 |
 
 `candidate` means enough encoded evidence exists to build or validate a parser.
 It is not yet a promise that the dictionary can be compared at the same quality
-as a supported feature adapter.
+as a supported feature adapter. `partial` and `weak` registry adapters are
+diagnostic-only unless explicitly promoted to `supported`.
 
 ## Required Work
 
 1. **Promote shared analyses to the broad set where evidence is neutral.**
    Coverage, pairwise overlap, unique vocabulary, and dossier presence can use
    all broad dictionaries now, with local-only source-link handling.
+   Current status: complete for the 40 eligible Sanskrit/BHS dictionaries.
 
 2. **Add grammar adapters.**
    Keep existing MW/AP/PWG/PWK/WIL `<lex>` extraction, existing SKD/VCP prose
    markers, then validate candidates such as PWKVN, CAE, MD, and BHS before
    including them in gender conflicts.
-   Current status: CAE, MD, and BHS are promoted through validated `<lex>`
-   adapters. PWKVN remains a parser candidate until local-only source evidence
-   can be displayed without broken GitHub links. ABCH, ACPH, and ACSJ remain
-   Kosha suffix candidates because synonym-headword gender evidence needs a
-   separate conflict model.
+   Current status: PWKVN, CAE, MD, BHS, ABCH, ACPH, and ACSJ are promoted
+   through validated adapters. The kosha dictionaries use parsed `<syns>`
+   gender suffixes; all remaining broad dictionaries lack grammar marker
+   evidence and are unavailable, not zero evidence.
 
 3. **Add citation adapters.**
    Extend `<ls>` apparatus handling beyond MW/AP/PWG/PWK, then build separate
    prose/source-hint extractors where dictionaries use non-`<ls>` conventions.
    Do not mix `<ls>` source matrices with weak `iti` counts without a method
    label.
+   Current status: 13 dictionaries have supported `<ls>` adapters for source
+   matrix/overlap. SKD, VCP, and KRM have diagnostic `iti` proxy rows; WIL
+   remains weak/diagnostic and out of source overlap.
 
 4. **Add homonym adapters.**
    Promote dictionaries with meaningful `<h>` usage after checking whether the
    marker means true homonymy, subentry numbering, or editorial grouping.
+   Current status: 20 dictionaries have supported homonym adapters. AP and
+   AP90 have sparse validated `<h>` traces, but remain diagnostic-only because
+   the metric treats unmarked lemmas as merged evidence.
 
 5. **Add sense adapters.**
    Support per-dictionary markers such as `<div>`, bullets, and numbered brace
    markers. Each adapter needs tests with known multi-sense and single-sense
    examples so sense-depth pages do not confuse formatting with semantics.
+   Current status: 14 dictionaries have supported sense-depth adapters. Eight
+   dictionaries expose diagnostic markers that encode prefix blocks,
+   source/reference sections, parallel translations, inflection tables, or
+   sparse paragraphs rather than validated sense divisions.
 
 6. **Regenerate public data and pages.**
    Deep pages should report all included dictionaries and show method badges or
