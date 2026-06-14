@@ -61,28 +61,34 @@ def add_common_args(ap):
     return ap
 
 
+API_URL = "https://dharmamitra.org/api/tagging/"
+
+
 def _run_pypi(rows, pypi_mode, args):
+    """Remote path: call the live dharmamitra.org tagging API directly.
+
+    The PyPI `dharmamitra-sanskrit-grammar` package (v0.1.7) is stale — the API
+    schema moved from a string `input_sentence` to a `texts` list, so the package
+    now 422s. We post the current contract ourselves: {texts, mode,
+    human_readable_tags} -> {"results": [...]} aligned to inputs. Not
+    reproducible; pin a local model revision for committed snapshots."""
     try:
-        from dharmamitra_sanskrit_grammar import DharmamitraSanskritProcessor
+        import requests
     except ImportError:
-        sys.exit(
-            "dharmamitra-sanskrit-grammar is not installed.\n"
-            "  pip install dharmamitra-sanskrit-grammar\n"
-            "Note: routes to the remote dharmamitra.org API (not reproducible). "
-            "Use --source local for committed runs."
-        )
-    processor = DharmamitraSanskritProcessor()
+        sys.exit("requests is not installed.\n  pip install requests")
     out = {}
     for start in range(0, len(rows), args.batch_size):
         chunk = rows[start:start + args.batch_size]
         inputs = [slp1_to_iast(s) for _, s in chunk]
-        results = processor.process_batch(inputs, mode=pypi_mode, human_readable_tags=True)
-        results = results if isinstance(results, list) else [results]
-        for (key, _), iast, res in zip(chunk, inputs, results):
-            raw = res if isinstance(res, str) else json.dumps(res, ensure_ascii=False)
-            out[key] = {"input": iast, "raw": raw}
+        resp = requests.post(API_URL, json={
+            "texts": inputs, "mode": pypi_mode, "human_readable_tags": True,
+        }, timeout=180)
+        resp.raise_for_status()
+        results = resp.json().get("results", [])
+        for (key, _), iast, raw in zip(chunk, inputs, results):
+            out[key] = {"input": iast, "raw": raw if isinstance(raw, str) else json.dumps(raw, ensure_ascii=False)}
         print(f"  inferred {min(start + args.batch_size, len(rows))}/{len(rows)}")
-    return out, {"endpoint": "remote dharmamitra.org API (not reproducible)"}
+    return out, {"endpoint": API_URL, "note": "remote, not reproducible"}
 
 
 def _run_local(rows, local_prefix, args):

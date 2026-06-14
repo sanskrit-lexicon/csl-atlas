@@ -17,6 +17,7 @@
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -58,9 +59,19 @@ def main():
     raw_by_key, extra_source = dm.run(rows, pypi_mode=PYPI_MODE, local_prefix=LOCAL_PREFIX, args=args)
 
     by_surface = {}
+    failed = 0
     for key, rec in raw_by_key.items():
         segs = segment_count(rec["raw"])
-        by_surface[key] = {"input": rec["input"], "modelSegments": len(segs), "segments": segs}
+        # Reject degenerate/malfunction output: empty ("____"), or any token that is
+        # junk (contains +,/,digit) or a single char ("t", "R"). Such rows are left
+        # null (model-failed -> model-pending in the join), not scored.
+        if not segs or any(re.search(r"[+/0-9]", t) or len(t) <= 1 for t in segs):
+            failed += 1
+            by_surface[key] = {"input": rec["input"], "modelSegments": None, "segments": []}
+        else:
+            by_surface[key] = {"input": rec["input"], "modelSegments": len(segs), "segments": segs}
+    if failed:
+        print(f"  note: {failed}/{len(by_surface)} degenerate/junk outputs (model-failed, left null)")
 
     payload = {
         "schemaVersion": "1.0.0",
