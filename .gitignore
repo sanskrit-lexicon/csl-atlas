@@ -25,3 +25,6 @@ src/data/lexico/sense_divergence.json
 src/data/external/langdetect-candidates.json
 src/data/external/dharmamitra-langdetect.json
 scripts/.langdetect-models/
+
+# StarDict export artifact (large binary; ship as a release artifact, not committed)
+stardict-dist/

@@ -163,6 +163,16 @@ format must be verified before redistribution.
 StarDict/GoldenDict format, learning from
 [dharmamitra-stardict-dictionaries](https://github.com/dharmamitra/dharmamitra-stardict-dictionaries).
 
+> **MW StarDict export DONE (2026-06-14, PR #112) — first slice.** [`build-stardict-export.mjs`](../scripts/build-stardict-export.mjs)
+> writes a valid StarDict (`.ifo`/`.idx`/`.dict`) of all **286,560 MW entries** (IAST headwords;
+> definitions cleaned from the CDSL markup — `<s>`/`{#…#}` → IAST, `<lex>`/`<ls>` kept,
+> `<info>` dropped; HTML, `sametypesequence=h`). Output (`stardict-dist/`, .dict 46 MB) is
+> **gitignored** — ship it as a CI/release artifact, not a committed blob. Verified by a
+> structural self-check (StarDict collation order, exact `idxfilesize`, offsets cover `.dict`)
+> **and** a round-trip read (`gaja` → "m. an elephant, ṢaḍvBr. v, 3; Mn. &c."). Disclaimer +
+> CC-BY-SA-4.0 in the `.ifo` and a `README.txt`. Remainders: ASCII/HK search forms via a `.syn`
+> file; richer markup rendering; a CI job + download page; extend to other CDSL dictionaries.
+
 **Tasks**
 - Add `build-stardict-export.mjs` (or Python via `pyglossary`) that reads `csl-orig`/atlas JSON
   and writes `.ifo/.idx/.dict` (or a `pyglossary`-driven build).
