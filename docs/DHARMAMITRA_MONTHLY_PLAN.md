@@ -200,10 +200,17 @@ low-precision demonstrator) with a model that actually separates German from San
 > held-out PWG test set, accuracy rises **0.942 → 0.995** vs the eng/skt baseline, cutting the
 > Sanskrit **false-flag rate 5.5% → 0.3%** (~18× fewer false positives — the precise #95 noise).
 > Models go to `scripts/.langdetect-models/` (gitignored); `src/data/external/langdetect-german-metrics.json`
-> records the numbers. **Remaining:** wire `san.model` + `deu.model` into
-> `import-dharmamitra-langdetect.py` (replace eng/skt fertility), re-run
-> `build-langdetect-crosscheck.mjs`, and re-measure / promote the #95 queue from demonstrator
-> to a real QA queue.
+> records the numbers.
+>
+> **Wired into #95 DONE (2026-06-14, PR #117).** `import-dharmamitra-langdetect.py` now classifies
+> with the trained `san.model` + `deu.model` (replacing the off-the-shelf eng/skt) and
+> `build-langdetect-crosscheck.mjs` flags spans the German model reads as German. Re-running over
+> all 183,213 PWG `{#..#}` spans cuts the flagged set **1,449 → 89** (~16×): the inflected-Sanskrit
+> false positives are gone; the remainder skews to very short forms (SPM noise on <5-char strings)
+> plus genuine foreign/OCR content — now a genuinely reviewable QA queue rather than a
+> demonstrator. Models stay gitignored (retrain via `npm run train-langdetect-german`).
+> **Remaining:** raise `MIN_LEN`/margin to trim the short-form tail; train on a held-out gold
+> set if one becomes available; extend to PWK.
 
 **Tasks**
 - Train/extend a SentencePiece (or small classifier) with a **German** model alongside
