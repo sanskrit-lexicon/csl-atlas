@@ -234,6 +234,17 @@ conveniently self-labeling, which de-risks it. Could be deferred if lower priori
 
 **Objective:** measure quality, add one new ByT5 capability, and harden the programme.
 
+> **Benchmark harness DONE (2026-06-14, PR #121).** [`scripts/build-benchmark-report.mjs`](../scripts/build-benchmark-report.mjs)
+> emits a leaderboard ([`src/data/benchmark-report.json`](../src/data/benchmark-report.json)) over
+> all **14 review queues**: machine precision = `reviewed-ok / (reviewed-ok + reviewed-corrected)`
+> on the human-gold subset, plus coverage. It also surfaces the one real model benchmark — the
+> German-aware langdetect held-out accuracy (0.942 → 0.995, #115). Today **147 gold items** (3
+> queues at 1.000); the Dharmamitra cross-checks are pending review, so the harness is the
+> framework that scores them as reviews land. **Still pending (GPU):** ByT5 task accuracy
+> (gender / lemma / segmentation) and an external comparison via `dharmamitra-leaderboard` — both
+> need the model run on a gold corpus. The **dependency-parsing** enrichment (`applications/
+> dependency-parsing`) likewise needs the GPU ByT5 model and stays open.
+
 **Tasks**
 - **Benchmark:** stand up evaluation against
   [dharmamitra-leaderboard](https://github.com/dharmamitra/dharmamitra-leaderboard) for the
