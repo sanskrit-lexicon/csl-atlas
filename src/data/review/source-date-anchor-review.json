@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-15T01:41:55.815Z",
+  "generatedAt": "2026-06-15T02:08:16.355Z",
   "sourcePath": "src/data/external/dharmamitra-chronology.json + src/data/mw-source-layers.json + unknown-source-layers-review.json",
   "recordCount": 67,
   "queue": "source-date-anchor",
@@ -18,6 +18,7 @@
   "assumptions": [
     "A siglum is dated by resolving it to a canonical name (curated expansion of major sigla, then dict-source-aliases.json, then the siglum) and matching chronology work titles — EXACT or unambiguous >=5-char prefix only.",
     "dateMedian is the median postMedian over the matched work's dated sections; dateRange is the span; chronologicalEra is the modal era.",
+    "corpusChunks / corpusVolumeBand (1-5, log-scale) is the source's text volume in the Dharmamitra dated corpus — corpus-frequency at the SOURCE level. Per-LEMMA frequency stays with the existing DCS layer (dcs_lemma_summary.json); dharmanexus exposes no committable per-lemma frequency, so this avoids duplicating DCS.",
     "Date-only by design: atlas layers mix chronology with genre (technical/lexicographic), so a date does NOT imply a layer. For unknown sigla the date informs the reviewer's layer choice; it is not applied automatically.",
     "Chronology dates are posterior model estimates; review evidence only — never rewrites mw-source-layers.json. Reviews preserved by reviewId."
   ],
@@ -58,6 +59,8 @@
           -479
         ],
         "chronologicalEra": "epic-sutra",
+        "corpusChunks": 11,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -98,6 +101,8 @@
           602
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 95,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -143,6 +148,8 @@
           1026
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 6,
+        "corpusVolumeBand": 2,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -183,6 +190,8 @@
           -935
         ],
         "chronologicalEra": "vedic",
+        "corpusChunks": 175,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -223,6 +232,8 @@
           -161
         ],
         "chronologicalEra": "epic-sutra",
+        "corpusChunks": 25,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -263,6 +274,8 @@
           1000
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 218,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -308,6 +321,8 @@
           998
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 125,
+        "corpusVolumeBand": 4,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -353,6 +368,8 @@
           700
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 4,
+        "corpusVolumeBand": 2,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -393,6 +410,8 @@
           806
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 290,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -438,6 +457,8 @@
           514
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 54,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -478,6 +499,8 @@
           1147
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 1,
+        "corpusVolumeBand": 1,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -518,6 +541,8 @@
           -578
         ],
         "chronologicalEra": "vedic",
+        "corpusChunks": 129,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -558,6 +583,8 @@
           994
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 7,
+        "corpusVolumeBand": 2,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -598,6 +625,8 @@
           332
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 227,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -643,6 +672,8 @@
           793
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 1,
+        "corpusVolumeBand": 1,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -683,6 +714,8 @@
           224
         ],
         "chronologicalEra": "epic-sutra",
+        "corpusChunks": 419,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -723,6 +756,8 @@
           702
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 142,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -768,6 +803,8 @@
           1110
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 3,
+        "corpusVolumeBand": 2,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -813,6 +850,8 @@
           610
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 176,
+        "corpusVolumeBand": 4,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -853,6 +892,8 @@
           468
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 27,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -893,6 +934,8 @@
           1206
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 696,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -933,6 +976,8 @@
           686
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 18,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -978,6 +1023,8 @@
           1074
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 82,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1023,6 +1070,8 @@
           1143
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 43,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1063,6 +1112,8 @@
           420
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 13,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1108,6 +1159,8 @@
           800
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 21,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1153,6 +1206,8 @@
           1616
         ],
         "chronologicalEra": "late-medieval",
+        "corpusChunks": 68,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1198,6 +1253,8 @@
           811
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 23,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1238,6 +1295,8 @@
           -903
         ],
         "chronologicalEra": "vedic",
+        "corpusChunks": 124,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1278,6 +1337,8 @@
           753
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 91,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1318,6 +1379,8 @@
           442
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 178,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1358,6 +1421,8 @@
           275
         ],
         "chronologicalEra": "epic-sutra",
+        "corpusChunks": 2278,
+        "corpusVolumeBand": 5,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1398,6 +1463,8 @@
           419
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 11,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1443,6 +1510,8 @@
           452
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 15,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1488,6 +1557,8 @@
           1368
         ],
         "chronologicalEra": "late-medieval",
+        "corpusChunks": 138,
+        "corpusVolumeBand": 4,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1528,6 +1599,8 @@
           879
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 155,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1568,6 +1641,8 @@
           201
         ],
         "chronologicalEra": "epic-sutra",
+        "corpusChunks": 278,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1613,6 +1688,8 @@
           -923
         ],
         "chronologicalEra": "vedic",
+        "corpusChunks": 298,
+        "corpusVolumeBand": 4,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1658,6 +1735,8 @@
           608
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 1,
+        "corpusVolumeBand": 1,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1698,6 +1777,8 @@
           201
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 107,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1743,6 +1824,8 @@
           610
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 103,
+        "corpusVolumeBand": 4,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1783,6 +1866,8 @@
           1305
         ],
         "chronologicalEra": "late-medieval",
+        "corpusChunks": 56,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1828,6 +1913,8 @@
           1305
         ],
         "chronologicalEra": "late-medieval",
+        "corpusChunks": 56,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1868,6 +1955,8 @@
           328
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 6,
+        "corpusVolumeBand": 2,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1913,6 +2002,8 @@
           1144
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 31,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -1953,6 +2044,8 @@
           175
         ],
         "chronologicalEra": "epic-sutra",
+        "corpusChunks": 449,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -1993,6 +2086,8 @@
           420
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 53,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2033,6 +2128,8 @@
           1145
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 27,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2078,6 +2175,8 @@
           1046
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 163,
+        "corpusVolumeBand": 4,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2123,6 +2222,8 @@
           748
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 157,
+        "corpusVolumeBand": 4,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2163,6 +2264,8 @@
           -1118
         ],
         "chronologicalEra": "vedic",
+        "corpusChunks": 424,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2203,6 +2306,8 @@
           416
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 61,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2243,6 +2348,8 @@
           -684
         ],
         "chronologicalEra": "vedic",
+        "corpusChunks": 111,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2288,6 +2395,8 @@
           -280
         ],
         "chronologicalEra": "epic-sutra",
+        "corpusChunks": 2,
+        "corpusVolumeBand": 2,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2328,6 +2437,8 @@
           835
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 1074,
+        "corpusVolumeBand": 5,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2373,6 +2484,8 @@
           949
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 17,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2418,6 +2531,8 @@
           850
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 10,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2463,6 +2578,8 @@
           1143
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 29,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2503,6 +2620,8 @@
           676
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 11,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2548,6 +2667,8 @@
           999
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 50,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2593,6 +2714,8 @@
           531
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 13,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2638,6 +2761,8 @@
           608
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 13,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2678,6 +2803,8 @@
           1445
         ],
         "chronologicalEra": "late-medieval",
+        "corpusChunks": 130,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2718,6 +2845,8 @@
           699
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 33,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2763,6 +2892,8 @@
           828
         ],
         "chronologicalEra": "early-medieval",
+        "corpusChunks": 64,
+        "corpusVolumeBand": 3,
         "verdict": "date-proposed (unknown source)"
       },
       "evidenceLevel": "inferred",
@@ -2803,6 +2934,8 @@
           454
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 245,
+        "corpusVolumeBand": 4,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
@@ -2843,6 +2976,8 @@
           213
         ],
         "chronologicalEra": "classical",
+        "corpusChunks": 14,
+        "corpusVolumeBand": 3,
         "verdict": "date-anchored"
       },
       "evidenceLevel": "inferred",
