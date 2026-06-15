@@ -122,7 +122,7 @@ corpus" and the alignment slips to Month 3.
 **Objective:** push source-layer dating from coarse bands to per-source anchoring, and add
 corpus-frequency evidence from the dharmanexus datasets.
 
-> **Per-siglum dating DONE (2026-06-14, PR #106).** [`build-source-date-anchor.mjs`](../scripts/build-source-date-anchor.mjs)
+> **Per-siglum dating DONE (2026-06-14, PR #108).** [`build-source-date-anchor.mjs`](../scripts/build-source-date-anchor.mjs)
 > joins the #90 chronology snapshot to the individual `<ls>` sigla and attaches a concrete date
 > to each it can confidently resolve — **67 sigla dated** (15 exact / 52 unambiguous-prefix),
 > including **29 of the 449 `unknown` sources** now carrying a date proposal. Two findings shaped
