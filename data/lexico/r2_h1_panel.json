@@ -44,6 +44,134 @@
     "archivedPearsonAll": 0.01,
     "archivedPearsonExplicit": 0.56
   },
+  "h1Controlled": {
+    "method": "Year is a dict-level covariate (11 values / ~7 families); bivariate r conflates it with family. Tested via within-family deltas, a family-controlled OLS, and parser-regime stratification.",
+    "naiveBivariatePearson": 0.093,
+    "withinFamilyTrends": [
+      {
+        "family": "indigenous",
+        "nDicts": 2,
+        "spanYears": 51,
+        "dicts": [
+          {
+            "dict": "skd",
+            "year": 1822,
+            "panelUnits": 1.767
+          },
+          {
+            "dict": "vcp",
+            "year": 1873,
+            "panelUnits": 1.033
+          }
+        ],
+        "deltaTotal": -0.734,
+        "unitsPerYear": -0.0144,
+        "verdict": "decrease (no inflation)"
+      },
+      {
+        "family": "Petersburg",
+        "nDicts": 2,
+        "spanYears": 73,
+        "dicts": [
+          {
+            "dict": "pwg",
+            "year": 1855,
+            "panelUnits": 5.167
+          },
+          {
+            "dict": "sch",
+            "year": 1928,
+            "panelUnits": 1.567
+          }
+        ],
+        "deltaTotal": -3.6,
+        "unitsPerYear": -0.0493,
+        "verdict": "decrease (no inflation)"
+      },
+      {
+        "family": "Monier-Williams",
+        "nDicts": 2,
+        "spanYears": 27,
+        "dicts": [
+          {
+            "dict": "mw72",
+            "year": 1872,
+            "panelUnits": 24.333
+          },
+          {
+            "dict": "mw",
+            "year": 1899,
+            "panelUnits": 14.9
+          }
+        ],
+        "deltaTotal": -9.433,
+        "unitsPerYear": -0.3494,
+        "verdict": "decrease (no inflation)"
+      },
+      {
+        "family": "Apte",
+        "nDicts": 2,
+        "spanYears": 67,
+        "dicts": [
+          {
+            "dict": "ap90",
+            "year": 1890,
+            "panelUnits": 10.667
+          },
+          {
+            "dict": "ap",
+            "year": 1957,
+            "panelUnits": 8.867
+          }
+        ],
+        "deltaTotal": -1.8,
+        "unitsPerYear": -0.0269,
+        "verdict": "decrease (no inflation)"
+      }
+    ],
+    "meanWithinFamilyUnitsPerYear": -0.11,
+    "familyControlledRegression": {
+      "model": "meanPanelUnits ~ yearCentered + family(6 dummies, ref=indigenous)",
+      "nObs": 11,
+      "nParams": 8,
+      "residualDf": 3,
+      "nearSaturated": true,
+      "yearSlopePerYear": -0.0514,
+      "yearSE": 0.0424,
+      "yearCI95": [
+        -0.1864,
+        0.0836
+      ],
+      "tCritical": 3.182,
+      "ciIncludesZero": true,
+      "note": "Near-saturated: 11 dicts spread over 7 families leave only 3 residual df, so year and family are barely separable — the wide CI reflects this, not a measured null."
+    },
+    "parserRegimeStratified": {
+      "western": {
+        "n": 9,
+        "pearsonYearVsUnits": -0.106,
+        "note": "All non-indigenous dicts share one Roman-headword parsing regime; a flat r here means the family-granularity gap is lexicographic, not a parser artifact."
+      },
+      "indigenous": {
+        "n": 2,
+        "dicts": [
+          {
+            "dict": "skd",
+            "year": 1822,
+            "panelUnits": 1.767
+          },
+          {
+            "dict": "vcp",
+            "year": 1873,
+            "panelUnits": 1.033
+          }
+        ],
+        "note": "Only 2 indigenous dicts (skd, vcp) — no within-regime trend estimable; reported for completeness."
+      }
+    },
+    "verdict": "Within every family with a time span, per-lemma granularity is flat-to-decreasing — no temporal inflation once family is held fixed. Across families it tracks family, not year. The pooled year effect is underidentified (n=11, ~7 families), so the correct statement is 'no within-family inflation', NOT 'r≈0 proves no relationship'.",
+    "interpretationNote": "Underpowered ≠ no effect: the family-controlled CI on year is wide by construction (only 11 dict-points). The falsifiable claim is the within-family one: any family showing a clear per-year increase would be evidence FOR temporal inflation."
+  },
   "rows": [
     {
       "dict": "skd",
@@ -139,6 +267,8 @@
     "Indigenous dicts (skd, vcp) use different headword conventions; stem-key matching may miss some panel lemmas.",
     "senseUnits() uses the same proxy as r2_h1 (unchanged); calibration drift documented there.",
     "r_explicit = 0.56 among 5 explicit-marker dicts is n=5 non-significant and convention-confounded.",
+    "h1Controlled.familyControlledRegression is near-saturated (only ~3 residual df): year's CI is wide by design, so it bounds — it does not measure — the temporal slope. The within-family deltas carry the inferential weight.",
+    "Within-family trends rest on as few as 2 dicts per family (one slope each); they falsify temporal inflation but cannot estimate its rate.",
     "Archive parity is a regression signal, not an optimization target."
   ]
 }
