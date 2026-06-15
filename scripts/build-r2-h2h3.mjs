@@ -241,7 +241,7 @@ async function main() {
   // Three edges
   const edges = [
     { key: "wil→shs",  ancDict: "wil",  desDict: "shs",  ancMap: wilMap,  desMap: shsMap,  archivedMeanAnc: 7.9,  archivedMeanDes: 8.5,  archivedDrift:  0.6,  archivedOverlap: 0.82, pattern: "near-verbatim copy" },
-    { key: "wil→yat",  ancDict: "wil",  desDict: "yat",  ancMap: wilMap,  desMap: yatMap,  archivedMeanAnc: 7.9,  archivedMeanDes: 1.1,  archivedDrift: -6.75, archivedOverlap: 0.15, pattern: "drastic condensation" },
+    { key: "wil→yat",  ancDict: "wil",  desDict: "yat",  ancMap: wilMap,  desMap: yatMap,  archivedMeanAnc: 7.9,  archivedMeanDes: 1.1,  archivedDrift: -6.75, archivedOverlap: 0.15, pattern: "parser artifact — NOT genuine condensation; YAT is semicolon-packed, not sense-numbered (verify-yat-sense-artifact.mjs)", senseExtractionArtifact: true },
     { key: "ap90→ap",  ancDict: "ap90", desDict: "ap",   ancMap: ap90Map, desMap: apMap,   archivedMeanAnc: 15.5, archivedMeanDes: 11.0, archivedDrift: -4.5,  archivedOverlap: 0.61, pattern: "revision, no expansion" },
   ];
 
@@ -304,6 +304,7 @@ async function main() {
       drift,
       meanGlossOverlap,
       pattern: edge.pattern,
+      senseExtractionArtifact: edge.senseExtractionArtifact ?? false,
       archivedMeanAncSenses: edge.archivedMeanAnc,
       archivedMeanDesSenses: edge.archivedMeanDes,
       archivedDrift: edge.archivedDrift,
@@ -412,6 +413,7 @@ async function main() {
       drift: r.drift,
       meanGlossOverlap: r.meanGlossOverlap,
       pattern: r.pattern,
+      senseExtractionArtifact: r.senseExtractionArtifact,
       archived: {
         meanAncSenses: r.archivedMeanAncSenses,
         meanDesSenses: r.archivedMeanDesSenses,
@@ -423,6 +425,7 @@ async function main() {
     limitations: [
       "28-noun panel reconstructed from nouns present in all 5 dicts with ≥3 WIL senses; original panel from deleted h2h3_analysis.py.",
       "SHS/YAT senses extracted by inline '\\b\\d+\\.\\s+' split; no XML tags preserved for per-sense citation check in SHS/YAT.",
+      "ARTIFACT: the wil→yat 'condensation' (9→1) is a parser artifact — YAT packs senses into one semicolon-separated run-on gloss (not sense-numbered) and the inline-number splitter mis-reads a noun-class marker, collapsing to 1. True YAT polysemy ≈ 5.7 meanings/entry (75% carry the class-number marker). See data/lexico/r2_yat_artifact_check.json (npm run verify-yat-sense-artifact). This edge is NOT evidence of condensation.",
       "Survival threshold is word-level Jaccard ≥ " + SURVIVAL_THRESHOLD + " (configurable).",
       "Gloss overlap uses word-level Jaccard after removing stop-words and short tokens.",
       "AP entries may include a 'lumped-proxy' header part; explicit sense parts are used for counting.",
