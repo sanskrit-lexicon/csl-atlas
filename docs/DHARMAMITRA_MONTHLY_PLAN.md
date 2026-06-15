@@ -193,6 +193,18 @@ work** — good buffer month if GPU/source-text access slips.
 **Objective:** replace the off-the-shelf eng-vs-skt classifier (PWG markup check, #95, is a
 low-precision demonstrator) with a model that actually separates German from Sanskrit.
 
+> **Training scaffold DONE + proven (2026-06-14, PR #115).** [`scripts/train-langdetect-german.py`](../scripts/train-langdetect-german.py)
+> is runnable, not just scaffolding: PWG **self-labels** the data (`{#…#}` = Sanskrit,
+> `{%…%}` = German), so it trains a per-language SentencePiece model (CPU, fast) and classifies
+> by minimum fertility — exactly detect-language's method, plus a German model. Measured on a
+> held-out PWG test set, accuracy rises **0.942 → 0.995** vs the eng/skt baseline, cutting the
+> Sanskrit **false-flag rate 5.5% → 0.3%** (~18× fewer false positives — the precise #95 noise).
+> Models go to `scripts/.langdetect-models/` (gitignored); `src/data/external/langdetect-german-metrics.json`
+> records the numbers. **Remaining:** wire `san.model` + `deu.model` into
+> `import-dharmamitra-langdetect.py` (replace eng/skt fertility), re-run
+> `build-langdetect-crosscheck.mjs`, and re-measure / promote the #95 queue from demonstrator
+> to a real QA queue.
+
 **Tasks**
 - Train/extend a SentencePiece (or small classifier) with a **German** model alongside
   eng/skt, or a 3-way Sanskrit/German/other classifier, using PWG's own `{#...#}` (Sanskrit) and

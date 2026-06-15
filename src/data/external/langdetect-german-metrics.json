@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "python scripts/train-langdetect-german.py",
+  "method": "Per-language SentencePiece (unigram); classify by minimum fertility. Mirrors dharmamitra/detect-language, adding a German model trained on PWG {%...%}.",
+  "trainingData": {
+    "source": "csl-orig PWG {#..#}=Sanskrit, {%..%}=German (self-labeled)",
+    "sanskritExamples": 60000,
+    "germanExamples": 60000,
+    "capPerLang": 60000,
+    "vocab": 4000,
+    "seed": 13
+  },
+  "heldOutTest": {
+    "sanskrit": 6000,
+    "german": 6000
+  },
+  "baseline_eng_vs_skt": {
+    "sanskritRecall": 0.9452,
+    "germanRecall": 0.9378,
+    "accuracy": 0.9415
+  },
+  "germanAware_san_vs_deu": {
+    "sanskritRecall": 0.9973,
+    "germanRecall": 0.9935,
+    "accuracy": 0.9954
+  },
+  "accuracyLift": 0.0539,
+  "models": {
+    "trained": [
+      "san.model",
+      "deu.model"
+    ],
+    "dir": "scripts/.langdetect-models/ (gitignored)"
+  },
+  "nextStep": "Wire san.model + deu.model into import-dharmamitra-langdetect.py (replace eng/skt fertility), re-run build-langdetect-crosscheck.mjs, re-measure #95 precision.",
+  "warnings": [
+    "Trained on PWG's own markup — evaluates the markup's internal consistency, not an external gold standard.",
+    "SentencePiece models are gitignored (binary); regenerate with this script."
+  ]
+}
