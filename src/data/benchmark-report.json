@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-15T14:08:59.814Z",
+  "generatedBy": "npm run build-benchmark-report",
+  "method": "Per review queue: precision = reviewed-ok / (reviewed-ok + reviewed-corrected) over the human-reviewed gold subset; coverage = gold / total. Fills in as reviewers adjudicate.",
+  "summary": {
+    "queueCount": 14,
+    "totalItems": 19435,
+    "totalGold": 147,
+    "overallPrecision": 1,
+    "dharmamitraQueues": 8,
+    "dharmamitraGold": 0,
+    "dharmamitraGoldPending": true
+  },
+  "queues": [
+    {
+      "queue": "encoding-ocr",
+      "file": "src/data/review/h5-anomaly-review.json",
+      "dharmamitra": false,
+      "total": 130,
+      "gold": 130,
+      "coverage": 1,
+      "precision": 1,
+      "statusCounts": {
+        "reviewed-ok": 130
+      }
+    },
+    {
+      "queue": "r2-checkpoint",
+      "file": "src/data/review/r2-checkpoint-review.json",
+      "dharmamitra": false,
+      "total": 10,
+      "gold": 10,
+      "coverage": 1,
+      "precision": 1,
+      "statusCounts": {
+        "reviewed-ok": 10
+      }
+    },
+    {
+      "queue": "low-confidence-alignment",
+      "file": "src/data/review/low-confidence-alignment-review.json",
+      "dharmamitra": false,
+      "total": 7,
+      "gold": 7,
+      "coverage": 1,
+      "precision": 1,
+      "statusCounts": {
+        "reviewed-ok": 7
+      }
+    },
+    {
+      "queue": "pos-gender-conflict",
+      "file": "src/data/review/gender-conflicts-review.json",
+      "dharmamitra": false,
+      "total": 4556,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 4556
+      }
+    },
+    {
+      "queue": "pos-gender-model-crosscheck",
+      "file": "src/data/review/gender-model-crosscheck-review.json",
+      "dharmamitra": true,
+      "total": 4556,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 4556
+      }
+    },
+    {
+      "queue": "citation-link-target",
+      "file": "src/data/review/citation-link-pilot-review.json",
+      "dharmamitra": true,
+      "total": 3996,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 3996
+      }
+    },
+    {
+      "queue": "compound-depth-crosscheck",
+      "file": "src/data/review/compound-depth-crosscheck-review.json",
+      "dharmamitra": true,
+      "total": 3496,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 3496
+      }
+    },
+    {
+      "queue": "lemma-normalization-crosscheck",
+      "file": "src/data/review/lemma-normalization-crosscheck-review.json",
+      "dharmamitra": true,
+      "total": 1913,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 1913
+      }
+    },
+    {
+      "queue": "unknown-source-layer",
+      "file": "src/data/review/unknown-source-layers-review.json",
+      "dharmamitra": false,
+      "total": 449,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 449
+      }
+    },
+    {
+      "queue": "source-siglum-alias",
+      "file": "src/data/review/source-siglum-review.json",
+      "dharmamitra": false,
+      "total": 158,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 158
+      }
+    },
+    {
+      "queue": "langdetect-markup-crosscheck",
+      "file": "src/data/review/langdetect-markup-crosscheck-review.json",
+      "dharmamitra": true,
+      "total": 89,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 89
+      }
+    },
+    {
+      "queue": "source-date-anchor",
+      "file": "src/data/review/source-date-anchor-review.json",
+      "dharmamitra": true,
+      "total": 67,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 67
+      }
+    },
+    {
+      "queue": "source-layer-anchoring",
+      "file": "src/data/review/source-layer-anchoring-review.json",
+      "dharmamitra": true,
+      "total": 6,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 6
+      }
+    },
+    {
+      "queue": "citation-link-target",
+      "file": "src/data/review/citation-link-split-review.json",
+      "dharmamitra": true,
+      "total": 2,
+      "gold": 0,
+      "coverage": 0,
+      "precision": null,
+      "statusCounts": {
+        "needs-review": 2
+      }
+    }
+  ],
+  "modelBenchmarks": {
+    "langdetectGerman": {
+      "task": "PWG Sanskrit-vs-German classification (held-out)",
+      "baselineAccuracy": 0.9415,
+      "germanAwareAccuracy": 0.9954,
+      "accuracyLift": 0.0539,
+      "source": "src/data/external/langdetect-german-metrics.json (#115)"
+    },
+    "byt5Pending": {
+      "note": "ByT5 task accuracy (gender / lemma / segmentation) and an external comparison via dharmamitra-leaderboard need a GPU run of the model on a gold corpus.",
+      "blockedOn": "GPU (no torch/transformers in-session)"
+    }
+  },
+  "notes": [
+    "precision here is the machine-verdict accept rate under human review, not classifier precision on an external gold set.",
+    "Most Dharmamitra cross-checks have zero gold today (pending review); this report is the framework that scores them as reviews land.",
+    "The langdetect German model has a real held-out benchmark (#115); the ByT5 queues need a GPU run for task-level accuracy."
+  ]
+}
