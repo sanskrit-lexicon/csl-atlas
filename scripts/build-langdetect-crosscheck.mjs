@@ -1,16 +1,17 @@
-// Build the detect-language markup cross-check review queue (review layer).
+// Build the langdetect markup cross-check review queue (review layer).
 //
 // PWG (Petersburg Sanskrit-Wörterbuch) marks Sanskrit object-language as
 // {#...#} (SLP1) and German metalanguage as {%...%}. This queue validates the
-// SANSKRIT side: it runs the Dharmamitra detect-language classifier (eng vs skt
-// SentencePiece fertility) over the distinct single-word {#...#} spans and flags
-// the ones that do NOT look like Sanskrit — i.e. German, Latin, or OCR garbage
-// mistakenly wrapped in Sanskrit markup.
+// SANSKRIT side: it runs a German-aware Sanskrit/German classifier (san vs deu
+// SentencePiece fertility, trained on PWG's own {#..#}/{%..%} — Month 5, #115,
+// scripts/train-langdetect-german.py) over the distinct single-word {#...#}
+// spans and flags the ones that read as GERMAN — i.e. German, Latin, or OCR
+// content mistakenly wrapped in Sanskrit markup.
 //
-// Direction matters: SLP1/IAST Sanskrit is highly distinctive, so genuine
-// Sanskrit reliably classifies "sa" and only true non-Sanskrit spans surface —
-// far higher precision than checking the German-gloss side (where the unmodelled
-// German fools the classifier). See docs/DHARMAMITRA_INTEGRATION.md.
+// The German model replaced the off-the-shelf detect-language eng/skt pair (#95),
+// which only modelled English-vs-Sanskrit and so flagged ~1,449 spans (mostly
+// inflected-Sanskrit false positives); the san/deu pair flags far fewer.
+// See docs/DHARMAMITRA_INTEGRATION.md.
 //
 // Two-step pattern: this build extracts candidate spans
 // (src/data/external/langdetect-candidates.json), then joins the classification
@@ -30,7 +31,7 @@ import { dictHref } from "./lib/dict-manifest.mjs";
 import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
 
 const MIN_LEN = 4;          // drop 1-3 char fragments (pure noise for SPM)
-const MARGIN_RATIO = 0.25;  // flag only when eng is >=25% fewer pieces than skt
+const MARGIN_RATIO = 0.25;  // flag only when the German model is >=25% fewer pieces than the Sanskrit one
 
 const PWG_SOURCE = path.resolve(process.cwd(), "..", "csl-orig", "v02", "pwg", "pwg.txt");
 const CANDIDATES = path.resolve(process.cwd(), "src", "data", "external", "langdetect-candidates.json");
@@ -38,7 +39,7 @@ const SNAPSHOT = path.resolve(process.cwd(), "src", "data", "external", "dharmam
 const OUTPUT = path.resolve(process.cwd(), "src", "data", "review", "langdetect-markup-crosscheck-review.json");
 
 const MODEL_POINTER = {
-  dictionary: "Dharmamitra detect-language",
+  dictionary: "German-aware Sanskrit/German classifier (PWG-trained)",
   line: null,
   href: "https://github.com/dharmamitra/detect-language"
 };
@@ -120,9 +121,9 @@ function main() {
     const rec = byKey[c.span];
     if (!rec) continue;
     classified += 1;
-    const { engPieces: e, sktPieces: s } = rec;
-    const marginRatio = s > 0 ? (s - e) / s : 0;
-    if (!(e < s && marginRatio >= MARGIN_RATIO)) continue; // keep only confident "not Sanskrit"
+    const { sanPieces: sp, deuPieces: dp } = rec;
+    const marginRatio = sp > 0 ? (sp - dp) / sp : 0;
+    if (!(dp < sp && marginRatio >= MARGIN_RATIO)) continue; // keep only confident "reads as German"
     if (headwords.has(c.span)) { droppedHeadword += 1; continue; } // genuine Sanskrit loanword, not an error
 
     const reviewId = `langdetect-markup-crosscheck:${c.span}`;
@@ -140,9 +141,9 @@ function main() {
         span: c.span,
         iast: rec.iast ?? null,
         markedAs: "sanskrit",
-        detected: "not-sanskrit",
-        engPieces: e,
-        sktPieces: s,
+        detected: "german",
+        sanPieces: sp,
+        deuPieces: dp,
         marginRatio: Math.round(marginRatio * 100) / 100,
         verdict: "marked-sanskrit-looks-foreign"
       },
@@ -169,13 +170,13 @@ function main() {
     assumptions: [
       `Candidates are the ${candidates.length} distinct single-word PWG {#...#} SLP1 spans (length >= ${MIN_LEN}, accents + edge punctuation stripped).`,
       "Each span is transliterated SLP1 -> IAST (in the importer) before classification.",
-      "A span is flagged when the English SentencePiece model tokenizes it into >=25% fewer pieces than the Sanskrit one — it does not read as Sanskrit despite Sanskrit markup.",
-      "Spans that are PWG headwords are dropped: those are genuine Sanskrit (often loanwords English knows, e.g. yogin/stupa/cakravartin), not markup errors.",
+      "A span is flagged when the German SentencePiece model (san vs deu, trained on PWG's self-labeled {#..#}/{%..%}, Month 5 #115) tokenizes it into >=25% fewer pieces than the Sanskrit one — it reads as German despite Sanskrit markup.",
+      "Spans that are PWG headwords are dropped: those are genuine Sanskrit (often loanwords, e.g. yogin/stupa/cakravartin), not markup errors.",
       "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds."
     ],
     warnings: [
-      "SentencePiece fertility is a heuristic and detect-language models English-vs-Sanskrit, not German; inflected Sanskrit forms and short spans can still misfire. Each flag is a candidate for human review, not a confirmed error.",
-      "This queue never rewrites PWG markup or source.",
+      "German-aware classifier: the previous detect-language eng/skt pair flagged ~1,449 spans (mostly inflected-Sanskrit false positives); the san/deu pair flags far fewer. Remaining flags skew to very short forms (SPM noise on <5-char strings) plus genuine foreign/OCR content — each is a review candidate, not a confirmed error.",
+      "Models are trained on PWG's own markup, so this measures internal consistency, not an external gold standard. The queue never rewrites PWG markup or source.",
       ...warnings
     ]
   });
