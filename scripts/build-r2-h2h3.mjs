@@ -134,20 +134,96 @@ function selectPanel(wilMap, shsMap, yatMap, ap90Map, apMap) {
 }
 
 // --- Compute survival rows for one lemma/edge ---
+// position = sense ordinal in the ancestor entry; glossLen = content-word count
+// (both centrality proxies, kept for the H2 confound-controlled model).
 function computeEdgeRows(ancSenses, desSenses) {
-  return ancSenses.map(({ text: ancText, rawText }) => {
+  return ancSenses.map(({ text: ancText, rawText }, position) => {
     const cited = hasCitation(rawText);
     let maxOverlap = 0;
     for (const { text: desText } of desSenses) {
       const ov = glossOverlap(ancText, desText);
       if (ov > maxOverlap) maxOverlap = ov;
     }
-    return { cited, overlap: maxOverlap, survived: maxOverlap >= SURVIVAL_THRESHOLD };
+    return { cited, overlap: maxOverlap, survived: maxOverlap >= SURVIVAL_THRESHOLD,
+             position, glossLen: glossWords(ancText).size, ancText };
   });
 }
 
-// Round to 3 decimal places
+// Round to 3 / 4 decimal places
 function r3(x) { return Math.round(x * 1000) / 1000; }
+function r4(x) { return Math.round(x * 10000) / 10000; }
+
+// ---- Numerical helpers for the H2 confound-controlled analysis ----
+// Pure-JS logistic regression (IRLS) + cluster-robust (CR1) SEs by lemma, so the
+// "cited senses survive better" gap is tested after centrality controls and
+// without the pseudoreplication of treating senses within an entry as independent.
+function sigmoid(z) { return 1 / (1 + Math.exp(-z)); }
+function dot(a, b) { let s = 0; for (let i = 0; i < a.length; i++) s += a[i] * b[i]; return s; }
+function matMul(A, B) {
+  const n = A.length, m = B[0].length, p = B.length;
+  return A.map(row => Array.from({ length: m }, (_, j) => { let s = 0; for (let t = 0; t < p; t++) s += row[t] * B[t][j]; return s; }));
+}
+function matInv(A) { // Gauss-Jordan; returns null if singular
+  const n = A.length;
+  const M = A.map((r, i) => [...r, ...Array.from({ length: n }, (_, j) => (i === j ? 1 : 0))]);
+  for (let c = 0; c < n; c++) {
+    let piv = c; for (let r = c + 1; r < n; r++) if (Math.abs(M[r][c]) > Math.abs(M[piv][c])) piv = r;
+    [M[c], M[piv]] = [M[piv], M[c]];
+    const d = M[c][c]; if (Math.abs(d) < 1e-12) return null;
+    for (let j = 0; j < 2 * n; j++) M[c][j] /= d;
+    for (let r = 0; r < n; r++) if (r !== c) { const f = M[r][c]; for (let j = 0; j < 2 * n; j++) M[r][j] -= f * M[c][j]; }
+  }
+  return M.map(r => r.slice(n));
+}
+// X: design matrix (rows include the intercept column), y: 0/1. Returns beta.
+export function fitLogistic(X, y, iters = 50) {
+  const n = X.length, k = X[0].length;
+  let beta = Array(k).fill(0);
+  for (let it = 0; it < iters; it++) {
+    const g = Array(k).fill(0);
+    const H = Array.from({ length: k }, () => Array(k).fill(0));
+    for (let i = 0; i < n; i++) {
+      const pi = sigmoid(dot(X[i], beta)), w = pi * (1 - pi), r = y[i] - pi;
+      for (let a = 0; a < k; a++) { g[a] += X[i][a] * r; for (let b = 0; b < k; b++) H[a][b] += X[i][a] * X[i][b] * w; }
+    }
+    const Hinv = matInv(H); if (!Hinv) break;
+    const step = Hinv.map(row => dot(row, g));
+    let maxd = 0; for (let a = 0; a < k; a++) { beta[a] += step[a]; maxd = Math.max(maxd, Math.abs(step[a])); }
+    if (maxd < 1e-9) break;
+  }
+  return beta;
+}
+// Cluster-robust (CR1) SEs: sandwich with the per-cluster score sums.
+export function clusterRobustSE(X, y, beta, clusters) {
+  const n = X.length, k = X[0].length;
+  const H = Array.from({ length: k }, () => Array(k).fill(0));
+  const p = X.map(row => sigmoid(dot(row, beta)));
+  for (let i = 0; i < n; i++) { const w = p[i] * (1 - p[i]); for (let a = 0; a < k; a++) for (let b = 0; b < k; b++) H[a][b] += X[i][a] * X[i][b] * w; }
+  const bread = matInv(H); if (!bread) return { se: Array(k).fill(NaN), G: 0 };
+  const score = new Map();
+  for (let i = 0; i < n; i++) {
+    const g = clusters[i]; if (!score.has(g)) score.set(g, Array(k).fill(0));
+    const s = score.get(g), r = y[i] - p[i]; for (let a = 0; a < k; a++) s[a] += X[i][a] * r;
+  }
+  const meat = Array.from({ length: k }, () => Array(k).fill(0));
+  for (const s of score.values()) for (let a = 0; a < k; a++) for (let b = 0; b < k; b++) meat[a][b] += s[a] * s[b];
+  const G = score.size;
+  const cAdj = (G / (G - 1)) * ((n - 1) / (n - k)); // CR1 finite-sample adjustment
+  const V = matMul(matMul(bread, meat), bread);
+  return { se: V.map((row, i) => Math.sqrt(Math.max(0, row[i] * cAdj))), G };
+}
+// Two-sided normal tail (Zelen-Severo approximation).
+function normalTwoSidedP(z) {
+  z = Math.abs(z);
+  const t = 1 / (1 + 0.2316419 * z), d = 0.3989423 * Math.exp(-z * z / 2);
+  const upper = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+  return r4(2 * upper);
+}
+function zscore(vals) {
+  const m = vals.reduce((s, x) => s + x, 0) / vals.length;
+  const sd = Math.sqrt(vals.reduce((s, x) => s + (x - m) ** 2, 0) / vals.length) || 1;
+  return vals.map(x => (x - m) / sd);
+}
 
 async function main() {
   // Load all 5 dicts
@@ -170,8 +246,9 @@ async function main() {
   ];
 
   // Per-edge and per-lemma accumulation
-  const h2Rows = []; // { cited, survived } across all edges
+  const h2Rows = []; // enriched: { lemma, edge, cited, survived, overlap, position, glossLen, crossDict }
   const h3rResults = [];
+  const ALL_MAPS = { wil: wilMap, shs: shsMap, yat: yatMap, ap90: ap90Map, ap: apMap };
 
   for (const edge of edges) {
     let totalAncSenses = 0, totalDesSenses = 0, totalOverlap = 0, nPairs = 0;
@@ -186,7 +263,21 @@ async function main() {
       if (!ancSenses.length || !desSenses.length) continue;
 
       const rows = computeEdgeRows(ancSenses, desSenses);
-      for (const row of rows) h2Rows.push(row);
+
+      // Cross-dictionary attestation per ancestor sense: how many of the OTHER
+      // panel dicts (not anc/des) carry a matching sense — a centrality control
+      // independent of this edge's survival outcome. Senses extracted once/stem.
+      const otherSenses = Object.entries(ALL_MAPS)
+        .filter(([c]) => c !== edge.ancDict && c !== edge.desDict)
+        .map(([c, m]) => extractSenses(m.get(stem) ?? "", c));
+      for (const row of rows) {
+        let crossDict = 0;
+        for (const senses of otherSenses) {
+          if (senses.some(({ text }) => glossOverlap(row.ancText, text) >= SURVIVAL_THRESHOLD)) crossDict++;
+        }
+        h2Rows.push({ lemma: stem, edge: edge.key, cited: row.cited, survived: row.survived,
+                      overlap: row.overlap, position: row.position, glossLen: row.glossLen, crossDict });
+      }
 
       const meanOverlap = rows.reduce((s, r) => s + r.overlap, 0) / rows.length;
       totalAncSenses += ancSenses.length;
@@ -243,6 +334,66 @@ async function main() {
   process.stderr.write(`H2: cited ${h2.cited.rate} (n=${h2.cited.n}) vs uncited ${h2.uncited.rate} (n=${h2.uncited.n}), gap=${gap}\n`);
   process.stderr.write(`    archived: cited 0.70 (n=96) vs uncited 0.54 (n=715)\n`);
 
+  // --- H2 confound-controlled: does `cited` survive after centrality controls,
+  //     clustered by lemma (pseudoreplication)? ---
+  // Edge fixed effects (ref = wil→shs) are essential: the three edges have
+  // radically different baseline survival (shs ~0.9 vs yat ~0.07), so without
+  // them the centrality covariates absorb edge differences.
+  const posZ = zscore(h2Rows.map(r => r.position));
+  const glZ  = zscore(h2Rows.map(r => r.glossLen));
+  const cdZ  = zscore(h2Rows.map(r => r.crossDict));
+  const X = h2Rows.map((r, i) => [
+    1, r.cited ? 1 : 0, posZ[i], glZ[i], cdZ[i],
+    r.edge === "wil→yat" ? 1 : 0, r.edge === "ap90→ap" ? 1 : 0,
+  ]);
+  const yv = h2Rows.map(r => (r.survived ? 1 : 0));
+  const beta = fitLogistic(X, yv);
+  const { se, G } = clusterRobustSE(X, yv, beta, h2Rows.map(r => r.lemma));
+  const terms = ["intercept", "cited", "position_z", "glossLen_z", "crossDict_z", "edge_wil→yat", "edge_ap90→ap"];
+  const model = terms.map((t, j) => ({
+    term: t, coef: r4(beta[j]), clusterRobustSE: r4(se[j]),
+    z: r4(beta[j] / se[j]), p: normalTwoSidedP(beta[j] / se[j]),
+    oddsRatio: r4(Math.exp(beta[j])),
+    ci95: [r4(beta[j] - 1.96 * se[j]), r4(beta[j] + 1.96 * se[j])],
+  }));
+  const citedTerm = model.find(m => m.term === "cited");
+
+  // Non-parametric cross-check: cited-vs-uncited survival within position tertiles.
+  const posSorted = h2Rows.map(r => r.position).sort((a, b) => a - b);
+  const q1 = posSorted[Math.floor(posSorted.length / 3)];
+  const q2 = posSorted[Math.floor(2 * posSorted.length / 3)];
+  const tertile = r => (r.position <= q1 ? "early" : r.position <= q2 ? "mid" : "late");
+  const positionStrata = ["early", "mid", "late"].map(label => {
+    const inBin = h2Rows.filter(r => tertile(r) === label);
+    const c = inBin.filter(r => r.cited), u = inBin.filter(r => !r.cited);
+    return {
+      stratum: label, n: inBin.length,
+      citedN: c.length, citedRate: c.length ? r3(c.filter(r => r.survived).length / c.length) : null,
+      uncitedN: u.length, uncitedRate: u.length ? r3(u.filter(r => r.survived).length / u.length) : null,
+    };
+  });
+
+  const h2Controlled = {
+    method: "Logistic regression survived ~ cited + position + glossLen + crossDict (centrality controls, z-scored) + edge fixed effects (ref wil→shs), with CR1 lemma-cluster-robust SEs (addresses the centrality confound, edge-baseline differences, and within-entry pseudoreplication).",
+    n: h2Rows.length,
+    lemmaClusters: G,
+    citedOddsRatio: citedTerm.oddsRatio,
+    citedCI95_logOdds: citedTerm.ci95,
+    citedP: citedTerm.p,
+    verdict: (citedTerm.coef > 0 && citedTerm.p < 0.05) ? "controlled-supported"
+           : (citedTerm.coef > 0) ? "attenuated-nonsignificant" : "not-supported-after-controls",
+    model,
+    positionTertileCrossCheck: positionStrata,
+    note: "Per-sense rows in data/lexico/r2_h2_senses.json for independent refitting. crossDict = matching senses among the 3 non-edge panel dicts.",
+  };
+  process.stderr.write(`H2 controlled: cited OR=${citedTerm.oddsRatio} p=${citedTerm.p} (cluster-robust, ${G} lemmas) -> ${h2Controlled.verdict}\n`);
+
+  fs.writeFileSync(path.join(OUT_DIR, "r2_h2_senses.json"), JSON.stringify({
+    schemaVersion: "0.1.0", generatedBy: "npm run build-r2-h2h3",
+    note: "Per-ancestor-sense rows for the H2 confound-controlled analysis.",
+    rows: h2Rows,
+  }, null, 2));
+
   const output = {
     schemaVersion: "0.1.0",
     generatedBy: "npm run build-r2-h2h3",
@@ -250,6 +401,7 @@ async function main() {
     panelSize: panel.length,
     survivedThreshold: SURVIVAL_THRESHOLD,
     h2,
+    h2Controlled,
     h3r: h3rResults.map(r => ({
       edge: r.edge,
       ancDict: r.ancDict,
