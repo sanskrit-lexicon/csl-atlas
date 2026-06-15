@@ -26,6 +26,7 @@
     "validate-dict-comparison": "node scripts/validate-dictionary-comparison.mjs",
     "build-citation-link-pilot": "node scripts/build-citation-link-pilot.mjs",
     "build-citation-link-split": "node scripts/build-citation-link-split.mjs",
+    "build-source-date-anchor": "node scripts/build-source-date-anchor.mjs",
     "build-broad-headword-lookup": "node scripts/build-broad-headword-lookup.mjs",
     "audit-analysis-capabilities": "node scripts/audit-broad-analysis-capabilities.mjs",
     "build-gender-review": "node scripts/build-gender-conflict-review.mjs",
