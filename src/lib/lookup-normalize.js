@@ -5,17 +5,15 @@
 // which the old maps left untranslated — sanskrit-util fixes that. The SLP1
 // headword normalizers below stay local: they are CDSL-headword-specific
 // (strip SLP1 accent marks + trailing homonym digits), not generic translit.
-import { to_slp1, from_slp1 } from "./sanskrit-util.js";
+import { to_slp1, from_slp1, slp1_norm } from "./sanskrit-util.js";
 
-const SLP1_ACCENTS = /[\/\\^~]/g;
 const IAST_MARKS = /[āīūṛṝḷḹṅñṭḍṇśṣṃṁḥĀĪŪṚṜḶḸṄÑṬḌṆŚṢṂṀḤ]/;
 
+// CDSL SLP1 headword key, delegated to the canonical sanskrit-util slp1_norm (same key the
+// build uses in scripts/lib/dict-normalize.mjs, so queries match the committed index).
 export function normalizeSlp1Lemma(value) {
-  const raw = (value ?? "").trim();
-  let normalized = raw.replace(SLP1_ACCENTS, "");
-  normalized = normalized.replace(/\d+$/, "");
-  normalized = normalized.replace(/\s+/g, " ").trim();
-  return { normalized, changed: normalized !== raw };
+  const normalized = slp1_norm(value);
+  return { normalized, changed: normalized !== (value ?? "").trim() };
 }
 
 export function iastToSlp1(value) {
