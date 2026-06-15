@@ -54,6 +54,7 @@
     "build-r2-explorer": "node scripts/build-r2-explorer.mjs",
     "build-r2-h1": "node scripts/build-r2-h1.mjs",
     "build-r2-h2h3": "node scripts/build-r2-h2h3.mjs",
+    "verify-yat-sense-artifact": "node scripts/verify-yat-sense-artifact.mjs",
     "build-r2-h1-panel": "node scripts/build-r2-h1-panel.mjs",
     "build-r2-pages": "node scripts/build-r2-pages.mjs",
     "build-r2-parser-diagnostics": "node scripts/build-r2-parser-diagnostics.mjs",
