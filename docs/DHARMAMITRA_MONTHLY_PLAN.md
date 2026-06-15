@@ -129,8 +129,15 @@ corpus-frequency evidence from the dharmanexus datasets.
 > it: (1) loose name matching produces false dates (`Amar` [Amarakośa] wrongly hitting
 > *Amaruśataka*), so matching is exact-or-unambiguous-prefix only; (2) the atlas's source LAYERS
 > **mix chronology with genre** (`technical`/`lexicographic` are genres, not periods), so a model
-> date cannot imply a layer — the queue is **date-only**, and the reviewer assigns any layer. The
-> remaining `corpus-frequency` task (dharmanexus) is still open below.
+> date cannot imply a layer — the reviewer assigns any layer.
+>
+> **Corpus-frequency DONE (2026-06-14, PR #110) — at the source level.** Finding: `dharmanexus-sanskrit`
+> is raw corpus text (GRETIL/DCS-sourced) with **no committable per-lemma frequency export**, and
+> the atlas already carries per-lemma frequency via DCS (`dcs_lemma_summary.json`) — so re-deriving
+> it would duplicate DCS. The non-duplicative signal is **per-source corpus volume**: the chronology
+> snapshot's `nChunks` per text. `build-source-date-anchor.mjs` now also attaches `corpusChunks` + a
+> 1-5 `corpusVolumeBand` to each dated siglum (MBh band 5 / 2,278 chunks … 1-chunk stotras band 1),
+> so each source carries **date + corpus prominence**. Per-lemma frequency stays with DCS.
 
 **Tasks**
 - **Per-siglum dating:** join `dharmamitra-chronology.json` to individual `<ls>` sources (not

@@ -5,8 +5,14 @@
 // (src/data/external/dharmamitra-chronology.json, 1,618 dated works) to the
 // individual <ls> source sigla the atlas tracks — the 184 mapped sigla
 // (mw-source-layers.json) and the 449 `unknown` ones
-// (unknown-source-layers-review.json) — and attaches a concrete DATE to each
-// siglum it can confidently resolve to a dated work.
+// (unknown-source-layers-review.json) — and attaches, per siglum it can
+// confidently resolve to a dated work, both a concrete DATE and the source's
+// CORPUS VOLUME (nChunks + a 1-5 band) in the Dharmamitra dated corpus.
+//
+// The corpus-volume band is corpus-frequency at the SOURCE level. Per-LEMMA
+// frequency is NOT added here — the atlas already carries it via DCS
+// (dcs_lemma_summary.json), and dharmanexus-sanskrit is raw corpus text with no
+// committable per-lemma frequency export, so re-deriving it would duplicate DCS.
 //
 // Deliberately date-only. The atlas's source LAYERS mix chronology
 // (vedic/epic/classical/puranic) with genre (technical/lexicographic), so a
@@ -62,6 +68,17 @@ function mode(xs) {
   for (const x of xs) c.set(x, (c.get(x) || 0) + 1);
   return [...c.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
 }
+// Corpus-volume band from the Dharmamitra dated corpus chunk count (log-scale,
+// 1–5 to mirror the DCS per-lemma frequency bands). Source-level, NOT per-lemma:
+// per-lemma frequency stays with the existing DCS layer (dcs_lemma_summary.json).
+function corpusBand(chunks) {
+  if (!chunks) return 0;
+  if (chunks >= 1000) return 5;
+  if (chunks >= 100) return 4;
+  if (chunks >= 10) return 3;
+  if (chunks >= 2) return 2;
+  return 1;
+}
 
 function main() {
   const chronology = JSON.parse(fs.readFileSync(CHRONOLOGY, "utf8"));
@@ -77,8 +94,9 @@ function main() {
     const key = norm(base);
     if (!key) continue;
     let e = chrono.get(key);
-    if (!e) { e = { base, dates: [], eras: [], sections: 0 }; chrono.set(key, e); }
+    if (!e) { e = { base, dates: [], eras: [], sections: 0, chunks: 0 }; chrono.set(key, e); }
     e.dates.push(w.postMedian); e.eras.push(w.eraKey); e.sections += 1;
+    e.chunks += Number.isFinite(w.nChunks) ? w.nChunks : 0;
   }
 
   // 2. siglum (lowercased) -> canonical name, from the alias table.
@@ -153,6 +171,8 @@ function main() {
         dateMedian: median(r.entry.dates),
         dateRange: [Math.min(...r.entry.dates), Math.max(...r.entry.dates)],
         chronologicalEra: mode(r.entry.eras),
+        corpusChunks: r.entry.chunks,
+        corpusVolumeBand: corpusBand(r.entry.chunks),
         verdict: isUnknown ? "date-proposed (unknown source)" : "date-anchored"
       },
       evidenceLevel: "inferred", // chronology is a model posterior
@@ -171,6 +191,7 @@ function main() {
     assumptions: [
       "A siglum is dated by resolving it to a canonical name (curated expansion of major sigla, then dict-source-aliases.json, then the siglum) and matching chronology work titles — EXACT or unambiguous >=5-char prefix only.",
       "dateMedian is the median postMedian over the matched work's dated sections; dateRange is the span; chronologicalEra is the modal era.",
+      "corpusChunks / corpusVolumeBand (1-5, log-scale) is the source's text volume in the Dharmamitra dated corpus — corpus-frequency at the SOURCE level. Per-LEMMA frequency stays with the existing DCS layer (dcs_lemma_summary.json); dharmanexus exposes no committable per-lemma frequency, so this avoids duplicating DCS.",
       "Date-only by design: atlas layers mix chronology with genre (technical/lexicographic), so a date does NOT imply a layer. For unknown sigla the date informs the reviewer's layer choice; it is not applied automatically.",
       "Chronology dates are posterior model estimates; review evidence only — never rewrites mw-source-layers.json. Reviews preserved by reviewId."
     ],
