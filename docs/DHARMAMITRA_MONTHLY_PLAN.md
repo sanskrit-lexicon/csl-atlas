@@ -122,6 +122,16 @@ corpus" and the alignment slips to Month 3.
 **Objective:** push source-layer dating from coarse bands to per-source anchoring, and add
 corpus-frequency evidence from the dharmanexus datasets.
 
+> **Per-siglum dating DONE (2026-06-14, PR #106).** [`build-source-date-anchor.mjs`](../scripts/build-source-date-anchor.mjs)
+> joins the #90 chronology snapshot to the individual `<ls>` sigla and attaches a concrete date
+> to each it can confidently resolve — **67 sigla dated** (15 exact / 52 unambiguous-prefix),
+> including **29 of the 449 `unknown` sources** now carrying a date proposal. Two findings shaped
+> it: (1) loose name matching produces false dates (`Amar` [Amarakośa] wrongly hitting
+> *Amaruśataka*), so matching is exact-or-unambiguous-prefix only; (2) the atlas's source LAYERS
+> **mix chronology with genre** (`technical`/`lexicographic` are genres, not periods), so a model
+> date cannot imply a layer — the queue is **date-only**, and the reviewer assigns any layer. The
+> remaining `corpus-frequency` task (dharmanexus) is still open below.
+
 **Tasks**
 - **Per-siglum dating:** join `dharmamitra-chronology.json` to individual `<ls>` sources (not
   just the 6 layer bands) via a siglum→work-title match (reuse the alias table); emit a
