@@ -3,7 +3,18 @@
   "status": "r2-parser-promotion-review-packet",
   "claim": "A semicolon-aware sense counter is proposed for run-on-gloss dictionaries (e.g. YAT), where the inline-number splitter under-counts senses to 1 and produces the spurious wil→yat 'condensation' (#125). Promotion is reviewer-gated.",
   "evidenceLabel": "derived",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "reviewed",
+  "reviewSummary": {
+    "reviewedAt": "2026-06-16",
+    "reviewer": "gasyoun",
+    "method": "Source-read all 26 YAT candidates against ../csl-orig/v02/yat/yat.txt in-session.",
+    "decisions": {
+      "promote-parser-candidate": 25,
+      "retain-inline-number": 1
+    },
+    "verdict": "PROMOTE the semicolon-aware sense counter for YAT: it is a koša-style polysemy dictionary whose semicolons separate distinct gender-sectioned meanings (commas keep within-sense synonyms), so inline=1 under-counts. One documented over-split exception (avaṣṭabdha): lone adjectival entries with synonym glosses should suppress semicolon-splitting inside a single `a.` section — a rule refinement, not a blocker.",
+    "ruleRefinement": "When promoting: do not semicolon-split within a lone adjectival/participial section (`a.`-only entry, no gender polysemy); count it as one sense."
+  },
   "ownerRepo": "csl-atlas",
   "generatedBy": "npm run build-r2-semicolon-counter-packet",
   "sourceFiles": [
@@ -75,10 +86,10 @@
       ],
       "reviewQuestion": "Should YAT 'Dara' count 11 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L70214): koša-style polysemy — 11 semicolon-separated distinct meanings across gender sections (\"a. Holding. m. A moun- tain; flock of cotton; the tor- toise Avatār; a Vasu demigod. f. The earth; womb; marrow; blood-v\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:Goza:yat",
@@ -106,10 +117,10 @@
       ],
       "reviewQuestion": "Should YAT 'Goza' count 10 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L49210): koša-style polysemy — 10 semicolon-separated distinct meanings across gender sections (\"1. m. A station of herds- men; a herdsman; a creeper; bell-metal; low thunder; a pro- clamation; a term applied to kāyas\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:taruRa:yat",
@@ -137,10 +148,10 @@
       ],
       "reviewQuestion": "Should YAT 'taruRa' count 10 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L58605): koša-style polysemy — 10 semicolon-separated distinct meanings across gender sections (\"a. Young, new. m. A young man; Castor oil tree; large cumin seed. n. A kind of flower. f. Young woman; aloe tree; a perf\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:divya:yat",
@@ -168,10 +179,10 @@
       ],
       "reviewQuestion": "Should YAT 'divya' count 10 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L65360): koša-style polysemy — 10 semicolon-separated distinct meanings across gender sections (\"a. Divine, beautiful. m. Barley; bdellium; a divine property. f. Emblic myrobalan. n. Cloves; a sort of sandal; an ordea\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:Dvajin:yat",
@@ -199,10 +210,10 @@
       ],
       "reviewQuestion": "Should YAT 'Dvajin' count 10 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L71960): koša-style polysemy — 10 semicolon-separated distinct meanings across gender sections (\"a. Having a flag. m. A brāhman; a hill; a car; a snake; a horse; a pea- cock; a distiller. f. An army.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:kirAta:yat",
@@ -230,10 +241,10 @@
       ],
       "reviewQuestion": "Should YAT 'kirAta' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L34374): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"1. 3. m. A savage; Shiva; a kind of gentian; a pig- my; a groom. f. (tI) The Gan- ges, or its goddess; Durgā; a bawd or\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:kzAra:yat",
@@ -261,10 +272,10 @@
       ],
       "reviewQuestion": "Should YAT 'kzAra' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L41124): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"1. m. Glass; juice; trea- cle; salt; ashes; borax; alkali; a cheat. n. A factitious salt.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:kzepa:yat",
@@ -292,10 +303,10 @@
       ],
       "reviewQuestion": "Should YAT 'kzepa' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L41897): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"1. m. Sending, throwing; pride; delay; contempt; pas- sing away time; abuse; clump of flowers; quantity to be added.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:tilaka:yat",
@@ -323,10 +334,10 @@
       ],
       "reviewQuestion": "Should YAT 'tilaka' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L59950): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"1. m. n. Mark on the forehead. m. A freckle, a mole; a title; a horse; a Tila tree. n. The bladder; salt, a disease. f.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:DAtf:yat",
@@ -354,10 +365,10 @@
       ],
       "reviewQuestion": "Should YAT 'DAtf' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L70777): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"4. m. Brahmā; Viṣṇu; father. f. (trI) A mother; a fos- ter mother; a nurse; the earth. a. Cherishing; containing.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:udGAta:yat",
@@ -385,10 +396,10 @@
       ],
       "reviewQuestion": "Should YAT 'udGAta' count 7 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L22437): koša-style polysemy — 7 semicolon-separated distinct meanings across gender sections (\"1. m. A beginning; a weapon; a stroke; a wound; section; breathing through the nostrils; slipping. a. High.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:koRa:yat",
@@ -416,10 +427,10 @@
       ],
       "reviewQuestion": "Should YAT 'koRa' count 6 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L39146): koša-style polysemy — 6 semicolon-separated distinct meanings across gender sections (\"1. m. The bow of a lute; drum stick; club; corner; edge of a sword; Mars, Saturn; in- termediate point of the compass.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:upasaMhAra:yat",
@@ -447,10 +458,10 @@
       ],
       "reviewQuestion": "Should YAT 'upasaMhAra' count 5 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L24009): koša-style polysemy — 5 semicolon-separated distinct meanings across gender sections (\"1. m. Refusing; taking away; death; collection, com- pendium; attack; refutation.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:cUqA:yat",
@@ -478,10 +489,10 @@
       ],
       "reviewQuestion": "Should YAT 'cUqA' count 5 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L52276): koša-style polysemy — 5 semicolon-separated distinct meanings across gender sections (\"1. f. Single lock left on the crown of the head; a crest; a top; head; upper room; bracelet.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:tapasvin:yat",
@@ -509,10 +520,10 @@
       ],
       "reviewQuestion": "Should YAT 'tapasvin' count 5 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L58211): koša-style polysemy — 5 semicolon-separated distinct meanings across gender sections (\"5. m. An ascetic; Nā- rada; a mango-fish. f. Spike- nard. a. Devout; poor.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:avazwabDa:yat",
@@ -540,10 +551,10 @@
       ],
       "reviewQuestion": "Should YAT 'avazwabDa' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "retain-inline-number",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L11530): lone adjectival/participial entry — semicolons separate synonyms of a single sense (\"a. Near; sup- ported; stopped.\"), not distinct meanings. Semicolon counter over-splits here; keep inline. Signature: no gender polysemy, classMarker=false. Documents the rule's boundary."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:avi:yat",
@@ -571,10 +582,10 @@
       ],
       "reviewQuestion": "Should YAT 'avi' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L11838): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"2. m. The sun; a moun- tain; a sheep; a wall; air.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:Aroha:yat",
@@ -602,10 +613,10 @@
       ],
       "reviewQuestion": "Should YAT 'Aroha' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L17790): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"1. m. Length; ascent, mounting; a woman's waist; weight; a mine.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:udAtta:yat",
@@ -633,10 +644,10 @@
       ],
       "reviewQuestion": "Should YAT 'udAtta' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L22221): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"1. m. The acute accent; a gift. a. Liberal; great; dear.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:upacAra:yat",
@@ -664,10 +675,10 @@
       ],
       "reviewQuestion": "Should YAT 'upacAra' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L23291): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"1. m. Service; practice; physicking; a bribe; ellipses.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:ojas:yat",
@@ -695,10 +706,10 @@
       ],
       "reviewQuestion": "Should YAT 'ojas' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L26838): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"5. n. Light; strength; gold; vitality; high style.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:calana:yat",
@@ -726,10 +737,10 @@
       ],
       "reviewQuestion": "Should YAT 'calana' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L50711): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"1. n. Wandering; trem- bling. m. A foot. f. Short petti- coat. a. Going, trembling.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:dIpana:yat",
@@ -757,10 +768,10 @@
       ],
       "reviewQuestion": "Should YAT 'dIpana' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L65566): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"a. Inflaming; tonic. 1. n. A lighting; stimulating; the root Tagāra. m. A potherb. m. f. n. An aromatic seed.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:udvega:yat",
@@ -788,10 +799,10 @@
       ],
       "reviewQuestion": "Should YAT 'udvega' count 3 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L22875): koša-style polysemy — 3 semicolon-separated distinct meanings across gender sections (\"1. n. The fruit of the betel-nut. m. Regret, fear, asto- nishment. a. Going swiftly.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:kalka:yat",
@@ -819,10 +830,10 @@
       ],
       "reviewQuestion": "Should YAT 'kalka' count 3 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L31298): koša-style polysemy — 3 semicolon-separated distinct meanings across gender sections (\"1. m. n. Sediment, dirt, sin; pride. a. Sinful.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     },
     {
       "checkpointId": "checkpoint:semicolon-counter:trika:yat",
@@ -850,10 +861,10 @@
       ],
       "reviewQuestion": "Should YAT 'trika' count 3 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
       "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L61790): koša-style polysemy — 3 semicolon-separated distinct meanings across gender sections (\"1. n. The lower part of the spine; a triad; om; place where three roads meet. f. Lid of a well.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
     }
   ]
 }
