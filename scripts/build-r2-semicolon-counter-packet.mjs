@@ -97,12 +97,39 @@ function main() {
   }
   candidateRows.sort((a, b) => b.methodComparison.semicolonMeanings - a.methodComparison.semicolonMeanings);
 
+  // Preserve human adjudication across rebuilds: a regenerate MUST NOT discard
+  // decisions. Carry over reviewedValue/reviewer/reviewedAt/note by checkpointId
+  // (and the top-level reviewStatus/reviewSummary) from the existing packet.
+  let preservedStatus = "needs-human-review";
+  let preservedSummary;
+  if (fs.existsSync(OUT_FILE)) {
+    const prev = JSON.parse(fs.readFileSync(OUT_FILE, "utf8"));
+    const byId = new Map((prev.checkpointRows || []).map(r => [r.checkpointId, r]));
+    let carried = 0;
+    for (const row of candidateRows) {
+      const old = byId.get(row.checkpointId);
+      if (old && old.reviewedValue != null) {
+        row.reviewedValue = old.reviewedValue;
+        row.reviewer = old.reviewer ?? null;
+        row.reviewedAt = old.reviewedAt ?? null;
+        row.note = old.note ?? "";
+        carried++;
+      }
+    }
+    if (carried > 0) {
+      preservedStatus = prev.reviewStatus || "reviewed";
+      preservedSummary = prev.reviewSummary;
+      console.log(`Preserved ${carried} human decision(s) from the existing packet.`);
+    }
+  }
+
   const payload = {
     schemaVersion: "1.0.0",
     status: "r2-parser-promotion-review-packet",
     claim: "A semicolon-aware sense counter is proposed for run-on-gloss dictionaries (e.g. YAT), where the inline-number splitter under-counts senses to 1 and produces the spurious wil→yat 'condensation' (#125). Promotion is reviewer-gated.",
     evidenceLabel: "derived",
-    reviewStatus: "needs-human-review",
+    reviewStatus: preservedStatus,
+    ...(preservedSummary ? { reviewSummary: preservedSummary } : {}),
     ownerRepo: "csl-atlas",
     generatedBy: "npm run build-r2-semicolon-counter-packet",
     sourceFiles: ["../csl-orig/v02/yat/yat.txt", "../csl-orig/v02/shs/shs.txt", "data/lexico/r2_yat_artifact_check.json"],
@@ -131,7 +158,7 @@ function main() {
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(OUT_FILE, `${JSON.stringify(payload, null, 2)}\n`);
-  console.log(`Semicolon-counter packet: ${candidateRows.length} checkpoint rows (needs-human-review)`);
+  console.log(`Semicolon-counter packet: ${candidateRows.length} checkpoint rows (${preservedStatus})`);
   for (const d of dictDetection) console.log(`  ${d.dict}: inline ${d.meanInlineSenses} / semicolon ${d.meanSemicolonMeanings} -> ${d.verdict}`);
   console.log(`Wrote ${path.relative(process.cwd(), OUT_FILE)}`);
 }

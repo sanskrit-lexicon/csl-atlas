@@ -1,9 +1,32 @@
 # R2 review packet — semicolon-aware sense counter (parser promotion)
 
-Status: **needs-human-review** — a parser-promotion proposal, not an applied change.
-Owner: `csl-atlas`. Routes through the R2 checkpoint process
-([`R2_CHECKPOINT_DECISIONS.md`](R2_CHECKPOINT_DECISIONS.md)). Machine fields are filled;
-human decision fields are empty.
+Status: **reviewed** (2026-06-16, reviewer `gasyoun`) — adjudicated, but still a
+parser-promotion *proposal*: the counter is **not yet applied**. Owner: `csl-atlas`.
+Routes through the R2 checkpoint process
+([`R2_CHECKPOINT_DECISIONS.md`](R2_CHECKPOINT_DECISIONS.md)).
+
+## Outcome
+
+All 26 YAT under-split candidates were source-read against
+[`../csl-orig/v02/yat/yat.txt`](../../csl-orig/v02/yat/yat.txt). **25 →
+`promote-parser-candidate`, 1 → `retain-inline-number`** (decisions + per-row
+evidence notes in the packet's `checkpointRows`; summary in `reviewSummary`).
+
+- **Verdict: promote the semicolon counter for YAT.** It is a *kośa*-style polysemy
+  dictionary whose semicolons separate distinct gender-sectioned referent-meanings
+  (commas keep within-sense synonyms), so the inline count of 1 is a gross
+  under-count and the semicolon count is faithful.
+- **One documented over-split exception** — `avaṣṭabdha` (`retain-inline-number`): a
+  lone adjectival/participial entry whose semicolons separate *synonyms* of a single
+  sense ("Near; supported; stopped"), not distinct meanings. Signature: `a.`-only, no
+  gender polysemy, `classMarker=false`.
+- **Rule refinement for the implementer:** when promoting, **do not** semicolon-split
+  inside a lone adjectival/participial section (an `a.`-only entry with no gender
+  polysemy) — count it as one sense.
+
+**Next action (separate, gated work):** implement the promoted counter behind the
+detection gate + the lone-adjective refinement, recompute H3R `wil→yat`, and let the
+withdrawn Yates edge re-enter the P2 paper with a real count. Not done here.
 
 Packet data: [`data/lexico/r2_semicolon_counter_packet.json`](../data/lexico/r2_semicolon_counter_packet.json)
 (`npm run build-r2-semicolon-counter-packet`). Evidence: [`data/lexico/r2_yat_artifact_check.json`](../data/lexico/r2_yat_artifact_check.json) (#125).
