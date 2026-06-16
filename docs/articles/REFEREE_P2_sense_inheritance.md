@@ -3,7 +3,7 @@
 Date: 2026-06-13
 
 Status: internal adversarial review of
-[`paper_sense_inheritance.md`](articles/paper_sense_inheritance.md), written in the
+[`paper_sense_inheritance.md`](paper_sense_inheritance.md), written in the
 voice of a *Lexicographica* / *IJL* referee, to surface the objections a real
 reviewer will raise before submission. Points marked **[fixed]** were applied to
 the manuscript in the same change; **[author]** points need the author's decision
