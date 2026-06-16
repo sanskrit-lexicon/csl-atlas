@@ -42,8 +42,8 @@
     },
     "uncited": {
       "n": 723,
-      "survived": 427,
-      "rate": 0.591
+      "survived": 510,
+      "rate": 0.705
     },
     "supported": true,
     "archivedCited": {
@@ -59,96 +59,125 @@
     "method": "Logistic regression survived ~ cited + position + glossLen + crossDict (centrality controls, z-scored) + edge fixed effects (ref wil→shs), with CR1 lemma-cluster-robust SEs (addresses the centrality confound, edge-baseline differences, and within-entry pseudoreplication).",
     "n": 807,
     "lemmaClusters": 28,
-    "citedOddsRatio": 1.7489,
+    "citedOddsRatio": 3.0387,
     "citedCI95_logOdds": [
-      -0.2261,
-      1.3441
+      0.2588,
+      1.964
     ],
-    "citedP": 0.1629,
-    "verdict": "attenuated-nonsignificant",
+    "citedP": 0.0106,
+    "citedByEdge": [
+      {
+        "edge": "wil→shs",
+        "cited": 1,
+        "total": 252
+      },
+      {
+        "edge": "wil→yat",
+        "cited": 1,
+        "total": 252
+      },
+      {
+        "edge": "ap90→ap",
+        "cited": 82,
+        "total": 303
+      }
+    ],
+    "citationConcentratedOnOneEdge": true,
+    "withinPrimaryEdge": {
+      "edge": "ap90→ap",
+      "citedRate": 0.768,
+      "citedN": 82,
+      "uncitedRate": 0.661,
+      "uncitedN": 221,
+      "twoProportionZ": 1.7999,
+      "twoSidedP": 0.0719,
+      "significant": false,
+      "note": "Unclustered 2-proportion test within the single citation-bearing edge — the clean citation-survival signal, invariant to other edges' parsing."
+    },
+    "verdict": "edge-concentrated: ~all cited senses are on one edge (ap90→ap), so the pooled controlled OR is unstable and not a reliable citation estimate; the clean within-edge test (z=1.7999, p=0.0719) is suggestive, not significant. Citation co-varies with survival but is not established as an independent predictor.",
     "model": [
       {
         "term": "intercept",
-        "coef": 4.7902,
-        "clusterRobustSE": 0.7027,
-        "z": 6.8168,
+        "coef": 4.9016,
+        "clusterRobustSE": 0.7022,
+        "z": 6.9807,
         "p": 0,
-        "oddsRatio": 120.3204,
+        "oddsRatio": 134.5109,
         "ci95": [
-          3.4129,
-          6.1674
+          3.5254,
+          6.2779
         ]
       },
       {
         "term": "cited",
-        "coef": 0.559,
-        "clusterRobustSE": 0.4005,
-        "z": 1.3956,
-        "p": 0.1629,
-        "oddsRatio": 1.7489,
+        "coef": 1.1114,
+        "clusterRobustSE": 0.435,
+        "z": 2.5551,
+        "p": 0.0106,
+        "oddsRatio": 3.0387,
         "ci95": [
-          -0.2261,
-          1.3441
+          0.2588,
+          1.964
         ]
       },
       {
         "term": "position_z",
-        "coef": -0.2835,
-        "clusterRobustSE": 0.2032,
-        "z": -1.3951,
-        "p": 0.163,
-        "oddsRatio": 0.7531,
+        "coef": -0.1704,
+        "clusterRobustSE": 0.1655,
+        "z": -1.0301,
+        "p": 0.303,
+        "oddsRatio": 0.8433,
         "ci95": [
-          -0.6819,
-          0.1148
+          -0.4948,
+          0.1539
         ]
       },
       {
         "term": "glossLen_z",
-        "coef": -0.1045,
-        "clusterRobustSE": 0.1024,
-        "z": -1.0207,
-        "p": 0.3074,
-        "oddsRatio": 0.9008,
+        "coef": -0.411,
+        "clusterRobustSE": 0.1115,
+        "z": -3.6851,
+        "p": 0.0002,
+        "oddsRatio": 0.663,
         "ci95": [
-          -0.3052,
-          0.0962
+          -0.6297,
+          -0.1924
         ]
       },
       {
         "term": "crossDict_z",
-        "coef": -0.0645,
-        "clusterRobustSE": 0.1505,
-        "z": -0.4281,
-        "p": 0.6685,
-        "oddsRatio": 0.9376,
+        "coef": -0.0054,
+        "clusterRobustSE": 0.1404,
+        "z": -0.0381,
+        "p": 0.9696,
+        "oddsRatio": 0.9947,
         "ci95": [
-          -0.3595,
-          0.2306
+          -0.2805,
+          0.2698
         ]
       },
       {
         "term": "edge_wil→yat",
-        "coef": -6.7609,
-        "clusterRobustSE": 0.727,
-        "z": -9.2997,
+        "coef": -5.1505,
+        "clusterRobustSE": 0.7158,
+        "z": -7.1956,
         "p": 0,
-        "oddsRatio": 0.0012,
+        "oddsRatio": 0.0058,
         "ci95": [
-          -8.1858,
-          -5.336
+          -6.5535,
+          -3.7476
         ]
       },
       {
         "term": "edge_ap90→ap",
-        "coef": -4.037,
-        "clusterRobustSE": 0.8112,
-        "z": -4.9767,
+        "coef": -4.2742,
+        "clusterRobustSE": 0.8156,
+        "z": -5.2406,
         "p": 0,
-        "oddsRatio": 0.0177,
+        "oddsRatio": 0.0139,
         "ci95": [
-          -5.6269,
-          -2.4471
+          -5.8727,
+          -2.6756
         ]
       }
     ],
@@ -159,7 +188,7 @@
         "citedN": 37,
         "citedRate": 0.865,
         "uncitedN": 299,
-        "uncitedRate": 0.635
+        "uncitedRate": 0.759
       },
       {
         "stratum": "mid",
@@ -167,7 +196,7 @@
         "citedN": 26,
         "citedRate": 0.615,
         "uncitedN": 222,
-        "uncitedRate": 0.581
+        "uncitedRate": 0.725
       },
       {
         "stratum": "late",
@@ -175,10 +204,10 @@
         "citedN": 21,
         "citedRate": 0.762,
         "uncitedN": 202,
-        "uncitedRate": 0.535
+        "uncitedRate": 0.604
       }
     ],
-    "note": "Per-sense rows in data/lexico/r2_h2_senses.json for independent refitting. crossDict = matching senses among the 3 non-edge panel dicts."
+    "note": "Per-sense rows in data/lexico/r2_h2_senses.json for independent refitting. crossDict = matching senses among the 3 non-edge panel dicts. The pooled OR is edge-composition-sensitive (see citationConcentratedOnOneEdge); prefer withinPrimaryEdge."
   },
   "h2ThresholdSensitivity": {
     "method": "Refit the h2Controlled model (survived ~ cited + position_z + glossLen_z + crossDict_z + edge FE, CR1 lemma-cluster-robust) at each survival cutoff; covariates held at the reference (0.15) definition, only the outcome re-thresholded.",
@@ -186,91 +215,91 @@
     "grid": [
       {
         "threshold": 0.1,
-        "citedRate": 0.786,
-        "uncitedRate": 0.676,
-        "naiveGap": 0.109,
-        "controlledOddsRatio": 1.5978,
+        "citedRate": 0.798,
+        "uncitedRate": 0.74,
+        "naiveGap": 0.058,
+        "controlledOddsRatio": 2.321,
         "citedCI95_logOdds": [
-          -0.4064,
-          1.3436
+          0.0466,
+          1.6374
         ],
-        "citedP": 0.2939,
-        "controlledSignificant": false,
+        "citedP": 0.038,
+        "controlledSignificant": true,
         "fitOk": true
       },
       {
         "threshold": 0.125,
-        "citedRate": 0.774,
-        "uncitedRate": 0.633,
-        "naiveGap": 0.14,
-        "controlledOddsRatio": 1.6678,
+        "citedRate": 0.786,
+        "uncitedRate": 0.73,
+        "naiveGap": 0.055,
+        "controlledOddsRatio": 2.637,
         "citedCI95_logOdds": [
-          -0.3989,
-          1.422
+          0.1061,
+          1.8331
         ],
-        "citedP": 0.2708,
-        "controlledSignificant": false,
+        "citedP": 0.0277,
+        "controlledSignificant": true,
         "fitOk": true
       },
       {
         "threshold": 0.15,
         "citedRate": 0.762,
-        "uncitedRate": 0.591,
-        "naiveGap": 0.171,
-        "controlledOddsRatio": 1.7489,
+        "uncitedRate": 0.705,
+        "naiveGap": 0.057,
+        "controlledOddsRatio": 3.0387,
         "citedCI95_logOdds": [
-          -0.2261,
-          1.3441
+          0.2588,
+          1.964
         ],
-        "citedP": 0.1629,
-        "controlledSignificant": false,
+        "citedP": 0.0106,
+        "controlledSignificant": true,
         "fitOk": true
       },
       {
         "threshold": 0.175,
         "citedRate": 0.738,
-        "uncitedRate": 0.574,
-        "naiveGap": 0.164,
-        "controlledOddsRatio": 1.4399,
+        "uncitedRate": 0.696,
+        "naiveGap": 0.042,
+        "controlledOddsRatio": 2.5828,
         "citedCI95_logOdds": [
-          -0.3995,
-          1.1287
+          0.1211,
+          1.7767
         ],
-        "citedP": 0.3497,
-        "controlledSignificant": false,
+        "citedP": 0.0247,
+        "controlledSignificant": true,
         "fitOk": true
       },
       {
         "threshold": 0.2,
         "citedRate": 0.738,
-        "uncitedRate": 0.567,
-        "naiveGap": 0.171,
-        "controlledOddsRatio": 1.6404,
+        "uncitedRate": 0.694,
+        "naiveGap": 0.044,
+        "controlledOddsRatio": 2.8362,
         "citedCI95_logOdds": [
-          -0.2831,
-          1.273
+          0.1843,
+          1.9006
         ],
-        "citedP": 0.2125,
-        "controlledSignificant": false,
+        "citedP": 0.0173,
+        "controlledSignificant": true,
         "fitOk": true
       },
       {
         "threshold": 0.25,
         "citedRate": 0.714,
-        "uncitedRate": 0.557,
-        "naiveGap": 0.157,
-        "controlledOddsRatio": 1.6038,
+        "uncitedRate": 0.686,
+        "naiveGap": 0.028,
+        "controlledOddsRatio": 2.6956,
         "citedCI95_logOdds": [
-          -0.3332,
-          1.2779
+          0.1322,
+          1.851
         ],
-        "citedP": 0.2504,
-        "controlledSignificant": false,
+        "citedP": 0.0237,
+        "controlledSignificant": true,
         "fitOk": true
       }
     ],
-    "verdict": "robust: across cutoffs 0.10–0.25 the naive cited-survival gap persists but the CONTROLLED cited effect stays non-significant (CI spans OR=1) — the #123 attenuation is not an artifact of the 0.15 choice.",
-    "note": "Covariates (incl. crossDict) are fixed at the 0.15 reference; only the survival outcome is swept, which isolates outcome-threshold sensitivity. Extreme cutoffs that fully separate an edge are flagged fitOk=false."
+    "verdict": "pooled OR is significant at every cutoff, BUT it inherits the edge-concentration fragility (h2Controlled.citationConcentratedOnOneEdge): the pooled estimate is not a reliable citation effect, so its threshold-stability is NOT evidence for H2. Defer to h2Controlled.withinPrimaryEdge.",
+    "note": "Covariates (incl. crossDict) are fixed at the 0.15 reference; only the survival outcome is swept. Extreme cutoffs that fully separate an edge are flagged fitOk=false. Since the YAT semicolon promotion (#126), the pooled OR rose but is edge-concentration-driven — read with h2Controlled."
   },
   "h3r": [
     {
@@ -467,11 +496,11 @@
       "desDict": "yat",
       "nLemmas": 28,
       "meanAncSenses": 9,
-      "meanDesSenses": 1,
-      "drift": -8,
-      "meanGlossOverlap": 0.075,
-      "pattern": "parser artifact — NOT genuine condensation; YAT is semicolon-packed, not sense-numbered (verify-yat-sense-artifact.mjs)",
-      "senseExtractionArtifact": true,
+      "meanDesSenses": 5.679,
+      "drift": -3.321,
+      "meanGlossOverlap": 0.256,
+      "pattern": "condensation (semicolon-aware count, #126 promotion: YAT abridges ~9→5.7, not the artifactual 9→1)",
+      "senseExtractionArtifact": false,
       "archived": {
         "meanAncSenses": 7.9,
         "meanDesSenses": 1.1,
@@ -483,169 +512,169 @@
           "stem": "avazwabDa",
           "ancSenses": 9,
           "desSenses": 1,
-          "meanOverlap": 0.031
+          "meanOverlap": 0.026
         },
         {
           "stem": "avi",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.069
+          "desSenses": 4,
+          "meanOverlap": 0.222
         },
         {
           "stem": "Aroha",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.099
+          "desSenses": 4,
+          "meanOverlap": 0.306
         },
         {
           "stem": "ASraya",
           "ancSenses": 9,
           "desSenses": 1,
-          "meanOverlap": 0.056
+          "meanOverlap": 0.037
         },
         {
           "stem": "udAtta",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.072
+          "desSenses": 4,
+          "meanOverlap": 0.167
         },
         {
           "stem": "udGAta",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.083
+          "desSenses": 7,
+          "meanOverlap": 0.328
         },
         {
           "stem": "udvega",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.071
+          "desSenses": 3,
+          "meanOverlap": 0.138
         },
         {
           "stem": "upacAra",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.09
+          "desSenses": 4,
+          "meanOverlap": 0.13
         },
         {
           "stem": "upasaMhAra",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.064
+          "desSenses": 5,
+          "meanOverlap": 0.19
         },
         {
           "stem": "ErAvata",
           "ancSenses": 9,
           "desSenses": 1,
-          "meanOverlap": 0.011
+          "meanOverlap": 0.01
         },
         {
           "stem": "ojas",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.054
+          "desSenses": 4,
+          "meanOverlap": 0.144
         },
         {
           "stem": "kalka",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.077
+          "desSenses": 3,
+          "meanOverlap": 0.204
         },
         {
           "stem": "kirAta",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.079
+          "desSenses": 8,
+          "meanOverlap": 0.353
         },
         {
           "stem": "koRa",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.106
+          "desSenses": 6,
+          "meanOverlap": 0.374
         },
         {
           "stem": "kzAra",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.086
+          "desSenses": 8,
+          "meanOverlap": 0.412
         },
         {
           "stem": "kzepa",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.08
+          "desSenses": 8,
+          "meanOverlap": 0.446
         },
         {
           "stem": "Goza",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.043
+          "desSenses": 10,
+          "meanOverlap": 0.23
         },
         {
           "stem": "calana",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.061
+          "desSenses": 4,
+          "meanOverlap": 0.205
         },
         {
           "stem": "cUqA",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.124
+          "desSenses": 5,
+          "meanOverlap": 0.384
         },
         {
           "stem": "tapasvin",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.07
+          "desSenses": 5,
+          "meanOverlap": 0.179
         },
         {
           "stem": "taruRa",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.1
+          "desSenses": 10,
+          "meanOverlap": 0.435
         },
         {
           "stem": "tilaka",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.082
+          "desSenses": 8,
+          "meanOverlap": 0.274
         },
         {
           "stem": "trika",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.158
+          "desSenses": 3,
+          "meanOverlap": 0.227
         },
         {
           "stem": "divya",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.104
+          "desSenses": 10,
+          "meanOverlap": 0.591
         },
         {
           "stem": "dIpana",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.057
+          "desSenses": 4,
+          "meanOverlap": 0.112
         },
         {
           "stem": "Dara",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.048
+          "desSenses": 11,
+          "meanOverlap": 0.467
         },
         {
           "stem": "DAtf",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.079
+          "desSenses": 8,
+          "meanOverlap": 0.255
         },
         {
           "stem": "Dvajin",
           "ancSenses": 9,
-          "desSenses": 1,
-          "meanOverlap": 0.043
+          "desSenses": 10,
+          "meanOverlap": 0.318
         }
       ]
     },
@@ -840,8 +869,9 @@
   ],
   "limitations": [
     "28-noun panel reconstructed from nouns present in all 5 dicts with ≥3 WIL senses; original panel from deleted h2h3_analysis.py.",
-    "SHS/YAT senses extracted by inline '\\b\\d+\\.\\s+' split; no XML tags preserved for per-sense citation check in SHS/YAT.",
-    "ARTIFACT: the wil→yat 'condensation' (9→1) is a parser artifact — YAT packs senses into one semicolon-separated run-on gloss (not sense-numbered) and the inline-number splitter mis-reads a noun-class marker, collapsing to 1. True YAT polysemy ≈ 5.7 meanings/entry (75% carry the class-number marker). See data/lexico/r2_yat_artifact_check.json (npm run verify-yat-sense-artifact). This edge is NOT evidence of condensation.",
+    "SHS senses extracted by inline '\\b\\d+\\.\\s+' split; YAT by semicolon-aware split (#126 promotion); no XML tags preserved for per-sense citation check in SHS/YAT (both descendants — H2 citation is on the WIL/AP90 ancestor).",
+    "RESOLVED (#126): the wil→yat '9→1 drastic condensation' was a parser artifact — YAT is semicolon-packed, not sense-numbered, so the inline-number splitter collapsed it to 1. The promoted semicolon counter (reviewer-adjudicated 25/26) now counts ~5.7 meanings/entry, so the edge reads as a genuine ~9→5.7 condensation (drift ≈ −3.3), comparable to ap90→ap. Lone adjectival entries keep inline (no over-split). See data/lexico/r2_semicolon_counter_packet.json + r2_yat_artifact_check.json.",
+    "H2 CAVEAT: cited ancestor senses are concentrated on the ap90→ap edge (~82 of 84; Wilson 1832 carries almost no <ls>), so the POOLED controlled OR is edge-composition-sensitive (it moved when the YAT split changed). The reliable signal is h2Controlled.withinPrimaryEdge (the single citation-bearing edge).",
     "Survival threshold is word-level Jaccard ≥ 0.15 (configurable).",
     "Gloss overlap uses word-level Jaccard after removing stop-words and short tokens.",
     "AP entries may include a 'lumped-proxy' header part; explicit sense parts are used for counting.",
