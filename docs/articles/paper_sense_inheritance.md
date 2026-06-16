@@ -84,7 +84,10 @@ of descent, (ii) a way of counting senses that respects each dictionary's own
 conventions rather than imposing one, and (iii) a way of aligning senses across
 dictionaries — and, in the Sanskrit case, across three description languages
 (German, English, Sanskrit) — so that survival and drift can be measured sense by
-sense rather than entry by entry.
+sense rather than entry by entry. The second of these is the classical microstructural
+problem — segmenting and comparing senses on each dictionary's own terms rather than a
+single editor's (Zgusta 1971; Wiegand 1989; Atkins and Rundell 2008) — here sharpened
+by a corpus that mixes four marking regimes across three description languages.
 
 The Cologne Digital Sanskrit Lexicon (CDSL) supplies all three. Its forty-three
 dictionaries include eleven general lexica spanning 1822–1957 whose genealogy is
@@ -94,7 +97,7 @@ Apte's 1890 dictionary was revised into the 1957 edition; the Petersburg lexicon
 stands behind Monier-Williams. Alongside the European line stand two indigenous
 Sanskrit–Sanskrit encyclopaedic lexica — *Śabdakalpadruma* (1822–58) and
 *Vācaspatya* (1873–84) — whose microstructure descends from the *kośa* and
-commentarial traditions rather than from the European critical apparatus.
+commentarial traditions (Vogel 1979) rather than from the European critical apparatus.
 
 This paper asks three questions of that record. **H1 (inflation):** do sense counts
 per entry rise with publication year? **H2 (survival):** when a dictionary inherits
@@ -427,6 +430,39 @@ to align these traditions must model the fusion, not filter it out.
 
 ## References
 
-*[TODO: secondary references — Wiegand on microstructure; Atkins & Rundell;
-Hausmann; Zgusta; Vogel's* Indian Lexicography*; CDSL project literature;
-companion drafts cited inline.]*
+Atkins, B. T. Sue, and Michael Rundell. 2008. *The Oxford Guide to Practical
+Lexicography.* Oxford: Oxford University Press.
+
+Hausmann, Franz Josef, Oskar Reichmann, Herbert Ernst Wiegand, and Ladislav Zgusta,
+eds. 1989–1991. *Wörterbücher / Dictionaries / Dictionnaires: An International
+Encyclopedia of Lexicography.* 3 vols. (Handbücher zur Sprach- und
+Kommunikationswissenschaft 5.1–5.3.) Berlin and New York: Walter de Gruyter.
+
+Vogel, Claus. 1979. *Indian Lexicography.* (A History of Indian Literature, ed. Jan
+Gonda, vol. 5, fasc. 4.) Wiesbaden: Otto Harrassowitz.
+
+Wiegand, Herbert Ernst. 1989. "Der Begriff der Mikrostruktur: Geschichte, Probleme,
+Perspektiven." In Hausmann et al. (eds.), *Wörterbücher / Dictionaries /
+Dictionnaires,* vol. 1, 409–462. Berlin and New York: Walter de Gruyter.
+
+Zgusta, Ladislav. 1971. *Manual of Lexicography.* (Janua Linguarum, Series Maior 39.)
+Prague: Academia; The Hague and Paris: Mouton.
+
+**Primary digital source.** Cologne Digital Sanskrit Dictionaries (CDSL). Institute of
+Indology and Tamil Studies, University of Cologne.
+[`sanskrit-lexicon.uni-koeln.de`](https://www.sanskrit-lexicon.uni-koeln.de/). The
+eleven dictionaries and their `csl-orig` plain-text sources are itemised in §2 and
+cited inline by file.
+
+**Companion papers (this project).**
+
+Gasūns, M. (in preparation). *Redundancy and Descent in a Digitised Dictionary Family:
+A Headword-Level Stemma of the Cologne Digital Sanskrit Lexicon.* (Cited above as the
+companion redundancy study.)
+
+Gasūns, M. (in preparation). *Two Citation Registers and the Dictionary-to-Book Gap in
+the Cologne Digital Sanskrit Lexicon.* (Cited above as the companion citation-registers
+paper.)
+
+*Bibliographic details (page ranges, series numbers, access dates) and the final
+byline are to be verified against the sources before submission.*
