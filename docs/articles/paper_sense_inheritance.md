@@ -443,7 +443,7 @@ Gonda, vol. 5, fasc. 4.) Wiesbaden: Otto Harrassowitz.
 
 Wiegand, Herbert Ernst. 1989. "Der Begriff der Mikrostruktur: Geschichte, Probleme,
 Perspektiven." In Hausmann et al. (eds.), *Wörterbücher / Dictionaries /
-Dictionnaires,* vol. 1, 409–462. Berlin and New York: Walter de Gruyter.
+Dictionnaires,* vol. 1 (HSK 5.1), 409–461. Berlin and New York: Walter de Gruyter.
 
 Zgusta, Ladislav. 1971. *Manual of Lexicography.* (Janua Linguarum, Series Maior 39.)
 Prague: Academia; The Hague and Paris: Mouton.
