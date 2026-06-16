@@ -24,6 +24,7 @@
     "build-h6-structural-review": "node scripts/build-h6-structural-review.mjs",
     "build-sense-depth": "node scripts/build-sense-depth.mjs",
     "validate-dict-comparison": "node scripts/validate-dictionary-comparison.mjs",
+    "import-rv-verse-counts": "node scripts/import-rv-verse-counts.mjs",
     "build-citation-link-pilot": "node scripts/build-citation-link-pilot.mjs",
     "build-citation-link-split": "node scripts/build-citation-link-split.mjs",
     "build-source-date-anchor": "node scripts/build-source-date-anchor.mjs",
