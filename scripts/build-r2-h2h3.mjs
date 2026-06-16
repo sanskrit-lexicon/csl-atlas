@@ -389,6 +389,60 @@ async function main() {
   };
   process.stderr.write(`H2 controlled: cited OR=${citedTerm.oddsRatio} p=${citedTerm.p} (cluster-robust, ${G} lemmas) -> ${h2Controlled.verdict}\n`);
 
+  // ---------------------------------------------------------------------------
+  // Threshold sensitivity (referee item M4): the survival cutoff (Jaccard ≥ 0.15)
+  // is a researcher choice. Sweep it and REFIT the same controlled model at each
+  // cutoff — only the binary outcome (survived) moves; the design matrix
+  // (covariates + edge FE, z-scored at the reference 0.15 definition) is held
+  // fixed, isolating the question "does the cited→survival inference depend on
+  // where we draw the survival line?". Cheap & exact: h2Rows carry raw overlap.
+  // ---------------------------------------------------------------------------
+  const THRESHOLD_GRID = [0.10, 0.125, 0.15, 0.175, 0.20, 0.25];
+  const clustersByLemma = h2Rows.map(r => r.lemma);
+  const citedRows = h2Rows.filter(r => r.cited);
+  const uncitedRows = h2Rows.filter(r => !r.cited);
+  const rate = (rows, t) => (rows.length ? rows.filter(r => r.overlap >= t).length / rows.length : null);
+  const thresholdGrid = THRESHOLD_GRID.map(t => {
+    const yt = h2Rows.map(r => (r.overlap >= t ? 1 : 0));
+    const survAll = yt.reduce((a, b) => a + b, 0);
+    let controlledOddsRatio = null, citedCI95_logOdds = null, citedPval = null, fitOk = false;
+    // Guard against perfect separation at extreme cutoffs (all-survive / none-survive).
+    if (survAll > 0 && survAll < yt.length) {
+      const betaT = fitLogistic(X, yt);
+      const { se: seT } = clusterRobustSE(X, yt, betaT, clustersByLemma);
+      const b = betaT[1], s = seT[1]; // cited term
+      if (Number.isFinite(b) && Number.isFinite(s) && s > 0) {
+        fitOk = true;
+        controlledOddsRatio = r4(Math.exp(b));
+        citedCI95_logOdds = [r4(b - 1.96 * s), r4(b + 1.96 * s)];
+        citedPval = normalTwoSidedP(b / s);
+      }
+    }
+    const cr = rate(citedRows, t), ur = rate(uncitedRows, t);
+    return {
+      threshold: t,
+      citedRate: cr === null ? null : r3(cr),
+      uncitedRate: ur === null ? null : r3(ur),
+      naiveGap: (cr === null || ur === null) ? null : r3(cr - ur),
+      controlledOddsRatio,
+      citedCI95_logOdds,
+      citedP: citedPval,
+      controlledSignificant: fitOk ? (controlledOddsRatio > 1 && citedPval < 0.05) : null,
+      fitOk,
+    };
+  });
+  const anySignificant = thresholdGrid.some(g => g.controlledSignificant === true);
+  const h2ThresholdSensitivity = {
+    method: "Refit the h2Controlled model (survived ~ cited + position_z + glossLen_z + crossDict_z + edge FE, CR1 lemma-cluster-robust) at each survival cutoff; covariates held at the reference (0.15) definition, only the outcome re-thresholded.",
+    referenceThreshold: SURVIVAL_THRESHOLD,
+    grid: thresholdGrid,
+    verdict: anySignificant
+      ? "threshold-dependent: the controlled cited effect reaches significance at one or more cutoffs — H2 is sensitive to the survival line."
+      : "robust: across cutoffs 0.10–0.25 the naive cited-survival gap persists but the CONTROLLED cited effect stays non-significant (CI spans OR=1) — the #123 attenuation is not an artifact of the 0.15 choice.",
+    note: "Covariates (incl. crossDict) are fixed at the 0.15 reference; only the survival outcome is swept, which isolates outcome-threshold sensitivity. Extreme cutoffs that fully separate an edge are flagged fitOk=false.",
+  };
+  process.stderr.write(`H2 threshold sensitivity: ${thresholdGrid.map(g => g.threshold + ':' + (g.fitOk ? 'OR' + g.controlledOddsRatio + '/p' + (g.citedP ?? 'NA') : 'sep')).join(' ')} -> ${anySignificant ? 'THRESHOLD-DEPENDENT' : 'robust'}\n`);
+
   fs.writeFileSync(path.join(OUT_DIR, "r2_h2_senses.json"), JSON.stringify({
     schemaVersion: "0.1.0", generatedBy: "npm run build-r2-h2h3",
     note: "Per-ancestor-sense rows for the H2 confound-controlled analysis.",
@@ -403,6 +457,7 @@ async function main() {
     survivedThreshold: SURVIVAL_THRESHOLD,
     h2,
     h2Controlled,
+    h2ThresholdSensitivity,
     h3r: h3rResults.map(r => ({
       edge: r.edge,
       ancDict: r.ancDict,

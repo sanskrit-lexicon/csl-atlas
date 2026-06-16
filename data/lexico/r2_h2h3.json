@@ -180,6 +180,98 @@
     ],
     "note": "Per-sense rows in data/lexico/r2_h2_senses.json for independent refitting. crossDict = matching senses among the 3 non-edge panel dicts."
   },
+  "h2ThresholdSensitivity": {
+    "method": "Refit the h2Controlled model (survived ~ cited + position_z + glossLen_z + crossDict_z + edge FE, CR1 lemma-cluster-robust) at each survival cutoff; covariates held at the reference (0.15) definition, only the outcome re-thresholded.",
+    "referenceThreshold": 0.15,
+    "grid": [
+      {
+        "threshold": 0.1,
+        "citedRate": 0.786,
+        "uncitedRate": 0.676,
+        "naiveGap": 0.109,
+        "controlledOddsRatio": 1.5978,
+        "citedCI95_logOdds": [
+          -0.4064,
+          1.3436
+        ],
+        "citedP": 0.2939,
+        "controlledSignificant": false,
+        "fitOk": true
+      },
+      {
+        "threshold": 0.125,
+        "citedRate": 0.774,
+        "uncitedRate": 0.633,
+        "naiveGap": 0.14,
+        "controlledOddsRatio": 1.6678,
+        "citedCI95_logOdds": [
+          -0.3989,
+          1.422
+        ],
+        "citedP": 0.2708,
+        "controlledSignificant": false,
+        "fitOk": true
+      },
+      {
+        "threshold": 0.15,
+        "citedRate": 0.762,
+        "uncitedRate": 0.591,
+        "naiveGap": 0.171,
+        "controlledOddsRatio": 1.7489,
+        "citedCI95_logOdds": [
+          -0.2261,
+          1.3441
+        ],
+        "citedP": 0.1629,
+        "controlledSignificant": false,
+        "fitOk": true
+      },
+      {
+        "threshold": 0.175,
+        "citedRate": 0.738,
+        "uncitedRate": 0.574,
+        "naiveGap": 0.164,
+        "controlledOddsRatio": 1.4399,
+        "citedCI95_logOdds": [
+          -0.3995,
+          1.1287
+        ],
+        "citedP": 0.3497,
+        "controlledSignificant": false,
+        "fitOk": true
+      },
+      {
+        "threshold": 0.2,
+        "citedRate": 0.738,
+        "uncitedRate": 0.567,
+        "naiveGap": 0.171,
+        "controlledOddsRatio": 1.6404,
+        "citedCI95_logOdds": [
+          -0.2831,
+          1.273
+        ],
+        "citedP": 0.2125,
+        "controlledSignificant": false,
+        "fitOk": true
+      },
+      {
+        "threshold": 0.25,
+        "citedRate": 0.714,
+        "uncitedRate": 0.557,
+        "naiveGap": 0.157,
+        "controlledOddsRatio": 1.6038,
+        "citedCI95_logOdds": [
+          -0.3332,
+          1.2779
+        ],
+        "citedP": 0.2504,
+        "controlledSignificant": false,
+        "fitOk": true
+      }
+    ],
+    "verdict": "robust: across cutoffs 0.10–0.25 the naive cited-survival gap persists but the CONTROLLED cited effect stays non-significant (CI spans OR=1) — the #123 attenuation is not an artifact of the 0.15 choice.",
+    "note": "Covariates (incl. crossDict) are fixed at the 0.15 reference; only the survival outcome is swept, which isolates outcome-threshold sensitivity. Extreme cutoffs that fully separate an edge are flagged fitOk=false."
+  },
   "h3r": [
     {
       "edge": "wil→shs",
