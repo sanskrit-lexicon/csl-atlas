@@ -5,7 +5,7 @@
   "evidenceLabel": "machine-review-sample",
   "reviewStatus": "needs-human-review",
   "ownerRepo": "csl-atlas",
-  "generatedAt": "2026-06-17T12:04:06.687Z",
+  "generatedAt": "2026-06-17T12:57:02.818Z",
   "generatedBy": "npm run build-h4-review-packet",
   "sourceFiles": [
     "src/data/dicts/semantic-fields.json",
@@ -22,9 +22,10 @@
   ],
   "counts": {
     "sampleRows": 105,
-    "autoResolved": 15,
-    "needsHumanReview": 90,
+    "autoResolved": 16,
+    "needsHumanReview": 89,
     "byAutoDecision": {
+      "normalization-risk": 1,
       "variant-headword": 15
     },
     "bySampleType": {
@@ -370,7 +371,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "DanyaH",
-          "foldKey": "dhanya"
+          "foldKey": "dhanya",
+          "dictionary": "skd"
         }
       }
     },
@@ -457,7 +459,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "mahecCaH",
-          "foldKey": "maheccha"
+          "foldKey": "maheccha",
+          "dictionary": "skd"
         }
       }
     },
@@ -544,7 +547,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "mahASayaH",
-          "foldKey": "mahāśaya"
+          "foldKey": "mahāśaya",
+          "dictionary": "skd"
         }
       }
     },
@@ -631,7 +635,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "hfdayAluH",
-          "foldKey": "hṛdayālu"
+          "foldKey": "hṛdayālu",
+          "dictionary": "skd"
         }
       }
     },
@@ -718,7 +723,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "suhfdayaH",
-          "foldKey": "suhṛdaya"
+          "foldKey": "suhṛdaya",
+          "dictionary": "skd"
         }
       }
     },
@@ -805,7 +811,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "mahotsAhaH",
-          "foldKey": "mahotsāha"
+          "foldKey": "mahotsāha",
+          "dictionary": "skd"
         }
       }
     },
@@ -892,7 +899,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "santatiH",
-          "foldKey": "santati"
+          "foldKey": "santati",
+          "dictionary": "skd"
         }
       }
     },
@@ -979,7 +987,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "gotraH",
-          "foldKey": "gotra"
+          "foldKey": "gotra",
+          "dictionary": "skd"
         }
       }
     },
@@ -1147,7 +1156,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "aBijanaH",
-          "foldKey": "abhijana"
+          "foldKey": "abhijana",
+          "dictionary": "skd"
         }
       }
     },
@@ -1234,7 +1244,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "anvayaH",
-          "foldKey": "anvaya"
+          "foldKey": "anvaya",
+          "dictionary": "skd"
         }
       }
     },
@@ -1321,7 +1332,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "vaMSaH",
-          "foldKey": "vanśa"
+          "foldKey": "vanśa",
+          "dictionary": "skd"
         }
       }
     },
@@ -1408,7 +1420,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "anvavAyaH",
-          "foldKey": "anvavāya"
+          "foldKey": "anvavāya",
+          "dictionary": "skd"
         }
       }
     },
@@ -1495,7 +1508,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "santAnaH",
-          "foldKey": "santāna"
+          "foldKey": "santāna",
+          "dictionary": "skd"
         }
       }
     },
@@ -1825,7 +1839,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "puzkaraH",
-          "foldKey": "puṣkara"
+          "foldKey": "puṣkara",
+          "dictionary": "skd"
         }
       }
     },
@@ -2236,7 +2251,8 @@
         "basis": "loose-fold-headword-match",
         "evidence": {
           "matchedHeadword": "SUdraH",
-          "foldKey": "śūdra"
+          "foldKey": "śūdra",
+          "dictionary": "skd"
         }
       }
     },
@@ -5495,7 +5511,7 @@
       },
       "coverageDeltaPct": 0.1305,
       "reviewQuestion": "Why does ananta appear in AP coverage but not AP90 coverage for vyomavargaH: edition history, parser gap, normalization risk, or true delta?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -5530,7 +5546,14 @@
         }
       ],
       "autoTriage": {
-        "resolved": false
+        "resolved": true,
+        "proposedDecision": "normalization-risk",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "anaMta",
+          "foldKey": "ananta",
+          "dictionary": "ap90"
+        }
       }
     },
     {

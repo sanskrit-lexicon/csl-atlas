@@ -20,6 +20,21 @@ test("applyAutoTriage resolves a missing lemma present under a looser fold", () 
   assert.equal(rows[0].reviewStatus, "auto-resolved");
 });
 
+test("applyAutoTriage resolves an ap-ap90 delta as normalization-risk via the comparison edition", () => {
+  const rows = [{
+    sampleType: "ap-ap90-delta", machineState: "delta", reviewId: "d1",
+    dictionary: { code: "ap" }, comparisonDictionary: { code: "ap90" }, lemma: "ananta",
+    expectedDecisionLabels: ["edition-delta", "parser-gap", "normalization-risk", "true-delta"],
+    reviewStatus: "needs-review"
+  }];
+  // AP90 holds "anaMta" (anusvāra variant of "ananta"); the delta is a fold artifact.
+  applyAutoTriage(rows, () => [{ k1: "anaMta" }], () => true);
+  assert.equal(rows[0].autoTriage.resolved, true);
+  assert.equal(rows[0].autoTriage.proposedDecision, "normalization-risk");
+  assert.equal(rows[0].autoTriage.evidence.matchedHeadword, "anaMta");
+  assert.equal(rows[0].autoTriage.evidence.dictionary, "ap90");
+});
+
 test("applyAutoTriage leaves a genuinely-missing lemma for human review", () => {
   const rows = [row({ lemma: "qwxzpq" })];
   applyAutoTriage(rows, () => [{ k1: "DanyaH" }], () => true);

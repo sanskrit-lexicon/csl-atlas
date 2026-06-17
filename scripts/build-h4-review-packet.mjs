@@ -577,16 +577,28 @@ function validatePayload(payload) {
   }
 }
 
-// Deterministic auto-triage: a `missing` row is mechanically explained when the
-// AMAR lemma IS present in the dictionary under a looser headword fold
-// (slp1_form_key folds the gender suffix / accent / visarga / final homonym
-// digit that the strict key keeps). Such a row is a `variant-headword`, not a
-// genuine gap — auto-resolve it (recording the matched headword as evidence) so
-// the reviewer only works the rows that aren't mechanically explainable. Rows
-// stay in the packet with reviewStatus "auto-resolved" so a human can audit or
-// override; nothing here is written to csl-orig. Only fires when the proposed
-// decision is in that sample type's vocabulary.
-const AUTO_TRIAGE_DECISION = { "skd-false-low": "variant-headword" };
+// Deterministic auto-triage. A row is mechanically explained when the AMAR lemma
+// IS present in the relevant dictionary under a looser headword fold
+// (slp1_form_key folds the gender suffix / accent / visarga / final homonym digit
+// the strict key keeps) — so the apparent gap is a normalization variant, not a
+// real one. Each rule names the machineState it applies to, which dictionary to
+// fold-check (the row's own dict for a `missing` row, the comparison edition for
+// an ap-ap90 `delta`), and the decision to propose (only used if it is in that
+// sample type's vocabulary):
+//   - skd-false-low (missing): lemma present in SKD under a fold  -> variant-headword
+//   - ap-ap90-delta (delta):  lemma present in AP90 under a fold  -> normalization-risk
+// The `covered` sample types (vcp-high-coverage, specialized-baseline,
+// index-reverse-control) ask about the QUALITY of an existing match (thin entry,
+// scope fit, reverse-index artifact) — genuine judgement with no mechanical proof,
+// so they are deliberately left for human review.
+const AUTO_TRIAGE_RULES = {
+  "skd-false-low": { state: "missing", checkDict: "primary", decision: "variant-headword" },
+  "ap-ap90-delta": { state: "delta", checkDict: "comparison", decision: "normalization-risk" }
+};
+
+function autoTriageCode(row, rule) {
+  return rule.checkDict === "comparison" ? row.comparisonDictionary?.code : row.dictionary.code;
+}
 
 // `preserved` (reviewId -> autoTriage block) lets a caller reuse a committed
 // packet's auto-triage instead of re-reading csl-orig — the same idempotency
@@ -594,11 +606,15 @@ const AUTO_TRIAGE_DECISION = { "skd-false-low": "variant-headword" };
 // the csl-orig-less CI runner. The generator passes no preserved map (it
 // recomputes fresh from the live dictionaries).
 export function applyAutoTriage(rows, iterate = iterateDict, exists = dictExists, preserved = new Map()) {
-  const codes = new Set(
-    rows.filter(row => !preserved.has(row.reviewId)
-      && AUTO_TRIAGE_DECISION[row.sampleType] && row.machineState === "missing")
-      .map(row => row.dictionary.code)
-  );
+  const codes = new Set();
+  for (const row of rows) {
+    if (preserved.has(row.reviewId)) continue;
+    const rule = AUTO_TRIAGE_RULES[row.sampleType];
+    if (rule && row.machineState === rule.state) {
+      const code = autoTriageCode(row, rule);
+      if (code) codes.add(code);
+    }
+  }
   const foldIndex = new Map(); // code -> Map<foldKey, headword>
   for (const code of codes) {
     const m = new Map();
@@ -617,16 +633,17 @@ export function applyAutoTriage(rows, iterate = iterateDict, exists = dictExists
       if (row.autoTriage?.resolved) row.reviewStatus = "auto-resolved";
       continue;
     }
-    const decision = AUTO_TRIAGE_DECISION[row.sampleType];
-    const eligible = decision && row.machineState === "missing"
-      && (row.expectedDecisionLabels ?? []).includes(decision);
-    const matched = eligible ? foldIndex.get(row.dictionary.code)?.get(slp1_form_key(row.lemma)) : null;
+    const rule = AUTO_TRIAGE_RULES[row.sampleType];
+    const eligible = rule && row.machineState === rule.state
+      && (row.expectedDecisionLabels ?? []).includes(rule.decision);
+    const code = eligible ? autoTriageCode(row, rule) : null;
+    const matched = code ? foldIndex.get(code)?.get(slp1_form_key(row.lemma)) : null;
     if (matched && norm(matched) !== norm(row.lemma)) {
       row.autoTriage = {
         resolved: true,
-        proposedDecision: decision,
+        proposedDecision: rule.decision,
         basis: "loose-fold-headword-match",
-        evidence: { matchedHeadword: matched, foldKey: slp1_form_key(row.lemma) }
+        evidence: { matchedHeadword: matched, foldKey: slp1_form_key(row.lemma), dictionary: code }
       };
       row.reviewStatus = "auto-resolved";
     } else {
@@ -725,7 +742,7 @@ export function buildMarkdown(packet) {
   lines.push("");
   lines.push(`Date: ${packet.generatedAt.slice(0, 10)}`);
   lines.push("");
-  lines.push(`Status: generated machine-only H4 review worksheet. ${packet.counts.autoResolved} of ${packet.counts.sampleRows} rows are deterministically auto-resolved (\`variant-headword\` — the lemma is present in the dictionary under a loose-fold headword match, evidence in \`autoTriage.evidence.matchedHeadword\`); ${packet.counts.needsHumanReview} still need human review. No human decisions are recorded here, and auto-resolved rows can be audited or overridden.`);
+  lines.push(`Status: generated machine-only H4 review worksheet. ${packet.counts.autoResolved} of ${packet.counts.sampleRows} rows are deterministically auto-resolved by a loose-fold headword match (the lemma is a normalization variant, not a real gap): \`variant-headword\` for a missing SKD entry, \`normalization-risk\` for an AP/AP90 edition delta — evidence in \`autoTriage.evidence\`. ${packet.counts.needsHumanReview} still need human review (the \`covered\`-quality questions — thin entry, scope fit, reverse-index artifact — are genuine judgement, not auto-resolvable). No human decisions are recorded here, and auto-resolved rows can be audited or overridden.`);
   lines.push("");
   lines.push("## Trust Block");
   lines.push("");
@@ -740,7 +757,7 @@ export function buildMarkdown(packet) {
   lines.push("| Metric | Count |");
   lines.push("|---|---:|");
   lines.push(`| Sample rows | ${packet.counts.sampleRows} |`);
-  lines.push(`| Auto-resolved (variant-headword) | ${packet.counts.autoResolved} |`);
+  lines.push(`| Auto-resolved (variant / normalization) | ${packet.counts.autoResolved} |`);
   lines.push(`| Needs human review | ${packet.counts.needsHumanReview} |`);
   lines.push(`| Source pointers | ${packet.counts.sourcePointers} |`);
   lines.push(`| Exact dictionary pointers | ${packet.counts.exactDictionaryPointers} |`);
