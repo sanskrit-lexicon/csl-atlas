@@ -3,8 +3,8 @@
 Date: 2026-06-13
 
 Status: internal adversarial review of the two IJL-targeted companion papers,
-[`paper_redundancy_and_descent.md`](articles/paper_redundancy_and_descent.md) (OBS-R)
-and [`paper_citation_registers.md`](articles/paper_citation_registers.md) (OBS-C),
+[`paper_redundancy_and_descent.md`](paper_redundancy_and_descent.md) (OBS-R)
+and [`paper_citation_registers.md`](paper_citation_registers.md) (OBS-C),
 in the voice of an *IJL* referee. **[fixed]** points were applied in the same change;
 **[author]** points need a decision or new number. Not part of either manuscript.
 
