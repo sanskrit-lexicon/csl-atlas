@@ -10,7 +10,7 @@ scheduling, standards tracking, and corpus-based dictionary plans. Use
 # Microstructure typology + Doktor Nauk career plan
 
 **Version**: 1.0 · **Date**: 2026-05-16 · **Owner**: M. Gasūns + Claude Code
-**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](L0_DESIGN.md), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md)
+**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](../LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](../L0_DESIGN.md), [`METALEXICOGRAPHY_ROADMAP.md`](../METALEXICOGRAPHY_ROADMAP.md)
 
 Boundary note 2026-06-04: atlas owns the dictionary microstructure,
 macrostructure, and dictionary-publication evidence in this plan. Corpus
