@@ -4,6 +4,13 @@ All notable changes to csl-atlas are documented here. Format loosely follows [Ke
 
 ## [1.0.0] - 2026-06-13
 
+### 2026-06-17 - Repo hygiene
+
+#### Changed
+- Archived 10 `docs/*_LEGACY_*.md` documents into `docs/archive/` and repointed the in-repo references to them, including a dead link in `docs/L0_HANDOFF.md`.
+- Untracked the session-journal working files `HANDOFF.md` and `docs/SESSION_HANDOFF.md` (local-only per the org session-state protocol).
+- Deleted merged branches and enabled auto-delete-on-merge for the repository.
+
 ### 2026-06-16 — DTB link-target: exact per-hymn verse validation (Dharmamitra Month 2)
 
 #### Added
