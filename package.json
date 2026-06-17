@@ -34,6 +34,8 @@
     "build-broad-headword-lookup": "node scripts/build-broad-headword-lookup.mjs",
     "audit-analysis-capabilities": "node scripts/audit-broad-analysis-capabilities.mjs",
     "build-gender-review": "node scripts/build-gender-conflict-review.mjs",
+    "import-dharmamitra-morphology": "python scripts/import-dharmamitra-morphology.py",
+    "build-gender-model-crosscheck": "node scripts/build-gender-model-crosscheck.mjs",
     "build-source-layer-review": "node scripts/build-source-layer-review.mjs",
     "build-langdetect-crosscheck": "node scripts/build-langdetect-crosscheck.mjs",
     "import-dharmamitra-langdetect": "python scripts/import-dharmamitra-langdetect.py",

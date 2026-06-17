@@ -28,6 +28,11 @@ LOCAL_PREFIX = {
     "unsandhied-lemma-morphosyntax": "SLM ",
 }
 HF_MODEL_ID = "chronbmm/sanskrit5-multitask"
+# Pinned commit of the HF model, for reproducible `--source local` runs
+# (chronbmm/sanskrit5-multitask, 2024-05-09). The vendored sanskrit_tags.tsv means
+# this pins ONLY the model weights; bump it deliberately, never to a moving `main`.
+# import-dharmamitra-morphology.py keeps its own copy of this constant — keep them equal.
+PINNED_REVISION = "c0d2ada54f3d19903149425aa888a203601423f8"
 HF_MAX_LENGTH = 512
 
 # SLP1 -> IAST (one char per phoneme). Single source of truth.
@@ -55,8 +60,8 @@ def add_common_args(ap):
     ap.add_argument("--source", choices=["pypi", "local"], default="pypi")
     ap.add_argument("--limit", type=int, default=0, help="cap rows for a pilot (0 = all)")
     ap.add_argument("--batch-size", type=int, default=32)
-    ap.add_argument("--revision", default="main",
-                    help="HF model revision for --source local; pin a commit hash for reproducibility")
+    ap.add_argument("--revision", default=PINNED_REVISION,
+                    help=f"HF model revision for --source local (default: pinned {PINNED_REVISION[:12]}; pass another commit to override)")
     ap.add_argument("--device", default=None, help="torch device for --source local")
     return ap
 
