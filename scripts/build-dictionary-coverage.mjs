@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const ROOT = path.resolve(process.cwd(), "..", "csl-orig", "v02");
 const OUT = [
@@ -302,6 +303,7 @@ function main() {
 
   for (const out of OUT) {
     fs.mkdirSync(path.dirname(out), {recursive: true});
+    payload.generatedAt = generatedAtForPayload(readJsonIfExists(out, fs), payload);
     fs.writeFileSync(out, `${JSON.stringify(payload, null, 2)}\n`);
   }
 

@@ -17,7 +17,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { loadDcsSummary } from "./lib/dcs-summary.mjs";
-import { licenseFields } from "./lib/dataset-meta.mjs";
+import { licenseFields, generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const ROOT = process.cwd();
@@ -118,6 +118,7 @@ function main() {
     entries
   };
 
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(OUT_PATH, fs), payload);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   // Written compact (like lemma-lookup/lemma-dossier): one large data file.
   fs.writeFileSync(OUT_PATH, `${JSON.stringify(payload)}\n`);
