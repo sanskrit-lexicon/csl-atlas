@@ -431,6 +431,25 @@ test("slp1ToIast renders public headwords in IAST", () => {
   assert.equal(slp1ToIast("dA"), "dā");
 });
 
+test("transcoders delegate to sanskrit-util and fix the Vedic retroflex L (ḻ)", () => {
+  // The old hand-rolled maps left SLP1 `L` untranslated; sanskrit-util maps L -> ḻ.
+  assert.equal(slp1ToIast("iLA"), "iḻā");
+  assert.equal(slp1ToIast("mfL"), "mṛḻ");
+  assert.equal(iastToSlp1("iḻā"), "iLA");
+});
+
+// The IAST<->SLP1 transcoders are vendored verbatim from the canonical sanskrit-util
+// package (src/lib/sanskrit-util.mjs). Guard against silent drift from the sibling
+// checkout; skip when the sibling repo is absent (e.g. on the csl-atlas CI runner).
+const canonicalSanskritUtil = path.resolve("..", "sanskrit-util", "js", "index.mjs");
+const driftOpts = { skip: fs.existsSync(canonicalSanskritUtil) ? false : "requires sibling ../sanskrit-util checkout" };
+test("vendored sanskrit-util.mjs matches the canonical sanskrit-util source", driftOpts, () => {
+  const lf = s => s.replace(/\r\n/g, "\n");
+  const vendored = lf(fs.readFileSync(path.resolve("src", "lib", "sanskrit-util.js"), "utf8"));
+  const canonical = lf(fs.readFileSync(canonicalSanskritUtil, "utf8"));
+  assert.equal(vendored, canonical, "src/lib/sanskrit-util.mjs has drifted from ../sanskrit-util/js/index.mjs — re-vendor it");
+});
+
 test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", () => {
   assert.deepEqual(normalizeLookupQuery("aMSa").candidates, ["aMSa"]);
   assert.deepEqual(normalizeLookupQuery("a/MSa").candidates, ["aMSa"]);

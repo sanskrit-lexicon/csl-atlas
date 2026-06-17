@@ -1286,8 +1286,21 @@ test("h1SenseUnits strips ls citations before semicolon-splitting for lumped dic
   assert.equal(units, 1, "ls-internal semicolons should not inflate sense count");
 });
 
-// ---- R2 H2H3: splitInlineNumber / glossOverlap ----
-import { splitInlineNumber, glossOverlap } from "../scripts/build-r2-h2h3.mjs";
+// ---- R2 H2H3: splitInlineNumber / glossOverlap / H2-controlled logistic ----
+import { splitInlineNumber, splitSemicolon, glossOverlap, fitLogistic, clusterRobustSE } from "../scripts/build-r2-h2h3.mjs";
+
+test("fitLogistic recovers a known positive coefficient", () => {
+  // Synthetic: x in {-1,+1}; P(y=1) = 0.85 when x=+1, 0.15 when x=-1.
+  // True log-odds-ratio ≈ ln((0.85/0.15)/(0.15/0.85)) ≈ 3.47; deterministic split.
+  const X = [], y = [];
+  for (let i = 0; i < 200; i++) { X.push([1, 1]); y.push(i < 170 ? 1 : 0); }   // x=+1: 170/200 = 0.85
+  for (let i = 0; i < 200; i++) { X.push([1, -1]); y.push(i < 30 ? 1 : 0); }    // x=-1: 30/200 = 0.15
+  const beta = fitLogistic(X, y);
+  assert.ok(beta[1] > 1.2 && beta[1] < 2.5, `slope/2 ≈ ${beta[1]} (full log-OR ≈ ${(2 * beta[1]).toFixed(2)})`);
+  const { se, G } = clusterRobustSE(X, y, beta, X.map((_, i) => i % 40)); // 40 clusters
+  assert.equal(G, 40);
+  assert.ok(se.every(s => Number.isFinite(s) && s > 0), `cluster-robust SEs finite+positive: ${se}`);
+});
 
 test("splitInlineNumber returns single sense for body with no markers", () => {
   const parts = splitInlineNumber("A simple definition.");
@@ -1315,6 +1328,20 @@ test("splitInlineNumber strips curly-brace markup before splitting", () => {
   const parts = splitInlineNumber(body);
   assert.equal(parts.length, 2);
   assert.ok(parts[0].includes("thing"));
+});
+
+test("splitSemicolon splits a YAT gender-sectioned polysemy entry into many senses (#126 promotion)", () => {
+  const body = "{#Dara#}¦ {#(raH-rA-raM)#} {%a.%} Holding. {%m.%} A mountain; flock of cotton; the tortoise. {%f.%} The earth; womb.";
+  const parts = splitSemicolon(body);
+  assert.ok(parts.length >= 4, `expected several distinct meanings, got ${parts.length}: ${JSON.stringify(parts)}`);
+  assert.ok(parts.some(p => /mountain/i.test(p)) && parts.some(p => /womb/i.test(p)), "distinct gender-section meanings preserved");
+});
+
+test("splitSemicolon keeps a lone-adjective entry as one sense (lone-adjective refinement)", () => {
+  // avaṣṭabdha: no m./f./n. gender section — semicolons separate synonyms, not senses.
+  const body = "{#avazwabDa#}¦ {#(bDaH-bDA-bDaM)#} {%a.%} Near; supported; stopped.";
+  const parts = splitSemicolon(body);
+  assert.equal(parts.length, 1, `lone adjective must not over-split, got ${JSON.stringify(parts)}`);
 });
 
 test("glossOverlap returns 1 for identical texts", () => {
@@ -1410,7 +1437,7 @@ test("h2Bars generates SVG with 4 bars and percentage labels", () => {
   const svg = h2Bars(h2h3Data);
   assert.ok(svg.includes("<svg"), "output should contain SVG tag");
   assert.ok(svg.includes("76%"), "should contain cited rate as 76% (0.762)");
-  assert.ok(svg.includes("59%"), "should contain uncited rate as 59% (0.591)");
+  assert.ok(svg.includes("71%"), "should contain uncited rate as 71% (0.705, after the #126 YAT semicolon promotion)");
   assert.ok(svg.includes("Cited"), "should have Cited group label");
   assert.ok(svg.includes("Uncited"), "should have Uncited group label");
 });

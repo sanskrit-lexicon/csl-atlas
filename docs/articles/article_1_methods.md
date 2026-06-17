@@ -6,7 +6,7 @@ The former `article_1_methods.md` was an integrated cross-repo draft combining
 GitHub/org observatory metrics, dictionary-structure evidence, publication
 planning, and external usage ideas. It is preserved as:
 
-- `docs/articles/article_1_methods_LEGACY_CROSS_REPO_METHODS.md`
+- `docs/archive/article_1_methods_LEGACY_CROSS_REPO_METHODS.md`
 
 That legacy file is not active implementation guidance.
 

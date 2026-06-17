@@ -122,6 +122,23 @@ corpus" and the alignment slips to Month 3.
 **Objective:** push source-layer dating from coarse bands to per-source anchoring, and add
 corpus-frequency evidence from the dharmanexus datasets.
 
+> **Per-siglum dating DONE (2026-06-14, PR #108).** [`build-source-date-anchor.mjs`](../scripts/build-source-date-anchor.mjs)
+> joins the #90 chronology snapshot to the individual `<ls>` sigla and attaches a concrete date
+> to each it can confidently resolve — **67 sigla dated** (15 exact / 52 unambiguous-prefix),
+> including **29 of the 449 `unknown` sources** now carrying a date proposal. Two findings shaped
+> it: (1) loose name matching produces false dates (`Amar` [Amarakośa] wrongly hitting
+> *Amaruśataka*), so matching is exact-or-unambiguous-prefix only; (2) the atlas's source LAYERS
+> **mix chronology with genre** (`technical`/`lexicographic` are genres, not periods), so a model
+> date cannot imply a layer — the reviewer assigns any layer.
+>
+> **Corpus-frequency DONE (2026-06-14, PR #110) — at the source level.** Finding: `dharmanexus-sanskrit`
+> is raw corpus text (GRETIL/DCS-sourced) with **no committable per-lemma frequency export**, and
+> the atlas already carries per-lemma frequency via DCS (`dcs_lemma_summary.json`) — so re-deriving
+> it would duplicate DCS. The non-duplicative signal is **per-source corpus volume**: the chronology
+> snapshot's `nChunks` per text. `build-source-date-anchor.mjs` now also attaches `corpusChunks` + a
+> 1-5 `corpusVolumeBand` to each dated siglum (MBh band 5 / 2,278 chunks … 1-chunk stotras band 1),
+> so each source carries **date + corpus prominence**. Per-lemma frequency stays with DCS.
+
 **Tasks**
 - **Per-siglum dating:** join `dharmamitra-chronology.json` to individual `<ls>` sources (not
   just the 6 layer bands) via a siglum→work-title match (reuse the alias table); emit a
@@ -146,6 +163,16 @@ format must be verified before redistribution.
 StarDict/GoldenDict format, learning from
 [dharmamitra-stardict-dictionaries](https://github.com/dharmamitra/dharmamitra-stardict-dictionaries).
 
+> **MW StarDict export DONE (2026-06-14, PR #112) — first slice.** [`build-stardict-export.mjs`](../scripts/build-stardict-export.mjs)
+> writes a valid StarDict (`.ifo`/`.idx`/`.dict`) of all **286,560 MW entries** (IAST headwords;
+> definitions cleaned from the CDSL markup — `<s>`/`{#…#}` → IAST, `<lex>`/`<ls>` kept,
+> `<info>` dropped; HTML, `sametypesequence=h`). Output (`stardict-dist/`, .dict 46 MB) is
+> **gitignored** — ship it as a CI/release artifact, not a committed blob. Verified by a
+> structural self-check (StarDict collation order, exact `idxfilesize`, offsets cover `.dict`)
+> **and** a round-trip read (`gaja` → "m. an elephant, ṢaḍvBr. v, 3; Mn. &c."). Disclaimer +
+> CC-BY-SA-4.0 in the `.ifo` and a `README.txt`. Remainders: ASCII/HK search forms via a `.syn`
+> file; richer markup rendering; a CI job + download page; extend to other CDSL dictionaries.
+
 **Tasks**
 - Add `build-stardict-export.mjs` (or Python via `pyglossary`) that reads `csl-orig`/atlas JSON
   and writes `.ifo/.idx/.dict` (or a `pyglossary`-driven build).
@@ -165,6 +192,25 @@ work** — good buffer month if GPU/source-text access slips.
 
 **Objective:** replace the off-the-shelf eng-vs-skt classifier (PWG markup check, #95, is a
 low-precision demonstrator) with a model that actually separates German from Sanskrit.
+
+> **Training scaffold DONE + proven (2026-06-14, PR #115).** [`scripts/train-langdetect-german.py`](../scripts/train-langdetect-german.py)
+> is runnable, not just scaffolding: PWG **self-labels** the data (`{#…#}` = Sanskrit,
+> `{%…%}` = German), so it trains a per-language SentencePiece model (CPU, fast) and classifies
+> by minimum fertility — exactly detect-language's method, plus a German model. Measured on a
+> held-out PWG test set, accuracy rises **0.942 → 0.995** vs the eng/skt baseline, cutting the
+> Sanskrit **false-flag rate 5.5% → 0.3%** (~18× fewer false positives — the precise #95 noise).
+> Models go to `scripts/.langdetect-models/` (gitignored); `src/data/external/langdetect-german-metrics.json`
+> records the numbers.
+>
+> **Wired into #95 DONE (2026-06-14, PR #117).** `import-dharmamitra-langdetect.py` now classifies
+> with the trained `san.model` + `deu.model` (replacing the off-the-shelf eng/skt) and
+> `build-langdetect-crosscheck.mjs` flags spans the German model reads as German. Re-running over
+> all 183,213 PWG `{#..#}` spans cuts the flagged set **1,449 → 89** (~16×): the inflected-Sanskrit
+> false positives are gone; the remainder skews to very short forms (SPM noise on <5-char strings)
+> plus genuine foreign/OCR content — now a genuinely reviewable QA queue rather than a
+> demonstrator. Models stay gitignored (retrain via `npm run train-langdetect-german`).
+> **Remaining:** raise `MIN_LEN`/margin to trim the short-form tail; train on a held-out gold
+> set if one becomes available; extend to PWK.
 
 **Tasks**
 - Train/extend a SentencePiece (or small classifier) with a **German** model alongside
@@ -187,6 +233,17 @@ conveniently self-labeling, which de-risks it. Could be deferred if lower priori
 ## Month 6 — Benchmarking, syntax enrichment, consolidation
 
 **Objective:** measure quality, add one new ByT5 capability, and harden the programme.
+
+> **Benchmark harness DONE (2026-06-14, PR #121).** [`scripts/build-benchmark-report.mjs`](../scripts/build-benchmark-report.mjs)
+> emits a leaderboard ([`src/data/benchmark-report.json`](../src/data/benchmark-report.json)) over
+> all **14 review queues**: machine precision = `reviewed-ok / (reviewed-ok + reviewed-corrected)`
+> on the human-gold subset, plus coverage. It also surfaces the one real model benchmark — the
+> German-aware langdetect held-out accuracy (0.942 → 0.995, #115). Today **147 gold items** (3
+> queues at 1.000); the Dharmamitra cross-checks are pending review, so the harness is the
+> framework that scores them as reviews land. **Still pending (GPU):** ByT5 task accuracy
+> (gender / lemma / segmentation) and an external comparison via `dharmamitra-leaderboard` — both
+> need the model run on a gold corpus. The **dependency-parsing** enrichment (`applications/
+> dependency-parsing`) likewise needs the GPU ByT5 model and stays open.
 
 **Tasks**
 - **Benchmark:** stand up evaluation against

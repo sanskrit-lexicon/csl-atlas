@@ -6,7 +6,7 @@ Status: active boundary-safe publication note for `csl-atlas`.
 
 The former cross-repo publication program is preserved as:
 
-- `docs/PUBLICATIONS_LEGACY_CROSS_REPO_PROGRAM.md`
+- `docs/archive/PUBLICATIONS_LEGACY_CROSS_REPO_PROGRAM.md`
 
 That legacy file includes corpus-based dictionary plans, standards work,
 observatory metrics, trend tracking, and long-range publication schedules. It
@@ -41,11 +41,14 @@ scope document.
 
 | Draft | Starts from | Evidence | Status |
 |---|---|---|---|
+| [`paper_measurement_framework.md`](articles/paper_measurement_framework.md) — *Measuring the Dictionary Family* (P1) | the atlas's dictionary metrics + traceability discipline (methods spine for P2–P6) | `HYPOTHESIS_INDEX.md`; `scripts/lib/review-report.mjs`, `scripts/lib/dataset-meta.mjs`; `data/schema/review-report.schema.json`; `ARCHITECTURE.md`; the per-metric generators | working draft (DSH/Oxford target, IJL methods alternate); atlas-only methods spine for P2–P6 — NOT the legacy project-KPI paper (that is `csl-observatory`'s); full draft with the 10-metric catalog + AP90→AP worked example; author tails: 2 `[author to add]` refs (provenance, reproducibility) + byline/venue |
 | [`paper_redundancy_and_descent.md`](articles/paper_redundancy_and_descent.md) — *Redundancy and Descent* (OBS-R) | headword overlap + dictionary inheritance | `CORPUS_REDUNDANCY_GENEALOGY.md`; `scripts/obs/headword_multiplicity.py`; `data/sanhw1_jaccard.csv` | working draft (IJL target); secondary refs + byline to finalise |
 | [`paper_citation_registers.md`](articles/paper_citation_registers.md) — *Two Citation Registers* (OBS-C) | source-citation apparatus + abbreviation behaviour | `CITATION_REGISTERS.md`; `scripts/lib/source-siglum.mjs`; `src/data/dict-source-aliases.json` | working draft (IJL target); secondary refs + byline to finalise |
 | [`paper_H_convention_vs_content_lineage.md`](articles/paper_H_convention_vs_content_lineage.md) — Paper H | convention vs content lineage | Phase L0 / `data/L0/` | draft section |
 | [`paper_sense_inheritance.md`](articles/paper_sense_inheritance.md) — *Condensation, Not Inflation* (R2/P2) | sense granularity, survival, inheritance edges | `r2_h1.json`, `r2_h1_panel.json`, `r2_h2h3.json`, `r2_promotion_experiment.json`, reviewed checkpoint | working draft (Lexicographica target, IJL alternate); secondary refs + byline to finalise |
+| [`paper_three_axes_descent.md`](articles/paper_three_axes_descent.md) — *Three Axes of Descent* (P3) | content vs convention vs microstructure inheritance (THREE-AXES) | `three_axis_comparison.json`, `THREE_AXIS_COMPARISON.md`, `L0_RESULTS.md`, `sanhw1_jaccard.csv`, `microstructure_fingerprint.json` | working draft (DH/lexicography methods target, WSC 2027 alternate); methodological companion to P2/P4/P6; stemmatics refs + byline to finalise |
 | [`paper_indigenous_microstructure.md`](articles/paper_indigenous_microstructure.md) — *Grammar Without Tags* (P4) | verbal-root microstructure + indigenous encoding conventions | `indigenous_by_dict.json`, `root_agreement.json`, `MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md`, `MICROSTRUCTURE_ZERO_MEANING.md`; `scripts/lexico/m4_indigenous.py` | working draft (IJL target, WSC 2027 alternate); secondary refs + byline to finalise |
+| [`paper_xref_lineage.md`](articles/paper_xref_lineage.md) — *Pointing Inward* (P5) | cross-reference graphs as a descent signal (XREF-CORE) | `xref_lineage.json`, `xref_edges.csv`, `xref_shared_edges.csv`, `xref_hub_review.json`; `MICROSTRUCTURE_XREF_LINEAGE.md`, `MICROSTRUCTURE_XREF_HUB_REVIEW.md`; `/tools/xref-lineage` | working draft (DH/lexicography methods target, WSC 2027 alternate); AP×AP90 positive control (85%/J=0.74) vs MW×PWG shared core (21.8%/J=0.069); graph refs + byline to finalise |
 | [`paper_kosha_macrostructure.md`](articles/paper_kosha_macrostructure.md) — *Order Is the Dictionary* (P6) | macrostructure of the versified synonymic kośa (kāṇḍa→verse→synonym-set) | `kosha_macrostructure.json`; `scripts/lexico/m6_kosha_macrostructure.py`; `csl-orig` armh/abch/acph/acsj; `MICROSTRUCTURE-MACROSTRUCTURE.md` | working draft (IJL target, WSC 2027 alternate); macrostructural companion to P4; secondary refs + byline to finalise |
 
 Both OBS drafts start from a dictionary research object (headword, citation, source

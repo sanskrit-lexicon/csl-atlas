@@ -1,0 +1,870 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "r2-parser-promotion-review-packet",
+  "claim": "A semicolon-aware sense counter is proposed for run-on-gloss dictionaries (e.g. YAT), where the inline-number splitter under-counts senses to 1 and produces the spurious wil→yat 'condensation' (#125). Promotion is reviewer-gated.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "reviewed",
+  "reviewSummary": {
+    "reviewedAt": "2026-06-16",
+    "reviewer": "gasyoun",
+    "method": "Source-read all 26 YAT candidates against ../csl-orig/v02/yat/yat.txt in-session.",
+    "decisions": {
+      "promote-parser-candidate": 25,
+      "retain-inline-number": 1
+    },
+    "verdict": "PROMOTE the semicolon-aware sense counter for YAT: it is a koša-style polysemy dictionary whose semicolons separate distinct gender-sectioned meanings (commas keep within-sense synonyms), so inline=1 under-counts. One documented over-split exception (avaṣṭabdha): lone adjectival entries with synonym glosses should suppress semicolon-splitting inside a single `a.` section — a rule refinement, not a blocker.",
+    "ruleRefinement": "When promoting: do not semicolon-split within a lone adjectival/participial section (`a.`-only entry, no gender polysemy); count it as one sense."
+  },
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "npm run build-r2-semicolon-counter-packet",
+  "sourceFiles": [
+    "../csl-orig/v02/yat/yat.txt",
+    "../csl-orig/v02/shs/shs.txt",
+    "data/lexico/r2_yat_artifact_check.json"
+  ],
+  "proposedRule": "If a dictionary's entries are not sense-numbered (mean inline-number senses < 1.5) but are semicolon-packed (mean semicolon meanings ≥ 3), count senses by semicolon segmentation instead of inline numbering.",
+  "detectionGate": "Per-dict gate over the panel: run-on-gloss iff meanInlineSenses < 1.5 AND meanSemicolonMeanings ≥ 3. SHS is the control (sense-numbered → gate OFF).",
+  "expectedImpactIfPromoted": [
+    "YAT panel sense count rises ~1 → ~5.7; the wil→yat drift recomputes from −8 toward parity, retracting the 'drastic condensation' reading.",
+    "H3R then has no condensation exemplar on this edge; only wil→shs (copy) and ap90→ap (revision) remain. A genuine condensation edge must be found elsewhere.",
+    "No change to SHS (sense-numbered) or to numbered dicts generally."
+  ],
+  "counts": {
+    "candidateDicts": 2,
+    "runOnGlossDicts": 1,
+    "checkpointRows": 26
+  },
+  "archiveParityPolicy": "Archive parity is a regression signal, not the optimization target; promotion must be justified by source-read meaning separation, not by matching any archived count.",
+  "limitations": [
+    "Semicolons also separate items WITHIN a single sense (e.g. a synonym list); over-splitting is the main risk — each row needs source verification before promotion.",
+    "Meaning count drops the leading headword + the first noun-class number heuristically; multi-gender entries ('m. n.') may carry more than one leading marker.",
+    "Panel-scoped (28 nouns); a full-corpus pass should confirm the per-dict gate before promotion."
+  ],
+  "boundaryNote": "This is a parser-promotion proposal, not an applied change. The sense-counting rule is unchanged until a reviewer adjudicates these rows. Owner repo: csl-atlas; routes through the R2 checkpoint process (docs/R2_CHECKPOINT_DECISIONS.md).",
+  "dictDetection": [
+    {
+      "dict": "yat",
+      "panelEntries": 28,
+      "meanInlineSenses": 1,
+      "meanSemicolonMeanings": 5.71,
+      "classNumberMarkerRate": 0.75,
+      "verdict": "run-on-gloss (apply semicolon counter)"
+    },
+    {
+      "dict": "shs",
+      "panelEntries": 28,
+      "meanInlineSenses": 9,
+      "meanSemicolonMeanings": 11.75,
+      "classNumberMarkerRate": 0,
+      "verdict": "sense-numbered (keep inline-number)"
+    }
+  ],
+  "checkpointRows": [
+    {
+      "checkpointId": "checkpoint:semicolon-counter:Dara:yat",
+      "diagnosticId": "under-split:yat:Dara",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "Dara",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 11,
+        "hasClassNumberMarker": false
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "Dara",
+          "sourceLine": 70214,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L70214",
+          "gloss": "Dara ¦ (raH-rA-raM) a. Holding. m. A moun- tain; flock of cotton; the tor- toise Avatār; a Vasu demi"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'Dara' count 11 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L70214): koša-style polysemy — 11 semicolon-separated distinct meanings across gender sections (\"a. Holding. m. A moun- tain; flock of cotton; the tor- toise Avatār; a Vasu demigod. f. The earth; womb; marrow; blood-v\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:Goza:yat",
+      "diagnosticId": "under-split:yat:Goza",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "Goza",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 10,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "Goza",
+          "sourceLine": 49210,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L49210",
+          "gloss": "Goza ¦ (zaH) 1. m. A station of herds- men; a herdsman; a creeper; bell-metal; low thunder; a pro- c"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'Goza' count 10 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L49210): koša-style polysemy — 10 semicolon-separated distinct meanings across gender sections (\"1. m. A station of herds- men; a herdsman; a creeper; bell-metal; low thunder; a pro- clamation; a term applied to kāyas\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:taruRa:yat",
+      "diagnosticId": "under-split:yat:taruRa",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "taruRa",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 10,
+        "hasClassNumberMarker": false
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "taruRa",
+          "sourceLine": 58605,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L58605",
+          "gloss": "taruRa ¦ (RaH-RA-RaM) a. Young, new. m. A young man; Castor oil tree; large cumin seed. n. A kind of"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'taruRa' count 10 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L58605): koša-style polysemy — 10 semicolon-separated distinct meanings across gender sections (\"a. Young, new. m. A young man; Castor oil tree; large cumin seed. n. A kind of flower. f. Young woman; aloe tree; a perf\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:divya:yat",
+      "diagnosticId": "under-split:yat:divya",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "divya",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 10,
+        "hasClassNumberMarker": false
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "divya",
+          "sourceLine": 65360,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L65360",
+          "gloss": "divya ¦ (vyaH-vyA-vyaM) a. Divine, beautiful. m. Barley; bdellium; a divine property. f. Emblic myro"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'divya' count 10 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L65360): koša-style polysemy — 10 semicolon-separated distinct meanings across gender sections (\"a. Divine, beautiful. m. Barley; bdellium; a divine property. f. Emblic myrobalan. n. Cloves; a sort of sandal; an ordea\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:Dvajin:yat",
+      "diagnosticId": "under-split:yat:Dvajin",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "Dvajin",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 10,
+        "hasClassNumberMarker": false
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "Dvajin",
+          "sourceLine": 71960,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L71960",
+          "gloss": "Dvajin ¦ (jI-jinI-ji) a. Having a flag. m. A brāhman; a hill; a car; a snake; a horse; a pea- cock; "
+        }
+      ],
+      "reviewQuestion": "Should YAT 'Dvajin' count 10 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L71960): koša-style polysemy — 10 semicolon-separated distinct meanings across gender sections (\"a. Having a flag. m. A brāhman; a hill; a car; a snake; a horse; a pea- cock; a distiller. f. An army.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:kirAta:yat",
+      "diagnosticId": "under-split:yat:kirAta",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "kirAta",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 8,
+        "hasClassNumberMarker": false
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "kirAta",
+          "sourceLine": 34374,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L34374",
+          "gloss": "kirAta ¦ (taH) 1. 3. m. A savage; Shiva; a kind of gentian; a pig- my; a groom. f. ( tI ) The Gan- g"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'kirAta' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L34374): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"1. 3. m. A savage; Shiva; a kind of gentian; a pig- my; a groom. f. (tI) The Gan- ges, or its goddess; Durgā; a bawd or\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:kzAra:yat",
+      "diagnosticId": "under-split:yat:kzAra",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "kzAra",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 8,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "kzAra",
+          "sourceLine": 41124,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L41124",
+          "gloss": "kzAra ¦ (raH) 1. m. Glass; juice; trea- cle; salt; ashes; borax; alkali; a cheat. n. A factitious sa"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'kzAra' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L41124): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"1. m. Glass; juice; trea- cle; salt; ashes; borax; alkali; a cheat. n. A factitious salt.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:kzepa:yat",
+      "diagnosticId": "under-split:yat:kzepa",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "kzepa",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 8,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "kzepa",
+          "sourceLine": 41897,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L41897",
+          "gloss": "kzepa ¦ (graH) 1. m. Sending, throwing; pride; delay; contempt; pas- sing away time; abuse; clump of"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'kzepa' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L41897): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"1. m. Sending, throwing; pride; delay; contempt; pas- sing away time; abuse; clump of flowers; quantity to be added.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:tilaka:yat",
+      "diagnosticId": "under-split:yat:tilaka",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "tilaka",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 8,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "tilaka",
+          "sourceLine": 59950,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L59950",
+          "gloss": "tilaka ¦ (kaH-kaM) 1. m. n. Mark on the forehead. m. A freckle, a mole; a title; a horse; a Tila tre"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'tilaka' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L59950): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"1. m. n. Mark on the forehead. m. A freckle, a mole; a title; a horse; a Tila tree. n. The bladder; salt, a disease. f.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:DAtf:yat",
+      "diagnosticId": "under-split:yat:DAtf",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "DAtf",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 8,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "DAtf",
+          "sourceLine": 70777,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L70777",
+          "gloss": "DAtf ¦ (tA) 4. m. Brahmā; Viṣṇu; father. f. ( trI ) A mother; a fos- ter mother; a nurse; the earth."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'DAtf' count 8 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L70777): koša-style polysemy — 8 semicolon-separated distinct meanings across gender sections (\"4. m. Brahmā; Viṣṇu; father. f. (trI) A mother; a fos- ter mother; a nurse; the earth. a. Cherishing; containing.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:udGAta:yat",
+      "diagnosticId": "under-split:yat:udGAta",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "udGAta",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 7,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "udGAta",
+          "sourceLine": 22437,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L22437",
+          "gloss": "ud-GAta ¦ (taH) 1. m. A beginning; a weapon; a stroke; a wound; section; breathing through the nostr"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'udGAta' count 7 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L22437): koša-style polysemy — 7 semicolon-separated distinct meanings across gender sections (\"1. m. A beginning; a weapon; a stroke; a wound; section; breathing through the nostrils; slipping. a. High.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:koRa:yat",
+      "diagnosticId": "under-split:yat:koRa",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "koRa",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "high",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 6,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "koRa",
+          "sourceLine": 39146,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L39146",
+          "gloss": "koRa ¦ (RaH) 1. m. The bow of a lute; drum stick; club; corner; edge of a sword; Mars, Saturn; in- t"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'koRa' count 6 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L39146): koša-style polysemy — 6 semicolon-separated distinct meanings across gender sections (\"1. m. The bow of a lute; drum stick; club; corner; edge of a sword; Mars, Saturn; in- termediate point of the compass.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:upasaMhAra:yat",
+      "diagnosticId": "under-split:yat:upasaMhAra",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "upasaMhAra",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 5,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "upasaMhAra",
+          "sourceLine": 24009,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L24009",
+          "gloss": "upa-saM-hAra ¦ (raH) 1. m. Refusing; taking away; death; collection, com- pendium; attack; refutatio"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'upasaMhAra' count 5 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L24009): koša-style polysemy — 5 semicolon-separated distinct meanings across gender sections (\"1. m. Refusing; taking away; death; collection, com- pendium; attack; refutation.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:cUqA:yat",
+      "diagnosticId": "under-split:yat:cUqA",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "cUqA",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 5,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "cUqA",
+          "sourceLine": 52276,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L52276",
+          "gloss": "cUqA ¦ (qA) 1. f. Single lock left on the crown of the head; a crest; a top; head; upper room; brace"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'cUqA' count 5 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L52276): koša-style polysemy — 5 semicolon-separated distinct meanings across gender sections (\"1. f. Single lock left on the crown of the head; a crest; a top; head; upper room; bracelet.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:tapasvin:yat",
+      "diagnosticId": "under-split:yat:tapasvin",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "tapasvin",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 5,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "tapasvin",
+          "sourceLine": 58211,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L58211",
+          "gloss": "tapasvin ¦ (svI) 5. m. An ascetic; Nā- rada; a mango-fish. f. Spike- nard. a. Devout; poor."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'tapasvin' count 5 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L58211): koša-style polysemy — 5 semicolon-separated distinct meanings across gender sections (\"5. m. An ascetic; Nā- rada; a mango-fish. f. Spike- nard. a. Devout; poor.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:avazwabDa:yat",
+      "diagnosticId": "under-split:yat:avazwabDa",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "avazwabDa",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 4,
+        "hasClassNumberMarker": false
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "avazwabDa",
+          "sourceLine": 11530,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L11530",
+          "gloss": "ava-zwabDa ¦ (bDaH-bDA-bDaM) a. Near; sup- ported; stopped."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'avazwabDa' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "retain-inline-number",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L11530): lone adjectival/participial entry — semicolons separate synonyms of a single sense (\"a. Near; sup- ported; stopped.\"), not distinct meanings. Semicolon counter over-splits here; keep inline. Signature: no gender polysemy, classMarker=false. Documents the rule's boundary."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:avi:yat",
+      "diagnosticId": "under-split:yat:avi",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "avi",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 4,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "avi",
+          "sourceLine": 11838,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L11838",
+          "gloss": "a-vi ¦ (viH) 2. m. The sun; a moun- tain; a sheep; a wall; air."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'avi' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L11838): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"2. m. The sun; a moun- tain; a sheep; a wall; air.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:Aroha:yat",
+      "diagnosticId": "under-split:yat:Aroha",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "Aroha",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 4,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "Aroha",
+          "sourceLine": 17790,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L17790",
+          "gloss": "A-roha ¦ (haH) 1. m. Length; ascent, mounting; a woman's waist; weight; a mine."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'Aroha' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L17790): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"1. m. Length; ascent, mounting; a woman's waist; weight; a mine.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:udAtta:yat",
+      "diagnosticId": "under-split:yat:udAtta",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "udAtta",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 4,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "udAtta",
+          "sourceLine": 22221,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L22221",
+          "gloss": "udA_tta ¦ (ttaH) 1. m. The acute accent; a gift. a. Liberal; great; dear."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'udAtta' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L22221): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"1. m. The acute accent; a gift. a. Liberal; great; dear.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:upacAra:yat",
+      "diagnosticId": "under-split:yat:upacAra",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "upacAra",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 4,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "upacAra",
+          "sourceLine": 23291,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L23291",
+          "gloss": "upa-cAra ¦ (raH) 1. m. Service; practice; physicking; a bribe; ellipses."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'upacAra' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L23291): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"1. m. Service; practice; physicking; a bribe; ellipses.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:ojas:yat",
+      "diagnosticId": "under-split:yat:ojas",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "ojas",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 4,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "ojas",
+          "sourceLine": 26838,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L26838",
+          "gloss": "ojas ¦ (jaH) 5. n. Light; strength; gold; vitality; high style."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'ojas' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L26838): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"5. n. Light; strength; gold; vitality; high style.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:calana:yat",
+      "diagnosticId": "under-split:yat:calana",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "calana",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 4,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "calana",
+          "sourceLine": 50711,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L50711",
+          "gloss": "calana ¦ (naM) 1. n. Wandering; trem- bling. m. A foot. f. Short petti- coat. a. Going, trembling."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'calana' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L50711): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"1. n. Wandering; trem- bling. m. A foot. f. Short petti- coat. a. Going, trembling.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:dIpana:yat",
+      "diagnosticId": "under-split:yat:dIpana",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "dIpana",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 4,
+        "hasClassNumberMarker": false
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "dIpana",
+          "sourceLine": 65566,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L65566",
+          "gloss": "dIpana ¦ (naH-nA-naM) a. Inflaming; tonic. 1. n. A lighting; stimulating; the root Tagāra. m. A poth"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'dIpana' count 4 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L65566): koša-style polysemy — 4 semicolon-separated distinct meanings across gender sections (\"a. Inflaming; tonic. 1. n. A lighting; stimulating; the root Tagāra. m. A potherb. m. f. n. An aromatic seed.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:udvega:yat",
+      "diagnosticId": "under-split:yat:udvega",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "udvega",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 3,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "udvega",
+          "sourceLine": 22875,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L22875",
+          "gloss": "udve_ga ¦ (gaH-gaM) 1. n. The fruit of the betel-nut. m. Regret, fear, asto- nishment. a. Going swif"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'udvega' count 3 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L22875): koša-style polysemy — 3 semicolon-separated distinct meanings across gender sections (\"1. n. The fruit of the betel-nut. m. Regret, fear, asto- nishment. a. Going swiftly.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:kalka:yat",
+      "diagnosticId": "under-split:yat:kalka",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "kalka",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 3,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "kalka",
+          "sourceLine": 31298,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L31298",
+          "gloss": "kalka ¦ (lkaH-lkaM) 1. m. n. Sediment, dirt, sin; pride. a. Sinful."
+        }
+      ],
+      "reviewQuestion": "Should YAT 'kalka' count 3 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L31298): koša-style polysemy — 3 semicolon-separated distinct meanings across gender sections (\"1. m. n. Sediment, dirt, sin; pride. a. Sinful.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    },
+    {
+      "checkpointId": "checkpoint:semicolon-counter:trika:yat",
+      "diagnosticId": "under-split:yat:trika",
+      "packetId": "run-on-gloss-sense-counter",
+      "packetTitle": "Semicolon-aware sense counter for run-on-gloss dictionaries",
+      "lemma": "trika",
+      "dict": "yat",
+      "driftClass": "under-split-candidate",
+      "priority": "medium",
+      "methodComparison": {
+        "inlineNumberSenses": 1,
+        "semicolonMeanings": 3,
+        "hasClassNumberMarker": true
+      },
+      "proposedRule": "Count senses by semicolon segmentation (after dropping the leading headword + noun-class number) for dicts the detection gate marks run-on-gloss.",
+      "sourcePointers": [
+        {
+          "kind": "source-record",
+          "rawHeadword": "trika",
+          "sourceLine": 61790,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/yat/yat.txt#L61790",
+          "gloss": "trika ¦ (kaM) 1. n. The lower part of the spine; a triad; om; place where three roads meet. f. Lid o"
+        }
+      ],
+      "reviewQuestion": "Should YAT 'trika' count 3 senses (semicolon-aware) instead of 1 (inline-number)? Source-verify the gloss separates distinct meanings, not one sense's sub-list.",
+      "nextAction": "source-read the linked entry; mark promote-parser-candidate / retain-inline-number / control-only",
+      "reviewedValue": "promote-parser-candidate",
+      "reviewer": "gasyoun",
+      "reviewedAt": "2026-06-16",
+      "note": "Source-read (L61790): koša-style polysemy — 3 semicolon-separated distinct meanings across gender sections (\"1. n. The lower part of the spine; a triad; om; place where three roads meet. f. Lid of a well.\"); commas keep synonyms within a sense. Inline=1 grossly under-counts; semicolon count faithful."
+    }
+  ]
+}

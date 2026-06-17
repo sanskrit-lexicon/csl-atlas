@@ -14,7 +14,11 @@ Companion to *Redundancy and Descent*
 ([`paper_redundancy_and_descent.md`](paper_redundancy_and_descent.md)) and *Two
 Citation Registers* ([`paper_citation_registers.md`](paper_citation_registers.md)).
 All counts are reproducible from committed data and the local `csl-orig` sources;
-numbers herein are the 2026-06 snapshot. Author: M. Gasūns (byline to finalise).*
+numbers herein are the 2026-06 snapshot, including the confound-controlled H1 and H2
+analyses (`h1Controlled` with `withinPrimaryEdge`, `h2ThresholdSensitivity`) and the
+reviewer-adjudicated YAT semicolon-aware sense counter, which re-counts the
+Wilson → Yates edge from the earlier inline-number artifact to a genuine condensation.
+Author: M. Gasūns (byline to finalise).*
 
 ---
 
@@ -24,26 +28,36 @@ When one dictionary descends from another, what happens to its senses? The Sansk
 lexicographic record is uniquely suited to the question: between 1822 and 1957 it
 produced two indigenous Sanskrit–Sanskrit encyclopaedic lexica and a dense family
 tree of European dictionaries with documented lines of descent — Wilson copied into
-Śabda-Sāgara and condensed into Yates, the Petersburg lexicon absorbed into
+Śabda-Sāgara and abridged into Yates, the Petersburg lexicon absorbed into
 Monier-Williams, Apte revised across editions. We measure sense behaviour across
 eleven general dictionaries (1822–1957) and three documented inheritance edges,
 using each dictionary's own sense-marking conventions and aligning senses across
 languages through the Sanskrit material they share rather than through translation.
-Three results follow. First, **sense granularity does not inflate over time**: the
-year-trend across the corpus is flat (Pearson *r* = 0.036; *r* = 0.093 on a fixed
-28–30-noun panel that removes the headword-splitting confound). Granularity is a
-**family trait** — Benfey enumerates 2.42 sense-units per entry, the Petersburg line
+Three results follow. First, **sense granularity does not inflate over time — if
+anything it declines within a family**: the pooled year-trend is flat (Pearson
+*r* = 0.036; *r* = 0.093 on a fixed 28–30-noun panel that removes the
+headword-splitting confound), but with eleven dictionaries spread across seven
+families that pooled correlation is *underidentified* rather than a measured null, so
+the sharper test holds family fixed — and every family that spans more than one
+edition is flat-to-decreasing in granularity (mean −0.11 sense-units per lemma·year).
+Granularity is a **family trait** — Benfey enumerates 2.42 sense-units per entry, the Petersburg line
 packs 1.13, the indigenous lexica 1.00 by construction — so any diachronic claim
 about "richer" later dictionaries must control for lexicographic school. Second,
-**citation predicts survival**: on a 28-noun panel of Wilson-line descent, ancestor
-senses carrying at least one source citation survive into the descendant at **0.762**
-(n = 84) against **0.591** for uncited senses (n = 723), a significant 17-point
-advantage (*p* ≈ 0.002) — the apparatus is not decoration but a predictor of
-lexicographic persistence. Third,
-descendants **copy or condense; they do not expand**: gloss overlap of 0.906 on the
-Wilson → Śabda-Sāgara edge (near-verbatim copy, drift 0), drastic condensation on
-Wilson → Yates (9 → 1 senses per lemma), contraction on Apte 1890 → 1957 (drift
-−3.07) — no measured edge adds senses systematically. A reviewed ten-row parser
+**citation is associated with survival, but the association is too concentrated on
+one edge to establish**: across the panel, cited ancestor senses survive at **0.762**
+(n = 84) against **0.705** for uncited senses (n = 723), but almost all cited senses
+(82 of 84) fall on a single edge — Apte 1890 → 1957 — because Wilson 1832 carries
+virtually no source citations. On that one citation-bearing edge cited senses survive
+at **0.768** against **0.661** (two-proportion *z* = 1.80, *p* = 0.07, not
+significant), and the pooled multi-edge estimate is unstable for the same reason.
+Citation co-varies with persistence, but the data do not establish it as an
+independent predictor of survival. Third, descendants **copy or condense; they do not
+expand**: gloss overlap of 0.906 on the Wilson → Śabda-Sāgara edge (near-verbatim
+copy, drift 0), a condensation on Apte 1890 → 1957 (drift −3.07), and — once Yates's
+semicolon-packed senses are counted correctly, a reviewed parser promotion (§3) — a
+comparable condensation on Wilson → Yates (≈ 9 → 5.7 senses per lemma, drift −3.3),
+no longer the spurious 9 → 1 of an earlier inline-number miscount. No measured edge
+adds senses systematically. A reviewed ten-row parser
 checkpoint and a promotion experiment ground the method: some reviewed windows
 reproduce the legacy static sense counts exactly without being tuned to them, while
 in every case where a window and the legacy count diverge sharply, inspection of the
@@ -70,7 +84,10 @@ of descent, (ii) a way of counting senses that respects each dictionary's own
 conventions rather than imposing one, and (iii) a way of aligning senses across
 dictionaries — and, in the Sanskrit case, across three description languages
 (German, English, Sanskrit) — so that survival and drift can be measured sense by
-sense rather than entry by entry.
+sense rather than entry by entry. The second of these is the classical microstructural
+problem — segmenting and comparing senses on each dictionary's own terms rather than a
+single editor's (Zgusta 1971; Wiegand 1989; Atkins and Rundell 2008) — here sharpened
+by a corpus that mixes four marking regimes across three description languages.
 
 The Cologne Digital Sanskrit Lexicon (CDSL) supplies all three. Its forty-three
 dictionaries include eleven general lexica spanning 1822–1957 whose genealogy is
@@ -80,7 +97,7 @@ Apte's 1890 dictionary was revised into the 1957 edition; the Petersburg lexicon
 stands behind Monier-Williams. Alongside the European line stand two indigenous
 Sanskrit–Sanskrit encyclopaedic lexica — *Śabdakalpadruma* (1822–58) and
 *Vācaspatya* (1873–84) — whose microstructure descends from the *kośa* and
-commentarial traditions rather than from the European critical apparatus.
+commentarial traditions (Vogel 1979) rather than from the European critical apparatus.
 
 This paper asks three questions of that record. **H1 (inflation):** do sense counts
 per entry rise with publication year? **H2 (survival):** when a dictionary inherits
@@ -240,29 +257,63 @@ artefact, not a temporal one. A fixed panel of 28–30 simple nouns present acro
 the corpus removes the artefact; the panel correlation is **r = 0.093**
 ([`r2_h1_panel.json`](../../data/lexico/r2_h1_panel.json)) — the conclusion stands.
 Neither correlation is significant (corpus *r* = 0.036, *t* = 0.11, df = 9; panel
-*r* = 0.093, *t* = 0.49, df = 28; both *p* ≫ 0.05), which is the point: there is no
-year trend to detect once family is allowed for.
-Within a single family the revision edge shows the same: Apte 1957 does not enumerate
-more finely than Apte 1890.
+*r* = 0.093, *t* = 0.49, df = 28; both *p* ≫ 0.05) — but with only eleven
+dictionaries across seven families, the pooled correlation is *underidentified*, not a
+measured null: it cannot separate a year effect from family composition, and a
+family-controlled regression (year plus family dummies, n = 11) is near-saturated,
+leaving year's partial slope at −0.051 sense-units per year with a wide 95 %
+confidence interval, [−0.186, +0.084], centred below zero. The decisive test holds
+family fixed. Each of the four families that span more than one edition is
+flat-to-*declining* in granularity over time — on the fixed panel, indigenous −0.014,
+Apte −0.027, Petersburg −0.049, Monier-Williams −0.349 sense-units per lemma·year
+(mean −0.11) — and within the single Western-parsed regime the trend is likewise
+negative (*r* = −0.11). Inflation is therefore not merely undetected but contradicted
+in direction: where inheritance is measured within a tradition, later editions
+enumerate no more finely — and usually less finely — than earlier ones (Apte 1957 does
+not enumerate more finely than Apte 1890). These controls are committed as the
+`h1Controlled` block of [`r2_h1_panel.json`](../../data/lexico/r2_h1_panel.json).
 
 The corrective matters for practice. Any cross-dictionary measure normalised "per
 sense" — definition length, citation density, equivalence counts — silently encodes
 the school of the dictionary unless family is controlled. "Later = finer" is, on
 this corpus, false.
 
-## 5. H2: cited senses survive
+## 5. H2: cited senses survive more often — but the signal sits on one edge
 
-On the 28-noun Wilson-line panel, each ancestor sense was traced into the descendant
-by gloss-text overlap (threshold 0.15). Ancestor senses carrying at least one `<ls>`
-source citation survived at **0.762** (64 of 84; Wilson 95 % CI [0.661, 0.840]);
-uncited senses at **0.591** (427 of 723; CI [0.554, 0.626]) — a 17-point gap whose
-confidence intervals do not overlap and which is significant on a two-proportion
-test (*z* = 3.0, *p* ≈ 0.002; χ² = 9.3, df = 1). The direction is stable against the
-archived baseline (0.70 vs 0.54). The citation apparatus, whose register-dependence
-is the subject of the companion paper, here acquires a diachronic function:
-**a citation is a survival predictor**. Senses on textual authority are the ones successor lexicographers keep;
-unattested senses are where condensation cuts first. We know of no comparable
-quantitative result for any dictionary family.
+On the 28-noun panel, each ancestor sense was traced into the descendant by
+gloss-text overlap (threshold 0.15). Cited ancestor senses — those carrying at least
+one `<ls>` source citation — survived at **0.762** (64 of 84); uncited senses at
+**0.705** (510 of 723). The pooled gap is small and, on a naive two-proportion test,
+not significant (*z* = 1.1).
+
+The deeper problem is *where* the cited senses are. Citation is not spread across the
+panel: Wilson 1832 carries almost no `<ls>`, so of the 84 cited ancestor senses
+**82 fall on a single edge — Apte 1890 → 1957** (the two Wilson edges contribute one
+cited sense each). The citation-survival question is therefore really a question about
+that one edge, and the clean test is *within* it, where the parsing of the others is
+irrelevant. On Apte 1890 → 1957, cited senses survive at **0.768** (n = 82) against
+**0.661** for uncited senses (n = 221) — a two-proportion *z* = 1.80, *p* = 0.07,
+**not significant** (`h2Controlled.withinPrimaryEdge` in
+[`r2_h2h3.json`](../../data/lexico/r2_h2h3.json)).
+
+A pooled model that borrows strength across edges does not rescue the result; it
+misleads. Fitting survival as a logistic regression — `survived ~ cited + position +
+gloss-length + cross-dictionary redundancy + edge fixed effects`, cluster-robust by
+lemma — returns a citation odds ratio of ≈ 3 (*p* ≈ 0.01) that *looks* significant,
+but the estimate is unstable precisely because the cited senses are concentrated on
+one edge: changing how an *unrelated* edge is parsed (the Yates semicolon promotion,
+§3) moved it from ≈ 1.75 to ≈ 3.0 without touching a single cited sense. The pooled
+number is an artifact of that imbalance, not a citation effect, and we do not rely on
+it. Two real confounds compound the point — senses nested within a lemma share a fate,
+and citation is itself entangled with sense centrality (early position, longer gloss,
+cross-family recurrence) — so even the within-edge gap is an upper bound.
+
+The honest reading is therefore that citation **co-varies** with persistence — cited
+senses do survive somewhat more often — but on this corpus the effect rests on a
+single edge and is not significant there, so the data do not establish citation as an
+*independent* predictor of survival. A larger panel with citation-dense ancestors on
+more than one edge could confirm or dissolve it. We know of no comparable quantitative
+treatment, positive or null, for any dictionary family.
 
 ## 6. H3: descendants copy or condense — none expand
 
@@ -271,20 +322,33 @@ quantitative result for any dictionary family.
 | Edge | Mean senses (anc → desc) | Drift | Gloss overlap | Pattern |
 |---|---|---:|---:|---|
 | Wilson 1832 → Śabda-Sāgara 1900 | 9 → 9 | 0 | **0.906** | near-verbatim copy |
-| Wilson 1832 → Yates 1846 | 9 → 1 | −8 | 0.075 | drastic condensation |
-| Apte 1890 → Apte 1957 | 10.8 → 7.8 | −3.07 | 0.565 | revision, no expansion |
+| Wilson 1832 → Yates 1846 | 9 → 5.7 | −3.3 | 0.256 | condensation (semicolon-aware count) |
+| Apte 1890 → Apte 1957 | 10.8 → 7.8 | −3.07 | 0.565 | revision, condensation, no expansion |
 
 *Source: [`r2_h2h3.json`](../../data/lexico/r2_h2h3.json), regenerated by
-`npm run build-r2-h2h3`.*
+`npm run build-r2-h2h3`. The Yates count uses the reviewer-adjudicated semicolon-aware
+counter (§3); the earlier 9 → 1 was an inline-number extraction artifact.*
 
 The Śabda-Sāgara row is forensic: its glosses are 90.6 % word-identical to Wilson's,
 sense by sense — microstructural confirmation of the lemma-level containment edge
-(WIL ⊆ SHS ≈ 0.95) reported in the companion redundancy study. Yates is the
-opposite strategy, an abridgement that keeps roughly one sense in nine. The Apte
-revision contracts. **No measured edge adds senses.** Combined with H1, the result
-inverts the inflation intuition twice over: later dictionaries are not finer-grained
-in general, and on the edges where inheritance is directly measurable, the movement
-is toward condensation — with the citation apparatus steering what survives.
+(WIL ⊆ SHS ≈ 0.95) reported in the companion redundancy study. The Apte revision
+contracts, dropping from 10.8 to 7.8 sense-units per lemma without adding any. The
+Wilson → Yates edge once read as a dramatic 9 → 1 abridgement, but that figure was an
+extraction artifact: Yates marks its senses with semicolons rather than the numbered
+markers the Western-explicit parser expects, so the inline-number splitter collapsed
+every entry to one. A source probe
+([`verify-yat-sense-artifact.mjs`](../../scripts/verify-yat-sense-artifact.mjs)) and a
+reviewed parser promotion (§3) re-count Yates by semicolon segmentation — about 5.7
+distinct meanings per panel lemma, with lone adjectival entries kept whole to avoid
+over-splitting synonym lists. Counted correctly, Yates is a **genuine condensation**
+(≈ 9 → 5.7, drift −3.3, overlap 0.26), of the same order as the Apte revision — an
+abridgement that keeps about three senses in five, not the spurious one in nine.
+**No measured edge adds senses**: across all three edges the movement is copy or
+condense, never expansion. Combined with H1 the result inverts the inflation intuition
+twice over — later dictionaries are not finer-grained in general, and on the edges
+where inheritance is directly measurable the movement is toward faithful copying or
+contraction. The stronger earlier claim that the citation apparatus *steers* what
+survives is qualified by §5 and is not relied on here.
 
 ## 7. The indigenous register: where sense and citation are one unit
 
@@ -327,9 +391,23 @@ are separable categories at all.
   indigenous lexica; it is an exemplar, not a frequency. A corpus-scale count over
   SKD/VCP is needed before the "two civilisations" claim is quantitative rather than
   demonstrative.
-- The H2 survival panel (84 cited vs 723 uncited ancestor senses) is significant but
-  drawn from 28 hand-chosen nouns on the Wilson line; replication on an independent,
-  larger panel — and on a non-Wilson edge — would harden the citation-survival result.
+- The H2 citation-survival signal rests on a single edge: 82 of 84 cited ancestor
+  senses are on Apte 1890 → 1957 (Wilson 1832 carries almost no `<ls>`), where the
+  within-edge test is not significant (0.768 vs 0.661; *z* = 1.80, *p* = 0.07). The
+  pooled multi-edge odds ratio is edge-composition-sensitive — it shifted from ≈ 1.75
+  to ≈ 3.0 when an unrelated edge's parser was changed — and is not relied on. An
+  independent panel with citation-dense ancestors on more than one edge is needed
+  before any independent citation effect can be claimed.
+- The Wilson → Yates count depends on a reviewer-adjudicated parser promotion (§3):
+  Yates is semicolon-packed, not sense-numbered, and the promoted semicolon-aware
+  counter (with a lone-adjective refinement to avoid over-splitting synonym lists)
+  recovers ≈ 5.7 meanings per lemma. The edge is a genuine condensation under this
+  counter; a different segmentation choice would shift the exact drift, though not the
+  copy/condense direction.
+- The within-family granularity slopes (H1) rest on as few as two editions per family
+  (one slope each), and the pooled family-controlled regression is near-saturated
+  (eleven dictionaries, seven families); the within-family decline is a robust
+  *direction*, not a precisely estimated rate.
 - Ten checkpoint rows were reviewed by a single reviewer against the sources; the
   review packets are designed for multi-reviewer adjudication with agreement
   statistics, which is planned but not yet done.
@@ -338,15 +416,53 @@ are separable categories at all.
 
 On the corpus where the history of dictionaries can actually be measured edge by
 edge, the received intuition fails twice. Sense granularity is a signature of
-lexicographic school, flat in time; and inheritance condenses rather than expands,
-with the citation apparatus acting as the selection pressure — cited senses survive
-at 0.762, uncited at 0.591. Beneath both results lies a register boundary deeper
-than citation style: the European tradition separates sense from authority; the
+lexicographic school, flat — indeed gently declining within families — in time; and
+inheritance copies or condenses rather than expands — across all three measurable
+edges, including a Yates abridgement that condenses about nine senses to six once its
+semicolon-packed entries are counted correctly. Cited senses do survive somewhat more
+often (0.762 versus 0.705 overall; 0.768 versus 0.661 on the one citation-bearing
+edge), but that signal rests on a single edge and is not significant there
+(*z* = 1.80, *p* = 0.07), so the apparatus marks persistence without a demonstrated
+independent effect on it. Beneath both results lies
+a register boundary deeper than citation style: the European tradition separates sense from authority; the
 *kośa* tradition fuses them into one construction. Digital lexicography that aims
 to align these traditions must model the fusion, not filter it out.
 
 ## References
 
-*[TODO: secondary references — Wiegand on microstructure; Atkins & Rundell;
-Hausmann; Zgusta; Vogel's* Indian Lexicography*; CDSL project literature;
-companion drafts cited inline.]*
+Atkins, B. T. Sue, and Michael Rundell. 2008. *The Oxford Guide to Practical
+Lexicography.* Oxford: Oxford University Press.
+
+Hausmann, Franz Josef, Oskar Reichmann, Herbert Ernst Wiegand, and Ladislav Zgusta,
+eds. 1989–1991. *Wörterbücher / Dictionaries / Dictionnaires: An International
+Encyclopedia of Lexicography.* 3 vols. (Handbücher zur Sprach- und
+Kommunikationswissenschaft 5.1–5.3.) Berlin and New York: Walter de Gruyter.
+
+Vogel, Claus. 1979. *Indian Lexicography.* (A History of Indian Literature, ed. Jan
+Gonda, vol. 5, fasc. 4.) Wiesbaden: Otto Harrassowitz.
+
+Wiegand, Herbert Ernst. 1989. "Der Begriff der Mikrostruktur: Geschichte, Probleme,
+Perspektiven." In Hausmann et al. (eds.), *Wörterbücher / Dictionaries /
+Dictionnaires,* vol. 1 (HSK 5.1), 409–461. Berlin and New York: Walter de Gruyter.
+
+Zgusta, Ladislav. 1971. *Manual of Lexicography.* (Janua Linguarum, Series Maior 39.)
+Prague: Academia; The Hague and Paris: Mouton.
+
+**Primary digital source.** Cologne Digital Sanskrit Dictionaries (CDSL). Institute of
+Indology and Tamil Studies, University of Cologne.
+[`sanskrit-lexicon.uni-koeln.de`](https://www.sanskrit-lexicon.uni-koeln.de/). The
+eleven dictionaries and their `csl-orig` plain-text sources are itemised in §2 and
+cited inline by file.
+
+**Companion papers (this project).**
+
+Gasūns, M. (in preparation). *Redundancy and Descent in a Digitised Dictionary Family:
+A Headword-Level Stemma of the Cologne Digital Sanskrit Lexicon.* (Cited above as the
+companion redundancy study.)
+
+Gasūns, M. (in preparation). *Two Citation Registers and the Dictionary-to-Book Gap in
+the Cologne Digital Sanskrit Lexicon.* (Cited above as the companion citation-registers
+paper.)
+
+*Bibliographic details (page ranges, series numbers, access dates) and the final
+byline are to be verified against the sources before submission.*

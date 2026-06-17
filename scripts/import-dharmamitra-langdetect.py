@@ -1,22 +1,19 @@
-# Import a Dharmamitra detect-language classification snapshot for the
-# PWG markup cross-check.
+# Import a language classification snapshot for the PWG markup cross-check.
 #
-# Unlike the ByT5 importers, this uses dharmamitra/detect-language: two
-# SentencePiece models (eng.model, skt.model). A string is classified by
-# whichever model tokenizes it into FEWER pieces (lower fertility) — so it is
-# effectively a Sanskrit / not-Sanskrit separator. Inputs are PWG {#...#}
-# Sanskrit spans (SLP1), transliterated to IAST here; a span that lands on the
-# not-Sanskrit ("en") side is the review signal (foreign content in Sanskrit
-# markup). SLP1/IAST is distinctive, so genuine Sanskrit reliably reads "sa".
+# German-aware (Month 5, #115): classifies each PWG {#...#} Sanskrit-marked span
+# with two locally-trained SentencePiece models — san.model (Sanskrit) and
+# deu.model (German) — by minimum fertility. This replaces the off-the-shelf
+# dharmamitra/detect-language eng/skt pair (#95), which modelled only
+# English-vs-Sanskrit and so misfired on German + Sanskrit loanwords/inflected
+# forms. On a held-out PWG test the German-aware pair lifts accuracy 0.942 ->
+# 0.995 and cuts the Sanskrit false-flag rate 5.5% -> 0.3%.
 #
-# It runs on CPU (sentencepiece only, no GPU/torch), so unlike the ByT5 steps
-# this produces REAL data, not model-pending scaffolding. The models (~0.5 MB
-# each) are fetched from the pinned repo on first run and cached.
+# A span that reads as German ("foreign") despite Sanskrit markup is the review
+# signal (foreign/OCR content in Sanskrit markup). CPU only (sentencepiece);
+# inputs are SLP1 -> IAST. Review EVIDENCE only.
 #
-# Consumes the candidate spans written by build-langdetect-crosscheck.mjs and
-# writes a classification snapshot the deterministic build joins back in.
-# SLP1->IAST reuses scripts/lib/dharmamitra_infer.py. Model output is review
-# EVIDENCE only.
+# The san/deu models are gitignored binaries — train them first:
+#   npm run train-langdetect-german
 #
 # Usage:
 #   python scripts/import-dharmamitra-langdetect.py --limit 500   # pilot
@@ -26,7 +23,6 @@
 import argparse
 import json
 import sys
-import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -38,22 +34,16 @@ import dharmamitra_infer as dm  # noqa: E402  (reused only for slp1_to_iast)
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES = ROOT / "src" / "data" / "external" / "langdetect-candidates.json"
 OUT = ROOT / "src" / "data" / "external" / "dharmamitra-langdetect.json"
-CACHE = Path(__file__).resolve().parent / ".langdetect-models"
-
-REPO = "https://github.com/dharmamitra/detect-language"
-RAW = "https://raw.githubusercontent.com/dharmamitra/detect-language/{rev}/models/{name}"
-MODELS = ("eng.model", "skt.model")
+MODELS_DIR = Path(__file__).resolve().parent / ".langdetect-models"
+MODELS = ("san.model", "deu.model")
 
 
-def ensure_models(revision, models_dir):
-    models_dir.mkdir(parents=True, exist_ok=True)
+def require_models(models_dir):
     paths = {}
     for name in MODELS:
         dest = models_dir / name
         if not dest.exists():
-            url = RAW.format(rev=revision, name=name)
-            print(f"  fetching {name}: {url}")
-            urllib.request.urlretrieve(url, dest)
+            sys.exit(f"Missing {dest}.\nTrain the German-aware models first:\n  npm run train-langdetect-german")
         paths[name] = dest
     return paths
 
@@ -65,10 +55,9 @@ def load_candidates(limit):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Classify PWG glosses with Dharmamitra detect-language (eng vs skt SPM).")
+    ap = argparse.ArgumentParser(description="Classify PWG Sanskrit spans with the German-aware san/deu SentencePiece pair.")
     ap.add_argument("--limit", type=int, default=0, help="cap candidates for a pilot (0 = all)")
-    ap.add_argument("--revision", default="main", help="detect-language repo revision (pin a commit for reproducibility)")
-    ap.add_argument("--models-dir", default=None, help="dir holding eng.model/skt.model (default: cached next to script)")
+    ap.add_argument("--models-dir", default=None, help="dir holding san.model/deu.model (default: cached next to script)")
     args = ap.parse_args()
 
     try:
@@ -79,58 +68,56 @@ def main():
     if not CANDIDATES.exists():
         sys.exit(f"No candidates file at {CANDIDATES}. Run `npm run build-langdetect-crosscheck` first.")
 
-    models_dir = Path(args.models_dir) if args.models_dir else CACHE
-    paths = ensure_models(args.revision, models_dir)
-    eng = spm.SentencePieceProcessor(); eng.load(str(paths["eng.model"]))
-    skt = spm.SentencePieceProcessor(); skt.load(str(paths["skt.model"]))
+    paths = require_models(Path(args.models_dir) if args.models_dir else MODELS_DIR)
+    san = spm.SentencePieceProcessor(); san.load(str(paths["san.model"]))
+    deu = spm.SentencePieceProcessor(); deu.load(str(paths["deu.model"]))
 
     rows = load_candidates(args.limit)
-    print(f"Classifying {len(rows)} PWG Sanskrit spans via detect-language (eng vs skt SentencePiece)...")
+    print(f"Classifying {len(rows)} PWG Sanskrit spans (German-aware san vs deu SentencePiece)...")
     by_key = {}
-    not_sanskrit = 0
+    foreign = 0
     for i, (key, text) in enumerate(rows, 1):
-        iast = dm.slp1_to_iast(text)  # skt.model expects romanized Sanskrit
-        e = len(eng.encode_as_pieces(iast))
-        s = len(skt.encode_as_pieces(iast))
-        # detect.py: "en" if eng strictly shorter, else "sa" (ties -> sa).
-        label = "en" if e < s else "sa"
-        if label == "en":
-            not_sanskrit += 1
-        by_key[key] = {"iast": iast, "engPieces": e, "sktPieces": s, "label": label}
+        iast = dm.slp1_to_iast(text)
+        sp = len(san.encode_as_pieces(iast))
+        dp = len(deu.encode_as_pieces(iast))
+        label = "foreign" if dp < sp else "sanskrit"   # ties -> sanskrit
+        if label == "foreign":
+            foreign += 1
+        by_key[key] = {"iast": iast, "sanPieces": sp, "deuPieces": dp, "label": label}
         if i % 20000 == 0:
             print(f"  classified {i}/{len(rows)}")
 
     payload = {
-        "schemaVersion": "1.0.0",
+        "schemaVersion": "2.0.0",
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "generatedBy": "python scripts/import-dharmamitra-langdetect.py",
         "source": {
-            "name": "Dharmamitra detect-language",
-            "repository": REPO,
-            "revision": args.revision,
-            "method": "eng.model vs skt.model SentencePiece fertility; fewer pieces wins (ties -> sa).",
+            "name": "German-aware Sanskrit/German classifier (trained on PWG self-labeled data)",
+            "trainer": "scripts/train-langdetect-german.py",
+            "method": "san.model vs deu.model SentencePiece fertility; fewer pieces wins (ties -> sanskrit). Mirrors dharmamitra/detect-language with a German model added.",
+            "metrics": "src/data/external/langdetect-german-metrics.json (held-out accuracy 0.942 -> 0.995)",
             "license": {
-                "label": "Dharmamitra GitHub organization license",
+                "label": "Models derived from CDSL PWG markup",
                 "note": "Classifications consumed as review evidence only — not redistributed as atlas data."
             },
         },
         "assumptions": [
-            "Label 'en' means the English SPM tokenized the string more efficiently than the Sanskrit one (does not read as Sanskrit).",
-            "Inputs are PWG {#...#} Sanskrit spans (SLP1 -> IAST); 'en' on a Sanskrit-marked span is the review signal.",
+            "Label 'foreign' means the German SPM tokenized the string more efficiently than the Sanskrit one.",
+            "Inputs are PWG {#...#} Sanskrit spans (SLP1 -> IAST); 'foreign' on a Sanskrit-marked span is the review signal (German/Latin/OCR in Sanskrit markup).",
             "Short strings are noisy; the deterministic build applies a fertility margin before flagging.",
         ],
         "warnings": [
-            "detect-language separates Sanskrit from English; SLP1/IAST Sanskrit is distinctive, so 'en' on a Sanskrit-marked span flags genuine non-Sanskrit content (German, Latin, OCR).",
+            "Models are trained on PWG's own markup, so this measures the markup's internal consistency, not an external gold standard.",
             "Probabilistic signal; do not rewrite PWG markup from this snapshot.",
         ],
         "candidateCount": len(by_key),
-        "notSanskritCount": not_sanskrit,
+        "foreignCount": foreign,
         "byKey": dict(sorted(by_key.items())),
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {len(by_key)} classifications ({not_sanskrit} 'en'/not-sanskrit) to {OUT.relative_to(ROOT)}")
+    print(f"Wrote {len(by_key)} classifications ({foreign} 'foreign') to {OUT.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

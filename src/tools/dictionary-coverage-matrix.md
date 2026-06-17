@@ -44,7 +44,7 @@ import * as Plot from "npm:@observablehq/plot";
 ```
 
 ```js
-function coveragePanel(scope, panelClass) {
+function coveragePanel(scope) {
   const activeCov = cov.scopes?.[scope] ?? cov.scopes?.broadHeadword ?? cov;
   const activeUnique = unique.scopes?.[scope] ?? unique.scopes?.broadHeadword ?? unique;
   const activeIntersection = intersection.scopes?.[scope] ?? intersection.scopes?.broadHeadword ?? intersection;
@@ -56,7 +56,7 @@ function coveragePanel(scope, panelClass) {
     [t("phase2.coverage-matrix.dictionaries")]: c.size,
     [t("phase2.coverage-matrix.lemmas")]: c.count
   }));
-  return html`<section class=${`scope-panel ${panelClass}`}>
+  return html`<section>
     <div class="note">${t("phase2.coverage-matrix.scope-note")} <b>${activeScopeLabel}</b>.</div>
     <div style="display:flex;gap:24px;flex-wrap:wrap;margin:8px 0">
       ${[
@@ -94,36 +94,18 @@ function coveragePanel(scope, panelClass) {
   </section>`;
 }
 
-display(html`<div class="scope-switch">
-  <input id="coverage-scope-broad" type="radio" name="coverage-scope" checked>
-  <label for="coverage-scope-broad">${cov.scopeLabels?.broadHeadword ?? "Broad 40"}</label>
-  <input id="coverage-scope-core" type="radio" name="coverage-scope">
-  <label for="coverage-scope-core">${cov.scopeLabels?.coreComparison ?? "Core 7"}</label>
-  ${coveragePanel("broadHeadword", "scope-panel-broad")}
-  ${coveragePanel("coreComparison", "scope-panel-core")}
-  <style>
-    .scope-switch > input { position: absolute; opacity: 0; pointer-events: none; }
-    .scope-switch > label {
-      border: 1px solid rgba(0,0,0,.14);
-      border-radius: 8px;
-      cursor: pointer;
-      display: inline-flex;
-      font-weight: 600;
-      margin: 0 0.35rem 0.75rem 0;
-      min-height: 34px;
-      padding: 0.35rem 0.75rem;
-    }
-    #coverage-scope-broad:checked + label,
-    #coverage-scope-core:checked + label {
-      background: #1f78b4;
-      border-color: #1f78b4;
-      color: #fff;
-    }
-    .scope-panel { display: none; }
-    #coverage-scope-broad:checked ~ .scope-panel-broad,
-    #coverage-scope-core:checked ~ .scope-panel-core { display: block; }
-  </style>
-</div>`);
+```
+
+```js
+const coverageScope = view(Inputs.radio(["broadHeadword", "coreComparison"], {
+  label: t("phase2.coverage-matrix.scope"),
+  value: "broadHeadword",
+  format: scope => cov.scopeLabels?.[scope] ?? (scope === "coreComparison" ? "Core 7" : "Broad 40")
+}));
+```
+
+```js
+display(coveragePanel(coverageScope));
 ```
 
 ---

@@ -7,7 +7,7 @@
 Boundary update 2026-06-04: this handoff now belongs to `csl-atlas` because it
 starts from dictionary headword conventions and dictionary genealogy. The old
 mixed observatory decision file is preserved as
-[`DECISIONS_NEEDED_LEGACY_OBSERVATORY.md`](DECISIONS_NEEDED_LEGACY_OBSERVATORY.md);
+[`DECISIONS_NEEDED_LEGACY_OBSERVATORY.md`](archive/DECISIONS_NEEDED_LEGACY_OBSERVATORY.md);
 do not treat it as the active atlas decision queue.
 
 ---

@@ -1,0 +1,213 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedBy": "npm run verify-yat-sense-artifact",
+  "claimUnderTest": "H3R wil→yat: 'drastic condensation' (9 senses → 1)",
+  "finding": "Parser artifact, not condensation. YAT packs senses into one semicolon-separated run-on gloss and is not sense-numbered; the inline-number splitter mis-reads a noun-class/gender number and collapses to 1. YAT's true polysemy is comparable to WIL's.",
+  "verdict": "artifact-confirmed",
+  "summary": {
+    "panelEntries": 28,
+    "meanInlineSenses": 1,
+    "meanTrueMeanings": 5.71,
+    "classNumberMarkerRate": 0.75,
+    "wilMeanSenses": 9
+  },
+  "rows": [
+    {
+      "stem": "avazwabDa",
+      "inlineSenses": 1,
+      "trueMeanings": 4,
+      "classNumberMarker": false,
+      "gloss": "ava-zwabDa ¦ (bDaH-bDA-bDaM) a. Near; sup- ported; stopped."
+    },
+    {
+      "stem": "avi",
+      "inlineSenses": 1,
+      "trueMeanings": 4,
+      "classNumberMarker": true,
+      "gloss": "a-vi ¦ (viH) 2. m. The sun; a moun- tain; a sheep; a wall; air."
+    },
+    {
+      "stem": "Aroha",
+      "inlineSenses": 1,
+      "trueMeanings": 4,
+      "classNumberMarker": true,
+      "gloss": "A-roha ¦ (haH) 1. m. Length; ascent, mounting; a woman's waist; weight; a mine."
+    },
+    {
+      "stem": "ASraya",
+      "inlineSenses": 1,
+      "trueMeanings": 0,
+      "classNumberMarker": true,
+      "gloss": "A-Sraya ¦ (yaH) 1. m. Asylum."
+    },
+    {
+      "stem": "udAtta",
+      "inlineSenses": 1,
+      "trueMeanings": 4,
+      "classNumberMarker": true,
+      "gloss": "udA_tta ¦ (ttaH) 1. m. The acute accent; a gift. a. Liberal; great; dear."
+    },
+    {
+      "stem": "udGAta",
+      "inlineSenses": 1,
+      "trueMeanings": 7,
+      "classNumberMarker": true,
+      "gloss": "ud-GAta ¦ (taH) 1. m. A beginning; a weapon; a stroke; a wound; section; breathing through the nostrils; slipping. a. Hi"
+    },
+    {
+      "stem": "udvega",
+      "inlineSenses": 1,
+      "trueMeanings": 3,
+      "classNumberMarker": true,
+      "gloss": "udve_ga ¦ (gaH-gaM) 1. n. The fruit of the betel-nut. m. Regret, fear, asto- nishment. a. Going swiftly."
+    },
+    {
+      "stem": "upacAra",
+      "inlineSenses": 1,
+      "trueMeanings": 4,
+      "classNumberMarker": true,
+      "gloss": "upa-cAra ¦ (raH) 1. m. Service; practice; physicking; a bribe; ellipses."
+    },
+    {
+      "stem": "upasaMhAra",
+      "inlineSenses": 1,
+      "trueMeanings": 5,
+      "classNumberMarker": true,
+      "gloss": "upa-saM-hAra ¦ (raH) 1. m. Refusing; taking away; death; collection, com- pendium; attack; refutation."
+    },
+    {
+      "stem": "ErAvata",
+      "inlineSenses": 1,
+      "trueMeanings": 0,
+      "classNumberMarker": true,
+      "gloss": "ErAvata ¦ (taH) 1. m. Idem. n. His bow unbent. tI f. Lighting."
+    },
+    {
+      "stem": "ojas",
+      "inlineSenses": 1,
+      "trueMeanings": 4,
+      "classNumberMarker": true,
+      "gloss": "ojas ¦ (jaH) 5. n. Light; strength; gold; vitality; high style."
+    },
+    {
+      "stem": "kalka",
+      "inlineSenses": 1,
+      "trueMeanings": 3,
+      "classNumberMarker": true,
+      "gloss": "kalka ¦ (lkaH-lkaM) 1. m. n. Sediment, dirt, sin; pride. a. Sinful."
+    },
+    {
+      "stem": "kirAta",
+      "inlineSenses": 1,
+      "trueMeanings": 8,
+      "classNumberMarker": false,
+      "gloss": "kirAta ¦ (taH) 1. 3. m. A savage; Shiva; a kind of gentian; a pig- my; a groom. f. ( tI ) The Gan- ges, or its goddess; "
+    },
+    {
+      "stem": "koRa",
+      "inlineSenses": 1,
+      "trueMeanings": 6,
+      "classNumberMarker": true,
+      "gloss": "koRa ¦ (RaH) 1. m. The bow of a lute; drum stick; club; corner; edge of a sword; Mars, Saturn; in- termediate point of t"
+    },
+    {
+      "stem": "kzAra",
+      "inlineSenses": 1,
+      "trueMeanings": 8,
+      "classNumberMarker": true,
+      "gloss": "kzAra ¦ (raH) 1. m. Glass; juice; trea- cle; salt; ashes; borax; alkali; a cheat. n. A factitious salt."
+    },
+    {
+      "stem": "kzepa",
+      "inlineSenses": 1,
+      "trueMeanings": 8,
+      "classNumberMarker": true,
+      "gloss": "kzepa ¦ (graH) 1. m. Sending, throwing; pride; delay; contempt; pas- sing away time; abuse; clump of flowers; quantity t"
+    },
+    {
+      "stem": "Goza",
+      "inlineSenses": 1,
+      "trueMeanings": 10,
+      "classNumberMarker": true,
+      "gloss": "Goza ¦ (zaH) 1. m. A station of herds- men; a herdsman; a creeper; bell-metal; low thunder; a pro- clamation; a term app"
+    },
+    {
+      "stem": "calana",
+      "inlineSenses": 1,
+      "trueMeanings": 4,
+      "classNumberMarker": true,
+      "gloss": "calana ¦ (naM) 1. n. Wandering; trem- bling. m. A foot. f. Short petti- coat. a. Going, trembling."
+    },
+    {
+      "stem": "cUqA",
+      "inlineSenses": 1,
+      "trueMeanings": 5,
+      "classNumberMarker": true,
+      "gloss": "cUqA ¦ (qA) 1. f. Single lock left on the crown of the head; a crest; a top; head; upper room; bracelet."
+    },
+    {
+      "stem": "tapasvin",
+      "inlineSenses": 1,
+      "trueMeanings": 5,
+      "classNumberMarker": true,
+      "gloss": "tapasvin ¦ (svI) 5. m. An ascetic; Nā- rada; a mango-fish. f. Spike- nard. a. Devout; poor."
+    },
+    {
+      "stem": "taruRa",
+      "inlineSenses": 1,
+      "trueMeanings": 10,
+      "classNumberMarker": false,
+      "gloss": "taruRa ¦ (RaH-RA-RaM) a. Young, new. m. A young man; Castor oil tree; large cumin seed. n. A kind of flower. f. Young wo"
+    },
+    {
+      "stem": "tilaka",
+      "inlineSenses": 1,
+      "trueMeanings": 8,
+      "classNumberMarker": true,
+      "gloss": "tilaka ¦ (kaH-kaM) 1. m. n. Mark on the forehead. m. A freckle, a mole; a title; a horse; a Tila tree. n. The bladder; s"
+    },
+    {
+      "stem": "trika",
+      "inlineSenses": 1,
+      "trueMeanings": 3,
+      "classNumberMarker": true,
+      "gloss": "trika ¦ (kaM) 1. n. The lower part of the spine; a triad; om; place where three roads meet. f. Lid of a well."
+    },
+    {
+      "stem": "divya",
+      "inlineSenses": 1,
+      "trueMeanings": 10,
+      "classNumberMarker": false,
+      "gloss": "divya ¦ (vyaH-vyA-vyaM) a. Divine, beautiful. m. Barley; bdellium; a divine property. f. Emblic myrobalan. n. Cloves; a "
+    },
+    {
+      "stem": "dIpana",
+      "inlineSenses": 1,
+      "trueMeanings": 4,
+      "classNumberMarker": false,
+      "gloss": "dIpana ¦ (naH-nA-naM) a. Inflaming; tonic. 1. n. A lighting; stimulating; the root Tagāra. m. A potherb. m. f. n. An aro"
+    },
+    {
+      "stem": "Dara",
+      "inlineSenses": 1,
+      "trueMeanings": 11,
+      "classNumberMarker": false,
+      "gloss": "Dara ¦ (raH-rA-raM) a. Holding. m. A moun- tain; flock of cotton; the tor- toise Avatār; a Vasu demigod. f. The earth; w"
+    },
+    {
+      "stem": "DAtf",
+      "inlineSenses": 1,
+      "trueMeanings": 8,
+      "classNumberMarker": true,
+      "gloss": "DAtf ¦ (tA) 4. m. Brahmā; Viṣṇu; father. f. ( trI ) A mother; a fos- ter mother; a nurse; the earth. a. Cherishing; cont"
+    },
+    {
+      "stem": "Dvajin",
+      "inlineSenses": 1,
+      "trueMeanings": 10,
+      "classNumberMarker": false,
+      "gloss": "Dvajin ¦ (jI-jinI-ji) a. Having a flag. m. A brāhman; a hill; a car; a snake; a horse; a pea- cock; a distiller. f. An a"
+    }
+  ],
+  "recommendation": "Demote the wil→yat edge to 'not sense-countable' in H3R, or add a semicolon-aware sense counter for run-on-gloss dictionaries (YAT, SHS) — a parser promotion to route through the R2 checkpoint review."
+}

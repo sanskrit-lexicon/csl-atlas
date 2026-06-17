@@ -4,7 +4,7 @@ Date: 2026-06-04
 
 This is the active critique for the dictionary-only atlas. The old integrated
 critique is preserved in
-`docs/READER_DEVELOPER_CRITIQUE_LEGACY_INTEGRATED_ATLAS.md`.
+`docs/archive/READER_DEVELOPER_CRITIQUE_LEGACY_INTEGRATED_ATLAS.md`.
 
 ## Product Boundary
 
@@ -96,4 +96,4 @@ The atlas is healthy when:
 - `docs/DICTIONARY_USER_GUIDE.md`
 - `docs/EVIDENCE_LABELS.md`
 - `docs/REVIEW_RELEASE_ROADMAP.md`
-- `docs/READER_DEVELOPER_CRITIQUE_LEGACY_INTEGRATED_ATLAS.md`
+- `docs/archive/READER_DEVELOPER_CRITIQUE_LEGACY_INTEGRATED_ATLAS.md`

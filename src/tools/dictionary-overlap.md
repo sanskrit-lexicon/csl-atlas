@@ -42,7 +42,7 @@ import * as Plot from "npm:@observablehq/plot";
 ```
 
 ```js
-function overlapPanel(scope, panelClass) {
+function overlapPanel(scope) {
   const activeData = data.scopes?.[scope] ?? data.scopes?.broadHeadword ?? data;
   const activeScopeLabel = data.scopeLabels?.[scope] ?? activeData.scopeLabel ?? scope;
   const dicts = activeData.dictionaries.map(d => d.label);
@@ -58,7 +58,7 @@ function overlapPanel(scope, panelClass) {
     [t("phase2.overlap.shared-lemmas")]: p.shared,
     [t("phase2.overlap.jaccard")]: p.jaccard
   }));
-  return html`<section class=${`scope-panel ${panelClass}`}>
+  return html`<section>
     <div class="note">${t("phase2.overlap.scope-note")} <b>${activeScopeLabel}</b>.</div>
     ${Plot.plot({
       marginLeft: scope === "coreComparison" ? 60 : 90,
@@ -82,36 +82,18 @@ function overlapPanel(scope, panelClass) {
   </section>`;
 }
 
-display(html`<div class="scope-switch">
-  <input id="overlap-scope-broad" type="radio" name="overlap-scope" checked>
-  <label for="overlap-scope-broad">${data.scopeLabels?.broadHeadword ?? "Broad 40"}</label>
-  <input id="overlap-scope-core" type="radio" name="overlap-scope">
-  <label for="overlap-scope-core">${data.scopeLabels?.coreComparison ?? "Core 7"}</label>
-  ${overlapPanel("broadHeadword", "scope-panel-broad")}
-  ${overlapPanel("coreComparison", "scope-panel-core")}
-  <style>
-    .scope-switch > input { position: absolute; opacity: 0; pointer-events: none; }
-    .scope-switch > label {
-      border: 1px solid rgba(0,0,0,.14);
-      border-radius: 8px;
-      cursor: pointer;
-      display: inline-flex;
-      font-weight: 600;
-      margin: 0 0.35rem 0.75rem 0;
-      min-height: 34px;
-      padding: 0.35rem 0.75rem;
-    }
-    #overlap-scope-broad:checked + label,
-    #overlap-scope-core:checked + label {
-      background: #1f78b4;
-      border-color: #1f78b4;
-      color: #fff;
-    }
-    .scope-panel { display: none; }
-    #overlap-scope-broad:checked ~ .scope-panel-broad,
-    #overlap-scope-core:checked ~ .scope-panel-core { display: block; }
-  </style>
-</div>`);
+```
+
+```js
+const overlapScope = view(Inputs.radio(["broadHeadword", "coreComparison"], {
+  label: t("phase2.overlap.scope"),
+  value: "broadHeadword",
+  format: scope => data.scopeLabels?.[scope] ?? (scope === "coreComparison" ? "Core 7" : "Broad 40")
+}));
+```
+
+```js
+display(overlapPanel(overlapScope));
 ```
 
 <div class="note">Broad overlap is headword evidence only. Use deep-analysis pages only where a feature has a validated adapter.</div>

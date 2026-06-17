@@ -1,0 +1,2991 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedAt": "2026-06-15T02:08:16.355Z",
+  "sourcePath": "src/data/external/dharmamitra-chronology.json + src/data/mw-source-layers.json + unknown-source-layers-review.json",
+  "recordCount": 67,
+  "queue": "source-date-anchor",
+  "chronologyWorks": 1618,
+  "distinctChronologyTexts": 1283,
+  "mappedMatched": 38,
+  "mappedTotal": 184,
+  "unknownMatched": 29,
+  "unknownTotal": 449,
+  "high": 15,
+  "medium": 52,
+  "unknownDateProposals": 29,
+  "assumptions": [
+    "A siglum is dated by resolving it to a canonical name (curated expansion of major sigla, then dict-source-aliases.json, then the siglum) and matching chronology work titles — EXACT or unambiguous >=5-char prefix only.",
+    "dateMedian is the median postMedian over the matched work's dated sections; dateRange is the span; chronologicalEra is the modal era.",
+    "corpusChunks / corpusVolumeBand (1-5, log-scale) is the source's text volume in the Dharmamitra dated corpus — corpus-frequency at the SOURCE level. Per-LEMMA frequency stays with the existing DCS layer (dcs_lemma_summary.json); dharmanexus exposes no committable per-lemma frequency, so this avoids duplicating DCS.",
+    "Date-only by design: atlas layers mix chronology with genre (technical/lexicographic), so a date does NOT imply a layer. For unknown sigla the date informs the reviewer's layer choice; it is not applied automatically.",
+    "Chronology dates are posterior model estimates; review evidence only — never rewrites mw-source-layers.json. Reviews preserved by reviewId."
+  ],
+  "warnings": [
+    "Coverage: 38/184 mapped and 29/449 unknown sigla dated (15 high-confidence exact, 52 medium-confidence prefix). Most unmatched unknowns are commentaries/minor texts absent from the dating corpus.",
+    "Verify each anchor — a wrong name match yields a wrong date. Authorial chronology (the cited text) is distinct from MW's editorial date.",
+    "Sectioned works (e.g. Mahābhārata, Ṛgveda) are aggregated by base title; dateRange shows the section spread."
+  ],
+  "items": [
+    {
+      "reviewId": "source-date-anchor:AitĀr",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "AitĀr",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "AitĀr",
+        "currentLayer": "vedic",
+        "matchedWork": "Aitareya-Upaniṣad",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 2,
+        "dateMedian": -483,
+        "dateRange": [
+          -487,
+          -479
+        ],
+        "chronologicalEra": "epic-sutra",
+        "corpusChunks": 11,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Āryabh",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Āryabh",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Āryabh",
+        "currentLayer": "technical",
+        "matchedWork": "Āryabhaṭīya",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 2,
+        "dateMedian": 598,
+        "dateRange": [
+          593,
+          602
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 95,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Aṣṭāv",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Aṣṭāv",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 512104,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L512104"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Aṣṭāv",
+        "currentLayer": "unknown",
+        "matchedWork": "Aṣṭāvakragītā",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1026,
+        "dateRange": [
+          1026,
+          1026
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 6,
+        "corpusVolumeBand": 2,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:AV",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "AV",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "AV",
+        "currentLayer": "vedic",
+        "matchedWork": "Atharvaveda-Saṃhitā",
+        "matchVia": "expansion",
+        "matchConfidence": "medium",
+        "datedSections": 2,
+        "dateMedian": -938,
+        "dateRange": [
+          -941,
+          -935
+        ],
+        "chronologicalEra": "vedic",
+        "corpusChunks": 175,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Baudh",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Baudh",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Baudh",
+        "currentLayer": "vedic",
+        "matchedWork": "Baudhāyana-Dharmasūtra",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": -161,
+        "dateRange": [
+          -161,
+          -161
+        ],
+        "chronologicalEra": "epic-sutra",
+        "corpusChunks": 25,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Bhag",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Bhag",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Bhag",
+        "currentLayer": "epic",
+        "matchedWork": "Bhagavadgītā",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 4,
+        "dateMedian": 975,
+        "dateRange": [
+          252,
+          1000
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 218,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Bharaṭ",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Bharaṭ",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 258513,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L258513"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Bharaṭ",
+        "currentLayer": "unknown",
+        "matchedWork": "Bhāratamañjarī",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 14,
+        "dateMedian": 995,
+        "dateRange": [
+          992,
+          998
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 125,
+        "corpusVolumeBand": 4,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Bījag",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Bījag",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 100064,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L100064"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Bījag",
+        "currentLayer": "unknown",
+        "matchedWork": "Bījagaṇita",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 700,
+        "dateRange": [
+          700,
+          700
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 4,
+        "corpusVolumeBand": 2,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:BrahmaP",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "BrahmaP",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "BrahmaP",
+        "currentLayer": "puranic",
+        "matchedWork": "Brahma-Purāṇa",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 806,
+        "dateRange": [
+          806,
+          806
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 290,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Bṛhasp",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Bṛhasp",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 128441,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L128441"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Bṛhasp",
+        "currentLayer": "unknown",
+        "matchedWork": "Bṛhaspatismṛti",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 2,
+        "dateMedian": 508,
+        "dateRange": [
+          502,
+          514
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 54,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Caurap",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Caurap",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Caurap",
+        "currentLayer": "classical",
+        "matchedWork": "Caurapañcāśikā",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1147,
+        "dateRange": [
+          1147,
+          1147
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 1,
+        "corpusVolumeBand": 1,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:ChUp",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "ChUp",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "ChUp",
+        "currentLayer": "vedic",
+        "matchedWork": "Chāndogya-Upaniṣad",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 3,
+        "dateMedian": -586,
+        "dateRange": [
+          -588,
+          -578
+        ],
+        "chronologicalEra": "vedic",
+        "corpusChunks": 129,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Daśar",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Daśar",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Daśar",
+        "currentLayer": "technical",
+        "matchedWork": "Daśarūpaka",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 994,
+        "dateRange": [
+          994,
+          994
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 7,
+        "corpusVolumeBand": 2,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Divyāv",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Divyāv",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Divyāv",
+        "currentLayer": "classical",
+        "matchedWork": "Divyāvadāna",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 332,
+        "dateRange": [
+          332,
+          332
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 227,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Gaṇap",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Gaṇap",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 210981,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L210981"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Gaṇap",
+        "currentLayer": "unknown",
+        "matchedWork": "Gaṇapatihṛdaya-Dhāraṇī",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 793,
+        "dateRange": [
+          793,
+          793
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 1,
+        "corpusVolumeBand": 1,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Hariv",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Hariv",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Hariv",
+        "currentLayer": "epic",
+        "matchedWork": "Harivaṃśa",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 2,
+        "dateMedian": 207,
+        "dateRange": [
+          190,
+          224
+        ],
+        "chronologicalEra": "epic-sutra",
+        "corpusChunks": 419,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Jātakam",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Jātakam",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Jātakam",
+        "currentLayer": "classical",
+        "matchedWork": "Jātakamālā",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 4,
+        "dateMedian": 403,
+        "dateRange": [
+          352,
+          702
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 142,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Kālac",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kālac",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 3579,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L3579"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kālac",
+        "currentLayer": "unknown",
+        "matchedWork": "Kālacakrāvatāra",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1110,
+        "dateRange": [
+          1110,
+          1110
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 3,
+        "corpusVolumeBand": 2,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:KālikāP",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "KālikāP",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 106625,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L106625"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "KālikāP",
+        "currentLayer": "unknown",
+        "matchedWork": "kālikāpurāṇam",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 610,
+        "dateRange": [
+          610,
+          610
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 176,
+        "corpusVolumeBand": 4,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Kāraṇḍ",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kāraṇḍ",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kāraṇḍ",
+        "currentLayer": "classical",
+        "matchedWork": "Kāraṇḍavyūha Sūtra",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 468,
+        "dateRange": [
+          468,
+          468
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 27,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Kathās",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kathās",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kathās",
+        "currentLayer": "classical",
+        "matchedWork": "Kathāsaritsāgara",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 3,
+        "dateMedian": 1072,
+        "dateRange": [
+          1069,
+          1206
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 696,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Kāvyād",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kāvyād",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kāvyād",
+        "currentLayer": "technical",
+        "matchedWork": "Kāvyādarśa",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 2,
+        "dateMedian": 646,
+        "dateRange": [
+          605,
+          686
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 18,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Kāvyapr",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kāvyapr",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 99332,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L99332"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kāvyapr",
+        "currentLayer": "unknown",
+        "matchedWork": "Kāvyaprakāśa",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 3,
+        "dateMedian": 1074,
+        "dateRange": [
+          1073,
+          1074
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 82,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Kulārṇ",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kulārṇ",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 41600,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L41600"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kulārṇ",
+        "currentLayer": "unknown",
+        "matchedWork": "Kulārṇavatantra",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1143,
+        "dateRange": [
+          1143,
+          1143
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 43,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Kum",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kum",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kum",
+        "currentLayer": "classical",
+        "matchedWork": "Kumārasambhava",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 1,
+        "dateMedian": 420,
+        "dateRange": [
+          420,
+          420
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 13,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Kuṭṭanīm",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Kuṭṭanīm",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 244576,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L244576"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Kuṭṭanīm",
+        "currentLayer": "unknown",
+        "matchedWork": "Kuṭṭanīmata",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 800,
+        "dateRange": [
+          800,
+          800
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 21,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Laghuk",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Laghuk",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 298986,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L298986"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Laghuk",
+        "currentLayer": "unknown",
+        "matchedWork": "Laghukaumudīvyākaraṇa",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1616,
+        "dateRange": [
+          1616,
+          1616
+        ],
+        "chronologicalEra": "late-medieval",
+        "corpusChunks": 68,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Mahāvy",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Mahāvy",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 69289,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L69289"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Mahāvy",
+        "currentLayer": "unknown",
+        "matchedWork": "Mahāvyutpatti",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 811,
+        "dateRange": [
+          811,
+          811
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 23,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:MaitrS",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "MaitrS",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "MaitrS",
+        "currentLayer": "vedic",
+        "matchedWork": "Maitrāyaṇī-Saṃhitā",
+        "matchVia": "alias",
+        "matchConfidence": "high",
+        "datedSections": 1,
+        "dateMedian": -903,
+        "dateRange": [
+          -903,
+          -903
+        ],
+        "chronologicalEra": "vedic",
+        "corpusChunks": 124,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Mālatīm",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Mālatīm",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Mālatīm",
+        "currentLayer": "classical",
+        "matchedWork": "Mālatīmādhava",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 753,
+        "dateRange": [
+          753,
+          753
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 91,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:MatsyaP",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "MatsyaP",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "MatsyaP",
+        "currentLayer": "puranic",
+        "matchedWork": "Matsya-Purāṇa",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 442,
+        "dateRange": [
+          442,
+          442
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 178,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:MBh",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "MBh",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "MBh",
+        "currentLayer": "epic",
+        "matchedWork": "Mahābhārata",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 18,
+        "dateMedian": 60,
+        "dateRange": [
+          11,
+          275
+        ],
+        "chronologicalEra": "epic-sutra",
+        "corpusChunks": 2278,
+        "corpusVolumeBand": 5,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Megh",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Megh",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Megh",
+        "currentLayer": "classical",
+        "matchedWork": "Meghadūta",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 3,
+        "dateMedian": 419,
+        "dateRange": [
+          418,
+          419
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 11,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Nidānas",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Nidānas",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 28840,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L28840"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Nidānas",
+        "currentLayer": "unknown",
+        "matchedWork": "Nidānasaṃyukta",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 452,
+        "dateRange": [
+          452,
+          452
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 15,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Nīlak",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Nīlak",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 6030,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6030"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Nīlak",
+        "currentLayer": "unknown",
+        "matchedWork": "Nīlakaṇṭha",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1368,
+        "dateRange": [
+          1368,
+          1368
+        ],
+        "chronologicalEra": "late-medieval",
+        "corpusChunks": 138,
+        "corpusVolumeBand": 4,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Nyāyam",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Nyāyam",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Nyāyam",
+        "currentLayer": "technical",
+        "matchedWork": "Nyāyamañjarī",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 879,
+        "dateRange": [
+          879,
+          879
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 155,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Nyāyas",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Nyāyas",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Nyāyas",
+        "currentLayer": "technical",
+        "matchedWork": "Nyāyasūtra",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 3,
+        "dateMedian": 139,
+        "dateRange": [
+          127,
+          201
+        ],
+        "chronologicalEra": "epic-sutra",
+        "corpusChunks": 278,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Paipp",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Paipp",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 565454,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L565454"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Paipp",
+        "currentLayer": "unknown",
+        "matchedWork": "Paippalāda-Saṃhitā",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": -923,
+        "dateRange": [
+          -923,
+          -923
+        ],
+        "chronologicalEra": "vedic",
+        "corpusChunks": 298,
+        "corpusVolumeBand": 4,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Pañcar",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Pañcar",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 103381,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L103381"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Pañcar",
+        "currentLayer": "unknown",
+        "matchedWork": "Pañcarakṣādevīstotrāṇi",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 608,
+        "dateRange": [
+          608,
+          608
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 1,
+        "corpusVolumeBand": 1,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Pañcat",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Pañcat",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Pañcat",
+        "currentLayer": "classical",
+        "matchedWork": "Pañcatantra",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 2,
+        "dateMedian": 201,
+        "dateRange": [
+          200,
+          201
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 107,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Prasann",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Prasann",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 360307,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L360307"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Prasann",
+        "currentLayer": "unknown",
+        "matchedWork": "Prasannapadā",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 610,
+        "dateRange": [
+          610,
+          610
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 103,
+        "corpusVolumeBand": 4,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Pratāp",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Pratāp",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Pratāp",
+        "currentLayer": "technical",
+        "matchedWork": "Pratāparudrīya",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1305,
+        "dateRange": [
+          1305,
+          1305
+        ],
+        "chronologicalEra": "late-medieval",
+        "corpusChunks": 56,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Pratāpar",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Pratāpar",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 111879,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L111879"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Pratāpar",
+        "currentLayer": "unknown",
+        "matchedWork": "Pratāparudrīya",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1305,
+        "dateRange": [
+          1305,
+          1305
+        ],
+        "chronologicalEra": "late-medieval",
+        "corpusChunks": 56,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Pravar",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Pravar",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Pravar",
+        "currentLayer": "technical",
+        "matchedWork": "Pravāraṇāvastu",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 328,
+        "dateRange": [
+          328,
+          328
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 6,
+        "corpusVolumeBand": 2,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Prāyaśc",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Prāyaśc",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 227249,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L227249"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Prāyaśc",
+        "currentLayer": "unknown",
+        "matchedWork": "Prāyaścittasamuccaya",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1144,
+        "dateRange": [
+          1144,
+          1144
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 31,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:R",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "R",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "R",
+        "currentLayer": "epic",
+        "matchedWork": "Rāmāyaṇa",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 8,
+        "dateMedian": 101,
+        "dateRange": [
+          8,
+          175
+        ],
+        "chronologicalEra": "epic-sutra",
+        "corpusChunks": 449,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Ragh",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Ragh",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Ragh",
+        "currentLayer": "classical",
+        "matchedWork": "Raghuvaṃśa",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 3,
+        "dateMedian": 419,
+        "dateRange": [
+          418,
+          420
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 53,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Rājat",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Rājat",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Rājat",
+        "currentLayer": "classical",
+        "matchedWork": "Rājataraṅginī",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1145,
+        "dateRange": [
+          1145,
+          1145
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 27,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:RevāKh",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "RevāKh",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 242907,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L242907"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "RevāKh",
+        "currentLayer": "unknown",
+        "matchedWork": "Revākhaṇḍa of the Vāyupurāṇa",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1046,
+        "dateRange": [
+          1046,
+          1046
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 163,
+        "corpusVolumeBand": 4,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Rudray",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Rudray",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 207397,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L207397"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Rudray",
+        "currentLayer": "unknown",
+        "matchedWork": "Rudrayāmalatantra",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 748,
+        "dateRange": [
+          748,
+          748
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 157,
+        "corpusVolumeBand": 4,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:RV",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "RV",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "RV",
+        "currentLayer": "vedic",
+        "matchedWork": "Ṛgveda",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 11,
+        "dateMedian": -1124,
+        "dateRange": [
+          -1125,
+          -1118
+        ],
+        "chronologicalEra": "vedic",
+        "corpusChunks": 424,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Sāṃkhyak",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Sāṃkhyak",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Sāṃkhyak",
+        "currentLayer": "technical",
+        "matchedWork": "Sāṃkhyakārikā",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 5,
+        "dateMedian": 406,
+        "dateRange": [
+          355,
+          416
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 61,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:ŚBr",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "ŚBr",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "ŚBr",
+        "currentLayer": "vedic",
+        "matchedWork": "Śatapatha-Brāhmaṇa",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 1,
+        "dateMedian": -684,
+        "dateRange": [
+          -684,
+          -684
+        ],
+        "chronologicalEra": "vedic",
+        "corpusChunks": 111,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:ŚiraUp",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "ŚiraUp",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 200040,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L200040"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "ŚiraUp",
+        "currentLayer": "unknown",
+        "matchedWork": "Śira-Upaniṣad",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": -280,
+        "dateRange": [
+          -280,
+          -280
+        ],
+        "chronologicalEra": "epic-sutra",
+        "corpusChunks": 2,
+        "corpusVolumeBand": 2,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:SkandaP",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "SkandaP",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "SkandaP",
+        "currentLayer": "puranic",
+        "matchedWork": "Skanda-Purāṇa",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 2,
+        "dateMedian": 730,
+        "dateRange": [
+          624,
+          835
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 1074,
+        "corpusVolumeBand": 5,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Śrīkaṇṭh",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Śrīkaṇṭh",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 331518,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L331518"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Śrīkaṇṭh",
+        "currentLayer": "unknown",
+        "matchedWork": "Śrīkaṇṭha",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 949,
+        "dateRange": [
+          949,
+          949
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 17,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Śṛṅgār",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Śṛṅgār",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 147520,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L147520"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Śṛṅgār",
+        "currentLayer": "unknown",
+        "matchedWork": "Śṛṅgāratilaka",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 850,
+        "dateRange": [
+          850,
+          850
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 10,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Śukas",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Śukas",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 218403,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L218403"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Śukas",
+        "currentLayer": "unknown",
+        "matchedWork": "Śuka-saptati",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1143,
+        "dateRange": [
+          1143,
+          1143
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 29,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Sūryas",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Sūryas",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Sūryas",
+        "currentLayer": "technical",
+        "matchedWork": "Sūryasiddhānta",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 676,
+        "dateRange": [
+          676,
+          676
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 11,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Tantras",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Tantras",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 81648,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L81648"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Tantras",
+        "currentLayer": "unknown",
+        "matchedWork": "Tantrasāra",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 2,
+        "dateMedian": 999,
+        "dateRange": [
+          999,
+          999
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 50,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Vajracch",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Vajracch",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 24025,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L24025"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Vajracch",
+        "currentLayer": "unknown",
+        "matchedWork": "Vajracchedikā Prajñāpāramitā",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 3,
+        "dateMedian": 515,
+        "dateRange": [
+          280,
+          531
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 13,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Vāsav",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Vāsav",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 153816,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L153816"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Vāsav",
+        "currentLayer": "unknown",
+        "matchedWork": "Vāsavadattā",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 608,
+        "dateRange": [
+          608,
+          608
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 13,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Vedāntas",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Vedāntas",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Vedāntas",
+        "currentLayer": "technical",
+        "matchedWork": "Vedāntasāra",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 1445,
+        "dateRange": [
+          1445,
+          1445
+        ],
+        "chronologicalEra": "late-medieval",
+        "corpusChunks": 130,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Veṇīs",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Veṇīs",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Veṇīs",
+        "currentLayer": "classical",
+        "matchedWork": "Veṇīsaṃhāra",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 1,
+        "dateMedian": 699,
+        "dateRange": [
+          699,
+          699
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 33,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Viṣṇus",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Viṣṇus",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "MW",
+          "line": 20704,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L20704"
+        },
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Viṣṇus",
+        "currentLayer": "unknown",
+        "matchedWork": "Viṣṇusmṛti",
+        "matchVia": "siglum",
+        "matchConfidence": "medium",
+        "datedSections": 2,
+        "dateMedian": 822,
+        "dateRange": [
+          816,
+          828
+        ],
+        "chronologicalEra": "early-medieval",
+        "corpusChunks": 64,
+        "corpusVolumeBand": 3,
+        "verdict": "date-proposed (unknown source)"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:VP",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "VP",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "VP",
+        "currentLayer": "puranic",
+        "matchedWork": "Viṣṇu-Purāṇa",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 2,
+        "dateMedian": 431,
+        "dateRange": [
+          407,
+          454
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 245,
+        "corpusVolumeBand": 4,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-date-anchor:Yogas",
+      "queue": "source-date-anchor",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "Yogas",
+        "lemma": null,
+        "dictionaries": [
+          "MW"
+        ]
+      },
+      "sourcePointers": [
+        {
+          "dictionary": "Dharmamitra dating",
+          "line": null,
+          "href": "https://github.com/dharmamitra/sanskrit-dating"
+        }
+      ],
+      "machineValue": {
+        "siglum": "Yogas",
+        "currentLayer": "technical",
+        "matchedWork": "Yogasūtra",
+        "matchVia": "expansion",
+        "matchConfidence": "high",
+        "datedSections": 3,
+        "dateMedian": 211,
+        "dateRange": [
+          209,
+          213
+        ],
+        "chronologicalEra": "classical",
+        "corpusChunks": 14,
+        "corpusVolumeBand": 3,
+        "verdict": "date-anchored"
+      },
+      "evidenceLevel": "inferred",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    }
+  ]
+}

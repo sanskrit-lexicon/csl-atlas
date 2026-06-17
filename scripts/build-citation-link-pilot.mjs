@@ -25,6 +25,7 @@ import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/r
 const MW_SOURCE = path.resolve(process.cwd(), "..", "csl-orig", "v02", "mw", "mw.txt");
 const MW_HREF = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt";
 const OUTPUT = path.resolve(process.cwd(), "src", "data", "review", "citation-link-pilot-review.json");
+const VERSE_COUNTS_PATH = path.resolve(process.cwd(), "src", "data", "external", "rv-verse-counts.json");
 
 const VEDAWEB_BASE = "https://vedaweb.uni-koeln.de/rigveda/view/id/";
 const VEDAWEB_WORK = "https://vedaweb.uni-koeln.de/rigveda";
@@ -35,12 +36,29 @@ const ROMAN = { i: 1, ii: 2, iii: 3, iv: 4, v: 5, vi: 6, vii: 7, viii: 8, ix: 9,
 // Known Ṛgveda structure: hymns per maṇḍala (1..10). Used to range-check loci.
 const HYMNS_PER_MANDALA = { 1: 191, 2: 43, 3: 62, 4: 58, 5: 87, 6: 75, 7: 104, 8: 103, 9: 114, 10: 191 };
 
-function vedawebId(m, h, v) {
+export function vedawebId(m, h, v) {
   return String(m).padStart(2, "0") + String(h).padStart(3, "0") + String(v).padStart(2, "0");
 }
 
+// Load the per-hymn stanza-count table (npm run import-rv-verse-counts). Absent
+// snapshot → null, and validation falls back to the conservative global cap.
+export function loadVerseCounts(file = VERSE_COUNTS_PATH) {
+  try {
+    const data = JSON.parse(fs.readFileSync(file, "utf8"));
+    if (data?.versesPerHymn) return data;
+  } catch { /* snapshot not present — fall back below */ }
+  return null;
+}
+
+// Stanzas in (maṇḍala, hymn) per the table, or null when the table is absent or
+// the hymn is unknown to it.
+function stanzasIn(verseCounts, m, h) {
+  const arr = verseCounts?.versesPerHymn?.[m];
+  return arr ? (arr[h - 1] ?? null) : null;
+}
+
 // Parse the locus text after "RV.". Returns {kind, mandala?, hymn?, verse?}.
-function parseLocus(raw) {
+export function parseLocus(raw) {
   const s = raw.replace(/\.\s*$/, "").trim();
   if (!s) return { kind: "work-level" };               // bare "RV."
   if (/[;&]| and /i.test(s)) return { kind: "multi" };  // combined refs -> link-splitting
@@ -55,19 +73,25 @@ function parseLocus(raw) {
   return { kind: "verse", mandala: m, hymn: h, verse: v };
 }
 
-// Range-check a verse locus. Maṇḍala/hymn are validated exactly; verse uses a
-// conservative global cap (no RV hymn exceeds 58 verses) — enough to catch
-// egregious mis-parses without a full per-hymn verse-count table (a next step).
+// Range-check a verse locus. Maṇḍala and hymn are always validated exactly. The
+// verse is validated against that hymn's actual stanza count when the per-hymn
+// table (npm run import-rv-verse-counts) is present; otherwise it falls back to
+// a conservative global cap (no RV hymn exceeds 58 stanzas).
 const MAX_VERSE = 58;
-function inRange(m, h, v) {
-  return HYMNS_PER_MANDALA[m] != null && h >= 1 && h <= HYMNS_PER_MANDALA[m] && v >= 1 && v <= MAX_VERSE;
+export function inRange(m, h, v, verseCounts = null) {
+  if (HYMNS_PER_MANDALA[m] == null || h < 1 || h > HYMNS_PER_MANDALA[m] || v < 1) return false;
+  const stanzas = stanzasIn(verseCounts, m, h);
+  return stanzas != null ? v <= stanzas : v <= MAX_VERSE;
 }
 
 function main() {
   const lines = fs.readFileSync(MW_SOURCE, "utf8").split(/\r?\n/);
+  const verseCounts = loadVerseCounts();
+  const verseValidation = verseCounts ? "exact-per-hymn" : "global-cap";
   const byLocus = new Map(); // "m.h.v" -> { mandala,hymn,verse, count, line, raw }
   const tally = { verse: 0, "hymn-level": 0, "mandala-only": 0, "work-level": 0, multi: 0, ambiguous: 0, unparseable: 0, "out-of-range": 0 };
   let totalCites = 0;
+  let verseExceedsHymn = 0; // out-of-range citations caught specifically by the per-hymn table
 
   for (let i = 0; i < lines.length; i++) {
     let m;
@@ -76,7 +100,12 @@ function main() {
       totalCites += 1;
       const loc = parseLocus(m[1]);
       if (loc.kind !== "verse") { tally[loc.kind] += 1; continue; }
-      if (!inRange(loc.mandala, loc.hymn, loc.verse)) { tally["out-of-range"] += 1; continue; }
+      if (!inRange(loc.mandala, loc.hymn, loc.verse, verseCounts)) {
+        tally["out-of-range"] += 1;
+        const stanzas = stanzasIn(verseCounts, loc.mandala, loc.hymn);
+        if (stanzas != null && loc.hymn <= HYMNS_PER_MANDALA[loc.mandala] && loc.verse > stanzas) verseExceedsHymn += 1;
+        continue;
+      }
       tally.verse += 1;
       const key = `${loc.mandala}.${loc.hymn}.${loc.verse}`;
       let e = byLocus.get(key);
@@ -124,16 +153,26 @@ function main() {
     extra: {
       source: "RV", linkTarget: VEDAWEB_BASE, workLink: VEDAWEB_WORK,
       totalRvCitations: totalCites, distinctVerseLoci: candidates.length,
+      verseValidation, // "exact-per-hymn" once the table is imported, else "global-cap"
+      verseCountsSource: verseCounts
+        ? { name: verseCounts.source?.name, repository: verseCounts.source?.repository, totalHymns: verseCounts.totalHymns, totalStanzas: verseCounts.totalStanzas }
+        : null,
+      verseExceedsHymn, // citations the per-hymn table rejects that the ≤58 cap would have passed
       breakdown: tally
     },
     assumptions: [
       "Pilot scope: Monier-Williams citations to the Ṛgveda only; one source, the achievable explicit-locus path.",
       "Locus = roman maṇḍala + arabic hymn + verse (e.g. 'RV. v, 86, 5' -> 5.86.5); deduped by locus, citationCount = MW entries citing it.",
-      "Link target is VedaWeb (vedaweb.uni-koeln.de) by zero-padded MMHHHVV stanza id; range-checked against the known RV hymn counts per maṇḍala.",
+      "Link target is VedaWeb (vedaweb.uni-koeln.de) by zero-padded MMHHHVV stanza id.",
+      verseCounts
+        ? "Maṇḍala, hymn, AND verse are all range-checked exactly: verse against that hymn's stanza count from the VedaWeb stanza index (npm run import-rv-verse-counts)."
+        : "Maṇḍala/hymn are range-checked against the known RV hymn counts; verse against a conservative global cap (run npm run import-rv-verse-counts to enable exact per-hymn validation).",
       "This proposes links for human review; it never writes links into csl-orig. Reviews preserved by reviewId across rebuilds."
     ],
     warnings: [
-      "Maṇḍala/hymn ranges are validated exactly; verse uses only a conservative global cap (≤58), so a wrong-but-in-cap verse can still pass. A per-hymn verse-count table would tighten this (next step); reviewers should spot-check that VedaWeb resolves the stanza.",
+      verseCounts
+        ? `Verse indices are validated exactly against each hymn's stanza count (VedaWeb stanza index: ${verseCounts.totalHymns} hymns, ${verseCounts.totalStanzas} stanzas); the per-hymn table rejected ${verseExceedsHymn} citation(s) the old ≤58 cap would have passed. A valid range still does not prove the citation is correct, only that the locus exists — reviewers should spot-check that VedaWeb resolves the stanza.`
+        : "Verse uses only a conservative global cap (≤58), so a wrong-but-in-cap verse can still pass. Run npm run import-rv-verse-counts to validate the verse against each hymn's actual stanza count.",
       "Out of scope here: work-level/maṇḍala-only/multi-locus citations (multi = link-splitting, the second DTB sub-task) and quote-only citations (the mitra-aligner case in MITRA_ALIGNER_HANDOFF.md).",
       "VedaWeb is a single-page app: a 200 does not by itself confirm a stanza exists — hence the range-check and the review gate."
     ]
@@ -142,7 +181,7 @@ function main() {
   writeReport(OUTPUT, payload);
   console.log(`Wrote ${items.length} citation-link-target items (${preservedCount} human reviews preserved) to:`);
   console.log(`- ${path.relative(process.cwd(), OUTPUT)}`);
-  console.log(`  RV citations: ${totalCites} | breakdown: ${JSON.stringify(tally)}`);
+  console.log(`  RV citations: ${totalCites} | verse validation: ${verseValidation} (per-hymn table rejected ${verseExceedsHymn}) | breakdown: ${JSON.stringify(tally)}`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) main();

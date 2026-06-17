@@ -6,7 +6,7 @@ The former `MICROSTRUCTURE_AND_CAREER_PLAN.md` mixed dictionary
 microstructure, publication scheduling, corpus-based dictionary planning,
 standards tracking, and career planning. It is preserved as:
 
-- `docs/MICROSTRUCTURE_AND_CAREER_PLAN_LEGACY_CROSS_REPO_PROGRAM.md`
+- `docs/archive/MICROSTRUCTURE_AND_CAREER_PLAN_LEGACY_CROSS_REPO_PROGRAM.md`
 
 That legacy file is not active implementation guidance.
 

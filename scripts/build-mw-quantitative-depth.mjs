@@ -21,7 +21,7 @@ import {
   compoundSegmentCount,
   FAMILY_ASSUMPTIONS
 } from "./lib/mw-depth-graph.mjs";
-import { licenseFields } from "./lib/dataset-meta.mjs";
+import { licenseFields, generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "mw");
@@ -53,6 +53,7 @@ function envelope(extra, { assumptions = [], warnings = [], recordCount }) {
 
 function writeJson(name, payload) {
   const out = path.join(OUT_DIR, name);
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(out, fs), payload);
   fs.writeFileSync(out, `${JSON.stringify(payload, null, 2)}\n`);
   return path.relative(process.cwd(), out);
 }
