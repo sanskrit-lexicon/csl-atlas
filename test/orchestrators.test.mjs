@@ -1128,7 +1128,15 @@ test("xref source-check rows keep human fields empty and reviewer-ready", () => 
   assert.equal(rows.length, 50);
   for (const row of rows) {
     const id = row.sampleId ?? row.controlId;
-    assert.equal(row.reviewStatus, "needs-source-check", `${id} should remain needs-source-check`);
+    // A row is either awaiting source-check or deterministically auto-resolved
+    // (prefix-convention via a target truncation marker); either way no human
+    // decision is written, so the human fields stay empty.
+    assert.ok(["needs-source-check", "auto-resolved"].includes(row.reviewStatus), `${id} unexpected status ${row.reviewStatus}`);
+    assert.equal(row.reviewStatus === "auto-resolved", row.autoTriage?.resolved === true, `${id} status/autoTriage disagree`);
+    if (row.autoTriage?.resolved) {
+      assert.equal(row.autoTriage.proposedDecision, "prefix-convention", `${id} unexpected auto decision`);
+      assert.ok(row.autoTriage.evidence?.target, `${id} auto-resolved without evidence`);
+    }
     assert.equal(row.reviewedValue, null, `${id} reviewedValue should stay null`);
     assert.equal(row.reviewer, "", `${id} reviewer should stay empty`);
     assert.equal(row.reviewedAt, "", `${id} reviewedAt should stay empty`);
