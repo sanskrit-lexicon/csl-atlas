@@ -26,6 +26,7 @@ import {
   splitRecord,
   indigenousAuthorityHints
 } from "./build-r2-source-anchors.mjs";
+import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const OUT_DIR = path.resolve(process.cwd(), "data", "lexico");
 const REVIEW_PATH = path.resolve(process.cwd(), "src", "data", "review", "r2-checkpoint-review.json");
@@ -451,6 +452,7 @@ function buildDoc(payload) {
 function main() {
   const { results, warnings } = runExperiment();
   const payload = buildPayload(results, warnings);
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(JSON_OUT, fs), payload);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`);
   fs.writeFileSync(DOC_OUT, buildDoc(payload));
