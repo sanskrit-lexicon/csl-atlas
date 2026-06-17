@@ -1,8 +1,8 @@
 # H4 Semantic-Field Review Samples
 
-Date: 2026-06-07
+Date: 2026-06-17
 
-Status: generated machine-only H4 review worksheet. All rows remain `needs-review`; no human decisions are recorded.
+Status: generated machine-only H4 review worksheet. 15 of 105 rows are deterministically auto-resolved (`variant-headword` — the lemma is present in the dictionary under a loose-fold headword match, evidence in `autoTriage.evidence.matchedHeadword`); 90 still need human review. No human decisions are recorded here, and auto-resolved rows can be audited or overridden.
 
 ## Trust Block
 
@@ -17,6 +17,8 @@ Status: generated machine-only H4 review worksheet. All rows remain `needs-revie
 | Metric | Count |
 |---|---:|
 | Sample rows | 105 |
+| Auto-resolved (variant-headword) | 15 |
+| Needs human review | 90 |
 | Source pointers | 290 |
 | Exact dictionary pointers | 80 |
 | Family profiles | 5 |

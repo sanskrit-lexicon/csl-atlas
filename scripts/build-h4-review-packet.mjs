@@ -12,6 +12,7 @@ import { pathToFileURL } from "node:url";
 import { parseCsv } from "./build-h5-anomaly-review.mjs";
 import { dictExists, iterateDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
+import { slp1_form_key } from "../src/lib/sanskrit-util.js";
 
 const SCHEMA_VERSION = "1.0.0";
 const GENERATED_BY = "npm run build-h4-review-packet";
@@ -375,6 +376,14 @@ export function preservedSourcePointerMap(packet) {
   return preserved;
 }
 
+export function preservedAutoTriageMap(packet) {
+  const preserved = new Map();
+  for (const row of packet.sampleRows ?? []) {
+    if (row.autoTriage) preserved.set(row.reviewId, row.autoTriage);
+  }
+  return preserved;
+}
+
 function loadPreservedSourcePointers(outputPath) {
   if (!fs.existsSync(outputPath)) return new Map();
   try {
@@ -548,7 +557,16 @@ function validatePayload(payload) {
     }
     if (!row.sourcePointers?.length) errors.push(`${row.reviewId}: missing sourcePointers`);
     if (!row.reviewQuestion) errors.push(`${row.reviewId}: missing reviewQuestion`);
-    if (row.reviewStatus !== "needs-review") errors.push(`${row.reviewId}: reviewStatus must be needs-review`);
+    const autoResolved = row.autoTriage?.resolved === true;
+    if (row.reviewStatus !== "needs-review" && row.reviewStatus !== "auto-resolved") {
+      errors.push(`${row.reviewId}: reviewStatus must be needs-review or auto-resolved`);
+    }
+    if (autoResolved !== (row.reviewStatus === "auto-resolved")) {
+      errors.push(`${row.reviewId}: reviewStatus/autoTriage.resolved disagree`);
+    }
+    if (autoResolved && !(row.expectedDecisionLabels ?? []).includes(row.autoTriage.proposedDecision)) {
+      errors.push(`${row.reviewId}: auto-resolved decision ${row.autoTriage.proposedDecision} not in vocabulary`);
+    }
     if (row.reviewedValue !== null) errors.push(`${row.reviewId}: reviewedValue must be null`);
     if (row.reviewer !== "" || row.reviewedAt !== "" || row.note !== "") {
       errors.push(`${row.reviewId}: human fields must remain empty`);
@@ -559,15 +577,78 @@ function validatePayload(payload) {
   }
 }
 
+// Deterministic auto-triage: a `missing` row is mechanically explained when the
+// AMAR lemma IS present in the dictionary under a looser headword fold
+// (slp1_form_key folds the gender suffix / accent / visarga / final homonym
+// digit that the strict key keeps). Such a row is a `variant-headword`, not a
+// genuine gap — auto-resolve it (recording the matched headword as evidence) so
+// the reviewer only works the rows that aren't mechanically explainable. Rows
+// stay in the packet with reviewStatus "auto-resolved" so a human can audit or
+// override; nothing here is written to csl-orig. Only fires when the proposed
+// decision is in that sample type's vocabulary.
+const AUTO_TRIAGE_DECISION = { "skd-false-low": "variant-headword" };
+
+// `preserved` (reviewId -> autoTriage block) lets a caller reuse a committed
+// packet's auto-triage instead of re-reading csl-orig — the same idempotency
+// pattern as the source pointers, and what keeps the regeneration test green on
+// the csl-orig-less CI runner. The generator passes no preserved map (it
+// recomputes fresh from the live dictionaries).
+export function applyAutoTriage(rows, iterate = iterateDict, exists = dictExists, preserved = new Map()) {
+  const codes = new Set(
+    rows.filter(row => !preserved.has(row.reviewId)
+      && AUTO_TRIAGE_DECISION[row.sampleType] && row.machineState === "missing")
+      .map(row => row.dictionary.code)
+  );
+  const foldIndex = new Map(); // code -> Map<foldKey, headword>
+  for (const code of codes) {
+    const m = new Map();
+    if (exists(code)) {
+      for (const rec of iterate(code)) {
+        if (!rec.k1) continue;
+        const fk = slp1_form_key(rec.k1);
+        if (!m.has(fk)) m.set(fk, rec.k1);
+      }
+    }
+    foldIndex.set(code, m);
+  }
+  for (const row of rows) {
+    if (preserved.has(row.reviewId)) {
+      row.autoTriage = preserved.get(row.reviewId);
+      if (row.autoTriage?.resolved) row.reviewStatus = "auto-resolved";
+      continue;
+    }
+    const decision = AUTO_TRIAGE_DECISION[row.sampleType];
+    const eligible = decision && row.machineState === "missing"
+      && (row.expectedDecisionLabels ?? []).includes(decision);
+    const matched = eligible ? foldIndex.get(row.dictionary.code)?.get(slp1_form_key(row.lemma)) : null;
+    if (matched && norm(matched) !== norm(row.lemma)) {
+      row.autoTriage = {
+        resolved: true,
+        proposedDecision: decision,
+        basis: "loose-fold-headword-match",
+        evidence: { matchedHeadword: matched, foldKey: slp1_form_key(row.lemma) }
+      };
+      row.reviewStatus = "auto-resolved";
+    } else {
+      row.autoTriage = { resolved: false };
+    }
+  }
+  return rows;
+}
+
 export function buildPayload(
   semanticData,
   familyProfiles,
   semanticFieldRows,
   generatedAt = new Date().toISOString(),
-  preservedSourcePointers = new Map()
+  preservedSourcePointers = new Map(),
+  preservedAutoTriage = new Map()
 ) {
   const semanticRows = semanticRowIndex(semanticFieldRows);
-  const sampleRows = buildSampleRows(semanticData, familyProfiles, semanticRows, preservedSourcePointers);
+  const sampleRows = applyAutoTriage(
+    buildSampleRows(semanticData, familyProfiles, semanticRows, preservedSourcePointers),
+    iterateDict, dictExists, preservedAutoTriage
+  );
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     status: "h4-semantic-field-review-packet",
@@ -584,6 +665,9 @@ export function buildPayload(
     ],
     counts: {
       sampleRows: sampleRows.length,
+      autoResolved: sampleRows.filter(row => row.autoTriage?.resolved).length,
+      needsHumanReview: sampleRows.filter(row => !row.autoTriage?.resolved).length,
+      byAutoDecision: countBy(sampleRows.filter(row => row.autoTriage?.resolved), row => row.autoTriage.proposedDecision),
       bySampleType: countBy(sampleRows, row => row.sampleType),
       byProposedLabel: countBy(sampleRows, row => row.proposedLabel),
       byDictionary: countBy(sampleRows, row => row.dictionary.code),
@@ -641,7 +725,7 @@ export function buildMarkdown(packet) {
   lines.push("");
   lines.push(`Date: ${packet.generatedAt.slice(0, 10)}`);
   lines.push("");
-  lines.push("Status: generated machine-only H4 review worksheet. All rows remain `needs-review`; no human decisions are recorded.");
+  lines.push(`Status: generated machine-only H4 review worksheet. ${packet.counts.autoResolved} of ${packet.counts.sampleRows} rows are deterministically auto-resolved (\`variant-headword\` — the lemma is present in the dictionary under a loose-fold headword match, evidence in \`autoTriage.evidence.matchedHeadword\`); ${packet.counts.needsHumanReview} still need human review. No human decisions are recorded here, and auto-resolved rows can be audited or overridden.`);
   lines.push("");
   lines.push("## Trust Block");
   lines.push("");
@@ -656,6 +740,8 @@ export function buildMarkdown(packet) {
   lines.push("| Metric | Count |");
   lines.push("|---|---:|");
   lines.push(`| Sample rows | ${packet.counts.sampleRows} |`);
+  lines.push(`| Auto-resolved (variant-headword) | ${packet.counts.autoResolved} |`);
+  lines.push(`| Needs human review | ${packet.counts.needsHumanReview} |`);
   lines.push(`| Source pointers | ${packet.counts.sourcePointers} |`);
   lines.push(`| Exact dictionary pointers | ${packet.counts.exactDictionaryPointers} |`);
   lines.push(`| Family profiles | ${packet.counts.familyProfiles} |`);
