@@ -376,6 +376,14 @@ export function preservedSourcePointerMap(packet) {
   return preserved;
 }
 
+export function preservedAutoTriageMap(packet) {
+  const preserved = new Map();
+  for (const row of packet.sampleRows ?? []) {
+    if (row.autoTriage) preserved.set(row.reviewId, row.autoTriage);
+  }
+  return preserved;
+}
+
 function loadPreservedSourcePointers(outputPath) {
   if (!fs.existsSync(outputPath)) return new Map();
   try {
@@ -580,9 +588,15 @@ function validatePayload(payload) {
 // decision is in that sample type's vocabulary.
 const AUTO_TRIAGE_DECISION = { "skd-false-low": "variant-headword" };
 
-export function applyAutoTriage(rows, iterate = iterateDict, exists = dictExists) {
+// `preserved` (reviewId -> autoTriage block) lets a caller reuse a committed
+// packet's auto-triage instead of re-reading csl-orig — the same idempotency
+// pattern as the source pointers, and what keeps the regeneration test green on
+// the csl-orig-less CI runner. The generator passes no preserved map (it
+// recomputes fresh from the live dictionaries).
+export function applyAutoTriage(rows, iterate = iterateDict, exists = dictExists, preserved = new Map()) {
   const codes = new Set(
-    rows.filter(row => AUTO_TRIAGE_DECISION[row.sampleType] && row.machineState === "missing")
+    rows.filter(row => !preserved.has(row.reviewId)
+      && AUTO_TRIAGE_DECISION[row.sampleType] && row.machineState === "missing")
       .map(row => row.dictionary.code)
   );
   const foldIndex = new Map(); // code -> Map<foldKey, headword>
@@ -598,6 +612,11 @@ export function applyAutoTriage(rows, iterate = iterateDict, exists = dictExists
     foldIndex.set(code, m);
   }
   for (const row of rows) {
+    if (preserved.has(row.reviewId)) {
+      row.autoTriage = preserved.get(row.reviewId);
+      if (row.autoTriage?.resolved) row.reviewStatus = "auto-resolved";
+      continue;
+    }
     const decision = AUTO_TRIAGE_DECISION[row.sampleType];
     const eligible = decision && row.machineState === "missing"
       && (row.expectedDecisionLabels ?? []).includes(decision);
@@ -622,10 +641,14 @@ export function buildPayload(
   familyProfiles,
   semanticFieldRows,
   generatedAt = new Date().toISOString(),
-  preservedSourcePointers = new Map()
+  preservedSourcePointers = new Map(),
+  preservedAutoTriage = new Map()
 ) {
   const semanticRows = semanticRowIndex(semanticFieldRows);
-  const sampleRows = applyAutoTriage(buildSampleRows(semanticData, familyProfiles, semanticRows, preservedSourcePointers));
+  const sampleRows = applyAutoTriage(
+    buildSampleRows(semanticData, familyProfiles, semanticRows, preservedSourcePointers),
+    iterateDict, dictExists, preservedAutoTriage
+  );
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     status: "h4-semantic-field-review-packet",

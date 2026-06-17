@@ -26,7 +26,7 @@ import { EXPECTED_EDGE_IDS as THREE_AXIS_EDGE_IDS, axisReadingForScores, buildMa
 import { EXPECTED_PREFIX_CONTROL_IDS as XREF_PREFIX_CONTROL_IDS, EXPECTED_SHARED_CORE_SAMPLE_IDS as XREF_SHARED_CORE_IDS, XREF_LABEL_VOCABULARY, buildMarkdown as buildXrefSourceCheckMarkdown, buildPayload as buildXrefSourceCheckPayload, preservedSourcePointerMap as preservedXrefSourcePointerMap } from "../scripts/build-xref-source-check-packet.mjs";
 import { loadPreserved } from "../scripts/lib/review-report.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
-import { EXPECTED_H4_SAMPLE_COUNTS, H4_MACHINE_LABEL_VOCABULARY, buildMarkdown as buildH4ReviewPacketMarkdown, buildPayload as buildH4ReviewPacketPayload, preservedSourcePointerMap as preservedH4SourcePointerMap } from "../scripts/build-h4-review-packet.mjs";
+import { EXPECTED_H4_SAMPLE_COUNTS, H4_MACHINE_LABEL_VOCABULARY, buildMarkdown as buildH4ReviewPacketMarkdown, buildPayload as buildH4ReviewPacketPayload, preservedSourcePointerMap as preservedH4SourcePointerMap, preservedAutoTriageMap as preservedH4AutoTriageMap } from "../scripts/build-h4-review-packet.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
 import { classifyHubTarget, parseCsv as parseXrefCsv } from "../scripts/build-xref-hub-review.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
@@ -996,7 +996,8 @@ test("H4 review packet is generated from semantic field artifacts", () => {
       h4FamilyProfiles,
       h4SemanticRows,
       h4ReviewPacket.generatedAt,
-      preservedH4SourcePointerMap(h4ReviewPacket)
+      preservedH4SourcePointerMap(h4ReviewPacket),
+      preservedH4AutoTriageMap(h4ReviewPacket)
     )
   );
   assert.equal(normalizeLineEndings(h4ReviewPacketMd), buildH4ReviewPacketMarkdown(h4ReviewPacket));

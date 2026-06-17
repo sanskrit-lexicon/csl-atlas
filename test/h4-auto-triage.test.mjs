@@ -34,6 +34,16 @@ test("applyAutoTriage never fires where the decision isn't in the vocabulary", (
   assert.equal(rows[0].autoTriage.resolved, false);
 });
 
+test("applyAutoTriage reuses preserved auto-triage and never reads the dictionary", () => {
+  // This is what keeps the regeneration test green on the csl-orig-less CI runner.
+  const r = row({ reviewId: "h4-x" });
+  const preserved = new Map([["h4-x", { resolved: true, proposedDecision: "variant-headword", basis: "preserved", evidence: { matchedHeadword: "DanyaH" } }]]);
+  const throwIterate = () => { throw new Error("must not read the dictionary when preserved"); };
+  applyAutoTriage([r], throwIterate, () => true, preserved);
+  assert.equal(r.autoTriage.proposedDecision, "variant-headword");
+  assert.equal(r.reviewStatus, "auto-resolved");
+});
+
 test("applyAutoTriage does not resolve when only the strict key already matches", () => {
   // matched headword equals the lemma's strict key -> not a *variant*, leave it
   const rows = [row({ lemma: "DanyaH" })];
