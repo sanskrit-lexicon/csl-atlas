@@ -2,7 +2,7 @@
 
 Date: 2026-06-17
 
-Status: generated machine-only H4 review worksheet. 15 of 105 rows are deterministically auto-resolved (`variant-headword` — the lemma is present in the dictionary under a loose-fold headword match, evidence in `autoTriage.evidence.matchedHeadword`); 90 still need human review. No human decisions are recorded here, and auto-resolved rows can be audited or overridden.
+Status: generated machine-only H4 review worksheet. 16 of 105 rows are deterministically auto-resolved by a loose-fold headword match (the lemma is a normalization variant, not a real gap): `variant-headword` for a missing SKD entry, `normalization-risk` for an AP/AP90 edition delta — evidence in `autoTriage.evidence`. 89 still need human review (the `covered`-quality questions — thin entry, scope fit, reverse-index artifact — are genuine judgement, not auto-resolvable). No human decisions are recorded here, and auto-resolved rows can be audited or overridden.
 
 ## Trust Block
 
@@ -17,8 +17,8 @@ Status: generated machine-only H4 review worksheet. 15 of 105 rows are determini
 | Metric | Count |
 |---|---:|
 | Sample rows | 105 |
-| Auto-resolved (variant-headword) | 15 |
-| Needs human review | 90 |
+| Auto-resolved (variant / normalization) | 16 |
+| Needs human review | 89 |
 | Source pointers | 290 |
 | Exact dictionary pointers | 80 |
 | Family profiles | 5 |
