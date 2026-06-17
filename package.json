@@ -53,6 +53,7 @@
     "build-xref-hub-review": "node scripts/build-xref-hub-review.mjs",
     "build-xref-source-check-packet": "node scripts/build-xref-source-check-packet.mjs",
     "build-review-worksheets": "node scripts/build-review-worksheets.mjs",
+    "build-micro-entry": "node scripts/build-micro-entry.mjs",
     "recover-r2-archive": "node scripts/recover-r2-archive.mjs",
     "build-r2-source-anchors": "node scripts/build-r2-source-anchors.mjs",
     "build-r2-explorer": "node scripts/build-r2-explorer.mjs",
