@@ -49,6 +49,10 @@ MODE = "unsandhied-lemma-morphosyntax"
 # space-separated string of `unsandhied_lemma_shortTag` tokens; the short tag is
 # a key into sanskrit_tags.tsv that expands to UD features (…|Gender=Masc|…).
 HF_MODEL_ID = "chronbmm/sanskrit5-multitask"
+# Pinned model commit for reproducible `--source local` runs (2024-05-09). The
+# vendored sanskrit_tags.tsv short-circuits the tag-file fetch, so this pins ONLY
+# the model weights. Keep equal to dharmamitra_infer.PINNED_REVISION.
+PINNED_REVISION = "c0d2ada54f3d19903149425aa888a203601423f8"
 HF_TASK_PREFIX = "SLM "
 HF_MAX_LENGTH = 512
 TAGS_TSV_NAME = "sanskrit_tags.tsv"  # vendored next to this script for offline runs
@@ -225,8 +229,8 @@ def main():
     ap.add_argument("--source", choices=["pypi", "local"], default="pypi")
     ap.add_argument("--limit", type=int, default=0, help="cap lemmas for a pilot (0 = all)")
     ap.add_argument("--batch-size", type=int, default=32)
-    ap.add_argument("--revision", default="main",
-                    help="HF model/tag-file revision for --source local; pin a commit hash for reproducibility")
+    ap.add_argument("--revision", default=PINNED_REVISION,
+                    help=f"HF model revision for --source local (default: pinned {PINNED_REVISION[:12]}; pass another commit to override)")
     ap.add_argument("--tags-tsv", default=None,
                     help="override sanskrit_tags.tsv path (default: vendored next to script, else fetch)")
     ap.add_argument("--device", default=None, help="torch device for --source local (default: cuda if available)")
