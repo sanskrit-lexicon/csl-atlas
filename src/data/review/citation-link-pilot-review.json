@@ -2,33 +2,42 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-14T15:51:04.211Z",
+  "generatedAt": "2026-06-16T20:16:22.548Z",
   "sourcePath": "../csl-orig/v02/mw/mw.txt (<ls>RV. ...</ls>) -> VedaWeb",
-  "recordCount": 3996,
+  "recordCount": 3942,
   "queue": "citation-link-target",
   "source": "RV",
   "linkTarget": "https://vedaweb.uni-koeln.de/rigveda/view/id/",
   "workLink": "https://vedaweb.uni-koeln.de/rigveda",
   "totalRvCitations": 15916,
-  "distinctVerseLoci": 3996,
+  "distinctVerseLoci": 3942,
+  "verseValidation": "exact-per-hymn",
+  "verseCountsSource": {
+    "name": "VedaWeb curated Ṛgveda stanza index",
+    "repository": "https://github.com/VedaWebProject/vedaweb-data",
+    "totalHymns": 1028,
+    "totalStanzas": 10552
+  },
+  "verseExceedsHymn": 60,
   "breakdown": {
-    "verse": 5738,
+    "verse": 5682,
     "hymn-level": 354,
     "mandala-only": 79,
     "work-level": 9707,
     "multi": 0,
     "ambiguous": 1,
     "unparseable": 24,
-    "out-of-range": 13
+    "out-of-range": 69
   },
   "assumptions": [
     "Pilot scope: Monier-Williams citations to the Ṛgveda only; one source, the achievable explicit-locus path.",
     "Locus = roman maṇḍala + arabic hymn + verse (e.g. 'RV. v, 86, 5' -> 5.86.5); deduped by locus, citationCount = MW entries citing it.",
-    "Link target is VedaWeb (vedaweb.uni-koeln.de) by zero-padded MMHHHVV stanza id; range-checked against the known RV hymn counts per maṇḍala.",
+    "Link target is VedaWeb (vedaweb.uni-koeln.de) by zero-padded MMHHHVV stanza id.",
+    "Maṇḍala, hymn, AND verse are all range-checked exactly: verse against that hymn's stanza count from the VedaWeb stanza index (npm run import-rv-verse-counts).",
     "This proposes links for human review; it never writes links into csl-orig. Reviews preserved by reviewId across rebuilds."
   ],
   "warnings": [
-    "Maṇḍala/hymn ranges are validated exactly; verse uses only a conservative global cap (≤58), so a wrong-but-in-cap verse can still pass. A per-hymn verse-count table would tighten this (next step); reviewers should spot-check that VedaWeb resolves the stanza.",
+    "Verse indices are validated exactly against each hymn's stanza count (VedaWeb stanza index: 1028 hymns, 10552 stanzas); the per-hymn table rejected 60 citation(s) the old ≤58 cap would have passed. A valid range still does not prove the citation is correct, only that the locus exists — reviewers should spot-check that VedaWeb resolves the stanza.",
     "Out of scope here: work-level/maṇḍala-only/multi-locus citations (multi = link-splitting, the second DTB sub-task) and quote-only citations (the mitra-aligner case in MITRA_ALIGNER_HANDOFF.md).",
     "VedaWeb is a single-page app: a 200 does not by itself confirm a stanza exists — hence the range-check and the review gate."
   ],
@@ -1514,46 +1523,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:1.13.14",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 744636,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L744636"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0101314"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "1.13.14",
-        "mandala": 1,
-        "hymn": 13,
-        "verse": 14,
-        "vedawebId": "0101314",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0101314",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:1.14.1",
       "queue": "citation-link-target",
       "subject": {
@@ -2264,46 +2233,6 @@
         "vedawebId": "0102105",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0102105",
         "citationCount": 2,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:1.21.11",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 97322,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L97322"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0102111"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "1.21.11",
-        "mandala": 1,
-        "hymn": 21,
-        "verse": 11,
-        "vedawebId": "0102111",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0102111",
-        "citationCount": 1,
         "verdict": "link-proposed"
       },
       "evidenceLevel": "derived",
@@ -5903,46 +5832,6 @@
         "verse": 9,
         "vedawebId": "0103509",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0103509",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:1.35.14",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 86346,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86346"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0103514"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "1.35.14",
-        "mandala": 1,
-        "hymn": 35,
-        "verse": 14,
-        "vedawebId": "0103514",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0103514",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -27434,46 +27323,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:1.145.12",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 377098,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L377098"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0114512"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "1.145.12",
-        "mandala": 1,
-        "hymn": 145,
-        "verse": 12,
-        "vedawebId": "0114512",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0114512",
-        "citationCount": 2,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:1.146.1",
       "queue": "citation-link-target",
       "subject": {
@@ -30514,46 +30363,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:1.163.14",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 544383,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L544383"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0116314"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "1.163.14",
-        "mandala": 1,
-        "hymn": 163,
-        "verse": 14,
-        "vedawebId": "0116314",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0116314",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:1.164.1",
       "queue": "citation-link-target",
       "subject": {
@@ -32704,46 +32513,6 @@
         "vedawebId": "0116708",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0116708",
         "citationCount": 4,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:1.167.45",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 101233,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L101233"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0116745"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "1.167.45",
-        "mandala": 1,
-        "hymn": 167,
-        "verse": 45,
-        "vedawebId": "0116745",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0116745",
-        "citationCount": 1,
         "verdict": "link-proposed"
       },
       "evidenceLevel": "derived",
@@ -37634,46 +37403,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:2.3.16",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 318312,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L318312"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0200316"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "2.3.16",
-        "mandala": 2,
-        "hymn": 3,
-        "verse": 16,
-        "vedawebId": "0200316",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0200316",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:2.4.1",
       "queue": "citation-link-target",
       "subject": {
@@ -39423,46 +39152,6 @@
         "verse": 15,
         "vedawebId": "0201215",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0201215",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:2.12.16",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 308896,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L308896"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0201216"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "2.12.16",
-        "mandala": 2,
-        "hymn": 12,
-        "verse": 16,
-        "vedawebId": "0201216",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0201216",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -45194,46 +44883,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:2.36.8",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 498388,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L498388"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0203608"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "2.36.8",
-        "mandala": 2,
-        "hymn": 36,
-        "verse": 8,
-        "vedawebId": "0203608",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0203608",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:2.37.1",
       "queue": "citation-link-target",
       "subject": {
@@ -47154,46 +46803,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:3.3.33",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 542531,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L542531"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0300333"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "3.3.33",
-        "mandala": 3,
-        "hymn": 3,
-        "verse": 33,
-        "vedawebId": "0300333",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0300333",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:3.4.2",
       "queue": "citation-link-target",
       "subject": {
@@ -48154,46 +47763,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:3.12.15",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 161824,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L161824"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0301215"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "3.12.15",
-        "mandala": 3,
-        "hymn": 12,
-        "verse": 15,
-        "vedawebId": "0301215",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0301215",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:3.13.7",
       "queue": "citation-link-target",
       "subject": {
@@ -48583,46 +48152,6 @@
         "verse": 3,
         "vedawebId": "0302003",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0302003",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:3.20.24",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 85555,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L85555"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0302024"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "3.20.24",
-        "mandala": 3,
-        "hymn": 20,
-        "verse": 24,
-        "vedawebId": "0302024",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0302024",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -53023,46 +52552,6 @@
         "verse": 18,
         "vedawebId": "0305418",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0305418",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:3.54.55",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 521438,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L521438"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0305455"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "3.54.55",
-        "mandala": 3,
-        "hymn": 54,
-        "verse": 55,
-        "vedawebId": "0305455",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0305455",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -65714,46 +65203,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:5.21.5",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 117258,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L117258"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0502105"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "5.21.5",
-        "mandala": 5,
-        "hymn": 21,
-        "verse": 5,
-        "vedawebId": "0502105",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0502105",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:5.22.1",
       "queue": "citation-link-target",
       "subject": {
@@ -66744,46 +66193,6 @@
         "vedawebId": "0503015",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0503015",
         "citationCount": 2,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:5.30.17",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 756234,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L756234"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0503017"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "5.30.17",
-        "mandala": 5,
-        "hymn": 30,
-        "verse": 17,
-        "vedawebId": "0503017",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0503017",
-        "citationCount": 1,
         "verdict": "link-proposed"
       },
       "evidenceLevel": "derived",
@@ -68063,46 +67472,6 @@
         "verse": 8,
         "vedawebId": "0503508",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0503508",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:5.35.36",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 455095,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L455095"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0503536"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "5.35.36",
-        "mandala": 5,
-        "hymn": 35,
-        "verse": 36,
-        "vedawebId": "0503536",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0503536",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -70824,46 +70193,6 @@
         "vedawebId": "0505005",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0505005",
         "citationCount": 2,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:5.50.51",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 859987,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L859987"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0505051"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "5.50.51",
-        "mandala": 5,
-        "hymn": 50,
-        "verse": 51,
-        "vedawebId": "0505051",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0505051",
-        "citationCount": 1,
         "verdict": "link-proposed"
       },
       "evidenceLevel": "derived",
@@ -75143,46 +74472,6 @@
         "verse": 4,
         "vedawebId": "0508004",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0508004",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:5.80.24",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 253220,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L253220"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0508024"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "5.80.24",
-        "mandala": 5,
-        "hymn": 80,
-        "verse": 24,
-        "vedawebId": "0508024",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0508024",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -80914,46 +80203,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:6.31.32",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 831546,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L831546"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0603132"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "6.31.32",
-        "mandala": 6,
-        "hymn": 31,
-        "verse": 32,
-        "vedawebId": "0603132",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0603132",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:6.32.5",
       "queue": "citation-link-target",
       "subject": {
@@ -80994,46 +80243,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:6.32.6",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 363680,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L363680"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0603206"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "6.32.6",
-        "mandala": 6,
-        "hymn": 32,
-        "verse": 6,
-        "vedawebId": "0603206",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0603206",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:6.33.5",
       "queue": "citation-link-target",
       "subject": {
@@ -81063,46 +80272,6 @@
         "verse": 5,
         "vedawebId": "0603305",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0603305",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:6.33.34",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 728965,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L728965"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0603334"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "6.33.34",
-        "mandala": 6,
-        "hymn": 33,
-        "verse": 34,
-        "vedawebId": "0603334",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0603334",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -90063,46 +89232,6 @@
         "verse": 25,
         "vedawebId": "0701825",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0701825",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:7.18.28",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 310330,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L310330"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0701828"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "7.18.28",
-        "mandala": 7,
-        "hymn": 18,
-        "verse": 28,
-        "vedawebId": "0701828",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0701828",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -99194,46 +98323,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:8.1.38",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 10709,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L10709"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0800138"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.1.38",
-        "mandala": 8,
-        "hymn": 1,
-        "verse": 38,
-        "vedawebId": "0800138",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0800138",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:8.2.1",
       "queue": "citation-link-target",
       "subject": {
@@ -102383,46 +101472,6 @@
         "verse": 4,
         "vedawebId": "0801004",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0801004",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.10.12",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 97466,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L97466"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0801012"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.10.12",
-        "mandala": 8,
-        "hymn": 10,
-        "verse": 12,
-        "vedawebId": "0801012",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0801012",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -107234,46 +106283,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:8.32.50",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 489412,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L489412"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0803250"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.32.50",
-        "mandala": 8,
-        "hymn": 32,
-        "verse": 50,
-        "vedawebId": "0803250",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0803250",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:8.33.2",
       "queue": "citation-link-target",
       "subject": {
@@ -111634,46 +110643,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:8.52.15",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 498235,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L498235"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805215"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.52.15",
-        "mandala": 8,
-        "hymn": 52,
-        "verse": 15,
-        "vedawebId": "0805215",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805215",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:8.53.4",
       "queue": "citation-link-target",
       "subject": {
@@ -112154,86 +111123,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:8.55.8",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 363181,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L363181"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805508"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.55.8",
-        "mandala": 8,
-        "hymn": 55,
-        "verse": 8,
-        "vedawebId": "0805508",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805508",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.55.10",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 490799,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L490799"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805510"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.55.10",
-        "mandala": 8,
-        "hymn": 55,
-        "verse": 10,
-        "vedawebId": "0805510",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805510",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:8.56.3",
       "queue": "citation-link-target",
       "subject": {
@@ -112263,46 +111152,6 @@
         "verse": 3,
         "vedawebId": "0805603",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805603",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.56.15",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 7380,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7380"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805615"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.56.15",
-        "mandala": 8,
-        "hymn": 56,
-        "verse": 15,
-        "vedawebId": "0805615",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805615",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -112344,86 +111193,6 @@
         "vedawebId": "0805802",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805802",
         "citationCount": 2,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.58.9",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 399961,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L399961"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805809"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.58.9",
-        "mandala": 8,
-        "hymn": 58,
-        "verse": 9,
-        "vedawebId": "0805809",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805809",
-        "citationCount": 2,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.58.13",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 475219,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L475219"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805813"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.58.13",
-        "mandala": 8,
-        "hymn": 58,
-        "verse": 13,
-        "vedawebId": "0805813",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0805813",
-        "citationCount": 1,
         "verdict": "link-proposed"
       },
       "evidenceLevel": "derived",
@@ -114954,46 +113723,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:8.73.23",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 63665,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L63665"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0807323"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.73.23",
-        "mandala": 8,
-        "hymn": 73,
-        "verse": 23,
-        "vedawebId": "0807323",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0807323",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:8.74.5",
       "queue": "citation-link-target",
       "subject": {
@@ -116194,86 +114923,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:8.81.19",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 520925,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L520925"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808119"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.81.19",
-        "mandala": 8,
-        "hymn": 81,
-        "verse": 19,
-        "vedawebId": "0808119",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808119",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.81.27",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 392778,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L392778"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808127"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.81.27",
-        "mandala": 8,
-        "hymn": 81,
-        "verse": 27,
-        "vedawebId": "0808127",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808127",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:8.82.2",
       "queue": "citation-link-target",
       "subject": {
@@ -116383,46 +115032,6 @@
         "verse": 9,
         "vedawebId": "0808209",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808209",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.82.15",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 310700,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L310700"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808215"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.82.15",
-        "mandala": 8,
-        "hymn": 82,
-        "verse": 15,
-        "vedawebId": "0808215",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808215",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -116594,46 +115203,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:8.86.8",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 130822,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L130822"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808608"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.86.8",
-        "mandala": 8,
-        "hymn": 86,
-        "verse": 8,
-        "vedawebId": "0808608",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808608",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:8.87.1",
       "queue": "citation-link-target",
       "subject": {
@@ -116663,46 +115232,6 @@
         "verse": 1,
         "vedawebId": "0808701",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808701",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.88.8",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 629089,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L629089"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808808"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.88.8",
-        "mandala": 8,
-        "hymn": 88,
-        "verse": 8,
-        "vedawebId": "0808808",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0808808",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -116864,46 +115393,6 @@
         "vedawebId": "0809006",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0809006",
         "citationCount": 2,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.90.16",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 96236,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L96236"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0809016"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.90.16",
-        "mandala": 8,
-        "hymn": 90,
-        "verse": 16,
-        "vedawebId": "0809016",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0809016",
-        "citationCount": 1,
         "verdict": "link-proposed"
       },
       "evidenceLevel": "derived",
@@ -117743,46 +116232,6 @@
         "verse": 7,
         "vedawebId": "0809507",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0809507",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:8.95.13",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 465107,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L465107"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0809513"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "8.95.13",
-        "mandala": 8,
-        "hymn": 95,
-        "verse": 13,
-        "vedawebId": "0809513",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0809513",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -120474,46 +118923,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:9.17.24",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 492920,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L492920"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0901724"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "9.17.24",
-        "mandala": 9,
-        "hymn": 17,
-        "verse": 24,
-        "vedawebId": "0901724",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0901724",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:9.18.5",
       "queue": "citation-link-target",
       "subject": {
@@ -120703,46 +119112,6 @@
         "verse": 7,
         "vedawebId": "0902007",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0902007",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:9.20.12",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 730879,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L730879"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0902012"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "9.20.12",
-        "mandala": 9,
-        "hymn": 20,
-        "verse": 12,
-        "vedawebId": "0902012",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0902012",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -121063,46 +119432,6 @@
         "verse": 4,
         "vedawebId": "0903404",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0903404",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:9.39.40",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 490619,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L490619"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0903940"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "9.39.40",
-        "mandala": 9,
-        "hymn": 39,
-        "verse": 40,
-        "vedawebId": "0903940",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0903940",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -121543,86 +119872,6 @@
         "verse": 1,
         "vedawebId": "0905601",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0905601",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:9.56.15",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 748395,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L748395"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0905615"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "9.56.15",
-        "mandala": 9,
-        "hymn": 56,
-        "verse": 15,
-        "vedawebId": "0905615",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0905615",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:9.59.57",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 203213,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L203213"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0905957"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "9.59.57",
-        "mandala": 9,
-        "hymn": 59,
-        "verse": 57,
-        "vedawebId": "0905957",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0905957",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -125954,46 +124203,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:9.91.7",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 393168,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L393168"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0909107"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "9.91.7",
-        "mandala": 9,
-        "hymn": 91,
-        "verse": 7,
-        "vedawebId": "0909107",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0909107",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:9.92.2",
       "queue": "citation-link-target",
       "subject": {
@@ -126103,46 +124312,6 @@
         "verse": 5,
         "vedawebId": "0909205",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0909205",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:9.92.24",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 294870,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L294870"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/0909224"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "9.92.24",
-        "mandala": 9,
-        "hymn": 92,
-        "verse": 24,
-        "vedawebId": "0909224",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/0909224",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -129383,46 +127552,6 @@
         "verse": 6,
         "vedawebId": "1000206",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1000206",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:10.2.22",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 324924,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L324924"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/1000222"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "10.2.22",
-        "mandala": 10,
-        "hymn": 2,
-        "verse": 22,
-        "vedawebId": "1000222",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1000222",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -133874,46 +132003,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:10.27.33",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 489418,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L489418"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/1002733"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "10.27.33",
-        "mandala": 10,
-        "hymn": 27,
-        "verse": 33,
-        "vedawebId": "1002733",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1002733",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:10.28.1",
       "queue": "citation-link-target",
       "subject": {
@@ -135663,46 +133752,6 @@
         "verse": 14,
         "vedawebId": "1003614",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1003614",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:10.36.16",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 320894,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L320894"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/1003616"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "10.36.16",
-        "mandala": 10,
-        "hymn": 36,
-        "verse": 16,
-        "vedawebId": "1003616",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1003616",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -138983,46 +137032,6 @@
         "verse": 5,
         "vedawebId": "1005605",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1005605",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:10.57.9",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 241234,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L241234"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/1005709"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "10.57.9",
-        "mandala": 10,
-        "hymn": 57,
-        "verse": 9,
-        "vedawebId": "1005709",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1005709",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -143303,46 +141312,6 @@
         "verse": 4,
         "vedawebId": "1007804",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1007804",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:10.78.16",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 85558,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L85558"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/1007816"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "10.78.16",
-        "mandala": 10,
-        "hymn": 78,
-        "verse": 16,
-        "vedawebId": "1007816",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1007816",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
@@ -152114,46 +150083,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:10.110.12",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 578862,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L578862"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/1011012"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "10.110.12",
-        "mandala": 10,
-        "hymn": 110,
-        "verse": 12,
-        "vedawebId": "1011012",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1011012",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:10.111.2",
       "queue": "citation-link-target",
       "subject": {
@@ -158794,46 +156723,6 @@
       "note": ""
     },
     {
-      "reviewId": "citation-link-target:RV:10.166.9",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 52904,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L52904"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/1016609"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "10.166.9",
-        "mandala": 10,
-        "hymn": 166,
-        "verse": 9,
-        "vedawebId": "1016609",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1016609",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
       "reviewId": "citation-link-target:RV:10.168.1",
       "queue": "citation-link-target",
       "subject": {
@@ -159343,46 +157232,6 @@
         "verse": 2,
         "vedawebId": "1017702",
         "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1017702",
-        "citationCount": 1,
-        "verdict": "link-proposed"
-      },
-      "evidenceLevel": "derived",
-      "reviewStatus": "needs-review",
-      "reviewedValue": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "note": ""
-    },
-    {
-      "reviewId": "citation-link-target:RV:10.178.4",
-      "queue": "citation-link-target",
-      "subject": {
-        "kind": "citation",
-        "lemma": null,
-        "dictionaries": [
-          "MW"
-        ]
-      },
-      "sourcePointers": [
-        {
-          "dictionary": "MW",
-          "line": 710307,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L710307"
-        },
-        {
-          "dictionary": "VedaWeb RV",
-          "line": null,
-          "href": "https://vedaweb.uni-koeln.de/rigveda/view/id/1017804"
-        }
-      ],
-      "machineValue": {
-        "source": "RV",
-        "locus": "10.178.4",
-        "mandala": 10,
-        "hymn": 178,
-        "verse": 4,
-        "vedawebId": "1017804",
-        "proposedLink": "https://vedaweb.uni-koeln.de/rigveda/view/id/1017804",
         "citationCount": 1,
         "verdict": "link-proposed"
       },
