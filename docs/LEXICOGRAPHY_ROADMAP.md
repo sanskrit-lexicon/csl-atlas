@@ -439,7 +439,7 @@ Adopted as the **default normalisation** for all parsing in Phase L1. Encoded as
 **Insight**: Each dict's choice across all 7 conventions is itself a fingerprint. Dicts following the same fingerprint pattern likely share lineage. Patel's per-dict membership lists give us this fingerprint **for free**.
 
 Example fingerprints (early single-value preview — **superseded** by the authoritative
-multi-valued ingest in [`data/L0/patel2016_assignments.csv`](../data/L0/patel2016_assignments.csv)
+multi-valued ingest in [`src/data/lexicographic-structure/L0/patel2016_assignments.csv`](../src/data/lexicographic-structure/L0/patel2016_assignments.csv)
 via `s2d_patel_gold.py`; e.g. PWG's true conv-1 is `1.2+1.5`, not a single `1.5`):
 
 | Dict | C1 | C2 | C3 | C4 | C5 | C6 | C7 |

@@ -95,7 +95,7 @@ What this roadmap **adds**: end-user tools (students + makers), new hypotheses, 
 Both read sibling `csl-orig` directly, no network, stdlib only; each regenerates committed data + a self-contained HTML.
 
 ### 1.1 MICRO — one lemma across dictionaries
-`scripts/lexico/micro_entry.py` → [`data/lexico/micro_gam.json`](../data/lexico/micro_gam.json) + `.html`.
+`scripts/lexico/micro_entry.py` → `data/lexico/micro_gam.json` + `.html` (generator + outputs run locally, not committed).
 A feature matrix (dicts × 12 microstructure features) plus side-by-side entry text for any headword.
 
 **Real findings for `gam` (8 dicts):**
@@ -104,7 +104,7 @@ A feature matrix (dicts × 12 microstructure features) plus side-by-side entry t
 - **AP**'s extracted `gam` is a **69-char stub** — likely a pointer or a parsing edge case → a concrete data-quality flag for makers.
 
 ### 1.2 MACRO — structural profile of every dictionary
-`scripts/lexico/macro_profile.py` → [`data/lexico/dict_profiles.csv`](../data/lexico/dict_profiles.csv) + `.html`.
+`scripts/lexico/macro_profile.py` → `data/lexico/dict_profiles.csv` + `.html` (generator + outputs run locally, not committed).
 Samples N entries **stratified across the whole alphabet** of all 43 canonical sources; heatmap of dicts × {entry size, citation density, %cited, %etymology, %cross-ref, %homonym, %grammar}.
 
 **Real findings (stratified sample, 3,000 entries each):**
