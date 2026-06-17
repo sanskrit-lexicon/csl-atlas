@@ -2,7 +2,7 @@
 
 **Date**: 2026-06-03 · **Model used**: Opus · **Stream**: the dictionary-genealogy research
 (separate from the measurement/Paper-1 stream). Consolidated cross-stream handoff:
-[`SESSION_HANDOFF.md`](SESSION_HANDOFF.md).
+[`SESSION_HANDOFF_LEGACY_OBSERVATORY.md`](archive/SESSION_HANDOFF_LEGACY_OBSERVATORY.md).
 
 Boundary update 2026-06-04: this handoff now belongs to `csl-atlas` because it
 starts from dictionary headword conventions and dictionary genealogy. The old

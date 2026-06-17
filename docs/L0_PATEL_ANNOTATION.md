@@ -8,7 +8,7 @@
 > retained only for the **2 dicts Patel does not cover (LRV, FRI)** and the 3 source-less ones
 > (KNA, KOW, AMAR). See [`L0_RESULTS.md`](L0_RESULTS.md) for the resulting tree.
 
-**Date**: 2026-06-03 · **For**: M. Gasūns · **Sheet**: [`data/L0/patel_fillin.csv`](../data/L0/patel_fillin.csv)
+**Date**: 2026-06-03 · **For**: M. Gasūns · **Sheet**: `data/L0/patel_fillin.csv`
 **Why this exists**: dims 2 + 4 are auto-filled mechanically; the cladogram recovers all 6
 lineage *families* but not fine directed lineage. Patel's other five conventions are the
 high-resolution discriminators — filling them closes the gate and produces the final tree.
@@ -17,7 +17,7 @@ high-resolution discriminators — filling them closes the gate and produces the
 
 ## How to use this
 
-1. Open [`data/L0/patel_fillin.csv`](../data/L0/patel_fillin.csv) (175 rows = 35 dicts × 5 dims).
+1. Open `data/L0/patel_fillin.csv` (175 rows = 35 dicts × 5 dims).
 2. For each row, read the **`evidence`** (a computed rate) and **`examples`** (real headwords of each competing form), then type your call into the **`VALUE`** column. Optional `confidence` (0–1) and `notes`.
 3. Push the CSV back (or hand it to me) — I re-run `s2b`→`s3` and the final tree drops out, no code change.
 
