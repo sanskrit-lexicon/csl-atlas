@@ -95,17 +95,16 @@ What this roadmap **adds**: end-user tools (students + makers), new hypotheses, 
 Both read sibling `csl-orig` directly, no network, stdlib only; each regenerates committed data + a self-contained HTML.
 
 ### 1.1 MICRO — one lemma across dictionaries
-`scripts/lexico/micro_entry.py` → `data/lexico/micro_gam.json` + `.html` (generator + outputs run locally, not committed).
-A feature matrix (dicts × 12 microstructure features) plus side-by-side entry text for any headword.
+[`scripts/build-micro-entry.mjs`](../scripts/build-micro-entry.mjs) (`npm run build-micro-entry [-- <lemma>]`) → [`data/lexico/micro-gam.json`](../data/lexico/micro-gam.json) (**committed**; reuses `iterateDict` + `normalizeLemma`; the original local `micro_entry.py` prototype is superseded).
+A feature matrix (dicts × 10 microstructure features: chars, `<ls>`, `iti`, gram, etym, xref, hom, div, subentry, root) plus a per-dict entry excerpt, for any headword.
 
-**Real findings for `gam` (8 dicts):**
-- **PWG** `gam` = **100,962 chars, 1,299 citations** — vs **MW** 7,132 / 115. Confirms PWG's citation-dense, preverb-rich signature.
+**Reproduced findings for `gam` (21 dicts carry it, 40 entries):**
+- **PWG** `gam` = **111,583 chars, 1,945 `<ls>`** — vs **MW** 7,364 / 119. Confirms PWG's citation-dense, preverb-rich signature.
 - **MW72** and **BOP** carry **etymology** (cognates) but **zero `<ls>`** — different citation convention, not absence of sourcing.
-- **AP**'s extracted `gam` is a **69-char stub** — likely a pointer or a parsing edge case → a concrete data-quality flag for makers.
+- (The prototype's **AP 69-char stub** was a parser edge case; the committed builder extracts the full AP `gam` cleanly.)
 
 ### 1.2 MACRO — structural profile of every dictionary
-`scripts/lexico/macro_profile.py` → `data/lexico/dict_profiles.csv` + `.html` (generator + outputs run locally, not committed).
-Samples N entries **stratified across the whole alphabet** of all 43 canonical sources; heatmap of dicts × {entry size, citation density, %cited, %etymology, %cross-ref, %homonym, %grammar}.
+**Already covered by the full-corpus per-dictionary structural layer** — [`src/data/dicts/structural-register.json`](../src/data/dicts/structural-register.json) (citation register × grammar-marking, `dominantLayer`, over ALL records) and `src/data/dictionary-coverage.json` `blockPct` (%gram / %`<ls>` / %`iti` / %etym / %xref / %hom over every entry). These supersede the sampled `macro_profile.py` prototype (which used a 3,000-entry sample), so it was **not reconstructed**; read the per-dict heatmap there. The documented MACRO findings (PWG 94% tagged-cited, VCP iti-dense, SKD/WIL profiles) read directly from that data.
 
 **Real findings (stratified sample, 3,000 entries each):**
 - A **Western-tagged cited cluster** (`<ls>`) — PWG 94%, SCH 90%, BEN 79%, AP90 32% — **and** an equally citation-dense **indigenous cluster**: **VCP 95% cited, SKD 51%**, via quotations (`“…”`) attributed to abbreviated authorities (`jE0`=Jaimini, `BA0`=Bhāṣya, `amara0`=Amara) closed with `iti`, carrying **no `<ls>` tag**. *(Correction: an earlier `<ls>`-only detector mis-reported SKD/VCP as "citation-free 0%" — they are among the most citation-dense; see Caveats.)*
