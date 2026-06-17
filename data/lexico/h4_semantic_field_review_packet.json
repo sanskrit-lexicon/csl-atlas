@@ -5,7 +5,7 @@
   "evidenceLabel": "machine-review-sample",
   "reviewStatus": "needs-human-review",
   "ownerRepo": "csl-atlas",
-  "generatedAt": "2026-06-07T20:03:31.452Z",
+  "generatedAt": "2026-06-17T12:04:06.687Z",
   "generatedBy": "npm run build-h4-review-packet",
   "sourceFiles": [
     "src/data/dicts/semantic-fields.json",
@@ -22,6 +22,11 @@
   ],
   "counts": {
     "sampleRows": 105,
+    "autoResolved": 15,
+    "needsHumanReview": 90,
+    "byAutoDecision": {
+      "variant-headword": 15
+    },
     "bySampleType": {
       "ap-ap90-delta": 20,
       "index-reverse-control": 20,
@@ -196,7 +201,10 @@
           "amarLemmas": 1017,
           "coveragePct": 0.0285
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:02:viSezyaniGnavargaH:puRyavat",
@@ -274,7 +282,10 @@
           "amarLemmas": 1017,
           "coveragePct": 0.0285
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:03:viSezyaniGnavargaH:Danya",
@@ -328,7 +339,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma Danya in viSezyaniGnavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -352,7 +363,16 @@
           "amarLemmas": 1017,
           "coveragePct": 0.0285
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "DanyaH",
+          "foldKey": "dhanya"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:04:viSezyaniGnavargaH:mahecCa",
@@ -406,7 +426,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma mahecCa in viSezyaniGnavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -430,7 +450,16 @@
           "amarLemmas": 1017,
           "coveragePct": 0.0285
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "mahecCaH",
+          "foldKey": "maheccha"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:05:viSezyaniGnavargaH:mahASaya",
@@ -484,7 +513,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma mahASaya in viSezyaniGnavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -508,7 +537,16 @@
           "amarLemmas": 1017,
           "coveragePct": 0.0285
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "mahASayaH",
+          "foldKey": "mahāśaya"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:06:viSezyaniGnavargaH:hfdayAlu",
@@ -562,7 +600,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma hfdayAlu in viSezyaniGnavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -586,7 +624,16 @@
           "amarLemmas": 1017,
           "coveragePct": 0.0285
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "hfdayAluH",
+          "foldKey": "hṛdayālu"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:07:viSezyaniGnavargaH:suhfdaya",
@@ -640,7 +687,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma suhfdaya in viSezyaniGnavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -664,7 +711,16 @@
           "amarLemmas": 1017,
           "coveragePct": 0.0285
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "suhfdayaH",
+          "foldKey": "suhṛdaya"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:08:viSezyaniGnavargaH:mahotsAha",
@@ -718,7 +774,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma mahotsAha in viSezyaniGnavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -742,7 +798,16 @@
           "amarLemmas": 1017,
           "coveragePct": 0.0285
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "mahotsAhaH",
+          "foldKey": "mahotsāha"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:09:brahmavargaH:santati",
@@ -796,7 +861,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma santati in brahmavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -820,7 +885,16 @@
           "amarLemmas": 385,
           "coveragePct": 0.1247
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "santatiH",
+          "foldKey": "santati"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:10:brahmavargaH:gotra",
@@ -874,7 +948,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma gotra in brahmavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -898,7 +972,16 @@
           "amarLemmas": 385,
           "coveragePct": 0.1247
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "gotraH",
+          "foldKey": "gotra"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:11:brahmavargaH:janana",
@@ -976,7 +1059,10 @@
           "amarLemmas": 385,
           "coveragePct": 0.1247
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:12:brahmavargaH:aBijana",
@@ -1030,7 +1116,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma aBijana in brahmavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -1054,7 +1140,16 @@
           "amarLemmas": 385,
           "coveragePct": 0.1247
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "aBijanaH",
+          "foldKey": "abhijana"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:13:brahmavargaH:anvaya",
@@ -1108,7 +1203,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma anvaya in brahmavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -1132,7 +1227,16 @@
           "amarLemmas": 385,
           "coveragePct": 0.1247
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "anvayaH",
+          "foldKey": "anvaya"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:14:brahmavargaH:vaMSa",
@@ -1186,7 +1290,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma vaMSa in brahmavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -1210,7 +1314,16 @@
           "amarLemmas": 385,
           "coveragePct": 0.1247
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "vaMSaH",
+          "foldKey": "vanśa"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:15:brahmavargaH:anvavAya",
@@ -1264,7 +1377,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma anvavAya in brahmavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -1288,7 +1401,16 @@
           "amarLemmas": 385,
           "coveragePct": 0.1247
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "anvavAyaH",
+          "foldKey": "anvavāya"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:16:brahmavargaH:santAna",
@@ -1342,7 +1464,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma santAna in brahmavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -1366,7 +1488,16 @@
           "amarLemmas": 385,
           "coveragePct": 0.1247
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "santAnaH",
+          "foldKey": "santāna"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:17:vyomavargaH:dyo",
@@ -1444,7 +1575,10 @@
           "amarLemmas": 23,
           "coveragePct": 0.1304
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:18:vyomavargaH:div",
@@ -1522,7 +1656,10 @@
           "amarLemmas": 23,
           "coveragePct": 0.1304
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:19:vyomavargaH:vyoman",
@@ -1600,7 +1737,10 @@
           "amarLemmas": 23,
           "coveragePct": 0.1304
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:20:vyomavargaH:puzkara",
@@ -1654,7 +1794,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma puzkara in vyomavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -1678,7 +1818,16 @@
           "amarLemmas": 23,
           "coveragePct": 0.1304
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "puzkaraH",
+          "foldKey": "puṣkara"
+        }
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:21:vyomavargaH:ambara",
@@ -1756,7 +1905,10 @@
           "amarLemmas": 23,
           "coveragePct": 0.1304
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:22:vyomavargaH:naBas",
@@ -1834,7 +1986,10 @@
           "amarLemmas": 23,
           "coveragePct": 0.1304
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:23:vyomavargaH:antarikza",
@@ -1912,7 +2067,10 @@
           "amarLemmas": 23,
           "coveragePct": 0.1304
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:24:vyomavargaH:gagana",
@@ -1990,7 +2148,10 @@
           "amarLemmas": 23,
           "coveragePct": 0.1304
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-skd-false-low:skd:25:SUdravargaH:SUdra",
@@ -2044,7 +2205,7 @@
       "comparisonCoverage": null,
       "coverageDeltaPct": null,
       "reviewQuestion": "Is SKD missing AMAR lemma SUdra in SUdravargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
-      "reviewStatus": "needs-review",
+      "reviewStatus": "auto-resolved",
       "reviewedValue": null,
       "reviewer": "",
       "reviewedAt": "",
@@ -2068,7 +2229,16 @@
           "amarLemmas": 349,
           "coveragePct": 0.1891
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": true,
+        "proposedDecision": "variant-headword",
+        "basis": "loose-fold-headword-match",
+        "evidence": {
+          "matchedHeadword": "SUdraH",
+          "foldKey": "śūdra"
+        }
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:01:narakavargaH:nAraka",
@@ -2154,7 +2324,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L370187",
           "bodyExcerpt": "nAraka¦ pu0 naraka eva prajYA0 aR . 1 narake . narako Bomyata- yA'styasva aR . 2 narakastye prARini tri0 amaraH ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:02:narakavargaH:naraka",
@@ -2240,7 +2413,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L363542",
           "bodyExcerpt": "naraka¦ pu0 narati nayati pApilokaM pApAnurUpaBogAyAtra nF--naye ADAre bA0 vun . pApaBogasTAne tasya taTAtvaYca vistareRa vizRupu0 SivaDarmottare ca varRitaM tadeva purARasa0 pradarSitaM tacca karmavipAkaSabde 1745 pfzWAdO darSitam . pApaBedena narakaBedaprAp..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:03:narakavargaH:niraya",
@@ -2326,7 +2502,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L374197",
           "bodyExcerpt": "niraya¦ pu0 nirgato'yotra prA0 ba0 nIcEretyatra nir + i AGAre ac vA . narake amaraH “niraye cEva patanaM yAtanASca yamakzaye” manuH ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:04:narakavargaH:durgati",
@@ -2412,7 +2591,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L332031",
           "bodyExcerpt": "durgati¦ strI duzwA gatiH prA0 sa0 . 1 narake amaraH . 2 dAridrye medi0 . “na durgatimavApnoti svargalokaYca gacCati” BA0 SA0 5593 Slo0 duHsTitA gatirasya prA0 ba0 . 3 tadyute tri0 ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:05:narakavargaH:tapana",
@@ -2498,7 +2680,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L293770",
           "bodyExcerpt": "tapana¦ pu0 tapa--lyu . 1 sUrtye 2 BallAtakavfkze . 3 agnyAdOdAha yukte narakaBede 4 grIzme ca hema0 . 5 arkavfkze 6 kzudrAgnimanTavfkze 7 sUryyakAntAmaRO ca rAjani0 . “paYcamaH paYcatapasAM tapano jAtavedasAm” mAGaH . strIRAM yOvane 8 satvajAtAvaNkAraBede na..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:06:narakavargaH:avIci",
@@ -2584,7 +2769,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L44259",
           "bodyExcerpt": "avIci¦ pu0 nAsti vIciH prakASaH suKaM vAtra . 1 narakaBede tatsvarUpaM tatkAraRaYca BAgavate 5 ska0 darSitaM yaTA “tAmisronDatAmisra” ityAdyupakramya “avIcirayaHpAna- mityAdinA azwAviMSatinarakAn viBajya “yastvihAnftaM vadati sAkzye, dravyavinimaye, dAne vA k..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:07:narakavargaH:mahArOrava",
@@ -2670,7 +2858,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L445410",
           "bodyExcerpt": "mahArOrava¦ pu0 karma0 . “mahArOravasaMjYastu UrDvADastAmra- saMpuwe . Damyate KadirANgArEH pracyate kAlamakzayam” ityukte narakaBede vahnipu0 ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:08:narakavargaH:rOrava",
@@ -2756,7 +2947,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L455096",
           "bodyExcerpt": "rOrava¦ pu0 rorUyate'tra ru--yaN kvip tena prApyaH tasmAyaM vA aR . 1 narakaBede amaraH . 2 caYcale, 3 DUrtte, 4 kzore ca tri0 Sabdara0 . 5 sAmaBede na0 . tacca sAma ahagAne [Page4817-a+ 33] 3 pra0 darSitam . “rOravayODAjaye vArhate tfce BavataH” tA0 brA0 . r..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:09:avyayavargaH:cirAya",
@@ -2842,7 +3036,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L267714",
           "bodyExcerpt": "cirAya¦ avya0 ciramayate arTa--aR . cirakAle dIrGakAle . “cirAya yadi te sOmya! ciramasmi na duHKitaH” BA0 SA0 267 a0 . “cirAya nAmnaH praTamABiDeya- [Page2953-a+ 38] tAm” . “aBIzwamAsAdya cirAya kAlaH” mAGaH ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:10:avyayavargaH:cirarAtrAya",
@@ -2928,7 +3125,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L267673",
           "bodyExcerpt": "cirarAtrAya¦ avya0 cirarAtramayate aya--aR upa0 sa0 . dIrGakAle . “haviryad cirarAtrAya taccAnantyAya kalpate” manuH “Sakyate dustyaje'pyarTe cirarAtrAya jIvitum” BA0 va0 131 a0 ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:11:avyayavargaH:cirasya",
@@ -3014,7 +3214,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L267698",
           "bodyExcerpt": "cirasya¦ avya0 ciramasyate asa--yat Saka0 . dIrGakAle . amaraH . “cirasya dfzweva mftotTiteva” kumA0 ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:12:avyayavargaH:cira",
@@ -3098,7 +3301,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L267580",
           "bodyExcerpt": "cira¦ na0 ci--rak . 1 dIrGakAle . 2 tadvarttini padArTe ti0 . laGvAdO (.') trikale gaRe SabdArTaci0 “dIrGasUtrI cira- kriyaH” amaraH . cirajIvI cirakArI cirakAlAdi ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:13:avyayavargaH:muhus",
@@ -3184,7 +3390,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L447623",
           "bodyExcerpt": "muhus¦ avya0 muha--usik . pOnaH punye amaraH ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:14:avyayavargaH:SaSvat",
@@ -3270,7 +3479,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L483336",
           "bodyExcerpt": "SaSvat¦ avya0 SaSa--vati . 1 nErantaryye 2 punaHpunarityarTe ca amaraH ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:15:avyayavargaH:aBIkzRam",
@@ -3356,7 +3568,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L28511",
           "bodyExcerpt": "aBIkzRam¦ avya0 aBi + kzRu--bA0 qamu pf0 dorGaH . pOnaH- punyesvarAdi . “aBIkzRamakzuRRatayA'tidurgamam” mAGaH ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:16:avyayavargaH:asakft",
@@ -3442,7 +3657,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L50166",
           "bodyExcerpt": "asakft¦ avya0 na sakft na0 ta0 . pOnaHpunye . “asakfdekara- Tena tarasvinA” raGuH “anyAdyenAsakfccEtAn guRESca pari- nodayet” “asakfdgarBavAsezu vAsaM janma ca dAruRam” iti ca manuH . “AvfttirasakfdupadeSAt” SA0 sU0 ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:17:BUmivargaH:BU",
@@ -3528,7 +3746,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L437724",
           "bodyExcerpt": "BU¦ prAptO cu0 A0 saka0 sew . BAvayata abIBavata ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:18:BUmivargaH:BUmi",
@@ -3614,7 +3835,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L438816",
           "bodyExcerpt": "BUmi(mI)¦ strI Bavantyasmin BUtAni BU--mi kiYca vA NIp . 1 pfTivyAm 2 sTAnamAtre medi0 3 jihvAyAM saMkzi0 uRA0 yogaSAstrokte 4 yoginAM cittasyAvasTABede, 5 eka- saMKyAyAYca . pARqusaMKyAdito'c samA0 bahu0 . dviBUmaH prasAdaH pARquBUmo deSaH . yogoktamUmayaSca..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:19:BUmivargaH:anantA",
@@ -3700,7 +3924,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L11971",
           "bodyExcerpt": "anantA¦ strI nAsti anto'syAH ba0 . viSalyAyAmozaDO (anantamUla) iti KyAte mUlaBede, pAvatyAm, pfTivyAm, durAlaBAyAM, dUrvAyAM, haritakyAM, AmalakyAm, guqUcyAm, agnimanTavfkze, agniSiKAvfkze, SyAmalatAyAm, pipapalyAM, nIladUrvAyAm, SvetadUrvAyAM, SArivozaDO ca..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-vcp-high-coverage:vcp:20:BUmivargaH:rasA",
@@ -3786,7 +4013,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L452602",
           "bodyExcerpt": "rasA¦ strI pAkajaH raso mADuryyAdirUpo'styasyAH ac . pfTivyAm amaraH ."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:01:vanOzaDivargaH:vipina",
@@ -3884,7 +4114,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L413481",
           "bodyExcerpt": "{#vipina#}¦ {%<lex>a.</lex>%} Thick, dense; {#amumativipinaM veda digvyApinam#} <ls>Ki. 5. 18</ls>."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:02:BUmivargaH:acalA",
@@ -3982,7 +4215,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L6976",
           "bodyExcerpt": "{#acala#} + .{@{#-lA#}@}¦ The earth (so called because the earth is immovable according to one view, or, according to Ārya Bhaṭṭa who rejects this view, {#acalAH#} {#parvatAH santyatra, astyarTe ac#}; {#acalatvAt svakakzAto bahirgamanABAvAdvA#}). <ab>cf.</ab>..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:03:BUmivargaH:anantA",
@@ -4080,7 +4316,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L17378",
           "bodyExcerpt": "{#ananta#} + .{@{#-ntA#}@}¦ ∙²1 The earth (the endless). ∙²2 The number one. ∙²3 Names of various females; <ab>N.</ab> of Pārvatī. ∙²4 Names of various plants; {#SArivA, anantamUla#} (a very medicinal plant) {#dUrvA, AmalakI, guqUcI, agnimanTa, kaRA, lANgalI,..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:04:BUmivargaH:sTirA",
@@ -4178,7 +4417,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L492643",
           "bodyExcerpt": "{#sTira#} + .{@{#-rA#}@}¦ ∙²1 The earth; {#pitAmahastAmAlokya vihastAmasTirAM sTirAm#} <ls>Śiva B. 5. 47</ls>. ∙²2 A strong-minded woman. ∙²3 The silk-cotton tree."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:05:viSezyaniGnavargaH:mahASaya",
@@ -4276,7 +4518,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L349966",
           "bodyExcerpt": "{#mahA#} + {#-ASaya#}¦ {%<lex>a.</lex>%} high-souled, noble-minded, magnanimous, noble; {#dEvAt#} {#prabudDaH SuSrAva varAho hi mahASayaH#} <ls>Ks.</ls>; {#rAjA hiraRyagarBo mahASayaH#} <ls>H. 4</ls>; see {#mahAtman#}."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:06:viSezyaniGnavargaH:mahecCa",
@@ -4374,7 +4619,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L349988",
           "bodyExcerpt": "{#mahA#} + {#-icCa#}¦ {%<lex>a.</lex>%} ∙²1 magnanimous, noble-minded, high-souled, noble; {#mahIM mahecCaH parikIrya#} {#sUnO#} <ls>R. 18. 33</ls>. ∙²2 having lofty aims or aspirations, ambitious; {#vidyAvatAM mahecCAnAM#} {#… … nASrayaH pArTivaM vinA#} <ls>..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:07:viSezyaniGnavargaH:mahotsAha",
@@ -4472,7 +4720,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L350069",
           "bodyExcerpt": "{#mahA#} + {#-utsAha#}¦ {%<lex>a.</lex>%} possessed of great energy, energetic, perservering; {#ahaM ca karRaM jAnAmi … … satyasaMDaM mahotsAhaM … …#} <ls>Mb. 3. 91. 20</ls>."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:08:viSezyaniGnavargaH:suhfdaya",
@@ -4570,7 +4821,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L482813",
           "bodyExcerpt": "{#su#} + {#-hfdaya#}¦ {%<lex>a.</lex>%} ∙²1 good-hearted. ∙²2 dear, affectionate, loving."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:09:viSezyaniGnavargaH:sukftin",
@@ -4668,7 +4922,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L480307",
           "bodyExcerpt": "{#su#} + {#-kftin#}¦ {%<lex>a.</lex>%} ∙²1 acting well or kindly. ∙²2 virtuous, pious, good, righteous; {#santaH santu nirApadaH sukftinAM#} {#kIrtiSciraM varDatAm#} <ls>H. 4. 132</ls>; {#caturviDA Bajante mAM janAH sukftino'rjuna#} <ls>Bg. 7. 16</ls>. ∙²3 wi..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:10:digvargaH:pUrvA",
@@ -4766,7 +5023,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L287797",
           "bodyExcerpt": "{#pUrva#} + .{@{#-rvA#}@}¦ ∙²1 The east ∙²2 <ab>N.</ab> of a country to the east of Madhyadeśa."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:11:SUdravargaH:avaravarRa",
@@ -4864,7 +5124,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L59749",
           "bodyExcerpt": "{#avara#} + {#-varRa#}¦ {%<lex>a.</lex>%} belonging to a low caste or tribe."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:12:DIvargaH:DizaRA",
@@ -4962,7 +5225,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L235069",
           "bodyExcerpt": "{#DizaRaH#} + .{@{#-RA#}@}¦ ∙²1 Speech. ∙²2 Praise, hymn. ∙²3 Intellect, understanding; {#viSudDEvotpattyA patati na ca tatpApaDizaRA#} <ls>Mv. 6. 8</ls>; {#AryaputrAryaDizaRa, prARanATa, SuBavrata#} <ls>Kāśīkhaṇḍa.</ls> ∙²4 Earth. ∙²5 A cup, bowl. .━{@<ab>Co..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:13:avyayavargaH:aBIkzRam",
@@ -5060,7 +5326,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L43307",
           "bodyExcerpt": "{#aBIkzRa#} + .{@{#-kzRam#}@}¦ {%<lex>ind.</lex>%} ∙²1 Frequently, repeatedly; {#kzate prahArA nipatantyaBIkzRam#} <ls>Pt. 2. 186</ls>. ∙²2 Constantly, ∙²3 Very much, exceedingly. ∙²4 Quickly."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:14:avyayavargaH:cirarAtrAya",
@@ -5158,7 +5427,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L186668",
           "bodyExcerpt": "{{Lbody=14975.052}}"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:15:vyomavargaH:ananta",
@@ -5256,7 +5528,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L17358",
           "bodyExcerpt": "{#ananta#}¦ {%<lex>a.</lex>%} [{#nAsti anto yasya#}] Endless, infinite, eternal, boundless, inexhaustible; {#˚ratnapraBavasya yasya#} <ls>Ku. 1. 3</ls>."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:16:vyomavargaH:suravartman",
@@ -5354,7 +5629,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L484050",
           "bodyExcerpt": "{#suraH#} + {#-vartman#}¦ {%<lex>n.</lex>%} the sky."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:17:vESyavargaH:BUmispfS",
@@ -5452,7 +5730,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L335869",
           "bodyExcerpt": "{#BUmiH#} + {#-spfS#}¦ {%<lex>a.</lex>%} ∙²1 blind. ∙²2 lame, cripple. ━({%<lex>m.</lex>%}) ∙²1 a man. ∙²2 mankind. ∙²3 a Vaiśya, ∙²4 a thief."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:18:vESyavargaH:vArtA",
@@ -5550,7 +5831,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L404763",
           "bodyExcerpt": "{{Lbody=29032}}"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:19:siMhAdivargaH:paYcAsya",
@@ -5648,7 +5932,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L259922",
           "bodyExcerpt": "{{Lbody=19731.020}}"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-ap-ap90-delta:ap:20:kzatriyavargaH:mUrDABizikta",
@@ -5746,7 +6033,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L361235",
           "bodyExcerpt": "{#mUrDan#} + {#-aBizikta#}¦ {%<lex>a.</lex>%} ∙²1 consecrated, crowned, inaugurated; {#mUrDABiziktaM kumudo baBAze#} <ls>R. 16. 81</ls>. ∙²2 common, stock (as an instance); {#utkftyotkftya kfttim iti bIBatsasya#} {#mUrDABiziktamudAharaRam#}."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:armh:01:pAtAlaBogivargaH:aDoBuvana",
@@ -5832,7 +6122,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/armh/armh.txt#L33034",
           "bodyExcerpt": "aDoBuvana; vaqavAmuKaM pAtAlaM vErocananiketanam . taTADoBuvanaM proktaM nAgaloko rasAtalam .. 623 .. 3.1.1.623"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:fri:02:vyomavargaH:div",
@@ -5918,7 +6211,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/fri/fri.txt#L17704",
           "bodyExcerpt": "I √div dīvyati, pp. dyūta <div n=\"1\"/>1 <lang n=\"czech\">zářiti, tešiti se, hráti (v kostky)</lang> <div n=\"1\"/>2 <lang n=\"russian\">сиять, радоваться, играть (в кости)</lang> <div n=\"1\"/>3 <lang n=\"english\">to shine, rejoice, play, gamble</lang>"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:bhs:03:DIvargaH:prajYA",
@@ -6004,7 +6300,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L39702",
           "bodyExcerpt": "{@prajñā@}¦ (<lang>Skt.</lang>, and <lang>Pali</lang> paññā), {%knowledge%}: three kinds, śrutamayī, cintāmayī, bhāvanāmayī (so in <lang>Pali</lang> cintāmayā, sutamayā, and bhāvanāmayā paññā, <ls>Childers</ls>): <ls>Mvy</ls> 〔1550—3〕; <ls>Dharmas</ls> 〔110〕."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:armh:04:pAtAlaBogivargaH:pAtAla",
@@ -6090,7 +6389,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/armh/armh.txt#L33022",
           "bodyExcerpt": "pAtAla; vaqavAmuKaM pAtAlaM vErocananiketanam . taTADoBuvanaM proktaM nAgaloko rasAtalam .. 623 .. 3.1.1.623"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:fri:05:vyomavargaH:aBra",
@@ -6176,7 +6478,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/fri/fri.txt#L3223",
           "bodyExcerpt": "abhra n. (m.) <div n=\"1\"/>1 <lang n=\"czech\">mrak, ovzduší</lang> <div n=\"1\"/>2 <lang n=\"russian\">туча, атмосфера</lang> <div n=\"1\"/>3 <lang n=\"english\">cloud, atmosphere</lang>"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:bhs:06:DIvargaH:mati",
@@ -6262,7 +6567,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L46082",
           "bodyExcerpt": "{@Mati@}¦, ({@1@}) <ab>n.</ab> of a prince, son of the Buddha Candrasūryapradīpa: <ls>SP</ls> 〔19.2〕; ({@2@}) <ab>n.</ab> of a brahman youth, previous incarnation of Dharmaruci; corresponds to {@Meghadatta@} of <ls>Mv</ls>, Megha of <lang>Pali</lang>, as asso..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:armh:07:pAtAlaBogivargaH:rasAtala",
@@ -6348,7 +6656,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/armh/armh.txt#L33046",
           "bodyExcerpt": "rasAtala; vaqavAmuKaM pAtAlaM vErocananiketanam . taTADoBuvanaM proktaM nAgaloko rasAtalam .. 623 .. 3.1.1.623"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:fri:08:vyomavargaH:vyoman",
@@ -6434,7 +6745,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/fri/fri.txt#L38827",
           "bodyExcerpt": "vyoman n. <div n=\"1\"/>1 <lang n=\"czech\">nebe, vzduch, ovzduší</lang> <div n=\"1\"/>2 <lang n=\"russian\">небо, воздух, атмосфера</lang> <div n=\"1\"/>3 <lang n=\"english\">heaven, sky, atmosphere</lang>"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:bhs:09:DIvargaH:pratipad",
@@ -6520,7 +6834,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L40182",
           "bodyExcerpt": "{@pratipad@}¦, <lex>f.</lex>, also {@˚dā@} (= <lang>Pali</lang> paṭipadā), {%course of conduct, practice, behavior%}, <ab>esp.</ab> {%good, approved behavior%}, = {@pratipatti@}, <ab>q.v.</ab>; <ab>acc.</ab> to <ls>Childers</ls> and <ls>PTSD</ls>, so also pri..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:armh:10:pAtAlaBogivargaH:nAgaloka",
@@ -6606,7 +6923,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/armh/armh.txt#L33040",
           "bodyExcerpt": "nAgaloka; vaqavAmuKaM pAtAlaM vErocananiketanam . taTADoBuvanaM proktaM nAgaloko rasAtalam .. 623 .. 3.1.1.623"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:fri:11:vyomavargaH:puzkara",
@@ -6692,7 +7012,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/fri/fri.txt#L24244",
           "bodyExcerpt": "puṣkara n. <div n=\"1\"/>1 <lang n=\"czech\">modrý lotos, voda, obloha; m., n. pr. jméno krále</lang> <div n=\"1\"/>2 <lang n=\"russian\">синий лотос, вода, небо; m., n. pr. имя короля</lang> <div n=\"1\"/>3 <lang n=\"english\">a blue lotus, water, sky; m., n. pr. name o..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:bhs:12:DIvargaH:jYapti",
@@ -6778,7 +7101,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L26752",
           "bodyExcerpt": "{@jñapti@}¦, for (always in <ls>Mvy</ls>, but nowhere else) {@jñāpti@}, <lex>f.</lex> (= <lang>Pali</lang> ñatti), {%proposal, motion%}, made before the assembly of monks or nuns; in the <lang>BHS</lang> literary passages recorded, usually concerning initiati..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:armh:13:pAtAlaBogivargaH:kuhara",
@@ -6864,7 +7190,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/armh/armh.txt#L33136",
           "bodyExcerpt": "kuhara; nimnamagADo gartaH SvaBraM SuziraM vapA bilaM vivaram . antaramavawucCidraM nirvyaTanaM ranDrarokakuharadarAH .. 624 .. 3.1.1.624"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:fri:14:vyomavargaH:ambara",
@@ -6950,7 +7279,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/fri/fri.txt#L3370",
           "bodyExcerpt": "ambara n. <div n=\"1\"/>1 <lang n=\"czech\">\"obklopující\" = šat, obloha</lang> <div n=\"1\"/>2 <lang n=\"russian\">\"окружающий\" = одежда, небесный свод</lang> <div n=\"1\"/>3 <lang n=\"english\">\"surrouding\" = garment, sky</lang>"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:bhs:15:DIvargaH:samADAna",
@@ -7036,7 +7368,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L64324",
           "bodyExcerpt": "{@samādhāna@}¦, <lex>nt.</lex>, ({@1@}) <ab>acc.</ab> to <lang>Tib.</lang> <tib>lan gdab pa</tib>, {%making answer, reply%}: <ls>Mvy</ls> 〔4448〕; <ab>prob.</ab> in sense of refutation of an opponentʼs argument by way of {%establishing%} oneʼs own view (<ab>cf..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:armh:16:pAtAlaBogivargaH:Suzira",
@@ -7122,7 +7457,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/armh/armh.txt#L33076",
           "bodyExcerpt": "Suzira; nimnamagADo gartaH SvaBraM SuziraM vapA bilaM vivaram . antaramavawucCidraM nirvyaTanaM ranDrarokakuharadarAH .. 624 .. 3.1.1.624"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:fri:17:vyomavargaH:naBas",
@@ -7208,7 +7546,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/fri/fri.txt#L20065",
           "bodyExcerpt": "nabhas n. <div n=\"1\"/>1 <lang n=\"czech\">mrak, pára, ovzduší; jm. měsíce</lang> <div n=\"1\"/>2 <lang n=\"russian\">туча, пар, атмосфера; название месяца</lang> <div n=\"1\"/>3 <lang n=\"english\">a cloud, mist, the atmosphere; name of a month</lang>"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:bhs:18:DIvargaH:praRiDAna",
@@ -7294,7 +7635,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bhs/bhs.txt#L39810",
           "bodyExcerpt": "{@praṇidhāna@}¦, <lex>nt.</lex> (<lex>m.</lex> modifiers <ls>Bhad</ls> 〔58〕; = <lang>Pali</lang> paṇidhāna; like {@praṇidhi@}, <ab>n. act.</ab> to {@praṇidadhāti, praṇidheti@}), {%fixation%} of mind (ceto-pra˚ <ls>Mv</ls> 〔i.239.5〕; 〔iii.138.19〕; <lang>Pali</..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:armh:19:pAtAlaBogivargaH:vivara",
@@ -7380,7 +7724,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/armh/armh.txt#L33094",
           "bodyExcerpt": "vivara; nimnamagADo gartaH SvaBraM SuziraM vapA bilaM vivaram . antaramavawucCidraM nirvyaTanaM ranDrarokakuharadarAH .. 624 .. 3.1.1.624"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-specialized-baseline:fri:20:vyomavargaH:antarikza",
@@ -7466,7 +7813,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/fri/fri.txt#L2101",
           "bodyExcerpt": "antarikṣa n. <div n=\"1\"/>1 <lang n=\"czech\">ovzduší, vzduch</lang> <div n=\"1\"/>2 <lang n=\"russian\">атмосфера, воздух</lang> <div n=\"1\"/>3 <lang n=\"english\">the atmosphere, air</lang>"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:ae:01:avyayavargaH:cit",
@@ -7552,7 +7902,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L9852",
           "bodyExcerpt": "{@Cit@}¦,Ⓒ<lex>s.</lex>Ⓓ<s>nAgarikaH, pfTagjanaH, nAgaraMjanaH</s>."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:mwe:02:avyayavargaH:cit",
@@ -7638,7 +7991,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mwe/mwe.txt#L24167",
           "bodyExcerpt": "CIT¦, {%s.%} {#nAgarajanaH, nAgarakaH, pOrajanaH, pfTagjanaH, avaravarRaH#}."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:pui:03:narakavargaH:naraka",
@@ -7724,7 +8080,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pui/pui.txt#L47767",
           "bodyExcerpt": "{%Naraka%}¦ — a son of Anṛta; another name of Raurava. <div n=\"P\"/>Br. II. 9. 64; Vā. 10. 39."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:inm:04:svargavargaH:svar",
@@ -7810,7 +8169,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/inm/inm.txt#L117153",
           "bodyExcerpt": "{@*Svar@}<sup>1</sup>¦ (“heaven”): XIV, 2840 ({%svar yānti dhārmikāḥ%}); mostly occurring in compounds, e.g. {%˚-gamana%} (VIII, †4088), {%˚-gata%} (I, 355), {%˚-gati%} (I, 263), {%˚-netṛ%} (III, 12705), {%˚-nivāsa%} (I, 3537), {%˚-yāta%} (I, 3807).—Do.<sup>2..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:ieg:05:vyomavargaH:aBra",
@@ -7896,7 +8258,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L473",
           "bodyExcerpt": "{%abhra%}¦ (IE 7-1-2), ‘cypher’."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:ae:06:avyayavargaH:ha",
@@ -7982,7 +8347,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L27913",
           "bodyExcerpt": "{@Ha@}¦,Ⓒ<lex>interj.</lex>Ⓓ<s>hA, aho, ayi, bata, haMta</s>."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:mwe:07:avyayavargaH:ha",
@@ -8068,7 +8436,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mwe/mwe.txt#L75153",
           "bodyExcerpt": "HA¦, {%interj.%} {#hA, hahA, AhA, aho, Aho, ahahaH, ahovat, ha, aha#}, {#A, ayi, AScaryyaM#}."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:pui:08:narakavargaH:niraya",
@@ -8154,7 +8525,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pui/pui.txt#L49789",
           "bodyExcerpt": "{%Niraya%} (I)¦ — a son of Bhaya and Mṛtyu. <div n=\"P\"/>Bhā. IV. 8. 4."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:inm:09:svargavargaH:svarga",
@@ -8240,7 +8614,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/inm/inm.txt#L117212",
           "bodyExcerpt": "{@*Svarga@}¦ (“heaven”, or “heavenly bliss”): I, 437, etc.; II, 685, etc.; III, 841, etc.; IV, 2247; V, †387, etc.; VI, 126, etc.; VII, 40, etc.; VIII, 447, etc.; IX, 182, etc.; X, 159, etc.; XI, 59, etc.; XII, 49, etc.; XIII, 307, etc.; 1057 (identified with..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:ieg:10:vyomavargaH:vyoman",
@@ -8326,7 +8703,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L36325",
           "bodyExcerpt": "{%vyoman%}¦ (IE 7-1-2; EI 33), ‘cypher’."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:ae:11:avyayavargaH:he",
@@ -8412,7 +8792,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L28469",
           "bodyExcerpt": "{@He@}¦,Ⓒ<lex>pron.</lex>Ⓓ<s>saH, ezaH, asO, ayaM</s>."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:mwe:12:avyayavargaH:he",
@@ -8498,7 +8881,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mwe/mwe.txt#L77207",
           "bodyExcerpt": "HE¦, {%s.%} {#saH (tad), ezaH (etad), asO#} {%m.%} {#(adas), sakaH#}; ‘so and so,’ [Page336-a+ 51] {#amukanAmA#} {%m.%} ({#n#}). OBS. The visarga of {#saH#} and {#ezaH#} is dropped before {%any consonant.%}"
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:pui:13:narakavargaH:durgati",
@@ -8584,7 +8970,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pui/pui.txt#L41878",
           "bodyExcerpt": "{%Durgati%}¦ — a commander of Bhaṇḍa. <div n=\"P\"/>Br. IV. 21. 86."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:inm:14:svargavargaH:nAka",
@@ -8670,7 +9059,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/inm/inm.txt#L85785",
           "bodyExcerpt": "{@Nāka@},¦ name of a weapon. § 563 (Bhagavadyānap.): V, {@96@}ϕ, 3490 (will be employed by Arjuna)."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:ieg:15:vyomavargaH:puzkara",
@@ -8756,7 +9148,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L25273",
           "bodyExcerpt": "{%puṣkara%}¦ (ML), a tank."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:ae:16:avyayavargaH:a",
@@ -8842,7 +9237,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L4",
           "bodyExcerpt": "{@A@}, {@An@}¦,Ⓐ(As an article) not <ab>ex.</ab>; ‘a man’ <s>naraH</s>. Ⓑ{@2@} (One) <s>eka</s>. Ⓑ{@3@} (Indefinite) <s>kiM</s> with <s>cit, cana</s> or <s>api</s>. Ⓑ{@4@} With <ab>part.</ab>, <ab>ex.</ab> by <ab>dat.</ab> or <ab>inf.</ab>; ‘set out a-hunting..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:mwe:17:avyayavargaH:a",
@@ -8928,7 +9326,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mwe/mwe.txt#L571",
           "bodyExcerpt": "A.¦ As an indefinite article before nouns singular, for the most part not expressed in Sanskrit; as, ‘a lion,’ {#siMhaH#}; (One) {#ekaH -kA -kaM#}. — (Some, a certain) {#kaScit#}; as, ‘a certain man,’ {#kaScit puruzaH#}. — (Each, every) expressed by {#prati#}..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:pui:18:narakavargaH:tapana",
@@ -9014,7 +9415,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pui/pui.txt#L36683",
           "bodyExcerpt": "{%Tapana%}¦ — the Sun whose daughter is Yamunā. <div n=\"P\"/>M. 108. 23; 110. 5."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:inm:19:svargavargaH:tridiva",
@@ -9100,7 +9504,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/inm/inm.txt#L119401",
           "bodyExcerpt": "{@Tridiva@}¦ (“heaven”): I, 161 ({%˚sthaṃ Dhanañjayaṃ%}), †1258, 1539, †1545, 1638, 2829, 3107 ({%˚aukasāṃ%}), 4180 (do.), 8474; [Page680-b+ 63] III, 1662 ({%˚nivāsināṃ%}), 1805, 1809 ({%rakṣitā…t˚ṃ Maghavān%} {%iva%}), †1878 ({%˚gatāḥ%}), 2229, †8713, 8766, ..."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     },
     {
       "reviewId": "h4-index-reverse-control:ieg:20:vyomavargaH:ambara",
@@ -9186,7 +9593,10 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L1860",
           "bodyExcerpt": "{%ambara%}¦ (IE 7-1-2), ‘cypher’."
         }
-      ]
+      ],
+      "autoTriage": {
+        "resolved": false
+      }
     }
   ],
   "limitations": [

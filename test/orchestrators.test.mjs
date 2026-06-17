@@ -1020,7 +1020,15 @@ test("H4 review rows keep human fields empty and labels valid", () => {
   const labels = new Set(H4_MACHINE_LABEL_VOCABULARY.map(row => row.label));
   const decisionLabels = new Set(Object.values(h4ReviewPacket.decisionVocabulary).flat());
   for (const row of h4ReviewPacket.sampleRows) {
-    assert.equal(row.reviewStatus, "needs-review", `${row.reviewId} should remain needs-review`);
+    // A row is either awaiting human review or deterministically auto-resolved
+    // (variant-headword via a loose-fold headword match); either way no human
+    // decision has been written, so the human fields stay empty.
+    assert.ok(["needs-review", "auto-resolved"].includes(row.reviewStatus), `${row.reviewId} unexpected status ${row.reviewStatus}`);
+    assert.equal(row.reviewStatus === "auto-resolved", row.autoTriage?.resolved === true, `${row.reviewId} status/autoTriage disagree`);
+    if (row.autoTriage?.resolved) {
+      assert.ok(row.expectedDecisionLabels.includes(row.autoTriage.proposedDecision), `${row.reviewId} auto decision not in vocab`);
+      assert.ok(row.autoTriage.evidence?.matchedHeadword, `${row.reviewId} auto-resolved without evidence`);
+    }
     assert.equal(row.reviewedValue, null, `${row.reviewId} reviewedValue should stay null`);
     assert.equal(row.reviewer, "", `${row.reviewId} reviewer should stay empty`);
     assert.equal(row.reviewedAt, "", `${row.reviewId} reviewedAt should stay empty`);
