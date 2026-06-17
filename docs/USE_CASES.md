@@ -6,7 +6,7 @@ This is the active use-case inventory for `csl-atlas` after the repository
 boundary split.
 
 The earlier integrated atlas use cases are preserved for history in
-`docs/USE_CASES_LEGACY_INTEGRATED_ATLAS.md`. Do not treat that legacy file as
+`docs/archive/USE_CASES_LEGACY_INTEGRATED_ATLAS.md`. Do not treat that legacy file as
 current product scope.
 
 ## Boundary Rule
@@ -307,4 +307,4 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - `docs/MICROSTRUCTURE_SEMANTIC_FIELDS.md`
 - `docs/MICROSTRUCTURE_METHODS.md`
 - `docs/MICROSTRUCTURE_FINDINGS.md`
-- `docs/USE_CASES_LEGACY_INTEGRATED_ATLAS.md`
+- `docs/archive/USE_CASES_LEGACY_INTEGRATED_ATLAS.md`

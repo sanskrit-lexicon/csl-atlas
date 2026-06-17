@@ -5,7 +5,7 @@ Date: 2026-06-04
 Status: active dictionary-atlas architecture. This file follows
 `docs/BOUNDARY_RULES.md` and supersedes the older integrated evidence-atlas
 architecture. The preserved legacy version is
-`docs/ARCHITECTURE_LEGACY_INTEGRATED_ATLAS.md`.
+`docs/archive/ARCHITECTURE_LEGACY_INTEGRATED_ATLAS.md`.
 
 ## Mission
 

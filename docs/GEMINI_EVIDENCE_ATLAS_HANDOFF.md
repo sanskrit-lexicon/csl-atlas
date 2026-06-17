@@ -9,7 +9,7 @@ architecture.
 That mixed direction is no longer active for `csl-atlas`.
 
 The full historical text is preserved at
-`docs/GEMINI_EVIDENCE_ATLAS_HANDOFF_LEGACY_INTEGRATED_ATLAS.md` so earlier
+`docs/archive/GEMINI_EVIDENCE_ATLAS_HANDOFF_LEGACY_INTEGRATED_ATLAS.md` so earlier
 reasoning remains auditable. New implementation work must use the current
 boundary documents instead:
 
