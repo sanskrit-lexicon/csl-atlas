@@ -41,6 +41,7 @@ scope document.
 
 | Draft | Starts from | Evidence | Status |
 |---|---|---|---|
+| [`paper_measurement_framework.md`](articles/paper_measurement_framework.md) — *Measuring the Dictionary Family* (P1) | the atlas's dictionary metrics + traceability discipline (methods spine for P2–P6) | `HYPOTHESIS_INDEX.md`; `scripts/lib/review-report.mjs`, `scripts/lib/dataset-meta.mjs`; `data/schema/review-report.schema.json`; `ARCHITECTURE.md`; the per-metric generators | scope + scaffold (DSH/Oxford target, IJL methods alternate); explicitly atlas-only — NOT the legacy project-KPI paper (that is `csl-observatory`'s); metric estimator boxes + worked example to draft |
 | [`paper_redundancy_and_descent.md`](articles/paper_redundancy_and_descent.md) — *Redundancy and Descent* (OBS-R) | headword overlap + dictionary inheritance | `CORPUS_REDUNDANCY_GENEALOGY.md`; `scripts/obs/headword_multiplicity.py`; `data/sanhw1_jaccard.csv` | working draft (IJL target); secondary refs + byline to finalise |
 | [`paper_citation_registers.md`](articles/paper_citation_registers.md) — *Two Citation Registers* (OBS-C) | source-citation apparatus + abbreviation behaviour | `CITATION_REGISTERS.md`; `scripts/lib/source-siglum.mjs`; `src/data/dict-source-aliases.json` | working draft (IJL target); secondary refs + byline to finalise |
 | [`paper_H_convention_vs_content_lineage.md`](articles/paper_H_convention_vs_content_lineage.md) — Paper H | convention vs content lineage | Phase L0 / `data/L0/` | draft section |
