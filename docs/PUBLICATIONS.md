@@ -6,7 +6,7 @@ Status: active boundary-safe publication note for `csl-atlas`.
 
 The former cross-repo publication program is preserved as:
 
-- `docs/PUBLICATIONS_LEGACY_CROSS_REPO_PROGRAM.md`
+- `docs/archive/PUBLICATIONS_LEGACY_CROSS_REPO_PROGRAM.md`
 
 That legacy file includes corpus-based dictionary plans, standards work,
 observatory metrics, trend tracking, and long-range publication schedules. It
