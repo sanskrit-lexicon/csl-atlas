@@ -128,6 +128,25 @@ warnings[]
 items / rows / data
 ```
 
+Reader-facing lookup data keeps compatibility monoliths and page-load shards:
+
+```text
+src/data/dicts/lemma-lookup.json              legacy/core lookup monolith
+src/data/dicts/lemma-dossier.json             legacy/core dossier monolith
+src/data/dicts/core-lookup/manifest.json      core lookup manifest + samples
+src/data/dicts/core-lookup/shards/*.json      exact/prefix lookup shards
+src/data/dicts/core-dossier/manifest.json     core dossier manifest + samples
+src/data/dicts/core-dossier/shards/*.json     exact/prefix dossier shards
+src/data/dicts/broad-headword/manifest.json   broad headword manifest + samples
+src/data/dicts/broad-headword/shards/*.json   broad headword shards
+src/data/dcs/lemma-summary/manifest.json      DCS chip manifest
+src/data/dcs/lemma-summary/shards/*.json      DCS chip shards
+```
+
+Observable pages should load manifests/sample entries first and then only the
+candidate shards needed for exact/prefix lookup. The monolithic lookup and
+dossier files remain generated for validators and compatibility.
+
 ## Evidence Labels
 
 All claims carry one of the canonical labels:

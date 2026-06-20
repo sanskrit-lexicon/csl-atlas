@@ -77,6 +77,38 @@ export function deva_to_iast(s) {
   return out;
 }
 
+// ---- Devanāgarī -> SLP1 (direct; the ळ→L vs x decision is made HERE) ----
+// deva_to_iast collapses ळ (U+0933, retroflex ḻa) onto vocalic ḷ (both render as IAST ḷ/U+1E37),
+// so to_slp1(deva_to_iast('ळ')) would yield 'x' (vocalic ḷ) instead of 'L'. SLP1 keeps them apart
+// and that can't be recovered after the IAST step, so we transcode Devanāgarī → SLP1 directly:
+// derive the maps from the IAST maps (tracking to_slp1) and override ळ → 'L'. Round-trip partner
+// of from_slp1 ('L' → ḻ), where to_slp1∘deva_to_iast is not. Mirror of the Python deva_to_slp1.
+const mapVals = (m) => Object.fromEntries(Object.entries(m).map(([k, v]) => [k, to_slp1(v)]));
+const DV_VOWEL_SLP1 = mapVals(DV_VOWEL);
+const DV_MATRA_SLP1 = mapVals(DV_MATRA);
+const DV_CONS_SLP1 = mapVals(DV_CONS);
+DV_CONS_SLP1['ळ'] = 'L';        // retroflex ḻa — NOT 'x' (vocalic ḷ, from ऌ); see note above
+const DV_MARK_SLP1 = mapVals(DV_MARK);
+
+export function deva_to_slp1(s) {
+  s = s || '';
+  let out = '';
+  for (let i = 0; i < s.length; i++) {
+    const ch = s[i];
+    if (DV_CONS_SLP1[ch] != null) {
+      out += DV_CONS_SLP1[ch];
+      const nx = s[i + 1];
+      if (nx === VIRAMA) { i++; }
+      else if (DV_MATRA_SLP1[nx] != null) { out += DV_MATRA_SLP1[nx]; i++; }
+      else { out += 'a'; }
+    } else if (DV_VOWEL_SLP1[ch] != null) { out += DV_VOWEL_SLP1[ch]; }
+    else if (DV_MARK_SLP1[ch] != null) { out += DV_MARK_SLP1[ch]; }
+    else if (ch === 'ऽ') { /* avagraha — drop */ }
+    else { out += ch; }
+  }
+  return out;
+}
+
 // ---- IAST -> Devanāgarī (approximate display transcode) ----
 const IAST_TO_DEVA = {
   a: 'अ', 'ā': 'आ', i: 'इ', 'ī': 'ई', u: 'उ', 'ū': 'ऊ', 'ṛ': 'ऋ', 'ṝ': 'ॠ', 'ḷ': 'ऌ', 'ḹ': 'ॡ',
@@ -185,7 +217,7 @@ export function slp1_form_key(slp1) {
 }
 
 export default {
-  to_slp1, from_slp1, to_roman, deva_to_iast, iast_to_devanagari,
+  to_slp1, from_slp1, to_roman, deva_to_iast, deva_to_slp1, iast_to_devanagari,
   norm, nfold, form_key, normalize_sanskrit,
   SLP1_VOWELS, SLP1_MARKS, SLP1_CONSONANTS, SLP1_ALPHABET,
   strip_slp1_accents, slp1_norm, slp1_form_key,

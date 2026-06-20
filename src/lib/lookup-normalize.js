@@ -1,5 +1,5 @@
 // IAST <-> SLP1 transcoding is delegated to the canonical, cross-repo
-// sanskrit-util package (vendored verbatim as ./sanskrit-util.mjs; see
+// sanskrit-util package (vendored verbatim as ./sanskrit-util.js; see
 // SHARED_CODE.md). The previous hand-rolled tables here were behaviour-identical
 // to to_slp1/from_slp1 over 197k real lemmas EXCEPT the Vedic retroflex `L`/ḻ,
 // which the old maps left untranslated — sanskrit-util fixes that. The SLP1

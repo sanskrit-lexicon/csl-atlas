@@ -14,14 +14,24 @@ import { iterateHeadwords } from "./lib/dict-headwords.mjs";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { presentDicts, lemmaConfidence, genderConflict } from "./lib/dict-align.mjs";
-import { buildBroadHeadwordDictionaries, coreComparisonDictionaries } from "./lib/dict-scope.mjs";
+import {
+  BROAD_HEADWORD_SHARD_PREFIXES,
+  buildBroadHeadwordDictionaries,
+  coreComparisonDictionaries,
+  shardIdForLemma,
+  shardPrefixForId
+} from "./lib/dict-scope.mjs";
 import { extractGrammar, featureSupport, supportedFeatureCodes } from "./lib/dict-feature-adapters.mjs";
 import { generatedAtForPayload, generatedAtNow, licenseFields, readJsonIfExists } from "./lib/dataset-meta.mjs";
 import { CSL_ORIG_GITHUB_BASE, dictSourcePath, sourceHrefForDict } from "./lib/source-links.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "dicts");
+const CORE_LOOKUP_DIR = path.join(OUT_DIR, "core-lookup");
+const CORE_DOSSIER_DIR = path.join(OUT_DIR, "core-dossier");
 const SAMPLE = 50;
+const LOOKUP_SAMPLE_LEMMAS = ["agni", "Siva", "deva", "aMSa", "akza"];
+const DOSSIER_SAMPLE_LIMIT = 30;
 // A lemma enters the dossier when it is attested in at least this many of the
 // 7 target dictionaries. Keeps the static dossier dataset compact while
 // covering the well-attested shared vocabulary (full-corpus lookup over all
@@ -94,6 +104,83 @@ function writeCompactJson(name, payload) {
     : payload;
   fs.writeFileSync(filePath, `${JSON.stringify(finalPayload)}\n`);
   return path.relative(process.cwd(), filePath);
+}
+
+function shardIds() {
+  return [...BROAD_HEADWORD_SHARD_PREFIXES.map(prefix => prefix.charCodeAt(0).toString(16)), "other"];
+}
+
+function compareLemma(a, b) {
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
+function cleanShardOutput(dir) {
+  fs.rmSync(dir, { recursive: true, force: true });
+  fs.mkdirSync(path.join(dir, "shards"), { recursive: true });
+}
+
+function writeCompactFile(filePath, payload) {
+  fs.writeFileSync(filePath, `${JSON.stringify(payload)}\n`);
+}
+
+function writeShardedEntries({
+  dir,
+  scope,
+  entries,
+  lemmaOf,
+  manifestExtra,
+  sampleEntries,
+  tupleFields,
+  dictTupleFields
+}) {
+  const manifestPath = path.join(dir, "manifest.json");
+  const previousManifest = readJsonIfExists(manifestPath, fs);
+  cleanShardOutput(dir);
+
+  const sortedEntries = [...entries].sort((a, b) => compareLemma(lemmaOf(a), lemmaOf(b)));
+  const shards = new Map(shardIds().map(id => [id, []]));
+  for (const entry of sortedEntries) shards.get(shardIdForLemma(lemmaOf(entry))).push(entry);
+
+  const shardSummary = [];
+  for (const [id, shardEntries] of shards.entries()) {
+    const shardPayload = {
+      schemaVersion: SCHEMA_VERSION,
+      scope,
+      shard: id,
+      prefix: shardPrefixForId(id),
+      count: shardEntries.length,
+      tupleFields,
+      ...(dictTupleFields ? { dictTupleFields } : {}),
+      entries: shardEntries
+    };
+    writeCompactFile(path.join(dir, "shards", `${id}.json`), shardPayload);
+    shardSummary.push({ id, prefix: shardPayload.prefix, path: `shards/${id}.json`, count: shardEntries.length });
+  }
+
+  const manifestBase = {
+    schemaVersion: SCHEMA_VERSION,
+    ...licenseFields(),
+    generatedAt: generatedAtNow(),
+    sourceRoot: "../csl-orig/v02",
+    scope,
+    ...manifestExtra,
+    count: entries.length,
+    tupleFields,
+    ...(dictTupleFields ? { dictTupleFields } : {}),
+    shards: shardSummary,
+    sampleEntries
+  };
+  const manifest = {
+    ...manifestBase,
+    generatedAt: generatedAtForPayload(previousManifest, manifestBase)
+  };
+  writeCompactFile(manifestPath, manifest);
+  return path.relative(process.cwd(), manifestPath);
+}
+
+function lookupSamples(entries, lemmas) {
+  const byLemma = new Map(entries.map(entry => [entry[0], entry]));
+  return lemmas.map(lemma => byLemma.get(lemma)).filter(Boolean);
 }
 
 function neutralEnvelope(extra, { assumptions = [], warnings = [] } = {}) {
@@ -733,6 +820,30 @@ function main() {
     }
   );
   written.push(writeCompactJson("lemma-dossier.json", dossierPayload));
+  written.push(writeShardedEntries({
+    dir: CORE_DOSSIER_DIR,
+    scope: "coreDossier",
+    entries: dossier,
+    lemmaOf: entry => entry.l,
+    sampleEntries: dossier.slice(0, DOSSIER_SAMPLE_LIMIT),
+    tupleFields: ["l", "c", "d"],
+    dictTupleFields: ["code", "records", "firstLine", "gender"],
+    manifestExtra: {
+      generatedBy: "npm run build-dict-comparison",
+      hrefBase: CSL_ORIG_GITHUB_BASE,
+      minDicts: DOSSIER_MIN_DICTS,
+      inputSchemes: ["SLP1", "IAST"],
+      dictionaries: DICTS.map(d => ({ code: d.code, label: d.label, grammarReliable: d.grammarReliable })),
+      assumptions: [
+        `Includes lemmas attested in at least ${DOSSIER_MIN_DICTS} of the ${ORDER.length} target dictionaries.`,
+        "Each entry is {l,c,d}; each dict tuple is [code, records, firstLine, gender].",
+        "Core dossier lookup is exact/prefix lookup over normalized headwords, not substring search."
+      ],
+      warnings: [
+        "Lemmas in fewer than the threshold number of dictionaries are omitted; full-corpus lookup needs a search backend (deferred)."
+      ]
+    }
+  }));
 
   // 8. Reader lookup index. Written compactly like the dossier.
   lookup.sort((a, b) => a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0);
@@ -761,6 +872,32 @@ function main() {
     }
   );
   written.push(writeCompactJson("lemma-lookup.json", lookupPayload));
+  written.push(writeShardedEntries({
+    dir: CORE_LOOKUP_DIR,
+    scope: "coreLookup",
+    entries: lookup,
+    lemmaOf: entry => entry[0],
+    sampleEntries: lookupSamples(lookup, LOOKUP_SAMPLE_LEMMAS),
+    tupleFields: ["lemma", "dicts"],
+    dictTupleFields: ["dictIndex", "records", "firstLine", "gender?"],
+    manifestExtra: {
+      generatedBy: "npm run build-dict-comparison",
+      hrefBase: CSL_ORIG_GITHUB_BASE,
+      minDicts: LOOKUP_MIN_DICTS,
+      inputSchemes: ["SLP1", "IAST"],
+      dictionaries: DICTS.map(d => ({ code: d.code, label: d.label, grammarReliable: d.grammarReliable })),
+      assumptions: [
+        `Includes normalized lemmas attested in at least ${LOOKUP_MIN_DICTS} of the ${ORDER.length} target dictionaries.`,
+        "Each entry is [lemma, dictTuples]; each dict tuple is [dictIndex, records, firstLine, gender?].",
+        "Reader Lookup v1 is exact/prefix lookup over dictionary headwords, not full-text search and not a corpus lookup."
+      ],
+      warnings: [
+        "Lemmas below the coverage threshold are omitted from Reader Lookup v1; use dictionary source files or a future search backend for the long tail.",
+        "Search is static and client-side; very broad prefixes are capped in the page.",
+        "IAST input is transliterated deterministically, but ambiguous surface forms and sandhi are not resolved."
+      ]
+    }
+  }));
 
   // 9. Validation report.
   const report = {

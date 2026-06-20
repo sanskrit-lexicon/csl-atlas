@@ -59,7 +59,9 @@ Review decisions must be recorded in the existing review files or mapping tables
 
 Reader Lookup v1 is implemented as a static Observable page backed by compact generated JSON:
 
-- data output: `src/data/dicts/lemma-lookup.json`;
+- compatibility output: `src/data/dicts/lemma-lookup.json`;
+- page-load output: `src/data/dicts/core-lookup/manifest.json` and
+  `src/data/dicts/core-lookup/shards/*.json`;
 - page: `src/tools/reader-lookup.md`;
 - query normalization: `src/lib/lookup-normalize.js`;
 - generator: `npm run build-dict-comparison`.
@@ -70,6 +72,7 @@ Scope:
 - indexes lemmas attested in at least 4 of the 7 target dictionaries; lower-coverage lemmas remain a future search-index/backend item;
 - supports SLP1 and IAST query normalization;
 - shows dictionary coverage, record counts, gender/POS where extracted, and source links;
+- loads manifest sample entries first, then only candidate shards for exact/prefix lookup;
 - does not implement full-text search, corpus lookup, sandhi recovery, Devanagari input, or `LexemeHub`.
 
 ## Future Roadmap Items

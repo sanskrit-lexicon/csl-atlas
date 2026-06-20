@@ -58,11 +58,15 @@ export function shardIdForLemma(lemma, loaders) {
   return loaders.has(id) ? id : "other";
 }
 
+export function entryLemma(entry) {
+  return Array.isArray(entry) ? entry[0] : entry?.l ?? "";
+}
+
 export function lowerBoundLemma(entries, lemma) {
   let lo = 0, hi = entries.length;
   while (lo < hi) {
     const mid = (lo + hi) >> 1;
-    if (entries[mid][0] < lemma) lo = mid + 1;
+    if (entryLemma(entries[mid]) < lemma) lo = mid + 1;
     else hi = mid;
   }
   return lo;
@@ -70,14 +74,14 @@ export function lowerBoundLemma(entries, lemma) {
 
 export function findLemma(entries, lemma) {
   const i = lowerBoundLemma(entries, lemma);
-  return entries[i]?.[0] === lemma ? entries[i] : null;
+  return entryLemma(entries[i]) === lemma ? entries[i] : null;
 }
 
 export function findPrefix(entries, prefix, limit = 80) {
   const out = [];
   for (let i = lowerBoundLemma(entries, prefix); i < entries.length && out.length < limit; i++) {
     const entry = entries[i];
-    if (!entry[0].startsWith(prefix)) break;
+    if (!entryLemma(entry).startsWith(prefix)) break;
     out.push(entry);
   }
   return out;
