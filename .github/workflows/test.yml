@@ -22,3 +22,7 @@ jobs:
         run: npm ci
       - name: Unit tests
         run: npm test
+      - name: Validate review reports
+        run: npm run validate-review-reports
+      - name: Build
+        run: npm run build
