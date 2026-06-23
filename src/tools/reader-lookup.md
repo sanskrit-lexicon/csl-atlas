@@ -25,7 +25,7 @@ const localesRu = FileAttachment("../locales-ru.json").json();
 ```
 
 ```js
-const lookup = FileAttachment("../data/dicts/lemma-lookup.json").json();
+const coreLookupManifest = FileAttachment("../data/dicts/core-lookup/manifest.json").json();
 const broadManifest = FileAttachment("../data/dicts/broad-headword/manifest.json").json();
 ```
 
@@ -80,6 +80,57 @@ const broadShardLoaders = new Map([
   ["68", () => FileAttachment("../data/dicts/broad-headword/shards/68.json").json()],
   ["other", () => FileAttachment("../data/dicts/broad-headword/shards/other.json").json()]
 ]);
+
+const coreLookupShardLoaders = new Map([
+  ["61", () => FileAttachment("../data/dicts/core-lookup/shards/61.json").json()],
+  ["41", () => FileAttachment("../data/dicts/core-lookup/shards/41.json").json()],
+  ["69", () => FileAttachment("../data/dicts/core-lookup/shards/69.json").json()],
+  ["49", () => FileAttachment("../data/dicts/core-lookup/shards/49.json").json()],
+  ["75", () => FileAttachment("../data/dicts/core-lookup/shards/75.json").json()],
+  ["55", () => FileAttachment("../data/dicts/core-lookup/shards/55.json").json()],
+  ["66", () => FileAttachment("../data/dicts/core-lookup/shards/66.json").json()],
+  ["46", () => FileAttachment("../data/dicts/core-lookup/shards/46.json").json()],
+  ["78", () => FileAttachment("../data/dicts/core-lookup/shards/78.json").json()],
+  ["58", () => FileAttachment("../data/dicts/core-lookup/shards/58.json").json()],
+  ["65", () => FileAttachment("../data/dicts/core-lookup/shards/65.json").json()],
+  ["45", () => FileAttachment("../data/dicts/core-lookup/shards/45.json").json()],
+  ["6f", () => FileAttachment("../data/dicts/core-lookup/shards/6f.json").json()],
+  ["4f", () => FileAttachment("../data/dicts/core-lookup/shards/4f.json").json()],
+  ["6b", () => FileAttachment("../data/dicts/core-lookup/shards/6b.json").json()],
+  ["4b", () => FileAttachment("../data/dicts/core-lookup/shards/4b.json").json()],
+  ["67", () => FileAttachment("../data/dicts/core-lookup/shards/67.json").json()],
+  ["47", () => FileAttachment("../data/dicts/core-lookup/shards/47.json").json()],
+  ["4e", () => FileAttachment("../data/dicts/core-lookup/shards/4e.json").json()],
+  ["63", () => FileAttachment("../data/dicts/core-lookup/shards/63.json").json()],
+  ["43", () => FileAttachment("../data/dicts/core-lookup/shards/43.json").json()],
+  ["6a", () => FileAttachment("../data/dicts/core-lookup/shards/6a.json").json()],
+  ["4a", () => FileAttachment("../data/dicts/core-lookup/shards/4a.json").json()],
+  ["59", () => FileAttachment("../data/dicts/core-lookup/shards/59.json").json()],
+  ["77", () => FileAttachment("../data/dicts/core-lookup/shards/77.json").json()],
+  ["57", () => FileAttachment("../data/dicts/core-lookup/shards/57.json").json()],
+  ["71", () => FileAttachment("../data/dicts/core-lookup/shards/71.json").json()],
+  ["51", () => FileAttachment("../data/dicts/core-lookup/shards/51.json").json()],
+  ["52", () => FileAttachment("../data/dicts/core-lookup/shards/52.json").json()],
+  ["74", () => FileAttachment("../data/dicts/core-lookup/shards/74.json").json()],
+  ["54", () => FileAttachment("../data/dicts/core-lookup/shards/54.json").json()],
+  ["64", () => FileAttachment("../data/dicts/core-lookup/shards/64.json").json()],
+  ["44", () => FileAttachment("../data/dicts/core-lookup/shards/44.json").json()],
+  ["6e", () => FileAttachment("../data/dicts/core-lookup/shards/6e.json").json()],
+  ["70", () => FileAttachment("../data/dicts/core-lookup/shards/70.json").json()],
+  ["50", () => FileAttachment("../data/dicts/core-lookup/shards/50.json").json()],
+  ["62", () => FileAttachment("../data/dicts/core-lookup/shards/62.json").json()],
+  ["42", () => FileAttachment("../data/dicts/core-lookup/shards/42.json").json()],
+  ["6d", () => FileAttachment("../data/dicts/core-lookup/shards/6d.json").json()],
+  ["79", () => FileAttachment("../data/dicts/core-lookup/shards/79.json").json()],
+  ["72", () => FileAttachment("../data/dicts/core-lookup/shards/72.json").json()],
+  ["6c", () => FileAttachment("../data/dicts/core-lookup/shards/6c.json").json()],
+  ["76", () => FileAttachment("../data/dicts/core-lookup/shards/76.json").json()],
+  ["53", () => FileAttachment("../data/dicts/core-lookup/shards/53.json").json()],
+  ["7a", () => FileAttachment("../data/dicts/core-lookup/shards/7a.json").json()],
+  ["73", () => FileAttachment("../data/dicts/core-lookup/shards/73.json").json()],
+  ["68", () => FileAttachment("../data/dicts/core-lookup/shards/68.json").json()],
+  ["other", () => FileAttachment("../data/dicts/core-lookup/shards/other.json").json()]
+]);
 ```
 
 ```js
@@ -111,7 +162,7 @@ const lookupMode = normalizeLookupMode(rawLookupMode);
 ```
 
 ```js
-const activeManifest = lookupMode === "broad" ? broadManifest : lookup;
+const activeManifest = lookupMode === "broad" ? broadManifest : coreLookupManifest;
 const activeDictionaries = activeManifest.dictionaries;
 const publicInputSchemes = (activeManifest.inputSchemes ?? []).filter(scheme => scheme !== "SLP1");
 const scopeNote = lookupMode === "broad" ? t("reader.lookup.scope-note-broad") : t("reader.lookup.scope-note-core");
@@ -177,17 +228,15 @@ const query = view(Inputs.text({
 
 ```js
 const normalizedQuery = normalizeLookupQuery(query);
-const broadEntriesByShard = lookupMode === "broad" ? await loadCandidateShards(normalizedQuery.candidates, broadShardLoaders) : new Map();
-const entriesForCandidate = candidate => lookupMode === "broad"
-  ? broadEntriesByShard.get(shardIdForLemma(candidate, broadShardLoaders)) ?? []
-  : lookup.entries;
+const activeShardLoaders = lookupMode === "broad" ? broadShardLoaders : coreLookupShardLoaders;
+const entriesByShard = await loadCandidateShards(normalizedQuery.candidates, activeShardLoaders);
+const entriesForCandidate = candidate => entriesByShard.get(shardIdForLemma(candidate, activeShardLoaders)) ?? [];
 const exact = normalizedQuery.candidates.map(candidate => findLemma(entriesForCandidate(candidate), candidate)).find(Boolean) ?? null;
-const prefixBase = normalizedQuery.candidates.find(candidate => candidate.length >= 1) ?? "";
-const prefixMatches = prefixBase ? findPrefix(entriesForCandidate(prefixBase), prefixBase) : [];
-const starterLemmas = ["agni", "Siva", "deva", "aMSa", "akza"];
-const starterEntries = lookupMode === "broad"
-  ? broadManifest.sampleEntries
-  : starterLemmas.map(lemma => findLemma(lookup.entries, lemma)).filter(Boolean);
+const prefixMatches = normalizedQuery.candidates
+  .filter(candidate => candidate.length >= 1)
+  .map(candidate => findPrefix(entriesForCandidate(candidate), candidate))
+  .find(matches => matches.length) ?? [];
+const starterEntries = activeManifest.sampleEntries ?? [];
 const shownEntries = exact ? [exact] : (query ? prefixMatches : starterEntries);
 const displayQuery = slp1ToIast(normalizedQuery.normalized) || query;
 ```

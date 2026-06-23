@@ -35,6 +35,7 @@ import { dictGithubHref, sourceHrefForDict } from "../scripts/lib/source-links.m
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
 import { generatedAtForPayload } from "../scripts/lib/dataset-meta.mjs";
 import { loadPreserved, reviewFields, reviewPayload } from "../scripts/lib/review-report.mjs";
+import { deva_to_slp1 } from "../src/lib/sanskrit-util.js";
 import { iastToSlp1, normalizeLookupQuery, normalizeSlp1Lemma, slp1ToIast } from "../src/lib/lookup-normalize.js";
 import {
   findLemma as findLookupLemma,
@@ -436,18 +437,20 @@ test("transcoders delegate to sanskrit-util and fix the Vedic retroflex L (ḻ)"
   assert.equal(slp1ToIast("iLA"), "iḻā");
   assert.equal(slp1ToIast("mfL"), "mṛḻ");
   assert.equal(iastToSlp1("iḻā"), "iLA");
+  assert.equal(deva_to_slp1("ळ"), "La");
+  assert.equal(deva_to_slp1("ळ्"), "L");
 });
 
 // The IAST<->SLP1 transcoders are vendored verbatim from the canonical sanskrit-util
-// package (src/lib/sanskrit-util.mjs). Guard against silent drift from the sibling
+// package (src/lib/sanskrit-util.js). Guard against silent drift from the sibling
 // checkout; skip when the sibling repo is absent (e.g. on the csl-atlas CI runner).
 const canonicalSanskritUtil = path.resolve("..", "sanskrit-util", "js", "index.mjs");
 const driftOpts = { skip: fs.existsSync(canonicalSanskritUtil) ? false : "requires sibling ../sanskrit-util checkout" };
-test("vendored sanskrit-util.mjs matches the canonical sanskrit-util source", driftOpts, () => {
+test("vendored sanskrit-util.js matches the canonical sanskrit-util source", driftOpts, () => {
   const lf = s => s.replace(/\r\n/g, "\n");
   const vendored = lf(fs.readFileSync(path.resolve("src", "lib", "sanskrit-util.js"), "utf8"));
   const canonical = lf(fs.readFileSync(canonicalSanskritUtil, "utf8"));
-  assert.equal(vendored, canonical, "src/lib/sanskrit-util.mjs has drifted from ../sanskrit-util/js/index.mjs — re-vendor it");
+  assert.equal(vendored, canonical, "src/lib/sanskrit-util.js has drifted from ../sanskrit-util/js/index.mjs — re-vendor it");
 });
 
 test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", () => {
@@ -470,6 +473,10 @@ test("lookup UI helpers support deep links, locales, and sorted lemma lookup", (
   const entries = [["Siva", 4], ["aMSa", 3], ["agni", 1], ["akza", 2]];
   assert.deepEqual(findLookupLemma(entries, "akza"), ["akza", 2]);
   assert.deepEqual(findLookupPrefix(entries, "a", 2).map(e => e[0]), ["aMSa", "agni"]);
+
+  const dossierEntries = [{ l: "Siva", c: 4 }, { l: "aMSa", c: 3 }, { l: "agni", c: 1 }, { l: "akza", c: 2 }];
+  assert.deepEqual(findLookupLemma(dossierEntries, "agni"), { l: "agni", c: 1 });
+  assert.deepEqual(findLookupPrefix(dossierEntries, "a", 2).map(e => e.l), ["aMSa", "agni"]);
 });
 
 test("lookup shard loading stays demand-driven", async () => {

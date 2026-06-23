@@ -20,11 +20,11 @@ import {
 ```
 
 ```js
-const dossier = FileAttachment("../data/dicts/lemma-dossier.json").json();
+const coreDossierManifest = FileAttachment("../data/dicts/core-dossier/manifest.json").json();
 const broadManifest = FileAttachment("../data/dicts/broad-headword/manifest.json").json();
 const localesEn = FileAttachment("../locales-en.json").json();
 const localesRu = FileAttachment("../locales-ru.json").json();
-const dcsSummary = FileAttachment("../data/dcs/dcs_lemma_summary.json").json();
+const dcsSummaryManifest = FileAttachment("../data/dcs/lemma-summary/manifest.json").json();
 ```
 
 ```js
@@ -78,6 +78,108 @@ const broadShardLoaders = new Map([
   ["68", () => FileAttachment("../data/dicts/broad-headword/shards/68.json").json()],
   ["other", () => FileAttachment("../data/dicts/broad-headword/shards/other.json").json()]
 ]);
+
+const coreDossierShardLoaders = new Map([
+  ["61", () => FileAttachment("../data/dicts/core-dossier/shards/61.json").json()],
+  ["41", () => FileAttachment("../data/dicts/core-dossier/shards/41.json").json()],
+  ["69", () => FileAttachment("../data/dicts/core-dossier/shards/69.json").json()],
+  ["49", () => FileAttachment("../data/dicts/core-dossier/shards/49.json").json()],
+  ["75", () => FileAttachment("../data/dicts/core-dossier/shards/75.json").json()],
+  ["55", () => FileAttachment("../data/dicts/core-dossier/shards/55.json").json()],
+  ["66", () => FileAttachment("../data/dicts/core-dossier/shards/66.json").json()],
+  ["46", () => FileAttachment("../data/dicts/core-dossier/shards/46.json").json()],
+  ["78", () => FileAttachment("../data/dicts/core-dossier/shards/78.json").json()],
+  ["58", () => FileAttachment("../data/dicts/core-dossier/shards/58.json").json()],
+  ["65", () => FileAttachment("../data/dicts/core-dossier/shards/65.json").json()],
+  ["45", () => FileAttachment("../data/dicts/core-dossier/shards/45.json").json()],
+  ["6f", () => FileAttachment("../data/dicts/core-dossier/shards/6f.json").json()],
+  ["4f", () => FileAttachment("../data/dicts/core-dossier/shards/4f.json").json()],
+  ["6b", () => FileAttachment("../data/dicts/core-dossier/shards/6b.json").json()],
+  ["4b", () => FileAttachment("../data/dicts/core-dossier/shards/4b.json").json()],
+  ["67", () => FileAttachment("../data/dicts/core-dossier/shards/67.json").json()],
+  ["47", () => FileAttachment("../data/dicts/core-dossier/shards/47.json").json()],
+  ["4e", () => FileAttachment("../data/dicts/core-dossier/shards/4e.json").json()],
+  ["63", () => FileAttachment("../data/dicts/core-dossier/shards/63.json").json()],
+  ["43", () => FileAttachment("../data/dicts/core-dossier/shards/43.json").json()],
+  ["6a", () => FileAttachment("../data/dicts/core-dossier/shards/6a.json").json()],
+  ["4a", () => FileAttachment("../data/dicts/core-dossier/shards/4a.json").json()],
+  ["59", () => FileAttachment("../data/dicts/core-dossier/shards/59.json").json()],
+  ["77", () => FileAttachment("../data/dicts/core-dossier/shards/77.json").json()],
+  ["57", () => FileAttachment("../data/dicts/core-dossier/shards/57.json").json()],
+  ["71", () => FileAttachment("../data/dicts/core-dossier/shards/71.json").json()],
+  ["51", () => FileAttachment("../data/dicts/core-dossier/shards/51.json").json()],
+  ["52", () => FileAttachment("../data/dicts/core-dossier/shards/52.json").json()],
+  ["74", () => FileAttachment("../data/dicts/core-dossier/shards/74.json").json()],
+  ["54", () => FileAttachment("../data/dicts/core-dossier/shards/54.json").json()],
+  ["64", () => FileAttachment("../data/dicts/core-dossier/shards/64.json").json()],
+  ["44", () => FileAttachment("../data/dicts/core-dossier/shards/44.json").json()],
+  ["6e", () => FileAttachment("../data/dicts/core-dossier/shards/6e.json").json()],
+  ["70", () => FileAttachment("../data/dicts/core-dossier/shards/70.json").json()],
+  ["50", () => FileAttachment("../data/dicts/core-dossier/shards/50.json").json()],
+  ["62", () => FileAttachment("../data/dicts/core-dossier/shards/62.json").json()],
+  ["42", () => FileAttachment("../data/dicts/core-dossier/shards/42.json").json()],
+  ["6d", () => FileAttachment("../data/dicts/core-dossier/shards/6d.json").json()],
+  ["79", () => FileAttachment("../data/dicts/core-dossier/shards/79.json").json()],
+  ["72", () => FileAttachment("../data/dicts/core-dossier/shards/72.json").json()],
+  ["6c", () => FileAttachment("../data/dicts/core-dossier/shards/6c.json").json()],
+  ["76", () => FileAttachment("../data/dicts/core-dossier/shards/76.json").json()],
+  ["53", () => FileAttachment("../data/dicts/core-dossier/shards/53.json").json()],
+  ["7a", () => FileAttachment("../data/dicts/core-dossier/shards/7a.json").json()],
+  ["73", () => FileAttachment("../data/dicts/core-dossier/shards/73.json").json()],
+  ["68", () => FileAttachment("../data/dicts/core-dossier/shards/68.json").json()],
+  ["other", () => FileAttachment("../data/dicts/core-dossier/shards/other.json").json()]
+]);
+
+const dcsSummaryShardLoaders = new Map([
+  ["61", () => FileAttachment("../data/dcs/lemma-summary/shards/61.json").json()],
+  ["41", () => FileAttachment("../data/dcs/lemma-summary/shards/41.json").json()],
+  ["69", () => FileAttachment("../data/dcs/lemma-summary/shards/69.json").json()],
+  ["49", () => FileAttachment("../data/dcs/lemma-summary/shards/49.json").json()],
+  ["75", () => FileAttachment("../data/dcs/lemma-summary/shards/75.json").json()],
+  ["55", () => FileAttachment("../data/dcs/lemma-summary/shards/55.json").json()],
+  ["66", () => FileAttachment("../data/dcs/lemma-summary/shards/66.json").json()],
+  ["46", () => FileAttachment("../data/dcs/lemma-summary/shards/46.json").json()],
+  ["78", () => FileAttachment("../data/dcs/lemma-summary/shards/78.json").json()],
+  ["58", () => FileAttachment("../data/dcs/lemma-summary/shards/58.json").json()],
+  ["65", () => FileAttachment("../data/dcs/lemma-summary/shards/65.json").json()],
+  ["45", () => FileAttachment("../data/dcs/lemma-summary/shards/45.json").json()],
+  ["6f", () => FileAttachment("../data/dcs/lemma-summary/shards/6f.json").json()],
+  ["4f", () => FileAttachment("../data/dcs/lemma-summary/shards/4f.json").json()],
+  ["6b", () => FileAttachment("../data/dcs/lemma-summary/shards/6b.json").json()],
+  ["4b", () => FileAttachment("../data/dcs/lemma-summary/shards/4b.json").json()],
+  ["67", () => FileAttachment("../data/dcs/lemma-summary/shards/67.json").json()],
+  ["47", () => FileAttachment("../data/dcs/lemma-summary/shards/47.json").json()],
+  ["4e", () => FileAttachment("../data/dcs/lemma-summary/shards/4e.json").json()],
+  ["63", () => FileAttachment("../data/dcs/lemma-summary/shards/63.json").json()],
+  ["43", () => FileAttachment("../data/dcs/lemma-summary/shards/43.json").json()],
+  ["6a", () => FileAttachment("../data/dcs/lemma-summary/shards/6a.json").json()],
+  ["4a", () => FileAttachment("../data/dcs/lemma-summary/shards/4a.json").json()],
+  ["59", () => FileAttachment("../data/dcs/lemma-summary/shards/59.json").json()],
+  ["77", () => FileAttachment("../data/dcs/lemma-summary/shards/77.json").json()],
+  ["57", () => FileAttachment("../data/dcs/lemma-summary/shards/57.json").json()],
+  ["71", () => FileAttachment("../data/dcs/lemma-summary/shards/71.json").json()],
+  ["51", () => FileAttachment("../data/dcs/lemma-summary/shards/51.json").json()],
+  ["52", () => FileAttachment("../data/dcs/lemma-summary/shards/52.json").json()],
+  ["74", () => FileAttachment("../data/dcs/lemma-summary/shards/74.json").json()],
+  ["54", () => FileAttachment("../data/dcs/lemma-summary/shards/54.json").json()],
+  ["64", () => FileAttachment("../data/dcs/lemma-summary/shards/64.json").json()],
+  ["44", () => FileAttachment("../data/dcs/lemma-summary/shards/44.json").json()],
+  ["6e", () => FileAttachment("../data/dcs/lemma-summary/shards/6e.json").json()],
+  ["70", () => FileAttachment("../data/dcs/lemma-summary/shards/70.json").json()],
+  ["50", () => FileAttachment("../data/dcs/lemma-summary/shards/50.json").json()],
+  ["62", () => FileAttachment("../data/dcs/lemma-summary/shards/62.json").json()],
+  ["42", () => FileAttachment("../data/dcs/lemma-summary/shards/42.json").json()],
+  ["6d", () => FileAttachment("../data/dcs/lemma-summary/shards/6d.json").json()],
+  ["79", () => FileAttachment("../data/dcs/lemma-summary/shards/79.json").json()],
+  ["72", () => FileAttachment("../data/dcs/lemma-summary/shards/72.json").json()],
+  ["6c", () => FileAttachment("../data/dcs/lemma-summary/shards/6c.json").json()],
+  ["76", () => FileAttachment("../data/dcs/lemma-summary/shards/76.json").json()],
+  ["53", () => FileAttachment("../data/dcs/lemma-summary/shards/53.json").json()],
+  ["7a", () => FileAttachment("../data/dcs/lemma-summary/shards/7a.json").json()],
+  ["73", () => FileAttachment("../data/dcs/lemma-summary/shards/73.json").json()],
+  ["68", () => FileAttachment("../data/dcs/lemma-summary/shards/68.json").json()],
+  ["other", () => FileAttachment("../data/dcs/lemma-summary/shards/other.json").json()]
+]);
 ```
 
 ```js
@@ -109,11 +211,10 @@ const lookupMode = normalizeLookupMode(rawLookupMode);
 ```
 
 ```js
-const activeManifest = lookupMode === "broad" ? broadManifest : dossier;
+const activeManifest = lookupMode === "broad" ? broadManifest : coreDossierManifest;
 const activeDictionaries = activeManifest.dictionaries;
 const activeDictionaryCount = activeDictionaries.length;
-const dcsMap = dcsSummary?.lemmas ?? {};
-const coreDictByCode = new Map(dossier.dictionaries.map(d => [d.code, { sourceLinkMode: "github", ...d }]));
+const coreDictByCode = new Map(coreDossierManifest.dictionaries.map(d => [d.code, { sourceLinkMode: "github", ...d }]));
 const broadDictByIndex = new Map(broadManifest.dictionaries.map((d, i) => [i, d]));
 ```
 
@@ -140,7 +241,7 @@ const dictionaryLabels = activeDictionaries.map(d => d.label).join(", ");
 display(html`<div class="note">
   ${lookupMode === "broad"
     ? html`${t("phase2.dossier.broad-note")} <b>${broadManifest.count.toLocaleString()}</b> ${t("phase2.dossier.lemmas")} ${t("phase2.dossier.across")} <b>${activeDictionaryCount}</b> ${t("phase2.dossier.dictionaries")}.`
-    : html`${t("phase2.dossier.core-note")} <b>${dossier.count.toLocaleString()}</b> ${t("phase2.dossier.lemmas")} ${t("phase2.dossier.in-at-least")} <b>${dossier.minDicts}</b> ${t("phase2.dossier.of")} <b>${activeDictionaryCount}</b> ${t("phase2.dossier.dictionaries")} (${dictionaryLabels}).`}
+    : html`${t("phase2.dossier.core-note")} <b>${coreDossierManifest.count.toLocaleString()}</b> ${t("phase2.dossier.lemmas")} ${t("phase2.dossier.in-at-least")} <b>${coreDossierManifest.minDicts}</b> ${t("phase2.dossier.of")} <b>${activeDictionaryCount}</b> ${t("phase2.dossier.dictionaries")} (${dictionaryLabels}).`}
 </div>`);
 ```
 
@@ -202,18 +303,21 @@ const q = (query ?? "").trim();
 const normalizedQuery = normalizeLookupQuery(q);
 const internalQueries = normalizedQuery.candidates;
 const displayQuery = slp1ToIast(normalizedQuery.normalized) || q;
-const broadEntriesByShard = lookupMode === "broad" ? await loadCandidateShards(internalQueries, broadShardLoaders) : new Map();
-const broadEntriesForCandidate = candidate => broadEntriesByShard.get(shardIdForLemma(candidate, broadShardLoaders)) ?? [];
-const broadExact = internalQueries.map(candidate => findLemma(broadEntriesForCandidate(candidate), candidate)).find(Boolean) ?? null;
-const broadPrefixBase = internalQueries.find(candidate => candidate.length >= 1) ?? "";
-const broadMatches = q
-  ? (broadExact ? [broadExact] : broadPrefixBase ? findPrefix(broadEntriesForCandidate(broadPrefixBase), broadPrefixBase, 200) : [])
-  : broadManifest.sampleEntries;
-const coreMatches = q
-  ? dossier.entries.filter(e => internalQueries.some(candidate => e.l.includes(candidate)))
-  : dossier.entries.slice(0, 30);
-const matches = lookupMode === "broad" ? broadMatches.map(broadEntry) : coreMatches.map(coreEntry);
+const activeShardLoaders = lookupMode === "broad" ? broadShardLoaders : coreDossierShardLoaders;
+const entriesByShard = await loadCandidateShards(internalQueries, activeShardLoaders);
+const entriesForCandidate = candidate => entriesByShard.get(shardIdForLemma(candidate, activeShardLoaders)) ?? [];
+const exact = internalQueries.map(candidate => findLemma(entriesForCandidate(candidate), candidate)).find(Boolean) ?? null;
+const prefixMatches = internalQueries
+  .filter(candidate => candidate.length >= 1)
+  .map(candidate => findPrefix(entriesForCandidate(candidate), candidate, 200))
+  .find(entries => entries.length) ?? [];
+const matchedEntries = q
+  ? (exact ? [exact] : prefixMatches)
+  : activeManifest.sampleEntries ?? [];
+const matches = lookupMode === "broad" ? matchedEntries.map(broadEntry) : matchedEntries.map(coreEntry);
 const shown = matches.slice(0, 200);
+const dcsEntriesByShard = await loadCandidateShards(shown.map(entry => entry.l), dcsSummaryShardLoaders);
+const dcsMap = new Map([...dcsEntriesByShard.values()].flat());
 ```
 
 ```js
@@ -232,7 +336,7 @@ display(html`<p class="dossier-status">
 ```js
 display(html`<div class="dossier-grid">
   ${shown.map(e => {
-    const dcs = dcsMap[e.l];
+    const dcs = dcsMap.get(e.l);
     return html`<section class="lemma-card">
       <h3>${slp1ToIast(e.l)} <span class="cov">${t("phase2.dossier.in")} ${e.c}/${activeDictionaryCount}</span></h3>
       <div class="chips">
