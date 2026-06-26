@@ -63,3 +63,11 @@ diacritic/case fold already handles the bulk; this adjudication extends the
 *reviewed* layer for the most-cited abbreviation families. The long tail stays in
 the source-siglum review queue by design — `siglum_families.py` regenerates
 candidates, this table records human decisions.
+
+## Batch 1 worklist
+
+`src/data/review/source-siglum-family-batch-1.json` records the first 50
+frequency-ranked candidate families from
+`data/obs/siglum_family_candidates.csv`. It is a reviewer worklist, not an
+accepted merge list: rows stay `needs-review` until a reviewer confirms that the
+members are one work or splits the mixed cluster into safe subsets.

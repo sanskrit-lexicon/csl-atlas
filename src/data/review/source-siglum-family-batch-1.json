@@ -1,0 +1,2862 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedAt": "2026-06-26T00:00:00.000Z",
+  "sourcePath": "data/obs/siglum_family_candidates.csv",
+  "recordCount": 50,
+  "queue": "source-siglum-alias",
+  "reviewFamily": "siglum-family-batch-1",
+  "assumptions": [
+    "Rows are the first 50 frequency-ranked abbreviation-family candidates from scripts/obs/siglum_families.py.",
+    "A row is a review worklist item, not an accepted alias merge.",
+    "Only a reviewer may promote a same-work family into src/data/dict-source-aliases.json.",
+    "Mixed clusters should be split or left in needs-review rather than merged wholesale."
+  ],
+  "warnings": [
+    "Prefix families can mix distinct works, authors, editions, or catalogues.",
+    "The reviewed seed in src/data/dict-source-aliases.json already covers some high-frequency safe subsets; this packet preserves the remaining batch context."
+  ],
+  "items": [
+    {
+      "reviewId": "source-siglum-family-batch-1:bhag",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "bhagp",
+        "canonicalId": "bhagp"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 2,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "bhag",
+        "representative": "bhagp",
+        "nMembers": 3,
+        "totalCitations": 28396,
+        "members": [
+          {
+            "foldKey": "bhagp",
+            "citations": 22174
+          },
+          {
+            "foldKey": "bhag",
+            "citations": 6146
+          },
+          {
+            "foldKey": "bhagpedbomb",
+            "citations": 76
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:kath",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "kathas",
+        "canonicalId": "kathas"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 3,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "kath",
+        "representative": "kathas",
+        "nMembers": 10,
+        "totalCitations": 25823,
+        "members": [
+          {
+            "foldKey": "kathas",
+            "citations": 22576
+          },
+          {
+            "foldKey": "kath",
+            "citations": 2409
+          },
+          {
+            "foldKey": "kathop",
+            "citations": 524
+          },
+          {
+            "foldKey": "kathup",
+            "citations": 157
+          },
+          {
+            "foldKey": "kathaslxi",
+            "citations": 33
+          },
+          {
+            "foldKey": "kathasxviii",
+            "citations": 29
+          },
+          {
+            "foldKey": "katharn",
+            "citations": 29
+          },
+          {
+            "foldKey": "kathaslxxii",
+            "citations": 23
+          },
+          {
+            "foldKey": "katharnava",
+            "citations": 22
+          },
+          {
+            "foldKey": "kathasvi",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:raja",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "rajan",
+        "canonicalId": "rajan"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 4,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "raja",
+        "representative": "rajan",
+        "nMembers": 13,
+        "totalCitations": 25165,
+        "members": [
+          {
+            "foldKey": "rajan",
+            "citations": 12596
+          },
+          {
+            "foldKey": "rajatar",
+            "citations": 7088
+          },
+          {
+            "foldKey": "rajat",
+            "citations": 4730
+          },
+          {
+            "foldKey": "rajatv",
+            "citations": 137
+          },
+          {
+            "foldKey": "rajativ",
+            "citations": 99
+          },
+          {
+            "foldKey": "rajav",
+            "citations": 91
+          },
+          {
+            "foldKey": "rajati",
+            "citations": 68
+          },
+          {
+            "foldKey": "rajatvii",
+            "citations": 68
+          },
+          {
+            "foldKey": "rajatviii",
+            "citations": 64
+          },
+          {
+            "foldKey": "rajanebend",
+            "citations": 64
+          },
+          {
+            "foldKey": "rajatarangini",
+            "citations": 56
+          },
+          {
+            "foldKey": "rajatiii",
+            "citations": 53
+          },
+          {
+            "foldKey": "rajatvi",
+            "citations": 51
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:panc",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "pancat",
+        "canonicalId": "pancat"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 5,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "panc",
+        "representative": "pancat",
+        "nMembers": 16,
+        "totalCitations": 21022,
+        "members": [
+          {
+            "foldKey": "pancat",
+            "citations": 7660
+          },
+          {
+            "foldKey": "panc",
+            "citations": 5192
+          },
+          {
+            "foldKey": "pancar",
+            "citations": 3079
+          },
+          {
+            "foldKey": "pancavbr",
+            "citations": 1941
+          },
+          {
+            "foldKey": "pancati",
+            "citations": 935
+          },
+          {
+            "foldKey": "pancad",
+            "citations": 555
+          },
+          {
+            "foldKey": "pancatiii",
+            "citations": 441
+          },
+          {
+            "foldKey": "pancatii",
+            "citations": 387
+          },
+          {
+            "foldKey": "pancatedorn",
+            "citations": 291
+          },
+          {
+            "foldKey": "pancatv",
+            "citations": 162
+          },
+          {
+            "foldKey": "panch",
+            "citations": 108
+          },
+          {
+            "foldKey": "pancativ",
+            "citations": 107
+          },
+          {
+            "foldKey": "pancatedbomb",
+            "citations": 66
+          },
+          {
+            "foldKey": "pancatpr",
+            "citations": 49
+          },
+          {
+            "foldKey": "panci",
+            "citations": 28
+          },
+          {
+            "foldKey": "pancatedorni",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:skdr",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "skdr",
+        "canonicalId": "skdr"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 6,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "skdr",
+        "representative": "skdr",
+        "nMembers": 2,
+        "totalCitations": 20154,
+        "members": [
+          {
+            "foldKey": "skdr",
+            "citations": 20113
+          },
+          {
+            "foldKey": "skdrsuppl",
+            "citations": 41
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:hari",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "hariv",
+        "canonicalId": "hariv"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 7,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "hari",
+        "representative": "hariv",
+        "nMembers": 4,
+        "totalCitations": 19961,
+        "members": [
+          {
+            "foldKey": "hariv",
+            "citations": 19772
+          },
+          {
+            "foldKey": "harivlangli",
+            "citations": 122
+          },
+          {
+            "foldKey": "harita",
+            "citations": 36
+          },
+          {
+            "foldKey": "harivlanglii",
+            "citations": 31
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:susr",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "susr",
+        "canonicalId": "susr"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 8,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "susr",
+        "representative": "susr",
+        "nMembers": 6,
+        "totalCitations": 17760,
+        "members": [
+          {
+            "foldKey": "susr",
+            "citations": 17285
+          },
+          {
+            "foldKey": "susri",
+            "citations": 221
+          },
+          {
+            "foldKey": "susriv",
+            "citations": 78
+          },
+          {
+            "foldKey": "susrii",
+            "citations": 66
+          },
+          {
+            "foldKey": "susrvi",
+            "citations": 63
+          },
+          {
+            "foldKey": "susrv",
+            "citations": 47
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:verz",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "verzdoxfh",
+        "canonicalId": "verzdoxfh"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 9,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "verz",
+        "representative": "verzdoxfh",
+        "nMembers": 8,
+        "totalCitations": 16749,
+        "members": [
+          {
+            "foldKey": "verzdoxfh",
+            "citations": 12504
+          },
+          {
+            "foldKey": "verzdbhno",
+            "citations": 2362
+          },
+          {
+            "foldKey": "verzdbh",
+            "citations": 1354
+          },
+          {
+            "foldKey": "verzdoxfhno",
+            "citations": 219
+          },
+          {
+            "foldKey": "verzdcambrh",
+            "citations": 140
+          },
+          {
+            "foldKey": "verzdtubh",
+            "citations": 86
+          },
+          {
+            "foldKey": "verzdpethno",
+            "citations": 54
+          },
+          {
+            "foldKey": "verzdkoph",
+            "citations": 30
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:ragh",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "ragh",
+        "canonicalId": "ragh"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 10,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "ragh",
+        "representative": "ragh",
+        "nMembers": 21,
+        "totalCitations": 11717,
+        "members": [
+          {
+            "foldKey": "ragh",
+            "citations": 10848
+          },
+          {
+            "foldKey": "raghedcalc",
+            "citations": 146
+          },
+          {
+            "foldKey": "raghiii",
+            "citations": 62
+          },
+          {
+            "foldKey": "raghi",
+            "citations": 56
+          },
+          {
+            "foldKey": "raghxii",
+            "citations": 52
+          },
+          {
+            "foldKey": "raghii",
+            "citations": 51
+          },
+          {
+            "foldKey": "raghv",
+            "citations": 46
+          },
+          {
+            "foldKey": "raghx",
+            "citations": 44
+          },
+          {
+            "foldKey": "raghix",
+            "citations": 41
+          },
+          {
+            "foldKey": "raghviii",
+            "citations": 40
+          },
+          {
+            "foldKey": "raghvii",
+            "citations": 38
+          },
+          {
+            "foldKey": "raghxiv",
+            "citations": 35
+          },
+          {
+            "foldKey": "raghxvi",
+            "citations": 35
+          },
+          {
+            "foldKey": "raghxi",
+            "citations": 35
+          },
+          {
+            "foldKey": "raghiv",
+            "citations": 33
+          },
+          {
+            "foldKey": "raghxiii",
+            "citations": 31
+          },
+          {
+            "foldKey": "raghvi",
+            "citations": 28
+          },
+          {
+            "foldKey": "raghxvii",
+            "citations": 25
+          },
+          {
+            "foldKey": "raghxix",
+            "citations": 24
+          },
+          {
+            "foldKey": "raghxv",
+            "citations": 24
+          },
+          {
+            "foldKey": "raghxviii",
+            "citations": 23
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:vara",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "varahbrhs",
+        "canonicalId": "varahbrhs"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 11,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "vara",
+        "representative": "varahbrhs",
+        "nMembers": 7,
+        "totalCitations": 9603,
+        "members": [
+          {
+            "foldKey": "varahbrhs",
+            "citations": 8396
+          },
+          {
+            "foldKey": "varahbrh",
+            "citations": 719
+          },
+          {
+            "foldKey": "varahyogay",
+            "citations": 262
+          },
+          {
+            "foldKey": "varahlaghuj",
+            "citations": 85
+          },
+          {
+            "foldKey": "varahap",
+            "citations": 66
+          },
+          {
+            "foldKey": "varah",
+            "citations": 53
+          },
+          {
+            "foldKey": "varahbrhss",
+            "citations": 22
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:katy",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "katysr",
+        "canonicalId": "katysr"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 12,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "katy",
+        "representative": "katysr",
+        "nMembers": 7,
+        "totalCitations": 8393,
+        "members": [
+          {
+            "foldKey": "katysr",
+            "citations": 8011
+          },
+          {
+            "foldKey": "katy",
+            "citations": 267
+          },
+          {
+            "foldKey": "katysrxxv",
+            "citations": 24
+          },
+          {
+            "foldKey": "katysri",
+            "citations": 24
+          },
+          {
+            "foldKey": "katyayana",
+            "citations": 23
+          },
+          {
+            "foldKey": "katysrxxii",
+            "citations": 23
+          },
+          {
+            "foldKey": "katysriv",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:inds",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "indst",
+        "canonicalId": "indst"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 13,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "inds",
+        "representative": "indst",
+        "nMembers": 3,
+        "totalCitations": 8184,
+        "members": [
+          {
+            "foldKey": "indst",
+            "citations": 8049
+          },
+          {
+            "foldKey": "indsti",
+            "citations": 99
+          },
+          {
+            "foldKey": "indstii",
+            "citations": 36
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:mark",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "markp",
+        "canonicalId": "markp"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 14,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "mark",
+        "representative": "markp",
+        "nMembers": 2,
+        "totalCitations": 7121,
+        "members": [
+          {
+            "foldKey": "markp",
+            "citations": 7085
+          },
+          {
+            "foldKey": "markps",
+            "citations": 36
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:yajn",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "yajn",
+        "canonicalId": "yajn"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 15,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "yajn",
+        "representative": "yajn",
+        "nMembers": 5,
+        "totalCitations": 6593,
+        "members": [
+          {
+            "foldKey": "yajn",
+            "citations": 5745
+          },
+          {
+            "foldKey": "yajnii",
+            "citations": 276
+          },
+          {
+            "foldKey": "yajni",
+            "citations": 220
+          },
+          {
+            "foldKey": "yajniii",
+            "citations": 190
+          },
+          {
+            "foldKey": "yajnsch",
+            "citations": 162
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:divy",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "divy",
+        "canonicalId": "divy"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 16,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "divy",
+        "representative": "divy",
+        "nMembers": 3,
+        "totalCitations": 6322,
+        "members": [
+          {
+            "foldKey": "divy",
+            "citations": 3172
+          },
+          {
+            "foldKey": "divyavad",
+            "citations": 2202
+          },
+          {
+            "foldKey": "divyav",
+            "citations": 948
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:sabd",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "sabdar",
+        "canonicalId": "sabdar"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 17,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "sabd",
+        "representative": "sabdar",
+        "nMembers": 6,
+        "totalCitations": 6113,
+        "members": [
+          {
+            "foldKey": "sabdar",
+            "citations": 3112
+          },
+          {
+            "foldKey": "sabdac",
+            "citations": 1432
+          },
+          {
+            "foldKey": "sabdam",
+            "citations": 775
+          },
+          {
+            "foldKey": "sabdarthak",
+            "citations": 705
+          },
+          {
+            "foldKey": "sabdak",
+            "citations": 51
+          },
+          {
+            "foldKey": "sabdarthakalpataru",
+            "citations": 38
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:aitb",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "aitbr",
+        "canonicalId": "aitbr"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 18,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "aitb",
+        "representative": "aitbr",
+        "nMembers": 9,
+        "totalCitations": 5867,
+        "members": [
+          {
+            "foldKey": "aitbr",
+            "citations": 5573
+          },
+          {
+            "foldKey": "aitbrii",
+            "citations": 54
+          },
+          {
+            "foldKey": "aitbri",
+            "citations": 49
+          },
+          {
+            "foldKey": "aitbrvii",
+            "citations": 40
+          },
+          {
+            "foldKey": "aitbriii",
+            "citations": 37
+          },
+          {
+            "foldKey": "aitbrv",
+            "citations": 30
+          },
+          {
+            "foldKey": "aitbrviii",
+            "citations": 29
+          },
+          {
+            "foldKey": "aitbrvi",
+            "citations": 29
+          },
+          {
+            "foldKey": "aitbriv",
+            "citations": 26
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:sank",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "sankhsr",
+        "canonicalId": "sankhsr"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 19,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "sank",
+        "representative": "sankhsr",
+        "nMembers": 7,
+        "totalCitations": 5851,
+        "members": [
+          {
+            "foldKey": "sankhsr",
+            "citations": 3210
+          },
+          {
+            "foldKey": "sankhbr",
+            "citations": 1166
+          },
+          {
+            "foldKey": "sankhgrhy",
+            "citations": 977
+          },
+          {
+            "foldKey": "sankhgr",
+            "citations": 320
+          },
+          {
+            "foldKey": "sank",
+            "citations": 110
+          },
+          {
+            "foldKey": "sankara",
+            "citations": 43
+          },
+          {
+            "foldKey": "sankhgri",
+            "citations": 25
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:hala",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "halay",
+        "canonicalId": "halay"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 20,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "hala",
+        "representative": "halay",
+        "nMembers": 2,
+        "totalCitations": 5245,
+        "members": [
+          {
+            "foldKey": "halay",
+            "citations": 5138
+          },
+          {
+            "foldKey": "hala",
+            "citations": 107
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:kaus",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "kaus",
+        "canonicalId": "kaus"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 21,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "kaus",
+        "representative": "kaus",
+        "nMembers": 3,
+        "totalCitations": 4911,
+        "members": [
+          {
+            "foldKey": "kaus",
+            "citations": 4321
+          },
+          {
+            "foldKey": "kausup",
+            "citations": 510
+          },
+          {
+            "foldKey": "kausbr",
+            "citations": 80
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:wils",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "wils",
+        "canonicalId": "wils"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 22,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "wils",
+        "representative": "wils",
+        "nMembers": 6,
+        "totalCitations": 4786,
+        "members": [
+          {
+            "foldKey": "wils",
+            "citations": 2015
+          },
+          {
+            "foldKey": "wilson",
+            "citations": 1599
+          },
+          {
+            "foldKey": "wilsonselworks",
+            "citations": 796
+          },
+          {
+            "foldKey": "wilsonselworksi",
+            "citations": 171
+          },
+          {
+            "foldKey": "wilsonsamkhyaks",
+            "citations": 131
+          },
+          {
+            "foldKey": "wilsonselworksii",
+            "citations": 74
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:dasa",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "dasak",
+        "canonicalId": "dasak"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 23,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "dasa",
+        "representative": "dasak",
+        "nMembers": 6,
+        "totalCitations": 4696,
+        "members": [
+          {
+            "foldKey": "dasak",
+            "citations": 3899
+          },
+          {
+            "foldKey": "dasar",
+            "citations": 616
+          },
+          {
+            "foldKey": "dasariv",
+            "citations": 59
+          },
+          {
+            "foldKey": "dasarii",
+            "citations": 57
+          },
+          {
+            "foldKey": "dasari",
+            "citations": 35
+          },
+          {
+            "foldKey": "dasariii",
+            "citations": 30
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:apas",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "apastsr",
+        "canonicalId": "apastsr"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 24,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "apas",
+        "representative": "apastsr",
+        "nMembers": 4,
+        "totalCitations": 4663,
+        "members": [
+          {
+            "foldKey": "apastsr",
+            "citations": 2157
+          },
+          {
+            "foldKey": "apast",
+            "citations": 1887
+          },
+          {
+            "foldKey": "apastgrhy",
+            "citations": 594
+          },
+          {
+            "foldKey": "apastamba",
+            "citations": 25
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:mait",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "maitrs",
+        "canonicalId": "maitrs"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 25,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "mait",
+        "representative": "maitrs",
+        "nMembers": 7,
+        "totalCitations": 4457,
+        "members": [
+          {
+            "foldKey": "maitrs",
+            "citations": 3429
+          },
+          {
+            "foldKey": "maitryup",
+            "citations": 576
+          },
+          {
+            "foldKey": "maitrup",
+            "citations": 257
+          },
+          {
+            "foldKey": "maitrsi",
+            "citations": 71
+          },
+          {
+            "foldKey": "maitrsii",
+            "citations": 58
+          },
+          {
+            "foldKey": "maitrsiii",
+            "citations": 46
+          },
+          {
+            "foldKey": "maitr",
+            "citations": 20
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:bhar",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "bhartr",
+        "canonicalId": "bhartr"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 26,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "bhar",
+        "representative": "bhartr",
+        "nMembers": 8,
+        "totalCitations": 4351,
+        "members": [
+          {
+            "foldKey": "bhartr",
+            "citations": 3068
+          },
+          {
+            "foldKey": "bhar",
+            "citations": 773
+          },
+          {
+            "foldKey": "bharata",
+            "citations": 166
+          },
+          {
+            "foldKey": "bharnatyas",
+            "citations": 162
+          },
+          {
+            "foldKey": "bhartriii",
+            "citations": 58
+          },
+          {
+            "foldKey": "bhartrsuppl",
+            "citations": 51
+          },
+          {
+            "foldKey": "bhartri",
+            "citations": 42
+          },
+          {
+            "foldKey": "bhartrii",
+            "citations": 31
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:dhat",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "dhatup",
+        "canonicalId": "dhatup"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 27,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "dhat",
+        "representative": "dhatup",
+        "nMembers": 30,
+        "totalCitations": 4185,
+        "members": [
+          {
+            "foldKey": "dhatup",
+            "citations": 2688
+          },
+          {
+            "foldKey": "dhatupxxxii",
+            "citations": 119
+          },
+          {
+            "foldKey": "dhatupxxviii",
+            "citations": 108
+          },
+          {
+            "foldKey": "dhatupxxxiii",
+            "citations": 92
+          },
+          {
+            "foldKey": "dhatupxxvi",
+            "citations": 82
+          },
+          {
+            "foldKey": "dhatupxvii",
+            "citations": 82
+          },
+          {
+            "foldKey": "dhatupxxxv",
+            "citations": 82
+          },
+          {
+            "foldKey": "dhatupix",
+            "citations": 80
+          },
+          {
+            "foldKey": "dhatupxv",
+            "citations": 78
+          },
+          {
+            "foldKey": "dhatupxxii",
+            "citations": 60
+          },
+          {
+            "foldKey": "dhatupxix",
+            "citations": 53
+          },
+          {
+            "foldKey": "dhatupvii",
+            "citations": 53
+          },
+          {
+            "foldKey": "dhatupxxiv",
+            "citations": 49
+          },
+          {
+            "foldKey": "dhatupv",
+            "citations": 49
+          },
+          {
+            "foldKey": "dhatupxxxi",
+            "citations": 45
+          },
+          {
+            "foldKey": "dhatupxvi",
+            "citations": 41
+          },
+          {
+            "foldKey": "dhatupiv",
+            "citations": 39
+          },
+          {
+            "foldKey": "dhatupxi",
+            "citations": 36
+          },
+          {
+            "foldKey": "dhatupxxi",
+            "citations": 36
+          },
+          {
+            "foldKey": "dhatupxiv",
+            "citations": 35
+          },
+          {
+            "foldKey": "dhatupii",
+            "citations": 35
+          },
+          {
+            "foldKey": "dhatupx",
+            "citations": 31
+          },
+          {
+            "foldKey": "dhatupxxiii",
+            "citations": 29
+          },
+          {
+            "foldKey": "dhatupviii",
+            "citations": 28
+          },
+          {
+            "foldKey": "dhatupiii",
+            "citations": 27
+          },
+          {
+            "foldKey": "dhatupxiii",
+            "citations": 27
+          },
+          {
+            "foldKey": "dhatupvi",
+            "citations": 26
+          },
+          {
+            "foldKey": "dhatupxx",
+            "citations": 25
+          },
+          {
+            "foldKey": "dhatupxxxiv",
+            "citations": 25
+          },
+          {
+            "foldKey": "dhatupxxvii",
+            "citations": 25
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:pani",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "paniv",
+        "canonicalId": "paniv"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 28,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "pani",
+        "representative": "paniv",
+        "nMembers": 5,
+        "totalCitations": 4148,
+        "members": [
+          {
+            "foldKey": "paniv",
+            "citations": 1617
+          },
+          {
+            "foldKey": "paniii",
+            "citations": 1154
+          },
+          {
+            "foldKey": "pani",
+            "citations": 703
+          },
+          {
+            "foldKey": "panii",
+            "citations": 649
+          },
+          {
+            "foldKey": "panini",
+            "citations": 25
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:vikr",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "vikr",
+        "canonicalId": "vikr"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 29,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "vikr",
+        "representative": "vikr",
+        "nMembers": 5,
+        "totalCitations": 4085,
+        "members": [
+          {
+            "foldKey": "vikr",
+            "citations": 3479
+          },
+          {
+            "foldKey": "vikramankac",
+            "citations": 461
+          },
+          {
+            "foldKey": "vikram",
+            "citations": 67
+          },
+          {
+            "foldKey": "vikrch",
+            "citations": 45
+          },
+          {
+            "foldKey": "vikriv",
+            "citations": 33
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:prab",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "prab",
+        "canonicalId": "prab"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 30,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "prab",
+        "representative": "prab",
+        "nMembers": 3,
+        "totalCitations": 4058,
+        "members": [
+          {
+            "foldKey": "prab",
+            "citations": 3331
+          },
+          {
+            "foldKey": "prabandh",
+            "citations": 691
+          },
+          {
+            "foldKey": "prabii",
+            "citations": 36
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:panv",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "panvi",
+        "canonicalId": "panvi"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 31,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "panv",
+        "representative": "panvi",
+        "nMembers": 4,
+        "totalCitations": 3740,
+        "members": [
+          {
+            "foldKey": "panvi",
+            "citations": 1265
+          },
+          {
+            "foldKey": "panv",
+            "citations": 1191
+          },
+          {
+            "foldKey": "panvii",
+            "citations": 675
+          },
+          {
+            "foldKey": "panviii",
+            "citations": 609
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:bhat",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "bhatt",
+        "canonicalId": "bhatt"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 32,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "bhat",
+        "representative": "bhatt",
+        "nMembers": 3,
+        "totalCitations": 3735,
+        "members": [
+          {
+            "foldKey": "bhatt",
+            "citations": 3676
+          },
+          {
+            "foldKey": "bhattotp",
+            "citations": 35
+          },
+          {
+            "foldKey": "bhattx",
+            "citations": 24
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:maha",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "mahavy",
+        "canonicalId": "mahavy"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 33,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "maha",
+        "representative": "mahavy",
+        "nMembers": 11,
+        "totalCitations": 3704,
+        "members": [
+          {
+            "foldKey": "mahavy",
+            "citations": 2601
+          },
+          {
+            "foldKey": "mahavirac",
+            "citations": 542
+          },
+          {
+            "foldKey": "mahabh",
+            "citations": 242
+          },
+          {
+            "foldKey": "mahabhk",
+            "citations": 52
+          },
+          {
+            "foldKey": "mahasamajwaldschmidtklskttexte",
+            "citations": 50
+          },
+          {
+            "foldKey": "mahan",
+            "citations": 48
+          },
+          {
+            "foldKey": "mahanarup",
+            "citations": 46
+          },
+          {
+            "foldKey": "mahabhlithausg",
+            "citations": 38
+          },
+          {
+            "foldKey": "mahav",
+            "citations": 35
+          },
+          {
+            "foldKey": "mahadeva",
+            "citations": 29
+          },
+          {
+            "foldKey": "mahadevazusamkhyas",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:sarv",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "sarvadarsanas",
+        "canonicalId": "sarvadarsanas"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 34,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "sarv",
+        "representative": "sarvadarsanas",
+        "nMembers": 5,
+        "totalCitations": 3650,
+        "members": [
+          {
+            "foldKey": "sarvadarsanas",
+            "citations": 2273
+          },
+          {
+            "foldKey": "sarvad",
+            "citations": 1291
+          },
+          {
+            "foldKey": "sarvas",
+            "citations": 43
+          },
+          {
+            "foldKey": "sarvadxv",
+            "citations": 22
+          },
+          {
+            "foldKey": "sarvadiii",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:samk",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "samk",
+        "canonicalId": "samk"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 35,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "samk",
+        "representative": "samk",
+        "nMembers": 10,
+        "totalCitations": 3624,
+        "members": [
+          {
+            "foldKey": "samk",
+            "citations": 1794
+          },
+          {
+            "foldKey": "samkhyak",
+            "citations": 771
+          },
+          {
+            "foldKey": "samkzubadar",
+            "citations": 416
+          },
+          {
+            "foldKey": "samkhyas",
+            "citations": 245
+          },
+          {
+            "foldKey": "samksiptas",
+            "citations": 215
+          },
+          {
+            "foldKey": "samkhyapr",
+            "citations": 83
+          },
+          {
+            "foldKey": "samkzubalar",
+            "citations": 29
+          },
+          {
+            "foldKey": "samkar",
+            "citations": 26
+          },
+          {
+            "foldKey": "samkara",
+            "citations": 24
+          },
+          {
+            "foldKey": "samkzubrharups",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:jata",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "jatakam",
+        "canonicalId": "jatakam"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 36,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "jata",
+        "representative": "jatakam",
+        "nMembers": 2,
+        "totalCitations": 3579,
+        "members": [
+          {
+            "foldKey": "jatakam",
+            "citations": 2550
+          },
+          {
+            "foldKey": "jatadh",
+            "citations": 1029
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:mala",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "malav",
+        "canonicalId": "malav"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 37,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "mala",
+        "representative": "malav",
+        "nMembers": 7,
+        "totalCitations": 3499,
+        "members": [
+          {
+            "foldKey": "malav",
+            "citations": 1679
+          },
+          {
+            "foldKey": "malatim",
+            "citations": 1263
+          },
+          {
+            "foldKey": "malat",
+            "citations": 378
+          },
+          {
+            "foldKey": "malatimedbomb",
+            "citations": 108
+          },
+          {
+            "foldKey": "malavi",
+            "citations": 25
+          },
+          {
+            "foldKey": "malavv",
+            "citations": 23
+          },
+          {
+            "foldKey": "malamasat",
+            "citations": 23
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:varb",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "varbrs",
+        "canonicalId": "varbrs"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 38,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "varb",
+        "representative": "varbrs",
+        "nMembers": 3,
+        "totalCitations": 3173,
+        "members": [
+          {
+            "foldKey": "varbrs",
+            "citations": 2960
+          },
+          {
+            "foldKey": "varbr",
+            "citations": 168
+          },
+          {
+            "foldKey": "varbrsxiv",
+            "citations": 45
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:laty",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "laty",
+        "canonicalId": "laty"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 39,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "laty",
+        "representative": "laty",
+        "nMembers": 3,
+        "totalCitations": 3145,
+        "members": [
+          {
+            "foldKey": "laty",
+            "citations": 3100
+          },
+          {
+            "foldKey": "latyi",
+            "citations": 24
+          },
+          {
+            "foldKey": "latyviii",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:mrcc",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "mrcch",
+        "canonicalId": "mrcch"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 40,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "mrcc",
+        "representative": "mrcch",
+        "nMembers": 3,
+        "totalCitations": 3083,
+        "members": [
+          {
+            "foldKey": "mrcch",
+            "citations": 3030
+          },
+          {
+            "foldKey": "mrcchi",
+            "citations": 31
+          },
+          {
+            "foldKey": "mrcchiii",
+            "citations": 22
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:kuma",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "kumaras",
+        "canonicalId": "kumaras"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 41,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "kuma",
+        "representative": "kumaras",
+        "nMembers": 3,
+        "totalCitations": 2901,
+        "members": [
+          {
+            "foldKey": "kumaras",
+            "citations": 2826
+          },
+          {
+            "foldKey": "kumarila",
+            "citations": 42
+          },
+          {
+            "foldKey": "kumarasvzupratapar",
+            "citations": 33
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:cara",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "caraka",
+        "canonicalId": "caraka"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 42,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "cara",
+        "representative": "caraka",
+        "nMembers": 2,
+        "totalCitations": 2790,
+        "members": [
+          {
+            "foldKey": "caraka",
+            "citations": 2743
+          },
+          {
+            "foldKey": "caran",
+            "citations": 47
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:eben",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "ebend",
+        "canonicalId": "ebend"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 43,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "eben",
+        "representative": "ebend",
+        "nMembers": 2,
+        "totalCitations": 2707,
+        "members": [
+          {
+            "foldKey": "ebend",
+            "citations": 2667
+          },
+          {
+            "foldKey": "ebendno",
+            "citations": 40
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:mbhi",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "mbhiii",
+        "canonicalId": "mbhiii"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 44,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "mbhi",
+        "representative": "mbhiii",
+        "nMembers": 5,
+        "totalCitations": 2566,
+        "members": [
+          {
+            "foldKey": "mbhiii",
+            "citations": 938
+          },
+          {
+            "foldKey": "mbhi",
+            "citations": 921
+          },
+          {
+            "foldKey": "mbhii",
+            "citations": 351
+          },
+          {
+            "foldKey": "mbhiv",
+            "citations": 194
+          },
+          {
+            "foldKey": "mbhix",
+            "citations": 162
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:burn",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "burnellt",
+        "canonicalId": "burnellt"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 45,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "burn",
+        "representative": "burnellt",
+        "nMembers": 7,
+        "totalCitations": 2547,
+        "members": [
+          {
+            "foldKey": "burnellt",
+            "citations": 985
+          },
+          {
+            "foldKey": "burnintr",
+            "citations": 727
+          },
+          {
+            "foldKey": "burnouf",
+            "citations": 383
+          },
+          {
+            "foldKey": "burn",
+            "citations": 228
+          },
+          {
+            "foldKey": "burnoufintr",
+            "citations": 180
+          },
+          {
+            "foldKey": "burnouflotus",
+            "citations": 22
+          },
+          {
+            "foldKey": "burnintri",
+            "citations": 22
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:unad",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "unadis",
+        "canonicalId": "unadis"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 46,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "unad",
+        "representative": "unadis",
+        "nMembers": 3,
+        "totalCitations": 2467,
+        "members": [
+          {
+            "foldKey": "unadis",
+            "citations": 1991
+          },
+          {
+            "foldKey": "unadik",
+            "citations": 277
+          },
+          {
+            "foldKey": "unadivr",
+            "citations": 199
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:bhav",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "bhavapr",
+        "canonicalId": "bhavapr"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 47,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "bhav",
+        "representative": "bhavapr",
+        "nMembers": 5,
+        "totalCitations": 2441,
+        "members": [
+          {
+            "foldKey": "bhavapr",
+            "citations": 2199
+          },
+          {
+            "foldKey": "bhavp",
+            "citations": 84
+          },
+          {
+            "foldKey": "bhavap",
+            "citations": 82
+          },
+          {
+            "foldKey": "bhavisyap",
+            "citations": 55
+          },
+          {
+            "foldKey": "bhavpii",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:ratn",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "ratnam",
+        "canonicalId": "ratnam"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 48,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "ratn",
+        "representative": "ratnam",
+        "nMembers": 5,
+        "totalCitations": 2427,
+        "members": [
+          {
+            "foldKey": "ratnam",
+            "citations": 1446
+          },
+          {
+            "foldKey": "ratnav",
+            "citations": 419
+          },
+          {
+            "foldKey": "ratn",
+            "citations": 379
+          },
+          {
+            "foldKey": "ratnach",
+            "citations": 135
+          },
+          {
+            "foldKey": "ratnak",
+            "citations": 48
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:cole",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "colebrmiscessii",
+        "canonicalId": "colebrmiscessii"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 49,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "cole",
+        "representative": "colebrmiscessii",
+        "nMembers": 5,
+        "totalCitations": 2418,
+        "members": [
+          {
+            "foldKey": "colebrmiscessii",
+            "citations": 1045
+          },
+          {
+            "foldKey": "colebrmiscessi",
+            "citations": 491
+          },
+          {
+            "foldKey": "colebralg",
+            "citations": 382
+          },
+          {
+            "foldKey": "colebrmiscess",
+            "citations": 307
+          },
+          {
+            "foldKey": "colebr",
+            "citations": 193
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:chan",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "chandup",
+        "canonicalId": "chandup"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 50,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "chan",
+        "representative": "chandup",
+        "nMembers": 7,
+        "totalCitations": 2315,
+        "members": [
+          {
+            "foldKey": "chandup",
+            "citations": 1713
+          },
+          {
+            "foldKey": "chandom",
+            "citations": 304
+          },
+          {
+            "foldKey": "chandups",
+            "citations": 157
+          },
+          {
+            "foldKey": "chan",
+            "citations": 50
+          },
+          {
+            "foldKey": "chandr",
+            "citations": 35
+          },
+          {
+            "foldKey": "chandas",
+            "citations": 35
+          },
+          {
+            "foldKey": "chandm",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    },
+    {
+      "reviewId": "source-siglum-family-batch-1:nais",
+      "queue": "source-siglum-alias",
+      "reviewFamily": "siglum-family-batch-1",
+      "subject": {
+        "kind": "source-abbreviation",
+        "source": "nais",
+        "canonicalId": "nais"
+      },
+      "sourcePointers": [
+        {
+          "dictionary": null,
+          "line": 51,
+          "sourceLinkMode": "local-only",
+          "sourcePath": "data/obs/siglum_family_candidates.csv"
+        }
+      ],
+      "machineValue": {
+        "prefix": "nais",
+        "representative": "nais",
+        "nMembers": 4,
+        "totalCitations": 2286,
+        "members": [
+          {
+            "foldKey": "nais",
+            "citations": 2215
+          },
+          {
+            "foldKey": "naisi",
+            "citations": 28
+          },
+          {
+            "foldKey": "naisvi",
+            "citations": 22
+          },
+          {
+            "foldKey": "naisviii",
+            "citations": 21
+          }
+        ]
+      },
+      "evidenceLevel": "derived",
+      "reviewStatus": "needs-review",
+      "reviewedValue": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "note": ""
+    }
+  ]
+}
