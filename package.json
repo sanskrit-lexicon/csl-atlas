@@ -15,6 +15,7 @@
     "predeploy": "npm run sync-site-data",
     "deploy": "observable deploy",
     "build-coverage": "node scripts/build-dictionary-coverage.mjs",
+    "build-etymology-oracle": "node scripts/build-etymology-oracle.mjs",
     "build-mw-depth": "node scripts/build-mw-quantitative-depth.mjs",
     "validate-mw-depth": "node scripts/validate-mw-depth.mjs",
     "build-dict-comparison": "node scripts/build-dictionary-comparison.mjs",

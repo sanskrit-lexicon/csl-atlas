@@ -1,0 +1,1092 @@
+{
+  "generatedAt": "2026-06-26T14:11:22.279Z",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "sourceRoot": "../csl-orig/v02",
+  "derivedFrom": "csl-orig <dict>_etymology.tsv + etymology_stats aggregates",
+  "provenance": "derivation-oracle (read-only consume; the atlas does not re-extract or recompute)",
+  "note": "Per-dict summaries are read from the TSVs. Cross-dict root agreement and productivity are consumed verbatim from csl-orig/etymology_stats, NOT recomputed here.",
+  "dictionaryCount": 10,
+  "totals": {
+    "etymologyRows": 67172,
+    "headwordsWithRoot": 64896
+  },
+  "rootAgreement": {
+    "source": "../csl-orig/v02/etymology_stats/cross_dict_root_agreement.csv",
+    "method": "pairwise headword-level root agreement, Wilson 95% CI (csl-orig stats_etymology.py §6b)",
+    "pairCount": 41,
+    "highestAgreement": [
+      {
+        "dictA": "Apte",
+        "dictB": "AP",
+        "sharedHeadwords": 172,
+        "rootAgrees": 161,
+        "pct": 93.6,
+        "ci95Low": 88.9,
+        "ci95High": 96.4
+      },
+      {
+        "dictA": "PWG",
+        "dictB": "PW",
+        "sharedHeadwords": 479,
+        "rootAgrees": 446,
+        "pct": 93.1,
+        "ci95Low": 90.5,
+        "ci95High": 95.1
+      },
+      {
+        "dictA": "VCP",
+        "dictB": "SHS",
+        "sharedHeadwords": 132,
+        "rootAgrees": 104,
+        "pct": 78.8,
+        "ci95Low": 71.1,
+        "ci95High": 84.9
+      },
+      {
+        "dictA": "AP",
+        "dictB": "PWG",
+        "sharedHeadwords": 52,
+        "rootAgrees": 40,
+        "pct": 76.9,
+        "ci95Low": 63.9,
+        "ci95High": 86.3
+      },
+      {
+        "dictA": "MW",
+        "dictB": "PWG",
+        "sharedHeadwords": 692,
+        "rootAgrees": 451,
+        "pct": 65.2,
+        "ci95Low": 61.5,
+        "ci95High": 68.6
+      }
+    ],
+    "lowestAgreement": [
+      {
+        "dictA": "WIL",
+        "dictB": "MW",
+        "sharedHeadwords": 1070,
+        "rootAgrees": 90,
+        "pct": 8.4,
+        "ci95Low": 6.9,
+        "ci95High": 10.2
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "SKD",
+        "sharedHeadwords": 90,
+        "rootAgrees": 16,
+        "pct": 17.8,
+        "ci95Low": 11.2,
+        "ci95High": 26.9
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "AP",
+        "sharedHeadwords": 84,
+        "rootAgrees": 17,
+        "pct": 20.2,
+        "ci95Low": 13,
+        "ci95High": 30
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "PWG",
+        "sharedHeadwords": 3802,
+        "rootAgrees": 772,
+        "pct": 20.3,
+        "ci95Low": 19.1,
+        "ci95High": 21.6
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "Apte",
+        "sharedHeadwords": 78,
+        "rootAgrees": 16,
+        "pct": 20.5,
+        "ci95Low": 13,
+        "ci95High": 30.8
+      }
+    ],
+    "pairs": [
+      {
+        "dictA": "WIL",
+        "dictB": "SKD",
+        "sharedHeadwords": 90,
+        "rootAgrees": 16,
+        "pct": 17.8,
+        "ci95Low": 11.2,
+        "ci95High": 26.9
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "VCP",
+        "sharedHeadwords": 1735,
+        "rootAgrees": 416,
+        "pct": 24,
+        "ci95Low": 22,
+        "ci95High": 26
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "Apte",
+        "sharedHeadwords": 78,
+        "rootAgrees": 16,
+        "pct": 20.5,
+        "ci95Low": 13,
+        "ci95High": 30.8
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "AP",
+        "sharedHeadwords": 84,
+        "rootAgrees": 17,
+        "pct": 20.2,
+        "ci95Low": 13,
+        "ci95High": 30
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "SHS",
+        "sharedHeadwords": 131,
+        "rootAgrees": 37,
+        "pct": 28.2,
+        "ci95Low": 21.2,
+        "ci95High": 36.5
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "KRM",
+        "sharedHeadwords": 46,
+        "rootAgrees": 29,
+        "pct": 63,
+        "ci95Low": 48.6,
+        "ci95High": 75.5
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "MW",
+        "sharedHeadwords": 1070,
+        "rootAgrees": 90,
+        "pct": 8.4,
+        "ci95Low": 6.9,
+        "ci95High": 10.2
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "PWG",
+        "sharedHeadwords": 3802,
+        "rootAgrees": 772,
+        "pct": 20.3,
+        "ci95Low": 19.1,
+        "ci95High": 21.6
+      },
+      {
+        "dictA": "WIL",
+        "dictB": "PW",
+        "sharedHeadwords": 186,
+        "rootAgrees": 39,
+        "pct": 21,
+        "ci95Low": 15.7,
+        "ci95High": 27.4
+      },
+      {
+        "dictA": "SKD",
+        "dictB": "VCP",
+        "sharedHeadwords": 62,
+        "rootAgrees": 40,
+        "pct": 64.5,
+        "ci95Low": 52.1,
+        "ci95High": 75.3
+      },
+      {
+        "dictA": "SKD",
+        "dictB": "Apte",
+        "sharedHeadwords": 83,
+        "rootAgrees": 39,
+        "pct": 47,
+        "ci95Low": 36.6,
+        "ci95High": 57.6
+      },
+      {
+        "dictA": "SKD",
+        "dictB": "AP",
+        "sharedHeadwords": 60,
+        "rootAgrees": 25,
+        "pct": 41.7,
+        "ci95Low": 30.1,
+        "ci95High": 54.3
+      },
+      {
+        "dictA": "SKD",
+        "dictB": "SHS",
+        "sharedHeadwords": 2,
+        "rootAgrees": 1,
+        "pct": 50,
+        "ci95Low": 9.5,
+        "ci95High": 90.5
+      },
+      {
+        "dictA": "SKD",
+        "dictB": "MW",
+        "sharedHeadwords": 13,
+        "rootAgrees": 5,
+        "pct": 38.5,
+        "ci95Low": 17.7,
+        "ci95High": 64.5
+      },
+      {
+        "dictA": "SKD",
+        "dictB": "PWG",
+        "sharedHeadwords": 30,
+        "rootAgrees": 16,
+        "pct": 53.3,
+        "ci95Low": 36.1,
+        "ci95High": 69.8
+      },
+      {
+        "dictA": "SKD",
+        "dictB": "PW",
+        "sharedHeadwords": 2,
+        "rootAgrees": 0,
+        "pct": 0,
+        "ci95Low": 0,
+        "ci95High": 65.8
+      },
+      {
+        "dictA": "VCP",
+        "dictB": "Apte",
+        "sharedHeadwords": 87,
+        "rootAgrees": 29,
+        "pct": 33.3,
+        "ci95Low": 24.3,
+        "ci95High": 43.8
+      },
+      {
+        "dictA": "VCP",
+        "dictB": "AP",
+        "sharedHeadwords": 95,
+        "rootAgrees": 32,
+        "pct": 33.7,
+        "ci95Low": 25,
+        "ci95High": 43.7
+      },
+      {
+        "dictA": "VCP",
+        "dictB": "SHS",
+        "sharedHeadwords": 132,
+        "rootAgrees": 104,
+        "pct": 78.8,
+        "ci95Low": 71.1,
+        "ci95High": 84.9
+      },
+      {
+        "dictA": "VCP",
+        "dictB": "KRM",
+        "sharedHeadwords": 15,
+        "rootAgrees": 5,
+        "pct": 33.3,
+        "ci95Low": 15.2,
+        "ci95High": 58.3
+      },
+      {
+        "dictA": "VCP",
+        "dictB": "MW",
+        "sharedHeadwords": 212,
+        "rootAgrees": 77,
+        "pct": 36.3,
+        "ci95Low": 30.1,
+        "ci95High": 43
+      },
+      {
+        "dictA": "VCP",
+        "dictB": "PWG",
+        "sharedHeadwords": 894,
+        "rootAgrees": 248,
+        "pct": 27.7,
+        "ci95Low": 24.9,
+        "ci95High": 30.8
+      },
+      {
+        "dictA": "VCP",
+        "dictB": "PW",
+        "sharedHeadwords": 29,
+        "rootAgrees": 9,
+        "pct": 31,
+        "ci95Low": 17.3,
+        "ci95High": 49.2
+      },
+      {
+        "dictA": "Apte",
+        "dictB": "AP",
+        "sharedHeadwords": 172,
+        "rootAgrees": 161,
+        "pct": 93.6,
+        "ci95Low": 88.9,
+        "ci95High": 96.4
+      },
+      {
+        "dictA": "Apte",
+        "dictB": "SHS",
+        "sharedHeadwords": 16,
+        "rootAgrees": 10,
+        "pct": 62.5,
+        "ci95Low": 38.6,
+        "ci95High": 81.5
+      },
+      {
+        "dictA": "Apte",
+        "dictB": "MW",
+        "sharedHeadwords": 12,
+        "rootAgrees": 3,
+        "pct": 25,
+        "ci95Low": 8.9,
+        "ci95High": 53.2
+      },
+      {
+        "dictA": "Apte",
+        "dictB": "PWG",
+        "sharedHeadwords": 48,
+        "rootAgrees": 38,
+        "pct": 79.2,
+        "ci95Low": 65.7,
+        "ci95High": 88.3
+      },
+      {
+        "dictA": "Apte",
+        "dictB": "PW",
+        "sharedHeadwords": 1,
+        "rootAgrees": 1,
+        "pct": 100,
+        "ci95Low": 20.7,
+        "ci95High": 100
+      },
+      {
+        "dictA": "AP",
+        "dictB": "SHS",
+        "sharedHeadwords": 18,
+        "rootAgrees": 14,
+        "pct": 77.8,
+        "ci95Low": 54.8,
+        "ci95High": 91
+      },
+      {
+        "dictA": "AP",
+        "dictB": "MW",
+        "sharedHeadwords": 12,
+        "rootAgrees": 5,
+        "pct": 41.7,
+        "ci95Low": 19.3,
+        "ci95High": 68
+      },
+      {
+        "dictA": "AP",
+        "dictB": "PWG",
+        "sharedHeadwords": 52,
+        "rootAgrees": 40,
+        "pct": 76.9,
+        "ci95Low": 63.9,
+        "ci95High": 86.3
+      },
+      {
+        "dictA": "AP",
+        "dictB": "PW",
+        "sharedHeadwords": 1,
+        "rootAgrees": 1,
+        "pct": 100,
+        "ci95Low": 20.7,
+        "ci95High": 100
+      },
+      {
+        "dictA": "SHS",
+        "dictB": "MW",
+        "sharedHeadwords": 8,
+        "rootAgrees": 5,
+        "pct": 62.5,
+        "ci95Low": 30.6,
+        "ci95High": 86.3
+      },
+      {
+        "dictA": "SHS",
+        "dictB": "PWG",
+        "sharedHeadwords": 45,
+        "rootAgrees": 33,
+        "pct": 73.3,
+        "ci95Low": 59,
+        "ci95High": 84
+      },
+      {
+        "dictA": "SHS",
+        "dictB": "PW",
+        "sharedHeadwords": 4,
+        "rootAgrees": 4,
+        "pct": 100,
+        "ci95Low": 51,
+        "ci95High": 100
+      },
+      {
+        "dictA": "KRM",
+        "dictB": "MW",
+        "sharedHeadwords": 12,
+        "rootAgrees": 4,
+        "pct": 33.3,
+        "ci95Low": 13.8,
+        "ci95High": 60.9
+      },
+      {
+        "dictA": "KRM",
+        "dictB": "PWG",
+        "sharedHeadwords": 34,
+        "rootAgrees": 1,
+        "pct": 2.9,
+        "ci95Low": 0.5,
+        "ci95High": 14.9
+      },
+      {
+        "dictA": "KRM",
+        "dictB": "PW",
+        "sharedHeadwords": 4,
+        "rootAgrees": 1,
+        "pct": 25,
+        "ci95Low": 4.6,
+        "ci95High": 69.9
+      },
+      {
+        "dictA": "MW",
+        "dictB": "PWG",
+        "sharedHeadwords": 692,
+        "rootAgrees": 451,
+        "pct": 65.2,
+        "ci95Low": 61.5,
+        "ci95High": 68.6
+      },
+      {
+        "dictA": "MW",
+        "dictB": "PW",
+        "sharedHeadwords": 58,
+        "rootAgrees": 36,
+        "pct": 62.1,
+        "ci95Low": 49.2,
+        "ci95High": 73.4
+      },
+      {
+        "dictA": "PWG",
+        "dictB": "PW",
+        "sharedHeadwords": 479,
+        "rootAgrees": 446,
+        "pct": 93.1,
+        "ci95Low": 90.5,
+        "ci95High": 95.1
+      }
+    ]
+  },
+  "rootProductivity": {
+    "source": "../csl-orig/v02/etymology_stats/root_productivity.csv",
+    "note": "verbal-root dicts + MW; WIL excluded upstream (its root is the first etymon, not a dhAtu)",
+    "topRoots": [
+      {
+        "root": "kṛ",
+        "derivatives": 865
+      },
+      {
+        "root": "bhū",
+        "derivatives": 454
+      },
+      {
+        "root": "i",
+        "derivatives": 336
+      },
+      {
+        "root": "dhā",
+        "derivatives": 274
+      },
+      {
+        "root": "gam",
+        "derivatives": 244
+      },
+      {
+        "root": "sthā",
+        "derivatives": 212
+      },
+      {
+        "root": "dā",
+        "derivatives": 207
+      },
+      {
+        "root": "yā",
+        "derivatives": 206
+      },
+      {
+        "root": "han",
+        "derivatives": 189
+      },
+      {
+        "root": "car",
+        "derivatives": 173
+      },
+      {
+        "root": "a",
+        "derivatives": 169
+      },
+      {
+        "root": "as",
+        "derivatives": 166
+      },
+      {
+        "root": "pat",
+        "derivatives": 160
+      },
+      {
+        "root": "vah",
+        "derivatives": 160
+      },
+      {
+        "root": "hṛ",
+        "derivatives": 151
+      },
+      {
+        "root": "ci",
+        "derivatives": 147
+      },
+      {
+        "root": "vas",
+        "derivatives": 140
+      },
+      {
+        "root": "kram",
+        "derivatives": 138
+      },
+      {
+        "root": "jñā",
+        "derivatives": 135
+      },
+      {
+        "root": "grah",
+        "derivatives": 135
+      }
+    ]
+  },
+  "dicts": [
+    {
+      "code": "WIL",
+      "sourceCode": "wil",
+      "sourceFile": "../csl-orig/v02/wil/wil_etymology.tsv",
+      "rootStyle": "iast-root",
+      "rows": 39650,
+      "headwordsWithRoot": 39069,
+      "rootCoveragePct": 98.53,
+      "distinctRoots": 7594,
+      "topRoots": [
+        {
+          "root": "a",
+          "count": 1274
+        },
+        {
+          "root": "vi",
+          "count": 1105
+        },
+        {
+          "root": "pra",
+          "count": 778
+        },
+        {
+          "root": "sam",
+          "count": 729
+        },
+        {
+          "root": "pari",
+          "count": 352
+        },
+        {
+          "root": "nir",
+          "count": 349
+        },
+        {
+          "root": "āṅ",
+          "count": 338
+        },
+        {
+          "root": "su",
+          "count": 322
+        },
+        {
+          "root": "ni",
+          "count": 320
+        },
+        {
+          "root": "upa",
+          "count": 290
+        }
+      ]
+    },
+    {
+      "code": "PWG",
+      "sourceCode": "pwg",
+      "sourceFile": "../csl-orig/v02/pwg/pwg_etymology.tsv",
+      "rootStyle": "source_slp1",
+      "rows": 10266,
+      "headwordsWithRoot": 10266,
+      "rootCoveragePct": 100,
+      "distinctRoots": 1073,
+      "topRoots": [
+        {
+          "root": "a",
+          "count": 162
+        },
+        {
+          "root": "i",
+          "count": 158
+        },
+        {
+          "root": "DA",
+          "count": 120
+        },
+        {
+          "root": "BU",
+          "count": 109
+        },
+        {
+          "root": "han",
+          "count": 102
+        },
+        {
+          "root": "sTA",
+          "count": 99
+        },
+        {
+          "root": "dA",
+          "count": 96
+        },
+        {
+          "root": "vah",
+          "count": 92
+        },
+        {
+          "root": "pat",
+          "count": 90
+        },
+        {
+          "root": "car",
+          "count": 89
+        }
+      ]
+    },
+    {
+      "code": "MW",
+      "sourceCode": "mw",
+      "sourceFile": "../csl-orig/v02/mw/mw_etymology.tsv",
+      "rootStyle": "root_slp1",
+      "rows": 9377,
+      "headwordsWithRoot": 8463,
+      "rootCoveragePct": 90.25,
+      "distinctRoots": 765,
+      "topRoots": [
+        {
+          "root": "kf",
+          "count": 729
+        },
+        {
+          "root": "BU",
+          "count": 268
+        },
+        {
+          "root": "i",
+          "count": 155
+        },
+        {
+          "root": "DA",
+          "count": 135
+        },
+        {
+          "root": "gam",
+          "count": 121
+        },
+        {
+          "root": "hf",
+          "count": 106
+        },
+        {
+          "root": "vft",
+          "count": 97
+        },
+        {
+          "root": "yA",
+          "count": 94
+        },
+        {
+          "root": "sTA",
+          "count": 82
+        },
+        {
+          "root": "sf",
+          "count": 76
+        }
+      ]
+    },
+    {
+      "code": "VCP",
+      "sourceCode": "vcp",
+      "sourceFile": "../csl-orig/v02/vcp/vcp_etymology.tsv",
+      "rootStyle": "root_slp1",
+      "rows": 3664,
+      "headwordsWithRoot": 3182,
+      "rootCoveragePct": 86.84,
+      "distinctRoots": 1236,
+      "topRoots": [
+        {
+          "root": "kf",
+          "count": 80
+        },
+        {
+          "root": "BU",
+          "count": 37
+        },
+        {
+          "root": "vfta",
+          "count": 29
+        },
+        {
+          "root": "hana",
+          "count": 26
+        },
+        {
+          "root": "hf",
+          "count": 25
+        },
+        {
+          "root": "gama",
+          "count": 24
+        },
+        {
+          "root": "krama",
+          "count": 21
+        },
+        {
+          "root": "cara",
+          "count": 20
+        },
+        {
+          "root": "dA",
+          "count": 20
+        },
+        {
+          "root": "Ikza",
+          "count": 20
+        }
+      ]
+    },
+    {
+      "code": "SKD",
+      "sourceCode": "skd",
+      "sourceFile": "../csl-orig/v02/skd/skd_etymology.tsv",
+      "rootStyle": "root_slp1",
+      "rows": 2214,
+      "headwordsWithRoot": 2066,
+      "rootCoveragePct": 93.32,
+      "distinctRoots": 953,
+      "topRoots": [
+        {
+          "root": "kf",
+          "count": 47
+        },
+        {
+          "root": "gam",
+          "count": 22
+        },
+        {
+          "root": "BU",
+          "count": 20
+        },
+        {
+          "root": "jYA",
+          "count": 18
+        },
+        {
+          "root": "jan",
+          "count": 16
+        },
+        {
+          "root": "ad",
+          "count": 15
+        },
+        {
+          "root": "hf",
+          "count": 15
+        },
+        {
+          "root": "mf",
+          "count": 15
+        },
+        {
+          "root": "pA",
+          "count": 15
+        },
+        {
+          "root": "dA",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "code": "PWK",
+      "sourceCode": "pw",
+      "sourceFile": "../csl-orig/v02/pw/pw_etymology.tsv",
+      "rootStyle": "source_slp1",
+      "rows": 767,
+      "headwordsWithRoot": 767,
+      "rootCoveragePct": 100,
+      "distinctRoots": 408,
+      "topRoots": [
+        {
+          "root": "i",
+          "count": 13
+        },
+        {
+          "root": "as",
+          "count": 12
+        },
+        {
+          "root": "BU",
+          "count": 12
+        },
+        {
+          "root": "DA",
+          "count": 11
+        },
+        {
+          "root": "dA",
+          "count": 10
+        },
+        {
+          "root": "Sam",
+          "count": 9
+        },
+        {
+          "root": "sah",
+          "count": 8
+        },
+        {
+          "root": "yA",
+          "count": 8
+        },
+        {
+          "root": "aS",
+          "count": 7
+        },
+        {
+          "root": "pac",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "code": "AP",
+      "sourceCode": "ap",
+      "sourceFile": "../csl-orig/v02/ap/ap_etymology.tsv",
+      "rootStyle": "root_slp1",
+      "rows": 339,
+      "headwordsWithRoot": 324,
+      "rootCoveragePct": 95.58,
+      "distinctRoots": 248,
+      "topRoots": [
+        {
+          "root": "tF",
+          "count": 5
+        },
+        {
+          "root": "jan",
+          "count": 4
+        },
+        {
+          "root": "jIv",
+          "count": 4
+        },
+        {
+          "root": "raYj",
+          "count": 4
+        },
+        {
+          "root": "BU",
+          "count": 3
+        },
+        {
+          "root": "cit",
+          "count": 3
+        },
+        {
+          "root": "dam",
+          "count": 3
+        },
+        {
+          "root": "gE",
+          "count": 3
+        },
+        {
+          "root": "grah",
+          "count": 3
+        },
+        {
+          "root": "han",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "code": "KRM",
+      "sourceCode": "krm",
+      "sourceFile": "../csl-orig/v02/krm/krm_etymology.tsv",
+      "rootStyle": "root_slp1",
+      "rows": 305,
+      "headwordsWithRoot": 305,
+      "rootCoveragePct": 100,
+      "distinctRoots": 218,
+      "topRoots": [
+        {
+          "root": "bAhulakAt",
+          "count": 12
+        },
+        {
+          "root": "nandyAditvAt",
+          "count": 10
+        },
+        {
+          "root": "ityAdinA",
+          "count": 8
+        },
+        {
+          "root": "RyantAt",
+          "count": 8
+        },
+        {
+          "root": "saMjYAyAM",
+          "count": 6
+        },
+        {
+          "root": "pAWAt",
+          "count": 4
+        },
+        {
+          "root": "RyantAdasmAt",
+          "count": 4
+        },
+        {
+          "root": "vartamAne",
+          "count": 4
+        },
+        {
+          "root": "AkftigaRatvAt",
+          "count": 3
+        },
+        {
+          "root": "citI",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "code": "AP90",
+      "sourceCode": "ap90",
+      "sourceFile": "../csl-orig/v02/ap90/ap90_etymology.tsv",
+      "rootStyle": "root_slp1",
+      "rows": 332,
+      "headwordsWithRoot": 301,
+      "rootCoveragePct": 90.66,
+      "distinctRoots": 232,
+      "topRoots": [
+        {
+          "root": "jan",
+          "count": 4
+        },
+        {
+          "root": "jIv",
+          "count": 4
+        },
+        {
+          "root": "raMj",
+          "count": 4
+        },
+        {
+          "root": "BU",
+          "count": 3
+        },
+        {
+          "root": "cit",
+          "count": 3
+        },
+        {
+          "root": "dam",
+          "count": 3
+        },
+        {
+          "root": "gal",
+          "count": 3
+        },
+        {
+          "root": "gE",
+          "count": 3
+        },
+        {
+          "root": "han",
+          "count": 3
+        },
+        {
+          "root": "ju",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "code": "SHS",
+      "sourceCode": "shs",
+      "sourceFile": "../csl-orig/v02/shs/shs_etymology.tsv",
+      "rootStyle": "root_slp1",
+      "rows": 258,
+      "headwordsWithRoot": 153,
+      "rootCoveragePct": 59.3,
+      "distinctRoots": 121,
+      "topRoots": [
+        {
+          "root": "kf",
+          "count": 6
+        },
+        {
+          "root": "Cada",
+          "count": 3
+        },
+        {
+          "root": "DU",
+          "count": 3
+        },
+        {
+          "root": "jAgf",
+          "count": 3
+        },
+        {
+          "root": "ji",
+          "count": 3
+        },
+        {
+          "root": "saMjYAyAM",
+          "count": 3
+        },
+        {
+          "root": "yA",
+          "count": 3
+        },
+        {
+          "root": "as",
+          "count": 2
+        },
+        {
+          "root": "cara",
+          "count": 2
+        },
+        {
+          "root": "Cid",
+          "count": 2
+        }
+      ]
+    }
+  ]
+}
