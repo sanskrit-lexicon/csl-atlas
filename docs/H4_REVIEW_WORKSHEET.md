@@ -1,6 +1,6 @@
 # H4 Semantic-Field Review Worksheet
 
-Date: 2026-06-17 · Source: `data/lexico/h4_semantic_field_review_packet.json`
+Date: 2026-06-29 · Source: `data/lexico/h4_semantic_field_review_packet.json`
 
 **89 rows need human review** (16 were auto-resolved and are excluded — see their `autoTriage` blocks in the packet). Grouped by sample type; within each, rows with a direct source link first, then by signal strength. Pick one decision per row from its options.
 
@@ -61,97 +61,97 @@ Date: 2026-06-17 · Source: `data/lexico/h4_semantic_field_review_packet.json`
 **11. `vipina`** — vanOzaDivargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does vipina appear in AP coverage but not AP90 coverage for vanOzaDivargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 41.5% (543/1307), Δ 23.0% · source: [AP L29844](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L413481)
+- Evidence: field coverage 41.5% (543/1307), Δ 23.0% · source: [AP L29844](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L414230)
 
 **12. `acalA`** — BUmivargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does acalA appear in AP coverage but not AP90 coverage for BUmivargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 56.5% (82/145), Δ 19.3% · source: [AP L360.004](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L6976)
+- Evidence: field coverage 56.5% (82/145), Δ 19.3% · source: [AP L360.004](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L7189)
 
 **13. `anantA`** — BUmivargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does anantA appear in AP coverage but not AP90 coverage for BUmivargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 56.5% (82/145), Δ 19.3% · source: [AP L1297.004](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L17378)
+- Evidence: field coverage 56.5% (82/145), Δ 19.3% · source: [AP L1297.004](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L17762)
 
 **14. `sTirA`** — BUmivargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does sTirA appear in AP coverage but not AP90 coverage for BUmivargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 56.5% (82/145), Δ 19.3% · source: [AP L35762.004](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L492643)
+- Evidence: field coverage 56.5% (82/145), Δ 19.3% · source: [AP L35762.004](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L493392)
 
 **15. `mahASaya`** — viSezyaniGnavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does mahASaya appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L25943.112](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L349966)
+- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L25943.112](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L350715)
 
 **16. `mahecCa`** — viSezyaniGnavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does mahecCa appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L25943.118](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L349988)
+- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L25943.118](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L350737)
 
 **17. `mahotsAha`** — viSezyaniGnavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does mahotsAha appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L25943.142](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L350069)
+- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L25943.142](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L350818)
 
 **18. `suhfdaya`** — viSezyaniGnavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does suhfdaya appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L35088.830](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L482813)
+- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L35088.830](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L483562)
 
 **19. `sukftin`** — viSezyaniGnavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does sukftin appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L35088.110](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L480307)
+- Evidence: field coverage 88.5% (900/1017), Δ 17.1% · source: [AP L35088.110](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L481056)
 
 **20. `pUrvA`** — digvargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does pUrvA appear in AP coverage but not AP90 coverage for digvargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 46.4% (159/343), Δ 15.8% · source: [AP L21715.006](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L287797)
+- Evidence: field coverage 46.4% (159/343), Δ 15.8% · source: [AP L21715.006](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L288546)
 
 **21. `avaravarRa`** — SUdravargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does avaravarRa appear in AP coverage but not AP90 coverage for SUdravargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 43.5% (152/349), Δ 14.9% · source: [AP L5170.036](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L59749)
+- Evidence: field coverage 43.5% (152/349), Δ 14.9% · source: [AP L5170.036](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L60491)
 
 **22. `DizaRA`** — DIvargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does DizaRA appear in AP coverage but not AP90 coverage for DIvargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 63.7% (100/157), Δ 14.6% · source: [AP L18018.004](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L235069)
+- Evidence: field coverage 63.7% (100/157), Δ 14.6% · source: [AP L18018.004](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L235818)
 
 **23. `aBIkzRam`** — avyayavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does aBIkzRam appear in AP coverage but not AP90 coverage for avyayavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 70.2% (188/268), Δ 14.2% · source: [AP L3865.002](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L43307)
+- Evidence: field coverage 70.2% (188/268), Δ 14.2% · source: [AP L3865.002](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L44049)
 
 **24. `cirarAtrAya`** — avyayavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does cirarAtrAya appear in AP coverage but not AP90 coverage for avyayavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 70.2% (188/268), Δ 14.2% · source: [AP L14975.054](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L186668)
+- Evidence: field coverage 70.2% (188/268), Δ 14.2% · source: [AP L14975.054](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L187417)
 
 **25. `suravartman`** — vyomavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does suravartman appear in AP coverage but not AP90 coverage for vyomavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 47.8% (11/23), Δ 13.1% · source: [AP L35135.146](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L484050)
+- Evidence: field coverage 47.8% (11/23), Δ 13.1% · source: [AP L35135.146](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L484799)
 
 **26. `BUmispfS`** — vESyavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does BUmispfS appear in AP coverage but not AP90 coverage for vESyavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 40.7% (344/845), Δ 13.0% · source: [AP L25245.140](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L335869)
+- Evidence: field coverage 40.7% (344/845), Δ 13.0% · source: [AP L25245.140](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L336618)
 
 **27. `vArtA`** — vESyavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does vArtA appear in AP coverage but not AP90 coverage for vESyavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 40.7% (344/845), Δ 13.0% · source: [AP L29032.002](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L404763)
+- Evidence: field coverage 40.7% (344/845), Δ 13.0% · source: [AP L29032.002](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L405512)
 
 **28. `paYcAsya`** — siMhAdivargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does paYcAsya appear in AP coverage but not AP90 coverage for siMhAdivargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 31.3% (124/396), Δ 12.9% · source: [AP L19731.022](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L259922)
+- Evidence: field coverage 31.3% (124/396), Δ 12.9% · source: [AP L19731.022](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L260671)
 
 **29. `mUrDABizikta`** — kzatriyavargaH · AP (western-tagged)
 - Decide: `edition-delta` · `parser-gap` · `normalization-risk` · `true-delta`
 - Q: Why does mUrDABizikta appear in AP coverage but not AP90 coverage for kzatriyavargaH: edition history, parser gap, normalization risk, or true delta?
-- Evidence: field coverage 43.1% (372/864), Δ 11.7% · source: [AP L26523.022](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L361235)
+- Evidence: field coverage 43.1% (372/864), Δ 11.7% · source: [AP L26523.022](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L361984)
 
 ## H4-R2 VCP high coverage — 20 rows
 
@@ -382,22 +382,22 @@ Date: 2026-06-17 · Source: `data/lexico/h4_semantic_field_review_packet.json`
 **74. `aBra`** — vyomavargaH · IEG (index-catalogue)
 - Decide: `direction-artifact` · `index-artifact` · `meaningful-exception`
 - Q: Is IEG coverage of aBra in vyomavargaH meaningful, or a lookup-direction/index artifact?
-- Evidence: field coverage 52.2% (12/23) · source: [IEG L33](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L473)
+- Evidence: field coverage 52.2% (12/23) · source: [IEG L33](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L438)
 
 **75. `vyoman`** — vyomavargaH · IEG (index-catalogue)
 - Decide: `direction-artifact` · `index-artifact` · `meaningful-exception`
 - Q: Is IEG coverage of vyoman in vyomavargaH meaningful, or a lookup-direction/index artifact?
-- Evidence: field coverage 52.2% (12/23) · source: [IEG L6787](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L36325)
+- Evidence: field coverage 52.2% (12/23) · source: [IEG L6787](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L28609)
 
 **76. `puzkara`** — vyomavargaH · IEG (index-catalogue)
 - Decide: `direction-artifact` · `index-artifact` · `meaningful-exception`
 - Q: Is IEG coverage of puzkara in vyomavargaH meaningful, or a lookup-direction/index artifact?
-- Evidence: field coverage 52.2% (12/23) · source: [IEG L4683](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L25273)
+- Evidence: field coverage 52.2% (12/23) · source: [IEG L4683](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L19880)
 
 **77. `ambara`** — vyomavargaH · IEG (index-catalogue)
 - Decide: `direction-artifact` · `index-artifact` · `meaningful-exception`
 - Q: Is IEG coverage of ambara in vyomavargaH meaningful, or a lookup-direction/index artifact?
-- Evidence: field coverage 52.2% (12/23) · source: [IEG L290](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L1860)
+- Evidence: field coverage 52.2% (12/23) · source: [IEG L290](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L1513)
 
 **78. `naraka`** — narakavargaH · PUI (index-catalogue)
 - Decide: `direction-artifact` · `index-artifact` · `meaningful-exception`

@@ -19,6 +19,43 @@ A comparative microstructural atlas of **nine narrative Sanskrit-dictionary chap
 
 ---
 
+## Start here
+
+<div class="start-grid">
+  <a class="start-card primary" href="research-desk">
+    <span>Student path</span>
+    <strong>Student Research Desk</strong>
+    <small>Start from one Sanskrit word and move from dictionary choice to lookup, dossier, evidence trail, and limits.</small>
+  </a>
+  <a class="start-card" href="researcher-dashboard">
+    <span>Builder path</span>
+    <strong>Researcher Dashboard</strong>
+    <small>See the current atlas work surface: human review, model-pending items, publication tails, and cross-repo leads.</small>
+  </a>
+  <a class="start-card" href="student-lessons">
+    <span>Lessons</span>
+    <strong>Student Lesson Track</strong>
+    <small>Use short classroom prompts to practice lookup, citation, disagreement, and correction caution.</small>
+  </a>
+  <a class="start-card" href="evidence-bridges">
+    <span>Research links</span>
+    <strong>Evidence Bridges</strong>
+    <small>See which nearby Sanskrit research repos should stay linked, become chips, or wait for a contract.</small>
+  </a>
+  <a class="start-card" href="dictionary-chooser">
+    <span>First dictionary</span>
+    <strong>Which dictionary?</strong>
+    <small>Use MW first, then choose AP, PWG/PWK, VCP/SKD, WIL, or a specialized dictionary by task.</small>
+  </a>
+  <a class="start-card" href="tools/reader-lookup">
+    <span>Lookup</span>
+    <strong>Reader Lookup</strong>
+    <small>Search SLP1 or IAST headwords across core and broad dictionary coverage.</small>
+  </a>
+</div>
+
+---
+
 ## Reader mode
 
 Start with [Which dictionary should I use?](dictionary-chooser) if you need a
@@ -156,3 +193,41 @@ The [Lineage Sankey](tools/lineage-sankey) visualises this collapse — MW's 40,
 <div class="footer-attribution">
 Source: CDSL · CC-BY-SA-4.0 · build {sha}
 </div>
+
+<style>
+.start-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 16px 0 22px;
+}
+.start-card {
+  display: grid;
+  gap: 7px;
+  min-height: 148px;
+  border: 1px solid color-mix(in srgb, var(--theme-foreground), transparent 82%);
+  border-radius: 8px;
+  padding: 14px;
+  text-decoration: none;
+  background: color-mix(in srgb, var(--theme-background), var(--theme-foreground) 3%);
+}
+.start-card:hover {
+  border-color: color-mix(in srgb, var(--theme-foreground), transparent 55%);
+}
+.start-card.primary {
+  background: color-mix(in srgb, var(--theme-background), #2f6f9f 11%);
+}
+.start-card span {
+  color: var(--theme-foreground-muted);
+  font-size: .82rem;
+  text-transform: uppercase;
+}
+.start-card strong {
+  color: var(--theme-foreground);
+  font-size: 1.08rem;
+}
+.start-card small {
+  color: var(--theme-foreground-muted);
+  line-height: 1.35;
+}
+</style>

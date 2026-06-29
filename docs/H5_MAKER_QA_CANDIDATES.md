@@ -77,8 +77,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L1979.1](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7169) - {{Lbody=1979}}<br>[PW L1260.1](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4821) - {{Lbody=1260}} |
-| Nearest real form | [MW L1979](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7164) - <s>aja—mIQa</s> or <s>aja—mI\|a</s>, ¦ <lex>m.</lex> <ab>N.</ab> of a son of <s1>Suhotra</s1> (author of some Vedic hymns, <ls>RV. iv, 43</ls> and <ls n="RV. iv,">44</ls>) <div n="P"/> of a grandson of <s1>Suhotra</s1>; <div n="P"/> of <s1>Yudhiṣṭhira</s1>.<info lex="m"/><br>[PW L1260](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4818) - {#ajamIQa#} und {#˚mI\|a#}¦ <lex>m.</lex> <ab>N. pr.</ab> eines Mannes. Angeblich auch ein <ab>Bein.</ab> <is>Yudhiṣṭhira</is>ʼs. <ab>Pl.</ab> Name einer Völkerschaft. |
+| Candidate form | [MW L1979.1](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7166) - {{Lbody=1979}}<br>[PW L1260.1](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4821) - {{Lbody=1260}} |
+| Nearest real form | [MW L1979](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L7161) - <s>aja—mIQa</s> or <s>aja—mI\|a</s>, ¦ <lex>m.</lex> <ab>N.</ab> of a son of <s1>Suhotra</s1> (author of some Vedic hymns, <ls>RV. iv, 43</ls> and <ls n="RV. iv,">44</ls>) <div n="P"/> of a grandson of <s1>Suhotra</s1>; <div n="P"/> of <s1>Yudhiṣṭhira</s1>.<info lex="m"/><br>[PW L1260](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L4818) - {#ajamIQa#} und {#˚mI\|a#}¦ <lex>m.</lex> <ab>N. pr.</ab> eines Mannes. Angeblich auch ein <ab>Bein.</ab> <is>Yudhiṣṭhira</is>ʼs. <ab>Pl.</ab> Name einer Völkerschaft. |
 
 ### 2. `awawyA` -> `awAwyA`
 
@@ -91,8 +91,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L2338.1](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8346) - <s>awawyA</s> ¦ <lex>f.</lex> constant roaming (= <s>awAtyA</s>), <ls>Subh.</ls><info n="sup"/><info lex="f"/><br>[PW L1486.2](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5737) - {{Lbody=1486}} |
-| Nearest real form | [MW L2352](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8388) - <s>awAwyA</s> ¦ <lex>f.</lex> (habit of) roaming, <ls>L.</ls><info lex="f"/><br>[PW L206047](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L587348) - {#awAwyA#}¦ <lex>f.</lex> {%das Herumwandern%} <ls>SUBHĀṢITĀV. 574</ls>.<info n="sup_5"/> |
+| Candidate form | [MW L2338.1](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8343) - <s>awawyA</s> ¦ <lex>f.</lex> constant roaming (= <s>awAtyA</s>), <ls>Subh.</ls><info n="sup"/><info lex="f"/><br>[PW L1486.2](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L5737) - {{Lbody=1486}} |
+| Nearest real form | [MW L2352](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L8385) - <s>awAwyA</s> ¦ <lex>f.</lex> (habit of) roaming, <ls>L.</ls><info lex="f"/><br>[PW L206047](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L587349) - {#awAwyA#}¦ <lex>f.</lex> {%das Herumwandern%} <ls>SUBHĀṢITĀV. 574</ls>.<info n="sup_5"/> |
 
 ### 3. `akalkala` -> `akalkana`
 
@@ -105,8 +105,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L207.1](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L711) - {{Lbody=207}}<br>[PWG L86](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L739) - {#akalkala#}¦ <lex>adj.</lex> <ab>Var.</ab> von {#akalkana#} <ls>ŚKDR.</ls> <ab>u.</ab> {#akalkana#} . |
-| Nearest real form | [MW L207](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L708) - <s>a-kalkana</s> or <s>a-kalkala</s> ¦ <lex>mfn.</lex> not deceitful, honourable, (<ls>T.</ls>), <ls>Bhag.</ls><info lex="m:f:n"/><br>[PWG L85](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L734) - {#akalkana#}¦ (3. {#a + kalkana#}) <lex>adj.</lex> {%frei von Hochmuth, bescheiden%} <ls>H. 490.</ls> |
+| Candidate form | [MW L207.1](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L711) - {{Lbody=207}}<br>[PWG L86](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L420) - {#akalkala#}¦ <lex>adj.</lex> <ab>Var.</ab> von {#akalkana#} <ls>ŚKDR.</ls> <ab>u.</ab> {#akalkana#}. |
+| Nearest real form | [MW L207](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L708) - <s>a-kalkana</s> or <s>a-kalkala</s> ¦ <lex>mfn.</lex> not deceitful, honourable, (<ls>T.</ls>), <ls>Bhag.</ls><info lex="m:f:n"/><br>[PWG L85](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L416) - {#akalkana#}¦ (<hom>3.</hom> {#a#} + {#kalkana#}) <lex>adj.</lex> {%frei von Hochmuth, bescheiden%} <ls>H. 490</ls>. |
 
 ### 4. `cApaqa` -> `cApala`
 
@@ -119,8 +119,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L72974](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246846) - <s>cApaqa</s> ¦ <ab>N.</ab> of a village, <ls>Kṣitīś. iv.</ls><br>[PWG L73703](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L679249) - {#cApaqa#}¦ <ab>N. pr.</ab> eines Dorfes <ls>KṢITĪŚ. 13,19. 16,15.</ls> |
-| Nearest real form | [MW L72975](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246849) - <s>cApala</s> ¦ <lex>n.</lex> (<ab>fr.</ab> <s>cap˚</s>, <ab>g.</ab> <s>yuvA<srs/>di</s>) mobility, swiftness, <ls>Ragh. iii, 42</ls>; <ls>BhP. vii, 12, 20</ls><info lex="n"/><br>[PWG L25182](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L240031) - {#cApala/#}¦ (<ab>nom. abstr.</ab> von {#capala#}) <lex>n.</lex> <is>gaṇa</is> {#yuvAdi#} zu <ls>P. 5,1,130.</ls> <div n="1"> 1) {%Beweglichkeit, rasche Bewegung, Geschwindigkeit%}: {#sUtanizidDacApala (aSva)#} <ls>RAGH. 3,42.</ls> {#BramatkandukacApalEH#} <ls>BHĀG. P. 8,12,20.<... |
+| Candidate form | [MW L72974](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246834) - <s>cApaqa</s> ¦ <ab>N.</ab> of a village, <ls>Kṣitīś. iv.</ls><br>[PWG L73703](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L358802) - {#cApaqa#}¦ <ab>N. pr.</ab> eines Dorfes <ls>KṢITĪŚ. 13,19</ls>. <ls n="KṢITĪŚ.">16,15</ls>. |
+| Nearest real form | [MW L72975](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246837) - <s>cApala</s> ¦ <lex>n.</lex> (<ab>fr.</ab> <s>cap˚</s>, <ab>g.</ab> <s>yuvA<srs/>di</s>) mobility, swiftness, <ls>Ragh. iii, 42</ls>; <ls>BhP. vii, 12, 20</ls><info lex="n"/><br>[PWG L25182](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L125378) - {#cApala/#}¦ (<ab>nom. abstr.</ab> von {#capala#}) <lex>n.</lex> <is>gaṇa</is> {#yuvAdi#} zu <ls>P. 5,1,130</ls>. <div n="1"> 1〉 {%Beweglichkeit, rasche Bewegung, Geschwindigkeit%}: {#sUtanizidDacApala (aSva)#} <ls>RAGH. 3,42</ls>. {#BramatkandukacApalEH#} <ls>BHĀG. P. 8,12,20</... |
 
 ### 5. `uzmopagama` -> `uzRopagama`
 
@@ -133,8 +133,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L37850](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132839) - <s>uzmo<srs/>pagama</s> ¦ <lex>m.</lex> beginning of the hot season, <ls>L.</ls><info lex="m"/><br>[PWG L12684](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L113851) - {#uzmopagama#}¦ <lex>m.</lex> = {#uzRopagama#} <ls>AK. 1,1,3,19</ls>, <ab>Sch.</ab> |
-| Nearest real form | [MW L37807](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132701) - <s>uzRo<srs/>pagama</s> ¦ <lex>m.</lex> the beginning of the hot season, <ls>L.</ls><info lex="m"/><br>[PWG L12673](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L113772) - {#uzRopagama#}¦ ({#u˚ + u˚#}) <lex>m.</lex> = {#uzRAgama#} <ls>AK. 1,1,3,19.</ls> |
+| Candidate form | [MW L37850](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132833) - <s>uzmo<srs/>pagama</s> ¦ <lex>m.</lex> beginning of the hot season, <ls>L.</ls><info lex="m"/><br>[PWG L12684](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L60985) - {#uzmopagama#}¦ <lex>m.</lex> = {#uzRopagama#} <ls>AK. 1,1,3,19</ls>, <ab>Sch.</ab> |
+| Nearest real form | [MW L37807](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132695) - <s>uzRo<srs/>pagama</s> ¦ <lex>m.</lex> the beginning of the hot season, <ls>L.</ls><info lex="m"/><br>[PWG L12673](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L60933) - {#uzRopagama#}¦ ({#u˚#} + {#u˚#}) <lex>m.</lex> = {#uzRAgama#} <ls>AK. 1,1,3,19</ls>. |
 
 ### 6. `aprapAda` -> `apramAda`
 
@@ -147,8 +147,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L10669](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39008) - <s>a/-prapAda</s> ¦ <lex>m.</lex> non-abortiveness, <ls>TS.</ls>; <ls>TBr.</ls><info lex="m"/><br>[PW L6875](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25451) - {#a/prapAda#}¦ <lex>m.</lex> {%kein vorzeitiges Abgehen des Fötus%}. |
-| Nearest real form | [MW L10682](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39050) - <s>a-pramAda</s> ¦ <lex>m.</lex> care, vigilance, <ls>MBh.</ls> &c.<info lex="m"/><br>[PW L6893](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25510) - <hom>1.</hom> {#apramAda#}¦ <lex>m.</lex> {%Aufmerksamkeit, Sorgsamkeit%} <ls>MBH. 14,1,14</ls>. |
+| Candidate form | [MW L10669](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39005) - <s>a/-prapAda</s> ¦ <lex>m.</lex> non-abortiveness, <ls>TS.</ls>; <ls>TBr.</ls><info lex="m"/><br>[PW L6875](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25451) - {#a/prapAda#}¦ <lex>m.</lex> {%kein vorzeitiges Abgehen des Fötus%}. |
+| Nearest real form | [MW L10682](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L39047) - <s>a-pramAda</s> ¦ <lex>m.</lex> care, vigilance, <ls>MBh.</ls> &c.<info lex="m"/><br>[PW L6893](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L25510) - <hom>1.</hom> {#apramAda#}¦ <lex>m.</lex> {%Aufmerksamkeit, Sorgsamkeit%} <ls>MBH. 14,1,14</ls>. |
 
 ### 7. `apraRASa` -> `aprakASa`
 
@@ -161,8 +161,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L10530](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38543) - <s>a/-praRASa</s> ¦ <lex>m.</lex> not perishing, <ls>ŚBr.</ls>; <ls>PBr.</ls><info lex="m"/><br>[PW L6722](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24932) - {#a/praRASa#}¦ <lex>m.</lex> <div n="1">— 1〉 {%das Nichtverschwinden%} <ls>TĀṆḌYA-BR. 14,2,6</ls>. <div n="1">— 2〉 {%das Nichtzugrundegehen%}. |
-| Nearest real form | [MW L10484](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38381) - <s>a-prakASa</s> ¦ <lex>mf(<s>A</s>)n.</lex> not shining, dark<info lex="m:f#A:n"/><br>[PW L6683](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24793) - {#aprakASa#}¦ <div n="1">— 1〉 <lex>Adj.</lex> (<lex>f.</lex> {#A#}) <div n="2">— a〉 {%nicht hell, dunkel%}. <div n="2">— b〉 {%versteckt, heimlich, von Andern nicht gesehen%} <ls>MṚCCH. 61,8</ls> <ab>v. l.</ab> <div n="1">— 2〉 {#˚m#} <lex>Adv.</lex> {%im Geheimen%}. <div n="1">— ... |
+| Candidate form | [MW L10530](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38540) - <s>a/-praRASa</s> ¦ <lex>m.</lex> not perishing, <ls>ŚBr.</ls>; <ls>PBr.</ls><info lex="m"/><br>[PW L6722](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24932) - {#a/praRASa#}¦ <lex>m.</lex> <div n="1">— 1〉 {%das Nichtverschwinden%} <ls>TĀṆḌYA-BR. 14,2,6</ls>. <div n="1">— 2〉 {%das Nichtzugrundegehen%}. |
+| Nearest real form | [MW L10484](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L38378) - <s>a-prakASa</s> ¦ <lex>mf(<s>A</s>)n.</lex> not shining, dark<info lex="m:f#A:n"/><br>[PW L6683](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L24793) - {#aprakASa#}¦ <div n="1">— 1〉 <lex>Adj.</lex> (<lex>f.</lex> {#A#}) <div n="2">— a〉 {%nicht hell, dunkel%}. <div n="2">— b〉 {%versteckt, heimlich, von Andern nicht gesehen%} <ls>MṚCCH. 61,8</ls> <ab>v. l.</ab> <div n="1">— 2〉 {#˚m#} <lex>Adv.</lex> {%im Geheimen%}. <div n="1">— ... |
 
 ### 8. `divaraTa` -> `devaraTa`
 
@@ -175,8 +175,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L92243](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309870) - <s>diva—raTa</s> ¦ <ab>w.r.</ab> for <s>divi-</s> (<ab>q.v.</ab>)<br>[PWG L32945](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L321032) - {#divaraTa#}¦ <ls>VP. 445</ls> falsche Form für {#diviraTa#} . |
-| Nearest real form | [MW L95965](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L322005) - <s>deva—raTa/</s> ¦ <lex>m.</lex> the car or vehicle of a god, <ls>AV.</ls>; <ls>TS.</ls>; <ls>Br.</ls><info lex="m"/><br>[PWG L34621](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L336136) - {#devaraTa#}¦ ({#deva + raTa#}) <lex>m.</lex> <div n="1"> 1) <ab>oxyt.</ab> {%Götterwagen%} <ls>AV. 8,8,22.</ls> <ls>TS. 2,5,6,1.</ls> <ls>TBR. 1,3,6,4.</ls> <ls>AIT. BR. 2,37.</ls> <ls>ŚĀṄKH. BR. 2,6.</ls> {#devaraTAhnya/#} <lex>n.</lex> {%Tagefahrt für einen Götterwagen (für d... |
+| Candidate form | [MW L92243](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309834) - <s>diva—raTa</s> ¦ <ab>w.r.</ab> for <s>divi-</s> (<ab>q.v.</ab>)<br>[PWG L32945](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L165464) - {#divaraTa#}¦ <ls>VP. 445</ls> falsche Form für {#diviraTa#}. |
+| Nearest real form | [MW L95965](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L321966) - <s>deva—raTa/</s> ¦ <lex>m.</lex> the car or vehicle of a god, <ls>AV.</ls>; <ls>TS.</ls>; <ls>Br.</ls><info lex="m"/><br>[PWG L34621](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L173560) - {#devaraTa#}¦ ({#deva#} + {#raTa#}) <lex>m.</lex> <div n="1"> 1〉 <ab>oxyt.</ab> {%Götterwagen%} <ls>AV. 8,8,22</ls>. <ls>TS. 2,5,6,1</ls>. <ls>TBR. 1,3,6,4</ls>. <ls>AIT. BR. 2,37</ls>. <ls>ŚĀṄKH. BR. 2,6</ls>. {#devaraTAhnya/#} <lex>n.</lex> {%Tagefahrt für einen Götterwagen%} ... |
 
 ### 9. `jalaDitA` -> `jalaDigA`
 
@@ -189,8 +189,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L77921](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262761) - <s>jala—Di—tA</s> ¦ <lex>f.</lex> the state of the ocean, <ls>ŚārṅgP. xxix, 12</ls><info lex="f"/><br>[PWG L74253](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L682945) - {#jalaDitA#}¦ <lex>f.</lex> {%der Zustand des Oceans%} <ls>Spr. 3572.</ls> |
-| Nearest real form | [MW L77919](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262755) - <s>jala—Di—gA</s> ¦ <lex>f.</lex> a river flowing into the ocean, <ls>L.</ls><info lex="f"/><br>[PWG L26915](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L259464) - {#jalaDigA#}¦ ({#jalaDi + gA#} von 1. {#ga#}) <lex>f.</lex> {%ein sich in's Meer ergiessender Fluss%} <ls>H. 1080.</ls> |
+| Candidate form | [MW L77921](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262746) - <s>jala—Di—tA</s> ¦ <lex>f.</lex> the state of the ocean, <ls>ŚārṅgP. xxix, 12</ls><info lex="f"/><br>[PWG L74253](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L361247) - {#jalaDitA#}¦ <lex>f.</lex> {%der Zustand des Oceans%} <ls>Spr. 3572</ls>. |
+| Nearest real form | [MW L77919](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262740) - <s>jala—Di—gA</s> ¦ <lex>f.</lex> a river flowing into the ocean, <ls>L.</ls><info lex="f"/><br>[PWG L26915](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L135146) - {#jalaDigA#}¦ ({#jalaDi#} + {#gA#} von <hom>1.</hom> {#ga#}) <lex>f.</lex> {%ein sich inʼs Meer ergiessender Fluss%} <ls>H. 1080</ls>. |
 
 ### 10. `kftAlaka` -> `mftAlaka`
 
@@ -203,8 +203,8 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Role | Source pointers |
 |---|---|
-| Candidate form | [MW L54495](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L187262) - <s>kftA<srs/>laka</s> ¦ <lex>m.</lex> <ab>N.</ab> of one of <s1>Śiva</s1>'s attendants <ab>Comm.</ab> on <ls>L.</ls><info lex="m"/><br>[PWG L18671](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L172936) - {#kftAlaka#}¦ ({#kfta + alaka#}) <lex>m.</lex> <ab>N. pr.</ab> eines Wesens im Gefolge von <is>Śiva</is> <ls>VYĀḌI</ls> zu <ls>H. 210.</ls> |
-| Nearest real form | [MW L167215](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L558573) - <s>mftAlaka</s>, <s>mfttAla</s> and <s>mfttA˚laka</s>, ¦ <lex>n.</lex> a kind of loam or clay, <ls>L.</ls><info lex="n"/><br>[PWG L61635](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L599269) - {#mftAlaka#}¦ <lex>n.</lex> {%eine <ab>best.</ab> Lehmart%} <ls>AK. 2,4,4,19.</ls> <div n="v">— <ab>Vgl.</ab> {#mfttAla, mfttAlaka#} . |
+| Candidate form | [MW L54495](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L187256) - <s>kftA<srs/>laka</s> ¦ <lex>m.</lex> <ab>N.</ab> of one of <s1>Śiva</s1>'s attendants <ab>Comm.</ab> on <ls>L.</ls><info lex="m"/><br>[PWG L18671](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L91751) - {#kftAlaka#}¦ ({#kfta#} + {#alaka#}) <lex>m.</lex> <ab>N. pr.</ab> eines Wesens im Gefolge von <is>Śiva</is> <ls>VYĀḌI</ls>_zu_<ls>H. 210</ls>. |
+| Nearest real form | [MW L167215](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L558492) - <s>mftAlaka</s>, <s>mfttAla</s> and <s>mfttA˚laka</s>, ¦ <lex>n.</lex> a kind of loam or clay, <ls>L.</ls><info lex="n"/><br>[PWG L61635](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L305618) - {#mftAlaka#}¦ <lex>n.</lex> {%eine <ab>best.</ab> Lehmart%} <ls>AK. 2,4,4,19</ls>. <div n="v">— <ab>Vgl.</ab> {#mfttAla, mfttAlaka#}. |
 
 ## Limitations
 

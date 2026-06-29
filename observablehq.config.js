@@ -10,8 +10,15 @@ export default {
       path: "/"
     },
     {
-      name: "Which dictionary?",
-      path: "/dictionary-chooser"
+      name: "Research paths",
+      pages: [
+        { name: "Student research desk", path: "/research-desk" },
+        { name: "Student lesson track", path: "/student-lessons" },
+        { name: "Researcher dashboard", path: "/researcher-dashboard" },
+        { name: "Evidence bridges", path: "/evidence-bridges" },
+        { name: "Which dictionary?", path: "/dictionary-chooser" },
+        { name: "Reader lookup", path: "/tools/reader-lookup" }
+      ]
     },
     {
       name: "Reader mode",
