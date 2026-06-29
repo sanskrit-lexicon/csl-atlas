@@ -5,7 +5,7 @@
   "evidenceLabel": "derived-source-pointers",
   "reviewStatus": "needs-source-check",
   "ownerRepo": "csl-atlas",
-  "generatedAt": "2026-06-17T13:12:25.021Z",
+  "generatedAt": "2026-06-29T14:34:43.749Z",
   "generatedBy": "npm run build-xref-source-check-packet",
   "sourceFiles": [
     "data/lexico/xref_hub_review.json",
@@ -97,8 +97,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "23311",
-          "line": 82985,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L82985",
+          "line": 82982,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L82982",
           "sourceLemma": "ARi",
           "sourceRecordLemma": "ARi",
           "target": "aRi",
@@ -110,13 +110,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "8208",
-          "line": 69917,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L69917",
+          "line": 39209,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L39209",
           "sourceLemma": "ARi",
           "sourceRecordLemma": "ARi",
           "target": "aRi",
           "kind": "vgl",
-          "bodyExcerpt": "{#ARi/#}¦ <div n=\"1\"> 1) <lex>m.</lex> {%der Zapfen der Achse%} (der Theil, welcher in der Nabe läuft): {#A\\RiM na raTya^ma\\mftADi^ tasTuH#} <ls>ṚV. 1,35,6.</ls> {#ga\\ntaM ni\\DiM Dura^mA\\Rirna nABi^m#} <ls n=\"ṚV.\">5,43,8.</ls> {#tvaM SuzRa^M vf\\jane^ pf\\kza A..."
+          "bodyExcerpt": "{#ARi/#}¦ 1〉 <lex>m.</lex> {%der Zapfen der Achse%} (der Theil, welcher in der Nabe läuft): {#A\\RiM na raTya^ma\\mftADi^ tasTuH#} <ls>ṚV. 1,35,6</ls>. {#ga\\ntaM ni\\DiM Dura^mA\\Rirna nABi^m#} <ls n=\"ṚV.\">5,43,8</ls>. {#tvaM SuzRa^M vf\\jane^ pf\\kza A\\RO (ahan)#}..."
         }
       ],
       "matchedDictionaries": [
@@ -150,8 +150,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "23968",
-          "line": 85247,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L85247",
+          "line": 85244,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L85244",
           "sourceLemma": "Adinava",
           "sourceRecordLemma": "Adinava",
           "target": "AdInava",
@@ -163,13 +163,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "8440",
-          "line": 72016,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L72016",
+          "line": 40294,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L40294",
           "sourceLemma": "Adinava",
           "sourceRecordLemma": "Adinava",
           "target": "AdInava",
           "kind": "vgl",
-          "bodyExcerpt": "{#Adinava/#}¦ {%Unglück, Hinderniss%} (im Würfelspiel): {#A\\di\\na\\vaM pra^ti\\dIvne^ Gf\\tenA\\smA~ a\\Bi kza^ra#} <ls>AV. 7,110,4.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#AdInava#} ."
+          "bodyExcerpt": "{#Adinava/#}¦ {%Unglück, Hinderniss%} (im Würfelspiel): {#A\\di\\na\\vaM pra^ti\\dIvne^ Gf\\tenA\\smA~ a\\Bi kza^ra#} <ls>AV. 7,110,4</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#AdInava#}."
         }
       ],
       "matchedDictionaries": [
@@ -203,13 +203,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "7882",
-          "line": 67188,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L67188",
+          "line": 37669,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L37669",
           "sourceLemma": "Akzit",
           "sourceRecordLemma": "Akzit",
           "target": "anAkzit",
           "kind": "vgl",
-          "bodyExcerpt": "{#Akzi/t#}¦ (von {#kzi#} mit {#A#}) <lex>adj.</lex> {%sich aufhaltend, wohnend%} <ls>ṚV. 3,55,5.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#anAkzit#} ."
+          "bodyExcerpt": "{#Akzi/t#}¦ (von {#kzi#} mit {#A#}) <lex>adj.</lex> {%sich aufhaltend, wohnend%} <ls>ṚV. 3,55,5</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#anAkzit#}."
         }
       ],
       "matchedDictionaries": [
@@ -244,8 +244,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "26790",
-          "line": 94804,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L94804",
+          "line": 94801,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L94801",
           "sourceLemma": "Ali",
           "sourceRecordLemma": "Ali",
           "target": "ali",
@@ -257,13 +257,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "9388",
-          "line": 80265,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L80265",
+          "line": 44746,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L44746",
           "sourceLemma": "Ali",
           "sourceRecordLemma": "Ali",
           "target": "ali",
           "kind": "vgl",
-          "bodyExcerpt": "1. {#Ali#}¦ <lex>m.</lex> <div n=\"1\"> 1) {%Scorpion%} <ls>H. 1211.</ls> <ls>Ind. St. 2,260.</ls> <div n=\"1\">— 2) {%Biene%} <ab>Sch.</ab> zu <ls>AK.</ls> und angeblich <ls>HĀR.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#ali, Alin#} ."
+          "bodyExcerpt": "<hom>1.</hom> {#Ali#}¦ <lex>m.</lex> <div n=\"1\"> 1〉 {%Scorpion%} <ls>H. 1211</ls>. <ls>Ind. St. 2,260</ls>. <div n=\"1\">— 2〉 {%Biene%} <ab>Sch.</ab> zu <ls>AK.</ls> und angeblich <ls>HĀR.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#ali, Alin#}."
         }
       ],
       "matchedDictionaries": [
@@ -297,8 +297,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "26803",
-          "line": 94846,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L94846",
+          "line": 94843,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L94843",
           "sourceLemma": "Alin",
           "sourceRecordLemma": "Alin",
           "target": "alin",
@@ -310,13 +310,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "9401",
-          "line": 80421,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L80421",
+          "line": 44817,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L44817",
           "sourceLemma": "Alin",
           "sourceRecordLemma": "Alin",
           "target": "alin",
           "kind": "vgl",
-          "bodyExcerpt": "{#Alin#}¦ <lex>m.</lex> {%Scorpion%} <ls>H. 1211.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#alin#} und 1. {#Ali#} ."
+          "bodyExcerpt": "{#Alin#}¦ <lex>m.</lex> {%Scorpion%} <ls>H. 1211</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#alin#} und <hom>1.</hom> {#Ali#}."
         }
       ],
       "matchedDictionaries": [
@@ -350,8 +350,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "24620",
-          "line": 87378,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L87378",
+          "line": 87375,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L87375",
           "sourceLemma": "Anuzak",
           "sourceRecordLemma": "Anuzak",
           "target": "anuzak",
@@ -363,13 +363,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "8661",
-          "line": 73649,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L73649",
+          "line": 41293,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L41293",
           "sourceLemma": "Anuzak",
           "sourceRecordLemma": "Anuzak",
           "target": "anuzak",
           "kind": "vgl",
-          "bodyExcerpt": "{#Anuza/k#}¦ (von {#saYj#} mit {#anu#}) <lex>adv.</lex> <is>gaṇa</is> {#svarAdi#} zu <ls>P. 1,1,37.</ls> <is>gaṇa</is> {#cAdi#} zu <ls n=\"P.\">1,4,57.</ls> {%in stätiger Folge, unausgesetzt, Einer nach dem Andern%}: {#vi ha\\vyama\\gnirA^nu\\zagBago\\ na vAra^mfRv..."
+          "bodyExcerpt": "{#Anuza/k#}¦ (von {#saYj#} mit {#anu#}) <lex>adv.</lex> <is>gaṇa</is> {#svarAdi#} zu <ls>P. 1,1,37</ls>. <is>gaṇa</is> {#cAdi#} zu <ls n=\"P.\">1,4,57</ls>. {%in stätiger Folge, unausgesetzt, Einer nach dem Andern%}: {#vi ha\\vyama\\gnirA^nu\\zagBago\\ na vAra^mfRv..."
         }
       ],
       "matchedDictionaries": [
@@ -403,13 +403,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "9148",
-          "line": 78258,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L78258",
+          "line": 43635,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L43635",
           "sourceLemma": "ArAt",
           "sourceRecordLemma": "ArAt",
           "target": "Are",
           "kind": "vgl",
-          "bodyExcerpt": "{#ArA/t#}¦ (<ab>abl.</ab> von 1. {#Ara#}) <is>gaṇa</is> {#svarAdi#} zu <ls>P. 1,1,37.</ls> <div n=\"1\"> 1) {%aus der Ferne, von fern; fern, fernhin; fern von%}, mit dem <ab>abl.</ab> (<ls>P. 2,2,29</ls>) <ls>AK. 3,4,32,4.</ls> <ls>H. an. 7,21.</ls> <ls>MED. av..."
+          "bodyExcerpt": "{#ArA/t#}¦ (<ab>abl.</ab> von <hom>1.</hom> {#Ara#}) <is>gaṇa</is> {#svarAdi#} zu <ls>P. 1,1,37</ls>. <div n=\"1\"> 1〉 {%aus der Ferne, von fern; fern, fernhin; fern von%}, mit dem <ab>abl.</ab> (<ls>P. 2,2,29</ls>) <ls>AK. 3,4,32,4</ls>. <ls>H. an. 7,21</ls>. ..."
         }
       ],
       "matchedDictionaries": [
@@ -444,8 +444,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "23251",
-          "line": 82778,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L82778",
+          "line": 82775,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L82775",
           "sourceLemma": "AwIkana",
           "sourceRecordLemma": "AwIkana",
           "target": "AwIlaka",
@@ -457,13 +457,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "8180",
-          "line": 69689,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L69689",
+          "line": 39074,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L39074",
           "sourceLemma": "AwIkana",
           "sourceRecordLemma": "AwIkana",
           "target": "AwIlaka",
           "kind": "vgl",
-          "bodyExcerpt": "{#AwIkana#}¦ (von {#wIk#} mit {#A#}) <lex>n.</lex> {%das Springen der Kälber%} <ls>TRIK. 2,9,20.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#AwIlaka, AlIQaka#} ."
+          "bodyExcerpt": "{#AwIkana#}¦ (von {#wIk#} mit {#A#}) <lex>n.</lex> {%das Springen der Kälber%} <ls>TRIK. 2,9,20</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#AwIlaka, AlIQaka#}."
         }
       ],
       "matchedDictionaries": [
@@ -497,8 +497,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "23247",
-          "line": 82763,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L82763",
+          "line": 82760,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L82760",
           "sourceLemma": "Awi",
           "sourceRecordLemma": "Awi",
           "target": "Aqi",
@@ -510,13 +510,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "8176",
-          "line": 69661,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L69661",
+          "line": 39055,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L39055",
           "sourceLemma": "Awi",
           "sourceRecordLemma": "Awi",
           "target": "Aqi",
           "kind": "vgl",
-          "bodyExcerpt": "{#Awi#}¦ <is>gaṇa</is> {#CAtryAdi#} zu <ls>P. 6,2,86.</ls> <lex>f.</lex> ein <ab>bes.</ab> Vogel, {%Turdus Ginginianus%}, <ls>AK. 2,5,25.</ls> <ls>H. 1338.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Aqi#} und {#Ati#} ."
+          "bodyExcerpt": "{#Awi#}¦ <is>gaṇa</is> {#CAtryAdi#} zu <ls>P. 6,2,86</ls>. <lex>f.</lex> ein <ab>bes.</ab> Vogel, <zoo>Turdus Ginginianus</zoo>, <ls>AK. 2,5,25</ls>. <ls>H. 1338</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#Aqi#} und {#Ati#}."
         }
       ],
       "matchedDictionaries": [
@@ -550,8 +550,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "25866",
-          "line": 91671,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L91671",
+          "line": 91668,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L91668",
           "sourceLemma": "Ayu",
           "sourceRecordLemma": "Ayu",
           "target": "Ayus",
@@ -563,13 +563,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "9050",
-          "line": 77316,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L77316",
+          "line": 43164,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L43164",
           "sourceLemma": "Ayu",
           "sourceRecordLemma": "Ayu",
           "target": "Ayus",
           "kind": "vgl",
-          "bodyExcerpt": "2. {#A/yu#}¦ (wie eben) {%Leben, Lebenszeit%}: {#va\\tsaM na pUrva\\ Ayu^ni jA\\taM ri^hanti mA\\tara^H#} <ls>ṚV. 9,100,1.</ls> {#agne\\ jara^sva svapa\\tya Ayu^ni#} <ls n=\"ṚV.\">3,3,6.</ls> {#AyuSezatA#} ({#AyuHSe˚?#}) <ls>PAÑCAT. 127,3.</ls> Nach den <ab>Sch.</ab>..."
+          "bodyExcerpt": "<hom>2.</hom> {#A/yu#}¦ (wie eben) {%Leben, Lebenszeit%}: {#va\\tsaM na pUrva\\ Ayu^ni jA\\taM ri^hanti mA\\tara^H#} <ls>ṚV. 9,100,1</ls>. {#agne\\ jara^sva svapa\\tya Ayu^ni#} <ls n=\"ṚV.\">3,3,6</ls>. {#AyuSezatA#} ({#AyuHSe˚#}?) <ls>PAÑCAT. 127,3</ls>. Nach den <a..."
         }
       ],
       "matchedDictionaries": [
@@ -603,8 +603,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "150156",
-          "line": 502962,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L502962",
+          "line": 502893,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L502893",
           "sourceLemma": "BAluka",
           "sourceRecordLemma": "BAluka",
           "target": "Balla",
@@ -616,13 +616,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "54677",
-          "line": 529575,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L529575",
+          "line": 271243,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L271243",
           "sourceLemma": "BAluka",
           "sourceRecordLemma": "BAluka",
           "target": "Balla",
           "kind": "vgl",
-          "bodyExcerpt": "{#BAluka#}¦ <lex>m.</lex> {%Bär%} <ab>Cit.</ab> bei <ls>BHAR.</ls> zu <ls>AK.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BAlUka, Balla#} <ab>u. s. w.</ab>"
+          "bodyExcerpt": "{#BAluka#}¦ <lex>m.</lex> {%Bär%} <ab>Cit.</ab> bei <ls>BHAR.</ls>_zu_<ls>AK.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BAlUka, Balla#} <ab>u. s. w.</ab>"
         }
       ],
       "matchedDictionaries": [
@@ -656,8 +656,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "149443",
-          "line": 500702,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L500702",
+          "line": 500633,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L500633",
           "sourceLemma": "BAtu",
           "sourceRecordLemma": "BAtu",
           "target": "BAnu",
@@ -669,13 +669,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "54526",
-          "line": 528157,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L528157",
+          "line": 270502,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L270502",
           "sourceLemma": "BAtu",
           "sourceRecordLemma": "BAtu",
           "target": "BAnu",
           "kind": "vgl",
-          "bodyExcerpt": "{#BAtu/#}¦ (wie eben) <ls>UṆĀDIS. 1,73.</ls> <lex>m.</lex> {%die Sonne%} <ls>TRIK. 1,1,98.</ls> <ls>UJJVAL.</ls> = {#dIpta#} <ls>UṆĀDIVṚ.</ls> im <ls>SAṂKṢIPTAS.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BAnu#} ."
+          "bodyExcerpt": "{#BAtu/#}¦ (wie eben) <ls>UṆĀDIS. 1,73</ls>. <lex>m.</lex> {%die Sonne%} <ls>TRIK. 1,1,98</ls>. <ls>UJJVAL.</ls> = {#dIpta#} <ls>UṆĀDIVṚ.</ls>_im_<ls>SAṂKṢIPTAS.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BAnu#}."
         }
       ],
       "matchedDictionaries": [
@@ -709,8 +709,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "150435",
-          "line": 503847,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L503847",
+          "line": 503778,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L503778",
           "sourceLemma": "BAvitra",
           "sourceRecordLemma": "BAvitra",
           "target": "Bavitra",
@@ -722,13 +722,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "54748",
-          "line": 530319,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L530319",
+          "line": 271598,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L271598",
           "sourceLemma": "BAvitra",
           "sourceRecordLemma": "BAvitra",
           "target": "Bavitra",
           "kind": "vgl",
-          "bodyExcerpt": "{#BA/vitra#}¦ (von 1. {#BU)#} <ls>UṆĀDIS. 4,170.</ls> <lex>n.</lex> {%die drei Welten%} <ls>UJJVAL.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Bavitra#} ."
+          "bodyExcerpt": "{#BA/vitra#}¦ (von <hom>1.</hom> {#BU#}) <ls>UṆĀDIS. 4,170</ls>. <lex>n.</lex> {%die drei Welten%} <ls>UJJVAL.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Bavitra#}."
         }
       ],
       "matchedDictionaries": [
@@ -762,8 +762,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "150969.1",
-          "line": 505640,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L505640",
+          "line": 505571,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L505571",
           "sourceLemma": "BI",
           "sourceRecordLemma": "BI",
           "target": "Byas",
@@ -775,13 +775,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "54938",
-          "line": 533051,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L533051",
+          "line": 272665,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L272665",
           "sourceLemma": "BI",
           "sourceRecordLemma": "BI",
           "target": "Byas",
           "kind": "vgl",
-          "bodyExcerpt": "1. {#BI#}¦, {#Ba/yate#} (die im <is>Veda</is> herrschende Form), {#Ba/yamAna; biBe/ti#} <ls>DHĀTUP. 25,2.</ls> <ls>P. 6,1,192.</ls> {#biBItas#} und {#biBitas#} <ab>u. s. w.</ab> <ls n=\"P.\">6,4,115.</ls> <ls>VOP. 9,31.</ls> [Page5-0292] {#biByati; biBIyA/t#} u..."
+          "bodyExcerpt": "<hom>1.</hom> {#BI#}¦, {#Ba/yate#} (die im <is>Veda</is> herrschende Form), {#Ba/yamAna; biBe/ti#} <ls>DHĀTUP. 25,2</ls>. <ls>P. 6,1,192</ls>. {#biBItas#} und {#biBitas#} <ab>u. s. w.</ab> <ls n=\"P.\">6,4,115</ls>. <ls>VOP. 9,31</ls>. [Page5-0292] {#biByati; b..."
         }
       ],
       "matchedDictionaries": [
@@ -815,8 +815,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "152444",
-          "line": 510438,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510438",
+          "line": 510369,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510369",
           "sourceLemma": "BUHKAra",
           "sourceRecordLemma": "BUHKAra",
           "target": "BuHKAra",
@@ -828,13 +828,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "55168",
-          "line": 536956,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L536956",
+          "line": 273996,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L273996",
           "sourceLemma": "BUHKAra",
           "sourceRecordLemma": "BUHKAra",
           "target": "BuHKAra",
           "kind": "vgl",
-          "bodyExcerpt": "{#BUHKAra#}¦ <lex>adj.</lex> {%bucharisch%}: {#vAjinaH#} <ls>RĀJA-TAR. 4,166.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BuHKAra#} ."
+          "bodyExcerpt": "{#BUHKAra#}¦ <lex>adj.</lex> {%bucharisch%}: {#vAjinaH#} <ls>RĀJA-TAR. 4,166</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#BuHKAra#}."
         }
       ],
       "matchedDictionaries": [
@@ -868,13 +868,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "53690",
-          "line": 519120,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L519120",
+          "line": 266384,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L266384",
           "sourceLemma": "BaMsas",
           "sourceRecordLemma": "BaMsas",
           "target": "Basad",
           "kind": "vgl",
-          "bodyExcerpt": "{#Ba/Msas#}¦ <lex>n.</lex> {%ein <ab>best.</ab> Theil des Unterleibes%}: {#yakzma\\M SroRi^ByA\\M BAsa^dA\\dBaMsa^so\\ vi vf^hAmi te#} <ls>ṚV. 10,163,4.</ls> {#a\\rAyA^~ asyA mu\\zkAByA\\M BaMsa\\so 'pa^ harAmasi#} <ls>AV. 8,6,5.</ls> <ls n=\"AV.\">9,8,21.</ls> <div n=..."
+          "bodyExcerpt": "{#Ba/Msas#}¦ <lex>n.</lex> {%ein <ab>best.</ab> Theil des Unterleibes%}: {#yakzma\\M SroRi^ByA\\M BAsa^dA\\dBaMsa^so\\ vi vf^hAmi te#} <ls>ṚV. 10,163,4</ls>. {#a\\rAyA^~ asyA mu\\zkAByA\\M BaMsa\\so 'pa^ harAmasi#} <ls>AV. 8,6,5</ls>. <ls n=\"AV.\">9,8,21</ls>. <div n=..."
         }
       ],
       "matchedDictionaries": [
@@ -909,8 +909,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "147531",
-          "line": 494486,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L494486",
+          "line": 494417,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L494417",
           "sourceLemma": "BakkikA",
           "sourceRecordLemma": "BakkikA",
           "target": "PaqiNgA",
@@ -922,13 +922,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "53692",
-          "line": 519132,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L519132",
+          "line": 266393,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L266393",
           "sourceLemma": "BakkikA",
           "sourceRecordLemma": "BakkikA",
           "target": "PaqiNgA",
           "kind": "vgl",
-          "bodyExcerpt": "{#BakkikA#}¦ <lex>f.</lex> {%Grille, Heimchen%} <ls>ŚABDĀRTHAK.</ls> bei <ls>WILSON.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#PaqiNgA#} ."
+          "bodyExcerpt": "{#BakkikA#}¦ <lex>f.</lex> {%Grille, Heimchen%} <ls>ŚABDĀRTHAK.</ls>_bei_<ls>WILSON</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#PaqiNgA#}."
         }
       ],
       "matchedDictionaries": [
@@ -962,8 +962,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "147534",
-          "line": 494498,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L494498",
+          "line": 494429,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L494429",
           "sourceLemma": "Bakz",
           "sourceRecordLemma": "Bakz",
           "target": "biBakzayizu",
@@ -975,13 +975,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "53742",
-          "line": 519546,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L519546",
+          "line": 266614,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L266614",
           "sourceLemma": "Bakz",
           "sourceRecordLemma": "Bakz",
           "target": "biBakzayizu",
           "kind": "vgl",
-          "bodyExcerpt": "{#Bakz#}¦, {#Bakza/yati#} <ls>DHĀTUP. 32,22.</ls> {#BakzayAmAsa, Bakzayizyati#}; bisweilen auch <ab>med.</ab>; in der späteren Sprache hier und da auch {#Ba/kzati, ˚te#} <ls>DHĀTUP. 21,27.</ls> <ab>partic.</ab> <ab>pass.</ab> {#Bakzita#}; {%geniessen, verzehr..."
+          "bodyExcerpt": "√{#Bakz#}¦, {#Bakza/yati#} <ls>DHĀTUP. 32,22</ls>. {#BakzayAmAsa, Bakzayizyati#}; bisweilen auch <ab>med.</ab>; in der späteren Sprache hier und da auch {#Ba/kzati, ˚te#} <ls>DHĀTUP. 21,27</ls>. <ab>partic.</ab> <ab>pass.</ab> {#Bakzita#}; {%geniessen, verzeh..."
         }
       ],
       "matchedDictionaries": [
@@ -1015,8 +1015,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "148924",
-          "line": 499080,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499080",
+          "line": 499011,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499011",
           "sourceLemma": "Bala",
           "sourceRecordLemma": "Bala",
           "target": "bal",
@@ -1028,13 +1028,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "54242",
-          "line": 525182,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L525182",
+          "line": 269128,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L269128",
           "sourceLemma": "Bala",
           "sourceRecordLemma": "Bala",
           "target": "bal",
           "kind": "vgl",
-          "bodyExcerpt": "1. {#Bala#}¦ <ab>enklit.</ab> <ab>Part.</ab> {%gewiss%}: {#Ba\\draM Ba^la\\ tyasyA^ aBU\\dyasyA^ u\\dara\\mAma^yat#} <ls>ṚV. 10,86,23.</ls> {#sarve^ Bala bravATa#} <ls>AV. 7,56,7.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#bal, baw#} und mahr. {#Balla#} {%well!%}"
+          "bodyExcerpt": "<hom>1.</hom> {#Bala#}¦ <ab>enklit.</ab> <ab>Part.</ab> {%gewiss%}: {#Ba\\draM Ba^la\\ tyasyA^ aBU\\dyasyA^ u\\dara\\mAma^yat#} <ls>ṚV. 10,86,23</ls>. {#sarve^ Bala bravATa#} <ls>AV. 7,56,7</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#bal, baw#} und <lang>mahr.</lang> {#Bal..."
         }
       ],
       "matchedDictionaries": [
@@ -1068,8 +1068,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "149289",
-          "line": 500211,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L500211",
+          "line": 500142,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L500142",
           "sourceLemma": "Bas",
           "sourceRecordLemma": "Bas",
           "target": "psA",
@@ -1081,13 +1081,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "54350",
-          "line": 526206,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L526206",
+          "line": 269650,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L269650",
           "sourceLemma": "Bas",
           "sourceRecordLemma": "Bas",
           "target": "psA",
           "kind": "vgl",
-          "bodyExcerpt": "{#Bas#}¦, {#ba/Basti, bapsati, babDAm#} <ls>NAIGH. 2,8.</ls> <ls>P. 6,4,100.</ls> <ab>partic.</ab> {#ba/psatH Ba/sat, Basa/Tas#} <ls>NAIGH.</ls>; {#BasitA, Basitum#} <ls>P. 7,2,8.</ls> <ab>Sch.</ab> {%kauen, zerkauen, zermalmen; verzehren%}: {#da\\dBirvanA^ni ..."
+          "bodyExcerpt": "√{#Bas#}¦, {#ba/Basti, bapsati, babDAm#} <ls>NAIGH. 2,8</ls>. <ls>P. 6,4,100</ls>. <ab>partic.</ab> {#ba/psatH Ba/sat, Basa/Tas#} <ls>NAIGH.</ls>; {#BasitA, Basitum#} <ls>P. 7,2,8</ls>. <ab>Sch.</ab> {%kauen, zerkauen, zermalmen; verzehren%}: {#da\\dBirvanA^ni..."
         }
       ],
       "matchedDictionaries": [
@@ -1121,8 +1121,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "149303",
-          "line": 500259,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L500259",
+          "line": 500190,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L500190",
           "sourceLemma": "BastrakA",
           "sourceRecordLemma": "BastrakA",
           "target": "BastrAkA",
@@ -1134,13 +1134,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "54358",
-          "line": 526289,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L526289",
+          "line": 269687,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L269687",
           "sourceLemma": "BastrakA",
           "sourceRecordLemma": "BastrakA",
           "target": "BastrAkA",
           "kind": "vgl",
-          "bodyExcerpt": "{#BastrakA#}¦ <lex>f.</lex> <ab>demin.</ab> von {#BastrA#} <ls>VOP. 4,7.</ls> <ls>ŚABDAR.</ls> im <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BastrAkA, BastrikA#} und <ls>P. 7,3,47.</ls>"
+          "bodyExcerpt": "{#BastrakA#}¦ <lex>f.</lex> <ab>demin.</ab> von {#BastrA#} <ls>VOP. 4,7</ls>. <ls>ŚABDAR.</ls>_im_<ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BastrAkA, BastrikA#} und <ls>P. 7,3,47</ls>."
         }
       ],
       "matchedDictionaries": [
@@ -1174,8 +1174,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "149155",
-          "line": 499794,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499794",
+          "line": 499725,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499725",
           "sourceLemma": "Bavanti",
           "sourceRecordLemma": "Bavanti",
           "target": "BavantI",
@@ -1187,13 +1187,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "54294",
-          "line": 525720,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L525720",
+          "line": 269381,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L269381",
           "sourceLemma": "Bavanti",
           "sourceRecordLemma": "Bavanti",
           "target": "BavantI",
           "kind": "vgl",
-          "bodyExcerpt": "{#Bavanti/#}¦ (wie eben) <ls>UṆĀDIS. 3,50.</ls> {%Gegenwart%} <ls>UJJVAL.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BavantI#} <ab>u.</ab> {#Bavant#} ."
+          "bodyExcerpt": "{#Bavanti/#}¦ (wie eben) <ls>UṆĀDIS. 3,50</ls>. {%Gegenwart%} <ls>UJJVAL.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BavantI#} <ab>u.</ab> {#Bavant#}."
         }
       ],
       "matchedDictionaries": [
@@ -1227,8 +1227,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "149200",
-          "line": 499935,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499935",
+          "line": 499866,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499866",
           "sourceLemma": "Bavitra",
           "sourceRecordLemma": "Bavitra",
           "target": "BAvitra",
@@ -1240,13 +1240,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "54325",
-          "line": 525943,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L525943",
+          "line": 269514,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L269514",
           "sourceLemma": "Bavitra",
           "sourceRecordLemma": "Bavitra",
           "target": "BAvitra",
           "kind": "vgl",
-          "bodyExcerpt": "{#Bavi/tra#}¦ (von 1. {#BU)#} <lex>n.</lex> nach <ls>SĀY.</ls> {#BuvanamantarikzamudakaM vA#}.{# SaM no^ Ba\\vitra\\M Samva^stu vA\\yuH#} <ls>ṚV. 7,35,9.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BAvitra#} ."
+          "bodyExcerpt": "{#Bavi/tra#}¦ (von <hom>1.</hom> {#BU#}) <lex>n.</lex> nach <ls>SĀY.</ls> {#BuvanamantarikzamudakaM vA#}. {#SaM no^ Ba\\vitra\\M Samva^stu vA\\yuH#} <ls>ṚV. 7,35,9</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#BAvitra#}."
         }
       ],
       "matchedDictionaries": [
@@ -1280,8 +1280,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "152923",
-          "line": 511993,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511993",
+          "line": 511924,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511924",
           "sourceLemma": "Bela",
           "sourceRecordLemma": "Bela",
           "target": "Beqa",
@@ -1293,13 +1293,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "55746",
-          "line": 542214,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L542214",
+          "line": 276713,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L276713",
           "sourceLemma": "Bela",
           "sourceRecordLemma": "Bela",
           "target": "Beqa",
           "kind": "vgl",
-          "bodyExcerpt": "{#Be/la#}¦ <ls>UJJVAL.</ls> zu <ls>UṆĀDIS. 2,28.</ls> <div n=\"1\"> 1) <lex>adj.</lex> <div n=\"2\"> a) {%furchtsam%} (<ab>vgl.</ab> {#BI)#} <ls>TRIK. 2,8,58.</ls> <ls n=\"TRIK.\">3,3,403.</ls> <ls>H. an. 2,504.</ls> <ls>MED. 1. 43.</ls> <ls>VIŚVA</ls> bei <ls>UJJV..."
+          "bodyExcerpt": "{#Be/la#}¦ <ls>UJJVAL.</ls>_zu_<ls>UṆĀDIS. 2,28</ls>. <div n=\"1\"> 1〉 <lex>adj.</lex> <div n=\"2\"> a〉 {%furchtsam%} (<ab>vgl.</ab> {#BI#}) <ls>TRIK. 2,8,58</ls>. <ls n=\"TRIK.\">3,3,403</ls>. <ls>H. an. 2,504</ls>. <ls>MED. l. 43</ls>. <ls>VIŚVA</ls>_bei_<ls>UJJV..."
         }
       ],
       "matchedDictionaries": [
@@ -1333,8 +1333,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "152682",
-          "line": 511228,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511228",
+          "line": 511159,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511159",
           "sourceLemma": "BfNgariwi",
           "sourceRecordLemma": "BfNgariwi",
           "target": "BfNgin",
@@ -1346,13 +1346,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "55644",
-          "line": 541101,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L541101",
+          "line": 276193,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L276193",
           "sourceLemma": "BfNgariwi",
           "sourceRecordLemma": "BfNgariwi",
           "target": "BfNgin",
           "kind": "vgl",
-          "bodyExcerpt": "{#BfNgariwi#}¦ <lex>m.</lex> <ab>N. pr.</ab> eines Wesens im Gefolge des <is>Śiva</is> <ls>BHŪRIPR.</ls> im <ls>ŚKDR.</ls> <ls>Verz. d. Oxf. H. 191,a,12.</ls> {#BfNgarIwa#} <ab>ebend.</ab> <ls n=\"Verz. d. Oxf. H.\">191,a,11.</ls> <ls>TRIK. 1,1,49.</ls> <ls>BHŪ..."
+          "bodyExcerpt": "{#BfNgariwi#}¦ <lex>m.</lex> <ab>N. pr.</ab> eines Wesens im Gefolge des <is>Śiva</is> <ls>BHŪRIPR.</ls>_im_<ls>ŚKDR.</ls> <ls>Verz. d. Oxf. H. 191,a,12</ls>. {#BfNgarIwa#} <ls>ebend. 191,a,11</ls>. <ls>TRIK. 1,1,49</ls>. <ls>BHŪRIPR.</ls> {#BfNgarIwi#} <ls>H..."
         }
       ],
       "matchedDictionaries": [
@@ -1386,8 +1386,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "152722",
-          "line": 511356,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511356",
+          "line": 511287,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511287",
           "sourceLemma": "BfRqi",
           "sourceRecordLemma": "BfRqi",
           "target": "BaRqi",
@@ -1399,13 +1399,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "55673",
-          "line": 541290,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L541290",
+          "line": 276328,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L276328",
           "sourceLemma": "BfRqi",
           "sourceRecordLemma": "BfRqi",
           "target": "BaRqi",
           "kind": "vgl",
-          "bodyExcerpt": "{#BfRqi#}¦ {%Welle%} <ls>HĀR. 205.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BaRqi#} ."
+          "bodyExcerpt": "{#BfRqi#}¦ {%Welle%} <ls>HĀR. 205</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#BaRqi#}."
         }
       ],
       "matchedDictionaries": [
@@ -1439,8 +1439,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "153144",
-          "line": 512680,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L512680",
+          "line": 512611,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L512611",
           "sourceLemma": "BogapAla",
           "sourceRecordLemma": "BogapAla",
           "target": "Bogika",
@@ -1452,13 +1452,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "55816",
-          "line": 542988,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L542988",
+          "line": 277046,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L277046",
           "sourceLemma": "BogapAla",
           "sourceRecordLemma": "BogapAla",
           "target": "Bogika",
           "kind": "vgl",
-          "bodyExcerpt": "{#BogapAla#}¦ (2. {#Boga + pAla)#} <lex>m.</lex> {%Pferdeknecht%} <ls>ŚABDAM.</ls> im <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Bogika#} ."
+          "bodyExcerpt": "{#BogapAla#}¦ (<hom>2.</hom> {#Boga#} + {#pAla#}) <lex>m.</lex> {%Pferdeknecht%} <ls>ŚABDAM.</ls>_im_<ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Bogika#}."
         }
       ],
       "matchedDictionaries": [
@@ -1492,8 +1492,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "153325",
-          "line": 513238,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L513238",
+          "line": 513169,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L513169",
           "sourceLemma": "BojyA",
           "sourceRecordLemma": "BojyA",
           "target": "BojA",
@@ -1505,13 +1505,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "55892",
-          "line": 543766,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L543766",
+          "line": 277422,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L277422",
           "sourceLemma": "BojyA",
           "sourceRecordLemma": "BojyA",
           "target": "BojA",
           "kind": "vgl",
-          "bodyExcerpt": "{#BojyA/#}¦ (von {#Boja)#} <lex>f.</lex> {%eine Prinzessin der%} <is>Bhoja</is> <is>gaṇa</is> {#krOqyAdi#} zu <ls>P. 4,1,80.</ls> <ls>MBH. 3,490.</ls> <ls>HARIV. 1922.</ls> <ls n=\"HARIV.\">7003.</ls> <ls n=\"HARIV.\">9136</ls> (die ältere <ab>Ausg.</ab> {#BojA)#..."
+          "bodyExcerpt": "{#BojyA/#}¦ (von {#Boja#}) <lex>f.</lex> {%eine Prinzessin der%} <is>Bhoja</is> <is>gaṇa</is> {#krOqyAdi#} zu <ls>P. 4,1,80</ls>. <ls>MBH. 3,490</ls>. <ls>HARIV. 1922</ls>. <ls n=\"HARIV.\">7003</ls>. <ls n=\"HARIV.\">9136</ls> (die ältere <ab>Ausg.</ab> {#BojA#}..."
         }
       ],
       "matchedDictionaries": [
@@ -1545,8 +1545,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "153761",
-          "line": 514651,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L514651",
+          "line": 514582,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L514582",
           "sourceLemma": "BrAS",
           "sourceRecordLemma": "BrAS",
           "target": "BlAS",
@@ -1558,13 +1558,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "56053",
-          "line": 545828,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L545828",
+          "line": 278295,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L278295",
           "sourceLemma": "BrAS",
           "sourceRecordLemma": "BrAS",
           "target": "BlAS",
           "kind": "vgl",
-          "bodyExcerpt": "{#BrAS#}¦, {#BrA/Sate#} {%flammen, leuchten%} <ls>NAIGH. 1,16.</ls> <ls>DHĀTUP. 19,76.</ls> <ls>P. 3,1,70.</ls> <ls>VOP. 8,67.</ls> [Page5-0411] {#BrA/Syati#} <ls>NAIGH.</ls> {#BrASyate#} <ls>P.</ls> <ls>VOP.</ls> {#baBrASe#} und {#BreSe, baBrASire#} und {#Br..."
+          "bodyExcerpt": "{#BrAS#}¦, {#BrA/Sate#} {%flammen, leuchten%} <ls>NAIGH. 1,16</ls>. <ls>DHĀTUP. 19,76</ls>. <ls>P. 3,1,70</ls>. <ls>VOP. 8,67</ls>. [Page5-0411] {#BrA/Syati#} <ls>NAIGH.</ls> {#BrASyate#} <ls>P.</ls> <ls>VOP.</ls> {#baBrASe#} und {#BreSe, baBrASire#} und {#Br..."
         }
       ],
       "matchedDictionaries": [
@@ -1598,8 +1598,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "151210",
-          "line": 506384,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506384",
+          "line": 506315,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506315",
           "sourceLemma": "BuHKAra",
           "sourceRecordLemma": "BuHKAra",
           "target": "BUHKAra",
@@ -1611,13 +1611,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "55031",
-          "line": 533987,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L533987",
+          "line": 273129,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L273129",
           "sourceLemma": "BuHKAra",
           "sourceRecordLemma": "BuHKAra",
           "target": "BUHKAra",
           "kind": "vgl",
-          "bodyExcerpt": "{#BuHKAra#}¦ {%die Bucharei%} <ls>RĀJA-TAR. 4,246.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#BUHKAra#} ."
+          "bodyExcerpt": "{#BuHKAra#}¦ {%die Bucharei%} <ls>RĀJA-TAR. 4,246</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#BUHKAra#}."
         }
       ],
       "matchedDictionaries": [
@@ -1651,8 +1651,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "151430",
-          "line": 507127,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L507127",
+          "line": 507058,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L507058",
           "sourceLemma": "BuRq",
           "sourceRecordLemma": "BuRq",
           "target": "huRq",
@@ -1664,13 +1664,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "55115",
-          "line": 535106,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L535106",
+          "line": 273578,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L273578",
           "sourceLemma": "BuRq",
           "sourceRecordLemma": "BuRq",
           "target": "huRq",
           "kind": "vgl",
-          "bodyExcerpt": "{#BuRq#}¦, {#Bu/Rqate#} <ls>DHĀTUP. 8,24</ls> {#(BaraRe#}; <ls>VOP.</ls> : {#BftO, vftO)#} . <div n=\"v\">— <ab>Vgl.</ab> {#huRq#} ."
+          "bodyExcerpt": "{#BuRq#}¦, {#Bu/Rqate#} <ls>DHĀTUP. 8,24</ls> ({#BaraRe#}; <ls>VOP.</ls>: {#BftO, vftO#}). <div n=\"v\">— <ab>Vgl.</ab> {#huRq#}."
         }
       ],
       "matchedDictionaries": [
@@ -1704,8 +1704,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "151348",
-          "line": 506843,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506843",
+          "line": 506774,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506774",
           "sourceLemma": "Buj",
           "sourceRecordLemma": "Buj",
           "target": "buBukzA",
@@ -1717,13 +1717,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "55050",
-          "line": 534179,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L534179",
+          "line": 273230,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L273230",
           "sourceLemma": "Buj",
           "sourceRecordLemma": "Buj",
           "target": "buBukzA",
           "kind": "vgl",
-          "bodyExcerpt": "3. {#Buj#}¦, {#Bunakti (BuYjati#} <ls>GṚHYASAṂGR. 2,30.</ls> <ls>Spr. 4059.</ls> <ls n=\"Spr.\">4844</ls>) und {#BuNkte (upaBuYjase#} <ls>MBH. 3,15118.</ls> {#BuYjate#} 3. <ab>sg.</ab> <ls n=\"MBH. 3,\">8085.</ls> <ls>HARIV. 1173</ls> [die neuere <ab>Ausg.</ab> {..."
+          "bodyExcerpt": "<hom>3.</hom> √{#Buj#}¦, {#Bunakti#} ({#BuYjati#} <ls>GṚHYASAṂGR. 2,30</ls>. <ls>Spr. 4059</ls>. <ls n=\"Spr.\">4844</ls>) und {#BuNkte#} ({#upaBuYjase#} <ls>MBH. 3,15118</ls>. {#BuYjate#} <pe>3.</pe> <ab>sg.</ab> <ls n=\"MBH. 3,\">8085</ls>. <ls>HARIV. 1173</ls>..."
         }
       ],
       "matchedDictionaries": [
@@ -1757,8 +1757,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "75482",
-          "line": 254981,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L254981",
+          "line": 254966,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L254966",
           "sourceLemma": "Cadis",
           "sourceRecordLemma": "Cadis",
           "target": "CAdizeya",
@@ -1770,13 +1770,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "26089",
-          "line": 249857,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L249857",
+          "line": 130237,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L130237",
           "sourceLemma": "Cadis",
           "sourceRecordLemma": "Cadis",
           "target": "CAdizeya",
           "kind": "vgl",
-          "bodyExcerpt": "{#Cadi/s#}¦ (von 1. {#Cad#}) <ls>Uṇ. 2,104.</ls> <ls>P. 3,4,97.</ls> <lex>n.</lex> (<lex>f.</lex> <ls>SIDDH. K. 250,b,1</ls>) {%Decke, Verdeck eines Wagens; Dach%} <ls>NAIGH. 3,4</ls> ( = {#gfha#}). <ls>AK. 2,2,14.</ls> <ls n=\"AK.\">3,4,26,203.</ls> <ls>H. 101..."
+          "bodyExcerpt": "{#Cadi/s#}¦ (von <hom>1.</hom> {#Cad#}) <ls>Uṇ. 2,104</ls>. <ls>P. 3,4,97</ls>. <lex>n.</lex> (<lex>f.</lex> <ls>SIDDH. K. 250,b,1</ls>) {%Decke, Verdeck eines Wagens; Dach%} <ls>NAIGH. 3,4</ls> (= {#gfha#}). <ls>AK. 2,2,14</ls>. <ls n=\"AK.\">3,4,26,203</ls>. ..."
         }
       ],
       "matchedDictionaries": [
@@ -1810,8 +1810,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "101620",
-          "line": 340556,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340556",
+          "line": 340511,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340511",
           "sourceLemma": "DUmana",
           "sourceRecordLemma": "DUmana",
           "target": "DUpana",
@@ -1823,13 +1823,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "76649",
-          "line": 698077,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L698077",
+          "line": 371613,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L371613",
           "sourceLemma": "DUmana",
           "sourceRecordLemma": "DUmana",
           "target": "DUpana",
           "kind": "vgl",
-          "bodyExcerpt": "{#DUmana#}¦ (von {#DUmay)#} <lex>n.</lex> {%das Umnebeln%} (eines Kometen) <ls>Ind. St. 10,209.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#DUpana#} ."
+          "bodyExcerpt": "{#DUmana#}¦ (von {#DUmay#}) <lex>n.</lex> {%das Umnebeln%} (eines Kometen) <ls>Ind. St. 10,209</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#DUpana#}."
         }
       ],
       "matchedDictionaries": [
@@ -1863,8 +1863,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "101737",
-          "line": 340911,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340911",
+          "line": 340866,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340866",
           "sourceLemma": "DUr",
           "sourceRecordLemma": "DUr",
           "target": "DUrv",
@@ -1876,13 +1876,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "36925",
-          "line": 360030,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L360030",
+          "line": 184965,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L184965",
           "sourceLemma": "DUr",
           "sourceRecordLemma": "DUr",
           "target": "DUrv",
           "kind": "vgl",
-          "bodyExcerpt": "{#DUr#}¦, {#DU/ryate#} {%verletzen, schaden; sich bewegen%} <ls>DHĀTUP. 26,44.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#DUrv#} ."
+          "bodyExcerpt": "{#DUr#}¦, {#DU/ryate#} {%verletzen, schaden; sich bewegen%} <ls>DHĀTUP. 26,44</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#DUrv#}."
         }
       ],
       "matchedDictionaries": [
@@ -1916,13 +1916,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "36453",
-          "line": 352174,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L352174",
+          "line": 182205,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L182205",
           "sourceLemma": "Darmya",
           "sourceRecordLemma": "Darmya",
           "target": "DArmyAyaRa",
           "kind": "vgl",
-          "bodyExcerpt": "{#Da/rmya#}¦ (von {#Darma#}) <lex>adj.</lex> = {#DarmeRa prApyam#} und {#DarmAdanapetam#} <ls>P. 4,4,91.</ls> <ls n=\"P. 4,4,\">92.</ls> <div n=\"1\"> 1) {%gesetzmässig, gesetzlich, rechtmässig, mit dem Gesetze —, dem Rechte —, dem Brauche in Einklang stehend, zu..."
+          "bodyExcerpt": "{#Da/rmya#}¦ (von {#Darma#}) <lex>adj.</lex> = {#DarmeRa prApyam#} und {#DarmAdanapetam#} <ls>P. 4,4,91</ls>. <ls n=\"P. 4,4,\">92</ls>. <div n=\"1\"> 1〉 {%gesetzmässig, gesetzlich, rechtmässig, mit dem Gesetze —, dem Rechte —, dem Brauche in Einklang stehend, zu..."
         }
       ],
       "matchedDictionaries": [
@@ -1957,8 +1957,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "102265",
-          "line": 342663,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L342663",
+          "line": 342618,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L342618",
           "sourceLemma": "DraR",
           "sourceRecordLemma": "DraR",
           "target": "Dvan",
@@ -1970,13 +1970,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "37128",
-          "line": 361908,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L361908",
+          "line": 185959,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L185959",
           "sourceLemma": "DraR",
           "sourceRecordLemma": "DraR",
           "target": "Dvan",
           "kind": "vgl",
-          "bodyExcerpt": "{#DraR#}¦, {#Dra/Rati#} {%tönen%} <ls>DHĀTUP. 13,16.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#Dvan#} ."
+          "bodyExcerpt": "√{#DraR#}¦, {#Dra/Rati#} {%tönen%} <ls>DHĀTUP. 13,16</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#Dvan#}."
         }
       ],
       "matchedDictionaries": [
@@ -2010,8 +2010,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "69725",
-          "line": 236198,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L236198",
+          "line": 236189,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L236189",
           "sourceLemma": "GAwarI",
           "sourceRecordLemma": "GAwarI",
           "target": "apaGAwilA",
@@ -2023,13 +2023,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "24050",
-          "line": 227826,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L227826",
+          "line": 119390,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L119390",
           "sourceLemma": "GAwarI",
           "sourceRecordLemma": "GAwarI",
           "target": "apaGAwilA",
           "kind": "vgl",
-          "bodyExcerpt": "{#GAwarI#}¦ <lex>f.</lex> <ab>dass.</ab> <ls>ŚĀṄKH. ŚR. 17,3,15. 16.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#apaGAwilA#} <ls>LĀṬY. 4,2,8. 9.</ls> {#avaGawarikA#} <ls>ŚĀṄKH. ŚR. 17,3,12.</ls>"
+          "bodyExcerpt": "{#GAwarI#}¦ <lex>f.</lex> <ab>dass.</ab> <ls>ŚĀṄKH. ŚR. 17,3,15</ls>. <ls n=\"ŚĀṄKH. ŚR. 17,3,\">16</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#apaGAwilA#} <ls>LĀṬY. 4,2,8</ls>. <ls n=\"LĀṬY. 4,2,\">9</ls>. {#avaGawarikA#} <ls>ŚĀṄKH. ŚR. 17,3,12</ls>."
         }
       ],
       "matchedDictionaries": [
@@ -2063,8 +2063,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "69210",
-          "line": 234597,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L234597",
+          "line": 234588,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L234588",
           "sourceLemma": "Ga",
           "sourceRecordLemma": "Ga",
           "target": "pariGa",
@@ -2076,13 +2076,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "23879",
-          "line": 226034,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L226034",
+          "line": 118455,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L118455",
           "sourceLemma": "Ga",
           "sourceRecordLemma": "Ga",
           "target": "pariGa",
           "kind": "vgl",
-          "bodyExcerpt": "2. {#Ga#}¦ (von {#han#}) <div n=\"1\"> 1) <lex>adj.</lex> {%schlagend, tödtend%} in {#jIvaGa, tAqaGa, pARiGa, rAjaGa#} <ab>u. s. w.</ab> <div n=\"1\">— 2) <lex>f.</lex> {#GA#} {%Schlag%} <ls>MED. gh. 1.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#pariGa#} ."
+          "bodyExcerpt": "<hom>2.</hom> {#Ga#}¦ (von {#han#}) <div n=\"1\"> 1〉 <lex>adj.</lex> {%schlagend, tödtend%} in {#jIvaGa, tAqaGa, pARiGa, rAjaGa#} <ab>u. s. w.</ab> <div n=\"1\">— 2〉 <lex>f.</lex> {#GA#} {%Schlag%} <ls>MED. gh. 1</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#pariGa#}."
         }
       ],
       "matchedDictionaries": [
@@ -2116,8 +2116,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "69421",
-          "line": 235266,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L235266",
+          "line": 235257,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L235257",
           "sourceLemma": "GaRqa",
           "sourceRecordLemma": "GaRqa",
           "target": "GuRqa",
@@ -2129,13 +2129,13 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "23946",
-          "line": 226797,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L226797",
+          "line": 118845,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L118845",
           "sourceLemma": "GaRqa",
           "sourceRecordLemma": "GaRqa",
           "target": "GuRqa",
           "kind": "vgl",
-          "bodyExcerpt": "{#GaRqa#}¦ <lex>m.</lex> {%Biene%} <ls>UṆĀDIVṚ.</ls> im <ls>SAṂKṢIPTAS.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#GuRqa#} ."
+          "bodyExcerpt": "{#GaRqa#}¦ <lex>m.</lex> {%Biene%} <ls>UṆĀDIVṚ.</ls>_im_<ls>SAṂKṢIPTAS.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#GuRqa#}."
         }
       ],
       "matchedDictionaries": [
@@ -2174,39 +2174,39 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "24415",
-          "line": 231738,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L231738",
+          "line": 121319,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L121319",
           "sourceLemma": "cakzus",
           "sourceRecordLemma": "cakzus",
           "target": "a˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#ca/kzus#}¦ (von {#cakz#}) <ls>Uṇ. 2,115.</ls> <ls>VOP. 26,68.</ls> <div n=\"1\"> 1) <lex>adj.</lex> {%sehend%}: {#BAsva^nta\\M cakzu^ze cakzuze\\ maya^H#} <ls>ṚV. 10,37,8.</ls> {#Buva\\Scakzu^rma\\ha f\\tasya^ go\\pAH#} <ls n=\"ṚV. 10,\">8,5.</ls> {#a\\kzI i^va\\ cakzu..."
+          "bodyExcerpt": "{#ca/kzus#}¦ (von {#cakz#}) <ls>Uṇ. 2,115</ls>. <ls>VOP. 26,68</ls>. <div n=\"1\"> 1〉 <lex>adj.</lex> {%sehend%}: {#BAsva^nta\\M cakzu^ze cakzuze\\ maya^H#} <ls>ṚV. 10,37,8</ls>. {#Buva\\Scakzu^rma\\ha f\\tasya^ go\\pAH#} <ls n=\"ṚV. 10,\">8,5</ls>. {#a\\kzI i^va\\ cakzu..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "27114",
-          "line": 260950,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L260950",
+          "line": 136090,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L136090",
           "sourceLemma": "javas",
           "sourceRecordLemma": "javas",
           "target": "a˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#ja/vas#}¦ (von {#jU#}) <lex>n.</lex> {%Raschheit, Schnelligkeit%}: {#Sye\\nasya^#} <ls>ṚV. 1,118,11.</ls> <ls n=\"ṚV.\">4,27,1.</ls> <ls n=\"ṚV.\">5,78,4.</ls> des Rosses <ls n=\"ṚV.\">3,50,2.</ls> Wassers <ls n=\"ṚV.\">4,21,8.</ls> <ls n=\"ṚV. 4,\">17,3.</ls> {#pra s..."
+          "bodyExcerpt": "{#ja/vas#}¦ (von {#jU#}) <lex>n.</lex> {%Raschheit, Schnelligkeit%}: {#Sye\\nasya^#} <ls>ṚV. 1,118,11</ls>. <ls n=\"ṚV.\">4,27,1</ls>. <ls n=\"ṚV.\">5,78,4</ls>. des Rosses <ls n=\"ṚV.\">3,50,2</ls>. Wassers <ls n=\"ṚV.\">4,21,8</ls>. <ls n=\"ṚV. 4,\">17,3</ls>. {#pra s..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "27303",
-          "line": 262882,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L262882",
+          "line": 137018,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L137018",
           "sourceLemma": "jAmi",
           "sourceRecordLemma": "jAmi",
           "target": "a˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#jAmi/#}¦ (von {#jan#}) <div n=\"1\"> 1) <lex>adj.</lex> <div n=\"2\"> a) {%leiblich verschwistert%}; seltener vom {%Bruder%} ({#jAmirBrAtA#}), häufig von der {%Schwester%} gebraucht und zwar sowohl {#svasA jAmiH#} ( <ls>ṚV. 1,123,5.</ls> <ls n=\"ṚV. 1,\">185,5.</..."
+          "bodyExcerpt": "{#jAmi/#}¦ (von {#jan#}) <div n=\"1\"> 1〉 <lex>adj.</lex> <div n=\"2\"> a〉 {%leiblich verschwistert%}; seltener vom {%Bruder%} ({#jAmirBrAtA#}), häufig von der {%Schwester%} gebraucht und zwar sowohl {#svasA jAmiH#} (<ls>ṚV. 1,123,5</ls>. <ls n=\"ṚV. 1,\">185,5</ls..."
         }
       ],
       "reviewQuestion": "Do the sampled PWG references to a˚ behave as prefix/compound convention rather than lexical lineage evidence?",
@@ -2243,39 +2243,39 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "19382",
-          "line": 179189,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L179189",
+          "line": 95195,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L95195",
           "sourceLemma": "koSa",
           "sourceRecordLemma": "koSa",
           "target": "mahA˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#ko/Sa#}¦ (so alle älteren Bücher; die neueren bald {#koSa#}, bald {#koza#} . <ls>AK. 3,4,29,223</ls> steht {#koza#} unter denjenigen Wörtern, welche {#za#} zum letzten Consonanten haben; <ls>H. an.</ls> und <ls>MED.</ls> führen ausdrucklich beide Formen auf..."
+          "bodyExcerpt": "{#ko/Sa#}¦ (so alle älteren Bücher; die neueren bald {#koSa#}, bald {#koza#}. <ls>AK. 3,4,29,223</ls> steht {#koza#} unter denjenigen Wörtern, welche {#za#} zum letzten Consonanten haben; <ls>H. an.</ls> und <ls>MED.</ls> führen ausdrucklich beide Formen <ab>..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "21460",
-          "line": 199874,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L199874",
+          "line": 105844,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L105844",
           "sourceLemma": "gaRa",
           "sourceRecordLemma": "gaRa",
           "target": "mahA˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#gaRa/#}¦ <lex>m.</lex> am Ende eines <ab>adj. comp.</ab> <lex>f.</lex> {#A#} <ls>MBH. 3,16608.</ls> <ls>R. 2,41,18.</ls> <ls n=\"R.\">5,51,1.</ls> <div n=\"1\"> 1) {%Schaar, Reihe%} (von Lebendigem und Leblosem); {%Gefolge, Anhang%} <ls>AK. 2,5,40.</ls> <ls n=\"..."
+          "bodyExcerpt": "{#gaRa/#}¦ <lex>m.</lex> am Ende eines <ab>adj. comp.</ab> <lex>f.</lex> {#A#} <ls>MBH. 3,16608</ls>. <ls>R. 2,41,18</ls>. <ls n=\"R.\">5,51,1</ls>. <div n=\"1\"> 1〉 {%Schaar, Reihe%} (von Lebendigem und Leblosem); {%Gefolge, Anhang%} <ls>AK. 2,5,40</ls>. <ls n=\"..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "23729",
-          "line": 224483,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L224483",
+          "line": 117698,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L117698",
           "sourceLemma": "grAma",
           "sourceRecordLemma": "grAma",
           "target": "mahA˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#grA/ma#}¦ <lex>m.</lex> <ls>Uṇ. 1,141.</ls> <ls>ŚĀNT. 2,15.</ls> <div n=\"1\"> 1) {%bewohnter Platz, Dorfschaft, Dorf%} (<ab>Gegens.</ab> {#araRya#} und später auch {#pura, nagara, pattana#}) <ls>AK. 2,2,19.</ls> <ls>TRIK. 3,3,295.</ls> <ls>H. 961.</ls> <ls>a..."
+          "bodyExcerpt": "{#grA/ma#}¦ <lex>m.</lex> <ls>Uṇ. 1,141</ls>. <ls>ŚĀNT. 2,15</ls>. <div n=\"1\"> 1〉 {%bewohnter Platz, Dorfschaft, Dorf%} (<ab>Gegens.</ab> {#araRya#} und später auch {#pura, nagara, pattana#}) <ls>AK. 2,2,19</ls>. <ls>TRIK. 3,3,295</ls>. <ls>H. 961</ls>. <ls n..."
         }
       ],
       "reviewQuestion": "Do the sampled PWG references to mahA˚ behave as prefix/compound convention rather than lexical lineage evidence?",
@@ -2312,39 +2312,39 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "20108",
-          "line": 187220,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L187220",
+          "line": 98972,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L98972",
           "sourceLemma": "kzatra",
           "sourceRecordLemma": "kzatra",
           "target": "su˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#kzatra/#}¦ <lex>n.</lex> <ls>Uṇ. 4,168.</ls> <ls>SIDDH. K. 249,b,2.</ls> <lex>m.</lex> (dieses nicht zu belegen) und <lex>n.</lex> <is>gaṇa</is> {#arDarcAdi#} zu <ls>P. 2,4,31.</ls> <div n=\"1\"> 1) {%Herrschaft, Obergewalt, Macht, imperium%}; sowohl von mens..."
+          "bodyExcerpt": "{#kzatra/#}¦ <lex>n.</lex> <ls>Uṇ. 4,168</ls>. <ls>SIDDH. K. 249,b,2</ls>. <lex>m.</lex> (dieses nicht zu belegen) und <lex>n.</lex> <is>gaṇa</is> {#arDarcAdi#} zu <ls>P. 2,4,31</ls>. <div n=\"1\"> 1〉 {%Herrschaft, Obergewalt, Macht, imperium%}; sowohl von mens..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "20179",
-          "line": 188098,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L188098",
+          "line": 99343,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L99343",
           "sourceLemma": "kzaya",
           "sourceRecordLemma": "kzaya",
           "target": "su˚",
           "kind": "vgl",
-          "bodyExcerpt": "1. {#kza/ya#}¦ (von 1. {#kzi#}) <lex>m.</lex> {%Wohnung, Wohnsitz, Aufenthalt%} <ls>P. 6,1,201.</ls> <ls>AK. 3,4,24,147.</ls> <ls>H. 991.</ls> <ls>an. 2,348.</ls> <ls>MED. y. 7.</ls> {#nf\\vati\\ kzaye^#} <ls>ṚV. 6,25,6.</ls> {#gi\\ripu\\ kzaya^M daDe#} <ls n=\"ṚV..."
+          "bodyExcerpt": "<hom>1.</hom> {#kza/ya#}¦ (von <hom>1.</hom> {#kzi#}) <lex>m.</lex> {%Wohnung, Wohnsitz, Aufenthalt%} <ls>P. 6,1,201</ls>. <ls>AK. 3,4,24,147</ls>. <ls>H. 991</ls>. <ls n=\"H.\">an. 2,348</ls>. <ls>MED. y. 7</ls>. {#nf\\vati\\ kzaye^#} <ls>ṚV. 6,25,6</ls>. {#gi\\r..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "20280",
-          "line": 189333,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L189333",
+          "line": 99869,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L99869",
           "sourceLemma": "kziti",
           "sourceRecordLemma": "kziti",
           "target": "su˚",
           "kind": "vgl",
-          "bodyExcerpt": "1. {#kziti/#}¦ (von 1. {#kzi#}) <lex>f.</lex> <div n=\"1\"> 1) {%Wohnsitz, Niederlassung%} <ls>AK. 3,4,14,73.</ls> <ls>H. an. 2,162.</ls> <ls>MED. t. 10.</ls> {#Dru\\vAsu^ kzi\\tizu^ kzi\\yanta^H#} <ls>ṚV. 7,88,7.</ls> <ls n=\"ṚV.\">1,73,4.</ls> {#kzeti^ kzi\\tIH su\\..."
+          "bodyExcerpt": "<hom>1.</hom> {#kziti/#}¦ (von <hom>1.</hom> {#kzi#}) <lex>f.</lex> <div n=\"1\"> 1〉 {%Wohnsitz, Niederlassung%} <ls>AK. 3,4,14,73</ls>. <ls>H. an. 2,162</ls>. <ls>MED. t. 10</ls>. {#Dru\\vAsu^ kzi\\tizu^ kzi\\yanta^H#} <ls>ṚV. 7,88,7</ls>. <ls n=\"ṚV.\">1,73,4</ls>..."
         }
       ],
       "reviewQuestion": "Do the sampled PWG references to su˚ behave as prefix/compound convention rather than lexical lineage evidence?",
@@ -2381,39 +2381,39 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "19101",
-          "line": 176702,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L176702",
+          "line": 93799,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L93799",
           "sourceLemma": "keSa",
           "sourceRecordLemma": "keSa",
           "target": "vi˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#ke/Sa#}¦ <div n=\"1\"> 1) <lex>m.</lex> <ls>Uṇ. 5,33.</ls> <div n=\"2\"> a) {%Haupthaar%} (neben {#loman#} {%pilus%} und {#SmaSru#} {%Bart%}) <ls>AK. 2,6,2,46.</ls> <ls>TRIK. 3,3,426.</ls> <ls>H. 567.</ls> <ls>an. 2,546.</ls> <ls>MED. ś. 4.</ls> {#yaste\\ keSo^ ..."
+          "bodyExcerpt": "{#ke/Sa#}¦ 1〉 <lex>m.</lex> <ls>Uṇ. 5,33</ls>. <div n=\"2\"> a〉 {%Haupthaar%} (neben {#loman#} {%pilus%} und {#SmaSru#} {%Bart%}) <ls>AK. 2,6,2,46</ls>. <ls>TRIK. 3,3,426</ls>. <ls>H. 567</ls>. <ls n=\"H.\">an. 2,546</ls>. <ls>MED. ś. 4</ls>. {#yaste\\ keSo^ 'va\\p..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "25039",
-          "line": 238504,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L238504",
+          "line": 124644,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L124644",
           "sourceLemma": "carzaRi",
           "sourceRecordLemma": "carzaRi",
           "target": "vi˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#carzaRi/#}¦. Die alten Erklärer suchten in diesem Worte den Begriff {%sehend%}, wie die Umschreibung <ls>NIR. 5,24</ls> und die Zusammenstellung <ls>NAIGH. 3,11</ls> zeigen, und nahmen wahrscheinlich eine Abstammung von {#cakz#} <ab>an.</ab> Ihnen folgen di..."
+          "bodyExcerpt": "{#carzaRi/#}¦. Die alten Erklärer suchten in diesem Worte den Begriff {%sehend%}, wie die Umschreibung <ls>NIR. 5,24</ls> und die Zusammenstellung <ls>NAIGH. 3,11</ls> zeigen, und nahmen wahrscheinlich eine Abstammung von {#cakz#} an. Ihnen folgen die spätere..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "25410",
-          "line": 242723,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L242723",
+          "line": 126616,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L126616",
           "sourceLemma": "citra",
           "sourceRecordLemma": "citra",
           "target": "vi˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#citra/#}¦ (von 4. {#cit#}) <ls>Uṇ. 4,165.</ls> <div n=\"1\"> 1) <lex>adj.</lex> <lex>f.</lex> {#A#} <div n=\"2\"> a) {%augenfällig; sichtbar, ausgezeichnet%}: {#Uti#} <ls>ṚV. 2,17,8.</ls> <ls n=\"ṚV.\">4,32,5.</ls> <ls n=\"ṚV.\">5,40,3.</ls> {#aBizwi#} <ls n=\"ṚV.\">..."
+          "bodyExcerpt": "{#citra/#}¦ (von <hom>4.</hom> {#cit#}) <ls>Uṇ. 4,165</ls>. <div n=\"1\"> 1〉 <lex>adj.</lex> <lex>f.</lex> {#A#} <div n=\"2\"> a〉 {%augenfällig; sichtbar, ausgezeichnet%}: {#Uti#} <ls>ṚV. 2,17,8</ls>. <ls n=\"ṚV.\">4,32,5</ls>. <ls n=\"ṚV.\">5,40,3</ls>. {#aBizwi#} <..."
         }
       ],
       "reviewQuestion": "Do the sampled PWG references to vi˚ behave as prefix/compound convention rather than lexical lineage evidence?",
@@ -2450,39 +2450,39 @@
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "17309",
-          "line": 160386,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L160386",
+          "line": 84885,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L84885",
           "sourceLemma": "kilbiza",
           "sourceRecordLemma": "kilbiza",
           "target": "deva˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#ki/lbiza#}¦ und {#ki/lviza (kilviza/#} <ls>Uṇ. 1,50</ls>) <lex>n.</lex> <ls>SIDDH. K. 249,b,5.</ls> <div n=\"1\"> 1) {%Fehler, Vergehen, Schuld, Sünde%}, = {#pApa#} <ls>AK. 1,1,4,1.</ls> <ls>H. 1381.</ls> = {#pApa#} und {#aparADa#} <ls>an. 3,732.</ls> <ls>MED..."
+          "bodyExcerpt": "{#ki/lbiza#} und {#ki/lviza#}¦ ({#kilviza/#} <ls>Uṇ. 1,50</ls>) <lex>n.</lex> <ls>SIDDH. K. 249,b,5</ls>. <div n=\"1\"> 1〉 {%Fehler, Vergehen, Schuld, Sünde%}, = {#pApa#} <ls>AK. 1,1,4,1</ls>. <ls>H. 1381</ls>. = {#pApa#} und {#aparADa#} <ls n=\"H.\">an. 3,732</l..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "20108",
-          "line": 187220,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L187220",
+          "line": 98972,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L98972",
           "sourceLemma": "kzatra",
           "sourceRecordLemma": "kzatra",
           "target": "deva˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#kzatra/#}¦ <lex>n.</lex> <ls>Uṇ. 4,168.</ls> <ls>SIDDH. K. 249,b,2.</ls> <lex>m.</lex> (dieses nicht zu belegen) und <lex>n.</lex> <is>gaṇa</is> {#arDarcAdi#} zu <ls>P. 2,4,31.</ls> <div n=\"1\"> 1) {%Herrschaft, Obergewalt, Macht, imperium%}; sowohl von mens..."
+          "bodyExcerpt": "{#kzatra/#}¦ <lex>n.</lex> <ls>Uṇ. 4,168</ls>. <ls>SIDDH. K. 249,b,2</ls>. <lex>m.</lex> (dieses nicht zu belegen) und <lex>n.</lex> <is>gaṇa</is> {#arDarcAdi#} zu <ls>P. 2,4,31</ls>. <div n=\"1\"> 1〉 {%Herrschaft, Obergewalt, Macht, imperium%}; sowohl von mens..."
         },
         {
           "role": "prefix-control-example",
           "dictionary": "PWG",
           "dict": "pwg",
           "L": "20580",
-          "line": 192169,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L192169",
+          "line": 101373,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L101373",
           "sourceLemma": "kzetra",
           "sourceRecordLemma": "kzetra",
           "target": "deva˚",
           "kind": "vgl",
-          "bodyExcerpt": "{#kze/tra#}¦ (von 1. 2. {#kzi#}) <lex>n.</lex> <ls>SIDDH. K. 249,b,2.</ls> <div n=\"1\"> 1) {%Grundbesitz, Grundstück; Grund und Boden, Feld%} (<ls>AK. 2,9,11.</ls> <ls>H. 965.</ls> <ls>an. 2,406.</ls> <ls>MED. r. 20).</ls> {#sana\\tkzetra\\M saKi^BiH Svi\\tnyeBi\\..."
+          "bodyExcerpt": "{#kze/tra#}¦ (von <hom>1.</hom> <hom>2.</hom> {#kzi#}) <lex>n.</lex> <ls>SIDDH. K. 249,b,2</ls>. <div n=\"1\"> 1〉 {%Grundbesitz, Grundstück; Grund und Boden, Feld%} (<ls>AK. 2,9,11</ls>. <ls>H. 965</ls>. <ls n=\"H.\">an. 2,406</ls>. <ls>MED. r. 20</ls>). {#sana\\t..."
         }
       ],
       "reviewQuestion": "Do the sampled PWG references to deva˚ behave as prefix/compound convention rather than lexical lineage evidence?",
@@ -2519,8 +2519,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "56436",
-          "line": 193423,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L193423",
+          "line": 193417,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L193417",
           "sourceLemma": "kowa",
           "sourceRecordLemma": "kowa",
           "target": "a-",
@@ -2532,8 +2532,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "57662",
-          "line": 197259,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L197259",
+          "line": 197253,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L197253",
           "sourceLemma": "kratu",
           "sourceRecordLemma": "kratu",
           "target": "a-",
@@ -2545,8 +2545,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "62152",
-          "line": 211629,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L211629",
+          "line": 211623,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L211623",
           "sourceLemma": "ga",
           "sourceRecordLemma": "ga",
           "target": "a-",
@@ -2588,8 +2588,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "59445",
-          "line": 203008,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L203008",
+          "line": 203002,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L203002",
           "sourceLemma": "kziti",
           "sourceRecordLemma": "kziti",
           "target": "a/-",
@@ -2601,8 +2601,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "61566",
-          "line": 209782,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L209782",
+          "line": 209776,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L209776",
           "sourceLemma": "Karva",
           "sourceRecordLemma": "Karva",
           "target": "a/-",
@@ -2614,8 +2614,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "73490",
-          "line": 248523,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L248523",
+          "line": 248511,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L248511",
           "sourceLemma": "cikitvas",
           "sourceRecordLemma": "cikitvas",
           "target": "a/-",
@@ -2657,8 +2657,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "71341",
-          "line": 241602,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L241602",
+          "line": 241590,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L241590",
           "sourceLemma": "caturam",
           "sourceRecordLemma": "caturam",
           "target": "A-",
@@ -2670,8 +2670,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "72289",
-          "line": 244702,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L244702",
+          "line": 244690,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L244690",
           "sourceLemma": "caraRya",
           "sourceRecordLemma": "caraRya",
           "target": "A-",
@@ -2683,8 +2683,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "74876",
-          "line": 253072,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L253072",
+          "line": 253057,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L253057",
           "sourceLemma": "cUzaRa",
           "sourceRecordLemma": "cUzaRa",
           "target": "A-",
@@ -2726,8 +2726,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "228280",
-          "line": 757261,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L757261",
+          "line": 757171,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L757171",
           "sourceLemma": "saMkrAnta",
           "sourceRecordLemma": "saMkrAnta",
           "target": "a-s˚",
@@ -2739,8 +2739,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "228456",
-          "line": 757899,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L757899",
+          "line": 757809,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L757809",
           "sourceLemma": "saMKyeya",
           "sourceRecordLemma": "saMKyeya",
           "target": "a-s˚",
@@ -2752,8 +2752,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "231997",
-          "line": 769902,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L769902",
+          "line": 769812,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L769812",
           "sourceLemma": "saMniDAna",
           "sourceRecordLemma": "saMniDAna",
           "target": "a-s˚",
@@ -2795,8 +2795,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "11990",
-          "line": 43603,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L43603",
+          "line": 43600,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L43600",
           "sourceLemma": "aBimad",
           "sourceRecordLemma": "aBimad",
           "target": "aBi-",
@@ -2808,8 +2808,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "66863",
-          "line": 226808,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L226808",
+          "line": 226799,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L226799",
           "sourceLemma": "gezRa",
           "sourceRecordLemma": "gezRa",
           "target": "aBi-",
@@ -2821,8 +2821,8 @@
           "dictionary": "MW",
           "dict": "mw",
           "L": "67940",
-          "line": 230412,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L230412",
+          "line": 230403,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L230403",
           "sourceLemma": "gopaya",
           "sourceRecordLemma": "gopaya",
           "target": "aBi-",
