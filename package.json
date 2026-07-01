@@ -11,7 +11,7 @@
     "sync-site-data": "node scripts/sync-site-data.mjs",
     "prebuild": "npm run sync-site-data",
     "build": "observable build",
-    "postbuild": "node -e \"const fs=require('fs');fs.copyFileSync('src/manifest.json', 'dist/manifest.json');fs.copyFileSync('src/sw.js', 'dist/sw.js');fs.copyFileSync('src/favicon.svg', 'dist/favicon.svg');\"",
+    "postbuild": "node -e \"const fs=require('fs');for(const f of ['manifest.json','sw.js','favicon.svg','robots.txt','sitemap.xml','atlas-card.png'])fs.copyFileSync('src/'+f,'dist/'+f);\"",
     "predeploy": "npm run sync-site-data",
     "deploy": "observable deploy",
     "build-coverage": "node scripts/build-dictionary-coverage.mjs",
