@@ -1,5 +1,5 @@
 ---
-title: csl-atlas
+title: Atlas of the Cologne Digital Sanskrit Lexicons
 toc: false
 ---
 
