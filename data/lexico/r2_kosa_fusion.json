@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "source-backed-r2-kosa-fusion",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "claim": "Corpus-scale SKD/VCP iti-unit classification: does the sense/citation split cleanly (separable, the VCP pattern) or fuse into one unit (authority-terminal, the SKD pattern)?",
+  "generatedBy": "npm run build-r2-kosa-fusion",
+  "sourceRoot": "../csl-orig/v02",
+  "method": {
+    "unitSplit": "iti-unit (splitIndigenous(), build-r2-source-anchors.mjs)",
+    "authoritySignal": "indigenousAuthorityHints() (VCP `...0` siglum convention, curated SKD authority-name list) generalised with the SKD sandhi-fused `ity<word>` formula pattern.",
+    "fusionRule": "A unit with an authority signal is \"authority-terminal\" if >= 20 non-whitespace characters of definitional content precede the earliest authority match within the SAME unit; otherwise \"separable\" (the unit is essentially the citation tag alone, and its definition sits in a sibling unit)."
+  },
+  "limitations": [
+    "Pattern-based classifier over a heterogeneous corpus of philological Sanskrit prose, not a scholar-reviewed sense/citation boundary; borderline units exist (short definitions that happen to fall under the fusion threshold, long discursive quotations misread as content).",
+    "FUSION_MIN_CONTENT_CHARS = 20 is a documented threshold, not a calibrated cut point; report at other thresholds may shift the fused/separable split modestly without changing which dictionary dominates.",
+    "VCP's discursive commentarial register (long Mimamsa-style argument interspersed with `...0` sigla) differs structurally from the simple synonym-run register the *dharma* exemplar illustrates; per-record classification may diverge from the record-level exemplar description even where the dictionary-level contrast holds.",
+    "The ~100-row SKD sample below is a stratified draw for human citational-vs-grammatical adjudication (REVISION_BRIEF_P2_OBS.md Part 4 / A08 C-M1); it is not itself the adjudicated result."
+  ],
+  "perDict": [
+    {
+      "dict": "skd",
+      "label": "Sabdakalpadruma 1822",
+      "records": 42531,
+      "totalUnits": 122691,
+      "recordsWithAuthorityUnit": 18418,
+      "pctRecordsWithAuthorityUnit": 43.3,
+      "authorityMarkedUnits": 24087,
+      "classCounts": {
+        "authority-terminal": 12831,
+        "separable": 11256,
+        "other-no-authority": 98604
+      },
+      "pctFusedAmongAuthorityMarked": 53.3,
+      "pctSeparableAmongAuthorityMarked": 46.7
+    },
+    {
+      "dict": "vcp",
+      "label": "Vacaspatya 1873",
+      "records": 50135,
+      "totalUnits": 65675,
+      "recordsWithAuthorityUnit": 38459,
+      "pctRecordsWithAuthorityUnit": 76.7,
+      "authorityMarkedUnits": 42980,
+      "classCounts": {
+        "authority-terminal": 33352,
+        "separable": 9628,
+        "other-no-authority": 22695
+      },
+      "pctFusedAmongAuthorityMarked": 77.6,
+      "pctSeparableAmongAuthorityMarked": 22.4
+    }
+  ],
+  "generatedAt": "2026-07-02T09:29:34.304Z"
+}

@@ -1,0 +1,726 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "adjudication-sample",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "claim": "Stratified ~100-row sample of SKD iti-units (authority-terminal / separable / other-no-authority) for human citational-vs-grammatical adjudication.",
+  "generatedBy": "npm run build-r2-kosa-fusion",
+  "dict": "skd",
+  "rows": [
+    {
+      "L": "1",
+      "k1": "a",
+      "unitIndex": 4,
+      "klass": "authority-terminal",
+      "text": "vIjavarRABiDAnaM .. anyacca . “aH SrIkaRWaH sureSaSca lalAwaYcEkamAtrikaH . pUrRodarI sfzwimeDO sArasvataH priyambadaH .. mahAbrAhmI vAsudevo DaneSaH keSavo'mftaM . kIrttirnivfttirvvAgISo narakArirha..."
+    },
+    {
+      "L": "1201",
+      "k1": "anfjuH",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "anfjuH¦ tri, (na fjuH saralaH, naYsamAsaH .) asa- ralaH . SaWaH . ityamaraH .. (“na pARipAdacapalo na necacapalo'nfjuH” . iti"
+    },
+    {
+      "L": "2268",
+      "k1": "arpisaH",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "arpisaH¦, puM, (f + Ric + isan .) hfdayaM . ityuRA- dikozaH .. (agramAMsaH .)"
+    },
+    {
+      "L": "3336",
+      "k1": "AQyaH",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "AQyaH¦, tri, (AQOkate QOkf gatO bAhulakAt QyaH .) DanavAn . ityamaraH .. yuktaH . viSizwaH . anvitaH . yaTA, DanAQyaH guRAQya ityAdiH .. (yaTA manuH 8 . 169 . “catvArastUpacIyante vipra AQyo vaRiq nf..."
+    },
+    {
+      "L": "4361",
+      "k1": "ukzA",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "ukzA¦, [n] puM, (ukza + kanin .) vfzaH . ityamaraH . (yaTA, fgvede 8 . 71 . 9 . “ukzA mimAti prati- yanti DenavaH” . taTA ca kumAre 7 . 70 . “tatrAvatIryyAcyutadattahastaH SaradGanAddIDitimAnivokzRaH..."
+    },
+    {
+      "L": "5296",
+      "k1": "UrjjasvI",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "UrjjasvI¦, [n] tri, (atiSayitaM urjo balamasyA- stIti + Urjas + vini .) atiSayabalavAn . ityamaraH .. (yaTA, BArate .) “annamUrjaskaraM loke dattvorjasvI BavennaraH” ..)"
+    },
+    {
+      "L": "6406",
+      "k1": "kambuH",
+      "unitIndex": 1,
+      "klass": "authority-terminal",
+      "text": "mfgazvAditvAt un vugAgamo vA . nipAtanAt vA sADuH ..) valayam . [Page2-029-a+ 52] (yaTA mahABArate 3 . 232 . 44 . “SataM dAsIsahasrARi kOnteyasya mahAtmanaH . kambukeyUraDAriRyo nizkakaRwyaH svalaNkf..."
+    },
+    {
+      "L": "7634",
+      "k1": "kAsAraH",
+      "unitIndex": 2,
+      "klass": "authority-terminal",
+      "text": "aR .) sapadmo nizpadmo vA mahAjalASayaH . sarobaraH . ityamaraH . 1 . 10 . 28 .. (yaTA, -- gItagovinde 2 . 20 . “durAlokastokastavakanavakASokalatikA- vikASaH kAsAropavanapavano'pi vyaTayati” ..)"
+    },
+    {
+      "L": "8904",
+      "k1": "kEdAraH",
+      "unitIndex": 1,
+      "klass": "authority-terminal",
+      "text": "rAjanirGaRwaH .. (kedArasambanDino ye te kEdArA ityarTaH . yaTA, BAvaprakASe . “kEdArA vAtapittaGnA guravaH kaPaSukralAH . kazAyA alpavarccazkA meDyAScEva balAvahAH” ..)"
+    },
+    {
+      "L": "10306",
+      "k1": "gajaH",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "gajaH¦, puM, (gajati madena matto BavatIti . gaj + ac .) hastI . ityamaraH . 2 . 8 . 34 .. (sa tu triviDaH . yaTAha SabdArTacintAmaRiH . “Badro mando mfgaScEva vijYeyAstriviGA gajAH ..” asya lakzaRAd..."
+    },
+    {
+      "L": "11668",
+      "k1": "glOH",
+      "unitIndex": 2,
+      "klass": "authority-terminal",
+      "text": "qOH .) candraH . (yaTA, aTarvva- vedasaMhitAyAm . 6 . 83 . 3 . “glOritaH pra patizyati sa galunto naSizyati ..”) karparaH . ityamaraH . 1 . 3 . 14 .."
+    },
+    {
+      "L": "13123",
+      "k1": "jaqimA",
+      "unitIndex": 1,
+      "klass": "authority-terminal",
+      "text": "imanic .) jaqatA . tasya lakzaRaM yaTA, -- “izwAnizWAparijYAnaM yatra praSnezvanuttaram . [Page2-505-a+ 52] darSanaSravaRABAvo jaqimA so'BiDIyate ..” ityujjvalanIlamaRiH .."
+    },
+    {
+      "L": "14583",
+      "k1": "talpaM",
+      "unitIndex": 1,
+      "klass": "authority-terminal",
+      "text": "papratyayena nipAtanAt sADuH .) SayyA . (yaTA, manuH . 3 . 3 . “sragviRaM talpa AsInamarhayet praTamaM gavA ..”) awwAlikA . dArAH . ityamaraBaratO .. (yaTA, sambarttakasaMhitAyAm . 158 . “pitfvyadAra..."
+    },
+    {
+      "L": "16047",
+      "k1": "darvvikA",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "darvvikA¦, strI, (darvvi + svArTe kan + wAp .) dArvvikA . ityamarawIkAyAM rAyamukuwaH .. KajAkA . iti"
+    },
+    {
+      "L": "17652",
+      "k1": "DaraRIDaraH",
+      "unitIndex": 2,
+      "klass": "authority-terminal",
+      "text": "rAjanirGaRwaH .. parvvataH . yaTA, “yo jAto DaraRIDarendratanayAnATANGripAToruhA- saktaH .” ityAdigopInATatarkAcAryyaH .. (pfTivI- DArake, tri . yaTA, harivaMSe . 53 . 68 . [Page2-782-c+ 52] “devAnac..."
+    },
+    {
+      "L": "18988",
+      "k1": "nimnagA",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "nimnagA¦, strI, (nimnaM gacCatIti . gama + qa . wAp .) nadI . ityamaraH . 1 . 10 . 30 .. (yaTA, manuH . 9 . 22 . “yAdfgguRena BartrA strI saMyujyeta yaTAviDi . tAdfgguRA sA Bavati samudreReva nimnagA..."
+    },
+    {
+      "L": "20228",
+      "k1": "padmacAriRI",
+      "unitIndex": 1,
+      "klass": "authority-terminal",
+      "text": "KyAtA ..) tatparyyAyaH . avyaTA 2 aticarA 3 padmA 4 cArawI 5 . ityamaraH . 2 . 4 146 .. asyAH paryyAyAntaraM guRASca sTalapadminISabde drazwavyAH .."
+    },
+    {
+      "L": "21336",
+      "k1": "pArSvaH",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "pArSvaH¦, puM, jinaH . (ayameva jEnAgamoktatrayo- viMSatIrTaNkaraH . asya pitA viSvasenaH mAtA ca brahmI . yaduktaM pArSvanATacaritre . 10 . 71 . “SrIlaSrIpArSvatIrTeSo viSvasenanfpAlaye . brahmIgarB..."
+    },
+    {
+      "L": "22413",
+      "k1": "pEtraM",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "pEtraM¦, klI, (pituridamiti . pitf + aR ) pitftIrTam . aNguzWatarjjanyormaDyam . ityamaraH . 2 . 7 . 51 .. pitfsambanDini, tri . (yaTA, mahABArate . 7 . 199 . 71 . “EndraM yAmyaM vAruRaM vEttapAlyaM ..."
+    },
+    {
+      "L": "23379",
+      "k1": "prARaTaH",
+      "unitIndex": 1,
+      "klass": "authority-terminal",
+      "text": "aTaH .) vAyuH . (prARitIti . karttari aTaH .) balavAn . ityuRAdikozaH .. prajA- patiH . tIrTam . iti"
+    },
+    {
+      "L": "24544",
+      "k1": "brAhmaM",
+      "unitIndex": 1,
+      "klass": "authority-terminal",
+      "text": "wilopaH .) brahmatIrTaM . tattu aNguzWasya mUle varttate . ityamaraH .. 2 . 7 . 51 .. anena tIrTena dbijasyAcamanaM yaTA, Ahnikatattve . “antarjAnuSucO deSa upavizwa udaNmuKaH . prAgvA brAhmeRa tIrTe..."
+    },
+    {
+      "L": "25740",
+      "k1": "maRiH",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "maRiH¦, puM, strI, (maRa + “sarvvaDAtuBya in .” uRA0 4 . 117 . itIn .) aSmajAtiH . [Page3-575-a+ 52] (yaTA, raGO . 1 . 4 . “maRO vajrasamutkIrRe sUtrasyevAsti me gatiH .”) muktAdikam . tatparyyAyaH ...."
+    },
+    {
+      "L": "27099",
+      "k1": "mADavIlatA",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "mADavIlatA¦, strI, (mADavyAKyA latA .) svanAma- KyAtapuzpalatA . ityamarawIkAyAM BarataH .."
+    },
+    {
+      "L": "28294",
+      "k1": "yajYaH",
+      "unitIndex": 2,
+      "klass": "authority-terminal",
+      "text": "naN .) yAgaH . tatparyyAyaH . savaH 2 aDvaraH 3 yAgaH 4 sapta- tantuH 5 maKaH 6 kratuH 7 . ityamaraH . 2 . 7 . 13 .. izwiH 8 izwam 9 vitAnam 10 manyuH 11 AhavaH 12 savanam 13 havaH 14 aBizavaH 15 hom..."
+    },
+    {
+      "L": "29568",
+      "k1": "rAmaH",
+      "unitIndex": 34,
+      "klass": "authority-terminal",
+      "text": "padmapurARe umAmaheSvarasaMvAde SrIrAma- candrAzwottaraSatanAmastotraM samAptam .. * .. (asya virAqmUrttikaTanaM yaTA, aDyAtmarAmA- yaRe . 3 . 9 . 30 -- 54 . ganDarvva uvAca . “stotumutsahate me'dya ..."
+    },
+    {
+      "L": "30996",
+      "k1": "vaDodyataH",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "vaDodyataH¦, tri, (vaDAya udyataH .) paravaDAyod- yuktaH . tatparyyAyaH . sannadDaH 2 AtatAyI 3 . ityamaraH .. AtatAyivaDApavAdamAha bfha- spatiH . “nAtatAtivaDe hantA prApnuyAt kilvizaM kvacit . vin..."
+    },
+    {
+      "L": "32260",
+      "k1": "vAstu",
+      "unitIndex": 37,
+      "klass": "authority-terminal",
+      "text": "pitfgaRAdAraBya vahniM yAvat yo vaMSaH prasAritastadvadAyato vAstupUruzaH . ambupo varuRaH . puzpakaH puzpadantaH . taTA . “pradakziRantu kurvvIta vAstoH padavileKanam .” kozWAnAM liKanaM pradakziRaM..."
+    },
+    {
+      "L": "33476",
+      "k1": "vizyaH",
+      "unitIndex": 1,
+      "klass": "authority-terminal",
+      "text": "yat .) vizeRa yo vaDyaH . ityamaraH .. (vizeRa krItaH . vizAya hita iti"
+    },
+    {
+      "L": "34535",
+      "k1": "vyUQakaNkawaH",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "vyUQakaNkawaH¦, tri, (vyUQaH kaNkawaH sannAho yena .) sannadDaH . ityamaraH .."
+    },
+    {
+      "L": "35699",
+      "k1": "SivakaH",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "SivakaH¦, puM, kIlakaH . ityamaraH .. dveKo~wA iti"
+    },
+    {
+      "L": "37137",
+      "k1": "saMyat",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "saMyat¦, puM, strI, (saMyamyate'treti . saM + yam + kvip . “gamAdInAm .” 6 . 4 . 40 . ityamya vArttikoktyA malopaH . tuk .) yudDam . itya- maraBaratO .. (yaTA, raGuH . 7 . 39 . “utTApitaH saMyati reR..."
+    },
+    {
+      "L": "38079",
+      "k1": "samupajozaM",
+      "unitIndex": 0,
+      "klass": "authority-terminal",
+      "text": "samupajozaM¦, [m] vya, (sam + upa + juza + am .) AnandaH . ityamarawIkAyAM rAmASramaH . 3 . 4 . 10 .. tAlavyaSakArAdi ca .."
+    },
+    {
+      "L": "39345",
+      "k1": "sucelakaH",
+      "unitIndex": 1,
+      "klass": "authority-terminal",
+      "text": "BAzA . tatparyyAyaH . pawaH 2 . ityamaraH . 2 . 6 . 116 .. pawiH 3 pawI 4 . iti"
+    },
+    {
+      "L": "40809",
+      "k1": "spfzwAspfzwi",
+      "unitIndex": 3,
+      "klass": "authority-terminal",
+      "text": "BAzA . yaTA, ratnAkare bfhaspatiH . “tIrTe vivAhe yAtrAyAM saMgrAme deSaviplave . nagaragrAmadAhe ca spfzwAspfzwi na duzyati .. Apadyapi ca kazwAyAM rugBaye pIqite taTA . mAtAmitrorguroScEva nideSe v..."
+    },
+    {
+      "L": "2",
+      "k1": "a",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "medinI . (naYo'yamakAraH zaqviDAn naYarTAn boDa- yati . yaTA, -- “tatsAdfSyamaBAvaSca tadanyatvaM tadalpatA . aprASastyaM viroDaSca naYarTAH zaw prakIrttitAH” .. iti ."
+    },
+    {
+      "L": "1248",
+      "k1": "antargataM",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "hemacandraH .. (“antargataSave grAme” . iti"
+    },
+    {
+      "L": "2304",
+      "k1": "alaM",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "hemacandraH . viCAra hula iti"
+    },
+    {
+      "L": "3568",
+      "k1": "AbidDaH",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "medinI .. mUrKaH . iti"
+    },
+    {
+      "L": "4624",
+      "k1": "udagadriH",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "hemacandraH .."
+    },
+    {
+      "L": "5630",
+      "k1": "oH",
+      "unitIndex": 0,
+      "klass": "separable",
+      "text": "oH¦, puM, vrahmA . ityekAkzarakozaH .."
+    },
+    {
+      "L": "6836",
+      "k1": "kalAcikA",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "hemacandraH .."
+    },
+    {
+      "L": "8000",
+      "k1": "kuRqaM",
+      "unitIndex": 2,
+      "klass": "separable",
+      "text": "medinI .. jalADAraviSezaH . cOvAccA iti"
+    },
+    {
+      "L": "9150",
+      "k1": "kOzikaH",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "medinI .."
+    },
+    {
+      "L": "10669",
+      "k1": "garttikA",
+      "unitIndex": 2,
+      "klass": "separable",
+      "text": "hemacandraH . 3 . 65 .. tA~t- Gara iti"
+    },
+    {
+      "L": "11871",
+      "k1": "GoRI",
+      "unitIndex": 2,
+      "klass": "separable",
+      "text": "iniH .) SUkaraH . ityamaraH . 2 . 5 . 2 .."
+    },
+    {
+      "L": "12969",
+      "k1": "CAyA",
+      "unitIndex": 6,
+      "klass": "separable",
+      "text": "medinI . ye, 23 .. kAtyAyanI . iti"
+    },
+    {
+      "L": "14141",
+      "k1": "QaH",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "medinI . Qe, 1 .. nirguRaH . DvaniH . ityekAkzarakozaH .."
+    },
+    {
+      "L": "15476",
+      "k1": "trAyantI",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "NIp .) trAyamARA latA . ityamaraH . 2 . 4 . 150 .. (yaTA, -- “trAyantI tu varA tiktA sarA pittakaPApahA . jvarahfdrogagulmArSoBramaSUlavizapraRut ..” iti"
+    },
+    {
+      "L": "16736",
+      "k1": "duliH",
+      "unitIndex": 2,
+      "klass": "separable",
+      "text": "medinI . le, 26 .."
+    },
+    {
+      "L": "17962",
+      "k1": "DUrttaH",
+      "unitIndex": 3,
+      "klass": "separable",
+      "text": "medinI . te, 28 .. (yaTA, mahABArate . 4 . 6 . 12 . “priyA hi DUrttA mama devinaH sadA BavAMSca devopama ! rAjyamarhati ..” yaTA ca paYcatantre . 3 . 73 . “narARAM nApito DUrttaH pakziRAM cEva vAyasa..."
+    },
+    {
+      "L": "19169",
+      "k1": "nirvvARaM",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "medinI . Re, 58 .. (yaTA, BAgavate . 3 . 28 . 35 . “muktASrayaM yarhi nirvvizayaM viraktaM nirvvARamfcCati manaH sahasA yaTArcciH ..”) viSrAntiH . iti"
+    },
+    {
+      "L": "20551",
+      "k1": "parimaRqalaM",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "hemacandraH .. (yaTA, BAgavate . 5 . 22 . 19 . “lakzottaraM sArdDanavakowiyojanaparimaRqalaM BU- valayasya kzaRena sagavyUtyuttaraM dbisahasrayojanAni sa BuNkte ..” paramARuparimARam . parimARa- viSi..."
+    },
+    {
+      "L": "21728",
+      "k1": "pItA",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "ac . wAp .) haridrA . ityamaraH . 2 . 9 . 41 .. (paryyAyo'syA yaTA, vEdyakaratnamAlAyAm . “haridrA pItakA gOrI kAYcanI rajanI niSA . mehaGnI rajanI pItA varRinI rAtrinAmikA ..”) dAruharidrA . mahAjyo..."
+    },
+    {
+      "L": "22950",
+      "k1": "pradozaH",
+      "unitIndex": 3,
+      "klass": "separable",
+      "text": "hemacandraH .. (prakfzwo dozo yasyeti . duzwe, tri . yaTA, mAGe . 2 . 98 . “ye cAnye kAlayavanaSAlvarukmidrumAdayaH . tamaHsvaBAvAste'pyenaM pradozamanuyAyinaH ..” “ye cAnye kAlayavanaSAlvarukmidrumA..."
+    },
+    {
+      "L": "24149",
+      "k1": "bahuPalI",
+      "unitIndex": 2,
+      "klass": "separable",
+      "text": "medinI . le, 157 .."
+    },
+    {
+      "L": "25508",
+      "k1": "BOtI",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "hemacandraH . 142 .."
+    },
+    {
+      "L": "26821",
+      "k1": "mahAvIraH",
+      "unitIndex": 6,
+      "klass": "separable",
+      "text": "hemacandraH .. DanurDaraH . iti"
+    },
+    {
+      "L": "28137",
+      "k1": "mokzaH",
+      "unitIndex": 4,
+      "klass": "separable",
+      "text": "hemacandraH . 1 . 75 .. (viSlezaH . yaTA, SrImadBagavadgItAyAm . 7 . 19 . “jarAmaraRamokzAya mAmASritya yatanti ye . te brahma tadbiduH kftsnamaDyAtmaM karmma cAKilam ..” “mokzAya viSlezaRArTam .” it..."
+    },
+    {
+      "L": "29461",
+      "k1": "rAjavartma",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "hemacandraH . 4 . 53 .."
+    },
+    {
+      "L": "30713",
+      "k1": "vaM",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "medinI . ve, 1 .. varuRabIjam . iti"
+    },
+    {
+      "L": "31946",
+      "k1": "vAnaM",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "medinI . ne, 20 .. (vanasyedamiti . vana + aR .) vanasambanDI .."
+    },
+    {
+      "L": "33016",
+      "k1": "viraYciH",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "hemacandraH .."
+    },
+    {
+      "L": "34212",
+      "k1": "vEdehaH",
+      "unitIndex": 0,
+      "klass": "separable",
+      "text": "vEdehaH¦, puM, baRik . ityamarawIkAyAM BarataH .. (videhasyApatyamiti . videha + aY .) nimi- rAjaputtraH . asyotpattiryaTA . aputtrasya tasya BUBujaH SarIramarAjakaBIravaste munayaH araRyAM mamanTuH ..."
+    },
+    {
+      "L": "35432",
+      "k1": "SAlAraM",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "medinI .."
+    },
+    {
+      "L": "36833",
+      "k1": "SvetaH",
+      "unitIndex": 5,
+      "klass": "separable",
+      "text": "hemacandraH .. SukragrahaH . SvetABraH . iti"
+    },
+    {
+      "L": "38138",
+      "k1": "samprahAraH",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "medinI .. hananam . iti"
+    },
+    {
+      "L": "39327",
+      "k1": "sugfhaH",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "hemacandraH .. (sundaraM gfham .) sundarAlaye, klI .."
+    },
+    {
+      "L": "40617",
+      "k1": "sTAsnuH",
+      "unitIndex": 1,
+      "klass": "separable",
+      "text": "snuH .) sTirataraH . ityamaraH . 3 . 1 . 73 .. (yaTA, BawwiH . 2 . 47 . “hiraRmayI SAlalateva jaNgamA cyutA divaH sTAsnu rivAcirapraBA . SaSANkakAnteraDidevatAkftiH sutA dade tasya sutAya mETilI ..”)..."
+    },
+    {
+      "L": "1",
+      "k1": "a",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "a¦, akAraH . AdyasvaravarRaH . asyoccAraRasTAnaM kaRWaH . sa tu hrasvo dIrGaH plutaSca Bavati . iti"
+    },
+    {
+      "L": "1501",
+      "k1": "apAcI",
+      "unitIndex": 1,
+      "klass": "other-no-authority",
+      "text": "halAyuDaH .."
+    },
+    {
+      "L": "2822",
+      "k1": "aSvatTaH",
+      "unitIndex": 12,
+      "klass": "other-no-authority",
+      "text": "tadvacanaM SrutvA visannavadano'Bavat . uddAlakastato vAkyaM tAmalakzmImuvAca ha” .. uddAlaka uvAca . “aSvatTavfkzamUle'smin alakzmIH SramyatAM kzaRaM ASramasTAnamAlokya yAvadAyAmyahaM punaH” .. sUta..."
+    },
+    {
+      "L": "4313",
+      "k1": "ISaM",
+      "unitIndex": 2,
+      "klass": "other-no-authority",
+      "text": "medinIkarahemacandrO .. (yaTA, kumAre . 3 . 34 “kaTaYcidISA manasAM baBUvuH” .)"
+    },
+    {
+      "L": "5694",
+      "k1": "OdaSvitaM",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "OdaSvitaM¦, klI, (udaSvit + “udaSvito'nyattara- syAm” . 4 . 2 . 19 . iti"
+    },
+    {
+      "L": "6938",
+      "k1": "kavarI",
+      "unitIndex": 5,
+      "klass": "other-no-authority",
+      "text": "BAzA .."
+    },
+    {
+      "L": "8159",
+      "k1": "kumBIpAkaH",
+      "unitIndex": 3,
+      "klass": "other-no-authority",
+      "text": "SrImAgavate . 6 . 26 . 7 .."
+    },
+    {
+      "L": "9421",
+      "k1": "kzattriyaH",
+      "unitIndex": 17,
+      "klass": "other-no-authority",
+      "text": "skandapurARe reRukAmAhAtmya paraSurAmadAlBya- saMvAde .. .."
+    },
+    {
+      "L": "10605",
+      "k1": "gaBastimAn",
+      "unitIndex": 1,
+      "klass": "other-no-authority",
+      "text": "BUmArTe matup .) sUryyaH . iti"
+    },
+    {
+      "L": "11736",
+      "k1": "GanaSyAmaH",
+      "unitIndex": 1,
+      "klass": "other-no-authority",
+      "text": "kecit tatra puM . yaTA, mahAnAwake . “aye rAma ! GanaSyAma ! cumbAmi muKapaNkajam . yadi jIvAmi Sokena punardrakzyAmi te muKam ..” “samAnakarRavinyastasPuranmakarakuRqalam . hemAmbaraM GanaSyAmaM SrI..."
+    },
+    {
+      "L": "12945",
+      "k1": "CAgaH",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "CAgaH¦, puM, strI, (CAyate Cidyate devabalaye iti ."
+    },
+    {
+      "L": "14156",
+      "k1": "RaKa",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "RaKa¦, gatO . iti"
+    },
+    {
+      "L": "15395",
+      "k1": "toyaDipriyaM",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "toyaDipriyaM¦, klI, (prIRAtIti . prI + “igu- paDeti .” 3 . 1 . 135 . iti"
+    },
+    {
+      "L": "16657",
+      "k1": "durArohaH",
+      "unitIndex": 2,
+      "klass": "other-no-authority",
+      "text": "rAja- nirGaRwaH .. duHKArohaRIye, tri .. (yaTA, mahA- BArate . 4 . 5 . 14 . “iyaM kUwe manuzyendra ! gahane mahatI SamI . BImaSAKA durArohA SmaSAnasya samIpataH ..”)"
+    },
+    {
+      "L": "17951",
+      "k1": "DUmrapatrA",
+      "unitIndex": 1,
+      "klass": "other-no-authority",
+      "text": "rAja- nirGaRwaH .."
+    },
+    {
+      "L": "19244",
+      "k1": "niSAcarmma",
+      "unitIndex": 1,
+      "klass": "other-no-authority",
+      "text": "trikARqaSezaH .."
+    },
+    {
+      "L": "20548",
+      "k1": "pariBAzA",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "pariBAzA¦, strI, (pari + BAz + ac . tatazwAp . parizkftaM BAzaRam . padArTavivecakAcAryyARAM yuktiyuktA vAk . iti"
+    },
+    {
+      "L": "21668",
+      "k1": "pIqa",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "pIqa¦, f ka vADe . gAhe . iti"
+    },
+    {
+      "L": "22951",
+      "k1": "pradyu",
+      "unitIndex": 1,
+      "klass": "other-no-authority",
+      "text": "mugDaboDawIkAyAM durgAdAsaH .."
+    },
+    {
+      "L": "24204",
+      "k1": "bahvapatyaH",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "bahvapatyaH¦, puM, strI, (bahUni apatyAni yasya .) SUkaraH . mUzakaH . iti"
+    },
+    {
+      "L": "25288",
+      "k1": "BUmayI",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "BUmayI¦, strI, (BU + mayaw + NIp .) CAyA . sA tu sUryyapatnI . iti"
+    },
+    {
+      "L": "26380",
+      "k1": "marUkaH",
+      "unitIndex": 2,
+      "klass": "other-no-authority",
+      "text": "saMkzipta- sAroRAdivfttiH .."
+    },
+    {
+      "L": "27521",
+      "k1": "muKasuraM",
+      "unitIndex": 4,
+      "klass": "other-no-authority",
+      "text": "BAzA .."
+    },
+    {
+      "L": "28640",
+      "k1": "yugAntaH",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "yugAntaH¦, puM, (yugAnAmanto yatra . yugAnAmanto vA .) pralayaH . iti"
+    },
+    {
+      "L": "29776",
+      "k1": "rudrARI",
+      "unitIndex": 3,
+      "klass": "other-no-authority",
+      "text": "rAjanirGaRwaH .."
+    },
+    {
+      "L": "30911",
+      "k1": "vawakaH",
+      "unitIndex": 7,
+      "klass": "other-no-authority",
+      "text": "SArNgaDare maDyaKaRqe saptame'DyAye maRqUra vawake .. * ..) azwamAzakaparimARam . yaTA, -- “daSaguYjAstu mAzaH syAt SARo mAzacatuzwayam . dvO SARO vawakaH koRastolako draNKaRaSca saH ..” iti"
+    },
+    {
+      "L": "32087",
+      "k1": "vAriDiH",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "vAriDiH¦, puM, (vArIRi DIyante asminniti . DA + “karmmaRyaDikaraRe ca .” 3 . 3 . 93 . iti"
+    },
+    {
+      "L": "33424",
+      "k1": "vizuRaH",
+      "unitIndex": 5,
+      "klass": "other-no-authority",
+      "text": "tadBAzye sAyaRaH ..)"
+    },
+    {
+      "L": "34620",
+      "k1": "Sa",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "Sa¦, tAlavyaSakAraH . ma tu SavargIyapraTamavarRaH . vyaYjanatriMSadvarRaSca . asyoccAraRasTAnaM tAlu . iti"
+    },
+    {
+      "L": "35797",
+      "k1": "SIGrajanmA",
+      "unitIndex": 1,
+      "klass": "other-no-authority",
+      "text": "BAzA . yaTA, -- “pUtIkaH pAMSulaH pozwA SIGrajanmA kuvftti- kft ..” iti"
+    },
+    {
+      "L": "36954",
+      "k1": "zaqUzaRaM",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "zaqUzaRaM¦, klI, (zaRRAmUzaRAnAM samAhAraH .) miSritazawkawudravyam . yaTA -- “pippalI maricaM SuRWI trayametadvimiSritam . trikawu tryuzaRaM vyozaM kawutrikamaTocyate . granTikAnalacavyEstu catuH pa..."
+    },
+    {
+      "L": "38283",
+      "k1": "sarjja",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "sarjja¦, arjjane . iti"
+    },
+    {
+      "L": "39625",
+      "k1": "suraktaH",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "suraktaH¦, tri, (su + raYja + ktaH .) SoBanarAga- yuktaH . atiSayaraktaviSizwaH . atyanuraktaH . iti"
+    },
+    {
+      "L": "40952",
+      "k1": "syandaniH",
+      "unitIndex": 0,
+      "klass": "other-no-authority",
+      "text": "syandaniH¦, puM, tiniSavfkzaH . iti"
+    }
+  ],
+  "generatedAt": "2026-07-02T09:29:34.306Z"
+}
