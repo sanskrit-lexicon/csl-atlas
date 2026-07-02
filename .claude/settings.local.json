@@ -11,5 +11,8 @@
       "Bash(git commit -m ' *)",
       "Bash(gh pr *)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "graymatter"
+  ]
 }
