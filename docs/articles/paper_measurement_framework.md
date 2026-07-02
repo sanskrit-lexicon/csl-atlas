@@ -59,7 +59,7 @@ Each metric is defined once, with a uniform shape — **Definition · Estimator 
 
 - **Definition.** Whether a dictionary cites through the European tagged-source apparatus (`<ls>`) or the indigenous quotative (`iti …`), and what fraction of citations resolve to a locus.
 - **Estimator.** Count `<ls>` citations and the fraction bearing a resolvable locator; separately count indigenous `iti` citations; never pool the two registers.
-- **Output.** Over 1.2 million `<ls>` citations, ≈59 % locator-bearing (upper bound on resolvability); the kośas cite densely through `iti` (word-boundary `iti`/`ity` hits: SKD 80,173 / VCP 15,627 / KRM 12,365) at *zero* `<ls>`. An `<ls>`-only measure mis-ranks the kośas as citation-poor.
+- **Output.** 1,245,644 `<ls>` citations, 59.3 % locator-bearing (upper bound on resolvability); the kośas cite densely through `iti` (word-boundary `iti`/`ity` hits: SKD 80,164 / VCP 15,619 / KRM 12,359) at *zero* `<ls>` — all per the committed artifact [`data/obs/citation_registers.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/obs/citation_registers.json). An `<ls>`-only measure mis-ranks the kośas as citation-poor.
 - **Limits.** A locator is necessary, not sufficient, for resolution; the `iti` count is an upper bound (it includes grammatical and quotative uses).
 
 ### 3.5 Citation-link resolvability (dictionary-to-book)
@@ -192,4 +192,4 @@ Zgusta, Ladislav. 1988. "Copying in Lexicography: Monier-Williams' Sanskrit Dict
 
 **Companion papers (this series).** *Condensation, Not Inflation* (P2, sense inheritance); *Three Axes of Descent* (P3, content/convention/microstructure); *Grammar Without Tags* (P4, indigenous verbal-root microstructure); *Pointing Inward* (P5, cross-reference lineage); *Order Is the Dictionary* (P6, kośa macrostructure). Each instantiates one or two of the metrics in §3 under the discipline of §§4–5.
 
-*The final byline is to be added before submission. [Data note, 2026-07-02: two §3.4 corpus-wide figures (`<ls>` total and locator-bearing share) trace to `docs/CITATION_REGISTERS.md` whose generator (`scripts/obs/citation_register_gaps.py`) prints but does not commit an enveloped artifact; likewise §3.2's 409,649-lemma collapse is doc-sourced. Commit both artifacts before submission so every §3 anchor is walkable.]*
+*The final byline is to be added before submission. [Data note, 2026-07-02: §3.4's corpus figures are regenerated from the committed enveloped artifact [`data/obs/citation_registers.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/obs/citation_registers.json) (generator [`scripts/obs/citation_register_gaps.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/citation_register_gaps.py)); §3.2's 409,649-lemma collapse is still doc-sourced — commit that artifact before submission so every §3 anchor is walkable.]*
