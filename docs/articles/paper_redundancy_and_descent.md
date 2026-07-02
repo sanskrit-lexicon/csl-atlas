@@ -222,23 +222,37 @@ German dictionary (0.945), Macdonell, and Benfey; PW itself stands downstream of
 Yates (1846) (mutual containment ≈ 0.91) and Wilson → *Śabda-Sāgara* (1900)
 (Wilson ⊆ SHS = 0.953).
 
-**Table 2.** Strongest directed containment edges (A ⊂ B; direction by year + size).
+**Table 2.** Strongest directed containment edges (A ⊂ B; direction by year + size),
+with the reverse-containment column and both denominators — the pair that turns "MW
+is a near-total absorber" from asserted into shown: `a_in_b` is large while `b_in_a`
+is small in every row.
 
-| A ⊂ B | `a_in_b` | Years (A / B) | Reading |
-|---|---:|---|---|
-| BOP ⊂ MW | 0.94 | 1847 / 1899 | absorbed by MW |
-| BEN ⊂ MW | 0.94 | 1866 / 1899 | absorbed by MW |
-| MD ⊂ MW | 0.93 | 1893 / 1899 | absorbed by MW |
-| ARMH ⊂ MW | 0.93 | 1861 / 1899 | kośa stock taken into MW |
-| ABCH ⊂ MW | 0.92 | 1896 / 1899 | kośa stock taken into MW |
-| GRA ⊂ MW | 0.88 | 1873 / 1899 | Vedic stock taken into MW |
-| CCS ⊂ PW | 0.945 | 1887 / 1879 | Cappeller (Ger.) from the *kürzere Fassung* |
-| WIL ⊂ SHS | 0.953 | 1832 / 1900 | Śabda-Sāgara reproduces Wilson |
+| A ⊂ B | `a_in_b` (\|A∩B\|/\|A\|) | `b_in_a` (\|A∩B\|/\|B\|) | \|A\| | \|B\| | \|A∩B\| | Years (A / B) | Reading |
+|---|---:|---:|---:|---:|---:|---|---|
+| BOP ⊂ MW | 0.940 | 0.041 | 8,505 | 194,084 | 7,995 | 1847 / 1899 | absorbed by MW |
+| BEN ⊂ MW | 0.937 | 0.082 | 17,036 | 194,084 | 15,969 | 1866 / 1899 | absorbed by MW |
+| MD ⊂ MW | 0.927 | 0.096 | 20,103 | 194,084 | 18,637 | 1893 / 1899 | absorbed by MW |
+| ARMH ⊂ MW | 0.929 | 0.032 | 6,673 | 194,084 | 6,196 | 1861 / 1899 | kośa stock taken into MW |
+| ABCH ⊂ MW | 0.925 | 0.055 | 11,584 | 194,084 | 10,711 | 1896 / 1899 | kośa stock taken into MW |
+| GRA ⊂ MW | 0.878 | 0.050 | 11,108 | 194,084 | 9,752 | 1873 / 1899 | Vedic stock taken into MW |
+| CCS ⊂ PW | 0.945 | 0.180 | 28,751 | 151,349 | 27,176 | 1887 / 1879 | Cappeller (Ger.) from the *kürzere Fassung* |
+| WIL ⊂ SHS | 0.953 | 0.896 | 43,939 | 46,730 | 41,854 | 1832 / 1900 | Śabda-Sāgara reproduces Wilson |
 
-The stemma is consistent with the philological record (§2.2) and quantifies it: the
-Monier-Williams dictionary is not merely *a* large dictionary but the documentary
-sink of the nineteenth-century tradition, while the Petersburg works form the
-upstream reservoir.
+*Source: [`data/sanhw1_jaccard.csv`](../../data/sanhw1_jaccard.csv) (intersection,
+`a_in_b`, `b_in_a`, `size_a`, `size_b` columns), already committed by the containment
+generator; no new computation.*
+
+Read against the reverse column, the asymmetry that "absorption" only asserted before
+is now visible directly: MW contains 88–94 % of nine smaller/earlier dictionaries'
+headwords while those dictionaries contain at most 9.6 % of MW's — a near-total,
+one-directional absorption, not a coincidental overlap. The WIL ⊂ SHS edge is the
+exception that proves the rule: with `b_in_a` = 0.896 alongside `a_in_b` = 0.953, the
+two dictionaries are near-mutual supersets of each other, which is exactly the
+near-verbatim reproduction the microstructural companion study (gloss overlap 0.906,
+Paper P2 §6) independently confirms. The stemma is consistent with the philological
+record (§2.2) and quantifies it: the Monier-Williams dictionary is not merely *a*
+large dictionary but the documentary sink of the nineteenth-century tradition, while
+the Petersburg works form the upstream reservoir.
 
 ### 4.5 The kośas re-group, they do not extend
 
@@ -281,9 +295,18 @@ sense-alignment work (R2). Containment establishes overlap, not direction of cop
 the year-plus-size heuristic orients edges plausibly but conflates "B absorbed A"
 with "B and A drew on a common source"; the discriminating evidence is
 copying-specific (citation truncation, shared rare readings), addressed in Paper H.
-Variant-folding is conservative (canonical `<k1>`/synonym forms only); an
-anus-vāra/visarga-folding pass lowers the independence figure by a few points and is
-reported elsewhere as a sensitivity bound. Finally, multiplicity treats all
+Variant-folding is conservative (canonical `<k1>`/synonym forms only); a final
+anusvāra/visarga-folding pass (stripping a trailing SLP1 `M` or `H` before comparing
+headwords —
+[`headword_multiplicity.py fold_sensitivity()`](../../scripts/obs/headword_multiplicity.py))
+lowers the independence figure by **3.4 points** (42.2 % → 38.8 % on the current
+corpus snapshot, 409,736 → 363,029 distinct folded lemmas; the 0.1-point drift from
+§4.2's 42.1 % baseline is an unrelated corpus-growth artifact, not the fold). This is
+a sensitivity bound reported here rather than adopted as the headline: the fold
+conflates grammatically distinct forms (a nominative-neuter *-am* and a genuine
+visarga-final *-aḥ* headword are different words, not spelling variants), so the
+post-fold figure is a lower bound on independence, not a better estimate of it.
+Finally, multiplicity treats all
 attestations as equal; weighting by corpus frequency (via a future
 dictionary-to-corpus join) would distinguish a lemma shared because it is common from
 one shared because it was copied.
@@ -318,7 +341,15 @@ Rādhākānta Deva, *Śabdakalpadruma* (1822–1858); Tarkavācaspati, *Vācaspa
 *Resource.* Kapp, D. and Malten, T., *Cologne Digital Sanskrit Dictionaries*,
 University of Cologne (sanskrit-lexicon.uni-koeln.de).
 
-*Secondary metalexicography (to be completed).* Standard references on dictionary
-typology, the dictionary-using research front, and quantitative dictionary
-comparison — e.g. survey treatments in the *International Journal of Lexicography* —
-to be added on submission. [TODO: author to insert specific citations.]
+*Secondary metalexicography.* Zgusta, Ladislav. 1971. *Manual of Lexicography.*
+(Janua Linguarum, Series Maior 39.) Prague: Academia; The Hague and Paris: Mouton.
+Hausmann, Franz Josef, Oskar Reichmann, Herbert Ernst Wiegand, and Ladislav Zgusta,
+eds. 1989–1991. *Wörterbücher / Dictionaries / Dictionnaires: An International
+Encyclopedia of Lexicography.* 3 vols. Berlin and New York: Walter de Gruyter.
+Atkins, B. T. Sue, and Michael Rundell. 2008. *The Oxford Guide to Practical
+Lexicography.* Oxford: Oxford University Press. [Same core metalexicography set as the
+companion sense-inheritance paper (P2); a dictionary-aggregation-specific comparator —
+a published entry-to-lemma ratio for another multi-dictionary portal — would
+strengthen §4.1's collapse figure further but is not required for this paper's claims
+and is not pursued here to avoid building a comparator dataset outside this study's
+scope.]

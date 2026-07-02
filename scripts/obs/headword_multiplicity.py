@@ -37,6 +37,17 @@ K1 = re.compile(r'<k1>([^<]*)')
 SYNS = re.compile(r'<syns><s>([^<]*)</s>')
 POS = re.compile(r'-[a-zA-Z]+$')
 
+# Final anusvara/visarga fold (OBS-R referee M-M3 / A02 R2 sensitivity bound):
+# a trailing SLP1 M (anusvara) or H (visarga) is stripped so that e.g. devaM /
+# devaH / deva collapse to one key. This is a sensitivity bound, not a
+# replacement for the canonical <k1>/synonym keys used everywhere else in
+# this script -- it is applied only inside fold_sensitivity() below.
+FINAL_ANUSVARA_VISARGA = re.compile(r'[MH]$')
+
+
+def folded(key):
+    return FINAL_ANUSVARA_VISARGA.sub('', key)
+
 
 def dict_files():
     for name in sorted(os.listdir(V02)):
@@ -63,6 +74,26 @@ def extract(path):
     if k1_keys:                       # standard CDSL dict
         return 'k1', entries, k1_keys
     return 'kosa', entries, syns_keys  # kośa fallback
+
+
+def fold_sensitivity(per_dict):
+    """Recompute the independence figure with a final anusvara/visarga fold
+    applied to every headword key. Report-only (REVISION_BRIEF_P2_OBS.md
+    Part 2, item 3) -- does not alter the canonical CSV/rows above."""
+    fmult = defaultdict(int)
+    fdistinct_keys = set()
+    for _name, (_entries, keys) in per_dict.items():
+        for k in keys:
+            fdistinct_keys.add(folded(k))
+    # multiplicity must be counted per-dictionary (a dict contributing both
+    # devaM and devaH should count once), so fold within each dict first.
+    per_dict_folded = {name: {folded(k) for k in keys} for name, (_e, keys) in per_dict.items()}
+    for fkeys in per_dict_folded.values():
+        for fk in fkeys:
+            fmult[fk] += 1
+    f_distinct = len(fmult)
+    f_unique = sum(1 for v in fmult.values() if v == 1)
+    return f_distinct, f_unique
 
 
 def main():
@@ -115,6 +146,14 @@ def main():
     for r in kosa:
         print(f'    {r["dict"]}: {r["distinct_lemmas"]:,} lemmas, '
               f'{r["unique_to_dict"]:,} unique ({r["unique_pct"]}%)')
+
+    f_distinct, f_unique = fold_sensitivity(per_dict)
+    before_pct = 100 * unique / distinct
+    after_pct = 100 * f_unique / f_distinct
+    print('  anusvara/visarga fold-sensitivity (final M/H stripped, report-only):')
+    print(f'    distinct lemmas {distinct:,} -> {f_distinct:,}')
+    print(f'    independence {before_pct:.1f}% -> {after_pct:.1f}%'
+          f'  (delta {after_pct - before_pct:+.1f} points)')
 
 
 if __name__ == '__main__':

@@ -150,9 +150,14 @@ Monier-Williams (311,933) follow.
 |---|---:|---:|
 | PWG — Petersburg (große) | 570,830 | 4.63 |
 | MW — Monier-Williams 1899 | 311,933 | 1.09 |
-| BEN — Benfey 1866 | — | 2.81 |
-| BHS — Buddhist Hybrid Sanskrit | — | 2.71 |
-| AP — Apte 1957 | — | 0.69 |
+| BEN — Benfey 1866 | 48,603 | 2.81 |
+| BHS — Buddhist Hybrid Sanskrit | 48,419 | 2.71 |
+| AP — Apte 1957 | 62,672 | 0.69 |
+
+*Totals from [`citation_register_gaps.py`](../../scripts/obs/citation_register_gaps.py),
+a trivial `<ls>` count over `csl-orig/v02` reusing the extraction convention of
+[`parse_cslorig.py`](../../scripts/forensic/parse_cslorig.py); per-entry figures
+unchanged from the prior pass.*
 
 ### 4.2 The dictionary-to-book gap is ~41 %
 
@@ -163,7 +168,14 @@ therefore tight, **59.1–59.8 %**, and robust. Its complement is the measured c
 of the **dictionary-to-book gap: ~41 % of citations, roughly 496,000, are bare source
 abbreviations** that cannot be resolved to a passage without further work. The figure
 is encouraging for automation — a clear majority of the European apparatus is
-mechanically linkable — and it sizes the manual residue precisely.
+mechanically linkable — and it sizes the manual residue precisely. We are not aware of
+a published corpus-level locator-resolvability figure for a comparable historical
+dictionary portal to set this against; the closest available comparator is
+qualitative, not quantitative — pre-critical (pre-twentieth-century) lexicography
+treats locator-bearing citation as the exception rather than the rule, favouring bare
+authority names over chapter-and-verse references — so a ~59 % locator rate, on a
+nineteenth-century corpus, already exceeds the pre-digital expectation rather than
+falling short of it.
 
 ### 4.3 A small working apparatus behind a long tail
 
@@ -202,6 +214,18 @@ These dictionaries cite indigenous authorities — Amara, Trikāṇḍaśeṣa, 
 Viśva, Medinī, Manu — through the *iti* construction. Their dictionary-to-book problem
 is different *in kind*: linking *iti X* to an indigenous source lexicon or text, not
 resolving a chapter-and-verse locator.
+
+The mis-ranking is not a rhetorical figure but a measured swap. Ranking all
+forty-four discovered CDSL dictionaries by `<ls>` density places the *Śabdakalpadruma*
+**39th of 44** — tied for last with the other zero-`<ls>` indigenous and *kośa*
+dictionaries, indistinguishable by this measure from a dictionary that cites nothing
+at all. Ranking the same forty-four by *iti*-density instead places it **2nd of 44**
+([`citation_register_gaps.py`](../../scripts/obs/citation_register_gaps.py)) — behind
+only the *Kṛdantarūpamālā*, ahead of every European dictionary in the corpus,
+including the *Großes Petersburger Wörterbuch* that leads Table 1. A single-register
+citation statistic therefore does not merely under-count SKD; it inverts its standing
+in the corpus, from apparently citation-poorest to among the two or three most
+citation-dense dictionaries in CDSL.
 
 ### 4.5 Two disjoint citation systems
 
@@ -283,7 +307,12 @@ Dictionary* (1953); Rādhākānta Deva, *Śabdakalpadruma* (1822–1858); Tarkav
 *Resource.* Kapp, D. and Malten, T., *Cologne Digital Sanskrit Dictionaries*,
 University of Cologne (sanskrit-lexicon.uni-koeln.de).
 
-*Secondary metalexicography (to be completed).* References on the citation/illustrative
-apparatus of historical dictionaries, reference-linking in digital editions, and
-comparative dictionary typology — to be added on submission.
-[TODO: author to insert specific citations.]
+*Secondary metalexicography.* Zgusta, Ladislav. 1971. *Manual of Lexicography.*
+(Janua Linguarum, Series Maior 39.) Prague: Academia; The Hague and Paris: Mouton.
+Hausmann, Franz Josef, Oskar Reichmann, Herbert Ernst Wiegand, and Ladislav Zgusta,
+eds. 1989–1991. *Wörterbücher / Dictionaries / Dictionnaires: An International
+Encyclopedia of Lexicography.* 3 vols. Berlin and New York: Walter de Gruyter.
+Vogel, Claus. 1979. *Indian Lexicography.* (A History of Indian Literature, ed. Jan
+Gonda, vol. 5, fasc. 4.) Wiesbaden: Otto Harrassowitz. [Same core metalexicography set
+as the companion sense-inheritance paper (P2); Vogel is the standard reference for the
+indigenous *kośa* citation tradition discussed in §4.4.]
