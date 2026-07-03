@@ -30,6 +30,7 @@ import {
 } from "../scripts/lib/dict-feature-adapters.mjs";
 import { iterateKoshaHeadwordsFromText, parseKoshaSynonymToken } from "../scripts/lib/dict-headwords.mjs";
 import { lemmaConfidence, genderConflict, presentDicts } from "../scripts/lib/dict-align.mjs";
+import { genderTypology } from "../scripts/lib/gender-typology.mjs";
 import { CORE_COMPARISON_DICTS, SOURCE_ROOT, buildBroadHeadwordDictionaries, isBroadHeadwordEligible, shardIdForLemma } from "../scripts/lib/dict-scope.mjs";
 import { dictGithubHref, sourceHrefForDict } from "../scripts/lib/source-links.mjs";
 import { foldSiglum, canonicalSiglum } from "../scripts/lib/source-siglum.mjs";
@@ -691,6 +692,34 @@ test("genderConflict: disjoint specific genders only", () => {
 
 test("presentDicts respects order", () => {
   assert.deepEqual(presentDicts({ pwg: {}, mw: {} }, ["mw", "ap", "pwg"]), ["mw", "pwg"]);
+});
+
+// ---- gender-typology ----
+test("genderTypology: binary lex m/n disjoint", () => {
+  const t = genderTypology({ MW: ["m"], PWK: ["n"] });
+  assert.equal(t.genderPair, "m/n");
+  assert.equal(t.basis, "lex");
+  assert.equal(t.cardinality, "binary");
+  assert.equal(t.overlap, "disjoint");
+  assert.equal(t.dictCount, 2);
+  assert.equal(t.label, "m/n · binary · lex · disjoint");
+});
+
+test("genderTypology: prose contributor flips basis to prose-mixed", () => {
+  assert.equal(genderTypology({ PWK: ["f"], VCP: ["m"] }).basis, "prose-mixed");
+  assert.equal(genderTypology({ MW: ["m"], SKD: ["n"] }).basis, "prose-mixed");
+});
+
+test("genderTypology: multi cardinality and gender-pair union ordered m/f/n", () => {
+  const t = genderTypology({ MW: ["m"], AP: ["f"], PWG: ["n"] });
+  assert.equal(t.cardinality, "multi");
+  assert.equal(t.dictCount, 3);
+  assert.equal(t.genderPair, "m/f/n");
+});
+
+test("genderTypology: a multi-gender dict marks partial overlap", () => {
+  assert.equal(genderTypology({ MW: ["m", "n"], PWK: ["n"] }).overlap, "partial");
+  assert.equal(genderTypology({ MW: ["m"], PWK: ["n"] }).overlap, "disjoint");
 });
 
 // ---- source-siglum ----
