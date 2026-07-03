@@ -4,17 +4,22 @@
 lexicography methods journal; WSC 2027 alternate). Empirical companion (P5) in this
 series, alongside* Condensation, Not Inflation *(sense inheritance, P2),* Three Axes of
 Descent *(inheritance methodology, P3),* Grammar Without Tags *(indigenous
-microstructure, P4), and* Order Is the Dictionary *(kośa macrostructure, P6). Empirical
+microstructure, P4), and* Order Is the Dictionary *(kośa macrostructure, P6); the cross-reference-overlap metric
+itself is owned by the series' methods paper (P1, §3.6). Empirical
 basis: the cross-reference lineage layer
-([`data/lexico/xref_lineage.json`](../../data/lexico/xref_lineage.json),
-[`data/lexico/xref_edges.csv`](../../data/lexico/xref_edges.csv),
-[`data/lexico/xref_shared_edges.csv`](../../data/lexico/xref_shared_edges.csv)) and the
+([`data/lexico/xref_lineage.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_lineage.json),
+[`data/lexico/xref_edges.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_edges.csv),
+[`data/lexico/xref_shared_edges.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_shared_edges.csv)) and the
 hub-review packet
-([`data/lexico/xref_hub_review.json`](../../data/lexico/xref_hub_review.json)),
-documented in [`MICROSTRUCTURE_XREF_LINEAGE.md`](../MICROSTRUCTURE_XREF_LINEAGE.md) and
-[`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](../MICROSTRUCTURE_XREF_HUB_REVIEW.md), with the
+([`data/lexico/xref_hub_review.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_hub_review.json)),
+documented in [`MICROSTRUCTURE_XREF_LINEAGE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_LINEAGE.md) and
+[`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_HUB_REVIEW.md), with the
 public chart at `/tools/xref-lineage`. All numbers are the 2026-06 snapshot and
-reproducible from committed data. Author: M. Gasūns (byline to finalise).*
+reproducible from committed data; every figure was re-verified against the artifacts in
+the 2026-07-03 referee pass
+([A05_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A05_review_fable5.md)),
+which also corrected an AP/AP90 edition-label swap in the abstract and Table 1.
+Author: M. Gasūns (byline to finalise).*
 
 ---
 
@@ -31,12 +36,13 @@ house style. We make the signal legible with a **positive control**. Parsing the
 cross-reference slots of the Cologne Digital Sanskrit Lexicon yields directed pointer
 graphs for the Petersburg lexicon (PWG `Vgl.`, 22,937 normalised edges over 11,857
 source lemmas), Monier-Williams (MW `cf.`, 7,637 edges / 6,974 sources), and the Apte
-editions (`cf.` in SLP1, 609 + 446 clean lemma edges for AP 1890 and the revised Apte).
+editions (`cf.` in SLP1, 444 clean lemma edges for Apte 1890 and 609 for the revised
+1957 Apte).
 Two editions of the *same* dictionary — Apte 1890 and the revised Apte — overlap at
 **85 % inheritance rate (Jaccard 0.74)**: that is the calibrated signature of descent.
 Against that ceiling, the cross-tradition Monier-Williams × Petersburg pair reaches only
-**21.8 % (Jaccard 0.069)** on the lemmas both cross-reference — far above chance in a
-~300,000-lemma space, so the two networks are *not* independent, but nowhere near the
+**21.8 % (Jaccard 0.069)** on the lemmas both cross-reference — far above chance in the ~300,000-lemma union of the two key spaces, so the two networks
+are *not* independent, but nowhere near the
 edition-continuity ceiling. The cross-reference relationship between MW and the
 Petersburg lexicon is therefore a **shared core, not wholesale inheritance**: a common
 substrate of variant/cognate pointers over which each tradition cross-referenced largely
@@ -56,7 +62,10 @@ positive control.
 
 ## 1. Introduction
 
-A cross-reference is the dictionary talking to itself. *Cf.*, *see*, *Vgl.* — each
+A cross-reference is the dictionary talking to itself — the pointer apparatus that
+lexicographic theory treats as a designed component of entry structure (Wiegand 1989;
+Atkins and Rundell 2008) and classical metalexicography as part of the dictionary's
+information economy (Zgusta 1971). *Cf.*, *see*, *Vgl.* — each
 pointer links one headword to another and asserts that the two belong together: variant
 spellings, cognate roots, members of a compound family, semantically related words. Over
 a whole dictionary these pointers form a directed graph, and that graph is a structural
@@ -101,14 +110,17 @@ of analysis: each node is a normalised headword, each edge a `source → target`
 |---|---|---:|---:|
 | Petersburg (PWG) | `Vgl.` | 22,937 | 11,857 |
 | Monier-Williams (MW) | `cf.` | 7,637 | 6,974 |
-| Apte 1890 (AP) | `cf.` `{#…#}` | 609 | — |
-| Apte revised (AP90) | `cf.` `{#…#}` | 446 | — |
-| Cappeller (CAE) | `cf.` `{#…#}` | 196 | — |
+| Apte revised, 1957 (AP) | `cf.` `{#…#}` | 609 | 604 |
+| Apte 1890 (AP90) | `cf.` `{#…#}` | 444 | 432 |
+| Cappeller (CAE) | `cf.` `{#…#}` | 190 | 160 |
 | Benfey (BEN) | `cf.` | **0** | — |
 
-*Source: [`MICROSTRUCTURE_XREF_LINEAGE.md`](../MICROSTRUCTURE_XREF_LINEAGE.md);
-[`xref_hub_review.json`](../../data/lexico/xref_hub_review.json) (PWG: 123,366 entries
-scanned, 12,283 carrying a cross-reference). Benfey's `cf.` is purely cognate /
+*Source: [`xref-lineage.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/xref-lineage.json)
+(normalised graphs) and [`MICROSTRUCTURE_XREF_LINEAGE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_LINEAGE.md);
+raw pre-normalisation scan counts (AP90 446, CAE 196) are in
+[`xref_hub_review.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_hub_review.json)
+(PWG: 123,366 entries scanned, 12,283 carrying a cross-reference). Note the CDSL codes:
+**AP90 is the 1890 edition, AP the 1957 revision**. Benfey's `cf.` is purely cognate /
 Roman-script, so it does **no internal Sanskrit cross-referencing** — a content fact,
 not a markup gap.*
 
@@ -123,8 +135,12 @@ hyphens, and deduplicate per dictionary. Two networks are then intersected on th
 MW and PWG agree about a lemma only one of them points from. On that shared-source set we
 report the number of identical `source → target` edges, the directed **inheritance rate**
 for each dictionary (what fraction of *its* cross-references from shared sources the other
-also makes), and the Jaccard overlap. Edges are **directed**: a reciprocal pointer in the
-other dictionary does not count as a match. The normalisation is deliberately
+also makes), and the Jaccard overlap (Jaccard 1912). Edges are **directed**: a reciprocal
+pointer in the
+other dictionary does not count as a match. (The metric's definition and limits are
+stated once for the series in P1, §3.6; this paper is its dedicated instantiation, and
+treating structural overlap as multi-dimensional descent evidence follows the
+digital-stemmatology precedent of Andrews and Macé 2013.) The normalisation is deliberately
 conservative — a messy multi-part target that does not reduce cleanly simply fails to
 match — so every number is a **floor**.
 
@@ -166,8 +182,10 @@ rate is directed (a-rate / b-rate); the reading is the machine review label.
 | CAE × PWG | 7 | 12.5 % / 1.8 % | 0.016 | too sparse |
 | AP90 × MW | 10 | 11.2 % / 8.6 % | 0.051 | sparse |
 
-*Source: [`MICROSTRUCTURE_XREF_LINEAGE.md`](../MICROSTRUCTURE_XREF_LINEAGE.md) and
-[`xref_hub_review.json`](../../data/lexico/xref_hub_review.json).*
+*Source: [`xref-lineage.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/xref-lineage.json)
+and [`MICROSTRUCTURE_XREF_LINEAGE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_LINEAGE.md).
+The two remaining packet pairs, AP × CAE (1 edge) and AP90 × CAE (0 edges), are omitted
+as empty.*
 
 The control behaves as it must: two editions of Apte recover **~85 %** of each other's
 cross-references, at Jaccard 0.74. That is the shape of descent — near-total preservation
@@ -180,7 +198,8 @@ makes 2,946 cross-references and PWG makes 7,022, of which **641 are identical**
 That is an inheritance rate of **21.8 %** from the MW side (and 9.1 % from the denser PWG
 side), at Jaccard 0.069. The number cuts both ways. It is far above chance — in a lexicon
 of some 300,000 headwords, 641 coincident directed pointers on a 2,538-lemma overlap is
-not what independent networks produce, so MW and PWG are demonstrably **related**, as the
+not what independent networks produce — here in the ≈300,000-headword union of the two
+dictionaries' key spaces — so MW and PWG are demonstrably **related**, as the
 philology has always held. But it is barely a quarter of the edition-continuity ceiling,
 and roughly four in five of MW's cross-references — even from lemmas PWG also
 cross-references — go where PWG does not. The sample of genuinely shared edges is telling:
@@ -269,8 +288,15 @@ measurably, back along the line of descent.
 
 ## References (draft — author to finalise)
 
+Andrews, Tara L., and Caroline Macé. 2013. "Beyond the Tree of Texts: Building an
+Empirical Model of Scribal Variation through Graph Analysis of Texts and Stemmata."
+*Literary and Linguistic Computing* 28 (4): 504–521.
+
 Atkins, B. T. Sue, and Michael Rundell. 2008. *The Oxford Guide to Practical
 Lexicography.* Oxford: Oxford University Press.
+
+Jaccard, Paul. 1912. "The Distribution of the Flora in the Alpine Zone." *New
+Phytologist* 11 (2): 37–50.
 
 Wiegand, Herbert Ernst. 1989. "Der Begriff der Mikrostruktur: Geschichte, Probleme,
 Perspektiven." In Hausmann, Reichmann, Wiegand and Zgusta (eds.), *Wörterbücher /
@@ -280,15 +306,15 @@ Gruyter.
 Zgusta, Ladislav. 1971. *Manual of Lexicography.* (Janua Linguarum, Series Maior 39.)
 Prague: Academia; The Hague and Paris: Mouton.
 
-*[Author to add: a graph-/network-overlap reference for the Jaccard and directed-edge
-measures, and a digital-stemmatology reference for treating cross-reference structure as
-evidence of textual descent.]*
-
 **Primary digital source.** Cologne Digital Sanskrit Dictionaries (CDSL). Institute of
 Indology and Tamil Studies, University of Cologne.
 [`sanskrit-lexicon.uni-koeln.de`](https://www.sanskrit-lexicon.uni-koeln.de/).
 
 **Companion papers (this series).**
+
+Gasūns, M. (in preparation). *Measuring the Dictionary Family: A Traceable Measurement
+Framework for Computational Lexicography* (P1 — owns the cross-reference-overlap metric
+this paper instantiates, §3.6 there).
 
 Gasūns, M. (in preparation). *Condensation, Not Inflation: Sense Inheritance in the
 Sanskrit Dictionary Family, 1822–1957* (P2).
