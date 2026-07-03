@@ -1,0 +1,36 @@
+code,year,start_year,end_year,n_volumes,letter_coverage,full_name,language_pair,family,author_or_compiler,deprecated,in_github,in_sanhw1,sanhw1_lemmas,notes
+WIL,1832,1832,1832,1,full,Wilson Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,H.H. Wilson,yes,yes,yes,43939,Deprecated by Cologne; oldest English-tradition dict
+YAT,1846,1846,1846,1,full,Yates Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,W. Yates,no,yes,yes,44720,WIL⇄YAT mutual containment ~91% suggests YAT derived from WIL
+GST,1856,1856,1856,1,partial-a-only,Goldstücker Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,Theodor Goldstücker,no,yes,yes,6761,Incomplete: only letter 'a-' published
+BEN,1866,1866,1866,1,full,Benfey Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,Theodor Benfey,no,yes,yes,17036,
+MW72,1872,1872,1872,1,full,Monier-Williams Sanskrit-English Dictionary (1st edition),Skt-Eng,Sanskrit-English,Monier Monier-Williams,no,yes,yes,51159,Predecessor to MW (1899); preface notes use of early PWG volumes (1855-1865 fascicles)
+LRV,1889,1889,1889,1,full,Vaidya Standard Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,L.R. Vaidya,no,yes,yes,48259,Indian Skt-Eng; HathiTrust 008693928
+AP90,1890,1890,1890,1,full,Apte Practical Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,V.S. Apte,no,yes,yes,34277,Original 1890 Apte; AP90→AP grew 2.6x
+CAE,1891,1891,1891,1,full,Cappeller Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,Carl Cappeller,no,yes,yes,38484,Same author as CCS
+MD,1893,1893,1893,1,full,Macdonell Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,A.A. Macdonell,no,yes,yes,20103,
+MW,1899,1899,1899,1,full,Monier-Williams Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,Monier Monier-Williams,no,yes,yes,194084,LARGEST CDSL dict; has S1+S2+Markup+Inflected-forms displays; gets most attention
+SHS,1900,1900,1900,1,full,Shabda-Sagara Sanskrit-English Dictionary,Skt-Eng,Sanskrit-English,Biswanath Mukerji,no,yes,yes,46730,WIL⊆SHS 0.953 confirms SHS derives from WIL
+AP,1957,1957,1959,3,full,Practical Sanskrit-English Dictionary (revised edition),Skt-Eng,Sanskrit-English,V.S. Apte (rev. P.K. Gode et al.),no,yes,yes,88667,3-volume Pune revised edition; major expansion of AP90
+BOR,1877,1877,1877,1,full,Borooah English-Sanskrit Dictionary,Eng-Skt,English-Sanskrit,A. Borooah,no,yes,no,0,Reverse-direction; English headwords
+AE,1920,1920,1920,1,full,Apte Student's English-Sanskrit Dictionary,Eng-Skt,English-Sanskrit,V.S. Apte,yes,yes,no,0,Deprecated; same as ApteES in github; reverse direction
+BUR,1866,1863,1866,1,full,Burnouf Dictionnaire Sanscrit-Français,Skt-Fra,Sanskrit-French,Émile Burnouf,no,yes,yes,19146,
+STC,1932,1932,1932,1,full,Stchoupak Dictionnaire Sanscrit-Français,Skt-Fra,Sanskrit-French,Stchoupak,no,yes,yes,23986,Has SD display
+PWG,1855,1855,1875,7,full,Böhtlingk and Roth Grosses Petersburger Wörterbuch,Skt-Ger,Sanskrit-German,Böhtlingk + Roth,yes,yes,yes,106083,7 volumes published 1855-1875; vol1 1855 (a-)
+GRA,1873,1873,1873,1,full,Grassmann Wörterbuch zum Rig Veda,Skt-Ger,Sanskrit-German,Hermann Grassmann,no,yes,yes,11108,Specialized: Rigveda only
+PW,1879,1879,1889,7,full,Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung,Skt-Ger,Sanskrit-German,Otto Böhtlingk,yes,yes,yes,151349,7 volumes 1879-1889; same as PWK in github; deprecated by Cologne
+CCS,1887,1887,1887,1,full,Cappeller Sanskrit Wörterbuch,Skt-Ger,Sanskrit-German,Carl Cappeller,no,yes,yes,28751,Same author as CAE; CCS⊆PW 0.945 confirms PWK→CCS derivation
+SCH,1928,1928,1928,1,supplemental,Schmidt Nachträge zum Sanskrit-Wörterbuch,Skt-Ger,Sanskrit-German,Richard Schmidt,no,yes,yes,28455,Continuation of PWG/PWK
+BOP,1847,1847,1847,1,full,Bopp Glossarium Sanscritum,Skt-Lat,Sanskrit-Latin,Franz Bopp,no,yes,yes,8505,
+VCP,1873,1873,1884,1,full,Vacaspatyam,Skt-Skt,Sanskrit-Sanskrit,Tarkavachaspati,no,yes,yes,48636,Multi-fascicle publication 1873-1884; indigenous Skt-Skt
+SKD,1886,1822,1886,1,full,Śabda-kalpadruma,Skt-Skt,Sanskrit-Sanskrit,Rādhākānta Deva,no,yes,yes,40817,Original publication 1822; Cologne digitisation based on later 1886 edition
+INM,1904,1904,1904,1,full,Index to the Names in the Mahabharata,Skt-meta,Specialized,Sörensen,no,yes,yes,9454,Specialized index
+VEI,1912,1912,1912,1,full,The Vedic Index of Names and Subjects,Skt-meta,Specialized,Macdonell + Keith,no,yes,yes,3704,Specialized: Vedic only
+PUI,1951,1951,1951,1,full,The Purana Index,Skt-meta,Specialized,Vettam Mani,no,yes,yes,11730,
+BHS,1953,1953,1953,1,full,Edgerton Buddhist Hybrid Sanskrit Dictionary,BHS-Eng,Specialized,Franklin Edgerton,no,yes,yes,17777,Specialized: Buddhist Hybrid Sanskrit
+FRI,1956,1956,1956,1,full,Friš Sanskrit Reader Vocabulary,Skt-Cze,Specialized,Oldřich Fríš,no,yes,yes,7775,Czech reader vocabulary; the 2015 Russian-edition link in github is a later derivation
+ACC,1962,1962,1962,1,full,Aufrecht's Catalogus Catalogorum,Skt-meta,Specialized,Aufrecht,no,yes,yes,32576,Bibliographic catalog
+KRM,1965,1965,1965,1,full,Kṛdantarūpamālā,Skt-Skt,Specialized,Bhattoji Dīkṣita (anc.),no,yes,yes,1698,Verbs only
+MCI,1993,1976,1993,15+ planned,partial-by-letter,Mahabharata Cultural Index,Skt-Eng,Specialized,Pusalker,no,yes,yes,2325,Partial publication; ongoing series
+KNA,1893,1893,1893,1,partial,Knauer Sanskrit-Russian Vocabulary,Skt-Rus,Sanskrit-Russian,Friedrich Knauer,no,yes,no,0,Sanskrit-Russian; Knauer was Russian-tradition Sanskritist of German extraction; not in sanhw1 (recent addition)
+KOW,1854,1854,1854,1,partial,Kossowich Sanskrit-Russian Dictionary,Skt-Rus,Sanskrit-Russian,Каэтан Коссович (1815-1883),no,yes,no,0,HYPOTHESIS: KOW is a Russian translation of WIL (1832); 22-year gap plausible; not in sanhw1
+AMAR,n/a,n/a,n/a,n/a,full,Amarakośa,Skt-Skt,Sanskrit-Sanskrit,Amarasiṃha (anc.),no,yes,no,0,Classical kośa; not in current sanhw1

@@ -1,0 +1,261 @@
+{
+  "WIL": {
+    "r_gemination_rate": 0.33,
+    "n_rC": 952,
+    "dim2": "mixed",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "YAT": {
+    "r_gemination_rate": 0.322,
+    "n_rC": 923,
+    "dim2": "mixed",
+    "inflect_rate": 0.004,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "GST": {
+    "r_gemination_rate": 0.004,
+    "n_rC": 741,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 6780,
+    "dim4": "uninflected"
+  },
+  "BEN": {
+    "r_gemination_rate": 0.011,
+    "n_rC": 870,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "MW72": {
+    "r_gemination_rate": 0.002,
+    "n_rC": 661,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "LRV": {
+    "r_gemination_rate": 0.0,
+    "n_rC": 894,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "AP90": {
+    "r_gemination_rate": 0.0,
+    "n_rC": 700,
+    "dim2": "single",
+    "inflect_rate": 0.315,
+    "n_k1": 8000,
+    "dim4": "inflected"
+  },
+  "CAE": {
+    "r_gemination_rate": 0.004,
+    "n_rC": 1034,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "MD": {
+    "r_gemination_rate": 0.005,
+    "n_rC": 813,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "MW": {
+    "r_gemination_rate": 0.001,
+    "n_rC": 688,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "SHS": {
+    "r_gemination_rate": 0.321,
+    "n_rC": 952,
+    "dim2": "mixed",
+    "inflect_rate": 0.001,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "AP": {
+    "r_gemination_rate": 0.0,
+    "n_rC": 785,
+    "dim2": "single",
+    "inflect_rate": 0.267,
+    "n_k1": 8000,
+    "dim4": "inflected"
+  },
+  "BOR": {
+    "r_gemination_rate": 0.0,
+    "n_rC": 798,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "AE": {
+    "r_gemination_rate": 0.0,
+    "n_rC": 768,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "BUR": {
+    "r_gemination_rate": 0.015,
+    "n_rC": 685,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "STC": {
+    "r_gemination_rate": 0.01,
+    "n_rC": 717,
+    "dim2": "single",
+    "inflect_rate": 0.001,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "PWG": {
+    "r_gemination_rate": 0.0,
+    "n_rC": 957,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "GRA": {
+    "r_gemination_rate": 0.0,
+    "n_rC": 714,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "PW": {
+    "r_gemination_rate": 0.003,
+    "n_rC": 888,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "CCS": {
+    "r_gemination_rate": 0.004,
+    "n_rC": 921,
+    "dim2": "single",
+    "inflect_rate": 0.0,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "SCH": {
+    "r_gemination_rate": 0.002,
+    "n_rC": 1024,
+    "dim2": "single",
+    "inflect_rate": 0.001,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "BOP": {
+    "r_gemination_rate": 0.006,
+    "n_rC": 533,
+    "dim2": "single",
+    "inflect_rate": 0.001,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "VCP": {
+    "r_gemination_rate": 0.343,
+    "n_rC": 1002,
+    "dim2": "mixed",
+    "inflect_rate": 0.002,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "SKD": {
+    "r_gemination_rate": 0.408,
+    "n_rC": 959,
+    "dim2": "duplicated",
+    "inflect_rate": 0.718,
+    "n_k1": 8000,
+    "dim4": "inflected"
+  },
+  "INM": {
+    "r_gemination_rate": 0.012,
+    "n_rC": 1093,
+    "dim2": "single",
+    "inflect_rate": 0.012,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "VEI": {
+    "r_gemination_rate": 0.0,
+    "n_rC": 408,
+    "dim2": "single",
+    "inflect_rate": 0.002,
+    "n_k1": 3834,
+    "dim4": "uninflected"
+  },
+  "PUI": {
+    "r_gemination_rate": 0.017,
+    "n_rC": 1056,
+    "dim2": "single",
+    "inflect_rate": 0.003,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "BHS": {
+    "r_gemination_rate": 0.001,
+    "n_rC": 1210,
+    "dim2": "single",
+    "inflect_rate": 0.005,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "FRI": {
+    "r_gemination_rate": 0.005,
+    "n_rC": 614,
+    "dim2": "single",
+    "inflect_rate": 0.003,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "ACC": {
+    "r_gemination_rate": 0.009,
+    "n_rC": 1562,
+    "dim2": "single",
+    "inflect_rate": 0.008,
+    "n_k1": 8000,
+    "dim4": "uninflected"
+  },
+  "KRM": {
+    "r_gemination_rate": 0.0,
+    "n_rC": 115,
+    "dim2": "single",
+    "inflect_rate": 0.002,
+    "n_k1": 2061,
+    "dim4": "uninflected"
+  },
+  "MCI": {
+    "r_gemination_rate": 0.006,
+    "n_rC": 334,
+    "dim2": "single",
+    "inflect_rate": 0.013,
+    "n_k1": 2643,
+    "dim4": "uninflected"
+  },
+  "KNA": "no-source",
+  "KOW": "no-source",
+  "AMAR": "no-source"
+}

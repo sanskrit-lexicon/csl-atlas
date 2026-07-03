@@ -1,0 +1,251 @@
+{
+  "total_cells": 1050,
+  "cells_auto": 590,
+  "cells_unknown": 460,
+  "fill_fraction": 0.562,
+  "dicts_total": 35,
+  "dicts_missing_source": [
+    "KNA",
+    "KOW",
+    "AMAR"
+  ],
+  "auto_dims": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "annotation_only_dims": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    16
+  ],
+  "informative_dims": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    17,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "constant_dims_flagged": [
+    15,
+    18
+  ],
+  "per_dim_coverage": {
+    "9": {
+      "name": "Compound-headword separation",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "hyphen",
+        "merged",
+        "space"
+      ]
+    },
+    "10": {
+      "name": "Variant-headword inclusion (<k2>)",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "few",
+        "many",
+        "none"
+      ]
+    },
+    "11": {
+      "name": "Sense numbering style",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "alpha",
+        "arabic",
+        "roman",
+        "unnumbered"
+      ]
+    },
+    "12": {
+      "name": "Sense-internal separator",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "colon",
+        "comma",
+        "semicolon"
+      ]
+    },
+    "13": {
+      "name": "Sub-sense indentation",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "flat",
+        "present"
+      ]
+    },
+    "14": {
+      "name": "Citation depth",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "full",
+        "minimal",
+        "mixed",
+        "partial"
+      ]
+    },
+    "15": {
+      "name": "Citation format style",
+      "dicts_filled": 13,
+      "distinct_values": [
+        "abbreviated"
+      ]
+    },
+    "17": {
+      "name": "Grammar marker style",
+      "dicts_filled": 30,
+      "distinct_values": [
+        "abbreviated",
+        "sanskrit"
+      ]
+    },
+    "18": {
+      "name": "Verb-class marker style",
+      "dicts_filled": 5,
+      "distinct_values": [
+        "arabic"
+      ]
+    },
+    "19": {
+      "name": "Etymology presence",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "full",
+        "none",
+        "partial"
+      ]
+    },
+    "20": {
+      "name": "Cross-reference syntax",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "absent",
+        "explicit"
+      ]
+    },
+    "21": {
+      "name": "Loanword marker",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "tagged",
+        "untagged"
+      ]
+    },
+    "22": {
+      "name": "Vedic accent preservation",
+      "dicts_filled": 22,
+      "distinct_values": [
+        "absent",
+        "present"
+      ]
+    },
+    "23": {
+      "name": "Vedic-only marker",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "flagged",
+        "unflagged"
+      ]
+    },
+    "24": {
+      "name": "Frequency / rarity marker",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "absent",
+        "present"
+      ]
+    },
+    "25": {
+      "name": "Indeclinable marker style",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "ind",
+        "nipata",
+        "unmarked"
+      ]
+    },
+    "26": {
+      "name": "Pāṇinian sūtra reference",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "cited",
+        "uncited"
+      ]
+    },
+    "27": {
+      "name": "Source-language identification within entries",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "absent",
+        "present"
+      ]
+    },
+    "28": {
+      "name": "Etymology presence rate",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "<=5%",
+        ">5%"
+      ]
+    },
+    "29": {
+      "name": "Etymology mean-length",
+      "dicts_filled": 8,
+      "distinct_values": [
+        "high",
+        "low",
+        "med"
+      ]
+    },
+    "30": {
+      "name": "Distinct etym-marker patterns",
+      "dicts_filled": 32,
+      "distinct_values": [
+        "0",
+        "1",
+        ">1"
+      ]
+    }
+  },
+  "cap_entries_per_dict": 4000
+}

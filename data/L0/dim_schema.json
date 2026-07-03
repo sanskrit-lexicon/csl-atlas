@@ -1,0 +1,299 @@
+[
+  {
+    "dim_id": 1,
+    "name": "Anusvāra before consonants",
+    "options": [
+      "opt1",
+      "opt2",
+      "opt3",
+      "opt4",
+      "opt5",
+      "opt6"
+    ]
+  },
+  {
+    "dim_id": 2,
+    "name": "Duplication after r",
+    "options": [
+      "opt1",
+      "opt2"
+    ]
+  },
+  {
+    "dim_id": 3,
+    "name": "Words ending with -at",
+    "options": [
+      "opt1",
+      "opt2",
+      "opt3",
+      "opt4",
+      "opt5"
+    ]
+  },
+  {
+    "dim_id": 4,
+    "name": "Inflected vs uninflected headword form",
+    "options": [
+      "inflected",
+      "uninflected"
+    ]
+  },
+  {
+    "dim_id": 5,
+    "name": "Anusvāra of verbs",
+    "options": [
+      "present",
+      "absent"
+    ]
+  },
+  {
+    "dim_id": 6,
+    "name": "ṛkārānta words",
+    "options": [
+      "opt1",
+      "opt2",
+      "opt3"
+    ]
+  },
+  {
+    "dim_id": 7,
+    "name": "vas/yas suffixes",
+    "options": [
+      "opt1",
+      "opt2",
+      "opt3",
+      "opt4"
+    ]
+  },
+  {
+    "dim_id": 8,
+    "name": "Sandhi handling at compound boundary",
+    "options": [
+      "preserved",
+      "split",
+      "both"
+    ]
+  },
+  {
+    "dim_id": 9,
+    "name": "Compound-headword separation",
+    "options": [
+      "hyphen",
+      "space",
+      "merged"
+    ]
+  },
+  {
+    "dim_id": 10,
+    "name": "Variant-headword inclusion (<k2>)",
+    "options": [
+      "none",
+      "few",
+      "many"
+    ]
+  },
+  {
+    "dim_id": 11,
+    "name": "Sense numbering style",
+    "options": [
+      "arabic",
+      "roman",
+      "alpha",
+      "sanskrit",
+      "unnumbered"
+    ]
+  },
+  {
+    "dim_id": 12,
+    "name": "Sense-internal separator",
+    "options": [
+      "semicolon",
+      "comma",
+      "period",
+      "colon"
+    ]
+  },
+  {
+    "dim_id": 13,
+    "name": "Sub-sense indentation",
+    "options": [
+      "present",
+      "flat"
+    ]
+  },
+  {
+    "dim_id": 14,
+    "name": "Citation depth",
+    "options": [
+      "full",
+      "partial",
+      "minimal",
+      "mixed"
+    ]
+  },
+  {
+    "dim_id": 15,
+    "name": "Citation format style",
+    "options": [
+      "abbreviated",
+      "full",
+      "sanskrit"
+    ]
+  },
+  {
+    "dim_id": 16,
+    "name": "Mahābhārata edition reference",
+    "options": [
+      "pune",
+      "critical"
+    ]
+  },
+  {
+    "dim_id": 17,
+    "name": "Grammar marker style",
+    "options": [
+      "abbreviated",
+      "full",
+      "sanskrit"
+    ]
+  },
+  {
+    "dim_id": 18,
+    "name": "Verb-class marker style",
+    "options": [
+      "roman",
+      "arabic",
+      "sanskrit"
+    ]
+  },
+  {
+    "dim_id": 19,
+    "name": "Etymology presence",
+    "options": [
+      "none",
+      "partial",
+      "full"
+    ]
+  },
+  {
+    "dim_id": 20,
+    "name": "Cross-reference syntax",
+    "options": [
+      "explicit",
+      "k1",
+      "italic",
+      "absent"
+    ]
+  },
+  {
+    "dim_id": 21,
+    "name": "Loanword marker",
+    "options": [
+      "tagged",
+      "untagged"
+    ]
+  },
+  {
+    "dim_id": 22,
+    "name": "Vedic accent preservation",
+    "options": [
+      "present",
+      "absent"
+    ]
+  },
+  {
+    "dim_id": 23,
+    "name": "Vedic-only marker",
+    "options": [
+      "flagged",
+      "unflagged"
+    ]
+  },
+  {
+    "dim_id": 24,
+    "name": "Frequency / rarity marker",
+    "options": [
+      "present",
+      "absent"
+    ]
+  },
+  {
+    "dim_id": 25,
+    "name": "Indeclinable marker style",
+    "options": [
+      "ind",
+      "inv",
+      "nipata",
+      "unmarked"
+    ]
+  },
+  {
+    "dim_id": 26,
+    "name": "Pāṇinian sūtra reference",
+    "options": [
+      "cited",
+      "uncited"
+    ]
+  },
+  {
+    "dim_id": 27,
+    "name": "Source-language identification within entries",
+    "options": [
+      "present",
+      "absent"
+    ]
+  },
+  {
+    "dim_id": 28,
+    "name": "Etymology presence rate",
+    "options": [
+      ">5%",
+      "<=5%"
+    ]
+  },
+  {
+    "dim_id": 29,
+    "name": "Etymology mean-length",
+    "options": [
+      "low",
+      "med",
+      "high"
+    ]
+  },
+  {
+    "dim_id": 30,
+    "name": "Distinct etym-marker patterns",
+    "options": [
+      "0",
+      "1",
+      ">1"
+    ]
+  },
+  {
+    "dim_id": 31,
+    "name": "takārānta words (mahat-type)",
+    "options": [
+      "31.1",
+      "31.2",
+      "31.3",
+      "31.4"
+    ]
+  },
+  {
+    "dim_id": 32,
+    "name": "sakārānta words (s-final stems)",
+    "options": [
+      "32.1",
+      "32.2",
+      "32.3"
+    ]
+  },
+  {
+    "dim_id": 33,
+    "name": "rephānta words (r-final stems)",
+    "options": [
+      "33.1",
+      "33.2"
+    ]
+  }
+]

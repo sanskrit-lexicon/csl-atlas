@@ -1,0 +1,100 @@
+{
+  "n_taxa": 32,
+  "n_characters": 80,
+  "mcmc": {
+    "generations": 80000,
+    "burnin": 25000,
+    "thin": 40,
+    "samples": 1375,
+    "acceptance_rate": 0.478,
+    "map_loglik": -987.52,
+    "model": "Mk (2-state symmetric, Lewis 2001)"
+  },
+  "nj_bootstrap_replicates": 500,
+  "support_metric": "P(pair in a shared clade of ≤ 4 leaves)",
+  "robinson_foulds_point_estimates": {
+    "upgma_vs_nj": 0.593,
+    "upgma_vs_bayes": 0.695,
+    "nj_vs_bayes": 0.448
+  },
+  "edge_support": [
+    {
+      "parent": "PWG",
+      "child": "PW",
+      "upgma_support": 0.764,
+      "nj_support": 0.828,
+      "bayes_support": 0.998
+    },
+    {
+      "parent": "PWG",
+      "child": "SCH",
+      "upgma_support": 0.75,
+      "nj_support": 0.808,
+      "bayes_support": 0.998
+    },
+    {
+      "parent": "WIL",
+      "child": "SHS",
+      "upgma_support": 0.912,
+      "nj_support": 0.872,
+      "bayes_support": 0.643
+    },
+    {
+      "parent": "AP90",
+      "child": "AP",
+      "upgma_support": 0.518,
+      "nj_support": 0.652,
+      "bayes_support": 0.98
+    },
+    {
+      "parent": "MW72",
+      "child": "BOP",
+      "upgma_support": 0.82,
+      "nj_support": 0.55,
+      "bayes_support": 0.51
+    },
+    {
+      "parent": "CCS",
+      "child": "CAE",
+      "upgma_support": 0.848,
+      "nj_support": 0.588,
+      "bayes_support": 0.097
+    },
+    {
+      "parent": "PW",
+      "child": "CCS",
+      "upgma_support": 0.134,
+      "nj_support": 0.238,
+      "bayes_support": 0.743
+    },
+    {
+      "parent": "BOP",
+      "child": "MW",
+      "upgma_support": 0.104,
+      "nj_support": 0.226,
+      "bayes_support": 0.649
+    },
+    {
+      "parent": "MW72",
+      "child": "MW",
+      "upgma_support": 0.086,
+      "nj_support": 0.148,
+      "bayes_support": 0.428
+    },
+    {
+      "parent": "YAT",
+      "child": "SHS",
+      "upgma_support": 0.066,
+      "nj_support": 0.012,
+      "bayes_support": 0.0
+    },
+    {
+      "parent": "WIL",
+      "child": "YAT",
+      "upgma_support": 0.052,
+      "nj_support": 0.014,
+      "bayes_support": 0.0
+    }
+  ],
+  "note": "Strong formatting edges (PWG-PW, PWG-SCH, WIL-SHS, AP90-AP) are recovered by all three algorithms; the convention-reformatted edges (MW72-MW, WIL-YAT) stay low across all three — the content≠convention finding is not a UPGMA artifact. Bayesian Mk is the most sensitive to shared derived states (surfaces PW-CCS, BOP-MW)."
+}

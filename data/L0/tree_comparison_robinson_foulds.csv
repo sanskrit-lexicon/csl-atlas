@@ -1,0 +1,9 @@
+,A_jaccard_upgma,A_jaccard_nj,B_hamming_upgma,B_hamming_nj,B_whamming_upgma,B_whamming_nj,C_chamming_upgma,C_chamming_nj
+A_jaccard_upgma,0.000,0.567,0.500,0.600,0.533,0.500,0.567,0.667
+A_jaccard_nj,0.567,0.000,0.567,0.567,0.567,0.467,0.667,0.600
+B_hamming_upgma,0.500,0.567,0.000,0.533,0.433,0.400,0.433,0.600
+B_hamming_nj,0.600,0.567,0.533,0.000,0.533,0.533,0.533,0.300
+B_whamming_upgma,0.533,0.567,0.433,0.533,0.000,0.333,0.533,0.600
+B_whamming_nj,0.500,0.467,0.400,0.533,0.333,0.000,0.500,0.533
+C_chamming_upgma,0.567,0.667,0.433,0.533,0.533,0.500,0.000,0.567
+C_chamming_nj,0.667,0.600,0.600,0.300,0.600,0.533,0.567,0.000

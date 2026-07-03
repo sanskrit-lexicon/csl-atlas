@@ -1,0 +1,114 @@
+{
+  "n_shared_dicts": 30,
+  "shared_dicts": [
+    "ACC",
+    "AP",
+    "AP90",
+    "BEN",
+    "BHS",
+    "BOP",
+    "BUR",
+    "CAE",
+    "CCS",
+    "FRI",
+    "GRA",
+    "GST",
+    "INM",
+    "KRM",
+    "LRV",
+    "MCI",
+    "MD",
+    "MW",
+    "MW72",
+    "PUI",
+    "PW",
+    "PWG",
+    "SCH",
+    "SHS",
+    "SKD",
+    "STC",
+    "VCP",
+    "VEI",
+    "WIL",
+    "YAT"
+  ],
+  "n_directed_edges": 25,
+  "n_scatter_pairs": 435,
+  "top_reformatting_edges": [
+    {
+      "edge": "CAE→MW",
+      "residual": 0.6768,
+      "containment": 0.911,
+      "conv_sim": 0.2342
+    },
+    {
+      "edge": "MD→MW",
+      "residual": 0.6545,
+      "containment": 0.9271,
+      "conv_sim": 0.2726
+    },
+    {
+      "edge": "CCS→MW",
+      "residual": 0.6234,
+      "containment": 0.9004,
+      "conv_sim": 0.277
+    },
+    {
+      "edge": "GRA→PW",
+      "residual": 0.579,
+      "containment": 0.8683,
+      "conv_sim": 0.2893
+    },
+    {
+      "edge": "BEN→PW",
+      "residual": 0.5437,
+      "containment": 0.8892,
+      "conv_sim": 0.3455
+    },
+    {
+      "edge": "WIL→YAT",
+      "residual": 0.5363,
+      "containment": 0.9264,
+      "conv_sim": 0.3901
+    }
+  ],
+  "most_faithful_edges": [
+    {
+      "edge": "SHS→WIL",
+      "residual": 0.1176,
+      "containment": 0.8957,
+      "conv_sim": 0.7781
+    },
+    {
+      "edge": "WIL→SHS",
+      "residual": 0.1744,
+      "containment": 0.9525,
+      "conv_sim": 0.7781
+    },
+    {
+      "edge": "PWG→PW",
+      "residual": 0.1909,
+      "containment": 0.9375,
+      "conv_sim": 0.7466
+    },
+    {
+      "edge": "CCS→CAE",
+      "residual": 0.2322,
+      "containment": 0.9396,
+      "conv_sim": 0.7074
+    },
+    {
+      "edge": "GRA→MW",
+      "residual": 0.24,
+      "containment": 0.8779,
+      "conv_sim": 0.6379
+    },
+    {
+      "edge": "CAE→PW",
+      "residual": 0.2987,
+      "containment": 0.8873,
+      "conv_sim": 0.5886
+    }
+  ],
+  "interpretation": "High residual = absorbed lexicon but recoded house style (editorial reformatting); low residual = faithful in content + form."
+}

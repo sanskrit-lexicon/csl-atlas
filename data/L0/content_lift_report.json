@@ -1,0 +1,609 @@
+{
+  "n_lemmas": 469844,
+  "n_dicts": 41,
+  "rare_thresholds": [
+    2,
+    3,
+    5
+  ],
+  "loader_validation": {
+    "pass": true,
+    "checks": [
+      {
+        "check": "|MW|",
+        "expected": 194084,
+        "got": 194084,
+        "pass": true
+      },
+      {
+        "check": "|PW|",
+        "expected": 151349,
+        "got": 151349,
+        "pass": true
+      },
+      {
+        "check": "|PWG|",
+        "expected": 106083,
+        "got": 106083,
+        "pass": true
+      },
+      {
+        "check": "|BOP|",
+        "expected": 8505,
+        "got": 8505,
+        "pass": true
+      },
+      {
+        "check": "|BOP&MW|",
+        "expected": 7995,
+        "got": 7995,
+        "pass": true
+      }
+    ]
+  },
+  "df_distribution": {
+    "1": 249326,
+    "2": 65331,
+    "3": 45075,
+    "4": 31284,
+    "5": 18263,
+    "6": 12057,
+    "7": 9385,
+    "8": 8054
+  },
+  "into_MW_reranked": [
+    {
+      "source": "PW",
+      "source_size": 151349,
+      "raw_containment": 0.8523,
+      "lift": 2.063,
+      "rare_cont_3": 0.7125,
+      "excl_pair": 17007
+    },
+    {
+      "source": "PWG",
+      "source_size": 106083,
+      "raw_containment": 0.8934,
+      "lift": 2.163,
+      "rare_cont_3": 0.6966,
+      "excl_pair": 721
+    },
+    {
+      "source": "MD",
+      "source_size": 20103,
+      "raw_containment": 0.9271,
+      "lift": 2.244,
+      "rare_cont_3": 0.6009,
+      "excl_pair": 326
+    },
+    {
+      "source": "MW72",
+      "source_size": 51159,
+      "raw_containment": 0.8963,
+      "lift": 2.17,
+      "rare_cont_3": 0.5666,
+      "excl_pair": 2572
+    },
+    {
+      "source": "CAE",
+      "source_size": 38484,
+      "raw_containment": 0.911,
+      "lift": 2.205,
+      "rare_cont_3": 0.5659,
+      "excl_pair": 735
+    },
+    {
+      "source": "STC",
+      "source_size": 23986,
+      "raw_containment": 0.8813,
+      "lift": 2.133,
+      "rare_cont_3": 0.5572,
+      "excl_pair": 757
+    },
+    {
+      "source": "BEN",
+      "source_size": 17036,
+      "raw_containment": 0.9374,
+      "lift": 2.269,
+      "rare_cont_3": 0.5116,
+      "excl_pair": 198
+    },
+    {
+      "source": "ACC",
+      "source_size": 32576,
+      "raw_containment": 0.5237,
+      "lift": 1.268,
+      "rare_cont_3": 0.4434,
+      "excl_pair": 8631
+    },
+    {
+      "source": "LAN",
+      "source_size": 4726,
+      "raw_containment": 0.9293,
+      "lift": 2.25,
+      "rare_cont_3": 0.3937,
+      "excl_pair": 64
+    },
+    {
+      "source": "SNP",
+      "source_size": 448,
+      "raw_containment": 0.9174,
+      "lift": 2.221,
+      "rare_cont_3": 0.3784,
+      "excl_pair": 4
+    },
+    {
+      "source": "GST",
+      "source_size": 6761,
+      "raw_containment": 0.8493,
+      "lift": 2.056,
+      "rare_cont_3": 0.3579,
+      "excl_pair": 77
+    },
+    {
+      "source": "BOP",
+      "source_size": 8505,
+      "raw_containment": 0.94,
+      "lift": 2.276,
+      "rare_cont_3": 0.3524,
+      "excl_pair": 48
+    },
+    {
+      "source": "GRA",
+      "source_size": 11108,
+      "raw_containment": 0.8779,
+      "lift": 2.125,
+      "rare_cont_3": 0.2913,
+      "excl_pair": 202
+    },
+    {
+      "source": "CCS",
+      "source_size": 28751,
+      "raw_containment": 0.9004,
+      "lift": 2.18,
+      "rare_cont_3": 0.2415,
+      "excl_pair": 19
+    },
+    {
+      "source": "ARMH",
+      "source_size": 6673,
+      "raw_containment": 0.9285,
+      "lift": 2.248,
+      "rare_cont_3": 0.2117,
+      "excl_pair": 36
+    },
+    {
+      "source": "ABCH",
+      "source_size": 11584,
+      "raw_containment": 0.9246,
+      "lift": 2.238,
+      "rare_cont_3": 0.2109,
+      "excl_pair": 49
+    },
+    {
+      "source": "ACPH",
+      "source_size": 1453,
+      "raw_containment": 0.8176,
+      "lift": 1.979,
+      "rare_cont_3": 0.1879,
+      "excl_pair": 22
+    },
+    {
+      "source": "ACSJ",
+      "source_size": 634,
+      "raw_containment": 0.8565,
+      "lift": 2.073,
+      "rare_cont_3": 0.1875,
+      "excl_pair": 7
+    },
+    {
+      "source": "LRV",
+      "source_size": 48259,
+      "raw_containment": 0.7489,
+      "lift": 1.813,
+      "rare_cont_3": 0.1649,
+      "excl_pair": 795
+    },
+    {
+      "source": "VEI",
+      "source_size": 3704,
+      "raw_containment": 0.8553,
+      "lift": 2.071,
+      "rare_cont_3": 0.1556,
+      "excl_pair": 26
+    },
+    {
+      "source": "INM",
+      "source_size": 9454,
+      "raw_containment": 0.7187,
+      "lift": 1.74,
+      "rare_cont_3": 0.153,
+      "excl_pair": 186
+    },
+    {
+      "source": "VCP",
+      "source_size": 48636,
+      "raw_containment": 0.8031,
+      "lift": 1.944,
+      "rare_cont_3": 0.1346,
+      "excl_pair": 332
+    },
+    {
+      "source": "FRI",
+      "source_size": 7775,
+      "raw_containment": 0.8076,
+      "lift": 1.955,
+      "rare_cont_3": 0.1287,
+      "excl_pair": 65
+    },
+    {
+      "source": "PE",
+      "source_size": 6623,
+      "raw_containment": 0.7226,
+      "lift": 1.749,
+      "rare_cont_3": 0.09,
+      "excl_pair": 31
+    },
+    {
+      "source": "SHS",
+      "source_size": 46730,
+      "raw_containment": 0.8364,
+      "lift": 2.025,
+      "rare_cont_3": 0.0887,
+      "excl_pair": 61
+    },
+    {
+      "source": "AP",
+      "source_size": 88667,
+      "raw_containment": 0.43,
+      "lift": 1.041,
+      "rare_cont_3": 0.0846,
+      "excl_pair": 1860
+    },
+    {
+      "source": "YAT",
+      "source_size": 44720,
+      "raw_containment": 0.8325,
+      "lift": 2.015,
+      "rare_cont_3": 0.0812,
+      "excl_pair": 130
+    },
+    {
+      "source": "PUI",
+      "source_size": 11730,
+      "raw_containment": 0.5354,
+      "lift": 1.296,
+      "rare_cont_3": 0.0735,
+      "excl_pair": 145
+    },
+    {
+      "source": "BHS",
+      "source_size": 17777,
+      "raw_containment": 0.3679,
+      "lift": 0.891,
+      "rare_cont_3": 0.0684,
+      "excl_pair": 289
+    },
+    {
+      "source": "MCI",
+      "source_size": 2325,
+      "raw_containment": 0.7269,
+      "lift": 1.76,
+      "rare_cont_3": 0.0598,
+      "excl_pair": 8
+    },
+    {
+      "source": "PGN",
+      "source_size": 470,
+      "raw_containment": 0.4213,
+      "lift": 1.02,
+      "rare_cont_3": 0.0496,
+      "excl_pair": 7
+    },
+    {
+      "source": "SCH",
+      "source_size": 28455,
+      "raw_containment": 0.5103,
+      "lift": 1.235,
+      "rare_cont_3": 0.0446,
+      "excl_pair": 207
+    },
+    {
+      "source": "PWKVN",
+      "source_size": 14995,
+      "raw_containment": 0.6507,
+      "lift": 1.575,
+      "rare_cont_3": 0.038,
+      "excl_pair": 0
+    },
+    {
+      "source": "WIL",
+      "source_size": 43939,
+      "raw_containment": 0.8318,
+      "lift": 2.014,
+      "rare_cont_3": 0.0362,
+      "excl_pair": 3
+    },
+    {
+      "source": "IEG",
+      "source_size": 7575,
+      "raw_containment": 0.3789,
+      "lift": 0.917,
+      "rare_cont_3": 0.0347,
+      "excl_pair": 61
+    },
+    {
+      "source": "SKD",
+      "source_size": 40817,
+      "raw_containment": 0.2169,
+      "lift": 0.525,
+      "rare_cont_3": 0.0303,
+      "excl_pair": 403
+    },
+    {
+      "source": "BUR",
+      "source_size": 19146,
+      "raw_containment": 0.7269,
+      "lift": 1.76,
+      "rare_cont_3": 0.0229,
+      "excl_pair": 32
+    },
+    {
+      "source": "PD",
+      "source_size": 104959,
+      "raw_containment": 0.0689,
+      "lift": 0.167,
+      "rare_cont_3": 0.0144,
+      "excl_pair": 565
+    },
+    {
+      "source": "KRM",
+      "source_size": 1698,
+      "raw_containment": 0.3822,
+      "lift": 0.925,
+      "rare_cont_3": 0.0086,
+      "excl_pair": 3
+    },
+    {
+      "source": "AP90",
+      "source_size": 34277,
+      "raw_containment": 0.5011,
+      "lift": 1.213,
+      "rare_cont_3": 0.0069,
+      "excl_pair": 1
+    }
+  ],
+  "canonical_lineages": [
+    {
+      "edge": "PWG->PW",
+      "raw_containment": 0.9375,
+      "lift": 2.91,
+      "rare_cont_2": 0.5279,
+      "rare_cont_3": 0.8438,
+      "rare_cont_5": 0.9068,
+      "excl_pair": 3767
+    },
+    {
+      "edge": "WIL->SHS",
+      "raw_containment": 0.9525,
+      "lift": 9.577,
+      "rare_cont_2": 0.2905,
+      "rare_cont_3": 0.7263,
+      "rare_cont_5": 0.8647,
+      "excl_pair": 289
+    },
+    {
+      "edge": "WIL->YAT",
+      "raw_containment": 0.9264,
+      "lift": 9.733,
+      "rare_cont_2": 0.4151,
+      "rare_cont_3": 0.6723,
+      "rare_cont_5": 0.8016,
+      "excl_pair": 413
+    },
+    {
+      "edge": "PWKVN->PW",
+      "raw_containment": 0.9985,
+      "lift": 3.1,
+      "rare_cont_2": 0.9525,
+      "rare_cont_3": 0.9926,
+      "rare_cont_5": 0.9977,
+      "excl_pair": 441
+    },
+    {
+      "edge": "PWG->MW",
+      "raw_containment": 0.8934,
+      "lift": 2.163,
+      "rare_cont_2": 0.101,
+      "rare_cont_3": 0.6966,
+      "rare_cont_5": 0.8153,
+      "excl_pair": 721
+    },
+    {
+      "edge": "MW72->MW",
+      "raw_containment": 0.8963,
+      "lift": 2.17,
+      "rare_cont_2": 0.463,
+      "rare_cont_3": 0.5666,
+      "rare_cont_5": 0.7483,
+      "excl_pair": 2572
+    },
+    {
+      "edge": "BOP->MW",
+      "raw_containment": 0.94,
+      "lift": 2.276,
+      "rare_cont_2": 0.2034,
+      "rare_cont_3": 0.3524,
+      "rare_cont_5": 0.4924,
+      "excl_pair": 48
+    }
+  ],
+  "top_exclusive_pairs": [
+    {
+      "pair": "MW/PW",
+      "n": 17007,
+      "examples": [
+        "akzaDurA",
+        "akzaprapAtana",
+        "agnihotrezwi",
+        "ajamI|a",
+        "awawyA"
+      ]
+    },
+    {
+      "pair": "ACC/MW",
+      "n": 8631,
+      "examples": [
+        "agAravinoda",
+        "agnirahasyakARqa",
+        "aNkasaMjYA",
+        "aNgasPuraRavicAra",
+        "aNgiraHsmfti"
+      ]
+    },
+    {
+      "pair": "AP/SKD",
+      "n": 8549,
+      "examples": [
+        "aMSuDaraH",
+        "aMSulaH",
+        "aMSuhastaH",
+        "aMsakUwaH",
+        "aMhaH"
+      ]
+    },
+    {
+      "pair": "PW/PWG",
+      "n": 3767,
+      "examples": [
+        "aMSay",
+        "aMsay",
+        "akapIvant",
+        "akziyant",
+        "aKanant"
+      ]
+    },
+    {
+      "pair": "AP/AP90",
+      "n": 3458,
+      "examples": [
+        "aMhasaspatiH",
+        "akAmataH",
+        "akIrtiH",
+        "akutaH",
+        "akzaraSaH"
+      ]
+    },
+    {
+      "pair": "MW/MW72",
+      "n": 2572,
+      "examples": [
+        "aktos",
+        "aNkAra",
+        "atinud",
+        "atyukz",
+        "atyuh"
+      ]
+    },
+    {
+      "pair": "AP/MW",
+      "n": 1860,
+      "examples": [
+        "akAraRe",
+        "agocareRa",
+        "atikfcCram",
+        "atiSayanI",
+        "anuvAkasaNKyA"
+      ]
+    },
+    {
+      "pair": "AP90/SKD",
+      "n": 1698,
+      "examples": [
+        "aMSukaM",
+        "akaM",
+        "akupyaM",
+        "aktuH",
+        "agAraM"
+      ]
+    },
+    {
+      "pair": "AP90/LRV",
+      "n": 818,
+      "examples": [
+        "aMkurita",
+        "aMkolikA",
+        "aMkya",
+        "aMg",
+        "aMga"
+      ]
+    },
+    {
+      "pair": "LRV/MW",
+      "n": 795,
+      "examples": [
+        "akarmikA",
+        "aKyAtikara",
+        "anityadattrima",
+        "anizwagraha",
+        "anukA"
+      ]
+    },
+    {
+      "pair": "MW/STC",
+      "n": 757,
+      "examples": [
+        "atiniHSvas",
+        "atiprapad",
+        "atipravA",
+        "atipraSaMs",
+        "ativirAj"
+      ]
+    },
+    {
+      "pair": "CAE/MW",
+      "n": 735,
+      "examples": [
+        "antarniKAta",
+        "antarvftti",
+        "antastapta",
+        "apatyasneha",
+        "apamlukta"
+      ]
+    },
+    {
+      "pair": "MW/PWG",
+      "n": 721,
+      "examples": [
+        "akalkala",
+        "atimarSa",
+        "atizkadvan",
+        "anaparAdDam",
+        "aparAntikA"
+      ]
+    },
+    {
+      "pair": "PD/PW",
+      "n": 594,
+      "examples": [
+        "akaRWatAlvozWa",
+        "akarmaDAraya",
+        "akARqatikta",
+        "akAraRatas",
+        "akAraRapUrvaka"
+      ]
+    },
+    {
+      "pair": "MW/PD",
+      "n": 565,
+      "examples": [
+        "aMSIkf",
+        "aMhana",
+        "akabara",
+        "akabbara",
+        "akartftva"
+      ]
+    }
+  ],
+  "interpretation": "Raw containment is size-confounded (highest for the unrelated BOP). Rare-lemma containment (rare_cont_k: fraction of the source's df<=k lemmas recurring in the inheritor) drops the common core and isolates idiosyncratic overlap -- true content heirs (PWG->MW, MW72->MW) score high, coincidental coverage (BOP->MW) scores low. Report content claims as rare-lemma containment or lift, never raw containment."
+}
