@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedBy": "scripts/obs/headword_multiplicity.py",
+  "sourceRoot": "../csl-orig/v02",
+  "method": {
+    "headwordKey": "standard CDSL dicts: <k1> per <L> line; k1-less kosa dicts: POS-stripped <syns> lemmas (<s>-wrapped for abch/acph/acsj, bare comma list for nmmb)",
+    "collapse": "distinct lemma keys corpus-wide vs raw <L> entry count; a shared headword is independent attestation in each dictionary, not necessarily a copy, so the unique fraction is a floor for novelty",
+    "foldSensitivity": "final SLP1 anusvara (M) / visarga (H) stripped per key, folded within each dict first — a report-only sensitivity bound, not a replacement for the canonical keys"
+  },
+  "documentedIn": "docs/CORPUS_REDUNDANCY_GENEALOGY.md",
+  "perDictCsv": "data/obs/headword_multiplicity.csv",
+  "dictionaryCount": 44,
+  "kosaFormatDicts": [
+    "abch",
+    "acph",
+    "acsj",
+    "nmmb"
+  ],
+  "totalEntries": 1496157,
+  "distinctLemmas": 410259,
+  "collapseRatio": 3.65,
+  "redundantPct": 57.8,
+  "independentPct": 42.2,
+  "foldSensitivity": {
+    "distinctLemmas": 363552,
+    "independentPct": 38.8,
+    "deltaPoints": -3.4
+  },
+  "warnings": [
+    "entry counts include homonym-split <L> records; the collapse ratio therefore mixes lexical redundancy with per-dictionary entry-splitting policy"
+  ],
+  "generatedAt": "2026-07-03T08:41:45.711Z"
+}
