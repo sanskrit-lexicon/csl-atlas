@@ -57,12 +57,12 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 
 | Review ID | Lemma | Pair | Source pointers |
 |---|---|---|---|
-| `h5:known-correction:MW-PW:Adya:` | `Adya` | `MW/PW` | [MW L23892](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L84962)<br>[PW L14507](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L54733) |
-| `h5:known-correction:MW-PW:Akenipa:` | `Akenipa` | `MW/PW` | [MW L22292](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L79513)<br>[PW L13484](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L50861) |
-| `h5:known-correction:MW-PW:Bavamanyu:` | `Bavamanyu` | `MW/PW` | [MW L149044](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499440)<br>[PW L79073](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L325800) |
-| `h5:known-correction:MW-PWG:DA:` | `DA` | `MW/PWG` | [MW L99233](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L332818)<br>[PWG L36484](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L352629) |
-| `h5:known-correction:MW-PWG:DU:` | `DU` | `MW/PWG` | [MW L101481](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340065)<br>[PWG L36831](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L358847) |
-| `h5:known-correction:MW-PW:Opala:` | `Opala` | `MW/PW` | [MW L41088](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L143942)<br>[PW L22961](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L89073) |
+| `h5:known-correction:MW-PW:Adya:` | `Adya` | `MW/PW` | [MW L23892](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L84959)<br>[PW L14507](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L54733) |
+| `h5:known-correction:MW-PW:Akenipa:` | `Akenipa` | `MW/PW` | [MW L22292](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L79510)<br>[PW L13484](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L50861) |
+| `h5:known-correction:MW-PW:Bavamanyu:` | `Bavamanyu` | `MW/PW` | [MW L149044](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499371)<br>[PW L79073](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L325801) |
+| `h5:known-correction:MW-PWG:DA:` | `DA` | `MW/PWG` | [MW L99233](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L332776)<br>[PWG L36484](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L182393) |
+| `h5:known-correction:MW-PWG:DU:` | `DU` | `MW/PWG` | [MW L101481](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340020)<br>[PWG L36831](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L184442) |
+| `h5:known-correction:MW-PW:Opala:` | `Opala` | `MW/PW` | [MW L41088](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L143936)<br>[PW L22961](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L89074) |
 
 ## QA Candidate Rows
 
