@@ -37,3 +37,6 @@ docs/SESSION_HANDOFF.md
 
 # interactive review sheets (personal voting artifacts, per /review-sheet)
 review/
+
+# regenerable L0 annotation-sheet emit (built by gen_lrv_fri_annotation_sheet.py)
+data/L0/lrv_fri_annotation_items.json

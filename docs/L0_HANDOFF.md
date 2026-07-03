@@ -115,8 +115,18 @@ Steps 3–6 (citation-set / entry-similarity / forensic) remain → §4(D).
   rare-lemma containment instead of raw containment.
 - **(B) Write Article 20 / Paper H §5 in full** — all convention-side numbers are in hand;
   the content side should use (A)'s corrected numbers, not raw containment.
-- **(C) Complete the dict set** — LRV/FRI are gated (not in Patel's 36; annotate from source);
-  KNA/KOW/AMAR need local sources from Cologne. Then re-run s2*→s3→s5 for the all-37 tree.
+- **(C) Complete the dict set** — investigated 03-07-2026 (Opus 4.8 `claude-opus-4-8`), now
+  **H137** ([`Uprava/handoffs/H137_lrv_fri_patel_annotation_and_dictset_blockers.md`](https://github.com/gasyoun/Uprava/blob/main/handoffs/H137_lrv_fri_patel_annotation_and_dictset_blockers.md)).
+  NOT a clean s2*→s3→s5 re-run: it splits three ways.
+  - **LRV/FRI** (the only sourced dicts outside Patel gold) — completable now via a human-gate
+    annotation of dims 1,3,5,6,7. Interactive sheet built (`scripts/L0/gen_lrv_fri_annotation_sheet.py`
+    → `review/lrv_fri_patel_annotation.html`); votes → `scripts/L0/apply_lrv_fri_annotation.py --rerun`
+    (durable overlay `data/L0/manual_annotations.csv`; new order **s2→s2b→s2d→apply→s3→s5**). Awaiting MG votes.
+  - **KNA/KOW** — metadata-only stubs, no digitized source anywhere reachable (`git ls-tree HEAD v02/`
+    empty); blocked on Cologne digitization (@WAITING).
+  - **AMAR** — source present (`../AMAR/amar.txt`) but verse-kosha `;c{}`/`<s>` format; `s2` detectors
+    score ~0 by construction (SKD/VCP trap). Do NOT fingerprint as-is — @DECIDE whether a thesaurus
+    belongs in a prose-dict tree + a kosha parser.
 - **(D) Phases L3/L4/L6** — forensic + entry-similarity + citation-set: the real content-copy
   evidence (and Paper M's spine).
 
