@@ -72,6 +72,12 @@ Grep `package.json` `scripts` for the exact one you need — do not guess a name
   (`scripts/lib/source-snippet.mjs`) and the
   [`/tools/source`](src/tools/source.md) viewer streams the raw file and stops at
   the requested line + context. Point per-line source references at that viewer.
+  **Raw source lines are SLP1-inside-markup and unreadable — render them to IAST
+  for display** with [`sourceLineToIast` / `sourceTextToIast`](src/lib/source-iast.js),
+  which honors each dict's encoding (MW `<s>…</s>`, PW/PWG/AP/WIL `{#…#}` with
+  `{%…%}` meaning left as-is, VCP/SKD whole-line prose) and strips the markup
+  shell. The viewer defaults to IAST with a Raw toggle; the review snippets show
+  IAST over a muted raw line. Reuse this helper anywhere a raw source line is shown.
 - **Scope is gated by `docs/BOUNDARY_RULES.md`** (superseded by/consistent with
   `ARCHITECTURE.md`): a page/script/dataset belongs here only if its primary
   object is a dictionary, edition, headword/entry, source citation/siglum, or
