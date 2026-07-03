@@ -3,18 +3,23 @@
 *Draft manuscript for submission to a metalexicography venue (target: International
 Journal of Lexicography, with the World Sanskrit Conference 2027 as an indological
 alternate). Empirical basis: the indigenous-root extraction
-([`scripts/lexico/m4_indigenous.py`](../../scripts/lexico/m4_indigenous.py) →
-[`data/lexico/indigenous_roots.csv`](../../data/lexico/indigenous_roots.csv),
-[`indigenous_by_dict.json`](../../data/lexico/indigenous_by_dict.json)); the
-anubandha key ([`MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md`](../MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md));
+([`scripts/lexico/m4_indigenous.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m4_indigenous.py) →
+[`data/lexico/indigenous_roots.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/indigenous_roots.csv),
+[`indigenous_by_dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/indigenous_by_dict.json)); the
+anubandha key ([`MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md));
 the cross-dictionary agreement
-([`root_agreement.json`](../../data/lexico/root_agreement.json),
-[`MICROSTRUCTURE_ROOT_AGREEMENT.md`](../MICROSTRUCTURE_ROOT_AGREEMENT.md)); and the
-zero-meaning methodology ([`MICROSTRUCTURE_ZERO_MEANING.md`](../MICROSTRUCTURE_ZERO_MEANING.md)).
+([`root_agreement.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/root_agreement.json),
+[`MICROSTRUCTURE_ROOT_AGREEMENT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_ROOT_AGREEMENT.md)); and the
+zero-meaning methodology ([`MICROSTRUCTURE_ZERO_MEANING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_ZERO_MEANING.md)).
 Companion to *Two Citation Registers*
-([`paper_citation_registers.md`](paper_citation_registers.md)) and *Condensation, Not
-Inflation* ([`paper_sense_inheritance.md`](paper_sense_inheritance.md)). All counts
-are reproducible from committed data; numbers herein are the 2026-06 snapshot.
+([`paper_citation_registers.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_citation_registers.md)) and *Condensation, Not
+Inflation* ([`paper_sense_inheritance.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_sense_inheritance.md)); the agreement metric
+itself is owned by the series' methods paper (P1, §3.9), and the derivational-apparatus
+overlap with the Pāṇinian-derivation study (A35) and the ŚKD/VCP microstructure study
+(A30) is coordinated in the series map — see the companion block in the References. All
+counts are reproducible from committed data; numbers herein are the 2026-06 snapshot;
+every figure was re-verified against the artifacts in the 2026-07-03 referee pass
+([A04_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A04_review_fable5.md)).
 Author: M. Gasūns (byline to finalise).*
 
 ---
@@ -53,8 +58,9 @@ microstructure; indigenous lexicography; digital lexicography; measurement bias.
 
 A digital dictionary corpus invites measurement: count the part-of-speech tags, the
 gender markers, the source citations, and you have a microstructural profile of each
-dictionary. Applied across the forty-three dictionaries of the Cologne Digital
-Sanskrit Lexicon, such measurement produces a striking and recurring result — the two
+dictionary. Applied across the forty-four dictionaries of the Cologne Digital
+Sanskrit Lexicon (43 at the 2026-06 measurement snapshot the numbers herein reflect),
+such measurement produces a striking and recurring result — the two
 great Sanskrit-to-Sanskrit *kośa*s, the *Śabdakalpadruma* (SKD) and the *Vācaspatya*
 (VCP), score at or near **zero** on almost every European-style detector. They carry
 no `<lex>` part-of-speech tags, no `<ls>` source-citation elements, no structural
@@ -73,7 +79,8 @@ convention-specific detector's zero as absence of content — is stated in §5.
 
 The European Indological dictionaries tag grammar explicitly: Monier-Williams writes
 `<lex>m.</lex>` for a masculine noun, `<ls>Pāṇ. 3,1,86</ls>` for a source. The
-indigenous *kośa*s descend instead from the *dhātupāṭha* and *kośa* traditions, in
+indigenous *kośa*s descend instead from the *dhātupāṭha* and *kośa* traditions
+(Palsule 1961; Vogel 1979), in
 which a root's grammar is conveyed by **position and convention** — the company a
 root keeps, the indicatory letters attached to it, the prose formula that closes a
 sense. A detector written for the European apparatus finds none of its expected
@@ -128,7 +135,7 @@ entries each; every European dictionary in the corpus carries **eight or fewer**
 
 **Table 1.** Root entries per dictionary (selected).
 
-| Dictionary | Root entries | of total entries |
+| Dictionary | Root entries | dict. total entries |
 |---|---:|---:|
 | SKD — *Śabdakalpadruma* | 2,544 | 42,531 |
 | VCP — *Vācaspatya* | 2,230 | 50,135 |
@@ -139,7 +146,10 @@ entries each; every European dictionary in the corpus carries **eight or fewer**
 | PW — Petersburg (kürzere) | 3 | 170,556 |
 | MW72 — Monier-Williams 1872 | 1 | 55,388 |
 
-*Source: [`indigenous_by_dict.json`](../../data/lexico/indigenous_by_dict.json).*
+*Source: [`indigenous_by_dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/indigenous_by_dict.json).
+"European dictionary" excludes Aufrecht's* Catalogus Catalogorum *(ACC), a bibliographic
+catalogue of works rather than a lexicon, whose 10 root-entry hits are citations to root
+authorities in work descriptions — the artifact records them, the claim does not count them.*
 
 A microstructural census that keyed "verbal grammar" to a European tag would conclude
 that the CDSL barely records roots at all. The truth is the reverse: it records them
@@ -222,7 +232,9 @@ line (VCP, SHS) converge on the same classification of the same roots.
 **For digital standards.** Encoding this microstructure in an interoperable form
 requires treating the *anubandha* slot and the *iti*-unit as first-class structures,
 not as untagged prose to be flattened — a requirement a baseline lexicographic schema
-(e.g. TEI Lex-0) meets only with a *kośa*-specific customisation.
+(TEI Lex-0; Tasovac, Romary et al. 2018) meets only with a *kośa*-specific
+customisation, exactly the kind of microstructural specificity the metalexicographic
+survey tradition anticipates (Hausmann and Wiegand 1989).
 
 ## 6. Limitations and future work
 
@@ -260,7 +272,35 @@ ed. G. B. Palsule (Poona, 1954); Tarkavācaspati, *Vācaspatya* (Calcutta, 1873�
 *Resource.* Kapp, D. and Malten, T., *Cologne Digital Sanskrit Dictionaries*,
 University of Cologne (sanskrit-lexicon.uni-koeln.de).
 
-*Secondary (to be completed).* Standard treatments of the *dhātupāṭha* and *anubandha*
-systems; the *kośa* genre in Sanskrit lexicography (Vogel, *Indian Lexicography*); and
-metalexicographic work on microstructure and on measurement bias in dictionary
-corpora. [TODO: author to insert specific citations.]
+*Secondary.*
+
+Hausmann, Franz Josef, and Herbert Ernst Wiegand. 1989. "Component Parts and Structures
+of General Monolingual Dictionaries: A Survey." In Hausmann, Reichmann, Wiegand and
+Zgusta (eds.), *Wörterbücher / Dictionaries / Dictionnaires,* vol. 1 (HSK 5.1), 328–360.
+Berlin and New York: Walter de Gruyter.
+
+Palsule, Gajanan Balkrishna. 1961. *The Sanskrit Dhātupāṭhas: A Critical Study.* Poona:
+University of Poona.
+
+Tasovac, Toma, Laurent Romary, et al. 2018. *TEI Lex-0: A Baseline Encoding for
+Lexicographic Data.* DARIAH Working Group on Lexical Resources.
+[`dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html`](https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html).
+
+Vogel, Claus. 1979. *Indian Lexicography.* (A History of Indian Literature, vol. V,
+fasc. 4, ed. Jan Gonda.) Wiesbaden: Otto Harrassowitz.
+
+**Companion papers (this series).**
+
+Gasūns, M. (in preparation). *Measuring the Dictionary Family: A Traceable Measurement
+Framework for Computational Lexicography* (P1 — owns the root-parser-agreement metric
+this paper's §4.4 instantiates, §3.9 there).
+
+Gasūns, M. (in preparation). *Condensation, Not Inflation* (P2) and *Two Citation
+Registers* (OBS-C) — the sense- and citation-register companions §4.5 defers to.
+
+**Coordinated sibling studies (shared derivational apparatus — one lead paper to be
+designated before submission).** The Pāṇinian-derivation consistency study (A35,
+csl-orig, 10 dictionaries) and the ŚKD/VCP indigenous-microstructure study (A30) overlap
+with this paper on the VCP/SKD derivational structure; the shared datasets are A35's
+per-dictionary `*_etymology.tsv` and the root crosswalks. This paper claims the
+*anubandha*/root-grammar layer; derivational affixes are A35's.
