@@ -12,6 +12,7 @@ this with the convention-fingerprint cladogram + L3 forensic signals
 to produce the canonical genealogy.
 """
 
+import os
 import sys
 import csv
 import collections
@@ -21,7 +22,20 @@ sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
 REPO_ROOT = Path(__file__).parent.parent
-SANHW1 = REPO_ROOT / "observatory" / "snapshots" / "sanhw1.txt"
+
+
+def _find_sanhw1():
+    """Locate the gitignored, API-regenerable sanhw1 snapshot across the repo split."""
+    for p in (os.environ.get("SANHW1"),
+              REPO_ROOT / "observatory" / "snapshots" / "sanhw1.txt",
+              REPO_ROOT.parent / "csl-observatory" / "observatory" / "snapshots" / "sanhw1.txt"):
+        if p and Path(p).exists():
+            return Path(p)
+    raise FileNotFoundError("sanhw1.txt not found — set $SANHW1, or place it in "
+                            "observatory/snapshots/ or ../csl-observatory/observatory/snapshots/.")
+
+
+SANHW1 = _find_sanhw1()
 DATA = REPO_ROOT / "data"
 DATA.mkdir(parents=True, exist_ok=True)
 

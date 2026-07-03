@@ -10,8 +10,14 @@ compilation would not:
       1.0 = identical order). Crucial null: MW vs APTE (AP) — an independent English dict
       that cites the same classical texts. If MW tracks PWG's order but not AP's, the
       order is PWG-specific = copying, not a shared scholarly ordering convention.
-  (B) APPARATUS SIZE — Spearman of citation-count per shared headword (structural proxy;
-      true sense-segmentation parallelism needs aligned sense-parsing, deferred).
+  (B) APPARATUS SIZE — Spearman of citation-count per shared headword (a rough structural
+      proxy only). For the REAL per-dictionary sense-division metric, do NOT reinvent it here:
+      use the repo's canonical, adapter-validated pipeline `npm run build-sense-depth`
+      (scripts/build-sense-depth.mjs + scripts/lib/dict-feature-adapters.mjs), which counts
+      senses per the validated per-dict convention (MW <div> sections, PWG/PW `N〉`, AP bullets)
+      -> src/data/dicts/sense-depth.json. NB it is per-entry, so it under-counts MW's senses
+      when MW splits them across sub-<L> entries (e.g. artha = 15 sub-entries). The structural
+      copying signal is already carried by F2 (homonym-split concordance, 64-77% vs ~33% null).
   (C) CONTENT       — Jaccard of the SANSKRIT tokens referenced inside the entry
       (<s>/<s1> in MW, {#..#} in the German dicts): do the two articles cross-reference
       the same Sanskrit words? Language-neutral. (Semantic DE->EN gloss MT deferred — it

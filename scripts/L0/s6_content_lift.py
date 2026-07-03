@@ -48,7 +48,18 @@ import collections
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
-SNAPSHOT = "observatory/snapshots/sanhw1.txt"
+def _find_sanhw1():
+    """Locate the gitignored, API-regenerable sanhw1 snapshot across the repo split
+    (csl-observatory holds it; this suite now lives in csl-atlas)."""
+    for p in (os.environ.get("SANHW1"), "observatory/snapshots/sanhw1.txt",
+              "../csl-observatory/observatory/snapshots/sanhw1.txt"):
+        if p and os.path.exists(p):
+            return p
+    raise FileNotFoundError("sanhw1.txt not found — set $SANHW1, or place it at "
+                            "observatory/snapshots/ or ../csl-observatory/observatory/snapshots/.")
+
+
+SNAPSHOT = _find_sanhw1()
 RARE_K = (2, 3, 5)            # document-frequency thresholds for "rare"
 MIN_RARE_DENOM = 30          # ignore rare-containment ratios on tiny denominators in headline tables
 
