@@ -7,7 +7,7 @@ toc: false
 ${t("learner.description")}
 
 ```js
-import { normalizeLookupQuery } from "../lib/lookup-normalize.js";
+import { normalizeLookupQuery, slp1ToIast } from "../lib/lookup-normalize.js";
 ```
 
 ```js
@@ -137,7 +137,7 @@ if (query && !exact && !prefixMatches.length) {
 display(html`<div class="learner-cards">
   ${shown.map(e => html`<section class="learner-card">
     <div class="learner-card-head">
-      <h2>${e.l}${e.g ? html` <small class="learner-gender">${e.g}</small>` : ""}</h2>
+      <h2>${slp1ToIast(e.l)}${e.g ? html` <small class="learner-gender">${e.g}</small>` : ""} <code style="font-size:.6em;color:var(--theme-foreground-muted);font-weight:400">${e.l}</code></h2>
       <span class="learner-band-chip band-${e.fb}">${e.fb >= 1 ? html`${bandLabel(e.fb)} · ${bandPriority(e.fb)}` : t("learner.not-in-corpus")}</span>
     </div>
     <div class="learner-card-body">

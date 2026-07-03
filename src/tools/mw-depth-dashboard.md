@@ -36,6 +36,7 @@ const t = (key) => {
 
 ```js
 import * as Plot from "npm:@observablehq/plot";
+import { slp1ToIast } from "../lib/lookup-normalize.js";
 ```
 
 ```js
@@ -74,7 +75,7 @@ display(Inputs.table(summary.types.map(t => ({
   type: t.type,
   count: t.count,
   "%": t.pct,
-  example: t.examples[0]?.k1 ?? "",
+  example: slp1ToIast(t.examples[0]?.k1 ?? ""),
   source: t.examples[0]?.href ?? ""
 })), {
   columns: ["type", "count", "%", "example", "source"],

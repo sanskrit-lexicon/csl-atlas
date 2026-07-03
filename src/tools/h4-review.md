@@ -24,6 +24,10 @@ It does not decide any row. Auto-resolved rows are machine proposals with their 
 - Next use: work the needs-review table below; the ordered markdown twin is `docs/H4_REVIEW_WORKSHEET.md`.
 
 ```js
+import { slp1ToIast } from "../lib/lookup-normalize.js";
+```
+
+```js
 const packet = FileAttachment("../data/lexico/h4_semantic_field_review_packet.json").json();
 ```
 
@@ -52,7 +56,8 @@ const typeFilter = view(Inputs.select(["(all)", ...new Set(needs.map(r => r.samp
 const shown = typeFilter === "(all)" ? needs : needs.filter(r => r.sampleLabel === typeFilter);
 display(html`<p style="color:var(--theme-foreground-muted)">${shown.length} row${shown.length === 1 ? "" : "s"}.</p>`);
 display(Inputs.table(shown.map(r => ({
-  lemma: r.lemma,
+  lemma: slp1ToIast(r.lemma),
+  slp1: r.lemma,
   type: r.sampleLabel,
   dict: r.dictionary.label,
   field: r.field.label,
@@ -61,7 +66,7 @@ display(Inputs.table(shown.map(r => ({
   decide: r.expectedDecisionLabels.join(" · "),
   source: r.sourcePointers.find(p => p.href)
 })), {
-  columns: ["lemma", "type", "dict", "field", "coverage", "Δ", "decide", "source"],
+  columns: ["lemma", "slp1", "type", "dict", "field", "coverage", "Δ", "decide", "source"],
   sort: "type",
   format: {
     source: p => p ? html`<a href=${p.href} target="_blank" rel="noopener">${p.dictionary} L${p.L}</a>` : html`<span style="color:var(--theme-foreground-faint)">—</span>`

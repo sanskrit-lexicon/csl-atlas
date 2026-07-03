@@ -35,6 +35,7 @@ const t = (key) => {
 
 ```js
 import * as d3 from "npm:d3@7";
+import { slp1ToIast } from "../lib/lookup-normalize.js";
 
 const width = 1000;
 const height = 560;
@@ -174,7 +175,7 @@ display(html`
         <ol>
           ${group.examples.map(entry => html`
             <li>
-              <a href=${entry.href} target="_blank" rel="noopener noreferrer">${entry.k1}</a>
+              <a href=${entry.href} target="_blank" rel="noopener noreferrer">${slp1ToIast(entry.k1)}</a>
               <span class="entry-meta">L ${entry.L}; page ${entry.pc}; line ${entry.line}</span>
             </li>
           `)}

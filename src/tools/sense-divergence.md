@@ -19,6 +19,10 @@ Which headwords does each dictionary treat very differently from its peers? This
 - Next use: inspect highlighted rows, then open exact dictionary source records before citing the pattern.
 
 ```js
+import { slp1ToIast } from "../lib/lookup-normalize.js";
+```
+
+```js
 const divData = FileAttachment("../data/lexico/sense_divergence.json").json();
 ```
 
@@ -74,7 +78,7 @@ display(html`<table class="div-table">
     ${shown.map(r => {
       const href = `dictionary-dossier?q=${encodeURIComponent(r.k1)}`;
       return html`<tr class="${r.range >= 5 ? "high" : r.range >= 2 ? "med" : ""}">
-        <td><a href="${href}" target="_blank" rel="noopener">${r.k1}</a></td>
+        <td><a href="${href}" target="_blank" rel="noopener">${slp1ToIast(r.k1)}</a> <code style="color:var(--theme-foreground-muted);font-size:.78rem">${r.k1}</code></td>
         <td class="num">${r.nDicts}</td>
         ${CORE.map(d => {
           const n = r.entryCounts[d];

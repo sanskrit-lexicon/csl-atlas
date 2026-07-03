@@ -29,6 +29,7 @@ const review = FileAttachment("../data/review/low-confidence-alignment-review.js
 
 ```js
 import * as Plot from "npm:@observablehq/plot";
+import { slp1ToIast } from "../lib/lookup-normalize.js";
 ```
 
 ```js
@@ -66,13 +67,14 @@ display(html`<p style="color:var(--theme-foreground-muted)">${review.items.lengt
 
 ```js
 display(Inputs.table(review.items.map(it => ({
-  lemma: it.subject.lemma,
+  lemma: slp1ToIast(it.subject.lemma),
+  slp1: it.subject.lemma,
   variants: it.machineValue.variants.join("  ·  "),
   dictionaries: it.subject.dictionaries.length,
   status: it.reviewStatus,
   sources: it.sourcePointers
 })), {
-  columns: ["lemma", "variants", "dictionaries", "status", "sources"],
+  columns: ["lemma", "slp1", "variants", "dictionaries", "status", "sources"],
   format: {
     sources: ptrs => html`${ptrs.map(p => html`<a href=${p.href} target="_blank" rel="noopener" style="margin-right:6px">${p.dictionary}</a>`)}`
   }

@@ -54,6 +54,24 @@ Grep `package.json` `scripts` for the exact one you need — do not guess a name
 
 ## Conventions
 
+- **Display Sanskrit in IAST, never raw SLP1 — a general rule for every
+  human-facing page.** SLP1 (`aBAga`, `ABicArika`) is a machine key, unreadable
+  to a human; convert it for display with `slp1ToIast` from
+  [`src/lib/lookup-normalize.js`](src/lib/lookup-normalize.js) (the canonical
+  client-side transcoder; `from_slp1` in `src/lib/sanskrit-util.js` is the same
+  map). Keep the SLP1 form only as a muted secondary / search key, and export
+  IAST first in any CSV. Any table, list, heading, or link text that shows a
+  bare SLP1 headword is a defect to fix.
+- **Every table or list gets a CSV download.** Use the shared
+  [`csvDownloadButton`](src/lib/csv-download.js) helper (client-side Blob, no
+  backend) so a reader can pull the data behind any view; it takes a thunk so the
+  export reflects the current filtered set.
+- **Source links must open the exact line, not a multi-MB blob.** GitHub refuses
+  to render the large `csl-orig` `.txt` files (only "View raw"; `#L…` anchors
+  never fire), so review data embeds a compact inline entry snippet
+  (`scripts/lib/source-snippet.mjs`) and the
+  [`/tools/source`](src/tools/source.md) viewer streams the raw file and stops at
+  the requested line + context. Point per-line source references at that viewer.
 - **Scope is gated by `docs/BOUNDARY_RULES.md`** (superseded by/consistent with
   `ARCHITECTURE.md`): a page/script/dataset belongs here only if its primary
   object is a dictionary, edition, headword/entry, source citation/siglum, or

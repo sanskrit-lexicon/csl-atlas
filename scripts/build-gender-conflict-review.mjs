@@ -18,6 +18,8 @@ import { DICTS, DICT_LABELS, dictHref } from "./lib/dict-manifest.mjs";
 import { iterateDict, dictExists, genderForDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { genderConflict } from "./lib/dict-align.mjs";
+import { genderTypology } from "./lib/gender-typology.mjs";
+import { entrySnippet, rawHref } from "./lib/source-snippet.mjs";
 import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
 
 // The review overlay lives where Observable reads it (docs/REVIEW_REPORTS.md).
@@ -48,10 +50,14 @@ function buildGenderIndex(warnings) {
       }
       let slot = entry[code];
       if (!slot) {
-        slot = { genders: new Set(), line: rec.startLine };
+        slot = { genders: new Set(), line: rec.startLine, genderLine: {} };
         entry[code] = slot;
       }
       slot.genders.add(g);
+      // Remember the first record that asserts each gender, so the source
+      // pointer/snippet lands on the line bearing the disputed gender — not
+      // just the first homonym record (which may carry a different tag).
+      if (slot.genderLine[g] == null) slot.genderLine[g] = rec.startLine;
     }
     console.log(`  indexed ${code}`);
   }
@@ -72,14 +78,32 @@ function main() {
 
     const reviewId = `gender-conflict:${lemma}`;
     const codes = Object.keys(gc.byDict);
+    const byDictLabelled = Object.fromEntries(codes.map(c => [DICT_LABELS[c], gc.byDict[c]]));
     const machineValue = {
-      byDict: Object.fromEntries(codes.map(c => [DICT_LABELS[c], gc.byDict[c]]))
+      byDict: byDictLabelled,
+      // Deterministic four-axis classification of the disagreement (no LLM).
+      typology: genderTypology(byDictLabelled)
     };
-    const sourcePointers = codes.map(c => ({
-      dictionary: DICT_LABELS[c],
-      line: entry[c].line,
-      href: dictHref(c, entry[c].line)
-    }));
+    // Each pointer carries the exact line, a rendered blob href (dead for the
+    // multi-MB files, kept for small ones), a raw href the viewer streams, the
+    // dict code so the page can build its own /tools/source link, and a compact
+    // inline snippet so the entry is legible without opening the source at all.
+    const sourcePointers = codes.map(c => {
+      // Land on the record that asserts this dictionary's disputed gender.
+      const disputed = gc.byDict[c][0];
+      const line = entry[c].genderLine?.[disputed] ?? entry[c].line;
+      const snip = entrySnippet(c, line);
+      return {
+        dictionary: DICT_LABELS[c],
+        code: c,
+        line,
+        href: dictHref(c, entry[c].line),
+        rawHref: rawHref(c),
+        snippet: snip ? snip.text : null,
+        snippetEnd: snip ? snip.end : null,
+        snippetTruncated: snip ? snip.truncated : null
+      };
+    });
 
     if (preserved.has(reviewId)) preservedCount += 1;
 
@@ -104,6 +128,8 @@ function main() {
       "Gender is from <lex> for the tagged dictionaries (MW, AP, PWG, PWK, WIL) and from prose markers for VCP and SKD.",
       "A conflict means two dictionaries assert disjoint specific genders ({m,f,n}); adjective/indeclinable tags never trigger one.",
       "Within-dictionary polysemy (one lemma listed under several genders) does not count as a conflict.",
+      "Each case carries a deterministic typology (gender-pair · cardinality · evidence-basis · overlap); 'prose-mixed' basis means a VCP/SKD prose marker is involved and the evidence is softer than a lex-vs-lex clash.",
+      "Each source pointer embeds a compact inline snippet of the entry so it is legible without opening the multi-MB source file; the standalone /tools/source viewer streams full surrounding context.",
       "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds."
     ],
     warnings: [
