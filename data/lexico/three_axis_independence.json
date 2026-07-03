@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "status": "three-axis-independence-test",
+  "hypothesis": "THREE-AXIS-INDEP",
+  "claim": "Across the documented inheritance edges, the content, convention, and microstructure axes are mutually decorrelated (each is genuinely separate information), so dictionary descent must be reported as a vector rather than a scalar.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-reviewed",
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "npm run build-three-axis-independence",
+  "sourceFiles": [
+    "data/lexico/three_axis_comparison.json",
+    "scripts/build-three-axis-independence.mjs"
+  ],
+  "sourceGeneratedAt": "2026-06-13T08:14:43.023Z",
+  "n": 13,
+  "method": "Pearson and Spearman correlations of the three axis scores (content = parent-in-child containment; convention = L0 fingerprint similarity; microstructure = composite register/layer similarity) across all documented edges. Critical |r| for n=13 (df=11): 0.553 at p=0.05, 0.684 at p=0.01.",
+  "crossAxisCorrelations": [
+    {
+      "pair": "content~convention",
+      "pearson": 0.146,
+      "spearman": 0.467,
+      "strength": "not-significant"
+    },
+    {
+      "pair": "content~microstructure",
+      "pearson": 0.262,
+      "spearman": -0.415,
+      "strength": "not-significant"
+    },
+    {
+      "pair": "convention~microstructure",
+      "pearson": -0.088,
+      "spearman": -0.248,
+      "strength": "not-significant"
+    }
+  ],
+  "internalStructureChecks": [
+    {
+      "pair": "convention~bootstrapSupport",
+      "pearson": 0.923,
+      "spearman": 0.977,
+      "strength": "significant-p01"
+    },
+    {
+      "pair": "microRegister~microLayers",
+      "pearson": 0.854,
+      "spearman": 0.731,
+      "strength": "significant-p01"
+    }
+  ],
+  "findings": {
+    "axesAreDecorrelated": true,
+    "maxAbsCrossAxisPearson": 0.262,
+    "bootstrapIsNotIndependentOfConvention": true,
+    "registerAndLayersAreCollinear": true
+  },
+  "interpretation": [
+    "Cross-axis: the three axes show no detectable correlation (all |Pearson| below the n=13 p=0.05 threshold of 0.553), so the packet cannot reject their independence — the empirical backing the paper's 'vector not scalar' thesis previously only asserted from the single PWG double dissociation.",
+    "Bootstrap support is NOT an independent control on the convention axis: it tracks convention similarity almost exactly, so paper §3.2 must be reframed to present bootstrap as a within-axis confidence measure, not as independent evidence.",
+    "The two microstructure sub-components (register similarity, layer overlap) are collinear, which empirically JUSTIFIES compositing them into a single microstructure axis rather than splitting them — the 50/50 average is not the cross-axis averaging the paper rejects."
+  ],
+  "limitations": [
+    "n equals the documented known-edge set; correlations are point estimates on a small, non-independent sample (several edges share the MW child or the PWG parent) and are reported as descriptive, not confirmatory.",
+    "Absence of detectable correlation is not proof of independence; it is failure to reject it at this sample size.",
+    "All inputs inherit the caveats of three_axis_comparison.json (containment is size-confounded; convention encodes only modelled house style; microstructure can reflect genre/format)."
+  ],
+  "boundary": [
+    "Derived from committed atlas dictionary evidence only; no source/corpus read, no public page, no human decision, no external maker work."
+  ],
+  "generatedAt": "2026-07-03T09:18:36.158Z"
+}
