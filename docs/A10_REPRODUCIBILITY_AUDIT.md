@@ -5,10 +5,12 @@ _Created: 03-07-2026 · Last updated: 03-07-2026_
 Data-verification pass over [`docs/articles/article_21_apparatus_not_errors.md`](articles/article_21_apparatus_not_errors.md)
 (A10), checking every headline figure against the committed forensic artifacts and,
 where an artifact was absent, against a faithful reconstruction from the same inputs.
-**Verdict: five of the six signals — including both decisive ones (F4b shared-error,
-F5 citation-order) — reproduce to the digit. One signal, §3.1's size-corrected
-rare-lemma containment ratios, is currently unreproducible: its generator was never
-committed.**
+**Verdict (updated 2026-07-03): all six signals — including both decisive ones (F4b
+shared-error, F5 citation-order) — reproduce to the digit. §3.1's size-corrected
+rare-lemma containment ratios were unreproducible at first pass (their generator was not
+yet in the repo), but the generator + output have since been migrated in from
+`csl-observatory` (commit `0b73b97`) and now regenerate byte-identically and match the
+published ratios exactly — see the §3.1 section below.**
 
 ## Reproduces exactly (committed artifact → paper)
 
@@ -26,37 +28,40 @@ errors (F4b) and that it reproduced Böhtlingk's citation *order* (F5) — are t
 that reproduce most cleanly. The forensic case for "heir of the scholarship, author of
 the prose" stands on committed, reproducing data.
 
-## Does NOT reproduce — §3.1 rare-lemma containment ratios
+## RESOLVED (2026-07-03) — §3.1 now reproduces exactly
 
 The paper's §3.1 reports **size-corrected** rare-lemma containment: PWG→MW 0.70 (df≤3) /
-0.82 (df≤5), PW→MW 0.71, MW72→MW 0.57, against unrelated BOP→MW 0.35. §7 states these
-"regenerate from … `scripts/L0/s6_content_lift.py`."
+0.82 (df≤5), PW→MW 0.71, MW72→MW 0.57, against unrelated BOP→MW 0.35.
 
-**That script was never committed** (empty `git log --all -- scripts/L0/s6_content_lift.py`)
-and its output `data/L0/content_lift.csv` is absent; `scripts/L0/` holds only
-`_provenance.py`. A faithful reconstruction from the same `sanhw1.txt` snapshot
-reproduces the *count* claim (17,007 MW∩PW-only, exact) but **no natural definition of
-"rare-lemma containment" reproduces the published ratios** — every variant tried
-(df window 2–3/2–5; excluding the source and/or MW from the df count) yields
-PWG→MW ≈0.75–0.85, MW72→MW ≈0.79–0.88, BOP→MW ≈0.58–0.70, i.e. a *compressed, wrongly
-ordered* gradient (the paper's discriminating BOP→MW 0.35 and MW72→MW 0.57 never appear).
-The published numbers therefore encode a size-correction the prose does not fully specify,
-and which is not recoverable without the original script.
+When this audit first ran, the generator `scripts/L0/s6_content_lift.py` and its output
+`data/L0/content_lift.csv` were **both absent** from `csl-atlas`, so §3.1 could not be
+independently checked. Commit `0b73b97` ("L0: migrate the convention-genealogy stream
+from csl-observatory") has since **restored both** — the script had lived in
+`csl-observatory` all along. The gap is closed:
 
-This is **not a refutation** — §3.1 is a *corroborating* signal, and the descent case is
-carried by the decisive F4b/F5 (both reproducing). But as it stands the §7 reproducibility
-claim is false for §3.1, and the five headline ratios cannot be independently checked.
+- `data/L0/content_lift.csv` is committed, and its `rare_cont_3` / `rare_cont_5` columns
+  give the paper's ratios **to the digit**: PWG→MW **0.6966 / 0.8153** (paper 0.70 / 0.82),
+  PW→MW **0.7125** (0.71, df≤3), MW72→MW **0.5666** (0.57, df≤3), BOP→MW **0.3524** (0.35,
+  df≤3). The `excl_pair` column reproduces the 17,007 MW∩PW-only count on the PW→MW row.
+- Re-running `python scripts/L0/s6_content_lift.py` regenerates `content_lift.csv`
+  **byte-identically** (verified 2026-07-03).
+- The method (from the script's own docstring) is the two-instrument L0.8 ladder: a size
+  **lift** `|A∩B|·N/(|A|·|B|)` plus **rare-lemma containment** — restrict to A's lemmas with
+  corpus document-frequency df ≤ k and ask what fraction recur in B. My earlier
+  reconstruction landed 0.75–0.85 (not 0.70–0.82) because it approximated the df universe;
+  the committed script's exact dict set reproduces the published gradient, including the
+  discriminating BOP→MW 0.35.
 
-## Recommended author action (before submission)
+The one residual dependency is the **input snapshot** `observatory/snapshots/sanhw1.txt`,
+which is owned by `csl-observatory` (a sibling repo), not duplicated into `csl-atlas` — the
+same cross-repo-input pattern as the `../csl-orig` forensic readers. The committed
+`content_lift.csv` is the walkable artifact; regeneration needs the sibling snapshot.
 
-1. **Recover `scripts/L0/s6_content_lift.py`** from wherever it was run (author's local
-   tree / another repo) and commit it plus `data/L0/content_lift.csv`; OR
-2. **Recompute §3.1** with a committed generator and update the five ratios to whatever
-   the reproducible method yields; OR
-3. **Down-weight §3.1** to the reproducible count claim (17,007) and drop the
-   unverifiable ratios, leaning §3.1 on the size-corrected *lift* language already used
-   elsewhere.
-4. Either way, correct §7 so it lists only committed generators.
+**All six A10 signals now reproduce.** No paper change is required for the numbers
+(they were always correct); §7 correctly names `scripts/L0/s6_content_lift.py`, which is
+now present. Optional polish: add a one-line data-pointer in §3.1 to
+`data/L0/content_lift.csv` for the same Claim→Evidence→Source walkability the other
+signals have.
 
 ## External-evidence gate (unchanged, out of scope)
 
