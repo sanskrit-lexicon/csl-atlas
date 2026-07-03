@@ -69,11 +69,11 @@ with one cited dictionary record and one sentence about evidence level.
 
 | Word | Task | Route |
 |---|---|---|
-| `dharma` | Compare a familiar word across English and Sanskrit-Sanskrit dictionaries. | Reader Lookup -> Lemma dossier -> VCP/SKD. |
-| `agni` | Find a quick reading gloss, then inspect whether source evidence changes your confidence. | Dictionary chooser -> MW -> AP -> citation tools. |
-| `gam` | Notice why verbal/root evidence is not the same as a simple noun lookup. | Reader Lookup -> dossier -> R2 sense explorer. |
-| `rAma` | Compare coverage and source links without assuming all dictionaries use the same scope. | Reader Lookup -> dossier -> dictionary pages. |
-| `mokza` | Practice input schemes and spelling discipline by comparing SLP1 and IAST. | Reader Lookup -> evidence labels -> source record. |
+| `dharma` | Compare a familiar word across English and Sanskrit-Sanskrit dictionaries. | <span class="handoff-links"><form method="get" action="tools/reader-lookup.html"><input type="hidden" name="q" value="dharma"><button type="submit">Lookup</button></form><form method="get" action="tools/dictionary-dossier.html"><input type="hidden" name="q" value="dharma"><button type="submit">Dossier</button></form></span> VCP/SKD. |
+| `agni` | Find a quick reading gloss, then inspect whether source evidence changes your confidence. | <span class="handoff-links"><form method="get" action="tools/reader-lookup.html"><input type="hidden" name="q" value="agni"><button type="submit">Lookup</button></form><form method="get" action="tools/dictionary-dossier.html"><input type="hidden" name="q" value="agni"><button type="submit">Dossier</button></form></span> citation tools. |
+| `gam` | Notice why verbal/root evidence is not the same as a simple noun lookup. | <span class="handoff-links"><form method="get" action="tools/reader-lookup.html"><input type="hidden" name="q" value="gam"><button type="submit">Lookup</button></form><form method="get" action="tools/dictionary-dossier.html"><input type="hidden" name="q" value="gam"><button type="submit">Dossier</button></form></span> R2 sense explorer. |
+| `rAma` | Compare coverage and source links without assuming all dictionaries use the same scope. | <span class="handoff-links"><form method="get" action="tools/reader-lookup.html"><input type="hidden" name="q" value="rAma"><button type="submit">Lookup</button></form><form method="get" action="tools/dictionary-dossier.html"><input type="hidden" name="q" value="rAma"><button type="submit">Dossier</button></form></span> dictionary pages. |
+| `mokza` | Practice input schemes and spelling discipline by comparing SLP1 and IAST. | <span class="handoff-links"><form method="get" action="tools/reader-lookup.html"><input type="hidden" name="q" value="mokza"><button type="submit">Lookup</button></form><form method="get" action="tools/dictionary-dossier.html"><input type="hidden" name="q" value="mokza"><button type="submit">Dossier</button></form></span> evidence labels. |
 
 ## Related Study Paths
 
@@ -127,5 +127,27 @@ with one cited dictionary record and one sentence about evidence level.
 .path-card small {
   color: var(--theme-foreground-muted);
   line-height: 1.35;
+}
+.handoff-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-right: 4px;
+}
+.handoff-links form {
+  display: inline;
+  margin: 0;
+}
+.handoff-links button {
+  border: 1px solid var(--theme-foreground-faint);
+  border-radius: 6px;
+  padding: 2px 8px;
+  color: var(--theme-foreground);
+  background: color-mix(in srgb, var(--theme-background), var(--theme-foreground) 4%);
+  font: inherit;
+  cursor: pointer;
+}
+.handoff-links button:hover {
+  border-color: color-mix(in srgb, var(--theme-foreground), transparent 55%);
 }
 </style>
