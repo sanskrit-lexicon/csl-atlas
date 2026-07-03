@@ -172,7 +172,7 @@ The [Lineage Sankey](tools/lineage-sankey) visualises this collapse — MW's 40,
 
 ## Corpus frequency data
 
-[VisualDCS](https://github.com/gasyoun/VisualDCS) provides DCS corpus dashboards and per-lemma frequency data (M1–M8 CoNLL-U→SQLite pipeline). Once VisualDCS emits `dcs_lemma_summary.json` (see [`docs/VISUALDCS_CONSUMPTION_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/VISUALDCS_CONSUMPTION_CONTRACT.md)), this atlas will display per-lemma corpus frequency bands inline on lemma pages. Until then, follow the link above for DCS-derived evidence.
+[VisualDCS](https://github.com/gasyoun/VisualDCS) provides DCS corpus dashboards and per-lemma frequency data (M1–M8 CoNLL-U→SQLite pipeline). Its `dcs_lemma_summary.json` feed (83,239 lemmas, DCS-2021 corpus release; consumption terms in [`docs/VISUALDCS_CONSUMPTION_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/VISUALDCS_CONSUMPTION_CONTRACT.md)) is wired into this atlas: the [Dictionary Dossier](tools/dictionary-dossier) shows a per-lemma DCS frequency-band chip (1 = hapax … 5 = very common, log₁₀ orders), and the [learner reading layer](tools/learner-reading-layer) folds the same bands into its index. Follow the VisualDCS link above for the full corpus dashboards.
 
 ---
 
