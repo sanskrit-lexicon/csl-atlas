@@ -76,6 +76,8 @@
     "build-h5-maker-qa-candidates": "node scripts/build-h5-maker-qa-candidates.mjs",
     "build-h5-maker-correction-proposal": "node scripts/build-h5-maker-correction-proposal.mjs",
     "build-three-axis-comparison": "node scripts/build-three-axis-comparison.mjs",
+    "build-three-axis-independence": "node scripts/build-three-axis-independence.mjs",
+    "build-root-agreement-kappa": "python scripts/lexico/root_agreement_kappa.py",
     "validate-review-reports": "node scripts/validate-review-reports.mjs",
     "build-divergence-map": "python scripts/lexico/build_divergence_map.py"
   },
