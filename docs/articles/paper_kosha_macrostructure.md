@@ -3,18 +3,21 @@
 *Draft manuscript for a metalexicography venue (target: International Journal of
 Lexicography; the World Sanskrit Conference 2027 as an indological alternate). The
 **macrostructural** companion to* Grammar Without Tags
-([`paper_indigenous_microstructure.md`](paper_indigenous_microstructure.md), P4): where
+([`paper_indigenous_microstructure.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_indigenous_microstructure.md), P4): where
 P4 recovered the indigenous *micro*structure of the verbal-root lexica, this paper
 recovers the *macro*structure of the synonymic *kośa*s — works that carry no
 European entry apparatus at all, and whose entire lexicographic content is their
-arrangement. Empirical basis: the four CDSL koshas (ARMH, ABCH, ACPH, ACSJ), measured
-by [`scripts/lexico/m6_kosha_macrostructure.py`](../../scripts/lexico/m6_kosha_macrostructure.py)
-→ [`data/lexico/kosha_macrostructure.json`](../../data/lexico/kosha_macrostructure.json);
-context in the dictionary pages [`armh`](../../src/dicts/armh.md),
-[`abch`](../../src/dicts/abch.md) and the structural typology
-[`MICROSTRUCTURE-MACROSTRUCTURE.md`](../MICROSTRUCTURE-MACROSTRUCTURE.md). All counts are
-the 2026-06 snapshot and reproducible from committed data. Author: M. Gasūns (byline to
-finalise).*
+arrangement. Empirical basis: the four koshas of the CDSL 2026-06 snapshot (ARMH, ABCH,
+ACPH, ACSJ; on the fifth, added later that month, see §2.1), measured
+by [`scripts/lexico/m6_kosha_macrostructure.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m6_kosha_macrostructure.py)
+→ [`data/lexico/kosha_macrostructure.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/kosha_macrostructure.json);
+context in the dictionary pages [`armh`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/dicts/armh.md),
+[`abch`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/dicts/abch.md) and the structural typology
+[`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md). All counts are
+the 2026-06 snapshot and reproducible from committed data; every count was re-verified
+against the artifact in the 2026-07-03 referee pass
+([A06_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A06_review_fable5.md)).
+Author: M. Gasūns (byline to finalise).*
 
 ---
 
@@ -57,7 +60,8 @@ dictionary; synonymy; Amarakośa; Hemacandra; digital lexicography; measurement 
 
 A European dictionary is *semasiological*: it is ordered by the word (alphabetically)
 and, at each word, tells you the meanings. The classical Sanskrit *kośa* is the inverse
-— *onomasiological*: it is ordered by the concept, and at each concept lists the words.
+— *onomasiological*: it is ordered by the concept, and at each concept lists the words
+(on the semasiological/onomasiological division see Zgusta 1971; Svensén 2009).
 There is no alphabet, no headword-then-definition entry, no citation apparatus. The
 *Amarakośa*, the genre's exemplar, is 1,500 memorisable verses grouped by subject; to
 know that *vahni*, *agni* and *pāvaka* are synonyms is simply to find them strung
@@ -88,11 +92,17 @@ sense-division lineage that reached the European dictionaries.
 
 The synonymic *kośa* (*nāmamālā*, "garland of names") arranges the vocabulary by subject
 into *kāṇḍa*s (books) and *varga*s (thematic sections), and within each section composes
-the synonyms of a concept into metrical verse for memorisation. The *Amarakośa* (not in
-CDSL) is the prototype; the CDSL holds four others (Table 1), headed by the two we
+the synonyms of a concept into metrical verse for memorisation (for the genre's history
+see Vogel 1979). The *Amarakośa* (not in
+CDSL) is the prototype; at the 2026-06 snapshot analysed here the CDSL held four others
+(Table 1), headed by the two we
 analyse: Halāyudha's *Abhidhānaratnamālā* (**ARMH**, ~10th c.) and Hemacandra's
 *Abhidhānacintāmaṇi* (**ABCH**, ~12th c.), together with the latter's two supplements,
-the *-pariśiṣṭa* (**ACPH**) and the *-śiloñcha* (**ACSJ**).
+the *-pariśiṣṭa* (**ACPH**) and the *-śiloñcha* (**ACSJ**). A **fifth** kośa — Bhoja's
+*Nāmamālikā* (**NMMB**) — was digitized into the CDSL in 2026-06, after this snapshot:
+a grouped-model text whose `<syns>` lists carry *no* `<s>` wrapper (2,265 lexemes, 521
+unique), i.e. yet a *third* digitization variant of the same genre; it is out of scope
+here and queued for the next revision, and it independently reinforces §4.3's warning.
 
 **Table 1.** The four CDSL koshas.
 
@@ -105,7 +115,8 @@ the *-pariśiṣṭa* (**ACPH**) and the *-śiloñcha* (**ACSJ**).
 
 These koshas matter to the wider CDSL lineage: the Fort William College pandits built
 Wilson's (WIL) English sense-divisions from exactly this kosha tradition, and those
-divisions descend into Monier-Williams. The *kośa*'s macrostructure is, in that sense,
+divisions descend into Monier-Williams *[author to verify against Wilson's 1819
+preface, which documents the kosha-based compilation, before submission]*. The *kośa*'s macrostructure is, in that sense,
 an ancestor of the European microstructure — which is one more reason it must be
 measured on its own terms rather than scored zero.
 
@@ -138,7 +149,7 @@ From these we count, per kosha: `<L>` records; distinct verses and *kāṇḍa*s
 *kāṇḍa* headers and their order, lexeme (`<eid>`) counts, and the gender distribution
 (ABCH family); synonym-set sizes (ARMH, by grouping on `<vn>`); and per-*kāṇḍa* record
 counts. The numbers below are emitted to
-[`kosha_macrostructure.json`](../../data/lexico/kosha_macrostructure.json) and are exact.
+[`kosha_macrostructure.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/kosha_macrostructure.json) and are exact.
 
 ## 4. Results
 
@@ -203,7 +214,10 @@ things. But it means **a corpus statistic that sums "entries" across koshas is s
 incommensurable units** — ARMH's record is a lexeme, ABCH's is a synonym-set roughly nine
 lexemes deep. Any density, coverage, or overlap figure computed over raw kosha
 record-counts is therefore an artifact of digitization policy, not of the texts. The unit
-must be normalised (to the lexeme, or to the verse) before koshas can be compared.
+must be normalised (to the lexeme, or to the verse) before koshas can be compared. The
+atlas's own corpus-collapse metric (P1, §3.2) already implements this normalisation —
+kośa records enter the corpus count as their `<syns>` lexemes, not as raw `<L>` records —
+so the hazard is real but, within this series, controlled.
 
 **Table 3.** Two digitization models.
 
@@ -220,7 +234,8 @@ Hemacandra's koshas carry a full **gender apparatus** layered over the macrostru
 every lexeme in ABCH is tagged for *liṅga* — masculine (*puM*, 7,015 tags), neuter
 (*klī* = *klība*, 3,110) and feminine (*strī*, 2,524), with dual-gender combinations
 (*puṃklī* "masc. and neut.", 385; *puṃstrī*, 122) and number (*dvi*, *ba*) where
-relevant — 13,284 gendered tags in all. This is grammatical information the European
+relevant — 13,284 gendered tags in all, the rarer combinations (*puṃdvi* 39,
+*strīklī* 29, *puṃba* 21, …) making up the remainder beyond the five tags enumerated. This is grammatical information the European
 dictionaries mark inconsistently and that P4 found encoded *indigenously* in the
 verbal-root lexica; here it rides on the synonym macrostructure, lexeme by lexeme.
 
@@ -234,7 +249,8 @@ dictionary's alphabetisation is — and just as measurable.
 ## 5. Discussion
 
 **Order is the lexicographic act.** In a semasiological dictionary the semantic work is
-done in the microstructure — the sense divisions, the glosses, the citations. In the
+done in the microstructure — the sense divisions, the glosses, the citations (the
+macro-/microstructure division in the sense of Hausmann and Wiegand 1989). In the
 *kośa* it is done in the macrostructure: to place *agni* in the fire-verse of the
 *svarga-kāṇḍa* is to assert its meaning, its register and its synonymy in one stroke.
 A metalexicography that can only see microstructure cannot see this lexicography at all.
@@ -258,7 +274,8 @@ sense-lists came from.
 
 ## 6. Limitations and future work
 
-The CDSL holds four koshas, not the *Amarakośa* itself, so the genre prototype is a
+The snapshot analysed holds four koshas — five since 2026-06, with NMMB (§2.1) awaiting
+its own modeling pass — but not the *Amarakośa* itself, so the genre prototype is a
 comparandum rather than data; adding a digitized Amara would anchor the model. ARMH's
 `<vn>` is not *varga*-subdivided in the digitization (only the *kāṇḍa* and a running
 verse number vary), so we model ARMH at *kāṇḍa* granularity and ABCH at *kāṇḍa*/*varga*
@@ -288,14 +305,40 @@ architecture of the word-hoard is data.
 
 *Primary.* Halāyudha, *Abhidhānaratnamālā* (*Halāyudhakośa*), ~10th c.; Hemacandra,
 *Abhidhānacintāmaṇi* with *-pariśiṣṭa*, ed. Śivadatta and Parab (Nirṇaya-sāgara Press,
-Bombay, 1896); Jinadeva (attr.), *Abhidhānacintāmaṇi-śiloñcha*; Amarasiṃha, *Amarakośa*
-(*Nāmaliṅgānuśāsana*), as genre comparandum.
+Bombay, 1896); Jinadeva (attr.), *Abhidhānacintāmaṇi-śiloñcha*; Bhoja (attr.),
+*Nāmamālikā* (NMMB, digitized 2026); Amarasiṃha, *Amarakośa* (*Nāmaliṅgānuśāsana*), as
+genre comparandum.
 
 *Resource.* Kapp, D. and Malten, T., *Cologne Digital Sanskrit Dictionaries*, University
-of Cologne (sanskrit-lexicon.uni-koeln.de); the *sanskrit-kosha* digitization project
-(Patel et al.).
+of Cologne ([sanskrit-lexicon.uni-koeln.de](https://www.sanskrit-lexicon.uni-koeln.de/));
+the *sanskrit-kosha* digitization project (Patel et al.).
 
-*Secondary (to be completed).* Vogel, C., *Indian Lexicography* (1979); standard
-treatments of the *nāmamālā* / *kośa* genre and of onomasiological vs semasiological
-dictionary structure; metalexicographic work on macrostructure (Wiegand; Svensén 2009).
-[TODO: author to insert specific citations.]
+*Secondary.*
+
+Hausmann, Franz Josef, and Herbert Ernst Wiegand. 1989. "Component Parts and Structures
+of General Monolingual Dictionaries: A Survey." In Hausmann, Reichmann, Wiegand and
+Zgusta (eds.), *Wörterbücher / Dictionaries / Dictionnaires,* vol. 1 (HSK 5.1), 328–360.
+Berlin and New York: Walter de Gruyter.
+
+Svensén, Bo. 2009. *A Handbook of Lexicography: The Theory and Practice of
+Dictionary-Making.* Cambridge: Cambridge University Press.
+
+Vogel, Claus. 1979. *Indian Lexicography.* (A History of Indian Literature, vol. V,
+fasc. 4, ed. Jan Gonda.) Wiesbaden: Otto Harrassowitz.
+
+Wilson, Horace Hayman. 1819. *A Dictionary, Sanscrit and English.* Calcutta: Hindoostanee
+Press. *[cited for the preface's account of the kosha-based compilation — author to
+verify page range]*
+
+Zgusta, Ladislav. 1971. *Manual of Lexicography.* (Janua Linguarum, Series Maior 39.)
+Prague: Academia; The Hague and Paris: Mouton.
+
+**Companion papers (this series).**
+
+Gasūns, M. (in preparation). *Measuring the Dictionary Family: A Traceable Measurement
+Framework for Computational Lexicography* (P1 — the series' methods paper; its §3.2
+collapse metric implements the lexeme normalisation §4.3 argues for).
+
+Gasūns, M. (in preparation). *Grammar Without Tags: The Verbal-Root Microstructure of
+the Indigenous Sanskrit Kośa* (P4 — the microstructural companion; establishes the
+zero-meaning rule this paper raises to the macrostructure).
