@@ -43,6 +43,8 @@ EID_RE = re.compile(r"<eid>")
 # combined (puMklI = "masc. and neut."), with number tags (dvi/ba) appended.
 MORPHTAG_RE = re.compile(r"-([A-Za-z]+)(?=[,<])")
 KVVV_RE = re.compile(r'<info kvvv="<s>([^<"]+)</s>"')
+S_RE = re.compile(r"<s>([^<]*)</s>")          # a <syns> synonym-form string (may be a comma list)
+POS_RE = re.compile(r"-[A-Za-z]+$")            # trailing gender/number tag on a form
 
 
 def read_lines(path):
@@ -112,6 +114,8 @@ def measure_grouped(lines):
     kanda_headers = []                 # order of ;k{} headers
     kanda_records = Counter()          # <L> records attributed to running ;k{} header
     cur_kanda = None
+    form_total = 0                     # comma-split <s> members (the SYNONYM-FORM unit)
+    form_distinct = set()              # distinct POS-stripped forms
     for ln in lines:
         mkh = KHEAD_RE.match(ln)
         if mkh:
@@ -123,6 +127,12 @@ def measure_grouped(lines):
             if cur_kanda is not None:
                 kanda_records[cur_kanda] += 1
         eids += len(EID_RE.findall(ln))
+        for syn in S_RE.findall(ln):
+            for member in syn.split(","):
+                lex = POS_RE.sub("", member.strip())
+                if lex:
+                    form_total += 1
+                    form_distinct.add(lex)
         for t in MORPHTAG_RE.findall(ln):
             if "puM" in t or "strI" in t or "klI" in t:
                 morphtags[t] += 1
@@ -135,10 +145,13 @@ def measure_grouped(lines):
     return {
         "model": "grouped (one concept-group = one record, internal <syns>/<eid>)",
         "records": records,
-        "lexeme_eids": eids,
+        # THREE distinct size granularities — do not conflate (see assumptions):
+        "lexeme_eids": eids,                       # <eid> concept-slots (Table-3 "lexemes")
+        "synonym_forms_total": form_total,         # comma-split <s> members (the unit gender tags ride on)
+        "synonym_forms_distinct": len(form_distinct),
         "kandas": len(kanda_headers),
         "kanda_order": kanda_headers,
-        "gendered_lexeme_tags": int(sum(morphtags.values())),
+        "gendered_lexeme_tags": int(sum(morphtags.values())),  # per synonym-FORM, not per eid
         "gender_admissions": dict(gender),     # a combined tag counts toward each gender it admits
         "top_morphtags": dict(morphtags.most_common(8)),
         "records_per_kanda": dict(kanda_records),
@@ -166,6 +179,12 @@ def main():
         "ABCH/ACPH/ACSJ kāṇḍa membership is read from ;k{} headers and <info kvvv=> tags; lexemes counted as <eid>.",
         "Gender tokens counted as -puM/-strI/-na/-avy suffixes in the <syns> field (Hemacandra's liṅga apparatus).",
         "Record counts are NOT cross-comparable: the two digitization models grain the same genre differently.",
+        "THREE grouped-kosha granularities are reported separately and MUST NOT be conflated as 'lexeme': "
+        "records (<L> concept-groups) < lexeme_eids (<eid> concept-slots) < synonym_forms_total "
+        "(comma-split <s> members). Gender tags ride on synonym-forms, so gendered_lexeme_tags is per-form, "
+        "not per-eid. The OBS-R redundancy census (headword_multiplicity.csv) counts the first <s> per line "
+        "comma-split, a fourth slice again — e.g. ABCH is 1,965 records / 4,619 eids / 14,735 distinct forms "
+        "(19,511 total) / 11,584 OBS-R keys; cite the unit explicitly in any kosha size claim.",
     ]
     payload["koshas"] = result
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
