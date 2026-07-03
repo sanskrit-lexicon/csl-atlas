@@ -1,0 +1,464 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedBy": "scripts/obs/citation_register_gaps.py",
+  "sourceRoot": "../csl-orig/v02",
+  "method": {
+    "registerA": "every <ls>…</ls> element per parse_cslorig.iter_entries; locator-bearing = cleaned citation content contains a digit (paper §3.1; an upper bound on resolvability, not verified linkability)",
+    "registerB": "word-boundary iti/ity regex '(?<![A-Za-z])(?:iti|ity)(?![A-Za-z])' over entry bodies — not adjacent to a Latin letter, so markup-/punctuation-adjacent quotatives count (paper §3.3; a register indicator including some grammatical iti, not an exact citation count)",
+    "ranks": "competition ranking (ties share the smallest rank) by per-entry density, descending"
+  },
+  "dictionaryCount": 44,
+  "totals": {
+    "entries": 1496157,
+    "ls": 1245644,
+    "lsWithLocator": 738173,
+    "iti": 113116,
+    "lsPerEntry": 0.8326,
+    "lsLocatorShare": 0.5926
+  },
+  "dicts": {
+    "abch": {
+      "entries": 1965,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 4,
+      "itiPerEntry": 0.002,
+      "itiDensityRank": 27
+    },
+    "acc": {
+      "entries": 49833,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 4,
+      "itiPerEntry": 0.0001,
+      "itiDensityRank": 42
+    },
+    "acph": {
+      "entries": 163,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 1,
+      "itiPerEntry": 0.0061,
+      "itiDensityRank": 17
+    },
+    "acsj": {
+      "entries": 240,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 4,
+      "itiPerEntry": 0.0167,
+      "itiDensityRank": 8
+    },
+    "ae": {
+      "entries": 11359,
+      "ls": 1141,
+      "lsWithLocator": 1120,
+      "lsPerEntry": 0.1004,
+      "lsDensityRank": 13,
+      "iti": 276,
+      "itiPerEntry": 0.0243,
+      "itiDensityRank": 7
+    },
+    "ap": {
+      "entries": 90843,
+      "ls": 62672,
+      "lsWithLocator": 55762,
+      "lsPerEntry": 0.6899,
+      "lsDensityRank": 8,
+      "iti": 682,
+      "itiPerEntry": 0.0075,
+      "itiDensityRank": 15
+    },
+    "ap90": {
+      "entries": 34882,
+      "ls": 38671,
+      "lsWithLocator": 34905,
+      "lsPerEntry": 1.1086,
+      "lsDensityRank": 5,
+      "iti": 322,
+      "itiPerEntry": 0.0092,
+      "itiDensityRank": 13
+    },
+    "armh": {
+      "entries": 7907,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 69,
+      "itiPerEntry": 0.0087,
+      "itiDensityRank": 14
+    },
+    "ben": {
+      "entries": 17310,
+      "ls": 48603,
+      "lsWithLocator": 0,
+      "lsPerEntry": 2.8078,
+      "lsDensityRank": 2,
+      "iti": 39,
+      "itiPerEntry": 0.0023,
+      "itiDensityRank": 25
+    },
+    "bhs": {
+      "entries": 17839,
+      "ls": 48419,
+      "lsWithLocator": 199,
+      "lsPerEntry": 2.7142,
+      "lsDensityRank": 3,
+      "iti": 241,
+      "itiPerEntry": 0.0135,
+      "itiDensityRank": 9
+    },
+    "bop": {
+      "entries": 8961,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 52,
+      "itiPerEntry": 0.0058,
+      "itiDensityRank": 19
+    },
+    "bor": {
+      "entries": 24609,
+      "ls": 526,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0214,
+      "lsDensityRank": 14,
+      "iti": 51,
+      "itiPerEntry": 0.0021,
+      "itiDensityRank": 26
+    },
+    "bur": {
+      "entries": 19776,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 33,
+      "itiPerEntry": 0.0017,
+      "itiDensityRank": 29
+    },
+    "cae": {
+      "entries": 40069,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 33,
+      "itiPerEntry": 0.0008,
+      "itiDensityRank": 35
+    },
+    "ccs": {
+      "entries": 30010,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 8,
+      "itiPerEntry": 0.0003,
+      "itiDensityRank": 39
+    },
+    "fri": {
+      "entries": 8155,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 376,
+      "itiPerEntry": 0.0461,
+      "itiDensityRank": 5
+    },
+    "gra": {
+      "entries": 12785,
+      "ls": 2255,
+      "lsWithLocator": 1086,
+      "lsPerEntry": 0.1764,
+      "lsDensityRank": 12,
+      "iti": 20,
+      "itiPerEntry": 0.0016,
+      "itiDensityRank": 30
+    },
+    "gst": {
+      "entries": 6780,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 166,
+      "itiPerEntry": 0.0245,
+      "itiDensityRank": 6
+    },
+    "ieg": {
+      "entries": 7932,
+      "ls": 11390,
+      "lsWithLocator": 1,
+      "lsPerEntry": 1.436,
+      "lsDensityRank": 4,
+      "iti": 7,
+      "itiPerEntry": 0.0009,
+      "itiDensityRank": 34
+    },
+    "inm": {
+      "entries": 12647,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 91,
+      "itiPerEntry": 0.0072,
+      "itiDensityRank": 16
+    },
+    "krm": {
+      "entries": 2061,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 12359,
+      "itiPerEntry": 5.9966,
+      "itiDensityRank": 1
+    },
+    "lan": {
+      "entries": 4944,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 29,
+      "itiPerEntry": 0.0059,
+      "itiDensityRank": 18
+    },
+    "lrv": {
+      "entries": 53441,
+      "ls": 16650,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.3116,
+      "lsDensityRank": 11,
+      "iti": 99,
+      "itiPerEntry": 0.0019,
+      "itiDensityRank": 28
+    },
+    "mci": {
+      "entries": 2643,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 282,
+      "itiPerEntry": 0.1067,
+      "itiDensityRank": 4
+    },
+    "md": {
+      "entries": 20749,
+      "ls": 58,
+      "lsWithLocator": 52,
+      "lsPerEntry": 0.0028,
+      "lsDensityRank": 15,
+      "iti": 104,
+      "itiPerEntry": 0.005,
+      "itiDensityRank": 20
+    },
+    "mw": {
+      "entries": 286525,
+      "ls": 312160,
+      "lsWithLocator": 47289,
+      "lsPerEntry": 1.0895,
+      "lsDensityRank": 6,
+      "iti": 172,
+      "itiPerEntry": 0.0006,
+      "itiDensityRank": 37
+    },
+    "mw72": {
+      "entries": 55390,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 195,
+      "itiPerEntry": 0.0035,
+      "itiDensityRank": 21
+    },
+    "mwe": {
+      "entries": 32378,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 102,
+      "itiPerEntry": 0.0032,
+      "itiDensityRank": 22
+    },
+    "nmmb": {
+      "entries": 506,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 6,
+      "itiPerEntry": 0.0119,
+      "itiDensityRank": 10
+    },
+    "pe": {
+      "entries": 8799,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 10,
+      "itiPerEntry": 0.0011,
+      "itiDensityRank": 33
+    },
+    "pgn": {
+      "entries": 485,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 0,
+      "itiPerEntry": 0.0,
+      "itiDensityRank": 44
+    },
+    "pui": {
+      "entries": 17512,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 5,
+      "itiPerEntry": 0.0003,
+      "itiDensityRank": 39
+    },
+    "pw": {
+      "entries": 170556,
+      "ls": 87810,
+      "lsWithLocator": 77172,
+      "lsPerEntry": 0.5148,
+      "lsDensityRank": 10,
+      "iti": 113,
+      "itiPerEntry": 0.0007,
+      "itiDensityRank": 36
+    },
+    "pwg": {
+      "entries": 123366,
+      "ls": 568730,
+      "lsWithLocator": 478185,
+      "lsPerEntry": 4.6101,
+      "lsDensityRank": 1,
+      "iti": 1145,
+      "itiPerEntry": 0.0093,
+      "itiDensityRank": 12
+    },
+    "pwkvn": {
+      "entries": 24976,
+      "ls": 15761,
+      "lsWithLocator": 14310,
+      "lsPerEntry": 0.631,
+      "lsDensityRank": 9,
+      "iti": 13,
+      "itiPerEntry": 0.0005,
+      "itiDensityRank": 38
+    },
+    "sch": {
+      "entries": 29125,
+      "ls": 30792,
+      "lsWithLocator": 28091,
+      "lsPerEntry": 1.0572,
+      "lsDensityRank": 7,
+      "iti": 88,
+      "itiPerEntry": 0.003,
+      "itiDensityRank": 23
+    },
+    "shs": {
+      "entries": 47326,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 60,
+      "itiPerEntry": 0.0013,
+      "itiDensityRank": 32
+    },
+    "skd": {
+      "entries": 42531,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 80164,
+      "itiPerEntry": 1.8848,
+      "itiDensityRank": 2
+    },
+    "snp": {
+      "entries": 453,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 5,
+      "itiPerEntry": 0.011,
+      "itiDensityRank": 11
+    },
+    "stc": {
+      "entries": 24574,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 39,
+      "itiPerEntry": 0.0016,
+      "itiDensityRank": 30
+    },
+    "vcp": {
+      "entries": 50135,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 15619,
+      "itiPerEntry": 0.3115,
+      "itiDensityRank": 3
+    },
+    "vei": {
+      "entries": 3834,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 10,
+      "itiPerEntry": 0.0026,
+      "itiDensityRank": 24
+    },
+    "wil": {
+      "entries": 44577,
+      "ls": 6,
+      "lsWithLocator": 1,
+      "lsPerEntry": 0.0001,
+      "lsDensityRank": 16,
+      "iti": 13,
+      "itiPerEntry": 0.0003,
+      "itiDensityRank": 39
+    },
+    "yat": {
+      "entries": 45206,
+      "ls": 0,
+      "lsWithLocator": 0,
+      "lsPerEntry": 0.0,
+      "lsDensityRank": 17,
+      "iti": 5,
+      "itiPerEntry": 0.0001,
+      "itiDensityRank": 42
+    }
+  },
+  "generatedAt": "2026-07-02T20:12:08.938Z"
+}
