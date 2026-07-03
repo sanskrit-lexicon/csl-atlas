@@ -12,6 +12,7 @@ import { pathToFileURL } from "node:url";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
+import { loadSuppression, suppressionHit } from "./lib/do-not-file-suppression.mjs";
 
 const F0 = path.resolve(process.cwd(), "data", "forensic", "shared_headword_anomalies.csv");
 const F2_RAW = path.resolve(process.cwd(), "data", "forensic", "raw_headword_pool.csv");
@@ -244,8 +245,10 @@ function finalizeCandidates(candidates, sourceIndex, countByClass) {
 
 function toReviewItems(candidates, preserved) {
   let preservedCount = 0;
+  const suppressionSet = loadSuppression();
   const items = candidates.map(candidate => {
     if (preserved.has(candidate.reviewId)) preservedCount += 1;
+    const doNotFileSuppression = suppressionHit(candidate.subjectLemma, suppressionSet);
     return {
       reviewId: candidate.reviewId,
       queue: "encoding-ocr",
@@ -255,7 +258,9 @@ function toReviewItems(candidates, preserved) {
         dictionaries: candidate.dictionaries
       },
       sourcePointers: candidate.sourcePointers,
-      machineValue: candidate.machineValue,
+      machineValue: doNotFileSuppression
+        ? { ...candidate.machineValue, doNotFileSuppression }
+        : candidate.machineValue,
       evidenceLevel: candidate.sampleClass === "known-correction" ? "observed" : "inferred",
       ...reviewFields(preserved, candidate.reviewId)
     };
@@ -310,7 +315,8 @@ function main() {
       "F0 rows are rare near-core forms one edit from common lemmas; most may be legitimate Sanskrit or morphology.",
       "F2 raw-headword rows preserve raw <k1> forms shared by MW and one Petersburg dictionary.",
       "Known-correction rows calibrate reviewer labels against already observed edits.",
-      "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds."
+      "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds.",
+      "machineValue.doNotFileSuppression annotates a hit against the SanskritSpellCheck do-not-file suppression corpus (sibling repo, graceful-absence if missing) as deliberate-nonstandard provenance -- it never changes reviewStatus/reviewedValue."
     ],
     warnings: [
       "Queue type is encoding-ocr to keep the canonical review-report schema unchanged; reviewFamily identifies this as H5.",
