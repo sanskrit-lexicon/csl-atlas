@@ -102,6 +102,32 @@ stdlib-only pipeline over the canonical CDSL sources, with no LLM and no
 external resource (§6); its limitations, and the parser decisions still held
 open for expert review, are stated in §7.
 
+## Draft — §2 Related work
+
+Cross-dictionary sense alignment has a published ACL Anthology analogue:
+**Monolingual Word Sense Alignment (MWSA)**, run as a GlobaLex/GWC shared task
+(2020 edition: [2020.globalex-1.12](https://aclanthology.org/2020.globalex-1.12/),
+[2020.globalex-1.14](https://aclanthology.org/2020.globalex-1.14/)) and framed
+methodologically as a supervised classification problem over gloss-pair
+features (Ahmadi & McCrae, GWC 2021, [2021.gwc-1.9](https://aclanthology.org/2021.gwc-1.9/)).
+That literature aligns senses *within* a language across dictionary editions
+using gloss-text features and embeddings; this paper's Sanskrit-fingerprint
+method is a **complementary, translation-free alternative** for a family where
+the dictionaries are in *different* metalanguages (German, English, Sanskrit)
+and a shared gloss-embedding space is unavailable or unreliable — the two
+approaches could be benchmarked against each other on an English/German pair
+where both are applicable (e.g. PWG↔Apte), which is flagged as an open
+validation idea for §7/§8 rather than attempted here. The MWSA shared task's
+labeled-relation framing (exact/broader/narrower/related, not just a binary
+match) is also a candidate refinement for this paper's own agreement
+statistic, currently binary Sanskrit-fingerprint overlap. The closest
+Sanskrit-specific precedent is Patel & Kulkarni's "Word Sense Alignment of
+Sanskrit Lexica" (ISCLS 2024, [2024.iscls-1.1](https://aclanthology.org/2024.iscls-1.1/)),
+which cross-aligns senses between Wilson and Yates' dictionaries by a
+different (non-Sanskrit-anchoring) method — worth direct comparison in a
+revision pass, and the paper this one should most explicitly position itself
+against for an ISCLS submission.
+
 ## Draft — §3 Method
 
 ### 3.1 Corpus
