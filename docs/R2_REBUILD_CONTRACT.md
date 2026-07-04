@@ -113,7 +113,27 @@ panel r=0.093 vs 0.01 (panel selection from 2077 candidate nouns, not
 the original deleted h1_analysis.py panel); explicit-marker r=-0.035 vs
 archived 0.56 (archived r was non-significant n=5, conclusion identical).
 
-**Restored (2026-06-09) — H2/H3R slice.** `r2_h2h3.json` generated from
+**Re-verified (2026-07-04) — full refresh against current `csl-orig` + paper
+figures.** All four generators re-run; re-runs are byte-identical
+(determinism gate). The refresh moved only small values (csl-orig corrections
+since 06-09): full-corpus H1 r 0.036→0.035; senseRows 1,811→1,751; H2 cited
+0.762 (n=84)→0.768 (n=82) with cluster-robust OR 3.04→3.30 (p 0.011→0.009);
+H3R patterns unchanged. New: `npm run build-r2-paper-figures` emits the two
+PAPER_SENSE_ALIGNMENT figures (`docs/figures/r2_fig1_h1_panel.svg`,
+`docs/figures/r2_fig2_alignment_anchor.svg`) from the committed JSON, with the
+§4 example rows pinned (missing row = hard error). Documented regression: the
+archived German↔English *dharma* alignment (`pwg#b) ~ ap#3` on `suhfdDarmo`)
+is still not reproduced by the restored splitter — blocked on applying the
+ruled `div-source-scope` labels (checkpoint rulings exist since 2026-06-12;
+only the YAT semicolon counter is applied), and now flagged in the paper's §4/§7.
+
+**Restored (2026-06-09) — H2/H3R slice.** NB the specific values in this
+block were later superseded by the #123–#134 hypothesis-rigor arc (2026-06-15/16:
+controlled logistic model, YAT semicolon-counter promotion via reviewed packet
+#126/#132/#133, threshold-sensitivity sweep) — e.g. uncited 0.591→0.705,
+wil→yat overlap 0.075→0.256, ap90→ap overlap 0.498→0.565. The block is kept
+as the restoration record; current values live in `r2_h2h3.json` and the
+2026-07-04 re-verification note above. `r2_h2h3.json` generated from
 `csl-orig` across three inheritance edges on a reconstructed 28-noun panel.
 Acceptance gates met: H2 reproduced (cited 0.762 vs 0.70 archived; uncited
 0.591 vs 0.54; direction H2 SUPPORTED); H3R reproduced (WIL→SHS verbatim copy

@@ -36,13 +36,13 @@
   "h2": {
     "survivalThreshold": 0.15,
     "cited": {
-      "n": 84,
-      "survived": 64,
-      "rate": 0.762
+      "n": 82,
+      "survived": 63,
+      "rate": 0.768
     },
     "uncited": {
-      "n": 723,
-      "survived": 510,
+      "n": 725,
+      "survived": 511,
       "rate": 0.705
     },
     "supported": true,
@@ -59,21 +59,21 @@
     "method": "Logistic regression survived ~ cited + position + glossLen + crossDict (centrality controls, z-scored) + edge fixed effects (ref wil→shs), with CR1 lemma-cluster-robust SEs (addresses the centrality confound, edge-baseline differences, and within-entry pseudoreplication).",
     "n": 807,
     "lemmaClusters": 28,
-    "citedOddsRatio": 3.0387,
+    "citedOddsRatio": 3.2975,
     "citedCI95_logOdds": [
-      0.2588,
-      1.964
+      0.2962,
+      2.0901
     ],
-    "citedP": 0.0106,
+    "citedP": 0.0091,
     "citedByEdge": [
       {
         "edge": "wil→shs",
-        "cited": 1,
+        "cited": 0,
         "total": 252
       },
       {
         "edge": "wil→yat",
-        "cited": 1,
+        "cited": 0,
         "total": 252
       },
       {
@@ -98,86 +98,86 @@
     "model": [
       {
         "term": "intercept",
-        "coef": 4.9016,
-        "clusterRobustSE": 0.7022,
-        "z": 6.9807,
+        "coef": 4.9114,
+        "clusterRobustSE": 0.7035,
+        "z": 6.9816,
         "p": 0,
-        "oddsRatio": 134.5109,
+        "oddsRatio": 135.8358,
         "ci95": [
-          3.5254,
-          6.2779
+          3.5326,
+          6.2903
         ]
       },
       {
         "term": "cited",
-        "coef": 1.1114,
-        "clusterRobustSE": 0.435,
-        "z": 2.5551,
-        "p": 0.0106,
-        "oddsRatio": 3.0387,
+        "coef": 1.1932,
+        "clusterRobustSE": 0.4576,
+        "z": 2.6073,
+        "p": 0.0091,
+        "oddsRatio": 3.2975,
         "ci95": [
-          0.2588,
-          1.964
+          0.2962,
+          2.0901
         ]
       },
       {
         "term": "position_z",
-        "coef": -0.1704,
+        "coef": -0.1661,
         "clusterRobustSE": 0.1655,
-        "z": -1.0301,
-        "p": 0.303,
-        "oddsRatio": 0.8433,
+        "z": -1.0033,
+        "p": 0.3157,
+        "oddsRatio": 0.847,
         "ci95": [
-          -0.4948,
-          0.1539
+          -0.4905,
+          0.1584
         ]
       },
       {
         "term": "glossLen_z",
-        "coef": -0.411,
-        "clusterRobustSE": 0.1115,
-        "z": -3.6851,
+        "coef": -0.4224,
+        "clusterRobustSE": 0.1136,
+        "z": -3.7168,
         "p": 0.0002,
-        "oddsRatio": 0.663,
+        "oddsRatio": 0.6555,
         "ci95": [
-          -0.6297,
-          -0.1924
+          -0.6451,
+          -0.1996
         ]
       },
       {
         "term": "crossDict_z",
-        "coef": -0.0054,
-        "clusterRobustSE": 0.1404,
-        "z": -0.0381,
-        "p": 0.9696,
-        "oddsRatio": 0.9947,
+        "coef": -0.0048,
+        "clusterRobustSE": 0.1405,
+        "z": -0.0342,
+        "p": 0.9727,
+        "oddsRatio": 0.9952,
         "ci95": [
-          -0.2805,
-          0.2698
+          -0.2802,
+          0.2706
         ]
       },
       {
         "term": "edge_wil→yat",
-        "coef": -5.1505,
-        "clusterRobustSE": 0.7158,
-        "z": -7.1956,
+        "coef": -5.1569,
+        "clusterRobustSE": 0.7173,
+        "z": -7.1893,
         "p": 0,
         "oddsRatio": 0.0058,
         "ci95": [
-          -6.5535,
-          -3.7476
+          -6.5628,
+          -3.751
         ]
       },
       {
         "term": "edge_ap90→ap",
-        "coef": -4.2742,
-        "clusterRobustSE": 0.8156,
-        "z": -5.2406,
+        "coef": -4.3019,
+        "clusterRobustSE": 0.8165,
+        "z": -5.2685,
         "p": 0,
-        "oddsRatio": 0.0139,
+        "oddsRatio": 0.0135,
         "ci95": [
-          -5.8727,
-          -2.6756
+          -5.9023,
+          -2.7015
         ]
       }
     ],
@@ -193,10 +193,10 @@
       {
         "stratum": "mid",
         "n": 248,
-        "citedN": 26,
-        "citedRate": 0.615,
-        "uncitedN": 222,
-        "uncitedRate": 0.725
+        "citedN": 24,
+        "citedRate": 0.625,
+        "uncitedN": 224,
+        "uncitedRate": 0.723
       },
       {
         "stratum": "late",
@@ -215,85 +215,85 @@
     "grid": [
       {
         "threshold": 0.1,
-        "citedRate": 0.798,
-        "uncitedRate": 0.74,
-        "naiveGap": 0.058,
-        "controlledOddsRatio": 2.321,
+        "citedRate": 0.793,
+        "uncitedRate": 0.741,
+        "naiveGap": 0.052,
+        "controlledOddsRatio": 2.2209,
         "citedCI95_logOdds": [
-          0.0466,
-          1.6374
+          -0.0017,
+          1.5975
         ],
-        "citedP": 0.038,
-        "controlledSignificant": true,
+        "citedP": 0.0505,
+        "controlledSignificant": false,
         "fitOk": true
       },
       {
         "threshold": 0.125,
-        "citedRate": 0.786,
-        "uncitedRate": 0.73,
-        "naiveGap": 0.055,
-        "controlledOddsRatio": 2.637,
+        "citedRate": 0.78,
+        "uncitedRate": 0.731,
+        "naiveGap": 0.049,
+        "controlledOddsRatio": 2.5073,
         "citedCI95_logOdds": [
-          0.1061,
-          1.8331
+          0.0565,
+          1.7819
         ],
-        "citedP": 0.0277,
+        "citedP": 0.0368,
         "controlledSignificant": true,
         "fitOk": true
       },
       {
         "threshold": 0.15,
-        "citedRate": 0.762,
+        "citedRate": 0.768,
         "uncitedRate": 0.705,
-        "naiveGap": 0.057,
-        "controlledOddsRatio": 3.0387,
+        "naiveGap": 0.063,
+        "controlledOddsRatio": 3.2975,
         "citedCI95_logOdds": [
-          0.2588,
-          1.964
+          0.2962,
+          2.0901
         ],
-        "citedP": 0.0106,
+        "citedP": 0.0091,
         "controlledSignificant": true,
         "fitOk": true
       },
       {
         "threshold": 0.175,
-        "citedRate": 0.738,
-        "uncitedRate": 0.696,
-        "naiveGap": 0.042,
-        "controlledOddsRatio": 2.5828,
+        "citedRate": 0.744,
+        "uncitedRate": 0.695,
+        "naiveGap": 0.049,
+        "controlledOddsRatio": 2.7726,
         "citedCI95_logOdds": [
-          0.1211,
-          1.7767
+          0.1513,
+          1.8883
         ],
-        "citedP": 0.0247,
+        "citedP": 0.0214,
         "controlledSignificant": true,
         "fitOk": true
       },
       {
         "threshold": 0.2,
-        "citedRate": 0.738,
+        "citedRate": 0.744,
         "uncitedRate": 0.694,
-        "naiveGap": 0.044,
-        "controlledOddsRatio": 2.8362,
+        "naiveGap": 0.05,
+        "controlledOddsRatio": 3.0553,
         "citedCI95_logOdds": [
-          0.1843,
-          1.9006
+          0.2141,
+          2.0197
         ],
-        "citedP": 0.0173,
+        "citedP": 0.0153,
         "controlledSignificant": true,
         "fitOk": true
       },
       {
         "threshold": 0.25,
-        "citedRate": 0.714,
+        "citedRate": 0.72,
         "uncitedRate": 0.686,
-        "naiveGap": 0.028,
-        "controlledOddsRatio": 2.6956,
+        "naiveGap": 0.034,
+        "controlledOddsRatio": 2.8856,
         "citedCI95_logOdds": [
-          0.1322,
-          1.851
+          0.157,
+          1.9625
         ],
-        "citedP": 0.0237,
+        "citedP": 0.0214,
         "controlledSignificant": true,
         "fitOk": true
       }
