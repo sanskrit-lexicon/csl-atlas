@@ -11,6 +11,7 @@ Link here from any review queue, or set the dictionary and line below. URL param
 
 ```js
 import { sourceLineToIast } from "../lib/source-iast.js";
+import { from_slp1 } from "../lib/sanskrit-util.js";
 ```
 
 ```js
@@ -83,16 +84,46 @@ if (ctx.error) {
   </div>`);
 } else {
   const kb = Math.round(ctx.bytes / 1024);
+  const byN = new Map(ctx.lines.map(l => [l.n, l]));
+  // The entry the target line belongs to: from its <L> header down to <LEND>.
+  let entryStart = line;
+  while (entryStart > ctx.from && !byN.get(entryStart)?.text.startsWith("<L>")) entryStart--;
+  let entryEnd = line;
+  while (entryEnd < ctx.until && byN.get(entryEnd) && !byN.get(entryEnd).text.startsWith("<LEND>")) entryEnd++;
+  // The headword we are hunting, from <k1> on the entry's <L> line.
+  const k1 = (byN.get(entryStart)?.text.match(/<k1>([^<]*)/) || [])[1] || "";
+  const hw = scriptMode === "SLP1" ? k1 : from_slp1(k1);
+
+  // <L>/<H> header lines are id/page/k1/k2 metadata, not markup-wrapped SLP1 —
+  // space the fields and transcode so the headword reads, not "2010511-292-b…".
+  const displayLine = (l) => {
+    if (scriptMode === "SLP1") return l.text;
+    if (/^<[LH]>/.test(l.text)) return from_slp1(l.text.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
+    return sourceLineToIast(l.text, code);
+  };
+  // Wrap each occurrence of the headword in a yellow mark.
+  const markWord = (text) => {
+    if (!hw || !text.includes(hw)) return text;
+    const out = [];
+    text.split(hw).forEach((p, i) => {
+      if (i > 0) out.push(html`<span style="background:#ffe08a;color:#000;border-radius:2px;padding:0 1px">${hw}</span>`);
+      if (p) out.push(p);
+    });
+    return out;
+  };
+
   display(html`<div>
     <div style="margin:6px 0;color:var(--theme-foreground-muted)">
       ${initialLabel ? html`<b>${initialLabel}</b> · ` : ""}${DICT_LABELS[code]} <code>${code}.txt</code> ·
-      lines ${ctx.from.toLocaleString()}–${Math.min(ctx.until, ctx.lastLine).toLocaleString()} ·
+      entry <b>${hw || "?"}</b> at line ${line.toLocaleString()} · lines ${ctx.from.toLocaleString()}–${Math.min(ctx.until, ctx.lastLine).toLocaleString()} ·
       streamed ${kb.toLocaleString()} KB ·
       <a href=${rawUrl(code)} target="_blank" rel="noopener">raw file</a>${ctx.capped ? " · stream capped for size" : ""}
     </div>
-    <pre style="overflow-x:auto;background:var(--theme-background-alt,#f6f6f6);border-radius:8px;padding:10px 4px;font-size:.85rem;line-height:1.5">${ctx.lines.map(l => html`<div style=${l.n === line
-        ? "display:flex;background:var(--theme-foreground-focus,#ffe08a);color:#000"
-        : "display:flex"}><span style="user-select:none;width:5.5em;flex:none;text-align:right;padding-right:1em;color:var(--theme-foreground-muted)">${l.n}</span><span style="white-space:pre-wrap">${(scriptMode === "SLP1" ? l.text : sourceLineToIast(l.text, code)) || " "}</span></div>`)}</pre>
+    <pre style="overflow-x:auto;background:var(--theme-background-alt,#f6f6f6);border-radius:8px;padding:10px 4px;font-size:.85rem;line-height:1.5">${ctx.lines.map(l => {
+      const inEntry = l.n >= entryStart && l.n <= entryEnd;
+      const disp = displayLine(l) || " ";
+      return html`<div style=${inEntry ? "display:flex;background:rgba(127,127,127,.13)" : "display:flex"}><span style="user-select:none;width:5.5em;flex:none;text-align:right;padding-right:1em;color:var(--theme-foreground-muted)">${l.n}</span><span style="white-space:pre-wrap">${inEntry ? markWord(disp) : disp}</span></div>`;
+    })}</pre>
   </div>`);
 }
 ```
