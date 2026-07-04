@@ -76,7 +76,7 @@
           {
             "dict": "pwg",
             "year": 1855,
-            "panelUnits": 5.167
+            "panelUnits": 5.233
           },
           {
             "dict": "sch",
@@ -84,8 +84,8 @@
             "panelUnits": 1.567
           }
         ],
-        "deltaTotal": -3.6,
-        "unitsPerYear": -0.0493,
+        "deltaTotal": -3.666,
+        "unitsPerYear": -0.0502,
         "verdict": "decrease (no inflation)"
       },
       {
@@ -129,18 +129,18 @@
         "verdict": "decrease (no inflation)"
       }
     ],
-    "meanWithinFamilyUnitsPerYear": -0.11,
+    "meanWithinFamilyUnitsPerYear": -0.1102,
     "familyControlledRegression": {
       "model": "meanPanelUnits ~ yearCentered + family(6 dummies, ref=indigenous)",
       "nObs": 11,
       "nParams": 8,
       "residualDf": 3,
       "nearSaturated": true,
-      "yearSlopePerYear": -0.0514,
+      "yearSlopePerYear": -0.0517,
       "yearSE": 0.0424,
       "yearCI95": [
-        -0.1864,
-        0.0836
+        -0.1867,
+        0.0833
       ],
       "tCritical": 3.182,
       "ciIncludesZero": true,
@@ -149,7 +149,7 @@
     "parserRegimeStratified": {
       "western": {
         "n": 9,
-        "pearsonYearVsUnits": -0.106,
+        "pearsonYearVsUnits": -0.107,
         "note": "All non-indigenous dicts share one Roman-headword parsing regime; a flat r here means the family-granularity gap is lexicographic, not a parser artifact."
       },
       "indigenous": {
@@ -193,7 +193,7 @@
       "dict": "pwg",
       "year": 1855,
       "family": "Petersburg",
-      "meanPanelUnits": 5.167,
+      "meanPanelUnits": 5.233,
       "panelLemmasFound": 30,
       "panelLemmasTotal": 30
     },

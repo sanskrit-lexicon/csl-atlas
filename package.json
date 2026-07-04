@@ -64,6 +64,7 @@
     "build-r2-semicolon-counter-packet": "node scripts/build-r2-semicolon-counter-packet.mjs",
     "build-r2-h1-panel": "node scripts/build-r2-h1-panel.mjs",
     "build-r2-pages": "node scripts/build-r2-pages.mjs",
+    "build-r2-paper-figures": "node scripts/build-r2-paper-figures.mjs",
     "build-r2-parser-diagnostics": "node scripts/build-r2-parser-diagnostics.mjs",
     "build-r2-review-packets": "node scripts/build-r2-review-packets.mjs",
     "build-r2-label-proposals": "node scripts/build-r2-label-proposals.mjs",

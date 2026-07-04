@@ -10,7 +10,7 @@
     "Archive parity is a regression signal, not an optimization target."
   ],
   "stats": {
-    "pearsonYearVsUnits": 0.036,
+    "pearsonYearVsUnits": 0.035,
     "archivedPearson": 0.06,
     "dictRows": 11,
     "familyRows": 7
@@ -38,7 +38,7 @@
       "dict": "pwg",
       "year": 1855,
       "family": "Petersburg",
-      "senseUnitsPerEntry": 1.127,
+      "senseUnitsPerEntry": 1.129,
       "entries": 123366,
       "archivedSenseUnitsPerEntry": 1.161,
       "archivedEntries": 123366
@@ -57,7 +57,7 @@
       "year": 1872,
       "family": "Monier-Williams",
       "senseUnitsPerEntry": 2.852,
-      "entries": 55388,
+      "entries": 55390,
       "archivedSenseUnitsPerEntry": 2.903,
       "archivedEntries": 55388
     },
@@ -93,7 +93,7 @@
       "year": 1899,
       "family": "Monier-Williams",
       "senseUnitsPerEntry": 1.15,
-      "entries": 286560,
+      "entries": 286525,
       "archivedSenseUnitsPerEntry": 1.22,
       "archivedEntries": 286560
     },
@@ -110,8 +110,8 @@
       "dict": "ap",
       "year": 1957,
       "family": "Apte",
-      "senseUnitsPerEntry": 1.726,
-      "entries": 90654,
+      "senseUnitsPerEntry": 1.724,
+      "entries": 90843,
       "archivedSenseUnitsPerEntry": 1.978,
       "archivedEntries": 90654
     }
@@ -124,7 +124,7 @@
     },
     {
       "family": "Apte",
-      "meanSenseUnitsPerEntry": 2.122,
+      "meanSenseUnitsPerEntry": 2.12,
       "dicts": 2
     },
     {
@@ -144,7 +144,7 @@
     },
     {
       "family": "Petersburg",
-      "meanSenseUnitsPerEntry": 1.133,
+      "meanSenseUnitsPerEntry": 1.134,
       "dicts": 2
     },
     {

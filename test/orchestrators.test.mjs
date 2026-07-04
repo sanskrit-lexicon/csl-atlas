@@ -1453,7 +1453,7 @@ test("h2Bars generates SVG with 4 bars and percentage labels", () => {
   const h2h3Data = JSON.parse(fs.readFileSync(path.join(repoRoot, "data", "lexico", "r2_h2h3.json"), "utf-8"));
   const svg = h2Bars(h2h3Data);
   assert.ok(svg.includes("<svg"), "output should contain SVG tag");
-  assert.ok(svg.includes("76%"), "should contain cited rate as 76% (0.762)");
+  assert.ok(svg.includes("77%"), "should contain cited rate as 77% (0.768, after the 2026-07 csl-orig refresh)");
   assert.ok(svg.includes("71%"), "should contain uncited rate as 71% (0.705, after the #126 YAT semicolon promotion)");
   assert.ok(svg.includes("Cited"), "should have Cited group label");
   assert.ok(svg.includes("Uncited"), "should have Uncited group label");
