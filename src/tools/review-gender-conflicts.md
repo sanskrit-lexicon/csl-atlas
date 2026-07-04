@@ -125,9 +125,7 @@ display(html`<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap
 // Per-source pointer: IAST-labelled line, a link to the in-site line viewer,
 // a raw fallback, and the inline snippet under a disclosure.
 function sourceBlock(p) {
-  const viewer = p.code && p.line
-    ? `./source?dict=${encodeURIComponent(p.code)}&line=${p.line}&label=${encodeURIComponent(p.dictionary)}`
-    : null;
+  const viewer = p.code && p.line ? `./source#${p.code}/${p.line}` : null;
   return html`<div style="margin:2px 0">
     <b>${p.dictionary}</b> <span style="color:var(--theme-foreground-muted)">L${p.line}</span>
     ${viewer ? html` · <a href=${viewer} target="_blank" rel="noopener">view line</a>` : ""}
