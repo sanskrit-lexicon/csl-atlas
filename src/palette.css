@@ -66,3 +66,13 @@
 
 /* Font: Noto Sans */
 body, .mw-figure { font-family: "Noto Sans", "DejaVu Sans", sans-serif; }
+
+/* Kill the huge gap between short page content and the site footer (MG, 04-07-2026).
+   Framework defaults make short pages overflow the viewport and scroll:
+   #observablehq-main { min-height: calc(100vh - 20rem) } forces the content area
+   to fill the page, and #observablehq-footer { margin-top: 10rem } adds a 10rem
+   gap on top — together they push past 100vh, leaving a large empty band and a
+   needless vertical scrollbar. Let content set its own height; give the footer a
+   normal margin. Site-wide (palette.css is linked on every page). */
+#observablehq-main { min-height: auto; }
+#observablehq-footer { margin-top: 2rem; }
