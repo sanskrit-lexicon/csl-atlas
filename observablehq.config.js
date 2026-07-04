@@ -1,8 +1,26 @@
 // Observable Framework config for csl-atlas
 // https://observablehq.com/framework/config
 
+import { execSync } from "node:child_process";
+
 // Production origin for canonical / Open Graph URLs (GitHub Pages).
 const ORIGIN = "https://sanskrit-lexicon.github.io/csl-atlas";
+
+// Real build identity for the site footer. `{sha}` used to ship as a literal,
+// unsubstituted placeholder (Observable Framework's `footer` option is a plain
+// string — it never interpolates it). GITHUB_SHA is set by Actions; the local
+// git HEAD is the fallback for `npm run dev`/`build` outside CI.
+function buildSha() {
+  const sha = process.env.GITHUB_SHA || execSync("git rev-parse HEAD", { encoding: "utf8" }).trim();
+  return sha ? sha.slice(0, 7) : "unknown";
+}
+const BUILD_SHA = (() => { try { return buildSha(); } catch { return "unknown"; } })();
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
+const FOOTER =
+  `<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem">` +
+  `<span>Source: CDSL · CC-BY-SA-4.0 · build ${BUILD_SHA} (${BUILD_DATE})</span>` +
+  `<span>Atlas tooling: Dr. Mārcis Gasūns</span>` +
+  `</div>`;
 
 // Fallback description for any route without a PAGE_DESCRIPTIONS entry.
 const DEFAULT_DESCRIPTION =
@@ -221,7 +239,7 @@ export default {
       ]
     }
   ],
-  footer: "Source: CDSL · CC-BY-SA-4.0 · build {sha}",
+  footer: FOOTER,
   head,
   theme: "wide",
   toc: true,
