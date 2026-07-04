@@ -30,13 +30,23 @@ function stripMarkup(text) {
     .replace(/<[^>]+>/g, "");          // any remaining tag shell (keep inner text)
 }
 
+// Final tidy: drop the ¦ headword/body separator (a markup artifact, not text),
+// pull punctuation back onto the preceding word, and collapse whitespace.
+function clean(text) {
+  return text
+    .replace(/¦/g, " ")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 /** One raw source line → readable IAST. `code` is the csl-orig dict code. */
 export function sourceLineToIast(text, code) {
   if (text == null) return "";
   const c = String(code || "").toLowerCase();
 
   if (PROSE_SLP1.has(c)) {
-    return stripMarkup(transcodeProse(String(text))).replace(/\s+/g, " ").trim();
+    return clean(stripMarkup(transcodeProse(String(text))));
   }
 
   let s = String(text);
@@ -44,7 +54,7 @@ export function sourceLineToIast(text, code) {
   s = s.replace(/\{[#@]([^#@]*)[#@]\}/g, (_, x) => from_slp1(x)); // {#…#}, {@…@}
   s = s.replace(/<s\d?>([^<]*)<\/s\d?>/gi, (_, x) => from_slp1(x)); // MW <s>…</s>
   s = s.replace(/\{%([^%]*)%\}/g, (_, x) => x);                    // meaning: unwrap, keep
-  return stripMarkup(s).replace(/\s+/g, " ").trim();
+  return clean(stripMarkup(s));
 }
 
 /** Multi-line snippet → IAST, line by line (preserves line breaks). */
