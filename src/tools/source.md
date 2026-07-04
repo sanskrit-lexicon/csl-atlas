@@ -5,10 +5,6 @@ toc: false
 
 # Source line viewer
 
-Opens **exactly the line you need** in a Cologne source file — not the whole document. GitHub refuses to render the multi-MB `csl-orig` `.txt` files (it only offers "View raw", and `#L…` anchors never fire), so this page streams the raw text, stops as soon as it has reached your line plus a little context, and highlights it.
-
-Link here from any review queue, or set the dictionary and line below. URL parameters: `?dict=pw&line=26745`.
-
 ```js
 import { sourceLineToIast } from "../lib/source-iast.js";
 import { from_slp1 } from "../lib/sanskrit-util.js";
@@ -21,16 +17,22 @@ const CODES = Object.keys(DICT_LABELS);
 const RAW_BASE = "https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02";
 const rawUrl = (code) => `${RAW_BASE}/${code}/${code}.txt`;
 
+// Clean form: /tools/source#pw/570764 (the ?dict=&line=&label= query is still
+// read for back-compat with older shared links); the label is derived from the
+// dict code, so it need not appear in the URL.
 const params = new URLSearchParams(typeof location !== "undefined" ? location.search : "");
-const initialCode = CODES.includes((params.get("dict") || "").toLowerCase()) ? params.get("dict").toLowerCase() : "mw";
-const initialLine = Math.max(1, parseInt(params.get("line"), 10) || 1);
+const hash = (typeof location !== "undefined" ? location.hash : "").replace(/^#\/?/, "");
+const [hDict, hLine] = hash ? hash.split("/") : [];
+const rawDict = (hDict || params.get("dict") || "").toLowerCase();
+const initialCode = CODES.includes(rawDict) ? rawDict : "mw";
+const initialLine = Math.max(1, parseInt(hLine || params.get("line"), 10) || 1);
 const initialLabel = params.get("label");
 ```
 
 ```js
 const code = view(Inputs.select(CODES, { label: "Dictionary", value: initialCode, format: c => DICT_LABELS[c] }));
 const line = view(Inputs.number({ label: "Line", value: initialLine, min: 1, step: 1, submit: true }));
-const context = view(Inputs.select([25, 60, 150, 400], { label: "Context lines", value: 60 }));
+const context = view(Inputs.select([5, 15, 40, 120, 400], { label: "Context lines", value: 5 }));
 const scriptMode = view(Inputs.radio(["IAST", "SLP1"], { label: "Script", value: "IAST", format: m => m === "SLP1" ? "SLP1 (raw source)" : "IAST" }));
 ```
 
@@ -129,5 +131,7 @@ if (ctx.error) {
 ```
 
 ---
+
+Opens **exactly the line you need** in a Cologne source file — not the whole document. GitHub refuses to render the multi-MB `csl-orig` `.txt` files (it only offers "View raw", and `#L…` anchors never fire), so this page streams the raw text, stops as soon as it has reached your line plus a little context, and highlights the entry. Link here from any review queue, or set the dictionary and line above — e.g. [`/tools/source#pw/26745`](./source#pw/26745).
 
 Streams from [`sanskrit-lexicon/csl-orig`](https://github.com/sanskrit-lexicon/csl-orig) `master`. CC-BY-SA-4.0.
