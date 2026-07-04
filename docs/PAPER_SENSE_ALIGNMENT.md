@@ -128,6 +128,46 @@ different (non-Sanskrit-anchoring) method — worth direct comparison in a
 revision pass, and the paper this one should most explicitly position itself
 against for an ISCLS submission.
 
+### Technique-adoption assessment (internal note, not manuscript prose)
+
+**Question.** §2 flags the MWSA shared task's labeled-relation framing
+(exact/broader/narrower/related, Ahmadi & McCrae GWC 2021,
+[2021.gwc-1.9](https://aclanthology.org/2021.gwc-1.9/)) as "a candidate
+refinement" for this paper's own agreement statistic, currently binary
+Sanskrit-fingerprint overlap. Is it actually worth prototyping now?
+
+**Where a validation pair already exists.** §4 names the two live examples:
+the *within-tradition* Apte 1957↔1890 *dharma* pair (Jaccard 1.0, reproduced)
+and the *cross-tradition* PWG↔Śabdakalpadruma *bodhisattva* pair (reproduced).
+The genuinely **cross-language** case — the archived German↔English
+*"Gesetz, Brauch, Vorschrift, Regel"* (PWG) ↔ *"Religious or moral merit,
+virtue"* (Apte) pair on shared form *suhṛddharmo* / citation *H.* — is the one
+that would actually test MWSA's framing against this paper's fingerprint
+overlap, since MWSA itself is a cross-*edition*, same-language task and the
+labeled-relation idea only earns its keep where alignment quality is
+contestable enough to need finer-grained labels than match/no-match. **That
+pair is currently unreproduced** by the restored splitter (§7, packet 1:
+PWG/PWK `<div n>` scope) — the restored pipeline only aligns PWG to Apte at
+preface level on a single shared form for *dharma*, not at the sub-sense
+level the archived German↔English example used.
+
+**Verdict: not now — defer until §7 packet 1 lands.** Labeling a handful of
+alignment pairs (exact/broader/narrower/related instead of binary overlap) is
+itself cheap once pairs exist to label — a few hours of manual annotation
+against the existing `r2_align_*.json` fixtures, not a pipeline redesign: the
+fingerprint-overlap score would stay the mechanism, with the four-way label
+applied as a post-hoc human read of what kind of overlap each aligned pair
+represents. But at n=2–3 reproduced pairs today (both same-lemma
+identity/near-identity cases, not the genuinely divergent German↔English
+example MWSA's finer labels would actually discriminate), there is nothing to
+prototype the refinement *against* — a labeled scheme needs cases where
+exact/broader/narrower actually differ, and the one pair that would supply
+that is exactly the one blocked on the parser fix. Once packet 1 lands and the
+German↔English pair reproduces, revisit: hand-labeling the resulting set
+(dharma identity, bodhisattva cross-tradition, PWG↔Apte cross-language) with
+MWSA's four relations is a ~2–4 hour exercise appropriate for §7/§8 as a
+robustness note, not a redesign of §3.3's alignment statistic.
+
 ## Draft — §3 Method
 
 ### 3.1 Corpus
