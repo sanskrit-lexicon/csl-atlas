@@ -109,6 +109,43 @@ export function deva_to_slp1(s) {
   return out;
 }
 
+// ---- SLP1 -> Devanāgarī (real transcode: virāma conjuncts + mātrās) ----
+// Round-trip partner of deva_to_slp1: for canonical SLP1, deva_to_slp1(slp1_to_devanagari(s)) == s
+// (proved on the full alphabet + 1000 real MW headwords). Unlike iast_to_devanagari (a display-only
+// replace), this supplies the virāma between clustered consonants and picks independent-vowel vs
+// mātrā by position. The vowel/mātrā/consonant maps are INVERTED from the same Devanāgarī→SLP1 maps
+// deva_to_slp1 uses (kept in lock-step); only the 3 marks are explicit (M→anusvāra, H→visarga,
+// ~→candrabindu) since anusvāra and candrabindu both map back to 'M' and can't be inverted. Not
+// round-trip stable (matching deva_to_slp1): candrabindu (~→ँ→'M') and avagraha ('→ऽ, dropped).
+const invert = (m) => Object.fromEntries(Object.entries(m).map(([k, v]) => [v, k]));
+const SLP1_TO_DV_VOWEL = invert(DV_VOWEL_SLP1);
+const SLP1_TO_DV_MATRA = invert(DV_MATRA_SLP1);
+SLP1_TO_DV_MATRA['a'] = '';        // inherent 'a' takes no sign
+const SLP1_TO_DV_CONS = invert(DV_CONS_SLP1);
+const SLP1_TO_DV_MARK = { M: 'ं', H: 'ः', '~': 'ँ' }; // anusvāra / visarga / candrabindu
+
+export function slp1_to_devanagari(slp1) {
+  const s = slp1 || '';
+  let out = '';
+  let pendingCons = false;         // a consonant sign was emitted, still awaits its vowel/virāma
+  for (const ch of s) {
+    if (SLP1_TO_DV_CONS[ch] != null) {
+      if (pendingCons) out += VIRAMA;               // previous consonant had no vowel -> conjunct
+      out += SLP1_TO_DV_CONS[ch];
+      pendingCons = true;
+    } else if (SLP1_TO_DV_VOWEL[ch] != null) {
+      if (pendingCons) { out += SLP1_TO_DV_MATRA[ch]; pendingCons = false; } // mātrā ('' for 'a')
+      else out += SLP1_TO_DV_VOWEL[ch];             // independent vowel sign
+    } else {                                        // mark, avagraha, accent, digit, space, other
+      if (pendingCons) { out += VIRAMA; pendingCons = false; }
+      if (ch === "'") out += 'ऽ';                   // avagraha
+      else out += (SLP1_TO_DV_MARK[ch] != null ? SLP1_TO_DV_MARK[ch] : ch);
+    }
+  }
+  if (pendingCons) out += VIRAMA;                   // trailing bare consonant
+  return out;
+}
+
 // ---- IAST -> Devanāgarī (approximate display transcode) ----
 const IAST_TO_DEVA = {
   a: 'अ', 'ā': 'आ', i: 'इ', 'ī': 'ई', u: 'उ', 'ū': 'ऊ', 'ṛ': 'ऋ', 'ṝ': 'ॠ', 'ḷ': 'ऌ', 'ḹ': 'ॡ',
@@ -216,9 +253,30 @@ export function slp1_form_key(slp1) {
   return form_key(from_slp1(strip_slp1_accents(slp1 ?? '')));
 }
 
+// Fuzzy-match key: fold ALL SLP1 distinctions to plain ASCII — the lossy extreme of the SLP1 key
+// family. For building/querying MW headword indexes (mw_en_tm.json); index and query sides agree
+// because both use standard SLP1 (R=ṇ). ⚠️ guṇa = 'guRa' in MW — forgetting R→n maps it to 'gūna'.
+export function slp1_simplify(slp1) {
+  let s = slp1 || '';
+  s = s.replace(/K/g, 'kh').replace(/G/g, 'gh')
+    .replace(/C/g, 'ch').replace(/J/g, 'jh')
+    .replace(/T/g, 'th').replace(/D/g, 'dh')
+    .replace(/P/g, 'ph').replace(/B/g, 'bh');
+  s = s.replace(/S/g, 's').replace(/z/g, 's');
+  s = s.replace(/Y/g, 'n').replace(/N/g, 'n').replace(/R/g, 'n');   // R=ṇ is the critical case
+  s = s.replace(/A/g, 'a').replace(/I/g, 'i').replace(/U/g, 'u');
+  s = s.replace(/E/g, 'ai').replace(/O/g, 'au');
+  s = s.replace(/f/g, 'r').replace(/F/g, 'r').replace(/x/g, 'l').replace(/X/g, 'l');
+  s = s.replace(/M/g, 'm').replace(/H/g, '');
+  s = s.replace(/W/g, 'th').replace(/Q/g, 'dh');
+  s = s.replace(/w/g, 't').replace(/q/g, 'd');
+  s = s.replace(/L/g, 'l');                                         // Vedic retroflex ḻa
+  return s.toLowerCase();
+}
+
 export default {
   to_slp1, from_slp1, to_roman, deva_to_iast, deva_to_slp1, iast_to_devanagari,
   norm, nfold, form_key, normalize_sanskrit,
   SLP1_VOWELS, SLP1_MARKS, SLP1_CONSONANTS, SLP1_ALPHABET,
-  strip_slp1_accents, slp1_norm, slp1_form_key,
+  strip_slp1_accents, slp1_norm, slp1_form_key, slp1_to_devanagari, slp1_simplify,
 };
