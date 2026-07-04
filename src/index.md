@@ -191,7 +191,7 @@ The [Lineage Sankey](tools/lineage-sankey) visualises this collapse — MW's 40,
 ---
 
 <div class="footer-attribution">
-Source: CDSL · CC-BY-SA-4.0 · build {sha}
+Source: CDSL · CC-BY-SA-4.0
 </div>
 
 <style>
