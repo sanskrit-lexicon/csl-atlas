@@ -30,7 +30,7 @@ const initialLabel = params.get("label");
 const code = view(Inputs.select(CODES, { label: "Dictionary", value: initialCode, format: c => DICT_LABELS[c] }));
 const line = view(Inputs.number({ label: "Line", value: initialLine, min: 1, step: 1, submit: true }));
 const context = view(Inputs.select([25, 60, 150, 400], { label: "Context lines", value: 60 }));
-const scriptMode = view(Inputs.radio(["IAST", "Raw"], { label: "Script", value: "IAST" }));
+const scriptMode = view(Inputs.radio(["IAST", "SLP1"], { label: "Script", value: "IAST", format: m => m === "SLP1" ? "SLP1 (raw source)" : "IAST" }));
 ```
 
 ```js
@@ -92,7 +92,7 @@ if (ctx.error) {
     </div>
     <pre style="overflow-x:auto;background:var(--theme-background-alt,#f6f6f6);border-radius:8px;padding:10px 4px;font-size:.85rem;line-height:1.5">${ctx.lines.map(l => html`<div style=${l.n === line
         ? "display:flex;background:var(--theme-foreground-focus,#ffe08a);color:#000"
-        : "display:flex"}><span style="user-select:none;width:5.5em;flex:none;text-align:right;padding-right:1em;color:var(--theme-foreground-muted)">${l.n}</span><span style="white-space:pre-wrap">${(scriptMode === "IAST" ? sourceLineToIast(l.text, code) : l.text) || " "}</span></div>`)}</pre>
+        : "display:flex"}><span style="user-select:none;width:5.5em;flex:none;text-align:right;padding-right:1em;color:var(--theme-foreground-muted)">${l.n}</span><span style="white-space:pre-wrap">${(scriptMode === "SLP1" ? l.text : sourceLineToIast(l.text, code)) || " "}</span></div>`)}</pre>
   </div>`);
 }
 ```

@@ -82,6 +82,7 @@ const basisFilter = view(Inputs.select(["(all)", ...uniq("basis")], { label: "Ev
 const cardFilter = view(Inputs.select(["(all)", ...uniq("cardinality")], { label: "Cardinality" }));
 const overlapFilter = view(Inputs.select(["(all)", ...uniq("overlap")], { label: "Overlap" }));
 const lemmaFilter = view(Inputs.text({ label: "Lemma contains", placeholder: "IAST or SLP1", submit: false }));
+const snippetScript = view(Inputs.radio(["IAST", "SLP1"], { label: "Snippet script", value: "IAST", format: m => m === "SLP1" ? "SLP1 (raw source)" : "IAST" }));
 ```
 
 ```js
@@ -131,7 +132,7 @@ function sourceBlock(p) {
     <b>${p.dictionary}</b> <span style="color:var(--theme-foreground-muted)">L${p.line}</span>
     ${viewer ? html` · <a href=${viewer} target="_blank" rel="noopener">view line</a>` : ""}
     ${p.rawHref ? html` · <a href=${p.rawHref} target="_blank" rel="noopener" title="raw text (large file)">raw</a>` : ""}
-    ${p.snippet ? html`<details style="margin:2px 0 4px"><summary style="cursor:pointer;color:var(--theme-foreground-muted)">snippet</summary><pre style="white-space:pre-wrap;margin:4px 0;padding:6px 8px;background:var(--theme-background-alt,#f6f6f6);border-radius:6px;font-size:.85rem;overflow-x:auto">${sourceTextToIast(p.snippet, p.code)}</pre></details>` : ""}
+    ${p.snippet ? html`<details style="margin:2px 0 4px"><summary style="cursor:pointer;color:var(--theme-foreground-muted)">snippet</summary><pre style="white-space:pre-wrap;margin:4px 0;padding:6px 8px;background:var(--theme-background-alt,#f6f6f6);border-radius:6px;font-size:.85rem;overflow-x:auto">${snippetScript === "SLP1" ? p.snippet : sourceTextToIast(p.snippet, p.code)}</pre></details>` : ""}
   </div>`;
 }
 
