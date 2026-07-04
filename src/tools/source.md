@@ -122,7 +122,7 @@ if (ctx.error) {
     <pre style="overflow-x:auto;background:var(--theme-background-alt,#f6f6f6);border-radius:8px;padding:10px 4px;font-size:.85rem;line-height:1.5">${ctx.lines.map(l => {
       const inEntry = l.n >= entryStart && l.n <= entryEnd;
       const disp = displayLine(l) || " ";
-      return html`<div style=${inEntry ? "display:flex;background:rgba(127,127,127,.13)" : "display:flex"}><span style="user-select:none;width:5.5em;flex:none;text-align:right;padding-right:1em;color:var(--theme-foreground-muted)">${l.n}</span><span style="white-space:pre-wrap">${inEntry ? markWord(disp) : disp}</span></div>`;
+      return html`<div style=${inEntry ? "display:flex;background:rgba(127,127,127,.28);box-shadow:inset 3px 0 0 #ffe08a" : "display:flex"}><span style="user-select:none;width:5.5em;flex:none;text-align:right;padding-right:1em;color:var(--theme-foreground-muted)">${l.n}</span><span style="white-space:pre-wrap">${inEntry ? markWord(disp) : disp}</span></div>`;
     })}</pre>
   </div>`);
 }
