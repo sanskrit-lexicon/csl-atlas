@@ -10,10 +10,13 @@ s2c_patel_evidence.py already computed the discriminating evidence (rates + real
 headword examples) per (dict,dim); assigning the actual Patel option is the human
 gate (design §12.3). This script turns that gate into a one-click interactive
 sheet: M.G. confirms/overrides an evidence-based suggestion per item and exports
-review/lrv_fri_patel_decisions.json, which apply_lrv_fri_annotation.py consumes.
+review/csl-atlas-lrv-fri-patel_l0dictset_decisions.json, which
+apply_lrv_fri_annotation.py consumes.
 
 Input : data/L0/lrv_fri_annotation_items.json  (evidence + Patel option taxonomy)
-Output: review/lrv_fri_patel_annotation.html    (gitignored personal artifact)
+Output: review/csl-atlas-lrv-fri-patel_l0dictset_review.html  (gitignored personal
+        artifact; named per the org sheet-naming convention — see
+        Uprava/REVIEW_SHEETS_INDEX.md, FINDINGS.md §34)
 
 Run from repo root:  python scripts/L0/gen_lrv_fri_annotation_sheet.py
 """
@@ -32,8 +35,8 @@ FILLIN = os.path.join(DATA, "patel_fillin.csv")          # s2c evidence (rates +
 PATEL_GOLD = os.path.join(DATA, "patel2016_assignments.csv")  # option taxonomy per convention
 ITEMS = os.path.join(DATA, "lrv_fri_annotation_items.json")   # emitted for inspection (not an input)
 OUT_DIR = os.path.join(REPO, "review")
-OUT = os.path.join(OUT_DIR, "lrv_fri_patel_annotation.html")
-SHEET_ID = "lrv_fri_patel_2026-07-03"
+SHEET_ID = "csl-atlas-lrv-fri-patel_l0dictset"
+OUT = os.path.join(OUT_DIR, SHEET_ID + "_review.html")
 GATE_DICTS = ("LRV", "FRI")
 GATE_DIMS = ("1", "3", "5", "6", "7")
 
@@ -244,7 +247,7 @@ function download(){
              items};
   const blob=new Blob([JSON.stringify(out,null,2)],{type:"application/json"});
   const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
-  a.download="lrv_fri_patel_decisions.json"; a.click();
+  a.download=SHEET+"_decisions.json"; a.click();
 }
 dl.onclick=download; dl2.onclick=download;
 render();

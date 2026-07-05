@@ -5,13 +5,15 @@
 // worksheets (docs/H4_REVIEW_WORKSHEET.md, docs/XREF_REVIEW_WORKSHEET.md)
 // remain as the read-only evidence view; these sheets are the voting surface.
 //
-// Output goes to review/ (gitignored — personal working artifacts):
-//   review/h4_review_sheet.html
-//   review/xref_review_sheet.html
-// Each exports decisions.json as
+// Output goes to review/ (gitignored — personal working artifacts), named
+// per the org sheet-naming convention (<repo>-<topic>_<scope>_review.html —
+// see Uprava/REVIEW_SHEETS_INDEX.md, FINDINGS.md §34):
+//   review/csl-atlas-h4-semantic-field_89rows_review.html
+//   review/csl-atlas-xref-shared-core_v1_review.html
+// Each exports decisions.json as <same stem>_decisions.json, with schema
 //   { sheet_id, generated, decided, items: [{ id, decision, note }] }
 // with unvoted items included as decision: null. Consumer: /decisions-apply
-// (drop the file at review/<sheet_id>.decisions.json and run the skill).
+// (drop the file at review/<stem>_decisions.json and run the skill).
 //
 // Run: node scripts/build-review-sheets.mjs
 import fs from "node:fs";
@@ -157,7 +159,7 @@ document.getElementById("dl").addEventListener("click", () => {
   };
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 2)], { type: "application/json" }));
-  a.download = SHEET_ID + ".decisions.json"; a.click();
+  a.download = SHEET_ID + "_decisions.json"; a.click();
 });
 paint();
 </script></body></html>\n`;
@@ -179,7 +181,7 @@ function buildH4() {
     ].join("\n"),
   }));
   return sheetHtml({
-    sheetId: "h4-semantic-field-review",
+    sheetId: "csl-atlas-h4-semantic-field_89rows",
     title: "H4 semantic-field review — 89 needs-review rows",
     sourceDesc: "data/lexico/h4_semantic_field_review_packet.json (auto-resolved rows excluded)",
     items,
@@ -202,7 +204,7 @@ function buildXref() {
     ].join("\n"),
   }));
   return sheetHtml({
-    sheetId: "xref-shared-core-review",
+    sheetId: "csl-atlas-xref-shared-core_v1",
     title: "Xref shared-core review — 40 MW/PWG edges",
     sourceDesc: "data/lexico/xref_source_check_packet.json (10 prefix-controls auto-resolved, excluded)",
     items,
@@ -210,9 +212,11 @@ function buildXref() {
 }
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
+const H4_FILE = "csl-atlas-h4-semantic-field_89rows_review.html";
+const XREF_FILE = "csl-atlas-xref-shared-core_v1_review.html";
 const h4 = buildH4();
-fs.writeFileSync(path.join(OUT_DIR, "h4_review_sheet.html"), h4);
+fs.writeFileSync(path.join(OUT_DIR, H4_FILE), h4);
 const xref = buildXref();
-fs.writeFileSync(path.join(OUT_DIR, "xref_review_sheet.html"), xref);
-console.log(`wrote review/h4_review_sheet.html (${(h4.length / 1024).toFixed(0)} kB)`);
-console.log(`wrote review/xref_review_sheet.html (${(xref.length / 1024).toFixed(0)} kB)`);
+fs.writeFileSync(path.join(OUT_DIR, XREF_FILE), xref);
+console.log(`wrote review/${H4_FILE} (${(h4.length / 1024).toFixed(0)} kB)`);
+console.log(`wrote review/${XREF_FILE} (${(xref.length / 1024).toFixed(0)} kB)`);
