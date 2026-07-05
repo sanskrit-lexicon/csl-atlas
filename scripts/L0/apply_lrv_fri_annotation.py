@@ -8,8 +8,10 @@ in a committed overlay (data/L0/manual_annotations.csv) and re-applied on top of
 fingerprint every run. Pipeline order becomes:  s2 → s2b → s2d → THIS → s3 → s5.
 
 Flow:
-  1. If review/lrv_fri_patel_decisions.json exists, upsert its assigned items into
-     the overlay (deferred / unassigned items are skipped, left "unknown").
+  1. If review/csl-atlas-lrv-fri-patel_l0dictset_decisions.json exists, upsert its
+     assigned items into the overlay (deferred / unassigned items are skipped, left
+     "unknown"). Falls back to the pre-05-07-2026 name review/lrv_fri_patel_decisions.json
+     if the new one isn't found, for continuity with any already-downloaded file.
   2. Apply the overlay onto data/L0/convention_fingerprint.csv
      (dim value = '+'-joined sorted Patel option set; source = 'mg-annot').
   3. With --rerun: run s3_cladogram.py then s5_bayesian.py and print LRV/FRI
@@ -31,7 +33,8 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(REPO, "data", "L0")
-DECISIONS = os.path.join(REPO, "review", "lrv_fri_patel_decisions.json")
+DECISIONS = os.path.join(REPO, "review", "csl-atlas-lrv-fri-patel_l0dictset_decisions.json")
+DECISIONS_LEGACY = os.path.join(REPO, "review", "lrv_fri_patel_decisions.json")
 OVERLAY = os.path.join(DATA, "manual_annotations.csv")
 FINGERPRINT = os.path.join(DATA, "convention_fingerprint.csv")
 ALLOWED_DIMS = {1, 3, 5, 6, 7}
@@ -42,9 +45,10 @@ CONFIDENCE = 0.8
 
 def ingest_decisions():
     """decisions.json -> upsert assigned rows into the committed overlay."""
-    if not os.path.isfile(DECISIONS):
+    path = DECISIONS if os.path.isfile(DECISIONS) else DECISIONS_LEGACY
+    if not os.path.isfile(path):
         return None
-    with open(DECISIONS, encoding="utf-8") as f:
+    with open(path, encoding="utf-8") as f:
         doc = json.load(f)
     decided = doc.get("decided", "")
     # load existing overlay keyed (dict,dim)
@@ -81,7 +85,7 @@ def ingest_decisions():
 def apply_overlay():
     """Patch the fingerprint from the overlay. Returns count of cells written."""
     if not os.path.isfile(OVERLAY):
-        print("No overlay yet — nothing to apply. Produce review/lrv_fri_patel_decisions.json first.")
+        print("No overlay yet — nothing to apply. Produce review/csl-atlas-lrv-fri-patel_l0dictset_decisions.json first.")
         return 0
     ann = {}
     with open(OVERLAY, encoding="utf-8") as f:
