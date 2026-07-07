@@ -62,6 +62,15 @@ GitHub/org-process evidence belongs to `csl-observatory`.
 | MW-ATTENTION | Type 3 | MW receives disproportionate digital-project attention. | Boundary-sensitive: GitHub/org-process evidence belongs to `csl-observatory`; atlas may only provide dictionary evidence for a separate richness comparison. | [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md) | `csl-observatory` | Define an observatory-owned attention metric and link atlas dictionary-richness evidence without copying it. | Observatory/process dashboard; boundary note. |
 | LEXEMEHUB-FUTURE | Type 3 | A LexemeHub-style integration layer may become useful later. | Future only; not a current atlas roadmap item until stable cross-repo contracts exist. | [`REVIEW_RELEASE_ROADMAP.md`](REVIEW_RELEASE_ROADMAP.md) | `csl-atlas` | Revisit only after dictionary, VisualDCS, and standards outputs expose stable contracts. | Future integration roadmap, not current release. |
 
+## Proposed (not yet active)
+
+Eight new hypotheses — PH1 CANON-CORE, PH2 CITE-4AXIS, PH3 FREQ-STRAT, PH4 GHOST-STOCK,
+PH5 ORTHO-CLOCK, PH6 HERITAGE-WIT, PH7 CANON-DATE, PH8 HEAP-SAT — are **proposed** with
+full specs (data, join keys, method, nearest-existing delta, readiness) in
+[`ATLAS_RESEARCH_AGENDA.md`](ATLAS_RESEARCH_AGENDA.md) §2 (H273, 07-07-2026). They enter
+the tables above only when a build session tests them; owner repo for all eight is
+`csl-atlas` (boundary-checked in the agenda).
+
 ## Maintenance Rules
 
 - Every row must have exactly one owner repo.
