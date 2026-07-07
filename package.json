@@ -21,6 +21,8 @@
     "build-dict-comparison": "node scripts/build-dictionary-comparison.mjs",
     "build-learner-index": "node scripts/build-learner-index.mjs",
     "build-citation-apparatus": "node scripts/build-citation-apparatus.mjs",
+    "build-citation-canon": "node scripts/build-citation-canon.mjs",
+    "validate-citation-canon": "node scripts/validate-citation-canon.mjs",
     "build-structural-register": "node scripts/build-structural-register.mjs",
     "build-h6-structural-review": "node scripts/build-h6-structural-review.mjs",
     "build-sense-depth": "node scripts/build-sense-depth.mjs",
