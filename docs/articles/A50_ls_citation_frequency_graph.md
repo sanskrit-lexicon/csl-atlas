@@ -25,9 +25,10 @@ Each intended result → the committed artifact that backs it. Gaps are the work
 | Coverage / resolution rate per dict (11 dicts, 57.8%) | [`README.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/README.md) coverage table | ✅ exists |
 | MW non-text-marker filter (audit trail) | [`data/citations/ls_citation_nontext_filtered.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_nontext_filtered.tsv) | ✅ exists |
 | Reproducible builder | [`data/citations/build_ls_citation_graph.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/build_ls_citation_graph.py) | ✅ exists |
-| Cross-tradition ranking (universal vs idiosyncratic authorities) | derivable from `nodes.tsv` `n_dicts` column | ⚠ needs deriving (analysis + figure) |
-| Vedic vs classical vs Buddhist citation profiles | per-dict edges × a text→tradition tag | ⚠ needs deriving (small curated tradition map, not yet built) |
-| dict × text co-citation matrix / heatmap figure | from `edges.tsv` | ⚠ needs deriving (figure) |
+| Cross-tradition ranking (universal vs idiosyncratic authorities) | [`citation_canon.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/citations/citation_canon.json) `topTexts` + `canonCurve`, rendered on [`/tools/citation-canon`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/citation-canon.md) | ✅ exists (H305): 608/912 texts single-dict, none in all 11; Rāmāyaṇa top by reach (9 dicts) |
+| Canon TOPOLOGY test — nested core–periphery vs modular tradition communities (PH1 CANON-CORE) | [`scripts/build-citation-canon.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-canon.mjs) → NODF + Barber modularity vs 1,000 degree-preserving nulls | ✅ exists (H305): **refuted-modular** — NODF 24.4 (< null 29.0, p=1.0), Q 0.50 (> null 0.43, p=0.001). §4 must frame traditions as separate citation communities, not shared-canon strata |
+| Vedic vs classical vs Buddhist citation profiles | per-dict edges × a text→tradition tag; per-dict fingerprints already on [`/tools/citation-canon`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/citation-canon.md) | ⚠ tradition map still needs curating (agenda backlog #9, human-reviewed) — fingerprints exist, tradition tags do not |
+| dict × text co-citation matrix / heatmap figure | live nested-order `cell` heatmap on [`/tools/citation-canon`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/citation-canon.md) | ✅ exists (H305) |
 | Keyless-dict coverage (ieg/gra/ae/bor) | — | ❌ blocked: no abbreviation key; ieg is an epigraphic outlier (cites EI/SII, not texts) — enhancement, not a gate |
 | Citable data release (Zenodo DOI) | — | ❌ needs `/data-release` before submission |
 
@@ -41,7 +42,11 @@ Each intended result → the committed artifact that backs it. Gaps are the work
 - **§3 The shared canon** — the most-cited texts across dicts; universal (`n_dicts` high) vs
   idiosyncratic (single-dict) authorities.
 - **§4 Tradition profiles** — Vedic (mw/pwg Vedic layer) vs classical-kāvya (ap/ap90/lrv) vs
-  Buddhist (bhs/pwkvn) citation signatures; the epigraphic outlier (ieg).
+  Buddhist (bhs/pwkvn) citation signatures; the epigraphic outlier (ieg). **Now grounded
+  quantitatively (H305, PH1 CANON-CORE, `/tools/citation-canon`): the matrix is significantly
+  MODULAR, not a nested shared canon (Barber Q 0.50 > null 0.43, p=0.001; NODF 24.4 < null 29.0),
+  so §4 should present the traditions as genuinely separate citation communities over a thin
+  universal head, not additive strata of one canon.**
 - **§5 Limitations** — resolution ceiling, title-synonymy tail, no per-locus resolution,
   MW's low text yield.
 - **§6 Conclusion** — the citation graph as a reusable layer for descent/register studies (ties

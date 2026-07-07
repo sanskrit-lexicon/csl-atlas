@@ -50,6 +50,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/dictionary-conflicts": "Lemmas where two Cologne dictionaries assert disjoint grammatical genders — review candidates with source links, not verdicts.",
   "/tools/dictionary-homonyms": "Where Cologne dictionaries disagree on how many homonyms a Sanskrit lemma has — one splits an entry another keeps whole.",
   "/tools/dictionary-citations": "How heavily each Cologne Sanskrit dictionary cites sources, how broad its apparatus is, and what it cites most.",
+  "/tools/citation-canon": "The shared citation canon across Cologne Sanskrit dictionaries as a dict×text matrix — is it a nested core–periphery or disjoint tradition communities (PH1 CANON-CORE, NODF + bipartite modularity vs permutation nulls).",
   "/tools/dictionary-senses": "Which Cologne Sanskrit dictionary treats a lemma's senses most richly, measured by structural sense divisions.",
   "/tools/lexicography": "Dictionary genealogy: first empirical findings on how the Cologne Sanskrit dictionaries descend from one another, derived from canonical headword data.",
   "/tools/lexicographic-conventions": "Convention fingerprints: how the Cologne Sanskrit dictionaries relate by house style — orthographic and citation formatting — as a cladogram.",
@@ -173,6 +174,7 @@ export default {
         { name: "Gender conflicts", path: "/tools/dictionary-conflicts" },
         { name: "Homonym splits", path: "/tools/dictionary-homonyms" },
         { name: "Citation apparatus", path: "/tools/dictionary-citations" },
+        { name: "Citation canon", path: "/tools/citation-canon" },
         { name: "Sense depth", path: "/tools/dictionary-senses" },
         { name: "Lemma dossier", path: "/tools/dictionary-dossier" }
       ]

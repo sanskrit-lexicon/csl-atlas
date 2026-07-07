@@ -1,0 +1,12 @@
+{
+  "dataset": "citation_canon",
+  "commit": "943721622b1c27d1762d913030d1650c9faf9a16",
+  "generatedAt": "2026-07-07T14:23:17.635Z",
+  "generatedBy": "npm run build-citation-canon",
+  "sourceFiles": [
+    "data/citations/ls_citation_edges.tsv",
+    "data/citations/ls_citation_nodes.tsv",
+    "scripts/build-citation-canon.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}

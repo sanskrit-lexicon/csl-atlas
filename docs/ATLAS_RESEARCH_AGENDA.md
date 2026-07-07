@@ -505,7 +505,7 @@ analysis-heavy · Sonnet = mechanical build · Opus = judgment-heavy review.
 
 | # | Item | Layer | Effort | Depends on | Owner | Tier |
 |---|---|---|---|---|---|---|
-| 1 | V1 citation-canon page + PH1 nestedness stat | b | M | — | csl-atlas | Fable (stat) + Sonnet (page) |
+| 1 | ✅ V1 citation-canon page + PH1 nestedness stat — **DONE (H305, 07-07-2026):** verdict refuted-modular (`/tools/citation-canon`, `build-citation-canon.mjs`) | b | M | — | csl-atlas | Fable (stat) + Sonnet (page) |
 | 2 | PH2 citation fourth axis + V3 page | b | S–M | — | csl-atlas | Fable |
 | 3 | PH4 ghost-stock join + PH6 Heritage witness + V4 strip/chips | c | M | — | csl-atlas | Sonnet (joins) + Opus (spot-check) |
 | 4 | V2 data-driven timeline upgrade | a | M | — | csl-atlas | Sonnet |
