@@ -1,6 +1,6 @@
 # What the Sanskrit lexicographic tradition cites: a citation-frequency graph of `<ls>` source tags across 11 Cologne dictionaries
 
-_Created: 06-07-2026 · Last updated: 06-07-2026_
+_Created: 06-07-2026 · Last updated: 08-07-2026_
 
 **Status: readiness 2/5 (skeleton).** The dataset is built and committed (data 4/5); the
 prose is an outline (1/5). This file forces the data inventory before the writing.
@@ -27,7 +27,7 @@ Each intended result → the committed artifact that backs it. Gaps are the work
 | Reproducible builder | [`data/citations/build_ls_citation_graph.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/build_ls_citation_graph.py) | ✅ exists |
 | Cross-tradition ranking (universal vs idiosyncratic authorities) | [`citation_canon.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/citations/citation_canon.json) `topTexts` + `canonCurve`, rendered on [`/tools/citation-canon`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/citation-canon.md) | ✅ exists (H305): 608/912 texts single-dict, none in all 11; Rāmāyaṇa top by reach (9 dicts) |
 | Canon TOPOLOGY test — nested core–periphery vs modular tradition communities (PH1 CANON-CORE) | [`scripts/build-citation-canon.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-canon.mjs) → NODF + Barber modularity vs 1,000 degree-preserving nulls | ✅ exists (H305): **refuted-modular** — NODF 24.4 (< null 29.0, p=1.0), Q 0.50 (> null 0.43, p=0.001). §4 must frame traditions as separate citation communities, not shared-canon strata |
-| Vedic vs classical vs Buddhist citation profiles | per-dict edges × a text→tradition tag; per-dict fingerprints already on [`/tools/citation-canon`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/citation-canon.md) | ⚠ tradition map still needs curating (agenda backlog #9, human-reviewed) — fingerprints exist, tradition tags do not |
+| Vedic vs classical vs Buddhist citation profiles | [`tradition_tags.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/tradition_tags.tsv) (119 texts) → [`build-tradition-tags.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-tradition-tags.mjs) → per-dict tradition-share panel on [`/tools/citation-canon`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/citation-canon.md) | ✅ **inferred map built (H340):** per-dict communities emerge — `bhs` buddhist 98%, ap/ap90/lrv classical-kāvya, mw/md vedic. ⚠ `inferred` / **human review pending** (0/119 reviewed; review sheet queued, agenda backlog #9) — not yet asserted as fact |
 | dict × text co-citation matrix / heatmap figure | live nested-order `cell` heatmap on [`/tools/citation-canon`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/citation-canon.md) | ✅ exists (H305) |
 | Keyless-dict coverage (ieg/gra/ae/bor) | — | ❌ blocked: no abbreviation key; ieg is an epigraphic outlier (cites EI/SII, not texts) — enhancement, not a gate |
 | Citable data release (Zenodo DOI) | — | ❌ needs `/data-release` before submission |
@@ -41,12 +41,19 @@ Each intended result → the committed artifact that backs it. Gaps are the work
   (All committed; §2 is largely a write-up of the README.)
 - **§3 The shared canon** — the most-cited texts across dicts; universal (`n_dicts` high) vs
   idiosyncratic (single-dict) authorities.
-- **§4 Tradition profiles** — Vedic (mw/pwg Vedic layer) vs classical-kāvya (ap/ap90/lrv) vs
-  Buddhist (bhs/pwkvn) citation signatures; the epigraphic outlier (ieg). **Now grounded
-  quantitatively (H305, PH1 CANON-CORE, `/tools/citation-canon`): the matrix is significantly
-  MODULAR, not a nested shared canon (Barber Q 0.50 > null 0.43, p=0.001; NODF 24.4 < null 29.0),
-  so §4 should present the traditions as genuinely separate citation communities over a thin
-  universal head, not additive strata of one canon.**
+- **§4 Tradition profiles** — the modular communities H305 detected, now **named** by the
+  curated 119-text `text → tradition` map (H340, [`tradition_tags.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/tradition_tags.tsv),
+  rendered as the per-dict tradition-share panel on [`/tools/citation-canon`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/citation-canon.md)).
+  Grounded quantitatively (H305, PH1 CANON-CORE): the matrix is significantly **MODULAR**, not a
+  nested shared canon (Barber Q 0.50 > null 0.43, p=0.001; NODF 24.4 < null 29.0), so §4 presents
+  the traditions as **genuinely separate citation communities over a thin universal head**, not
+  additive strata of one canon. The inferred map makes the communities concrete: **`bhs` is an
+  almost pure Buddhist community (98% of its tagged citation volume)**, the Apte pair (`ap`/`ap90`)
+  and `lrv` are classical-kāvya (59–79%), `pwg` spreads across lexical-kośa / classical-kāvya /
+  epic, and `mw`/`md` read as Vedic over a small tagged sample (MW under-represented — see §5). The
+  epigraphic outlier (`ieg`) is keyless and out of the graph. **Caveat for the draft: the tradition
+  map is `inferred` (0/119 human-reviewed as of 08-07-2026) — §4 must report the communities as a
+  reviewed map before submission; the review sheet is queued (agenda backlog #9).**
 - **§5 Limitations** — resolution ceiling, title-synonymy tail, no per-locus resolution,
   MW's low text yield.
 - **§6 Conclusion** — the citation graph as a reusable layer for descent/register studies (ties
