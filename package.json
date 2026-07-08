@@ -25,6 +25,8 @@
     "validate-citation-canon": "node scripts/validate-citation-canon.mjs",
     "build-correction-feed": "node scripts/build-correction-feed.mjs",
     "validate-correction-feed": "node scripts/validate-correction-feed.mjs",
+    "build-heritage-witness": "node scripts/build-heritage-witness.mjs",
+    "validate-heritage-witness": "node scripts/validate-heritage-witness.mjs",
     "build-structural-register": "node scripts/build-structural-register.mjs",
     "build-h6-structural-review": "node scripts/build-h6-structural-review.mjs",
     "build-sense-depth": "node scripts/build-sense-depth.mjs",
