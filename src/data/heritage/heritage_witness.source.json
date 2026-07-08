@@ -1,0 +1,15 @@
+{
+  "dataset": "heritage_witness",
+  "commit": "3423ca2a0a57f4b13fd88d005af1c2f8b1d2f390",
+  "crosswalkRepo": "https://github.com/gasyoun/SanskritLexicography",
+  "crosswalkPath": "HeadwordLists/mw_heritage_crosswalk.tsv",
+  "crosswalkCommit": "c6c35389239f7c782201f4478a6a9616310d6d63",
+  "generatedAt": "2026-07-08T07:21:45.056Z",
+  "generatedBy": "npm run build-heritage-witness",
+  "sourceFiles": [
+    "SanskritLexicography/HeadwordLists/mw_heritage_crosswalk.tsv",
+    "csl-orig/v02/mw/mw.txt",
+    "scripts/build-heritage-witness.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}
