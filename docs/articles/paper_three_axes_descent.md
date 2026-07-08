@@ -237,6 +237,24 @@ and register recoded* (2, including PWG → MW), *content overlap needing axis r
 they are a triage that tells a reviewer **which axes to read against which** for each
 edge, which is precisely what a one-dimensional score cannot do.
 
+### 4.4 A fourth axis? The citation profile (note added 08-07-2026, PH2 CITE-4AXIS)
+
+A follow-up packet ([`FOUR_AXIS_CITATION_INDEPENDENCE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/FOUR_AXIS_CITATION_INDEPENDENCE.md),
+[`/tools/descent-axes`](https://sanskrit-lexicon.github.io/csl-atlas/tools/descent-axes))
+tested whether the **citation profile** — cosine similarity of two dictionaries'
+share-normalised citation vectors over the canonical-siglum source matrix — is a
+*fourth* separable axis on these edges. Only 7 of the 14 edge dictionaries carry a
+validated `<ls>` citation adapter, so the testable set shrinks to n=5 edges and the
+result is descriptive: no citation~axis correlation reaches the n=5 p=0.05 threshold
+(0.878), and no exact label-permutation p (all 120 permutations) falls below 0.05 —
+independence is not rejected, consistent with citation canon being a fourth axis.
+One estimate deserves flagging rather than burying: citation~microstructure Pearson
+0.84 (exact p 0.083) is the strongest cross-axis coupling measured on any pair in this
+programme; if it survives a larger edge set, "quoting the same books" travels with
+microstructural register, not with headword stock, and the axis count stays at three
+plus a register-linked citation component. Until then this paper's three-axis frame
+stands, with the fourth-axis question explicitly open rather than silently unasked.
+
 ## 5. Discussion
 
 ### 5.1 Why a single score fails

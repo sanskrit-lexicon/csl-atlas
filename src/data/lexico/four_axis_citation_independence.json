@@ -1,0 +1,293 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "status": "four-axis-citation-independence-test",
+  "hypothesis": "CITE-4AXIS",
+  "claim": "Dictionary-pair citation-profile similarity (cosine over per-dict normalised citation vectors) is statistically separable from the content, convention, and microstructure axes on the documented L0 edges — a fourth axis of descent.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-reviewed",
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "npm run build-four-axis-independence",
+  "sourceFiles": [
+    "data/lexico/three_axis_comparison.json",
+    "src/data/dicts/citation-apparatus.json",
+    "data/citations/ls_citation_edges.tsv",
+    "scripts/build-four-axis-independence.mjs"
+  ],
+  "sourceGeneratedAt": "2026-06-13T08:14:43.023Z",
+  "n": 5,
+  "nDocumentedEdges": 13,
+  "method": "Citation axis = cosine similarity of the two dictionaries' share-normalised citation vectors over the citation-apparatus canonical-siglum source matrix (top-60 shared sources, validated <ls> adapters). Pearson and Spearman against the three committed axis scores on the reduced edge set, with the two-tailed critical |r| for n=5 (df=3): 0.878 at p=0.05, 0.959 at p=0.01. Each citation~axis Pearson additionally carries an EXACT label-permutation p over all 5! = 120 permutations.",
+  "edgeShrinkage": {
+    "note": "Only 7 of the 14 dictionaries on the 13 documented L0 edges have a validated <ls> citation adapter, leaving n=5 testable edges — fewer than the agenda §2 estimate (\"9 of the 13\"). The excluded edges are listed explicitly; nothing is imputed.",
+    "testableEdges": 5,
+    "excludedEdges": [
+      {
+        "rowId": "three-axis:WIL:YAT",
+        "parent": "WIL",
+        "child": "YAT",
+        "reason": "no validated <ls> citation adapter for WIL, YAT"
+      },
+      {
+        "rowId": "three-axis:WIL:SHS",
+        "parent": "WIL",
+        "child": "SHS",
+        "reason": "no validated <ls> citation adapter for WIL, SHS"
+      },
+      {
+        "rowId": "three-axis:YAT:SHS",
+        "parent": "YAT",
+        "child": "SHS",
+        "reason": "no validated <ls> citation adapter for YAT, SHS"
+      },
+      {
+        "rowId": "three-axis:PW:CCS",
+        "parent": "PW",
+        "child": "CCS",
+        "reason": "no validated <ls> citation adapter for CCS"
+      },
+      {
+        "rowId": "three-axis:CCS:CAE",
+        "parent": "CCS",
+        "child": "CAE",
+        "reason": "no validated <ls> citation adapter for CCS, CAE"
+      },
+      {
+        "rowId": "three-axis:MW72:MW",
+        "parent": "MW72",
+        "child": "MW",
+        "reason": "no validated <ls> citation adapter for MW72"
+      },
+      {
+        "rowId": "three-axis:PWG:MW72",
+        "parent": "PWG",
+        "child": "MW72",
+        "reason": "no validated <ls> citation adapter for MW72"
+      },
+      {
+        "rowId": "three-axis:BOP:MW",
+        "parent": "BOP",
+        "child": "MW",
+        "reason": "no validated <ls> citation adapter for BOP"
+      }
+    ]
+  },
+  "citationVectorSource": {
+    "primary": "src/data/dicts/citation-apparatus.json sourceMatrix (canonical siglum fold + reviewed alias table; MW fully resolved: 320,828 tagged citations)",
+    "whyNotLsGraph": "data/citations/ls_citation_edges.tsv resolves MW to only 5 texts (its top abbreviations — MBh., R., BhP. … — sit unresolved in ls_citation_unresolved_top.tsv), and 3 of the 5 testable edges involve MW, so ls-graph cosines there measure resolver coverage, not canon shape (BEN~MW = 0.0 is an artifact). The ls-graph cosine is reported per edge as a sensitivity column instead.",
+    "sensitivityAgreementSpearman": 0.7
+  },
+  "edges": [
+    {
+      "rowId": "three-axis:PWG:PW",
+      "parent": "PWG",
+      "child": "PW",
+      "tier": "A",
+      "contentAxis": 0.9375,
+      "conventionAxis": 0.7466,
+      "microstructureAxis": 0.6788,
+      "citationAxis": 0.5933,
+      "citationSharedSources": 50,
+      "graphCitationCosine": 0.508,
+      "graphSharedTexts": 58
+    },
+    {
+      "rowId": "three-axis:AP90:AP",
+      "parent": "AP90",
+      "child": "AP",
+      "tier": "A",
+      "contentAxis": 0.7601,
+      "conventionAxis": 0.6163,
+      "microstructureAxis": 0.9569,
+      "citationAxis": 0.8994,
+      "citationSharedSources": 33,
+      "graphCitationCosine": 0.8736,
+      "graphSharedTexts": 142
+    },
+    {
+      "rowId": "three-axis:PWG:MW",
+      "parent": "PWG",
+      "child": "MW",
+      "tier": "A",
+      "contentAxis": 0.8934,
+      "conventionAxis": 0.3708,
+      "microstructureAxis": 0.6911,
+      "citationAxis": 0.4478,
+      "citationSharedSources": 39,
+      "graphCitationCosine": 0.228,
+      "graphSharedTexts": 2
+    },
+    {
+      "rowId": "three-axis:PWG:SCH",
+      "parent": "PWG",
+      "child": "SCH",
+      "tier": "A",
+      "contentAxis": 0.0734,
+      "conventionAxis": 0.682,
+      "microstructureAxis": 0.2162,
+      "citationAxis": 0.2684,
+      "citationSharedSources": 48,
+      "graphCitationCosine": 0.4611,
+      "graphSharedTexts": 158
+    },
+    {
+      "rowId": "three-axis:BEN:MW",
+      "parent": "BEN",
+      "child": "MW",
+      "tier": "B",
+      "contentAxis": 0.9374,
+      "conventionAxis": 0.5297,
+      "microstructureAxis": 0.6821,
+      "citationAxis": 0.3758,
+      "citationSharedSources": 18,
+      "graphCitationCosine": 0,
+      "graphSharedTexts": 0
+    }
+  ],
+  "citationCorrelations": [
+    {
+      "pair": "citation~content",
+      "pearson": 0.416,
+      "spearman": 0.3,
+      "strength": "not-significant",
+      "permutationP": 0.408,
+      "nPermutations": 120
+    },
+    {
+      "pair": "citation~convention",
+      "pearson": 0.16,
+      "spearman": 0.1,
+      "strength": "not-significant",
+      "permutationP": 0.792,
+      "nPermutations": 120
+    },
+    {
+      "pair": "citation~microstructure",
+      "pearson": 0.843,
+      "spearman": 0.7,
+      "strength": "not-significant",
+      "permutationP": 0.083,
+      "nPermutations": 120
+    }
+  ],
+  "correlationMatrix": [
+    {
+      "a": "content",
+      "b": "content",
+      "pearson": 1,
+      "spearman": 1
+    },
+    {
+      "a": "content",
+      "b": "convention",
+      "pearson": -0.35,
+      "spearman": 0.1
+    },
+    {
+      "a": "content",
+      "b": "microstructure",
+      "pearson": 0.794,
+      "spearman": 0
+    },
+    {
+      "a": "content",
+      "b": "citation",
+      "pearson": 0.416,
+      "spearman": 0.3
+    },
+    {
+      "a": "convention",
+      "b": "content",
+      "pearson": -0.35,
+      "spearman": 0.1
+    },
+    {
+      "a": "convention",
+      "b": "convention",
+      "pearson": 1,
+      "spearman": 1
+    },
+    {
+      "a": "convention",
+      "b": "microstructure",
+      "pearson": -0.245,
+      "spearman": -0.6
+    },
+    {
+      "a": "convention",
+      "b": "citation",
+      "pearson": 0.16,
+      "spearman": 0.1
+    },
+    {
+      "a": "microstructure",
+      "b": "content",
+      "pearson": 0.794,
+      "spearman": 0
+    },
+    {
+      "a": "microstructure",
+      "b": "convention",
+      "pearson": -0.245,
+      "spearman": -0.6
+    },
+    {
+      "a": "microstructure",
+      "b": "microstructure",
+      "pearson": 1,
+      "spearman": 1
+    },
+    {
+      "a": "microstructure",
+      "b": "citation",
+      "pearson": 0.843,
+      "spearman": 0.7
+    },
+    {
+      "a": "citation",
+      "b": "content",
+      "pearson": 0.416,
+      "spearman": 0.3
+    },
+    {
+      "a": "citation",
+      "b": "convention",
+      "pearson": 0.16,
+      "spearman": 0.1
+    },
+    {
+      "a": "citation",
+      "b": "microstructure",
+      "pearson": 0.843,
+      "spearman": 0.7
+    },
+    {
+      "a": "citation",
+      "b": "citation",
+      "pearson": 1,
+      "spearman": 1
+    }
+  ],
+  "findings": {
+    "citationAxisSeparable": true,
+    "maxAbsCitationPearson": 0.843,
+    "minCitationPermutationP": 0.083,
+    "strongestCoupling": "citation~microstructure"
+  },
+  "interpretation": [
+    "No citation~axis correlation reaches the n=5 p=0.05 threshold and no exact permutation p falls below 0.05, so the packet cannot reject the citation profile's independence from the other three axes — consistent with citation canon being a FOURTH axis of descent.",
+    "The citation~microstructure point estimate is large (Pearson ≈ 0.84, exact permutation p ≈ 0.08) — the single strongest cross-axis coupling measured on any axis pair so far. At n=5 it is not detectable, but it is the first thing to re-test when the documented edge set grows: if it holds, 'quoting the same books' travels with microstructural register, not with headword stock.",
+    "Citation~content is weak (≈0.4): sharing headword stock does not imply sharing citation canon on these edges — which is exactly the separation the fourth-axis claim needs, and consistent with APPARATUS-NOT-ERRORS treating apparatus descent as its own signal."
+  ],
+  "limitations": [
+    "n=5 testable edges after honest shrinkage — the smallest reduced set in the axis series. Critical |r| at this n is 0.878, so only near-perfect collinearity would be detectable; every verdict here is descriptive, not confirmatory.",
+    "The citation vectors live in the apparatus top-source space (head of the citation-frequency distribution, canonical-siglum folded); tail sources are not represented. Cosine on share-normalised vectors is dominated by the head anyway, but a full-vector recomputation is the natural upgrade.",
+    "Several edges share the PWG parent or the MW child, so the edge sample is non-independent — the same caveat as THREE-AXIS-INDEP.",
+    "All inputs inherit the caveats of three_axis_comparison.json and citation-apparatus.json (containment is size-confounded; convention encodes modelled house style; <ls> adapters miss prose/`iti` citation)."
+  ],
+  "boundary": [
+    "Derived from committed atlas dictionary evidence only; no source/corpus read, no human decision, no external maker work."
+  ],
+  "generatedAt": "2026-07-08T20:00:42.423Z"
+}
