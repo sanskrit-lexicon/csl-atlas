@@ -55,6 +55,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/heritage-witness": "Which Monier-Williams headwords the independent Sanskrit Heritage Platform (INRIA) lexicon confirms, joined via the MW-Heritage crosswalk — coverage by initial letter and a searchable witnessed-headword table.",
   "/tools/dictionary-senses": "Which Cologne Sanskrit dictionary treats a lemma's senses most richly, measured by structural sense divisions.",
   "/tools/lexicography": "Dictionary genealogy: first empirical findings on how the Cologne Sanskrit dictionaries descend from one another, derived from canonical headword data.",
+  "/tools/descent-axes": "Descent axes (PH2 CITE-4AXIS): whether citation-profile similarity is a fourth separable axis of dictionary inheritance beside content, convention, and microstructure — axis-pair scatters and the 4×4 correlation matrix on the testable L0 edges.",
   "/tools/lexicographic-conventions": "Convention fingerprints: how the Cologne Sanskrit dictionaries relate by house style — orthographic and citation formatting — as a cladogram.",
   "/tools/structural-register": "Structural register scatter (H6): whether citation style plus grammar marking predicts a Cologne dictionary's family.",
   "/tools/semantic-fields": "Semantic fields (H4): whether the Cologne Sanskrit dictionaries show measurable topical coverage profiles.",
@@ -187,6 +188,7 @@ export default {
       name: "Dictionary structure",
       pages: [
         { name: "Dictionary genealogy", path: "/tools/lexicography" },
+        { name: "Descent axes", path: "/tools/descent-axes" },
         { name: "Convention fingerprints", path: "/tools/lexicographic-conventions" },
         { name: "Structural register", path: "/tools/structural-register" },
         { name: "Semantic fields", path: "/tools/semantic-fields" },
