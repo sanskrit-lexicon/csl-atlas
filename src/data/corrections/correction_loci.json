@@ -1,0 +1,5368 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedBy": "npm run build-correction-feed",
+  "sourceFiles": [
+    "csl-corrections/data/derived/correction_loci.tsv",
+    "csl-corrections/data/derived/dict_entry_counts.tsv",
+    "scripts/build-correction-feed.mjs"
+  ],
+  "method": "Read the csl-corrections correction_loci.tsv feed (one row per corrected source line, locus-resolved to the printed <pc> page where the change files carry it) plus its dict_entry_counts.tsv sidecar (grep -c '^<L>' per csl-orig v02 dict). Aggregate per dict and per process (bulk vs human batches); bin <pc>-resolved records into 40 normalized page-position bins, where position = page / that dictionary's highest corrected page seen in the feed (an underestimate of the true page count — see limitations).",
+  "positionBins": 40,
+  "heatmapMinLoci": 30,
+  "totals": {
+    "records": 39540,
+    "human": 9487,
+    "bulk": 30053,
+    "dicts": 15,
+    "pcResolved": 39531
+  },
+  "perDict": [
+    {
+      "dict": "bor",
+      "records": 21990,
+      "human": 0,
+      "bulk": 21990,
+      "humanShare": 0,
+      "entries": 24609,
+      "per1k": 893.58,
+      "per1kHuman": 0,
+      "pcResolved": 21990,
+      "pcResolvedShare": 1,
+      "maxPage": 772,
+      "distinctPages": 772,
+      "pageCoverage": 1,
+      "firstDate": "2026-05-29",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "new": 21990
+      },
+      "topTagContexts": {
+        "text": 12363,
+        "div": 9627
+      }
+    },
+    {
+      "dict": "lrv",
+      "records": 10298,
+      "human": 2235,
+      "bulk": 8063,
+      "humanShare": 0.217,
+      "entries": 53441,
+      "per1k": 192.7,
+      "per1kHuman": 41.82,
+      "pcResolved": 10298,
+      "pcResolvedShare": 1,
+      "maxPage": 839,
+      "distinctPages": 810,
+      "pageCoverage": 0.9654,
+      "firstDate": "2025-01-14",
+      "lastDate": "2026-02-03",
+      "directives": {
+        "new": 10298
+      },
+      "topTagContexts": {
+        "k2": 8068,
+        "text": 1834,
+        "i": 161,
+        "pc": 160,
+        "ls": 36
+      }
+    },
+    {
+      "dict": "shs",
+      "records": 3455,
+      "human": 3455,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 47326,
+      "per1k": 73,
+      "per1kHuman": 73,
+      "pcResolved": 3455,
+      "pcResolvedShare": 1,
+      "maxPage": 837,
+      "distinctPages": 714,
+      "pageCoverage": 0.853,
+      "firstDate": "2025-01-14",
+      "lastDate": "2026-02-03",
+      "directives": {
+        "new": 3455
+      },
+      "topTagContexts": {
+        "text": 3347,
+        "k1": 108
+      }
+    },
+    {
+      "dict": "ap",
+      "records": 2299,
+      "human": 2299,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 90843,
+      "per1k": 25.31,
+      "per1kHuman": 25.31,
+      "pcResolved": 2298,
+      "pcResolvedShare": 0.9996,
+      "maxPage": 1764,
+      "distinctPages": 643,
+      "pageCoverage": 0.3645,
+      "firstDate": "2025-04-18",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "new": 2299
+      },
+      "topTagContexts": {
+        "text": 2249,
+        "k1": 43,
+        "ls": 6,
+        "k2": 1
+      }
+    },
+    {
+      "dict": "mw",
+      "records": 1187,
+      "human": 1187,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 286525,
+      "per1k": 4.14,
+      "per1kHuman": 4.14,
+      "pcResolved": 1187,
+      "pcResolvedShare": 1,
+      "maxPage": 1332,
+      "distinctPages": 597,
+      "pageCoverage": 0.4482,
+      "firstDate": "2024-06-23",
+      "lastDate": "2026-06-27",
+      "directives": {
+        "new": 1187
+      },
+      "topTagContexts": {
+        "text": 795,
+        "s1": 159,
+        "s": 135,
+        "k1": 28,
+        "k2": 26
+      }
+    },
+    {
+      "dict": "ap90",
+      "records": 139,
+      "human": 139,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 34882,
+      "per1k": 3.98,
+      "per1kHuman": 3.98,
+      "pcResolved": 139,
+      "pcResolvedShare": 1,
+      "maxPage": 1196,
+      "distinctPages": 94,
+      "pageCoverage": 0.0786,
+      "firstDate": "2025-01-14",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "new": 139
+      },
+      "topTagContexts": {
+        "text": 136,
+        "k1": 2,
+        "ls": 1
+      }
+    },
+    {
+      "dict": "gra",
+      "records": 60,
+      "human": 60,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 12785,
+      "per1k": 4.69,
+      "per1kHuman": 4.69,
+      "pcResolved": 60,
+      "pcResolvedShare": 1,
+      "maxPage": 1608,
+      "distinctPages": 54,
+      "pageCoverage": 0.0336,
+      "firstDate": "2026-05-29",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "new": 60
+      },
+      "topTagContexts": {
+        "old": 54,
+        "new": 6
+      }
+    },
+    {
+      "dict": "bop",
+      "records": 39,
+      "human": 39,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 8961,
+      "per1k": 4.35,
+      "per1kHuman": 4.35,
+      "pcResolved": 39,
+      "pcResolvedShare": 1,
+      "maxPage": 395,
+      "distinctPages": 32,
+      "pageCoverage": 0.081,
+      "firstDate": "2026-05-29",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "new": 39
+      },
+      "topTagContexts": {
+        "lang": 39
+      }
+    },
+    {
+      "dict": "mw72",
+      "records": 24,
+      "human": 24,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 55390,
+      "per1k": 0.43,
+      "per1kHuman": 0.43,
+      "pcResolved": 24,
+      "pcResolvedShare": 1,
+      "maxPage": 1180,
+      "distinctPages": 22,
+      "pageCoverage": 0.0186,
+      "firstDate": "2026-05-29",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "new": 24
+      },
+      "topTagContexts": {
+        "nsi": 12,
+        "lang": 12
+      }
+    },
+    {
+      "dict": "pw",
+      "records": 18,
+      "human": 18,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 170556,
+      "per1k": 0.11,
+      "per1kHuman": 0.11,
+      "pcResolved": 18,
+      "pcResolvedShare": 1,
+      "maxPage": 7,
+      "distinctPages": 4,
+      "pageCoverage": 0.5714,
+      "firstDate": "2025-11-26",
+      "lastDate": "2026-02-03",
+      "directives": {
+        "new": 18
+      },
+      "topTagContexts": {
+        "div": 9,
+        "text": 6,
+        "k1": 2,
+        "ls": 1
+      }
+    },
+    {
+      "dict": "skd",
+      "records": 16,
+      "human": 16,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 42531,
+      "per1k": 0.38,
+      "per1kHuman": 0.38,
+      "pcResolved": 16,
+      "pcResolvedShare": 1,
+      "maxPage": 5,
+      "distinctPages": 4,
+      "pageCoverage": 0.8,
+      "firstDate": "2026-06-27",
+      "lastDate": "2026-06-27",
+      "directives": {
+        "new": 16
+      },
+      "topTagContexts": {
+        "text": 16
+      }
+    },
+    {
+      "dict": "stc",
+      "records": 8,
+      "human": 8,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 24574,
+      "per1k": 0.33,
+      "per1kHuman": 0.33,
+      "pcResolved": 0,
+      "pcResolvedShare": 0,
+      "maxPage": null,
+      "distinctPages": 0,
+      "pageCoverage": null,
+      "firstDate": "2026-06-26",
+      "lastDate": "2026-06-26",
+      "directives": {
+        "new": 4,
+        "del": 4
+      },
+      "topTagContexts": {
+        "line": 4,
+        "text": 3,
+        "P": 1
+      }
+    },
+    {
+      "dict": "krm",
+      "records": 5,
+      "human": 5,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 2061,
+      "per1k": 2.43,
+      "per1kHuman": 2.43,
+      "pcResolved": 5,
+      "pcResolvedShare": 1,
+      "maxPage": 1194,
+      "distinctPages": 5,
+      "pageCoverage": 0.0042,
+      "firstDate": "2026-05-29",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "new": 5
+      },
+      "topTagContexts": {
+        "s": 5
+      }
+    },
+    {
+      "dict": "bur",
+      "records": 1,
+      "human": 1,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 19776,
+      "per1k": 0.05,
+      "per1kHuman": 0.05,
+      "pcResolved": 1,
+      "pcResolvedShare": 1,
+      "maxPage": 521,
+      "distinctPages": 1,
+      "pageCoverage": 0.0019,
+      "firstDate": "2026-05-29",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "new": 1
+      },
+      "topTagContexts": {
+        "lang": 1
+      }
+    },
+    {
+      "dict": "inm",
+      "records": 1,
+      "human": 1,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 12647,
+      "per1k": 0.08,
+      "per1kHuman": 0.08,
+      "pcResolved": 1,
+      "pcResolvedShare": 1,
+      "maxPage": 42,
+      "distinctPages": 1,
+      "pageCoverage": 0.0238,
+      "firstDate": "2026-05-29",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "new": 1
+      },
+      "topTagContexts": {
+        "is": 1
+      }
+    }
+  ],
+  "heatmapDicts": [
+    "bor",
+    "lrv",
+    "shs",
+    "ap",
+    "mw",
+    "ap90",
+    "gra",
+    "bop"
+  ],
+  "heatmapCells": [
+    {
+      "dict": "ap",
+      "bin": 0,
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "ap",
+      "bin": 1,
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "ap",
+      "bin": 2,
+      "process": "human",
+      "count": 110
+    },
+    {
+      "dict": "ap",
+      "bin": 3,
+      "process": "human",
+      "count": 179
+    },
+    {
+      "dict": "ap",
+      "bin": 4,
+      "process": "human",
+      "count": 187
+    },
+    {
+      "dict": "ap",
+      "bin": 5,
+      "process": "human",
+      "count": 217
+    },
+    {
+      "dict": "ap",
+      "bin": 6,
+      "process": "human",
+      "count": 221
+    },
+    {
+      "dict": "ap",
+      "bin": 7,
+      "process": "human",
+      "count": 259
+    },
+    {
+      "dict": "ap",
+      "bin": 8,
+      "process": "human",
+      "count": 300
+    },
+    {
+      "dict": "ap",
+      "bin": 9,
+      "process": "human",
+      "count": 339
+    },
+    {
+      "dict": "ap",
+      "bin": 10,
+      "process": "human",
+      "count": 116
+    },
+    {
+      "dict": "ap",
+      "bin": 11,
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "ap",
+      "bin": 12,
+      "process": "human",
+      "count": 13
+    },
+    {
+      "dict": "ap",
+      "bin": 13,
+      "process": "human",
+      "count": 9
+    },
+    {
+      "dict": "ap",
+      "bin": 14,
+      "process": "human",
+      "count": 9
+    },
+    {
+      "dict": "ap",
+      "bin": 15,
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "ap",
+      "bin": 16,
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "ap",
+      "bin": 17,
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "ap",
+      "bin": 18,
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "ap",
+      "bin": 19,
+      "process": "human",
+      "count": 13
+    },
+    {
+      "dict": "ap",
+      "bin": 20,
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "ap",
+      "bin": 21,
+      "process": "human",
+      "count": 15
+    },
+    {
+      "dict": "ap",
+      "bin": 22,
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "ap",
+      "bin": 23,
+      "process": "human",
+      "count": 18
+    },
+    {
+      "dict": "ap",
+      "bin": 24,
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "ap",
+      "bin": 25,
+      "process": "human",
+      "count": 18
+    },
+    {
+      "dict": "ap",
+      "bin": 26,
+      "process": "human",
+      "count": 28
+    },
+    {
+      "dict": "ap",
+      "bin": 27,
+      "process": "human",
+      "count": 18
+    },
+    {
+      "dict": "ap",
+      "bin": 28,
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "ap",
+      "bin": 29,
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "ap",
+      "bin": 30,
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "ap",
+      "bin": 31,
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "ap",
+      "bin": 32,
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "ap",
+      "bin": 33,
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "ap",
+      "bin": 34,
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "ap",
+      "bin": 35,
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "ap",
+      "bin": 36,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "ap",
+      "bin": 37,
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "ap",
+      "bin": 38,
+      "process": "human",
+      "count": 13
+    },
+    {
+      "dict": "ap",
+      "bin": 39,
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "ap90",
+      "bin": 0,
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "ap90",
+      "bin": 1,
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "ap90",
+      "bin": 2,
+      "process": "human",
+      "count": 38
+    },
+    {
+      "dict": "ap90",
+      "bin": 3,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "ap90",
+      "bin": 6,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 7,
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "ap90",
+      "bin": 8,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 9,
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "ap90",
+      "bin": 10,
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "ap90",
+      "bin": 11,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 12,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 13,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 14,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 15,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 17,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 18,
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "ap90",
+      "bin": 19,
+      "process": "human",
+      "count": 9
+    },
+    {
+      "dict": "ap90",
+      "bin": 20,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 21,
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "ap90",
+      "bin": 22,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 23,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 24,
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "ap90",
+      "bin": 25,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 26,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 27,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 28,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 31,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 32,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 33,
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "ap90",
+      "bin": 35,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 36,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 37,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 38,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 39,
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "bop",
+      "bin": 1,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 2,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 3,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 4,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 5,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 6,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 7,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "bop",
+      "bin": 9,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 10,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "bop",
+      "bin": 11,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "bop",
+      "bin": 14,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 15,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 18,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 22,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 24,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "bop",
+      "bin": 26,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 28,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 30,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 33,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "bop",
+      "bin": 35,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 36,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 37,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 39,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bor",
+      "bin": 0,
+      "process": "bulk",
+      "count": 599
+    },
+    {
+      "dict": "bor",
+      "bin": 1,
+      "process": "bulk",
+      "count": 522
+    },
+    {
+      "dict": "bor",
+      "bin": 2,
+      "process": "bulk",
+      "count": 588
+    },
+    {
+      "dict": "bor",
+      "bin": 3,
+      "process": "bulk",
+      "count": 580
+    },
+    {
+      "dict": "bor",
+      "bin": 4,
+      "process": "bulk",
+      "count": 563
+    },
+    {
+      "dict": "bor",
+      "bin": 5,
+      "process": "bulk",
+      "count": 501
+    },
+    {
+      "dict": "bor",
+      "bin": 6,
+      "process": "bulk",
+      "count": 557
+    },
+    {
+      "dict": "bor",
+      "bin": 7,
+      "process": "bulk",
+      "count": 494
+    },
+    {
+      "dict": "bor",
+      "bin": 8,
+      "process": "bulk",
+      "count": 583
+    },
+    {
+      "dict": "bor",
+      "bin": 9,
+      "process": "bulk",
+      "count": 555
+    },
+    {
+      "dict": "bor",
+      "bin": 10,
+      "process": "bulk",
+      "count": 554
+    },
+    {
+      "dict": "bor",
+      "bin": 11,
+      "process": "bulk",
+      "count": 532
+    },
+    {
+      "dict": "bor",
+      "bin": 12,
+      "process": "bulk",
+      "count": 513
+    },
+    {
+      "dict": "bor",
+      "bin": 13,
+      "process": "bulk",
+      "count": 596
+    },
+    {
+      "dict": "bor",
+      "bin": 14,
+      "process": "bulk",
+      "count": 607
+    },
+    {
+      "dict": "bor",
+      "bin": 15,
+      "process": "bulk",
+      "count": 617
+    },
+    {
+      "dict": "bor",
+      "bin": 16,
+      "process": "bulk",
+      "count": 586
+    },
+    {
+      "dict": "bor",
+      "bin": 17,
+      "process": "bulk",
+      "count": 496
+    },
+    {
+      "dict": "bor",
+      "bin": 18,
+      "process": "bulk",
+      "count": 504
+    },
+    {
+      "dict": "bor",
+      "bin": 19,
+      "process": "bulk",
+      "count": 524
+    },
+    {
+      "dict": "bor",
+      "bin": 20,
+      "process": "bulk",
+      "count": 485
+    },
+    {
+      "dict": "bor",
+      "bin": 21,
+      "process": "bulk",
+      "count": 466
+    },
+    {
+      "dict": "bor",
+      "bin": 22,
+      "process": "bulk",
+      "count": 536
+    },
+    {
+      "dict": "bor",
+      "bin": 23,
+      "process": "bulk",
+      "count": 439
+    },
+    {
+      "dict": "bor",
+      "bin": 24,
+      "process": "bulk",
+      "count": 453
+    },
+    {
+      "dict": "bor",
+      "bin": 25,
+      "process": "bulk",
+      "count": 441
+    },
+    {
+      "dict": "bor",
+      "bin": 26,
+      "process": "bulk",
+      "count": 520
+    },
+    {
+      "dict": "bor",
+      "bin": 27,
+      "process": "bulk",
+      "count": 512
+    },
+    {
+      "dict": "bor",
+      "bin": 28,
+      "process": "bulk",
+      "count": 591
+    },
+    {
+      "dict": "bor",
+      "bin": 29,
+      "process": "bulk",
+      "count": 672
+    },
+    {
+      "dict": "bor",
+      "bin": 30,
+      "process": "bulk",
+      "count": 635
+    },
+    {
+      "dict": "bor",
+      "bin": 31,
+      "process": "bulk",
+      "count": 600
+    },
+    {
+      "dict": "bor",
+      "bin": 32,
+      "process": "bulk",
+      "count": 583
+    },
+    {
+      "dict": "bor",
+      "bin": 33,
+      "process": "bulk",
+      "count": 593
+    },
+    {
+      "dict": "bor",
+      "bin": 34,
+      "process": "bulk",
+      "count": 578
+    },
+    {
+      "dict": "bor",
+      "bin": 35,
+      "process": "bulk",
+      "count": 547
+    },
+    {
+      "dict": "bor",
+      "bin": 36,
+      "process": "bulk",
+      "count": 533
+    },
+    {
+      "dict": "bor",
+      "bin": 37,
+      "process": "bulk",
+      "count": 549
+    },
+    {
+      "dict": "bor",
+      "bin": 38,
+      "process": "bulk",
+      "count": 583
+    },
+    {
+      "dict": "bor",
+      "bin": 39,
+      "process": "bulk",
+      "count": 603
+    },
+    {
+      "dict": "gra",
+      "bin": 0,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "gra",
+      "bin": 2,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "gra",
+      "bin": 3,
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "gra",
+      "bin": 4,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 5,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 6,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 7,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "gra",
+      "bin": 8,
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "gra",
+      "bin": 9,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "gra",
+      "bin": 10,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "gra",
+      "bin": 11,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "gra",
+      "bin": 12,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 15,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "gra",
+      "bin": 19,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "gra",
+      "bin": 20,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "gra",
+      "bin": 21,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "gra",
+      "bin": 23,
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "gra",
+      "bin": 25,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 26,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 27,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "gra",
+      "bin": 28,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "gra",
+      "bin": 31,
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "gra",
+      "bin": 32,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "gra",
+      "bin": 34,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 35,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 36,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 37,
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "gra",
+      "bin": 39,
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "lrv",
+      "bin": 0,
+      "process": "bulk",
+      "count": 217
+    },
+    {
+      "dict": "lrv",
+      "bin": 0,
+      "process": "human",
+      "count": 158
+    },
+    {
+      "dict": "lrv",
+      "bin": 1,
+      "process": "bulk",
+      "count": 112
+    },
+    {
+      "dict": "lrv",
+      "bin": 1,
+      "process": "human",
+      "count": 114
+    },
+    {
+      "dict": "lrv",
+      "bin": 2,
+      "process": "bulk",
+      "count": 159
+    },
+    {
+      "dict": "lrv",
+      "bin": 2,
+      "process": "human",
+      "count": 148
+    },
+    {
+      "dict": "lrv",
+      "bin": 3,
+      "process": "bulk",
+      "count": 194
+    },
+    {
+      "dict": "lrv",
+      "bin": 3,
+      "process": "human",
+      "count": 65
+    },
+    {
+      "dict": "lrv",
+      "bin": 4,
+      "process": "bulk",
+      "count": 156
+    },
+    {
+      "dict": "lrv",
+      "bin": 4,
+      "process": "human",
+      "count": 76
+    },
+    {
+      "dict": "lrv",
+      "bin": 5,
+      "process": "bulk",
+      "count": 163
+    },
+    {
+      "dict": "lrv",
+      "bin": 5,
+      "process": "human",
+      "count": 61
+    },
+    {
+      "dict": "lrv",
+      "bin": 6,
+      "process": "bulk",
+      "count": 103
+    },
+    {
+      "dict": "lrv",
+      "bin": 6,
+      "process": "human",
+      "count": 48
+    },
+    {
+      "dict": "lrv",
+      "bin": 7,
+      "process": "bulk",
+      "count": 238
+    },
+    {
+      "dict": "lrv",
+      "bin": 7,
+      "process": "human",
+      "count": 61
+    },
+    {
+      "dict": "lrv",
+      "bin": 8,
+      "process": "bulk",
+      "count": 231
+    },
+    {
+      "dict": "lrv",
+      "bin": 8,
+      "process": "human",
+      "count": 30
+    },
+    {
+      "dict": "lrv",
+      "bin": 9,
+      "process": "bulk",
+      "count": 211
+    },
+    {
+      "dict": "lrv",
+      "bin": 9,
+      "process": "human",
+      "count": 43
+    },
+    {
+      "dict": "lrv",
+      "bin": 10,
+      "process": "bulk",
+      "count": 188
+    },
+    {
+      "dict": "lrv",
+      "bin": 10,
+      "process": "human",
+      "count": 45
+    },
+    {
+      "dict": "lrv",
+      "bin": 11,
+      "process": "bulk",
+      "count": 192
+    },
+    {
+      "dict": "lrv",
+      "bin": 11,
+      "process": "human",
+      "count": 56
+    },
+    {
+      "dict": "lrv",
+      "bin": 12,
+      "process": "bulk",
+      "count": 230
+    },
+    {
+      "dict": "lrv",
+      "bin": 12,
+      "process": "human",
+      "count": 43
+    },
+    {
+      "dict": "lrv",
+      "bin": 13,
+      "process": "bulk",
+      "count": 190
+    },
+    {
+      "dict": "lrv",
+      "bin": 13,
+      "process": "human",
+      "count": 43
+    },
+    {
+      "dict": "lrv",
+      "bin": 14,
+      "process": "bulk",
+      "count": 190
+    },
+    {
+      "dict": "lrv",
+      "bin": 14,
+      "process": "human",
+      "count": 40
+    },
+    {
+      "dict": "lrv",
+      "bin": 15,
+      "process": "bulk",
+      "count": 243
+    },
+    {
+      "dict": "lrv",
+      "bin": 15,
+      "process": "human",
+      "count": 49
+    },
+    {
+      "dict": "lrv",
+      "bin": 16,
+      "process": "bulk",
+      "count": 157
+    },
+    {
+      "dict": "lrv",
+      "bin": 16,
+      "process": "human",
+      "count": 79
+    },
+    {
+      "dict": "lrv",
+      "bin": 17,
+      "process": "bulk",
+      "count": 188
+    },
+    {
+      "dict": "lrv",
+      "bin": 17,
+      "process": "human",
+      "count": 57
+    },
+    {
+      "dict": "lrv",
+      "bin": 18,
+      "process": "bulk",
+      "count": 147
+    },
+    {
+      "dict": "lrv",
+      "bin": 18,
+      "process": "human",
+      "count": 22
+    },
+    {
+      "dict": "lrv",
+      "bin": 19,
+      "process": "bulk",
+      "count": 167
+    },
+    {
+      "dict": "lrv",
+      "bin": 19,
+      "process": "human",
+      "count": 49
+    },
+    {
+      "dict": "lrv",
+      "bin": 20,
+      "process": "bulk",
+      "count": 270
+    },
+    {
+      "dict": "lrv",
+      "bin": 20,
+      "process": "human",
+      "count": 32
+    },
+    {
+      "dict": "lrv",
+      "bin": 21,
+      "process": "bulk",
+      "count": 254
+    },
+    {
+      "dict": "lrv",
+      "bin": 21,
+      "process": "human",
+      "count": 54
+    },
+    {
+      "dict": "lrv",
+      "bin": 22,
+      "process": "bulk",
+      "count": 124
+    },
+    {
+      "dict": "lrv",
+      "bin": 22,
+      "process": "human",
+      "count": 26
+    },
+    {
+      "dict": "lrv",
+      "bin": 23,
+      "process": "bulk",
+      "count": 197
+    },
+    {
+      "dict": "lrv",
+      "bin": 23,
+      "process": "human",
+      "count": 38
+    },
+    {
+      "dict": "lrv",
+      "bin": 24,
+      "process": "bulk",
+      "count": 214
+    },
+    {
+      "dict": "lrv",
+      "bin": 24,
+      "process": "human",
+      "count": 57
+    },
+    {
+      "dict": "lrv",
+      "bin": 25,
+      "process": "bulk",
+      "count": 217
+    },
+    {
+      "dict": "lrv",
+      "bin": 25,
+      "process": "human",
+      "count": 66
+    },
+    {
+      "dict": "lrv",
+      "bin": 26,
+      "process": "bulk",
+      "count": 233
+    },
+    {
+      "dict": "lrv",
+      "bin": 26,
+      "process": "human",
+      "count": 71
+    },
+    {
+      "dict": "lrv",
+      "bin": 27,
+      "process": "bulk",
+      "count": 209
+    },
+    {
+      "dict": "lrv",
+      "bin": 27,
+      "process": "human",
+      "count": 61
+    },
+    {
+      "dict": "lrv",
+      "bin": 28,
+      "process": "bulk",
+      "count": 177
+    },
+    {
+      "dict": "lrv",
+      "bin": 28,
+      "process": "human",
+      "count": 34
+    },
+    {
+      "dict": "lrv",
+      "bin": 29,
+      "process": "bulk",
+      "count": 226
+    },
+    {
+      "dict": "lrv",
+      "bin": 29,
+      "process": "human",
+      "count": 47
+    },
+    {
+      "dict": "lrv",
+      "bin": 30,
+      "process": "bulk",
+      "count": 260
+    },
+    {
+      "dict": "lrv",
+      "bin": 30,
+      "process": "human",
+      "count": 55
+    },
+    {
+      "dict": "lrv",
+      "bin": 31,
+      "process": "bulk",
+      "count": 214
+    },
+    {
+      "dict": "lrv",
+      "bin": 31,
+      "process": "human",
+      "count": 44
+    },
+    {
+      "dict": "lrv",
+      "bin": 32,
+      "process": "bulk",
+      "count": 169
+    },
+    {
+      "dict": "lrv",
+      "bin": 32,
+      "process": "human",
+      "count": 53
+    },
+    {
+      "dict": "lrv",
+      "bin": 33,
+      "process": "bulk",
+      "count": 208
+    },
+    {
+      "dict": "lrv",
+      "bin": 33,
+      "process": "human",
+      "count": 56
+    },
+    {
+      "dict": "lrv",
+      "bin": 34,
+      "process": "bulk",
+      "count": 296
+    },
+    {
+      "dict": "lrv",
+      "bin": 34,
+      "process": "human",
+      "count": 76
+    },
+    {
+      "dict": "lrv",
+      "bin": 35,
+      "process": "bulk",
+      "count": 162
+    },
+    {
+      "dict": "lrv",
+      "bin": 35,
+      "process": "human",
+      "count": 24
+    },
+    {
+      "dict": "lrv",
+      "bin": 36,
+      "process": "bulk",
+      "count": 253
+    },
+    {
+      "dict": "lrv",
+      "bin": 36,
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "lrv",
+      "bin": 37,
+      "process": "bulk",
+      "count": 314
+    },
+    {
+      "dict": "lrv",
+      "bin": 37,
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "lrv",
+      "bin": 38,
+      "process": "bulk",
+      "count": 213
+    },
+    {
+      "dict": "lrv",
+      "bin": 38,
+      "process": "human",
+      "count": 47
+    },
+    {
+      "dict": "lrv",
+      "bin": 39,
+      "process": "bulk",
+      "count": 177
+    },
+    {
+      "dict": "lrv",
+      "bin": 39,
+      "process": "human",
+      "count": 57
+    },
+    {
+      "dict": "mw",
+      "bin": 0,
+      "process": "human",
+      "count": 112
+    },
+    {
+      "dict": "mw",
+      "bin": 1,
+      "process": "human",
+      "count": 47
+    },
+    {
+      "dict": "mw",
+      "bin": 2,
+      "process": "human",
+      "count": 54
+    },
+    {
+      "dict": "mw",
+      "bin": 3,
+      "process": "human",
+      "count": 47
+    },
+    {
+      "dict": "mw",
+      "bin": 4,
+      "process": "human",
+      "count": 36
+    },
+    {
+      "dict": "mw",
+      "bin": 5,
+      "process": "human",
+      "count": 26
+    },
+    {
+      "dict": "mw",
+      "bin": 6,
+      "process": "human",
+      "count": 15
+    },
+    {
+      "dict": "mw",
+      "bin": 7,
+      "process": "human",
+      "count": 27
+    },
+    {
+      "dict": "mw",
+      "bin": 8,
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "mw",
+      "bin": 9,
+      "process": "human",
+      "count": 11
+    },
+    {
+      "dict": "mw",
+      "bin": 10,
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "mw",
+      "bin": 11,
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "mw",
+      "bin": 12,
+      "process": "human",
+      "count": 41
+    },
+    {
+      "dict": "mw",
+      "bin": 13,
+      "process": "human",
+      "count": 28
+    },
+    {
+      "dict": "mw",
+      "bin": 14,
+      "process": "human",
+      "count": 45
+    },
+    {
+      "dict": "mw",
+      "bin": 15,
+      "process": "human",
+      "count": 39
+    },
+    {
+      "dict": "mw",
+      "bin": 16,
+      "process": "human",
+      "count": 24
+    },
+    {
+      "dict": "mw",
+      "bin": 17,
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "mw",
+      "bin": 18,
+      "process": "human",
+      "count": 23
+    },
+    {
+      "dict": "mw",
+      "bin": 19,
+      "process": "human",
+      "count": 28
+    },
+    {
+      "dict": "mw",
+      "bin": 20,
+      "process": "human",
+      "count": 15
+    },
+    {
+      "dict": "mw",
+      "bin": 21,
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "mw",
+      "bin": 22,
+      "process": "human",
+      "count": 21
+    },
+    {
+      "dict": "mw",
+      "bin": 23,
+      "process": "human",
+      "count": 45
+    },
+    {
+      "dict": "mw",
+      "bin": 24,
+      "process": "human",
+      "count": 39
+    },
+    {
+      "dict": "mw",
+      "bin": 25,
+      "process": "human",
+      "count": 26
+    },
+    {
+      "dict": "mw",
+      "bin": 26,
+      "process": "human",
+      "count": 21
+    },
+    {
+      "dict": "mw",
+      "bin": 27,
+      "process": "human",
+      "count": 45
+    },
+    {
+      "dict": "mw",
+      "bin": 28,
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "mw",
+      "bin": 29,
+      "process": "human",
+      "count": 21
+    },
+    {
+      "dict": "mw",
+      "bin": 30,
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "mw",
+      "bin": 31,
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "mw",
+      "bin": 32,
+      "process": "human",
+      "count": 35
+    },
+    {
+      "dict": "mw",
+      "bin": 33,
+      "process": "human",
+      "count": 18
+    },
+    {
+      "dict": "mw",
+      "bin": 34,
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 35,
+      "process": "human",
+      "count": 13
+    },
+    {
+      "dict": "mw",
+      "bin": 36,
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "mw",
+      "bin": 37,
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "mw",
+      "bin": 38,
+      "process": "human",
+      "count": 24
+    },
+    {
+      "dict": "mw",
+      "bin": 39,
+      "process": "human",
+      "count": 59
+    },
+    {
+      "dict": "shs",
+      "bin": 0,
+      "process": "human",
+      "count": 236
+    },
+    {
+      "dict": "shs",
+      "bin": 1,
+      "process": "human",
+      "count": 154
+    },
+    {
+      "dict": "shs",
+      "bin": 2,
+      "process": "human",
+      "count": 162
+    },
+    {
+      "dict": "shs",
+      "bin": 3,
+      "process": "human",
+      "count": 140
+    },
+    {
+      "dict": "shs",
+      "bin": 4,
+      "process": "human",
+      "count": 130
+    },
+    {
+      "dict": "shs",
+      "bin": 5,
+      "process": "human",
+      "count": 141
+    },
+    {
+      "dict": "shs",
+      "bin": 6,
+      "process": "human",
+      "count": 118
+    },
+    {
+      "dict": "shs",
+      "bin": 7,
+      "process": "human",
+      "count": 132
+    },
+    {
+      "dict": "shs",
+      "bin": 8,
+      "process": "human",
+      "count": 137
+    },
+    {
+      "dict": "shs",
+      "bin": 9,
+      "process": "human",
+      "count": 137
+    },
+    {
+      "dict": "shs",
+      "bin": 10,
+      "process": "human",
+      "count": 139
+    },
+    {
+      "dict": "shs",
+      "bin": 11,
+      "process": "human",
+      "count": 125
+    },
+    {
+      "dict": "shs",
+      "bin": 12,
+      "process": "human",
+      "count": 126
+    },
+    {
+      "dict": "shs",
+      "bin": 13,
+      "process": "human",
+      "count": 138
+    },
+    {
+      "dict": "shs",
+      "bin": 14,
+      "process": "human",
+      "count": 107
+    },
+    {
+      "dict": "shs",
+      "bin": 15,
+      "process": "human",
+      "count": 153
+    },
+    {
+      "dict": "shs",
+      "bin": 16,
+      "process": "human",
+      "count": 91
+    },
+    {
+      "dict": "shs",
+      "bin": 17,
+      "process": "human",
+      "count": 75
+    },
+    {
+      "dict": "shs",
+      "bin": 18,
+      "process": "human",
+      "count": 67
+    },
+    {
+      "dict": "shs",
+      "bin": 19,
+      "process": "human",
+      "count": 28
+    },
+    {
+      "dict": "shs",
+      "bin": 20,
+      "process": "human",
+      "count": 50
+    },
+    {
+      "dict": "shs",
+      "bin": 21,
+      "process": "human",
+      "count": 42
+    },
+    {
+      "dict": "shs",
+      "bin": 22,
+      "process": "human",
+      "count": 40
+    },
+    {
+      "dict": "shs",
+      "bin": 23,
+      "process": "human",
+      "count": 24
+    },
+    {
+      "dict": "shs",
+      "bin": 24,
+      "process": "human",
+      "count": 26
+    },
+    {
+      "dict": "shs",
+      "bin": 25,
+      "process": "human",
+      "count": 52
+    },
+    {
+      "dict": "shs",
+      "bin": 26,
+      "process": "human",
+      "count": 50
+    },
+    {
+      "dict": "shs",
+      "bin": 27,
+      "process": "human",
+      "count": 56
+    },
+    {
+      "dict": "shs",
+      "bin": 28,
+      "process": "human",
+      "count": 54
+    },
+    {
+      "dict": "shs",
+      "bin": 29,
+      "process": "human",
+      "count": 46
+    },
+    {
+      "dict": "shs",
+      "bin": 30,
+      "process": "human",
+      "count": 51
+    },
+    {
+      "dict": "shs",
+      "bin": 31,
+      "process": "human",
+      "count": 26
+    },
+    {
+      "dict": "shs",
+      "bin": 32,
+      "process": "human",
+      "count": 63
+    },
+    {
+      "dict": "shs",
+      "bin": 33,
+      "process": "human",
+      "count": 54
+    },
+    {
+      "dict": "shs",
+      "bin": 34,
+      "process": "human",
+      "count": 39
+    },
+    {
+      "dict": "shs",
+      "bin": 35,
+      "process": "human",
+      "count": 51
+    },
+    {
+      "dict": "shs",
+      "bin": 36,
+      "process": "human",
+      "count": 36
+    },
+    {
+      "dict": "shs",
+      "bin": 37,
+      "process": "human",
+      "count": 55
+    },
+    {
+      "dict": "shs",
+      "bin": 38,
+      "process": "human",
+      "count": 28
+    },
+    {
+      "dict": "shs",
+      "bin": 39,
+      "process": "human",
+      "count": 76
+    }
+  ],
+  "columnDicts": [
+    "shs",
+    "mw",
+    "ap90",
+    "bop"
+  ],
+  "columnCells": [
+    {
+      "dict": "ap90",
+      "bin": 0,
+      "col": "a",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 0,
+      "col": "b",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 0,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 1,
+      "col": "a",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 1,
+      "col": "b",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 1,
+      "col": "c",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "ap90",
+      "bin": 2,
+      "col": "a",
+      "process": "human",
+      "count": 13
+    },
+    {
+      "dict": "ap90",
+      "bin": 2,
+      "col": "b",
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "ap90",
+      "bin": 2,
+      "col": "c",
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "ap90",
+      "bin": 3,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 3,
+      "col": "c",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 6,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 6,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 7,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 7,
+      "col": "b",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "ap90",
+      "bin": 7,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 8,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 8,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 9,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 9,
+      "col": "c",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "ap90",
+      "bin": 10,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 10,
+      "col": "c",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "ap90",
+      "bin": 11,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 12,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 12,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 13,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 14,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 15,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 17,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 18,
+      "col": "a",
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "ap90",
+      "bin": 18,
+      "col": "c",
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "ap90",
+      "bin": 19,
+      "col": "a",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "ap90",
+      "bin": 19,
+      "col": "b",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "ap90",
+      "bin": 19,
+      "col": "c",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 20,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 21,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 21,
+      "col": "c",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "ap90",
+      "bin": 22,
+      "col": "a",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 23,
+      "col": "b",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 24,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 24,
+      "col": "b",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "ap90",
+      "bin": 24,
+      "col": "c",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 25,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 26,
+      "col": "c",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 27,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 28,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 28,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 31,
+      "col": "a",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "ap90",
+      "bin": 32,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 33,
+      "col": "a",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "ap90",
+      "bin": 35,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 36,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 37,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 38,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 38,
+      "col": "c",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "ap90",
+      "bin": 39,
+      "col": "a",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "ap90",
+      "bin": 39,
+      "col": "b",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "bop",
+      "bin": 1,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 2,
+      "col": "b",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 3,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 4,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 5,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 6,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 7,
+      "col": "b",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "bop",
+      "bin": 9,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 10,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 10,
+      "col": "b",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 11,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 11,
+      "col": "b",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 14,
+      "col": "b",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 15,
+      "col": "a",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 18,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 22,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 24,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 24,
+      "col": "b",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "bop",
+      "bin": 26,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 28,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 30,
+      "col": "1b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 33,
+      "col": "b",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "bop",
+      "bin": 35,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 35,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 36,
+      "col": "1b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 36,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 37,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 39,
+      "col": "a",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "bop",
+      "bin": 39,
+      "col": "b",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "mw",
+      "bin": 0,
+      "col": "1",
+      "process": "human",
+      "count": 58
+    },
+    {
+      "dict": "mw",
+      "bin": 0,
+      "col": "2",
+      "process": "human",
+      "count": 34
+    },
+    {
+      "dict": "mw",
+      "bin": 0,
+      "col": "3",
+      "process": "human",
+      "count": 20
+    },
+    {
+      "dict": "mw",
+      "bin": 1,
+      "col": "1",
+      "process": "human",
+      "count": 16
+    },
+    {
+      "dict": "mw",
+      "bin": 1,
+      "col": "2",
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "mw",
+      "bin": 1,
+      "col": "3",
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "mw",
+      "bin": 2,
+      "col": "1",
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "mw",
+      "bin": 2,
+      "col": "2",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 2,
+      "col": "3",
+      "process": "human",
+      "count": 23
+    },
+    {
+      "dict": "mw",
+      "bin": 3,
+      "col": "1",
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "mw",
+      "bin": 3,
+      "col": "2",
+      "process": "human",
+      "count": 18
+    },
+    {
+      "dict": "mw",
+      "bin": 3,
+      "col": "3",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 4,
+      "col": "1",
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "mw",
+      "bin": 4,
+      "col": "2",
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "mw",
+      "bin": 4,
+      "col": "3",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 5,
+      "col": "1",
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "mw",
+      "bin": 5,
+      "col": "2",
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "mw",
+      "bin": 5,
+      "col": "3",
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "mw",
+      "bin": 6,
+      "col": "1",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 6,
+      "col": "2",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "mw",
+      "bin": 6,
+      "col": "3",
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "mw",
+      "bin": 7,
+      "col": "1",
+      "process": "human",
+      "count": 11
+    },
+    {
+      "dict": "mw",
+      "bin": 7,
+      "col": "2",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 7,
+      "col": "3",
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "mw",
+      "bin": 8,
+      "col": "1",
+      "process": "human",
+      "count": 15
+    },
+    {
+      "dict": "mw",
+      "bin": 8,
+      "col": "2",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 8,
+      "col": "3",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "mw",
+      "bin": 9,
+      "col": "1",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "mw",
+      "bin": 9,
+      "col": "2",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "mw",
+      "bin": 9,
+      "col": "3",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 10,
+      "col": "1",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 10,
+      "col": "2",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "mw",
+      "bin": 10,
+      "col": "3",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 11,
+      "col": "1",
+      "process": "human",
+      "count": 1
+    },
+    {
+      "dict": "mw",
+      "bin": 11,
+      "col": "2",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 11,
+      "col": "3",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 12,
+      "col": "1",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 12,
+      "col": "2",
+      "process": "human",
+      "count": 15
+    },
+    {
+      "dict": "mw",
+      "bin": 12,
+      "col": "3",
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "mw",
+      "bin": 13,
+      "col": "1",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 13,
+      "col": "2",
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "mw",
+      "bin": 13,
+      "col": "3",
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "mw",
+      "bin": 14,
+      "col": "1",
+      "process": "human",
+      "count": 15
+    },
+    {
+      "dict": "mw",
+      "bin": 14,
+      "col": "2",
+      "process": "human",
+      "count": 16
+    },
+    {
+      "dict": "mw",
+      "bin": 14,
+      "col": "3",
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "mw",
+      "bin": 15,
+      "col": "1",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 15,
+      "col": "2",
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "mw",
+      "bin": 15,
+      "col": "3",
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "mw",
+      "bin": 16,
+      "col": "1",
+      "process": "human",
+      "count": 11
+    },
+    {
+      "dict": "mw",
+      "bin": 16,
+      "col": "2",
+      "process": "human",
+      "count": 2
+    },
+    {
+      "dict": "mw",
+      "bin": 16,
+      "col": "3",
+      "process": "human",
+      "count": 11
+    },
+    {
+      "dict": "mw",
+      "bin": 17,
+      "col": "1",
+      "process": "human",
+      "count": 13
+    },
+    {
+      "dict": "mw",
+      "bin": 17,
+      "col": "2",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 17,
+      "col": "3",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 18,
+      "col": "1",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 18,
+      "col": "2",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 18,
+      "col": "3",
+      "process": "human",
+      "count": 11
+    },
+    {
+      "dict": "mw",
+      "bin": 19,
+      "col": "1",
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "mw",
+      "bin": 19,
+      "col": "2",
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "mw",
+      "bin": 19,
+      "col": "3",
+      "process": "human",
+      "count": 11
+    },
+    {
+      "dict": "mw",
+      "bin": 20,
+      "col": "1",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "mw",
+      "bin": 20,
+      "col": "2",
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "mw",
+      "bin": 20,
+      "col": "3",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 21,
+      "col": "1",
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "mw",
+      "bin": 21,
+      "col": "2",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 21,
+      "col": "3",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 22,
+      "col": "1",
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "mw",
+      "bin": 22,
+      "col": "2",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 22,
+      "col": "3",
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "mw",
+      "bin": 23,
+      "col": "1",
+      "process": "human",
+      "count": 18
+    },
+    {
+      "dict": "mw",
+      "bin": 23,
+      "col": "2",
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "mw",
+      "bin": 23,
+      "col": "3",
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "mw",
+      "bin": 24,
+      "col": "1",
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "mw",
+      "bin": 24,
+      "col": "2",
+      "process": "human",
+      "count": 16
+    },
+    {
+      "dict": "mw",
+      "bin": 24,
+      "col": "3",
+      "process": "human",
+      "count": 13
+    },
+    {
+      "dict": "mw",
+      "bin": 25,
+      "col": "1",
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "mw",
+      "bin": 25,
+      "col": "2",
+      "process": "human",
+      "count": 9
+    },
+    {
+      "dict": "mw",
+      "bin": 25,
+      "col": "3",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 26,
+      "col": "1",
+      "process": "human",
+      "count": 9
+    },
+    {
+      "dict": "mw",
+      "bin": 26,
+      "col": "2",
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "mw",
+      "bin": 26,
+      "col": "3",
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "mw",
+      "bin": 27,
+      "col": "1",
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "mw",
+      "bin": 27,
+      "col": "2",
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "mw",
+      "bin": 27,
+      "col": "3",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 28,
+      "col": "1",
+      "process": "human",
+      "count": 16
+    },
+    {
+      "dict": "mw",
+      "bin": 28,
+      "col": "2",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "mw",
+      "bin": 28,
+      "col": "3",
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "mw",
+      "bin": 29,
+      "col": "1",
+      "process": "human",
+      "count": 5
+    },
+    {
+      "dict": "mw",
+      "bin": 29,
+      "col": "2",
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "mw",
+      "bin": 29,
+      "col": "3",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 30,
+      "col": "1",
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "mw",
+      "bin": 30,
+      "col": "2",
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "mw",
+      "bin": 30,
+      "col": "3",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 31,
+      "col": "1",
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "mw",
+      "bin": 31,
+      "col": "2",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 31,
+      "col": "3",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 32,
+      "col": "1",
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "mw",
+      "bin": 32,
+      "col": "2",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 32,
+      "col": "3",
+      "process": "human",
+      "count": 9
+    },
+    {
+      "dict": "mw",
+      "bin": 33,
+      "col": "1",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 33,
+      "col": "2",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 33,
+      "col": "3",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 34,
+      "col": "1",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 34,
+      "col": "2",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 34,
+      "col": "3",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 35,
+      "col": "1",
+      "process": "human",
+      "count": 4
+    },
+    {
+      "dict": "mw",
+      "bin": 35,
+      "col": "2",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 35,
+      "col": "3",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 36,
+      "col": "1",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 36,
+      "col": "2",
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "mw",
+      "bin": 36,
+      "col": "3",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 37,
+      "col": "1",
+      "process": "human",
+      "count": 3
+    },
+    {
+      "dict": "mw",
+      "bin": 37,
+      "col": "2",
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "mw",
+      "bin": 37,
+      "col": "3",
+      "process": "human",
+      "count": 6
+    },
+    {
+      "dict": "mw",
+      "bin": 38,
+      "col": "1",
+      "process": "human",
+      "count": 7
+    },
+    {
+      "dict": "mw",
+      "bin": 38,
+      "col": "2",
+      "process": "human",
+      "count": 8
+    },
+    {
+      "dict": "mw",
+      "bin": 38,
+      "col": "3",
+      "process": "human",
+      "count": 9
+    },
+    {
+      "dict": "mw",
+      "bin": 39,
+      "col": "1",
+      "process": "human",
+      "count": 29
+    },
+    {
+      "dict": "mw",
+      "bin": 39,
+      "col": "2",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "mw",
+      "bin": 39,
+      "col": "3",
+      "process": "human",
+      "count": 18
+    },
+    {
+      "dict": "shs",
+      "bin": 0,
+      "col": "a",
+      "process": "human",
+      "count": 103
+    },
+    {
+      "dict": "shs",
+      "bin": 0,
+      "col": "b",
+      "process": "human",
+      "count": 133
+    },
+    {
+      "dict": "shs",
+      "bin": 1,
+      "col": "a",
+      "process": "human",
+      "count": 83
+    },
+    {
+      "dict": "shs",
+      "bin": 1,
+      "col": "b",
+      "process": "human",
+      "count": 71
+    },
+    {
+      "dict": "shs",
+      "bin": 2,
+      "col": "a",
+      "process": "human",
+      "count": 83
+    },
+    {
+      "dict": "shs",
+      "bin": 2,
+      "col": "b",
+      "process": "human",
+      "count": 79
+    },
+    {
+      "dict": "shs",
+      "bin": 3,
+      "col": "a",
+      "process": "human",
+      "count": 67
+    },
+    {
+      "dict": "shs",
+      "bin": 3,
+      "col": "b",
+      "process": "human",
+      "count": 73
+    },
+    {
+      "dict": "shs",
+      "bin": 4,
+      "col": "a",
+      "process": "human",
+      "count": 75
+    },
+    {
+      "dict": "shs",
+      "bin": 4,
+      "col": "b",
+      "process": "human",
+      "count": 55
+    },
+    {
+      "dict": "shs",
+      "bin": 5,
+      "col": "a",
+      "process": "human",
+      "count": 56
+    },
+    {
+      "dict": "shs",
+      "bin": 5,
+      "col": "b",
+      "process": "human",
+      "count": 85
+    },
+    {
+      "dict": "shs",
+      "bin": 6,
+      "col": "a",
+      "process": "human",
+      "count": 77
+    },
+    {
+      "dict": "shs",
+      "bin": 6,
+      "col": "b",
+      "process": "human",
+      "count": 41
+    },
+    {
+      "dict": "shs",
+      "bin": 7,
+      "col": "a",
+      "process": "human",
+      "count": 62
+    },
+    {
+      "dict": "shs",
+      "bin": 7,
+      "col": "b",
+      "process": "human",
+      "count": 70
+    },
+    {
+      "dict": "shs",
+      "bin": 8,
+      "col": "a",
+      "process": "human",
+      "count": 59
+    },
+    {
+      "dict": "shs",
+      "bin": 8,
+      "col": "b",
+      "process": "human",
+      "count": 78
+    },
+    {
+      "dict": "shs",
+      "bin": 9,
+      "col": "a",
+      "process": "human",
+      "count": 71
+    },
+    {
+      "dict": "shs",
+      "bin": 9,
+      "col": "b",
+      "process": "human",
+      "count": 66
+    },
+    {
+      "dict": "shs",
+      "bin": 10,
+      "col": "a",
+      "process": "human",
+      "count": 83
+    },
+    {
+      "dict": "shs",
+      "bin": 10,
+      "col": "b",
+      "process": "human",
+      "count": 56
+    },
+    {
+      "dict": "shs",
+      "bin": 11,
+      "col": "a",
+      "process": "human",
+      "count": 59
+    },
+    {
+      "dict": "shs",
+      "bin": 11,
+      "col": "b",
+      "process": "human",
+      "count": 66
+    },
+    {
+      "dict": "shs",
+      "bin": 12,
+      "col": "a",
+      "process": "human",
+      "count": 62
+    },
+    {
+      "dict": "shs",
+      "bin": 12,
+      "col": "b",
+      "process": "human",
+      "count": 64
+    },
+    {
+      "dict": "shs",
+      "bin": 13,
+      "col": "a",
+      "process": "human",
+      "count": 70
+    },
+    {
+      "dict": "shs",
+      "bin": 13,
+      "col": "b",
+      "process": "human",
+      "count": 68
+    },
+    {
+      "dict": "shs",
+      "bin": 14,
+      "col": "a",
+      "process": "human",
+      "count": 53
+    },
+    {
+      "dict": "shs",
+      "bin": 14,
+      "col": "b",
+      "process": "human",
+      "count": 54
+    },
+    {
+      "dict": "shs",
+      "bin": 15,
+      "col": "a",
+      "process": "human",
+      "count": 83
+    },
+    {
+      "dict": "shs",
+      "bin": 15,
+      "col": "b",
+      "process": "human",
+      "count": 70
+    },
+    {
+      "dict": "shs",
+      "bin": 16,
+      "col": "a",
+      "process": "human",
+      "count": 40
+    },
+    {
+      "dict": "shs",
+      "bin": 16,
+      "col": "b",
+      "process": "human",
+      "count": 51
+    },
+    {
+      "dict": "shs",
+      "bin": 17,
+      "col": "a",
+      "process": "human",
+      "count": 35
+    },
+    {
+      "dict": "shs",
+      "bin": 17,
+      "col": "b",
+      "process": "human",
+      "count": 40
+    },
+    {
+      "dict": "shs",
+      "bin": 18,
+      "col": "a",
+      "process": "human",
+      "count": 33
+    },
+    {
+      "dict": "shs",
+      "bin": 18,
+      "col": "b",
+      "process": "human",
+      "count": 34
+    },
+    {
+      "dict": "shs",
+      "bin": 19,
+      "col": "a",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "shs",
+      "bin": 19,
+      "col": "b",
+      "process": "human",
+      "count": 16
+    },
+    {
+      "dict": "shs",
+      "bin": 20,
+      "col": "a",
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "shs",
+      "bin": 20,
+      "col": "b",
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "shs",
+      "bin": 21,
+      "col": "a",
+      "process": "human",
+      "count": 23
+    },
+    {
+      "dict": "shs",
+      "bin": 21,
+      "col": "b",
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "shs",
+      "bin": 22,
+      "col": "a",
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "shs",
+      "bin": 22,
+      "col": "b",
+      "process": "human",
+      "count": 23
+    },
+    {
+      "dict": "shs",
+      "bin": 23,
+      "col": "a",
+      "process": "human",
+      "count": 10
+    },
+    {
+      "dict": "shs",
+      "bin": 23,
+      "col": "b",
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "shs",
+      "bin": 24,
+      "col": "a",
+      "process": "human",
+      "count": 12
+    },
+    {
+      "dict": "shs",
+      "bin": 24,
+      "col": "b",
+      "process": "human",
+      "count": 14
+    },
+    {
+      "dict": "shs",
+      "bin": 25,
+      "col": "a",
+      "process": "human",
+      "count": 27
+    },
+    {
+      "dict": "shs",
+      "bin": 25,
+      "col": "b",
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "shs",
+      "bin": 26,
+      "col": "a",
+      "process": "human",
+      "count": 22
+    },
+    {
+      "dict": "shs",
+      "bin": 26,
+      "col": "b",
+      "process": "human",
+      "count": 28
+    },
+    {
+      "dict": "shs",
+      "bin": 27,
+      "col": "a",
+      "process": "human",
+      "count": 22
+    },
+    {
+      "dict": "shs",
+      "bin": 27,
+      "col": "b",
+      "process": "human",
+      "count": 34
+    },
+    {
+      "dict": "shs",
+      "bin": 28,
+      "col": "a",
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "shs",
+      "bin": 28,
+      "col": "b",
+      "process": "human",
+      "count": 29
+    },
+    {
+      "dict": "shs",
+      "bin": 29,
+      "col": "a",
+      "process": "human",
+      "count": 29
+    },
+    {
+      "dict": "shs",
+      "bin": 29,
+      "col": "b",
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "shs",
+      "bin": 30,
+      "col": "a",
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "shs",
+      "bin": 30,
+      "col": "b",
+      "process": "human",
+      "count": 32
+    },
+    {
+      "dict": "shs",
+      "bin": 31,
+      "col": "a",
+      "process": "human",
+      "count": 9
+    },
+    {
+      "dict": "shs",
+      "bin": 31,
+      "col": "b",
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "shs",
+      "bin": 32,
+      "col": "a",
+      "process": "human",
+      "count": 33
+    },
+    {
+      "dict": "shs",
+      "bin": 32,
+      "col": "b",
+      "process": "human",
+      "count": 30
+    },
+    {
+      "dict": "shs",
+      "bin": 33,
+      "col": "a",
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "shs",
+      "bin": 33,
+      "col": "b",
+      "process": "human",
+      "count": 29
+    },
+    {
+      "dict": "shs",
+      "bin": 34,
+      "col": "a",
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "shs",
+      "bin": 34,
+      "col": "b",
+      "process": "human",
+      "count": 20
+    },
+    {
+      "dict": "shs",
+      "bin": 35,
+      "col": "a",
+      "process": "human",
+      "count": 29
+    },
+    {
+      "dict": "shs",
+      "bin": 35,
+      "col": "b",
+      "process": "human",
+      "count": 22
+    },
+    {
+      "dict": "shs",
+      "bin": 36,
+      "col": "a",
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "shs",
+      "bin": 36,
+      "col": "b",
+      "process": "human",
+      "count": 17
+    },
+    {
+      "dict": "shs",
+      "bin": 37,
+      "col": "a",
+      "process": "human",
+      "count": 25
+    },
+    {
+      "dict": "shs",
+      "bin": 37,
+      "col": "b",
+      "process": "human",
+      "count": 30
+    },
+    {
+      "dict": "shs",
+      "bin": 38,
+      "col": "a",
+      "process": "human",
+      "count": 19
+    },
+    {
+      "dict": "shs",
+      "bin": 38,
+      "col": "b",
+      "process": "human",
+      "count": 9
+    },
+    {
+      "dict": "shs",
+      "bin": 39,
+      "col": "a",
+      "process": "human",
+      "count": 37
+    },
+    {
+      "dict": "shs",
+      "bin": 39,
+      "col": "b",
+      "process": "human",
+      "count": 39
+    }
+  ],
+  "topPages": [
+    {
+      "dict": "bor",
+      "page": 269,
+      "count": 48,
+      "human": 0,
+      "bulk": 48,
+      "sampleK1": "fat",
+      "sampleLine": 48780
+    },
+    {
+      "dict": "bor",
+      "page": 28,
+      "count": 46,
+      "human": 0,
+      "bulk": 46,
+      "sampleK1": "animal",
+      "sampleLine": 4686
+    },
+    {
+      "dict": "bor",
+      "page": 228,
+      "count": 45,
+      "human": 0,
+      "bulk": 45,
+      "sampleK1": "earth-worm",
+      "sampleLine": 41281
+    },
+    {
+      "dict": "bor",
+      "page": 159,
+      "count": 44,
+      "human": 0,
+      "bulk": 44,
+      "sampleK1": "course",
+      "sampleLine": 28520
+    },
+    {
+      "dict": "bor",
+      "page": 535,
+      "count": 44,
+      "human": 0,
+      "bulk": 44,
+      "sampleK1": "potter",
+      "sampleLine": 99025
+    },
+    {
+      "dict": "bor",
+      "page": 628,
+      "count": 44,
+      "human": 0,
+      "bulk": 44,
+      "sampleK1": "sensible",
+      "sampleLine": 115098
+    },
+    {
+      "dict": "bor",
+      "page": 748,
+      "count": 44,
+      "human": 0,
+      "bulk": 44,
+      "sampleK1": "vinegar",
+      "sampleLine": 136758
+    },
+    {
+      "dict": "bor",
+      "page": 79,
+      "count": 43,
+      "human": 0,
+      "bulk": 43,
+      "sampleK1": "boaster",
+      "sampleLine": 13602
+    },
+    {
+      "dict": "bor",
+      "page": 126,
+      "count": 43,
+      "human": 0,
+      "bulk": 43,
+      "sampleK1": "cloister",
+      "sampleLine": 22406
+    },
+    {
+      "dict": "bor",
+      "page": 573,
+      "count": 43,
+      "human": 0,
+      "bulk": 43,
+      "sampleK1": "ravine",
+      "sampleLine": 105716
+    },
+    {
+      "dict": "lrv",
+      "page": 560,
+      "count": 79,
+      "human": 22,
+      "bulk": 57,
+      "sampleK1": "mahAvaroha",
+      "sampleLine": 108209
+    },
+    {
+      "dict": "lrv",
+      "page": 14,
+      "count": 67,
+      "human": 51,
+      "bulk": 16,
+      "sampleK1": "advEtavAdin",
+      "sampleLine": 3215
+    },
+    {
+      "dict": "lrv",
+      "page": 58,
+      "count": 59,
+      "human": 45,
+      "bulk": 14,
+      "sampleK1": "ameyAtman",
+      "sampleLine": 11276
+    },
+    {
+      "dict": "lrv",
+      "page": 382,
+      "count": 58,
+      "human": 5,
+      "bulk": 53,
+      "sampleK1": "nirupAKya",
+      "sampleLine": 72221
+    },
+    {
+      "dict": "lrv",
+      "page": 335,
+      "count": 55,
+      "human": 3,
+      "bulk": 52,
+      "sampleK1": "dIrGanAda",
+      "sampleLine": 62648
+    },
+    {
+      "dict": "lrv",
+      "page": 29,
+      "count": 51,
+      "human": 47,
+      "bulk": 4,
+      "sampleK1": "antaHkuwila",
+      "sampleLine": 6236
+    },
+    {
+      "dict": "lrv",
+      "page": 57,
+      "count": 46,
+      "human": 33,
+      "bulk": 13,
+      "sampleK1": "amitavikrama",
+      "sampleLine": 11024
+    },
+    {
+      "dict": "lrv",
+      "page": 263,
+      "count": 42,
+      "human": 4,
+      "bulk": 38,
+      "sampleK1": "caMkramaRa",
+      "sampleLine": 48362
+    },
+    {
+      "dict": "lrv",
+      "page": 318,
+      "count": 42,
+      "human": 13,
+      "bulk": 29,
+      "sampleK1": "triparRa",
+      "sampleLine": 59366
+    },
+    {
+      "dict": "lrv",
+      "page": 411,
+      "count": 42,
+      "human": 5,
+      "bulk": 37,
+      "sampleK1": "para",
+      "sampleLine": 77354
+    },
+    {
+      "dict": "shs",
+      "page": 55,
+      "count": 30,
+      "human": 30,
+      "bulk": 0,
+      "sampleK1": "aravindanABi",
+      "sampleLine": 12754
+    },
+    {
+      "dict": "shs",
+      "page": 9,
+      "count": 23,
+      "human": 23,
+      "bulk": 0,
+      "sampleK1": "aNgasaMskAra",
+      "sampleLine": 1810
+    },
+    {
+      "dict": "shs",
+      "page": 75,
+      "count": 23,
+      "human": 23,
+      "bulk": 0,
+      "sampleK1": "aSvastana",
+      "sampleLine": 17617
+    },
+    {
+      "dict": "shs",
+      "page": 17,
+      "count": 22,
+      "human": 22,
+      "bulk": 0,
+      "sampleK1": "adasa",
+      "sampleLine": 3698
+    },
+    {
+      "dict": "shs",
+      "page": 329,
+      "count": 21,
+      "human": 21,
+      "bulk": 0,
+      "sampleK1": "dakzakanyA",
+      "sampleLine": 75943
+    },
+    {
+      "dict": "shs",
+      "page": 91,
+      "count": 20,
+      "human": 20,
+      "bulk": 0,
+      "sampleK1": "Adikara",
+      "sampleLine": 21455
+    },
+    {
+      "dict": "shs",
+      "page": 735,
+      "count": 20,
+      "human": 20,
+      "bulk": 0,
+      "sampleK1": "Srutarzi",
+      "sampleLine": 170555
+    },
+    {
+      "dict": "shs",
+      "page": 10,
+      "count": 18,
+      "human": 18,
+      "bulk": 0,
+      "sampleK1": "acalADipa",
+      "sampleLine": 2067
+    },
+    {
+      "dict": "shs",
+      "page": 22,
+      "count": 18,
+      "human": 18,
+      "bulk": 0,
+      "sampleK1": "ananta",
+      "sampleLine": 4908
+    },
+    {
+      "dict": "shs",
+      "page": 828,
+      "count": 18,
+      "human": 18,
+      "bulk": 0,
+      "sampleK1": "hari",
+      "sampleLine": 192604
+    },
+    {
+      "dict": "ap",
+      "page": 118,
+      "count": 28,
+      "human": 28,
+      "bulk": 0,
+      "sampleK1": "antavat",
+      "sampleLine": 19958
+    },
+    {
+      "dict": "ap",
+      "page": 223,
+      "count": 27,
+      "human": 27,
+      "bulk": 0,
+      "sampleK1": "arRava",
+      "sampleLine": 38507
+    },
+    {
+      "dict": "ap",
+      "page": 384,
+      "count": 21,
+      "human": 21,
+      "bulk": 0,
+      "sampleK1": "indraH",
+      "sampleLine": 68537
+    },
+    {
+      "dict": "ap",
+      "page": 362,
+      "count": 20,
+      "human": 20,
+      "bulk": 0,
+      "sampleK1": "AvikzitaH",
+      "sampleLine": 64387
+    },
+    {
+      "dict": "ap",
+      "page": 407,
+      "count": 20,
+      "human": 20,
+      "bulk": 0,
+      "sampleK1": "uttama",
+      "sampleLine": 72878
+    },
+    {
+      "dict": "ap",
+      "page": 305,
+      "count": 18,
+      "human": 18,
+      "bulk": 0,
+      "sampleK1": "Akasmika",
+      "sampleLine": 53645
+    },
+    {
+      "dict": "ap",
+      "page": 323,
+      "count": 18,
+      "human": 18,
+      "bulk": 0,
+      "sampleK1": "Atman",
+      "sampleLine": 57224
+    },
+    {
+      "dict": "ap",
+      "page": 282,
+      "count": 17,
+      "human": 17,
+      "bulk": 0,
+      "sampleK1": "azwan",
+      "sampleLine": 49501
+    },
+    {
+      "dict": "ap",
+      "page": 405,
+      "count": 17,
+      "human": 17,
+      "bulk": 0,
+      "sampleK1": "utkam",
+      "sampleLine": 72469
+    },
+    {
+      "dict": "ap",
+      "page": 376,
+      "count": 16,
+      "human": 16,
+      "bulk": 0,
+      "sampleK1": "AhiRq",
+      "sampleLine": 67184
+    },
+    {
+      "dict": "mw",
+      "page": 6,
+      "count": 29,
+      "human": 29,
+      "bulk": 0,
+      "sampleK1": "agrima",
+      "sampleLine": 4806
+    },
+    {
+      "dict": "mw",
+      "page": 164,
+      "count": 12,
+      "human": 12,
+      "bulk": 0,
+      "sampleK1": "iLA",
+      "sampleLine": 102107
+    },
+    {
+      "dict": "mw",
+      "page": 257,
+      "count": 11,
+      "human": 11,
+      "bulk": 0,
+      "sampleK1": "kartf",
+      "sampleLine": 158089
+    },
+    {
+      "dict": "mw",
+      "page": 951,
+      "count": 11,
+      "human": 11,
+      "bulk": 0,
+      "sampleK1": "vidrumacCavi",
+      "sampleLine": 642448
+    },
+    {
+      "dict": "mw",
+      "page": 9,
+      "count": 10,
+      "human": 10,
+      "bulk": 0,
+      "sampleK1": "acyutavAsa",
+      "sampleLine": 6982
+    },
+    {
+      "dict": "mw",
+      "page": 19,
+      "count": 10,
+      "human": 10,
+      "bulk": 0,
+      "sampleK1": "adya",
+      "sampleLine": 13667
+    },
+    {
+      "dict": "mw",
+      "page": 1309,
+      "count": 10,
+      "human": 10,
+      "bulk": 0,
+      "sampleK1": "agotA",
+      "sampleLine": 3092
+    },
+    {
+      "dict": "mw",
+      "page": 163,
+      "count": 9,
+      "human": 9,
+      "bulk": 0,
+      "sampleK1": "ikzu",
+      "sampleLine": 100970
+    },
+    {
+      "dict": "mw",
+      "page": 632,
+      "count": 9,
+      "human": 9,
+      "bulk": 0,
+      "sampleK1": "put",
+      "sampleLine": 422749
+    },
+    {
+      "dict": "mw",
+      "page": 864,
+      "count": 9,
+      "human": 9,
+      "bulk": 0,
+      "sampleK1": "ratnakarRikA",
+      "sampleLine": 581759
+    },
+    {
+      "dict": "ap90",
+      "page": 554,
+      "count": 8,
+      "human": 8,
+      "bulk": 0,
+      "sampleK1": "dakziRa",
+      "sampleLine": 129092
+    },
+    {
+      "dict": "ap90",
+      "page": 70,
+      "count": 5,
+      "human": 5,
+      "bulk": 0,
+      "sampleK1": "anutarzaRaM",
+      "sampleLine": 16003
+    },
+    {
+      "dict": "ap90",
+      "page": 79,
+      "count": 5,
+      "human": 5,
+      "bulk": 0,
+      "sampleK1": "anuruD",
+      "sampleLine": 18024
+    },
+    {
+      "dict": "ap90",
+      "page": 83,
+      "count": 4,
+      "human": 4,
+      "bulk": 0,
+      "sampleK1": "anuzaMj",
+      "sampleLine": 18989
+    },
+    {
+      "dict": "ap90",
+      "page": 587,
+      "count": 4,
+      "human": 4,
+      "bulk": 0,
+      "sampleK1": "dvAr",
+      "sampleLine": 136514
+    },
+    {
+      "dict": "ap90",
+      "page": 1010,
+      "count": 4,
+      "human": 4,
+      "bulk": 0,
+      "sampleK1": "vetAlaH",
+      "sampleLine": 233889
+    },
+    {
+      "dict": "ap90",
+      "page": 74,
+      "count": 3,
+      "human": 3,
+      "bulk": 0,
+      "sampleK1": "anupaskAra",
+      "sampleLine": 16818
+    },
+    {
+      "dict": "ap90",
+      "page": 40,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "adaDryaMc",
+      "sampleLine": 8968
+    },
+    {
+      "dict": "ap90",
+      "page": 56,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "ananuBAvuka",
+      "sampleLine": 12516
+    },
+    {
+      "dict": "ap90",
+      "page": 63,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "anAhUta",
+      "sampleLine": 14373
+    },
+    {
+      "dict": "gra",
+      "page": 332,
+      "count": 5,
+      "human": 5,
+      "bulk": 0,
+      "sampleK1": "kf",
+      "sampleLine": 15714
+    },
+    {
+      "dict": "gra",
+      "page": 145,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "as",
+      "sampleLine": 7439
+    },
+    {
+      "dict": "gra",
+      "page": 472,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "jana",
+      "sampleLine": 21569
+    },
+    {
+      "dict": "gra",
+      "page": 3,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "aMhas",
+      "sampleLine": 71
+    },
+    {
+      "dict": "gra",
+      "page": 23,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "aYj",
+      "sampleLine": 1211
+    },
+    {
+      "dict": "gra",
+      "page": 33,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "ad",
+      "sampleLine": 1555
+    },
+    {
+      "dict": "gra",
+      "page": 103,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "aramati",
+      "sampleLine": 5345
+    },
+    {
+      "dict": "gra",
+      "page": 105,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "ari",
+      "sampleLine": 5437
+    },
+    {
+      "dict": "gra",
+      "page": 114,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "ard",
+      "sampleLine": 5865
+    },
+    {
+      "dict": "gra",
+      "page": 121,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "av",
+      "sampleLine": 6195
+    },
+    {
+      "dict": "bop",
+      "page": 239,
+      "count": 3,
+      "human": 3,
+      "bulk": 0,
+      "sampleK1": "bAhu",
+      "sampleLine": 34398
+    },
+    {
+      "dict": "bop",
+      "page": 72,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "kiYcit",
+      "sampleLine": 11559
+    },
+    {
+      "dict": "bop",
+      "page": 104,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "giri",
+      "sampleLine": 15981
+    },
+    {
+      "dict": "bop",
+      "page": 110,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "grah",
+      "sampleLine": 16772
+    },
+    {
+      "dict": "bop",
+      "page": 152,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "tArA",
+      "sampleLine": 22080
+    },
+    {
+      "dict": "bop",
+      "page": 330,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "vft",
+      "sampleLine": 46492
+    },
+    {
+      "dict": "bop",
+      "page": 11,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "antar",
+      "sampleLine": 1784
+    },
+    {
+      "dict": "bop",
+      "page": 20,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "ava",
+      "sampleLine": 3339
+    },
+    {
+      "dict": "bop",
+      "page": 23,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "aSva",
+      "sampleLine": 3888
+    },
+    {
+      "dict": "bop",
+      "page": 39,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "iDma",
+      "sampleLine": 6219
+    },
+    {
+      "dict": "mw72",
+      "page": 740,
+      "count": 3,
+      "human": 3,
+      "bulk": 0,
+      "sampleK1": "man",
+      "sampleLine": 281141
+    },
+    {
+      "dict": "mw72",
+      "page": 59,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "abala",
+      "sampleLine": 26847
+    },
+    {
+      "dict": "mw72",
+      "page": 333,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "Cid",
+      "sampleLine": 134423
+    },
+    {
+      "dict": "mw72",
+      "page": 443,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "dvi",
+      "sampleLine": 172050
+    },
+    {
+      "dict": "mw72",
+      "page": 485,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "nij",
+      "sampleLine": 186394
+    },
+    {
+      "dict": "mw72",
+      "page": 558,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "paS",
+      "sampleLine": 215080
+    },
+    {
+      "dict": "mw72",
+      "page": 560,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "pA",
+      "sampleLine": 215717
+    },
+    {
+      "dict": "mw72",
+      "page": 583,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "purA",
+      "sampleLine": 223796
+    },
+    {
+      "dict": "mw72",
+      "page": 668,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "PatihaSAha",
+      "sampleLine": 257672
+    },
+    {
+      "dict": "mw72",
+      "page": 703,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "BA",
+      "sampleLine": 269212
+    },
+    {
+      "dict": "pw",
+      "page": 1,
+      "count": 12,
+      "human": 12,
+      "bulk": 0,
+      "sampleK1": "akzi",
+      "sampleLine": 1310
+    },
+    {
+      "dict": "pw",
+      "page": 3,
+      "count": 3,
+      "human": 3,
+      "bulk": 0,
+      "sampleK1": "dfzwi",
+      "sampleLine": 213966
+    },
+    {
+      "dict": "pw",
+      "page": 7,
+      "count": 2,
+      "human": 2,
+      "bulk": 0,
+      "sampleK1": "sadfSa",
+      "sampleLine": 495673
+    },
+    {
+      "dict": "pw",
+      "page": 2,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "kAYcanapraBa",
+      "sampleLine": 577269
+    },
+    {
+      "dict": "skd",
+      "page": 2,
+      "count": 6,
+      "human": 6,
+      "bulk": 0,
+      "sampleK1": "kawI",
+      "sampleLine": 62937
+    },
+    {
+      "dict": "skd",
+      "page": 5,
+      "count": 5,
+      "human": 5,
+      "bulk": 0,
+      "sampleK1": "SrI",
+      "sampleLine": 506810
+    },
+    {
+      "dict": "skd",
+      "page": 1,
+      "count": 4,
+      "human": 4,
+      "bulk": 0,
+      "sampleK1": "izmaH",
+      "sampleLine": 42288
+    },
+    {
+      "dict": "skd",
+      "page": 3,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "bahvASI",
+      "sampleLine": 305670
+    },
+    {
+      "dict": "krm",
+      "page": 6,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "agi",
+      "sampleLine": 202
+    },
+    {
+      "dict": "krm",
+      "page": 399,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "gupU",
+      "sampleLine": 14379
+    },
+    {
+      "dict": "krm",
+      "page": 404,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "gurda",
+      "sampleLine": 14518
+    },
+    {
+      "dict": "krm",
+      "page": 548,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "jakza",
+      "sampleLine": 19591
+    },
+    {
+      "dict": "krm",
+      "page": 1194,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "vana",
+      "sampleLine": 44651
+    },
+    {
+      "dict": "bur",
+      "page": 521,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "yat",
+      "sampleLine": 68267
+    },
+    {
+      "dict": "inm",
+      "page": 42,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "AnuSAsanikaparvan",
+      "sampleLine": 7716
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2024-06",
+      "process": "human",
+      "count": 166
+    },
+    {
+      "month": "2025-01",
+      "process": "human",
+      "count": 2317
+    },
+    {
+      "month": "2025-04",
+      "process": "bulk",
+      "count": 8063
+    },
+    {
+      "month": "2025-04",
+      "process": "human",
+      "count": 4308
+    },
+    {
+      "month": "2025-11",
+      "process": "human",
+      "count": 2477
+    },
+    {
+      "month": "2026-02",
+      "process": "human",
+      "count": 53
+    },
+    {
+      "month": "2026-05",
+      "process": "bulk",
+      "count": 21990
+    },
+    {
+      "month": "2026-05",
+      "process": "human",
+      "count": 141
+    },
+    {
+      "month": "2026-06",
+      "process": "human",
+      "count": 25
+    }
+  ],
+  "limitations": [
+    "Correction density measures REPORTED-AND-FIXED errors, not true error rate: reader traffic biases where errors get found (memo C6), so hot pages read as attention, not necessarily print quality.",
+    "76% of records are machine batches (BOR digitization completion 21,990; LRV/markhom 8,063) — every view is split by process, and dictionary-level comparisons should default to the human series.",
+    "Normalized page position divides by each dictionary's highest CORRECTED page in the feed, not the true printed page count — the far tail of a barely-corrected dictionary is invisible, and the last bin is anchored at the last corrected page by construction.",
+    "Entry counts are current csl-orig v02 <L> record counts, not entry counts at correction time.",
+    "pc resolution varies by dict (e.g. STC change files carry no <pc> headers); pcResolvedShare states the binnable fraction per dict."
+  ],
+  "boundary": [
+    "Feed owner is csl-corrections (scripts/build_correction_loci.py); this packet only aggregates it — never re-parses change files. Rendering owner repo csl-atlas."
+  ],
+  "generatedAt": "2026-07-08T06:29:13.705Z"
+}
