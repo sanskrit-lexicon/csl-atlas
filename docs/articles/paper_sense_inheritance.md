@@ -20,7 +20,10 @@ numbers herein are the 2026-06 snapshot, including the confound-controlled H1 an
 analyses (`h1Controlled` with `withinPrimaryEdge`, `h2ThresholdSensitivity`) and the
 reviewer-adjudicated YAT semicolon-aware sense counter, which re-counts the
 Wilson → Yates edge from the earlier inline-number artifact to a genuine condensation.
-Author: M. Gasūns (byline to finalise).*
+Author-voice pass 2026-07-08, Fable 5 `claude-fable-5` — see
+[SIGNOFF_A02_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A02_author_pass.md).*
+
+**Mārcis Gasūns** · ORCID [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X) · gasyoun@ya.ru
 
 ---
 
@@ -30,7 +33,7 @@ When one dictionary descends from another, what happens to its senses? Between 1
 and 1957 the record produced two indigenous Sanskrit–Sanskrit encyclopaedic lexica
 and a family tree of European dictionaries with documented descent — Wilson into
 Śabda-Sāgara and Yates, Petersburg into Monier-Williams, Apte revised across
-editions. We ask whether sense
+editions. I ask whether sense
 counts inflate over time (H1), whether citation predicts survival (H2), and
 whether descendants expand, copy, or condense (H3), across eleven dictionaries and
 three inheritance edges, aligning senses through shared Sanskrit material rather
@@ -202,7 +205,7 @@ unit is simultaneously the sense list and its citation. A classifier that routes
 authority-marked units out of the sense window therefore removes the senses
 themselves. The European sense/apparatus distinction is not wrong for SKD — it is
 **inapplicable**: in the *kośa* register, attestation and enumeration are one
-construction. We return to this in §7.
+construction. I return to this in §7.
 
 **Table 2. Source-faithful windows versus the legacy static counts on the high-drift
 checkpoint rows.**
@@ -286,7 +289,7 @@ lemma) returns a citation odds ratio of ≈ 3 (*p* ≈ 0.01) that *looks* signif
 the estimate is unstable precisely because cited senses are concentrated on one edge:
 changing how an *unrelated* edge is parsed (the Yates semicolon promotion, §3) moved
 it from ≈ 1.75 to ≈ 3.0 without touching a single cited sense, so the pooled number is
-an artifact of that imbalance, not a citation effect, and we do not rely on it — the
+an artifact of that imbalance, not a citation effect, and I do not rely on it — the
 full grid is in `h2Controlled` in
 [`r2_h2h3.json`](../../data/lexico/r2_h2h3.json). Two real confounds compound the
 point — senses nested within a lemma share a fate, and citation is itself entangled
@@ -306,7 +309,7 @@ present result is at the sense level within one dictionary family rather than th
 word level across languages, but the same caution applies — an apparent survival
 predictor can be a proxy for something else (frequency there, edge composition here)
 unless the confound is controlled. A larger panel with citation-dense ancestors on
-more than one edge could confirm or dissolve the citation effect itself. We know of no
+more than one edge could confirm or dissolve the citation effect itself. I know of no
 comparable quantitative treatment, positive or null, for any historical dictionary
 family with documented lines of descent. The pooled estimate fails in exactly the way
 §3 shows legacy sense
@@ -503,5 +506,5 @@ Gasūns, M. (in preparation). *Two Citation Registers and the Dictionary-to-Book
 the Cologne Digital Sanskrit Lexicon.* (Cited above as the companion citation-registers
 paper.)
 
-*Bibliographic details (page ranges, series numbers, access dates) and the final
-byline are to be verified against the sources before submission.*
+*Bibliographic details (page ranges, series numbers, access dates) are to be verified
+against the sources before submission.*
