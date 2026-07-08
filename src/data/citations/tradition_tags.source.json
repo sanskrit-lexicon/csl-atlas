@@ -1,0 +1,13 @@
+{
+  "dataset": "tradition_tags",
+  "commit": "d039ce9d120dbf6f312e9ea7173b9e58d350f45c",
+  "generatedAt": "2026-07-08T19:16:48.130Z",
+  "generatedBy": "npm run build-tradition-tags",
+  "sourceFiles": [
+    "data/citations/tradition_tags.tsv",
+    "data/citations/ls_citation_edges.tsv",
+    "data/citations/ls_citation_nodes.tsv",
+    "scripts/build-tradition-tags.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}
