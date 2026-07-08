@@ -18,11 +18,15 @@ export function extractCitations(body) {
 }
 
 /**
- * Normalize a source abbreviation for "lexicographer-only" detection.
+ * Normalize a source abbreviation for "lexicographer-only" detection and for
+ * mw-source-layers.json map lookups. NFC-composes first: <ls> content can
+ * arrive NFD-decomposed (e.g. Ś as S + combining acute, U+0301) depending on
+ * upstream tooling, while the reviewed layer map is authored NFC-composed —
+ * without this the two never collide on lookup (SPEC-4).
  * Strips a single trailing period and surrounding whitespace.
  */
 export function normalizeSource(value) {
-  return value.replace(/\s+/g, " ").trim().replace(/\.$/, "");
+  return value.normalize("NFC").replace(/\s+/g, " ").trim().replace(/\.$/, "");
 }
 
 /**

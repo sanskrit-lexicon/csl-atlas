@@ -142,6 +142,13 @@ test("normalizeSource and isLexicographerOnly", () => {
   assert.equal(isLexicographerOnly([]), false);
 });
 
+test("normalizeSource is NFC/NFD-insensitive (SPEC-4 Ś = s+U+0301 trap)", () => {
+  const nfc = "ŚBr"; // Ś composed (matches mw-source-layers.json key form)
+  const nfd = nfc.normalize("NFD"); // decomposes to S + combining acute
+  assert.notEqual(nfd, nfc, "test fixture must actually be decomposed");
+  assert.equal(normalizeSource(nfd), nfc);
+});
+
 test("extractCitations pulls <ls> values", () => {
   assert.deepEqual(extractCitations("x <ls>RV. x, 1</ls> y <ls>L.</ls>"), ["RV. x, 1", "L."]);
 });
@@ -730,10 +737,31 @@ test("foldSiglum folds case and diacritics", () => {
   assert.equal(foldSiglum("RV"), "rv");
 });
 
-test("canonicalSiglum applies the reviewed alias table", () => {
+test("foldSiglum strips trailing roman-numeral locator tokens (SPEC-4)", () => {
+  assert.equal(foldSiglum("Ragh. iii"), "ragh");
+  assert.equal(foldSiglum("Dhatup. xxxii"), "dhatup");
+  assert.equal(foldSiglum("Pan. iv"), "pan");
+  assert.equal(foldSiglum("MBh. i"), "mbh");
+  assert.equal(foldSiglum("Susr. i"), "susr");
+});
+
+test("foldSiglum does not strip real sigla ending in roman-numeral letters (SPEC-4 negatives)", () => {
+  assert.equal(foldSiglum("Hariv."), "hariv");
+  assert.equal(foldSiglum("Divyav."), "divyav");
+  assert.equal(foldSiglum("Malav."), "malav");
+  assert.equal(foldSiglum("Rajav."), "rajav");
+  assert.equal(foldSiglum("Vikram."), "vikram");
+});
+
+test("canonicalSiglum applies the reviewed alias table (src/data/dicts/dict-source-aliases.json)", () => {
   assert.equal(canonicalSiglum("MBh"), "mbh");
-  // bhag -> bhp via src/data/dict-source-aliases.json
-  assert.equal(canonicalSiglum("Bhāg"), "bhp");
+  // kathop -> kathup per the 2026-07 curated adjudication (PR #185)
+  assert.equal(canonicalSiglum("kathop"), "kathup");
+  assert.equal(canonicalSiglum("bhagpedbomb"), "bhagp");
+});
+
+test("canonicalSiglum keeps curated distinct works unmerged (bhag = Bhagavadgita != bhagp = Bhagavata-Purana)", () => {
+  assert.equal(canonicalSiglum("Bhāg"), "bhag");
   assert.equal(canonicalSiglum("BhP"), "bhp");
 });
 
