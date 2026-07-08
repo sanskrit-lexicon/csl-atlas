@@ -16,8 +16,11 @@ context in the dictionary pages [`armh`](https://github.com/sanskrit-lexicon/csl
 [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md). All counts are
 the 2026-06 snapshot and reproducible from committed data; every count was re-verified
 against the artifact in the 2026-07-03 referee pass
-([A06_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A06_review_fable5.md)).
-Author: M. Gasūns (byline to finalise).*
+([A06_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A06_review_fable5.md));
+author-voice pass 2026-07-08, Fable 5 `claude-fable-5` — see
+[SIGNOFF_A06_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A06_author_pass.md).*
+
+**Mārcis Gasūns** · ORCID [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X) · gasyoun@ya.ru
 
 ---
 
@@ -26,12 +29,12 @@ Author: M. Gasūns (byline to finalise).*
 The versified synonymic *kośa* is the central genre of indigenous Sanskrit
 lexicography, yet it is invisible to every structural measure built for a European
 dictionary: it has no part-of-speech tags, no source-citation apparatus, no definitional
-prose — a microstructure detector scores it zero. We show that the zero is the point.
+prose — a microstructure detector scores it zero. I show that the zero is the point.
 The *kośa*'s lexicographic work is done entirely by its **macrostructure**: an
 onomasiological (concept-ordered) hierarchy of *kāṇḍa* (book) → *varga* (section) →
 verse → synonym-set, in which to place a word *is* to define it. Measuring the four
 *kośa*s of the Cologne Digital Sanskrit Lexicon — Halāyudha's *Abhidhānaratnamālā*
-(ARMH) and Hemacandra's *Abhidhānacintāmaṇi* corpus (ABCH, ACPH, ACSJ) — we recover
+(ARMH) and Hemacandra's *Abhidhānacintāmaṇi* corpus (ABCH, ACPH, ACSJ) — I recover
 that macrostructure quantitatively and report four findings. **(1)** The two koshas
 encode two *different* orderings of the same conceptual universe: ARMH runs by cosmic
 region (heaven → earth → nether-world → general → homonyms), ABCH by a hierarchy of
@@ -78,7 +81,7 @@ that convention, not the absence of content. P4 demonstrated the rule for the in
 *macro*structure — and the demonstration is sharper here, because the *kośa* has *no*
 microstructure to recover: its entire content is its arrangement.
 
-Our contribution is a quantitative macrostructural model of the four CDSL koshas: the
+My contribution is a quantitative macrostructural model of the four CDSL koshas: the
 *kāṇḍa*–verse–synonym-set hierarchy made measurable (§3), the comparative ordering of
 two koshas and its theological signature (§4.1), the verse-as-unit and synonym-set
 statistics (§4.2), the incommensurability of the two digitization models (§4.3), and the
@@ -95,7 +98,7 @@ into *kāṇḍa*s (books) and *varga*s (thematic sections), and within each sec
 the synonyms of a concept into metrical verse for memorisation (for the genre's history
 see Vogel 1979). The *Amarakośa* (not in
 CDSL) is the prototype; at the 2026-06 snapshot analysed here the CDSL held four others
-(Table 1), headed by the two we
+(Table 1), headed by the two I
 analyse: Halāyudha's *Abhidhānaratnamālā* (**ARMH**, ~10th c.) and Hemacandra's
 *Abhidhānacintāmaṇi* (**ABCH**, ~12th c.), together with the latter's two supplements,
 the *-pariśiṣṭa* (**ACPH**) and the *-śiloñcha* (**ACSJ**). A **fifth** kośa — Bhoja's
@@ -126,11 +129,11 @@ The koshas carry none of the European entry apparatus. ARMH's "entry" is a fragm
 verse; ABCH's is a synonym-list. There is no `<lex>`, no `<ls>`, no definitional prose
 to parse. The dictionary pages in this atlas already flag the koshas as
 "Common-block framework: **Not applicable** (verse-synonym genre)." The content is real
-and dense; it is simply *located in the arrangement*, which is what we now measure.
+and dense; it is simply *located in the arrangement*, which is what I now measure.
 
 ## 3. Data and method
 
-We measure the macrostructure directly from the canonical `csl-orig` source files with a
+I measure the macrostructure directly from the canonical `csl-orig` source files with a
 stdlib-only extractor ([`m6_kosha_macrostructure.py`](../../scripts/lexico/m6_kosha_macrostructure.py)),
 which detects each kosha's encoding model and recovers its hierarchy. The two koshas use
 **opposite digitization models**, and recognising this is itself part of the method:
@@ -145,7 +148,7 @@ which detects each kosha's encoding model and recovers its hierarchy. The two ko
   each carrying a gender tag (`-puM` masc., `-strI` fem., `-klī` neut., and combinations);
   every record is stamped `<info kvvv="…kāṇḍaḥ"/>`.
 
-From these we count, per kosha: `<L>` records; distinct verses and *kāṇḍa*s (ARMH);
+From these I count, per kosha: `<L>` records; distinct verses and *kāṇḍa*s (ARMH);
 *kāṇḍa* headers and their order, lexeme (`<eid>`) counts, and the gender distribution
 (ABCH family); synonym-set sizes (ARMH, by grouping on `<vn>`); and per-*kāṇḍa* record
 counts. The numbers below are emitted to
@@ -199,7 +202,7 @@ synonymic. Its verses use the *…api…* ("X also [means] Y") formula, e.g.
 *"rudre'pi khaṇḍaparaśur vaiśravaṇe'py ekakuṇḍalaḥ…"* ("*khaṇḍaparaśu* also denotes Rudra;
 *ekakuṇḍala* also denotes Vaiśravaṇa…"). The flat `<vn>` digitization explodes these
 word + added-meaning pairs exactly as it explodes a synonym-set, so the per-verse figure
-for *kāṇḍa* 5 (9.3) counts lexemes, not synonyms. We therefore report the synonym density
+for *kāṇḍa* 5 (9.3) counts lexemes, not synonyms. I therefore report the synonym density
 on the synonymic *kāṇḍa*s 1–4 (mean 9.18) and flag *kāṇḍa* 5 separately — the same
 convention-awareness the genre demands, applied to its own internal sections.
 
@@ -278,7 +281,7 @@ The snapshot analysed holds four koshas — five since 2026-06, with NMMB (§2.1
 its own modeling pass — but not the *Amarakośa* itself, so the genre prototype is a
 comparandum rather than data; adding a digitized Amara would anchor the model. ARMH's
 `<vn>` is not *varga*-subdivided in the digitization (only the *kāṇḍa* and a running
-verse number vary), so we model ARMH at *kāṇḍa* granularity and ABCH at *kāṇḍa*/*varga*
+verse number vary), so I model ARMH at *kāṇḍa* granularity and ABCH at *kāṇḍa*/*varga*
 granularity — a normalisation the sources permit but do not yet expose uniformly. The
 gender figures count combined tags toward each gender admitted, and the *kāṇḍa*-5
 synonym density is reported as lexeme-density for the reason given in §4.2. Finally, the
