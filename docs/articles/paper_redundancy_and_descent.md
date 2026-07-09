@@ -7,30 +7,31 @@ Journal of Lexicography). Empirical basis: the OBS-R finding
 containment data `data/sanhw1_jaccard.csv`; inventory `data/dictionary_inventory.csv`.
 Companion to Paper H (convention lineage,
 [`paper_H_convention_vs_content_lineage.md`](paper_H_convention_vs_content_lineage.md)).
-All counts are reproducible from committed data; numbers herein are the 2026-06
-snapshot. Author: M. Gasūns (byline to finalise).*
+All counts are reproducible from committed data; numbers herein are the 2026-07
+corpus snapshot (44 dictionaries, including the *Nāmamālikā* digitised 2026-06;
+aggregate figures from `data/obs/headword_collapse.json`). Author: M. Gasūns.*
 
 ---
 
 ## Abstract
 
-The Cologne Digital Sanskrit Lexicon (CDSL) aggregates forty-three historical
+The Cologne Digital Sanskrit Lexicon (CDSL) aggregates forty-four historical
 Sanskrit dictionaries into a single freely available corpus of roughly 1.5 million
 lexical entries. That figure is routinely cited as a measure of the resource's
 scale, but it conflates the size of the *digitised record* with the size of the
 *lexical record*: a headword attested in nine dictionaries is counted nine times.
 We measure, for the first time at the level of the whole corpus, how much of the
 CDSL is independent attestation and how much is re-lexicalisation. Extracting the
-canonical headword (`<k1>`, SLP1) from every entry — and, for three indigenous
+canonical headword (`<k1>`, SLP1) from every entry — and, for four indigenous
 *kośa*s that use a different markup, the synonym lemmas they list — we reduce
-1,495,459 entries to **409,649 distinct headwords, a collapse of 3.65 : 1**. A
-**majority (57.9 %) of distinct headwords occur in two or more dictionaries**; only
-42.1 % (≈172,000 lemmas) are unique to a single work. Crucially, redundancy is not
+1,496,157 entries to **410,259 distinct headwords, a collapse of 3.65 : 1**. A
+**majority (57.8 %) of distinct headwords occur in two or more dictionaries**; only
+42.2 % (≈173,000 lemmas) are unique to a single work. Crucially, redundancy is not
 uniform but *structured*: the general bilingual dictionaries re-lexicalise one
 another almost completely (the Petersburg *kürzere Fassung* contributes 4.4 %
-unique headwords, Monier-Williams 13.0 %), whereas specialised and corpus-bound
+unique headwords, Monier-Williams 12.9 %), whereas specialised and corpus-bound
 lexica retain large independent cores (the Buddhist Hybrid Sanskrit dictionary
-57.6 %, the epigraphical glossary 57.6 %). Pairwise asymmetric containment, directed
+57.6 %, the epigraphical glossary 57.5 %). Pairwise asymmetric containment, directed
 by publication year and set size, recovers a coherent inheritance stemma in which
 **Monier-Williams (1899) is a near-total absorber** of its predecessors (containing
 88–94 % of nine other dictionaries' headword stock) and the Petersburg tradition
@@ -49,7 +50,8 @@ overlap; dictionary genealogy; digital lexicography; redundancy.
 Aggregated digital dictionary portals present many historical dictionaries through
 one interface and report their scale as a single summed entry count. The Cologne
 Digital Sanskrit Lexicon (Kapp and Malten; *Cologne Digital Sanskrit Dictionaries*)
-is a mature example: forty-three dictionaries spanning 1832–1993, in Sanskrit-to-
+is a mature example: forty-four dictionaries whose printed editions span 1822–1993,
+in Sanskrit-to-
 English, -German, -French, -Latin and Sanskrit-to-Sanskrit, encoded in a common
 markup and downloadable in full. Its often-quoted headline — on the order of 1.5
 million entries — measures the digitisation effort, not the language. Two questions
@@ -62,7 +64,7 @@ These are classical questions of dictionary genealogy, normally pursued
 philologically — through prefaces, known editorial dependencies, and spot
 comparison. The CDSL makes them tractable quantitatively for an entire dictionary
 family at once. This paper supplies the corpus-level measurement: a headword-multiplicity
-census across all forty-three dictionaries, a profile of which dictionaries
+census across all forty-four dictionaries, a profile of which dictionaries
 contribute independent material, and a headword-containment stemma whose directed
 edges reproduce, and extend, the derivation relationships recorded piecemeal in the
 philological literature.
@@ -87,8 +89,9 @@ comprises Böhtlingk and Roth's *Großes Petersburger Wörterbuch* (PWG, seven v
 1855–1875) and Böhtlingk's *kürzere Fassung* (PW/PWK, seven volumes 1879–1889), with
 Schmidt's *Nachträge* (1928) and Cappeller's German dictionary (1887). Alongside
 these stand the indigenous Sanskrit-to-Sanskrit *kośa*s — the *Śabdakalpadruma*
-(Rādhākānta Deva, 1822–58), the *Vācaspatya* (Tarkavācaspati, 1873–84), and
-Hemacandra's *Abhidhānacintāmaṇi* and its supplements — and the specialised lexica:
+(Rādhākānta Deva, 1822–58), the *Vācaspatya* (Tarkavācaspati, 1873–84),
+Hemacandra's *Abhidhānacintāmaṇi* and its supplements, and the *Nāmamālikā*
+(digitised into the CDSL in 2026) — and the specialised lexica:
 Edgerton's Buddhist Hybrid Sanskrit dictionary (1953), Grassmann's *Wörterbuch zum
 Rig-Veda* (1873), epigraphical and Purāṇic glossaries, and others.
 
@@ -113,9 +116,11 @@ canonical citation form (homonyms carry a separate `<h>` index, so the `<k1>` of
 homographs is identical). We take, per dictionary, the **set of distinct `<k1>`
 values** as its headword inventory.
 
-Three dictionaries — the Hemacandra *kośa* family (`abch`, `acph`, `acsj`) — carry no
-`<k1>` field; they encode synonym groups in a `<syns><s>…</s>` structure in which each
-member is a lemma followed by a part-of-speech tag. For these we extract the synonym
+Four dictionaries carry no `<k1>` field. The Hemacandra *kośa* family (`abch`,
+`acph`, `acsj`) encodes synonym groups in a `<syns><s>…</s>` structure in which each
+member is a lemma followed by a part-of-speech tag; the *Nāmamālikā* (`nmmb`) uses
+the same `<syns>` field as a bare comma-separated lemma-POS list without the `<s>`
+wrapper. For these we extract the synonym
 lemmas, stripping the POS suffix. This format-aware extraction reproduces the
 independently computed *sanhw1* lemma counts for these dictionaries exactly (e.g.
 *Abhidhānacintāmaṇi* 11,584 lemmas), confirming that the two markup styles are being
@@ -144,18 +149,19 @@ The measurement is at the level of the *headword*, not the sense or the gloss; t
 dictionaries that list the same lemma with entirely different treatments still count
 as sharing it. Containment is a floor for overlap and is not, by itself, evidence of
 direct copying. Variant-folding is limited to the canonical `<k1>`/synonym forms;
-finer normalisation (anusvāra, final visarga) would raise overlap slightly and is
-treated as a sensitivity bound rather than the headline. These limits are revisited
-in §6.
+finer normalisation (folding a final anusvāra or visarga) raises overlap and lowers
+the corpus-wide independence figure from 42.2 % to 38.8 % (−3.4 points); this is
+treated as a sensitivity bound rather than the headline, for the reasons given in
+§6.
 
 ## 4. Results
 
 ### 4.1 The aggregate collapses by 3.65 : 1
 
-Across the forty-three dictionaries, 1,495,459 `<L>` entries reduce to **409,649
+Across the forty-four dictionaries, 1,496,157 `<L>` entries reduce to **410,259
 distinct headwords** — a collapse of **3.65 : 1**. Homonym-normalisation alone (the
-sum of per-dictionary distinct `<k1>` sets, before cross-dictionary merging) is
-1,291,215, an **entry split-inflation of 1.158**: roughly one entry in seven is a
+sum of per-dictionary distinct headword sets, before cross-dictionary merging) is
+1,307,338, an **entry split-inflation of 1.144**: roughly one entry in eight is a
 homonym or sub-entry split rather than a distinct headword. This split-inflation is
 the corpus-wide reflex of the macrostructural trade-off documented elsewhere in this
 project (Paper on microstructure, M1–M2): Monier-Williams promotes derivatives and
@@ -164,16 +170,16 @@ dictionaries nest them.
 
 ### 4.2 The record is majority-redundant
 
-**57.9 % of distinct headwords occur in two or more dictionaries; 42.1 %
-(≈172,000 lemmas) are unique to a single dictionary.** The multiplicity
+**57.8 % of distinct headwords occur in two or more dictionaries; 42.2 %
+(173,139 lemmas) are unique to a single dictionary.** The multiplicity
 distribution has a long high-frequency tail — a pan-lexical core of common words
 recorded by almost every dictionary — and a large body of singletons. The headline
 re-framing is therefore: the CDSL's ~1.5 million entries reduce to ~410,000 distinct
-headwords, of which only some **170,000 are dictionary-unique**, the rest being
+headwords, of which only some **173,000 are dictionary-unique**, the rest being
 re-lexicalisation of a shared core. "Dictionary-unique" is a floor for novelty, not a
 count of independent attestation: a headword shared by several dictionaries may be
 independently recorded in each rather than copied (§3.3), so the count of
-*independently attested* lemmas lies somewhere above 170,000 — its exact value is a
+*independently attested* lemmas lies somewhere above 173,000 — its exact value is a
 copying-level question, not a headword-level one.
 
 ### 4.3 Redundancy is structured, not uniform
@@ -191,12 +197,12 @@ vs. independent lexica).
 | YAT — Yates 1846 | 2.8 | derivative (see §4.4) |
 | PW — Petersburg (kürzere) | 4.4 | re-lexicalised by the family |
 | MW72 — Monier-Williams 1872 | 4.7 | subsumed by MW 1899 |
-| MW — Monier-Williams 1899 | 13.0 | the great compiler-hub |
+| MW — Monier-Williams 1899 | 12.9 | the great compiler-hub |
 | AP — Apte 1957 | 34.7 | idiom/compound expansion |
-| SKD — Śabdakalpadruma | 37.2 | indigenous kośa |
+| SKD — Śabdakalpadruma | 37.1 | indigenous kośa |
 | PUI — Purāṇa Index | 38.6 | corpus-bound proper names |
 | ACC — Aufrecht catalogue | 43.3 | bibliographic |
-| IEG — Indian Epigraphical Glossary | 57.6 | epigraphic vocabulary |
+| IEG — Indian Epigraphical Glossary | 57.5 | epigraphic vocabulary |
 | BHS — Buddhist Hybrid Sanskrit | 57.6 | a distinct register |
 
 The general bilingual dictionaries we expect on philological grounds to be
@@ -240,7 +246,10 @@ is small in every row.
 
 *Source: [`data/sanhw1_jaccard.csv`](../../data/sanhw1_jaccard.csv) (intersection,
 `a_in_b`, `b_in_a`, `size_a`, `size_b` columns), already committed by the containment
-generator; no new computation.*
+generator; no new computation. At these set sizes the containment ratios are stable
+point estimates: for the smallest numerator set in the table (BOP, |A| = 8,505), the
+Wilson 95 % confidence interval on `a_in_b` = 0.940 is [0.935, 0.945], and every
+other row's interval is at least as tight, so intervals are omitted from the table.*
 
 Read against the reverse column, the asymmetry that "absorption" only asserted before
 is now visible directly: MW contains 88–94 % of nine smaller/earlier dictionaries'
@@ -258,9 +267,11 @@ the Petersburg works form the upstream reservoir.
 
 A striking corollary emerges once the indigenous *kośa*s are parsed correctly. The
 *Abhidhānacintāmaṇi* supplies 11,584 synonym lemmas but **only 3.3 % are unique** to
-it (its supplements 14.2 % and 7.6 %). A synonym thesaurus, by its nature, re-groups
+it (its supplements 14.1 % and 7.6 %). A synonym thesaurus, by its nature, re-groups
 words that are *already attested* elsewhere into semantic sets; it adds organisation,
-not vocabulary. This is the mirror image of the citation-driven specialised lexica
+not vocabulary. The newly digitised *Nāmamālikā* is the partial exception (23.0 %
+of its 2,265 lemmas are unique), a reminder that the re-grouping profile is a
+tendency of the genre, strongest in the large thesauri, not a law. This is the mirror image of the citation-driven specialised lexica
 of §4.3, and it cautions against reading a *kośa*'s size as documentary breadth.
 
 ## 5. Discussion
@@ -271,10 +282,10 @@ into an actionable map: which dictionaries are largely subsumed by others (and c
 be presented as views rather than independent sources), where consolidation or
 de-duplication would reduce maintenance burden without lexical loss, and which small
 dictionaries carry disproportionate unique value and warrant priority in curation and
-quality control. The 3.65 : 1 collapse and 57.9 % redundancy quantify what portal
+quality control. The 3.65 : 1 collapse and 57.8 % redundancy quantify what portal
 users intuit — that "more dictionaries" is not "more words."
 
-**For Indology.** The independent core — on the order of 170,000 dictionary-unique
+**For Indology.** The independent core — on the order of 173,000 dictionary-unique
 lemmas, concentrated in the specialised and indigenous lexica — is the part of the
 CDSL that no other member can supply. Identifying it is a prerequisite for any corpus
 or treebank that needs a defensible lexical inventory, and for editorial decisions
@@ -299,9 +310,8 @@ Variant-folding is conservative (canonical `<k1>`/synonym forms only); a final
 anusvāra/visarga-folding pass (stripping a trailing SLP1 `M` or `H` before comparing
 headwords —
 [`headword_multiplicity.py fold_sensitivity()`](../../scripts/obs/headword_multiplicity.py))
-lowers the independence figure by **3.4 points** (42.2 % → 38.8 % on the current
-corpus snapshot, 409,736 → 363,029 distinct folded lemmas; the 0.1-point drift from
-§4.2's 42.1 % baseline is an unrelated corpus-growth artifact, not the fold). This is
+lowers the independence figure by **3.4 points** (42.2 % → 38.8 %; 410,259 →
+363,552 distinct folded lemmas). This is
 a sensitivity bound reported here rather than adopted as the headline: the fold
 conflates grammatically distinct forms (a nominative-neuter *-am* and a genuine
 visarga-final *-aḥ* headword are different words, not spelling variants), so the
@@ -315,7 +325,7 @@ one shared because it was copied.
 
 Behind the Cologne Digital Sanskrit Lexicon's 1.5 million entries lie roughly 410,000
 distinct headwords, of which a majority are shared across dictionaries and only some
-170,000 are unique. Redundancy is structured: the general bilingual dictionaries
+173,000 are unique. Redundancy is structured: the general bilingual dictionaries
 re-lexicalise one another, with Monier-Williams (1899) as their documentary sink and
 the Petersburg dictionaries as the upstream reservoir, while specialised and
 indigenous lexica retain the corpus's irreplaceable independent vocabulary.
@@ -325,7 +335,7 @@ family.
 
 ---
 
-## References (draft — author to finalise)
+## References
 
 *Primary dictionaries* (as digitised in the Cologne Digital Sanskrit Lexicon):
 Wilson, H. H. (1832); Yates, W. (1846); Benfey, T. (1866); Böhtlingk, O. and Roth, R.,
@@ -336,7 +346,8 @@ Macdonell, A. A. (1893); Cappeller, C. (1891); Apte, V. S. (1890; rev. edn, ed.
 P. K. Gode et al., Poona, 1957–1959); Edgerton, F., *Buddhist Hybrid Sanskrit
 Dictionary* (New Haven, 1953); Grassmann, H., *Wörterbuch zum Rig-Veda* (1873);
 Rādhākānta Deva, *Śabdakalpadruma* (1822–1858); Tarkavācaspati, *Vācaspatya*
-(1873–1884); Hemacandra, *Abhidhānacintāmaṇi*.
+(1873–1884); Hemacandra, *Abhidhānacintāmaṇi*; *Nāmamālikā* (as digitised in the
+CDSL, 2026).
 
 *Resource.* Kapp, D. and Malten, T., *Cologne Digital Sanskrit Dictionaries*,
 University of Cologne (sanskrit-lexicon.uni-koeln.de).
