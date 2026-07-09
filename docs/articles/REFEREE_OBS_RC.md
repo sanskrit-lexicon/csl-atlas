@@ -57,10 +57,10 @@ against a comparator aggregate (another portal's entry-to-lemma ratio) if one ex
 
 | Point | Action |
 |---|---|
-| R-M1 stemma direction | pending — add reverse-containment column to Table 2 |
+| R-M1 stemma direction | **applied** — Table 2 carries `b_in_a` beside `a_in_b` (asymmetry shown, not asserted) |
 | R-M2 value vs independence | **applied** |
-| R-M3 fold sensitivity | pending — state the number |
-| R-M4 denominators | pending — add set sizes to Table 2 |
+| R-M3 fold sensitivity | **applied** — 42.2 % → 38.8 % (−3.4 pts) stated in §3.3 and §6 |
+| R-M4 denominators | **applied** — \|A\|, \|B\|, \|A∩B\| in Table 2 + Wilson-CI note (worked BOP example) |
 | R-M5 unique vs attested | **applied** |
 
 ---
