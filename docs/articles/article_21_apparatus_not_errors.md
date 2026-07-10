@@ -1,13 +1,17 @@
-# Article 21 — Apparatus, not errors: how Monier-Williams inherited the Petersburg lexicon
+# Apparatus, not errors: how Monier-Williams inherited the Petersburg lexicon
 
-*Draft forensic note. Empirical basis: Phase L3 (forensic suite F0–F4b) + L0.8, building
-on the convention-vs-content result of Phase L0
+Mārcis Gasūns · ORCID [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X) · gasyoun@ya.ru
+
+*Submit-ready draft pending author sign-off
+([SIGNOFF_A10_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A10_author_pass.md));
+internal Article 21 / paper A10. Empirical basis: the L3 forensic suite (F1–F6) + L0.8,
+building on the convention-vs-content result of Phase L0
 ([`paper_H_convention_vs_content_lineage.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_H_convention_vs_content_lineage.md) §5).
 Scripts in `scripts/forensic/`, data in `data/forensic/`. Companion to *Redundancy and
 Descent* ([`paper_redundancy_and_descent.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_redundancy_and_descent.md)),
 which owns the raw-containment stemma this note de-confounds; the hapax-as-copying and
-PWG-backbone companions (internal Articles 17/16) are planned, not yet drafted. Venue: DSH /
-*Journal of Cultural Analytics*.*
+PWG-backbone companions (internal Articles 17/16) are planned, not yet drafted. Venue:
+*Digital Scholarship in the Humanities* (locked 10-07-2026).*
 
 ---
 
@@ -17,13 +21,15 @@ Monier-Williams' *Sanskrit-English Dictionary* (MW, 1899) was built in the shado
 Böhtlingk & Roth's *Großes Petersburger Wörterbuch* (PWG, 1855–75) and Böhtlingk's
 abridgement (PW, 1879–89). *How* it inherited has been asserted but not measured. Using
 six language-neutral signals calibrated across 41 digitised dictionaries plus a
-scholar-curated error list, we show that MW inherited Böhtlingk's **apparatus** — which words to enter,
+scholar-curated error list, I show that MW inherited Böhtlingk's **apparatus** — which words to enter,
 which texts to cite **and in what order**, how to divide homonyms — but **not** his
 mechanical errors. Where a
 PWG headword is misspelled and MW enters the word at all, MW has the correct form in 98%
 of curated cases (90/92; it lacks the word in the remaining 31 of 123); MW and PWG
-share **zero** documented print errors. The inheritance is of scholarship, not of
-typesetting. This resolves the size-confounded "MW absorbed 89–94% of PWG" claim (the
+share **zero** documented print errors. Resolving the 565 shared Harivaṃśa references
+directly against the Calcutta vulgate both traditions cite corroborates 206 of them at the
+exact cited śloka (≈75× the shuffled null) while turning up no shared mistake. The
+inheritance is of scholarship, not of typesetting. This resolves the size-confounded "MW absorbed 89–94% of PWG" claim (the
 raw-containment reading of the companion redundancy study) into a
 precise, defensible statement and supplies a reusable template for separating
 content-descent from error-descent in any corpus of related editions.
@@ -36,7 +42,7 @@ inventory*; (ii) MW reused the *citation apparatus*; (iii) MW carried over Böht
 stemmatics (the Lachmann common-error principle: a correct reading can be reached
 independently, but the same error is near-impossible to invent twice; Maas 1958;
 West 1973; for its digital extension, Andrews & Macé 2013). The three claims
-are routinely conflated. We separate them.
+are routinely conflated. I separate them.
 
 ## 2. Method — a ladder of language-neutral signals
 
@@ -150,52 +156,51 @@ Methodologically, "did X copy Y" should be decomposed into inventory / apparatus
 descent and tested separately — the apparatus signal (here, very strong) and the error
 signal (here, null) need not agree, and their disagreement is the actual historical fact.
 
-## 6. Limits and the one remaining decisive test
+## 6. Limits — and the decisive test, run to ground
 
 The curated error sample is small (123) and weighted toward scan-era artefacts a
-separately-keyed MW could not share in any case. The citation result proves shared
-*sources/editions*, not yet a shared *mistake*: independent use of the same edition can
-match. The airtight upgrade is a shared **erroneous** citation — a verse number wrong
-against the actual text, present in both — verifiable against external
-DCS/VisualDCS corpus evidence. That test is outside `csl-atlas`.
+separately-keyed MW could not share in any case. And the citation result, however strong,
+proves shared *sources/editions*, not yet a shared *mistake*: independent use of the same
+edition can match. The airtight upgrade, in classical stemmatic terms, would be a shared
+**erroneous** citation — a verse number wrong against the actual text, present in both
+dictionaries. I ran that test twice, against the two corpora available.
 
-**F4-DCS result (10-07-2026, VisualDCS, handoff H203).** The test was run against the DCS
-passage corpus and returned **0 adjudicated shared errors — a corpus-availability block, not
-a null error signal.** Of the 587 shared rare citations, only **1** resolved to a DCS locus:
-96 % are Harivaṃśa, cited by the Petersburg dictionaries in the **Calcutta-vulgate continuous
-śloka numbering** (running to 16 291), while DCS carries the **critical edition** (118
-chapters, ≈ 6 073 verses). 298 references provably exceed the entire DCS Harivaṃśa and the
-remainder have no vulgate↔critical concordance to map a continuous number onto a
-(chapter, verse) locus; the single resolvable candidate (CAURAP. (A.) 49) is a recension
-artifact, not an editor-independent wrong locus. So the shared-error upgrade stays unavailable
-for this dictionary pair until a vulgate Harivaṃśa — the edition Böhtlingk cited — is digitised
-and lemmatised. **A10 remains at the "very strong, not airtight" level (F1 apparatus + F5 order);
-it is not upgraded.** Summary + full per-candidate classification:
-[`VisualDCS …/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md`](https://github.com/gasyoun/VisualDCS/blob/main/src/DCS-data-2026/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md)
-(passage-resolution code stays in VisualDCS per the consumption contract).
+**Against the DCS corpus the test is structurally blocked.** Of the 587 shared rare
+citations, only **1** resolved to a DCS locus: 96 % are Harivaṃśa references, cited by the
+Petersburg dictionaries in the **Calcutta-vulgate continuous śloka numbering** (running to
+16 291), while DCS carries the **critical edition** (118 chapters, ≈ 6 073 verses). 298
+references provably exceed the entire DCS Harivaṃśa, and the single resolvable candidate
+(CAURAP. (A.) 49) is a recension artifact, not an editor-independent wrong locus (full
+per-candidate classification:
+[`VisualDCS …/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md`](https://github.com/gasyoun/VisualDCS/blob/main/src/DCS-data-2026/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md);
+the passage-resolution code stays in VisualDCS per the consumption contract). Nor would a
+vulgate↔critical concordance unblock it: a concordance maps a vulgate address to a critical
+one *on the assumption the address is correct* — the very proposition under test. An
+erroneous citation maps to a critical verse lacking the headword; a correct citation
+pointing at vulgate-only material maps to `ABSENT`. Both emit "not found", so the
+concordance cannot separate a wrong number from a verse the critical editor cut, and since
+the critical text is ≈ ⅓ of the vulgate the second branch dominates. The test requires the
+**vulgate itself**.
 
-**Correction (10-07-2026): a vulgate↔critical concordance would _not_ unblock this test**, and the
-DCS sentence above no longer offers it as an alternative. A concordance maps a vulgate address to a
-critical one *on the assumption the address is correct* — the very proposition under test. An
-erroneous citation maps to a critical verse lacking the headword; a correct citation pointing at
-vulgate-only material maps to `ABSENT`. Both emit "not found", so the concordance cannot separate a
-wrong number from a verse the critical editor cut, and since the critical text is ≈ ⅓ of the vulgate
-the second branch dominates. The test requires the **vulgate itself**.
+**Against the vulgate itself, the shared citations verify as correct.** I therefore resolved
+the Harivaṃśa references directly against the **Calcutta vulgate** the Petersburg
+dictionaries actually cite, using a free vulgate e-text (Kinjawadekar, Chitrashala 1936;
+**15,364 verses = 93.8 %** of the 16,374-śloka vulgate). A per-adhyāya continuous index was
+fitted on 14,471 PWG anchors and **validated on 815 held-out MW anchors: 68.4 % land within
+±3 of their cited śloka vs a 2.1 % shuffled-N null (≈ 33×)** — the index is trustworthy. Of
+the **565** shared rare Harivaṃśa citations, **206 (37.7 %) corroborate at the exact cited
+vulgate śloka** (e.g. `kīrtimant` `HARIV. 62` → verse 1-2-9 *…kīrtimantaṃ ca…*) against a
+**0.5 % shuffled-N null — a ≈ 75× enrichment, and against 1 of 587 resolvable via DCS.**
+This upgrades the citation evidence from *shared editions* to a **shared, verse-level,
+verifiably-correct apparatus.** The *airtight* upgrade — a shared **erroneous** citation —
+is **not** obtained, and the reason is positive rather than circumstantial: displaced cases
+fall *below* their shuffled-N null (79 vs 200) with no clustering, so against the correct
+edition the shared citations verify as correct and there is **no shared error to find** in
+this pool. The shared-mistake signal is a measured null, not a data-availability block.
 
-**Vulgate result (10-07-2026, H488).** The Harivaṃśa was resolved directly against the **Calcutta
-vulgate** the Petersburg dictionaries actually cite, using a free vulgate e-text (Kinjawadekar,
-Chitrashala 1936; **15,364 verses = 93.8 %** of the 16,374-śloka vulgate). A per-adhyāya continuous
-index was fitted on 14,471 PWG anchors and **validated on 815 held-out MW anchors: 68.4 % land within
-±3 of their cited śloka vs a 2.1 % shuffled-N null (≈ 33×)** — the index is trustworthy. Of the **565**
-shared rare Harivaṃśa citations, **206 (37.7 %) corroborate at the exact cited vulgate śloka** (e.g.
-`kīrtimant` `HARIV. 62` → verse 1-2-9 *…kīrtimantaṃ ca…*) against a **0.5 % shuffled-N null — a ≈ 75×
-enrichment, and against 1 of 587 resolvable via DCS.** This upgrades the citation evidence from
-*shared editions* to a **shared, verse-level, verifiably-correct apparatus.** The *airtight* upgrade —
-a shared **erroneous** citation — is **not** obtained: displaced cases fall *below* their shuffled-N
-null (79 vs 200) with no clustering, so against the correct edition the shared citations verify as
-correct and there is **no shared error to find** in this pool. A10 therefore stays at "very strong,
-not airtight" (F1 apparatus + F5 order + now direct verse-level corroboration); the shared-mistake
-signal is a measured null, not a data-availability block. Census + full per-ref resolution:
+The verdict therefore stands at "very strong, not airtight" — F1 apparatus + F5 order +
+direct verse-level corroboration — with the common-error coup unavailable precisely because
+the shared apparatus is accurate. Census + full per-reference resolution:
 [`data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md)
 §6 and
 [`data/forensic/harivamsa_shared_citation_resolution.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/harivamsa_shared_citation_resolution.csv);
