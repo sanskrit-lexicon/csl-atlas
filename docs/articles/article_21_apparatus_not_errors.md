@@ -175,17 +175,32 @@ it is not upgraded.** Summary + full per-candidate classification:
 (passage-resolution code stays in VisualDCS per the consumption contract).
 
 **Correction (10-07-2026): a vulgate↔critical concordance would _not_ unblock this test**, and the
-sentence above no longer offers it as an alternative. A concordance maps a vulgate address to a
+DCS sentence above no longer offers it as an alternative. A concordance maps a vulgate address to a
 critical one *on the assumption the address is correct* — the very proposition under test. An
 erroneous citation maps to a critical verse lacking the headword; a correct citation pointing at
 vulgate-only material maps to `ABSENT`. Both emit "not found", so the concordance cannot separate a
 wrong number from a verse the critical editor cut, and since the critical text is ≈ ⅓ of the vulgate
-the second branch dominates. The test requires the **vulgate itself**. A free vulgate e-text
-(Kinjawadekar, Chitrashala 1936) covers 71.1 % of the vulgate and reaches **474 of the 565 shared
-Harivaṃśa refs (83.9 %)**, against 1 of 587 via DCS — census in
-[`data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md),
-executable path in [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md),
-negative result in [`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md) §8.
+the second branch dominates. The test requires the **vulgate itself**.
+
+**Vulgate result (10-07-2026, H488).** The Harivaṃśa was resolved directly against the **Calcutta
+vulgate** the Petersburg dictionaries actually cite, using a free vulgate e-text (Kinjawadekar,
+Chitrashala 1936; **15,364 verses = 93.8 %** of the 16,374-śloka vulgate). A per-adhyāya continuous
+index was fitted on 14,471 PWG anchors and **validated on 815 held-out MW anchors: 68.4 % land within
+±3 of their cited śloka vs a 2.1 % shuffled-N null (≈ 33×)** — the index is trustworthy. Of the **565**
+shared rare Harivaṃśa citations, **206 (37.7 %) corroborate at the exact cited vulgate śloka** (e.g.
+`kīrtimant` `HARIV. 62` → verse 1-2-9 *…kīrtimantaṃ ca…*) against a **0.5 % shuffled-N null — a ≈ 75×
+enrichment, and against 1 of 587 resolvable via DCS.** This upgrades the citation evidence from
+*shared editions* to a **shared, verse-level, verifiably-correct apparatus.** The *airtight* upgrade —
+a shared **erroneous** citation — is **not** obtained: displaced cases fall *below* their shuffled-N
+null (79 vs 200) with no clustering, so against the correct edition the shared citations verify as
+correct and there is **no shared error to find** in this pool. A10 therefore stays at "very strong,
+not airtight" (F1 apparatus + F5 order + now direct verse-level corroboration); the shared-mistake
+signal is a measured null, not a data-availability block. Census + full per-ref resolution:
+[`data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md)
+§6 and
+[`data/forensic/harivamsa_shared_citation_resolution.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/harivamsa_shared_citation_resolution.csv);
+executable path [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md);
+dead-end record [`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md) §8.
 
 ## 7. Reproducibility
 
