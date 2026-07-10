@@ -168,12 +168,24 @@ chapters, ≈ 6 073 verses). 298 references provably exceed the entire DCS Hariv
 remainder have no vulgate↔critical concordance to map a continuous number onto a
 (chapter, verse) locus; the single resolvable candidate (CAURAP. (A.) 49) is a recension
 artifact, not an editor-independent wrong locus. So the shared-error upgrade stays unavailable
-for this dictionary pair until a vulgate Harivaṃśa (the edition Böhtlingk cited) — or a
-vulgate↔critical verse concordance — is digitised and lemmatised. **A10 remains at the
-"very strong, not airtight" level (F1 apparatus + F5 order); it is not upgraded.** Summary +
-full per-candidate classification:
+for this dictionary pair until a vulgate Harivaṃśa — the edition Böhtlingk cited — is digitised
+and lemmatised. **A10 remains at the "very strong, not airtight" level (F1 apparatus + F5 order);
+it is not upgraded.** Summary + full per-candidate classification:
 [`VisualDCS …/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md`](https://github.com/gasyoun/VisualDCS/blob/main/src/DCS-data-2026/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md)
 (passage-resolution code stays in VisualDCS per the consumption contract).
+
+**Correction (10-07-2026): a vulgate↔critical concordance would _not_ unblock this test**, and the
+sentence above no longer offers it as an alternative. A concordance maps a vulgate address to a
+critical one *on the assumption the address is correct* — the very proposition under test. An
+erroneous citation maps to a critical verse lacking the headword; a correct citation pointing at
+vulgate-only material maps to `ABSENT`. Both emit "not found", so the concordance cannot separate a
+wrong number from a verse the critical editor cut, and since the critical text is ≈ ⅓ of the vulgate
+the second branch dominates. The test requires the **vulgate itself**. A free vulgate e-text
+(Kinjawadekar, Chitrashala 1936) covers 71.1 % of the vulgate and reaches **474 of the 565 shared
+Harivaṃśa refs (83.9 %)**, against 1 of 587 via DCS — census in
+[`data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md),
+executable path in [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md),
+negative result in [`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md) §8.
 
 ## 7. Reproducibility
 
