@@ -121,9 +121,10 @@ exclusion, never silently dropped; closing that gap means OCRing Calcutta Vol. I
   *measurements* is fine; **republishing the bytes may not be**. Run
   [`/publish-safety-check`](https://github.com/gasyoun/claude-config/blob/main/commands/publish-safety-check.md)
   before any public-tier `kosha` release.
-- 🟡 **Band boundaries above are approximate.** P2's upper edge (~12,562) is a cumulative estimate
-  from Kinjawadekar's verse counts, not a Calcutta-verified boundary; the exact split shifts once the
-  index is fitted. Treat 83.9% as a close estimate, not a settled figure.
+- 🟢 **Superseded by §6 (H488 executed 10-07-2026).** The §4 reachability of 83.9% was a
+  *plan-time estimate*; the actual harvest reached **93.8%** of the vulgate and the fitted index
+  validated on held-out MW anchors, so the numbers below §6 — not §4's estimates — are the settled
+  figures. §4 is retained as the pre-execution scoping record.
 
 ## 6. Results (H488, executed 10-07-2026)
 
