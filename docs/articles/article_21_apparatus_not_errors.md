@@ -159,6 +159,22 @@ match. The airtight upgrade is a shared **erroneous** citation — a verse numbe
 against the actual text, present in both — verifiable against external
 DCS/VisualDCS corpus evidence. That test is outside `csl-atlas`.
 
+**F4-DCS result (10-07-2026, VisualDCS, handoff H203).** The test was run against the DCS
+passage corpus and returned **0 adjudicated shared errors — a corpus-availability block, not
+a null error signal.** Of the 587 shared rare citations, only **1** resolved to a DCS locus:
+96 % are Harivaṃśa, cited by the Petersburg dictionaries in the **Calcutta-vulgate continuous
+śloka numbering** (running to 16 291), while DCS carries the **critical edition** (118
+chapters, ≈ 6 073 verses). 298 references provably exceed the entire DCS Harivaṃśa and the
+remainder have no vulgate↔critical concordance to map a continuous number onto a
+(chapter, verse) locus; the single resolvable candidate (CAURAP. (A.) 49) is a recension
+artifact, not an editor-independent wrong locus. So the shared-error upgrade stays unavailable
+for this dictionary pair until a vulgate Harivaṃśa (the edition Böhtlingk cited) — or a
+vulgate↔critical verse concordance — is digitised and lemmatised. **A10 remains at the
+"very strong, not airtight" level (F1 apparatus + F5 order); it is not upgraded.** Summary +
+full per-candidate classification:
+[`VisualDCS …/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md`](https://github.com/gasyoun/VisualDCS/blob/main/src/DCS-data-2026/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md)
+(passage-resolution code stays in VisualDCS per the consumption contract).
+
 ## 7. Reproducibility
 
 All figures regenerate from `scripts/forensic/` (run `parse_cslorig.py --all` first) and
