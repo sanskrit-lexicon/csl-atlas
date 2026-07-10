@@ -125,18 +125,78 @@ exclusion, never silently dropped; closing that gap means OCRing Calcutta Vol. I
   from Kinjawadekar's verse counts, not a Calcutta-verified boundary; the exact split shifts once the
   index is fitted. Treat 83.9% as a close estimate, not a settled figure.
 
+## 6. Results (H488, executed 10-07-2026)
+
+The plan in §4 was executed. Outputs:
+[`harivamsa_continuous_index_offsets.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/harivamsa_continuous_index_offsets.csv),
+[`harivamsa_shared_citation_resolution.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/harivamsa_shared_citation_resolution.csv),
+[`f7_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f7_report.json).
+Scripts:
+[`f7_harivamsa_harvest.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f7_harivamsa_harvest.py),
+[`f7_harivamsa_resolve.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f7_harivamsa_resolve.py).
+
+**Harvest beat the §4 estimate.** Fetching *both* page series in full yielded **15,364 distinct
+verses = 93.8 %** of the 16,374-śloka vulgate, not the 71.1 % estimated pre-harvest — the
+Bhaviṣya-parvan came in at **4,594 verses / 135 adhyāyas** (the `bhavishyaparva/` plain series is far
+fuller than the `_mpr` series the estimate sampled), so the "thin P3 / OCR Calcutta Vol. IV" worry in
+§4 and the Prerequisites largely dissolves. Kinjawadekar divides the text **55 / 128 / 135 = 318
+adhyāyas**; P1 and P3 chapter counts match Calcutta (55, 135), so the continuous-index drift
+concentrates in the Viṣṇu-parvan. (A handful of stray out-of-range verse markers — adhyāya 422, 711,
+… with 1–2 verses — were dropped.)
+
+**Continuous index — held-out check PASSED.** A per-adhyāya constant offset (median of anchor
+residuals `N − C`, clipped to a monotone confident-baseline envelope so a few mismatched anchors
+cannot inject garbage) was fitted on **14,471 PWG** anchors and validated on **815 held-out MW**
+anchors:
+
+| Held-out MW check | Value |
+|---|--:|
+| MW anchors with headword within ±3 of cited `N` | **528 / 772 = 68.4 %** |
+| Shuffled-N null (same test at a random far `N`) | 2.1 % |
+| Enrichment | **≈ 33×** |
+
+The calibrated `δ = Ĉ − N` distribution peaks sharply at 0 (283) and is tight (±2), and corroboration
+is flat in the window width (36.7 % at ±2 → 39.7 % at ±10), confirming correct citations sit *at* the
+cited verse, not merely near it. The index is trustworthy; the error test was run.
+
+**Shared-citation resolution (565 shared rare `HARIV.` refs, 547 with a matchable ≥4-char key):**
+
+| Category | Count | Share |
+|---|--:|--:|
+| **corroborated** — headword within ±3 of cited `N` | **206** | 37.7 % |
+| displaced — headword present only > ±3 from `N` | 152 | 27.8 % |
+| absent — no strict locus (uncovered verse or unmatchable compound) | 189 | 34.6 % |
+
+**(A) Verse-level shared apparatus — confirmed.** 206 of 547 shared rare citations **resolve to the
+exact cited vulgate śloka** (e.g. `kīrtimant` `HARIV. 62` → verse 1-2-9, which reads
+*…kīrtimantaṃ ca…*), against a shuffled-N null of **2.7 (0.5 %)** — a **≈ 75× enrichment**. This
+upgrades A10's citation evidence from *shared sources/editions* (source-Jaccard) to a **shared,
+verse-level, verifiably-correct apparatus**, and stands against **1 of 587** resolvable via DCS.
+
+**(B) Shared *erroneous* citation — negative (a valid exit).** No shared error is demonstrable above
+chance. The "displaced" cases are **fewer** than expected by chance (79 clean displaced observed vs a
+shuffled-N null of **200**), their offsets `δ` neither cluster nor form plausible-typo patterns, and
+widening the window does not pull them toward `N` — i.e. they are coincidental occurrences of a rare
+word elsewhere while the cited (often uncovered) verse is its true home, **not** copied wrong numbers.
+So A10's *airtight* upgrade (a shared **mistake**) is **not** achieved — but now for a measured reason
+rather than a data-availability block: against the very edition the dictionaries cite, the shared
+citations **verify as correct**, leaving no shared error to find in this pool. A10 stays at "very
+strong, not airtight," now with direct verse-level corroboration underneath it.
+
 ## Reproduce
 
 Citation-form census: grep `HARIV\.(">| )[0-9]+` over `csl-orig/v02/pwg/pwg.txt`, and
-`<ls>Hariv\.[^<]*</ls>` over `csl-orig/v02/mw/mw.txt`. Vulgate harvest census: walk the index at
-`harivamsa-cs-index.html`, follow both `hv_<p>_<c>.html` and `_mpr` series (parvan 2 under
-`vishnuparva/`, parvan 3 under `bhavishyaparva/`), count `\|\|\s*(\d+)-(\d+)-\s*(\d+)` markers whose
-parvan/adhyāya match their page.
+`<ls>Hariv\.[^<]*</ls>` over `csl-orig/v02/mw/mw.txt`. Full resolution pipeline (harvest → transcode →
+anchors → calibrate → held-out → shared-error test): `python scripts/forensic/f7_harivamsa_harvest.py`
+then `python scripts/forensic/f7_harivamsa_resolve.py` (needs the sibling `../sanskrit-util/py` and
+`pip install indic_transliteration`; the harvested e-text is gitignored per the rights caveat and is
+regenerated by the harvest script).
 
-**Provenance:** measured 10-07-2026 by Opus 4.8 (`claude-opus-4-8`) over
-[`csl-orig`](https://github.com/sanskrit-lexicon/csl-orig),
+**Provenance:** census measured, and §6 resolution executed (H488), 10-07-2026 by Opus 4.8
+(`claude-opus-4-8`) over [`csl-orig`](https://github.com/sanskrit-lexicon/csl-orig),
 [`VisualDCS`](https://github.com/gasyoun/VisualDCS), and the Kinjawadekar e-text. Supersedes the
 "recension artifact / needs a concordance" framing recorded in A10 §6 by
-[PR #235](https://github.com/sanskrit-lexicon/csl-atlas/pull/235).
+[PR #235](https://github.com/sanskrit-lexicon/csl-atlas/pull/235); the §6 result is written back to
+A10 §6.
 
 _Dr. Mārcis Gasūns_

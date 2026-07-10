@@ -13,6 +13,11 @@ __pycache__/
 
 # local forensic caches
 data/forensic/_f6_tcache.json
+# Harivaṃśa vulgate e-text (H488): harvested Kinjawadekar bytes are a volunteer
+# transcription — derive measurements, do not redistribute. Regenerate with
+# scripts/forensic/f7_harivamsa_harvest.py.
+data/forensic/_hv_cache/
+data/forensic/_harivamsa_verses.jsonl
 
 # local reference PDFs dropped into src/ (not site sources; keep refs under docs/refs/)
 src/*.pdf

@@ -1,0 +1,36 @@
+{
+ "n_verses": 15364,
+ "coverage_pct": 93.8,
+ "n_adhyaya": 308,
+ "confident_adhyaya": 144,
+ "anchors_pwg": 14471,
+ "anchors_mw": 815,
+ "held_out": {
+  "evaluable": 772,
+  "hits": 528,
+  "agreement": 0.6839378238341969,
+  "null_evaluable": 725,
+  "null_hits": 15,
+  "null_rate": 0.020689655172413793,
+  "delta_dist": {
+   "-3": 16,
+   "-2": 28,
+   "-1": 75,
+   "0": 283,
+   "1": 91,
+   "2": 29,
+   "3": 6
+  }
+ },
+ "held_out_pass": true,
+ "shared_evaluable": 547,
+ "shared_total": 565,
+ "corroborated": 206,
+ "displaced": 152,
+ "absent": 189,
+ "corroboration_pct": 37.7,
+ "null_corr_mean": 2.7,
+ "null_corr_sd": 1.55,
+ "displaced_clear": 79,
+ "null_displaced_clear_mean": 200.5
+}
