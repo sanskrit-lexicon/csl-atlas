@@ -32,6 +32,7 @@ Pipeline
    arbitrary N, so 'displaced' is EXPECTED and is NOT by itself a shared-error proof).
 
 Outputs (committed measurements — NOT the e-text bytes):
+  data/forensic/harivamsa_vulgate_concordance.csv          per-verse address -> continuous śloka N
   data/forensic/harivamsa_continuous_index_offsets.csv     per-adhyāya calibration offsets
   data/forensic/harivamsa_shared_citation_resolution.csv   per shared-ref classification
   data/forensic/f7_report.json                             held-out + corroboration + null stats
@@ -351,7 +352,6 @@ def main():
                 w.writerow([r["lemma"], r["N"], r["cat"], r["delta"], r["nloci"], r["src"], r["inh"], r["corpus_n"]])
 
     # offsets csv (always)
-    inv = {v: k for k, v in {}.items()}
     pa_by_ord = {}
     for r in V:
         pa_by_ord.setdefault(r["A"], (r["parvan"], r["adhyaya"]))
@@ -361,11 +361,26 @@ def main():
         for a in range(n_adh):
             p, adh = pa_by_ord[a]
             w.writerow([a, p, adh, offset[a], nsup[a]])
+
+    # per-verse concordance (always): Kinjawadekar parvan-adhyāya-verse -> continuous Calcutta
+    # śloka number Ĉ = C + offset[adhyāya]. Numbers only — no verse text (rights: the e-text is
+    # a volunteer transcription, only measurements are redistributed). continuous_sloka is an
+    # ESTIMATE (calibration noise ±1–2; held-out MW 68.4% land within ±3). adhyaya_n_anchors>0
+    # marks a directly-fitted adhyāya; 0 = offset interpolated from neighbours.
+    with open("data/forensic/harivamsa_vulgate_concordance.csv", "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["parvan", "adhyaya", "verse", "continuous_sloka", "adhyaya_offset", "adhyaya_n_anchors"])
+        for r in sorted(V, key=lambda r: (r["parvan"], r["adhyaya"], r["verse"])):
+            w.writerow([r["parvan"], r["adhyaya"], r["verse"], int(round(r["chat"])),
+                        offset[r["A"]], nsup[r["A"]]])
+
     json.dump(report, open("data/forensic/f7_report.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     write_source("data/forensic/harivamsa_continuous_index_offsets.csv", "f7_harivamsa_resolve.py", 7)
+    write_source("data/forensic/harivamsa_vulgate_concordance.csv", "f7_harivamsa_resolve.py", 7)
     if passed:
         write_source("data/forensic/harivamsa_shared_citation_resolution.csv", "f7_harivamsa_resolve.py", 7)
-    print("\nwrote data/forensic/{harivamsa_continuous_index_offsets,harivamsa_shared_citation_resolution}.csv + f7_report.json")
+    print(f"\nwrote data/forensic/harivamsa_vulgate_concordance.csv ({len(V)} verses) + "
+          "harivamsa_continuous_index_offsets.csv + harivamsa_shared_citation_resolution.csv + f7_report.json")
 
 
 if __name__ == "__main__":
