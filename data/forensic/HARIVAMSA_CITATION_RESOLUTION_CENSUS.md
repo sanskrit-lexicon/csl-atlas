@@ -128,12 +128,26 @@ exclusion, never silently dropped; closing that gap means OCRing Calcutta Vol. I
 ## 6. Results (H488, executed 10-07-2026)
 
 The plan in §4 was executed. Outputs:
+[`harivamsa_vulgate_concordance.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/harivamsa_vulgate_concordance.csv),
 [`harivamsa_continuous_index_offsets.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/harivamsa_continuous_index_offsets.csv),
 [`harivamsa_shared_citation_resolution.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/harivamsa_shared_citation_resolution.csv),
 [`f7_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f7_report.json).
 Scripts:
 [`f7_harivamsa_harvest.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f7_harivamsa_harvest.py),
 [`f7_harivamsa_resolve.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f7_harivamsa_resolve.py).
+
+**The concordance file.** [`harivamsa_vulgate_concordance.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/harivamsa_vulgate_concordance.csv)
+is the standalone product of the calibration: **15,364 rows**, one per harvested verse, mapping
+Kinjawadekar's `parvan · adhyāya · verse` address to the **continuous Calcutta śloka number `HARIV. N`**
+the Petersburg dictionaries cite (`continuous_sloka` = `C + adhyaya_offset`), plus the adhyāya's offset
+and anchor count. Numbers only — **no verse text** (rights, per §5). This is the *vulgate-internal*
+concordance (Kinjawadekar addressing ↔ Calcutta continuous numbering), **not** a vulgate↔critical
+(DCS/BORI) concordance — that one is a separate object and, for the error test, a
+[dead end](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md) §8. Caveats: the
+number is an **estimate** (calibration noise ±1–2; held-out MW 68.4 % land within ±3; `kīrtimant`
+`1-2-9` → 63 vs cited 62); the mapping is monotone in verse order but for 31 of 15,363 steps at chapter
+seams; and **0.8 %** of verses sit in adhyāyas whose offset was interpolated (`adhyaya_n_anchors = 0`)
+rather than directly fitted. Coverage spans continuous **8 … 16,368** of the 16,374-śloka vulgate.
 
 **Harvest beat the §4 estimate.** Fetching *both* page series in full yielded **15,364 distinct
 verses = 93.8 %** of the 16,374-śloka vulgate, not the 71.1 % estimated pre-harvest — the
