@@ -150,16 +150,19 @@ private API, TLS chain fails verification, `curl -k` works; role gated by D3).
 **W0 — this pass (H602, done).** Audit + this roadmap; forks parked as D1–D4; wave-1 handoffs
 minted and queued.
 
-**W1a — MBH census + Böhtlingk-notes pilot** ([H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md)) —
-Opus 4.8 (`claude-opus-4-8`), 1–2 sessions. Port f7 → `f8_mbh_*`: extract both dictionaries'
-MBH refs; mine correction notes (`fehlerhaft`, `Druckfehler`, `lies`, `richtig`, `st.`) with
-entry context; vet + harvest one vulgate-family e-text; fit per-book continuous index (held-out
-MW, shuffled null); classify; verify each note per-case with DCS-reading evidence; deliver
-`data/forensic/MBH_CITATION_RESOLUTION_CENSUS.md` (+ meta, numbers-only CSVs). Validation
-cases: brū `7,9283` (abravat→abravīt), `7,9226` (yenāvibruvatā praśnam). **Per R1/R3:** add
-the character-fuzzy quote-retrieval lane and emit the benchmark schema fields (per-ref stable
-ID, evidence tier, verdict class, cascade tier) from the first run; report the
-fitted-index-only vs retrieval-only vs hybrid baseline split.
+**W1a — MBH census + Böhtlingk-notes pilot ✅ DONE (H610, 11-07-2026, Opus 4.8 `claude-opus-4-8`).**
+Delivered [`data/forensic/MBH_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MBH_CITATION_RESOLUTION_CENSUS.md)
+(+ meta), scripts [`f8_mbh_census.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_census.py)
++ [`f8_mbh_verify.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_verify.py),
+numbers-only CSVs ([PR #247](https://github.com/sanskrit-lexicon/csl-atlas/pull/247)). Results:
+PWG **66,103** MBH loci + MW **29,178**; **2,466** Böhtlingk correction notes; character-fuzzy
+quote-retrieval (R1) confirmed **956** notes against BORI reading-evidence (39 % ≈ Harivaṃśa
+37.7 %), R3 benchmark schema emitted. Case `7,9226` (yenāvibruvatā praśnam) → confirmed
+quote-exact at BORI `07,170.032`; `7,9283` (abravat→abravīt) → D3 escalation.
+**The fitted-index locus census was BLOCKED and deferred** — no free bulk Nilakantha-vulgate
+e-text exists (BORI-only ⇒ [DEAD_ENDS §8b](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md));
+the fitted-vs-retrieval baseline is deferred with it. Unblocks only on a Manipal Sastri-Vavilla
+harvest (D3) or Calcutta-scan OCR.
 
 **W1b — Sprüche verification census** ([H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md)) —
 Sonnet 4.6 (`claude-sonnet-4-6`), 1 session. Harvest boesp1/boesp2 typed verses; extract PWG
