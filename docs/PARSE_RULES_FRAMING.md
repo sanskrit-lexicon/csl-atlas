@@ -8,7 +8,7 @@ to describe that relationship in grant and paper framing.
 
 ## Trust Block
 
-- Evidence: this repo's convention-fingerprint outputs (`src/data/lexicographic-structure/L0/`), microstructure fingerprint (`data/lexico/microstructure_fingerprint.json`), the eighteen-block apparatus in the [MWS microanalysis paper](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md), and Setiawan et al., *MUDIDI* ([DavidSamuell/MUDIDI](https://github.com/DavidSamuell/MUDIDI); local PDF kept with the project sources, not redistributed here).
+- Evidence: this repo's convention-fingerprint outputs (`src/data/lexicographic-structure/L0/`), microstructure fingerprint (`data/lexico/microstructure_fingerprint.json`), the eighteen-block apparatus in the [MWS microanalysis paper](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md), Setiawan et al., *MUDIDI* ([DavidSamuell/MUDIDI](https://github.com/DavidSamuell/MUDIDI); local PDF kept with the project sources, not redistributed here), and Coward, D. F. & Grimes, C. E. (2000). *Making Dictionaries: A Guide to Lexicography and the Multi-Dictionary Formatter.* Waxhaw, NC: SIL International — the primary definition of the MDF standard-format-marker schema (Appendix A field inventory).
 - Limitations: a framing/positioning document, not a generator. The "~6 F1" figure is from a recent preprint and describes MUDIDI's dictionaries, not a re-run on CDSL data; treat it as motivation, not a measured atlas result.
 - Validation: convention claims are checked by `npm run build` and `docs/L0_RESULTS.md`; microstructure by `python scripts/lexico/validate_lexico.py`.
 - Owner repo: `csl-atlas`.
@@ -17,7 +17,8 @@ to describe that relationship in grant and paper framing.
 ## The Claim
 
 The MUDIDI benchmark decomposes machine dictionary digitisation into two stages —
-faithful page transcription (Stage 1) and parsing into SIL's MDF schema (Stage 2) —
+faithful page transcription (Stage 1) and parsing into SIL's MDF schema (Coward &
+Grimes 2000, the standard-format-marker inventory of Appendix A) (Stage 2) —
 and runs a "parse-rules" pass once per dictionary before parsing pages. That pass
 produces a JSON object with three parts:
 
