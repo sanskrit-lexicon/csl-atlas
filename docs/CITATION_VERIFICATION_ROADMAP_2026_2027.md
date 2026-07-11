@@ -1,6 +1,6 @@
 # Citation-verification roadmap 2026–2027 — PWG/MW loci against digital corpora
 
-_Created: 11-07-2026 · Last updated: 11-07-2026_
+_Created: 11-07-2026 · Last updated: 12-07-2026_
 
 **What this is.** The program plan for verifying the literary citations of the Petersburg
 dictionaries (PWG, later pw/PWK) and Monier-Williams against digital corpora — per-text
@@ -163,10 +163,23 @@ PWG **66,103** MBH loci + MW **29,178**; **2,466** Böhtlingk correction notes; 
 quote-retrieval (R1) confirmed **956** notes against BORI reading-evidence (39 % ≈ Harivaṃśa
 37.7 %), R3 benchmark schema emitted. Case `7,9226` (yenāvibruvatā praśnam) → confirmed
 quote-exact at BORI `07,170.032`; `7,9283` (abravat→abravīt) → D3 escalation.
-**The fitted-index locus census was BLOCKED and deferred** — no free bulk Nilakantha-vulgate
-e-text exists (BORI-only ⇒ [DEAD_ENDS §8b](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md));
-the fitted-vs-retrieval baseline is deferred with it. Unblocks only on a Manipal Sastri-Vavilla
-harvest (D3) or Calcutta-scan OCR.
+**The fitted-index locus census was BLOCKED and deferred** at H610 — no free bulk
+Nilakantha-vulgate e-text existed (BORI-only ⇒ [DEAD_ENDS §8b](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md)).
+**✅ UNBLOCKED and done for book 7 (Droṇa), 12-07-2026, Opus 4.8 (`claude-opus-4-8`),
+[H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/H761-Opus_csl-atlas_mbh_fitted_index_nilakantha_vulgate_unblocked_12.07.26.md).**
+The premise is refuted: a full Nīlakaṇṭha vulgate (83,971 shlokas, 18 parvans) was scraped from
+[sanatana.in](https://sanatana.in/mahabharata/) into CommentaryStrategies
+([PR #83](https://github.com/gasyoun/CommentaryStrategies/pull/83)). The f7 fitted-index method
+now runs against it for Droṇaparva
+([`MBH_DRONA_FITTED_INDEX_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MBH_DRONA_FITTED_INDEX_CENSUS.md),
+[`f8_mbh_drona_fitted_index.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_drona_fitted_index.py)):
+book-7 vulgate 9,641 shlokas / 202 adhyāyas; PWG 3,590 + MW 194 anchors. **Held-out gate PASSES**
+— MW agreement **48.1 %** (90/187) within ±3, δ peaked exactly at 0, vs a **0.0 %** shuffled-N
+null; exemplar `MBH. 7,9283` → vulgate 7.200.24 (`…droṇaputram athābravīt`) end-to-end.
+Classification: 847 corroborated (29.6 %, vs 0.7 % null), 1,084 displaced, 931 absent; clear
+displacement 486 **below** the 1,035 chance mean ⇒ no shared-error excess. The remaining 17
+parvans and the fitted-vs-retrieval baseline generalize by re-running per book (each parva is
+its own held-out gate); Manipal Sastri-Vavilla (D3) / Calcutta OCR are no longer prerequisites.
 
 **W1b — Sprüche verification census — DONE 11-07-2026** ([H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md),
 Sonnet 5 `claude-sonnet-5`, 1 session). **Scope correction: `boesp1` has no typed text** (only a
