@@ -1,5 +1,7 @@
 # CSL Atlas Review Release Roadmap
 
+_Created: 04-06-2026 · Last updated: 20-06-2026_
+
 Date: 2026-06-03
 
 Status: active 3-month roadmap for turning the current evidence-atlas build into a stable public release.
@@ -83,3 +85,5 @@ Scope:
 - `LexemeHub` only if a future cross-repo integration project proves it is
   needed; it is not an atlas roadmap item.
 - TEI/OntoLex/FrAC standards work in `csl-standards`, not `csl-atlas`.
+
+_Dr. Mārcis Gasūns_

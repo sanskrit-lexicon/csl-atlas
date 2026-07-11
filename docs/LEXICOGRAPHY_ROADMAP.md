@@ -1,5 +1,7 @@
 # CSL Atlas Lexicography Research Roadmap
 
+_Created: 04-06-2026 · Last updated: 17-06-2026_
+
 **Version**: 1.0 · **Date**: 2026-05-16 · **Owner**: M. Gasūns + Claude Code
 **Companion to**: [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md), [`L0_HANDOFF.md`](L0_HANDOFF.md), [`RESEARCH_LAYER_ROADMAP.md`](RESEARCH_LAYER_ROADMAP.md)
 
@@ -540,3 +542,5 @@ KNA/KOW/AMAR — if/when sources land.)*
 2. ✅ **Patel's open conventions** (mahat-type/sakārānta/rephānta/ṛ-nipātita) → operationalise as dims 31+ **and contribute back to `hwnorm1`** (Phase L0.9, §10).
 3. ✅ **Convention-vs-content finding → both** a standalone methods note (article 16+ in PUBLICATIONS) **and** Paper H §5.
 4. ✅ **Paper-final tree rigor** → add full Bayesian MCMC + NJ-posterior (Phase L0-rigor, §10).
+
+_Dr. Mārcis Gasūns_

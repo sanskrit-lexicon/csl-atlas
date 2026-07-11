@@ -1,5 +1,7 @@
 # Use-Case Page Roadmap
 
+_Created: 06-06-2026 · Last updated: 12-06-2026_
+
 Date: 2026-06-04
 
 Status: maintainer decisions captured for the next documentation and analysis
@@ -137,3 +139,5 @@ The atlas may link outward, but it must not absorb external work:
 - DCS and corpus comparison: [VisualDCS](https://github.com/gasyoun/VisualDCS)
 - Standards/export work: [csl-standards](https://github.com/sanskrit-lexicon/csl-standards)
 - GitHub/org observatory work: [csl-observatory](https://github.com/sanskrit-lexicon/csl-observatory)
+
+_Dr. Mārcis Gasūns_

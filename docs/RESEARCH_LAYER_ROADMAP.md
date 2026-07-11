@@ -1,5 +1,7 @@
 # CDSL Research & Practitioner Layer — Roadmap
 
+_Created: 04-06-2026 · Last updated: 17-06-2026_
+
 **Version**: 1.2 · **Date**: 2026-05-31 · **Owner**: M. Gasūns + Claude
 *v1.1: R2 sense-splitter design decided (§5.1) — heuristic per-dict, full corpus, Sanskrit-anchored alignment; A6/A7 closed.*
 *v1.2: historical round-2 decisions (§7) — corpus handoff, main-dashboard
@@ -292,3 +294,5 @@ documented in
 *Prototypes: `scripts/lexico/micro_entry.py`, `scripts/lexico/macro_profile.py`.
 Data: `data/lexico/`. Round-2 decisions recorded 2026-05-31; boundary update
 for DCS/VisualDCS recorded 2026-06-04.*
+
+_Dr. Mārcis Gasūns_
