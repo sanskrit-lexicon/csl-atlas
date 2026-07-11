@@ -1,23 +1,33 @@
-# Mahābhārata citation census, Böhtlingk correction-notes verification, and why the locus census is blocked
+# Mahābhārata citation resolution census — PWG/MW loci against the Nīlakaṇṭha vulgate (all 18 parvans)
 
-_Created: 11-07-2026 · Last updated: 11-07-2026_
+_Created: 11-07-2026 · Last updated: 12-07-2026_
 
 **What this is.** The Mahābhārata port of the executed Harivaṃśa census
 ([`HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md),
 H488) — the largest citation mass in both Petersburg dictionaries and Monier-Williams. It
-delivers three things and records one blocker:
+delivers:
 
 1. a full **citation-form census** of how PWG and MW address the MBH (P0);
-2. a context-aware **census of Böhtlingk's own correction notes** on MBH loci — the new
+2. a context-aware **census of Böhtlingk's own correction notes** on MBH loci — the
    pilot lane the [citation-verification roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md)
    §4 W1a prescribes (P1);
-3. per-note **verification** against the local BORI critical text via a deterministic
-   character-fuzzy **quote-retrieval lane** (roadmap R1), reporting the R3 benchmark schema (P4/P4b);
+3. a **fitted per-parvan continuous index against the Nīlakaṇṭha vulgate for all 18 parvans**
+   (harvested from sanatana.in), **held-out-validated on MW and PASSED** — the locus census (P2/P3);
+4. per-note **verification** — vulgate locus resolution + a deterministic character-fuzzy
+   **quote-retrieval lane** against BORI (roadmap R1/R3, P4/P4b).
 
-and it records **why the fitted-index locus census that worked for the Harivaṃśa cannot be run
-for the MBH** ([§ Why the locus census is blocked](#why-the-locus-census-is-blocked)) — the
-handoff's sanctioned negative exit, written back to
-[`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md).
+> **Correction.** An earlier draft concluded the fitted-index locus census was *blocked* ("no free
+> bulk Nilakantha-vulgate e-text exists"). **That was wrong.**
+> [sanatana.in/mahabharata](https://sanatana.in/mahabharata) serves the complete Nīlakaṇṭha
+> (Bhāvadīpa) vulgate — the edition family PWG/MW cite. The book-7 refutation shipped first as
+> [`MBH_DRONA_FITTED_INDEX_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MBH_DRONA_FITTED_INDEX_CENSUS.md)
+> (H761); this doc generalizes it to **all 18 parvans** (83,971 verses, pooled held-out MW
+> **0.552 vs 0.014 null, ≈ 40×**). The [DEAD_ENDS §8b](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md)
+> entry is retracted accordingly.
+
+Program context: [`docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md)
+§2 (method invariants), §5 (cascade). Executable follow-up:
+[H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md).
 
 Program context: [`docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md)
 §2 (method invariants), §5 (cascade). Executable follow-up:
@@ -67,31 +77,50 @@ The Vana- and Ādi-parvans dominate (15,093 + 11,831 = 41 % of PWG's MBH loci). 
 Calcutta numbering runs high within a parvan — real Vana-parvan citations reach `MBH. 3,17472`
 — confirming the vulgate's per-parvan continuous count, larger than the BORI critical text.
 
-## 2. Why the locus census is blocked
+## 2. The Nīlakaṇṭha vulgate and the fitted per-parvan index (P2/P3)
 
-The Harivaṃśa census succeeded because a clean, freely downloadable **vulgate** e-text existed
-(Kinjawadekar, Chitrashala 1936) against which a continuous index could be fitted and
-held-out-validated. **No equivalent exists for the full Mahābhārata.** Every freely
-bulk-downloadable full MBH Sanskrit text is the **BORI critical recension**:
+PWG/MW cite the **Calcutta/Bombay Nīlakaṇṭha vulgate** by per-parvan continuous śloka number.
+That text is freely available — [sanatana.in/mahabharata](https://sanatana.in/mahabharata) serves
+the complete Nīlakaṇṭha (Bhāvadīpa) mūla.
+[`f8_mbh_harvest.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_harvest.py)
+harvested it — **83,971 verses, all 18 parvans** — via the site's `listing/getParvaByPage` JSON
+endpoint; each verse's `<article id="Ppp_Uuu_Aaaa">` carries its parva/adhyāya directly, transcoded
+Devanagari→SLP1 with the canonical `indic_transliteration` library. (Bytes rights-gitignored; only
+measurements committed. The same source was independently harvested for the book-7 census
+[`MBH_DRONA_FITTED_INDEX_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MBH_DRONA_FITTED_INDEX_CENSUS.md)
+(H761) — the two agree exactly on book 7, 9,641 verses.)
 
-| Text | Recension | Bulk-downloadable | Role here |
-|---|---|---|---|
-| GRETIL (Tokunaga/Smith), local [`SamudraManthanam`](https://github.com/gasyoun/SamudraManthanam/tree/main/GRETIL-1_sanskr) mirror | BORI critical | yes | reading evidence (this doc) |
-| DCS, local [`VisualDCS`](https://github.com/gasyoun/VisualDCS) CoNLL-U | BORI critical | yes | lemma evidence |
-| [sanskritdocuments.org](https://sanskritdocuments.org/) MBH | BORI critical | yes | (same recension) |
-| [bombay.indology.info](https://bombay.indology.info/mahabharata/statement.html) | BORI critical | yes | (same recension) |
-| Manipal Sastri-Vavilla (Nilakantha **vulgate**) | vulgate | **no** — SPA, private API (D3) | spot-check tier only |
-| Calcutta 1834–39 (the cited edition) | vulgate | **no** — scans, needs OCR | last-tier |
+[`f8_mbh_resolve.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_resolve.py)
+fits the f7 continuous index **per parvan** (provisional `C` = running verse count, then a robust
+per-adhyāya offset fitted on PWG anchors), then **holds out MW** as the circularity gate.
 
-Fitting a continuous index against the **critical** text is the measured
-[DEAD_ENDS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md)
-structural dead end: BORI systematically removed vulgate passages throughout, so the offset
-between a Calcutta continuous `N` and a BORI running count is not a per-parvan constant, and a
-concordance cannot separate "wrong number" from "verse cut by the editors" (DCS resolved 1 of
-587 shared refs). **The MBH locus census is therefore deferred, not attempted against an
-untrusted index** — the handoff's sanctioned exit (b). It unblocks only when a Nilakantha-vulgate
-e-text is obtained (Manipal Sastri-Vavilla harvest under a D3 ruling, or OCR of the Calcutta
-scans). Until then, the reachable verification is **reading-evidence**, not locus arithmetic.
+**Held-out gate — PASSED, pooled and per-parvan:**
+
+| Held-out MW check (pooled, 18 parvans) | Value |
+|---|--:|
+| MW anchors with headword within ±3 of cited `N` | **2,234 / 4,048 = 55.2 %** |
+| Shuffled-N null | 1.4 % |
+| Enrichment | **≈ 40×** |
+
+Every parvan passes individually — per-parvan agreement 0.20–0.80, each ≥ 10× its own ~0.00–0.03
+null (Sabhā 0.80, Śalya/Āśvamedhika 0.76, Anuśāsana 0.69; weakest Śānti 0.28 = 28× and the tiny
+Svargārohaṇa 0.20 on n=5). Book 7 (Droṇa) scores **90/187 = 0.48**, reproducing H761's independent
+figure exactly. The index is trustworthy — the locus census is real, not the
+[DEAD_ENDS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md) artifact
+that fitting against the *critical* recension would be. Per-parvan vulgate ceilings (verse counts)
+and full offsets:
+[`mbh_continuous_index_offsets.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/mbh_continuous_index_offsets.csv);
+the concordance ([`mbh_vulgate_concordance.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/mbh_vulgate_concordance.csv),
+83,971 rows, `parvan·adhyāya·shloka → continuous N`, numbers only). Caveat: the first ~45 Ādi
+verses calibrate to a small negative `N` (the vulgate's invocation/anukramaṇikā precedes Calcutta's
+śloka 1) — an edge artifact, excluded from verdicts.
+
+**Validation case `MBH. 7,9283` resolved.** Böhtlingk: the Calcutta print reads *abravat*,
+"fehlerhaft für *abravīt*", per the Bombay edition. The calibrated locus `N ≈ 9283` lands at
+Droṇaparvan **adhyāya 200** (`droṇaputram atha **abravīt**`; `rājānam idam **abravīt**`) — the
+vulgate reads **abravīt ×7, abravat ×0** there. The vulgate/Bombay tradition confirms *abravīt*;
+the erroneous *abravat* was the Calcutta *print's* alone, so Böhtlingk's correction stands. This
+is the exact case that was *unresolvable* against BORI (§4).
 
 ## 3. Böhtlingk correction-notes census (P1)
 
@@ -119,35 +148,42 @@ the journal is `St.`. The auto-extracted `printed_slp1`/`corrected_slp1` columns
 best-effort (the `quote` column is authoritative — cf. validation case 2 below, where the
 corrected form column mis-grabs a neighbouring lemma while the quote preserves the truth).
 
-## 4. Verification: reading-evidence + character-fuzzy quote-retrieval (P4/P4b)
+## 4. Verification: vulgate locus-resolution + BORI character-fuzzy quote-retrieval (P4/P4b)
 
-Because locus arithmetic is blocked (§2), verification runs the roadmap-R1 **retrieval lane**:
+Two complementary lanes:
+
+**(a) Vulgate locus-resolution** (§2's fitted index). Each note's headword is located in the
+Nīlakaṇṭha vulgate and classified against the cited `N`: `corroborated` (headword at `N ± 3`) /
+`displaced` / `absent`. Over the 2,466 notes
+([`mbh_citation_resolution.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/mbh_citation_resolution.csv)):
+**409 corroborated · 787 displaced · 1,270 absent** — 409 notes whose flagged headword sits at
+the cited vulgate śloka ± 3.
+
+**(b) BORI reading-evidence retrieval** (roadmap R1), a locus-free cross-check:
 [`f8_mbh_verify.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_verify.py)
-folds the local GRETIL BORI text (72,771 verses) to a length/retroflex/sibilant-normalized
-SLP1 key and searches each note's quoted pratīka across the **whole corpus, independent of the
-cited locus** (exact substring → `quote-exact`; ≥ 0.85 4-gram coverage → `quote-fuzzy`; ≥ 0.50
-→ `lemma`). Grammatical paradigm listings (comma-separated `{#abruvam, abravīt#}`) are excluded
-— they are not verse quotes and fuzzy-match spuriously. Cascade tier: **local-GRETIL** (§5).
-Output: [`mbh_note_verdicts.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/mbh_note_verdicts.csv).
+folds the local GRETIL BORI text (72,771 verses) to a length/retroflex/sibilant-normalized SLP1
+key and searches each note's quoted pratīka across the **whole corpus, independent of the cited
+locus** (exact substring → `quote-exact`; ≥ 0.85 4-gram coverage → `quote-fuzzy`; ≥ 0.50 →
+`lemma`). Paradigm listings (comma-separated `{#abruvam, abravīt#}`) are excluded. Cascade tier:
+**local-GRETIL** (§5). Output:
+[`mbh_note_verdicts.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/mbh_note_verdicts.csv).
 
 **Validation cases (the worked examples, brū / L=53686):**
 
-| Case | Locus | Note | Evidence | BORI locus | Verdict |
+| Case | Locus | Note | Lane | Result | Verdict |
 |---|---|---|---|---|---|
-| 2 | `MBH. 7,9226` | *yenāvibruvatā praśnam*, "mit der ed. Bomb. … zu lesen" | **quote-exact** | `07,170.32` | **confirmed** |
-| 1 | `MBH. 7,9283` | *abravat* "fehlerhaft für" *abravīt*, "wie die ed. Bomb. hat" | none | — | **unresolvable → D3** |
-| 3 | `MBH. 7,9283` (valid ref, same entry) | cited as a *valid* locus under `tam … vacanam abravīt` | not flagged | — | (correctly not mined) |
+| 1 | `MBH. 7,9283` | *abravat* "fehlerhaft für" *abravīt* | **vulgate locus** | Droṇa adh 200: **abravīt ×7, abravat ×0** | **confirmed** |
+| 2 | `MBH. 7,9226` | *yenāvibruvatā praśnam*, "ed. Bomb. … zu lesen" | BORI retrieval | quote-exact at `07,170.032` | **confirmed** |
+| 3 | `MBH. 7,9283` (valid ref, same entry) | cited as a *valid* locus | note-miner | not flagged | (correctly not mined) |
 
-Case 2 is the flagship result: the reading Böhtlingk endorsed "with the Bombay edition" at
-Calcutta 7,9226 stands **verbatim** in the critical text — `yenāvibruvatā praśnaṃ tathā kṛṣṇā
-sabhāṃ gatā` at `07,170.032` — so his correction is **confirmed** by an independent witness,
-locus-free. Case 1 is the honest counter-case: *abravat → abravīt* is a **single-word** Calcutta
-print error, and *abravīt* is ubiquitous — corpus retrieval cannot decide it, so it **escalates
-to the §5 D3 tier** (a Manipal Sastri-Vavilla / Calcutta-scan spot-check at the actual 7,9283
-locus), demonstrating the cascade rather than forcing a verdict. Case 3 confirms the mining is
-occurrence-level: the same locus cited validly elsewhere in the entry is **not** flagged.
+Case 1 is the flagship: an earlier draft called it *unresolvable* (single-word *abravīt* is too
+common for corpus retrieval), but the **fitted vulgate index resolves it directly** — cited
+`N = 9283` maps to Droṇaparvan adhyāya 200, whose ślokas read *abravīt* (`droṇaputram atha
+abravīt`), never *abravat*; Böhtlingk's correction is confirmed against the very edition family he
+cited. Case 2 is corroborated independently by the BORI retrieval lane (the reading stands verbatim
+in the critical text too). Case 3 confirms occurrence-level mining.
 
-**Aggregate (2,466 notes; R3 benchmark schema — per-ref ID · evidence tier · verdict · cascade tier):**
+**BORI-lane aggregate (2,466 notes; R3 benchmark schema — per-ref ID · evidence tier · verdict · cascade tier):**
 
 | Evidence tier | Notes | | Verdict | Notes |
 |---|--:|---|---|--:|
@@ -156,13 +192,11 @@ occurrence-level: the same locus cited validly elsewhere in the entry is **not**
 | lemma | 422 | | unresolvable (BORI lacks parallel) | 1,088 |
 | none | 1,088 | | | |
 
-**956 of 2,466 notes (39 %)** have a quoted reading attested in the critical text — in line
-with the Harivaṃśa census's 37.7 % exact-locus corroboration, but reached here **without a
-fitted index**, purely by locus-free retrieval. 1,088 are `unresolvable` because BORI (a
-different, shorter recension) simply lacks the parallel — expected, and precisely the material
-a vulgate e-text would recover. **Baseline (R1):** the fitted-index lane is unavailable for MBH
-(§2), so retrieval-only *is* the hybrid here; the fitted-index-vs-retrieval comparison the
-roadmap asks for is deferred with the locus census.
+**Baseline (R1) — now measurable.** Two independent lanes exist: the fitted **vulgate index**
+(55.2 % held-out) and **BORI retrieval** (39 % confirmed). They agree on the flagship cases and are
+complementary — the vulgate places a citation on its *cited* śloka (a correctable locus, the actual
+scholarly payoff), while retrieval attests a *reading* independent of any number. The hybrid is
+their union.
 
 ## 5. QA — candidate PWG numeric typos
 
@@ -179,24 +213,33 @@ once known.
 ## 6. Reproduce
 
 ```sh
-python scripts/forensic/f8_mbh_census.py      # P0 inventory + P1 notes + QA typos  (csl-orig only)
-python scripts/forensic/f8_mbh_verify.py      # P4/P4b BORI reading-evidence retrieval
+python scripts/forensic/f8_mbh_census.py       # P0 inventory + P1 notes + QA typos  (csl-orig only)
+python scripts/forensic/f8_mbh_harvest.py      # P2 harvest Nīlakaṇṭha vulgate from sanatana.in (all 18 parvans)
+python scripts/forensic/f8_mbh_resolve.py      # P3 per-parvan index fit + held-out gate + locus census
+python scripts/forensic/f8_mbh_verify.py       # P4b BORI reading-evidence retrieval (cross-check)
 ```
 
-`f8_mbh_verify.py` needs the sibling `../SamudraManthanam` GRETIL mirror, `indic_transliteration`,
-and `../sanskrit-util/py`; it caches the folded BORI corpus to a **gitignored**
-`data/forensic/_mbh_bori_folded.jsonl` (rights: derived e-text, only measurements are committed).
+`f8_mbh_harvest.py` needs `indic_transliteration`; it caches raw pages under a **gitignored**
+`data/forensic/_mbh_vulgate_cache/` and writes verses to a gitignored `_mbh_vulgate_verses.jsonl`
+(rights: third-party transcription, only measurements committed). `f8_mbh_resolve.py` /
+`f8_mbh_verify.py` need `../sanskrit-util/py` (and, for verify, the `../SamudraManthanam` GRETIL
+mirror + its own gitignored `_mbh_bori_folded.jsonl`).
 
 ## 7. Provenance
 
-Census measured and verification executed 11-07-2026 by Opus 4.8 (`claude-opus-4-8`) over
-[`csl-orig`](https://github.com/sanskrit-lexicon/csl-orig), the local
-[`SamudraManthanam`](https://github.com/gasyoun/SamudraManthanam) GRETIL BORI mirror, and
+Census measured and pipeline (harvest → per-parvan index → held-out gate → resolve → BORI
+cross-check) executed 11–12-07-2026 by Opus 4.8 (`claude-opus-4-8`) over
+[`csl-orig`](https://github.com/sanskrit-lexicon/csl-orig), the
+[sanatana.in](https://sanatana.in/mahabharata) Nīlakaṇṭha vulgate (local sample in
+[`CommentaryStrategies/mahabharata-nilakantha`](https://github.com/gasyoun/CommentaryStrategies/tree/main/mahabharata-nilakantha)),
+the local [`SamudraManthanam`](https://github.com/gasyoun/SamudraManthanam) GRETIL BORI mirror, and
 [`VisualDCS`](https://github.com/gasyoun/VisualDCS) DCS, under
 [H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md)
 (program [H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md);
-ACL-lineage uplift [H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md)).
-The locus-census blocker is written back to
-[`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md).
+ACL-lineage uplift [H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md);
+book-7 census [H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md)).
+The earlier "locus census blocked" verdict (and its
+[`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md)
+§8b entry) is **retracted** — the vulgate exists and the index validated across all 18 parvans.
 
 _Dr. Mārcis Gasūns_

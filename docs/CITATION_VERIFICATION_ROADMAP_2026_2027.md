@@ -177,9 +177,16 @@ book-7 vulgate 9,641 shlokas / 202 adhyāyas; PWG 3,590 + MW 194 anchors. **Held
 — MW agreement **48.1 %** (90/187) within ±3, δ peaked exactly at 0, vs a **0.0 %** shuffled-N
 null; exemplar `MBH. 7,9283` → vulgate 7.200.24 (`…droṇaputram athābravīt`) end-to-end.
 Classification: 847 corroborated (29.6 %, vs 0.7 % null), 1,084 displaced, 931 absent; clear
-displacement 486 **below** the 1,035 chance mean ⇒ no shared-error excess. The remaining 17
-parvans and the fitted-vs-retrieval baseline generalize by re-running per book (each parva is
-its own held-out gate); Manipal Sastri-Vavilla (D3) / Calcutta OCR are no longer prerequisites.
+displacement 486 **below** the 1,035 chance mean ⇒ no shared-error excess.
+**✅ GENERALIZED to all 18 parvans, 12-07-2026, Opus 4.8 (`claude-opus-4-8`)** —
+[`f8_mbh_harvest.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_harvest.py)
+(csl-atlas-native harvest of the full sanatana.in vulgate, 83,971 verses) +
+[`f8_mbh_resolve.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_resolve.py)
+fit the per-parvan index for every book and fold the results into
+[`MBH_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MBH_CITATION_RESOLUTION_CENSUS.md)
+§2/§4. **Pooled held-out MW 55.2 % (2,234/4,048) vs 1.4 % null (≈ 40×); every parvan passes;
+book 7 reproduces H761's 90/187 exactly.** Note-locus census 409 corroborated / 787 displaced /
+1,270 absent. Manipal Sastri-Vavilla (D3) / Calcutta OCR fully moot for the locus census.
 
 **W1b — Sprüche verification census — DONE 11-07-2026** ([H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md),
 Sonnet 5 `claude-sonnet-5`, 1 session). **Scope correction: `boesp1` has no typed text** (only a
