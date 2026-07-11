@@ -39,7 +39,8 @@ microstructure apparatus. The atlas therefore stands one step *downstream* of MU
 from scans — but the two meet at the schema boundary: the atlas's per-dictionary
 convention profiles are precisely the validated parse-rules MUDIDI shows are worth the
 largest single F1 gain, and the [candidate MDF export](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md)
-adds SIL's Multi-Dictionary Formatter as a third interoperability target beside the
+adds SIL's Multi-Dictionary Formatter — the flat standard-format-marker schema defined
+in Coward & Grimes (2000) — as a third interoperability target beside the
 `csl-standards` TEI and OntoLex/FrAC views. (Note that MUDIDI exercises Sanskrit only
 in its transcription stage; its ten-dictionary *parsing* subset does not include
 Sanskrit — a gap the atlas's source-linked structured CDSL data is uniquely placed to
