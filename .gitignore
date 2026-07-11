@@ -47,3 +47,6 @@ review/
 data/L0/lrv_fri_annotation_items.json
 # scripts/forensic/f8_mbh_verify.py (derived BORI text, rights)
 data/forensic/_mbh_bori_folded.jsonl
+# scripts/forensic/f8_mbh_harvest.py (vulgate e-text, rights)
+data/forensic/_mbh_vulgate_cache/
+data/forensic/_mbh_vulgate_verses.jsonl
