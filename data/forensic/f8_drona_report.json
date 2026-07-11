@@ -1,0 +1,41 @@
+{
+ "book": 7,
+ "parva": "Droṇa",
+ "vulgate_source": "sanatana.in (Nīlakaṇṭha vulgate)",
+ "n_verses": 9641,
+ "n_adhyaya": 202,
+ "confident_adhyaya": 97,
+ "anchors_pwg": 3590,
+ "anchors_mw": 194,
+ "held_out": {
+  "evaluable": 187,
+  "hits": 90,
+  "agreement": 0.48128342245989303,
+  "null_evaluable": 185,
+  "null_hits": 0,
+  "null_rate": 0.0,
+  "delta_dist": {
+   "-2": 6,
+   "-1": 9,
+   "0": 60,
+   "1": 8,
+   "2": 4,
+   "3": 3
+  }
+ },
+ "held_out_pass": true,
+ "offset_min": -20,
+ "offset_max": 14,
+ "classification_run": true,
+ "evaluable_refs": 2862,
+ "total_refs": 3590,
+ "corroborated": 847,
+ "displaced": 1084,
+ "absent": 931,
+ "corroboration_pct": 29.6,
+ "null_corr_mean": 18.8,
+ "null_corr_sd": 4.29,
+ "null_corr_pct": 0.7,
+ "displaced_clear": 486,
+ "null_displaced_clear_mean": 1035.0
+}
