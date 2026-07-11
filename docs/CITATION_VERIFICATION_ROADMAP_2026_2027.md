@@ -168,12 +168,20 @@ e-text exists (BORI-only ⇒ [DEAD_ENDS §8b](https://github.com/gasyoun/Sanskri
 the fitted-vs-retrieval baseline is deferred with it. Unblocks only on a Manipal Sastri-Vavilla
 harvest (D3) or Calcutta-scan OCR.
 
-**W1b — Sprüche verification census** ([H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md)) —
-Sonnet 4.6 (`claude-sonnet-4-6`), 1 session. Harvest boesp1/boesp2 typed verses; extract PWG
-`Spr.`/`Spr. (II)` refs (9,360 + 7,309; extend to pw/PWK sigla); verify verse-exists +
-headword/pratīka containment (SLP1↔IAST via sanskrit-util); cross-edition hits = edition-siglum
-error candidates; deliver `data/forensic/SPRUECHE_CITATION_VERIFICATION_CENSUS.md` + verdict
-CSV. Validation case: `Spr. 2790`. **Per R3:** same benchmark schema fields as W1a.
+**W1b — Sprüche verification census — DONE 11-07-2026** ([H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md),
+Sonnet 5 `claude-sonnet-5`, 1 session). **Scope correction: `boesp1` has no typed text** (only a
+scan-page index) — only `Spr. (II)` (6,320 refs extracted) got full text verification; `Spr.`
+(9,557 refs) is range-only. Results: 2,621 corroborated (1,332 exact/771 fuzzy/518 lemma) · 443
+mismatch (flagged for review, not confirmed) · 3,255 no-quote-to-check · 38 edition-siglum-swap
+candidates. **Validation case `Spr. 2790` does not resolve as described above** — the quoted text
+this roadmap attributes to it (`tān havyakavyayor…`) actually belongs to the adjacent `M. 3,150`
+citation in the same PWG entry, not to `Spr. 2790`; see
+[`SPRUECHE_CITATION_VERIFICATION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SPRUECHE_CITATION_VERIFICATION_CENSUS.md)
+§2 for the correct reading and full results. Delivered
+[`SPRUECHE_CITATION_VERIFICATION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SPRUECHE_CITATION_VERIFICATION_CENSUS.md) +
+[`SPRUECHE_CITATION_VERIFICATION_VERDICT.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SPRUECHE_CITATION_VERIFICATION_VERDICT.csv)
+(R3 schema). **Not done this pass:** PW/PWK siglum extension, 1st-edition OCR/text-level
+verification, human review of the mismatch/swap-candidate queues — queued as census §7 follow-ups.
 
 **W2 — Rāmāyaṇa + easy-class sweep.** R. edition census first (Schlegel/Gorresio/Bombay), then
 the f8 pattern; RV link-pilot → verification upgrade; Pāṇini/Manu/AV/ŚBr; kośas-vs-CDSL
