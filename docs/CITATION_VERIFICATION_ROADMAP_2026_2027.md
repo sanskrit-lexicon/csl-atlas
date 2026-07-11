@@ -10,6 +10,8 @@ resolution censuses on the model of the executed
 Authored audit-first (`--no-interview`): the genuine forks are in [§6 Decisions needed](#6-decisions-needed--rulings-pending),
 each with a marked recommendation; they are mirrored to
 [`Uprava/GTD_NEXT_ACTIONS.md`](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md) as `@DECIDE`.
+Amended 11-07-2026 (H661) with the ACL-lineage method uplift — four rulings R1–R4 taken
+interactively by MG, see [§2a](#2a-acl-lineage-method-uplift--rulings-r1r4-11-07-2026).
 
 ## 0. Worked examples (why this program)
 
@@ -70,6 +72,55 @@ the ed.1/ed.2 siglum split already explicit in PWG (`Spr.` vs `Spr. (II)`).
 6. **Context-aware note mining.** The same locus string can be flagged-erroneous and valid in
    one entry (brū above) — regex alone is not a verdict.
 
+## 2a. ACL-lineage method uplift — rulings R1–R4 (11-07-2026)
+
+The program as first written verified citations by **locus arithmetic + headword presence**
+only. The ACL claim-verification tradition ([FEVER, Thorne et al. NAACL 2018](https://aclanthology.org/N18-1074/)
+and the [FEVER workshop series](https://aclanthology.org/volumes/2024.fever-1/)) separates
+*evidence retrieval* from *verdict classification* — the retrieval half was missing. Four
+rulings taken interactively by MG, 11-07-2026 (H661):
+
+**R1 — quote-retrieval lane, character-fuzzy, in W1a.** Many PWG entries quote the text they
+cite (`yenAvibruvatA praSnam`; full Spr. verses). W1a gains a **deterministic** retrieval
+lane: SLP1-normalized character/n-gram fuzzy search of the quoted pratīka across the whole
+harvested corpus, *independent of the cited locus*. Normalization-before-matching is the
+measured lesson of [allusive text-reuse detection (LaTeCH-CLfL 2019)](https://aclanthology.org/W19-2514/)
+— short quotes with few shared words are the hard case, and character-level normalized
+matching is the floor method. Payoffs: (a) tiered evidence strength
+(`quote-exact` ≫ `quote-fuzzy` ≫ `lemma` ≫ `headword`), (b) `displaced` upgrades from a
+dead-end verdict to `displaced-to-<locus>` — a correctable fact, the actual scholarly payoff,
+(c) a free baseline comparison (fitted-index-only vs retrieval-only vs hybrid) that hardens
+every census against circularity objections. **Embeddings are deliberately NOT in W1a** (the
+pipeline stays deterministic per house rules) — the embedding lane
+(BuddhaNexus / [SansTib, LREC 2022](https://aclanthology.org/2022.lrec-1.724/) /
+[Vedic similarity measures, NLP4DH 2024](https://aclanthology.org/2024.nlp4dh-1.12/)-style
+million-scale NN search, DharmaMitra stack) gets its own Fable-tier planning handoff
+[H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md),
+planned from the start, adopted where character-fuzzy saturates (paraphrase-level reuse, W2+).
+
+**R2 — gold-standard adjudication set, in W2.** ~200 stratified refs (text class × verdict
+class), adjudicated blind with an LLM second annotator (the A44 precedent), reporting
+agreement + confusion, so every census from W2 on states measured per-class precision — not
+just the aggregate shuffled-null gate. W1 censuses ship without it and get their precision
+numbers retro-fitted when the W2 gold set lands.
+
+**R3 — benchmark framing (refines D4).** The verdict layer is built as a **releasable
+benchmark dataset** for citation verification in historical lexicography (plausibly the first
+of its kind): numbers-only, with a datasheet. The schema fields this requires are cheap in W1
+and expensive to retrofit, so they are **mandatory from the first census**: per-ref stable ID,
+evidence tier (`quote-exact`/`quote-fuzzy`/`lemma`/`headword`/`none`), verdict class, and the
+[§5 cascade](#5-verification-cascade-standing-order-per-mg-11-07-2026) tier where the verdict
+landed. A **resource-paper article ID is minted only after W1 numbers exist** (per the
+roadmap's own "premature before W1" logic); candidate venues:
+[LaTeCH-CLfL](https://aclanthology.org/volumes/2025.latechclfl-1/) (SIGHUM, *ACL-colocated),
+NLP4DH. A50 still consumes the counts either way.
+
+**R4 — DharmaMitra engagement after the W1a pilot.** Their production parallel-passage /
+semantic-search stack ([Nehrdich](https://sebastian-nehrdich.github.io/), Berkeley) is exactly
+the W2+ embedding tech. Outreach is drafted (via `/outreach-draft`, never auto-sent) **after**
+W1a produces concrete pilot numbers — a far stronger opener than a cold "we plan to". Until
+then, local deterministic tools only.
+
 ## 3. Text classes — the queue is shaped by addressing, not only mass
 
 **Easy class** (stable addressing + existing digital adjudicator): ṚV (VedaWeb, accented),
@@ -105,18 +156,23 @@ MBH refs; mine correction notes (`fehlerhaft`, `Druckfehler`, `lies`, `richtig`,
 entry context; vet + harvest one vulgate-family e-text; fit per-book continuous index (held-out
 MW, shuffled null); classify; verify each note per-case with DCS-reading evidence; deliver
 `data/forensic/MBH_CITATION_RESOLUTION_CENSUS.md` (+ meta, numbers-only CSVs). Validation
-cases: brū `7,9283` (abravat→abravīt), `7,9226` (yenāvibruvatā praśnam).
+cases: brū `7,9283` (abravat→abravīt), `7,9226` (yenāvibruvatā praśnam). **Per R1/R3:** add
+the character-fuzzy quote-retrieval lane and emit the benchmark schema fields (per-ref stable
+ID, evidence tier, verdict class, cascade tier) from the first run; report the
+fitted-index-only vs retrieval-only vs hybrid baseline split.
 
 **W1b — Sprüche verification census** ([H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md)) —
 Sonnet 4.6 (`claude-sonnet-4-6`), 1 session. Harvest boesp1/boesp2 typed verses; extract PWG
 `Spr.`/`Spr. (II)` refs (9,360 + 7,309; extend to pw/PWK sigla); verify verse-exists +
 headword/pratīka containment (SLP1↔IAST via sanskrit-util); cross-edition hits = edition-siglum
 error candidates; deliver `data/forensic/SPRUECHE_CITATION_VERIFICATION_CENSUS.md` + verdict
-CSV. Validation case: `Spr. 2790`.
+CSV. Validation case: `Spr. 2790`. **Per R3:** same benchmark schema fields as W1a.
 
 **W2 — Rāmāyaṇa + easy-class sweep.** R. edition census first (Schlegel/Gorresio/Bombay), then
 the f8 pattern; RV link-pilot → verification upgrade; Pāṇini/Manu/AV/ŚBr; kośas-vs-CDSL
-self-check; BhāgP.
+self-check; BhāgP. **Per R2:** build the ~200-ref stratified gold set (blind LLM second
+annotator) and retro-fit measured per-class precision onto the W1 censuses. **Per R1/H662:**
+adopt the embedding retrieval lane here if the H662 plan clears it.
 
 **W3 — long tail + surfacing.** Remaining sigla by
 [`lsextract`](https://github.com/sanskrit-lexicon/literarysource/blob/main/pwg/lsextract_pwg_06.txt)
@@ -133,8 +189,9 @@ scan URLs) — recording at which tier the verdict landed.
 
 ## 6. Decisions needed — rulings pending
 
-Audit-derived roadmap: D1's recommendation runs as plan-of-record (clearly dominant); D2–D4 are
-parked as GTD `@DECIDE` and do not block W1.
+Audit-derived roadmap: D1's recommendation runs as plan-of-record (clearly dominant); D2–D3
+remain parked as GTD `@DECIDE` and do not block W1; D4 was ruled 11-07-2026 (see R3 in
+[§2a](#2a-acl-lineage-method-uplift--rulings-r1r4-11-07-2026)).
 
 **D1 — wave order.** *Plan-of-record: MBH + Sprüche in parallel (W1a ∥ W1b).* MBH is the
 user-named flagship with both worked examples; Sprüche is near-zero setup with a typed
@@ -154,12 +211,13 @@ scraper.* Unique value = Sastri-Vavilla and Tatparyanirnaya (nowhere else machin
 risks of first-class use = fragile private SPA API, broken TLS chain, load ethics. Alternative
 (bulk client over all 4 editions) buys recension breadth at real maintenance cost.
 
-**D4 — paper vehicle.** *Recommended:* censuses feed
-[A50](https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md) ("What the tradition cites",
-currently data 4/5 · prose 1/5) and stand as per-text forensic docs; open a **new** article ID
-only if W1 yields a standalone result (e.g. a measured accuracy rate for Böhtlingk's ed.-Bomb.
-corrections). A10 is untouched — already at sign-off. Alternative: a dedicated "citation
-forensics" paper now (premature before W1 numbers exist).
+**D4 — paper vehicle.** ~~*Recommended:* censuses feed A50 and stand as per-text forensic
+docs; open a new article ID only if W1 yields a standalone result.~~ **RULED 11-07-2026 (R3,
+supersedes the open fork):** benchmark-dataset framing adopted — schema fields mandatory from
+W1, resource-paper article ID minted after W1 numbers exist, candidate venues
+LaTeCH-CLfL / NLP4DH; [A50](https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md) ("What
+the tradition cites", currently data 4/5 · prose 1/5) still consumes the counts. A10 is
+untouched — already at sign-off.
 
 ## 7. Non-goals
 
@@ -180,5 +238,11 @@ evidence gathered by three read-only Explore agents over csl-atlas, the org hubs
 `csl-orig`, plus live probes of GRETIL, Manipal and the scans org. Program requested by MG
 11-07-2026 (brū / MBH. 7,9283 exemplar; Manipal edition list; Spr. ed.1/ed.2 tracking; "such
 work must be done for other works of MW and PWG as well").
+
+§2a ACL-lineage uplift (rulings R1–R4) added 11-07-2026 by Fable 5 (`claude-fable-5`) under
+[H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md),
+after an ACL Anthology method crosswalk and an interactive four-question ruling round with MG.
+Improvement analysis + backlog live in the companion metadoc
+[`CITATION_VERIFICATION_ROADMAP_2026_2027.meta.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.meta.md).
 
 _Dr. Mārcis Gasūns_
