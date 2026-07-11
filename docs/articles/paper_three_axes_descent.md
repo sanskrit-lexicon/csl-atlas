@@ -17,8 +17,11 @@ fingerprint and its bootstrap support, and the microstructure fingerprint
 ([`data/lexico/microstructure_fingerprint.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/microstructure_fingerprint.json)).
 All numbers are the 2026-06 snapshot and reproducible from committed data; every figure
 was re-verified against the packet in the 2026-07-03 referee pass
-([A03_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A03_review_fable5.md)).
-Author: M. Gasūns (byline to finalise).*
+([A03_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A03_review_fable5.md));
+author-voice pass 2026-07-11
+([SIGNOFF_A03_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A03_author_pass.md)).
+Author: Mārcis Gasūns, independent scholar
+([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru.*
 
 ---
 
@@ -126,7 +129,7 @@ as a middling 0.46. We therefore take **parent-in-child containment** as the con
 axis and keep Jaccard only as a caveat that flags size asymmetry. Crucially, high
 containment is a **floor** for relatedness, not proof of copying: two dictionaries of
 the same language inevitably share the common core of the lexicon, so a high content
-score licenses the question "did the later one take its words from the earlier?", it
+score licenses the question "did the later one take its words from the earlier?"; it
 does not answer it. (The floor rule is stated once for the whole series in P1, §3.1;
 this paper is its dedicated demonstration.)
 
@@ -237,7 +240,7 @@ and register recoded* (2, including PWG → MW), *content overlap needing axis r
 they are a triage that tells a reviewer **which axes to read against which** for each
 edge, which is precisely what a one-dimensional score cannot do.
 
-### 4.4 A fourth axis? The citation profile (note added 08-07-2026, PH2 CITE-4AXIS)
+### 4.4 A fourth axis? The citation profile
 
 A follow-up packet ([`FOUR_AXIS_CITATION_INDEPENDENCE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/FOUR_AXIS_CITATION_INDEPENDENCE.md),
 [`/tools/descent-axes`](https://sanskrit-lexicon.github.io/csl-atlas/tools/descent-axes))
@@ -292,7 +295,8 @@ and stating it once, here, lets each of them assume it.
   must be controlled before any content-axis (survival) claim. The Wilson → Yates edge
   is the same one that appears here as *content carried, convention recoded*: P2 shows
   Yates carries Wilson's senses but re-marks them (semicolon-packed rather than
-  numbered), the microstructural recoding this paper's third axis isolates in general.
+  numbered) — the microstructural recoding that this paper's third axis isolates in
+  general.
 - *Grammar Without Tags* (P4) reads grammatical content off indigenous dictionaries that
   carry **no** grammar-marking convention — a pure case of the content and convention
   axes coming apart, where the absence of the convention axis is the finding.
@@ -388,5 +392,4 @@ Gasūns, M. (in preparation). *Redundancy and Descent in a Digitised Dictionary 
 A Headword-Level Stemma of the Cologne Digital Sanskrit Lexicon* (OBS-R — owns the
 headword-containment matrix the content axis reads from).
 
-*Bibliographic details and the final byline are to be verified against the sources
-before submission.*
+*Bibliographic details are to be verified against the sources before submission.*
