@@ -50,19 +50,46 @@ adopted only if the §5 criterion is met.
 
 | Stack | What it is | Weights/code | Local? | License | Fit |
 |---|---|---|---|---|---|
-| **MITRA-E** ([arXiv 2601.06400](https://arxiv.org/abs/2601.06400), 01-2026) | Gemma-2-9B contrastively fine-tuned sentence embedder for Sanskrit/Pāli/Buddhist-Chinese/Tibetan; SOTA on 7 retrieval tasks (Sanskrit→Sanskrit and cross-lingual, P@1 up to 95) | [`buddhist-nlp/gemma-2-mitra-e`](https://huggingface.co/buddhist-nlp/gemma-2-mitra-e) via [dharmamitra/mitra-parallel](https://github.com/dharmamitra/mitra-parallel) | **yes** (downloadable) | repo + corpus CC BY-SA 4.0; weights additionally under Gemma Terms of Use (Gemma-2 derivative) | **primary candidate** — the exact "as Dharmamitra has" tech, current generation |
-| ByT5-Sanskrit ([EMNLP 2024 Findings](https://aclanthology.org/2024.findings-emnlp.805/); Nehrdich, Hellwig, Keutzer) | byte-level multitask model: segmentation, lemmatization, morphosyntax | [`chronbmm/sanskrit5-multitask`](https://huggingface.co/chronbmm/sanskrit5-multitask), **already vendored in-house** at pinned revision `c0d2ada` via [`scripts/lib/dharmamitra_infer.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/dharmamitra_infer.py) | yes (in use) | CC BY-SA 4.0 side | not an embedder — the **preprocessing normalizer** (sandhi segmentation before embedding, §4 ablation) |
-| BuddhaNexus → DharmaNexus | production million-scale intertextuality graph (the operational proof the approach scales); frontends archived, relaunched as DharmaNexus 07-2025 within the [MITRA tool suite](https://dharmamitra.github.io/dharmamitra-guides/news/) | [BuddhaNexus org](https://github.com/BuddhaNexus/) — backend GPL-3.0; inputs are **segmented** text ([segmented-sanskrit](https://github.com/BuddhaNexus/segmented-sanskrit)) | service, no public API | GPL-3.0 (code) | **reference architecture, not a dependency** — query/compare, never vendor GPL code (house rule, cf. the Samsaadhanii/SCL precedent); no API ⇒ not pipeline-usable anyway |
+| **MITRA-E** ([arXiv 2601.06400](https://arxiv.org/abs/2601.06400), 01-2026) | Gemma-2-9B contrastively fine-tuned sentence embedder for Sanskrit/Pāli/Buddhist-Chinese/Tibetan; SOTA on 7 retrieval tasks (Sanskrit→Sanskrit and cross-lingual, P@1 up to 95) | [`buddhist-nlp/gemma-2-mitra-e`](https://huggingface.co/buddhist-nlp/gemma-2-mitra-e) via [dharmamitra/mitra-parallel](https://github.com/dharmamitra/mitra-parallel) | **yes** (downloadable) | corpus CC BY-SA 4.0; **weights: no HF license declared** ⚠️ (license reality check below); Gemma Terms of Use apply as a Gemma-2 derivative | **primary candidate** — the exact "as Dharmamitra has" tech, current generation |
+| [`buddhist-nlp/buddhist-sentence-similarity`](https://huggingface.co/buddhist-nlp/buddhist-sentence-similarity) | LaBSE-based sentence embedder fine-tuned for Sanskrit (**IAST input**), Pāli, Tibetan, Chinese — base LaBSE's 109 languages exclude Sanskrit; this fine-tune adds it | same HF card | **yes** — ~0.5B, CPU-feasible | no HF license declared ⚠️ (upstream LaBSE is Apache-2.0) | **fallback/floor candidate** — no GPU and no Gemma-ToU dependency; can run the §5 parity gate locally |
+| ByT5-Sanskrit ([EMNLP 2024 Findings](https://aclanthology.org/2024.findings-emnlp.805/); Nehrdich, Hellwig, Keutzer) | byte-level multitask model: segmentation, lemmatization, morphosyntax | [`chronbmm/sanskrit5-multitask`](https://huggingface.co/chronbmm/sanskrit5-multitask), **already vendored in-house** at pinned revision `c0d2ada` via [`scripts/lib/dharmamitra_infer.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/dharmamitra_infer.py) | yes (in use) | Apache-2.0 **per paper prose only** ⚠️ — no LICENSE file in the repo, no HF tag (license reality check below) | not an embedder — the **preprocessing normalizer** (sandhi segmentation before embedding, §4 ablation) |
+| BuddhaNexus → DharmaNexus | production million-scale intertextuality graph (the operational proof the approach scales); frontends archived, relaunched as DharmaNexus 07-2025 within the [MITRA tool suite](https://dharmamitra.github.io/dharmamitra-guides/news/) | [BuddhaNexus org](https://github.com/BuddhaNexus/) — backend GPL-3.0; inputs are **segmented** text ([segmented-sanskrit](https://github.com/BuddhaNexus/segmented-sanskrit)) | service; **public endpoints, no key** ([dharmamitra-claude-code-agent](https://github.com/dharmamitra/dharmamitra-claude-code-agent)); backend source unpublished | GPL-3.0 (code) | **reference architecture, not a dependency** — query/compare, never vendor GPL code (house rule, cf. the Samsaadhanii/SCL precedent); the public API is segment-keyed to their own corpus, not arbitrary-query retrieval, and runtime calls are banned regardless (§3) |
 | SansTib ([LREC 2022](https://aclanthology.org/2022.lrec-1.724/)) | Sanskrit–Tibetan bilingual sentence embeddings + the alignment method behind BuddhaNexus's Sanskrit side | per paper | yes | research release | superseded by MITRA-E (same lineage, same author); cite as method ancestry |
 | Vedic similarity measures ([NLP4DH 2024](https://aclanthology.org/2024.nlp4dh-1.12/); Miyagawa et al.) | word2vec + stylometry + TRACER compared on Vedic intertextuality | per paper | yes (word2vec-class) | research release | two transferable lessons: **smaller chunks detect parallels better** (embed at verse/pāda granularity, not entry level), and cheap word2vec-class vectors are a legitimate **CPU-only floor baseline** for the pilot |
 | FAISS | exact/ANN vector search | [faiss](https://github.com/facebookresearch/faiss) (`faiss-cpu`) | yes | MIT | index layer; at our scale **exact search only** (§3) |
 
-**API-only vs downloadable.** The MITRA *services* (Explore/Search, Deep Research, DharmaNexus)
-have **no public API** — but this costs nothing: house invariants (§3) forbid runtime service
-calls in the pipeline anyway. The *models* are downloadable, and local frozen inference is the
-only house-compatible route. **Nothing needs to be built from scratch**: model (MITRA-E),
-normalizer (in-house ByT5 harness), index (FAISS), corpus (the W1a frozen BORI harvest), and
-query set (the 2,466-note verdict CSV) all exist.
+**API-only vs downloadable — verified 11-07-2026.** The DharmaNexus *service* does expose
+public HTTP endpoints (no account or key required —
+[dharmamitra-claude-code-agent](https://github.com/dharmamitra/dharmamitra-claude-code-agent)
+consumes `POST /api-db/matches/` for precomputed parallels), but the *backend source is
+unpublished* and the endpoints are keyed to their own corpus segment numbers, not
+arbitrary-query retrieval — and house invariants (§3) forbid runtime service calls in the
+pipeline regardless. (A one-off networked `import-*` consultation of that API would be
+house-compatible if their Sanskrit index turns out to cover our texts — a §6 ask, cheaper than
+embedding anything ourselves.) The *models* are downloadable, and local frozen inference is
+the only house-compatible route. Generic multilingual encoders are not a shortcut: **LaBSE's
+109 languages exclude Sanskrit outright** (a 2026 low-resource study falls back to LASER3 for
+exactly this reason, [arXiv 2601.10205](https://arxiv.org/pdf/2601.10205)), and mE5/BGE-M3-class
+encoders have XLM-R-lineage token coverage of Sanskrit but **no measured Sanskrit retrieval
+quality anywhere** — plausible, unvalidated. **Nothing needs to be built from scratch**: model
+(MITRA-E), normalizer (in-house ByT5 harness), index (FAISS), corpus (the W1a frozen BORI
+harvest), and query set (the 2,466-note verdict CSV) all exist.
+
+**License reality check (measured 11-07-2026, HF API + repo contents — not read off the
+papers).** **None of the five candidate checkpoints declares any license on HF**
+([`gemma-2-mitra-e`](https://huggingface.co/buddhist-nlp/gemma-2-mitra-e),
+[`gemma-2-mitra-e-fp8`](https://huggingface.co/buddhist-nlp/gemma-2-mitra-e-fp8),
+[`buddhist-sentence-similarity`](https://huggingface.co/buddhist-nlp/buddhist-sentence-similarity),
+[`byt5-sanskrit`](https://huggingface.co/buddhist-nlp/byt5-sanskrit),
+[`sanskrit5-multitask`](https://huggingface.co/chronbmm/sanskrit5-multitask) — all
+`license: NONE`; only [`sanstib`](https://huggingface.co/buddhist-nlp/sanstib) is tagged,
+LGPL-LR). [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers)
+ships **no LICENSE file** against the paper's Apache-2.0 statement, and
+[mitra-parallel](https://github.com/dharmamitra/mitra-parallel)'s CC BY-SA 4.0 covers the
+*dataset* (the README's own `LICENSE` link is dead — no such file). All weights are public and
+ungated, so **internal research inference is low-risk**; anything distribution-sensitive is
+gated on the §6 license ask. Gemma-2 derivatives additionally inherit the Google Gemma Terms
+of Use whatever the missing tags say.
 
 ## 3. Fit to house invariants — offline, versioned, cached; never a runtime service
 
@@ -182,11 +209,16 @@ brief for [`/outreach-draft`](https://github.com/gasyoun/claude-config/blob/main
   Böhtlingk correction notes mined; 956 (39 %) confirmed against BORI by deterministic
   retrieval; 1,088 paraphrase-or-gap notes as the embedding target; MITRA-E already selected
   as primary candidate.
-- **The asks:** (i) domain-shift guidance — MITRA-E is trained Buddhist-corpus-heavy; any
-  known behavior on classical/epic Sanskrit, and is a small contrastive fine-tune on epic
-  parallels sensible? (ii) pooling/input-form recommendation for unsegmented print-form
-  quotes (§4 ablation); (iii) any Sanskrit-only retrieval eval sets beyond the MITRA paper's
-  5,552 pairs; (iv) interest in the R3 benchmark as a co-authored resource paper
+- **The asks:** (i) **license tags** — none of the candidate checkpoints declares a license
+  on HF and the analyzers repo has no LICENSE file (§2 license reality check); a card tag or
+  written terms unblocks anything distribution-sensitive; (ii) domain-shift guidance —
+  MITRA-E is trained Buddhist-corpus-heavy; any known behavior on classical/epic Sanskrit,
+  and is a small contrastive fine-tune on epic parallels sensible? (iii) pooling/input-form
+  recommendation for unsegmented print-form quotes (§4 ablation); (iv) any Sanskrit-only
+  retrieval eval sets beyond the MITRA paper's 5,552 pairs; (v) whether the DharmaNexus
+  Sanskrit index reaches GRETIL-wide (epics, kośas) beyond the Buddhist canon, and whether
+  any public endpoint takes arbitrary-query semantic search — consume before we embed (§2);
+  (vi) interest in the R3 benchmark as a co-authored resource paper
   (LaTeCH-CLfL / NLP4DH venues) — a citation-verification benchmark is adjacent to, not
   competitive with, their intertextuality graph.
 - **The offers:** the frozen benchmark dataset (numbers-only, public-domain gloss text); the
@@ -201,7 +233,8 @@ brief for [`/outreach-draft`](https://github.com/gasyoun/claude-config/blob/main
 
 | Item | Estimate | Notes |
 |---|---|---|
-| MITRA-E weights | ~18–20 GB (bf16, Gemma-2-9B) | needs ≥ 24 GB VRAM GPU for comfortable batched inference; int8 (~10 GB) feasible but quantization changes scores — if used, the quantization method+version joins the manifest (§3) |
+| MITRA-E weights | ~18–20 GB (bf16, Gemma-2-9B) | needs ≥ 24 GB VRAM GPU for comfortable batched inference; a **published fp8 checkpoint** ([`gemma-2-mitra-e-fp8`](https://huggingface.co/buddhist-nlp/gemma-2-mitra-e-fp8), ~10 GB) is the pin-friendly quantized option — quantization changes scores, so the manifest pins the chosen checkpoint itself, never a DIY quant (§3) |
+| Fallback embedder | ~1–2 GB (0.5B, LaBSE-class) | [`buddhist-sentence-similarity`](https://huggingface.co/buddhist-nlp/buddhist-sentence-similarity): CPU-feasible end-to-end — removes the cloud-GPU dependency entirely if it passes the §5 parity gate; IAST input matches the house display normalization |
 | Embedding pass | 73k verses + ~2.5k queries ≈ 1–2 GPU-hours, one-off | **no suitable local GPU assumed**: one-off cloud run (Colab/RunPod-class, ~$5–15) or a DharmaMitra collaboration run (§6 ask) — the artifact is what's kept, not the machine |
 | CPU floor baseline | minutes, local | word2vec/fastText-class (§5.3); no GPU dependency |
 | Search | trivial | 73k × 3584 flat cosine = CPU-fine with `faiss-cpu` (MIT) or plain NumPy |
@@ -233,5 +266,10 @@ and a same-day web survey of [arXiv 2601.06400](https://arxiv.org/abs/2601.06400
 [sebastian-nehrdich.github.io](https://sebastian-nehrdich.github.io/). Improvement backlog for
 this doc lives with the program metadoc,
 [`CITATION_VERIFICATION_ROADMAP_2026_2027.meta.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.meta.md).
+
+License and availability cells re-verified 11-07-2026 by a second Fable 5 (`claude-fable-5`)
+session (two web-survey Explore agents + direct HF-API/repo-contents probes): the §2 license
+reality check and the public-endpoints correction supersede the paper-prose readings of the
+first pass.
 
 _Dr. Mārcis Gasūns_
