@@ -14,7 +14,14 @@ counts are regenerated from the committed artifact
 [`data/obs/citation_registers.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/obs/citation_registers.json)
 (built by [`citation_register_gaps.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/citation_register_gaps.py));
 numbers herein are the 2026-07 snapshot. Siglum-inventory figures (§4.3) are the
-2026-06 siglum pass. Author: M. Gasūns (byline to finalise).*
+2026-06 siglum pass. Referee pass 2026-06-13
+([REFEREE_OBS_RC.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/REFEREE_OBS_RC.md));
+revision executed 2026-07-02 ([PR #184](https://github.com/sanskrit-lexicon/csl-atlas/pull/184))
+with counts regenerated from the committed artifact
+([PR #187](https://github.com/sanskrit-lexicon/csl-atlas/pull/187)); author-voice pass 2026-07-11
+([SIGNOFF_A08_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A08_author_pass.md)).
+Author: Mārcis Gasūns, independent scholar
+([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru.*
 
 ---
 
@@ -43,8 +50,8 @@ references, the *Vācaspatya* ~15,600 and the *Kṛdantarūpamālā* ~12,400 —
 to an `<ls>`-based measure. We conclude that the CDSL contains **two disjoint citation
 systems**: a European apparatus that is roughly 60 % machine-resolvable and amenable
 to a reviewed source-abbreviation registry, and an indigenous *iti*-quotation register
-that is citation-dense but requires an entirely different resolution strategy. Per-
-dictionary citation density is meaningless unless reported per register.
+that is citation-dense but requires an entirely different resolution strategy.
+Per-dictionary citation density is meaningless unless reported per register.
 
 **Keywords:** historical lexicography; Sanskrit; source citation; reference linking;
 citation apparatus; dictionary-to-book; abbreviation normalisation; digital
@@ -226,7 +233,7 @@ is different *in kind*: linking *iti X* to an indigenous source lexicon or text,
 resolving a chapter-and-verse locator.
 
 The mis-ranking is not a rhetorical figure but a measured swap. Ranking all
-forty-four discovered CDSL dictionaries by `<ls>` density places the *Śabdakalpadruma*
+forty-four CDSL dictionaries by `<ls>` density places the *Śabdakalpadruma*
 **tied for last** — twenty-eight of the forty-four source files carry no `<ls>` tag
 at all, and this measure cannot distinguish SKD from any of them, that is, from a
 dictionary that cites nothing. Ranking the same forty-four by *iti*-density instead
