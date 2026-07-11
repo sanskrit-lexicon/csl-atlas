@@ -1,6 +1,6 @@
 # Metadoc — `HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`
 
-_Created: 10-07-2026 · Last updated: 10-07-2026_
+_Created: 10-07-2026 · Last updated: 11-07-2026_
 
 > **Status: H488 has been executed** ([PR #239](https://github.com/sanskrit-lexicon/csl-atlas/pull/239), 10-07-2026).
 > The plan-time estimates this metadoc originally hedged are now measured; the trust table and backlog
@@ -69,6 +69,64 @@ was) to reach for a vulgate↔critical concordance.
 - **Rights.** The Kinjawadekar text (1936, volunteer transcription) may be measured freely but not
   necessarily *republished*; a `kosha` release of the harvested text needs `/publish-safety-check` first.
 
+## Intended use / known misuse
+
+**Intended use.** Settling, for anyone touching A10's `HARIV. N` citation evidence, which text can
+actually adjudicate a *wrong* Harivaṃśa citation (the Kinjawadekar vulgate via the fitted continuous
+index — §6 of the subject), and at what confidence each headline number (93.8% coverage, 68.4%
+held-out agreement, 206/565 corroborated) should be trusted. It is the reference for *why* the
+concordance route is closed (§3 of the subject) so nobody reopens it.
+
+**Known/likely misuse:**
+- **Citing §4's 83.9%/71.1% as current.** Those are the pre-execution *plan-time* estimates; §6 (93.8%
+  coverage, the fitted held-out-validated index) is the settled figure. §4 is scoping history only —
+  reading it in isolation (e.g. skimming just the top of the subject doc) understates the coverage.
+- **Reading the null result as inconclusive or as a blocked test.** "No shared error found" (§6-B) is a
+  *measured, positive* result — the shared apparatus verifies as correct against the vulgate — not the
+  earlier DCS situation where the test could not be run at all. Citing this census as evidence A10's
+  error test was "blocked" or "inconclusive" misrepresents it.
+- **Treating the concordance file (`harivamsa_vulgate_concordance.csv`) as a vulgate↔critical (DCS/BORI)
+  concordance.** It is a *vulgate-internal* concordance (Kinjawadekar addressing ↔ Calcutta continuous
+  numbering) — a genuine vulgate↔critical concordance is a different, unbuilt object, and per §3 of the
+  subject it would not help the error test anyway (a structural argument, not a data gap).
+- **Republishing the harvested Kinjawadekar text bytes** (as opposed to the derived numeric mapping)
+  without running [`/publish-safety-check`](https://github.com/gasyoun/claude-config/blob/main/commands/publish-safety-check.md)
+  first — see the Rights caveat above.
+- **Using the continuous-index offset as verse-exact for any single citation.** It carries ±1–2
+  calibration noise (68.4% within ±3 held-out); fine for the aggregate corroboration statistic this
+  census reports, not fine as a claim that a specific `HARIV. N` maps to one exact Kinjawadekar verse
+  without checking the offset caveats in subject §6.
+
+## Maintenance & sunset plan
+
+The subject document is owned by whoever holds A10 ([`article_21_apparatus_not_errors.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/article_21_apparatus_not_errors.md))
+in the `csl-atlas` repo — currently maintained ad hoc by the agent session touching that paper, not a
+standing pipeline or scheduled job. There is no automated regeneration: the census and its four CSV/JSON
+outputs (`harivamsa_vulgate_concordance.csv`, `harivamsa_continuous_index_offsets.csv`,
+`harivamsa_shared_citation_resolution.csv`, `f7_report.json`) are one-shot outputs of
+[`f7_harivamsa_harvest.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f7_harivamsa_harvest.py)
+and [`f7_harivamsa_resolve.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f7_harivamsa_resolve.py),
+re-runnable if `csl-orig`'s PWG/MW citation forms change materially or the upstream Kinjawadekar
+e-text is re-harvested.
+
+This metadoc itself was briefly stale by header date only: the subject was synced to H488's measured
+results one day after this metadoc was first written (commit
+[`606db08`](https://github.com/sanskrit-lexicon/csl-atlas/commit/606db0862b26afd045eaa80329139fae04db6054),
+11-07-2026, "docs sync: reconcile Harivamsa census + metadoc with H488 results") — both files were kept
+in lockstep in that same commit, so content never actually drifted out of sync; only the `Last updated`
+header lagged by a day until this pass.
+
+**Sunset trigger.** This census/metadoc pair is considered archived (no further updates expected) once
+A10 either lands the shared-erroneous-citation claim as "very strong, not airtight" in a published
+venue, or the paper's framing changes such that the Harivaṃśa test is dropped entirely. If a future
+vulgate↔critical (DCS/BORI) concordance is ever built for other purposes (§3 of the subject notes this
+is possible), it is a *new* object and gets its own doc + metadoc rather than folding into this one.
+
+## Deprecation status
+
+`active` — A10 still cites this census's §6 results as its evidence base, and the backlog above has
+one open item (`HARIV. 19850`'s true reading).
+
 ## Related documents
 
 - Subject's index: [`data/forensic/README.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/README.md)
@@ -84,5 +142,6 @@ was) to reach for a vulgate↔critical concordance.
 |---|---|---|
 | 10-07-2026 | Subject created (citation-form census + adjudicability table + vulgate harvest census); this metadoc created alongside it. | Opus 4.8 (`claude-opus-4-8`) |
 | 10-07-2026 | H488 executed ([PR #239](https://github.com/sanskrit-lexicon/csl-atlas/pull/239)): §6 results appended to subject; metadoc synced — trust table flipped to measured, backlog #1/#4 closed, #2 downgraded, plan-time caveats retired. | Opus 4.8 (`claude-opus-4-8`) |
+| 11-07-2026 | template v2 backfill (H663) | Sonnet 5 (`claude-sonnet-5`) |
 
 _Dr. Mārcis Gasūns_
