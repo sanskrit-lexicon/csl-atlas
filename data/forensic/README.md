@@ -1,6 +1,6 @@
 # `data/forensic/` — dictionary-descent evidence
 
-_Created: 10-07-2026 · Last updated: 10-07-2026_
+_Created: 10-07-2026 · Last updated: 11-07-2026_
 
 The datasets and topic docs behind the **MW-vs-Petersburg descent** analysis
 ([`article_21_apparatus_not_errors.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/article_21_apparatus_not_errors.md), paper A10).
@@ -14,6 +14,7 @@ list, not only from a cross-link inside the paper.
 |---|---|
 | [`CITATION_TAGGING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/CITATION_TAGGING.md) | `<ls>`-count = 0 does **not** mean "citation-free": SKD/VCP cite densely in the indigenous `iti <authority>` / quote / `X0`-abbreviation style, which carries no `<ls>` tag. Corrects the F1 framing. |
 | [`HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md) | Which text can adjudicate a **wrong** `HARIV. N` citation, **and the H488 result (§6).** PWG (15,415 numbered refs) and MW both cite the **Calcutta vulgate** by continuous śloka; DCS (critical edition) resolves 1/587. Resolved against the Kinjawadekar vulgate e-text (93.8% coverage): held-out MW check **PASSED** (68.4% vs 2.1% null); **206/565 shared refs corroborate at the exact cited śloka (37.7% vs 0.5% null, ≈75×)** — verse-level shared apparatus — but the shared-**error** test is a **measured null** (no copied wrong numbers). Executed [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md); dead-end record [`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md) §8. |
+| [`SPRUECHE_CITATION_VERIFICATION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SPRUECHE_CITATION_VERIFICATION_CENSUS.md) | Verification of PWG's `Spr.`/`Spr. (II)` citations of Böhtlingk's *Indische Sprüche* against the typed boesp1/boesp2 digitizations. **Scope finding: `boesp1` (1st ed.) has no typed text at all** — only `Spr. (II)` (6,320 refs, 2nd ed.) gets full text verification; `Spr.` (9,557 refs, 1st ed.) is range-only. Results: 2,621 corroborated · 443 mismatch (review queue) · 38 edition-siglum-swap candidates. **The roadmap's own `Spr. 2790` validation case does not resolve as described** — see §2. Executed [H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md); Wave 1b of the [Citation Verification Roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md). |
 
 ## Key datasets
 
@@ -26,5 +27,6 @@ list, not only from a cross-link inside the paper.
 | [`homonym_concordance.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/homonym_concordance.csv) | Shared deep-homonym splits (F2 structure). |
 | [`shared_corrections.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/shared_corrections.csv) · [`pair_shared_typo_counts.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/pair_shared_typo_counts.csv) | Shared print-error / correction evidence. |
 | `ahlborn_mw_comparison.csv`, `f*_report.json` | Per-signal reports; provenance in the `.source.json` sidecars. |
+| [`SPRUECHE_CITATION_VERIFICATION_VERDICT.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SPRUECHE_CITATION_VERIFICATION_VERDICT.csv) | H611 R3-schema verdict for all 15,877 extracted PWG `Spr.`/`Spr. (II)` refs (IAST + SLP1, per-ref evidence tier, verdict, edition-swap flag, roadmap §5 cascade tier). |
 
 _Dr. Mārcis Gasūns_
