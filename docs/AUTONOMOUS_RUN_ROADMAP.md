@@ -1,5 +1,7 @@
 # Autonomous Run Roadmap — 3 weeks, balanced
 
+_Created: 10-06-2026 · Last updated: 10-06-2026_
+
 Companion to `AUTONOMOUS_RUN_CHARTER.md`. Set 2026-06-10 (M.G. away). Structure:
 **three weekly phases**, each ending in a `WEEK_N_REVIEW.md` PR M.G. reads async.
 Aim: **balanced progress across all four streams** every week (not one stream per week).
@@ -58,3 +60,5 @@ At each week's close, in a worktree off `origin/main`:
 - **Never make a final scholarly/maker call.** Suggestions only; humans decide.
 - **No parser/JSON-schema changes for viz** (presentation only) unless a packet's contract explicitly calls for a new suggestion field (Stream 3).
 - **Idempotent or it isn't done.** Re-running any generator must produce no git diff.
+
+_Dr. Mārcis Gasūns_

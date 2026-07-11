@@ -1,5 +1,7 @@
 # Metalexicography roadmap — measuring digital-edition richness
 
+_Created: 04-06-2026 · Last updated: 04-06-2026_
+
 **Version**: 1.0 · **Date**: 2026-05-16 · **Owner**: M. Gasūns + Claude Code
 **Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](L0_DESIGN.md)
 
@@ -427,3 +429,5 @@ schemas are handoff targets for `csl-standards`, not atlas deliverables.
 | **M6a** — Native schema design | XSD + documentation + per-dict mapping notes |
 | **M6b** — Standards handoff notes | Dictionary evidence and known loss cases for `csl-standards` |
 | **M6c** — Boundary check | Confirm no TEI/OntoLex/RDF generation is added to atlas scripts |
+
+_Dr. Mārcis Gasūns_
