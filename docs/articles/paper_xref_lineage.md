@@ -14,12 +14,16 @@ hub-review packet
 ([`data/lexico/xref_hub_review.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_hub_review.json)),
 documented in [`MICROSTRUCTURE_XREF_LINEAGE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_LINEAGE.md) and
 [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_HUB_REVIEW.md), with the
-public chart at `/tools/xref-lineage`. All numbers are the 2026-06 snapshot and
+public chart at [`/tools/xref-lineage`](https://sanskrit-lexicon.github.io/csl-atlas/tools/xref-lineage).
+All numbers are the 2026-06 snapshot and
 reproducible from committed data; every figure was re-verified against the artifacts in
 the 2026-07-03 referee pass
 ([A05_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A05_review_fable5.md)),
-which also corrected an AP/AP90 edition-label swap in the abstract and Table 1.
-Author: M. Gasūns (byline to finalise).*
+which also corrected an AP/AP90 edition-label swap in the abstract and Table 1;
+author-voice pass 2026-07-11
+([SIGNOFF_A05_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A05_author_pass.md)).
+Author: Mārcis Gasūns, independent scholar
+([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru.*
 
 ---
 
@@ -41,8 +45,9 @@ editions (`cf.` in SLP1, 444 clean lemma edges for Apte 1890 and 609 for the rev
 Two editions of the *same* dictionary — Apte 1890 and the revised Apte — overlap at
 **85 % inheritance rate (Jaccard 0.74)**: that is the calibrated signature of descent.
 Against that ceiling, the cross-tradition Monier-Williams × Petersburg pair reaches only
-**21.8 % (Jaccard 0.069)** on the lemmas both cross-reference — far above chance in the ~300,000-lemma union of the two key spaces, so the two networks
-are *not* independent, but nowhere near the
+**21.8 % (Jaccard 0.069)** on the lemmas both cross-reference — far above chance in the
+~300,000-lemma union of the two key spaces, so the two networks
+are *not* independent, yet the overlap sits nowhere near the
 edition-continuity ceiling. The cross-reference relationship between MW and the
 Petersburg lexicon is therefore a **shared core, not wholesale inheritance**: a common
 substrate of variant/cognate pointers over which each tradition cross-referenced largely
@@ -147,7 +152,7 @@ match — so every number is a **floor**.
 ### 3.2 The positive control
 
 Because overlap has no absolute scale, the method is anchored by a pair whose answer is
-known. Apte 1890 (AP) and the revised Apte (AP90) are the same dictionary in two
+known. Apte 1890 (AP90) and the revised Apte (AP) are the same dictionary in two
 editions; whatever descent does to a cross-reference graph, it must leave most of it
 intact across an edition boundary. The overlap measured on AP × AP90 is therefore the
 **edition-continuity ceiling** — the value the method assigns to genuine, near-total
@@ -196,10 +201,10 @@ of the pointer graph across an edition. Every other pair is read against it.
 The headline pair is the largest. MW and PWG share 2,538 source lemmas; on those, MW
 makes 2,946 cross-references and PWG makes 7,022, of which **641 are identical** edges.
 That is an inheritance rate of **21.8 %** from the MW side (and 9.1 % from the denser PWG
-side), at Jaccard 0.069. The number cuts both ways. It is far above chance — in a lexicon
-of some 300,000 headwords, 641 coincident directed pointers on a 2,538-lemma overlap is
-not what independent networks produce — here in the ≈300,000-headword union of the two
-dictionaries' key spaces — so MW and PWG are demonstrably **related**, as the
+side), at Jaccard 0.069. The number cuts both ways. It is far above chance — in the
+≈300,000-headword union of the two dictionaries' key spaces, 641 coincident directed
+pointers on a 2,538-lemma overlap is not what independent networks produce — so MW and
+PWG are demonstrably **related**, as the
 philology has always held. But it is barely a quarter of the edition-continuity ceiling,
 and roughly four in five of MW's cross-references — even from lemmas PWG also
 cross-references — go where PWG does not. The sample of genuinely shared edges is telling:
@@ -328,5 +333,4 @@ Indigenous Sanskrit Kośa* (P4).
 Gasūns, M. (in preparation). *Order Is the Dictionary: A Macrostructural Model of the
 Versified Synonymic Kośa* (P6).
 
-*Bibliographic details and the final byline are to be verified against the sources before
-submission.*
+*Bibliographic details are to be verified against the sources before submission.*

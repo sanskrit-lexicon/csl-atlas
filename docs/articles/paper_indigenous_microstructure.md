@@ -19,8 +19,11 @@ overlap with the Pāṇinian-derivation study (A35) and the ŚKD/VCP microstruct
 (A30) is coordinated in the series map — see the companion block in the References. All
 counts are reproducible from committed data; numbers herein are the 2026-06 snapshot;
 every figure was re-verified against the artifacts in the 2026-07-03 referee pass
-([A04_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A04_review_fable5.md)).
-Author: M. Gasūns (byline to finalise).*
+([A04_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A04_review_fable5.md));
+author-voice pass 2026-07-11
+([SIGNOFF_A04_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A04_author_pass.md)).
+Author: Mārcis Gasūns, independent scholar
+([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru.*
 
 ---
 
