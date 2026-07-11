@@ -1,0 +1,19 @@
+{
+ "bori_corpus_verses": 72771,
+ "notes_total": 2466,
+ "notes_with_retrievable_pratika": 1378,
+ "evidence_tier_distribution": {
+  "none": 1088,
+  "quote-fuzzy": 308,
+  "quote-exact": 648,
+  "lemma": 422
+ },
+ "verdict_distribution": {
+  "unresolvable": 1088,
+  "confirmed": 956,
+  "reading-supported": 422
+ },
+ "high_conf_notes": 1630,
+ "high_conf_confirmed": 638,
+ "baseline_note": "fitted-index lane unavailable (no free bulk Nilakantha-vulgate e-text; BORI-only ⇒ DEAD_ENDS §8). Retrieval-only is the sole lane; hybrid = retrieval-only for MBH until a vulgate e-text is obtained."
+}

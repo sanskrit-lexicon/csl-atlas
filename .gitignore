@@ -45,3 +45,5 @@ review/
 
 # regenerable L0 annotation-sheet emit (built by gen_lrv_fri_annotation_sheet.py)
 data/L0/lrv_fri_annotation_items.json
+# scripts/forensic/f8_mbh_verify.py (derived BORI text, rights)
+data/forensic/_mbh_bori_folded.jsonl
