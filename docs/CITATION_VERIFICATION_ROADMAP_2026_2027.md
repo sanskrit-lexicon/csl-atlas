@@ -97,6 +97,10 @@ pipeline stays deterministic per house rules) — the embedding lane
 million-scale NN search, DharmaMitra stack) gets its own Fable-tier planning handoff
 [H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md),
 planned from the start, adopted where character-fuzzy saturates (paraphrase-level reuse, W2+).
+**Plan delivered 11-07-2026:**
+[`docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md)
+(primary candidate MITRA-E; two-step offline import per house pattern; pilot + adoption
+criterion in its §5).
 
 **R2 — gold-standard adjudication set, in W2.** ~200 stratified refs (text class × verdict
 class), adjudicated blind with an LLM second annotator (the A44 precedent), reporting
@@ -175,7 +179,9 @@ CSV. Validation case: `Spr. 2790`. **Per R3:** same benchmark schema fields as W
 the f8 pattern; RV link-pilot → verification upgrade; Pāṇini/Manu/AV/ŚBr; kośas-vs-CDSL
 self-check; BhāgP. **Per R2:** build the ~200-ref stratified gold set (blind LLM second
 annotator) and retro-fit measured per-class precision onto the W1 censuses. **Per R1/H662:**
-adopt the embedding retrieval lane here if the H662 plan clears it.
+adopt the embedding retrieval lane here if it clears the
+[plan's §5.4 adoption criterion](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md)
+(parity gate + ≥ 25 new adjudicated paraphrase parallels; pilot handoff mints at W2 time).
 
 **W3 — long tail + surfacing.** Remaining sigla by
 [`lsextract`](https://github.com/sanskrit-lexicon/literarysource/blob/main/pwg/lsextract_pwg_06.txt)

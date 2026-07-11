@@ -18,7 +18,8 @@ program spine; per-text results live in `data/forensic/*_CENSUS.md` files.
 | Date | Model | Handoff | What |
 |---|---|---|---|
 | 11-07-2026 | Fable 5 (`claude-fable-5`) | [H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md) | Initial audit-first roadmap ([PR #245](https://github.com/sanskrit-lexicon/csl-atlas/pull/245)) |
-| 11-07-2026 | Fable 5 (`claude-fable-5`) | [H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md) | §2a ACL-lineage uplift, rulings R1–R4, this metadoc |
+| 11-07-2026 | Fable 5 (`claude-fable-5`) | [H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md) | §2a ACL-lineage uplift, rulings R1–R4, this metadoc |
+| 11-07-2026 | Fable 5 (`claude-fable-5`) | [H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md) | R1 embedding-lane plan ([`EMBEDDING_RETRIEVAL_LANE_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md)); backlog rows 1–2 closed, row 5 gate marked satisfied |
 
 ## The improvement analysis behind §2a (ACL Anthology crosswalk, 11-07-2026)
 
@@ -59,11 +60,11 @@ Also ruled: **R4** — DharmaMitra outreach only after W1a pilot numbers exist
 
 | # | Item | Status |
 |---|---|---|
-| 1 | Character-fuzzy quote lane + benchmark schema fields in W1a | queued in [H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md) (R1/R3 amendment) |
-| 2 | Embedding retrieval lane plan (Fable) | queued as [H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md) |
+| 1 | Character-fuzzy quote lane + benchmark schema fields in W1a | ✅ done 11-07-2026 ([H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md), [PR #247](https://github.com/sanskrit-lexicon/csl-atlas/pull/247)) — 956/2,466 notes confirmed |
+| 2 | Embedding retrieval lane plan (Fable) | ✅ done 11-07-2026 (H662) — [`docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md); embedding pilot itself mints at W2 time per its §8 |
 | 3 | Gold-standard set + per-class precision (W2) | queued (mint at W2 handoff time) |
 | 4 | Benchmark datasheet + resource-paper article ID | gated on W1 numbers (R3) |
-| 5 | DharmaMitra outreach draft | gated on W1a pilot (R4) |
+| 5 | DharmaMitra outreach draft | **gate satisfied** (W1a numbers exist, R4) — brief ready in [plan §6](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md); recommended timing: after the §5 embedding pilot |
 | 6 | D2 (article-site badges) / D3 (Manipal tier) rulings | open `@DECIDE` in [GTD](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md) |
 
 ## Known limitations / caveats
@@ -89,6 +90,7 @@ Also ruled: **R4** — DharmaMitra outreach only after W1a pilot numbers exist
 | Date | Change | PR |
 |---|---|---|
 | 11-07-2026 | Initial roadmap (H602) | [#245](https://github.com/sanskrit-lexicon/csl-atlas/pull/245) |
-| 11-07-2026 | §2a rulings R1–R4, wave amendments, D4 ruled (H661) | this PR |
+| 11-07-2026 | §2a rulings R1–R4, wave amendments, D4 ruled (H661) | [#246](https://github.com/sanskrit-lexicon/csl-atlas/pull/246) |
+| 11-07-2026 | R1 embedding-lane plan delivered as [`docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md); §2a link added (H662) | this PR |
 
 _Dr. Mārcis Gasūns_
