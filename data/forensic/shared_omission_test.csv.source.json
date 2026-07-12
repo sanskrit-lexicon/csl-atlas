@@ -1,0 +1,38 @@
+{
+  "script": "scripts/forensic/f9_shared_omission.py",
+  "inputs": {
+    "MW": "MW-unique-key1-194084.txt",
+    "PWG": "PWG-unique-key1-106082.txt",
+    "AP": "AP-unique-key1-88867.txt",
+    "SKD": "SKD-unique-key1-40817.txt",
+    "VCP": "VCP-unique-key1-48636.txt"
+  },
+  "input_dir": "SanskritLexicography/HeadwordLists/now-2026/",
+  "anchor": "SKD & VCP (indigenous-attested)",
+  "anchor_n": 6941,
+  "control": "AP (Apte 1890, independent English tradition)",
+  "results": {
+    "MW": {
+      "pwg_has_probe_has": 4134,
+      "pwg_has_probe_lacks": 158,
+      "pwg_lacks_probe_has": 1446,
+      "pwg_lacks_probe_lacks": 1203,
+      "pwg_has": 4292,
+      "pwg_lacks": 2649,
+      "lack_given_pwg_has": 0.0368,
+      "lack_given_pwg_lacks": 0.4541,
+      "gap_sensitivity": 12.336
+    },
+    "AP": {
+      "pwg_has_probe_has": 2696,
+      "pwg_has_probe_lacks": 1596,
+      "pwg_lacks_probe_has": 1162,
+      "pwg_lacks_probe_lacks": 1487,
+      "pwg_has": 4292,
+      "pwg_lacks": 2649,
+      "lack_given_pwg_has": 0.3719,
+      "lack_given_pwg_lacks": 0.5613,
+      "gap_sensitivity": 1.51
+    }
+  }
+}
