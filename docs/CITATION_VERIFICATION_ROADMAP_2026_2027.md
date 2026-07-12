@@ -95,7 +95,7 @@ pipeline stays deterministic per house rules) — the embedding lane
 (BuddhaNexus / [SansTib, LREC 2022](https://aclanthology.org/2022.lrec-1.724/) /
 [Vedic similarity measures, NLP4DH 2024](https://aclanthology.org/2024.nlp4dh-1.12/)-style
 million-scale NN search, DharmaMitra stack) gets its own Fable-tier planning handoff
-[H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md),
+[H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md),
 planned from the start, adopted where character-fuzzy saturates (paraphrase-level reuse, W2+).
 **Plan delivered 11-07-2026:**
 [`docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md)
@@ -166,7 +166,7 @@ quote-exact at BORI `07,170.032`; `7,9283` (abravat→abravīt) → D3 escalatio
 **The fitted-index locus census was BLOCKED and deferred** at H610 — no free bulk
 Nilakantha-vulgate e-text existed (BORI-only ⇒ [DEAD_ENDS §8b](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md)).
 **✅ UNBLOCKED and done for book 7 (Droṇa), 12-07-2026, Opus 4.8 (`claude-opus-4-8`),
-[H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/H761-Opus_csl-atlas_mbh_fitted_index_nilakantha_vulgate_unblocked_12.07.26.md).**
+[H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H761-Opus_csl-atlas_mbh_fitted_index_nilakantha_vulgate_unblocked_12.07.26.md).**
 The premise is refuted: a full Nīlakaṇṭha vulgate (83,971 shlokas, 18 parvans) was scraped from
 [sanatana.in](https://sanatana.in/mahabharata/) into CommentaryStrategies
 ([PR #83](https://github.com/gasyoun/CommentaryStrategies/pull/83)). The f7 fitted-index method
@@ -188,7 +188,7 @@ fit the per-parvan index for every book and fold the results into
 book 7 reproduces H761's 90/187 exactly.** Note-locus census 409 corroborated / 787 displaced /
 1,270 absent. Manipal Sastri-Vavilla (D3) / Calcutta OCR fully moot for the locus census.
 
-**W1b — Sprüche verification census — DONE 11-07-2026** ([H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md),
+**W1b — Sprüche verification census — DONE 11-07-2026** ([H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md),
 Sonnet 5 `claude-sonnet-5`, 1 session). **Scope correction: `boesp1` has no typed text** (only a
 scan-page index) — only `Spr. (II)` (6,320 refs extracted) got full text verification; `Spr.`
 (9,557 refs) is range-only. Results: 2,621 corroborated (1,332 exact/771 fuzzy/518 lemma) · 443
@@ -270,14 +270,14 @@ untouched — already at sign-off.
 ## 8. Provenance
 
 Audit + roadmap authored 11-07-2026 by Fable 5 (`claude-fable-5`) under
-[H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md);
+[H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md);
 evidence gathered by three read-only Explore agents over csl-atlas, the org hubs, and
 `csl-orig`, plus live probes of GRETIL, Manipal and the scans org. Program requested by MG
 11-07-2026 (brū / MBH. 7,9283 exemplar; Manipal edition list; Spr. ed.1/ed.2 tracking; "such
 work must be done for other works of MW and PWG as well").
 
 §2a ACL-lineage uplift (rulings R1–R4) added 11-07-2026 by Fable 5 (`claude-fable-5`) under
-[H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md),
+[H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md),
 after an ACL Anthology method crosswalk and an interactive four-question ruling round with MG.
 Improvement analysis + backlog live in the companion metadoc
 [`CITATION_VERIFICATION_ROADMAP_2026_2027.meta.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.meta.md).

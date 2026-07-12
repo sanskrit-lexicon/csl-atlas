@@ -15,7 +15,7 @@ held-out gate.
 
 ## Provenance
 
-Built under [H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/H761-Opus_csl-atlas_mbh_fitted_index_nilakantha_vulgate_unblocked_12.07.26.md)
+Built under [H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H761-Opus_csl-atlas_mbh_fitted_index_nilakantha_vulgate_unblocked_12.07.26.md)
 by Opus 4.8 (`claude-opus-4-8`), 12-07-2026. Reuses the H488 Harivaṃśa fitted-index method
 ([`f7_harivamsa_resolve.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f7_harivamsa_resolve.py):
 `fit_offsets`, `held_out`, `classify`) and the H610 MBH citation extractors

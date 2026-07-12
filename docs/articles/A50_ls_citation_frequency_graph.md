@@ -378,13 +378,13 @@ Zenodo release. `/venue-scout` later.
 ## Provenance
 
 - Scaffolded 06-07-2026 by Opus 4.8 (`claude-opus-4-8`) under
-  [H213](https://github.com/gasyoun/Uprava/blob/main/handoffs/H213-Opus_csl-atlas_ls_citation_graph_canonicalization_06.07.26.md);
+  [H213](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H213-Opus_csl-atlas_ls_citation_graph_canonicalization_06.07.26.md);
   dataset built + merged in [csl-atlas PR #220](https://github.com/sanskrit-lexicon/csl-atlas/pull/220)
   (v1 in [PR #219](https://github.com/sanskrit-lexicon/csl-atlas/pull/219)).
 - Canon topology test (H305) and tradition map (H340) by Fable 5 (`claude-fable-5`),
   07/08-07-2026.
 - Full prose draft 11-07-2026 by Fable 5 (`claude-fable-5`) under
-  [H677](https://github.com/gasyoun/Uprava/blob/main/handoffs/H677-Fable_csl-atlas_a50-citation-graph-prose_11.07.26.md);
+  [H677](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H677-Fable_csl-atlas_a50-citation-graph-prose_11.07.26.md);
   all figures recomputed from the committed dataset in the same pass.
 
 _Dr. Mārcis Gasūns_

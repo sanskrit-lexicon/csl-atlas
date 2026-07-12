@@ -17,9 +17,9 @@ program spine; per-text results live in `data/forensic/*_CENSUS.md` files.
 
 | Date | Model | Handoff | What |
 |---|---|---|---|
-| 11-07-2026 | Fable 5 (`claude-fable-5`) | [H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md) | Initial audit-first roadmap ([PR #245](https://github.com/sanskrit-lexicon/csl-atlas/pull/245)) |
+| 11-07-2026 | Fable 5 (`claude-fable-5`) | [H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md) | Initial audit-first roadmap ([PR #245](https://github.com/sanskrit-lexicon/csl-atlas/pull/245)) |
 | 11-07-2026 | Fable 5 (`claude-fable-5`) | [H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md) | §2a ACL-lineage uplift, rulings R1–R4, this metadoc |
-| 11-07-2026 | Fable 5 (`claude-fable-5`) | [H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md) | R1 embedding-lane plan ([`EMBEDDING_RETRIEVAL_LANE_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md)); backlog rows 1–2 closed, row 5 gate marked satisfied |
+| 11-07-2026 | Fable 5 (`claude-fable-5`) | [H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md) | R1 embedding-lane plan ([`EMBEDDING_RETRIEVAL_LANE_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EMBEDDING_RETRIEVAL_LANE_PLAN.md)); backlog rows 1–2 closed, row 5 gate marked satisfied |
 
 ## The improvement analysis behind §2a (ACL Anthology crosswalk, 11-07-2026)
 
@@ -36,7 +36,7 @@ MG ruled on all four the same day (answers recorded in §2a of the subject doc):
    ([SansTib LREC 2022](https://aclanthology.org/2022.lrec-1.724/) /
    [NLP4DH 2024 Vedic similarity](https://aclanthology.org/2024.nlp4dh-1.12/) /
    BuddhaNexus-class NN search). → **R1**: fuzzy lane in W1a; embedding lane planned in
-   [H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md).
+   [H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md).
 2. **No measured classifier precision.** H488's gates validate the index fit, not the
    per-ref taxonomy; "how often is `absent` really an edition variant?" had no answer.
    Remedy (FEVER annotation discipline): stratified ~200-ref gold set, blind LLM second

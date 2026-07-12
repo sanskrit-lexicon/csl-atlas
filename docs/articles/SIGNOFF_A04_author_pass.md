@@ -4,7 +4,7 @@ _Created: 11-07-2026 · Last updated: 11-07-2026_
 
 Author-voice pass over [`docs/articles/paper_indigenous_microstructure.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_indigenous_microstructure.md)
 ("Grammar Without Tags", P4), executed under handoff
-[H680](https://github.com/gasyoun/Uprava/blob/main/handoffs/H680-Fable_csl-atlas_a04-a05-author-pass_11.07.26.md)
+[H680](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H680-Fable_csl-atlas_a04-a05-author-pass_11.07.26.md)
 by Fable 5 (`claude-fable-5`) via the [`/paper-author-pass`](https://github.com/gasyoun/claude-config/blob/main/commands/paper-author-pass.md) skill,
 paired with the A05 pass ([SIGNOFF_A05_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A05_author_pass.md))
 per the handoff — the two papers shared referee [PR #200](https://github.com/sanskrit-lexicon/csl-atlas/pull/200).

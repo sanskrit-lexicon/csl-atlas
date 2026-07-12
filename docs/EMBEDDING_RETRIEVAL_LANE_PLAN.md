@@ -9,7 +9,7 @@ program's quote-retrieval track — ruling **R1** of
 this lane *planned from the start, adopted where character-fuzzy saturates* (MG: "do Fable
 planning for Embeddings from the start as Dharmamitra has"). This is a plan, not a pipeline:
 no code ships with it. Executed under
-[H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md).
+[H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md).
 
 ## 1. Where character-fuzzy saturates — the measured target population
 
@@ -256,7 +256,7 @@ item); no rebuilding of segmenters/lemmatizers/transcoders the org already owns.
 ## 9. Provenance
 
 Authored 11-07-2026 by Fable 5 (`claude-fable-5`) under
-[H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md)
+[H662](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H662-Fable_csl-atlas_embedding-retrieval-lane-plan_11.07.26.md)
 (minted by H661's §2a ruling round). Evidence: the W1a census + verdict CSV (H610), the five
 merged DharmaMitra integration PRs, [DEAD_ENDS §8/§8b](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md),
 and a same-day web survey of [arXiv 2601.06400](https://arxiv.org/abs/2601.06400),

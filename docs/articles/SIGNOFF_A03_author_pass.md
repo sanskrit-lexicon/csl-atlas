@@ -4,7 +4,7 @@ _Created: 11-07-2026 · Last updated: 11-07-2026_
 
 Author-voice pass over [`docs/articles/paper_three_axes_descent.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_three_axes_descent.md)
 ("Three Axes of Descent", P3), executed under handoff
-[H679](https://github.com/gasyoun/Uprava/blob/main/handoffs/H679-Fable_csl-atlas_a03-descent-axes-author-pass_11.07.26.md)
+[H679](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H679-Fable_csl-atlas_a03-descent-axes-author-pass_11.07.26.md)
 by Fable 5 (`claude-fable-5`) via the [`/paper-author-pass`](https://github.com/gasyoun/claude-config/blob/main/commands/paper-author-pass.md) skill.
 
 This document exists so the bump to 5/5 costs a ~30-minute read rather than a full

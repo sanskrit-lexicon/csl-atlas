@@ -27,11 +27,11 @@ delivers:
 
 Program context: [`docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md)
 §2 (method invariants), §5 (cascade). Executable follow-up:
-[H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md).
+[H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md).
 
 Program context: [`docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md)
 §2 (method invariants), §5 (cascade). Executable follow-up:
-[H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md).
+[H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md).
 
 ## 1. Citation-form census (P0)
 
@@ -234,10 +234,10 @@ cross-check) executed 11–12-07-2026 by Opus 4.8 (`claude-opus-4-8`) over
 [`CommentaryStrategies/mahabharata-nilakantha`](https://github.com/gasyoun/CommentaryStrategies/tree/main/mahabharata-nilakantha)),
 the local [`SamudraManthanam`](https://github.com/gasyoun/SamudraManthanam) GRETIL BORI mirror, and
 [`VisualDCS`](https://github.com/gasyoun/VisualDCS) DCS, under
-[H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md)
-(program [H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md);
-ACL-lineage uplift [H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md);
-book-7 census [H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md)).
+[H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md)
+(program [H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md);
+ACL-lineage uplift [H661](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H661-Fable_csl-atlas_citation-roadmap-acl-uplift_11.07.26.md);
+book-7 census [H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md)).
 The earlier "locus census blocked" verdict (and its
 [`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md)
 §8b entry) is **retracted** — the vulgate exists and the index validated across all 18 parvans.

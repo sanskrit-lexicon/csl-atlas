@@ -14,7 +14,7 @@ Rāmāyaṇa) that reuse the `f8_mbh_*` engine and the R3 benchmark schema.
 
 ## Provenance
 
-Built under [H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md)
+Built under [H610](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H610-Opus_csl-atlas_mbh_citation_census_11.07.26.md)
 by Opus 4.8 (`claude-opus-4-8`), 11-07-2026. Port of the H488 Harivaṃśa method
 ([`f7_harivamsa_*`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f7_harivamsa_resolve.py)).
 Scripts: [`f8_mbh_census.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_census.py),

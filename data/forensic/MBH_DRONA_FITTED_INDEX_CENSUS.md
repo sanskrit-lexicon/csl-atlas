@@ -117,6 +117,6 @@ interpolated offset.
 
 Scripts run from repo root: `python scripts/forensic/f8_mbh_drona_fitted_index.py` (after the
 CommentaryStrategies vulgate scrape). Built under
-[H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/H761-Opus_csl-atlas_mbh_fitted_index_nilakantha_vulgate_unblocked_12.07.26.md).
+[H761](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H761-Opus_csl-atlas_mbh_fitted_index_nilakantha_vulgate_unblocked_12.07.26.md).
 
 _Dr. Mārcis Gasūns_

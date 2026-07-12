@@ -247,7 +247,7 @@ the shared apparatus is accurate. Census + full per-reference resolution:
 [`data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md)
 §6 and
 [`data/forensic/harivamsa_shared_citation_resolution.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/harivamsa_shared_citation_resolution.csv);
-executable path [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md);
+executable path [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md);
 dead-end record [`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md) §8.
 
 ## 7. Reproducibility

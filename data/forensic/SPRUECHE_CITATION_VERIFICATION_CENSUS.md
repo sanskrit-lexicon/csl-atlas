@@ -8,7 +8,7 @@ Böhtlingk's *Indische Sprüche* against the typed digitizations in
 1863–65) and [sanskrit-lexicon-scans/boesp2](https://github.com/sanskrit-lexicon-scans/boesp2)
 (2nd ed., 1870–73). Wave 1b of the
 [Citation Verification Roadmap 2026–2027](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_VERIFICATION_ROADMAP_2026_2027.md)
-§4, run per [H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md).
+§4, run per [H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md).
 
 Deliverable pair: this census + [`SPRUECHE_CITATION_VERIFICATION_VERDICT.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SPRUECHE_CITATION_VERIFICATION_VERDICT.csv)
 (15,877 rows, R3 schema per H602/H661).
@@ -151,6 +151,6 @@ Extracted 11-07-2026 by Sonnet 5 (`claude-sonnet-5`) from
 [`literarysource/pwg/lsextract_pwg_06.txt`](https://github.com/sanskrit-lexicon/literarysource/blob/main/pwg/lsextract_pwg_06.txt) +
 [`sanskrit-lexicon-scans/boesp2`](https://github.com/sanskrit-lexicon-scans/boesp2) `web1/json/*`.
 Minted under [H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md),
-Wave 1b of [H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md).
+Wave 1b of [H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md).
 
 _Dr. Mārcis Gasūns_

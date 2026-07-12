@@ -4,7 +4,7 @@ _Created: 11-07-2026 · Last updated: 11-07-2026_
 
 Author-voice pass over [`docs/articles/paper_citation_registers.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_citation_registers.md)
 ("Two Citation Registers", OBS-C), executed under handoff
-[H682](https://github.com/gasyoun/Uprava/blob/main/handoffs/H682-Fable_Uprava_fable-untouched-next-article_11.07.26.md)
+[H682](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H682-Fable_Uprava_fable-untouched-next-article_11.07.26.md)
 by Fable 5 (`claude-fable-5`) via the [`/paper-author-pass`](https://github.com/gasyoun/claude-config/blob/main/commands/paper-author-pass.md) skill,
 following the same-day A03/A04/A05 passes
 ([SIGNOFF_A04_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A04_author_pass.md)).

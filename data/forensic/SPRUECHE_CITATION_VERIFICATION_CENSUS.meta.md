@@ -17,7 +17,7 @@ text exists for it anywhere in the org). Audience: whoever picks up the roadmap'
 ## Provenance
 
 - **Built:** 11-07-2026, Sonnet 5 (`claude-sonnet-5`), executing
-  [H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md).
+  [H611](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H611-Sonnet_csl-atlas_spruche_citation_verify_11.07.26.md).
 - **Method:** the mission brief asserted both `boesp1` and `boesp2` were "typed editions" — this
   was checked, not assumed, by opening both repos before writing any extraction code; only
   `boesp2` turned out to be. The quoted-pratīka extraction heuristic was iteratively corrected
