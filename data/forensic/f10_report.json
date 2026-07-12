@@ -1,0 +1,96 @@
+{
+  "min_senses": 3,
+  "min_matched": 3,
+  "null_iters": 20,
+  "segmentation": {
+    "mw": "sub-<L> records + <div n=to|P|1>",
+    "pwg": "<div> Bedeutungen",
+    "ap": "U+2219 bullets"
+  },
+  "alignment": "position-blind greedy 1:1 match on {English gloss + Sanskrit referent} token-Jaccard; PWG German rendered de->en offline (argos, cached); citations DELIBERATELY excluded so the result is independent of F5",
+  "pairs": [
+    {
+      "vs": "PWG",
+      "is_null": false,
+      "shared_headwords_ge3_senses": 5179,
+      "scored_headwords": 2451,
+      "mean_sense_order_concordance": 0.7668,
+      "pct_identical_order": 41.9,
+      "mean_shuffled_null": 0.4996,
+      "mean_matched_pairs": 4.63,
+      "mean_match_similarity": 0.2172
+    },
+    {
+      "vs": "AP",
+      "is_null": true,
+      "shared_headwords_ge3_senses": 3686,
+      "scored_headwords": 2507,
+      "mean_sense_order_concordance": 0.7506,
+      "pct_identical_order": 34.3,
+      "mean_shuffled_null": 0.4994,
+      "mean_matched_pairs": 4.55,
+      "mean_match_similarity": 0.3959
+    }
+  ],
+  "petersburg_order": 0.7668,
+  "null_apte_order": 0.7506,
+  "shuffle_floor": 0.4996,
+  "robustness": {
+    "paired": {
+      "headwords_ge3_all_three": 1450,
+      "scored_in_both": 660,
+      "paired_mean_pwg": 0.7161,
+      "paired_mean_ap": 0.7129,
+      "mean_diff_pwg_minus_ap": 0.0032,
+      "pwg_gt_ap": 293,
+      "tie": 83,
+      "pwg_lt_ap": 284,
+      "sign_test_z": 0.37
+    },
+    "sim_floor_sweep": [
+      {
+        "sim_floor": 0.0,
+        "n_paired": 660,
+        "pwg": 0.7161,
+        "ap": 0.7129,
+        "pwg_minus_ap": 0.0032
+      },
+      {
+        "sim_floor": 0.05,
+        "n_paired": 560,
+        "pwg": 0.7212,
+        "ap": 0.7243,
+        "pwg_minus_ap": -0.003
+      },
+      {
+        "sim_floor": 0.1,
+        "n_paired": 373,
+        "pwg": 0.7328,
+        "ap": 0.7383,
+        "pwg_minus_ap": -0.0055
+      },
+      {
+        "sim_floor": 0.15,
+        "n_paired": 214,
+        "pwg": 0.7637,
+        "ap": 0.7359,
+        "pwg_minus_ap": 0.0278
+      },
+      {
+        "sim_floor": 0.2,
+        "n_paired": 76,
+        "pwg": 0.8346,
+        "ap": 0.7302,
+        "pwg_minus_ap": 0.1044
+      },
+      {
+        "sim_floor": 0.3,
+        "n_paired": 22,
+        "pwg": 0.8939,
+        "ap": 0.7138,
+        "pwg_minus_ap": 0.1801
+      }
+    ]
+  },
+  "interpretation": "SENSE order is the fourth Boehtlingk clause ('die Reihenfolge der Bedeutungen einfach abgeschrieben'). MW-vs-PWG concordance is copying only if it clears BOTH the shuffled-sense floor (matching/forced-order artifact) AND the independent Apte control (a shared literal->figurative->technical ordering convention). Read the gradient, not the absolute value."
+}
