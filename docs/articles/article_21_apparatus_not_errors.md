@@ -30,7 +30,10 @@ independently supplies **55%** of the words PWG omits — it inherited the inven
 without copying the blind spots. Where a
 PWG headword is misspelled and MW enters the word at all, MW has the correct form in 98%
 of curated cases (90/92; it lacks the word in the remaining 31 of 123); MW and PWG
-share **zero** documented print errors. Resolving the 565 shared Harivaṃśa references
+share **zero** documented print errors. Nor did MW copy the order of the **meanings** —
+Böhtlingk's fourth charge: it sequences its senses no more like PWG's (0.767) than like the
+independent Apte's (0.751), shared lexicographic convention rather than transcription, with a
+copying residue only in the entries whose definitions MW derived most closely. Resolving the 565 shared Harivaṃśa references
 directly against the Calcutta vulgate both traditions cite corroborates 206 of them at the
 exact cited śloka (≈75× the shuffled null) while turning up no shared mistake. The
 inheritance is of scholarship, not of typesetting. This resolves the size-confounded "MW absorbed 89–94% of PWG" claim (the
@@ -62,7 +65,7 @@ common-error principle used here: under English law "Wiederabdruck von Druckfehl
 demonstrable copied error. Ladislav Zgusta (1988), reviewing the affair, judged it a matter
 of insufficient *acknowledgement* rather than theft — "Monier-Williams ought to have been
 more explicit in his preface." This note adjudicates the 140-year-old charge on the
-digitised editions, clause by clause: apparatus (§3), omission (§3.5), error (§4, §6).
+digitised editions, clause by clause: apparatus (§3), omission (§3.5), sense-order (§3.6), error (§4, §6).
 
 ## 2. Method — a ladder of language-neutral signals
 
@@ -84,6 +87,7 @@ in an untagged indigenous style, not for lack of citations — see
 | **F5** citation-order agreement | worked *from* the article | `scripts/forensic/f5_entry_comparison.py` |
 | **F6** gloss DE→EN (offline MT) | prose translated? | `scripts/forensic/f6_gloss_translation.py` |
 | **F9** shared omission | inventory inheritance, negative-space | `scripts/forensic/f9_shared_omission.py` |
+| **F10** sense-order concordance | order of *meanings* copied? | `scripts/forensic/f10_sense_order.py` |
 | **F4b** shared-error test | copied *mistakes* | `scripts/forensic/f4b_ahlborn_nulltest.py` |
 
 ## 3. What MW inherited — the apparatus
@@ -152,6 +156,34 @@ can independently drop the same rare word — so this corroborates common descen
 delivering the airtight Lachmann proof. It strengthens the **apparatus** side, not the error side
 (full census: [`data/forensic/SHARED_OMISSION_TEST.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SHARED_OMISSION_TEST.md)).
 
+**3.6 Sense order — the fourth clause, measured directly, and it comes out near-null.** §3.4 measured the
+order in which the two works cite their *sources*; Böhtlingk's item #4 was narrower and more literal —
+"die Reihenfolge der **Bedeutungen** einfach abgeschrieben," the order of the **meanings** copied out.
+For every headword both dictionaries carry with ≥3 senses, I extract MW's ordered sense sequence and
+PWG's, align them **cross-lingually by meaning** — each sense reduced to its {English gloss + Sanskrit
+referent} token bag, PWG's German rendered `de→en` by the same offline MT channel as §4.3, citations
+**excluded** so the test is independent of F5 — and score sequence concordance exactly as §3.4 did for
+citations. Over **2,451** shared headwords MW reproduces PWG's sense order at **0.767** concordance
+(41.9% of entries in perfectly identical order). But — unlike the citations — this barely clears the
+**independent Apte control at 0.751**: a differential of just **+0.016**, against the +0.39 gap that the
+citation order showed (§3.4: PWG 0.811 vs Apte 0.42). Both dictionaries order senses far above the 0.50
+shuffled-sense floor, so sense order is *structured* — but it is structured by a **shared lexicographic
+convention** (literal → figurative → technical), not by transcription: MW sequences its meanings barely
+more like Böhtlingk's than like the wholly independent Apte's. Only on the strict "perfectly identical"
+metric does a faint Petersburg residue survive (41.9% vs Apte's 34.3%, +7.6 pts), and the cross-lingual
+match is noisier for PWG (match-similarity 0.22 vs Apte's 0.40), which if anything **depresses** the
+measured MW-vs-PWG value — so 0.767 is a floor and the near-parity with Apte is not a matching artefact.
+A paired within-headword test (n = 660: MW-vs-PWG 0.716 vs Apte 0.713, sign-test *n.s.*) confirms the
+near-parity is not a subset accident, and a match-quality sweep locates the residue precisely: as the
+matches are cleaned up (equalising the noisier PWG arm), the Petersburg excess emerges and grows
+(+0.10 at match-similarity > 0.20) **only** in the entries where MW's gloss most closely echoes PWG's —
+sense order was copied chiefly where MW derived the definition most directly, and convergently
+everywhere else. **On this one clause Böhtlingk largely overreached:** the sense order was not "simply copied" — MW is the author
+of its sense-sequencing as it is of its prose (§4), even as it remains the heir of the citation
+apparatus (§3.4) and inventory (§3.1, §3.5). Read alone, the F5 citation-order proxy would have
+over-attributed this clause; the direct test corrects it (full census:
+[`data/forensic/SENSE_ORDER_TEST.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SENSE_ORDER_TEST.md)).
+
 ## 4. What MW did *not* inherit — the errors
 
 **4.1 The decisive test.** `CORRECTIONS/dictionaries/PWG/ahlborn.txt` is a scholar-curated
@@ -186,9 +218,11 @@ glosses track PWG *least*. The prose is MW's own throughout, technical vocabular
 
 The signals converge on one statement: **MW is a structural copycat of Böhtlingk's apparatus
 and an independent typesetting.** It worked *from* the Petersburg articles — reproducing not
-only the lemma inventory and the textual loci but their **order** within the entry (§3.4),
-the surest sign that the German article lay open on the desk — yet it composed its own English
-prose and, separately keyed, carried over none of the German edition's mechanical errors.
+only the lemma inventory and the textual loci but their **citation order** within the entry (§3.4),
+the surest sign that the German article lay open on the desk — yet the finer-grained order of the
+**meanings** was *not* transcribed (§3.6: MW-vs-PWG 0.767 barely above the independent Apte's 0.751,
+against the +0.39 citation-order gap), it composed its own English prose, and, separately keyed,
+carried over none of the German edition's mechanical errors.
 "Heir of the scholarship, author of the prose." This is the forensic complement to the
 Phase-L0 finding that MW absorbed the Petersburg *content* while recoding its *conventions*
 (PWG→MW convention bootstrap 0.013 vs formatting-lineage edges 0.58–0.81;
@@ -256,9 +290,12 @@ All figures regenerate from `scripts/forensic/` (run `parse_cslorig.py --all` fi
 `scripts/L0/s6_content_lift.py`, over `../csl-orig`, `../CORRECTIONS`, `../csl-corrections`,
 and the sanhw1 snapshot. Datasets: `data/forensic/{citation_pair_overlap,
 shared_rare_citations, homonym_concordance, ahlborn_mw_comparison, shared_corrections,
-shared_omission_test}.csv`
+shared_omission_test, sense_order_test, sense_order_robustness}.csv`
 and the `f*_report.json` files; `data/L0/content_lift.csv`. F9 (shared omission) additionally
-reads the `now-2026` `key1` headword exports from `../SanskritLexicography/HeadwordLists/`. Per-run provenance in the
+reads the `now-2026` `key1` headword exports from `../SanskritLexicography/HeadwordLists/`. F10
+(sense order) renders PWG's German glosses `de→en` with offline argos-translate (one-time model
+install via `scripts/forensic/_setup_argos.py`; cache gitignored + rebuildable, parallel fill via
+`_f10_pretranslate.py`) — the only figure not derived purely from the source text. Per-run provenance in the
 `.source.json` sidecars.
 
 ## References
