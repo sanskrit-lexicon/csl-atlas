@@ -23,7 +23,11 @@ abridgement (PW, 1879–89). *How* it inherited has been asserted but not measur
 six language-neutral signals calibrated across 41 digitised dictionaries plus a
 scholar-curated error list, I show that MW inherited Böhtlingk's **apparatus** — which words to enter,
 which texts to cite **and in what order**, how to divide homonyms — but **not** his
-mechanical errors. Where a
+mechanical errors. The inheritance shows even in the *gaps*: on 6,941 real words attested
+in both indigenous kośas but which PWG may or may not carry, MW's omissions track PWG's
+**≈8× more** than the independent Apte's do (gap-sensitivity 12.3× vs 1.5×), yet MW
+independently supplies **55%** of the words PWG omits — it inherited the inventory backbone
+without copying the blind spots. Where a
 PWG headword is misspelled and MW enters the word at all, MW has the correct form in 98%
 of curated cases (90/92; it lacks the word in the remaining 31 of 123); MW and PWG
 share **zero** documented print errors. Resolving the 565 shared Harivaṃśa references
@@ -44,6 +48,22 @@ independently, but the same error is near-impossible to invent twice; Maas 1958;
 West 1973; for its digital extension, Andrews & Macé 2013). The three claims
 are routinely conflated. I separate them.
 
+These are not abstract categories — they are the very terms of Böhtlingk's own accusation.
+In the preface to volume 4 of the abridged *pw* (1883) he charged Monier-Williams with a
+"hinter dem Rücken … handwerksmässig betriebene Ausbeutung" of the Petersburg lexicon and
+cited **35 passages** in evidence. The contemporaneous Böhtlingk↔Max-Müller correspondence,
+edited by Stache-Weiske (2015), itemises the charge precisely: MW reproduces "**Versehen**
+mannigfacher Art, **Druckfehler** und falsche **Citate**" (errors of every kind, misprints,
+false citations), and — Müller, 11 June 1881 — "**was in Ihrem Werk ausgelaßen** … ist bei
+ihm ausgelaßen … u[nd] **die Reihenfolge der Bedeutungen einfach abgeschrieben**" (shared
+*omissions*, shared *errors*, copied *sense-order*). Müller's proposed proof was the very
+common-error principle used here: under English law "Wiederabdruck von Druckfehlern"
+(reprinting of misprints) constituted piracy, and Böhtlingk set the bar at a *single*
+demonstrable copied error. Ladislav Zgusta (1988), reviewing the affair, judged it a matter
+of insufficient *acknowledgement* rather than theft — "Monier-Williams ought to have been
+more explicit in his preface." This note adjudicates the 140-year-old charge on the
+digitised editions, clause by clause: apparatus (§3), omission (§3.5), error (§4, §6).
+
 ## 2. Method — a ladder of language-neutral signals
 
 MW is English; PWG/PW are German. Gloss prose is therefore a weak, cross-lingual channel;
@@ -63,6 +83,7 @@ in an untagged indigenous style, not for lack of citations — see
 | **F3** gloss-length tracking | translation of prose | `scripts/forensic/f3_gloss.py` |
 | **F5** citation-order agreement | worked *from* the article | `scripts/forensic/f5_entry_comparison.py` |
 | **F6** gloss DE→EN (offline MT) | prose translated? | `scripts/forensic/f6_gloss_translation.py` |
+| **F9** shared omission | inventory inheritance, negative-space | `scripts/forensic/f9_shared_omission.py` |
 | **F4b** shared-error test | copied *mistakes* | `scripts/forensic/f4b_ahlborn_nulltest.py` |
 
 ## 3. What MW inherited — the apparatus
@@ -108,6 +129,28 @@ Petersburg-influenced) > the independent Apte 0.42 (the Apte tail rests on 8 ord
 entries and Benfey on 154 — thin, but the gradient is monotone). MW did not merely consult Böhtlingk's
 sources; it assembled its entries **following Böhtlingk's entry**. This is the strongest
 single copying signal in the suite, and it is structural, not lexical.
+
+**3.5 Shared omission — the inventory backbone, from the negative-space side.** §3.1 shows
+shared *presence*; Böhtlingk's item #1 was shared *absence* — "was in Ihrem Werk ausgelaßen
+ist, ist bei ihm ausgelaßen." I test it on the negative space of the inventory, restricted to
+words that are unambiguously real yet lie **wholly outside the European lineage**: the **6,941**
+headwords attested in **both** indigenous kośas, Śabdakalpadruma and Vācaspatyam (SKD ∩ VCP).
+Among these, whether MW enters a word is **12.3×** more likely when PWG enters it than when PWG
+omits it (MW lacks 3.7% of PWG's holdings but 45.4% of PWG's omissions) — while for the
+independent Apte the same coupling is only **1.5×** (F9). Whether MW enters a real word is thus
+**≈8× more predicted by Böhtlingk's decision** than it is for an independent compiler — a
+negative-space corroboration of §3.1's containment on a set where "MW contains everything"
+cannot trivially hold and with an *independent* dictionary, not a size-correction, absorbing
+the rarity confound (the mirror of the §4.2 "same hard words" trap). The confound runs the safe
+way: MW's Pandit-mediated Indian sources would, if anything, let it share indigenous vocabulary
+*independently* of PWG and *fill* the gaps — weakening the coupling — so 8× is a floor. **Yet MW
+is no mechanical copy of the gaps:** it independently supplies **54.6%** of the real indigenous
+words PWG omits, *more* than the independent Apte's 43.9%. Böhtlingk's rhetorical "what PW omits,
+MW omits" therefore *overstates*: MW inherited the inventory backbone and then extended it. And,
+exactly as with the shared citations (§6), an omission is not a conjunctive error — two compilers
+can independently drop the same rare word — so this corroborates common descent without
+delivering the airtight Lachmann proof. It strengthens the **apparatus** side, not the error side
+(full census: [`data/forensic/SHARED_OMISSION_TEST.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SHARED_OMISSION_TEST.md)).
 
 ## 4. What MW did *not* inherit — the errors
 
@@ -212,8 +255,10 @@ dead-end record [`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun
 All figures regenerate from `scripts/forensic/` (run `parse_cslorig.py --all` first) and
 `scripts/L0/s6_content_lift.py`, over `../csl-orig`, `../CORRECTIONS`, `../csl-corrections`,
 and the sanhw1 snapshot. Datasets: `data/forensic/{citation_pair_overlap,
-shared_rare_citations, homonym_concordance, ahlborn_mw_comparison, shared_corrections}.csv`
-and the `f*_report.json` files; `data/L0/content_lift.csv`. Per-run provenance in the
+shared_rare_citations, homonym_concordance, ahlborn_mw_comparison, shared_corrections,
+shared_omission_test}.csv`
+and the `f*_report.json` files; `data/L0/content_lift.csv`. F9 (shared omission) additionally
+reads the `now-2026` `key1` headword exports from `../SanskritLexicography/HeadwordLists/`. Per-run provenance in the
 `.source.json` sidecars.
 
 ## References
@@ -254,4 +299,14 @@ Monier-Williams, M. (1872). *A Sanskrit-English Dictionary*. Oxford: Clarendon P
 Monier-Williams, M. (1899). *A Sanskrit-English Dictionary, new edition, greatly enlarged
 and improved*. Oxford: Clarendon Press. [MW]
 
+Stache-Weiske, A. (2015). „Man muß zuweilen Insekten mit Kanonen schießen." Max Müllers Rolle
+im Streit zwischen Böhtlingk und Monier-Williams. In: A. A. Esposito, H. Oberlin, B. A. Viveka
+Rai & K. J. Steiner (eds.), *„In ihrer rechten Hand hielt sie ein silbernes Messer mit
+Glöckchen…" — Studies in Indian Culture and Literature*, 323–336. Wiesbaden: Harrassowitz.
+(Documentary reconstruction of the 1881–83 plagiarism dispute from the Böhtlingk↔Max-Müller
+correspondence; source of the itemised charge tested here.)
+
 West, M. L. (1973). *Textual Criticism and Editorial Technique*. Stuttgart: Teubner.
+
+Zgusta, L. (1988). Copying in lexicography: Monier-Williams, Sanskrit Dictionary and other cases
+(Dvaikośyam). *Lexicographica* 4, 145–164.
