@@ -2,8 +2,6 @@
 
 All notable changes to csl-atlas are documented here. Format loosely follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO. The atlas is unversioned (static site); entries are grouped by date.
 
-## [1.0.0] - 2026-06-13
-
 ### 2026-07-13 — F10 sense-order test: Böhtlingk's fourth clause, measured
 
 #### Added
