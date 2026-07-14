@@ -181,7 +181,7 @@ The [Lineage Sankey](tools/lineage-sankey) visualises this collapse — MW's 40,
 - [PAPER.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md) — the full IJL paper draft (~8,700 words; [submission-v1 tag](https://github.com/sanskrit-lexicon/MWS/releases/tag/submission-v1))
 - [IJL_COVER_LETTER.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/IJL_COVER_LETTER.md) — submission cover letter
 - [PAPER_RU.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER_RU.md) — Russian companion paper (Vostok·Oriens target)
-- [All-dictionary coverage and size layer](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/docs/ALL_DICTIONARY_COVERAGE.md) — 43-dictionary extension from block population to size, type inventory, and framework-fit bands
+- [All-dictionary coverage and size layer](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ALL_DICTIONARY_COVERAGE.md) — 43-dictionary extension from block population to size, type inventory, and framework-fit bands
 - [DICT_PROFILE.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/DICT_PROFILE.md) — narrative profile of MW1899
 - [ENTRY_GUIDE.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/ENTRY_GUIDE.md) — how to read an MW entry
 - [MICROANALYSIS.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/MICROANALYSIS.md) — block-level working notes

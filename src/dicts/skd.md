@@ -34,7 +34,7 @@ title: SKD — Śabdakalpadrumaḥ (1822–1858)
 | **Mean entry length** | 532 characters (~7× MW) |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/SKD](https://github.com/sanskrit-lexicon/SKD) |
-| **Source file** | [`csl-orig/v02/skd/skd.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt) |
+| **Source file** | [`csl-orig/v02/skd/skd.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt) |
 
 ## 2. Why the structured-bilingual block framework does not apply
 
@@ -113,9 +113,9 @@ PWG cites SKD as `<ls>ŚKDR.</ls>` 20,109 times — SKD's biggest impact on the 
 ## 8. Data dictionary + reproducibility manifest
 
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/SKD/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory (notes the absence of `<lex>` / `<ls>`)
-- **Source file**: [`csl-orig/v02/skd/skd.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt)
+- **Source file**: [`csl-orig/v02/skd/skd.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py) (note: SKD output is the degenerate case — every column zero)
-- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes SKD metadata; SKD does not use tagged `<ls>` citation blocks)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (includes SKD metadata; SKD does not use tagged `<ls>` citation blocks)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/SKD/blob/master/LICENSE)
 
 ## See also (tools)

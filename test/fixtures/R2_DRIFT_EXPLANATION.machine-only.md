@@ -123,7 +123,7 @@ All checkpoint rows keep `reviewedValue = null`, `reviewer = null`, `reviewedAt 
 ### PWG/PWK division and source-record scope
 
 - Packet: `div-source-scope`
-- Vocabulary: [`docs/R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md)
+- Vocabulary: [`docs/R2_DIV_SOURCE_SCOPE_LABELS.md`](docs/R2_DIV_SOURCE_SCOPE_LABELS.md)
 - Diagnostic rows: 10
 - Checkpoint rows: 2
 - Role: Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.
@@ -131,7 +131,7 @@ All checkpoint rows keep `reviewedValue = null`, `reviewer = null`, `reviewedAt 
 ### Numbered-marker run scope
 
 - Packet: `marker-run-scope`
-- Vocabulary: [`docs/R2_MARKER_RUN_SCOPE_LABELS.md`](R2_MARKER_RUN_SCOPE_LABELS.md)
+- Vocabulary: [`docs/R2_MARKER_RUN_SCOPE_LABELS.md`](docs/R2_MARKER_RUN_SCOPE_LABELS.md)
 - Diagnostic rows: 28
 - Checkpoint rows: 2
 - Role: Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.
@@ -139,7 +139,7 @@ All checkpoint rows keep `reviewedValue = null`, `reviewer = null`, `reviewedAt 
 ### AE reverse-equivalent rank bands
 
 - Packet: `ae-reverse-bands`
-- Vocabulary: [`docs/R2_AE_REVERSE_BAND_LABELS.md`](R2_AE_REVERSE_BAND_LABELS.md)
+- Vocabulary: [`docs/R2_AE_REVERSE_BAND_LABELS.md`](docs/R2_AE_REVERSE_BAND_LABELS.md)
 - Diagnostic rows: 5
 - Checkpoint rows: 2
 - Role: Explains reverse-dictionary drift by equivalent-position rank, direct-equivalent cues, phrase/collocation matches, and broad-headword overmatch controls.
@@ -147,7 +147,7 @@ All checkpoint rows keep `reviewedValue = null`, `reviewer = null`, `reviewedAt 
 ### SKD/VCP iti-unit authority review
 
 - Packet: `indigenous-iti-authority`
-- Vocabulary: [`docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md)
+- Vocabulary: [`docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md)
 - Diagnostic rows: 10
 - Checkpoint rows: 2
 - Role: Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.
@@ -155,7 +155,7 @@ All checkpoint rows keep `reviewedValue = null`, `reviewer = null`, `reviewedAt 
 ### Source gaps, mild drift, and parity controls
 
 - Packet: `source-gap-controls`
-- Vocabulary: [`docs/R2_SOURCE_GAP_CONTROL_LABELS.md`](R2_SOURCE_GAP_CONTROL_LABELS.md)
+- Vocabulary: [`docs/R2_SOURCE_GAP_CONTROL_LABELS.md`](docs/R2_SOURCE_GAP_CONTROL_LABELS.md)
 - Diagnostic rows: 17
 - Checkpoint rows: 2
 - Role: Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.

@@ -33,7 +33,7 @@ title: WIL — Wilson Sanskrit-English Dictionary (1832)
 | **`<ls>L.</ls>` hedges** | 0 (no systematic convention attested in print or digital record) |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/WIL](https://github.com/sanskrit-lexicon/WIL) |
-| **Source file** | [`csl-orig/v02/wil/wil.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt) |
+| **Source file** | [`csl-orig/v02/wil/wil.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/wil/wil.txt) |
 
 ## 2. Structural features (Tier B: in place of profile table)
 
@@ -114,10 +114,10 @@ Full lineage in [WIL/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/WIL/bl
 ## 8. Data dictionary + reproducibility manifest
 
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/WIL/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory
-- **Source file**: [`csl-orig/v02/wil/wil.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/wil/wil.txt)
+- **Source file**: [`csl-orig/v02/wil/wil.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/wil/wil.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
-- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes WIL block matrix data)
-- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/WIL/blob/master/LICENSE)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (includes WIL block matrix data)
+- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/WIL/blob/main/LICENSE)
 
 ## See also (tools)
 

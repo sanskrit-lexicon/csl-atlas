@@ -16,8 +16,8 @@ Negative-result record: [`SanskritLexicography/DEAD_ENDS.md`](https://github.com
 
 ## 1. Citation-form census
 
-Measured 10-07-2026 over [`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt)
-and [`csl-orig/v02/mw/mw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt).
+Measured 10-07-2026 over [`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt)
+and [`csl-orig/v02/mw/mw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw.txt).
 
 | Measure | PWG | MW |
 |---|--:|--:|

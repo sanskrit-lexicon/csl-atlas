@@ -59,7 +59,7 @@ For each record extract:
 Use this link format:
 
 ```text
-https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L{startLine}
+https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw.txt#L{startLine}
 ```
 
 Preserve line numbers. Avoid generating very large Observable-facing JSON if a smaller summary is enough.

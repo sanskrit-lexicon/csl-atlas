@@ -116,7 +116,7 @@ Steps 3–6 (citation-set / entry-similarity / forensic) remain → §4(D).
 - **(B) Write Article 20 / Paper H §5 in full** — all convention-side numbers are in hand;
   the content side should use (A)'s corrected numbers, not raw containment.
 - **(C) Complete the dict set** — investigated 03-07-2026 (Opus 4.8 `claude-opus-4-8`), now
-  **H137** ([`Uprava/handoffs/H137_lrv_fri_patel_annotation_and_dictset_blockers.md`](https://github.com/gasyoun/Uprava/blob/main/handoffs/H137_lrv_fri_patel_annotation_and_dictset_blockers.md)).
+  **H137** ([`Uprava/handoffs/H137-Opus_DO_csl-atlas_lrv_fri_patel_annotation_and_dictset_blockers_03.07.26.md`](https://github.com/gasyoun/Uprava/blob/main/handoffs/H137-Opus_DO_csl-atlas_lrv_fri_patel_annotation_and_dictset_blockers_03.07.26.md)).
   NOT a clean s2*→s3→s5 re-run: it splits three ways.
   - **LRV/FRI** (the only sourced dicts outside Patel gold) — completable now via a human-gate
     annotation of dims 1,3,5,6,7. Interactive sheet built (`scripts/L0/gen_lrv_fri_annotation_sheet.py`

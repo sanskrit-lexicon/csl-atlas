@@ -34,7 +34,7 @@ title: VCP — Vācaspatyam (1873–1884)
 | **Mean entry length** | 494 characters |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/VCP](https://github.com/sanskrit-lexicon/VCP) |
-| **Source file** | [`csl-orig/v02/vcp/vcp.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt) |
+| **Source file** | [`csl-orig/v02/vcp/vcp.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/vcp/vcp.txt) |
 
 ## 2. Genre-bound (the framework does not apply — second confirmation)
 
@@ -123,10 +123,10 @@ The four kosha repos that resolve MW's `<ls>L.</ls>` hedge are *prior to* both S
 ## 8. Data dictionary + reproducibility manifest
 
 - **`DATA_DICTIONARY.md`** — [VCP/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/VCP/blob/docs-pass/DATA_DICTIONARY.md) (notes absence of `<lex>`/`<ls>`)
-- **Source file**: [`csl-orig/v02/vcp/vcp.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt)
+- **Source file**: [`csl-orig/v02/vcp/vcp.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/vcp/vcp.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py) (same degenerate output as SKD)
-- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes VCP metadata; VCP does not use tagged `<ls>` citation blocks)
-- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/VCP/blob/master/LICENSE)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (includes VCP metadata; VCP does not use tagged `<ls>` citation blocks)
+- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/VCP/blob/main/LICENSE)
 
 ## See also (tools + epilogue)
 

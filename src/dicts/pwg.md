@@ -33,7 +33,7 @@ The seven-volume *Sanskrit-Wörterbuch*, compiled by [Otto von Böhtlingk](https
 | **Distinct `<ls>` sigla** | 238,271 |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/PWG](https://github.com/sanskrit-lexicon/PWG) |
-| **Source file** | [`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt) |
+| **Source file** | [`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt) |
 | **CDSL display** | [sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020](https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/index.php) |
 | **Project ROADMAP** | [PWG/ROADMAP.md](https://github.com/sanskrit-lexicon/PWG/blob/docs-pass/ROADMAP.md) — 53 open issues in quarterly plan |
 | **DICT_PROFILE** | [PWG/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/PWG/blob/docs-pass/DICT_PROFILE.md) |
@@ -139,9 +139,9 @@ Per-dict editorial choices for this chapter:
 ## 8. Data dictionary + reproducibility manifest
 
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/PWG/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory for PWG
-- **Source file**: [`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt)
+- **Source file**: [`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py) (functions `classify_type`, `detect_blocks`)
-- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes PWG block matrix data)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (includes PWG block matrix data)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/PWG/blob/docs-pass/LICENSE)
 
 ## See also (tools)

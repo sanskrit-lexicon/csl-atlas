@@ -6,7 +6,7 @@ title: ABCH — Abhidhānacintāmaṇi (Hemacandra)
 
 The classical Sanskrit synonymic kosha by [Hemacandra](https://en.wikipedia.org/wiki/Hemachandra) (~12th century CE). A verse-format synonymic dictionary of the Jain scholarly tradition. **The most-cited kosha in [PWG](pwg)** — cited 17,337 times as `H.` (Hemacandra), making it the single most-referenced source in the entire Großes PW. One of the **four CDSL koshas** included in this atlas for lineage analysis.
 
-**[Source: csl-orig v02/abch/abch.txt](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/abch/abch.txt) · [ABCH GitHub](https://github.com/sanskrit-lexicon/abch)**
+**[Source: csl-orig v02/abch/abch.txt](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/abch/abch.txt) · [ABCH GitHub](https://github.com/sanskrit-lexicon/abch)**
 
 ## Trust Block
 

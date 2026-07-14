@@ -32,7 +32,7 @@ title: CAE — Cappeller 1891
 | **Typographic markers** | `*` 1,370× · `†` 903× · `†...†` (combination) |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/CAE](https://github.com/sanskrit-lexicon/CAE) |
-| **Source file** | [`csl-orig/v02/cae/cae.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt) |
+| **Source file** | [`csl-orig/v02/cae/cae.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/cae/cae.txt) |
 | **CDSL display** | [sanskrit-lexicon.uni-koeln.de/scans/CAEScan/2014](https://www.sanskrit-lexicon.uni-koeln.de/scans/CAEScan/2014/web/index.php) |
 
 ## 2. Structural features (Tier B: in place of profile table)
@@ -111,7 +111,7 @@ Cappeller's dagger marks a *different* phenomenon (Prakrit-translation-only atte
 
 CAE occupies the **typographic-precedent position** in the European-Sanskrit-lexicography lineage. It draws on [PWG 1855–75](pwg) and [PWK 1879–89](pwk) for its lexical material (the subtitle is explicit: "Based Upon the St. Petersburg Lexicons") and on MW 1872 for the *concept* of the lexicographer-only mark (which MW had declared in his preface but not systematically implemented). It synthesises both into a single-volume work that, for the first time, applies the mark at scale. Its direct successor is **[MW 1899](mw)** — which preserves the convention but promotes it from typographic `*` to tagged `<ls>L.</ls>`, increasing scale ~30-fold and integrating it with the named-source citation apparatus.
 
-Full lineage in [CAE/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/CAE/blob/master/DATA_DICTIONARY.md) (note: as of 2026-05-27 the CAE DATA_DICTIONARY does *not* document the asterisk/dagger conventions; this is a tracked editorial gap, [LS_HEDGE_CHECK.md §"Print-preface read"](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/LS_HEDGE_CHECK.md)).
+Full lineage in [CAE/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/CAE/blob/main/DATA_DICTIONARY.md) (note: as of 2026-05-27 the CAE DATA_DICTIONARY does *not* document the asterisk/dagger conventions; this is a tracked editorial gap, [LS_HEDGE_CHECK.md §"Print-preface read"](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/LS_HEDGE_CHECK.md)).
 
 ## 6. Cross-references — divergence/convergence with adjacent chapters
 
@@ -131,11 +131,11 @@ Full lineage in [CAE/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/CAE
 
 ## 8. Data dictionary + reproducibility manifest
 
-- **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/CAE/blob/master/DATA_DICTIONARY.md)** — full tag inventory (note: asterisk/dagger conventions are not yet documented; tracked as editorial gap)
-- **Source file**: [`csl-orig/v02/cae/cae.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/cae/cae.txt)
+- **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/CAE/blob/main/DATA_DICTIONARY.md)** — full tag inventory (note: asterisk/dagger conventions are not yet documented; tracked as editorial gap)
+- **Source file**: [`csl-orig/v02/cae/cae.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/cae/cae.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
-- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes CAE block matrix data)
-- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/CAE/blob/master/LICENSE)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (includes CAE block matrix data)
+- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/CAE/blob/main/LICENSE)
 
 ## See also (tools)
 
