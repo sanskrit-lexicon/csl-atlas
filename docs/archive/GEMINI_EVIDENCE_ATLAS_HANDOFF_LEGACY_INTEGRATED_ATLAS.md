@@ -473,7 +473,7 @@ Each parsed record should include:
   "raw": "...",
   "startLine": 55,
   "endLine": 57,
-  "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L55"
+  "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw.txt#L55"
 }
 ```
 

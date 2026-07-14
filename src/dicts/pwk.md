@@ -33,7 +33,7 @@ title: PWK — Böhtlingk Kürzeres PW (1879–1889)
 | **`<ls>L.</ls>` hedges** | 0 (but typographic `*` prefix used as hedge — see §3) |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/PWK](https://github.com/sanskrit-lexicon/PWK) |
-| **Source file** | [`csl-orig/v02/pw/pw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt) |
+| **Source file** | [`csl-orig/v02/pw/pw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pw/pw.txt) |
 
 ## 2. Profile table (5 primary types × profile)
 
@@ -134,10 +134,10 @@ Full lineage in [PWK/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/PWK/bl
 ## 8. Data dictionary + reproducibility manifest
 
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/PWK/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory
-- **Source file**: [`csl-orig/v02/pw/pw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt)
+- **Source file**: [`csl-orig/v02/pw/pw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pw/pw.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
-- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes PWK/PW block matrix data)
-- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/PWK/blob/master/LICENSE)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (includes PWK/PW block matrix data)
+- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/PWK/blob/main/LICENSE)
 
 ## See also (tools)
 

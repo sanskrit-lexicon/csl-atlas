@@ -32,7 +32,7 @@ The standard single-volume Sanskrit–English reference, edited by [Monier Monie
 | **`<ls>` citations/record** | 1.09 |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/MWS](https://github.com/sanskrit-lexicon/MWS) |
-| **Source file** | [`csl-orig/v02/mw/mw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt) (48.9 MB) |
+| **Source file** | [`csl-orig/v02/mw/mw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw.txt) (48.9 MB) |
 | **CDSL display** | [sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020](https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/index.php) |
 
 ## 2. Profile table (8+1 primary types × 18 blocks)
@@ -155,9 +155,9 @@ Per-dict editorial choices documented in this chapter:
 ## 8. Data dictionary + reproducibility manifest
 
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory, encoding policy, generation pipeline
-- **Source file**: [`csl-orig/v02/mw/mw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt) (commit at fetch time 2026-05-23)
+- **Source file**: [`csl-orig/v02/mw/mw.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw.txt) (commit at fetch time 2026-05-23)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py) (functions `classify_type`, `detect_blocks`)
-- **Cross-dict JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (renders all 9 atlas chapters; MW block matrix is embedded there)
+- **Cross-dict JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (renders all 9 atlas chapters; MW block matrix is embedded there)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/LICENSE) (data); CC-BY-SA-4.0 (this chapter)
 
 ## See also (tools)

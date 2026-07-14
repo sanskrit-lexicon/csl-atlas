@@ -10,7 +10,7 @@ dictionaries. Complements the *forensic* citation work in
 [`data/forensic/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/forensic)
 (shared-rare / shared-erroneous citations) — this is the *frequency* layer.
 
-**Second pass (06-07-2026, [H213](https://github.com/gasyoun/Uprava/blob/main/handoffs/H213-Opus_csl-atlas_ls_citation_graph_canonicalization_06.07.26.md)):**
+**Second pass (06-07-2026, [H213](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H213-Opus_csl-atlas_ls_citation_graph_canonicalization_06.07.26.md)):**
 the MW grammatical-marker pollution is now filtered, the `? [Cologne Addition]`
 unidentified-source placeholder is dropped, three keyless dicts (`ap`, `sch`, `pwkvn`) are
 resolved by borrowing a same-tradition key, and the top author's-genitive / title-synonym
@@ -140,6 +140,6 @@ Requires `csl-orig` and `csl-guides` as siblings of `csl-atlas`. ~1 min.
 **Provenance:** derived from [`csl-orig`](https://github.com/sanskrit-lexicon/csl-orig)
 `<ls>` tags + [`csl-guides`](https://github.com/sanskrit-lexicon/csl-guides) abbreviation keys.
 Spun out of the [`DATA_LAYERS_CENSUS.md`](https://github.com/gasyoun/Uprava/blob/main/DATA_LAYERS_CENSUS.md)
-(06-07-2026); full task in handoff [H213](https://github.com/gasyoun/Uprava/blob/main/handoffs/H213-Opus_csl-atlas_ls_citation_graph_canonicalization_06.07.26.md).
+(06-07-2026); full task in handoff [H213](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H213-Opus_csl-atlas_ls_citation_graph_canonicalization_06.07.26.md).
 
 _Dr. Mārcis Gasūns_

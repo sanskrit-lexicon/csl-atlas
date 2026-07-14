@@ -16,7 +16,7 @@ Not a copy of its content — its purpose, how far to trust each number, and wha
 
 Settles **which text can adjudicate a *wrong* `HARIV. N` citation**, so nobody re-attempts the
 shared-erroneous-citation upgrade of A10 against the wrong witness or via a concordance. Audience:
-whoever picks up [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md),
+whoever picks up [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md),
 and any future reader tempted (as [PR #235](https://github.com/sanskrit-lexicon/csl-atlas/pull/235)
 was) to reach for a vulgate↔critical concordance.
 
@@ -132,7 +132,7 @@ one open item (`HARIV. 19850`'s true reading).
 - Subject's index: [`data/forensic/README.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/README.md)
 - Sibling topic doc: [`CITATION_TAGGING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/CITATION_TAGGING.md)
 - Consumes the census: [`article_21_apparatus_not_errors.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/article_21_apparatus_not_errors.md) §6
-- Executable follow-up: [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md)
+- Executable follow-up: [H488](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H488-Opus_csl-atlas_harivamsa_vulgate_citation_resolution_10.07.26.md)
 - Negative result: [`SanskritLexicography/DEAD_ENDS.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md) §8
 - Infra gotcha: [`Uprava/FINDINGS.md`](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) §55
 

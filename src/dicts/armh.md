@@ -6,7 +6,7 @@ title: ARMH — Abhidhānaratnamālā (Halāyudhakośa)
 
 The classical Sanskrit synonymic kosha by [Halāyudha](https://en.wikipedia.org/wiki/Hal%C4%81yudha) (~10th century CE). A verse-format synonymic dictionary — each entry is part of a verse listing synonyms grouped by semantic field. One of the **four CDSL koshas** included in this atlas for lineage analysis; part of the kosha tradition that [WIL](wil)'s Fort William College pandits drew on to construct the English sense-divisions that [MW](mw) later inherited.
 
-**[Source: csl-orig v02/armh/armh.txt](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/armh/armh.txt) · [ARMH GitHub](https://github.com/sanskrit-lexicon/armh)**
+**[Source: csl-orig v02/armh/armh.txt](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/armh/armh.txt) · [ARMH GitHub](https://github.com/sanskrit-lexicon/armh)**
 
 ## Trust Block
 

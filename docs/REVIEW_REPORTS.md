@@ -68,7 +68,7 @@ Review reports are JSON-first and reproducible. A single review record:
   },
   "sourcePointers": [
     { "dictionary": "mw",  "L": "1767", "line": 6284,
-      "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L6284" },
+      "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw.txt#L6284" },
     { "dictionary": "pwg", "L": "...",  "line": 0, "href": "..." }
   ],
   "machineValue": { "aligned": true, "confidence": 0.42 },

@@ -7,7 +7,7 @@ _Created: 11-07-2026 · Last updated: 11-07-2026_
 **Pass:** author-voice pass per
 [/paper-author-pass](https://github.com/gasyoun/claude-config/blob/main/commands/paper-author-pass.md),
 executed 11-07-2026 by Fable 5 (`claude-fable-5`), handoff
-[H560](https://github.com/gasyoun/Uprava/blob/main/handoffs/H560-Fable_csl-atlas_a10_author_pass_dsh_11.07.26.md)
+[H560](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H560-Fable_csl-atlas_a10_author_pass_dsh_11.07.26.md)
 (re-minted from the collided orphan ID H533).
 **Prior gates, all closed:** hostile referee pass 03-07-2026
 ([A10_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A10_review_fable5.md),

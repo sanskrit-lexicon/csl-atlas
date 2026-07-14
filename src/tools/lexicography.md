@@ -5,7 +5,7 @@ toc: true
 
 # Dictionary Genealogy
 
-First empirical findings from the **lexicography research stream**. Everything here is derived from the canonical [`sanhw1.txt`](https://github.com/sanskrit-lexicon/hwnorm1/blob/master/sanhw1/sanhw1.txt) master headword index (469,844 normalised SLP1 lemmas across 41 dictionaries).
+First empirical findings from the **lexicography research stream**. Everything here is derived from the canonical [`sanhw1.txt`](https://github.com/sanskrit-lexicon/hwnorm1/blob/main/sanhw1/sanhw1.txt) master headword index (469,844 normalised SLP1 lemmas across 41 dictionaries).
 
 This page is companion to the [Lexicography Roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md), which lays out the broader research plan (Phases L0-L10, Papers M, L, H).
 
@@ -143,7 +143,7 @@ Beyond shared *headwords*, the [archived R2 sense-alignment findings](https://gi
 
 ## Method
 
-`sanhw1.txt` is the canonical CDSL master headword index, computed and maintained at [hwnorm1/sanhw1](https://github.com/sanskrit-lexicon/hwnorm1/tree/master/sanhw1) by the Cologne team. It applies headword normalisation per [Patel 2016](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/Patel_2016_Normalizing_headwords.pdf) so that variant spellings of the same lemma collapse.
+`sanhw1.txt` is the canonical CDSL master headword index, computed and maintained at [hwnorm1/sanhw1](https://github.com/sanskrit-lexicon/hwnorm1/tree/main/sanhw1) by the Cologne team. It applies headword normalisation per [Patel 2016](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/Patel_2016_Normalizing_headwords.pdf) so that variant spellings of the same lemma collapse.
 
 For each pair of dictionaries (A, B):
 - **Jaccard distance** = 1 − |A ∩ B| / |A ∪ B|

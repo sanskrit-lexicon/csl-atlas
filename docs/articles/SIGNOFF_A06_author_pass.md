@@ -3,7 +3,7 @@
 _Created: 08-07-2026 · Last updated: 08-07-2026_
 
 **Paper:** [paper_kosha_macrostructure.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_kosha_macrostructure.md) (P6, *Order Is the Dictionary*)
-**Pass:** author-voice sim per [AUTHOR_PASS_SIM_PROTOCOL.md](https://github.com/gasyoun/Uprava/blob/main/docs/AUTHOR_PASS_SIM_PROTOCOL.md), executed 08-07-2026 by Fable 5 (`claude-fable-5`), handoff [H368](https://github.com/gasyoun/Uprava/blob/main/handoffs/H368-Fable_Uprava_author_pass_sim_protocol_batch1_08.07.26.md).
+**Pass:** author-voice sim per [AUTHOR_PASS_SIM_PROTOCOL.md](https://github.com/gasyoun/Uprava/blob/main/docs/AUTHOR_PASS_SIM_PROTOCOL.md), executed 08-07-2026 by Fable 5 (`claude-fable-5`), handoff [H368](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H368-Fable_Uprava_author_pass_sim_protocol_batch1_08.07.26.md).
 
 ## What changed
 

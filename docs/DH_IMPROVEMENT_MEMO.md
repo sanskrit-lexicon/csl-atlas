@@ -3,7 +3,7 @@
 _Created: 07-07-2026 · Last updated: 07-07-2026_
 
 **What this is.** The atlas-facing half of the
-[H271](https://github.com/gasyoun/Uprava/blob/main/handoffs/H271-Fable_csl-corrections_correction-hypotheses-atlas-DH-ACL_07.07.26.md)
+[H271](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H271-Fable_csl-corrections_correction-hypotheses-atlas-DH-ACL_07.07.26.md)
 design memo: how the [`csl-corrections`](https://github.com/sanskrit-lexicon/csl-corrections)
 audit-trail corpus becomes an atlas data feed, plus the external-DH / internal-reuse
 recommendations that raise the atlas's scientific and pedagogical standard. The correction-data
@@ -11,7 +11,7 @@ hypotheses, census figures, ACL method table, and ranked backlog live in the anc
 [`csl-corrections/docs/HYPOTHESES_AND_VIZ_MEMO.md`](https://github.com/sanskrit-lexicon/csl-corrections/blob/main/docs/HYPOTHESES_AND_VIZ_MEMO.md).
 
 **Boundary.** The *general* csl-atlas research agenda is owned by the queued sibling handoff
-[H273](https://github.com/gasyoun/Uprava/blob/main/handoffs/H273-Fable_csl-atlas_atlas_research_agenda_07.07.26.md)
+[H273](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H273-Fable_csl-atlas_atlas_research_agenda_07.07.26.md)
 (its deliverable was absent from `docs/` at write time — verified 07-07-2026). This memo stays
 in the H271 lane: **what correction data supplies to the atlas**, and defers everything else to
 H273. Memo only — no pages, data, or scripts were changed.

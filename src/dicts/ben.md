@@ -33,7 +33,7 @@ title: BEN — Benfey 1866
 | **Typographic markers (preface)** | `*` (fictitious forms) · `†` (no authoritative references) · `§` (compound position) |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/BEN](https://github.com/sanskrit-lexicon/BEN) |
-| **Source file** | [`csl-orig/v02/ben/ben.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt) |
+| **Source file** | [`csl-orig/v02/ben/ben.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ben/ben.txt) |
 
 ## 2. Structural features (Tier B: in place of profile table)
 
@@ -132,10 +132,10 @@ BEN occupies the **IE-comparative-philology position** in the European-Sanskrit-
 ## 8. Data dictionary + reproducibility manifest
 
 - **`DATA_DICTIONARY.md`** — tag inventory (BEN does not have a docs-pass branch as of 2026-05-27; tracked in Phase 4 wave 1 work)
-- **Source file**: [`csl-orig/v02/ben/ben.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt)
+- **Source file**: [`csl-orig/v02/ben/ben.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ben/ben.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
-- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes BEN block matrix data)
-- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/BEN/blob/master/LICENSE)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (includes BEN block matrix data)
+- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/BEN/blob/main/LICENSE)
 
 ## See also (tools)
 

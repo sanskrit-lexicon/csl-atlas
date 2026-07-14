@@ -33,7 +33,7 @@ title: AP — Apte Practical Sanskrit-English Dictionary (1890 / 1957)
 | **`<ls>L.</ls>` hedges** | **1** (only AP and MW have any L. hedge in CDSL) |
 | **License** | CC-BY-SA-4.0 |
 | **Repo** | [sanskrit-lexicon/AP90](https://github.com/sanskrit-lexicon/AP90) (1890 base) and [AP](https://github.com/sanskrit-lexicon/AP) (1957 revised) |
-| **Source file** | [`csl-orig/v02/ap90/ap90.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt) |
+| **Source file** | [`csl-orig/v02/ap90/ap90.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap90/ap90.txt) |
 
 ## 2. Profile table
 
@@ -124,9 +124,9 @@ Full lineage in [AP/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/AP90/bl
 ## 8. Data dictionary + reproducibility manifest
 
 - **[`DATA_DICTIONARY.md`](https://github.com/sanskrit-lexicon/AP90/blob/docs-pass/DATA_DICTIONARY.md)** — full tag inventory
-- **Source file**: [`csl-orig/v02/ap90/ap90.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap90/ap90.txt)
+- **Source file**: [`csl-orig/v02/ap90/ap90.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap90/ap90.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py)
-- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/interoperability-handoff/src/data/cross-dict.json) (includes AP/AP90 block matrix data)
+- **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (includes AP/AP90 block matrix data)
 - **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/AP90/blob/master/LICENSE)
 
 ## See also (tools)

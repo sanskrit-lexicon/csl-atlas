@@ -76,7 +76,7 @@ DH / computational-lexicography methods venue (DSH, *Cultural Analytics*) or a d
 ## Provenance
 
 Scaffolded 06-07-2026 by Opus 4.8 (`claude-opus-4-8`) under handoff
-[H213](https://github.com/gasyoun/Uprava/blob/main/handoffs/H213-Opus_csl-atlas_ls_citation_graph_canonicalization_06.07.26.md);
+[H213](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H213-Opus_csl-atlas_ls_citation_graph_canonicalization_06.07.26.md);
 dataset built + merged in [csl-atlas PR #220](https://github.com/sanskrit-lexicon/csl-atlas/pull/220).
 
 _Dr. Mārcis Gasūns_
