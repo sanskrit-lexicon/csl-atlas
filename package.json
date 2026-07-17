@@ -94,7 +94,10 @@
     "build-root-agreement-kappa": "python scripts/lexico/root_agreement_kappa.py",
     "validate-review-reports": "node scripts/validate-review-reports.mjs",
     "build-divergence-map": "python scripts/lexico/build_divergence_map.py",
-    "build-review-sheets": "node scripts/build-review-sheets.mjs"
+    "install-review-tools": "python -m pip install --upgrade -r requirements-review.txt",
+    "build-review-sheets": "node scripts/build-review-sheets.mjs",
+    "test-review-decisions": "python -m unittest scripts.test_validate_review_decisions",
+    "validate-review-decisions": "python scripts/validate_review_decisions.py"
   },
   "engines": {
     "node": "20.x",

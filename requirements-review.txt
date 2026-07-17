@@ -1,0 +1,3 @@
+# Review-sheet emitter v0.2.0. Pin the immutable release commit so generation
+# cannot silently change when the tag or default branch moves.
+csl-pyutil @ https://github.com/sanskrit-lexicon/csl-pyutil/archive/e93cd8d6bcbeffcbc43a4b2d1698a8b08ff63c7e.zip
