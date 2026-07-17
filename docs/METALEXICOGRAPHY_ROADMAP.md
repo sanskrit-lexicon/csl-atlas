@@ -1,5 +1,8 @@
 # Metalexicography roadmap — measuring digital-edition richness
 
+> Supporting specification. The governing delivery order is
+> [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
+
 _Created: 04-06-2026 · Last updated: 04-06-2026_
 
 **Version**: 1.0 · **Date**: 2026-05-16 · **Owner**: M. Gasūns + Claude Code

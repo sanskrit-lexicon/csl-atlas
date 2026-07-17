@@ -11,6 +11,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
+import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const REVIEW_PATH = path.resolve(process.cwd(), "src", "data", "review", "h5-anomaly-review.json");
@@ -469,6 +470,7 @@ function main() {
   const reviewReport = JSON.parse(fs.readFileSync(REVIEW_PATH, "utf8"));
   const preservedSourceChecks = loadPreservedSourceChecks(JSON_OUT);
   const payload = buildPayload(reviewReport, undefined, preservedSourceChecks);
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(JSON_OUT, fs), payload);
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
   fs.writeFileSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`);
   fs.writeFileSync(MARKDOWN_OUT, buildMarkdown(payload));

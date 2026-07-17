@@ -11,6 +11,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { parseCsv } from "./build-xref-hub-review.mjs";
 import { dictExists, iterateDict } from "./lib/dict-parser.mjs";
+import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const GENERATED_BY = "npm run build-xref-source-check-packet";
@@ -529,8 +530,9 @@ function main() {
   try {
     const hubReview = JSON.parse(fs.readFileSync(HUB_REVIEW_PATH, "utf8"));
     const edgeRows = parseCsv(fs.readFileSync(XREF_EDGES_PATH, "utf8"));
-    const preservedSourcePointers = loadPreservedSourcePointers(JSON_OUT);
-    const payload = buildPayload(hubReview, edgeRows, undefined, preservedSourcePointers);
+  const preservedSourcePointers = loadPreservedSourcePointers(JSON_OUT);
+  const payload = buildPayload(hubReview, edgeRows, undefined, preservedSourcePointers);
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(JSON_OUT, fs), payload);
     fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
     fs.writeFileSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`);
     fs.writeFileSync(MARKDOWN_OUT, buildMarkdown(payload));

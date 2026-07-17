@@ -1,6 +1,24 @@
 # Changelog
 
-All notable changes to csl-atlas are documented here. Format loosely follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO. The atlas is unversioned (static site); entries are grouped by date.
+All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
+
+## [Unreleased]
+
+## [0.2.0] - 2026-07-17
+
+### Stabilization release
+
+- Added `npm run regen-review-artifacts` and `npm run verify`; CI and Pages now
+  run the same deterministic, clean-tree release contract.
+- Regenerated the R2, H5, H4, and xref review evidence, retaining all human
+  review fields and canonical `csl-orig/main` source links.
+- Pinned Node 20/npm 10 and Observable Framework 1.13.4; refreshed compatible
+  transitive dependencies and documented the remaining development-only low
+  advisory.
+- Established `docs/ROADMAP_2026_2027.md` as the governing roadmap and archived
+  completed/superseded roadmap documents.
+
+### Earlier unversioned work included in this baseline
 
 ### 2026-07-13 — F10 sense-order test: Böhtlingk's fourth clause, measured
 

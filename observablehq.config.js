@@ -18,7 +18,7 @@ const BUILD_SHA = (() => { try { return buildSha(); } catch { return "unknown"; 
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 const FOOTER =
   `<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem">` +
-  `<span>Source: CDSL · CC-BY-SA-4.0 · build ${BUILD_SHA} (${BUILD_DATE})</span>` +
+  `<span>csl-atlas v0.2.0 · Source: CDSL · CC-BY-SA-4.0 · build ${BUILD_SHA} (${BUILD_DATE})</span>` +
   `<span>Atlas tooling: Dr. Mārcis Gasūns</span>` +
   `</div>`;
 
