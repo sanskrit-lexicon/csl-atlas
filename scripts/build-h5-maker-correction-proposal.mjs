@@ -10,6 +10,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
+import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const INPUT = path.resolve(process.cwd(), "data", "lexico", "h5_maker_qa_candidates.json");
@@ -359,8 +360,9 @@ function main() {
   }
   try {
     const qaPacket = JSON.parse(fs.readFileSync(INPUT, "utf8"));
-    const preservedTargets = loadPreservedTargets(JSON_OUT);
-    const payload = buildPayload(qaPacket, undefined, preservedTargets);
+  const preservedTargets = loadPreservedTargets(JSON_OUT);
+  const payload = buildPayload(qaPacket, undefined, preservedTargets);
+  payload.generatedAt = generatedAtForPayload(readJsonIfExists(JSON_OUT, fs), payload);
     fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
     fs.writeFileSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`);
     fs.writeFileSync(MARKDOWN_OUT, buildMarkdown(payload));

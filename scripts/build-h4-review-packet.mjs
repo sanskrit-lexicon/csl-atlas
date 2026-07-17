@@ -10,6 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { parseCsv } from "./build-h5-anomaly-review.mjs";
+import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 import { dictExists, iterateDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { slp1_form_key } from "../src/lib/sanskrit-util.js";
@@ -810,8 +811,10 @@ function main() {
   const semanticData = JSON.parse(fs.readFileSync(SEMANTIC_FIELDS_PATH, "utf8"));
   const familyProfiles = JSON.parse(fs.readFileSync(FAMILY_PROFILES_PATH, "utf8"));
   const semanticRows = parseCsv(fs.readFileSync(SEMANTIC_ROWS_PATH, "utf8"));
+  const previousPayload = readJsonIfExists(JSON_OUT, fs);
   const preserved = loadPreservedSourcePointers(JSON_OUT);
   const payload = buildPayload(semanticData, familyProfiles, semanticRows, new Date().toISOString(), preserved);
+  payload.generatedAt = generatedAtForPayload(previousPayload, payload);
   const markdown = buildMarkdown(payload);
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
   fs.mkdirSync(path.dirname(MARKDOWN_OUT), { recursive: true });
