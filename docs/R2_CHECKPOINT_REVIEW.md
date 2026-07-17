@@ -45,13 +45,13 @@ Checkpoint labels in this packet: `target-primary-series`, `same-headword-supple
 
 Source pointers:
 
-- source record 21814 (gam); line 203360; 252 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L203360
-- source record 72578 (gam); line 671452; 88 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L671452
-- source record 119742 (gam); line 1112351; 12 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L1112351
-- source record 21815 (gam); line 205058; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L205058
-- example row gam:pwg:21814:1; line 203360; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L203360
-- example row gam:pwg:21814:10; line 203360; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L203360
-- example row gam:pwg:21814:100; line 203360; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L203360
+- source record 21814 (gam); line 203360; 252 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360
+- source record 72578 (gam); line 671452; 88 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L671452
+- source record 119742 (gam); line 1112351; 12 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1112351
+- source record 21815 (gam); line 205058; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L205058
+- example row gam:pwg:21814:1; line 203360; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360
+- example row gam:pwg:21814:10; line 203360; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360
+- example row gam:pwg:21814:100; line 203360; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L203360
 
 #### `r2-drift:dharma:pwg`
 
@@ -66,11 +66,11 @@ Source pointers:
 
 Source pointers:
 
-- source record 36241 (Darma); line 350536; 14 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L350536
-- source record 76490 (Darma); line 696945; 7 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L696945
-- example row dharma:pwg:36241:1; line 350536; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L350536
-- example row dharma:pwg:36241:10; line 350536; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L350536
-- example row dharma:pwg:36241:11; line 350536; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L350536
+- source record 36241 (Darma); line 350536; 14 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536
+- source record 76490 (Darma); line 696945; 7 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L696945
+- example row dharma:pwg:36241:1; line 350536; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536
+- example row dharma:pwg:36241:10; line 350536; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536
+- example row dharma:pwg:36241:11; line 350536; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L350536
 
 
 ### Numbered-marker run scope
@@ -94,8 +94,8 @@ Checkpoint labels in this packet: `archive-prefix-runs`, `reset-run-expansion`, 
 
 Source pointers:
 
-- source record 4326 (gam); line 29576; 172 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ben/ben.txt#L29576
-- example row gam:ben:4326:1; line 29576; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ben/ben.txt#L29576
+- source record 4326 (gam); line 29576; 172 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L29576
+- example row gam:ben:4326:1; line 29576; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L29576
 
 #### `r2-drift:rama:ben`
 
@@ -110,9 +110,9 @@ Source pointers:
 
 Source pointers:
 
-- source record 12079 (rAma); line 88260; 8 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ben/ben.txt#L88260
-- source record 11986 (rama); line 87379; 7 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ben/ben.txt#L87379
-- example row rama:ben:11986:1; line 87379; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ben/ben.txt#L87379
+- source record 12079 (rAma); line 88260; 8 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L88260
+- source record 11986 (rama); line 87379; 7 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379
+- example row rama:ben:11986:1; line 87379; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L87379
 
 
 ### AE reverse-equivalent rank bands
@@ -136,17 +136,17 @@ Checkpoint labels in this packet: `reverse-high-candidate`, `reverse-medium-revi
 
 Source pointers:
 
-- source record 39 (abroad); line 218; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L218
-- source record 60 (accede); line 348; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L348
-- source record 81 (accrue); line 483; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L483
-- source record 156 (advance); line 926; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L926
-- source record 217 (agree); line 1290; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L1290
-- source record 230 (air); line 1370; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L1370
-- source record 477 (apply); line 2647; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L2647
-- source record 484 (apprehend); line 2701; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L2701
-- example row gam:ae:39:equiv; line 218; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L218
-- example row gam:ae:60:equiv; line 348; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L348
-- example row gam:ae:81:equiv; line 483; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L483
+- source record 39 (abroad); line 218; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L218
+- source record 60 (accede); line 348; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L348
+- source record 81 (accrue); line 483; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L483
+- source record 156 (advance); line 926; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L926
+- source record 217 (agree); line 1290; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1290
+- source record 230 (air); line 1370; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1370
+- source record 477 (apply); line 2647; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L2647
+- source record 484 (apprehend); line 2701; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L2701
+- example row gam:ae:39:equiv; line 218; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L218
+- example row gam:ae:60:equiv; line 348; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L348
+- example row gam:ae:81:equiv; line 483; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L483
 
 #### `r2-drift:dharma:ae`
 
@@ -161,17 +161,17 @@ Source pointers:
 
 Source pointers:
 
-- source record 136 (administer); line 804; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L804
-- source record 173 (affect); line 1040; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L1040
-- source record 644 (attribute); line 3619; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L3619
-- source record 1731 (church); line 9631; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L9631
-- source record 1885 (code); line 10544; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L10544
-- source record 1972 (command); line 11051; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L11051
-- source record 2217 (convert); line 12784; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L12784
-- source record 2341 (court); line 13487; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L13487
-- example row dharma:ae:136:equiv; line 804; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L804
-- example row dharma:ae:173:equiv; line 1040; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L1040
-- example row dharma:ae:644:equiv; line 3619; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ae/ae.txt#L3619
+- source record 136 (administer); line 804; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L804
+- source record 173 (affect); line 1040; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1040
+- source record 644 (attribute); line 3619; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L3619
+- source record 1731 (church); line 9631; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L9631
+- source record 1885 (code); line 10544; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L10544
+- source record 1972 (command); line 11051; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L11051
+- source record 2217 (convert); line 12784; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L12784
+- source record 2341 (court); line 13487; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L13487
+- example row dharma:ae:136:equiv; line 804; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L804
+- example row dharma:ae:173:equiv; line 1040; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L1040
+- example row dharma:ae:644:equiv; line 3619; split: reverse-equivalent: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ae/ae.txt#L3619
 
 
 ### SKD/VCP iti-unit authority review
@@ -195,10 +195,10 @@ Checkpoint labels in this packet: `definition-iti-unit`, `authority-siglum-unit`
 
 Source pointers:
 
-- source record 27030 (Darmma); line 352094; 27 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/vcp/vcp.txt#L352094
-- example row dharma:vcp:27030:1; line 352094; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/vcp/vcp.txt#L352094
-- example row dharma:vcp:27030:10; line 352094; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/vcp/vcp.txt#L352094
-- example row dharma:vcp:27030:11; line 352094; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/vcp/vcp.txt#L352094
+- source record 27030 (Darmma); line 352094; 27 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094
+- example row dharma:vcp:27030:1; line 352094; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094
+- example row dharma:vcp:27030:10; line 352094; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094
+- example row dharma:vcp:27030:11; line 352094; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L352094
 
 #### `r2-drift:dharma:skd`
 
@@ -213,11 +213,11 @@ Source pointers:
 
 Source pointers:
 
-- source record 17668 (DarmmaH); line 206596; 11 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L206596
-- source record 17667 (DarmmaH); line 206577; 4 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L206577
-- example row dharma:skd:17667:1; line 206577; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L206577
-- example row dharma:skd:17667:2; line 206577; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L206577
-- example row dharma:skd:17667:3; line 206577; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L206577
+- source record 17668 (DarmmaH); line 206596; 11 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206596
+- source record 17667 (DarmmaH); line 206577; 4 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577
+- example row dharma:skd:17667:1; line 206577; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577
+- example row dharma:skd:17667:2; line 206577; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577
+- example row dharma:skd:17667:3; line 206577; split: iti-unit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/skd/skd.txt#L206577
 
 
 ### Source gaps, mild drift, and parity controls
@@ -241,10 +241,10 @@ Checkpoint labels in this packet: `under-split-marker-gap`, `nested-marker-gap`,
 
 Source pointers:
 
-- source record 8130 (iti); line 92701; 3 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap/ap.txt#L92701
-- example row iti:ap:8130:1; line 92701; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap/ap.txt#L92701
-- example row iti:ap:8130:2; line 92701; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap/ap.txt#L92701
-- example row iti:ap:8130:preface; line 92701; split: lumped-proxy: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap/ap.txt#L92701
+- source record 8130 (iti); line 92701; 3 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701
+- example row iti:ap:8130:1; line 92701; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701
+- example row iti:ap:8130:2; line 92701; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701
+- example row iti:ap:8130:preface; line 92701; split: lumped-proxy: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L92701
 
 #### `r2-drift:gam:ap`
 
@@ -259,10 +259,10 @@ Source pointers:
 
 Source pointers:
 
-- source record 13831 (gam); line 167512; 15 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap/ap.txt#L167512
-- source record 13731.006 (gam); line 165154; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap/ap.txt#L165154
-- example row gam:ap:13731.006:bundle; line 165154; split: lumped-proxy: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap/ap.txt#L165154
-- example row gam:ap:13831:1; line 167512; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/ap/ap.txt#L167512
+- source record 13831 (gam); line 167512; 15 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L167512
+- source record 13731.006 (gam); line 165154; 1 row(s): https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L165154
+- example row gam:ap:13731.006:bundle; line 165154; split: lumped-proxy: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L165154
+- example row gam:ap:13831:1; line 167512; split: explicit: https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L167512
 
 
 ## Limitations

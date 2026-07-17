@@ -5,14 +5,14 @@
   "evidenceLabel": "source-check-derived",
   "proposalStatus": "proposal-ready",
   "ownerRepo": "csl-atlas",
-  "generatedAt": "2026-07-03T02:22:52.577Z",
+  "generatedAt": "2026-07-17T18:43:48.203Z",
   "generatedBy": "npm run build-h5-maker-correction-proposal",
   "sourceFiles": [
     "data/lexico/h5_maker_qa_candidates.json"
   ],
   "sourcePacket": {
     "path": "data/lexico/h5_maker_qa_candidates.json",
-    "generatedAt": "2026-07-03T02:22:48.903Z",
+    "generatedAt": "2026-07-17T18:43:38.416Z",
     "status": "h5-maker-qa-candidate-packet",
     "reviewStatus": "source-checked",
     "counts": {

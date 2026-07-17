@@ -1,6 +1,6 @@
 {
   "name": "csl-atlas",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Atlas of the Cologne Digital Sanskrit Lexicons — interactive microstructural analysis",
   "type": "module",
   "license": "CC-BY-SA-4.0",
@@ -8,6 +8,8 @@
     "predev": "npm run sync-site-data",
     "dev": "observable preview",
     "test": "node --test",
+    "regen-review-artifacts": "node scripts/regen-review-artifacts.mjs",
+    "verify": "node scripts/verify.mjs",
     "sync-site-data": "node scripts/sync-site-data.mjs",
     "prebuild": "npm run sync-site-data",
     "build": "observable build",
@@ -94,8 +96,13 @@
     "build-divergence-map": "python scripts/lexico/build_divergence_map.py",
     "build-review-sheets": "node scripts/build-review-sheets.mjs"
   },
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
+  "packageManager": "npm@10.8.2",
   "devDependencies": {
-    "@observablehq/framework": "^1.13.0"
+    "@observablehq/framework": "1.13.4"
   },
   "repository": {
     "type": "git",
