@@ -151,10 +151,20 @@ npm run build-sense-depth          # sense-division richness comparison
 npm run build-gender-review        # gender-conflict review queue
 npm run build-source-layer-review  # unknown source-layer review queue
 npm run build-alignment-review     # low-confidence alignment review queue
+npm run install-review-tools       # install immutable csl-pyutil v0.2.0 emitter
+npm run build-review-sheets        # generate four ignored strict HTML sheets
+npm run test-review-decisions      # test strict export validation rules
+npm run validate-review-decisions -- review/csl-atlas-skd-iti_100units_decisions.json
 npm test         # unit tests for the deterministic libs (node --test)
 npm run dev      # starts dev server on http://localhost:3000
 npm run build    # produces dist/ for GitHub Pages
 ```
+
+Review sheets and decision exports stay in the gitignored `review/` directory.
+Strict sheets autosave incomplete drafts locally, but final downloads require
+reviewer `gasyoun`, a vote on every item, and a `corrected-label: rationale`
+note for every rejection. The validator checks exports 1:1 against committed
+source packets before any decision-application work begins.
 
 The full script inventory — many additional derived-data builders, importers, and review-packet generators beyond the ones above — lives in [`package.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/package.json). (See [Observable Framework docs](https://observablehq.com/framework/getting-started) for full reference.)
 
