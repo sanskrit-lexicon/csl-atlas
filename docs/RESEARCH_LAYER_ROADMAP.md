@@ -1,5 +1,8 @@
 # CDSL Research & Practitioner Layer — Roadmap
 
+> Supporting specification. The governing delivery order is
+> [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
+
 _Created: 04-06-2026 · Last updated: 17-06-2026_
 
 **Version**: 1.2 · **Date**: 2026-05-31 · **Owner**: M. Gasūns + Claude

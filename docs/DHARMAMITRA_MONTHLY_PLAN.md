@@ -1,5 +1,8 @@
 # Dharmamitra integration — monthly plan
 
+> Supporting specification. The governing delivery order is
+> [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
+
 A detailed, sequenced programme for integrating [Dharmamitra](https://github.com/dharmamitra)
 assets into the Cologne dictionaries via this atlas. Companion to
 [DHARMAMITRA_INTEGRATION.md](DHARMAMITRA_INTEGRATION.md) (the architecture + opportunity list)

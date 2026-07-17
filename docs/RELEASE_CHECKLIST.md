@@ -2,7 +2,8 @@
 
 Date: 2026-06-03
 
-Use this checklist before publishing or opening a release PR for the review-release roadmap.
+Use this checklist before publishing or opening a release PR. The governing
+delivery order is [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
 
 ## Source Snapshot
 
@@ -12,27 +13,10 @@ Use this checklist before publishing or opening a release PR for the review-rele
 
 ## Rebuild Commands
 
-Run the relevant generators before validation:
+Regenerate the review evidence from one consistent source snapshot:
 
 ```bash
-npm run build-coverage
-npm run build-mw-depth
-npm run build-dict-comparison
-npm run build-citation-apparatus
-npm run build-structural-register
-npm run build-h6-structural-review
-npm run build-sense-depth
-npm run build-gender-review
-npm run build-source-layer-review
-npm run build-alignment-review
-npm run build-semantic-fields
-npm run build-h4-family-profiles
-npm run build-xref-lineage
-npm run build-xref-hub-review
-npm run recover-r2-archive
-npm run build-r2-source-anchors
-npm run build-r2-parser-diagnostics
-npm run build-h5-anomaly-review
+npm run regen-review-artifacts
 ```
 
 ## Validation Gates
@@ -40,18 +24,14 @@ npm run build-h5-anomaly-review
 Required:
 
 ```bash
-npm test
-npm run validate-mw-depth
-npm run validate-dict-comparison
-npm run validate-review-reports
-npm run build
+npm run verify
 ```
 
 ## Review Preservation
 
-- [ ] Inspect one previously human-reviewed item, if any exists.
-- [ ] Rerun that queue generator.
-- [ ] Confirm `reviewStatus`, `reviewedValue`, `reviewer`, `reviewedAt`, and `note` survive.
+- [ ] Confirm `regen-review-artifacts` reports byte-equivalent preserved human fields.
+- [ ] Confirm it is run twice by `verify` without a tracked diff.
+- [ ] Never use the R2 `--reseed` flag in a release workflow.
 - [ ] Confirm no generated source data was manually edited to encode a review decision.
 
 ## Public Site Checks
@@ -66,6 +46,8 @@ npm run build
 - [ ] Dictionary structure pages open: genealogy, convention fingerprints, structural register, semantic fields, cross-reference lineage, R2 sense explorer.
 - [ ] Mobile viewport has no incoherent text overlap.
 - [ ] GitHub Pages assets copied by `postbuild`: `manifest.json`, `sw.js`, `favicon.svg`.
+- [ ] Live footer reports `v0.2.0` and the deployed `main` SHA.
+- [ ] Run the five-part publish-safety gate immediately before publishing.
 
 ## Known Caveats To Keep Visible
 
