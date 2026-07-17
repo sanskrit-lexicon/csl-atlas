@@ -16,8 +16,13 @@ const VALIDATORS = [
 ];
 
 function run(command, args) {
-  const executable = process.platform === "win32" && command === "npm" ? "npm.cmd" : command;
-  const result = spawnSync(executable, args, { cwd: ROOT, encoding: "utf8", stdio: "inherit" });
+  // On Windows, spawnSync cannot directly execute npm.cmd (EINVAL). npm exposes
+  // its CLI script to lifecycle commands, so run it with Node rather than a shell.
+  const executable = command === "npm" && process.env.npm_execpath ? process.execPath : command;
+  const commandArgs = command === "npm" && process.env.npm_execpath
+    ? [process.env.npm_execpath, ...args]
+    : args;
+  const result = spawnSync(executable, commandArgs, { cwd: ROOT, encoding: "utf8", stdio: "inherit" });
   if (result.status !== 0) throw new Error(`${command} ${args.join(" ")} failed with exit code ${result.status}`);
 }
 
