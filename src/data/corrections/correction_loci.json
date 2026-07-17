@@ -12,8 +12,8 @@
   "positionBins": 40,
   "heatmapMinLoci": 30,
   "totals": {
-    "records": 39540,
-    "human": 9487,
+    "records": 39555,
+    "human": 9502,
     "bulk": 30053,
     "dicts": 15,
     "pcResolved": 39531
@@ -149,25 +149,25 @@
     },
     {
       "dict": "ap90",
-      "records": 139,
-      "human": 139,
+      "records": 154,
+      "human": 154,
       "bulk": 0,
       "humanShare": 1,
       "entries": 34882,
-      "per1k": 3.98,
-      "per1kHuman": 3.98,
+      "per1k": 4.41,
+      "per1kHuman": 4.41,
       "pcResolved": 139,
-      "pcResolvedShare": 1,
+      "pcResolvedShare": 0.9026,
       "maxPage": 1196,
       "distinctPages": 94,
       "pageCoverage": 0.0786,
       "firstDate": "2025-01-14",
-      "lastDate": "2026-05-29",
+      "lastDate": "2026-07-12",
       "directives": {
-        "new": 139
+        "new": 154
       },
       "topTagContexts": {
-        "text": 136,
+        "text": 151,
         "k1": 2,
         "ls": 1
       }
@@ -5352,6 +5352,11 @@
       "month": "2026-06",
       "process": "human",
       "count": 25
+    },
+    {
+      "month": "2026-07",
+      "process": "human",
+      "count": 15
     }
   ],
   "limitations": [
@@ -5364,5 +5369,5 @@
   "boundary": [
     "Feed owner is csl-corrections (scripts/build_correction_loci.py); this packet only aggregates it — never re-parses change files. Rendering owner repo csl-atlas."
   ],
-  "generatedAt": "2026-07-08T06:29:13.705Z"
+  "generatedAt": "2026-07-17T19:29:12.354Z"
 }
