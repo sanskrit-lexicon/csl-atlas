@@ -44,9 +44,26 @@ SCHEMA_VERSION = "1.0.0"
 # (the pre-2026-07 rule) missed ~2/3 of them.
 ITI_RE = re.compile(r'(?<![A-Za-z])(?:iti|ity)(?![A-Za-z])')
 
-# Locator-bearing <ls> per paper §3.1: the cleaned citation content contains a
-# numeral (book/chapter/verse/page digits); bare otherwise.
+# Locator-bearing <ls> per paper §3.1: contains a locator token — an arabic
+# digit, OR a lowercase roman numeral (MW writes roman locators lowercase,
+# e.g. `ŚBr. xiv`). Case matters: folding case would misread the hedge
+# siglum `L.` as roman 50 and capitalised sigla (`Vi.`, `Ci.`) as roman
+# numerals, silently reclassifying tens of thousands of bare citations as
+# attested (H1076's first pass). Rule ported verbatim from
+# MWS/papers/p3_citation_registers/register_census/register_census.py
+# (is_locator_token) rather than re-derived.
 DIGIT_RE = re.compile(r"\d")
+ROMAN_RE = re.compile(r"^[ivxlc]+$")
+
+
+def has_locator(citation_text):
+    """True if any whitespace-delimited token in the citation is a locator
+    (arabic digit or lowercase roman numeral, after stripping punctuation)."""
+    for tok in citation_text.split():
+        t = tok.strip(" .,;()[]")
+        if t and (DIGIT_RE.search(t) or ROMAN_RE.match(t)):
+            return True
+    return False
 
 
 def discover_dicts():
@@ -69,7 +86,7 @@ def counts_for(code):
         entries += 1
         citations = e.get("citations") or []
         ls_total += len(citations)
-        ls_locator += sum(1 for c in citations if DIGIT_RE.search(c))
+        ls_locator += sum(1 for c in citations if has_locator(c))
         iti_total += len(ITI_RE.findall(e.get("body") or ""))
     return {"entries": entries, "ls": ls_total, "lsWithLocator": ls_locator,
             "iti": iti_total}
@@ -115,8 +132,9 @@ def build_payload(per_dict):
         "generatedBy": "scripts/obs/citation_register_gaps.py",
         "sourceRoot": "../csl-orig/v02",
         "method": {
-            "registerA": "every <ls>…</ls> element per parse_cslorig.iter_entries; "
-                         "locator-bearing = cleaned citation content contains a digit "
+            "registerA": "every <ls>…</ls> element per parse_cslorig.iter_entries (bare and "
+                         "@n-attributed shapes both matched); locator-bearing = citation "
+                         "contains an arabic digit or lowercase roman-numeral token "
                          "(paper §3.1; an upper bound on resolvability, not verified linkability)",
             "registerB": f"word-boundary iti/ity regex {ITI_RE.pattern!r} over entry bodies — "
                          "not adjacent to a Latin letter, so markup-/punctuation-adjacent "
