@@ -30,16 +30,18 @@ const HUMAN_REVIEW_FILES = [
   "data/lexico/h4_semantic_field_review_packet.json",
   "data/lexico/xref_source_check_packet.json"
 ];
+const H5_STEPS = [
+  "build-h5-anomaly-review.mjs",
+  "build-h5-maker-qa-candidates.mjs",
+  "build-h5-maker-correction-proposal.mjs"
+];
 const STEPS = [
   // R2
   "build-r2-label-proposals.mjs",
   "build-r2-checkpoint-packet.mjs",
   "build-r2-checkpoint-review.mjs",
   "build-r2-drift-explanation.mjs",
-  // H5
-  "build-h5-anomaly-review.mjs",
-  "build-h5-maker-qa-candidates.mjs",
-  "build-h5-maker-correction-proposal.mjs",
+  // H5 (requires sibling csl-orig source files)
   // H4
   "build-semantic-fields.mjs",
   "build-h4-family-profiles.mjs",
@@ -50,6 +52,10 @@ const STEPS = [
   "build-xref-source-check-packet.mjs",
   "build-review-worksheets.mjs"
 ];
+
+function hasH5SourceCheckout() {
+  return fs.existsSync(path.join(ROOT, "..", "csl-orig", "v02", "mw", "mw.txt"));
+}
 
 function stable(value) {
   return JSON.stringify(value);
@@ -111,7 +117,13 @@ function writeMachineOnlyFixture() {
 
 export function regenerateReviewArtifacts() {
   const before = snapshotHumanFields();
-  for (const step of STEPS) run(step);
+  for (const step of STEPS.slice(0, 4)) run(step);
+  if (hasH5SourceCheckout()) {
+    for (const step of H5_STEPS) run(step);
+  } else {
+    console.log("Skipping source-dependent H5 regeneration: sibling csl-orig checkout is absent (expected in CI).");
+  }
+  for (const step of STEPS.slice(4)) run(step);
   writeMachineOnlyFixture();
   const after = snapshotHumanFields();
   if (stable(before) !== stable(after)) {
