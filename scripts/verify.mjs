@@ -16,13 +16,14 @@ const VALIDATORS = [
 ];
 
 function run(command, args) {
-  const result = spawnSync(command, args, { cwd: ROOT, encoding: "utf8", stdio: "inherit", shell: process.platform === "win32" });
+  const executable = process.platform === "win32" && command === "npm" ? "npm.cmd" : command;
+  const result = spawnSync(executable, args, { cwd: ROOT, encoding: "utf8", stdio: "inherit" });
   if (result.status !== 0) throw new Error(`${command} ${args.join(" ")} failed with exit code ${result.status}`);
 }
 
 function assertClean(label) {
-  const result = spawnSync("git", ["diff", "--quiet", "--exit-code"], { cwd: ROOT, encoding: "utf8", shell: process.platform === "win32" });
-  const staged = spawnSync("git", ["diff", "--cached", "--quiet", "--exit-code"], { cwd: ROOT, encoding: "utf8", shell: process.platform === "win32" });
+  const result = spawnSync("git", ["diff", "--quiet", "--exit-code"], { cwd: ROOT, encoding: "utf8" });
+  const staged = spawnSync("git", ["diff", "--cached", "--quiet", "--exit-code"], { cwd: ROOT, encoding: "utf8" });
   if (result.status !== 0 || staged.status !== 0) throw new Error(`${label}: tracked files are not clean.`);
 }
 
