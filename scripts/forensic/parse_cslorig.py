@@ -38,14 +38,25 @@ PARSED_DIR = "data/forensic/parsed"
 
 _ATTR = re.compile(r"<(k1|k2|h|e|pc)>([^<]*)")
 _LID = re.compile(r"<L>([0-9.]+)")
-_LS = re.compile(r"<ls>(.*?)</ls>", re.DOTALL)
+# MW writes <ls> in two shapes: bare `<ls>Pāṇ. vi, 2, 161</ls>` and attributed
+# `<ls n="RV.">vii, 96, 3</ls>` (locator sometimes split further across the
+# attribute: `<ls n="RV. viii, 96,">15</ls>`) — a literal `<ls>` match misses
+# the attributed form entirely (H1086: undercounted MW's <ls> total by
+# 28.6%). `[^"]*` (not `[^>]*`) is required inside the attribute so an
+# embedded literal `>` in a malformed source line (`<ls n=">Dhātup. iii,">4`,
+# mw.txt) doesn't truncate the match early. Pattern reused verbatim from
+# scripts/forensic/f7_harivamsa_resolve.py / MWS's register_census.py.
+_LS = re.compile(r'<ls(?:\s+n="([^"]*)")?\s*>(.*?)</ls>', re.DOTALL)
 _TAG = re.compile(r"<[^>]*>")
 _WS = re.compile(r"\s+")
 
 
-def clean_citation(raw):
-    """Strip inner tags + collapse whitespace from an <ls> payload."""
-    return _WS.sub(" ", _TAG.sub("", raw)).strip()
+def clean_citation(attr_n, content):
+    """Join the @n attribute (if present) with the tag content, then strip
+    inner tags + collapse whitespace — the citation's full text is always
+    @n + content, never content alone (see _LS above)."""
+    full = ((attr_n or "") + " " + (content or "")).strip()
+    return _WS.sub(" ", _TAG.sub("", full)).strip()
 
 
 def iter_entries(path):
@@ -58,7 +69,7 @@ def iter_entries(path):
             if line.startswith("<LEND>"):
                 if inside:
                     text = "".join(body)
-                    cites = [clean_citation(m) for m in _LS.findall(text)]
+                    cites = [clean_citation(n, c) for n, c in _LS.findall(text)]
                     yield {"L": L, "pc": pc, "k1": k1, "k2": k2, "h": h, "e": e,
                            "body": text, "citations": [c for c in cites if c]}
                 inside = False
