@@ -37,8 +37,21 @@ sys.stderr.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "review"
 DATE = "19-07-2026"  # explicit for reproducible artifacts
-REQUIRED_EMITTER_VERSION = "0.3.0"
+#: Minimum, NOT exact: the V1–V8 standard shipped in csl-pyutil 0.3.0, and the
+#: light-mode contrast fix (color-scheme:dark + hardened note textarea) in 0.3.1.
+#: A `>=` check expresses "require at least the standard" so future emitter patch
+#: releases don't hard-fail this builder (the equality-pin trap PR #5 flagged).
+MIN_EMITTER_VERSION = "0.3.1"
 REVIEWER = "gasyoun"
+
+
+def _version_tuple(v):
+    """Parse an X.Y.Z version string into an int tuple for ordering comparison."""
+    out = []
+    for token in str(v).split("."):
+        digits = "".join(ch for ch in token if ch.isdigit())
+        out.append(int(digits) if digits else 0)
+    return tuple(out)
 
 #: V6 -- the standard's taller note box (the emitter's donor default is 44px,
 #: ~2 rows; the standard doubles it). Same value as SanskritLexicography's
@@ -78,9 +91,10 @@ def source_panels(pointers):
 
 
 def emit(stem, title, subtitle, items, filters):
-    if CSL_PYUTIL_VERSION != REQUIRED_EMITTER_VERSION:
+    if _version_tuple(CSL_PYUTIL_VERSION) < _version_tuple(MIN_EMITTER_VERSION):
         raise RuntimeError(
-            f"csl-pyutil {REQUIRED_EMITTER_VERSION} is required; "
+            f"csl-pyutil >= {MIN_EMITTER_VERSION} is required "
+            f"(V1–V8 review-sheet standard + light-mode contrast fix); "
             f"found {CSL_PYUTIL_VERSION}. Run `npm run install-review-tools`."
         )
     config = {
