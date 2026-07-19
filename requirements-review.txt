@@ -1,3 +1,6 @@
-# Review-sheet emitter v0.2.0. Pin the immutable release commit so generation
-# cannot silently change when the tag or default branch moves.
-csl-pyutil @ https://github.com/sanskrit-lexicon/csl-pyutil/archive/e93cd8d6bcbeffcbc43a4b2d1698a8b08ff63c7e.zip
+# Review-sheet emitter v0.3.0 — the 19-07-2026 V1–V8 standard. Pin the
+# immutable commit so generation cannot silently change when the tag or default
+# branch moves. This is v0.3.0 + the __version__-string fix (csl-pyutil#5): the
+# 0.3.0 tag itself still reported 0.2.0 from csl_pyutil/__init__.py, which the
+# REQUIRED_EMITTER_VERSION guard below reads.
+csl-pyutil @ https://github.com/sanskrit-lexicon/csl-pyutil/archive/652e9a6a02d4d70f04614f7fa10173509b59b7ab.zip

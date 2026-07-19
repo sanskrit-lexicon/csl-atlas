@@ -1,4 +1,26 @@
-"""Generate csl-atlas's human-gated sheets with the shared csl-pyutil emitter."""
+"""Generate csl-atlas's human-gated sheets with the shared csl-pyutil emitter.
+
+Sheets sit on the 19-07-2026 org review-sheet standard (V1-V8), ratified from
+the h178_da vote and implemented in csl_pyutil.render_review_sheet v0.3.0.
+Which parts of the standard apply here, and why the rest deliberately does not:
+
+* V3 show_ids, V6 note_min_height_px, V8 save_as -- applied to every sheet via
+  STANDARD_CONFIG below.
+* V4 title_href -- applied per sheet wherever the packet carries a real source
+  link (xref edges, SKD units). The H4 and tradition packets have no per-row
+  URL, so their headers stay plain text rather than inventing a target.
+* V1/V5 rating -- deliberately NOT applied. The rating row scores a judgement
+  on a scale; every csl-atlas sheet is a categorical label decision (confirm
+  the proposed class, or reject and name the correct one in the note). A 1-5
+  score has nothing to measure here, so adding it would ask the reviewer for a
+  number that no downstream consumer reads.
+* V7 mark_cyrillic -- deliberately NOT applied. It exists to separate the
+  Russian text under judgement from surrounding markup and German. In these
+  sheets the content under judgement is Sanskrit/IAST lemmas and Latin class
+  labels; the only Cyrillic is the instruction chrome, which is the same on
+  every card. Verified 19-07-2026: no card content in any of the four packets
+  contains Cyrillic. Highlighting the chrome would be pure noise.
+"""
 import argparse
 import csv
 import html
@@ -14,13 +36,32 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "review"
-DATE = "17-07-2026"  # explicit for reproducible artifacts
-REQUIRED_EMITTER_VERSION = "0.2.0"
+DATE = "19-07-2026"  # explicit for reproducible artifacts
+REQUIRED_EMITTER_VERSION = "0.3.0"
 REVIEWER = "gasyoun"
+
+#: V6 -- the standard's taller note box (the emitter's donor default is 44px,
+#: ~2 rows; the standard doubles it). Same value as SanskritLexicography's
+#: review_sheet_standard.NOTE_MIN_HEIGHT_PX, so sheets look alike across repos.
+NOTE_MIN_HEIGHT_PX = 88
+
+#: V3 + V6 -- applied to every csl-atlas sheet. V8 (save_as) is per-sheet
+#: because the banner names that sheet's own destination file.
+STANDARD_CONFIG = {"show_ids": True, "note_min_height_px": NOTE_MIN_HEIGHT_PX}
 
 
 def read_json(relative):
     return json.loads((ROOT / relative).read_text(encoding="utf-8"))
+
+
+def first_href(pointers):
+    """V4 -- the card header's link target: the first source pointer that
+    carries a real URL. Returns None when the packet has none (H4, tradition),
+    in which case the header stays plain text."""
+    for pointer in pointers or []:
+        if pointer.get("href"):
+            return pointer["href"]
+    return None
 
 
 def source_panels(pointers):
@@ -56,6 +97,9 @@ def emit(stem, title, subtitle, items, filters):
             "require_all_votes": True,
             "require_reject_note": True,
         },
+        # V8 -- banner binding the downloaded decisions file to this sheet.
+        "save_as": f"csl-atlas\\review\\{stem}_decisions.json",
+        **STANDARD_CONFIG,
     }
     OUT.mkdir(exist_ok=True)
     target = OUT / f"{stem}_review.html"
@@ -94,11 +138,15 @@ def xref_items():
             "<p>Подтвердите значимое общее лексическое ребро либо отклоните и укажите в примечании "
             "<code>prefix-convention</code>, <code>normalization-risk</code> или <code>too-sparse</code>.</p>"
         )
-        items.append({"id": row["sampleId"], "filt": "shared-core",
-                      "title": f"{row['sourceLemma']} → {row['target']}",
-                      "badges": row.get("matchedDictionaries", ["MW", "PWG"]), "question": question,
-                      "panels": source_panels(row.get("sourcePointers", [])),
-                      "note_placeholder": "Если отклоняете: corrected-label: краткое основание."})
+        item = {"id": row["sampleId"], "filt": "shared-core",
+                "title": f"{row['sourceLemma']} → {row['target']}",
+                "badges": row.get("matchedDictionaries", ["MW", "PWG"]), "question": question,
+                "panels": source_panels(row.get("sourcePointers", [])),
+                "note_placeholder": "Если отклоняете: corrected-label: краткое основание."}
+        href = first_href(row.get("sourcePointers", []))
+        if href:
+            item["title_href"] = href  # V4
+        items.append(item)
     return items
 
 
@@ -131,6 +179,7 @@ def skd_items():
         )
         panel = [("Источник", f'<p><a href="{href}" target="_blank" rel="noopener">SKD L{row["L"]}</a></p><code>{html.escape(row["text"])}</code>')]
         items.append({"id": item_id, "filt": row["klass"], "title": f"{row['k1']} · единица {row['unitIndex']}",
+                      "title_href": href,  # V4
                       "badges": [row["klass"]], "question": question, "panels": panel,
                       "note_placeholder": "Если отклоняете: corrected-label: краткое основание."})
     return items
