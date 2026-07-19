@@ -7,8 +7,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ### Changed — review sheets on the 19-07-2026 org standard (V1–V8)
 
 - `scripts/build-review-sheets.py` now requires the review-sheet emitter at
-  v0.3.0 (the [19-07-2026 standard](https://github.com/sanskrit-lexicon/csl-pyutil/releases/tag/v0.3.0)
-  ratified from the h178_da vote) and turns on **V3** copyable id chips, **V6**
+  **>= v0.3.1** (the [19-07-2026 standard](https://github.com/sanskrit-lexicon/csl-pyutil/releases/tag/v0.3.0)
+  ratified from the h178_da vote, plus its light-mode contrast fix) and turns on **V3** copyable id chips, **V6**
   taller note boxes, and a **V8** save-path banner on all four sheets, plus
   **V4** clickable card headers on the two packets that carry real source URLs
   (xref edges → `csl-orig` lines, SKD units → `skd.txt` lines). All four sheets
@@ -27,6 +27,13 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   a `__version__`-string fix this port surfaced: the 0.3.0 release still
   reported `0.2.0` from `csl_pyutil/__init__.py`, so the `REQUIRED_EMITTER_VERSION`
   equality guard here could not express "require the standard" at all.
+- **Emitter pin bumped to v0.3.1; the version guard is now a minimum, not an
+  equality.** The old `REQUIRED_EMITTER_VERSION = "0.3.0"` `!=` check hard-failed
+  against any newer emitter — including [csl-pyutil v0.3.1](https://github.com/sanskrit-lexicon/csl-pyutil/releases/tag/v0.3.1),
+  which carries the light-mode contrast fix (dark-only sheets rendered the note
+  box white-bg/light-text — invisible — in a light-mode browser). `requirements-review.txt`
+  now pins the v0.3.1 commit and the guard uses `MIN_EMITTER_VERSION` with a `>=`
+  comparison, so future emitter patch releases no longer break generation.
 
 ## [0.2.0] - 2026-07-17
 
