@@ -131,3 +131,46 @@ Inputs.table(crosswalk, {
   sort: "pd_citations", reverse: true
 })
 ```
+
+## Conclusions — and the dictionary's own clock
+
+The residue matters more because **the dictionary that would define it will not finish for
+centuries.** The Poona Dictionary began publishing in **1976**; fifty years later it has issued
+~6 bound volumes / 6,056 pages / 104,959 lemmas and reached only **a-** to ~`apaca-` — it has
+not finished the *short* vowel `a`, let alone `ā`. At one volume every **8.3 years** against
+its ~37-volume plan, **PD completes in roughly 250 years — around 2280.**
+
+<div style="border-left:3px solid var(--theme-foreground-focus);padding:0.5rem 1rem;margin:1rem 0">
+At today's printing speed, <b>31 volumes remain ≈ 258 years</b> (range ~117 yr at a 20-volume
+scope to ~258 yr at 37). The most telling number is the present: <b>after 50 years, PD is still
+inside the letter a.</b>
+</div>
+
+**A geometric corpus against an arithmetic dictionary.** DCS grew 4.58 M → 5.69 M tokens in five
+years — **+4.45 %/yr, doubling every ~16 years** — while PD spent five decades in one letter.
+The two scale by different laws and do not converge: over one 30-year planning horizon DCS grows
+~×3.7 (to ~21 M tokens, absorbing most of the purāṇas and kāvya it now lacks), while PD adds ~3–4
+volumes and merely finishes `a`. The 75 % residue this page measures is therefore **a moving
+front, not a permanent deficit** — DCS's 2021→2026 Vedic surge is what closing it looks like.
+
+```js
+Plot.plot({
+  height: 150, marginLeft: 96, marginRight: 20,
+  x: {label: "year", domain: [1976, 2290], grid: true, tickFormat: "d"},
+  y: {label: null, domain: ["DCS tokens", "PD (a–)"], padding: 0.5},
+  marks: [
+    Plot.barX([{y:"PD (a–)", x1:2026, x2:2284}], {y:"y", x1:"x1", x2:"x2", fill:"#d95f0e", fillOpacity:0.35}),
+    Plot.barX([{y:"PD (a–)", x1:1976, x2:2026}], {y:"y", x1:"x1", x2:"x2", fill:"#2c7fb8"}),
+    Plot.barX([{y:"DCS tokens", x1:1976, x2:2026}], {y:"y", x1:"x1", x2:"x2", fill:"#2c7fb8", fillOpacity:0.5}),
+    Plot.text([{y:"PD (a–)", x:2155, t:"~258 yr remaining → ~2284"}], {y:"y", x:"x", text:"t", fill:"#d95f0e", fontSize:11}),
+    Plot.ruleX([2026], {strokeDasharray:"3,3", stroke:"currentColor", strokeOpacity:0.4})
+  ]
+})
+```
+
+**What follows.** DCS *attests*; PD *analyses* — a corpus cannot supply PD's historical
+sense-development, so for the 97 % of the lexicon PD has not reached it remains the only project
+attempting it. But the practical conclusion is unambiguous: **don't wait for the dictionary —
+feed the corpus.** The highest-leverage additions to DCS are exactly PD's high-frequency
+uncovered works, and PD's own citation frequency (the residue chart above) is a ready-made
+digitisation priority list. Full argument: [reports/PD_DCS_CORPUS_COVERAGE_2026.md §8](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_DCS_CORPUS_COVERAGE_2026.md).
