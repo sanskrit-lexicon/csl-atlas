@@ -4,6 +4,18 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Changed — PD × DCS coverage: conclusions + completion-horizon analysis (H1336)
+
+- Added §8 Conclusions to
+  [reports/PD_DCS_CORPUS_COVERAGE_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_DCS_CORPUS_COVERAGE_2026.md)
+  and a conclusions block to the `/tools/pd-dcs-coverage` page: at its current
+  printing rate (~6 volumes / 6,056 pp in 50 years, 1976–2026, still inside the
+  letter `a`), the Poona Dictionary completes in **~250 years (≈ 2280)** against a
+  ~37-volume plan. Deep comparison — an **arithmetic** dictionary (~121 pp/yr, flat)
+  against a **geometric** corpus (DCS +4.45 %/yr, doubling every ~16 yr): the residue
+  is a moving front, not a permanent deficit. Recommendation: feed the corpus (digitise
+  PD's high-frequency residue) rather than wait centuries for the dictionary.
+
 ## [0.3.0] - 2026-07-20
 
 ### Added — PD × DCS corpus coverage (H1336)

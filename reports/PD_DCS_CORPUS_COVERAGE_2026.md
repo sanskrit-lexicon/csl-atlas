@@ -252,6 +252,102 @@ quarter of the ground and must be supplemented.
 
 ---
 
+## 8. Conclusions
+
+### 8.1 The finding, in one line
+
+DCS is a **deep sample of the classical core, not a broad sample of the canon.** It holds the
+Vedic-epic-śāstra spine PD leans on hardest (78 % of DCS's own token mass is PD-cited) but only
+a quarter of PD's actual citation practice — the purāṇic, lexicographic and classical-kāvya
+breadth a historical dictionary documents is three-quarters absent.
+
+### 8.2 How long until PD itself finishes — at the current rate, ≈ 250 years
+
+The residue matters more because the dictionary that would define it is advancing at a pace
+that puts its completion **centuries** away. The Poona Dictionary is the slowest-moving major
+lexicographic project in the field, and the arithmetic is stark.
+
+**The record (1976 – 2026, 50 years).** Conceived by S. M. Katre in **1948**, editing begun
+1973, first fascicule **1976**, first bound volume 1978. In the half-century since, PD has
+published **~6 bound volumes / 6,056 pages / 104,959 lemmas**, reaching **a-** to roughly
+**`apaca-` / `anupahve-`** — i.e. it has not yet finished the *short* vowel **a**, and has not
+reached **ā**. (The project's "35 volumes published" figure counts *fascicules*: 6,056 pp ÷ 35
+≈ 173 pp each is fascicule size, not the 500–1,000 pp of a bound volume. The bound work is ~6
+volumes.)
+
+**The rate.** 6 volumes in 50 years = **one volume every 8.3 years** (≈ 121 pages/year).
+
+**The horizon.** Against the project's ~37-volume plan, 31 volumes remain:
+
+| Assumed complete scope | Volumes remaining | Years left (at 8.3 yr/vol) | Completion year |
+|---|---:|---:|---:|
+| 20 volumes (optimistic) | 14 | **~117** | ~2143 |
+| 30 volumes | 24 | **~199** | ~2225 |
+| **37 volumes (project's plan)** | **31** | **~258** | **~2284** |
+| by pages (~37,000 pp target) | ~31,000 pp | ~256 | ~2282 |
+
+**So, at today's printing speed, PD finishes in roughly 250 years — around the year 2280** —
+give or take a century depending on the true final scope. The single most telling number is
+not the horizon but the present: **after 50 years, PD is still inside the letter `a`.**
+
+The scope itself is the largest uncertainty (the "37+" plan is the project's ambition, not a
+measured total), and PD's own density front-loads the letter `a` — the privative `a-`, the
+`ā-` stem, and the prefix families (`adhi-`, `anu-`, `antar-`, `apa-`, `abhi-`, `ava-`) make
+`a`/`ā` the densest stretch of the whole alphabet. So the later letters should move faster per
+letter than `a` did — but the 37-volume plan already prices that in, which is why the
+volume-rate estimate (≈ 258 yr) is more principled than a naïve alphabet-position extrapolation
+(which would read ~3 % of the alphabet in 50 years and overshoot to 1,000+ years).
+
+### 8.3 Deep comparison — an arithmetic dictionary against a geometric corpus
+
+PD and DCS are not merely fast and slow; they scale by **different laws**, and that is the
+real conclusion of this study.
+
+| | Poona Dictionary (PD) | Digital Corpus of Sanskrit (DCS) |
+|---|---|---|
+| Kind | historical **dictionary** — analysis by historical principles | lemmatised **corpus** — attestation |
+| Unit of growth | the hand-edited fascicule | the ingested-and-tagged text |
+| Growth law | **arithmetic** — ~121 pp/yr, flat for 50 years | **geometric** — 4.58 M → 5.69 M tokens in 5 yr = **+4.45 %/yr**, doubling every **~16 years** |
+| 50-year record | a- → ~`apaca-` (still in `a`) | already holds 78 % of PD's citation *mass* |
+| Completion horizon | ~250 years (≈ 2280) | not a fixed target — it accretes |
+
+Project the two over one human planning horizon — **30 years, to ~2056**:
+
+- **PD** adds ~3–4 volumes (0.12 vol/yr × 30). It plausibly *finishes the letter `a`* and
+  begins `ā`/`i` — still under ~30 % of the alphabet.
+- **DCS** grows by ~×3.7 (16-yr doubling), from ~5.7 M to **~21 M tokens**, almost certainly
+  absorbing most of the major purāṇas and kāvya it currently lacks.
+
+**The crossover is structural, not incidental.** A corpus that doubles every 16 years and a
+dictionary that spends 50 years in one letter do not converge — the corpus laps the
+dictionary. Long before PD reaches `k`, DCS will hold the bulk of the very canon PD would cite.
+The residue this study measured — the 75 % of PD's citations DCS lacks — is therefore **not a
+permanent deficit but a moving front**, and DCS's 2021→2026 Vedic surge (Śatapathabrāhmaṇa
+3.7 k → 144 k tokens; +3.8 pp coverage in five years) is exactly what closing that front looks
+like.
+
+### 8.4 What follows — don't wait for the dictionary; feed the corpus
+
+This is not "the corpus makes the dictionary obsolete." DCS *attests*; PD *analyses* — the
+historical sense-development, the etymological argument, the disambiguated homonym. A corpus
+cannot supply that interpretive layer, and for the 97 % of the lexicon PD has not reached, PD
+remains the only project attempting it. But the practical consequence is unambiguous:
+
+1. **For any task needing PD's breadth this generation, supplement DCS — do not wait for PD.**
+   The wait is measured in centuries; the supplement in years.
+2. **Prioritise the residue for digitisation.** The highest-leverage additions to DCS are
+   precisely PD's high-frequency uncovered works — the purāṇas (Padma, Brahmāṇḍa, Bhaviṣya,
+   Mārkaṇḍeya…), the kośa tradition (Vaijayantī, Medinī, Nānārtha), and the classical kāvya
+   (Raghuvaṃśa, Kādambarī, Śiśupālavadha). PD's own citation frequency is a ready-made
+   priority ranking for that effort.
+3. **The two are complements on a shared timeline.** DCS closes coverage from the
+   high-frequency end in years; PD deepens analysis one letter at a time over centuries. The
+   crosswalk in this study is the bridge between them — and the fastest way to raise real
+   coverage of PD's canon is not to hurry the dictionary but to feed its residue into the
+   corpus.
+
+---
+
 _Data: [data/pd/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/pd) · derived from PD
 ([drdhaval2785/SanskritSpellCheck](https://github.com/drdhaval2785/SanskritSpellCheck)) and DCS 2021/2026
 ([gasyoun/VisualDCS](https://github.com/gasyoun/VisualDCS))._
