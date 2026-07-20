@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-07-20
+
 ### Added — PD × DCS corpus coverage (H1336)
 
 - First-ever measurement of what share of the **Poona Dictionary**'s source
