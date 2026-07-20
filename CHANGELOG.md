@@ -4,6 +4,24 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — PD × DCS corpus coverage (H1336)
+
+- First-ever measurement of what share of the **Poona Dictionary**'s source
+  canon the **Digital Corpus of Sanskrit** covers, for PD's published letter-`a-`
+  volumes (107,630 entries, 398,359 citation occurrences). New page
+  **`/tools/pd-dcs-coverage`**, report
+  [reports/PD_DCS_CORPUS_COVERAGE_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_DCS_CORPUS_COVERAGE_2026.md),
+  and data under [data/pd/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/pd)
+  (`pd_siglum_families.tsv`, `pd_dcs_text_crosswalk.tsv`, `pd_dcs_metrics.json`).
+- Headline: DCS is **25 % PD-citation-weighted** but **78 % DCS-token-weighted** —
+  it holds the archaic/classical core (Mahābhārata, Rāmāyaṇa, Vedas) PD leans on,
+  but only ~118 of ~2,445 distinct works PD cites, missing the purāṇic,
+  lexicographic and classical-kāvya breadth (residue is 75 % of PD's primary
+  citation mass). DCS's 2021→2026 growth was concentrated in exactly PD's Vedic
+  core (+3.8 pp token-weighted coverage). Scripts
+  `scripts/pd_extract_sigla.py`, `scripts/pd_dcs_crosswalk.py`. Anchors on DCS's
+  bounded 276-text inventory so every siglum carries an adjudicated `match_type`.
+
 ### Changed — review sheets on the 19-07-2026 org standard (V1–V8)
 
 - `scripts/build-review-sheets.py` now requires the review-sheet emitter at
