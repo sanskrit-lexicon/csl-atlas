@@ -243,10 +243,10 @@ quarter of the ground and must be supplemented.
 - **Locate the printed PD front-matter "List of Works and Abbreviations"** (Deccan College /
   Sanskrit Library / Cologne mirrors) to convert the inferred expansion into a sourced one and
   adjudicate the residue properly. Worth a separate handoff now that the residue size is known.
-- **Two open questions for a human** (H1336 §8): whether `EI.` (Epigraphia Indica,
-  inscriptions) should count as primary or secondary — it is currently secondary; and whether
-  a >200-work residue is a stop-and-report moment — it is reported here in full rather than
-  hidden.
+- **Both H1336 §8 open questions ratified (MG, 20-07-2026):** `EI.` (Epigraphia Indica,
+  inscriptions) counts as **secondary** scholarship — as classified here; and the >200-work
+  residue is reported **in full** (§4) rather than treated as a stop-and-report moment —
+  as done here. No change to the numbers; the classification stands as ruled.
 - **Extend to the rest of PD** when further volumes are digitised, to test whether the a-
   sample is representative.
 
