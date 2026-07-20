@@ -346,6 +346,72 @@ remains the only project attempting it. But the practical consequence is unambig
    coverage of PD's canon is not to hurry the dictionary but to feed its residue into the
    corpus.
 
+### 8.5 Two speeds, and three yardsticks (AP · PWG · MW)
+
+The horizon in §8.2 has two free variables — the **printing rate** and the true **final
+scope** — and both can be pinned against the three completed Sanskrit dictionaries that already
+span the whole alphabet: **AP** (Apte 1890), **PWG** (Böhtlingk–Roth, the *grosses*
+Petersburger Wörterbuch), and **MW** (Monier-Williams 1899). Their sorted headword lists let us
+locate PD's frontier (`apaca-`) inside a *finished* dictionary and read off, exactly, how much
+is done and how much is left.
+
+**Method.** In each dictionary's Sanskrit-collated unique-headword list
+([HeadwordLists/now-2026/](https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/now-2026),
+SLP1 key1), the line number of `apaca` is the count of headwords sorting at or before PD's
+frontier. PD's own count in that range is its published lemma total, 104,959.
+
+**How far is PD, measured against a finished dictionary?**
+
+| Reference (whole alphabet) | Total headwords | In `a-`…`apaca-` | PD has reached | Left ahead |
+|---|---:|---:|---:|---:|
+| AP — Apte 1890 | 88,867 | 5,414 | **6.1 %** | 93.9 % |
+| PWG — Böhtlingk–Roth (gr.) | 106,082 | 4,519 | **4.3 %** | 95.7 % |
+| MW — Monier-Williams 1899 | 194,084 | 7,856 | **4.1 %** | 95.9 % |
+
+The three agree: after 50 years PD has traversed only **~4–6 % of the alphabetical span** a
+complete Sanskrit dictionary covers. **~94–96 % lies ahead.**
+
+**How much denser is PD where it has covered?** This is why 4 % of the alphabet took 50 years:
+
+| Reference | Headwords in `a-`…`apaca-` | PD lemmas, same range | PD is denser by |
+|---|---:|---:|---:|
+| MW | 7,856 | 104,959 | **13.4 ×** |
+| AP | 5,414 | 104,959 | **19.4 ×** |
+| PWG | 4,519 | 104,959 | **23.2 ×** |
+
+The single most vivid measure of PD's ambition: **its coverage of just `a-` through `apaca-`
+already holds as many lemmas (104,959) as the *entire* Petersburger Wörterbuch (106,082), more
+than the *entire* Apte (88,867), and 54 % of the *entire* Monier-Williams (194,084)** — for
+about 4 % of the alphabet. Per printed headword, PD carries roughly **13–23 ×** the granularity
+of any completed dictionary: every homonym split, every attested compound and derivative, each
+with its historical citations.
+
+**The two-speed horizon.** With scope now anchored two ways — the project's own **~37-volume
+plan** (~1,009 pp/volume → ~37,300 pp total) versus **holding PD's current MW-relative density**
+across the rest of the alphabet (~0.77 pp per MW headword → ~149,600 pp total) — and the rate at
+the historical **121 pp/yr** versus a hypothetical post-2019 **200 pp/yr**:
+
+| Completion year | @ 121 pp/yr (50-yr average) | @ 200 pp/yr (accelerated) |
+|---|---:|---:|
+| **Model A — 37-volume plan** (~31,300 pp left) | **≈ 2284** | **≈ 2182** |
+| **Model B — current density held** (~143,600 pp left) | ≈ 3211 | ≈ 2744 |
+
+Two things fall out. First, **scope dominates rate**: choosing between the volume-plan and the
+density-held model moves the finish by ~900–1,000 years, far more than the printing speed does.
+Second, **even a 65 % speed-up barely dents the horizon** — 200 pp/yr instead of 121 buys ~100
+years on the optimistic plan and ~470 on the density model, but completion stays *centuries*
+away either way. The constraint is not laziness; it is that PD is an order of magnitude denser
+than any dictionary that has ever been finished. That density is exactly why §8.4's conclusion
+holds: the corpus (DCS) is the only bridge available on a human timescale, and PD's enduring
+value is **depth in what it has covered**, not breadth any time soon.
+
+> **Benchmark caveats.** "Lemmas" (PD, `sanhw1`) and "unique headwords" (AP/PWG/MW key1 lists)
+> count in slightly different registers, so the density multipliers are directional, not exact —
+> but the order of magnitude, and the "PD's `a-` ≈ all of PWG" statement, are robust across all
+> three references. The AP list count (88,867) is itself high versus the printed Apte and is used
+> only for the internally-consistent coverage-% and ratio. Frontier taken as `apaca-` (H1336 §6);
+> the alternative `anupahve-` frontier sits ~100 headwords earlier and moves nothing material.
+
 ---
 
 _Data: [data/pd/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/pd) · derived from PD
