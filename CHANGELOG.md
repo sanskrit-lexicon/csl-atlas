@@ -15,6 +15,12 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   against a **geometric** corpus (DCS +4.45 %/yr, doubling every ~16 yr): the residue
   is a moving front, not a permanent deficit. Recommendation: feed the corpus (digitise
   PD's high-frequency residue) rather than wait centuries for the dictionary.
+- Added §8.5 (report) + a benchmark block (page): PD's frontier `apaca-` located inside
+  the finished AP/PWG/MW headword lists. PD has reached only **4–6 % of the alphabet**
+  (MW 4.1 %, PWG 4.3 %, Apte 6.1 %) yet its `a-`…`apaca-` alone (104,959 lemmas) already
+  holds **as many entries as the entire PWG** and 54 % of all MW — PD is **13–23× denser**
+  than any completed dictionary. Two-speed horizon: at 121 / 200 pp/yr PD finishes ~2284 /
+  ~2182 (37-volume plan) or ~3211 / ~2744 (current density held). Scope dominates rate.
 
 ## [0.3.0] - 2026-07-20
 

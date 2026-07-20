@@ -168,6 +168,50 @@ Plot.plot({
 })
 ```
 
+### Three yardsticks — AP, PWG, MW
+
+Locate PD's frontier (`apaca-`) inside three *finished* Sanskrit dictionaries and the horizon
+sharpens. After 50 years PD has reached only **4–6 % of the alphabetical span** a complete
+dictionary covers — yet its coverage of just `a-`…`apaca-` (104,959 lemmas) already holds **as
+many entries as the entire Petersburger Wörterbuch**, exceeds all of Apte, and is 54 % of all
+Monier-Williams. Per headword PD is **13–23× denser** than any completed dictionary.
+
+```js
+const bench = [
+  {d:"MW · Monier-Williams", whole:194084, done:7856, dens:13.4},
+  {d:"PWG · Petersburg (gr.)", whole:106082, done:4519, dens:23.2},
+  {d:"AP · Apte", whole:88867, done:5414, dens:19.4}
+];
+```
+
+```js
+Plot.plot({
+  marginLeft: 150, height: 190, x: {label: "headwords / lemmas", grid: true},
+  y: {label: null, domain: bench.map(b=>b.d)},
+  marks: [
+    Plot.barX(bench, {y:"d", x:"whole", fill:"#9e9e9e", fillOpacity:0.35}),
+    Plot.ruleX([104959], {stroke:"#d95f0e", strokeWidth:2}),
+    Plot.text([{x:104959, y:bench[0].d, t:"PD's a– alone = 104,959"}], {x:"x", y:"y", text:"t", fill:"#d95f0e", dy:-14, textAnchor:"middle", fontSize:11}),
+    Plot.text(bench, {y:"d", x:"whole", text:d=>d.whole.toLocaleString(), textAnchor:"start", dx:4, fontSize:10, fill:"currentColor"}),
+    Plot.ruleX([0])
+  ]
+})
+```
+
+<div style="font-size:0.85rem;color:var(--theme-foreground-muted);margin:-0.5rem 0 0.5rem">Grey = each finished dictionary's whole-alphabet headword count; the orange line is what PD holds under <b>a-</b> alone. Coverage so far: MW 4.1 %, PWG 4.3 %, Apte 6.1 %.</div>
+
+**Two speeds, by what year does PD finish?** Anchoring scope two ways — the ~37-volume plan vs
+holding PD's current density — and the rate at 121 pp/yr (its 50-year average) vs a post-2019
+200 pp/yr:
+
+| Completion year | @ 121 pp/yr | @ 200 pp/yr |
+|---|---:|---:|
+| 37-volume plan (~31k pp left) | **~2284** | **~2182** |
+| current density held (~144k pp left) | ~3211 | ~2744 |
+
+Scope moves the finish by ~900 years; a 65 % speed-up buys only ~100–470. Completion stays
+centuries out either way — the constraint is PD's density, not its pace.
+
 **What follows.** DCS *attests*; PD *analyses* — a corpus cannot supply PD's historical
 sense-development, so for the 97 % of the lexicon PD has not reached it remains the only project
 attempting it. But the practical conclusion is unambiguous: **don't wait for the dictionary —
