@@ -108,3 +108,12 @@ Grep `package.json` `scripts` for the exact one you need — do not guess a name
   `npm run sync-site-data`, explicitly gitignored; regenerate, don't hand-edit.
 - TEI/OntoLex/SHACL/RDF standards work — that's `csl-standards`' territory per
   `docs/BOUNDARY_RULES.md`, not this repo's.
+
+## Operational hazard notes
+
+Destructive-risk facts for this repo (do-not-rerun scripts, decoys, traps) are
+registered centrally in an org-private hub
+([Uprava DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md),
+org members only); the public-safe subset is mirrored in the generated block of
+[AGENTS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/AGENTS.md). Check them
+before running anything that writes.
