@@ -27,6 +27,19 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   **long-dictionary league table** (PWG 23 yr · OED 71 · CAD 90 · Grimm 123 · SAOB 130 · WNT 134
   · TLL ~156 · **PD ~308⁺, still in `a`**) — no dictionary ever finished took >~180 yr; PWG did
   all of Sanskrit in 23. PD is on course to be the longest lexicographic project in history.
+- Added §8.9 (report) + `a`-analysis & expanded league (page): **is `a` the hardest letter?**
+  By initial-letter count `a` is only 4th in MW/PWG (`s`>`p`>`v`>`a`) but **1st in Apte (14.3 %)**
+  — the privative/samāsa intuition holds in the compound-heavy tradition; PD's hardest letters
+  (`s`,`p`,`v`) are still ahead. Expanded the peer table into **Sanskrit/Indo-Aryan** (WIL, GST,
+  PWG, PW, MW, KEWA, EWA) vs **century-long giants**: seven Sanskrit dicts finished in 10–27 yr
+  (PW: 151,349 lemmas in 10), while **Goldstücker's 1856 remake of Wilson died in `a` at 6,761
+  entries** — PD is that project reborn at ~16× density. Per-letter chart added.
+- Quantified the samāsa question: **83 % of MW's `a`/`ā`-entries (19,601 of 23,590) are
+  dash-marked compounds**, only ~17 % simple stems — `a` is a letter of combinations, not roots.
+  Added **BORI's Prakrit dictionary** (CDPL) to the comparison: same city (Pune), founding editor
+  A. M. Ghatage *also edited PD*, started 1988 (younger than PD) yet already `a`→`ujjhittu` (past
+  all vowels, ~33,600 lexemes, bounded ~90k plan, finish ~2090) — a natural experiment showing a
+  Sanskrit-family dictionary finishes only if it bounds its scope.
 
 ## [0.3.0] - 2026-07-20
 

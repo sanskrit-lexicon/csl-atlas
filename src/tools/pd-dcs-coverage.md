@@ -229,15 +229,84 @@ alphabetical mid-point sits at `p`, not `k`, because Sanskrit is so front-loaded
 families. *(Vowel milestones are firm; consonant ones are upper bounds — the 37-volume plan
 compresses them.)*
 
+### Is `a` the hardest letter?
+
+A good question — is `a` hardest because it holds all the `a-`/`an-` privative compounds
+(`a-dharma` "non-dharma", `an-artha` "misfortune"), the negated samāsas buildable from almost
+any word? The headword lists answer precisely — and it depends on the dictionary:
+
+```js
+const letters = [
+  {l:"s", n:25075}, {l:"p", n:21051}, {l:"v", n:18598}, {l:"a", n:18463, hi:true},
+  {l:"k", n:12997}, {l:"m", n:11180}, {l:"ś", n:10215}, {l:"n", n:8330},
+  {l:"d", n:7793}, {l:"t", n:5421}
+];
+```
+
+```js
+Plot.plot({
+  height: 220, marginLeft: 30, x: {label: "initial letter (Monier-Williams)"}, y: {label: "headwords", grid: true},
+  marks: [
+    Plot.barY(letters, {x:"l", y:"n", fill: d=>d.hi?"#d95f0e":"#2c7fb8", sort:{x:"-y"}}),
+    Plot.text(letters, {x:"l", y:"n", text:d=>d.n.toLocaleString(), dy:-6, fontSize:9, fill:"currentColor"}),
+    Plot.ruleY([0])
+  ]
+})
+```
+
+In **MW and PWG**, `a` is only the **4th**-largest letter — the sibilant **`s`** wins, then
+**`p`** and **`v`**. But in **Apte** (the compound-inclusive practical dictionary) **`a` is #1
+at 14.3 %**, exactly because the privative and prefix families (`a-`, `an-`, `ā-`, `adhi-`,
+`anu-`…) import a negated or prefixed twin of much of the language under `a`. So the samāsa
+intuition is real — but `s`/`p`/`v` carry their own huge prefix families (`sam-`, `pra-`,
+`vi-`…) and rival it. **The sting: PD's hardest letters are still ahead** — `s`, `p` and `v`
+each hold *more* MW headwords than the `a` that has already cost fifty years.
+
+**And how many `a`-entries are actually compounds? — 83 %.** MW's printed-form list marks every
+compound joint with a dash: of the 23,590 `a`/`ā`-entries, **19,601 (83 %) are dash-marked
+samāsas**, only ~4,000 simple stems. `a` is overwhelmingly a letter of *combinations*, not roots
+— which is the deepest reason a maximalist dictionary drowns in it: it isn't defining ~4,000
+words, it's documenting ~20,000 compounds, each with its own attestations.
+
 ### The long-dictionary league table
 
-No dictionary ever finished has taken more than ~180 years. PD is projected at 200–1,200 — and
-the *complete* Petersburg Wörterbuch did all of Sanskrit in **23 years**.
+**Same language, done fast.** Seven Sanskrit/Indo-Aryan dictionaries were *completed* in 10–27
+years — Böhtlingk's *kürzere Fassung* logged **151,349 lemmas across the whole alphabet in ten
+years**. Only the two that chose exhaustive historical detail stall:
 
-| Dictionary | Language | Span | Years | Status |
+| Sanskrit / Indo-Aryan | Span | Years | Lemmas | Status |
+|---|---|---:|---:|---|
+| WIL · Wilson | 1819–1832 | ~13 | 43,939 | ✓ |
+| **GST · Goldstücker** | 1856–1864 | ~8 | 6,761 | ✗ **abandoned in `a`** |
+| PWG · Böhtlingk–Roth (gr.) | 1855–1875 | 20 | 106,083 | ✓ |
+| PW · Böhtlingk (kürzere) | 1879–1889 | **10** | 151,349 | ✓ |
+| MW · Monier-Williams | 1872–1899 | ~27 | 194,084 | ✓ |
+| KEWA · Mayrhofer (etym.) | 1956–1980 | 24 | — | ✓ |
+| EWA · Mayrhofer (etym.) | 1986–2001 | 15 | — | ✓ |
+| BORI Prakrit Dict. (CDPL) | 1988–~2090 *(proj.)* | ~102 | 33,600 *(a→`u`)* | ⧗ past the vowels |
+| **PD · Poona Dictionary** | **1976–~2284⁺** | **~308⁺** | 104,959 *(a-)* | ⧗ **still in `a`** |
+
+**The graveyard of `a`.** Sanskrit is not the problem — exhaustive detail is, and the proof is
+120 years old: **Goldstücker's 1856 remake of Wilson sank into the letter `a`, published 6,761
+entries, and was abandoned there at his death.** PD is the same project reborn at ~16× the
+density (104,959 vs 6,761 for `a`) — the same undertaking, the same letter, the same trap.
+
+**The controlled experiment — two dictionaries, one city, one editor.** Across town in the same
+Pune, the **Bhandarkar Institute** (BORI) *Comprehensive & Critical Dictionary of the Prakrit
+Languages* began in **1988** — twelve years *younger* than PD — and has already reached **`a`
+through `ujjhittu`**: all the vowels and into the consonants, ~33,600 lexemes against a bounded
+~90,000-entry plan (finish ~2090). Its founding editor was **A. M. Ghatage — the very scholar who
+edited PD's first volumes.** Same man, same city, same decade; the difference is *scope*. BORI
+bounded its corpus and cleared the vowels in 38 years; PD chose the unbounded maximum and in 50
+has not left `a`. A great Sanskrit-family dictionary finishes only if it refuses to let `a`
+become infinite.
+
+**PD's real peers are the century-long giants** — and it is projected to outlast them all. No
+dictionary ever *finished* took more than ~180 years:
+
+| Century-long giants | Language | Span | Years | Status |
 |---|---|---|---:|---|
-| PWG · Böhtlingk–Roth | Sanskrit | 1852–1875 | **23** | ✓ |
-| OED, 1st edition | English | 1857–1928 | 71 | ✓ |
+| OED, 1st ed. | English | 1857–1928 | 71 | ✓ |
 | CAD · Chicago Assyrian | Akkadian | 1921–2011 | 90 | ✓ |
 | Grimm · Deutsches Wb. | German | 1838–1961 | 123 | ✓ (rev. 2016) |
 | SAOB · Swedish Academy | Swedish | 1893–2023 | 130 | ✓ |
