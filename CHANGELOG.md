@@ -4,6 +4,27 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — Evidence-grading deep manual (H1408)
+
+- **[docs/EVIDENCE_GRADING_DEEP_MANUAL.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_GRADING_DEEP_MANUAL.md)**
+  — the end-to-end operator/scholar manual for the evidence-grading methodology and
+  human-review workflow: the four-label evidence ladder (and the `evidenceLevel` vs
+  `evidenceLabel` enforcement split), provenance envelopes, Chart Trust Blocks (with a
+  61/64-page coverage + 8-item drift census), the review-queue/packet/auto-triage
+  machinery, human-decision persistence across rebuilds (`reviewId`/`checkpointId`
+  overlays; preservation invariant re-proved live: plain `build-r2-checkpoint-review`
+  → 10/10 decisions preserved, byte-identical output), the hypothesis registry, the
+  P1–P6/A-paper pipeline, the from-scratch statistics engines (IRLS+CR1,
+  degree-preserving permutation nulls, exact small-n permutation), a design-rationale
+  chapter, the consolidated incident corpus (A10 uncommitted-generator, YAT
+  retraction→un-retraction, H2 pseudoreplication, overlay-wipe class, R2 archive
+  loss, extraction under-counts), a failure-mode table, and the 93-script operator
+  appendix. Sibling metadoc
+  [docs/EVIDENCE_GRADING_DEEP_MANUAL.meta.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_GRADING_DEEP_MANUAL.meta.md)
+  carries the `LAST_VERIFIED` block (joins the org `manual_staleness.py` estate) and a
+  9-item improvement backlog. Closes deep-manual gap-census rows 11+12. Authored by
+  Fable 5 (`claude-fable-5`), H1408.
+
 ### Added — Macrostructure anatomy waves B & D + Wave-A dash-truth (H1423 executed)
 
 - **Wave B — entry-size decay in real time.** PWG's `<pc>`→volume→year mapping lets all 123,366
