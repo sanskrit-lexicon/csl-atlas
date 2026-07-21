@@ -284,7 +284,7 @@ years**. Only the two that chose exhaustive historical detail stall:
 | MW · Monier-Williams | 1872–1899 | ~27 | 194,084 | ✓ |
 | KEWA · Mayrhofer (etym.) | 1956–1980 | 24 | — | ✓ |
 | EWA · Mayrhofer (etym.) | 1986–2001 | 15 | — | ✓ |
-| BORI Prakrit Dict. (CDPL) | 1988–~2090 *(proj.)* | ~102 | 33,600 *(a→`u`)* | ⧗ past the vowels |
+| BORI Prakrit Dict. (CDPL) | 1988–ongoing | 38+ | 33,600 *(3 vols, a→`u`)* | ⧗ far from finished |
 | **PD · Poona Dictionary** | **1976–~2284⁺** | **~308⁺** | 104,959 *(a-)* | ⧗ **still in `a`** |
 
 **The graveyard of `a`.** Sanskrit is not the problem — exhaustive detail is. The proof is
@@ -304,7 +304,8 @@ families plus the privative, so 83 % of its entries are compounds, not roots.
 Pune, the **Bhandarkar Institute** (BORI) *Comprehensive & Critical Dictionary of the Prakrit
 Languages* began in **1988** — twelve years *younger* than PD — and has already reached **`a`
 through `ujjhittu`**: all the vowels and into the consonants, ~33,600 lexemes against a bounded
-~90,000-entry plan (finish ~2090). Its founding editor was **A. M. Ghatage — the very scholar who
+~90,000-entry plan — **still far from finished** (~37 % after 38 years), but *moving through the
+alphabet*, which is the point. Its founding editor was **A. M. Ghatage — the very scholar who
 edited PD's first volumes.** Same man, same city, same decade; the difference is *scope*. BORI
 bounded its corpus and cleared the vowels in 38 years; PD chose the unbounded maximum and in 50
 has not left `a`. A great Sanskrit-family dictionary finishes only if it refuses to let `a`
@@ -349,6 +350,34 @@ difference isn't that it's faster — it's that it *abandons the model whose clo
 measuring*. PD may be the last of the great print historical dictionaries; DCS welded to a lexical
 layer is the Sanskrit form of what comes after. *(Exact TamiLex figures pending — the site returned
 a transient error at time of writing; the comparison turns on paradigm, not dates.)*
+
+### Who finishes a dictionary — and why
+
+Are Germans simply the best dictionary-makers, and Indians confined to the kośa? The record says
+no — it is about **method, institution and scope**, not nation.
+
+- **The real German trait is finishability, not maximalism.** The German/European school dominated
+  historical lexicography through its academies and a discipline Mayrhofer put as a rule: *do not
+  begin a dictionary you cannot finish.* **PD is not German** — it is a Deccan-College institutional
+  project on the *slip-archive* method (slips now merely scanned); its problem is unbounded scope,
+  not any imported method.
+- **The "entries shrank over time" pattern is European, not Indian.** The [entry-size study](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/LETTER_ANATOMY_AND_ENTRY_SIZE_2026.md)
+  found the decay in **PWG (−0.19), PWK (−0.34), Grassmann (−0.20)** (and it runs through KEWA/EWA
+  and the big non-Sanskrit dictionaries) — while the two Indian encyclopaedias **SKD and VCP show
+  none** (ρ≈0.00). The belief that funding-cut compression was an Indian failing is backwards.
+- **The finished dictionaries were near-solo.** **V. S. Apte** (Fergusson College, Pune) compiled
+  a complete, still-standard Sanskrit–English dictionary *almost alone* and **died at 34** (1858–92),
+  two years after it appeared; Böhtlingk carried the *kürzere Fassung* single-handed. A bounded
+  scope + a single vision finishes; a large institution + an unbounded scope (PD) does not.
+- **Indians did not do "only kośas."** The kośa is a sophisticated genre, not a ceiling — and
+  beyond it Apte, **SKD** and **VCP** are *finished* Indian encyclopaedias. The struggling projects
+  are the modern *institutional* ones (BORI far from done; the Madras Tamil Lexicon now remade in
+  Hamburg as TamiLex).
+
+**Verdict:** the great dictionaries came from wherever **bounded scope met a discipline of
+finishability** — most often the German academy, and the lone scholar who scoped to one lifetime.
+PD is stuck because it is *unbounded and institutional*, not because it is Indian; the reef named
+`a` sinks the exhaustive of every nation alike.
 
 **What follows.** DCS *attests*; PD *analyses* — a corpus cannot supply PD's historical
 sense-development, so for the 97 % of the lexicon PD has not reached it remains the only project
