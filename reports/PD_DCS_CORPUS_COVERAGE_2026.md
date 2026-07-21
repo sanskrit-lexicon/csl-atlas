@@ -478,7 +478,7 @@ historical monuments** of other traditions (same ambition, different language).
 | MW · Monier-Williams | Skt→Eng | 1872–1899 | ~27 | 194,084 | ✓ complete |
 | KEWA · Mayrhofer (etymological) | Skt→Ger | 1956–1980 | 24 | — | ✓ complete |
 | EWA · Mayrhofer (etymological) | Ind.-Ar.→Ger | 1986–2001 | 15 | — | ✓ complete |
-| BORI Prakrit Dict. (CDPL) | Prakrit→Eng | 1988–~2090 *(proj.)* | ~102 | 33,600 *(a→`u`)* | ⧗ through the vowels |
+| BORI Prakrit Dict. (CDPL) | Prakrit→Eng | 1988–ongoing | 38+ | 33,600 *(3 vols, a→`u`)* | ⧗ far from finished |
 | **PD · Poona Dictionary** | Skt→Eng | **1976–~2284⁺** | **~308⁺** | 104,959 *(a- only)* | ⧗ **still in `a`** |
 
 The contrast could not be sharper. Böhtlingk's *kürzere Fassung* (PW) documented **151,349
@@ -498,13 +498,14 @@ the same letter, the same trap, now a century and a half deep.
 **The controlled experiment — two dictionaries, one city, one editor.** The sharpest comparison
 is not across centuries but across town. In the *same* Pune, the **Bhandarkar Oriental Research
 Institute**'s *Comprehensive and Critical Dictionary of the Prakrit Languages* (CDPL) began in
-**1988** — twelve years *younger* than PD — and has already published 3 volumes covering **`a`
-through `ujjhittu`**: all the vowels and into the consonants, ~33,600 lexemes against a *bounded*
-plan of ~90,000 entries over ~450 texts (finish projected ~2090). Its founding general editor was
-**A. M. Ghatage — the very scholar who edited PD's first volumes.** The same man, the same city,
-the same decade, ran both projects; the difference is *scope*. BORI bounded its corpus (~450
-texts, terser articles) and in 38 years cleared the entire vowel series; PD chose the unbounded
-historical maximum and in 50 years has not left `a`. It is as close to a natural experiment in
+**1988** — twelve years *younger* than PD — and has published 3 volumes covering **`a` through
+`ujjhittu`**: all the vowels and into the consonants, ~33,600 lexemes against a *bounded* plan of
+~90,000 entries over ~450 texts. It is **still far from finished** — only ~37 % of its own planned
+entries after 38 years — but it is *moving through the alphabet*, which is the whole point. Its
+founding general editor was **A. M. Ghatage — the very scholar who edited PD's first volumes.** The
+same man, the same city, the same decade, ran both projects; the difference is *scope*. BORI
+bounded its corpus (~450 texts, terser articles) and in 38 years cleared the entire vowel series;
+PD chose the unbounded historical maximum and in 50 years has not left `a`. It is as close to a natural experiment in
 lexicographic ambition as the field offers, and its verdict is unambiguous: **a great
 Sanskrit-family dictionary finishes only if it refuses to let the letter `a` become infinite.**
 
@@ -635,6 +636,62 @@ comes after — and DCS, welded to a lexical layer, is the Sanskrit form it woul
 > and are described here at the level of paradigm, which is what the comparison turns on. The
 > concrete figures should be confirmed against [tamilex.uni-hamburg.de](https://www.tamilex.uni-hamburg.de)
 > and folded in._
+
+### 8.11 Who finishes a dictionary — and why (a measured note)
+
+A question hangs over the league table: **are Germans simply the best dictionary-makers, and
+Indians confined to the kośa?** The record rewards a careful answer, and it is not the
+essentialist one — it is about *method, institution, and scope*, not nation.
+
+**What is true.** The dominant force in historical lexicography *was* the 19th–20th-century
+German/European philological school — its academies, its historical-principles method, and above
+all a **discipline of finishability**. The landmarks cluster there (Böhtlingk & Roth, Mayrhofer,
+Grimm, the TLL), and Manfred Mayrhofer — who wrote on lexicographic method — embodies the school's
+first rule: *do not begin a dictionary you cannot finish.* That rule, not any national genius, is
+the operative variable. A project scoped to completion completes.
+
+**What is not true — three corrections this study forces.**
+
+1. **PD is not a "German" project, and not "German maximalism."** PD has nothing German in it. It
+   is a Deccan-College institutional dictionary that still works by the **slip-archive** method —
+   now with the slips merely *scanned* — and its problem is unbounded scope and multi-generational
+   committee continuity, not any imported method. Goldstücker, used above as the death-in-`a`
+   precedent, is a weak nationality argument in either direction: he **died in 1872**, so his
+   dictionary stopped for want of a life, not for want of discipline.
+2. **The measurable "entries shrank as the work wore on" pattern is a European trait, not an Indian
+   one.** The H1416 study
+   ([LETTER_ANATOMY_AND_ENTRY_SIZE_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/LETTER_ANATOMY_AND_ENTRY_SIZE_2026.md))
+   found the decay strong in **PWG (−0.19), PWK (−0.34) and Grassmann (−0.20)** — the German
+   Petersburg/Grassmann line — and it runs through Mayrhofer's KEWA/EWA and the great non-Sanskrit
+   dictionaries besides; the two Indian encyclopaedias it was *believed* to afflict, **SKD and VCP,
+   show none** (ρ ≈ 0.00). If compression-under-time is a failing it is Europe's — and it may in
+   fact be the finishability-discipline *in action*, editors tightening articles to reach the end.
+3. **The finished dictionaries were often near-solo, not institutional.** This is the deepest
+   point. **V. S. Apte** — professor at Fergusson College, **Pune** — compiled a complete,
+   still-standard Sanskrit–English dictionary (AP90, 1890, ~34k entries) **almost alone** and
+   **died at 34** (1858–1892), two years after it appeared; **Böhtlingk** carried the *kürzere
+   Fassung* essentially single-handed. What finishes is a *single sustained vision with a bounded
+   scope*; what does not is the *large institution with an unbounded one* — which is exactly PD.
+
+**And the Indian record is not "only kośas."** The indigenous **kośa** (Amarakośa and its kin) is
+a sophisticated genre in its own right — a versified, memorizable, poetics-oriented lexicon built
+for a manuscript culture with no alphabetical page-lookup: a different tool for a different
+information ecology, not a lesser one. Beyond it, Indian scholars produced *finished* alphabetical
+encyclopaedias — **Apte**, and the two great 19th-century Sanskrit-to-Sanskrit works
+**Śabdakalpadruma (SKD)** and **Vācaspatyam (VCP)**, both completed by single pandits and both in
+this study's own dataset. It is the modern *institutional* Indian projects that go harder: the
+BORI Prakrit dictionary is **far from finished**, the Madras **Tamil Lexicon is now being wholly
+remade in Hamburg** (it becomes TamiLex, §8.10), and among the modern bilingual efforts Apte
+largely stands alone as a completion.
+
+**The measured verdict.** The great dictionaries came from wherever **bounded scope met a
+discipline of finishability** — historically, most often the German/European academy (hence so
+many German landmarks); and, at the individual scale, the lone scholar who scoped to what one life
+could complete (Apte, Böhtlingk). It is a fact about method, institutions and scope, not about
+nations. PD is stuck not because it is Indian but because it is *unbounded and institutional* — a
+German academy that adopted PD's plan would be stuck too, and an Indian scholar who adopted
+Böhtlingk's discipline (as Apte did) finishes. The kośa is a genre, not a ceiling; and the reef
+named `a` sinks the exhaustive of every nation alike.
 
 ---
 

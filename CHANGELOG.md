@@ -4,6 +4,18 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — §8.11 "Who finishes a dictionary — and why" (measured note, H1336)
+
+- New report §8.11 + page section answering "are Germans the best dictionary-makers and Indians
+  confined to the kośa?" — measured, non-essentialist: it is method/institution/scope, not nation.
+  The real German trait is **finishability** (Mayrhofer's rule), not maximalism; **PD is not German**
+  (Deccan-College slip-archive project, slips now scanned). The entry-size decay is a **European**
+  trait (PWG/PWK/Grassmann/KEWA/EWA + big non-Sanskrit dicts) — **SKD/VCP show none**. The finished
+  dictionaries were near-solo: **V. S. Apte** made a complete Skt-Eng dictionary almost alone and
+  **died at 34**; Böhtlingk carried the *kürzere Fassung* single-handed. Indians produced *finished*
+  encyclopaedias (Apte, SKD, VCP); the struggling ones are the modern *institutional* projects.
+  Also softened the BORI claim (still **far from finished**, ~37 % after 38 yr, not "~2090").
+
 ### Added — Per-letter anatomy + entry-size decay test (H1416)
 
 - New study
