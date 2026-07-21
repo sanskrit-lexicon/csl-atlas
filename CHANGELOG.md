@@ -4,6 +4,17 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — Phase-2 execution plan: cross-dictionary macrostructure anatomy (H1423, via /ask)
+
+- Layered plan (index + roadmap + architecture + implementation + verification + metadoc) under
+  [docs/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/docs) for the H1416 follow-up:
+  generalise the compound/preverb law across MW/AP/PWG/PWK (+ SKD/VCP contrast) via the
+  DharmaMitra splitter calibrated on MW dash-truth (Wave A), regress PWG entry-size on real
+  publication year via the `<pc>`→volume→year mapping and test the compression counter-explanation
+  (Wave B), and a multi-signal cross-dictionary density fingerprint page (Wave D). Execution
+  handoff [H1423](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1423-Opus_csl-atlas_dict-macrostructure-anatomy-exec_21.07.26.md);
+  authored via `/ask`, autonomy-readiness gate passed.
+
 ### Changed — §8.11 solo-vs-committee sharpened (H1336)
 
 - **Böhtlingk** wrote ~**9/10 of the "Böhtlingk–Roth" PWG** as well as the *kürzere Fassung* alone
