@@ -212,6 +212,44 @@ holding PD's current density — and the rate at 121 pp/yr (its 50-year average)
 Scope moves the finish by ~900 years; a 65 % speed-up buys only ~100–470. Completion stays
 centuries out either way — the constraint is PD's density, not its pace.
 
+### Milestones — clearing `a`, the vowels, the halfway mark
+
+Turning the horizon into dates (at current density; both rates carried through):
+
+| Milestone | @ 121 pp/yr | @ 200 pp/yr |
+|---|---:|---:|
+| End of the short vowel `a` (before `ā`) | **~2094** | ~2067 |
+| End of ALL vowels (`a ā i … au`) | **~2179** | ~2119 |
+| Mid-dictionary (50 % of headwords, at `p`) | ~2594 | ~2370 |
+| Full completion (density held) | ~3211 | ~2744 |
+
+PD will not clear even the *short* vowel `a` until **~2094** — the letter `a` alone is ~118
+years of work. The vowel block (one-sixth of the alphabet) is not done until **~2179**; the
+alphabetical mid-point sits at `p`, not `k`, because Sanskrit is so front-loaded with prefix
+families. *(Vowel milestones are firm; consonant ones are upper bounds — the 37-volume plan
+compresses them.)*
+
+### The long-dictionary league table
+
+No dictionary ever finished has taken more than ~180 years. PD is projected at 200–1,200 — and
+the *complete* Petersburg Wörterbuch did all of Sanskrit in **23 years**.
+
+| Dictionary | Language | Span | Years | Status |
+|---|---|---|---:|---|
+| PWG · Böhtlingk–Roth | Sanskrit | 1852–1875 | **23** | ✓ |
+| OED, 1st edition | English | 1857–1928 | 71 | ✓ |
+| CAD · Chicago Assyrian | Akkadian | 1921–2011 | 90 | ✓ |
+| Grimm · Deutsches Wb. | German | 1838–1961 | 123 | ✓ (rev. 2016) |
+| SAOB · Swedish Academy | Swedish | 1893–2023 | 130 | ✓ |
+| WNT · Nederlandsche Taal | Dutch | 1864–1998 | 134 | ✓ |
+| TLL · Thes. Linguae Latinae | Latin | 1894–~2050 | ~156 | ⧗ |
+| **PD · Poona Dictionary** | **Sanskrit** | **1976–~2284⁺** | **~308⁺** | **⧗ still in `a`** |
+
+Even PD's fastest scenario (2182, 206 yr) exceeds the longest dictionary ever completed; its
+density-held scenario is ~9× the Dutch WNT. On present course PD becomes the longest single
+lexicographic project in history — a direct consequence of its 13–23× density, not of any lack
+of effort.
+
 **What follows.** DCS *attests*; PD *analyses* — a corpus cannot supply PD's historical
 sense-development, so for the 97 % of the lexicon PD has not reached it remains the only project
 attempting it. But the practical conclusion is unambiguous: **don't wait for the dictionary —

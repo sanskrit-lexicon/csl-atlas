@@ -412,10 +412,96 @@ value is **depth in what it has covered**, not breadth any time soon.
 > only for the internally-consistent coverage-% and ratio. Frontier taken as `apaca-` (H1336 §6);
 > the alternative `anupahve-` frontier sits ~100 headwords earlier and moves nothing material.
 
+### 8.6 Milestones — when does PD clear `a`, the vowels, the halfway mark?
+
+The same headword yardstick turns the horizon into datable milestones. Each milestone is a rank
+in the MW list; PD reaches it after covering the intervening headwords at its current density
+(0.771 pp/MW-headword) and printing rate. Both rates are carried through.
+
+| Milestone | MW rank | Pages still to print | **@ 121 pp/yr** | **@ 200 pp/yr** |
+|---|---:|---:|---:|---:|
+| *(now — frontier `apaca-`)* | 7,856 | — | *2026* | *2026* |
+| **End of the short vowel `a`** (before `ā`) | 18,463 | ~8,200 | **≈ 2094** | ≈ 2067 |
+| **End of ALL vowels** (`a ā i ī u ū ṛ … au`) | 31,946 | ~18,600 | **≈ 2179** | ≈ 2119 |
+| **Mid-dictionary** (50 % of headwords) | 97,042 | ~68,800 | **≈ 2594** | ≈ 2370 |
+| **Full completion** (density-held) | 194,084 | ~143,600 | ≈ 3211 | ≈ 2744 |
+
+Read plainly: **PD will not finish even the short vowel `a` until ~2094** — a further ~68 years
+on top of the 50 already spent, because the letter `a` alone is ~14,200 pages / ~118 years of
+work at this density (about 43 % done). **The whole vowel block (`a` … `au`) — 31,946 of MW's
+headwords, one-sixth of the alphabet — is not cleared until ~2179.** The alphabetical
+**mid-point falls at `p`** (MW headword *pratigṛdh*), not `k`: Sanskrit vocabulary is so
+front-loaded with prefix families (`a-`, `pra-`, `sam-`…) that half of all headwords sit in the
+first stretch `a`–`p`. The vowel milestones are reliable (the vowel section is as prefix-dense
+as `a`); the consonant milestones are an **upper bound** — under the project's optimistic
+37-volume plan, which assumes later letters compress, the halfway mark and completion arrive
+sooner (the plan finishes the whole work by ~2284 @ 121, ~2182 @ 200; §8.2, §8.5).
+
+### 8.7 What else is worth counting
+
+The dataset supports several further measures, each a different lens on the same slowness:
+
+- **Per-letter workload.** The letter `a` (short) is ~14,200 pp ≈ 118 years by itself; a
+  ranked "hardest letters" list (from the MW per-letter headword counts) would show `a`, `p`,
+  `s`, `v`, `k` as the multi-decade tentpoles and give a realistic volume-by-letter schedule.
+- **Editor-generations.** At ~30 years per scholarly generation, PD needs **~8.6 generations**
+  of editors on the optimistic plan and **~40** on the density-held model — it has used ~2.5 so
+  far (Katre → Ghatage → Joshi → Bhatta …).
+- **Time-since-conception rate.** Measured from Katre's 1948 conception, PD has taken 78 years
+  to document ~4 % of the lexicon; that fraction-rate alone implies millennia and is why the
+  *density-held* model, not the plan, may be the honest one.
+- **Is it accelerating?** The gap between the 50-year average (121 pp/yr) and a plausible
+  post-2019 pace (200 pp/yr) is itself a measurable trend; a fascicule-date time-series would
+  settle whether the digital *KoshaSHRI* effort has bent the curve.
+- **DCS catch-up date.** DCS already holds 78 % of PD's citation *mass* and doubles every ~16
+  years; one can date when DCS's corpus will contain effectively every text PD would cite —
+  almost certainly long before PD reaches `k`.
+- **Coverage of DCS-attested lemmas.** How many of DCS's own lemmas PD has already *defined*
+  (in `a`–`apaca-`) is a direct dictionary-for-corpus usefulness metric.
+
+### 8.8 The long-dictionary league table
+
+PD's slowness is best judged against the other great multi-generational dictionaries — the only
+fair peer group, since all are historical-principles works spanning a full language. **No
+dictionary ever completed has taken more than ~180 years; PD is projected at 200–1,200.**
+
+| Dictionary | Language | Span | Years | Status |
+|---|---|---|---:|---|
+| **PWG** · Böhtlingk–Roth | Sanskrit | 1852–1875 | **23** | ✓ completed |
+| OED, 1st edition | English | 1857–1928 | 71 | ✓ completed |
+| CAD · Chicago Assyrian | Akkadian | 1921–2011 | 90 | ✓ completed |
+| Grimm · *Deutsches Wörterbuch* | German | 1838–1961 | 123 | ✓ (revision to 2016 = 178) |
+| SAOB · Swedish Academy | Swedish | 1893–2023 | 130 | ✓ completed (2023) |
+| WNT · *Nederlandsche Taal* | Dutch | 1864–1998 | 134 | ✓ largest print dictionary |
+| TLL · *Thesaurus Linguae Latinae* | Latin | 1894–~2050 | ~156 | ⧗ ongoing (at `N`/`R`) |
+| **PD · Poona Dictionary** | **Sanskrit** | **1976–~2284⁺** | **~308⁺** | **⧗ still in `a`** |
+
+Two comparisons land hardest. First, **the same language, done fast:** the *complete* great
+Petersburg Wörterbuch (PWG, 7 volumes, all of Sanskrit) was finished in **23 years** (1852–75) —
+PD is projected to take **10–50× longer** for the same language, the entire difference being
+that PD is ~23× denser. Second, **even PD's most optimistic scenario is off the chart:** its
+fastest completion (2182, 206 years, plan @ 200 pp/yr) already exceeds the longest dictionary
+ever finished (WNT, 134 years) and the slowest still running (TLL, ~156); its density-held
+scenario (~1,235 years) is roughly **9× the WNT**. On present evidence PD is on course to become
+the longest single lexicographic project in human history — a distinction that is the direct
+consequence of the ~13–23× density measured in §8.5, not of any lack of effort.
+
+> **Milestone caveats.** Years assume PD holds its current per-MW-headword density and a
+> constant rate; both are simplifications (density drops in the consonants, the rate may rise
+> under digital editing). Vowel-section milestones are robust; consonant ones (mid-dictionary,
+> completion) are upper bounds. Peer spans are start-of-publication to completion (or estimated
+> completion) per each project's own record — see sources below.
+
 ---
 
 _Data: [data/pd/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/pd) · derived from PD
 ([drdhaval2785/SanskritSpellCheck](https://github.com/drdhaval2785/SanskritSpellCheck)) and DCS 2021/2026
-([gasyoun/VisualDCS](https://github.com/gasyoun/VisualDCS))._
+([gasyoun/VisualDCS](https://github.com/gasyoun/VisualDCS)); reference-dictionary headword counts from
+[HeadwordLists/now-2026](https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/now-2026)._
+
+_Peer-dictionary spans (§8.8): [Thesaurus Linguae Latinae](https://en.wikipedia.org/wiki/Thesaurus_Linguae_Latinae),
+[Woordenboek der Nederlandsche Taal](https://en.wikipedia.org/wiki/Woordenboek_der_Nederlandsche_Taal),
+[Deutsches Wörterbuch (Grimm)](https://www.britannica.com/topic/Deutsches-Worterbuch-German-dictionary),
+[Svenska Akademiens ordbok](https://en.wikipedia.org/wiki/Svenska_Akademiens_ordbok)._
 
 _Dr. Mārcis Gasūns_
