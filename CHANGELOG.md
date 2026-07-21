@@ -4,6 +4,32 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — Per-letter anatomy + entry-size decay test (H1416)
+
+- New study
+  [reports/LETTER_ANATOMY_AND_ENTRY_SIZE_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/LETTER_ANATOMY_AND_ENTRY_SIZE_2026.md)
+  and interactive page [`/tools/letter-anatomy`](https://sanskrit-lexicon.github.io/csl-atlas/tools/letter-anatomy),
+  extending the H1336 §8.5–8.9 per-letter observations into a systematic programme
+  ([scripts/letter_anatomy.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/letter_anatomy.py)).
+- **Q1 samāsa share (MW):** reproduces the H1336 `a`/`ā` figure exactly (83.1 %) and
+  generalises it — `u` 79.5 %, `p` 78.0 %, `s` 77.9 %, `v` 75.5 %; `k` (no preverb) 56.4 %.
+  `a` is the most compound-dense letter but **not uniquely** so.
+- **Q2 upasarga profile:** every large letter heads a preverb family — `v` = *vi-* (38.6 %),
+  `u` = *ud-/upa-* (62.3 %), `s` = *sam-/su-*, `p` = *pra-/pari-/prati-*, `a` = five preverbs +
+  the privative. The mechanistic reason `a`/`u`/`p`/`s`/`v` balloon.
+- **Q4 funding-decay test (the headline):** using an outlier-robust per-letter rank test
+  (mandatory — VCP has single articles >310k chars that wreck the parametric FE), the belief
+  that entries shrink over serial publication is **refuted for the two dictionaries it named,
+  SKD and VCP** (ρ ≈ 0.00). The decay is real and strong instead in **PWG (−0.19), PWK (−0.34),
+  GRA (−0.20)** — the German Petersburg/Grassmann tradition with a documented compression history.
+- New derived feeds
+  [data/pd/letter_anatomy.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/letter_anatomy.tsv)
+  (dict × letter) and
+  [data/pd/entry_size_by_position.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/entry_size_by_position.tsv).
+- **Graveyard of `a` extended (H1336 tidy):** added Kossowicz (KOW, 1854) and the 1850s
+  Wilson-remake cohort to the graveyard note in the H1336 report §8.9 and the
+  `/tools/pd-dcs-coverage` page.
+
 ### Changed — PD × DCS coverage: conclusions + completion-horizon analysis (H1336)
 
 - Added §8 Conclusions to
