@@ -4,6 +4,29 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — Macrostructure anatomy waves B & D + Wave-A dash-truth (H1423 executed)
+
+- **Wave B — entry-size decay in real time.** PWG's `<pc>`→volume→year mapping lets all 123,366
+  entries carry a publication year: **PWG entries shrank −14.3 %/decade** (CI [−15.0, −13.7]),
+  and the compression counter-test shows it is a **smooth fade** (vols 2–7 still −15.3 %/decade
+  after dropping the over-detailed vol-1), not a one-time policy break — settling the cause
+  question H1416 left open. Feed
+  [data/pd/entry_size_by_year.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/entry_size_by_year.tsv);
+  PWK/SKD/VCP flagged `date_quality` (no per-fascicule dates).
+- **Wave D — density fingerprint.** New page
+  [`/tools/dictionary-density`](https://sanskrit-lexicon.github.io/csl-atlas/tools/dictionary-density)
+  + feed [data/pd/density_fingerprint.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/density_fingerprint.tsv):
+  chars/Sanskrit-spans/markup-tags per entry across MW/AP/PWG/PWK/SKD/VCP. PWG carries the richest
+  apparatus (20 tags/entry), PWK the tersest (43 chars), SKD/VCP the longest articles (median
+  169/112) but ~0 Cologne markup (plain Skt→Skt).
+- **Wave A — dash-truth generalization.** Feed
+  [data/pd/compound_share_by_letter.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/compound_share_by_letter.tsv)
+  with the MW/GRA dash-truth per-letter compound share. The DharmaMitra ByT5 splitter (for the
+  non-dash dicts) was unreachable in the build env, so splitter columns ship *model unavailable*
+  (the planned graceful degradation); re-run
+  [scripts/import_compound_segmentation.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/import_compound_segmentation.py)
+  where the model is reachable to fill them. Report §7.
+
 ### Changed — §8.11 sourced (Delbrück) + 74-years conflation fixed (H1336; re-applied after clobber)
 
 - **Sourced the "9/10":** it is **Delbrück's estimate** (B. Delbrück, *Ber. Sächs. Ges. Wiss.* 56,

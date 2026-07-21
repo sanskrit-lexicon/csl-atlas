@@ -210,6 +210,32 @@ Plot.plot({
 })
 ```
 
+### Wave B — PWG entry size vs *real* publication year
+
+H1416 measured decay against alphabetical position. PWG's `<pc>` field encodes the volume
+(1–7), each with a known year, so every entry maps to a real year — **PWG entries shrank
+−14.3 %/decade**, and the counter-test shows it is a *smooth* fade (volumes 2–7 still
+−15.3 %/decade after dropping the over-detailed vol-1), not a one-time policy break.
+
+```js
+const byYear = FileAttachment("../data/pd/entry_size_by_year.tsv").tsv({typed: true});
+const pwgYears = byYear.filter(d => d.dict === "PWG" && typeof d.year === "number");
+```
+
+```js
+Plot.plot({
+  marginLeft: 52,
+  x: {label: "PWG publication year (volume)", grid: true, tickFormat: "d"},
+  y: {label: "mean entry length (chars)", grid: true, domain: [0, null]},
+  marks: [
+    Plot.lineY(pwgYears, {x: "year", y: "mean_entry_chars", stroke: "#d95f0e", marker: "circle"}),
+    Plot.text(pwgYears, {x: "year", y: "mean_entry_chars", text: d => "v" + d.volume,
+                         dy: -10, fill: "var(--theme-foreground-muted)", fontSize: 10}),
+    Plot.ruleY([0])
+  ]
+})
+```
+
 <div class="note">Data:
 <a href="https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/letter_anatomy.tsv">letter_anatomy.tsv</a> ·
 <a href="https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/entry_size_by_position.tsv">entry_size_by_position.tsv</a> ·

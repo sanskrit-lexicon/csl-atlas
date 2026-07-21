@@ -1,0 +1,15 @@
+dict	volume	year	n_entries	mean_chars	median_chars	date_quality
+PWG	1	1855	14374	238	104	exact
+PWG	2	1858	12307	269	94	exact
+PWG	3	1861	11060	279	102	exact
+PWG	4	1865	14495	254	102	exact
+PWG	5	1868	29138	163	78	exact
+PWG	6	1871	16244	284	85	exact
+PWG	7	1875	25748	209	76	exact
+PWK		1879-1889	24976	43	40	span
+SKD		1886-1886	42531	479	169	point
+VCP		1873-1884	50135	442	112	span
+PWG	YEAR_SLOPE		123366	-14.3%/decade	CI[-15.0,-13.7]% p=0.0e+00 DECAY; counter-test: vol1 median 104 vs later 85 (-18%); vols2-7 slope -15.3%/dec -> SMOOTH decay (still negative after dropping vol-1)	exact
+PWK	YEAR_SLOPE		24976	n/a	insufficient date granularity (span); use H1416 alphabetical-position decay instead	span
+SKD	YEAR_SLOPE		42531	n/a	insufficient date granularity (point); use H1416 alphabetical-position decay instead	point
+VCP	YEAR_SLOPE		50135	n/a	insufficient date granularity (span); use H1416 alphabetical-position decay instead	span
