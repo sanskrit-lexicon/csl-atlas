@@ -670,13 +670,19 @@ the operative variable. A project scoped to completion completes.
    deepest point, and it is causal, not incidental. **V. S. Apte** — professor at Fergusson
    College, **Pune** — compiled a complete, still-standard Sanskrit–English dictionary (AP90, 1890,
    ~34k entries) **almost alone** and **died at 34** (1858–1892), two years after it appeared.
-   **Böhtlingk** is the even stronger case: he carried the *kürzere Fassung* (PW) single-handed
-   **and** wrote an estimated **9/10 of the "Böhtlingk–Roth" PWG** — one man, essentially, produced
-   *two* complete Sanskrit dictionaries. Against that stands **PD's committee**: planned for **~74
-   lexicographers**, it has **about a dozen** working regularly today — and this is not a footnote
-   to its slowness but a **cause** of it. What finishes is a single sustained vision on a bounded
-   scope; what does not is a large, under-staffed institution on an unbounded one — which is exactly
-   PD, and one reason it may never finish at all.
+   **Böhtlingk** is the even stronger case. The "Böhtlingk–Roth" PWG is nominally a joint work, but
+   by **Delbrück's estimate Böhtlingk wrote nine tenths of it himself** (B. Delbrück, *Ber. Sächs.
+   Ges. Wiss.* 56, 1904, 253–258): Roth supplied the Ṛgveda and Suśruta, Whitney the Atharvaveda,
+   Weber the Śatapatha-brāhmaṇa, Stenzler Manu, Kern Varāhamihira, Schiefner the Buddhist Sanskrit —
+   Böhtlingk did *everything else* and drove the whole to completion in ~22 years (1853–1875); he
+   then wrote the *kürzere Fassung* single-handed (1879–1889). One man, essentially, produced *two*
+   complete Sanskrit dictionaries. Against that stands **PD's committee.** It has run **74 years**
+   since its 1948 conception and is chronically **under-staffed** — the project reports a *severe
+   shortage of Sanskrit lexicographers*, with only on the order of a dozen-to-two-dozen scholars
+   working it regularly against a task scoped at millions of entries. That is not a footnote to its
+   slowness but a **cause** of it: what finishes is a single sustained vision on a bounded scope;
+   what does not is a large, under-staffed institution on an unbounded one — which is exactly PD,
+   and one reason it may never finish at all.
 
 **And the Indian record is not "only kośas."** The indigenous **kośa** (Amarakośa and its kin) is
 a sophisticated genre in its own right — a versified, memorizable, poetics-oriented lexicon built
@@ -713,5 +719,13 @@ Mayrhofer [KEWA/EWA](https://www.winter-verlag.de/en/detail/c1954/Mayrhofer_Manf
 [Deutsches Wörterbuch (Grimm)](https://www.britannica.com/topic/Deutsches-Worterbuch-German-dictionary),
 [Svenska Akademiens ordbok](https://en.wikipedia.org/wiki/Svenska_Akademiens_ordbok). Per-initial-letter
 counts from [HeadwordLists/now-2026](https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/now-2026)._
+
+_§8.11: Böhtlingk's ~9/10 share of PWG and the division of labour from B. Delbrück, Ber. Sächs.
+Ges. Wiss. 56 (1904), 253–258, via
+[Karttunen's indology biographies](https://whowaswho-indology.info/834/bohtlingk-otto-nikolaus-von/)
+(which also cites A. A. Vigasin's work on Russian indology — his articles on the Petersburg
+dictionary to be folded in when supplied); Apte's dates from
+[Wikipedia](https://en.wikipedia.org/wiki/Vaman_Shivram_Apte); PD staffing (74 years since 1948; a
+severe shortage of lexicographers) from the [Deccan College dictionary project](https://www.frontlist.in/1464-volumes-74-years-and-counting-the-making-of-the-worlds-biggest-encyclopaedic-sanskrit-dictionary)._
 
 _Dr. Mārcis Gasūns_
