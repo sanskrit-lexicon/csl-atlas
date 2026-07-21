@@ -4,6 +4,18 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Changed — §8.11 sourced (Delbrück) + 74-years conflation fixed (H1336; re-applied after clobber)
+
+- **Sourced the "9/10":** it is **Delbrück's estimate** (B. Delbrück, *Ber. Sächs. Ges. Wiss.* 56,
+  1904, 253–258) of Böhtlingk's share of PWG — Roth did the Ṛgveda + Suśruta, Whitney the AV, Weber
+  the Śatapatha, Stenzler Manu, Kern Varāhamihira, Schiefner Buddhist Sanskrit; Böhtlingk everything
+  else, whole done in ~22 yr (1853–1875), then the *kürzere Fassung* alone (1879–1889). Karttunen's
+  entry (source) also cites **A. A. Vigasin** — his Petersburg-dictionary articles to be folded in.
+- **Corrected the "74" conflation:** it is the **years since PD's 1948 conception**, not a planned
+  lexicographer count; PD's staffing point restated as the real *severe shortage* (~a
+  dozen-to-two-dozen active). Report §8.11 + page + sources footer. (This content was lost to a
+  concurrent merge — PR #288 never landed — and is re-applied here.)
+
 ### Added — Phase-2 execution plan: cross-dictionary macrostructure anatomy (H1423, via /ask)
 
 - Layered plan (index + roadmap + architecture + implementation + verification + metadoc) under
