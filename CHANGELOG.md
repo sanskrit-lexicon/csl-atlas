@@ -21,6 +21,12 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   holds **as many entries as the entire PWG** and 54 % of all MW — PD is **13–23× denser**
   than any completed dictionary. Two-speed horizon: at 121 / 200 pp/yr PD finishes ~2284 /
   ~2182 (37-volume plan) or ~3211 / ~2744 (current density held). Scope dominates rate.
+- Added §8.6–8.8 (report) + milestone/league blocks (page): **milestones** — PD clears the
+  short vowel `a` only ~2094, all vowels ~2179, mid-dictionary (at `p`) ~2594; **extra metrics**
+  to count (per-letter workload, editor-generations ~8.6–40, DCS catch-up date); and the
+  **long-dictionary league table** (PWG 23 yr · OED 71 · CAD 90 · Grimm 123 · SAOB 130 · WNT 134
+  · TLL ~156 · **PD ~308⁺, still in `a`**) — no dictionary ever finished took >~180 yr; PWG did
+  all of Sanskrit in 23. PD is on course to be the longest lexicographic project in history.
 
 ## [0.3.0] - 2026-07-20
 
