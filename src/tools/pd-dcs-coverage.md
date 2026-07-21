@@ -368,10 +368,12 @@ no — it is about **method, institution and scope**, not nation.
 - **The finished dictionaries were near-solo; the unfinished one is a committee.** **V. S. Apte**
   (Fergusson College, Pune) compiled a complete, still-standard Sanskrit–English dictionary *almost
   alone* and **died at 34** (1858–92), two years after it appeared. **Böhtlingk** carried the
-  *kürzere Fassung* single-handed **and** wrote ~**9/10 of the "Böhtlingk–Roth" PWG** — one man,
-  two complete Sanskrit dictionaries. Against that, **PD's committee** was planned for **~74
-  lexicographers** and has **about a dozen** working regularly today — a *cause* of its
-  non-completion, not a footnote. A single vision on a bounded scope finishes; a large, under-staffed
+  *kürzere Fassung* single-handed **and**, by Delbrück's estimate, wrote **9/10 of the
+  "Böhtlingk–Roth" PWG** (Roth did the Ṛgveda + Suśruta; Whitney the AV; Weber the Śatapatha) — one
+  man, two complete Sanskrit dictionaries, in 23 years. Against that, **PD's committee**: **74 years**
+  since its 1948 conception **and chronically under-staffed** — a severe shortage of Sanskrit
+  lexicographers, ~a dozen-to-two-dozen active against a task scoped at millions of entries. A
+  *cause* of its non-completion, not a footnote. A single vision on a bounded scope finishes; a large, under-staffed
   institution on an unbounded one (PD) may never finish at all.
 - **Indians did not do "only kośas."** The kośa is a sophisticated genre, not a ceiling — and
   beyond it Apte, **SKD** and **VCP** are *finished* Indian encyclopaedias. The struggling projects

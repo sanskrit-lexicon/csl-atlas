@@ -4,6 +4,15 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Changed — §8.11 sourced + a conflation fixed (H1336)
+
+- **Sourced the "9/10" figure:** it is **Delbrück's estimate** of Böhtlingk's share of the
+  "Böhtlingk–Roth" PWG (Roth = Ṛgveda + Suśruta, Whitney = AV, Weber = Śatapatha, Stenzler = Manu;
+  Böhtlingk everything else, whole done in 23 years, 1852–1875). **Corrected a conflation:** the
+  "74" is the **years since PD's 1948 conception**, *not* a planned lexicographer count; PD's
+  staffing point is now stated as a *severe shortage* (~a dozen-to-two-dozen active), the real
+  cause. Report §8.11 + page.
+
 ### Changed — §8.11 solo-vs-committee sharpened (H1336)
 
 - **Böhtlingk** wrote ~**9/10 of the "Böhtlingk–Roth" PWG** as well as the *kürzere Fassung* alone
