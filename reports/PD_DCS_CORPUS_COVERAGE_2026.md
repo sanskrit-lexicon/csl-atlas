@@ -461,13 +461,52 @@ The dataset supports several further measures, each a different lens on the same
 
 ### 8.8 The long-dictionary league table
 
-PD's slowness is best judged against the other great multi-generational dictionaries — the only
-fair peer group, since all are historical-principles works spanning a full language. **No
-dictionary ever completed has taken more than ~180 years; PD is projected at 200–1,200.**
+PD's slowness is best judged against two peer groups: the other **Sanskrit / Indo-Aryan
+dictionaries** (same language, so density is the only variable), and the **century-long
+historical monuments** of other traditions (same ambition, different language).
+
+**First peer group — the Sanskrit / Indo-Aryan dictionaries.** Seven were *completed* in
+10–27 years. Only the two that chose exhaustive historical-principles treatment stall:
+
+| Dictionary | Direction | Span | Years | Lemmas | Status |
+|---|---|---|---:|---:|---|
+| WIL · Wilson | Skt→Eng | 1819–1832 | ~13 | 43,939 | ✓ complete |
+| **GST · Goldstücker** | Skt→Eng | 1856–1864 | ~8 | 6,761 | ✗ **abandoned in `a`** |
+| PWG · Böhtlingk–Roth (*grosse*) | Skt→Ger | 1855–1875 | 20 | 106,083 | ✓ complete |
+| PW · Böhtlingk (*kürzere*) | Skt→Ger | 1879–1889 | **10** | 151,349 | ✓ complete |
+| MW · Monier-Williams | Skt→Eng | 1872–1899 | ~27 | 194,084 | ✓ complete |
+| KEWA · Mayrhofer (etymological) | Skt→Ger | 1956–1980 | 24 | — | ✓ complete |
+| EWA · Mayrhofer (etymological) | Ind.-Ar.→Ger | 1986–2001 | 15 | — | ✓ complete |
+| BORI Prakrit Dict. (CDPL) | Prakrit→Eng | 1988–~2090 *(proj.)* | ~102 | 33,600 *(a→`u`)* | ⧗ through the vowels |
+| **PD · Poona Dictionary** | Skt→Eng | **1976–~2284⁺** | **~308⁺** | 104,959 *(a- only)* | ⧗ **still in `a`** |
+
+The contrast could not be sharper. Böhtlingk's *kürzere Fassung* (PW) documented **151,349
+lemmas across the whole alphabet in ten years**; PD has 104,959 lemmas and has covered ~4 % of
+the alphabet in fifty. Sanskrit is not the problem — **exhaustive historical detail is.** The
+proof is 120 years old: **Theodor Goldstücker's 1856 remake of Wilson set out to improve the
+whole dictionary, sank into the letter `a`, published 6,761 entries, and was abandoned there at
+his death.** PD is Goldstücker's project reborn at ~16× the density (104,959 vs 6,761 for `a`)
+and computer-typeset — the same undertaking, the same letter, the same trap.
+
+**The controlled experiment — two dictionaries, one city, one editor.** The sharpest comparison
+is not across centuries but across town. In the *same* Pune, the **Bhandarkar Oriental Research
+Institute**'s *Comprehensive and Critical Dictionary of the Prakrit Languages* (CDPL) began in
+**1988** — twelve years *younger* than PD — and has already published 3 volumes covering **`a`
+through `ujjhittu`**: all the vowels and into the consonants, ~33,600 lexemes against a *bounded*
+plan of ~90,000 entries over ~450 texts (finish projected ~2090). Its founding general editor was
+**A. M. Ghatage — the very scholar who edited PD's first volumes.** The same man, the same city,
+the same decade, ran both projects; the difference is *scope*. BORI bounded its corpus (~450
+texts, terser articles) and in 38 years cleared the entire vowel series; PD chose the unbounded
+historical maximum and in 50 years has not left `a`. It is as close to a natural experiment in
+lexicographic ambition as the field offers, and its verdict is unambiguous: **a great
+Sanskrit-family dictionary finishes only if it refuses to let the letter `a` become infinite.**
+
+**Second peer group — the century-long giants.** PD's real family is not the fast Sanskrit
+dictionaries but the multi-generational historical monuments — and it is projected to outlast
+them all:
 
 | Dictionary | Language | Span | Years | Status |
 |---|---|---|---:|---|
-| **PWG** · Böhtlingk–Roth | Sanskrit | 1852–1875 | **23** | ✓ completed |
 | OED, 1st edition | English | 1857–1928 | 71 | ✓ completed |
 | CAD · Chicago Assyrian | Akkadian | 1921–2011 | 90 | ✓ completed |
 | Grimm · *Deutsches Wörterbuch* | German | 1838–1961 | 123 | ✓ (revision to 2016 = 178) |
@@ -476,12 +515,9 @@ dictionary ever completed has taken more than ~180 years; PD is projected at 200
 | TLL · *Thesaurus Linguae Latinae* | Latin | 1894–~2050 | ~156 | ⧗ ongoing (at `N`/`R`) |
 | **PD · Poona Dictionary** | **Sanskrit** | **1976–~2284⁺** | **~308⁺** | **⧗ still in `a`** |
 
-Two comparisons land hardest. First, **the same language, done fast:** the *complete* great
-Petersburg Wörterbuch (PWG, 7 volumes, all of Sanskrit) was finished in **23 years** (1852–75) —
-PD is projected to take **10–50× longer** for the same language, the entire difference being
-that PD is ~23× denser. Second, **even PD's most optimistic scenario is off the chart:** its
-fastest completion (2182, 206 years, plan @ 200 pp/yr) already exceeds the longest dictionary
-ever finished (WNT, 134 years) and the slowest still running (TLL, ~156); its density-held
+**No dictionary ever completed has taken more than ~180 years** (Grimm, with its revision). Even
+PD's most optimistic scenario (2182 — 206 years, plan @ 200 pp/yr) already exceeds the longest
+finished dictionary (WNT, 134) and the slowest still running (TLL, ~156); its density-held
 scenario (~1,235 years) is roughly **9× the WNT**. On present evidence PD is on course to become
 the longest single lexicographic project in human history — a distinction that is the direct
 consequence of the ~13–23× density measured in §8.5, not of any lack of effort.
@@ -492,6 +528,54 @@ consequence of the ~13–23× density measured in §8.5, not of any lack of effo
 > completion) are upper bounds. Peer spans are start-of-publication to completion (or estimated
 > completion) per each project's own record — see sources below.
 
+### 8.9 Is `a` the hardest letter? — the graveyard of the first letter
+
+A natural intuition (and a good question): **is `a` the hardest letter because it holds all the
+`a-`/`an-` privative compounds — `a-dharma` "non-dharma", `an-artha` "misfortune" — the negated
+samāsas that can be built from almost any word?** The headword lists give a precise, and
+partly surprising, answer.
+
+**Counting the initial letter across the three completed dictionaries:**
+
+| Dictionary | 1st | 2nd | 3rd | 4th |
+|---|---|---|---|---|
+| MW | **s** 12.9 % | p 10.8 % | v 9.6 % | `a` 9.5 % |
+| PWG | **s** 12.1 % | p 10.2 % | v 9.1 % | `a` 9.0 % |
+| AP (Apte) | **`a` 14.3 %** | p 11.0 % | s 8.9 % | v 7.9 % |
+
+So the intuition is **half right, and the half it gets right is exactly the samāsa point.** In
+the two scholarly German-tradition dictionaries (PWG and its descendant MW), `a` is only the
+**fourth**-largest letter — the sibilant **`s`** wins, followed by **`p`** and **`v`**. But in
+**Apte**, the practical dictionary that lists compounds most generously, **`a` is the largest
+letter by a clear margin (14.3 %)** — precisely because the privative `a-`/`an-` and the prefix
+families (`ā-`, `adhi-`, `anu-`, `apa-`…) generate a negated or prefixed twin of much of the
+rest of the lexicon, and a compound-inclusive dictionary lists them all under `a`. The privative
+is a real, `a`-specific tax: `a-` before a consonant (`a-dharma`) and `an-` before a vowel
+(`an-artha`) can negate essentially any nominal, so `a` inherits a shadow of the whole language.
+
+**How many `a`-entries are actually compounds? — 83 %.** MW's printed-form (key2) list marks
+every compound joint with a dash, so this is directly countable: of the **23,590** `a`-/`ā`-initial
+entries, **19,601 (83.1 %) are dash-marked samāsas** and only 3,989 (16.9 %) are simple
+uncompounded stems. The intuition is quantitatively vindicated — the letter `a` is overwhelmingly
+a letter of *compounds*, not of roots: privative `a-`/`an-` negations (`a-dharma`, `an-artha`),
+prefix compounds (`adhi-`, `anu-`, `apa-`…) and every `a`-initial first member (`agni-…`,
+`artha-…`). This is the deepest reason a maximalist historical dictionary drowns in `a`: it is not
+defining ~4,000 words, it is documenting ~20,000 *combinations*, each with its own attestations.
+
+**But `a` is not uniquely hard — `s`, `p` and `v` carry their own huge prefix families** (`sam-`,
+`su-`, `sa-`; `pra-`, `pari-`, `prati-`; `vi-`, `ava-`), which is why they rival or beat `a` in
+the scholarly counts. The consequence for PD is sobering: **its hardest letters are still
+ahead.** `s` (25,075 MW headwords), `p` (21,051) and `v` (18,598) each exceed the short `a`
+(18,463) that has already consumed fifty years — PD's slowest marathons have not begun.
+
+**Why, then, is `a` where Sanskrit dictionaries get stuck?** Not because it is the single largest
+letter, but because it is **first, always top-four in size, and privative-inflated** — the worst
+possible place to begin a maximalist project. The evidence is a genuine graveyard: Goldstücker
+(1856) died in `a`; Böhtlingk–Roth's PWG spent its entire first volume (1855) on `a-` alone; and
+PD has now spent five decades there and is not done. `a` is the reef every exhaustive Sanskrit
+dictionary runs onto first — and the only ones that finish are those, like Böhtlingk's *kürzere
+Fassung*, that refuse to let it swallow them.
+
 ---
 
 _Data: [data/pd/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/pd) · derived from PD
@@ -499,9 +583,13 @@ _Data: [data/pd/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/p
 ([gasyoun/VisualDCS](https://github.com/gasyoun/VisualDCS)); reference-dictionary headword counts from
 [HeadwordLists/now-2026](https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/now-2026)._
 
-_Peer-dictionary spans (§8.8): [Thesaurus Linguae Latinae](https://en.wikipedia.org/wiki/Thesaurus_Linguae_Latinae),
+_Peer-dictionary spans (§8.8): Sanskrit/Indo-Aryan (WIL · GST · PWG · PW · MW) from
+[dictionary_inventory.csv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv);
+Mayrhofer [KEWA/EWA](https://www.winter-verlag.de/en/detail/c1954/Mayrhofer_Manfred_Kurzgefasstes_etymologisches_Woerterbuch_des_Altindischen/);
+[Thesaurus Linguae Latinae](https://en.wikipedia.org/wiki/Thesaurus_Linguae_Latinae),
 [Woordenboek der Nederlandsche Taal](https://en.wikipedia.org/wiki/Woordenboek_der_Nederlandsche_Taal),
 [Deutsches Wörterbuch (Grimm)](https://www.britannica.com/topic/Deutsches-Worterbuch-German-dictionary),
-[Svenska Akademiens ordbok](https://en.wikipedia.org/wiki/Svenska_Akademiens_ordbok)._
+[Svenska Akademiens ordbok](https://en.wikipedia.org/wiki/Svenska_Akademiens_ordbok). Per-initial-letter
+counts from [HeadwordLists/now-2026](https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/now-2026)._
 
 _Dr. Mārcis Gasūns_
