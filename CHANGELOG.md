@@ -24,8 +24,11 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   GRA (−0.20)** — the German Petersburg/Grassmann tradition with a documented compression history.
 - New derived feeds
   [data/pd/letter_anatomy.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/letter_anatomy.tsv)
-  (dict × letter) and
-  [data/pd/entry_size_by_position.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/entry_size_by_position.tsv).
+  (dict × letter),
+  [data/pd/entry_size_by_position.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/entry_size_by_position.tsv),
+  and [data/pd/upasarga_counts.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/upasarga_counts.tsv)
+  (Q2 full breakdown — every one of the 20 preverbs × every dictionary, count + %; report §3.1).
+  `vi-` is the largest preverb in every dict; the `sam`/`su` order flips in Vedic (GRA `su` 452 > `sam` 126).
 - **Graveyard of `a` extended (H1336 tidy):** added Kossowicz (KOW, 1854) and the 1850s
   Wilson-remake cohort to the graveyard note in the H1336 report §8.9 and the
   `/tools/pd-dcs-coverage` page.

@@ -93,6 +93,48 @@ stem-initials (<code>ā, vi, ni, su</code>); the ranking of which preverb domina
 robust to this. The privative <code>a-/an-</code> is a negation, not a preverb, and is not
 surface-separable — see the report.</div>
 
+### Every preverb, every dictionary
+
+Each preverb's total sits entirely under its own initial letter, so these are exact counts.
+`vi-` leads in every dictionary; the `sam`/`su` order flips in Vedic Grassmann (`su` > `sam`).
+
+```js
+const upa = FileAttachment("../data/pd/upasarga_counts.tsv").tsv({typed: true});
+```
+
+```js
+const upaDicts = ["MW","AP","PWG","PWK","SKD","VCP","GRA","VEI"];
+const upaRows = upa.filter(d => d.upasarga && !d.upasarga.startsWith("ALL_") && !d.upasarga.startsWith("TOTAL_"));
+```
+
+```js
+Inputs.table(upaRows, {
+  columns: ["upasarga", ...upaDicts],
+  header: Object.fromEntries([["upasarga", "upasarga"], ...upaDicts.map(d => [d, d])]),
+  sort: "MW", reverse: true,
+  width: {upasarga: 90}
+})
+```
+
+```js
+// long-form grouped bars for the four biggest dictionaries
+const upaLong = upaRows.flatMap(r => ["MW","PWG","PWK","AP"].map(d => ({upasarga: r.upasarga, dict: d, n: r[d]})));
+```
+
+```js
+Plot.plot({
+  marginLeft: 60,
+  height: 520,
+  x: {label: "headwords beginning with the preverb (surface match)", grid: true},
+  y: {label: null, domain: upaRows.slice().sort((a,b) => b.MW - a.MW).map(d => d.upasarga)},
+  color: {domain: ["MW","PWG","PWK","AP"], range: ["#2c7fb8","#41ab5d","#7fcdbb","#d95f0e"], legend: true},
+  marks: [
+    Plot.barX(upaLong, {x: "n", y: "upasarga", fill: "dict", fy: "dict", sort: null}),
+    Plot.ruleX([0])
+  ]
+})
+```
+
 ## Q4 — Do entries shrink toward the end of the dictionary?
 
 The **funding-decay** test. Naïvely regressing entry size on alphabetical position confounds the
