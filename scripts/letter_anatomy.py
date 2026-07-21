@@ -297,6 +297,7 @@ def main():
     by_position_rows = []      # dict x position-bin
     q4 = {}                    # dict -> regression result
     per_dict_meta = {}
+    upasarga_totals = {}       # dict -> {upasarga_label: total count}  (Q2 full breakdown)
 
     for did, hwpref, slug, label, has_dash in DICTS:
         print(f'\n=== {did} — {label} ===')
@@ -353,6 +354,8 @@ def main():
                 if lab:
                     d = q2_by_letter.setdefault(lb, {})
                     d[lab] = d.get(lab, 0) + 1
+                    tot = upasarga_totals.setdefault(did, {})
+                    tot[lab] = tot.get(lab, 0) + 1
 
         # ---- Q3 entry-size per letter + collect regression arrays (Q4) ----
         letters_arr, pos_arr, size_arr = [], [], []
@@ -450,6 +453,30 @@ def main():
               ['dict', 'letter_slp1', 'letter_iast', 'alpha_rank', 'n_headwords',
                'n_entries', 'pct_compound', 'n_upasarga_initial', 'pct_upasarga',
                'top5_upasargas', 'mean_entry_chars', 'median_entry_chars'])
+
+    # ---- Q2 full breakdown: every upasarga x every key1 dict (count + % of headwords) ----
+    # Each preverb's total sits entirely under its own initial letter, so these are exact
+    # surface-match totals, not a top-5 truncation.
+    upa_dicts = [d for d, _, _, _, _ in DICTS if d in upasarga_totals]
+    upa_rows = []
+    for lab, _variants in UPASARGAS:
+        row = {'upasarga': lab}
+        for d in upa_dicts:
+            c = upasarga_totals.get(d, {}).get(lab, 0)
+            n = per_dict_meta.get(d, {}).get('n_headwords', 0) or 1
+            row[d] = c
+            row[f'{d}_pct'] = f'{100.0 * c / n:.2f}'
+        upa_rows.append(row)
+    # trailing summary rows
+    tot_row = {'upasarga': 'ALL_upasarga_initial'}
+    hw_row = {'upasarga': 'TOTAL_headwords'}
+    for d in upa_dicts:
+        tot_row[d] = sum(upasarga_totals.get(d, {}).values())
+        hw_row[d] = per_dict_meta.get(d, {}).get('n_headwords', 0)
+    upa_rows.append(tot_row)
+    upa_rows.append(hw_row)
+    upa_cols = ['upasarga'] + [c for d in upa_dicts for c in (d, f'{d}_pct')]
+    write_tsv(OUT / 'upasarga_counts.tsv', upa_rows, upa_cols)
 
     # by_position: append FE slope/CI as trailing rows per dict
     for did, res in q4.items():

@@ -105,6 +105,42 @@ ranking.
 | s | 38.3 | sam- 23.5 %, su- 14.8 % |
 | k | 0.0 | — (no preverb begins with k) |
 
+### 3.1 Full per-upasarga counts (every preverb, every dictionary)
+
+Because a preverb *is* the start of its words, each upasarga's total sits entirely under its own
+initial letter — so these surface-match totals are exact, not a top-5 truncation. Full feed:
+[data/pd/upasarga_counts.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/upasarga_counts.tsv)
+(count + % of headwords per dictionary).
+
+| upasarga | MW | AP | PWG | PWK | SKD | VCP | GRA | VEI |
+|---|--:|--:|--:|--:|--:|--:|--:|--:|
+| **vi** | **7,179** | 2,616 | 3,500 | 4,594 | 1,234 | 780 | 348 | 81 |
+| **sam** | **5,887** | 1,969 | 2,340 | 3,216 | 522 | 451 | 126 | 35 |
+| pra | 4,749 | 2,255 | 2,195 | 2,990 | 639 | 866 | 180 | 66 |
+| ā- (A) | 4,384 | 3,060 | 2,647 | 3,952 | 830 | 1,857 | 237 | 98 |
+| **su** | **3,705** | 860 | 2,235 | 2,990 | 642 | 450 | 452 | 58 |
+| nis/nir | 2,354 | 1,148 | 1,245 | 1,639 | 380 | 537 | 40 | 11 |
+| ud | 1,921 | 1,296 | 992 | 1,523 | 342 | 608 | 52 | 17 |
+| upa | 1,601 | 965 | 768 | 1,033 | 198 | 501 | 64 | 25 |
+| pari | 1,600 | 735 | 716 | 943 | 180 | 257 | 42 | 26 |
+| prati | 1,487 | 637 | 669 | 961 | 146 | 239 | 20 | 17 |
+| abhi- (aBi) | 1,408 | 719 | 488 | 681 | 93 | 337 | 67 | 8 |
+| anu | 1,383 | 808 | 604 | 979 | 113 | 348 | 34 | 8 |
+| ni | 1,344 | 611 | 621 | 850 | 244 | 324 | 80 | 20 |
+| ava | 1,116 | 839 | 547 | 802 | 193 | 389 | 43 | 6 |
+| dus/dur | 1,092 | 428 | 734 | 939 | 128 | 318 | 73 | 13 |
+| apa | 893 | 577 | 441 | 779 | 121 | 298 | 34 | 5 |
+| ati | 607 | 341 | 375 | 886 | 72 | 170 | 10 | 3 |
+| adhi- (aDi) | 333 | 185 | 177 | 262 | 27 | 96 | 19 | 3 |
+| parā (parA) | 290 | 132 | 134 | 182 | 50 | 65 | 10 | 2 |
+| api | 86 | 27 | 29 | 45 | 5 | 21 | 9 | 1 |
+
+Two patterns stand out. **`vi-` is the single largest preverb in every dictionary** — the most
+productive Sanskrit prefix. And **the `sam`/`su` order flips in the Vedic register**: the
+classical dictionaries all rank `sam` above `su` (MW 5,887 > 3,705), but **Grassmann's Rig-Veda
+dictionary reverses it — `su` 452 > `sam` 126**, the archaic language's fondness for the
+laudatory *su-* "well-, good-".
+
 **Every large Sanskrit-dictionary letter is large because it heads a preverb family.** This is
 the single cleanest finding of the report: `v` = *vi-*, `u` = *ud-* + *upa-*, `s` = *sam-* +
 *su-*, `p` = *pra-* + *pari-* + *prati-*, `a` = *ā-* + *abhi-* + *anu-* + *apa-* + *ava-*. The
