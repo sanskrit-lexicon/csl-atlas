@@ -277,6 +277,7 @@ years**. Only the two that chose exhaustive historical detail stall:
 | Sanskrit / Indo-Aryan | Span | Years | Lemmas | Status |
 |---|---|---:|---:|---|
 | WIL · Wilson | 1819–1832 | ~13 | 43,939 | ✓ |
+| KOW · Kossowicz (Skt-Rus) | 1854 | — | 13,488 *(a→`gh`)* | ✗ incomplete (terse) |
 | **GST · Goldstücker** | 1856–1864 | ~8 | 6,761 | ✗ **abandoned in `a`** |
 | PWG · Böhtlingk–Roth (gr.) | 1855–1875 | 20 | 106,083 | ✓ |
 | PW · Böhtlingk (kürzere) | 1879–1889 | **10** | 151,349 | ✓ |
@@ -286,15 +287,17 @@ years**. Only the two that chose exhaustive historical detail stall:
 | BORI Prakrit Dict. (CDPL) | 1988–~2090 *(proj.)* | ~102 | 33,600 *(a→`u`)* | ⧗ past the vowels |
 | **PD · Poona Dictionary** | **1976–~2284⁺** | **~308⁺** | 104,959 *(a-)* | ⧗ **still in `a`** |
 
-**The graveyard of `a`.** Sanskrit is not the problem — exhaustive detail is, and the proof is
-120 years old: **Goldstücker's 1856 remake of Wilson sank into the letter `a`, published 6,761
-entries, and was abandoned there at his death.** He was not alone — **Kossowicz's 1854
-Sanskrit→Russian remake of Wilson (KOW)** and **Böhtlingk–Roth's PWG (1855, whose entire first
-volume was `a-`)** joined him in the same 1850s reef. PD is the same project reborn at ~16× the
-density (104,959 vs 6,761 for `a`) — the same undertaking, the same letter, the same trap.
-Why `a` traps every one of them is anatomised in
-[Letter anatomy](/tools/letter-anatomy): it heads five preverb families plus the privative, so
-83 % of its entries are compounds, not roots.
+**The graveyard of `a`.** Sanskrit is not the problem — exhaustive detail is. The proof is
+170 years old: **Goldstücker's 1856 remake of Wilson set out to improve the whole dictionary,
+sank into the letter `a`, published 6,761 exhaustive entries, and was abandoned there at his
+death.** Terseness is the escape hatch — and the contrast is exact. His contemporary
+**Kossowicz** (1854, Sanskrit→Russian, also Wilson-based) kept entries short and so reached
+**`gh`** — 13,488 entries running `a`→`gh` — before that dictionary too was left unfinished;
+Böhtlingk–Roth's PWG spent its whole first volume (1855) on `a-` yet *completed*, because it
+refused to be exhaustive. PD is Goldstücker's project reborn at ~16× the density (104,959 vs
+6,761 for `a`) — the same undertaking, the same letter, the same trap. Why `a` traps the
+exhaustive is anatomised in [Letter anatomy](/tools/letter-anatomy): it heads five preverb
+families plus the privative, so 83 % of its entries are compounds, not roots.
 
 **The controlled experiment — two dictionaries, one city, one editor.** Across town in the same
 Pune, the **Bhandarkar Institute** (BORI) *Comprehensive & Critical Dictionary of the Prakrit
@@ -323,6 +326,28 @@ Even PD's fastest scenario (2182, 206 yr) exceeds the longest dictionary ever co
 density-held scenario is ~9× the Dutch WNT. On present course PD becomes the longest single
 lexicographic project in history — a direct consequence of its 13–23× density, not of any lack
 of effort.
+
+### The other model — born-digital corpus lexicography
+
+Every dictionary above belongs to one paradigm: the print historical dictionary, composed from
+slips and published alphabetically over decades. The sharpest contrast is the paradigm that
+*retires* it. **[TamiLex](https://www.tamilex.uni-hamburg.de)** (Universität Hamburg), a digital
+lexicography project for **Tamil**, differs from PD in *kind*, not speed:
+
+- **Born-digital, not print-fascicule** — a queryable database is never *stuck* at a letter; the
+  death-in-`a` trap is structurally impossible.
+- **Whole-language-at-once, not alphabetical** — partial-but-growing coverage everywhere at once,
+  not `a` perfected before `b` is touched. PD's centuries-long horizon is an artifact of the
+  alphabetical-completion constraint a database doesn't have.
+- **Corpus-integrated, not corpus-blind** — lexicon and attestation are one system. For Sanskrit,
+  dictionary (PD) and corpus (DCS) are *separate* — this whole study is the after-the-fact weld.
+- **Aggregative and open, not from-scratch and print.**
+
+**TamiLex is, for Tamil, essentially what the next section recommends for Sanskrit.** The drastic
+difference isn't that it's faster — it's that it *abandons the model whose clock this page has been
+measuring*. PD may be the last of the great print historical dictionaries; DCS welded to a lexical
+layer is the Sanskrit form of what comes after. *(Exact TamiLex figures pending — the site returned
+a transient error at time of writing; the comparison turns on paradigm, not dates.)*
 
 **What follows.** DCS *attests*; PD *analyses* — a corpus cannot supply PD's historical
 sense-development, so for the 97 % of the lexicon PD has not reached it remains the only project

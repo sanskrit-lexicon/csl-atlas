@@ -29,9 +29,11 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   and [data/pd/upasarga_counts.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/upasarga_counts.tsv)
   (Q2 full breakdown — every one of the 20 preverbs × every dictionary, count + %; report §3.1).
   `vi-` is the largest preverb in every dict; the `sam`/`su` order flips in Vedic (GRA `su` 452 > `sam` 126).
-- **Graveyard of `a` extended (H1336 tidy):** added Kossowicz (KOW, 1854) and the 1850s
-  Wilson-remake cohort to the graveyard note in the H1336 report §8.9 and the
-  `/tools/pd-dcs-coverage` page.
+- **Graveyard of `a` — corrected (H1336 tidy):** the reef sinks only the *exhaustive*.
+  Goldstücker (1856) died in Sanskrit `a` (6,761 entries). Kossowicz (KOW, 1854) reached 13,488
+  entries but is ordered by the **Russian**, not Sanskrit, alphabet and left unfinished — a
+  partial work of a different kind; Böhtlingk–Roth's PWG (1855) spent its first volume on `a-`
+  yet *completed* the alphabet. Terseness finishes, exhaustiveness drowns — report §8.9 + page.
 
 ### Changed — PD × DCS coverage: conclusions + completion-horizon analysis (H1336)
 
@@ -69,6 +71,14 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   A. M. Ghatage *also edited PD*, started 1988 (younger than PD) yet already `a`→`ujjhittu` (past
   all vowels, ~33,600 lexemes, bounded ~90k plan, finish ~2090) — a natural experiment showing a
   Sanskrit-family dictionary finishes only if it bounds its scope.
+- Added **KOW (Kossowicz 1854)** to the comparison (report + page): a *terse* Wilson-based
+  Sanskrit→Russian dictionary that reached `gh` (13,488 entries, `a`→`gh`) before stopping
+  unfinished — the escape-by-terseness contrast to Goldstücker's death-in-`a` (verified against
+  `SanskritLexicography/literature/kos_01.txt`; NOT an `a`-only dictionary). Added
+  §8.10 + a page section on **[TamiLex](https://www.tamilex.uni-hamburg.de)** (Hamburg): the
+  born-digital, corpus-integrated, non-alphabetical paradigm that *retires* the print-fascicule
+  model — differs from PD in kind, not speed; it is for Tamil what §8.4 recommends for Sanskrit
+  (DCS + a lexical layer). TamiLex exact figures pending (site returned a transient error).
 
 ## [0.3.0] - 2026-07-20
 

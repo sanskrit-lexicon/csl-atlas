@@ -471,6 +471,7 @@ historical monuments** of other traditions (same ambition, different language).
 | Dictionary | Direction | Span | Years | Lemmas | Status |
 |---|---|---|---:|---:|---|
 | WIL · Wilson | Skt→Eng | 1819–1832 | ~13 | 43,939 | ✓ complete |
+| KOW · Kossowicz | Skt→Rus | 1854 | — | 13,488 *(a→`gh`)* | ✗ incomplete (terse) |
 | **GST · Goldstücker** | Skt→Eng | 1856–1864 | ~8 | 6,761 | ✗ **abandoned in `a`** |
 | PWG · Böhtlingk–Roth (*grosse*) | Skt→Ger | 1855–1875 | 20 | 106,083 | ✓ complete |
 | PW · Böhtlingk (*kürzere*) | Skt→Ger | 1879–1889 | **10** | 151,349 | ✓ complete |
@@ -482,11 +483,16 @@ historical monuments** of other traditions (same ambition, different language).
 
 The contrast could not be sharper. Böhtlingk's *kürzere Fassung* (PW) documented **151,349
 lemmas across the whole alphabet in ten years**; PD has 104,959 lemmas and has covered ~4 % of
-the alphabet in fifty. Sanskrit is not the problem — **exhaustive historical detail is.** The
-proof is 120 years old: **Theodor Goldstücker's 1856 remake of Wilson set out to improve the
-whole dictionary, sank into the letter `a`, published 6,761 entries, and was abandoned there at
-his death.** PD is Goldstücker's project reborn at ~16× the density (104,959 vs 6,761 for `a`)
-and computer-typeset — the same undertaking, the same letter, the same trap.
+the alphabet in fifty. Sanskrit is not the problem — **exhaustive historical detail is**, and the
+proof is 170 years old. **Theodor Goldstücker's 1856 remake of Wilson** set out to improve the
+whole dictionary, sank into `a`, published 6,761 exhaustive entries, and was abandoned there at his
+death. The contrast is exact and stands right beside it: his contemporary **Kaetan Kossowicz**
+(1854, Sanskrit→Russian, also Wilson-based) kept his articles short and so ran `a`→`gh` — **13,488
+entries** — before that dictionary too was left unfinished, while Böhtlingk–Roth's PWG spent its
+entire first volume (1855) on `a-` yet *completed the alphabet*, precisely because it refused to be
+exhaustive. Terseness finishes; exhaustiveness drowns. PD is Goldstücker's project reborn at ~16×
+the density (104,959 vs Goldstücker's 6,761 for `a`) and computer-typeset — the same undertaking,
+the same letter, the same trap, now a century and a half deep.
 
 **The controlled experiment — two dictionaries, one city, one editor.** The sharpest comparison
 is not across centuries but across town. In the *same* Pune, the **Bhandarkar Oriental Research
@@ -570,13 +576,16 @@ ahead.** `s` (25,075 MW headwords), `p` (21,051) and `v` (18,598) each exceed th
 
 **Why, then, is `a` where Sanskrit dictionaries get stuck?** Not because it is the single largest
 letter, but because it is **first, always top-four in size, and privative-inflated** — the worst
-possible place to begin a maximalist project. The evidence is a genuine graveyard, and it is a
-**1850s cohort**: three maximalist remakes of Wilson set out within the same decade and each ran
-onto the `a` reef — **Kossowicz (KOW, 1854**, a Sanskrit→Russian remake of Wilson, which never
-left the early letters), **Goldstücker (1856)**, and **Böhtlingk–Roth's PWG (1855)**, whose
-entire first volume was `a-` alone; PD has now spent five decades there and is not done. `a` is
-the reef every exhaustive Sanskrit dictionary runs onto first — and the only one of the cohort to
-finish was Böhtlingk's later *kürzere Fassung*, which refused to let it swallow it.
+possible place to begin a maximalist project. The evidence is a genuine graveyard — but the reef
+sinks only the *exhaustive*. The clearest wreck is **Goldstücker (1856)**, whose maximalist remake
+of Wilson published 6,761 entries and never left `a`. Two 1850s contemporaries show the escape is
+terseness, not talent: **Kossowicz (KOW, 1854**, a Sanskrit→Russian remake of Wilson) kept his
+articles short and ran `a`→`gh` (13,488 entries) before stopping unfinished, and **Böhtlingk–Roth's
+PWG (1855)** spent its whole first volume on `a-` yet *completed the entire alphabet* by 1875,
+precisely because it declined to be exhaustive. PD has now spent five decades in `a` and is not
+done. `a` is the reef every *exhaustive* Sanskrit dictionary runs onto first — and the ones that
+finish, like Böhtlingk's PWG and later *kürzere Fassung*, are those that refuse to let it swallow
+them.
 
 A companion study now quantifies the anatomy of that reef —
 [LETTER_ANATOMY_AND_ENTRY_SIZE_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/LETTER_ANATOMY_AND_ENTRY_SIZE_2026.md)
@@ -585,6 +594,45 @@ A companion study now quantifies the anatomy of that reef —
 families plus the privative; `u`, `p`, `s`, `v` are close behind for the same reason. That study
 also tests, and refutes for SKD/VCP, the belief that dictionary entries shrink toward the end of
 the work — the entry-size decay is real only in the Petersburg dictionaries and Grassmann.
+
+### 8.10 The other model — born-digital corpus lexicography (TamiLex)
+
+Every dictionary in §8.8, PD included, belongs to one paradigm: the **print historical
+dictionary, composed from a slip-archive and published alphabetically in fascicules**. The whole
+arithmetic of this report — the 250-year horizon, the milestones, the death-in-`a` — is the
+arithmetic *of that paradigm*. The sharpest comparison is therefore not to another slow print
+dictionary but to the paradigm that **retires** it. **[TamiLex](https://www.tamilex.uni-hamburg.de)**
+(Universität Hamburg) — a digital lexicography project for **Tamil**, the classical language whose
+lexicographic tradition most parallels Sanskrit's — is that other model, and the differences from
+PD are differences of *kind*, not of speed:
+
+1. **Born-digital, not print-fascicule.** TamiLex is a queryable digital resource, not a sequence
+   of bound volumes. Nothing is "published" letter by letter, so **the death-in-`a` trap is
+   structurally impossible** — a database is never *stuck* at a letter.
+2. **Whole-language-at-once, not alphabetical.** A digital lexicon holds partial-but-growing
+   coverage across the *entire* language simultaneously and deepens everywhere at once, instead of
+   perfecting `a` before touching `b`. PD's centuries-long horizon is a direct artifact of the
+   alphabetical-*completion* constraint that a digital resource simply does not have.
+3. **Corpus-integrated, not corpus-blind.** TamiLex is built against a digital Tamil corpus, so
+   attestation and lexicon are one system. In the Sanskrit world the dictionary (PD) and the
+   corpus (DCS) are *separate projects* — and this study exists only because someone had to weld
+   them together after the fact. TamiLex has that weld from the start.
+4. **Aggregative and open, not from-scratch and print.** It digitises and cross-links the existing
+   Tamil dictionaries into an open, machine-queryable resource, rather than composing one
+   monumental new dictionary from slips over generations.
+
+The synthesis writes itself: **TamiLex is, for Tamil, essentially what §8.4 recommends for
+Sanskrit** — a corpus-integrated digital lexicon rather than a print dictionary crawling through
+the alphabet for centuries. The drastic difference is not that TamiLex is *faster*; it is that it
+**abandons the model whose clock this whole report has been measuring.** PD may be the last, and
+grandest, of the great print historical dictionaries; the born-digital corpus lexicon is what
+comes after — and DCS, welded to a lexical layer, is the Sanskrit form it would take.
+
+> _TamiLex specifics (exact start year, funding term, entry counts, source-dictionary set) were
+> not machine-verifiable at time of writing — the project site returned a transient server error —
+> and are described here at the level of paradigm, which is what the comparison turns on. The
+> concrete figures should be confirmed against [tamilex.uni-hamburg.de](https://www.tamilex.uni-hamburg.de)
+> and folded in._
 
 ---
 
