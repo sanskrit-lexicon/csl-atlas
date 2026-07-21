@@ -71,10 +71,11 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   A. M. Ghatage *also edited PD*, started 1988 (younger than PD) yet already `a`→`ujjhittu` (past
   all vowels, ~33,600 lexemes, bounded ~90k plan, finish ~2090) — a natural experiment showing a
   Sanskrit-family dictionary finishes only if it bounds its scope.
-- Added **KOW (Kossowicz 1854)** to the comparison (report + page): a *terse* Wilson-based
-  Sanskrit→Russian dictionary that reached `gh` (13,488 entries, `a`→`gh`) before stopping
-  unfinished — the escape-by-terseness contrast to Goldstücker's death-in-`a` (verified against
-  `SanskritLexicography/literature/kos_01.txt`; NOT an `a`-only dictionary). Added
+- Added **KOW (Kossowicz 1854)** to the comparison (report + page): a partial Wilson-based
+  Sanskrit→Russian dictionary of 13,488 entries **arranged in Russian (not Sanskrit) alphabetical
+  order** and left unfinished — so it is neither a death-in-`a` nor comparable on the
+  Sanskrit-letter axis (verified against `SanskritLexicography/literature/kos_01.txt`). Only
+  Goldstücker (exhaustive) died in Sanskrit `a`; PWG (first vol `a-`) completed. Added
   §8.10 + a page section on **[TamiLex](https://www.tamilex.uni-hamburg.de)** (Hamburg): the
   born-digital, corpus-integrated, non-alphabetical paradigm that *retires* the print-fascicule
   model — differs from PD in kind, not speed; it is for Tamil what §8.4 recommends for Sanskrit

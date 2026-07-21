@@ -277,7 +277,7 @@ years**. Only the two that chose exhaustive historical detail stall:
 | Sanskrit / Indo-Aryan | Span | Years | Lemmas | Status |
 |---|---|---:|---:|---|
 | WIL · Wilson | 1819–1832 | ~13 | 43,939 | ✓ |
-| KOW · Kossowicz (Skt-Rus) | 1854 | — | 13,488 *(a→`gh`)* | ✗ incomplete (terse) |
+| KOW · Kossowicz (Skt-Rus) | 1854 | — | 13,488 *(Russian-ordered)* | ✗ incomplete |
 | **GST · Goldstücker** | 1856–1864 | ~8 | 6,761 | ✗ **abandoned in `a`** |
 | PWG · Böhtlingk–Roth (gr.) | 1855–1875 | 20 | 106,083 | ✓ |
 | PW · Böhtlingk (kürzere) | 1879–1889 | **10** | 151,349 | ✓ |
@@ -290,11 +290,12 @@ years**. Only the two that chose exhaustive historical detail stall:
 **The graveyard of `a`.** Sanskrit is not the problem — exhaustive detail is. The proof is
 170 years old: **Goldstücker's 1856 remake of Wilson set out to improve the whole dictionary,
 sank into the letter `a`, published 6,761 exhaustive entries, and was abandoned there at his
-death.** Terseness is the escape hatch — and the contrast is exact. His contemporary
-**Kossowicz** (1854, Sanskrit→Russian, also Wilson-based) kept entries short and so reached
-**`gh`** — 13,488 entries running `a`→`gh` — before that dictionary too was left unfinished;
-Böhtlingk–Roth's PWG spent its whole first volume (1855) on `a-` yet *completed*, because it
-refused to be exhaustive. PD is Goldstücker's project reborn at ~16× the density (104,959 vs
+death** — the one clean death-in-`a`. Two contemporaries are often lumped in but don't belong:
+**Kossowicz** (1854, Sanskrit→Russian) reached 13,488 entries but is ordered by the **Russian**,
+not Sanskrit, alphabet and left unfinished — a partial work of a different kind, not on the
+Sanskrit-letter axis at all; and Böhtlingk–Roth's PWG spent its whole first volume (1855) on `a-`
+yet *completed the alphabet*, because it refused to be exhaustive. PD is Goldstücker's project
+reborn at ~16× the density (104,959 vs
 6,761 for `a`) — the same undertaking, the same letter, the same trap. Why `a` traps the
 exhaustive is anatomised in [Letter anatomy](/tools/letter-anatomy): it heads five preverb
 families plus the privative, so 83 % of its entries are compounds, not roots.

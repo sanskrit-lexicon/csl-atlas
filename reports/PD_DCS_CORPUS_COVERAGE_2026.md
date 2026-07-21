@@ -471,7 +471,7 @@ historical monuments** of other traditions (same ambition, different language).
 | Dictionary | Direction | Span | Years | Lemmas | Status |
 |---|---|---|---:|---:|---|
 | WIL · Wilson | Skt→Eng | 1819–1832 | ~13 | 43,939 | ✓ complete |
-| KOW · Kossowicz | Skt→Rus | 1854 | — | 13,488 *(a→`gh`)* | ✗ incomplete (terse) |
+| KOW · Kossowicz | Skt→Rus | 1854 | — | 13,488 *(Russian-ordered)* | ✗ incomplete |
 | **GST · Goldstücker** | Skt→Eng | 1856–1864 | ~8 | 6,761 | ✗ **abandoned in `a`** |
 | PWG · Böhtlingk–Roth (*grosse*) | Skt→Ger | 1855–1875 | 20 | 106,083 | ✓ complete |
 | PW · Böhtlingk (*kürzere*) | Skt→Ger | 1879–1889 | **10** | 151,349 | ✓ complete |
@@ -486,10 +486,11 @@ lemmas across the whole alphabet in ten years**; PD has 104,959 lemmas and has c
 the alphabet in fifty. Sanskrit is not the problem — **exhaustive historical detail is**, and the
 proof is 170 years old. **Theodor Goldstücker's 1856 remake of Wilson** set out to improve the
 whole dictionary, sank into `a`, published 6,761 exhaustive entries, and was abandoned there at his
-death. The contrast is exact and stands right beside it: his contemporary **Kaetan Kossowicz**
-(1854, Sanskrit→Russian, also Wilson-based) kept his articles short and so ran `a`→`gh` — **13,488
-entries** — before that dictionary too was left unfinished, while Böhtlingk–Roth's PWG spent its
-entire first volume (1855) on `a-` yet *completed the alphabet*, precisely because it refused to be
+death — the one clean death-in-`a`. Two contemporaries are often lumped with him but do not
+belong: **Kossowicz's 1854 Sanskrit→Russian dictionary** reached 13,488 entries but is arranged in
+**Russian**, not Sanskrit, alphabetical order and was left unfinished — a partial work of a
+different kind, not comparable on the Sanskrit-letter axis; and **Böhtlingk–Roth's PWG** spent its
+whole first volume (1855) on `a-` yet *completed the alphabet* by 1875, because it refused to be
 exhaustive. Terseness finishes; exhaustiveness drowns. PD is Goldstücker's project reborn at ~16×
 the density (104,959 vs Goldstücker's 6,761 for `a`) and computer-typeset — the same undertaking,
 the same letter, the same trap, now a century and a half deep.
@@ -577,13 +578,14 @@ ahead.** `s` (25,075 MW headwords), `p` (21,051) and `v` (18,598) each exceed th
 **Why, then, is `a` where Sanskrit dictionaries get stuck?** Not because it is the single largest
 letter, but because it is **first, always top-four in size, and privative-inflated** — the worst
 possible place to begin a maximalist project. The evidence is a genuine graveyard — but the reef
-sinks only the *exhaustive*. The clearest wreck is **Goldstücker (1856)**, whose maximalist remake
-of Wilson published 6,761 entries and never left `a`. Two 1850s contemporaries show the escape is
-terseness, not talent: **Kossowicz (KOW, 1854**, a Sanskrit→Russian remake of Wilson) kept his
-articles short and ran `a`→`gh` (13,488 entries) before stopping unfinished, and **Böhtlingk–Roth's
-PWG (1855)** spent its whole first volume on `a-` yet *completed the entire alphabet* by 1875,
-precisely because it declined to be exhaustive. PD has now spent five decades in `a` and is not
-done. `a` is the reef every *exhaustive* Sanskrit dictionary runs onto first — and the ones that
+sinks only the *exhaustive*. The one clean wreck is **Goldstücker (1856)**, whose maximalist remake
+of Wilson published 6,761 entries and never left `a`. Two 1850s contemporaries are often lumped in
+but do not belong: **Kossowicz (KOW, 1854**, a Sanskrit→Russian remake of Wilson) reached 13,488
+entries but is ordered by the **Russian**, not Sanskrit, alphabet and was left unfinished — a
+partial work of a different kind; and **Böhtlingk–Roth's PWG (1855)** spent its whole first volume
+on `a-` yet *completed the entire alphabet* by 1875, because it declined to be exhaustive. PD has
+now spent five decades in `a` and is not done. `a` is the reef every *exhaustive* Sanskrit
+dictionary runs onto first — and the ones that
 finish, like Böhtlingk's PWG and later *kürzere Fassung*, are those that refuse to let it swallow
 them.
 
