@@ -570,11 +570,21 @@ ahead.** `s` (25,075 MW headwords), `p` (21,051) and `v` (18,598) each exceed th
 
 **Why, then, is `a` where Sanskrit dictionaries get stuck?** Not because it is the single largest
 letter, but because it is **first, always top-four in size, and privative-inflated** — the worst
-possible place to begin a maximalist project. The evidence is a genuine graveyard: Goldstücker
-(1856) died in `a`; Böhtlingk–Roth's PWG spent its entire first volume (1855) on `a-` alone; and
-PD has now spent five decades there and is not done. `a` is the reef every exhaustive Sanskrit
-dictionary runs onto first — and the only ones that finish are those, like Böhtlingk's *kürzere
-Fassung*, that refuse to let it swallow them.
+possible place to begin a maximalist project. The evidence is a genuine graveyard, and it is a
+**1850s cohort**: three maximalist remakes of Wilson set out within the same decade and each ran
+onto the `a` reef — **Kossowicz (KOW, 1854**, a Sanskrit→Russian remake of Wilson, which never
+left the early letters), **Goldstücker (1856)**, and **Böhtlingk–Roth's PWG (1855)**, whose
+entire first volume was `a-` alone; PD has now spent five decades there and is not done. `a` is
+the reef every exhaustive Sanskrit dictionary runs onto first — and the only one of the cohort to
+finish was Böhtlingk's later *kürzere Fassung*, which refused to let it swallow it.
+
+A companion study now quantifies the anatomy of that reef —
+[LETTER_ANATOMY_AND_ENTRY_SIZE_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/LETTER_ANATOMY_AND_ENTRY_SIZE_2026.md)
+([/tools/letter-anatomy](https://sanskrit-lexicon.github.io/csl-atlas/tools/letter-anatomy)):
+`a` is 83.1 % compounds not because it is uniquely hard but because it heads five preverb
+families plus the privative; `u`, `p`, `s`, `v` are close behind for the same reason. That study
+also tests, and refutes for SKD/VCP, the belief that dictionary entries shrink toward the end of
+the work — the entry-size decay is real only in the Petersburg dictionaries and Grassmann.
 
 ---
 

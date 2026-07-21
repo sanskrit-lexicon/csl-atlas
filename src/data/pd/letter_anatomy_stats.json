@@ -1,0 +1,1530 @@
+{
+  "handoff": "H1416",
+  "generator": "scripts/letter_anatomy.py",
+  "model": "Opus 4.8 (claude-opus-4-8)",
+  "dicts": {
+    "MW": {
+      "label": "Monier-Williams 1899",
+      "has_dash": true,
+      "n_headwords": 194084,
+      "n_entries": 286525,
+      "entry_text": "C:/Users/user/Documents/GitHub/csl-orig/v02/mw/mw.txt"
+    },
+    "AP": {
+      "label": "Apte 1890",
+      "has_dash": false,
+      "n_headwords": 88867,
+      "n_entries": 34882,
+      "entry_text": "C:/Users/user/Documents/GitHub/csl-orig/v02/ap90/ap90.txt"
+    },
+    "PWG": {
+      "label": "Boehtlingk-Roth (grosse) 1855-75",
+      "has_dash": false,
+      "n_headwords": 106082,
+      "n_entries": 123366,
+      "entry_text": "C:/Users/user/Documents/GitHub/csl-orig/v02/pwg/pwg.txt"
+    },
+    "PWK": {
+      "label": "Boehtlingk (kuerzere) 1879-89",
+      "has_dash": false,
+      "n_headwords": 151349,
+      "n_entries": 24976,
+      "entry_text": "C:/Users/user/Documents/GitHub/csl-orig/v02/pwkvn/pwkvn.txt"
+    },
+    "SKD": {
+      "label": "Sabdakalpadruma 1886",
+      "has_dash": false,
+      "n_headwords": 40817,
+      "n_entries": 42531,
+      "entry_text": "C:/Users/user/Documents/GitHub/csl-orig/v02/skd/skd.txt"
+    },
+    "VCP": {
+      "label": "Vacaspatyam 1873-84",
+      "has_dash": false,
+      "n_headwords": 48636,
+      "n_entries": 50135,
+      "entry_text": "C:/Users/user/Documents/GitHub/csl-orig/v02/vcp/vcp.txt"
+    },
+    "GRA": {
+      "label": "Grassmann (Rig-Veda) 1873",
+      "has_dash": true,
+      "n_headwords": 11108,
+      "n_entries": 12785,
+      "entry_text": "C:/Users/user/Documents/GitHub/csl-orig/v02/gra/gra.txt"
+    },
+    "PD": {
+      "label": "Petersburg Dictionary (in prog.)",
+      "has_dash": false,
+      "n_headwords": 104959,
+      "n_entries": 107630,
+      "entry_text": "C:/Users/user/Documents/GitHub/SanskritSpellCheck/external_src/pd/pd.txt"
+    }
+  },
+  "q4_regression": {
+    "MW": {
+      "n": 286525,
+      "n_letters": 42,
+      "log_slope": 0.33317908565712634,
+      "log_ci_lo": 0.2516525137114181,
+      "log_ci_hi": 0.41470565760283457,
+      "log_p": 1.1520374537421435e-15,
+      "pct_change_per_traversal": 39.53971717142273,
+      "fe_slope": 21.116135506187703,
+      "fe_ci_lo": 10.760193671530558,
+      "fe_ci_hi": 31.472077340844848,
+      "fe_p": 6.431457600206993e-05,
+      "naive_slope": 1.679279826896527,
+      "spearman_rho": 0.014991126604402744,
+      "spearman_p": 1.0163298447044108e-15,
+      "verdict": "GROWTH",
+      "robust": {
+        "rho_combined": 0.01763748892411894,
+        "rho_ci_lo": 0.013975918599024901,
+        "rho_ci_hi": 0.02129858622810301,
+        "p": 3.735936140527002e-21,
+        "n_letters": 40,
+        "neg_letters": 17,
+        "sign_test_p": 0.42959050784338615,
+        "verdict": "GROWTH",
+        "per_letter": [
+          {
+            "letter": "B",
+            "n": 6736,
+            "rho": 0.022
+          },
+          {
+            "letter": "C",
+            "n": 830,
+            "rho": 0.001
+          },
+          {
+            "letter": "D",
+            "n": 3587,
+            "rho": -0.005
+          },
+          {
+            "letter": "E",
+            "n": 314,
+            "rho": -0.052
+          },
+          {
+            "letter": "G",
+            "n": 1101,
+            "rho": 0.014
+          },
+          {
+            "letter": "J",
+            "n": 214,
+            "rho": -0.193
+          },
+          {
+            "letter": "K",
+            "n": 1563,
+            "rho": 0.049
+          },
+          {
+            "letter": "O",
+            "n": 590,
+            "rho": -0.049
+          },
+          {
+            "letter": "P",
+            "n": 761,
+            "rho": 0.062
+          },
+          {
+            "letter": "Q",
+            "n": 52,
+            "rho": 0.168
+          },
+          {
+            "letter": "R",
+            "n": 12,
+            "rho": -0.091
+          },
+          {
+            "letter": "S",
+            "n": 14658,
+            "rho": -0.007
+          },
+          {
+            "letter": "T",
+            "n": 31,
+            "rho": 0.279
+          },
+          {
+            "letter": "W",
+            "n": 24,
+            "rho": -0.037
+          },
+          {
+            "letter": "a",
+            "n": 32759,
+            "rho": 0.067
+          },
+          {
+            "letter": "b",
+            "n": 5591,
+            "rho": 0.081
+          },
+          {
+            "letter": "c",
+            "n": 5439,
+            "rho": -0.074
+          },
+          {
+            "letter": "d",
+            "n": 10874,
+            "rho": -0.006
+          },
+          {
+            "letter": "e",
+            "n": 1312,
+            "rho": -0.004
+          },
+          {
+            "letter": "f",
+            "n": 793,
+            "rho": -0.096
+          },
+          {
+            "letter": "g",
+            "n": 7547,
+            "rho": 0.019
+          },
+          {
+            "letter": "h",
+            "n": 5198,
+            "rho": 0.026
+          },
+          {
+            "letter": "i",
+            "n": 1698,
+            "rho": -0.046
+          },
+          {
+            "letter": "j",
+            "n": 5077,
+            "rho": 0.04
+          },
+          {
+            "letter": "k",
+            "n": 20502,
+            "rho": 0.07
+          },
+          {
+            "letter": "l",
+            "n": 3981,
+            "rho": 0.008
+          },
+          {
+            "letter": "m",
+            "n": 16215,
+            "rho": 0.006
+          },
+          {
+            "letter": "n",
+            "n": 11746,
+            "rho": 0.07
+          },
+          {
+            "letter": "o",
+            "n": 247,
+            "rho": 0.098
+          },
+          {
+            "letter": "p",
+            "n": 31035,
+            "rho": 0.057
+          },
+          {
+            "letter": "q",
+            "n": 187,
+            "rho": -0.078
+          },
+          {
+            "letter": "r",
+            "n": 7742,
+            "rho": 0.028
+          },
+          {
+            "letter": "s",
+            "n": 36866,
+            "rho": -0.101
+          },
+          {
+            "letter": "t",
+            "n": 8185,
+            "rho": 0.001
+          },
+          {
+            "letter": "u",
+            "n": 9187,
+            "rho": 0.052
+          },
+          {
+            "letter": "v",
+            "n": 28396,
+            "rho": 0.052
+          },
+          {
+            "letter": "w",
+            "n": 168,
+            "rho": -0.032
+          },
+          {
+            "letter": "x",
+            "n": 14,
+            "rho": -0.77
+          },
+          {
+            "letter": "y",
+            "n": 4456,
+            "rho": -0.057
+          },
+          {
+            "letter": "z",
+            "n": 823,
+            "rho": 0.11
+          }
+        ]
+      }
+    },
+    "AP": {
+      "n": 34882,
+      "n_letters": 41,
+      "log_slope": 0.09280548622610367,
+      "log_ci_lo": -0.1802164165690937,
+      "log_ci_hi": 0.3658273890213011,
+      "log_p": 0.505253653468014,
+      "pct_change_per_traversal": 9.724828460446822,
+      "fe_slope": -225.32959432696634,
+      "fe_ci_lo": -359.9818604083775,
+      "fe_ci_hi": -90.6773282455552,
+      "fe_p": 0.0010392589853115198,
+      "naive_slope": -9.538028608392704,
+      "spearman_rho": -0.012181765561374715,
+      "spearman_p": 0.022896480537453114,
+      "verdict": "inconclusive",
+      "robust": {
+        "rho_combined": -0.019912997596570836,
+        "rho_ci_lo": -0.03041989562493199,
+        "rho_ci_hi": -0.009401699395175224,
+        "p": 0.00020501421164676164,
+        "n_letters": 36,
+        "neg_letters": 25,
+        "sign_test_p": 0.028816719655878845,
+        "verdict": "DECAY",
+        "per_letter": [
+          {
+            "letter": "B",
+            "n": 622,
+            "rho": -0.05
+          },
+          {
+            "letter": "C",
+            "n": 124,
+            "rho": -0.109
+          },
+          {
+            "letter": "D",
+            "n": 370,
+            "rho": -0.017
+          },
+          {
+            "letter": "E",
+            "n": 91,
+            "rho": 0.116
+          },
+          {
+            "letter": "G",
+            "n": 152,
+            "rho": -0.197
+          },
+          {
+            "letter": "J",
+            "n": 73,
+            "rho": -0.038
+          },
+          {
+            "letter": "K",
+            "n": 256,
+            "rho": -0.028
+          },
+          {
+            "letter": "O",
+            "n": 183,
+            "rho": -0.046
+          },
+          {
+            "letter": "P",
+            "n": 90,
+            "rho": -0.299
+          },
+          {
+            "letter": "Q",
+            "n": 10,
+            "rho": 0.079
+          },
+          {
+            "letter": "S",
+            "n": 1127,
+            "rho": -0.025
+          },
+          {
+            "letter": "a",
+            "n": 7967,
+            "rho": -0.051
+          },
+          {
+            "letter": "b",
+            "n": 400,
+            "rho": 0.045
+          },
+          {
+            "letter": "c",
+            "n": 628,
+            "rho": -0.1
+          },
+          {
+            "letter": "d",
+            "n": 915,
+            "rho": 0.007
+          },
+          {
+            "letter": "e",
+            "n": 106,
+            "rho": 0.024
+          },
+          {
+            "letter": "f",
+            "n": 114,
+            "rho": 0.045
+          },
+          {
+            "letter": "g",
+            "n": 695,
+            "rho": 0.017
+          },
+          {
+            "letter": "h",
+            "n": 448,
+            "rho": -0.1
+          },
+          {
+            "letter": "i",
+            "n": 297,
+            "rho": -0.007
+          },
+          {
+            "letter": "j",
+            "n": 523,
+            "rho": 0.091
+          },
+          {
+            "letter": "k",
+            "n": 2445,
+            "rho": 0.06
+          },
+          {
+            "letter": "l",
+            "n": 466,
+            "rho": -0.065
+          },
+          {
+            "letter": "m",
+            "n": 1324,
+            "rho": -0.031
+          },
+          {
+            "letter": "n",
+            "n": 1388,
+            "rho": -0.003
+          },
+          {
+            "letter": "o",
+            "n": 62,
+            "rho": -0.034
+          },
+          {
+            "letter": "p",
+            "n": 4329,
+            "rho": 0.026
+          },
+          {
+            "letter": "q",
+            "n": 45,
+            "rho": -0.031
+          },
+          {
+            "letter": "r",
+            "n": 508,
+            "rho": -0.081
+          },
+          {
+            "letter": "s",
+            "n": 2858,
+            "rho": -0.09
+          },
+          {
+            "letter": "t",
+            "n": 937,
+            "rho": -0.035
+          },
+          {
+            "letter": "u",
+            "n": 2009,
+            "rho": -0.066
+          },
+          {
+            "letter": "v",
+            "n": 2909,
+            "rho": 0.073
+          },
+          {
+            "letter": "w",
+            "n": 44,
+            "rho": -0.132
+          },
+          {
+            "letter": "y",
+            "n": 309,
+            "rho": -0.114
+          },
+          {
+            "letter": "z",
+            "n": 38,
+            "rho": -0.355
+          }
+        ]
+      }
+    },
+    "PWG": {
+      "n": 123366,
+      "n_letters": 42,
+      "log_slope": -1.1035381611412673,
+      "log_ci_lo": -1.1315016285617374,
+      "log_ci_hi": -1.0755746937207973,
+      "log_p": 0.0,
+      "pct_change_per_traversal": -66.83045867530826,
+      "fe_slope": -317.7770827878711,
+      "fe_ci_lo": -354.6924339508122,
+      "fe_ci_hi": -280.86173162493003,
+      "fe_p": 8.521601937528907e-64,
+      "naive_slope": -69.36247948924313,
+      "spearman_rho": -0.2271016261320077,
+      "spearman_p": 0.0,
+      "verdict": "DECAY",
+      "robust": {
+        "rho_combined": -0.18640457189256215,
+        "rho_ci_lo": -0.19178799163037277,
+        "rho_ci_hi": -0.181009935440153,
+        "p": 0.0,
+        "n_letters": 38,
+        "neg_letters": 36,
+        "sign_test_p": 5.398760549724102e-09,
+        "verdict": "DECAY",
+        "per_letter": [
+          {
+            "letter": "B",
+            "n": 2775,
+            "rho": -0.123
+          },
+          {
+            "letter": "C",
+            "n": 364,
+            "rho": -0.16
+          },
+          {
+            "letter": "D",
+            "n": 1628,
+            "rho": -0.234
+          },
+          {
+            "letter": "E",
+            "n": 245,
+            "rho": -0.31
+          },
+          {
+            "letter": "G",
+            "n": 506,
+            "rho": -0.175
+          },
+          {
+            "letter": "J",
+            "n": 104,
+            "rho": -0.286
+          },
+          {
+            "letter": "K",
+            "n": 795,
+            "rho": -0.196
+          },
+          {
+            "letter": "O",
+            "n": 436,
+            "rho": -0.193
+          },
+          {
+            "letter": "P",
+            "n": 342,
+            "rho": -0.164
+          },
+          {
+            "letter": "Q",
+            "n": 21,
+            "rho": -0.271
+          },
+          {
+            "letter": "S",
+            "n": 5584,
+            "rho": -0.069
+          },
+          {
+            "letter": "T",
+            "n": 16,
+            "rho": -0.23
+          },
+          {
+            "letter": "W",
+            "n": 10,
+            "rho": -0.6
+          },
+          {
+            "letter": "a",
+            "n": 15920,
+            "rho": -0.301
+          },
+          {
+            "letter": "b",
+            "n": 2383,
+            "rho": -0.104
+          },
+          {
+            "letter": "c",
+            "n": 2520,
+            "rho": -0.246
+          },
+          {
+            "letter": "d",
+            "n": 5674,
+            "rho": -0.272
+          },
+          {
+            "letter": "e",
+            "n": 635,
+            "rho": -0.33
+          },
+          {
+            "letter": "f",
+            "n": 413,
+            "rho": -0.288
+          },
+          {
+            "letter": "g",
+            "n": 3553,
+            "rho": -0.226
+          },
+          {
+            "letter": "h",
+            "n": 2092,
+            "rho": 0.01
+          },
+          {
+            "letter": "i",
+            "n": 1003,
+            "rho": -0.216
+          },
+          {
+            "letter": "j",
+            "n": 2427,
+            "rho": -0.236
+          },
+          {
+            "letter": "k",
+            "n": 9990,
+            "rho": -0.232
+          },
+          {
+            "letter": "l",
+            "n": 1546,
+            "rho": -0.095
+          },
+          {
+            "letter": "m",
+            "n": 7044,
+            "rho": -0.184
+          },
+          {
+            "letter": "n",
+            "n": 5201,
+            "rho": -0.255
+          },
+          {
+            "letter": "o",
+            "n": 148,
+            "rho": -0.311
+          },
+          {
+            "letter": "p",
+            "n": 12754,
+            "rho": -0.216
+          },
+          {
+            "letter": "q",
+            "n": 115,
+            "rho": -0.055
+          },
+          {
+            "letter": "r",
+            "n": 3048,
+            "rho": 0.029
+          },
+          {
+            "letter": "s",
+            "n": 13420,
+            "rho": -0.143
+          },
+          {
+            "letter": "t",
+            "n": 4091,
+            "rho": -0.241
+          },
+          {
+            "letter": "u",
+            "n": 3890,
+            "rho": -0.231
+          },
+          {
+            "letter": "v",
+            "n": 10311,
+            "rho": -0.013
+          },
+          {
+            "letter": "w",
+            "n": 104,
+            "rho": -0.194
+          },
+          {
+            "letter": "y",
+            "n": 1926,
+            "rho": -0.12
+          },
+          {
+            "letter": "z",
+            "n": 324,
+            "rho": -0.119
+          }
+        ]
+      }
+    },
+    "PWK": {
+      "n": 24976,
+      "n_letters": 39,
+      "log_slope": -1.1775724350334615,
+      "log_ci_lo": -1.2124618525541144,
+      "log_ci_hi": -1.1426830175128087,
+      "log_p": 0.0,
+      "pct_change_per_traversal": -69.19744161571741,
+      "fe_slope": -40.85917743971935,
+      "fe_ci_lo": -42.523970272329215,
+      "fe_ci_hi": -39.19438460710949,
+      "fe_p": 0.0,
+      "naive_slope": -17.287708868969187,
+      "spearman_rho": -0.3635280081596998,
+      "spearman_p": 0.0,
+      "verdict": "DECAY",
+      "robust": {
+        "rho_combined": -0.3347419130640905,
+        "rho_ci_lo": -0.3457378588140402,
+        "rho_ci_hi": -0.3236540423710375,
+        "p": 0.0,
+        "n_letters": 32,
+        "neg_letters": 27,
+        "sign_test_p": 0.00011307420209050179,
+        "verdict": "DECAY",
+        "per_letter": [
+          {
+            "letter": "B",
+            "n": 275,
+            "rho": -0.204
+          },
+          {
+            "letter": "C",
+            "n": 83,
+            "rho": 0.095
+          },
+          {
+            "letter": "D",
+            "n": 217,
+            "rho": -0.284
+          },
+          {
+            "letter": "E",
+            "n": 42,
+            "rho": -0.514
+          },
+          {
+            "letter": "G",
+            "n": 87,
+            "rho": -0.445
+          },
+          {
+            "letter": "J",
+            "n": 14,
+            "rho": -0.45
+          },
+          {
+            "letter": "K",
+            "n": 127,
+            "rho": -0.336
+          },
+          {
+            "letter": "O",
+            "n": 68,
+            "rho": -0.26
+          },
+          {
+            "letter": "P",
+            "n": 24,
+            "rho": 0.07
+          },
+          {
+            "letter": "S",
+            "n": 194,
+            "rho": 0.087
+          },
+          {
+            "letter": "a",
+            "n": 11644,
+            "rho": -0.463
+          },
+          {
+            "letter": "b",
+            "n": 331,
+            "rho": -0.205
+          },
+          {
+            "letter": "c",
+            "n": 590,
+            "rho": -0.079
+          },
+          {
+            "letter": "d",
+            "n": 785,
+            "rho": -0.309
+          },
+          {
+            "letter": "e",
+            "n": 353,
+            "rho": -0.424
+          },
+          {
+            "letter": "f",
+            "n": 109,
+            "rho": -0.146
+          },
+          {
+            "letter": "g",
+            "n": 768,
+            "rho": -0.074
+          },
+          {
+            "letter": "h",
+            "n": 42,
+            "rho": -0.132
+          },
+          {
+            "letter": "i",
+            "n": 337,
+            "rho": -0.455
+          },
+          {
+            "letter": "j",
+            "n": 446,
+            "rho": -0.061
+          },
+          {
+            "letter": "k",
+            "n": 2109,
+            "rho": -0.263
+          },
+          {
+            "letter": "l",
+            "n": 101,
+            "rho": -0.136
+          },
+          {
+            "letter": "m",
+            "n": 587,
+            "rho": -0.135
+          },
+          {
+            "letter": "n",
+            "n": 737,
+            "rho": -0.235
+          },
+          {
+            "letter": "o",
+            "n": 35,
+            "rho": -0.418
+          },
+          {
+            "letter": "p",
+            "n": 1567,
+            "rho": -0.173
+          },
+          {
+            "letter": "r",
+            "n": 190,
+            "rho": -0.111
+          },
+          {
+            "letter": "s",
+            "n": 460,
+            "rho": 0.031
+          },
+          {
+            "letter": "t",
+            "n": 637,
+            "rho": -0.328
+          },
+          {
+            "letter": "u",
+            "n": 1261,
+            "rho": -0.37
+          },
+          {
+            "letter": "v",
+            "n": 583,
+            "rho": 0.069
+          },
+          {
+            "letter": "y",
+            "n": 134,
+            "rho": -0.054
+          }
+        ]
+      }
+    },
+    "SKD": {
+      "n": 42531,
+      "n_letters": 43,
+      "log_slope": -0.18652650265120704,
+      "log_ci_lo": -0.5413306522658362,
+      "log_ci_hi": 0.16827764696342215,
+      "log_p": 0.30282093565514223,
+      "pct_change_per_traversal": -17.01634312092328,
+      "fe_slope": 240.52139076129777,
+      "fe_ci_lo": -531.3842101747091,
+      "fe_ci_hi": 1012.4269916973046,
+      "fe_p": 0.5413809348495948,
+      "naive_slope": 154.4744144081954,
+      "spearman_rho": -0.015896913161881545,
+      "spearman_p": 0.001043461648056587,
+      "verdict": "inconclusive",
+      "robust": {
+        "rho_combined": -0.0009495291207723191,
+        "rho_ci_lo": -0.010467972980579178,
+        "rho_ci_hi": 0.008569086798445457,
+        "p": 0.8449894358191518,
+        "n_letters": 38,
+        "neg_letters": 23,
+        "sign_test_p": 0.2558750795433298,
+        "verdict": "inconclusive",
+        "per_letter": [
+          {
+            "letter": "B",
+            "n": 1039,
+            "rho": -0.017
+          },
+          {
+            "letter": "C",
+            "n": 172,
+            "rho": -0.112
+          },
+          {
+            "letter": "D",
+            "n": 577,
+            "rho": -0.115
+          },
+          {
+            "letter": "E",
+            "n": 44,
+            "rho": -0.077
+          },
+          {
+            "letter": "G",
+            "n": 229,
+            "rho": -0.022
+          },
+          {
+            "letter": "J",
+            "n": 80,
+            "rho": -0.255
+          },
+          {
+            "letter": "K",
+            "n": 387,
+            "rho": -0.107
+          },
+          {
+            "letter": "O",
+            "n": 58,
+            "rho": 0.046
+          },
+          {
+            "letter": "P",
+            "n": 203,
+            "rho": 0.038
+          },
+          {
+            "letter": "Q",
+            "n": 13,
+            "rho": -0.088
+          },
+          {
+            "letter": "R",
+            "n": 38,
+            "rho": -0.092
+          },
+          {
+            "letter": "S",
+            "n": 2309,
+            "rho": 0.021
+          },
+          {
+            "letter": "T",
+            "n": 10,
+            "rho": -0.53
+          },
+          {
+            "letter": "a",
+            "n": 4018,
+            "rho": -0.003
+          },
+          {
+            "letter": "b",
+            "n": 826,
+            "rho": -0.367
+          },
+          {
+            "letter": "c",
+            "n": 971,
+            "rho": -0.066
+          },
+          {
+            "letter": "d",
+            "n": 1789,
+            "rho": -0.042
+          },
+          {
+            "letter": "e",
+            "n": 141,
+            "rho": -0.172
+          },
+          {
+            "letter": "f",
+            "n": 90,
+            "rho": 0.026
+          },
+          {
+            "letter": "g",
+            "n": 1393,
+            "rho": 0.061
+          },
+          {
+            "letter": "h",
+            "n": 894,
+            "rho": -0.03
+          },
+          {
+            "letter": "i",
+            "n": 333,
+            "rho": 0.103
+          },
+          {
+            "letter": "j",
+            "n": 902,
+            "rho": -0.02
+          },
+          {
+            "letter": "k",
+            "n": 4159,
+            "rho": 0.009
+          },
+          {
+            "letter": "l",
+            "n": 678,
+            "rho": -0.003
+          },
+          {
+            "letter": "m",
+            "n": 2659,
+            "rho": -0.053
+          },
+          {
+            "letter": "n",
+            "n": 1605,
+            "rho": 0.062
+          },
+          {
+            "letter": "o",
+            "n": 49,
+            "rho": 0.184
+          },
+          {
+            "letter": "p",
+            "n": 3960,
+            "rho": 0.061
+          },
+          {
+            "letter": "q",
+            "n": 61,
+            "rho": -0.092
+          },
+          {
+            "letter": "r",
+            "n": 1234,
+            "rho": 0.024
+          },
+          {
+            "letter": "s",
+            "n": 4187,
+            "rho": -0.072
+          },
+          {
+            "letter": "t",
+            "n": 1570,
+            "rho": 0.048
+          },
+          {
+            "letter": "u",
+            "n": 999,
+            "rho": 0.003
+          },
+          {
+            "letter": "v",
+            "n": 4037,
+            "rho": 0.108
+          },
+          {
+            "letter": "w",
+            "n": 46,
+            "rho": -0.079
+          },
+          {
+            "letter": "y",
+            "n": 547,
+            "rho": 0.032
+          },
+          {
+            "letter": "z",
+            "n": 205,
+            "rho": -0.011
+          }
+        ]
+      }
+    },
+    "VCP": {
+      "n": 50135,
+      "n_letters": 42,
+      "log_slope": 2.11992902548309,
+      "log_ci_lo": 1.7813571592736466,
+      "log_ci_hi": 2.458500891692533,
+      "log_p": 1.4289754353021961e-34,
+      "pct_change_per_traversal": 733.0546210212257,
+      "fe_slope": 1681.1315586314518,
+      "fe_ci_lo": 650.9690168987077,
+      "fe_ci_hi": 2711.294100364196,
+      "fe_p": 0.0013820157887006802,
+      "naive_slope": -417.48908999793423,
+      "spearman_rho": 0.01423860941407811,
+      "spearman_p": 0.0014314797733691125,
+      "verdict": "GROWTH",
+      "robust": {
+        "rho_combined": 0.0014224381316020054,
+        "rho_ci_lo": -0.007342552473613398,
+        "rho_ci_hi": 0.010187210184034392,
+        "p": 0.7504268391560817,
+        "n_letters": 38,
+        "neg_letters": 22,
+        "sign_test_p": 0.417692190836533,
+        "verdict": "inconclusive",
+        "per_letter": [
+          {
+            "letter": "B",
+            "n": 1193,
+            "rho": -0.015
+          },
+          {
+            "letter": "C",
+            "n": 203,
+            "rho": -0.168
+          },
+          {
+            "letter": "D",
+            "n": 834,
+            "rho": -0.07
+          },
+          {
+            "letter": "E",
+            "n": 89,
+            "rho": 0.055
+          },
+          {
+            "letter": "G",
+            "n": 327,
+            "rho": 0.006
+          },
+          {
+            "letter": "J",
+            "n": 76,
+            "rho": -0.156
+          },
+          {
+            "letter": "K",
+            "n": 457,
+            "rho": -0.101
+          },
+          {
+            "letter": "O",
+            "n": 208,
+            "rho": 0.023
+          },
+          {
+            "letter": "P",
+            "n": 199,
+            "rho": -0.114
+          },
+          {
+            "letter": "Q",
+            "n": 16,
+            "rho": 0.044
+          },
+          {
+            "letter": "R",
+            "n": 37,
+            "rho": -0.063
+          },
+          {
+            "letter": "S",
+            "n": 1691,
+            "rho": -0.03
+          },
+          {
+            "letter": "T",
+            "n": 13,
+            "rho": -0.313
+          },
+          {
+            "letter": "a",
+            "n": 8222,
+            "rho": 0.002
+          },
+          {
+            "letter": "b",
+            "n": 816,
+            "rho": 0.18
+          },
+          {
+            "letter": "c",
+            "n": 1299,
+            "rho": -0.068
+          },
+          {
+            "letter": "d",
+            "n": 2902,
+            "rho": 0.021
+          },
+          {
+            "letter": "e",
+            "n": 272,
+            "rho": -0.194
+          },
+          {
+            "letter": "f",
+            "n": 221,
+            "rho": -0.005
+          },
+          {
+            "letter": "g",
+            "n": 2016,
+            "rho": 0.022
+          },
+          {
+            "letter": "h",
+            "n": 672,
+            "rho": -0.14
+          },
+          {
+            "letter": "i",
+            "n": 534,
+            "rho": 0.055
+          },
+          {
+            "letter": "j",
+            "n": 1228,
+            "rho": 0.05
+          },
+          {
+            "letter": "k",
+            "n": 5161,
+            "rho": -0.073
+          },
+          {
+            "letter": "l",
+            "n": 423,
+            "rho": -0.044
+          },
+          {
+            "letter": "m",
+            "n": 1675,
+            "rho": -0.034
+          },
+          {
+            "letter": "n",
+            "n": 2305,
+            "rho": -0.049
+          },
+          {
+            "letter": "o",
+            "n": 67,
+            "rho": 0.062
+          },
+          {
+            "letter": "p",
+            "n": 5339,
+            "rho": 0.013
+          },
+          {
+            "letter": "q",
+            "n": 64,
+            "rho": 0.025
+          },
+          {
+            "letter": "r",
+            "n": 791,
+            "rho": -0.019
+          },
+          {
+            "letter": "s",
+            "n": 3132,
+            "rho": -0.062
+          },
+          {
+            "letter": "t",
+            "n": 2269,
+            "rho": 0.01
+          },
+          {
+            "letter": "u",
+            "n": 1843,
+            "rho": -0.014
+          },
+          {
+            "letter": "v",
+            "n": 2910,
+            "rho": 0.317
+          },
+          {
+            "letter": "w",
+            "n": 48,
+            "rho": -0.113
+          },
+          {
+            "letter": "y",
+            "n": 359,
+            "rho": 0.008
+          },
+          {
+            "letter": "z",
+            "n": 206,
+            "rho": -0.313
+          }
+        ]
+      }
+    },
+    "GRA": {
+      "n": 12785,
+      "n_letters": 32,
+      "log_slope": -1.643270304243874,
+      "log_ci_lo": -1.7579231504702308,
+      "log_ci_hi": -1.5286174580175174,
+      "log_p": 1.486791499499956e-168,
+      "pct_change_per_traversal": -80.66532952968821,
+      "fe_slope": -378.5088235446849,
+      "fe_ci_lo": -471.9852297115183,
+      "fe_ci_hi": -285.0324173778515,
+      "fe_p": 2.2415170721707645e-15,
+      "naive_slope": -90.43063142059768,
+      "spearman_rho": -0.19973845300068419,
+      "spearman_p": 3.437254536895849e-115,
+      "verdict": "DECAY",
+      "robust": {
+        "rho_combined": -0.1950650264940472,
+        "rho_ci_lo": -0.21174897697667758,
+        "rho_ci_hi": -0.17826741711306188,
+        "p": 1.071869209891462e-109,
+        "n_letters": 30,
+        "neg_letters": 28,
+        "sign_test_p": 8.67992639541626e-07,
+        "verdict": "DECAY",
+        "per_letter": [
+          {
+            "letter": "B",
+            "n": 235,
+            "rho": -0.218
+          },
+          {
+            "letter": "C",
+            "n": 21,
+            "rho": -0.021
+          },
+          {
+            "letter": "D",
+            "n": 191,
+            "rho": -0.197
+          },
+          {
+            "letter": "G",
+            "n": 63,
+            "rho": -0.195
+          },
+          {
+            "letter": "K",
+            "n": 42,
+            "rho": -0.23
+          },
+          {
+            "letter": "O",
+            "n": 10,
+            "rho": 0.043
+          },
+          {
+            "letter": "P",
+            "n": 14,
+            "rho": -0.381
+          },
+          {
+            "letter": "S",
+            "n": 604,
+            "rho": -0.242
+          },
+          {
+            "letter": "a",
+            "n": 2038,
+            "rho": -0.234
+          },
+          {
+            "letter": "b",
+            "n": 156,
+            "rho": 0.015
+          },
+          {
+            "letter": "c",
+            "n": 196,
+            "rho": -0.223
+          },
+          {
+            "letter": "d",
+            "n": 687,
+            "rho": -0.101
+          },
+          {
+            "letter": "e",
+            "n": 74,
+            "rho": -0.305
+          },
+          {
+            "letter": "f",
+            "n": 180,
+            "rho": -0.155
+          },
+          {
+            "letter": "g",
+            "n": 302,
+            "rho": -0.24
+          },
+          {
+            "letter": "h",
+            "n": 263,
+            "rho": -0.1
+          },
+          {
+            "letter": "i",
+            "n": 230,
+            "rho": -0.173
+          },
+          {
+            "letter": "j",
+            "n": 289,
+            "rho": -0.231
+          },
+          {
+            "letter": "k",
+            "n": 550,
+            "rho": -0.197
+          },
+          {
+            "letter": "l",
+            "n": 26,
+            "rho": -0.017
+          },
+          {
+            "letter": "m",
+            "n": 618,
+            "rho": -0.229
+          },
+          {
+            "letter": "n",
+            "n": 405,
+            "rho": -0.102
+          },
+          {
+            "letter": "o",
+            "n": 36,
+            "rho": -0.378
+          },
+          {
+            "letter": "p",
+            "n": 1053,
+            "rho": -0.079
+          },
+          {
+            "letter": "r",
+            "n": 374,
+            "rho": -0.235
+          },
+          {
+            "letter": "s",
+            "n": 1735,
+            "rho": -0.142
+          },
+          {
+            "letter": "t",
+            "n": 530,
+            "rho": -0.305
+          },
+          {
+            "letter": "u",
+            "n": 366,
+            "rho": -0.253
+          },
+          {
+            "letter": "v",
+            "n": 1212,
+            "rho": -0.252
+          },
+          {
+            "letter": "y",
+            "n": 272,
+            "rho": -0.332
+          }
+        ]
+      }
+    }
+  },
+  "upasarga_method": "surface longest-prefix match on key1 (SLP1), >=2 stem chars; over-counts A/vi/ni/su (common stem-initials); privative a-/an- not surface-separable and reported via Q1 dash-share for a.",
+  "q1_scope": "dash-marked samasa share meaningful only for MW (71.6% dashed) and GRA (36.6%); AP/PWG/PWK/SKD/VCP/VEI have ~0 dash marks."
+}

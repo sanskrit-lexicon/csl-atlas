@@ -288,8 +288,13 @@ years**. Only the two that chose exhaustive historical detail stall:
 
 **The graveyard of `a`.** Sanskrit is not the problem — exhaustive detail is, and the proof is
 120 years old: **Goldstücker's 1856 remake of Wilson sank into the letter `a`, published 6,761
-entries, and was abandoned there at his death.** PD is the same project reborn at ~16× the
+entries, and was abandoned there at his death.** He was not alone — **Kossowicz's 1854
+Sanskrit→Russian remake of Wilson (KOW)** and **Böhtlingk–Roth's PWG (1855, whose entire first
+volume was `a-`)** joined him in the same 1850s reef. PD is the same project reborn at ~16× the
 density (104,959 vs 6,761 for `a`) — the same undertaking, the same letter, the same trap.
+Why `a` traps every one of them is anatomised in
+[Letter anatomy](/tools/letter-anatomy): it heads five preverb families plus the privative, so
+83 % of its entries are compounds, not roots.
 
 **The controlled experiment — two dictionaries, one city, one editor.** Across town in the same
 Pune, the **Bhandarkar Institute** (BORI) *Comprehensive & Critical Dictionary of the Prakrit
