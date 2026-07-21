@@ -4,6 +4,13 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Changed — §8.11 solo-vs-committee sharpened (H1336)
+
+- **Böhtlingk** wrote ~**9/10 of the "Böhtlingk–Roth" PWG** as well as the *kürzere Fassung* alone
+  — one man, two complete Sanskrit dictionaries (strengthens the near-solo point). **PD's committee
+  structure is a *cause* of non-completion, not a footnote:** planned for **~74 lexicographers**, it
+  has **about a dozen** working regularly now — "may never finish at all". Report §8.11 + page.
+
 ### Added — §8.11 "Who finishes a dictionary — and why" (measured note, H1336)
 
 - New report §8.11 + page section answering "are Germans the best dictionary-makers and Indians
