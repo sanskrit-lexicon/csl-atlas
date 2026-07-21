@@ -666,12 +666,17 @@ the operative variable. A project scoped to completion completes.
    dictionaries besides; the two Indian encyclopaedias it was *believed* to afflict, **SKD and VCP,
    show none** (ρ ≈ 0.00). If compression-under-time is a failing it is Europe's — and it may in
    fact be the finishability-discipline *in action*, editors tightening articles to reach the end.
-3. **The finished dictionaries were often near-solo, not institutional.** This is the deepest
-   point. **V. S. Apte** — professor at Fergusson College, **Pune** — compiled a complete,
-   still-standard Sanskrit–English dictionary (AP90, 1890, ~34k entries) **almost alone** and
-   **died at 34** (1858–1892), two years after it appeared; **Böhtlingk** carried the *kürzere
-   Fassung* essentially single-handed. What finishes is a *single sustained vision with a bounded
-   scope*; what does not is the *large institution with an unbounded one* — which is exactly PD.
+3. **The finished dictionaries were near-solo; the unfinished one is a committee.** This is the
+   deepest point, and it is causal, not incidental. **V. S. Apte** — professor at Fergusson
+   College, **Pune** — compiled a complete, still-standard Sanskrit–English dictionary (AP90, 1890,
+   ~34k entries) **almost alone** and **died at 34** (1858–1892), two years after it appeared.
+   **Böhtlingk** is the even stronger case: he carried the *kürzere Fassung* (PW) single-handed
+   **and** wrote an estimated **9/10 of the "Böhtlingk–Roth" PWG** — one man, essentially, produced
+   *two* complete Sanskrit dictionaries. Against that stands **PD's committee**: planned for **~74
+   lexicographers**, it has **about a dozen** working regularly today — and this is not a footnote
+   to its slowness but a **cause** of it. What finishes is a single sustained vision on a bounded
+   scope; what does not is a large, under-staffed institution on an unbounded one — which is exactly
+   PD, and one reason it may never finish at all.
 
 **And the Indian record is not "only kośas."** The indigenous **kośa** (Amarakośa and its kin) is
 a sophisticated genre in its own right — a versified, memorizable, poetics-oriented lexicon built
