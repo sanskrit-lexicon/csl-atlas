@@ -4,6 +4,17 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — Etymology-style witness page (H1525)
+
+- New tools page
+  [`src/tools/etymology-style.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/etymology-style.md):
+  four Plot charts (Nirukta `.E.` share, `cf.` counts, year×share slope, WIL
+  token bars) over frozen observatory probes vendored to
+  [`src/data/witness/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/src/data/witness)
+  with provenance headers. Trust Block marks the witness as an exploratory
+  spike (n=5 dicts). Nav under Dictionary structure; cross-links from the
+  homepage and the WIL chapter. Render-only — no new etymology extractor.
+
 ### Changed - Data-driven lexicographic timeline (H1484 / agenda V2)
 
 - Upgrade [`src/tools/timeline.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/timeline.md)

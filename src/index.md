@@ -85,7 +85,7 @@ Broad Sanskrit/BHS headword coverage across eligible local dictionaries, with Co
 
 ### Dictionary structure
 
-[Dictionary genealogy](tools/lexicography), [convention fingerprints](tools/lexicographic-conventions), [structural register](tools/structural-register), and R2 [sense alignment](tools/r2-explorer) / [sense granularity](tools/r2-h1) move dictionary-structure research into the atlas path.
+[Dictionary genealogy](tools/lexicography), [convention fingerprints](tools/lexicographic-conventions), [structural register](tools/structural-register), [etymology style](tools/etymology-style) (WIL Nirukta vs Western `cf.`), and R2 [sense alignment](tools/r2-explorer) / [sense granularity](tools/r2-h1) move dictionary-structure research into the atlas path.
 
 ### Review queues
 
