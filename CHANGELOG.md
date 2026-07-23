@@ -4,6 +4,17 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Changed - Data-driven lexicographic timeline (H1484 / agenda V2)
+
+- Upgrade [`src/tools/timeline.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/timeline.md)
+  from static Mermaid-only to a Plot spine driven by
+  [`data/dictionary_inventory.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv):
+  per-dictionary lifespan bars (deprecation fade/hatch), family-lane aggregate,
+  volume-width encoding, sanhw1 lemma size at start year, and a cumulative
+  coverage-ribbon step strip. Mermaid retained below the fold as the teaching
+  narrative. Cross-links from [`lexicography`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/lexicography.md)
+  and the tools index. Trust Block stresses orientation dates ≠ usage dating.
+
 ## [0.4.0] - 2026-07-21
 
 ### Added — Evidence-grading deep manual (H1408)

@@ -9,6 +9,8 @@ First empirical findings from the **lexicography research stream**. Everything h
 
 This page is companion to the [Lexicography Roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md), which lays out the broader research plan (Phases L0-L10, Papers M, L, H).
 
+**Diachronic spine:** publication lifespans, family lanes, lemma-size-over-time, and the cumulative coverage ribbon live on the [Lexicographic timeline](timeline) (agenda V2) — this page stays the structural genealogy surface (lemma counts + inheritance + distance).
+
 ## Trust Block
 
 - Evidence: `src/data/lexicographic-structure/dictionary_inventory.csv`, `sanhw1_inheritance_edges.csv`, and `sanhw1_distance_matrix.csv`.

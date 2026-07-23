@@ -76,7 +76,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/dictionary-coverage": "All-dictionary coverage: the nine-chapter comparison extended to every CDSL v02 dictionary with a main source file.",
   "/tools/matrix-explorer": "Matrix explorer: an 18×14 block-by-article-type heatmap of Monier-Williams, with per-cell counts and filtering.",
   "/tools/lineage-sankey": "Lineage Sankey: the visual evidence for the kosha-collapse finding — PWG source labels flowing into Monier-Williams's single hedge.",
-  "/tools/timeline": "Lexicographic timeline: from the indigenous kośa tradition (~6th c.) to the Cologne Digital Sanskrit Lexicon.",
+  "/tools/timeline": "Lexicographic timeline (agenda V2): inventory lifespan bars, family lanes, lemma size over time, and a cumulative coverage ribbon for the Cologne Sanskrit dictionaries.",
   "/tools/type-comparator": "Type comparator: pick two Monier-Williams article types and compare their block profiles side by side.",
   "/tools/citation-tracer": "Citation tracer: trace source citations across the Cologne Sanskrit dictionaries (Tier-3 tool, in progress).",
   "/paper/grounded": "The grounded framework: the atlas paper's body, building its analysis from Monier-Williams's own data before any external theory.",

@@ -127,7 +127,7 @@ One consolidated study of Monier-Williams 1899 — a data-grounded body, triangu
 - **[Matrix explorer](tools/matrix-explorer)** — 18 formal blocks × primary article types
 - **[Lineage Sankey](tools/lineage-sankey)** — PWG → PWK → MW kosha-citation collapse
 - **[Typology treemap](tools/typology-treemap)** — 286,561 MW entries by article type
-- **[Lexicographic timeline](tools/timeline)** — 6th c. — 2024
+- **[Lexicographic timeline](tools/timeline)** — inventory lifespan bars, family lanes, lemma size over time, coverage ribbon (Mermaid narrative below the fold)
 - **[Type comparator](tools/type-comparator)** — pick two types, see block differences
 - **[Citation tracer](tools/citation-tracer)** — click a source, see all entries
 
