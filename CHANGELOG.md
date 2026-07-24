@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-07-24
+
 ### Added — Correction-lane overlays (H1579 / DH memo remainders)
 
 - Close the three H271/DH_IMPROVEMENT_MEMO §3 remainders after H306's loci heatmap:
