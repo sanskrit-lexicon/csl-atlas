@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedBy": "npm run build-correction-lane-overlays",
+  "dataset": "shared_error_overlay",
+  "sourceFiles": [
+    "data/forensic/shared_corrections.csv",
+    "data/forensic/f4b_report.json",
+    "scripts/build-correction-lane-overlays.mjs"
+  ],
+  "method": "Aggregate atlas forensic shared_corrections.csv by pet dictionary (PW/PWG/SCH headwords also corrected on the MW side). Attach F4b Ahlborn direct-test + co-correction null-model stats already computed by scripts/forensic/f4b_ahlborn_nulltest.py. Edge weight = shared-corrected headword count; the direct test (not the edge weight) is the copy-detection verdict.",
+  "claim": "Shared-corrected headwords concentrate on the PWG/PW→MW lineage edge, but the Ahlborn direct test shows MW does not inherit PWG's mechanical headword errors (2/123 shares error) — the co-correction lift is convergence + editorial coupling, not copied mistakes (APPARATUS-NOT-ERRORS).",
+  "evidenceLabel": "inferred",
+  "reviewStatus": "machine-reviewed",
+  "ownerRepo": "csl-atlas",
+  "hypothesisId": "APPARATUS-NOT-ERRORS",
+  "totals": {
+    "sharedCorrectionRows": 289,
+    "petDicts": 3,
+    "edges": 3
+  },
+  "edges": [
+    {
+      "source": "PWG",
+      "target": "MW",
+      "sharedCorrectedHeadwords": 176,
+      "inPwgissuesBundle": 20,
+      "independentOfBundle": 156,
+      "examples": [
+        "Ap",
+        "BI",
+        "Buvana",
+        "Cala",
+        "DA",
+        "DAv",
+        "DU",
+        "Dur"
+      ],
+      "evidenceLabel": "inferred"
+    },
+    {
+      "source": "PW",
+      "target": "MW",
+      "sharedCorrectedHeadwords": 112,
+      "inPwgissuesBundle": 2,
+      "independentOfBundle": 110,
+      "examples": [
+        "2.",
+        "ABoga",
+        "Adya",
+        "Akara",
+        "Akenipa",
+        "Bavamanyu",
+        "Ekzava",
+        "Kewa"
+      ],
+      "evidenceLabel": "inferred"
+    },
+    {
+      "source": "SCH",
+      "target": "MW",
+      "sharedCorrectedHeadwords": 1,
+      "inPwgissuesBundle": 0,
+      "independentOfBundle": 1,
+      "examples": [
+        "d"
+      ],
+      "evidenceLabel": "inferred"
+    }
+  ],
+  "ahlbornDirectTest": {
+    "total": 123,
+    "sharesError": 2,
+    "sharesErrorPct": 1.6,
+    "mwCorrect": 90,
+    "mwAbsent": 31
+  },
+  "nullModel": {
+    "observedCoCorrected": 256,
+    "expected": 102.79,
+    "lift": 2.491,
+    "p": 4.012891867722993e-41,
+    "verdict": "same hard words corrected in both, but DIFFERENT errors (convergence + editorial coupling, NOT copying — see direct test)"
+  },
+  "limitations": [
+    "shared_corrections.csv is a forensic sample of co-corrected headwords (n≈290), not a full form-keyed join over correction_loci.tsv (memo C3 rank-4 full build).",
+    "Edge weight is raw shared-corrected count, not yet residual above a confusion-aware null; F4b supplies the null on co-correction, not on identical old→new strings.",
+    "in_pwgissues=True rows are multi-dict fix bundles by design and inflate co-correction without proving inheritance.",
+    "Evidence grade remains inferred until a reviewer promotes the null model."
+  ],
+  "boundary": [
+    "Cladistics / APPARATUS-NOT-ERRORS owner stays csl-atlas (HYPOTHESIS_INDEX). Correction feed owner is csl-corrections; this packet only aggregates already-committed forensic artifacts."
+  ],
+  "generatedAt": "2026-07-24T07:56:22.960Z"
+}

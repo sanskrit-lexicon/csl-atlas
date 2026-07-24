@@ -314,6 +314,64 @@ display(Plot.plot({
 display(csvDownloadButton(data.monthly, "correction-monthly.csv"));
 ```
 
+## Related correction-lane pages
+
+- [Correction front](./correction-front) — month × component diachronic strip
+  (OBS-T events; when/which layer).
+- [Lineage Sankey](./lineage-sankey#shared-corrected-error-overlay-apparatus-not-errors)
+  — shared-corrected-error overlay on the PWG/PW→MW edge (F4b apparatus-not-errors).
+
+## Maker QA — correction-pressure column
+
+Prioritization signal for the H5 maker-QA worksheet: how much *human* correction
+traffic has already touched the candidate lemma or its nearest-real neighbour
+(form-keyed via `slp1_norm`). **No new queue** — one column on the existing H5
+packet ([`docs/H5_MAKER_QA_CANDIDATES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H5_MAKER_QA_CANDIDATES.md)).
+Bulk machine batches are excluded.
+
+```js
+const pressure = FileAttachment("../data/corrections/qa_pressure.json").json();
+```
+
+```js
+const pressureRows = pressure.candidates.map((r) => ({
+  rank: r.pressure,
+  lemma_slp1: r.lemma,
+  "nearest real": r.nearestReal,
+  pair: r.pair,
+  "human (lemma)": r.humanCorrections,
+  "human (nearest)": r.nearestRealHumanCorrections,
+  "same-pair (nearest)": r.nearestRealSamePairHumanCorrections,
+  "last date": r.lastCorrectionDate,
+  source: r.pressureSource,
+  reviewId: r.reviewId
+}));
+display(html`<p style="color:var(--theme-foreground-muted);font-size:.9rem">
+  ${pressure.totals.candidateRows} candidates —
+  high ${pressure.totals.high} · medium ${pressure.totals.medium} ·
+  low ${pressure.totals.low} · none ${pressure.totals.none}
+  (calibration controls separately: ${pressure.totals.calibrationRows} rows).
+</p>`);
+display(Inputs.table(pressureRows, { rows: 12, layout: "auto" }));
+display(csvDownloadButton(pressureRows, "correction-qa-pressure-candidates.csv"));
+```
+
+```js
+const calPressure = pressure.calibration.map((r) => ({
+  rank: r.pressure,
+  lemma_slp1: r.lemma,
+  pair: r.pair,
+  human: r.humanCorrections,
+  recent: r.recentHumanCorrections,
+  "same-pair": r.samePairHumanCorrections,
+  "last date": r.lastCorrectionDate,
+  reviewId: r.reviewId
+}));
+display(html`<h4>Calibration controls (known corrections)</h4>`);
+display(Inputs.table(calPressure, { rows: 8, layout: "auto" }));
+display(csvDownloadButton(calPressure, "correction-qa-pressure-calibration.csv"));
+```
+
 ## Chart Trust Block
 
 - **Claim:** where reported-and-fixed errors sit in each printed edition, and
