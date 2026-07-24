@@ -1,6 +1,6 @@
 # DH improvement memo — the correction-data feed into csl-atlas
 
-_Created: 07-07-2026 · Last updated: 07-07-2026_
+_Created: 07-07-2026 · Last updated: 24-07-2026_
 
 **What this is.** The atlas-facing half of the
 [H271](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H271-Fable_csl-corrections_correction-hypotheses-atlas-DH-ACL_07.07.26.md)
@@ -96,15 +96,22 @@ CSV download on every table.
    edge weight = shared-corrected-error count beyond confusion-rate expectation (anchor memo C3).
    Extends APPARATUS-NOT-ERRORS (owner stays csl-atlas per HYPOTHESIS_INDEX); `inferred` until
    the null model is reviewed.
+   **Shipped H1579 (24-07-2026):** overlay section on lineage-sankey + packet
+   `src/data/corrections/shared_error_overlay.json` (raw co-correction counts + F4b direct/null
+   stats). Full confusion-aware residual (C3 rank-4) remains a future forensic handoff.
 4. **Correction-front strip** (small multiple per dict, time × component, era-split 2014–2019 /
    2019–2026): the atlas-side rendering of OBS-T's diachronic finding plus the anchor memo's C2
    process split. Data owner remains
    [`csl-observatory`](https://github.com/sanskrit-lexicon/csl-observatory) (MW-ATTENTION
    boundary respected — atlas renders, observatory owns the attention/event data).
+   **Shipped H1579:** [`/tools/correction-front`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/correction-front.md)
+   + `src/data/corrections/correction_front.json` (era split at 2019-01-01; top-12 dict strip).
 5. **Maker QA worklist enrichment** (existing
    [`RESEARCH_LAYER_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RESEARCH_LAYER_ROADMAP.md)
    §4.2 lane): add "correction pressure" (recent human corrections near a locus) as a
    prioritization signal in the existing review queues — no new page, one column.
+   **Shipped H1579:** pressure column on correction-loci (H5 candidates + nearestReal form-key
+   join) + `src/data/corrections/qa_pressure.json`.
 
 Pedagogical framing (the personas the atlas already serves): the heatmap doubles as a
 proofreading treasure map for student contributors; the radar's editorial axes answer the

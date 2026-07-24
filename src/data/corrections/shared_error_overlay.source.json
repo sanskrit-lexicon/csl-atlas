@@ -1,0 +1,12 @@
+{
+  "dataset": "shared_error_overlay",
+  "commit": "9ced11a6a122c9f2eda3f038ffc084c2c96428cd",
+  "generatedAt": "2026-07-24T07:56:22.960Z",
+  "generatedBy": "npm run build-correction-lane-overlays",
+  "sourceFiles": [
+    "data/forensic/shared_corrections.csv",
+    "data/forensic/f4b_report.json",
+    "scripts/build-correction-lane-overlays.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}

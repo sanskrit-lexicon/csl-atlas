@@ -4,6 +4,23 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — Correction-lane overlays (H1579 / DH memo remainders)
+
+- Close the three H271/DH_IMPROVEMENT_MEMO §3 remainders after H306's loci heatmap:
+  1. **Shared-error Sankey overlay** on
+     [`src/tools/lineage-sankey.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/lineage-sankey.md)
+     (PWG/PW→MW co-corrected headwords + F4b Ahlborn direct test / null lift).
+  2. **Correction-front strip** page
+     [`src/tools/correction-front.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/correction-front.md)
+     (OBS-T month×component + 2014–2018 / 2019–2026 era small multiples; data owner csl-observatory).
+  3. **Maker-QA correction-pressure column** on
+     [`src/tools/correction-loci.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/correction-loci.md)
+     (human-process form-key join of H5 candidates + nearestReal against correction_loci.tsv).
+- Builder `npm run build-correction-lane-overlays` → committed packets under
+  [`src/data/corrections/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/src/data/corrections)
+  (`shared_error_overlay`, `correction_front`, `qa_pressure` + `.source.json` sidecars).
+- Tests: `test/correction-lane-overlays.test.mjs`.
+
 ### Added — Etymology-style witness page (H1525)
 
 - New tools page

@@ -1,0 +1,7297 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedBy": "npm run build-correction-lane-overlays",
+  "dataset": "correction_front",
+  "sourceFiles": [
+    "csl-observatory/observatory/site/src/data/correction_events_release.csv",
+    "scripts/build-correction-lane-overlays.mjs"
+  ],
+  "method": "Aggregate OBS-T correction_events_release.csv (owner: csl-observatory) into month×dict×error_component cells and an era split at 2019-01-01 (2014–2018 vs 2019–2026). Restrict the committed strip to the top 12 dictionaries by event count so the page stays readable; full dict ranking is retained in dictRanking.",
+  "claim": "The correction front — where editorial attention lands over time and by microstructure component — is a ready-made diachronic lesson; atlas renders, observatory owns the event typology (MW-ATTENTION / OBS-T boundary).",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-reviewed",
+  "ownerRepo": "csl-atlas",
+  "dataOwnerRepo": "csl-observatory",
+  "eraSplit": "2019-01-01",
+  "topDicts": [
+    "pw",
+    "mw",
+    "pwg",
+    "ap90",
+    "ap",
+    "ccs",
+    "bur",
+    "cae",
+    "pd",
+    "ben",
+    "wil",
+    "md"
+  ],
+  "totals": {
+    "events": 52498,
+    "dated": 52498,
+    "dicts": 43,
+    "components": 7,
+    "stripDicts": 12,
+    "monthlyCells": 1064,
+    "eraCells": 93
+  },
+  "components": {
+    "unattributed": 18743,
+    "sense": 17778,
+    "markup": 5902,
+    "headword": 5823,
+    "citation": 3335,
+    "meta": 624,
+    "grammar": 293
+  },
+  "dictRanking": [
+    {
+      "dict": "pw",
+      "count": 13662
+    },
+    {
+      "dict": "mw",
+      "count": 9638
+    },
+    {
+      "dict": "pwg",
+      "count": 3771
+    },
+    {
+      "dict": "ap90",
+      "count": 2539
+    },
+    {
+      "dict": "ap",
+      "count": 2407
+    },
+    {
+      "dict": "ccs",
+      "count": 2289
+    },
+    {
+      "dict": "bur",
+      "count": 1807
+    },
+    {
+      "dict": "cae",
+      "count": 1696
+    },
+    {
+      "dict": "pd",
+      "count": 1375
+    },
+    {
+      "dict": "ben",
+      "count": 1220
+    },
+    {
+      "dict": "wil",
+      "count": 1207
+    },
+    {
+      "dict": "md",
+      "count": 1124
+    },
+    {
+      "dict": "pui",
+      "count": 980
+    },
+    {
+      "dict": "vcp",
+      "count": 904
+    },
+    {
+      "dict": "gra",
+      "count": 717
+    },
+    {
+      "dict": "shs",
+      "count": 680
+    },
+    {
+      "dict": "skd",
+      "count": 558
+    },
+    {
+      "dict": "yat",
+      "count": 551
+    },
+    {
+      "dict": "sch",
+      "count": 529
+    },
+    {
+      "dict": "acc",
+      "count": 458
+    },
+    {
+      "dict": "bop",
+      "count": 408
+    },
+    {
+      "dict": "mw72",
+      "count": 365
+    },
+    {
+      "dict": "bhs",
+      "count": 328
+    },
+    {
+      "dict": "gst",
+      "count": 308
+    },
+    {
+      "dict": "bor",
+      "count": 299
+    },
+    {
+      "dict": "lrv",
+      "count": 287
+    },
+    {
+      "dict": "stc",
+      "count": 264
+    },
+    {
+      "dict": "ae",
+      "count": 260
+    },
+    {
+      "dict": "ieg",
+      "count": 232
+    },
+    {
+      "dict": "vei",
+      "count": 222
+    },
+    {
+      "dict": "lan",
+      "count": 210
+    },
+    {
+      "dict": "mci",
+      "count": 196
+    },
+    {
+      "dict": "inm",
+      "count": 179
+    },
+    {
+      "dict": "mwe",
+      "count": 145
+    },
+    {
+      "dict": "pwkvn",
+      "count": 139
+    },
+    {
+      "dict": "fri",
+      "count": 93
+    },
+    {
+      "dict": "pe",
+      "count": 86
+    },
+    {
+      "dict": "abch",
+      "count": 85
+    },
+    {
+      "dict": "krm",
+      "count": 78
+    },
+    {
+      "dict": "pgn",
+      "count": 78
+    },
+    {
+      "dict": "apes",
+      "count": 72
+    },
+    {
+      "dict": "pwg2013",
+      "count": 50
+    },
+    {
+      "dict": "snp",
+      "count": 2
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2014-07",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2014-07",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2014-08",
+      "dict": "ben",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2014-08",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2014-08",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2014-08",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2014-08",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2014-09",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2014-09",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2014-09",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 9
+    },
+    {
+      "month": "2014-09",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 15
+    },
+    {
+      "month": "2014-09",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2014-09",
+      "dict": "mw",
+      "component": "headword",
+      "count": 18
+    },
+    {
+      "month": "2014-09",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2014-09",
+      "dict": "mw",
+      "component": "sense",
+      "count": 12
+    },
+    {
+      "month": "2014-09",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 34
+    },
+    {
+      "month": "2014-09",
+      "dict": "pw",
+      "component": "headword",
+      "count": 20
+    },
+    {
+      "month": "2014-09",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2014-09",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2014-10",
+      "dict": "cae",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2014-10",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2014-10",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2014-10",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2014-10",
+      "dict": "mw",
+      "component": "headword",
+      "count": 31
+    },
+    {
+      "month": "2014-10",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2014-10",
+      "dict": "mw",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2014-10",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 86
+    },
+    {
+      "month": "2014-10",
+      "dict": "pw",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "month": "2014-10",
+      "dict": "pw",
+      "component": "headword",
+      "count": 25
+    },
+    {
+      "month": "2014-10",
+      "dict": "pw",
+      "component": "sense",
+      "count": 55
+    },
+    {
+      "month": "2014-10",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 96
+    },
+    {
+      "month": "2014-11",
+      "dict": "ben",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2014-11",
+      "dict": "cae",
+      "component": "headword",
+      "count": 157
+    },
+    {
+      "month": "2014-11",
+      "dict": "cae",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2014-11",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 140
+    },
+    {
+      "month": "2014-11",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 11
+    },
+    {
+      "month": "2014-11",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 18
+    },
+    {
+      "month": "2014-11",
+      "dict": "md",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2014-11",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2014-11",
+      "dict": "mw",
+      "component": "headword",
+      "count": 10
+    },
+    {
+      "month": "2014-11",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2014-11",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 23
+    },
+    {
+      "month": "2014-11",
+      "dict": "pd",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2014-11",
+      "dict": "pw",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "month": "2014-11",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 11
+    },
+    {
+      "month": "2014-11",
+      "dict": "wil",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2014-12",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 17
+    },
+    {
+      "month": "2014-12",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 31
+    },
+    {
+      "month": "2014-12",
+      "dict": "cae",
+      "component": "headword",
+      "count": 34
+    },
+    {
+      "month": "2014-12",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 62
+    },
+    {
+      "month": "2014-12",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2014-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 9
+    },
+    {
+      "month": "2014-12",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 12
+    },
+    {
+      "month": "2014-12",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2014-12",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 6
+    },
+    {
+      "month": "2014-12",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 15
+    },
+    {
+      "month": "2014-12",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2014-12",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 30
+    },
+    {
+      "month": "2014-12",
+      "dict": "wil",
+      "component": "headword",
+      "count": 173
+    },
+    {
+      "month": "2014-12",
+      "dict": "wil",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2014-12",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 188
+    },
+    {
+      "month": "2015-01",
+      "dict": "ap",
+      "component": "headword",
+      "count": 33
+    },
+    {
+      "month": "2015-01",
+      "dict": "ap",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2015-01",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 32
+    },
+    {
+      "month": "2015-01",
+      "dict": "ben",
+      "component": "headword",
+      "count": 6
+    },
+    {
+      "month": "2015-01",
+      "dict": "ben",
+      "component": "unattributed",
+      "count": 9
+    },
+    {
+      "month": "2015-01",
+      "dict": "md",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2015-01",
+      "dict": "mw",
+      "component": "citation",
+      "count": 2
+    },
+    {
+      "month": "2015-01",
+      "dict": "mw",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2015-01",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2015-01",
+      "dict": "mw",
+      "component": "sense",
+      "count": 12
+    },
+    {
+      "month": "2015-01",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 10
+    },
+    {
+      "month": "2015-01",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2015-01",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "month": "2015-01",
+      "dict": "wil",
+      "component": "headword",
+      "count": 400
+    },
+    {
+      "month": "2015-01",
+      "dict": "wil",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "month": "2015-01",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 325
+    },
+    {
+      "month": "2015-02",
+      "dict": "bur",
+      "component": "headword",
+      "count": 27
+    },
+    {
+      "month": "2015-02",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 24
+    },
+    {
+      "month": "2015-02",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2015-02",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2015-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2015-02",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2015-02",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2015-02",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-02",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-03",
+      "dict": "cae",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2015-03",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 256
+    },
+    {
+      "month": "2015-03",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 196
+    },
+    {
+      "month": "2015-03",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2015-03",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2015-03",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2015-03",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2015-03",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-03",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-04",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2015-04",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2015-04",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2015-05",
+      "dict": "ap",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2015-05",
+      "dict": "mw",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2015-05",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2015-05",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2015-05",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 16
+    },
+    {
+      "month": "2015-05",
+      "dict": "pd",
+      "component": "unattributed",
+      "count": 79
+    },
+    {
+      "month": "2015-05",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2015-06",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2015-06",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2015-06",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2015-06",
+      "dict": "mw",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2015-06",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 6
+    },
+    {
+      "month": "2015-06",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-06",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-07",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "month": "2015-07",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2015-07",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2015-07",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2015-07",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2015-08",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "month": "2015-08",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2015-08",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2015-08",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 6
+    },
+    {
+      "month": "2015-08",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2015-08",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2015-09",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-09",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-09",
+      "dict": "mw",
+      "component": "citation",
+      "count": 2
+    },
+    {
+      "month": "2015-09",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 11
+    },
+    {
+      "month": "2015-09",
+      "dict": "mw",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "month": "2015-09",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2015-09",
+      "dict": "mw",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2015-09",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 43
+    },
+    {
+      "month": "2015-09",
+      "dict": "pw",
+      "component": "headword",
+      "count": 17
+    },
+    {
+      "month": "2015-09",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 7
+    },
+    {
+      "month": "2015-10",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2015-10",
+      "dict": "mw",
+      "component": "headword",
+      "count": 16
+    },
+    {
+      "month": "2015-10",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 27
+    },
+    {
+      "month": "2015-10",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-11",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 7
+    },
+    {
+      "month": "2015-11",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2015-11",
+      "dict": "ben",
+      "component": "headword",
+      "count": 9
+    },
+    {
+      "month": "2015-11",
+      "dict": "ben",
+      "component": "unattributed",
+      "count": 6
+    },
+    {
+      "month": "2015-11",
+      "dict": "bur",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2015-11",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 13
+    },
+    {
+      "month": "2015-11",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 8
+    },
+    {
+      "month": "2015-11",
+      "dict": "md",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2015-11",
+      "dict": "md",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2015-11",
+      "dict": "mw",
+      "component": "headword",
+      "count": 20
+    },
+    {
+      "month": "2015-11",
+      "dict": "mw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2015-11",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 24
+    },
+    {
+      "month": "2015-11",
+      "dict": "pw",
+      "component": "citation",
+      "count": 69
+    },
+    {
+      "month": "2015-11",
+      "dict": "pw",
+      "component": "headword",
+      "count": 284
+    },
+    {
+      "month": "2015-11",
+      "dict": "pw",
+      "component": "sense",
+      "count": 26
+    },
+    {
+      "month": "2015-11",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 233
+    },
+    {
+      "month": "2015-11",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 22
+    },
+    {
+      "month": "2015-11",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 18
+    },
+    {
+      "month": "2015-12",
+      "dict": "ap",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2015-12",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2015-12",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 6
+    },
+    {
+      "month": "2015-12",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 8
+    },
+    {
+      "month": "2015-12",
+      "dict": "ben",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2015-12",
+      "dict": "ben",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-12",
+      "dict": "bur",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2015-12",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2015-12",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2015-12",
+      "dict": "cae",
+      "component": "headword",
+      "count": 19
+    },
+    {
+      "month": "2015-12",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 13
+    },
+    {
+      "month": "2015-12",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "month": "2015-12",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2015-12",
+      "dict": "md",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2015-12",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 3
+    },
+    {
+      "month": "2015-12",
+      "dict": "mw",
+      "component": "headword",
+      "count": 17
+    },
+    {
+      "month": "2015-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2015-12",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 32
+    },
+    {
+      "month": "2015-12",
+      "dict": "pd",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2015-12",
+      "dict": "pw",
+      "component": "headword",
+      "count": 18
+    },
+    {
+      "month": "2015-12",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2015-12",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 5458
+    },
+    {
+      "month": "2015-12",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 7
+    },
+    {
+      "month": "2015-12",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 6
+    },
+    {
+      "month": "2015-12",
+      "dict": "wil",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2015-12",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-01",
+      "dict": "ap",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-01",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 401
+    },
+    {
+      "month": "2016-01",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-01",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 268
+    },
+    {
+      "month": "2016-01",
+      "dict": "ben",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-01",
+      "dict": "bur",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-01",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-01",
+      "dict": "cae",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "month": "2016-01",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-01",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 31
+    },
+    {
+      "month": "2016-01",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 21
+    },
+    {
+      "month": "2016-01",
+      "dict": "md",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-01",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2016-01",
+      "dict": "mw",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2016-01",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2016-01",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2016-01",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 12
+    },
+    {
+      "month": "2016-01",
+      "dict": "pd",
+      "component": "unattributed",
+      "count": 6
+    },
+    {
+      "month": "2016-01",
+      "dict": "pw",
+      "component": "citation",
+      "count": 19
+    },
+    {
+      "month": "2016-01",
+      "dict": "pw",
+      "component": "grammar",
+      "count": 4
+    },
+    {
+      "month": "2016-01",
+      "dict": "pw",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2016-01",
+      "dict": "pw",
+      "component": "sense",
+      "count": 16
+    },
+    {
+      "month": "2016-01",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 5266
+    },
+    {
+      "month": "2016-01",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-01",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2016-01",
+      "dict": "wil",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-01",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-02",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2016-02",
+      "dict": "mw",
+      "component": "headword",
+      "count": 89
+    },
+    {
+      "month": "2016-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 13
+    },
+    {
+      "month": "2016-02",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 93
+    },
+    {
+      "month": "2016-02",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-02",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-03",
+      "dict": "ap",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-03",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-03",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-03",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-03",
+      "dict": "bur",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2016-03",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2016-03",
+      "dict": "cae",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-03",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-03",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2016-03",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "month": "2016-03",
+      "dict": "md",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-03",
+      "dict": "mw",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2016-03",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-03",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 11
+    },
+    {
+      "month": "2016-03",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-03",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-03",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2016-03",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-03",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-04",
+      "dict": "ap",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2016-04",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-04",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-04",
+      "dict": "bur",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-04",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-04",
+      "dict": "cae",
+      "component": "headword",
+      "count": 422
+    },
+    {
+      "month": "2016-04",
+      "dict": "cae",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2016-04",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 422
+    },
+    {
+      "month": "2016-04",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 921
+    },
+    {
+      "month": "2016-04",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 691
+    },
+    {
+      "month": "2016-04",
+      "dict": "mw",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2016-04",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2016-04",
+      "dict": "mw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2016-04",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 10
+    },
+    {
+      "month": "2016-04",
+      "dict": "pd",
+      "component": "unattributed",
+      "count": 1283
+    },
+    {
+      "month": "2016-04",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-04",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-04",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2016-04",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-04",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2016-04",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2016-05",
+      "dict": "ap",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-05",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-05",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2016-05",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-05",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2016-05",
+      "dict": "ben",
+      "component": "headword",
+      "count": 102
+    },
+    {
+      "month": "2016-05",
+      "dict": "ben",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-05",
+      "dict": "ben",
+      "component": "unattributed",
+      "count": 321
+    },
+    {
+      "month": "2016-05",
+      "dict": "bur",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2016-05",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2016-05",
+      "dict": "cae",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-05",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-05",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-05",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-05",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2016-05",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "month": "2016-05",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-05",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2016-05",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "month": "2016-05",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-05",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-05",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 13
+    },
+    {
+      "month": "2016-05",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-05",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-05",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 7
+    },
+    {
+      "month": "2016-05",
+      "dict": "wil",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "month": "2016-05",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2016-06",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-06",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-06",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2016-06",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-06",
+      "dict": "bur",
+      "component": "headword",
+      "count": 202
+    },
+    {
+      "month": "2016-06",
+      "dict": "bur",
+      "component": "sense",
+      "count": 18
+    },
+    {
+      "month": "2016-06",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 361
+    },
+    {
+      "month": "2016-06",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-06",
+      "dict": "mw",
+      "component": "headword",
+      "count": 14
+    },
+    {
+      "month": "2016-06",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2016-06",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 35
+    },
+    {
+      "month": "2016-06",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-06",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-06",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-06",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-06",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2016-07",
+      "dict": "ap90",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2016-07",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-07",
+      "dict": "mw",
+      "component": "headword",
+      "count": 13
+    },
+    {
+      "month": "2016-07",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-07",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 20
+    },
+    {
+      "month": "2016-07",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-08",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-08",
+      "dict": "ben",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-08",
+      "dict": "mw",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2016-08",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2016-08",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 14
+    },
+    {
+      "month": "2016-09",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-09",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-09",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-09",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-09",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "month": "2016-10",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2016-10",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2016-10",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-10",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2016-10",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2016-10",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2016-10",
+      "dict": "pw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2016-10",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2016-10",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2016-10",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-11",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2016-11",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2016-11",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2016-11",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-11",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2016-11",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-12",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-12",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2016-12",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2016-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2016-12",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 11
+    },
+    {
+      "month": "2016-12",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2016-12",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2017-01",
+      "dict": "ben",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-01",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-01",
+      "dict": "mw",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2017-01",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 11
+    },
+    {
+      "month": "2017-01",
+      "dict": "pw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2017-02",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-02",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2017-02",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2017-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2017-02",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "month": "2017-02",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2017-02",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-03",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2017-03",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-03",
+      "dict": "md",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-03",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2017-03",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-03",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-03",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2017-04",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2017-04",
+      "dict": "mw",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2017-04",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2017-05",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2017-05",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-05",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2017-05",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2017-05",
+      "dict": "mw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2017-05",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "month": "2017-05",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-06",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-06",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-06",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-06",
+      "dict": "md",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2017-06",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2017-06",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2017-06",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2017-06",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2017-06",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 23
+    },
+    {
+      "month": "2017-06",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-07",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-07",
+      "dict": "mw",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2017-07",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "month": "2017-07",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2017-08",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2017-08",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-08",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2017-08",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2017-08",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 10
+    },
+    {
+      "month": "2017-08",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2017-09",
+      "dict": "ap",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2017-09",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-09",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-09",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-09",
+      "dict": "cae",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2017-09",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2017-09",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 6
+    },
+    {
+      "month": "2017-09",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-09",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2017-09",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 6
+    },
+    {
+      "month": "2017-09",
+      "dict": "pd",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-09",
+      "dict": "pw",
+      "component": "headword",
+      "count": 7
+    },
+    {
+      "month": "2017-09",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 9
+    },
+    {
+      "month": "2017-09",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "month": "2017-09",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 7
+    },
+    {
+      "month": "2017-09",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2017-10",
+      "dict": "ap",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2017-10",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2017-10",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-10",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-10",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-10",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2017-10",
+      "dict": "mw",
+      "component": "headword",
+      "count": 7
+    },
+    {
+      "month": "2017-10",
+      "dict": "mw",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2017-10",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 6
+    },
+    {
+      "month": "2017-10",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2017-10",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2017-11",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-11",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "month": "2017-11",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2017-11",
+      "dict": "mw",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2017-11",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 8
+    },
+    {
+      "month": "2017-12",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-12",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2017-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "month": "2017-12",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 11
+    },
+    {
+      "month": "2017-12",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2017-12",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2017-12",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-01",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2018-01",
+      "dict": "mw",
+      "component": "citation",
+      "count": 7
+    },
+    {
+      "month": "2018-01",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2018-01",
+      "dict": "mw",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2018-01",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 22
+    },
+    {
+      "month": "2018-01",
+      "dict": "wil",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2018-02",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2018-02",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-02",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2018-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2018-02",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 11
+    },
+    {
+      "month": "2018-02",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2018-03",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2018-03",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-03",
+      "dict": "bur",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2018-03",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2018-03",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2018-03",
+      "dict": "mw",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2018-03",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 10
+    },
+    {
+      "month": "2018-04",
+      "dict": "bur",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2018-04",
+      "dict": "bur",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2018-04",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-04",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2018-04",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2018-04",
+      "dict": "mw",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2018-04",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "month": "2018-04",
+      "dict": "wil",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2018-05",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2018-05",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2018-05",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-05",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 3
+    },
+    {
+      "month": "2018-05",
+      "dict": "mw",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2018-05",
+      "dict": "mw",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2018-05",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2018-05",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-06",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2018-06",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2018-06",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2018-06",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2018-07",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2018-07",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2018-07",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-08",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2018-08",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 6
+    },
+    {
+      "month": "2018-09",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2018-09",
+      "dict": "mw",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2018-09",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-10",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2018-10",
+      "dict": "bur",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2018-10",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-10",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2018-10",
+      "dict": "mw",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "month": "2018-10",
+      "dict": "mw",
+      "component": "sense",
+      "count": 10
+    },
+    {
+      "month": "2018-10",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 12
+    },
+    {
+      "month": "2018-10",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-10",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2018-10",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2018-10",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-11",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-11",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2018-11",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2018-11",
+      "dict": "mw",
+      "component": "sense",
+      "count": 9
+    },
+    {
+      "month": "2018-11",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "month": "2018-11",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-12",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2018-12",
+      "dict": "md",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2018-12",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2018-12",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2018-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2018-12",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 14
+    },
+    {
+      "month": "2018-12",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2018-12",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-01",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-01",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2019-01",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2019-01",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2019-01",
+      "dict": "mw",
+      "component": "sense",
+      "count": 10
+    },
+    {
+      "month": "2019-01",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 14
+    },
+    {
+      "month": "2019-01",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-02",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2019-02",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2019-02",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2019-02",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-02",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-02",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2019-02",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2019-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2019-02",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 12
+    },
+    {
+      "month": "2019-03",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-03",
+      "dict": "bur",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2019-03",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-03",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-03",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2019-03",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2019-03",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2019-03",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2019-03",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-03",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2019-04",
+      "dict": "ap90",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2019-04",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-04",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-04",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2019-04",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-04",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2019-04",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2019-04",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2019-05",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-05",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2019-05",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-05",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-05",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-06",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-06",
+      "dict": "md",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-06",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "month": "2019-06",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2019-06",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-06",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 4
+    },
+    {
+      "month": "2019-06",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "month": "2019-07",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-07",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-07",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2019-07",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2019-07",
+      "dict": "pw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2019-07",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-07",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 1
+    },
+    {
+      "month": "2019-12",
+      "dict": "mw",
+      "component": "markup",
+      "count": 40
+    },
+    {
+      "month": "2019-12",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2019-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2019-12",
+      "dict": "pw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2019-12",
+      "dict": "pw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2020-01",
+      "dict": "mw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2020-02",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2020-02",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2020-02",
+      "dict": "bur",
+      "component": "markup",
+      "count": 3
+    },
+    {
+      "month": "2020-02",
+      "dict": "bur",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2020-02",
+      "dict": "mw",
+      "component": "markup",
+      "count": 21
+    },
+    {
+      "month": "2020-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 18
+    },
+    {
+      "month": "2020-02",
+      "dict": "pw",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "month": "2020-02",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 2
+    },
+    {
+      "month": "2020-02",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2020-03",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 26
+    },
+    {
+      "month": "2020-03",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2020-03",
+      "dict": "mw",
+      "component": "markup",
+      "count": 4
+    },
+    {
+      "month": "2020-03",
+      "dict": "mw",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "month": "2020-03",
+      "dict": "pw",
+      "component": "markup",
+      "count": 12
+    },
+    {
+      "month": "2020-03",
+      "dict": "pw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2020-04",
+      "dict": "ben",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2020-05",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2020-05",
+      "dict": "bur",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2020-05",
+      "dict": "bur",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2020-05",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2020-05",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2020-05",
+      "dict": "mw",
+      "component": "sense",
+      "count": 11
+    },
+    {
+      "month": "2020-05",
+      "dict": "pw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2020-05",
+      "dict": "pw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2020-06",
+      "dict": "mw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2020-06",
+      "dict": "mw",
+      "component": "sense",
+      "count": 11
+    },
+    {
+      "month": "2020-06",
+      "dict": "pw",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2020-08",
+      "dict": "bur",
+      "component": "sense",
+      "count": 14
+    },
+    {
+      "month": "2020-08",
+      "dict": "md",
+      "component": "sense",
+      "count": 84
+    },
+    {
+      "month": "2020-08",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2020-08",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2020-08",
+      "dict": "mw",
+      "component": "markup",
+      "count": 3
+    },
+    {
+      "month": "2020-08",
+      "dict": "mw",
+      "component": "meta",
+      "count": 49
+    },
+    {
+      "month": "2020-08",
+      "dict": "mw",
+      "component": "sense",
+      "count": 14
+    },
+    {
+      "month": "2020-09",
+      "dict": "md",
+      "component": "sense",
+      "count": 248
+    },
+    {
+      "month": "2020-10",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2020-10",
+      "dict": "ben",
+      "component": "sense",
+      "count": 65
+    },
+    {
+      "month": "2020-10",
+      "dict": "bur",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2020-10",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2020-10",
+      "dict": "md",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2020-10",
+      "dict": "md",
+      "component": "sense",
+      "count": 116
+    },
+    {
+      "month": "2020-10",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2020-10",
+      "dict": "mw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2020-10",
+      "dict": "mw",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2020-10",
+      "dict": "pw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2020-10",
+      "dict": "pw",
+      "component": "sense",
+      "count": 9
+    },
+    {
+      "month": "2020-10",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2020-10",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2020-11",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 37
+    },
+    {
+      "month": "2020-11",
+      "dict": "ben",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2020-11",
+      "dict": "ben",
+      "component": "sense",
+      "count": 269
+    },
+    {
+      "month": "2020-11",
+      "dict": "pw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2020-11",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2020-11",
+      "dict": "pw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2020-11",
+      "dict": "pw",
+      "component": "sense",
+      "count": 88
+    },
+    {
+      "month": "2020-11",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2020-12",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 609
+    },
+    {
+      "month": "2020-12",
+      "dict": "cae",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2020-12",
+      "dict": "cae",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2020-12",
+      "dict": "cae",
+      "component": "sense",
+      "count": 215
+    },
+    {
+      "month": "2020-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2021-01",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 195
+    },
+    {
+      "month": "2021-01",
+      "dict": "bur",
+      "component": "sense",
+      "count": 233
+    },
+    {
+      "month": "2021-01",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2021-01",
+      "dict": "mw",
+      "component": "markup",
+      "count": 52
+    },
+    {
+      "month": "2021-01",
+      "dict": "mw",
+      "component": "sense",
+      "count": 41
+    },
+    {
+      "month": "2021-03",
+      "dict": "bur",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2021-03",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2021-04",
+      "dict": "md",
+      "component": "sense",
+      "count": 31
+    },
+    {
+      "month": "2021-04",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2021-05",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 62
+    },
+    {
+      "month": "2021-05",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 415
+    },
+    {
+      "month": "2021-05",
+      "dict": "mw",
+      "component": "markup",
+      "count": 81
+    },
+    {
+      "month": "2021-05",
+      "dict": "mw",
+      "component": "sense",
+      "count": 215
+    },
+    {
+      "month": "2021-06",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 11
+    },
+    {
+      "month": "2021-06",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "month": "2021-06",
+      "dict": "mw",
+      "component": "citation",
+      "count": 2
+    },
+    {
+      "month": "2021-06",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2021-06",
+      "dict": "mw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2021-06",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2021-06",
+      "dict": "mw",
+      "component": "sense",
+      "count": 19
+    },
+    {
+      "month": "2021-06",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 39
+    },
+    {
+      "month": "2021-07",
+      "dict": "ap90",
+      "component": "citation",
+      "count": 4
+    },
+    {
+      "month": "2021-07",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 6
+    },
+    {
+      "month": "2021-07",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 22
+    },
+    {
+      "month": "2021-07",
+      "dict": "mw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2021-07",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2021-07",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2021-07",
+      "dict": "wil",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2021-08",
+      "dict": "ap90",
+      "component": "citation",
+      "count": 12
+    },
+    {
+      "month": "2021-08",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 5
+    },
+    {
+      "month": "2021-08",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 53
+    },
+    {
+      "month": "2021-08",
+      "dict": "ben",
+      "component": "sense",
+      "count": 41
+    },
+    {
+      "month": "2021-08",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2021-08",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 280
+    },
+    {
+      "month": "2021-09",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "month": "2021-09",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2021-09",
+      "dict": "ben",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2021-09",
+      "dict": "bur",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2021-09",
+      "dict": "bur",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2021-09",
+      "dict": "bur",
+      "component": "sense",
+      "count": 39
+    },
+    {
+      "month": "2021-09",
+      "dict": "cae",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2021-09",
+      "dict": "cae",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2021-09",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2021-09",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2021-09",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2021-09",
+      "dict": "mw",
+      "component": "markup",
+      "count": 34
+    },
+    {
+      "month": "2021-09",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2021-09",
+      "dict": "mw",
+      "component": "sense",
+      "count": 21
+    },
+    {
+      "month": "2021-09",
+      "dict": "pw",
+      "component": "sense",
+      "count": 344
+    },
+    {
+      "month": "2021-09",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2021-09",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2021-09",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 16
+    },
+    {
+      "month": "2021-10",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2021-10",
+      "dict": "ben",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2021-10",
+      "dict": "ben",
+      "component": "markup",
+      "count": 10
+    },
+    {
+      "month": "2021-10",
+      "dict": "ben",
+      "component": "meta",
+      "count": 128
+    },
+    {
+      "month": "2021-10",
+      "dict": "ben",
+      "component": "sense",
+      "count": 69
+    },
+    {
+      "month": "2021-10",
+      "dict": "bur",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2021-10",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2021-10",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2021-10",
+      "dict": "md",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2021-10",
+      "dict": "mw",
+      "component": "citation",
+      "count": 55
+    },
+    {
+      "month": "2021-10",
+      "dict": "mw",
+      "component": "markup",
+      "count": 72
+    },
+    {
+      "month": "2021-10",
+      "dict": "mw",
+      "component": "sense",
+      "count": 51
+    },
+    {
+      "month": "2021-10",
+      "dict": "pw",
+      "component": "citation",
+      "count": 2
+    },
+    {
+      "month": "2021-10",
+      "dict": "pw",
+      "component": "markup",
+      "count": 3
+    },
+    {
+      "month": "2021-10",
+      "dict": "pw",
+      "component": "sense",
+      "count": 42
+    },
+    {
+      "month": "2021-10",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2021-12",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2021-12",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2021-12",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2021-12",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2021-12",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2021-12",
+      "dict": "mw",
+      "component": "markup",
+      "count": 4
+    },
+    {
+      "month": "2021-12",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2021-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 20
+    },
+    {
+      "month": "2021-12",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2022-01",
+      "dict": "pw",
+      "component": "citation",
+      "count": 126
+    },
+    {
+      "month": "2022-01",
+      "dict": "pw",
+      "component": "markup",
+      "count": 4
+    },
+    {
+      "month": "2022-01",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 118
+    },
+    {
+      "month": "2022-01",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 69
+    },
+    {
+      "month": "2022-01",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2022-02",
+      "dict": "md",
+      "component": "sense",
+      "count": 54
+    },
+    {
+      "month": "2022-02",
+      "dict": "mw",
+      "component": "citation",
+      "count": 18
+    },
+    {
+      "month": "2022-02",
+      "dict": "mw",
+      "component": "markup",
+      "count": 6
+    },
+    {
+      "month": "2022-02",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 8
+    },
+    {
+      "month": "2022-02",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2022-02",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2022-03",
+      "dict": "md",
+      "component": "meta",
+      "count": 72
+    },
+    {
+      "month": "2022-03",
+      "dict": "md",
+      "component": "sense",
+      "count": 106
+    },
+    {
+      "month": "2022-04",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2022-04",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 12
+    },
+    {
+      "month": "2022-04",
+      "dict": "bur",
+      "component": "sense",
+      "count": 217
+    },
+    {
+      "month": "2022-04",
+      "dict": "mw",
+      "component": "headword",
+      "count": 9
+    },
+    {
+      "month": "2022-04",
+      "dict": "mw",
+      "component": "markup",
+      "count": 22
+    },
+    {
+      "month": "2022-04",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2022-04",
+      "dict": "mw",
+      "component": "sense",
+      "count": 50
+    },
+    {
+      "month": "2022-04",
+      "dict": "pw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2022-04",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2022-04",
+      "dict": "wil",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2022-05",
+      "dict": "ben",
+      "component": "markup",
+      "count": 21
+    },
+    {
+      "month": "2022-05",
+      "dict": "ben",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2022-05",
+      "dict": "bur",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2022-05",
+      "dict": "bur",
+      "component": "sense",
+      "count": 294
+    },
+    {
+      "month": "2022-06",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2022-06",
+      "dict": "mw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2022-06",
+      "dict": "pw",
+      "component": "citation",
+      "count": 27
+    },
+    {
+      "month": "2022-06",
+      "dict": "pw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2022-06",
+      "dict": "pw",
+      "component": "sense",
+      "count": 13
+    },
+    {
+      "month": "2022-07",
+      "dict": "mw",
+      "component": "citation",
+      "count": 39
+    },
+    {
+      "month": "2022-07",
+      "dict": "mw",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2022-07",
+      "dict": "mw",
+      "component": "markup",
+      "count": 19
+    },
+    {
+      "month": "2022-07",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2022-07",
+      "dict": "mw",
+      "component": "sense",
+      "count": 150
+    },
+    {
+      "month": "2022-08",
+      "dict": "mw",
+      "component": "citation",
+      "count": 26
+    },
+    {
+      "month": "2022-08",
+      "dict": "mw",
+      "component": "markup",
+      "count": 11
+    },
+    {
+      "month": "2022-08",
+      "dict": "mw",
+      "component": "sense",
+      "count": 233
+    },
+    {
+      "month": "2022-09",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2022-09",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 16
+    },
+    {
+      "month": "2022-09",
+      "dict": "bur",
+      "component": "markup",
+      "count": 18
+    },
+    {
+      "month": "2022-09",
+      "dict": "bur",
+      "component": "sense",
+      "count": 50
+    },
+    {
+      "month": "2022-09",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2022-09",
+      "dict": "mw",
+      "component": "markup",
+      "count": 5
+    },
+    {
+      "month": "2022-09",
+      "dict": "mw",
+      "component": "sense",
+      "count": 33
+    },
+    {
+      "month": "2022-09",
+      "dict": "pw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2022-09",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2022-09",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2022-09",
+      "dict": "wil",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2022-10",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2022-12",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "month": "2022-12",
+      "dict": "bur",
+      "component": "sense",
+      "count": 32
+    },
+    {
+      "month": "2022-12",
+      "dict": "mw",
+      "component": "headword",
+      "count": 8
+    },
+    {
+      "month": "2022-12",
+      "dict": "mw",
+      "component": "markup",
+      "count": 86
+    },
+    {
+      "month": "2022-12",
+      "dict": "mw",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "month": "2022-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 49
+    },
+    {
+      "month": "2022-12",
+      "dict": "pw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2022-12",
+      "dict": "wil",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2023-01",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2023-01",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2023-01",
+      "dict": "mw",
+      "component": "markup",
+      "count": 62
+    },
+    {
+      "month": "2023-01",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2023-01",
+      "dict": "pw",
+      "component": "sense",
+      "count": 223
+    },
+    {
+      "month": "2023-02",
+      "dict": "bur",
+      "component": "sense",
+      "count": 15
+    },
+    {
+      "month": "2023-02",
+      "dict": "md",
+      "component": "sense",
+      "count": 384
+    },
+    {
+      "month": "2023-02",
+      "dict": "mw",
+      "component": "markup",
+      "count": 85
+    },
+    {
+      "month": "2023-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 145
+    },
+    {
+      "month": "2023-02",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 4
+    },
+    {
+      "month": "2023-02",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 19
+    },
+    {
+      "month": "2023-02",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2023-03",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "month": "2023-03",
+      "dict": "bur",
+      "component": "markup",
+      "count": 5
+    },
+    {
+      "month": "2023-03",
+      "dict": "bur",
+      "component": "sense",
+      "count": 41
+    },
+    {
+      "month": "2023-03",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2023-03",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2023-03",
+      "dict": "md",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2023-03",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2023-03",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2023-03",
+      "dict": "mw",
+      "component": "headword",
+      "count": 8
+    },
+    {
+      "month": "2023-03",
+      "dict": "mw",
+      "component": "markup",
+      "count": 4
+    },
+    {
+      "month": "2023-03",
+      "dict": "mw",
+      "component": "sense",
+      "count": 97
+    },
+    {
+      "month": "2023-03",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2023-03",
+      "dict": "pw",
+      "component": "markup",
+      "count": 4
+    },
+    {
+      "month": "2023-03",
+      "dict": "pw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2023-03",
+      "dict": "pw",
+      "component": "sense",
+      "count": 13
+    },
+    {
+      "month": "2023-03",
+      "dict": "wil",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2023-04",
+      "dict": "pw",
+      "component": "citation",
+      "count": 3
+    },
+    {
+      "month": "2023-04",
+      "dict": "pw",
+      "component": "markup",
+      "count": 29
+    },
+    {
+      "month": "2023-04",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2023-06",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2023-06",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2023-06",
+      "dict": "bur",
+      "component": "sense",
+      "count": 20
+    },
+    {
+      "month": "2023-06",
+      "dict": "md",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2023-06",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2023-06",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2023-06",
+      "dict": "mw",
+      "component": "markup",
+      "count": 34
+    },
+    {
+      "month": "2023-06",
+      "dict": "mw",
+      "component": "meta",
+      "count": 8
+    },
+    {
+      "month": "2023-06",
+      "dict": "mw",
+      "component": "sense",
+      "count": 42
+    },
+    {
+      "month": "2023-06",
+      "dict": "pw",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2023-06",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2023-06",
+      "dict": "wil",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2023-06",
+      "dict": "wil",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2023-07",
+      "dict": "ben",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2023-07",
+      "dict": "ben",
+      "component": "sense",
+      "count": 121
+    },
+    {
+      "month": "2023-07",
+      "dict": "mw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2023-07",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2023-07",
+      "dict": "pw",
+      "component": "sense",
+      "count": 17
+    },
+    {
+      "month": "2023-09",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2023-09",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2023-09",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2023-09",
+      "dict": "mw",
+      "component": "headword",
+      "count": 6
+    },
+    {
+      "month": "2023-09",
+      "dict": "mw",
+      "component": "markup",
+      "count": 9
+    },
+    {
+      "month": "2023-09",
+      "dict": "mw",
+      "component": "sense",
+      "count": 25
+    },
+    {
+      "month": "2023-09",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2023-09",
+      "dict": "pw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2023-09",
+      "dict": "pw",
+      "component": "sense",
+      "count": 43
+    },
+    {
+      "month": "2023-09",
+      "dict": "wil",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2023-10",
+      "dict": "pw",
+      "component": "sense",
+      "count": 235
+    },
+    {
+      "month": "2023-11",
+      "dict": "pw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2023-11",
+      "dict": "pw",
+      "component": "sense",
+      "count": 177
+    },
+    {
+      "month": "2023-12",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2023-12",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 11
+    },
+    {
+      "month": "2023-12",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2023-12",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2023-12",
+      "dict": "md",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2023-12",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2023-12",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2023-12",
+      "dict": "mw",
+      "component": "headword",
+      "count": 15
+    },
+    {
+      "month": "2023-12",
+      "dict": "mw",
+      "component": "markup",
+      "count": 11
+    },
+    {
+      "month": "2023-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 105
+    },
+    {
+      "month": "2023-12",
+      "dict": "pw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2023-12",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2023-12",
+      "dict": "pw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2023-12",
+      "dict": "pw",
+      "component": "sense",
+      "count": 37
+    },
+    {
+      "month": "2023-12",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 140
+    },
+    {
+      "month": "2024-01",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2024-01",
+      "dict": "mw",
+      "component": "citation",
+      "count": 14
+    },
+    {
+      "month": "2024-01",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 15
+    },
+    {
+      "month": "2024-01",
+      "dict": "mw",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2024-01",
+      "dict": "mw",
+      "component": "markup",
+      "count": 65
+    },
+    {
+      "month": "2024-01",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2024-01",
+      "dict": "mw",
+      "component": "sense",
+      "count": 277
+    },
+    {
+      "month": "2024-01",
+      "dict": "pw",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2024-02",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2024-02",
+      "dict": "cae",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2024-02",
+      "dict": "cae",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2024-02",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2024-02",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2024-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 16
+    },
+    {
+      "month": "2024-02",
+      "dict": "wil",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2024-03",
+      "dict": "bur",
+      "component": "markup",
+      "count": 23
+    },
+    {
+      "month": "2024-03",
+      "dict": "bur",
+      "component": "sense",
+      "count": 28
+    },
+    {
+      "month": "2024-03",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2024-03",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2024-04",
+      "dict": "mw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2024-04",
+      "dict": "mw",
+      "component": "sense",
+      "count": 67
+    },
+    {
+      "month": "2024-05",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2024-05",
+      "dict": "mw",
+      "component": "markup",
+      "count": 7
+    },
+    {
+      "month": "2024-05",
+      "dict": "mw",
+      "component": "meta",
+      "count": 6
+    },
+    {
+      "month": "2024-05",
+      "dict": "mw",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2024-06",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 22
+    },
+    {
+      "month": "2024-06",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 28
+    },
+    {
+      "month": "2024-06",
+      "dict": "bur",
+      "component": "sense",
+      "count": 26
+    },
+    {
+      "month": "2024-06",
+      "dict": "mw",
+      "component": "citation",
+      "count": 12
+    },
+    {
+      "month": "2024-06",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 152
+    },
+    {
+      "month": "2024-06",
+      "dict": "mw",
+      "component": "headword",
+      "count": 81
+    },
+    {
+      "month": "2024-06",
+      "dict": "mw",
+      "component": "markup",
+      "count": 349
+    },
+    {
+      "month": "2024-06",
+      "dict": "mw",
+      "component": "meta",
+      "count": 11
+    },
+    {
+      "month": "2024-06",
+      "dict": "mw",
+      "component": "sense",
+      "count": 988
+    },
+    {
+      "month": "2024-06",
+      "dict": "pw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2024-06",
+      "dict": "pw",
+      "component": "sense",
+      "count": 10
+    },
+    {
+      "month": "2024-07",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2024-07",
+      "dict": "mw",
+      "component": "headword",
+      "count": 11
+    },
+    {
+      "month": "2024-07",
+      "dict": "mw",
+      "component": "markup",
+      "count": 51
+    },
+    {
+      "month": "2024-07",
+      "dict": "mw",
+      "component": "sense",
+      "count": 27
+    },
+    {
+      "month": "2024-09",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 3
+    },
+    {
+      "month": "2024-09",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2024-09",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 35
+    },
+    {
+      "month": "2024-09",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 99
+    },
+    {
+      "month": "2024-10",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2024-10",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 27
+    },
+    {
+      "month": "2024-10",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 65
+    },
+    {
+      "month": "2024-10",
+      "dict": "bur",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2024-10",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2024-10",
+      "dict": "mw",
+      "component": "headword",
+      "count": 13
+    },
+    {
+      "month": "2024-10",
+      "dict": "mw",
+      "component": "markup",
+      "count": 626
+    },
+    {
+      "month": "2024-10",
+      "dict": "mw",
+      "component": "meta",
+      "count": 42
+    },
+    {
+      "month": "2024-10",
+      "dict": "mw",
+      "component": "sense",
+      "count": 768
+    },
+    {
+      "month": "2024-10",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2024-10",
+      "dict": "wil",
+      "component": "sense",
+      "count": 26
+    },
+    {
+      "month": "2024-11",
+      "dict": "mw",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "month": "2024-11",
+      "dict": "mw",
+      "component": "markup",
+      "count": 87
+    },
+    {
+      "month": "2024-11",
+      "dict": "mw",
+      "component": "meta",
+      "count": 26
+    },
+    {
+      "month": "2024-11",
+      "dict": "mw",
+      "component": "sense",
+      "count": 25
+    },
+    {
+      "month": "2024-12",
+      "dict": "mw",
+      "component": "citation",
+      "count": 23
+    },
+    {
+      "month": "2024-12",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2024-12",
+      "dict": "mw",
+      "component": "markup",
+      "count": 35
+    },
+    {
+      "month": "2024-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2024-12",
+      "dict": "pw",
+      "component": "citation",
+      "count": 54
+    },
+    {
+      "month": "2024-12",
+      "dict": "pw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2024-12",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2024-12",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 15
+    },
+    {
+      "month": "2024-12",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 4
+    },
+    {
+      "month": "2024-12",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2025-01",
+      "dict": "mw",
+      "component": "citation",
+      "count": 2
+    },
+    {
+      "month": "2025-02",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2025-02",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2025-02",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 1
+    },
+    {
+      "month": "2025-02",
+      "dict": "mw",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "month": "2025-02",
+      "dict": "mw",
+      "component": "markup",
+      "count": 182
+    },
+    {
+      "month": "2025-02",
+      "dict": "mw",
+      "component": "meta",
+      "count": 17
+    },
+    {
+      "month": "2025-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 35
+    },
+    {
+      "month": "2025-02",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 43
+    },
+    {
+      "month": "2025-02",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 11
+    },
+    {
+      "month": "2025-03",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 114
+    },
+    {
+      "month": "2025-03",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 152
+    },
+    {
+      "month": "2025-03",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 24
+    },
+    {
+      "month": "2025-05",
+      "dict": "ben",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2025-05",
+      "dict": "mw",
+      "component": "citation",
+      "count": 17
+    },
+    {
+      "month": "2025-05",
+      "dict": "mw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2025-05",
+      "dict": "mw",
+      "component": "markup",
+      "count": 87
+    },
+    {
+      "month": "2025-05",
+      "dict": "mw",
+      "component": "sense",
+      "count": 35
+    },
+    {
+      "month": "2025-05",
+      "dict": "pw",
+      "component": "citation",
+      "count": 7
+    },
+    {
+      "month": "2025-05",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2025-05",
+      "dict": "pw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2025-05",
+      "dict": "pw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2025-05",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 8
+    },
+    {
+      "month": "2025-05",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 181
+    },
+    {
+      "month": "2025-06",
+      "dict": "mw",
+      "component": "citation",
+      "count": 62
+    },
+    {
+      "month": "2025-06",
+      "dict": "mw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2025-06",
+      "dict": "mw",
+      "component": "sense",
+      "count": 16
+    },
+    {
+      "month": "2025-06",
+      "dict": "pw",
+      "component": "citation",
+      "count": 59
+    },
+    {
+      "month": "2025-06",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2025-06",
+      "dict": "pw",
+      "component": "markup",
+      "count": 5
+    },
+    {
+      "month": "2025-06",
+      "dict": "pw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2025-06",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 213
+    },
+    {
+      "month": "2025-06",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 43
+    },
+    {
+      "month": "2025-07",
+      "dict": "ap",
+      "component": "citation",
+      "count": 32
+    },
+    {
+      "month": "2025-07",
+      "dict": "ap",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2025-07",
+      "dict": "ap",
+      "component": "markup",
+      "count": 20
+    },
+    {
+      "month": "2025-07",
+      "dict": "ap",
+      "component": "sense",
+      "count": 169
+    },
+    {
+      "month": "2025-07",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2025-07",
+      "dict": "md",
+      "component": "sense",
+      "count": 7
+    },
+    {
+      "month": "2025-07",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2025-07",
+      "dict": "mw",
+      "component": "markup",
+      "count": 71
+    },
+    {
+      "month": "2025-07",
+      "dict": "mw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "month": "2025-07",
+      "dict": "mw",
+      "component": "sense",
+      "count": 25
+    },
+    {
+      "month": "2025-07",
+      "dict": "pw",
+      "component": "markup",
+      "count": 3
+    },
+    {
+      "month": "2025-07",
+      "dict": "pw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2025-07",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 387
+    },
+    {
+      "month": "2025-07",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 107
+    },
+    {
+      "month": "2025-07",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2025-08",
+      "dict": "ap",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2025-08",
+      "dict": "ap",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2025-08",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 53
+    },
+    {
+      "month": "2025-08",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 90
+    },
+    {
+      "month": "2025-08",
+      "dict": "ap90",
+      "component": "meta",
+      "count": 4
+    },
+    {
+      "month": "2025-08",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 59
+    },
+    {
+      "month": "2025-08",
+      "dict": "mw",
+      "component": "citation",
+      "count": 25
+    },
+    {
+      "month": "2025-08",
+      "dict": "mw",
+      "component": "markup",
+      "count": 21
+    },
+    {
+      "month": "2025-08",
+      "dict": "mw",
+      "component": "sense",
+      "count": 9
+    },
+    {
+      "month": "2025-08",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 433
+    },
+    {
+      "month": "2025-08",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 40
+    },
+    {
+      "month": "2025-08",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 5
+    },
+    {
+      "month": "2025-09",
+      "dict": "mw",
+      "component": "citation",
+      "count": 40
+    },
+    {
+      "month": "2025-09",
+      "dict": "mw",
+      "component": "markup",
+      "count": 3
+    },
+    {
+      "month": "2025-09",
+      "dict": "pw",
+      "component": "citation",
+      "count": 92
+    },
+    {
+      "month": "2025-09",
+      "dict": "pw",
+      "component": "markup",
+      "count": 4
+    },
+    {
+      "month": "2025-09",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 564
+    },
+    {
+      "month": "2025-09",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 19
+    },
+    {
+      "month": "2025-09",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2025-10",
+      "dict": "mw",
+      "component": "citation",
+      "count": 9
+    },
+    {
+      "month": "2025-10",
+      "dict": "mw",
+      "component": "markup",
+      "count": 4
+    },
+    {
+      "month": "2025-10",
+      "dict": "mw",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2025-10",
+      "dict": "pw",
+      "component": "citation",
+      "count": 64
+    },
+    {
+      "month": "2025-10",
+      "dict": "pw",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "month": "2025-10",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 90
+    },
+    {
+      "month": "2025-10",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 42
+    },
+    {
+      "month": "2025-10",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "month": "2025-11",
+      "dict": "mw",
+      "component": "citation",
+      "count": 15
+    },
+    {
+      "month": "2025-11",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 6
+    },
+    {
+      "month": "2025-11",
+      "dict": "mw",
+      "component": "headword",
+      "count": 26
+    },
+    {
+      "month": "2025-11",
+      "dict": "mw",
+      "component": "markup",
+      "count": 134
+    },
+    {
+      "month": "2025-11",
+      "dict": "mw",
+      "component": "meta",
+      "count": 12
+    },
+    {
+      "month": "2025-11",
+      "dict": "mw",
+      "component": "sense",
+      "count": 338
+    },
+    {
+      "month": "2025-11",
+      "dict": "pw",
+      "component": "citation",
+      "count": 28
+    },
+    {
+      "month": "2025-11",
+      "dict": "pw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2025-11",
+      "dict": "pw",
+      "component": "sense",
+      "count": 11
+    },
+    {
+      "month": "2025-11",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 134
+    },
+    {
+      "month": "2025-11",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2025-11",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 63
+    },
+    {
+      "month": "2025-12",
+      "dict": "ap",
+      "component": "markup",
+      "count": 4
+    },
+    {
+      "month": "2025-12",
+      "dict": "ap",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "month": "2025-12",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2025-12",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2025-12",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 135
+    },
+    {
+      "month": "2025-12",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 5
+    },
+    {
+      "month": "2025-12",
+      "dict": "mw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2025-12",
+      "dict": "mw",
+      "component": "markup",
+      "count": 293
+    },
+    {
+      "month": "2025-12",
+      "dict": "mw",
+      "component": "meta",
+      "count": 25
+    },
+    {
+      "month": "2025-12",
+      "dict": "mw",
+      "component": "sense",
+      "count": 12
+    },
+    {
+      "month": "2026-01",
+      "dict": "ap",
+      "component": "citation",
+      "count": 45
+    },
+    {
+      "month": "2026-01",
+      "dict": "ap",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "month": "2026-01",
+      "dict": "ap",
+      "component": "sense",
+      "count": 83
+    },
+    {
+      "month": "2026-01",
+      "dict": "mw",
+      "component": "headword",
+      "count": 6
+    },
+    {
+      "month": "2026-01",
+      "dict": "mw",
+      "component": "markup",
+      "count": 94
+    },
+    {
+      "month": "2026-01",
+      "dict": "mw",
+      "component": "meta",
+      "count": 15
+    },
+    {
+      "month": "2026-01",
+      "dict": "mw",
+      "component": "sense",
+      "count": 30
+    },
+    {
+      "month": "2026-01",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2026-02",
+      "dict": "ap",
+      "component": "sense",
+      "count": 11
+    },
+    {
+      "month": "2026-02",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2026-02",
+      "dict": "bur",
+      "component": "sense",
+      "count": 15
+    },
+    {
+      "month": "2026-02",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2026-02",
+      "dict": "mw",
+      "component": "markup",
+      "count": 3
+    },
+    {
+      "month": "2026-02",
+      "dict": "mw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2026-02",
+      "dict": "pw",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2026-02",
+      "dict": "pw",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2026-03",
+      "dict": "ap",
+      "component": "headword",
+      "count": 10
+    },
+    {
+      "month": "2026-03",
+      "dict": "ap",
+      "component": "markup",
+      "count": 16
+    },
+    {
+      "month": "2026-03",
+      "dict": "ap",
+      "component": "sense",
+      "count": 127
+    },
+    {
+      "month": "2026-03",
+      "dict": "mw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2026-04",
+      "dict": "ap",
+      "component": "citation",
+      "count": 32
+    },
+    {
+      "month": "2026-04",
+      "dict": "ap",
+      "component": "grammar",
+      "count": 15
+    },
+    {
+      "month": "2026-04",
+      "dict": "ap",
+      "component": "headword",
+      "count": 62
+    },
+    {
+      "month": "2026-04",
+      "dict": "ap",
+      "component": "markup",
+      "count": 170
+    },
+    {
+      "month": "2026-04",
+      "dict": "ap",
+      "component": "meta",
+      "count": 11
+    },
+    {
+      "month": "2026-04",
+      "dict": "ap",
+      "component": "sense",
+      "count": 314
+    },
+    {
+      "month": "2026-04",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 25
+    },
+    {
+      "month": "2026-04",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 33
+    },
+    {
+      "month": "2026-04",
+      "dict": "ben",
+      "component": "sense",
+      "count": 17
+    },
+    {
+      "month": "2026-04",
+      "dict": "bur",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2026-04",
+      "dict": "bur",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2026-04",
+      "dict": "cae",
+      "component": "sense",
+      "count": 174
+    },
+    {
+      "month": "2026-04",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 17
+    },
+    {
+      "month": "2026-04",
+      "dict": "mw",
+      "component": "citation",
+      "count": 5
+    },
+    {
+      "month": "2026-04",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "month": "2026-04",
+      "dict": "mw",
+      "component": "headword",
+      "count": 41
+    },
+    {
+      "month": "2026-04",
+      "dict": "mw",
+      "component": "markup",
+      "count": 176
+    },
+    {
+      "month": "2026-04",
+      "dict": "mw",
+      "component": "meta",
+      "count": 6
+    },
+    {
+      "month": "2026-04",
+      "dict": "mw",
+      "component": "sense",
+      "count": 70
+    },
+    {
+      "month": "2026-04",
+      "dict": "pw",
+      "component": "headword",
+      "count": 1
+    },
+    {
+      "month": "2026-04",
+      "dict": "pw",
+      "component": "sense",
+      "count": 6
+    },
+    {
+      "month": "2026-04",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2026-04",
+      "dict": "wil",
+      "component": "headword",
+      "count": 2
+    },
+    {
+      "month": "2026-04",
+      "dict": "wil",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "month": "2026-05",
+      "dict": "ap",
+      "component": "citation",
+      "count": 7
+    },
+    {
+      "month": "2026-05",
+      "dict": "ap",
+      "component": "grammar",
+      "count": 44
+    },
+    {
+      "month": "2026-05",
+      "dict": "ap",
+      "component": "headword",
+      "count": 129
+    },
+    {
+      "month": "2026-05",
+      "dict": "ap",
+      "component": "markup",
+      "count": 170
+    },
+    {
+      "month": "2026-05",
+      "dict": "ap",
+      "component": "meta",
+      "count": 29
+    },
+    {
+      "month": "2026-05",
+      "dict": "ap",
+      "component": "sense",
+      "count": 396
+    },
+    {
+      "month": "2026-05",
+      "dict": "ap90",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2026-05",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2026-05",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 4
+    },
+    {
+      "month": "2026-05",
+      "dict": "bur",
+      "component": "sense",
+      "count": 10
+    },
+    {
+      "month": "2026-05",
+      "dict": "cae",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2026-05",
+      "dict": "md",
+      "component": "sense",
+      "count": 1
+    },
+    {
+      "month": "2026-05",
+      "dict": "mw",
+      "component": "citation",
+      "count": 1
+    },
+    {
+      "month": "2026-05",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "month": "2026-05",
+      "dict": "mw",
+      "component": "headword",
+      "count": 9
+    },
+    {
+      "month": "2026-05",
+      "dict": "mw",
+      "component": "markup",
+      "count": 39
+    },
+    {
+      "month": "2026-05",
+      "dict": "mw",
+      "component": "sense",
+      "count": 42
+    },
+    {
+      "month": "2026-05",
+      "dict": "pw",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2026-05",
+      "dict": "pw",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "month": "2026-05",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2026-05",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 51
+    },
+    {
+      "month": "2026-05",
+      "dict": "wil",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "month": "2026-05",
+      "dict": "wil",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "month": "2026-05",
+      "dict": "wil",
+      "component": "sense",
+      "count": 14
+    }
+  ],
+  "era": [
+    {
+      "era": "2014-2018",
+      "dict": "ap",
+      "component": "headword",
+      "count": 47
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ap",
+      "component": "sense",
+      "count": 3
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ap",
+      "component": "unattributed",
+      "count": 445
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 44
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ap90",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 27
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 328
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ben",
+      "component": "headword",
+      "count": 123
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ben",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ben",
+      "component": "unattributed",
+      "count": 338
+    },
+    {
+      "era": "2014-2018",
+      "dict": "bur",
+      "component": "headword",
+      "count": 243
+    },
+    {
+      "era": "2014-2018",
+      "dict": "bur",
+      "component": "sense",
+      "count": 36
+    },
+    {
+      "era": "2014-2018",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 408
+    },
+    {
+      "era": "2014-2018",
+      "dict": "cae",
+      "component": "headword",
+      "count": 644
+    },
+    {
+      "era": "2014-2018",
+      "dict": "cae",
+      "component": "sense",
+      "count": 8
+    },
+    {
+      "era": "2014-2018",
+      "dict": "cae",
+      "component": "unattributed",
+      "count": 646
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 1261
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ccs",
+      "component": "unattributed",
+      "count": 965
+    },
+    {
+      "era": "2014-2018",
+      "dict": "md",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "era": "2014-2018",
+      "dict": "md",
+      "component": "sense",
+      "count": 2
+    },
+    {
+      "era": "2014-2018",
+      "dict": "md",
+      "component": "unattributed",
+      "count": 7
+    },
+    {
+      "era": "2014-2018",
+      "dict": "mw",
+      "component": "citation",
+      "count": 13
+    },
+    {
+      "era": "2014-2018",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 36
+    },
+    {
+      "era": "2014-2018",
+      "dict": "mw",
+      "component": "headword",
+      "count": 295
+    },
+    {
+      "era": "2014-2018",
+      "dict": "mw",
+      "component": "meta",
+      "count": 24
+    },
+    {
+      "era": "2014-2018",
+      "dict": "mw",
+      "component": "sense",
+      "count": 220
+    },
+    {
+      "era": "2014-2018",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 746
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pd",
+      "component": "unattributed",
+      "count": 1375
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pw",
+      "component": "citation",
+      "count": 88
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pw",
+      "component": "grammar",
+      "count": 6
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pw",
+      "component": "headword",
+      "count": 391
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pw",
+      "component": "sense",
+      "count": 120
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 11154
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 2
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 55
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 9
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 80
+    },
+    {
+      "era": "2014-2018",
+      "dict": "wil",
+      "component": "headword",
+      "count": 582
+    },
+    {
+      "era": "2014-2018",
+      "dict": "wil",
+      "component": "meta",
+      "count": 1
+    },
+    {
+      "era": "2014-2018",
+      "dict": "wil",
+      "component": "sense",
+      "count": 12
+    },
+    {
+      "era": "2014-2018",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 536
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap",
+      "component": "citation",
+      "count": 116
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap",
+      "component": "grammar",
+      "count": 59
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap",
+      "component": "headword",
+      "count": 207
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap",
+      "component": "markup",
+      "count": 380
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap",
+      "component": "meta",
+      "count": 40
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap",
+      "component": "sense",
+      "count": 1110
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap90",
+      "component": "citation",
+      "count": 17
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap90",
+      "component": "headword",
+      "count": 67
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap90",
+      "component": "markup",
+      "count": 241
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap90",
+      "component": "meta",
+      "count": 5
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap90",
+      "component": "sense",
+      "count": 1804
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap90",
+      "component": "unattributed",
+      "count": 5
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ben",
+      "component": "headword",
+      "count": 5
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ben",
+      "component": "markup",
+      "count": 32
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ben",
+      "component": "meta",
+      "count": 128
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ben",
+      "component": "sense",
+      "count": 592
+    },
+    {
+      "era": "2019-2026",
+      "dict": "bur",
+      "component": "headword",
+      "count": 4
+    },
+    {
+      "era": "2019-2026",
+      "dict": "bur",
+      "component": "markup",
+      "count": 54
+    },
+    {
+      "era": "2019-2026",
+      "dict": "bur",
+      "component": "sense",
+      "count": 1060
+    },
+    {
+      "era": "2019-2026",
+      "dict": "bur",
+      "component": "unattributed",
+      "count": 2
+    },
+    {
+      "era": "2019-2026",
+      "dict": "cae",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "era": "2019-2026",
+      "dict": "cae",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "era": "2019-2026",
+      "dict": "cae",
+      "component": "sense",
+      "count": 394
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ccs",
+      "component": "headword",
+      "count": 9
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ccs",
+      "component": "sense",
+      "count": 54
+    },
+    {
+      "era": "2019-2026",
+      "dict": "md",
+      "component": "markup",
+      "count": 2
+    },
+    {
+      "era": "2019-2026",
+      "dict": "md",
+      "component": "meta",
+      "count": 72
+    },
+    {
+      "era": "2019-2026",
+      "dict": "md",
+      "component": "sense",
+      "count": 1038
+    },
+    {
+      "era": "2019-2026",
+      "dict": "mw",
+      "component": "citation",
+      "count": 378
+    },
+    {
+      "era": "2019-2026",
+      "dict": "mw",
+      "component": "grammar",
+      "count": 188
+    },
+    {
+      "era": "2019-2026",
+      "dict": "mw",
+      "component": "headword",
+      "count": 275
+    },
+    {
+      "era": "2019-2026",
+      "dict": "mw",
+      "component": "markup",
+      "count": 3006
+    },
+    {
+      "era": "2019-2026",
+      "dict": "mw",
+      "component": "meta",
+      "count": 235
+    },
+    {
+      "era": "2019-2026",
+      "dict": "mw",
+      "component": "sense",
+      "count": 4187
+    },
+    {
+      "era": "2019-2026",
+      "dict": "mw",
+      "component": "unattributed",
+      "count": 35
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pw",
+      "component": "citation",
+      "count": 463
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pw",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pw",
+      "component": "headword",
+      "count": 18
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pw",
+      "component": "markup",
+      "count": 82
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pw",
+      "component": "meta",
+      "count": 2
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pw",
+      "component": "sense",
+      "count": 1325
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pw",
+      "component": "unattributed",
+      "count": 11
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pwg",
+      "component": "citation",
+      "count": 2140
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pwg",
+      "component": "headword",
+      "count": 8
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pwg",
+      "component": "markup",
+      "count": 789
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pwg",
+      "component": "sense",
+      "count": 685
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pwg",
+      "component": "unattributed",
+      "count": 3
+    },
+    {
+      "era": "2019-2026",
+      "dict": "wil",
+      "component": "grammar",
+      "count": 2
+    },
+    {
+      "era": "2019-2026",
+      "dict": "wil",
+      "component": "headword",
+      "count": 3
+    },
+    {
+      "era": "2019-2026",
+      "dict": "wil",
+      "component": "markup",
+      "count": 1
+    },
+    {
+      "era": "2019-2026",
+      "dict": "wil",
+      "component": "sense",
+      "count": 68
+    },
+    {
+      "era": "2019-2026",
+      "dict": "wil",
+      "component": "unattributed",
+      "count": 2
+    }
+  ],
+  "eraOverview": [
+    {
+      "era": "2014-2018",
+      "dict": "pw",
+      "count": 11759
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ccs",
+      "count": 2226
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pd",
+      "count": 1375
+    },
+    {
+      "era": "2014-2018",
+      "dict": "mw",
+      "count": 1334
+    },
+    {
+      "era": "2014-2018",
+      "dict": "cae",
+      "count": 1298
+    },
+    {
+      "era": "2014-2018",
+      "dict": "wil",
+      "count": 1131
+    },
+    {
+      "era": "2014-2018",
+      "dict": "bur",
+      "count": 687
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ap",
+      "count": 495
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ben",
+      "count": 463
+    },
+    {
+      "era": "2014-2018",
+      "dict": "ap90",
+      "count": 400
+    },
+    {
+      "era": "2014-2018",
+      "dict": "pwg",
+      "count": 146
+    },
+    {
+      "era": "2014-2018",
+      "dict": "md",
+      "count": 12
+    },
+    {
+      "era": "2019-2026",
+      "dict": "mw",
+      "count": 8304
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pwg",
+      "count": 3625
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap90",
+      "count": 2139
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ap",
+      "count": 1912
+    },
+    {
+      "era": "2019-2026",
+      "dict": "pw",
+      "count": 1903
+    },
+    {
+      "era": "2019-2026",
+      "dict": "bur",
+      "count": 1120
+    },
+    {
+      "era": "2019-2026",
+      "dict": "md",
+      "count": 1112
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ben",
+      "count": 757
+    },
+    {
+      "era": "2019-2026",
+      "dict": "cae",
+      "count": 398
+    },
+    {
+      "era": "2019-2026",
+      "dict": "wil",
+      "count": 76
+    },
+    {
+      "era": "2019-2026",
+      "dict": "ccs",
+      "count": 63
+    }
+  ],
+  "limitations": [
+    "OBS-T events are a different grain from csl-corrections change-file loci (normalized IAST edits vs full-line markup diffs); counts are not 1:1 with correction_loci.tsv.",
+    "error_component=unattributed is the plurality class — component shares understate true typology resolution.",
+    "Corrector identity is deliberately omitted (personal data); /publish-safety-check gate for any corrector-level view.",
+    "Strip shows top dicts only; rarer dictionaries are in dictRanking but not monthly cells."
+  ],
+  "boundary": [
+    "Data owner: csl-observatory (OBS-T / correction_events_release.csv). Rendering owner: csl-atlas. Never recompute the 9-label component typology here."
+  ],
+  "generatedAt": "2026-07-24T07:56:28.880Z"
+}

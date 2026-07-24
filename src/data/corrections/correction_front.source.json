@@ -1,0 +1,13 @@
+{
+  "dataset": "correction_front",
+  "commit": "9ced11a6a122c9f2eda3f038ffc084c2c96428cd",
+  "generatedAt": "2026-07-24T07:56:28.880Z",
+  "generatedBy": "npm run build-correction-lane-overlays",
+  "sourceFiles": [
+    "csl-observatory/observatory/site/src/data/correction_events_release.csv",
+    "scripts/build-correction-lane-overlays.mjs"
+  ],
+  "schemaVersion": "1.0.0",
+  "feedRepo": "https://github.com/sanskrit-lexicon/csl-observatory",
+  "feedCommit": "3a518e57b40e88778ae6e071c72bdb8b6b568283"
+}
