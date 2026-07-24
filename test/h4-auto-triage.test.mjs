@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { applyAutoTriage } from "../scripts/build-h4-review-packet.mjs";
+import { applyAutoTriage, applyPreservedReviews, preservedReviewsMap } from "../scripts/build-h4-review-packet.mjs";
 
 const skdVocab = ["true-low", "variant-headword", "prose-present", "parser-gap"];
 function row(over) {
@@ -64,4 +64,30 @@ test("applyAutoTriage does not resolve when only the strict key already matches"
   const rows = [row({ lemma: "DanyaH" })];
   applyAutoTriage(rows, () => [{ k1: "DanyaH" }], () => true);
   assert.equal(rows[0].autoTriage.resolved, false);
+});
+
+test("applyPreservedReviews rehydrates agent/human overlays by reviewId", () => {
+  const rows = [row({
+    reviewId: "h4-x",
+    reviewStatus: "needs-review",
+    reviewedValue: null,
+    reviewer: "",
+    reviewedAt: "",
+    note: ""
+  })];
+  const packet = {
+    sampleRows: [{
+      reviewId: "h4-x",
+      reviewStatus: "reviewed-ok",
+      reviewedValue: "true-low",
+      reviewer: "grok-4.5",
+      reviewedAt: "2026-07-24",
+      note: "evidence"
+    }]
+  };
+  applyPreservedReviews(rows, preservedReviewsMap(packet));
+  assert.equal(rows[0].reviewStatus, "reviewed-ok");
+  assert.equal(rows[0].reviewedValue, "true-low");
+  assert.equal(rows[0].reviewer, "grok-4.5");
+  assert.equal(rows[0].note, "evidence");
 });

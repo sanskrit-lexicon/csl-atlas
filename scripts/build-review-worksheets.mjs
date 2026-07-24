@@ -1,15 +1,15 @@
-// Build ordered, human-facing review worksheets for the rows the auto-triage
-// left for a person — the H4 semantic-field packet and the Xref source-check
-// packet. Pure: reads the two committed review packets (which already carry the
-// source pointers, evidence, and decision vocabularies) and writes two markdown
-// worksheets. No csl-orig, no model. Auto-resolved rows are excluded; what's
-// left is ordered evidence-first so the clearest decisions come first.
+// Build ordered, human-facing review worksheets for the H4 semantic-field
+// packet and the Xref source-check packet. Pure: reads the committed review
+// packets and writes markdown worksheets. No csl-orig. Auto-resolved rows are
+// excluded. H4 human vote stage is closed (H1621) — when agent-reviewed, the
+// worksheet is a read-only decision ledger with IAST lemmas (keys stay SLP1).
 //
 // Usage: npm run build-review-worksheets
 
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { from_slp1 } from "../src/lib/sanskrit-util.js";
 
 const ROOT = process.cwd();
 const H4_PACKET = path.join(ROOT, "data", "lexico", "h4_semantic_field_review_packet.json");
@@ -19,6 +19,7 @@ const XREF_OUT = path.join(ROOT, "docs", "XREF_REVIEW_WORKSHEET.md");
 
 const readJson = file => JSON.parse(fs.readFileSync(file, "utf8"));
 const pct = v => (v == null ? "—" : `${(v * 100).toFixed(1)}%`);
+const iast = s => from_slp1(String(s ?? ""));
 const compact = (s, n = 160) => {
   const t = (s ?? "").replace(/\s+/g, " ").trim();
   return t.length > n ? `${t.slice(0, n)}…` : t;
@@ -29,12 +30,21 @@ const H4_TYPE_ORDER = [
   "specialized-baseline", "index-reverse-control"
 ];
 
+function humanizeH4Question(row) {
+  let q = String(row.reviewQuestion ?? "");
+  for (const token of [row.lemma, row.field?.label, row.field?.varga, row.field?.kanda].filter(Boolean).sort((a, b) => b.length - a.length)) {
+    q = q.split(token).join(iast(token));
+  }
+  return q;
+}
+
 export function buildH4Worksheet(packet) {
-  const rows = packet.sampleRows.filter(row => !row.autoTriage?.resolved);
+  const open = packet.sampleRows.filter(row => row.reviewStatus === "needs-review");
+  const agent = packet.sampleRows.filter(row => row.reviewStatus === "reviewed-ok");
+  // Prefer open human rows; if none (H1621 agent stage done), list agent ledger.
+  const rows = open.length ? open : agent;
+  const agentMode = open.length === 0 && agent.length > 0;
   const hasLink = row => row.sourcePointers.some(pointer => pointer.href);
-  // Evidence signal: a missing SKD entry is a stronger false-low the LOWER the
-  // field coverage; an ap-ap90 delta is more salient the bigger the gap; a
-  // covered row is more salient the higher the coverage.
   const signal = row => {
     const cov = row.coverage?.coveragePct ?? 0;
     if (row.sampleType === "ap-ap90-delta") return Math.abs(row.coverageDeltaPct ?? 0);
@@ -52,7 +62,11 @@ export function buildH4Worksheet(packet) {
   lines.push("");
   lines.push(`Date: ${packet.generatedAt.slice(0, 10)} · Source: \`data/lexico/h4_semantic_field_review_packet.json\``);
   lines.push("");
-  lines.push(`**${rows.length} rows need human review** (${packet.counts.autoResolved} were auto-resolved and are excluded — see their \`autoTriage\` blocks in the packet). Grouped by sample type; within each, rows with a direct source link first, then by signal strength. Pick one decision per row from its options.`);
+  if (agentMode) {
+    lines.push(`**${rows.length} rows agent-adjudicated (H1621)** — human vote not required. Lemmas/fields shown in **IAST** (machine keys remain SLP1). ${packet.counts.autoResolved} auto-resolved rows stay excluded. Decision ledger only.`);
+  } else {
+    lines.push(`**${rows.length} rows need human review** (${packet.counts.autoResolved} were auto-resolved and are excluded — see their \`autoTriage\` blocks in the packet). Grouped by sample type; within each, rows with a direct source link first, then by signal strength. Pick one decision per row from its options. Display uses IAST.`);
+  }
   lines.push("");
   let lastType = null, n = 0;
   for (const row of rows) {
@@ -68,9 +82,14 @@ export function buildH4Worksheet(packet) {
       ? `field coverage ${pct(row.coverage.coveragePct)} (${row.coverage.coveredLemmas}/${row.coverage.amarLemmas})`
       : "—";
     const delta = row.coverageDeltaPct != null ? `, Δ ${(row.coverageDeltaPct * 100).toFixed(1)}%` : "";
-    lines.push(`**${n}. \`${row.lemma}\`** — ${row.field.label} · ${row.dictionary.label} (${row.dictionary.familyLabel})`);
-    lines.push(`- Decide: ${row.expectedDecisionLabels.map(label => `\`${label}\``).join(" · ")}`);
-    lines.push(`- Q: ${row.reviewQuestion}`);
+    lines.push(`**${n}. \`${iast(row.lemma)}\`** (SLP1 \`${row.lemma}\`) — ${iast(row.field.label)} · ${row.dictionary.label} (${row.dictionary.familyLabel})`);
+    if (agentMode) {
+      lines.push(`- Decision: \`${row.reviewedValue}\` · reviewer: ${row.reviewer} · ${row.reviewedAt}`);
+      if (row.note) lines.push(`- Note: ${row.note}`);
+    } else {
+      lines.push(`- Decide: ${row.expectedDecisionLabels.map(label => `\`${label}\``).join(" · ")}`);
+    }
+    lines.push(`- Q: ${humanizeH4Question(row)}`);
     lines.push(`- Evidence: ${cov}${delta}${link ? ` · source: [${link.dictionary} L${link.L}](${link.href})` : " · (absence row — no direct headword link)"}`);
     lines.push("");
   }
@@ -116,7 +135,9 @@ function main() {
   const xref = readJson(XREF_PACKET);
   fs.writeFileSync(H4_OUT, buildH4Worksheet(h4));
   fs.writeFileSync(XREF_OUT, buildXrefWorksheet(xref));
-  console.log(`Wrote ${path.relative(ROOT, H4_OUT)} (${h4.counts.needsHumanReview} rows) and ${path.relative(ROOT, XREF_OUT)} (${xref.counts.needsHumanReview} rows).`);
+  const h4Open = h4.counts.needsHumanReview ?? 0;
+  const h4Agent = h4.counts.agentReviewed ?? 0;
+  console.log(`Wrote ${path.relative(ROOT, H4_OUT)} (open=${h4Open}, agent=${h4Agent}) and ${path.relative(ROOT, XREF_OUT)} (${xref.counts.needsHumanReview} rows).`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) main();
