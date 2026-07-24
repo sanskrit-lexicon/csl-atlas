@@ -385,6 +385,40 @@ export function preservedAutoTriageMap(packet) {
   return preserved;
 }
 
+// Agent/human decisions are an overlay on machine rows (same contract as
+// scripts/lib/review-report.mjs). Preserve across rebuilds by reviewId so
+// adjudicated H4 rows survive `npm run build-h4-review-packet`.
+export const H4_DECIDED_STATUSES = new Set(["reviewed-ok", "blocked", "deferred"]);
+
+export function preservedReviewsMap(packet) {
+  const preserved = new Map();
+  for (const row of packet.sampleRows ?? []) {
+    if (H4_DECIDED_STATUSES.has(row.reviewStatus) || (row.reviewer && row.reviewer !== "") || row.reviewedValue != null) {
+      preserved.set(row.reviewId, {
+        reviewStatus: row.reviewStatus,
+        reviewedValue: row.reviewedValue ?? null,
+        reviewer: row.reviewer ?? "",
+        reviewedAt: row.reviewedAt ?? "",
+        note: row.note ?? ""
+      });
+    }
+  }
+  return preserved;
+}
+
+export function applyPreservedReviews(rows, preserved = new Map()) {
+  for (const row of rows) {
+    const saved = preserved.get(row.reviewId);
+    if (!saved) continue;
+    row.reviewStatus = saved.reviewStatus;
+    row.reviewedValue = saved.reviewedValue;
+    row.reviewer = saved.reviewer;
+    row.reviewedAt = saved.reviewedAt;
+    row.note = saved.note;
+  }
+  return rows;
+}
+
 function loadPreservedSourcePointers(outputPath) {
   if (!fs.existsSync(outputPath)) return new Map();
   try {
@@ -393,6 +427,8 @@ function loadPreservedSourcePointers(outputPath) {
     return new Map();
   }
 }
+
+
 
 function collectNeededLemmas(candidates) {
   const needed = new Map();
@@ -559,18 +595,32 @@ function validatePayload(payload) {
     if (!row.sourcePointers?.length) errors.push(`${row.reviewId}: missing sourcePointers`);
     if (!row.reviewQuestion) errors.push(`${row.reviewId}: missing reviewQuestion`);
     const autoResolved = row.autoTriage?.resolved === true;
-    if (row.reviewStatus !== "needs-review" && row.reviewStatus !== "auto-resolved") {
-      errors.push(`${row.reviewId}: reviewStatus must be needs-review or auto-resolved`);
+    const decided = H4_DECIDED_STATUSES.has(row.reviewStatus);
+    const allowedStatus = ["needs-review", "auto-resolved", ...H4_DECIDED_STATUSES];
+    if (!allowedStatus.includes(row.reviewStatus)) {
+      errors.push(`${row.reviewId}: reviewStatus must be one of ${allowedStatus.join("|")}`);
     }
-    if (autoResolved !== (row.reviewStatus === "auto-resolved")) {
+    // Auto-triage and agent/human overlay are independent: a row may be
+    // auto-resolved (machine) then later reviewed-ok (agent), or stay
+    // needs-review until reviewed. Only the undecided auto-resolved case
+    // requires status===auto-resolved ↔ autoTriage.resolved.
+    if (!decided && autoResolved !== (row.reviewStatus === "auto-resolved")) {
       errors.push(`${row.reviewId}: reviewStatus/autoTriage.resolved disagree`);
     }
     if (autoResolved && !(row.expectedDecisionLabels ?? []).includes(row.autoTriage.proposedDecision)) {
       errors.push(`${row.reviewId}: auto-resolved decision ${row.autoTriage.proposedDecision} not in vocabulary`);
     }
-    if (row.reviewedValue !== null) errors.push(`${row.reviewId}: reviewedValue must be null`);
-    if (row.reviewer !== "" || row.reviewedAt !== "" || row.note !== "") {
-      errors.push(`${row.reviewId}: human fields must remain empty`);
+    if (row.reviewStatus === "reviewed-ok") {
+      if (!(row.expectedDecisionLabels ?? []).includes(row.reviewedValue)) {
+        errors.push(`${row.reviewId}: reviewedValue ${row.reviewedValue} not in vocabulary`);
+      }
+      if (!row.reviewer) errors.push(`${row.reviewId}: reviewed-ok requires reviewer`);
+      if (!row.reviewedAt) errors.push(`${row.reviewId}: reviewed-ok requires reviewedAt`);
+    } else if (!decided) {
+      if (row.reviewedValue !== null) errors.push(`${row.reviewId}: reviewedValue must be null until decided`);
+      if (row.reviewer !== "" || row.reviewedAt !== "" || row.note !== "") {
+        errors.push(`${row.reviewId}: review fields must remain empty until decided`);
+      }
     }
   }
   if (errors.length) {
@@ -660,19 +710,25 @@ export function buildPayload(
   semanticFieldRows,
   generatedAt = new Date().toISOString(),
   preservedSourcePointers = new Map(),
-  preservedAutoTriage = new Map()
+  preservedAutoTriage = new Map(),
+  preservedReviews = new Map()
 ) {
   const semanticRows = semanticRowIndex(semanticFieldRows);
-  const sampleRows = applyAutoTriage(
-    buildSampleRows(semanticData, familyProfiles, semanticRows, preservedSourcePointers),
-    iterateDict, dictExists, preservedAutoTriage
+  const sampleRows = applyPreservedReviews(
+    applyAutoTriage(
+      buildSampleRows(semanticData, familyProfiles, semanticRows, preservedSourcePointers),
+      iterateDict, dictExists, preservedAutoTriage
+    ),
+    preservedReviews
   );
+  const agentReviewed = sampleRows.filter(row => row.reviewStatus === "reviewed-ok").length;
+  const stillNeedsReview = sampleRows.filter(row => row.reviewStatus === "needs-review").length;
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     status: "h4-semantic-field-review-packet",
     claim: "H4-FIELD-FAMILY: AMAR field profiles differ by dictionary family, not only by gross coverage.",
     evidenceLabel: "machine-review-sample",
-    reviewStatus: "needs-human-review",
+    reviewStatus: stillNeedsReview === 0 ? "agent-reviewed" : "needs-human-review",
     ownerRepo: "csl-atlas",
     generatedAt,
     generatedBy: GENERATED_BY,
@@ -684,8 +740,10 @@ export function buildPayload(
     counts: {
       sampleRows: sampleRows.length,
       autoResolved: sampleRows.filter(row => row.autoTriage?.resolved).length,
-      needsHumanReview: sampleRows.filter(row => !row.autoTriage?.resolved).length,
+      needsHumanReview: stillNeedsReview,
+      agentReviewed,
       byAutoDecision: countBy(sampleRows.filter(row => row.autoTriage?.resolved), row => row.autoTriage.proposedDecision),
+      byReviewedValue: countBy(sampleRows.filter(row => row.reviewedValue), row => row.reviewedValue),
       bySampleType: countBy(sampleRows, row => row.sampleType),
       byProposedLabel: countBy(sampleRows, row => row.proposedLabel),
       byDictionary: countBy(sampleRows, row => row.dictionary.code),
@@ -703,14 +761,15 @@ export function buildPayload(
       "Select VCP covered examples from indigenous-prose high fields for high-coverage review.",
       "Select AP covered examples that AP90 marks missing to isolate edition/parser/normalization deltas.",
       "Round-robin ARMH, FRI, and BHS examples from strong fields plus weak-field controls for specialized baselines.",
-      "Round-robin AE, MWE, and index-family non-zero examples as lookup-direction and index controls."
+      "Round-robin AE, MWE, and index-family non-zero examples as lookup-direction and index controls.",
+      "Agent adjudication (H1621) writes reviewedValue/reviewer/reviewedAt; rebuild preserves those overlays."
     ],
     sampleRows,
     limitations: [
-      "Rows are machine-selected review prompts, not human decisions.",
+      "Rows are machine-selected review prompts; agent/human decisions overlay them when present.",
       "Strict AMAR headword coverage is not sense coverage, citation coverage, prose coverage, corpus frequency, or passage attestation.",
       "Missing rows may still be present under variant headwords, prose, or citation wording.",
-      "Covered rows still need source review before paper-level topical claims."
+      "Covered rows still need source review before paper-level topical claims unless agent-reviewed."
     ],
     boundaryNote: "Atlas H4 artifacts only; no corpus/DCS evidence, public page update, parser promotion, source-anchor generation, R2/H5 row change, backend/runtime LLM work, or standards work is included.",
     warnings: []
@@ -794,9 +853,14 @@ export function buildMarkdown(packet) {
     }
     lines.push("");
   }
-  lines.push("## Human Fields");
+  lines.push("## Review Fields");
   lines.push("");
-  lines.push("Every row keeps `reviewedValue = null`, `reviewer = \"\"`, `reviewedAt = \"\"`, and `note = \"\"`. Review decisions are outside this generated packet.");
+  const decided = packet.sampleRows.filter(row => row.reviewedValue != null);
+  if (decided.length === 0) {
+    lines.push("Every row keeps `reviewedValue = null`, `reviewer = \"\"`, `reviewedAt = \"\"`, and `note = \"\"` until agent/human adjudication writes them. Rebuild preserves decided overlays by `reviewId`.");
+  } else {
+    lines.push(`${decided.length} rows carry agent/human decisions (\`reviewed-ok\` / blocked). Rebuild preserves overlays by \`reviewId\`. ${packet.counts.needsHumanReview} still \`needs-review\`.`);
+  }
   lines.push("");
   lines.push("## Limitations");
   lines.push("");
@@ -812,15 +876,25 @@ function main() {
   const familyProfiles = JSON.parse(fs.readFileSync(FAMILY_PROFILES_PATH, "utf8"));
   const semanticRows = parseCsv(fs.readFileSync(SEMANTIC_ROWS_PATH, "utf8"));
   const previousPayload = readJsonIfExists(JSON_OUT, fs);
-  const preserved = loadPreservedSourcePointers(JSON_OUT);
-  const payload = buildPayload(semanticData, familyProfiles, semanticRows, new Date().toISOString(), preserved);
+  const preserved = previousPayload ? preservedSourcePointerMap(previousPayload) : loadPreservedSourcePointers(JSON_OUT);
+  const preservedAuto = previousPayload ? preservedAutoTriageMap(previousPayload) : new Map();
+  const preservedReviews = previousPayload ? preservedReviewsMap(previousPayload) : new Map();
+  const payload = buildPayload(
+    semanticData,
+    familyProfiles,
+    semanticRows,
+    new Date().toISOString(),
+    preserved,
+    preservedAuto,
+    preservedReviews
+  );
   payload.generatedAt = generatedAtForPayload(previousPayload, payload);
   const markdown = buildMarkdown(payload);
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
   fs.mkdirSync(path.dirname(MARKDOWN_OUT), { recursive: true });
   fs.writeFileSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`);
   fs.writeFileSync(MARKDOWN_OUT, markdown);
-  console.log(`Wrote ${path.relative(process.cwd(), JSON_OUT)} (${payload.counts.sampleRows} H4 review rows).`);
+  console.log(`Wrote ${path.relative(process.cwd(), JSON_OUT)} (${payload.counts.sampleRows} H4 review rows; ${payload.counts.agentReviewed ?? 0} agent-reviewed; ${payload.counts.needsHumanReview} still needs-review).`);
   console.log(`Wrote ${path.relative(process.cwd(), MARKDOWN_OUT)}.`);
 }
 

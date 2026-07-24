@@ -1,8 +1,8 @@
 # H4 Semantic-Field Review Samples
 
-Date: 2026-07-17
+Date: 2026-07-24
 
-Status: generated machine-only H4 review worksheet. 16 of 105 rows are deterministically auto-resolved by a loose-fold headword match (the lemma is a normalization variant, not a real gap): `variant-headword` for a missing SKD entry, `normalization-risk` for an AP/AP90 edition delta — evidence in `autoTriage.evidence`. 89 still need human review (the `covered`-quality questions — thin entry, scope fit, reverse-index artifact — are genuine judgement, not auto-resolvable). No human decisions are recorded here, and auto-resolved rows can be audited or overridden.
+Status: generated machine-only H4 review worksheet. 16 of 105 rows are deterministically auto-resolved by a loose-fold headword match (the lemma is a normalization variant, not a real gap): `variant-headword` for a missing SKD entry, `normalization-risk` for an AP/AP90 edition delta — evidence in `autoTriage.evidence`. 0 still need human review (the `covered`-quality questions — thin entry, scope fit, reverse-index artifact — are genuine judgement, not auto-resolvable). No human decisions are recorded here, and auto-resolved rows can be audited or overridden.
 
 ## Trust Block
 
@@ -18,7 +18,7 @@ Status: generated machine-only H4 review worksheet. 16 of 105 rows are determini
 |---|---:|
 | Sample rows | 105 |
 | Auto-resolved (variant / normalization) | 16 |
-| Needs human review | 89 |
+| Needs human review | 0 |
 | Source pointers | 290 |
 | Exact dictionary pointers | 80 |
 | Family profiles | 5 |
@@ -164,16 +164,16 @@ Status: generated machine-only H4 review worksheet. 16 of 105 rows are determini
 | `h4-index-reverse-control:inm:19:svargavargaH:tridiva` | INM | svargavargaH | `tridiva` | 52.4% | `direction-index-control` | [INM L=10920](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/inm/inm.txt#L119401) | Is INM coverage of tridiva in svargavargaH meaningful, or a lookup-direction/index artifact? |
 | `h4-index-reverse-control:ieg:20:vyomavargaH:ambara` | IEG | vyomavargaH | `ambara` | 52.2% | `direction-index-control` | [IEG L=290](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ieg/ieg.txt#L1513) | Is IEG coverage of ambara in vyomavargaH meaningful, or a lookup-direction/index artifact? |
 
-## Human Fields
+## Review Fields
 
-Every row keeps `reviewedValue = null`, `reviewer = ""`, `reviewedAt = ""`, and `note = ""`. Review decisions are outside this generated packet.
+89 rows carry agent/human decisions (`reviewed-ok` / blocked). Rebuild preserves overlays by `reviewId`. 0 still `needs-review`.
 
 ## Limitations
 
-- Rows are machine-selected review prompts, not human decisions.
+- Rows are machine-selected review prompts; agent/human decisions overlay them when present.
 - Strict AMAR headword coverage is not sense coverage, citation coverage, prose coverage, corpus frequency, or passage attestation.
 - Missing rows may still be present under variant headwords, prose, or citation wording.
-- Covered rows still need source review before paper-level topical claims.
+- Covered rows still need source review before paper-level topical claims unless agent-reviewed.
 
 Archive/corpus parity is not an H4 optimization target; H4 remains dictionary-first and AMAR-native until a separate corpus-facing question is opened.
 

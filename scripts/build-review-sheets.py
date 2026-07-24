@@ -30,13 +30,14 @@ from pathlib import Path
 
 from csl_pyutil import __version__ as CSL_PYUTIL_VERSION
 from csl_pyutil import render_review_sheet
+from sanskrit_util import from_slp1
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "review"
-DATE = "19-07-2026"  # explicit for reproducible artifacts
+DATE = "24-07-2026"  # H1621 IAST display + agent-adjudication note
 #: Minimum, NOT exact: the V1–V8 standard shipped in csl-pyutil 0.3.0, and the
 #: light-mode contrast fix (color-scheme:dark + hardened note textarea) in 0.3.1.
 #: A `>=` check expresses "require at least the standard" so future emitter patch
@@ -121,24 +122,61 @@ def emit(stem, title, subtitle, items, filters):
     print(f"wrote {target.relative_to(ROOT)} ({len(items)} items)")
 
 
+def _iast(token):
+    """Human-facing IAST from SLP1 machine keys (H1621). Empty/None → ''."""
+    if not token:
+        return ""
+    return from_slp1(str(token))
+
+
+def _humanize_h4_question(row):
+    """Replace SLP1 lemma/field tokens in the machine question with IAST."""
+    q = str(row.get("reviewQuestion") or "")
+    tokens = [
+        row.get("lemma"),
+        (row.get("field") or {}).get("label"),
+        (row.get("field") or {}).get("varga"),
+        (row.get("field") or {}).get("kanda"),
+        (row.get("field") or {}).get("upavarga"),
+    ]
+    for token in sorted({t for t in tokens if t}, key=len, reverse=True):
+        q = q.replace(str(token), _iast(token))
+    return q
+
+
 def h4_items():
+    """H4 sheet is no longer a human vote gate (H1621): show open rows if any,
+    else the agent-adjudicated set with IAST titles. Machine keys stay SLP1."""
     packet = read_json("data/lexico/h4_semantic_field_review_packet.json")
+    open_rows = [r for r in packet["sampleRows"] if r["reviewStatus"] == "needs-review"]
+    rows = open_rows or [r for r in packet["sampleRows"] if r["reviewStatus"] == "reviewed-ok"]
     items = []
-    for row in packet["sampleRows"]:
-        if row["reviewStatus"] != "needs-review":
-            continue
+    for row in rows:
         options = ", ".join(row["expectedDecisionLabels"])
+        lemma_iast = _iast(row["lemma"])
+        field_iast = _iast((row.get("field") or {}).get("label") or "")
+        agent = row.get("reviewedValue")
+        agent_line = (
+            f"<p><strong>Agent decision:</strong> <code>{html.escape(str(agent))}</code>"
+            f" ({html.escape(str(row.get('reviewer') or ''))}).</p>"
+            if agent else ""
+        )
         question = (
             f"<p><strong>Предлагаемая метка:</strong> <code>{html.escape(row['proposedLabel'])}</code>.</p>"
-            f"<p>{html.escape(row['reviewQuestion'])}</p>"
+            f"<p>{html.escape(_humanize_h4_question(row))}</p>"
+            f"{agent_line}"
             f"<p>Допустимые итоговые метки: <code>{html.escape(options)}</code>. "
-            "Подтвердите предложенную оценку либо отклоните и укажите итоговую метку в примечании.</p>"
+            "H1621: human vote not required; agent adjudication is the stage of record.</p>"
         )
-        items.append({"id": row["reviewId"], "filt": row["sampleType"],
-                      "title": f"{row['sampleLabel']}: {row['lemma']}",
-                      "badges": [row["dictionary"]["label"], row["field"]["label"]],
-                      "question": question, "panels": source_panels(row.get("sourcePointers", [])),
-                      "note_placeholder": "Если отклоняете: corrected-label: краткое основание."})
+        items.append({
+            "id": row["reviewId"],
+            "filt": row["sampleType"],
+            "title": f"{row['sampleLabel']}: {lemma_iast} [SLP1 {row['lemma']}]",
+            "badges": [row["dictionary"]["label"], field_iast or row["field"]["label"]],
+            "question": question,
+            "panels": source_panels(row.get("sourcePointers", [])),
+            "note_placeholder": "Agent stage closed; optional override note only.",
+        })
     return items
 
 
@@ -200,7 +238,13 @@ def skd_items():
 
 
 BUILDERS = {
-    "h4": ("csl-atlas-h4-semantic-field_89rows", "H4: семантические поля — 89 строк", "Пакет H4; авторазрешённые строки исключены.", h4_items, [("skd-false-low", "SKD"), ("vcp-high-coverage", "VCP"), ("ap-ap90-delta", "AP/AP90"), ("specialized-baseline", "специализированные"), ("index-reverse-control", "контроль")]),
+    "h4": (
+        "csl-atlas-h4-semantic-field_89rows",
+        "H4: семантические поля (IAST display; agent stage H1621)",
+        "Пакет H4; леммы/поля в IAST; ключи SLP1. Human vote not required after agent adjudication.",
+        h4_items,
+        [("skd-false-low", "SKD"), ("vcp-high-coverage", "VCP"), ("ap-ap90-delta", "AP/AP90"), ("specialized-baseline", "специализированные"), ("index-reverse-control", "контроль")],
+    ),
     "xref": ("csl-atlas-xref-shared-core_40edges", "Xref: общие MW/PWG рёбра — 40 строк", "Пакет xref; prefix-control уже разрешены автоматически.", xref_items, [("shared-core", "общие рёбра")]),
     "tradition": ("csl-atlas-tradition-tags_119texts", "Теги традиций — 119 текстов", "Неавтоматизированная проверка, разблокирующая A50.", tradition_items, []),
     # Keep the historical 100units stem: it is part of the download filename,

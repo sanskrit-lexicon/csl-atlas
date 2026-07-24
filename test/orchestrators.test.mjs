@@ -26,7 +26,7 @@ import { EXPECTED_EDGE_IDS as THREE_AXIS_EDGE_IDS, axisReadingForScores, buildMa
 import { EXPECTED_PREFIX_CONTROL_IDS as XREF_PREFIX_CONTROL_IDS, EXPECTED_SHARED_CORE_SAMPLE_IDS as XREF_SHARED_CORE_IDS, XREF_LABEL_VOCABULARY, buildMarkdown as buildXrefSourceCheckMarkdown, buildPayload as buildXrefSourceCheckPayload, preservedSourcePointerMap as preservedXrefSourcePointerMap } from "../scripts/build-xref-source-check-packet.mjs";
 import { loadPreserved } from "../scripts/lib/review-report.mjs";
 import { mean as h4Mean, rankFamilyFields, roundPct } from "../scripts/build-h4-family-profiles.mjs";
-import { EXPECTED_H4_SAMPLE_COUNTS, H4_MACHINE_LABEL_VOCABULARY, buildMarkdown as buildH4ReviewPacketMarkdown, buildPayload as buildH4ReviewPacketPayload, preservedSourcePointerMap as preservedH4SourcePointerMap, preservedAutoTriageMap as preservedH4AutoTriageMap } from "../scripts/build-h4-review-packet.mjs";
+import { EXPECTED_H4_SAMPLE_COUNTS, H4_MACHINE_LABEL_VOCABULARY, buildMarkdown as buildH4ReviewPacketMarkdown, buildPayload as buildH4ReviewPacketPayload, preservedSourcePointerMap as preservedH4SourcePointerMap, preservedAutoTriageMap as preservedH4AutoTriageMap, preservedReviewsMap as preservedH4ReviewsMap } from "../scripts/build-h4-review-packet.mjs";
 import { edgeReviewClass, structuralDistance } from "../scripts/build-h6-structural-review.mjs";
 import { classifyHubTarget, parseCsv as parseXrefCsv } from "../scripts/build-xref-hub-review.mjs";
 import { classify, fitBand, median, percent } from "../scripts/build-dictionary-coverage.mjs";
@@ -997,7 +997,8 @@ test("H4 review packet is generated from semantic field artifacts", () => {
       h4SemanticRows,
       h4ReviewPacket.generatedAt,
       preservedH4SourcePointerMap(h4ReviewPacket),
-      preservedH4AutoTriageMap(h4ReviewPacket)
+      preservedH4AutoTriageMap(h4ReviewPacket),
+      preservedH4ReviewsMap(h4ReviewPacket)
     )
   );
   assert.equal(normalizeLineEndings(h4ReviewPacketMd), buildH4ReviewPacketMarkdown(h4ReviewPacket));
@@ -1017,23 +1018,32 @@ test("H4 review packet keeps stable sample counts and order", () => {
   assert.equal(h4ReviewPacket.sampleRows[85].reviewId, "h4-index-reverse-control:ae:01:avyayavargaH:cit");
 });
 
-test("H4 review rows keep human fields empty and labels valid", () => {
+test("H4 review rows keep labels valid and preserve agent/human overlays", () => {
   const labels = new Set(H4_MACHINE_LABEL_VOCABULARY.map(row => row.label));
   const decisionLabels = new Set(Object.values(h4ReviewPacket.decisionVocabulary).flat());
+  const allowedStatus = new Set(["needs-review", "auto-resolved", "reviewed-ok", "blocked", "deferred"]);
   for (const row of h4ReviewPacket.sampleRows) {
-    // A row is either awaiting human review or deterministically auto-resolved
-    // (variant-headword via a loose-fold headword match); either way no human
-    // decision has been written, so the human fields stay empty.
-    assert.ok(["needs-review", "auto-resolved"].includes(row.reviewStatus), `${row.reviewId} unexpected status ${row.reviewStatus}`);
-    assert.equal(row.reviewStatus === "auto-resolved", row.autoTriage?.resolved === true, `${row.reviewId} status/autoTriage disagree`);
+    // Machine auto-triage and agent/human overlay are independent (H1621):
+    // auto-resolved rows keep empty review fields unless later adjudicated;
+    // reviewed-ok rows must carry a closed-vocab decision + reviewer + date.
+    assert.ok(allowedStatus.has(row.reviewStatus), `${row.reviewId} unexpected status ${row.reviewStatus}`);
+    if (row.reviewStatus === "auto-resolved") {
+      assert.equal(row.autoTriage?.resolved, true, `${row.reviewId} auto-resolved without autoTriage`);
+    }
     if (row.autoTriage?.resolved) {
       assert.ok(row.expectedDecisionLabels.includes(row.autoTriage.proposedDecision), `${row.reviewId} auto decision not in vocab`);
       assert.ok(row.autoTriage.evidence?.matchedHeadword, `${row.reviewId} auto-resolved without evidence`);
     }
-    assert.equal(row.reviewedValue, null, `${row.reviewId} reviewedValue should stay null`);
-    assert.equal(row.reviewer, "", `${row.reviewId} reviewer should stay empty`);
-    assert.equal(row.reviewedAt, "", `${row.reviewId} reviewedAt should stay empty`);
-    assert.equal(row.note, "", `${row.reviewId} note should stay empty`);
+    if (row.reviewStatus === "reviewed-ok") {
+      assert.ok(row.expectedDecisionLabels.includes(row.reviewedValue), `${row.reviewId} reviewedValue not in vocab`);
+      assert.ok(row.reviewer, `${row.reviewId} reviewed-ok without reviewer`);
+      assert.ok(row.reviewedAt, `${row.reviewId} reviewed-ok without reviewedAt`);
+    } else if (row.reviewStatus === "needs-review" || row.reviewStatus === "auto-resolved") {
+      assert.equal(row.reviewedValue, null, `${row.reviewId} reviewedValue should stay null until decided`);
+      assert.equal(row.reviewer, "", `${row.reviewId} reviewer should stay empty until decided`);
+      assert.equal(row.reviewedAt, "", `${row.reviewId} reviewedAt should stay empty until decided`);
+      assert.equal(row.note, "", `${row.reviewId} note should stay empty until decided`);
+    }
     assert.ok(row.reviewQuestion, `${row.reviewId} lacks review question`);
     assert.ok(row.sourcePointers.length >= 2, `${row.reviewId} lacks source pointers`);
     assert.ok(row.sourcePointers.some(pointer => pointer.role === "amar-field-lemma"), `${row.reviewId} lacks AMAR pointer`);

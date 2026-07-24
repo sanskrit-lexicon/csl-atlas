@@ -4,6 +4,22 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — H4 semantic-field agent adjudication (H1621)
+
+- Close the H4 human vote stage: all **89** `needs-review` rows in
+  [`data/lexico/h4_semantic_field_review_packet.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/h4_semantic_field_review_packet.json)
+  now carry agent `reviewed-ok` decisions (closed vocab per sample type) with
+  evidence notes from local csl-orig probes + packet pointers. Reviewer:
+  `grok-4.5` (H1621).
+- New runner [`scripts/adjudicate-h4-agent.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/adjudicate-h4-agent.mjs)
+  writes the packet overlay and gitignored
+  `review/csl-atlas-h4-semantic-field_89rows_decisions.json`.
+- `build-h4-review-packet.mjs` preserves agent/human review overlays on rebuild
+  (`preservedReviewsMap` / `applyPreservedReviews`); top-level status becomes
+  `agent-reviewed` when no open rows remain.
+- Human-facing H4 surfaces (review sheet + worksheet) show **IAST** for lemmas
+  and field labels; SLP1 remains the machine key. Human vote is no longer required.
+
 ## [0.5.0] - 2026-07-24
 
 ### Added — Correction-lane overlays (H1579 / DH memo remainders)

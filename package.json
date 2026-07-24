@@ -62,6 +62,7 @@
     "build-semantic-fields": "node scripts/build-semantic-fields.mjs",
     "build-h4-family-profiles": "node scripts/build-h4-family-profiles.mjs",
     "build-h4-review-packet": "node scripts/build-h4-review-packet.mjs",
+    "adjudicate-h4-agent": "node scripts/adjudicate-h4-agent.mjs",
     "build-xref-lineage": "node scripts/build-xref-lineage.mjs",
     "build-xref-hub-review": "node scripts/build-xref-hub-review.mjs",
     "build-xref-source-check-packet": "node scripts/build-xref-source-check-packet.mjs",
