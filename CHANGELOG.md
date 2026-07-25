@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-07-25
+
 ### Added — PH8 Heaps saturation + PH3 era signatures + V4 panels (H1576)
 
 - New builder [`scripts/build-heap-sat.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-heap-sat.mjs)
