@@ -12,6 +12,8 @@ const VALIDATORS = [
   "validate-correction-feed.mjs",
   "validate-heritage-witness.mjs",
   "validate-ghost-stock.mjs",
+  "validate-heap-sat.mjs",
+  "validate-period-signatures.mjs",
   "validate-four-axis-independence.mjs",
   "validate-review-reports.mjs"
 ];

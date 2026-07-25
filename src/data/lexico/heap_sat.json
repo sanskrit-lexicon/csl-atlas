@@ -1,0 +1,296 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedBy": "npm run build-heap-sat",
+  "sourceFiles": [
+    "SanskritLexicography/HeadwordLists/union/union_headwords.tsv",
+    "data/dictionary_inventory.csv",
+    "scripts/build-heap-sat.mjs"
+  ],
+  "method": "Normalize each union_headwords.tsv slp1 key with the canonical sanskrit-util slp1_norm and deduplicate; fold every lemma's dictionary list to a 15-bit mask so cumulative novelty under any dictionary ordering is exact mask arithmetic. Order dictionaries by dictionary_inventory.csv publication year (siglum tie-break; union PWK = inventory pw, 1879). Fit Heaps K*n^beta by OLS on log cumulative-distinct vs log cumulative-tokens over the 15 accumulation steps (n = cumulative union lemma listings scanned). Per-dictionary relative residual = (observed novelty - fitted increment) / fitted increment. Specialised-break statistic = mean relative residual of the inventory-family-Specialized dictionaries (INM, VEI, BHS). Null 1 (order-permutation): shuffle arrival order with a fixed-seed mulberry32, refit per permutation, recompute the statistic at permuted positions; one-sided p = (exceed+1)/(valid+1). Null 2 (label-permutation, exhaustive): keep the observed order and fit, rank the specialised trio's mean residual among all C(15,3)=455 same-size subsets.",
+  "totals": {
+    "unionLemmas": 323417,
+    "dictionaries": 15,
+    "totalLemmaListings": 806120,
+    "specialised": [
+      "INM",
+      "VEI",
+      "BHS"
+    ]
+  },
+  "heapsFit": {
+    "K": 198.48,
+    "beta": 0.53821,
+    "r2LogLog": 0.98874,
+    "fitPoints": 15,
+    "model": "V(n) = K * n^beta, OLS on log-log over the 15 publication-order accumulation steps"
+  },
+  "steps": [
+    {
+      "code": "PWG",
+      "inventoryCode": "pwg",
+      "year": 1855,
+      "family": "Sanskrit-German",
+      "specialised": false,
+      "lemmas": 106050,
+      "novelty": 106050,
+      "noveltyShare": 1,
+      "cumulativeTokens": 106050,
+      "cumulativeDistinct": 106050,
+      "predictedNovelty": 100573,
+      "relativeResidual": 0.0545
+    },
+    {
+      "code": "BUR",
+      "inventoryCode": "bur",
+      "year": 1866,
+      "family": "Sanskrit-French",
+      "specialised": false,
+      "lemmas": 19135,
+      "novelty": 6601,
+      "noveltyShare": 0.345,
+      "cumulativeTokens": 125185,
+      "cumulativeDistinct": 112651,
+      "predictedNovelty": 9392,
+      "relativeResidual": -0.2972
+    },
+    {
+      "code": "GRA",
+      "inventoryCode": "gra",
+      "year": 1873,
+      "family": "Sanskrit-German",
+      "specialised": false,
+      "lemmas": 11108,
+      "novelty": 1974,
+      "noveltyShare": 0.1777,
+      "cumulativeTokens": 136293,
+      "cumulativeDistinct": 114625,
+      "predictedNovelty": 5148.4,
+      "relativeResidual": -0.6166
+    },
+    {
+      "code": "VCP",
+      "inventoryCode": "vcp",
+      "year": 1873,
+      "family": "Sanskrit-Sanskrit",
+      "specialised": false,
+      "lemmas": 48583,
+      "novelty": 12858,
+      "noveltyShare": 0.2647,
+      "cumulativeTokens": 184876,
+      "cumulativeDistinct": 127483,
+      "predictedNovelty": 20526.7,
+      "relativeResidual": -0.3736
+    },
+    {
+      "code": "PWK",
+      "inventoryCode": "pw",
+      "year": 1879,
+      "family": "Sanskrit-German",
+      "specialised": false,
+      "lemmas": 151310,
+      "novelty": 48721,
+      "noveltyShare": 0.322,
+      "cumulativeTokens": 336186,
+      "cumulativeDistinct": 176204,
+      "predictedNovelty": 51497,
+      "relativeResidual": -0.0539
+    },
+    {
+      "code": "SKD",
+      "inventoryCode": "skd",
+      "year": 1886,
+      "family": "Sanskrit-Sanskrit",
+      "specialised": false,
+      "lemmas": 40700,
+      "novelty": 32103,
+      "noveltyShare": 0.7888,
+      "cumulativeTokens": 376886,
+      "cumulativeDistinct": 208307,
+      "predictedNovelty": 11871.2,
+      "relativeResidual": 1.7043
+    },
+    {
+      "code": "CCS",
+      "inventoryCode": "ccs",
+      "year": 1887,
+      "family": "Sanskrit-German",
+      "specialised": false,
+      "lemmas": 28743,
+      "novelty": 1196,
+      "noveltyShare": 0.0416,
+      "cumulativeTokens": 405629,
+      "cumulativeDistinct": 209503,
+      "predictedNovelty": 8029.8,
+      "relativeResidual": -0.8511
+    },
+    {
+      "code": "CAE",
+      "inventoryCode": "cae",
+      "year": 1891,
+      "family": "Sanskrit-English",
+      "specialised": false,
+      "lemmas": 38476,
+      "novelty": 2438,
+      "noveltyShare": 0.0634,
+      "cumulativeTokens": 444105,
+      "cumulativeDistinct": 211941,
+      "predictedNovelty": 10348.3,
+      "relativeResidual": -0.7644
+    },
+    {
+      "code": "MD",
+      "inventoryCode": "md",
+      "year": 1893,
+      "family": "Sanskrit-English",
+      "specialised": false,
+      "lemmas": 20094,
+      "novelty": 1151,
+      "noveltyShare": 0.0573,
+      "cumulativeTokens": 464199,
+      "cumulativeDistinct": 213092,
+      "predictedNovelty": 5239.6,
+      "relativeResidual": -0.7803
+    },
+    {
+      "code": "MW",
+      "inventoryCode": "mw",
+      "year": 1899,
+      "family": "Sanskrit-English",
+      "specialised": false,
+      "lemmas": 193852,
+      "novelty": 52220,
+      "noveltyShare": 0.2694,
+      "cumulativeTokens": 658051,
+      "cumulativeDistinct": 265312,
+      "predictedNovelty": 45997.4,
+      "relativeResidual": 0.1353
+    },
+    {
+      "code": "INM",
+      "inventoryCode": "inm",
+      "year": 1904,
+      "family": "Specialized",
+      "specialised": true,
+      "lemmas": 9431,
+      "novelty": 2397,
+      "noveltyShare": 0.2542,
+      "cumulativeTokens": 667482,
+      "cumulativeDistinct": 267709,
+      "predictedNovelty": 2065.2,
+      "relativeResidual": 0.1607
+    },
+    {
+      "code": "VEI",
+      "inventoryCode": "vei",
+      "year": 1912,
+      "family": "Specialized",
+      "specialised": true,
+      "lemmas": 3702,
+      "novelty": 448,
+      "noveltyShare": 0.121,
+      "cumulativeTokens": 671184,
+      "cumulativeDistinct": 268157,
+      "predictedNovelty": 807,
+      "relativeResidual": -0.4448
+    },
+    {
+      "code": "SCH",
+      "inventoryCode": "sch",
+      "year": 1928,
+      "family": "Sanskrit-German",
+      "specialised": false,
+      "lemmas": 28431,
+      "novelty": 9023,
+      "noveltyShare": 0.3174,
+      "cumulativeTokens": 699615,
+      "cumulativeDistinct": 277180,
+      "predictedNovelty": 6130.3,
+      "relativeResidual": 0.4719
+    },
+    {
+      "code": "BHS",
+      "inventoryCode": "bhs",
+      "year": 1953,
+      "family": "Specialized",
+      "specialised": true,
+      "lemmas": 17761,
+      "novelty": 10475,
+      "noveltyShare": 0.5898,
+      "cumulativeTokens": 717376,
+      "cumulativeDistinct": 287655,
+      "predictedNovelty": 3771.3,
+      "relativeResidual": 1.7775
+    },
+    {
+      "code": "AP",
+      "inventoryCode": "ap",
+      "year": 1957,
+      "family": "Sanskrit-English",
+      "specialised": false,
+      "lemmas": 88744,
+      "novelty": 35762,
+      "noveltyShare": 0.403,
+      "cumulativeTokens": 806120,
+      "cumulativeDistinct": 323417,
+      "predictedNovelty": 18230.1,
+      "relativeResidual": 0.9617
+    }
+  ],
+  "specialisedBreak": {
+    "statistic": 0.4978,
+    "statisticDefinition": "mean relative residual (observed vs Heaps-fitted marginal novelty) over the Specialized-family dictionaries INM, VEI, BHS",
+    "orderPermutation": {
+      "permutations": 5000,
+      "valid": 5000,
+      "seed": 15760801,
+      "pOneSided": 0.07019
+    },
+    "labelPermutation": {
+      "subsets": 455,
+      "exceeding": 75,
+      "pOneSided": 0.16484,
+      "note": "exhaustive over all same-size dictionary subsets; observed order and fit held fixed"
+    }
+  },
+  "post1890General": [
+    {
+      "code": "CAE",
+      "year": 1891,
+      "noveltyShare": 0.0634
+    },
+    {
+      "code": "MD",
+      "year": 1893,
+      "noveltyShare": 0.0573
+    },
+    {
+      "code": "MW",
+      "year": 1899,
+      "noveltyShare": 0.2694
+    },
+    {
+      "code": "SCH",
+      "year": 1928,
+      "noveltyShare": 0.3174
+    },
+    {
+      "code": "AP",
+      "year": 1957,
+      "noveltyShare": 0.403
+    }
+  ],
+  "limitations": [
+    "The token axis counts union lemma LISTINGS (one per dictionary that lists the lemma), not corpus tokens; Heaps' law is borrowed as a saturation model for the recording process, not asserted as the linguistic original.",
+    "Union lemmas key on normalized SLP1 (accents and homonym digits stripped), so homonyms collapse; a dictionary's novelty is novelty of normalized keys.",
+    "Publication years are single inventory dates; multi-volume spans (PWG 1855-1875, PW 1879-1889) are collapsed to their inventory year, so within-span arrival order is conventional.",
+    "15 dictionaries give 15 fit points; the Heaps fit is descriptive and the order-permutation null is the inferential guard, not the OLS standard errors.",
+    "The specialised set is the inventory family `Specialized` restricted to union members (INM, VEI, BHS); IEG and technical kosas named in the agenda are not in the union backbone and are untested here.",
+    "The union backbone covers 15 of the 44+ CDSL dictionaries (the deduplicated multi-dictionary export); saturation claims are relative to this roster, not all of Sanskrit lexicography."
+  ],
+  "boundary": [
+    "union_headwords.tsv is owned by SanskritLexicography and consumed read-only from the sibling checkout; dictionary_inventory.csv is the in-repo roster. Dictionary-only evidence — no DCS/corpus data touched. Rendering owner repo: csl-atlas."
+  ],
+  "generatedAt": "2026-07-25T19:23:12.467Z"
+}

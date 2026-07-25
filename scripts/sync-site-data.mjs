@@ -23,6 +23,14 @@ const COPIES = [
   {
     source: "data/lexico/h4_semantic_field_review_packet.json",
     target: "src/data/lexico/h4_semantic_field_review_packet.json"
+  },
+  {
+    source: "data/lexico/heap_sat.json",
+    target: "src/data/lexico/heap_sat.json"
+  },
+  {
+    source: "data/lexico/period_signatures.json",
+    target: "src/data/lexico/period_signatures.json"
   }
 ];
 

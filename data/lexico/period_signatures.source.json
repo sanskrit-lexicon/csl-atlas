@@ -1,0 +1,19 @@
+{
+  "dataset": "period_signatures",
+  "commit": "a15e5e677dbc197f49c32b2024f2ad40afd3dcd8",
+  "unionRepo": "https://github.com/gasyoun/SanskritLexicography",
+  "unionPath": "HeadwordLists/union/union_headwords.tsv",
+  "unionCommit": "12ba7095fefd6916d27e6cf23dc77531b6e0e68a",
+  "koshaRepo": "https://github.com/gasyoun/kosha",
+  "koshaPath": "data/frequency/lemma_frequency.tsv",
+  "koshaCommit": "2ca14d708114737bab45b646e6326104e927efe9",
+  "generatedAt": "2026-07-25T19:37:32.824Z",
+  "generatedBy": "npm run build-period-signatures",
+  "sourceFiles": [
+    "SanskritLexicography/HeadwordLists/union/union_headwords.tsv",
+    "kosha/data/frequency/lemma_frequency.tsv",
+    "data/dictionary_inventory.csv",
+    "scripts/build-period-signatures.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}
