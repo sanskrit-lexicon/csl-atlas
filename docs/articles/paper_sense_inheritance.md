@@ -42,7 +42,7 @@ than translation.
 family**: the pooled trend is flat (*r* = 0.036), and granularity is instead a
 **family trait** — Benfey 2.42 sense-units/entry, the Petersburg line 1.13, the
 indigenous lexica 1.00 by construction. **Citation co-varies with survival but is
-not an independent predictor**: cited senses survive somewhat more often (0.762 vs
+not an independent predictor**: cited senses survive somewhat more often (0.768 vs
 0.705), but the signal sits on one edge and is not significant there (*z* = 1.80,
 *p* = 0.07); a pooled estimate that looks significant is an edge-concentration
 artifact. Descendants **copy or condense, never expand**:
@@ -268,14 +268,14 @@ this corpus, false.
 
 On the 28-noun panel, each ancestor sense was traced into the descendant by
 gloss-text overlap (threshold 0.15). Cited ancestor senses — those carrying at least
-one `<ls>` source citation — survived at **0.762** (64 of 84); uncited senses at
-**0.705** (510 of 723). The pooled gap is small and, on a naive two-proportion test,
-not significant (*z* = 1.1).
+one `<ls>` source citation — survived at **0.768** (63 of 82); uncited senses at
+**0.705** (511 of 725). The pooled gap is small and, on a naive two-proportion test,
+not significant (*z* ≈ 1.2).
 
 The deeper problem is *where* the cited senses are. Citation is not spread across the
-panel: Wilson 1832 carries almost no `<ls>`, so of the 84 cited ancestor senses
-**82 fall on a single edge — Apte 1890 → 1957** (the two Wilson edges contribute one
-cited sense each). The citation-survival question is therefore really a question about
+panel: Wilson 1832 carries no `<ls>` on these edges, so **all 82 cited ancestor
+senses fall on a single edge — Apte 1890 → 1957** (the two Wilson edges contribute
+none). The citation-survival question is therefore really a question about
 that one edge, and the clean test is *within* it, where the parsing of the others is
 irrelevant. On Apte 1890 → 1957, cited senses survive at **0.768** (n = 82) against
 **0.661** for uncited senses (n = 221) — a two-proportion *z* = 1.80, *p* = 0.07,
@@ -417,8 +417,8 @@ not on others.
   citational-vs-grammatical adjudication
   ([`REVIEW_SKD_ITI_ADJUDICATION.html`](REVIEW_SKD_ITI_ADJUDICATION.html)); that
   adjudication is outstanding and will sharpen or revise the 53 %/78 % figures in §7.
-- The H2 citation-survival signal rests on a single edge: 82 of 84 cited ancestor
-  senses are on Apte 1890 → 1957 (Wilson 1832 carries almost no `<ls>`), where the
+- The H2 citation-survival signal rests on a single edge: all 82 cited ancestor
+  senses are on Apte 1890 → 1957 (Wilson 1832 carries no `<ls>` on these edges), where the
   within-edge test is not significant (0.768 vs 0.661; *z* = 1.80, *p* = 0.07). The
   pooled multi-edge odds ratio is edge-composition-sensitive — it shifted from ≈ 1.75
   to ≈ 3.0 when an unrelated edge's parser was changed — and is not relied on. The
@@ -447,8 +447,9 @@ lexicographic school, flat — indeed gently declining within families — in ti
 inheritance copies or condenses rather than expands — across all three measurable
 edges, including a Yates abridgement that condenses about nine senses to six once its
 semicolon-packed entries are counted correctly. Cited senses do survive somewhat more
-often (0.762 versus 0.705 overall; 0.768 versus 0.661 on the one citation-bearing
-edge), but that signal rests on a single edge and is not significant there
+often (0.768 versus 0.705 overall; 0.768 versus 0.661 on the one citation-bearing
+edge — the same cited rate, since every cited sense sits there), but that signal
+rests on a single edge and is not significant there
 (*z* = 1.80, *p* = 0.07); the pooled estimate that borrows strength across edges to
 manufacture apparent significance fails in exactly the way §3 shows legacy sense
 counts fail — it measures edge composition, not the citation effect it names — so the
@@ -506,5 +507,7 @@ Gasūns, M. (in preparation). *Two Citation Registers and the Dictionary-to-Book
 the Cologne Digital Sanskrit Lexicon.* (Cited above as the companion citation-registers
 paper.)
 
-*Bibliographic details (page ranges, series numbers, access dates) are to be verified
-against the sources before submission.*
+*Bibliographic details are verified for the five core secondary references (Atkins &
+Rundell; Hausmann et al.; Vogel; Wiegand; Zgusta). Still to confirm before submission:
+page range and DOI for Pagel, Atkinson & Meade (2007) and Petersen et al. (2012), as
+flagged inline above.*
