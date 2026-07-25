@@ -4,6 +4,40 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — PH8 Heaps saturation + PH3 era signatures + V4 panels (H1576)
+
+- New builder [`scripts/build-heap-sat.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-heap-sat.mjs)
+  (+ `validate-heap-sat`, 8 tests): accumulates the 323,417-lemma
+  [union headword backbone](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/union/union_headwords.tsv)
+  in publication order (15 dictionaries, PWG 1855 → AP 1957) via exact
+  15-bit-mask novelty arithmetic. Committed packet
+  [`data/lexico/heap_sat.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/heap_sat.json):
+  **PH8 supported** — Heaps V(n)=K·n^0.538, log–log R²=0.989; largest
+  above-curve breaks SKD (+170%, 78.9% novel) and BHS (+178%, 59.0% novel);
+  the specialised-break trio statistic (+0.50) stays **descriptive only**
+  (seeded order-permutation p=0.070, exhaustive label-permutation p=0.165,
+  n=3); the "<5% post-1890 general novelty" sub-claim is refuted (MW 26.9%,
+  SCH 31.7%, AP 40.3%).
+- New builder [`scripts/build-period-signatures.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-period-signatures.mjs)
+  (+ `validate-period-signatures`, 5 tests): joins union provenance × the
+  frozen kosha
+  [`lemma_frequency.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/lemma_frequency.tsv)
+  DCS-period vectors on normalized SLP1 (61,338 lemmas matched, 19.0%;
+  boundary-clean — no VisualDCS ingestion). Committed packet
+  [`data/lexico/period_signatures.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/period_signatures.json):
+  **PH3 supported per-dictionary** — type-weighted era profiles with disjoint
+  bootstrap CIs (GRA −423 CE / TVD 0.49; VEI −115; SKD +956, VCP +655;
+  Petersburg line 516–574) — while the family-predicts-weighting sub-claim is
+  **not supported** (Kruskal–Wallis H=5.42, p≈0.14, descriptive at n=14):
+  canon, not language-pair family, drives the signature.
+- [`/tools/dictionary-coverage`](https://sanskrit-lexicon.github.io/csl-atlas/tools/dictionary-coverage)
+  gains V4 panels i (union growth curve + Heaps fit + step annotations) and
+  ii (period-share small multiples + chronological centre-of-mass dot plot),
+  each with CSV download and Trust Block; both packets wired into
+  `sync-site-data`, the verify validator roster, and
+  [`docs/HYPOTHESIS_INDEX.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_INDEX.md)
+  Type 1 (HEAP-SAT, FREQ-STRAT); agenda backlog #5 closed.
+
 ### Fixed — deploy gate scoped to production dependencies (advisory churn)
 
 - [`scripts/verify.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/verify.mjs):

@@ -1,0 +1,15 @@
+{
+  "dataset": "heap_sat",
+  "commit": "a15e5e677dbc197f49c32b2024f2ad40afd3dcd8",
+  "unionRepo": "https://github.com/gasyoun/SanskritLexicography",
+  "unionPath": "HeadwordLists/union/union_headwords.tsv",
+  "siblingCommit": "12ba7095fefd6916d27e6cf23dc77531b6e0e68a",
+  "generatedAt": "2026-07-25T19:23:12.467Z",
+  "generatedBy": "npm run build-heap-sat",
+  "sourceFiles": [
+    "SanskritLexicography/HeadwordLists/union/union_headwords.tsv",
+    "data/dictionary_inventory.csv",
+    "scripts/build-heap-sat.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}
