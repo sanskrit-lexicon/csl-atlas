@@ -42,7 +42,9 @@ class ReviewDecisionValidationTests(unittest.TestCase):
             {
                 "csl-atlas-skd-iti_100units": 102,
                 "csl-atlas-tradition-tags_119texts": 119,
-                "csl-atlas-h4-semantic-field_89rows": 89,
+                # 0 open since the H1621 agent adjudication filled all 89
+                # rows (PR #297); the sheet no longer takes a human export.
+                "csl-atlas-h4-semantic-field_89rows": 0,
                 "csl-atlas-xref-shared-core_40edges": 40,
             },
         )

@@ -28,6 +28,15 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   MW/MD lead unique-attested share, not BHS; PH6 supported); agenda backlog #3
   ticked.
 
+### Fixed — deploy-blocking stale H4 queue count in CI (H1621 residue)
+
+- [`scripts/test_validate_review_decisions.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/test_validate_review_decisions.py):
+  `test_expected_queue_counts_are_stable` still expected 89 open
+  `csl-atlas-h4-semantic-field` rows after the H1621 agent adjudication
+  (PR #297) legitimately drained the sheet to 0, failing the Production
+  verification step and **blocking every site deploy since v0.6.0**.
+  Expected count updated to 0 with an H1621 provenance comment.
+
 ### Fixed — vendored sanskrit-util re-synced (H1394 residue)
 
 - [`src/lib/sanskrit-util.js`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/lib/sanskrit-util.js)
