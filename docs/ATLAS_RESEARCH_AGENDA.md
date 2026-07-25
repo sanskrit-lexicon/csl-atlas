@@ -510,7 +510,7 @@ analysis-heavy · Sonnet = mechanical build · Opus = judgment-heavy review.
 |---|---|---|---|---|---|---|
 | 1 | ✅ V1 citation-canon page + PH1 nestedness stat — **DONE (H305, 07-07-2026):** verdict refuted-modular (`/tools/citation-canon`, `build-citation-canon.mjs`) | b | M | — | csl-atlas | Fable (stat) + Sonnet (page) |
 | 2 | PH2 citation fourth axis + V3 page | b | S–M | — | csl-atlas | Fable |
-| 3 | PH4 ghost-stock join + PH6 Heritage witness + V4 strip/chips | c | M | — | csl-atlas | Sonnet (joins) + Opus (spot-check) |
+| 3 | ✅ PH4 ghost-stock join + PH6 Heritage witness + V4 strip/chips — **DONE (H1575, 25-07-2026):** PH4 supported (attestation 4.7%→100% monotone in `n_dicts`; specialised-concentration sub-claim reversed — MW/MD lead unique-attested share), PH6 supported (Heritage-uncovered→DCS-unattested OR 5.45; 37,931-row `inferred` triple-filter queue) — `/tools/ghost-stock`, `build-ghost-stock.mjs`, V4 strip on `/tools/dictionary-coverage` | c | M | — | csl-atlas | Fable 5 (`claude-fable-5`) |
 | 4 | V2 data-driven timeline upgrade | a | M | — | csl-atlas | Sonnet |
 | 5 | PH8 Heaps saturation + PH3 era signatures + V4 panels | a+c | M | union excerpt step | csl-atlas | Fable (fits) + Sonnet (page) |
 | 6 | PH5 ortho-drift census + V5 page | d | M–L | frozen reform maps | csl-atlas | Fable (census design) + Sonnet (page) |

@@ -4,6 +4,38 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — PH4 ghost stock + PH6 Heritage triangulation (H1575)
+
+- New builder [`scripts/build-ghost-stock.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-ghost-stock.mjs)
+  (+ `validate-ghost-stock`, 7 tests): joins the 323,417-lemma
+  [union headword backbone](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/union/union_headwords.tsv)
+  × DCS attestation × the
+  [MW↔Heritage crosswalk](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/mw_heritage_crosswalk.tsv)
+  on normalized SLP1. Committed packet
+  [`src/data/ghost-stock/ghost_stock.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/ghost-stock/ghost_stock.json):
+  attestation-by-multiplicity strata with Wilson CIs (4.7% at `n_dicts`=1 →
+  100% at 13+), per-dict unique-attested shares, deterministic IRLS logistic
+  (`n_dicts` +0.626 log-odds/dict, McFadden R² 0.27, independently reproduced
+  in NumPy), the 2×2×2 Heritage witness cube with Woolf-CI odds ratios
+  (uncovered→unattested OR 5.45), and a 37,931-row triple-filter
+  ghost-candidate queue graded `inferred`.
+- New page [`/tools/ghost-stock`](https://sanskrit-lexicon.github.io/csl-atlas/tools/ghost-stock)
+  + V4 attestation strip on
+  [`/tools/dictionary-coverage`](https://sanskrit-lexicon.github.io/csl-atlas/tools/dictionary-coverage);
+  PH4/PH6 promoted Proposed → Type 1 in
+  [`docs/HYPOTHESIS_INDEX.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_INDEX.md)
+  (PH4 main claim supported, specialised-concentration sub-claim reversed —
+  MW/MD lead unique-attested share, not BHS; PH6 supported); agenda backlog #3
+  ticked.
+
+### Fixed — vendored sanskrit-util re-synced (H1394 residue)
+
+- [`src/lib/sanskrit-util.js`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/lib/sanskrit-util.js)
+  re-vendored from the canonical `sanskrit-util` checkout: the vendored copy
+  still carried the pre-H1394 naive `iast_to_devanagari` and failed the
+  sync selftest against the fixed canonical source. No `slp1_norm` change —
+  committed normalized keys unaffected.
+
 ## [0.6.0] - 2026-07-25
 
 ### Fixed — A02 H2 figures re-synced to committed data (H001 residue)

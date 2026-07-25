@@ -17,6 +17,41 @@ This tool extends the nine-chapter comparison to every CDSL v02 dictionary with 
 
 ```js
 const coverage = FileAttachment("../data/dictionary-coverage.json").json();
+const ghostStock = FileAttachment("../data/ghost-stock/ghost_stock.json").json();
+```
+
+## Corpus attestation by multiplicity (V4 strip)
+
+How often the [Digital Corpus of Sanskrit](http://www.sanskrit-linguistics.org/dcs/)
+attests a union lemma, by how many dictionaries list it — dictionary-unique
+vocabulary is overwhelmingly corpus-invisible. Full analysis, per-dictionary
+shares, the Heritage witness cube, and the ghost-candidate queue:
+[Ghost stock](ghost-stock).
+
+```js
+const stripBuckets = [
+  { bucket: "1", match: (n) => n === 1 },
+  { bucket: "2–4", match: (n) => n >= 2 && n <= 4 },
+  { bucket: "5–8", match: (n) => n >= 5 && n <= 8 },
+  { bucket: "9+", match: (n) => n >= 9 }
+].map(({ bucket, match }) => {
+  const rows = ghostStock.byMultiplicity.filter((r) => match(r.nDicts));
+  const lemmas = rows.reduce((a, r) => a + r.lemmas, 0);
+  const attested = rows.reduce((a, r) => a + r.attested, 0);
+  return { bucket, lemmas, attested, rate: attested / lemmas };
+});
+display(Plot.plot({
+  width: 640,
+  height: 170,
+  marginLeft: 46,
+  x: { label: "dictionaries listing the lemma", domain: stripBuckets.map((b) => b.bucket) },
+  y: { label: "DCS-attested share", domain: [0, 1], percent: true, grid: true },
+  marks: [
+    Plot.barY(stripBuckets, { x: "bucket", y: "rate", fill: "var(--theme-foreground-focus)",
+      title: (b) => `${b.attested.toLocaleString()}/${b.lemmas.toLocaleString()} attested (${(b.rate * 100).toFixed(1)}%)` }),
+    Plot.ruleY([0])
+  ]
+}));
 ```
 
 ```js
