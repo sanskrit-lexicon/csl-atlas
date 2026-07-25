@@ -4,6 +4,20 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Fixed — A02 H2 figures re-synced to committed data (H001 residue)
+
+- [`docs/articles/paper_sense_inheritance.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_sense_inheritance.md):
+  the pooled H2 citation-survival figures had gone stale against the regenerated
+  [`data/lexico/r2_h2h3.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h2h3.json)
+  — the draft asserted 84 cited ancestor senses (0.762 = 64/84 pooled, one cited
+  sense on each Wilson edge), while the committed data has **82** cited senses
+  (0.768 = 63/82, **zero** on both Wilson edges), making the draft's pooled 0.762
+  vs within-edge 0.768 internally impossible. Abstract, §5, §8 and Conclusion now
+  quote 0.768 (63/82) / 0.705 (511/725), naive pooled *z* ≈ 1.2, and "all 82 on
+  Apte 1890 → 1957". Reference footer narrowed to the two genuinely unverified
+  refs (Pagel/Atkinson/Meade 2007; Petersen et al. 2012). H2 verdict unchanged:
+  within-edge gap still not significant (*z* = 1.80, *p* = 0.07).
+
 ### Added — H4 semantic-field agent adjudication (H1621)
 
 - Close the H4 human vote stage: all **89** `needs-review` rows in
