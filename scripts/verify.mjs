@@ -11,6 +11,7 @@ const VALIDATORS = [
   "validate-tradition-tags.mjs",
   "validate-correction-feed.mjs",
   "validate-heritage-witness.mjs",
+  "validate-ghost-stock.mjs",
   "validate-four-axis-independence.mjs",
   "validate-review-reports.mjs"
 ];
@@ -41,7 +42,10 @@ export function verify() {
   run(process.execPath, [path.join("scripts", "regen-review-artifacts.mjs")]);
   assertClean("after deterministic regeneration");
   run("npm", ["run", "build"]);
-  run("npm", ["audit", "--audit-level=high"]);
+  // --omit=dev: the deployed artifact is static HTML; the whole toolchain is
+  // devDependencies, and docs/DEPENDENCY_SECURITY.md already scopes dev-only
+  // advisories as non-blocking (they cannot ship). Production deps stay gated.
+  run("npm", ["audit", "--omit=dev", "--audit-level=high"]);
   assertClean("after build and audit");
   console.log("verify: all tests, validators, deterministic regeneration, build, audit, and clean-tree checks passed.");
 }

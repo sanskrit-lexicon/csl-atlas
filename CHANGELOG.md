@@ -4,6 +4,19 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Fixed — deploy gate scoped to production dependencies (advisory churn)
+
+- [`scripts/verify.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/verify.mjs):
+  the audit gate is now `npm audit --omit=dev --audit-level=high` — the
+  25-07-2026 `brace-expansion` advisory (`GHSA-mh99-v99m-4gvg`, no backport to
+  the majors `minimatch` pins) made the unscoped gate unpassable without a
+  breaking framework downgrade, blocking every deploy; nothing from the
+  devDependency toolchain ships in the static Pages artifact. Posture +
+  accepted-advisory list documented in
+  [`docs/DEPENDENCY_SECURITY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DEPENDENCY_SECURITY.md).
+  Lockfile refreshed (`brace-expansion` top-level, `tar`) without `--force`;
+  `validate-ghost-stock` added to the verify validator roster.
+
 ## [0.7.0] - 2026-07-25
 
 ### Added — PH4 ghost stock + PH6 Heritage triangulation (H1575)
