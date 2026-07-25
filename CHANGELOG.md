@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-07-25
+
 ### Added — PH4 ghost stock + PH6 Heritage triangulation (H1575)
 
 - New builder [`scripts/build-ghost-stock.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-ghost-stock.mjs)
