@@ -32,12 +32,15 @@ from csl_pyutil import __version__ as CSL_PYUTIL_VERSION
 from csl_pyutil import render_review_sheet
 from sanskrit_util import from_slp1
 
+sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
+from cdsl_anatomy import highlight as cdsl_highlight, legend_html as cdsl_legend  # noqa: E402
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "review"
-DATE = "24-07-2026"  # H1621 IAST display + agent-adjudication note
+DATE = "25-07-2026"  # H1646 xref reviewability: Cologne links, anatomy, taxonomy, sampling
 #: Minimum, NOT exact: the V1–V8 standard shipped in csl-pyutil 0.3.0, and the
 #: light-mode contrast fix (color-scheme:dark + hardened note textarea) in 0.3.1.
 #: A `>=` check expresses "require at least the standard" so future emitter patch
@@ -180,24 +183,167 @@ def h4_items():
     return items
 
 
+#: Muted body text inside the xref reference blocks; the sheet exposes no caller
+#: CSS hook, so every colour on this sheet is an inline style.
+_MUTED = "#9aa3b2"
+
+
+def _details(summary, body, open_by_default=False):
+    """A collapsed reference block. Cards carry their own copy rather than pointing
+    at the sticky sheet header — that header would cover the viewport when expanded,
+    and a reviewer on card 27 should not have to scroll back to card 1 for a definition."""
+    attr = " open" if open_by_default else ""
+    return (
+        f'<details{attr} style="margin:8px 0 0"><summary style="cursor:pointer;color:{_MUTED};'
+        f'font-size:12.5px">{html.escape(summary)}</summary>'
+        f'<div style="margin:8px 0 0;font-size:12.5px;line-height:1.65">{body}</div></details>'
+    )
+
+
+def _label_vocabulary_html(vocabulary):
+    """Fix 1 (H1646): the closed label set, each with what it does and does not assert
+    plus two worked examples from this packet. Previously the sheet named three reject
+    options and defined none of them."""
+    blocks = []
+    for entry in vocabulary:
+        if not entry.get("appliesToSheet"):
+            continue
+        examples = "".join(
+            f'<li><code>{html.escape(ex["sampleId"])}</code> — {html.escape(ex["edge"])}<br>'
+            f'<span style="color:{_MUTED}">{html.escape(ex["why"])}</span></li>'
+            for ex in entry.get("examples", [])
+        )
+        blocks.append(
+            f'<p style="margin:10px 0 4px"><code>{html.escape(entry["label"])}</code> — '
+            f'{html.escape(entry["meaning"])}</p>'
+            f'<p style="margin:0 0 4px"><strong>Утверждает:</strong> {html.escape(entry.get("asserts", ""))}</p>'
+            f'<p style="margin:0 0 4px"><strong>НЕ утверждает:</strong> {html.escape(entry.get("doesNotAssert", ""))}</p>'
+            f'<ul style="margin:0 0 6px;padding-left:20px">{examples}</ul>'
+        )
+    return "".join(blocks)
+
+
+def _selection_policy_html(packet):
+    """Fix 4 (H1646): how these 40 rows were chosen — "I do not see the list of methods
+    used for sampling these words". The packet has always carried selectionPolicy and
+    limitations; nothing rendered them."""
+    steps = "".join(f"<li>{html.escape(step)}</li>" for step in packet.get("selectionPolicy", []))
+    limits = "".join(f"<li>{html.escape(item)}</li>" for item in packet.get("limitations", []))
+    counts = packet.get("counts", {})
+    artifact = packet.get("sourceArtifact", {})
+    return (
+        f"<p><strong>Отбор</strong></p><ol style='margin:0 0 8px;padding-left:20px'>{steps}</ol>"
+        f"<p><strong>Счётчики:</strong> {counts.get('sharedCoreRows')} строк shared-core, "
+        f"{counts.get('exactSharedCorePointers')} записей-источников, "
+        f"{counts.get('sharedCoreRowsWithMissingExactEdge')} строк только с одним словарём; "
+        f"{counts.get('prefixControlRows')} prefix-control автоматически разрешены "
+        f"(<code>{html.escape(str(list(counts.get('byAutoDecision', {}).keys())))}</code>).</p>"
+        f"<p><strong>Источник выборки:</strong> <code>{html.escape(str(artifact.get('path')))}</code>, "
+        f"построен <code>{html.escape(str(artifact.get('generatedBy')))}</code>.</p>"
+        f"<p><strong>Ограничения</strong></p><ul style='margin:0;padding-left:20px'>{limits}</ul>"
+    )
+
+
+def _link_row(links):
+    """Render the (label, href) pairs that survive as a single separated line."""
+    parts = [
+        f'<a href="{html.escape(href)}" target="_blank" rel="noopener">{html.escape(label)}</a>'
+        for label, href in links if href
+    ]
+    return " · ".join(parts)
+
+
+def xref_source_panels(row):
+    """One panel per dictionary record: Cologne + csl-orig links, then the record
+    itself with its markup colour-coded (fixes 2 and 3 of H1646).
+
+    Fix 2 — the card used to link only the csl-orig blob line. A reviewer asked to
+    judge whether an edge is real needs to read the entry as the dictionary shows it,
+    so each record now also links its Cologne entry display and its printed scan page.
+    Fix 3 — the raw record was dumped into a bare <code> block; it is now segmented by
+    part class, with the cross-reference target outlined where it occurs.
+    """
+    panels = []
+    for pointer in row.get("sourcePointers", []):
+        heading = f"Источник · {pointer.get('dictionary')} · L{pointer.get('L')}"
+        links = _link_row([
+            ("Кёльн: статья", pointer.get("cologneEntryHref")),
+            (f"скан {pointer.get('pc')}" if pointer.get("pc") else "скан", pointer.get("cologneScanHref")),
+            ("csl-orig", pointer.get("href")),
+        ])
+        excerpt = pointer.get("bodyExcerpt", "")
+        body = cdsl_highlight(excerpt, target=row.get("target")) if excerpt else ""
+        panels.append((heading, f'<p style="margin:0 0 8px">{links}</p>{body}'))
+
+    target_links = row.get("targetLinks", [])
+    if target_links:
+        target_iast = _iast(row["target"])
+        heading = f"Цель ссылки · {target_iast} [SLP1 {row['target']}]"
+        links = _link_row([
+            (f"Кёльн: {link['dictionary']}", link.get("cologneEntryHref")) for link in target_links
+        ])
+        panels.append((heading, (
+            f'<p style="margin:0 0 6px">{links}</p>'
+            f'<p style="margin:0;color:{_MUTED}">Другой конец ребра. Ссылка ведёт на статью-заголовок; '
+            f'при омонимах Кёльн покажет все статьи под этим заголовком.</p>'
+        )))
+    return panels
+
+
 def xref_items():
     packet = read_json("data/lexico/xref_source_check_packet.json")
+    vocabulary_html = _label_vocabulary_html(packet.get("packetLabelVocabulary", []))
+    policy_html = _selection_policy_html(packet)
+    legend = cdsl_legend()
     items = []
     for row in packet["sharedCoreRows"]:
+        source_iast, target_iast = _iast(row["sourceLemma"]), _iast(row["target"])
+        # Same H1621 rule as the H4 sheet: the machine question is written in SLP1;
+        # show the reviewer IAST, keeping the SLP1 key alongside it.
+        question_text = row["reviewQuestion"]
+        for slp1, iast in sorted(
+            {row["sourceLemma"]: source_iast, row["target"]: target_iast}.items(),
+            key=lambda kv: len(kv[0]), reverse=True,
+        ):
+            question_text = question_text.replace(slp1, f"{iast} [{slp1}]")
+        missing = row.get("missingExactEdgeDictionaries", [])
+        # A row with only one dictionary attached cannot demonstrate the "shared" in
+        # shared-core. Say so on the card instead of letting the reviewer discover it
+        # by counting panels — this is precisely the `too-sparse` case.
+        sparse_note = (
+            f'<p style="margin:6px 0 0;color:#e6c07b">⚠ Приложена запись только одного словаря '
+            f'({", ".join(html.escape(d) for d in row.get("matchedDictionaries", []))}); '
+            f'{", ".join(html.escape(d) for d in missing)} — точного ребра нет. Общность здесь '
+            f'не показана, поэтому <code>too-sparse</code> — законный ответ.</p>'
+        ) if missing else ""
         question = (
-            f"<p><strong>Предложение:</strong> <code>lexical-shared-core</code>.</p>"
-            f"<p>{html.escape(row['reviewQuestion'])}</p>"
+            f'<p><strong>Предложение:</strong> <code>lexical-shared-core</code>.</p>'
+            f"<p>{html.escape(question_text)}</p>"
+            f"{sparse_note}"
             "<p>Подтвердите значимое общее лексическое ребро либо отклоните и укажите в примечании "
-            "<code>prefix-convention</code>, <code>normalization-risk</code> или <code>too-sparse</code>.</p>"
+            "<code>prefix-convention</code>, <code>normalization-risk</code> или <code>too-sparse</code>. "
+            "Определения и по два разобранных примера — ниже.</p>"
+            + _details("Словарь меток: что означает каждая и когда её выбирать", vocabulary_html)
+            + _details("Как отобраны эти 40 рёбер (метод выборки и его ограничения)", policy_html)
+            + _details("Легенда разметки статьи", legend)
         )
-        item = {"id": row["sampleId"], "filt": "shared-core",
-                "title": f"{row['sourceLemma']} → {row['target']}",
-                "badges": row.get("matchedDictionaries", ["MW", "PWG"]), "question": question,
-                "panels": source_panels(row.get("sourcePointers", [])),
-                "note_placeholder": "Если отклоняете: corrected-label: краткое основание."}
-        href = first_href(row.get("sourcePointers", []))
-        if href:
-            item["title_href"] = href  # V4
+        item = {
+            "id": row["sampleId"],
+            "filt": "shared-core",
+            # H1621 display rule: IAST for the human, SLP1 kept visible as the machine key.
+            "title": f"{source_iast} → {target_iast}",
+            "badges": row.get("matchedDictionaries", ["MW", "PWG"])
+                      + [f"SLP1 {row['sourceLemma']} → {row['target']}"],
+            "question": question,
+            "panels": xref_source_panels(row),
+            "note_placeholder": "Если отклоняете: corrected-label: краткое основание.",
+        }
+        # V4 — the header now opens the Cologne entry, the thing a reviewer wants to
+        # read, rather than the csl-orig source line.
+        pointers = row.get("sourcePointers", [])
+        href = next((p.get("cologneEntryHref") for p in pointers if p.get("cologneEntryHref")), None)
+        if href or first_href(pointers):
+            item["title_href"] = href or first_href(pointers)
         items.append(item)
     return items
 
@@ -245,7 +391,15 @@ BUILDERS = {
         h4_items,
         [("skd-false-low", "SKD"), ("vcp-high-coverage", "VCP"), ("ap-ap90-delta", "AP/AP90"), ("specialized-baseline", "специализированные"), ("index-reverse-control", "контроль")],
     ),
-    "xref": ("csl-atlas-xref-shared-core_40edges", "Xref: общие MW/PWG рёбра — 40 строк", "Пакет xref; prefix-control уже разрешены автоматически.", xref_items, [("shared-core", "общие рёбра")]),
+    "xref": (
+        "csl-atlas-xref-shared-core_40edges",
+        "Xref: общие MW/PWG рёбра — 40 строк",
+        "Первые 40 из 642 общих рёбер в порядке заголовков (не случайная выборка); "
+        "prefix-control разрешены автоматически. На каждой карточке: ссылки в Кёльн на оба конца ребра, "
+        "разметка статьи с подсветкой, словарь меток и метод отбора.",
+        xref_items,
+        [("shared-core", "общие рёбра")],
+    ),
     "tradition": ("csl-atlas-tradition-tags_119texts", "Теги традиций — 119 текстов", "Неавтоматизированная проверка, разблокирующая A50.", tradition_items, []),
     # Keep the historical 100units stem: it is part of the download filename,
     # sheet ID, and localStorage key contract. The corrected visible count is 102.

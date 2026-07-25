@@ -1,6 +1,6 @@
 # Xref Source-Check Review Worksheet
 
-Date: 2026-07-17 · Source: `data/lexico/xref_source_check_packet.json`
+Date: 2026-07-25 · Source: `data/lexico/xref_source_check_packet.json`
 
 **40 MW/PWG shared-core edges need a source-check** (10 prefix-convention rows auto-resolved, excluded). Ordered: rows with the exact shared edge in both dictionaries first; the 4 rows missing an exact edge are flagged at the end. Pick one label per row.
 
