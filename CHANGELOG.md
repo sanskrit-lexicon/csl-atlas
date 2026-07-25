@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-07-25
+
 ### Changed — xref shared-core review sheet made answerable (H1646)
 
 Reviewer feedback on
