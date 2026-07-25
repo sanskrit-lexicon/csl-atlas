@@ -4,6 +4,47 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Changed — xref shared-core review sheet made answerable (H1646)
+
+Reviewer feedback on
+[`csl-atlas-xref-shared-core_40edges_review.html`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-review-sheets.py)
+was that the 40 cards could not be voted as built: no way to read the entries, raw
+markup dumped verbatim, three reject labels named but none defined, and no disclosed
+sampling method. Four fixes, all in the generators — the sheet itself stays gitignored
+and is regenerated with `npm run build-review-sheets`.
+
+- **Cologne links on both ends of every edge.** New
+  [`scripts/lib/cologne-links.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs)
+  builds the CDSL entry-display URL (`indexcaller.php`, which auto-searches on load —
+  param contract read from the `csl-websanlexicon` template, live-verified for MW and
+  PWG) and the printed-scan URL (`servepdf.php`), reusing kosha
+  [`app/scan_resolver.py`](https://github.com/gasyoun/kosha/blob/main/app/scan_resolver.py)
+  semantics including the PWG `{vol}-{page:04d}` trap. Each source pointer gains
+  `pc` / `cologneEntryHref` / `cologneScanHref`; each row gains `targetLinks` for the
+  *target* headword, which was never shown. `iterateDict()` now yields `pc`.
+- **Entry anatomy colour-coding.** New
+  [`scripts/lib/cdsl_anatomy.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cdsl_anatomy.py)
+  keeps the CDSL markup visible but dims delimiters and colours the payload by part
+  class (Sanskrit · gloss · citation · grammar · cross-reference marker · etymology ·
+  language · taxon · homonym), and outlines every occurrence of the cross-reference
+  target — the exact span the edge is claimed from. Part taxonomy from the
+  `/entry-anatomy` skill, dark palette from
+  [`SanskritLexicography/EntryAnatomy/build_entry_anatomy.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/EntryAnatomy/build_entry_anatomy.py);
+  inline styles throughout, since `render_review_sheet` exposes no caller-CSS hook.
+- **Label vocabulary with worked examples.** `XREF_LABEL_VOCABULARY` now carries
+  `asserts` / `doesNotAssert` / two `examples` per label, rendered on every card.
+  States explicitly that `lexical-shared-core` is *not* a synonymy claim. Prose
+  companion:
+  [`docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md)
+  (+ metadoc).
+- **Sampling method disclosed.** `selectionPolicy` now states the real three-stage
+  mechanism and the bias it carries: the 40 rows are the **first 40 of 642 shared edges
+  in headword order, not a random sample**, so every card is an Ā-/B-/C-/D-/G-initial
+  headword. Rendered on each card alongside counts and limitations.
+- Cards additionally show IAST titles (SLP1 kept as a badge, per the H1621 display
+  rule), and the 4 single-dictionary rows now say on the card that `too-sparse` is a
+  legitimate answer. Record excerpts raised 260 → 900 chars.
+
 ## [0.8.0] - 2026-07-25
 
 ### Added — PH8 Heaps saturation + PH3 era signatures + V4 panels (H1576)

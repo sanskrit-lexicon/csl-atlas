@@ -79,7 +79,12 @@ export function genderForDict(code, body) {
 
 /**
  * Iterate records of one dictionary file.
- * Yields { L, k1, body, startLine, href }.
+ * Yields { L, k1, h, pc, body, startLine, href }.
+ *
+ * `pc` is the record's printed page/column field, kept verbatim: MW uses
+ * "page,column" (134,1), PWG uses "vol-Spalte" (1-0614). Consumers that need a
+ * Cologne scan URL must normalise it through lib/cologne-links.mjs rather than
+ * splitting it themselves — the two shapes differ per dictionary.
  */
 export function* iterateDict(code) {
   const text = fs.readFileSync(dictFile(code), "utf8");
@@ -98,7 +103,8 @@ export function* iterateDict(code) {
       const L = headerField(header, "L");
       const k1 = headerField(header, "k1");
       const h = headerField(header, "h"); // homonym index, where the dictionary marks one
-      yield { L, k1, h, body: bodyLines.join("\n"), startLine, href: dictHref(code, startLine) };
+      const pc = headerField(header, "pc"); // printed page/column; shape differs per dict
+      yield { L, k1, h, pc, body: bodyLines.join("\n"), startLine, href: dictHref(code, startLine) };
       header = null;
       bodyLines = [];
     } else if (header != null) {

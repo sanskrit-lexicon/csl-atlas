@@ -11,6 +11,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { parseCsv } from "./build-xref-hub-review.mjs";
 import { dictExists, iterateDict } from "./lib/dict-parser.mjs";
+import { cologneLinksFor, entryUrl } from "./lib/cologne-links.mjs";
 import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
@@ -40,30 +41,146 @@ export const EXPECTED_PREFIX_CONTROL_IDS = Object.freeze([
   "xref-prefix-control:mw:05"
 ]);
 
+// The closed label vocabulary. Each entry carries not just a one-line `meaning`
+// but the decision rule a reviewer actually needs: what the label asserts, what
+// it explicitly does NOT assert, and two worked examples drawn from this very
+// packet. H1646: the previous one-line-per-label form was unusable at the sheet —
+// a reviewer was asked to choose between `prefix-convention`, `normalization-risk`
+// and `too-sparse` with no definition of any of them on screen.
+//
+// `appliesToSheet: false` marks labels the hub classifier uses upstream but that
+// are NOT offered as answers on the 40-edge shared-core sheet; they are documented
+// so the vocabulary reads as a whole, not rendered as choices.
 export const XREF_LABEL_VOCABULARY = Object.freeze([
   {
     label: "lexical-shared-core",
-    meaning: "The same source lemma points to the same meaningful Sanskrit target in MW and PWG."
+    appliesToSheet: true,
+    meaning: "The same source lemma points to the same meaningful Sanskrit target in MW and PWG.",
+    asserts:
+      "Both dictionaries, independently, print a cross-reference from this headword to this target, "
+      + "and the target is a real lemma rather than a markup convention. Two editorial traditions "
+      + "made the same link.",
+    doesNotAssert:
+      "NOT that the two words are synonyms. NOT a claim about what kind of relation it is "
+      + "(variant spelling, derivative, cognate root, homophone) or in which direction it runs. "
+      + "A vṛddhi derivative, a -ka suffix formation and a dialectal by-form all qualify equally: "
+      + "the question is only whether the shared edge is real and lexical.",
+    examples: [
+      {
+        sampleId: "mw-pwg-shared:09",
+        edge: "Awi -> Aqi (āṭi -> āḍi)",
+        why:
+          "MW prints '(cf. Aqi and Ati)' and PWG prints 'Vgl. Aqi und Ati' for the same bird name "
+          + "(Turdus Ginginianus). Two independent editors recorded the same by-form link."
+      },
+      {
+        sampleId: "mw-pwg-shared:14",
+        edge: "BI -> Byas (bhī -> bhyas)",
+        why:
+          "A derivational/etymological relation between the root bhī 'fear' and bhyas, carried by both "
+          + "dictionaries. Not synonyms, and that is fine — the edge is still lexical, not an artifact."
+      }
+    ]
   },
   {
     label: "prefix-convention",
-    meaning: "The target is primarily a prefix or compound-reference convention, not rare lexical inheritance."
-  },
-  {
-    label: "edition-continuity",
-    meaning: "A stable edge across editions of the same dictionary family."
-  },
-  {
-    label: "lexical-target",
-    meaning: "A top xref target that behaves like an ordinary lexical target rather than a convention hub."
+    appliesToSheet: true,
+    meaning: "The target is primarily a prefix or compound-reference convention, not rare lexical inheritance.",
+    asserts:
+      "The cross-reference target is not a headword at all but a piece of the dictionary's own "
+      + "abbreviation machinery — a truncated compound member, or a prefix cited as a form.",
+    doesNotAssert:
+      "NOT that the entry is wrong or the reference useless — only that it is house style for "
+      + "compressing compounds, so it carries no evidence about lexical descent.",
+    examples: [
+      {
+        sampleId: "xref-prefix-control:pwg:01",
+        edge: "target 'a˚' (320 references in PWG)",
+        why:
+          "'˚' is CDSL's truncation ring: 'a˚' abbreviates 'the compound beginning in a-', not a lemma. "
+          + "Auto-resolved by this packet on the marker alone."
+      },
+      {
+        sampleId: "xref-prefix-control:mw:05",
+        edge: "target 'aBi-' (11 references in MW)",
+        why:
+          "The trailing hyphen marks a prefix cited as a compound-forming element — same house-style "
+          + "class as the ring, different mark."
+      }
+    ]
   },
   {
     label: "normalization-risk",
-    meaning: "A target string where normalization may create or hide an edge."
+    appliesToSheet: true,
+    meaning: "A target string where normalization may create or hide an edge.",
+    asserts:
+      "The edge may exist only because the pipeline folded MW and PWG spellings together. "
+      + "m6_xref_lineage.py strips MW's '-'/accent marks and PWG's '°' before intersecting, so two "
+      + "headwords the dictionaries spelt differently can meet in the middle. Reach for this label "
+      + "when source and target differ ONLY in vowel length, accent, or a diacritic the normaliser touches.",
+    doesNotAssert:
+      "NOT that the words are unrelated — a length variant is often a genuine by-form. It flags that "
+      + "THIS edge is not independent evidence, because the matching step could have manufactured it.",
+    examples: [
+      {
+        sampleId: "mw-pwg-shared:30",
+        edge: "BuHKAra -> BUHKAra (buhkāra -> būhkāra)",
+        why:
+          "Source and target differ only in the length of the first vowel, and the reciprocal edge "
+          + "mw-pwg-shared:15 runs the other way. A spelling pair, plausibly an artifact of which form "
+          + "each dictionary chose as headword."
+      },
+      {
+        sampleId: "mw-pwg-shared:21",
+        edge: "BastrakA -> BastrAkA (bhastrakā -> bhastrākā)",
+        why: "Same shape: only the placement of vowel length distinguishes the two strings."
+      }
+    ]
   },
   {
     label: "too-sparse",
-    meaning: "A pair has too few shared sources for lineage interpretation."
+    appliesToSheet: true,
+    meaning: "A pair has too few shared sources for lineage interpretation.",
+    asserts:
+      "The evidence on the card is too thin to answer either way — typically only ONE dictionary's "
+      + "record is attached (`missingExactEdgeDictionaries` is non-empty), so the 'shared' in "
+      + "shared-core is not actually demonstrated here.",
+    doesNotAssert:
+      "NOT a rejection of the edge. It is the honest answer when the card does not contain what the "
+      + "question asks about — prefer it to guessing.",
+    examples: [
+      {
+        sampleId: "mw-pwg-shared:07",
+        edge: "ArAt -> Are (ārāt -> āre), PWG only",
+        why:
+          "Only the PWG record is attached; MW has no exact edge row. PWG's record shows an ablative "
+          + "adverb pointing at a locative-shaped one, and there is no MW side to corroborate a shared "
+          + "editorial judgement."
+      },
+      {
+        sampleId: "mw-pwg-shared:03",
+        edge: "Akzit -> anAkzit (ākṣit -> anākṣit), PWG only",
+        why: "Single-dictionary evidence again: 4 of the 40 rows are in this state and are marked as such on the card."
+      }
+    ]
+  },
+  {
+    label: "edition-continuity",
+    appliesToSheet: false,
+    meaning: "A stable edge across editions of the same dictionary family.",
+    asserts: "Used by the upstream hub classifier for within-family (e.g. PW/PWG) edges.",
+    doesNotAssert: "Not an answer option on the MW/PWG shared-core sheet, which is cross-family by construction.",
+    examples: []
+  },
+  {
+    label: "lexical-target",
+    appliesToSheet: false,
+    meaning: "A top xref target that behaves like an ordinary lexical target rather than a convention hub.",
+    asserts:
+      "A property of a TARGET string in the hub profile (classifyHubTarget in build-xref-hub-review.mjs), "
+      + "carried on each row as `hubClass`. It is the reason a row reached this sheet, not a verdict on it.",
+    doesNotAssert: "Not an answer option; it describes the target, not the edge.",
+    examples: []
   }
 ]);
 
@@ -76,7 +193,13 @@ function countBy(rows, keyFn) {
   return Object.fromEntries(Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])));
 }
 
-function compactText(value, length = 260) {
+// H1646 raised this from 260. At 260 the PWG side of a long record was cut
+// mid-sense ("... 1〉 aus der Ferne, von fern; fern, ...") and the reviewer could
+// not see whether the cross-reference clause the edge rests on was even present.
+// 900 keeps whole records for the shared-core sample while staying compact.
+const EXCERPT_LENGTH = 900;
+
+function compactText(value, length = EXCERPT_LENGTH) {
   const text = String(value ?? "").replace(/\s+/g, " ").trim();
   return text.length > length ? `${text.slice(0, length - 1)}...` : text;
 }
@@ -166,6 +289,7 @@ function buildSourceRecordIndex(edgeRows) {
         L: String(rec.L),
         line: rec.startLine,
         href: rec.href,
+        pc: rec.pc ?? null,
         sourceLemma: rec.k1,
         bodyExcerpt: compactText(rec.body)
       });
@@ -201,20 +325,54 @@ function loadPreservedSourcePointers(outputPath) {
 function pointerForEdge(edge, sourceRecordIndex, role, preservedSourcePointers = new Map()) {
   const source = sourceRecordIndex.get(recordKey(edge.dict, edge.L));
   const preserved = preservedSourcePointers.get(pointerKey(edge, role));
-  if (!source && preserved) return preserved;
+  // Cologne links are derived from (dict, headword, <pc>) alone, so a pointer
+  // recovered from a previous packet still gets them — they do not depend on
+  // csl-orig being present in this run.
+  const pc = source?.pc ?? preserved?.pc ?? null;
+  const headword = source?.sourceLemma ?? preserved?.sourceRecordLemma ?? edge.k1;
+  const cologne = cologneLinksFor(edge.dict, headword, pc);
+  if (!source && preserved) return { ...preserved, pc, ...cologne };
   return {
     role,
     dictionary: String(edge.dict).toUpperCase(),
     dict: edge.dict,
     L: edge.L,
     line: source?.line ?? preserved?.line ?? null,
+    pc,
     href: source?.href ?? preserved?.href ?? null,
+    ...cologne,
     sourceLemma: edge.k1,
     sourceRecordLemma: source?.sourceLemma ?? preserved?.sourceRecordLemma ?? null,
     target: edge.target,
     kind: edge.kind,
     bodyExcerpt: source?.bodyExcerpt ?? preserved?.bodyExcerpt ?? ""
   };
+}
+
+// A cross-reference has two ends, and the packet only ever carried records for the
+// SOURCE end. Asking "is ARi -> aRi a real lexical edge?" while showing only the ARi
+// entries makes the question unanswerable — H1646: "you do not give links to Cologne,
+// to check what the entries actually contain, both aRi and ARi". These are the target
+// end: a Cologne lookup of the target headword in each dictionary.
+//
+// Built from the target string, so it is only emitted when that string is a plain
+// SLP1 headword. A truncation/prefix target (a˚, aBi-) is not a lemma and would send
+// the reviewer to an empty result, which is worse than no link.
+function isLookupableHeadword(target) {
+  return /^[A-Za-z]+$/.test(String(target ?? ""));
+}
+
+function targetLinksFor(target) {
+  if (!isLookupableHeadword(target)) return [];
+  return ["mw", "pwg"]
+    .map(dict => ({
+      role: "target-lookup",
+      dictionary: dict.toUpperCase(),
+      dict,
+      headword: target,
+      cologneEntryHref: entryUrl(dict, target)
+    }))
+    .filter(link => link.cologneEntryHref);
 }
 
 function emptyHumanFields() {
@@ -248,6 +406,7 @@ function buildSharedCoreRows(hubReview, exactEdgeIndex, sourceRecordIndex, prese
       proposedLabels: [sample.reviewLabel],
       machineInterpretation: sample.interpretation,
       sourcePointers: sourceEdges.map(edge => pointerForEdge(edge, sourceRecordIndex, "exact-shared-edge", preservedSourcePointers)),
+      targetLinks: targetLinksFor(sample.target),
       matchedDictionaries: [...matched].sort(),
       missingExactEdgeDictionaries: ["MW", "PWG"].filter(dict => !matched.has(dict)),
       reviewQuestion: sharedReviewQuestion(sample),
@@ -315,6 +474,16 @@ function validatePayload(payload) {
         errors.push(`${id}: incomplete source pointer`);
       }
       if (!pointer.href) errors.push(`${id}: source pointer ${pointer.dictionary} L${pointer.L} lacks href`);
+      if (!pointer.cologneEntryHref) {
+        errors.push(`${id}: source pointer ${pointer.dictionary} L${pointer.L} lacks cologneEntryHref`);
+      }
+    }
+  }
+  // Every shared-core row must let the reviewer read BOTH ends of the edge. A row
+  // whose target is not a lookupable headword is a finding in itself, not a silent gap.
+  for (const row of payload.sharedCoreRows) {
+    if (!row.targetLinks?.length) {
+      errors.push(`${row.sampleId}: no target-end Cologne links for target ${row.target}`);
     }
   }
   for (const row of payload.prefixControlRows) {
@@ -414,17 +583,39 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
       byProposedLabel: countBy(allRows.flatMap(row => row.proposedLabels), label => label),
       prefixControlsByDictionary: countBy(prefixControlRows, row => row.dict)
     },
+    // H1646: the reviewer could not see "the list of methods used for sampling these
+    // words", so this now states the actual mechanism end to end, including the
+    // selection bias, rather than only the steps this script performs.
     selectionPolicy: [
-      "Read the existing xref hub review artifact and xref edge CSV.",
-      "Keep the established 40-row MW/PWG shared-core sample in its current order.",
-      "Select the first five prefix-convention top targets for PWG and MW as controls.",
-      "Attach up to three dictionary source pointers per prefix target from xref_edges.csv order.",
-      "Record labels as source-check prompts, not accepted lineage decisions."
+      "Stage 1 — build the candidate pool: scripts/lexico/m6_xref_lineage.py reads MW's and PWG's "
+        + "cross-reference edges, normalises each target (strips MW's '-' and accent marks and PWG's "
+        + "'°' ring), and writes the MW-intersect-PWG set to data/lexico/xref_shared_edges.csv. "
+        + "That intersection is 642 edges.",
+      "Stage 2 — take the sample: buildSharedCoreSample() in scripts/build-xref-hub-review.mjs takes "
+        + "sharedEdges.slice(0, 40), i.e. the FIRST 40 rows of that CSV in file order.",
+      "NOT A RANDOM SAMPLE, and the bias is visible on the sheet: the CSV is in headword order, so "
+        + "all 40 cards are Ā-, B-, C-, D- and G-initial headwords. Findings from these 40 describe "
+        + "the head of the alphabet, not the 642 as a whole. Re-running over a random or stratified "
+        + "draw is a separate, unstarted job.",
+      "Stage 3 — attach evidence: this script re-slices to 40, keeps the frozen sampleId order "
+        + "(validatePayload rejects any reorder), and attaches the exact MW/PWG source records per edge "
+        + "from xref_edges.csv, plus Cologne entry/scan links for both ends of the edge.",
+      "Controls: the first five prefix-convention top targets for PWG and MW, with up to three source "
+        + "examples each, are carried alongside as a contrast class; all ten auto-resolve on their "
+        + "truncation marker and are not put to the reviewer.",
+      "Deterministic throughout — no RNG anywhere in the three stages; re-running reproduces the same "
+        + "40 cards in the same order.",
+      "Labels on the cards are source-check prompts, not accepted lineage decisions."
     ],
     sharedCoreRows,
     prefixControlRows,
     limitations: [
       "Machine labels are review prompts only; this packet records no source-check decisions.",
+      "The 40 shared-core rows are the first 40 of 642 shared edges in headword order, not a random "
+        + "sample: every card is an Ā-, B-, C-, D- or G-initial headword. Do not generalise a rate "
+        + "measured on these 40 to the full intersection.",
+      "Cologne entry links resolve a HEADWORD, not this exact record: where a dictionary has homonyms "
+        + "the lookup shows all of them. The csl-orig blob link is the pointer to the precise record.",
       "Some shared-core sample rows are present in the shared-edge sample but lack an exact MW edge row in xref_edges.csv; those rows remain visible with missing-exact-edge metadata.",
       "Prefix controls test convention pressure and are not optimization targets for lineage claims.",
       "Cross-reference overlap remains dictionary-internal evidence and must not be mixed with DCS/corpus co-occurrence.",
