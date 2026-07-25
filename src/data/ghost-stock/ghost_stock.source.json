@@ -1,0 +1,19 @@
+{
+  "dataset": "ghost_stock",
+  "commit": "46644594a76573a3693dedbca53748cbdf0141bd",
+  "unionRepo": "https://github.com/gasyoun/SanskritLexicography",
+  "unionPath": "HeadwordLists/union/union_headwords.tsv",
+  "crosswalkPath": "HeadwordLists/mw_heritage_crosswalk.tsv",
+  "siblingCommit": "12ba7095fefd6916d27e6cf23dc77531b6e0e68a",
+  "dcsCorpusRelease": "DCS-2021",
+  "generatedAt": "2026-07-25T16:33:00.201Z",
+  "generatedBy": "npm run build-ghost-stock",
+  "sourceFiles": [
+    "SanskritLexicography/HeadwordLists/union/union_headwords.tsv",
+    "SanskritLexicography/HeadwordLists/mw_heritage_crosswalk.tsv",
+    "data/dcs/dcs_lemma_summary.json",
+    "src/data/lexicographic-structure/dictionary_inventory.csv",
+    "scripts/build-ghost-stock.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}

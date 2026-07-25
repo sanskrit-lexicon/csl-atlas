@@ -57,6 +57,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/correction-loci": "Where accepted corrections land in each printed Cologne dictionary — page-position heatmap, editorial per-1k-entries radar axes, hottest corrected pages, and maker-QA correction-pressure column, split machine-batch vs human.",
   "/tools/correction-front": "Diachronic correction front — month×component and 2014–2018 vs 2019–2026 era strips from OBS-T events (atlas renders; csl-observatory owns the typology).",
   "/tools/heritage-witness": "Which Monier-Williams headwords the independent Sanskrit Heritage Platform (INRIA) lexicon confirms, joined via the MW-Heritage crosswalk — coverage by initial letter and a searchable witnessed-headword table.",
+  "/tools/ghost-stock": "Ghost stock (PH4+PH6): is dictionary-unique Sanskrit vocabulary real? DCS attestation by dictionary-multiplicity with Wilson CIs, per-dictionary unique-attested shares, the MW Heritage 2x2x2 witness cube, and a ranked (inferred) ghost-candidate review queue.",
   "/tools/dictionary-senses": "Which Cologne Sanskrit dictionary treats a lemma's senses most richly, measured by structural sense divisions.",
   "/tools/lexicography": "Dictionary genealogy: first empirical findings on how the Cologne Sanskrit dictionaries descend from one another, derived from canonical headword data.",
   "/tools/descent-axes": "Descent axes (PH2 CITE-4AXIS): whether citation-profile similarity is a fourth separable axis of dictionary inheritance beside content, convention, and microstructure — axis-pair scatters and the 4×4 correlation matrix on the testable L0 edges.",
@@ -189,6 +190,7 @@ export default {
         { name: "Correction loci", path: "/tools/correction-loci" },
         { name: "Correction front", path: "/tools/correction-front" },
         { name: "Heritage witness", path: "/tools/heritage-witness" },
+        { name: "Ghost stock", path: "/tools/ghost-stock" },
         { name: "Sense depth", path: "/tools/dictionary-senses" },
         { name: "Lemma dossier", path: "/tools/dictionary-dossier" }
       ]

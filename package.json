@@ -33,6 +33,8 @@
     "build-correction-lane-overlays": "node scripts/build-correction-lane-overlays.mjs",
     "build-heritage-witness": "node scripts/build-heritage-witness.mjs",
     "validate-heritage-witness": "node scripts/validate-heritage-witness.mjs",
+    "build-ghost-stock": "node scripts/build-ghost-stock.mjs",
+    "validate-ghost-stock": "node scripts/validate-ghost-stock.mjs",
     "build-structural-register": "node scripts/build-structural-register.mjs",
     "build-h6-structural-review": "node scripts/build-h6-structural-review.mjs",
     "build-sense-depth": "node scripts/build-sense-depth.mjs",
