@@ -11,16 +11,16 @@ abstract: >-
 type: software
 authors:
   - family-names: "Gasūns"
-    given-names: "Mikhail"
+    given-names: "Mārcis"
     alias: "gasyoun"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"  # TODO: register an ORCID and add it
+    orcid: "https://orcid.org/0000-0003-4513-884X"
   - family-names: "Funderburk"
     given-names: "Jim"
     alias: "funderburkjim"
     # orcid: ...  # TODO
   - alias: "Andhrabharati"  # TODO: confirm preferred legal name and ORCID
-version: "0.5.0"
-date-released: "2026-07-24"
+version: "0.6.0"
+date-released: "2026-07-25"
 license: "CC-BY-SA-4.0"
 repository-code: "https://github.com/sanskrit-lexicon/csl-atlas"
 url: "https://sanskrit-lexicon.github.io/csl-atlas/"
