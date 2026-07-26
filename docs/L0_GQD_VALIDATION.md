@@ -134,9 +134,17 @@ Three things this table says that the existing L0 validation could not:
 3. **The tradition gold is barely beaten** (0.53–0.61, z ≈ −1.7 to −4.4). Convention similarity does *not* reduce to "dictionaries with the same target language look alike" — if it did, the tradition column would be the strong one. It is the weak one.
 
 Two honesty notes. `canonical_consensus.newick` and `B_whamming_upgma.newick` are
-**byte-identical** in the committed data (blob `bfbdf371`): the 1000× dimension-bootstrap
-consensus recovered the point estimate exactly, so their rows coincide by construction, not
-by coincidence. And `A_jaccard_upgma` scores *better* than the published canonical
+**byte-identical** in the committed data (blob `bfbdf371`), so their two rows are one
+measurement, not two. Chasing that identity turned up a mislabel worth recording: despite
+the filename, the canonical file is **not a consensus tree** — `s3_cladogram.py`'s 1000×
+bootstrap loop accumulates per-edge support counts and never builds a topology from the
+replicates, so the canonical tree is the single-run UPGMA on the full `B_whamming` matrix.
+The support numbers are unaffected and nothing needed recomputing, but the prose that called
+it a consensus was corrected in the same pass, and the choice between renaming the file and
+actually publishing a majority-rule consensus is
+[csl-atlas#313](https://github.com/sanskrit-lexicon/csl-atlas/issues/313). A real consensus
+could carry polytomies and would change these GQD numbers — which is exactly why it is a
+human's call, not a cleanup. And `A_jaccard_upgma` scores *better* than the published canonical
 (0.1102 vs 0.1456). The canonical config was **pre-registered** in `L0_DESIGN.md` §5–§6 and
 is not re-opened on the strength of a metric computed after the fact — selecting the
 best-scoring config post hoc is exactly the overfitting the pre-registration exists to

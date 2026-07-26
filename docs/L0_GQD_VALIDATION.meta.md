@@ -56,7 +56,12 @@ accuracy. Not a reader-facing page — the site-facing summary is one sentence i
 - `A_jaccard_upgma` beats the pre-registered canonical (0.1102 vs 0.1456). This must not be
   used to re-canonicalise — pre-registration is the reason the 0.1456 is credible.
 - `canonical_consensus.newick` and `B_whamming_upgma.newick` are byte-identical in the
-  committed data, so their rows are not independent evidence.
+  committed data, so their rows are not independent evidence — and the reason is a
+  mislabel, not convergence: no consensus topology is ever built
+  ([csl-atlas#313](https://github.com/sanskrit-lexicon/csl-atlas/issues/313), found here).
+  If that issue is resolved by publishing a real majority-rule consensus, every number in
+  this doc must be recomputed, because a consensus can carry polytomies and the strict/
+  literal GQD pair would then diverge.
 
 ## Revision history
 

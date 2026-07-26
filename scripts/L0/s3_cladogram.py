@@ -13,15 +13,20 @@ Honest deviation from the design's nominal "27 trees" (3 encodings × 3 metrics 
 secondary), so encodings B and C share one categorical value and differ only in
 the distance weighting — giving 4 meaningful (encoding, metric) configs, not 9.
 Algorithms = UPGMA + Neighbour-Joining; the design's Bayesian-consensus canonical
-tree is approximated by a 1000× dimension-bootstrap majority-consensus UPGMA
-(full MCMC deferred per design §9 risk-mitigation). Every deviation is recorded
-in validation_report.json.
+tree is approximated by a UPGMA *point estimate* on the full B_whamming matrix,
+annotated with 1000× dimension-bootstrap per-edge support (full MCMC deferred per
+design §9 risk-mitigation). NOTE (corrected 26-07-2026, H1578): despite the
+output filename, no majority-consensus topology is built — the bootstrap loop
+below accumulates edge-support counts only, so canonical_consensus.newick is
+byte-identical to B_whamming_upgma.newick by construction. See csl-atlas#313.
+Every deviation is recorded in validation_report.json.
 
 Outputs (data/L0/):
   encoded/onehot.csv                      encoding A binary matrix
   distances/<config>.csv                  4 pairwise distance matrices
   trees/<config>_<algo>.newick            8 candidate trees
-  trees/canonical_consensus.newick        bootstrap-consensus canonical tree
+  trees/canonical_consensus.newick        canonical UPGMA point estimate (historical
+                                          filename; NOT a consensus — see csl-atlas#313)
   trees/canonical_consensus.txt           ASCII rendering
   trees/canonical_consensus.png           dendrogram
   tree_comparison_robinson_foulds.csv     8×8 normalised RF
@@ -324,7 +329,9 @@ def main():
                 row.append(f"{rf_distance(trees[a], trees[b], codes):.3f}")
             w.writerow(row)
 
-    # ---- canonical tree: 1000× dimension-bootstrap consensus UPGMA on B_whamming ----
+    # ---- canonical tree: UPGMA on B_whamming + 1000× dimension-bootstrap EDGE SUPPORT ----
+    # The loop below resamples dimensions to count per-edge support; it does NOT build a
+    # consensus topology. The canonical tree at L~350 is the unresampled point estimate.
     base_cfg = "B_whamming"
     edge_support = defaultdict(int)
     knn_hits = defaultdict(int)

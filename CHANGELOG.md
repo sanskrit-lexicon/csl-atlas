@@ -38,6 +38,22 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   `A_jaccard_upgma` scores better (0.1102) than the pre-registered canonical and was
   deliberately **not** promoted.
 
+### Fixed — `canonical_consensus.newick` was described as something it is not (H1578)
+
+- Chasing why two L0 trees scored identically under GQD surfaced a mislabel:
+  `data/L0/trees/canonical_consensus.newick` is **not a consensus tree**. The 1000×
+  dimension-bootstrap loop in
+  [`scripts/L0/s3_cladogram.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/L0/s3_cladogram.py)
+  accumulates per-edge support counts and never builds a topology from the replicates, so
+  the canonical file is the single-run UPGMA on the full `B_whamming` matrix and is
+  byte-identical to `B_whamming_upgma.newick`. Corrected the prose that asserted otherwise
+  — the public `/tools/lexicographic-conventions` page, `docs/L0_RESULTS.md` §1/§4/§6, and
+  the script's own docstring and section comment. **No data, tree or number changed**; the
+  bootstrap support values are genuinely resampled and remain valid. Whether to rename the
+  file or to actually publish a majority-rule consensus (which would change the published
+  topology and every GQD number) is filed as
+  [csl-atlas#313](https://github.com/sanskrit-lexicon/csl-atlas/issues/313) for a human.
+
 ## [0.11.0] - 2026-07-26
 
 ### Changed — xref sheet: the "independent witnesses" claim retracted, instructions in Russian (H1648)
