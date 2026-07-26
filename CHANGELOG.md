@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.12.0] - 2026-07-26
+
 ### Added — GQD validation of the L0 convention stemma (H1578)
 
 - **`npm run build-l0-gqd` + `validate-l0-gqd`**
