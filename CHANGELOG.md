@@ -4,6 +4,34 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — PH5 ORTHO-CLOCK gloss-orthography census + V5 explorer (H1577)
+
+- **`npm run build-ortho-drift` + `validate-ortho-drift`**
+  ([`scripts/build-ortho-drift.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-ortho-drift.mjs),
+  [`scripts/validate-ortho-drift.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/validate-ortho-drift.mjs)):
+  deterministic census of pre-reform German/Russian spellings in dictionary gloss
+  text against the frozen SanskritSpellCheck reform maps (15,685 DE / 7,709 RU
+  pairs, consumed read-only from the sibling checkout) →
+  [`data/lexico/ortho_drift.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/ortho_drift.json)
+  (+ `.source.json`), with entry-bootstrap CIs, exhaustive-permutation Spearman,
+  and directional entry-level pair tests. 11 unit tests in
+  [`test/ortho-drift.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/ortho-drift.test.mjs).
+- **V5 page [`/tools/ortho-drift`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/ortho-drift.md)**:
+  drift-vs-year scatter with lineage lanes and CIs, era-composition clock,
+  descent pair-test table, searchable top-drifted-forms table (a learner
+  search-normalisation aid), Russian Kossovich section, CSVs + Trust Block.
+- **Measured verdicts** (registered in
+  [`docs/HYPOTHESIS_INDEX.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_INDEX.md)
+  as ORTHO-CLOCK, Type 1; agenda backlog #6 ticked): the density clock is
+  direction-consistent but inconclusive at n=6 (ρ=−0.52, exhaustive p=0.30) and
+  is really a **house-style clock** — the Böhtlingk lane stays uniformly fossil
+  (PWG 14.8 → PW 17.5/1k) while non-Böhtlingk dictionaries modernise with date
+  (GRA 10.4, CCS 6.5, SCH 4.8); the **descent sub-claim is refuted** (CCS 1887,
+  a declared Petersburg descendant, is LESS pre-reform than the independent
+  GRA 1873 — Cappeller re-spelled); the **era-composition clock is robust**
+  (SCH-1928 flips to 69% 1996-ß, reproducing the upstream control at the atlas
+  layer); Russian Kossovich (1854) runs at 358/1k, a single dated point.
+
 ## [0.9.0] - 2026-07-25
 
 ### Changed — xref shared-core review sheet made answerable (H1646)

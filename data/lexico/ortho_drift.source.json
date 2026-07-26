@@ -1,0 +1,20 @@
+{
+  "dataset": "ortho_drift",
+  "commit": "d19ac2763e5318367cd3748f7061b2b4450909d1",
+  "reformMapRepo": "https://github.com/drdhaval2785/SanskritSpellCheck",
+  "reformMapCommit": "e9b785800d0ff8c746ecaf04a493bdd495e9b843",
+  "kossovichRepo": "https://github.com/gasyoun/SamudraManthanam",
+  "kossovichCommit": "b4f7d8432bcf2162ef6936425e44f8cb3edc08b1",
+  "cslOrigCommit": "ae1196d0e37d734f0a33ec08833ac7dd37f241c3",
+  "generatedAt": "2026-07-26T02:58:54.101Z",
+  "generatedBy": "npm run build-ortho-drift",
+  "sourceFiles": [
+    "SanskritSpellCheck/ortho_drift/de_reform_map.tsv",
+    "SanskritSpellCheck/ortho_drift/ru_reform_map.tsv",
+    "csl-orig/v02/{pwg,gra,pw,pwkvn,ccs,sch}",
+    "SamudraManthanam/web/corpus_builder/jsonl/kossovich.jsonl",
+    "src/data/lexicographic-structure/dictionary_inventory.csv",
+    "scripts/build-ortho-drift.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}
