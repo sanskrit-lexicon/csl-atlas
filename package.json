@@ -101,6 +101,8 @@
     "build-three-axis-independence": "node scripts/build-three-axis-independence.mjs",
     "build-four-axis-independence": "node scripts/build-four-axis-independence.mjs",
     "validate-four-axis-independence": "node scripts/validate-four-axis-independence.mjs",
+    "build-l0-gqd": "python scripts/L0/s7_gqd.py",
+    "validate-l0-gqd": "node scripts/validate-l0-gqd.mjs",
     "build-root-agreement-kappa": "python scripts/lexico/root_agreement_kappa.py",
     "validate-review-reports": "node scripts/validate-review-reports.mjs",
     "build-divergence-map": "python scripts/lexico/build_divergence_map.py",

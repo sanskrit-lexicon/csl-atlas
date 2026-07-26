@@ -414,7 +414,7 @@ lives in the anchor memo §4; no overlap below.)
 | LSC metric design + usage-graph gold | [Goworek & Dubossarsky 2026](https://aclanthology.org/2026.lchange-1.13/) · [ChiWUG 2023](https://aclanthology.org/2023.lchange-1.10/) | any future "sense drift" score | how to gold-standard drift numbers before trusting them | R2 review packets; delta = WUG-style pairwise-judgment recipe |
 | Historical text normalisation benchmark | [Bollmann 2019](https://aclanthology.org/N19-1389/) | gloss-language orthography (PH5) | method space + accuracy/CER conventions for reform-map application | do-not-file wiring; delta = the evaluation frame for ORTHO-CLOCK |
 | OCR post-correction for historical print | [Rijhwani, Anastasopoulos & Neubig 2020](https://aclanthology.org/2020.emnlp-main.478/) | digitisation QA vs scans | CER/WER conventions if scan-vs-text QA is measured (needs scan gold — net-new) | H5; delta = evaluation convention |
-| Character-matrix phylogenetics with automated input | [Rama, List, Wahle & Jäger 2018](https://aclanthology.org/N18-2063/) | L0 headword/gloss character matrices | validate the machine stemma vs the known genealogy (Generalized Quartet Distance; B-cubed F1) | L0 trees + bootstrap; delta = the automated-vs-expert tree-agreement statistic the L0 layer lacks |
+| Character-matrix phylogenetics with automated input | [Rama, List, Wahle & Jäger 2018](https://aclanthology.org/N18-2063/) | L0 headword/gloss character matrices | validate the machine stemma vs the known genealogy (Generalized Quartet Distance; B-cubed F1) | **ADOPTED (H1578):** GQD landed at 0.1456 vs documented descent — [`L0_GQD_VALIDATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_GQD_VALIDATION.md); remaining delta = B-cubed F1 on the same gold |
 | Inter-coder agreement norms | [Artstein & Poesio 2008](https://aclanthology.org/J08-4004/) | every human review queue | κ/α reporting on adjudications (xref hubs, H4/H5/PH6 packets) | M7-ROOT-AGREE reports κ; delta = extend the norm to *human* review queues |
 | Significance-testing protocol | [Dror et al. 2018](https://aclanthology.org/P18-1128/) | every comparative claim | test-selection discipline (bootstrap / permutation) memo-wide | ad-hoc per-hypothesis stats; delta = one standing protocol |
 | Data statements | [Bender & Friedman 2018](https://aclanthology.org/Q18-1041/) | every released derived dataset | data-statement fields in `.source.json`/README before any Zenodo release | `.source.json` envelopes; delta = curation-rationale + limitations fields |
@@ -427,7 +427,8 @@ requirements in
 so every figure carries the right test and every adjudication a κ. (2) The **AAN
 citation-network recipe** is the shortest path to making A50 real: the edges are committed;
 what is missing is exactly what Radev et al. standardised. (3) **Phylogenetics validation**
-(Rama et al.) is the one method that would materially harden the L0 stemma for reviewers.
+(Rama et al.) — the one method that would materially harden the L0 stemma for reviewers —
+is **done** (H1578, backlog #8): GQD 0.1456 against documented descent, z=−7.7.
 (4) The **MWSA label protocol** is the right frame for sense work but stays *deferred*
 until the R2 parser packet unblocks the cross-language pair — do not prototype early.
 
@@ -515,7 +516,7 @@ analysis-heavy · Sonnet = mechanical build · Opus = judgment-heavy review.
 | 5 | ✅ PH8 Heaps saturation + PH3 era signatures + V4 panels — **DONE (H1576, 25-07-2026):** PH8 supported (Heaps V(n)=K·n^0.538, log–log R²=0.989; biggest breaks SKD +170% / BHS +178%; specialised-break trio descriptive only, order-perm p=0.070; post-1890 general novelty 5.7–40.3%, not <5%), PH3 supported per-dictionary (GRA −423 CE / TVD 0.49, SKD +956, Petersburg ~516–574) with family-level KW descriptive (p≈0.14 — canon, not family, drives the signature) — `build-heap-sat.mjs`, `build-period-signatures.mjs`, V4 panels i+ii on `/tools/dictionary-coverage` | a+c | M | — | csl-atlas | Fable 5 (`claude-fable-5`) |
 | 6 | ✅ PH5 ortho-drift census + V5 page — **DONE (H1577, 26-07-2026):** clock (i) direction-consistent but inconclusive at n=6 (Spearman ρ=−0.52, exhaustive p=0.30) and reframed as a HOUSE-STYLE clock (Böhtlingk lane uniformly fossil 14.8–17.5/1k regardless of date; non-Böhtlingk modernise with date: GRA 10.4 → CCS 6.5 → SCH 4.8), descent (ii) REFUTED (CCS 1887 descendant LESS pre-reform than independent GRA 1873, −3.98/1k, one-sided p=1; Cappeller re-spelled), era-composition clock robust (SCH-1928 flips to 69% 1996-ß); Russian: Kossovich 358/1k single point — `/tools/ortho-drift`, `build-ortho-drift.mjs`, `data/lexico/ortho_drift.json` | d | M–L | frozen reform maps | csl-atlas | Fable 5 (`claude-fable-5`) |
 | 7 | PH7 canon-breadth-vs-year | a+b | S | #1 | csl-atlas | Fable |
-| 8 | Rama-et-al. GQD validation of the L0 stemma | bonus | M | L0 trees (committed) | csl-atlas | Fable |
+| 8 | ✅ Rama-et-al. GQD validation of the L0 stemma — **DONE (H1578, 26-07-2026):** the published convention stemma agrees with **85.4%** of the documented-descent quartets (GQD 0.1456 vs a leaf-permutation null of 0.666 ± 0.068, z=−7.7, p=0.001); all 10 gated trees land 0.110–0.172, so the agreement is a property of the convention characters, not of UPGMA. Convention ≠ content confirmed at topology level: against the same expert gold the lemma-overlap tree scores 0.430 vs the convention tree's 0.147, and the two recover *different* families (Petersburg 1.000 convention / 0.395 content; Wilson 0.442 convention / 1.000 content). Reticulation limit recorded — 5 documented edges (incl. PWG→MW) are unrepresentable in any tree, so 0.1456 is a floor — [`L0_GQD_VALIDATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_GQD_VALIDATION.md), `scripts/L0/s7_gqd.py`, `data/L0/gqd_*` | bonus | M | L0 trees (committed) | csl-atlas | Fable 5 (`claude-fable-5`) |
 | 9 | Tradition-tag map for A50 §4 (review queue) | b | S | #1 | csl-atlas + human review | Opus |
 | 10 | Trust-template upgrade: Dror protocol + κ norm + data-statement fields | — | S | — | csl-atlas | Sonnet |
 | 11 | Correction-fed pages (loci heatmap, radar axes, front strip, dossier chip) | a | M | `correction_loci.tsv` feed | **H271 lane** (specs exist) | per DH_IMPROVEMENT_MEMO |
@@ -540,9 +541,7 @@ Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Fable_csl-atlas_coverag
 ```
 🔴 EXECUTED: [H1577-Fable_csl-atlas_ortho-drift-census_24.07.26.md](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1577-Fable_csl-atlas_ortho-drift-census_24.07.26.md) (26-07-2026 — backlog #6 done, see the table above)
 
-```
-Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Fable_csl-atlas_l0_gqd_validation_DD.MM.YY.md and execute it.
-```
+🔴 EXECUTED: [H1578-Fable_csl-atlas_l0-gqd-validation_24.07.26.md](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1578-Fable_csl-atlas_l0-gqd-validation_24.07.26.md) (26-07-2026 — backlog #8 done, see the table above)
 
 ## 7. Deferred / out-of-scope appendix
 

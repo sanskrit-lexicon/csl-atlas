@@ -121,6 +121,7 @@ Architecture and planning:
 - [Dictionary comparison plan](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
 - [H6 structural-register scatter](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H6_STRUCTURAL_REGISTER_SCATTER.md) — implemented scholar-facing analysis page and chart spec
 - [Microstructure profile](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_PROFILE.md) · [methods](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_METHODS.md) · [findings](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_FINDINGS.md)
+- [L0 GQD validation](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_GQD_VALIDATION.md) — how much of the documented dictionary genealogy the convention stemma actually recovers (Generalized Quartet Distance)
 - DCS migration material now lives in `VisualDCS/docs/csl-atlas-migration/`; active corpus work belongs outside this repo
 - [Review reports](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary
 - [Review queue proofs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_QUEUE_PROOFS.md) — what each review queue proves before procedure

@@ -24,7 +24,7 @@ The headline finding is that **convention-lineage and content-lineage are distin
 
 - Evidence: L0 convention-fingerprint files under `src/data/lexicographic-structure/L0/`, Patel 2016 assignments, and validation reports.
 - Limitations: convention lineage measures house style and markup practice; it is separate from content inheritance.
-- Validation: checked by `npm run build`; L0 validation details are in `docs/L0_RESULTS.md` and `docs/L0_DESIGN.md`.
+- Validation: checked by `npm run build`; L0 validation details are in `docs/L0_RESULTS.md` and `docs/L0_DESIGN.md`. Against documented descent the published tree scores a **Generalized Quartet Distance of 0.146 — 85.4% agreement** with the expert-resolved quartets, versus 0.666 ± 0.068 for randomly relabelled trees (all ten gated trees fall in 0.110–0.172); the lemma-overlap tree scores 0.430 on the same gold. Method, gold trees, and the five documented edges no tree can represent: [`docs/L0_GQD_VALIDATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_GQD_VALIDATION.md).
 - Owner repo: `csl-atlas`.
 - Next use: treat the chart as structural evidence, then check companion docs before making a lineage claim.
 
@@ -59,8 +59,8 @@ display(html`<div style="display:flex;gap:0.8rem;flex-wrap:wrap;">
 
 ## The canonical convention cladogram
 
-UPGMA on the rare-option-weighted Hamming distance over the 25 convention dimensions, with
-1000× dimension-bootstrap consensus. Five readable clades emerge: the **Petersburg
+UPGMA on the rare-option-weighted Hamming distance over the 25 convention dimensions,
+annotated with 1000× dimension-bootstrap edge support. Five readable clades emerge: the **Petersburg
 formatting family** (PWG/PW/SCH/CCS/CAE), the **Latin/German etymological + MW** group, the
 **Anglo-Indian** line (WIL/SHS/AP90/AP/MD), the **indigenous + verb** dicts (SKD/VCP/KRM),
 and a mixed/index cluster.
@@ -264,7 +264,7 @@ Inputs.table(residual, {
 
 - **Fingerprint**: 7 Patel conventions (`source = patel2016`, from his per-dict classification) + 18 auto-extracted markup dimensions. English-headword dicts (BOR, AE) are excluded by Patel from the Sanskrit-headword conventions; LRV, FRI are not in Patel's 36 and remain partially gated; KNA/KOW/AMAR lack a local source.
 - **Distance**: rare-option-weighted Hamming, missing-aware, with cell-level Jaccard for multi-valued conventions. Encoding choice barely moves the tree (Robinson–Foulds ≈ 0.07 between Jaccard and Hamming UPGMA); algorithm choice matters more (UPGMA vs NJ ≈ 0.5).
-- **Canonical tree**: 1000× dimension-bootstrap consensus UPGMA; full Bayesian MCMC deferred (design §9). Config `B_whamming` is pre-registered, not tuned to recovery.
+- **Canonical tree**: UPGMA **point estimate** on the full `B_whamming` matrix, annotated with 1000× dimension-bootstrap per-edge support; full Bayesian MCMC deferred (design §9). Config `B_whamming` is pre-registered, not tuned to recovery. The file is named `canonical_consensus.newick` for historical reasons and is byte-identical to `B_whamming_upgma.newick` — the bootstrap resampling produces the support numbers, **not** a majority-rule consensus topology (corrected 26-07-2026, H1578; tracked in [csl-atlas#313](https://github.com/sanskrit-lexicon/csl-atlas/issues/313)).
 - **Reproduce**: `scripts/L0/s2_fingerprint.py` → `s2b_patel_auto.py` → `s2d_patel_gold.py` → `s3_cladogram.py`. Taxonomy & numbering in [`refs/fingerprint_conventions.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/fingerprint_conventions.md) + [`refs/concordance.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/concordance.md).
 
 [← back to Dictionary genealogy](lexicography) · [overview](../)

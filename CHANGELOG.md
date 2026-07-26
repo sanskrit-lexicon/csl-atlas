@@ -4,6 +4,56 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — GQD validation of the L0 convention stemma (H1578)
+
+- **`npm run build-l0-gqd` + `validate-l0-gqd`**
+  ([`scripts/L0/s7_gqd.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/L0/s7_gqd.py),
+  [`scripts/validate-l0-gqd.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/validate-l0-gqd.mjs)):
+  Generalized Quartet Distance (Pompei, Loreto & Tria 2011 eq. 8, the tree-evaluation
+  metric of Rama, List, Wahle & Jäger 2018) scored over the committed L0 trees against
+  two expert references, neither built from convention characters. Re-implemented from
+  the published definition — four-point condition on unit-weight topological distances,
+  no phylogenetics dependency — with a 999-permutation leaf-shuffle null, deterministic
+  seed, and a 21-check `--selftest`. Outputs
+  [`data/L0/gqd_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/L0/gqd_report.json),
+  `gqd_validation.csv`, `gqd_clade_recovery.csv`, `gqd_tree_matrix.csv` and the gold trees
+  under [`data/L0/gold/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/L0/gold)
+  (with a per-group documentary-warrant CSV). Re-running reproduces all four outputs
+  byte-for-byte.
+- **[`docs/L0_GQD_VALIDATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_GQD_VALIDATION.md)**
+  (+ `.meta.md`): the published convention stemma agrees with **85.4% of the
+  documented-descent quartets** (GQD 0.1456 vs a null of 0.666 ± 0.068, z=−7.67,
+  p=0.001); all ten gated trees span 0.110–0.172, so the agreement survives every
+  encoding/metric/algorithm choice. Convention ≠ content is now a topology-level result:
+  against the same gold the lemma-overlap tree scores 0.4302, and the two axes recover
+  *different* documented families (Petersburg 1.000 convention / 0.395 content; Wilson
+  0.442 / 1.000). The Patel-2016 convention ingest is worth ≈0.28 GQD. Registered as
+  `L0-GQD` in
+  [`docs/HYPOTHESIS_INDEX.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_INDEX.md);
+  agenda backlog #8 ticked.
+- **Honest limits carried in the doc, the report JSON and the registry**: the gold is a
+  tree while dictionary descent is reticulate, so five documented edges (including
+  PWG→MW) are unrepresentable and 0.1456 is a floor; two gold groups cite lemma
+  containment, which advantages the content tree and never the convention tree;
+  `A_jaccard_upgma` scores better (0.1102) than the pre-registered canonical and was
+  deliberately **not** promoted.
+
+### Fixed — `canonical_consensus.newick` was described as something it is not (H1578)
+
+- Chasing why two L0 trees scored identically under GQD surfaced a mislabel:
+  `data/L0/trees/canonical_consensus.newick` is **not a consensus tree**. The 1000×
+  dimension-bootstrap loop in
+  [`scripts/L0/s3_cladogram.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/L0/s3_cladogram.py)
+  accumulates per-edge support counts and never builds a topology from the replicates, so
+  the canonical file is the single-run UPGMA on the full `B_whamming` matrix and is
+  byte-identical to `B_whamming_upgma.newick`. Corrected the prose that asserted otherwise
+  — the public `/tools/lexicographic-conventions` page, `docs/L0_RESULTS.md` §1/§4/§6, and
+  the script's own docstring and section comment. **No data, tree or number changed**; the
+  bootstrap support values are genuinely resampled and remain valid. Whether to rename the
+  file or to actually publish a majority-rule consensus (which would change the published
+  topology and every GQD number) is filed as
+  [csl-atlas#313](https://github.com/sanskrit-lexicon/csl-atlas/issues/313) for a human.
+
 ## [0.11.0] - 2026-07-26
 
 ### Changed — xref sheet: the "independent witnesses" claim retracted, instructions in Russian (H1648)

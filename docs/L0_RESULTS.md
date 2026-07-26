@@ -12,7 +12,7 @@
 1. **`s2_fingerprint.py`** — auto-extracts dims 9–30 from the 32 local CDSL sources.
 2. **`s2b_patel_auto.py`** — mechanical pre-fill of the two parseable Patel conventions (dims 2, 4) for dicts outside Patel's coverage (LRV, FRI).
 3. **`s2d_patel_gold.py`** — ingests **Patel 2016's authoritative per-dict assignments** for conventions 1–7 (`data/L0/patel2016_assignments.csv`), the gold ground truth that **closes the annotation gate** for all 30 covered dicts. Conventions are multi-valued → cells store `+`-joined option sets (e.g. AP90 dim 1 = `1.1+1.3+1.5`).
-4. **`s3_cladogram.py`** — 4 (encoding, metric) configs → UPGMA + NJ (8 trees), Robinson–Foulds, 1000× dimension-bootstrap consensus canonical tree, validation. Multi-valued cells expand to per-option one-hot tokens (encoding A) with cell-level Jaccard inside the Hamming metrics.
+4. **`s3_cladogram.py`** — 4 (encoding, metric) configs → UPGMA + NJ (8 trees), Robinson–Foulds, a canonical UPGMA point estimate annotated with 1000× dimension-bootstrap per-edge support, validation. Multi-valued cells expand to per-option one-hot tokens (encoding A) with cell-level Jaccard inside the Hamming metrics.
 
 Run over **32 dicts × 25 informative dims** (Patel's 7 now all live + dims 9–30).
 
@@ -96,9 +96,17 @@ idiosyncratic (rare) headwords (rare@3 0.70 / rare@5 0.82), versus 35–49% for 
 17k headwords are exclusive to the MW/PW pair.* The convention≠content finding is unchanged — it
 never relied on the magnitude.
 
-## 4. The tree (canonical, `B_whamming` UPGMA, bootstrap-consensus)
+## 4. The tree (canonical, `B_whamming` UPGMA point estimate, bootstrap-annotated)
 
-`data/L0/trees/canonical_consensus.{newick,txt,png}` — five clean clades:
+`data/L0/trees/canonical_consensus.{newick,txt,png}` — five clean clades.
+
+> **Naming correction (26-07-2026, H1578).** Despite the filename, this is **not** a
+> consensus tree: `s3_cladogram.py`'s 1000× bootstrap loop accumulates per-edge support
+> counts and never builds a topology from the replicates, so the canonical file is the
+> single-run UPGMA on the full `B_whamming` matrix and is byte-identical to
+> `B_whamming_upgma.newick`. The support numbers are unaffected. Whether to rename the file
+> or to actually publish a majority-rule consensus is
+> [csl-atlas#313](https://github.com/sanskrit-lexicon/csl-atlas/issues/313).
 - **Petersburg formatting** (red): PWG, PW, SCH, CCS, CAE.
 - **Latin/German etymological + MW** (green): BOP, MW72, BUR, VEI, GRA, MW, BHS, BEN.
 - **Anglo-Indian** (orange): WIL, SHS, MD, INM, AP90, AP, GST.
@@ -147,7 +155,7 @@ the three-algorithm agreement on the strong edges is the rigor warrant (design �
 ## 6. Deviations from the design (in `validation_report.json`)
 
 - Encodings B/C share one categorical value (stage-2 primary-only) → 4 live (encoding,metric) configs, not 9.
-- Bayesian-consensus canonical tree approximated by 1000× dimension-bootstrap consensus UPGMA; full MCMC deferred (design §9).
+- Bayesian-consensus canonical tree approximated by a UPGMA point estimate carrying 1000× dimension-bootstrap edge support (the design's consensus was never computed — see the §4 correction and [csl-atlas#313](https://github.com/sanskrit-lexicon/csl-atlas/issues/313)); full MCMC deferred (design §9).
 - Canonical config `B_whamming` is pre-registered, not tuned to recovery.
 
 ## 7. Remaining / next
