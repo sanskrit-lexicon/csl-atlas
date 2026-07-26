@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-07-26
+
 ### Added — PH5 ORTHO-CLOCK gloss-orthography census + V5 explorer (H1577)
 
 - **`npm run build-ortho-drift` + `validate-ortho-drift`**
