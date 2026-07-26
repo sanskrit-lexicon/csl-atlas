@@ -41,44 +41,72 @@ export const EXPECTED_PREFIX_CONTROL_IDS = Object.freeze([
   "xref-prefix-control:mw:05"
 ]);
 
-// The closed label vocabulary. Each entry carries not just a one-line `meaning`
-// but the decision rule a reviewer actually needs: what the label asserts, what
-// it explicitly does NOT assert, and two worked examples drawn from this very
-// packet. H1646: the previous one-line-per-label form was unusable at the sheet —
-// a reviewer was asked to choose between `prefix-convention`, `normalization-risk`
-// and `too-sparse` with no definition of any of them on screen.
+// The closed label vocabulary. Each entry carries the decision rule a reviewer needs:
+// what the label asserts, what it explicitly does NOT assert, and two worked examples
+// drawn from this packet — in English for the repo record and in Russian (`*Ru`) for
+// the review sheet, which is the reviewer's instruction surface (H1648).
 //
-// `appliesToSheet: false` marks labels the hub classifier uses upstream but that
-// are NOT offered as answers on the 40-edge shared-core sheet; they are documented
-// so the vocabulary reads as a whole, not rendered as choices.
+// H1646 wrote the shared-core justification as "both dictionaries, INDEPENDENTLY,
+// print a cross-reference ... two editorial traditions made the same link". MG rejected
+// that on 26-07-2026 — **MW depends on PWG and PW** — and the data agrees: on the 2,750
+// headwords cross-referenced in both dictionaries, MW's target is also a PWG target
+// 21.8% of the time against 0.007% expected by chance (~2950x enrichment, p < 0.005;
+// scripts/lexico/m9_xref_marker_agreement.py → data/lexico/xref_marker_agreement.json).
+// The independence claim is therefore gone. What survives is MG's other judgement:
+// a shared edge can still be real and lexical, and THAT is what the label asserts.
+//
+// `appliesToSheet: false` marks labels the hub classifier uses upstream but that are
+// NOT offered as answers on the 40-edge shared-core sheet.
 export const XREF_LABEL_VOCABULARY = Object.freeze([
   {
     label: "lexical-shared-core",
     appliesToSheet: true,
     meaning: "The same source lemma points to the same meaningful Sanskrit target in MW and PWG.",
+    meaningRu: "Один и тот же заголовок в MW и в PWG отсылает к одной и той же осмысленной санскритской цели.",
     asserts:
-      "Both dictionaries, independently, print a cross-reference from this headword to this target, "
-      + "and the target is a real lemma rather than a markup convention. Two editorial traditions "
-      + "made the same link.",
+      "The cross-reference is real and lexical: the target is an actual lemma, not a piece of "
+      + "markup convention, and the link between the two words is a linguistic one.",
+    assertsRu:
+      "Перекрёстная ссылка реальна и лексична: цель — настоящая лемма, а не элемент разметки, "
+      + "и связь между двумя словами языковая, а не техническая.",
     doesNotAssert:
-      "NOT that the two words are synonyms. NOT a claim about what kind of relation it is "
-      + "(variant spelling, derivative, cognate root, homophone) or in which direction it runs. "
-      + "A vṛddhi derivative, a -ka suffix formation and a dialectal by-form all qualify equally: "
-      + "the question is only whether the shared edge is real and lexical.",
+      "NOT two independent witnesses. MW (1899) rests on PW/PWG, and the edge data shows it: "
+      + "where both dictionaries cross-reference the same headword they agree on the target 21.8% "
+      + "of the time versus 0.007% expected by chance (~2950x enrichment, p < 0.005). A shared "
+      + "reference does not double the evidence — MW may simply be carrying PWG's reference over. "
+      + "Also NOT a synonymy claim, and NOT a claim about what kind of relation it is (variant, "
+      + "derivative, cognate root, homophone) or in which direction it runs.",
+    doesNotAssertRu:
+      "НЕ утверждает, что перед нами два независимых свидетельства. MW (1899) опирается на PW/PWG, "
+      + "и данные это подтверждают: там, где оба словаря дают перекрёстную ссылку от одного и того же "
+      + "заголовка, цель совпадает в 21,8% случаев против 0,007%, ожидаемых случайно (обогащение "
+      + "примерно в 2950 раз, p < 0,005). Общая ссылка не удваивает свидетельство — MW мог просто "
+      + "перенести ссылку из PWG. Также НЕ утверждает синонимии и НЕ утверждает, какого рода это "
+      + "отношение (вариант написания, дериват, однокоренное слово, омоним) и в какую сторону оно идёт. "
+      + "Вритти, суффикс -ka и диалектный вариант подходят одинаково: вопрос только в том, реально ли "
+      + "ребро и лексично ли оно.",
     examples: [
       {
         sampleId: "mw-pwg-shared:09",
         edge: "Awi -> Aqi (āṭi -> āḍi)",
         why:
           "MW prints '(cf. Aqi and Ati)' and PWG prints 'Vgl. Aqi und Ati' for the same bird name "
-          + "(Turdus Ginginianus). Two independent editors recorded the same by-form link."
+          + "(Turdus Ginginianus). A real by-form link — though not, on this evidence alone, two "
+          + "independent records of it.",
+        whyRu:
+          "MW печатает «(cf. Aqi and Ati)», PWG — «Vgl. Aqi und Ati» для одного и того же названия "
+          + "птицы (Turdus Ginginianus). Настоящая связь вариантов — но, по одному этому свидетельству, "
+          + "не два независимых её фиксирования."
       },
       {
         sampleId: "mw-pwg-shared:14",
         edge: "BI -> Byas (bhī -> bhyas)",
         why:
-          "A derivational/etymological relation between the root bhī 'fear' and bhyas, carried by both "
-          + "dictionaries. Not synonyms, and that is fine — the edge is still lexical, not an artifact."
+          "A derivational/etymological relation between the root bhī 'fear' and bhyas. Not synonyms, "
+          + "and that is fine — the edge is still lexical rather than an artifact.",
+        whyRu:
+          "Словообразовательная/этимологическая связь между корнем bhī «бояться» и bhyas. Не синонимы — "
+          + "и это нормально: ребро всё равно лексическое, а не артефакт."
       }
     ]
   },
@@ -86,26 +114,39 @@ export const XREF_LABEL_VOCABULARY = Object.freeze([
     label: "prefix-convention",
     appliesToSheet: true,
     meaning: "The target is primarily a prefix or compound-reference convention, not rare lexical inheritance.",
+    meaningRu: "Цель — это приставка или условное сокращение сложного слова, а не редкое лексическое наследование.",
     asserts:
       "The cross-reference target is not a headword at all but a piece of the dictionary's own "
       + "abbreviation machinery — a truncated compound member, or a prefix cited as a form.",
+    assertsRu:
+      "Цель ссылки вообще не заголовок, а часть словарного аппарата сокращений: усечённый член "
+      + "сложного слова или приставка, приведённая как форма.",
     doesNotAssert:
       "NOT that the entry is wrong or the reference useless — only that it is house style for "
       + "compressing compounds, so it carries no evidence about lexical descent.",
+    doesNotAssertRu:
+      "НЕ утверждает, что статья ошибочна или ссылка бесполезна, — только что это издательская "
+      + "условность для сокращения сложных слов, и потому она ничего не говорит о лексическом родстве.",
     examples: [
       {
         sampleId: "xref-prefix-control:pwg:01",
         edge: "target 'a˚' (320 references in PWG)",
         why:
           "'˚' is CDSL's truncation ring: 'a˚' abbreviates 'the compound beginning in a-', not a lemma. "
-          + "Auto-resolved by this packet on the marker alone."
+          + "Auto-resolved by this packet on the marker alone.",
+        whyRu:
+          "«˚» — знак усечения в CDSL: «a˚» сокращает «сложное слово, начинающееся на a-», а не лемму. "
+          + "Пакет разрешает такие строки автоматически, по одному этому знаку."
       },
       {
         sampleId: "xref-prefix-control:mw:05",
         edge: "target 'aBi-' (11 references in MW)",
         why:
           "The trailing hyphen marks a prefix cited as a compound-forming element — same house-style "
-          + "class as the ring, different mark."
+          + "class as the ring, different mark.",
+        whyRu:
+          "Конечный дефис отмечает приставку, приведённую как элемент сложного слова, — тот же класс "
+          + "издательской условности, что и кружок, только другой знак."
       }
     ]
   },
@@ -113,27 +154,57 @@ export const XREF_LABEL_VOCABULARY = Object.freeze([
     label: "normalization-risk",
     appliesToSheet: true,
     meaning: "A target string where normalization may create or hide an edge.",
+    meaningRu: "Строка-цель, на которой нормализация может создать или, наоборот, скрыть ребро.",
     asserts:
-      "The edge may exist only because the pipeline folded MW and PWG spellings together. "
-      + "m6_xref_lineage.py strips MW's '-'/accent marks and PWG's '°' before intersecting, so two "
-      + "headwords the dictionaries spelt differently can meet in the middle. Reach for this label "
-      + "when source and target differ ONLY in vowel length, accent, or a diacritic the normaliser touches.",
+      "The edge may be an artifact of string folding rather than a fact about the language. Two "
+      + "mechanisms, in opposite directions. (a) CREATED: m6_xref_lineage.py strips MW's '-'/accent "
+      + "marks and PWG's '°' ring before intersecting, so headwords the dictionaries spelt "
+      + "differently can meet in the middle. (b) HIDDEN: MW and PWG follow documented and DIFFERENT "
+      + "headword conventions (Patel 2016, docs/refs/Patel_2016_Normalizing_headwords.pdf) which this "
+      + "pipeline does not reconcile — śatṛ stems MW '-at' vs PWG '-a' (conv. 3.1/3.2), vatup/matup "
+      + "MW '-vat/-mat' vs PWG '-v/-m' (3.4/3.5), ṛ-stems MW '-ṛ' vs PWG '-ar' (6.1/6.2), and "
+      + "vas/yas MW '-vas/-yas' vs PWG '-vaṃs/-yaṃs' (7.1/7.4). Reach for this label when source and "
+      + "target differ only in vowel length, accent, or a diacritic the normaliser touches.",
+    assertsRu:
+      "Ребро может быть артефактом склейки строк, а не фактом языка. Два механизма, действующих в "
+      + "противоположные стороны. (а) СОЗДАНО: m6_xref_lineage.py перед пересечением убирает у MW "
+      + "дефисы и знаки ударения, а у PWG — кружок «°», поэтому заголовки, написанные словарями "
+      + "по-разному, могут совпасть. (б) СКРЫТО: MW и PWG следуют задокументированным и РАЗНЫМ "
+      + "конвенциям записи заголовков (Patel 2016, docs/refs/Patel_2016_Normalizing_headwords.pdf), "
+      + "которые этот конвейер не согласует: причастия на śatṛ у MW «-at», у PWG «-a» (конв. 3.1/3.2); "
+      + "vatup/matup у MW «-vat/-mat», у PWG «-v/-m» (3.4/3.5); основы на ṛ у MW «-ṛ», у PWG «-ar» "
+      + "(6.1/6.2); vas/yas у MW «-vas/-yas», у PWG «-vaṃs/-yaṃs» (7.1/7.4). Выбирайте эту метку, "
+      + "когда источник и цель различаются только долготой гласного, ударением или диакритикой, "
+      + "которую трогает нормализатор.",
     doesNotAssert:
       "NOT that the words are unrelated — a length variant is often a genuine by-form. It flags that "
-      + "THIS edge is not independent evidence, because the matching step could have manufactured it.",
+      + "THIS edge is not independent evidence, because the matching step could have manufactured it. "
+      + "Note the (b) mechanism also means the 642-edge intersection UNDERCOUNTS: a ṛ-stem edge can "
+      + "never intersect while MW writes '-ṛ' and PWG writes '-ar'.",
+    doesNotAssertRu:
+      "НЕ утверждает, что слова не связаны, — вариант по долготе часто является настоящей побочной "
+      + "формой. Метка говорит лишь о том, что ИМЕННО ЭТО ребро не является независимым свидетельством, "
+      + "поскольку шаг сопоставления мог его изготовить. Заметьте: механизм (б) означает также, что "
+      + "пересечение из 642 рёбер ЗАНИЖЕНО — ребро на основе с ṛ вообще не может попасть в пересечение, "
+      + "пока MW пишет «-ṛ», а PWG «-ar».",
     examples: [
       {
         sampleId: "mw-pwg-shared:30",
         edge: "BuHKAra -> BUHKAra (buhkāra -> būhkāra)",
         why:
           "Source and target differ only in the length of the first vowel, and the reciprocal edge "
-          + "mw-pwg-shared:15 runs the other way. A spelling pair, plausibly an artifact of which form "
-          + "each dictionary chose as headword."
+          + "mw-pwg-shared:15 runs the other way. Plausibly an artifact of which form each dictionary "
+          + "chose as headword.",
+        whyRu:
+          "Источник и цель различаются только долготой первого гласного, а обратное ребро "
+          + "mw-pwg-shared:15 идёт в другую сторону. Вероятно, артефакт того, какую форму каждый "
+          + "словарь выбрал заголовком."
       },
       {
         sampleId: "mw-pwg-shared:21",
         edge: "BastrakA -> BastrAkA (bhastrakā -> bhastrākā)",
-        why: "Same shape: only the placement of vowel length distinguishes the two strings."
+        why: "Same shape: only the placement of vowel length distinguishes the two strings.",
+        whyRu: "Тот же случай: строки различаются только местом долготы гласного."
       }
     ]
   },
@@ -141,26 +212,37 @@ export const XREF_LABEL_VOCABULARY = Object.freeze([
     label: "too-sparse",
     appliesToSheet: true,
     meaning: "A pair has too few shared sources for lineage interpretation.",
+    meaningRu: "У пары слишком мало общих источников, чтобы судить о происхождении.",
     asserts:
       "The evidence on the card is too thin to answer either way — typically only ONE dictionary's "
       + "record is attached (`missingExactEdgeDictionaries` is non-empty), so the 'shared' in "
       + "shared-core is not actually demonstrated here.",
+    assertsRu:
+      "Свидетельства на карточке слишком мало, чтобы ответить в любую сторону: обычно приложена запись "
+      + "только ОДНОГО словаря (поле `missingExactEdgeDictionaries` непусто), так что «общность» "
+      + "shared-core здесь фактически не показана.",
     doesNotAssert:
       "NOT a rejection of the edge. It is the honest answer when the card does not contain what the "
       + "question asks about — prefer it to guessing.",
+    doesNotAssertRu:
+      "НЕ отклонение ребра. Это честный ответ, когда на карточке нет того, о чём спрашивает вопрос; "
+      + "он предпочтительнее догадки.",
     examples: [
       {
         sampleId: "mw-pwg-shared:07",
         edge: "ArAt -> Are (ārāt -> āre), PWG only",
         why:
           "Only the PWG record is attached; MW has no exact edge row. PWG's record shows an ablative "
-          + "adverb pointing at a locative-shaped one, and there is no MW side to corroborate a shared "
-          + "editorial judgement."
+          + "adverb pointing at a locative-shaped one, and there is no MW side to corroborate.",
+        whyRu:
+          "Приложена только запись PWG; точного ребра MW нет. В записи PWG наречие в аблативе отсылает "
+          + "к форме локативного вида, и нет стороны MW, чтобы это подтвердить."
       },
       {
         sampleId: "mw-pwg-shared:03",
         edge: "Akzit -> anAkzit (ākṣit -> anākṣit), PWG only",
-        why: "Single-dictionary evidence again: 4 of the 40 rows are in this state and are marked as such on the card."
+        why: "Single-dictionary evidence again: 4 of the 40 rows are in this state and are marked as such on the card.",
+        whyRu: "Снова свидетельство одного словаря: в таком состоянии 4 строки из 40, и на карточке это отмечено."
       }
     ]
   },
@@ -168,18 +250,26 @@ export const XREF_LABEL_VOCABULARY = Object.freeze([
     label: "edition-continuity",
     appliesToSheet: false,
     meaning: "A stable edge across editions of the same dictionary family.",
+    meaningRu: "Устойчивое ребро между изданиями одного словарного семейства.",
     asserts: "Used by the upstream hub classifier for within-family (e.g. PW/PWG) edges.",
+    assertsRu: "Используется вышестоящим классификатором для рёбер внутри одного семейства (например, PW/PWG).",
     doesNotAssert: "Not an answer option on the MW/PWG shared-core sheet, which is cross-family by construction.",
+    doesNotAssertRu: "Не вариант ответа на этом листе: MW/PWG — межсемейная пара по построению.",
     examples: []
   },
   {
     label: "lexical-target",
     appliesToSheet: false,
     meaning: "A top xref target that behaves like an ordinary lexical target rather than a convention hub.",
+    meaningRu: "Частая цель ссылок, ведущая себя как обычная лексическая цель, а не как узел условностей.",
     asserts:
       "A property of a TARGET string in the hub profile (classifyHubTarget in build-xref-hub-review.mjs), "
       + "carried on each row as `hubClass`. It is the reason a row reached this sheet, not a verdict on it.",
+    assertsRu:
+      "Свойство строки-ЦЕЛИ в профиле узлов (classifyHubTarget в build-xref-hub-review.mjs), которое "
+      + "переносится в каждую строку как `hubClass`. Это причина попадания строки на лист, а не приговор ей.",
     doesNotAssert: "Not an answer option; it describes the target, not the edge.",
+    doesNotAssertRu: "Не вариант ответа: описывает цель, а не ребро.",
     examples: []
   }
 ]);
@@ -389,6 +479,13 @@ function sharedReviewQuestion(row) {
   return `Do the MW/PWG source records support ${row.sourceLemma} -> ${row.target} as a meaningful shared lexical xref rather than a normalization or convention artifact?`;
 }
 
+// The reviewer reads Russian; the sheet is his instruction surface (H1648), so the
+// question ships in Russian too. Lemma tokens stay SLP1 here — the sheet builder
+// swaps them for IAST and keeps the SLP1 key alongside.
+function sharedReviewQuestionRu(row) {
+  return `Подтверждают ли записи MW и PWG, что ${row.sourceLemma} -> ${row.target} — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?`;
+}
+
 function prefixReviewQuestion(row) {
   return `Do the sampled ${row.dictionary.toUpperCase()} references to ${row.target} behave as prefix/compound convention rather than lexical lineage evidence?`;
 }
@@ -410,6 +507,7 @@ function buildSharedCoreRows(hubReview, exactEdgeIndex, sourceRecordIndex, prese
       matchedDictionaries: [...matched].sort(),
       missingExactEdgeDictionaries: ["MW", "PWG"].filter(dict => !matched.has(dict)),
       reviewQuestion: sharedReviewQuestion(sample),
+      reviewQuestionRu: sharedReviewQuestionRu(sample),
       ...emptyHumanFields()
     };
     return row;
@@ -607,6 +705,43 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
         + "40 cards in the same order.",
       "Labels on the cards are source-check prompts, not accepted lineage decisions."
     ],
+    // H1648 — the Russian rendering the sheet actually shows the reviewer.
+    selectionPolicyRu: [
+      "Шаг 1 — построение пула кандидатов: scripts/lexico/m6_xref_lineage.py читает перекрёстные "
+        + "ссылки MW и PWG, нормализует каждую цель (убирает у MW дефис и знаки ударения, у PWG — "
+        + "кружок «°») и записывает пересечение MW ∩ PWG в data/lexico/xref_shared_edges.csv. "
+        + "В пересечении 642 ребра.",
+      "Шаг 2 — взятие выборки: buildSharedCoreSample() в scripts/build-xref-hub-review.mjs берёт "
+        + "sharedEdges.slice(0, 40), то есть ПЕРВЫЕ 40 строк этого CSV в порядке файла.",
+      "ЭТО НЕ СЛУЧАЙНАЯ ВЫБОРКА, и смещение видно на листе: CSV упорядочен по заголовкам, поэтому "
+        + "все 40 карточек — заголовки на Ā-, B-, C-, D- и G-. Выводы по этим 40 описывают начало "
+        + "алфавита, а не все 642. Прогон по случайной или стратифицированной выборке — отдельная, "
+        + "ещё не начатая задача.",
+      "Шаг 3 — приложение свидетельств: этот скрипт снова берёт 40, сохраняет замороженный порядок "
+        + "sampleId (validatePayload отвергает любую перестановку) и прикладывает точные записи "
+        + "MW/PWG для каждого ребра из xref_edges.csv, а также кёльнские ссылки на статью и скан "
+        + "для обоих концов ребра.",
+      "Контроли: первые пять частых prefix-convention целей у PWG и у MW, до трёх примеров-источников "
+        + "на каждую, идут рядом как контрастный класс; все десять разрешаются автоматически по знаку "
+        + "усечения и человеку не показываются.",
+      "Всё детерминировано — ни на одном из трёх шагов нет генератора случайных чисел; повторный "
+        + "прогон даёт те же 40 карточек в том же порядке.",
+      "Метки на карточках — это подсказки для проверки по источнику, а не принятые решения о "
+        + "происхождении."
+    ],
+    // H1648 — MG's ruling that MW depends on PW/PWG, measured rather than assumed.
+    markerIndependence: {
+      finding: "MW `cf.` and PWG `Vgl.` cross-references are NOT independent witnesses.",
+      findingRu: "Перекрёстные ссылки MW («cf.») и PWG («Vgl.») НЕ являются независимыми свидетельствами.",
+      headwordsInBoth: 2750,
+      agreementRate: 0.218,
+      expectedRate: 0.00007,
+      enrichment: 2953.2,
+      pValue: "< 0.005",
+      artifact: "data/lexico/xref_marker_agreement.json",
+      generatedBy: "python scripts/lexico/m9_xref_marker_agreement.py",
+      noteRu: "MW (1899) опирается на PW/PWG. Общая ссылка не удваивает свидетельство."
+    },
     sharedCoreRows,
     prefixControlRows,
     limitations: [
@@ -620,6 +755,22 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
       "Prefix controls test convention pressure and are not optimization targets for lineage claims.",
       "Cross-reference overlap remains dictionary-internal evidence and must not be mixed with DCS/corpus co-occurrence.",
       "No R2 splitter behavior, source-anchor generation, H5 review row, public page, backend/runtime LLM, corpus, DCS, or standards work is changed."
+    ],
+    limitationsRu: [
+      "Машинные метки — только подсказки для проверки; этот пакет не фиксирует никаких решений.",
+      "40 строк shared-core — это первые 40 из 642 общих рёбер в порядке заголовков, а не случайная "
+        + "выборка: каждая карточка — заголовок на Ā-, B-, C-, D- или G-. Не переносите долю, "
+        + "измеренную на этих 40, на всё пересечение.",
+      "Кёльнская ссылка на статью открывает ЗАГОЛОВОК, а не именно эту запись: при омонимах поиск "
+        + "покажет их все. Точную запись адресует ссылка на csl-orig.",
+      "Часть строк присутствует в выборке общих рёбер, но не имеет точного ребра MW в xref_edges.csv; "
+        + "такие строки остаются видимыми и помечены.",
+      "MW и PWG следуют разным конвенциям записи заголовков (Patel 2016), которые конвейер не "
+        + "согласует, поэтому пересечение из 642 рёбер занижено: часть настоящих общих рёбер "
+        + "не может совпасть по строке в принципе.",
+      "Prefix-control проверяют давление издательских условностей и не являются целью оптимизации.",
+      "Пересечение перекрёстных ссылок остаётся внутрисловарным свидетельством и не должно "
+        + "смешиваться с совстречаемостью по корпусу DCS."
     ],
     boundaryNote: "Atlas xref artifacts plus dictionary source pointers only; source checking is deferred to human review and does not promote parser or public-lineage behavior.",
     warnings: unresolvedSourcePointers.length ? warnings : []
