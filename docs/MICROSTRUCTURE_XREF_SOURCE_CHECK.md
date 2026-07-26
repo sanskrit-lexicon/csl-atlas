@@ -17,9 +17,9 @@ Status: generated source-check packet; all rows remain `needs-source-check` and 
 
 ## Selection Policy
 
-- Stage 1 — build the candidate pool: scripts/lexico/m6_xref_lineage.py reads MW's and PWG's cross-reference edges, normalises each target (strips MW's '-' and accent marks and PWG's '°' ring), and writes the MW-intersect-PWG set to data/lexico/xref_shared_edges.csv. That intersection is 642 edges.
+- Stage 1 — build the candidate pool: scripts/lexico/m6_xref_lineage.py reads MW's and PWG's cross-reference edges, normalises each target (strips MW's '-' and accent marks and PWG's '°' ring), and writes the MW-intersect-PWG set to data/lexico/xref_shared_edges.csv. That intersection is 641 edges.
 - Stage 2 — take the sample: buildSharedCoreSample() in scripts/build-xref-hub-review.mjs takes sharedEdges.slice(0, 40), i.e. the FIRST 40 rows of that CSV in file order.
-- NOT A RANDOM SAMPLE, and the bias is visible on the sheet: the CSV is in headword order, so all 40 cards are Ā-, B-, C-, D- and G-initial headwords. Findings from these 40 describe the head of the alphabet, not the 642 as a whole. Re-running over a random or stratified draw is a separate, unstarted job.
+- NOT A RANDOM SAMPLE, and the bias is visible on the sheet: the CSV is in headword order, so all 40 cards are Ā-, B-, C-, D- and G-initial headwords. Findings from these 40 describe the head of the alphabet, not the 641 as a whole. Re-running over a random or stratified draw is a separate, unstarted job.
 - Stage 3 — attach evidence: this script re-slices to 40, keeps the frozen sampleId order (validatePayload rejects any reorder), and attaches the exact MW/PWG source records per edge from xref_edges.csv, plus Cologne entry/scan links for both ends of the edge.
 - Controls: the first five prefix-convention top targets for PWG and MW, with up to three source examples each, are carried alongside as a contrast class; all ten auto-resolve on their truncation marker and are not put to the reviewer.
 - Deterministic throughout — no RNG anywhere in the three stages; re-running reproduces the same 40 cards in the same order.
@@ -113,7 +113,7 @@ Every row keeps `reviewedValue = null`, `reviewer = ""`, `reviewedAt = ""`, and 
 ## Limitations
 
 - Machine labels are review prompts only; this packet records no source-check decisions.
-- The 40 shared-core rows are the first 40 of 642 shared edges in headword order, not a random sample: every card is an Ā-, B-, C-, D- or G-initial headword. Do not generalise a rate measured on these 40 to the full intersection.
+- The 40 shared-core rows are the first 40 of 641 shared edges in headword order, not a random sample: every card is an Ā-, B-, C-, D- or G-initial headword. Do not generalise a rate measured on these 40 to the full intersection.
 - Cologne entry links resolve a HEADWORD, not this exact record: where a dictionary has homonyms the lookup shows all of them. The csl-orig blob link is the pointer to the precise record.
 - Some shared-core sample rows are present in the shared-edge sample but lack an exact MW edge row in xref_edges.csv; those rows remain visible with missing-exact-edge metadata.
 - Prefix controls test convention pressure and are not optimization targets for lineage claims.

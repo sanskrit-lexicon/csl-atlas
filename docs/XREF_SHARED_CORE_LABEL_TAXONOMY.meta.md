@@ -12,6 +12,16 @@ each label in the closed vocabulary asserts, what it explicitly does not assert,
 worked examples per label, and how the 40 sampled edges were selected — including the
 selection bias.
 
+## Languages
+
+Kept in two files: [`XREF_SHARED_CORE_LABEL_TAXONOMY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md)
+(English, repo-facing record) and [`.ru.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md)
+(Russian, reviewer-facing). Prose may differ in wording; **every figure in both is pinned to
+the committed data** by [`test/xref-taxonomy-docs.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/xref-taxonomy-docs.test.mjs),
+which also fails if either file re-asserts the retracted independence justification, or if
+the Russian file stops being Russian. Numeric drift between them is therefore a CI failure,
+not something a reader has to notice.
+
 ## Audience
 
 Whoever votes the 40-edge sheet (currently MG), and any later session adjudicating,
@@ -65,6 +75,7 @@ re-sampling, or extending the xref shared-core review. Not a public-site documen
 | Date | Change | Handoff |
 |---|---|---|
 | 25-07-2026 | Created alongside the sheet rebuild (Cologne links, entry anatomy, label definitions, sampling disclosure). | [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md) |
+| 26-07-2026 | Added the Russian companion `.ru.md` + a docs-vs-data drift guard (5 tests). The guard immediately caught a real error: the candidate pool was quoted everywhere as **642** but is **641** — a `wc -l` counting the CSV header as data. The packet now computes it instead of carrying a literal. Also fixed a leftover "two independent editors recorded the same by-form link" line that had survived the retraction. | [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md) |
 | 26-07-2026 | **Retracted the "two independent witnesses" justification** after MG's ruling that MW depends on PW/PWG; added the measured non-independence (21.8% vs 0.007%, ≈2953×, p&nbsp;<&nbsp;0.005), grounded `normalization-risk` in the four documented MW↔PWG convention divergences from Patel 2016 (incl. that the 642-edge intersection is an undercount), and recorded that the sheet is now fully Russian. | [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md) |
 
 _Dr. Mārcis Gasūns_

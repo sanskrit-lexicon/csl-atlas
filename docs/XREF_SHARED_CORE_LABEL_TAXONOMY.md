@@ -2,6 +2,11 @@
 
 _Created: 25-07-2026 · Last updated: 26-07-2026_
 
+Russian version: [XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md).
+Both files say the same thing; their figures are checked against the data automatically
+([`test/xref-taxonomy-docs.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/xref-taxonomy-docs.test.mjs)),
+so they cannot drift apart numerically.
+
 The decision rules behind the MW/PWG shared-core review sheet
 ([`csl-atlas-xref-shared-core_40edges_review.html`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-review-sheets.py),
 generated into the gitignored `review/`): what each label means, when to reach for it,
@@ -77,7 +82,7 @@ section above for what this deliberately no longer claims.
 
 | Example | Why |
 |---|---|
-| `mw-pwg-shared:09` — `Awi → Aqi` (āṭi → āḍi) | MW prints `(cf. Aqi and Ati)`, PWG prints `Vgl. Aqi und Ati`, for the same bird name (*Turdus Ginginianus*). Two independent editors recorded the same by-form link. |
+| `mw-pwg-shared:09` — `Awi → Aqi` (āṭi → āḍi) | MW prints `(cf. Aqi and Ati)`, PWG prints `Vgl. Aqi und Ati`, for the same bird name (*Turdus Ginginianus*). A real by-form link — though not, on this evidence alone, two independent records of it. |
 | `mw-pwg-shared:14` — `BI → Byas` (bhī → bhyas) | A derivational/etymological relation between the root *bhī* 'fear' and *bhyas*, carried by both dictionaries. Not synonyms — and that does not matter; the edge is still lexical rather than an artifact. |
 
 ### `prefix-convention` — reject
@@ -92,7 +97,7 @@ carries no evidence about lexical descent.
 | `xref-prefix-control:pwg:01` — target `a˚` (320 references in PWG) | `˚` is CDSL's truncation ring: `a˚` abbreviates "the compound beginning in *a-*", not a lemma. |
 | `xref-prefix-control:mw:05` — target `aBi-` (11 references in MW) | The trailing hyphen marks a prefix cited as a compound-forming element — same class, different mark. |
 
-Both examples are drawn from the ten prefix controls the packet auto-resolves on the
+Both examples are drawn from the 10 prefix controls the packet auto-resolves on the
 marker alone, so they are proven members of the class rather than illustrations.
 
 ### `normalization-risk` — reject
@@ -133,7 +138,7 @@ So the risk runs in **both** directions:
 - **Created.** The accent/`°`/hyphen stripping in `m6_xref_lineage.py` can fold two
   genuinely distinct spellings onto one key — the mechanism behind the two examples above.
 - **Hidden.** The four divergences above mean a real shared edge on, say, a ṛ-stem *can
-  never intersect*, because MW's `-ṛ` key and PWG's `-ar` key never match. **The 642-edge
+  never intersect*, because MW's `-ṛ` key and PWG's `-ar` key never match. **The 641-edge
   intersection is therefore an undercount**, and a whole-alphabet re-run that first
   normalises per Patel would be expected to find more, not fewer, shared edges.
 
@@ -142,8 +147,8 @@ So the risk runs in **both** directions:
 The evidence on the card is too thin to answer either way: typically only one
 dictionary's record is attached (`missingExactEdgeDictionaries` is non-empty), so the
 "shared" in shared-core is not demonstrated. This is not a rejection of the edge — it is
-the honest answer when the card does not contain what the question asks about. **Four of
-the forty rows are in this state** and now say so on the card.
+the honest answer when the card does not contain what the question asks about. **4 of the
+40 rows are in this state** and now say so on the card.
 
 | Example | Why |
 |---|---|
@@ -159,7 +164,11 @@ the same order.
    [`scripts/lexico/m6_xref_lineage.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m6_xref_lineage.py)
    reads MW's and PWG's cross-reference edges, normalises each target (see
    `normalization-risk` above), and writes the MW ∩ PWG set to
-   `data/lexico/xref_shared_edges.csv` — **642 edges**.
+   `data/lexico/xref_shared_edges.csv` — **641 edges**. (Quoted as "642" until 26-07-2026:
+   a `wc -l` that counted the CSV header as a data row. The packet now computes this figure
+   rather than carrying it as a literal, and
+   [`test/xref-taxonomy-docs.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/xref-taxonomy-docs.test.mjs)
+   pins both prose companions to it.)
 2. **The sample.** `buildSharedCoreSample()` in
    [`scripts/build-xref-hub-review.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-xref-hub-review.mjs)
    takes `sharedEdges.slice(0, 40)` — the **first 40 rows of that CSV in file order**.
@@ -173,12 +182,12 @@ the same order.
 
 **This is not a random sample.** The CSV is in headword order, so all 40 cards are Ā-, B-,
 C-, D- or G-initial headwords. A confirm/reject rate measured on these 40 describes the
-head of the alphabet, not the 642. Re-running over a random or stratified draw is a
+head of the alphabet, not the 641. Re-running over a random or stratified draw is a
 separate job that has not been started.
 
-Alongside the 40, ten `prefix-control` rows (the top five prefix-convention targets in
-each of PWG and MW, with up to three source examples each) are carried as a contrast
-class. All ten auto-resolve on their truncation marker and are never put to a reviewer.
+Alongside the 40, 10 `prefix-control` rows (the top 5 prefix-convention targets in each
+of PWG and MW, with up to 3 source examples each) are carried as a contrast class. All 10
+auto-resolve on their truncation marker and are never put to a reviewer.
 
 ## Reading the cards
 
@@ -198,7 +207,8 @@ examples, sampling method, markup legend, and the emitter's own chrome (toolbar 
 keyboard hint, save banner, vote legend, translated through
 [`csl-pyutil` 0.4.0's `ui_strings`](https://github.com/sanskrit-lexicon/csl-pyutil/pull/9)).
 The only non-Russian prose left on a card is the dictionary text itself, which is quoted
-verbatim and stays German for PWG and English for MW. This document remains English as the
-repo-facing record; the sheet is self-sufficient and does not require it.
+verbatim and stays German for PWG and English for MW. This document is kept in both English
+(repo-facing record) and [Russian](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md)
+(reviewer-facing); the sheet itself is self-sufficient and requires neither.
 
 _Dr. Mārcis Gasūns_

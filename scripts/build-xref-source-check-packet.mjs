@@ -18,9 +18,19 @@ const SCHEMA_VERSION = "1.0.0";
 const GENERATED_BY = "npm run build-xref-source-check-packet";
 const HUB_REVIEW_PATH = path.resolve(process.cwd(), "data", "lexico", "xref_hub_review.json");
 const XREF_EDGES_PATH = path.resolve(process.cwd(), "data", "lexico", "xref_edges.csv");
+const SHARED_EDGES_PATH = path.resolve(process.cwd(), "data", "lexico", "xref_shared_edges.csv");
 const JSON_OUT = path.resolve(process.cwd(), "data", "lexico", "xref_source_check_packet.json");
 const MARKDOWN_OUT = path.resolve(process.cwd(), "docs", "MICROSTRUCTURE_XREF_SOURCE_CHECK.md");
 const SHARED_CORE_LIMIT = 40;
+
+// The candidate pool the 40 are sliced from. Computed, never typed: the figure was
+// hardcoded as "642" and was wrong by one — a `wc -l` that counted the CSV header as a
+// data row. It had propagated into the packet, both prose companions, FINDINGS and
+// several PR bodies before a docs-vs-data test caught it (H1648).
+function sharedEdgePoolSize() {
+  const csv = fs.readFileSync(SHARED_EDGES_PATH, "utf8");
+  return csv.trim().split(/\r?\n/).length - 1; // minus the header row
+}
 const PREFIX_CONTROL_TARGETS_PER_DICT = 5;
 const PREFIX_CONTROL_EXAMPLES_PER_TARGET = 3;
 
@@ -179,13 +189,13 @@ export const XREF_LABEL_VOCABULARY = Object.freeze([
     doesNotAssert:
       "NOT that the words are unrelated — a length variant is often a genuine by-form. It flags that "
       + "THIS edge is not independent evidence, because the matching step could have manufactured it. "
-      + "Note the (b) mechanism also means the 642-edge intersection UNDERCOUNTS: a ṛ-stem edge can "
+      + `Note the (b) mechanism also means the ${sharedEdgePoolSize()}-edge intersection UNDERCOUNTS: a ṛ-stem edge can `
       + "never intersect while MW writes '-ṛ' and PWG writes '-ar'.",
     doesNotAssertRu:
       "НЕ утверждает, что слова не связаны, — вариант по долготе часто является настоящей побочной "
       + "формой. Метка говорит лишь о том, что ИМЕННО ЭТО ребро не является независимым свидетельством, "
       + "поскольку шаг сопоставления мог его изготовить. Заметьте: механизм (б) означает также, что "
-      + "пересечение из 642 рёбер ЗАНИЖЕНО — ребро на основе с ṛ вообще не может попасть в пересечение, "
+      + `пересечение из ${sharedEdgePoolSize()} рёбер ЗАНИЖЕНО — ребро на основе с ṛ вообще не может попасть в пересечение, `
       + "пока MW пишет «-ṛ», а PWG «-ar».",
     examples: [
       {
@@ -688,12 +698,12 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
       "Stage 1 — build the candidate pool: scripts/lexico/m6_xref_lineage.py reads MW's and PWG's "
         + "cross-reference edges, normalises each target (strips MW's '-' and accent marks and PWG's "
         + "'°' ring), and writes the MW-intersect-PWG set to data/lexico/xref_shared_edges.csv. "
-        + "That intersection is 642 edges.",
+        + `That intersection is ${sharedEdgePoolSize()} edges.`,
       "Stage 2 — take the sample: buildSharedCoreSample() in scripts/build-xref-hub-review.mjs takes "
         + "sharedEdges.slice(0, 40), i.e. the FIRST 40 rows of that CSV in file order.",
       "NOT A RANDOM SAMPLE, and the bias is visible on the sheet: the CSV is in headword order, so "
         + "all 40 cards are Ā-, B-, C-, D- and G-initial headwords. Findings from these 40 describe "
-        + "the head of the alphabet, not the 642 as a whole. Re-running over a random or stratified "
+        + `the head of the alphabet, not the ${sharedEdgePoolSize()} as a whole. Re-running over a random or stratified `
         + "draw is a separate, unstarted job.",
       "Stage 3 — attach evidence: this script re-slices to 40, keeps the frozen sampleId order "
         + "(validatePayload rejects any reorder), and attaches the exact MW/PWG source records per edge "
@@ -710,12 +720,12 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
       "Шаг 1 — построение пула кандидатов: scripts/lexico/m6_xref_lineage.py читает перекрёстные "
         + "ссылки MW и PWG, нормализует каждую цель (убирает у MW дефис и знаки ударения, у PWG — "
         + "кружок «°») и записывает пересечение MW ∩ PWG в data/lexico/xref_shared_edges.csv. "
-        + "В пересечении 642 ребра.",
+        + `В пересечении ${sharedEdgePoolSize()} ребра.`,
       "Шаг 2 — взятие выборки: buildSharedCoreSample() в scripts/build-xref-hub-review.mjs берёт "
         + "sharedEdges.slice(0, 40), то есть ПЕРВЫЕ 40 строк этого CSV в порядке файла.",
       "ЭТО НЕ СЛУЧАЙНАЯ ВЫБОРКА, и смещение видно на листе: CSV упорядочен по заголовкам, поэтому "
         + "все 40 карточек — заголовки на Ā-, B-, C-, D- и G-. Выводы по этим 40 описывают начало "
-        + "алфавита, а не все 642. Прогон по случайной или стратифицированной выборке — отдельная, "
+        + `алфавита, а не все ${sharedEdgePoolSize()}. Прогон по случайной или стратифицированной выборке — отдельная, `
         + "ещё не начатая задача.",
       "Шаг 3 — приложение свидетельств: этот скрипт снова берёт 40, сохраняет замороженный порядок "
         + "sampleId (validatePayload отвергает любую перестановку) и прикладывает точные записи "
@@ -746,7 +756,7 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
     prefixControlRows,
     limitations: [
       "Machine labels are review prompts only; this packet records no source-check decisions.",
-      "The 40 shared-core rows are the first 40 of 642 shared edges in headword order, not a random "
+      `The 40 shared-core rows are the first 40 of ${sharedEdgePoolSize()} shared edges in headword order, not a random `
         + "sample: every card is an Ā-, B-, C-, D- or G-initial headword. Do not generalise a rate "
         + "measured on these 40 to the full intersection.",
       "Cologne entry links resolve a HEADWORD, not this exact record: where a dictionary has homonyms "
@@ -758,7 +768,7 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
     ],
     limitationsRu: [
       "Машинные метки — только подсказки для проверки; этот пакет не фиксирует никаких решений.",
-      "40 строк shared-core — это первые 40 из 642 общих рёбер в порядке заголовков, а не случайная "
+      `40 строк shared-core — это первые 40 из ${sharedEdgePoolSize()} общих рёбер в порядке заголовков, а не случайная `
         + "выборка: каждая карточка — заголовок на Ā-, B-, C-, D- или G-. Не переносите долю, "
         + "измеренную на этих 40, на всё пересечение.",
       "Кёльнская ссылка на статью открывает ЗАГОЛОВОК, а не именно эту запись: при омонимах поиск "
@@ -766,7 +776,7 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
       "Часть строк присутствует в выборке общих рёбер, но не имеет точного ребра MW в xref_edges.csv; "
         + "такие строки остаются видимыми и помечены.",
       "MW и PWG следуют разным конвенциям записи заголовков (Patel 2016), которые конвейер не "
-        + "согласует, поэтому пересечение из 642 рёбер занижено: часть настоящих общих рёбер "
+        + `согласует, поэтому пересечение из ${sharedEdgePoolSize()} рёбер занижено: часть настоящих общих рёбер `
         + "не может совпасть по строке в принципе.",
       "Prefix-control проверяют давление издательских условностей и не являются целью оптимизации.",
       "Пересечение перекрёстных ссылок остаётся внутрисловарным свидетельством и не должно "
