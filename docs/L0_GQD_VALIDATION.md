@@ -103,6 +103,10 @@ against it. It is included precisely to show what the convention signal is *not*
 32 dictionaries; 35,960 quartets; the stemma gold resolves **5,625** of them, the tradition
 gold 21,980. Null = 999 leaf-label permutations of the same tree (seed 20260726); `p` is the
 one-sided empirical fraction of permutations scoring at least as well, floored at 1/1000.
+Each tree is scored on its own leaves: the ten gated trees carry all 32, and the final
+(preview) row carries the 30-leaf tanglegram set, where the same gold resolves 4,830
+butterflies. Read that row against §4's like-for-like comparison, not against the rows above
+it.
 
 | tree | grade | GQD vs **descent** | null mean ± sd | z | p | GQD vs tradition |
 |---|---|---|---|---|---|---|
