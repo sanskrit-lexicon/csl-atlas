@@ -3,7 +3,7 @@
 > Supporting specification. The governing delivery order is
 > [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
 
-_Created: 07-07-2026 · Last updated: 07-07-2026_
+_Created: 07-07-2026 · Last updated: 26-07-2026_
 
 **What this is.** The general csl-atlas research agenda: a design memo + build spec answering
 five owner questions — new hypotheses, new/improved visualisations, non-Cologne data reuse,
@@ -513,7 +513,7 @@ analysis-heavy · Sonnet = mechanical build · Opus = judgment-heavy review.
 | 3 | ✅ PH4 ghost-stock join + PH6 Heritage witness + V4 strip/chips — **DONE (H1575, 25-07-2026):** PH4 supported (attestation 4.7%→100% monotone in `n_dicts`; specialised-concentration sub-claim reversed — MW/MD lead unique-attested share), PH6 supported (Heritage-uncovered→DCS-unattested OR 5.45; 37,931-row `inferred` triple-filter queue) — `/tools/ghost-stock`, `build-ghost-stock.mjs`, V4 strip on `/tools/dictionary-coverage` | c | M | — | csl-atlas | Fable 5 (`claude-fable-5`) |
 | 4 | V2 data-driven timeline upgrade | a | M | — | csl-atlas | Sonnet |
 | 5 | ✅ PH8 Heaps saturation + PH3 era signatures + V4 panels — **DONE (H1576, 25-07-2026):** PH8 supported (Heaps V(n)=K·n^0.538, log–log R²=0.989; biggest breaks SKD +170% / BHS +178%; specialised-break trio descriptive only, order-perm p=0.070; post-1890 general novelty 5.7–40.3%, not <5%), PH3 supported per-dictionary (GRA −423 CE / TVD 0.49, SKD +956, Petersburg ~516–574) with family-level KW descriptive (p≈0.14 — canon, not family, drives the signature) — `build-heap-sat.mjs`, `build-period-signatures.mjs`, V4 panels i+ii on `/tools/dictionary-coverage` | a+c | M | — | csl-atlas | Fable 5 (`claude-fable-5`) |
-| 6 | PH5 ortho-drift census + V5 page | d | M–L | frozen reform maps | csl-atlas | Fable (census design) + Sonnet (page) |
+| 6 | ✅ PH5 ortho-drift census + V5 page — **DONE (H1577, 26-07-2026):** clock (i) direction-consistent but inconclusive at n=6 (Spearman ρ=−0.52, exhaustive p=0.30) and reframed as a HOUSE-STYLE clock (Böhtlingk lane uniformly fossil 14.8–17.5/1k regardless of date; non-Böhtlingk modernise with date: GRA 10.4 → CCS 6.5 → SCH 4.8), descent (ii) REFUTED (CCS 1887 descendant LESS pre-reform than independent GRA 1873, −3.98/1k, one-sided p=1; Cappeller re-spelled), era-composition clock robust (SCH-1928 flips to 69% 1996-ß); Russian: Kossovich 358/1k single point — `/tools/ortho-drift`, `build-ortho-drift.mjs`, `data/lexico/ortho_drift.json` | d | M–L | frozen reform maps | csl-atlas | Fable 5 (`claude-fable-5`) |
 | 7 | PH7 canon-breadth-vs-year | a+b | S | #1 | csl-atlas | Fable |
 | 8 | Rama-et-al. GQD validation of the L0 stemma | bonus | M | L0 trees (committed) | csl-atlas | Fable |
 | 9 | Tradition-tag map for A50 §4 (review queue) | b | S | #1 | csl-atlas + human review | Opus |
@@ -538,9 +538,8 @@ Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Sonnet_csl-atlas_timeli
 ```
 Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Fable_csl-atlas_coverage_saturation_era_DD.MM.YY.md and execute it.
 ```
-```
-Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Fable_csl-atlas_ortho_drift_census_DD.MM.YY.md and execute it.
-```
+🔴 EXECUTED: [H1577-Fable_csl-atlas_ortho-drift-census_24.07.26.md](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1577-Fable_csl-atlas_ortho-drift-census_24.07.26.md) (26-07-2026 — backlog #6 done, see the table above)
+
 ```
 Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Fable_csl-atlas_l0_gqd_validation_DD.MM.YY.md and execute it.
 ```

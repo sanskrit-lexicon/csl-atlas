@@ -31,6 +31,10 @@ const COPIES = [
   {
     source: "data/lexico/period_signatures.json",
     target: "src/data/lexico/period_signatures.json"
+  },
+  {
+    source: "data/lexico/ortho_drift.json",
+    target: "src/data/lexico/ortho_drift.json"
   }
 ];
 
