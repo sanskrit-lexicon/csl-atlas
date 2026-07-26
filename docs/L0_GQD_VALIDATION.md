@@ -124,7 +124,7 @@ it.
 
 **The published stemma agrees with 85.4% of the expert-resolved quartets** (GQD 0.1456), and
 every gated tree lands in a narrow 0.110–0.172 band — encoding, metric and algorithm move the
-figure by at most 0.06, so the agreement is a property of the convention characters, not of
+figure by 0.062 end to end, so the agreement is a property of the convention characters, not of
 UPGMA. All ten clear the permutation null by 7.6–8.6 standard deviations.
 
 Three things this table says that the existing L0 validation could not:
