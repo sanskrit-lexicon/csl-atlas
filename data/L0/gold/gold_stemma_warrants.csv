@@ -1,0 +1,11 @@
+group,members,structure,warrant,source
+Wilson,WIL YAT SHS,flat,Wilson 1832 is the head of the English-tradition line; YAT (1846) and SHS (1900) both re-lexicalise it.,dictionary_inventory.csv notes (WIL<->YAT ~91% mutual containment; WIL subset SHS 0.953); s3_cladogram.py KNOWN_EDGES tier A
+Cappeller,CCS CAE,flat,Same compiler (Carl Cappeller): CCS 1887 (Skt-German) and CAE 1891 (Skt-English) are the two faces of one lexicon.,dictionary_inventory.csv notes ('Same author as CCS'/'Same author as CAE'); KNOWN_EDGES tier A CCS->CAE
+Petersburg,PWG PW SCH CCS CAE,nest:Cappeller,"The Petersburg line: PWG (1855-75) -> PW (1879-89, Boehtlingk's shorter recension) -> SCH (1928 Nachtraege) with the Cappeller pair descending from PW.","dictionary_inventory.csv notes ('Continuation of PWG/PWK'; 'CCS subset PW 0.945 confirms PWK->CCS'); KNOWN_EDGES tier A PWG->PW, PW->CCS, PWG->SCH"
+Monier-Williams,MW72 MW,flat,"Same compiler, first (1872) and second (1899) editions.",dictionary_inventory.csv notes ('Predecessor to MW (1899)'); KNOWN_EDGES tier A MW72->MW
+Apte,AP90 AP,flat,Apte 1890 and the 1957-59 Pune revision of it.,dictionary_inventory.csv notes ('Original 1890 Apte; AP90->AP grew 2.6x'); KNOWN_EDGES tier A AP90->AP
+UNREPRESENTABLE:PWG->MW72,PWG MW72,tier A,"MW72's preface credits the early PWG fascicles, but MW72 already sits in the Monier-Williams group; a tree gives each leaf one parent.",s3_cladogram.py KNOWN_EDGES
+UNREPRESENTABLE:PWG->MW,PWG MW,tier A,Same conflict for MW (1899).,s3_cladogram.py KNOWN_EDGES
+UNREPRESENTABLE:BOP->MW,BOP MW,tier B,Bopp-Glossarium hypothesis; MW is already placed.,s3_cladogram.py KNOWN_EDGES
+UNREPRESENTABLE:BEN->MW,BEN MW,tier B,Benfey hypothesis; MW is already placed.,s3_cladogram.py KNOWN_EDGES
+UNREPRESENTABLE:YAT->SHS,YAT SHS,tier A,"Collapsed into the flat Wilson group rather than resolved, to keep the gold conservative.",s3_cladogram.py KNOWN_EDGES

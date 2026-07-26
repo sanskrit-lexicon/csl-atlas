@@ -24,7 +24,7 @@ The headline finding is that **convention-lineage and content-lineage are distin
 
 - Evidence: L0 convention-fingerprint files under `src/data/lexicographic-structure/L0/`, Patel 2016 assignments, and validation reports.
 - Limitations: convention lineage measures house style and markup practice; it is separate from content inheritance.
-- Validation: checked by `npm run build`; L0 validation details are in `docs/L0_RESULTS.md` and `docs/L0_DESIGN.md`.
+- Validation: checked by `npm run build`; L0 validation details are in `docs/L0_RESULTS.md` and `docs/L0_DESIGN.md`. Against documented descent the published tree scores a **Generalized Quartet Distance of 0.146 — 85.4% agreement** with the expert-resolved quartets, versus 0.666 ± 0.068 for randomly relabelled trees (all ten gated trees fall in 0.110–0.172); the lemma-overlap tree scores 0.430 on the same gold. Method, gold trees, and the five documented edges no tree can represent: [`docs/L0_GQD_VALIDATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_GQD_VALIDATION.md).
 - Owner repo: `csl-atlas`.
 - Next use: treat the chart as structural evidence, then check companion docs before making a lineage claim.
 
