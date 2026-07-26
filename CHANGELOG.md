@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-07-26
+
 ### Added — Russian companion for the xref taxonomy + a docs-vs-data drift guard (H1648)
 
 - [`docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md)
