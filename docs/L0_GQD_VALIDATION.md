@@ -23,7 +23,7 @@ _Created: 26-07-2026 · Last updated: 26-07-2026_
   *reticulate* — five documented edges cannot be encoded at all (§7). The stemma gold's
   warrants partly cite lemma containment, which advantages the content tree in §4 and never
   the convention tree. The permutation test bounds accidental agreement; it is not a
-  likelihood-ratio test. n = 32 dictionaries, only 14 of them inside a documented group.
+  likelihood-ratio test. n = 32 dictionaries, only 12 of them inside a documented group.
 - **Validation**: `python scripts/L0/s7_gqd.py --selftest` (21 checks: quartet coding,
   star handling, hand-counted GQD values on 4- and 6-leaf fixtures, branch-length and
   trifurcating-root invariance, gold assembly). Deterministic — seed `20260726`,
@@ -73,7 +73,7 @@ Neither reference is built from convention characters, so neither is circular wi
 to the trees under test.
 
 **`gold_stemma`** — documented bibliographic descent, deliberately polytomous. Only groups
-with a documentary warrant are resolved; the other 18 dictionaries hang at the root and
+with a documentary warrant are resolved; the other 20 dictionaries hang at the root and
 cost nothing. Warrants, one row each, in
 [`data/L0/gold/gold_stemma_warrants.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/L0/gold/gold_stemma_warrants.csv).
 
@@ -229,9 +229,11 @@ the same range it gives cross-axis pairs).
 3. **The permutation test randomises leaf labels only.** It answers "could this tree shape
    match the classification this well by accident" — it is not a model comparison and yields
    no likelihood. p is floored at 0.001 by the 999-permutation budget.
-4. **n = 32, of which 14 are inside a documented group.** The other 18 contribute no
-   butterflies of their own; the stemma gold's 5,625 butterflies all involve at least one
-   documented group. Sub-clade differences among the unplaced 18 are invisible to this metric.
+4. **n = 32, of which 12 are inside a documented group** (AP, AP90, CAE, CCS, MW, MW72, PW,
+   PWG, SCH, SHS, WIL, YAT — the stage prints and the report records this count rather than
+   asserting it, because the groups overlap and summing their sizes over-counts). The other
+   20 contribute no butterflies of their own; the stemma gold's 5,625 butterflies all involve
+   at least one documented group, so differences among the unplaced 20 are invisible here.
 5. **European-tradition skew.** The corpus, the documented edges, and hence the gold all
    over-represent the 19th-century European lexicographical line (see `L0_DESIGN.md`
    limitations). KNA, KOW and AMAR are absent from the L0 matrix entirely.

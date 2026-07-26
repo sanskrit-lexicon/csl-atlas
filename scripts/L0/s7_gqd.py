@@ -522,6 +522,12 @@ def main():
         "stemma": Tree("gold_stemma", stemma_nw, "expert", "gold"),
         "tradition": Tree("gold_tradition", trad_nw, "expert", "gold"),
     }
+    # Dictionaries the stemma gold actually places (counted, never hand-stated:
+    # the groups overlap — Cappeller nests inside Petersburg — so summing the
+    # group sizes over-counts).
+    placed = sorted({m for _n, members, _mo, _w, _s in GOLD_STEMMA_GROUPS
+                     for m in members if m in set(full)})
+    print(f"gold_stemma places {len(placed)} of {len(full)} dicts: {' '.join(placed)}")
 
     # ---- GQD table -------------------------------------------------------
     rows = []
@@ -640,9 +646,9 @@ def main():
             "The permutation test randomises leaf labels only. It bounds accidental "
             "agreement given the tree's shape; it is not a model-comparison test "
             "and yields no likelihood.",
-            "n = 32 dictionaries, of which only 14 sit in a documented group; the "
-            "remaining 18 are unresolved in the gold and contribute no butterflies "
-            "of their own.",
+            f"n = {len(full)} dictionaries, of which only {len(placed)} sit in a "
+            f"documented group; the remaining {len(full) - len(placed)} are "
+            "unresolved in the gold and contribute no butterflies of their own.",
             "Corpus is European-tradition-skewed (see L0_DESIGN limitations); the "
             "gold inherits that skew.",
         ],

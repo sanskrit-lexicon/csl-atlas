@@ -40,7 +40,7 @@ accuracy. Not a reader-facing page — the site-facing summary is one sentence i
 2. **A network-aware score.** The headline limitation is structural: five documented edges
    (all tier-A ones into MW) cannot be represented in a tree gold at all, so 0.1456 is a
    floor. A reticulation-aware agreement measure would be the only way to credit them.
-3. **Grow the gold.** It resolves 5 groups over 14 of 32 dictionaries. Every dictionary that
+3. **Grow the gold.** It resolves 5 groups over 12 of 32 dictionaries. Every dictionary that
    gains a documented parent (csl-atlas#89/#92; KNA/KOW/AMAR entering the L0 matrix) adds
    butterflies and sharpens the estimate.
 4. **Remove the containment warrants**, or split the gold into a bibliography-only variant,
