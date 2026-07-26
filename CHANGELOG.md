@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-07-26
+
 ### Changed — xref sheet: the "independent witnesses" claim retracted, instructions in Russian (H1648)
 
 Reviewer feedback on the [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)
