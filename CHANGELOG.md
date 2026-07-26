@@ -4,6 +4,30 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — Russian companion for the xref taxonomy + a docs-vs-data drift guard (H1648)
+
+- [`docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md)
+  — full Russian companion to the English taxonomy doc, so the reviewer-facing reference
+  matches the (already Russian) review sheet. Org filename convention `.ru.md`.
+- [`test/xref-taxonomy-docs.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/xref-taxonomy-docs.test.mjs)
+  (5 tests) pins **both** companions to the committed data: every load-bearing figure must
+  match `xref_marker_agreement.json` / `xref_source_check_packet.json` / the shared-edge CSV,
+  every sheet-applicable label must be covered, neither file may re-assert the retracted
+  independence justification outside its retraction section, and the `.ru.md` must actually
+  be Cyrillic. Two prose companions in two languages are exactly what goes stale silently;
+  now that fails CI instead.
+
+### Fixed — the shared-edge candidate pool is 641, not 642
+
+The drift guard caught it on first run. The figure was a `wc -l` that counted
+`xref_shared_edges.csv`'s header as a data row, and it had propagated into the packet's
+`selectionPolicy`/`limitations`, both prose companions, the review sheet, FINDINGS §466 and
+several PR bodies. `build-xref-source-check-packet.mjs` now **computes** the pool size
+(`sharedEdgePoolSize()`) rather than carrying a literal, so it cannot drift again. Also
+removed a leftover "Two independent editors recorded the same by-form link" line in the
+English doc that had survived the H1648 retraction.
+
+
 ## [0.12.0] - 2026-07-26
 
 ### Added — GQD validation of the L0 convention stemma (H1578)

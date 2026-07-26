@@ -5,7 +5,7 @@
   "evidenceLabel": "derived-source-pointers",
   "reviewStatus": "needs-source-check",
   "ownerRepo": "csl-atlas",
-  "generatedAt": "2026-07-26T03:36:49.140Z",
+  "generatedAt": "2026-07-26T05:16:25.523Z",
   "generatedBy": "npm run build-xref-source-check-packet",
   "sourceFiles": [
     "data/lexico/xref_hub_review.json",
@@ -77,8 +77,8 @@
       "meaningRu": "Строка-цель, на которой нормализация может создать или, наоборот, скрыть ребро.",
       "asserts": "The edge may be an artifact of string folding rather than a fact about the language. Two mechanisms, in opposite directions. (a) CREATED: m6_xref_lineage.py strips MW's '-'/accent marks and PWG's '°' ring before intersecting, so headwords the dictionaries spelt differently can meet in the middle. (b) HIDDEN: MW and PWG follow documented and DIFFERENT headword conventions (Patel 2016, docs/refs/Patel_2016_Normalizing_headwords.pdf) which this pipeline does not reconcile — śatṛ stems MW '-at' vs PWG '-a' (conv. 3.1/3.2), vatup/matup MW '-vat/-mat' vs PWG '-v/-m' (3.4/3.5), ṛ-stems MW '-ṛ' vs PWG '-ar' (6.1/6.2), and vas/yas MW '-vas/-yas' vs PWG '-vaṃs/-yaṃs' (7.1/7.4). Reach for this label when source and target differ only in vowel length, accent, or a diacritic the normaliser touches.",
       "assertsRu": "Ребро может быть артефактом склейки строк, а не фактом языка. Два механизма, действующих в противоположные стороны. (а) СОЗДАНО: m6_xref_lineage.py перед пересечением убирает у MW дефисы и знаки ударения, а у PWG — кружок «°», поэтому заголовки, написанные словарями по-разному, могут совпасть. (б) СКРЫТО: MW и PWG следуют задокументированным и РАЗНЫМ конвенциям записи заголовков (Patel 2016, docs/refs/Patel_2016_Normalizing_headwords.pdf), которые этот конвейер не согласует: причастия на śatṛ у MW «-at», у PWG «-a» (конв. 3.1/3.2); vatup/matup у MW «-vat/-mat», у PWG «-v/-m» (3.4/3.5); основы на ṛ у MW «-ṛ», у PWG «-ar» (6.1/6.2); vas/yas у MW «-vas/-yas», у PWG «-vaṃs/-yaṃs» (7.1/7.4). Выбирайте эту метку, когда источник и цель различаются только долготой гласного, ударением или диакритикой, которую трогает нормализатор.",
-      "doesNotAssert": "NOT that the words are unrelated — a length variant is often a genuine by-form. It flags that THIS edge is not independent evidence, because the matching step could have manufactured it. Note the (b) mechanism also means the 642-edge intersection UNDERCOUNTS: a ṛ-stem edge can never intersect while MW writes '-ṛ' and PWG writes '-ar'.",
-      "doesNotAssertRu": "НЕ утверждает, что слова не связаны, — вариант по долготе часто является настоящей побочной формой. Метка говорит лишь о том, что ИМЕННО ЭТО ребро не является независимым свидетельством, поскольку шаг сопоставления мог его изготовить. Заметьте: механизм (б) означает также, что пересечение из 642 рёбер ЗАНИЖЕНО — ребро на основе с ṛ вообще не может попасть в пересечение, пока MW пишет «-ṛ», а PWG «-ar».",
+      "doesNotAssert": "NOT that the words are unrelated — a length variant is often a genuine by-form. It flags that THIS edge is not independent evidence, because the matching step could have manufactured it. Note the (b) mechanism also means the 641-edge intersection UNDERCOUNTS: a ṛ-stem edge can never intersect while MW writes '-ṛ' and PWG writes '-ar'.",
+      "doesNotAssertRu": "НЕ утверждает, что слова не связаны, — вариант по долготе часто является настоящей побочной формой. Метка говорит лишь о том, что ИМЕННО ЭТО ребро не является независимым свидетельством, поскольку шаг сопоставления мог его изготовить. Заметьте: механизм (б) означает также, что пересечение из 641 рёбер ЗАНИЖЕНО — ребро на основе с ṛ вообще не может попасть в пересечение, пока MW пишет «-ṛ», а PWG «-ar».",
       "examples": [
         {
           "sampleId": "mw-pwg-shared:30",
@@ -168,18 +168,18 @@
     }
   },
   "selectionPolicy": [
-    "Stage 1 — build the candidate pool: scripts/lexico/m6_xref_lineage.py reads MW's and PWG's cross-reference edges, normalises each target (strips MW's '-' and accent marks and PWG's '°' ring), and writes the MW-intersect-PWG set to data/lexico/xref_shared_edges.csv. That intersection is 642 edges.",
+    "Stage 1 — build the candidate pool: scripts/lexico/m6_xref_lineage.py reads MW's and PWG's cross-reference edges, normalises each target (strips MW's '-' and accent marks and PWG's '°' ring), and writes the MW-intersect-PWG set to data/lexico/xref_shared_edges.csv. That intersection is 641 edges.",
     "Stage 2 — take the sample: buildSharedCoreSample() in scripts/build-xref-hub-review.mjs takes sharedEdges.slice(0, 40), i.e. the FIRST 40 rows of that CSV in file order.",
-    "NOT A RANDOM SAMPLE, and the bias is visible on the sheet: the CSV is in headword order, so all 40 cards are Ā-, B-, C-, D- and G-initial headwords. Findings from these 40 describe the head of the alphabet, not the 642 as a whole. Re-running over a random or stratified draw is a separate, unstarted job.",
+    "NOT A RANDOM SAMPLE, and the bias is visible on the sheet: the CSV is in headword order, so all 40 cards are Ā-, B-, C-, D- and G-initial headwords. Findings from these 40 describe the head of the alphabet, not the 641 as a whole. Re-running over a random or stratified draw is a separate, unstarted job.",
     "Stage 3 — attach evidence: this script re-slices to 40, keeps the frozen sampleId order (validatePayload rejects any reorder), and attaches the exact MW/PWG source records per edge from xref_edges.csv, plus Cologne entry/scan links for both ends of the edge.",
     "Controls: the first five prefix-convention top targets for PWG and MW, with up to three source examples each, are carried alongside as a contrast class; all ten auto-resolve on their truncation marker and are not put to the reviewer.",
     "Deterministic throughout — no RNG anywhere in the three stages; re-running reproduces the same 40 cards in the same order.",
     "Labels on the cards are source-check prompts, not accepted lineage decisions."
   ],
   "selectionPolicyRu": [
-    "Шаг 1 — построение пула кандидатов: scripts/lexico/m6_xref_lineage.py читает перекрёстные ссылки MW и PWG, нормализует каждую цель (убирает у MW дефис и знаки ударения, у PWG — кружок «°») и записывает пересечение MW ∩ PWG в data/lexico/xref_shared_edges.csv. В пересечении 642 ребра.",
+    "Шаг 1 — построение пула кандидатов: scripts/lexico/m6_xref_lineage.py читает перекрёстные ссылки MW и PWG, нормализует каждую цель (убирает у MW дефис и знаки ударения, у PWG — кружок «°») и записывает пересечение MW ∩ PWG в data/lexico/xref_shared_edges.csv. В пересечении 641 ребра.",
     "Шаг 2 — взятие выборки: buildSharedCoreSample() в scripts/build-xref-hub-review.mjs берёт sharedEdges.slice(0, 40), то есть ПЕРВЫЕ 40 строк этого CSV в порядке файла.",
-    "ЭТО НЕ СЛУЧАЙНАЯ ВЫБОРКА, и смещение видно на листе: CSV упорядочен по заголовкам, поэтому все 40 карточек — заголовки на Ā-, B-, C-, D- и G-. Выводы по этим 40 описывают начало алфавита, а не все 642. Прогон по случайной или стратифицированной выборке — отдельная, ещё не начатая задача.",
+    "ЭТО НЕ СЛУЧАЙНАЯ ВЫБОРКА, и смещение видно на листе: CSV упорядочен по заголовкам, поэтому все 40 карточек — заголовки на Ā-, B-, C-, D- и G-. Выводы по этим 40 описывают начало алфавита, а не все 641. Прогон по случайной или стратифицированной выборке — отдельная, ещё не начатая задача.",
     "Шаг 3 — приложение свидетельств: этот скрипт снова берёт 40, сохраняет замороженный порядок sampleId (validatePayload отвергает любую перестановку) и прикладывает точные записи MW/PWG для каждого ребра из xref_edges.csv, а также кёльнские ссылки на статью и скан для обоих концов ребра.",
     "Контроли: первые пять частых prefix-convention целей у PWG и у MW, до трёх примеров-источников на каждую, идут рядом как контрастный класс; все десять разрешаются автоматически по знаку усечения и человеку не показываются.",
     "Всё детерминировано — ни на одном из трёх шагов нет генератора случайных чисел; повторный прогон даёт те же 40 карточек в том же порядке.",
@@ -3963,7 +3963,7 @@
   ],
   "limitations": [
     "Machine labels are review prompts only; this packet records no source-check decisions.",
-    "The 40 shared-core rows are the first 40 of 642 shared edges in headword order, not a random sample: every card is an Ā-, B-, C-, D- or G-initial headword. Do not generalise a rate measured on these 40 to the full intersection.",
+    "The 40 shared-core rows are the first 40 of 641 shared edges in headword order, not a random sample: every card is an Ā-, B-, C-, D- or G-initial headword. Do not generalise a rate measured on these 40 to the full intersection.",
     "Cologne entry links resolve a HEADWORD, not this exact record: where a dictionary has homonyms the lookup shows all of them. The csl-orig blob link is the pointer to the precise record.",
     "Some shared-core sample rows are present in the shared-edge sample but lack an exact MW edge row in xref_edges.csv; those rows remain visible with missing-exact-edge metadata.",
     "Prefix controls test convention pressure and are not optimization targets for lineage claims.",
@@ -3972,10 +3972,10 @@
   ],
   "limitationsRu": [
     "Машинные метки — только подсказки для проверки; этот пакет не фиксирует никаких решений.",
-    "40 строк shared-core — это первые 40 из 642 общих рёбер в порядке заголовков, а не случайная выборка: каждая карточка — заголовок на Ā-, B-, C-, D- или G-. Не переносите долю, измеренную на этих 40, на всё пересечение.",
+    "40 строк shared-core — это первые 40 из 641 общих рёбер в порядке заголовков, а не случайная выборка: каждая карточка — заголовок на Ā-, B-, C-, D- или G-. Не переносите долю, измеренную на этих 40, на всё пересечение.",
     "Кёльнская ссылка на статью открывает ЗАГОЛОВОК, а не именно эту запись: при омонимах поиск покажет их все. Точную запись адресует ссылка на csl-orig.",
     "Часть строк присутствует в выборке общих рёбер, но не имеет точного ребра MW в xref_edges.csv; такие строки остаются видимыми и помечены.",
-    "MW и PWG следуют разным конвенциям записи заголовков (Patel 2016), которые конвейер не согласует, поэтому пересечение из 642 рёбер занижено: часть настоящих общих рёбер не может совпасть по строке в принципе.",
+    "MW и PWG следуют разным конвенциям записи заголовков (Patel 2016), которые конвейер не согласует, поэтому пересечение из 641 рёбер занижено: часть настоящих общих рёбер не может совпасть по строке в принципе.",
     "Prefix-control проверяют давление издательских условностей и не являются целью оптимизации.",
     "Пересечение перекрёстных ссылок остаётся внутрисловарным свидетельством и не должно смешиваться с совстречаемостью по корпусу DCS."
   ],
