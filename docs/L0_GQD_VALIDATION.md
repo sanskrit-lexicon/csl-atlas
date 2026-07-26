@@ -208,9 +208,10 @@ Neither axis dominates, and the failures are the informative part:
 [`gqd_tree_matrix.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/L0/gqd_tree_matrix.csv)
 is the quartet analogue of the committed Robinson–Foulds matrix — normalised over all
 quartets on each pair's shared leaves, so it is comparable across the 30/32-leaf split that
-RF cannot handle. Convention trees sit 0.05–0.46 from one another; the content tree sits
-**0.59–0.66 from every one of them**, its own nearest convention neighbour (0.590) still
-farther than the two most distant convention trees are from each other (0.462). Quartet
+RF cannot handle. The ten gated convention trees sit 0.05–0.46 from one another (0.55 once
+the preview-grade convention tree is included); the content tree sits **0.59–0.66 from every
+one of them**, so even its nearest convention neighbour (0.590) is farther away than any two
+convention trees are from each other. Quartet
 distance separates the axes more sharply than RF did (RF put UPGMA–NJ at 0.59, i.e. inside
 the same range it gives cross-axis pairs).
 
