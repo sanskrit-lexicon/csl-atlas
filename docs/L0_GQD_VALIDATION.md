@@ -23,7 +23,7 @@ _Created: 26-07-2026 · Last updated: 26-07-2026_
   *reticulate* — five documented edges cannot be encoded at all (§7). The stemma gold's
   warrants partly cite lemma containment, which advantages the content tree in §4 and never
   the convention tree. The permutation test bounds accidental agreement; it is not a
-  likelihood-ratio test. n = 32 dictionaries, only 14 of them inside a documented group.
+  likelihood-ratio test. n = 32 dictionaries, only 12 of them inside a documented group.
 - **Validation**: `python scripts/L0/s7_gqd.py --selftest` (21 checks: quartet coding,
   star handling, hand-counted GQD values on 4- and 6-leaf fixtures, branch-length and
   trifurcating-root invariance, gold assembly). Deterministic — seed `20260726`,
@@ -73,7 +73,7 @@ Neither reference is built from convention characters, so neither is circular wi
 to the trees under test.
 
 **`gold_stemma`** — documented bibliographic descent, deliberately polytomous. Only groups
-with a documentary warrant are resolved; the other 18 dictionaries hang at the root and
+with a documentary warrant are resolved; the other 20 dictionaries hang at the root and
 cost nothing. Warrants, one row each, in
 [`data/L0/gold/gold_stemma_warrants.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/L0/gold/gold_stemma_warrants.csv).
 
@@ -124,13 +124,13 @@ it.
 
 **The published stemma agrees with 85.4% of the expert-resolved quartets** (GQD 0.1456), and
 every gated tree lands in a narrow 0.110–0.172 band — encoding, metric and algorithm move the
-figure by at most 0.06, so the agreement is a property of the convention characters, not of
+figure by 0.062 end to end, so the agreement is a property of the convention characters, not of
 UPGMA. All ten clear the permutation null by 7.6–8.6 standard deviations.
 
 Three things this table says that the existing L0 validation could not:
 
 1. **The 55% directed-edge recovery in [`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md) §3 understated the tree.** Edge recovery asks whether each documented parent-child pair is a sister pair — an all-or-nothing test that a large, otherwise-correct clade fails. GQD scores the same trees at 0.85 agreement because it measures *topological* agreement with the documented groups rather than sisterhood.
-2. **The Patel-2016 gold-convention ingest is worth ≈0.28 GQD.** The preview tree (19 mechanical dims, no Patel conventions) scores 0.4292 against the same gold on the same leaves where the gated tree scores 0.1468 (§4). This independently corroborates §2 of `L0_RESULTS.md` ("the Patel ingest doubled the signal") on a metric that was not used to tune anything.
+2. **The gated pipeline is worth ≈0.28 GQD over the preview.** The preview tree scores 0.4292 against the same gold on the same 30 leaves where the gated tree scores 0.1468 (§4) — a large, independently-measured improvement on a metric that was used to tune nothing, and consistent with §2 of `L0_RESULTS.md` ("the Patel ingest doubled the signal"). **It does not isolate the Patel ingest**, because the two pipelines differ in two ways at once: 19 mechanical dimensions with Gower distance (preview) versus 25 dimensions including Patel's seven gold conventions with rare-option-weighted Hamming (gated). Splitting the credit would need two trees that do not exist in the repo (25 dims under Gower, 19 under weighted Hamming), so the honest statement is the joint one.
 3. **The tradition gold is barely beaten** (0.53–0.61, z ≈ −1.7 to −4.4). Convention similarity does *not* reduce to "dictionaries with the same target language look alike" — if it did, the tradition column would be the strong one. It is the weak one.
 
 Two honesty notes. `canonical_consensus.newick` and `B_whamming_upgma.newick` are
@@ -208,9 +208,10 @@ Neither axis dominates, and the failures are the informative part:
 [`gqd_tree_matrix.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/L0/gqd_tree_matrix.csv)
 is the quartet analogue of the committed Robinson–Foulds matrix — normalised over all
 quartets on each pair's shared leaves, so it is comparable across the 30/32-leaf split that
-RF cannot handle. Convention trees sit 0.05–0.46 from one another; the content tree sits
-**0.59–0.66 from every one of them**, its own nearest convention neighbour (0.590) still
-farther than the two most distant convention trees are from each other (0.462). Quartet
+RF cannot handle. The ten gated convention trees sit 0.05–0.46 from one another (0.55 once
+the preview-grade convention tree is included); the content tree sits **0.59–0.66 from every
+one of them**, so even its nearest convention neighbour (0.590) is farther away than any two
+convention trees are from each other. Quartet
 distance separates the axes more sharply than RF did (RF put UPGMA–NJ at 0.59, i.e. inside
 the same range it gives cross-axis pairs).
 
@@ -228,9 +229,11 @@ the same range it gives cross-axis pairs).
 3. **The permutation test randomises leaf labels only.** It answers "could this tree shape
    match the classification this well by accident" — it is not a model comparison and yields
    no likelihood. p is floored at 0.001 by the 999-permutation budget.
-4. **n = 32, of which 14 are inside a documented group.** The other 18 contribute no
-   butterflies of their own; the stemma gold's 5,625 butterflies all involve at least one
-   documented group. Sub-clade differences among the unplaced 18 are invisible to this metric.
+4. **n = 32, of which 12 are inside a documented group** (AP, AP90, CAE, CCS, MW, MW72, PW,
+   PWG, SCH, SHS, WIL, YAT — the stage prints and the report records this count rather than
+   asserting it, because the groups overlap and summing their sizes over-counts). The other
+   20 contribute no butterflies of their own; the stemma gold's 5,625 butterflies all involve
+   at least one documented group, so differences among the unplaced 20 are invisible here.
 5. **European-tradition skew.** The corpus, the documented edges, and hence the gold all
    over-represent the 19th-century European lexicographical line (see `L0_DESIGN.md`
    limitations). KNA, KOW and AMAR are absent from the L0 matrix entirely.

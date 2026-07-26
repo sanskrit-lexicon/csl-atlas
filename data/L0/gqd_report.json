@@ -1977,7 +1977,7 @@
     "The expert stemma is a TREE; documented dictionary descent is reticulate. Five documented edges (listed in gold/gold_stemma_warrants.csv as UNREPRESENTABLE) cannot be encoded, including PWG->MW and PWG->MW72 — the very edges the L0 results identify as reformatted. GQD therefore cannot reward a tree for recovering them.",
     "The gold stemma's warrants include sanhw1 lemma containment, which is the content axis. That gives the CONTENT tree a mild home-field advantage in the head-to-head and gives the convention tree none; read a convention-tree win as conservative and a content-tree win as partly circular.",
     "The permutation test randomises leaf labels only. It bounds accidental agreement given the tree's shape; it is not a model-comparison test and yields no likelihood.",
-    "n = 32 dictionaries, of which only 14 sit in a documented group; the remaining 18 are unresolved in the gold and contribute no butterflies of their own.",
+    "n = 32 dictionaries, of which only 12 sit in a documented group; the remaining 20 are unresolved in the gold and contribute no butterflies of their own.",
     "Corpus is European-tradition-skewed (see L0_DESIGN limitations); the gold inherits that skew."
   ]
 }

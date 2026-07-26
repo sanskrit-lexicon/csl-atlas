@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.12.0] - 2026-07-26
+
 ### Added — GQD validation of the L0 convention stemma (H1578)
 
 - **`npm run build-l0-gqd` + `validate-l0-gqd`**
@@ -27,7 +29,9 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   encoding/metric/algorithm choice. Convention ≠ content is now a topology-level result:
   against the same gold the lemma-overlap tree scores 0.4302, and the two axes recover
   *different* documented families (Petersburg 1.000 convention / 0.395 content; Wilson
-  0.442 / 1.000). The Patel-2016 convention ingest is worth ≈0.28 GQD. Registered as
+  0.442 / 1.000). The gated pipeline beats the preview one by ≈0.28 GQD — a joint effect
+  of Patel's seven gold conventions and the weighted-Hamming distance, not separable into
+  the two with the trees the repo committed. Registered as
   `L0-GQD` in
   [`docs/HYPOTHESIS_INDEX.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_INDEX.md);
   agenda backlog #8 ticked.
