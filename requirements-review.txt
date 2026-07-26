@@ -1,6 +1,7 @@
-# Review-sheet emitter v0.3.1 — the 19-07-2026 V1–V8 standard plus the light-mode
-# contrast fix (color-scheme:dark + hardened note textarea, csl-pyutil#6). Pin the
-# immutable commit so generation cannot silently change when the tag or default
-# branch moves. v0.3.1 also carries the __version__-string fix (csl-pyutil#5), so
-# csl_pyutil/__init__.py reports 0.3.1, which the MIN_EMITTER_VERSION guard reads.
-csl-pyutil @ https://github.com/sanskrit-lexicon/csl-pyutil/archive/594b4e9a8e2d6b4c1e4942b6664d6deb87857dd8.zip
+# Review-sheet emitter v0.4.0 — the 19-07-2026 V1–V8 standard, the light-mode
+# contrast fix (csl-pyutil#6), and config["ui_strings"] for translating the emitter's
+# own chrome (csl-pyutil#9, H1648): the xref sheet is reviewed in Russian, and the
+# toolbar button, keyboard hint, save banner and vote legend are instructions too.
+# Pin the immutable commit so generation cannot silently change when the tag or
+# default branch moves.
+csl-pyutil @ https://github.com/sanskrit-lexicon/csl-pyutil/archive/db85dbb9e81393cb77d3b8fab2b6ce8c44131323.zip

@@ -32,17 +32,19 @@ import re
 
 #: Part class -> (colour, human label, extra CSS). Dark-panel palette, matching the
 #: review sheet's own --panel2 (#1e222b). Labels drive the rendered legend.
+#: Labels are Russian: the only surface rendering this legend is the review sheet,
+#: whose reviewer reads Russian (H1648). Keys stay English machine identifiers.
 PARTS = {
-    "sanskrit": ("#e6c07b", "Sanskrit form", ""),
-    "gloss": ("#98c379", "Gloss / meaning", "font-style:italic"),
-    "citation": ("#e06c75", "Source citation", ""),
-    "grammar": ("#d19a66", "Grammar tag", ""),
-    "crossref": ("#56b6c2", "Cross-reference marker", "font-weight:600"),
-    "etymology": ("#61afef", "Etymology / cognate", ""),
-    "language": ("#7aa2c9", "Language label", ""),
-    "taxon": ("#c678dd", "Botanical / zoological name", ""),
-    "homonym": ("#b57edc", "Homonym index", ""),
-    "structure": ("#7f8c9b", "Sense / section divider", ""),
+    "sanskrit": ("#e6c07b", "санскритская форма", ""),
+    "gloss": ("#98c379", "перевод / значение", "font-style:italic"),
+    "citation": ("#e06c75", "ссылка на источник", ""),
+    "grammar": ("#d19a66", "грамматическая помета", ""),
+    "crossref": ("#56b6c2", "маркер перекрёстной ссылки (cf. / Vgl.)", "font-weight:600"),
+    "etymology": ("#61afef", "этимология / когнат", ""),
+    "language": ("#7aa2c9", "название языка", ""),
+    "taxon": ("#c678dd", "ботаническое / зоологическое название", ""),
+    "homonym": ("#b57edc", "номер омонима", ""),
+    "structure": ("#7f8c9b", "разделитель значения / раздела", ""),
 }
 
 #: Paired content tags -> part class. ``<s>``/``<s1>``/``<s2>`` are MW's Sanskrit
@@ -110,7 +112,7 @@ def _sanskrit_body(inner, target_norm):
         # This span IS the cross-reference the card is asking about.
         return (
             '<span style="background:rgba(86,182,194,.22);outline:1px solid #56b6c2;'
-            'border-radius:3px;padding:0 2px" title="the cross-reference target this card asks about">'
+            'border-radius:3px;padding:0 2px" title="цель перекрёстной ссылки, о которой спрашивает эта карточка">'
             + _span(body, colour, extra, escape=False)
             + "</span>"
         )
@@ -181,6 +183,6 @@ def legend_html(parts=None):
         '<span style="display:inline-block;margin:0 10px 4px 0;white-space:nowrap">'
         '<span style="display:inline-block;width:10px;height:10px;border-radius:2px;'
         'background:rgba(86,182,194,.22);outline:1px solid #56b6c2;margin-right:5px"></span>'
-        '<span style="color:#56b6c2">the cross-reference target</span></span>'
+        '<span style="color:#56b6c2">цель перекрёстной ссылки</span></span>'
     )
     return '<div style="font-size:12px;line-height:1.9">' + "".join(chips) + "</div>"

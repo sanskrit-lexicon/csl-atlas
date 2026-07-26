@@ -4,6 +4,38 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Changed — xref sheet: the "independent witnesses" claim retracted, instructions in Russian (H1648)
+
+Reviewer feedback on the [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)
+rebuild. Three points, one of them a correction to a claim this repo was making.
+
+- **Retracted: "both dictionaries, independently, print a cross-reference".** MG: *"wrong —
+  MW depends on PWG and PW."* MW 1899 was built on Böhtlingk–Roth, so a shared reference may
+  be one tradition copied rather than two agreeing. New
+  [`scripts/lexico/m9_xref_marker_agreement.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m9_xref_marker_agreement.py)
+  measures it instead of assuming either way: on the **2,750** headwords cross-referenced in
+  both dictionaries, MW's `cf.` target is also a PWG `Vgl.`/`s.` target **21.8%** of the time
+  versus **0.007%** expected under a degree-preserving null — **≈2,953× enrichment, 0/200
+  null draws at or above observed (p < 0.005)**. Committed to
+  [`data/lexico/xref_marker_agreement.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_marker_agreement.json).
+  `lexical-shared-core` now asserts only that the edge is **real and lexical**; the raw
+  containment asymmetry (~3.2×) is flagged as a set-size artifact (~3.4× edge-count ratio),
+  not directional evidence.
+- **`normalization-risk` grounded in Patel 2016.** MG: *"to check for artifacts you first
+  have to check how artifacts could be made."*
+  [`docs/refs/Patel_2016_Normalizing_headwords.pdf`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/Patel_2016_Normalizing_headwords.pdf)
+  yields four documented conventions where MW and PWG take **opposite** sides and which this
+  pipeline does not reconcile: śatṛ `-at`/`-a` (3.1/3.2), vatup/matup `-vat`/`-v` (3.4/3.5),
+  ṛ-stems `-ṛ`/`-ar` (6.1/6.2), vas/yas `-vas`/`-vaṃs` (7.1/7.4). Consequence now stated: the
+  risk runs both ways, and **the 642-edge intersection is an undercount** — a ṛ-stem edge
+  cannot intersect at all while the two dictionaries key it differently.
+- **The sheet is in Russian.** Question, label definitions, worked examples, sampling method
+  and markup legend are translated, and the emitter's own chrome (toolbar button, keyboard
+  hint, save banner, vote legend) with it, via
+  [`csl-pyutil` 0.4.0's new `ui_strings`](https://github.com/sanskrit-lexicon/csl-pyutil/pull/9)
+  rather than by post-processing HTML here (pin bumped, `MIN_EMITTER_VERSION` 0.3.1 → 0.4.0).
+  The only non-Russian prose left on a card is the quoted dictionary text itself.
+
 ## [0.10.0] - 2026-07-26
 
 ### Added — PH5 ORTHO-CLOCK gloss-orthography census + V5 explorer (H1577)

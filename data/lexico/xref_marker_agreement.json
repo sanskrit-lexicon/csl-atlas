@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "xref-marker-agreement",
+  "claim": "MW `cf.` and PWG `Vgl.` cross-references are NOT independent witnesses: where both dictionaries cross-reference the same headword they agree on the target far more often than chance allows.",
+  "evidenceLabel": "derived-measurement",
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "python scripts/lexico/m9_xref_marker_agreement.py",
+  "sourceFiles": [
+    "data/lexico/xref_edges.csv",
+    "scripts/lexico/m6_xref_lineage.py"
+  ],
+  "counts": {
+    "mwCfEdges": 7637,
+    "pwgVglEdges": 22937,
+    "pwgSEdges": 2838,
+    "pwgAllEdges": 25766,
+    "mwHeadwordsWithXref": 6974,
+    "pwgHeadwordsWithXref": 14016,
+    "headwordsInBoth": 2750,
+    "intersectionEdges": 694
+  },
+  "agreement": {
+    "opportunityEdges": 3184,
+    "agreeingEdges": 694,
+    "agreementRate": 0.217965,
+    "expectedByChance": 0.235,
+    "expectedRate": 7.381e-05,
+    "enrichment": 2953.2,
+    "nullDraws": 200,
+    "nullDrawsAtOrAboveObserved": 0,
+    "pValue": "< 0.005",
+    "seed": 20260726
+  },
+  "containment": {
+    "mwEdgesFoundInPwgEitherDirection": 854,
+    "mwShareFoundInPwg": 0.1118,
+    "pwgEdgesFoundInMwEitherDirection": 896,
+    "pwgShareFoundInMw": 0.0348,
+    "pwgToMwEdgeCountRatio": 3.37,
+    "caveat": "The containment asymmetry (~3.2x) is almost exactly the edge-count ratio (~3.4x), so it is what set sizes alone predict. Do NOT read it as directional evidence. The agreement enrichment above is the result that carries weight."
+  },
+  "interpretation": [
+    "Refutes 'two dictionaries independently made the same link' as grounds for confirming a shared-core edge; that justification has been removed from the label vocabulary.",
+    "Does NOT establish direction on its own. MW's dependence on Boehtlingk-Roth is a bibliographic fact (MW 1899 preface), not something this statistic shows.",
+    "A shared edge can still be real and lexical — that, not double attestation, is what lexical-shared-core asserts.",
+    "Normalization is a live confound throughout: MW and PWG follow different headword conventions (Patel 2016), so folding them together can both create and hide edges. See docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md."
+  ],
+  "limitations": [
+    "Agreement is measured on normalized (accent-stripped, ring-stripped) forms; the normalisation itself can manufacture agreement.",
+    "The null reshuffles MW targets from MW's own target pool, so it preserves MW's target frequency profile but not its phonological or semantic structure.",
+    "Marker semantics are not identical: PWG's `Vgl.` and `s.` are distinct referring conventions and MW's `cf.` spans both; they are pooled here.",
+    "No per-edge causal claim: a high overall enrichment says nothing about whether any ONE card's edge was copied."
+  ]
+}

@@ -40,12 +40,12 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "review"
-DATE = "25-07-2026"  # H1646 xref reviewability: Cologne links, anatomy, taxonomy, sampling
-#: Minimum, NOT exact: the V1–V8 standard shipped in csl-pyutil 0.3.0, and the
-#: light-mode contrast fix (color-scheme:dark + hardened note textarea) in 0.3.1.
+DATE = "26-07-2026"  # H1648 xref: Russian instructions + MW-depends-on-PWG correction
+#: Minimum, NOT exact: the V1–V8 standard shipped in csl-pyutil 0.3.0, the
+#: light-mode contrast fix in 0.3.1, and `ui_strings` chrome translation in 0.4.0.
 #: A `>=` check expresses "require at least the standard" so future emitter patch
 #: releases don't hard-fail this builder (the equality-pin trap PR #5 flagged).
-MIN_EMITTER_VERSION = "0.3.1"
+MIN_EMITTER_VERSION = "0.4.0"
 REVIEWER = "gasyoun"
 
 
@@ -62,9 +62,36 @@ def _version_tuple(v):
 #: review_sheet_standard.NOTE_MIN_HEIGHT_PX, so sheets look alike across repos.
 NOTE_MIN_HEIGHT_PX = 88
 
+#: H1648 -- every sheet here is voted in Russian, but the emitter's own chrome
+#: (toolbar button, keyboard hint, save banner, vote legend) was hard-coded English.
+#: These are instructions the reviewer has to read, so they are translated through
+#: csl-pyutil 0.4.0's `ui_strings` hook rather than left as the one English island
+#: on an otherwise Russian sheet. `save_banner` deliberately keeps the sheet_id and
+#: destination path in code spans -- those are machine identifiers, not prose.
+UI_STRINGS_RU = {
+    "download_button": "Скачать decisions.json",
+    "save_button": "Сохранять в папку…",
+    "footer_hint": (
+        "Клавиши: <kbd>a</kbd> — подтвердить &middot; <kbd>r</kbd> — отклонить &middot; "
+        "<kbd>d</kbd> — отложить &middot; <kbd>&darr;</kbd>/<kbd>&uarr;</kbd> — следующая/предыдущая "
+        "карточка. Голоса автоматически сохраняются в localStorage этого браузера; когда закончите, "
+        "нажмите «Скачать decisions.json» (непроголосованные строки выгрузятся с decision:null)."
+    ),
+    "legend": (
+        "<b>Подтвердить</b> — согласиться с тем, что написано на карточке (отдельного «принять как "
+        "есть» нет: подтверждение и означает согласие в том виде, как сформулировано). "
+        "<b>Отклонить</b> — не принимать предложение, оставить как есть. <b>Отложить</b> — пока не "
+        "уверены, вернуться позже. Поле примечания — для частичной правки вместо полного отклонения."
+    ),
+}
+
 #: V3 + V6 -- applied to every csl-atlas sheet. V8 (save_as) is per-sheet
 #: because the banner names that sheet's own destination file.
-STANDARD_CONFIG = {"show_ids": True, "note_min_height_px": NOTE_MIN_HEIGHT_PX}
+STANDARD_CONFIG = {
+    "show_ids": True,
+    "note_min_height_px": NOTE_MIN_HEIGHT_PX,
+    "ui_strings": UI_STRINGS_RU,
+}
 
 
 def read_json(relative):
@@ -118,6 +145,18 @@ def emit(stem, title, subtitle, items, filters):
         # V8 -- banner binding the downloaded decisions file to this sheet.
         "save_as": f"csl-atlas\\review\\{stem}_decisions.json",
         **STANDARD_CONFIG,
+    }
+    # The V8 banner names this sheet's own destination, so it is the one chrome
+    # string that cannot live in the shared UI_STRINGS_RU table.
+    save_as = config["save_as"]
+    config["ui_strings"] = {
+        **UI_STRINGS_RU,
+        "save_banner": (
+            f"&#128229; Экспорт скачается файлом <code>{stem}_decisions.json</code> &rarr; "
+            f"сохраните его в <code>{html.escape(save_as)}</code> "
+            f"(внутри файла поле <code>sheet_id</code> = <code>{stem}</code> — по нему "
+            f"следующая сессия поймёт, к какому листу относятся эти решения)."
+        ),
     }
     OUT.mkdir(exist_ok=True)
     target = OUT / f"{stem}_review.html"
@@ -210,25 +249,57 @@ def _label_vocabulary_html(vocabulary):
             continue
         examples = "".join(
             f'<li><code>{html.escape(ex["sampleId"])}</code> — {html.escape(ex["edge"])}<br>'
-            f'<span style="color:{_MUTED}">{html.escape(ex["why"])}</span></li>'
+            f'<span style="color:{_MUTED}">{html.escape(ex.get("whyRu") or ex["why"])}</span></li>'
             for ex in entry.get("examples", [])
         )
         blocks.append(
             f'<p style="margin:10px 0 4px"><code>{html.escape(entry["label"])}</code> — '
-            f'{html.escape(entry["meaning"])}</p>'
-            f'<p style="margin:0 0 4px"><strong>Утверждает:</strong> {html.escape(entry.get("asserts", ""))}</p>'
-            f'<p style="margin:0 0 4px"><strong>НЕ утверждает:</strong> {html.escape(entry.get("doesNotAssert", ""))}</p>'
+            f'{html.escape(entry.get("meaningRu") or entry["meaning"])}</p>'
+            f'<p style="margin:0 0 4px"><strong>Утверждает:</strong> '
+            f'{html.escape(entry.get("assertsRu") or entry.get("asserts", ""))}</p>'
+            f'<p style="margin:0 0 4px"><strong>НЕ утверждает:</strong> '
+            f'{html.escape(entry.get("doesNotAssertRu") or entry.get("doesNotAssert", ""))}</p>'
             f'<ul style="margin:0 0 6px;padding-left:20px">{examples}</ul>'
         )
     return "".join(blocks)
+
+
+def _independence_html(packet):
+    """H1648. The sheet used to justify a confirm with "two dictionaries independently
+    made the same link". MG: "wrong — MW depends on PWG and PW." The measurement agrees,
+    so the card now carries the correction rather than the claim."""
+    m = packet.get("markerIndependence")
+    if not m:
+        return ""
+    return (
+        f'<p style="margin:0 0 6px;color:#e6c07b"><strong>{html.escape(m["findingRu"])}</strong></p>'
+        f'<p style="margin:0 0 6px">На {m["headwordsInBoth"]} заголовках, у которых перекрёстная '
+        f'ссылка есть в обоих словарях, цель MW совпадает с целью PWG в '
+        f'<strong>{100 * m["agreementRate"]:.1f}%</strong>'.replace(".", ",") + ' случаев против '
+        + f'<strong>{100 * m["expectedRate"]:.3f}%</strong>'.replace(".", ",")
+        + f', ожидаемых случайно — обогащение ≈&nbsp;{m["enrichment"]:.0f}×, '
+        f'p&nbsp;{html.escape(m["pValue"])}.</p>'
+        f'<p style="margin:0 0 6px">{html.escape(m["noteRu"])} Поэтому «оба словаря независимо» '
+        f'больше не является основанием для подтверждения ребра: подтверждать следует то, что '
+        f'ссылка <em>реальна и лексична</em>, а не то, что она засвидетельствована дважды.</p>'
+        f'<p style="margin:0;color:{_MUTED}">Замер: <code>{html.escape(m["generatedBy"])}</code> → '
+        f'<code>{html.escape(m["artifact"])}</code>. Направление зависимости берётся из '
+        f'библиографии (предисловие MW 1899), а не из этой статистики.</p>'
+    )
 
 
 def _selection_policy_html(packet):
     """Fix 4 (H1646): how these 40 rows were chosen — "I do not see the list of methods
     used for sampling these words". The packet has always carried selectionPolicy and
     limitations; nothing rendered them."""
-    steps = "".join(f"<li>{html.escape(step)}</li>" for step in packet.get("selectionPolicy", []))
-    limits = "".join(f"<li>{html.escape(item)}</li>" for item in packet.get("limitations", []))
+    steps = "".join(
+        f"<li>{html.escape(step)}</li>"
+        for step in (packet.get("selectionPolicyRu") or packet.get("selectionPolicy", []))
+    )
+    limits = "".join(
+        f"<li>{html.escape(item)}</li>"
+        for item in (packet.get("limitationsRu") or packet.get("limitations", []))
+    )
     counts = packet.get("counts", {})
     artifact = packet.get("sourceArtifact", {})
     return (
@@ -294,13 +365,15 @@ def xref_items():
     packet = read_json("data/lexico/xref_source_check_packet.json")
     vocabulary_html = _label_vocabulary_html(packet.get("packetLabelVocabulary", []))
     policy_html = _selection_policy_html(packet)
+    independence_html = _independence_html(packet)
     legend = cdsl_legend()
     items = []
     for row in packet["sharedCoreRows"]:
         source_iast, target_iast = _iast(row["sourceLemma"]), _iast(row["target"])
         # Same H1621 rule as the H4 sheet: the machine question is written in SLP1;
-        # show the reviewer IAST, keeping the SLP1 key alongside it.
-        question_text = row["reviewQuestion"]
+        # show the reviewer IAST, keeping the SLP1 key alongside it. H1648: the
+        # Russian rendering of the question is the one the reviewer reads.
+        question_text = row.get("reviewQuestionRu") or row["reviewQuestion"]
         for slp1, iast in sorted(
             {row["sourceLemma"]: source_iast, row["target"]: target_iast}.items(),
             key=lambda kv: len(kv[0]), reverse=True,
@@ -320,9 +393,10 @@ def xref_items():
             f'<p><strong>Предложение:</strong> <code>lexical-shared-core</code>.</p>'
             f"<p>{html.escape(question_text)}</p>"
             f"{sparse_note}"
-            "<p>Подтвердите значимое общее лексическое ребро либо отклоните и укажите в примечании "
-            "<code>prefix-convention</code>, <code>normalization-risk</code> или <code>too-sparse</code>. "
-            "Определения и по два разобранных примера — ниже.</p>"
+            "<p>Подтвердите, что ссылка <strong>реальна и лексична</strong>, либо отклоните и укажите "
+            "в примечании <code>prefix-convention</code>, <code>normalization-risk</code> или "
+            "<code>too-sparse</code>. Определения и по два разобранных примера — ниже.</p>"
+            + _details("⚠ Что НЕ доказывает общая ссылка: MW зависит от PW/PWG", independence_html)
             + _details("Словарь меток: что означает каждая и когда её выбирать", vocabulary_html)
             + _details("Как отобраны эти 40 рёбер (метод выборки и его ограничения)", policy_html)
             + _details("Легенда разметки статьи", legend)
@@ -396,7 +470,10 @@ BUILDERS = {
         "Xref: общие MW/PWG рёбра — 40 строк",
         "Первые 40 из 642 общих рёбер в порядке заголовков (не случайная выборка); "
         "prefix-control разрешены автоматически. На каждой карточке: ссылки в Кёльн на оба конца ребра, "
-        "разметка статьи с подсветкой, словарь меток и метод отбора.",
+        "разметка статьи с подсветкой, словарь меток и метод отбора. "
+        "⚠ Общая ссылка НЕ означает двух независимых свидетельств: MW опирается на PW/PWG "
+        "(совпадение целей 21,8% против 0,007% случайных) — подтверждайте реальность и лексичность "
+        "ссылки, а не её двойную засвидетельствованность.",
         xref_items,
         [("shared-core", "общие рёбра")],
     ),

@@ -1,6 +1,6 @@
 # XREF_SHARED_CORE_LABEL_TAXONOMY.md — metadoc
 
-_Created: 25-07-2026 · Last updated: 25-07-2026_
+_Created: 25-07-2026 · Last updated: 26-07-2026_
 
 Companion record for
 [`docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md).
@@ -19,7 +19,9 @@ re-sampling, or extending the xref shared-core review. Not a public-site documen
 
 ## Provenance
 
-- Handoff: [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)
+- Handoffs: [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)
+  (created), [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md)
+  (independence correction, Patel grounding, Russian sheet)
 - Model: Opus 5 (1M context) (`claude-opus-5[1m]`)
 - Trigger: reviewer feedback in `Uprava/review/40edges.md` — eight numbered objections to
   the sheet, of which four were structural (no Cologne links, unreadable raw markup,
@@ -42,9 +44,12 @@ re-sampling, or extending the xref shared-core review. Not a public-site documen
 
 ## Improvement backlog (ranked)
 
-1. **Re-sample the 642 edges randomly or stratified by initial** and regenerate the
-   sheet — the alphabetical-head bias is the largest live threat to any rate measured
-   from this review.
+1. **Normalise per Patel 2016 before intersecting, then re-sample.** Two defects
+   compound here: the alphabetical-head bias, and the four documented MW↔PWG headword
+   convention divergences the pipeline does not reconcile (śatṛ, vatup/matup, ṛ-stems,
+   vas/yas). The second means the 642-edge intersection is an *undercount* — a ṛ-stem
+   edge cannot intersect at all — so a Patel-normalised re-run should be done before,
+   or together with, a random/stratified draw.
 2. **Adjudicate the `normalization-risk` candidates** (`:15`/`:30`, `:21`, and the other
    reciprocal length pairs) so the examples become decided cases rather than arguments.
 3. **Backfill the 4 single-dictionary rows** — check whether the missing MW edge is
@@ -60,5 +65,6 @@ re-sampling, or extending the xref shared-core review. Not a public-site documen
 | Date | Change | Handoff |
 |---|---|---|
 | 25-07-2026 | Created alongside the sheet rebuild (Cologne links, entry anatomy, label definitions, sampling disclosure). | [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md) |
+| 26-07-2026 | **Retracted the "two independent witnesses" justification** after MG's ruling that MW depends on PW/PWG; added the measured non-independence (21.8% vs 0.007%, ≈2953×, p&nbsp;<&nbsp;0.005), grounded `normalization-risk` in the four documented MW↔PWG convention divergences from Patel 2016 (incl. that the 642-edge intersection is an undercount), and recorded that the sheet is now fully Russian. | [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md) |
 
 _Dr. Mārcis Gasūns_

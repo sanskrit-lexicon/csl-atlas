@@ -1,6 +1,6 @@
 # Xref shared-core: label taxonomy and sampling method
 
-_Created: 25-07-2026 · Last updated: 25-07-2026_
+_Created: 25-07-2026 · Last updated: 26-07-2026_
 
 The decision rules behind the MW/PWG shared-core review sheet
 ([`csl-atlas-xref-shared-core_40edges_review.html`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-review-sheets.py),
@@ -24,11 +24,42 @@ whether the MW and PWG source records support it **as a meaningful shared lexica
 cross-reference rather than a normalization or convention artifact**.
 
 The question is *not* whether the two words mean the same thing. Confirming an edge
-asserts only that both dictionaries independently printed a cross-reference between
-these two headwords and that the target is a real lemma. A vṛddhi derivative, a `-ka`
-suffix formation, a dialectal by-form and an etymological cognate all confirm equally —
-the classification does not record *which* of those it is, and does not claim the two
-are synonyms.
+asserts only that the cross-reference is **real and lexical**: the target is an actual
+lemma rather than a piece of markup convention, and the link between the two words is a
+linguistic one. A vṛddhi derivative, a `-ka` suffix formation, a dialectal by-form and an
+etymological cognate all confirm equally — the classification does not record *which* of
+those it is, and does not claim the two are synonyms.
+
+## ⚠ What a shared reference does *not* prove
+
+An earlier version of this document (and of the sheet) justified a confirm on the grounds
+that "both dictionaries, **independently**, print a cross-reference … two editorial
+traditions made the same link". **That is wrong, and MG rejected it on 26-07-2026: MW
+depends on PWG and PW.** Monier-Williams 1899 was built on Böhtlingk–Roth; a reference
+shared between them may be one tradition copied, not two traditions agreeing.
+
+The edge data says the same thing without appeal to the bibliography.
+[`scripts/lexico/m9_xref_marker_agreement.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m9_xref_marker_agreement.py)
+compares MW's `cf.` targets against PWG's `Vgl.`/`s.` targets for the same headword,
+against a null that reshuffles MW's targets while preserving each headword's out-degree:
+
+| Measure | Value |
+|---|---|
+| Headwords cross-referenced in **both** dictionaries | 2,750 |
+| MW `cf.` edges on those headwords | 3,184 |
+| …whose target PWG also points to | **694 (21.8%)** |
+| Expected by chance (200 null draws, seed 20260726) | 0.235 (0.007%) |
+| Enrichment | **≈2,953×** |
+| Null draws ≥ observed | 0 / 200 (p < 0.005) |
+
+For scale: MW carries 7,637 normalized `cf.` edges and PWG 25,766. The raw containment
+asymmetry (11.2% of MW's edges appear in PWG vs 3.5% the other way) is ~3.2×, almost
+exactly the 3.4× edge-count ratio — **that asymmetry is a set-size artifact and is not
+directional evidence.** The agreement enrichment is the result that carries weight.
+
+What this changes in practice: confirm an edge because the reference is *real and
+lexical*, not because it is *doubly attested*. Full measurement and its limitations:
+[`data/lexico/xref_marker_agreement.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_marker_agreement.json).
 
 ## The four labels in play
 
@@ -40,9 +71,9 @@ not a verdict on it.
 
 ### `lexical-shared-core` — confirm
 
-Both dictionaries, independently, print a cross-reference from this headword to this
-target, and the target is a real lemma rather than a markup convention. Two editorial
-traditions made the same link.
+The cross-reference is real and lexical: the target is an actual lemma, not a piece of
+markup convention, and the link between the two words is a linguistic one. See the
+section above for what this deliberately no longer claims.
 
 | Example | Why |
 |---|---|
@@ -81,6 +112,30 @@ could have manufactured it.
 |---|---|
 | `mw-pwg-shared:30` — `BuHKAra → BUHKAra` (buhkāra → būhkāra) | Differs only in the length of the first vowel, and the reciprocal edge `mw-pwg-shared:15` runs the other way. Plausibly an artifact of which form each dictionary chose as headword. |
 | `mw-pwg-shared:21` — `BastrakA → BastrAkA` (bhastrakā → bhastrākā) | Same shape: only the placement of vowel length distinguishes the two strings. |
+
+#### How artifacts get made: the documented MW↔PWG convention divergences
+
+Before judging whether an edge is an artifact, know the mechanisms that produce one.
+Dhaval Patel's *Normalizing headwords of Cologne digital dictionaries* (2016,
+[`docs/refs/Patel_2016_Normalizing_headwords.pdf`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/Patel_2016_Normalizing_headwords.pdf))
+catalogues the per-dictionary headword conventions. Four of them put **MW and PWG on
+opposite sides**, and this pipeline reconciles none of them:
+
+| Patel convention | MW writes | PWG writes | Example |
+|---|---|---|---|
+| 3.1 / 3.2 — *śatṛ* present participles | `-at` | `-a` + virāma | गच्छत् vs अनागच्` |
+| 3.4 / 3.5 — *vatup* / *matup* stems | `-vat` / `-mat` | `-v` / `-m` | भगवत् vs भगव् |
+| 6.1 / 6.2 — ṛ-final stems | `-ṛ` | `-ar` | कर्तृ vs पितर् |
+| 7.1 / 7.4 — *vas* / *yas* stems | `-vas` / `-yas` | `-vaṃs` / `-yaṃs` | विद्वस् vs विद्वंस् |
+
+So the risk runs in **both** directions:
+
+- **Created.** The accent/`°`/hyphen stripping in `m6_xref_lineage.py` can fold two
+  genuinely distinct spellings onto one key — the mechanism behind the two examples above.
+- **Hidden.** The four divergences above mean a real shared edge on, say, a ṛ-stem *can
+  never intersect*, because MW's `-ṛ` key and PWG's `-ar` key never match. **The 642-edge
+  intersection is therefore an undercount**, and a whole-alphabet re-run that first
+  normalises per Patel would be expected to find more, not fewer, shared edges.
 
 ### `too-sparse` — reject
 
@@ -137,5 +192,13 @@ ends and only the source end used to be shown.
 Cologne entry links resolve a *headword*, not one exact record: where a dictionary has
 homonyms the lookup shows all of them. The csl-orig link remains the pointer to the precise
 record.
+
+**The sheet is in Russian** (26-07-2026, H1648) — question, label definitions, worked
+examples, sampling method, markup legend, and the emitter's own chrome (toolbar button,
+keyboard hint, save banner, vote legend, translated through
+[`csl-pyutil` 0.4.0's `ui_strings`](https://github.com/sanskrit-lexicon/csl-pyutil/pull/9)).
+The only non-Russian prose left on a card is the dictionary text itself, which is quoted
+verbatim and stays German for PWG and English for MW. This document remains English as the
+repo-facing record; the sheet is self-sufficient and does not require it.
 
 _Dr. Mārcis Gasūns_
