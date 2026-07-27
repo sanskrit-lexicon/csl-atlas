@@ -1,0 +1,2633 @@
+{
+  "schemaVersion": "1.0.0",
+  "handoff": "H1684",
+  "sheetId": "csl-atlas-skd-iti_100units",
+  "reviewer": "Opus 5 1M (`claude-opus-5[1m]`) — H1684 agent; evidence: local csl-orig v02/skd full unit text",
+  "evidenceLabel": "agent-adjudicated",
+  "source": {
+    "sample": "data/lexico/r2_kosa_fusion_sample.json",
+    "corpus": "../csl-orig/v02/skd/skd.txt (local, read-only)",
+    "classifier": "scripts/build-r2-kosa-fusion.mjs (FUSION_MIN_CONTENT_CHARS=20)"
+  },
+  "method": {
+    "fusionMinContentChars": 20,
+    "boundaryBand": [
+      12,
+      30
+    ],
+    "authorityNames": 46,
+    "formulaStems": 31,
+    "rules": [
+      "no-authority-signal → other-no-authority",
+      "grammatical-formula-only (ity-arthaḥ / ity-ādi with no name) → other-no-authority",
+      "unknown-ity-token → other-no-authority, flagged not-certain",
+      "authority present, <20 content chars before → separable",
+      "authority present, ≥20 content chars before → authority-terminal",
+      "content chars in 12–30 → not agent-decidable (uncalibrated threshold)"
+    ]
+  },
+  "counts": {
+    "rows": 102,
+    "confirm": 77,
+    "correct": 16,
+    "uncertain": 9,
+    "unitsWhereFullTextExceededSample": 29,
+    "byProposedClass": {
+      "authority-terminal": {
+        "n": 34,
+        "confirm": 24,
+        "correct": 7,
+        "uncertain": 3
+      },
+      "separable": {
+        "n": 34,
+        "confirm": 28,
+        "correct": 0,
+        "uncertain": 6
+      },
+      "other-no-authority": {
+        "n": 34,
+        "confirm": 25,
+        "correct": 9,
+        "uncertain": 0
+      }
+    },
+    "byAgentClass": {
+      "authority-terminal": 27,
+      "separable": 45,
+      "other-no-authority": 30
+    },
+    "byRule": {
+      "authority-leads-unit": 45,
+      "content-then-authority": 27,
+      "no-authority-signal": 25,
+      "grammatical-formula-only": 5
+    }
+  },
+  "rows": [
+    {
+      "reviewId": "skd-iti:1:4",
+      "L": "1",
+      "k1": "a",
+      "unitIndex": 4,
+      "proposedClass": "authority-terminal",
+      "agentClass": "other-no-authority",
+      "verdict": "correct",
+      "rule": "grammatical-formula-only",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "Only explanatory formula(e) ityarTaH present — a grammatical boundary (\"such is the meaning\" / \"et cetera\"), not a citation of an authority.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityarTaH",
+          "offset": 278,
+          "kind": "formula",
+          "label": "ity-arTaH"
+        }
+      ],
+      "fullUnitChars": 428,
+      "sampledUnitChars": 202,
+      "unitText": "vIjavarRABiDAnaM .. anyacca . “aH SrIkaRWaH sureSaSca lalAwaYcEkamAtrikaH . pUrRodarI sfzwimeDO sArasvataH priyambadaH .. mahAbrAhmI vAsudevo DaneSaH keSavo'mftaM . kIrttirnivfttirvvAgISo narakArirharo marut .. brahmA vAmAdyajo hrasvaH karasuH praRavAdyakaH” . praRavAdyAvayava ityarTaH . “brahmARI kAmarUpaSca kAmeSI vAsinI biyat .. viSveSaH SrIvizRukaRWO pratipattiTiraMSinI . arkamaRqalavarRAdyO brAhmaRaH kAmakarziRI” .. iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L1"
+    },
+    {
+      "reviewId": "skd-iti:1201:0",
+      "L": "1201",
+      "k1": "anfjuH",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 53,
+      "evidence": "Authority «ityamaraH» at offset 64; 53 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 64,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 125,
+      "sampledUnitChars": 125,
+      "unitText": "anfjuH¦ tri, (na fjuH saralaH, naYsamAsaH .) asa- ralaH . SaWaH . ityamaraH .. (“na pARipAdacapalo na necacapalo'nfjuH” . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L1201"
+    },
+    {
+      "reviewId": "skd-iti:2268:0",
+      "L": "2268",
+      "k1": "arpisaH",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 34,
+      "evidence": "Authority «ityuRAdikozaH» at offset 44; 34 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityuRAdikozaH",
+          "offset": 44,
+          "kind": "authority",
+          "label": "uRAdikozaH"
+        }
+      ],
+      "fullUnitChars": 77,
+      "sampledUnitChars": 77,
+      "unitText": "arpisaH¦, puM, (f + Ric + isan .) hfdayaM . ityuRA- dikozaH .. (agramAMsaH .)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L2268"
+    },
+    {
+      "reviewId": "skd-iti:3336:0",
+      "L": "3336",
+      "k1": "AQyaH",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 50,
+      "evidence": "Authority «ityamaraH» at offset 60; 50 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 60,
+          "kind": "authority",
+          "label": "amaraH"
+        },
+        {
+          "form": "fused",
+          "token": "ityAdiH",
+          "offset": 126,
+          "kind": "formula",
+          "label": "ity-AdiH"
+        },
+        {
+          "form": "bare",
+          "token": "manuH",
+          "offset": 143,
+          "kind": "text-citation",
+          "label": "manuH"
+        }
+      ],
+      "fullUnitChars": 277,
+      "sampledUnitChars": 202,
+      "unitText": "AQyaH¦, tri, (AQOkate QOkf gatO bAhulakAt QyaH .) DanavAn . ityamaraH .. yuktaH . viSizwaH . anvitaH . yaTA, DanAQyaH guRAQya ityAdiH .. (yaTA manuH 8 . 169 . “catvArastUpacIyante vipra AQyo vaRiq nfpaH” . yaTA BagavadgItAyAM, -- “AQyo'BijanavAnasmi ko'nyo'sti sadfSo mayA” ..)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L3336"
+    },
+    {
+      "reviewId": "skd-iti:4361:0",
+      "L": "4361",
+      "k1": "ukzA",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 32,
+      "evidence": "Authority «ityamaraH» at offset 41; 32 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 41,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 222,
+      "sampledUnitChars": 202,
+      "unitText": "ukzA¦, [n] puM, (ukza + kanin .) vfzaH . ityamaraH . (yaTA, fgvede 8 . 71 . 9 . “ukzA mimAti prati- yanti DenavaH” . taTA ca kumAre 7 . 70 . “tatrAvatIryyAcyutadattahastaH SaradGanAddIDitimAnivokzRaH” ..) fzaBOzaDiH .. iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L4361"
+    },
+    {
+      "reviewId": "skd-iti:5296:0",
+      "L": "5296",
+      "k1": "UrjjasvI",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 74,
+      "evidence": "Authority «ityamaraH» at offset 87; 74 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 87,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 169,
+      "sampledUnitChars": 169,
+      "unitText": "UrjjasvI¦, [n] tri, (atiSayitaM urjo balamasyA- stIti + Urjas + vini .) atiSayabalavAn . ityamaraH .. (yaTA, BArate .) “annamUrjaskaraM loke dattvorjasvI BavennaraH” ..)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L5296"
+    },
+    {
+      "reviewId": "skd-iti:6406:1",
+      "L": "6406",
+      "k1": "kambuH",
+      "unitIndex": 1,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 193,
+      "evidence": "Authority «ityamaraH» at offset 227; 193 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 227,
+          "kind": "authority",
+          "label": "amaraH"
+        },
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 253,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 304,
+      "sampledUnitChars": 202,
+      "unitText": "mfgazvAditvAt un vugAgamo vA . nipAtanAt vA sADuH ..) valayam . [Page2-029-a+ 52] (yaTA mahABArate 3 . 232 . 44 . “SataM dAsIsahasrARi kOnteyasya mahAtmanaH . kambukeyUraDAriRyo nizkakaRwyaH svalaNkftAH” ..) SambUkaH . hastI . ityamaraH . 3 . 3 . 133 . medinI ca .. karvvUravarRaH . grIvA . nalakam . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L6406"
+    },
+    {
+      "reviewId": "skd-iti:7634:2",
+      "L": "7634",
+      "k1": "kAsAraH",
+      "unitIndex": 2,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 45,
+      "evidence": "Authority «ityamaraH» at offset 54; 45 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 54,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 195,
+      "sampledUnitChars": 195,
+      "unitText": "aR .) sapadmo nizpadmo vA mahAjalASayaH . sarobaraH . ityamaraH . 1 . 10 . 28 .. (yaTA, -- gItagovinde 2 . 20 . “durAlokastokastavakanavakASokalatikA- vikASaH kAsAropavanapavano'pi vyaTayati” ..)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L7634"
+    },
+    {
+      "reviewId": "skd-iti:8904:1",
+      "L": "8904",
+      "k1": "kEdAraH",
+      "unitIndex": 1,
+      "proposedClass": "authority-terminal",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «rAjanirGaRwaH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "rAjanirGaRwaH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "rAjanirGaRwaH"
+        },
+        {
+          "form": "fused",
+          "token": "ityarTaH",
+          "offset": 48,
+          "kind": "formula",
+          "label": "ity-arTaH"
+        }
+      ],
+      "fullUnitChars": 169,
+      "sampledUnitChars": 169,
+      "unitText": "rAjanirGaRwaH .. (kedArasambanDino ye te kEdArA ityarTaH . yaTA, BAvaprakASe . “kEdArA vAtapittaGnA guravaH kaPaSukralAH . kazAyA alpavarccazkA meDyAScEva balAvahAH” ..)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L8904"
+    },
+    {
+      "reviewId": "skd-iti:10306:0",
+      "L": "10306",
+      "k1": "gajaH",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 52,
+      "evidence": "Authority «ityamaraH» at offset 65; 52 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 65,
+          "kind": "authority",
+          "label": "amaraH"
+        },
+        {
+          "form": "bare",
+          "token": "SabdArTacintAmaRiH",
+          "offset": 116,
+          "kind": "authority",
+          "label": "SabdArTacintAmaRiH"
+        }
+      ],
+      "fullUnitChars": 1777,
+      "sampledUnitChars": 202,
+      "unitText": "gajaH¦, puM, (gajati madena matto BavatIti . gaj + ac .) hastI . ityamaraH . 2 . 8 . 34 .. (sa tu triviDaH . yaTAha SabdArTacintAmaRiH . “Badro mando mfgaScEva vijYeyAstriviGA gajAH ..” asya lakzaRAdikaM yaTA, vfhatsaMhitAyAM 67 aDyAye . “maDvABadantAH suviBaktadehA na copadigDASca kfSAH kzamASca . gAtrEH samEScApasamAnavaMSA varAhatulyErjaGanESca BadrAH .. [Page2-290-b+ 52] vakzo'Ta kakzAvalayaH SlaTASca lambodarastvagbfhatI galaSca . sTUlA ca kukziH saha pecakena sEMhI ca dfgmandamataNgajasya .. mfgAstu hrasvADaravAlameQrA- stanvaNGrikaRWadvijahastakarRAH . sTUlekzaRASceti yaToktacihnEH saN...",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L10306"
+    },
+    {
+      "reviewId": "skd-iti:11668:2",
+      "L": "11668",
+      "k1": "glOH",
+      "unitIndex": 2,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 100,
+      "evidence": "Authority «ityamaraH» at offset 122; 100 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 122,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 149,
+      "sampledUnitChars": 149,
+      "unitText": "qOH .) candraH . (yaTA, aTarvva- vedasaMhitAyAm . 6 . 83 . 3 . “glOritaH pra patizyati sa galunto naSizyati ..”) karparaH . ityamaraH . 1 . 3 . 14 ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L11668"
+    },
+    {
+      "reviewId": "skd-iti:13123:1",
+      "L": "13123",
+      "k1": "jaqimA",
+      "unitIndex": 1,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 132,
+      "evidence": "Authority «ityujjvalanIlamaRiH» at offset 150; 132 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityujjvalanIlamaRiH",
+          "offset": 150,
+          "kind": "authority",
+          "label": "ujjvalanIlamaRiH"
+        }
+      ],
+      "fullUnitChars": 172,
+      "sampledUnitChars": 172,
+      "unitText": "imanic .) jaqatA . tasya lakzaRaM yaTA, -- “izwAnizWAparijYAnaM yatra praSnezvanuttaram . [Page2-505-a+ 52] darSanaSravaRABAvo jaqimA so'BiDIyate ..” ityujjvalanIlamaRiH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L13123"
+    },
+    {
+      "reviewId": "skd-iti:14583:1",
+      "L": "14583",
+      "k1": "talpaM",
+      "unitIndex": 1,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 109,
+      "evidence": "Authority «ityamaraBaratO» at offset 132; 109 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "manuH",
+          "offset": 47,
+          "kind": "text-citation",
+          "label": "manuH"
+        },
+        {
+          "form": "fused",
+          "token": "ityamaraBaratO",
+          "offset": 132,
+          "kind": "authority",
+          "label": "amaraBaratO"
+        }
+      ],
+      "fullUnitChars": 278,
+      "sampledUnitChars": 202,
+      "unitText": "papratyayena nipAtanAt sADuH .) SayyA . (yaTA, manuH . 3 . 3 . “sragviRaM talpa AsInamarhayet praTamaM gavA ..”) awwAlikA . dArAH . ityamaraBaratO .. (yaTA, sambarttakasaMhitAyAm . 158 . “pitfvyadAragamane BrAtfBAryyAgaBe taTA . gurutalpavrataM kuryyAt nAnyA nizkftirucyate ..”)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L14583"
+    },
+    {
+      "reviewId": "skd-iti:16047:0",
+      "L": "16047",
+      "k1": "darvvikA",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 47,
+      "evidence": "Authority «ityamarawIkAyAM» at offset 58; 47 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamarawIkAyAM",
+          "offset": 58,
+          "kind": "authority",
+          "label": "amarawIkAyAM"
+        }
+      ],
+      "fullUnitChars": 101,
+      "sampledUnitChars": 101,
+      "unitText": "darvvikA¦, strI, (darvvi + svArTe kan + wAp .) dArvvikA . ityamarawIkAyAM rAyamukuwaH .. KajAkA . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L16047"
+    },
+    {
+      "reviewId": "skd-iti:17652:2",
+      "L": "17652",
+      "k1": "DaraRIDaraH",
+      "unitIndex": 2,
+      "proposedClass": "authority-terminal",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «rAjanirGaRwaH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "rAjanirGaRwaH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "rAjanirGaRwaH"
+        },
+        {
+          "form": "fused",
+          "token": "ityAdigopInATatarkAcAryyaH",
+          "offset": 90,
+          "kind": "authority",
+          "label": "gopInATatarkAcAryyaH"
+        }
+      ],
+      "fullUnitChars": 283,
+      "sampledUnitChars": 202,
+      "unitText": "rAjanirGaRwaH .. parvvataH . yaTA, “yo jAto DaraRIDarendratanayAnATANGripAToruhA- saktaH .” ityAdigopInATatarkAcAryyaH .. (pfTivI- DArake, tri . yaTA, harivaMSe . 53 . 68 . [Page2-782-c+ 52] “devAnacodayad brahmA nigrahArTaM suradvizAm . naraYcEva purARarziM SezaYca DaraRIDaram ..”)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L17652"
+    },
+    {
+      "reviewId": "skd-iti:18988:0",
+      "L": "18988",
+      "k1": "nimnagA",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 49,
+      "evidence": "Authority «ityamaraH» at offset 62; 49 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 62,
+          "kind": "authority",
+          "label": "amaraH"
+        },
+        {
+          "form": "bare",
+          "token": "manuH",
+          "offset": 96,
+          "kind": "text-citation",
+          "label": "manuH"
+        }
+      ],
+      "fullUnitChars": 223,
+      "sampledUnitChars": 202,
+      "unitText": "nimnagA¦, strI, (nimnaM gacCatIti . gama + qa . wAp .) nadI . ityamaraH . 1 . 10 . 30 .. (yaTA, manuH . 9 . 22 . “yAdfgguRena BartrA strI saMyujyeta yaTAviDi . tAdfgguRA sA Bavati samudreReva nimnagA ..”) nIcagAmini, tri ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L18988"
+    },
+    {
+      "reviewId": "skd-iti:20228:1",
+      "L": "20228",
+      "k1": "padmacAriRI",
+      "unitIndex": 1,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 50,
+      "evidence": "Authority «ityamaraH» at offset 63; 50 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 63,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 148,
+      "sampledUnitChars": 148,
+      "unitText": "KyAtA ..) tatparyyAyaH . avyaTA 2 aticarA 3 padmA 4 cArawI 5 . ityamaraH . 2 . 4 146 .. asyAH paryyAyAntaraM guRASca sTalapadminISabde drazwavyAH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L20228"
+    },
+    {
+      "reviewId": "skd-iti:21336:0",
+      "L": "21336",
+      "k1": "pArSvaH",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "other-no-authority",
+      "verdict": "correct",
+      "rule": "grammatical-formula-only",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "Only explanatory formula(e) ityuktAni present — a grammatical boundary (\"such is the meaning\" / \"et cetera\"), not a citation of an authority.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityuktAni",
+          "offset": 2574,
+          "kind": "formula",
+          "label": "ity-uktAni"
+        }
+      ],
+      "fullUnitChars": 2871,
+      "sampledUnitChars": 202,
+      "unitText": "pArSvaH¦, puM, jinaH . (ayameva jEnAgamoktatrayo- viMSatIrTaNkaraH . asya pitA viSvasenaH mAtA ca brahmI . yaduktaM pArSvanATacaritre . 10 . 71 . “SrIlaSrIpArSvatIrTeSo viSvasenanfpAlaye . brahmIgarBe jagannATo'vatarizyati muktaye ..” taTA ca tatrEva . 11 . 39 . “viSvasenapaterbrahmyAH sadgarBe'vatarizyati . SrIpArSvanATa evAdyatIrTakarttA jagadguruH ..” hemacandrAcAryyAdimate tu asya pitfnAma aSva- senaH mAtfnAma vAmA .. * .. asya janmakAlAdiryaTA tatrEva . 11 . 45 -- 46, 96 -- 97 . “vESAKakfzRapakzasya dvitIyAyAM niSAtyaye . viSAKarkze sulagnAdO sumuhUrtte sureSvaraH .. avatIrRo divaScyuttv...",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L21336"
+    },
+    {
+      "reviewId": "skd-iti:22413:0",
+      "L": "22413",
+      "k1": "pEtraM",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 69,
+      "evidence": "Authority «ityamaraH» at offset 81; 69 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 81,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 310,
+      "sampledUnitChars": 202,
+      "unitText": "pEtraM¦, klI, (pituridamiti . pitf + aR ) pitftIrTam . aNguzWatarjjanyormaDyam . ityamaraH . 2 . 7 . 51 .. pitfsambanDini, tri . (yaTA, mahABArate . 7 . 199 . 71 . “EndraM yAmyaM vAruRaM vEttapAlyaM pEtraM tvAzwraM karmma sOmyaYca tuByam . rUpaM jyotiH SabdamAkASavAyuH sparSaH svAdyaM salilaM ganDa urvvI ..”)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L22413"
+    },
+    {
+      "reviewId": "skd-iti:23379:1",
+      "L": "23379",
+      "k1": "prARaTaH",
+      "unitIndex": 1,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 45,
+      "evidence": "Authority «ityuRAdikozaH» at offset 56; 45 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityuRAdikozaH",
+          "offset": 56,
+          "kind": "authority",
+          "label": "uRAdikozaH"
+        }
+      ],
+      "fullUnitChars": 100,
+      "sampledUnitChars": 100,
+      "unitText": "aTaH .) vAyuH . (prARitIti . karttari aTaH .) balavAn . ityuRAdikozaH .. prajA- patiH . tIrTam . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L23379"
+    },
+    {
+      "reviewId": "skd-iti:24544:1",
+      "L": "24544",
+      "k1": "brAhmaM",
+      "unitIndex": 1,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 50,
+      "evidence": "Authority «ityamaraH» at offset 59; 50 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 59,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 396,
+      "sampledUnitChars": 202,
+      "unitText": "wilopaH .) brahmatIrTaM . tattu aNguzWasya mUle varttate . ityamaraH .. 2 . 7 . 51 .. anena tIrTena dbijasyAcamanaM yaTA, Ahnikatattve . “antarjAnuSucO deSa upavizwa udaNmuKaH . prAgvA brAhmeRa tIrTena dbijo nityamupaspfSet .. aNguzWottarato reKA yA pARerdakziRasya ca . etadbrAhmamiti KyAtaM tIrTamAcamanAya vE ..” brahmapurARam . yaTA, -- “brAhmaM pAdmaM vEzRavaYca SEvaM BAgavataM taTA ..” iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L24544"
+    },
+    {
+      "reviewId": "skd-iti:25740:0",
+      "L": "25740",
+      "k1": "maRiH",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 177,
+      "evidence": "Authority «ityamaraH» at offset 218; 177 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 218,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 364,
+      "sampledUnitChars": 202,
+      "unitText": "maRiH¦, puM, strI, (maRa + “sarvvaDAtuBya in .” uRA0 4 . 117 . itIn .) aSmajAtiH . [Page3-575-a+ 52] (yaTA, raGO . 1 . 4 . “maRO vajrasamutkIrRe sUtrasyevAsti me gatiH .”) muktAdikam . tatparyyAyaH . ratnam 2 maRI 3 . ityamaraH . 2 . 9 . 93 . (taTAcAsya paryyAyaH . “ratnaM klIve maRiH puMsi striyAmapi nigadyate . tattu pAzARaBedo'sti muktAdi ca taducyate ..” iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L25740"
+    },
+    {
+      "reviewId": "skd-iti:27099:0",
+      "L": "27099",
+      "k1": "mADavIlatA",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 56,
+      "evidence": "Authority «ityamarawIkAyAM» at offset 63; 56 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamarawIkAyAM",
+          "offset": 63,
+          "kind": "authority",
+          "label": "amarawIkAyAM"
+        },
+        {
+          "form": "bare",
+          "token": "BarataH",
+          "offset": 79,
+          "kind": "authority",
+          "label": "BarataH"
+        }
+      ],
+      "fullUnitChars": 91,
+      "sampledUnitChars": 91,
+      "unitText": "mADavIlatA¦, strI, (mADavyAKyA latA .) svanAma- KyAtapuzpalatA . ityamarawIkAyAM BarataH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L27099"
+    },
+    {
+      "reviewId": "skd-iti:28294:2",
+      "L": "28294",
+      "k1": "yajYaH",
+      "unitIndex": 2,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 70,
+      "evidence": "Authority «ityamaraH» at offset 89; 70 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 89,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 230,
+      "sampledUnitChars": 202,
+      "unitText": "naN .) yAgaH . tatparyyAyaH . savaH 2 aDvaraH 3 yAgaH 4 sapta- tantuH 5 maKaH 6 kratuH 7 . ityamaraH . 2 . 7 . 13 .. izwiH 8 izwam 9 vitAnam 10 manyuH 11 AhavaH 12 savanam 13 havaH 14 aBizavaH 15 homaH 16 havanam 17 mahaH 18 . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L28294"
+    },
+    {
+      "reviewId": "skd-iti:29568:34",
+      "L": "29568",
+      "k1": "rAmaH",
+      "unitIndex": 34,
+      "proposedClass": "authority-terminal",
+      "agentClass": "other-no-authority",
+      "verdict": "correct",
+      "rule": "grammatical-formula-only",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "Only explanatory formula(e) ityaBiDIyate present — a grammatical boundary (\"such is the meaning\" / \"et cetera\"), not a citation of an authority.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityaBiDIyate",
+          "offset": 432,
+          "kind": "formula",
+          "label": "ity-aBiDIyate"
+        }
+      ],
+      "fullUnitChars": 5450,
+      "sampledUnitChars": 202,
+      "unitText": "padmapurARe umAmaheSvarasaMvAde SrIrAma- candrAzwottaraSatanAmastotraM samAptam .. * .. (asya virAqmUrttikaTanaM yaTA, aDyAtmarAmA- yaRe . 3 . 9 . 30 -- 54 . ganDarvva uvAca . “stotumutsahate me'dya mano rAmAtisamBramAt . tvAmanantamanAdyantaM manovAcAmagocaram .. sUkzmaM te rUpamavyaktaM dehadbayavilakzaRam . dfgrUpamitaraM sarvvaM dfSyaM jaqamanAtmakam .. tatkaTaM tvAM vijAnIyAdvyatiriktaM manaH praBo . budDyAtmABAsayorEkyaM jIva ityaBiDIyate .. budDyAdisAkzI brahmEva tasmin nirvvizaye'Kilam . Aropyate'jYAnavaSAnnirvvikAre'KilAtmani .. hiraRyagarBaste sUkzmaM dehaM sTUlaM virAw smftam . BAv...",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L29568"
+    },
+    {
+      "reviewId": "skd-iti:30996:0",
+      "L": "30996",
+      "k1": "vaDodyataH",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 82,
+      "evidence": "Authority «ityamaraH» at offset 96; 82 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 96,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 1944,
+      "sampledUnitChars": 202,
+      "unitText": "vaDodyataH¦, tri, (vaDAya udyataH .) paravaDAyod- yuktaH . tatparyyAyaH . sannadDaH 2 AtatAyI 3 . ityamaraH .. AtatAyivaDApavAdamAha bfha- spatiH . “nAtatAtivaDe hantA prApnuyAt kilvizaM kvacit . vinASArTinamAyAntaM GAtayannAparADnuyAt ..” kAtyAyanaH . “AtatAyinamAyAntamapi vedAntapAragam . jiGAMsantaM jiGAMsIyAt na tena brahmahA Bavet ..” jiGAMsI san IyAt gacCedityarTaH . devalaH . “udyamya SastramAyAntaM BrURamapyAtatAyinam . nihatya BrURahA na syAdahatvA BrURahA Bavet ..” BrURo brAhmaRaviSezaH . dozadarSanaM niyamArTam . manuvizRU . “guruM vA bAlavfdDO vA brAhmaRaM vA bahuSrutam . AtatAyin...",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L30996"
+    },
+    {
+      "reviewId": "skd-iti:32260:37",
+      "L": "32260",
+      "k1": "vAstu",
+      "unitIndex": 37,
+      "proposedClass": "authority-terminal",
+      "agentClass": "other-no-authority",
+      "verdict": "correct",
+      "rule": "grammatical-formula-only",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "Only explanatory formula(e) ityantamatrApi present — a grammatical boundary (\"such is the meaning\" / \"et cetera\"), not a citation of an authority.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityantamatrApi",
+          "offset": 1633,
+          "kind": "formula",
+          "label": "ity-antam"
+        }
+      ],
+      "fullUnitChars": 1914,
+      "sampledUnitChars": 202,
+      "unitText": "pitfgaRAdAraBya vahniM yAvat yo vaMSaH prasAritastadvadAyato vAstupUruzaH . ambupo varuRaH . puzpakaH puzpadantaH . taTA . “pradakziRantu kurvvIta vAstoH padavileKanam .” kozWAnAM liKanaM pradakziRaM kAryyam . taTA . “tarjanI maDyamA cEva taTANguzWaSca dakziRaH . prabAlaratnakanakaM PalapuzpAkzatodakam . sarvvaYca vAmaBAgezu SastaM padavileKane ..” * .. taTA . “vAstO parIkzite samyagvAstudehe vicakzaRaH . vAstU paSamanaM kuryyAt samidBirbalikarmmaRA .. [Page4-367-a+ 52] jIrRodDAre taTodyAne taTA gfhaniveSane . dvArABivardDane tadvat prAsAdezu gfhezu ca .. vAstUpaSamanaM kuryyAt pUrvvameva vic...",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L32260"
+    },
+    {
+      "reviewId": "skd-iti:33476:1",
+      "L": "33476",
+      "k1": "vizyaH",
+      "unitIndex": 1,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "uncertain",
+      "rule": "content-then-authority",
+      "certain": false,
+      "contentCharsBeforeAuthority": 20,
+      "evidence": "Authority «ityamaraH» at offset 26; 20 non-space content chars precede it in the unit (threshold 20) — inside the uncalibrated boundary band 12–30, so the fused/separable call is not agent-decidable.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 26,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 71,
+      "sampledUnitChars": 71,
+      "unitText": "yat .) vizeRa yo vaDyaH . ityamaraH .. (vizeRa krItaH . vizAya hita iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L33476"
+    },
+    {
+      "reviewId": "skd-iti:34535:0",
+      "L": "34535",
+      "k1": "vyUQakaNkawaH",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 57,
+      "evidence": "Authority «ityamaraH» at offset 66; 57 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 66,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 78,
+      "sampledUnitChars": 78,
+      "unitText": "vyUQakaNkawaH¦, tri, (vyUQaH kaNkawaH sannAho yena .) sannadDaH . ityamaraH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L34535"
+    },
+    {
+      "reviewId": "skd-iti:35699:0",
+      "L": "35699",
+      "k1": "SivakaH",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "uncertain",
+      "rule": "content-then-authority",
+      "certain": false,
+      "contentCharsBeforeAuthority": 21,
+      "evidence": "Authority «ityamaraH» at offset 25; 21 non-space content chars precede it in the unit (threshold 20) — inside the uncalibrated boundary band 12–30, so the fused/separable call is not agent-decidable.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 25,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 50,
+      "sampledUnitChars": 50,
+      "unitText": "SivakaH¦, puM, kIlakaH . ityamaraH .. dveKo~wA iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L35699"
+    },
+    {
+      "reviewId": "skd-iti:37137:0",
+      "L": "37137",
+      "k1": "saMyat",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 106,
+      "evidence": "Authority «ityamaraBaratO» at offset 133; 106 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamya",
+          "offset": 86,
+          "kind": "unknown",
+          "label": "ityamya"
+        },
+        {
+          "form": "fused",
+          "token": "ityamaraBaratO",
+          "offset": 133,
+          "kind": "authority",
+          "label": "amaraBaratO"
+        }
+      ],
+      "fullUnitChars": 243,
+      "sampledUnitChars": 202,
+      "unitText": "saMyat¦, puM, strI, (saMyamyate'treti . saM + yam + kvip . “gamAdInAm .” 6 . 4 . 40 . ityamya vArttikoktyA malopaH . tuk .) yudDam . itya- maraBaratO .. (yaTA, raGuH . 7 . 39 . “utTApitaH saMyati reRuraSvEH sAndrIkftaH syandanavaMSacakrEH ..”)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L37137"
+    },
+    {
+      "reviewId": "skd-iti:38079:0",
+      "L": "38079",
+      "k1": "samupajozaM",
+      "unitIndex": 0,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "confirm",
+      "rule": "content-then-authority",
+      "certain": true,
+      "contentCharsBeforeAuthority": 46,
+      "evidence": "Authority «ityamarawIkAyAM» at offset 59; 46 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamarawIkAyAM",
+          "offset": 59,
+          "kind": "authority",
+          "label": "amarawIkAyAM"
+        }
+      ],
+      "fullUnitChars": 123,
+      "sampledUnitChars": 123,
+      "unitText": "samupajozaM¦, [m] vya, (sam + upa + juza + am .) AnandaH . ityamarawIkAyAM rAmASramaH . 3 . 4 . 10 .. tAlavyaSakArAdi ca ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L38079"
+    },
+    {
+      "reviewId": "skd-iti:39345:1",
+      "L": "39345",
+      "k1": "sucelakaH",
+      "unitIndex": 1,
+      "proposedClass": "authority-terminal",
+      "agentClass": "authority-terminal",
+      "verdict": "uncertain",
+      "rule": "content-then-authority",
+      "certain": false,
+      "contentCharsBeforeAuthority": 25,
+      "evidence": "Authority «ityamaraH» at offset 32; 25 non-space content chars precede it in the unit (threshold 20) — inside the uncalibrated boundary band 12–30, so the fused/separable call is not agent-decidable.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 32,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 79,
+      "sampledUnitChars": 79,
+      "unitText": "BAzA . tatparyyAyaH . pawaH 2 . ityamaraH . 2 . 6 . 116 .. pawiH 3 pawI 4 . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L39345"
+    },
+    {
+      "reviewId": "skd-iti:40809:3",
+      "L": "40809",
+      "k1": "spfzwAspfzwi",
+      "unitIndex": 3,
+      "proposedClass": "authority-terminal",
+      "agentClass": "other-no-authority",
+      "verdict": "correct",
+      "rule": "grammatical-formula-only",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "Only explanatory formula(e) ityavyayaM present — a grammatical boundary (\"such is the meaning\" / \"et cetera\"), not a citation of an authority.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityavyayaM",
+          "offset": 229,
+          "kind": "formula",
+          "label": "ity-avyayaM"
+        }
+      ],
+      "fullUnitChars": 287,
+      "sampledUnitChars": 202,
+      "unitText": "BAzA . yaTA, ratnAkare bfhaspatiH . “tIrTe vivAhe yAtrAyAM saMgrAme deSaviplave . nagaragrAmadAhe ca spfzwAspfzwi na duzyati .. Apadyapi ca kazwAyAM rugBaye pIqite taTA . mAtAmitrorguroScEva nideSe varttanAttaTA ..” spfzwAspfzwi ityavyayaM kriyAvyatIhAre . taTeti na duzyatItyarTaH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L40809"
+    },
+    {
+      "reviewId": "skd-iti:2:1",
+      "L": "2",
+      "k1": "a",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 167,
+      "sampledUnitChars": 167,
+      "unitText": "medinI . (naYo'yamakAraH zaqviDAn naYarTAn boDa- yati . yaTA, -- “tatsAdfSyamaBAvaSca tadanyatvaM tadalpatA . aprASastyaM viroDaSca naYarTAH zaw prakIrttitAH” .. iti .",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L2"
+    },
+    {
+      "reviewId": "skd-iti:1248:1",
+      "L": "1248",
+      "k1": "antargataM",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 43,
+      "sampledUnitChars": 43,
+      "unitText": "hemacandraH .. (“antargataSave grAme” . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L1248"
+    },
+    {
+      "reviewId": "skd-iti:2304:1",
+      "L": "2304",
+      "k1": "alaM",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 29,
+      "sampledUnitChars": 29,
+      "unitText": "hemacandraH . viCAra hula iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L2304"
+    },
+    {
+      "reviewId": "skd-iti:3568:1",
+      "L": "3568",
+      "k1": "AbidDaH",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 22,
+      "sampledUnitChars": 22,
+      "unitText": "medinI .. mUrKaH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L3568"
+    },
+    {
+      "reviewId": "skd-iti:4624:1",
+      "L": "4624",
+      "k1": "udagadriH",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 14,
+      "sampledUnitChars": 14,
+      "unitText": "hemacandraH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L4624"
+    },
+    {
+      "reviewId": "skd-iti:5630:0",
+      "L": "5630",
+      "k1": "oH",
+      "unitIndex": 0,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "uncertain",
+      "rule": "authority-leads-unit",
+      "certain": false,
+      "contentCharsBeforeAuthority": 15,
+      "evidence": "Authority «ityekAkzarakozaH» at offset 19; 15 non-space content chars precede it in the unit (threshold 20) — inside the uncalibrated boundary band 12–30, so the fused/separable call is not agent-decidable.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityekAkzarakozaH",
+          "offset": 19,
+          "kind": "authority",
+          "label": "ekAkzarakozaH"
+        }
+      ],
+      "fullUnitChars": 38,
+      "sampledUnitChars": 38,
+      "unitText": "oH¦, puM, vrahmA . ityekAkzarakozaH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L5630"
+    },
+    {
+      "reviewId": "skd-iti:6836:1",
+      "L": "6836",
+      "k1": "kalAcikA",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 14,
+      "sampledUnitChars": 14,
+      "unitText": "hemacandraH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L6836"
+    },
+    {
+      "reviewId": "skd-iti:8000:2",
+      "L": "8000",
+      "k1": "kuRqaM",
+      "unitIndex": 2,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 39,
+      "sampledUnitChars": 39,
+      "unitText": "medinI .. jalADAraviSezaH . cOvAccA iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L8000"
+    },
+    {
+      "reviewId": "skd-iti:9150:1",
+      "L": "9150",
+      "k1": "kOzikaH",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 9,
+      "sampledUnitChars": 9,
+      "unitText": "medinI ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L9150"
+    },
+    {
+      "reviewId": "skd-iti:10669:2",
+      "L": "10669",
+      "k1": "garttikA",
+      "unitIndex": 2,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 38,
+      "sampledUnitChars": 38,
+      "unitText": "hemacandraH . 3 . 65 .. tA~t- Gara iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L10669"
+    },
+    {
+      "reviewId": "skd-iti:11871:2",
+      "L": "11871",
+      "k1": "GoRI",
+      "unitIndex": 2,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "uncertain",
+      "rule": "authority-leads-unit",
+      "certain": false,
+      "contentCharsBeforeAuthority": 14,
+      "evidence": "Authority «ityamaraH» at offset 18; 14 non-space content chars precede it in the unit (threshold 20) — inside the uncalibrated boundary band 12–30, so the fused/separable call is not agent-decidable.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 18,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 42,
+      "sampledUnitChars": 42,
+      "unitText": "iniH .) SUkaraH . ityamaraH . 2 . 5 . 2 ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L11871"
+    },
+    {
+      "reviewId": "skd-iti:12969:6",
+      "L": "12969",
+      "k1": "CAyA",
+      "unitIndex": 6,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 34,
+      "sampledUnitChars": 34,
+      "unitText": "medinI . ye, 23 .. kAtyAyanI . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L12969"
+    },
+    {
+      "reviewId": "skd-iti:14141:1",
+      "L": "14141",
+      "k1": "QaH",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        },
+        {
+          "form": "fused",
+          "token": "ityekAkzarakozaH",
+          "offset": 38,
+          "kind": "authority",
+          "label": "ekAkzarakozaH"
+        }
+      ],
+      "fullUnitChars": 57,
+      "sampledUnitChars": 57,
+      "unitText": "medinI . Qe, 1 .. nirguRaH . DvaniH . ityekAkzarakozaH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L14141"
+    },
+    {
+      "reviewId": "skd-iti:15476:1",
+      "L": "15476",
+      "k1": "trAyantI",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "uncertain",
+      "rule": "authority-leads-unit",
+      "certain": false,
+      "contentCharsBeforeAuthority": 19,
+      "evidence": "Authority «ityamaraH» at offset 24; 19 non-space content chars precede it in the unit (threshold 20) — inside the uncalibrated boundary band 12–30, so the fused/separable call is not agent-decidable.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 24,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 153,
+      "sampledUnitChars": 153,
+      "unitText": "NIp .) trAyamARA latA . ityamaraH . 2 . 4 . 150 .. (yaTA, -- “trAyantI tu varA tiktA sarA pittakaPApahA . jvarahfdrogagulmArSoBramaSUlavizapraRut ..” iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L15476"
+    },
+    {
+      "reviewId": "skd-iti:16736:2",
+      "L": "16736",
+      "k1": "duliH",
+      "unitIndex": 2,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 18,
+      "sampledUnitChars": 18,
+      "unitText": "medinI . le, 26 ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L16736"
+    },
+    {
+      "reviewId": "skd-iti:17962:3",
+      "L": "17962",
+      "k1": "DUrttaH",
+      "unitIndex": 3,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 251,
+      "sampledUnitChars": 202,
+      "unitText": "medinI . te, 28 .. (yaTA, mahABArate . 4 . 6 . 12 . “priyA hi DUrttA mama devinaH sadA BavAMSca devopama ! rAjyamarhati ..” yaTA ca paYcatantre . 3 . 73 . “narARAM nApito DUrttaH pakziRAM cEva vAyasaH . daMzwriRAYca SfgAlaSca SvetaBikzustapasvinAm ..”",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L17962"
+    },
+    {
+      "reviewId": "skd-iti:19169:1",
+      "L": "19169",
+      "k1": "nirvvARaM",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        },
+        {
+          "form": "bare",
+          "token": "BAgavate",
+          "offset": 26,
+          "kind": "text-citation",
+          "label": "BAgavate"
+        }
+      ],
+      "fullUnitChars": 150,
+      "sampledUnitChars": 150,
+      "unitText": "medinI . Re, 58 .. (yaTA, BAgavate . 3 . 28 . 35 . “muktASrayaM yarhi nirvvizayaM viraktaM nirvvARamfcCati manaH sahasA yaTArcciH ..”) viSrAntiH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L19169"
+    },
+    {
+      "reviewId": "skd-iti:20551:1",
+      "L": "20551",
+      "k1": "parimaRqalaM",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        },
+        {
+          "form": "bare",
+          "token": "BAgavate",
+          "offset": 22,
+          "kind": "text-citation",
+          "label": "BAgavate"
+        }
+      ],
+      "fullUnitChars": 219,
+      "sampledUnitChars": 202,
+      "unitText": "hemacandraH .. (yaTA, BAgavate . 5 . 22 . 19 . “lakzottaraM sArdDanavakowiyojanaparimaRqalaM BU- valayasya kzaRena sagavyUtyuttaraM dbisahasrayojanAni sa BuNkte ..” paramARuparimARam . parimARa- viSizwaH paramARuH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L20551"
+    },
+    {
+      "reviewId": "skd-iti:21728:1",
+      "L": "21728",
+      "k1": "pItA",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "uncertain",
+      "rule": "authority-leads-unit",
+      "certain": false,
+      "contentCharsBeforeAuthority": 16,
+      "evidence": "Authority «ityamaraH» at offset 22; 16 non-space content chars precede it in the unit (threshold 20) — inside the uncalibrated boundary band 12–30, so the fused/separable call is not agent-decidable.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 22,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 252,
+      "sampledUnitChars": 202,
+      "unitText": "ac . wAp .) haridrA . ityamaraH . 2 . 9 . 41 .. (paryyAyo'syA yaTA, vEdyakaratnamAlAyAm . “haridrA pItakA gOrI kAYcanI rajanI niSA . mehaGnI rajanI pItA varRinI rAtrinAmikA ..”) dAruharidrA . mahAjyotizmatI .. kapilaSiMSapA . priyaNguH . gorocanA . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L21728"
+    },
+    {
+      "reviewId": "skd-iti:22950:3",
+      "L": "22950",
+      "k1": "pradozaH",
+      "unitIndex": 3,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 385,
+      "sampledUnitChars": 202,
+      "unitText": "hemacandraH .. (prakfzwo dozo yasyeti . duzwe, tri . yaTA, mAGe . 2 . 98 . “ye cAnye kAlayavanaSAlvarukmidrumAdayaH . tamaHsvaBAvAste'pyenaM pradozamanuyAyinaH ..” “ye cAnye kAlayavanaSAlvarukmidrumAdayo rAjAnastamaHsvaBAvAH tamoguRAtmakAH ataeva te'pi pradozaM prakfzwadozam . pradozo duzwarAtrAMSA viti vEjayantI . tAmasamevEnaM cEdyamanuyAyinaH anuyAsyanti sAdfSyAditi BAvaH ..” iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L22950"
+    },
+    {
+      "reviewId": "skd-iti:24149:2",
+      "L": "24149",
+      "k1": "bahuPalI",
+      "unitIndex": 2,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 19,
+      "sampledUnitChars": 19,
+      "unitText": "medinI . le, 157 ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L24149"
+    },
+    {
+      "reviewId": "skd-iti:25508:1",
+      "L": "25508",
+      "k1": "BOtI",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 20,
+      "sampledUnitChars": 20,
+      "unitText": "hemacandraH . 142 ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L25508"
+    },
+    {
+      "reviewId": "skd-iti:26821:6",
+      "L": "26821",
+      "k1": "mahAvIraH",
+      "unitIndex": 6,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 31,
+      "sampledUnitChars": 31,
+      "unitText": "hemacandraH .. DanurDaraH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L26821"
+    },
+    {
+      "reviewId": "skd-iti:28137:4",
+      "L": "28137",
+      "k1": "mokzaH",
+      "unitIndex": 4,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        },
+        {
+          "form": "fused",
+          "token": "ityAnandagiriH",
+          "offset": 197,
+          "kind": "unknown",
+          "label": "ityAnandagiriH"
+        }
+      ],
+      "fullUnitChars": 240,
+      "sampledUnitChars": 202,
+      "unitText": "hemacandraH . 1 . 75 .. (viSlezaH . yaTA, SrImadBagavadgItAyAm . 7 . 19 . “jarAmaraRamokzAya mAmASritya yatanti ye . te brahma tadbiduH kftsnamaDyAtmaM karmma cAKilam ..” “mokzAya viSlezaRArTam .” ityAnandagiriH .. AtmasvarUpadarSanam . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L28137"
+    },
+    {
+      "reviewId": "skd-iti:29461:1",
+      "L": "29461",
+      "k1": "rAjavartma",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 23,
+      "sampledUnitChars": 23,
+      "unitText": "hemacandraH . 4 . 53 ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L29461"
+    },
+    {
+      "reviewId": "skd-iti:30713:1",
+      "L": "30713",
+      "k1": "vaM",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 35,
+      "sampledUnitChars": 35,
+      "unitText": "medinI . ve, 1 .. varuRabIjam . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L30713"
+    },
+    {
+      "reviewId": "skd-iti:31946:1",
+      "L": "31946",
+      "k1": "vAnaM",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 64,
+      "sampledUnitChars": 64,
+      "unitText": "medinI . ne, 20 .. (vanasyedamiti . vana + aR .) vanasambanDI ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L31946"
+    },
+    {
+      "reviewId": "skd-iti:33016:1",
+      "L": "33016",
+      "k1": "viraYciH",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 14,
+      "sampledUnitChars": 14,
+      "unitText": "hemacandraH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L33016"
+    },
+    {
+      "reviewId": "skd-iti:34212:0",
+      "L": "34212",
+      "k1": "vEdehaH",
+      "unitIndex": 0,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "uncertain",
+      "rule": "authority-leads-unit",
+      "certain": false,
+      "contentCharsBeforeAuthority": 19,
+      "evidence": "Authority «ityamarawIkAyAM» at offset 23; 19 non-space content chars precede it in the unit (threshold 20) — inside the uncalibrated boundary band 12–30, so the fused/separable call is not agent-decidable.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamarawIkAyAM",
+          "offset": 23,
+          "kind": "authority",
+          "label": "amarawIkAyAM"
+        },
+        {
+          "form": "bare",
+          "token": "BarataH",
+          "offset": 39,
+          "kind": "authority",
+          "label": "BarataH"
+        }
+      ],
+      "fullUnitChars": 342,
+      "sampledUnitChars": 202,
+      "unitText": "vEdehaH¦, puM, baRik . ityamarawIkAyAM BarataH .. (videhasyApatyamiti . videha + aY .) nimi- rAjaputtraH . asyotpattiryaTA . aputtrasya tasya BUBujaH SarIramarAjakaBIravaste munayaH araRyAM mamanTuH . tatra ca kumAro jajYe . jananAjjanaka- saMjYAM cAsAvavApa . aBUdbideho'sya piteti vEdehaH . maTanAnmiTiraBUttasyodAvasuH puttro- 'Bavat . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L34212"
+    },
+    {
+      "reviewId": "skd-iti:35432:1",
+      "L": "35432",
+      "k1": "SAlAraM",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 9,
+      "sampledUnitChars": 9,
+      "unitText": "medinI ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L35432"
+    },
+    {
+      "reviewId": "skd-iti:36833:5",
+      "L": "36833",
+      "k1": "SvetaH",
+      "unitIndex": 5,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 44,
+      "sampledUnitChars": 44,
+      "unitText": "hemacandraH .. SukragrahaH . SvetABraH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L36833"
+    },
+    {
+      "reviewId": "skd-iti:38138:1",
+      "L": "38138",
+      "k1": "samprahAraH",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinI» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinI",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinI"
+        }
+      ],
+      "fullUnitChars": 23,
+      "sampledUnitChars": 23,
+      "unitText": "medinI .. hananam . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L38138"
+    },
+    {
+      "reviewId": "skd-iti:39327:1",
+      "L": "39327",
+      "k1": "sugfhaH",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "confirm",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «hemacandraH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "hemacandraH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "hemacandraH"
+        }
+      ],
+      "fullUnitChars": 53,
+      "sampledUnitChars": 53,
+      "unitText": "hemacandraH .. (sundaraM gfham .) sundarAlaye, klI ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L39327"
+    },
+    {
+      "reviewId": "skd-iti:40617:1",
+      "L": "40617",
+      "k1": "sTAsnuH",
+      "unitIndex": 1,
+      "proposedClass": "separable",
+      "agentClass": "separable",
+      "verdict": "uncertain",
+      "rule": "authority-leads-unit",
+      "certain": false,
+      "contentCharsBeforeAuthority": 17,
+      "evidence": "Authority «ityamaraH» at offset 21; 17 non-space content chars precede it in the unit (threshold 20) — inside the uncalibrated boundary band 12–30, so the fused/separable call is not agent-decidable.",
+      "authoritySignals": [
+        {
+          "form": "fused",
+          "token": "ityamaraH",
+          "offset": 21,
+          "kind": "authority",
+          "label": "amaraH"
+        }
+      ],
+      "fullUnitChars": 214,
+      "sampledUnitChars": 202,
+      "unitText": "snuH .) sTirataraH . ityamaraH . 3 . 1 . 73 .. (yaTA, BawwiH . 2 . 47 . “hiraRmayI SAlalateva jaNgamA cyutA divaH sTAsnu rivAcirapraBA . SaSANkakAnteraDidevatAkftiH sutA dade tasya sutAya mETilI ..”) SASvataH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L40617"
+    },
+    {
+      "reviewId": "skd-iti:1:0",
+      "L": "1",
+      "k1": "a",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 99,
+      "sampledUnitChars": 99,
+      "unitText": "a¦, akAraH . AdyasvaravarRaH . asyoccAraRasTAnaM kaRWaH . sa tu hrasvo dIrGaH plutaSca Bavati . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L1"
+    },
+    {
+      "reviewId": "skd-iti:1501:1",
+      "L": "1501",
+      "k1": "apAcI",
+      "unitIndex": 1,
+      "proposedClass": "other-no-authority",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «halAyuDaH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "halAyuDaH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "halAyuDaH"
+        }
+      ],
+      "fullUnitChars": 12,
+      "sampledUnitChars": 12,
+      "unitText": "halAyuDaH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L1501"
+    },
+    {
+      "reviewId": "skd-iti:2822:12",
+      "L": "2822",
+      "k1": "aSvatTaH",
+      "unitIndex": 12,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 212,
+      "sampledUnitChars": 202,
+      "unitText": "tadvacanaM SrutvA visannavadano'Bavat . uddAlakastato vAkyaM tAmalakzmImuvAca ha” .. uddAlaka uvAca . “aSvatTavfkzamUle'smin alakzmIH SramyatAM kzaRaM ASramasTAnamAlokya yAvadAyAmyahaM punaH” .. sUta uvAca . “iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L2822"
+    },
+    {
+      "reviewId": "skd-iti:4313:2",
+      "L": "4313",
+      "k1": "ISaM",
+      "unitIndex": 2,
+      "proposedClass": "other-no-authority",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «medinIkarahemacandrO» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "medinIkarahemacandrO",
+          "offset": 0,
+          "kind": "authority",
+          "label": "medinIkarahemacandrO"
+        }
+      ],
+      "fullUnitChars": 79,
+      "sampledUnitChars": 79,
+      "unitText": "medinIkarahemacandrO .. (yaTA, kumAre . 3 . 34 “kaTaYcidISA manasAM baBUvuH” .)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L4313"
+    },
+    {
+      "reviewId": "skd-iti:5694:0",
+      "L": "5694",
+      "k1": "OdaSvitaM",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 72,
+      "sampledUnitChars": 72,
+      "unitText": "OdaSvitaM¦, klI, (udaSvit + “udaSvito'nyattara- syAm” . 4 . 2 . 19 . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L5694"
+    },
+    {
+      "reviewId": "skd-iti:6938:5",
+      "L": "6938",
+      "k1": "kavarI",
+      "unitIndex": 5,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 7,
+      "sampledUnitChars": 7,
+      "unitText": "BAzA ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L6938"
+    },
+    {
+      "reviewId": "skd-iti:8159:3",
+      "L": "8159",
+      "k1": "kumBIpAkaH",
+      "unitIndex": 3,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 27,
+      "sampledUnitChars": 27,
+      "unitText": "SrImAgavate . 6 . 26 . 7 ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L8159"
+    },
+    {
+      "reviewId": "skd-iti:9421:17",
+      "L": "9421",
+      "k1": "kzattriyaH",
+      "unitIndex": 17,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 64,
+      "sampledUnitChars": 59,
+      "unitText": "skandapurARe reRukAmAhAtmya paraSurAmadAlBya- saMvAde .. ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L9421"
+    },
+    {
+      "reviewId": "skd-iti:10605:1",
+      "L": "10605",
+      "k1": "gaBastimAn",
+      "unitIndex": 1,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 30,
+      "sampledUnitChars": 30,
+      "unitText": "BUmArTe matup .) sUryyaH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L10605"
+    },
+    {
+      "reviewId": "skd-iti:11736:1",
+      "L": "11736",
+      "k1": "GanaSyAmaH",
+      "unitIndex": 1,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 224,
+      "sampledUnitChars": 202,
+      "unitText": "kecit tatra puM . yaTA, mahAnAwake . “aye rAma ! GanaSyAma ! cumbAmi muKapaNkajam . yadi jIvAmi Sokena punardrakzyAmi te muKam ..” “samAnakarRavinyastasPuranmakarakuRqalam . hemAmbaraM GanaSyAmaM SrIvatsaSrIniketanam ..” iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L11736"
+    },
+    {
+      "reviewId": "skd-iti:12945:0",
+      "L": "12945",
+      "k1": "CAgaH",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 51,
+      "sampledUnitChars": 51,
+      "unitText": "CAgaH¦, puM, strI, (CAyate Cidyate devabalaye iti .",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L12945"
+    },
+    {
+      "reviewId": "skd-iti:14156:0",
+      "L": "14156",
+      "k1": "RaKa",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 17,
+      "sampledUnitChars": 17,
+      "unitText": "RaKa¦, gatO . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L14156"
+    },
+    {
+      "reviewId": "skd-iti:15395:0",
+      "L": "15395",
+      "k1": "toyaDipriyaM",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 72,
+      "sampledUnitChars": 72,
+      "unitText": "toyaDipriyaM¦, klI, (prIRAtIti . prI + “igu- paDeti .” 3 . 1 . 135 . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L15395"
+    },
+    {
+      "reviewId": "skd-iti:16657:2",
+      "L": "16657",
+      "k1": "durArohaH",
+      "unitIndex": 2,
+      "proposedClass": "other-no-authority",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «rAjanirGaRwaH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "rAjanirGaRwaH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "rAjanirGaRwaH"
+        }
+      ],
+      "fullUnitChars": 165,
+      "sampledUnitChars": 165,
+      "unitText": "rAja- nirGaRwaH .. duHKArohaRIye, tri .. (yaTA, mahA- BArate . 4 . 5 . 14 . “iyaM kUwe manuzyendra ! gahane mahatI SamI . BImaSAKA durArohA SmaSAnasya samIpataH ..”)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L16657"
+    },
+    {
+      "reviewId": "skd-iti:17951:1",
+      "L": "17951",
+      "k1": "DUmrapatrA",
+      "unitIndex": 1,
+      "proposedClass": "other-no-authority",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «rAjanirGaRwaH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "rAjanirGaRwaH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "rAjanirGaRwaH"
+        }
+      ],
+      "fullUnitChars": 18,
+      "sampledUnitChars": 18,
+      "unitText": "rAja- nirGaRwaH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L17951"
+    },
+    {
+      "reviewId": "skd-iti:19244:1",
+      "L": "19244",
+      "k1": "niSAcarmma",
+      "unitIndex": 1,
+      "proposedClass": "other-no-authority",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «trikARqaSezaH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "trikARqaSezaH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "trikARqaSezaH"
+        }
+      ],
+      "fullUnitChars": 16,
+      "sampledUnitChars": 16,
+      "unitText": "trikARqaSezaH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L19244"
+    },
+    {
+      "reviewId": "skd-iti:20548:0",
+      "L": "20548",
+      "k1": "pariBAzA",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 113,
+      "sampledUnitChars": 113,
+      "unitText": "pariBAzA¦, strI, (pari + BAz + ac . tatazwAp . parizkftaM BAzaRam . padArTavivecakAcAryyARAM yuktiyuktA vAk . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L20548"
+    },
+    {
+      "reviewId": "skd-iti:21668:0",
+      "L": "21668",
+      "k1": "pIqa",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 29,
+      "sampledUnitChars": 29,
+      "unitText": "pIqa¦, f ka vADe . gAhe . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L21668"
+    },
+    {
+      "reviewId": "skd-iti:22951:1",
+      "L": "22951",
+      "k1": "pradyu",
+      "unitIndex": 1,
+      "proposedClass": "other-no-authority",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «mugDaboDawIkAyAM» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "mugDaboDawIkAyAM",
+          "offset": 0,
+          "kind": "authority",
+          "label": "mugDaboDawIkAyAM"
+        },
+        {
+          "form": "bare",
+          "token": "durgAdAsaH",
+          "offset": 17,
+          "kind": "authority",
+          "label": "durgAdAsaH"
+        }
+      ],
+      "fullUnitChars": 30,
+      "sampledUnitChars": 30,
+      "unitText": "mugDaboDawIkAyAM durgAdAsaH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L22951"
+    },
+    {
+      "reviewId": "skd-iti:24204:0",
+      "L": "24204",
+      "k1": "bahvapatyaH",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 74,
+      "sampledUnitChars": 74,
+      "unitText": "bahvapatyaH¦, puM, strI, (bahUni apatyAni yasya .) SUkaraH . mUzakaH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L24204"
+    },
+    {
+      "reviewId": "skd-iti:25288:0",
+      "L": "25288",
+      "k1": "BUmayI",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 66,
+      "sampledUnitChars": 66,
+      "unitText": "BUmayI¦, strI, (BU + mayaw + NIp .) CAyA . sA tu sUryyapatnI . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L25288"
+    },
+    {
+      "reviewId": "skd-iti:26380:2",
+      "L": "26380",
+      "k1": "marUkaH",
+      "unitIndex": 2,
+      "proposedClass": "other-no-authority",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «saMkziptasAroRAdivfttiH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "saMkziptasAroRAdivfttiH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "saMkziptasAroRAdivfttiH"
+        }
+      ],
+      "fullUnitChars": 28,
+      "sampledUnitChars": 28,
+      "unitText": "saMkzipta- sAroRAdivfttiH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L26380"
+    },
+    {
+      "reviewId": "skd-iti:27521:4",
+      "L": "27521",
+      "k1": "muKasuraM",
+      "unitIndex": 4,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 7,
+      "sampledUnitChars": 7,
+      "unitText": "BAzA ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L27521"
+    },
+    {
+      "reviewId": "skd-iti:28640:0",
+      "L": "28640",
+      "k1": "yugAntaH",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 69,
+      "sampledUnitChars": 69,
+      "unitText": "yugAntaH¦, puM, (yugAnAmanto yatra . yugAnAmanto vA .) pralayaH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L28640"
+    },
+    {
+      "reviewId": "skd-iti:29776:3",
+      "L": "29776",
+      "k1": "rudrARI",
+      "unitIndex": 3,
+      "proposedClass": "other-no-authority",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 0,
+      "evidence": "Authority «rAjanirGaRwaH» at offset 0; 0 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "rAjanirGaRwaH",
+          "offset": 0,
+          "kind": "authority",
+          "label": "rAjanirGaRwaH"
+        }
+      ],
+      "fullUnitChars": 16,
+      "sampledUnitChars": 16,
+      "unitText": "rAjanirGaRwaH ..",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L29776"
+    },
+    {
+      "reviewId": "skd-iti:30911:7",
+      "L": "30911",
+      "k1": "vawakaH",
+      "unitIndex": 7,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 190,
+      "sampledUnitChars": 190,
+      "unitText": "SArNgaDare maDyaKaRqe saptame'DyAye maRqUra vawake .. * ..) azwamAzakaparimARam . yaTA, -- “daSaguYjAstu mAzaH syAt SARo mAzacatuzwayam . dvO SARO vawakaH koRastolako draNKaRaSca saH ..” iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L30911"
+    },
+    {
+      "reviewId": "skd-iti:32087:0",
+      "L": "32087",
+      "k1": "vAriDiH",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 89,
+      "sampledUnitChars": 89,
+      "unitText": "vAriDiH¦, puM, (vArIRi DIyante asminniti . DA + “karmmaRyaDikaraRe ca .” 3 . 3 . 93 . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L32087"
+    },
+    {
+      "reviewId": "skd-iti:33424:5",
+      "L": "33424",
+      "k1": "vizuRaH",
+      "unitIndex": 5,
+      "proposedClass": "other-no-authority",
+      "agentClass": "separable",
+      "verdict": "correct",
+      "rule": "authority-leads-unit",
+      "certain": true,
+      "contentCharsBeforeAuthority": 8,
+      "evidence": "Authority «sAyaRaH» at offset 9; 8 non-space content chars precede it in the unit (threshold 20).",
+      "authoritySignals": [
+        {
+          "form": "bare",
+          "token": "sAyaRaH",
+          "offset": 9,
+          "kind": "authority",
+          "label": "sAyaRaH"
+        }
+      ],
+      "fullUnitChars": 20,
+      "sampledUnitChars": 20,
+      "unitText": "tadBAzye sAyaRaH ..)",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L33424"
+    },
+    {
+      "reviewId": "skd-iti:34620:0",
+      "L": "34620",
+      "k1": "Sa",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 107,
+      "sampledUnitChars": 107,
+      "unitText": "Sa¦, tAlavyaSakAraH . ma tu SavargIyapraTamavarRaH . vyaYjanatriMSadvarRaSca . asyoccAraRasTAnaM tAlu . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L34620"
+    },
+    {
+      "reviewId": "skd-iti:35797:1",
+      "L": "35797",
+      "k1": "SIGrajanmA",
+      "unitIndex": 1,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 71,
+      "sampledUnitChars": 71,
+      "unitText": "BAzA . yaTA, -- “pUtIkaH pAMSulaH pozwA SIGrajanmA kuvftti- kft ..” iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L35797"
+    },
+    {
+      "reviewId": "skd-iti:36954:0",
+      "L": "36954",
+      "k1": "zaqUzaRaM",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 220,
+      "sampledUnitChars": 202,
+      "unitText": "zaqUzaRaM¦, klI, (zaRRAmUzaRAnAM samAhAraH .) miSritazawkawudravyam . yaTA -- “pippalI maricaM SuRWI trayametadvimiSritam . trikawu tryuzaRaM vyozaM kawutrikamaTocyate . granTikAnalacavyEstu catuH paYca zaqUzaRam ..” iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L36954"
+    },
+    {
+      "reviewId": "skd-iti:38283:0",
+      "L": "38283",
+      "k1": "sarjja",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 22,
+      "sampledUnitChars": 22,
+      "unitText": "sarjja¦, arjjane . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L38283"
+    },
+    {
+      "reviewId": "skd-iti:39625:0",
+      "L": "39625",
+      "k1": "suraktaH",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 100,
+      "sampledUnitChars": 100,
+      "unitText": "suraktaH¦, tri, (su + raYja + ktaH .) SoBanarAga- yuktaH . atiSayaraktaviSizwaH . atyanuraktaH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L39625"
+    },
+    {
+      "reviewId": "skd-iti:40952:0",
+      "L": "40952",
+      "k1": "syandaniH",
+      "unitIndex": 0,
+      "proposedClass": "other-no-authority",
+      "agentClass": "other-no-authority",
+      "verdict": "confirm",
+      "rule": "no-authority-signal",
+      "certain": true,
+      "contentCharsBeforeAuthority": null,
+      "evidence": "No sandhi-fused ity-authority and no bare indigenous authority name in the full unit text.",
+      "authoritySignals": [],
+      "fullUnitChars": 35,
+      "sampledUnitChars": 35,
+      "unitText": "syandaniH¦, puM, tiniSavfkzaH . iti",
+      "sourceHref": "https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/skd/skd.txt#L40952"
+    }
+  ]
+}

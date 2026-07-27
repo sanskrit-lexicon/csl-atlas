@@ -6,7 +6,7 @@
   "claim": "Each Cologne Sanskrit dictionary's <ls> citation volume splits across a small set of textual traditions (Vedic, epic, classical-kāvya, Buddhist, dharma-śāstra, lexical-kośa, …); the per-dictionary split names the modular citation communities PH1 CANON-CORE detected quantitatively.",
   "evidenceLabel": "inferred",
   "reviewStatus": "inferred-pending-review",
-  "reviewNote": "The text→tradition map is a scholarly proposal routed to human review (agenda backlog #9). Every tradition claim on the page is flagged by review state; unreviewed tags are shown as inferred, never asserted as fact.",
+  "reviewNote": "The text→tradition map is a scholarly proposal routed to human review (agenda backlog #9). Every tradition claim on the page is flagged by review state; unreviewed tags are shown as inferred, never asserted as fact. Rows promoted by the H1684 agent adjudication carry reviewed_by=agent-h1684 and are reported separately from human-read rows — a fully-reviewed map whose reviews are partly agent-made reads agent-adjudicated-human-gated, never human-reviewed.",
   "ownerRepo": "csl-atlas",
   "generatedBy": "npm run build-tradition-tags",
   "sourceFiles": [
@@ -42,6 +42,9 @@
       "medium": 14,
       "low": 11
     },
+    "byReviewer": {},
+    "agentReviewed": 0,
+    "humanReviewed": 0,
     "allReviewed": false
   },
   "coverage": {
@@ -867,6 +870,7 @@
       "tradition": "epic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 56818,
       "nDicts": 8
@@ -876,6 +880,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 38187,
       "nDicts": 7
@@ -885,6 +890,7 @@
       "tradition": "epic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 38155,
       "nDicts": 9
@@ -894,6 +900,7 @@
       "tradition": "dharma-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 26365,
       "nDicts": 7
@@ -903,6 +910,7 @@
       "tradition": "grammar-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 21791,
       "nDicts": 3
@@ -912,6 +920,7 @@
       "tradition": "purana",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 21330,
       "nDicts": 5
@@ -921,6 +930,7 @@
       "tradition": "lexical-kosa",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "19th-c Skt encyclopaedic lexicon",
       "totalCites": 20232,
       "nDicts": 7
@@ -930,6 +940,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 19922,
       "nDicts": 7
@@ -939,6 +950,7 @@
       "tradition": "lexical-kosa",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Hemacandra kośa",
       "totalCites": 18073,
       "nDicts": 3
@@ -948,6 +960,7 @@
       "tradition": "classical-kavya",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Böhtlingk modern subhāṣita anthology",
       "totalCites": 18030,
       "nDicts": 4
@@ -957,6 +970,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "kathā",
       "totalCites": 17015,
       "nDicts": 9
@@ -966,6 +980,7 @@
       "tradition": "lexical-kosa",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 14918,
       "nDicts": 8
@@ -975,6 +990,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "nīti/fable",
       "totalCites": 14743,
       "nDicts": 6
@@ -984,6 +1000,7 @@
       "tradition": "epic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "MBh khila",
       "totalCites": 13685,
       "nDicts": 7
@@ -993,6 +1010,7 @@
       "tradition": "lexical-kosa",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 13246,
       "nDicts": 6
@@ -1002,6 +1020,7 @@
       "tradition": "other",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "scholar / Catalogus Catalogorum, not a text",
       "totalCites": 12718,
       "nDicts": 4
@@ -1011,6 +1030,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 11900,
       "nDicts": 8
@@ -1020,6 +1040,7 @@
       "tradition": "lexical-kosa",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Hemacandra homonym kośa",
       "totalCites": 11674,
       "nDicts": 3
@@ -1029,6 +1050,7 @@
       "tradition": "medical",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "āyurveda",
       "totalCites": 11571,
       "nDicts": 7
@@ -1038,6 +1060,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 11010,
       "nDicts": 7
@@ -1047,6 +1070,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 10820,
       "nDicts": 8
@@ -1056,6 +1080,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 9677,
       "nDicts": 8
@@ -1065,6 +1090,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 8846,
       "nDicts": 8
@@ -1074,6 +1100,7 @@
       "tradition": "classical-kavya",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "historical kāvya",
       "totalCites": 8640,
       "nDicts": 5
@@ -1083,6 +1110,7 @@
       "tradition": "lexical-kosa",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 8435,
       "nDicts": 6
@@ -1092,6 +1120,7 @@
       "tradition": "jyotisa",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Varāhamihira astro/omen",
       "totalCites": 8255,
       "nDicts": 6
@@ -1101,6 +1130,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 7174,
       "nDicts": 1
@@ -1110,6 +1140,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "nīti/fable",
       "totalCites": 6456,
       "nDicts": 8
@@ -1119,6 +1150,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 5827,
       "nDicts": 8
@@ -1128,6 +1160,7 @@
       "tradition": "epic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "MBh; devotional-philosophical",
       "totalCites": 5649,
       "nDicts": 9
@@ -1137,6 +1170,7 @@
       "tradition": "purana",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 5648,
       "nDicts": 9
@@ -1146,6 +1180,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 5604,
       "nDicts": 8
@@ -1155,6 +1190,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 5252,
       "nDicts": 5
@@ -1164,6 +1200,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 5222,
       "nDicts": 7
@@ -1173,6 +1210,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 5136,
       "nDicts": 7
@@ -1182,6 +1220,7 @@
       "tradition": "lexical-kosa",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Abhidhānaratnamālā lexicographer",
       "totalCites": 5121,
       "nDicts": 6
@@ -1191,6 +1230,7 @@
       "tradition": "poetics-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "alaṃkāra",
       "totalCites": 4699,
       "nDicts": 8
@@ -1200,6 +1240,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 4586,
       "nDicts": 4
@@ -1209,6 +1250,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 4564,
       "nDicts": 3
@@ -1218,6 +1260,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 4493,
       "nDicts": 7
@@ -1227,6 +1270,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 4246,
       "nDicts": 6
@@ -1236,6 +1280,7 @@
       "tradition": "buddhist",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Buddhist terminological lexicon",
       "totalCites": 4110,
       "nDicts": 1
@@ -1245,6 +1290,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "OCR variant of Raghuvaṃśa",
       "totalCites": 4101,
       "nDicts": 1
@@ -1254,6 +1300,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 3785,
       "nDicts": 5
@@ -1263,6 +1310,7 @@
       "tradition": "purana",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 3726,
       "nDicts": 5
@@ -1272,6 +1320,7 @@
       "tradition": "other",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "edition place, not a text",
       "totalCites": 3640,
       "nDicts": 3
@@ -1281,6 +1330,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 3354,
       "nDicts": 5
@@ -1290,6 +1340,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 3264,
       "nDicts": 5
@@ -1299,6 +1350,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 3174,
       "nDicts": 1
@@ -1308,6 +1360,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 3157,
       "nDicts": 6
@@ -1317,6 +1370,7 @@
       "tradition": "other",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Benfey modern reader, not a text",
       "totalCites": 3017,
       "nDicts": 1
@@ -1326,6 +1380,7 @@
       "tradition": "purana",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Bhāgavata-Purāṇa",
       "totalCites": 2968,
       "nDicts": 3
@@ -1335,6 +1390,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 2772,
       "nDicts": 4
@@ -1344,6 +1400,7 @@
       "tradition": "classical-kavya",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "allegorical drama",
       "totalCites": 2717,
       "nDicts": 6
@@ -1353,6 +1410,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "AV ritual sūtra",
       "totalCites": 2671,
       "nDicts": 6
@@ -1362,6 +1420,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 2612,
       "nDicts": 7
@@ -1371,6 +1430,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 2512,
       "nDicts": 7
@@ -1380,6 +1440,7 @@
       "tradition": "dharma-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 2459,
       "nDicts": 1
@@ -1389,6 +1450,7 @@
       "tradition": "medical",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "āyurveda",
       "totalCites": 2308,
       "nDicts": 6
@@ -1398,6 +1460,7 @@
       "tradition": "dharma-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Yājñavalkyasmṛti",
       "totalCites": 2300,
       "nDicts": 4
@@ -1407,6 +1470,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 2279,
       "nDicts": 2
@@ -1416,6 +1480,7 @@
       "tradition": "grammar-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 2277,
       "nDicts": 5
@@ -1425,6 +1490,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "upaniṣad",
       "totalCites": 2074,
       "nDicts": 5
@@ -1434,6 +1500,7 @@
       "tradition": "classical-kavya",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "śataka poet (vs grammarian namesake)",
       "totalCites": 2036,
       "nDicts": 2
@@ -1443,6 +1510,7 @@
       "tradition": "vedic",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Vedic commentary",
       "totalCites": 2005,
       "nDicts": 6
@@ -1452,6 +1520,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1876,
       "nDicts": 2
@@ -1461,6 +1530,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1876,
       "nDicts": 6
@@ -1470,6 +1540,7 @@
       "tradition": "buddhist",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "generic label",
       "totalCites": 1866,
       "nDicts": 1
@@ -1479,6 +1550,7 @@
       "tradition": "dharma-sastra",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "OCR-garbled Hemādri Caturvargacintāmaṇi (nibandha)",
       "totalCites": 1845,
       "nDicts": 1
@@ -1488,6 +1560,7 @@
       "tradition": "dharma-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "variant of Manusmṛti",
       "totalCites": 1762,
       "nDicts": 1
@@ -1497,6 +1570,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "upaniṣad",
       "totalCites": 1758,
       "nDicts": 5
@@ -1506,6 +1580,7 @@
       "tradition": "other",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "modern dictionary, not a text",
       "totalCites": 1736,
       "nDicts": 1
@@ -1515,6 +1590,7 @@
       "tradition": "dharma-sastra",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "dharma/śrauta sūtra",
       "totalCites": 1712,
       "nDicts": 4
@@ -1524,6 +1600,7 @@
       "tradition": "dharma-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "commentary on Manu",
       "totalCites": 1707,
       "nDicts": 8
@@ -1533,6 +1610,7 @@
       "tradition": "vedic",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "generic label",
       "totalCites": 1621,
       "nDicts": 1
@@ -1542,6 +1620,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Śāntideva",
       "totalCites": 1584,
       "nDicts": 1
@@ -1551,6 +1630,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 1502,
       "nDicts": 6
@@ -1560,6 +1640,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1445,
       "nDicts": 2
@@ -1569,6 +1650,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1437,
       "nDicts": 6
@@ -1578,6 +1660,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1378,
       "nDicts": 1
@@ -1587,6 +1670,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1287,
       "nDicts": 5
@@ -1596,6 +1680,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 1274,
       "nDicts": 4
@@ -1605,6 +1690,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1255,
       "nDicts": 2
@@ -1614,6 +1700,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1217,
       "nDicts": 1
@@ -1623,6 +1710,7 @@
       "tradition": "poetics-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "alaṃkāra",
       "totalCites": 1143,
       "nDicts": 6
@@ -1632,6 +1720,7 @@
       "tradition": "dharma-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1120,
       "nDicts": 1
@@ -1641,6 +1730,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 1108,
       "nDicts": 2
@@ -1650,6 +1740,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 1057,
       "nDicts": 5
@@ -1659,6 +1750,7 @@
       "tradition": "other",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "catalogue, not a text",
       "totalCites": 984,
       "nDicts": 1
@@ -1668,6 +1760,7 @@
       "tradition": "lexical-kosa",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Jain polymath; here usually his kośa",
       "totalCites": 894,
       "nDicts": 6
@@ -1677,6 +1770,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 889,
       "nDicts": 5
@@ -1686,6 +1780,7 @@
       "tradition": "jyotisa",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 852,
       "nDicts": 5
@@ -1695,6 +1790,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "variant of Ṛgveda",
       "totalCites": 837,
       "nDicts": 4
@@ -1704,6 +1800,7 @@
       "tradition": "darsana",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Nyāya (Viśvanātha)",
       "totalCites": 759,
       "nDicts": 6
@@ -1713,6 +1810,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Pañcarakṣā dhāraṇī",
       "totalCites": 741,
       "nDicts": 1
@@ -1722,6 +1820,7 @@
       "tradition": "classical-kavya",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "kāvya commentator",
       "totalCites": 710,
       "nDicts": 6
@@ -1731,6 +1830,7 @@
       "tradition": "other",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "epigraphy, not a text",
       "totalCites": 687,
       "nDicts": 1
@@ -1740,6 +1840,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 638,
       "nDicts": 1
@@ -1749,6 +1850,7 @@
       "tradition": "poetics-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "dramaturgy",
       "totalCites": 609,
       "nDicts": 8
@@ -1758,6 +1860,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "upaniṣad",
       "totalCites": 591,
       "nDicts": 6
@@ -1767,6 +1870,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "upaniṣad",
       "totalCites": 588,
       "nDicts": 5
@@ -1776,6 +1880,7 @@
       "tradition": "classical-kavya",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Śukasaptati via modern anthology",
       "totalCites": 561,
       "nDicts": 2
@@ -1785,6 +1890,7 @@
       "tradition": "buddhist",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 542,
       "nDicts": 1
@@ -1794,6 +1900,7 @@
       "tradition": "other",
       "confidence": "low",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "the PW dictionary itself, not a text",
       "totalCites": 525,
       "nDicts": 1
@@ -1803,6 +1910,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 522,
       "nDicts": 5
@@ -1812,6 +1920,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 484,
       "nDicts": 5
@@ -1821,6 +1930,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "drama",
       "totalCites": 464,
       "nDicts": 5
@@ -1830,6 +1940,7 @@
       "tradition": "dharma-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "variant of Yājñavalkyasmṛti",
       "totalCites": 407,
       "nDicts": 1
@@ -1839,6 +1950,7 @@
       "tradition": "classical-kavya",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "garbled Bhartṛhari-śataka",
       "totalCites": 381,
       "nDicts": 1
@@ -1848,6 +1960,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "upaniṣad",
       "totalCites": 361,
       "nDicts": 5
@@ -1857,6 +1970,7 @@
       "tradition": "dharma-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "commentary on Yājñavalkya",
       "totalCites": 355,
       "nDicts": 5
@@ -1866,6 +1980,7 @@
       "tradition": "poetics-sastra",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "chandas/prosody",
       "totalCites": 355,
       "nDicts": 8
@@ -1875,6 +1990,7 @@
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "variant of Bhāminīvilāsa",
       "totalCites": 299,
       "nDicts": 1
@@ -1884,6 +2000,7 @@
       "tradition": "classical-kavya",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "short kāvya (attrib. Kālidāsa)",
       "totalCites": 240,
       "nDicts": 5
@@ -1893,6 +2010,7 @@
       "tradition": "grammar-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Vardhamāna gaṇapāṭha",
       "totalCites": 127,
       "nDicts": 5
@@ -1902,6 +2020,7 @@
       "tradition": "dharma-sastra",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 120,
       "nDicts": 6
@@ -1911,6 +2030,7 @@
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "upaniṣad",
       "totalCites": 97,
       "nDicts": 5
@@ -1920,6 +2040,7 @@
       "tradition": "purana",
       "confidence": "high",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "",
       "totalCites": 85,
       "nDicts": 5
@@ -1929,10 +2050,11 @@
       "tradition": "jyotisa",
       "confidence": "medium",
       "reviewed": false,
+      "reviewedBy": "",
       "note": "Bhāskara mathematics",
       "totalCites": 52,
       "nDicts": 5
     }
   ],
-  "generatedAt": "2026-07-08T19:16:48.130Z"
+  "generatedAt": "2026-07-27T09:21:20.352Z"
 }

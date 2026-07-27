@@ -4,6 +4,47 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — В2 agent adjudication of both remaining review sheets (H1684)
+
+- [`docs/H1684_B2_ADJUDICATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H1684_B2_ADJUDICATION.md)
+  — method, results and traps for the В2 pass over `csl-atlas-skd-iti_100units` (102 units) and
+  `csl-atlas-tradition-tags_119texts` (119 texts). **221 rows owed to a human → 61.**
+- [`scripts/adjudicate-h1684-skd-iti.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/adjudicate-h1684-skd-iti.mjs)
+  re-derives every sampled *iti*-unit from local `csl-orig/v02/skd` (29 of 102 are longer than
+  the packet's 200-char excerpt, so the sample alone cannot settle them) and rules
+  citational-vs-grammatical: **77 confirm · 16 corrected · 9 uncertain**.
+- [`scripts/adjudicate-h1684-tradition-tags.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/adjudicate-h1684-tradition-tags.mjs)
+  rules all 119 tradition tags against **both** ACC and NCC, joined through the H1657 crosswalk
+  at Tier A/B only: **114 confirm · 0 corrected · 5 policy forks**.
+- [`scripts/build_h1684_spotcheck_sheet.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build_h1684_spotcheck_sheet.py)
+  + [`scripts/apply_h1684_spotcheck.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/apply_h1684_spotcheck.py)
+  — stratified **blind** spot-check (the agent verdict is hidden from sampled cards) whose
+  per-stratum sample sizes are *derived* from a Wilson-95% / 0.80 promotion floor under a
+  finite-population correction, not chosen. Strata gate independently; nothing is stamped
+  `reviewed=yes` without the human arm.
+
+### Fixed — the shipped *iti*-classifier mislabels in two directions (H1684)
+
+- **False negatives:** `SKD_AUTHORITY_HINTS` is 17 entries dominated by *text* citations, so bare
+  kośa authorities opening a tail unit (halāyudhaḥ, trikāṇḍaśeṣaḥ, rājanighaṇṭuḥ ×3, durgādāsaḥ,
+  sāyaṇaḥ, saṃkṣiptasāra-uṇādivṛttiḥ, medinīkara-hemacandrau) fell into `other-no-authority`.
+- **False positives:** `ity[a-zA-Z]{3,}` also fires on the grammatical formulae (`ityarthaḥ`,
+  `ityādi`, `ityuktāni`, `ityabhidhīyate`, `ityantam`, `ityavyayaṃ`) — explanatory, not
+  citational, boundaries.
+- Net effect on A02/A08: `other-no-authority` is inflated and `separable` under-counted in the
+  shipped fused/separable shares.
+
+### Changed — `tradition_tags.tsv` records review PROVENANCE, not just review (H1684)
+
+- New `reviewed_by` column (`human` | `agent-h1684`). The old
+  `allReviewed ? "human-reviewed" : …` derivation would have let promoted agent verdicts make the
+  packet claim `human-reviewed` for rows no human ever read. `reviewStatus` is now three-valued
+  (`inferred-pending-review` / `human-reviewed` / `agent-adjudicated-human-gated`) with a matching
+  `evidenceLabel`, and
+  [`validate-tradition-tags.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/validate-tradition-tags.mjs)
+  fails the build on a reviewed row with no provenance, a provenance with no review, or any packet
+  claiming `human-reviewed` while carrying agent-attributed rows.
+
 ## [0.13.0] - 2026-07-26
 
 ### Added — Russian companion for the xref taxonomy + a docs-vs-data drift guard (H1648)

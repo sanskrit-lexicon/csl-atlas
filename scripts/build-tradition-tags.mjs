@@ -94,6 +94,12 @@ export function buildPayload(edgeRows, nodeRows, tagRows, generatedAt) {
       tradition,
       confidence: (r.confidence || "").trim() || "low",
       reviewed: /^(yes|y|true|1)$/i.test((r.reviewed || "").trim()),
+      // H1684 — provenance of the review, NOT just its existence. A bare
+      // boolean cannot distinguish "a human read this row" from "an agent
+      // ruled on it and a sampled human arm cleared the stratum"; collapsing
+      // the two would let reviewStatus claim `human-reviewed` for rows no
+      // human ever saw. Empty (unreviewed) | "human" | "agent-<handoff>".
+      reviewedBy: (r.reviewed_by || "").trim(),
       note: (r.note || "").trim()
     });
   }
@@ -128,6 +134,7 @@ export function buildPayload(edgeRows, nodeRows, tagRows, generatedAt) {
         tradition: tag.tradition,
         confidence: tag.confidence,
         reviewed: tag.reviewed,
+        reviewedBy: tag.reviewedBy,
         note: tag.note,
         totalCites: node ? node.total : 0,
         nDicts: node ? node.nDicts : 0
@@ -198,16 +205,42 @@ export function buildPayload(edgeRows, nodeRows, tagRows, generatedAt) {
   for (const t of taggedTexts) byConfidence[t.confidence] = (byConfidence[t.confidence] || 0) + 1;
   const allReviewed = reviewedCount === taggedTexts.length && taggedTexts.length > 0;
 
+  // H1684 — review PROVENANCE, so a fully-reviewed map cannot claim more than
+  // it earned. Three states, not two:
+  //   inferred-pending-review        some rows still unreviewed
+  //   human-reviewed                 every reviewed row was read by a human
+  //   agent-adjudicated-human-gated  some rows carry an agent verdict that a
+  //                                  sampled human arm cleared (H1684 В2)
+  const byReviewer = {};
+  for (const t of taggedTexts) {
+    if (!t.reviewed) continue;
+    const who = t.reviewedBy || "unattributed";
+    byReviewer[who] = (byReviewer[who] || 0) + 1;
+  }
+  const agentReviewed = Object.entries(byReviewer)
+    .filter(([who]) => who !== "human")
+    .reduce((a, [, n]) => a + n, 0);
+  const reviewStatus = !allReviewed
+    ? "inferred-pending-review"
+    : agentReviewed > 0
+      ? "agent-adjudicated-human-gated"
+      : "human-reviewed";
+  const evidenceLabel = !allReviewed
+    ? "inferred"
+    : agentReviewed > 0
+      ? "agent-adjudicated"
+      : "human-verified";
+
   const payload = {
     schemaVersion: SCHEMA_VERSION,
     ...licenseFields(),
     status: "tradition-community-map",
     claim:
       "Each Cologne Sanskrit dictionary's <ls> citation volume splits across a small set of textual traditions (Vedic, epic, classical-kāvya, Buddhist, dharma-śāstra, lexical-kośa, …); the per-dictionary split names the modular citation communities PH1 CANON-CORE detected quantitatively.",
-    evidenceLabel: "inferred",
-    reviewStatus: allReviewed ? "human-reviewed" : "inferred-pending-review",
+    evidenceLabel,
+    reviewStatus,
     reviewNote:
-      "The text→tradition map is a scholarly proposal routed to human review (agenda backlog #9). Every tradition claim on the page is flagged by review state; unreviewed tags are shown as inferred, never asserted as fact.",
+      "The text→tradition map is a scholarly proposal routed to human review (agenda backlog #9). Every tradition claim on the page is flagged by review state; unreviewed tags are shown as inferred, never asserted as fact. Rows promoted by the H1684 agent adjudication carry reviewed_by=agent-h1684 and are reported separately from human-read rows — a fully-reviewed map whose reviews are partly agent-made reads agent-adjudicated-human-gated, never human-reviewed.",
     ownerRepo: "csl-atlas",
     generatedBy: GENERATED_BY,
     sourceFiles: [
@@ -224,6 +257,9 @@ export function buildPayload(edgeRows, nodeRows, tagRows, generatedAt) {
       reviewed: reviewedCount,
       pctReviewed: round(taggedTexts.length ? reviewedCount / taggedTexts.length : 0, 4),
       byConfidence,
+      byReviewer,
+      agentReviewed,
+      humanReviewed: byReviewer.human || 0,
       allReviewed
     },
     coverage: {

@@ -74,9 +74,30 @@ if (packet) {
     if (conf[k] !== packet.reviewState.byConfidence[k]) errors.push(`byConfidence.${k} ${packet.reviewState.byConfidence[k]} != counted ${conf[k]}`);
   }
   const allReviewed = reviewed === packet.taggedTexts.length && packet.taggedTexts.length > 0;
-  const expectStatus = allReviewed ? "human-reviewed" : "inferred-pending-review";
-  if (packet.reviewStatus !== expectStatus) errors.push(`reviewStatus "${packet.reviewStatus}" inconsistent with ${reviewed}/${packet.taggedTexts.length} reviewed (expected "${expectStatus}")`);
-  if (!allReviewed && packet.evidenceLabel !== "inferred") errors.push(`evidenceLabel must be "inferred" while unreviewed (is "${packet.evidenceLabel}")`);
+
+  // H1684 — review PROVENANCE. The load-bearing check is the last one: the map
+  // may only call itself human-reviewed when every reviewed row was read by a
+  // human. Agent verdicts promoted through the Wilson gate are real review, but
+  // they are not that claim, and a bare `reviewed` boolean cannot tell them
+  // apart — which is exactly how an agent pass could silently upgrade its own
+  // evidence label.
+  const agentReviewed = packet.taggedTexts.filter((t) => t.reviewed && (t.reviewedBy || "") !== "human").length;
+  const expectStatus = !allReviewed
+    ? "inferred-pending-review"
+    : agentReviewed > 0 ? "agent-adjudicated-human-gated" : "human-reviewed";
+  const expectLabel = !allReviewed
+    ? "inferred"
+    : agentReviewed > 0 ? "agent-adjudicated" : "human-verified";
+  if (packet.reviewStatus !== expectStatus) errors.push(`reviewStatus "${packet.reviewStatus}" inconsistent with ${reviewed}/${packet.taggedTexts.length} reviewed, ${agentReviewed} agent-attributed (expected "${expectStatus}")`);
+  if (packet.evidenceLabel !== expectLabel) errors.push(`evidenceLabel "${packet.evidenceLabel}" inconsistent with review state (expected "${expectLabel}")`);
+  if (packet.reviewState && packet.reviewState.agentReviewed !== agentReviewed) errors.push(`reviewState.agentReviewed ${packet.reviewState.agentReviewed} != counted ${agentReviewed}`);
+  for (const t of packet.taggedTexts) {
+    if (t.reviewed && !t.reviewedBy) errors.push(`row marked reviewed with no reviewed_by provenance: "${t.text}"`);
+    if (!t.reviewed && t.reviewedBy) errors.push(`row carries reviewed_by "${t.reviewedBy}" but is not marked reviewed: "${t.text}"`);
+  }
+  if (allReviewed && agentReviewed > 0 && packet.reviewStatus === "human-reviewed") {
+    errors.push("packet claims human-reviewed while carrying agent-attributed rows");
+  }
 
   // Traditions in use are a subset of vocab, sorted by cites desc.
   for (const tr of packet.traditions) {
