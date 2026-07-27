@@ -1,0 +1,2921 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedAt": "2026-07-27T13:33:09.776Z",
+  "claim": "M1: every locally-present CDSL dictionary placed on the roadmap's L0-L10 data-richness ordinal scale, with a machine-readable justification per level.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-reviewed",
+  "sourceFiles": [
+    "data/dictionary-coverage.json",
+    "src/data/dicts/coverage-matrix.json",
+    "src/data/dicts/structural-register.json",
+    "src/data/citations/citation_canon.json",
+    "src/data/dicts/xref-lineage.json",
+    "scripts/lib/cologne-links.mjs",
+    "../alternateheadwords/data (sibling repo, local-only)",
+    "../csl-lslink/zip (sibling repo, local-only)",
+    "../csl-orig/v02/nmmb/nmmb.txt (direct fallback probe, NMMB only)"
+  ],
+  "method": "Cumulative ordinal classifier over docs/METALEXICOGRAPHY_ROADMAP.md §1. A dict's level is the highest N for which every L1..LN criterion holds (first gap stops the climb); each level's raw independent boolean is retained in `criteria` so a higher-tier feature present despite a lower-tier convention gap stays visible instead of disappearing into the cap. L9 is always qualified `partial` (M0a live-site scrape not run, roadmap §13); L10 is always `met:false` by design (csl-standards' territory, docs/BOUNDARY_RULES.md).",
+  "thresholds": {
+    "gram": 20,
+    "citeTagged": 20,
+    "headMajority": 50,
+    "divProxy": 5
+  },
+  "levels": [
+    {
+      "level": 0,
+      "name": "Scan-only",
+      "requirement": "PDF page images; no text content",
+      "exampleDicts": "Patel-2016 scan-only set (PD, PE, PGN, IEG, MWE, AE, SNP, YAT) per the roadmap; empirically most of those now have keyboarded text in this local checkout — see limitations."
+    },
+    {
+      "level": 1,
+      "name": "Plain text",
+      "requirement": "OCR'd or keyboarded UTF-8; no markup"
+    },
+    {
+      "level": 2,
+      "name": "Entry boundaries",
+      "requirement": "<L>NNNN ... <LEND> markers separate entries"
+    },
+    {
+      "level": 3,
+      "name": "Headword / body separation",
+      "requirement": "<k1> for primary, <k2> for variants"
+    },
+    {
+      "level": 4,
+      "name": "Lexical metadata tags",
+      "requirement": "<lex> (category), <gen> (gender)"
+    },
+    {
+      "level": 5,
+      "name": "Citation tagging",
+      "requirement": "<ls> for literary sources, structured"
+    },
+    {
+      "level": 6,
+      "name": "Sense structure",
+      "requirement": "numbered or hierarchical senses; <sense n=\"1\"> or equivalent"
+    },
+    {
+      "level": 7,
+      "name": "Cross-reference tagging",
+      "requirement": "entry-to-entry pointers as machine-readable links"
+    },
+    {
+      "level": 8,
+      "name": "Scan-page linking",
+      "requirement": "each entry -> page image of original print"
+    },
+    {
+      "level": 9,
+      "name": "Cross-dictionary integration",
+      "requirement": "each headword -> corresponding entries in other CDSL dicts"
+    },
+    {
+      "level": 10,
+      "name": "Full structured semantic web",
+      "requirement": "external TEI/RDF publication via csl-standards"
+    }
+  ],
+  "rowCount": 44,
+  "rows": [
+    {
+      "code": "MW",
+      "sourceCode": "mw",
+      "title": "Monier-Williams 1899",
+      "records": 286560,
+      "familyLabel": "western-tagged",
+      "level": 9,
+      "levelName": "Cross-dictionary integration",
+      "levelQualifier": "partial",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=286560 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=73.27% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=79.13% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": true,
+          "evidence": "coverage-matrix.json senseSegmented=true"
+        },
+        "l7": {
+          "level": 7,
+          "met": true,
+          "evidence": "structural-register.json xrefEdges=7665 (M1-M5 microstructure cross-reference graph; blockPct.xref=19.07% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": true,
+          "evidence": "sourceCode \"mw\" -> COLOGNE_SCAN_DIR[\"mw\"]=\"MW\" in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"mw\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "L9 is a floor, not a verified ceiling: roadmap §13 Phase M0a (the Cologne live-site scrape confirming cross-dict lookup actually resolves at runtime) has not run for this repo (grep for cologne_features/cologne_scrape found nothing). This label reflects committed cross-dict linking infrastructure (alternateheadwords / csl-lslink) only."
+      ]
+    },
+    {
+      "code": "PWG",
+      "sourceCode": "pwg",
+      "title": "Böhtlingk and Roth",
+      "records": 123366,
+      "familyLabel": "western-tagged",
+      "level": 9,
+      "levelName": "Cross-dictionary integration",
+      "levelQualifier": "partial",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=123366 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=80.11% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=94.3% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": true,
+          "evidence": "coverage-matrix.json senseSegmented=true"
+        },
+        "l7": {
+          "level": 7,
+          "met": true,
+          "evidence": "structural-register.json xrefEdges=22987 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.05% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": true,
+          "evidence": "sourceCode \"pwg\" -> COLOGNE_SCAN_DIR[\"pwg\"]=\"PWG\" in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"pwg\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "L9 is a floor, not a verified ceiling: roadmap §13 Phase M0a (the Cologne live-site scrape confirming cross-dict lookup actually resolves at runtime) has not run for this repo (grep for cologne_features/cologne_scrape found nothing). This label reflects committed cross-dict linking infrastructure (alternateheadwords / csl-lslink) only."
+      ]
+    },
+    {
+      "code": "AP",
+      "sourceCode": "ap",
+      "title": "Apte 1957 Chicago",
+      "records": 90654,
+      "familyLabel": "western-tagged",
+      "level": 7,
+      "levelName": "Cross-reference tagging",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=90654 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=38.42% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=31.63% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": true,
+          "evidence": "coverage-matrix.json senseSegmented=true"
+        },
+        "l7": {
+          "level": 7,
+          "met": true,
+          "evidence": "structural-register.json xrefEdges=609 (M1-M5 microstructure cross-reference graph; blockPct.xref=4.51% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"ap\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"ap\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L9 is present despite the cumulative cap at L7 — a lower-tier convention gap (see criteria), not missing content."
+      ]
+    },
+    {
+      "code": "PWK",
+      "sourceCode": "pw",
+      "title": "Böhtlingk 1879-1889",
+      "records": 170556,
+      "familyLabel": "western-tagged",
+      "level": 6,
+      "levelName": "Sense structure",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=170556 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=80.3% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=38.81% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": true,
+          "evidence": "coverage-matrix.json senseSegmented=true"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.02% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"pw\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"pw\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L9 is present despite the cumulative cap at L6 — a lower-tier convention gap (see criteria), not missing content."
+      ]
+    },
+    {
+      "code": "AP90",
+      "sourceCode": "ap90",
+      "title": "Apte 1890",
+      "records": 34882,
+      "familyLabel": "western-tagged",
+      "level": 5,
+      "levelName": "Citation tagging",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=34882 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=50.58% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=31.15% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": true,
+          "evidence": "structural-register.json xrefEdges=446 (M1-M5 microstructure cross-reference graph; blockPct.xref=8.02% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": true,
+          "evidence": "sourceCode \"ap90\" -> COLOGNE_SCAN_DIR[\"ap90\"]=\"AP90\" in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"ap90\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L7, L8, L9 is present despite the cumulative cap at L5 — a lower-tier convention gap (see criteria), not missing content."
+      ]
+    },
+    {
+      "code": "BEN",
+      "sourceCode": "ben",
+      "title": "Benfey 1866",
+      "records": 17310,
+      "familyLabel": "western-tagged",
+      "level": 5,
+      "levelName": "Citation tagging",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=17310 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=92.23% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=76% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=18.8% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"ben\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"ben\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "BHS",
+      "sourceCode": "bhs",
+      "title": "Edgerton Buddhist",
+      "records": 17839,
+      "familyLabel": "specialized",
+      "level": 5,
+      "levelName": "Citation tagging",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=17839 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=74.68% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=91.32% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=50.39% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"bhs\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"bhs\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "LAN",
+      "sourceCode": "lan",
+      "title": "Lanman Reader 1906",
+      "records": 4944,
+      "familyLabel": "western-tagged",
+      "level": 5,
+      "levelName": "Citation tagging",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=4944 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=81.78% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=51.5% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=29.55% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"lan\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"lan\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "PWKVN",
+      "sourceCode": "pwkvn",
+      "title": "Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung, Nachträge und Verbesserungen",
+      "records": 24976,
+      "familyLabel": "western-tagged",
+      "level": 5,
+      "levelName": "Citation tagging",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=24976 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=42% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=54.36% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"pwkvn\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"pwkvn\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "AE",
+      "sourceCode": "ae",
+      "title": "Apte English Sanskrit",
+      "records": 11359,
+      "familyLabel": "reverse-bilingual",
+      "level": 4,
+      "levelName": "Lexical metadata tags",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=11359 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=97.56% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=6.79% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "absent from coverage-matrix.json; low-confidence proxy blockPct.div=0% < 5%",
+          "lowConfidence": true
+        },
+        "l7": {
+          "level": 7,
+          "met": true,
+          "evidence": "structural-register.json xrefEdges=2 (M1-M5 microstructure cross-reference graph; blockPct.xref=22.28% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"ae\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"ae\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L7, L9 is present despite the cumulative cap at L4 — a lower-tier convention gap (see criteria), not missing content.",
+        "Absent from coverage-matrix.json (outside the Core-40 comparison slice); L4-L6 rely on data/dictionary-coverage.json blockPct alone."
+      ]
+    },
+    {
+      "code": "BUR",
+      "sourceCode": "bur",
+      "title": "Burnouf 1866",
+      "records": 19776,
+      "familyLabel": "western-tagged",
+      "level": 4,
+      "levelName": "Lexical metadata tags",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=19776 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=72.95% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=13.76% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"bur\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"bur\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "CAE",
+      "sourceCode": "cae",
+      "title": "Cappeller 1891",
+      "records": 40069,
+      "familyLabel": "western-tagged",
+      "level": 4,
+      "levelName": "Lexical metadata tags",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=40069 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=94.25% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": true,
+          "evidence": "structural-register.json xrefEdges=196 (M1-M5 microstructure cross-reference graph; blockPct.xref=1.67% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"cae\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"cae\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L7 is present despite the cumulative cap at L4 — a lower-tier convention gap (see criteria), not missing content."
+      ]
+    },
+    {
+      "code": "GRA",
+      "sourceCode": "gra",
+      "title": "Grassmann",
+      "records": 12785,
+      "familyLabel": "western-tagged",
+      "level": 4,
+      "levelName": "Lexical metadata tags",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=12785 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=78.08% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=12.04% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.04% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"gra\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"gra\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L9 is present despite the cumulative cap at L4 — a lower-tier convention gap (see criteria), not missing content."
+      ]
+    },
+    {
+      "code": "MD",
+      "sourceCode": "md",
+      "title": "Macdonell 1893",
+      "records": 20749,
+      "familyLabel": "western-tagged",
+      "level": 4,
+      "levelName": "Lexical metadata tags",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=20749 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=89.95% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0.26% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.18% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"md\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"md\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "STC",
+      "sourceCode": "stc",
+      "title": "Stchoupak",
+      "records": 24574,
+      "familyLabel": "western-tagged",
+      "level": 4,
+      "levelName": "Lexical metadata tags",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=24574 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=61.26% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.58% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"stc\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"stc\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L9 is present despite the cumulative cap at L4 — a lower-tier convention gap (see criteria), not missing content."
+      ]
+    },
+    {
+      "code": "WIL",
+      "sourceCode": "wil",
+      "title": "Wilson",
+      "records": 44577,
+      "familyLabel": "western-tagged",
+      "level": 4,
+      "levelName": "Lexical metadata tags",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=44577 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=99.8% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0.5% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=7.15% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"wil\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"wil\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "ACC",
+      "sourceCode": "acc",
+      "title": "Aufrecht Catalogus",
+      "records": 49822,
+      "familyLabel": "index-catalogue",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=49822 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=5.8% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"acc\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"acc\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "ARMH",
+      "sourceCode": "armh",
+      "title": "Halāyudhakośaḥ",
+      "records": 7907,
+      "familyLabel": "specialized",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=7907 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.01% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"armh\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"armh\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "BOP",
+      "sourceCode": "bop",
+      "title": "Bopp 1847",
+      "records": 8961,
+      "familyLabel": "western-tagged",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=8961 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.12% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.07% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"bop\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"bop\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "BOR",
+      "sourceCode": "bor",
+      "title": "Borooah English",
+      "records": 24609,
+      "familyLabel": "specialized",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=24609 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.07% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=1.53% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": true,
+          "evidence": "absent from coverage-matrix.json; low-confidence proxy blockPct.div=63.43% >= 5%",
+          "lowConfidence": true
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.31% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"bor\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"bor\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L6 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content.",
+        "Absent from coverage-matrix.json (outside the Core-40 comparison slice); L4-L6 rely on data/dictionary-coverage.json blockPct alone."
+      ]
+    },
+    {
+      "code": "CCS",
+      "sourceCode": "ccs",
+      "title": "Cappeller German",
+      "records": 30010,
+      "familyLabel": "western-tagged",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=30010 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.02% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.06% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"ccs\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"ccs\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "FRI",
+      "sourceCode": "fri",
+      "title": "FRI",
+      "records": 8155,
+      "familyLabel": "specialized",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=8155 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.02% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.23% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"fri\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"fri\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "GST",
+      "sourceCode": "gst",
+      "title": "Goldstücker",
+      "records": 6780,
+      "familyLabel": "specialized",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=6780 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.24% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=19.37% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"gst\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"gst\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "IEG",
+      "sourceCode": "ieg",
+      "title": "Sircar",
+      "records": 7907,
+      "familyLabel": "index-catalogue",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=7907 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=13.63% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"ieg\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"ieg\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "INM",
+      "sourceCode": "inm",
+      "title": "Sörensen",
+      "records": 12647,
+      "familyLabel": "index-catalogue",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=12647 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.13% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=1.7% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"inm\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"inm\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "KRM",
+      "sourceCode": "krm",
+      "title": "Ramasubba Sastri",
+      "records": 2061,
+      "familyLabel": "indigenous-prose",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=2061 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=13.59% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.05% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"krm\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"krm\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "LRV",
+      "sourceCode": "lrv",
+      "title": "Vaidya 1889",
+      "records": 53441,
+      "familyLabel": "western-tagged",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=53441 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.03% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=17% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=1.41% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"lrv\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"lrv\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "MCI",
+      "sourceCode": "mci",
+      "title": "Mehendale",
+      "records": 2643,
+      "familyLabel": "index-catalogue",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=2643 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.11% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=32.46% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"mci\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"mci\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "MW72",
+      "sourceCode": "mw72",
+      "title": "Monier-Williams 72",
+      "records": 55388,
+      "familyLabel": "western-tagged",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=55388 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.01% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=10.64% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"mw72\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"mw72\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "MWE",
+      "sourceCode": "mwe",
+      "title": "Monier English",
+      "records": 32378,
+      "familyLabel": "reverse-bilingual",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=32378 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.06% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "absent from coverage-matrix.json; low-confidence proxy blockPct.div=0% < 5%",
+          "lowConfidence": true
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=9.89% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"mwe\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"mwe\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Absent from coverage-matrix.json (outside the Core-40 comparison slice); L4-L6 rely on data/dictionary-coverage.json blockPct alone."
+      ]
+    },
+    {
+      "code": "PE",
+      "sourceCode": "pe",
+      "title": "Mani",
+      "records": 8799,
+      "familyLabel": "specialized",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=8799 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.05% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=21.16% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"pe\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"pe\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "PGN",
+      "sourceCode": "pgn",
+      "title": "Sharma 1978",
+      "records": 485,
+      "familyLabel": "specialized",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=485 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=1.44% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"pgn\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"pgn\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "PUI",
+      "sourceCode": "pui",
+      "title": "Dikshitar",
+      "records": 17512,
+      "familyLabel": "index-catalogue",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=17512 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.03% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=2.75% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"pui\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"pui\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "SCH",
+      "sourceCode": "sch",
+      "title": "Schmidt 1928",
+      "records": 29125,
+      "familyLabel": "western-tagged",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=29125 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.01% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=89.39% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.02% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"sch\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"sch\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L5, L9 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
+    },
+    {
+      "code": "SHS",
+      "sourceCode": "shs",
+      "title": "Vidyasagara 1900",
+      "records": 47326,
+      "familyLabel": "western-tagged",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=47326 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.02% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=6.97% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"shs\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"shs\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "SKD",
+      "sourceCode": "skd",
+      "title": "{S}abdakalpadruma",
+      "records": 42531,
+      "familyLabel": "indigenous-prose",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=42531 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=2.49% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.01% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"skd\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"skd\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L9 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
+    },
+    {
+      "code": "SNP",
+      "sourceCode": "snp",
+      "title": "Meulenbeld plants",
+      "records": 453,
+      "familyLabel": "index-catalogue",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=453 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=26.93% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"snp\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"snp\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "VCP",
+      "sourceCode": "vcp",
+      "title": "{v}Acaspatya Köln",
+      "records": 50135,
+      "familyLabel": "indigenous-prose",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=50135 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=6.98% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"vcp\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"vcp\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "Raw evidence for L9 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
+    },
+    {
+      "code": "VEI",
+      "sourceCode": "vei",
+      "title": "Vedic Index",
+      "records": 3834,
+      "familyLabel": "index-catalogue",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=3834 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.05% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=21.57% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"vei\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"vei\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "YAT",
+      "sourceCode": "yat",
+      "title": "Yates 1846",
+      "records": 45206,
+      "familyLabel": "western-tagged",
+      "level": 3,
+      "levelName": "Headword / body separation",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=45206 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0.2% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"yat\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"yat\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "ABCH",
+      "sourceCode": "abch",
+      "title": "Abhidhānacintāmaṇi",
+      "records": 1965,
+      "familyLabel": "specialized",
+      "level": 1,
+      "levelName": "Plain text",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=1965 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": false,
+          "evidence": "blockPct.head=0% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": false,
+          "evidence": "blockPct.head=0% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.25% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"abch\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"abch\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "ACPH",
+      "sourceCode": "acph",
+      "title": "Abhidhānacintāmaṇipariśiṣṭa",
+      "records": 163,
+      "familyLabel": "specialized",
+      "level": 1,
+      "levelName": "Plain text",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=163 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": false,
+          "evidence": "blockPct.head=0% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": false,
+          "evidence": "blockPct.head=0% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0.61% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"acph\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"acph\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "ACSJ",
+      "sourceCode": "acsj",
+      "title": "Abhidhānacintāmaṇiśiloñcha",
+      "records": 240,
+      "familyLabel": "specialized",
+      "level": 1,
+      "levelName": "Plain text",
+      "levelQualifier": "confirmed",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=240 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": false,
+          "evidence": "blockPct.head=0% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": false,
+          "evidence": "blockPct.head=0% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "blockPct.gram=0% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "blockPct.citeTagged=0% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "coverage-matrix.json senseSegmented=false"
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "structural-register.json xrefEdges=0 (M1-M5 microstructure cross-reference graph; blockPct.xref=0% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"acsj\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"acsj\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "NMMB",
+      "sourceCode": "nmmb",
+      "title": "Nāmamālikā (Bhoja)",
+      "records": 506,
+      "familyLabel": "indigenous-prose",
+      "level": 2,
+      "levelName": "Entry boundaries",
+      "levelQualifier": "confirmed-fallback",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "506 <L>...<LEND> blocks found by direct probe of ../csl-orig/v02/nmmb/nmmb.txt"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "506 <L>...<LEND> blocks found by direct probe of ../csl-orig/v02/nmmb/nmmb.txt"
+        },
+        "l3": {
+          "level": 3,
+          "met": false,
+          "evidence": "0 <k1> tags found; NMMB is a <syns> synonym-set kosha entry, not the <k1>/<k2> headword model L3 describes — not independently verified, not guessed"
+        },
+        "l4": {
+          "level": 4,
+          "met": false,
+          "evidence": "Not evaluated: NMMB excluded from the primary pipeline (see fallbackNote); higher levels require the computed signals this dict lacks."
+        },
+        "l5": {
+          "level": 5,
+          "met": false,
+          "evidence": "Not evaluated: NMMB excluded from the primary pipeline (see fallbackNote); higher levels require the computed signals this dict lacks."
+        },
+        "l6": {
+          "level": 6,
+          "met": false,
+          "evidence": "Not evaluated: NMMB excluded from the primary pipeline (see fallbackNote); higher levels require the computed signals this dict lacks."
+        },
+        "l7": {
+          "level": 7,
+          "met": false,
+          "evidence": "Not evaluated: NMMB excluded from the primary pipeline (see fallbackNote); higher levels require the computed signals this dict lacks."
+        },
+        "l8": {
+          "level": 8,
+          "met": false,
+          "evidence": "sourceCode \"nmmb\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": false,
+          "evidence": "sourceCode \"nmmb\" not found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design (see docs/BOUNDARY_RULES.md)."
+        }
+      },
+      "notes": [
+        "Excluded from data/dictionary-coverage.json, coverage-matrix.json, and structural-register.json (added to csl-orig/v02 after those pipelines last ran; has an active prep/ subfolder). Assessed by a direct regex probe of ../csl-orig/v02/nmmb/nmmb.txt in this script only."
+      ]
+    }
+  ],
+  "summary": {
+    "byLevel": {
+      "1": 3,
+      "2": 1,
+      "3": 24,
+      "4": 7,
+      "5": 5,
+      "6": 1,
+      "7": 1,
+      "9": 2
+    },
+    "hypothesisCheck": "Roadmap §1 hypothesis: 'MW is the only dict at L8+; most others sit at L4-L6; specialised ones at L3-L5; scan-only ones at L0.' Empirically (this run): MW, PWG reach L8+ — MW is NOT the only one, confirming the roadmap's own counter-hypothesis (§3) that PWG carries comparable digital investment. No locally-present dict is at L0 — the roadmap's named scan-only examples (PD, PE, PGN, IEG, MWE, AE, SNP, YAT) are either not present in this local csl-orig checkout (PD) or, empirically, already have keyboarded plain text (PE, PGN, IEG, MWE, AE, SNP, YAT all have nonzero records here) — the roadmap's example column is stale relative to current data, not this classifier's finding."
+  },
+  "limitations": [
+    "L9 reflects committed cross-dict linking infrastructure (alternateheadwords, csl-lslink), not a live-resolution check against the Cologne site (M0a, unrun) — a floor, not a ceiling.",
+    "L10 is never achieved by construction: atlas keeps native dictionary evidence only, per docs/BOUNDARY_RULES.md and roadmap §10/§14 decisions locked 2026-05-16.",
+    "<k2> variant-headword presence (part of L3's stated requirement) is not independently verified by any computed signal this classifier consumes; L3 uses <k1> majority coverage as the available proxy.",
+    "NMMB is excluded from all three primary signal sources and is assessed by a direct fallback probe of its raw source only (see its row's notes) — lower confidence than every other row.",
+    "11 dicts (pwg, pw, pwkvn, sch, ap, ap90, bhs, lrv, ben, mw, md) additionally appear in the citation_canon.json dict×text matrix and 5 dicts (mw, pwg, ap, ap90, cae) in xref-lineage.json's pairwise overlap study — corroborating context for L5/L7, not separately gated.",
+    "3 dicts (ae, bor, mwe) are absent from coverage-matrix.json; their L6 uses a documented low-confidence blockPct.div proxy instead of the senseSegmented flag (see each row's criteria.l6.lowConfidence)."
+  ],
+  "assumptions": [
+    "Every criterion is read from an already-committed data file or a curated code table in this repo — no new corpus parsing beyond the single NMMB fallback probe.",
+    "Cumulative gating (first gap stops the climb) is deliberate: it measures what is actually implemented for a dict as a coherent edition, not the union of features scattered across its markup.",
+    "Genre-appropriate headword equivalents (e.g. NMMB's <syns> synonym sets) are not silently mapped onto the <k1>/<k2> criterion; they are left unverified with an explicit note instead."
+  ]
+}
