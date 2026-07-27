@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.15.0] - 2026-07-27
+
 ### Added — entry-anatomy radar chart (H1510)
 
 - [`src/tools/entry-anatomy.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/entry-anatomy.md)
