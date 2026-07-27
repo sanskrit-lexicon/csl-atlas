@@ -70,6 +70,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/r2-explorer": "R2 sense explorer: browse cross-dictionary sense structure across the Cologne Sanskrit lexicons.",
   "/tools/r2-h1": "R2 sense granularity: how finely the Cologne Sanskrit dictionaries subdivide senses (hypothesis H1).",
   "/tools/r2-h2h3": "R2 sense survival and drift: how senses persist or change across the Cologne Sanskrit dictionaries (hypotheses H2–H3).",
+  "/tools/entry-anatomy": "Entry anatomy: a radar overlay of one headword's 10-feature microstructure profile across every Cologne dictionary that carries it (anchor lemmas gam, dharma, rāma, iti).",
   "/tools/review-gender-conflicts": "Review queue: cross-dictionary gender disagreements among the tagged Cologne dictionaries, as candidates for human judgment.",
   "/tools/review-source-layers": "Review queue: Monier-Williams source abbreviations not yet mapped to a diachronic layer, cited at least five times.",
   "/tools/review-alignment": "Alignment confidence: how confidently lemmas align across the seven core Cologne dictionaries, and the queue that doesn't align cleanly.",
@@ -209,7 +210,8 @@ export default {
         { name: "Cross-reference lineage", path: "/tools/xref-lineage" },
         { name: "R2 sense explorer", path: "/tools/r2-explorer" },
         { name: "R2 sense granularity", path: "/tools/r2-h1" },
-        { name: "R2 survival and drift", path: "/tools/r2-h2h3" }
+        { name: "R2 survival and drift", path: "/tools/r2-h2h3" },
+        { name: "Entry anatomy", path: "/tools/entry-anatomy" }
       ]
     },
     {
