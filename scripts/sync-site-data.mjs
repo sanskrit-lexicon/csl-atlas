@@ -35,6 +35,22 @@ const COPIES = [
   {
     source: "data/lexico/ortho_drift.json",
     target: "src/data/lexico/ortho_drift.json"
+  },
+  {
+    source: "data/lexico/micro-gam.json",
+    target: "src/data/lexico/micro-gam.json"
+  },
+  {
+    source: "data/lexico/micro-Darma.json",
+    target: "src/data/lexico/micro-Darma.json"
+  },
+  {
+    source: "data/lexico/micro-rAma.json",
+    target: "src/data/lexico/micro-rAma.json"
+  },
+  {
+    source: "data/lexico/micro-iti.json",
+    target: "src/data/lexico/micro-iti.json"
   }
 ];
 
