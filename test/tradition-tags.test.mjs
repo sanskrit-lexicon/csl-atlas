@@ -60,11 +60,45 @@ test("buildPayload rejects a tradition outside the closed vocabulary", () => {
   assert.throws(() => buildPayload(EDGES, NODES, bad, FIXED_AT), /outside the closed vocabulary/);
 });
 
-test("reviewStatus rises to human-reviewed only when every row is reviewed", () => {
-  const reviewedTags = TAGS.map((t) => ({ ...t, reviewed: "yes" }));
+test("reviewStatus rises to human-reviewed only when every row is reviewed BY A HUMAN", () => {
+  const reviewedTags = TAGS.map((t) => ({ ...t, reviewed: "yes", reviewed_by: "human" }));
   const p = buildPayload(EDGES, NODES, reviewedTags, FIXED_AT);
   assert.equal(p.reviewStatus, "human-reviewed");
+  assert.equal(p.evidenceLabel, "human-verified");
   assert.equal(p.reviewState.reviewed, 3);
+  assert.equal(p.reviewState.humanReviewed, 3);
+  assert.equal(p.reviewState.agentReviewed, 0);
+});
+
+test("a fully reviewed map with any agent-attributed row never claims human-reviewed (H1684)", () => {
+  // The failure this guards: promoting agent verdicts into the bare `reviewed`
+  // boolean used to flip reviewStatus to human-reviewed, asserting that a human
+  // had read rows no human ever saw.
+  const mixed = TAGS.map((t, i) => ({
+    ...t, reviewed: "yes", reviewed_by: i === 0 ? "agent-h1684" : "human"
+  }));
+  const p = buildPayload(EDGES, NODES, mixed, FIXED_AT);
+  assert.equal(p.reviewStatus, "agent-adjudicated-human-gated");
+  assert.equal(p.evidenceLabel, "agent-adjudicated");
+  assert.equal(p.reviewState.reviewed, 3);
+  assert.equal(p.reviewState.agentReviewed, 1);
+  assert.equal(p.reviewState.humanReviewed, 2);
+});
+
+test("a reviewed row with no provenance counts as agent-attributed, not human", () => {
+  // Unattributed review is not evidence of human review — fail closed.
+  const unattributed = TAGS.map((t) => ({ ...t, reviewed: "yes" }));
+  const p = buildPayload(EDGES, NODES, unattributed, FIXED_AT);
+  assert.equal(p.reviewStatus, "agent-adjudicated-human-gated");
+  assert.equal(p.reviewState.humanReviewed, 0);
+  assert.equal(p.reviewState.byReviewer.unattributed, 3);
+});
+
+test("partially reviewed stays inferred-pending-review regardless of provenance", () => {
+  const partial = TAGS.map((t, i) => (i === 0 ? { ...t, reviewed: "yes", reviewed_by: "human" } : t));
+  const p = buildPayload(EDGES, NODES, partial, FIXED_AT);
+  assert.equal(p.reviewStatus, "inferred-pending-review");
+  assert.equal(p.evidenceLabel, "inferred");
 });
 
 test("confidence tally is correct", () => {
