@@ -1,7 +1,9 @@
-# Review-sheet emitter v0.4.0 — the 19-07-2026 V1–V8 standard, the light-mode
-# contrast fix (csl-pyutil#6), and config["ui_strings"] for translating the emitter's
-# own chrome (csl-pyutil#9, H1648): the xref sheet is reviewed in Russian, and the
-# toolbar button, keyboard hint, save banner and vote legend are instructions too.
+# Review-sheet emitter v0.6.0 — the 19-07-2026 V1-V8 standard, the light-mode
+# contrast fix (csl-pyutil#6), config["ui_strings"] for translating the emitter's
+# own chrome (csl-pyutil#9, H1648), and csl_pyutil.anatomy (csl-pyutil#11, H1808),
+# which is now the single canonical home of the entry-anatomy colouring this repo
+# used to carry in scripts/lib/cdsl_anatomy.py -- that file is now a shim over it.
+# 0.6.0 also raises the default type scale by 150% (MG, voting the G5 sheet).
 # Pin the immutable commit so generation cannot silently change when the tag or
 # default branch moves.
-csl-pyutil @ https://github.com/sanskrit-lexicon/csl-pyutil/archive/db85dbb9e81393cb77d3b8fab2b6ce8c44131323.zip
+csl-pyutil @ https://github.com/sanskrit-lexicon/csl-pyutil/archive/04d0afe59d680d15b10d8e4c69e2bbccdefd84f5.zip
