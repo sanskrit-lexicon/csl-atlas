@@ -4,6 +4,25 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Changed
+
+- **`scripts/lib/cdsl_anatomy.py` is now a re-export shim over `csl_pyutil.anatomy`
+  (H1808).** The entry-anatomy colouring was written here for the xref sheet (H1646)
+  and could be reached from no other generator; when SanskritLexicography's G5
+  print-readiness sheet needed the same treatment, MG's note on it was «why entry
+  anatomy is missing again? It must be a hook». The implementation moved into the
+  shared emitter package ([csl-pyutil v0.6.0](https://github.com/sanskrit-lexicon/csl-pyutil/releases/tag/v0.6.0))
+  rather than being copied a second time — two hand-synced copies of one highlighter
+  is the fork-drift `SHARED_CODE.md` exists to prevent. This repo keeps its own
+  semantics in the shim: `<ab>` stays the bright `crossref` class (in PWG it wraps
+  *every* abbreviation, so the shared default is the quieter `abbreviation`), and the
+  legend keeps its original ten classes. Regenerating
+  `csl-atlas-xref-shared-core_40edges_review.html` reproduces the previous sheet
+  byte-for-byte apart from the emitter's new type scale and a `class="anatomy"` hook
+  on the block. `requirements-review.txt` and `MIN_EMITTER_VERSION` move to 0.6.0.
+- Review sheets now render at the emitter's new default type scale (+150%, MG's
+  ruling while voting the G5 sheet), with an A−/A+ control in the toolbar.
+
 ## [0.15.0] - 2026-07-27
 
 ### Added — entry-anatomy radar chart (H1510)

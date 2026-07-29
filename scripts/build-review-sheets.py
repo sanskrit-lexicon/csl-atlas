@@ -42,10 +42,12 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "review"
 DATE = "26-07-2026"  # H1648 xref: Russian instructions + MW-depends-on-PWG correction
 #: Minimum, NOT exact: the V1–V8 standard shipped in csl-pyutil 0.3.0, the
-#: light-mode contrast fix in 0.3.1, and `ui_strings` chrome translation in 0.4.0.
+#: light-mode contrast fix in 0.3.1, `ui_strings` chrome translation in 0.4.0, and
+#: `csl_pyutil.anatomy` in 0.6.0 — which scripts/lib/cdsl_anatomy.py now shims, so
+#: below that the import fails outright rather than rendering an uncoloured sheet.
 #: A `>=` check expresses "require at least the standard" so future emitter patch
 #: releases don't hard-fail this builder (the equality-pin trap PR #5 flagged).
-MIN_EMITTER_VERSION = "0.4.0"
+MIN_EMITTER_VERSION = "0.6.0"
 REVIEWER = "gasyoun"
 
 
