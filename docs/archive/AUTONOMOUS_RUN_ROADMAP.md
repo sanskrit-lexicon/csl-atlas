@@ -1,6 +1,21 @@
 # Autonomous Run Roadmap — 3 weeks, balanced
 
-_Created: 10-06-2026 · Last updated: 10-06-2026_
+_Created: 10-06-2026 · Last updated: 29-07-2026_
+
+> **SUPERSEDED (29-07-2026, H1877 roadmap-drift sweep).** This plan's literal 3-week
+> window closed ~2026-07-01 with no `WEEK_N_REVIEW.md` filed, and the Week 1-3
+> "decision-support" deliverables (adding a `machineSuggestion`/`confidence` field to
+> the R2 checkpoint / Xref / H4 review packets, as literally scoped in the matrix
+> below) were never built under those names. They are functionally superseded by a
+> separate **auto-triage initiative**, completed and recorded "Auto-triage initiative
+> COMPLETE" in `.ai_state.md` on 2026-06-17: `build-h4-review-packet.mjs` and
+> `build-xref-source-check-packet.mjs` gained an `applyAutoTriage` rule table that
+> mechanically auto-resolves the easy rows instead of adding a machine-suggestion
+> field to every row. Post auto-triage, the remaining unreviewed rows — **40 in the
+> Xref shared-core packet, 89 in the H4 semantic-field packet** — are documented as
+> carrying **zero mechanical signal** (pure scholarly judgement calls), so this
+> roadmap's literal Week 1-3 matrix below will not be built as scoped — kept for
+> historical record only. Live human-review work is tracked in `.ai_state.md`.
 
 Companion to `AUTONOMOUS_RUN_CHARTER.md`. Set 2026-06-10 (M.G. away). Structure:
 **three weekly phases**, each ending in a `WEEK_N_REVIEW.md` PR M.G. reads async.
