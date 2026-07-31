@@ -4,6 +4,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-07-31
+
 ### Added — citation truncation & hapax overlap (PET-MW-CITE, H1827)
 
 - [`scripts/build-citation-truncation.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-truncation.mjs)
