@@ -1,0 +1,22 @@
+{
+  "dataset": "citation_truncation_hapax",
+  "commit": "92ccee2248b21cf3950567985a14cef7dea223dd",
+  "cslOrigRepo": "https://github.com/sanskrit-lexicon/csl-orig",
+  "cslOrigCommit": "78cbb257d9c655f7464e342d17507f8133140c96",
+  "dictionaries": [
+    "pwg",
+    "pw",
+    "pwkvn",
+    "mw",
+    "mw72"
+  ],
+  "generatedAt": "2026-07-31T03:23:31.138Z",
+  "generatedBy": "npm run build-citation-truncation",
+  "sourceFiles": [
+    "csl-orig/v02/{pwg,pw,pwkvn,mw,mw72}",
+    "src/data/dicts/dict-source-aliases.json",
+    "src/data/mw-source-layers.json",
+    "scripts/build-citation-truncation.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}

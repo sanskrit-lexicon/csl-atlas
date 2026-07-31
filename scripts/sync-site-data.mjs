@@ -37,6 +37,10 @@ const COPIES = [
     target: "src/data/lexico/ortho_drift.json"
   },
   {
+    source: "data/lexico/citation_truncation_hapax.json",
+    target: "src/data/lexico/citation_truncation_hapax.json"
+  },
+  {
     source: "data/lexico/micro-gam.json",
     target: "src/data/lexico/micro-gam.json"
   },
