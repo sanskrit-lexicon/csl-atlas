@@ -18,6 +18,11 @@ const VALIDATORS = [
   "validate-l0-gqd.mjs",
   "validate-review-reports.mjs"
 ];
+// Python-side unit tests (`node --test` only discovers the .mjs suites).
+const PY_UNITTESTS = [
+  "scripts.test_validate_review_decisions",
+  "scripts.test_ls_abbreviation_frequency"
+];
 
 function run(command, args) {
   // On Windows, spawnSync cannot directly execute npm.cmd (EINVAL). npm exposes
@@ -39,7 +44,7 @@ function assertClean(label) {
 export function verify() {
   assertClean("before verification");
   run(process.execPath, ["--test"]);
-  run("python", ["-m", "unittest", "scripts.test_validate_review_decisions"]);
+  for (const suite of PY_UNITTESTS) run("python", ["-m", "unittest", suite]);
   for (const validator of VALIDATORS) run(process.execPath, [path.join("scripts", validator)]);
   run(process.execPath, [path.join("scripts", "regen-review-artifacts.mjs")]);
   run(process.execPath, [path.join("scripts", "regen-review-artifacts.mjs")]);

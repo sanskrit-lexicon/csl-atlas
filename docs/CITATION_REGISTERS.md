@@ -1,6 +1,6 @@
 # Two citation registers, quantified (OBS-C)
 
-_Created: 10-06-2026 · Last updated: 17-07-2026_
+_Created: 10-06-2026 · Last updated: 30-07-2026_
 
 Corpus-wide measurement of source citations across all 44 `csl-orig` dicts. This
 **quantifies** the correction already recorded qualitatively in
@@ -83,6 +83,75 @@ folding gives 8,922 fold-keys; 265 prefix-clustered families (e.g. `kathas`/
 Rājanighaṇṭu vs `rajatar` Rājataraṅgiṇī cluster on the `raja` prefix) — exactly
 why merges feed the human-reviewed alias table rather than apply automatically.
 The fully reviewed true-source count converges toward the ~2,166 works cited ≥10×.
+
+### Per-abbreviation frequencies — the legend-coverage lever (H1826, 30-07-2026)
+
+The table above counts `<ls>` citations but not *which abbreviation* each one
+sits under, so csl-guides' abbreviation-resolvability hypothesis (GH-4,
+[csl-atlas#222](https://github.com/sanskrit-lexicon/csl-atlas/issues/222)) could
+only state an **exposure upper bound** — how many citations carry some
+abbreviation — never true legend coverage, which is token-weighted: how much
+citation mass a dictionary's own legend actually explains.
+
+[`scripts/obs/ls_abbreviation_frequency.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/ls_abbreviation_frequency.py)
+supplies that layer as
+[`data/obs/ls_abbreviation_frequency.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/obs/ls_abbreviation_frequency.json),
+shaped `{dict: {token: count}}`. It reuses `parse_cslorig.iter_entries` (so both
+the bare and the attributed `<ls n="…">` shapes count — the H1086 fix) and ports
+the citation→abbreviation splitter the shipped apparatus pipeline already uses,
+`baseForm(normalizeSource(c))` from
+[`scripts/lib/mw-source-layers.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/mw-source-layers.mjs)
+and
+[`scripts/lib/mw-classifiers.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/mw-classifiers.mjs)
+(`MBh. iii,5` → `MBh`). Tokens are the **raw** form as each dictionary writes it
+(`MBh` and `MBH` stay distinct); folding them is `foldSiglum`'s separate job.
+Exactly one token per citation, so per dictionary `sum(counts)` equals that
+dictionary's `<ls>` total in `citation_registers.json` — the invariant
+[`test/ls-abbreviation-frequency.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/ls-abbreviation-frequency.test.mjs)
+enforces over all 44 dicts (corpus 1,517,609 = 1,517,609).
+
+Corpus: **7,293 distinct abbreviations**, 9,430 dictionary×abbreviation pairs,
+across the 17 dicts that carry `<ls>` at all.
+
+| Dict | `<ls>` citations | distinct tokens | top 50 | top 100 | cited ≥10× | hapax |
+|---|---:|---:|---:|---:|---:|---:|
+| PWG | 801,788 | 3,561 | 82.6 % | 92.6 % | 99.2 % | 1,702 |
+| MW | 320,828 | 814 | 79.3 % | 89.9 % | 99.7 % | 210 |
+| PW | 98,483 | 1,266 | 73.2 % | 88.2 % | 98.2 % | 650 |
+| AP | 68,273 | 769 | 90.9 % | 96.8 % | 98.3 % | 403 |
+| BEN | 49,234 | 194 | 98.4 % | 99.8 % | 99.5 % | 77 |
+| BHS | 48,419 | 662 | 90.6 % | 96.8 % | 97.9 % | 350 |
+| AP90 | 43,892 | 278 | 96.7 % | 99.2 % | 98.9 % | 92 |
+| SCH | 31,041 | 646 | 73.5 % | 85.2 % | 96.8 % | 195 |
+| PWKVN | 17,627 | 761 | 72.3 % | 86.0 % | 93.6 % | 390 |
+| LRV | 16,650 | 156 | 98.8 % | 99.7 % | 98.7 % | 57 |
+| IEG | 11,390 | 133 | 98.8 % | 99.7 % | 97.9 % | 49 |
+| LAN | 5,912 | 2 | 100.0 % | 100.0 % | 100.0 % | 0 |
+| GRA | 2,341 | 123 | 96.8 % | 99.0 % | 92.5 % | 71 |
+| AE | 1,141 | 26 | 100.0 % | 100.0 % | 96.1 % | 4 |
+| BOR | 526 | 22 | 100.0 % | 100.0 % | 92.6 % | 5 |
+| MD | 58 | 13 | 100.0 % | 100.0 % | 72.4 % | 9 |
+| WIL | 6 | 4 | 100.0 % | 100.0 % | 0.0 % | 3 |
+
+Reproduce with `npm run build-ls-abbreviation-frequency` (the report prints this
+table; percentages are shares of that dictionary's own citation mass).
+
+**What it shows.** Every `<ls>`-bearing dictionary has a steep head: a legend of
+100 entries would already cover 85–100 % of the citation mass everywhere, and
+89.9 % for MW, 92.6 % for PWG. The long tail is real but light — PWG's 1,702
+once-cited abbreviations are 0.2 % of its apparatus. So legend coverage is not
+blocked by scale; it is blocked by *which* head entries a given legend omits,
+which is now a checkable per-dictionary list rather than an estimate. The
+corpus-wide 95.3 % exposure figure in csl-guides stays an upper bound —
+occurrence mass under *some* abbreviation, not under a *documented* one.
+
+**Limitations.** The token is a raw surface form, so a dictionary that writes the
+same work two ways (`MBh` / `MBH`) contributes two tokens; run the counts through
+`canonicalSiglum` before treating them as work counts. `LAN`'s 2 tokens and
+`WIL`'s 6 citations are apparatus stubs, not measurements of citing behaviour.
+Locator-only citations (`<ls>78</ls>`, no siglum) yield an integer-like token —
+55 of them, 70 citations corpus-wide — which is also why no consumer should rely
+on JSON key order here: JS engines hoist integer-like keys.
 
 ## Register B — indigenous `iti`/`ity` quotative (Sanskrit-Sanskrit kośas)
 
