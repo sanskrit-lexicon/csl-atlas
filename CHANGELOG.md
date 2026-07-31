@@ -4,6 +4,41 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added — citation truncation & hapax overlap (PET-MW-CITE, H1827)
+
+- [`scripts/build-citation-truncation.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-truncation.mjs)
+  + [`scripts/validate-citation-truncation.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/validate-citation-truncation.mjs)
+  — the roadmap's asymmetric descent test. `citation_truncation_evidence(A→B)`
+  counts A's citations, on the sources both dictionaries cite ≥5 times each,
+  whose locator depth exceeds B's mean depth for that source; a dictionary can
+  shorten an ancestor's `Rv. 1.22.16` to `RV.` but cannot invent precision it
+  never had. Paired with a hapax-overlap test on rare headwords (all headwords,
+  and the shared-source headwords the roadmap names).
+- [`data/lexico/citation_truncation_hapax.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/citation_truncation_hapax.json)
+  + `.source.json` provenance envelope (csl-orig commit pinned), with the site
+  copy wired through `scripts/sync-site-data.mjs`.
+- [`src/tools/citation-truncation.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/citation-truncation.md)
+  — new page under *Dictionary structure*: locator-depth composition per
+  dictionary, the pairwise asymmetry chart with **within-lane control pairs**,
+  a per-shared-source table and depth scatter, and the hapax table with an
+  all-headwords / shared-source-headwords toggle. Trust Block, CSV download on
+  every table, `Inputs.table` fallback throughout.
+- Measured (29-07-2026, 5 dictionaries, 916,370 usable citations):
+  `evidence(PWG→MW)` = 277,279 of 291,553 (95.1%) against 25,380 of 154,865
+  (16.4%) the other way — asymmetry 0.787; all 3 testable cross-lane pairs put
+  the Petersburg side deeper (0.747–0.856) against a within-Petersburg control
+  band of 0.141–0.353. MW leaves 78.9% of its citations at a bare siglum, PWG
+  16.4%.
+- Honest shrinkage recorded in the packet, not silently absorbed: **MW72 carries
+  zero `<ls>` tags** and so cannot enter the citation half at all (hapax only);
+  the Petersburg lane's elliptical bare-numeral citations (`<ls>112,24</ls>`)
+  have no siglum to share and are excluded and counted separately; "PW" and
+  "PWK" are one digitisation in csl-orig (code `pw`), so PWKVN joins as the
+  third Petersburg witness.
+- `docs/HYPOTHESIS_INDEX.md` PET-MW-CITE flipped from "route" to
+  direction-consistent-but-not-confirmatory, with the numbers and the standing
+  caveat that locator depth reads apparatus formatting, not scholarship.
+
 ### Changed
 
 - **`scripts/lib/cdsl_anatomy.py` is now a re-export shim over `csl_pyutil.anatomy`

@@ -62,6 +62,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/lexicography": "Dictionary genealogy: first empirical findings on how the Cologne Sanskrit dictionaries descend from one another, derived from canonical headword data.",
   "/tools/descent-axes": "Descent axes (PH2 CITE-4AXIS): whether citation-profile similarity is a fourth separable axis of dictionary inheritance beside content, convention, and microstructure — axis-pair scatters and the 4×4 correlation matrix on the testable L0 edges.",
   "/tools/lexicographic-conventions": "Convention fingerprints: how the Cologne Sanskrit dictionaries relate by house style — orthographic and citation formatting — as a cladogram.",
+  "/tools/citation-truncation": "Citation truncation and hapax overlap (PET-MW-CITE): whether the Petersburg-to-MW lineage is visible as a one-directional loss of citation locator precision, with within-lane control pairs and a rare-headword (hapax) overlap test.",
   "/tools/ortho-drift": "Orthographic drift (PH5 ORTHO-CLOCK): pre-reform German and Russian spellings in dictionary gloss text as a dating and descent signal — per-dictionary drift census with CIs, drift-vs-year scatter, era-composition clock, and a searchable top-drifted-forms table.",
   "/tools/structural-register": "Structural register scatter (H6): whether citation style plus grammar marking predicts a Cologne dictionary's family.",
   "/tools/richness-typology": "Data-richness typology (M1): every locally-present Cologne dictionary placed on the roadmap's L0-L10 ordinal scale (scan-only to full structured semantic web), with a machine-readable justification per level.",
@@ -203,6 +204,7 @@ export default {
       pages: [
         { name: "Dictionary genealogy", path: "/tools/lexicography" },
         { name: "Descent axes", path: "/tools/descent-axes" },
+        { name: "Citation truncation", path: "/tools/citation-truncation" },
         { name: "Convention fingerprints", path: "/tools/lexicographic-conventions" },
         { name: "Orthographic drift", path: "/tools/ortho-drift" },
         { name: "Structural register", path: "/tools/structural-register" },

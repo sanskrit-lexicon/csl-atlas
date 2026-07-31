@@ -1,0 +1,2281 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "status": "citation-truncation-and-hapax-overlap-evidence",
+  "hypothesis": "PET-MW-CITE",
+  "claim": "The Petersburg→MW lineage is visible as a one-directional citation-truncation asymmetry: on the sources both sides cite, the Petersburg dictionaries carry systematically deeper locators than MW, and the rare-headword (hapax) overlap between the lanes exceeds the all-headword baseline.",
+  "evidenceLabel": "derived",
+  "reviewStatus": "machine-reviewed",
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "npm run build-citation-truncation",
+  "sourceFiles": [
+    "csl-orig/v02/{pwg,pw,pwkvn,mw,mw72}",
+    "src/data/dicts/dict-source-aliases.json",
+    "src/data/mw-source-layers.json",
+    "scripts/build-citation-truncation.mjs"
+  ],
+  "method": {
+    "locatorDepth": "Locator depth = the number of numeric or i/v/x roman components following the base siglum of an <ls> citation. \"RV.\" → 0, \"RV. i, 1\" → 2, \"Rv. 1.22.16\" → 3. Roman components are restricted to i/v/x because l./c./d./m. are abbreviation letters in this corpus far more often than numerals.",
+    "sourceIdentity": "Sources are folded to a canonical identity with the same two-layer scheme the citation apparatus uses (scripts/lib/source-siglum.mjs: diacritic/case fold + the reviewed src/data/dicts/dict-source-aliases.json alias table), so MW \"MBh\" and PWG \"MBH.\" are one source.",
+    "truncationEvidence": "citation_truncation_evidence(A→B) = the number of A's citations, on sources both dictionaries cite at least 5 times each, whose locator depth EXCEEDS B's mean depth for that same source. Reported as a rate over A's shared-source citations; the pair's direction is the asymmetry rate(A→B) − rate(B→A), called \"tied\" inside ±0.05.",
+    "hapaxOverlap": "A lemma's rarity is its in-scope dictionary count (1–5 of the dictionaries in this packet). shared hapax(A,B) = lemmas recorded by exactly two of the in-scope dictionaries, and those two are A and B — the rare-stock analogue of a shared error, since common stock is shared by every dictionary and so evidences nothing. Reported as a count, as a share of the pair's intersection, and beside a rare-set Jaccard (lemmas in ≤2 dictionaries) whose ratio to the all-headword Jaccard (`rareVsAllJaccard`) is structurally ≤1 and is a composition figure, not a lift.",
+    "scopes": "The hapax block is computed twice: `all` over the full <k1> headword sets, and `citedShared` restricted to the headwords whose entry actually cites one of the pair's shared sources — the roadmap's \"shared-source headwords\". Rarity itself stays global to the packet in both scopes: rarity is a property of the lemma, not of the citing subset.",
+    "headwordIdentity": "Headwords are the SLP1 <k1> normalised through scripts/lib/dict-normalize.mjs (the canonical sanskrit-util slp1_norm: accent marks and homonym digits dropped, phonemic case preserved)."
+  },
+  "scope": {
+    "dictionaries": [
+      {
+        "code": "pwg",
+        "label": "PWG",
+        "lane": "petersburg"
+      },
+      {
+        "code": "pw",
+        "label": "PWK",
+        "lane": "petersburg"
+      },
+      {
+        "code": "pwkvn",
+        "label": "PWKVN",
+        "lane": "petersburg"
+      },
+      {
+        "code": "mw",
+        "label": "MW",
+        "lane": "mw"
+      },
+      {
+        "code": "mw72",
+        "label": "MW72",
+        "lane": "mw"
+      }
+    ],
+    "citationDictionaries": [
+      "pwg",
+      "pw",
+      "pwkvn",
+      "mw"
+    ],
+    "excludedDictionaries": [
+      {
+        "code": "mw72",
+        "label": "MW72",
+        "reason": "no <ls> source citations in csl-orig v02/mw72 (0 raw <ls> payloads) — cannot enter the citation-truncation half; hapax half only"
+      }
+    ],
+    "pwNote": "\"PW\" and \"PWK\" are one digitisation in csl-orig — the kürzere Fassung lives at code `pw` and is labelled PWK by scripts/lib/dict-manifest.mjs. PWKVN (its Nachträge) is included as a third Petersburg witness so the lane is not a single point.",
+    "controlPairs": "Within-lane pairs (PWG↔PWK, PWG↔PWKVN, PWK↔PWKVN, MW↔MW72) are controls: they show what the same measures read when descent is not in question."
+  },
+  "perDictionary": [
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "lane": "petersburg",
+      "entries": 123366,
+      "headwords": 106079,
+      "citationsRaw": 801788,
+      "citationsUsable": 572485,
+      "citationsContinuation": 229294,
+      "citationsNontext": 7,
+      "distinctSources": 3814,
+      "meanLocatorDepth": 1.883,
+      "bareSiglumShare": 0.1643,
+      "depthHistogram": {
+        "0": {
+          "citations": 94053,
+          "share": 0.1643
+        },
+        "1": {
+          "citations": 80401,
+          "share": 0.1404
+        },
+        "2": {
+          "citations": 230268,
+          "share": 0.4022
+        },
+        "3": {
+          "citations": 138499,
+          "share": 0.2419
+        },
+        "4": {
+          "citations": 26895,
+          "share": 0.047
+        },
+        "5": {
+          "citations": 835,
+          "share": 0.0015
+        },
+        "6": {
+          "citations": 1424,
+          "share": 0.0025
+        },
+        "7": {
+          "citations": 48,
+          "share": 0.0001
+        },
+        "8": {
+          "citations": 23,
+          "share": 0
+        },
+        "9": {
+          "citations": 9,
+          "share": 0
+        },
+        "10": {
+          "citations": 5,
+          "share": 0
+        },
+        "11": {
+          "citations": 5,
+          "share": 0
+        },
+        "12": {
+          "citations": 12,
+          "share": 0
+        },
+        "13": {
+          "citations": 1,
+          "share": 0
+        },
+        "16": {
+          "citations": 2,
+          "share": 0
+        },
+        "17": {
+          "citations": 2,
+          "share": 0
+        },
+        "21": {
+          "citations": 1,
+          "share": 0
+        },
+        "26": {
+          "citations": 1,
+          "share": 0
+        },
+        "27": {
+          "citations": 1,
+          "share": 0
+        }
+      }
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "lane": "petersburg",
+      "entries": 170556,
+      "headwords": 151346,
+      "citationsRaw": 98483,
+      "citationsUsable": 87782,
+      "citationsContinuation": 10653,
+      "citationsNontext": 48,
+      "distinctSources": 1122,
+      "meanLocatorDepth": 2.061,
+      "bareSiglumShare": 0.1234,
+      "depthHistogram": {
+        "0": {
+          "citations": 10834,
+          "share": 0.1234
+        },
+        "1": {
+          "citations": 12502,
+          "share": 0.1424
+        },
+        "2": {
+          "citations": 37842,
+          "share": 0.4311
+        },
+        "3": {
+          "citations": 19634,
+          "share": 0.2237
+        },
+        "4": {
+          "citations": 4345,
+          "share": 0.0495
+        },
+        "5": {
+          "citations": 1319,
+          "share": 0.015
+        },
+        "6": {
+          "citations": 677,
+          "share": 0.0077
+        },
+        "7": {
+          "citations": 154,
+          "share": 0.0018
+        },
+        "8": {
+          "citations": 185,
+          "share": 0.0021
+        },
+        "9": {
+          "citations": 135,
+          "share": 0.0015
+        },
+        "10": {
+          "citations": 49,
+          "share": 0.0006
+        },
+        "11": {
+          "citations": 25,
+          "share": 0.0003
+        },
+        "12": {
+          "citations": 23,
+          "share": 0.0003
+        },
+        "13": {
+          "citations": 15,
+          "share": 0.0002
+        },
+        "14": {
+          "citations": 12,
+          "share": 0.0001
+        },
+        "15": {
+          "citations": 8,
+          "share": 0.0001
+        },
+        "16": {
+          "citations": 3,
+          "share": 0
+        },
+        "17": {
+          "citations": 3,
+          "share": 0
+        },
+        "18": {
+          "citations": 1,
+          "share": 0
+        },
+        "19": {
+          "citations": 1,
+          "share": 0
+        },
+        "20": {
+          "citations": 4,
+          "share": 0
+        },
+        "21": {
+          "citations": 2,
+          "share": 0
+        },
+        "22": {
+          "citations": 3,
+          "share": 0
+        },
+        "23": {
+          "citations": 2,
+          "share": 0
+        },
+        "24": {
+          "citations": 2,
+          "share": 0
+        },
+        "25": {
+          "citations": 1,
+          "share": 0
+        },
+        "27": {
+          "citations": 1,
+          "share": 0
+        }
+      }
+    },
+    {
+      "code": "pwkvn",
+      "label": "PWKVN",
+      "lane": "petersburg",
+      "entries": 24976,
+      "headwords": 14995,
+      "citationsRaw": 17627,
+      "citationsUsable": 15739,
+      "citationsContinuation": 1888,
+      "citationsNontext": 0,
+      "distinctSources": 693,
+      "meanLocatorDepth": 2.003,
+      "bareSiglumShare": 0.0993,
+      "depthHistogram": {
+        "0": {
+          "citations": 1563,
+          "share": 0.0993
+        },
+        "1": {
+          "citations": 2730,
+          "share": 0.1735
+        },
+        "2": {
+          "citations": 6869,
+          "share": 0.4364
+        },
+        "3": {
+          "citations": 3763,
+          "share": 0.2391
+        },
+        "4": {
+          "citations": 482,
+          "share": 0.0306
+        },
+        "5": {
+          "citations": 266,
+          "share": 0.0169
+        },
+        "6": {
+          "citations": 29,
+          "share": 0.0018
+        },
+        "7": {
+          "citations": 7,
+          "share": 0.0004
+        },
+        "8": {
+          "citations": 13,
+          "share": 0.0008
+        },
+        "9": {
+          "citations": 8,
+          "share": 0.0005
+        },
+        "10": {
+          "citations": 7,
+          "share": 0.0004
+        },
+        "12": {
+          "citations": 1,
+          "share": 0.0001
+        },
+        "27": {
+          "citations": 1,
+          "share": 0.0001
+        }
+      }
+    },
+    {
+      "code": "mw",
+      "label": "MW",
+      "lane": "mw",
+      "entries": 286525,
+      "headwords": 194084,
+      "citationsRaw": 320828,
+      "citationsUsable": 240364,
+      "citationsContinuation": 8290,
+      "citationsNontext": 72174,
+      "distinctSources": 970,
+      "meanLocatorDepth": 0.491,
+      "bareSiglumShare": 0.7887,
+      "depthHistogram": {
+        "0": {
+          "citations": 189582,
+          "share": 0.7887
+        },
+        "1": {
+          "citations": 7475,
+          "share": 0.0311
+        },
+        "2": {
+          "citations": 20406,
+          "share": 0.0849
+        },
+        "3": {
+          "citations": 21846,
+          "share": 0.0909
+        },
+        "4": {
+          "citations": 1034,
+          "share": 0.0043
+        },
+        "5": {
+          "citations": 18,
+          "share": 0.0001
+        },
+        "6": {
+          "citations": 2,
+          "share": 0
+        },
+        "8": {
+          "citations": 1,
+          "share": 0
+        }
+      }
+    },
+    {
+      "code": "mw72",
+      "label": "MW72",
+      "lane": "mw",
+      "entries": 55390,
+      "headwords": 51159,
+      "citationsRaw": 0,
+      "citationsUsable": 0,
+      "citationsContinuation": 0,
+      "citationsNontext": 0,
+      "distinctSources": 0,
+      "meanLocatorDepth": null,
+      "bareSiglumShare": null,
+      "depthHistogram": {}
+    }
+  ],
+  "pairs": [
+    {
+      "a": "pwg",
+      "b": "pw",
+      "labelA": "PWG",
+      "labelB": "PWK",
+      "relation": "within-petersburg",
+      "pair": "PWG↔PWK",
+      "citationTestable": true,
+      "citation": {
+        "sharedSourcesAll": 427,
+        "sharedSources": 220,
+        "minCitationsPerSide": 5,
+        "truncationEvidenceAB": 242451,
+        "truncationEvidenceBA": 48137,
+        "sharedSourceCitationsA": 526188,
+        "sharedSourceCitationsB": 65027,
+        "truncationRateAB": 0.4608,
+        "truncationRateBA": 0.7403,
+        "meanDepthA": 1.957,
+        "meanDepthB": 2.234,
+        "asymmetry": -0.2795,
+        "moreSpecific": "pw",
+        "sourcesAMoreSpecific": 62,
+        "sourcesBMoreSpecific": 145,
+        "topSources": [
+          {
+            "source": "mbh",
+            "name": "Mahabharata (mbhi/mbhii/... are book locators — fold-rule case)",
+            "citationsA": 39130,
+            "citationsB": 4174,
+            "meanDepthA": 1.98,
+            "meanDepthB": 2.844,
+            "depthDelta": -0.863
+          },
+          {
+            "source": "r",
+            "name": null,
+            "citationsA": 27779,
+            "citationsB": 1734,
+            "meanDepthA": 2.981,
+            "meanDepthB": 2.979,
+            "depthDelta": 0.002
+          },
+          {
+            "source": "h",
+            "name": null,
+            "citationsA": 27141,
+            "citationsB": 208,
+            "meanDepthA": 0.868,
+            "meanDepthB": 1.091,
+            "depthDelta": -0.223
+          },
+          {
+            "source": "bhag",
+            "name": "Bhagavadgita — NOT Bhagavata-Purana (bhagp)",
+            "citationsA": 21244,
+            "citationsB": 1067,
+            "meanDepthA": 2.856,
+            "meanDepthB": 2.48,
+            "depthDelta": 0.376
+          },
+          {
+            "source": "p",
+            "name": null,
+            "citationsA": 21509,
+            "citationsB": 531,
+            "meanDepthA": 3.225,
+            "meanDepthB": 3.075,
+            "depthDelta": 0.15
+          },
+          {
+            "source": "rv",
+            "name": null,
+            "citationsA": 20113,
+            "citationsB": 1584,
+            "meanDepthA": 2.861,
+            "meanDepthB": 2.729,
+            "depthDelta": 0.132
+          },
+          {
+            "source": "skdr",
+            "name": null,
+            "citationsA": 20130,
+            "citationsB": 17,
+            "meanDepthA": 0,
+            "meanDepthB": 0.294,
+            "depthDelta": -0.294
+          },
+          {
+            "source": "spr",
+            "name": null,
+            "citationsA": 14679,
+            "citationsB": 3071,
+            "meanDepthA": 1.382,
+            "meanDepthB": 1,
+            "depthDelta": 0.382
+          },
+          {
+            "source": "verz",
+            "name": null,
+            "citationsA": 16534,
+            "citationsB": 248,
+            "meanDepthA": 1.842,
+            "meanDepthB": 1.827,
+            "depthDelta": 0.016
+          },
+          {
+            "source": "kathas",
+            "name": "Kathasaritsagara",
+            "citationsA": 14941,
+            "citationsB": 723,
+            "meanDepthA": 1.995,
+            "meanDepthB": 1.95,
+            "depthDelta": 0.045
+          },
+          {
+            "source": "ak",
+            "name": null,
+            "citationsA": 14481,
+            "citationsB": 51,
+            "meanDepthA": 3.345,
+            "meanDepthB": 3.529,
+            "depthDelta": -0.184
+          },
+          {
+            "source": "med",
+            "name": null,
+            "citationsA": 13083,
+            "citationsB": 65,
+            "meanDepthA": 0.457,
+            "meanDepthB": 0.8,
+            "depthDelta": -0.343
+          },
+          {
+            "source": "m",
+            "name": null,
+            "citationsA": 12357,
+            "citationsB": 524,
+            "meanDepthA": 1.992,
+            "meanDepthB": 1.897,
+            "depthDelta": 0.095
+          },
+          {
+            "source": "hariv",
+            "name": "Harivamsa",
+            "citationsA": 11630,
+            "citationsB": 1041,
+            "meanDepthA": 1.014,
+            "meanDepthB": 1.917,
+            "depthDelta": -0.903
+          },
+          {
+            "source": "rajan",
+            "name": "Rajanighantu (kosha; PW/PWG 'Rajan.') — NOT Rajatarangini",
+            "citationsA": 6671,
+            "citationsB": 5885,
+            "meanDepthA": 0.224,
+            "meanDepthB": 2.053,
+            "depthDelta": -1.83
+          },
+          {
+            "source": "sat",
+            "name": null,
+            "citationsA": 10607,
+            "citationsB": 1171,
+            "meanDepthA": 3.942,
+            "meanDepthB": 3.635,
+            "depthDelta": 0.307
+          },
+          {
+            "source": "av",
+            "name": null,
+            "citationsA": 9957,
+            "citationsB": 939,
+            "meanDepthA": 2.85,
+            "meanDepthB": 2.397,
+            "depthDelta": 0.453
+          },
+          {
+            "source": "susr",
+            "name": "Susruta-Samhita",
+            "citationsA": 9696,
+            "citationsB": 630,
+            "meanDepthA": 2.982,
+            "meanDepthB": 3.192,
+            "depthDelta": -0.211
+          },
+          {
+            "source": "varah",
+            "name": null,
+            "citationsA": 8778,
+            "citationsB": 660,
+            "meanDepthA": 2.009,
+            "meanDepthB": 2.03,
+            "depthDelta": -0.021
+          },
+          {
+            "source": "trik",
+            "name": null,
+            "citationsA": 8361,
+            "citationsB": 48,
+            "meanDepthA": 2.597,
+            "meanDepthB": 2.563,
+            "depthDelta": 0.035
+          },
+          {
+            "source": "ind",
+            "name": null,
+            "citationsA": 6029,
+            "citationsB": 2196,
+            "meanDepthA": 2.134,
+            "meanDepthB": 2.132,
+            "depthDelta": 0.002
+          },
+          {
+            "source": "ragh",
+            "name": "Raghuvamsa",
+            "citationsA": 7739,
+            "citationsB": 287,
+            "meanDepthA": 1.995,
+            "meanDepthB": 2,
+            "depthDelta": -0.005
+          },
+          {
+            "source": "rajat",
+            "name": "Rajatarangini",
+            "citationsA": 7130,
+            "citationsB": 446,
+            "meanDepthA": 1.994,
+            "meanDepthB": 1.987,
+            "depthDelta": 0.007
+          },
+          {
+            "source": "pancat",
+            "name": "Pancatantra",
+            "citationsA": 7066,
+            "citationsB": 346,
+            "meanDepthA": 1.994,
+            "meanDepthB": 2.124,
+            "depthDelta": -0.131
+          },
+          {
+            "source": "vs",
+            "name": null,
+            "citationsA": 5811,
+            "citationsB": 235,
+            "meanDepthA": 1.952,
+            "meanDepthB": 1.506,
+            "depthDelta": 0.445
+          }
+        ]
+      },
+      "hapax": {
+        "all": {
+          "headwordsA": 106079,
+          "headwordsB": 151346,
+          "intersection": 99453,
+          "jaccard": 0.6296,
+          "rareHeadwordsA": 12564,
+          "rareHeadwordsB": 51742,
+          "rareIntersection": 7184,
+          "rareJaccard": 0.1258,
+          "sharedHapax": 7184,
+          "sharedHapaxShareOfIntersection": 0.0722,
+          "rareVsAllJaccard": 0.2
+        },
+        "citedShared": {
+          "headwordsA": 99248,
+          "headwordsB": 46730,
+          "intersection": 20630,
+          "jaccard": 0.1646,
+          "rareHeadwordsA": 10956,
+          "rareHeadwordsB": 22010,
+          "rareIntersection": 1197,
+          "rareJaccard": 0.0377,
+          "sharedHapax": 1197,
+          "sharedHapaxShareOfIntersection": 0.058,
+          "rareVsAllJaccard": 0.229
+        }
+      },
+      "pairCodes": [
+        "pw",
+        "pwg"
+      ]
+    },
+    {
+      "a": "pwg",
+      "b": "pwkvn",
+      "labelA": "PWG",
+      "labelB": "PWKVN",
+      "relation": "within-petersburg",
+      "pair": "PWG↔PWKVN",
+      "citationTestable": true,
+      "citation": {
+        "sharedSourcesAll": 283,
+        "sharedSources": 135,
+        "minCitationsPerSide": 5,
+        "truncationEvidenceAB": 208742,
+        "truncationEvidenceBA": 7709,
+        "sharedSourceCitationsA": 480299,
+        "sharedSourceCitationsB": 9791,
+        "truncationRateAB": 0.4346,
+        "truncationRateBA": 0.7874,
+        "meanDepthA": 2.017,
+        "meanDepthB": 2.337,
+        "asymmetry": -0.3528,
+        "moreSpecific": "pwkvn",
+        "sourcesAMoreSpecific": 42,
+        "sourcesBMoreSpecific": 87,
+        "topSources": [
+          {
+            "source": "mbh",
+            "name": "Mahabharata (mbhi/mbhii/... are book locators — fold-rule case)",
+            "citationsA": 39130,
+            "citationsB": 825,
+            "meanDepthA": 1.98,
+            "meanDepthB": 2.972,
+            "depthDelta": -0.992
+          },
+          {
+            "source": "r",
+            "name": null,
+            "citationsA": 27779,
+            "citationsB": 561,
+            "meanDepthA": 2.981,
+            "meanDepthB": 2.989,
+            "depthDelta": -0.008
+          },
+          {
+            "source": "h",
+            "name": null,
+            "citationsA": 27141,
+            "citationsB": 28,
+            "meanDepthA": 0.868,
+            "meanDepthB": 1.25,
+            "depthDelta": -0.382
+          },
+          {
+            "source": "p",
+            "name": null,
+            "citationsA": 21509,
+            "citationsB": 136,
+            "meanDepthA": 3.225,
+            "meanDepthB": 3.088,
+            "depthDelta": 0.137
+          },
+          {
+            "source": "bhag",
+            "name": "Bhagavadgita — NOT Bhagavata-Purana (bhagp)",
+            "citationsA": 21244,
+            "citationsB": 233,
+            "meanDepthA": 2.856,
+            "meanDepthB": 2.837,
+            "depthDelta": 0.019
+          },
+          {
+            "source": "rv",
+            "name": null,
+            "citationsA": 20113,
+            "citationsB": 147,
+            "meanDepthA": 2.861,
+            "meanDepthB": 2.898,
+            "depthDelta": -0.037
+          },
+          {
+            "source": "skdr",
+            "name": null,
+            "citationsA": 20130,
+            "citationsB": 7,
+            "meanDepthA": 0,
+            "meanDepthB": 0,
+            "depthDelta": 0
+          },
+          {
+            "source": "verz",
+            "name": null,
+            "citationsA": 16534,
+            "citationsB": 33,
+            "meanDepthA": 1.842,
+            "meanDepthB": 1.939,
+            "depthDelta": -0.097
+          },
+          {
+            "source": "kathas",
+            "name": "Kathasaritsagara",
+            "citationsA": 14941,
+            "citationsB": 144,
+            "meanDepthA": 1.995,
+            "meanDepthB": 2,
+            "depthDelta": -0.005
+          },
+          {
+            "source": "spr",
+            "name": null,
+            "citationsA": 14679,
+            "citationsB": 140,
+            "meanDepthA": 1.382,
+            "meanDepthB": 0.993,
+            "depthDelta": 0.389
+          },
+          {
+            "source": "ak",
+            "name": null,
+            "citationsA": 14481,
+            "citationsB": 8,
+            "meanDepthA": 3.345,
+            "meanDepthB": 3.375,
+            "depthDelta": -0.03
+          },
+          {
+            "source": "med",
+            "name": null,
+            "citationsA": 13083,
+            "citationsB": 6,
+            "meanDepthA": 0.457,
+            "meanDepthB": 0.667,
+            "depthDelta": -0.21
+          },
+          {
+            "source": "m",
+            "name": null,
+            "citationsA": 12357,
+            "citationsB": 153,
+            "meanDepthA": 1.992,
+            "meanDepthB": 1.758,
+            "depthDelta": 0.234
+          },
+          {
+            "source": "hariv",
+            "name": "Harivamsa",
+            "citationsA": 11630,
+            "citationsB": 119,
+            "meanDepthA": 1.014,
+            "meanDepthB": 1.37,
+            "depthDelta": -0.356
+          },
+          {
+            "source": "sat",
+            "name": null,
+            "citationsA": 10607,
+            "citationsB": 113,
+            "meanDepthA": 3.942,
+            "meanDepthB": 3.752,
+            "depthDelta": 0.19
+          },
+          {
+            "source": "av",
+            "name": null,
+            "citationsA": 9957,
+            "citationsB": 103,
+            "meanDepthA": 2.85,
+            "meanDepthB": 2.369,
+            "depthDelta": 0.481
+          },
+          {
+            "source": "susr",
+            "name": "Susruta-Samhita",
+            "citationsA": 9696,
+            "citationsB": 101,
+            "meanDepthA": 2.982,
+            "meanDepthB": 2.99,
+            "depthDelta": -0.009
+          },
+          {
+            "source": "varah",
+            "name": null,
+            "citationsA": 8778,
+            "citationsB": 51,
+            "meanDepthA": 2.009,
+            "meanDepthB": 2.039,
+            "depthDelta": -0.03
+          },
+          {
+            "source": "ragh",
+            "name": "Raghuvamsa",
+            "citationsA": 7739,
+            "citationsB": 58,
+            "meanDepthA": 1.995,
+            "meanDepthB": 2,
+            "depthDelta": -0.005
+          },
+          {
+            "source": "rajat",
+            "name": "Rajatarangini",
+            "citationsA": 7130,
+            "citationsB": 49,
+            "meanDepthA": 1.994,
+            "meanDepthB": 2,
+            "depthDelta": -0.006
+          },
+          {
+            "source": "pancat",
+            "name": "Pancatantra",
+            "citationsA": 7066,
+            "citationsB": 35,
+            "meanDepthA": 1.994,
+            "meanDepthB": 2.114,
+            "depthDelta": -0.121
+          },
+          {
+            "source": "rajan",
+            "name": "Rajanighantu (kosha; PW/PWG 'Rajan.') — NOT Rajatarangini",
+            "citationsA": 6671,
+            "citationsB": 53,
+            "meanDepthA": 0.224,
+            "meanDepthB": 1.925,
+            "depthDelta": -1.701
+          },
+          {
+            "source": "ind",
+            "name": null,
+            "citationsA": 6029,
+            "citationsB": 104,
+            "meanDepthA": 2.134,
+            "meanDepthB": 2.029,
+            "depthDelta": 0.105
+          },
+          {
+            "source": "vs",
+            "name": null,
+            "citationsA": 5811,
+            "citationsB": 13,
+            "meanDepthA": 1.952,
+            "meanDepthB": 1.846,
+            "depthDelta": 0.105
+          },
+          {
+            "source": "katy",
+            "name": "Katyayana (author-siglum: varttikas or srautasutra by context) — do not merge into katysr",
+            "citationsA": 5174,
+            "citationsB": 74,
+            "meanDepthA": 2.876,
+            "meanDepthB": 2.432,
+            "depthDelta": 0.443
+          }
+        ]
+      },
+      "hapax": {
+        "all": {
+          "headwordsA": 106079,
+          "headwordsB": 14995,
+          "intersection": 4041,
+          "jaccard": 0.0345,
+          "rareHeadwordsA": 12564,
+          "rareHeadwordsB": 4971,
+          "rareIntersection": 0,
+          "rareJaccard": 0,
+          "sharedHapax": 0,
+          "sharedHapaxShareOfIntersection": 0,
+          "rareVsAllJaccard": 0
+        },
+        "citedShared": {
+          "headwordsA": 94072,
+          "headwordsB": 8563,
+          "intersection": 2109,
+          "jaccard": 0.021,
+          "rareHeadwordsA": 10250,
+          "rareHeadwordsB": 2547,
+          "rareIntersection": 0,
+          "rareJaccard": 0,
+          "sharedHapax": 0,
+          "sharedHapaxShareOfIntersection": 0,
+          "rareVsAllJaccard": 0
+        }
+      },
+      "pairCodes": [
+        "pwg",
+        "pwkvn"
+      ]
+    },
+    {
+      "a": "pwg",
+      "b": "mw",
+      "labelA": "PWG",
+      "labelB": "MW",
+      "relation": "cross-lane",
+      "pair": "PWG↔MW",
+      "citationTestable": true,
+      "citation": {
+        "sharedSourcesAll": 316,
+        "sharedSources": 172,
+        "minCitationsPerSide": 5,
+        "truncationEvidenceAB": 277279,
+        "truncationEvidenceBA": 25380,
+        "sharedSourceCitationsA": 291553,
+        "sharedSourceCitationsB": 154865,
+        "truncationRateAB": 0.951,
+        "truncationRateBA": 0.1639,
+        "meanDepthA": 2.178,
+        "meanDepthB": 0.438,
+        "asymmetry": 0.7871,
+        "moreSpecific": "pwg",
+        "sourcesAMoreSpecific": 141,
+        "sourcesBMoreSpecific": 20,
+        "topSources": [
+          {
+            "source": "mbh",
+            "name": "Mahabharata (mbhi/mbhii/... are book locators — fold-rule case)",
+            "citationsA": 39130,
+            "citationsB": 28058,
+            "meanDepthA": 1.98,
+            "meanDepthB": 0.343,
+            "depthDelta": 1.638
+          },
+          {
+            "source": "r",
+            "name": null,
+            "citationsA": 27779,
+            "citationsB": 10815,
+            "meanDepthA": 2.981,
+            "meanDepthB": 0.413,
+            "depthDelta": 2.568
+          },
+          {
+            "source": "rv",
+            "name": null,
+            "citationsA": 20113,
+            "citationsB": 15918,
+            "meanDepthA": 2.861,
+            "meanDepthB": 1.137,
+            "depthDelta": 1.724
+          },
+          {
+            "source": "bhag",
+            "name": "Bhagavadgita — NOT Bhagavata-Purana (bhagp)",
+            "citationsA": 21244,
+            "citationsB": 516,
+            "meanDepthA": 2.856,
+            "meanDepthB": 0.432,
+            "depthDelta": 2.424
+          },
+          {
+            "source": "kathas",
+            "name": "Kathasaritsagara",
+            "citationsA": 14941,
+            "citationsB": 6757,
+            "meanDepthA": 1.995,
+            "meanDepthB": 0.142,
+            "depthDelta": 1.853
+          },
+          {
+            "source": "hariv",
+            "name": "Harivamsa",
+            "citationsA": 11630,
+            "citationsB": 6314,
+            "meanDepthA": 1.014,
+            "meanDepthB": 0.183,
+            "depthDelta": 0.831
+          },
+          {
+            "source": "av",
+            "name": null,
+            "citationsA": 9957,
+            "citationsB": 7238,
+            "meanDepthA": 2.85,
+            "meanDepthB": 0.854,
+            "depthDelta": 1.996
+          },
+          {
+            "source": "susr",
+            "name": "Susruta-Samhita",
+            "citationsA": 9696,
+            "citationsB": 6224,
+            "meanDepthA": 2.982,
+            "meanDepthB": 0.21,
+            "depthDelta": 2.772
+          },
+          {
+            "source": "rajat",
+            "name": "Rajatarangini",
+            "citationsA": 7130,
+            "citationsB": 3410,
+            "meanDepthA": 1.994,
+            "meanDepthB": 0.319,
+            "depthDelta": 1.675
+          },
+          {
+            "source": "ragh",
+            "name": "Raghuvamsa",
+            "citationsA": 7739,
+            "citationsB": 2655,
+            "meanDepthA": 1.995,
+            "meanDepthB": 0.54,
+            "depthDelta": 1.455
+          },
+          {
+            "source": "pancat",
+            "name": "Pancatantra",
+            "citationsA": 7066,
+            "citationsB": 3133,
+            "meanDepthA": 1.994,
+            "meanDepthB": 0.296,
+            "depthDelta": 1.698
+          },
+          {
+            "source": "vs",
+            "name": null,
+            "citationsA": 5811,
+            "citationsB": 2998,
+            "meanDepthA": 1.952,
+            "meanDepthB": 0.449,
+            "depthDelta": 1.502
+          },
+          {
+            "source": "ts",
+            "name": null,
+            "citationsA": 4928,
+            "citationsB": 3207,
+            "meanDepthA": 3.738,
+            "meanDepthB": 0.376,
+            "depthDelta": 3.362
+          },
+          {
+            "source": "sak",
+            "name": null,
+            "citationsA": 5205,
+            "citationsB": 1498,
+            "meanDepthA": 1.498,
+            "meanDepthB": 0.413,
+            "depthDelta": 1.085
+          },
+          {
+            "source": "vop",
+            "name": null,
+            "citationsA": 5042,
+            "citationsB": 763,
+            "meanDepthA": 1.873,
+            "meanDepthB": 0.503,
+            "depthDelta": 1.37
+          },
+          {
+            "source": "yajn",
+            "name": "Yajnavalkya-smrti",
+            "citationsA": 3555,
+            "citationsB": 2249,
+            "meanDepthA": 1.991,
+            "meanDepthB": 0.614,
+            "depthDelta": 1.377
+          },
+          {
+            "source": "vp",
+            "name": null,
+            "citationsA": 3627,
+            "citationsB": 2167,
+            "meanDepthA": 1.315,
+            "meanDepthB": 0.244,
+            "depthDelta": 1.072
+          },
+          {
+            "source": "sah",
+            "name": null,
+            "citationsA": 3541,
+            "citationsB": 1790,
+            "meanDepthA": 1.624,
+            "meanDepthB": 0.22,
+            "depthDelta": 1.405
+          },
+          {
+            "source": "katy",
+            "name": "Katyayana (author-siglum: varttikas or srautasutra by context) — do not merge into katysr",
+            "citationsA": 5174,
+            "citationsB": 95,
+            "meanDepthA": 2.876,
+            "meanDepthB": 0.011,
+            "depthDelta": 2.865
+          },
+          {
+            "source": "hit",
+            "name": null,
+            "citationsA": 3265,
+            "citationsB": 1512,
+            "meanDepthA": 1.902,
+            "meanDepthB": 0.203,
+            "depthDelta": 1.699
+          },
+          {
+            "source": "tbr",
+            "name": null,
+            "citationsA": 2788,
+            "citationsB": 1413,
+            "meanDepthA": 3.868,
+            "meanDepthB": 0.465,
+            "depthDelta": 3.403
+          },
+          {
+            "source": "nir",
+            "name": null,
+            "citationsA": 3006,
+            "citationsB": 1184,
+            "meanDepthA": 1.973,
+            "meanDepthB": 0.811,
+            "depthDelta": 1.162
+          },
+          {
+            "source": "dhatup",
+            "name": "Dhatupatha (all dhatup<roman> members are chapter locators — fold-rule case)",
+            "citationsA": 2356,
+            "citationsB": 1777,
+            "meanDepthA": 1.915,
+            "meanDepthB": 1.755,
+            "depthDelta": 0.159
+          },
+          {
+            "source": "kaus",
+            "name": "Kausika-sutra (AV)",
+            "citationsA": 2563,
+            "citationsB": 1139,
+            "meanDepthA": 1.092,
+            "meanDepthB": 0.084,
+            "depthDelta": 1.008
+          },
+          {
+            "source": "sarvad",
+            "name": "Sarvadarsanasamgraha",
+            "citationsA": 2273,
+            "citationsB": 1189,
+            "meanDepthA": 1.99,
+            "meanDepthB": 0.197,
+            "depthDelta": 1.794
+          }
+        ]
+      },
+      "hapax": {
+        "all": {
+          "headwordsA": 106079,
+          "headwordsB": 194084,
+          "intersection": 94780,
+          "jaccard": 0.4615,
+          "rareHeadwordsA": 12564,
+          "rareHeadwordsB": 94015,
+          "rareIntersection": 2030,
+          "rareJaccard": 0.0194,
+          "sharedHapax": 2030,
+          "sharedHapaxShareOfIntersection": 0.0214,
+          "rareVsAllJaccard": 0.042
+        },
+        "citedShared": {
+          "headwordsA": 61602,
+          "headwordsB": 83884,
+          "intersection": 43713,
+          "jaccard": 0.4295,
+          "rareHeadwordsA": 6307,
+          "rareHeadwordsB": 32721,
+          "rareIntersection": 550,
+          "rareJaccard": 0.0143,
+          "sharedHapax": 550,
+          "sharedHapaxShareOfIntersection": 0.0126,
+          "rareVsAllJaccard": 0.033
+        }
+      },
+      "pairCodes": [
+        "mw",
+        "pwg"
+      ]
+    },
+    {
+      "a": "pwg",
+      "b": "mw72",
+      "labelA": "PWG",
+      "labelB": "MW72",
+      "relation": "cross-lane",
+      "pair": "PWG↔MW72",
+      "citationTestable": false,
+      "citation": null,
+      "hapax": {
+        "all": {
+          "headwordsA": 106079,
+          "headwordsB": 51159,
+          "intersection": 35000,
+          "jaccard": 0.2863,
+          "rareHeadwordsA": 12564,
+          "rareHeadwordsB": 14804,
+          "rareIntersection": 500,
+          "rareJaccard": 0.0186,
+          "sharedHapax": 500,
+          "sharedHapaxShareOfIntersection": 0.0143,
+          "rareVsAllJaccard": 0.065
+        },
+        "citedShared": null
+      },
+      "pairCodes": [
+        "mw72",
+        "pwg"
+      ]
+    },
+    {
+      "a": "pw",
+      "b": "pwkvn",
+      "labelA": "PWK",
+      "labelB": "PWKVN",
+      "relation": "within-petersburg",
+      "pair": "PWK↔PWKVN",
+      "citationTestable": true,
+      "citation": {
+        "sharedSourcesAll": 668,
+        "sharedSources": 232,
+        "minCitationsPerSide": 5,
+        "truncationEvidenceAB": 40138,
+        "truncationEvidenceBA": 5956,
+        "sharedSourceCitationsA": 74828,
+        "sharedSourceCitationsB": 15076,
+        "truncationRateAB": 0.5364,
+        "truncationRateBA": 0.3951,
+        "meanDepthA": 2.128,
+        "meanDepthB": 2.053,
+        "asymmetry": 0.1413,
+        "moreSpecific": "pw",
+        "sourcesAMoreSpecific": 119,
+        "sourcesBMoreSpecific": 52,
+        "topSources": [
+          {
+            "source": "rajan",
+            "name": "Rajanighantu (kosha; PW/PWG 'Rajan.') — NOT Rajatarangini",
+            "citationsA": 5885,
+            "citationsB": 53,
+            "meanDepthA": 2.053,
+            "meanDepthB": 1.925,
+            "depthDelta": 0.129
+          },
+          {
+            "source": "mbh",
+            "name": "Mahabharata (mbhi/mbhii/... are book locators — fold-rule case)",
+            "citationsA": 4174,
+            "citationsB": 825,
+            "meanDepthA": 2.844,
+            "meanDepthB": 2.972,
+            "depthDelta": -0.129
+          },
+          {
+            "source": "spr",
+            "name": null,
+            "citationsA": 3071,
+            "citationsB": 140,
+            "meanDepthA": 1,
+            "meanDepthB": 0.993,
+            "depthDelta": 0.007
+          },
+          {
+            "source": "apast",
+            "name": "Apastamba (bare = Dharmasutra in MW usage; authority record 'Ap')",
+            "citationsA": 2460,
+            "citationsB": 716,
+            "meanDepthA": 2.415,
+            "meanDepthB": 2.401,
+            "depthDelta": 0.014
+          },
+          {
+            "source": "opp",
+            "name": null,
+            "citationsA": 2057,
+            "citationsB": 278,
+            "meanDepthA": 1.02,
+            "meanDepthB": 1.007,
+            "depthDelta": 0.013
+          },
+          {
+            "source": "ind",
+            "name": null,
+            "citationsA": 2196,
+            "citationsB": 104,
+            "meanDepthA": 2.132,
+            "meanDepthB": 2.029,
+            "depthDelta": 0.103
+          },
+          {
+            "source": "r",
+            "name": null,
+            "citationsA": 1734,
+            "citationsB": 561,
+            "meanDepthA": 2.979,
+            "meanDepthB": 2.989,
+            "depthDelta": -0.01
+          },
+          {
+            "source": "sis",
+            "name": null,
+            "citationsA": 1580,
+            "citationsB": 464,
+            "meanDepthA": 2.204,
+            "meanDepthB": 1.996,
+            "depthDelta": 0.209
+          },
+          {
+            "source": "maitr",
+            "name": null,
+            "citationsA": 1444,
+            "citationsB": 520,
+            "meanDepthA": 4.087,
+            "meanDepthB": 4.283,
+            "depthDelta": -0.195
+          },
+          {
+            "source": "hemadri1",
+            "name": null,
+            "citationsA": 1590,
+            "citationsB": 188,
+            "meanDepthA": 2.489,
+            "meanDepthB": 2,
+            "depthDelta": 0.489
+          },
+          {
+            "source": "gal",
+            "name": null,
+            "citationsA": 1736,
+            "citationsB": 11,
+            "meanDepthA": 0,
+            "meanDepthB": 0,
+            "depthDelta": 0
+          },
+          {
+            "source": "rv",
+            "name": null,
+            "citationsA": 1584,
+            "citationsB": 147,
+            "meanDepthA": 2.729,
+            "meanDepthB": 2.898,
+            "depthDelta": -0.169
+          },
+          {
+            "source": "bhavapr",
+            "name": "Bhavaprakasa (medicine)",
+            "citationsA": 1689,
+            "citationsB": 14,
+            "meanDepthA": 2.163,
+            "meanDepthB": 1.714,
+            "depthDelta": 0.449
+          },
+          {
+            "source": "kad",
+            "name": null,
+            "citationsA": 1613,
+            "citationsB": 50,
+            "meanDepthA": 3.166,
+            "meanDepthB": 3.22,
+            "depthDelta": -0.054
+          },
+          {
+            "source": "mahavy",
+            "name": "Mahavyutpatti",
+            "citationsA": 831,
+            "citationsB": 831,
+            "meanDepthA": 1.56,
+            "meanDepthB": 1.56,
+            "depthDelta": 0
+          },
+          {
+            "source": "vp",
+            "name": null,
+            "citationsA": 1523,
+            "citationsB": 37,
+            "meanDepthA": 2.427,
+            "meanDepthB": 2.757,
+            "depthDelta": -0.33
+          },
+          {
+            "source": "divy",
+            "name": "Divyavadana",
+            "citationsA": 813,
+            "citationsB": 698,
+            "meanDepthA": 2.138,
+            "meanDepthB": 2.007,
+            "depthDelta": 0.131
+          },
+          {
+            "source": "jatakam",
+            "name": "Jatakamala",
+            "citationsA": 822,
+            "citationsB": 651,
+            "meanDepthA": 1.552,
+            "meanDepthB": 1.492,
+            "depthDelta": 0.061
+          },
+          {
+            "source": "bhag",
+            "name": "Bhagavadgita — NOT Bhagavata-Purana (bhagp)",
+            "citationsA": 1067,
+            "citationsB": 233,
+            "meanDepthA": 2.48,
+            "meanDepthB": 2.837,
+            "depthDelta": -0.357
+          },
+          {
+            "source": "sat",
+            "name": null,
+            "citationsA": 1171,
+            "citationsB": 113,
+            "meanDepthA": 3.635,
+            "meanDepthB": 3.752,
+            "depthDelta": -0.118
+          },
+          {
+            "source": "balar",
+            "name": "Balaramayana (Rajasekhara)",
+            "citationsA": 1207,
+            "citationsB": 23,
+            "meanDepthA": 2.222,
+            "meanDepthB": 2,
+            "depthDelta": 0.222
+          },
+          {
+            "source": "hariv",
+            "name": "Harivamsa",
+            "citationsA": 1041,
+            "citationsB": 119,
+            "meanDepthA": 1.917,
+            "meanDepthB": 1.37,
+            "depthDelta": 0.548
+          },
+          {
+            "source": "gaut",
+            "name": null,
+            "citationsA": 1121,
+            "citationsB": 15,
+            "meanDepthA": 1.178,
+            "meanDepthB": 1.733,
+            "depthDelta": -0.555
+          },
+          {
+            "source": "hem",
+            "name": null,
+            "citationsA": 853,
+            "citationsB": 223,
+            "meanDepthA": 2.22,
+            "meanDepthB": 1.982,
+            "depthDelta": 0.238
+          },
+          {
+            "source": "av",
+            "name": null,
+            "citationsA": 939,
+            "citationsB": 103,
+            "meanDepthA": 2.397,
+            "meanDepthB": 2.369,
+            "depthDelta": 0.028
+          }
+        ]
+      },
+      "hapax": {
+        "all": {
+          "headwordsA": 151346,
+          "headwordsB": 14995,
+          "intersection": 14973,
+          "jaccard": 0.0989,
+          "rareHeadwordsA": 51742,
+          "rareHeadwordsB": 4971,
+          "rareIntersection": 4949,
+          "rareJaccard": 0.0956,
+          "sharedHapax": 4949,
+          "sharedHapaxShareOfIntersection": 0.3305,
+          "rareVsAllJaccard": 0.967
+        },
+        "citedShared": {
+          "headwordsA": 53634,
+          "headwordsB": 12577,
+          "intersection": 12479,
+          "jaccard": 0.2322,
+          "rareHeadwordsA": 25824,
+          "rareHeadwordsB": 3922,
+          "rareIntersection": 3886,
+          "rareJaccard": 0.1503,
+          "sharedHapax": 3886,
+          "sharedHapaxShareOfIntersection": 0.3114,
+          "rareVsAllJaccard": 0.647
+        }
+      },
+      "pairCodes": [
+        "pw",
+        "pwkvn"
+      ]
+    },
+    {
+      "a": "pw",
+      "b": "mw",
+      "labelA": "PWK",
+      "labelB": "MW",
+      "relation": "cross-lane",
+      "pair": "PWK↔MW",
+      "citationTestable": true,
+      "citation": {
+        "sharedSourcesAll": 261,
+        "sharedSources": 162,
+        "minCitationsPerSide": 5,
+        "truncationEvidenceAB": 39689,
+        "truncationEvidenceBA": 16623,
+        "sharedSourceCitationsA": 46291,
+        "sharedSourceCitationsB": 150347,
+        "truncationRateAB": 0.8574,
+        "truncationRateBA": 0.1106,
+        "meanDepthA": 2.264,
+        "meanDepthB": 0.443,
+        "asymmetry": 0.7468,
+        "moreSpecific": "pw",
+        "sourcesAMoreSpecific": 154,
+        "sourcesBMoreSpecific": 6,
+        "topSources": [
+          {
+            "source": "mbh",
+            "name": "Mahabharata (mbhi/mbhii/... are book locators — fold-rule case)",
+            "citationsA": 4174,
+            "citationsB": 28058,
+            "meanDepthA": 2.844,
+            "meanDepthB": 0.343,
+            "depthDelta": 2.501
+          },
+          {
+            "source": "rv",
+            "name": null,
+            "citationsA": 1584,
+            "citationsB": 15918,
+            "meanDepthA": 2.729,
+            "meanDepthB": 1.137,
+            "depthDelta": 1.593
+          },
+          {
+            "source": "r",
+            "name": null,
+            "citationsA": 1734,
+            "citationsB": 10815,
+            "meanDepthA": 2.979,
+            "meanDepthB": 0.413,
+            "depthDelta": 2.566
+          },
+          {
+            "source": "av",
+            "name": null,
+            "citationsA": 939,
+            "citationsB": 7238,
+            "meanDepthA": 2.397,
+            "meanDepthB": 0.854,
+            "depthDelta": 1.543
+          },
+          {
+            "source": "kathas",
+            "name": "Kathasaritsagara",
+            "citationsA": 723,
+            "citationsB": 6757,
+            "meanDepthA": 1.95,
+            "meanDepthB": 0.142,
+            "depthDelta": 1.808
+          },
+          {
+            "source": "hariv",
+            "name": "Harivamsa",
+            "citationsA": 1041,
+            "citationsB": 6314,
+            "meanDepthA": 1.917,
+            "meanDepthB": 0.183,
+            "depthDelta": 1.734
+          },
+          {
+            "source": "susr",
+            "name": "Susruta-Samhita",
+            "citationsA": 630,
+            "citationsB": 6224,
+            "meanDepthA": 3.192,
+            "meanDepthB": 0.21,
+            "depthDelta": 2.982
+          },
+          {
+            "source": "ts",
+            "name": null,
+            "citationsA": 730,
+            "citationsB": 3207,
+            "meanDepthA": 3.182,
+            "meanDepthB": 0.376,
+            "depthDelta": 2.806
+          },
+          {
+            "source": "rajat",
+            "name": "Rajatarangini",
+            "citationsA": 446,
+            "citationsB": 3410,
+            "meanDepthA": 1.987,
+            "meanDepthB": 0.319,
+            "depthDelta": 1.667
+          },
+          {
+            "source": "vp",
+            "name": null,
+            "citationsA": 1523,
+            "citationsB": 2167,
+            "meanDepthA": 2.427,
+            "meanDepthB": 0.244,
+            "depthDelta": 2.183
+          },
+          {
+            "source": "pancat",
+            "name": "Pancatantra",
+            "citationsA": 346,
+            "citationsB": 3133,
+            "meanDepthA": 2.124,
+            "meanDepthB": 0.296,
+            "depthDelta": 1.829
+          },
+          {
+            "source": "sis",
+            "name": null,
+            "citationsA": 1580,
+            "citationsB": 1718,
+            "meanDepthA": 2.204,
+            "meanDepthB": 0.659,
+            "depthDelta": 1.546
+          },
+          {
+            "source": "vs",
+            "name": null,
+            "citationsA": 235,
+            "citationsB": 2998,
+            "meanDepthA": 1.506,
+            "meanDepthB": 0.449,
+            "depthDelta": 1.057
+          },
+          {
+            "source": "apast",
+            "name": "Apastamba (bare = Dharmasutra in MW usage; authority record 'Ap')",
+            "citationsA": 2460,
+            "citationsB": 484,
+            "meanDepthA": 2.415,
+            "meanDepthB": 0,
+            "depthDelta": 2.415
+          },
+          {
+            "source": "ragh",
+            "name": "Raghuvamsa",
+            "citationsA": 287,
+            "citationsB": 2655,
+            "meanDepthA": 2,
+            "meanDepthB": 0.54,
+            "depthDelta": 1.46
+          },
+          {
+            "source": "kad",
+            "name": null,
+            "citationsA": 1613,
+            "citationsB": 1211,
+            "meanDepthA": 3.166,
+            "meanDepthB": 0.158,
+            "depthDelta": 3.008
+          },
+          {
+            "source": "gal",
+            "name": null,
+            "citationsA": 1736,
+            "citationsB": 943,
+            "meanDepthA": 0,
+            "meanDepthB": 0,
+            "depthDelta": 0
+          },
+          {
+            "source": "yajn",
+            "name": "Yajnavalkya-smrti",
+            "citationsA": 196,
+            "citationsB": 2249,
+            "meanDepthA": 1.99,
+            "meanDepthB": 0.614,
+            "depthDelta": 1.376
+          },
+          {
+            "source": "kas",
+            "name": null,
+            "citationsA": 457,
+            "citationsB": 1736,
+            "meanDepthA": 1.284,
+            "meanDepthB": 0,
+            "depthDelta": 1.284
+          },
+          {
+            "source": "balar",
+            "name": "Balaramayana (Rajasekhara)",
+            "citationsA": 1207,
+            "citationsB": 923,
+            "meanDepthA": 2.222,
+            "meanDepthB": 0.491,
+            "depthDelta": 1.731
+          },
+          {
+            "source": "sah",
+            "name": null,
+            "citationsA": 191,
+            "citationsB": 1790,
+            "meanDepthA": 1.654,
+            "meanDepthB": 0.22,
+            "depthDelta": 1.435
+          },
+          {
+            "source": "divy",
+            "name": "Divyavadana",
+            "citationsA": 813,
+            "citationsB": 1066,
+            "meanDepthA": 2.138,
+            "meanDepthB": 0.22,
+            "depthDelta": 1.918
+          },
+          {
+            "source": "gaut",
+            "name": null,
+            "citationsA": 1121,
+            "citationsB": 758,
+            "meanDepthA": 1.178,
+            "meanDepthB": 0.236,
+            "depthDelta": 0.942
+          },
+          {
+            "source": "dhatup",
+            "name": "Dhatupatha (all dhatup<roman> members are chapter locators — fold-rule case)",
+            "citationsA": 61,
+            "citationsB": 1777,
+            "meanDepthA": 1.426,
+            "meanDepthB": 1.755,
+            "depthDelta": -0.329
+          },
+          {
+            "source": "pat",
+            "name": null,
+            "citationsA": 175,
+            "citationsB": 1651,
+            "meanDepthA": 4.366,
+            "meanDepthB": 0.009,
+            "depthDelta": 4.357
+          }
+        ]
+      },
+      "hapax": {
+        "all": {
+          "headwordsA": 151346,
+          "headwordsB": 194084,
+          "intersection": 129005,
+          "jaccard": 0.5961,
+          "rareHeadwordsA": 51742,
+          "rareHeadwordsB": 94015,
+          "rareIntersection": 30182,
+          "rareJaccard": 0.2611,
+          "sharedHapax": 30182,
+          "sharedHapaxShareOfIntersection": 0.234,
+          "rareVsAllJaccard": 0.438
+        },
+        "citedShared": {
+          "headwordsA": 34929,
+          "headwordsB": 83446,
+          "intersection": 21807,
+          "jaccard": 0.2258,
+          "rareHeadwordsA": 16410,
+          "rareHeadwordsB": 33223,
+          "rareIntersection": 7370,
+          "rareJaccard": 0.1744,
+          "sharedHapax": 7370,
+          "sharedHapaxShareOfIntersection": 0.338,
+          "rareVsAllJaccard": 0.772
+        }
+      },
+      "pairCodes": [
+        "mw",
+        "pw"
+      ]
+    },
+    {
+      "a": "pw",
+      "b": "mw72",
+      "labelA": "PWK",
+      "labelB": "MW72",
+      "relation": "cross-lane",
+      "pair": "PWK↔MW72",
+      "citationTestable": false,
+      "citation": null,
+      "hapax": {
+        "all": {
+          "headwordsA": 151346,
+          "headwordsB": 51159,
+          "intersection": 35171,
+          "jaccard": 0.2102,
+          "rareHeadwordsA": 51742,
+          "rareHeadwordsB": 14804,
+          "rareIntersection": 62,
+          "rareJaccard": 0.0009,
+          "sharedHapax": 62,
+          "sharedHapaxShareOfIntersection": 0.0018,
+          "rareVsAllJaccard": 0.004
+        },
+        "citedShared": null
+      },
+      "pairCodes": [
+        "mw72",
+        "pw"
+      ]
+    },
+    {
+      "a": "pwkvn",
+      "b": "mw",
+      "labelA": "PWKVN",
+      "labelB": "MW",
+      "relation": "cross-lane",
+      "pair": "PWKVN↔MW",
+      "citationTestable": true,
+      "citation": {
+        "sharedSourcesAll": 203,
+        "sharedSources": 107,
+        "minCitationsPerSide": 5,
+        "truncationEvidenceAB": 9235,
+        "truncationEvidenceBA": 13602,
+        "sharedSourceCitationsA": 9712,
+        "sharedSourceCitationsB": 143472,
+        "truncationRateAB": 0.9509,
+        "truncationRateBA": 0.0948,
+        "meanDepthA": 2.258,
+        "meanDepthB": 0.448,
+        "asymmetry": 0.8561,
+        "moreSpecific": "pwkvn",
+        "sourcesAMoreSpecific": 96,
+        "sourcesBMoreSpecific": 6,
+        "topSources": [
+          {
+            "source": "mbh",
+            "name": "Mahabharata (mbhi/mbhii/... are book locators — fold-rule case)",
+            "citationsA": 825,
+            "citationsB": 28058,
+            "meanDepthA": 2.972,
+            "meanDepthB": 0.343,
+            "depthDelta": 2.629
+          },
+          {
+            "source": "rv",
+            "name": null,
+            "citationsA": 147,
+            "citationsB": 15918,
+            "meanDepthA": 2.898,
+            "meanDepthB": 1.137,
+            "depthDelta": 1.761
+          },
+          {
+            "source": "r",
+            "name": null,
+            "citationsA": 561,
+            "citationsB": 10815,
+            "meanDepthA": 2.989,
+            "meanDepthB": 0.413,
+            "depthDelta": 2.576
+          },
+          {
+            "source": "av",
+            "name": null,
+            "citationsA": 103,
+            "citationsB": 7238,
+            "meanDepthA": 2.369,
+            "meanDepthB": 0.854,
+            "depthDelta": 1.515
+          },
+          {
+            "source": "kathas",
+            "name": "Kathasaritsagara",
+            "citationsA": 144,
+            "citationsB": 6757,
+            "meanDepthA": 2,
+            "meanDepthB": 0.142,
+            "depthDelta": 1.858
+          },
+          {
+            "source": "hariv",
+            "name": "Harivamsa",
+            "citationsA": 119,
+            "citationsB": 6314,
+            "meanDepthA": 1.37,
+            "meanDepthB": 0.183,
+            "depthDelta": 1.187
+          },
+          {
+            "source": "susr",
+            "name": "Susruta-Samhita",
+            "citationsA": 101,
+            "citationsB": 6224,
+            "meanDepthA": 2.99,
+            "meanDepthB": 0.21,
+            "depthDelta": 2.78
+          },
+          {
+            "source": "rajat",
+            "name": "Rajatarangini",
+            "citationsA": 49,
+            "citationsB": 3410,
+            "meanDepthA": 2,
+            "meanDepthB": 0.319,
+            "depthDelta": 1.681
+          },
+          {
+            "source": "ts",
+            "name": null,
+            "citationsA": 158,
+            "citationsB": 3207,
+            "meanDepthA": 3.766,
+            "meanDepthB": 0.376,
+            "depthDelta": 3.39
+          },
+          {
+            "source": "pancat",
+            "name": "Pancatantra",
+            "citationsA": 35,
+            "citationsB": 3133,
+            "meanDepthA": 2.114,
+            "meanDepthB": 0.296,
+            "depthDelta": 1.819
+          },
+          {
+            "source": "vs",
+            "name": null,
+            "citationsA": 13,
+            "citationsB": 2998,
+            "meanDepthA": 1.846,
+            "meanDepthB": 0.449,
+            "depthDelta": 1.397
+          },
+          {
+            "source": "ragh",
+            "name": "Raghuvamsa",
+            "citationsA": 58,
+            "citationsB": 2655,
+            "meanDepthA": 2,
+            "meanDepthB": 0.54,
+            "depthDelta": 1.46
+          },
+          {
+            "source": "yajn",
+            "name": "Yajnavalkya-smrti",
+            "citationsA": 63,
+            "citationsB": 2249,
+            "meanDepthA": 1.952,
+            "meanDepthB": 0.614,
+            "depthDelta": 1.338
+          },
+          {
+            "source": "vp",
+            "name": null,
+            "citationsA": 37,
+            "citationsB": 2167,
+            "meanDepthA": 2.757,
+            "meanDepthB": 0.244,
+            "depthDelta": 2.513
+          },
+          {
+            "source": "sis",
+            "name": null,
+            "citationsA": 464,
+            "citationsB": 1718,
+            "meanDepthA": 1.996,
+            "meanDepthB": 0.659,
+            "depthDelta": 1.337
+          },
+          {
+            "source": "sah",
+            "name": null,
+            "citationsA": 36,
+            "citationsB": 1790,
+            "meanDepthA": 1.694,
+            "meanDepthB": 0.22,
+            "depthDelta": 1.475
+          },
+          {
+            "source": "dhatup",
+            "name": "Dhatupatha (all dhatup<roman> members are chapter locators — fold-rule case)",
+            "citationsA": 13,
+            "citationsB": 1777,
+            "meanDepthA": 2,
+            "meanDepthB": 1.755,
+            "depthDelta": 0.245
+          },
+          {
+            "source": "kas",
+            "name": null,
+            "citationsA": 41,
+            "citationsB": 1736,
+            "meanDepthA": 0,
+            "meanDepthB": 0,
+            "depthDelta": 0
+          },
+          {
+            "source": "divy",
+            "name": "Divyavadana",
+            "citationsA": 698,
+            "citationsB": 1066,
+            "meanDepthA": 2.007,
+            "meanDepthB": 0.22,
+            "depthDelta": 1.788
+          },
+          {
+            "source": "pat",
+            "name": null,
+            "citationsA": 15,
+            "citationsB": 1651,
+            "meanDepthA": 0,
+            "meanDepthB": 0.009,
+            "depthDelta": -0.009
+          },
+          {
+            "source": "hit",
+            "name": null,
+            "citationsA": 10,
+            "citationsB": 1512,
+            "meanDepthA": 2,
+            "meanDepthB": 0.203,
+            "depthDelta": 1.797
+          },
+          {
+            "source": "sak",
+            "name": null,
+            "citationsA": 22,
+            "citationsB": 1498,
+            "meanDepthA": 1.591,
+            "meanDepthB": 0.413,
+            "depthDelta": 1.178
+          },
+          {
+            "source": "tbr",
+            "name": null,
+            "citationsA": 47,
+            "citationsB": 1413,
+            "meanDepthA": 3.979,
+            "meanDepthB": 0.465,
+            "depthDelta": 3.514
+          },
+          {
+            "source": "kaus",
+            "name": "Kausika-sutra (AV)",
+            "citationsA": 212,
+            "citationsB": 1139,
+            "meanDepthA": 1.873,
+            "meanDepthB": 0.084,
+            "depthDelta": 1.788
+          },
+          {
+            "source": "kad",
+            "name": null,
+            "citationsA": 50,
+            "citationsB": 1211,
+            "meanDepthA": 3.22,
+            "meanDepthB": 0.158,
+            "depthDelta": 3.062
+          }
+        ]
+      },
+      "hapax": {
+        "all": {
+          "headwordsA": 14995,
+          "headwordsB": 194084,
+          "intersection": 9758,
+          "jaccard": 0.049,
+          "rareHeadwordsA": 4971,
+          "rareHeadwordsB": 94015,
+          "rareIntersection": 0,
+          "rareJaccard": 0,
+          "sharedHapax": 0,
+          "sharedHapaxShareOfIntersection": 0,
+          "rareVsAllJaccard": 0
+        },
+        "citedShared": {
+          "headwordsA": 8577,
+          "headwordsB": 80213,
+          "intersection": 4099,
+          "jaccard": 0.0484,
+          "rareHeadwordsA": 2498,
+          "rareHeadwordsB": 31407,
+          "rareIntersection": 0,
+          "rareJaccard": 0,
+          "sharedHapax": 0,
+          "sharedHapaxShareOfIntersection": 0,
+          "rareVsAllJaccard": 0
+        }
+      },
+      "pairCodes": [
+        "mw",
+        "pwkvn"
+      ]
+    },
+    {
+      "a": "pwkvn",
+      "b": "mw72",
+      "labelA": "PWKVN",
+      "labelB": "MW72",
+      "relation": "cross-lane",
+      "pair": "PWKVN↔MW72",
+      "citationTestable": false,
+      "citation": null,
+      "hapax": {
+        "all": {
+          "headwordsA": 14995,
+          "headwordsB": 51159,
+          "intersection": 3036,
+          "jaccard": 0.0481,
+          "rareHeadwordsA": 4971,
+          "rareHeadwordsB": 14804,
+          "rareIntersection": 0,
+          "rareJaccard": 0,
+          "sharedHapax": 0,
+          "sharedHapaxShareOfIntersection": 0,
+          "rareVsAllJaccard": 0
+        },
+        "citedShared": null
+      },
+      "pairCodes": [
+        "mw72",
+        "pwkvn"
+      ]
+    },
+    {
+      "a": "mw",
+      "b": "mw72",
+      "labelA": "MW",
+      "labelB": "MW72",
+      "relation": "within-mw",
+      "pair": "MW↔MW72",
+      "citationTestable": false,
+      "citation": null,
+      "hapax": {
+        "all": {
+          "headwordsA": 194084,
+          "headwordsB": 51159,
+          "intersection": 45856,
+          "jaccard": 0.23,
+          "rareHeadwordsA": 94015,
+          "rareHeadwordsB": 14804,
+          "rareIntersection": 10050,
+          "rareJaccard": 0.1018,
+          "sharedHapax": 10050,
+          "sharedHapaxShareOfIntersection": 0.2192,
+          "rareVsAllJaccard": 0.443
+        },
+        "citedShared": null
+      },
+      "pairCodes": [
+        "mw",
+        "mw72"
+      ]
+    }
+  ],
+  "findings": {
+    "citationTestablePairs": 6,
+    "crossLanePairsTested": 3,
+    "crossLanePairsWherePetersburgIsDeeper": 3,
+    "maxCrossLaneAsymmetry": 0.8561,
+    "mwBareSiglumShare": 0.7887,
+    "pwgBareSiglumShare": 0.1643,
+    "maxCrossLaneSharedHapax": 30182,
+    "maxWithinLaneSharedHapax": 10050
+  },
+  "interpretation": [
+    "Apparatus style splits the lanes before any pair is formed: MW leaves 78.9% of its citations at a bare siglum (mean locator depth 0.491), against 16.4% for PWG (mean depth 1.883). Truncation is not a rare event in MW — it is MW's default.",
+    "On the 172 sources PWG and MW both cite at least 5 times, citation_truncation_evidence(PWG→MW) = 277 279 of 291 553 PWG citations (95.1%), against 25 380 of 154 865 the other way (16.4%) — asymmetry 0.7871. The direction is the one the descent hypothesis needs; the magnitude is a house-style gap as much as a copying signal.",
+    "The within-lane pairs are the control, and they are not zero: |asymmetry| runs 0.1413–0.3528 inside the Petersburg lane (where descent is not in question and house style is shared) against 0.7468–0.8561 across the lanes. The separation is the finding; the non-zero control is the reminder that this measure reads apparatus style, and even sibling Petersburg digitisations differ in it. Cross-lane pairs where the Petersburg side is the deeper one: 3 of 3.",
+    "Hapax overlap adds the content-side half: PWG and MW share 94 780 headwords (Jaccard 0.4615), of which 2 030 (2.1% of the intersection) are recorded by these two dictionaries and by no other in-scope dictionary. Common stock is shared by everyone and evidences nothing; this rare residue is the part that a shared source would explain.",
+    "The shared-hapax counts are descriptive, not size-corrected: the largest cross-lane count is 30 182 against 10 050 for the largest within-lane pair, but headword-set sizes differ by a factor of five across the packet and nothing here normalises for that — read the counts beside the per-dictionary headword totals. With only 5 dictionaries in the rarity base, \"recorded by no other in-scope dictionary\" is a floor on rarity, not corpus-wide uniqueness; the 44-dictionary base would shrink every count here."
+  ],
+  "limitations": [
+    "Locator depth measures FORMATTING specificity, not scholarship. MW's house style is compressed by editorial policy (a one-volume English dictionary), so a depth gap is consistent with descent-plus-truncation AND with independent house style. The measure bounds the direction of information loss; it does not by itself prove copying.",
+    "The canonical-siglum fold is a reviewed but incomplete alias table: unaliased sigla fall back to their bare fold key, so a source the two dictionaries abbreviate incompatibly is counted as two sources and simply never enters the shared set. That biases the shared-source count DOWN, not the asymmetry up.",
+    "Sources are required to carry at least 5 citations on each side, so the per-source mean depth is not a one-citation artifact; the excluded thin sources are reported as sharedSourcesAll − sharedSources.",
+    "The elliptical bare-numeral citations of the Petersburg lane (`<ls>112,24</ls>`, continuing the previous citation's siglum) are excluded, because they have no siglum to share. They are a real part of PWG's apparatus, so PWG's usable-citation count here is smaller than its raw <ls> count.",
+    "Hapax rarity is computed over the five in-scope dictionaries only. A lemma \"unique to PWG and MW\" here may well appear in AP, SKD or VCP; the corpus-wide rarity base (OBS-R's 44-dictionary collapse) is the natural upgrade and would only shrink these counts.",
+    "Headword identity is the normalised <k1> string; it does not resolve homonym merges or orthographic variants beyond slp1_norm, so both intersection and union are slightly conservative.",
+    "MW72 contributes headwords only — it carries no <ls> tags at all, so nothing in the citation half can be said about it."
+  ],
+  "boundary": [
+    "Derived from committed csl-orig dictionary text and the atlas's own reviewed alias tables; no corpus read, no external maker work, no human decision promoted. csl-orig is never written."
+  ],
+  "generatedAt": "2026-07-31T03:23:31.138Z"
+}
