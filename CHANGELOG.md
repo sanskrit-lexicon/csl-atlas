@@ -4,6 +4,11 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added
+
+- **ls abbreviation frequency pipeline (H1826, csl-atlas#222):** \scripts/obs/ls_abbreviation_frequency.py\ emits \data/obs/ls_abbreviation_frequency.json\ as \{dict: {token: count}}\ with provenance block; per-dict token sums match \citation_registers.json\ \ls\ totals. npm scripts \uild-ls-abbreviation-frequency\ / \	est-ls-abbreviation-frequency\; node invariant test \	est/ls-abbreviation-frequency.test.mjs\.
+
+
 ## [0.16.0] - 2026-07-31
 
 ### Added — citation truncation & hapax overlap (PET-MW-CITE, H1827)
