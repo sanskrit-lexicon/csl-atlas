@@ -117,7 +117,9 @@
     "install-review-tools": "python -m pip install --upgrade -r requirements-review.txt",
     "build-review-sheets": "node scripts/build-review-sheets.mjs",
     "test-review-decisions": "python -m unittest scripts.test_validate_review_decisions",
-    "validate-review-decisions": "python scripts/validate_review_decisions.py"
+    "validate-review-decisions": "python scripts/validate_review_decisions.py",
+    "build-ls-abbreviation-frequency": "python scripts/obs/ls_abbreviation_frequency.py",
+    "test-ls-abbreviation-frequency": "python -m unittest scripts.test_ls_abbreviation_frequency"
   },
   "engines": {
     "node": "20.x",
