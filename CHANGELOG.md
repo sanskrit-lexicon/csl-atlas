@@ -4,6 +4,7 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.16.1] - 2026-08-04
 ### Fixed
 
 - **Correction-loci packet resynced with the csl-corrections sibling feed (H2036, csl-atlas#331):** `validate-correction-feed` had gone red (ap90 154!=157, mw72 24!=78, `pwg` missing from the packet) after the sibling feed regenerated 01-08-2026 to 61,430 rows. Rebuilt via `npm run build-correction-feed` -- no code change, packet counts now match the sibling feed exactly for every dict.
