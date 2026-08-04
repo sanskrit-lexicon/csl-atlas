@@ -4,6 +4,25 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added
+
+- **Hostile referee of all nine July 2026 hypothesis promotions — zero demotions, one
+  structural row repair (H1866, Fable 5 `claude-fable-5`, 05-08-2026).** Every figure
+  asserted by the July-promoted rows (THREE-AXIS-INDEP, CANON-CORE, CITE-4AXIS,
+  GHOST-STOCK, HERITAGE-WIT, HEAP-SAT, FREQ-STRAT, ORTHO-CLOCK, L0-GQD) in
+  [`docs/HYPOTHESIS_INDEX.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_INDEX.md)
+  was re-read from its committed JSON artifact under a default-REFUTED posture — 102
+  figures checked, all match; a staleness sweep confirmed no promotion rests on an input
+  regenerated after its promotion date (the 17-07 MW `<ls>` +28.6% fix touched only
+  `data/obs/citation_registers.json`). Findings: the CANON-CORE index row had 7 cells
+  against 8 columns (its Evidence cell was missing — restored), and it now carries the
+  MW-lane caveat its own artifact already recorded (MW resolves to 5 texts in the
+  ls-graph, so "none cited by all 11" is partly mechanical); the CANON-CORE-trusts /
+  CITE-4AXIS-rejects split over the same ls-graph MW lane is registered as a
+  cross-promotion methods contradiction in SanskritLexicography/CONTRADICTIONS.md. Full
+  verdicts:
+  [`docs/HYPOTHESIS_PROMOTIONS_JULY_2026_REFEREE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_PROMOTIONS_JULY_2026_REFEREE.md).
+
 ## [0.16.2] - 2026-08-04
 ### Changed
 
