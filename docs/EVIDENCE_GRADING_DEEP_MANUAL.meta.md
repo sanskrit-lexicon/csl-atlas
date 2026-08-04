@@ -27,7 +27,7 @@ of the org deep-manual gap census
 
 ## Provenance
 
-- Handoff: [H1408](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1408-Fable_csl-atlas_deep-manual-evidence-grading-methodology_20.07.26.md)
+- Handoff: [H1408](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1408-Fable_csl-atlas_deep-manual-evidence-grading-methodology_20.07.26.md)
   (queued 20-07-2026, executed 21-07-2026).
 - Authored by Fable 5 (`claude-fable-5`) against repo state `6956469` (21-07-2026),
   in a worktree off `origin/main`, via a 6-agent parallel subsystem-mining pass

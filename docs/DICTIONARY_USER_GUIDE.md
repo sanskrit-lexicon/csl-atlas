@@ -171,7 +171,7 @@ Each entry has a stable record ID and a source link. When you cite a word in you
 - [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — what the certainty labels mean.
 - [`docs/READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) - what a
   lookup result means and what it does not prove.
-- [`docs/USE_CASE_PAGE_ROADMAP.md`](USE_CASE_PAGE_ROADMAP.md) - how reader and
+- [`docs/USE_CASE_PAGE_ROADMAP.md`](docs/archive/USE_CASE_PAGE_ROADMAP.md) - how reader and
   analysis pages are sequenced.
 - [`docs/CHART_TRUST_TEMPLATE.md`](CHART_TRUST_TEMPLATE.md) - the required trust
   block for public pages and charts.

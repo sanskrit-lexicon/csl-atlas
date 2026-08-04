@@ -29,8 +29,8 @@ re-sampling, or extending the xref shared-core review. Not a public-site documen
 
 ## Provenance
 
-- Handoffs: [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)
-  (created), [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md)
+- Handoffs: [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)
+  (created), [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md)
   (independence correction, Patel grounding, Russian sheet)
 - Model: Opus 5 (1M context) (`claude-opus-5[1m]`)
 - Trigger: reviewer feedback in `Uprava/review/40edges.md` — eight numbered objections to
@@ -74,8 +74,8 @@ re-sampling, or extending the xref shared-core review. Not a public-site documen
 
 | Date | Change | Handoff |
 |---|---|---|
-| 25-07-2026 | Created alongside the sheet rebuild (Cologne links, entry anatomy, label definitions, sampling disclosure). | [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md) |
-| 26-07-2026 | Added the Russian companion `.ru.md` + a docs-vs-data drift guard (5 tests). The guard immediately caught a real error: the candidate pool was quoted everywhere as **642** but is **641** — a `wc -l` counting the CSV header as data. The packet now computes it instead of carrying a literal. Also fixed a leftover "two independent editors recorded the same by-form link" line that had survived the retraction. | [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md) |
-| 26-07-2026 | **Retracted the "two independent witnesses" justification** after MG's ruling that MW depends on PW/PWG; added the measured non-independence (21.8% vs 0.007%, ≈2953×, p&nbsp;<&nbsp;0.005), grounded `normalization-risk` in the four documented MW↔PWG convention divergences from Patel 2016 (incl. that the 642-edge intersection is an undercount), and recorded that the sheet is now fully Russian. | [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md) |
+| 25-07-2026 | Created alongside the sheet rebuild (Cologne links, entry anatomy, label definitions, sampling disclosure). | [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md) |
+| 26-07-2026 | Added the Russian companion `.ru.md` + a docs-vs-data drift guard (5 tests). The guard immediately caught a real error: the candidate pool was quoted everywhere as **642** but is **641** — a `wc -l` counting the CSV header as data. The packet now computes it instead of carrying a literal. Also fixed a leftover "two independent editors recorded the same by-form link" line that had survived the retraction. | [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md) |
+| 26-07-2026 | **Retracted the "two independent witnesses" justification** after MG's ruling that MW depends on PW/PWG; added the measured non-independence (21.8% vs 0.007%, ≈2953×, p&nbsp;<&nbsp;0.005), grounded `normalization-risk` in the four documented MW↔PWG convention divergences from Patel 2016 (incl. that the 642-edge intersection is an undercount), and recorded that the sheet is now fully Russian. | [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md) |
 
 _Dr. Mārcis Gasūns_

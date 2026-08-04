@@ -372,7 +372,7 @@ Sections:
 ## 9. Canonical dictionary inventory (per Patel 2016 + extensions)
 
 Source: Patel, D. (2016). *Normalizing headwords of Cologne digital dictionaries*.
-Saved at: [csl-corrections/Normalizing_headwords_of_Cologne_digital.pdf](https://github.com/sanskrit-lexicon/csl-corrections/blob/master/Normalizing_headwords_of_Cologne_digital.pdf)
+Saved at: [csl-corrections/Normalizing_headwords_of_Cologne_digital.pdf](https://github.com/sanskrit-lexicon/csl-corrections/blob/main/Normalizing_headwords_of_Cologne_digital.pdf)
 
 Full CSV at [`data/dictionary_inventory.csv`](../data/dictionary_inventory.csv).
 

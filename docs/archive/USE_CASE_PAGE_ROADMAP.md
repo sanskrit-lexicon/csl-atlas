@@ -49,12 +49,12 @@ targets before adding new analysis-method prose.
 
 | Order | Page | Primary use cases | Audience | Purpose | Status |
 |---|---|---|---|---|---|
-| 1 | [`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md) and `/dictionary-chooser` | UC-RD-02 | public readers | Answer which dictionary to start with and why; MW is the default public route. | active first page; public top-level page |
-| 1a | [`DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md) | UC-RD-02, UC-RD-07 | public readers | Explain the chooser in broader reader-guide context. | active companion |
-| 2 | [`READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) | UC-RD-01, UC-RD-03, UC-RD-04, UC-RD-05 | public readers | Explain what a lookup result means, including no-result and ambiguous-result cases. | active second page |
-| 3 | [`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | proof doc active; four public queue pages carry proof/trust blocks |
-| 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md), and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | edge and family labels done |
-| 5 | [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md) plus the microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Start with the easiest parsed structure: headwords vs nested subentries. | active first microstructure page |
+| 1 | [`UC_RD_02_DICTIONARY_CHOOSER.md`](docs/UC_RD_02_DICTIONARY_CHOOSER.md) and `/dictionary-chooser` | UC-RD-02 | public readers | Answer which dictionary to start with and why; MW is the default public route. | active first page; public top-level page |
+| 1a | [`DICTIONARY_USER_GUIDE.md`](docs/DICTIONARY_USER_GUIDE.md) | UC-RD-02, UC-RD-07 | public readers | Explain the chooser in broader reader-guide context. | active companion |
+| 2 | [`READER_LOOKUP_EXPLAINER.md`](docs/READER_LOOKUP_EXPLAINER.md) | UC-RD-01, UC-RD-03, UC-RD-04, UC-RD-05 | public readers | Explain what a lookup result means, including no-result and ambiguous-result cases. | active second page |
+| 3 | [`REVIEW_QUEUE_PROOFS.md`](docs/REVIEW_QUEUE_PROOFS.md) | UC-CD-04, UC-CD-05, UC-LX-05, UC-RV-02, UC-RV-03 | reviewers, scholars | Explain what each queue proves before explaining how to review it. | proof doc active; four public queue pages carry proof/trust blocks |
+| 4 | [`H6_STRUCTURAL_REGISTER_SCATTER.md`](docs/H6_STRUCTURAL_REGISTER_SCATTER.md), [`H6_STRUCTURAL_REGISTER_REVIEW.md`](docs/H6_STRUCTURAL_REGISTER_REVIEW.md), and `/tools/structural-register` | UC-LX-03, UC-DEV-04 | scholars | Turn the supported H6 claim into a traceable chart/page. | edge and family labels done |
+| 5 | [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](docs/MICROSTRUCTURE_HEADWORD_SUBENTRY.md) plus the microstructure doc family | UC-LX-01, UC-LX-02, UC-LX-03 | scholars | Start with the easiest parsed structure: headwords vs nested subentries. | active first microstructure page |
 | 6 | H4 semantic-field package and `/tools/semantic-fields` | UC-CD-06, UC-LX-04 | scholars, students | Use AMAR-native fields as the active dictionary-first semantic review package. | generated review sample packet active |
 | 7 | Xref hub review package | UC-LX-03, UC-LX-05 | scholars, reviewers | Label and source-check cross-reference hub families before paper use. | source-check packet active |
 | 8 | H5 anomaly scope package | UC-CD-05, UC-RV-03 | makers, reviewers | Turn forensic anomaly signals into a proof-first review queue. | maker-QA packet active |
@@ -90,7 +90,7 @@ targets before adding new analysis-method prose.
 ## Public Page Contract
 
 Every public atlas page or tool must include the short form of
-[`CHART_TRUST_TEMPLATE.md`](CHART_TRUST_TEMPLATE.md):
+[`CHART_TRUST_TEMPLATE.md`](docs/CHART_TRUST_TEMPLATE.md):
 
 - Evidence
 - Limitations

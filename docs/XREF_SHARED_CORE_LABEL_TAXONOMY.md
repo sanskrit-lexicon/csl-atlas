@@ -14,7 +14,7 @@ and how the 40 edges on the sheet were chosen.
 
 Written because the sheet asked a reviewer to reject an edge into one of three named
 buckets while defining none of them, and disclosed no sampling method
-([H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)).
+([H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)).
 The canonical machine-readable copy of everything below is
 `packetLabelVocabulary` + `selectionPolicy` in
 [`data/lexico/xref_source_check_packet.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_source_check_packet.json),

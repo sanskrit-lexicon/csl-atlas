@@ -33,7 +33,7 @@ for `Spr. (II)` only.
 The roadmap's own validation instruction: *"`Spr. 2790` = `tān havyakavyayor viprān anarhān manur
 abravīt` (cited under `brū`, PWG); verify presence + reading at boesp2 verse 2790."*
 
-Reading the actual `brū` entry ([`pwg.txt` L=53686](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt)),
+Reading the actual `brū` entry ([`pwg.txt` L=53686](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt)),
 the two citations are **separate, adjacent examples**, not one:
 
 ```
@@ -147,7 +147,7 @@ digitization typos).
 ## Provenance
 
 Extracted 11-07-2026 by Sonnet 5 (`claude-sonnet-5`) from
-[`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt) +
+[`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt) +
 [`literarysource/pwg/lsextract_pwg_06.txt`](https://github.com/sanskrit-lexicon/literarysource/blob/main/pwg/lsextract_pwg_06.txt) +
 [`sanskrit-lexicon-scans/boesp2`](https://github.com/sanskrit-lexicon-scans/boesp2) `web1/json/*`.
 Minted under [H602](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H602-Fable_csl-atlas_citation-verification-roadmap_11.07.26.md),
