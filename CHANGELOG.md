@@ -4,6 +4,10 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Fixed
+
+- **Correction-loci packet resynced with the csl-corrections sibling feed (H2036, csl-atlas#331):** `validate-correction-feed` had gone red (ap90 154!=157, mw72 24!=78, `pwg` missing from the packet) after the sibling feed regenerated 01-08-2026 to 61,430 rows. Rebuilt via `npm run build-correction-feed` -- no code change, packet counts now match the sibling feed exactly for every dict.
+
 ### Added
 
 - **ls abbreviation frequency pipeline (H1826, csl-atlas#222):** \scripts/obs/ls_abbreviation_frequency.py\ emits \data/obs/ls_abbreviation_frequency.json\ as \{dict: {token: count}}\ with provenance block; per-dict token sums match \citation_registers.json\ \ls\ totals. npm scripts \uild-ls-abbreviation-frequency\ / \	est-ls-abbreviation-frequency\; node invariant test \	est/ls-abbreviation-frequency.test.mjs\.
