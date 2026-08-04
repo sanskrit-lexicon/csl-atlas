@@ -12,13 +12,40 @@
   "positionBins": 40,
   "heatmapMinLoci": 30,
   "totals": {
-    "records": 39555,
-    "human": 9502,
+    "records": 61430,
+    "human": 31377,
     "bulk": 30053,
-    "dicts": 15,
+    "dicts": 16,
     "pcResolved": 39531
   },
   "perDict": [
+    {
+      "dict": "mw",
+      "records": 23004,
+      "human": 23004,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 286525,
+      "per1k": 80.29,
+      "per1kHuman": 80.29,
+      "pcResolved": 1187,
+      "pcResolvedShare": 0.0516,
+      "maxPage": 1332,
+      "distinctPages": 597,
+      "pageCoverage": 0.4482,
+      "firstDate": "2024-06-23",
+      "lastDate": "2026-06-27",
+      "directives": {
+        "new": 23004
+      },
+      "topTagContexts": {
+        "text": 22608,
+        "s1": 159,
+        "s": 135,
+        "k1": 28,
+        "k2": 26
+      }
+    },
     {
       "dict": "bor",
       "records": 21990,
@@ -121,55 +148,55 @@
       }
     },
     {
-      "dict": "mw",
-      "records": 1187,
-      "human": 1187,
-      "bulk": 0,
-      "humanShare": 1,
-      "entries": 286525,
-      "per1k": 4.14,
-      "per1kHuman": 4.14,
-      "pcResolved": 1187,
-      "pcResolvedShare": 1,
-      "maxPage": 1332,
-      "distinctPages": 597,
-      "pageCoverage": 0.4482,
-      "firstDate": "2024-06-23",
-      "lastDate": "2026-06-27",
-      "directives": {
-        "new": 1187
-      },
-      "topTagContexts": {
-        "text": 795,
-        "s1": 159,
-        "s": 135,
-        "k1": 28,
-        "k2": 26
-      }
-    },
-    {
       "dict": "ap90",
-      "records": 154,
-      "human": 154,
+      "records": 157,
+      "human": 157,
       "bulk": 0,
       "humanShare": 1,
       "entries": 34882,
-      "per1k": 4.41,
-      "per1kHuman": 4.41,
+      "per1k": 4.5,
+      "per1kHuman": 4.5,
       "pcResolved": 139,
-      "pcResolvedShare": 0.9026,
+      "pcResolvedShare": 0.8854,
       "maxPage": 1196,
       "distinctPages": 94,
       "pageCoverage": 0.0786,
       "firstDate": "2025-01-14",
       "lastDate": "2026-07-12",
       "directives": {
-        "new": 154
+        "new": 157
       },
       "topTagContexts": {
-        "text": 151,
+        "text": 154,
         "k1": 2,
         "ls": 1
+      }
+    },
+    {
+      "dict": "mw72",
+      "records": 78,
+      "human": 78,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": 55390,
+      "per1k": 1.41,
+      "per1kHuman": 1.41,
+      "pcResolved": 24,
+      "pcResolvedShare": 0.3077,
+      "maxPage": 1180,
+      "distinctPages": 22,
+      "pageCoverage": 0.0186,
+      "firstDate": "2026-05-29",
+      "lastDate": "2026-05-29",
+      "directives": {
+        "ins": 54,
+        "new": 24
+      },
+      "topTagContexts": {
+        "text": 36,
+        "LEND": 18,
+        "nsi": 12,
+        "lang": 12
       }
     },
     {
@@ -217,30 +244,6 @@
       },
       "topTagContexts": {
         "lang": 39
-      }
-    },
-    {
-      "dict": "mw72",
-      "records": 24,
-      "human": 24,
-      "bulk": 0,
-      "humanShare": 1,
-      "entries": 55390,
-      "per1k": 0.43,
-      "per1kHuman": 0.43,
-      "pcResolved": 24,
-      "pcResolvedShare": 1,
-      "maxPage": 1180,
-      "distinctPages": 22,
-      "pageCoverage": 0.0186,
-      "firstDate": "2026-05-29",
-      "lastDate": "2026-05-29",
-      "directives": {
-        "new": 24
-      },
-      "topTagContexts": {
-        "nsi": 12,
-        "lang": 12
       }
     },
     {
@@ -386,14 +389,37 @@
       "topTagContexts": {
         "is": 1
       }
+    },
+    {
+      "dict": "pwg",
+      "records": 1,
+      "human": 1,
+      "bulk": 0,
+      "humanShare": 1,
+      "entries": null,
+      "per1k": null,
+      "per1kHuman": null,
+      "pcResolved": 0,
+      "pcResolvedShare": 0,
+      "maxPage": null,
+      "distinctPages": 0,
+      "pageCoverage": null,
+      "firstDate": null,
+      "lastDate": null,
+      "directives": {
+        "new": 1
+      },
+      "topTagContexts": {
+        "div": 1
+      }
     }
   ],
   "heatmapDicts": [
+    "mw",
     "bor",
     "lrv",
     "shs",
     "ap",
-    "mw",
     "ap90",
     "gra",
     "bop"
@@ -2351,8 +2377,8 @@
     }
   ],
   "columnDicts": [
-    "shs",
     "mw",
+    "shs",
     "ap90",
     "bop"
   ],
@@ -4362,6 +4388,96 @@
   ],
   "topPages": [
     {
+      "dict": "mw",
+      "page": 6,
+      "count": 29,
+      "human": 29,
+      "bulk": 0,
+      "sampleK1": "agrima",
+      "sampleLine": 4806
+    },
+    {
+      "dict": "mw",
+      "page": 164,
+      "count": 12,
+      "human": 12,
+      "bulk": 0,
+      "sampleK1": "iLA",
+      "sampleLine": 102107
+    },
+    {
+      "dict": "mw",
+      "page": 257,
+      "count": 11,
+      "human": 11,
+      "bulk": 0,
+      "sampleK1": "kartf",
+      "sampleLine": 158089
+    },
+    {
+      "dict": "mw",
+      "page": 951,
+      "count": 11,
+      "human": 11,
+      "bulk": 0,
+      "sampleK1": "vidrumacCavi",
+      "sampleLine": 642448
+    },
+    {
+      "dict": "mw",
+      "page": 9,
+      "count": 10,
+      "human": 10,
+      "bulk": 0,
+      "sampleK1": "acyutavAsa",
+      "sampleLine": 6982
+    },
+    {
+      "dict": "mw",
+      "page": 19,
+      "count": 10,
+      "human": 10,
+      "bulk": 0,
+      "sampleK1": "adya",
+      "sampleLine": 13667
+    },
+    {
+      "dict": "mw",
+      "page": 1309,
+      "count": 10,
+      "human": 10,
+      "bulk": 0,
+      "sampleK1": "agotA",
+      "sampleLine": 3092
+    },
+    {
+      "dict": "mw",
+      "page": 163,
+      "count": 9,
+      "human": 9,
+      "bulk": 0,
+      "sampleK1": "ikzu",
+      "sampleLine": 100970
+    },
+    {
+      "dict": "mw",
+      "page": 632,
+      "count": 9,
+      "human": 9,
+      "bulk": 0,
+      "sampleK1": "put",
+      "sampleLine": 422749
+    },
+    {
+      "dict": "mw",
+      "page": 864,
+      "count": 9,
+      "human": 9,
+      "bulk": 0,
+      "sampleK1": "ratnakarRikA",
+      "sampleLine": 581759
+    },
+    {
       "dict": "bor",
       "page": 269,
       "count": 48,
@@ -4722,96 +4838,6 @@
       "sampleLine": 67184
     },
     {
-      "dict": "mw",
-      "page": 6,
-      "count": 29,
-      "human": 29,
-      "bulk": 0,
-      "sampleK1": "agrima",
-      "sampleLine": 4806
-    },
-    {
-      "dict": "mw",
-      "page": 164,
-      "count": 12,
-      "human": 12,
-      "bulk": 0,
-      "sampleK1": "iLA",
-      "sampleLine": 102107
-    },
-    {
-      "dict": "mw",
-      "page": 257,
-      "count": 11,
-      "human": 11,
-      "bulk": 0,
-      "sampleK1": "kartf",
-      "sampleLine": 158089
-    },
-    {
-      "dict": "mw",
-      "page": 951,
-      "count": 11,
-      "human": 11,
-      "bulk": 0,
-      "sampleK1": "vidrumacCavi",
-      "sampleLine": 642448
-    },
-    {
-      "dict": "mw",
-      "page": 9,
-      "count": 10,
-      "human": 10,
-      "bulk": 0,
-      "sampleK1": "acyutavAsa",
-      "sampleLine": 6982
-    },
-    {
-      "dict": "mw",
-      "page": 19,
-      "count": 10,
-      "human": 10,
-      "bulk": 0,
-      "sampleK1": "adya",
-      "sampleLine": 13667
-    },
-    {
-      "dict": "mw",
-      "page": 1309,
-      "count": 10,
-      "human": 10,
-      "bulk": 0,
-      "sampleK1": "agotA",
-      "sampleLine": 3092
-    },
-    {
-      "dict": "mw",
-      "page": 163,
-      "count": 9,
-      "human": 9,
-      "bulk": 0,
-      "sampleK1": "ikzu",
-      "sampleLine": 100970
-    },
-    {
-      "dict": "mw",
-      "page": 632,
-      "count": 9,
-      "human": 9,
-      "bulk": 0,
-      "sampleK1": "put",
-      "sampleLine": 422749
-    },
-    {
-      "dict": "mw",
-      "page": 864,
-      "count": 9,
-      "human": 9,
-      "bulk": 0,
-      "sampleK1": "ratnakarRikA",
-      "sampleLine": 581759
-    },
-    {
       "dict": "ap90",
       "page": 554,
       "count": 8,
@@ -4900,6 +4926,96 @@
       "bulk": 0,
       "sampleK1": "anAhUta",
       "sampleLine": 14373
+    },
+    {
+      "dict": "mw72",
+      "page": 740,
+      "count": 3,
+      "human": 3,
+      "bulk": 0,
+      "sampleK1": "man",
+      "sampleLine": 281141
+    },
+    {
+      "dict": "mw72",
+      "page": 59,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "abala",
+      "sampleLine": 26847
+    },
+    {
+      "dict": "mw72",
+      "page": 333,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "Cid",
+      "sampleLine": 134423
+    },
+    {
+      "dict": "mw72",
+      "page": 443,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "dvi",
+      "sampleLine": 172050
+    },
+    {
+      "dict": "mw72",
+      "page": 485,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "nij",
+      "sampleLine": 186394
+    },
+    {
+      "dict": "mw72",
+      "page": 558,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "paS",
+      "sampleLine": 215080
+    },
+    {
+      "dict": "mw72",
+      "page": 560,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "pA",
+      "sampleLine": 215717
+    },
+    {
+      "dict": "mw72",
+      "page": 583,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "purA",
+      "sampleLine": 223796
+    },
+    {
+      "dict": "mw72",
+      "page": 668,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "PatihaSAha",
+      "sampleLine": 257672
+    },
+    {
+      "dict": "mw72",
+      "page": 703,
+      "count": 1,
+      "human": 1,
+      "bulk": 0,
+      "sampleK1": "BA",
+      "sampleLine": 269212
     },
     {
       "dict": "gra",
@@ -5080,96 +5196,6 @@
       "bulk": 0,
       "sampleK1": "iDma",
       "sampleLine": 6219
-    },
-    {
-      "dict": "mw72",
-      "page": 740,
-      "count": 3,
-      "human": 3,
-      "bulk": 0,
-      "sampleK1": "man",
-      "sampleLine": 281141
-    },
-    {
-      "dict": "mw72",
-      "page": 59,
-      "count": 1,
-      "human": 1,
-      "bulk": 0,
-      "sampleK1": "abala",
-      "sampleLine": 26847
-    },
-    {
-      "dict": "mw72",
-      "page": 333,
-      "count": 1,
-      "human": 1,
-      "bulk": 0,
-      "sampleK1": "Cid",
-      "sampleLine": 134423
-    },
-    {
-      "dict": "mw72",
-      "page": 443,
-      "count": 1,
-      "human": 1,
-      "bulk": 0,
-      "sampleK1": "dvi",
-      "sampleLine": 172050
-    },
-    {
-      "dict": "mw72",
-      "page": 485,
-      "count": 1,
-      "human": 1,
-      "bulk": 0,
-      "sampleK1": "nij",
-      "sampleLine": 186394
-    },
-    {
-      "dict": "mw72",
-      "page": 558,
-      "count": 1,
-      "human": 1,
-      "bulk": 0,
-      "sampleK1": "paS",
-      "sampleLine": 215080
-    },
-    {
-      "dict": "mw72",
-      "page": 560,
-      "count": 1,
-      "human": 1,
-      "bulk": 0,
-      "sampleK1": "pA",
-      "sampleLine": 215717
-    },
-    {
-      "dict": "mw72",
-      "page": 583,
-      "count": 1,
-      "human": 1,
-      "bulk": 0,
-      "sampleK1": "purA",
-      "sampleLine": 223796
-    },
-    {
-      "dict": "mw72",
-      "page": 668,
-      "count": 1,
-      "human": 1,
-      "bulk": 0,
-      "sampleK1": "PatihaSAha",
-      "sampleLine": 257672
-    },
-    {
-      "dict": "mw72",
-      "page": 703,
-      "count": 1,
-      "human": 1,
-      "bulk": 0,
-      "sampleK1": "BA",
-      "sampleLine": 269212
     },
     {
       "dict": "pw",
@@ -5369,5 +5395,5 @@
   "boundary": [
     "Feed owner is csl-corrections (scripts/build_correction_loci.py); this packet only aggregates it — never re-parses change files. Rendering owner repo csl-atlas."
   ],
-  "generatedAt": "2026-07-17T19:29:12.354Z"
+  "generatedAt": "2026-08-04T01:12:28.165Z"
 }
