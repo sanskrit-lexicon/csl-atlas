@@ -142,7 +142,7 @@ Per-dict editorial choices for this chapter:
 - **Source file**: [`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt)
 - **Block-detector script**: [`figures/scripts/export_data.py`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/scripts/export_data.py) (functions `classify_type`, `detect_blocks`)
 - **Cross-dict aggregate JSON**: [`src/data/cross-dict.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/cross-dict.json) (includes PWG block matrix data)
-- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/PWG/blob/docs-pass/LICENSE)
+- **License**: [CC-BY-SA-4.0](https://github.com/sanskrit-lexicon/PWG/blob/main/LICENSE)
 
 ## See also (tools)
 

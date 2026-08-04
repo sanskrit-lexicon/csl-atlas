@@ -14,7 +14,7 @@ _Created: 26-07-2026 · Last updated: 26-07-2026_
 
 Документ появился потому, что лист предлагал отклонить ребро в одну из трёх названных
 корзин, не определяя ни одной из них, и не раскрывал метод выборки
-([H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)).
+([H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)).
 Канонический машиночитаемый источник всего изложенного ниже — `packetLabelVocabulary` и
 `selectionPolicy` в
 [`data/lexico/xref_source_check_packet.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/xref_source_check_packet.json),

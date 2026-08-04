@@ -15,7 +15,7 @@ interactively by MG, see [§2a](#2a-acl-lineage-method-uplift--rulings-r1r4-11-0
 
 ## 0. Worked examples (why this program)
 
-**brū / MBH. 7,9283.** [`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt)
+**brū / MBH. 7,9283.** [`csl-orig/v02/pwg/pwg.txt`](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt)
 line 266324 (`L=53686`, `k1=brU`) carries Böhtlingk's note:
 
 > `{#abruvam, abravIt#} ({#abravat#} <ls>MBH. 7,9283</ls> fehlerhaft für {#abravIt#}, wie die <ls>ed. Bomb.</ls> hat)`

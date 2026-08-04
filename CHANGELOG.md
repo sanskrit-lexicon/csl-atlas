@@ -239,7 +239,7 @@ English doc that had survived the H1648 retraction.
 
 ### Changed — xref sheet: the "independent witnesses" claim retracted, instructions in Russian (H1648)
 
-Reviewer feedback on the [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)
+Reviewer feedback on the [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md)
 rebuild. Three points, one of them a correction to a claim this repo was making.
 
 - **Retracted: "both dictionaries, independently, print a cross-reference".** MG: *"wrong —
@@ -573,7 +573,7 @@ and is regenerated with `npm run build-review-sheets`.
   DharmaMitra splitter calibrated on MW dash-truth (Wave A), regress PWG entry-size on real
   publication year via the `<pc>`→volume→year mapping and test the compression counter-explanation
   (Wave B), and a multi-signal cross-dictionary density fingerprint page (Wave D). Execution
-  handoff [H1423](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1423-Opus_csl-atlas_dict-macrostructure-anatomy-exec_21.07.26.md);
+  handoff [H1423](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1423-Opus_csl-atlas_dict-macrostructure-anatomy-exec_21.07.26.md);
   authored via `/ask`, autonomy-readiness gate passed.
 
 ### Changed — §8.11 solo-vs-committee sharpened (H1336)

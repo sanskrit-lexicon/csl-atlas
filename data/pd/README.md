@@ -6,7 +6,7 @@ What share of the **Poona Dictionary**'s cited source canon does the **Digital C
 Sanskrit** hold? This directory is the first measurement — data, metrics, and crosswalk.
 Full write-up: [reports/PD_DCS_CORPUS_COVERAGE_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_DCS_CORPUS_COVERAGE_2026.md).
 Interactive page: `/tools/pd-dcs-coverage`. Handoff:
-[H1336](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1336-Opus_csl-atlas_pd-abbrev-vs-dcs-corpus-coverage_19.07.26.md).
+[H1336](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1336-Opus_csl-atlas_pd-abbrev-vs-dcs-corpus-coverage_19.07.26.md).
 
 ## The headline
 

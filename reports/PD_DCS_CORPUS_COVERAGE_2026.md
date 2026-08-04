@@ -2,7 +2,7 @@
 
 _Created: 20-07-2026 · Last updated: 20-07-2026_
 
-**Handoff:** [H1336](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1336-Opus_csl-atlas_pd-abbrev-vs-dcs-corpus-coverage_19.07.26.md)
+**Handoff:** [H1336](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1336-Opus_csl-atlas_pd-abbrev-vs-dcs-corpus-coverage_19.07.26.md)
 · **Model:** Opus 4.8 (`claude-opus-4-8`) · **Scope:** Poona Dictionary letter **a-** only (see §6).
 
 ---
@@ -37,7 +37,7 @@ the grammatical/śāstric commentary layer. That gap **is** the finding.
 ## 1. Method
 
 Full provenance and the don't-rebuild sweep are in
-[H1336](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1336-Opus_csl-atlas_pd-abbrev-vs-dcs-corpus-coverage_19.07.26.md).
+[H1336](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1336-Opus_csl-atlas_pd-abbrev-vs-dcs-corpus-coverage_19.07.26.md).
 Three scripts, all in
 [scripts/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/scripts):
 
