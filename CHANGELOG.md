@@ -4,6 +4,31 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.16.2] - 2026-08-04
+### Changed
+
+- **`.gitattributes` LF policy widened from 38 files to the whole repo — and the org deploy
+  could never have done it (Opus 5 `claude-opus-5`, 04-08-2026).** The existing attributes
+  pinned `eol=lf` on **seven globs** under `data/lexico/` and `src/data/review/`, covering
+  **38 of 1 078** tracked files; the other ~96 % of the repo had no line-ending policy at
+  all. The gap was self-concealing in two independent ways. First, the standard detector
+  (`git ls-files --eol | grep -E 'i/(crlf|mixed)' | grep 'eol=lf'`) only inspects files that
+  *carry* an `eol=lf` attribute, so an unpoliced file cannot appear in it — a clean census
+  result meant "no violations among the 38", not "no violations". Second, and more
+  consequentially, the org-wide deploy in
+  [`Uprava/tools/cologne_batch_deploy.py`](https://github.com/gasyoun/Uprava/blob/main/tools/cologne_batch_deploy.py)
+  decides coverage with `gitattributes_satisfied()`, which returns `True` when the string
+  `eol=lf` appears **anywhere** in the file. Those seven narrow globs therefore marked this
+  repo *satisfied*, and every future run of the deploy would have skipped it — a repo can be
+  96 % unpoliced and invisible to the tool built to police it. Fixed by appending the
+  canonical org block (`GITATTRIBUTES_TEMPLATE`, H2004) beneath the existing rules, which
+  are preserved verbatim. **`git add --renormalize` ran in the same commit and changed
+  nothing**, confirming every blob was already LF: policy widened with zero content churn
+  and no binary file touched. The pairing is deliberate — `.gitattributes` alone governs
+  only *future* writes and leaves existing blobs contradicting the new rule, exactly how
+  [csl-devanagari#52](https://github.com/sanskrit-lexicon/csl-devanagari/pull/52) was left
+  behind by its own policy commit.
+
 ## [0.16.1] - 2026-08-04
 ### Fixed
 
