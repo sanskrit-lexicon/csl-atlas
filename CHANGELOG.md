@@ -4,6 +4,7 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.16.3] - 2026-08-05
 ### Added
 
 - **Hostile referee of all nine July 2026 hypothesis promotions — zero demotions, one
