@@ -3,6 +3,22 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+### Added
+
+- **A68 paper draft: "How representative is DCS of the Sanskrit lexicographic canon?"
+  (H1867, Fable 5 `claude-fable-5`, 05-08-2026).** The H1336 PD–DCS crosswalk measurement
+  is now a venue-shaped paper draft —
+  [`papers/A68_DCS_REPRESENTATIVENESS_PD_CANON.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/papers/A68_DCS_REPRESENTATIVENESS_PD_CANON.md)
+  — with abstract, explicit canon-membership criteria (§4.1: the frequency-weighted set of
+  works PD's published a-volumes cite as `primary`), methods, results (25.2 %
+  citation-weighted vs 77.9 % token-weighted; 118 of ~2,445 works; +3.8 pp Vedic-led
+  2021→2026 closure), discussion, and limitations. Four figures are committed under
+  [`papers/figures/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/papers/figures)
+  and regenerate deterministically via
+  [`scripts/build_a68_figures.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build_a68_figures.py),
+  which re-derives all 12 headline values from the row-level TSVs in
+  [`data/pd/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/pd) and aborts
+  on any drift from `pd_dcs_metrics.json` (cross-paper figure drift guard).
 
 ## [0.16.3] - 2026-08-05
 ### Added
