@@ -3,6 +3,8 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+
+## [0.17.0] - 2026-08-05
 ### Added
 
 - **A68 paper draft: "How representative is DCS of the Sanskrit lexicographic canon?"
