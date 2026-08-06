@@ -3,6 +3,8 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+
+## [0.17.1] - 2026-08-06
 ### Fixed
 
 - **Re-green `main`: R2 drift-explanation golden fixture regenerated (H2292, Sonnet 5
