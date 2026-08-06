@@ -3,6 +3,20 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+### Fixed
+
+- **Re-green `main`: R2 drift-explanation golden fixture regenerated (H2292, Sonnet 5
+  `claude-sonnet-5`, 06-08-2026).** `test/fixtures/R2_DRIFT_EXPLANATION.machine-only.md`
+  drifted against `scripts/build-r2-drift-explanation.mjs` when
+  [PR #335](https://github.com/sanskrit-lexicon/csl-atlas/pull/335)'s org-wide link
+  auto-fix rewrote the fixture's 5 vocabulary links to a `docs/`-prefixed form, as if the
+  fixture file lived at its own path (`test/fixtures/`). The generator's
+  `docsRelativeHref()` strips the `docs/` prefix on purpose — the real committed doc,
+  `docs/R2_DRIFT_EXPLANATION.md`, sits *inside* `docs/`, so a sibling link to
+  `docs/R2_*_LABELS.md` is correctly bare-filename relative from there (confirmed against
+  the live committed doc's own links). Regenerated the fixture with the one-liner already
+  documented in the test file's own comment; no code change. Closes
+  [csl-atlas#337](https://github.com/sanskrit-lexicon/csl-atlas/issues/337).
 
 ## [0.17.0] - 2026-08-05
 ### Added
