@@ -1,0 +1,1416 @@
+{
+  "schemaVersion": "1.0.0",
+  "handoff": "H2368",
+  "title": "METALEX L8 — entry-level scan-page link census",
+  "generatedAt": "2026-08-07T19:10:10Z",
+  "generatedDate": "2026-08-07",
+  "model": "Grok 4.5 (grok-4.5)",
+  "cslOrigRoot": "C:\\Users\\user\\Documents\\GitHub\\csl-orig\\v02",
+  "method": {
+    "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
+    "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
+    "numerator_atlas_scan": "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — dict ∈ COLOGNE_SCAN_DIR {mw, pwg, ap90} AND pc passes scanPageFromPc (PWG: /^\\d+-\\d+$/; others: first comma-field is digits-only)",
+    "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
+    "non_goals": [
+      "No mass link invention",
+      "No extension of COLOGNE_SCAN_DIR beyond the three verified maps",
+      "No live HTTP probe of Cologne servepdf (rate-limit host)",
+      "L9/L10 out of scope"
+    ],
+    "relation_to_richness_typology": "scripts/build-richness-typology.mjs L8 is DICT-level (sourceCode ∈ COLOGNE_SCAN_DIR). This census is ENTRY-level coverage. A dict can be typology L8=true while atlas_resolvable_pct < 100% if pc shapes fail scanPageFromPc (observed for ap90).",
+    "cologne_scan_dir_map": {
+      "mw": "MW",
+      "pwg": "PWG",
+      "ap90": "AP90"
+    }
+  },
+  "totals": {
+    "dicts": 44,
+    "entries": 1496157,
+    "with_pc": 1496156,
+    "missing_pc": 1,
+    "pc_pct": 99.9999,
+    "atlas_resolvable_scan": 409891,
+    "atlas_resolvable_pct": 27.3963
+  },
+  "gap_buckets": {
+    "pc_present_no_cologne_scan_dir": 1051383,
+    "missing_pc": 1,
+    "pc_unparseable_for_atlas_scan_url": 34882
+  },
+  "dict_buckets": {
+    "pc_coverage_100": [
+      "abch",
+      "acc",
+      "acph",
+      "acsj",
+      "ap",
+      "ap90",
+      "armh",
+      "ben",
+      "bhs",
+      "bop",
+      "bor",
+      "bur",
+      "cae",
+      "ccs",
+      "fri",
+      "gra",
+      "gst",
+      "ieg",
+      "inm",
+      "krm",
+      "lan",
+      "lrv",
+      "mci",
+      "md",
+      "mw",
+      "mw72",
+      "mwe",
+      "nmmb",
+      "pe",
+      "pgn",
+      "pui",
+      "pw",
+      "pwg",
+      "pwkvn",
+      "sch",
+      "shs",
+      "skd",
+      "snp",
+      "stc",
+      "vcp",
+      "vei",
+      "wil",
+      "yat"
+    ],
+    "pc_coverage_lt_100": [
+      "ae"
+    ],
+    "in_cologne_scan_dir": [
+      "ap90",
+      "mw",
+      "pwg"
+    ],
+    "atlas_resolvable_100": [
+      "mw",
+      "pwg"
+    ],
+    "in_scan_dir_but_not_100_resolvable": [
+      "ap90"
+    ],
+    "not_in_cologne_scan_dir": [
+      "abch",
+      "acc",
+      "acph",
+      "acsj",
+      "ae",
+      "ap",
+      "armh",
+      "ben",
+      "bhs",
+      "bop",
+      "bor",
+      "bur",
+      "cae",
+      "ccs",
+      "fri",
+      "gra",
+      "gst",
+      "ieg",
+      "inm",
+      "krm",
+      "lan",
+      "lrv",
+      "mci",
+      "md",
+      "mw72",
+      "mwe",
+      "nmmb",
+      "pe",
+      "pgn",
+      "pui",
+      "pw",
+      "pwkvn",
+      "sch",
+      "shs",
+      "skd",
+      "snp",
+      "stc",
+      "vcp",
+      "vei",
+      "wil",
+      "yat"
+    ]
+  },
+  "l8_verdict": {
+    "roadmap_target": "L8 minimum: every entry linked to scan page",
+    "pc_substrate_complete": false,
+    "atlas_scan_url_complete": false,
+    "claim_l8_done": false,
+    "note": "Do not claim L8 complete: print coordinates are nearly universal, but a working Cologne scan URL is only resolvable for a minority of entries under the atlas's verified dict→scan-dir map."
+  },
+  "gap_samples": [
+    {
+      "bucket": "missing_pc",
+      "code": "ae",
+      "L": "9035.1",
+      "k1": "ruffian",
+      "pc": ""
+    },
+    {
+      "bucket": "pc_unparseable_for_atlas_scan_url",
+      "code": "ap90",
+      "L": "1",
+      "k1": "a",
+      "pc": "0001-a"
+    },
+    {
+      "bucket": "pc_unparseable_for_atlas_scan_url",
+      "code": "ap90",
+      "L": "2",
+      "k1": "afRin",
+      "pc": "0001-c"
+    },
+    {
+      "bucket": "pc_unparseable_for_atlas_scan_url",
+      "code": "ap90",
+      "L": "3",
+      "k1": "aMS",
+      "pc": "0001-c"
+    }
+  ],
+  "rows": [
+    {
+      "code": "abch",
+      "sourcePath": "csl-orig\\v02\\abch\\abch.txt",
+      "entries": 1965,
+      "with_pc": 1965,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 1965
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          1965
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "acc",
+      "sourcePath": "csl-orig\\v02\\acc\\acc.txt",
+      "entries": 49833,
+      "with_pc": 49833,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 49833
+      },
+      "pc_shape_top": [
+        [
+          "N-N,N",
+          49833
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "acph",
+      "sourcePath": "csl-orig\\v02\\acph\\acph.txt",
+      "entries": 163,
+      "with_pc": 163,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 163
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          163
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "acsj",
+      "sourcePath": "csl-orig\\v02\\acsj\\acsj.txt",
+      "entries": 240,
+      "with_pc": 240,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 240
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          240
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "ae",
+      "sourcePath": "csl-orig\\v02\\ae\\ae.txt",
+      "entries": 11359,
+      "with_pc": 11358,
+      "missing_pc": 1,
+      "pc_pct": 99.9912,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 11358,
+        "missing_pc": 1
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          11358
+        ]
+      ],
+      "sample_missing_pc": [
+        {
+          "L": "9035.1",
+          "k1": "ruffian",
+          "pc": ""
+        }
+      ],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "ap",
+      "sourcePath": "csl-orig\\v02\\ap\\ap.txt",
+      "entries": 90843,
+      "with_pc": 90843,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 90843
+      },
+      "pc_shape_top": [
+        [
+          "N-N",
+          90094
+        ],
+        [
+          "N-aN",
+          693
+        ],
+        [
+          "N-bN",
+          50
+        ],
+        [
+          "N-cN",
+          6
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "ap90",
+      "sourcePath": "csl-orig\\v02\\ap90\\ap90.txt",
+      "entries": 34882,
+      "with_pc": 34882,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "AP90",
+      "gap_reason_counts": {
+        "pc_unparseable_for_atlas_scan_url": 34882
+      },
+      "pc_shape_top": [
+        [
+          "N-b",
+          11574
+        ],
+        [
+          "N-c",
+          11532
+        ],
+        [
+          "N-a",
+          11530
+        ],
+        [
+          "N-N",
+          246
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": [
+        {
+          "L": "1",
+          "k1": "a",
+          "pc": "0001-a"
+        },
+        {
+          "L": "2",
+          "k1": "afRin",
+          "pc": "0001-c"
+        },
+        {
+          "L": "3",
+          "k1": "aMS",
+          "pc": "0001-c"
+        }
+      ]
+    },
+    {
+      "code": "armh",
+      "sourcePath": "csl-orig\\v02\\armh\\armh.txt",
+      "entries": 7907,
+      "with_pc": 7907,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 7907
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          7907
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "ben",
+      "sourcePath": "csl-orig\\v02\\ben\\ben.txt",
+      "entries": 17310,
+      "with_pc": 17310,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 17310
+      },
+      "pc_shape_top": [
+        [
+          "N-a",
+          8723
+        ],
+        [
+          "N-b",
+          8587
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "bhs",
+      "sourcePath": "csl-orig\\v02\\bhs\\bhs.txt",
+      "entries": 17839,
+      "with_pc": 17839,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 17839
+      },
+      "pc_shape_top": [
+        [
+          "N,N",
+          17839
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "bop",
+      "sourcePath": "csl-orig\\v02\\bop\\bop.txt",
+      "entries": 8961,
+      "with_pc": 8961,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 8961
+      },
+      "pc_shape_top": [
+        [
+          "N-a",
+          4433
+        ],
+        [
+          "N-b",
+          4269
+        ],
+        [
+          "N-Na",
+          139
+        ],
+        [
+          "N-Nb",
+          120
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "bor",
+      "sourcePath": "csl-orig\\v02\\bor\\bor.txt",
+      "entries": 24609,
+      "with_pc": 24609,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 24609
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          24609
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "bur",
+      "sourcePath": "csl-orig\\v02\\bur\\bur.txt",
+      "entries": 19776,
+      "with_pc": 19776,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 19776
+      },
+      "pc_shape_top": [
+        [
+          "N,N",
+          19776
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "cae",
+      "sourcePath": "csl-orig\\v02\\cae\\cae.txt",
+      "entries": 40069,
+      "with_pc": 40069,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 40069
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          40069
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "ccs",
+      "sourcePath": "csl-orig\\v02\\ccs\\ccs.txt",
+      "entries": 30010,
+      "with_pc": 30010,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 30010
+      },
+      "pc_shape_top": [
+        [
+          "N-N",
+          29099
+        ],
+        [
+          "N-Na",
+          844
+        ],
+        [
+          "N-Nc",
+          32
+        ],
+        [
+          "N-Nb",
+          19
+        ],
+        [
+          "N-Nd",
+          16
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "fri",
+      "sourcePath": "csl-orig\\v02\\fri\\fri.txt",
+      "entries": 8155,
+      "with_pc": 8155,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 8155
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          8155
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "gra",
+      "sourcePath": "csl-orig\\v02\\gra\\gra.txt",
+      "entries": 12785,
+      "with_pc": 12785,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 12785
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          12493
+        ],
+        [
+          "N-b",
+          138
+        ],
+        [
+          "N-a",
+          131
+        ],
+        [
+          "Na",
+          23
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "gst",
+      "sourcePath": "csl-orig\\v02\\gst\\gst.txt",
+      "entries": 6780,
+      "with_pc": 6780,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 6780
+      },
+      "pc_shape_top": [
+        [
+          "N-b",
+          3406
+        ],
+        [
+          "N-a",
+          3374
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "ieg",
+      "sourcePath": "csl-orig\\v02\\ieg\\ieg.txt",
+      "entries": 7932,
+      "with_pc": 7932,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 7932
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          7932
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "inm",
+      "sourcePath": "csl-orig\\v02\\inm\\inm.txt",
+      "entries": 12647,
+      "with_pc": 12647,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 12647
+      },
+      "pc_shape_top": [
+        [
+          "N-N",
+          12647
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "krm",
+      "sourcePath": "csl-orig\\v02\\krm\\krm.txt",
+      "entries": 2061,
+      "with_pc": 2061,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 2061
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          2061
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "lan",
+      "sourcePath": "csl-orig\\v02\\lan\\lan.txt",
+      "entries": 4944,
+      "with_pc": 4944,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 4944
+      },
+      "pc_shape_top": [
+        [
+          "N-a",
+          2511
+        ],
+        [
+          "N-b",
+          2433
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "lrv",
+      "sourcePath": "csl-orig\\v02\\lrv\\lrv.txt",
+      "entries": 53441,
+      "with_pc": 53441,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 53441
+      },
+      "pc_shape_top": [
+        [
+          "N-N",
+          53221
+        ],
+        [
+          "N-N.N",
+          220
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "mci",
+      "sourcePath": "csl-orig\\v02\\mci\\mci.txt",
+      "entries": 2643,
+      "with_pc": 2643,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 2643
+      },
+      "pc_shape_top": [
+        [
+          "N-a",
+          1324
+        ],
+        [
+          "N-b",
+          1319
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "md",
+      "sourcePath": "csl-orig\\v02\\md\\md.txt",
+      "entries": 20749,
+      "with_pc": 20749,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 20749
+      },
+      "pc_shape_top": [
+        [
+          "N-N",
+          19954
+        ],
+        [
+          "N-aN",
+          750
+        ],
+        [
+          "N-cN",
+          28
+        ],
+        [
+          "N-dN",
+          9
+        ],
+        [
+          "N-eN",
+          5
+        ],
+        [
+          "N-bN",
+          3
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "mw",
+      "sourcePath": "csl-orig\\v02\\mw\\mw.txt",
+      "entries": 286525,
+      "with_pc": 286525,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 286525,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "MW",
+      "gap_reason_counts": {},
+      "pc_shape_top": [
+        [
+          "N,N",
+          286524
+        ],
+        [
+          "N,Nx",
+          1
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "mw72",
+      "sourcePath": "csl-orig\\v02\\mw72\\mw72.txt",
+      "entries": 55390,
+      "with_pc": 55390,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 55390
+      },
+      "pc_shape_top": [
+        [
+          "N-a",
+          18569
+        ],
+        [
+          "N-c",
+          18519
+        ],
+        [
+          "N-b",
+          18302
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "mwe",
+      "sourcePath": "csl-orig\\v02\\mwe\\mwe.txt",
+      "entries": 32378,
+      "with_pc": 32378,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 32378
+      },
+      "pc_shape_top": [
+        [
+          "N-b",
+          16389
+        ],
+        [
+          "N-a",
+          15989
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "nmmb",
+      "sourcePath": "csl-orig\\v02\\nmmb\\nmmb.txt",
+      "entries": 506,
+      "with_pc": 506,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 506
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          506
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "pe",
+      "sourcePath": "csl-orig\\v02\\pe\\pe.txt",
+      "entries": 8799,
+      "with_pc": 8799,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 8799
+      },
+      "pc_shape_top": [
+        [
+          "N-a",
+          4444
+        ],
+        [
+          "N-b",
+          4355
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "pgn",
+      "sourcePath": "csl-orig\\v02\\pgn\\pgn.txt",
+      "entries": 485,
+      "with_pc": 485,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 485
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          485
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "pui",
+      "sourcePath": "csl-orig\\v02\\pui\\pui.txt",
+      "entries": 17512,
+      "with_pc": 17512,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 17512
+      },
+      "pc_shape_top": [
+        [
+          "N-N",
+          17512
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "pw",
+      "sourcePath": "csl-orig\\v02\\pw\\pw.txt",
+      "entries": 170556,
+      "with_pc": 170556,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 170556
+      },
+      "pc_shape_top": [
+        [
+          "N-N-b",
+          55765
+        ],
+        [
+          "N-N-a",
+          55627
+        ],
+        [
+          "N-N-c",
+          55445
+        ],
+        [
+          "N-N-d",
+          3699
+        ],
+        [
+          "N-N-Na",
+          5
+        ],
+        [
+          "N-N-Nc",
+          5
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "pwg",
+      "sourcePath": "csl-orig\\v02\\pwg\\pwg.txt",
+      "entries": 123366,
+      "with_pc": 123366,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 123366,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "PWG",
+      "gap_reason_counts": {},
+      "pc_shape_top": [
+        [
+          "N-N",
+          123366
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "pwkvn",
+      "sourcePath": "csl-orig\\v02\\pwkvn\\pwkvn.txt",
+      "entries": 24976,
+      "with_pc": 24976,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 24976
+      },
+      "pc_shape_top": [
+        [
+          "N-N-b",
+          7119
+        ],
+        [
+          "N-N-a",
+          7110
+        ],
+        [
+          "N-N-c",
+          7034
+        ],
+        [
+          "N-N-d",
+          3693
+        ],
+        [
+          "N-N-Na",
+          5
+        ],
+        [
+          "N-N-Nc",
+          5
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "sch",
+      "sourcePath": "csl-orig\\v02\\sch\\sch.txt",
+      "entries": 29125,
+      "with_pc": 29125,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 29125
+      },
+      "pc_shape_top": [
+        [
+          "N-N",
+          28610
+        ],
+        [
+          "Na-N",
+          515
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "shs",
+      "sourcePath": "csl-orig\\v02\\shs\\shs.txt",
+      "entries": 47326,
+      "with_pc": 47326,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 47326
+      },
+      "pc_shape_top": [
+        [
+          "N-a",
+          23988
+        ],
+        [
+          "N-b",
+          23338
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "skd",
+      "sourcePath": "csl-orig\\v02\\skd\\skd.txt",
+      "entries": 42531,
+      "with_pc": 42531,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 42531
+      },
+      "pc_shape_top": [
+        [
+          "N-N-a",
+          14334
+        ],
+        [
+          "N-N-c",
+          14321
+        ],
+        [
+          "N-N-b",
+          13841
+        ],
+        [
+          "N-N-aN",
+          12
+        ],
+        [
+          "N-N-bN",
+          12
+        ],
+        [
+          "N-N-cN",
+          6
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "snp",
+      "sourcePath": "csl-orig\\v02\\snp\\snp.txt",
+      "entries": 453,
+      "with_pc": 453,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 453
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          453
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "stc",
+      "sourcePath": "csl-orig\\v02\\stc\\stc.txt",
+      "entries": 24574,
+      "with_pc": 24574,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 24574
+      },
+      "pc_shape_top": [
+        [
+          "N,N",
+          24574
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "vcp",
+      "sourcePath": "csl-orig\\v02\\vcp\\vcp.txt",
+      "entries": 50135,
+      "with_pc": 50135,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 50135
+      },
+      "pc_shape_top": [
+        [
+          "N,b",
+          25267
+        ],
+        [
+          "N,a",
+          24868
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "vei",
+      "sourcePath": "csl-orig\\v02\\vei\\vei.txt",
+      "entries": 3834,
+      "with_pc": 3834,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 3834
+      },
+      "pc_shape_top": [
+        [
+          "N-N",
+          3834
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "wil",
+      "sourcePath": "csl-orig\\v02\\wil\\wil.txt",
+      "entries": 44577,
+      "with_pc": 44577,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 44577
+      },
+      "pc_shape_top": [
+        [
+          "N",
+          44577
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    },
+    {
+      "code": "yat",
+      "sourcePath": "csl-orig\\v02\\yat\\yat.txt",
+      "entries": 45206,
+      "with_pc": 45206,
+      "missing_pc": 0,
+      "pc_pct": 100.0,
+      "atlas_resolvable_scan": 0,
+      "atlas_resolvable_pct": 0.0,
+      "in_cologne_scan_dir": false,
+      "cologne_scan_dir": null,
+      "gap_reason_counts": {
+        "pc_present_no_cologne_scan_dir": 45206
+      },
+      "pc_shape_top": [
+        [
+          "N-b",
+          22652
+        ],
+        [
+          "N-a",
+          22554
+        ]
+      ],
+      "sample_missing_pc": [],
+      "sample_unparseable_pc": []
+    }
+  ]
+}
