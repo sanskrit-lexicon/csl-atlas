@@ -4,6 +4,18 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added
+
+- **METALEX L8 entry-level scan-page link census (H2368, Grok 4.5 `grok-4.5`,
+  07-08-2026).** Stdlib script
+  [`scripts/metalex/l8_scan_link_census.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/metalex/l8_scan_link_census.py)
+  measures local csl-orig: **1,496,157** entries · **99.9999%** with non-empty
+  `<pc>` · **27.40%** atlas-resolvable Cologne scan URLs (mw+pwg at 100%; ap90 in
+  `COLOGNE_SCAN_DIR` but 0% under digit-only page extract). Report:
+  [`data/metalex/L8_SCAN_LINK_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md)
+  (+ JSON). Roadmap L8 checkbox annotated with measured % — **not** claimed complete.
+  No mass link invention.
+
 ## [0.17.1] - 2026-08-06
 ### Fixed
 
