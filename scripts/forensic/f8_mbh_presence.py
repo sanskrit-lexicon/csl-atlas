@@ -25,8 +25,13 @@ witness, and **`unchecked` is never collapsed into `absent`**:
    alignment must be **by verse content, not by number** — the vulgate carries exactly the
    passages the critical edition banished to its apparatus, so śloka numbers diverge
    structurally. Each vulgate half-verse is therefore searched against the WHOLE critical
-   corpus (158k half-verses) with a folded character 4-gram coverage score, anchored by an
-   8-gram inverted index (step-6 winnowing: any shared substring ≥ 14 folded chars is found).
+   corpus (158k half-verses) by two-stage retrieval: a 12-gram shingle index indexed at step 4
+   and queried at step 1 (so any shared substring ≥ 15 folded chars is guaranteed to surface a
+   candidate), then an exact 4-gram coverage score on the few best candidates.
+
+   Shingles whose posting list exceeds MAX_POSTING are dropped from the index: a 12-gram shared
+   by more than 40 half-verses of the epic is formulaic (`bharatarsabha`, `mahabaho`) and
+   carries no identification value, while keeping it would make the sweep quadratic.
 
 ## Thresholds (locked before the run, reported honestly)
 
@@ -36,10 +41,26 @@ witness, and **`unchecked` is never collapsed into `absent`**:
 A vulgate half shorter than MIN_HALF folded chars is too formulaic to decide on
 (`X uvāca`) and is skipped; a verse whose every half is skipped is `unchecked`, not `absent`.
 
+## What the citation-level verdict is, and is not
+
+The verse-level table is unconditional: it compares two texts. The citation-level table is
+**conditional on the fitted locus being right**, and the fitted index's own held-out accuracy is
+0.552 (MBH_CITATION_RESOLUTION_CENSUS.md). The specimen `MBH. 12,8081` is a live counter-example:
+its quoted pratika actually stands 110 calibrated ślokas away from where the index sends it. So
+read `present/absent` at citation level as "the verse the fitted index points at is vulgate-only",
+not yet as "PWG cited a verse BORI rejects" — the quote lane
+(`scripts/forensic/f8_mbh_quote_lane.py`) is what upgrades one to the other.
+
 Outputs (measurements only — no verse bytes; both witnesses stay gitignored):
   data/forensic/mbh_vulgate_critical_presence.csv   83,971 rows, one per vulgate verse
   data/forensic/mbh_citation_presence.csv           one row per extractable PWG/MW MBh citation
+  data/forensic/mbh_presence_spotcheck.csv          30 sampled loci WITH both rendered links
   data/forensic/f8_presence_report.json             verdict distribution + spot-check
+
+The scan and etext URLs are **functions** (`scan_url`, `etext_url`), not stored columns: baking
+90-char URLs into 154k rows would add ~14 MB of derivable text, and the citation renderer — not
+the dataset — is where a link belongs. The spot-check CSV carries them rendered so the join is
+demonstrable.
 
 Run from repo root (after f8_mbh_witnesses.py):  python scripts/forensic/f8_mbh_presence.py
 Deps: ../sanskrit-util/py (slp1_simplify).
@@ -49,7 +70,7 @@ from collections import Counter, defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
-sys.path.insert(0, os.path.abspath("scripts/forensic"))
+sys.path.insert(0, os.path.abspath("scripts/L0"))
 sys.path.insert(0, os.path.abspath("../sanskrit-util/py"))
 from _provenance import write_source
 from sanskrit_util import slp1_simplify
@@ -61,8 +82,10 @@ CONCORDANCE = f"{OUT}/mbh_vulgate_concordance.csv"
 INVENTORY = f"{OUT}/mbh_citation_inventory.csv"
 
 GRAM = 4           # scoring n-gram
-ANCHOR = 8         # inverted-index gram
-STEP = 6           # index every STEP-th anchor position (winnowing)
+ANCHOR = 12        # shingle length of the inverted index
+STEP = 4           # index every STEP-th shingle position (query steps by 1)
+MAX_POSTING = 40   # drop shingles shared by more half-verses than this — formulaic, not identifying
+TOP_CAND = 4       # how many anchor-hit leaders get the exact coverage score
 MIN_HALF = 16      # folded chars below which a half-verse is too formulaic to adjudicate
 EXACTISH = 0.85
 FUZZY = 0.60
@@ -108,27 +131,30 @@ def scan_url(parvan, cited_verse):
 
 # ---- critical-corpus index ----------------------------------------------------
 def build_index(bori):
+    """shingle -> [half-verse index]. Formulaic shingles (posting list > MAX_POSTING) are
+    dropped: they identify nothing and would dominate every candidate set."""
     inv = defaultdict(list)
     for j, b in enumerate(bori):
         f = b["folded"]
         for i in range(0, max(1, len(f) - ANCHOR + 1), STEP):
             inv[f[i:i + ANCHOR]].append(j)
-    return inv
+    return {k: v for k, v in inv.items() if len(v) <= MAX_POSTING}
 
 
-def best_match(half_folded, bori, bsets, inv):
+def best_match(half_folded, bori, inv):
     """Max 4-gram coverage of a CRITICAL half-verse by this vulgate half. Coverage is measured
     on the critical side (|shared| / |critical grams|): a critical half fully contained in the
     vulgate reading scores 1.0, and a long vulgate expansion cannot inflate the score."""
-    cand = set()
+    hits = Counter()
     for i in range(len(half_folded) - ANCHOR + 1):
-        cand.update(inv.get(half_folded[i:i + ANCHOR], ()))
-    if not cand:
+        for j in inv.get(half_folded[i:i + ANCHOR], ()):
+            hits[j] += 1
+    if not hits:
         return 0.0, ""
     qg = grams(half_folded)
     best, bestloc = 0.0, ""
-    for j in cand:
-        cg = bsets[j]
+    for j, _ in hits.most_common(TOP_CAND):
+        cg = grams(bori[j]["folded"])
         if not cg:
             continue
         cov = len(cg & qg) / len(cg)
@@ -147,10 +173,10 @@ def main():
 
     vul = [json.loads(l) for l in open(VULGATE, encoding="utf-8")]
     bori = [json.loads(l) for l in open(BORI, encoding="utf-8")]
-    print(f"vulgate {len(vul):,} verses · critical {len(bori):,} half-verses")
-    bsets = [grams(b["folded"]) for b in bori]
+    print(f"vulgate {len(vul):,} verses · critical {len(bori):,} half-verses", flush=True)
     inv = build_index(bori)
-    print(f"anchor index: {len(inv):,} distinct {ANCHOR}-grams")
+    print(f"shingle index: {len(inv):,} identifying {ANCHOR}-grams "
+          f"(posting cap {MAX_POSTING})", flush=True)
 
     # concordance: (parvan, adhyaya, shloka) -> calibrated_N, and (parvan, N) -> address
     addr_to_n, n_to_addr = {}, {}
@@ -166,8 +192,8 @@ def main():
     # ---- lane 2+3 over every vulgate verse -----------------------------------
     rows = []
     for k, v in enumerate(vul):
-        if k and k % 10000 == 0:
-            print(f"  … {k:,}/{len(vul):,}")
+        if k and k % 5000 == 0:
+            print(f"  … {k:,}/{len(vul):,}", flush=True)
         halves = [fold(h) for h in v.get("halves_slp1") or []]
         halves = [h for h in halves if len(h) >= MIN_HALF]
         whole = fold(v.get("slp1"))
@@ -177,7 +203,7 @@ def main():
         else:
             best, bestloc, matched = 0.0, "", 0
             for h in halves:
-                sc, lc = best_match(h, bori, bsets, inv)
+                sc, lc = best_match(h, bori, inv)
                 if sc >= FUZZY:
                     matched += 1
                 if sc > best:
@@ -196,7 +222,6 @@ def main():
             "vulgate": vulgate_state, "critical": crit_state,
             "critical_evidence": evid, "critical_score": score, "bori_locus": loc,
             "n_halves": len(halves), "n_halves_matched": matched,
-            "etext_url": etext_url(v["parvan"], v["upaparva"], v["adhyaya"], v["shloka"]),
         })
 
     with open(f"{OUT}/mbh_vulgate_critical_presence.csv", "w", encoding="utf-8", newline="") as f:
@@ -222,8 +247,7 @@ def main():
                     "parvan": p, "cited_verse": n, "adhyaya": "", "shloka": "",
                     "vulgate": "unchecked", "critical": "unchecked",
                     "verdict": "unresolved-locus", "critical_evidence": "locus-out-of-range",
-                    "critical_score": "", "bori_locus": "",
-                    "scan_url": scan_url(p, n), "etext_url": ""})
+                    "critical_score": "", "bori_locus": ""})
                 continue
             a, s = addr
             r = by_addr.get((p, a, s))
@@ -233,8 +257,7 @@ def main():
                     "parvan": p, "cited_verse": n, "adhyaya": a, "shloka": s,
                     "vulgate": "unchecked", "critical": "unchecked",
                     "verdict": "unchecked/unchecked", "critical_evidence": "witness-missing",
-                    "critical_score": "", "bori_locus": "",
-                    "scan_url": scan_url(p, n), "etext_url": ""})
+                    "critical_score": "", "bori_locus": ""})
                 continue
             cit_rows.append({
                 "dict": c["dict"], "L": c["L"], "headword_slp1": c["headword_slp1"],
@@ -242,8 +265,7 @@ def main():
                 "vulgate": r["vulgate"], "critical": r["critical"],
                 "verdict": f"{r['vulgate']}/{r['critical']}",
                 "critical_evidence": r["critical_evidence"],
-                "critical_score": r["critical_score"], "bori_locus": r["bori_locus"],
-                "scan_url": scan_url(p, n), "etext_url": r["etext_url"]})
+                "critical_score": r["critical_score"], "bori_locus": r["bori_locus"]})
 
     with open(f"{OUT}/mbh_citation_presence.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(cit_rows[0].keys()))
@@ -259,6 +281,7 @@ def main():
     for c in sample:
         p, a, s = c["parvan"], c["adhyaya"], c["shloka"]
         back = addr_to_n.get((p, a, s))
+        vv = by_addr.get((p, a, s))
         spot.append({
             "dict": c["dict"], "headword_slp1": c["headword_slp1"],
             "cited": f"MBH. {p},{c['cited_verse']}", "resolved": f"{p}.{a}.{s}",
@@ -266,7 +289,9 @@ def main():
             "roundtrip_ok": bool(back == c["cited_verse"]),
             "vulgate_text_present": c["vulgate"] == "present",
             "verdict": c["verdict"], "bori_locus": c["bori_locus"],
-            "critical_score": c["critical_score"], "etext_url": c["etext_url"]})
+            "critical_score": c["critical_score"],
+            "scan_url": scan_url(p, c["cited_verse"]),
+            "etext_url": etext_url(p, vv["upaparva"] if vv else 0, a, s)})
     with open(f"{OUT}/mbh_presence_spotcheck.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(spot[0].keys()))
         w.writeheader()
@@ -284,7 +309,8 @@ def main():
         per_parvan[r["parvan"]][f"{r['vulgate']}/{r['critical']}"] += 1
     report = {
         "vulgate_verses": len(vul), "critical_half_verses": len(bori),
-        "thresholds": {"gram": GRAM, "anchor": ANCHOR, "step": STEP,
+        "thresholds": {"gram": GRAM, "shingle": ANCHOR, "index_step": STEP,
+                       "max_posting": MAX_POSTING, "top_candidates": TOP_CAND,
                        "min_half_folded_chars": MIN_HALF,
                        "exactish": EXACTISH, "fuzzy": FUZZY},
         "verse_level_verdicts": dict(vc),
