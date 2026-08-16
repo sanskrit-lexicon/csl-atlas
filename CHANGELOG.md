@@ -4,6 +4,12 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Changed
+
+- **H2820 — CLAUDE.md truth-pass** (Grok 4.6 `grok-4.6`, 16-08-2026). Dated
+  header, what/run/don't, primer + DANGER_FACTS pointers; AGENTS.md twin
+  regenerated from the new TOC. Taxonomy tables not recopied.
+
 ### Added
 
 - **METALEX L8 entry-level scan-page link census (H2368, Grok 4.5 `grok-4.5`,
