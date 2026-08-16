@@ -59,8 +59,21 @@ def fold(s):
 def build_corpus():
     if os.path.exists(CACHE):
         return [json.loads(l) for l in open(CACHE, encoding="utf-8")]
+    # H2845 integrity guard. The GRETIL mirror is an unversioned sibling checkout and was
+    # measured MISSING on 16-08-2026. Without this check `glob` returns nothing, the corpus is
+    # silently empty, every retrieval returns "none", and the script rewrites the verdict CSV
+    # with `unresolvable` for all 1,700+ notes — reporting ABSENCE for what is merely UNCHECKED,
+    # which is the one failure this whole lane exists to prevent. Fail loudly instead.
+    sources = sorted(glob.glob(f"{GRETIL}/mbh_*_u.htm"))
+    if not sources:
+        raise SystemExit(
+            f"FATAL: no BORI witness at {GRETIL} (expected mbh_*_u.htm).\n"
+            "  Refusing to build an empty corpus: every verdict would come back "
+            "'unresolvable', which reads as absence but is only non-retrieval.\n"
+            "  Restore the GRETIL mirror, or stage the Tokunaga/Smith text with "
+            "scripts/forensic/f8_mbh_witnesses.py and point this script at it.")
     rows = []
-    for path in sorted(glob.glob(f"{GRETIL}/mbh_*_u.htm")):
+    for path in sources:
         if re.search(r"mbh1-18", path):
             continue
         parvan = int(re.search(r"mbh_(\d+)_u", path).group(1))

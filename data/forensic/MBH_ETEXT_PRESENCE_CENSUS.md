@@ -38,13 +38,17 @@ Both witnesses did exist, in the sibling repo, on a branch that never leaves the
 Both are staged into **gitignored** caches by
 [`scripts/forensic/f8_mbh_witnesses.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f8_mbh_witnesses.py),
 read straight out of the sibling's git object store — no re-scrape, no network, no checkout of
-that branch. Nothing in this document or in any committed CSV carries verse bytes; the single
-half-verse quoted in §5 is a de-minimis quotation as evidence, of the kind the dictionaries
-themselves print, not a copy of either text.
+that branch. No committed CSV carries verse bytes — the presence tables hold verdicts, scores
+and BORI addresses, and the quote lane records only a pratīka's *length*, never its text.
 
 **Rights verdict (publish-safety, 16-08-2026):** committed artefacts are **numbers, addresses
-and URLs only**. The staged text stays local and gitignored. The one exception is the specimen
-half-verse in §5, quoted because the question cannot be answered without it.
+and URLs only**, with exactly one exception, named here so it is not discovered later: the
+specimen. §5 quotes two half-verses, and
+[`f8_specimen_mbh_12_8081.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f8_specimen_mbh_12_8081.json)
+carries three vulgate verses in full — the verse the fitted locus lands on, and the verse the
+quotation actually stands in. Three verses of 83,971 (0.004 %) is a de-minimis quotation as
+evidence, of the kind the dictionaries themselves print; the question MG asked cannot be
+answered without showing the words. No other committed file quotes either text.
 
 ### Two traps worth keeping
 
