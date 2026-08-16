@@ -1,0 +1,110 @@
+{
+ "vulgate_verses": 83971,
+ "critical_half_verses": 158501,
+ "thresholds": {
+  "gram": 4,
+  "shingle": 12,
+  "index_step": 4,
+  "max_posting": 40,
+  "top_candidates": 4,
+  "min_half_folded_chars": 16,
+  "exactish": 0.85,
+  "fuzzy": 0.6
+ },
+ "verse_level_verdicts": {
+  "present/absent": 6494,
+  "present/present": 77246,
+  "absent/unchecked": 231
+ },
+ "citation_level_verdicts": {
+  "present/present": 60101,
+  "unresolved-locus": 3880,
+  "present/absent": 5950,
+  "absent/unchecked": 492
+ },
+ "citations_seen": 70423,
+ "citation_rows": 70423,
+ "per_parvan": {
+  "1": {
+   "present/absent": 1045,
+   "present/present": 7578
+  },
+  "2": {
+   "present/present": 2479,
+   "present/absent": 234
+  },
+  "3": {
+   "present/present": 10797,
+   "present/absent": 1062
+  },
+  "4": {
+   "present/present": 1979,
+   "present/absent": 291
+  },
+  "5": {
+   "present/present": 6318,
+   "present/absent": 295
+  },
+  "6": {
+   "present/present": 5651,
+   "present/absent": 217
+  },
+  "7": {
+   "present/present": 8690,
+   "present/absent": 951
+  },
+  "8": {
+   "present/present": 4246,
+   "present/absent": 766
+  },
+  "9": {
+   "present/present": 3525,
+   "present/absent": 110
+  },
+  "10": {
+   "present/present": 796,
+   "present/absent": 7
+  },
+  "11": {
+   "present/present": 776,
+   "present/absent": 49
+  },
+  "12": {
+   "present/present": 13339,
+   "present/absent": 424,
+   "absent/unchecked": 1
+  },
+  "13": {
+   "present/present": 6575,
+   "present/absent": 894,
+   "absent/unchecked": 230
+  },
+  "14": {
+   "present/present": 2808,
+   "present/absent": 37
+  },
+  "15": {
+   "present/present": 1079,
+   "present/absent": 9
+  },
+  "16": {
+   "present/present": 279,
+   "present/absent": 8
+  },
+  "17": {
+   "present/present": 107,
+   "present/absent": 3
+  },
+  "18": {
+   "present/present": 224,
+   "present/absent": 92
+  }
+ },
+ "spotcheck": {
+  "n": 30,
+  "seed": 2845,
+  "locus_roundtrip_ok": 30,
+  "vulgate_text_present": 30
+ },
+ "integrity_note": "`unchecked` is emitted whenever the locus does not resolve or no half-verse clears MIN_HALF; it is never written as `absent`."
+}

@@ -1,0 +1,21 @@
+{
+ "pwg_pairs_found": 12541,
+ "sample_cap": 20000,
+ "seed": 2845,
+ "outcomes": {
+  "retrieved": 6912,
+  "probe-too-short": 5342,
+  "not-retrieved": 287
+ },
+ "retrieved_with_calibrated_N": 6912,
+ "fitted_index_agreement_within_k_slokas": {
+  "0": 0.4941,
+  "2": 0.6804,
+  "10": 0.7254,
+  "50": 0.8559,
+  "200": 0.9857
+ },
+ "delta_median": 0,
+ "delta_mean": 0.68,
+ "note": "PWG's printed number vs the calibrated_N of the verse its own quoted pratika actually stands in. This is the accuracy the citation-level presence verdict inherits; the verse-level table does not depend on it."
+}

@@ -52,3 +52,6 @@ data/forensic/_mbh_bori_folded.jsonl
 # scripts/forensic/f8_mbh_harvest.py (vulgate e-text, rights)
 data/forensic/_mbh_vulgate_cache/
 data/forensic/_mbh_vulgate_verses.jsonl
+
+# scripts/forensic/f8_mbh_witnesses.py (staged rights-gated MBh witnesses)
+data/forensic/_mbh_bori_halfverse.jsonl
