@@ -16,7 +16,17 @@ This script reads those blobs straight out of that branch's git object store (no
 re-scrape, no network) and writes the two gitignored caches csl-atlas' presence lane consumes:
 
   data/forensic/_mbh_vulgate_verses.jsonl   {parvan, upaparva, adhyaya, shloka, id, slp1, C}
-  data/forensic/_mbh_bori_folded.jsonl      {loc, folded}   (half-verse granularity)
+  data/forensic/_mbh_bori_halfverse.jsonl   {parvan, adhyaya, shloka, half, loc, folded}
+
+(The name deliberately differs from f8_mbh_verify.py's `_mbh_bori_folded.jsonl`: that cache is
+built from the GRETIL mirror at WHOLE-verse granularity, this one from the Tokunaga/Smith "UR"
+text at HALF-verse granularity. Two files, two lanes, no silent cross-consumption.)
+
+**ISO-15919 trap, measured 16-08-2026:** the "UR" text is ISO-15919, not IAST. `r̥`/`l̥`
+(NFD r + combining ring U+0325) survive `indic_transliteration`'s IAST->SLP1 unharmed, but
+anusvara `ṁ` (U+1E41) does **not** — it passes straight through as a literal `ṁ` and every
+folded key carrying an anusvara silently fails to match the vulgate. Normalising ISO-15919 to
+IAST before transliteration is therefore load-bearing, not cosmetic.
 
 If the sibling branch is missing, the fallback is the original acquisition path — re-run
 `scripts/forensic/f8_mbh_harvest.py` for the vulgate (NOTE 16-08-2026: the sanatana.in AJAX
@@ -28,7 +38,7 @@ works again) and the `curl` loop in CommentaryStrategies'
 Run from repo root:  python scripts/forensic/f8_mbh_witnesses.py
 Deps: indic_transliteration; ../sanskrit-util/py (slp1_simplify).
 """
-import sys, os, re, json, subprocess
+import sys, os, re, json, subprocess, unicodedata
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -43,7 +53,7 @@ VULGATE_BLOB = "mahabharata-nilakantha/nilakantha_vulgate_full.jsonl"
 BORI_BLOB = "mahabharata-nilakantha/bori-critical/MBh%02d.txt"
 
 VULGATE_OUT = "data/forensic/_mbh_vulgate_verses.jsonl"   # gitignored (rights)
-BORI_OUT = "data/forensic/_mbh_bori_folded.jsonl"         # gitignored (rights)
+BORI_OUT = "data/forensic/_mbh_bori_halfverse.jsonl"      # gitignored (rights)
 
 DEV = re.compile(r"[ऀ-ॿ]")
 # BORI "UR" line: PPAAASSS + half-verse letter, then a tab or spaces, then the text.
@@ -51,10 +61,20 @@ BORI_LINE = re.compile(r"^(\d{2})(\d{3})(\d{3})([a-zA-Z]?)\s+(.+?)\s*$")
 
 
 def fold(s):
-    """SLP1 -> length/retroflex/sibilant-folded, spaceless: the fuzzy match key.
+    """SLP1 -> length/retroflex/sibilant-folded, letters only: the fuzzy match key.
 
-    Same key f8_mbh_verify.py uses, so the two lanes are directly comparable."""
-    return slp1_simplify(s or "").replace(" ", "")
+    f8_mbh_verify.py's fold only drops spaces; this one also drops avagraha/punctuation, so a
+    vulgate `yajamAno 'nuparyagAH` and a critical `yajamāno 'nuparyagāḥ` fold identically."""
+    return re.sub(r"[^a-z]", "", slp1_simplify(s or "").lower())
+
+
+def iso15919_to_iast(s):
+    """ISO-15919 (the BORI "UR" encoding) -> IAST. See the module docstring's anusvara trap."""
+    s = unicodedata.normalize("NFD", s)
+    s = s.replace("r̥", "ṛ").replace("R̥", "Ṛ")
+    s = s.replace("l̥", "ḷ").replace("L̥", "Ḷ")
+    s = unicodedata.normalize("NFC", s)
+    return s.replace("ṁ", "ṃ").replace("Ṁ", "Ṃ")   # ṁ -> ṃ
 
 
 def git_show(path):
@@ -128,11 +148,12 @@ def stage_bori():
             pp, aa, ss, half, text = m.groups()
             if int(pp) != p:
                 continue
-            slp = transliterate(text, sanscript.IAST, sanscript.SLP1)
+            slp = transliterate(iso15919_to_iast(text), sanscript.IAST, sanscript.SLP1)
             folded = fold(slp)
             if len(folded) < 4:
                 continue
-            out.append({"loc": f"{p:02d},{int(aa)}.{int(ss)}{half}", "folded": folded})
+            out.append({"parvan": p, "adhyaya": int(aa), "shloka": int(ss), "half": half,
+                        "loc": f"{p:02d},{int(aa)}.{int(ss)}{half}", "folded": folded})
     if missing:
         print(f"  MISSING BORI parvans: {missing}", file=sys.stderr)
     with open(BORI_OUT, "w", encoding="utf-8") as f:
