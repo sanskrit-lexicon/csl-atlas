@@ -86,13 +86,25 @@ by side — are committed as
 [`mbh_presence_spotcheck.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/mbh_presence_spotcheck.csv)
 so the join is demonstrable rather than asserted.
 
-**Not yet done, and named plainly:** MG's *"All voting forms have the same functionality now?"*
-requires the etext branch to land inside the shared renderer
-`RussianTranslation/src/ls_links.py` in the sibling repo
+**The renderer half, and the trap it hid.** MG's *"All voting forms have the same functionality
+now?"* needed the etext branch inside the shared citation renderer in the sibling repo
 [SanskritLexicography](https://github.com/gasyoun/SanskritLexicography), so that every sheet
-built from it gains the link at once. That file is in a different repository from this one and
-was **not** touched by this pass. What remains there is one function returning the template
-above plus a selftest case; until it lands, cards still render the scan link only.
+gains the link at once rather than one builder at a time. It landed as
+[PR #1753](https://github.com/gasyoun/SanskritLexicography/pull/1753) — but not where this
+document first predicted. `linkify` in
+[`ls_links.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/ls_links.py)
+is **not** the path the cards take: the voting sheets and the article site render citations
+through
+[`build_article_site._ls_html`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/pilot/build_article_site.py)
+via `g5_card_render.print_panel`, and `build_reglue_sheet_v2.py` imports `LsLinks` only for its
+status constants. Landing the branch in `linkify` alone would have shipped a feature no sheet
+displays. Both surfaces carry it now: a lookup class `MbhEtext` over the table below, and an
+`E` / `E†` anchor beside the scan link — `E†` marking the `present/absent` reading.
+
+The same `unchecked ≠ absent` rule is enforced there in code, not convention: csl-atlas is an
+**optional** sibling checkout on that side, and where it is missing the card renders nothing at
+all rather than implying a verse is missing. Both branches are asserted in the selftests, so
+silence is tested behaviour rather than an accident of the machine.
 
 ## 3. Method — how presence is decided
 
@@ -246,8 +258,11 @@ verse — §6 is, and says roughly half.
 
 ## 8. What is still open
 
-1. **`ls_links.py` etext branch** (§2) — the shared renderer in the sibling repo; until it
-   lands, only this repo's data carries the etext address.
+1. **Merge order.** The renderer half (§2) is open as
+   [SanskritLexicography#1753](https://github.com/gasyoun/SanskritLexicography/pull/1753) and
+   reads the presence table that lands with **this** PR. Until both are merged and csl-atlas is
+   cloned beside the sibling, the card degrades to the scan link alone — by design, and
+   asserted as such rather than left to chance.
 2. **Quote-lane upgrade of the citation table.** The 12,541 PWG pairs can replace a fitted
    guess with an exact address wherever PWG quotes the verse, turning a conditional
    `present/absent` into an unconditional one. The machinery exists; the join to

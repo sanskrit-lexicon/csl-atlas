@@ -54,9 +54,14 @@ Steps 2–4 each take a few minutes; step 1 is seconds. Only step 4 needs
 
 ## Ranked improvement backlog
 
-1. Land the etext branch in the shared renderer
-   [`ls_links.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/ls_links.py)
-   — until then only this repo's data knows the etext address.
+1. ~~Land the etext branch in the shared renderer~~ — done, as
+   [SanskritLexicography#1753](https://github.com/gasyoun/SanskritLexicography/pull/1753). Note
+   for whoever edits it next: the card path is
+   [`build_article_site._ls_html`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/pilot/build_article_site.py)
+   via `g5_card_render.print_panel`, **not** `linkify` in
+   [`ls_links.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/ls_links.py);
+   both carry the branch, but only the first is what a voting sheet renders. What is left is the
+   merge order — that PR reads the presence table this one commits.
 2. Join the 12,541 quote-lane pairs onto `mbh_citation_presence.csv` so a quoted citation gets
    its exact address instead of a fitted guess, and its verdict becomes unconditional.
 3. Mine MW's quoted citations the same way PWG's were.
