@@ -45,7 +45,8 @@ STEP = 4
 MAX_POSTING = 40
 MIN_PROBE = 24     # folded chars a pratika needs before it can identify a verse
 COVER = 0.60
-SAMPLE = 1500      # cap the sweep; sampled with a fixed seed so the number is reproducible
+SAMPLE = 20000     # cap the sweep (sampled with a fixed seed); above the ~12.5k pairs PWG has,
+                   # so the default run is exhaustive — lower it for a fast smoke run
 SEED = 2845
 
 
