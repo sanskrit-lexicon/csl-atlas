@@ -97,6 +97,17 @@ def clean_mula(dev):
     return dev.strip()
 
 
+def split_halves(dev):
+    """Split a sanatana.in mula field into half-verses on the danda, BEFORE cleaning.
+
+    The critical edition is addressed by half-verse (`12226006a` / `...c`), so comparing
+    half against half is the like-for-like join; a whole-verse query would drown a short
+    critical half in a long vulgate verse."""
+    dev = re.sub(r"[०-९]+", " ", dev or "")
+    parts = re.split(r"[।॥\n]+", dev)
+    return [p.strip() for p in parts if DEV.search(p or "")]
+
+
 def stage_vulgate():
     r = git_show(VULGATE_BLOB)
     if r.returncode != 0:
@@ -114,11 +125,14 @@ def stage_vulgate():
             dev = ""
         p = int(d["parva_no"])
         per_parvan[p] = per_parvan.get(p, 0) + 1
+        halves = [transliterate(h, sanscript.DEVANAGARI, sanscript.SLP1)
+                  for h in split_halves(d.get("mula_dev"))]
         rows.append({
             "parvan": p, "upaparva": int(d.get("upaparva") or 0),
             "adhyaya": int(d["adhyaya"]), "shloka": int(d["shloka"]),
             "id": d.get("id", ""),
             "slp1": transliterate(dev, sanscript.DEVANAGARI, sanscript.SLP1) if dev else "",
+            "halves_slp1": halves,
         })
     rows.sort(key=lambda x: (x["parvan"], x["adhyaya"], x["shloka"]))
     running = {}
