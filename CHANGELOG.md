@@ -4,6 +4,39 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added
+
+- **H2891 — the human review overlays now carry a committed digest, and CI goes
+  red when one is wiped** (Opus 5 `claude-opus-5`, 17-08-2026). The H2890 census
+  measured something worth stating plainly: of the **19,368** records in
+  `src/data/review/`, **147** carry a human review *status*, and only **10** are
+  attributed to a human — 130 to `codex`, 7 to `Antigravity`. A predicate using
+  the status half alone would over-claim human review **14.7×**, which is
+  [H1684](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CHANGELOG.md)
+  in numbers. More pointedly: **all 10 of the real human rulings live in one
+  file**, `r2-checkpoint-review.json` — precisely the file whose builder carries
+  the registered destructive path, since
+  [`build-r2-checkpoint-review.mjs --reseed`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-r2-checkpoint-review.mjs)
+  sets the preserved map to empty and overwrites every decision with the machine
+  seed. The other 13 generators call `loadPreserved` and are overlay-preserving.
+  This repo's entire human review corpus therefore sat behind exactly one
+  unguarded flag, with nothing watching it. New
+  [`data/integrity/csl_atlas_review.pin.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/integrity/csl_atlas_review.pin.json)
+  pins two SHA-256 digests over the reviewed projection — content and key-set,
+  because a `--reseed` moves both while an in-place edit moves only the first —
+  with a per-file digest so a red run names the report that changed rather than
+  printing one hash for fourteen. The predicate rides in the pin as data, not
+  code, and the hasher is the shared
+  [`csl_pyutil.integrity_tripwire`](https://github.com/sanskrit-lexicon/csl-pyutil/pull/28)
+  rather than a local copy. New
+  [`overlay-tripwire.yml`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.github/workflows/overlay-tripwire.yml)
+  runs it per PR, weekly, and on dispatch, and carries a **negative control**
+  that reproduces the `--reseed` outcome in a scratch copy (10 → 0 reviewed
+  records) and fails the job if the gate stays green — the real seeder is never
+  invoked, because "never `--reseed`" is this repo's own danger fact and CI is
+  not the place to make an exception to it. Detection only; the refuse-by-default
+  hatch on `--reseed` itself is H2892.
+
 ### Changed
 
 - **H2820 — CLAUDE.md truth-pass** (Grok 4.6 `grok-4.6`, 16-08-2026). Dated
