@@ -1,0 +1,91 @@
+name: Overlay tripwire
+
+# H2891, wave 1 of the Q7 data-integrity programme.
+#
+# The H2890 census measured something worth stating plainly: of the 19,368
+# records in src/data/review/, exactly 147 carry a human review STATUS, and
+# only 10 of those are attributed to a human -- 130 to codex, 7 to Antigravity.
+# All 10 of the real human rulings live in ONE file, r2-checkpoint-review.json,
+# which is precisely the file whose builder has the registered destructive path:
+# `build-r2-checkpoint-review.mjs --reseed` sets the preserved map to empty, so
+# applyPreservedDecisions becomes a no-op and every human decision is
+# overwritten with the machine seed.
+#
+# The other 13 generators call loadPreserved and are overlay-preserving. The
+# whole human review corpus of this repo therefore sits behind exactly one
+# unguarded flag, and nothing has been watching it.
+#
+# RED means a human ruling changed. The fix is one commit, not a re-run:
+#   python -m csl_pyutil.integrity_tripwire --extract \
+#          --pin data/integrity/csl_atlas_review.pin.json --write-pin \
+#          --reason "what changed and why" --updated DD-MM-YYYY
+# If --reseed was run by accident, restore the file -- do not bump the pin.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly. Not path-filtered: the failure mode is a regeneration that
+    # rewrites a review report without touching the pin.
+    - cron: "31 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: overlay-tripwire-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  review-overlays:
+    name: Review-report human overlays
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      # Pinned to the H2891 feature-branch SHA while
+      # https://github.com/sanskrit-lexicon/csl-pyutil/pull/28 is open.
+      # Retarget to the v0.15.0 tag once it merges.
+      - name: Install the shared tripwire checker
+        run: |
+          pip install "csl-pyutil @ git+https://github.com/sanskrit-lexicon/csl-pyutil@0b42b7ff8a96e4190031be52d70452f7ed378e8f"
+      - name: Check the human review overlays against their pin
+        run: python -m csl_pyutil.integrity_tripwire --check --pin data/integrity/csl_atlas_review.pin.json
+      - name: Negative control — simulate --reseed and require RED
+        # Reproduces what --reseed does to the preserved rows (status back to
+        # pending, reviewer cleared) in a scratch copy, and fails the job if the
+        # checker stays green. The real seeder is NOT invoked: this repo's own
+        # danger fact is "never --reseed", and a CI job is not the place to make
+        # an exception to it. The checkout's files are never written.
+        run: |
+          set -e
+          scratch="$RUNNER_TEMP/tripwire-control"
+          mkdir -p "$scratch/src/data/review" "$scratch/data/integrity"
+          cp src/data/review/*.json "$scratch/src/data/review/"
+          cp data/integrity/csl_atlas_review.pin.json "$scratch/data/integrity/"
+          python - "$scratch" <<'PY'
+          import json, sys
+          path = sys.argv[1] + "/src/data/review/r2-checkpoint-review.json"
+          with open(path, encoding="utf-8") as fh:
+              doc = json.load(fh)
+          wiped = 0
+          for item in doc["items"]:
+              if item.get("reviewer") == "gasyoun":
+                  item["reviewStatus"] = "pending"
+                  item["reviewer"] = None
+                  item["reviewedValue"] = None
+                  wiped += 1
+          assert wiped == 10, "expected the 10 human rulings, found %d" % wiped
+          with open(path, "w", encoding="utf-8", newline="\n") as fh:
+              json.dump(doc, fh, ensure_ascii=False, indent=2)
+          PY
+          if python -m csl_pyutil.integrity_tripwire --check \
+               --pin "$scratch/data/integrity/csl_atlas_review.pin.json" --root "$scratch"; then
+            echo "::error::the tripwire stayed GREEN over a wiped human review overlay"
+            exit 1
+          fi
+          echo "negative control OK — the gate fires"

@@ -1,0 +1,208 @@
+{
+  "store_id": "csl_atlas_review_reports",
+  "overlay_sha256": "7819978e5c66a168a33872939084c34ed72d34555e05d9e9a1b919c47e955214",
+  "keyset_sha256": "5e0cd4671df53dbadaa05ba3dc25b0a4acff9ceadf456784879eb310a2e8e568",
+  "key_count": 10,
+  "sources": [
+    {
+      "path": "src/data/review/citation-link-pilot-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/citation-link-split-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/compound-depth-crosscheck-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/gender-conflicts-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/gender-model-crosscheck-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/h5-anomaly-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/langdetect-markup-crosscheck-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/lemma-normalization-crosscheck-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/low-confidence-alignment-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/r2-checkpoint-review.json",
+      "key_count": 10,
+      "overlay_sha256": "a6c36f6b700c0866bd6b148e5d59f2b05a2d5362b9703bb41622831002266a58",
+      "keyset_sha256": "625fa51a3b579aff095f36d3a74b3dbbef88ba897415e16b9affc4fabe96c964"
+    },
+    {
+      "path": "src/data/review/source-date-anchor-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/source-layer-anchoring-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/source-siglum-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "src/data/review/unknown-source-layers-review.json",
+      "key_count": 0,
+      "overlay_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ],
+  "reason": "wave-1-baseline",
+  "updated": "17-08-2026",
+  "source_gitignored": false,
+  "spec": {
+    "store_id": "csl_atlas_review_reports",
+    "source_gitignored": false,
+    "extract_path": "",
+    "key_fields": [
+      "queue",
+      "reviewId"
+    ],
+    "reviewed_fields": [
+      "reviewStatus",
+      "reviewedValue",
+      "reviewer",
+      "reviewedAt",
+      "note"
+    ],
+    "reviewed_predicate": {
+      "description": "A row is reviewed when items[].reviewStatus is in {reviewed-ok, reviewed-corrected} AND items[].reviewer holds a HUMAN identity. The second half is H1684: agent-attributed rows must not claim human-reviewed. Measured 17-08-2026: 147 rows pass the status half, only 10 pass both -- 130 codex + 7 Antigravity are agent-attributed, so status alone over-claims human review 14.7x. An unrecognised identity reads as NOT human; a genuinely new human reviewer moves the key set, so CI goes red and the census gains the name in the same pass that bumps the pin.",
+      "all_of": [
+        {
+          "field": "reviewStatus",
+          "test": "in",
+          "values": [
+            "reviewed-ok",
+            "reviewed-corrected"
+          ]
+        },
+        {
+          "field": "reviewer",
+          "test": "human_identity",
+          "known_human": [
+            "gasyoun"
+          ],
+          "known_agent": [
+            "codex",
+            "Antigravity"
+          ]
+        }
+      ],
+      "source_of_truth": "scripts/lib/review-report.mjs :: HUMAN_STATUSES (:15) + preservation predicate (:27)"
+    },
+    "sources": [
+      {
+        "path": "src/data/review/citation-link-pilot-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/citation-link-split-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/compound-depth-crosscheck-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/gender-conflicts-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/gender-model-crosscheck-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/h5-anomaly-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/langdetect-markup-crosscheck-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/lemma-normalization-crosscheck-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/low-confidence-alignment-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/r2-checkpoint-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/source-date-anchor-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/source-layer-anchoring-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/source-siglum-review.json",
+        "container": "json",
+        "records_at": "items"
+      },
+      {
+        "path": "src/data/review/unknown-source-layers-review.json",
+        "container": "json",
+        "records_at": "items"
+      }
+    ]
+  }
+}
