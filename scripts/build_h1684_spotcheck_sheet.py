@@ -73,6 +73,14 @@ UI_STRINGS_RU = {
         "В группе «выборка» вердикт агента намеренно скрыт: ваш голос — независимое измерение, "
         "по нему считается доверительная граница Уилсона."
     ),
+    # H3103: chrome keys added in csl-pyutil v0.18.0/v0.20.0, absent from
+    # this dict since it predates them — see build-review-sheets.py's H3103
+    # comment for the full "%(n)d items"/"Generated"/lang="en" backstory.
+    "count_suffix": "карточек",
+    "generated_label": "Собрано",
+    "doc_lang": "ru",
+    "filter_all": "все",
+    "filter_unvoted": "только непроголосованные",
 }
 
 
