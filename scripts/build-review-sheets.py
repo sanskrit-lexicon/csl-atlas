@@ -85,6 +85,15 @@ UI_STRINGS_RU = {
         "<b>Отклонить</b> — не принимать предложение, оставить как есть. <b>Отложить</b> — пока не "
         "уверены, вернуться позже. Поле примечания — для частичной правки вместо полного отклонения."
     ),
+    # H3103: three bare English chrome words baked into _CORE_TEMPLATE's
+    # <head>/<header> (csl-pyutil v0.18.0/v0.20.0) — unreachable via title/
+    # subtitle/footer/approve_label/reject_label, so this dict (predating
+    # those keys) still leaked "N items", "Generated ..." and lang="en".
+    "count_suffix": "карточек",
+    "generated_label": "Собрано",
+    "doc_lang": "ru",
+    "filter_all": "все",
+    "filter_unvoted": "только непроголосованные",
 }
 
 #: V3 + V6 -- applied to every csl-atlas sheet. V8 (save_as) is per-sheet
