@@ -305,10 +305,130 @@ export function source_text_to_iast(text, code) {
   return String(text).split('\n').map((l) => source_line_to_iast(l, code)).join('\n');
 }
 
+// ---- German lexicographic-apparatus (metalanguage) detection -----------------
+// Behaviour-identical port of the Python classify_german_metalanguage — see the
+// Python module for the full harvest provenance (pwg_tm_fragmentize GRAMMAR_AB /
+// FORMULA_AB / FORMULA_PHRASES, compile_translatable GRAM, microstructure FUNC_DE
+// ∪ pwg_mask DE_FUNCTION, H2684 extras, H2787 defect formulae). PWG/PW apparatus
+// spans ("eines", "im Comp. vorangehend", "adj.") must never be translated as
+// ordinary gloss prose; 'uncertain' (bare "so" / "Ergänzung") is the consumer's
+// treat-as-not-gloss-and-log case.
+export const GERMAN_GRAMMAR_AB = new Set([
+  'adj.', 'adv.', 'm.', 'f.', 'n.', 'm. n.', 'f. n.', 'm. f.', 'm. f. n.',
+  'partic.', 'part.', 'caus.', 'desid.', 'intens.', 'pass.', 'med.', 'act.',
+  'nom.', 'acc.', 'instr.', 'dat.', 'abl.', 'gen.', 'loc.', 'voc.',
+  'sg.', 'du.', 'pl.', 'inf.', 'abs.', 'ger.', 'impf.', 'perf.', 'aor.',
+  'opt.', 'impv.', 'fut.', 'cond.', 'ppp.', 'pp.', 'subst.', 'interj.',
+  'pron.', 'num.', 'indecl.', 'comp.', 'superl.', 'denomin.', 'desid',
+  'partic', 'caus',
+]);
+export const GERMAN_GRAMMAR_BARE = new Set([
+  'Subst', 'Adj', 'Adv', 'Indekl', 'PostP', 'mfn', 'ifc', 'NPr',
+  'Pl', 'Sg', 'Du', 'Akk', 'Lok', 'Dat', 'Gen', 'Instr', 'Nom', 'Vok',
+]);
+export const GERMAN_FORMULA_AB = new Set([
+  'vgl.', 's. u.', 's. d.', 's. v.', 's. u. d.', 'fgg.', 'fg.', 'dass.',
+  'ebend.', 'u.s.w.', 'desgl.', 'dgl.', 'sc.', 'scil.', 's. u. d. W.',
+  // H2684 one-bounded-repair extras
+  'demin.', 'personif.', 'uebertr.',
+]);
+// Pattern STRINGS (compiled case-insensitive); identical to the Python tuple.
+export const GERMAN_FORMULA_PHRASES = [
+  'am Anf(?:ange|\\.) eines Comp(?:ositums?|\\.)?',
+  'am Ende eines Comp(?:ositums?|\\.)?',
+  'an der Spitze eines Comp(?:ositums?|\\.)?',
+  'mit Ergänzung von',
+  'im Comp\\.(?:,? vorangehend[a-z]*)?',
+  'in Verbindung mit',
+  's\\.\\s*u\\.\\s*d\\.\\s*W\\.',
+];
+export const GERMAN_FUNCTION_WORDS = new Set(
+  ('der die das den dem des ein eine einen einem eines einer und oder aber auf '
+   + 'in an zu von mit bei nach für so als wie am im zum zur ist sind war wird '
+   + 'auch nur noch nicht wo wenn dass vor über unter durch ohne um bis').split(' '));
+export const GERMAN_AMBIGUOUS_TOKENS = new Set(['so', 'ergänzung']);
+
+// Guards: no German letter directly before/after (explicit classes — \b mishandles
+// umlauts and would diverge from the Python port).
+const GM_L = '(?<![A-Za-zäöüßÄÖÜ])';
+const GM_R = '(?![A-Za-zäöüßÄÖÜ])';
+const GM_PHRASE_RES = GERMAN_FORMULA_PHRASES.map((p) => new RegExp(GM_L + p + GM_R, 'gi'));
+
+// '.' is literal; a single space matches a plain-whitespace run ([ \t\n\r]+, NOT \s+,
+// because Python and JS disagree on the \s class edges).  Backslashes are escaped
+// first so a literal '\' in a token can never act as a regex metachar (CodeQL
+// incomplete-string-escaping; inputs today are compile-time constants - hardened
+// so a future dynamic token cannot turn the class into an injection surface).
+function gmTokenPattern(tok) {
+  return tok.replace(/\\/g, '\\\\').replace(/\./g, '\\.').replace(/ /g, '[ \t\n\r]+');
+}
+
+const gmSortTokens = (set) =>
+  [...set].sort((a, b) => (b.length - a.length) || (a < b ? -1 : a > b ? 1 : 0));
+const GM_DOTTED_RE = new RegExp(
+  GM_L + '(?:' + gmSortTokens(new Set([...GERMAN_GRAMMAR_AB, ...GERMAN_FORMULA_AB]))
+    .map(gmTokenPattern).join('|') + ')' + GM_R,
+  'gi');
+const GM_BARE_RE = new RegExp(
+  GM_L + '(?:' + gmSortTokens(GERMAN_GRAMMAR_BARE).join('|') + ')' + GM_R,
+  'g');   // case-SENSITIVE: NWS-layer labels, exact form
+const GM_WORD_RE = /[A-Za-zäöüßÄÖÜ]+/g;
+const gmEnsureDot = (t) => (t.endsWith('.') ? t : t + '.');
+const GM_FORMULA_NORM = new Set([...GERMAN_FORMULA_AB].map(gmEnsureDot));
+
+// Detect German lexicographic-apparatus spans; returns [{start, end, text, category}]
+// sorted by position. Categories: 'grammar_label' | 'recurring_formula' |
+// 'function_word' (whole text is bare function words) | 'uncertain' (whole text is
+// an ambiguous token — consumer treats as not-gloss and logs). Mid-text function
+// words ("Name eines Baumes") are NOT flagged; ordinary gloss prose returns [].
+// Offsets are code-unit-identical to the Python port for BMP text.
+export function classify_german_metalanguage(text) {
+  const s = text || '';
+  const spans = [];
+  const keep = (start, end, txt, category) => {
+    for (const sp of spans) if (start < sp.end && sp.start < end) return;
+    spans.push({ start, end, text: txt, category });
+  };
+  for (const rx of GM_PHRASE_RES) {
+    rx.lastIndex = 0;
+    for (const m of s.matchAll(rx)) keep(m.index, m.index + m[0].length, m[0], 'recurring_formula');
+  }
+  GM_DOTTED_RE.lastIndex = 0;
+  for (const m of s.matchAll(GM_DOTTED_RE)) {
+    const tok = gmEnsureDot(m[0].replace(/[ \t\n\r]+/g, ' ').toLowerCase());
+    const cat = GM_FORMULA_NORM.has(tok) ? 'recurring_formula' : 'grammar_label';
+    keep(m.index, m.index + m[0].length, m[0], cat);
+  }
+  GM_BARE_RE.lastIndex = 0;
+  for (const m of s.matchAll(GM_BARE_RE)) keep(m.index, m.index + m[0].length, m[0], 'grammar_label');
+  if (spans.length) {
+    spans.sort((a, b) => (a.start - b.start) || (a.end - b.end));
+    return spans;
+  }
+
+  // nothing matched: is the WHOLE text an apparatus placeholder / ambiguous token?
+  GM_WORD_RE.lastIndex = 0;
+  const words = (s.match(GM_WORD_RE) || []).map((w) => w.toLowerCase());
+  if (words.length
+      && words.every((w) => GERMAN_FUNCTION_WORDS.has(w) || GERMAN_AMBIGUOUS_TOKENS.has(w))) {
+    GM_WORD_RE.lastIndex = 0;
+    const first = GM_WORD_RE.exec(s);
+    const start = first.index;
+    let end = s.length;
+    while (end > start && ' \t\n\r'.includes(s[end - 1])) end -= 1;
+    const cat = words.every((w) => GERMAN_AMBIGUOUS_TOKENS.has(w)) ? 'uncertain' : 'function_word';
+    return [{ start, end, text: s.slice(start, end), category: cat }];
+  }
+  return [];
+}
+
 export default {
   to_slp1, from_slp1, to_roman, deva_to_iast, deva_to_slp1, iast_to_devanagari,
   norm, nfold, form_key, normalize_sanskrit,
   SLP1_VOWELS, SLP1_MARKS, SLP1_CONSONANTS, SLP1_ALPHABET,
   strip_slp1_accents, slp1_norm, slp1_form_key, slp1_to_devanagari, slp1_simplify,
   source_line_to_iast, source_text_to_iast,
+  classify_german_metalanguage,
+  GERMAN_GRAMMAR_AB, GERMAN_GRAMMAR_BARE, GERMAN_FORMULA_AB, GERMAN_FORMULA_PHRASES,
+  GERMAN_FUNCTION_WORDS, GERMAN_AMBIGUOUS_TOKENS,
 };
