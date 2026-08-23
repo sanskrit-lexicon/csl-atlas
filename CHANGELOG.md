@@ -4,6 +4,7 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.17.2] - 2026-08-24
 ### Added
 
 - **H2891 — the human review overlays now carry a committed digest, and CI goes
