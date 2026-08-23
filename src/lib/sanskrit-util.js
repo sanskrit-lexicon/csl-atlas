@@ -355,9 +355,12 @@ const GM_R = '(?![A-Za-zäöüßÄÖÜ])';
 const GM_PHRASE_RES = GERMAN_FORMULA_PHRASES.map((p) => new RegExp(GM_L + p + GM_R, 'gi'));
 
 // '.' is literal; a single space matches a plain-whitespace run ([ \t\n\r]+, NOT \s+,
-// because Python and JS disagree on the \s class edges).
+// because Python and JS disagree on the \s class edges).  Backslashes are escaped
+// first so a literal '\' in a token can never act as a regex metachar (CodeQL
+// incomplete-string-escaping; inputs today are compile-time constants - hardened
+// so a future dynamic token cannot turn the class into an injection surface).
 function gmTokenPattern(tok) {
-  return tok.replace(/\./g, '\\.').replace(/ /g, '[ \t\n\r]+');
+  return tok.replace(/\\/g, '\\\\').replace(/\./g, '\\.').replace(/ /g, '[ \t\n\r]+');
 }
 
 const gmSortTokens = (set) =>
