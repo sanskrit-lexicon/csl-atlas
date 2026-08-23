@@ -2,9 +2,10 @@
   "schemaVersion": "1.0.0",
   "handoff": "H2368",
   "title": "METALEX L8 — entry-level scan-page link census",
-  "generatedAt": "2026-08-07T19:10:10Z",
-  "generatedDate": "2026-08-07",
+  "generatedAt": "2026-08-23T22:15:13Z",
+  "generatedDate": "2026-08-24",
   "model": "Grok 4.5 (grok-4.5)",
+  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix)",
   "cslOrigRoot": "C:\\Users\\user\\Documents\\GitHub\\csl-orig\\v02",
   "method": {
     "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
@@ -30,13 +31,13 @@
     "with_pc": 1496156,
     "missing_pc": 1,
     "pc_pct": 99.9999,
-    "atlas_resolvable_scan": 409891,
-    "atlas_resolvable_pct": 27.3963
+    "atlas_resolvable_scan": 444527,
+    "atlas_resolvable_pct": 29.7113
   },
   "gap_buckets": {
     "pc_present_no_cologne_scan_dir": 1051383,
     "missing_pc": 1,
-    "pc_unparseable_for_atlas_scan_url": 34882
+    "pc_unparseable_for_atlas_scan_url": 246
   },
   "dict_buckets": {
     "pc_coverage_100": [
@@ -161,23 +162,23 @@
     {
       "bucket": "pc_unparseable_for_atlas_scan_url",
       "code": "ap90",
-      "L": "1",
-      "k1": "a",
-      "pc": "0001-a"
+      "L": "5719",
+      "k1": "A",
+      "pc": "0220-1"
     },
     {
       "bucket": "pc_unparseable_for_atlas_scan_url",
       "code": "ap90",
-      "L": "2",
-      "k1": "afRin",
-      "pc": "0001-c"
+      "L": "5720",
+      "k1": "A",
+      "pc": "0220-1"
     },
     {
       "bucket": "pc_unparseable_for_atlas_scan_url",
       "code": "ap90",
-      "L": "3",
-      "k1": "aMS",
-      "pc": "0001-c"
+      "L": "5721",
+      "k1": "AM",
+      "pc": "0220-1"
     }
   ],
   "rows": [
@@ -345,12 +346,12 @@
       "with_pc": 34882,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
+      "atlas_resolvable_scan": 34636,
+      "atlas_resolvable_pct": 99.2948,
       "in_cologne_scan_dir": true,
       "cologne_scan_dir": "AP90",
       "gap_reason_counts": {
-        "pc_unparseable_for_atlas_scan_url": 34882
+        "pc_unparseable_for_atlas_scan_url": 246
       },
       "pc_shape_top": [
         [
@@ -373,19 +374,19 @@
       "sample_missing_pc": [],
       "sample_unparseable_pc": [
         {
-          "L": "1",
-          "k1": "a",
-          "pc": "0001-a"
+          "L": "5719",
+          "k1": "A",
+          "pc": "0220-1"
         },
         {
-          "L": "2",
-          "k1": "afRin",
-          "pc": "0001-c"
+          "L": "5720",
+          "k1": "A",
+          "pc": "0220-1"
         },
         {
-          "L": "3",
-          "k1": "aMS",
-          "pc": "0001-c"
+          "L": "5721",
+          "k1": "AM",
+          "pc": "0220-1"
         }
       ]
     },

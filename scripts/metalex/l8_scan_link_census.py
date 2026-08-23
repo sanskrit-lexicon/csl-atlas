@@ -49,6 +49,9 @@ _GAP_SAMPLE_PER_BUCKET = 8
 _GAP_SAMPLE_PER_DICT = 3
 
 
+_PC_COLUMN_LETTER = re.compile(r"^(\d+)-[a-zA-Z]+$")
+
+
 def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
     """Port of cologne-links.mjs scanPageFromPc — exact contract."""
     raw = (pc or "").strip()
@@ -58,7 +61,11 @@ def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
     if code in MULTI_VOLUME_DICTS:
         return raw if re.fullmatch(r"\d+-\d+", raw) else None
     page = raw.split(",")[0].strip()
-    return page if re.fullmatch(r"\d+", page) else None
+    if re.fullmatch(r"\d+", page):
+        return page
+    # Single-volume "page-<column letter(s)>" shape (ap90: "0001-a").
+    m = _PC_COLUMN_LETTER.match(page)
+    return m.group(1) if m else None
 
 
 def atlas_resolvable(dict_code: str, pc: str | None) -> bool:
@@ -197,6 +204,7 @@ def build_report(rows: list[dict]) -> dict:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generatedDate": date.today().isoformat(),
         "model": "Grok 4.5 (grok-4.5)",
+        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix)",
         "cslOrigRoot": str(CSL_ORIG),
         "method": {
             "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
@@ -265,12 +273,13 @@ def render_md(report: dict) -> str:
     lines: list[str] = []
     lines.append("# METALEX L8 — entry-level scan-page link census")
     lines.append("")
-    lines.append(f"_Created: 07-08-2026 · Last updated: 07-08-2026_")
+    lines.append(f"_Created: 07-08-2026 · Last updated: 24-08-2026_")
     lines.append("")
     lines.append(
         f"**Handoff:** [H2368](https://github.com/gasyoun/Uprava/blob/main/handoffs/"
         f"H2368-Grok_csl-atlas_metalex-l8-scan-link-census_07.08.26.md) · "
-        f"**Model:** {report['model']} · **Generated:** {report['generatedAt']}"
+        f"**Model:** {report['model']} · **Generated:** {report['generatedAt']} · "
+        f"**Rerun:** {report['rerunBy']}"
     )
     lines.append("")
     lines.append("## Headline")
@@ -348,7 +357,9 @@ def render_md(report: dict) -> str:
     lines.append(
         f"- **In scan-dir map but not 100% resolvable:** "
         f"`{', '.join(db['in_scan_dir_but_not_100_resolvable']) or '—'}` "
-        f"(ap90: pc shape `NNNN-a` fails digit-only page extract)"
+        f"(ap90: page-column-letter shape `NNNN-a/b/c` is now stripped to the page "
+        f"— H2368-A10 fix; residual is a distinct `NNNN-N` numeric-suffix shape, "
+        f"e.g. `0220-1`, not yet understood well enough to resolve safely)"
     )
     lines.append(
         f"- **Not in scan-dir map:** {len(db['not_in_cologne_scan_dir'])} dicts "
