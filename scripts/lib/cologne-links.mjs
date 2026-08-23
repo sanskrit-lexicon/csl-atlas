@@ -85,7 +85,8 @@ export function entryUrl(dictCode, slp1Key, options = {}) {
 
 /**
  * Normalise a csl-orig <pc> field into the page value servepdf.php honours.
- * MW "134,1" (page,column) -> "134"; PWG "1-0614" (vol-Spalte) -> "1-0614".
+ * MW "134,1" (page,column) -> "134"; PWG "1-0614" (vol-Spalte) -> "1-0614";
+ * AP90 "0001-a" (page-column-letter) -> "0001".
  * @returns {string|null} null when <pc> is absent or not in a shape we trust
  */
 export function scanPageFromPc(dictCode, pc) {
@@ -97,7 +98,12 @@ export function scanPageFromPc(dictCode, pc) {
     return /^\d+-\d+$/.test(raw) ? raw : null;
   }
   const page = raw.split(",")[0].trim();
-  return /^\d+$/.test(page) ? page : null;
+  if (/^\d+$/.test(page)) return page;
+  // Single-volume "page-<column letter(s)>" shape (observed for ap90, e.g.
+  // "0001-a"): the trailing letters are a column marker, not a volume — drop
+  // them and keep the page digits (with any leading zeros, verbatim).
+  const columnMatch = page.match(/^(\d+)-[a-zA-Z]+$/);
+  return columnMatch ? columnMatch[1] : null;
 }
 
 /**

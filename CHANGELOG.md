@@ -37,6 +37,29 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   not the place to make an exception to it. Detection only; the refuse-by-default
   hatch on `--reseed` itself is H2892.
 
+### Fixed
+
+- **METALEX L8 — ap90 scan-page pc-shape gap (H2368-A10, Sonnet 5
+  `claude-sonnet-5`, 24-08-2026).** `scanPageFromPc` in
+  [`scripts/lib/cologne-links.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs)
+  only trusted a bare-digit or `page,column` `<pc>` shape, so every ap90 entry
+  — whose `<pc>` is `NNNN-a`/`NNNN-b`/`NNNN-c` (page-column-letter) — silently
+  failed to resolve despite ap90 being in `COLOGNE_SCAN_DIR`. Now strips the
+  trailing column letter(s) and keeps the page digits verbatim; mw and pwg
+  parsing is untouched. Re-running
+  [`scripts/metalex/l8_scan_link_census.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/metalex/l8_scan_link_census.py)
+  moves ap90 from 0% → **99.29%** atlas-resolvable (34,636 more entries) and the
+  overall L8 figure from 27.40% → **29.71%**; a residual 246 ap90 entries use a
+  distinct `NNNN-N` numeric-suffix `<pc>` shape not yet understood, left
+  unresolved rather than guessed at. New
+  [`test/cologne-links.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/cologne-links.test.mjs)
+  covers mw/pwg/ap90 `scanPageFromPc`/`scanUrl` contracts. Roadmap L8 checkbox
+  and
+  [`data/metalex/L8_SCAN_LINK_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md)
+  updated with the new measurement — **still not** L8-complete; the dominant
+  gap (1,051,383 entries, 41 dicts outside `COLOGNE_SCAN_DIR`) is unchanged and
+  needs per-dict Cologne scan-directory verification, out of scope here.
+
 ### Changed
 
 - **H2820 — CLAUDE.md truth-pass** (Grok 4.6 `grok-4.6`, 16-08-2026). Dated
