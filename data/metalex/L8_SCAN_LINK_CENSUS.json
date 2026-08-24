@@ -2,10 +2,10 @@
   "schemaVersion": "1.0.0",
   "handoff": "H2368",
   "title": "METALEX L8 — entry-level scan-page link census",
-  "generatedAt": "2026-08-24T19:57:32Z",
+  "generatedAt": "2026-08-24T20:08:00Z",
   "generatedDate": "2026-08-24",
   "model": "Grok 4.5 (grok-4.5)",
-  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension)",
+  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix)",
   "cslOrigRoot": "C:\\Users\\user\\Documents\\GitHub\\csl-orig\\v02",
   "method": {
     "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
@@ -42,13 +42,12 @@
     "with_pc": 1496156,
     "missing_pc": 1,
     "pc_pct": 99.9999,
-    "atlas_resolvable_scan": 583143,
-    "atlas_resolvable_pct": 38.9761
+    "atlas_resolvable_scan": 583389,
+    "atlas_resolvable_pct": 38.9925
   },
   "gap_buckets": {
     "pc_present_no_cologne_scan_dir": 912767,
-    "missing_pc": 1,
-    "pc_unparseable_for_atlas_scan_url": 246
+    "missing_pc": 1
   },
   "dict_buckets": {
     "pc_coverage_100": [
@@ -120,6 +119,7 @@
       "abch",
       "acph",
       "acsj",
+      "ap90",
       "armh",
       "bor",
       "cae",
@@ -132,9 +132,7 @@
       "snp",
       "wil"
     ],
-    "in_scan_dir_but_not_100_resolvable": [
-      "ap90"
-    ],
+    "in_scan_dir_but_not_100_resolvable": [],
     "not_in_cologne_scan_dir": [
       "acc",
       "ae",
@@ -181,27 +179,6 @@
       "L": "9035.1",
       "k1": "ruffian",
       "pc": ""
-    },
-    {
-      "bucket": "pc_unparseable_for_atlas_scan_url",
-      "code": "ap90",
-      "L": "5719",
-      "k1": "A",
-      "pc": "0220-1"
-    },
-    {
-      "bucket": "pc_unparseable_for_atlas_scan_url",
-      "code": "ap90",
-      "L": "5720",
-      "k1": "A",
-      "pc": "0220-1"
-    },
-    {
-      "bucket": "pc_unparseable_for_atlas_scan_url",
-      "code": "ap90",
-      "L": "5721",
-      "k1": "AM",
-      "pc": "0220-1"
     }
   ],
   "rows": [
@@ -363,13 +340,11 @@
       "with_pc": 34882,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 34636,
-      "atlas_resolvable_pct": 99.2948,
+      "atlas_resolvable_scan": 34882,
+      "atlas_resolvable_pct": 100.0,
       "in_cologne_scan_dir": true,
       "cologne_scan_dir": "AP90",
-      "gap_reason_counts": {
-        "pc_unparseable_for_atlas_scan_url": 246
-      },
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-b",
@@ -389,23 +364,7 @@
         ]
       ],
       "sample_missing_pc": [],
-      "sample_unparseable_pc": [
-        {
-          "L": "5719",
-          "k1": "A",
-          "pc": "0220-1"
-        },
-        {
-          "L": "5720",
-          "k1": "A",
-          "pc": "0220-1"
-        },
-        {
-          "L": "5721",
-          "k1": "AM",
-          "pc": "0220-1"
-        }
-      ]
+      "sample_unparseable_pc": []
     },
     {
       "code": "armh",

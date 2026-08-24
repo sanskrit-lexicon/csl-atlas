@@ -3,6 +3,30 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+### Fixed
+
+- **METALEX L8 — ap90 reaches 100% atlas-resolvable scan links, closing the
+  digit-marker residual A10 left open (H2368-A11 follow-up, Sonnet 5
+  `claude-sonnet-5`, 24-08-2026).** A10's L8 fix taught `scanPageFromPc` to
+  strip ap90's page-column-letter `<pc>` shape (`NNNN-a/b/c`) but left 246
+  entries unresolved, whose `<pc>` uses a digit instead of a letter
+  (`NNNN-N`, e.g. `0220-1`, `0351-2`). Tracing those entries in
+  `csl-orig/v02/ap90/ap90.txt` shows the digit shows up exactly at
+  new-letter section breaks — page 0220 runs `-a,-b,-c` then restarts as
+  `-1` where headwords starting with `A` begin — the same "trailing chunk
+  is a column marker, not a volume" shape as the letter case.
+  [`scripts/lib/cologne-links.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs)
+  now accepts an all-digit trailing marker alongside the all-letter one (a
+  mixed chunk like `x0` still stays unresolved — no shape invented beyond
+  what's observed), mirrored in
+  [`scripts/metalex/l8_scan_link_census.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/metalex/l8_scan_link_census.py).
+  L8 census re-measured on top of A11's 12-dict extension: atlas-resolvable
+  Cologne scan URLs **583,143 → 583,389** (38.98% → 38.99%); ap90 **99.29% →
+  100%**. L8 minimum stays unchecked — the dominant gap (912,767 entries
+  across the 29 dicts still outside `COLOGNE_SCAN_DIR`) is unaffected and
+  needs per-dict Cologne scan-directory verification, still out of scope
+  for this pass. Report:
+  [`data/metalex/L8_SCAN_LINK_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md).
 
 ## [0.17.3] - 2026-08-24
 ### Added

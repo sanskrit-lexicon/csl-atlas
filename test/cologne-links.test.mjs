@@ -17,6 +17,12 @@ test("scanPageFromPc: AP90 page-column-letter drops the trailing letter (H2368 g
   assert.equal(scanPageFromPc("ap90", "42-b"), "42");
 });
 
+test("scanPageFromPc: AP90 page-column-digit drops the trailing digit marker (H2368-A11 follow-up gap fix)", () => {
+  assert.equal(scanPageFromPc("ap90", "0351-1"), "0351", "column marker resets to numeric at a new-letter section break");
+  assert.equal(scanPageFromPc("ap90", "0220-1"), "0220");
+  assert.equal(scanPageFromPc("ap90", "0351-2"), "0351");
+});
+
 test("scanPageFromPc: unresolvable shapes stay null (no invented links)", () => {
   assert.equal(scanPageFromPc("ap90", ""), null);
   assert.equal(scanPageFromPc("ap90", "abc"), null);
