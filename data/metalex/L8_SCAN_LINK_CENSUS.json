@@ -2,27 +2,38 @@
   "schemaVersion": "1.0.0",
   "handoff": "H2368",
   "title": "METALEX L8 — entry-level scan-page link census",
-  "generatedAt": "2026-08-23T22:15:13Z",
+  "generatedAt": "2026-08-24T19:57:32Z",
   "generatedDate": "2026-08-24",
   "model": "Grok 4.5 (grok-4.5)",
-  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix)",
+  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension)",
   "cslOrigRoot": "C:\\Users\\user\\Documents\\GitHub\\csl-orig\\v02",
   "method": {
     "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
     "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
-    "numerator_atlas_scan": "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — dict ∈ COLOGNE_SCAN_DIR {mw, pwg, ap90} AND pc passes scanPageFromPc (PWG: /^\\d+-\\d+$/; others: first comma-field is digits-only)",
+    "numerator_atlas_scan": "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — dict ∈ COLOGNE_SCAN_DIR (15 dicts as of A11) AND pc passes scanPageFromPc (PWG: /^\\d+-\\d+$/; others: first comma-field is digits-only)",
     "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
     "non_goals": [
       "No mass link invention",
-      "No extension of COLOGNE_SCAN_DIR beyond the three verified maps",
-      "No live HTTP probe of Cologne servepdf (rate-limit host)",
+      "No extension of COLOGNE_SCAN_DIR without live spot-check confirmation (A11: single sequential WebFetch probes per candidate dict, not a bulk crawl)",
       "L9/L10 out of scope"
     ],
     "relation_to_richness_typology": "scripts/build-richness-typology.mjs L8 is DICT-level (sourceCode ∈ COLOGNE_SCAN_DIR). This census is ENTRY-level coverage. A dict can be typology L8=true while atlas_resolvable_pct < 100% if pc shapes fail scanPageFromPc (observed for ap90).",
     "cologne_scan_dir_map": {
       "mw": "MW",
       "pwg": "PWG",
-      "ap90": "AP90"
+      "ap90": "AP90",
+      "wil": "WIL",
+      "cae": "CAE",
+      "bor": "BOR",
+      "fri": "FRI",
+      "ieg": "IEG",
+      "armh": "ARMH",
+      "krm": "KRM",
+      "abch": "ABCH",
+      "pgn": "PGN",
+      "snp": "SNP",
+      "acsj": "ACSJ",
+      "acph": "ACPH"
     }
   },
   "totals": {
@@ -31,11 +42,11 @@
     "with_pc": 1496156,
     "missing_pc": 1,
     "pc_pct": 99.9999,
-    "atlas_resolvable_scan": 444527,
-    "atlas_resolvable_pct": 29.7113
+    "atlas_resolvable_scan": 583143,
+    "atlas_resolvable_pct": 38.9761
   },
   "gap_buckets": {
-    "pc_present_no_cologne_scan_dir": 1051383,
+    "pc_present_no_cologne_scan_dir": 912767,
     "missing_pc": 1,
     "pc_unparseable_for_atlas_scan_url": 246
   },
@@ -89,38 +100,53 @@
       "ae"
     ],
     "in_cologne_scan_dir": [
+      "abch",
+      "acph",
+      "acsj",
       "ap90",
+      "armh",
+      "bor",
+      "cae",
+      "fri",
+      "ieg",
+      "krm",
       "mw",
-      "pwg"
+      "pgn",
+      "pwg",
+      "snp",
+      "wil"
     ],
     "atlas_resolvable_100": [
+      "abch",
+      "acph",
+      "acsj",
+      "armh",
+      "bor",
+      "cae",
+      "fri",
+      "ieg",
+      "krm",
       "mw",
-      "pwg"
+      "pgn",
+      "pwg",
+      "snp",
+      "wil"
     ],
     "in_scan_dir_but_not_100_resolvable": [
       "ap90"
     ],
     "not_in_cologne_scan_dir": [
-      "abch",
       "acc",
-      "acph",
-      "acsj",
       "ae",
       "ap",
-      "armh",
       "ben",
       "bhs",
       "bop",
-      "bor",
       "bur",
-      "cae",
       "ccs",
-      "fri",
       "gra",
       "gst",
-      "ieg",
       "inm",
-      "krm",
       "lan",
       "lrv",
       "mci",
@@ -129,18 +155,15 @@
       "mwe",
       "nmmb",
       "pe",
-      "pgn",
       "pui",
       "pw",
       "pwkvn",
       "sch",
       "shs",
       "skd",
-      "snp",
       "stc",
       "vcp",
       "vei",
-      "wil",
       "yat"
     ]
   },
@@ -189,13 +212,11 @@
       "with_pc": 1965,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 1965
-      },
+      "atlas_resolvable_scan": 1965,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "ABCH",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -235,13 +256,11 @@
       "with_pc": 163,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 163
-      },
+      "atlas_resolvable_scan": 163,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "ACPH",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -258,13 +277,11 @@
       "with_pc": 240,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 240
-      },
+      "atlas_resolvable_scan": 240,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "ACSJ",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -397,13 +414,11 @@
       "with_pc": 7907,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 7907
-      },
+      "atlas_resolvable_scan": 7907,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "ARMH",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -505,13 +520,11 @@
       "with_pc": 24609,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 24609
-      },
+      "atlas_resolvable_scan": 24609,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "BOR",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -551,13 +564,11 @@
       "with_pc": 40069,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 40069
-      },
+      "atlas_resolvable_scan": 40069,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "CAE",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -613,13 +624,11 @@
       "with_pc": 8155,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 8155
-      },
+      "atlas_resolvable_scan": 8155,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "FRI",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -698,13 +707,11 @@
       "with_pc": 7932,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 7932
-      },
+      "atlas_resolvable_scan": 7932,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "IEG",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -744,13 +751,11 @@
       "with_pc": 2061,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 2061
-      },
+      "atlas_resolvable_scan": 2061,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "KRM",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -1024,13 +1029,11 @@
       "with_pc": 485,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 485
-      },
+      "atlas_resolvable_scan": 485,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "PGN",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -1274,13 +1277,11 @@
       "with_pc": 453,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 453
-      },
+      "atlas_resolvable_scan": 453,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "SNP",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
@@ -1370,13 +1371,11 @@
       "with_pc": 44577,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 44577
-      },
+      "atlas_resolvable_scan": 44577,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "WIL",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N",
