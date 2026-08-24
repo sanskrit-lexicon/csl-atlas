@@ -188,14 +188,14 @@ This becomes a heatmap chart on the dashboard.
 
 ## 5. Roadmap for data-structure evolution
 
-**Where we are**: most dicts at L4-L6; MW and PWG at entry-level L8 under the atlas scan URL builder (H2368 census).
+**Where we are**: most dicts at L4-L6; 15 dicts (mw, pwg, ap90, wil, cae, bor, fri, ieg, armh, krm, abch, pgn, snp, acsj, acph) at entry-level L8 under the atlas scan URL builder (H2368 census, A11 extension).
 **Where we want to be**: all dicts at L8+ minimum; flagship dicts at L9-L10.
 
 ### 5.1 Target end-state (5-year horizon)
 
 For every CDSL dictionary:
 
-- [ ] **L8 minimum**: every entry linked to scan page — **measured 07-08-2026, re-measured 24-08-2026 (H2368, A10 ap90 fix):** local csl-orig **1,496,157** entries · **1,496,156** with non-empty `<pc>` (**99.9999%**) · **444,527** atlas-resolvable Cologne scan URLs (**29.71%**, up from 27.40%; **mw** + **pwg** at 100%; **ap90** fixed from 0% → **99.29%** by teaching `scanPageFromPc` its page-column-letter `NNNN-a/b/c` shape — [scripts/lib/cologne-links.mjs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs), residual 246 ap90 entries use a distinct `NNNN-N` numeric-suffix shape not yet understood). Dominant gap unchanged: **1,051,383** entries with `<pc>` but dict not in the verified scan-dir map — extending `COLOGNE_SCAN_DIR` beyond mw/pwg/ap90 needs per-dict Cologne scan-directory verification, out of scope for this pass. **Not L8-complete.** Report: [data/metalex/L8_SCAN_LINK_CENSUS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md).
+- [ ] **L8 minimum**: every entry linked to scan page — **measured 07-08-2026, re-measured 24-08-2026 (H2368, A10 ap90 fix; A11 12-dict scan-dir extension):** local csl-orig **1,496,157** entries · **1,496,156** with non-empty `<pc>` (**99.9999%**) · **583,143** atlas-resolvable Cologne scan URLs (**38.98%**, up from 29.71%; **mw**, **pwg**, **wil**, **cae**, **bor**, **fri**, **ieg**, **armh**, **krm**, **abch**, **pgn**, **snp**, **acsj**, **acph** at 100%; **ap90** at 99.29%). A11 extended `COLOGNE_SCAN_DIR` from 3 → 15 dicts: `wil/cae/bor/fri/ieg/armh/krm/abch/pgn/snp/acsj/acph` all have a bare-integer `<pc>` (no volume-shape risk, H839) and their `{DICT}Scan/{year}` folder was cross-checked against the production deploy script `csl-websanlexicon/v02/redo_cologne_all.sh` **and** live spot-checked one `servepdf.php` fetch per dict (WebFetch, sequential, not bursty) — [scripts/lib/cologne-links.mjs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs). `nmmb` (NMMBScan/2026) was probed the same way and returned a broken response, not a scan page — left **out** rather than guessed at. Dominant gap now **912,767** entries (down from 1,051,383) across the remaining **29** dicts with `<pc>` but no verified Cologne scan-dir map — most of those have non-trivial `<pc>` shapes (page-column-letter, page,column-letter, multi-part) each needing its own `scanPageFromPc` rule plus a live spot-check before trusting it, per-dict work out of scope for this pass. **Not L8-complete.** Report: [data/metalex/L8_SCAN_LINK_CENSUS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md).
 - [ ] **L9 stretch**: cross-dict linking active for every shared lemma
 - [ ] **L10 aspirational**: external `csl-standards` export available; queryable via SPARQL
 
@@ -210,7 +210,7 @@ For every CDSL dictionary:
 | L4 → L5 | Identify literary-source citations and wrap in `<ls>` | weeks |
 | L5 → L6 | Detect and structure senses (often by `1.`, `;`, `2.` patterns) | weeks |
 | L6 → L7 | Detect cross-references and mark | days-weeks |
-| L7 → L8 | Match each entry to scan-page coordinates | months — **coordinates almost done** (`<pc>` ≈100% per H2368); **ap90 shape fix done (A10, 24-08-2026)**; remaining work is verified Cologne `*Scan` maps + pc→`servepdf` page normalisers for the 41 dicts still outside `COLOGNE_SCAN_DIR` (dominant gap, 1,051,383 entries) |
+| L7 → L8 | Match each entry to scan-page coordinates | months — **coordinates almost done** (`<pc>` ≈100% per H2368); **ap90 shape fix done (A10, 24-08-2026)**; **12 more dicts (wil/cae/bor/fri/ieg/armh/krm/abch/pgn/snp/acsj/acph) verified + live-spot-checked (A11, 24-08-2026)**; remaining work is verified Cologne `*Scan` maps + pc→`servepdf` page normalisers for the 29 dicts still outside `COLOGNE_SCAN_DIR` (dominant gap, 912,767 entries) |
 | L8 → L9 | Build cross-dict lemma matching | new infrastructure |
 | L9 → L10 | external TEI/RDF conversion + SPARQL endpoint | `csl-standards` infrastructure |
 
@@ -279,7 +279,7 @@ A specific cross-cutting analysis using all the metalexicography KPIs from §2-�
 ### 7.2 Expected paper findings
 
 - MW's per-entry investment is 5-10× the median dict
-- MW is the ONLY dict at L8 (full Dictionary→Book linking) — **superseded H2368, re-measured A10 24-08-2026:** MW **and** PWG are 100% atlas-resolvable, **ap90 now 99.29%**; print coordinates are near-universal; working scan URLs are the bottleneck (29.71% overall)
+- MW is the ONLY dict at L8 (full Dictionary→Book linking) — **superseded H2368, re-measured A10+A11 24-08-2026:** 15 dicts (mw, pwg, wil, cae, bor, fri, ieg, armh, krm, abch, pgn, snp, acsj, acph at 100%; ap90 at 99.29%) are atlas-resolvable; print coordinates are near-universal; working scan URLs for the remaining 29 dicts are the bottleneck (38.98% overall)
 - MW has the deepest XML markup
 - MW is referenced in the most other CDSL repos
 - BUT: PWG has comparable per-entry investment when normalised (it's foundational)

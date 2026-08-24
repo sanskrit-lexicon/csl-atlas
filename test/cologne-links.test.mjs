@@ -25,12 +25,36 @@ test("scanPageFromPc: unresolvable shapes stay null (no invented links)", () => 
 });
 
 test("scanUrl: null dict or unparseable pc yields no URL; ap90 now resolves (H2368 gap fix)", () => {
-  assert.equal(scanUrl("wil", "1"), null, "wil is not in COLOGNE_SCAN_DIR");
+  assert.equal(scanUrl("nmmb", "1"), null, "nmmb spot-check failed live (A11) — deliberately not in COLOGNE_SCAN_DIR");
   assert.equal(scanUrl("ap90", "0001-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/AP90Scan/2020/web/webtc/servepdf.php?page=0001");
 });
 
-test("COLOGNE_SCAN_DIR still names only the three verified dicts", () => {
-  assert.deepEqual(COLOGNE_SCAN_DIR, { mw: "MW", pwg: "PWG", ap90: "AP90" });
+test("scanUrl: A11 dicts resolve with their verified scan dir and year", () => {
+  assert.equal(scanUrl("wil", "001"), "https://sanskrit-lexicon.uni-koeln.de/scans/WILScan/2020/web/webtc/servepdf.php?page=001");
+  assert.equal(scanUrl("fri", "011"), "https://sanskrit-lexicon.uni-koeln.de/scans/FRIScan/2025/web/webtc/servepdf.php?page=011");
+  assert.equal(scanUrl("abch", "5"), "https://sanskrit-lexicon.uni-koeln.de/scans/ABCHScan/2023/web/webtc/servepdf.php?page=5");
+  assert.equal(scanUrl("acsj", "1"), "https://sanskrit-lexicon.uni-koeln.de/scans/ACSJScan/2023/web/webtc/servepdf.php?page=1");
+  assert.equal(scanUrl("acph", "1"), "https://sanskrit-lexicon.uni-koeln.de/scans/ACPHScan/2023/web/webtc/servepdf.php?page=1");
+});
+
+test("COLOGNE_SCAN_DIR names the fifteen live-verified dicts (H2368 + A11)", () => {
+  assert.deepEqual(COLOGNE_SCAN_DIR, {
+    mw: "MW",
+    pwg: "PWG",
+    ap90: "AP90",
+    wil: "WIL",
+    cae: "CAE",
+    bor: "BOR",
+    fri: "FRI",
+    ieg: "IEG",
+    armh: "ARMH",
+    krm: "KRM",
+    abch: "ABCH",
+    pgn: "PGN",
+    snp: "SNP",
+    acsj: "ACSJ",
+    acph: "ACPH"
+  });
 });
 
 test("entryUrl is unaffected by the scanPageFromPc fix", () => {

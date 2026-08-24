@@ -3,6 +3,42 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+### Added
+
+- **METALEX L8 — 12-dict `COLOGNE_SCAN_DIR` extension (H2368-A11, Sonnet 5
+  `claude-sonnet-5`, 24-08-2026).** The L8 census's dominant gap was 41 dicts
+  outside the atlas's verified Cologne scan-directory map — A10 scoped
+  further extension out as needing "per-dict Cologne scan-directory
+  verification." That verification source turned out to already exist:
+  `csl-websanlexicon/v02/redo_cologne_all.sh`, the production script that
+  deploys the live Cologne site, names the exact `{DICT}Scan/{year}` folder
+  for every dict. Of the 41 gap dicts, 13 have a `<pc>` that is always a bare
+  integer (no volume/column suffix, so none of the H839 "silently defaults to
+  volume 1" risk that blocks a naive PWG-style extension) — `wil, cae, bor,
+  fri, ieg, armh, krm, abch, pgn, snp, acsj, acph, nmmb`. Each was spot-checked
+  live, one sequential `servepdf.php` fetch per dict (not a burst — this host
+  429s, Uprava `SERVER_OUTAGES.md`): 12 resolved a real scanned page; `nmmb`
+  (`NMMBScan/2026`, per `SanskritLexicography/FINDINGS.md` §50) returned a
+  broken response and was left **out** of `COLOGNE_SCAN_DIR` rather than
+  guessed at. New `COLOGNE_SCAN_YEAR` map in
+  [`scripts/lib/cologne-links.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs)
+  carries the non-2020 deploy years (`fri` 2025; `abch`/`acsj`/`acph` 2023)
+  that `redo_cologne_all.sh` records for those dicts; `entryUrl`/`scanUrl` now
+  build both link shapes from it instead of hardcoding `/2020/`. Re-running
+  [`scripts/metalex/l8_scan_link_census.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/metalex/l8_scan_link_census.py)
+  moves the overall L8 figure from 29.71% → **38.98%** (444,527 → **583,143**
+  atlas-resolvable entries; the `pc_present_no_cologne_scan_dir` gap shrinks
+  from 1,051,383 to **912,767** across 29 remaining dicts).
+  [`scripts/build-richness-typology.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-richness-typology.mjs)
+  regenerated: the 12 dicts now show `l8.met = true` at dict level. New
+  `COLOGNE_SCAN_DIR`/`scanUrl` cases in
+  [`test/cologne-links.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/cologne-links.test.mjs).
+  Roadmap L8 checkbox and
+  [`data/metalex/L8_SCAN_LINK_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md)
+  updated — **still not** L8-complete; the remaining 29 dicts have non-trivial
+  `<pc>` shapes (page-column-letter, page-comma-column-letter, multi-part) that
+  each need their own `scanPageFromPc` rule plus a live spot-check, out of
+  scope for this pass.
 
 ## [0.17.2] - 2026-08-24
 ### Added

@@ -53,11 +53,47 @@
 const ENTRY_BASE = "https://www.sanskrit-lexicon.uni-koeln.de/scans";
 const SCAN_BASE = "https://sanskrit-lexicon.uni-koeln.de/scans";
 
-/** csl-orig dict code -> Cologne scan-directory prefix. Extend as dicts are added. */
+/**
+ * csl-orig dict code -> Cologne scan-directory prefix. Extend as dicts are added.
+ *
+ * wil/cae/bor/fri/ieg/armh/krm/abch/pgn/snp/acsj/acph added A11 (H2368 roadmap
+ * follow-on): dict-> {DIR}Scan/{year} verified against the production deploy
+ * script `csl-websanlexicon/v02/redo_cologne_all.sh` (the source that builds
+ * the live site), then spot-checked live via servepdf.php for every one of
+ * the twelve before trusting it (WebFetch, single sequential requests — this
+ * host 429s on bursts, Uprava SERVER_OUTAGES.md). `nmmb` was tried the same
+ * way (NMMBScan/2026, per SanskritLexicography FINDINGS.md §50) and the probe
+ * came back a broken/error response, not a scan page — left OUT rather than
+ * guessed at; emitting no link beats emitting a silently-wrong one.
+ */
 export const COLOGNE_SCAN_DIR = Object.freeze({
   mw: "MW",
   pwg: "PWG",
-  ap90: "AP90"
+  ap90: "AP90",
+  wil: "WIL",
+  cae: "CAE",
+  bor: "BOR",
+  fri: "FRI",
+  ieg: "IEG",
+  armh: "ARMH",
+  krm: "KRM",
+  abch: "ABCH",
+  pgn: "PGN",
+  snp: "SNP",
+  acsj: "ACSJ",
+  acph: "ACPH"
+});
+
+/**
+ * Cologne scan-site year for dicts whose deployed folder isn't .../2020/ —
+ * mirrors the year each dict was (re)published with in redo_cologne_all.sh /
+ * dictparms.py. Absent codes default to 2020.
+ */
+const COLOGNE_SCAN_YEAR = Object.freeze({
+  fri: "2025",
+  abch: "2023",
+  acsj: "2023",
+  acph: "2023"
 });
 
 /** Dicts whose Cologne page keys are "{vol}-{page:04d}" rather than a bare page. */
@@ -65,6 +101,10 @@ const MULTI_VOLUME_DICTS = new Set(["pwg"]);
 
 function scanDir(dictCode) {
   return COLOGNE_SCAN_DIR[String(dictCode ?? "").toLowerCase()] ?? null;
+}
+
+function scanYear(dictCode) {
+  return COLOGNE_SCAN_YEAR[String(dictCode ?? "").toLowerCase()] ?? "2020";
 }
 
 /**
@@ -79,7 +119,8 @@ export function entryUrl(dictCode, slp1Key, options = {}) {
   const key = String(slp1Key ?? "").trim();
   if (!dir || !key) return null;
   const filter = options.filter ?? "roman";
-  return `${ENTRY_BASE}/${dir}Scan/2020/web/webtc/indexcaller.php`
+  const year = scanYear(dictCode);
+  return `${ENTRY_BASE}/${dir}Scan/${year}/web/webtc/indexcaller.php`
     + `?key=${encodeURIComponent(key)}&transLit=slp1&filter=${encodeURIComponent(filter)}`;
 }
 
@@ -114,7 +155,8 @@ export function scanUrl(dictCode, pc) {
   const dir = scanDir(dictCode);
   const page = scanPageFromPc(dictCode, pc);
   if (!dir || !page) return null;
-  return `${SCAN_BASE}/${dir}Scan/2020/web/webtc/servepdf.php?page=${encodeURIComponent(page)}`;
+  const year = scanYear(dictCode);
+  return `${SCAN_BASE}/${dir}Scan/${year}/web/webtc/servepdf.php?page=${encodeURIComponent(page)}`;
 }
 
 /**

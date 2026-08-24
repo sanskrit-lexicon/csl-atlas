@@ -39,6 +39,18 @@ COLOGNE_SCAN_DIR = {
     "mw": "MW",
     "pwg": "PWG",
     "ap90": "AP90",
+    "wil": "WIL",
+    "cae": "CAE",
+    "bor": "BOR",
+    "fri": "FRI",
+    "ieg": "IEG",
+    "armh": "ARMH",
+    "krm": "KRM",
+    "abch": "ABCH",
+    "pgn": "PGN",
+    "snp": "SNP",
+    "acsj": "ACSJ",
+    "acph": "ACPH",
 }
 MULTI_VOLUME_DICTS = {"pwg"}
 
@@ -204,21 +216,20 @@ def build_report(rows: list[dict]) -> dict:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generatedDate": date.today().isoformat(),
         "model": "Grok 4.5 (grok-4.5)",
-        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix)",
+        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension)",
         "cslOrigRoot": str(CSL_ORIG),
         "method": {
             "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
             "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
             "numerator_atlas_scan": (
                 "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — "
-                "dict ∈ COLOGNE_SCAN_DIR {mw, pwg, ap90} AND pc passes scanPageFromPc "
+                "dict ∈ COLOGNE_SCAN_DIR (15 dicts as of A11) AND pc passes scanPageFromPc "
                 r"(PWG: /^\d+-\d+$/; others: first comma-field is digits-only)"
             ),
             "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
             "non_goals": [
                 "No mass link invention",
-                "No extension of COLOGNE_SCAN_DIR beyond the three verified maps",
-                "No live HTTP probe of Cologne servepdf (rate-limit host)",
+                "No extension of COLOGNE_SCAN_DIR without live spot-check confirmation (A11: single sequential WebFetch probes per candidate dict, not a bulk crawl)",
                 "L9/L10 out of scope",
             ],
             "relation_to_richness_typology": (

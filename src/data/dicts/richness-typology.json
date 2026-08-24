@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-07-27T13:33:09.776Z",
+  "generatedAt": "2026-08-24T20:00:11.367Z",
   "claim": "M1: every locally-present CDSL dictionary placed on the roadmap's L0-L10 data-richness ordinal scale, with a machine-readable justification per level.",
   "evidenceLabel": "derived",
   "reviewStatus": "machine-reviewed",
@@ -838,8 +838,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"cae\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"cae\" -> COLOGNE_SCAN_DIR[\"cae\"]=\"CAE\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -853,7 +853,7 @@
         }
       },
       "notes": [
-        "Raw evidence for L7 is present despite the cumulative cap at L4 — a lower-tier convention gap (see criteria), not missing content."
+        "Raw evidence for L7, L8 is present despite the cumulative cap at L4 — a lower-tier convention gap (see criteria), not missing content."
       ]
     },
     {
@@ -1096,8 +1096,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"wil\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"wil\" -> COLOGNE_SCAN_DIR[\"wil\"]=\"WIL\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -1110,7 +1110,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L4 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "ACC",
@@ -1222,8 +1224,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"armh\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"armh\" -> COLOGNE_SCAN_DIR[\"armh\"]=\"ARMH\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -1236,7 +1238,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "BOP",
@@ -1349,8 +1353,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"bor\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"bor\" -> COLOGNE_SCAN_DIR[\"bor\"]=\"BOR\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -1364,7 +1368,7 @@
         }
       },
       "notes": [
-        "Raw evidence for L6 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content.",
+        "Raw evidence for L6, L8 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content.",
         "Absent from coverage-matrix.json (outside the Core-40 comparison slice); L4-L6 rely on data/dictionary-coverage.json blockPct alone."
       ]
     },
@@ -1478,8 +1482,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"fri\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"fri\" -> COLOGNE_SCAN_DIR[\"fri\"]=\"FRI\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -1492,7 +1496,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "GST",
@@ -1604,8 +1610,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"ieg\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"ieg\" -> COLOGNE_SCAN_DIR[\"ieg\"]=\"IEG\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -1618,7 +1624,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "INM",
@@ -1730,8 +1738,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"krm\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"krm\" -> COLOGNE_SCAN_DIR[\"krm\"]=\"KRM\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -1744,7 +1752,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "LRV",
@@ -2111,8 +2121,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"pgn\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"pgn\" -> COLOGNE_SCAN_DIR[\"pgn\"]=\"PGN\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -2125,7 +2135,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "PUI",
@@ -2430,8 +2442,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"snp\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"snp\" -> COLOGNE_SCAN_DIR[\"snp\"]=\"SNP\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -2444,7 +2456,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "VCP",
@@ -2684,8 +2698,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"abch\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"abch\" -> COLOGNE_SCAN_DIR[\"abch\"]=\"ABCH\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -2698,7 +2712,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L1 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "ACPH",
@@ -2747,8 +2763,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"acph\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"acph\" -> COLOGNE_SCAN_DIR[\"acph\"]=\"ACPH\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -2761,7 +2777,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L1 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "ACSJ",
@@ -2810,8 +2828,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"acsj\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"acsj\" -> COLOGNE_SCAN_DIR[\"acsj\"]=\"ACSJ\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -2824,7 +2842,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L1 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "NMMB",
