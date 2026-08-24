@@ -3,6 +3,8 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+
+## [0.17.4] - 2026-08-24
 ### Fixed
 
 - **METALEX L8 — ap90 reaches 100% atlas-resolvable scan links, closing the
