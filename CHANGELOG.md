@@ -3,6 +3,8 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+
+## [0.17.3] - 2026-08-24
 ### Added
 
 - **METALEX L8 — 12-dict `COLOGNE_SCAN_DIR` extension (H2368-A11, Sonnet 5
