@@ -61,7 +61,7 @@ _GAP_SAMPLE_PER_BUCKET = 8
 _GAP_SAMPLE_PER_DICT = 3
 
 
-_PC_COLUMN_LETTER = re.compile(r"^(\d+)-[a-zA-Z]+$")
+_PC_COLUMN_MARKER = re.compile(r"^(\d+)-([a-zA-Z]+|\d+)$")
 
 
 def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
@@ -75,8 +75,10 @@ def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
     page = raw.split(",")[0].strip()
     if re.fullmatch(r"\d+", page):
         return page
-    # Single-volume "page-<column letter(s)>" shape (ap90: "0001-a").
-    m = _PC_COLUMN_LETTER.match(page)
+    # Single-volume "page-<column marker>" shape (ap90: "0001-a", or at a
+    # new-letter section break "0351-1" — H2368-A11 follow-up). Marker is
+    # all-letters or all-digits, never mixed.
+    m = _PC_COLUMN_MARKER.match(page)
     return m.group(1) if m else None
 
 
@@ -216,7 +218,7 @@ def build_report(rows: list[dict]) -> dict:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generatedDate": date.today().isoformat(),
         "model": "Grok 4.5 (grok-4.5)",
-        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension)",
+        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix)",
         "cslOrigRoot": str(CSL_ORIG),
         "method": {
             "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
@@ -363,14 +365,16 @@ def render_md(report: dict) -> str:
         f"- **In atlas `COLOGNE_SCAN_DIR`:** `{', '.join(db['in_cologne_scan_dir']) or '—'}`"
     )
     lines.append(
-        f"- **Atlas-resolvable 100%:** `{', '.join(db['atlas_resolvable_100']) or '—'}`"
+        f"- **Atlas-resolvable 100%:** `{', '.join(db['atlas_resolvable_100']) or '—'}` "
+        f"(ap90 reached 100% in two steps: page-column-letter shape `NNNN-a/b/c` "
+        f"stripped to the page — H2368-A10 fix; then the page-column-digit shape "
+        f"`NNNN-N` seen at new-letter section breaks, e.g. `0220-1`, `0351-2` — "
+        f"H2368-A11 follow-up, same reasoning: the trailing chunk is a column "
+        f"marker, not a volume)"
     )
     lines.append(
         f"- **In scan-dir map but not 100% resolvable:** "
-        f"`{', '.join(db['in_scan_dir_but_not_100_resolvable']) or '—'}` "
-        f"(ap90: page-column-letter shape `NNNN-a/b/c` is now stripped to the page "
-        f"— H2368-A10 fix; residual is a distinct `NNNN-N` numeric-suffix shape, "
-        f"e.g. `0220-1`, not yet understood well enough to resolve safely)"
+        f"`{', '.join(db['in_scan_dir_but_not_100_resolvable']) or '—'}`"
     )
     lines.append(
         f"- **Not in scan-dir map:** {len(db['not_in_cologne_scan_dir'])} dicts "

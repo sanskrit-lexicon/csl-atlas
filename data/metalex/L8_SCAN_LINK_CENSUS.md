@@ -2,7 +2,7 @@
 
 _Created: 07-08-2026 · Last updated: 24-08-2026_
 
-**Handoff:** [H2368](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2368-Grok_csl-atlas_metalex-l8-scan-link-census_07.08.26.md) · **Model:** Grok 4.5 (grok-4.5) · **Generated:** 2026-08-24T19:57:32Z · **Rerun:** Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension)
+**Handoff:** [H2368](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2368-Grok_csl-atlas_metalex-l8-scan-link-census_07.08.26.md) · **Model:** Grok 4.5 (grok-4.5) · **Generated:** 2026-08-24T20:08:00Z · **Rerun:** Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix)
 
 ## Headline
 
@@ -10,7 +10,7 @@ _Created: 07-08-2026 · Last updated: 24-08-2026_
 |---|---:|---:|---:|
 | Entries in scope (local csl-orig) | 1,496,157 | — | 100 |
 | With non-empty `<pc>` (print coordinate) | 1,496,156 | 1,496,157 | **100.00** |
-| Atlas-resolvable Cologne scan URL | 583,143 | 1,496,157 | **38.98** |
+| Atlas-resolvable Cologne scan URL | 583,389 | 1,496,157 | **38.99** |
 
 **L8 complete?** **No.** Do not claim L8 complete: print coordinates are nearly universal, but a working Cologne scan URL is only resolvable for a minority of entries under the atlas's verified dict→scan-dir map.
 
@@ -35,14 +35,14 @@ _Created: 07-08-2026 · Last updated: 24-08-2026_
 |---|---:|---|
 | `missing_pc` | 1 | Header has no non-empty `<pc>` |
 | `pc_present_no_cologne_scan_dir` | 912,767 | `<pc>` present but dict not in atlas `COLOGNE_SCAN_DIR` (no verified Cologne scan URL builder) |
-| `pc_unparseable_for_atlas_scan_url` | 246 | Dict is in `COLOGNE_SCAN_DIR` but `scanPageFromPc` returns null (pc shape not trusted by the atlas builder) |
+| `pc_unparseable_for_atlas_scan_url` | 0 | Dict is in `COLOGNE_SCAN_DIR` but `scanPageFromPc` returns null (pc shape not trusted by the atlas builder) |
 
 ### Dict-level sets
 
 - **`<pc>` coverage 100%:** 43 dicts (not 100%: `ae`)
 - **In atlas `COLOGNE_SCAN_DIR`:** `abch, acph, acsj, ap90, armh, bor, cae, fri, ieg, krm, mw, pgn, pwg, snp, wil`
-- **Atlas-resolvable 100%:** `abch, acph, acsj, armh, bor, cae, fri, ieg, krm, mw, pgn, pwg, snp, wil`
-- **In scan-dir map but not 100% resolvable:** `ap90` (ap90: page-column-letter shape `NNNN-a/b/c` is now stripped to the page — H2368-A10 fix; residual is a distinct `NNNN-N` numeric-suffix shape, e.g. `0220-1`, not yet understood well enough to resolve safely)
+- **Atlas-resolvable 100%:** `abch, acph, acsj, ap90, armh, bor, cae, fri, ieg, krm, mw, pgn, pwg, snp, wil` (ap90 reached 100% in two steps: page-column-letter shape `NNNN-a/b/c` stripped to the page — H2368-A10 fix; then the page-column-digit shape `NNNN-N` seen at new-letter section breaks, e.g. `0220-1`, `0351-2` — H2368-A11 follow-up, same reasoning: the trailing chunk is a column marker, not a volume)
+- **In scan-dir map but not 100% resolvable:** `—`
 - **Not in scan-dir map:** 29 dicts (dominant gap — coordinates exist; atlas has no verified servepdf map)
 
 ## Per-dictionary table
@@ -62,7 +62,7 @@ _Created: 07-08-2026 · Last updated: 24-08-2026_
 | wil | 44,577 | 44,577 | 100.00 | 44,577 | 100.00 | yes | `N`×44577 |
 | skd | 42,531 | 42,531 | 100.00 | 0 | 0.00 | no | `N-N-a`×14334, `N-N-c`×14321, `N-N-b`×13841 |
 | cae | 40,069 | 40,069 | 100.00 | 40,069 | 100.00 | yes | `N`×40069 |
-| ap90 | 34,882 | 34,882 | 100.00 | 34,636 | 99.29 | yes | `N-b`×11574, `N-c`×11532, `N-a`×11530 |
+| ap90 | 34,882 | 34,882 | 100.00 | 34,882 | 100.00 | yes | `N-b`×11574, `N-c`×11532, `N-a`×11530 |
 | mwe | 32,378 | 32,378 | 100.00 | 0 | 0.00 | no | `N-b`×16389, `N-a`×15989 |
 | ccs | 30,010 | 30,010 | 100.00 | 0 | 0.00 | no | `N-N`×29099, `N-Na`×844, `N-Nc`×32 |
 | sch | 29,125 | 29,125 | 100.00 | 0 | 0.00 | no | `N-N`×28610, `Na-N`×515 |
@@ -99,9 +99,6 @@ _Created: 07-08-2026 · Last updated: 24-08-2026_
 | bucket | code | L | k1 | pc |
 |---|---|---|---|---|
 | `missing_pc` | ae | 9035.1 | `ruffian` | `` |
-| `pc_unparseable_for_atlas_scan_url` | ap90 | 5719 | `A` | `0220-1` |
-| `pc_unparseable_for_atlas_scan_url` | ap90 | 5720 | `A` | `0220-1` |
-| `pc_unparseable_for_atlas_scan_url` | ap90 | 5721 | `AM` | `0220-1` |
 
 The mass of the gap is **dict not in `COLOGNE_SCAN_DIR`**, not missing `<pc>`. Those rows are not expanded entry-by-entry (would be ~1.2M rows and invent nothing useful).
 

@@ -127,7 +127,9 @@ export function entryUrl(dictCode, slp1Key, options = {}) {
 /**
  * Normalise a csl-orig <pc> field into the page value servepdf.php honours.
  * MW "134,1" (page,column) -> "134"; PWG "1-0614" (vol-Spalte) -> "1-0614";
- * AP90 "0001-a" (page-column-letter) -> "0001".
+ * AP90 "0001-a" (page-column-letter) -> "0001"; AP90 "0351-1" (page-column-digit,
+ * seen at a new-letter section break where the column marker itself resets to
+ * numeric — H2368-A11 follow-up) -> "0351".
  * @returns {string|null} null when <pc> is absent or not in a shape we trust
  */
 export function scanPageFromPc(dictCode, pc) {
@@ -140,10 +142,12 @@ export function scanPageFromPc(dictCode, pc) {
   }
   const page = raw.split(",")[0].trim();
   if (/^\d+$/.test(page)) return page;
-  // Single-volume "page-<column letter(s)>" shape (observed for ap90, e.g.
-  // "0001-a"): the trailing letters are a column marker, not a volume — drop
-  // them and keep the page digits (with any leading zeros, verbatim).
-  const columnMatch = page.match(/^(\d+)-[a-zA-Z]+$/);
+  // Single-volume "page-<column marker>" shape (observed for ap90, e.g. "0001-a"
+  // or, at a new-letter section break, "0351-1"): the trailing chunk is a column
+  // marker, not a volume — drop it and keep the page digits (with any leading
+  // zeros, verbatim). The marker itself is either all letters or all digits, never
+  // mixed (a mixed chunk like "x0" is not a marker shape we've verified).
+  const columnMatch = page.match(/^(\d+)-([a-zA-Z]+|\d+)$/);
   return columnMatch ? columnMatch[1] : null;
 }
 
