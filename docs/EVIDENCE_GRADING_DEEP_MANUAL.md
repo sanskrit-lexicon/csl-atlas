@@ -1,6 +1,6 @@
 # csl-atlas — Evidence-Grading Methodology & Human-Review Deep Manual
 
-_Created: 21-07-2026 · Last updated: 21-07-2026_
+_Created: 21-07-2026 · Last updated: 17-08-2026_
 
 > Deep manual for the org's flagship epistemic architecture: how a claim in csl-atlas is
 > born, labeled, provenance-stamped, routed to human review, statistically tested,
@@ -55,6 +55,15 @@ blanks the human review overlay (§8.3, §14). Registered in
 [Uprava DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md)
 and mirrored publicly in
 [AGENTS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/AGENTS.md).
+
+Since **H2892 (17-08-2026) that sentence is enforced, not advised**: `--reseed`
+exits **2** and writes nothing unless `ALLOW_OVERLAY_WIPE=1` is set in the
+environment. The hatch is exact — `true`, `yes`, an empty value all still refuse.
+The plain overlay-preserving rebuild is untouched and remains the normal path.
+Lock: `refuseReseedWithoutHatch` in
+[scripts/lib/review-report.mjs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/review-report.mjs);
+proof in both directions:
+[test/reseed-lock.test.mjs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/reseed-lock.test.mjs).
 
 ## 2. Component map
 

@@ -133,6 +133,28 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ### Added
 
+- **H2892 — `--reseed` now refuses instead of asking to be trusted** (Opus 5
+  `claude-opus-5`, 17-08-2026). `npm run build-r2-checkpoint-review -- --reseed`
+  skips `loadPreserved` and blanks the human review overlay back to the machine
+  seed. That has been a registered do-not-run danger fact in prose since it was
+  written; it is now a gate. The flag exits **2** and writes nothing unless
+  `ALLOW_OVERLAY_WIPE=1` is set, and the hatch is an exact match on `1` —
+  `true`, `yes`, an empty value all still refuse, because a half-set hatch must
+  not read as consent. The stakes the H2890 census measured: of 19,368 review
+  rows, 147 carry a `reviewed-*` status and only **10** are human-attributed
+  (130 codex, 7 Antigravity), so a careless reseed loses ten irreplaceable
+  rulings while looking like a routine rebuild. The lock lives in
+  [`scripts/lib/review-report.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/review-report.mjs)
+  (`refuseReseedWithoutHatch`), not in the one generator, so a future queue that
+  grows a `--reseed` inherits it. The **overlay-preserving rebuild is
+  unchanged** and stays the normal path — a guard that refused everything would
+  just move the damage from the data to the pipeline, so
+  [`test/reseed-lock.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/reseed-lock.test.mjs)
+  asserts all three directions: refusal exits 2 with the committed report
+  SHA-256-identical, a plain rebuild carries every human ruling forward verbatim,
+  and a *hatched* reseed still does what it says on the tin. The two end-to-end
+  cases run in a temporary tree, never against `src/data/review/`.
+
 - **METALEX L8 entry-level scan-page link census (H2368, Grok 4.5 `grok-4.5`,
   07-08-2026).** Stdlib script
   [`scripts/metalex/l8_scan_link_census.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/metalex/l8_scan_link_census.py)

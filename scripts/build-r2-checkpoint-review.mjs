@@ -12,11 +12,16 @@
 //
 // Usage: npm run build-r2-checkpoint-review            (preserves human overlay)
 //        npm run build-r2-checkpoint-review -- --reseed (blanks human overlay)
+//
+// H2892: --reseed now REFUSES with exit 2 unless ALLOW_OVERLAY_WIPE=1 is set.
+// Ten of this repo's 19,368 review rows are human-attributed; a careless reseed
+// loses all ten and nobody reconstructs them from memory. The plain rebuild is
+// unaffected and stays the normal path.
 
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
+import { loadPreserved, refuseReseedWithoutHatch, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
 
 const INPUT = path.resolve(process.cwd(), "data", "lexico", "r2_checkpoint_review_packet.json");
 const OUTPUT = path.resolve(process.cwd(), "src", "data", "review", "r2-checkpoint-review.json");
@@ -233,12 +238,19 @@ export function applyPreservedDecisions(payload, preserved) {
 }
 
 function main() {
+  // H2892: the reseed lock comes FIRST — before the input check, so a refusal is
+  // never shadowed by a missing packet, and long before anything is written.
+  const reseed = process.argv.includes("--reseed");
+  if (reseed && refuseReseedWithoutHatch({
+    script: "scripts/build-r2-checkpoint-review.mjs",
+    outputPath: OUTPUT
+  })) return;
+
   if (!fs.existsSync(INPUT)) {
     console.error(`Missing ${path.relative(process.cwd(), INPUT)}; run "npm run build-r2-checkpoint-packet" first.`);
     process.exit(1);
   }
   try {
-    const reseed = process.argv.includes("--reseed");
     const checkpointPacket = JSON.parse(fs.readFileSync(INPUT, "utf8"));
     const machinePayload = buildPayload(checkpointPacket);
     const preserved = reseed ? new Map() : loadPreserved(OUTPUT);

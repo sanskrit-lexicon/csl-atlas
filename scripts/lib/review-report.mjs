@@ -74,6 +74,76 @@ export function reviewPayload({ queue, sourcePath, items, assumptions = [], warn
   };
 }
 
+// ── The reseed lock (H2892) ────────────────────────────────────────────────
+//
+// Thirteen of the fourteen review generators call loadPreserved and are
+// overlay-preserving by construction. The fourteenth,
+// scripts/build-r2-checkpoint-review.mjs, takes --reseed, which skips
+// loadPreserved and blanks the human overlay back to the machine seed. That is
+// the Uprava DANGER_FACTS "never --reseed" row, and until now the row was prose.
+//
+// The H2890 census measured what is behind it: of 19,368 review rows, 147 carry
+// a reviewed-* status and only 10 of those are human-attributed. Ten human
+// rulings is a small enough number to lose in one careless rebuild and a large
+// enough number that nobody will reconstruct them from memory.
+
+/** The one escape hatch, exact-matched on "1". */
+export const OVERLAY_WIPE_HATCH = "ALLOW_OVERLAY_WIPE";
+
+/** Refusal exit code, deliberately distinct from the scripts' own failures (1). */
+export const RESEED_REFUSAL_EXIT = 2;
+
+/** Verbatim from the Uprava danger row this lock enforces. */
+export const RESEED_DANGER_SENTENCE =
+  "--reseed blanks the human review overlay back to the machine seed";
+
+/** True only for the exact string "1" — a half-set hatch is not consent. */
+export function reseedIsHatched(env = process.env) {
+  return env[OVERLAY_WIPE_HATCH] === "1";
+}
+
+export function reseedRefusalMessage({ script, outputPath }) {
+  const target = outputPath ? path.relative(process.cwd(), outputPath) : "the review report";
+  return [
+    `REFUSED: ${script} --reseed is a guarded overlay wipe (H2892).`,
+    "",
+    RESEED_DANGER_SENTENCE,
+    `  ${target}`,
+    "",
+    "Nothing was written. A plain rebuild is always allowed and preserves every",
+    "human decision:",
+    "",
+    `    node ${script}`,
+    "",
+    "If the overlay genuinely has to go back to the machine seed, say so",
+    "explicitly and re-pin the tripwire in the same commit:",
+    "",
+    `    ${OVERLAY_WIPE_HATCH}=1 node ${script} --reseed`,
+    "    python -m csl_pyutil.integrity_tripwire --extract \\",
+    "           --pin data/integrity/csl_atlas_review.pin.json --write-pin \\",
+    '           --reason "what changed and why" --updated DD-MM-YYYY',
+    ""
+  ].join("\n");
+}
+
+/**
+ * Refuse a --reseed run unless the hatch is set. Returns true when it refused
+ * (the caller should stop), false when the run may proceed. `exit` and `log`
+ * are injectable so the lock can be tested without ending the test process.
+ */
+export function refuseReseedWithoutHatch({
+  script,
+  outputPath,
+  env = process.env,
+  exit = code => process.exit(code),
+  log = message => console.error(message)
+} = {}) {
+  if (reseedIsHatched(env)) return false;
+  log(reseedRefusalMessage({ script, outputPath }));
+  exit(RESEED_REFUSAL_EXIT);
+  return true;
+}
+
 export function writeReport(outputPath, payload) {
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   const previous = readJsonIfExists(outputPath, fs);

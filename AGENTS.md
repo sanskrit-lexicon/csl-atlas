@@ -29,3 +29,16 @@ This file orients Codex and other non-Claude agent sessions. The section between
 - Gitignored/off-git canonical assets are registered as pointer rows in the org-private [shadow-assets registry](https://github.com/gasyoun/Uprava/blob/main/SHADOW_ASSETS_POINTERS.md).
 
 [/generated-block]
+
+## The `--reseed` danger fact is now enforced (H2892)
+
+As of 17-08-2026 `npm run build-r2-checkpoint-review -- --reseed` **exits 2 and
+writes nothing** unless `ALLOW_OVERLAY_WIPE=1` is set. Ten of this repo's 19,368
+review rows are human-attributed; that is what the flag destroys.
+
+Do not set the variable to make a command "work". The plain rebuild —
+`npm run build-r2-checkpoint-review`, no flag — preserves every human decision
+and is the normal path. Lock:
+[`scripts/lib/review-report.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/review-report.mjs).
+Tests:
+[`test/reseed-lock.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/reseed-lock.test.mjs).
