@@ -90,7 +90,10 @@ test("refuseReseedWithoutHatch refuses with exit 2 and says why", () => {
   });
   assert.equal(refused, true);
   assert.deepEqual(exits, [RESEED_REFUSAL_EXIT]);
-  assert.match(logs.join("\n"), new RegExp(RESEED_DANGER_SENTENCE.replace(/[-]/g, "\\$&")));
+  // Literal substring match: the refusal must carry the danger sentence
+  // verbatim. (Building a RegExp from the sentence with partial escaping trips
+  // CodeQL js/incomplete-sanitization; includes() needs no escaping at all.)
+  assert.ok(logs.join("\n").includes(RESEED_DANGER_SENTENCE));
 });
 
 test("refuseReseedWithoutHatch lets a hatched run through untouched", () => {
