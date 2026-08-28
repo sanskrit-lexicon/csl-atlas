@@ -2,6 +2,15 @@
 // https://observablehq.com/framework/config
 
 import { execSync } from "node:child_process";
+import { readFileSync } from "node:fs";
+
+// Single authoritative version surface: package.json. The footer, the release
+// tag and package.json used to drift independently for weeks (the footer shipped
+// a hardcoded literal that no release ever matched). No version literal may be
+// re-spelled in this file; read it from package.json instead.
+const VERSION = JSON.parse(
+  readFileSync(new URL("./package.json", import.meta.url), "utf8")
+).version;
 
 // Production origin for canonical / Open Graph URLs (GitHub Pages).
 const ORIGIN = "https://sanskrit-lexicon.github.io/csl-atlas";
@@ -18,7 +27,7 @@ const BUILD_SHA = (() => { try { return buildSha(); } catch { return "unknown"; 
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 const FOOTER =
   `<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem">` +
-  `<span>csl-atlas v0.2.0 · Source: CDSL · CC-BY-SA-4.0 · build ${BUILD_SHA} (${BUILD_DATE})</span>` +
+  `<span>csl-atlas v${VERSION} · Source: CDSL · CC-BY-SA-4.0 · build ${BUILD_SHA} (${BUILD_DATE})</span>` +
   `<span>Atlas tooling: Dr. Mārcis Gasūns</span>` +
   `</div>`;
 
