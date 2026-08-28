@@ -51,6 +51,12 @@ COLOGNE_SCAN_DIR = {
     "snp": "SNP",
     "acsj": "ACSJ",
     "acph": "ACPH",
+    "bur": "BUR",
+    "stc": "STC",
+    "vcp": "VCP",
+    "ae": "AE",
+    "bhs": "BHS",
+    "gra": "GRA",
 }
 MULTI_VOLUME_DICTS = {"pwg"}
 
@@ -218,14 +224,14 @@ def build_report(rows: list[dict]) -> dict:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generatedDate": date.today().isoformat(),
         "model": "Grok 4.5 (grok-4.5)",
-        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix)",
+        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free)",
         "cslOrigRoot": str(CSL_ORIG),
         "method": {
             "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
             "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
             "numerator_atlas_scan": (
                 "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — "
-                "dict ∈ COLOGNE_SCAN_DIR (15 dicts as of A11) AND pc passes scanPageFromPc "
+                "dict ∈ COLOGNE_SCAN_DIR (21 dicts as of A12) AND pc passes scanPageFromPc "
                 r"(PWG: /^\d+-\d+$/; others: first comma-field is digits-only)"
             ),
             "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
