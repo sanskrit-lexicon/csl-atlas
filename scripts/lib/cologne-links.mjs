@@ -65,6 +65,18 @@ const SCAN_BASE = "https://sanskrit-lexicon.uni-koeln.de/scans";
  * way (NMMBScan/2026, per SanskritLexicography FINDINGS.md §50) and the probe
  * came back a broken/error response, not a scan page — left OUT rather than
  * guessed at; emitting no link beats emitting a silently-wrong one.
+ *
+ * bur/stc/vcp/ae/bhs/gra added A12 (H2368 roadmap follow-on, 28-08-2026),
+ * same two-step verification: `redo_cologne_all.sh` maps all six to
+ * `{DIR}Scan/2020`, and each dict's own `<dict>-meta2.txt` in csl-orig
+ * documents `<pc>` as "page-col reference to scanned image" with continuous
+ * page numbering and NO volume component (only PWG carries a volume prefix,
+ * kosha scan_resolver MULTI_VOLUME_DICTS = {pwg}, H839) — so the existing
+ * single-volume scanPageFromPc paths (bare page, page,column, page-marker)
+ * apply verbatim, page = first comma-field. Live spot-checks: one
+ * servepdf.php fetch per dict against a real mid-dict <pc> page (ae and gra
+ * needed one retry each after transient transport errors — the endpoint
+ * answered correctly on the second attempt; no dict left out).
  */
 export const COLOGNE_SCAN_DIR = Object.freeze({
   mw: "MW",
@@ -81,7 +93,13 @@ export const COLOGNE_SCAN_DIR = Object.freeze({
   pgn: "PGN",
   snp: "SNP",
   acsj: "ACSJ",
-  acph: "ACPH"
+  acph: "ACPH",
+  bur: "BUR",
+  stc: "STC",
+  vcp: "VCP",
+  ae: "AE",
+  bhs: "BHS",
+  gra: "GRA"
 });
 
 /**

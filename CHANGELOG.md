@@ -3,6 +3,23 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+### Changed
+
+- **L8 scan-link coverage 38.99% → 48.11%: `COLOGNE_SCAN_DIR` extended 15 → 21
+  dicts (A12, H2368 roadmap follow-on, 28-08-2026).** `bur`, `stc`, `vcp`,
+  `ae`, `bhs`, `gra` (~136k entries) now resolve to live Cologne scan pages.
+  Verification follows the A11 two-step bar: `redo_cologne_all.sh` maps all
+  six to `{DICT}Scan/2020`, and each dict's own `-meta2.txt` documents `<pc>`
+  as a page-col reference with continuous numbering and no volume component
+  (only PWG carries vol-Spalte, H839) — so the existing single-volume
+  `scanPageFromPc` paths apply verbatim. One sequential `servepdf.php` live
+  probe per dict (ae/gra passed on retry after transient transport errors).
+  Residuals recorded in the roadmap: gra 99.82% (23 unseparated `NNNa`
+  entries = named next increment), ae 99.99% (its one missing-`<pc>` entry).
+  Census regenerated:
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md).
 
 ## [0.18.0] - 2026-08-28
 ### Changed

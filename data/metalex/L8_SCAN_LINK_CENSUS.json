@@ -2,15 +2,15 @@
   "schemaVersion": "1.0.0",
   "handoff": "H2368",
   "title": "METALEX L8 — entry-level scan-page link census",
-  "generatedAt": "2026-08-24T20:08:00Z",
-  "generatedDate": "2026-08-24",
+  "generatedAt": "2026-08-28T12:50:11Z",
+  "generatedDate": "2026-08-28",
   "model": "Grok 4.5 (grok-4.5)",
-  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix)",
+  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free)",
   "cslOrigRoot": "C:\\Users\\user\\Documents\\GitHub\\csl-orig\\v02",
   "method": {
     "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
     "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
-    "numerator_atlas_scan": "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — dict ∈ COLOGNE_SCAN_DIR (15 dicts as of A11) AND pc passes scanPageFromPc (PWG: /^\\d+-\\d+$/; others: first comma-field is digits-only)",
+    "numerator_atlas_scan": "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — dict ∈ COLOGNE_SCAN_DIR (21 dicts as of A12) AND pc passes scanPageFromPc (PWG: /^\\d+-\\d+$/; others: first comma-field is digits-only)",
     "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
     "non_goals": [
       "No mass link invention",
@@ -33,7 +33,13 @@
       "pgn": "PGN",
       "snp": "SNP",
       "acsj": "ACSJ",
-      "acph": "ACPH"
+      "acph": "ACPH",
+      "bur": "BUR",
+      "stc": "STC",
+      "vcp": "VCP",
+      "ae": "AE",
+      "bhs": "BHS",
+      "gra": "GRA"
     }
   },
   "totals": {
@@ -42,12 +48,13 @@
     "with_pc": 1496156,
     "missing_pc": 1,
     "pc_pct": 99.9999,
-    "atlas_resolvable_scan": 583389,
-    "atlas_resolvable_pct": 38.9925
+    "atlas_resolvable_scan": 719833,
+    "atlas_resolvable_pct": 48.1121
   },
   "gap_buckets": {
-    "pc_present_no_cologne_scan_dir": 912767,
-    "missing_pc": 1
+    "pc_present_no_cologne_scan_dir": 776300,
+    "missing_pc": 1,
+    "pc_unparseable_for_atlas_scan_url": 23
   },
   "dict_buckets": {
     "pc_coverage_100": [
@@ -102,17 +109,23 @@
       "abch",
       "acph",
       "acsj",
+      "ae",
       "ap90",
       "armh",
+      "bhs",
       "bor",
+      "bur",
       "cae",
       "fri",
+      "gra",
       "ieg",
       "krm",
       "mw",
       "pgn",
       "pwg",
       "snp",
+      "stc",
+      "vcp",
       "wil"
     ],
     "atlas_resolvable_100": [
@@ -121,7 +134,9 @@
       "acsj",
       "ap90",
       "armh",
+      "bhs",
       "bor",
+      "bur",
       "cae",
       "fri",
       "ieg",
@@ -130,19 +145,20 @@
       "pgn",
       "pwg",
       "snp",
+      "stc",
+      "vcp",
       "wil"
     ],
-    "in_scan_dir_but_not_100_resolvable": [],
+    "in_scan_dir_but_not_100_resolvable": [
+      "ae",
+      "gra"
+    ],
     "not_in_cologne_scan_dir": [
       "acc",
-      "ae",
       "ap",
       "ben",
-      "bhs",
       "bop",
-      "bur",
       "ccs",
-      "gra",
       "gst",
       "inm",
       "lan",
@@ -159,8 +175,6 @@
       "sch",
       "shs",
       "skd",
-      "stc",
-      "vcp",
       "vei",
       "yat"
     ]
@@ -179,6 +193,27 @@
       "L": "9035.1",
       "k1": "ruffian",
       "pc": ""
+    },
+    {
+      "bucket": "pc_unparseable_for_atlas_scan_url",
+      "code": "gra",
+      "L": "2373",
+      "k1": "ka",
+      "pc": "0307a"
+    },
+    {
+      "bucket": "pc_unparseable_for_atlas_scan_url",
+      "code": "gra",
+      "L": "2374",
+      "k1": "kakardu",
+      "pc": "0308a"
+    },
+    {
+      "bucket": "pc_unparseable_for_atlas_scan_url",
+      "code": "gra",
+      "L": "2375",
+      "k1": "kakAtA",
+      "pc": "0308a"
     }
   ],
   "rows": [
@@ -275,12 +310,11 @@
       "with_pc": 11358,
       "missing_pc": 1,
       "pc_pct": 99.9912,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
+      "atlas_resolvable_scan": 11358,
+      "atlas_resolvable_pct": 99.9912,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "AE",
       "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 11358,
         "missing_pc": 1
       },
       "pc_shape_top": [
@@ -421,13 +455,11 @@
       "with_pc": 17839,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 17839
-      },
+      "atlas_resolvable_scan": 17839,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "BHS",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N,N",
@@ -500,13 +532,11 @@
       "with_pc": 19776,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 19776
-      },
+      "atlas_resolvable_scan": 19776,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "BUR",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N,N",
@@ -604,12 +634,12 @@
       "with_pc": 12785,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
+      "atlas_resolvable_scan": 12762,
+      "atlas_resolvable_pct": 99.8201,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "GRA",
       "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 12785
+        "pc_unparseable_for_atlas_scan_url": 23
       },
       "pc_shape_top": [
         [
@@ -630,7 +660,23 @@
         ]
       ],
       "sample_missing_pc": [],
-      "sample_unparseable_pc": []
+      "sample_unparseable_pc": [
+        {
+          "L": "2373",
+          "k1": "ka",
+          "pc": "0307a"
+        },
+        {
+          "L": "2374",
+          "k1": "kakardu",
+          "pc": "0308a"
+        },
+        {
+          "L": "2375",
+          "k1": "kakAtA",
+          "pc": "0308a"
+        }
+      ]
     },
     {
       "code": "gst",
@@ -1257,13 +1303,11 @@
       "with_pc": 24574,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 24574
-      },
+      "atlas_resolvable_scan": 24574,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "STC",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N,N",
@@ -1280,13 +1324,11 @@
       "with_pc": 50135,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 50135
-      },
+      "atlas_resolvable_scan": 50135,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "VCP",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N,b",

@@ -43,7 +43,17 @@ test("scanUrl: A11 dicts resolve with their verified scan dir and year", () => {
   assert.equal(scanUrl("acph", "1"), "https://sanskrit-lexicon.uni-koeln.de/scans/ACPHScan/2023/web/webtc/servepdf.php?page=1");
 });
 
-test("COLOGNE_SCAN_DIR names the fifteen live-verified dicts (H2368 + A11)", () => {
+test("scanUrl: A12 dicts resolve with their verified scan dir and year (bur/stc/vcp/ae/bhs/gra)", () => {
+  assert.equal(scanUrl("bur", "066,2"), "https://sanskrit-lexicon.uni-koeln.de/scans/BURScan/2020/web/webtc/servepdf.php?page=066");
+  assert.equal(scanUrl("stc", "42,1"), "https://sanskrit-lexicon.uni-koeln.de/scans/STCScan/2020/web/webtc/servepdf.php?page=42");
+  assert.equal(scanUrl("vcp", "0180,b"), "https://sanskrit-lexicon.uni-koeln.de/scans/VCPScan/2020/web/webtc/servepdf.php?page=0180");
+  assert.equal(scanUrl("vcp", "001-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/VCPScan/2020/web/webtc/servepdf.php?page=001", "vcp also carries the page-column-letter dash shape");
+  assert.equal(scanUrl("ae", "068"), "https://sanskrit-lexicon.uni-koeln.de/scans/AEScan/2020/web/webtc/servepdf.php?page=068");
+  assert.equal(scanUrl("bhs", "068,1"), "https://sanskrit-lexicon.uni-koeln.de/scans/BHSScan/2020/web/webtc/servepdf.php?page=068");
+  assert.equal(scanUrl("gra", "0247"), "https://sanskrit-lexicon.uni-koeln.de/scans/GRAScan/2020/web/webtc/servepdf.php?page=0247");
+});
+
+test("COLOGNE_SCAN_DIR names the twenty-one live-verified dicts (H2368 + A11 + A12)", () => {
   assert.deepEqual(COLOGNE_SCAN_DIR, {
     mw: "MW",
     pwg: "PWG",
@@ -59,7 +69,13 @@ test("COLOGNE_SCAN_DIR names the fifteen live-verified dicts (H2368 + A11)", () 
     pgn: "PGN",
     snp: "SNP",
     acsj: "ACSJ",
-    acph: "ACPH"
+    acph: "ACPH",
+    bur: "BUR",
+    stc: "STC",
+    vcp: "VCP",
+    ae: "AE",
+    bhs: "BHS",
+    gra: "GRA"
   });
 });
 
