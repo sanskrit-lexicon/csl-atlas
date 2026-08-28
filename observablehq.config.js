@@ -157,59 +157,47 @@ export default {
   title: "Atlas of the Cologne Digital Sanskrit Lexicons",
   pages: [
     {
-      name: "Overview",
-      path: "/"
-    },
-    {
-      name: "Research paths",
+      name: "Start",
       pages: [
-        { name: "Student research desk", path: "/research-desk" },
-        { name: "Student lesson track", path: "/student-lessons" },
-        { name: "Researcher dashboard", path: "/researcher-dashboard" },
-        { name: "Evidence bridges", path: "/evidence-bridges" },
+        { name: "Atlas overview", path: "/" },
         { name: "Which dictionary?", path: "/dictionary-chooser" },
-        { name: "Reader lookup", path: "/tools/reader-lookup" }
+        { name: "Student research desk", path: "/research-desk" },
+        { name: "Researcher dashboard", path: "/researcher-dashboard" },
+        { name: "Evidence bridges", path: "/evidence-bridges" }
       ]
     },
     {
-      name: "Reader mode",
-      pages: [
-        { name: "Reader lookup", path: "/tools/reader-lookup" },
-        { name: "Learner's reading layer", path: "/tools/learner-reading-layer" },
-        { name: "Lemma dossier", path: "/tools/dictionary-dossier" }
-      ]
-    },
-    {
-      name: "MW depth (Phase 1)",
-      pages: [
-        { name: "Depth dashboard", path: "/tools/mw-depth-dashboard" },
-        { name: "Diachronic layers", path: "/tools/mw-diachronic-layers" },
-        { name: "Family depth", path: "/tools/mw-family-depth" },
-        { name: "Typology treemap", path: "/tools/typology-treemap" }
-      ]
-    },
-    {
-      name: "Dictionary comparison (Phase 2)",
+      name: "Evidence & Comparison",
       pages: [
         { name: "Coverage matrix", path: "/tools/dictionary-coverage-matrix" },
+        { name: "All-dictionary coverage", path: "/tools/dictionary-coverage" },
         { name: "Pairwise overlap", path: "/tools/dictionary-overlap" },
+        { name: "Cross-dictionary comparison", path: "/tools/cross-dict" },
+        { name: "Matrix explorer", path: "/tools/matrix-explorer" },
+        { name: "Type comparator", path: "/tools/type-comparator" },
         { name: "Gender conflicts", path: "/tools/dictionary-conflicts" },
         { name: "Homonym splits", path: "/tools/dictionary-homonyms" },
+        { name: "Sense depth", path: "/tools/dictionary-senses" },
         { name: "Citation apparatus", path: "/tools/dictionary-citations" },
         { name: "Citation canon", path: "/tools/citation-canon" },
+        { name: "Citation tracer", path: "/tools/citation-tracer" },
         { name: "PD × DCS coverage", path: "/tools/pd-dcs-coverage" },
-        { name: "Letter anatomy", path: "/tools/letter-anatomy" },
-        { name: "Dictionary density", path: "/tools/dictionary-density" },
-        { name: "Correction loci", path: "/tools/correction-loci" },
-        { name: "Correction front", path: "/tools/correction-front" },
         { name: "Heritage witness", path: "/tools/heritage-witness" },
         { name: "Ghost stock", path: "/tools/ghost-stock" },
-        { name: "Sense depth", path: "/tools/dictionary-senses" },
-        { name: "Lemma dossier", path: "/tools/dictionary-dossier" }
+        { name: "Dictionary density", path: "/tools/dictionary-density" },
+        { name: "Letter anatomy", path: "/tools/letter-anatomy" },
+        { name: "Correction loci", path: "/tools/correction-loci" },
+        { name: "Correction front", path: "/tools/correction-front" },
+        { name: "MW depth dashboard", path: "/tools/mw-depth-dashboard" },
+        { name: "MW diachronic layers", path: "/tools/mw-diachronic-layers" },
+        { name: "MW family depth", path: "/tools/mw-family-depth" },
+        { name: "MW typology treemap", path: "/tools/typology-treemap" },
+        { name: "Lexicographic timeline", path: "/tools/timeline" },
+        { name: "Lineage Sankey", path: "/tools/lineage-sankey" }
       ]
     },
     {
-      name: "Dictionary structure",
+      name: "Structure & Lineage",
       pages: [
         { name: "Dictionary genealogy", path: "/tools/lexicography" },
         { name: "Descent axes", path: "/tools/descent-axes" },
@@ -228,7 +216,7 @@ export default {
       ]
     },
     {
-      name: "Review queues",
+      name: "Review Queues",
       pages: [
         { name: "Gender conflicts", path: "/tools/review-gender-conflicts" },
         { name: "Source layers", path: "/tools/review-source-layers" },
@@ -239,24 +227,21 @@ export default {
       ]
     },
     {
-      name: "Atlas figures",
-      pages: [
-        { name: "Cross-dictionary comparison", path: "/tools/cross-dict" },
-        { name: "All-dictionary coverage", path: "/tools/dictionary-coverage" },
-        { name: "Matrix explorer", path: "/tools/matrix-explorer" },
-        { name: "Lineage Sankey", path: "/tools/lineage-sankey" },
-        { name: "Lexicographic timeline", path: "/tools/timeline" },
-        { name: "Type comparator", path: "/tools/type-comparator" },
-        { name: "Citation tracer", path: "/tools/citation-tracer" }
-      ]
-    },
-    {
-      name: "Paper",
+      name: "Publications & Methods",
       pages: [
         { name: "Grounded framework (body)", path: "/paper/grounded" },
         { name: "Triangulation (§7)", path: "/paper/triangulation" },
         { name: "Framework appendices A·B·C", path: "/paper/appendices" },
         { name: "Related work & positioning", path: "/paper/related-work" }
+      ]
+    },
+    {
+      name: "Reader & Teaching",
+      pages: [
+        { name: "Reader lookup", path: "/tools/reader-lookup" },
+        { name: "Learner's reading layer", path: "/tools/learner-reading-layer" },
+        { name: "Lemma dossier", path: "/tools/dictionary-dossier" },
+        { name: "Student lesson track", path: "/student-lessons" }
       ]
     },
     {
