@@ -57,8 +57,22 @@ COLOGNE_SCAN_DIR = {
     "ae": "AE",
     "bhs": "BHS",
     "gra": "GRA",
+    "ben": "BEN",
+    "gst": "GST",
+    "inm": "INM",
+    "lan": "LAN",
+    "mci": "MCI",
+    "mw72": "MW72",
+    "mwe": "MWE",
+    "nybj": "NYBJ",
+    "pe": "PE",
+    "shs": "SHS",
+    "yat": "YAT",
 }
 MULTI_VOLUME_DICTS = {"pwg"}
+
+# Mirror of cologne-links.mjs COLOGNE_SCAN_YEAR (absent codes default to 2020).
+COLOGNE_SCAN_YEAR = {"fri": "2025", "abch": "2023", "acsj": "2023", "acph": "2023", "nybj": "2026"}
 
 _ATTR_PC = re.compile(r"<pc>([^<]*)")
 _ATTR_K1 = re.compile(r"<k1>([^<]*)")
@@ -68,6 +82,7 @@ _GAP_SAMPLE_PER_DICT = 3
 
 
 _PC_COLUMN_MARKER = re.compile(r"^(\d+)-([a-zA-Z]+|\d+)$")
+_PC_UNSEPARATED_COLUMN = re.compile(r"^(\d+)[a-zA-Z]+$")
 
 
 def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
@@ -85,6 +100,11 @@ def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
     # new-letter section break "0351-1" — H2368-A11 follow-up). Marker is
     # all-letters or all-digits, never mixed.
     m = _PC_COLUMN_MARKER.match(page)
+    if m:
+        return m.group(1)
+    # Unseparated "page<column-letter>" shape (gra "0307a" — digitisation slip
+    # for "0307-a"; H2368-A07. Exists in no other local dict per census).
+    m = _PC_UNSEPARATED_COLUMN.match(page)
     return m.group(1) if m else None
 
 
@@ -224,15 +244,16 @@ def build_report(rows: list[dict]) -> dict:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generatedDate": date.today().isoformat(),
         "model": "Grok 4.5 (grok-4.5)",
-        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free)",
+        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash)",
         "cslOrigRoot": str(CSL_ORIG),
         "method": {
             "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
             "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
             "numerator_atlas_scan": (
                 "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — "
-                "dict ∈ COLOGNE_SCAN_DIR (21 dicts as of A12) AND pc passes scanPageFromPc "
-                r"(PWG: /^\d+-\d+$/; others: first comma-field is digits-only)"
+                "dict ∈ COLOGNE_SCAN_DIR (32 dicts as of A07) AND pc passes scanPageFromPc "
+                r"(PWG: /^\d+-\d+$/; others: first comma-field is digits-only, "
+                r"page-marker, or unseparated page+column-letters)"
             ),
             "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
             "non_goals": [
@@ -273,7 +294,8 @@ def build_report(rows: list[dict]) -> dict:
             "claim_l8_done": False,
             "note": (
                 "Do not claim L8 complete: print coordinates are nearly universal, "
-                "but a working Cologne scan URL is only resolvable for a minority of "
+                "but 13 dicts with <pc> data still have no verified Cologne scan-dir "
+                "map (542,880 entries), so a working scan URL resolves for 63.96% of "
                 "entries under the atlas's verified dict→scan-dir map."
             ),
         },
@@ -292,7 +314,7 @@ def render_md(report: dict) -> str:
     lines: list[str] = []
     lines.append("# METALEX L8 — entry-level scan-page link census")
     lines.append("")
-    lines.append(f"_Created: 07-08-2026 · Last updated: 24-08-2026_")
+    lines.append(f"_Created: 07-08-2026 · Last updated: 28-08-2026_")
     lines.append("")
     lines.append(
         f"**Handoff:** [H2368](https://github.com/gasyoun/Uprava/blob/main/handoffs/"

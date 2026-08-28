@@ -5,6 +5,31 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 ### Changed
 
+- **L8 scan-link coverage 48.11% → 63.96%: `COLOGNE_SCAN_DIR` extended 21 → 32
+  dicts + gra's unseparated page-column rule (A07, H2368 roadmap follow-on,
+  28-08-2026).** `ben`, `gst`, `inm`, `lan`, `mci`, `mw72`, `mwe`, `nybj`,
+  `pe`, `shs`, `yat` (~244k entries) now resolve to live Cologne scan pages,
+  and gra's 23 unseparated `NNNa` `<pc>` stragglers resolve too (gra now
+  100%). Verification per the A11/A12 bar: `redo_cologne_all.sh` maps all
+  eleven to `{DIR}Scan/2020`, per-dict `<pc>` first comma-fields grow like
+  real continuous page numbers, and one sequential `servepdf.php` live probe
+  per dict answered with the working scan-viewer shell. `nybj` deploys at
+  year 2026 per `csl-websanlexicon/v02/dictparms.py` (its redo-script 2020
+  path 404s live) — added to `COLOGNE_SCAN_YEAR`. The unseparated rule
+  (`0307a` → page `0307`) exists in no other local dict per a full census.
+  **Guarded exclusions**: `pui`/`vei`/`acc` lead their `<pc>` with a
+  volume-like field (structurally PWG's vol-Spalte, H839) — left out rather
+  than emit `?page=1..3` for every entry; each needs its own multi-volume
+  rule + spot-check. `nmmb` stays out (broken probe, A11). Census
+  regenerated (963,510 / 1,506,391 = 63.96%; local csl-orig grew to
+  1,506,391 entries since A12's 1,496,157 — acc/ap/ben landed in between;
+  542,880 entries in the remaining 13 outside dicts are the dominant gap):
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md) ·
+  typology packet regenerated with the new L8 flags:
+  [src/data/dicts/richness-typology.json](src/data/dicts/richness-typology.json).
+
 - **L8 scan-link coverage 38.99% → 48.11%: `COLOGNE_SCAN_DIR` extended 15 → 21
   dicts (A12, H2368 roadmap follow-on, 28-08-2026).** `bur`, `stc`, `vcp`,
   `ae`, `bhs`, `gra` (~136k entries) now resolve to live Cologne scan pages.

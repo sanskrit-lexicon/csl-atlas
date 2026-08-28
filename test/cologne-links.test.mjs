@@ -30,6 +30,13 @@ test("scanPageFromPc: unresolvable shapes stay null (no invented links)", () => 
   assert.equal(scanPageFromPc("ap90", "0001-x0"), null, "trailing chunk must be letters only, not alnum");
 });
 
+test("scanPageFromPc: GRA unseparated page-column drops the trailing letters (H2368-A07 gap fix)", () => {
+  assert.equal(scanPageFromPc("gra", "0307a"), "0307", "digitisation slip for the separated '0307-a' shape; live-verified servepdf page=0307");
+  assert.equal(scanPageFromPc("gra", "1365a"), "1365");
+  assert.equal(scanPageFromPc("ap90", "0117-a1"), null, "mixed marker chunk (digits+letters) is still not trusted");
+  assert.equal(scanPageFromPc("gra", "12x0"), null, "digits must come first, letters only after");
+});
+
 test("scanUrl: null dict or unparseable pc yields no URL; ap90 now resolves (H2368 gap fix)", () => {
   assert.equal(scanUrl("nmmb", "1"), null, "nmmb spot-check failed live (A11) — deliberately not in COLOGNE_SCAN_DIR");
   assert.equal(scanUrl("ap90", "0001-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/AP90Scan/2020/web/webtc/servepdf.php?page=0001");
@@ -53,7 +60,32 @@ test("scanUrl: A12 dicts resolve with their verified scan dir and year (bur/stc/
   assert.equal(scanUrl("gra", "0247"), "https://sanskrit-lexicon.uni-koeln.de/scans/GRAScan/2020/web/webtc/servepdf.php?page=0247");
 });
 
-test("COLOGNE_SCAN_DIR names the twenty-one live-verified dicts (H2368 + A11 + A12)", () => {
+test("scanUrl: A07 dicts resolve with their verified scan dir and year (11-dict extension)", () => {
+  // Real mid-dict <pc> values, each live-verified via servepdf.php 28-08-2026.
+  assert.equal(scanUrl("ben", "0556-b"), "https://sanskrit-lexicon.uni-koeln.de/scans/BENScan/2020/web/webtc/servepdf.php?page=0556");
+  assert.equal(scanUrl("gst", "105-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/GSTScan/2020/web/webtc/servepdf.php?page=105");
+  assert.equal(scanUrl("inm", "443-1"), "https://sanskrit-lexicon.uni-koeln.de/scans/INMScan/2020/web/webtc/servepdf.php?page=443", "inm page-column-digit shape");
+  assert.equal(scanUrl("lan", "187-b"), "https://sanskrit-lexicon.uni-koeln.de/scans/LANScan/2020/web/webtc/servepdf.php?page=187");
+  assert.equal(scanUrl("mci", "363-b"), "https://sanskrit-lexicon.uni-koeln.de/scans/MCIScan/2020/web/webtc/servepdf.php?page=363");
+  assert.equal(scanUrl("mw72", "0545-c"), "https://sanskrit-lexicon.uni-koeln.de/scans/MW72Scan/2020/web/webtc/servepdf.php?page=0545");
+  assert.equal(scanUrl("mwe", "398-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/MWEScan/2020/web/webtc/servepdf.php?page=398");
+  assert.equal(scanUrl("nybj", "0498"), "https://sanskrit-lexicon.uni-koeln.de/scans/NYBJScan/2026/web/webtc/servepdf.php?page=0498", "nybj deploys at year 2026 per csl-websanlexicon dictparms.py — its 2020 path 404s live");
+  assert.equal(scanUrl("pe", "488-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/PEScan/2020/web/webtc/servepdf.php?page=488");
+  assert.equal(scanUrl("shs", "429-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/SHSScan/2020/web/webtc/servepdf.php?page=429");
+  assert.equal(scanUrl("yat", "446-b"), "https://sanskrit-lexicon.uni-koeln.de/scans/YATScan/2020/web/webtc/servepdf.php?page=446");
+  assert.equal(scanUrl("gra", "0307a"), "https://sanskrit-lexicon.uni-koeln.de/scans/GRAScan/2020/web/webtc/servepdf.php?page=0307", "gra unseparated straggler, live-verified");
+});
+
+test("scanUrl: volume-prefixed pc dicts stay OUT (pui/vei/acc) — no silently-wrong links", () => {
+  // Their <pc> leads with a volume-like field (pui ∈ {1,2,3}, vei ∈ {1,2},
+  // acc ∈ {1,2,3}) — structurally PWG's vol-Spalte (H839). The single-volume
+  // rule would emit "?page=1..3" for every entry; emitting no link beats that.
+  assert.equal(scanUrl("pui", "1-001"), null);
+  assert.equal(scanUrl("vei", "1-005"), null);
+  assert.equal(scanUrl("acc", "1-001,1"), null);
+});
+
+test("COLOGNE_SCAN_DIR names the thirty-two live-verified dicts (H2368 + A11 + A12 + A07)", () => {
   assert.deepEqual(COLOGNE_SCAN_DIR, {
     mw: "MW",
     pwg: "PWG",
@@ -75,7 +107,18 @@ test("COLOGNE_SCAN_DIR names the twenty-one live-verified dicts (H2368 + A11 + A
     vcp: "VCP",
     ae: "AE",
     bhs: "BHS",
-    gra: "GRA"
+    gra: "GRA",
+    ben: "BEN",
+    gst: "GST",
+    inm: "INM",
+    lan: "LAN",
+    mci: "MCI",
+    mw72: "MW72",
+    mwe: "MWE",
+    nybj: "NYBJ",
+    pe: "PE",
+    shs: "SHS",
+    yat: "YAT"
   });
 });
 

@@ -77,6 +77,23 @@ const SCAN_BASE = "https://sanskrit-lexicon.uni-koeln.de/scans";
  * servepdf.php fetch per dict against a real mid-dict <pc> page (ae and gra
  * needed one retry each after transient transport errors — the endpoint
  * answered correctly on the second attempt; no dict left out).
+ *
+ * ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat added A07 (H2368 roadmap
+ * follow-on, 28-08-2026), same two-step bar: `redo_cologne_all.sh` maps all
+ * eleven to `{DIR}Scan/2020`, and each `<pc>` first comma-field grows like a
+ * real continuous page number (hundreds of distinct values per dict; the
+ * `<pc>`-documenting `-meta2.txt` files describe page-col references with no
+ * volume component). One sequential servepdf.php live probe per dict on a
+ * real mid-dict `<pc>` page. Two guarded exclusions discovered the same way:
+ * `pui`/`vei`/`acc` `<pc>` values lead with a volume-like field (pui "1-001"
+ * with first field ∈ {1,2,3}; vei ∈ {1,2}; acc ∈ {1,2,3}) — structurally
+ * PWG's vol-Spalte (H839), so the single-volume rule would emit "?page=1..3"
+ * for every entry; left OUT pending their own multi-volume rule + spot-check.
+ * `nybj` needed `COLOGNE_SCAN_YEAR` = 2026 (`csl-websanlexicon/v02/
+ * dictparms.py` dictyear, live-verified; its redo_cologne_all.sh "2020" path
+ * 404s). gra's 23 unseparated "NNNa" `<pc>` stragglers resolved by the new
+ * unseparated page-column rule in scanPageFromPc (see below), live-verified
+ * at "0307a" -> page=0307.
  */
 export const COLOGNE_SCAN_DIR = Object.freeze({
   mw: "MW",
@@ -99,7 +116,18 @@ export const COLOGNE_SCAN_DIR = Object.freeze({
   vcp: "VCP",
   ae: "AE",
   bhs: "BHS",
-  gra: "GRA"
+  gra: "GRA",
+  ben: "BEN",
+  gst: "GST",
+  inm: "INM",
+  lan: "LAN",
+  mci: "MCI",
+  mw72: "MW72",
+  mwe: "MWE",
+  nybj: "NYBJ",
+  pe: "PE",
+  shs: "SHS",
+  yat: "YAT"
 });
 
 /**
@@ -111,7 +139,8 @@ const COLOGNE_SCAN_YEAR = Object.freeze({
   fri: "2025",
   abch: "2023",
   acsj: "2023",
-  acph: "2023"
+  acph: "2023",
+  nybj: "2026"
 });
 
 /** Dicts whose Cologne page keys are "{vol}-{page:04d}" rather than a bare page. */
@@ -147,7 +176,9 @@ export function entryUrl(dictCode, slp1Key, options = {}) {
  * MW "134,1" (page,column) -> "134"; PWG "1-0614" (vol-Spalte) -> "1-0614";
  * AP90 "0001-a" (page-column-letter) -> "0001"; AP90 "0351-1" (page-column-digit,
  * seen at a new-letter section break where the column marker itself resets to
- * numeric — H2368-A11 follow-up) -> "0351".
+ * numeric — H2368-A11 follow-up) -> "0351"; GRA "0307a" (unseparated
+ * page-column, a digitisation slip for "0307-a" — H2368-A07; the shape exists
+ * in no other local dict) -> "0307".
  * @returns {string|null} null when <pc> is absent or not in a shape we trust
  */
 export function scanPageFromPc(dictCode, pc) {
@@ -166,7 +197,16 @@ export function scanPageFromPc(dictCode, pc) {
   // zeros, verbatim). The marker itself is either all letters or all digits, never
   // mixed (a mixed chunk like "x0" is not a marker shape we've verified).
   const columnMatch = page.match(/^(\d+)-([a-zA-Z]+|\d+)$/);
-  return columnMatch ? columnMatch[1] : null;
+  if (columnMatch) return columnMatch[1];
+  // Unseparated "page<column-letter>" shape (observed for gra, e.g. "0307a" —
+  // a digitisation slip for "0307-a"): same semantics as the dash marker, just
+  // missing the separator. Digits followed only by trailing letters; a mixed
+  // chunk like "0117-a1" still does not match. A census of every local dict
+  // confirmed this shape exists in no other dictionary, so the rule only ever
+  // bites on verified page-col data (gra's -meta2.txt documents <pc> as a
+  // page-col reference with continuous numbering, no volume component).
+  const unseparatedMatch = page.match(/^(\d+)[a-zA-Z]+$/);
+  return unseparatedMatch ? unseparatedMatch[1] : null;
 }
 
 /**
