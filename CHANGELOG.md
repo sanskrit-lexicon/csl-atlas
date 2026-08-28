@@ -3,6 +3,30 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+### Changed
+
+- **One authoritative version surface, and Wave 3's researcher-first navigation
+  (H3604, Opus 5 `claude-opus-5`, 28-08-2026).** Two long-standing public
+  defects that [H3002](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3002-Opus_multi_stale-roadmap-s4-cologne-ask-replan_17.08.26.md)
+  measured but deliberately did not execute, because each needed a build rather
+  than a documentation edit.
+  - The site footer in
+    [`observablehq.config.js`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/observablehq.config.js)
+    carried a hardcoded version literal, public on every page since 17-07-2026,
+    while the newest release tag and `package.json` each said something
+    different - three surfaces, three answers, and the one the public reads was
+    the most wrong. `package.json` is now the single source (set to the newest
+    existing tag, not an invented number) and the footer interpolates it; no
+    version literal is left in the config. Live-Pages footer verified after
+    deploy. ([PR #422](https://github.com/sanskrit-lexicon/csl-atlas/pull/422))
+  - Navigation re-grouped from 10 build-phase sections into the seven
+    researcher-task sections Wave 3 of
+    [`docs/ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ROADMAP_2026_2027.md)
+    prescribes by name, and the two routes listed twice
+    (`/tools/reader-lookup`, `/tools/dictionary-dossier`) are now listed once
+    each. Route-preserving: 71 entries / 69 distinct before, 69 / 69 after,
+    zero routes lost or added.
+    ([PR #423](https://github.com/sanskrit-lexicon/csl-atlas/pull/423))
 
 ## [0.17.4] - 2026-08-24
 ### Fixed
