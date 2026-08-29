@@ -94,6 +94,17 @@ const SCAN_BASE = "https://sanskrit-lexicon.uni-koeln.de/scans";
  * 404s). gra's 23 unseparated "NNNa" `<pc>` stragglers resolved by the new
  * unseparated page-column rule in scanPageFromPc (see below), live-verified
  * at "0307a" -> page=0307.
+ *
+ * bop added A08 (H2368 roadmap follow-on, 29-08-2026): `redo_cologne_all.sh`
+ * maps it to `BOPScan/2020`, and `bop-meta2.txt` documents `<pc>` as a
+ * "page-col reference to scanned image" with no volume component — same
+ * single-volume family as the rest of this map. 97.1% of its `<pc>` values
+ * already matched the existing dash-marker rule (`NNN-a`/`NNN-b`); the
+ * remaining 2.9% are `bop-meta2.txt`'s documented "letter break" shape
+ * `[PagePPP-zC+ NN]` digitised as `NNN-1a`/`NNN-2a` (z = 1..3, C = a/b) — a
+ * digit-then-letters marker, handled by the new alternative in
+ * scanPageFromPc below. Live spot-check: one servepdf.php fetch against
+ * `page=322` returned the working scan-viewer shell embedding `bop-322.pdf`.
  */
 export const COLOGNE_SCAN_DIR = Object.freeze({
   mw: "MW",
@@ -127,7 +138,8 @@ export const COLOGNE_SCAN_DIR = Object.freeze({
   nybj: "NYBJ",
   pe: "PE",
   shs: "SHS",
-  yat: "YAT"
+  yat: "YAT",
+  bop: "BOP"
 });
 
 /**
@@ -178,7 +190,9 @@ export function entryUrl(dictCode, slp1Key, options = {}) {
  * seen at a new-letter section break where the column marker itself resets to
  * numeric — H2368-A11 follow-up) -> "0351"; GRA "0307a" (unseparated
  * page-column, a digitisation slip for "0307-a" — H2368-A07; the shape exists
- * in no other local dict) -> "0307".
+ * in no other local dict) -> "0307"; BOP "027-1a" (documented "letter break"
+ * marker `[PagePPP-zC+ NN]` digitised as page-dash-digit-letters — H2368-A08)
+ * -> "027".
  * @returns {string|null} null when <pc> is absent or not in a shape we trust
  */
 export function scanPageFromPc(dictCode, pc) {
@@ -206,7 +220,14 @@ export function scanPageFromPc(dictCode, pc) {
   // bites on verified page-col data (gra's -meta2.txt documents <pc> as a
   // page-col reference with continuous numbering, no volume component).
   const unseparatedMatch = page.match(/^(\d+)[a-zA-Z]+$/);
-  return unseparatedMatch ? unseparatedMatch[1] : null;
+  if (unseparatedMatch) return unseparatedMatch[1];
+  // "page-<digit><letters>" letter-break shape (observed for bop, e.g.
+  // "027-1a"; bop-meta2.txt documents it as `[PagePPP-zC+ NN]` where z is a
+  // 1/2/3 letter-break marker and C is the a/b column — still page-col, no
+  // volume component). Distinct from the digit-only marker above because the
+  // trailing letters follow a leading digit rather than standing alone.
+  const letterBreakMatch = page.match(/^(\d+)-\d+[a-zA-Z]+$/);
+  return letterBreakMatch ? letterBreakMatch[1] : null;
 }
 
 /**

@@ -68,6 +68,7 @@ COLOGNE_SCAN_DIR = {
     "pe": "PE",
     "shs": "SHS",
     "yat": "YAT",
+    "bop": "BOP",
 }
 MULTI_VOLUME_DICTS = {"pwg"}
 
@@ -83,6 +84,7 @@ _GAP_SAMPLE_PER_DICT = 3
 
 _PC_COLUMN_MARKER = re.compile(r"^(\d+)-([a-zA-Z]+|\d+)$")
 _PC_UNSEPARATED_COLUMN = re.compile(r"^(\d+)[a-zA-Z]+$")
+_PC_LETTER_BREAK = re.compile(r"^(\d+)-\d+[a-zA-Z]+$")
 
 
 def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
@@ -105,6 +107,12 @@ def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
     # Unseparated "page<column-letter>" shape (gra "0307a" — digitisation slip
     # for "0307-a"; H2368-A07. Exists in no other local dict per census).
     m = _PC_UNSEPARATED_COLUMN.match(page)
+    if m:
+        return m.group(1)
+    # "page-<digit><letters>" letter-break shape (bop "027-1a"; bop-meta2.txt
+    # documents `[PagePPP-zC+ NN]` where z is a 1/2/3 letter-break marker and
+    # C the a/b column — H2368-A08).
+    m = _PC_LETTER_BREAK.match(page)
     return m.group(1) if m else None
 
 
@@ -244,14 +252,14 @@ def build_report(rows: list[dict]) -> dict:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generatedDate": date.today().isoformat(),
         "model": "Grok 4.5 (grok-4.5)",
-        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash)",
+        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix)",
         "cslOrigRoot": str(CSL_ORIG),
         "method": {
             "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
             "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
             "numerator_atlas_scan": (
                 "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — "
-                "dict ∈ COLOGNE_SCAN_DIR (32 dicts as of A07) AND pc passes scanPageFromPc "
+                "dict ∈ COLOGNE_SCAN_DIR (33 dicts as of A08) AND pc passes scanPageFromPc "
                 r"(PWG: /^\d+-\d+$/; others: first comma-field is digits-only, "
                 r"page-marker, or unseparated page+column-letters)"
             ),
@@ -294,8 +302,8 @@ def build_report(rows: list[dict]) -> dict:
             "claim_l8_done": False,
             "note": (
                 "Do not claim L8 complete: print coordinates are nearly universal, "
-                "but 13 dicts with <pc> data still have no verified Cologne scan-dir "
-                "map (542,880 entries), so a working scan URL resolves for 63.96% of "
+                "but 12 dicts with <pc> data still have no verified Cologne scan-dir "
+                "map (533,916 entries), so a working scan URL resolves for 64.31% of "
                 "entries under the atlas's verified dict→scan-dir map."
             ),
         },
@@ -314,7 +322,7 @@ def render_md(report: dict) -> str:
     lines: list[str] = []
     lines.append("# METALEX L8 — entry-level scan-page link census")
     lines.append("")
-    lines.append(f"_Created: 07-08-2026 · Last updated: 28-08-2026_")
+    lines.append(f"_Created: 07-08-2026 · Last updated: 29-08-2026_")
     lines.append("")
     lines.append(
         f"**Handoff:** [H2368](https://github.com/gasyoun/Uprava/blob/main/handoffs/"
