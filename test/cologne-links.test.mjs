@@ -76,6 +76,18 @@ test("scanUrl: A07 dicts resolve with their verified scan dir and year (11-dict 
   assert.equal(scanUrl("gra", "0307a"), "https://sanskrit-lexicon.uni-koeln.de/scans/GRAScan/2020/web/webtc/servepdf.php?page=0307", "gra unseparated straggler, live-verified");
 });
 
+test("scanPageFromPc: BOP letter-break marker drops the trailing digit+letters (H2368-A08 gap fix)", () => {
+  assert.equal(scanPageFromPc("bop", "027-1a"), "027", "bop-meta2.txt [PagePPP-zC+ NN] letter-break shape");
+  assert.equal(scanPageFromPc("bop", "099-3b"), "099");
+  assert.equal(scanPageFromPc("bop", "001-a"), "001", "plain dash-letter marker still resolves");
+  assert.equal(scanPageFromPc("bop", "0117-a1"), null, "letters-then-digit order is still not trusted (matches the ap90 exclusion)");
+});
+
+test("scanUrl: A08 dict resolves with its verified scan dir and year (bop)", () => {
+  assert.equal(scanUrl("bop", "322-b"), "https://sanskrit-lexicon.uni-koeln.de/scans/BOPScan/2020/web/webtc/servepdf.php?page=322", "live-verified servepdf page=322");
+  assert.equal(scanUrl("bop", "027-1a"), "https://sanskrit-lexicon.uni-koeln.de/scans/BOPScan/2020/web/webtc/servepdf.php?page=027", "letter-break shape");
+});
+
 test("scanUrl: volume-prefixed pc dicts stay OUT (pui/vei/acc) — no silently-wrong links", () => {
   // Their <pc> leads with a volume-like field (pui ∈ {1,2,3}, vei ∈ {1,2},
   // acc ∈ {1,2,3}) — structurally PWG's vol-Spalte (H839). The single-volume
@@ -85,7 +97,7 @@ test("scanUrl: volume-prefixed pc dicts stay OUT (pui/vei/acc) — no silently-w
   assert.equal(scanUrl("acc", "1-001,1"), null);
 });
 
-test("COLOGNE_SCAN_DIR names the thirty-two live-verified dicts (H2368 + A11 + A12 + A07)", () => {
+test("COLOGNE_SCAN_DIR names the thirty-three live-verified dicts (H2368 + A11 + A12 + A07 + A08)", () => {
   assert.deepEqual(COLOGNE_SCAN_DIR, {
     mw: "MW",
     pwg: "PWG",
@@ -118,7 +130,8 @@ test("COLOGNE_SCAN_DIR names the thirty-two live-verified dicts (H2368 + A11 + A
     nybj: "NYBJ",
     pe: "PE",
     shs: "SHS",
-    yat: "YAT"
+    yat: "YAT",
+    bop: "BOP"
   });
 });
 
