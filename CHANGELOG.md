@@ -3,6 +3,37 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+### Changed
+
+- **L8 scan-link coverage 79.30% → 92.42%: `COLOGNE_SCAN_DIR` extended 38 → 40
+  dicts with the `pw`/`pwkvn` three-part vol-page-col rule (H3695, Atlas L8
+  bounded slice, 29-08-2026).** `pw` (170,556 entries) and `pwkvn` (24,976)
+  now resolve to live Cologne scan pages at 100%. Their `<pc>` is PWG's
+  vol-Spalte (H839) plus a trailing column marker on the same page —
+  `N-N-a/b/c/d` dominant, plus per dict 19 letter-break stragglers
+  `7-384-1a`..`-1d` (the A08 bop digit-then-letters class) and 1 digit-only
+  marker `7-366-1` (the ap90 digit-marker class); vol ∈ 1..7, and 100% of both
+  dicts' `<pc>` values are that one shape family. servepdf.php still has no
+  vol= parameter, so `scanPageFromPc`'s multi-volume branch now strips the
+  trailing marker and returns `{vol}-{page}` verbatim — the H839 bare-page
+  refusal is untouched, and a bare page still never silently resolves to
+  volume 1. `redo_cologne_all.sh` maps pw → `PWScan/2020` and pwkvn →
+  `PWKVNScan/2020` (`dictparms.py` dictyear 2020 for both). Cologne was
+  source-health-probed up (200 GO) before the fetches; live evidence, one
+  sequential `servepdf.php` probe per dict plus one residual-marker probe:
+  pw `page=7-385` → working scan-viewer shell embedding `pw7-385.pdf`
+  (marker page `7-384` → `pw7-384.pdf`), pwkvn `page=2-288` → working shell
+  embedding `pw2-288N.png`. **Guarded exclusions now**: `pui`/`vei`/`acc`
+  (volume first-field), `skd` (same vol-page-col family — kept for a later
+  pass with its own spot-check), `nmmb` (broken probe, A11). Census
+  regenerated at this pass's snapshot (1,392,174 / 1,506,391 = 92.42%; the
+  remaining 5 outside dicts — acc, nmmb, pui, skd, vei — hold 114,216 entries
+  and are the dominant gap):
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md) ·
+  typology packet regenerated with the new L8 flags:
+  [src/data/dicts/richness-typology.json](src/data/dicts/richness-typology.json).
 
 ## [0.19.0] - 2026-08-29
 ### Changed

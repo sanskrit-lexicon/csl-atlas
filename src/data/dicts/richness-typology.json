@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-08-29T00:34:21.244Z",
+  "generatedAt": "2026-08-29T20:41:49.446Z",
   "claim": "M1: every locally-present CDSL dictionary placed on the roadmap's L0-L10 data-richness ordinal scale, with a machine-readable justification per level.",
   "evidenceLabel": "derived",
   "reviewStatus": "machine-reviewed",
@@ -326,8 +326,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"pw\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"pw\" -> COLOGNE_SCAN_DIR[\"pw\"]=\"PW\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -341,7 +341,7 @@
         }
       },
       "notes": [
-        "Raw evidence for L9 is present despite the cumulative cap at L6 — a lower-tier convention gap (see criteria), not missing content."
+        "Raw evidence for L8, L9 is present despite the cumulative cap at L6 — a lower-tier convention gap (see criteria), not missing content."
       ]
     },
     {
@@ -651,8 +651,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"pwkvn\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"pwkvn\" -> COLOGNE_SCAN_DIR[\"pwkvn\"]=\"PWKVN\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -665,7 +665,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L5 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "AE",
