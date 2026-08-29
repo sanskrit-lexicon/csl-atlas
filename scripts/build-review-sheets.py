@@ -47,7 +47,9 @@ DATE = "26-07-2026"  # H1648 xref: Russian instructions + MW-depends-on-PWG corr
 #: below that the import fails outright rather than rendering an uncoloured sheet.
 #: A `>=` check expresses "require at least the standard" so future emitter patch
 #: releases don't hard-fail this builder (the equality-pin trap PR #5 flagged).
-MIN_EMITTER_VERSION = "0.6.0"
+#: Raised to 0.16.0 (H3091): the xref sheet now emits U7 typology chips, which
+#: `_check_typology_stats` only validates from that release onward.
+MIN_EMITTER_VERSION = "0.16.0"  # H3091: U7 typology chips + _check_typology_stats
 REVIEWER = "gasyoun"
 
 
@@ -132,7 +134,7 @@ def source_panels(pointers):
     return [("Источник", "".join(rows))]
 
 
-def emit(stem, title, subtitle, items, filters):
+def emit(stem, title, subtitle, items, filters, screening=None):
     if _version_tuple(CSL_PYUTIL_VERSION) < _version_tuple(MIN_EMITTER_VERSION):
         raise RuntimeError(
             f"csl-pyutil >= {MIN_EMITTER_VERSION} is required "
@@ -171,7 +173,8 @@ def emit(stem, title, subtitle, items, filters):
     }
     OUT.mkdir(exist_ok=True)
     target = OUT / f"{stem}_review.html"
-    target.write_text(render_review_sheet(items, config), encoding="utf-8")
+    target.write_text(
+        render_review_sheet(items, config, screening=screening), encoding="utf-8")
     print(f"wrote {target.relative_to(ROOT)} ({len(items)} items)")
 
 
@@ -372,8 +375,75 @@ def xref_source_panels(row):
     return panels
 
 
+def xref_screening():
+    """H1649 — `render_review_sheet` requires the screening block whenever
+    ``extras=True``; without it the emitter has refused to build this sheet since
+    csl-pyutil grew the check, which is why a plain re-run of this script fails on
+    `origin/main` today (H3091 found it while regenerating for U7).
+
+    Every number below is read off the packet's own counters, not chosen: of the 50
+    source-check rows, 10 auto-resolve deterministically on the prefix-truncation
+    marker and 40 are rendered for the human. No lookup or agent stage runs on this
+    packet, so those tiers are honestly 0."""
+    counts = read_json("data/lexico/xref_source_check_packet.json")["counts"]
+    return {
+        "deterministic": counts["autoResolved"],
+        "lookup": 0,
+        "agent": 0,
+        "human": counts["needsHumanReview"],
+        "evidence_path": "data/lexico/xref_source_check_packet.json",
+        "rules": ["prefix-control: auto-resolve on the truncation marker (10 rows, not shown)"],
+    }
+
+
+def xref_population_edges():
+    """U7 (H3091) — the population this sheet draws from is the whole MW-intersect-PWG
+    shared-edge set, not the 40-row sample. Counted from the CSV the sampler slices,
+    header row excluded. The sheet blurb previously said 642, which was the file's
+    line count *including* the header; the true edge count is 641, matching the
+    packet's own selectionPolicy prose."""
+    path = ROOT / "data" / "lexico" / "xref_shared_edges.csv"
+    with path.open(encoding="utf-8", newline="") as fh:
+        return sum(1 for _ in csv.DictReader(fh))
+
+
+def xref_typology(packet):
+    """U7 (H2846 / H3091) — the xref card *does* pre-classify: it opens with
+    "Предложение: lexical-shared-core" and asks the reviewer to confirm that class
+    or name another from a fixed six-label vocabulary. That is a typology label
+    shown before the vote, so U7 applies — even though the card's plain `badges`
+    are provenance tags (which dictionaries assert the edge), not a class chip.
+
+    The population share is `share_unknown` on purpose, and this is the ruling
+    H3091 was minted to make. The population is the 641-edge intersection; no
+    label distribution over those 641 exists, because the label is precisely what
+    this vote produces. A share computed over the 40-row draw would be worse than
+    silence: the draw is `sharedEdges.slice(0, 40)` in headword order (all A/B/C/D/G
+    initials), so no rate from it generalises. `n` is therefore the count within
+    this sheet, and the share is declared unknown rather than faked."""
+    rows = packet["sharedCoreRows"]
+    label = "lexical-shared-core"
+    n = sum(1 for r in rows if label in (r.get("proposedLabels") or []))
+    return [{"label": label, "n": n, "share_unknown": True}]
+
+
 def xref_items():
     packet = read_json("data/lexico/xref_source_check_packet.json")
+    typology = xref_typology(packet)
+    population = xref_population_edges()
+    # U7 (H3091): the chip says "share unknown"; this line says WHY, in the
+    # reviewer's own language, so the unknown reads as a measured fact rather
+    # than a missing number.
+    share_note = (
+        f'<p style="margin:6px 0 0;color:{_MUTED}">Метка <code>lexical-shared-core</code> '
+        f'предложена на всех {typology[0]["n"]} карточках этого листа. Доля этой метки '
+        f'в популяции (общие рёбра MW∩PWG, всего <strong>{population}</strong>) '
+        f'<strong>неизвестна</strong>: разметки остальных рёбер '
+        f'(<strong>{population - typology[0]["n"]}</strong>) не существует — её и '
+        f'производит это голосование. Эти {typology[0]["n"]} — первые в порядке '
+        f'заголовков, не случайная выборка, поэтому доля по ним не переносится '
+        f'на популяцию.</p>'
+    )
     vocabulary_html = _label_vocabulary_html(packet.get("packetLabelVocabulary", []))
     policy_html = _selection_policy_html(packet)
     independence_html = _independence_html(packet)
@@ -402,6 +472,7 @@ def xref_items():
         ) if missing else ""
         question = (
             f'<p><strong>Предложение:</strong> <code>lexical-shared-core</code>.</p>'
+            f"{share_note}"
             f"<p>{html.escape(question_text)}</p>"
             f"{sparse_note}"
             "<p>Подтвердите, что ссылка <strong>реальна и лексична</strong>, либо отклоните и укажите "
@@ -419,6 +490,10 @@ def xref_items():
             "title": f"{source_iast} → {target_iast}",
             "badges": row.get("matchedDictionaries", ["MW", "PWG"])
                       + [f"SLP1 {row['sourceLemma']} → {row['target']}"],
+            # U7 (H3091): the proposed class, with its count in this sheet and an
+            # explicit `share unknown` — see xref_typology() for why no share can
+            # honestly be stated over the 641-edge population.
+            "typology": typology,
             "question": question,
             "panels": xref_source_panels(row),
             "note_placeholder": "Если отклоняете: corrected-label: краткое основание.",
@@ -479,7 +554,7 @@ BUILDERS = {
     "xref": (
         "csl-atlas-xref-shared-core_40edges",
         "Xref: общие MW/PWG рёбра — 40 строк",
-        "Первые 40 из 642 общих рёбер в порядке заголовков (не случайная выборка); "
+        "Первые 40 из 641 общего ребра в порядке заголовков (не случайная выборка); "
         "prefix-control разрешены автоматически. На каждой карточке: ссылки в Кёльн на оба конца ребра, "
         "разметка статьи с подсветкой, словарь меток и метод отбора. "
         "⚠ Общая ссылка НЕ означает двух независимых свидетельств: MW опирается на PW/PWG "
@@ -487,6 +562,7 @@ BUILDERS = {
         "ссылки, а не её двойную засвидетельствованность.",
         xref_items,
         [("shared-core", "общие рёбра")],
+        xref_screening,
     ),
     "tradition": ("csl-atlas-tradition-tags_119texts", "Теги традиций — 119 текстов", "Неавтоматизированная проверка, разблокирующая A50.", tradition_items, []),
     # Keep the historical 100units stem: it is part of the download filename,
@@ -499,10 +575,17 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--only", choices=BUILDERS.keys())
     choice = parser.parse_args().only
-    for key, (stem, title, subtitle, builder, filters) in BUILDERS.items():
+    for key, entry in BUILDERS.items():
         if choice and key != choice:
             continue
-        emit(stem, title, subtitle, builder(), filters)
+        stem, title, subtitle, builder, filters = entry[:5]
+        # H3091: only `xref` carries an H1649 screening builder so far. The other
+        # three sheets are ✅ closed/agent-adjudicated and must not be regenerated
+        # in place, so their screening blocks are deliberately NOT invented here —
+        # they stay unbuildable against csl-pyutil >= 0.16.0 until someone with
+        # their real screening counts fixes them. Tracked, not silently papered over.
+        screening = entry[5]() if len(entry) > 5 else None
+        emit(stem, title, subtitle, builder(), filters, screening)
 
 
 if __name__ == "__main__":
