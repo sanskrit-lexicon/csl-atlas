@@ -105,6 +105,23 @@ const SCAN_BASE = "https://sanskrit-lexicon.uni-koeln.de/scans";
  * digit-then-letters marker, handled by the new alternative in
  * scanPageFromPc below. Live spot-check: one servepdf.php fetch against
  * `page=322` returned the working scan-viewer shell embedding `bop-322.pdf`.
+ *
+ * ap/ccs/lrv/md/sch added A08 follow-up (H2368 roadmap follow-on, 29-08-2026):
+ * each `<pc>` first-field grows like a real continuous page number (ap 1–1768,
+ * ccs 1–541, lrv 1–839, md 1–384, sch 1–396) and `-meta2.txt` (lrv has no
+ * meta2; its `<pc>` is the same page-col family as the others) documents a
+ * page-col reference with no volume component. `redo_cologne_all.sh` maps
+ * ap/ccs/md/sch to `{DIR}Scan/2020` and lrv to `LRVScan/2022` (dictparms.py
+ * still says year 2020 for lrv — the nybj class of mismatch; the live 2022
+ * path is the one that answers). One sequential servepdf.php probe per dict
+ * on a real mid-dict `<pc>` page, plus one residual-shape probe for each new
+ * scanPageFromPc alternative, all returned the working scan-viewer shell
+ * (29-08-2026). New alternatives below: ap/md letter-then-digit
+ * (`0379-a1` / `036-a1`), sch unseparated-page-then-column (`104a-1`),
+ * lrv dotted-column (`120-12.1`). ccs's `038-1a` already matched the A08
+ * bop letter-break rule. Guarded exclusions unchanged: pui/vei/acc (volume
+ * first-field), pw/pwkvn/skd (vol-page-col `N-N-a`, first-field ∈ 1..7),
+ * nmmb (broken probe, A11).
  */
 export const COLOGNE_SCAN_DIR = Object.freeze({
   mw: "MW",
@@ -139,7 +156,12 @@ export const COLOGNE_SCAN_DIR = Object.freeze({
   pe: "PE",
   shs: "SHS",
   yat: "YAT",
-  bop: "BOP"
+  bop: "BOP",
+  ap: "AP",
+  ccs: "CCS",
+  lrv: "LRV",
+  md: "MD",
+  sch: "SCH"
 });
 
 /**
@@ -152,7 +174,8 @@ const COLOGNE_SCAN_YEAR = Object.freeze({
   abch: "2023",
   acsj: "2023",
   acph: "2023",
-  nybj: "2026"
+  nybj: "2026",
+  lrv: "2022"
 });
 
 /** Dicts whose Cologne page keys are "{vol}-{page:04d}" rather than a bare page. */
@@ -192,7 +215,10 @@ export function entryUrl(dictCode, slp1Key, options = {}) {
  * page-column, a digitisation slip for "0307-a" — H2368-A07; the shape exists
  * in no other local dict) -> "0307"; BOP "027-1a" (documented "letter break"
  * marker `[PagePPP-zC+ NN]` digitised as page-dash-digit-letters — H2368-A08)
- * -> "027".
+ * -> "027"; AP/MD "0379-a1" (letter-break `[PagePPPP-UC]` — H2368-A08
+ * follow-up) -> "0379"; SCH "104a-1" (documented `PPPa.C` — H2368-A08
+ * follow-up) -> "104"; LRV "120-12.1" (dotted column — H2368-A08 follow-up)
+ * -> "120".
  * @returns {string|null} null when <pc> is absent or not in a shape we trust
  */
 export function scanPageFromPc(dictCode, pc) {
@@ -227,7 +253,28 @@ export function scanPageFromPc(dictCode, pc) {
   // volume component). Distinct from the digit-only marker above because the
   // trailing letters follow a leading digit rather than standing alone.
   const letterBreakMatch = page.match(/^(\d+)-\d+[a-zA-Z]+$/);
-  return letterBreakMatch ? letterBreakMatch[1] : null;
+  if (letterBreakMatch) return letterBreakMatch[1];
+  // "page-<letters><digit>" letter-break shape (observed for ap/md, e.g.
+  // "0379-a1"; ap-meta2.txt `[PagePPPP-UC]` and md-meta2.txt `[PageUY-C]`
+  // where U is a/b/c/d/e at a letter change on the same page). Inverse of
+  // the bop digit-then-letters marker; previously left null as an unverified
+  // mixed chunk (ap90 "0117-a1" test). Live-verified servepdf page=0379
+  // (ap) and page=036 (md) 29-08-2026.
+  const letterThenDigitMatch = page.match(/^(\d+)-[a-zA-Z]+\d+$/);
+  if (letterThenDigitMatch) return letterThenDigitMatch[1];
+  // "page<letter>-<column>" shape (observed for sch, e.g. "104a-1";
+  // sch-meta2.txt `PPPa.C` — the 2nd horizontal section of a page that
+  // starts a new letter). Distinct from gra's unseparated `0307a` because
+  // a column number still follows the dash. Live-verified servepdf
+  // page=104 29-08-2026.
+  const unseparatedThenColMatch = page.match(/^(\d+)[a-zA-Z]+-\d+$/);
+  if (unseparatedThenColMatch) return unseparatedThenColMatch[1];
+  // "page-<column>.<sub>" dotted-column shape (observed for lrv, e.g.
+  // "120-12.1"; 220 of 53,441 entries). First field is still the page
+  // (lrv pages 1–839); drop the dotted column. Live-verified servepdf
+  // page=120 29-08-2026.
+  const dottedColMatch = page.match(/^(\d+)-\d+\.\d+$/);
+  return dottedColMatch ? dottedColMatch[1] : null;
 }
 
 /**

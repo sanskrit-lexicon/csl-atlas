@@ -5,6 +5,31 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 ### Changed
 
+- **L8 scan-link coverage 64.31% → 79.30%: `COLOGNE_SCAN_DIR` extended 33 → 38
+  dicts + three `scanPageFromPc` alternatives (A08 follow-up, H2368 roadmap
+  follow-on, 29-08-2026).** `ap`, `ccs`, `lrv`, `md`, `sch` (~224k entries)
+  now resolve to live Cologne scan pages at 100%. Verification per the
+  A11/A12/A07 bar: `redo_cologne_all.sh` maps ap/ccs/md/sch to `{DIR}Scan/2020`
+  and lrv to `LRVScan/2022` (`dictparms.py` still says 2020 for lrv — same
+  year-mismatch class as nybj; the live 2022 path answers), per-dict `<pc>`
+  first-fields grow like real continuous page numbers with no volume
+  component, and one sequential `servepdf.php` live probe per dict plus one
+  residual-shape probe for each new rule answered with the working
+  scan-viewer shell. New alternatives: ap/md letter-then-digit (`0379-a1` →
+  page `0379`), sch unseparated-page-then-column (`104a-1` → page `104`),
+  lrv dotted-column (`120-12.1` → page `120`); ccs's `038-1a` already matched
+  the A08 bop letter-break rule. `lrv` added to `COLOGNE_SCAN_YEAR` as 2022.
+  **Guarded exclusions unchanged**: `pui`/`vei`/`acc` (volume first-field) and
+  `pw`/`pwkvn`/`skd` (three-part vol-page-col, first-field ∈ 1..7) — H839;
+  `nmmb` stays out (broken probe, A11). Census regenerated
+  (1,186,408 / 1,496,157 = 79.30%; 309,748 entries in the remaining 7
+  outside dicts are the dominant gap):
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md) ·
+  typology packet regenerated with the new L8 flags:
+  [src/data/dicts/richness-typology.json](src/data/dicts/richness-typology.json).
+
 - **L8 scan-link coverage 48.11% → 63.96%: `COLOGNE_SCAN_DIR` extended 21 → 32
   dicts + gra's unseparated page-column rule (A07, H2368 roadmap follow-on,
   28-08-2026).** `ben`, `gst`, `inm`, `lan`, `mci`, `mw72`, `mwe`, `nybj`,

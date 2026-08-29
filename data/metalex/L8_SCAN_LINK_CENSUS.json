@@ -2,15 +2,15 @@
   "schemaVersion": "1.0.0",
   "handoff": "H2368",
   "title": "METALEX L8 — entry-level scan-page link census",
-  "generatedAt": "2026-08-29T00:13:24Z",
+  "generatedAt": "2026-08-29T00:35:45Z",
   "generatedDate": "2026-08-29",
   "model": "Grok 4.5 (grok-4.5)",
-  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix)",
+  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5)",
   "cslOrigRoot": "C:\\Users\\user\\Documents\\GitHub\\csl-orig\\v02",
   "method": {
     "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
     "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
-    "numerator_atlas_scan": "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — dict ∈ COLOGNE_SCAN_DIR (33 dicts as of A08) AND pc passes scanPageFromPc (PWG: /^\\d+-\\d+$/; others: first comma-field is digits-only, page-marker, or unseparated page+column-letters)",
+    "numerator_atlas_scan": "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — dict ∈ COLOGNE_SCAN_DIR (38 dicts as of A08 follow-up) AND pc passes scanPageFromPc (PWG: /^\\d+-\\d+$/; others: first comma-field is digits-only, page-marker, unseparated page+column-letters, letter-then-digit, unseparated-page-then-column, or dotted-column)",
     "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
     "non_goals": [
       "No mass link invention",
@@ -51,7 +51,12 @@
       "pe": "PE",
       "shs": "SHS",
       "yat": "YAT",
-      "bop": "BOP"
+      "bop": "BOP",
+      "ap": "AP",
+      "ccs": "CCS",
+      "lrv": "LRV",
+      "md": "MD",
+      "sch": "SCH"
     }
   },
   "totals": {
@@ -60,11 +65,11 @@
     "with_pc": 1496156,
     "missing_pc": 1,
     "pc_pct": 99.9999,
-    "atlas_resolvable_scan": 962240,
-    "atlas_resolvable_pct": 64.3141
+    "atlas_resolvable_scan": 1186408,
+    "atlas_resolvable_pct": 79.297
   },
   "gap_buckets": {
-    "pc_present_no_cologne_scan_dir": 533916,
+    "pc_present_no_cologne_scan_dir": 309748,
     "missing_pc": 1
   },
   "dict_buckets": {
@@ -121,6 +126,7 @@
       "acph",
       "acsj",
       "ae",
+      "ap",
       "ap90",
       "armh",
       "ben",
@@ -129,6 +135,7 @@
       "bor",
       "bur",
       "cae",
+      "ccs",
       "fri",
       "gra",
       "gst",
@@ -136,13 +143,16 @@
       "inm",
       "krm",
       "lan",
+      "lrv",
       "mci",
+      "md",
       "mw",
       "mw72",
       "mwe",
       "pe",
       "pgn",
       "pwg",
+      "sch",
       "shs",
       "snp",
       "stc",
@@ -154,6 +164,7 @@
       "abch",
       "acph",
       "acsj",
+      "ap",
       "ap90",
       "armh",
       "ben",
@@ -162,6 +173,7 @@
       "bor",
       "bur",
       "cae",
+      "ccs",
       "fri",
       "gra",
       "gst",
@@ -169,13 +181,16 @@
       "inm",
       "krm",
       "lan",
+      "lrv",
       "mci",
+      "md",
       "mw",
       "mw72",
       "mwe",
       "pe",
       "pgn",
       "pwg",
+      "sch",
       "shs",
       "snp",
       "stc",
@@ -188,15 +203,10 @@
     ],
     "not_in_cologne_scan_dir": [
       "acc",
-      "ap",
-      "ccs",
-      "lrv",
-      "md",
       "nmmb",
       "pui",
       "pw",
       "pwkvn",
-      "sch",
       "skd",
       "vei"
     ]
@@ -206,7 +216,7 @@
     "pc_substrate_complete": false,
     "atlas_scan_url_complete": false,
     "claim_l8_done": false,
-    "note": "Do not claim L8 complete: print coordinates are nearly universal, but 12 dicts with <pc> data still have no verified Cologne scan-dir map (533,916 entries), so a working scan URL resolves for 64.31% of entries under the atlas's verified dict→scan-dir map."
+    "note": "Do not claim L8 complete: print coordinates are nearly universal, but 7 dicts with <pc> data still have no verified Cologne scan-dir map (309,748 entries), so a working scan URL resolves for 79.30% of entries under the atlas's verified dict→scan-dir map."
   },
   "gap_samples": [
     {
@@ -340,13 +350,11 @@
       "with_pc": 90843,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 90843
-      },
+      "atlas_resolvable_scan": 90843,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "AP",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-N",
@@ -571,13 +579,11 @@
       "with_pc": 30010,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 30010
-      },
+      "atlas_resolvable_scan": 30010,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "CCS",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-N",
@@ -777,13 +783,11 @@
       "with_pc": 53441,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 53441
-      },
+      "atlas_resolvable_scan": 53441,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "LRV",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-N",
@@ -829,13 +833,11 @@
       "with_pc": 20749,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 20749
-      },
+      "atlas_resolvable_scan": 20749,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "MD",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-N",
@@ -1150,13 +1152,11 @@
       "with_pc": 29125,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 29125
-      },
+      "atlas_resolvable_scan": 29125,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "SCH",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-N",

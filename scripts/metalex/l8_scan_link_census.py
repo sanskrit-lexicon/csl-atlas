@@ -69,11 +69,23 @@ COLOGNE_SCAN_DIR = {
     "shs": "SHS",
     "yat": "YAT",
     "bop": "BOP",
+    "ap": "AP",
+    "ccs": "CCS",
+    "lrv": "LRV",
+    "md": "MD",
+    "sch": "SCH",
 }
 MULTI_VOLUME_DICTS = {"pwg"}
 
 # Mirror of cologne-links.mjs COLOGNE_SCAN_YEAR (absent codes default to 2020).
-COLOGNE_SCAN_YEAR = {"fri": "2025", "abch": "2023", "acsj": "2023", "acph": "2023", "nybj": "2026"}
+COLOGNE_SCAN_YEAR = {
+    "fri": "2025",
+    "abch": "2023",
+    "acsj": "2023",
+    "acph": "2023",
+    "nybj": "2026",
+    "lrv": "2022",
+}
 
 _ATTR_PC = re.compile(r"<pc>([^<]*)")
 _ATTR_K1 = re.compile(r"<k1>([^<]*)")
@@ -85,6 +97,9 @@ _GAP_SAMPLE_PER_DICT = 3
 _PC_COLUMN_MARKER = re.compile(r"^(\d+)-([a-zA-Z]+|\d+)$")
 _PC_UNSEPARATED_COLUMN = re.compile(r"^(\d+)[a-zA-Z]+$")
 _PC_LETTER_BREAK = re.compile(r"^(\d+)-\d+[a-zA-Z]+$")
+_PC_LETTER_THEN_DIGIT = re.compile(r"^(\d+)-[a-zA-Z]+\d+$")
+_PC_UNSEP_THEN_COL = re.compile(r"^(\d+)[a-zA-Z]+-\d+$")
+_PC_DOTTED_COL = re.compile(r"^(\d+)-\d+\.\d+$")
 
 
 def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
@@ -113,6 +128,18 @@ def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
     # documents `[PagePPP-zC+ NN]` where z is a 1/2/3 letter-break marker and
     # C the a/b column — H2368-A08).
     m = _PC_LETTER_BREAK.match(page)
+    if m:
+        return m.group(1)
+    # "page-<letters><digit>" letter-break (ap/md "0379-a1" — H2368-A08 follow-up).
+    m = _PC_LETTER_THEN_DIGIT.match(page)
+    if m:
+        return m.group(1)
+    # "page<letter>-<column>" (sch "104a-1" — H2368-A08 follow-up).
+    m = _PC_UNSEP_THEN_COL.match(page)
+    if m:
+        return m.group(1)
+    # "page-<column>.<sub>" dotted-column (lrv "120-12.1" — H2368-A08 follow-up).
+    m = _PC_DOTTED_COL.match(page)
     return m.group(1) if m else None
 
 
@@ -252,16 +279,17 @@ def build_report(rows: list[dict]) -> dict:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generatedDate": date.today().isoformat(),
         "model": "Grok 4.5 (grok-4.5)",
-        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix)",
+        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5)",
         "cslOrigRoot": str(CSL_ORIG),
         "method": {
             "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
             "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
             "numerator_atlas_scan": (
                 "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — "
-                "dict ∈ COLOGNE_SCAN_DIR (33 dicts as of A08) AND pc passes scanPageFromPc "
+                "dict ∈ COLOGNE_SCAN_DIR (38 dicts as of A08 follow-up) AND pc passes scanPageFromPc "
                 r"(PWG: /^\d+-\d+$/; others: first comma-field is digits-only, "
-                r"page-marker, or unseparated page+column-letters)"
+                r"page-marker, unseparated page+column-letters, letter-then-digit, "
+                r"unseparated-page-then-column, or dotted-column)"
             ),
             "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
             "non_goals": [
@@ -302,8 +330,11 @@ def build_report(rows: list[dict]) -> dict:
             "claim_l8_done": False,
             "note": (
                 "Do not claim L8 complete: print coordinates are nearly universal, "
-                "but 12 dicts with <pc> data still have no verified Cologne scan-dir "
-                "map (533,916 entries), so a working scan URL resolves for 64.31% of "
+                f"but {len(no_scan_dir_codes)} dicts with <pc> data still have no "
+                "verified Cologne scan-dir map "
+                f"({gap_buckets.get('pc_present_no_cologne_scan_dir', 0):,} entries), "
+                "so a working scan URL resolves for "
+                f"{round(100.0 * resolvable / total, 2) if total else 0:.2f}% of "
                 "entries under the atlas's verified dict→scan-dir map."
             ),
         },

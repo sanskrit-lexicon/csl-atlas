@@ -27,13 +27,12 @@ test("scanPageFromPc: unresolvable shapes stay null (no invented links)", () => 
   assert.equal(scanPageFromPc("ap90", ""), null);
   assert.equal(scanPageFromPc("ap90", "abc"), null);
   assert.equal(scanPageFromPc("mw", "abc,1"), null);
-  assert.equal(scanPageFromPc("ap90", "0001-x0"), null, "trailing chunk must be letters only, not alnum");
+  assert.equal(scanPageFromPc("ap90", "0001-a1b"), null, "letters-digit-letters trailing chunk is not a verified marker");
 });
 
 test("scanPageFromPc: GRA unseparated page-column drops the trailing letters (H2368-A07 gap fix)", () => {
   assert.equal(scanPageFromPc("gra", "0307a"), "0307", "digitisation slip for the separated '0307-a' shape; live-verified servepdf page=0307");
   assert.equal(scanPageFromPc("gra", "1365a"), "1365");
-  assert.equal(scanPageFromPc("ap90", "0117-a1"), null, "mixed marker chunk (digits+letters) is still not trusted");
   assert.equal(scanPageFromPc("gra", "12x0"), null, "digits must come first, letters only after");
 });
 
@@ -80,12 +79,44 @@ test("scanPageFromPc: BOP letter-break marker drops the trailing digit+letters (
   assert.equal(scanPageFromPc("bop", "027-1a"), "027", "bop-meta2.txt [PagePPP-zC+ NN] letter-break shape");
   assert.equal(scanPageFromPc("bop", "099-3b"), "099");
   assert.equal(scanPageFromPc("bop", "001-a"), "001", "plain dash-letter marker still resolves");
-  assert.equal(scanPageFromPc("bop", "0117-a1"), null, "letters-then-digit order is still not trusted (matches the ap90 exclusion)");
+});
+
+test("scanPageFromPc: AP/MD letter-then-digit marker (H2368-A08 follow-up)", () => {
+  assert.equal(scanPageFromPc("ap", "0379-a1"), "0379", "ap-meta2.txt [PagePPPP-UC] letter-break; live-verified servepdf page=0379");
+  assert.equal(scanPageFromPc("ap", "1321-a2"), "1321");
+  assert.equal(scanPageFromPc("md", "036-a1"), "036", "md-meta2.txt [PageUY-C]; live-verified servepdf page=036");
+  assert.equal(scanPageFromPc("md", "060-a3"), "060");
+  assert.equal(scanPageFromPc("ap90", "0117-a1"), "0117", "same shape now trusted after ap/md live verification");
+});
+
+test("scanPageFromPc: SCH unseparated-page then column (H2368-A08 follow-up)", () => {
+  assert.equal(scanPageFromPc("sch", "104a-1"), "104", "sch-meta2.txt PPPa.C; live-verified servepdf page=104");
+  assert.equal(scanPageFromPc("sch", "186a-3"), "186");
+  assert.equal(scanPageFromPc("sch", "198-1"), "198", "plain page-column-digit still resolves");
+});
+
+test("scanPageFromPc: LRV dotted-column (H2368-A08 follow-up)", () => {
+  assert.equal(scanPageFromPc("lrv", "120-12.1"), "120", "live-verified servepdf page=120");
+  assert.equal(scanPageFromPc("lrv", "839-22.1"), "839");
+  assert.equal(scanPageFromPc("lrv", "425-32"), "425", "plain two-digit column still resolves");
 });
 
 test("scanUrl: A08 dict resolves with its verified scan dir and year (bop)", () => {
   assert.equal(scanUrl("bop", "322-b"), "https://sanskrit-lexicon.uni-koeln.de/scans/BOPScan/2020/web/webtc/servepdf.php?page=322", "live-verified servepdf page=322");
   assert.equal(scanUrl("bop", "027-1a"), "https://sanskrit-lexicon.uni-koeln.de/scans/BOPScan/2020/web/webtc/servepdf.php?page=027", "letter-break shape");
+});
+
+test("scanUrl: A08 follow-up dicts resolve with verified scan dir and year (ap/ccs/lrv/md/sch)", () => {
+  assert.equal(scanUrl("ap", "0923-2"), "https://sanskrit-lexicon.uni-koeln.de/scans/APScan/2020/web/webtc/servepdf.php?page=0923", "live-verified servepdf page=0923");
+  assert.equal(scanUrl("ap", "0379-a1"), "https://sanskrit-lexicon.uni-koeln.de/scans/APScan/2020/web/webtc/servepdf.php?page=0379", "letter-then-digit residual");
+  assert.equal(scanUrl("ccs", "264-2"), "https://sanskrit-lexicon.uni-koeln.de/scans/CCSScan/2020/web/webtc/servepdf.php?page=264", "live-verified servepdf page=264");
+  assert.equal(scanUrl("ccs", "038-1a"), "https://sanskrit-lexicon.uni-koeln.de/scans/CCSScan/2020/web/webtc/servepdf.php?page=038", "bop letter-break shape");
+  assert.equal(scanUrl("lrv", "425-32"), "https://sanskrit-lexicon.uni-koeln.de/scans/LRVScan/2022/web/webtc/servepdf.php?page=425", "lrv deploys at year 2022 per redo_cologne_all.sh");
+  assert.equal(scanUrl("lrv", "120-12.1"), "https://sanskrit-lexicon.uni-koeln.de/scans/LRVScan/2022/web/webtc/servepdf.php?page=120", "dotted-column residual");
+  assert.equal(scanUrl("md", "137-3"), "https://sanskrit-lexicon.uni-koeln.de/scans/MDScan/2020/web/webtc/servepdf.php?page=137", "live-verified servepdf page=137");
+  assert.equal(scanUrl("md", "036-a1"), "https://sanskrit-lexicon.uni-koeln.de/scans/MDScan/2020/web/webtc/servepdf.php?page=036", "letter-then-digit residual");
+  assert.equal(scanUrl("sch", "198-1"), "https://sanskrit-lexicon.uni-koeln.de/scans/SCHScan/2020/web/webtc/servepdf.php?page=198", "live-verified servepdf page=198");
+  assert.equal(scanUrl("sch", "104a-1"), "https://sanskrit-lexicon.uni-koeln.de/scans/SCHScan/2020/web/webtc/servepdf.php?page=104", "unseparated-page-then-column residual");
 });
 
 test("scanUrl: volume-prefixed pc dicts stay OUT (pui/vei/acc) — no silently-wrong links", () => {
@@ -97,7 +128,7 @@ test("scanUrl: volume-prefixed pc dicts stay OUT (pui/vei/acc) — no silently-w
   assert.equal(scanUrl("acc", "1-001,1"), null);
 });
 
-test("COLOGNE_SCAN_DIR names the thirty-three live-verified dicts (H2368 + A11 + A12 + A07 + A08)", () => {
+test("COLOGNE_SCAN_DIR names the thirty-eight live-verified dicts (H2368 + A11 + A12 + A07 + A08 + A08 follow-up)", () => {
   assert.deepEqual(COLOGNE_SCAN_DIR, {
     mw: "MW",
     pwg: "PWG",
@@ -131,7 +162,12 @@ test("COLOGNE_SCAN_DIR names the thirty-three live-verified dicts (H2368 + A11 +
     pe: "PE",
     shs: "SHS",
     yat: "YAT",
-    bop: "BOP"
+    bop: "BOP",
+    ap: "AP",
+    ccs: "CCS",
+    lrv: "LRV",
+    md: "MD",
+    sch: "SCH"
   });
 });
 
