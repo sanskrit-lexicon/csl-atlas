@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-08-29T00:12:09.918Z",
+  "generatedAt": "2026-08-29T00:34:21.244Z",
   "claim": "M1: every locally-present CDSL dictionary placed on the roadmap's L0-L10 data-richness ordinal scale, with a machine-readable justification per level.",
   "evidenceLabel": "derived",
   "reviewStatus": "machine-reviewed",
@@ -84,6 +84,71 @@
   ],
   "rowCount": 44,
   "rows": [
+    {
+      "code": "AP",
+      "sourceCode": "ap",
+      "title": "Apte 1957 Chicago",
+      "records": 90654,
+      "familyLabel": "western-tagged",
+      "level": 9,
+      "levelName": "Cross-dictionary integration",
+      "levelQualifier": "partial",
+      "criteria": {
+        "l1": {
+          "level": 1,
+          "met": true,
+          "evidence": "records=90654 in data/dictionary-coverage.json"
+        },
+        "l2": {
+          "level": 2,
+          "met": true,
+          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
+        },
+        "l3": {
+          "level": 3,
+          "met": true,
+          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
+        },
+        "l4": {
+          "level": 4,
+          "met": true,
+          "evidence": "blockPct.gram=38.42% >= 20%"
+        },
+        "l5": {
+          "level": 5,
+          "met": true,
+          "evidence": "blockPct.citeTagged=31.63% >= 20%"
+        },
+        "l6": {
+          "level": 6,
+          "met": true,
+          "evidence": "coverage-matrix.json senseSegmented=true"
+        },
+        "l7": {
+          "level": 7,
+          "met": true,
+          "evidence": "structural-register.json xrefEdges=609 (M1-M5 microstructure cross-reference graph; blockPct.xref=4.51% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
+        },
+        "l8": {
+          "level": 8,
+          "met": true,
+          "evidence": "sourceCode \"ap\" -> COLOGNE_SCAN_DIR[\"ap\"]=\"AP\" in scripts/lib/cologne-links.mjs"
+        },
+        "l9": {
+          "level": 9,
+          "met": true,
+          "evidence": "sourceCode \"ap\" found under ../alternateheadwords/data or ../csl-lslink/zip"
+        },
+        "l10": {
+          "level": 10,
+          "met": false,
+          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
+        }
+      },
+      "notes": [
+        "L9 is a floor, not a verified ceiling: roadmap §13 Phase M0a (the Cologne live-site scrape confirming cross-dict lookup actually resolves at runtime) has not run for this repo (grep for cologne_features/cologne_scrape found nothing). This label reflects committed cross-dict linking infrastructure (alternateheadwords / csl-lslink) only."
+      ]
+    },
     {
       "code": "MW",
       "sourceCode": "mw",
@@ -212,71 +277,6 @@
       },
       "notes": [
         "L9 is a floor, not a verified ceiling: roadmap §13 Phase M0a (the Cologne live-site scrape confirming cross-dict lookup actually resolves at runtime) has not run for this repo (grep for cologne_features/cologne_scrape found nothing). This label reflects committed cross-dict linking infrastructure (alternateheadwords / csl-lslink) only."
-      ]
-    },
-    {
-      "code": "AP",
-      "sourceCode": "ap",
-      "title": "Apte 1957 Chicago",
-      "records": 90654,
-      "familyLabel": "western-tagged",
-      "level": 7,
-      "levelName": "Cross-reference tagging",
-      "levelQualifier": "confirmed",
-      "criteria": {
-        "l1": {
-          "level": 1,
-          "met": true,
-          "evidence": "records=90654 in data/dictionary-coverage.json"
-        },
-        "l2": {
-          "level": 2,
-          "met": true,
-          "evidence": "blockPct.head=100% in data/dictionary-coverage.json — nonzero only when the dict-wide <L>...<LEND> split succeeded (scripts/build-dictionary-coverage.mjs splitEntries()), which is then true for every entry"
-        },
-        "l3": {
-          "level": 3,
-          "met": true,
-          "evidence": "blockPct.head=100% >= 50% (majority of <L>-bounded entries carry a recognizable <k1>); <k2> variant-headword presence is not independently verified by any computed signal this classifier consumes"
-        },
-        "l4": {
-          "level": 4,
-          "met": true,
-          "evidence": "blockPct.gram=38.42% >= 20%"
-        },
-        "l5": {
-          "level": 5,
-          "met": true,
-          "evidence": "blockPct.citeTagged=31.63% >= 20%"
-        },
-        "l6": {
-          "level": 6,
-          "met": true,
-          "evidence": "coverage-matrix.json senseSegmented=true"
-        },
-        "l7": {
-          "level": 7,
-          "met": true,
-          "evidence": "structural-register.json xrefEdges=609 (M1-M5 microstructure cross-reference graph; blockPct.xref=4.51% textual mentions shown for context only, not used to gate — it includes untagged prose \"see\"/\"cf.\")"
-        },
-        "l8": {
-          "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"ap\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
-        },
-        "l9": {
-          "level": 9,
-          "met": true,
-          "evidence": "sourceCode \"ap\" found under ../alternateheadwords/data or ../csl-lslink/zip"
-        },
-        "l10": {
-          "level": 10,
-          "met": false,
-          "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
-        }
-      },
-      "notes": [
-        "Raw evidence for L9 is present despite the cumulative cap at L7 — a lower-tier convention gap (see criteria), not missing content."
       ]
     },
     {
@@ -976,8 +976,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"md\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"md\" -> COLOGNE_SCAN_DIR[\"md\"]=\"MD\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -990,7 +990,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L4 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "STC",
@@ -1429,8 +1431,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"ccs\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"ccs\" -> COLOGNE_SCAN_DIR[\"ccs\"]=\"CCS\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -1443,7 +1445,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "FRI",
@@ -1817,8 +1821,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"lrv\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"lrv\" -> COLOGNE_SCAN_DIR[\"lrv\"]=\"LRV\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -1831,7 +1835,9 @@
           "evidence": "Not evaluated by design: external TEI/RDF/SPARQL publication is csl-standards' territory per docs/BOUNDARY_RULES.md, so an atlas-side signal can never mark this achieved."
         }
       },
-      "notes": []
+      "notes": [
+        "Raw evidence for L8 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+      ]
     },
     {
       "code": "MCI",
@@ -2270,8 +2276,8 @@
         },
         "l8": {
           "level": 8,
-          "met": false,
-          "evidence": "sourceCode \"sch\" absent from COLOGNE_SCAN_DIR in scripts/lib/cologne-links.mjs"
+          "met": true,
+          "evidence": "sourceCode \"sch\" -> COLOGNE_SCAN_DIR[\"sch\"]=\"SCH\" in scripts/lib/cologne-links.mjs"
         },
         "l9": {
           "level": 9,
@@ -2285,7 +2291,7 @@
         }
       },
       "notes": [
-        "Raw evidence for L5, L9 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
+        "Raw evidence for L5, L8, L9 is present despite the cumulative cap at L3 — a lower-tier convention gap (see criteria), not missing content."
       ]
     },
     {
@@ -2945,10 +2951,9 @@
       "4": 7,
       "5": 5,
       "6": 1,
-      "7": 1,
-      "9": 2
+      "9": 3
     },
-    "hypothesisCheck": "Roadmap §1 hypothesis: 'MW is the only dict at L8+; most others sit at L4-L6; specialised ones at L3-L5; scan-only ones at L0.' Empirically (this run): MW, PWG reach L8+ — MW is NOT the only one, confirming the roadmap's own counter-hypothesis (§3) that PWG carries comparable digital investment. No locally-present dict is at L0 — the roadmap's named scan-only examples (PD, PE, PGN, IEG, MWE, AE, SNP, YAT) are either not present in this local csl-orig checkout (PD) or, empirically, already have keyboarded plain text (PE, PGN, IEG, MWE, AE, SNP, YAT all have nonzero records here) — the roadmap's example column is stale relative to current data, not this classifier's finding."
+    "hypothesisCheck": "Roadmap §1 hypothesis: 'MW is the only dict at L8+; most others sit at L4-L6; specialised ones at L3-L5; scan-only ones at L0.' Empirically (this run): AP, MW, PWG reach L8+ — MW is NOT the only one, confirming the roadmap's own counter-hypothesis (§3) that PWG carries comparable digital investment. No locally-present dict is at L0 — the roadmap's named scan-only examples (PD, PE, PGN, IEG, MWE, AE, SNP, YAT) are either not present in this local csl-orig checkout (PD) or, empirically, already have keyboarded plain text (PE, PGN, IEG, MWE, AE, SNP, YAT all have nonzero records here) — the roadmap's example column is stale relative to current data, not this classifier's finding."
   },
   "limitations": [
     "L9 reflects committed cross-dict linking infrastructure (alternateheadwords, csl-lslink), not a live-resolution check against the Cologne site (M0a, unrun) — a floor, not a ceiling.",
