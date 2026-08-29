@@ -3,6 +3,8 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+
+## [0.19.0] - 2026-08-29
 ### Changed
 
 - **U7 typology chip on the xref shared-core sheet; population share ruled
