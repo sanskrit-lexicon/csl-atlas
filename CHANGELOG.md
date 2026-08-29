@@ -5,6 +5,28 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 ### Changed
 
+- **U7 typology chip on the xref shared-core sheet; population share ruled
+  genuinely unknown (H3091, 29-08-2026).** `csl-atlas-xref-shared-core_40edges`
+  pre-classifies — the card opens with `Предложение: lexical-shared-core` and
+  asks the reviewer to confirm that class — so U7 (H2846) applies, even though
+  the card's plain `badges` are provenance tags, not a class chip. The share is
+  `share_unknown` **by ruling, not by omission**: the population is the 641-edge
+  MW∩PWG intersection, no label distribution over it exists (the vote is what
+  produces the label), and the 40 rows are `sharedEdges.slice(0, 40)` in headword
+  order, so no rate from them generalises. Every card now carries
+  `lexical-shared-core (n=40, share unknown)` plus a Russian note naming both
+  denominators (641 population / 601 unlabelled) and the sampling bias. Two
+  defects found while regenerating: the script had been **unbuildable on `main`**
+  against csl-pyutil >= 0.16.0 (`render_review_sheet` requires an H1649
+  `screening=` block; `xref_screening()` now supplies it from the packet's own
+  counters — the three ✅ closed sheets are deliberately left unbuilt rather than
+  given invented counts), and the blurb's "642 общих рёбер" was
+  `xref_shared_edges.csv`'s line count *including the header* — the intersection
+  is **641**, now counted rather than hardcoded. Emitter floor 0.6.0 → 0.16.0.
+  Evidence: 40 `badge-typology` spans == 40 cards, zero `n=None`.
+  Generator: [scripts/build-review-sheets.py](scripts/build-review-sheets.py) ·
+  standard: [Uprava docs/REVIEW_SHEET_CONTENT_STANDARD_2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/REVIEW_SHEET_CONTENT_STANDARD_2026.md) §8
+
 - **L8 scan-link coverage 64.31% → 79.30%: `COLOGNE_SCAN_DIR` extended 33 → 38
   dicts + three `scanPageFromPc` alternatives (A08 follow-up, H2368 roadmap
   follow-on, 29-08-2026).** `ap`, `ccs`, `lrv`, `md`, `sch` (~224k entries)
