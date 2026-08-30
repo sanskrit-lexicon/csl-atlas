@@ -101,6 +101,18 @@ test("scanPageFromPc: LRV dotted-column (H2368-A08 follow-up)", () => {
   assert.equal(scanPageFromPc("lrv", "425-32"), "425", "plain two-digit column still resolves");
 });
 
+test("scanPageFromPc: pw/pwkvn three-part vol-page-col keeps the vol-page value (H3695, H839)", () => {
+  assert.equal(scanPageFromPc("pw", "7-385-d"), "7-385", "dominant page-column-letter marker drops; live-verified servepdf page=7-385");
+  assert.equal(scanPageFromPc("pw", "1-001-b"), "1-001");
+  assert.equal(scanPageFromPc("pwkvn", "2-288-a"), "2-288", "live-verified servepdf page=2-288");
+  assert.equal(scanPageFromPc("pw", "7-384-1a"), "7-384", "bop-class digit-then-letters letter-break marker drops");
+  assert.equal(scanPageFromPc("pwkvn", "7-366-1"), "7-366", "ap90-class digit-only section-break marker drops");
+  assert.equal(scanPageFromPc("pw", "1-0614"), "1-0614", "two-part vol-page passes through verbatim (H839 PWG contract)");
+  assert.equal(scanPageFromPc("pw", "385"), null, "bare page must not silently default to volume 1");
+  assert.equal(scanPageFromPc("pw", "7-385-1a2"), null, "mixed trailing chunk is not a verified marker shape");
+  assert.equal(scanPageFromPc("pwkvn", "x-288-a"), null);
+});
+
 test("scanUrl: A08 dict resolves with its verified scan dir and year (bop)", () => {
   assert.equal(scanUrl("bop", "322-b"), "https://sanskrit-lexicon.uni-koeln.de/scans/BOPScan/2020/web/webtc/servepdf.php?page=322", "live-verified servepdf page=322");
   assert.equal(scanUrl("bop", "027-1a"), "https://sanskrit-lexicon.uni-koeln.de/scans/BOPScan/2020/web/webtc/servepdf.php?page=027", "letter-break shape");
@@ -119,6 +131,11 @@ test("scanUrl: A08 follow-up dicts resolve with verified scan dir and year (ap/c
   assert.equal(scanUrl("sch", "104a-1"), "https://sanskrit-lexicon.uni-koeln.de/scans/SCHScan/2020/web/webtc/servepdf.php?page=104", "unseparated-page-then-column residual");
 });
 
+test("scanUrl: H3695 pw/pwkvn resolve to their vol-page servepdf URLs", () => {
+  assert.equal(scanUrl("pw", "7-385-d"), "https://sanskrit-lexicon.uni-koeln.de/scans/PWScan/2020/web/webtc/servepdf.php?page=7-385", "live-verified servepdf page=7-385 (api=1 named the pdf)");
+  assert.equal(scanUrl("pwkvn", "2-288-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/PWKVNScan/2020/web/webtc/servepdf.php?page=2-288", "live-verified servepdf page=2-288 (api=1 named the pdf)");
+});
+
 test("scanUrl: volume-prefixed pc dicts stay OUT (pui/vei/acc) — no silently-wrong links", () => {
   // Their <pc> leads with a volume-like field (pui ∈ {1,2,3}, vei ∈ {1,2},
   // acc ∈ {1,2,3}) — structurally PWG's vol-Spalte (H839). The single-volume
@@ -128,7 +145,7 @@ test("scanUrl: volume-prefixed pc dicts stay OUT (pui/vei/acc) — no silently-w
   assert.equal(scanUrl("acc", "1-001,1"), null);
 });
 
-test("COLOGNE_SCAN_DIR names the thirty-eight live-verified dicts (H2368 + A11 + A12 + A07 + A08 + A08 follow-up)", () => {
+test("COLOGNE_SCAN_DIR names the forty live-verified dicts (H2368 + A11 + A12 + A07 + A08 + A08 follow-up + H3695)", () => {
   assert.deepEqual(COLOGNE_SCAN_DIR, {
     mw: "MW",
     pwg: "PWG",
@@ -167,7 +184,9 @@ test("COLOGNE_SCAN_DIR names the thirty-eight live-verified dicts (H2368 + A11 +
     ccs: "CCS",
     lrv: "LRV",
     md: "MD",
-    sch: "SCH"
+    sch: "SCH",
+    pw: "PW",
+    pwkvn: "PWKVN"
   });
 });
 

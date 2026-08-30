@@ -74,8 +74,10 @@ COLOGNE_SCAN_DIR = {
     "lrv": "LRV",
     "md": "MD",
     "sch": "SCH",
+    "pw": "PW",
+    "pwkvn": "PWKVN",
 }
-MULTI_VOLUME_DICTS = {"pwg"}
+MULTI_VOLUME_DICTS = {"pwg", "pw", "pwkvn"}
 
 # Mirror of cologne-links.mjs COLOGNE_SCAN_YEAR (absent codes default to 2020).
 COLOGNE_SCAN_YEAR = {
@@ -100,6 +102,7 @@ _PC_LETTER_BREAK = re.compile(r"^(\d+)-\d+[a-zA-Z]+$")
 _PC_LETTER_THEN_DIGIT = re.compile(r"^(\d+)-[a-zA-Z]+\d+$")
 _PC_UNSEP_THEN_COL = re.compile(r"^(\d+)[a-zA-Z]+-\d+$")
 _PC_DOTTED_COL = re.compile(r"^(\d+)-\d+\.\d+$")
+_PC_MV_VOL_PAGE_COL = re.compile(r"^(\d+-\d+)-(?:[a-zA-Z]+|\d+[a-zA-Z]+|\d+)$")
 
 
 def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
@@ -109,7 +112,16 @@ def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
         return None
     code = (dict_code or "").lower()
     if code in MULTI_VOLUME_DICTS:
-        return raw if re.fullmatch(r"\d+-\d+", raw) else None
+        if re.fullmatch(r"\d+-\d+", raw):
+            return raw
+        # pw/pwkvn "{vol}-{page}-{column}" three-part shape (H3695): the
+        # trailing chunk is a column marker on the same page — all-letters
+        # ("7-385-d"), digit-break + letters ("7-384-1a", the bop class), or
+        # digit-only at a new-letter section break ("7-366-1", the ap90
+        # class). Drop the marker, keep "{vol}-{page}" verbatim (H839);
+        # anything else is not trusted.
+        m = _PC_MV_VOL_PAGE_COL.match(raw)
+        return m.group(1) if m else None
     page = raw.split(",")[0].strip()
     if re.fullmatch(r"\d+", page):
         return page
@@ -279,15 +291,16 @@ def build_report(rows: list[dict]) -> dict:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generatedDate": date.today().isoformat(),
         "model": "Grok 4.5 (grok-4.5)",
-        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5)",
+        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5), H3695 (pw/pwkvn three-part vol-page-col extension, OxAlpha opencode glm-5.3-flash)",
         "cslOrigRoot": str(CSL_ORIG),
         "method": {
             "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
             "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
             "numerator_atlas_scan": (
                 "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — "
-                "dict ∈ COLOGNE_SCAN_DIR (38 dicts as of A08 follow-up) AND pc passes scanPageFromPc "
-                r"(PWG: /^\d+-\d+$/; others: first comma-field is digits-only, "
+                "dict ∈ COLOGNE_SCAN_DIR (40 dicts as of H3695) AND pc passes scanPageFromPc "
+                r"(PWG: /^\d+-\d+$/ verbatim; pw/pwkvn: three-part vol-page-col "
+                r"marker-stripped to vol-page; others: first comma-field is digits-only, "
                 r"page-marker, unseparated page+column-letters, letter-then-digit, "
                 r"unseparated-page-then-column, or dotted-column)"
             ),

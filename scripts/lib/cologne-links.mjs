@@ -119,9 +119,24 @@ const SCAN_BASE = "https://sanskrit-lexicon.uni-koeln.de/scans";
  * (29-08-2026). New alternatives below: ap/md letter-then-digit
  * (`0379-a1` / `036-a1`), sch unseparated-page-then-column (`104a-1`),
  * lrv dotted-column (`120-12.1`). ccs's `038-1a` already matched the A08
- * bop letter-break rule. Guarded exclusions unchanged: pui/vei/acc (volume
- * first-field), pw/pwkvn/skd (vol-page-col `N-N-a`, first-field ∈ 1..7),
- * nmmb (broken probe, A11).
+ * bop letter-break rule.
+ *
+ * pw/pwkvn added H3695 (Atlas L8 bounded slice, 29-08-2026): the three-part
+ * vol-page-col family. `redo_cologne_all.sh` maps pw to `PWScan/2020` and
+ * pwkvn to `PWKVNScan/2020`; dictparms.py says dictyear 2020 for both, so no
+ * COLOGNE_SCAN_YEAR entry. Their `<pc>` is PWG's vol-Spalte (H839) plus a
+ * trailing column marker on the same page: `N-N-a/b/c/d` dominant, plus per
+ * dict 19 letter-break stragglers `7-384-1a`..`-1d` (the bop
+ * digit-then-letters class) and 1 digit-only marker `7-366-1` (the ap90
+ * digit-marker class) — 100% of both dicts' `<pc>` values are that one
+ * three-part shape family, vol ∈ 1..7, page ≤ 3 digits. servepdf.php still
+ * takes no vol= parameter, so the page value is "{vol}-{page}" verbatim with
+ * the marker dropped; live spot-checks: one sequential `servepdf.php?api=1`
+ * probe per dict (the egress-safe route per SERVER_OUTAGES, H3457) named
+ * the pdf for each. Guarded exclusions now: pui/vei/acc (volume
+ * first-field), skd (same vol-page-col family — kept for a later pass with
+ * its own spot-check; H3695 scope was pw+pwkvn only), nmmb (broken probe,
+ * A11).
  */
 export const COLOGNE_SCAN_DIR = Object.freeze({
   mw: "MW",
@@ -161,7 +176,9 @@ export const COLOGNE_SCAN_DIR = Object.freeze({
   ccs: "CCS",
   lrv: "LRV",
   md: "MD",
-  sch: "SCH"
+  sch: "SCH",
+  pw: "PW",
+  pwkvn: "PWKVN"
 });
 
 /**
@@ -178,8 +195,12 @@ const COLOGNE_SCAN_YEAR = Object.freeze({
   lrv: "2022"
 });
 
-/** Dicts whose Cologne page keys are "{vol}-{page:04d}" rather than a bare page. */
-const MULTI_VOLUME_DICTS = new Set(["pwg"]);
+/**
+ * Dicts whose Cologne page keys are "{vol}-{page:04d}" rather than a bare page.
+ * pw/pwkvn join pwg in H3695: their <pc> is the same vol-Spalte plus a column
+ * marker scanPageFromPc strips (servepdf.php has no vol= parameter — H839).
+ */
+const MULTI_VOLUME_DICTS = new Set(["pwg", "pw", "pwkvn"]);
 
 function scanDir(dictCode) {
   return COLOGNE_SCAN_DIR[String(dictCode ?? "").toLowerCase()] ?? null;
@@ -218,7 +239,9 @@ export function entryUrl(dictCode, slp1Key, options = {}) {
  * -> "027"; AP/MD "0379-a1" (letter-break `[PagePPPP-UC]` — H2368-A08
  * follow-up) -> "0379"; SCH "104a-1" (documented `PPPa.C` — H2368-A08
  * follow-up) -> "104"; LRV "120-12.1" (dotted column — H2368-A08 follow-up)
- * -> "120".
+ * -> "120"; PW/PWKVN "7-385-d" (vol-page-col — the trailing chunk is a column
+ * marker on the same page, all-letters, digit-break "7-384-1a", or digit-only
+ * "7-366-1") -> "7-385" (H3695; H839 governs the "{vol}-{page}" half).
  * @returns {string|null} null when <pc> is absent or not in a shape we trust
  */
 export function scanPageFromPc(dictCode, pc) {
@@ -227,7 +250,14 @@ export function scanPageFromPc(dictCode, pc) {
   if (MULTI_VOLUME_DICTS.has(String(dictCode ?? "").toLowerCase())) {
     // Require the explicit "{vol}-{page}" shape: a bare page here would silently
     // resolve to volume 1 (H839), which is the failure mode worth refusing.
-    return /^\d+-\d+$/.test(raw) ? raw : null;
+    if (/^\d+-\d+$/.test(raw)) return raw;
+    // pw/pwkvn "{vol}-{page}-{column}" three-part shape (H3695): the trailing
+    // chunk is a column marker on the same page — all-letters ("7-385-d"),
+    // digit-break + letters ("7-384-1a", the bop class), or digit-only at a
+    // new-letter section break ("7-366-1", the ap90 class). Drop the marker,
+    // keep "{vol}-{page}" verbatim; anything else is not trusted.
+    const mvMatch = raw.match(/^(\d+-\d+)-(?:[a-zA-Z]+|\d+[a-zA-Z]+|\d+)$/);
+    return mvMatch ? mvMatch[1] : null;
   }
   const page = raw.split(",")[0].trim();
   if (/^\d+$/.test(page)) return page;
