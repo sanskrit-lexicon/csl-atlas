@@ -3,6 +3,8 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+
+## [0.19.1] - 2026-08-30
 ### Changed
 
 - **L8 scan-link coverage 79.30% → 92.42%: `COLOGNE_SCAN_DIR` extended 38 → 40
