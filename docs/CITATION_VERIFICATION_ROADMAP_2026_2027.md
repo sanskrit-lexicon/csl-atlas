@@ -1,6 +1,12 @@
 # Citation-verification roadmap 2026–2027 — PWG/MW loci against digital corpora
 
-_Created: 11-07-2026 · Last updated: 12-07-2026_
+_Created: 11-07-2026 · Last updated: 02-09-2026_
+
+> **Truth-pass 02-09-2026** (H3775) — `roadmap_handoff_truth.py --check` flagged this
+> page drained but still living: **7 of 7 referenced handoffs have shipped, zero remain OPEN**.
+> Kept at this path per MG ruling 31-08-2026 (do not archive) — the strategy/plan
+> layer still holds even though its backlog has fully closed. A future session
+> reopening work here should mint a fresh H### rather than un-close these.
 
 **What this is.** The program plan for verifying the literary citations of the Petersburg
 dictionaries (PWG, later pw/PWK) and Monier-Williams against digital corpora — per-text
