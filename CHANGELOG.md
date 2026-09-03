@@ -3,6 +3,41 @@
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+### Changed
+
+- **L8 scan-link coverage 92.42% → 99.97%: `COLOGNE_SCAN_DIR` extended 40 → 44
+  dicts with the `pui`/`vei`/`acc`/`skd` multi-volume rules (H3725, Atlas L8
+  next multivolume slice, 03-09-2026).** `pui` (17,512 entries), `vei` (3,834),
+  `acc` (49,833) and `skd` (42,531) now resolve to live Cologne scan pages at
+  100% — 113,710 of the 114,216-entry 5-dict gap closed; the four all join
+  `MULTI_VOLUME_DICTS` (H839). `<pc>` is shape-pure per dict: pui/vei are
+  PWG's verbatim `{vol}-{page}` contract (vol 1..3 / 1..2); acc is
+  `{vol}-{page},{col}` (vol 1..3) — a new multi-volume comma-column
+  alternative strips the trailing chunk (`1-618,1` → `1-618`); note the H839
+  trap acc would have hit under the single-volume rule, whose page-column
+  matcher returns `1` — volume-as-page for every entry — the `MULTI_VOLUME`
+  gate is what makes acc resolvable at all; skd is pw/pwkvn's three-part
+  vol-page-col family (vol 1..5) with 30 letter-break stragglers
+  `2-486-a1`..`-c1` whose tail is letters-then-digit (the A08-follow-up
+  ap/md letterThenDigit class on the MV tail, `2-486-a1` → `2-486`).
+  `redo_cologne_all.sh` maps all four to `{DICT}Scan/2020` (`dictparms.py`
+  dictyear 2020 — no `COLOGNE_SCAN_YEAR` entry). Live evidence 03-09-2026,
+  one sequential `servepdf.php` probe per dict, each embedded pdf also
+  HEAD-checked 200, plus one residual-shape probe: pui `page=2-444` →
+  `pg2_444.pdf`, vei `page=2-015` → `pg2_015.pdf`, acc `page=1-618` →
+  `pg1_618.pdf`, skd `page=3-122` → `pg3_122.pdf` (straggler page `2-486` →
+  `pg2_486.pdf`). **Guarded exclusion remains**: `nmmb` (506 entries) —
+  re-tried this pass; the `NMMBScan/2026` servepdf.php viewer shell now
+  answers 200 (A11's flat failure has healed) but every embedded pdf it
+  names 404s (`pdfpages/pg0001/0020/0100.pdf` and the `NMMBScanpdf/`
+  variant) — the scan images behind the tree are absent, so it stays out
+  rather than link to dead targets; upstream-scan-images gap, not an atlas
+  rule. Census regenerated (1,505,884 / 1,506,391 = 99.97%):
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md) ·
+  typology packet regenerated with the new L8 flags:
+  [src/data/dicts/richness-typology.json](src/data/dicts/richness-typology.json).
 
 ## [0.19.1] - 2026-08-30
 ### Changed

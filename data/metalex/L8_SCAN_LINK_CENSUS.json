@@ -2,15 +2,15 @@
   "schemaVersion": "1.0.0",
   "handoff": "H2368",
   "title": "METALEX L8 — entry-level scan-page link census",
-  "generatedAt": "2026-09-01T12:18:47Z",
-  "generatedDate": "2026-09-01",
+  "generatedAt": "2026-09-03T12:46:38Z",
+  "generatedDate": "2026-09-03",
   "model": "Grok 4.5 (grok-4.5)",
-  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5), H3695 (pw/pwkvn three-part vol-page-col extension, OxAlpha opencode glm-5.3-flash)",
-  "cslOrigRoot": "C:\\Users\\user\\Documents\\GitHub\\csl-orig\\v02",
+  "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5), H3695 (pw/pwkvn three-part vol-page-col extension, OxAlpha opencode glm-5.3-flash), H3725 (pui/vei/acc/skd multi-volume extension + acc comma-column / skd letters-then-digit-tail rules, OxAlpha opencode glm-5.3-flash)",
+  "cslOrigRoot": "/Users/mac/Documents/GitHub/csl-orig/v02",
   "method": {
     "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
     "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
-    "numerator_atlas_scan": "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — dict ∈ COLOGNE_SCAN_DIR (40 dicts as of H3695) AND pc passes scanPageFromPc (PWG: /^\\d+-\\d+$/ verbatim; pw/pwkvn: three-part vol-page-col marker-stripped to vol-page; others: first comma-field is digits-only, page-marker, unseparated page+column-letters, letter-then-digit, unseparated-page-then-column, or dotted-column)",
+    "numerator_atlas_scan": "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — dict ∈ COLOGNE_SCAN_DIR (44 dicts as of H3725) AND pc passes scanPageFromPc (PWG/pui/vei: /^\\d+-\\d+$/ verbatim; pw/pwkvn/skd: three-part vol-page-col marker-stripped to vol-page, skd tail may be letters-then-digit; acc: vol-page,col comma-column stripped to vol-page; others: first comma-field is digits-only, page-marker, unseparated page+column-letters, letter-then-digit, unseparated-page-then-column, or dotted-column)",
     "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
     "non_goals": [
       "No mass link invention",
@@ -58,7 +58,11 @@
       "md": "MD",
       "sch": "SCH",
       "pw": "PW",
-      "pwkvn": "PWKVN"
+      "pwkvn": "PWKVN",
+      "pui": "PUI",
+      "vei": "VEI",
+      "acc": "ACC",
+      "skd": "SKD"
     }
   },
   "totals": {
@@ -67,12 +71,12 @@
     "with_pc": 1506390,
     "missing_pc": 1,
     "pc_pct": 99.9999,
-    "atlas_resolvable_scan": 1392174,
-    "atlas_resolvable_pct": 92.4178
+    "atlas_resolvable_scan": 1505884,
+    "atlas_resolvable_pct": 99.9663
   },
   "gap_buckets": {
-    "pc_present_no_cologne_scan_dir": 114216,
-    "missing_pc": 1
+    "missing_pc": 1,
+    "pc_present_no_cologne_scan_dir": 506
   },
   "dict_buckets": {
     "pc_coverage_100": [
@@ -126,6 +130,7 @@
     ],
     "in_cologne_scan_dir": [
       "abch",
+      "acc",
       "acph",
       "acsj",
       "ae",
@@ -155,19 +160,23 @@
       "nybj",
       "pe",
       "pgn",
+      "pui",
       "pw",
       "pwg",
       "pwkvn",
       "sch",
       "shs",
+      "skd",
       "snp",
       "stc",
       "vcp",
+      "vei",
       "wil",
       "yat"
     ],
     "atlas_resolvable_100": [
       "abch",
+      "acc",
       "acph",
       "acsj",
       "ap",
@@ -196,14 +205,17 @@
       "nybj",
       "pe",
       "pgn",
+      "pui",
       "pw",
       "pwg",
       "pwkvn",
       "sch",
       "shs",
+      "skd",
       "snp",
       "stc",
       "vcp",
+      "vei",
       "wil",
       "yat"
     ],
@@ -211,11 +223,7 @@
       "ae"
     ],
     "not_in_cologne_scan_dir": [
-      "acc",
-      "nmmb",
-      "pui",
-      "skd",
-      "vei"
+      "nmmb"
     ]
   },
   "l8_verdict": {
@@ -223,7 +231,7 @@
     "pc_substrate_complete": false,
     "atlas_scan_url_complete": false,
     "claim_l8_done": false,
-    "note": "Do not claim L8 complete: print coordinates are nearly universal, but 5 dicts with <pc> data still have no verified Cologne scan-dir map (114,216 entries), so a working scan URL resolves for 92.42% of entries under the atlas's verified dict→scan-dir map."
+    "note": "Do not claim L8 complete: print coordinates are nearly universal, but 1 dicts with <pc> data still have no verified Cologne scan-dir map (506 entries), so a working scan URL resolves for 99.97% of entries under the atlas's verified dict→scan-dir map."
   },
   "gap_samples": [
     {
@@ -237,7 +245,7 @@
   "rows": [
     {
       "code": "abch",
-      "sourcePath": "csl-orig\\v02\\abch\\abch.txt",
+      "sourcePath": "csl-orig/v02/abch/abch.txt",
       "entries": 1965,
       "with_pc": 1965,
       "missing_pc": 0,
@@ -258,18 +266,16 @@
     },
     {
       "code": "acc",
-      "sourcePath": "csl-orig\\v02\\acc\\acc.txt",
+      "sourcePath": "csl-orig/v02/acc/acc.txt",
       "entries": 49833,
       "with_pc": 49833,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 49833
-      },
+      "atlas_resolvable_scan": 49833,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "ACC",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-N,N",
@@ -281,7 +287,7 @@
     },
     {
       "code": "acph",
-      "sourcePath": "csl-orig\\v02\\acph\\acph.txt",
+      "sourcePath": "csl-orig/v02/acph/acph.txt",
       "entries": 163,
       "with_pc": 163,
       "missing_pc": 0,
@@ -302,7 +308,7 @@
     },
     {
       "code": "acsj",
-      "sourcePath": "csl-orig\\v02\\acsj\\acsj.txt",
+      "sourcePath": "csl-orig/v02/acsj/acsj.txt",
       "entries": 240,
       "with_pc": 240,
       "missing_pc": 0,
@@ -323,7 +329,7 @@
     },
     {
       "code": "ae",
-      "sourcePath": "csl-orig\\v02\\ae\\ae.txt",
+      "sourcePath": "csl-orig/v02/ae/ae.txt",
       "entries": 11359,
       "with_pc": 11358,
       "missing_pc": 1,
@@ -352,7 +358,7 @@
     },
     {
       "code": "ap",
-      "sourcePath": "csl-orig\\v02\\ap\\ap.txt",
+      "sourcePath": "csl-orig/v02/ap/ap.txt",
       "entries": 90847,
       "with_pc": 90847,
       "missing_pc": 0,
@@ -385,7 +391,7 @@
     },
     {
       "code": "ap90",
-      "sourcePath": "csl-orig\\v02\\ap90\\ap90.txt",
+      "sourcePath": "csl-orig/v02/ap90/ap90.txt",
       "entries": 34882,
       "with_pc": 34882,
       "missing_pc": 0,
@@ -418,7 +424,7 @@
     },
     {
       "code": "armh",
-      "sourcePath": "csl-orig\\v02\\armh\\armh.txt",
+      "sourcePath": "csl-orig/v02/armh/armh.txt",
       "entries": 7907,
       "with_pc": 7907,
       "missing_pc": 0,
@@ -439,7 +445,7 @@
     },
     {
       "code": "ben",
-      "sourcePath": "csl-orig\\v02\\ben\\ben.txt",
+      "sourcePath": "csl-orig/v02/ben/ben.txt",
       "entries": 25062,
       "with_pc": 25062,
       "missing_pc": 0,
@@ -464,7 +470,7 @@
     },
     {
       "code": "bhs",
-      "sourcePath": "csl-orig\\v02\\bhs\\bhs.txt",
+      "sourcePath": "csl-orig/v02/bhs/bhs.txt",
       "entries": 17839,
       "with_pc": 17839,
       "missing_pc": 0,
@@ -485,7 +491,7 @@
     },
     {
       "code": "bop",
-      "sourcePath": "csl-orig\\v02\\bop\\bop.txt",
+      "sourcePath": "csl-orig/v02/bop/bop.txt",
       "entries": 8961,
       "with_pc": 8961,
       "missing_pc": 0,
@@ -518,7 +524,7 @@
     },
     {
       "code": "bor",
-      "sourcePath": "csl-orig\\v02\\bor\\bor.txt",
+      "sourcePath": "csl-orig/v02/bor/bor.txt",
       "entries": 24609,
       "with_pc": 24609,
       "missing_pc": 0,
@@ -539,7 +545,7 @@
     },
     {
       "code": "bur",
-      "sourcePath": "csl-orig\\v02\\bur\\bur.txt",
+      "sourcePath": "csl-orig/v02/bur/bur.txt",
       "entries": 19776,
       "with_pc": 19776,
       "missing_pc": 0,
@@ -560,7 +566,7 @@
     },
     {
       "code": "cae",
-      "sourcePath": "csl-orig\\v02\\cae\\cae.txt",
+      "sourcePath": "csl-orig/v02/cae/cae.txt",
       "entries": 40069,
       "with_pc": 40069,
       "missing_pc": 0,
@@ -581,7 +587,7 @@
     },
     {
       "code": "ccs",
-      "sourcePath": "csl-orig\\v02\\ccs\\ccs.txt",
+      "sourcePath": "csl-orig/v02/ccs/ccs.txt",
       "entries": 30010,
       "with_pc": 30010,
       "missing_pc": 0,
@@ -618,7 +624,7 @@
     },
     {
       "code": "fri",
-      "sourcePath": "csl-orig\\v02\\fri\\fri.txt",
+      "sourcePath": "csl-orig/v02/fri/fri.txt",
       "entries": 8155,
       "with_pc": 8155,
       "missing_pc": 0,
@@ -639,7 +645,7 @@
     },
     {
       "code": "gra",
-      "sourcePath": "csl-orig\\v02\\gra\\gra.txt",
+      "sourcePath": "csl-orig/v02/gra/gra.txt",
       "entries": 12785,
       "with_pc": 12785,
       "missing_pc": 0,
@@ -672,7 +678,7 @@
     },
     {
       "code": "gst",
-      "sourcePath": "csl-orig\\v02\\gst\\gst.txt",
+      "sourcePath": "csl-orig/v02/gst/gst.txt",
       "entries": 6780,
       "with_pc": 6780,
       "missing_pc": 0,
@@ -697,7 +703,7 @@
     },
     {
       "code": "ieg",
-      "sourcePath": "csl-orig\\v02\\ieg\\ieg.txt",
+      "sourcePath": "csl-orig/v02/ieg/ieg.txt",
       "entries": 7932,
       "with_pc": 7932,
       "missing_pc": 0,
@@ -718,7 +724,7 @@
     },
     {
       "code": "inm",
-      "sourcePath": "csl-orig\\v02\\inm\\inm.txt",
+      "sourcePath": "csl-orig/v02/inm/inm.txt",
       "entries": 12647,
       "with_pc": 12647,
       "missing_pc": 0,
@@ -739,7 +745,7 @@
     },
     {
       "code": "krm",
-      "sourcePath": "csl-orig\\v02\\krm\\krm.txt",
+      "sourcePath": "csl-orig/v02/krm/krm.txt",
       "entries": 2061,
       "with_pc": 2061,
       "missing_pc": 0,
@@ -760,7 +766,7 @@
     },
     {
       "code": "lan",
-      "sourcePath": "csl-orig\\v02\\lan\\lan.txt",
+      "sourcePath": "csl-orig/v02/lan/lan.txt",
       "entries": 4944,
       "with_pc": 4944,
       "missing_pc": 0,
@@ -785,7 +791,7 @@
     },
     {
       "code": "lrv",
-      "sourcePath": "csl-orig\\v02\\lrv\\lrv.txt",
+      "sourcePath": "csl-orig/v02/lrv/lrv.txt",
       "entries": 53440,
       "with_pc": 53440,
       "missing_pc": 0,
@@ -810,7 +816,7 @@
     },
     {
       "code": "mci",
-      "sourcePath": "csl-orig\\v02\\mci\\mci.txt",
+      "sourcePath": "csl-orig/v02/mci/mci.txt",
       "entries": 2643,
       "with_pc": 2643,
       "missing_pc": 0,
@@ -835,7 +841,7 @@
     },
     {
       "code": "md",
-      "sourcePath": "csl-orig\\v02\\md\\md.txt",
+      "sourcePath": "csl-orig/v02/md/md.txt",
       "entries": 20749,
       "with_pc": 20749,
       "missing_pc": 0,
@@ -876,7 +882,7 @@
     },
     {
       "code": "mw",
-      "sourcePath": "csl-orig\\v02\\mw\\mw.txt",
+      "sourcePath": "csl-orig/v02/mw/mw.txt",
       "entries": 286525,
       "with_pc": 286525,
       "missing_pc": 0,
@@ -901,7 +907,7 @@
     },
     {
       "code": "mw72",
-      "sourcePath": "csl-orig\\v02\\mw72\\mw72.txt",
+      "sourcePath": "csl-orig/v02/mw72/mw72.txt",
       "entries": 55390,
       "with_pc": 55390,
       "missing_pc": 0,
@@ -930,7 +936,7 @@
     },
     {
       "code": "mwe",
-      "sourcePath": "csl-orig\\v02\\mwe\\mwe.txt",
+      "sourcePath": "csl-orig/v02/mwe/mwe.txt",
       "entries": 32378,
       "with_pc": 32378,
       "missing_pc": 0,
@@ -955,7 +961,7 @@
     },
     {
       "code": "nmmb",
-      "sourcePath": "csl-orig\\v02\\nmmb\\nmmb.txt",
+      "sourcePath": "csl-orig/v02/nmmb/nmmb.txt",
       "entries": 506,
       "with_pc": 506,
       "missing_pc": 0,
@@ -978,7 +984,7 @@
     },
     {
       "code": "nybj",
-      "sourcePath": "csl-orig\\v02\\nybj\\nybj.txt",
+      "sourcePath": "csl-orig/v02/nybj/nybj.txt",
       "entries": 2479,
       "with_pc": 2479,
       "missing_pc": 0,
@@ -999,7 +1005,7 @@
     },
     {
       "code": "pe",
-      "sourcePath": "csl-orig\\v02\\pe\\pe.txt",
+      "sourcePath": "csl-orig/v02/pe/pe.txt",
       "entries": 8799,
       "with_pc": 8799,
       "missing_pc": 0,
@@ -1024,7 +1030,7 @@
     },
     {
       "code": "pgn",
-      "sourcePath": "csl-orig\\v02\\pgn\\pgn.txt",
+      "sourcePath": "csl-orig/v02/pgn/pgn.txt",
       "entries": 485,
       "with_pc": 485,
       "missing_pc": 0,
@@ -1045,18 +1051,16 @@
     },
     {
       "code": "pui",
-      "sourcePath": "csl-orig\\v02\\pui\\pui.txt",
+      "sourcePath": "csl-orig/v02/pui/pui.txt",
       "entries": 17512,
       "with_pc": 17512,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 17512
-      },
+      "atlas_resolvable_scan": 17512,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "PUI",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-N",
@@ -1068,7 +1072,7 @@
     },
     {
       "code": "pw",
-      "sourcePath": "csl-orig\\v02\\pw\\pw.txt",
+      "sourcePath": "csl-orig/v02/pw/pw.txt",
       "entries": 170556,
       "with_pc": 170556,
       "missing_pc": 0,
@@ -1109,7 +1113,7 @@
     },
     {
       "code": "pwg",
-      "sourcePath": "csl-orig\\v02\\pwg\\pwg.txt",
+      "sourcePath": "csl-orig/v02/pwg/pwg.txt",
       "entries": 123366,
       "with_pc": 123366,
       "missing_pc": 0,
@@ -1130,7 +1134,7 @@
     },
     {
       "code": "pwkvn",
-      "sourcePath": "csl-orig\\v02\\pwkvn\\pwkvn.txt",
+      "sourcePath": "csl-orig/v02/pwkvn/pwkvn.txt",
       "entries": 24976,
       "with_pc": 24976,
       "missing_pc": 0,
@@ -1171,7 +1175,7 @@
     },
     {
       "code": "sch",
-      "sourcePath": "csl-orig\\v02\\sch\\sch.txt",
+      "sourcePath": "csl-orig/v02/sch/sch.txt",
       "entries": 29125,
       "with_pc": 29125,
       "missing_pc": 0,
@@ -1196,7 +1200,7 @@
     },
     {
       "code": "shs",
-      "sourcePath": "csl-orig\\v02\\shs\\shs.txt",
+      "sourcePath": "csl-orig/v02/shs/shs.txt",
       "entries": 47326,
       "with_pc": 47326,
       "missing_pc": 0,
@@ -1221,18 +1225,16 @@
     },
     {
       "code": "skd",
-      "sourcePath": "csl-orig\\v02\\skd\\skd.txt",
+      "sourcePath": "csl-orig/v02/skd/skd.txt",
       "entries": 42531,
       "with_pc": 42531,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 42531
-      },
+      "atlas_resolvable_scan": 42531,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "SKD",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-N-a",
@@ -1264,7 +1266,7 @@
     },
     {
       "code": "snp",
-      "sourcePath": "csl-orig\\v02\\snp\\snp.txt",
+      "sourcePath": "csl-orig/v02/snp/snp.txt",
       "entries": 453,
       "with_pc": 453,
       "missing_pc": 0,
@@ -1285,7 +1287,7 @@
     },
     {
       "code": "stc",
-      "sourcePath": "csl-orig\\v02\\stc\\stc.txt",
+      "sourcePath": "csl-orig/v02/stc/stc.txt",
       "entries": 24574,
       "with_pc": 24574,
       "missing_pc": 0,
@@ -1306,7 +1308,7 @@
     },
     {
       "code": "vcp",
-      "sourcePath": "csl-orig\\v02\\vcp\\vcp.txt",
+      "sourcePath": "csl-orig/v02/vcp/vcp.txt",
       "entries": 50135,
       "with_pc": 50135,
       "missing_pc": 0,
@@ -1331,18 +1333,16 @@
     },
     {
       "code": "vei",
-      "sourcePath": "csl-orig\\v02\\vei\\vei.txt",
+      "sourcePath": "csl-orig/v02/vei/vei.txt",
       "entries": 3834,
       "with_pc": 3834,
       "missing_pc": 0,
       "pc_pct": 100.0,
-      "atlas_resolvable_scan": 0,
-      "atlas_resolvable_pct": 0.0,
-      "in_cologne_scan_dir": false,
-      "cologne_scan_dir": null,
-      "gap_reason_counts": {
-        "pc_present_no_cologne_scan_dir": 3834
-      },
+      "atlas_resolvable_scan": 3834,
+      "atlas_resolvable_pct": 100.0,
+      "in_cologne_scan_dir": true,
+      "cologne_scan_dir": "VEI",
+      "gap_reason_counts": {},
       "pc_shape_top": [
         [
           "N-N",
@@ -1354,7 +1354,7 @@
     },
     {
       "code": "wil",
-      "sourcePath": "csl-orig\\v02\\wil\\wil.txt",
+      "sourcePath": "csl-orig/v02/wil/wil.txt",
       "entries": 44577,
       "with_pc": 44577,
       "missing_pc": 0,
@@ -1375,7 +1375,7 @@
     },
     {
       "code": "yat",
-      "sourcePath": "csl-orig\\v02\\yat\\yat.txt",
+      "sourcePath": "csl-orig/v02/yat/yat.txt",
       "entries": 45206,
       "with_pc": 45206,
       "missing_pc": 0,

@@ -133,10 +133,37 @@ const SCAN_BASE = "https://sanskrit-lexicon.uni-koeln.de/scans";
  * takes no vol= parameter, so the page value is "{vol}-{page}" verbatim with
  * the marker dropped; live spot-checks: one sequential `servepdf.php?api=1`
  * probe per dict (the egress-safe route per SERVER_OUTAGES, H3457) named
- * the pdf for each. Guarded exclusions now: pui/vei/acc (volume
- * first-field), skd (same vol-page-col family — kept for a later pass with
- * its own spot-check; H3695 scope was pw+pwkvn only), nmmb (broken probe,
- * A11).
+ * the pdf for each.
+ *
+ * pui/vei/acc/skd added H3725 (Atlas L8 next multivolume slice, 03-09-2026):
+ * the two new members of the multi-volume family plus acc's comma-column
+ * variant. `redo_cologne_all.sh` maps pui/vei/acc/skd to `{DIR}Scan/2020`
+ * (dictyear 2020 for all four — no COLOGNE_SCAN_YEAR entry). Their `<pc>`
+ * is H839's vol-Spalte throughout, 100% shape-pure per dict: pui/vei
+ * "{vol}-{page}" verbatim (pui vol 1..3, vei vol 1..2 — the pwg verbatim
+ * path applies unchanged); acc "{vol}-{page},{col}" (vol 1..3) — first
+ * comma-field is the vol-page, trailing comma-chunk the column, so the MV
+ * branch gained the comma-column alternative; skd "{vol}-{page}-{col}"
+ * (vol 1..5) — pw/pwkvn's three-part family with 30 letter-break
+ * stragglers "2-486-a1" whose tail is letters-then-digit (the ap/md
+ * letterThenDigit class transposed to the MV tail, new alternative).
+ * NOTE the H839 trap acc would have walked into under the single-volume
+ * rule: first comma-field "1-618" matches the page-column-marker regex and
+ * returns "1" — volume-as-page for every entry; the MULTI_VOLUME gate is
+ * what makes acc resolvable at all. Live spot-checks 03-09-2026: one
+ * sequential `servepdf.php` probe per dict on a real mid-dict `<pc>` page
+ * (pui "2-444", vei "2-015", acc "1-618", skd "3-122" — each returned the
+ * scan-viewer shell embedding the pdf, and the embedded pdf itself answers
+ * HTTP 200), plus one residual-shape probe for skd's straggler page
+ * ("2-486-a1" -> pg2_486.pdf).
+ *
+ * `nmmb` stays OUT (re-tried H3725, 03-09-2026): the A11 breakage persists
+ * one level deeper — `NMMBScan/2026` servepdf.php now returns a working
+ * viewer shell, but every embedded pdf path it names 404s (pdfpages/
+ * pg0001/0020/0100.pdf and the NMMBScanpdf/ variant all 404). The scan
+ * images behind the tree are absent; a shell-only pass would be the
+ * silently-wrong-link failure mode. Guarded exclusions now: nmmb (missing
+ * scan images), plus the A11-class dicts not yet re-verified.
  */
 export const COLOGNE_SCAN_DIR = Object.freeze({
   mw: "MW",
@@ -178,7 +205,11 @@ export const COLOGNE_SCAN_DIR = Object.freeze({
   md: "MD",
   sch: "SCH",
   pw: "PW",
-  pwkvn: "PWKVN"
+  pwkvn: "PWKVN",
+  pui: "PUI",
+  vei: "VEI",
+  acc: "ACC",
+  skd: "SKD"
 });
 
 /**
@@ -197,10 +228,12 @@ const COLOGNE_SCAN_YEAR = Object.freeze({
 
 /**
  * Dicts whose Cologne page keys are "{vol}-{page:04d}" rather than a bare page.
- * pw/pwkvn join pwg in H3695: their <pc> is the same vol-Spalte plus a column
- * marker scanPageFromPc strips (servepdf.php has no vol= parameter — H839).
+ * pw/pwkvn join pwg in H3695; pui/vei/acc/skd join in H3725 (their <pc> is the
+ * same vol-Spalte, with acc carrying a trailing ",col" chunk and skd a
+ * "-col" chunk that scanPageFromPc strips — servepdf.php has no vol=
+ * parameter, H839).
  */
-const MULTI_VOLUME_DICTS = new Set(["pwg", "pw", "pwkvn"]);
+const MULTI_VOLUME_DICTS = new Set(["pwg", "pw", "pwkvn", "pui", "vei", "acc", "skd"]);
 
 function scanDir(dictCode) {
   return COLOGNE_SCAN_DIR[String(dictCode ?? "").toLowerCase()] ?? null;
@@ -241,7 +274,13 @@ export function entryUrl(dictCode, slp1Key, options = {}) {
  * follow-up) -> "104"; LRV "120-12.1" (dotted column — H2368-A08 follow-up)
  * -> "120"; PW/PWKVN "7-385-d" (vol-page-col — the trailing chunk is a column
  * marker on the same page, all-letters, digit-break "7-384-1a", or digit-only
- * "7-366-1") -> "7-385" (H3695; H839 governs the "{vol}-{page}" half).
+ * "7-366-1") -> "7-385" (H3695; H839 governs the "{vol}-{page}" half);
+ * PUI/VEI "2-444" (vol-page verbatim, H3725) -> "2-444"; ACC "1-618,1"
+ * (vol-page,col — first comma-field is the vol-page, trailing comma-chunk the
+ * column; H3725) -> "1-618"; SKD "3-122-a" (vol-page-col — H3695's three-part
+ * family) -> "3-122", with 30 letter-break stragglers "2-486-a1" whose tail
+ * is letters-then-digit (the ap/md letterThenDigit class on the MV tail;
+ * H3725) -> "2-486".
  * @returns {string|null} null when <pc> is absent or not in a shape we trust
  */
 export function scanPageFromPc(dictCode, pc) {
@@ -251,13 +290,23 @@ export function scanPageFromPc(dictCode, pc) {
     // Require the explicit "{vol}-{page}" shape: a bare page here would silently
     // resolve to volume 1 (H839), which is the failure mode worth refusing.
     if (/^\d+-\d+$/.test(raw)) return raw;
-    // pw/pwkvn "{vol}-{page}-{column}" three-part shape (H3695): the trailing
-    // chunk is a column marker on the same page — all-letters ("7-385-d"),
-    // digit-break + letters ("7-384-1a", the bop class), or digit-only at a
-    // new-letter section break ("7-366-1", the ap90 class). Drop the marker,
-    // keep "{vol}-{page}" verbatim; anything else is not trusted.
-    const mvMatch = raw.match(/^(\d+-\d+)-(?:[a-zA-Z]+|\d+[a-zA-Z]+|\d+)$/);
-    return mvMatch ? mvMatch[1] : null;
+    // pw/pwkvn/skd "{vol}-{page}-{column}" three-part shape (H3695, skd via
+    // H3725): the trailing chunk is a column marker on the same page —
+    // all-letters ("7-385-d"), digit-break + letters ("7-384-1a", the bop
+    // class), letters-then-digit ("2-486-a1", the ap/md letterThenDigit
+    // class on the MV tail — skd's 30 stragglers, H3725), or digit-only at
+    // a new-letter section break ("7-366-1", the ap90 class). Drop the
+    // marker, keep "{vol}-{page}" verbatim; anything else is not trusted.
+    const mvMatch = raw.match(/^(\d+-\d+)-(?:[a-zA-Z]+|\d+[a-zA-Z]+|[a-zA-Z]+\d+|\d+)$/);
+    if (mvMatch) return mvMatch[1];
+    // acc "{vol}-{page},{col}" comma-column shape (H3725): the first
+    // comma-field is the vol-page (H839), the trailing comma-chunk the
+    // column on that page ("1-618,1"). Strip the column, keep the
+    // vol-page half. A single-volume read of acc would return "1" here —
+    // volume-as-page for every entry — which is exactly why acc is gated
+    // through the MULTI_VOLUME branch.
+    const mvCommaMatch = raw.match(/^(\d+-\d+),\d+$/);
+    return mvCommaMatch ? mvCommaMatch[1] : null;
   }
   const page = raw.split(",")[0].trim();
   if (/^\d+$/.test(page)) return page;
