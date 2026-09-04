@@ -37,7 +37,7 @@ test("scanPageFromPc: GRA unseparated page-column drops the trailing letters (H2
 });
 
 test("scanUrl: null dict or unparseable pc yields no URL; ap90 now resolves (H2368 gap fix)", () => {
-  assert.equal(scanUrl("nmmb", "1"), null, "nmmb spot-check failed live (A11) — deliberately not in COLOGNE_SCAN_DIR");
+  assert.equal(scanUrl("nmmb", "1"), null, "nmmb viewer shell answers but every scan pdf it names 404s (re-tried H3725) — deliberately not in COLOGNE_SCAN_DIR");
   assert.equal(scanUrl("ap90", "0001-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/AP90Scan/2020/web/webtc/servepdf.php?page=0001");
 });
 
@@ -136,16 +136,37 @@ test("scanUrl: H3695 pw/pwkvn resolve to their vol-page servepdf URLs", () => {
   assert.equal(scanUrl("pwkvn", "2-288-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/PWKVNScan/2020/web/webtc/servepdf.php?page=2-288", "live-verified servepdf page=2-288 (api=1 named the pdf)");
 });
 
-test("scanUrl: volume-prefixed pc dicts stay OUT (pui/vei/acc) — no silently-wrong links", () => {
-  // Their <pc> leads with a volume-like field (pui ∈ {1,2,3}, vei ∈ {1,2},
-  // acc ∈ {1,2,3}) — structurally PWG's vol-Spalte (H839). The single-volume
-  // rule would emit "?page=1..3" for every entry; emitting no link beats that.
-  assert.equal(scanUrl("pui", "1-001"), null);
-  assert.equal(scanUrl("vei", "1-005"), null);
-  assert.equal(scanUrl("acc", "1-001,1"), null);
+test("scanPageFromPc: pui/vei/acc/skd join the multi-volume family (H3725, H839)", () => {
+  // pui/vei: pwg's verbatim "{vol}-{page}" contract.
+  assert.equal(scanPageFromPc("pui", "2-444"), "2-444", "live-verified servepdf page=2-444");
+  assert.equal(scanPageFromPc("vei", "2-015"), "2-015", "live-verified servepdf page=2-015");
+  // acc: "{vol}-{page},{col}" — first comma-field is the vol-page, trailing
+  // comma-chunk the column. A single-volume read would return "1" here
+  // (volume-as-page for every entry) — the exact H839 failure mode.
+  assert.equal(scanPageFromPc("acc", "1-618,1"), "1-618", "live-verified servepdf page=1-618; column after the comma drops");
+  assert.equal(scanPageFromPc("acc", "2-003,2"), "2-003");
+  // skd: pw/pwkvn's three-part family, vol 1..5.
+  assert.equal(scanPageFromPc("skd", "3-122-a"), "3-122", "live-verified servepdf page=3-122");
+  assert.equal(scanPageFromPc("skd", "2-486-a1"), "2-486", "letters-then-digit tail (ap/md letterThenDigit class on the MV tail); live-verified servepdf page=2-486");
+  assert.equal(scanPageFromPc("skd", "1-001"), "1-001", "two-part vol-page passes through verbatim (H839 PWG contract)");
+  // H839 guards: a bare page must not silently default to volume 1; mixed
+  // trailing chunks stay untrusted.
+  assert.equal(scanPageFromPc("pui", "444"), null);
+  assert.equal(scanPageFromPc("acc", "618"), null);
+  assert.equal(scanPageFromPc("skd", "937"), null);
+  assert.equal(scanPageFromPc("skd", "2-486-1a2"), null);
+  assert.equal(scanPageFromPc("acc", "1-618,a"), null, "non-digit comma-chunk is not a verified column shape");
 });
 
-test("COLOGNE_SCAN_DIR names the forty live-verified dicts (H2368 + A11 + A12 + A07 + A08 + A08 follow-up + H3695)", () => {
+test("scanUrl: H3725 pui/vei/acc/skd resolve to their vol-page servepdf URLs", () => {
+  assert.equal(scanUrl("pui", "2-444"), "https://sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2020/web/webtc/servepdf.php?page=2-444", "live-verified 03-09-2026");
+  assert.equal(scanUrl("vei", "2-015"), "https://sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2020/web/webtc/servepdf.php?page=2-015", "live-verified 03-09-2026");
+  assert.equal(scanUrl("acc", "1-618,1"), "https://sanskrit-lexicon.uni-koeln.de/scans/ACCScan/2020/web/webtc/servepdf.php?page=1-618", "live-verified 03-09-2026");
+  assert.equal(scanUrl("skd", "3-122-a"), "https://sanskrit-lexicon.uni-koeln.de/scans/SKDScan/2020/web/webtc/servepdf.php?page=3-122", "live-verified 03-09-2026");
+  assert.equal(scanUrl("skd", "2-486-a1"), "https://sanskrit-lexicon.uni-koeln.de/scans/SKDScan/2020/web/webtc/servepdf.php?page=2-486", "letters-then-digit straggler");
+});
+
+test("COLOGNE_SCAN_DIR names the forty-four live-verified dicts (H2368 + A11 + A12 + A07 + A08 + A08 follow-up + H3695 + H3725)", () => {
   assert.deepEqual(COLOGNE_SCAN_DIR, {
     mw: "MW",
     pwg: "PWG",
@@ -186,7 +207,11 @@ test("COLOGNE_SCAN_DIR names the forty live-verified dicts (H2368 + A11 + A12 + 
     md: "MD",
     sch: "SCH",
     pw: "PW",
-    pwkvn: "PWKVN"
+    pwkvn: "PWKVN",
+    pui: "PUI",
+    vei: "VEI",
+    acc: "ACC",
+    skd: "SKD"
   });
 });
 

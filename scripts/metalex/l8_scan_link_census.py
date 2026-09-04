@@ -76,8 +76,12 @@ COLOGNE_SCAN_DIR = {
     "sch": "SCH",
     "pw": "PW",
     "pwkvn": "PWKVN",
+    "pui": "PUI",
+    "vei": "VEI",
+    "acc": "ACC",
+    "skd": "SKD",
 }
-MULTI_VOLUME_DICTS = {"pwg", "pw", "pwkvn"}
+MULTI_VOLUME_DICTS = {"pwg", "pw", "pwkvn", "pui", "vei", "acc", "skd"}
 
 # Mirror of cologne-links.mjs COLOGNE_SCAN_YEAR (absent codes default to 2020).
 COLOGNE_SCAN_YEAR = {
@@ -102,7 +106,8 @@ _PC_LETTER_BREAK = re.compile(r"^(\d+)-\d+[a-zA-Z]+$")
 _PC_LETTER_THEN_DIGIT = re.compile(r"^(\d+)-[a-zA-Z]+\d+$")
 _PC_UNSEP_THEN_COL = re.compile(r"^(\d+)[a-zA-Z]+-\d+$")
 _PC_DOTTED_COL = re.compile(r"^(\d+)-\d+\.\d+$")
-_PC_MV_VOL_PAGE_COL = re.compile(r"^(\d+-\d+)-(?:[a-zA-Z]+|\d+[a-zA-Z]+|\d+)$")
+_PC_MV_VOL_PAGE_COL = re.compile(r"^(\d+-\d+)-(?:[a-zA-Z]+|\d+[a-zA-Z]+|[a-zA-Z]+\d+|\d+)$")
+_PC_MV_VOL_PAGE_COMMA_COL = re.compile(r"^(\d+-\d+),\d+$")
 
 
 def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
@@ -114,13 +119,24 @@ def scan_page_from_pc(dict_code: str, pc: str | None) -> str | None:
     if code in MULTI_VOLUME_DICTS:
         if re.fullmatch(r"\d+-\d+", raw):
             return raw
-        # pw/pwkvn "{vol}-{page}-{column}" three-part shape (H3695): the
-        # trailing chunk is a column marker on the same page — all-letters
-        # ("7-385-d"), digit-break + letters ("7-384-1a", the bop class), or
-        # digit-only at a new-letter section break ("7-366-1", the ap90
-        # class). Drop the marker, keep "{vol}-{page}" verbatim (H839);
-        # anything else is not trusted.
+        # pw/pwkvn/skd "{vol}-{page}-{column}" three-part shape (H3695, skd
+        # via H3725): the trailing chunk is a column marker on the same page
+        # — all-letters ("7-385-d"), digit-break + letters ("7-384-1a", the
+        # bop class), letters-then-digit ("2-486-a1", the ap/md
+        # letterThenDigit class on the MV tail — skd's 30 stragglers,
+        # H3725), or digit-only at a new-letter section break ("7-366-1",
+        # the ap90 class). Drop the marker, keep "{vol}-{page}" verbatim
+        # (H839); anything else is not trusted.
         m = _PC_MV_VOL_PAGE_COL.match(raw)
+        if m:
+            return m.group(1)
+        # acc "{vol}-{page},{col}" comma-column shape (H3725): the first
+        # comma-field is the vol-page (H839), the trailing comma-chunk the
+        # column on that page ("1-618,1"). Strip the column, keep the
+        # vol-page half. A single-volume read of acc would return "1" here
+        # — volume-as-page for every entry — which is exactly why acc is
+        # gated through the MULTI_VOLUME branch.
+        m = _PC_MV_VOL_PAGE_COMMA_COL.match(raw)
         return m.group(1) if m else None
     page = raw.split(",")[0].strip()
     if re.fullmatch(r"\d+", page):
@@ -291,18 +307,20 @@ def build_report(rows: list[dict]) -> dict:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generatedDate": date.today().isoformat(),
         "model": "Grok 4.5 (grok-4.5)",
-        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5), H3695 (pw/pwkvn three-part vol-page-col extension, OxAlpha opencode glm-5.3-flash)",
+        "rerunBy": "Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5), H3695 (pw/pwkvn three-part vol-page-col extension, OxAlpha opencode glm-5.3-flash), H3725 (pui/vei/acc/skd multi-volume extension + acc comma-column / skd letters-then-digit-tail rules, OxAlpha opencode glm-5.3-flash)",
         "cslOrigRoot": str(CSL_ORIG),
         "method": {
             "denominator": "Every <L>… header line in each local csl-orig/v02/<code>/<code>.txt",
             "numerator_pc": "Entry header contains non-empty <pc>… (print page/column coordinate)",
             "numerator_atlas_scan": (
                 "Entry would get a non-null cologne-links.mjs scanUrl(dict, pc) — "
-                "dict ∈ COLOGNE_SCAN_DIR (40 dicts as of H3695) AND pc passes scanPageFromPc "
-                r"(PWG: /^\d+-\d+$/ verbatim; pw/pwkvn: three-part vol-page-col "
-                r"marker-stripped to vol-page; others: first comma-field is digits-only, "
-                r"page-marker, unseparated page+column-letters, letter-then-digit, "
-                r"unseparated-page-then-column, or dotted-column)"
+                "dict ∈ COLOGNE_SCAN_DIR (44 dicts as of H3725) AND pc passes scanPageFromPc "
+                r"(PWG/pui/vei: /^\d+-\d+$/ verbatim; pw/pwkvn/skd: three-part vol-page-col "
+                r"marker-stripped to vol-page, skd tail may be letters-then-digit; "
+                r"acc: vol-page,col comma-column stripped to vol-page; others: "
+                r"first comma-field is digits-only, page-marker, unseparated "
+                r"page+column-letters, letter-then-digit, unseparated-page-then-column, "
+                r"or dotted-column)"
             ),
             "scan_link_field": "<pc> in csl-orig entry header (not <bookref>; roadmap alias)",
             "non_goals": [
@@ -366,7 +384,7 @@ def render_md(report: dict) -> str:
     lines: list[str] = []
     lines.append("# METALEX L8 — entry-level scan-page link census")
     lines.append("")
-    lines.append(f"_Created: 07-08-2026 · Last updated: 29-08-2026_")
+    lines.append(f"_Created: 07-08-2026 · Last updated: 03-09-2026_")
     lines.append("")
     lines.append(
         f"**Handoff:** [H2368](https://github.com/gasyoun/Uprava/blob/main/handoffs/"
