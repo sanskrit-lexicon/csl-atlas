@@ -5,6 +5,19 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 ### Changed
 
+- **METALEX L8 checkbox ticked: every entry linked to scan page — atlas side
+  complete at 99.97% (A07 roadmap-drain re-pass, 04-09-2026).** Re-measured at
+  the current sibling-csl-orig `origin/main` snapshot: 1,506,391 entries ·
+  1,505,884 atlas-resolvable (**99.97%**) — totals identical to H3725's
+  03-09-2026 run, stable with no upstream drift. `test/cologne-links.test.mjs`
+  22/22 green. Honest split: the residual 0.03% is not an atlas gap — `nmmb`
+  (506 entries) waits on upstream scan-image upload (every embedded pdf 404s;
+  the atlas rule is ready the day the images land), 2 entries repo-wide lack
+  `<pc>` in csl-orig itself. Census re-confirmed:
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md)
+  (L8 box ticked; §7.2 32-dict/63.96% snapshot refreshed to 44 dicts/99.97%).
+
 - **L8 scan-link coverage 92.42% → 99.97%: `COLOGNE_SCAN_DIR` extended 40 → 44
   dicts with the `pui`/`vei`/`acc`/`skd` multi-volume rules (H3725, Atlas L8
   next multivolume slice, 03-09-2026).** `pui` (17,512 entries), `vei` (3,834),
