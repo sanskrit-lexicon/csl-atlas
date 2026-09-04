@@ -384,7 +384,7 @@ def render_md(report: dict) -> str:
     lines: list[str] = []
     lines.append("# METALEX L8 — entry-level scan-page link census")
     lines.append("")
-    lines.append(f"_Created: 07-08-2026 · Last updated: 03-09-2026_")
+    lines.append(f"_Created: 07-08-2026 · Last updated: 04-09-2026_")
     lines.append("")
     lines.append(
         f"**Handoff:** [H2368](https://github.com/gasyoun/Uprava/blob/main/handoffs/"

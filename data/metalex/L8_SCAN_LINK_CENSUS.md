@@ -1,8 +1,8 @@
 # METALEX L8 — entry-level scan-page link census
 
-_Created: 07-08-2026 · Last updated: 03-09-2026_
+_Created: 07-08-2026 · Last updated: 04-09-2026_
 
-**Handoff:** [H2368](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2368-Grok_csl-atlas_metalex-l8-scan-link-census_07.08.26.md) · **Model:** Grok 4.5 (grok-4.5) · **Generated:** 2026-09-03T12:46:38Z · **Rerun:** Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5), H3695 (pw/pwkvn three-part vol-page-col extension, OxAlpha opencode glm-5.3-flash), H3725 (pui/vei/acc/skd multi-volume extension + acc comma-column / skd letters-then-digit-tail rules, OxAlpha opencode glm-5.3-flash)
+**Handoff:** [H2368](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2368-Grok_csl-atlas_metalex-l8-scan-link-census_07.08.26.md) · **Model:** Grok 4.5 (grok-4.5) · **Generated:** 2026-09-04T12:46:28Z · **Rerun:** Sonnet 5 (claude-sonnet-5), A10 (H2368 ap90 pc-shape fix), A11 (12-dict COLOGNE_SCAN_DIR extension), A11-followup (ap90 digit-marker fix), A12 (bur/stc/vcp/ae/bhs/gra 6-dict extension, OxAlpha x-preview-f-free), A07 (ben/gst/inm/lan/mci/mw72/mwe/nybj/pe/shs/yat 11-dict extension + gra unseparated-column fix, OxAlpha opencode glm-5.3-flash), A08 (bop 1-dict extension + letter-break-marker fix), A08 follow-up (ap/ccs/lrv/md/sch 5-dict extension + letter-then-digit / sch unseparated-then-col / lrv dotted-column rules, Grok 4.5 grok-4.5), H3695 (pw/pwkvn three-part vol-page-col extension, OxAlpha opencode glm-5.3-flash), H3725 (pui/vei/acc/skd multi-volume extension + acc comma-column / skd letters-then-digit-tail rules, OxAlpha opencode glm-5.3-flash)
 
 ## Headline
 
