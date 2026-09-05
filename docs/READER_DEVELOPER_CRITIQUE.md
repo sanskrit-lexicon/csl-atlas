@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Reader And Developer Critique
 
 Date: 2026-06-04
@@ -97,3 +99,5 @@ The atlas is healthy when:
 - `docs/EVIDENCE_LABELS.md`
 - `docs/REVIEW_RELEASE_ROADMAP.md`
 - `docs/archive/READER_DEVELOPER_CRITIQUE_LEGACY_INTEGRATED_ATLAS.md`
+
+_Dr. Mārcis Gasūns_

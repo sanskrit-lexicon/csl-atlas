@@ -1,3 +1,5 @@
+_Created: 31-05-2026 · Last updated: 05-09-2026_
+
 # Changelog
 
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
@@ -14,8 +16,8 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   (506 entries) waits on upstream scan-image upload (every embedded pdf 404s;
   the atlas rule is ready the day the images land), 2 entries repo-wide lack
   `<pc>` in csl-orig itself. Census re-confirmed:
-  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
-  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md)
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md)
   (L8 box ticked; §7.2 32-dict/63.96% snapshot refreshed to 44 dicts/99.97%).
 
 - **L8 scan-link coverage 92.42% → 99.97%: `COLOGNE_SCAN_DIR` extended 40 → 44
@@ -46,11 +48,11 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   variant) — the scan images behind the tree are absent, so it stays out
   rather than link to dead targets; upstream-scan-images gap, not an atlas
   rule. Census regenerated (1,505,884 / 1,506,391 = 99.97%):
-  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
-  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
-  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md) ·
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md) ·
   typology packet regenerated with the new L8 flags:
-  [src/data/dicts/richness-typology.json](src/data/dicts/richness-typology.json).
+  [src/data/dicts/richness-typology.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/richness-typology.json).
 
 ## [0.19.1] - 2026-08-30
 ### Changed
@@ -79,11 +81,11 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   regenerated at this pass's snapshot (1,392,174 / 1,506,391 = 92.42%; the
   remaining 5 outside dicts — acc, nmmb, pui, skd, vei — hold 114,216 entries
   and are the dominant gap):
-  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
-  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
-  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md) ·
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md) ·
   typology packet regenerated with the new L8 flags:
-  [src/data/dicts/richness-typology.json](src/data/dicts/richness-typology.json).
+  [src/data/dicts/richness-typology.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/richness-typology.json).
 
 ## [0.19.0] - 2026-08-29
 ### Changed
@@ -107,7 +109,7 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   `xref_shared_edges.csv`'s line count *including the header* — the intersection
   is **641**, now counted rather than hardcoded. Emitter floor 0.6.0 → 0.16.0.
   Evidence: 40 `badge-typology` spans == 40 cards, zero `n=None`.
-  Generator: [scripts/build-review-sheets.py](scripts/build-review-sheets.py) ·
+  Generator: [scripts/build-review-sheets.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-review-sheets.py) ·
   standard: [Uprava docs/REVIEW_SHEET_CONTENT_STANDARD_2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/REVIEW_SHEET_CONTENT_STANDARD_2026.md) §8
 
 - **L8 scan-link coverage 64.31% → 79.30%: `COLOGNE_SCAN_DIR` extended 33 → 38
@@ -129,11 +131,11 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   `nmmb` stays out (broken probe, A11). Census regenerated
   (1,186,408 / 1,496,157 = 79.30%; 309,748 entries in the remaining 7
   outside dicts are the dominant gap):
-  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
-  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
-  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md) ·
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md) ·
   typology packet regenerated with the new L8 flags:
-  [src/data/dicts/richness-typology.json](src/data/dicts/richness-typology.json).
+  [src/data/dicts/richness-typology.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/richness-typology.json).
 
 - **L8 scan-link coverage 48.11% → 63.96%: `COLOGNE_SCAN_DIR` extended 21 → 32
   dicts + gra's unseparated page-column rule (A07, H2368 roadmap follow-on,
@@ -154,11 +156,11 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   regenerated (963,510 / 1,506,391 = 63.96%; local csl-orig grew to
   1,506,391 entries since A12's 1,496,157 — acc/ap/ben landed in between;
   542,880 entries in the remaining 13 outside dicts are the dominant gap):
-  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
-  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
-  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md) ·
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md) ·
   typology packet regenerated with the new L8 flags:
-  [src/data/dicts/richness-typology.json](src/data/dicts/richness-typology.json).
+  [src/data/dicts/richness-typology.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/richness-typology.json).
 
 - **L8 scan-link coverage 38.99% → 48.11%: `COLOGNE_SCAN_DIR` extended 15 → 21
   dicts (A12, H2368 roadmap follow-on, 28-08-2026).** `bur`, `stc`, `vcp`,
@@ -172,9 +174,9 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
   Residuals recorded in the roadmap: gra 99.82% (23 unseparated `NNNa`
   entries = named next increment), ae 99.99% (its one missing-`<pc>` entry).
   Census regenerated:
-  [data/metalex/L8_SCAN_LINK_CENSUS.md](data/metalex/L8_SCAN_LINK_CENSUS.md) ·
-  map: [scripts/lib/cologne-links.mjs](scripts/lib/cologne-links.mjs) ·
-  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](docs/METALEXICOGRAPHY_ROADMAP.md).
+  [data/metalex/L8_SCAN_LINK_CENSUS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/metalex/L8_SCAN_LINK_CENSUS.md) ·
+  map: [scripts/lib/cologne-links.mjs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/cologne-links.mjs) ·
+  roadmap: [docs/METALEXICOGRAPHY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md).
 
 ## [0.18.0] - 2026-08-28
 ### Changed
@@ -1279,3 +1281,5 @@ A large expansion from the interoperability pilot into a deterministic, source-l
 ### Baseline — Interoperability pilot (≤ 2026-05-29)
 - MW-PWG-PWK hard-case interoperability track: 50-case TEI archival + OntoLex/FrAC pilot, loss reports, and validation harnesses. This track now lives in `csl-standards`.
 - Nine narrative dictionary chapters and the microanalysis paper pages.
+
+_Dr. Mārcis Gasūns_

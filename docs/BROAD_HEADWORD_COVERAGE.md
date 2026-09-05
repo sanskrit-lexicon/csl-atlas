@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Broad Headword Coverage
 
 Broad headword coverage is a public lookup layer for Reader lookup and Lemma dossier. It expands visibility beyond the core comparison dictionaries without changing the deeper comparison model.
@@ -33,3 +35,5 @@ The broad manifest exposes `sourceLinkMode` per dictionary:
 Broad mode reports headword presence, record count, and first source line where linkable. It does not imply reliable gender extraction, citation tagging, homonym markup, sense segmentation, semantic agreement, or editorial priority.
 
 Full analytical parity is adapter-driven: a broad dictionary participates in a deep feature only after `scripts/lib/dict-feature-adapters.mjs` contains a supported adapter for that dictionary and feature. Missing deep markup is shown as unavailable, never as zero evidence.
+
+_Dr. Mārcis Gasūns_

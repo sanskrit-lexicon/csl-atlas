@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Order Is the Dictionary: A Macrostructural Model of the Versified Synonymic *Kośa*
 
 *Draft manuscript for a metalexicography venue (target: International Journal of
@@ -134,7 +136,7 @@ and dense; it is simply *located in the arrangement*, which is what I now measur
 ## 3. Data and method
 
 I measure the macrostructure directly from the canonical `csl-orig` source files with a
-stdlib-only extractor ([`m6_kosha_macrostructure.py`](../../scripts/lexico/m6_kosha_macrostructure.py)),
+stdlib-only extractor ([`m6_kosha_macrostructure.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m6_kosha_macrostructure.py)),
 which detects each kosha's encoding model and recovers its hierarchy. The two koshas use
 **opposite digitization models**, and recognising this is itself part of the method:
 
@@ -345,3 +347,5 @@ collapse metric implements the lexeme normalisation §4.3 argues for).
 Gasūns, M. (in preparation). *Grammar Without Tags: The Verbal-Root Microstructure of
 the Indigenous Sanskrit Kośa* (P4 — the microstructural companion; establishes the
 zero-meaning rule this paper raises to the macrostructure).
+
+_Dr. Mārcis Gasūns_

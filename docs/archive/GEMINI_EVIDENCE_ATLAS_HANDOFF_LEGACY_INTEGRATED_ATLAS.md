@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Gemini Handoff: Sanskrit Evidence Atlas
 
 Legacy note 2026-06-04: this file preserves the old integrated handoff. The
@@ -1291,3 +1293,5 @@ When reporting back, include:
 9. recommended next slice.
 
 Keep the report concise, but do not hide warnings.
+
+_Dr. Mārcis Gasūns_

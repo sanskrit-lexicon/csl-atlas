@@ -1,9 +1,11 @@
+_Created: 15-06-2026 · Last updated: 05-09-2026_
+
 # R2 review packet — semicolon-aware sense counter (parser promotion)
 
 Status: **reviewed** (2026-06-16, reviewer `gasyoun`) — adjudicated, but still a
 parser-promotion *proposal*: the counter is **not yet applied**. Owner: `csl-atlas`.
 Routes through the R2 checkpoint process
-([`R2_CHECKPOINT_DECISIONS.md`](R2_CHECKPOINT_DECISIONS.md)).
+([`R2_CHECKPOINT_DECISIONS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_CHECKPOINT_DECISIONS.md)).
 
 ## Outcome
 
@@ -28,8 +30,8 @@ evidence notes in the packet's `checkpointRows`; summary in `reviewSummary`).
 detection gate + the lone-adjective refinement, recompute H3R `wil→yat`, and let the
 withdrawn Yates edge re-enter the P2 paper with a real count. Not done here.
 
-Packet data: [`data/lexico/r2_semicolon_counter_packet.json`](../data/lexico/r2_semicolon_counter_packet.json)
-(`npm run build-r2-semicolon-counter-packet`). Evidence: [`data/lexico/r2_yat_artifact_check.json`](../data/lexico/r2_yat_artifact_check.json) (#125).
+Packet data: [`data/lexico/r2_semicolon_counter_packet.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_semicolon_counter_packet.json)
+(`npm run build-r2-semicolon-counter-packet`). Evidence: [`data/lexico/r2_yat_artifact_check.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_yat_artifact_check.json) (#125).
 
 ---
 
@@ -92,3 +94,5 @@ Each of the 26 rows links the YAT source entry. Source-read the gloss, then mark
 
 The sense-counting rule is **unchanged** until a reviewer adjudicates these rows. This packet
 proposes; it does not edit the parser or `csl-orig`.
+
+_Dr. Mārcis Gasūns_

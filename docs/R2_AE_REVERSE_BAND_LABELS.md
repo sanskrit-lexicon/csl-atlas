@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 AE Reverse Band Label Proposals
 
 Date: 2026-06-06
@@ -79,3 +81,5 @@ For the next non-final R2 rebuild experiment:
 This keeps AE useful for distinctive cross-language hints while preventing
 common-root rows such as `gam`, formula rows such as `iti`, and broad entries
 such as `part` or `please` from inflating R2 alignment evidence.
+
+_Dr. Mārcis Gasūns_

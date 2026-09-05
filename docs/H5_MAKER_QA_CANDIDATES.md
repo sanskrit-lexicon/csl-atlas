@@ -1,3 +1,5 @@
+_Created: 07-06-2026 · Last updated: 05-09-2026_
+
 # H5 Maker QA Candidate Packet
 
 Date: 2026-06-07
@@ -214,3 +216,4 @@ Known corrections remain calibration controls. They explain what reviewed `possi
 - The packet is intentionally small and ranked for a first source-check session, not a complete H5 inventory.
 - No parser behavior, source-anchor generation, public page, backend/runtime LLM, corpus, DCS, or standards work is changed.
 
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: PWG — Boehtlingk-Roth Grosses PW (1855–1875)
 ---
@@ -154,3 +156,5 @@ Per-dict editorial choices for this chapter:
 ---
 
 Source: CDSL `pwg.txt` 2026-05-23 · MWS docs-pass commit reflects audit pipeline as of 2026-05-27 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

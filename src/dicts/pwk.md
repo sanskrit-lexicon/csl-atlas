@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: PWK — Böhtlingk Kürzeres PW (1879–1889)
 ---
@@ -148,3 +150,5 @@ Full lineage in [PWK/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/PWK/bl
 ---
 
 Source: CDSL `pwk.txt` 2026-05-23 · MWS docs-pass commit reflects audit pipeline as of 2026-05-27 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

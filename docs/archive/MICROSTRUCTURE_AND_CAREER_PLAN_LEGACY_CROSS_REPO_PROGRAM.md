@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Legacy Cross-Repo Microstructure And Career Plan
 
 Status: legacy reference only. This file predates the 2026-06-04 boundary
@@ -10,7 +12,7 @@ scheduling, standards tracking, and corpus-based dictionary plans. Use
 # Microstructure typology + Doktor Nauk career plan
 
 **Version**: 1.0 · **Date**: 2026-05-16 · **Owner**: M. Gasūns + Claude Code
-**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](../LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](../L0_DESIGN.md), [`METALEXICOGRAPHY_ROADMAP.md`](../METALEXICOGRAPHY_ROADMAP.md)
+**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_DESIGN.md), [`METALEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md)
 
 Boundary note 2026-06-04: atlas owns the dictionary microstructure,
 macrostructure, and dictionary-publication evidence in this plan. Corpus
@@ -454,3 +456,5 @@ Per author request: help track trends in **(a) Digital Humanities** and **(b) Di
 4. **Article 1 status**: should we start drafting Article 1 (Quantifying) NOW with the data we already have, or wait for L0 / M1 to complete?
 5. **Manual scope**: is the practical manual aimed at academics, or also at independent / amateur lexicographers (e.g. Wikipedians, OpenSanskrit contributors)?
 6. **Defense timing**: do you have a target year for Doktor Nauk defense (2034? 2035?), affecting whether to compress or expand the 15-article schedule?
+
+_Dr. Mārcis Gasūns_

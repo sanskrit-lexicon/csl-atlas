@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: SKD — Śabdakalpadrumaḥ (1822–1858)
 ---
@@ -127,3 +129,5 @@ PWG cites SKD as `<ls>ŚKDR.</ls>` 20,109 times — SKD's biggest impact on the 
 ---
 
 Source: CDSL `skd.txt` 2026-05-23 · MWS docs-pass commit reflects audit pipeline as of 2026-05-27 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

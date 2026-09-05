@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # H4 Semantic Fields
 
 Date: 2026-06-05
@@ -98,5 +100,7 @@ This package supports `/tools/semantic-fields`, a scholar-facing chart page
 with a compact trust block. It also supports the generated family-profile
 artifact used by the interpretation note. The active interpretation and
 review-sample plan is
-[`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md).
+[`H4_SEMANTIC_FIELD_INTERPRETATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_INTERPRETATION.md).
 Keep SKD/VCP-style convention caveats visible before making paper-level claims.
+
+_Dr. Mārcis Gasūns_

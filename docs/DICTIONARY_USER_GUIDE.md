@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Dictionary User Guide
 
 Date: 2026-05-29
@@ -7,7 +9,7 @@ Audience: readers, students, and translators who want to look up a Sanskrit word
 This guide answers the question the architecture documents do not answer for a newcomer: **which dictionary should I use, and how do I read what it tells me?**
 
 For the short task-based chooser, start with
-[`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md). This guide
+[`UC_RD_02_DICTIONARY_CHOOSER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/UC_RD_02_DICTIONARY_CHOOSER.md). This guide
 is the longer companion for reading entries, caveats, and evidence labels.
 
 ## Trust Block
@@ -158,7 +160,7 @@ Every claim in the atlas carries a certainty label. In plain terms:
 - **Probable** — a useful guess that has not been verified.
 - **Checked** — confirmed or corrected by a human reviewer.
 
-For the full explanation, see [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md).
+For the full explanation, see [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md).
 
 ## Citing What You Find
 
@@ -166,15 +168,17 @@ Each entry has a stable record ID and a source link. When you cite a word in you
 
 ## Related Documents
 
-- [`docs/UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md) -
+- [`docs/UC_RD_02_DICTIONARY_CHOOSER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/UC_RD_02_DICTIONARY_CHOOSER.md) -
   the short "which dictionary should I use?" page.
-- [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — what the certainty labels mean.
-- [`docs/READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md) - what a
+- [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) — what the certainty labels mean.
+- [`docs/READER_LOOKUP_EXPLAINER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/READER_LOOKUP_EXPLAINER.md) - what a
   lookup result means and what it does not prove.
 - [`docs/USE_CASE_PAGE_ROADMAP.md`](docs/archive/USE_CASE_PAGE_ROADMAP.md) - how reader and
   analysis pages are sequenced.
-- [`docs/CHART_TRUST_TEMPLATE.md`](CHART_TRUST_TEMPLATE.md) - the required trust
+- [`docs/CHART_TRUST_TEMPLATE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CHART_TRUST_TEMPLATE.md) - the required trust
   block for public pages and charts.
-- [`docs/DICTIONARY_COMPARISON_PLAN.md`](DICTIONARY_COMPARISON_PLAN.md) — how cross-dictionary comparison works (research mode).
+- [`docs/DICTIONARY_COMPARISON_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_COMPARISON_PLAN.md) — how cross-dictionary comparison works (research mode).
 - `docs/USE_CASES.md` — the reader use cases this guide supports (UC-RD-01 through UC-RD-07).
 - `ARCHITECTURE.md` — the overall design and audience policy.
+
+_Dr. Mārcis Gasūns_

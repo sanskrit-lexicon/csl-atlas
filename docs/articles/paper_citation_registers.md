@@ -1,15 +1,17 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 # Two Citation Registers and the Dictionary-to-Book Gap in the Cologne Digital Sanskrit Lexicon
 
 *Draft manuscript for submission to a metalexicography venue (target: International
 Journal of Lexicography). Empirical basis: the OBS-C finding
-([`CITATION_REGISTERS.md`](../CITATION_REGISTERS.md)); siglum normalisation
-[`scripts/lib/source-siglum.mjs`](../../scripts/lib/source-siglum.mjs) and the
-reviewed alias table [`src/data/dict-source-aliases.json`](../../src/data/dict-source-aliases.json);
+([`CITATION_REGISTERS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_REGISTERS.md)); siglum normalisation
+[`scripts/lib/source-siglum.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/source-siglum.mjs) and the
+reviewed alias table [`src/data/dict-source-aliases.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dict-source-aliases.json);
 abbreviation-family candidate generator
-[`scripts/obs/siglum_families.py`](../../scripts/obs/siglum_families.py). Companion to
-the headword-redundancy study ([`paper_redundancy_and_descent.md`](paper_redundancy_and_descent.md))
+[`scripts/obs/siglum_families.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/siglum_families.py). Companion to
+the headword-redundancy study ([`paper_redundancy_and_descent.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_redundancy_and_descent.md))
 and to the standing `INDIG-CITE` finding
-([`MICROSTRUCTURE_ZERO_MEANING.md`](../MICROSTRUCTURE_ZERO_MEANING.md)). All corpus
+([`MICROSTRUCTURE_ZERO_MEANING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_ZERO_MEANING.md)). All corpus
 counts are regenerated from the committed artifact
 [`data/obs/citation_registers.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/obs/citation_registers.json)
 (built by [`citation_register_gaps.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/citation_register_gaps.py));
@@ -334,3 +336,5 @@ Vogel, Claus. 1979. *Indian Lexicography.* (A History of Indian Literature, ed. 
 Gonda, vol. 5, fasc. 4.) Wiesbaden: Otto Harrassowitz. [Same core metalexicography set
 as the companion sense-inheritance paper (P2); Vogel is the standard reference for the
 indigenous *kośa* citation tradition discussed in §4.4.]
+
+_Dr. Mārcis Gasūns_

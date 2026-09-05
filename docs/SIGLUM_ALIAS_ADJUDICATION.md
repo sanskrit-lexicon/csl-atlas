@@ -1,13 +1,15 @@
+_Created: 10-06-2026 · Last updated: 05-09-2026_
+
 # Source-siglum alias adjudication (OBS-C)
 
 Date: 2026-06-10
 
 Review log for the abbreviation-family merge candidates produced by
-[`scripts/obs/siglum_families.py`](../scripts/obs/siglum_families.py). Accepted
+[`scripts/obs/siglum_families.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/siglum_families.py). Accepted
 merges are written to
-[`src/data/dict-source-aliases.json`](../src/data/dict-source-aliases.json),
+[`src/data/dict-source-aliases.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dict-source-aliases.json),
 which feeds `canonicalSiglum()` in
-[`scripts/lib/source-siglum.mjs`](../scripts/lib/source-siglum.mjs).
+[`scripts/lib/source-siglum.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/source-siglum.mjs).
 
 **Principle.** Merge a candidate family only when every member is the *same work*
 — variants being section/book numerals (`raghxii` = Raghuvaṃśa XII), edition tags
@@ -63,3 +65,5 @@ diacritic/case fold already handles the bulk; this adjudication extends the
 *reviewed* layer for the most-cited abbreviation families. The long tail stays in
 the source-siglum review queue by design — `siglum_families.py` regenerates
 candidates, this table records human decisions.
+
+_Dr. Mārcis Gasūns_

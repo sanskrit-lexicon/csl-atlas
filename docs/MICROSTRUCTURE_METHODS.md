@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # Microstructure Methods
 
 Date: 2026-06-04
@@ -18,9 +20,9 @@ microstructure extractor counts.
 ## Method Inventory
 
 For scholar-facing reading, start with the easiest visible layer:
-[`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md).
+[`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_HEADWORD_SUBENTRY.md).
 It explains why M1/M2 headword and subentry structure comes first. Then use
-[`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md)
+[`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_SENSE_SEGMENTATION.md)
 to decide which sense divisions are structural proxies and which require R2
 review before interpretation.
 
@@ -82,3 +84,5 @@ python scripts/lexico/m7_root_agreement.py
 python scripts/lexico/m8_semantic_fields.py
 python scripts/lexico/validate_lexico.py
 ```
+
+_Dr. Mārcis Gasūns_

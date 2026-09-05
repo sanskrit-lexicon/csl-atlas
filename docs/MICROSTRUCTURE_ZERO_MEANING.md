@@ -1,6 +1,8 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # What a "0" means in the microstructure scripts — and what it does NOT
 
-**Date**: 2026-06-03 · Companion to [`MICROSTRUCTURE_M1_M2_RESULTS.md`](MICROSTRUCTURE_M1_M2_RESULTS.md)
+**Date**: 2026-06-03 · Companion to [`MICROSTRUCTURE_M1_M2_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_M1_M2_RESULTS.md)
 
 ## The correction
 
@@ -89,12 +91,12 @@ VCP (Vācaspatya) is the same indigenous style (`DAtuH` ×164, `parasmEpadI` ×8
 > A cross-dictionary **0 is never a statement about content.** Report it as "does not use this
 > markup," never as "lacks this feature."
 
-(Identical to the citation lesson in [`../data/forensic/CITATION_TAGGING.md`](../data/forensic/CITATION_TAGGING.md):
+(Identical to the citation lesson in [`../data/forensic/CITATION_TAGGING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/CITATION_TAGGING.md):
 "0 `<ls>` ≠ citation-free.")
 
 ## Measuring SKD/VCP verbal microstructure — prototyped (M4)
 
-[`scripts/lexico/m4_indigenous.py`](../scripts/lexico/m4_indigenous.py) is the indigenous-tradition
+[`scripts/lexico/m4_indigenous.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m4_indigenous.py) is the indigenous-tradition
 counterpart to `m1`. It flags a **verbal-root entry** by **two complementary signals** (recorded per
 row in `root_signal`):
 - **citation** — the entry names a dhātupāṭha; the Kavikalpadruma (`iti kavikalpadrumaH`, 2,135× in
@@ -135,3 +137,5 @@ mostly via undecoded anubandha it-markers (so its coverage is lower than VCP's);
 forms carry mild noise; gaṇa/pada/transitivity take the first match; veṭ (optional seṭ) is not split.
 A feasibility proof, not a finished parser. But it settles the methodological point:
 **the 0 was the detector, never the dictionary.**
+
+_Dr. Mārcis Gasūns_

@@ -1,13 +1,15 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # L0 / Lexicography-Genealogy Stream Handoff
 
 **Date**: 2026-06-03 · **Model used**: Opus · **Stream**: the dictionary-genealogy research
 (separate from the measurement/Paper-1 stream). Consolidated cross-stream handoff:
-[`SESSION_HANDOFF_LEGACY_OBSERVATORY.md`](archive/SESSION_HANDOFF_LEGACY_OBSERVATORY.md).
+[`SESSION_HANDOFF_LEGACY_OBSERVATORY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/archive/SESSION_HANDOFF_LEGACY_OBSERVATORY.md).
 
 Boundary update 2026-06-04: this handoff now belongs to `csl-atlas` because it
 starts from dictionary headword conventions and dictionary genealogy. The old
 mixed observatory decision file is preserved as
-[`DECISIONS_NEEDED_LEGACY_OBSERVATORY.md`](archive/DECISIONS_NEEDED_LEGACY_OBSERVATORY.md);
+[`DECISIONS_NEEDED_LEGACY_OBSERVATORY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/archive/DECISIONS_NEEDED_LEGACY_OBSERVATORY.md);
 do not treat it as the active atlas decision queue.
 
 ---
@@ -25,9 +27,9 @@ The convention-fingerprint cladogram (L0_DESIGN) and all four post-L0 decisions 
 | L0-rigor | **Bayesian Mk MCMC** + NJ bootstrap; three-algorithm comparison | ✅ |
 | L0.8 | **content-magnitude de-confound** — lift + rare-lemma containment + exclusive-pair (`s6`) | ✅ |
 
-Read in order: [`L0_DESIGN.md`](L0_DESIGN.md) → [`L0_RESULTS.md`](L0_RESULTS.md) →
-[`refs/fingerprint_conventions.md`](refs/fingerprint_conventions.md) +
-[`refs/concordance.md`](refs/concordance.md). Live dashboard page:
+Read in order: [`L0_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_DESIGN.md) → [`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md) →
+[`refs/fingerprint_conventions.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/fingerprint_conventions.md) +
+[`refs/concordance.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/concordance.md). Live dashboard page:
 **`/tools/lexicographic-conventions`**.
 
 ### Headline finding (the publishable result)
@@ -38,7 +40,7 @@ reformatted: PWG→MW, MW72→MW score ~0. Monier-Williams imported the Petersbu
 recoded its conventions (ṛ-stems `-ṛ` not `-ar`, etc.). Quantified as the **reformatting
 residual** = content_containment − convention_similarity (top: CAE→MW 0.68, MD→MW 0.65,
 CCS→MW 0.62, WIL→YAT 0.54). Robust across UPGMA/NJ/Bayesian (L0_RESULTS §4b). → **Paper H §5**
-([`articles/paper_H_convention_vs_content_lineage.md`](articles/paper_H_convention_vs_content_lineage.md))
+([`articles/paper_H_convention_vs_content_lineage.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_H_convention_vs_content_lineage.md))
 + **standalone methods note, PUBLICATIONS Article 20**.
 
 ## 2. Scripts & data map
@@ -151,3 +153,5 @@ Steps 3–6 (citation-set / entry-similarity / forensic) remain → §4(D).
 Resolved 2026-06-03 (DECISIONS_NEEDED "Post-L0"): next=L0.7 ✅ · Patel-open→hwnorm1 ✅ ·
 paper=both (Article 20 + Paper H §5) ✅ · rigor=Bayesian MCMC+NJ ✅.
 Open/human: complete-dict-set sourcing (Cologne); whether to gate the paper-final tree on all 37.
+
+_Dr. Mārcis Gasūns_

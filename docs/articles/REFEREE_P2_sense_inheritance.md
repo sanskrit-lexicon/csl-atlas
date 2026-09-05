@@ -1,9 +1,11 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Pre-submission referee report — P2 (*Condensation, Not Inflation*)
 
 Date: 2026-06-13
 
 Status: internal adversarial review of
-[`paper_sense_inheritance.md`](paper_sense_inheritance.md), written in the
+[`paper_sense_inheritance.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_sense_inheritance.md), written in the
 voice of a *Lexicographica* / *IJL* referee, to surface the objections a real
 reviewer will raise before submission. Points marked **[fixed]** were applied to
 the manuscript in the same change; **[author]** points need the author's decision
@@ -106,3 +108,5 @@ count from M3.
 The applied fixes harden the empirical core; the pending items are a coherent
 single revision pass (centrality control + an SKD/VCP fusion count + a
 threshold-sensitivity line + references) that would carry the paper to acceptance.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 09-06-2026 · Last updated: 05-09-2026_
+
 # VisualDCS Consumption Contract
 
 Date: 2026-06-09
@@ -10,11 +12,11 @@ implementation; VisualDCS owns production of the file.
 
 ## Why this document exists
 
-[`BOUNDARY_RULES.md`](BOUNDARY_RULES.md) keeps DCS corpus data, passage
+[`BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/BOUNDARY_RULES.md) keeps DCS corpus data, passage
 evidence, corpus grammar, and dictionary-vs-corpus joins **out** of the atlas
 and assigns them to VisualDCS. The same rules allow the atlas to *consume* a
 stable dictionary-facing summary later
-([`RESEARCH_LAYER_ROADMAP.md`](RESEARCH_LAYER_ROADMAP.md) §7, phase R5).
+([`RESEARCH_LAYER_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RESEARCH_LAYER_ROADMAP.md) §7, phase R5).
 
 Today no such summary exists: VisualDCS's published JSON
 (`morph_pn.json`, `tense_case_data.json`, …) is keyed by grammatical **category
@@ -104,7 +106,7 @@ store or recompute them.
 - **Headword-keyed object** (above), so the atlas can `O(1)` look up a lemma.
 - **Size budget: ≤ ~10 MB uncompressed**, matching the existing client-side
   `sanhw1` index that already loads in-browser
-  ([`RESEARCH_LAYER_ROADMAP.md`](RESEARCH_LAYER_ROADMAP.md) §7). Band-level
+  ([`RESEARCH_LAYER_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RESEARCH_LAYER_ROADMAP.md) §7). Band-level
   records for ~55k attested lemmas fit comfortably. If it grows past budget,
   shard by first letter and publish a manifest.
 - **Versioned**: bump `schemaVersion` on any breaking field change; the atlas
@@ -156,3 +158,5 @@ VisualDCS (allowed today by `BOUNDARY_RULES.md` "External Links Are Allowed").
 This document is the handoff. It is in-bounds for the atlas because it describes
 a **dictionary-headword join requirement**, not corpus scope; the corpus work it
 asks for stays in VisualDCS.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 16-06-2026 · Last updated: 05-09-2026_
+
 # Three Axes of Descent: Separating Content, Convention, and Microstructure in Dictionary Inheritance
 
 *Draft manuscript for a metalexicography / digital-humanities methodology venue
@@ -393,3 +395,5 @@ A Headword-Level Stemma of the Cologne Digital Sanskrit Lexicon* (OBS-R — owns
 headword-containment matrix the content axis reads from).
 
 *Bibliographic details are to be verified against the sources before submission.*
+
+_Dr. Mārcis Gasūns_

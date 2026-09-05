@@ -1,3 +1,5 @@
+_Created: 24-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Paper — grounded framework
 ---
@@ -40,3 +42,5 @@ MW reuses a small **~6-block kernel** (F01, F02, F04, F10, F12, F17) across 286,
 ---
 
 *Tour page. Canonical text: [PAPER.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md).*
+
+_Dr. Mārcis Gasūns_

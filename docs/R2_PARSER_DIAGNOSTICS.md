@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Parser Diagnostics
 
 Date: 2026-06-05
@@ -28,7 +30,7 @@ each lemma/dictionary pair into a parser work package.
 
 `npm run build-r2-review-packets` groups the same diagnostics into
 reviewer-facing parser-decision packets. See
-[`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md).
+[`R2_REVIEW_PACKETS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REVIEW_PACKETS.md).
 
 Current artifact:
 
@@ -191,3 +193,5 @@ markers after excluding obvious grammar labels.
 
 This makes the indigenous review class more informative without claiming that
 SKD/VCP prose has been fully parsed into a normalized citation apparatus.
+
+_Dr. Mārcis Gasūns_

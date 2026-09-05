@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Lineage Sankey — PWG → MW kosha collapse
 toc: false
@@ -239,3 +241,5 @@ display(csvDownloadButton(edgeRows, "shared-error-lineage-edges.csv"));
 ---
 
 Source: CDSL pwg.txt + mw.txt 2026-05-23. Static SVG: [sankey-en.svg](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/sankey-en.svg). Shared-error overlay: forensic F4/F4b (H1579). CC-BY-SA-4.0.
+
+_Dr. Mārcis Gasūns_

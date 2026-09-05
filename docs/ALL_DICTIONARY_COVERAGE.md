@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # All-Dictionary Coverage And Size Layer
 
 Date: 2026-05-28
@@ -88,3 +90,5 @@ The all-dictionary layer should become the bridge between the current paper and 
 5. Hand off entry-type and block-size results to `csl-standards` when TEI archival modeling or OntoLex semantic modeling needs atlas evidence.
 
 This turns Figure 6 from a structural heatmap into the first panel of a larger atlas: structure, size, type, fit, and model loss.
+
+_Dr. Mārcis Gasūns_

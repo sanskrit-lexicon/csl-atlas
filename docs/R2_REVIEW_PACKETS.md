@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Review Packets
 
 Date: 2026-06-05
@@ -23,11 +25,11 @@ result.
   until R2 coverage broadens beyond the five anchor lemmas.
 - Review status: `machine-reviewed`.
 - Owner repo: `csl-atlas`.
-- Next use: use [`R2_DRIFT_EXPLANATION.md`](R2_DRIFT_EXPLANATION.md) as the
+- Next use: use [`R2_DRIFT_EXPLANATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_DRIFT_EXPLANATION.md) as the
   machine-only control packet, then record decisions in
   `src/data/review/r2-checkpoint-review.json` using
-  [`R2_CHECKPOINT_DECISIONS.md`](R2_CHECKPOINT_DECISIONS.md) and
-  [`R2_CHECKPOINT_REVIEW.md`](R2_CHECKPOINT_REVIEW.md); keep parser promotion
+  [`R2_CHECKPOINT_DECISIONS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_CHECKPOINT_DECISIONS.md) and
+  [`R2_CHECKPOINT_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_CHECKPOINT_REVIEW.md); keep parser promotion
   deferred until human decisions exist.
 - External dependencies: local dictionary source rows already used by the R2
   source-anchor prototype.
@@ -67,36 +69,36 @@ diagnostics provide them.
 The first no-human implementation slice after packet labeling is therefore not
 a new public page and not parser promotion. It is the machine-only drift
 explanation/control packet in
-[`R2_DRIFT_EXPLANATION.md`](R2_DRIFT_EXPLANATION.md), preserving every excluded
+[`R2_DRIFT_EXPLANATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_DRIFT_EXPLANATION.md), preserving every excluded
 or lower-confidence source record as evidence rather than dropping it from the
 worklist. The starting label vocabulary and per-source record proposals are
 recorded in
-[`R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md); they are
+[`R2_DIV_SOURCE_SCOPE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_DIV_SOURCE_SCOPE_LABELS.md); they are
 machine-proposed labels, not scholar-reviewed `reviewedValue`.
 
 The second source-inspected proposal layer is
-[`R2_MARKER_RUN_SCOPE_LABELS.md`](R2_MARKER_RUN_SCOPE_LABELS.md), covering
+[`R2_MARKER_RUN_SCOPE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_MARKER_RUN_SCOPE_LABELS.md), covering
 numbered-marker prefix runs, preface/proxy rows, raw-headword bundles, and
 archive-parity controls.
 
 The third source-inspected proposal layer is
-[`R2_AE_REVERSE_BAND_LABELS.md`](R2_AE_REVERSE_BAND_LABELS.md), covering AE
+[`R2_AE_REVERSE_BAND_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_AE_REVERSE_BAND_LABELS.md), covering AE
 reverse-equivalent rank bands, direct-equivalent candidates, phrase/collocation
 matches, broad-headword overmatches, and no-anchor controls.
 
 The fourth source-inspected proposal layer is
-[`R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md),
+[`R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md),
 covering SKD/VCP `iti` units, authority quotation hints, raw VCP authority
 sigla, grammar/commentary units, record splits, and controls.
 
 The fifth source-inspected proposal layer is
-[`R2_SOURCE_GAP_CONTROL_LABELS.md`](R2_SOURCE_GAP_CONTROL_LABELS.md), covering
+[`R2_SOURCE_GAP_CONTROL_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_SOURCE_GAP_CONTROL_LABELS.md), covering
 R2 mild drift follow-ups, under-split marker gaps, archive-parity controls,
 source-only expansion rows, homonym/continuation controls, and no-anchor
 controls.
 
 The generated checkpoint review packet is
-[`R2_CHECKPOINT_REVIEW.md`](R2_CHECKPOINT_REVIEW.md), backed by
+[`R2_CHECKPOINT_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_CHECKPOINT_REVIEW.md), backed by
 `data/lexico/r2_checkpoint_review_packet.json`. It selects two rows from each
 packet for human review, preserves source links and proposed parser labels, and
 keeps all human-decision fields empty.
@@ -107,7 +109,7 @@ It keeps canonical empty human fields until review and preserves future human
 decisions across rebuilds.
 
 The generated drift explanation packet is
-[`R2_DRIFT_EXPLANATION.md`](R2_DRIFT_EXPLANATION.md), backed by
+[`R2_DRIFT_EXPLANATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_DRIFT_EXPLANATION.md), backed by
 `data/lexico/r2_drift_explanation.json`. It covers all 70 diagnostics, counts
 machine labels by packet/drift/priority/label, and keeps the 10 checkpoint rows
 as `needs-review`.
@@ -207,3 +209,5 @@ A future R2 parser rule can be promoted only when the packet records:
 | `reverse-rank-counts` | AE equivalent-position rank counts are available. |
 | `indigenous-authority-hints` | SKD/VCP authority hints are available outside `<ls>` tagging. |
 | `archive-missing-from-source` | The archive has rows but the source-backed prototype found none. |
+
+_Dr. Mārcis Gasūns_

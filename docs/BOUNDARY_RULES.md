@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Boundary Rules
 
 Date: 2026-06-03
@@ -50,7 +52,7 @@ If it does not start from dictionary evidence, it does not belong here.
   The atlas may *consume* one stable dictionary-facing summary from VisualDCS
   (band-level frequency keyed on SLP1 headword) without importing corpus scope —
   the requirement is specified in
-  [`VISUALDCS_CONSUMPTION_CONTRACT.md`](VISUALDCS_CONSUMPTION_CONTRACT.md).
+  [`VISUALDCS_CONSUMPTION_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/VISUALDCS_CONSUMPTION_CONTRACT.md).
 - GitHub organization analytics, repo metrics, issues, PRs, contributors,
   tooling runbooks, workflow health, and ecosystem observability.
 - Publication planning unless it is directly tied to dictionary-atlas pages or
@@ -98,3 +100,5 @@ Before adding a new file, page, generated dataset, or package command, ask:
 > dictionary comparison?
 
 If the answer is no, open or use a different repository.
+
+_Dr. Mārcis Gasūns_

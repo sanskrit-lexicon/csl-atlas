@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # UC-RD-02 Dictionary Chooser
 
 Date: 2026-06-05
@@ -123,8 +125,10 @@ It must not absorb:
 
 ## Related Pages
 
-- [`DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md)
-- [`READER_LOOKUP_EXPLAINER.md`](READER_LOOKUP_EXPLAINER.md)
-- [`EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md)
-- [`USE_CASES.md`](USE_CASES.md)
-- [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md)
+- [`DICTIONARY_USER_GUIDE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md)
+- [`READER_LOOKUP_EXPLAINER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/READER_LOOKUP_EXPLAINER.md)
+- [`EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md)
+- [`USE_CASES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/USE_CASES.md)
+- [`BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/BOUNDARY_RULES.md)
+
+_Dr. Mārcis Gasūns_

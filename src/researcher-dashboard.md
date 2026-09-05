@@ -1,3 +1,5 @@
+_Created: 29-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Researcher dashboard
 toc: false
@@ -124,3 +126,5 @@ repos currently matter to the atlas.
   line-height: 1.35;
 }
 </style>
+
+_Dr. Mārcis Gasūns_

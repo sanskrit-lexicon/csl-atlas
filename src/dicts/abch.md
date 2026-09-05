@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: ABCH — Abhidhānacintāmaṇi (Hemacandra)
 ---
@@ -64,3 +66,5 @@ From [DICT_PROFILE.md — Citation evidence](https://github.com/sanskrit-lexicon
 ---
 
 Source: CDSL abch.txt 2026-05-24 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

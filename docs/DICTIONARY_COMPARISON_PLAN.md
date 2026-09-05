@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Dictionary Comparison Plan
 
 Date: 2026-05-29
@@ -42,7 +44,7 @@ The hard problem is deciding when two records are "the same lemma." Keep the fir
 2. **Group by normalized key** across dictionaries — this gives the coverage matrix directly.
 3. **Score alignment confidence** per match: exact normalized match = high; match after stripping accents/homonym index = medium; fuzzy/near match = low → review queue.
 4. **Never silently merge homonyms.** If one dictionary has `agni 1` / `agni 2` and another has a single `agni`, that is a *finding* (homonym split), not noise to flatten.
-5. **Carry evidence labels.** Coverage is `observed`; grammar conflicts are `derived`; family overlaps are often `inferred`. See [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md).
+5. **Carry evidence labels.** Coverage is `observed`; grammar conflicts are `derived`; family overlaps are often `inferred`. See [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md).
 
 Tagged dictionaries (MW, AP, PWG, PWK, WIL) and prose `iti` dictionaries (VCP, SKD) need different parsers. Comparison must handle the prose lexica as a distinct genre, not force them into the MW tag model (`docs/ALL_DICTIONARY_COVERAGE.md`, fit bands). For VCP/SKD, citation comparison falls back to inline `iti` detection.
 
@@ -89,7 +91,7 @@ Every table keeps small examples with source links so any number can be debugged
 
 ## Review Queues
 
-Comparison is the largest producer of review work. Wire these into the shared review-report format ([`docs/REVIEW_REPORTS.md`](REVIEW_REPORTS.md)):
+Comparison is the largest producer of review work. Wire these into the shared review-report format ([`docs/REVIEW_REPORTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md)):
 
 - low-confidence alignment queue (UC-CD-05 / UC-RV-03);
 - POS/gender conflict queue (UC-CD-04 / UC-RV-03);
@@ -119,5 +121,7 @@ Do not scatter one-off report shapes; reuse the shared review-report helpers in
 
 - `ARCHITECTURE.md` — Track 2, common data model, Comparative Dictionary Series.
 - `docs/ALL_DICTIONARY_COVERAGE.md` — the coverage/size/fit layer this builds on.
-- [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) and [`docs/REVIEW_REPORTS.md`](REVIEW_REPORTS.md).
+- [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) and [`docs/REVIEW_REPORTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md).
 - `docs/USE_CASES.md` — UC-CD-01 through UC-CD-06 and UC-LX-01 through UC-LX-05.
+
+_Dr. Mārcis Gasūns_

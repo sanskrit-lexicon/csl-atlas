@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 <style>
  body{font-family:system-ui,sans-serif;margin:1.5rem;max-width:1100px;color:#1b1b1b}
  h1{font-size:1.3rem} h2{font-size:1rem;margin:1.2rem 0 .4rem;color:#444}
@@ -63,3 +65,5 @@ sel.addEventListener('change',()=>render(sel.value));
 render(sel.value="dharma");
 </script>
 <!-- R2-GEN:END explorer-script -->
+
+_Dr. Mārcis Gasūns_

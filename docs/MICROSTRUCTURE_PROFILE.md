@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # Microstructure Profile
 
 Date: 2026-06-04
@@ -27,9 +29,9 @@ dictionary entry:
 - M5 unified join and per-dictionary fingerprint.
 
 Read the doc family in parse order. Start with
-[`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md),
+[`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_HEADWORD_SUBENTRY.md),
 then move to
-[`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md)
+[`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_SENSE_SEGMENTATION.md)
 before citation practice, grammar/gender marking, and cross-references.
 
 The row key is `(dict, L)`, the dictionary code and CDSL entry number. The
@@ -73,13 +75,15 @@ conventions, not European abbreviation tags.
 
 ## Companion Docs
 
-- [`MICROSTRUCTURE_METHODS.md`](MICROSTRUCTURE_METHODS.md)
-- [`MICROSTRUCTURE_FINDINGS.md`](MICROSTRUCTURE_FINDINGS.md)
-- [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md)
-- [`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md)
-- [`MICROSTRUCTURE_M1_M2_RESULTS.md`](MICROSTRUCTURE_M1_M2_RESULTS.md)
-- [`MICROSTRUCTURE_ZERO_MEANING.md`](MICROSTRUCTURE_ZERO_MEANING.md)
-- [`MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md`](MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md)
-- [`MICROSTRUCTURE_XREF_LINEAGE.md`](MICROSTRUCTURE_XREF_LINEAGE.md)
-- [`MICROSTRUCTURE_ROOT_AGREEMENT.md`](MICROSTRUCTURE_ROOT_AGREEMENT.md)
-- [`MICROSTRUCTURE_SEMANTIC_FIELDS.md`](MICROSTRUCTURE_SEMANTIC_FIELDS.md)
+- [`MICROSTRUCTURE_METHODS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_METHODS.md)
+- [`MICROSTRUCTURE_FINDINGS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_FINDINGS.md)
+- [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_HEADWORD_SUBENTRY.md)
+- [`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_SENSE_SEGMENTATION.md)
+- [`MICROSTRUCTURE_M1_M2_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_M1_M2_RESULTS.md)
+- [`MICROSTRUCTURE_ZERO_MEANING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_ZERO_MEANING.md)
+- [`MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md)
+- [`MICROSTRUCTURE_XREF_LINEAGE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_LINEAGE.md)
+- [`MICROSTRUCTURE_ROOT_AGREEMENT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_ROOT_AGREEMENT.md)
+- [`MICROSTRUCTURE_SEMANTIC_FIELDS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_SEMANTIC_FIELDS.md)
+
+_Dr. Mārcis Gasūns_

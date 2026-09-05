@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # H6 Structural-Register Review Packet
 
 Date: 2026-06-05
@@ -133,3 +135,5 @@ Before paper use, source-read any individual edge or outlier that will be cited
 as an example, but the documentation layer now distinguishes lineage
 corroboration, format shift, convergence, genre outliers, lookup-direction
 splits, prose-register effects, and detector limitation.
+
+_Dr. Mārcis Gasūns_

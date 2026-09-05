@@ -1,3 +1,5 @@
+_Created: 29-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Student research desk
 toc: false
@@ -151,3 +153,5 @@ with one cited dictionary record and one sentence about evidence level.
   border-color: color-mix(in srgb, var(--theme-foreground), transparent 55%);
 }
 </style>
+
+_Dr. Mārcis Gasūns_

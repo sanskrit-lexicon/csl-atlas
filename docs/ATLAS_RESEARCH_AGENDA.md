@@ -1,9 +1,9 @@
 # Atlas Research Agenda — hypotheses, visualisations, reuse layers, ACL-method crosswalk
 
 > Supporting specification. The governing delivery order is
-> [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
+> [`ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ROADMAP_2026_2027.md).
 
-_Created: 07-07-2026 · Last updated: 26-07-2026_
+_Created: 07-07-2026 · Last updated: 05-09-2026_
 
 **What this is.** The general csl-atlas research agenda: a design memo + build spec answering
 five owner questions — new hypotheses, new/improved visualisations, non-Cologne data reuse,

@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Evidence Labels
 
 Date: 2026-05-29
@@ -64,11 +66,13 @@ The evidence labels describe *how a value was produced*. Review status describes
 | `derived` | `machine` / `needs-review` | `reviewed-ok` or `reviewed-corrected` |
 | `inferred` | `needs-review` | `reviewed-ok`, `reviewed-corrected`, or `blocked` |
 
-For the full review-status vocabulary and how corrections are recorded, see [`docs/REVIEW_REPORTS.md`](REVIEW_REPORTS.md).
+For the full review-status vocabulary and how corrections are recorded, see [`docs/REVIEW_REPORTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md).
 
 ## Related Documents
 
-- [`docs/DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md) — the reader-facing lookup guide.
-- [`docs/REVIEW_REPORTS.md`](REVIEW_REPORTS.md) — how machine claims become reviewed claims.
+- [`docs/DICTIONARY_USER_GUIDE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md) — the reader-facing lookup guide.
+- [`docs/REVIEW_REPORTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md) — how machine claims become reviewed claims.
 - `ARCHITECTURE.md` — the core certainty principle and the diachronic-scale caveats.
 - `docs/USE_CASES.md` — UC-RD-05 and the anti-use case on hiding weak evidence.
+
+_Dr. Mārcis Gasūns_

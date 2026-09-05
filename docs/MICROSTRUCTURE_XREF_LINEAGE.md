@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Cross-reference lineage: does MW `cf.` inherit PWG `Vgl.`? (issue #30 §3.1)
 
 Date: 2026-06-05
@@ -22,7 +24,7 @@ Date: 2026-06-05
   lexical shared cores, sparse pairs, and edition continuity.
 
 Hub-family interpretation and review labels are in
-[`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md).
+[`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_HUB_REVIEW.md).
 That review note now carries the active xref starting labels from
 `data/lexico/xref_hub_review.json`.
 
@@ -118,3 +120,5 @@ cognate (`<lang>`) / roman, so BEN does no internal Sanskrit cross-referencing a
 `xref_cf_quotes.csv`) → `scripts/lexico/m6_xref_lineage.py` → `data/lexico/xref_lineage.json`
 (all-pair stats) + `data/lexico/xref_shared_edges.csv` (the 641 MW∩PWG edges). Validated by
 `validate_lexico.py` (m6 check). Deterministic, no deps.
+
+_Dr. Mārcis Gasūns_

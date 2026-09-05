@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Concordance — dimension numbering across schemes
 
 **Purpose**: decouple our **operational** fingerprint numbering (the `dim_1…dim_30`
@@ -6,8 +8,8 @@ numbering (the citable source for conventions 1–7). The pipeline is stable on 
 L0 IDs; this file is the only place the mapping to external schemes lives, so Patel's
 paper order can be confirmed or revised here **without touching code or data**.
 
-**Companion**: [`fingerprint_conventions.md`](fingerprint_conventions.md) (definitions),
-[`../L0_DESIGN.md`](../L0_DESIGN.md) §2 (rationale).
+**Companion**: [`fingerprint_conventions.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/fingerprint_conventions.md) (definitions),
+[`../L0_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_DESIGN.md) §2 (rationale).
 
 ---
 
@@ -107,3 +109,5 @@ dimensions, add reference columns here and keep the export/validation code in
 | Date | Change |
 |---|---|
 | 2026-06-03 | Concordance created. Adopted `L0-dim-N` as the frozen operational numbering, decoupled from Patel 2016 (recorded here for citation). No code/data renumbered. |
+
+_Dr. Mārcis Gasūns_

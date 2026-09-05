@@ -1,9 +1,11 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Release Checklist
 
 Date: 2026-06-03
 
 Use this checklist before publishing or opening a release PR. The governing
-delivery order is [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
+delivery order is [`ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ROADMAP_2026_2027.md).
 
 ## Source Snapshot
 
@@ -59,3 +61,5 @@ npm run verify
 - R2 sense-alignment pages are archived snapshots until the rebuild contract is
   implemented.
 - H5 anomaly candidates are review seeds, not automatic ghost-entry claims.
+
+_Dr. Mārcis Gasūns_

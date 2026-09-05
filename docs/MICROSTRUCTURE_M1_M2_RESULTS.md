@@ -1,8 +1,10 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Microstructure subentry inventory — M1–M3 results
 
 **Date**: 2026-06-03 · **Phase**: L0.6 (Subentry analysis) → Article 9 ("verb-derivation matrix")
-**Scripts**: [`m1_subentries.py`](../scripts/lexico/m1_subentries.py) (derivative subentries), [`m2_preverbs.py`](../scripts/lexico/m2_preverbs.py) (preverbs), [`m3_xrefs.py`](../scripts/lexico/m3_xrefs.py) (cross-references), [`validate_lexico.py`](../scripts/lexico/validate_lexico.py)
-**Companion**: [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (the 15-category subentry typology this operationalises)
+**Scripts**: [`m1_subentries.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m1_subentries.py) (derivative subentries), [`m2_preverbs.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m2_preverbs.py) (preverbs), [`m3_xrefs.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m3_xrefs.py) (cross-references), [`validate_lexico.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/validate_lexico.py)
+**Companion**: [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md) (the 15-category subentry typology this operationalises)
 
 Empirical first pass over **all 43 local csl-orig dicts (1,495,459 entries scanned)**.
 Two complementary, deterministic signals — no LLM, no sampling. Outputs in `data/lexico/`.
@@ -44,8 +46,8 @@ headwords** (deep macrostructure, shallow microstructure); the Petersburg dicts 
 (shallow macrostructure, deep microstructure). Read the ratio *within* comparable dicts — MW's
 `<info verb=>` makes its "verbal" denominator generous.
 
-**"0 markers ≠ structureless"** (mirrors [`CITATION_TAGGING.md`](../data/forensic/CITATION_TAGGING.md);
-**full account in [`MICROSTRUCTURE_ZERO_MEANING.md`](MICROSTRUCTURE_ZERO_MEANING.md)** — SKD has 0
+**"0 markers ≠ structureless"** (mirrors [`CITATION_TAGGING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/CITATION_TAGGING.md);
+**full account in [`MICROSTRUCTURE_ZERO_MEANING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_ZERO_MEANING.md)** — SKD has 0
 `<ab>`/`<div>`/`<s>`/`{#..#}` at all, yet marks thousands of verbs via `dhātuḥ`/`preraṇe`/`bhvādi`
 in prose; the detector is blind to it).
 **27 of 43 dicts emit zero** `<ab>` derivative markers — not because they are flat, but because
@@ -160,3 +162,5 @@ python scripts/lexico/m3_xrefs.py      --all          # xref_edges.csv (cross-re
 python scripts/lexico/validate_lexico.py              # consistency checks (m1 + m2 + m3)
 python scripts/lexico/m1_subentries.py --probe gam    # ground-truth check
 ```
+
+_Dr. Mārcis Gasūns_

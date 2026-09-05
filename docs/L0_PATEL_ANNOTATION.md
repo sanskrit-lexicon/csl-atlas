@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Phase L0 — Patel co-annotation guide (the 5 judgement-bound conventions)
 
 > **2026-06-03 UPDATE — gate largely CLOSED.** The Patel 2016 PDF
@@ -6,7 +8,7 @@
 > ingested as gold (`s2d_patel_gold.py` → `data/L0/patel2016_assignments.csv`) and dims 1–7
 > are now filled for **30 of our 32** dicts — no manual annotation needed. The sheet below is
 > retained only for the **2 dicts Patel does not cover (LRV, FRI)** and the 3 source-less ones
-> (KNA, KOW, AMAR). See [`L0_RESULTS.md`](L0_RESULTS.md) for the resulting tree.
+> (KNA, KOW, AMAR). See [`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md) for the resulting tree.
 
 **Date**: 2026-06-03 · **For**: M. Gasūns · **Sheet**: `data/L0/patel_fillin.csv`
 **Why this exists**: dims 2 + 4 are auto-filled mechanically; the cladogram recovers all 6
@@ -24,7 +26,7 @@ high-resolution discriminators — filling them closes the gate and produces the
 **You do not need the Patel 2016 PDF in front of you** — the evidence columns carry the discriminating signal. Where my candidate option labels differ from Patel's exact taxonomy, just write Patel's label in `VALUE`; the pipeline treats values as free categorical strings.
 
 > The full convention taxonomy (all 30 dims + the numbered slots for Patel's exact
-> option codes) lives in [`refs/fingerprint_conventions.md`](refs/fingerprint_conventions.md).
+> option codes) lives in [`refs/fingerprint_conventions.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/fingerprint_conventions.md).
 > If you have Patel 2016 to hand, dropping his enumerated options into the `(c.1)…(c.N)`
 > slots there lets me pre-map more cells and shrink this sheet further.
 
@@ -80,4 +82,6 @@ Notable: **GRA -vat 274** (Rigveda possessives dominate), **BOR/AE -vat ≈ 1** 
 
 - Cells you leave blank stay at `unknown` (the pipeline is missing-aware — partial fills still help).
 - The 3 source-less dicts (KNA, KOW, AMAR) are in the sheet marked *NO LOCAL SOURCE*; they need the Cologne text first, so skip unless you want to annotate from the print/scans.
-- Hand back the CSV; I run `s2b_patel_auto.py` → `s3_cladogram.py` and update [`L0_RESULTS.md`](L0_RESULTS.md) with the final validated tree + recovery scores.
+- Hand back the CSV; I run `s2b_patel_auto.py` → `s3_cladogram.py` and update [`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md) with the final validated tree + recovery scores.
+
+_Dr. Mārcis Gasūns_

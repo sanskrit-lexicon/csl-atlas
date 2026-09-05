@@ -1,3 +1,5 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 # Convention Fingerprints as Parse-Rules
 
 Date: 2026-06-11
@@ -12,7 +14,7 @@ to describe that relationship in grant and paper framing.
 - Limitations: a framing/positioning document, not a generator. The "~6 F1" figure is from a recent preprint and describes MUDIDI's dictionaries, not a re-run on CDSL data; treat it as motivation, not a measured atlas result.
 - Validation: convention claims are checked by `npm run build` and `docs/L0_RESULTS.md`; microstructure by `python scripts/lexico/validate_lexico.py`.
 - Owner repo: `csl-atlas`.
-- Next use: read with the [related-work note](../src/paper/related-work.md) and the candidate [MDF export profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md).
+- Next use: read with the [related-work note](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/paper/related-work.md) and the candidate [MDF export profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md).
 
 ## The Claim
 
@@ -44,7 +46,7 @@ Reframed: the atlas's convention scholarship is not only descriptive — it is t
 |---|---|---|
 | MDF field inventory | eighteen-block apparatus + tag→MDF map | [MWS PAPER §3](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md); [MDF export profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md) |
 | Abbreviation key | `<ab>` inventory (194,879 in MW) + dictionary intros + `MWS/mwabbreviations/abbr.html` | CDSL source markup; per-dict abbreviation HTML |
-| Entry-boundary / structural rules | convention fingerprints (25 dims) + microstructure (headword-promotion M1, preverb M2, continuation, homonym) | `src/data/lexicographic-structure/L0/`; `data/lexico/microstructure_fingerprint.json`; [convention fingerprints page](../src/tools/lexicographic-conventions.md) |
+| Entry-boundary / structural rules | convention fingerprints (25 dims) + microstructure (headword-promotion M1, preverb M2, continuation, homonym) | `src/data/lexicographic-structure/L0/`; `data/lexico/microstructure_fingerprint.json`; [convention fingerprints page](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/lexicographic-conventions.md) |
 | House-style normalisation (anusvāra, ṛ-stems, -at vs -ant …) | Patel's seven canonical conventions, per-dictionary | `src/data/lexicographic-structure/L0/patel2016_assignments.csv` |
 
 The convention-fingerprint work even carries a result MUDIDI's setup implies but does
@@ -86,3 +88,5 @@ parse-rules that the largest single F1 gain in current digitisation comes from.*
 3. Add an experiment note: does feeding the atlas convention fingerprint as parse-rules
    measurably help a model parse a held-out CDSL page? (Would be the first *measured*
    atlas claim here, replacing the external ~6 F1.)
+
+_Dr. Mārcis Gasūns_

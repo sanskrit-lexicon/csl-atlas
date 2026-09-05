@@ -1,3 +1,5 @@
+_Created: 07-06-2026 · Last updated: 05-09-2026_
+
 # R2 Drift Explanation Packet
 
 Date: 2026-06-06 (checkpoint decisions recorded 2026-06-12)
@@ -131,7 +133,7 @@ Status: generated drift explanation/control packet in post-decision mode. It exp
 ### PWG/PWK division and source-record scope
 
 - Packet: `div-source-scope`
-- Vocabulary: [`docs/R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md)
+- Vocabulary: [`docs/R2_DIV_SOURCE_SCOPE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_DIV_SOURCE_SCOPE_LABELS.md)
 - Diagnostic rows: 10
 - Checkpoint rows: 2
 - Role: Separates target source records, supplements, homonyms, derived series, and candidate division markers before any row is counted as a target sense series.
@@ -139,7 +141,7 @@ Status: generated drift explanation/control packet in post-decision mode. It exp
 ### Numbered-marker run scope
 
 - Packet: `marker-run-scope`
-- Vocabulary: [`docs/R2_MARKER_RUN_SCOPE_LABELS.md`](R2_MARKER_RUN_SCOPE_LABELS.md)
+- Vocabulary: [`docs/R2_MARKER_RUN_SCOPE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_MARKER_RUN_SCOPE_LABELS.md)
 - Diagnostic rows: 28
 - Checkpoint rows: 2
 - Role: Distinguishes archive-prefix marker runs, reset expansions, preface proxies, exact-record controls, lumped parity controls, and no-anchor controls.
@@ -147,7 +149,7 @@ Status: generated drift explanation/control packet in post-decision mode. It exp
 ### AE reverse-equivalent rank bands
 
 - Packet: `ae-reverse-bands`
-- Vocabulary: [`docs/R2_AE_REVERSE_BAND_LABELS.md`](R2_AE_REVERSE_BAND_LABELS.md)
+- Vocabulary: [`docs/R2_AE_REVERSE_BAND_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_AE_REVERSE_BAND_LABELS.md)
 - Diagnostic rows: 5
 - Checkpoint rows: 2
 - Role: Explains reverse-dictionary drift by equivalent-position rank, direct-equivalent cues, phrase/collocation matches, and broad-headword overmatch controls.
@@ -155,7 +157,7 @@ Status: generated drift explanation/control packet in post-decision mode. It exp
 ### SKD/VCP iti-unit authority review
 
 - Packet: `indigenous-iti-authority`
-- Vocabulary: [`docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md)
+- Vocabulary: [`docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md)
 - Diagnostic rows: 10
 - Checkpoint rows: 2
 - Role: Keeps definition units, authority quotations or sigla, grammar units, discussion prose, record splits, and indigenous controls visible before sense counting.
@@ -163,7 +165,7 @@ Status: generated drift explanation/control packet in post-decision mode. It exp
 ### Source gaps, mild drift, and parity controls
 
 - Packet: `source-gap-controls`
-- Vocabulary: [`docs/R2_SOURCE_GAP_CONTROL_LABELS.md`](R2_SOURCE_GAP_CONTROL_LABELS.md)
+- Vocabulary: [`docs/R2_SOURCE_GAP_CONTROL_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_SOURCE_GAP_CONTROL_LABELS.md)
 - Diagnostic rows: 17
 - Checkpoint rows: 2
 - Role: Separates mild drift, under-split marker gaps, source-only expansion, parity controls, homonym controls, continuation proxies, and no-anchor controls.
@@ -176,3 +178,4 @@ Status: generated drift explanation/control packet in post-decision mode. It exp
 - Parser promotion is gated by each checkpoint row's recorded `parserDisposition` and stays scoped to the documented promotion experiment.
 - No R2 splitter behavior, source-anchor generation, H5 review rows, public R2 pages, backend, runtime LLM, corpus, DCS, or standards work is changed.
 
+_Dr. Mārcis Gasūns_

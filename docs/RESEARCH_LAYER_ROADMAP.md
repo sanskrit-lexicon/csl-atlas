@@ -1,9 +1,9 @@
 # CDSL Research & Practitioner Layer — Roadmap
 
 > Supporting specification. The governing delivery order is
-> [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
+> [`ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ROADMAP_2026_2027.md).
 
-_Created: 04-06-2026 · Last updated: 29-07-2026_
+_Created: 04-06-2026 · Last updated: 05-09-2026_
 
 **Version**: 1.2 · **Date**: 2026-05-31 · **Owner**: M. Gasūns + Claude
 *v1.1: R2 sense-splitter design decided (§5.1) — heuristic per-dict, full corpus, Sanskrit-anchored alignment; A6/A7 closed.*
@@ -14,7 +14,7 @@ superseded by v1.3 boundary note.*
 VisualDCS work, not atlas generation work.*
 *v1.4 hypothesis update 2026-06-05: H1/H3 are negative findings, H2 is
 supported, and the canonical cross-repo hypothesis routing lives in
-[`HYPOTHESIS_INDEX.md`](HYPOTHESIS_INDEX.md).*
+[`HYPOTHESIS_INDEX.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_INDEX.md).*
 *v1.5 remaining-priority update 2026-06-05: R2 rebuild, H4 interpretation,
 xref hub review, and H5 anomaly scope now have explicit work packages.*
 *v1.6 H4 update 2026-06-05: semantic-field family profiles are generated as
@@ -79,7 +79,7 @@ pointers while all human fields remain empty.*
 *v3.8 H4 review-sample update 2026-06-07: a generated H4 review packet now
 selects 105 SKD/VCP/AP/AP90/specialized/index-control rows with machine labels
 and empty human fields before source review.*
-**Companion to**: [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md), [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (genealogy/phylogeny), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (structure typology), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md).
+**Companion to**: [`BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/BOUNDARY_RULES.md), [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md) (genealogy/phylogeny), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md) (structure typology), [`METALEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md).
 
 This stream is **additive**. The existing program is researcher-facing (papers M/L/H + a 50-viz catalog). This roadmap turns those analyses into a **practitioner layer** — usable tools for three audiences — and adds new testable hypotheses and visualizations. Two working prototypes ship with it.
 
@@ -100,7 +100,7 @@ What this roadmap **adds**: end-user tools (students + makers), new hypotheses, 
 Both read sibling `csl-orig` directly, no network, stdlib only; each regenerates committed data + a self-contained HTML.
 
 ### 1.1 MICRO — one lemma across dictionaries
-[`scripts/build-micro-entry.mjs`](../scripts/build-micro-entry.mjs) (`npm run build-micro-entry [-- <lemma>]`) → [`data/lexico/micro-gam.json`](../data/lexico/micro-gam.json) (**committed**; reuses `iterateDict` + `normalizeLemma`; the original local `micro_entry.py` prototype is superseded).
+[`scripts/build-micro-entry.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-micro-entry.mjs) (`npm run build-micro-entry [-- <lemma>]`) → [`data/lexico/micro-gam.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/micro-gam.json) (**committed**; reuses `iterateDict` + `normalizeLemma`; the original local `micro_entry.py` prototype is superseded).
 A feature matrix (dicts × 10 microstructure features: chars, `<ls>`, `iti`, gram, etym, xref, hom, div, subentry, root) plus a per-dict entry excerpt, for any headword.
 
 **Reproduced findings for `gam` (21 dicts carry it, 40 entries):**
@@ -109,7 +109,7 @@ A feature matrix (dicts × 10 microstructure features: chars, `<ls>`, `iti`, gra
 - (The prototype's **AP 69-char stub** was a parser edge case; the committed builder extracts the full AP `gam` cleanly.)
 
 ### 1.2 MACRO — structural profile of every dictionary
-**Already covered by the full-corpus per-dictionary structural layer** — [`src/data/dicts/structural-register.json`](../src/data/dicts/structural-register.json) (citation register × grammar-marking, `dominantLayer`, over ALL records) and `src/data/dictionary-coverage.json` `blockPct` (%gram / %`<ls>` / %`iti` / %etym / %xref / %hom over every entry). These supersede the sampled `macro_profile.py` prototype (which used a 3,000-entry sample), so it was **not reconstructed**; read the per-dict heatmap there. The documented MACRO findings (PWG 94% tagged-cited, VCP iti-dense, SKD/WIL profiles) read directly from that data.
+**Already covered by the full-corpus per-dictionary structural layer** — [`src/data/dicts/structural-register.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/structural-register.json) (citation register × grammar-marking, `dominantLayer`, over ALL records) and `src/data/dictionary-coverage.json` `blockPct` (%gram / %`<ls>` / %`iti` / %etym / %xref / %hom over every entry). These supersede the sampled `macro_profile.py` prototype (which used a 3,000-entry sample), so it was **not reconstructed**; read the per-dict heatmap there. The documented MACRO findings (PWG 94% tagged-cited, VCP iti-dense, SKD/WIL profiles) read directly from that data.
 
 **Real findings (stratified sample, 3,000 entries each):**
 - A **Western-tagged cited cluster** (`<ls>`) — PWG 94%, SCH 90%, BEN 79%, AP90 32% — **and** an equally citation-dense **indigenous cluster**: **VCP 95% cited, SKD 51%**, via quotations (`“…”`) attributed to abbreviated authorities (`jE0`=Jaimini, `BA0`=Bhāṣya, `amara0`=Amara) closed with `iti`, carrying **no `<ls>` tag**. *(Correction: an earlier `<ls>`-only detector mis-reported SKD/VCP as "citation-free 0%" — they are among the most citation-dense; see Caveats.)*
@@ -121,7 +121,7 @@ A feature matrix (dicts × 10 microstructure features: chars, `<ls>`, `iti`, gra
 ## 2. Hypothesis Status
 
 The canonical, boundary-aware hypothesis table is
-[`HYPOTHESIS_INDEX.md`](HYPOTHESIS_INDEX.md). This roadmap keeps the short
+[`HYPOTHESIS_INDEX.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_INDEX.md). This roadmap keeps the short
 working view below so old H1-H7 labels do not look equally open.
 
 | # | Hypothesis | Signal / method | Audience | Status |
@@ -192,7 +192,7 @@ need to be restored or rebuilt before the claims are broadened.
 |---|---|---|---|
 | **R0** (done) | Two prototypes + this roadmap | — | proof of concept |
 | **R1** | Productize the micro explorer (any lemma, web) | parse + index headwords (have `sanhw1`) | students |
-| **R2** | **Sense splitter** per dict format → sense-level corpus — archived first-slice findings recorded in [R2_FINDINGS.md](R2_FINDINGS.md) | dict format study (have micro typology) | H1R, H2, H3R, sense-alignment, divergence map |
+| **R2** | **Sense splitter** per dict format → sense-level corpus — archived first-slice findings recorded in [R2_FINDINGS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md) | dict format study (have micro typology) | H1R, H2, H3R, sense-alignment, divergence map |
 | **R3** | Semantic-field coverage, chart, family-profile artifact, and generated review sample packet (Amarakosa-native) | Amarakosa topical hierarchy (`AMAR`) + dictionary headword sets | H4, semantic chart, scholar review samples |
 | **R4** | Maker QA worklist | R2 + encoding guard + anomaly detectors | dictionary makers |
 | **R5** | Student learning paths + external corpus-frequency handoff | R1 + VisualDCS output contract | students |
@@ -204,10 +204,10 @@ restored or rebuilt under the contract before new R2 claims are added. The
 source-backed prototype now has parser-drift diagnostics and source-inspected
 packet proposal layers plus a machine-only drift explanation packet that ranks
 which splitter families must be reviewed before promotion:
-[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md),
-[`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md),
-[`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md),
-[`R2_DRIFT_EXPLANATION.md`](R2_DRIFT_EXPLANATION.md).
+[`R2_REBUILD_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REBUILD_CONTRACT.md),
+[`R2_PARSER_DIAGNOSTICS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_PARSER_DIAGNOSTICS.md),
+[`R2_REVIEW_PACKETS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REVIEW_PACKETS.md),
+[`R2_DRIFT_EXPLANATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_DRIFT_EXPLANATION.md).
 
 ### 5.1 R2 — decided design (2026-05-31)
 
@@ -232,7 +232,7 @@ dict, lemma, sense-index, gloss-span, and Sanskrit fingerprint. That package
 feeds the sense-alignment view and the divergence map (the maker worklist).
 
 **Archived first slice shipped 2026-05-31** — the R2 findings are recorded in
-[R2_FINDINGS.md](R2_FINDINGS.md) and static pages `/tools/r2-h1` and
+[R2_FINDINGS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md) and static pages `/tools/r2-h1` and
 `/tools/r2-explorer`. The current branch does not contain the old R2 generator
 files, so treat these as archived evidence until the generator package is
 restored or rebuilt. Proven: (1) **Sanskrit-anchored alignment works across the
@@ -265,7 +265,7 @@ H1 time-inflation.
   a stable dictionary-facing summary later, but it must not own DCS ingestion,
   passage dashboards, or corpus chronology. *(2026-06-09: that output contract
   is now specified — see
-  [`VISUALDCS_CONSUMPTION_CONTRACT.md`](VISUALDCS_CONSUMPTION_CONTRACT.md). It is
+  [`VISUALDCS_CONSUMPTION_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/VISUALDCS_CONSUMPTION_CONTRACT.md). It is
   the input requirement for VisualDCS; the atlas-side adapter is deferred until
   VisualDCS publishes the file.)*
 - **Practitioner-layer hosting** → a **page in the main Observable dashboard** (client-side interactive; the ~10 MB `sanhw1` index loads in-browser). No new infra — leverages the existing static-site stack. (Cologne integration deferred to DNS item C3.)
@@ -285,13 +285,13 @@ submitting or tracking maker review for the generated `divaraTa -> diviraTa`
 H5 correction proposal after the 10-row source-check pass.
 H4 interpretation/review, H6 review, xref hub review, and H5 scope are
 documented in
-[`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md),
-[`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md),
-[`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md),
-[`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md),
-[`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md),
-[`MICROSTRUCTURE_XREF_SOURCE_CHECK.md`](MICROSTRUCTURE_XREF_SOURCE_CHECK.md), and
-[`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md).
+[`H4_SEMANTIC_FIELD_INTERPRETATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_INTERPRETATION.md),
+[`H4_SEMANTIC_FIELD_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_REVIEW.md),
+[`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md),
+[`H6_STRUCTURAL_REGISTER_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H6_STRUCTURAL_REGISTER_REVIEW.md),
+[`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_HUB_REVIEW.md),
+[`MICROSTRUCTURE_XREF_SOURCE_CHECK.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_SOURCE_CHECK.md), and
+[`H5_GHOST_ANOMALY_SCOPE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H5_GHOST_ANOMALY_SCOPE.md).
 
 ---
 *Prototypes: `scripts/lexico/micro_entry.py`, `scripts/lexico/macro_profile.py`.

@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Typology treemap
 toc: false
@@ -189,3 +191,5 @@ display(html`
 ---
 
 Source: CDSL mw.txt 2026-05-23. Static SVG: [treemap-en.svg](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/treemap-en.svg). CC-BY-SA-4.0.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Paper — related work & positioning
 ---
@@ -55,3 +57,5 @@ fill.)
 ---
 
 *Tour page. The canonical microanalysis paper lives in [MWS `docs-pass`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md); MUDIDI is external related work, summarised here for positioning.*
+
+_Dr. Mārcis Gasūns_

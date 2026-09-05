@@ -1,12 +1,14 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 # Redundancy and Descent in a Digitised Dictionary Family: A Headword-Level Stemma of the Cologne Digital Sanskrit Lexicon
 
 *Draft manuscript for submission to a metalexicography venue (target: International
 Journal of Lexicography). Empirical basis: the OBS-R finding
-([`CORPUS_REDUNDANCY_GENEALOGY.md`](../CORPUS_REDUNDANCY_GENEALOGY.md)); generator
-[`scripts/obs/headword_multiplicity.py`](../../scripts/obs/headword_multiplicity.py);
+([`CORPUS_REDUNDANCY_GENEALOGY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CORPUS_REDUNDANCY_GENEALOGY.md)); generator
+[`scripts/obs/headword_multiplicity.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/headword_multiplicity.py);
 containment data `data/sanhw1_jaccard.csv`; inventory `data/dictionary_inventory.csv`.
 Companion to Paper H (convention lineage,
-[`paper_H_convention_vs_content_lineage.md`](paper_H_convention_vs_content_lineage.md)).
+[`paper_H_convention_vs_content_lineage.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_H_convention_vs_content_lineage.md)).
 All counts are reproducible from committed data; numbers herein are the 2026-07
 corpus snapshot (44 dictionaries, including the *Nāmamālikā* digitised 2026-06;
 aggregate figures from `data/obs/headword_collapse.json`). Author: M. Gasūns.*
@@ -244,7 +246,7 @@ is small in every row.
 | CCS ⊂ PW | 0.945 | 0.180 | 28,751 | 151,349 | 27,176 | 1887 / 1879 | Cappeller (Ger.) from the *kürzere Fassung* |
 | WIL ⊂ SHS | 0.953 | 0.896 | 43,939 | 46,730 | 41,854 | 1832 / 1900 | Śabda-Sāgara reproduces Wilson |
 
-*Source: [`data/sanhw1_jaccard.csv`](../../data/sanhw1_jaccard.csv) (intersection,
+*Source: [`data/sanhw1_jaccard.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/sanhw1_jaccard.csv) (intersection,
 `a_in_b`, `b_in_a`, `size_a`, `size_b` columns), already committed by the containment
 generator; no new computation. At these set sizes the containment ratios are stable
 point estimates: for the smallest numerator set in the table (BOP, |A| = 8,505), the
@@ -309,7 +311,7 @@ copying-specific (citation truncation, shared rare readings), addressed in Paper
 Variant-folding is conservative (canonical `<k1>`/synonym forms only); a final
 anusvāra/visarga-folding pass (stripping a trailing SLP1 `M` or `H` before comparing
 headwords —
-[`headword_multiplicity.py fold_sensitivity()`](../../scripts/obs/headword_multiplicity.py))
+[`headword_multiplicity.py fold_sensitivity()`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/headword_multiplicity.py))
 lowers the independence figure by **3.4 points** (42.2 % → 38.8 %; 410,259 →
 363,552 distinct folded lemmas). This is
 a sensitivity bound reported here rather than adopted as the headline: the fold
@@ -364,3 +366,5 @@ a published entry-to-lemma ratio for another multi-dictionary portal — would
 strengthen §4.1's collapse figure further but is not required for this paper's claims
 and is not pursued here to avoid building a comparator dataset outside this study's
 scope.]
+
+_Dr. Mārcis Gasūns_

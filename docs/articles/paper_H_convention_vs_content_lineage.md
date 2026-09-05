@@ -1,7 +1,9 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Paper H §5 — Convention-lineage is not content-lineage
 
 *Draft section for Paper H (historical transmission). Empirical basis: Phase L0
-([`L0_RESULTS.md`](../L0_RESULTS.md)); data in `data/L0/`. Companion to the sanhw1
+([`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md)); data in `data/L0/`. Companion to the sanhw1
 content-containment results (Paper L §4 / dashboard `/lexicography`).*
 
 ---
@@ -85,9 +87,11 @@ axis as used here is therefore lemma-set **presence**, adequate to contrast with
 convention dissimilarity but not a measure of content-copying. A precise content-inheritance
 figure requires size-corrected association (lift over a coverage null), rare/exclusive-lemma
 containment, and entry-text + citation-set comparison (Phases L4/L6) — pending; see
-[`L0_HANDOFF.md`](../L0_HANDOFF.md) §3. The §5 finding does not depend on the magnitude.
+[`L0_HANDOFF.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_HANDOFF.md) §3. The §5 finding does not depend on the magnitude.
 
 > **Numbers in this section** are from `data/L0/bootstrap_support.csv` and
 > `validation_report.json` (convention axis) and `data/sanhw1_inheritance_edges.csv`
 > (content axis). Convention assignments: Patel 2016, `data/L0/patel2016_assignments.csv`.
 > Figure: `data/L0/trees/canonical_consensus.png` (convention cladogram).
+
+_Dr. Mārcis Gasūns_

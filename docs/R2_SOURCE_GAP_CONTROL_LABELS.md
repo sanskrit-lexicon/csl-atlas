@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Source Gap Control Label Proposals
 
 Date: 2026-06-06
@@ -86,3 +88,5 @@ For the next non-final R2 rebuild experiment:
 This gives the R2 rebuild a control layer: rows that should remain stable while
 the higher-risk parser decisions change, and rows that should wait for later
 coverage or nested-marker review.
+
+_Dr. Mārcis Gasūns_

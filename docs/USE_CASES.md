@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # CSL Atlas Use Cases
 
 Date: 2026-06-04
@@ -55,7 +57,7 @@ The atlas must keep uncertainty visible.
 - Goal: understand whether MW, AP, PWG, PWK, WIL, VCP, SKD, or another
   dictionary is the best first stop for a task.
 - Evidence: dictionary scope, language, source density, coverage, caveats.
-- Page: [`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md).
+- Page: [`UC_RD_02_DICTIONARY_CHOOSER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/UC_RD_02_DICTIONARY_CHOOSER.md).
 
 ### UC-RD-03 Multi-Dictionary Lemma View `P0`
 
@@ -267,7 +269,7 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 
 - Use-case pages come before analysis method notes.
 - The first reader page is the dictionary chooser:
-  [`UC_RD_02_DICTIONARY_CHOOSER.md`](UC_RD_02_DICTIONARY_CHOOSER.md).
+  [`UC_RD_02_DICTIONARY_CHOOSER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/UC_RD_02_DICTIONARY_CHOOSER.md).
 - Every public tool, chart, or page must carry a compact trust block:
   Evidence, Limitations, Validation, Owner repo.
 - Scholar-facing analysis docs come before public-facing analysis explanations.
@@ -308,3 +310,5 @@ Unreviewed, inferred, or machine-derived outputs must remain visibly labeled.
 - `docs/MICROSTRUCTURE_METHODS.md`
 - `docs/MICROSTRUCTURE_FINDINGS.md`
 - `docs/archive/USE_CASES_LEGACY_INTEGRATED_ATLAS.md`
+
+_Dr. Mārcis Gasūns_

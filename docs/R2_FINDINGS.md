@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # R2 sense-splitter — first-slice findings (2026-05-31)
 
 Current artifact note, 2026-06-05: this document preserves the R2 findings and
@@ -12,9 +14,9 @@ rebuild rung, not the final splitter. `npm run build-r2-parser-diagnostics`
 classifies source/archive drift into parser work packages, and
 `npm run build-r2-review-packets` groups those diagnostics into reviewer-facing
 packets. The reconstruction contract is
-[`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md), with the diagnostic note in
-[`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) and packet guide in
-[`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md).
+[`R2_REBUILD_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REBUILD_CONTRACT.md), with the diagnostic note in
+[`R2_PARSER_DIAGNOSTICS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_PARSER_DIAGNOSTICS.md) and packet guide in
+[`R2_REVIEW_PACKETS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REVIEW_PACKETS.md).
 
 First real build of **R2** (the per-dict sense splitter, RESEARCH_LAYER_ROADMAP
 §5.1), run on the 5 anchor lemmas (`gam`, `dharma`, `rāma`, `iti`,
@@ -127,15 +129,17 @@ The headline is **forensic**: Śabda-Sāgara's sense glosses are **82% word-iden
 ## Next
 
 - Rebuild the reproducible package defined in
-  [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md).
-- Use [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) to tighten PWG/PWK
+  [`R2_REBUILD_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REBUILD_CONTRACT.md).
+- Use [`R2_PARSER_DIAGNOSTICS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_PARSER_DIAGNOSTICS.md) to tighten PWG/PWK
   division scope, BEN/AP90/BHS marker scope, AE reverse rank filtering/review,
   and finer indigenous splitting.
-- Use [`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md) to review parser decisions
+- Use [`R2_REVIEW_PACKETS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REVIEW_PACKETS.md) to review parser decisions
   by packet before changing splitter rules.
 - Archived result — H1 de-confounded on a fixed 30-noun panel: the year-trend
   stays flat (Pearson *r* = 0.01) after removing the headword-splitting
   artifact, confirming H1 is unsupported. A weak *r* = 0.56 among the 5
   explicit-marking dicts is n=5 non-significant + convention-confounded.
-- These results (H1 tradition-effect, H2 citation-survival, H3 verbatim-copy) are the empirical core of the **standalone methods paper** ([PUBLICATIONS.md](PUBLICATIONS.md)) on Sanskrit-anchored cross-language sense alignment.
+- These results (H1 tradition-effect, H2 citation-survival, H3 verbatim-copy) are the empirical core of the **standalone methods paper** ([PUBLICATIONS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PUBLICATIONS.md)) on Sanskrit-anchored cross-language sense alignment.
 - The cross-language + cross-cluster alignment feeds the **sense-alignment view** (R1 dashboard page) and the **divergence map** (maker worklist); the granularity-by-family result is the empirical seed for **H1** (Paper L), measured family-controlled next.
+
+_Dr. Mārcis Gasūns_

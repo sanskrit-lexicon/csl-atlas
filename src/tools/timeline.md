@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Lexicographic timeline
 toc: true
@@ -401,3 +403,5 @@ For the fully-detailed version with all 50+ dates, sources, and CDSL repo links:
 See also: [Dictionary genealogy](lexicography) · [All-dictionary coverage](dictionary-coverage) · [Lineage Sankey](lineage-sankey) · [Descent axes](descent-axes).
 
 Source inventory: [dictionary_inventory.csv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv). Narrative sources: [DICT_PROFILE Historical background](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/DICT_PROFILE.md#historical-background) and [Lineage section](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/DICT_PROFILE.md#lineage-wil--koshas-mw--pwg). Agenda: [V2 data-driven timeline](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ATLAS_RESEARCH_AGENDA.md). CC-BY-SA-4.0.
+
+_Dr. Mārcis Gasūns_

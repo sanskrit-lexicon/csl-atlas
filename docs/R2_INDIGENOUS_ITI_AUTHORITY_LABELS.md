@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Indigenous Iti Authority Label Proposals
 
 Date: 2026-06-06
@@ -93,3 +95,5 @@ For the next non-final R2 rebuild experiment:
 This should let R2 use SKD/VCP indigenous evidence without flattening prose,
 authority citations, grammar notes, and same-headword records into a single
 false sense count.
+
+_Dr. Mārcis Gasūns_

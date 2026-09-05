@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Marker Run Scope Label Proposals
 
 Date: 2026-06-06
@@ -91,3 +93,5 @@ For the next non-final R2 rebuild experiment:
 
 This should explain BEN/AP90/WIL archive parity without silently discarding
 later runs, sibling raw headwords, or source-only rows.
+
+_Dr. Mārcis Gasūns_

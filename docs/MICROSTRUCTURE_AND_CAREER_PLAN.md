@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Microstructure Plan Moved To Boundary-Safe Scope
 
 Date: 2026-06-04
@@ -30,3 +32,5 @@ Use these active atlas docs instead:
 Publication scheduling, corpus-based dictionary plans, TEI/OntoLex standards,
 DCS/corpus work, GitHub/org metrics, and trend tracking belong outside
 `csl-atlas` unless rewritten as dictionary-evidence notes.
+
+_Dr. Mārcis Gasūns_

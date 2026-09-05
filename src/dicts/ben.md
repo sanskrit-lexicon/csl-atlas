@@ -1,3 +1,5 @@
+_Created: 27-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: BEN — Benfey 1866
 ---
@@ -146,3 +148,5 @@ BEN occupies the **IE-comparative-philology position** in the European-Sanskrit-
 ---
 
 Source: CDSL `ben.txt` 2026-05-23 · MWS docs-pass commit reflects audit pipeline as of 2026-05-27 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

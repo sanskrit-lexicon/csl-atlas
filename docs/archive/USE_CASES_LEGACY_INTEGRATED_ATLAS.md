@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Sanskrit Evidence Atlas Use Cases
 
 Legacy note 2026-06-04: this file preserves the old integrated atlas use-case
@@ -1104,3 +1106,5 @@ The following docs should be created before the atlas becomes reader-facing:
 - `docs/DICTIONARY_COMPARISON_PLAN.md`
 
 These are not implementation blockers for MW Quantitative Depth, but they are important for turning the atlas from an expert workbench into a usable public research tool.
+
+_Dr. Mārcis Gasūns_

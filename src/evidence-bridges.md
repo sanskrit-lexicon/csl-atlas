@@ -1,3 +1,5 @@
+_Created: 29-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Evidence bridges
 toc: false
@@ -61,3 +63,5 @@ link first, import only when a dictionary-facing artifact has a clear contract.
 - [Student Lesson Track](student-lessons)
 - [Boundary rules](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/BOUNDARY_RULES.md)
 - [VisualDCS consumption contract](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/VISUALDCS_CONSUMPTION_CONTRACT.md)
+
+_Dr. Mārcis Gasūns_

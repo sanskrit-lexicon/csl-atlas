@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # Reader Lookup Explainer
 
 Date: 2026-06-04
@@ -54,7 +56,7 @@ Each lookup result should expose these parts:
 
 ## How It Relates To Dictionary Choice
 
-Use [`DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md) first when the
+Use [`DICTIONARY_USER_GUIDE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md) first when the
 question is "which dictionary should I use?" Use Reader Lookup when the question
 is "what evidence exists for this word?"
 
@@ -86,7 +88,9 @@ Do not infer these claims from Reader Lookup v1:
 
 ## Related Docs
 
-- [`DICTIONARY_USER_GUIDE.md`](DICTIONARY_USER_GUIDE.md)
-- [`EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md)
-- [`USE_CASES.md`](USE_CASES.md)
-- [`CHART_TRUST_TEMPLATE.md`](CHART_TRUST_TEMPLATE.md)
+- [`DICTIONARY_USER_GUIDE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md)
+- [`EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md)
+- [`USE_CASES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/USE_CASES.md)
+- [`CHART_TRUST_TEMPLATE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CHART_TRUST_TEMPLATE.md)
+
+_Dr. Mārcis Gasūns_

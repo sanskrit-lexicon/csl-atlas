@@ -1,8 +1,10 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Dharmamitra GPU runbook — activate the gender (#89) + lemma (#92) cross-checks
 
 **Status:** ready to run. The atlas-side scaffolding is complete and pinned; the only missing piece is one GPU (or patient CPU) pass of the pinned model. Run this on a box with a GPU, commit the two snapshots + regenerated review queues, open a PR. The deterministic build NEVER calls the model — these snapshots are review evidence only.
 
-See also: [`DHARMAMITRA_MONTHLY_PLAN.md`](DHARMAMITRA_MONTHLY_PLAN.md), [`DHARMAMITRA_INTEGRATION.md`](DHARMAMITRA_INTEGRATION.md).
+See also: [`DHARMAMITRA_MONTHLY_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DHARMAMITRA_MONTHLY_PLAN.md), [`DHARMAMITRA_INTEGRATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DHARMAMITRA_INTEGRATION.md).
 
 ## What this unblocks
 
@@ -68,3 +70,5 @@ Commit **the two snapshots** (`src/data/external/dharmamitra-morphology.json`, `
 - The model is a **probabilistic posterior** — it breaks gender/lemma ties as a third vote, it does not settle them. Never auto-rewrite any dictionary's asserted value from the snapshot.
 - To intentionally move the pin to a newer model commit, bump `PINNED_REVISION` in **both** files and note why; don't point it at a moving `main`.
 - Re-running a full pass replaces #100-style degraded-API output with reproducible, junk-free data.
+
+_Dr. Mārcis Gasūns_

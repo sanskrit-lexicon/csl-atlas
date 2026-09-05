@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Matrix explorer
 toc: false
@@ -104,3 +106,5 @@ display(
 The static SVG version is in the [MWS docs-pass branch](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/figures/heatmap-en.svg).
 
 Source: CDSL mw.txt 2026-05-23 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

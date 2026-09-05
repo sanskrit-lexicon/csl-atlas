@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # TEI/OntoLex Migration Note
 
 Date: 2026-06-03
@@ -41,3 +43,5 @@ The active migration manifest is:
 ```text
 C:\Users\user\Documents\GitHub\csl-standards\docs\MIGRATION_PLAN.md
 ```
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 16-06-2026 · Last updated: 05-09-2026_
+
 # Measuring the Dictionary Family: A Traceable Measurement Framework for Computational Lexicography
 
 **Mārcis Gasūns** · ORCID [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X) · gasyoun@ya.ru
@@ -195,3 +197,5 @@ Zgusta, Ladislav. 1988. "Copying in Lexicography: Monier-Williams' Sanskrit Dict
 **Companion papers (this series).** *Condensation, Not Inflation* (P2, sense inheritance; instantiates §3.3); *Three Axes of Descent* (P3, content/convention/microstructure; §3.1, §3.6, §3.8); *Grammar Without Tags* (P4, indigenous verbal-root microstructure; §3.9); *Pointing Inward* (P5, cross-reference lineage; §3.6); *Order Is the Dictionary* (P6, kośa macrostructure; §3.10); *Redundancy and Descent* (OBS-R, headword-level stemma; §3.1–§3.2, whose worked corpus figures §3.2 anchors); *Two Citation Registers* (OBS-C, citation registers; §3.4, likewise). Each instantiates one or more of the metrics in §3 under the discipline of §§4–5; where P1 quotes a companion's headline figure (§3.2, §3.4), the companion owns the full result and P1 owns only the metric's definition.
 
 *[Data note, 2026-07-03: every §3 anchor is now walkable to a committed enveloped artifact. §3.4's corpus figures are regenerated from [`data/obs/citation_registers.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/obs/citation_registers.json) (generator [`scripts/obs/citation_register_gaps.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/citation_register_gaps.py)); §3.2's collapse (1,496,157 → 410,259, 3.65 : 1) from [`data/obs/headword_collapse.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/obs/headword_collapse.json) (generator [`scripts/obs/headword_multiplicity.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/headword_multiplicity.py), now format-aware for the `<s>`-less nmmb kośa added to csl-orig in 2026-06; the previously doc-sourced 409,649 reflected the pre-nmmb corpus).]*
+
+_Dr. Mārcis Gasūns_

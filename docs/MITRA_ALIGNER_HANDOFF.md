@@ -1,8 +1,10 @@
+_Created: 14-06-2026 · Last updated: 05-09-2026_
+
 # Handoff: mitra-aligner → DTB link-targets
 
 **Status:** specification / handoff. Not implemented. This document is a complete brief for
 the next agent or contributor to build the `mitra-aligner` integration (Opportunity 1 in
-[DHARMAMITRA_INTEGRATION.md](DHARMAMITRA_INTEGRATION.md)). It deliberately stops at the point
+[DHARMAMITRA_INTEGRATION.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DHARMAMITRA_INTEGRATION.md)). It deliberately stops at the point
 where the work needs assets and decisions outside this repo (digital source corpora, a remote
 alignment API, Cologne-wide `csl-corrections` policy).
 
@@ -60,9 +62,9 @@ pairwise bertalign?** Resolve this first; it determines the importer design.
 
 | Input | Where it is / where to get it | Notes |
 |---|---|---|
-| Dictionary quotes + citation + locus | parse `csl-orig` (`<ls>` tags + adjacent `{#...#}` quote) | [`extractCitations`](../scripts/lib/mw-classifiers.mjs) already pulls `<ls>` strings |
-| Canonical source identity per siglum | [`src/data/dict-source-aliases.json`](../src/data/dict-source-aliases.json), [`source-siglum.mjs`](../scripts/lib/source-siglum.mjs), the reviewed [`source-siglum-review.json`](../src/data/review/source-siglum-review.json) | siglum→canonical-source folding is **already started** |
-| Per-source citation inventory | [`src/data/dicts/citation-apparatus.json`](../src/data/dicts/citation-apparatus.json) (built by [`build-citation-apparatus.mjs`](../scripts/build-citation-apparatus.mjs)) | use to pick the highest-yield source for the first slice |
+| Dictionary quotes + citation + locus | parse `csl-orig` (`<ls>` tags + adjacent `{#...#}` quote) | [`extractCitations`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/mw-classifiers.mjs) already pulls `<ls>` strings |
+| Canonical source identity per siglum | [`src/data/dict-source-aliases.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dict-source-aliases.json), [`source-siglum.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/source-siglum.mjs), the reviewed [`source-siglum-review.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/review/source-siglum-review.json) | siglum→canonical-source folding is **already started** |
+| Per-source citation inventory | [`src/data/dicts/citation-apparatus.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/citation-apparatus.json) (built by [`build-citation-apparatus.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-apparatus.mjs)) | use to pick the highest-yield source for the first slice |
 | **Digital source texts** | **NOT in this repo** — GRETIL, DCS, SARIT, or the scanned-edition OCR | the hard external dependency; see §6 |
 | Alignment engine | mitra-aligner-client (remote API) or local mitra-aligner | GPU-free path preferred for reproducibility-of-process |
 
@@ -74,10 +76,10 @@ without a machine-readable text of the cited work to align against. Securing GRE
 
 ## 4. Architecture (follow the established two-step pattern)
 
-Mirror every other Dharmamitra integration ([DHARMAMITRA_INTEGRATION.md](DHARMAMITRA_INTEGRATION.md)):
+Mirror every other Dharmamitra integration ([DHARMAMITRA_INTEGRATION.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DHARMAMITRA_INTEGRATION.md)):
 a networked **import** step writing a snapshot under `src/data/external/`, and a **deterministic
 build** step that joins it into a schema-conforming review queue via
-[`review-report.mjs`](../scripts/lib/review-report.mjs). The model/alignment output is **review
+[`review-report.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/review-report.mjs). The model/alignment output is **review
 evidence only** — it never edits `csl-orig`.
 
 ```
@@ -108,7 +110,7 @@ build-citation-link-review.mjs            # deterministic
 `"citation"`, `machineValue: { siglum, canonicalSource, locus, proposedLink, matchedText,
 score, verdict }`. Verdicts: `link-proposed` / `low-confidence` / `no-source-text` /
 `needs-review`. Add the `citation-link-target` queue value and `citation` subject kind to
-[`review-report.schema.json`](../data/schema/review-report.schema.json) (one line each).
+[`review-report.schema.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/schema/review-report.schema.json) (one line each).
 
 ---
 
@@ -117,7 +119,7 @@ score, verdict }`. Verdicts: `link-proposed` / `low-confidence` / `no-source-tex
 Do **not** attempt all sources at once. Pick **one** high-yield, digitally-available source and
 prove the pipeline end-to-end:
 
-1. From [`citation-apparatus.json`](../src/data/dicts/citation-apparatus.json), choose the
+1. From [`citation-apparatus.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/citation-apparatus.json), choose the
    densest source that also has a clean GRETIL/DCS text — e.g. **Ṛgveda** (RV) or
    **Mahābhārata** (MBh): high citation counts, well-digitized, stable locus schemes.
 2. Resolve its siglum via the existing alias table; collect all `(quote, locus)` pairs in MW
@@ -139,7 +141,7 @@ a measured precision number and a documented locus-link format ready for `csl-co
   cited sources have machine-readable editions before committing to scope.
 - **Encoding/sandhi.** Dictionary quotes are SLP1, often sandhi-joined fragments; source texts
   may be IAST/Devanāgari/HK with different sandhi/segmentation. Normalize both sides (reuse
-  [`lookup-normalize.js`](../src/lib/lookup-normalize.js) and `dharmamitra_infer.slp1_to_iast`)
+  [`lookup-normalize.js`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/lib/lookup-normalize.js) and `dharmamitra_infer.slp1_to_iast`)
   and consider sandhi-insensitive matching. This is where most precision is won or lost.
 - **Locus schemes differ** between the dictionary's citation convention and the digital edition's
   (book/hymn/verse vs line offset). A per-source locus-mapping table is likely needed.
@@ -167,9 +169,11 @@ a measured precision number and a documented locus-link format ready for `csl-co
 ## 8. Pointers
 
 - Org DTB taxonomy + `csl-corrections` workflow: `../CLAUDE.md` (org-level).
-- Existing citation/siglum machinery: [`build-citation-apparatus.mjs`](../scripts/build-citation-apparatus.mjs),
-  [`source-siglum.mjs`](../scripts/lib/source-siglum.mjs), [`CITATION_REGISTERS.md`](CITATION_REGISTERS.md).
-- Review-layer contract: [`REVIEW_REPORTS.md`](REVIEW_REPORTS.md), [`review-report.mjs`](../scripts/lib/review-report.mjs).
+- Existing citation/siglum machinery: [`build-citation-apparatus.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-apparatus.mjs),
+  [`source-siglum.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/source-siglum.mjs), [`CITATION_REGISTERS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CITATION_REGISTERS.md).
+- Review-layer contract: [`REVIEW_REPORTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md), [`review-report.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/review-report.mjs).
 - Repos: [mitra-aligner](https://github.com/dharmamitra/mitra-aligner) ·
   [mitra-aligner-client](https://github.com/dharmamitra/mitra-aligner-client) ·
   [mitra-parallel](https://github.com/dharmamitra/mitra-parallel).
+
+_Dr. Mārcis Gasūns_

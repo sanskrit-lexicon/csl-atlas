@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # SKD anubandha key — the authoritative Dhātudīpikā decode (issue #30)
 
 > **Status: VERIFIED & APPLIED.** This key is no longer a proposal. It is taken from
@@ -17,7 +19,7 @@ convention outright (the *grantha-paripāṭī*):
 > — "the anubandha of each root is determined; **roots that have no anubandha get a dot or a zero**."
 
 That is a **primary-source footing for the whole "0 ≠ absent content" methodology**
-([MICROSTRUCTURE_ZERO_MEANING.md](MICROSTRUCTURE_ZERO_MEANING.md)): a `0` in the slot is
+([MICROSTRUCTURE_ZERO_MEANING.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_ZERO_MEANING.md)): a `0` in the slot is
 "no anubandha," never "no verb."
 
 ## The key — anubandhas encode GAṆA + OPERATIONS, not pada
@@ -91,3 +93,5 @@ variants are tallied, not in substance.)
 Key: `docs/refs/SKD_Front pages.docx` (Dhātudīpikā anubandha-phala table). Decode:
 `scripts/lexico/m4_indigenous.py` (`_ANU_KEY`, `decode_anubandhas`) → `indigenous_roots.csv`
 (`gana`, `pada`, `anubandhas`). Empirical antecedent: `scripts/lexico/_xwalk_skd_vcp.py`.
+
+_Dr. Mārcis Gasūns_

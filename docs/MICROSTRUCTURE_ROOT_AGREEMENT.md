@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # Cross-dictionary verbal-feature agreement (m7, Article 9)
 
 > **Status: BUILT & validated.** `scripts/lexico/m7_root_agreement.py` →
@@ -83,3 +85,5 @@ intersection across the participating dicts is non-empty. SKD/SHS contribute few
 opinions than VCP/KRM/YAT because their feature coverage is still lower, though SHS now
 fills most gaṇa/pada/transitivity slots from its dash cluster and English class ordinal.
 Deterministic, no LLM; provenance-stamped.
+
+_Dr. Mārcis Gasūns_

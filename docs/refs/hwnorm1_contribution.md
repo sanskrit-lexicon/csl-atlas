@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # hwnorm1 contribution — completing the §TODO conventions
 
 *Body of the issue opened on [`sanskrit-lexicon/hwnorm1`](https://github.com/sanskrit-lexicon/hwnorm1) as part of Phase L0.9. Kept here for the record. Computed by `scripts/L0/s2e_patel_open.py`; data in `data/L0/patel_open_assignments.csv`.*
@@ -54,3 +56,5 @@ The same probe approach applies (`jāmātṛ, naptṛ, …`) but needs a vetted 
 - Reproducible: [`scripts/L0/s2e_patel_open.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/L0/s2e_patel_open.py); assignments CSV [`data/L0/patel_open_assignments.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/L0/patel_open_assignments.csv).
 
 Happy to open a PR adding these as conventions 8–10 (+ the validation harness) to hwnorm1 if useful, or to adjust the probe sets to forms you prefer.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 20-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: PD × DCS corpus coverage
 toc: false
@@ -116,9 +118,9 @@ Plot.plot({
   Opus-adjudicated, not sourced from PD's printed abbreviation list. See the report's §6.
 - **Owner repo.** `csl-atlas`. Data:
   [data/pd/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/pd).
-- **Download.** [Covered-text crosswalk (TSV)](../data/pd/pd_dcs_text_crosswalk.tsv) ·
-  [Top residue (TSV)](../data/pd/pd_dcs_residue_top.tsv) ·
-  [Metrics (JSON)](../data/pd/pd_dcs_metrics.json).
+- **Download.** [Covered-text crosswalk (TSV)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/pd/pd_dcs_text_crosswalk.tsv) ·
+  [Top residue (TSV)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/pd/pd_dcs_residue_top.tsv) ·
+  [Metrics (JSON)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/pd/pd_dcs_metrics.json).
 
 ## Covered-text crosswalk (data table)
 
@@ -392,3 +394,5 @@ attempting it. But the practical conclusion is unambiguous: **don't wait for the
 feed the corpus.** The highest-leverage additions to DCS are exactly PD's high-frequency
 uncovered works, and PD's own citation frequency (the residue chart above) is a ready-made
 digitisation priority list. Full argument: [reports/PD_DCS_CORPUS_COVERAGE_2026.md §8](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_DCS_CORPUS_COVERAGE_2026.md).
+
+_Dr. Mārcis Gasūns_

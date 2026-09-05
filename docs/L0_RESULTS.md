@@ -1,7 +1,9 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Phase L0 — Results (convention-fingerprint cladogram)
 
 **Date**: 2026-06-03 · **Status**: pipeline complete + validated on **Patel-2016 gold conventions**
-**Design**: [`L0_DESIGN.md`](L0_DESIGN.md) · **Taxonomy**: [`refs/fingerprint_conventions.md`](refs/fingerprint_conventions.md), [`refs/concordance.md`](refs/concordance.md)
+**Design**: [`L0_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_DESIGN.md) · **Taxonomy**: [`refs/fingerprint_conventions.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/fingerprint_conventions.md), [`refs/concordance.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/concordance.md)
 **Scripts**: `scripts/L0/s2b_patel_auto.py`, `s2d_patel_gold.py`, `s3_cladogram.py`
 **Data**: `data/L0/` (distances, trees, encodings, `patel2016_assignments.csv`, `validation_report.json`)
 
@@ -37,7 +39,7 @@ Recovery is 55%, not higher — and the **pattern of hits vs misses is itself th
 - **Recovered (strong bootstrap)** are *formatting* lineages — dictionaries that inherited orthographic/citation **conventions**: WIL→SHS, PWG→PW→SCH, CCS↔CAE, AP90→AP.
 - **Missed** are *content* lineages where the inheritor **reformatted**: **PWG→MW** (0.02), **MW72→MW** (0.29), **PWG→MW72** (0.01). Monier-Williams carries the Petersburg *lexicon* (PWG's headwords largely recur in MW) but recoded the conventions — MW uses `6.2 -ṛ` where PWG uses `6.1 -ar`, MW `7.1` vs PWG `7.4`, MW `3.1` vs PWG `3.2`. The fingerprint correctly reports that MW does **not** share PWG's house style.
 
-  > ⚠️ **Precision caveat (see [`L0_HANDOFF.md`](L0_HANDOFF.md) §3).** The "PWG headwords recur in MW" magnitude (raw sanhw1 containment, ~89%) is **size-confounded** — MW's 194k lemmas contain almost any older dict's common-core vocabulary; the *unrelated* BOP scores a higher 0.94, and containment falls monotonically with source size. So the *content* axis here is lemma-set **presence**, not content-copying; a precise content claim needs size-corrected lift + rare-lemma containment (cheap, pending) and entry/citation comparison (Phases L4/L6). The convention≠content **finding is independent of the exact %** — it rests on the convention dissimilarity, which is direct.
+  > ⚠️ **Precision caveat (see [`L0_HANDOFF.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_HANDOFF.md) §3).** The "PWG headwords recur in MW" magnitude (raw sanhw1 containment, ~89%) is **size-confounded** — MW's 194k lemmas contain almost any older dict's common-core vocabulary; the *unrelated* BOP scores a higher 0.94, and containment falls monotonically with source size. So the *content* axis here is lemma-set **presence**, not content-copying; a precise content claim needs size-corrected lift + rare-lemma containment (cheap, pending) and entry/citation comparison (Phases L4/L6). The convention≠content **finding is independent of the exact %** — it rests on the convention dissimilarity, which is direct.
 - **YAT** is a convention outlier (uniquely `1.4`; inconsistent `2.1+2.2`) → it sits apart from WIL despite deriving from it: Yates re-styled Wilson.
 
 So the convention cladogram is a **formatting-genealogy** instrument, distinct from (and complementary to) the sanhw1 content-containment edges. That distinction is a Paper-H/M result, not a shortfall: the 70% target was set for an undifferentiated notion of lineage; against *convention* lineage the strong edges land at 0.70–0.81 bootstrap.
@@ -164,3 +166,5 @@ the three-algorithm agreement on the strong edges is the rigor warrant (design �
 2. **KNA, KOW, AMAR** — no local source; fetch from Cologne to add the Russian-tradition + Amarakośa dicts.
 3. **Patel's open conventions** (`tकारान्त` `mahat`-type; ṛ-nipātita; sकारान्त; रेफान्त) → candidate dims 31+ (see `refs/fingerprint_conventions.md` §A note).
 4. **Dashboard page** `/lexicography/conventions.md` (design §7.2); **Paper M §4.1.5 / Paper H §5** paragraphs (esp. the convention-vs-content-lineage finding, §3 above).
+
+_Dr. Mārcis Gasūns_

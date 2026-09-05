@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Checkpoint Review Packet
 
 Date: 2026-06-06
@@ -28,7 +30,7 @@ Status: generated reviewer worksheet for the 10-row R2 machine-label checkpoint.
 
 Packet: `div-source-scope`
 
-Vocabulary doc: [`docs/R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md)
+Vocabulary doc: [`docs/R2_DIV_SOURCE_SCOPE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_DIV_SOURCE_SCOPE_LABELS.md)
 
 Checkpoint labels in this packet: `target-primary-series`, `same-headword-supplement`, `prefixed-or-derived-series`, `separate-homonym`, `candidate-sense-marker`, `supplement-marker`
 
@@ -77,7 +79,7 @@ Source pointers:
 
 Packet: `marker-run-scope`
 
-Vocabulary doc: [`docs/R2_MARKER_RUN_SCOPE_LABELS.md`](R2_MARKER_RUN_SCOPE_LABELS.md)
+Vocabulary doc: [`docs/R2_MARKER_RUN_SCOPE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_MARKER_RUN_SCOPE_LABELS.md)
 
 Checkpoint labels in this packet: `archive-prefix-runs`, `reset-run-expansion`, `source-record-exact-target`, `lookup-bundle-split`
 
@@ -119,7 +121,7 @@ Source pointers:
 
 Packet: `ae-reverse-bands`
 
-Vocabulary doc: [`docs/R2_AE_REVERSE_BAND_LABELS.md`](R2_AE_REVERSE_BAND_LABELS.md)
+Vocabulary doc: [`docs/R2_AE_REVERSE_BAND_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_AE_REVERSE_BAND_LABELS.md)
 
 Checkpoint labels in this packet: `reverse-high-candidate`, `reverse-medium-review`, `reverse-low-context`, `reverse-tail-overmatch`, `phrase-or-collocation-match`, `broad-headword-overmatch`, `direct-equivalent-candidate`
 
@@ -178,7 +180,7 @@ Source pointers:
 
 Packet: `indigenous-iti-authority`
 
-Vocabulary doc: [`docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md)
+Vocabulary doc: [`docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md)
 
 Checkpoint labels in this packet: `definition-iti-unit`, `authority-siglum-unit`, `commentarial-discussion-unit`, `source-record-exact-control`, `same-headword-record-split`, `authority-quotation-unit`
 
@@ -224,7 +226,7 @@ Source pointers:
 
 Packet: `source-gap-controls`
 
-Vocabulary doc: [`docs/R2_SOURCE_GAP_CONTROL_LABELS.md`](R2_SOURCE_GAP_CONTROL_LABELS.md)
+Vocabulary doc: [`docs/R2_SOURCE_GAP_CONTROL_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_SOURCE_GAP_CONTROL_LABELS.md)
 
 Checkpoint labels in this packet: `under-split-marker-gap`, `nested-marker-gap`, `preface-proxy-extra`, `archive-parity-control`, `continuation-proxy-row`
 
@@ -272,3 +274,4 @@ Source pointers:
 - This packet is a worksheet for parser-scope review, not a restored R2 splitter or a broadened sense-alignment claim.
 - No public R2 page, source-anchor generator, H5 review row, backend, runtime LLM, corpus, DCS, or standards work is changed by this artifact.
 
+_Dr. Mārcis Gasūns_

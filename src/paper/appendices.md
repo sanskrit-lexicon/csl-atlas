@@ -1,3 +1,5 @@
+_Created: 24-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Paper — framework appendices
 ---
@@ -40,3 +42,5 @@ MW's 18 blocks partition into Form / Semantic / (residual) Pragmatic / Quellen c
 ---
 
 *Tour page. Canonical text: [PAPER.md Appendices A–C](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#appendix-a--the-wiegand-theoretic-reading-condensed).*
+
+_Dr. Mārcis Gasūns_

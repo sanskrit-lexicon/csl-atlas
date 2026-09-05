@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # Microstructure Headword And Subentry Structure
 
 Date: 2026-06-06
@@ -145,10 +147,12 @@ toward interpretation-heavy layers.
 
 ## Related
 
-- [`MICROSTRUCTURE_PROFILE.md`](MICROSTRUCTURE_PROFILE.md)
-- [`MICROSTRUCTURE_METHODS.md`](MICROSTRUCTURE_METHODS.md)
-- [`MICROSTRUCTURE_FINDINGS.md`](MICROSTRUCTURE_FINDINGS.md)
-- [`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](MICROSTRUCTURE_SENSE_SEGMENTATION.md)
-- [`MICROSTRUCTURE_M1_M2_RESULTS.md`](MICROSTRUCTURE_M1_M2_RESULTS.md)
-- [`MICROSTRUCTURE_ZERO_MEANING.md`](MICROSTRUCTURE_ZERO_MEANING.md)
-- [`H6_STRUCTURAL_REGISTER_SCATTER.md`](H6_STRUCTURAL_REGISTER_SCATTER.md)
+- [`MICROSTRUCTURE_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_PROFILE.md)
+- [`MICROSTRUCTURE_METHODS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_METHODS.md)
+- [`MICROSTRUCTURE_FINDINGS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_FINDINGS.md)
+- [`MICROSTRUCTURE_SENSE_SEGMENTATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_SENSE_SEGMENTATION.md)
+- [`MICROSTRUCTURE_M1_M2_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_M1_M2_RESULTS.md)
+- [`MICROSTRUCTURE_ZERO_MEANING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_ZERO_MEANING.md)
+- [`H6_STRUCTURAL_REGISTER_SCATTER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H6_STRUCTURAL_REGISTER_SCATTER.md)
+
+_Dr. Mārcis Gasūns_

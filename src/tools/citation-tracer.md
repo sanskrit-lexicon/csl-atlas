@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Citation tracer
 ---
@@ -27,3 +29,5 @@ The plan: click an `<ls>` source (e.g. `RV.`, `MBh.`, `L.`), see all MW entries 
 ---
 
 *Tier 3 tool. Will land in a later iteration.*
+
+_Dr. Mārcis Gasūns_

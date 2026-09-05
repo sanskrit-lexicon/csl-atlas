@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Decisions needed from the maintainer
 
 Consolidated list of items that are **blocked on a human** (a decision, a credential, or an action only you can take). Maintained so an agent can resurface it at the start of a session. Last updated 2026-06-03 (all A-decisions closed; B1/B3/D2/D3 cleared; C deferred). **Only B2, C1–C3, D1 remain open.**
@@ -67,4 +69,6 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 
 ---
 
-*Engineering items trace to [`ROADMAP.md`](ROADMAP.md) + the [csl-corrections handoff](https://github.com/sanskrit-lexicon/csl-corrections/blob/main/.ai_state.md). Research items trace to [`LEXICOGRAPHY_ROADMAP.md`](../LEXICOGRAPHY_ROADMAP.md) §11 and [`MICROSTRUCTURE-MACROSTRUCTURE.md`](../MICROSTRUCTURE-MACROSTRUCTURE.md) §6.*
+*Engineering items trace to [`ROADMAP.md`](ROADMAP.md) + the [csl-corrections handoff](https://github.com/sanskrit-lexicon/csl-corrections/blob/main/.ai_state.md). Research items trace to [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md) §11 and [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md) §6.*
+
+_Dr. Mārcis Gasūns_

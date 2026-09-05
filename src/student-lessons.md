@@ -1,3 +1,5 @@
+_Created: 29-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Student lesson track
 toc: false
@@ -57,3 +59,5 @@ dictionary record proves.
 - [Reader Lookup](tools/reader-lookup)
 - [Lemma dossier](tools/dictionary-dossier)
 - [csl-guides](https://sanskrit-lexicon.github.io/csl-guides/)
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 16-06-2026 · Last updated: 05-09-2026_
+
 # Pointing Inward: Cross-Reference Graphs as a Signal of Dictionary Descent
 
 *Draft manuscript for a digital-humanities / metalexicography venue (target: a DH or
@@ -334,3 +336,5 @@ Gasūns, M. (in preparation). *Order Is the Dictionary: A Macrostructural Model 
 Versified Synonymic Kośa* (P6).
 
 *Bibliographic details are to be verified against the sources before submission.*
+
+_Dr. Mārcis Gasūns_

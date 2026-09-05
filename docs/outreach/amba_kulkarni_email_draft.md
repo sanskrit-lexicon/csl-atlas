@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Email draft — Prof. Amba Kulkarni (IIT Hyderabad)
 
 **Status**: DRAFT for M. Gasūns review and sending
@@ -50,3 +52,5 @@ ORCID: [TBD]
 5. Tone is respectful, concrete, no over-claiming
 6. Two requests in one email is acceptable for a peer-to-peer outreach; if it feels like too much, split: send Request 1 first, follow up with Request 2 after a positive reply
 7. CC: nobody on first email; if you want institutional cover, BCC J. Funderburk or D. Patel as silent witnesses
+
+_Dr. Mārcis Gasūns_

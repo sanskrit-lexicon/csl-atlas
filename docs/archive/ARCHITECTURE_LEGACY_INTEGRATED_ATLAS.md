@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Sanskrit Evidence Atlas Architecture
 
 Date: 2026-05-29
@@ -484,3 +486,5 @@ visualization -> lemma/family/construction -> dictionary record -> corpus passag
 ```
 
 The strongest contribution is the integration of corpus grammar, Sanskrit lexicography, and diachronic evidence in one traceable research environment.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 12-06-2026 · Last updated: 05-09-2026_
+
 # R2 Parser-Promotion Experiment
 
 Date: 2026-06-13
@@ -89,3 +91,5 @@ not a public R2 page update, and not a scholar-reviewed sense decision layer.
 - Indigenous iti-unit classification is heuristic (authority hints/quotation markers, then >350-char prose as discussion) and is a labeling experiment, not a scholar-reviewed sense decision.
 - AE windows apply to the reviewed nominal lemma only; verbal reverse rows remain side evidence per r2-drift:gam:ae.
 - No existing R2 output (senses, H1, H2H3, explorer) is modified; this artifact is additive.
+
+_Dr. Mārcis Gasūns_

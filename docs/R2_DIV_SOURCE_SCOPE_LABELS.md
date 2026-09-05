@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Div Source Scope Label Proposals
 
 Date: 2026-06-06
@@ -121,3 +123,5 @@ For the first non-final R2 rebuild experiment, test this conservative rule:
    `div` markers.
 
 This should reduce false inflation without discarding source evidence.
+
+_Dr. Mārcis Gasūns_

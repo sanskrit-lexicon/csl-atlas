@@ -1,3 +1,5 @@
+_Created: 07-06-2026 · Last updated: 05-09-2026_
+
 # Xref Source-Check Packet
 
 Date: 2026-06-07
@@ -124,3 +126,4 @@ Every row keeps `reviewedValue = null`, `reviewer = ""`, `reviewedAt = ""`, and 
 
 - Atlas xref artifacts plus dictionary source pointers only; source checking is deferred to human review and does not promote parser or public-lineage behavior.
 
+_Dr. Mārcis Gasūns_

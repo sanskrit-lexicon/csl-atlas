@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: ARMH — Abhidhānaratnamālā (Halāyudhakośa)
 ---
@@ -54,3 +56,5 @@ ARMH is not a structured bilingual dictionary and cannot be analysed with the bl
 ---
 
 Source: CDSL armh.txt 2026-05-24 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

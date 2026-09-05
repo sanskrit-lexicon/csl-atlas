@@ -1,3 +1,5 @@
+_Created: 23-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Etymology style witness
 toc: false
@@ -354,3 +356,5 @@ display(csvDownloadButton(tokensSorted, "wil-nirukta-tokens-full.csv"));
 - [Convention fingerprints](lexicographic-conventions) — house-style cladogram (Patel L0)
 - [Structural register](structural-register) — citation × grammar family scatter
 - [Lemma dossier](dictionary-dossier) — look up a headword across dictionaries
+
+_Dr. Mārcis Gasūns_

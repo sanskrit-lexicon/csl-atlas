@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Type comparator
 ---
@@ -57,3 +59,5 @@ display(
 **Reading:** the bar shows the difference in block-presence percentage between Type A and Type B. Positive (blue, right): Type A has this block more often. Negative (red, left): Type B has this block more often.
 
 Source: CDSL mw.txt 2026-05-23 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 08-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Heritage witness
 toc: false
@@ -177,3 +179,5 @@ display(csvDownloadButton(
 - **Boundary note:** the atlas joins and renders; the DICO alignment itself,
   its homonym-fallback logic, and any Heritage-side corrections stay with
   SanskritLexicography.
+
+_Dr. Mārcis Gasūns_

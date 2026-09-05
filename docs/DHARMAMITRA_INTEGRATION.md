@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Learning from Dharmamitra
 
 [Dharmamitra](https://github.com/dharmamitra) is the computational/NLP counterpart to
@@ -9,8 +11,8 @@ below.*
 
 This document records what we have already wired in, the rule that governs any further
 integration, and the remaining opportunities mapped to concrete atlas structures. For the
-sequenced delivery programme see [DHARMAMITRA_MONTHLY_PLAN.md](DHARMAMITRA_MONTHLY_PLAN.md); for
-the DTB link-target spec see [MITRA_ALIGNER_HANDOFF.md](MITRA_ALIGNER_HANDOFF.md).
+sequenced delivery programme see [DHARMAMITRA_MONTHLY_PLAN.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DHARMAMITRA_MONTHLY_PLAN.md); for
+the DTB link-target spec see [MITRA_ALIGNER_HANDOFF.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MITRA_ALIGNER_HANDOFF.md).
 
 ---
 
@@ -19,7 +21,7 @@ the DTB link-target spec see [MITRA_ALIGNER_HANDOFF.md](MITRA_ALIGNER_HANDOFF.md
 Dharmamitra outputs are **probabilistic model predictions**. They enter the atlas as
 **review evidence only** — feeding a review queue or an external snapshot a human reads —
 and **never as a silent input to the deterministic figure build**. This preserves the
-reproducibility guarantee in [the README](../README.md): every figure regenerates from
+reproducibility guarantee in [the README](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/README.md): every figure regenerates from
 committed JSON plus `csl-orig`, with no LLM inference in the build path.
 
 Concretely, every integration follows the **two-step pattern**:
@@ -28,7 +30,7 @@ Concretely, every integration follows the **two-step pattern**:
    snapshot under `src/data/external/` (created on first run), stamped with provenance
    (model, revision, date, license). Normal builds never re-call it.
 2. A deterministic **`build-*-review.mjs` step** that joins that snapshot to atlas data and
-   emits a schema-conforming review queue via [`scripts/lib/review-report.mjs`](../scripts/lib/review-report.mjs),
+   emits a schema-conforming review queue via [`scripts/lib/review-report.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/review-report.mjs),
    preserving human decisions by `reviewId`.
 
 ---
@@ -41,11 +43,11 @@ its feature branch — follow the PR link.)
 
 | Capability | Source repo | Import step | Consumer | PR |
 |---|---|---|---|---|
-| **Gender cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-morphology.py`](../scripts/import-dharmamitra-morphology.py) → `dharmamitra-morphology.json` | [`build-gender-model-crosscheck.mjs`](../scripts/build-gender-model-crosscheck.mjs) → `pos-gender-model-crosscheck` | [#89](https://github.com/sanskrit-lexicon/csl-atlas/pull/89) |
-| **Source-layer anchoring** | [sanskrit-dating](https://github.com/dharmamitra/sanskrit-dating) | [`import-dharmamitra-chronology.mjs`](../scripts/import-dharmamitra-chronology.mjs) → `dharmamitra-chronology.json` | [`build-source-layer-anchoring-review.mjs`](../scripts/build-source-layer-anchoring-review.mjs) → `source-layer-anchoring` | [#90](https://github.com/sanskrit-lexicon/csl-atlas/pull/90) |
-| **Compound-depth cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-segmentation.py`](../scripts/import-dharmamitra-segmentation.py) → `dharmamitra-segmentation.json` | [`build-compound-depth-crosscheck.mjs`](../scripts/build-compound-depth-crosscheck.mjs) → `compound-depth-crosscheck` | [#91](https://github.com/sanskrit-lexicon/csl-atlas/pull/91) |
-| **Lemma-normalization cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-lemma.py`](../scripts/import-dharmamitra-lemma.py) → `dharmamitra-lemma.json` | [`build-lemma-normalization-crosscheck.mjs`](../scripts/build-lemma-normalization-crosscheck.mjs) → `lemma-normalization-crosscheck` | [#92](https://github.com/sanskrit-lexicon/csl-atlas/pull/92) |
-| **PWG markup cross-check** | [detect-language](https://github.com/dharmamitra/detect-language) | [`import-dharmamitra-langdetect.py`](../scripts/import-dharmamitra-langdetect.py) → `dharmamitra-langdetect.json` | [`build-langdetect-crosscheck.mjs`](../scripts/build-langdetect-crosscheck.mjs) → `langdetect-markup-crosscheck` | [#95](https://github.com/sanskrit-lexicon/csl-atlas/pull/95) |
+| **Gender cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-morphology.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/import-dharmamitra-morphology.py) → `dharmamitra-morphology.json` | [`build-gender-model-crosscheck.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-gender-model-crosscheck.mjs) → `pos-gender-model-crosscheck` | [#89](https://github.com/sanskrit-lexicon/csl-atlas/pull/89) |
+| **Source-layer anchoring** | [sanskrit-dating](https://github.com/dharmamitra/sanskrit-dating) | [`import-dharmamitra-chronology.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/import-dharmamitra-chronology.mjs) → `dharmamitra-chronology.json` | [`build-source-layer-anchoring-review.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-source-layer-anchoring-review.mjs) → `source-layer-anchoring` | [#90](https://github.com/sanskrit-lexicon/csl-atlas/pull/90) |
+| **Compound-depth cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-segmentation.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/import-dharmamitra-segmentation.py) → `dharmamitra-segmentation.json` | [`build-compound-depth-crosscheck.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-compound-depth-crosscheck.mjs) → `compound-depth-crosscheck` | [#91](https://github.com/sanskrit-lexicon/csl-atlas/pull/91) |
+| **Lemma-normalization cross-check** | [byt5-sanskrit-analyzers](https://github.com/dharmamitra/byt5-sanskrit-analyzers) | [`import-dharmamitra-lemma.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/import-dharmamitra-lemma.py) → `dharmamitra-lemma.json` | [`build-lemma-normalization-crosscheck.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-lemma-normalization-crosscheck.mjs) → `lemma-normalization-crosscheck` | [#92](https://github.com/sanskrit-lexicon/csl-atlas/pull/92) |
+| **PWG markup cross-check** | [detect-language](https://github.com/dharmamitra/detect-language) | [`import-dharmamitra-langdetect.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/import-dharmamitra-langdetect.py) → `dharmamitra-langdetect.json` | [`build-langdetect-crosscheck.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-langdetect-crosscheck.mjs) → `langdetect-markup-crosscheck` | [#95](https://github.com/sanskrit-lexicon/csl-atlas/pull/95) |
 
 **Gender cross-check** ([#89](https://github.com/sanskrit-lexicon/csl-atlas/pull/89)) — adds an
 **independent third vote** to the existing cross-dictionary gender-conflict queue: for each
@@ -53,7 +55,7 @@ conflicted headword, the ByT5 morphosyntax model's predicted gender is compared 
 dictionary's asserted gender (`model-favors` / `model-diverges` / `model-concurs` /
 `model-pending`). It runs `chronbmm/sanskrit5-multitask` either via the PyPI
 `dharmamitra-sanskrit-grammar` remote API or a pinned local HF model, with
-[`scripts/sanskrit_tags.tsv`](../scripts/sanskrit_tags.tsv) vendored for fully offline tag
+[`scripts/sanskrit_tags.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/sanskrit_tags.tsv) vendored for fully offline tag
 expansion.
 
 **Source-layer anchoring** ([#90](https://github.com/sanskrit-lexicon/csl-atlas/pull/90)) —
@@ -71,7 +73,7 @@ over- or under-splits — e.g. counting the privative `a-` or suffixes `-tva`/`-
 **Lemma-normalization cross-check** ([#92](https://github.com/sanskrit-lexicon/csl-atlas/pull/92)) —
 validates the atlas's orthographic key (`normalizeSlp1Lemma`) against ByT5 `lemma` over the
 **1,913 lemmas attested in all 7 dictionaries**, normalizing the model lemma back through
-`lookup-normalize.js`. Also added the shared [`scripts/lib/dharmamitra_infer.py`](../scripts/lib/dharmamitra_infer.py)
+`lookup-normalize.js`. Also added the shared [`scripts/lib/dharmamitra_infer.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/dharmamitra_infer.py)
 the other ByT5 importers were refactored onto ([#94](https://github.com/sanskrit-lexicon/csl-atlas/pull/94)).
 
 **PWG markup cross-check** ([#95](https://github.com/sanskrit-lexicon/csl-atlas/pull/95)) — runs
@@ -103,7 +105,7 @@ Dharmamitra's archive.org scan metadata is a citation→passage alignment engine
 automated half of the link-target work. This is a Cologne-wide opportunity, not atlas-specific;
 outputs would feed the `csl-corrections` audit-trail workflow, reviewed before commit.
 
-**Full specification:** [MITRA_ALIGNER_HANDOFF.md](MITRA_ALIGNER_HANDOFF.md) — architecture,
+**Full specification:** [MITRA_ALIGNER_HANDOFF.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MITRA_ALIGNER_HANDOFF.md) — architecture,
 data contracts, the source-corpus dependency, recommended first slice, and definition of done.
 
 ### 2. Ship a StarDict / GoldenDict distribution
@@ -113,7 +115,7 @@ data contracts, the source-corpus dependency, recommended first slice, and defin
 They build ~4M GoldenDict headwords from parallel data, shipped with an explicit
 *"automatically generated, use with caution"* disclaimer. Two takeaways: (a) StarDict is a
 cheap, high-reach distribution format the CDSL could also emit from existing data; (b) their
-caution-labeling validates our own [evidence-labels](EVIDENCE_LABELS.md) discipline — provenance
+caution-labeling validates our own [evidence-labels](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) discipline — provenance
 honesty is the norm in this space.
 
 ### 3. Benchmark with `dharmamitra-leaderboard`
@@ -163,3 +165,5 @@ model cards live on HuggingFace and the training data derives from DCS. We consu
 as review evidence and do not redistribute them as atlas data, which sidesteps most concerns —
 but record provenance (model, revision, license) in every imported snapshot, as the existing
 import steps do.
+
+_Dr. Mārcis Gasūns_

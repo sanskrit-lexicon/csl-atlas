@@ -1,3 +1,5 @@
+_Created: 09-06-2026 · Last updated: 05-09-2026_
+
 # R2 Page Regeneration Spec
 
 Date: 2026-06-09 | Completed: 2026-06-10
@@ -223,3 +225,5 @@ JSON.
   correct mark counts (4 H2 bars, 3 H3R dumbbells).
 - All pages keep their Trust Block, now worded as "generated from JSON".
 - `npm test` passes; no parser/JSON-schema change in the diff.
+
+_Dr. Mārcis Gasūns_

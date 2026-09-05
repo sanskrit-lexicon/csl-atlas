@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: WIL — Wilson Sanskrit-English Dictionary (1832)
 ---
@@ -128,3 +130,5 @@ Full lineage in [WIL/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/WIL/bl
 ---
 
 Source: CDSL `wil.txt` 2026-05-23 · MWS docs-pass commit reflects audit pipeline as of 2026-05-27 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

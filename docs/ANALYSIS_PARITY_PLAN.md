@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Full Analysis Parity For Broad Dictionaries
 
 ## Goal
@@ -127,3 +129,5 @@ diagnostic-only unless explicitly promoted to `supported`.
 - Local-only dictionaries never emit broken GitHub links.
 - `npm test`, `npm run audit-analysis-capabilities`, and the Observable build
   pass.
+
+_Dr. Mārcis Gasūns_

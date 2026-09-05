@@ -1,22 +1,24 @@
+_Created: 10-06-2026 · Last updated: 05-09-2026_
+
 # Corpus-wide redundancy and dictionary genealogy (OBS-R)
 
 Date: 2026-06-10
 
 Corpus-wide (all 43 local `csl-orig` dicts) quantification of headword
 redundancy and the inheritance stemma. This is the **content-containment axis**
-of [`THREE_AXIS_COMPARISON.md`](THREE_AXIS_COMPARISON.md) measured across every
+of [`THREE_AXIS_COMPARISON.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/THREE_AXIS_COMPARISON.md) measured across every
 dictionary at once, and the all-dictionary generalisation of the panel results in
-[`MICROSTRUCTURE_M1_M2_RESULTS.md`](MICROSTRUCTURE_M1_M2_RESULTS.md),
-[`MICROSTRUCTURE_XREF_LINEAGE.md`](MICROSTRUCTURE_XREF_LINEAGE.md), and the
-derivation notes already recorded in [`../data/dictionary_inventory.csv`](../data/dictionary_inventory.csv).
+[`MICROSTRUCTURE_M1_M2_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_M1_M2_RESULTS.md),
+[`MICROSTRUCTURE_XREF_LINEAGE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_LINEAGE.md), and the
+derivation notes already recorded in [`../data/dictionary_inventory.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv).
 
 ## Trust Block
 
 - Evidence: `<L>`/`<k1>` extraction over `../csl-orig/v02/*/*.txt` (43 dicts,
   1,495,459 entries — the same scan base as `MICROSTRUCTURE_M1_M2_RESULTS.md`);
-  pairwise containment from [`../data/sanhw1_jaccard.csv`](../data/sanhw1_jaccard.csv)
+  pairwise containment from [`../data/sanhw1_jaccard.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/sanhw1_jaccard.csv)
   (columns `a_in_b`, `b_in_a`); publication years and prior derivation notes from
-  [`../data/dictionary_inventory.csv`](../data/dictionary_inventory.csv).
+  [`../data/dictionary_inventory.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv).
 - Limitations: lemma-level, not sense-level; surface `<k1>` keys (already
   canonical SLP1 — light normalisation moved only 7 of 343,460 lemmas, so the
   lower-redundancy bound needs anusvāra/visarga folding). **Containment is a floor
@@ -24,7 +26,7 @@ derivation notes already recorded in [`../data/dictionary_inventory.csv`](../dat
   `MICROSTRUCTURE_XREF_LINEAGE.md`). All 43 dictionaries are now included: the
   three Hemacandra kośas (abch, acph, acsj) carry no `<k1>` and are read from
   their `<syns><s>…</s>` synonym format by
-  [`scripts/obs/headword_multiplicity.py`](../scripts/obs/headword_multiplicity.py),
+  [`scripts/obs/headword_multiplicity.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/obs/headword_multiplicity.py),
   validated to reproduce the sanhw1 lemma counts exactly.
 - Validation: re-run the extraction (command at foot); the entry total must
   reconcile with the canonical 1,495,459 and with `data/headwords.json` per-dict
@@ -110,3 +112,5 @@ _Companion: org-process correction-sustainability evidence (OBS-Q) lives in
 `csl-observatory/reports/obs_q_correction_sustainability.md`; the cross-repo bridge
 memo that routed these numbers here is
 `csl-observatory/reports/obs_rc_atlas_bridge.md`._
+
+_Dr. Mārcis Gasūns_

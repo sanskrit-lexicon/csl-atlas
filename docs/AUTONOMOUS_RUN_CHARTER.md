@@ -1,3 +1,5 @@
+_Created: 10-06-2026 · Last updated: 05-09-2026_
+
 # Autonomous Run Charter
 
 Operating rules for the week-long unattended run set up **2026-06-10** (M.G. away;
@@ -52,3 +54,5 @@ See memory `csl-atlas-branch-hygiene` and `feedback-autonomous-task-prefs`.
 ## Definition of done (per item)
 Tests green (`npm test`), idempotent generators (rerun → no git diff), docs/journal updated,
 PR opened (auto-merged only within the scope above). Presentation-only for viz: no parser/JSON-schema changes.
+
+_Dr. Mārcis Gasūns_

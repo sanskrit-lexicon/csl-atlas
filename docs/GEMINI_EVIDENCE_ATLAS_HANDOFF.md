@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Legacy Integrated Atlas Handoff Pointer
 
 Date: 2026-06-04
@@ -23,3 +25,5 @@ Active rule: `csl-atlas` starts from dictionaries, headwords, dictionary
 entries, source citations, comparison outputs, and dictionary review queues.
 Corpus, grammar, standards/export, and GitHub/org observatory work must stay in
 their own repositories.
+
+_Dr. Mārcis Gasūns_

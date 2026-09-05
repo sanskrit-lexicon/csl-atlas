@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Convention-fingerprint reference — all 30 L0 dimensions (canonical taxonomy)
 
 **Purpose**: the single source of truth for every fingerprint dimension used in
@@ -6,9 +8,9 @@ dimension's option set, how it is currently obtained, and — for Patel's canoni
 7 — the contrastive states we can measure versus the exact codes that live in
 Patel 2016 and must be slotted in by M.G. / V. Patel.
 
-**Companion**: [`../L0_DESIGN.md`](../L0_DESIGN.md) §2 (rationale), [`../L0_RESULTS.md`](../L0_RESULTS.md)
-(first tree), [`../L0_PATEL_ANNOTATION.md`](../L0_PATEL_ANNOTATION.md) (the fill-in sheet),
-[`concordance.md`](concordance.md) (numbering ↔ Patel 2016 ↔ CSV columns; the stability contract).
+**Companion**: [`../L0_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_DESIGN.md) §2 (rationale), [`../L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md)
+(first tree), [`../L0_PATEL_ANNOTATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_PATEL_ANNOTATION.md) (the fill-in sheet),
+[`concordance.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/concordance.md) (numbering ↔ Patel 2016 ↔ CSV columns; the stability contract).
 **Source of truth for code**: `scripts/L0/s2_fingerprint.py` (DIMS), `s2b_patel_auto.py`, `s2c_patel_evidence.py`.
 
 ### Status legend
@@ -220,3 +222,5 @@ edge applies only to lemmas in vols 1–4 (≈ letters a–p). Range columns liv
 
 > When any future phase needs a fixed option set, add it to this file so there is one
 > canonical taxonomy across the programme.
+
+_Dr. Mārcis Gasūns_

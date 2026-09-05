@@ -1,3 +1,5 @@
+_Created: 08-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Descent axes
 toc: false
@@ -185,3 +187,5 @@ display(csvDownloadButton(excludedRows, "descent-axes-excluded-edges.csv"));
 Related: [Citation canon explorer](citation-canon) (the dict×text matrix this axis
 is derived from) · [Citation apparatus](dictionary-citations) (apparatus style) ·
 [Dictionary genealogy](lexicography) (the descent evidence the axes decompose).
+
+_Dr. Mārcis Gasūns_

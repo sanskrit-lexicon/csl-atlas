@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Session handoff — read this first in a new chat
 
 ## ⏩ 2026-06-02 — current state (START HERE; the 2026-05-16 research handoff follows below)
@@ -8,10 +10,10 @@
 - Done: markup fixes for 10 csl-orig dicts; issue taxonomy on 6 dict repos (BOR/BUR/INM/KRM/BOP/MW72); full README+CLAUDE+citation/community docs for those 6; org-wide [`CONTRIBUTOR_STATS.md`](CONTRIBUTOR_STATS.md); ecosystem [`ROADMAP.md`](ROADMAP.md) + 7 tracked issues; **quick wins Q1–Q6 shipped** — hw.py BOM `utf-8-sig` fix (csl-pywork#50), `.gitattributes`×7, csl-orig encoding+`<L>/<LEND>` CI guard, contributor-identity map, Mermaid validator, AI-contribution policy, `clone_org.py`.
 - Remaining (human/scope): **Q7 taxonomy FULLY DONE 2026-05-31** — 24 dictionary repos (786 issues) + 4 tooling repos csl-apidev/cologne-stardict/GreekInSanskrit/ArabicInSanskrit (153 issues) all verified all-clean (type+severity+milestone+project). A2 closed. **M3 full-runbook README/CLAUDE DONE 2026-05-31** for **15 stub repos** (WIL + ACC, BEN, BHS, CAE, CCS, LRV, MCI, SCH, SKD, STC, VCP, VEI + **ApteES, SHS**), matching the BOR-group gold standard (live counts, validated Mermaid, source bibliography, data-format example); pushed to each repo's default branch. ApteES got hand-built reverse-direction docs (`{@en@}`/`<s>skt</s>`); SHS author corrected to Jibananda Vidyāsāgara (B4/B5 both resolved). All M3 dict gaps now closed (repos with pre-existing real READMEs — incl. PWG/PWK's lowercase `readme.md` — were already done). NB: the org-wide `docs-pass` branches are a *separate* microanalysis effort (DICT_PROFILE.md etc.), still awaiting maintainer review — not M3. **B3 issue templates DONE 2026-06-02** — all 8 files pushed to BOR/BUR/INM/KRM/BOP/MW72 via gh api (48 files total). Other remaining: dependabot rebase mop-up (loop running, job `b27c7a5e`; 27 PRs merged, 14 conflicting awaiting rebase; re-run merger via `10m` cron), M1 refresh-script modernization, M4 refresh automation (needs token), M7 KRM license decision, #51 XML-parse tail.
 
-**B · Research / practitioner layer** — additive to the existing genealogy + typology program. **L0/lexicography-genealogy stream: start at [`L0_HANDOFF.md`](../L0_HANDOFF.md)** (Phase L0 fully built; key open issue = the size-confounded MW content figure + the precision ladder).
-- Existing: [`LEXICOGRAPHY_ROADMAP.md`](../LEXICOGRAPHY_ROADMAP.md) (L0–L10), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](../MICROSTRUCTURE-MACROSTRUCTURE.md) (typology + 50-viz catalog).
-- New: [`RESEARCH_LAYER_ROADMAP.md`](../RESEARCH_LAYER_ROADMAP.md) — 7 hypotheses, practitioner tools (students/makers/researchers), and 2 working prototypes: `scripts/lexico/micro_entry.py` (`python … Darma` → one lemma × dicts) and `scripts/lexico/macro_profile.py` (43-dict structural profile). Outputs in `data/lexico/`.
-- **Phase L0 cladogram — DONE 2026-06-03, gate CLOSED via Patel gold** ([`L0_RESULTS.md`](../L0_RESULTS.md)): full pipeline (`scripts/L0/s2*.py`, `s3_cladogram.py`) over 32 dicts × **25** dims. The **Patel 2016 PDF** (`refs/Patel_2016_Normalizing_headwords.pdf`) gave the convention author's own per-dict assignments for all 7 conventions → ingested as gold (`s2d_patel_gold.py`), closing the annotation gate for 30/32 dicts. Recovery **27%→55%**; **PWG→PW 0.79, PWG→SCH 0.70, WIL→SHS 0.81** bootstrap; 6/6 families cohere; Petersburg formatting family (PWG/PW/SCH/CCS) razor-sharp. **Key finding:** convention-lineage ≠ content-lineage — MW reformatted PWG conventions (so PWG→MW misses, correctly). Taxonomy + concordance in [`refs/`](refs/). Remaining `gate`: LRV/FRI (not in Patel's 36); KNA/KOW/AMAR need Cologne sources. **Dashboard page** `observatory/site/src/conventions.md` (nav "Conventions (L0)") + **Paper H §5 draft** [`articles/paper_H_convention_vs_content_lineage.md`](../articles/paper_H_convention_vs_content_lineage.md) both shipped 2026-06-03 (build verified, exit 0); refresh workflow copies `data/L0/` into the site.
+**B · Research / practitioner layer** — additive to the existing genealogy + typology program. **L0/lexicography-genealogy stream: start at [`L0_HANDOFF.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_HANDOFF.md)** (Phase L0 fully built; key open issue = the size-confounded MW content figure + the precision ladder).
+- Existing: [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md) (L0–L10), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md) (typology + 50-viz catalog).
+- New: [`RESEARCH_LAYER_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RESEARCH_LAYER_ROADMAP.md) — 7 hypotheses, practitioner tools (students/makers/researchers), and 2 working prototypes: `scripts/lexico/micro_entry.py` (`python … Darma` → one lemma × dicts) and `scripts/lexico/macro_profile.py` (43-dict structural profile). Outputs in `data/lexico/`.
+- **Phase L0 cladogram — DONE 2026-06-03, gate CLOSED via Patel gold** ([`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md)): full pipeline (`scripts/L0/s2*.py`, `s3_cladogram.py`) over 32 dicts × **25** dims. The **Patel 2016 PDF** (`refs/Patel_2016_Normalizing_headwords.pdf`) gave the convention author's own per-dict assignments for all 7 conventions → ingested as gold (`s2d_patel_gold.py`), closing the annotation gate for 30/32 dicts. Recovery **27%→55%**; **PWG→PW 0.79, PWG→SCH 0.70, WIL→SHS 0.81** bootstrap; 6/6 families cohere; Petersburg formatting family (PWG/PW/SCH/CCS) razor-sharp. **Key finding:** convention-lineage ≠ content-lineage — MW reformatted PWG conventions (so PWG→MW misses, correctly). Taxonomy + concordance in [`refs/`](refs/). Remaining `gate`: LRV/FRI (not in Patel's 36); KNA/KOW/AMAR need Cologne sources. **Dashboard page** `observatory/site/src/conventions.md` (nav "Conventions (L0)") + **Paper H §5 draft** [`articles/paper_H_convention_vs_content_lineage.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_H_convention_vs_content_lineage.md) both shipped 2026-06-03 (build verified, exit 0); refresh workflow copies `data/L0/` into the site.
 - **Next research build: R2 — a per-dict sense splitter** (gates hypotheses H1–H3 and the maker worklist); needs decisions A6/A7.
 - ⚠️ **Lesson (2026-05-30):** *validate heuristic detectors against real entries before trusting numbers.* A `<ls>`-only citation detector wrongly called SKD/VCP "citation-free"; they cite densely via `“…”` + `…0` authorities (`jE0`,`BA0`,`amara0`) + `iti` — fixed (VCP 95%, SKD 51% cited). Test on **mid-alphabet** lemmas (`dharma`=`Darma`); resolve Patel headword-convention variants (doubled-`r` → `Darmma`, inflected visarga → `DarmmaH`) and concatenate homonyms.
 
@@ -37,7 +39,7 @@ This doc gives a new chat session everything needed to continue without losing m
 **csl-observatory** — a measurement-and-analysis layer for the Cologne Digital Sanskrit Lexicon (CDSL). Open-source, unfunded, run by M. Gasūns (project lead, working toward higher-doctorate qualification).
 
 End-products planned by 2035:
-- **19 peer-reviewed articles** (per [`PUBLICATIONS.md`](../PUBLICATIONS.md) — 15 originally scheduled + 4 added 2026-05-16)
+- **19 peer-reviewed articles** (per [`PUBLICATIONS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PUBLICATIONS.md) — 15 originally scheduled + 4 added 2026-05-16)
 - **Scientific monograph** (the Book, 2033)
 - **Practical manual** for Sanskrit lexicographers (2034)
 - **New corpus-based Sanskrit-Russian dictionary** (~50k headwords, 2035)
@@ -55,19 +57,19 @@ Repository: **https://github.com/sanskrit-lexicon/csl-observatory**
 | 1 | [`SESSION_HANDOFF.md`](SESSION_HANDOFF.md) | THIS doc — orientation |
 | 2 | [`OBSERVATORY_DESIGN.md`](OBSERVATORY_DESIGN.md) | Architecture: Observable Framework, GitHub Actions, snapshot strategy, KPI catalog |
 | 3 | [`OBSERVATORY_ROADMAP.md`](OBSERVATORY_ROADMAP.md) | Phases A-H for the measurement framework |
-| 4 | [`LEXICOGRAPHY_ROADMAP.md`](../LEXICOGRAPHY_ROADMAP.md) | Phases L0-L10 for the dictionary-comparison research stream |
-| 5 | [`L0_DESIGN.md`](../L0_DESIGN.md) | The first cladogram phase: 30 fingerprint dims, 27 trees, validation. Also includes Phase L0.5 (Nirukta), L0.6 (subentries), L1.5 (KOW⇄WIL), M3-Bopp, Phase P (preface analysis) |
-| 6 | [`METALEXICOGRAPHY_ROADMAP.md`](../METALEXICOGRAPHY_ROADMAP.md) | Data-richness typology L0-L10, MW-attention hypothesis, multi-volume year handling, KCH inclusion |
-| 7 | [`MICROSTRUCTURE-MACROSTRUCTURE.md`](../MICROSTRUCTURE-MACROSTRUCTURE.md) | 24 verb-entry dimensions + 10 nominal + 20 macrostructure; 50+ visualisations |
-| 8 | [`PUBLICATIONS.md`](../PUBLICATIONS.md) | The 15-article plan, book, manual, dictionary, trends-tracking |
+| 4 | [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md) | Phases L0-L10 for the dictionary-comparison research stream |
+| 5 | [`L0_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_DESIGN.md) | The first cladogram phase: 30 fingerprint dims, 27 trees, validation. Also includes Phase L0.5 (Nirukta), L0.6 (subentries), L1.5 (KOW⇄WIL), M3-Bopp, Phase P (preface analysis) |
+| 6 | [`METALEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md) | Data-richness typology L0-L10, MW-attention hypothesis, multi-volume year handling, KCH inclusion |
+| 7 | [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md) | 24 verb-entry dimensions + 10 nominal + 20 macrostructure; 50+ visualisations |
+| 8 | [`PUBLICATIONS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PUBLICATIONS.md) | The 15-article plan, book, manual, dictionary, trends-tracking |
 | 9 | [`PAPER_1_OUTLINE.md`](PAPER_1_OUTLINE.md) | Paragraph-by-paragraph outline of Paper 1 |
-| 10 | [`articles/article_1_methods.md`](../articles/article_1_methods.md) | Draft Methods section (1700 words) |
-| 11 | [`trends/2026-Q2.md`](../trends/2026-Q2.md) | First quarterly trends digest (skeleton) |
+| 10 | [`articles/article_1_methods.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/article_1_methods.md) | Draft Methods section (1700 words) |
+| 11 | [`trends/2026-Q2.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/trends/2026-Q2.md) | First quarterly trends digest (skeleton) |
 
 Reference data (read as needed):
-- [`data/dictionary_inventory.csv`](../../data/dictionary_inventory.csv) — 47 dicts with year ranges, families, sanhw1 lemma counts
-- [`data/sanhw1_inheritance_edges.csv`](../../data/sanhw1_inheritance_edges.csv) — empirical inheritance edges
-- [`data/sanhw1_distance_matrix.csv`](../../data/sanhw1_distance_matrix.csv) — 41×41 Jaccard
+- [`data/dictionary_inventory.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv) — 47 dicts with year ranges, families, sanhw1 lemma counts
+- [`data/sanhw1_inheritance_edges.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/sanhw1_inheritance_edges.csv) — empirical inheritance edges
+- [`data/sanhw1_distance_matrix.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/sanhw1_distance_matrix.csv) — 41×41 Jaccard
 - [`data/etymology_marker_preliminary.csv`](../data/etymology_marker_preliminary.csv) — WIL/MW/AP etymology markers
 
 ---
@@ -138,11 +140,11 @@ Reference data (read as needed):
 
 ### Done in session 2026-05-16
 - [x] **Asked 4-8 prompting questions** to extract M. Gasūns's research questions (8 prompts in 2 rounds via `AskUserQuestion`)
-- [x] **Captured answers** in [MICROSTRUCTURE-MACROSTRUCTURE.md §5.2](../MICROSTRUCTURE-MACROSTRUCTURE.md) (Round 1, structure/lineage) and [PUBLICATIONS.md §6.2](../PUBLICATIONS.md) (Round 2, publication strategy / methodology)
+- [x] **Captured answers** in [MICROSTRUCTURE-MACROSTRUCTURE.md §5.2](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md) (Round 1, structure/lineage) and [PUBLICATIONS.md §6.2](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PUBLICATIONS.md) (Round 2, publication strategy / methodology)
 
 ### Immediate (~next session)
 - [ ] **Pandanus brief**: one-page summary of the Prague Pandanus project (scope, status, dataset) — M.G. asked to include it in the non-CDSL comparison thread but is not yet familiar with the project
-- [ ] **Phase L0.7 design**: hapax-legomena overlap study — chosen as the forensic instrument for derivation claims (Round 1 Q2). Add as a new phase in [`LEXICOGRAPHY_ROADMAP.md`](../LEXICOGRAPHY_ROADMAP.md).
+- [ ] **Phase L0.7 design**: hapax-legomena overlap study — chosen as the forensic instrument for derivation claims (Round 1 Q2). Add as a new phase in [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md).
 - [ ] **Integrate Articles 16-19 into the §1 schedule**: PWG-backbone, hapax-methodology, grammatical-coding variation, CCS→KCH (currently in §6.2 only — needs cadence/timing slots in §1's main table)
 - [ ] **Name the "Petersburg Thread"** explicitly in PUBLICATIONS.md §1 — it spans Articles 6, 11, 14, 16, 19 per Round 2 Q8
 
@@ -170,8 +172,8 @@ Reference data (read as needed):
 ## 5. The 4-8 prompting questions — asked and answered 2026-05-16
 
 **Status**: ✅ Completed. Both rounds (4+4) asked via `AskUserQuestion` and answered by M. Gasūns. Captured at:
-- [MICROSTRUCTURE-MACROSTRUCTURE.md §5.2](../MICROSTRUCTURE-MACROSTRUCTURE.md#52-new--added-by-author-captured-2026-05-16-prompting-round-1) — Round 1 (lineage + structure)
-- [PUBLICATIONS.md §6.2](../PUBLICATIONS.md#62-additional-research-questions-captured-2026-05-16-prompting-round-2) — Round 2 (publication strategy + methodology)
+- [MICROSTRUCTURE-MACROSTRUCTURE.md §5.2](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md#52-new--added-by-author-captured-2026-05-16-prompting-round-1) — Round 1 (lineage + structure)
+- [PUBLICATIONS.md §6.2](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PUBLICATIONS.md#62-additional-research-questions-captured-2026-05-16-prompting-round-2) — Round 2 (publication strategy + methodology)
 
 The 8 prompts are preserved below for reference / re-use.
 
@@ -265,3 +267,5 @@ Suggested opening from the new Claude session:
 
 If user says yes → ask round 1 via AskUserQuestion
 If user redirects → follow their lead; reference this handoff for context as needed
+
+_Dr. Mārcis Gasūns_

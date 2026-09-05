@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Convention fingerprints — the L0 cladogram
 toc: true
@@ -268,3 +270,5 @@ Inputs.table(residual, {
 - **Reproduce**: `scripts/L0/s2_fingerprint.py` → `s2b_patel_auto.py` → `s2d_patel_gold.py` → `s3_cladogram.py`. Taxonomy & numbering in [`refs/fingerprint_conventions.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/fingerprint_conventions.md) + [`refs/concordance.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/refs/concordance.md).
 
 [← back to Dictionary genealogy](lexicography) · [overview](../)
+
+_Dr. Mārcis Gasūns_

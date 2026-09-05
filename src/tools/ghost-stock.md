@@ -1,3 +1,5 @@
+_Created: 25-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Ghost stock
 toc: false
@@ -245,3 +247,5 @@ display(csvDownloadButton(
   (union + crosswalk), VisualDCS summary (in-repo frozen copy).
 - **Boundary note:** no DCS ingestion here (VisualDCS contract); Heritage is
   cited and joined, never cloned (LGPLLR).
+
+_Dr. Mārcis Gasūns_

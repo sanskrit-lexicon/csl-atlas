@@ -1,3 +1,5 @@
+_Created: 07-06-2026 · Last updated: 05-09-2026_
+
 # Three-Axis Comparison Packet
 
 Date: 2026-06-07
@@ -61,3 +63,4 @@ Status: generated machine-reviewed comparison packet; no human decisions or publ
 - No R2 parser behavior, public page, source-anchor generation, H5 review row, backend/runtime LLM, DCS/corpus, standards, or GitHub-process work is changed.
 - DCS/corpus frequency and external maker decisions remain outside this artifact.
 
+_Dr. Mārcis Gasūns_

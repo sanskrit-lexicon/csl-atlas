@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Review Reports
 
 Date: 2026-05-29
@@ -47,11 +49,11 @@ Review reports back the review use cases in `docs/USE_CASES.md`:
 | Encoding / OCR problem | UC-DEV-02 / UC-RV-03 | parser emits a source-quality warning |
 | Over-broad inferred family | UC-LX-03 / UC-RV-03 | `inferred` family exceeds a size/divergence heuristic |
 
-A claim labeled `observed` rarely needs a queue. A claim labeled `inferred` almost always does. See [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md).
+A claim labeled `observed` rarely needs a queue. A claim labeled `inferred` almost always does. See [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md).
 
 Before adding procedure for a queue, document what the queue proves and what it
 does not prove. The active proof-first guide is
-[`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md).
+[`REVIEW_QUEUE_PROOFS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_QUEUE_PROOFS.md).
 
 ## JSON Shape
 
@@ -120,7 +122,7 @@ src/data/review/        review reports consumed by Observable pages
 data/schema/review-report.schema.json   JSON Schema for review reports
 ```
 
-The schema lives at [`data/schema/review-report.schema.json`](../data/schema/review-report.schema.json). It is currently a stub (the review layer is built from Phase 2 onward); review-report generators should validate against it.
+The schema lives at [`data/schema/review-report.schema.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/schema/review-report.schema.json). It is currently a stub (the review layer is built from Phase 2 onward); review-report generators should validate against it.
 
 ## Workflow
 
@@ -171,9 +173,11 @@ To record a decision, edit the item's `reviewStatus` / `reviewedValue` / `review
 
 ## Related Documents
 
-- [`data/schema/review-report.schema.json`](../data/schema/review-report.schema.json) — the machine-checkable schema for this shape.
-- [`docs/EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md) — evidence labels vs review status.
-- [`docs/REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md) - what each queue proves before procedure.
+- [`data/schema/review-report.schema.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/schema/review-report.schema.json) — the machine-checkable schema for this shape.
+- [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) — evidence labels vs review status.
+- [`docs/REVIEW_QUEUE_PROOFS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_QUEUE_PROOFS.md) - what each queue proves before procedure.
 - `docs/DICTIONARY_COMPARISON_PLAN.md` — the alignment queues that produce most reviews.
 - `docs/USE_CASES.md` — UC-RV-01 through UC-RV-03 and Milestone B.
 - `ARCHITECTURE.md` — the review architecture and status list.
+
+_Dr. Mārcis Gasūns_

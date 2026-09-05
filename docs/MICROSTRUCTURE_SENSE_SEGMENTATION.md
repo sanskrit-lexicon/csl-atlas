@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # Microstructure Sense Segmentation
 
 Date: 2026-06-06
@@ -130,11 +132,13 @@ tell:
 
 ## Related
 
-- [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](MICROSTRUCTURE_HEADWORD_SUBENTRY.md)
-- [`MICROSTRUCTURE_PROFILE.md`](MICROSTRUCTURE_PROFILE.md)
-- [`MICROSTRUCTURE_METHODS.md`](MICROSTRUCTURE_METHODS.md)
-- [`MICROSTRUCTURE_FINDINGS.md`](MICROSTRUCTURE_FINDINGS.md)
-- [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md)
-- [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md)
-- [`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md)
-- [`R2_FINDINGS.md`](R2_FINDINGS.md)
+- [`MICROSTRUCTURE_HEADWORD_SUBENTRY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_HEADWORD_SUBENTRY.md)
+- [`MICROSTRUCTURE_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_PROFILE.md)
+- [`MICROSTRUCTURE_METHODS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_METHODS.md)
+- [`MICROSTRUCTURE_FINDINGS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_FINDINGS.md)
+- [`R2_REBUILD_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REBUILD_CONTRACT.md)
+- [`R2_PARSER_DIAGNOSTICS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_PARSER_DIAGNOSTICS.md)
+- [`R2_REVIEW_PACKETS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REVIEW_PACKETS.md)
+- [`R2_FINDINGS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md)
+
+_Dr. Mārcis Gasūns_

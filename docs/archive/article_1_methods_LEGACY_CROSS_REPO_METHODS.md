@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Legacy Cross-Repo Article 1 Methods Draft
 
 Status: legacy reference only. This file predates the 2026-06-04 boundary
@@ -171,3 +173,5 @@ Seven of twenty-two candidate inheritance pairs — 32% — therefore carry both
 - [ ] **Conclusion** (250 words)
 
 This Methods section is ~1700 words; the target overall length is ~8500 words (15-20 pages).
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # H4 Semantic-Field Review Worksheet
 
 Date: 2026-07-24 · Source: `data/lexico/h4_semantic_field_review_packet.json`
@@ -548,3 +550,4 @@ Date: 2026-07-24 · Source: `data/lexico/h4_semantic_field_review_packet.json`
 - Q: Is MWE coverage of a in avyayavargaḥ meaningful, or a lookup-direction/index artifact?
 - Evidence: field coverage 2.2% (6/268) · source: [MWE L1](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mwe/mwe.txt#L571)
 
+_Dr. Mārcis Gasūns_

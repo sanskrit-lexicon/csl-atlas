@@ -1,7 +1,9 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Phase L0 Design — Convention-fingerprint cladogram
 
 **Version**: 1.0 · **Date**: 2026-05-16 · **Status**: design-locked, ready to implement
-**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md)
+**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md)
 
 L0 is the **cheapest, fastest, most validatable** phase in the lexicography stream. It produces the first phylogenetic tree of CDSL dictionaries using only Patel-2016-style "convention fingerprints" — no XML parsing of any source dictionary. Estimated effort: 2-3 days end-to-end.
 
@@ -496,3 +498,5 @@ Output: `data/subentry_density.csv`, `data/subentry_depth.csv`, `data/verb_deriv
 ## 21. Open question
 
 Awaiting clarification.
+
+_Dr. Mārcis Gasūns_

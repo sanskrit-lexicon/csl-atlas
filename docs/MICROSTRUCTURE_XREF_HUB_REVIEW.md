@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # Cross-Reference Hub Review
 
 Date: 2026-06-05
@@ -108,3 +110,5 @@ MW/PWG 40-edge shared-core sample, then adjudicate the 10 PWG/MW prefix
 controls. The package can move from machine labels to reviewed interpretation
 only after those source checks confirm which edges are lexical and which are
 convention artifacts.
+
+_Dr. Mārcis Gasūns_

@@ -1,12 +1,12 @@
 # Metalexicography roadmap — measuring digital-edition richness
 
 > Supporting specification. The governing delivery order is
-> [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
+> [`ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ROADMAP_2026_2027.md).
 
-_Created: 04-06-2026 · Last updated: 01-09-2026_
+_Created: 04-06-2026 · Last updated: 05-09-2026_
 
 **Version**: 1.0 · **Date**: 2026-05-16 · **Owner**: M. Gasūns + Claude Code
-**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](L0_DESIGN.md)
+**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_DESIGN.md)
 
 Boundary update 2026-06-04: atlas may measure dictionary markup richness and
 dictionary structure. TEI/OntoLex/FrAC/SHACL/RDF export, validation, and

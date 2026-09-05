@@ -1,3 +1,5 @@
+_Created: 21-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Dictionary density fingerprint
 toc: false
@@ -73,3 +75,5 @@ Plot.plot({
 generator <a href="https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/density_fingerprint.py">density_fingerprint.py</a> ·
 entry bodies from <a href="https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02">csl-orig v02</a>.
 H1423, Opus 4.8 (<code>claude-opus-4-8</code>).</div>
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 24-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Paper — triangulation
 ---
@@ -41,3 +43,5 @@ That three independently-motivated frameworks converge on the same three facts i
 ---
 
 *Tour page. Canonical text: [PAPER.md §7](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#7-triangulation-three-external-frameworks-converge).*
+
+_Dr. Mārcis Gasūns_

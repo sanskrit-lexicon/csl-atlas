@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # MW Quantitative Depth Handoff
 
 This handoff describes a deterministic implementation plan for adding synchronic and diachronic quantitative metrics for Monier-Williams (`mw.txt`) to `csl-atlas`.
@@ -267,3 +269,5 @@ Document:
 - New pages render without console errors.
 - Outputs include examples with links.
 - Runtime does not depend on Gemini, OpenAI, or any other LLM.
+
+_Dr. Mārcis Gasūns_

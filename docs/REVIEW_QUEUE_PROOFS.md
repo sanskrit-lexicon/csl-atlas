@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # Review Queue Proofs
 
 Date: 2026-06-04
@@ -43,11 +45,11 @@ shape when implemented.
 
 | Future queue | What it should prove | Boundary |
 |---|---|---|
-| Sense divergence | Whether cross-dictionary sense disagreement reflects copying, condensation, family style, or parser weakness; see [`R2_REBUILD_CONTRACT.md`](R2_REBUILD_CONTRACT.md). | `csl-atlas`; dictionary sense evidence only. |
-| R2 parser-drift diagnostics | Whether source/archive row-count drift is a parser-family problem before it becomes a sense-alignment claim; see [`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md). | `csl-atlas`; dictionary source rows and recovered R2 fixtures only. |
-| Cross-reference lineage candidates | Whether shared Sanskrit cross-reference targets preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](MICROSTRUCTURE_XREF_HUB_REVIEW.md). | `csl-atlas`; dictionary graph evidence only; `data/lexico/xref_hub_review.json` built as the review-prompt artifact. |
+| Sense divergence | Whether cross-dictionary sense disagreement reflects copying, condensation, family style, or parser weakness; see [`R2_REBUILD_CONTRACT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REBUILD_CONTRACT.md). | `csl-atlas`; dictionary sense evidence only. |
+| R2 parser-drift diagnostics | Whether source/archive row-count drift is a parser-family problem before it becomes a sense-alignment claim; see [`R2_PARSER_DIAGNOSTICS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_PARSER_DIAGNOSTICS.md). | `csl-atlas`; dictionary source rows and recovered R2 fixtures only. |
+| Cross-reference lineage candidates | Whether shared Sanskrit cross-reference targets preserve lineage beyond headword overlap; see [`MICROSTRUCTURE_XREF_HUB_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_XREF_HUB_REVIEW.md). | `csl-atlas`; dictionary graph evidence only; `data/lexico/xref_hub_review.json` built as the review-prompt artifact. |
 | SKD anubandha adjudication | Whether indigenous it-marker coding can be decoded safely enough to emit reviewed grammatical columns. | `csl-atlas`; philological review required. |
-| H4 semantic-field review | Whether Amarakosa-native fields classify dictionary evidence without importing corpus categories; see [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](H4_SEMANTIC_FIELD_INTERPRETATION.md) and [`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md). | `csl-atlas`; M8 data package, chart, family-profile artifact, and scholar review packet built. |
+| H4 semantic-field review | Whether Amarakosa-native fields classify dictionary evidence without importing corpus categories; see [`H4_SEMANTIC_FIELD_INTERPRETATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_INTERPRETATION.md) and [`H4_SEMANTIC_FIELD_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_REVIEW.md). | `csl-atlas`; M8 data package, chart, family-profile artifact, and scholar review packet built. |
 
 ## Proof Types
 
@@ -91,8 +93,8 @@ Every review queue page should include:
 - Owner repo:
 ```
 
-Then link to the procedure in [`REVIEW_REPORTS.md`](REVIEW_REPORTS.md) or
-[`LIGHT_REVIEW_SPRINT.md`](LIGHT_REVIEW_SPRINT.md).
+Then link to the procedure in [`REVIEW_REPORTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md) or
+[`LIGHT_REVIEW_SPRINT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LIGHT_REVIEW_SPRINT.md).
 
 ## Public Queue Page Coverage
 
@@ -125,8 +127,10 @@ Run only the relevant generator when editing one queue, then always run
 
 ## Related Docs
 
-- [`REVIEW_REPORTS.md`](REVIEW_REPORTS.md)
-- [`LIGHT_REVIEW_SPRINT.md`](LIGHT_REVIEW_SPRINT.md)
-- [`USE_CASES.md`](USE_CASES.md)
-- [`CHART_TRUST_TEMPLATE.md`](CHART_TRUST_TEMPLATE.md)
-- [`EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md)
+- [`REVIEW_REPORTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md)
+- [`LIGHT_REVIEW_SPRINT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LIGHT_REVIEW_SPRINT.md)
+- [`USE_CASES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/USE_CASES.md)
+- [`CHART_TRUST_TEMPLATE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CHART_TRUST_TEMPLATE.md)
+- [`EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md)
+
+_Dr. Mārcis Gasūns_

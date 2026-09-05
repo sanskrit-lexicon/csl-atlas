@@ -6,7 +6,7 @@ This file orients Codex and other non-Claude agent sessions. The section between
 ## Shared org context (generated — H1393 layer)
 
 - Encodings / key1/key2 / transcoder traps: [Sanskrit context primer](https://github.com/gasyoun/github-spine/blob/main/SANSKRIT_CONTEXT_PRIMER.md).
-- Task routing: [CLAUDE.md](CLAUDE.md) — matching section, not end-to-end.
+- Task routing: [CLAUDE.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CLAUDE.md) — matching section, not end-to-end.
 - Danger facts (destroy-work-if-missed; full text + sources in [DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md)):
   - Never run the seeder with --reseed — it wipes human review overlays (R2 overlay-wipe; goals matrix G16 tracks it as destructive-risk)
   - H2892: --reseed is now gated in code — it exits 2 and writes nothing unless ALLOW_OVERLAY_WIPE=1 (exact string match). Do not set that variable to make a command work: the plain rebuild preserves every human decision and is the normal path. Lands with csl-atlas PR #411, open at the time of writing

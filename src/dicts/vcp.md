@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: VCP — Vācaspatyam (1873–1884)
 ---
@@ -138,3 +140,5 @@ The four kosha repos that resolve MW's `<ls>L.</ls>` hedge are *prior to* both S
 ---
 
 Source: CDSL `vcp.txt` 2026-05-23 · MWS docs-pass commit reflects audit pipeline as of 2026-05-28 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

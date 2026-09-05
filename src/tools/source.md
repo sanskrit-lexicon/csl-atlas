@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Source line viewer
 toc: false
@@ -135,3 +137,5 @@ if (ctx.error) {
 Opens **exactly the line you need** in a Cologne source file — not the whole document. GitHub refuses to render the multi-MB `csl-orig` `.txt` files (it only offers "View raw", and `#L…` anchors never fire), so this page streams the raw text, stops as soon as it has reached your line plus a little context, and highlights the entry. Link here from any review queue, or set the dictionary and line above — e.g. `/tools/source?dict=pw&line=26745`.
 
 Streams from [`sanskrit-lexicon/csl-orig`](https://github.com/sanskrit-lexicon/csl-orig) `master`. CC-BY-SA-4.0.
+
+_Dr. Mārcis Gasūns_

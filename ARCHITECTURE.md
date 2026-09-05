@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # CSL Atlas Architecture
 
 Date: 2026-06-04
@@ -235,3 +237,5 @@ Boundary checks:
 - `docs/REVIEW_REPORTS.md`
 - `docs/DICTIONARY_COMPARISON_PLAN.md`
 - `docs/TEI_ONTOLEX_MIGRATION.md`
+
+_Dr. Mārcis Gasūns_

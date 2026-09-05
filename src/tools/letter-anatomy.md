@@ -1,3 +1,5 @@
+_Created: 21-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Per-letter anatomy & the entry-size decay test
 toc: false
@@ -244,3 +246,5 @@ Sources: MW/AP/PWG/PWK/SKD/VCP/GRA headwords from
 <a href="https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/now-2026">HeadwordLists/now-2026</a>,
 entry bodies from <a href="https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02">csl-orig v02</a>.
 Opus 4.8 (<code>claude-opus-4-8</code>), H1416.</div>
+
+_Dr. Mārcis Gasūns_

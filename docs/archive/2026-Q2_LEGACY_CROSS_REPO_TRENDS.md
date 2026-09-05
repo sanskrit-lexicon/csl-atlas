@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Legacy Cross-Repo Trends Digest — 2026 Q2
 
 Status: legacy reference only. This file predates the 2026-06-04 boundary
@@ -11,7 +13,7 @@ digital-humanities monitoring. Use `2026-Q2.md` for the current atlas pointer.
 **Period covered**: April – June 2026
 **Compiled by**: Claude (csl-observatory tracking infrastructure)
 **For**: M. Gasūns, Doktor Nauk research program
-**Companion to**: [`MICROSTRUCTURE_AND_CAREER_PLAN.md`](../MICROSTRUCTURE_AND_CAREER_PLAN.md) §7
+**Companion to**: [`MICROSTRUCTURE_AND_CAREER_PLAN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_AND_CAREER_PLAN.md) §7
 
 This is the **inaugural quarterly digest**. Format is tiered:
 - §1 Top-20 highlights — most-relevant items with brief commentary
@@ -121,3 +123,5 @@ Future quarterly digests live at `docs/trends/YYYY-QN.md`. The tracking workflow
 5. Wiktionary + Wikidata API for monthly statistics updates
 
 Synthesis happens at end of each quarter (March 31, June 30, September 30, December 31) and is committed as a new file in this directory.
+
+_Dr. Mārcis Gasūns_

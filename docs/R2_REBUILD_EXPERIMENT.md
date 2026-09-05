@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Non-Final Rebuild Experiment
 
 Date: 2026-06-06
@@ -140,3 +142,5 @@ decisions. A future parser-change pass should:
 6. keep archive parity as a comparison signal rather than a row-count target;
 7. avoid broadening beyond `gam`, `dharma`, `rama`, `iti`, and `bodhisattva`
    until the anchor run explains or reproduces the archived payloads.
+
+_Dr. Mārcis Gasūns_

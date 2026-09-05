@@ -1,3 +1,5 @@
+_Created: 03-06-2026 · Last updated: 05-09-2026_
+
 # Citation tagging across CDSL dictionaries — a correction
 
 **Status**: corrects an error in the F1 framing (and a repeat of the 2026-05-30
@@ -48,3 +50,5 @@ the **indigenous Sanskrit commentarial** style, which carries no `<ls>` tag:
 
 **Recurring lesson** (third occurrence): validate a detector against real entries before
 labelling — never infer "absent" from "untagged-in-the-one-scheme-I-parsed".
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 24-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Correction front
 toc: false
@@ -180,3 +182,5 @@ display(csvDownloadButton(compRows, "correction-front-components.csv"));
 display(Inputs.table(data.dictRanking, { rows: 20 }));
 display(csvDownloadButton(data.dictRanking, "correction-front-dict-ranking.csv"));
 ```
+
+_Dr. Mārcis Gasūns_

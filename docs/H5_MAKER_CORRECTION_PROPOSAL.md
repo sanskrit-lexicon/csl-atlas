@@ -1,3 +1,5 @@
+_Created: 07-06-2026 · Last updated: 05-09-2026_
+
 # H5 Maker Correction Proposal
 
 Date: 2026-06-07
@@ -60,3 +62,4 @@ These rows stay out of the correction proposal because the source-check pass fou
 - The other nine source-checked H5 rows are retained as non-correction evidence.
 - No parser behavior, source-anchor generation, public page, backend/runtime LLM, corpus, DCS, or standards work is changed.
 
+_Dr. Mārcis Gasūns_

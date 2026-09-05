@@ -1,3 +1,5 @@
+_Created: 07-06-2026 · Last updated: 05-09-2026_
+
 # H4 Semantic-Field Review Samples
 
 Date: 2026-07-24
@@ -177,3 +179,4 @@ Status: generated machine-only H4 review worksheet. 16 of 105 rows are determini
 
 Archive/corpus parity is not an H4 optimization target; H4 remains dictionary-first and AMAR-native until a separate corpus-facing question is opened.
 
+_Dr. Mārcis Gasūns_

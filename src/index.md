@@ -1,3 +1,5 @@
+_Created: 23-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Atlas of the Cologne Digital Sanskrit Lexicons
 toc: false
@@ -231,3 +233,5 @@ Source: CDSL · CC-BY-SA-4.0
   line-height: 1.35;
 }
 </style>
+
+_Dr. Mārcis Gasūns_

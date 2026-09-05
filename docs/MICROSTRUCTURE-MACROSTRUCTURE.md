@@ -1,7 +1,9 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Microstructure & Macrostructure typology of CDSL dictionaries
 
 **Version**: 1.0 · **Date**: 2026-05-16
-**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](L0_DESIGN.md), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md), [`PUBLICATIONS.md`](PUBLICATIONS.md)
+**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_DESIGN.md), [`METALEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md), [`PUBLICATIONS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PUBLICATIONS.md)
 
 Two complementary layers of dictionary structure:
 
@@ -317,3 +319,5 @@ Each question becomes one of:
 2. Are there other dictionary entries besides `gam` you'd like sampled (e.g. a noun like `rāma`, a particle like `iti`, a Buddhist-Hybrid term)? Different test cases would reveal different microstructure patterns.
 3. Should microstructure be measured for every entry, or sampled (10% / 5% / specific letter-bands)?
 4. Should macrostructure be measured from preface text (Phase P) or from observable computational signals (sanhw1 already gives us alphabetisation hints, etc.)?
+
+_Dr. Mārcis Gasūns_

@@ -1,8 +1,8 @@
 # A10 "Apparatus, not errors" — reproducibility audit
 
-_Created: 03-07-2026 · Last updated: 03-07-2026_
+_Created: 03-07-2026 · Last updated: 05-09-2026_
 
-Data-verification pass over [`docs/articles/article_21_apparatus_not_errors.md`](articles/article_21_apparatus_not_errors.md)
+Data-verification pass over [`docs/articles/article_21_apparatus_not_errors.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/article_21_apparatus_not_errors.md)
 (A10), checking every headline figure against the committed forensic artifacts and,
 where an artifact was absent, against a faithful reconstruction from the same inputs.
 **Verdict (updated 2026-07-03): all six signals — including both decisive ones (F4b
@@ -17,11 +17,11 @@ published ratios exactly — see the §3.1 section below.**
 | Paper § | Signal | Paper claim | Committed value | Source |
 |---|---|---|---|---|
 | §3.1 | MW∩PW-only headwords | 17,007 | **17,007** | `csl-observatory/observatory/snapshots/sanhw1.txt` (df=2, {MW,PW}) |
-| §3.2 | F1 citation source-Jaccard | PWG/PW 0.16–0.19; nulls 0.004–0.017 | PWG→MW **0.1594**, PW→MW **0.1875**; BHS **0.0038**, AP **0.0168** | [`f1_report.json`](../data/forensic/f1_report.json) |
-| §3.4 | F5 citation-order concordance | PWG 0.811 / 47.8% identical; PW 0.73; BEN 0.68; AP 0.42 | PWG **0.8107** / **47.8%** (n=3,593); PW **0.7303**; BEN **0.677**; AP **0.4167** | [`f5_report.json`](../data/forensic/f5_report.json) |
-| §4.1 | F4b decisive shared-error | 2/123 (1.6%); null 256 vs 102.8, lift 2.49, p≈4×10⁻⁴¹ | **2/123**, 90 correct, 31 absent; null **256** vs **102.79**, lift **2.491**, p **4.01×10⁻⁴¹** | [`f4b_report.json`](../data/forensic/f4b_report.json) |
-| §4.3 | F3 gloss-length tracking | PWG 0.564 vs AP 0.576 (Δ −0.01) | PWG→MW **0.5636**, AP→MW **0.5757** | [`f3_report.json`](../data/forensic/f3_report.json) |
-| §4.3 | F6 gloss DE→EN overlap | ALL .104/.129, VERB .044/.098, PHIL .086/.086 | ALL **.1042/.1289**, VERB **.0445/.0979**, PHIL **.086/.0858** | [`f6_report.json`](../data/forensic/f6_report.json) |
+| §3.2 | F1 citation source-Jaccard | PWG/PW 0.16–0.19; nulls 0.004–0.017 | PWG→MW **0.1594**, PW→MW **0.1875**; BHS **0.0038**, AP **0.0168** | [`f1_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f1_report.json) |
+| §3.4 | F5 citation-order concordance | PWG 0.811 / 47.8% identical; PW 0.73; BEN 0.68; AP 0.42 | PWG **0.8107** / **47.8%** (n=3,593); PW **0.7303**; BEN **0.677**; AP **0.4167** | [`f5_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f5_report.json) |
+| §4.1 | F4b decisive shared-error | 2/123 (1.6%); null 256 vs 102.8, lift 2.49, p≈4×10⁻⁴¹ | **2/123**, 90 correct, 31 absent; null **256** vs **102.79**, lift **2.491**, p **4.01×10⁻⁴¹** | [`f4b_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f4b_report.json) |
+| §4.3 | F3 gloss-length tracking | PWG 0.564 vs AP 0.576 (Δ −0.01) | PWG→MW **0.5636**, AP→MW **0.5757** | [`f3_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f3_report.json) |
+| §4.3 | F6 gloss DE→EN overlap | ALL .104/.129, VERB .044/.098, PHIL .086/.086 | ALL **.1042/.1289**, VERB **.0445/.0979**, PHIL **.086/.0858** | [`f6_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f6_report.json) |
 
 The paper's two **decisive** claims — that MW shares ≈0 % of Böhtlingk's mechanical
 errors (F4b) and that it reproduced Böhtlingk's citation *order* (F5) — are the ones

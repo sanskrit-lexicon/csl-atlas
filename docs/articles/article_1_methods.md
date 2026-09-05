@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Article 1 Methods Moved To Legacy
 
 Date: 2026-06-04
@@ -26,3 +28,5 @@ For active atlas methods, use the dictionary-specific docs:
 - `docs/METALEXICOGRAPHY_ROADMAP.md`
 - `docs/L0_HANDOFF.md`
 - `docs/R2_FINDINGS.md`
+
+_Dr. Mārcis Gasūns_

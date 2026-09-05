@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Which dictionary should I use?
 toc: false
@@ -166,3 +168,5 @@ grammar analysis outside dictionary records.
   line-height: 1.35;
 }
 </style>
+
+_Dr. Mārcis Gasūns_

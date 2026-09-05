@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Light Review Sprint
 
 Date: 2026-06-03
@@ -11,7 +13,7 @@ Review decisions are overlays. A reviewer edits the review fields in the queue f
 Do not edit generated source data directly.
 
 For the proof value of each queue, see
-[`REVIEW_QUEUE_PROOFS.md`](REVIEW_QUEUE_PROOFS.md). This sprint records reviewer
+[`REVIEW_QUEUE_PROOFS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_QUEUE_PROOFS.md). This sprint records reviewer
 actions; the proof page records why each queue matters.
 
 ## Worklists
@@ -70,3 +72,5 @@ The release should report:
 - which cases were blocked or deferred.
 
 It should not hide unresolved machine output.
+
+_Dr. Mārcis Gasūns_

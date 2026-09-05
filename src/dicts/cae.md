@@ -1,3 +1,5 @@
+_Created: 27-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: CAE — Cappeller 1891
 ---
@@ -146,3 +148,5 @@ Full lineage in [CAE/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/CAE
 ---
 
 Source: CDSL `cae.txt` 2026-05-23 · MWS docs-pass commit reflects audit pipeline as of 2026-05-27 · CC-BY-SA-4.0
+
+_Dr. Mārcis Gasūns_

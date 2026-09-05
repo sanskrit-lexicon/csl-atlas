@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # Chart Trust Template
 
 Date: 2026-06-04
@@ -65,7 +67,7 @@ page. Avoid vague phrases such as "continue research."
 
 ## Evidence Labels
 
-Use the atlas labels from [`EVIDENCE_LABELS.md`](EVIDENCE_LABELS.md):
+Use the atlas labels from [`EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md):
 
 | Label | Use in a trust block |
 |---|---|
@@ -98,3 +100,5 @@ This queue proves: ...
 Do this before adding instructions for reviewer actions. The first question is
 what the queue shows about dictionary evidence; the second question is how a
 human corrects it.
+
+_Dr. Mārcis Gasūns_

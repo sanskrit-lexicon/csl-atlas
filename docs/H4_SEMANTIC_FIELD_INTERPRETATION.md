@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # H4 Semantic-Field Interpretation
 
 Date: 2026-06-05
@@ -78,7 +80,7 @@ and headword conventions the review samples must control for.
 
 Use the generated review packet before making paper-level claims:
 `data/lexico/h4_semantic_field_review_packet.json` and
-[`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md)
+[`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md)
 contain 105 machine-selected rows with source/coverage pointers, proposed
 machine labels, review questions, and empty human fields.
 
@@ -101,7 +103,7 @@ machine labels, review questions, and empty human fields.
 | 5 | H4-R5 index/reverse controls | The largest spreads are western-tagged versus reverse-bilingual controls. | `direction-index-control`; review prevents quality-ranking claims. |
 
 The review packet is now documented in
-[`H4_SEMANTIC_FIELD_REVIEW.md`](H4_SEMANTIC_FIELD_REVIEW.md). It adds sample
+[`H4_SEMANTIC_FIELD_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_REVIEW.md). It adds sample
 selection rules, decision labels, review columns, and boundary rules for SKD
 false lows, VCP high coverage, AP/AP90 deltas, specialized baselines, and
 index/reverse controls.
@@ -119,3 +121,5 @@ Use the review packet to choose rows from the family-profile artifact, then
 record which high/low clusters are true topical signals and which are convention
 or scope effects. This can become a paper figure only after those samples are
 checked.
+
+_Dr. Mārcis Gasūns_

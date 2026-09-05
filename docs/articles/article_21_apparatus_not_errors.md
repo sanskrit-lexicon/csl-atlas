@@ -1,3 +1,5 @@
+_Created: 03-06-2026 · Last updated: 05-09-2026_
+
 # Apparatus, not errors: how Monier-Williams inherited the Petersburg lexicon
 
 Mārcis Gasūns · ORCID [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X) · gasyoun@ya.ru
@@ -347,3 +349,5 @@ West, M. L. (1973). *Textual Criticism and Editorial Technique*. Stuttgart: Teub
 
 Zgusta, L. (1988). Copying in lexicography: Monier-Williams, Sanskrit Dictionary and other cases
 (Dvaikośyam). *Lexicographica* 4, 145–164.
+
+_Dr. Mārcis Gasūns_

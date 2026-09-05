@@ -1,3 +1,5 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Reader And Developer Critique
 
 Legacy note 2026-06-04: this file preserves the old integrated critique. The
@@ -115,3 +117,5 @@ When implementation resumes, start with the approved Phase 1:
 5. add review queues only where the machine output is uncertain.
 
 Do not start dictionary comparison or corpus grammar in the same pass unless explicitly requested.
+
+_Dr. Mārcis Gasūns_

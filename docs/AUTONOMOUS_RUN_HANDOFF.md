@@ -1,3 +1,5 @@
+_Created: 10-06-2026 · Last updated: 05-09-2026_
+
 # Autonomous Run Handoff Prompt
 
 The self-pacing prompt the `/loop` carries forward each iteration. Also usable to
@@ -56,3 +58,5 @@ or maker calls. Intensity: no ceiling. Continue draining the queue.
 - Run is in progress: Week 1 viz items began landing via PR #61 (incl. the
   sense-divergence map). **Derive the current position from .ai_state.md + PRs** — do
   not trust a hardcoded position here.
+
+_Dr. Mārcis Gasūns_

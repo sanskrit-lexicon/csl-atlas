@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # H4 Semantic-Field Review Packet
 
 Date: 2026-06-05
@@ -23,7 +25,7 @@ Status: scholar-facing review packet for H4/M8 semantic-field evidence.
   `npm run build-h4-review-packet`, and `npm run build`.
 - Owner repo: `csl-atlas`.
 - Next use: review the generated worksheet
-  [`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md)
+  [`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md)
   before treating H4 family contrasts as paper-level claims.
 
 ## Purpose
@@ -40,7 +42,7 @@ headword/subentry and sense-segmentation limits that H4 depends on. Do not mark
 H4 as reviewed until the source checks below have been sampled.
 
 `data/lexico/h4_semantic_field_review_packet.json` and
-[`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md)
+[`H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H4_SEMANTIC_FIELD_REVIEW_SAMPLES.md)
 now turn the priority samples below into 105 stable machine-only rows: 25 SKD
 false-low rows, then 20 rows each for VCP high coverage, AP/AP90 deltas,
 specialized baselines, and index/reverse controls. All `reviewedValue`,
@@ -147,3 +149,5 @@ review-report schema and status vocabulary unchanged. Suggested machine fields:
 H4 can move from `machine-reviewed` to `reviewed` interpretation when each
 priority packet has a small adjudicated sample and the result is summarized in
 `H4_SEMANTIC_FIELD_INTERPRETATION.md`.
+
+_Dr. Mārcis Gasūns_

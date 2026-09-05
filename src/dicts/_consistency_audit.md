@@ -1,3 +1,5 @@
+_Created: 28-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: O9 — Cross-chapter consistency audit
 ---
@@ -83,3 +85,5 @@ The 9 atlas chapters are internally consistent. Patches applied in this audit pa
 3. [`src/dicts/pwk.md`](pwk) — added D21 citation to §7
 
 Atlas is ready for the O10 landing-page refresh.
+
+_Dr. Mārcis Gasūns_

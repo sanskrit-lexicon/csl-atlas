@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Microstructure line — decision log (issue #30)
 
 Decisions captured interactively with the maintainer (M.G.) for the
@@ -290,3 +292,5 @@ detector matching `BvAdiH` / `curAdiH` etc. anywhere in the body.
 **Built:** `_KRM_GANA_NAMES` / `_KRM_PADA` / `_KRM_TRANS` + `krm_cluster()` in
 `scripts/lexico/m4_indigenous.py`. Root detection unchanged. Coverage after fix:
 pada 1,378 / 1,757 (78 %); trans 1,735 / 1,757 (99 %). Part of PR #34.
+
+_Dr. Mārcis Gasūns_

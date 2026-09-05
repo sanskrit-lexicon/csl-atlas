@@ -1,3 +1,5 @@
+_Created: 17-07-2026 · Last updated: 05-09-2026_
+
 # Dependency security posture
 
 Last checked: 25-07-2026
@@ -33,3 +35,5 @@ Known accepted dev-only advisories (do not affect the Pages artifact):
 
 Re-evaluate both when Observable publishes a release carrying fixed
 transitives.
+
+_Dr. Mārcis Gasūns_

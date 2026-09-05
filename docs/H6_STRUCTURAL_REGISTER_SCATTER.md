@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # H6 Structural-Register Scatter
 
 Date: 2026-06-04
@@ -8,7 +10,7 @@ public atlas page is `/tools/structural-register`, generated from
 `data/lexico/structural_register_h6_review.json`.
 
 The scholar-facing review packet is
-[`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md).
+[`H6_STRUCTURAL_REGISTER_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H6_STRUCTURAL_REGISTER_REVIEW.md).
 
 ## Chart Trust Block
 
@@ -116,7 +118,7 @@ npm run build
 
 ### Review Action
 
-Use [`H6_STRUCTURAL_REGISTER_REVIEW.md`](H6_STRUCTURAL_REGISTER_REVIEW.md) as
+Use [`H6_STRUCTURAL_REGISTER_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H6_STRUCTURAL_REGISTER_REVIEW.md) as
 the next-action queue. For each edge or family outlier, record whether the
 chart is showing:
 
@@ -320,3 +322,5 @@ The page must say:
 - [x] Tooltips expose both tagged and prose citation components.
 - [x] Zeros are accompanied by convention warnings where relevant.
 - [x] L0 edge comparison is documented as a review artifact, not descent proof.
+
+_Dr. Mārcis Gasūns_

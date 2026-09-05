@@ -1,12 +1,12 @@
 # CSL Atlas Lexicography Research Roadmap
 
 > Supporting specification. The governing delivery order is
-> [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
+> [`ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ROADMAP_2026_2027.md).
 
-_Created: 04-06-2026 · Last updated: 17-06-2026_
+_Created: 04-06-2026 · Last updated: 05-09-2026_
 
 **Version**: 1.0 · **Date**: 2026-05-16 · **Owner**: M. Gasūns + Claude Code
-**Companion to**: [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md), [`L0_HANDOFF.md`](L0_HANDOFF.md), [`RESEARCH_LAYER_ROADMAP.md`](RESEARCH_LAYER_ROADMAP.md)
+**Companion to**: [`BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/BOUNDARY_RULES.md), [`L0_HANDOFF.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_HANDOFF.md), [`RESEARCH_LAYER_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RESEARCH_LAYER_ROADMAP.md)
 
 Boundary update 2026-06-04: this roadmap now lives in `csl-atlas` because it
 studies dictionary structure, headword conventions, citation apparatus, and
@@ -217,7 +217,7 @@ Each phase is independently shippable; each produces dashboard pages and paper m
 ### Phase L3 — Forensic analysis (1-2 weeks, hardest)
 - Build typo / abbreviation / unusual-citation extractor
 - Run pairwise rarity-weighted shared-anomaly count; the current H5 scope and
-  review labels live in [`H5_GHOST_ANOMALY_SCOPE.md`](H5_GHOST_ANOMALY_SCOPE.md)
+  review labels live in [`H5_GHOST_ANOMALY_SCOPE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H5_GHOST_ANOMALY_SCOPE.md)
 - Citation truncation analysis (PWG ↔ MW especially)
 - New dashboard page: `/lexicography/forensic.md`
 - **Paper M Section**: §4.2 (forensic signals); **Paper H Section**: §5 (PWG → MW textual evidence)
@@ -316,8 +316,8 @@ Sections:
 
 A short, self-contained methods paper built on Phase L0 + L0.7: the convention fingerprint
 and the content↔convention **reformatting residual** as a general DH instrument (any corpus
-of related editions). Reuses the same result as **Paper H §5** ([`articles/paper_H_convention_vs_content_lineage.md`](articles/paper_H_convention_vs_content_lineage.md)).
-**Add to [`PUBLICATIONS.md`](PUBLICATIONS.md) as article 16+.** Venue: a DH methods venue (DSH / *Journal of Cultural Analytics*).
+of related editions). Reuses the same result as **Paper H §5** ([`articles/paper_H_convention_vs_content_lineage.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_H_convention_vs_content_lineage.md)).
+**Add to [`PUBLICATIONS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PUBLICATIONS.md) as article 16+.** Venue: a DH methods venue (DSH / *Journal of Cultural Analytics*).
 
 ### Paper H — Historical
 **Title**: *From Petersburg to Cologne: 170 years of Sanskrit lexicography traced through computational stemmatics*
@@ -374,7 +374,7 @@ Sections:
 Source: Patel, D. (2016). *Normalizing headwords of Cologne digital dictionaries*.
 Saved at: [csl-corrections/Normalizing_headwords_of_Cologne_digital.pdf](https://github.com/sanskrit-lexicon/csl-corrections/blob/main/Normalizing_headwords_of_Cologne_digital.pdf)
 
-Full CSV at [`data/dictionary_inventory.csv`](../data/dictionary_inventory.csv).
+Full CSV at [`data/dictionary_inventory.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv).
 
 **Key insights from this inventory**:
 
@@ -444,7 +444,7 @@ Adopted as the **default normalisation** for all parsing in Phase L1. Encoded as
 **Insight**: Each dict's choice across all 7 conventions is itself a fingerprint. Dicts following the same fingerprint pattern likely share lineage. Patel's per-dict membership lists give us this fingerprint **for free**.
 
 Example fingerprints (early single-value preview — **superseded** by the authoritative
-multi-valued ingest in [`src/data/lexicographic-structure/L0/patel2016_assignments.csv`](../src/data/lexicographic-structure/L0/patel2016_assignments.csv)
+multi-valued ingest in [`src/data/lexicographic-structure/L0/patel2016_assignments.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/lexicographic-structure/L0/patel2016_assignments.csv)
 via `s2d_patel_gold.py`; e.g. PWG's true conv-1 is `1.2+1.5`, not a single `1.5`):
 
 | Dict | C1 | C2 | C3 | C4 | C5 | C6 | C7 |
@@ -473,7 +473,7 @@ via `s2d_patel_gold.py`; e.g. PWG's true conv-1 is `1.2+1.5`, not a single `1.5`
 ### Phase L0 — Convention-fingerprint cladogram ✅ DONE 2026-06-03
 
 Executed and validated. Scripts `scripts/L0/s2*.py` + `s3_cladogram.py`; results in
-[`L0_RESULTS.md`](L0_RESULTS.md); taxonomy/concordance in [`refs/`](refs/); dashboard page
+[`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md); taxonomy/concordance in [`refs/`](refs/); dashboard page
 `/conventions` live; **25 dims** (7 Patel `patel2016` gold + 18 auto) × 32 dicts. **All 6
 lineage families cohere**; bootstrap WIL→SHS 0.81, PWG→PW 0.79, PWG→SCH 0.70. **Headline
 finding: convention-lineage ≠ content-lineage** (Paper H §5 drafted; standalone methods note
@@ -483,7 +483,7 @@ planned — decision 2026-06-03 #3 below).
 
 Shipped: `scripts/L0/s4_residual.py` → `data/L0/content_convention_residual.csv` (25 ranked
 directed edges) + `content_convention_scatter.csv` (435 pairs); dashboard scatter + ranked
-bar on `/conventions`; quantified in [`L0_RESULTS.md`](L0_RESULTS.md) §3 and Paper H §5.4.
+bar on `/conventions`; quantified in [`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md) §3 and Paper H §5.4.
 **Result:** top reformatting residuals = CAE→MW 0.68, MD→MW 0.65, CCS→MW 0.62, WIL→YAT 0.54
 (MW is the corpus's principal reformatter); faithful tail = SHS↔WIL, PWG→PW, CCS→CAE.
 

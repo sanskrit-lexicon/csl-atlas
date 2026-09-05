@@ -1,20 +1,22 @@
+_Created: 12-06-2026 · Last updated: 05-09-2026_
+
 # Condensation, Not Inflation: Sense Inheritance in the Sanskrit Dictionary Family, 1822–1957
 
 *Draft manuscript for submission to a metalexicography venue (target: Lexicographica,
 with International Journal of Lexicography as alternate). Empirical basis: the
 restored R2 sense-alignment layer — granularity trend
-([`data/lexico/r2_h1.json`](../../data/lexico/r2_h1.json), deconfounded panel
-[`data/lexico/r2_h1_panel.json`](../../data/lexico/r2_h1_panel.json)), survival and
-inheritance edges ([`data/lexico/r2_h2h3.json`](../../data/lexico/r2_h2h3.json)),
+([`data/lexico/r2_h1.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h1.json), deconfounded panel
+[`data/lexico/r2_h1_panel.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h1_panel.json)), survival and
+inheritance edges ([`data/lexico/r2_h2h3.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h2h3.json)),
 reviewed parser checkpoint
-([`src/data/review/r2-checkpoint-review.json`](../../src/data/review/r2-checkpoint-review.json))
+([`src/data/review/r2-checkpoint-review.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/review/r2-checkpoint-review.json))
 the promotion experiment
-([`data/lexico/r2_promotion_experiment.json`](../../data/lexico/r2_promotion_experiment.json)),
+([`data/lexico/r2_promotion_experiment.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_promotion_experiment.json)),
 and the corpus-scale SKD/VCP sense/citation-fusion count
-([`data/lexico/r2_kosa_fusion.json`](../../data/lexico/r2_kosa_fusion.json), §7).
+([`data/lexico/r2_kosa_fusion.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_kosa_fusion.json), §7).
 Companion to *Redundancy and Descent*
-([`paper_redundancy_and_descent.md`](paper_redundancy_and_descent.md)) and *Two
-Citation Registers* ([`paper_citation_registers.md`](paper_citation_registers.md)).
+([`paper_redundancy_and_descent.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_redundancy_and_descent.md)) and *Two
+Citation Registers* ([`paper_citation_registers.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_citation_registers.md)).
 All counts are reproducible from committed data and the local `csl-orig` sources;
 numbers herein are the 2026-06 snapshot, including the confound-controlled H1 and H2
 analyses (`h1Controlled` with `withinPrimaryEdge`, `h2ThresholdSensitivity`) and the
@@ -117,7 +119,7 @@ every count cited here regenerates from them with the committed build scripts.
 | 1928 | Schmidt (SCH) | Petersburg | 29,125 | 1.14 |
 | 1957 | Apte (AP) | Apte | 90,654 | 1.73 |
 
-*Source: [`r2_h1.json`](../../data/lexico/r2_h1.json), regenerated from csl-orig by
+*Source: [`r2_h1.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h1.json), regenerated from csl-orig by
 `npm run build-r2-h1`.*
 
 ## 3. Method
@@ -241,7 +243,7 @@ split compounds into separate headwords — Monier-Williams 1899's 286,560 entri
 dilute its ratio (1.15) far below its own 1872 edition (2.85), a headword-policy
 artefact, not a temporal one. A fixed panel of 28–30 simple nouns present across
 the corpus removes the artefact; the panel correlation is **r = 0.093**
-([`r2_h1_panel.json`](../../data/lexico/r2_h1_panel.json)) — the conclusion stands.
+([`r2_h1_panel.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h1_panel.json)) — the conclusion stands.
 Neither correlation is significant (corpus *r* = 0.036, *t* = 0.11, df = 9; panel
 *r* = 0.093, *t* = 0.49, df = 28; both *p* ≫ 0.05) — but with only eleven
 dictionaries across seven families, the pooled correlation is *underidentified*, not a
@@ -257,7 +259,7 @@ negative (*r* = −0.11). Inflation is therefore not merely undetected but contr
 in direction: where inheritance is measured within a tradition, later editions
 enumerate no more finely — and usually less finely — than earlier ones (Apte 1957 does
 not enumerate more finely than Apte 1890). These controls are committed as the
-`h1Controlled` block of [`r2_h1_panel.json`](../../data/lexico/r2_h1_panel.json).
+`h1Controlled` block of [`r2_h1_panel.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h1_panel.json).
 
 The corrective matters for practice. Any cross-dictionary measure normalised "per
 sense" — definition length, citation density, equivalence counts — silently encodes
@@ -280,7 +282,7 @@ that one edge, and the clean test is *within* it, where the parsing of the other
 irrelevant. On Apte 1890 → 1957, cited senses survive at **0.768** (n = 82) against
 **0.661** for uncited senses (n = 221) — a two-proportion *z* = 1.80, *p* = 0.07,
 **not significant** (`h2Controlled.withinPrimaryEdge` in
-[`r2_h2h3.json`](../../data/lexico/r2_h2h3.json)).
+[`r2_h2h3.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h2h3.json)).
 
 A pooled model that borrows strength across edges does not rescue the result; it
 misleads. Fitting survival as a logistic regression (`survived ~ cited + position +
@@ -291,7 +293,7 @@ changing how an *unrelated* edge is parsed (the Yates semicolon promotion, §3) 
 it from ≈ 1.75 to ≈ 3.0 without touching a single cited sense, so the pooled number is
 an artifact of that imbalance, not a citation effect, and I do not rely on it — the
 full grid is in `h2Controlled` in
-[`r2_h2h3.json`](../../data/lexico/r2_h2h3.json). Two real confounds compound the
+[`r2_h2h3.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h2h3.json). Two real confounds compound the
 point — senses nested within a lemma share a fate, and citation is itself entangled
 with sense centrality (early position, longer gloss, cross-family recurrence) — so
 even the within-edge gap is an upper bound. The pattern is invariant to the 0.15
@@ -325,7 +327,7 @@ counts fail: it measures composition, not the quantity it names.
 | Wilson 1832 → Yates 1846 | 9 → 5.7 | −3.3 | 0.256 | condensation (semicolon-aware count) |
 | Apte 1890 → Apte 1957 | 10.8 → 7.8 | −3.07 | 0.565 | revision, condensation, no expansion |
 
-*Source: [`r2_h2h3.json`](../../data/lexico/r2_h2h3.json), regenerated by
+*Source: [`r2_h2h3.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/r2_h2h3.json), regenerated by
 `npm run build-r2-h2h3`. The Yates count uses the reviewer-adjudicated semicolon-aware
 counter (§3); the earlier 9 → 1 was an inline-number extraction artifact.*
 
@@ -337,7 +339,7 @@ Wilson → Yates edge once read as a dramatic 9 → 1 abridgement, but that figu
 extraction artifact: Yates marks its senses with semicolons rather than the numbered
 markers the Western-explicit parser expects, so the inline-number splitter collapsed
 every entry to one. A source probe
-([`verify-yat-sense-artifact.mjs`](../../scripts/verify-yat-sense-artifact.mjs)) and a
+([`verify-yat-sense-artifact.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/verify-yat-sense-artifact.mjs)) and a
 reviewed parser promotion (§3) re-count Yates by semicolon segmentation — about 5.7
 distinct meanings per panel lemma, with lone adjectival entries kept whole to avoid
 over-splitting synonym lists. Counted correctly, Yates is a **genuine condensation**
@@ -363,7 +365,7 @@ listed synonyms (*puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ*) and the citation
 sit in the same *iti*-unit, so definition and attestation are structurally fused.
 
 A corpus-scale count generalises this contrast — and complicates it. A new read-only
-build ([`build-r2-kosa-fusion.mjs`](../../scripts/build-r2-kosa-fusion.mjs),
+build ([`build-r2-kosa-fusion.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-r2-kosa-fusion.mjs),
 `data/lexico/r2_kosa_fusion.json`) walks every SKD and VCP record, classifying each
 *iti*-unit as authority-terminal (a substantial run of definitional content closes in
 its own authority citation, the *dharma*-in-SKD pattern), separable (the unit is
@@ -415,7 +417,7 @@ not on others.
   (`FUSION_MIN_CONTENT_CHARS` in `build-r2-kosa-fusion.mjs`) is a documented threshold,
   not a calibrated one. A stratified ~100-unit SKD sample has been drawn for human
   citational-vs-grammatical adjudication
-  ([`REVIEW_SKD_ITI_ADJUDICATION.html`](REVIEW_SKD_ITI_ADJUDICATION.html)); that
+  ([`REVIEW_SKD_ITI_ADJUDICATION.html`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/REVIEW_SKD_ITI_ADJUDICATION.html)); that
   adjudication is outstanding and will sharpen or revise the 53 %/78 % figures in §7.
 - The H2 citation-survival signal rests on a single edge: all 82 cited ancestor
   senses are on Apte 1890 → 1957 (Wilson 1832 carries no `<ls>` on these edges), where the
@@ -511,3 +513,5 @@ paper.)
 Rundell; Hausmann et al.; Vogel; Wiegand; Zgusta). Still to confirm before submission:
 page range and DOI for Pagel, Atkinson & Meade (2007) and Petersen et al. (2012), as
 flagged inline above.*
+
+_Dr. Mārcis Gasūns_

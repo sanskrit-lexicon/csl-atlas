@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Checkpoint Decisions
 
 Date: 2026-06-06
@@ -22,7 +24,7 @@ scholar-reviewed sense decision layer.
 
 ## How To Review
 
-Use [`R2_CHECKPOINT_REVIEW.md`](R2_CHECKPOINT_REVIEW.md) for the source-linked
+Use [`R2_CHECKPOINT_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_CHECKPOINT_REVIEW.md) for the source-linked
 worksheet and edit only the matching item in
 `src/data/review/r2-checkpoint-review.json`.
 
@@ -78,3 +80,5 @@ The stable `reviewId` for each row is its `diagnosticId`, for example
 - Do not treat proposed parser labels as accepted sense decisions.
 - Do not optimize rows to match archive counts; use archive parity only as a
   comparison/control signal.
+
+_Dr. Mārcis Gasūns_

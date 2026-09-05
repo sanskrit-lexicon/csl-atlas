@@ -1,3 +1,5 @@
+_Created: 11-07-2026 · Last updated: 05-09-2026_
+
 # Practice Checks For csl-atlas
 
 Use these checks for manuscript, article, changelog, publication-index, and generated documentation PRs.
@@ -36,3 +38,5 @@ Before merging:
 - [ ] Generated output has a command or provenance note.
 - [ ] Reviewer is asked one concrete registration or navigation question.
 - [ ] Dependent PRs include merge and retarget plan.
+
+_Dr. Mārcis Gasūns_

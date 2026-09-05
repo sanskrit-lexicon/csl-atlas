@@ -1,3 +1,5 @@
+_Created: 06-06-2026 · Last updated: 05-09-2026_
+
 # R2 Rebuild Contract
 
 Date: 2026-06-05
@@ -74,7 +76,7 @@ AE reverse-dictionary overmatching with equivalent-position rank counts, and
 splits some PWG/PWK/BEN source markers more finely than the archived static
 explorer. Use the drift table in
 `r2_source_anchor_summary.json` and the classified worklist in
-[`R2_PARSER_DIAGNOSTICS.md`](R2_PARSER_DIAGNOSTICS.md) to decide which parser
+[`R2_PARSER_DIAGNOSTICS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_PARSER_DIAGNOSTICS.md) to decide which parser
 family to tighten next.
 
 ## Required Outputs
@@ -180,16 +182,16 @@ Each sense row should be compact and deterministic:
 
 ## Current Decision Queue
 
-The generated packet layer in [`R2_REVIEW_PACKETS.md`](R2_REVIEW_PACKETS.md)
+The generated packet layer in [`R2_REVIEW_PACKETS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REVIEW_PACKETS.md)
 is the current implementation queue. All five packets now have
 source-inspected proposal layers and a machine-only drift explanation packet.
 These labels are machine-proposed parser labels, not scholar-reviewed sense
 decisions or `reviewedValue` fields. The current no-human action is
-[`R2_DRIFT_EXPLANATION.md`](R2_DRIFT_EXPLANATION.md), which explains all 70
+[`R2_DRIFT_EXPLANATION.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_DRIFT_EXPLANATION.md), which explains all 70
 diagnostic rows and marks the checkpoint rows still `needs-review`. The next
 human action is checkpoint review, guided by
-[`R2_CHECKPOINT_DECISIONS.md`](R2_CHECKPOINT_DECISIONS.md) and
-[`R2_CHECKPOINT_REVIEW.md`](R2_CHECKPOINT_REVIEW.md), keeping parser promotion
+[`R2_CHECKPOINT_DECISIONS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_CHECKPOINT_DECISIONS.md) and
+[`R2_CHECKPOINT_REVIEW.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_CHECKPOINT_REVIEW.md), keeping parser promotion
 deferred until human decisions exist.
 
 | Order | Packet | Rows | High priority | Decision before code promotion |
@@ -202,11 +204,11 @@ deferred until human decisions exist.
 
 Proposal layers:
 
-- [`R2_DIV_SOURCE_SCOPE_LABELS.md`](R2_DIV_SOURCE_SCOPE_LABELS.md)
-- [`R2_MARKER_RUN_SCOPE_LABELS.md`](R2_MARKER_RUN_SCOPE_LABELS.md)
-- [`R2_AE_REVERSE_BAND_LABELS.md`](R2_AE_REVERSE_BAND_LABELS.md)
-- [`R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md)
-- [`R2_SOURCE_GAP_CONTROL_LABELS.md`](R2_SOURCE_GAP_CONTROL_LABELS.md)
+- [`R2_DIV_SOURCE_SCOPE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_DIV_SOURCE_SCOPE_LABELS.md)
+- [`R2_MARKER_RUN_SCOPE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_MARKER_RUN_SCOPE_LABELS.md)
+- [`R2_AE_REVERSE_BAND_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_AE_REVERSE_BAND_LABELS.md)
+- [`R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_INDIGENOUS_ITI_AUTHORITY_LABELS.md)
+- [`R2_SOURCE_GAP_CONTROL_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_SOURCE_GAP_CONTROL_LABELS.md)
 
 ## Acceptance Gates
 
@@ -252,6 +254,8 @@ any public R2 claim changes. Broaden beyond `gam`, `dharma`, `rama`, `iti`, and
 payloads from source.
 
 The current baseline experiment note is
-[`R2_REBUILD_EXPERIMENT.md`](R2_REBUILD_EXPERIMENT.md). It records the stable
+[`R2_REBUILD_EXPERIMENT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_REBUILD_EXPERIMENT.md). It records the stable
 rerun baseline, the packet gates, and the promotion rule for the first parser
 pass.
+
+_Dr. Mārcis Gasūns_

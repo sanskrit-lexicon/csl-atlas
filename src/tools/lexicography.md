@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Dictionary genealogy - first findings
 toc: true
@@ -155,3 +157,5 @@ For each pair of dictionaries (A, B):
 UPGMA cladogram from the distance matrix is in [`data/sanhw1_cladogram.newick`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/sanhw1_cladogram.newick).
 
 [← back to overview](../)
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Grammar Without Tags: The Verbal-Root Microstructure of the Indigenous Sanskrit *Kośa*
 
 *Draft manuscript for submission to a metalexicography venue (target: International
@@ -307,3 +309,5 @@ csl-orig, 10 dictionaries) and the ŚKD/VCP indigenous-microstructure study (A30
 with this paper on the VCP/SKD derivational structure; the shared datasets are A35's
 per-dictionary `*_etymology.tsv` and the root crosswalks. This paper claims the
 *anubandha*/root-grammar layer; derivational affixes are A35's.
+
+_Dr. Mārcis Gasūns_

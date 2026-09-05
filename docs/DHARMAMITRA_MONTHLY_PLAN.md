@@ -1,12 +1,14 @@
+_Created: 14-06-2026 · Last updated: 05-09-2026_
+
 # Dharmamitra integration — monthly plan
 
 > Supporting specification. The governing delivery order is
-> [`ROADMAP_2026_2027.md`](ROADMAP_2026_2027.md).
+> [`ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ROADMAP_2026_2027.md).
 
 A detailed, sequenced programme for integrating [Dharmamitra](https://github.com/dharmamitra)
 assets into the Cologne dictionaries via this atlas. Companion to
-[DHARMAMITRA_INTEGRATION.md](DHARMAMITRA_INTEGRATION.md) (the architecture + opportunity list)
-and [MITRA_ALIGNER_HANDOFF.md](MITRA_ALIGNER_HANDOFF.md) (the DTB spec).
+[DHARMAMITRA_INTEGRATION.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DHARMAMITRA_INTEGRATION.md) (the architecture + opportunity list)
+and [MITRA_ALIGNER_HANDOFF.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MITRA_ALIGNER_HANDOFF.md) (the DTB spec).
 
 Dates are relative ("Month 1" = the first month work resumes). Each month is scoped to land at
 least one mergeable PR with a measurable definition of done. Everything obeys the
@@ -77,12 +79,12 @@ highest-value month.
 ## Month 2 — DTB link-targets pilot (mitra-aligner)
 
 **Objective:** prove the citation→passage pipeline end-to-end for **one** source. Driven by
-[MITRA_ALIGNER_HANDOFF.md](MITRA_ALIGNER_HANDOFF.md).
+[MITRA_ALIGNER_HANDOFF.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MITRA_ALIGNER_HANDOFF.md).
 
 > **Pilot DONE (2026-06-14, PR #102) — and it reframed the problem.** The first source (Ṛgveda)
 > showed that the *high-value* link-target path needs **no alignment at all**: MW cites RV with
 > an **explicit locus** (`<ls>RV. v, 86, 5</ls>` = 5.86.5), so the link is just locus-parsing →
-> a stable digital-edition URL. [`build-citation-link-pilot.mjs`](../scripts/build-citation-link-pilot.mjs)
+> a stable digital-edition URL. [`build-citation-link-pilot.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-link-pilot.mjs)
 > parses MW's 15,916 RV citations and emits **3,996 distinct verse links** to **VedaWeb**
 > (`vedaweb.uni-koeln.de`, zero-padded `MMHHHVV` stanza id; a sampled link resolves 200) as a
 > `citation-link-target` review queue, range-checked against the RV maṇḍala/hymn structure.
@@ -93,7 +95,7 @@ highest-value month.
 > below. Remaining pilot work: a per-hymn verse-count table (tighten verse validation) and
 > extending to a non-explicit-locus source to exercise mitra-aligner proper.
 >
-> **link-splitting sub-task DONE (2026-06-14, PR #104) — near-empty.** [`build-citation-link-split.mjs`](../scripts/build-citation-link-split.mjs)
+> **link-splitting sub-task DONE (2026-06-14, PR #104) — near-empty.** [`build-citation-link-split.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-link-split.mjs)
 > audited all **311,933** MW `<ls>` citations: only **2** carry a combined-reference signal
 > (`Bālar. iv, 11; x.` semicolon; `PadmaP., Svargakh. 1-5.` range) — the Cologne digitizers
 > already atomised citations into one `<ls>` per reference. So link-splitting needs **no
@@ -125,7 +127,7 @@ corpus" and the alignment slips to Month 3.
 **Objective:** push source-layer dating from coarse bands to per-source anchoring, and add
 corpus-frequency evidence from the dharmanexus datasets.
 
-> **Per-siglum dating DONE (2026-06-14, PR #108).** [`build-source-date-anchor.mjs`](../scripts/build-source-date-anchor.mjs)
+> **Per-siglum dating DONE (2026-06-14, PR #108).** [`build-source-date-anchor.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-source-date-anchor.mjs)
 > joins the #90 chronology snapshot to the individual `<ls>` sigla and attaches a concrete date
 > to each it can confidently resolve — **67 sigla dated** (15 exact / 52 unambiguous-prefix),
 > including **29 of the 449 `unknown` sources** now carrying a date proposal. Two findings shaped
@@ -166,7 +168,7 @@ format must be verified before redistribution.
 StarDict/GoldenDict format, learning from
 [dharmamitra-stardict-dictionaries](https://github.com/dharmamitra/dharmamitra-stardict-dictionaries).
 
-> **MW StarDict export DONE (2026-06-14, PR #112) — first slice.** [`build-stardict-export.mjs`](../scripts/build-stardict-export.mjs)
+> **MW StarDict export DONE (2026-06-14, PR #112) — first slice.** [`build-stardict-export.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-stardict-export.mjs)
 > writes a valid StarDict (`.ifo`/`.idx`/`.dict`) of all **286,560 MW entries** (IAST headwords;
 > definitions cleaned from the CDSL markup — `<s>`/`{#…#}` → IAST, `<lex>`/`<ls>` kept,
 > `<info>` dropped; HTML, `sametypesequence=h`). Output (`stardict-dist/`, .dict 46 MB) is
@@ -180,7 +182,7 @@ StarDict/GoldenDict format, learning from
 - Add `build-stardict-export.mjs` (or Python via `pyglossary`) that reads `csl-orig`/atlas JSON
   and writes `.ifo/.idx/.dict` (or a `pyglossary`-driven build).
 - Ship with an explicit *"generated, verify before scholarly use"* disclaimer, matching the
-  atlas [evidence-labels](EVIDENCE_LABELS.md) discipline.
+  atlas [evidence-labels](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) discipline.
 - CI artifact + a download page; CC-BY-SA-4.0 attribution to CDSL.
 
 **Deliverables:** a reproducible StarDict build for ≥1 dictionary (MW first) as a release
@@ -196,7 +198,7 @@ work** — good buffer month if GPU/source-text access slips.
 **Objective:** replace the off-the-shelf eng-vs-skt classifier (PWG markup check, #95, is a
 low-precision demonstrator) with a model that actually separates German from Sanskrit.
 
-> **Training scaffold DONE + proven (2026-06-14, PR #115).** [`scripts/train-langdetect-german.py`](../scripts/train-langdetect-german.py)
+> **Training scaffold DONE + proven (2026-06-14, PR #115).** [`scripts/train-langdetect-german.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/train-langdetect-german.py)
 > is runnable, not just scaffolding: PWG **self-labels** the data (`{#…#}` = Sanskrit,
 > `{%…%}` = German), so it trains a per-language SentencePiece model (CPU, fast) and classifies
 > by minimum fertility — exactly detect-language's method, plus a German model. Measured on a
@@ -237,8 +239,8 @@ conveniently self-labeling, which de-risks it. Could be deferred if lower priori
 
 **Objective:** measure quality, add one new ByT5 capability, and harden the programme.
 
-> **Benchmark harness DONE (2026-06-14, PR #121).** [`scripts/build-benchmark-report.mjs`](../scripts/build-benchmark-report.mjs)
-> emits a leaderboard ([`src/data/benchmark-report.json`](../src/data/benchmark-report.json)) over
+> **Benchmark harness DONE (2026-06-14, PR #121).** [`scripts/build-benchmark-report.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-benchmark-report.mjs)
+> emits a leaderboard ([`src/data/benchmark-report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/benchmark-report.json)) over
 > all **14 review queues**: machine precision = `reviewed-ok / (reviewed-ok + reviewed-corrected)`
 > on the human-gold subset, plus coverage. It also surfaces the one real model benchmark — the
 > German-aware langdetect held-out accuracy (0.942 → 0.995, #115). Today **147 gold items** (3
@@ -257,7 +259,7 @@ conveniently self-labeling, which de-risks it. Could be deferred if lower priori
   detection used in the gender cross-check's `head_gender`).
 - **Consolidation:** refactor the langdetect importer onto a shared SPM helper if a second SPM
   use appears; add a CI check that re-runs `validate-review-reports`; refresh
-  [DHARMAMITRA_INTEGRATION.md](DHARMAMITRA_INTEGRATION.md) status; consider a TEI/OntoLex export
+  [DHARMAMITRA_INTEGRATION.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DHARMAMITRA_INTEGRATION.md) status; consider a TEI/OntoLex export
   of the review decisions to `csl-standards`.
 
 **Deliverables:** a benchmark report; a dependency-parse pilot or a documented decision to skip;
@@ -298,3 +300,5 @@ dependency** — pure upside. Month 2 (DTB) is highest *strategic* value but gat
 corpora, so it runs second and can slip without stalling the programme. Months 3–6 are ordered
 to keep an unblocked, independently-valuable task available each month (chronology, distribution,
 model-quality, measurement), so the programme never idles waiting on one blocker.
+
+_Dr. Mārcis Gasūns_

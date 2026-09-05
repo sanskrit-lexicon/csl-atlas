@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Xref Source-Check Review Worksheet
 
 Date: 2026-07-26 · Source: `data/lexico/xref_source_check_packet.json`
@@ -244,3 +246,4 @@ Date: 2026-07-26 · Source: `data/lexico/xref_source_check_packet.json`
 - ⚠ Exact edge missing in: MW — needs a manual source read.
 - PWG [L36453](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L182205) (vgl): {#Da/rmya#}¦ (von {#Darma#}) <lex>adj.</lex> = {#DarmeRa prApyam#} und {#DarmAdanapetam#} <ls>P. 4,4,91</ls>. <ls n="P. 4,4,">92</ls>. <div n="1"> 1〉 {%gesetzmä…
 
+_Dr. Mārcis Gasūns_

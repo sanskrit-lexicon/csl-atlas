@@ -1,3 +1,5 @@
+_Created: 08-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Correction loci
 toc: false
@@ -417,3 +419,5 @@ display(csvDownloadButton(calPressure, "correction-qa-pressure-calibration.csv")
   corrector stats, and trends stay with
   [`csl-observatory`](https://github.com/sanskrit-lexicon/csl-observatory)'s
   event data, and the change-file parser stays in csl-corrections.
+
+_Dr. Mārcis Gasūns_
