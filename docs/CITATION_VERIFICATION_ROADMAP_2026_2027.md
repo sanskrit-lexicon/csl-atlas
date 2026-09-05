@@ -13,11 +13,11 @@ dictionaries (PWG, later pw/PWK) and Monier-Williams against digital corpora —
 resolution censuses on the model of the executed
 [`HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md)
 (H488, 10-07-2026), plus a new per-case lane verifying Böhtlingk's *own explicit corrections*.
-Authored audit-first (`--no-interview`): the genuine forks are in [§6 Decisions needed](#6-decisions-needed--rulings-pending),
+Authored audit-first (`--no-interview`): the genuine forks are in [§6 Decisions needed](#6-decisions-needed-rulings-pending),
 each with a marked recommendation; they are mirrored to
 [`Uprava/GTD_NEXT_ACTIONS.md`](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md) as `@DECIDE`.
 Amended 11-07-2026 (H661) with the ACL-lineage method uplift — four rulings R1–R4 taken
-interactively by MG, see [§2a](#2a-acl-lineage-method-uplift--rulings-r1r4-11-07-2026).
+interactively by MG, see [§2a](#2a-acl-lineage-method-uplift-rulings-r1r4-11-07-2026).
 
 ## 0. Worked examples (why this program)
 
@@ -234,7 +234,7 @@ scan URLs) — recording at which tier the verdict landed.
 
 Audit-derived roadmap: D1's recommendation runs as plan-of-record (clearly dominant); D2–D3
 remain parked as GTD `@DECIDE` and do not block W1; D4 was ruled 11-07-2026 (see R3 in
-[§2a](#2a-acl-lineage-method-uplift--rulings-r1r4-11-07-2026)).
+[§2a](#2a-acl-lineage-method-uplift-rulings-r1r4-11-07-2026)).
 
 **D1 — wave order.** *Plan-of-record: MBH + Sprüche in parallel (W1a ∥ W1b).* MBH is the
 user-named flagship with both worked examples; Sprüche is near-zero setup with a typed

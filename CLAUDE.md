@@ -37,7 +37,7 @@ exists (`build-mw-depth` / `validate-mw-depth`, `build-dict-comparison` /
 |---|---|
 | [`src/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/src) | Observable pages (`.md`), generated `src/data/*.json`, `src/lib/`, tool pages, dict chapters |
 | [`scripts/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/scripts) | Build/import/validate; shared parsers in `scripts/lib/` |
-| [`docs/ARCHITECTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ARCHITECTURE.md) · [`docs/BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/BOUNDARY_RULES.md) | Scope — read first |
+| [`docs/ARCHITECTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/ARCHITECTURE.md) · [`docs/BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/BOUNDARY_RULES.md) | Scope — read first |
 | [`data/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data) | Raw/intermediate inputs (not the generated `src/data/` copies) |
 | `dist/` | Build output — generated, gitignored |
 

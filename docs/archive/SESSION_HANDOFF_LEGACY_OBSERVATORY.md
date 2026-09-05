@@ -172,8 +172,8 @@ Reference data (read as needed):
 ## 5. The 4-8 prompting questions — asked and answered 2026-05-16
 
 **Status**: ✅ Completed. Both rounds (4+4) asked via `AskUserQuestion` and answered by M. Gasūns. Captured at:
-- [MICROSTRUCTURE-MACROSTRUCTURE.md §5.2](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md#52-new--added-by-author-captured-2026-05-16-prompting-round-1) — Round 1 (lineage + structure)
-- [PUBLICATIONS.md §6.2](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PUBLICATIONS.md#62-additional-research-questions-captured-2026-05-16-prompting-round-2) — Round 2 (publication strategy + methodology)
+- [MICROSTRUCTURE-MACROSTRUCTURE.md §5.2](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md#52-new-added-by-author-captured-2026-05-16-prompting-round-1) — Round 1 (lineage + structure)
+- [PUBLICATIONS.md §6.2](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PUBLICATIONS.md) — Round 2 (publication strategy + methodology)
 
 The 8 prompts are preserved below for reference / re-use.
 

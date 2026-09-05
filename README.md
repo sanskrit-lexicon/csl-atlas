@@ -115,7 +115,7 @@ Reader-facing:
 Architecture and planning:
 
 - [Architecture](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/ARCHITECTURE.md) · [Use cases](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/USE_CASES.md) · [Reader/developer critique](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/READER_DEVELOPER_CRITIQUE.md)
-- [Use-case page roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/USE_CASE_PAGE_ROADMAP.md) — page order, trust block policy, and analysis sequence
+- [Use-case page roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/archive/USE_CASE_PAGE_ROADMAP.md) — page order, trust block policy, and analysis sequence
 - [Chart trust template](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CHART_TRUST_TEMPLATE.md) — required evidence/limitations/validation/owner block
 - [MW Quantitative Depth handoff](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md) (Phase 1)
 - [Dictionary comparison plan](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
@@ -125,7 +125,7 @@ Architecture and planning:
 - DCS migration material now lives in `VisualDCS/docs/csl-atlas-migration/`; active corpus work belongs outside this repo
 - [Review reports](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md) — shared review shape and status vocabulary
 - [Review queue proofs](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_QUEUE_PROOFS.md) — what each review queue proves before procedure
-- [Review release roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_RELEASE_ROADMAP.md) · [Release checklist](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RELEASE_CHECKLIST.md) · [Light review sprint](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LIGHT_REVIEW_SPRINT.md)
+- [Review release roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/archive/REVIEW_RELEASE_ROADMAP.md) · [Release checklist](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RELEASE_CHECKLIST.md) · [Light review sprint](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LIGHT_REVIEW_SPRINT.md)
 - [Changelog](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CHANGELOG.md) — what changed and when
 
 ---

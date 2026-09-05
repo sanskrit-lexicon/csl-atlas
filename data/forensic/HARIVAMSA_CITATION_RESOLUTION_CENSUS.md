@@ -7,7 +7,7 @@ actually adjudicate whether one of those citations is **wrong**. It exists becau
 shared-erroneous-citation test ([`article_21_apparatus_not_errors.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/article_21_apparatus_not_errors.md) §6)
 resolved **1 of 587** refs against DCS, and because the remedy the paper offers in the same
 paragraph — "a vulgate↔critical verse concordance" — **cannot work**. See
-[§ Why a concordance cannot help](#why-a-concordance-cannot-help).
+§ Why a concordance cannot help.
 
 Companion to [`CITATION_TAGGING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/CITATION_TAGGING.md)
 and [`shared_rare_citations.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/shared_rare_citations.csv).
