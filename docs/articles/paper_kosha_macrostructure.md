@@ -1,4 +1,4 @@
-_Created: 13-06-2026 · Last updated: 05-09-2026_
+_Created: 13-06-2026 · Last updated: 06-09-2026_
 
 # Order Is the Dictionary: A Macrostructural Model of the Versified Synonymic *Kośa*
 
@@ -20,7 +20,9 @@ the 2026-06 snapshot and reproducible from committed data; every count was re-ve
 against the artifact in the 2026-07-03 referee pass
 ([A06_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A06_review_fable5.md));
 author-voice pass 2026-07-08, Fable 5 `claude-fable-5` — see
-[SIGNOFF_A06_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A06_author_pass.md).*
+[SIGNOFF_A06_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A06_author_pass.md);
+author-voice pass 06-09-2026, Fable 5.1 `claude-fable-5-1`
+([SIGNOFF_A06_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A06_author_pass.md), Pass 2).*
 
 **Mārcis Gasūns** · ORCID [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X) · gasyoun@ya.ru
 
@@ -31,28 +33,28 @@ author-voice pass 2026-07-08, Fable 5 `claude-fable-5` — see
 The versified synonymic *kośa* is the central genre of indigenous Sanskrit
 lexicography, yet it is invisible to every structural measure built for a European
 dictionary: it has no part-of-speech tags, no source-citation apparatus, no definitional
-prose — a microstructure detector scores it zero. I show that the zero is the point.
-The *kośa*'s lexicographic work is done entirely by its **macrostructure**: an
+prose, so a microstructure detector scores it zero. I show that the zero is the point.
+The *kośa*'s lexicographic work is done entirely by its macrostructure: an
 onomasiological (concept-ordered) hierarchy of *kāṇḍa* (book) → *varga* (section) →
 verse → synonym-set, in which to place a word *is* to define it. Measuring the four
 *kośa*s of the Cologne Digital Sanskrit Lexicon — Halāyudha's *Abhidhānaratnamālā*
 (ARMH) and Hemacandra's *Abhidhānacintāmaṇi* corpus (ABCH, ACPH, ACSJ) — I recover
-that macrostructure quantitatively and report four findings. **(1)** The two koshas
+that macrostructure quantitatively and report four findings. (1) The two koshas
 encode two *different* orderings of the same conceptual universe: ARMH runs by cosmic
 region (heaven → earth → nether-world → general → homonyms), ABCH by a hierarchy of
-beings (supreme-Jina → gods → mortals → animals → hell → general) — a **Jain**
+beings (supreme-Jina → gods → mortals → animals → hell → general) — a Jain
 signature, with the Arhats placed above the Brahmanical gods and the mass of the lexicon
-(811 of 1,965 records) in the *human* world. **(2)** The verse is the lexical unit and
-the synonym-set its payload: ARMH packs a mean of **9.2 synonyms per verse**, densest in
-the heaven-*kāṇḍa* (10.6), peaking at **56 names for Viṣṇu**, 47 for the Sun, 45 for
-Śiva — theonyms carry the largest sets. **(3)** The two koshas are digitized by
-**opposite** models — ARMH *explodes* one synonym per record (7,907 records), ABCH
-*groups* one concept per record (1,965 records / 4,619 lexemes) — so their entry counts
-are **incommensurable**, a concrete hazard for any corpus statistic that sums "entries"
-across koshas. **(4)** Hemacandra's lexicon carries a full gender apparatus over the
+(811 of 1,965 records) in the *human* world. (2) The verse is the lexical unit and
+the synonym-set its payload: ARMH packs a mean of 9.2 synonyms per verse, densest in
+the heaven-*kāṇḍa* (10.6), and peaks at 56 names for Viṣṇu, 47 for the Sun and 45 for
+Śiva: theonyms carry the largest sets. (3) The two koshas are digitized by
+opposite models: ARMH *explodes* one synonym per record (7,907 records), ABCH
+*groups* one concept per record (1,965 records / 4,619 lexemes). Their entry counts
+are therefore incommensurable, a concrete hazard for any corpus statistic that sums "entries"
+across koshas. (4) Hemacandra's lexicon carries a full gender apparatus over the
 macrostructure (masc. 7,015, neut. 3,110, fem. 2,524 lexeme tags, plus dual-gender
-combinations), and the supplementary koshas (ACPH, ACSJ) **inherit the six-*kāṇḍa*
-frame** of the parent. The macrostructural model is first-class lexicographic data that
+combinations), and the supplementary koshas (ACPH, ACSJ) inherit the six-*kāṇḍa*
+frame of the parent. The macrostructural model is first-class lexicographic data that
 no entry-level measure can see — the same convention-blindness, raised from the
 microstructure to the architecture of the work.
 
@@ -69,14 +71,14 @@ and, at each word, tells you the meanings. The classical Sanskrit *kośa* is the
 (on the semasiological/onomasiological division see Zgusta 1971; Svensén 2009).
 There is no alphabet, no headword-then-definition entry, no citation apparatus. The
 *Amarakośa*, the genre's exemplar, is 1,500 memorisable verses grouped by subject; to
-know that *vahni*, *agni* and *pāvaka* are synonyms is simply to find them strung
+know that *vahni*, *agni* and *pāvaka* are synonyms is to find them strung
 together in the fire-verse. The lexicographic act is the *placement*.
 
 This makes the *kośa* a stress test for digital metalexicography. Every structural
 measure the field has built — and that the companion papers in this series apply across
 the Cologne Digital Sanskrit Lexicon (CDSL) — keys on a European convention: a
 part-of-speech tag, an `<ls>` source siglum, a `<div>` sense block. The *kośa* has none
-of these, and so reads as **empty** under all of them. The project records this as the
+of these, and so reads as empty under all of them. The project records this as the
 *zero-meaning* rule: a zero under a convention-specific detector measures the absence of
 that convention, not the absence of content. P4 demonstrated the rule for the indigenous
 *micro*structure (the verbal-root apparatus). This paper demonstrates it for the
@@ -103,11 +105,11 @@ CDSL) is the prototype; at the 2026-06 snapshot analysed here the CDSL held four
 (Table 1), headed by the two I
 analyse: Halāyudha's *Abhidhānaratnamālā* (**ARMH**, ~10th c.) and Hemacandra's
 *Abhidhānacintāmaṇi* (**ABCH**, ~12th c.), together with the latter's two supplements,
-the *-pariśiṣṭa* (**ACPH**) and the *-śiloñcha* (**ACSJ**). A **fifth** kośa — Bhoja's
+the *-pariśiṣṭa* (**ACPH**) and the *-śiloñcha* (**ACSJ**). A fifth kośa — Bhoja's
 *Nāmamālikā* (**NMMB**) — was digitized into the CDSL in 2026-06, after this snapshot:
 a grouped-model text whose `<syns>` lists carry *no* `<s>` wrapper (2,265 lexemes, 521
-unique), i.e. yet a *third* digitization variant of the same genre; it is out of scope
-here and queued for the next revision, and it independently reinforces §4.3's warning.
+unique), that is, a *third* digitization variant of the same genre. It is out of scope
+here and queued for the next revision, and it independently reinforces the warning of §4.3.
 
 **Table 1.** The four CDSL koshas.
 
@@ -122,7 +124,7 @@ These koshas matter to the wider CDSL lineage: the Fort William College pandits 
 Wilson's (WIL) English sense-divisions from exactly this kosha tradition, and those
 divisions descend into Monier-Williams *[author to verify against Wilson's 1819
 preface, which documents the kosha-based compilation, before submission]*. The *kośa*'s macrostructure is, in that sense,
-an ancestor of the European microstructure — which is one more reason it must be
+an ancestor of the European microstructure, which is one more reason it must be
 measured on its own terms rather than scored zero.
 
 ### 2.2 Why a microstructure detector scores them zero
@@ -131,14 +133,14 @@ The koshas carry none of the European entry apparatus. ARMH's "entry" is a fragm
 verse; ABCH's is a synonym-list. There is no `<lex>`, no `<ls>`, no definitional prose
 to parse. The dictionary pages in this atlas already flag the koshas as
 "Common-block framework: **Not applicable** (verse-synonym genre)." The content is real
-and dense; it is simply *located in the arrangement*, which is what I now measure.
+and dense; it is *located in the arrangement*, which is what I now measure.
 
 ## 3. Data and method
 
 I measure the macrostructure directly from the canonical `csl-orig` source files with a
 stdlib-only extractor ([`m6_kosha_macrostructure.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m6_kosha_macrostructure.py)),
 which detects each kosha's encoding model and recovers its hierarchy. The two koshas use
-**opposite digitization models**, and recognising this is itself part of the method:
+opposite digitization models, and recognising this is itself part of the method:
 
 - **ARMH — exploded.** Each synonym is its own `<L>` record carrying a verse locator
   `<vn>` = *kāṇḍa.section.subsection.verse*; the synonym-set is reconstructed by grouping
@@ -160,20 +162,20 @@ counts. The numbers below are emitted to
 
 ### 4.1 Two orderings of one universe — and a Jain signature
 
-Both koshas are onomasiological, but they order the conceptual universe **differently**
-(Table 2). ARMH runs by **cosmic region** — *svarga* (heaven) → *bhūmi* (earth) →
+Both koshas are onomasiological, but they order the conceptual universe differently
+(Table 2). ARMH runs by cosmic region — *svarga* (heaven) → *bhūmi* (earth) →
 *pātāla* (the nether/oceanic region, opening with *vaḍavāmukha*, the submarine fire) →
-*sāmānya* (general) → *anekārtha* (homonyms). Hemacandra's ABCH runs by a **hierarchy of
-beings** — *devādhideva* (the supreme Jinas) → *deva* (gods) → *martya* (mortals) →
+*sāmānya* (general) → *anekārtha* (homonyms). Hemacandra's ABCH runs by a hierarchy of
+beings — *devādhideva* (the supreme Jinas) → *deva* (gods) → *martya* (mortals) →
 *tiryak* (animals) → *naraka* (hell-beings) → *sāmānya* (general), closed by an
 *avyaya-varga* of indeclinables.
 
-Two things are legible in the ordering. First, it is **Jain**: ABCH places the
+Two things are legible in the ordering. First, it is Jain: ABCH places the
 *devādhideva-kāṇḍa* — the Arhats and Tīrthaṅkaras — *above* the Brahmanical gods, exactly
 inverting the Amarakośa's *svarga*-first cosmology. The macrostructure encodes the
 worldview. Second, the *order* is theological but the *mass* is anthropocentric: the
-**martya- (human) *kāṇḍa* holds 811 of ABCH's 1,965 records** — more than gods (271+41)
-and animals (602) — while the hell-*kāṇḍa* musters only **6**. A *kośa* is a map of what
+martya- (human) *kāṇḍa* holds 811 of ABCH's 1,965 records, more than gods (271+41)
+and animals (602), while the hell-*kāṇḍa* musters only 6. A *kośa* is a map of what
 its culture had the most words for, and that is the human world.
 
 **Table 2.** Macrostructure of the two principal koshas (records per *kāṇḍa*).
@@ -191,32 +193,32 @@ its culture had the most words for, and that is the human world.
 
 ### 4.2 The verse is the unit; the synonym-set is the payload
 
-In ARMH the lexical unit is the verse: **860 verse-locators** carry the **7,907**
-synonym-records, a mean of **9.2 synonyms per verse** (median 8). Density is highest in
-the heaven-*kāṇḍa* (**10.6** per verse) and lowest on earth (8.6) — the gods attract the
-most names. The peak is emphatic: the single largest synonym-set is **56 names for
-Viṣṇu** (*viṣṇu, kṛṣṇa, keśava, …*), followed by **47 for the Sun** (*āditya, savitṛ,
-bhāskara, …*) and **45 for Śiva** (*īśāna, paśupati, śaṅkara, …*). The theonymic richness
+In ARMH the lexical unit is the verse: 860 verse-locators carry the 7,907
+synonym-records, a mean of 9.2 synonyms per verse (median 8). Density is highest in
+the heaven-*kāṇḍa* (10.6 per verse) and lowest on earth (8.6): the gods attract the
+most names. The peak is emphatic: the single largest synonym-set is 56 names for
+Viṣṇu (*viṣṇu, kṛṣṇa, keśava, …*), followed by 47 for the Sun (*āditya, savitṛ,
+bhāskara, …*) and 45 for Śiva (*īśāna, paśupati, śaṅkara, …*). The theonymic richness
 of devotional Sanskrit is directly visible as macrostructural density.
 
-One honest qualification: ARMH's fifth *kāṇḍa* is *anekārtha* — **homonymic**, not
+One qualification is needed. ARMH's fifth *kāṇḍa* is *anekārtha*, homonymic rather than
 synonymic. Its verses use the *…api…* ("X also [means] Y") formula, e.g.
 *"rudre'pi khaṇḍaparaśur vaiśravaṇe'py ekakuṇḍalaḥ…"* ("*khaṇḍaparaśu* also denotes Rudra;
 *ekakuṇḍala* also denotes Vaiśravaṇa…"). The flat `<vn>` digitization explodes these
 word + added-meaning pairs exactly as it explodes a synonym-set, so the per-verse figure
 for *kāṇḍa* 5 (9.3) counts lexemes, not synonyms. I therefore report the synonym density
-on the synonymic *kāṇḍa*s 1–4 (mean 9.18) and flag *kāṇḍa* 5 separately — the same
+on the synonymic *kāṇḍa*s 1–4 (mean 9.18) and flag *kāṇḍa* 5 separately: the same
 convention-awareness the genre demands, applied to its own internal sections.
 
 ### 4.3 Two digitization models, incommensurable counts
 
-The headline methodological result is that the **same genre is digitized two opposite
-ways** (Table 3). ARMH privileges the *headword* — one synonym, one record, alphabetically
-findable — and so reports **7,907 "entries."** ABCH privileges the *concept-group* — one
-verse-set, one record, preserving the onomasiological unit — and so reports **1,965
-"entries"** holding **4,619 lexemes**. Neither count is wrong; they measure different
-things. But it means **a corpus statistic that sums "entries" across koshas is summing
-incommensurable units** — ARMH's record is a lexeme, ABCH's is a synonym-set roughly nine
+The main methodological result is that the same genre is digitized in two opposite
+ways (Table 3). ARMH privileges the *headword* — one synonym, one record, alphabetically
+findable — and so reports 7,907 "entries." ABCH privileges the *concept-group* — one
+verse-set, one record, preserving the onomasiological unit — and so reports 1,965
+"entries" holding 4,619 lexemes. Neither count is wrong; they measure different
+things. But it means that a corpus statistic that sums "entries" across koshas is summing
+incommensurable units: ARMH's record is a lexeme, ABCH's a synonym-set roughly nine
 lexemes deep. Any density, coverage, or overlap figure computed over raw kosha
 record-counts is therefore an artifact of digitization policy, not of the texts. The unit
 must be normalised (to the lexeme, or to the verse) before koshas can be compared. The
@@ -235,7 +237,7 @@ so the hazard is real but, within this series, controlled.
 
 ### 4.4 The gender apparatus, and macrostructural inheritance
 
-Hemacandra's koshas carry a full **gender apparatus** layered over the macrostructure:
+Hemacandra's koshas carry a full gender apparatus layered over the macrostructure:
 every lexeme in ABCH is tagged for *liṅga* — masculine (*puM*, 7,015 tags), neuter
 (*klī* = *klība*, 3,110) and feminine (*strī*, 2,524), with dual-gender combinations
 (*puṃklī* "masc. and neut.", 385; *puṃstrī*, 122) and number (*dvi*, *ba*) where
@@ -244,12 +246,12 @@ relevant — 13,284 gendered tags in all, the rarer combinations (*puṃdvi* 39,
 dictionaries mark inconsistently and that P4 found encoded *indigenously* in the
 verbal-root lexica; here it rides on the synonym macrostructure, lexeme by lexeme.
 
-Finally, the macrostructure is **inherited within the Hemacandra corpus**: the
+Finally, the macrostructure is inherited within the Hemacandra corpus: the
 supplementary *-pariśiṣṭa* (ACPH) and *-śiloñcha* (ACSJ) reuse the parent's six-*kāṇḍa*
 frame intact (*devādhideva → deva → martya → tiryak → naraka → sāmānya*), adding gleaned
 material into the existing books rather than re-ordering. The frame is a stable
 intellectual object, transmitted across a textual tradition the way a European
-dictionary's alphabetisation is — and just as measurable.
+dictionary's alphabetisation is, and just as measurable.
 
 ## 5. Discussion
 
@@ -260,7 +262,7 @@ macro-/microstructure division in the sense of Hausmann and Wiegand 1989). In th
 *svarga-kāṇḍa* is to assert its meaning, its register and its synonymy in one stroke.
 A metalexicography that can only see microstructure cannot see this lexicography at all.
 The *zero-meaning* rule, established for the microstructure in P4, therefore reaches its
-strongest form here: the synonymic *kośa* is **100 % macrostructure**, and a zero under
+strongest form here: the synonymic *kośa* is 100 % macrostructure, and a zero under
 any entry-level detector is a statement about the instrument, never the text.
 
 **Incommensurable counts are a corpus hazard.** §4.3 is a caution for the whole CDSL
@@ -300,7 +302,7 @@ informative once measured: it encodes a cosmology (Brahmanical in Halāyudha, Ja
 Hemacandra), it concentrates its mass in the human world, it peaks at fifty-six names for
 a single god, it carries a complete gender apparatus, and it is transmitted intact across
 a textual tradition. The two koshas' opposite digitizations make their entry-counts
-incommensurable — a warning for any statistic that would sum them. The lesson is the
+incommensurable, a warning for any statistic that would sum them. The lesson is the
 series' lesson, raised one level: a zero is a question about the instrument, and the
 architecture of the word-hoard is data.
 
