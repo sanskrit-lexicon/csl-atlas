@@ -1,4 +1,4 @@
-_Created: 16-06-2026 · Last updated: 05-09-2026_
+_Created: 16-06-2026 · Last updated: 06-09-2026_
 
 # Three Axes of Descent: Separating Content, Convention, and Microstructure in Dictionary Inheritance
 
@@ -21,7 +21,8 @@ All numbers are the 2026-06 snapshot and reproducible from committed data; every
 was re-verified against the packet in the 2026-07-03 referee pass
 ([A03_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A03_review_fable5.md));
 author-voice pass 2026-07-11
-([SIGNOFF_A03_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A03_author_pass.md)).
+([SIGNOFF_A03_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A03_author_pass.md));
+author-voice pass 06-09-2026 ([SIGNOFF_A03_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A03_author_pass.md)).
 Author: Mārcis Gasūns, independent scholar
 ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru.*
 
@@ -31,17 +32,17 @@ Author: Mārcis Gasūns, independent scholar
 
 When one dictionary is said to "descend from" another, the claim bundles together at
 least three different relationships: that the later dictionary carries the earlier
-one's **word list**, that it follows the earlier one's **house conventions**, and that
-it organises an entry the same way at the **microstructural** level — citation style,
+one's word list, that it follows the earlier one's house conventions, and that
+it organises an entry the same way at the microstructural level — citation style,
 grammatical marking, sense layering. Computational stemmatics of dictionaries usually
 collapses these into a single similarity or containment score, and a single score
 cannot tell a copy from a re-encoding from a same-school dictionary that happens to
-share no words. We measure the three relationships as **separate axes** over thirteen
+share no words. We measure the three relationships as separate axes over thirteen
 documented inheritance edges of the Cologne Digital Sanskrit Lexicon: a *content* axis
 (directed headword containment), a *convention* axis (house-style fingerprint
 similarity with phylogenetic bootstrap support), and a *microstructure* axis (citation-
 and grammar-register distance plus sense-layer overlap). The axes cross-cut. The
-sharpest evidence is a **double dissociation on a single parent**: from the Petersburg
+sharpest evidence is a double dissociation on a single parent: from the Petersburg
 lexicon (PWG), the edge to Monier-Williams carries 89 % of PWG's headwords yet earns
 only 0.37 convention similarity and near-zero bootstrap support (0.013) — content
 without convention; while the edge to Schmidt shares barely 7 % of PWG's headwords yet
@@ -49,8 +50,8 @@ scores 0.68 convention similarity at 0.68 bootstrap support — convention witho
 content. A one-dimensional descent score would rank these two PWG edges as opposites of
 each other on whichever axis it happened to encode, and would mislabel both. We argue
 that dictionary inheritance must be reported as a vector, not a scalar; that headword
-containment is a **floor** for relatedness and never on its own proof of copying; and
-that convention and microstructure are **confounds** that the content axis must be read
+containment is a floor for relatedness and never on its own proof of copying; and
+that convention and microstructure are confounds that the content axis must be read
 against — the methodological discipline the empirical companions in this series each
 rely on. The thirteen edges, their axis readings, and the two high-content / low-
 convention focus rows are committed as a machine-reviewed packet; the readings are
@@ -69,18 +70,20 @@ Wilson, Monier-Williams stands on the Petersburg lexicon (a dependence establish
 philologically by Zgusta 1988 and recently re-examined by Hanneder 2020), Apte revises
 Apte — and digital lexicography has made such claims testable at scale by measuring how
 much two dictionaries share. But "share" is ambiguous, and the ambiguity is
-consequential; for textual descent generally, the case that transmission is
+consequential. Two dictionaries can share a word list without sharing a house style;
+they can share a house style without sharing words; and they can agree on both and
+still organise the inside of an entry — its citations, its grammar tags, its sense
+divisions — completely differently. A descent score that fuses these into one number
+cannot distinguish the cases, yet the cases are exactly what a historian of the
+dictionary wants to know. For textual descent generally, the case that transmission is
 multi-dimensional and resists a single tree has been made in digital stemmatology
-(Andrews and Macé 2013).
-Two dictionaries can share a word list without sharing a house style; they can share a
-house style without sharing words; and they can agree on both and still organise the
-inside of an entry — its citations, its grammar tags, its sense divisions — completely
-differently. A descent score that fuses these into one number cannot distinguish the
-cases, yet the cases are exactly what a historian of the dictionary wants to know.
+(Andrews and Macé 2013); the argument of this paper is that the same holds for
+dictionaries, and that the dimensions can be measured one at a time.
 
-This paper makes the separation explicit. We define three axes of inheritance and
-measure all three over a fixed set of thirteen dictionary edges whose genealogy is
-independently documented (Phase L0, §2). The axes are:
+The contribution of this paper is to make that separation explicit and measurable. We
+define three axes of inheritance and measure all three over a fixed set of thirteen
+dictionary edges whose genealogy is independently documented (Phase L0, §2). The axes
+are:
 
 - **Content** — does the descendant carry the ancestor's headwords? Measured as
   *directed* containment (what fraction of the parent's lemmas appear in the child),
@@ -121,15 +124,15 @@ behaviour enters the measurement; the packet is dictionary evidence only.
 
 ### 3.1 Content: directed headword containment
 
-Containment is **directional and size-confounded**, and both facts matter. From the
+Containment is directional and size-confounded, and both facts matter. From the
 Petersburg lexicon (106,083 headwords) to Monier-Williams (194,084 headwords), the
-intersection is 94,776 lemmas: that is **0.89 of PWG inside MW** but only **0.49 of MW
-inside PWG**, for a symmetric Jaccard of 0.46. The directed reading — almost all of
+intersection is 94,776 lemmas: that is 0.89 of PWG inside MW but only 0.49 of MW
+inside PWG, for a symmetric Jaccard of 0.46. The directed reading — almost all of
 Petersburg is present in Monier-Williams, which then roughly doubles it — is the
 informative one; the Jaccard alone would understate the parent-in-child signal and read
-as a middling 0.46. We therefore take **parent-in-child containment** as the content
-axis and keep Jaccard only as a caveat that flags size asymmetry. Crucially, high
-containment is a **floor** for relatedness, not proof of copying: two dictionaries of
+as a middling 0.46. We therefore take parent-in-child containment as the content
+axis and keep Jaccard only as a caveat that flags size asymmetry. And high
+containment is a floor for relatedness, not proof of copying: two dictionaries of
 the same language inevitably share the common core of the lexicon, so a high content
 score licenses the question "did the later one take its words from the earlier?"; it
 does not answer it. (The floor rule is stated once for the whole series in P1, §3.1;
@@ -152,10 +155,11 @@ The microstructure axis asks whether the *inside* of an entry is built the same 
 the H6 citation-and-grammar register distance (how far apart two dictionaries sit on
 the citation-density and grammar-marking axes that separate the lexicographic
 traditions) plus the overlap of the M1–M5 structural layers in the microstructure
-fingerprint — the *microstructure* in Wiegand's (1989) sense; on entry structure as a
-designed object of practical lexicography see Atkins and Rundell (2008). Two dictionaries can copy each other's words and house style and still
-recode the microstructure — change a citation convention, add or drop grammatical tags,
-re-divide senses — so this axis moves on its own.
+fingerprint. The term is Wiegand's (1989); for entry structure as a designed object of
+practical lexicography see Atkins and Rundell (2008). Two dictionaries can copy each
+other's words and house style and still recode the microstructure — change a citation
+convention, add or drop grammatical tags, re-divide senses — so this axis moves on its
+own.
 
 ## 4. Results
 
@@ -196,21 +200,21 @@ fits its other member (Wilson → Yates, register similarity 0.29) without quali
 ### 4.1 The axes cross-cut: a double dissociation
 
 The decisive observation is in the two boldfaced rows, which share a parent. From the
-**Petersburg lexicon**:
+Petersburg lexicon:
 
-- **→ Monier-Williams (MW 1899)** scores **content 0.89** but **convention 0.37**, with
-  bootstrap support of only **0.013**. Monier-Williams absorbs almost the whole of
+- **→ Monier-Williams (MW 1899)** scores content 0.89 but convention 0.37, with
+  bootstrap support of only 0.013. Monier-Williams absorbs almost the whole of
   Petersburg's word list (the directed containment in §3.1) and then re-encodes it in its
   own house style: the convention phylogeny barely supports the edge. This is *content
   without convention*. (The re-encoding is a *convention* fact, not a register fact: both
   dictionaries cite through the tagged apparatus and sit close on the citation–grammar
   register, 0.88 — see the note under Table 1.)
-- **→ Schmidt** scores **content 0.07** but **convention 0.68**, with bootstrap support
-  of **0.68**. Schmidt is recognisably of the Petersburg school — strong, well-supported
+- **→ Schmidt** scores content 0.07 but convention 0.68, with bootstrap support
+  of 0.68. Schmidt is recognisably of the Petersburg school — strong, well-supported
   convention similarity — yet shares almost none of Petersburg's headword stock. This is
   *convention without content*.
 
-The two edges are a **double dissociation**: same ancestor, opposite axis profiles.
+The two edges are a double dissociation: same ancestor, opposite axis profiles.
 Any single inheritance score must encode one axis or some average of them, and on that
 score the two PWG edges would be ranked as near-opposites — yet which one looks like
 "more inheritance" would depend entirely on which axis the score happened to weight.
@@ -239,8 +243,8 @@ The thirteen edges fall into four machine-assigned reading classes — *content-
 convention aligned with a register shift* (3 edges), *content carried with convention
 and register recoded* (2, including PWG → MW), *content overlap needing axis review*
 (4), and *mixed* (4, including PWG → Schmidt). The classes are not a lineage verdict;
-they are a triage that tells a reviewer **which axes to read against which** for each
-edge, which is precisely what a one-dimensional score cannot do.
+they are a triage that tells a reviewer which axes to read against which for each
+edge, which a one-dimensional score cannot do.
 
 ### 4.4 A fourth axis? The citation profile
 
@@ -258,7 +262,7 @@ One estimate deserves flagging rather than burying: citation~microstructure Pear
 programme; if it survives a larger edge set, "quoting the same books" travels with
 microstructural register, not with headword stock, and the axis count stays at three
 plus a register-linked citation component. Until then this paper's three-axis frame
-stands, with the fourth-axis question explicitly open rather than silently unasked.
+stands, with the fourth-axis question left open.
 
 ## 5. Discussion
 
@@ -282,10 +286,10 @@ visually compelling. But MW contains 89 % of Petersburg's lemmas, and so would a
 sufficiently large Sanskrit dictionary contain most of any smaller one — the common
 lexicon is shared by descent from the *language*, not from each other. Containment
 therefore licenses a copying hypothesis; it never confirms one. Confirmation needs the
-other axes (does the convention transmit?) and finer evidence the empirical companions
-supply — citation-truncation patterns, rare-term coincidence, sense-level word identity:
-the *shared structure and shared error* signal that Zgusta (1988) made decisive for
-exactly this corpus's flagship edge.
+other axes (does the convention transmit?) and the finer evidence the empirical
+companions supply: citation-truncation patterns, rare-term coincidence, sense-level word
+identity — in short, the *shared structure and shared error* signal that Zgusta (1988)
+made decisive for exactly this corpus's flagship edge.
 
 ### 5.3 The discipline the companion papers rely on
 
@@ -308,8 +312,8 @@ and stating it once, here, lets each of them assume it.
   convention and microstructure necessarily controlled rather than measured.
 
 In each case the empirical claim is only safe because the confounding axis is held
-fixed. This paper is the general statement of that move: **convention and microstructure
-are confounds for content, and a content claim must be read against them.**
+fixed. This paper is the general statement of that move: convention and microstructure
+are confounds for content, and a content claim must be read against them.
 
 ## 6. Limitations
 
