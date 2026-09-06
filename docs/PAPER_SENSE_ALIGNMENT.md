@@ -1,9 +1,10 @@
 # Paper (methods) — Sanskrit-Anchored Cross-Language Sense Alignment
 
-_Created: 04-06-2026 · Last updated: 04-07-2026_
+_Created: 04-06-2026 · Last updated: 06-09-2026_
 
 **Status**: Methods (§3) + Validation/Results (§4–5) drafted 2026-05-31; §1 + §7 +
-figures added 2026-07-04 · feeds Paper L.
+figures added 2026-07-04 · author-voice pass 06-09-2026
+([SIGNOFF_A09_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/SIGNOFF_A09_author_pass.md)) · feeds Paper L.
 **Type**: short computational-lexicography / digital-humanities methods paper.
 **Owner**: M. Gasūns + Claude. **Evidence base**:
 [R2_FINDINGS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md),
@@ -27,9 +28,11 @@ kept in parentheses as regression baselines.
 
 *Anchoring on Sanskrit: deterministic cross-language sense alignment across 15 historical Sanskrit dictionaries.*
 
+Mārcis Gasūns, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru
+
 ## Thesis / abstract
 
-Historical Sanskrit dictionaries gloss the **same** Sanskrit headwords into different metalanguages — German (Petersburg, Schmidt), English (Wilson, Monier-Williams, Apte, Benfey), French (Stchoupak), and Sanskrit itself (Vācaspatya, Śabdakalpadruma). Comparing their **senses** has therefore required translation. We show this is unnecessary: because every tradition exposes Sanskrit material *inside* each sense — cited forms, synonyms, cognates, and citation sigla — senses can be aligned **deterministically, with no translation**, by the Sanskrit they share ("anchor on Sanskrit"). We split each dictionary's entries into senses with per-tradition heuristic grammars, fingerprint each sense by its Sanskrit tokens + `<ls>` citations, and align by fingerprint overlap. Applied to 15 CDSL dictionaries (1822–1957), the method aligns German↔English↔Sanskrit senses and yields three results on dictionary genealogy.
+Historical Sanskrit dictionaries gloss the same Sanskrit headwords into different metalanguages — German (Petersburg, Schmidt), English (Wilson, Monier-Williams, Apte, Benfey), French (Stchoupak), and Sanskrit itself (Vācaspatya, Śabdakalpadruma). Comparing their senses has therefore required translation. We show this is unnecessary: because every tradition exposes Sanskrit material *inside* each sense — cited forms, synonyms, cognates, and citation sigla — senses can be aligned deterministically, with no translation, by the Sanskrit they share ("anchor on Sanskrit"). We split each dictionary's entries into senses with per-tradition heuristic grammars, fingerprint each sense by its Sanskrit tokens + `<ls>` citations, and align by fingerprint overlap. Applied to 15 CDSL dictionaries (1822–1957), the method aligns German↔English↔Sanskrit senses and yields three results on dictionary genealogy.
 
 ## Contributions
 
@@ -62,7 +65,7 @@ the indigenous Sanskrit-to-Sanskrit lexica Śabdakalpadruma and Vācaspatya.
 These works describe the *same* headwords, and questions about how they relate
 — who copied whom, whether later lexicographers discriminated senses more
 finely, which meanings survived from one generation to the next — are
-questions about **senses**, not headwords. Headword-overlap stemmatics for
+questions about senses, not headwords. Headword-overlap stemmatics for
 this family already exists; what it cannot see is the microstructure: whether
 a shared lemma carries the same meanings, the same evidence, the same wording.
 
@@ -112,21 +115,20 @@ methodologically as a supervised classification problem over gloss-pair
 features (Ahmadi & McCrae, GWC 2021, [2021.gwc-1.9](https://aclanthology.org/2021.gwc-1.9/)).
 That literature aligns senses *within* a language across dictionary editions
 using gloss-text features and embeddings; this paper's Sanskrit-fingerprint
-method is a **complementary, translation-free alternative** for a family where
+method is a complementary, translation-free alternative for a family where
 the dictionaries are in *different* metalanguages (German, English, Sanskrit)
-and a shared gloss-embedding space is unavailable or unreliable — the two
+and a shared gloss-embedding space is unavailable or unreliable. The two
 approaches could be benchmarked against each other on an English/German pair
-where both are applicable (e.g. PWG↔Apte), which is flagged as an open
-validation idea for §7/§8 rather than attempted here. The MWSA shared task's
+where both are applicable (e.g. PWG↔Apte); that benchmark is flagged as an
+open validation idea for §7/§8 rather than attempted here. The MWSA shared task's
 labeled-relation framing (exact/broader/narrower/related, not just a binary
 match) is also a candidate refinement for this paper's own agreement
 statistic, currently binary Sanskrit-fingerprint overlap. The closest
 Sanskrit-specific precedent is Patel & Kulkarni's "Word Sense Alignment of
 Sanskrit Lexica" (ISCLS 2024, [2024.iscls-1.1](https://aclanthology.org/2024.iscls-1.1/)),
-which cross-aligns senses between Wilson and Yates' dictionaries by a
-different (non-Sanskrit-anchoring) method — worth direct comparison in a
-revision pass, and the paper this one should most explicitly position itself
-against for an ISCLS submission.
+which cross-aligns senses between Wilson and Yates' dictionaries by a different (non-Sanskrit-anchoring) method. It deserves direct comparison
+in a revision pass, and it is the paper this one should most explicitly
+position itself against for an ISCLS submission.
 
 ### Technique-adoption assessment (internal note, not manuscript prose)
 
@@ -191,27 +193,26 @@ The entire pipeline is deterministic and uses no model or external resource: re-
 
 ## Draft — §4 Validation
 
-The alignment behaves correctly at two scales (Figure 2). *Within* a single tradition, the two editions of Apte's Sanskrit-English dictionary align sense-for-sense: for *dharma*, sense 4 of the 1957 edition aligns to sense 4 of the 1890 edition at Jaccard 1.0, the two senses sharing the example *ṣaṣṭhāṃśavṛtterapi dharma* and the citations *Ms.* 1.114 and *Ś.* 5.4 (reproduced in the restored data: `r2_align_dharma.json`, `ap#4 ~ ap90#4`). *Across* the language barrier and the tradition boundary at once, for *bodhisattva* the method aligns a Western (German) Petersburg sense to an indigenous (Sanskrit) Śabdakalpadruma sense through the shared narrative vocabulary *jīmūtavāhanāt*, *kalpadrumam* (reproduced: `r2_align_bodhisattva.json`, `pwg#preface ~ skd#2`). The archived run additionally aligned a German Petersburg sense — *"Gesetz, Brauch, Vorschrift, Regel"* — to Apte's English *"Religious or moral merit, virtue"* on the shared form *suhṛddharmo* and citation *H.*; ⚠️ that German↔English pair is preserved in the archive fixture but **not yet reproduced by the restored splitter**, because the restored PWG parser does not yet split `<div>`-level sub-senses the same way — exactly the open `div-source-scope` parser decision of §7 (the restored data still aligns PWG to Apte for *dharma*, but only at preface level on a single shared form). Sanskrit, the object language of every dictionary, thus serves as the alignment interlingua.
+The alignment behaves correctly at two scales (Figure 2). *Within* a single tradition, the two editions of Apte's Sanskrit-English dictionary align sense-for-sense: for *dharma*, sense 4 of the 1957 edition aligns to sense 4 of the 1890 edition at Jaccard 1.0, the two senses sharing the example *ṣaṣṭhāṃśavṛtterapi dharma* and the citations *Ms.* 1.114 and *Ś.* 5.4 (reproduced in the restored data: `r2_align_dharma.json`, `ap#4 ~ ap90#4`). *Across* the language barrier and the tradition boundary at once, for *bodhisattva* the method aligns a Western (German) Petersburg sense to an indigenous (Sanskrit) Śabdakalpadruma sense through the shared narrative vocabulary *jīmūtavāhanāt*, *kalpadrumam* (reproduced: `r2_align_bodhisattva.json`, `pwg#preface ~ skd#2`). The archived run additionally aligned a German Petersburg sense — *"Gesetz, Brauch, Vorschrift, Regel"* — to Apte's English *"Religious or moral merit, virtue"* on the shared form *suhṛddharmo* and citation *H.*; that German↔English pair is preserved in the archive fixture but not yet reproduced by the restored splitter, because the restored PWG parser does not yet split `<div>`-level sub-senses the same way — exactly the open `div-source-scope` parser decision of §7 (the restored data still aligns PWG to Apte for *dharma*, but only at preface level on a single shared form). Sanskrit, the object language of every dictionary, thus serves as the alignment interlingua.
 
 ## Draft — §5 Results
 
 ### 5.1 Sense granularity is a tradition trait, not a function of date (H1)
 
-We measure granularity two independent ways (Figure 1). Over the full corpus of eleven general dictionaries we count sense-units per entry; against publication year the correlation is negligible (Pearson *r* = 0.035; archived run 0.06). Because that per-entry figure is confounded by headword-splitting policy — Monier-Williams distributes compounds over some 286,000 short entries, diluting its per-entry average to 1.15 while its fixed-panel mean is 14.9 once a lemma's `<L>` blocks are aggregated — we repeat the measurement on a fixed panel of thirty common nouns held constant across every dictionary, aggregating each word's homonym blocks; the year-correlation stays effectively zero (*r* = 0.093; archived 0.01). The archived run had reported a weak positive correlation (*r* = 0.56) when the comparison was restricted to the five dictionaries that mark senses explicitly; in the restored data even that vanishes (*r* = −0.035), and at *n* = 5 neither value was ever significant — the apparent trend was an artefact of marking convention: the earliest dictionary in the set, Wilson (1832), is already among the most finely enumerated (8 senses per panel word), while the apparently sparse mid-century Petersburg figure reflects only its coarse `<div>`-level marking. What varies across the corpus is therefore not the number of senses a word has but the **convention** by which a tradition exposes them — fine enumeration (Apte, Benfey, Wilson) versus run-on lumping (Monier-Williams, the Petersburg dictionaries, the indigenous lexica) — a categorical, atemporal property of lexicographic school. The naïve expectation that later dictionaries are sense-richer is not supported.
+We measure granularity two independent ways (Figure 1). Over the full corpus of eleven general dictionaries we count sense-units per entry; against publication year the correlation is negligible (Pearson *r* = 0.035; archived run 0.06). Because that per-entry figure is confounded by headword-splitting policy — Monier-Williams distributes compounds over some 286,000 short entries, diluting its per-entry average to 1.15 while its fixed-panel mean is 14.9 once a lemma's `<L>` blocks are aggregated — we repeat the measurement on a fixed panel of thirty common nouns held constant across every dictionary, aggregating each word's homonym blocks; the year-correlation stays effectively zero (*r* = 0.093; archived 0.01). The archived run had reported a weak positive correlation (*r* = 0.56) when the comparison was restricted to the five dictionaries that mark senses explicitly; in the restored data even that vanishes (*r* = −0.035), and at *n* = 5 neither value was ever significant — the apparent trend was an artefact of marking convention: the earliest dictionary in the set, Wilson (1832), is already among the most finely enumerated (8 senses per panel word), while the apparently sparse mid-century Petersburg figure reflects only its coarse `<div>`-level marking. What varies across the corpus is therefore not the number of senses a word has but the convention by which a tradition exposes them — fine enumeration (Apte, Benfey, Wilson) versus run-on lumping (Monier-Williams, the Petersburg dictionaries, the indigenous lexica) — a categorical, atemporal property of lexicographic school. The naïve expectation that later dictionaries are sense-richer is not supported.
 
 ### 5.2 Citation density co-varies with a sense's survival (H2, suggestive)
 
-Aligning ancestor to descendant senses along documented inheritance edges (28-noun panel, 807 ancestor senses), an ancestor sense carrying at least one literary citation survives into its descendant 76.8% of the time (*n* = 82), against 70.5% for uncited senses (*n* = 725); the archived run had reported 70% vs 54%, a gap that narrowed once a semicolon-aware counter credited the uncited Yates senses the archived splitter had missed. ⚠️ The restored pipeline also subjects H2 to controls the archived run lacked, and they **downgrade the claim** — this section must be written as *co-varies*, not *predicts*. In a logistic regression with sense-position, gloss-length, cross-dictionary-attestation and edge fixed effects, and lemma-cluster-robust standard errors, the citation coefficient is nominally significant at the reference threshold (OR 3.30, 95% CI 1.34–8.09, *p* = 0.009), but two committed diagnostics undercut it: (i) the estimate is **threshold-dependent** — stable in magnitude (OR 2.2–3.3) but not in significance (*p* = 0.05 at the loosest cutoff) across survival thresholds 0.1–0.25; and (ii) it is **edge-concentrated** — every one of the 82 cited senses sits on the single Apte 1890→1957 edge (Wilson carries almost no `<ls>` citations), and the clean unclustered two-proportion test within that one edge gives 76.8% vs 66.1%, *z* = 1.80, *p* = 0.072: not significant. The defensible statement is that citation density and survival co-vary in the expected direction on the only edge that can test it, with the pooled "significance" an artifact of edge composition — report the sensitivity table and the within-edge test, not a single star. (The companion inheritance manuscript already adopts this framing; keep the two in lockstep.)
+Aligning ancestor to descendant senses along documented inheritance edges (28-noun panel, 807 ancestor senses), an ancestor sense carrying at least one literary citation survives into its descendant 76.8% of the time (*n* = 82), against 70.5% for uncited senses (*n* = 725); the archived run had reported 70% vs 54%, a gap that narrowed once a semicolon-aware counter credited the uncited Yates senses the archived splitter had missed. The restored pipeline also subjects H2 to controls the archived run lacked, and they downgrade the claim; this section is therefore written as *co-varies*, not *predicts*. In a logistic regression with sense-position, gloss-length, cross-dictionary-attestation and edge fixed effects, and lemma-cluster-robust standard errors, the citation coefficient is nominally significant at the reference threshold (OR 3.30, 95% CI 1.34–8.09, *p* = 0.009), but two committed diagnostics undercut it: (i) the estimate is **threshold-dependent** — stable in magnitude (OR 2.2–3.3) but not in significance (*p* = 0.05 at the loosest cutoff) across survival thresholds 0.1–0.25; and (ii) it is **edge-concentrated** — every one of the 82 cited senses sits on the single Apte 1890→1957 edge (Wilson carries almost no `<ls>` citations), and the clean unclustered two-proportion test within that one edge gives 76.8% vs 66.1%, *z* = 1.80, *p* = 0.072: not significant. The defensible statement is that citation density and survival co-vary in the expected direction on the only edge that can test it, with the pooled "significance" an artifact of edge composition — report the sensitivity table and the within-edge test, not a single star. (The companion inheritance manuscript already adopts this framing; keep the two in lockstep.)
 
 ### 5.3 Derivatives copy or condense; they do not innovate (H3)
 
-On the three inheritance edges where both ends mark senses, the derivative never systematically adds senses. Yates (1846) condenses Wilson (1832) sharply (mean drift −3.3 senses per panel word, 9 → 5.7, with gloss overlap 0.26; the archived run's −6.75 was partly an artifact of undercounting Yates's unmarked senses, corrected by the same semicolon-aware counter as in §5.2). The revised Apte (1957) does not expand the 1890 edition (drift −3.07, overlap 0.57 — revision, not expansion). Most strikingly, the Śabda-Sāgara (1900) **reproduces Wilson's sense glosses near-verbatim**: across the panel its sense text is 90.6% word-identical to Wilson's (archived 82%), sense by sense, with exactly zero net drift (9 senses in, 9 senses out). This is a microstructure-level confirmation of the lemma-overlap edge WIL ⊆ SHS ≈ 0.953 reported from headword data alone: the inheritance is visible not only in *which* words the two dictionaries share but in the very wording of their definitions. Sense-level evidence thus corroborates, and sharpens, the computational stemmatics of the CDSL family.
+On the three inheritance edges where both ends mark senses, the derivative never systematically adds senses. Yates (1846) condenses Wilson (1832) sharply (mean drift −3.3 senses per panel word, 9 → 5.7, with gloss overlap 0.26; the archived run's −6.75 was partly an artifact of undercounting Yates's unmarked senses, corrected by the same semicolon-aware counter as in §5.2). The revised Apte (1957) does not expand the 1890 edition (drift −3.07, overlap 0.57); this is revision, not expansion. The Śabda-Sāgara (1900) reproduces Wilson's sense glosses near-verbatim: across the panel its sense text is 90.6% word-identical to Wilson's (archived 82%), sense by sense, with exactly zero net drift (9 senses in, 9 senses out). This is a microstructure-level confirmation of the lemma-overlap edge WIL ⊆ SHS ≈ 0.953 reported from headword data alone: the inheritance is visible not only in *which* words the two dictionaries share but in the very wording of their definitions. Sense-level evidence thus corroborates, and sharpens, the computational stemmatics of the CDSL family.
 
 ## Draft — §7 Limitations
 
-The method's determinism is also its honesty policy: every weakness below is
-visible in the committed outputs rather than averaged away, and none is
-silently patched.
+Because the pipeline is deterministic, every weakness below is visible in the
+committed outputs rather than averaged away, and none is silently patched.
 
 **Splitter grammars are heuristic, and parser-rule promotion is gated by an
 expert-reviewed decision queue.** The per-tradition grammars of §3.2 were
@@ -259,7 +260,7 @@ blind spot: a sense inherited by *translation without any shared Sanskrit*
 (gloss reworded, citations dropped) is invisible to the method and counted as
 non-surviving.
 
-**Coverage claims need one trim.** ⚠️ The restored package covers fourteen
+**Coverage claims need one trim.** The restored package covers fourteen
 dictionaries in the explorer slice plus Yates and Śabda-Sāgara on the
 inheritance edges; the French dictionary (Stchoupak) named in the abstract was
 touched only by the archived run. Before submission either restore Stchoupak
