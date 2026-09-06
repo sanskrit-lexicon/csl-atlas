@@ -1,6 +1,8 @@
-_Created: 11-06-2026 · Last updated: 05-09-2026_
+_Created: 11-06-2026 · Last updated: 06-09-2026_
 
 # Redundancy and Descent in a Digitised Dictionary Family: A Headword-Level Stemma of the Cologne Digital Sanskrit Lexicon
+
+Mārcis Gasūns, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru
 
 *Draft manuscript for submission to a metalexicography venue (target: International
 Journal of Lexicography). Empirical basis: the OBS-R finding
@@ -22,13 +24,13 @@ Sanskrit dictionaries into a single freely available corpus of roughly 1.5 milli
 lexical entries. That figure is routinely cited as a measure of the resource's
 scale, but it conflates the size of the *digitised record* with the size of the
 *lexical record*: a headword attested in nine dictionaries is counted nine times.
-We measure, for the first time at the level of the whole corpus, how much of the
+I measure, for the first time at the level of the whole corpus, how much of the
 CDSL is independent attestation and how much is re-lexicalisation. Extracting the
 canonical headword (`<k1>`, SLP1) from every entry — and, for four indigenous
-*kośa*s that use a different markup, the synonym lemmas they list — we reduce
+*kośa*s that use a different markup, the synonym lemmas they list — I reduce
 1,496,157 entries to **410,259 distinct headwords, a collapse of 3.65 : 1**. A
 **majority (57.8 %) of distinct headwords occur in two or more dictionaries**; only
-42.2 % (≈173,000 lemmas) are unique to a single work. Crucially, redundancy is not
+42.2 % (≈173,000 lemmas) are unique to a single work. Redundancy is not
 uniform but *structured*: the general bilingual dictionaries re-lexicalise one
 another almost completely (the Petersburg *kürzere Fassung* contributes 4.4 %
 unique headwords, Monier-Williams 12.9 %), whereas specialised and corpus-bound
@@ -37,7 +39,7 @@ lexica retain large independent cores (the Buddhist Hybrid Sanskrit dictionary
 by publication year and set size, recovers a coherent inheritance stemma in which
 **Monier-Williams (1899) is a near-total absorber** of its predecessors (containing
 88–94 % of nine other dictionaries' headword stock) and the Petersburg tradition
-forms a second hub. We argue that headword multiplicity is a simple, reproducible
+forms a second hub. I argue that headword multiplicity is a simple, reproducible
 diagnostic for editing and consolidating aggregated digital dictionaries, and that
 the structured-redundancy profile distinguishes derivative compilations from
 dictionaries of genuine documentary value.
@@ -53,8 +55,7 @@ Aggregated digital dictionary portals present many historical dictionaries throu
 one interface and report their scale as a single summed entry count. The Cologne
 Digital Sanskrit Lexicon (Kapp and Malten; *Cologne Digital Sanskrit Dictionaries*)
 is a mature example: forty-four dictionaries whose printed editions span 1822–1993,
-in Sanskrit-to-
-English, -German, -French, -Latin and Sanskrit-to-Sanskrit, encoded in a common
+in Sanskrit-to-English, -German, -French, -Latin and Sanskrit-to-Sanskrit, encoded in a common
 markup and downloadable in full. Its often-quoted headline — on the order of 1.5
 million entries — measures the digitisation effort, not the language. Two questions
 follow that the summed count cannot answer. *How much of the aggregate is
@@ -71,10 +72,10 @@ contribute independent material, and a headword-containment stemma whose directe
 edges reproduce, and extend, the derivation relationships recorded piecemeal in the
 philological literature.
 
-Our claim is deliberately bounded. Headword overlap is a *floor* for structural
+My claim is deliberately bounded. Headword overlap is a *floor* for structural
 relatedness, not proof of copying: two dictionaries may share a headword because one
 copied the other, or because both record the same well-known word independently.
-We therefore treat the stemma as the skeleton onto which finer, copying-specific
+I therefore treat the stemma as the skeleton onto which finer, copying-specific
 evidence — citation truncation, rare-term and hapax sharing, sense-level alignment
 — is to be layered (Paper H; the `PET-MW-CITE` programme). What the headword level
 *does* settle is the economics of the aggregate: how much of it is lexically novel.
@@ -111,18 +112,18 @@ dictionary in one quantitative relationship to every other.
 
 ### 3.1 Source and headword key
 
-We work directly from the canonical CDSL source files (`csl-orig/v02`), one per
+I work directly from the canonical CDSL source files (`csl-orig/v02`), one per
 dictionary. Each entry is delimited by an `<L>` marker; the canonical headword is the
 `<k1>` field, already normalised to the SLP1 transliteration scheme and to a
 canonical citation form (homonyms carry a separate `<h>` index, so the `<k1>` of
-homographs is identical). We take, per dictionary, the **set of distinct `<k1>`
+homographs is identical). I take, per dictionary, the **set of distinct `<k1>`
 values** as its headword inventory.
 
 Four dictionaries carry no `<k1>` field. The Hemacandra *kośa* family (`abch`,
 `acph`, `acsj`) encodes synonym groups in a `<syns><s>…</s>` structure in which each
 member is a lemma followed by a part-of-speech tag; the *Nāmamālikā* (`nmmb`) uses
 the same `<syns>` field as a bare comma-separated lemma-POS list without the `<s>`
-wrapper. For these we extract the synonym
+wrapper. For these I extract the synonym
 lemmas, stripping the POS suffix. This format-aware extraction reproduces the
 independently computed *sanhw1* lemma counts for these dictionaries exactly (e.g.
 *Abhidhānacintāmaṇi* 11,584 lemmas), confirming that the two markup styles are being
@@ -130,17 +131,17 @@ read to the same standard.
 
 A lemma's **multiplicity** is the number of dictionaries whose headword set contains
 it. A lemma of multiplicity 1 is **dictionary-unique**; multiplicity ≥ 2 is
-**shared**. We also report the **entry-to-lemma collapse ratio** (raw `<L>` count
+**shared**. I also report the **entry-to-lemma collapse ratio** (raw `<L>` count
 divided by distinct headwords) and an **entry split-inflation** figure (raw `<L>`
 count divided by the sum, over dictionaries, of distinct `<k1>` per dictionary),
 which isolates the contribution of homonym and sub-entry splitting.
 
 ### 3.2 Containment and the direction of descent
 
-For each ordered pair of dictionaries (A, B) we compute the **containment**
+For each ordered pair of dictionaries (A, B) I compute the **containment**
 of A in B, `a_in_b = |A ∩ B| / |A|`: the fraction of A's headwords that recur in B.
 High `a_in_b` with low `b_in_a` means A is largely a subset of B. To orient such an
-edge into a descent claim we apply a conservative rule: where A ⊂ B and the two
+edge into a descent claim I apply a conservative rule: where A ⊂ B and the two
 differ in publication date, the **earlier (and typically larger superset)** member
 is the ancestor. Contemporaneous or symmetric pairs are left undirected. This rule
 reconstructs, rather than assumes, the dependencies of §2.2.
@@ -207,7 +208,7 @@ vs. independent lexica).
 | IEG — Indian Epigraphical Glossary | 57.5 | epigraphic vocabulary |
 | BHS — Buddhist Hybrid Sanskrit | 57.6 | a distinct register |
 
-The general bilingual dictionaries we expect on philological grounds to be
+The general bilingual dictionaries I expect on philological grounds to be
 derivative score very low; the specialised and corpus-bound lexica score high. The
 metric thus validates itself against prior knowledge and supplies a quantitative
 criterion: *a dictionary's independent contribution to the aggregate is indexed by
@@ -231,8 +232,8 @@ Yates (1846) (mutual containment ≈ 0.91) and Wilson → *Śabda-Sāgara* (1900
 (Wilson ⊆ SHS = 0.953).
 
 **Table 2.** Strongest directed containment edges (A ⊂ B; direction by year + size),
-with the reverse-containment column and both denominators — the pair that turns "MW
-is a near-total absorber" from asserted into shown: `a_in_b` is large while `b_in_a`
+with the reverse-containment column and both denominators, so that the claim "MW
+is a near-total absorber" can be checked row by row: `a_in_b` is large while `b_in_a`
 is small in every row.
 
 | A ⊂ B | `a_in_b` (\|A∩B\|/\|A\|) | `b_in_a` (\|A∩B\|/\|B\|) | \|A\| | \|B\| | \|A∩B\| | Years (A / B) | Reading |
@@ -253,11 +254,11 @@ point estimates: for the smallest numerator set in the table (BOP, |A| = 8,505),
 Wilson 95 % confidence interval on `a_in_b` = 0.940 is [0.935, 0.945], and every
 other row's interval is at least as tight, so intervals are omitted from the table.*
 
-Read against the reverse column, the asymmetry that "absorption" only asserted before
-is now visible directly: MW contains 88–94 % of nine smaller/earlier dictionaries'
+Read against the reverse column, the asymmetry behind the word "absorption" is
+visible directly: MW contains 88–94 % of nine smaller/earlier dictionaries'
 headwords while those dictionaries contain at most 9.6 % of MW's — a near-total,
 one-directional absorption, not a coincidental overlap. The WIL ⊂ SHS edge is the
-exception that proves the rule: with `b_in_a` = 0.896 alongside `a_in_b` = 0.953, the
+instructive exception: with `b_in_a` = 0.896 alongside `a_in_b` = 0.953, the
 two dictionaries are near-mutual supersets of each other, which is exactly the
 near-verbatim reproduction the microstructural companion study (gloss overlap 0.906,
 Paper P2 §6) independently confirms. The stemma is consistent with the philological
@@ -267,7 +268,7 @@ the Petersburg works form the upstream reservoir.
 
 ### 4.5 The kośas re-group, they do not extend
 
-A striking corollary emerges once the indigenous *kośa*s are parsed correctly. The
+A corollary follows once the indigenous *kośa*s are parsed correctly. The
 *Abhidhānacintāmaṇi* supplies 11,584 synonym lemmas but **only 3.3 % are unique** to
 it (its supplements 14.1 % and 7.6 %). A synonym thesaurus, by its nature, re-groups
 words that are *already attested* elsewhere into semantic sets; it adds organisation,
@@ -280,7 +281,7 @@ of §4.3, and it cautions against reading a *kośa*'s size as documentary breadt
 
 **For digital lexicography.** Headword multiplicity is a cheap, reproducible audit
 for any aggregated dictionary portal. It converts an undifferentiated "entry count"
-into an actionable map: which dictionaries are largely subsumed by others (and could
+into a map an editor can act on: which dictionaries are largely subsumed by others (and could
 be presented as views rather than independent sources), where consolidation or
 de-duplication would reduce maintenance burden without lexical loss, and which small
 dictionaries carry disproportionate unique value and warrant priority in curation and
