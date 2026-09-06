@@ -1,4 +1,4 @@
-_Created: 13-06-2026 · Last updated: 05-09-2026_
+_Created: 13-06-2026 · Last updated: 06-09-2026_
 
 # Grammar Without Tags: The Verbal-Root Microstructure of the Indigenous Sanskrit *Kośa*
 
@@ -23,7 +23,9 @@ counts are reproducible from committed data; numbers herein are the 2026-06 snap
 every figure was re-verified against the artifacts in the 2026-07-03 referee pass
 ([A04_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A04_review_fable5.md));
 author-voice pass 2026-07-11
-([SIGNOFF_A04_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A04_author_pass.md)).
+([SIGNOFF_A04_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A04_author_pass.md));
+author-voice pass 06-09-2026
+([SIGNOFF_A04_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A04_author_pass.md), Pass 2 section).
 Author: Mārcis Gasūns, independent scholar
 ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru.*
 
@@ -33,24 +35,24 @@ Author: Mārcis Gasūns, independent scholar
 
 Run any European-style microstructure detector — for part of speech, gender, or a
 tagged source apparatus — over the Sanskrit-to-Sanskrit *kośa*s of the Cologne
-Digital Sanskrit Lexicon (CDSL) and they score close to zero. We show that this zero
-is a measurement artifact, not an absence of content: the indigenous lexica encode a
-**rich and recoverable verbal-grammatical apparatus** through conventions of their
-own. First, the verbal root is almost exclusively an *indigenous* object in this
+Digital Sanskrit Lexicon (CDSL) and they score close to zero. I show
+that this zero is a measurement artifact, not an absence of content: the indigenous
+lexica encode a rich and recoverable verbal-grammatical apparatus through conventions
+of their own. First, the verbal root is almost exclusively an *indigenous* object in this
 corpus — the *Śabdakalpadruma* carries 2,544 root entries, the *Vācaspatya* 2,230,
 the *Kṛdantarūpamālā* 1,757, Yates's conjugation tables 1,643 and the *Śabda-Sāgara*
 463, against eight or fewer in every European dictionary. Second, the
 *Śabdakalpadruma* records each root's verbal class (*gaṇa*), voice (*pada*) and
 morphophonemic behaviour not in tags but in a string of *anubandha* indicatory
-letters, whose key we recover from Durgādāsa Vidyāvāgīśa's *Dhātudīpikā* (preserved
+letters, whose key I recover from Durgādāsa Vidyāvāgīśa's *Dhātudīpikā* (preserved
 in SKD's own front matter) and apply at scale: it resolves the *gaṇa* of 1,737 and
 the *pada* of 1,498 SKD roots, up from 1,117 and 1,167 by surface markers alone.
 Third — and this is the validation — five independent indigenous lexica, using four
-different encoding conventions, **agree on the grammar they record**: across 1,526
-roots classified by two or more of them, *gaṇa* is compatible in **85.5 %** of cases
+different encoding conventions, agree on the grammar they record: across 1,526
+roots classified by two or more of them, *gaṇa* is compatible in 85.5 % of cases
 (pairwise *Śabdakalpadruma*–*Vācaspatya* 92.8 %, *Śabdakalpadruma*–*Kṛdantarūpamālā*
 95.0 %), *pada* in 75.3 %, transitivity in 81.4 %. The indigenous microstructure is
-therefore first-class lexicographic data that a tag-keyed measure simply cannot see;
+therefore first-class lexicographic data that a tag-keyed measure cannot see;
 treating a detector's zero as "no content" systematically erases the indigenous
 tradition from any corpus-wide statistic.
 
@@ -65,17 +67,17 @@ A digital dictionary corpus invites measurement: count the part-of-speech tags, 
 gender markers, the source citations, and you have a microstructural profile of each
 dictionary. Applied across the forty-four dictionaries of the Cologne Digital
 Sanskrit Lexicon (43 at the 2026-06 measurement snapshot the numbers herein reflect),
-such measurement produces a striking and recurring result — the two
+such measurement produces a striking and recurring result: the two
 great Sanskrit-to-Sanskrit *kośa*s, the *Śabdakalpadruma* (SKD) and the *Vācaspatya*
-(VCP), score at or near **zero** on almost every European-style detector. They carry
+(VCP), score at or near zero on almost every European-style detector. They carry
 no `<lex>` part-of-speech tags, no `<ls>` source-citation elements, no structural
 `<div>` sense markers.
 
-It is tempting, and wrong, to read that zero as thinness. This paper makes the
-opposite case with three measurements. The verbal root — the organising object of the
+It is tempting, and wrong, to read that zero as thinness. I make the opposite case
+with three measurements. The verbal root — the organising object of the
 indigenous Sanskrit grammatical tradition — is almost *only* recorded in these
 dictionaries (§4.1). What looks like an absence of grammatical tagging is in fact a
-different *technology* of grammatical encoding, one we can decode (§4.2–4.3). And the
+different *technology* of grammatical encoding, one I can decode (§4.2–4.3). And the
 decode is not a private reading: five indigenous lexica, encoding root grammar four
 different ways, agree on it (§4.4). The methodological moral — never read a
 convention-specific detector's zero as absence of content — is stated in §5.
@@ -86,13 +88,13 @@ The European Indological dictionaries tag grammar explicitly: Monier-Williams wr
 `<lex>m.</lex>` for a masculine noun, `<ls>Pāṇ. 3,1,86</ls>` for a source. The
 indigenous *kośa*s descend instead from the *dhātupāṭha* and *kośa* traditions
 (Palsule 1961; Vogel 1979), in
-which a root's grammar is conveyed by **position and convention** — the company a
+which a root's grammar is conveyed by position and convention: the company a
 root keeps, the indicatory letters attached to it, the prose formula that closes a
 sense. A detector written for the European apparatus finds none of its expected
 markers and returns zero.
 
 The project has recorded this hazard qualitatively as the *zero-meaning* rule: a zero
-under a European detector measures the **absence of a European convention**, not the
+under a European detector measures the absence of a European convention, not the
 absence of content. The *Śabdakalpadruma*'s own front matter states the principle for
 its root apparatus in so many words — *"the anubandha of each root is determined;
 roots that have no anubandha get a dot or a zero"* — so that a `0` in the slot means
@@ -101,7 +103,7 @@ a measured demonstration.
 
 ## 3. Data and method
 
-We extract, from the canonical CDSL source files (`csl-orig/v02`), every entry that
+I extract, from the canonical CDSL source files (`csl-orig/v02`), every entry that
 records a verbal root, across the five indigenous root-bearing lexica — SKD, VCP, the
 *Kṛdantarūpamālā* (KRM), Yates (YAT) and the *Śabda-Sāgara* (SHS) — and, for control,
 the European dictionaries. For each root entry the extractor recovers, where the
@@ -118,16 +120,16 @@ front matter — which assigns a *phala* (grammatical effect) to each of forty-s
 *parasmaipada* the unmarked default), and the rest mark morphophonemic operations
 (*iṭ*/*aniṭ* behaviour, *mit* shortening, and so on). The key was first recovered
 empirically from an SKD∩VCP cross-walk and then corrected by the primary source,
-which reassigned the gaṇa markers the cross-walk had mistaken for *pada* signals (the
+which reassigned the *gaṇa* markers the cross-walk had mistaken for *pada* signals (the
 *pada* correlation was a shadow of the *gaṇa*→*pada* tendency); G. B. Palsule's
 edition of the *Kavikalpadruma* independently corroborates it.
 
 To test whether the recovered grammar is real rather than an artifact of one decoder,
-we measure **cross-dictionary agreement**: grouping all entries by SLP1 root, we ask
+I measure cross-dictionary agreement: grouping all entries by SLP1 root, I ask
 whether two or more dictionaries that classify the same root give a compatible label.
 *Compatible* tolerates legitimate homonymy (a root spelled alike but belonging to two
 classes is not a self-conflict); *unanimous* is the stricter all-agree rate.
-Disagreement conflates genuine cross-tradition difference with homonymy, so we report
+Disagreement conflates genuine cross-tradition difference with homonymy, so I report
 it as an upper bound on real conflict, not a review queue.
 
 ## 4. Results
@@ -136,7 +138,7 @@ it as an upper bound on real conflict, not a review queue.
 
 The verbal-root apparatus is almost entirely confined to the indigenous lexica
 (Table 1). The five indigenous root dictionaries carry hundreds to thousands of root
-entries each; every European dictionary in the corpus carries **eight or fewer**.
+entries each; every European dictionary in the corpus carries eight or fewer.
 
 **Table 1.** Root entries per dictionary (selected).
 
@@ -164,8 +166,8 @@ densely, in the dictionaries the tag cannot read.
 
 The *Śabdakalpadruma* encodes each root's class and voice in a string of *anubandha*
 letters placed in a slot immediately after the headword separator. Applying
-Durgādāsa's key resolves the *gaṇa* of **1,737** SKD roots and the *pada* of
-**1,498**, up from 1,117 and 1,167 recoverable from surface markers alone — a gain of
+Durgādāsa's key resolves the *gaṇa* of 1,737 SKD roots and the *pada* of
+1,498, up from 1,117 and 1,167 recoverable from surface markers alone, a gain of
 55 % and 28 %. Of SKD's 2,544 root entries, 1,925 carry a slot to decode. The
 resulting *gaṇa* distribution is linguistically correct: *bhvādi* (class 1, the
 largest class) dominates (634 roots), followed by *curādi* (531) and *tudādi* (170),
@@ -177,9 +179,9 @@ rather than read as zero.
 The indigenous lexica do not share an encoding; they share a *subject*. SKD marks
 roots by *anubandha* letters plus cited authority; VCP and SHS by prose annotation;
 KRM by a *dhātupāṭha*-style annotation; YAT by a full conjugation paradigm (Table 2).
-Yet the *gaṇa* distributions they produce agree in shape — *bhvādi* is the modal class
-in every one (SKD 634, VCP 1,152, KRM 944, YAT 1,009, SHS 288), exactly as the
-grammatical tradition predicts.
+Yet the *gaṇa* distributions they produce agree in shape: *bhvādi* is the modal class
+in every one (SKD 634, VCP 1,152, KRM 944, YAT 1,009, SHS 288), as the grammatical
+tradition predicts.
 
 **Table 2.** Encoding convention and resolved-feature counts, indigenous root lexica.
 
@@ -195,13 +197,13 @@ grammatical tradition predicts.
 
 Agreement is the test that the decoded grammar is real. Across the 1,526 roots that
 two or more indigenous lexica classify for *gaṇa*, a single class is compatible in
-**85.5 %** of cases (unanimous in 69.9 %); only 221 roots (14.5 %) conflict, and that
-figure still includes homonyms. Pairwise, the closest readers agree even more tightly
-— *Śabdakalpadruma*–*Vācaspatya* 92.8 % (948 of 1,022 shared roots),
+85.5 % of cases (unanimous in 69.9 %); only 221 roots (14.5 %) conflict, and that
+figure still includes homonyms. Pairwise, the closest readers agree even more tightly:
+*Śabdakalpadruma*–*Vācaspatya* 92.8 % (948 of 1,022 shared roots),
 *Śabdakalpadruma*–*Kṛdantarūpamālā* 95.0 %, *Vācaspatya*–*Kṛdantarūpamālā* 92.7 %.
-*Pada* is compatible in **75.3 %** (the lower figure reflects the genuine
+*Pada* is compatible in 75.3 % (the lower figure reflects the genuine
 *parasmai*-default ambiguity and YAT's bare-stem citation, which undercounts), and
-transitivity in **81.4 %**. Five dictionaries, four conventions, one grammatical
+transitivity in 81.4 %. Five dictionaries, four conventions, one grammatical
 tradition, measured.
 
 ### 4.5 The sense unit is the *iti*-group, not the gloss
@@ -238,8 +240,8 @@ line (VCP, SHS) converge on the same classification of the same roots.
 requires treating the *anubandha* slot and the *iti*-unit as first-class structures,
 not as untagged prose to be flattened — a requirement a baseline lexicographic schema
 (TEI Lex-0; Tasovac, Romary et al. 2018) meets only with a *kośa*-specific
-customisation, exactly the kind of microstructural specificity the metalexicographic
-survey tradition anticipates (Hausmann and Wiegand 1989).
+customisation, the kind of microstructural specificity the metalexicographic survey
+tradition anticipates (Hausmann and Wiegand 1989).
 
 ## 6. Limitations and future work
 
