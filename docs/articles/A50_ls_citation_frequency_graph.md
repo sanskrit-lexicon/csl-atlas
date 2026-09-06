@@ -1,21 +1,25 @@
 # What the Sanskrit lexicographic tradition cites: a citation-frequency graph of `<ls>` source tags across 11 Cologne dictionaries
 
-_Created: 06-07-2026 · Last updated: 11-07-2026_
+_Created: 06-07-2026 · Last updated: 06-09-2026_
+
+Mārcis Gasūns, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru
 
 **Status: readiness 3/5 (full draft).** Data 4/5 (committed, reproducible); prose drafted in
-one pass (11-07-2026, H677) over the committed dataset only. Remaining gates before 4/5: human
+one pass (11-07-2026, H677) over the committed dataset only;
+author-voice pass 06-09-2026 ([SIGNOFF_A50_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A50_author_pass.md)).
+Remaining gates before 4/5: human
 review of the tradition map (§4 caveat), the Zenodo data release, secondary-reference
 verification (flagged below), byline/venue.
 
 ## Abstract
 
-Nineteenth- and twentieth-century Sanskrit dictionaries do not merely define words — they cite
+Besides defining words, nineteenth- and twentieth-century Sanskrit dictionaries cite
 authorities. In the Cologne Digital Sanskrit Dictionaries (CDSL) digitizations, those citations
 are machine-readable: every `<ls>` ("literary source") tag names the text a lexicographer
-invoked as evidence. We extract all 1,496,302 `<ls>` tags from the 11 CDSL dictionaries with a
+invoked as evidence. I extract all 1,496,302 `<ls>` tags from the 11 CDSL dictionaries with a
 usable abbreviation key, resolve and canonicalize them into a citation-frequency graph of
 828,505 citations of 912 distinct source texts, and release the graph as a documented,
-reproducible dataset. Three findings. First, the tradition's citation mass is heavily
+reproducible dataset. Three findings follow. First, the tradition's citation mass is heavily
 concentrated: the top 10 texts (led by the Mahābhārata, Ṛgveda, Rāmāyaṇa, and Manusmṛti) carry
 33.7% of all citations and the top 50 carry 71.0%. Second, the shared canon is thin: no text is
 cited by all 11 dictionaries, only 29 texts (3.2%) appear in seven or more, and 608 of 912
@@ -36,9 +40,9 @@ explicit on every page — Böhtlingk and Roth's *Sanskrit-Wörterbuch* (PWG) al
 800,000 source citations. The Cologne Digital Sanskrit Dictionaries preserve these citations as
 `<ls>` tags, each wrapping the lexicographer's own abbreviation for the work cited
 (`<ls>MBH. 7,9283</ls>`, `<ls>Spr. 2790</ls>`). Read across dictionaries, the tags form a
-bipartite citation network — dictionary × cited text — that lets us ask, quantitatively, a
-question usually answered by impression: **what does the Sanskrit lexicographic tradition
-actually cite?**
+bipartite citation network — dictionary × cited text — that lets me ask, quantitatively, a
+question usually answered by impression: what does the Sanskrit lexicographic tradition
+actually cite?
 
 Two sub-questions structure the paper. (i) *Is there a shared canon?* — a core set of texts
 every lexicon leans on, with idiosyncratic authorities as decoration. (ii) *Or do the
@@ -46,7 +50,7 @@ dictionaries partition into citation communities* — Vedic, classical-kāvya, B
 overlap is thinner than the "one tradition" framing suggests? These are distinguishable
 topologically: a shared canon predicts a *nested* matrix (small dictionaries cite subsets of
 what large ones cite), while communities predict a *modular* one (blocks of texts private to
-groups of dictionaries). We test both against degree-preserving nulls (§4).
+groups of dictionaries). I test both against degree-preserving nulls (§4).
 
 **Contributions.** (1) A documented, reproducible citation-frequency graph over 11 CDSL
 dictionaries — 828,505 resolved citations, 912 canonical text nodes, 1,701 dictionary→text
@@ -68,7 +72,7 @@ measures — NODF nestedness (Almeida-Neto et al. 2008) and Barber's (2007) bipa
 under the permutation-testing discipline argued for NLP by Dror et al. (2018). On the
 lexicographic side, the descriptive inventories of the Sanskrit dictionary tradition (Vogel
 1979; Zgusta 1971 for the general theory) characterize each dictionary's sources qualitatively;
-we are not aware of a prior quantitative citation census across the Sanskrit dictionaries.
+I am not aware of a prior quantitative citation census across the Sanskrit dictionaries.
 
 ## 2 Data and method
 
@@ -136,8 +140,8 @@ its two largest causes (MW's tag reuse, partial borrowed keys) are treated as li
 
 **Concentration.** Citation mass is strongly top-heavy. Computed from
 [`ls_citation_nodes.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_nodes.tsv)
-(n = 912 texts, 828,505 citations, data as of 11-07-2026): the top 10 texts carry **33.7%** of
-all citations, the top 20 carry 49.7%, the top 50 carry **71.0%**, and the top 100 carry 84.9%.
+(n = 912 texts, 828,505 citations, data as of 11-07-2026): the top 10 texts carry 33.7% of
+all citations, the top 20 carry 49.7%, the top 50 carry 71.0%, and the top 100 carry 84.9%.
 A working lexicographer's evidentiary world was, in volume terms, a few dozen texts deep.
 
 **Table 2 — the most-cited texts.** Source: `ls_citation_nodes.tsv` (n = 912; folded canonical
@@ -186,10 +190,10 @@ citing his own anthology (see §5 on its verification).
 | 2 | 97 |
 | 1 | 608 |
 
-**No text is cited by all 11 dictionaries.** The widest-reach texts, at 9 of 11, are the
+No text is cited by all 11 dictionaries. The widest-reach texts, at 9 of 11, are the
 Rāmāyaṇa, the Kathāsaritsāgara, the Bhagavadgītā, and the Mārkaṇḍeya-Purāṇa. Only 29 texts
 (3.2%) reach seven or more dictionaries — but those 29 carry 44.1% of all citation volume.
-Meanwhile **608 of 912 texts (66.7%) are private to a single dictionary**, jointly carrying
+Meanwhile 608 of 912 texts (66.7%) are private to a single dictionary, jointly carrying
 11.1% of the volume. The picture is a thin, heavily-cited universal head over a long private
 tail — which raises the topological question of §4: is the tail structured?
 
@@ -202,15 +206,15 @@ authorities, the matrix should be *modular*: blocks of texts co-cited by a group
 dictionaries and absent elsewhere. Following the committed test
 ([`scripts/build-citation-canon.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-canon.mjs)
 → [`citation_canon.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/citations/citation_canon.json),
-generated 07-07-2026; matrix 11 × 912, 1,701 edges, fill 0.170), we compute NODF nestedness
+generated 07-07-2026; matrix 11 × 912, 1,701 edges, fill 0.170), I compute NODF nestedness
 (Almeida-Neto et al. 2008) and Barber (2007) bipartite modularity Q (label propagation, best of
 6 restarts), each against 1,000 degree-preserving (fixed-fixed) permutation nulls; permutation
 p = (r+1)/(n+1).
 
 **Result: the matrix is significantly modular and, if anything, *less* nested than chance.**
 NODF = 24.44 vs. null mean 28.98 ± 0.18 (z = −25.7, p = 1.0); Barber Q = 0.4995 (9 modules)
-vs. null mean 0.4295 ± 0.0008 (z = 83.8, **p = 0.001**). The shared-canon hypothesis is not
-merely unsupported — the arrangement of citations runs the other way. The degree-preserving
+vs. null mean 0.4295 ± 0.0008 (z = 83.8, p = 0.001). The shared-canon hypothesis is not
+merely unsupported: the arrangement of citations runs the other way. The degree-preserving
 null holds each dictionary's breadth and each text's popularity fixed, so this is a statement
 about *arrangement*, not about the concentration already reported in §3: given how many texts
 each dictionary cites and how popular each text is, the specific assignments cluster into
@@ -259,7 +263,7 @@ this section must be re-stated over the reviewed map before submission.
 1. **Resolution ceiling.** 57.8% of non-filtered `<ls>` tags resolve to a canonical text. The
    unresolved remainder is dominated by unkeyed abbreviations and is inventoried per dictionary
    in [`ls_citation_unresolved_top.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_unresolved_top.tsv)
-   — a worklist, not a mystery. Results in §3–§4 describe the resolved graph.
+   — a worklist. Results in §3–§4 describe the resolved graph.
 2. **MW's yield is structurally low (7.9%).** After the audited removal of 63,582
    grammatical/editorial markers, MW contributes only ~20k text citations under 5 coarse nodes
    (78.6% of them "Ṛgveda"). MW's `<ls>` habits make it a poor frequency source; its
@@ -307,7 +311,7 @@ Read as a citation network, the Sanskrit dictionary tradition is not one traditi
 citation mass concentrates on a few dozen texts, but the *arrangement* of citations is
 significantly modular: a Buddhist lexicon, a kāvya-schoolroom line, a Vedic profile, and the
 omnivorous Petersburg lineage each kept their own authorities, sharing only a thin universal
-head — Rāmāyaṇa, Mahābhārata, Ṛgveda, Manusmṛti — that no single text of which reaches all
+head — Rāmāyaṇa, Mahābhārata, Ṛgveda, Manusmṛti — of which no single text reaches all
 eleven dictionaries. The "canon of Sanskrit literature" implied by the dictionaries is a union
 of school reading lists, not an intersection.
 
