@@ -1,4 +1,4 @@
-_Created: 16-06-2026 · Last updated: 05-09-2026_
+_Created: 16-06-2026 · Last updated: 06-09-2026_
 
 # Pointing Inward: Cross-Reference Graphs as a Signal of Dictionary Descent
 
@@ -23,6 +23,8 @@ the 2026-07-03 referee pass
 ([A05_review_fable5.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A05_review_fable5.md)),
 which also corrected an AP/AP90 edition-label swap in the abstract and Table 1;
 author-voice pass 2026-07-11
+([SIGNOFF_A05_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A05_author_pass.md));
+author-voice pass 06-09-2026
 ([SIGNOFF_A05_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A05_author_pass.md)).
 Author: Mārcis Gasūns, independent scholar
 ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru.*
@@ -38,23 +40,23 @@ cross-reference graphs is a candidate signal of descent. The difficulty is readi
 overlap: two dictionaries of the same language share variant and cognate pointers by
 common scholarly knowledge, and they share prefix-marking conventions that manufacture
 spurious hubs, so a raw overlap number conflates inheritance with coincidence and with
-house style. We make the signal legible with a **positive control**. Parsing the
+house style. I make the signal legible with a positive control. Parsing the
 cross-reference slots of the Cologne Digital Sanskrit Lexicon yields directed pointer
 graphs for the Petersburg lexicon (PWG `Vgl.`, 22,937 normalised edges over 11,857
 source lemmas), Monier-Williams (MW `cf.`, 7,637 edges / 6,974 sources), and the Apte
 editions (`cf.` in SLP1, 444 clean lemma edges for Apte 1890 and 609 for the revised
 1957 Apte).
 Two editions of the *same* dictionary — Apte 1890 and the revised Apte — overlap at
-**85 % inheritance rate (Jaccard 0.74)**: that is the calibrated signature of descent.
+85 % inheritance rate (Jaccard 0.74): that is the calibrated signature of descent.
 Against that ceiling, the cross-tradition Monier-Williams × Petersburg pair reaches only
-**21.8 % (Jaccard 0.069)** on the lemmas both cross-reference — far above chance in the
+21.8 % (Jaccard 0.069) on the lemmas both cross-reference — far above chance in the
 ~300,000-lemma union of the two key spaces, so the two networks
 are *not* independent, yet the overlap sits nowhere near the
 edition-continuity ceiling. The cross-reference relationship between MW and the
-Petersburg lexicon is therefore a **shared core, not wholesale inheritance**: a common
+Petersburg lexicon is therefore a shared core, not wholesale inheritance: a common
 substrate of variant/cognate pointers over which each tradition cross-referenced largely
-on its own (PWG's network is three times denser). We further show that the apparent
-overlap must be cleaned of **prefix-convention hubs** (PWG points 320 times to *a°*, 254
+on its own (PWG's network is three times denser). I further show that the apparent
+overlap must be cleaned of prefix-convention hubs (PWG points 320 times to *a°*, 254
 to *mahā°*) — a *convention* artefact in the sense of the companion methods paper — and
 that one dictionary, Benfey, does no internal Sanskrit cross-referencing at all, a fact
 about its content rather than its markup. Cross-reference overlap is a floor for
@@ -93,12 +95,12 @@ manufactures graph hubs out of house style rather than shared knowledge. And onl
 overlap is genuine **inheritance**, one network built on the other. A single overlap
 number cannot tell these apart.
 
-Our solution is calibration by a positive control (§3). Two editions of the same
-dictionary must, by construction, share most of their cross-references; measuring how
-much they actually share tells us what a descent signal *looks like* on this data and
-this method, and gives every other pair a ceiling to be read against. With that ceiling
-in hand, the cross-tradition comparisons become interpretable — and the answer to the
-roadmap question is a qualified no: a shared core, not the same graph.
+The contribution of this paper is a calibration by positive control (§3). Two editions
+of the same dictionary must, by construction, share most of their cross-references;
+measuring how much they actually share shows what a descent signal looks like on this
+data and this method, and gives every other pair a ceiling to be read against. With that
+ceiling in hand, the cross-tradition comparisons become interpretable, and the answer to
+the roadmap question is a qualified no: a shared core, not the same graph.
 
 ## 2. Data
 
@@ -138,18 +140,18 @@ not a markup gap.*
 Both ends of every edge are reduced to a common key: strip the compound-family marker
 (PWG writes it `°`, MW writes it `-`, so `a°` ≡ `a-`), strip SLP1 accents and stray
 hyphens, and deduplicate per dictionary. Two networks are then intersected on the set of
-**source lemmas both dictionaries cross-reference** — there is no point asking whether
-MW and PWG agree about a lemma only one of them points from. On that shared-source set we
+source lemmas both dictionaries cross-reference — there is no point asking whether
+MW and PWG agree about a lemma only one of them points from. On that shared-source set I
 report the number of identical `source → target` edges, the directed **inheritance rate**
 for each dictionary (what fraction of *its* cross-references from shared sources the other
-also makes), and the Jaccard overlap (Jaccard 1912). Edges are **directed**: a reciprocal
+also makes), and the Jaccard overlap (Jaccard 1912). Edges are directed: a reciprocal
 pointer in the
 other dictionary does not count as a match. (The metric's definition and limits are
 stated once for the series in P1, §3.6; this paper is its dedicated instantiation, and
 treating structural overlap as multi-dimensional descent evidence follows the
 digital-stemmatology precedent of Andrews and Macé 2013.) The normalisation is deliberately
 conservative — a messy multi-part target that does not reduce cleanly simply fails to
-match — so every number is a **floor**.
+match — so every number is a floor.
 
 ### 3.2 The positive control
 
@@ -194,25 +196,25 @@ and [`MICROSTRUCTURE_XREF_LINEAGE.md`](https://github.com/sanskrit-lexicon/csl-a
 The two remaining packet pairs, AP × CAE (1 edge) and AP90 × CAE (0 edges), are omitted
 as empty.*
 
-The control behaves as it must: two editions of Apte recover **~85 %** of each other's
+The control behaves as it must: two editions of Apte recover ~85 % of each other's
 cross-references, at Jaccard 0.74. That is the shape of descent — near-total preservation
 of the pointer graph across an edition. Every other pair is read against it.
 
 ### 4.2 Monier-Williams and the Petersburg lexicon: a shared core
 
 The headline pair is the largest. MW and PWG share 2,538 source lemmas; on those, MW
-makes 2,946 cross-references and PWG makes 7,022, of which **641 are identical** edges.
-That is an inheritance rate of **21.8 %** from the MW side (and 9.1 % from the denser PWG
+makes 2,946 cross-references and PWG makes 7,022, of which 641 are identical edges.
+That is an inheritance rate of 21.8 % from the MW side (and 9.1 % from the denser PWG
 side), at Jaccard 0.069. The number cuts both ways. It is far above chance — in the
 ≈300,000-headword union of the two dictionaries' key spaces, 641 coincident directed
 pointers on a 2,538-lemma overlap is not what independent networks produce — so MW and
-PWG are demonstrably **related**, as the
+PWG are demonstrably related, as the
 philology has always held. But it is barely a quarter of the edition-continuity ceiling,
 and roughly four in five of MW's cross-references — even from lemmas PWG also
 cross-references — go where PWG does not. The sample of genuinely shared edges is telling:
 *ARi → aRi*, *Ayu → Ayus*, *Bala → bal* — variant-form and cognate-root pointers that two
 competent Sanskrit lexicographers would each record independently. The verdict is a
-**shared cross-reference core with large independent expansion in each tradition** —
+shared cross-reference core with large independent expansion in each tradition —
 common scholarly substrate, very possibly some borrowing, but not a network MW lifted
 from Petersburg.
 
@@ -228,7 +230,7 @@ reading, leaving the 641 shared edges to be adjudicated on their lexical merits.
 
 ### 4.4 A content finding: Benfey points nowhere inward
 
-Benfey's dictionary records **zero** internal Sanskrit cross-references: its `cf.` slot
+Benfey's dictionary records zero internal Sanskrit cross-references: its `cf.` slot
 holds only cognates in other languages and Roman-script comparanda. This is not a markup
 limitation the parser failed to read but a property of the dictionary — Benfey simply does
 not build an internal pointer graph — and it means cross-reference descent is undefined
@@ -243,9 +245,9 @@ Read naively, the MW × PWG overlap could be told either way — "21.8 % shared,
 are related!" or "78 % divergent, MW built its own graph!" — and both spins are true and
 useless. The positive control dissolves the ambiguity: 21.8 % is not "high" or "low" in
 the abstract, it is *a quarter of what descent looks like* on this method, measured on the
-same data. Calibration, not the raw number, is what licenses the reading. This is the
-general lesson — a structural-overlap measure means nothing without a known-answer pair to
-scale it, and the cheapest such pair is two editions of one dictionary.
+same data. Calibration, not the raw number, is what licenses the reading. The general lesson
+follows: a structural-overlap measure means nothing without a known-answer pair to scale
+it, and the cheapest such pair is two editions of one dictionary.
 
 ### 5.2 Relation to the companion findings
 
@@ -264,26 +266,28 @@ that is a fact about the instrument's content, not a gap to be filled.
 
 ## 6. Limitations
 
-- **Floor, not ceiling.** Conservative normalisation means unmatched messy targets only
-  *lower* the measured overlap; the true shared core is at least as large as reported.
-- **Directed edges.** Only `source → target` matches count; a reciprocal pointer in the
-  other dictionary is not credited, which understates symmetric relatedness.
-- **Density asymmetry.** PWG cross-references roughly three times as densely as MW
-  (22,937 vs 7,637 edges), so the two directed inheritance rates are not comparable in
-  magnitude and are reported separately rather than averaged.
-- **Sparse pairs are unreadable.** Every cross-tradition pair except MW × PWG and the
-  Apte control shares too few source lemmas (7–23 overlapping edges) to support a reading;
-  they are reported for completeness only.
-- **The labels are review prompts.** Edition-continuity, lexical-shared-core, prefix-
-  convention, and too-sparse are machine triage classes over a 40-edge shared-core sample;
-  the packet records no human lineage decision.
-- **One positive control.** The calibration rests on a single same-dictionary pair (Apte);
-  a second edition-continuity pair would strengthen the ceiling.
+The numbers are floors, not ceilings: conservative normalisation means unmatched messy
+targets only lower the measured overlap, so the true shared core is at least as large as
+reported. Edges are directed: only `source → target` matches count, and a reciprocal
+pointer in the other dictionary is not credited, which understates symmetric relatedness.
+The two networks differ in density: PWG cross-references roughly three times as densely as
+MW (22,937 vs 7,637 edges), so the two directed inheritance rates are not comparable in
+magnitude and are reported separately rather than averaged.
+
+The sparse pairs are unreadable: every cross-tradition pair except MW × PWG and the Apte
+control shares too few source lemmas (7–23 overlapping edges) to support a reading, and
+they are reported for completeness only. The labels are review prompts: edition-continuity,
+lexical-shared-core, prefix-convention and too-sparse are machine triage classes over a
+40-edge shared-core sample, and the packet records no human lineage decision. Finally, the
+calibration rests on a single same-dictionary pair (Apte); a second edition-continuity pair
+would strengthen the ceiling.
 
 ## 7. Conclusion
 
 The graph a dictionary makes by pointing at itself is a real and measurable signal of
-descent — but only once it is calibrated and cleaned. Two editions of Apte preserve 85 %
+descent — but only once it is calibrated and cleaned. The question the introduction
+posed, whether the Monier-Williams `cf.` network and the Petersburg `Vgl.` network are
+the same graph, gets a qualified no. Two editions of Apte preserve 85 %
 of their cross-references; against that ceiling, Monier-Williams and the Petersburg lexicon
 share just 21.8 %, and that fraction, stripped of the prefix-convention hubs that
 manufacture false agreement, resolves into a common scholarly core of variant and cognate
