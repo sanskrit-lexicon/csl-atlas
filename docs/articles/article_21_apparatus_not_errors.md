@@ -1,11 +1,11 @@
-_Created: 03-06-2026 · Last updated: 05-09-2026_
+_Created: 03-06-2026 · Last updated: 06-09-2026_
 
 # Apparatus, not errors: how Monier-Williams inherited the Petersburg lexicon
 
-Mārcis Gasūns · ORCID [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X) · gasyoun@ya.ru
+Mārcis Gasūns · independent scholar · ORCID [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X) · gasyoun@ya.ru
 
-*Submit-ready draft pending author sign-off
-([SIGNOFF_A10_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A10_author_pass.md));
+*Submit-ready draft pending author sign-off (author-voice pass 06-09-2026,
+[SIGNOFF_A10_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A10_author_pass.md));
 internal Article 21 / paper A10. Empirical basis: the L3 forensic suite (F1–F6) + L0.8,
 building on the convention-vs-content result of Phase L0
 ([`paper_H_convention_vs_content_lineage.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/paper_H_convention_vs_content_lineage.md) §5).
@@ -23,16 +23,16 @@ Monier-Williams' *Sanskrit-English Dictionary* (MW, 1899) was built in the shado
 Böhtlingk & Roth's *Großes Petersburger Wörterbuch* (PWG, 1855–75) and Böhtlingk's
 abridgement (PW, 1879–89). *How* it inherited has been asserted but not measured. Using
 six language-neutral signals calibrated across 41 digitised dictionaries plus a
-scholar-curated error list, I show that MW inherited Böhtlingk's **apparatus** — which words to enter,
-which texts to cite **and in what order**, how to divide homonyms — but **not** his
+scholar-curated error list, I show that MW inherited Böhtlingk's apparatus — which words to enter,
+which texts to cite and in what order, how to divide homonyms — but not his
 mechanical errors. The inheritance shows even in the *gaps*: on 6,941 real words attested
 in both indigenous kośas but which PWG may or may not carry, MW's omissions track PWG's
-**≈8× more** than the independent Apte's do (gap-sensitivity 12.3× vs 1.5×), yet MW
-independently supplies **55%** of the words PWG omits — it inherited the inventory backbone
+≈8× more than the independent Apte's do (gap-sensitivity 12.3× vs 1.5×), yet MW
+independently supplies 55% of the words PWG omits — it inherited the inventory backbone
 without copying the blind spots. Where a
 PWG headword is misspelled and MW enters the word at all, MW has the correct form in 98%
 of curated cases (90/92; it lacks the word in the remaining 31 of 123); MW and PWG
-share **zero** documented print errors. Nor did MW copy the order of the **meanings** —
+share zero documented print errors. Nor did MW copy the order of the *meanings* —
 Böhtlingk's fourth charge: it sequences its senses no more like PWG's (0.767) than like the
 independent Apte's (0.751), shared lexicographic convention rather than transcription, with a
 copying residue only in the entries whose definitions MW derived most closely. Resolving the 565 shared Harivaṃśa references
@@ -53,7 +53,7 @@ independently, but the same error is near-impossible to invent twice; Maas 1958;
 West 1973; for its digital extension, Andrews & Macé 2013). The three claims
 are routinely conflated. I separate them.
 
-These are not abstract categories — they are the very terms of Böhtlingk's own accusation.
+The three categories are Böhtlingk's own: they are the terms of his accusation.
 In the preface to volume 4 of the abridged *pw* (1883) he charged Monier-Williams with a
 "hinter dem Rücken … handwerksmässig betriebene Ausbeutung" of the Petersburg lexicon and
 cited **35 passages** in evidence. The contemporaneous Böhtlingk↔Max-Müller correspondence,
@@ -74,10 +74,9 @@ digitised editions, clause by clause: apparatus (§3), omission (§3.5), sense-o
 MW is English; PWG/PW are German. Gloss prose is therefore a weak, cross-lingual channel;
 the load is carried by signals that survive translation: headword sets, citations
 (`<ls>` tags), and homonym structure. Each signal is calibrated against a **null** of
-demonstrably unrelated dictionaries (e.g. BHS — Buddhist Hybrid Sanskrit, Edgerton 1953;
-the indigenous
-Śabdakalpadruma/Vācaspatyam are *excluded* from the citation analysis because they cite
-in an untagged indigenous style, not for lack of citations — see
+demonstrably unrelated dictionaries, e.g. BHS (Buddhist Hybrid Sanskrit, Edgerton 1953).
+The indigenous Śabdakalpadruma/Vācaspatyam are *excluded* from the citation analysis
+because they cite in an untagged indigenous style, not for lack of citations (see
 `data/forensic/CITATION_TAGGING.md`).
 
 | signal | what it measures | script |
@@ -139,8 +138,8 @@ single copying signal in the suite, and it is structural, not lexical.
 **3.5 Shared omission — the inventory backbone, from the negative-space side.** §3.1 shows
 shared *presence*; Böhtlingk's item #1 was shared *absence* — "was in Ihrem Werk ausgelaßen
 ist, ist bei ihm ausgelaßen." I test it on the negative space of the inventory, restricted to
-words that are unambiguously real yet lie **wholly outside the European lineage**: the **6,941**
-headwords attested in **both** indigenous kośas, Śabdakalpadruma and Vācaspatyam (SKD ∩ VCP).
+words that are unambiguously real yet lie wholly outside the European lineage: the **6,941**
+headwords attested in *both* indigenous kośas, Śabdakalpadruma and Vācaspatyam (SKD ∩ VCP).
 Among these, whether MW enters a word is **12.3×** more likely when PWG enters it than when PWG
 omits it (MW lacks 3.7% of PWG's holdings but 45.4% of PWG's omissions) — while for the
 independent Apte the same coupling is only **1.5×** (F9). Whether MW enters a real word is thus
@@ -149,38 +148,38 @@ negative-space corroboration of §3.1's containment on a set where "MW contains 
 cannot trivially hold and with an *independent* dictionary, not a size-correction, absorbing
 the rarity confound (the mirror of the §4.2 "same hard words" trap). The confound runs the safe
 way: MW's Pandit-mediated Indian sources would, if anything, let it share indigenous vocabulary
-*independently* of PWG and *fill* the gaps — weakening the coupling — so 8× is a floor. **Yet MW
-is no mechanical copy of the gaps:** it independently supplies **54.6%** of the real indigenous
+*independently* of PWG and *fill* the gaps — weakening the coupling — so 8× is a floor. Yet MW
+is no mechanical copy of the gaps: it independently supplies **54.6%** of the real indigenous
 words PWG omits, *more* than the independent Apte's 43.9%. Böhtlingk's rhetorical "what PW omits,
 MW omits" therefore *overstates*: MW inherited the inventory backbone and then extended it. And,
 exactly as with the shared citations (§6), an omission is not a conjunctive error — two compilers
 can independently drop the same rare word — so this corroborates common descent without
-delivering the airtight Lachmann proof. It strengthens the **apparatus** side, not the error side
+delivering the airtight Lachmann proof. It strengthens the *apparatus* side, not the error side
 (full census: [`data/forensic/SHARED_OMISSION_TEST.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SHARED_OMISSION_TEST.md)).
 
 **3.6 Sense order — the fourth clause, measured directly, and it comes out near-null.** §3.4 measured the
 order in which the two works cite their *sources*; Böhtlingk's item #4 was narrower and more literal —
-"die Reihenfolge der **Bedeutungen** einfach abgeschrieben," the order of the **meanings** copied out.
+"die Reihenfolge der *Bedeutungen* einfach abgeschrieben," the order of the *meanings* copied out.
 For every headword both dictionaries carry with ≥3 senses, I extract MW's ordered sense sequence and
-PWG's, align them **cross-lingually by meaning** — each sense reduced to its {English gloss + Sanskrit
+PWG's, align them cross-lingually by meaning — each sense reduced to its {English gloss + Sanskrit
 referent} token bag, PWG's German rendered `de→en` by the same offline MT channel as §4.3, citations
-**excluded** so the test is independent of F5 — and score sequence concordance exactly as §3.4 did for
+*excluded* so the test is independent of F5 — and score sequence concordance exactly as §3.4 did for
 citations. Over **2,451** shared headwords MW reproduces PWG's sense order at **0.767** concordance
-(41.9% of entries in perfectly identical order). But — unlike the citations — this barely clears the
-**independent Apte control at 0.751**: a differential of just **+0.016**, against the +0.39 gap that the
+(41.9% of entries in perfectly identical order). But, unlike the citations, this barely clears the
+independent Apte control at **0.751**: a differential of just **+0.016**, against the +0.39 gap that the
 citation order showed (§3.4: PWG 0.811 vs Apte 0.42). Both dictionaries order senses far above the 0.50
-shuffled-sense floor, so sense order is *structured* — but it is structured by a **shared lexicographic
-convention** (literal → figurative → technical), not by transcription: MW sequences its meanings barely
+shuffled-sense floor, so sense order is *structured* — but it is structured by a *shared lexicographic
+convention* (literal → figurative → technical), not by transcription: MW sequences its meanings barely
 more like Böhtlingk's than like the wholly independent Apte's. Only on the strict "perfectly identical"
 metric does a faint Petersburg residue survive (41.9% vs Apte's 34.3%, +7.6 pts), and the cross-lingual
-match is noisier for PWG (match-similarity 0.22 vs Apte's 0.40), which if anything **depresses** the
+match is noisier for PWG (match-similarity 0.22 vs Apte's 0.40), which if anything *depresses* the
 measured MW-vs-PWG value — so 0.767 is a floor and the near-parity with Apte is not a matching artefact.
 A paired within-headword test (n = 660: MW-vs-PWG 0.716 vs Apte 0.713, sign-test *n.s.*) confirms the
 near-parity is not a subset accident, and a match-quality sweep locates the residue precisely: as the
 matches are cleaned up (equalising the noisier PWG arm), the Petersburg excess emerges and grows
-(+0.10 at match-similarity > 0.20) **only** in the entries where MW's gloss most closely echoes PWG's —
+(+0.10 at match-similarity > 0.20) *only* in the entries where MW's gloss most closely echoes PWG's —
 sense order was copied chiefly where MW derived the definition most directly, and convergently
-everywhere else. **On this one clause Böhtlingk largely overreached:** the sense order was not "simply copied" — MW is the author
+everywhere else. On this one clause Böhtlingk largely overreached: the sense order was not "simply copied" — MW is the author
 of its sense-sequencing as it is of its prose (§4), even as it remains the heir of the citation
 apparatus (§3.4) and inventory (§3.1, §3.5). Read alone, the F5 citation-order proxy would have
 over-attributed this clause; the direct test corrects it (full census:
@@ -194,7 +193,7 @@ Funderburk in 2014) of 123 PWG headword spelling errors, several recording MW's 
 for the same word. **MW carries the PWG error in 2 of 123 cases (1.6%)** — and both
 (`asUya/asUy`, `vara/var`) are root-vs-stem citation conventions, not misspellings, so the
 genuine figure is ≈ **0%**. Where PWG erred, MW has the *correct* form (90 cases) or simply
-lacks the word (31). Independent of typesetting accidents.
+lacks the word (31). MW's text is independent of PWG's typesetting accidents.
 
 **4.2 The null-test trap.** A naïve corpus null is misleading here: headwords corrected in
 *both* a Petersburg dict and MW number 256 against 102.8 expected by chance — a lift of
@@ -218,7 +217,7 @@ glosses track PWG *least*. The prose is MW's own throughout, technical vocabular
 
 ## 5. Discussion
 
-The signals converge on one statement: **MW is a structural copycat of Böhtlingk's apparatus
+The signals converge on one statement: **MW is a structural copy of Böhtlingk's apparatus
 and an independent typesetting.** It worked *from* the Petersburg articles — reproducing not
 only the lemma inventory and the textual loci but their **citation order** within the entry (§3.4),
 the surest sign that the German article lay open on the desk — yet the finer-grained order of the
