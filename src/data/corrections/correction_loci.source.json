@@ -1,9 +1,9 @@
 {
   "dataset": "correction_loci",
-  "commit": "529a0654c166c3f326e769e57e8934653c1a6240",
+  "commit": "453bee39c06acf839f486212c5c0ab404c27f4dc",
   "feedRepo": "https://github.com/sanskrit-lexicon/csl-corrections",
-  "feedCommit": "0629c77381dc1c00361eb8a819869c7704b9b7ad",
-  "generatedAt": "2026-08-04T01:12:28.165Z",
+  "feedCommit": "55b2619ceb0880d34cc2d1df7a8f0c3f0cdd61fe",
+  "generatedAt": "2026-09-06T05:46:46.243Z",
   "generatedBy": "npm run build-correction-feed",
   "sourceFiles": [
     "csl-corrections/data/derived/correction_loci.tsv",

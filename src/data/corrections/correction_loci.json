@@ -34,7 +34,7 @@
       "distinctPages": 597,
       "pageCoverage": 0.4482,
       "firstDate": "2024-06-23",
-      "lastDate": "2026-06-27",
+      "lastDate": "2026-08-04",
       "directives": {
         "new": 23004
       },
@@ -162,7 +162,7 @@
       "distinctPages": 94,
       "pageCoverage": 0.0786,
       "firstDate": "2025-01-14",
-      "lastDate": "2026-07-12",
+      "lastDate": "2026-08-04",
       "directives": {
         "new": 157
       },
@@ -187,7 +187,7 @@
       "distinctPages": 22,
       "pageCoverage": 0.0186,
       "firstDate": "2026-05-29",
-      "lastDate": "2026-05-29",
+      "lastDate": "2026-08-04",
       "directives": {
         "ins": 54,
         "new": 24
@@ -404,8 +404,8 @@
       "maxPage": null,
       "distinctPages": 0,
       "pageCoverage": null,
-      "firstDate": null,
-      "lastDate": null,
+      "firstDate": "2026-08-04",
+      "lastDate": "2026-08-04",
       "directives": {
         "new": 1
       },
@@ -5383,6 +5383,11 @@
       "month": "2026-07",
       "process": "human",
       "count": 15
+    },
+    {
+      "month": "2026-08",
+      "process": "human",
+      "count": 21875
     }
   ],
   "limitations": [
@@ -5395,5 +5400,5 @@
   "boundary": [
     "Feed owner is csl-corrections (scripts/build_correction_loci.py); this packet only aggregates it — never re-parses change files. Rendering owner repo csl-atlas."
   ],
-  "generatedAt": "2026-08-04T01:12:28.165Z"
+  "generatedAt": "2026-09-06T05:46:46.243Z"
 }
