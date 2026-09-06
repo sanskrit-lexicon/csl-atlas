@@ -1,4 +1,4 @@
-_Created: 11-06-2026 · Last updated: 05-09-2026_
+_Created: 11-06-2026 · Last updated: 06-09-2026_
 
 # Two Citation Registers and the Dictionary-to-Book Gap in the Cologne Digital Sanskrit Lexicon
 
@@ -21,7 +21,9 @@ numbers herein are the 2026-07 snapshot. Siglum-inventory figures (§4.3) are th
 revision executed 2026-07-02 ([PR #184](https://github.com/sanskrit-lexicon/csl-atlas/pull/184))
 with counts regenerated from the committed artifact
 ([PR #187](https://github.com/sanskrit-lexicon/csl-atlas/pull/187)); author-voice pass 2026-07-11
-([SIGNOFF_A08_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A08_author_pass.md)).
+([SIGNOFF_A08_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A08_author_pass.md));
+second author-voice pass 2026-09-06 (Pass 2 in the same
+[SIGNOFF_A08_author_pass.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/SIGNOFF_A08_author_pass.md)).
 Author: Mārcis Gasūns, independent scholar
 ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru.*
 
@@ -29,28 +31,28 @@ Author: Mārcis Gasūns, independent scholar
 
 ## Abstract
 
-A historical dictionary's authority rests in large part on its **source citations** —
+A historical dictionary's authority rests in large part on its source citations —
 the references to texts that license each sense. In a fully digitised dictionary
 corpus these citations become a linking problem: how many can be resolved
 automatically to the work and passage they name (the "dictionary-to-book" gap), and
-do the constituent dictionaries even cite in the same way? We answer both questions
+do the constituent dictionaries even cite in the same way? I answer both questions
 for the Cologne Digital Sanskrit Lexicon (CDSL), forty-four Sanskrit dictionaries in
 a common markup. The European critical-apparatus tradition tags source references
-explicitly: we count **1,245,644 such `<ls>` citations** (about 0.83 per entry), of
-which **59.3 % carry a numeric locator** — book, chapter or verse — and are thus
+explicitly: I count 1,245,644 such `<ls>` citations (about 0.83 per entry), of
+which 59.3 % carry a numeric locator — book, chapter or verse — and are thus
 resolvable in principle to a passage, while the remaining ~41 % (≈507,000 citations)
 are bare source abbreviations. That bare-abbreviation residue is the measured ceiling
 of the dictionary-to-book gap. The citations draw on a heavily skewed source
 inventory: roughly 13,000 raw abbreviation strings fold to about 9,000 distinct
-sigla, but only **2,166 sources are cited ten or more times** — the genuine working
+sigla, but only 2,166 sources are cited ten or more times — the genuine working
 apparatus — behind a long tail in which the fifty commonest sigla already account for
-half of all citations. Critically, the `<ls>` tally measures only one **citation
-register**. The indigenous Sanskrit-to-Sanskrit *kośa*s use **no `<ls>` tags at all**;
+half of all citations. But the `<ls>` tally measures only one citation
+register. The indigenous Sanskrit-to-Sanskrit *kośa*s use no `<ls>` tags at all;
 they cite by quoting a source work followed by the quotative particle *iti*. Counting
 that construction shows the *Śabdakalpadruma* alone carrying ~80,000 source
 references, the *Vācaspatya* ~15,600 and the *Kṛdantarūpamālā* ~12,400 — all invisible
-to an `<ls>`-based measure. We conclude that the CDSL contains **two disjoint citation
-systems**: a European apparatus that is roughly 60 % machine-resolvable and amenable
+to an `<ls>`-based measure. I conclude that the CDSL contains two disjoint citation
+systems: a European apparatus that is roughly 60 % machine-resolvable and amenable
 to a reviewed source-abbreviation registry, and an indigenous *iti*-quotation register
 that is citation-dense but requires an entirely different resolution strategy.
 Per-dictionary citation density is meaningless unless reported per register.
@@ -74,14 +76,14 @@ be resolved to a controlled list of works.
 
 This paper measures the problem for the Cologne Digital Sanskrit Lexicon (CDSL),
 which encodes forty-four Sanskrit dictionaries in a shared markup with an explicit
-source-citation tag. We ask three questions. *How many citations are there, and how
+source-citation tag. I ask three questions. *How many citations are there, and how
 densely do the dictionaries cite?* *What fraction carry enough information — a
 locator — to be resolved to a passage rather than merely to a work?* And *how large
 and how skewed is the inventory of cited sources, once abbreviation variants are
 normalised?* A fourth question proves to be prior to all of these: *do all the
 dictionaries cite in the same way at all?* The answer — that two of the corpus's
 lexicographic traditions use mutually unintelligible citation registers — reframes
-every per-dictionary statistic and is, we argue, the paper's principal finding.
+every per-dictionary statistic and is, I argue, the paper's principal finding.
 
 ## 2. Background
 
@@ -110,10 +112,10 @@ corpus-wide citation statistic.
 
 ### 3.1 Counting `<ls>` citations and their resolvability
 
-We extract every `<ls>…</ls>` element from the canonical source files
+I extract every `<ls>…</ls>` element from the canonical source files
 (`csl-orig/v02`) of all forty-four dictionaries. A citation is classed as
-**locator-bearing** if its content contains a numeral (a book, chapter, verse or page
-reference), and **bare** otherwise. Locator presence is a generous proxy for
+*locator-bearing* if its content contains a numeral (a book, chapter, verse or page
+reference), and *bare* otherwise. Locator presence is a generous proxy for
 resolvability — it is a necessary, not sufficient, condition for linking to a passage
 — so the locator share is reported as the *upper* bound of a resolvability band. The
 lower bound additionally requires the citation's source abbreviation to be a member
@@ -122,9 +124,9 @@ of the established source set (§3.2).
 ### 3.2 Normalising the source inventory
 
 Source abbreviations vary by dictionary house style. Two folding layers reduce them
-to canonical identities. The first is a **diacritic-and-case fold** (`foldSiglum`):
+to canonical identities. The first is a *diacritic-and-case fold* (`foldSiglum`):
 *MBh* and *MBH* both fold to *mbh*, *RV* and *ṚV* to *rv*. The second is a reviewed
-**abbreviation-family** layer: length variants of one work — *R.*, *Rām.*, *Rāmāy.* →
+*abbreviation-family* layer: length variants of one work — *R.*, *Rām.*, *Rāmāy.* →
 Rāmāyaṇa — that the fold cannot catch. Because abbreviation merging is error-prone, it
 is generated as *review candidates* (a prefix-clustering tool over the fold-keys) and
 adjudicated by hand into a curated alias table; the tool deliberately surfaces false
@@ -133,7 +135,7 @@ distinct works) so that they are *split*, not merged.
 
 ### 3.3 The indigenous register
 
-For the *kośa*s we count the quotative construction directly: occurrences of *iti*
+For the *kośa*s I count the quotative construction directly: occurrences of *iti*
 and its pre-vocalic sandhi form *ity* at a word boundary — not adjacent to a Latin
 letter on either side — which excludes the many in-word substrings (*prīti*, *nīti*)
 while still counting quotatives that sit directly after markup or punctuation. The
@@ -154,8 +156,8 @@ automatic. These limits are revisited in §6.
 
 ### 4.1 Volume and per-dictionary density (the `<ls>` register)
 
-The European dictionaries carry **1,245,644 `<ls>` citations**, about **0.83 per
-entry** corpus-wide, but density is very uneven (Table 1). The *Großes Petersburger
+The European dictionaries carry 1,245,644 `<ls>` citations, about 0.83 per
+entry corpus-wide, but density is very uneven (Table 1). The *Großes Petersburger
 Wörterbuch* is the most citation-dense major dictionary at 4.61 citations per entry
 (568,730 in total); Benfey, the Buddhist Hybrid Sanskrit dictionary and
 Monier-Williams (312,160) follow.
@@ -178,44 +180,44 @@ an `<ls>` count over `csl-orig/v02` reusing the extraction convention of
 
 ### 4.2 The dictionary-to-book gap is ~41 %
 
-**59.3 % of `<ls>` citations carry a locator** (738,173 of 1,245,644); requiring in
+59.3 % of `<ls>` citations carry a locator (738,173 of 1,245,644); requiring in
 addition an established source siglum lowers this only marginally — by 0.7
 percentage points in the 2026-06 siglum pass (then 59.8 % → 59.1 %) — that is,
 almost every locator-bearing citation already uses a recognised source. The
-resolvability band is therefore tight, **≈58.6–59.3 %**, and robust. Its complement
-is the measured ceiling of the **dictionary-to-book gap: ~41 % of citations, roughly
-507,000, are bare source abbreviations** that cannot be resolved to a passage
+resolvability band is therefore tight, ≈58.6–59.3 %, and stable. Its complement
+is the measured ceiling of the dictionary-to-book gap: ~41 % of citations, roughly
+507,000, are bare source abbreviations that cannot be resolved to a passage
 without further work. The figure
 is encouraging for automation — a clear majority of the European apparatus is
-mechanically linkable — and it sizes the manual residue precisely. We are not aware of
+mechanically linkable — and it sizes the manual residue precisely. I am not aware of
 a published corpus-level locator-resolvability figure for a comparable historical
 dictionary portal to set this against; the closest available comparator is
-qualitative, not quantitative — pre-critical (pre-twentieth-century) lexicography
+qualitative, not quantitative. Pre-critical (pre-twentieth-century) lexicography
 treats locator-bearing citation as the exception rather than the rule, favouring bare
-authority names over chapter-and-verse references — so a ~59 % locator rate, on a
+authority names over chapter-and-verse references, so a ~59 % locator rate, on a
 nineteenth-century corpus, already exceeds the pre-digital expectation rather than
 falling short of it.
 
 ### 4.3 A small working apparatus behind a long tail
 
-The cited-source inventory is steeply skewed. About **13,000 raw abbreviation strings**
-fold to roughly **9,000 distinct sigla**, but only **2,166 sources are cited ten or
-more times** — the genuine working apparatus — while the remainder are rare or one-off
-references. Concentration is extreme: the **fifty commonest sigla account for about
-half of all citations**, led by the Rāmāyaṇa, the Mahābhārata, the lexicographers
+The cited-source inventory is steeply skewed. About 13,000 raw abbreviation strings
+fold to roughly 9,000 distinct sigla, but only 2,166 sources are cited ten or
+more times — the genuine working apparatus — while the remainder are rare or one-off
+references. Concentration is extreme: the fifty commonest sigla account for about
+half of all citations, led by the Rāmāyaṇa, the Mahābhārata, the lexicographers
 (*L.*), Pāṇini, the Ṛgveda and the major *purāṇa*s. The diacritic/case fold alone
 resolves the largest variant pairs (Mahābhārata *MBH*+*MBh* = 75,548; Ṛgveda *ṚV*+*RV*
 = 32,316); abbreviation-family review then collapses length-variant families
-(*Kathāsaritsāgara*, *Suśruta*, *Raghuvaṃśa* and others) further. We adjudicated the
+(*Kathāsaritsāgara*, *Suśruta*, *Raghuvaṃśa* and others) further. I adjudicated the
 high-frequency families into a reviewed alias table of canonical works, keeping
 distinct works that merely share a prefix apart. The practical implication is that a
-**reviewed source-abbreviation registry of low-thousands of entries suffices to
-resolve the great majority of the European apparatus**.
+reviewed source-abbreviation registry of low-thousands of entries suffices to
+resolve the great majority of the European apparatus.
 
 ### 4.4 The hidden register: indigenous *iti*-citation
 
 The `<ls>` count omits an entire citation system. The Sanskrit-to-Sanskrit *kośa*s
-carry **no `<ls>` tags whatever**, yet cite densely by quotation (Table 2): the
+carry no `<ls>` tags whatever, yet cite densely by quotation (Table 2): the
 *Śabdakalpadruma* records ~80,000 *iti*-citations, the *Vācaspatya* ~15,600, and the
 *Kṛdantarūpamālā* the highest density in the corpus at six per entry. An
 `<ls>`-only measure therefore mis-ranks precisely these dictionaries as
@@ -236,10 +238,10 @@ resolving a chapter-and-verse locator.
 
 The mis-ranking is not a rhetorical figure but a measured swap. Ranking all
 forty-four CDSL dictionaries by `<ls>` density places the *Śabdakalpadruma*
-**tied for last** — twenty-eight of the forty-four source files carry no `<ls>` tag
+tied for last — twenty-eight of the forty-four source files carry no `<ls>` tag
 at all, and this measure cannot distinguish SKD from any of them, that is, from a
 dictionary that cites nothing. Ranking the same forty-four by *iti*-density instead
-places it **2nd of 44**
+places it 2nd of 44
 ([`data/obs/citation_registers.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/obs/citation_registers.json)) — behind
 only the *Kṛdantarūpamālā*, ahead of every European dictionary in the corpus,
 including the *Großes Petersburger Wörterbuch* that leads Table 1. A single-register
@@ -252,8 +254,8 @@ citation-dense dictionaries in CDSL.
 The corpus thus contains two non-overlapping citation registers. The 59 %
 resolvability result and the source-abbreviation registry apply to the European
 `<ls>` register alone; the indigenous register is invisible to them and requires its
-own normaliser keyed on the *iti*-source construction. **Any per-dictionary citation
-statistic that does not state its register is therefore ill-defined** — the apparent
+own normaliser keyed on the *iti*-source construction. Any per-dictionary citation
+statistic that does not state its register is therefore ill-defined — the apparent
 "citation-poverty" of a *kośa* is an artefact of measuring the wrong tradition's
 markup.
 
@@ -296,10 +298,10 @@ the prerequisite for a corpus-wide, register-neutral citation graph.
 ## 7. Conclusion
 
 The Cologne Digital Sanskrit Lexicon contains over 1.2 million explicit source
-citations, of which **up to** a tight majority — 59.3 %, the locator-bearing
-upper bound — are resolvable in principle to a passage, leaving a measured
-dictionary-to-book gap of at least some 507,000 bare abbreviations, all drawing on a
-working apparatus of roughly two thousand sources.
+citations, all drawing on a working apparatus of roughly two thousand sources. Up to
+a tight majority of them — 59.3 %, the locator-bearing upper bound — are resolvable
+in principle to a passage, leaving a measured dictionary-to-book gap of at least some
+507,000 bare abbreviations.
 But this European apparatus is only one of two citation registers: the indigenous
 *kośa*s cite densely through *iti*-quotation — on an indicator that includes some
 grammatical *iti* and so bounds their citation rate from above — and are wholly
