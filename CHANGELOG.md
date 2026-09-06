@@ -7,6 +7,37 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 ### Changed
 
+- **Correction-loci packet rebuilt against the current sibling feed (H4178
+  flip 1, 06-09-2026).** `npm run build-correction-feed` re-run green against
+  the pinned csl-corrections feed
+  ([correction_loci.source.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/corrections/correction_loci.source.json)):
+  61,430 records · 16 dicts · human 31,377 / bulk 30,053 · pc-resolved 39,531 —
+  packet refresh only (date-span advance to 2026-08-04; structure unchanged).
+  Confirms the csl-corrections → csl-atlas `correction_loci.tsv` feed live
+  end-to-end (consumer shipped in #294, rebuilt #331).
+
+### Added
+
+- **First real consumer of the IndologyScholars
+  [meso_discipline_crosswalk.csv](https://github.com/gasyoun/IndologyScholars/blob/main/curation/meso_discipline_crosswalk.csv)
+  — atlas discipline-coverage packet + page (H4178 flip 3, ruling F5c slot
+  discharged, 06-09-2026).** `npm run build-discipline-coverage` joins the
+  atlas's 43-dict inventory through a reviewed dict→meso assignment layer
+  ([`dict_meso_assignments.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/disciplines/dict_meso_assignments.json))
+  to the ratified discipline taxonomy
+  ([`disciplines.csv`](https://github.com/gasyoun/IndologyScholars/blob/main/curation/disciplines.csv),
+  D1 10-07-2026) — taxonomy never re-derived, sha-pinned in
+  [`discipline_coverage.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/disciplines/discipline_coverage.source.json);
+  38 dicts assigned (sanskritology 33, buddhology 1, vedic→sanskritology 2,
+  epic→sanskritology/literature 1, epigraphy→history_archaeology 2,
+  plants→religious_studies 2), 5 honestly unassigned; 8 NOT-MAPPED sentinel
+  rows surfaced. Validator `npm run validate-discipline-coverage` (CI-safe,
+  sibling cross-check when present). Page:
+  [/tools/discipline-coverage](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/discipline-coverage.md).
+  `git grep meso_discipline_crosswalk` now returns the consuming call.
+
+### Changed
+
 - **METALEX L8 checkbox ticked: every entry linked to scan page — atlas side
   complete at 99.97% (A07 roadmap-drain re-pass, 04-09-2026).** Re-measured at
   the current sibling-csl-orig `origin/main` snapshot: 1,506,391 entries ·

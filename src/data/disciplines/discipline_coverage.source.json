@@ -1,0 +1,15 @@
+{
+  "dataset": "discipline_coverage",
+  "commit": "453bee39c06acf839f486212c5c0ab404c27f4dc",
+  "feedRepo": "https://github.com/gasyoun/IndologyScholars",
+  "feedCommit": "a296d5c6d6f646b88096250d24d3b5881e0f6bae",
+  "generatedAt": "2026-09-06T05:53:57.961Z",
+  "generatedBy": "npm run build-discipline-coverage",
+  "sourceFiles": [
+    "IndologyScholars/curation/meso_discipline_crosswalk.csv",
+    "IndologyScholars/curation/disciplines.csv",
+    "src/data/disciplines/dict_meso_assignments.json",
+    "scripts/build-discipline-coverage.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}

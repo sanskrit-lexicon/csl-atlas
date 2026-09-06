@@ -34,6 +34,8 @@
     "apply-h1684-spotcheck": "python scripts/apply_h1684_spotcheck.py",
     "build-correction-feed": "node scripts/build-correction-feed.mjs",
     "validate-correction-feed": "node scripts/validate-correction-feed.mjs",
+    "build-discipline-coverage": "node scripts/build-discipline-coverage.mjs",
+    "validate-discipline-coverage": "node scripts/validate-discipline-coverage.mjs",
     "build-correction-lane-overlays": "node scripts/build-correction-lane-overlays.mjs",
     "build-heritage-witness": "node scripts/build-heritage-witness.mjs",
     "validate-heritage-witness": "node scripts/validate-heritage-witness.mjs",

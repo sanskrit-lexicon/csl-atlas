@@ -1,0 +1,891 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC BY-SA 4.0",
+  "generatedBy": "npm run build-discipline-coverage",
+  "sourceFiles": [
+    "IndologyScholars/curation/meso_discipline_crosswalk.csv",
+    "IndologyScholars/curation/disciplines.csv",
+    "src/data/disciplines/dict_meso_assignments.json",
+    "scripts/build-discipline-coverage.mjs"
+  ],
+  "method": "Atlas dict -> meso_code assignments joined through the sibling IndologyScholars crosswalk to the ratified discipline taxonomy; taxonomy never re-derived (H3567 F5 / F5c).",
+  "totals": {
+    "dicts": 43,
+    "assigned": 38,
+    "unassigned": 5,
+    "disciplines": 5
+  },
+  "perDiscipline": [
+    {
+      "code": "sanskritology",
+      "labelEn": "Sanskritology",
+      "labelRu": "Санскритология",
+      "dicts": [
+        "MW",
+        "BEN",
+        "PWG",
+        "LAN",
+        "GRA",
+        "PWK",
+        "AE",
+        "WIL",
+        "CAE",
+        "AP90",
+        "MD",
+        "BUR",
+        "PWKVN",
+        "STC",
+        "AP",
+        "SCH",
+        "BOR",
+        "VEI",
+        "PGN",
+        "GST",
+        "MW72",
+        "INM",
+        "IEG",
+        "VCP",
+        "ACC",
+        "SHS",
+        "SKD",
+        "MWE",
+        "BOP",
+        "YAT",
+        "CCS",
+        "ARMH",
+        "ABCH",
+        "ACSJ",
+        "ACPH"
+      ]
+    },
+    {
+      "code": "religious_studies",
+      "labelEn": "Religious studies",
+      "labelRu": "Религиоведение",
+      "dicts": [
+        "SNP",
+        "FRI"
+      ]
+    },
+    {
+      "code": "history_archaeology",
+      "labelEn": "History and archaeology of India",
+      "labelRu": "История и археология Индии",
+      "dicts": [
+        "IEG",
+        "ACC"
+      ]
+    },
+    {
+      "code": "buddhology",
+      "labelEn": "Buddhology",
+      "labelRu": "Буддология",
+      "dicts": [
+        "BHS"
+      ]
+    },
+    {
+      "code": "literature",
+      "labelEn": "Literary studies",
+      "labelRu": "Литературоведение",
+      "dicts": [
+        "INM"
+      ]
+    }
+  ],
+  "notMappedSentinels": [
+    {
+      "mesoCode": "comparative_analysis",
+      "confidence": 0,
+      "note": "НЕ МАППИТСЯ: методологический код, а не предметная область."
+    },
+    {
+      "mesoCode": "bengal",
+      "confidence": 0,
+      "note": "НЕ МАППИТСЯ: региональный код. Бенгалия сама по себе не определяет дисциплину."
+    },
+    {
+      "mesoCode": "nepal_newar_kathmandu",
+      "confidence": 0,
+      "note": "НЕ МАППИТСЯ: региональный код. Невары — тибето-бирманцы, отнесение к tibetology было бы натяжкой."
+    },
+    {
+      "mesoCode": "china_mongolia_inner_asia",
+      "confidence": 0,
+      "note": "НЕ МАППИТСЯ: региональный код, к тому же за пределами Индии."
+    },
+    {
+      "mesoCode": "himalaya",
+      "confidence": 0,
+      "note": "НЕ МАППИТСЯ: региональный код; tibetology_himalaya несёт дисциплину отдельно."
+    },
+    {
+      "mesoCode": "assam",
+      "confidence": 0,
+      "note": "НЕ МАППИТСЯ: региональный код."
+    },
+    {
+      "mesoCode": "twentieth_century",
+      "confidence": 0,
+      "note": "НЕ МАППИТСЯ: хронологический код."
+    },
+    {
+      "mesoCode": "board_games",
+      "confidence": 0,
+      "note": "НЕ МАППИТСЯ: предметный микро-код без дисциплинарной привязки."
+    }
+  ],
+  "dicts": [
+    {
+      "dict": "BHS",
+      "title": "Edgerton Buddhist",
+      "mesoCode": "buddhist_studies",
+      "assignmentConfidence": 0.95,
+      "rationale": "Edgerton Buddhist Hybrid Sanskrit dictionary - core Buddhist-studies subject matter.",
+      "disciplines": [
+        {
+          "code": "buddhology",
+          "labelEn": "Buddhology",
+          "labelRu": "Буддология",
+          "parentCode": "indology",
+          "confidence": 0.9025,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "MW",
+      "title": "Monier-Williams 1899",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "General Sanskrit dictionary; nearest Sanskrit facet, no general-lexicography meso code.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "BEN",
+      "title": "Benfey 1866",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Benfey's general Sanskrit dictionary; nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "PWG",
+      "title": "Böhtlingk and Roth",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Petersburger Woerterbuch (Boehtlingk-Roth); general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "LAN",
+      "title": "Lanman Reader 1906",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Lanman's Sanskrit Reader; Sanskrit texts facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "GRA",
+      "title": "Grassmann",
+      "mesoCode": "vedic_studies",
+      "assignmentConfidence": 0.95,
+      "rationale": "Grassmann's Rigveda-Woerterbuch - Vedic corpus direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.9025,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Ведийский корпус — санскритский."
+        }
+      ]
+    },
+    {
+      "dict": "PWK",
+      "title": "Böhtlingk 1879-1889",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Boehtlingk 1879-1889 kuertzere Fassung; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "AE",
+      "title": "Apte English Sanskrit",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Apte English-Sanskrit; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "WIL",
+      "title": "Wilson",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Wilson's dictionary; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "CAE",
+      "title": "Cappeller 1891",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Cappeller 1891; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "AP90",
+      "title": "Apte 1890",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Apte 1890; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "MD",
+      "title": "Macdonell 1893",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Macdonell 1893; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "BUR",
+      "title": "Burnouf 1866",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Burnouf 1866; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "PWKVN",
+      "title": "Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung, Nachträge und Verbesserungen",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "PW kuerzere Fassung Nachtraege; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "STC",
+      "title": "Stchoupak",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Stchoupak Sanskrit-French; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "AP",
+      "title": "Apte 1957 Chicago",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Apte 1957; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "SCH",
+      "title": "Schmidt 1928",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Schmidt 1928; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "PUI",
+      "title": "Dikshitar",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "Dikshitar puranic index - the meso vocabulary has no purana facet; epic_ramayana_mahabharata would be wrong. Left unassigned pending human curation.",
+      "disciplines": []
+    },
+    {
+      "dict": "MCI",
+      "title": "Mehendale",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "Mehendale middle-Indo-Aryan historical grammar - no middle-Indic facet in the meso vocabulary. Left unassigned.",
+      "disciplines": []
+    },
+    {
+      "dict": "KRM",
+      "title": "Ramasubba Sastri",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "Ramasubba Sastri dictionary - identity unverified here. Left unassigned.",
+      "disciplines": []
+    },
+    {
+      "dict": "SNP",
+      "title": "Meulenbeld plants",
+      "mesoCode": "yoga_ayurveda",
+      "assignmentConfidence": 0.4,
+      "rationale": "Meulenbeld plant-name lexicon; nearest facet is yoga_ayurveda (ayurvedic materia medica) - low confidence, verify.",
+      "disciplines": [
+        {
+          "code": "religious_studies",
+          "labelEn": "Religious studies",
+          "labelRu": "Религиоведение",
+          "parentCode": "indology",
+          "confidence": 0.28,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Йога и аюрведа как религиозная практика; часть докладов ближе к философии или медицине."
+        }
+      ]
+    },
+    {
+      "dict": "PE",
+      "title": "Mani",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "Mani dictionary - identity unverified here. Left unassigned.",
+      "disciplines": []
+    },
+    {
+      "dict": "FRI",
+      "title": "FRI",
+      "mesoCode": "yoga_ayurveda",
+      "assignmentConfidence": 0.35,
+      "rationale": "Forest Research Institute plant names; nearest facet is yoga_ayurveda - very low confidence, verify.",
+      "disciplines": [
+        {
+          "code": "religious_studies",
+          "labelEn": "Religious studies",
+          "labelRu": "Религиоведение",
+          "parentCode": "indology",
+          "confidence": 0.245,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Йога и аюрведа как религиозная практика; часть докладов ближе к философии или медицине."
+        }
+      ]
+    },
+    {
+      "dict": "LRV",
+      "title": "Vaidya 1889",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "Vaidya 1889 dictionary - identity unverified here. Left unassigned.",
+      "disciplines": []
+    },
+    {
+      "dict": "BOR",
+      "title": "Borooah English",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Borooah English-Sanskrit; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "VEI",
+      "title": "Vedic Index",
+      "mesoCode": "vedic_studies",
+      "assignmentConfidence": 0.95,
+      "rationale": "Macdonell-Keith Vedic Index - Vedic studies direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.9025,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Ведийский корпус — санскритский."
+        }
+      ]
+    },
+    {
+      "dict": "PGN",
+      "title": "Sharma 1978",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Sharma 1978 Paninian glossary (identity not re-verified here); grammar facet, low confidence.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "GST",
+      "title": "Goldstücker",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Goldstuecker's dictionary; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "MW72",
+      "title": "Monier-Williams 72",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "General Sanskrit dictionary (1972 reprint); nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "INM",
+      "title": "Sörensen",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.9,
+      "rationale": "Soerensen's Index to Names in the Mahabharata - epic facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.72,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.63,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "dict": "IEG",
+      "title": "Sircar",
+      "mesoCode": "manuscripts_epigraphy",
+      "assignmentConfidence": 0.85,
+      "rationale": "Sircar's Indian Epigraphical Glossary - epigraphy facet direct.",
+      "disciplines": [
+        {
+          "code": "history_archaeology",
+          "labelEn": "History and archaeology of India",
+          "labelRu": "История и археология Индии",
+          "parentCode": "indology",
+          "confidence": 0.51,
+          "crosswalkConfidence": 0.6,
+          "crosswalkNote": "Эпиграфика — вспомогательная историческая дисциплина."
+        },
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.425,
+          "crosswalkConfidence": 0.5,
+          "crosswalkNote": "Часть рукописей санскритские, часть — нет; уверенность низкая."
+        }
+      ]
+    },
+    {
+      "dict": "VCP",
+      "title": "{v}Acaspatya Köln",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Vacaspatyam; encyclopedic Sanskrit koSha, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "ACC",
+      "title": "Aufrecht Catalogus",
+      "mesoCode": "manuscripts_epigraphy",
+      "assignmentConfidence": 0.8,
+      "rationale": "Aufrecht's Catalogus Catalogorum - manuscript-catalog spine.",
+      "disciplines": [
+        {
+          "code": "history_archaeology",
+          "labelEn": "History and archaeology of India",
+          "labelRu": "История и археология Индии",
+          "parentCode": "indology",
+          "confidence": 0.48,
+          "crosswalkConfidence": 0.6,
+          "crosswalkNote": "Эпиграфика — вспомогательная историческая дисциплина."
+        },
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.4,
+          "crosswalkConfidence": 0.5,
+          "crosswalkNote": "Часть рукописей санскритские, часть — нет; уверенность низкая."
+        }
+      ]
+    },
+    {
+      "dict": "SHS",
+      "title": "Vidyasagara 1900",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Vidyasagara 1900 koSha; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "SKD",
+      "title": "{S}abdakalpadruma",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Shabdakalpadruma; encyclopedic Sanskrit koSha, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "MWE",
+      "title": "Monier English",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Monier-Williams English-Sanskrit; nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "BOP",
+      "title": "Bopp 1847",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Bopp 1847; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "YAT",
+      "title": "Yates 1846",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Yates 1846; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "CCS",
+      "title": "Cappeller German",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Cappeller German; general Sanskrit, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "ARMH",
+      "title": "Halāyudhakośaḥ",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "HalayudhakoSha; Sanskrit synonym koSha, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "ABCH",
+      "title": "Abhidhānacintāmaṇi",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Abhidhanacintamani (Hemacandra); synonym koSha - Jain authorship is not jain_studies subject matter, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "ACSJ",
+      "title": "Abhidhānacintāmaṇiśiloñcha",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Abhidhanacintamani-shiloNcha; synonym koSha, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "dict": "ACPH",
+      "title": "Abhidhānacintāmaṇipariśiṣṭa",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Abhidhanacintamani-parishiShTa; synonym koSha, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    }
+  ]
+}
