@@ -11,7 +11,7 @@ First empirical findings from the **lexicography research stream**. Everything h
 
 This page is companion to the [Lexicography Roadmap](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md), which lays out the broader research plan (Phases L0-L10, Papers M, L, H).
 
-**Diachronic spine:** publication lifespans, family lanes, lemma-size-over-time, and the cumulative coverage ribbon live on the [Lexicographic timeline](timeline) (agenda V2) — this page stays the structural genealogy surface (lemma counts + inheritance + distance).
+**Diachronic spine:** publication lifespans, family lanes, lemma-size-over-time, and the cumulative coverage ribbon live on the Lexicographic timeline (agenda V2) — this page stays the structural genealogy surface (lemma counts + inheritance + distance).
 
 ## Trust Block
 
@@ -135,9 +135,9 @@ Plot.plot({
 
 Beyond shared *headwords*, the [archived R2 sense-alignment findings](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md) split entries into individual **senses** and align them across dictionaries by the **Sanskrit material they share** — SLP1 forms, `<ls>` citations, indigenous `…0` sigla — with **no translation**. This aligns a German PWG sense to an English Apte sense, and a Western sense to an indigenous *Vācaspatya* one, through Sanskrit alone (the "anchor on Sanskrit" method). The current branch keeps this as archived evidence until the R2 generator package is restored or rebuilt.
 
-**[Open the interactive sense-alignment explorer](r2-explorer)** — pick a headword (`dharma`, `rāma`, …) and browse its senses across up to 13 dictionaries, with the Sanskrit-anchored cross-tradition alignments highlighted.
+**Open the interactive sense-alignment explorer** — pick a headword (`dharma`, `rāma`, …) and browse its senses across up to 13 dictionaries, with the Sanskrit-anchored cross-tradition alignments highlighted.
 
-**H1 — does sense granularity inflate over time?** Measured over the full corpus of 11 general dictionaries (1822–1957): **no.** The year-trend is essentially flat (Pearson *r* = 0.06). Sense granularity is a **lexicographic-family trait** — Benfey/Apte enumerate ~2.5 sense-units per entry, Monier-Williams/Petersburg lump to ~1 — not a function of date, so Paper L treats it as a covariate to control for. [**See the H1 figure**](r2-h1) · [R2_FINDINGS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md).
+**H1 — does sense granularity inflate over time?** Measured over the full corpus of 11 general dictionaries (1822–1957): **no.** The year-trend is essentially flat (Pearson *r* = 0.06). Sense granularity is a **lexicographic-family trait** — Benfey/Apte enumerate ~2.5 sense-units per entry, Monier-Williams/Petersburg lump to ~1 — not a function of date, so Paper L treats it as a covariate to control for. **See the H1 figure** · [R2_FINDINGS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/R2_FINDINGS.md).
 
 ## What this means for the papers
 

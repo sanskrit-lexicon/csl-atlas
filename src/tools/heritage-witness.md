@@ -78,7 +78,7 @@ display(csvDownloadButton(data.perInitial, "heritage-coverage-by-initial.csv"));
 ## Heritage-covered headwords
 
 Every MW headword Heritage covers, with its match tier and a link into the
-[source viewer](source) at the first MW occurrence (headwords shown in IAST).
+source viewer at the first MW occurrence (headwords shown in IAST).
 
 ```js
 const tierPick = view(Inputs.radio(["all", "anchored", "covered-no-anchor"], { value: "all", label: "match tier" }));

@@ -6,7 +6,7 @@ title: Paper — grounded framework
 
 # The grounded framework (the paper's body)
 
-The single consolidated paper builds its analytic apparatus **from MW's own data**, before any external theory. This page tours that body; the two companion pages cover the [triangulation](triangulation) against three external frameworks and the [framework appendices](appendices).
+The single consolidated paper builds its analytic apparatus **from MW's own data**, before any external theory. This page tours that body; the two companion pages cover the triangulation against three external frameworks and the framework appendices.
 
 📄 **Canonical paper:** [PAPER.md in MWS `docs-pass`](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md) (§3–§6 are the body summarised here).
 
@@ -32,12 +32,12 @@ MW reuses a small **~6-block kernel** (F01, F02, F04, F10, F12, F17) across 286,
 
 ![Heatmap: 18 blocks × 14 article types](https://raw.githubusercontent.com/sanskrit-lexicon/MWS/docs-pass/papers/microanalysis/figures/heatmap-en.svg)
 
-> **Audit note.** A [cross-dictionary check](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT.md) shows the economy *shape* (small modal kernel + long tail) is **common across the structured-bilingual CDSL dictionaries**, not unique to MW (modal blocks/entry: MW 5, PWG 4, PWK 3, AP 2, WIL 3, Benfey 3, Cappeller 3). This should not be reduced to a simple "single-volume vs multi-volume" claim: PWG, PWK, SKD, and VCP are all seven-volume works, yet PWG is tagged-citation dense, PWK is compacted, and SKD/VCP are genre-bound prose lexica. See [PAPER.md §9.3](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#9-methodological-limitations) and the [all-dictionary coverage tool](../tools/dictionary-coverage).
+> **Audit note.** A [cross-dictionary check](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT.md) shows the economy *shape* (small modal kernel + long tail) is **common across the structured-bilingual CDSL dictionaries**, not unique to MW (modal blocks/entry: MW 5, PWG 4, PWK 3, AP 2, WIL 3, Benfey 3, Cappeller 3). This should not be reduced to a simple "single-volume vs multi-volume" claim: PWG, PWK, SKD, and VCP are all seven-volume works, yet PWG is tagged-citation dense, PWK is compacted, and SKD/VCP are genre-bound prose lexica. See [PAPER.md §9.3](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#9-methodological-limitations) and the all-dictionary coverage tool.
 
 ## See also
 
-- 🔗 [Triangulation (§7)](triangulation) · [Framework appendices A/B/C](appendices)
-- 🔗 [Matrix explorer](../tools/matrix-explorer) · [Typology treemap](../tools/typology-treemap)
+- 🔗 Triangulation (§7) · Framework appendices A/B/C
+- 🔗 Matrix explorer · Typology treemap
 
 ---
 

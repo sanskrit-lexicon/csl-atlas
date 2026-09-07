@@ -151,8 +151,8 @@ test and co-correction null model already computed as F4b.
   packet + page via `npm test` / `npm run build`.
 - Owner repo: `csl-atlas` (APPARATUS-NOT-ERRORS).
 - Next use: treat co-correction lift as **convergence + editorial coupling**, not
-  inheritance of mistakes; pair with [Correction loci](./correction-loci) and
-  [Correction front](./correction-front).
+  inheritance of mistakes; pair with Correction loci and
+  Correction front.
 
 ```js
 const ahl = shared.ahlbornDirectTest;

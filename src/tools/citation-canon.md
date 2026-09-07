@@ -19,7 +19,7 @@ the next-broader one's — one canon in additive strata), or is it *modular*
 (dictionaries carry partly disjoint tradition communities)?
 
 > This is the **text graph** — what the dictionaries quote. It is a different
-> object from the [Citation apparatus](dictionary-citations) page, which measures
+> object from the Citation apparatus page, which measures
 > apparatus *style* (density, breadth, siglum overlap). Read the two together.
 
 ```js
@@ -303,7 +303,7 @@ display(csvDownloadButton(topRows, "citation-canon-top-texts.csv"));
 - Known false negatives: prose/`iti` citations (VCP, SKD, WIL) are not in the `<ls>` graph, so those dictionaries' rows understate their real canon; MW's grammatical/editorial `<ls>` markers (63,582) are filtered as non-text, so MW is under-represented.
 - Review status: the topology test is machine-reviewed; the tradition-community panel is built from the curated [`tradition_tags.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/tradition_tags.tsv) map (`inferred`, agenda backlog #9), flagged by review state on the page — unreviewed tags are never shown as fact. Vote via `npm run build-tradition-review-sheet` → `review/csl-atlas-tradition-tags_119texts_review.html`.
 - Owner repo: `csl-atlas`.
-- Next action: read the highlighted off-canon rows (e.g. `bhs`'s Buddhist sources) against the exact dictionary entries via the [source viewer](source), and cross-check apparatus style on the [Citation apparatus](dictionary-citations) page.
+- Next action: read the highlighted off-canon rows (e.g. `bhs`'s Buddhist sources) against the exact dictionary entries via the source viewer, and cross-check apparatus style on the Citation apparatus page.
 - External dependencies: none at runtime; inputs are two committed atlas TSVs.
 - Boundary note: dictionary citation evidence only — no corpus passage search, no standards export.
 

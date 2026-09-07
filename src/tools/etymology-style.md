@@ -351,10 +351,10 @@ display(csvDownloadButton(tokensSorted, "wil-nirukta-tokens-full.csv"));
 
 ## Related
 
-- [WIL dictionary chapter](../dicts/wil) — Wilson as the base of the European line
-- [Dictionary genealogy](lexicography) — content inheritance, not etymology style
-- [Convention fingerprints](lexicographic-conventions) — house-style cladogram (Patel L0)
-- [Structural register](structural-register) — citation × grammar family scatter
-- [Lemma dossier](dictionary-dossier) — look up a headword across dictionaries
+- WIL dictionary chapter — Wilson as the base of the European line
+- Dictionary genealogy — content inheritance, not etymology style
+- Convention fingerprints — house-style cladogram (Patel L0)
+- Structural register — citation × grammar family scatter
+- Lemma dossier — look up a headword across dictionaries
 
 _Dr. Mārcis Gasūns_

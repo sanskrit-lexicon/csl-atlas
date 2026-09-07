@@ -69,6 +69,6 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 
 ---
 
-*Engineering items trace to [`ROADMAP.md`](ROADMAP.md) + the [csl-corrections handoff](https://github.com/sanskrit-lexicon/csl-corrections/blob/main/.ai_state.md). Research items trace to [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md) §11 and [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md) §6.*
+*Engineering items trace to `ROADMAP.md` + the [csl-corrections handoff](https://github.com/sanskrit-lexicon/csl-corrections/blob/main/.ai_state.md). Research items trace to [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md) §11 and [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md) §6.*
 
 _Dr. Mārcis Gasūns_

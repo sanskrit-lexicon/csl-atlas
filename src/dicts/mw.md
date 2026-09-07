@@ -18,7 +18,7 @@ title: MW — Monier-Williams 1899
 
 ## 1. Overview
 
-The standard single-volume Sanskrit–English reference, edited by [Monier Monier-Williams](https://en.wikipedia.org/wiki/Monier_Monier-Williams) (Boden Professor of Sanskrit at Oxford 1860–88) with contributions from [Ernst Leumann](https://en.wikipedia.org/wiki/Ernst_Leumann) and [Carl Cappeller](https://en.wikipedia.org/wiki/Carl_Cappeller). Published 1899 (Clarendon Press, Oxford) as a substantial revision of the 1872 first edition. 286,561 records in the CDSL digital edition (compared to ~180,000 entries in PWG, the proximate German predecessor; ~44,000 in [WIL 1832](wil)). Single-volume format, ~1,333 pages, alphabetical macrostructure. MW is the **reference dictionary for this atlas** — all microanalytic constructs (block, slot, profile, hedge, infrastructure) were developed on MW first; the other 8 chapters test how far each construct generalises.
+The standard single-volume Sanskrit–English reference, edited by [Monier Monier-Williams](https://en.wikipedia.org/wiki/Monier_Monier-Williams) (Boden Professor of Sanskrit at Oxford 1860–88) with contributions from [Ernst Leumann](https://en.wikipedia.org/wiki/Ernst_Leumann) and [Carl Cappeller](https://en.wikipedia.org/wiki/Carl_Cappeller). Published 1899 (Clarendon Press, Oxford) as a substantial revision of the 1872 first edition. 286,561 records in the CDSL digital edition (compared to ~180,000 entries in PWG, the proximate German predecessor; ~44,000 in WIL 1832). Single-volume format, ~1,333 pages, alphabetical macrostructure. MW is the **reference dictionary for this atlas** — all microanalytic constructs (block, slot, profile, hedge, infrastructure) were developed on MW first; the other 8 chapters test how far each construct generalises.
 
 | | |
 |---|---|
@@ -134,7 +134,7 @@ None of the three stages is fully derivative; each adds something. The 40,212 he
 
 ## 5. Lineage statement
 
-MW occupies the **synthesis position** in the European Sanskrit-lexicography lineage: it draws on [WIL 1832](wil) via the indigenous-kosha tradition (Wilson's base was the Calcutta College's Amarakośa-derived word-list); on [PWG 1855–75](pwg) via the German philological apparatus and the bulk of the lexical material; and on Cappeller 1891 via the systematic typographic discipline that made the 40,212-instance `<ls>L.</ls>` apparatus possible. MW's successors are mostly indirect: [AP 1957](ap) (Apte) explicitly leans on MW for its primary lemma list and adds its own editorial layer; modern Sanskrit-English dictionaries derived from CDSL reuse MW data wholesale.
+MW occupies the **synthesis position** in the European Sanskrit-lexicography lineage: it draws on WIL 1832 via the indigenous-kosha tradition (Wilson's base was the Calcutta College's Amarakośa-derived word-list); on PWG 1855–75 via the German philological apparatus and the bulk of the lexical material; and on Cappeller 1891 via the systematic typographic discipline that made the 40,212-instance `<ls>L.</ls>` apparatus possible. MW's successors are mostly indirect: AP 1957 (Apte) explicitly leans on MW for its primary lemma list and adds its own editorial layer; modern Sanskrit-English dictionaries derived from CDSL reuse MW data wholesale.
 
 Full lineage narrative in [DICT_PROFILE.md § Lineage](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/DICT_PROFILE.md#lineage-wil--koshas-mw--pwg).
 
@@ -143,7 +143,7 @@ Full lineage narrative in [DICT_PROFILE.md § Lineage](https://github.com/sanskr
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
 | **← prior:** (none — MW is position 1) | — | MW is the framework's home; cross-dict facts emerge in chapters 2–9 |
-| **next →: [PWG](pwg)** | Same kernel morphology (small modal + long tail); PWG is the immediate source of much MW lexical material | PWG is **~4× more citation-dense** (4.63 vs 1.09 `<ls>`/record); multi-volume vs single-volume; PWG has 0 hedges (uses named-kosha apparatus instead); PWG type-citation spread 0.4 pts vs MW's 11.3 pts |
+| **next →: PWG** | Same kernel morphology (small modal + long tail); PWG is the immediate source of much MW lexical material | PWG is **~4× more citation-dense** (4.63 vs 1.09 `<ls>`/record); multi-volume vs single-volume; PWG has 0 hedges (uses named-kosha apparatus instead); PWG type-citation spread 0.4 pts vs MW's 11.3 pts |
 
 ## 7. Decisions log
 
@@ -164,9 +164,9 @@ Per-dict editorial choices documented in this chapter:
 
 ## See also (tools)
 
-- [Matrix explorer](../tools/matrix-explorer) — full 18×8 block × primary-type heatmap
-- [Lineage Sankey](../tools/lineage-sankey) — kosha → WIL → MW → PWG flow
-- [Cross-dictionary comparison](../tools/cross-dict) — MW alongside all 8 other CDSL dicts
+- Matrix explorer — full 18×8 block × primary-type heatmap
+- Lineage Sankey — kosha → WIL → MW → PWG flow
+- Cross-dictionary comparison — MW alongside all 8 other CDSL dicts
 - [MWS docs-pass ROADMAP](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/ROADMAP.md)
 
 ---

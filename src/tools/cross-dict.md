@@ -7,7 +7,7 @@ toc: false
 
 # Cross-dictionary comparison
 
-The atlas's original core comparison: nine CDSL dictionaries on a **format-robust common-block vocabulary** (blocks detectable regardless of each dict's markup). It shows source-citation density and the population of each structural block, per dictionary. For size, block mass, entry lengths, and all CDSL v02 dictionaries, use the [all-dictionary coverage tool](dictionary-coverage). Data: the [cross-dict audit](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT.md) in the MWS docs-pass branch.
+The atlas's original core comparison: nine CDSL dictionaries on a **format-robust common-block vocabulary** (blocks detectable regardless of each dict's markup). It shows source-citation density and the population of each structural block, per dictionary. For size, block mass, entry lengths, and all CDSL v02 dictionaries, use the all-dictionary coverage tool. Data: the [cross-dict audit](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/CROSS_DICT.md) in the MWS docs-pass branch.
 
 ## Trust Block
 

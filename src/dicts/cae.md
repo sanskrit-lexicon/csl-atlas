@@ -111,7 +111,7 @@ Cappeller's dagger marks a *different* phenomenon (Prakrit-translation-only atte
 
 ## 5. Lineage statement
 
-CAE occupies the **typographic-precedent position** in the European-Sanskrit-lexicography lineage. It draws on [PWG 1855–75](pwg) and [PWK 1879–89](pwk) for its lexical material (the subtitle is explicit: "Based Upon the St. Petersburg Lexicons") and on MW 1872 for the *concept* of the lexicographer-only mark (which MW had declared in his preface but not systematically implemented). It synthesises both into a single-volume work that, for the first time, applies the mark at scale. Its direct successor is **[MW 1899](mw)** — which preserves the convention but promotes it from typographic `*` to tagged `<ls>L.</ls>`, increasing scale ~30-fold and integrating it with the named-source citation apparatus.
+CAE occupies the **typographic-precedent position** in the European-Sanskrit-lexicography lineage. It draws on PWG 1855–75 and PWK 1879–89 for its lexical material (the subtitle is explicit: "Based Upon the St. Petersburg Lexicons") and on MW 1872 for the *concept* of the lexicographer-only mark (which MW had declared in his preface but not systematically implemented). It synthesises both into a single-volume work that, for the first time, applies the mark at scale. Its direct successor is **MW 1899** — which preserves the convention but promotes it from typographic `*` to tagged `<ls>L.</ls>`, increasing scale ~30-fold and integrating it with the named-source citation apparatus.
 
 Full lineage in [CAE/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/CAE/blob/main/DATA_DICTIONARY.md) (note: as of 2026-05-27 the CAE DATA_DICTIONARY does *not* document the asterisk/dagger conventions; this is a tracked editorial gap, [LS_HEDGE_CHECK.md §"Print-preface read"](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/LS_HEDGE_CHECK.md)).
 
@@ -119,8 +119,8 @@ Full lineage in [CAE/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/CAE
 
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
-| **← prior: [BEN](ben)** | Both 19th-century single-volume European works; both rely on typographic (not tagged) markers; both have `*` and `†` glyphs in their preface inventories | Benfey's `*` means *fictitious forms* (Proto-IE reconstruction, NOT a hedge precedent); Benfey's `†` means *no authoritative references* (weaker hedge); CAE's `*` is the *semantic equivalent* of MW's `<ls>L.</ls>` (the actual precedent). See [PAPER.md Appendix C.2](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#appendix-c--the-hausmann-wiegand-comment-class-reading-condensed) per D22 honesty |
-| **next →: [WIL](wil)** | Both single-volume; both have effectively zero `<ls>` tagged apparatus | WIL has no systematic hedge convention in print or digital record; CAE has 1,370-instance systematic typographic hedge. WIL is the *base* of the European tradition (1832); CAE is the *systematic-precedent* node (1891) |
+| **← prior: BEN** | Both 19th-century single-volume European works; both rely on typographic (not tagged) markers; both have `*` and `†` glyphs in their preface inventories | Benfey's `*` means *fictitious forms* (Proto-IE reconstruction, NOT a hedge precedent); Benfey's `†` means *no authoritative references* (weaker hedge); CAE's `*` is the *semantic equivalent* of MW's `<ls>L.</ls>` (the actual precedent). See [PAPER.md Appendix C.2](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#appendix-c--the-hausmann-wiegand-comment-class-reading-condensed) per D22 honesty |
+| **next →: WIL** | Both single-volume; both have effectively zero `<ls>` tagged apparatus | WIL has no systematic hedge convention in print or digital record; CAE has 1,370-instance systematic typographic hedge. WIL is the *base* of the European tradition (1832); CAE is the *systematic-precedent* node (1891) |
 
 ## 7. Decisions log
 
@@ -141,8 +141,8 @@ Full lineage in [CAE/DATA_DICTIONARY.md](https://github.com/sanskrit-lexicon/CAE
 
 ## See also (tools)
 
-- [Cross-dictionary comparison](../tools/cross-dict) — CAE alongside all 8 other CDSL dicts
-- [Lineage Sankey](../tools/lineage-sankey) — Cappeller's typographic asterisk → MW's tagged hedge
+- Cross-dictionary comparison — CAE alongside all 8 other CDSL dicts
+- Lineage Sankey — Cappeller's typographic asterisk → MW's tagged hedge
 - [LS_HEDGE_CHECK.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/LS_HEDGE_CHECK.md) — full hedge analysis including the Cappeller preface read
 
 ---

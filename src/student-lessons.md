@@ -27,12 +27,12 @@ dictionary record proves.
 
 | Lesson | Question | Tool path | Student output |
 |---|---|---|---|
-| 1. First dictionary | Which dictionary should I open first for this word? | [Which dictionary?](dictionary-chooser) -> [Reader Lookup](tools/reader-lookup) | One first-stop dictionary and one reason. |
-| 2. Coverage is not meaning | How many dictionaries know this lemma, and what does that not prove? | [Reader Lookup](tools/reader-lookup) -> [Lemma dossier](tools/dictionary-dossier) | Coverage count plus one limitation. |
-| 3. Source trail | Does the gloss depend on a named source or only dictionary tradition? | [Citation apparatus](tools/dictionary-citations) -> dictionary page | One cited source link or a note that no source is explicit. |
-| 4. Dictionary disagreement | Where do two dictionaries differ in grammar, sense, or convention? | [Lemma dossier](tools/dictionary-dossier) -> [Gender conflicts](tools/dictionary-conflicts) | Two records and a neutral description of the disagreement. |
-| 5. Corpus caution | Does dictionary evidence equal corpus attestation? | [Learner layer](tools/learner-reading-layer) -> [Lemma dossier](tools/dictionary-dossier) | One sentence separating dictionary record from corpus signal. |
-| 6. Do not correct too quickly | Is an odd spelling likely an error, variant, or apparatus note? | [Researcher Dashboard](researcher-dashboard) -> [SanskritSpellCheck](https://github.com/gasyoun/SanskritSpellCheck) | A cautious classification and the evidence needed before filing. |
+| 1. First dictionary | Which dictionary should I open first for this word? | Which dictionary? -> Reader Lookup | One first-stop dictionary and one reason. |
+| 2. Coverage is not meaning | How many dictionaries know this lemma, and what does that not prove? | Reader Lookup -> Lemma dossier | Coverage count plus one limitation. |
+| 3. Source trail | Does the gloss depend on a named source or only dictionary tradition? | Citation apparatus -> dictionary page | One cited source link or a note that no source is explicit. |
+| 4. Dictionary disagreement | Where do two dictionaries differ in grammar, sense, or convention? | Lemma dossier -> Gender conflicts | Two records and a neutral description of the disagreement. |
+| 5. Corpus caution | Does dictionary evidence equal corpus attestation? | Learner layer -> Lemma dossier | One sentence separating dictionary record from corpus signal. |
+| 6. Do not correct too quickly | Is an odd spelling likely an error, variant, or apparatus note? | Researcher Dashboard -> [SanskritSpellCheck](https://github.com/gasyoun/SanskritSpellCheck) | A cautious classification and the evidence needed before filing. |
 
 ## Suggested Word Sets
 
@@ -54,10 +54,10 @@ dictionary record proves.
 
 ## Related
 
-- [Student Research Desk](research-desk)
-- [Which dictionary should I use?](dictionary-chooser)
-- [Reader Lookup](tools/reader-lookup)
-- [Lemma dossier](tools/dictionary-dossier)
+- Student Research Desk
+- Which dictionary should I use?
+- Reader Lookup
+- Lemma dossier
 - [csl-guides](https://sanskrit-lexicon.github.io/csl-guides/)
 
 _Dr. Mārcis Gasūns_

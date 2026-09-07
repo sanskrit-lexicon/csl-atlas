@@ -18,7 +18,7 @@ title: VCP — Vācaspatyam (1873–1884)
 
 ## 1. Overview
 
-[*Vācaspatyam*](https://sa.wikisource.org/wiki/वाचस्पत्यम्) ("the work of Vācaspati", named after the editor's epithet), an encyclopedic Sanskrit-Sanskrit dictionary compiled by **Tārānātha Tarkavācaspati**, published Calcutta 1873–1884 in seven volumes. VCP is the **second indigenous-Indian large-scale Sanskrit-Sanskrit lexicon** in CDSL, contemporary with PWG's later volumes and PWK's beginning, and one of the major CDSL Sanskrit-Sanskrit works (50,135 records). VCP is structurally similar to [SKD](skd) — encyclopedic, monolingual, prose-paragraph entries with inline `iti` citation — but with a *much sparser* inline citation density (0.26 *iti* / record vs SKD's 1.70). In the nine-chapter atlas path, VCP confirms the genre boundary discovered at SKD; the all-dictionary coverage layer extends beyond this chapter path by measuring partial framework fit across every available CDSL v02 dictionary.
+[*Vācaspatyam*](https://sa.wikisource.org/wiki/वाचस्पत्यम्) ("the work of Vācaspati", named after the editor's epithet), an encyclopedic Sanskrit-Sanskrit dictionary compiled by **Tārānātha Tarkavācaspati**, published Calcutta 1873–1884 in seven volumes. VCP is the **second indigenous-Indian large-scale Sanskrit-Sanskrit lexicon** in CDSL, contemporary with PWG's later volumes and PWK's beginning, and one of the major CDSL Sanskrit-Sanskrit works (50,135 records). VCP is structurally similar to SKD — encyclopedic, monolingual, prose-paragraph entries with inline `iti` citation — but with a *much sparser* inline citation density (0.26 *iti* / record vs SKD's 1.70). In the nine-chapter atlas path, VCP confirms the genre boundary discovered at SKD; the all-dictionary coverage layer extends beyond this chapter path by measuring partial framework fit across every available CDSL v02 dictionary.
 
 | | |
 |---|---|
@@ -110,8 +110,8 @@ The four kosha repos that resolve MW's `<ls>L.</ls>` hedge are *prior to* both S
 
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
-| **← prior: [SKD](skd)** | Both encyclopedic Sanskrit-Sanskrit *kośa*; both no `<lex>`/`<ls>` tags; both prose-paragraph entries; same genre, same editorial tradition | SKD inline `iti` density = **1.70**/record (quotation-rich prototype); VCP = **0.26** (synthesis-rich variant). SKD is the *prototype* of the genre, VCP is a *variant editorial philosophy* within it. Both confirm the genre boundary; together they delimit the structured-bilingual framework's outer limit |
-| **next →: [All-dictionary coverage](../tools/dictionary-coverage)** | Moves from nine narrative chapters to every CDSL v02 dictionary with a main source file | The next question is not only block presence, but size: record counts, entry lengths, block character mass, and type distributions across partial fits |
+| **← prior: SKD** | Both encyclopedic Sanskrit-Sanskrit *kośa*; both no `<lex>`/`<ls>` tags; both prose-paragraph entries; same genre, same editorial tradition | SKD inline `iti` density = **1.70**/record (quotation-rich prototype); VCP = **0.26** (synthesis-rich variant). SKD is the *prototype* of the genre, VCP is a *variant editorial philosophy* within it. Both confirm the genre boundary; together they delimit the structured-bilingual framework's outer limit |
+| **next →: All-dictionary coverage** | Moves from nine narrative chapters to every CDSL v02 dictionary with a main source file | The next question is not only block presence, but size: record counts, entry lengths, block character mass, and type distributions across partial fits |
 
 ## 7. Decisions log
 
@@ -132,8 +132,8 @@ The four kosha repos that resolve MW's `<ls>L.</ls>` hedge are *prior to* both S
 
 ## See also (tools + epilogue)
 
-- [Cross-dictionary comparison](../tools/cross-dict) — VCP shown alongside SKD and the structured bilingual dicts for the nine-chapter comparison
-- [All-dictionary coverage](../tools/dictionary-coverage) — VCP shown inside the full CDSL v02 coverage and size inventory
+- Cross-dictionary comparison — VCP shown alongside SKD and the structured bilingual dicts for the nine-chapter comparison
+- All-dictionary coverage — VCP shown inside the full CDSL v02 coverage and size inventory
 - [VCP#31 — docs-pass tracking issue](https://github.com/sanskrit-lexicon/VCP/issues/31)
 - **Boundary of the nine-chapter path.** Continue to the coverage tool for the full-dictionary inventory.
 

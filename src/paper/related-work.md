@@ -7,9 +7,9 @@ title: Paper — related work & positioning
 # Related work: where the atlas sits in the digitisation pipeline
 
 A short positioning note placing the atlas relative to the current machine
-dictionary-digitisation literature. It complements the [grounded body](grounded),
-the [triangulation](triangulation) against three lexicographic frameworks, and the
-[framework appendices](appendices).
+dictionary-digitisation literature. It complements the grounded body,
+the triangulation against three lexicographic frameworks, and the
+framework appendices.
 
 ## Trust Block
 
@@ -33,9 +33,9 @@ machine-inferred ones adds about 6 more. This is independent, quantified corrobo
 of the atlas's core methodological bet: that a dictionary's **house-style conventions
 are not incidental but are the controlling signal for correct structural
 interpretation** — exactly the knowledge the atlas already encodes by hand as the
-[convention fingerprints](../tools/lexicographic-conventions) (25 dimensions; Patel's
+convention fingerprints (25 dimensions; Patel's
 seven canonical normalisation conventions plus eighteen auto-extracted), the
-[structural register](../tools/structural-register), and the eighteen-block
+structural register, and the eighteen-block
 microstructure apparatus. The atlas therefore stands one step *downstream* of MUDIDI
 — it analyses CDSL text that Cologne has already keyed, rather than recovering text
 from scans — but the two meet at the schema boundary: the atlas's per-dictionary
@@ -50,7 +50,7 @@ fill.)
 
 ## See also
 
-- 🔗 [Grounded body](grounded) · [Triangulation (§7)](triangulation) · [Framework appendices](appendices)
+- 🔗 Grounded body · Triangulation (§7) · Framework appendices
 - 🔗 Parse-rules framing: [`docs/PARSE_RULES_FRAMING.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/PARSE_RULES_FRAMING.md)
 - 🔗 Candidate MDF export profile: [`csl-standards/docs/MDF_EXPORT_MAPPING.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md)
 

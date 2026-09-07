@@ -119,8 +119,8 @@ BEN occupies the **IE-comparative-philology position** in the European-Sanskrit-
 
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
-| **← prior: [AP](ap)** | Both compact single-volume modern reference works; both significantly fewer records than MW | BEN is 19th-century philological; AP is 20th-century practical (1957); AP keeps `<lex>` tags, BEN drops them; AP has 1× `<ls>L.</ls>`, BEN has 0 |
-| **next →: [CAE](cae)** | Both 19th-century single-volume European works; both use `*` and `†` typographic markers in their prefaces | **The `*` markers mean different things**: Benfey `*` = "fictitious forms" (Proto-IE), CAE `*` = "taught only by grammarians or lexicographers" (semantic equivalent of MW's hedge). Only Benfey's `†` is a precedent for MW's hedge, and it is *semantically weaker* than CAE's `*` (no-authority vs kosha-only). See [PAPER.md Appendix C.2](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#appendix-c--the-hausmann-wiegand-comment-class-reading-condensed) and [D22](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md) honesty |
+| **← prior: AP** | Both compact single-volume modern reference works; both significantly fewer records than MW | BEN is 19th-century philological; AP is 20th-century practical (1957); AP keeps `<lex>` tags, BEN drops them; AP has 1× `<ls>L.</ls>`, BEN has 0 |
+| **next →: CAE** | Both 19th-century single-volume European works; both use `*` and `†` typographic markers in their prefaces | **The `*` markers mean different things**: Benfey `*` = "fictitious forms" (Proto-IE), CAE `*` = "taught only by grammarians or lexicographers" (semantic equivalent of MW's hedge). Only Benfey's `†` is a precedent for MW's hedge, and it is *semantically weaker* than CAE's `*` (no-authority vs kosha-only). See [PAPER.md Appendix C.2](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#appendix-c--the-hausmann-wiegand-comment-class-reading-condensed) and [D22](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md) honesty |
 
 ## 7. Decisions log
 
@@ -141,8 +141,8 @@ BEN occupies the **IE-comparative-philology position** in the European-Sanskrit-
 
 ## See also (tools)
 
-- [Cross-dictionary comparison](../tools/cross-dict)
-- [Lineage Sankey](../tools/lineage-sankey)
+- Cross-dictionary comparison
+- Lineage Sankey
 - [LS_HEDGE_CHECK.md](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/analysis/LS_HEDGE_CHECK.md) — full hedge analysis including the Benfey preface read
 
 ---

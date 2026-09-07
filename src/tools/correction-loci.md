@@ -266,7 +266,7 @@ display(Plot.plot({
 ## Hottest pages — deep links into the source
 
 The most-corrected printed pages per dictionary. Each row links into the
-[source viewer](source) at a sample corrected line, so a cell of the heatmap is
+source viewer at a sample corrected line, so a cell of the heatmap is
 one click from the actual dictionary text (headwords shown in IAST).
 
 ```js
@@ -318,9 +318,9 @@ display(csvDownloadButton(data.monthly, "correction-monthly.csv"));
 
 ## Related correction-lane pages
 
-- [Correction front](./correction-front) — month × component diachronic strip
+- Correction front — month × component diachronic strip
   (OBS-T events; when/which layer).
-- [Lineage Sankey](./lineage-sankey#shared-corrected-error-overlay-apparatus-not-errors)
+- Lineage Sankey
   — shared-corrected-error overlay on the PWG/PW→MW edge (F4b apparatus-not-errors).
 
 ## Maker QA — correction-pressure column

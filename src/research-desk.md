@@ -79,12 +79,12 @@ with one cited dictionary record and one sentence about evidence level.
 
 ## Related Study Paths
 
-- [Student Lesson Track](student-lessons)
-- [Evidence Bridges](evidence-bridges)
-- [Which dictionary should I use?](dictionary-chooser)
-- [Reader Lookup](tools/reader-lookup)
-- [Lemma dossier](tools/dictionary-dossier)
-- [Learner's reading layer](tools/learner-reading-layer)
+- Student Lesson Track
+- Evidence Bridges
+- Which dictionary should I use?
+- Reader Lookup
+- Lemma dossier
+- Learner's reading layer
 - [Dictionary user guide](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md)
 - [csl-guides learning track](https://sanskrit-lexicon.github.io/csl-guides/)
 

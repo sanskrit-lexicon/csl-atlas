@@ -113,8 +113,8 @@ Full lineage in [AP/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/AP90/bl
 
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
-| **← prior: [PWK](pwk)** | Both working-reference formats; both moderate `<ls>` density (PWK 0.51, AP 0.69) | AP is 20th-century English practical; PWK is 19th-century German scholarly; AP has 1× `<ls>L.</ls>` (post-MW inheritance), PWK has 0; AP type-citation spread 15.2 pts (most selective) vs PWK 7.7 pts |
-| **next →: [BEN](ben)** | Both compact practical reference works | AP is 20th-century practical (1957); BEN is 19th-century philological (1866); AP has `<lex>` tagging, BEN does not; AP has 1× `<ls>L.</ls>`, BEN has 0 |
+| **← prior: PWK** | Both working-reference formats; both moderate `<ls>` density (PWK 0.51, AP 0.69) | AP is 20th-century English practical; PWK is 19th-century German scholarly; AP has 1× `<ls>L.</ls>` (post-MW inheritance), PWK has 0; AP type-citation spread 15.2 pts (most selective) vs PWK 7.7 pts |
+| **next →: BEN** | Both compact practical reference works | AP is 20th-century practical (1957); BEN is 19th-century philological (1866); AP has `<lex>` tagging, BEN does not; AP has 1× `<ls>L.</ls>`, BEN has 0 |
 
 ## 7. Decisions log
 
@@ -133,7 +133,7 @@ Full lineage in [AP/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/AP90/bl
 
 ## See also (tools)
 
-- [Cross-dictionary comparison](../tools/cross-dict)
+- Cross-dictionary comparison
 - [AP90#31 — docs-pass tracking issue](https://github.com/sanskrit-lexicon/AP90/issues/31)
 
 ---

@@ -299,7 +299,7 @@ Sanskrit-letter axis at all; and Böhtlingk–Roth's PWG spent its whole first v
 yet *completed the alphabet*, because it refused to be exhaustive. PD is Goldstücker's project
 reborn at ~16× the density (104,959 vs
 6,761 for `a`) — the same undertaking, the same letter, the same trap. Why `a` traps the
-exhaustive is anatomised in [Letter anatomy](/tools/letter-anatomy): it heads five preverb
+exhaustive is anatomised in Letter anatomy: it heads five preverb
 families plus the privative, so 83 % of its entries are compounds, not roots.
 
 **The controlled experiment — two dictionaries, one city, one editor.** Across town in the same

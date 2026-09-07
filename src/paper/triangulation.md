@@ -6,7 +6,7 @@ title: Paper — triangulation
 
 # Triangulation: three frameworks converge (§7)
 
-The study was originally drafted as **four parallel framework papers**. Per [DOUBTS D4](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md#d4--4-framework-papers-from-the-same-data--is-this-honest--blocking) — four papers from one dataset risks salami-slicing — they were **consolidated into one paper**: the [grounded reading](grounded) is the body, and the three external frameworks become condensed [appendices](appendices). This page is the hinge: §7, where the external frameworks act as *witnesses* rather than rival publications.
+The study was originally drafted as **four parallel framework papers**. Per [DOUBTS D4](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/DOUBTS.md#d4--4-framework-papers-from-the-same-data--is-this-honest--blocking) — four papers from one dataset risks salami-slicing — they were **consolidated into one paper**: the grounded reading is the body, and the three external frameworks become condensed appendices. This page is the hinge: §7, where the external frameworks act as *witnesses* rather than rival publications.
 
 📄 **Canonical:** [PAPER.md §7](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#7-triangulation-three-external-frameworks-converge).
 
@@ -37,8 +37,8 @@ That three independently-motivated frameworks converge on the same three facts i
 
 ## See also
 
-- 🔗 [Grounded body](grounded) · [Framework appendices A/B/C](appendices)
-- 🔗 [Type comparator](../tools/type-comparator) · [Lineage Sankey](../tools/lineage-sankey)
+- 🔗 Grounded body · Framework appendices A/B/C
+- 🔗 Type comparator · Lineage Sankey
 
 ---
 

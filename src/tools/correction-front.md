@@ -15,8 +15,8 @@ strip; the event typology is owned by
 (OBS-T / MW-ATTENTION boundary — never recomputed here).
 
 Sister pages: spatial loci on
-[Correction loci](./correction-loci), shared-error lineage overlay on
-[Lineage Sankey](./lineage-sankey).
+Correction loci, shared-error lineage overlay on
+Lineage Sankey.
 
 ```js
 const data = FileAttachment("../data/corrections/correction_front.json").json();

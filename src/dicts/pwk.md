@@ -122,8 +122,8 @@ Full lineage in [PWK/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/PWK/bl
 
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
-| **← prior: [BEN](ben)** | Both 19th-century works contemporary with PWG | BEN is small (5,186 records), IE-comparative, single-author English; PWK is large (170,556), single-author German, abridgement-by-design; BEN has 14,708 tagged `<ls>` (no hedge), PWK has 86,750 tagged `<ls>` (no hedge but typographic `*`) |
-| **next →: [AP](ap)** | Both are working-reference reductions with moderate `<ls>` density (PWK 0.51, AP 0.69) | AP is 20th-century English practical (1957); PWK is 19th-century German scholarly (1879–89); AP has 1× `<ls>L.</ls>`, PWK has 0 (typographic `*` only); AP type-citation spread 15.2 vs PWK 7.7 (AP more selective) |
+| **← prior: BEN** | Both 19th-century works contemporary with PWG | BEN is small (5,186 records), IE-comparative, single-author English; PWK is large (170,556), single-author German, abridgement-by-design; BEN has 14,708 tagged `<ls>` (no hedge), PWK has 86,750 tagged `<ls>` (no hedge but typographic `*`) |
+| **next →: AP** | Both are working-reference reductions with moderate `<ls>` density (PWK 0.51, AP 0.69) | AP is 20th-century English practical (1957); PWK is 19th-century German scholarly (1879–89); AP has 1× `<ls>L.</ls>`, PWK has 0 (typographic `*` only); AP type-citation spread 15.2 vs PWK 7.7 (AP more selective) |
 
 ## 7. Decisions log
 
@@ -143,8 +143,8 @@ Full lineage in [PWK/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/PWK/bl
 
 ## See also (tools)
 
-- [Cross-dictionary comparison](../tools/cross-dict)
-- [Lineage Sankey](../tools/lineage-sankey) — PWG → PWK → MW kosha-collapse arc
+- Cross-dictionary comparison
+- Lineage Sankey — PWG → PWK → MW kosha-collapse arc
 - [PWK#115 — docs-pass tracking issue](https://github.com/sanskrit-lexicon/PWK/issues/115)
 
 ---

@@ -32,7 +32,7 @@ Audit run after O1–O8 chapter authoring completed all 9 atlas chapters. Three 
 
 **Result: ✅ all 8 forward/backward pairs are bidirectionally consistent.**
 
-A small finding: the PWK chapter's "prior" entry in its §6 table reads "← prior: [BEN]" rather than "← prior: [PWG]". This reflects an **authoring-order link** (per Decision 29 §29.4, the *authoring* order is MW → PWG → CAE → BEN → PWK → AP → WIL → SKD → VCP, where PWK is authored after BEN) rather than the *presentation* order. Both orderings co-exist in the atlas — the presentation order drives §6 narrative ("how reading the chapters in 1–9 order builds the argument") while the authoring order shapes which chapters' findings are freshest when each is written. Per [Decision 29 §29.4](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#294--authoring-order--presentation-order), this dual ordering is by design and not a bug. Reader navigation tools (the [matrix explorer](../tools/matrix-explorer), the [atlas index](../)) follow presentation order; §6 narratives may surface either.
+A small finding: the PWK chapter's "prior" entry in its §6 table reads "← prior: [BEN]" rather than "← prior: [PWG]". This reflects an **authoring-order link** (per Decision 29 §29.4, the *authoring* order is MW → PWG → CAE → BEN → PWK → AP → WIL → SKD → VCP, where PWK is authored after BEN) rather than the *presentation* order. Both orderings co-exist in the atlas — the presentation order drives §6 narrative ("how reading the chapters in 1–9 order builds the argument") while the authoring order shapes which chapters' findings are freshest when each is written. Per [Decision 29 §29.4](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/decisions/MICROSITE.md#294--authoring-order--presentation-order), this dual ordering is by design and not a bug. Reader navigation tools (the matrix explorer, the [atlas index](../)) follow presentation order; §6 narratives may surface either.
 
 ## 2. Required-doubt citations (D17, D18, D19, D21)
 
@@ -80,9 +80,9 @@ Spot-checked that numbers cited in one chapter match the chapter they reference:
 
 The 9 atlas chapters are internally consistent. Patches applied in this audit pass:
 
-1. [`src/dicts/ben.md`](ben) — added D19, D21 citations to §7
-2. [`src/dicts/cae.md`](cae) — added D19 citation to §7
-3. [`src/dicts/pwk.md`](pwk) — added D21 citation to §7
+1. `src/dicts/ben.md` — added D19, D21 citations to §7
+2. `src/dicts/cae.md` — added D19 citation to §7
+3. `src/dicts/pwk.md` — added D21 citation to §7
 
 Atlas is ready for the O10 landing-page refresh.
 

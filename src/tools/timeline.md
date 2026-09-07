@@ -9,7 +9,7 @@ toc: true
 
 Data-driven diachronic spine for the CDSL inventory: when each dictionary was published (or spanned multi-volume years), which language family it belongs to, how large its sanhw1 lemma set is, and which titles Cologne marks deprecated. Built from committed inventory rows — not hard-coded dates in page prose.
 
-Companion pages: [Dictionary genealogy](lexicography) (lemma counts and inheritance — do not re-derive here), [All-dictionary coverage](dictionary-coverage) (structure-fit scatter), agenda item V2 in [ATLAS_RESEARCH_AGENDA.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ATLAS_RESEARCH_AGENDA.md).
+Companion pages: Dictionary genealogy (lemma counts and inheritance — do not re-derive here), All-dictionary coverage (structure-fit scatter), agenda item V2 in [ATLAS_RESEARCH_AGENDA.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ATLAS_RESEARCH_AGENDA.md).
 
 ```js
 const invRaw = await FileAttachment("../data/lexicographic-structure/dictionary_inventory.csv").csv({typed: false});
@@ -220,7 +220,7 @@ Multi-volume titles (PWG, PW, PD, …) fill more of the row height; single-volum
 
 ## 4. Lemma size at publication year
 
-Dot at each dictionary’s start year; area ∝ sanhw1 lemmas (0-lemma reverse-direction / incomplete titles sit on the axis). This is **inventory size at digitisation**, not growth of Sanskrit itself. Lemma bars by code live on [lexicography](lexicography) — this panel only places size in time.
+Dot at each dictionary’s start year; area ∝ sanhw1 lemmas (0-lemma reverse-direction / incomplete titles sit on the axis). This is **inventory size at digitisation**, not growth of Sanskrit itself. Lemma bars by code live on lexicography — this panel only places size in time.
 
 ```js
 const withLemmas = dated.filter((d) => d.sanhw1_lemmas > 0);
@@ -263,7 +263,7 @@ display(Plot.plot({
 
 ## 5. Coverage ribbon — cumulative tradition steps
 
-Thin cumulative strip: for each dictionary’s `start_year` (sorted), how many inventory titles have *appeared* by that year. **Not** the full Heaps/era V4 programme (that needs union headword excerpts). Use this as “when does the printed tradition thicken?”; for structure-fit vs size see [dictionary-coverage](dictionary-coverage).
+Thin cumulative strip: for each dictionary’s `start_year` (sorted), how many inventory titles have *appeared* by that year. **Not** the full Heaps/era V4 programme (that needs union headword excerpts). Use this as “when does the printed tradition thicken?”; for structure-fit vs size see dictionary-coverage.
 
 ```js
 const ribbon = (() => {
@@ -400,7 +400,7 @@ For the fully-detailed version with all 50+ dates, sources, and CDSL repo links:
 
 ---
 
-See also: [Dictionary genealogy](lexicography) · [All-dictionary coverage](dictionary-coverage) · [Lineage Sankey](lineage-sankey) · [Descent axes](descent-axes).
+See also: Dictionary genealogy · All-dictionary coverage · Lineage Sankey · Descent axes.
 
 Source inventory: [dictionary_inventory.csv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv). Narrative sources: [DICT_PROFILE Historical background](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/DICT_PROFILE.md#historical-background) and [Lineage section](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/DICT_PROFILE.md#lineage-wil--koshas-mw--pwg). Agenda: [V2 data-driven timeline](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ATLAS_RESEARCH_AGENDA.md). CC-BY-SA-4.0.
 

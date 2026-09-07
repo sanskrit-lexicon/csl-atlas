@@ -80,14 +80,14 @@ repos currently matter to the atlas.
 
 ## Related Atlas Pages
 
-- [Student Research Desk](research-desk)
-- [Student Lesson Track](student-lessons)
-- [Evidence Bridges](evidence-bridges)
-- [Reader Lookup](tools/reader-lookup)
-- [Lemma dossier](tools/dictionary-dossier)
-- [H4 semantic fields](tools/h4-review)
-- [Cross-reference lineage](tools/xref-lineage)
-- [Source-siglum aliases](tools/review-source-siglum)
+- Student Research Desk
+- Student Lesson Track
+- Evidence Bridges
+- Reader Lookup
+- Lemma dossier
+- H4 semantic fields
+- Cross-reference lineage
+- Source-siglum aliases
 
 <style>
 .watch-grid {

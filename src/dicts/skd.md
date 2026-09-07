@@ -18,7 +18,7 @@ title: SKD — Śabdakalpadrumaḥ (1822–1858)
 
 ## 1. Overview
 
-[*Śabdakalpadrumaḥ*](https://sa.wikisource.org/wiki/शब्दकल्पद्रुमः) ("the wishing-tree of words"), an encyclopedic Sanskrit-Sanskrit dictionary in seven volumes compiled by Rājā Rādhākānta Deva and his circle, published Calcutta 1822–1858. SKD is the **first indigenous-Indian large-scale lexicon** in the modern Sanskrit-philological tradition: encyclopedic in scope, monolingual in language (Sanskrit headword + Sanskrit definitions), and rich with citations from literary works and prior *kośa* sources via **inline `iti <source>` prose**. Within CDSL, SKD marks the **genre boundary** of the present framework: where MW, PWG, PWK, AP, BEN, CAE, WIL are *structured bilingual* dictionaries amenable to the 18-block detector, SKD and [VCP](vcp) are *encyclopedic Sanskrit-Sanskrit* works whose source-discipline lives in prose, not in tags. The block apparatus developed for MW does not apply.
+[*Śabdakalpadrumaḥ*](https://sa.wikisource.org/wiki/शब्दकल्पद्रुमः) ("the wishing-tree of words"), an encyclopedic Sanskrit-Sanskrit dictionary in seven volumes compiled by Rājā Rādhākānta Deva and his circle, published Calcutta 1822–1858. SKD is the **first indigenous-Indian large-scale lexicon** in the modern Sanskrit-philological tradition: encyclopedic in scope, monolingual in language (Sanskrit headword + Sanskrit definitions), and rich with citations from literary works and prior *kośa* sources via **inline `iti <source>` prose**. Within CDSL, SKD marks the **genre boundary** of the present framework: where MW, PWG, PWK, AP, BEN, CAE, WIL are *structured bilingual* dictionaries amenable to the 18-block detector, SKD and VCP are *encyclopedic Sanskrit-Sanskrit* works whose source-discipline lives in prose, not in tags. The block apparatus developed for MW does not apply.
 
 | | |
 |---|---|
@@ -102,8 +102,8 @@ PWG cites SKD as `<ls>ŚKDR.</ls>` 20,109 times — SKD's biggest impact on the 
 
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
-| **← prior: [WIL](wil)** | Both 19th-century Calcutta compilations rooted in indigenous-Indian scholarship | WIL is bilingual (Sanskrit → English); SKD is monolingual Sanskrit-Sanskrit; WIL is structured-bilingual genre, SKD is genre-bound encyclopedic; the **genre boundary** in the atlas falls here |
-| **next →: [VCP](vcp)** | Both encyclopedic Sanskrit-Sanskrit; both no `<lex>`/`<ls>` tags; both prose-paragraph entries | SKD inline `iti` density = 1.70/record (the densest); VCP = 0.26/record (much sparser). SKD is the *prototype* of the genre, VCP is a *variant* — different editor (Tārānātha), different methodology, but same genre |
+| **← prior: WIL** | Both 19th-century Calcutta compilations rooted in indigenous-Indian scholarship | WIL is bilingual (Sanskrit → English); SKD is monolingual Sanskrit-Sanskrit; WIL is structured-bilingual genre, SKD is genre-bound encyclopedic; the **genre boundary** in the atlas falls here |
+| **next →: VCP** | Both encyclopedic Sanskrit-Sanskrit; both no `<lex>`/`<ls>` tags; both prose-paragraph entries | SKD inline `iti` density = 1.70/record (the densest); VCP = 0.26/record (much sparser). SKD is the *prototype* of the genre, VCP is a *variant* — different editor (Tārānātha), different methodology, but same genre |
 
 ## 7. Decisions log
 
@@ -122,7 +122,7 @@ PWG cites SKD as `<ls>ŚKDR.</ls>` 20,109 times — SKD's biggest impact on the 
 
 ## See also (tools)
 
-- [Cross-dictionary comparison](../tools/cross-dict) — SKD shown alongside structured bilingual dicts for contrast
+- Cross-dictionary comparison — SKD shown alongside structured bilingual dicts for contrast
 - [SKD#20 — docs-pass tracking issue](https://github.com/sanskrit-lexicon/SKD/issues/20)
 - [Kosha resolution repos](https://github.com/sanskrit-lexicon/armh): ARMH · [ABCH](https://github.com/sanskrit-lexicon/abch) · [ACPH](https://github.com/sanskrit-lexicon/acph) · [ACSJ](https://github.com/sanskrit-lexicon/acsj)
 

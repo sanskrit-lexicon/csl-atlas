@@ -21,7 +21,7 @@ parent's spellings?
 
 > This is the **meta-language layer** — how the lexicographers spelled their
 > German and Russian, not how they recorded Sanskrit. The Sanskrit-side house
-> style lives on the [Convention fingerprints](lexicographic-conventions) page.
+> style lives on the Convention fingerprints page.
 
 ```js
 const data = FileAttachment("../data/lexico/ortho_drift.json").json();

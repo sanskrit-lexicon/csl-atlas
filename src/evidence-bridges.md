@@ -59,8 +59,8 @@ link first, import only when a dictionary-facing artifact has a clear contract.
 
 ## Related
 
-- [Researcher Dashboard](researcher-dashboard)
-- [Student Lesson Track](student-lessons)
+- Researcher Dashboard
+- Student Lesson Track
 - [Boundary rules](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/BOUNDARY_RULES.md)
 - [VisualDCS consumption contract](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/VISUALDCS_CONSUMPTION_CONTRACT.md)
 

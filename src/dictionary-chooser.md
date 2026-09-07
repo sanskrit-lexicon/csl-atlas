@@ -123,13 +123,13 @@ grammar analysis outside dictionary records.
 
 ## Related
 
-- [Reader Lookup](tools/reader-lookup)
-- [MW](dicts/mw)
-- [AP](dicts/ap)
-- [PWG](dicts/pwg)
-- [PWK](dicts/pwk)
-- [VCP](dicts/vcp)
-- [SKD](dicts/skd)
+- Reader Lookup
+- MW
+- AP
+- PWG
+- PWK
+- VCP
+- SKD
 
 <style>
 .decision-cards {

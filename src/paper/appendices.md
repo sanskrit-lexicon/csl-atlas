@@ -6,7 +6,7 @@ title: Paper — framework appendices
 
 # Framework appendices A · B · C
 
-The three external-framework treatments, condensed as appendices to the [grounded body](grounded). Each preserves its framework's distinctive contribution; full text in the canonical paper.
+The three external-framework treatments, condensed as appendices to the grounded body. Each preserves its framework's distinctive contribution; full text in the canonical paper.
 
 📄 **Canonical:** [PAPER.md Appendices A–C](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#appendix-a--the-wiegand-theoretic-reading-condensed).
 
@@ -36,8 +36,8 @@ MW's 18 blocks partition into Form / Semantic / (residual) Pragmatic / Quellen c
 
 ## See also
 
-- 🔗 [Grounded body](grounded) · [Triangulation (§7)](triangulation)
-- 🔗 [Lineage Sankey](../tools/lineage-sankey) · [Citation tracer](../tools/citation-tracer)
+- 🔗 Grounded body · Triangulation (§7)
+- 🔗 Lineage Sankey · Citation tracer
 
 ---
 

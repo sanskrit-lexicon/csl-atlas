@@ -14,7 +14,7 @@ title: WIL — Wilson Sanskrit-English Dictionary (1832)
 - Limitations: narrative atlas profile; counts summarize committed/generated artifacts and do not replace source edition inspection.
 - Validation: checked by `npm run build`; chapter consistency is tracked in `_consistency_audit`.
 - Owner repo: `csl-atlas`.
-- Next use: use this dictionary profile as context, then open source-linked records or compare the lemma in Reader Lookup. For Wilson's Nirukta-style `.E.` affix notation versus later Western `cf.`, see the exploratory [etymology style](../tools/etymology-style) witness.
+- Next use: use this dictionary profile as context, then open source-linked records or compare the lemma in Reader Lookup. For Wilson's Nirukta-style `.E.` affix notation versus later Western `cf.`, see the exploratory etymology style witness.
 
 ## 1. Overview
 
@@ -103,8 +103,8 @@ Full lineage in [WIL/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/WIL/bl
 
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
-| **← prior: [CAE](cae)** | Both single-volume; both have effectively zero `<ls>` tagged apparatus | CAE has 1,370-instance systematic typographic hedge (`*` for lexicographer-only); WIL has no systematic hedge convention at all. CAE is the *systematic-precedent* node (1891), WIL is the *base* node (1832); 59 years and an entire methodology separate them |
-| **next →: [SKD](skd)** | Both 1820–30s compilations rooted in indigenous-Indian scholarship (WIL from Calcutta College, SKD from Bengal Sanskrit scholarship) | WIL is bilingual (Sanskrit → English); SKD is monolingual Sanskrit-Sanskrit (the *kośa* tradition itself, not a European reading of it); WIL is structured-bilingual genre, SKD is genre-bound `iti`-citation. The genre boundary in the atlas falls here: WIL is the last structured bilingual chapter, SKD is the first genre-bound chapter |
+| **← prior: CAE** | Both single-volume; both have effectively zero `<ls>` tagged apparatus | CAE has 1,370-instance systematic typographic hedge (`*` for lexicographer-only); WIL has no systematic hedge convention at all. CAE is the *systematic-precedent* node (1891), WIL is the *base* node (1832); 59 years and an entire methodology separate them |
+| **next →: SKD** | Both 1820–30s compilations rooted in indigenous-Indian scholarship (WIL from Calcutta College, SKD from Bengal Sanskrit scholarship) | WIL is bilingual (Sanskrit → English); SKD is monolingual Sanskrit-Sanskrit (the *kośa* tradition itself, not a European reading of it); WIL is structured-bilingual genre, SKD is genre-bound `iti`-citation. The genre boundary in the atlas falls here: WIL is the last structured bilingual chapter, SKD is the first genre-bound chapter |
 
 ## 7. Decisions log
 
@@ -123,8 +123,8 @@ Full lineage in [WIL/DICT_PROFILE.md](https://github.com/sanskrit-lexicon/WIL/bl
 
 ## See also (tools)
 
-- [Cross-dictionary comparison](../tools/cross-dict)
-- [Lineage Sankey](../tools/lineage-sankey) — WIL as the base from which the European tradition departs
+- Cross-dictionary comparison
+- Lineage Sankey — WIL as the base from which the European tradition departs
 - [WIL#18 — docs-pass tracking issue](https://github.com/sanskrit-lexicon/WIL/issues/18)
 
 ---

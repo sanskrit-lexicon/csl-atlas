@@ -31,7 +31,7 @@ How often the [Digital Corpus of Sanskrit](http://www.sanskrit-linguistics.org/d
 attests a union lemma, by how many dictionaries list it — dictionary-unique
 vocabulary is overwhelmingly corpus-invisible. Full analysis, per-dictionary
 shares, the Heritage witness cube, and the ghost-candidate queue:
-[Ghost stock](ghost-stock).
+Ghost stock.
 
 ```js
 const stripBuckets = [
@@ -62,7 +62,7 @@ display(Plot.plot({
 ## Union growth and Heaps saturation (V4 panel i)
 
 Accumulating the 15 union dictionaries in publication order (dates from the
-[Lexicographic timeline](timeline)), cumulative distinct lemmas follow a
+Lexicographic timeline), cumulative distinct lemmas follow a
 saturating Heaps-type law — V(n) = ${heapSat.heapsFit.K?.toLocaleString()} ·
 n^${heapSat.heapsFit.beta} (log–log R² ${heapSat.heapsFit.r2LogLog}). Points
 above the curve add more novel vocabulary than the recording process predicts:
@@ -124,7 +124,7 @@ ticks the whole-union baseline. GRA and VEI shift hard toward Vedic; the
 indigenous kośas (SKD, VCP) toward the classical and late periods; the
 Petersburg line sits between. Match rates against the kosha frequency release
 are shown per dictionary — the unmatched stock is the corpus-invisible
-vocabulary characterised in [Ghost stock](ghost-stock).
+vocabulary characterised in Ghost stock.
 
 ```js
 const periodLabels = periodSignatures.periods.map((p) => p.label);

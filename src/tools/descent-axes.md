@@ -17,8 +17,8 @@ dictionaries' normalised citation vectors, "do they quote the same books?" — a
 *fourth* separable axis, or does it just travel with one of the three?
 
 > The citation vectors come from the canonical-siglum source matrix behind the
-> [Citation apparatus](dictionary-citations) page; the dict×text graph behind the
-> [Citation canon explorer](citation-canon) is reported as a sensitivity column
+> Citation apparatus page; the dict×text graph behind the
+> Citation canon explorer is reported as a sensitivity column
 > (its MW coverage is degenerate — see the Trust Block).
 
 ```js
@@ -184,8 +184,8 @@ display(csvDownloadButton(excludedRows, "descent-axes-excluded-edges.csv"));
 - External dependencies: none at runtime; inputs are committed atlas artifacts.
 - Boundary note: dictionary citation evidence only — no corpus passage search, no standards export.
 
-Related: [Citation canon explorer](citation-canon) (the dict×text matrix this axis
-is derived from) · [Citation apparatus](dictionary-citations) (apparatus style) ·
-[Dictionary genealogy](lexicography) (the descent evidence the axes decompose).
+Related: Citation canon explorer (the dict×text matrix this axis
+is derived from) · Citation apparatus (apparatus style) ·
+Dictionary genealogy (the descent evidence the axes decompose).
 
 _Dr. Mārcis Gasūns_

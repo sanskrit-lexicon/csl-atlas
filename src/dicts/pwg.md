@@ -99,7 +99,7 @@ Top 12 `<ls>` sigla ([analysis/LS_HEDGE_CHECK.md](https://github.com/sanskrit-le
 | `<ls>KULL.</ls>` | Kullūka's *Manu-smṛti* commentary | 1,417 |
 | `<ls>SĀY.</ls>` | Sāyaṇa's Vedic commentaries | 1,253 |
 
-**Striking absence: `<ls>L.</ls>` = 0**. PWG never collapses kosha sources into a generic hedge — it always names which kosha. The top 5 sigla are all named indigenous Sanskrit lexicons (ŚKDR, MED, H. an., RĀJAN, ŚABDAR); together they account for 42,931 citations (7.5 % of PWG's total apparatus). MW's `<ls>L.</ls>` 40,212-instance hedge ([MW chapter §4](mw#4-hedge-analysis-the-ls-l-ls-construct)) is the editorial compression of *exactly this kind of named-kosha citation* into a binary "named-source vs lexicographer-only" distinction.
+**Striking absence: `<ls>L.</ls>` = 0**. PWG never collapses kosha sources into a generic hedge — it always names which kosha. The top 5 sigla are all named indigenous Sanskrit lexicons (ŚKDR, MED, H. an., RĀJAN, ŚABDAR); together they account for 42,931 citations (7.5 % of PWG's total apparatus). MW's `<ls>L.</ls>` 40,212-instance hedge (MW chapter §4) is the editorial compression of *exactly this kind of named-kosha citation* into a binary "named-source vs lexicographer-only" distinction.
 
 ## 4. Hedge analysis — PWG has none, by design
 
@@ -117,7 +117,7 @@ The PWG design treats every indigenous lexicon as a *named source on a par with 
 
 ## 5. Lineage statement
 
-PWG occupies the **densest node** in the CDSL European-Sanskrit-lexicography lineage. It draws on the indigenous Sanskrit kosha tradition (via direct citation of Amarakośa, Medinīkośa, Hemacandra, Śabdakalpadruma, Rājanighaṇṭu, Halāyudha, etc.) and on the extant European Sanskrit dictionaries of the early 19th century (Wilson 1832, cited as `<ls>WILS.</ls>` 2,014×). Its 19-year compilation (1855–1875) sets the methodological benchmark that every later European Sanskrit dictionary measures itself against. Its direct successors: **[PWK](pwk)** (Böhtlingk's own compact seven-part abridgement, 1879–1889, which dropped 90+ % of PWG's kosha apparatus); **[MW 1899](mw)** (the English-language single-volume re-edition with `<ls>L.</ls>` compression). The four indigenous-kosha repos that resolve PWG's named-kosha citations live at [ARMH](https://github.com/sanskrit-lexicon/armh), [ABCH](https://github.com/sanskrit-lexicon/abch), [ACPH](https://github.com/sanskrit-lexicon/acph), [ACSJ](https://github.com/sanskrit-lexicon/acsj).
+PWG occupies the **densest node** in the CDSL European-Sanskrit-lexicography lineage. It draws on the indigenous Sanskrit kosha tradition (via direct citation of Amarakośa, Medinīkośa, Hemacandra, Śabdakalpadruma, Rājanighaṇṭu, Halāyudha, etc.) and on the extant European Sanskrit dictionaries of the early 19th century (Wilson 1832, cited as `<ls>WILS.</ls>` 2,014×). Its 19-year compilation (1855–1875) sets the methodological benchmark that every later European Sanskrit dictionary measures itself against. Its direct successors: **PWK** (Böhtlingk's own compact seven-part abridgement, 1879–1889, which dropped 90+ % of PWG's kosha apparatus); **MW 1899** (the English-language single-volume re-edition with `<ls>L.</ls>` compression). The four indigenous-kosha repos that resolve PWG's named-kosha citations live at [ARMH](https://github.com/sanskrit-lexicon/armh), [ABCH](https://github.com/sanskrit-lexicon/abch), [ACPH](https://github.com/sanskrit-lexicon/acph), [ACSJ](https://github.com/sanskrit-lexicon/acsj).
 
 Full lineage narrative in [PWG/DICT_PROFILE.md § Lineage](https://github.com/sanskrit-lexicon/PWG/blob/docs-pass/DICT_PROFILE.md).
 
@@ -125,8 +125,8 @@ Full lineage narrative in [PWG/DICT_PROFILE.md § Lineage](https://github.com/sa
 
 | Adjacent chapter | Convergence | Divergence |
 |---|---|---|
-| **← prior: [MW](mw)** | Same kernel morphology (small modal + long tail of enrichment); MW inherits the bulk of PWG's lexical material via German philology | PWG ~4× more citation-dense (4.63 vs 1.09 `<ls>`/record); 7 volumes vs 1; **PWG has 0 hedges** (uses named-kosha apparatus instead); PWG type-citation spread 0.4 pts (uniform) vs MW's 11.3 pts (selective) |
-| **next →: [PWK](pwk)** | Same editor (Böhtlingk) without Roth; structurally identical record format; same `<ls>` tag system; both seven-volume Petersburg works at different physical scales | PWK drops PWG's kosha apparatus almost entirely (PWG `<ls>ŚKDR.</ls>` 20,109 → PWK 0; PWG `<ls>H. an.</ls>` 6,619 → PWK 0); PWK's compact design produces type-citation spread of 7.7 pts |
+| **← prior: MW** | Same kernel morphology (small modal + long tail of enrichment); MW inherits the bulk of PWG's lexical material via German philology | PWG ~4× more citation-dense (4.63 vs 1.09 `<ls>`/record); 7 volumes vs 1; **PWG has 0 hedges** (uses named-kosha apparatus instead); PWG type-citation spread 0.4 pts (uniform) vs MW's 11.3 pts (selective) |
+| **next →: PWK** | Same editor (Böhtlingk) without Roth; structurally identical record format; same `<ls>` tag system; both seven-volume Petersburg works at different physical scales | PWK drops PWG's kosha apparatus almost entirely (PWG `<ls>ŚKDR.</ls>` 20,109 → PWK 0; PWG `<ls>H. an.</ls>` 6,619 → PWK 0); PWK's compact design produces type-citation spread of 7.7 pts |
 
 ## 7. Decisions log
 
@@ -148,9 +148,9 @@ Per-dict editorial choices for this chapter:
 
 ## See also (tools)
 
-- [Matrix explorer](../tools/matrix-explorer) — PWG block × type heatmap (where applicable)
-- [Lineage Sankey](../tools/lineage-sankey) — kosha → PWG → PWK → MW flow
-- [Cross-dictionary comparison](../tools/cross-dict) — PWG alongside all 8 other CDSL dicts
+- Matrix explorer — PWG block × type heatmap (where applicable)
+- Lineage Sankey — kosha → PWG → PWK → MW flow
+- Cross-dictionary comparison — PWG alongside all 8 other CDSL dicts
 - [PWG/ROADMAP.md](https://github.com/sanskrit-lexicon/PWG/blob/docs-pass/ROADMAP.md) — 53 open issues in quarterly plan
 
 ---
