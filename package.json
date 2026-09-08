@@ -121,7 +121,8 @@
     "test-review-decisions": "python -m unittest scripts.test_validate_review_decisions",
     "validate-review-decisions": "python scripts/validate_review_decisions.py",
     "build-ls-abbreviation-frequency": "python scripts/obs/ls_abbreviation_frequency.py",
-    "test-ls-abbreviation-frequency": "python -m unittest scripts.test_ls_abbreviation_frequency"
+    "test-ls-abbreviation-frequency": "python -m unittest scripts.test_ls_abbreviation_frequency",
+    "test-forensic-pins": "python -m pytest tests/forensic -q -p no:cacheprovider"
   },
   "engines": {
     "node": "20.x",
