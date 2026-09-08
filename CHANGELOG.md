@@ -5,6 +5,9 @@ _Created: 31-05-2026 · Last updated: 08-09-2026_
 All notable changes to csl-atlas are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/). Dates are ISO.
 
 ## [Unreleased]
+<!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
+
+## [0.19.2] - 2026-09-08
 ### Changed
 
 - **Correction-loci packet rebuilt against the current sibling feed (H4178
