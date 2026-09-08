@@ -1,12 +1,17 @@
 # `data/forensic/` — dictionary-descent evidence
 
-_Created: 10-07-2026 · Last updated: 12-07-2026_
+_Created: 10-07-2026 · Last updated: 08-09-2026_
 
 The datasets and topic docs behind the **MW-vs-Petersburg descent** analysis
 ([`article_21_apparatus_not_errors.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/article_21_apparatus_not_errors.md), paper A10).
 Datasets regenerate from [`scripts/forensic/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/scripts/forensic)
 (run `parse_cslorig.py --all` first). This index exists so a topic doc here is reachable from a
 list, not only from a cross-link inside the paper.
+The arithmetic of the nine highest-claim scripts (F0, F1, F2, F3, F4, F4b, F5, F9, F10) is pinned
+offline against hand-derived miniature fixtures in
+[`tests/forensic/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/tests/forensic)
+(`npm run test-forensic-pins`); coverage, expected-vs-actual table and the unpinned residue:
+[`FORENSIC_CLAIM_PINS_COVERAGE_08-09-2026.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/tests/forensic/FORENSIC_CLAIM_PINS_COVERAGE_08-09-2026.md).
 
 ## Topic docs (read these, not just the raw tables)
 

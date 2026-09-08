@@ -1,4 +1,4 @@
-_Created: 31-05-2026 · Last updated: 05-09-2026_
+_Created: 31-05-2026 · Last updated: 08-09-2026_
 
 # Changelog
 
@@ -18,6 +18,20 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 
 ### Added
 
+- **Arithmetic and null-test pins for the nine highest-claim forensic scripts
+  (H4352, 08-09-2026).** New offline pytest suite
+  [`tests/forensic/`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/tests/forensic)
+  (`npm run test-forensic-pins`, CI job `forensic-pins` in
+  [test.yml](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.github/workflows/test.yml)):
+  f0 · f4 · f4b · f9 · f1 · f10 · f3 · f2 · f5 plus the `parse_cslorig` foundation,
+  each with a hand-computed miniature csl-orig-shaped fixture, a null fixture that
+  must report zero shared items, and off-by-one pins on every population count the
+  script prints — 48 tests, every expected value hand-derived in the test docstring,
+  an autouse socket guard proving no network, no live `../csl-orig` read. Coverage
+  table, the 14 scripts left unpinned and why, and three script quirks surfaced
+  (f4b crashes without scipy, f5 drops a 0.0 Petersburg row from its mean, f1
+  hard-codes a `pw` cache) in
+  [FORENSIC_CLAIM_PINS_COVERAGE_08-09-2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/tests/forensic/FORENSIC_CLAIM_PINS_COVERAGE_08-09-2026.md).
 - **First real consumer of the IndologyScholars
   [meso_discipline_crosswalk.csv](https://github.com/gasyoun/IndologyScholars/blob/main/curation/meso_discipline_crosswalk.csv)
   — atlas discipline-coverage packet + page (H4178 flip 3, ruling F5c slot

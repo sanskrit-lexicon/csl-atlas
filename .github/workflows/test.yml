@@ -22,3 +22,18 @@ jobs:
         run: npm ci
       - name: Production verification
         run: npm run verify
+
+  # Offline arithmetic + null pins for the nine highest-claim forensic scripts
+  # (tests/forensic, H4352). scipy is only needed for the f4b p-value pin; the
+  # suite skips that one pin without it, everything else is stdlib + pytest.
+  forensic-pins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Install test deps
+        run: python -m pip install --quiet pytest scipy
+      - name: Forensic claim pins (offline)
+        run: python -m pytest tests/forensic -q -p no:cacheprovider
