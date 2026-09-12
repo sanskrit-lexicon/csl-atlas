@@ -1,11 +1,23 @@
 name: Test
 
+# H4613: this workflow also runs on pushes to main. The 05-09..08-09
+# generator-owned-docs drift survived for days precisely because the workflow
+# was pull_request-only while the drift commits were pushed straight to main
+# (91d6ad0, 3fdacf8, 4307c17); build-and-deploy went red but is not required
+# either, so nothing surfaced it until #454.
+
 on:
+  push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -37,3 +49,49 @@ jobs:
         run: python -m pip install --quiet pytest scipy
       - name: Forensic claim pins (offline)
         run: python -m pytest tests/forensic -q -p no:cacheprovider
+
+  # H4613 negative control: prove the generator-owned-docs gate actually fires.
+  # Mirrors the overlay-tripwire negative control (H2891): simulate the bad
+  # event — a committed hand edit to a generated doc, the exact 05-09 failure
+  # mode — and require the checker to go RED instead of trusting that the
+  # verify.mjs nets exist on paper. Two nets are pinned:
+  #   1. byte-compare: node --test must FAIL over a hand-edited generated doc;
+  #   2. self-healing: deterministic regeneration must overwrite the hand edit,
+  #      so a hand edit can never survive into the clean-tree assert.
+  # The baseline regen must be clean first (CI shape: no sibling csl-orig, the
+  # source-derived steps are skipped); a dirty baseline means the environment,
+  # not the gate, is broken and the control refuses to judge.
+  generator-owned-negative-control:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Negative control — a hand edit to a generator-owned doc must go RED
+        run: |
+          set -e
+          doc=docs/H4_REVIEW_WORKSHEET.md
+          # Environment gate: committed inputs must regen to a clean tree.
+          node scripts/regen-review-artifacts.mjs
+          git diff --quiet --exit-code -- "$doc" || {
+            echo "::error::baseline regen is dirty - environment broken, control void"
+            exit 1
+          }
+          # Simulate the 05-09 failure mode: a committed hand edit.
+          printf '\nHAND-EDIT sentinel - simulates a committed manual edit\n' >> "$doc"
+          # Net 1: the byte-compare test must go RED over the hand edit.
+          if node --test test/review-worksheets.test.mjs; then
+            echo "::error::gate BLIND: byte-compare test stayed GREEN over a hand-edited generated doc"
+            exit 1
+          fi
+          # Net 2: regeneration must erase the hand edit (self-healing).
+          node scripts/regen-review-artifacts.mjs
+          git diff --quiet --exit-code -- "$doc" || {
+            echo "::error::gate WEAK: regeneration left a hand edit in place"
+            exit 1
+          }
+          echo "negative control OK: hand edit went RED on the byte-compare and was erased by regeneration"
