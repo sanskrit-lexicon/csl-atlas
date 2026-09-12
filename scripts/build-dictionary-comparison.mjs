@@ -13,7 +13,7 @@ import { DICTS, DICT_LABELS } from "./lib/dict-manifest.mjs";
 import { iterateHeadwords } from "./lib/dict-headwords.mjs";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
-import { presentDicts, lemmaConfidence, genderConflict } from "./lib/dict-align.mjs";
+import { presentDicts, lemmaConfidence, genderConflict, crossLinkCodes } from "./lib/dict-align.mjs";
 import {
   BROAD_HEADWORD_SHARD_PREFIXES,
   buildBroadHeadwordDictionaries,
@@ -442,7 +442,12 @@ function main() {
           code,
           entry[code].records,
           entry[code].example.line,
-          [...entry[code].genders].filter(g => GENDER_TOKENS.has(g)).sort().join("")
+          [...entry[code].genders].filter(g => GENDER_TOKENS.has(g)).sort().join(""),
+          // L9 cross-dict linking: every OTHER present dict's own code for this
+          // same lemma. The page resolves each sibling's href from that
+          // sibling's own tuple in this same `d` array (code + firstLine),
+          // exactly how it already resolves the dict's own chip href.
+          crossLinkCodes(codes, code)
         ])
       });
     }
@@ -455,9 +460,11 @@ function main() {
         normalized,
         codes.map(code => {
           const gender = [...entry[code].genders].filter(g => GENDER_TOKENS.has(g)).sort().join("");
-          const tuple = [DICT_INDEX[code], entry[code].records, entry[code].example.line];
-          if (gender) tuple.push(gender);
-          return tuple;
+          // L9 cross-dict linking: every OTHER present dict's index for this
+          // same lemma (resolved against `dictionaries[dictIndex]`, same as
+          // the tuple's own dictIndex).
+          const crossLinks = crossLinkCodes(codes, code).map(c => DICT_INDEX[c]);
+          return [DICT_INDEX[code], entry[code].records, entry[code].example.line, gender, crossLinks];
         })
       ]);
     }
@@ -804,15 +811,16 @@ function main() {
     {
       minDicts: DOSSIER_MIN_DICTS,
       hrefBase: CSL_ORIG_GITHUB_BASE,
-      tupleFields: ["code", "records", "firstLine", "gender"],
+      tupleFields: ["code", "records", "firstLine", "gender", "crossLinks"],
       count: dossier.length,
       entries: dossier
     },
     {
       assumptions: [
         `Includes lemmas attested in at least ${DOSSIER_MIN_DICTS} of the ${ORDER.length} target dictionaries.`,
-        "Each dict tuple is [code, records, firstLine, gender]; href = hrefBase + /code/code.txt#L firstLine.",
-        "gender (from <lex>) is empty for VCP/SKD (prose) and for entries without a <lex> tag."
+        "Each dict tuple is [code, records, firstLine, gender, crossLinks]; href = hrefBase + /code/code.txt#L firstLine.",
+        "gender (from <lex>) is empty for VCP/SKD (prose) and for entries without a <lex> tag.",
+        "crossLinks (L9) lists every OTHER present dict's own code for this same lemma, sorted, never including its own code; the page resolves each sibling's href from that sibling's own tuple in the same `d` array."
       ],
       warnings: [
         "Lemmas in fewer than the threshold number of dictionaries are omitted; full-corpus lookup needs a search backend (deferred)."
@@ -827,7 +835,7 @@ function main() {
     lemmaOf: entry => entry.l,
     sampleEntries: dossier.slice(0, DOSSIER_SAMPLE_LIMIT),
     tupleFields: ["l", "c", "d"],
-    dictTupleFields: ["code", "records", "firstLine", "gender"],
+    dictTupleFields: ["code", "records", "firstLine", "gender", "crossLinks"],
     manifestExtra: {
       generatedBy: "npm run build-dict-comparison",
       hrefBase: CSL_ORIG_GITHUB_BASE,
@@ -836,8 +844,9 @@ function main() {
       dictionaries: DICTS.map(d => ({ code: d.code, label: d.label, grammarReliable: d.grammarReliable })),
       assumptions: [
         `Includes lemmas attested in at least ${DOSSIER_MIN_DICTS} of the ${ORDER.length} target dictionaries.`,
-        "Each entry is {l,c,d}; each dict tuple is [code, records, firstLine, gender].",
-        "Core dossier lookup is exact/prefix lookup over normalized headwords, not substring search."
+        "Each entry is {l,c,d}; each dict tuple is [code, records, firstLine, gender, crossLinks].",
+        "Core dossier lookup is exact/prefix lookup over normalized headwords, not substring search.",
+        "crossLinks (L9) lists every OTHER present dict's own code for this same lemma; the page resolves each sibling's href from that sibling's own tuple in the same `d` array."
       ],
       warnings: [
         "Lemmas in fewer than the threshold number of dictionaries are omitted; full-corpus lookup needs a search backend (deferred)."
@@ -852,7 +861,7 @@ function main() {
       hrefBase: CSL_ORIG_GITHUB_BASE,
       minDicts: LOOKUP_MIN_DICTS,
       tupleFields: ["lemma", "dicts"],
-      dictTupleFields: ["dictIndex", "records", "firstLine", "gender?"],
+      dictTupleFields: ["dictIndex", "records", "firstLine", "gender", "crossLinks"],
       inputSchemes: ["SLP1", "IAST"],
       count: lookup.length,
       entries: lookup
@@ -860,9 +869,10 @@ function main() {
     {
       assumptions: [
         `Includes normalized lemmas attested in at least ${LOOKUP_MIN_DICTS} of the ${ORDER.length} target dictionaries.`,
-        "Each entry is [lemma, dictTuples]; each dict tuple is [dictIndex, records, firstLine, gender?].",
+        "Each entry is [lemma, dictTuples]; each dict tuple is [dictIndex, records, firstLine, gender, crossLinks] (gender is \"\" when unavailable).",
         "Dictionary code is dictionaries[dictIndex].code; href = hrefBase + /code/code.txt#L firstLine.",
-        "Reader Lookup v1 is exact/prefix lookup over dictionary headwords, not full-text search and not a corpus lookup."
+        "Reader Lookup v1 is exact/prefix lookup over dictionary headwords, not full-text search and not a corpus lookup.",
+        "crossLinks (L9) lists every OTHER present dict's own dictIndex for this same lemma; the page resolves each sibling's href from that sibling's own tuple in the same entry's dict list."
       ],
       warnings: [
         "Lemmas below the coverage threshold are omitted from Reader Lookup v1; use dictionary source files or a future search backend for the long tail.",
@@ -879,7 +889,7 @@ function main() {
     lemmaOf: entry => entry[0],
     sampleEntries: lookupSamples(lookup, LOOKUP_SAMPLE_LEMMAS),
     tupleFields: ["lemma", "dicts"],
-    dictTupleFields: ["dictIndex", "records", "firstLine", "gender?"],
+    dictTupleFields: ["dictIndex", "records", "firstLine", "gender", "crossLinks"],
     manifestExtra: {
       generatedBy: "npm run build-dict-comparison",
       hrefBase: CSL_ORIG_GITHUB_BASE,
@@ -888,8 +898,9 @@ function main() {
       dictionaries: DICTS.map(d => ({ code: d.code, label: d.label, grammarReliable: d.grammarReliable })),
       assumptions: [
         `Includes normalized lemmas attested in at least ${LOOKUP_MIN_DICTS} of the ${ORDER.length} target dictionaries.`,
-        "Each entry is [lemma, dictTuples]; each dict tuple is [dictIndex, records, firstLine, gender?].",
-        "Reader Lookup v1 is exact/prefix lookup over dictionary headwords, not full-text search and not a corpus lookup."
+        "Each entry is [lemma, dictTuples]; each dict tuple is [dictIndex, records, firstLine, gender, crossLinks] (gender is \"\" when unavailable).",
+        "Reader Lookup v1 is exact/prefix lookup over dictionary headwords, not full-text search and not a corpus lookup.",
+        "crossLinks (L9) lists every OTHER present dict's own dictIndex for this same lemma; the page resolves each sibling's href from that sibling's own tuple in the same entry's dict list."
       ],
       warnings: [
         "Lemmas below the coverage threshold are omitted from Reader Lookup v1; use dictionary source files or a future search backend for the long tail.",

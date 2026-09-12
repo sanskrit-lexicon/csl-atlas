@@ -26,6 +26,17 @@ export function lemmaConfidence(entry, codes) {
 }
 
 /**
+ * Cross-dict links for one dictionary among a lemma's present dictionaries
+ * (L9 stretch: "cross-dict linking active for every shared lemma"). Returns
+ * every OTHER present code, sorted, never including `code` itself — the
+ * caller resolves each sibling's own href from that sibling's own {code,
+ * line} record, exactly the way it already resolves `code`'s own href.
+ */
+export function crossLinkCodes(codes, code) {
+  return codes.filter(c => c !== code).sort();
+}
+
+/**
  * Detect a gender conflict among the grammar-reliable dictionaries.
  * A conflict requires two dictionaries whose specific-gender sets ({m,f,n})
  * are both non-empty and disjoint. POS-only tags (adj/ind) never trigger one.
