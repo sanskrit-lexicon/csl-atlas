@@ -1,4 +1,4 @@
-_Created: 29-05-2026 · Last updated: 05-09-2026_
+_Created: 29-05-2026 · Last updated: 08-09-2026_
 
 ---
 title: Lemma dossier
@@ -259,14 +259,26 @@ function dictBadges(dict, line) {
   return [...new Set(badges)];
 }
 function coreEntry(e) {
+  // Every dict's own {code, line} is already in `e.d` (the compact tuple
+  // array); L9 cross-links (a per-tuple list of sibling codes) are resolved
+  // against that same array so each sibling's chip href reuses the source
+  // link it already carries for its own dict.
+  const byCode = new Map(e.d.map(([code, , line]) => [code, { code, line }]));
   return {
     l: e.l,
     c: e.c,
-    dicts: e.d.map(([code, records, line, gender]) => ({
+    dicts: e.d.map(([code, records, line, gender, crossLinks]) => ({
       dict: coreDictByCode.get(code) ?? { code, label: code.toUpperCase(), sourceLinkMode: "github" },
       records,
       line,
-      gender
+      gender,
+      crossLinks: (crossLinks ?? [])
+        .map(siblingCode => {
+          const sibling = byCode.get(siblingCode);
+          if (!sibling) return null;
+          return { dict: coreDictByCode.get(siblingCode) ?? { code: siblingCode, label: siblingCode.toUpperCase(), sourceLinkMode: "github" }, line: sibling.line };
+        })
+        .filter(Boolean)
     }))
   };
 }
@@ -342,15 +354,26 @@ display(html`<div class="dossier-grid">
     return html`<section class="lemma-card">
       <h3>${slp1ToIast(e.l)} <span class="cov">${t("phase2.dossier.in")} ${e.c}/${activeDictionaryCount}</span></h3>
       <div class="chips">
-        ${e.dicts.map(({ dictIndex, dict, records, line, gender }) => {
+        ${e.dicts.map(({ dictIndex, dict, records, line, gender, crossLinks }) => {
           const link = hrefOf(dict, line);
           const badges = dictBadges(dict, line);
           const content = html`<b>${dict?.label ?? dict?.code ?? `#${dictIndex}`}</b>
             <span>${records}×${gender ? " · " + gender : lookupMode === "broad" ? " · " + t("phase2.dossier.headword-only") : ""}</span>
             ${badges.length ? html`<em>${badges.join(" · ")}</em>` : ""}`;
-          return link
+          const ownChip = link
             ? html`<a class="chip" href=${link} target="_blank" rel="noopener">${content}</a>`
             : html`<span class="chip chip-muted">${content}</span>`;
+          const crossChips = (crossLinks ?? []).map(cl => {
+            const clLink = hrefOf(cl.dict, cl.line);
+            const label = cl.dict?.label ?? cl.dict?.code ?? "?";
+            return clLink
+              ? html`<a class="cross-link" href=${clLink} target="_blank" rel="noopener">${label}</a>`
+              : html`<span class="cross-link cross-link-muted">${label}</span>`;
+          });
+          return html`<div class="chip-group">
+            ${ownChip}
+            ${crossChips.length ? html`<span class="cross-links">${t("phase2.dossier.also-in")}: ${crossChips}</span>` : ""}
+          </div>`;
         })}
         ${dcs ? html`<a class="chip chip-dcs" href="https://github.com/gasyoun/VisualDCS" target="_blank" rel="noopener"><b>DCS</b><span>band ${dcs.freqBand}/5</span></a>` : ""}
       </div>
