@@ -1,4 +1,4 @@
-_Created: 03-06-2026 · Last updated: 06-09-2026_
+_Created: 03-06-2026 · Last updated: 17-09-2026_
 
 # Apparatus, not errors: how Monier-Williams inherited the Petersburg lexicon
 
@@ -157,6 +157,19 @@ can independently drop the same rare word — so this corroborates common descen
 delivering the airtight Lachmann proof. It strengthens the *apparatus* side, not the error side
 (full census: [`data/forensic/SHARED_OMISSION_TEST.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SHARED_OMISSION_TEST.md)).
 
+The Petersburg Nachträge give this result a complement on the entry side. In the largest
+supplement volume (volume 7; 35,581 entries), a canary-locked census finds **571
+homonym-extensions** — words MW already heads, for which the Nachträge record a further homonym
+MW's main body never reaches: e.g. *kārin*, whose Nachträge homonym *kārin*³ (`pw.txt` line
+620966) exceeds MW's main-body maximum of two — while the *kārin*³ in MW's own annexure is a
+different derivation, a numbering coincidence the census refuses to score as absorption. The
+inventory backbone of §3.1 thus has a precise edge: it thins exactly at the supplements' newest
+stratum. Two clauses travel with the figure: MW's and Petersburg's homonym numbering are not
+proven 1:1 comparable (the count spans 498–626 across defensible definitions of "extension"),
+and every figure describes the Cologne digitizations, not the printed page (full census:
+[`data/forensic/MW_UNABSORBED_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MW_UNABSORBED_CENSUS.md);
+the book-form twin carries the full class list at Chapter 12, §3.5).
+
 **3.6 Sense order — the fourth clause, measured directly, and it comes out near-null.** §3.4 measured the
 order in which the two works cite their *sources*; Böhtlingk's item #4 was narrower and more literal —
 "die Reihenfolge der *Bedeutungen* einfach abgeschrieben," the order of the *meanings* copied out.
@@ -293,7 +306,12 @@ and the sanhw1 snapshot. Datasets: `data/forensic/{citation_pair_overlap,
 shared_rare_citations, homonym_concordance, ahlborn_mw_comparison, shared_corrections,
 shared_omission_test, sense_order_test, sense_order_robustness}.csv`
 and the `f*_report.json` files; `data/L0/content_lift.csv`. F9 (shared omission) additionally
-reads the `now-2026` `key1` headword exports from `../SanskritLexicography/HeadwordLists/`. F10
+reads the `now-2026` `key1` headword exports from `../SanskritLexicography/HeadwordLists/`. The
+volume-7 unabsorbed census folded into §3.5 is external to this suite: it regenerates with
+SanskritLexicography's [`mw_unabsorbed_census.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/mw_unabsorbed_census.py)
+(deterministic, stdlib-only, ~8 s) over `../csl-orig`, and its frozen outputs are archived in
+[`data/forensic/MW_UNABSORBED_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MW_UNABSORBED_CENSUS.md).
+F10
 (sense order) renders PWG's German glosses `de→en` with offline argos-translate (one-time model
 install via `scripts/forensic/_setup_argos.py`; cache gitignored + rebuildable, parallel fill via
 `_f10_pretranslate.py`) — the only figure not derived purely from the source text. Per-run provenance in the
