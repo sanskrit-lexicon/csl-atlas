@@ -1,4 +1,4 @@
-_Created: 03-06-2026 · Last updated: 17-09-2026_
+_Created: 03-06-2026 · Last updated: 20-09-2026_
 
 # Apparatus, not errors: how Monier-Williams inherited the Petersburg lexicon
 
@@ -109,7 +109,15 @@ own Petersburg exposure (§3.4). **587 rare exact references are shared for the 
 headword***, each attested at ≤4 lemmas corpus-wide, 203 of them occurring nowhere else in
 the corpus at all: e.g. `ullApya → SĀH. 545`, `dAsatA → VEṆĪS. 175`, `granTakAra →
 VEDĀNTAS. 1` (all three corpus-unique), and 565
-exact Harivaṃśa line-numbers (`HARIV. 9529` …). MW further reduces Böhtlingk's full verse
+exact Harivaṃśa line-numbers (`HARIV. 9529` …). Those last are 96% of the pool, and they are
+the *same* source events §6 resolves against the vulgate: the rare-reference mass and the
+Harivaṃśa run-to-ground are one line of evidence read at two resolutions, not two independent
+ones. Ablating Harivaṃśa leaves 33 rare shared references over 18 other texts — the
+idiosyncratic-apparatus signal is real but concentrated
+([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §3.3).
+The Jaccard signal itself is *not* concentrated: ablating the 25 most widely cited texts
+widens the lineage-over-null separation from 9.7× to 16.3×, so it is not shared common texts
+doing the work (ibid. §3.5). MW further reduces Böhtlingk's full verse
 references to a bare sigil **41,552 times** — a directional PWG→MW compression. The method
 self-validates: it ranks known same-apparatus pairs at the top (PW/PWKVN 0.87, SCH/PW 0.62,
 AP/AP90 0.76) and the nulls at the floor.
@@ -131,9 +139,21 @@ PRAB · SUŚR (six sources, identical sequence — random odds 1/720). The effec
 Petersburg-*specific*, not a shared scholarly ordering convention: agreement falls
 monotonically with distance from the tradition — PWG 0.81 > PW 0.73 > Benfey 0.68 (itself
 Petersburg-influenced) > the independent Apte 0.42 (the Apte tail rests on 8 order-bearing
-entries and Benfey on 154 — thin, but the gradient is monotone). MW did not merely consult Böhtlingk's
+entries and Benfey on 154 — thin, but the gradient is monotone). Because that independent arm
+is thin, the Petersburg-specificity is better carried by a direct control than by the
+gradient: derive each dictionary's *global* ordering habit (the mean normalised position of
+every text across all its entries), then keep only the sigil pairs on which MW's and PWG's
+habits point in **opposite** directions. On those 4,685 convention-defying pairs MW still
+follows PWG's particular article **75.2%** of the time, against a within-entry permutation
+floor of 0.500 — so only ≈0.05 of the 0.811 is convention, and the rest is the article
+([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §3.6).
+MW did not merely consult Böhtlingk's
 sources; it assembled its entries **following Böhtlingk's entry**. This is the strongest
-single copying signal in the suite, and it is structural, not lexical.
+single copying signal in the suite, and it is structural, not lexical. It is not, however, an
+*independent* signal: every one of these entries is by construction a §3.2 shared-cited
+lemma, so §3.2 and §3.4 are two questions put to one evidence base, not two corroborations
+(ibid. §3.1). The independent second leg is §3.5, 46.7% of whose anchor neither citation
+signal touches.
 
 **3.5 Shared omission — the inventory backbone, from the negative-space side.** §3.1 shows
 shared *presence*; Böhtlingk's item #1 was shared *absence* — "was in Ihrem Werk ausgelaßen
@@ -314,7 +334,23 @@ SanskritLexicography's [`mw_unabsorbed_census.py`](https://github.com/gasyoun/Sa
 F10
 (sense order) renders PWG's German glosses `de→en` with offline argos-translate (one-time model
 install via `scripts/forensic/_setup_argos.py`; cache gitignored + rebuildable, parallel fill via
-`_f10_pretranslate.py`) — the only figure not derived purely from the source text. Per-run provenance in the
+`_f10_pretranslate.py`) — the only figure not derived purely from the source text.
+
+**A pinning caveat, measured (H5073).** The `.source.json` sidecars record the *csl-atlas*
+commit, not the `../csl-orig` revision the figures were computed over, and `csl-orig` receives
+upstream corrections continuously. The signals that read frozen `key1` exports (F9) therefore
+reproduce to the digit; those that read `csl-orig` live (F1, F5) drift. Re-run 20-09-2026
+against `csl-orig` [`30b2ae7b`](https://github.com/sanskrit-lexicon/csl-orig/commit/30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4)
+(2026-08-29), three months after the 03-06-2026 freeze: the rare-reference pool moves 587 → 598
+(Harivaṃśa unchanged at 565), the order-bearing entries 3,593 → 3,583 with concordance
+0.8107 → 0.8108 and identical share 47.8% → 47.73%, and F9's 12.336 / 1.51 are unchanged. The
+arithmetic pins in `tests/forensic/` are unaffected — they run against fixtures. Until the
+sidecars carry a corpus revision, read the F1/F5 digits as a June-2026 snapshot; per-input
+SHA-256 hashes and the corpus revision for the audit run are recorded in
+[`f11_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f11_report.json)
+and [`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §4.
+
+Per-run provenance in the
 `.source.json` sidecars.
 
 ## References
