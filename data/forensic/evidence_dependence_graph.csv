@@ -1,0 +1,6 @@
+claim_id,signal_id,locus_id,n_loci,what
+A10-C1,S-F1-JACC,L-CIT-LEMMA,80600,§3.2 per-lemma source-Jaccard
+A10-C1,S-F1-RARE,L-RARE-EVENT,598,§3.2 corpus-rare shared exact refs
+A10-C2,S-F5-ORDER,L-ORD-ENTRY,3583,§3.4 citation-order concordance
+A10-C2,S-F5-IDENT,L-ORD-ENTRY,3583,§3.4 perfectly-identical share
+A10-C3,S-F9-GAPSENS,L-ANCHOR-WORD,6941,§3.5 gap-sensitivity

@@ -1,0 +1,312 @@
+{
+  "seed": 20260920,
+  "min_shared_sources_for_order": 3,
+  "permutation_iters": 200,
+  "anchor_sources": {
+    "SKD": "key1-export",
+    "VCP": "key1-export"
+  },
+  "corpus_revision": {
+    "path": "/Users/mac/Documents/GitHub/csl-orig",
+    "revision": "30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4",
+    "committed": "2026-08-29T23:03:49+03:00"
+  },
+  "reproduction_delta": {
+    "note": "The published figures were produced on 2026-06-03 against an unpinned ../csl-orig; this run reads the revision recorded under corpus_revision. Deltas below are corpus drift, not arithmetic disagreement — the pinned arithmetic tests (tests/forensic, H4352) still pass.",
+    "S-F1-RARE": {
+      "published": 587,
+      "reproduced": 598
+    },
+    "S-F1-RARE-HARIV": {
+      "published": 565,
+      "reproduced": 565
+    },
+    "S-F5-ORDER": {
+      "published_entries": 3593,
+      "reproduced_entries": 3583,
+      "published_concordance": 0.8107,
+      "reproduced_concordance": 0.8108,
+      "published_pct_identical": 47.8,
+      "reproduced_pct_identical": 47.73
+    },
+    "S-F9-GAPSENS": {
+      "published_mw": 12.336,
+      "reproduced_mw": 12.336,
+      "published_ap": 1.51,
+      "reproduced_ap": 1.51
+    }
+  },
+  "source_hashes": {
+    "data/forensic/parsed/mw.tsv": "7821d7865608fd377524789237b59a1abb4d4dc3c194d0ca6e77c3e2ab0aff08",
+    "data/forensic/parsed/pwg.tsv": "d31654a0d6b79611853827709b440406b4d20610105c1777138d5c6c7f31c861",
+    "data/forensic/parsed/pw.tsv": "7e486ee1632ba3a51d98505de026b23a871e9c65c18488b9bc6d5a59feaf9dd0",
+    "data/forensic/parsed/ap.tsv": "a227bd1fec86eb5987fac4822df555e5358adb9f4060f9cea5607209e64c8352",
+    "data/forensic/parsed/ben.tsv": "2084467db113b7cbc4fa321a05ef1b76794f8422caaf71ae9b416749bbdc99b3",
+    "data/forensic/parsed/sch.tsv": "d5ddfbc1dfa42d27159a389f2adba26780e991c103dbbb0f9e0fc750f621b97c",
+    "data/forensic/parsed/pwkvn.tsv": "e67fa06a778492b3377e89c709af3a1048a0eee6ac204ba525225dd07ad5b800",
+    "data/forensic/parsed/ae.tsv": "c355dcab3e3ecce4e420d3d1097c04209802f1e53a79500ee36b346634bf19ee",
+    "data/forensic/parsed/ap90.tsv": "46a2a543fd0826239551080a19345c30d519219e80ae4b5340343b3bd8dc60d3",
+    "data/forensic/parsed/bhs.tsv": "989c664163f515dba1851f4d7cf118a69b4558ede0ee7faa6f6c470a09da01e2",
+    "data/forensic/parsed/bor.tsv": "473b504c443f0bd74605391e79ccef7fe884de9d8ad37bff87c6cbbcec41e816",
+    "data/forensic/parsed/gra.tsv": "7c06ef3c339a857b520904d33d4fc5b1ec6a12242c9e13dbfc8f8110b4b28462",
+    "data/forensic/parsed/lrv.tsv": "2426d8973e7eb87a51bcc3414f5975d882ca8049e1073f391cadf0c2cb250d4f",
+    "data/forensic/parsed/skd.tsv": "530c0aaec5c2ae395a8f1adfce6e532052d1bbd388e9cb5928d50a794f2b56cc",
+    "data/forensic/parsed/vcp.tsv": "409c896e4c4ebc763ea9d5cd48c76aa585c978c68629740479423cd51ba6bc8f",
+    "data/forensic/f1_report.json": "ab4fafb44e04bf95b103e71a091ead804a3bb132ae9ef984d4f3d159f2e9ff2b",
+    "data/forensic/f5_report.json": "eb99624aff64baae971d5f7d0bf3556be1c5e07f92a3cbf04409238dc1d6811d",
+    "data/forensic/shared_omission_test.csv": "1fb5cfafa205e0ea1cdd80f0e0c2a04285bdadb5256d6b361010086d69d69335",
+    "data/forensic/shared_rare_citations.csv": "8a9f308c95bbd28fca283647ed1f4a2f3a489a0a36459ff752a2627389e7702e"
+  },
+  "claims": {
+    "A10-C1": {
+      "section": "3.2",
+      "signals": [
+        "S-F1-JACC",
+        "S-F1-RARE"
+      ],
+      "loci": {
+        "L-CIT-LEMMA": 80600,
+        "L-RARE-EVENT": 598
+      }
+    },
+    "A10-C2": {
+      "section": "3.4",
+      "signals": [
+        "S-F5-ORDER",
+        "S-F5-IDENT"
+      ],
+      "loci": {
+        "L-ORD-ENTRY": 3583
+      }
+    },
+    "A10-C3": {
+      "section": "3.5",
+      "signals": [
+        "S-F9-GAPSENS"
+      ],
+      "loci": {
+        "L-ANCHOR-WORD": 6941
+      }
+    }
+  },
+  "locus_overlap": {
+    "C2_in_C1": {
+      "c2": 3583,
+      "intersection": 3583,
+      "share_of_c2": 1.0
+    },
+    "C1rare_in_C2": {
+      "rare_lemmas": 513,
+      "intersection": 133,
+      "share_of_rare_lemmas": 0.2593
+    },
+    "C3_in_C1": {
+      "anchor": 6941,
+      "intersection": 3697,
+      "share_of_anchor": 0.5326
+    },
+    "C3_in_C2": {
+      "anchor": 6941,
+      "intersection": 340,
+      "share_of_anchor": 0.049
+    }
+  },
+  "deduplicated_accounting": {
+    "C1_loci": 80600,
+    "C2_loci": 3583,
+    "C3_loci": 6941,
+    "naive_sum_of_loci": 91124,
+    "union_of_loci": 83844,
+    "double_counted_by_naive_sum": 7280,
+    "C2_loci_not_in_C1": 0,
+    "C3_loci_not_in_C1_or_C2": 3244
+  },
+  "c3_reproduction": {
+    "MW": {
+      "pwg_has_probe_has": 4134,
+      "pwg_has_probe_lacks": 158,
+      "pwg_lacks_probe_has": 1446,
+      "pwg_lacks_probe_lacks": 1203,
+      "pwg_has": 4292,
+      "pwg_lacks": 2649,
+      "lack_given_pwg_has": 0.0368,
+      "lack_given_pwg_lacks": 0.4541,
+      "gap_sensitivity": 12.336
+    },
+    "AP": {
+      "pwg_has_probe_has": 2696,
+      "pwg_has_probe_lacks": 1596,
+      "pwg_lacks_probe_has": 1162,
+      "pwg_lacks_probe_lacks": 1487,
+      "pwg_has": 4292,
+      "pwg_lacks": 2649,
+      "lack_given_pwg_has": 0.3719,
+      "lack_given_pwg_lacks": 0.5613,
+      "gap_sensitivity": 1.51
+    }
+  },
+  "c2_observed": {
+    "PWG": {
+      "entries": 3583,
+      "mean_concordance": 0.8108,
+      "pct_identical": 47.73
+    },
+    "AP": {
+      "entries": 8,
+      "mean_concordance": 0.4167,
+      "pct_identical": 12.5
+    }
+  },
+  "rare_event_concentration": {
+    "HARIV": 565,
+    "GAṆAR": 4,
+    "PAÑCAT. II": 4,
+    "PAÑCAT. IV": 3,
+    "PAÑCAT. I": 3,
+    "LAGHUK": 3,
+    "PAÑCAT. III": 2,
+    "CHANDOM": 2,
+    "BHĀṢĀP": 2,
+    "HIT. II": 1,
+    "KAUŚ": 1,
+    "HIT. IV": 1,
+    "SĀH": 1,
+    "PURUṢOTT": 1,
+    "VEṆĪS": 1,
+    "VEDĀNTAS": 1,
+    "CAURAP. (A.)": 1,
+    "BĪJAG": 1,
+    "BHĀRADV": 1
+  },
+  "controls": {
+    "CTRL-DUP": {
+      "before": {
+        "naive_witness_events": 598,
+        "independent_source_events": 574
+      },
+      "after_seeding_verbatim_PWG_duplicate": {
+        "naive_witness_events": 1125,
+        "independent_source_events": 574
+      },
+      "naive_inflation": 527,
+      "independent_support_delta": 0,
+      "control_passes": true
+    },
+    "CTRL-PWDUP": {
+      "pwg_witness_events": 527,
+      "pw_witness_events": 71,
+      "shared_by_both_petersburg_witnesses": 24,
+      "pw_events_already_in_pwg": 0.338,
+      "independent_source_events": 574,
+      "naive_witness_events": 598
+    },
+    "CTRL-ABL-H": {
+      "rare_events_all": 598,
+      "harivamsa_events": 565,
+      "harivamsa_share": 0.9448,
+      "rare_events_without_harivamsa": 33,
+      "distinct_sigils_without_harivamsa": 18,
+      "residue_by_sigil": {
+        "PAÑCAT. II": 4,
+        "GAṆAR": 4,
+        "LAGHUK": 3,
+        "PAÑCAT. I": 3,
+        "PAÑCAT. IV": 3,
+        "PAÑCAT. III": 2,
+        "CHANDOM": 2,
+        "BHĀṢĀP": 2,
+        "SĀH": 1,
+        "BHĀRADV": 1,
+        "HIT. IV": 1,
+        "VEṆĪS": 1,
+        "KAUŚ": 1,
+        "CAURAP. (A.)": 1,
+        "HIT. II": 1,
+        "BĪJAG": 1,
+        "PURUṢOTT": 1,
+        "VEDĀNTAS": 1
+      }
+    },
+    "CTRL-ABL-S": {
+      "ablated_sigils": [
+        "AK",
+        "AV",
+        "BHP",
+        "BHĀG. P",
+        "H",
+        "HARIV",
+        "IB",
+        "KATHĀS",
+        "L",
+        "M",
+        "MBH",
+        "P",
+        "R",
+        "RAGH",
+        "RV",
+        "RĀJAN",
+        "SUŚR",
+        "TRIK",
+        "TS",
+        "VERZ. D. OXF. H",
+        "VS",
+        "W",
+        "ŚAT. BR",
+        "ŚKDR",
+        "ṚV"
+      ],
+      "pairs": {
+        "PWG/MW": {
+          "mean_source_jaccard": 0.1579,
+          "n_lemmas": 80600,
+          "mean_source_jaccard_top_sigils_ablated": 0.0684,
+          "n_lemmas_ablated": 64904
+        },
+        "PW/MW": {
+          "mean_source_jaccard": 0.1791,
+          "n_lemmas": 46061,
+          "mean_source_jaccard_top_sigils_ablated": 0.1564,
+          "n_lemmas_ablated": 40591
+        },
+        "AP/MW": {
+          "mean_source_jaccard": 0.0163,
+          "n_lemmas": 12402,
+          "mean_source_jaccard_top_sigils_ablated": 0.0042,
+          "n_lemmas_ablated": 12196
+        },
+        "BEN/MW": {
+          "mean_source_jaccard": 0.1016,
+          "n_lemmas": 15977,
+          "mean_source_jaccard_top_sigils_ablated": 0.0494,
+          "n_lemmas_ablated": 15038
+        }
+      }
+    },
+    "CTRL-PERM": {
+      "PWG": {
+        "iters": 200,
+        "entries": 3583,
+        "mean_concordance": 0.5002,
+        "min_concordance": 0.4885,
+        "max_concordance": 0.5142,
+        "pct_identical": 10.12
+      }
+    },
+    "CTRL-CONV": {
+      "PWG": {
+        "entries_scored": 3583,
+        "convention_concordant_pairs": 20363,
+        "agreement_on_convention_concordant": 0.8006,
+        "convention_discordant_pairs": 4685,
+        "agreement_on_convention_discordant": 0.7518
+      },
+      "AP": {
+        "entries_scored": 8,
+        "convention_concordant_pairs": 14,
+        "agreement_on_convention_concordant": 0.6429,
+        "convention_discordant_pairs": 13,
+        "agreement_on_convention_discordant": 0.2308
+      }
+    }
+  }
+}
