@@ -14,7 +14,7 @@ __pycache__/
 # local forensic caches
 # parse_cslorig.py --all output: ~48 MB of derived per-dictionary TSV caches
 # regenerated from csl-orig in minutes. Never committed (size + upstream rights).
-data/forensic/parsed/
+data/forensic/parsed
 data/forensic/_f6_tcache.json
 data/forensic/_f10_sense_tcache.json
 data/forensic/_f10_need.json

@@ -93,7 +93,9 @@
     "C2_in_C1": {
       "c2": 3583,
       "intersection": 3583,
-      "share_of_c2": 1.0
+      "share_of_c2": 1.0,
+      "kind": "structural",
+      "note": "1.0 by construction, not by measurement: c2_entries is built by iterating c1_lemmas, so this share cannot come out below 1.0. It is reported because the CONSEQUENCE — §3.4 is not an independent corroboration of §3.2 — is what the paper had not stated"
     },
     "C1rare_in_C2": {
       "rare_lemmas": 513,
@@ -161,22 +163,22 @@
     "HARIV": 565,
     "GAṆAR": 4,
     "PAÑCAT. II": 4,
-    "PAÑCAT. IV": 3,
-    "PAÑCAT. I": 3,
     "LAGHUK": 3,
-    "PAÑCAT. III": 2,
-    "CHANDOM": 2,
+    "PAÑCAT. I": 3,
+    "PAÑCAT. IV": 3,
     "BHĀṢĀP": 2,
-    "HIT. II": 1,
-    "KAUŚ": 1,
-    "HIT. IV": 1,
-    "SĀH": 1,
-    "PURUṢOTT": 1,
-    "VEṆĪS": 1,
-    "VEDĀNTAS": 1,
-    "CAURAP. (A.)": 1,
+    "CHANDOM": 2,
+    "PAÑCAT. III": 2,
+    "BHĀRADV": 1,
     "BĪJAG": 1,
-    "BHĀRADV": 1
+    "CAURAP. (A.)": 1,
+    "HIT. II": 1,
+    "HIT. IV": 1,
+    "KAUŚ": 1,
+    "PURUṢOTT": 1,
+    "SĀH": 1,
+    "VEDĀNTAS": 1,
+    "VEṆĪS": 1
   },
   "controls": {
     "CTRL-DUP": {
@@ -190,6 +192,22 @@
       },
       "naive_inflation": 527,
       "independent_support_delta": 0,
+      "control_passes": true,
+      "note": "structural, not empirical: independent_support projects onto (lemma, ref) and a verbatim duplicate shares that key, so Δ=0 cannot fail — read with CTRL-NOVEL, which can"
+    },
+    "CTRL-NOVEL": {
+      "injected_novel_triples": 100,
+      "distinct_new_source_events": 91,
+      "before": {
+        "naive_witness_events": 598,
+        "independent_source_events": 574
+      },
+      "after_seeding_novel_events": {
+        "naive_witness_events": 698,
+        "independent_source_events": 665
+      },
+      "independent_support_delta": 91,
+      "expected_delta": 91,
       "control_passes": true
     },
     "CTRL-PWDUP": {
@@ -207,24 +225,24 @@
       "rare_events_without_harivamsa": 33,
       "distinct_sigils_without_harivamsa": 18,
       "residue_by_sigil": {
-        "PAÑCAT. II": 4,
         "GAṆAR": 4,
+        "PAÑCAT. II": 4,
         "LAGHUK": 3,
         "PAÑCAT. I": 3,
         "PAÑCAT. IV": 3,
-        "PAÑCAT. III": 2,
-        "CHANDOM": 2,
         "BHĀṢĀP": 2,
-        "SĀH": 1,
+        "CHANDOM": 2,
+        "PAÑCAT. III": 2,
         "BHĀRADV": 1,
-        "HIT. IV": 1,
-        "VEṆĪS": 1,
-        "KAUŚ": 1,
+        "BĪJAG": 1,
         "CAURAP. (A.)": 1,
         "HIT. II": 1,
-        "BĪJAG": 1,
+        "HIT. IV": 1,
+        "KAUŚ": 1,
         "PURUṢOTT": 1,
-        "VEDĀNTAS": 1
+        "SĀH": 1,
+        "VEDĀNTAS": 1,
+        "VEṆĪS": 1
       }
     },
     "CTRL-ABL-S": {
@@ -280,16 +298,51 @@
           "mean_source_jaccard_top_sigils_ablated": 0.0494,
           "n_lemmas_ablated": 15038
         }
-      }
+      },
+      "depth_sweep": {
+        "0": {
+          "PWG/MW": 0.1579,
+          "AP/MW": 0.0163,
+          "separation": 9.69
+        },
+        "5": {
+          "PWG/MW": 0.1037,
+          "AP/MW": 0.0116,
+          "separation": 8.94
+        },
+        "10": {
+          "PWG/MW": 0.0783,
+          "AP/MW": 0.0091,
+          "separation": 8.6
+        },
+        "25": {
+          "PWG/MW": 0.0684,
+          "AP/MW": 0.0042,
+          "separation": 16.29
+        },
+        "50": {
+          "PWG/MW": 0.0592,
+          "AP/MW": 0.0041,
+          "separation": 14.44
+        },
+        "100": {
+          "PWG/MW": 0.0293,
+          "AP/MW": 0.0016,
+          "separation": 18.31
+        }
+      },
+      "separation_min_over_depths": 8.6,
+      "separation_max_over_depths": 18.31,
+      "survives_every_depth": true
     },
     "CTRL-PERM": {
       "PWG": {
         "iters": 200,
         "entries": 3583,
-        "mean_concordance": 0.5002,
+        "mean_concordance": 0.5004,
         "min_concordance": 0.4885,
-        "max_concordance": 0.5142,
-        "pct_identical": 10.12
+        "max_concordance": 0.5123,
+        "pct_identical": 10.13
       }
     },
     "CTRL-CONV": {
@@ -300,12 +353,47 @@
         "convention_discordant_pairs": 4685,
         "agreement_on_convention_discordant": 0.7518
       },
+      "PW": {
+        "entries_scored": 183,
+        "convention_concordant_pairs": 590,
+        "agreement_on_convention_concordant": 0.7254,
+        "convention_discordant_pairs": 199,
+        "agreement_on_convention_discordant": 0.6281
+      },
       "AP": {
         "entries_scored": 8,
         "convention_concordant_pairs": 14,
         "agreement_on_convention_concordant": 0.6429,
         "convention_discordant_pairs": 13,
         "agreement_on_convention_discordant": 0.2308
+      },
+      "BEN": {
+        "entries_scored": 116,
+        "convention_concordant_pairs": 435,
+        "agreement_on_convention_concordant": 0.7057,
+        "convention_discordant_pairs": 101,
+        "agreement_on_convention_discordant": 0.6337
+      },
+      "_reference_floor": {
+        "permutation_floor": 0.5004,
+        "min_discordant_pairs_for_a_reference_arm": 50,
+        "non_lineage_arms": {
+          "AP": {
+            "agreement_on_convention_discordant": 0.2308,
+            "convention_discordant_pairs": 13,
+            "usable_as_floor": false
+          },
+          "BEN": {
+            "agreement_on_convention_discordant": 0.6337,
+            "convention_discordant_pairs": 101,
+            "usable_as_floor": true
+          }
+        },
+        "best_non_lineage_reference": "BEN",
+        "best_non_lineage_agreement": 0.6337,
+        "pwg_excess_over_best_reference": 0.1181,
+        "pwg_excess_over_permutation_floor": 0.2514,
+        "note": "the defensible margin is the excess over the best non-lineage reference, not over the permutation floor; BEN carries its own Petersburg exposure, so it is a conservative, imperfect negative control"
       }
     }
   }

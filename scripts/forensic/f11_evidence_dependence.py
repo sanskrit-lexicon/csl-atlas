@@ -334,7 +334,7 @@ def convention_split(mw, other, entries, conv_mw, conv_other):
     """
     agree_c = tot_c = agree_d = tot_d = 0
     n_entries = 0
-    for k1 in entries:
+    for k1 in sorted(entries):
         a = dedup([s for s in mw[k1]["sigils"]])
         b = dedup([s for s in other[k1]["sigils"]])
         common = set(a) & set(b)
@@ -379,9 +379,15 @@ def permutation_null(mw, other, entries, rng, iters):
     Preserves: which sigils the entry cites, how many, the comparand's order,
     the entry population and both dictionaries' sigil distributions. Only the
     within-entry sequence — the thing C2 claims was copied — is destroyed.
+
+    `entries` is SORTED before use. It arrives as a set, and a set of `str` is
+    iterated in hash order, which Python randomises per process: unsorted, the
+    shared RNG is consumed in a different order every run and the band
+    (min/max/pct_identical) moves even though the seed is fixed. Found by the
+    H5073 pre-review, which got three different CTRL-PERM blocks from one seed.
     """
     pairs = []
-    for k1 in entries:
+    for k1 in sorted(entries):
         a = dedup(mw[k1]["sigils"])
         b = dedup(other[k1]["sigils"])
         common = set(a) & set(b)
@@ -432,7 +438,17 @@ def independent_support(witness_events):
 
 
 def seeded_duplicate_witness(rare_events):
-    """CTRL-DUP: inject PWG_DUP, a verbatim copy of the PWG witness."""
+    """CTRL-DUP: inject PWG_DUP, a verbatim copy of the PWG witness.
+
+    Honest framing (H5073 pre-review finding 1): Δ = 0 here is STRUCTURAL, not
+    empirical. `independent_support` projects onto `(k1, r)` and a verbatim
+    duplicate shares that key by construction, so no input could make this
+    number move. It is a regression pin on the accounting's witness-blindness,
+    and it is only informative when read together with CTRL-NOVEL below, which
+    CAN fail: an injected event at a *new* (lemma, ref) must raise independent
+    support by exactly the number injected. Together they show the key
+    discriminates witnesses from events rather than discarding both.
+    """
     before = independent_support(rare_events)
     seeded = set(rare_events)
     for (k1, r, w) in list(rare_events):
@@ -446,6 +462,45 @@ def seeded_duplicate_witness(rare_events):
         "independent_support_delta": (after["independent_source_events"]
                                       - before["independent_source_events"]),
         "control_passes": after["independent_source_events"] == before["independent_source_events"],
+        "note": ("structural, not empirical: independent_support projects onto (lemma, ref) "
+                 "and a verbatim duplicate shares that key, so Δ=0 cannot fail — read with "
+                 "CTRL-NOVEL, which can"),
+    }
+
+
+def seeded_novel_witness(rare_events, n_inject=100):
+    """CTRL-NOVEL: the falsifiable twin of CTRL-DUP.
+
+    Inject `n_inject` triples at (lemma, ref) pairs that are NOT in the pool —
+    the ref is suffixed so the pair is new while the witness label is reused.
+    A witness-blind accounting must raise independent support by exactly the
+    number of DISTINCT new (lemma, ref) keys. An accounting that keyed on the
+    witness would rise by the triple count instead; one that discarded the ref
+    would not rise at all. Both are failures this control can see.
+    """
+    before = independent_support(rare_events)
+    seeded = set(rare_events)
+    injected = 0
+    new_keys = set()
+    for (k1, r, w) in sorted(rare_events):
+        if injected >= n_inject:
+            break
+        probe = (k1, r + " [SEEDED-NOVEL]", w)
+        if probe in seeded:
+            continue
+        seeded.add(probe)
+        new_keys.add((k1, probe[1]))
+        injected += 1
+    after = independent_support(seeded)
+    delta = after["independent_source_events"] - before["independent_source_events"]
+    return {
+        "injected_novel_triples": injected,
+        "distinct_new_source_events": len(new_keys),
+        "before": before,
+        "after_seeding_novel_events": after,
+        "independent_support_delta": delta,
+        "expected_delta": len(new_keys),
+        "control_passes": delta == len(new_keys),
     }
 
 
@@ -478,6 +533,11 @@ def main():
         "C2_in_C1": {
             "c2": len(c2), "intersection": len(c2 & c1),
             "share_of_c2": round(len(c2 & c1) / len(c2), 4) if c2 else None,
+            "kind": "structural",
+            "note": ("1.0 by construction, not by measurement: c2_entries is built by "
+                     "iterating c1_lemmas, so this share cannot come out below 1.0. It is "
+                     "reported because the CONSEQUENCE — §3.4 is not an independent "
+                     "corroboration of §3.2 — is what the paper had not stated"),
         },
         "C1rare_in_C2": {
             "rare_lemmas": len(rare_lemmas),
@@ -510,8 +570,12 @@ def main():
         "harivamsa_share": round(harivamsa / len(rare), 4) if rare else None,
         "rare_events_without_harivamsa": len(ablated),
         "distinct_sigils_without_harivamsa": len({source_of(r) for (_k, r, _w) in ablated}),
-        "residue_by_sigil": dict(collections.Counter(
-            source_of(r) for (_k, r, _w) in ablated).most_common()),
+        # sorted by (-count, sigil): most_common() breaks ties by insertion
+        # order, which comes from a set and so varies per process (H5073
+        # pre-review finding 3 — the artifact must be byte-stable).
+        "residue_by_sigil": dict(sorted(collections.Counter(
+            source_of(r) for (_k, r, _w) in ablated).items(),
+            key=lambda kv: (-kv[1], kv[0]))),
     }
 
     # ---- CTRL-ABL-S -------------------------------------------------------
@@ -537,7 +601,31 @@ def main():
             n += 1
         return (round(tot / n, 4) if n else None), n
 
-    ctrl_abl_s = {"ablated_sigils": sorted(top_sigils), "pairs": {}}
+    # Depth sweep (H5073 pre-review finding 4): the frozen depth-25 result is
+    # a *widening*, but the separation DIPS below the unablated ratio at small
+    # depths. Only "never collapses" is robust across depth, so every depth is
+    # recorded and the report quotes the sweep, not the single frozen number.
+    ABL_DEPTHS = (5, 10, 25, 50, 100)
+    ctrl_abl_s = {"ablated_sigils": sorted(top_sigils), "pairs": {}, "depth_sweep": {}}
+    base_pwg, _ = mean_jaccard("PWG", "MW")
+    base_ap, _ = mean_jaccard("AP", "MW")
+    ctrl_abl_s["depth_sweep"]["0"] = {
+        "PWG/MW": base_pwg, "AP/MW": base_ap,
+        "separation": round(base_pwg / base_ap, 2) if base_ap else None,
+    }
+    for depth in ABL_DEPTHS:
+        drop = {s for s, _ in sigil_df.most_common(depth)}
+        d_pwg, _ = mean_jaccard("PWG", "MW", drop)
+        d_ap, _ = mean_jaccard("AP", "MW", drop)
+        ctrl_abl_s["depth_sweep"][str(depth)] = {
+            "PWG/MW": d_pwg, "AP/MW": d_ap,
+            "separation": round(d_pwg / d_ap, 2) if d_ap else None,
+        }
+    seps = [v["separation"] for v in ctrl_abl_s["depth_sweep"].values() if v["separation"]]
+    ctrl_abl_s["separation_min_over_depths"] = min(seps) if seps else None
+    ctrl_abl_s["separation_max_over_depths"] = max(seps) if seps else None
+    ctrl_abl_s["survives_every_depth"] = all(s > 1.0 for s in seps) if seps else None
+
     for a, b in (("PWG", "MW"), ("PW", "MW"), ("AP", "MW"), ("BEN", "MW")):
         full_j, n_full = mean_jaccard(a, b)
         abl_j, n_abl = mean_jaccard(a, b, top_sigils)
@@ -561,19 +649,57 @@ def main():
                 "mean_concordance": round(acc / n, 4) if n else None,
                 "pct_identical": round(100.0 * ident / n, 2) if n else None}
 
-    ap_entries = {k for k in (set(mw) & set(ap))
-                  if len(set(mw[k]["sigils"]) & set(ap[k]["sigils"])) >= MIN_SHARED_SRC}
+    def order_entries(other):
+        return {k for k in (set(mw) & set(other))
+                if len(set(mw[k]["sigils"]) & set(other[k]["sigils"])) >= MIN_SHARED_SRC}
+
+    ap_entries = order_entries(ap)
     c2_observed = {"PWG": observed_order(pwg, c2), "AP": observed_order(ap, ap_entries)}
     ctrl_perm = {"PWG": permutation_null(mw, pwg, c2, rng, PERM_ITERS)}
 
-    conv = {c: global_convention(dicts[c]) for c in ("MW", "PWG", "AP")}
-    ctrl_conv = {
-        "PWG": convention_split(mw, pwg, c2, conv["MW"], conv["PWG"]),
-        "AP": convention_split(mw, ap, ap_entries, conv["MW"], conv["AP"]),
+    # CTRL-CONV runs on every comparand we can reach, not just the lineage arm.
+    # H5073 pre-review finding 2: the within-entry permutation floor (~0.50)
+    # measures NO signal at all, which is not the same baseline as "a dictionary
+    # that did not copy MW's source, working in the same citation culture". The
+    # non-lineage arms below are that second, harder floor; the headline is the
+    # EXCESS of PWG over the best of them, not over 0.50.
+    conv_codes = ("MW", "PWG", "PW", "AP", "BEN")
+    conv = {c: global_convention(dicts[c]) for c in conv_codes}
+    conv_arms = {"PWG": (pwg, c2)}
+    for code in ("PW", "AP", "BEN"):
+        conv_arms[code] = (dicts[code], order_entries(dicts[code]))
+    ctrl_conv = {code: convention_split(mw, other, ents, conv["MW"], conv[code])
+                 for code, (other, ents) in conv_arms.items()}
+
+    MIN_REF_PAIRS = 50          # an arm below this is reported but not used as the floor
+    refs = {c: ctrl_conv[c] for c in ("AP", "BEN")
+            if (ctrl_conv[c]["convention_discordant_pairs"] or 0) >= MIN_REF_PAIRS
+            and ctrl_conv[c]["agreement_on_convention_discordant"] is not None}
+    best_ref = max(refs, key=lambda c: refs[c]["agreement_on_convention_discordant"]) if refs else None
+    pwg_d = ctrl_conv["PWG"]["agreement_on_convention_discordant"]
+    ctrl_conv["_reference_floor"] = {
+        "permutation_floor": (ctrl_perm["PWG"]["mean_concordance"]),
+        "min_discordant_pairs_for_a_reference_arm": MIN_REF_PAIRS,
+        "non_lineage_arms": {c: {
+            "agreement_on_convention_discordant": ctrl_conv[c]["agreement_on_convention_discordant"],
+            "convention_discordant_pairs": ctrl_conv[c]["convention_discordant_pairs"],
+            "usable_as_floor": c in refs,
+        } for c in ("AP", "BEN")},
+        "best_non_lineage_reference": best_ref,
+        "best_non_lineage_agreement": (refs[best_ref]["agreement_on_convention_discordant"]
+                                       if best_ref else None),
+        "pwg_excess_over_best_reference": (round(pwg_d - refs[best_ref][
+            "agreement_on_convention_discordant"], 4) if (best_ref and pwg_d is not None) else None),
+        "pwg_excess_over_permutation_floor": (round(pwg_d - ctrl_perm["PWG"]["mean_concordance"], 4)
+                                              if pwg_d is not None else None),
+        "note": ("the defensible margin is the excess over the best non-lineage reference, "
+                 "not over the permutation floor; BEN carries its own Petersburg exposure, "
+                 "so it is a conservative, imperfect negative control"),
     }
 
-    # ---- CTRL-DUP / CTRL-PWDUP -------------------------------------------
+    # ---- CTRL-DUP / CTRL-NOVEL / CTRL-PWDUP ------------------------------
     ctrl_dup = seeded_duplicate_witness(rare)
+    ctrl_novel = seeded_novel_witness(rare)
     pwg_ev = {(k, r) for (k, r, w) in rare if w == "PWG"}
     pw_ev = {(k, r) for (k, r, w) in rare if w == "PW"}
     ctrl_pwdup = {
@@ -676,9 +802,11 @@ def main():
         "deduplicated_accounting": accounting,
         "c3_reproduction": {"MW": f9_mw, "AP": f9_ap},
         "c2_observed": c2_observed,
-        "rare_event_concentration": dict(by_sigil.most_common()),
+        "rare_event_concentration": dict(sorted(by_sigil.items(),
+                                                key=lambda kv: (-kv[1], kv[0]))),
         "controls": {
             "CTRL-DUP": ctrl_dup,
+            "CTRL-NOVEL": ctrl_novel,
             "CTRL-PWDUP": ctrl_pwdup,
             "CTRL-ABL-H": ctrl_abl_h,
             "CTRL-ABL-S": ctrl_abl_s,
@@ -701,14 +829,20 @@ def main():
     print(f"  observed   AP  {c2_observed['AP']}")
     print(f"  CTRL-PERM  PWG {ctrl_perm['PWG']}")
     print(f"  CTRL-CONV  PWG {ctrl_conv['PWG']}")
-    print(f"  CTRL-CONV  AP  {ctrl_conv['AP']}")
+    for code in ("PW", "AP", "BEN"):
+        print(f"  CTRL-CONV  {code:3s} {ctrl_conv[code]}")
+    print(f"  CTRL-CONV  floor {ctrl_conv['_reference_floor']}")
     print("\n-- duplicate witnesses --------------------------------------------")
     print(f"  CTRL-DUP    {ctrl_dup}")
+    print(f"  CTRL-NOVEL  {ctrl_novel}")
     print(f"  CTRL-PWDUP  {ctrl_pwdup}")
     print("\n-- ablations ------------------------------------------------------")
     print(f"  CTRL-ABL-H  {harivamsa}/{len(rare)} rare events are HARIV "
           f"({ctrl_abl_h['harivamsa_share']}); residue {len(ablated)} over "
           f"{ctrl_abl_h['distinct_sigils_without_harivamsa']} sigils")
+    for depth, v in ctrl_abl_s["depth_sweep"].items():
+        print(f"  CTRL-ABL-S  depth {depth:>3s}: PWG/MW {v['PWG/MW']} vs AP/MW {v['AP/MW']} "
+              f"= {v['separation']}x")
     for pair, v in ctrl_abl_s["pairs"].items():
         print(f"  CTRL-ABL-S  {pair:8s} {v['mean_source_jaccard']} -> "
               f"{v['mean_source_jaccard_top_sigils_ablated']} (top-{ABLATE_TOP_SIGILS} sigils dropped)")

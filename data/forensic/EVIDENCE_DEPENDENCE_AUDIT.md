@@ -20,7 +20,12 @@ the failure mode this audit tests for — and it is the failure mode a reader of
 published paper about a named scholar would find first.
 
 Everything below is deterministic, offline and seeded
-(`seed = 20260920`, 200 permutation replicates), and regenerates with:
+(`seed = 20260920`, 200 permutation replicates) — and deterministic *across
+processes*, not merely within one: two fresh runs write a byte-identical
+`f11_report.json`. That property had to be fixed rather than claimed. The first
+version of this tool iterated a Python `set` while drawing from the shared RNG,
+and because `str` hashing is randomised per process the permutation band moved
+run to run under a fixed seed (§7.0). It regenerates with:
 
 ```bash
 python scripts/forensic/parse_cslorig.py mw pwg pw ap ben sch pwkvn ae ap90 bhs bor gra lrv skd vcp
@@ -35,7 +40,8 @@ python scripts/forensic/f11_evidence_dependence.py
 (2026-08-29). Per-input SHA-256 hashes are in the `source_hashes` block of
 [`f11_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f11_report.json).
 Arithmetic pins: [`tests/forensic/test_f11_evidence_dependence.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/tests/forensic/test_f11_evidence_dependence.py)
-(13 tests, hand-derived fixture, null fixture asserting exactly zero).
+(14 tests, hand-derived fixture, null fixture asserting exactly zero, and a
+cross-container order-independence pin on the permutation block).
 
 ## 1. The three claims, their signals and their loci
 
@@ -119,8 +125,9 @@ right thing to have done — but the two must not be added together.
 
 ### 3.4 Witness duplication (`CTRL-DUP`, `CTRL-PWDUP`)
 
-`CTRL-DUP` is the acceptance control: a **verbatim duplicate of the PWG witness**
-is injected into the evidence pool and the accounting must not reward it.
+`CTRL-DUP` is the handoff's named acceptance control: a **verbatim duplicate of
+the PWG witness** is injected into the evidence pool and the accounting must not
+reward it.
 
 | | naive witness events | independent source events |
 |---|---|---|
@@ -128,8 +135,27 @@ is injected into the evidence pool and the accounting must not reward it.
 | after seeding a verbatim PWG duplicate | 1,125 | **574** |
 | delta | +527 (+88.1 %) | **0** |
 
-**Control passes.** A duplicated witness inflates the naive count by 88 % and
-moves independent support by exactly zero.
+**Control passes** — but read what it is. The Δ = 0 is **structural, not
+empirical**: `independent_support()` projects the pool onto `(lemma, reference)`
+and a verbatim duplicate shares that key by construction, so no input could make
+this number move. It is a regression pin on the accounting's witness-blindness,
+not a test the data could fail. Reporting it alone would sell a tautology as a
+result (H5073 pre-review, finding 1).
+
+Its falsifiable twin is `CTRL-NOVEL`, added for exactly that reason: inject
+events at **new** `(lemma, reference)` keys and independent support must rise by
+the number of distinct new keys.
+
+| | naive witness events | independent source events |
+|---|---|---|
+| before seeding | 598 | 574 |
+| after seeding 100 novel triples (91 distinct new keys) | 698 | **665** |
+| delta | +100 | **+91**, expected +91 |
+
+**Control passes**, and this one could have failed: an accounting that keyed on
+the witness would have risen by 100, one that discarded the reference by 0. The
+pair together is what shows the key discriminates witnesses from events rather
+than discarding both.
 
 `CTRL-PWDUP` measures the *real* partial duplicate already in the evidence base:
 PW is Böhtlingk's own abridgement of PWG, so PWG/MW and PW/MW are not two
@@ -160,8 +186,24 @@ sigils:
 | AP/MW (null) | 0.0163 | 0.0042 |
 | BEN/MW (intermediate) | 0.1016 | 0.0494 |
 
-Lineage-over-null separation **rises** from 9.69× to 16.29×. The control could
-have killed the claim and did not: `A10-C1` is not riding on shared common texts.
+At the frozen depth of 25 the lineage-over-null separation rises from 9.69× to
+16.29× — but *rising* is not the robust part of this result. A depth sweep
+(H5073 pre-review, finding 4) shows the ratio dipping below its unablated value
+before climbing:
+
+| sigils ablated | PWG/MW | AP/MW | separation |
+|---|---|---|---|
+| 0 (unablated) | 0.1579 | 0.0163 | 9.69× |
+| 5 | 0.1037 | 0.0116 | 8.94× |
+| 10 | 0.0783 | 0.0091 | 8.60× |
+| **25 (frozen)** | 0.0684 | 0.0042 | **16.29×** |
+| 50 | 0.0592 | 0.0041 | 14.44× |
+| 100 | 0.0293 | 0.0016 | 18.31× |
+
+What survives every depth is **survival**, not widening: the separation never
+falls below 8.60× and never approaches 1. The control could have killed the
+claim and did not — `A10-C1` is not riding on shared common texts — but the
+paper should say "never collapses under ablation", not "widens".
 
 ### 3.6 `A10-C2` survives the convention control (`CTRL-CONV`) — the sharp test
 
@@ -179,20 +221,43 @@ pair's direction:
 |---|---|---|
 | conventions agree | 20,363 | 0.8006 |
 | **conventions disagree** | **4,685** | **0.7518** |
-| within-entry permutation floor (`CTRL-PERM`, 200 reps) | — | 0.5004 (range 0.4890–0.5117) |
+| within-entry permutation floor (`CTRL-PERM`, 200 reps) | — | 0.5004 (range 0.4885–0.5123) |
 
 On the 4,685 pairs where the two dictionaries' *habits* point in opposite
-directions, MW still follows PWG's particular article 75.2 % of the time. Only
-≈ 0.05 of the 0.811 is attributable to convention agreement. **§3.4's central
-assertion survives its sharpest available control**, and now rests on 4,685
+directions, MW still follows PWG's particular article 75.2 % of the time. §3.4's
+central assertion survives its sharpest available control, and now rests on 4,685
 convention-defying pairs rather than an 8-entry null.
 
-The Apte arm under the same control is 0.2308 on 13 discordant pairs — the right
-direction, still far too thin to cite. It should be reported as thin, not as a
-null.
+**But 0.5004 is the wrong floor to quote the margin against** (H5073 pre-review,
+finding 2). A within-entry permutation measures *no signal at all*; the question
+"could convention explain this?" needs the harder baseline of a dictionary that
+did **not** work from MW's source but writes in the same citation culture. So the
+same control now runs on every comparand we can reach:
+
+| arm | lineage to MW's source | discordant pairs | agreement |
+|---|---|---|---|
+| PWG | the claimed source | 4,685 | **0.7518** |
+| PW | Böhtlingk's own abridgement — not independent | 199 | 0.6281 |
+| BEN | no claimed descent (but see caveat) | 101 | **0.6337** |
+| AP | no claimed descent | 13 | 0.2308 — too thin to use |
+| permutation | no signal at all | — | 0.5004 |
+
+Against the best usable non-lineage reference (BEN, ≥ 50 pairs), PWG's excess is
+**+0.118**, not the +0.251 the permutation floor suggests. The defensible
+sentence is therefore *"MW follows PWG's particular article on convention-defying
+pairs about 0.12 more often than it follows a non-source contemporary's"* — a
+real, directional margin, monotone in claimed lineage distance
+(PWG 0.752 > PW 0.628 ≈ BEN 0.634 ≫ permutation 0.500) — and **not** "only ≈ 0.05
+of the 0.811 is convention, the rest is the article". The caveat that keeps this
+conservative: BEN has its own Petersburg exposure (A10 §3.4), so it is an
+imperfect negative control, and its 101 pairs are clustered within entries, which
+makes a naive binomial SE optimistic.
+
+The Apte arm at 0.2308 on 13 discordant pairs points the right way and is far too
+thin to cite either way. It should be reported as thin, not as a null.
 
 `CTRL-PERM` also reproduces A10's quoted baseline from an actual permutation
-rather than assertion: 0.5004 concordance, 10.14 % chance-identical, against the
+rather than assertion: 0.5004 concordance, 10.13 % chance-identical, against the
 article's "0.50 concordance and only ~5–17 % chance-identical".
 
 ## 4. Reproduction against the frozen figures — a pinning gap
@@ -225,9 +290,9 @@ files do not.
 
 | Claim | Verdict | Basis |
 |---|---|---|
-| `A10-C1` §3.2 citation apparatus | **Survives** | separation rises to 16.3× after ablating the 25 commonest texts (`CTRL-ABL-S`). |
+| `A10-C1` §3.2 citation apparatus | **Survives** | separation never falls below 8.6× and never approaches 1 across ablation depths 5–100 (`CTRL-ABL-S`); 16.3× at the frozen depth 25. |
 | `A10-C1` rare-reference sub-signal | **Weakens** | 94.5 % one text; 33 events survive Harivaṃśa ablation; same event set as §6, not a second line (`CTRL-ABL-H`). |
-| `A10-C2` §3.4 citation order | **Survives, but is not independent of C1** | 0.7518 on 4,685 convention-discordant pairs vs a 0.5004 permutation floor (`CTRL-CONV`, `CTRL-PERM`); 100 % of its loci are C1 loci. |
+| `A10-C2` §3.4 citation order | **Survives, but is not independent of C1, and by a smaller margin than first written** | 0.7518 on 4,685 convention-discordant pairs — **+0.118 over the best non-lineage reference** (BEN 0.6337), not +0.25 over the permutation floor (`CTRL-CONV`); 100 % of its loci are C1 loci. |
 | `A10-C3` §3.5 shared omission | **Survives; the only independent leg** | 46.7 % of its anchor is untouched by either citation signal; reproduces to the digit. |
 | Combination as published | **Overstated in framing, not in arithmetic** | 7,280 loci double-counted by a naive sum; §3.2 + §6 are one stratum; PW is a partial duplicate of PWG. |
 
@@ -241,12 +306,20 @@ different resolutions; and the omission anchor), not four or five.
 Landed with this audit, minimal and sourced:
 
 1. §3.2 — state that the rare-reference pool is 94.5 % Harivaṃśa and is the same
-   event set §6 resolves.
+   event set §6 resolves; say the Jaccard signal *never collapses* under
+   common-text ablation rather than that it widens (the widening is specific to
+   the frozen depth of 25).
 2. §3.4 — state that the order-bearing entries are a subset of §3.2's shared
-   cited lemmas, and cite the convention control instead of leaning on the
-   8-entry Apte null.
+   cited lemmas; cite the convention control instead of leaning on the 8-entry
+   Apte null; and quote the margin **against a non-source contemporary**
+   (+0.118 over BEN), not against the permutation floor. The unhedged "only
+   ≈ 0.05 of the 0.811 is convention, the rest is the article" does not survive
+   its own §7.1 caveat and was replaced.
 3. §7 — record that `.source.json` sidecars do not pin the `csl-orig` revision,
    and name the revision this audit ran against.
+4. §3.2 — cross-reference the two Harivaṃśa shares so they cannot read as a
+   discrepancy: 96 % is 565/587 in the published 2026-06-03 frame, 94.5 % is
+   565/598 in this run's frame, and §7 explains the drift.
 
 Not done, and deliberately: no published figure was revised, because none
 changed for a reason other than upstream corpus drift, and re-freezing A10's
@@ -255,6 +328,18 @@ scope (it would move every `f*_report.json` at once).
 
 ## 7. Limitations
 
+0. **A determinism defect this audit shipped and then fixed.** The first version
+   of `f11_evidence_dependence.py` iterated a Python `set` of headwords while
+   drawing from the seeded RNG. `str` hashing is randomised per process, so the
+   RNG was consumed in a different order each run and `CTRL-PERM`'s band moved
+   under a fixed seed — three runs gave three blocks (`0.5002 / 0.4885–0.5142`,
+   `0.5004 / 0.4890–0.5117`, `0.5004 / 0.4869–0.5135`), and the committed
+   artifact did not match the prose citing it. Found by the H5073 pre-review,
+   fixed by sorting the entry set before use and by breaking `Counter` ties on
+   the key; two fresh processes now write a byte-identical report, and a pin
+   asserts the block is invariant under container order. The means were never
+   affected; the bands and `pct_identical` were. Canonical values are those in
+   this document.
 1. The `A10-C2` verdict rests on a global-convention estimator (mean normalised
    sigil position). A compiler whose convention is *conditional* — Veda first in
    grammatical entries, epic first in narrative ones — would be scored as
@@ -264,15 +349,22 @@ scope (it would move every `f*_report.json` at once).
 2. `CTRL-ABL-S` ablates by corpus document-frequency, which correlates with (but
    is not) "texts everyone cites".
 3. The Apte arms of both `S-F5-ORDER` and `CTRL-CONV` rest on 8 entries / 13
-   pairs. They are reported, not relied on.
-4. `L-ANCHOR-WORD` independence is measured at the level of *loci*, not of
+   pairs. They are reported, not relied on. The BEN arm that replaces Apte as
+   the reference floor is itself only 101 discordant pairs, clustered within
+   entries (so a naive binomial standard error understates the uncertainty), and
+   BEN has its own Petersburg exposure — it is a conservative but imperfect
+   negative control, and a genuinely unexposed contemporary would be better.
+4. `CTRL-DUP`'s Δ = 0 is structural and cannot fail (§3.4); only `CTRL-NOVEL`
+   is falsifiable, and the `C2 ⊂ C1` "measurement" is likewise true by
+   construction — what is a finding there is the consequence, not the number.
+5. `L-ANCHOR-WORD` independence is measured at the level of *loci*, not of
    underlying historical decisions: MW's decision to enter a word and its
    decision to cite a text for that word are not statistically independent even
    when the locus sets are disjoint.
-5. Sub-`<L>` entries are folded per `k1`, matching F1/F5; MW's habit of splitting
+6. Sub-`<L>` entries are folded per `k1`, matching F1/F5; MW's habit of splitting
    one word across several `<L>` records is therefore invisible here, as it is
    in the signals being audited.
-6. Every figure describes the Cologne digitizations, not the printed pages.
+7. Every figure describes the Cologne digitizations, not the printed pages.
 
 ## 8. Related
 
