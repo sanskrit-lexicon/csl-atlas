@@ -236,6 +236,28 @@ def test_ctrl_dup_seeded_duplicate_witness(graphs, f11, pin):
     pin("f11", "CTRL-DUP.control_passes", True, out["control_passes"])
 
 
+def test_ctrl_novel_can_fail_where_ctrl_dup_cannot(graphs, f11, pin):
+    """CTRL-DUP's Δ=0 is structural; this is its falsifiable twin.
+
+    Fixture rare_events (module docstring): 4 triples over 3 distinct
+    (lemma, ref) keys — (deva, HARIV. 900) carries both PWG and PW. Injecting
+    at novel refs with n_inject=2 walks the SORTED triples and suffixes the ref,
+    so the first two triples in sort order yield two DISTINCT new keys and
+    independent support must rise by exactly 2, while the naive count rises by
+    the triple count. An accounting that keyed on the witness would rise by more
+    than the distinct-key count; one that dropped the ref would not rise at all.
+    """
+    _dicts, g = graphs
+    out = f11.seeded_novel_witness(g["rare_events"], n_inject=2)
+    pin("f11", "CTRL-NOVEL.injected_triples", 2, out["injected_novel_triples"])
+    pin("f11", "CTRL-NOVEL.distinct_new_events", 2, out["distinct_new_source_events"])
+    pin("f11", "CTRL-NOVEL.after.naive", 6, out["after_seeding_novel_events"]["naive_witness_events"])
+    pin("f11", "CTRL-NOVEL.after.independent", 5,
+        out["after_seeding_novel_events"]["independent_source_events"])
+    pin("f11", "CTRL-NOVEL.independent_support_delta", 2, out["independent_support_delta"])
+    pin("f11", "CTRL-NOVEL.control_passes", True, out["control_passes"])
+
+
 def test_independent_support_drops_the_witness(f11, pin):
     events = {("deva", "HARIV. 900", "PWG"), ("deva", "HARIV. 900", "PW")}
     out = f11.independent_support(events)
@@ -282,6 +304,17 @@ def test_ctrl_perm_is_seed_deterministic(graphs, f11, pin):
     pin("f11", "CTRL-PERM.entries", 3, a["entries"])
     pin("f11", "CTRL-PERM.iters", 50, a["iters"])
     pin("f11", "CTRL-PERM.seed_deterministic", a, b)
+    # H5073 pre-review finding 3: same-process determinism (a == b above) is the
+    # WEAK property. The entry set arrives as a `set`, whose iteration order is
+    # hash-randomised per process; unsorted, the shared RNG is consumed in a
+    # different order each run and the band moves under a fixed seed. Feeding
+    # the SAME entries in a deliberately different container order must now give
+    # a byte-identical block — that is the property a rerun in another process
+    # actually needs.
+    reordered = list(g["c2_entries"])[::-1]
+    c = f11.permutation_null(dicts["MW"], dicts["PWG"], reordered,
+                             random.Random(f11.SEED), 50)
+    pin("f11", "CTRL-PERM.order_independent", a, c)
     assert 0.35 <= a["mean_concordance"] <= 0.65, (
         f"permutation mean {a['mean_concordance']} is far from the symmetry "
         "expectation of 0.5 — the shuffle is not destroying the order signal"

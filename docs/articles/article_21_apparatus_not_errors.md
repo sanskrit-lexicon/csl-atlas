@@ -109,15 +109,18 @@ own Petersburg exposure (§3.4). **587 rare exact references are shared for the 
 headword***, each attested at ≤4 lemmas corpus-wide, 203 of them occurring nowhere else in
 the corpus at all: e.g. `ullApya → SĀH. 545`, `dAsatA → VEṆĪS. 175`, `granTakAra →
 VEDĀNTAS. 1` (all three corpus-unique), and 565
-exact Harivaṃśa line-numbers (`HARIV. 9529` …). Those last are 96% of the pool, and they are
-the *same* source events §6 resolves against the vulgate: the rare-reference mass and the
+exact Harivaṃśa line-numbers (`HARIV. 9529` …). Those last are 96% of the pool (565/587 in the
+frozen frame these figures come from; the audit's re-run against a later `csl-orig` gives
+565/598 = 94.5%, see §7), and they are the *same* source events §6 resolves against the
+vulgate: the rare-reference mass and the
 Harivaṃśa run-to-ground are one line of evidence read at two resolutions, not two independent
 ones. Ablating Harivaṃśa leaves 33 rare shared references over 18 other texts — the
 idiosyncratic-apparatus signal is real but concentrated
 ([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §3.3).
-The Jaccard signal itself is *not* concentrated: ablating the 25 most widely cited texts
-widens the lineage-over-null separation from 9.7× to 16.3×, so it is not shared common texts
-doing the work (ibid. §3.5). MW further reduces Böhtlingk's full verse
+The Jaccard signal itself is *not* concentrated: ablating the most widely cited texts never
+collapses the lineage-over-null separation — across ablation depths of 5 to 100 texts it stays
+between 8.6× and 18.3× (16.3× at depth 25, against 9.7× unablated) — so it is not shared
+common texts doing the work (ibid. §3.5). MW further reduces Böhtlingk's full verse
 references to a bare sigil **41,552 times** — a directional PWG→MW compression. The method
 self-validates: it ranks known same-apparatus pairs at the top (PW/PWKVN 0.87, SCH/PW 0.62,
 AP/AP90 0.76) and the nulls at the floor.
@@ -144,9 +147,17 @@ is thin, the Petersburg-specificity is better carried by a direct control than b
 gradient: derive each dictionary's *global* ordering habit (the mean normalised position of
 every text across all its entries), then keep only the sigil pairs on which MW's and PWG's
 habits point in **opposite** directions. On those 4,685 convention-defying pairs MW still
-follows PWG's particular article **75.2%** of the time, against a within-entry permutation
-floor of 0.500 — so only ≈0.05 of the 0.811 is convention, and the rest is the article
-([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §3.6).
+follows PWG's particular article **75.2%** of the time. The margin that matters is not the one
+over a within-entry permutation floor (0.500 — that floor represents no signal at all) but the
+one over a dictionary that did *not* work from MW's source while writing in the same citation
+culture: Benfey manages 0.634 on the same pair class, so MW's excess over the best available
+non-lineage reference is **≈0.12**. Small, but real and monotone in claimed lineage distance
+(PWG 0.752 > PW 0.628 ≈ Benfey 0.634 ≫ permutation 0.500), and it rests on 4,685 pairs rather
+than on the 8-entry Apte tail. The caveats are stated in the audit: Benfey's own Petersburg
+exposure makes it a conservative negative control, its arm is only 101 discordant pairs, and a
+*conditional* ordering convention would be scored as convention-defying here, so 0.752 is an
+upper bound on article-level copying
+([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §3.6, §7).
 MW did not merely consult Böhtlingk's
 sources; it assembled its entries **following Böhtlingk's entry**. This is the strongest
 single copying signal in the suite, and it is structural, not lexical. It is not, however, an
