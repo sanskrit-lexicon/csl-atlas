@@ -154,14 +154,14 @@ culture: Benfey manages 0.634 on the same pair class, so MW's excess over the be
 non-lineage reference is **≈0.12** (entry-clustered 95% interval +0.02 to +0.21). That margin is
 descriptive, not an identified copying excess: the two arms score largely different pairs
 (2,168 vs 64 contributing entries), and on the 24 pairs both score Benfey agrees *more*
-(0.75 vs 0.67); nor is the gradient monotone (PW 0.628 < Benfey 0.634). A *conditional*
-ordering convention would be scored as convention-defying here, and a constructed example
-with no copying scores 1.0, so 0.752 is a pair-agreement rate, not a bound on copying
+(0.75 vs 0.67); nor is the gradient monotone (PW 0.628 < Benfey 0.634). The convention estimator is
+a marginal mean, so even one *fixed* ordering shared by two dictionaries that copy nothing can
+score 1.0 on "convention-discordant" pairs (a pinned constructed example), so 0.752 is a pair-agreement rate, not a bound on copying
 ([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §3.6, §7).
 The order agreement is what MW
 assembling its entries **following Böhtlingk's entry** would produce, and it is structural,
-not lexical; but the available controls cannot yet exclude a shared conditional ordering
-habit, so it is consistent with copying rather than proof of it. It is not, either, a
+not lexical; but the available controls cannot yet exclude a shared ordering habit, fixed
+or conditional, so it is consistent with copying rather than proof of it. It is not, either, a
 *separate* body of evidence: every one of these entries is by construction a §3.2
 shared-cited lemma, so §3.2 and §3.4 are two questions put to one evidence base, not two
 corroborations (ibid. §3.1). The only leg that adds loci of its own is §3.5: 3,244 of its
