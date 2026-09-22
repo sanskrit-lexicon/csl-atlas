@@ -138,25 +138,49 @@ def main():
     with open(os.path.join(PARSED_DIR, "_parse_stats.json"), "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
     print(f"Cached {len(stats)} dict(s); stats -> {PARSED_DIR}/_parse_stats.json")
-    # H5073 (Astra finding 4): record the csl-orig revision that GENERATED this
-    # cache, so downstream reports can pin it instead of reading whatever the
-    # sibling checkout happens to be at when they run.
-    prov = {"csl_orig": os.path.abspath(CSL_ORIG), "revision": None, "dirty": None,
-            "codes": [s["code"] for s in stats]}
+    write_provenance([st["code"] for st in stats])
+
+
+def write_provenance(codes):
+    """Record, PER CACHE, the csl-orig revision that generated it (H5073).
+
+    A partial rebuild (`parse_cslorig.py mw`) updates only the records it
+    rebuilt; every record is bound to its TSV's SHA-256 so a consumer can
+    reject a record whose file has since changed.
+    """
+    import hashlib
+    import subprocess
+    rev = dirty = None
+    note = None
     try:
-        import subprocess
-        rev = subprocess.run(["git", "-C", CSL_ORIG, "rev-parse", "HEAD"],
-                             capture_output=True, text=True, timeout=30)
-        dirty = subprocess.run(["git", "-C", CSL_ORIG, "status", "--porcelain", "-uno"],
-                               capture_output=True, text=True, timeout=60)
-        if rev.returncode == 0:
-            prov["revision"] = rev.stdout.strip()
-        if dirty.returncode == 0:
-            prov["dirty"] = bool(dirty.stdout.strip())
+        r = subprocess.run(["git", "-C", CSL_ORIG, "rev-parse", "HEAD"],
+                           capture_output=True, text=True, encoding="utf-8", timeout=30)
+        d = subprocess.run(["git", "-C", CSL_ORIG, "status", "--porcelain", "-uno"],
+                           capture_output=True, text=True, encoding="utf-8", timeout=60)
+        if r.returncode == 0:
+            rev = r.stdout.strip()
+        if d.returncode == 0:
+            dirty = bool(d.stdout.strip())
     except Exception as exc:                                   # noqa: BLE001
-        prov["note"] = repr(exc)[:200]
-    with open(os.path.join(PARSED_DIR, "_parse_provenance.json"), "w", encoding="utf-8") as f:
-        json.dump(prov, f, indent=2, ensure_ascii=False)
+        note = repr(exc)[:200]
+    path = os.path.join(PARSED_DIR, "_parse_provenance.json")
+    prov = {"csl_orig": os.path.abspath(CSL_ORIG), "caches": {}}
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            old = json.load(f) or {}
+        prov["caches"] = old.get("caches", {}) or {}
+    for code in codes:
+        tsv = os.path.join(PARSED_DIR, f"{code}.tsv")
+        h = hashlib.sha256()
+        with open(tsv, "rb") as f:
+            for chunk in iter(lambda: f.read(1 << 20), b""):
+                h.update(chunk)
+        rec = {"revision": rev, "dirty": dirty, "tsv_sha256": h.hexdigest()}
+        if note:
+            rec["note"] = note
+        prov["caches"][code] = rec
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(prov, f, indent=2, ensure_ascii=False, sort_keys=True)
 
 
 if __name__ == "__main__":

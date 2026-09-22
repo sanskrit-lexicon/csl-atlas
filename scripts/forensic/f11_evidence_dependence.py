@@ -117,14 +117,18 @@ def sha256_file(path):
     return h.hexdigest()
 
 
-def corpus_revision():
+def corpus_revision(tsv_paths=()):
     """What is known about the csl-orig revision behind the parsed caches.
 
     Two different things, kept apart (H5073 Astra finding 4):
 
-    * `cache_generating_revision` — read from `parsed/_parse_provenance.json`,
-      which `parse_cslorig.py` writes at cache-build time. Absent for a cache
-      built before that sidecar existed; then it is `None`, never guessed.
+    * `cache_generating_revision` — from `parsed/_parse_provenance.json`, which
+      `parse_cslorig.py` writes PER CACHE at build time, each record bound to
+      that TSV's SHA-256. Every TSV this audit reads is checked: a missing
+      record, or a record whose hash no longer matches the file, makes that
+      cache `unverified`, and then the overall value is `None`, never guessed.
+      If verified caches came from different revisions it is `"MIXED"` and
+      `per_cache` says which is which (H5073 Astra round-2 finding 4).
     * `sibling_checkout_at_run` — the current HEAD of ../csl-orig when this
       audit ran. It is NOT evidence of what built the cache: the checkout can
       move while the cache stays put.
@@ -136,14 +140,29 @@ def corpus_revision():
     out = {"cache_generating_revision": None, "sibling_checkout_at_run": None,
            "binding_pin": "source_hashes"}
     prov_path = os.path.join(PARSED_DIR, "_parse_provenance.json")
+    caches = {}
     if os.path.exists(prov_path):
         with open(prov_path, encoding="utf-8") as fh:
-            prov = json.load(fh)
-        out["cache_generating_revision"] = prov.get("revision")
-        out["cache_generating_dirty"] = prov.get("dirty")
+            caches = (json.load(fh) or {}).get("caches", {}) or {}
+    per_cache = {}
+    for p in sorted(tsv_paths):
+        code = os.path.basename(p)[:-4]
+        rec = caches.get(code)
+        if not rec:
+            per_cache[code] = {"status": "unrecorded"}
+        elif not os.path.exists(p) or rec.get("tsv_sha256") != sha256_file(p):
+            per_cache[code] = {"status": "hash-mismatch", "recorded_revision": rec.get("revision")}
+        else:
+            per_cache[code] = {"status": "verified", "revision": rec.get("revision"),
+                               "dirty": rec.get("dirty")}
+    out["per_cache"] = per_cache
+    revs = {v.get("revision") for v in per_cache.values()}
+    if per_cache and all(v["status"] == "verified" for v in per_cache.values()):
+        out["cache_generating_revision"] = revs.pop() if len(revs) == 1 else "MIXED"
     else:
-        out["cache_generating_note"] = ("parsed cache predates _parse_provenance.json; "
-                                        "its generating csl-orig revision is unrecorded")
+        out["cache_generating_note"] = ("at least one parsed cache has no hash-bound "
+                                        "provenance record; its generating csl-orig "
+                                        "revision is unrecorded")
     if os.path.isdir(os.path.join(src, ".git")):
         try:
             import subprocess
@@ -347,8 +366,11 @@ def convention_split(mw, other, entries, conv_mw, conv_other, loci=None):
     For each order-bearing entry, partition the scored sigil pairs by whether
     MW's and the comparand's GLOBAL conventions already agree on that pair's
     direction. Agreement on convention-concordant pairs is what a shared
-    lexicographic habit predicts; agreement on convention-DISCORDANT pairs is
-    what only working from the other dictionary's article predicts.
+    lexicographic habit predicts. Agreement on convention-DISCORDANT pairs is
+    what working from the other dictionary's article WOULD produce — but not
+    only that: the "convention" here is a marginal mean position, and different
+    source membership alone can reverse it, so two dictionaries obeying one
+    fixed shared ordering can still agree 1.0 on "discordant" pairs.
 
     If ``loci`` is a dict, every convention-DISCORDANT pair is recorded into it
     as ``(k1, x, y) -> observed`` so arms can be compared on the SAME pairs
@@ -870,7 +892,8 @@ def main():
         "min_shared_sources_for_order": MIN_SHARED_SRC,
         "permutation_iters": PERM_ITERS,
         "anchor_sources": g["anchor_sources"],
-        "corpus_revision": corpus_revision(),
+        "corpus_revision": corpus_revision(
+            [p for p in inputs if p.startswith(PARSED_DIR) and p.endswith(".tsv")]),
         "reproduction_delta": repro,
         "source_hashes": fingerprint(inputs),
         "claims": {

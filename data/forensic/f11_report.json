@@ -13,7 +13,54 @@
       "committed": "2026-09-20T11:58:58+03:00"
     },
     "binding_pin": "source_hashes",
-    "cache_generating_note": "parsed cache predates _parse_provenance.json; its generating csl-orig revision is unrecorded"
+    "per_cache": {
+      "ae": {
+        "status": "unrecorded"
+      },
+      "ap": {
+        "status": "unrecorded"
+      },
+      "ap90": {
+        "status": "unrecorded"
+      },
+      "ben": {
+        "status": "unrecorded"
+      },
+      "bhs": {
+        "status": "unrecorded"
+      },
+      "bor": {
+        "status": "unrecorded"
+      },
+      "gra": {
+        "status": "unrecorded"
+      },
+      "lrv": {
+        "status": "unrecorded"
+      },
+      "mw": {
+        "status": "unrecorded"
+      },
+      "pw": {
+        "status": "unrecorded"
+      },
+      "pwg": {
+        "status": "unrecorded"
+      },
+      "pwkvn": {
+        "status": "unrecorded"
+      },
+      "sch": {
+        "status": "unrecorded"
+      },
+      "skd": {
+        "status": "unrecorded"
+      },
+      "vcp": {
+        "status": "unrecorded"
+      }
+    },
+    "cache_generating_note": "at least one parsed cache has no hash-bound provenance record; its generating csl-orig revision is unrecorded"
   },
   "reproduction_delta": {
     "note": "The published figures were produced on 2026-06-03 against an unpinned ../csl-orig. Upstream corpus drift is the most plausible cause of the deltas below (the pinned arithmetic tests, tests/forensic H4352, still pass), but it is not proven the exclusive cause: neither the 2026-06-03 run nor this cache's generating csl-orig revision was recorded (see corpus_revision).",

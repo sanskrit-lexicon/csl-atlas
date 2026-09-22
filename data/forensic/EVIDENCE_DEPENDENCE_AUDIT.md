@@ -108,11 +108,13 @@ lacks. What it cannot do is count as a second, separately sampled body of loci.
 
 The shared-omission test rests on words chosen precisely because they lie
 outside the European lineage, and the measurement confirms it: nearly half its
-anchor is invisible to the citation signals. `A10-C3` is the only leg whose
-loci are largely *disjoint* from the citation signals, which is the opposite of
-how §3.5 presents itself ("corroborates rather than proves"). Disjoint loci are
-not statistical independence: whether MW enters a word and whether it cites a
-text for a word can share historical causes across different loci (§7, item 5).
+anchor is invisible to the citation signals. `A10-C3` is the only leg that
+*adds* loci the citation signals never touch — 3,244 of its 6,941 anchor words;
+the other 3,697 (53.3 %) overlap them — which is the opposite of how §3.5
+presents itself ("corroborates rather than proves"). Even the non-overlapping
+part is not thereby statistically independent: whether MW enters a word and
+whether it cites a text for a word can share historical causes across different
+loci (§7, item 5).
 
 ### 3.3 The rare-reference pool is one text (`CTRL-ABL-H`)
 
@@ -268,7 +270,11 @@ entries and discordant pairs separately per comparand, so the arms barely overla
 
 The unmatched difference is +0.1181 with an entry-clustered bootstrap 95 % interval
 of **[+0.023, +0.210]** (1,000 resamples, entries resampled within each arm). So
-the unmatched gap is unlikely to be pure sampling noise, but on the only pairs where
+the unmatched gap is not explained by entry-level resampling alone — a *conditional*
+statement: the bootstrap holds the estimated conventions and the selected loci
+fixed, resamples the two arms independently although they share MW's lemmas, and
+does not re-run the reference-arm selection, so it measures that resampling
+uncertainty only, not the historical claim. And on the only pairs where
 the two arms can be compared like-for-like, BEN agrees *more* than PWG — on 24 loci,
 too few to reverse anything, and enough to forbid calling the margin identified. The
 arms are not monotone either: PW 0.628 sits *below* BEN 0.634. The defensible
@@ -324,15 +330,16 @@ files pin neither.
 | `A10-C1` §3.2 citation apparatus | **Survives** | separation never falls below 8.6× and never approaches 1 across ablation depths 5–100 (`CTRL-ABL-S`); 16.3× at the frozen depth 25. |
 | `A10-C1` rare-reference sub-signal | **Weakens** | 94.5 % one text; 33 events survive Harivaṃśa ablation; same event set as §6, not a second line (`CTRL-ABL-H`). |
 | `A10-C2` §3.4 citation order | **Weakens: the order agreement survives, its attribution to copying is unidentified** | 0.7518 on 4,685 convention-discordant pairs, above every non-lineage arm; but the +0.118 over BEN compares different populations (24 shared loci, on which BEN agrees more), and a shared *conditional* convention can score 1.0 with no copying (pinned counterexample). 100 % of its loci are C1 loci. |
-| `A10-C3` §3.5 shared omission | **Survives; the only locus-disjoint leg** | 46.7 % of its anchor is untouched by either citation signal; reproduces to the digit. Disjoint loci, not proven statistical independence. |
+| `A10-C3` §3.5 shared omission | **Survives; the only leg that adds loci of its own** | 3,244 of its 6,941 anchor loci (46.7 %) are untouched by either citation signal, 3,697 (53.3 %) overlap them; reproduces to the digit. Added loci, not proven statistical independence. |
 | Combination as published | **Overstated in framing, not in arithmetic** | a naive sum of locus sets counts 7,280 loci twice (set accounting — not a measured amount of inferential double-counting); §3.2 + §6 are one stratum; PW is a partial duplicate of PWG. |
 
 No claim was refuted, and no published number was found wrong. What the audit
 changes is how the signals may be *combined*: the conclusion should rest on
-**two locus-disjoint evidence bases** (the citation apparatus, examined twice at
-different resolutions; and the omission anchor), not four or five. Locus
-disjointness is the most this audit measures; it does not establish that the two
-bases are statistically independent (§7, item 5).
+**two partially overlapping evidence bases** — the citation apparatus, examined
+twice at different resolutions, and the omission anchor, which overlaps the
+citation loci on 3,697 of its 6,941 words and adds 3,244 of its own — not four or
+five. Locus overlap is the most this audit measures; it does not establish that
+the two bases are statistically independent (§7, item 5).
 
 ## 6. Edits owed to A10
 
