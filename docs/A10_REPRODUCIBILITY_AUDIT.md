@@ -15,7 +15,7 @@ published ratios exactly — see the §3.1 section below.**
 ## Reproduces exactly (committed artifact → paper)
 
 Values below are the committed artifacts at the `csl-orig@f4c08c57` pin (H5248 for F1/F5,
-H5260 for F2–F4b/F8, 22-09-2026); the first-pass (03-07-2026) values are kept in
+H5260 for F2–F4b/F8, H5264 for F7 and the F8 witness stages, 22-09-2026); the first-pass (03-07-2026) values are kept in
 brackets where the pin moved them. The article was updated to the pinned values the same pass.
 
 | Paper § | Signal | Paper claim | Committed value | Source |
@@ -87,10 +87,26 @@ flip on a tracked file (a hook installer's `chmod`) is not counted as dirt; a co
    `CAURAP. (A.) 49`; 293 Harivaṃśa numbers exceed DCS's 6,073 verses (298 in June).
 3. **Correction to §7's earlier "Harivaṃśa unchanged at 565".** The count is unchanged but the
    membership is not: 49 of the June 565 `HARIV.` rows left the pool and 49 others entered it
-   (upstream corrections to the citation text or to its corpus frequency; not itemised here). The §6 vulgate arm (F7: 206/565 corroborated) is therefore a June-membership
-   figure; it was not re-run because its verse witness (`_harivamsa_verses.jsonl`, rights-restricted,
-   gitignored) is absent on the box that ran this pass. Same for the F8 stages that read the MBh
-   vulgate/critical witnesses — their committed sidecars stay unpinned until that re-run.
+   (upstream corrections to the citation text or to its corpus frequency; not itemised here).
+   **Witness stages re-run at the pin (H5264, 22-09-2026).** The rights-restricted witnesses were
+   re-staged locally (gitignored, never committed): the Harivaṃśa vulgate by re-harvest (15,364
+   verses, identical to June), the MBh vulgate and BORI critical text from the CommentaryStrategies
+   local-only branch. Byte-identical under `PYTHONHASHSEED=1` and `=2`; the F8 outputs are also
+   content-identical between the Windows box and the Mac (line endings aside).
+   - §6 vulgate arm (F7) on the pinned pool: **207/565 corroborated (37.9 % of 546 evaluable)** [206, 37.7 % of 547];
+     displaced 161 [152], absent 178 [189], evaluable 546 [547]; shuffled null 2.8 [2.7], ≈ 74×
+     [≈ 76×, printed "≈ 75×"]; displaced-clear 85 vs null 204.5 [79 vs 200.5]. Index validation
+     unchanged: 68.4 % vs 2.1 % on 772 evaluable held-out MW anchors.
+   - F8 resolve: held-out pooled agreement 0.526 on 4,044 [0.552 on 4,048]; note loci 391
+     corroborated / 790 displaced / 1,285 absent [409 / 787 / 1,270]. F8 presence: citation level
+     60,003 present/present, 5,965 present/absent, 4,010 unresolved-locus, 445 absent/unchecked
+     [60,101 / 5,950 / 3,880 / 492]. F8 quote lane: exact Δ = 0 48.4 % [49.4 %], ±2 66.6 % [68.0 %],
+     ±10 71.1 % [72.5 %]. F8 Droṇa: unchanged (847/2,862 corroborated, 29.6 %).
+   - Still unpinned: F8 verify (`mbh_note_verdicts.csv`; its BORI witness, the local GRETIL
+     `mbh_*_u.htm` mirror, is absent on both boxes and the script refuses to build an empty
+     corpus), F10 (`sense_order_test.csv`; offline-MT engine and cache absent). F0 and F9 read frozen
+     `key1` headword exports, not `csl-orig`, and carry no corpus pin by design. No A10 figure
+     rests on F8 verify.
 
 ## External-evidence gate (unchanged, out of scope)
 

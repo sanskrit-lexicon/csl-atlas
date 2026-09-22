@@ -1,6 +1,8 @@
 # Harivaṃśa citation-form census and resolution options
 
-_Created: 10-07-2026 · Last updated: 10-07-2026_
+_Created: 10-07-2026 · Last updated: 22-09-2026_
+
+> **Re-pinned 22-09-2026 (H5264).** The §6 resolution was re-run on the 598-row pool at `csl-orig@f4c08c57`: **207 of 565 corroborate (37.9 % of the 546 evaluable)** vs a 2.8 null (≈ 74×), displaced 161, absent 178, displaced-clear 85 vs null 204.5. The harvest (15,364 verses) and the index validation (68.4 % vs 2.1 %) are unchanged. The June figures below (206/565, 37.7 %, ≈ 75×, 79 vs 200.5) are kept as the first-pass record. Details: [A10 audit, "Re-pinned 22-09-2026" item 3](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/A10_REPRODUCIBILITY_AUDIT.md).
 
 **What this is.** A measured census of how PWG and MW cite the *Harivaṃśa*, and of which text can
 actually adjudicate whether one of those citations is **wrong**. It exists because the A10

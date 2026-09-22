@@ -1,4 +1,5 @@
 {
+ "csl_orig_revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
  "n_verses": 15364,
  "coverage_pct": 93.8,
  "n_adhyaya": 308,
@@ -23,14 +24,14 @@
   }
  },
  "held_out_pass": true,
- "shared_evaluable": 547,
+ "shared_evaluable": 546,
  "shared_total": 565,
- "corroborated": 206,
- "displaced": 152,
- "absent": 189,
- "corroboration_pct": 37.7,
- "null_corr_mean": 2.7,
- "null_corr_sd": 1.55,
- "displaced_clear": 79,
- "null_displaced_clear_mean": 200.5
+ "corroborated": 207,
+ "displaced": 161,
+ "absent": 178,
+ "corroboration_pct": 37.9,
+ "null_corr_mean": 2.8,
+ "null_corr_sd": 1.62,
+ "displaced_clear": 85,
+ "null_displaced_clear_mean": 204.5
 }

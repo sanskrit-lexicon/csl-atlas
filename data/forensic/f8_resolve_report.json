@@ -1,4 +1,5 @@
 {
+ "csl_orig_revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
  "vulgate_verses": 83971,
  "parvans_harvested": [
   1,
@@ -42,10 +43,10 @@
  },
  "anchors_pwg": 66103,
  "anchors_mw": 4320,
- "held_out_pooled_agreement": 0.552,
+ "held_out_pooled_agreement": 0.526,
  "held_out_pooled_null": 0.014,
  "held_out_pass": true,
- "held_out_evaluable": 4048,
+ "held_out_evaluable": 4044,
  "per_parvan_held_out": {
   "1": {
    "agr": 0.451,
@@ -60,10 +61,10 @@
    "null": 0.02
   },
   "3": {
-   "agr": 0.602,
-   "ev": 694,
-   "hits": 418,
-   "null": 0.011
+   "agr": 0.614,
+   "ev": 695,
+   "hits": 427,
+   "null": 0.013
   },
   "4": {
    "agr": 0.643,
@@ -114,15 +115,15 @@
    "null": 0.0
   },
   "12": {
-   "agr": 0.275,
-   "ev": 520,
-   "hits": 143,
-   "null": 0.014
+   "agr": 0.255,
+   "ev": 518,
+   "hits": 132,
+   "null": 0.008
   },
   "13": {
-   "agr": 0.691,
-   "ev": 554,
-   "hits": 383,
+   "agr": 0.503,
+   "ev": 551,
+   "hits": 277,
    "null": 0.009
   },
   "14": {
@@ -157,8 +158,8 @@
   }
  },
  "note_locus_resolution": {
-  "displaced": 787,
-  "absent": 1270,
-  "corroborated": 409
+  "displaced": 790,
+  "absent": 1285,
+  "corroborated": 391
  }
 }

@@ -1035,6 +1035,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 103888,saMjYikA,12,13382,fehlerhaft,high,absent,
 81094,yat,12,13789,zu lesen,high,absent,
 48303,pratiniDi,13,49,st.,medium,absent,
+39849,nivftti,13,54,zu lesen,high,absent,
 27412,ji,13,131,zu lesen,high,absent,
 88916,vas,13,205,st.,medium,absent,
 103843,saYj,13,210,zu lesen,high,absent,
@@ -1044,7 +1045,9 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 78170,paritrARa,13,627,st.,medium,absent,
 95893,vEyAGrapAda,13,634,fehlerhaft,high,absent,
 99828,SI,13,686,fehlerhaft,high,absent,
+97785,Sabara,13,733,zu lesen,high,absent,
 106996,sarvavAdin,13,743,fehlerhaft,high,absent,
+95554,vezw,13,764,fehlerhaft,high,absent,
 86767,lokAloka,13,802,zu lesen,high,absent,
 86767,lokAloka,13,802,st.,medium,absent,
 88730,valasUdana,13,828,fälschlich,medium,absent,
@@ -1055,6 +1058,9 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 85736,laGiman,13,1015,zu lesen,high,absent,
 85736,laGiman,13,1015,st.,medium,absent,
 80890,yajurmaya,13,1085,st.,medium,absent,
+108182,sADaka,13,1151,zu lesen,high,absent,
+58355,mahAkeSa,13,1202,st.,medium,absent,
+117902,hlAdana,13,1257,zu lesen,high,absent,
 113665,stu,13,1276,druckfehler,high,absent,
 65826,as,13,1323,fehlerhaft,high,absent,
 104247,sad,13,1336,st.,medium,absent,
@@ -1084,6 +1090,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 15726,kalinda,13,2104,druckfehler,high,absent,
 93196,viS,13,2115,zu lesen,high,absent,
 93196,viS,13,2115,st.,medium,absent,
+116342,haris,13,2119,fehlerhaft,high,absent,
 106410,sar,13,2142,zu lesen,high,absent,
 106410,sar,13,2150,fehlerhaft,high,absent,
 64534,aBilaNGana,13,2194,fehlerhaft,high,absent,
@@ -1099,6 +1106,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 86635,lok,13,2752,zu lesen,high,absent,
 89199,vah,13,2760,st.,medium,absent,
 83835,rasAla,13,2771,statt,medium,absent,
+55847,Bogya,13,2772,fehlerhaft,high,absent,
 82180,yugya,13,2793,fälschlich,medium,absent,
 65787,azwapadikA,13,2831,st.,medium,absent,
 67140,i,13,2980,zu lesen,high,absent,
@@ -1111,21 +1119,27 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 51596,PARita,13,3264,zu lesen,high,absent,
 84146,rAjamAsa,13,3282,fehlerhaft,high,absent,
 84144,rAjamAza,13,3282,fälschlich,medium,absent,
+38986,nipAna,13,3439,lies,high,absent,
+77143,nipAna,13,3439,st.,medium,absent,
 93196,viS,13,3453,fehlerhaft,high,absent,
 93196,viS,13,3453,statt,medium,absent,
 44628,pAradArin,13,3567,fehlerhaft,high,absent,
 50219,prasnava,13,3683,fehlerhaft,high,absent,
 86437,lih,13,3872,fehlerhaft,high,absent,
 117242,hu,13,4110,st.,medium,absent,
+23691,grahapati,13,4133,fehlerhaft,high,absent,
 94370,vIj,13,4252,fälschlich,medium,absent,
 43192,pariSrita,13,4291,zu lesen,high,absent,
 43192,pariSrita,13,4291,st.,medium,absent,
 116915,hiNgu,13,4363,zu lesen,high,absent,
 118050,ajAjI,13,4365,lies,high,absent,
 118050,ajAjI,13,4365,st.,medium,absent,
+55847,Bogya,13,4529,zu lesen,high,absent,
 85042,ruD,13,4530,fehlerhaft,high,absent,
 97760,Sap,13,4560,st.,medium,absent,
 105532,samAdAna,13,4581,fälschlich,medium,absent,
+66428,ADAna,13,4633,lies,high,absent,
+66428,ADAna,13,4633,st.,medium,absent,
 55166,BU,13,4640,zu lesen,high,absent,
 51609,PAlitA,13,4718,druckfehler,high,absent,
 68603,ullApika,13,4737,falsch,medium,absent,
@@ -1169,6 +1183,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 116719,hA,13,6907,st.,medium,absent,
 104747,saMDimant,13,6971,st.,medium,absent,
 34271,dfQavya,13,7112,fehlerhaft,high,absent,
+37719,namuca,13,7112,statt,medium,absent,
 109138,sic,13,7329,zu lesen,high,absent,
 109138,sic,13,7329,st.,medium,absent,
 23861,glA,13,7365,st.,medium,absent,
@@ -1361,6 +1376,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 14804,kanyakubja,3,8313,zu lesen,high,corroborated,0
 90750,viMSati,3,8379,zu lesen,high,corroborated,0
 53268,braDnaSva,3,8606,fehlerhaft,high,corroborated,0
+20315,kzip,3,10403,fehlerhaft,high,corroborated,2
 65240,alaka,3,11813,lies,high,corroborated,0
 100910,SEla,3,12141,fehlerhaft,high,corroborated,0
 96002,vEvasvata,3,12755,zu lesen,high,corroborated,-2
@@ -1557,7 +1573,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 96445,vyasana,12,3910,zu lesen,high,corroborated,0
 96446,vyasana,12,3910,fehlerhaft,high,corroborated,0
 76490,Darma,12,9232,st.,medium,corroborated,-1
-28639,tantu,12,10975,lies,high,corroborated,-1
+28639,tantu,12,10975,lies,high,corroborated,-2
 42852,pariDAna,12,11276,zu lesen,high,corroborated,0
 51457,Palaka,12,11276,zu lesen,high,corroborated,0
 50763,prADAnika,12,11558,fehlerhaft,high,corroborated,0
@@ -1568,30 +1584,25 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 93087,vivaha,12,12409,zu lesen,high,corroborated,0
 42605,parAvaha,12,12416,fälschlich,medium,corroborated,0
 115701,svAyaMBuva,12,12658,zu lesen,high,corroborated,0
-106817,sarvadarSin,12,12864,zu lesen,high,corroborated,0
-77168,niyama,12,12864,st.,medium,corroborated,0
-77168,niyama,12,12864,st.,medium,corroborated,0
 55916,BOma,12,12956,fälschlich,medium,corroborated,0
+45321,pitrya,12,13399,zu lesen,high,corroborated,0
 113718,stokaka,12,13869,st.,medium,corroborated,0
 72541,gantavya,13,65,st.,medium,corroborated,0
-100867,SEkza,13,161,st.,medium,corroborated,2
+100867,SEkza,13,161,st.,medium,corroborated,1
 60034,mArutantavya,13,253,fehlerhaft,high,corroborated,0
 112139,sUta,13,256,fehlerhaft,high,corroborated,0
 42824,parityajya,13,398,zu lesen,high,corroborated,0
 113804,strIpuMsa,13,528,zu schreiben,high,corroborated,0
-42384,parama,13,793,zu lesen,high,corroborated,0
-121522,mahAnta,13,802,st.,medium,corroborated,0
-101849,Sruti,13,823,zu lesen,high,corroborated,-1
-113804,strIpuMsa,13,891,zu lesen,high,corroborated,-2
+42384,parama,13,793,zu lesen,high,corroborated,-2
+121522,mahAnta,13,802,st.,medium,corroborated,2
+101849,Sruti,13,823,zu lesen,high,corroborated,1
+113804,strIpuMsa,13,891,zu lesen,high,corroborated,0
+115139,svayaMBuva,13,1011,fehlerhaft,high,corroborated,-2
 39138,niraYjana,13,1101,falsch,medium,corroborated,0
-108182,sADaka,13,1151,zu lesen,high,corroborated,0
-37610,nandivarDana,13,1189,fälschlich,medium,corroborated,1
-58355,mahAkeSa,13,1202,st.,medium,corroborated,1
-117902,hlAdana,13,1257,zu lesen,high,corroborated,1
 98050,SaraRAkuru,13,1354,fehlerhaft,high,corroborated,0
 53280,brahmakAya,13,1371,zu lesen,high,corroborated,0
 53280,brahmakAya,13,1371,st.,medium,corroborated,0
-101122,SoBana,13,1392,zu schreiben,high,corroborated,0
+101122,SoBana,13,1392,zu schreiben,high,corroborated,1
 46755,pUrva,13,1591,falsch,medium,corroborated,-2
 49605,prayAga,13,1723,zu lesen,high,corroborated,0
 54690,BAva,13,1878,zu lesen,high,corroborated,0
@@ -1599,7 +1610,6 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 47664,prakASa,13,2002,zu schreiben,high,corroborated,0
 113497,skAnda,13,2013,fehlerhaft,high,corroborated,0
 90791,vikatTana,13,2016,zu lesen,high,corroborated,0
-41223,pakzahara,13,2059,fehlerhaft,high,corroborated,0
 116521,havis,13,2119,zu lesen,high,corroborated,1
 39944,niScaya,13,2218,st.,medium,corroborated,0
 36186,Dar,13,2567,lies,high,corroborated,-3
@@ -1620,23 +1630,11 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 104143,satyavant,13,3655,fehlerhaft,high,corroborated,0
 48211,pratiGAta,13,3750,zu lesen,high,corroborated,0
 86456,lIlANga,13,3778,fehlerhaft,high,corroborated,0
-113729,stoBa,13,4108,zu lesen,high,corroborated,-2
+113729,stoBa,13,4108,zu lesen,high,corroborated,-1
 90297,vAruRa,13,4210,st.,medium,corroborated,0
 44627,pAradArika,13,4278,fälschlich,medium,corroborated,0
 44895,pArzRikzema,13,4355,zu lesen,high,corroborated,0
-72931,gfzwyA,13,4427,zu lesen,high,corroborated,0
-68449,upADi,13,4450,lies,high,corroborated,-1
-68449,upADi,13,4450,st.,medium,corroborated,-1
-20532,kzuD,13,4463,zu lesen,high,corroborated,-2
-42197,padmin,13,4471,zu lesen,high,corroborated,-1
-88654,varzAcara,13,4527,st.,medium,corroborated,-2
-85212,reRuka,13,4607,st.,medium,corroborated,0
-102743,saMyamana,13,4858,fälschlich,medium,corroborated,0
-49122,pradakziRa,13,4979,st.,medium,corroborated,1
-67940,uddIpaka,13,5069,fehlerhaft,high,corroborated,-1
-50115,prasADana,13,5075,fälschlich,medium,corroborated,-1
-83368,raTacaryA,13,5101,zu lesen,high,corroborated,-1
-73862,cirikAka,13,5521,st.,medium,corroborated,0
+73862,cirikAka,13,5521,st.,medium,corroborated,-1
 94317,vihiMsaka,13,5552,zu schreiben,high,corroborated,0
 85638,lakzaRya,13,5599,st.,medium,corroborated,0
 85308,rEvata,13,5665,st.,medium,corroborated,0
@@ -1651,11 +1649,10 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 61761,mfzA,13,6650,falsch,medium,corroborated,0
 92225,vipAka,13,6666,zu lesen,high,corroborated,0
 60059,mArga,13,6700,st.,medium,corroborated,0
-45337,pinAkin,13,6806,druckfehler,high,corroborated,0
-89037,vasuDADara,13,6866,st.,medium,corroborated,-1
+45337,pinAkin,13,6806,druckfehler,high,corroborated,1
+89037,vasuDADara,13,6866,st.,medium,corroborated,0
 57466,mantra,13,7082,zu lesen,high,corroborated,0
 57466,mantra,13,7082,st.,medium,corroborated,0
-114045,sTira,13,7512,st.,medium,corroborated,-1
 24296,cakraDara,13,7570,st.,medium,corroborated,-1
 47148,pfzaDra,13,7683,zu schreiben,high,corroborated,1
 57842,marutta,14,226,fälschlich,medium,corroborated,0
@@ -1687,8 +1684,8 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 45941,pundra,1,228,fehlerhaft,high,displaced,-40
 45711,puRqra,1,228,st.,medium,displaced,-40
 110714,supratIka,1,228,fälschlich,medium,displaced,-39
-84468,rAma,1,272,zu lesen,high,displaced,-37
-84468,rAma,1,272,st.,medium,displaced,-37
+84468,rAma,1,272,zu lesen,high,displaced,-35
+84468,rAma,1,272,st.,medium,displaced,-35
 95950,vErAwa,1,328,zu lesen,high,displaced,-41
 52834,bIBatsa,1,347,zu lesen,high,displaced,4462
 52834,bIBatsa,1,347,st.,medium,displaced,4462
@@ -1823,13 +1820,13 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 65498,avarza,2,1208,st.,medium,displaced,4
 107317,savarRa,2,1881,zu lesen,high,displaced,-1016
 107317,savarRa,2,1881,st.,medium,displaced,-1016
-50692,prAtikAmin,2,2198,fälschlich,medium,displaced,11
+50692,prAtikAmin,2,2198,fälschlich,medium,displaced,21
 81162,yaTA,2,2399,st.,medium,displaced,10
 113928,sTA,2,2432,zu lesen,high,displaced,-677
 55485,BUyaMs,2,2517,st.,medium,displaced,-1070
 96821,vraj,2,2674,fehlerhaft,high,displaced,-42
 88549,varD,3,258,zu lesen,high,displaced,-46
-77205,nirayu,3,291,st.,medium,displaced,10023
+77205,nirayu,3,291,st.,medium,displaced,10021
 26091,Cadman,3,415,zu lesen,high,displaced,14412
 60147,mAla,3,433,lies,high,displaced,1335
 55960,Bram,3,733,st.,medium,displaced,14865
@@ -1840,21 +1837,21 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 51753,banD,3,1297,falsch,medium,displaced,93
 9015,Ayati,3,1412,zu lesen,high,displaced,15636
 44137,pARin,3,1622,statt,medium,displaced,45
-101720,SrImant,3,1724,fälschlich,medium,displaced,9225
+101720,SrImant,3,1724,fälschlich,medium,displaced,9223
 96273,vyaTA,3,1736,st.,medium,displaced,-399
 117438,hfdya,3,1818,zu lesen,high,displaced,681
 55050,Buj,3,2167,zu lesen,high,displaced,1540
 88124,varaRa,3,2171,st.,medium,displaced,-18
-56300,majj,3,2251,st.,medium,displaced,8475
+56300,majj,3,2251,st.,medium,displaced,8473
 104762,saMDya,3,2256,zu lesen,high,displaced,5774
 54756,BAz,3,2282,zu lesen,high,displaced,302
 88503,vart,3,2347,fehlerhaft,high,displaced,255
 113416,sOhfda,3,2358,zu lesen,high,displaced,12355
 99255,SiKA,3,2398,fehlerhaft,high,displaced,459
-106590,sarp,3,2513,zu lesen,high,displaced,9903
+106590,sarp,3,2513,zu lesen,high,displaced,9901
 70285,kAtara,3,2549,lies,high,displaced,9145
 27221,jAti,3,2556,zu lesen,high,displaced,408
-23656,graB,3,2810,falsch,medium,displaced,11116
+23656,graB,3,2810,falsch,medium,displaced,11114
 41140,nyUna,3,4057,st.,medium,displaced,-2804
 107621,sahasraka,3,5037,fehlerhaft,high,displaced,1541
 105505,samAkula,3,5891,zu lesen,high,displaced,-3450
@@ -1864,69 +1861,68 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 37862,nart,3,6087,lies,high,displaced,-4220
 37862,nart,3,6088,zu lesen,high,displaced,-4221
 46350,puzkara,3,6130,zu lesen,high,displaced,492
-76833,naraka,3,7039,zu lesen,high,displaced,3521
-76833,naraka,3,7039,st.,medium,displaced,3521
+76833,naraka,3,7039,zu lesen,high,displaced,3519
+76833,naraka,3,7039,st.,medium,displaced,3519
 51703,badara,3,7051,fälschlich,medium,displaced,-451
 81468,yadi,3,8075,st.,medium,displaced,-47
 55050,Buj,3,8085,st.,medium,displaced,3644
 15038,kambala,3,8219,fälschlich,medium,displaced,-8038
-103025,saMSraya,3,8370,zu lesen,high,displaced,2523
+103025,saMSraya,3,8370,zu lesen,high,displaced,2521
 88503,vart,3,8438,fehlerhaft,high,displaced,133
 88503,vart,3,8438,fehlerhaft,high,displaced,133
 19905,kruD,3,8545,lies,high,displaced,-7472
 79103,praRaya,3,8584,st.,medium,displaced,-5549
-15594,karzaRa,3,10080,zu lesen,high,displaced,45
+15594,karzaRa,3,10080,zu lesen,high,displaced,44
 82912,rakzya,3,10285,fehlerhaft,high,displaced,4729
-34077,duhitar,3,10304,falsch,medium,displaced,100
-20315,kzip,3,10403,fehlerhaft,high,displaced,4
-11389,uddAlaka,3,10603,zu lesen,high,displaced,55
-44228,pAta,3,10646,lies,high,displaced,-24
-57066,maDuvilA,3,10692,zu lesen,high,displaced,53
-12669,uzRIgaNga,3,10698,fehlerhaft,high,displaced,53
-51753,banD,3,10727,fälschlich,medium,displaced,3127
-56300,majj,3,10756,zu lesen,high,displaced,-27
-109975,suKozita,3,10866,fehlerhaft,high,displaced,51
-48457,pratimAna,3,10879,zu lesen,high,displaced,50
-48457,pratimAna,3,10879,st.,medium,displaced,50
-79199,pratimAna,3,10879,fälschlich,medium,displaced,50
-57103,maDusrava,3,11035,zu lesen,high,displaced,49
-27058,jalASaya,3,11123,zu lesen,high,displaced,47
-49619,prayAtavya,3,11173,zu lesen,high,displaced,46
-16525,kAmyA,3,11190,zu lesen,high,displaced,-68
-116009,hanUmant,3,11193,druckfehler,high,displaced,77
-105700,samASraya,3,11242,fehlerhaft,high,displaced,45
-104369,sadgati,3,11316,zu lesen,high,displaced,43
-39854,nivedya,3,11322,fehlerhaft,high,displaced,43
-69878,kart,3,11383,st.,medium,displaced,-235
+34077,duhitar,3,10304,falsch,medium,displaced,98
+11389,uddAlaka,3,10603,zu lesen,high,displaced,53
+44228,pAta,3,10646,lies,high,displaced,-26
+57066,maDuvilA,3,10692,zu lesen,high,displaced,51
+12669,uzRIgaNga,3,10698,fehlerhaft,high,displaced,51
+51753,banD,3,10727,fälschlich,medium,displaced,3125
+56300,majj,3,10756,zu lesen,high,displaced,-29
+109975,suKozita,3,10866,fehlerhaft,high,displaced,49
+48457,pratimAna,3,10879,zu lesen,high,displaced,48
+48457,pratimAna,3,10879,st.,medium,displaced,48
+79199,pratimAna,3,10879,fälschlich,medium,displaced,48
+57103,maDusrava,3,11035,zu lesen,high,displaced,47
+27058,jalASaya,3,11123,zu lesen,high,displaced,45
+49619,prayAtavya,3,11173,zu lesen,high,displaced,44
+16525,kAmyA,3,11190,zu lesen,high,displaced,-70
+116009,hanUmant,3,11193,druckfehler,high,displaced,75
+105700,samASraya,3,11242,fehlerhaft,high,displaced,43
+104369,sadgati,3,11316,zu lesen,high,displaced,41
+39854,nivedya,3,11322,fehlerhaft,high,displaced,41
+69878,kart,3,11383,st.,medium,displaced,-237
 72557,ganDarva,3,11762,lies,high,displaced,-143
 72557,ganDarva,3,11762,lies,high,displaced,-143
 72557,ganDarva,3,11762,st.,medium,displaced,-143
 116135,hari,3,11903,zu lesen,high,displaced,-40
-87964,vand,3,11907,st.,medium,displaced,36
-84768,ripu,3,11912,st.,medium,displaced,-557
-53140,bfhant,3,11964,lies,high,displaced,347
-86636,loka,3,12025,zu lesen,high,displaced,8
-109151,sita,3,12109,fehlerhaft,high,displaced,24
+87964,vand,3,11907,st.,medium,displaced,34
+84768,ripu,3,11912,st.,medium,displaced,-559
+53140,bfhant,3,11964,lies,high,displaced,345
+86636,loka,3,12025,zu lesen,high,displaced,6
+109151,sita,3,12109,fehlerhaft,high,displaced,22
 85650,lakzmaRa,3,12182,st.,medium,displaced,3837
-34889,dEteya,3,12203,fehlerhaft,high,displaced,34
-23656,graB,3,12225,st.,medium,displaced,1701
-23656,graB,3,12225,st.,medium,displaced,1701
-42573,parABAva,3,12242,st.,medium,displaced,33
+34889,dEteya,3,12203,fehlerhaft,high,displaced,32
+23656,graB,3,12225,st.,medium,displaced,1699
+23656,graB,3,12225,st.,medium,displaced,1699
+42573,parABAva,3,12242,st.,medium,displaced,31
 119654,kzan,3,12274,zu lesen,high,displaced,-304
-11060,utpAta,3,12513,fehlerhaft,high,displaced,31
+11060,utpAta,3,12513,fehlerhaft,high,displaced,29
 53862,Baj,3,12683,fehlerhaft,high,displaced,-806
 109803,suKa,3,12770,zu lesen,high,displaced,30
 41710,paW,3,12813,zu lesen,high,displaced,279
 32168,dala,3,13178,st.,medium,displaced,22
 51896,bala,3,13178,st.,medium,displaced,-131
-23656,graB,3,13180,falsch,medium,displaced,746
-63075,atra,3,13229,lies,high,displaced,136
-63075,atra,3,13229,st.,medium,displaced,136
+23656,graB,3,13180,falsch,medium,displaced,744
+63075,atra,3,13229,lies,high,displaced,134
+63075,atra,3,13229,st.,medium,displaced,134
 116888,hiMs,3,13269,st.,medium,displaced,20
 50344,prAkfta,3,13864,zu lesen,high,displaced,-427
-73487,caturviMSaka,3,13918,zu lesen,high,displaced,15
-119898,caturviMSaka,3,13918,zu lesen,high,displaced,15
-73487,caturviMSaka,3,13918,st.,medium,displaced,15
+73487,caturviMSaka,3,13918,zu lesen,high,displaced,13
+119898,caturviMSaka,3,13918,zu lesen,high,displaced,13
+73487,caturviMSaka,3,13918,st.,medium,displaced,13
 66987,ASin,3,13994,st.,medium,displaced,507
 87023,lohitoda,3,14269,statt,medium,displaced,255
 20315,kzip,3,14314,fehlerhaft,high,displaced,20
@@ -1939,7 +1935,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 109632,sImantin,3,15613,zu lesen,high,displaced,1005
 113928,sTA,3,15621,fehlerhaft,high,displaced,-77
 82233,yuD,3,15645,st.,medium,displaced,159
-89553,vAjin,3,15672,zu lesen,high,displaced,-5460
+89553,vAjin,3,15672,zu lesen,high,displaced,-5462
 31573,daMSita,3,15684,zu lesen,high,displaced,720
 31573,daMSita,3,15684,st.,medium,displaced,720
 55960,Bram,3,15734,st.,medium,displaced,-136
@@ -1950,7 +1946,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 45963,pura,3,16215,st.,medium,displaced,-50
 7773,Akara,3,16302,zu lesen,high,displaced,-756
 36186,Dar,3,16580,fälschlich,medium,displaced,-8
-104617,saMtApa,3,16622,zu lesen,high,displaced,-5338
+104617,saMtApa,3,16622,zu lesen,high,displaced,-5340
 60166,mAlava,3,16637,fälschlich,medium,displaced,170
 88230,varAroha,3,16646,lies,high,displaced,202
 54756,BAz,3,16731,zu lesen,high,displaced,67
@@ -2045,8 +2041,8 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 85641,lakzay,5,7042,fehlerhaft,high,displaced,-2866
 85641,lakzay,5,7042,fehlerhaft,high,displaced,-2866
 108434,sAman,5,7042,st.,medium,displaced,130
-103843,saYj,5,7152,zu lesen,high,displaced,-1820
-103843,saYj,5,7152,st.,medium,displaced,-1820
+103843,saYj,5,7152,zu lesen,high,displaced,406
+103843,saYj,5,7152,st.,medium,displaced,406
 88503,vart,5,7164,fehlerhaft,high,displaced,-84
 88503,vart,5,7276,zu lesen,high,displaced,-26
 43511,paryaya,5,7384,zu lesen,high,displaced,-2003
@@ -2069,7 +2065,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 53887,Bawa,6,1886,zu lesen,high,displaced,-4
 98108,Sarava,6,2084,fehlerhaft,high,displaced,2631
 61784,mekala,6,2103,zu lesen,high,displaced,1764
-103843,saYj,6,2421,fehlerhaft,high,displaced,89
+103843,saYj,6,2421,fehlerhaft,high,displaced,4
 61706,mfdu,6,2591,zu lesen,high,displaced,3132
 81491,yantra,6,2659,zu lesen,high,displaced,-370
 91871,viDAna,6,3030,fehlerhaft,high,displaced,-1594
@@ -2094,7 +2090,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 60059,mArga,7,11,unrichtig,medium,displaced,1908
 54403,BAga,7,75,st.,medium,displaced,-5
 74502,jEtra,7,76,st.,medium,displaced,2914
-103843,saYj,7,79,st.,medium,displaced,-29
+103843,saYj,7,79,st.,medium,displaced,6
 79857,bala,7,203,st.,medium,displaced,11
 72334,KAd,7,205,fehlerhaft,high,displaced,352
 83542,raB,7,363,zu lesen,high,displaced,3847
@@ -2272,7 +2268,7 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 106160,saMprasAda,12,8947,zu lesen,high,displaced,-121
 49385,praBava,12,9211,zu lesen,high,displaced,47
 49385,praBava,12,9211,st.,medium,displaced,47
-92241,vipAna,12,9270,fehlerhaft,high,displaced,1819
+92241,vipAna,12,9270,fehlerhaft,high,displaced,1817
 85996,laB,12,9431,fehlerhaft,high,displaced,-7
 39285,nirAsa,12,9646,fehlerhaft,high,displaced,-85
 27197,jAWara,12,9661,zu lesen,high,displaced,853
@@ -2282,59 +2278,58 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 36167,Danvin,12,10361,zu lesen,high,displaced,149
 36167,Danvin,12,10361,st.,medium,displaced,149
 92004,vinAyaka,12,10477,st.,medium,displaced,-163
-87492,vaYc,12,10934,fehlerhaft,high,displaced,515
-87492,vaYc,12,10934,zu lesen,high,displaced,515
+87492,vaYc,12,10934,fehlerhaft,high,displaced,511
+87492,vaYc,12,10934,zu lesen,high,displaced,511
 75437,dakza,12,10983,st.,medium,displaced,-124
 109448,siDya,12,11268,fehlerhaft,high,displaced,-1735
-53862,Baj,12,11290,fehlerhaft,high,displaced,-324
-53862,Baj,12,11290,st.,medium,displaced,-324
+53862,Baj,12,11290,fehlerhaft,high,displaced,-325
+53862,Baj,12,11290,st.,medium,displaced,-325
 22041,garh,12,11822,zu lesen,high,displaced,-2610
 66073,AkiMcanya,12,11901,zu lesen,high,displaced,-5410
 66073,AkiMcanya,12,11901,st.,medium,displaced,-5410
-81327,yaTArTa,12,11904,unrichtig,medium,displaced,452
-81327,yaTArTa,12,11904,falsch,medium,displaced,452
-44654,pAralOkika,12,12053,fälschlich,medium,displaced,1739
-36186,Dar,12,12529,zu lesen,high,displaced,5
-36186,Dar,12,12529,st.,medium,displaced,5
+81327,yaTArTa,12,11904,unrichtig,medium,displaced,439
+81327,yaTArTa,12,11904,falsch,medium,displaced,439
+44654,pAralOkika,12,12053,fälschlich,medium,displaced,1734
+36186,Dar,12,12529,zu lesen,high,displaced,-8
+36186,Dar,12,12529,st.,medium,displaced,-8
+106817,sarvadarSin,12,12864,zu lesen,high,displaced,-5203
+77168,niyama,12,12864,st.,medium,displaced,16
+77168,niyama,12,12864,st.,medium,displaced,16
 28008,jyotiza,12,13136,fälschlich,medium,displaced,-98
 100866,SEkya,12,13202,fehlerhaft,high,displaced,-26
 106126,saMpradAna,12,13204,fehlerhaft,high,displaced,-26
-45321,pitrya,12,13399,zu lesen,high,displaced,12
 31244,trisOparRa,12,13567,zu lesen,high,displaced,-3317
-64804,amfta,13,23,lies,high,displaced,1215
-64804,amfta,13,23,st.,medium,displaced,1215
-39849,nivftti,13,54,zu lesen,high,displaced,1093
+64804,amfta,13,23,lies,high,displaced,2674
+64804,amfta,13,23,st.,medium,displaced,2674
 81875,yAjya,13,178,st.,medium,displaced,2727
 84878,ruci,13,251,st.,medium,displaced,-10
 66527,AnfSaMsa,13,263,st.,medium,displaced,26
 100388,SuBa,13,344,zu lesen,high,displaced,-40
-97785,Sabara,13,733,zu lesen,high,displaced,441
-95554,vezw,13,764,fehlerhaft,high,displaced,408
-99255,SiKA,13,862,zu lesen,high,displaced,310
+99255,SiKA,13,862,zu lesen,high,displaced,1406
 63314,aDyAsa,13,867,fehlerhaft,high,displaced,798
-103335,sakti,13,871,fehlerhaft,high,displaced,289
-90545,vAsa,13,882,zu schreiben,high,displaced,100
-51753,banD,13,899,fehlerhaft,high,displaced,316
+103335,sakti,13,871,fehlerhaft,high,displaced,984
+90545,vAsa,13,882,zu schreiben,high,displaced,102
+51753,banD,13,899,fehlerhaft,high,displaced,1536
 113456,skanDa,13,907,fehlerhaft,high,displaced,5651
-82492,yogi,13,916,st.,medium,displaced,-7
-115139,svayaMBuva,13,1011,fehlerhaft,high,displaced,-4
-113583,stamba,13,1090,fehlerhaft,high,displaced,-86
+82492,yogi,13,916,st.,medium,displaced,-5
+113583,stamba,13,1090,fehlerhaft,high,displaced,-84
 105876,samuddeSa,13,1125,zu lesen,high,displaced,1685
 10888,uttara,13,1143,zu lesen,high,displaced,373
+37610,nandivarDana,13,1189,fälschlich,medium,displaced,5636
 57271,manas,13,1393,zu lesen,high,displaced,-31
 88106,vara,13,1441,statt,medium,displaced,-84
-98693,SAwa,13,1485,st.,medium,displaced,50
-98693,SAwa,13,1485,fälschlich,medium,displaced,50
+98693,SAwa,13,1485,st.,medium,displaced,49
+98693,SAwa,13,1485,fälschlich,medium,displaced,49
 113928,sTA,13,1660,zu lesen,high,displaced,149
 65300,alolupa,13,1705,lies,high,displaced,324
 18692,kfttikA,13,1708,zu lesen,high,displaced,1548
-62586,agni,13,1729,lies,high,displaced,-43
-45045,piNga,13,1741,zu lesen,high,displaced,-494
+62586,agni,13,1729,lies,high,displaced,-44
+45045,piNga,13,1741,zu lesen,high,displaced,4410
 105781,samIkza,13,1752,fehlerhaft,high,displaced,-433
 101448,Srama,13,1948,fälschlich,medium,displaced,-31
 87645,vatsya,13,1951,fehlerhaft,high,displaced,-108
-116342,haris,13,2119,fehlerhaft,high,displaced,-960
-42310,para,13,2134,st.,medium,displaced,-14
+41223,pakzahara,13,2059,fehlerhaft,high,displaced,-6
+42310,para,13,2134,st.,medium,displaced,10
 41759,paRqitamAnin,13,2195,zu lesen,high,displaced,5342
 41759,paRqitamAnin,13,2195,st.,medium,displaced,5342
 82848,rakz,13,2221,zu lesen,high,displaced,19
@@ -2342,19 +2337,16 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 53763,Baga,13,2328,zu lesen,high,displaced,19
 32585,dAyAdya,13,2522,lies,high,displaced,1050
 31803,datta,13,2616,zu lesen,high,displaced,-62
-60501,miTyA,13,2623,falsch,medium,displaced,-376
+60501,miTyA,13,2623,falsch,medium,displaced,-384
 100488,Sulka,13,2624,fehlerhaft,high,displaced,-144
 90853,vikAra,13,2761,zu lesen,high,displaced,689
-55847,Bogya,13,2772,fehlerhaft,high,displaced,-1586
 97017,Saka,13,2835,fehlerhaft,high,displaced,-64
 88503,vart,13,3126,st.,medium,displaced,-59
 97001,SaMs,13,3139,fehlerhaft,high,displaced,-21
-96042,vESya,13,3140,fehlerhaft,high,displaced,-69
+96042,vESya,13,3140,fehlerhaft,high,displaced,-121
 106590,sarp,13,3186,zu lesen,high,displaced,71
 44637,pAramaka,13,3350,fehlerhaft,high,displaced,60
-38979,nipAta,13,3439,fehlerhaft,high,displaced,1189
-38986,nipAna,13,3439,lies,high,displaced,-2201
-77143,nipAna,13,3439,st.,medium,displaced,-2201
+38979,nipAta,13,3439,fehlerhaft,high,displaced,1145
 114658,syad,13,3495,fehlerhaft,high,displaced,-1028
 49414,praBAva,13,3499,st.,medium,displaced,-114
 114790,srota,13,3512,fälschlich,medium,displaced,173
@@ -2362,36 +2354,44 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 50234,prasrava,13,3683,fälschlich,medium,displaced,19
 114658,syad,13,3719,fehlerhaft,high,displaced,-1252
 94085,vizyanda,13,3727,zu lesen,high,displaced,-27
-83542,raB,13,3943,zu lesen,high,displaced,-1789
+83542,raB,13,3943,zu lesen,high,displaced,-1796
 103442,saMkalpa,13,4033,zu lesen,high,displaced,316
 103442,saMkalpa,13,4033,st.,medium,displaced,316
 60577,miSra,13,4071,statt,medium,displaced,-772
 60577,miSra,13,4071,statt,medium,displaced,-772
-111066,sura,13,4108,fehlerhaft,high,displaced,-43
-23691,grahapati,13,4133,fehlerhaft,high,displaced,-2981
+111066,sura,13,4108,fehlerhaft,high,displaced,-42
 113928,sTA,13,4215,zu lesen,high,displaced,-404
-25554,cint,13,4341,fehlerhaft,high,displaced,299
+25554,cint,13,4341,fehlerhaft,high,displaced,255
+72931,gfzwyA,13,4427,zu lesen,high,displaced,-42
+68449,upADi,13,4450,lies,high,displaced,-43
+68449,upADi,13,4450,st.,medium,displaced,-43
+20532,kzuD,13,4463,zu lesen,high,displaced,4
+42197,padmin,13,4471,zu lesen,high,displaced,-13
 18427,kUwa,13,4526,fälschlich,medium,displaced,1205
 18427,kUwa,13,4526,falsch,medium,displaced,1205
-55847,Bogya,13,4529,zu lesen,high,displaced,-3343
-66428,ADAna,13,4633,lies,high,displaced,-3417
-66428,ADAna,13,4633,st.,medium,displaced,-3417
+88654,varzAcara,13,4527,st.,medium,displaced,-44
+85212,reRuka,13,4607,st.,medium,displaced,-33
 42634,pari,13,4672,st.,medium,displaced,-1132
-49080,praT,13,4679,zu lesen,high,displaced,49
-97001,SaMs,13,4734,zu lesen,high,displaced,26
+49080,praT,13,4679,zu lesen,high,displaced,4
+97001,SaMs,13,4734,zu lesen,high,displaced,-16
 80914,yajYaka,13,4818,fehlerhaft,high,displaced,1680
-40058,nizkakaRWa,13,4939,zu lesen,high,displaced,-5
-113603,stamBa,13,4990,zu lesen,high,displaced,262
-30476,tejas,13,5018,lies,high,displaced,14
-99451,SiraHsnAta,13,5024,st.,medium,displaced,56
+102743,saMyamana,13,4858,fälschlich,medium,displaced,-46
+40058,nizkakaRWa,13,4939,zu lesen,high,displaced,-51
+49122,pradakziRa,13,4979,st.,medium,displaced,-48
+113603,stamBa,13,4990,zu lesen,high,displaced,211
+30476,tejas,13,5018,lies,high,displaced,-36
+99451,SiraHsnAta,13,5024,st.,medium,displaced,6
 106569,sarj,13,5025,zu lesen,high,displaced,1427
 106569,sarj,13,5025,st.,medium,displaced,1427
+67940,uddIpaka,13,5069,fehlerhaft,high,displaced,-51
+50115,prasADana,13,5075,fälschlich,medium,displaced,-51
 25031,carya,13,5101,zu lesen,high,displaced,1437
+83368,raTacaryA,13,5101,zu lesen,high,displaced,-51
 116374,hartar,13,5466,fehlerhaft,high,displaced,-2371
 89136,vastu,13,5519,fehlerhaft,high,displaced,-1659
 89136,vastu,13,5519,statt,medium,displaced,-1659
-105540,samADi,13,5535,zu lesen,high,displaced,-895
-84882,rucitA,13,5628,fehlerhaft,high,displaced,-4854
+105540,samADi,13,5535,zu lesen,high,displaced,-939
+84882,rucitA,13,5628,fehlerhaft,high,displaced,-4852
 113928,sTA,13,5785,zu lesen,high,displaced,-73
 113928,sTA,13,5785,st.,medium,displaced,-73
 47940,prajas,13,6062,zu lesen,high,displaced,1333
@@ -2399,25 +2399,25 @@ L,headword_slp1,parvan,verse,marker,confidence,category,delta
 89462,vAcA,13,6149,fehlerhaft,high,displaced,7
 36858,DUma,13,6151,fehlerhaft,high,displaced,589
 54756,BAz,13,6338,fehlerhaft,high,displaced,141
-92774,virama,13,6415,fehlerhaft,high,displaced,577
+92774,virama,13,6415,fehlerhaft,high,displaced,713
 106569,sarj,13,6460,fehlerhaft,high,displaced,-8
 94587,vIrAsana,13,6515,zu lesen,high,displaced,-6159
 50491,prAcetasa,13,6830,zu lesen,high,displaced,-4346
-113924,sTavira,13,6955,zu lesen,high,displaced,-1937
-113924,sTavira,13,6955,st.,medium,displaced,-1937
+113924,sTavira,13,6955,zu lesen,high,displaced,-1987
+113924,sTavira,13,6955,st.,medium,displaced,-1987
 29372,tAraRa,13,6986,lies,high,displaced,-3245
-95753,vEdya,13,7108,fehlerhaft,high,displaced,-141
-95753,vEdya,13,7108,fehlerhaft,high,displaced,-141
-37719,namuca,13,7112,statt,medium,displaced,-5861
+95753,vEdya,13,7108,fehlerhaft,high,displaced,-1288
+95753,vEdya,13,7108,fehlerhaft,high,displaced,-1288
 98785,SAna,13,7175,fehlerhaft,high,displaced,-6
 100386,SuB,13,7183,st.,medium,displaced,-73
-57924,marj,13,7219,st.,medium,displaced,-6578
+57924,marj,13,7219,st.,medium,displaced,-6576
 54756,BAz,13,7302,fehlerhaft,high,displaced,110
-31145,trivft,13,7379,fälschlich,medium,displaced,-5838
-57924,marj,13,7426,fehlerhaft,high,displaced,-6785
+31145,trivft,13,7379,fälschlich,medium,displaced,-5839
+57924,marj,13,7426,fehlerhaft,high,displaced,-6783
 114357,sparS,13,7446,zu lesen,high,displaced,-1708
 114357,sparS,13,7446,st.,medium,displaced,-1708
 106569,sarj,13,7447,fehlerhaft,high,displaced,-995
+114045,sTira,13,7512,st.,medium,displaced,4
 54903,Binnavftta,13,7544,fehlerhaft,high,displaced,-7031
 54903,Binnavftta,13,7544,st.,medium,displaced,-7031
 45265,pitfpEtAmaha,13,7556,st.,medium,displaced,-387

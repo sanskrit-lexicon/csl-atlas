@@ -1,4 +1,5 @@
 {
+ "csl_orig_revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
  "pwg_pairs_found": 12541,
  "sample_cap": 20000,
  "seed": 2845,
@@ -9,13 +10,13 @@
  },
  "retrieved_with_calibrated_N": 6912,
  "fitted_index_agreement_within_k_slokas": {
-  "0": 0.4941,
-  "2": 0.6804,
-  "10": 0.7254,
-  "50": 0.8559,
+  "0": 0.4844,
+  "2": 0.6659,
+  "10": 0.7114,
+  "50": 0.854,
   "200": 0.9857
  },
  "delta_median": 0,
- "delta_mean": 0.68,
+ "delta_mean": 1.59,
  "note": "PWG's printed number vs the calibrated_N of the verse its own quoted pratika actually stands in. This is the accuracy the citation-level presence verdict inherits; the verse-level table does not depend on it."
 }

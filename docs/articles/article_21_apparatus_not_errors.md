@@ -36,8 +36,8 @@ share zero documented print errors. Nor did MW copy the order of the *meanings* 
 Böhtlingk's fourth charge: it sequences its senses no more like PWG's (0.767) than like the
 independent Apte's (0.751), shared lexicographic convention rather than transcription, with a
 copying residue only in the entries whose definitions MW derived most closely. Resolving the 565 shared Harivaṃśa references
-directly against the Calcutta vulgate both traditions cite corroborates 206 of them at the
-exact cited śloka (≈75× the shuffled null) while turning up no shared mistake. The
+directly against the Calcutta vulgate both traditions cite corroborates 207 of them at the
+exact cited śloka (≈74× the shuffled null) while turning up no shared mistake. The
 inheritance is of scholarship, not of typesetting. This resolves the size-confounded "MW absorbed 89–94% of PWG" claim (the
 raw-containment reading of the companion redundancy study) into a
 precise, defensible statement and supplies a reusable template for separating
@@ -111,8 +111,8 @@ the corpus at all: e.g. `ullApya → SĀH. 545`, `dAsatA → VEṆĪS. 175`, `gr
 VEDĀNTAS. 1` (all three corpus-unique), and 565
 exact Harivaṃśa line-numbers (`HARIV. 9529` …). Those last are 94.5% of the pool (565/598 at the
 `csl-orig` revision every F1/F5 figure is pinned to, §7), and they are the source events §6 resolves against the
-vulgate (516 of these 565 are the June-pool rows §6's vulgate arm resolved; 49 left the pool and 49 others
-entered it between the two corpus revisions, §7): the rare-reference mass and the
+vulgate at the same pin (49 of the June pool's 565 left it and 49 others entered it between the two
+corpus revisions, §7): the rare-reference mass and the
 Harivaṃśa run-to-ground are one line of evidence read at two resolutions, not two independent
 ones. Ablating Harivaṃśa leaves 33 rare shared references over 18 other texts — the
 idiosyncratic-apparatus signal is real but concentrated
@@ -313,14 +313,14 @@ dictionaries actually cite, using a free vulgate e-text (Kinjawadekar, Chitrasha
 **15,364 verses = 93.8 %** of the 16,374-śloka vulgate). A per-adhyāya continuous index was
 fitted on 14,471 PWG anchors and **validated on 815 held-out MW anchors: 68.4 % land within
 ±3 of their cited śloka vs a 2.1 % shuffled-N null (≈ 33×)** — the index is trustworthy. Of
-the **565** shared rare Harivaṃśa citations in the June pool (this vulgate arm has not been
-re-run at the §7 pin, where 49 of those rows are exchanged for 49 others — see §7), **206 (37.7 %) corroborate at the exact cited
+the **565** shared rare Harivaṃśa citations at the §7 pin (re-run 22-09-2026; 206 of the June
+pool's 565, 37.7 %), **207 (37.9 % of the 546 evaluable) corroborate at the exact cited
 vulgate śloka** (e.g. `kīrtimant` `HARIV. 62` → verse 1-2-9 *…kīrtimantaṃ ca…*) against a
-**0.5 % shuffled-N null — a ≈ 75× enrichment, and against 1 of 598 resolvable via DCS.**
+**0.5 % shuffled-N null — a ≈ 74× enrichment, and against 1 of 598 resolvable via DCS.**
 This upgrades the citation evidence from *shared editions* to a **shared, verse-level,
 verifiably-correct apparatus.** The *airtight* upgrade — a shared **erroneous** citation —
 is **not** obtained, and the reason is positive rather than circumstantial: displaced cases
-fall *below* their shuffled-N null (79 vs 200) with no clustering, so against the correct
+fall *below* their shuffled-N null (85 vs 205) with no clustering, so against the correct
 edition the shared citations verify as correct and there is **no shared error to find** in
 this pool. The shared-mistake signal is a measured null, not a data-availability block.
 
@@ -377,10 +377,15 @@ identical across hash seeds: §4.2's null 256 vs 102.8 (lift 2.49, p ≈ 4×10�
 (differential −0.012, unchanged at the precision of §4.3); the F2 deep-split agreements of §3.3
 unchanged at whole-percent precision (MW/PWG 65.3 % → 65.1 %); F4a's zero shared print errors
 unchanged. The §6 DCS arm, re-run against the 598-row pool, resolves the same single candidate.
-Not re-frozen: the §6 **vulgate arm** (F7) and the F8 stages that read the vulgate/critical witness
-texts — those witnesses are rights-restricted derived e-texts kept out of the repository, and this
-re-freeze ran where they are absent. The vulgate figures (206 of 565) therefore describe the June
-membership, 516 of whose 565 rows survive at the pin. F10 (sense order) also still awaits a run at the pin.
+**Witness stages re-run (H5264, 22-09-2026).** The §6 **vulgate arm** (F7) and the F8 stages that
+read the rights-restricted vulgate/critical witness texts (resolve, presence, quote lane, Droṇa
+index) were re-run at the same `f4c08c57`, byte-identical across hash seeds; the F8 outputs are also
+content-identical across two machines. The re-harvested vulgate e-text reproduces 15,364 verses
+exactly and the index validation is unchanged (68.4 % vs 2.1 %). On the pinned pool's 565
+Harivaṃśa rows the vulgate arm corroborates 207 (37.9 % of 546 evaluable; June 206, 37.7 % of 547), with displaced cases
+85 against a 204.5 null (June 79 vs 200.5). No verdict changes. Still unpinned: F8 verify (its
+GRETIL witness is absent on both machines; no figure in this article) and F10 (sense order), whose
+offline-MT engine and cache are absent too.
 
 Per-run provenance in the
 `.source.json` sidecars.
