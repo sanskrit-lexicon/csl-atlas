@@ -38,7 +38,8 @@ sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/L0"))
 sys.path.insert(0, os.path.abspath("../sanskrit-util/py"))
-from _provenance import write_source
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _corpus_pin
 from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
 from sanskrit_util import slp1_simplify
@@ -189,6 +190,9 @@ def main():
     vsets, inv = build_ngram_index(corpus)
     print(f"inverted 4-gram index: {len(inv):,} distinct grams")
 
+    # H5260: the notes are census output — inherit its csl-orig pin (refuse unpinned/MIXED).
+    pin = _corpus_pin.inherited_revision([NOTES])
+    print(f"csl-orig revision (inherited from upstream sidecars): {pin['revision']}")
     notes = list(csv.DictReader(open(NOTES, encoding="utf-8")))
     verdicts = []
     for n in notes:
@@ -239,6 +243,7 @@ def main():
                         "cascade_tier", "retrieved_form_slp1", "quote"]])
 
     report = {
+        "csl_orig_revision": pin["revision"],
         "bori_corpus_verses": len(corpus),
         "notes_total": len(notes),
         "notes_with_retrievable_pratika": len([v for v in verdicts if v["retrieved_form_slp1"] or v["evidence_tier"] != "none"]),
@@ -253,7 +258,7 @@ def main():
                           "hybrid = retrieval-only for MBH until a vulgate e-text is obtained."),
     }
     json.dump(report, open(f"{OUT}/f8_verify_report.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    write_source(f"{OUT}/mbh_note_verdicts.csv", "f8_mbh_verify.py", 8)
+    _corpus_pin.write_pinned_source(f"{OUT}/mbh_note_verdicts.csv", "f8_mbh_verify.py", 8, pin)
 
     print(f"\nevidence tiers: {dict(tiers)}")
     print(f"verdicts: {dict(vc)}")

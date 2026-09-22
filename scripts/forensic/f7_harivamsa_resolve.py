@@ -50,7 +50,8 @@ sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/L0"))
 sys.path.insert(0, os.path.abspath("../sanskrit-util/py"))
 from parse_cslorig import iter_entries, CSL_ORIG
-from _provenance import write_source
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _corpus_pin
 from sanskrit_util import slp1_simplify
 
 VERSES = "data/forensic/_harivamsa_verses.jsonl"     # gitignored input from f7_harivamsa_harvest
@@ -281,8 +282,14 @@ def main():
     entries, keys = build_index(V)
     print(f"verses={len(V)}  adhyāyas={n_adh}  coverage={len(V)/16374*100:.1f}%")
 
+    # H5260: anchors are re-read live; the shared pool is F1 output pinned in its sidecar.
+    pin = _corpus_pin.live_revision(CSL_ORIG)
     pwg = load_anchors("PWG", "pwg")
     mw = load_anchors("MW", "mw")
+    _corpus_pin.assert_unmoved(pin, CSL_ORIG)
+    if os.path.exists(POOL):
+        _corpus_pin.assert_same(pin, _corpus_pin.inherited_revision([POOL]))
+    print(f"csl-orig revision (live checkout, clean): {pin['revision']}")
     print(f"anchors: PWG={len(pwg)}  MW={len(mw)}")
 
     offset, nsup, n_conf = fit_offsets(V, entries, keys, pwg, n_adh)
@@ -298,7 +305,7 @@ def main():
           f"null={ho['null_rate']:.3f}  ->  {'PASS' if passed else 'FAIL'}")
     print(f"  δ dist (±{W}): {ho['delta_dist']}")
 
-    report = {"n_verses": len(V), "coverage_pct": round(len(V) / 16374 * 100, 1),
+    report = {"csl_orig_revision": pin["revision"], "n_verses": len(V), "coverage_pct": round(len(V) / 16374 * 100, 1),
               "n_adhyaya": n_adh, "confident_adhyaya": n_conf,
               "anchors_pwg": len(pwg), "anchors_mw": len(mw), "held_out": ho, "held_out_pass": passed}
 
@@ -375,10 +382,10 @@ def main():
                         offset[r["A"]], nsup[r["A"]]])
 
     json.dump(report, open("data/forensic/f7_report.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    write_source("data/forensic/harivamsa_continuous_index_offsets.csv", "f7_harivamsa_resolve.py", 7)
-    write_source("data/forensic/harivamsa_vulgate_concordance.csv", "f7_harivamsa_resolve.py", 7)
+    _corpus_pin.write_pinned_source("data/forensic/harivamsa_continuous_index_offsets.csv", "f7_harivamsa_resolve.py", 7, pin)
+    _corpus_pin.write_pinned_source("data/forensic/harivamsa_vulgate_concordance.csv", "f7_harivamsa_resolve.py", 7, pin)
     if passed:
-        write_source("data/forensic/harivamsa_shared_citation_resolution.csv", "f7_harivamsa_resolve.py", 7)
+        _corpus_pin.write_pinned_source("data/forensic/harivamsa_shared_citation_resolution.csv", "f7_harivamsa_resolve.py", 7, pin)
     print(f"\nwrote data/forensic/harivamsa_vulgate_concordance.csv ({len(V)} verses) + "
           "harivamsa_continuous_index_offsets.csv + harivamsa_shared_citation_resolution.csv + f7_report.json")
 

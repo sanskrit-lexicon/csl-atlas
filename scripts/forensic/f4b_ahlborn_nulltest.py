@@ -29,7 +29,8 @@ import json
 import glob
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
-from parse_cslorig import load_entries
+from parse_cslorig import load_entries, PARSED_DIR
+import _corpus_pin
 from f4_shared_corrections import parse_correctionform, parse_printchange, parse_change_file, norm_hw
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -119,6 +120,10 @@ def main():
     print("F4b — curated PWG-error vs MW test (ahlborn) + hypergeometric null")
     print("=" * 64)
 
+    # H5260: pin the parsed caches (one csl-orig revision) and the correction checkouts.
+    pin = _corpus_pin.cache_revision(["mw"] + PET, PARSED_DIR)
+    inputs = _corpus_pin.input_revisions({d: d for d in CORR_DIRS + [os.path.dirname(AHLBORN)]})
+    print(f"csl-orig revision (hash-bound parse provenance): {pin['revision']}")
     mw_hw = mw_headwords()
     print(f"\nMW headword forms (normalized): {len(mw_hw):,}")
 
@@ -171,6 +176,7 @@ def main():
     print(f"  => {verdict}")
 
     report = {
+        "csl_orig_revision": pin["revision"],
         "ahlborn_total": len(rows), "ahlborn_status": dict(tally),
         "ahlborn_shares_error": shares,
         "ahlborn_shares_error_pct": round(100 * shares / len(rows), 1) if rows else 0,
@@ -195,12 +201,8 @@ def main():
         json.dump(report, f, indent=2, ensure_ascii=False)
 
     print(f"\nWrote ahlborn_mw_comparison.csv ({len(rows)} rows), f4b_report.json")
-    try:
-        sys.path.insert(0, os.path.abspath("scripts/L0"))
-        from _provenance import write_source
-        write_source("data/forensic/ahlborn_mw_comparison.csv", "f4b_ahlborn_nulltest.py", 4)
-    except Exception as e:
-        print(f"Provenance error: {e}")
+    _corpus_pin.write_pinned_source("data/forensic/ahlborn_mw_comparison.csv", "f4b_ahlborn_nulltest.py", 4,
+                                    pin, inputs=inputs)
 
 
 if __name__ == "__main__":

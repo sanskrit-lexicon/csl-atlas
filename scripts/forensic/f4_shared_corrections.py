@@ -34,6 +34,9 @@ import json
 import glob
 import collections
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _corpus_pin
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
@@ -155,6 +158,11 @@ def main():
     print("F4a — shared corrections (the editors' own shared-error record)")
     print("=" * 64)
 
+    # H5260: F4 reads no csl-orig file — pin the two correction checkouts it does read.
+    inputs = _corpus_pin.input_revisions({"PWG/pwgissues": PWGISSUES, "csl-corrections": CSLCORR})
+    for label, rec in inputs.items():
+        print(f"input revision {label}: {rec['revision']}")
+
     # ---- source 1: the 13 cross-dict pwgissues ----
     issue_rows = []
     all_records = []
@@ -257,7 +265,12 @@ def main():
     print(f"\nShared fixed citations (issue-bundled): {len(shared_cit_issue)}")
     print("    " + ", ".join(sorted(shared_cit_issue)[:18]))
 
+    for label, rec in _corpus_pin.input_revisions({"PWG/pwgissues": PWGISSUES, "csl-corrections": CSLCORR}).items():
+        if rec["revision"] != inputs[label]["revision"]:
+            raise _corpus_pin.CorpusPinError(f"{label} moved mid-run: {inputs[label]['revision']} -> {rec['revision']}")
     report = {
+        "csl_orig_revision": None,
+        "input_revisions": {k: v["revision"] for k, v in inputs.items()},
         "source1_cross_issues": cross_issues,
         "issue_breakdown": issue_rows,
         "source2_pet_corrected_hw": len(hw_c["PET"]), "source2_mw_corrected_hw": len(hw_c["MW"]),
@@ -285,12 +298,8 @@ def main():
         json.dump(report, f, indent=2, ensure_ascii=False)
 
     print(f"\nWrote shared_corrections.csv ({len(rows)} rows), f4_report.json")
-    try:
-        sys.path.insert(0, os.path.abspath("scripts/L0"))
-        from _provenance import write_source
-        write_source("data/forensic/shared_corrections.csv", "f4_shared_corrections.py", 4)
-    except Exception as e:
-        print(f"Provenance error: {e}")
+    _corpus_pin.write_pinned_source("data/forensic/shared_corrections.csv", "f4_shared_corrections.py", 4,
+                                    None, inputs=inputs)
 
 
 if __name__ == "__main__":

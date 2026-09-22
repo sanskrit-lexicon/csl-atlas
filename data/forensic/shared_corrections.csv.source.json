@@ -1,6 +1,21 @@
 {
   "stage": 4,
-  "commit": "20677fb67373d30f50594f767b41c7fa77ed3ddb",
-  "utc_iso": "2026-06-03T16:13:31.331334+00:00",
-  "script": "f4_shared_corrections.py"
+  "commit": "49a7e89fde0c9c4c2fd78934b0e6e5ad5e266bb6",
+  "utc_iso": "2026-09-22T15:46:04.095359+00:00",
+  "script": "f4_shared_corrections.py",
+  "csl_orig": {
+    "read": false,
+    "revision": null,
+    "note": "figure reads no csl-orig file; its inputs are pinned under `inputs`"
+  },
+  "inputs": {
+    "PWG/pwgissues": {
+      "revision": "05a023a18459c572ded097624c65495d21557253",
+      "via": "live_checkout"
+    },
+    "csl-corrections": {
+      "revision": "3cb692daf1a31361d0479fdbe22c1e06031d4fdc",
+      "via": "live_checkout"
+    }
+  }
 }

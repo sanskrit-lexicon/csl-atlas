@@ -33,6 +33,7 @@ import itertools
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 from parse_cslorig import load_entries, PARSED_DIR
+import _corpus_pin
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -66,6 +67,10 @@ def main():
     stats = json.load(open(os.path.join(PARSED_DIR, "_parse_stats.json"), encoding="utf-8"))
     hom_codes = sorted(s["code"].upper() for s in stats if s["with_homonym"] >= MIN_HOM)
     print(f"\nHomonym-bearing dicts (>= {MIN_HOM} <h>): {', '.join(hom_codes)}")
+    # H5260: part (b) reads EVERY parsed cache, so pin all of them to one csl-orig revision up front.
+    all_codes = sorted(os.path.basename(p)[:-4] for p in glob.glob(os.path.join(PARSED_DIR, "*.tsv")))
+    pin = _corpus_pin.cache_revision(all_codes, PARSED_DIR)
+    print(f"csl-orig revision (hash-bound parse provenance): {pin['revision']}")
 
     hc = {c: hcount_map(c.lower()) for c in hom_codes}
 
@@ -98,7 +103,6 @@ def main():
         w.writerows(rows)
 
     # ---- (b) raw-headword exclusive pool: k1 in exactly {MW, Petersburg} among all parsed ----
-    all_codes = sorted(os.path.basename(p)[:-4] for p in glob.glob(os.path.join(PARSED_DIR, "*.tsv")))
     k1_dicts = collections.defaultdict(set)
     for code in all_codes:
         for e in load_entries(code):
@@ -145,6 +149,7 @@ def main():
           f"{len(pool):,} (PWG {pool_pwg:,}, PW {pool_pw:,}) — triage in raw_headword_pool.csv")
 
     report = {
+        "csl_orig_revision": pin["revision"],
         "min_hom": MIN_HOM, "homonym_dicts": hom_codes,
         "n_pairs": len(rows),
         "lineage": {f"{a}/{b}": get(a, b) for a, b in LINEAGE if get(a, b)},
@@ -166,12 +171,8 @@ def main():
 
     print(f"\nWrote homonym_concordance.csv ({len(rows)} pairs), "
           f"raw_headword_pool.csv ({len(pool):,}), f2_report.json")
-    try:
-        sys.path.insert(0, os.path.abspath("scripts/L0"))
-        from _provenance import write_source
-        write_source("data/forensic/homonym_concordance.csv", "f2_structure.py", 2)
-    except Exception as e:
-        print(f"Provenance error: {e}")
+    for out in ("data/forensic/homonym_concordance.csv", "data/forensic/raw_headword_pool.csv"):
+        _corpus_pin.write_pinned_source(out, "f2_structure.py", 2, pin)
 
 
 if __name__ == "__main__":

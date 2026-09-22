@@ -27,7 +27,10 @@ import json
 
 import f2_structure as f2
 import parse_cslorig
-from conftest import write_text, write_tsv
+import pytest
+
+import _corpus_pin
+from conftest import FIXTURE_REVISION, write_parse_provenance, write_text, write_tsv
 
 
 def _rows(spec):
@@ -82,6 +85,7 @@ def _null(parsed):
 def _run(tmp_path, monkeypatch, forensic_cwd, build):
     parsed = tmp_path / "parsed"
     build(parsed)
+    write_parse_provenance(parsed, sorted(p.stem for p in parsed.glob("*.tsv")))   # H5260: every cache pinned
     monkeypatch.setattr(parse_cslorig, "PARSED_DIR", str(parsed))
     monkeypatch.setattr(f2, "PARSED_DIR", str(parsed))
     monkeypatch.setattr(f2, "MIN_HOM", 1)
@@ -132,3 +136,26 @@ def test_null_fixture_zero_agreement_zero_pool(tmp_path, monkeypatch, forensic_c
     pin("f2", "null.deep", ("0", "0", "0.0"), (row["deep_split_both_3plus"], row["deep_agree"], row["deep_agreement_rate"]))
     pin("f2", "null.raw_pool_total", 0, report["raw_pool_total"])
     pin("f2", "null.raw_pool.csv_rows", 0, len(pool))
+
+
+def test_csl_orig_pin_in_report_and_both_sidecars(tmp_path, monkeypatch, forensic_cwd, pin):
+    """H5260: F2 names the one csl-orig revision behind every cache it read."""
+    report, _conc, _pool = _run(tmp_path, monkeypatch, forensic_cwd, _positive)
+    pin("f2", "csl_orig_revision(H5260)", FIXTURE_REVISION, report["csl_orig_revision"])
+    for out in ("homonym_concordance.csv", "raw_headword_pool.csv"):
+        side = json.loads((forensic_cwd / f"data/forensic/{out}.source.json").read_text(encoding="utf-8"))
+        pin("f2", f"sidecar.{out}.csl_orig", (FIXTURE_REVISION, "parse_provenance"),
+            (side["csl_orig"]["revision"], side["csl_orig"]["via"]))
+
+
+def test_refuses_when_one_cache_is_unrecorded(tmp_path, monkeypatch, forensic_cwd):
+    """H5260: part (b) reads EVERY cache, so one unrecorded cache (ap) refuses the whole figure."""
+    parsed = tmp_path / "parsed"
+    _positive(parsed)
+    write_parse_provenance(parsed, ["mw", "pw", "pwg"])
+    monkeypatch.setattr(parse_cslorig, "PARSED_DIR", str(parsed))
+    monkeypatch.setattr(f2, "PARSED_DIR", str(parsed))
+    monkeypatch.setattr(f2, "MIN_HOM", 1)
+    with pytest.raises(_corpus_pin.CorpusPinError, match="ap: unrecorded"):
+        f2.main()
+    assert not (forensic_cwd / "data/forensic/f2_report.json").exists()

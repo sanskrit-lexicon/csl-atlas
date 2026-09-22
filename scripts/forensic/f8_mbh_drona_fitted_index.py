@@ -48,10 +48,12 @@ sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/L0"))
 sys.path.insert(0, os.path.abspath("../sanskrit-util/py"))
-from _provenance import write_source
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _corpus_pin
 from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
 from sanskrit_util import slp1_simplify
+from parse_cslorig import CSL_ORIG
 from f8_mbh_census import load as load_cites, pwg_citations, mw_citations
 from f7_harivamsa_resolve import stem_key, build_index, fit_offsets, held_out, classify, TOKEN, W
 
@@ -110,8 +112,12 @@ def main():
     total_sh = len(V)
     print(f"vulgate book {BOOK}: {total_sh} shlokas, {n_adh} adhyāyas")
 
+    # H5260: citations are re-read live from csl-orig, so pin the clean checkout before AND after.
+    pin = _corpus_pin.live_revision(CSL_ORIG)
     pwg_cites, _notes = load_cites("PWG", "pwg", pwg_citations)
     mw_cites, _ = load_cites("MW", "mw", mw_citations)
+    _corpus_pin.assert_unmoved(pin, CSL_ORIG)
+    print(f"csl-orig revision (live checkout, clean): {pin['revision']}")
     pwg = book_anchors(pwg_cites, BOOK)
     mw = book_anchors(mw_cites, BOOK)
     print(f"book-{BOOK} anchors: PWG={len(pwg)}  MW={len(mw)}")
@@ -130,7 +136,7 @@ def main():
           f"null={ho['null_rate']:.3f}  ->  {'PASS' if passed else 'FAIL'}")
     print(f"  δ dist (±{W}): {ho['delta_dist']}")
 
-    report = {"book": BOOK, "parva": "Droṇa", "vulgate_source": "sanatana.in (Nīlakaṇṭha vulgate)",
+    report = {"csl_orig_revision": pin["revision"], "book": BOOK, "parva": "Droṇa", "vulgate_source": "sanatana.in (Nīlakaṇṭha vulgate)",
               "n_verses": total_sh, "n_adhyaya": n_adh, "confident_adhyaya": n_conf,
               "anchors_pwg": len(pwg), "anchors_mw": len(mw),
               "held_out": ho, "held_out_pass": passed,
@@ -158,8 +164,8 @@ def main():
         report["classification_run"] = False
         json.dump(report, open(f"{OUT}/f8_drona_report.json", "w", encoding="utf-8"),
                   ensure_ascii=False, indent=1)
-        write_source(f"{OUT}/mbh_drona_fitted_index_offsets.csv", "f8_mbh_drona_fitted_index.py", 8)
-        write_source(f"{OUT}/mbh_drona_vulgate_concordance.csv", "f8_mbh_drona_fitted_index.py", 8)
+        _corpus_pin.write_pinned_source(f"{OUT}/mbh_drona_fitted_index_offsets.csv", "f8_mbh_drona_fitted_index.py", 8, pin)
+        _corpus_pin.write_pinned_source(f"{OUT}/mbh_drona_vulgate_concordance.csv", "f8_mbh_drona_fitted_index.py", 8, pin)
         print("\nwrote offsets + concordance + f8_drona_report.json (no resolution CSV — gate failed)")
         return
 
@@ -216,7 +222,7 @@ def main():
               ensure_ascii=False, indent=1)
     for p in ("mbh_drona_fitted_index_offsets.csv", "mbh_drona_vulgate_concordance.csv",
               "mbh_drona_citation_resolution.csv"):
-        write_source(f"{OUT}/{p}", "f8_mbh_drona_fitted_index.py", 8)
+        _corpus_pin.write_pinned_source(f"{OUT}/{p}", "f8_mbh_drona_fitted_index.py", 8, pin)
     print("\nwrote mbh_drona_vulgate_concordance.csv + mbh_drona_fitted_index_offsets.csv + "
           "mbh_drona_citation_resolution.csv + f8_drona_report.json")
 

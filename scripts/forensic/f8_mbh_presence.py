@@ -72,7 +72,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.abspath("scripts/L0"))
 sys.path.insert(0, os.path.abspath("../sanskrit-util/py"))
-from _provenance import write_source
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _corpus_pin
 from sanskrit_util import slp1_simplify
 
 OUT = "data/forensic"
@@ -171,6 +172,9 @@ def main():
                   file=sys.stderr)
             return 2
 
+    # H5260: reads only derived CSVs — inherit their csl-orig pin (refuse unpinned/MIXED).
+    pin = _corpus_pin.inherited_revision([CONCORDANCE, INVENTORY])
+    print(f"csl-orig revision (inherited from upstream sidecars): {pin['revision']}")
     vul = [json.loads(l) for l in open(VULGATE, encoding="utf-8")]
     bori = [json.loads(l) for l in open(BORI, encoding="utf-8")]
     print(f"vulgate {len(vul):,} verses · critical {len(bori):,} half-verses", flush=True)
@@ -308,6 +312,7 @@ def main():
     for r in rows:
         per_parvan[r["parvan"]][f"{r['vulgate']}/{r['critical']}"] += 1
     report = {
+        "csl_orig_revision": pin["revision"],
         "vulgate_verses": len(vul), "critical_half_verses": len(bori),
         "thresholds": {"gram": GRAM, "shingle": ANCHOR, "index_step": STEP,
                        "max_posting": MAX_POSTING, "top_candidates": TOP_CAND,
@@ -326,7 +331,7 @@ def main():
               ensure_ascii=False, indent=1)
     for path in ("mbh_vulgate_critical_presence.csv", "mbh_citation_presence.csv",
                  "mbh_presence_spotcheck.csv"):
-        write_source(f"{OUT}/{path}", "f8_mbh_presence.py", 8)
+        _corpus_pin.write_pinned_source(f"{OUT}/{path}", "f8_mbh_presence.py", 8, pin)
 
     print(f"\nverse-level: {dict(vc)}")
     print(f"citation-level: {dict(cc)}")

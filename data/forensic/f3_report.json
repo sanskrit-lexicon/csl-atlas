@@ -1,38 +1,39 @@
 {
+  "csl_orig_revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
   "pairs": [
     {
       "source": "PWG",
       "inheritor": "MW",
       "source_lang": "de",
-      "shared_glossed_lemmas": 68926,
-      "pearson_loglen": 0.6567,
-      "spearman_loglen": 0.5636
+      "shared_glossed_lemmas": 67198,
+      "pearson_loglen": 0.6576,
+      "spearman_loglen": 0.5641
     },
     {
       "source": "PW",
       "inheritor": "MW",
       "source_lang": "de",
       "shared_glossed_lemmas": 92347,
-      "pearson_loglen": 0.6425,
+      "pearson_loglen": 0.6424,
       "spearman_loglen": 0.5488
     },
     {
       "source": "AP",
       "inheritor": "MW",
       "source_lang": "en",
-      "shared_glossed_lemmas": 38135,
-      "pearson_loglen": 0.6308,
-      "spearman_loglen": 0.5757
+      "shared_glossed_lemmas": 38197,
+      "pearson_loglen": 0.6314,
+      "spearman_loglen": 0.5763
     },
     {
       "source": "BEN",
       "inheritor": "MW",
       "source_lang": "de",
-      "shared_glossed_lemmas": 15947,
-      "pearson_loglen": 0.3699,
-      "spearman_loglen": 0.2592
+      "shared_glossed_lemmas": 22699,
+      "pearson_loglen": 0.2279,
+      "spearman_loglen": 0.1341
     }
   ],
-  "differential_pwg_minus_ap_spearman": -0.0121,
+  "differential_pwg_minus_ap_spearman": -0.0122,
   "interpretation": "Proxy only. Entry length correlates across any dict pair via lemma importance, so read the DIFFERENTIAL MW~PWG minus MW~AP(independent English): -0.012. Positive = MW's article size tracks Böhtlingk's German more tightly than an independent English dict = consistent with adaptation. This is the WEAKEST forensic rung; token-level DE->EN alignment (real translation evidence) is deferred. The language-neutral F1 (citations) and F2 (homonyms) carry the load."
 }
