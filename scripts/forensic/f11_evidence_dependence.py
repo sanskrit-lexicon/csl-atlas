@@ -118,25 +118,43 @@ def sha256_file(path):
 
 
 def corpus_revision():
-    """The csl-orig revision the parsed caches were built from.
+    """What is known about the csl-orig revision behind the parsed caches.
 
-    No `.source.json` sidecar in this repo records it — they pin the *csl-atlas*
-    commit only — so the published forensic figures are not pinned to a corpus
-    state. Recording it here is what makes this audit re-runnable to the digit.
+    Two different things, kept apart (H5073 Astra finding 4):
+
+    * `cache_generating_revision` — read from `parsed/_parse_provenance.json`,
+      which `parse_cslorig.py` writes at cache-build time. Absent for a cache
+      built before that sidecar existed; then it is `None`, never guessed.
+    * `sibling_checkout_at_run` — the current HEAD of ../csl-orig when this
+      audit ran. It is NOT evidence of what built the cache: the checkout can
+      move while the cache stays put.
+
+    The binding pin for every figure is `source_hashes` (SHA-256 of each parsed
+    input); these revision fields are provenance leads, not the pin.
     """
     src = os.path.abspath(os.path.join(ATLAS_ROOT, "..", "csl-orig"))
-    if not os.path.isdir(os.path.join(src, ".git")):
-        return {"path": src, "revision": None, "note": "csl-orig not a git checkout here"}
-    try:
-        import subprocess
-        out = subprocess.run(["git", "-C", src, "log", "-1", "--format=%H|%cI"],
-                             capture_output=True, text=True, encoding="utf-8", timeout=30)
-        if out.returncode != 0:
-            return {"path": src, "revision": None, "note": out.stderr.strip()[:200]}
-        sha, iso = out.stdout.strip().split("|", 1)
-        return {"path": src, "revision": sha, "committed": iso}
-    except Exception as exc:                                   # noqa: BLE001
-        return {"path": src, "revision": None, "note": repr(exc)[:200]}
+    out = {"cache_generating_revision": None, "sibling_checkout_at_run": None,
+           "binding_pin": "source_hashes"}
+    prov_path = os.path.join(PARSED_DIR, "_parse_provenance.json")
+    if os.path.exists(prov_path):
+        with open(prov_path, encoding="utf-8") as fh:
+            prov = json.load(fh)
+        out["cache_generating_revision"] = prov.get("revision")
+        out["cache_generating_dirty"] = prov.get("dirty")
+    else:
+        out["cache_generating_note"] = ("parsed cache predates _parse_provenance.json; "
+                                        "its generating csl-orig revision is unrecorded")
+    if os.path.isdir(os.path.join(src, ".git")):
+        try:
+            import subprocess
+            r = subprocess.run(["git", "-C", src, "log", "-1", "--format=%H|%cI"],
+                               capture_output=True, text=True, encoding="utf-8", timeout=30)
+            if r.returncode == 0:
+                sha, iso = r.stdout.strip().split("|", 1)
+                out["sibling_checkout_at_run"] = {"revision": sha, "committed": iso}
+        except Exception as exc:                               # noqa: BLE001
+            out["sibling_checkout_note"] = repr(exc)[:200]
+    return out
 
 
 def fingerprint(paths):
@@ -323,7 +341,7 @@ def global_convention(d, min_sigils=2):
     return {s: tot / n for s, (tot, n) in acc.items() if n}
 
 
-def convention_split(mw, other, entries, conv_mw, conv_other):
+def convention_split(mw, other, entries, conv_mw, conv_other, loci=None):
     """Split C2's concordance into convention-explained and convention-defying.
 
     For each order-bearing entry, partition the scored sigil pairs by whether
@@ -331,6 +349,14 @@ def convention_split(mw, other, entries, conv_mw, conv_other):
     direction. Agreement on convention-concordant pairs is what a shared
     lexicographic habit predicts; agreement on convention-DISCORDANT pairs is
     what only working from the other dictionary's article predicts.
+
+    If ``loci`` is a dict, every convention-DISCORDANT pair is recorded into it
+    as ``(k1, x, y) -> observed`` so arms can be compared on the SAME pairs
+    (H5073 Astra finding 2: PWG and BEN otherwise score different populations).
+
+    Pair agreement is not a copying rate: two dictionaries that never copied
+    each other but share a *contextual* ordering can score 1.0 here (pinned in
+    tests as the conditional-convention counterexample).
     """
     agree_c = tot_c = agree_d = tot_d = 0
     n_entries = 0
@@ -360,12 +386,61 @@ def convention_split(mw, other, entries, conv_mw, conv_other):
                 else:
                     tot_d += 1
                     agree_d += 1 if observed else 0
+                    if loci is not None:
+                        loci[(k1, x, y)] = observed
     return {
         "entries_scored": n_entries,
         "convention_concordant_pairs": tot_c,
         "agreement_on_convention_concordant": round(agree_c / tot_c, 4) if tot_c else None,
         "convention_discordant_pairs": tot_d,
         "agreement_on_convention_discordant": round(agree_d / tot_d, 4) if tot_d else None,
+    }
+
+
+def arm_comparison(loci_a, loci_b, rng, iters=1000):
+    """Compare two CTRL-CONV arms honestly (H5073 Astra finding 2).
+
+    * population: contributing entries per arm and the discordant loci they share;
+    * matched: agreement of each arm on the loci BOTH arms score;
+    * unmatched difference with an entry-clustered bootstrap interval (entries
+      resampled with replacement within each arm, independently), because pairs
+      inside one entry are not independent draws.
+    """
+    def by_entry(loci):
+        out = collections.defaultdict(list)
+        for (k1, _x, _y), obs in sorted(loci.items()):
+            out[k1].append(1 if obs else 0)
+        return out
+
+    ea, eb = by_entry(loci_a), by_entry(loci_b)
+    shared = sorted(set(loci_a) & set(loci_b))
+
+    def rate(entries_map, keys):
+        n = sum(len(entries_map[k]) for k in keys)
+        return sum(sum(entries_map[k]) for k in keys) / n if n else None
+
+    ka, kb = sorted(ea), sorted(eb)
+    diffs = []
+    for _ in range(iters):
+        ra = rate(ea, [ka[rng.randrange(len(ka))] for _ in ka]) if ka else None
+        rb = rate(eb, [kb[rng.randrange(len(kb))] for _ in kb]) if kb else None
+        if ra is not None and rb is not None:
+            diffs.append(ra - rb)
+    diffs.sort()
+    lo = diffs[int(0.025 * len(diffs))] if diffs else None
+    hi = diffs[int(0.975 * len(diffs)) - 1] if diffs else None
+    return {
+        "contributing_entries": {"a": len(ea), "b": len(eb)},
+        "discordant_pairs": {"a": len(loci_a), "b": len(loci_b)},
+        "shared_discordant_loci": len(shared),
+        "shared_entries": len({k for k, _x, _y in shared}),
+        "matched_agreement": {
+            "a": round(sum(loci_a[k] for k in shared) / len(shared), 4) if shared else None,
+            "b": round(sum(loci_b[k] for k in shared) / len(shared), 4) if shared else None,
+        },
+        "unmatched_difference": round(rate(ea, ka) - rate(eb, kb), 4) if ka and kb else None,
+        "entry_cluster_bootstrap_95": [round(lo, 4), round(hi, 4)] if diffs else None,
+        "bootstrap_iters": iters,
     }
 
 
@@ -668,7 +743,9 @@ def main():
     conv_arms = {"PWG": (pwg, c2)}
     for code in ("PW", "AP", "BEN"):
         conv_arms[code] = (dicts[code], order_entries(dicts[code]))
-    ctrl_conv = {code: convention_split(mw, other, ents, conv["MW"], conv[code])
+    conv_loci = {code: {} for code in conv_arms}
+    ctrl_conv = {code: convention_split(mw, other, ents, conv["MW"], conv[code],
+                                        loci=conv_loci[code])
                  for code, (other, ents) in conv_arms.items()}
 
     MIN_REF_PAIRS = 50          # an arm below this is reported but not used as the floor
@@ -692,10 +769,15 @@ def main():
             "agreement_on_convention_discordant"], 4) if (best_ref and pwg_d is not None) else None),
         "pwg_excess_over_permutation_floor": (round(pwg_d - ctrl_perm["PWG"]["mean_concordance"], 4)
                                               if pwg_d is not None else None),
-        "note": ("the defensible margin is the excess over the best non-lineage reference, "
-                 "not over the permutation floor; BEN carries its own Petersburg exposure, "
-                 "so it is a conservative, imperfect negative control"),
+        "note": ("the excess over the best non-lineage reference is a DESCRIPTIVE difference "
+                 "between two different pair populations, not an identified copying excess; "
+                 "see pwg_vs_best_reference for the matched loci and an entry-clustered "
+                 "bootstrap. BEN carries its own Petersburg exposure."),
     }
+    # A separate RNG so this block cannot perturb the frozen CTRL-PERM draws.
+    if best_ref:
+        ctrl_conv["_reference_floor"]["pwg_vs_best_reference"] = arm_comparison(
+            conv_loci["PWG"], conv_loci[best_ref], random.Random(SEED + 1))
 
     # ---- CTRL-DUP / CTRL-NOVEL / CTRL-PWDUP ------------------------------
     ctrl_dup = seeded_duplicate_witness(rare)
@@ -764,9 +846,10 @@ def main():
         pub_f9 = {r["probe"]: r for r in csv.DictReader(fh)}
     repro = {
         "note": ("The published figures were produced on 2026-06-03 against an unpinned "
-                 "../csl-orig; this run reads the revision recorded under corpus_revision. "
-                 "Deltas below are corpus drift, not arithmetic disagreement — the pinned "
-                 "arithmetic tests (tests/forensic, H4352) still pass."),
+                 "../csl-orig. Upstream corpus drift is the most plausible cause of the deltas "
+                 "below (the pinned arithmetic tests, tests/forensic H4352, still pass), but it "
+                 "is not proven the exclusive cause: neither the 2026-06-03 run nor this "
+                 "cache's generating csl-orig revision was recorded (see corpus_revision)."),
         "S-F1-RARE": {"published": pub_f1["n_smoking_guns"], "reproduced": len(rare)},
         "S-F1-RARE-HARIV": {"published": pub_f1["smoking_gun_sources"].get("HARIV"),
                             "reproduced": harivamsa},
@@ -847,8 +930,9 @@ def main():
         print(f"  CTRL-ABL-S  {pair:8s} {v['mean_source_jaccard']} -> "
               f"{v['mean_source_jaccard_top_sigils_ablated']} (top-{ABLATE_TOP_SIGILS} sigils dropped)")
     print("\n-- reproduction vs the frozen published figures --------------------")
-    print(f"  corpus_revision {report['corpus_revision'].get('revision')} "
-          f"({report['corpus_revision'].get('committed')})")
+    cr = report["corpus_revision"]
+    print(f"  corpus_revision: cache-generating {cr.get('cache_generating_revision')} · "
+          f"sibling checkout at run {(cr.get('sibling_checkout_at_run') or {}).get('revision')}")
     for k, v in repro.items():
         if k != "note":
             print(f"  {k:14s} {v}")

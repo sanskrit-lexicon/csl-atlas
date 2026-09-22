@@ -240,21 +240,25 @@ def test_ctrl_novel_can_fail_where_ctrl_dup_cannot(graphs, f11, pin):
     """CTRL-DUP's Δ=0 is structural; this is its falsifiable twin.
 
     Fixture rare_events (module docstring): 4 triples over 3 distinct
-    (lemma, ref) keys — (deva, HARIV. 900) carries both PWG and PW. Injecting
-    at novel refs with n_inject=2 walks the SORTED triples and suffixes the ref,
-    so the first two triples in sort order yield two DISTINCT new keys and
-    independent support must rise by exactly 2, while the naive count rises by
-    the triple count. An accounting that keyed on the witness would rise by more
-    than the distinct-key count; one that dropped the ref would not rise at all.
+    (lemma, ref) keys. Sorted, they are (deva, HARIV. 855, PWG),
+    (deva, HARIV. 900, PW), (deva, HARIV. 900, PWG), (indra, TS. 1,2, PWG).
+    With n_inject=3 the injector suffixes the refs of the first three, so the
+    last TWO injected triples land on ONE new key (deva, HARIV. 900 [SEEDED]) —
+    3 triples, 2 distinct keys. Independent support must rise by exactly 2:
+    an accounting that counted triples (keyed on the witness) would rise by 3,
+    one that dropped the ref would not rise at all. (H5073 Astra finding 5: the
+    earlier n_inject=2 hit two distinct keys and could not tell these apart.)
     """
     _dicts, g = graphs
-    out = f11.seeded_novel_witness(g["rare_events"], n_inject=2)
-    pin("f11", "CTRL-NOVEL.injected_triples", 2, out["injected_novel_triples"])
+    out = f11.seeded_novel_witness(g["rare_events"], n_inject=3)
+    pin("f11", "CTRL-NOVEL.injected_triples", 3, out["injected_novel_triples"])
     pin("f11", "CTRL-NOVEL.distinct_new_events", 2, out["distinct_new_source_events"])
-    pin("f11", "CTRL-NOVEL.after.naive", 6, out["after_seeding_novel_events"]["naive_witness_events"])
+    pin("f11", "CTRL-NOVEL.after.naive", 7, out["after_seeding_novel_events"]["naive_witness_events"])
     pin("f11", "CTRL-NOVEL.after.independent", 5,
         out["after_seeding_novel_events"]["independent_source_events"])
     pin("f11", "CTRL-NOVEL.independent_support_delta", 2, out["independent_support_delta"])
+    pin("f11", "CTRL-NOVEL.delta_below_triple_count", True,
+        out["independent_support_delta"] < out["injected_novel_triples"])
     pin("f11", "CTRL-NOVEL.control_passes", True, out["control_passes"])
 
 
@@ -430,3 +434,51 @@ def test_null_fixture_scores_exactly_zero(forensic_cwd, monkeypatch, f11, pin):
     pin("f11", "null.CTRL-CONV.entries_scored", 0, split["entries_scored"])
     pin("f11", "null.CTRL-CONV.agreement_discordant", None,
         split["agreement_on_convention_discordant"])
+
+
+def test_ctrl_conv_conditional_convention_counterexample(f11, pin):
+    """H5073 Astra finding 3: pair agreement on convention-discordant pairs is
+    not a copying rate. Two dictionaries sharing ONE fixed ordering B<Y<A<X and
+    the same contextual ordering in `target` — no copying anywhere — still score
+    1.0 on convention-discordant pairs, because the unequal background entries
+    shift each dictionary's *marginal* sigil positions in opposite directions.
+
+    Hand derivation (normalised position i/(n-1), averaged over every entry
+    the sigil appears in, `target` included):
+      a: A=(0+1)/2=0.5   B=(0.5+0)/2=0.25  C=1
+      b: A=(0+0)/2=0     B=(0.5+1)/2=0.75  C=1
+    target pairs over A,B,C:
+      (A,B) a: 0.5<0.25 no ; b: 0<0.75 yes -> DISCORDANT; b has A before B -> agree
+      (A,C) a yes ; b yes -> concordant      (B,C) a yes ; b yes -> concordant
+    So 1 discordant pair, agreement 1.0 — with no copying in the construction.
+    """
+    a = {"target": {"sigils": ["A", "B", "C"]},
+         "a": {"sigils": ["X", "A"]}, "b": {"sigils": ["B", "Y"]}}
+    b = {"target": {"sigils": ["A", "B", "C"]},
+         "a": {"sigils": ["A", "X"]}, "b": {"sigils": ["Y", "B"]}}
+    out = f11.convention_split(a, b, {"target"},
+                               f11.global_convention(a), f11.global_convention(b))
+    pin("f11", "CTRL-CONV.counterexample.discordant_pairs", 1,
+        out["convention_discordant_pairs"])
+    pin("f11", "CTRL-CONV.counterexample.agreement_discordant", 1.0,
+        out["agreement_on_convention_discordant"])
+
+
+def test_arm_comparison_matched_and_population(f11, pin):
+    """Hand fixture for the matched-loci comparison (H5073 Astra finding 2).
+
+    arm a: e1 (P,Q)=agree (P,R)=agree ; e2 (S,T)=disagree      -> 3 pairs, 2 entries, 2/3
+    arm b: e1 (P,Q)=disagree ; e3 (U,V)=agree                  -> 2 pairs, 2 entries, 1/2
+    shared loci = {(e1,P,Q)} -> matched a=1.0, b=0.0 ; shared entries 1
+    unmatched difference = 2/3 - 1/2 = 0.1667
+    """
+    import random
+    a = {("e1", "P", "Q"): True, ("e1", "P", "R"): True, ("e2", "S", "T"): False}
+    b = {("e1", "P", "Q"): False, ("e3", "U", "V"): True}
+    out = f11.arm_comparison(a, b, random.Random(1), iters=200)
+    pin("f11", "arm_comparison.contributing_entries", {"a": 2, "b": 2}, out["contributing_entries"])
+    pin("f11", "arm_comparison.discordant_pairs", {"a": 3, "b": 2}, out["discordant_pairs"])
+    pin("f11", "arm_comparison.shared_loci", 1, out["shared_discordant_loci"])
+    pin("f11", "arm_comparison.shared_entries", 1, out["shared_entries"])
+    pin("f11", "arm_comparison.matched", {"a": 1.0, "b": 0.0}, out["matched_agreement"])
+    pin("f11", "arm_comparison.unmatched_difference", 0.1667, out["unmatched_difference"])

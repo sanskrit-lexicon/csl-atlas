@@ -1,4 +1,4 @@
-_Created: 03-06-2026 · Last updated: 20-09-2026_
+_Created: 03-06-2026 · Last updated: 22-09-2026_
 
 # Apparatus, not errors: how Monier-Williams inherited the Petersburg lexicon
 
@@ -138,8 +138,8 @@ PWG's citation **sequence** at **0.811** concordance, with **47.8% of entries in
 identical order** — against a random baseline of 0.50 concordance and only ~5–17%
 chance-identical for k≥3 sources (a 3–10× excess). For example *droṇa*: both cite
 MBH · YĀJÑ · SUŚR · HARIV · VP in that order; *pratikartavya*: MBH · HARIV · ŚAṂK · R ·
-PRAB · SUŚR (six sources, identical sequence — random odds 1/720). The effect is
-Petersburg-*specific*, not a shared scholarly ordering convention: agreement falls
+PRAB · SUŚR (six sources, identical sequence — random odds 1/720). The effect points to
+Petersburg-*specificity* rather than a shared scholarly ordering convention: agreement falls
 monotonically with distance from the tradition — PWG 0.81 > PW 0.73 > Benfey 0.68 (itself
 Petersburg-influenced) > the independent Apte 0.42 (the Apte tail rests on 8 order-bearing
 entries and Benfey on 154 — thin, but the gradient is monotone). Because that independent arm
@@ -151,20 +151,22 @@ follows PWG's particular article **75.2%** of the time. The margin that matters 
 over a within-entry permutation floor (0.500 — that floor represents no signal at all) but the
 one over a dictionary that did *not* work from MW's source while writing in the same citation
 culture: Benfey manages 0.634 on the same pair class, so MW's excess over the best available
-non-lineage reference is **≈0.12**. Small, but real and monotone in claimed lineage distance
-(PWG 0.752 > PW 0.628 ≈ Benfey 0.634 ≫ permutation 0.500), and it rests on 4,685 pairs rather
-than on the 8-entry Apte tail. The caveats are stated in the audit: Benfey's own Petersburg
-exposure makes it a conservative negative control, its arm is only 101 discordant pairs, and a
-*conditional* ordering convention would be scored as convention-defying here, so 0.752 is an
-upper bound on article-level copying
+non-lineage reference is **≈0.12** (entry-clustered 95% interval +0.02 to +0.21). That margin is
+descriptive, not an identified copying excess: the two arms score largely different pairs
+(2,168 vs 64 contributing entries), and on the 24 pairs both score Benfey agrees *more*
+(0.75 vs 0.67); nor is the gradient monotone (PW 0.628 < Benfey 0.634). A *conditional*
+ordering convention would be scored as convention-defying here, and a constructed example
+with no copying scores 1.0, so 0.752 is a pair-agreement rate, not a bound on copying
 ([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §3.6, §7).
-MW did not merely consult Böhtlingk's
-sources; it assembled its entries **following Böhtlingk's entry**. This is the strongest
-single copying signal in the suite, and it is structural, not lexical. It is not, however, an
-*independent* signal: every one of these entries is by construction a §3.2 shared-cited
-lemma, so §3.2 and §3.4 are two questions put to one evidence base, not two corroborations
-(ibid. §3.1). The independent second leg is §3.5, 46.7% of whose anchor neither citation
-signal touches.
+The order agreement is what MW
+assembling its entries **following Böhtlingk's entry** would produce, and it is structural,
+not lexical; but the available controls cannot yet exclude a shared conditional ordering
+habit, so it is consistent with copying rather than proof of it. It is not, either, a
+*separate* body of evidence: every one of these entries is by construction a §3.2
+shared-cited lemma, so §3.2 and §3.4 are two questions put to one evidence base, not two
+corroborations (ibid. §3.1). The only locus-disjoint second leg is §3.5, 46.7% of whose anchor
+neither citation signal touches — disjoint loci, though not thereby statistically
+independent evidence.
 
 **3.5 Shared omission — the inventory backbone, from the negative-space side.** §3.1 shows
 shared *presence*; Böhtlingk's item #1 was shared *absence* — "was in Ihrem Werk ausgelaßen
@@ -351,13 +353,15 @@ install via `scripts/forensic/_setup_argos.py`; cache gitignored + rebuildable, 
 commit, not the `../csl-orig` revision the figures were computed over, and `csl-orig` receives
 upstream corrections continuously. The signals that read frozen `key1` exports (F9) therefore
 reproduce to the digit; those that read `csl-orig` live (F1, F5) drift. Re-run 20-09-2026
-against `csl-orig` [`30b2ae7b`](https://github.com/sanskrit-lexicon/csl-orig/commit/30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4)
+with the sibling `csl-orig` checkout at [`30b2ae7b`](https://github.com/sanskrit-lexicon/csl-orig/commit/30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4)
 (2026-08-29), three months after the 03-06-2026 freeze: the rare-reference pool moves 587 → 598
 (Harivaṃśa unchanged at 565), the order-bearing entries 3,593 → 3,583 with concordance
 0.8107 → 0.8108 and identical share 47.8% → 47.73%, and F9's 12.336 / 1.51 are unchanged. The
 arithmetic pins in `tests/forensic/` are unaffected — they run against fixtures. Until the
 sidecars carry a corpus revision, read the F1/F5 digits as a June-2026 snapshot; per-input
-SHA-256 hashes and the corpus revision for the audit run are recorded in
+SHA-256 hashes for the audit run (the binding pin; the cache's generating `csl-orig` revision
+itself went unrecorded, so upstream drift is the most plausible, not a proven, cause of the
+deltas) are recorded in
 [`f11_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f11_report.json)
 and [`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §4.
 
