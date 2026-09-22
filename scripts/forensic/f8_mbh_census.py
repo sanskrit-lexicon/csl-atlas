@@ -41,7 +41,8 @@ sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/L0"))
 from parse_cslorig import iter_entries, CSL_ORIG
-from _provenance import write_source
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _corpus_pin
 
 OUT = "data/forensic"
 ROMAN = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 8, "ix": 9,
@@ -223,8 +224,12 @@ def load(code, fname, extractor):
 
 def main():
     print("F8a — Mahābhārata citation census + Böhtlingk correction-notes (H610)")
+    # H5260: bodies are re-read live, so pin the clean checkout before AND after.
+    pin = _corpus_pin.live_revision(CSL_ORIG)
+    print(f"csl-orig revision (live checkout, clean): {pin['revision']}")
     pwg, pwg_notes = load("PWG", "pwg", pwg_citations)
     mw, _ = load("MW", "mw", mw_citations)
+    _corpus_pin.assert_unmoved(pin, CSL_ORIG)
     print(f"PWG MBH citations: {len(pwg)}   MW MBh citations: {len(mw)}   PWG notes: {len(pwg_notes)}")
 
     os.makedirs(OUT, exist_ok=True)
@@ -280,7 +285,7 @@ def main():
         w.writerow(["parvan", "cited_verse", "L", "headword_slp1", "parvan_robust_fence"])
         for b, v, Lid, k1, fence in typos:
             w.writerow([b, v, Lid, k1, int(fence)])
-    write_source(f"{OUT}/mbh_candidate_numeric_typos.csv", "f8_mbh_census.py", 8)
+    _corpus_pin.write_pinned_source(f"{OUT}/mbh_candidate_numeric_typos.csv", "f8_mbh_census.py", 8, pin)
 
     # report
     mw_forms = Counter(form for _, _, (_, _, form) in mw)
@@ -288,6 +293,7 @@ def main():
     for _, _, (b, v, _, _) in pwg:
         pwg_maxv[b] = max(pwg_maxv[b], v)
     report = {
+        "csl_orig_revision": pin["revision"],
         "pwg_mbh_citations": len(pwg),
         "mw_mbh_citations": len(mw),
         "mw_form_breakdown": dict(mw_forms),
@@ -302,7 +308,7 @@ def main():
     }
     json.dump(report, open(f"{OUT}/f8_report.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for p in ("mbh_citation_inventory.csv", "mbh_parvan_distribution.csv", "mbh_correction_notes.csv"):
-        write_source(f"{OUT}/{p}", "f8_mbh_census.py", 8)
+        _corpus_pin.write_pinned_source(f"{OUT}/{p}", "f8_mbh_census.py", 8, pin)
 
     print(f"\nMW forms: {dict(mw_forms)}")
     print(f"PWG parvan max cited verse (raw; some are PWG's own typos, e.g. 13,73001): "

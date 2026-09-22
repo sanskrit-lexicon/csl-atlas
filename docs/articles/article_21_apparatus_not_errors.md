@@ -110,8 +110,9 @@ headword***, each attested at ≤4 lemmas corpus-wide, 169 of them occurring now
 the corpus at all: e.g. `ullApya → SĀH. 545`, `dAsatA → VEṆĪS. 175`, `granTakAra →
 VEDĀNTAS. 1` (all three corpus-unique), and 565
 exact Harivaṃśa line-numbers (`HARIV. 9529` …). Those last are 94.5% of the pool (565/598 at the
-`csl-orig` revision every F1/F5 figure is pinned to, §7), and they are the *same* source events §6 resolves against the
-vulgate: the rare-reference mass and the
+`csl-orig` revision every F1/F5 figure is pinned to, §7), and they are the source events §6 resolves against the
+vulgate (516 of these 565 are the June-pool rows §6's vulgate arm resolved; 49 left the pool and 49 others
+entered it between the two corpus revisions, §7): the rare-reference mass and the
 Harivaṃśa run-to-ground are one line of evidence read at two resolutions, not two independent
 ones. Ablating Harivaṃśa leaves 33 rare shared references over 18 other texts — the
 idiosyncratic-apparatus signal is real but concentrated
@@ -241,8 +242,8 @@ genuine figure is ≈ **0%**. Where PWG erred, MW has the *correct* form (90 cas
 lacks the word (31). MW's text is independent of PWG's typesetting accidents.
 
 **4.2 The null-test trap.** A naïve corpus null is misleading here: headwords corrected in
-*both* a Petersburg dict and MW number 256 against 102.8 expected by chance — a lift of
-**2.49** (hypergeometric p ≈ 4×10⁻⁴¹). Taken alone this *looks* like shared errors. It is
+*both* a Petersburg dict and MW number 260 against 103.3 expected by chance — a lift of
+**2.52** (hypergeometric p ≈ 1.5×10⁻⁴²). Taken alone this *looks* like shared errors. It is
 not: it is the *same hard words* attracting corrections in both works, with **different**
 errors in each — convergence on difficult vocabulary, compounded by editorial coupling
 (the Cologne `pwgissues` bundles correct one word across several dictionaries by design).
@@ -288,12 +289,12 @@ edition can match. The airtight upgrade, in classical stemmatic terms, would be 
 **erroneous** citation — a verse number wrong against the actual text, present in both
 dictionaries. I ran that test twice, against the two corpora available.
 
-**Against the DCS corpus the test is structurally blocked.** Of the 587 shared rare
-citations in the June-2026 F1 pool this F8 run resolved (598 at the §7 pin; the 565
-Harivaṃśa references are identical in both), only **1** resolved to a DCS locus: 96 % are Harivaṃśa references, cited by the
+**Against the DCS corpus the test is structurally blocked.** Of the 598 shared rare
+citations at the §7 pin, only **1** resolved to a DCS locus (re-run 22-09-2026; the June
+587-row pool gave the same single candidate): 94.5 % are Harivaṃśa references, cited by the
 Petersburg dictionaries in the **Calcutta-vulgate continuous śloka numbering** (running to
-16 291), while DCS carries the **critical edition** (118 chapters, ≈ 6 073 verses). 298
-references provably exceed the entire DCS Harivaṃśa, and the single resolvable candidate
+16 291), while DCS carries the **critical edition** (118 chapters, ≈ 6 073 verses). 293
+references provably exceed the entire DCS Harivaṃśa (298 in the June pool), and the single resolvable candidate
 (CAURAP. (A.) 49) is a recension artifact, not an editor-independent wrong locus (full
 per-candidate classification:
 [`VisualDCS …/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md`](https://github.com/gasyoun/VisualDCS/blob/main/src/DCS-data-2026/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md);
@@ -312,9 +313,10 @@ dictionaries actually cite, using a free vulgate e-text (Kinjawadekar, Chitrasha
 **15,364 verses = 93.8 %** of the 16,374-śloka vulgate). A per-adhyāya continuous index was
 fitted on 14,471 PWG anchors and **validated on 815 held-out MW anchors: 68.4 % land within
 ±3 of their cited śloka vs a 2.1 % shuffled-N null (≈ 33×)** — the index is trustworthy. Of
-the **565** shared rare Harivaṃśa citations, **206 (37.7 %) corroborate at the exact cited
+the **565** shared rare Harivaṃśa citations in the June pool (this vulgate arm has not been
+re-run at the §7 pin, where 49 of those rows are exchanged for 49 others — see §7), **206 (37.7 %) corroborate at the exact cited
 vulgate śloka** (e.g. `kīrtimant` `HARIV. 62` → verse 1-2-9 *…kīrtimantaṃ ca…*) against a
-**0.5 % shuffled-N null — a ≈ 75× enrichment, and against 1 of 587 resolvable via DCS.**
+**0.5 % shuffled-N null — a ≈ 75× enrichment, and against 1 of 598 resolvable via DCS.**
 This upgrades the citation evidence from *shared editions* to a **shared, verse-level,
 verifiably-correct apparatus.** The *airtight* upgrade — a shared **erroneous** citation —
 is **not** obtained, and the reason is positive rather than circumstantial: displaced cases
@@ -358,15 +360,27 @@ exports) reproduced to the digit. Every F1 and F5 figure in this article is now 
 revision, and the scripts refuse to write a figure if it is unrecorded, dirty, mixed across caches
 or moves mid-run. A second clean run at that revision, from a rebuilt cache, reproduces every
 re-frozen figure to the digit, and the output files are byte-identical across hash seeds. What moved against the June freeze: the rare-reference pool
-587 → 598 (Harivaṃśa unchanged at 565; corpus-unique 203 → 169), the order-bearing entries
+587 → 598 (Harivaṃśa count unchanged at 565, though 49 rows left the pool and 49 others entered it; corpus-unique 203 → 169), the order-bearing entries
 3,593 → 3,583 (concordance 0.8107 → 0.8108, identical share 47.8% → 47.7%), PWG→MW truncations
 41,552 → 41,571, the lineage source-Jaccard band 0.16–0.19 → 0.16–0.18 (Apte null 0.017 → 0.016;
 separation 9.5–49× → 9.7–47×), and the Benfey order arm 0.68 on 154 entries → 0.70 on 116.
 No verdict changes. The June values stay in the `superseded_2026_06_03` block of
 [`f11_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f11_report.json)
 ([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §4).
-Not re-frozen: F8 (§6, which ran against the June 587 pool) and F10 (sense order; its writer now
-records the revision on its next run).
+**Extended to F2–F4 and F8 (H5260, 22-09-2026).** F2 and F4b pin the parsed caches, F3 and the F8
+Mahābhārata census pin the live checkout, all at the same `f4c08c57`; F4 reads no `csl-orig` file,
+so its sidecar pins the two correction checkouts it does read (`PWG/pwgissues`, `csl-corrections`)
+instead of claiming a corpus revision. The F8 stages that read only derived tables inherit the pin
+from those tables' sidecars and refuse an unpinned or mixed upstream. Re-running at the pin, byte-
+identical across hash seeds: §4.2's null 256 vs 102.8 (lift 2.49, p ≈ 4×10⁻⁴¹) → 260 vs 103.3
+(lift 2.52, p ≈ 1.5×10⁻⁴²), the 2/123 direct test unchanged; F3 PWG 0.5641 vs Apte 0.5763
+(differential −0.012, unchanged at the precision of §4.3); the F2 deep-split agreements of §3.3
+unchanged at whole-percent precision (MW/PWG 65.3 % → 65.1 %); F4a's zero shared print errors
+unchanged. The §6 DCS arm, re-run against the 598-row pool, resolves the same single candidate.
+Not re-frozen: the §6 **vulgate arm** (F7) and the F8 stages that read the vulgate/critical witness
+texts — those witnesses are rights-restricted derived e-texts kept out of the repository, and this
+re-freeze ran where they are absent. The vulgate figures (206 of 565) therefore describe the June
+membership, 516 of whose 565 rows survive at the pin. F10 (sense order) also still awaits a run at the pin.
 
 Per-run provenance in the
 `.source.json` sidecars.

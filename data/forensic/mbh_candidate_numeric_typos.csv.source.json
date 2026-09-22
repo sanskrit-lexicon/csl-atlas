@@ -1,6 +1,10 @@
 {
   "stage": 8,
-  "commit": "289eb05b6250c940907bd318cc256baf4f135f0d",
-  "utc_iso": "2026-07-11T12:22:08.586235+00:00",
-  "script": "f8_mbh_census.py"
+  "commit": "49a7e89fde0c9c4c2fd78934b0e6e5ad5e266bb6",
+  "utc_iso": "2026-09-22T15:46:13.117167+00:00",
+  "script": "f8_mbh_census.py",
+  "csl_orig": {
+    "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+    "via": "live_checkout"
+  }
 }

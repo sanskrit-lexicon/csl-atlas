@@ -38,7 +38,8 @@ import pytest
 
 import f4b_ahlborn_nulltest as f4b
 import parse_cslorig
-from conftest import write_text, write_tsv
+import _corpus_pin
+from conftest import FIXTURE_REVISION, git_commit_all, write_parse_provenance, write_text, write_tsv
 
 AHLBORN = """<pwg err="typo" corr="anarGya">anarDya</pwg> <mw>anarGya</mw>
 <pwg err="typo" corr="abc">abd</pwg> <mw>abd</mw>
@@ -75,6 +76,7 @@ def _parsed(tmp_path):
     write_tsv(parsed / "pw.tsv", [(1, "a", "", "", "", 0, ""), (2, "b", "", "", "", 0, "")])
     write_tsv(parsed / "sch.tsv", [])
     write_tsv(parsed / "pwkvn.tsv", [])
+    write_parse_provenance(parsed, ["mw", "pwg", "pw", "sch", "pwkvn"])   # H5260
     return parsed
 
 
@@ -83,8 +85,12 @@ def _run(tmp_path, monkeypatch, forensic_cwd, ahlborn, pet_corrected, mw_correct
     corr = tmp_path / "corr" / "dictionaries"
     write_text(corr / "pwg" / "change_pwg_1.txt", _change(pet_corrected))
     write_text(corr / "mw" / "change_mw_1.txt", _change(mw_corrected))
+    ahl = write_text(tmp_path / "ahl" / "ahlborn.txt", ahlborn)
+    git_commit_all(tmp_path / "corr")      # H5260: correction inputs must be clean checkouts
+    git_commit_all(tmp_path / "ahl")
     monkeypatch.setattr(parse_cslorig, "PARSED_DIR", str(parsed))
-    monkeypatch.setattr(f4b, "AHLBORN", str(write_text(tmp_path / "ahlborn.txt", ahlborn)))
+    monkeypatch.setattr(f4b, "PARSED_DIR", str(parsed))
+    monkeypatch.setattr(f4b, "AHLBORN", str(ahl))
     monkeypatch.setattr(f4b, "CORR_DIRS", [str(tmp_path / "corr")])
     f4b.main()
     return json.loads((forensic_cwd / "data/forensic/f4b_report.json").read_text(encoding="utf-8"))
@@ -146,3 +152,29 @@ def test_main_null_fixture_zero_shared(tmp_path, monkeypatch, forensic_cwd, pin)
     pin("f4b", "null.null_lift", 0.0, report["null_lift"])
     pin("f4b", "null.null_p", 1.0, report["null_p"])
     pin("f4b", "null.shared_corrected_examples", [], report["shared_corrected_examples"])
+
+
+def test_main_pins_caches_and_correction_inputs(tmp_path, monkeypatch, forensic_cwd, pin):
+    """H5260: the report names the parsed caches' csl-orig revision; the sidecar
+    also pins every correction checkout the null test read."""
+    pytest.importorskip("scipy")
+    report = _run(tmp_path, monkeypatch, forensic_cwd, AHLBORN_MAIN,
+                  pet_corrected=["a", "b", "x"], mw_corrected=["a", "c", "e"])
+    side = json.loads((forensic_cwd / "data/forensic/ahlborn_mw_comparison.csv.source.json")
+                      .read_text(encoding="utf-8"))
+    pin("f4b", "csl_orig_revision(H5260)", FIXTURE_REVISION, report["csl_orig_revision"])
+    pin("f4b", "sidecar.csl_orig", (FIXTURE_REVISION, "parse_provenance"),
+        (side["csl_orig"]["revision"], side["csl_orig"]["via"]))
+    pin("f4b", "sidecar.inputs", sorted([str(tmp_path / "corr"), str(tmp_path / "ahl")]), sorted(side["inputs"]))
+
+
+def test_main_refuses_a_hash_mismatched_cache(tmp_path, monkeypatch, forensic_cwd):
+    """H5260: a cache edited after its provenance was recorded refuses before any output."""
+    pytest.importorskip("scipy")
+    parsed = _parsed(tmp_path)
+    write_tsv(parsed / "pw.tsv", [(1, "q", "", "", "", 0, "")])
+    monkeypatch.setattr(parse_cslorig, "PARSED_DIR", str(parsed))
+    monkeypatch.setattr(f4b, "PARSED_DIR", str(parsed))
+    with pytest.raises(_corpus_pin.CorpusPinError, match="pw: hash-mismatch"):
+        f4b.main()
+    assert not (forensic_cwd / "data/forensic/f4b_report.json").exists()

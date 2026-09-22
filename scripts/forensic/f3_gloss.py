@@ -30,6 +30,7 @@ import collections
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 from parse_cslorig import iter_entries, CSL_ORIG
+import _corpus_pin
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -93,6 +94,9 @@ def main():
     print("F3 — gloss-length tracking DE->EN (cross-lingual proxy; weakest signal)")
     print("=" * 64)
 
+    # H5260: bodies are re-read live, so pin the clean checkout before AND after.
+    pin = _corpus_pin.live_revision(CSL_ORIG)
+    print(f"csl-orig revision (live checkout, clean): {pin['revision']}")
     cache = {}
     rows = []
     for a, b, lang in PAIRS:
@@ -101,7 +105,7 @@ def main():
         if b not in cache:
             cache[b] = gloss_len_map(b, "en")
         ga, gb = cache[a], cache[b]
-        shared = [k for k in ga.keys() & gb.keys() if ga[k] > 0 and gb[k] > 0]
+        shared = [k for k in sorted(ga.keys() & gb.keys()) if ga[k] > 0 and gb[k] > 0]
         xs = [math.log1p(ga[k]) for k in shared]
         ys = [math.log1p(gb[k]) for k in shared]
         pear, spear = corr(xs, ys)
@@ -124,7 +128,9 @@ def main():
     print(f"\nDifferential MW~PWG(de) - MW~AP(independent en) = {diff:+.3f} "
           f"({'PWG tracks tighter' if diff > 0 else 'no DE->EN advantage'})")
 
+    _corpus_pin.assert_unmoved(pin, CSL_ORIG)
     report = {
+        "csl_orig_revision": pin["revision"],
         "pairs": rows,
         "differential_pwg_minus_ap_spearman": diff,
         "interpretation": ("Proxy only. Entry length correlates across any dict pair via lemma "
@@ -139,12 +145,7 @@ def main():
         json.dump(report, f, indent=2, ensure_ascii=False)
 
     print(f"\nWrote gloss_length_correlation.csv ({len(rows)} pairs), f3_report.json")
-    try:
-        sys.path.insert(0, os.path.abspath("scripts/L0"))
-        from _provenance import write_source
-        write_source("data/forensic/gloss_length_correlation.csv", "f3_gloss.py", 3)
-    except Exception as e:
-        print(f"Provenance error: {e}")
+    _corpus_pin.write_pinned_source("data/forensic/gloss_length_correlation.csv", "f3_gloss.py", 3, pin)
 
 
 if __name__ == "__main__":

@@ -38,7 +38,8 @@ import json
 import pytest
 
 import f4_shared_corrections as f4
-from conftest import write_text
+import _corpus_pin
+from conftest import git_commit_all, write_text
 
 
 def _issue(root, name, files):
@@ -93,6 +94,8 @@ def _fixture_null(tmp_path):
 
 
 def _run(tmp_path, monkeypatch, forensic_cwd):
+    for repo in ("pwgissues", "csl-corrections"):   # H5260: both inputs must be clean checkouts
+        git_commit_all(tmp_path / repo)
     monkeypatch.setattr(f4, "PWGISSUES", str(tmp_path / "pwgissues"))
     monkeypatch.setattr(f4, "CSLCORR", str(tmp_path / "csl-corrections"))
     f4.main()
@@ -180,3 +183,29 @@ def test_null_fixture_reports_zero_shared(tmp_path, monkeypatch, forensic_cwd, p
     pin("f4", "null.shared_print_error_headwords", [], report["shared_print_error_headwords"])
     pin("f4", "null.n_shared_correction_rows", 0, report["n_shared_correction_rows"])
     pin("f4", "null.csv.rows", 0, len(rows))
+
+
+def test_inputs_pinned_and_no_csl_orig_claimed(tmp_path, monkeypatch, forensic_cwd, pin):
+    """H5260: F4 reads no csl-orig file, so it pins its two input checkouts and
+    says so, instead of borrowing a csl-orig revision it never depended on."""
+    _fixture(tmp_path)
+    report, _rows = _run(tmp_path, monkeypatch, forensic_cwd)
+    side = json.loads((forensic_cwd / "data/forensic/shared_corrections.csv.source.json")
+                      .read_text(encoding="utf-8"))
+    pin("f4", "csl_orig_revision(H5260)", None, report["csl_orig_revision"])
+    pin("f4", "input_revisions.keys", ["PWG/pwgissues", "csl-corrections"], sorted(report["input_revisions"]))
+    pin("f4", "sidecar.csl_orig.read", False, side["csl_orig"]["read"])
+    pin("f4", "sidecar.inputs==report", report["input_revisions"],
+        {k: v["revision"] for k, v in side["inputs"].items()})
+
+
+def test_refuses_on_a_dirty_input(tmp_path, monkeypatch, forensic_cwd):
+    _fixture(tmp_path)
+    for repo in ("pwgissues", "csl-corrections"):
+        git_commit_all(tmp_path / repo)
+    write_text(tmp_path / "csl-corrections" / "2024" / "dictionaries" / "mw" / "printchange_mw.txt", "edited\n")
+    monkeypatch.setattr(f4, "PWGISSUES", str(tmp_path / "pwgissues"))
+    monkeypatch.setattr(f4, "CSLCORR", str(tmp_path / "csl-corrections"))
+    with pytest.raises(_corpus_pin.CorpusPinError, match="csl-corrections: input checkout .* is dirty"):
+        f4.main()
+    assert not (forensic_cwd / "data/forensic/f4_report.json").exists()

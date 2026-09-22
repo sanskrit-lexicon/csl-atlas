@@ -30,7 +30,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.abspath("scripts/L0"))
 sys.path.insert(0, os.path.abspath("../sanskrit-util/py"))
-from _provenance import write_source
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _corpus_pin
 from sanskrit_util import slp1_simplify
 
 OUT = "data/forensic"
@@ -67,6 +68,10 @@ def main():
               file=sys.stderr)
         return 2
 
+    # H5260: pwg.txt is read live; the concordance is resolve output pinned in its sidecar.
+    pin = _corpus_pin.live_revision(os.path.dirname(PWG))
+    _corpus_pin.assert_same(pin, _corpus_pin.inherited_revision([CONCORDANCE]))
+    print(f"csl-orig revision (live checkout, clean): {pin['revision']}")
     vul = [json.loads(l) for l in open(VULGATE, encoding="utf-8")]
     folded = [fold(v["slp1"]) for v in vul]
     addr_to_n = {}
@@ -85,6 +90,7 @@ def main():
     print(f"vulgate {len(vul):,} verses indexed per parvan", flush=True)
 
     raw = open(PWG, encoding="utf-8", errors="replace").read()
+    _corpus_pin.assert_unmoved(pin, os.path.dirname(PWG))
     pairs = [(m.group(1), int(m.group(2)), int(m.group(3))) for m in PAIR.finditer(raw)]
     print(f"PWG quoted-pratika + MBH-locus pairs: {len(pairs):,}", flush=True)
     rnd = random.Random(SEED)
@@ -133,13 +139,14 @@ def main():
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()
         w.writerows(rows)
-    write_source(f"{OUT}/mbh_quote_lane_check.csv", "f8_mbh_quote_lane.py", 8)
+    _corpus_pin.write_pinned_source(f"{OUT}/mbh_quote_lane_check.csv", "f8_mbh_quote_lane.py", 8, pin)
 
     oc = Counter(r["outcome"] for r in rows)
     n = len(deltas)
     within = {str(k): (sum(1 for d in deltas if abs(d) <= k) / n if n else 0.0)
               for k in (0, 2, 10, 50, 200)}
     report = {
+        "csl_orig_revision": pin["revision"],
         "pwg_pairs_found": len(rows), "sample_cap": SAMPLE, "seed": SEED,
         "outcomes": dict(oc), "retrieved_with_calibrated_N": n,
         "fitted_index_agreement_within_k_slokas": {k: round(v, 4) for k, v in within.items()},

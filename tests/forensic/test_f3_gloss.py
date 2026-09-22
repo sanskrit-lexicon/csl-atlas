@@ -24,7 +24,8 @@ import json
 import pytest
 
 import f3_gloss as f3
-from conftest import write_text
+import _corpus_pin
+from conftest import git_commit_all, write_text
 
 
 def _entry(k1, body):
@@ -55,6 +56,7 @@ NULL = {
 def _run(tmp_path, monkeypatch, forensic_cwd, spec):
     root = tmp_path / "csl-orig"
     _corpus(root, spec)
+    git_commit_all(root)   # H5260: F3 re-reads bodies live and refuses a non-clean checkout
     monkeypatch.setattr(f3, "CSL_ORIG", str(root))
     f3.main()
     report = json.loads((forensic_cwd / "data/forensic/f3_report.json").read_text(encoding="utf-8"))
@@ -108,3 +110,30 @@ def test_null_fixture_no_shared_lemmas(tmp_path, monkeypatch, forensic_cwd, pin)
         [rows[c]["shared_glossed_lemmas"] for c in ("PWG", "PW", "AP", "BEN")])
     pin("f3", "null.PWG.corr", ("0.0", "0.0"), (rows["PWG"]["pearson_loglen"], rows["PWG"]["spearman_loglen"]))
     pin("f3", "null.differential", 0.0, report["differential_pwg_minus_ap_spearman"])
+
+
+def test_csl_orig_pin_is_the_live_head(tmp_path, monkeypatch, forensic_cwd, pin):
+    """H5260: report and sidecar carry the clean HEAD F3 read its bodies from."""
+    root = tmp_path / "csl-orig"
+    _corpus(root, POSITIVE)
+    head = git_commit_all(root)
+    monkeypatch.setattr(f3, "CSL_ORIG", str(root))
+    f3.main()
+    report = json.loads((forensic_cwd / "data/forensic/f3_report.json").read_text(encoding="utf-8"))
+    side = json.loads((forensic_cwd / "data/forensic/gloss_length_correlation.csv.source.json")
+                      .read_text(encoding="utf-8"))
+    pin("f3", "csl_orig_revision(H5260)", head, report["csl_orig_revision"])
+    pin("f3", "sidecar.csl_orig", (head, "live_checkout"), (side["csl_orig"]["revision"], side["csl_orig"]["via"]))
+
+
+@pytest.mark.parametrize("case", ["not-a-checkout", "dirty"])
+def test_refuses_without_a_clean_checkout(tmp_path, monkeypatch, forensic_cwd, case):
+    root = tmp_path / "csl-orig"
+    _corpus(root, POSITIVE)
+    if case == "dirty":
+        git_commit_all(root)
+        write_text(root / "mw" / "mw.txt", "<L>1<pc>1-1<k1>a<k2>a\nedited\n<LEND>\n")
+    monkeypatch.setattr(f3, "CSL_ORIG", str(root))
+    with pytest.raises(_corpus_pin.CorpusPinError, match="dirty" if case == "dirty" else "None"):
+        f3.main()
+    assert not (forensic_cwd / "data/forensic/f3_report.json").exists()

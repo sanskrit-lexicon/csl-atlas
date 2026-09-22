@@ -1,4 +1,5 @@
 {
+  "csl_orig_revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
   "min_hom": 1000,
   "homonym_dicts": [
     "CAE",
@@ -18,18 +19,18 @@
     "PWG/MW": {
       "dict_a": "MW",
       "dict_b": "PWG",
-      "shared_headwords": 94777,
+      "shared_headwords": 94779,
       "split_in_either": 3336,
-      "agree_on_count": 788,
-      "agreement_rate": 0.2362,
-      "deep_split_both_3plus": 193,
-      "deep_agree": 126,
-      "deep_agreement_rate": 0.6528
+      "agree_on_count": 787,
+      "agreement_rate": 0.2359,
+      "deep_split_both_3plus": 192,
+      "deep_agree": 125,
+      "deep_agreement_rate": 0.651
     },
     "PW/MW": {
       "dict_a": "MW",
       "dict_b": "PW",
-      "shared_headwords": 129003,
+      "shared_headwords": 129005,
       "split_in_either": 4046,
       "agree_on_count": 1032,
       "agreement_rate": 0.2551,
@@ -51,10 +52,10 @@
     "PWG/MW72": {
       "dict_a": "MW72",
       "dict_b": "PWG",
-      "shared_headwords": 34999,
+      "shared_headwords": 35000,
       "split_in_either": 2153,
-      "agree_on_count": 524,
-      "agreement_rate": 0.2434,
+      "agree_on_count": 525,
+      "agreement_rate": 0.2438,
       "deep_split_both_3plus": 120,
       "deep_agree": 70,
       "deep_agreement_rate": 0.5833
@@ -62,10 +63,10 @@
     "PWG/PW": {
       "dict_a": "PW",
       "dict_b": "PWG",
-      "shared_headwords": 99454,
+      "shared_headwords": 99455,
       "split_in_either": 3214,
-      "agree_on_count": 1885,
-      "agreement_rate": 0.5865,
+      "agree_on_count": 1886,
+      "agreement_rate": 0.5868,
       "deep_split_both_3plus": 319,
       "deep_agree": 260,
       "deep_agreement_rate": 0.815
@@ -86,7 +87,7 @@
     "PUI/MW": {
       "dict_a": "MW",
       "dict_b": "PUI",
-      "shared_headwords": 6280,
+      "shared_headwords": 6281,
       "split_in_either": 2017,
       "agree_on_count": 52,
       "agreement_rate": 0.0258,
@@ -132,10 +133,10 @@
     {
       "dict_a": "PW",
       "dict_b": "PWG",
-      "shared_headwords": 99454,
+      "shared_headwords": 99455,
       "split_in_either": 3214,
-      "agree_on_count": 1885,
-      "agreement_rate": 0.5865,
+      "agree_on_count": 1886,
+      "agreement_rate": 0.5868,
       "deep_split_both_3plus": 319,
       "deep_agree": 260,
       "deep_agreement_rate": 0.815
@@ -167,8 +168,8 @@
       "dict_b": "PWG",
       "shared_headwords": 29052,
       "split_in_either": 2009,
-      "agree_on_count": 703,
-      "agreement_rate": 0.3499,
+      "agree_on_count": 704,
+      "agreement_rate": 0.3504,
       "deep_split_both_3plus": 88,
       "deep_agree": 48,
       "deep_agreement_rate": 0.5455
@@ -178,8 +179,8 @@
       "dict_b": "PWG",
       "shared_headwords": 23856,
       "split_in_either": 1801,
-      "agree_on_count": 466,
-      "agreement_rate": 0.2587,
+      "agree_on_count": 467,
+      "agreement_rate": 0.2593,
       "deep_split_both_3plus": 75,
       "deep_agree": 37,
       "deep_agreement_rate": 0.4933
@@ -198,7 +199,7 @@
     {
       "dict_a": "MW",
       "dict_b": "PW",
-      "shared_headwords": 129003,
+      "shared_headwords": 129005,
       "split_in_either": 4046,
       "agree_on_count": 1032,
       "agreement_rate": 0.2551,
@@ -209,10 +210,10 @@
     {
       "dict_a": "MW72",
       "dict_b": "PWG",
-      "shared_headwords": 34999,
+      "shared_headwords": 35000,
       "split_in_either": 2153,
-      "agree_on_count": 524,
-      "agreement_rate": 0.2434,
+      "agree_on_count": 525,
+      "agreement_rate": 0.2438,
       "deep_split_both_3plus": 120,
       "deep_agree": 70,
       "deep_agreement_rate": 0.5833
@@ -220,13 +221,13 @@
     {
       "dict_a": "MW",
       "dict_b": "PWG",
-      "shared_headwords": 94777,
+      "shared_headwords": 94779,
       "split_in_either": 3336,
-      "agree_on_count": 788,
-      "agreement_rate": 0.2362,
-      "deep_split_both_3plus": 193,
-      "deep_agree": 126,
-      "deep_agreement_rate": 0.6528
+      "agree_on_count": 787,
+      "agreement_rate": 0.2359,
+      "deep_split_both_3plus": 192,
+      "deep_agree": 125,
+      "deep_agreement_rate": 0.651
     },
     {
       "dict_a": "CCS",
@@ -339,8 +340,8 @@
       "deep_agreement_rate": 0.4722
     }
   ],
-  "raw_pool_total": 18025,
-  "raw_pool_pwg": 744,
-  "raw_pool_pw": 17281,
+  "raw_pool_total": 17918,
+  "raw_pool_pwg": 731,
+  "raw_pool_pw": 17187,
   "interpretation": "(a) Homonym-split agreement: a structural heir matches the source's homonym DIVISIONS, esp. the rare 3+ splits. On deep (3+) splits MW agrees with Petersburg 64-77% vs ~32-36% for true index-type nulls (INM/PUI) = ~2x = structural inheritance. BUT splits are partly linguistically forced (any Sanskritist splits a-vowel / a-privative / a-pronoun), so this CORROBORATES, weaker than F1 citations. NB CAE/CCS are Petersburg-derived, not nulls. (b) raw_headword_pool = CANDIDATE triage (raw k1 shared only by MW + one Petersburg dict; PW count ~ the s6 sanhw1 exclusive figure) — cannot alone separate a corruption from a rare real compound; needs eyeball."
 }

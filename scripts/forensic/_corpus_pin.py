@@ -14,6 +14,13 @@ is now written only when the corpus revision behind it is known exactly:
   directly (F5, F10): HEAD of that checkout, which must be clean. Call it
   before AND after the run (`assert_unmoved`) so a checkout that moved mid-run
   refuses instead of producing a figure from two revisions.
+* `inherited_revision(paths)` — for scripts that read only DERIVED files
+  (F8 presence/verify/drona, F7 resolve's pool): the csl-orig pin recorded in
+  the upstream `.source.json` sidecars; unpinned -> None, several -> MIXED.
+* `input_revisions(paths)` — for scripts that never read csl-orig at all (F4
+  reads ../PWG/pwgissues + ../csl-corrections): the clean HEAD of each input
+  checkout, recorded under `inputs` so the sidecar does not claim a csl-orig
+  revision the figure never depended on (H5260).
 
 `write_pinned_source()` writes the sidecar with the pin under `csl_orig`.
 """
@@ -77,7 +84,8 @@ def live_revision(csl_orig=None):
     try:
         r = subprocess.run(["git", "-C", csl_orig, "rev-parse", "HEAD"],
                            capture_output=True, text=True, encoding="utf-8", timeout=30)
-        d = subprocess.run(["git", "-C", csl_orig, "status", "--porcelain", "-uno"],
+        d = subprocess.run(["git", "-C", csl_orig, "-c", "core.fileMode=false",   # a mode-only flip (hook installers) is not corpus content
+                            "status", "--porcelain", "-uno"],
                            capture_output=True, text=True, encoding="utf-8", timeout=120)
     except Exception as exc:                                   # noqa: BLE001
         raise CorpusPinError(f"csl-orig revision is None: {exc!r}"[:300]) from exc
@@ -89,6 +97,50 @@ def live_revision(csl_orig=None):
     return {"revision": r.stdout.strip(), "via": "live_checkout"}
 
 
+def inherited_revision(source_paths):
+    """One csl-orig revision recorded by the sidecars of the derived inputs, or refuse."""
+    per, bad = {}, []
+    for path in sorted(source_paths):
+        side = path if path.endswith(".source.json") else f"{path}.source.json"
+        try:
+            with open(side, encoding="utf-8") as fh:
+                rev = ((json.load(fh) or {}).get("csl_orig") or {}).get("revision")
+        except (OSError, ValueError):
+            rev = None
+        if not rev or rev == "MIXED":
+            bad.append(f"{os.path.basename(side)}: unpinned")
+        else:
+            per[os.path.basename(side)] = rev
+    if not source_paths:
+        bad.append("no upstream sidecars named")
+    if bad:
+        raise CorpusPinError("csl-orig revision is None — re-run the upstream writer at a pinned "
+                             "revision first: " + "; ".join(bad))
+    revs = sorted(set(per.values()))
+    if len(revs) != 1:
+        raise CorpusPinError(f"csl-orig revision is MIXED across upstream sidecars: {per}")
+    return {"revision": revs[0], "via": "inherited", "from": sorted(per)}
+
+
+def assert_same(pin, other):
+    """Refuse when a live read and an inherited input sit on different revisions."""
+    if pin["revision"] != other["revision"]:
+        raise CorpusPinError(f"csl-orig revision is MIXED: {pin['via']} {pin['revision']} "
+                             f"vs {other['via']} {other['revision']}")
+    return pin
+
+
+def input_revisions(paths):
+    """Clean HEAD of every non-csl-orig input checkout, {label: {revision, via}}."""
+    out = {}
+    for label, path in sorted(paths.items()):
+        try:
+            out[label] = live_revision(path)
+        except CorpusPinError as exc:
+            raise CorpusPinError(f"{label}: {exc}".replace("csl-orig", "input")) from exc
+    return out
+
+
 def assert_unmoved(before, csl_orig=None):
     """Refuse if the checkout moved (or got dirty) while the script read it."""
     after = live_revision(csl_orig)
@@ -97,9 +149,16 @@ def assert_unmoved(before, csl_orig=None):
     return before
 
 
-def write_pinned_source(out_path, script, stage, pin):
-    """The L0 sidecar shape plus the csl-orig pin. `pin` must carry a revision."""
-    if not pin or not pin.get("revision") or pin["revision"] == "MIXED":
+def write_pinned_source(out_path, script, stage, pin, inputs=None):
+    """The L0 sidecar shape plus the csl-orig pin. `pin` must carry a revision,
+    unless `inputs` pins every checkout of a figure that never reads csl-orig
+    (then `pin` is None and `csl_orig` records {"read": false})."""
+    if inputs is not None and (not inputs or any(not (v or {}).get("revision") for v in inputs.values())):
+        raise CorpusPinError(f"refusing to write {out_path}.source.json without every input revision")
+    if pin is None and inputs:
+        pin = {"read": False, "revision": None,
+               "note": "figure reads no csl-orig file; its inputs are pinned under `inputs`"}
+    elif not pin or not pin.get("revision") or pin["revision"] == "MIXED":
         raise CorpusPinError(f"refusing to write {out_path}.source.json without one csl-orig revision")
     try:
         commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True,
@@ -109,5 +168,7 @@ def write_pinned_source(out_path, script, stage, pin):
     data = {"stage": stage, "commit": commit,
             "utc_iso": datetime.now(timezone.utc).isoformat(),
             "script": script, "csl_orig": pin}
+    if inputs is not None:
+        data["inputs"] = inputs
     with open(f"{out_path}.source.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
