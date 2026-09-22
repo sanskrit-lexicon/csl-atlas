@@ -238,7 +238,8 @@ On the 4,685 pairs where the two dictionaries' *habits* point in opposite
 directions, MW's order still agrees with PWG's particular article 75.2 % of the
 time. The *agreement* survives this control and now rests on 4,685
 convention-defying pairs rather than an 8-entry null; what it does not establish is
-that copying, rather than a shared conditional habit, produces it (§7, item 1).
+that copying, rather than a shared ordering habit — even a fixed one — produces it
+(§7, item 1).
 
 **But 0.5004 is the wrong floor to quote the margin against** (H5073 pre-review,
 finding 2). A within-entry permutation measures *no signal at all*; the question
@@ -329,7 +330,7 @@ files pin neither.
 |---|---|---|
 | `A10-C1` §3.2 citation apparatus | **Survives** | separation never falls below 8.6× and never approaches 1 across ablation depths 5–100 (`CTRL-ABL-S`); 16.3× at the frozen depth 25. |
 | `A10-C1` rare-reference sub-signal | **Weakens** | 94.5 % one text; 33 events survive Harivaṃśa ablation; same event set as §6, not a second line (`CTRL-ABL-H`). |
-| `A10-C2` §3.4 citation order | **Weakens: the order agreement survives, its attribution to copying is unidentified** | 0.7518 on 4,685 convention-discordant pairs, above every non-lineage arm; but the +0.118 over BEN compares different populations (24 shared loci, on which BEN agrees more), and a shared *conditional* convention can score 1.0 with no copying (pinned counterexample). 100 % of its loci are C1 loci. |
+| `A10-C2` §3.4 citation order | **Weakens: the order agreement survives, its attribution to copying is unidentified** | 0.7518 on 4,685 convention-discordant pairs, above every non-lineage arm; but the +0.118 over BEN compares different populations (24 shared loci, on which BEN agrees more), and even one *fixed* ordering shared by two dictionaries that copy nothing can score 1.0 (pinned counterexample). 100 % of its loci are C1 loci. |
 | `A10-C3` §3.5 shared omission | **Survives; the only leg that adds loci of its own** | 3,244 of its 6,941 anchor loci (46.7 %) are untouched by either citation signal, 3,697 (53.3 %) overlap them; reproduces to the digit. Added loci, not proven statistical independence. |
 | Combination as published | **Overstated in framing, not in arithmetic** | a naive sum of locus sets counts 7,280 loci twice (set accounting — not a measured amount of inferential double-counting); §3.2 + §6 are one stratum; PW is a partial duplicate of PWG. |
 
@@ -382,14 +383,19 @@ scope (it would move every `f*_report.json` at once).
    affected; the bands and `pct_identical` were. Canonical values are those in
    this document.
 1. The `A10-C2` verdict rests on a global-convention estimator (mean normalised
-   sigil position). A compiler whose convention is *conditional* — Veda first in
-   grammatical entries, epic first in narrative ones — would be scored as
-   convention-defying here. The 0.7518 is a *pair-agreement rate*, not a copying
+   sigil position). That estimator fails even without a *conditional* convention:
+   because it is a marginal mean, different source membership alone can reverse
+   it, so two dictionaries obeying ONE fixed shared ordering can have a pair scored
+   "convention-discordant" and still agree on it. A conditional convention (Veda
+   first in grammatical entries, epic first in narrative ones) is a further,
+   separate way to be scored convention-defying. The 0.7518 is a *pair-agreement rate*, not a copying
    rate: without a model linking copying to agreement it bounds neither the share
    of copied articles nor the share owed to convention (copied articles can be
    reordered; uncopied ones can agree by habit). A pinned counterexample
    (`test_ctrl_conv_conditional_convention_counterexample`) scores 1.0 from two
-   dictionaries that share one contextual ordering and copy nothing. Separating
+   dictionaries whose every sequence obeys one fixed ordering X < A < B < Y < C
+   and which copy nothing; the independent reviewer confirmed it holds with the
+   background entries weighted 1×, 2× and 10×. Separating
    the causes needs an entry-type covariate this repo does not yet carry.
 2. `CTRL-ABL-S` ablates by corpus document-frequency, which correlates with (but
    is not) "texts everyone cites".

@@ -39,14 +39,14 @@ Predecessor: [`FORENSIC_CLAIM_PINS_COVERAGE_08-09-2026.md`](https://github.com/s
 ## Ranked improvement backlog
 
 1. **Pin `csl-orig` in every `.source.json` sidecar** and re-freeze the F1/F5/F10 figures against one named revision — the cleanest fix for §4's gap, and it moves every `f*_report.json` at once. — *status: open, medium.*
-2. **Entry-type covariate for `CTRL-CONV`** — a conditional ordering convention (Veda-first in grammatical entries, epic-first in narrative ones) is scored as convention-defying today, and a pinned counterexample scores 1.0 with no copying — 0.7518 is a pair-agreement rate, not a bound on copying. — *status: open, needs an entry-type signal this repo lacks.*
+2. **Entry-type covariate for `CTRL-CONV`** — a conditional ordering convention (Veda-first in grammatical entries, epic-first in narrative ones) is scored as convention-defying today, and a pinned counterexample under one *fixed* shared ordering scores 1.0 with no copying — 0.7518 is a pair-agreement rate, not a bound on copying. — *status: open, needs an entry-type signal this repo lacks.*
 3. **Extend the audit to §3.1 and §3.3** — headword containment and homonym concordance were out of H5073's three-claim scope; the PW-as-duplicate-witness caution applies to §3.1's PWG 0.70 / PW 0.71 gradient with more force than it does here. — *status: open, cheap.*
 4. **A genuinely unexposed reference arm** — Benfey now carries the floor at 101 discordant pairs but has its own Petersburg exposure, and Apte's 13 pairs are unusable. A contemporary with no Petersburg contact, or a lowered `MIN_SHARED_SRC` for the reference arms only with the bias stated, plus a matched-loci comparison with enough shared pairs (today 24), would be needed before any copying margin is defensible. — *status: open, cheap.* (Partially addressed 20-09-2026: the reference floor replaced the 8-entry Apte null.)
 5. **Independence at the level of decisions, not loci** — disjoint locus sets do not make MW's decision to enter a word and its decision to cite a text for it statistically independent. — *status: open, research.*
 
 ## Known limitations / caveats
 
-- The global-convention estimator is a mean normalised sigil position; it cannot see a conditional convention (backlog 2).
+- The global-convention estimator is a mean normalised sigil position; a marginal mean that different source membership alone can reverse, so it misreads even a fixed shared ordering, and it cannot see a conditional convention (backlog 2).
 - `CTRL-ABL-S` ablates by corpus document-frequency, a proxy for "texts everyone cites", not the thing itself.
 - Sub-`<L>` entries are folded per `k1`, matching F1/F5 — MW's habit of splitting one word across several `<L>` records is invisible here exactly as it is in the audited signals.
 - SKD/VCP `key1` exports are absent from the `now-2026` snapshot on some boxes; the raw-`<k1>` fallback reproduces both counts exactly (40,817 / 48,636), and the report records which path ran under `anchor_sources`.
