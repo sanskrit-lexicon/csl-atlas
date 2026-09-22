@@ -164,9 +164,9 @@ not lexical; but the available controls cannot yet exclude a shared conditional 
 habit, so it is consistent with copying rather than proof of it. It is not, either, a
 *separate* body of evidence: every one of these entries is by construction a §3.2
 shared-cited lemma, so §3.2 and §3.4 are two questions put to one evidence base, not two
-corroborations (ibid. §3.1). The only locus-disjoint second leg is §3.5, 46.7% of whose anchor
-neither citation signal touches — disjoint loci, though not thereby statistically
-independent evidence.
+corroborations (ibid. §3.1). The only leg that adds loci of its own is §3.5: 3,244 of its
+6,941 anchor words (46.7%) are touched by neither citation signal, while the other 53.3%
+overlap them — added loci, though not thereby statistically independent evidence.
 
 **3.5 Shared omission — the inventory backbone, from the negative-space side.** §3.1 shows
 shared *presence*; Böhtlingk's item #1 was shared *absence* — "was in Ihrem Werk ausgelaßen

@@ -437,11 +437,12 @@ def test_null_fixture_scores_exactly_zero(forensic_cwd, monkeypatch, f11, pin):
 
 
 def test_ctrl_conv_conditional_convention_counterexample(f11, pin):
-    """H5073 Astra finding 3: pair agreement on convention-discordant pairs is
-    not a copying rate. Two dictionaries sharing ONE fixed ordering B<Y<A<X and
-    the same contextual ordering in `target` — no copying anywhere — still score
-    1.0 on convention-discordant pairs, because the unequal background entries
-    shift each dictionary's *marginal* sigil positions in opposite directions.
+    """H5073 Astra findings 3 (round 1) and 3 (round 2): agreement on
+    convention-discordant pairs is not a copying rate. Every sequence below
+    obeys ONE fixed shared ordering X < A < B < Y < C, and nothing is copied —
+    the two dictionaries merely cite different companions in `u` and `v`. That
+    different source membership alone reverses the *marginal* A/B positions,
+    so the target's (A,B) pair is scored "discordant" and still agrees: 1.0.
 
     Hand derivation (normalised position i/(n-1), averaged over every entry
     the sigil appears in, `target` included):
@@ -450,18 +451,71 @@ def test_ctrl_conv_conditional_convention_counterexample(f11, pin):
     target pairs over A,B,C:
       (A,B) a: 0.5<0.25 no ; b: 0<0.75 yes -> DISCORDANT; b has A before B -> agree
       (A,C) a yes ; b yes -> concordant      (B,C) a yes ; b yes -> concordant
-    So 1 discordant pair, agreement 1.0 — with no copying in the construction.
+    So 1 discordant pair, agreement 1.0.
     """
+    order = "XABYC"
     a = {"target": {"sigils": ["A", "B", "C"]},
-         "a": {"sigils": ["X", "A"]}, "b": {"sigils": ["B", "Y"]}}
+         "u": {"sigils": ["X", "A"]}, "v": {"sigils": ["B", "Y"]}}
     b = {"target": {"sigils": ["A", "B", "C"]},
-         "a": {"sigils": ["A", "X"]}, "b": {"sigils": ["Y", "B"]}}
+         "u": {"sigils": ["A", "Y"]}, "v": {"sigils": ["X", "B"]}}
+    respects = all(order.index(x) < order.index(y)
+                   for d in (a, b) for e in d.values()
+                   for x, y in zip(e["sigils"], e["sigils"][1:]))
+    pin("f11", "CTRL-CONV.counterexample.one_fixed_order", True, respects)
     out = f11.convention_split(a, b, {"target"},
                                f11.global_convention(a), f11.global_convention(b))
     pin("f11", "CTRL-CONV.counterexample.discordant_pairs", 1,
         out["convention_discordant_pairs"])
     pin("f11", "CTRL-CONV.counterexample.agreement_discordant", 1.0,
         out["agreement_on_convention_discordant"])
+
+
+def test_corpus_revision_is_per_cache_and_hash_bound(f11, pin, tmp_path, monkeypatch):
+    """H5073 Astra round-2 finding 4: a partial rebuild must not relabel the
+    whole cache. Records are per cache and bound to the TSV's SHA-256.
+
+    mw.tsv + pwg.tsv, both recorded at rev R1 with matching hashes -> "R1".
+    Rebuild only mw at R2 (record + file change together)       -> "MIXED".
+    Edit pwg.tsv without re-recording (hash no longer matches)  -> None.
+    """
+    import json
+    import parse_cslorig
+    monkeypatch.setattr(f11, "PARSED_DIR", str(tmp_path))
+    monkeypatch.setattr(parse_cslorig, "PARSED_DIR", str(tmp_path))
+    monkeypatch.setattr(parse_cslorig, "CSL_ORIG", str(tmp_path / "no-such-csl-orig"))
+    mw, pwg = tmp_path / "mw.tsv", tmp_path / "pwg.tsv"
+    mw.write_text("L\tk1\n1\tagni\n", encoding="utf-8")
+    pwg.write_text("L\tk1\n1\tdeva\n", encoding="utf-8")
+    prov = tmp_path / "_parse_provenance.json"
+
+    def record(code, rev):
+        data = json.loads(prov.read_text(encoding="utf-8")) if prov.exists() else {"caches": {}}
+        data["caches"][code] = {"revision": rev, "dirty": False,
+                                "tsv_sha256": f11.sha256_file(str(tmp_path / f"{code}.tsv"))}
+        prov.write_text(json.dumps(data), encoding="utf-8")
+
+    paths = [str(mw), str(pwg)]
+    record("mw", "R1")
+    record("pwg", "R1")
+    pin("f11", "corpus_revision.all_R1", "R1", f11.corpus_revision(paths)["cache_generating_revision"])
+
+    mw.write_text("L\tk1\n1\tagni\n2\tsoma\n", encoding="utf-8")
+    record("mw", "R2")
+    out = f11.corpus_revision(paths)
+    pin("f11", "corpus_revision.partial_rebuild", "MIXED", out["cache_generating_revision"])
+    pin("f11", "corpus_revision.partial_rebuild.pwg_kept", "R1", out["per_cache"]["pwg"]["revision"])
+
+    pwg.write_text("L\tk1\n1\tdeva\n2\tindra\n", encoding="utf-8")
+    out = f11.corpus_revision(paths)
+    pin("f11", "corpus_revision.stale_record", None, out["cache_generating_revision"])
+    pin("f11", "corpus_revision.stale_record.status", "hash-mismatch", out["per_cache"]["pwg"]["status"])
+
+    # the writer: a partial rebuild updates only its own record
+    parse_cslorig.write_provenance(["mw"])
+    caches = json.loads(prov.read_text(encoding="utf-8"))["caches"]
+    pin("f11", "write_provenance.partial.keeps_pwg", "R1", caches["pwg"]["revision"])
+    pin("f11", "write_provenance.partial.mw_hash_bound", f11.sha256_file(str(mw)),
+        caches["mw"]["tsv_sha256"])
 
 
 def test_arm_comparison_matched_and_population(f11, pin):

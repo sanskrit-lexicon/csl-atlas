@@ -33,7 +33,7 @@ Predecessor: [`FORENSIC_CLAIM_PINS_COVERAGE_08-09-2026.md`](https://github.com/s
 - **`CTRL-PWDUP`** — 33.8% of PW's rare events are already PWG's; 598 naive → 574 independent.
 - **`CTRL-ABL-S`** — separation never collapses across ablation depths 5–100 (8.60×–18.31×; 16.29× at the frozen depth 25, against 9.69× unablated). The *widening* is depth-25-specific; only survival is robust.
 - **`CTRL-CONV`** — on 4,685 convention-discordant sigil pairs MW follows PWG's per-entry order at **0.7518**. Against the best non-lineage reference (Benfey 0.6337, 101 pairs) the unmatched excess is **+0.118** (entry-clustered bootstrap 95 % [+0.023, +0.210]) — but the arms score different populations (2,168 vs 64 entries; 24 shared loci, on which BEN agrees *more*, 0.750 vs 0.667), so the margin is descriptive, not an identified copying excess (independent review 22-09-2026). Against the within-entry permutation floor (0.5004, 200 reps) it is +0.251, but that floor represents no signal at all.
-- **`A10-C3` is the only locus-disjoint leg** — 3,244 anchor words (46.7%) touch neither citation locus set; disjoint loci, not proven statistical independence.
+- **`A10-C3` is the only leg that adds loci of its own** — 3,244 anchor words (46.7%) touch neither citation locus set, 3,697 (53.3%) overlap them; added loci, not proven statistical independence.
 - **Provenance gap** — F9 reproduces exactly (12.336 / 1.51, frozen `key1` exports); F1/F5 drift (587 → 598, 3,593 → 3,583) — most plausibly upstream drift, not proven exclusive, because no sidecar pins the `csl-orig` revision; the parsed cache's own generating revision is unrecorded too (`parse_cslorig.py` now writes `_parse_provenance.json` for future builds).
 
 ## Ranked improvement backlog
