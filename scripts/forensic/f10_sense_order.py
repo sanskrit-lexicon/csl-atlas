@@ -350,6 +350,11 @@ def main():
     print("F10 -- sense-ORDER test: does MW reproduce PWG's order of meanings?")
     print("=" * 70)
 
+    # H5248: bodies are re-read live, so pin the clean checkout before AND after.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import _corpus_pin
+    pin = _corpus_pin.live_revision(CSL_ORIG)
+    print(f"csl-orig revision (live checkout, clean): {pin['revision']}")
     print("\nparsing MW / PWG / AP (grouping records by headword)...")
     mw_rec = group_by_k1(os.path.join(CSL_ORIG, "mw", "mw.txt"))
     pwg_rec = group_by_k1(os.path.join(CSL_ORIG, "pwg", "pwg.txt"))
@@ -512,7 +517,9 @@ def main():
         w.writeheader()
         w.writerows(robust["sim_floor_sweep"])
 
+    _corpus_pin.assert_unmoved(pin, CSL_ORIG)
     report = {
+        "csl_orig_revision": pin["revision"],
         "min_senses": MIN_SENSES, "min_matched": MIN_MATCHED, "null_iters": NULLITER,
         "segmentation": {"mw": "sub-<L> records + <div n=to|P|1>", "pwg": "<div> Bedeutungen",
                          "ap": "U+2219 bullets"},
@@ -532,12 +539,7 @@ def main():
     with open("data/forensic/f10_report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
     print(f"\nWrote sense_order_test.csv, sense_order_examples.csv ({len(examples)}), f10_report.json")
-    try:
-        sys.path.insert(0, os.path.abspath("scripts/L0"))
-        from _provenance import write_source
-        write_source("data/forensic/sense_order_test.csv", "f10_sense_order.py", 10)
-    except Exception as e:
-        print(f"Provenance error: {e}")
+    _corpus_pin.write_pinned_source("data/forensic/sense_order_test.csv", "f10_sense_order.py", 10, pin)
 
 
 if __name__ == "__main__":

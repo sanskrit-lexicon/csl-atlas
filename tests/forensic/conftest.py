@@ -16,8 +16,11 @@ Discipline (from the handoff, locked before any test was written):
 the terminal summary prints the expected-vs-actual table the handoff asks for.
 """
 
+import hashlib
+import json
 import pathlib
 import socket
+import subprocess
 import sys
 
 import pytest
@@ -85,6 +88,35 @@ def write_tsv(path, rows):
     for row in rows:
         lines.append("\t".join(str(x) for x in row))
     return write_text(path, "\n".join(lines) + "\n")
+
+
+FIXTURE_REVISION = "f" * 40
+
+
+def write_parse_provenance(parsed, codes, revision=FIXTURE_REVISION, dirty=False):
+    """The ``_parse_provenance.json`` shape ``parse_cslorig.write_provenance``
+    emits (H5248): one clean record per cache, bound to that TSV's SHA-256."""
+    parsed = pathlib.Path(parsed)
+    caches = {code: {"revision": revision, "dirty": dirty,
+                     "tsv_sha256": hashlib.sha256((parsed / f"{code}.tsv").read_bytes()).hexdigest()}
+              for code in codes}
+    return write_text(parsed / "_parse_provenance.json",
+                      json.dumps({"csl_orig": str(parsed), "caches": caches}))
+
+
+def git_commit_all(root):
+    """Make a fixture corpus a clean one-commit git checkout; returns its HEAD.
+    Identity is passed per command: the self-hosted CI runner has none."""
+    root = str(root)
+
+    def git(*args):
+        return subprocess.run(["git", "-C", root, "-c", "user.name=pin", "-c", "user.email=pin@example.invalid",
+                               "-c", "commit.gpgsign=false", *args],
+                              check=True, capture_output=True, text=True).stdout.strip()
+    git("init", "-q")
+    git("add", "-A")
+    git("commit", "-q", "-m", "fixture")
+    return git("rev-parse", "HEAD")
 
 
 def pytest_terminal_summary(terminalreporter):

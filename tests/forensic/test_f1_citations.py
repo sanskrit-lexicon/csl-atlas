@@ -34,7 +34,7 @@ import json
 
 import f1_citations as f1
 import parse_cslorig
-from conftest import write_text, write_tsv
+from conftest import FIXTURE_REVISION, write_parse_provenance, write_text, write_tsv
 
 
 def _stats(parsed, cites):
@@ -57,6 +57,7 @@ def _positive(parsed):
     write_tsv(parsed / "pw.tsv", [(1, "soma", "soma", "", "", 1, "R. 5,5")])
     write_tsv(parsed / "ap.tsv", [(1, "agni", "agni", "", "", 1, "MBH. 3,45")])
     _stats(parsed, {"pwg": 4, "mw": 4, "pw": 1, "ap": 1})
+    write_parse_provenance(parsed, ["pwg", "mw", "pw", "ap"])
 
 
 def _null(parsed):
@@ -65,6 +66,7 @@ def _null(parsed):
     write_tsv(parsed / "mw.tsv", [(1, "agni", "agni", "", "", 1, "AV. 2,2")])
     write_tsv(parsed / "pw.tsv", [(1, "soma", "soma", "", "", 1, "R. 1")])
     _stats(parsed, {"pwg": 1, "mw": 1, "pw": 1})
+    write_parse_provenance(parsed, ["pwg", "mw", "pw"])
 
 
 def _run(tmp_path, monkeypatch, forensic_cwd, build):
@@ -131,6 +133,11 @@ def test_positive_fixture_pairs_and_guns(tmp_path, monkeypatch, forensic_cwd, pi
     pin("f1", "lineage.keys", ["PWG/MW", "PW/MW"], list(report["lineage"]))
     pin("f1", "nulls.keys", ["AP/MW"], list(report["nulls"]))
     pin("f1", "top_pairs(>=500 shared)", [], report["top_pairs"])
+    pin("f1", "csl_orig_revision(H5248)", FIXTURE_REVISION, report["csl_orig_revision"])
+    for out in ("citation_pair_overlap.csv", "shared_rare_citations.csv"):
+        side = json.loads((forensic_cwd / f"data/forensic/{out}.source.json").read_text(encoding="utf-8"))
+        pin("f1", f"sidecar.{out}.csl_orig", (FIXTURE_REVISION, "parse_provenance"),
+            (side["csl_orig"]["revision"], side["csl_orig"]["via"]))
 
 
 def test_null_fixture_zero_shared_apparatus(tmp_path, monkeypatch, forensic_cwd, pin):

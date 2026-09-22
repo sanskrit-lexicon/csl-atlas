@@ -7,7 +7,7 @@
     "VCP": "key1-export"
   },
   "corpus_revision": {
-    "cache_generating_revision": null,
+    "cache_generating_revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
     "sibling_checkout_at_run": {
       "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
       "committed": "2026-09-20T11:58:58+03:00"
@@ -15,57 +15,101 @@
     "binding_pin": "source_hashes",
     "per_cache": {
       "ae": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "ap": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "ap90": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "ben": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "bhs": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "bor": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "gra": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "lrv": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "mw": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "pw": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "pwg": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "pwkvn": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "sch": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "skd": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       },
       "vcp": {
-        "status": "unrecorded"
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
       }
-    },
-    "cache_generating_note": "at least one parsed cache has no hash-bound provenance record; its generating csl-orig revision is unrecorded"
+    }
   },
   "reproduction_delta": {
-    "note": "The published figures were produced on 2026-06-03 against an unpinned ../csl-orig. Upstream corpus drift is the most plausible cause of the deltas below (the pinned arithmetic tests, tests/forensic H4352, still pass), but it is not proven the exclusive cause: neither the 2026-06-03 run nor this cache's generating csl-orig revision was recorded (see corpus_revision).",
+    "note": "'published' = the f1/f5 reports on disk. Since H5248 (22-09-2026) those carry csl_orig_revision, and published_revision below says which; a published revision equal to corpus_revision.cache_generating_revision should reproduce to the digit. The first freeze (2026-06-03, unpinned ../csl-orig) is kept verbatim in superseded_2026_06_03 — upstream drift is the most plausible, not a proven, cause of its deltas, because its revision was never recorded.",
+    "published_revision": {
+      "f1": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+      "f5": "f4c08c578b330e2379e38f54d3a541f1564b8eee"
+    },
+    "superseded_2026_06_03": {
+      "S-F1-RARE": 587,
+      "S-F1-RARE-HARIV": 565,
+      "S-F1-RARE-corpus-unique": 203,
+      "S-F5-ORDER": {
+        "entries": 3593,
+        "concordance": 0.8107,
+        "pct_identical": 47.8
+      },
+      "csl_orig_revision": null
+    },
     "S-F1-RARE": {
-      "published": 587,
+      "published": 598,
       "reproduced": 598
     },
     "S-F1-RARE-HARIV": {
@@ -73,11 +117,11 @@
       "reproduced": 565
     },
     "S-F5-ORDER": {
-      "published_entries": 3593,
+      "published_entries": 3583,
       "reproduced_entries": 3583,
-      "published_concordance": 0.8107,
+      "published_concordance": 0.8108,
       "reproduced_concordance": 0.8108,
-      "published_pct_identical": 47.8,
+      "published_pct_identical": 47.7,
       "reproduced_pct_identical": 47.73
     },
     "S-F9-GAPSENS": {
@@ -103,10 +147,10 @@
     "data/forensic/parsed/lrv.tsv": "2426d8973e7eb87a51bcc3414f5975d882ca8049e1073f391cadf0c2cb250d4f",
     "data/forensic/parsed/skd.tsv": "530c0aaec5c2ae395a8f1adfce6e532052d1bbd388e9cb5928d50a794f2b56cc",
     "data/forensic/parsed/vcp.tsv": "409c896e4c4ebc763ea9d5cd48c76aa585c978c68629740479423cd51ba6bc8f",
-    "data/forensic/f1_report.json": "ab4fafb44e04bf95b103e71a091ead804a3bb132ae9ef984d4f3d159f2e9ff2b",
-    "data/forensic/f5_report.json": "eb99624aff64baae971d5f7d0bf3556be1c5e07f92a3cbf04409238dc1d6811d",
+    "data/forensic/f1_report.json": "e15a21afa3a091836cb68c0f5707d0fe2a23fb6e0678f41c3976c7aed80f4047",
+    "data/forensic/f5_report.json": "2a2e5cbff10dc0a7da2e10c478fb6e041cecc4ff84524a6a83e2b13c98a36173",
     "data/forensic/shared_omission_test.csv": "1fb5cfafa205e0ea1cdd80f0e0c2a04285bdadb5256d6b361010086d69d69335",
-    "data/forensic/shared_rare_citations.csv": "8a9f308c95bbd28fca283647ed1f4a2f3a489a0a36459ff752a2627389e7702e"
+    "data/forensic/shared_rare_citations.csv": "581b3914793a254c5493f4bf50d69a30c1f23bb5820c32794c17b65d8c457df5"
   },
   "claims": {
     "A10-C1": {

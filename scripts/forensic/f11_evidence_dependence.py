@@ -105,6 +105,15 @@ KEY1_FILES = {
 }
 
 
+# The 2026-06-03 F1/F5 freeze, over an unrecorded csl-orig revision. Re-frozen by
+# H5248 at a recorded revision; the old digits stay here so the move is never silent.
+SUPERSEDED_2026_06_03 = {
+    "S-F1-RARE": 587, "S-F1-RARE-HARIV": 565, "S-F1-RARE-corpus-unique": 203,
+    "S-F5-ORDER": {"entries": 3593, "concordance": 0.8107, "pct_identical": 47.8},
+    "csl_orig_revision": None,
+}
+
+
 # --------------------------------------------------------------------------
 # provenance
 # --------------------------------------------------------------------------
@@ -867,11 +876,15 @@ def main():
     with open(os.path.join(OUT_DIR, "shared_omission_test.csv"), encoding="utf-8") as fh:
         pub_f9 = {r["probe"]: r for r in csv.DictReader(fh)}
     repro = {
-        "note": ("The published figures were produced on 2026-06-03 against an unpinned "
-                 "../csl-orig. Upstream corpus drift is the most plausible cause of the deltas "
-                 "below (the pinned arithmetic tests, tests/forensic H4352, still pass), but it "
-                 "is not proven the exclusive cause: neither the 2026-06-03 run nor this "
-                 "cache's generating csl-orig revision was recorded (see corpus_revision)."),
+        "note": ("'published' = the f1/f5 reports on disk. Since H5248 (22-09-2026) those carry "
+                 "csl_orig_revision, and published_revision below says which; a published "
+                 "revision equal to corpus_revision.cache_generating_revision should reproduce "
+                 "to the digit. The first freeze (2026-06-03, unpinned ../csl-orig) is kept "
+                 "verbatim in superseded_2026_06_03 — upstream drift is the most plausible, "
+                 "not a proven, cause of its deltas, because its revision was never recorded."),
+        "published_revision": {"f1": pub_f1.get("csl_orig_revision"),
+                               "f5": pub_f5.get("csl_orig_revision")},
+        "superseded_2026_06_03": SUPERSEDED_2026_06_03,
         "S-F1-RARE": {"published": pub_f1["n_smoking_guns"], "reproduced": len(rare)},
         "S-F1-RARE-HARIV": {"published": pub_f1["smoking_gun_sources"].get("HARIV"),
                             "reproduced": harivamsa},
