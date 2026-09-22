@@ -138,6 +138,25 @@ def main():
     with open(os.path.join(PARSED_DIR, "_parse_stats.json"), "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
     print(f"Cached {len(stats)} dict(s); stats -> {PARSED_DIR}/_parse_stats.json")
+    # H5073 (Astra finding 4): record the csl-orig revision that GENERATED this
+    # cache, so downstream reports can pin it instead of reading whatever the
+    # sibling checkout happens to be at when they run.
+    prov = {"csl_orig": os.path.abspath(CSL_ORIG), "revision": None, "dirty": None,
+            "codes": [s["code"] for s in stats]}
+    try:
+        import subprocess
+        rev = subprocess.run(["git", "-C", CSL_ORIG, "rev-parse", "HEAD"],
+                             capture_output=True, text=True, timeout=30)
+        dirty = subprocess.run(["git", "-C", CSL_ORIG, "status", "--porcelain", "-uno"],
+                               capture_output=True, text=True, timeout=60)
+        if rev.returncode == 0:
+            prov["revision"] = rev.stdout.strip()
+        if dirty.returncode == 0:
+            prov["dirty"] = bool(dirty.stdout.strip())
+    except Exception as exc:                                   # noqa: BLE001
+        prov["note"] = repr(exc)[:200]
+    with open(os.path.join(PARSED_DIR, "_parse_provenance.json"), "w", encoding="utf-8") as f:
+        json.dump(prov, f, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":

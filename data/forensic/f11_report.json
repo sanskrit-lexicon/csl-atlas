@@ -7,12 +7,16 @@
     "VCP": "key1-export"
   },
   "corpus_revision": {
-    "path": "/Users/mac/Documents/GitHub/csl-orig",
-    "revision": "30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4",
-    "committed": "2026-08-29T23:03:49+03:00"
+    "cache_generating_revision": null,
+    "sibling_checkout_at_run": {
+      "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+      "committed": "2026-09-20T11:58:58+03:00"
+    },
+    "binding_pin": "source_hashes",
+    "cache_generating_note": "parsed cache predates _parse_provenance.json; its generating csl-orig revision is unrecorded"
   },
   "reproduction_delta": {
-    "note": "The published figures were produced on 2026-06-03 against an unpinned ../csl-orig; this run reads the revision recorded under corpus_revision. Deltas below are corpus drift, not arithmetic disagreement — the pinned arithmetic tests (tests/forensic, H4352) still pass.",
+    "note": "The published figures were produced on 2026-06-03 against an unpinned ../csl-orig. Upstream corpus drift is the most plausible cause of the deltas below (the pinned arithmetic tests, tests/forensic H4352, still pass), but it is not proven the exclusive cause: neither the 2026-06-03 run nor this cache's generating csl-orig revision was recorded (see corpus_revision).",
     "S-F1-RARE": {
       "published": 587,
       "reproduced": 598
@@ -393,7 +397,29 @@
         "best_non_lineage_agreement": 0.6337,
         "pwg_excess_over_best_reference": 0.1181,
         "pwg_excess_over_permutation_floor": 0.2514,
-        "note": "the defensible margin is the excess over the best non-lineage reference, not over the permutation floor; BEN carries its own Petersburg exposure, so it is a conservative, imperfect negative control"
+        "note": "the excess over the best non-lineage reference is a DESCRIPTIVE difference between two different pair populations, not an identified copying excess; see pwg_vs_best_reference for the matched loci and an entry-clustered bootstrap. BEN carries its own Petersburg exposure.",
+        "pwg_vs_best_reference": {
+          "contributing_entries": {
+            "a": 2168,
+            "b": 64
+          },
+          "discordant_pairs": {
+            "a": 4685,
+            "b": 101
+          },
+          "shared_discordant_loci": 24,
+          "shared_entries": 22,
+          "matched_agreement": {
+            "a": 0.6667,
+            "b": 0.75
+          },
+          "unmatched_difference": 0.1181,
+          "entry_cluster_bootstrap_95": [
+            0.023,
+            0.2101
+          ],
+          "bootstrap_iters": 1000
+        }
       }
     }
   }

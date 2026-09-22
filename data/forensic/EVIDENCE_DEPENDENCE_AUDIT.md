@@ -1,4 +1,4 @@
-_Created: 20-09-2026 · Last updated: 20-09-2026_
+_Created: 20-09-2026 · Last updated: 22-09-2026_
 
 # Evidence-dependence audit — are A10's three strongest descent signals independent? (H5073)
 
@@ -35,10 +35,15 @@ python scripts/forensic/parse_cslorig.py mw pwg pw ap ben sch pwkvn ae ap90 bhs 
 python scripts/forensic/f11_evidence_dependence.py
 ```
 
-**Corpus revision pinned for this run:** `csl-orig` at
-[`30b2ae7b`](https://github.com/sanskrit-lexicon/csl-orig/commit/30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4)
-(2026-08-29). Per-input SHA-256 hashes are in the `source_hashes` block of
-[`f11_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f11_report.json).
+**What pins this run:** the per-input SHA-256 hashes in the `source_hashes` block of
+[`f11_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f11_report.json)
+— those are the binding pin. The *csl-orig revision* that generated the parsed cache is
+**unrecorded**: the cache predates the `_parse_provenance.json` sidecar that
+`parse_cslorig.py` now writes (H5073 review, finding 4). The sibling `../csl-orig` checkout
+stood at [`30b2ae7b`](https://github.com/sanskrit-lexicon/csl-orig/commit/30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4)
+(2026-08-29) when this audit first ran and at `f4c08c57` (2026-09-20) at the re-run, with
+**identical input hashes and identical results** — so the checkout HEAD is a lead about the
+cache's origin, not a record of it. `corpus_revision` now reports the two separately.
 Arithmetic pins: [`tests/forensic/test_f11_evidence_dependence.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/tests/forensic/test_f11_evidence_dependence.py)
 (14 tests, hand-derived fixture, null fixture asserting exactly zero, and a
 cross-container order-independence pin on the permutation block).
@@ -89,7 +94,9 @@ That sentence is correct about what the order signal *adds* (a stronger
 inference from the same events). It is wrong if read as two independent bodies
 of evidence. C2 re-reads a 4.4 % subset of C1's loci and asks a sharper question
 of them. The right summary is one evidence base, two questions — not two
-corroborations.
+corroborations. That does not make the order signal worthless: *conditional on*
+shared citation membership it can still carry evidence the membership signal
+lacks. What it cannot do is count as a second, separately sampled body of loci.
 
 ### 3.2 `A10-C3` is the claim that genuinely adds loci
 
@@ -101,9 +108,11 @@ corroborations.
 
 The shared-omission test rests on words chosen precisely because they lie
 outside the European lineage, and the measurement confirms it: nearly half its
-anchor is invisible to the citation signals. `A10-C3` is the load-bearing
-independent leg of the combination, which is the opposite of how §3.5 presents
-itself ("corroborates rather than proves").
+anchor is invisible to the citation signals. `A10-C3` is the only leg whose
+loci are largely *disjoint* from the citation signals, which is the opposite of
+how §3.5 presents itself ("corroborates rather than proves"). Disjoint loci are
+not statistical independence: whether MW enters a word and whether it cites a
+text for a word can share historical causes across different loci (§7, item 5).
 
 ### 3.3 The rare-reference pool is one text (`CTRL-ABL-H`)
 
@@ -224,9 +233,10 @@ pair's direction:
 | within-entry permutation floor (`CTRL-PERM`, 200 reps) | — | 0.5004 (range 0.4885–0.5123) |
 
 On the 4,685 pairs where the two dictionaries' *habits* point in opposite
-directions, MW still follows PWG's particular article 75.2 % of the time. §3.4's
-central assertion survives its sharpest available control, and now rests on 4,685
-convention-defying pairs rather than an 8-entry null.
+directions, MW's order still agrees with PWG's particular article 75.2 % of the
+time. The *agreement* survives this control and now rests on 4,685
+convention-defying pairs rather than an 8-entry null; what it does not establish is
+that copying, rather than a shared conditional habit, produces it (§7, item 1).
 
 **But 0.5004 is the wrong floor to quote the margin against** (H5073 pre-review,
 finding 2). A within-entry permutation measures *no signal at all*; the question
@@ -243,12 +253,29 @@ same control now runs on every comparand we can reach:
 | permutation | no signal at all | — | 0.5004 |
 
 Against the best usable non-lineage reference (BEN, ≥ 50 pairs), PWG's excess is
-**+0.118**, not the +0.251 the permutation floor suggests. The defensible
-sentence is therefore *"MW follows PWG's particular article on convention-defying
-pairs about 0.12 more often than it follows a non-source contemporary's"* — a
-real, directional margin, monotone in claimed lineage distance
-(PWG 0.752 > PW 0.628 ≈ BEN 0.634 ≫ permutation 0.500) — and **not** "only ≈ 0.05
-of the 0.811 is convention, the rest is the article". The caveat that keeps this
+**+0.118**, not the +0.251 the permutation floor suggests. **That +0.118 is a
+descriptive difference between two different pair populations, not an identified
+copying excess** (H5073 independent review, finding 2). `convention_split` selects
+entries and discordant pairs separately per comparand, so the arms barely overlap
+(`pwg_vs_best_reference` in `f11_report.json`):
+
+| | PWG arm | BEN arm |
+|---|---|---|
+| contributing entries | 2,168 | 64 |
+| discordant pairs | 4,685 | 101 |
+| discordant loci scored by **both** arms | 24 (in 22 entries) | 24 |
+| agreement on those 24 matched loci | **0.6667** | **0.7500** |
+
+The unmatched difference is +0.1181 with an entry-clustered bootstrap 95 % interval
+of **[+0.023, +0.210]** (1,000 resamples, entries resampled within each arm). So
+the unmatched gap is unlikely to be pure sampling noise, but on the only pairs where
+the two arms can be compared like-for-like, BEN agrees *more* than PWG — on 24 loci,
+too few to reverse anything, and enough to forbid calling the margin identified. The
+arms are not monotone either: PW 0.628 sits *below* BEN 0.634. The defensible
+sentence is *"on convention-discordant pairs MW's order agrees with PWG's article
+0.752 of the time, above every non-lineage arm we can score, by a margin the
+available controls cannot attribute to copying"* — **not** "only ≈ 0.05 of the 0.811
+is convention, the rest is the article", and not "real and monotone". The caveat that keeps this
 conservative: BEN has its own Petersburg exposure (A10 §3.4), so it is an
 imperfect negative control, and its 101 pairs are clustered within entries, which
 makes a naive binomial SE optimistic.
@@ -281,10 +308,14 @@ corrections moved the rare-reference residue: this run gains 12 `PAÑCAT. I–IV
 and 2 `HIT.` events and loses 3 `KAUŚ`.
 
 Nothing here contradicts the H4352 arithmetic pins — those run against fixtures
-and still pass (61 tests). The gap is provenance, not correctness: **a published
+and still pass (64 tests). The gap is provenance, not correctness: **a published
 forensic figure over a moving upstream is not reproducible until the upstream
-revision is recorded.** `f11_report.json` records it; the other `f*_report.json`
-files do not.
+revision is recorded.** Upstream drift is the most plausible cause of the deltas
+above, not a proven exclusive one — neither the 2026-06-03 run's revision nor this
+cache's generating revision was recorded. `f11_report.json` pins its inputs by
+SHA-256; `parse_cslorig.py` now also writes `parsed/_parse_provenance.json` so the
+*next* cache build records its generating revision. The other `f*_report.json`
+files pin neither.
 
 ## 5. Verdicts
 
@@ -292,14 +323,16 @@ files do not.
 |---|---|---|
 | `A10-C1` §3.2 citation apparatus | **Survives** | separation never falls below 8.6× and never approaches 1 across ablation depths 5–100 (`CTRL-ABL-S`); 16.3× at the frozen depth 25. |
 | `A10-C1` rare-reference sub-signal | **Weakens** | 94.5 % one text; 33 events survive Harivaṃśa ablation; same event set as §6, not a second line (`CTRL-ABL-H`). |
-| `A10-C2` §3.4 citation order | **Survives, but is not independent of C1, and by a smaller margin than first written** | 0.7518 on 4,685 convention-discordant pairs — **+0.118 over the best non-lineage reference** (BEN 0.6337), not +0.25 over the permutation floor (`CTRL-CONV`); 100 % of its loci are C1 loci. |
-| `A10-C3` §3.5 shared omission | **Survives; the only independent leg** | 46.7 % of its anchor is untouched by either citation signal; reproduces to the digit. |
-| Combination as published | **Overstated in framing, not in arithmetic** | 7,280 loci double-counted by a naive sum; §3.2 + §6 are one stratum; PW is a partial duplicate of PWG. |
+| `A10-C2` §3.4 citation order | **Weakens: the order agreement survives, its attribution to copying is unidentified** | 0.7518 on 4,685 convention-discordant pairs, above every non-lineage arm; but the +0.118 over BEN compares different populations (24 shared loci, on which BEN agrees more), and a shared *conditional* convention can score 1.0 with no copying (pinned counterexample). 100 % of its loci are C1 loci. |
+| `A10-C3` §3.5 shared omission | **Survives; the only locus-disjoint leg** | 46.7 % of its anchor is untouched by either citation signal; reproduces to the digit. Disjoint loci, not proven statistical independence. |
+| Combination as published | **Overstated in framing, not in arithmetic** | a naive sum of locus sets counts 7,280 loci twice (set accounting — not a measured amount of inferential double-counting); §3.2 + §6 are one stratum; PW is a partial duplicate of PWG. |
 
 No claim was refuted, and no published number was found wrong. What the audit
 changes is how the signals may be *combined*: the conclusion should rest on
-**two** independent evidence bases (the citation apparatus, examined twice at
-different resolutions; and the omission anchor), not four or five.
+**two locus-disjoint evidence bases** (the citation apparatus, examined twice at
+different resolutions; and the omission anchor), not four or five. Locus
+disjointness is the most this audit measures; it does not establish that the two
+bases are statistically independent (§7, item 5).
 
 ## 6. Edits owed to A10
 
@@ -322,7 +355,8 @@ Landed with this audit, minimal and sourced:
    565/598 in this run's frame, and §7 explains the drift.
 
 Not done, and deliberately: no published figure was revised, because none
-changed for a reason other than upstream corpus drift, and re-freezing A10's
+changed except through the reproduction deltas of §4 (most plausibly upstream
+corpus drift), and re-freezing A10's
 numbers against a newer `csl-orig` is a separate, larger job than this handoff's
 scope (it would move every `f*_report.json` at once).
 
@@ -343,9 +377,13 @@ scope (it would move every `f*_report.json` at once).
 1. The `A10-C2` verdict rests on a global-convention estimator (mean normalised
    sigil position). A compiler whose convention is *conditional* — Veda first in
    grammatical entries, epic first in narrative ones — would be scored as
-   convention-defying here. The 0.7518 is therefore an upper bound on
-   article-level copying and a lower bound on convention; disentangling them
-   needs an entry-type covariate this repo does not yet carry.
+   convention-defying here. The 0.7518 is a *pair-agreement rate*, not a copying
+   rate: without a model linking copying to agreement it bounds neither the share
+   of copied articles nor the share owed to convention (copied articles can be
+   reordered; uncopied ones can agree by habit). A pinned counterexample
+   (`test_ctrl_conv_conditional_convention_counterexample`) scores 1.0 from two
+   dictionaries that share one contextual ordering and copy nothing. Separating
+   the causes needs an entry-type covariate this repo does not yet carry.
 2. `CTRL-ABL-S` ablates by corpus document-frequency, which correlates with (but
    is not) "texts everyone cites".
 3. The Apte arms of both `S-F5-ORDER` and `CTRL-CONV` rest on 8 entries / 13
