@@ -44,6 +44,11 @@ stood at [`30b2ae7b`](https://github.com/sanskrit-lexicon/csl-orig/commit/30b2ae
 (2026-08-29) when this audit first ran and at `f4c08c57` (2026-09-20) at the re-run, with
 **identical input hashes and identical results** — so the checkout HEAD is a lead about the
 cache's origin, not a record of it. `corpus_revision` now reports the two separately.
+**Since H5248 (22-09-2026) the cache's generating revision is recorded:** the cache was rebuilt
+at [`f4c08c57`](https://github.com/sanskrit-lexicon/csl-orig/commit/f4c08c578b330e2379e38f54d3a541f1564b8eee)
+and all 15 caches this audit reads verify against `_parse_provenance.json`
+(`cache_generating_revision` = `f4c08c57…`, clean). Every figure in §§1–3 and §5 was unchanged by
+that rebuild.
 Arithmetic pins: [`tests/forensic/test_f11_evidence_dependence.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/tests/forensic/test_f11_evidence_dependence.py)
 (14 tests, hand-derived fixture, null fixture asserting exactly zero, and a
 cross-container order-independence pin on the permutation block).
@@ -294,35 +299,52 @@ thin to cite either way. It should be reported as thin, not as a null.
 rather than assertion: 0.5004 concordance, 10.13 % chance-identical, against the
 article's "0.50 concordance and only ~5–17 % chance-identical".
 
-## 4. Reproduction against the frozen figures — a pinning gap
+## 4. Reproduction against the frozen figures — pinned since H5248
 
-| signal | published (2026-06-03) | this run (`csl-orig` 30b2ae7b) | delta |
+| signal | first freeze (2026-06-03, revision unrecorded) | re-frozen (`csl-orig` f4c08c57) | delta |
 |---|---|---|---|
 | `S-F1-RARE` rare shared references | 587 | 598 | **+11** |
 | `S-F1-RARE` of which Harivaṃśa | 565 | 565 | 0 |
+| `S-F1-RARE` corpus-unique | 203 | 169 | −34 |
 | `S-F5-ORDER` entries | 3,593 | 3,583 | −10 |
 | `S-F5-ORDER` concordance | 0.8107 | 0.8108 | +0.0001 |
-| `S-F5-IDENT` identical share | 47.8 % | 47.73 % | −0.07 pt |
+| `S-F5-IDENT` identical share | 47.8 % | 47.7 % | −0.1 pt |
 | `S-F9-GAPSENS` MW | 12.336 | 12.336 | **0** |
 | `S-F9-GAPSENS` AP | 1.51 | 1.51 | **0** |
 
-The pattern is diagnostic. **F9 reproduces to the digit because it reads frozen
-`key1` headword exports; F1 and F5 drift because they read `../csl-orig`
-directly, and no `.source.json` sidecar records which revision of it.** The
-sidecars pin the *csl-atlas* commit only (`commit`, `utc_iso`, `script`), and
-A10 §7 says "over `../csl-orig`" with no revision. Three months of upstream
-corrections moved the rare-reference residue: this run gains 12 `PAÑCAT. I–IV`
-and 2 `HIT.` events and loses 3 `KAUŚ`.
+**The diagnosis (H5073).** F9 reproduced to the digit because it reads frozen `key1`
+headword exports; F1 and F5 drifted because they read `../csl-orig` directly and no
+`.source.json` sidecar recorded which revision of it. The residue moved with upstream
+corrections: the re-frozen pool gains 12 `PAÑCAT. I–IV` and 2 `HIT.` events and loses 3 `KAUŚ`.
+Upstream drift is the most plausible cause of the June deltas, not a proven exclusive one — the
+June run's revision was never recorded, so those old digits cannot be reproduced.
 
-Nothing here contradicts the H4352 arithmetic pins — those run against fixtures
-and still pass (64 tests). The gap is provenance, not correctness: **a published
-forensic figure over a moving upstream is not reproducible until the upstream
-revision is recorded.** Upstream drift is the most plausible cause of the deltas
-above, not a proven exclusive one — neither the 2026-06-03 run's revision nor this
-cache's generating revision was recorded. `f11_report.json` pins its inputs by
-SHA-256; `parse_cslorig.py` now also writes `parsed/_parse_provenance.json` so the
-*next* cache build records its generating revision. The other `f*_report.json`
-files pin neither.
+**The fix (H5248, 22-09-2026).** One named revision now pins every F1/F5 figure:
+[`csl-orig@f4c08c57`](https://github.com/sanskrit-lexicon/csl-orig/commit/f4c08c578b330e2379e38f54d3a541f1564b8eee)
+(2026-09-20, clean checkout).
+
+1. `scripts/forensic/_corpus_pin.py` gives a figure one revision or refuses. Cache readers
+   (F1) take it from `parsed/_parse_provenance.json`, with every cache hash-verified, clean and
+   single-revision — None or `MIXED` refuse. Live readers (F5, F10) take the clean checkout
+   HEAD before and after the run, and refuse if it is dirty or moved.
+2. Every F1/F5 `.source.json` sidecar (`citation_pair_overlap`, `shared_rare_citations`,
+   `f5_pair_summary`, `f5_citation_order_examples`) and `f1_report.json` / `f5_report.json`
+   carry `csl_orig_revision`. F10's writer does the same on its next run. It was not re-run here:
+   its MT stage is outside this re-freeze, and its figures were never shown to drift.
+3. Reproduction: a second run from a deleted and rebuilt parse cache, at the same revision,
+   rebuilt all 45 caches with identical SHA-256 and reproduced every figure to the digit. Two
+   CSVs, though, followed Python set order: `shared_rare_citations.csv` ordered its tied rows
+   differently, and `f5_citation_order_examples.csv` (capped at 200) sampled different
+   entries. Both now sort before writing. Two runs under different `PYTHONHASHSEED`s then gave
+   byte-identical F1/F5/F11 outputs (only sidecar timestamps differ). `f11_report.json` now reads `published_revision` = `cache_generating_revision`
+   = `f4c08c57…` and keeps the June digits verbatim under `superseded_2026_06_03`.
+4. The arithmetic pins in `tests/forensic/` still pass (74 tests; 9 new pins for the refusal
+   paths: unrecorded, hash-mismatch, dirty, `MIXED`, moved, not-a-checkout). The pins run
+   against fixture corpora that are real one-commit git checkouts, so the live-reader path is
+   exercised without reading `../csl-orig`.
+
+Moving to a newer `csl-orig` is now an explicit act: rebuild the cache, re-run, and record the
+new revision. It can no longer happen silently.
 
 ## 5. Verdicts
 

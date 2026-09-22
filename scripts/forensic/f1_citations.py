@@ -34,6 +34,7 @@ import itertools
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 from parse_cslorig import load_entries, PARSED_DIR
+import _corpus_pin
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -84,6 +85,9 @@ def main():
     # citation-free. F1 compares the Western <ls> apparatus. See CITATION_TAGGING.md.
     print(f"\n<ls>-tagging dicts (>= {MIN_CIT} <ls> cites): {', '.join(codes)}")
     print("  (SKD/VCP/INM cite densely in the indigenous style with no <ls> -> see CITATION_TAGGING.md)")
+    # H5248: refuse up front unless every cache read below is one recorded csl-orig revision.
+    pin = _corpus_pin.cache_revision(codes, PARSED_DIR)
+    print(f"csl-orig revision (hash-bound parse provenance): {pin['revision']}")
 
     full = {}
     src = {}
@@ -148,7 +152,7 @@ def main():
                 ncorp = len({lm for (_, lm) in ref_lemmas[r]})   # distinct lemmas citing r anywhere
                 if ncorp <= max_corpus_lemmas:
                     out.append((ncorp, k1, r, a, b))
-        out.sort(key=lambda t: (t[0], t[1]))
+        out.sort(key=lambda t: (t[0], t[1], t[2]))   # full key: row order must not follow set order (H5248)
         return out
 
     gun_rows = []
@@ -193,6 +197,7 @@ def main():
 
     gun_sources = collections.Counter(source_of(g["shared_ref"]) for g in gun_rows)
     report = {
+        "csl_orig_revision": pin["revision"],
         "min_cit": MIN_CIT, "citation_dicts": codes,
         "citation_tagging_note": ("'citation_dicts' = <ls>-TAGGED dicts only. SKD (84,616 iti) "
                                   "and VCP (30,928 iti) are the corpus's MOST citation-dense dicts "
@@ -219,12 +224,8 @@ def main():
 
     print(f"\nWrote citation_pair_overlap.csv ({len(rows)} pairs), "
           f"shared_rare_citations.csv ({len(gun_rows)} guns), f1_report.json")
-    try:
-        sys.path.insert(0, os.path.abspath("scripts/L0"))
-        from _provenance import write_source
-        write_source("data/forensic/citation_pair_overlap.csv", "f1_citations.py", 1)
-    except Exception as e:
-        print(f"Provenance error: {e}")
+    for out in ("data/forensic/citation_pair_overlap.csv", "data/forensic/shared_rare_citations.csv"):
+        _corpus_pin.write_pinned_source(out, "f1_citations.py", 1, pin)
 
 
 if __name__ == "__main__":

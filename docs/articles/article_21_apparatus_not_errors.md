@@ -102,16 +102,15 @@ the unrelated BOP→MW at 0.35 (`data/L0/content_lift.csv`). **17,007 headwords 
 only MW and PW** in the entire corpus (L0.8).
 
 **3.2 Citation apparatus (the strongest signal).** Both traditions tag references with
-`<ls>`. MW shares a per-lemma citation **source-Jaccard of 0.16–0.19** with PWG/PW, versus
-**0.004 (BHS) – 0.017 (Apte)** for the unrelated nulls — a 9.5–49× separation. Intermediate
+`<ls>`. MW shares a per-lemma citation **source-Jaccard of 0.16–0.18** with PWG/PW, versus
+**0.004 (BHS) – 0.016 (Apte)** for the unrelated nulls — a 9.7–47× separation. Intermediate
 values (Benfey 0.10, Grassmann 0.04) sit between lineage and null, consistent with Benfey's
-own Petersburg exposure (§3.4). **587 rare exact references are shared for the *same
-headword***, each attested at ≤4 lemmas corpus-wide, 203 of them occurring nowhere else in
+own Petersburg exposure (§3.4). **598 rare exact references are shared for the *same
+headword***, each attested at ≤4 lemmas corpus-wide, 169 of them occurring nowhere else in
 the corpus at all: e.g. `ullApya → SĀH. 545`, `dAsatA → VEṆĪS. 175`, `granTakAra →
 VEDĀNTAS. 1` (all three corpus-unique), and 565
-exact Harivaṃśa line-numbers (`HARIV. 9529` …). Those last are 96% of the pool (565/587 in the
-frozen frame these figures come from; the audit's re-run against a later `csl-orig` gives
-565/598 = 94.5%, see §7), and they are the *same* source events §6 resolves against the
+exact Harivaṃśa line-numbers (`HARIV. 9529` …). Those last are 94.5% of the pool (565/598 at the
+`csl-orig` revision every F1/F5 figure is pinned to, §7), and they are the *same* source events §6 resolves against the
 vulgate: the rare-reference mass and the
 Harivaṃśa run-to-ground are one line of evidence read at two resolutions, not two independent
 ones. Ablating Harivaṃśa leaves 33 rare shared references over 18 other texts — the
@@ -121,7 +120,7 @@ The Jaccard signal itself is *not* concentrated: ablating the most widely cited 
 collapses the lineage-over-null separation — across ablation depths of 5 to 100 texts it stays
 between 8.6× and 18.3× (16.3× at depth 25, against 9.7× unablated) — so it is not shared
 common texts doing the work (ibid. §3.5). MW further reduces Böhtlingk's full verse
-references to a bare sigil **41,552 times** — a directional PWG→MW compression. The method
+references to a bare sigil **41,571 times** — a directional PWG→MW compression. The method
 self-validates: it ranks known same-apparatus pairs at the top (PW/PWKVN 0.87, SCH/PW 0.62,
 AP/AP90 0.76) and the nulls at the floor.
 
@@ -133,16 +132,16 @@ division is partly linguistically forced, so this corroborates rather than prove
 
 **3.4 Citation order — MW worked *from* PWG's articles.** Sharing *which* texts to cite
 (§3.2) is consistent with merely using the same sources; sharing their *order* is not.
-Over 3,593 shared headwords for which both works cite ≥3 common sources, MW reproduces
-PWG's citation **sequence** at **0.811** concordance, with **47.8% of entries in perfectly
+Over 3,583 shared headwords for which both works cite ≥3 common sources, MW reproduces
+PWG's citation **sequence** at **0.811** concordance, with **47.7% of entries in perfectly
 identical order** — against a random baseline of 0.50 concordance and only ~5–17%
 chance-identical for k≥3 sources (a 3–10× excess). For example *droṇa*: both cite
 MBH · YĀJÑ · SUŚR · HARIV · VP in that order; *pratikartavya*: MBH · HARIV · ŚAṂK · R ·
 PRAB · SUŚR (six sources, identical sequence — random odds 1/720). The effect points to
 Petersburg-*specificity* rather than a shared scholarly ordering convention: agreement falls
-monotonically with distance from the tradition — PWG 0.81 > PW 0.73 > Benfey 0.68 (itself
+monotonically with distance from the tradition — PWG 0.81 > PW 0.73 > Benfey 0.70 (itself
 Petersburg-influenced) > the independent Apte 0.42 (the Apte tail rests on 8 order-bearing
-entries and Benfey on 154 — thin, but the gradient is monotone). Because that independent arm
+entries and Benfey on 116 — thin, but the gradient is monotone). Because that independent arm
 is thin, the Petersburg-specificity is better carried by a direct control than by the
 gradient: derive each dictionary's *global* ordering habit (the mean normalised position of
 every text across all its entries), then keep only the sigil pairs on which MW's and PWG's
@@ -290,7 +289,8 @@ edition can match. The airtight upgrade, in classical stemmatic terms, would be 
 dictionaries. I ran that test twice, against the two corpora available.
 
 **Against the DCS corpus the test is structurally blocked.** Of the 587 shared rare
-citations, only **1** resolved to a DCS locus: 96 % are Harivaṃśa references, cited by the
+citations in the June-2026 F1 pool this F8 run resolved (598 at the §7 pin; the 565
+Harivaṃśa references are identical in both), only **1** resolved to a DCS locus: 96 % are Harivaṃśa references, cited by the
 Petersburg dictionaries in the **Calcutta-vulgate continuous śloka numbering** (running to
 16 291), while DCS carries the **critical edition** (118 chapters, ≈ 6 073 verses). 298
 references provably exceed the entire DCS Harivaṃśa, and the single resolvable candidate
@@ -349,21 +349,24 @@ F10
 install via `scripts/forensic/_setup_argos.py`; cache gitignored + rebuildable, parallel fill via
 `_f10_pretranslate.py`) — the only figure not derived purely from the source text.
 
-**A pinning caveat, measured (H5073).** The `.source.json` sidecars record the *csl-atlas*
-commit, not the `../csl-orig` revision the figures were computed over, and `csl-orig` receives
-upstream corrections continuously. The signals that read frozen `key1` exports (F9) therefore
-reproduce to the digit; those that read `csl-orig` live (F1, F5) drift. Re-run 20-09-2026
-with the sibling `csl-orig` checkout at [`30b2ae7b`](https://github.com/sanskrit-lexicon/csl-orig/commit/30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4)
-(2026-08-29), three months after the 03-06-2026 freeze: the rare-reference pool moves 587 → 598
-(Harivaṃśa unchanged at 565), the order-bearing entries 3,593 → 3,583 with concordance
-0.8107 → 0.8108 and identical share 47.8% → 47.73%, and F9's 12.336 / 1.51 are unchanged. The
-arithmetic pins in `tests/forensic/` are unaffected — they run against fixtures. Until the
-sidecars carry a corpus revision, read the F1/F5 digits as a June-2026 snapshot; per-input
-SHA-256 hashes for the audit run (the binding pin; the cache's generating `csl-orig` revision
-itself went unrecorded, so upstream drift is the most plausible, not a proven, cause of the
-deltas) are recorded in
+**Pinned to one `csl-orig` revision (H5073 → H5248, re-frozen 22-09-2026).** `csl-orig`
+receives upstream corrections continuously, and the first freeze (03-06-2026) recorded only the
+*csl-atlas* commit — so F1 and F5, which read `../csl-orig`, drifted while F9 (frozen `key1`
+exports) reproduced to the digit. Every F1 and F5 figure in this article is now computed at
+[`csl-orig@f4c08c57`](https://github.com/sanskrit-lexicon/csl-orig/commit/f4c08c578b330e2379e38f54d3a541f1564b8eee)
+(2026-09-20). Each F1/F5 `.source.json` sidecar and `f1_report.json` / `f5_report.json` carry that
+revision, and the scripts refuse to write a figure if it is unrecorded, dirty, mixed across caches
+or moves mid-run. A second clean run at that revision, from a rebuilt cache, reproduces every
+re-frozen figure to the digit, and the output files are byte-identical across hash seeds. What moved against the June freeze: the rare-reference pool
+587 → 598 (Harivaṃśa unchanged at 565; corpus-unique 203 → 169), the order-bearing entries
+3,593 → 3,583 (concordance 0.8107 → 0.8108, identical share 47.8% → 47.7%), PWG→MW truncations
+41,552 → 41,571, the lineage source-Jaccard band 0.16–0.19 → 0.16–0.18 (Apte null 0.017 → 0.016;
+separation 9.5–49× → 9.7–47×), and the Benfey order arm 0.68 on 154 entries → 0.70 on 116.
+No verdict changes. The June values stay in the `superseded_2026_06_03` block of
 [`f11_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f11_report.json)
-and [`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §4.
+([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §4).
+Not re-frozen: F8 (§6, which ran against the June 587 pool) and F10 (sense order; its writer now
+records the revision on its next run).
 
 Per-run provenance in the
 `.source.json` sidecars.

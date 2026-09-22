@@ -39,6 +39,7 @@ import collections
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 from parse_cslorig import iter_entries, CSL_ORIG
+import _corpus_pin
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -140,6 +141,9 @@ def main():
     print("F5 — at-scale entry comparison: MW vs the Petersburg family")
     print("=" * 66)
 
+    # H5248: bodies are re-read live, so pin the clean checkout before AND after.
+    pin = _corpus_pin.live_revision(CSL_ORIG)
+    print(f"csl-orig revision (live checkout, clean): {pin['revision']}")
     print("\nparsing MW + Petersburg + nulls (re-reads csl-orig bodies)...")
     mw = build("mw")
     others = {c.upper(): build(c) for c in PET + NULLS}
@@ -151,7 +155,7 @@ def main():
         shared = set(mw) & set(D)
         order_vals, content_vals, cnt_pairs = [], [], []
         rare_shared = 0
-        for h in shared:
+        for h in sorted(shared):   # sorted: the 200-row example cap must not follow set order (H5248)
             m, o = mw[h], D[h]
             cf = concordant_fraction(m["cites"], o["cites"])
             if cf is not None:
@@ -214,7 +218,9 @@ def main():
     print(f"\n  Petersburg order-agreement {pet_mean:.3f} vs independent-null {null_mean:.3f} "
           f"(random 0.500)")
 
+    _corpus_pin.assert_unmoved(pin, CSL_ORIG)
     report = {
+        "csl_orig_revision": pin["revision"],
         "min_shared_sources_for_order": MIN_SHARED_SRC,
         "pairs": rows,
         "petersburg_mean_order": round(pet_mean, 4), "null_mean_order": round(null_mean, 4),
@@ -247,12 +253,8 @@ def main():
 
     print(f"\nWrote f5_pair_summary.csv ({len(rows)} pairs), "
           f"f5_citation_order_examples.csv ({len(order_examples)}), f5_report.json")
-    try:
-        sys.path.insert(0, os.path.abspath("scripts/L0"))
-        from _provenance import write_source
-        write_source("data/forensic/f5_pair_summary.csv", "f5_entry_comparison.py", 5)
-    except Exception as e:
-        print(f"Provenance error: {e}")
+    for out in ("data/forensic/f5_pair_summary.csv", "data/forensic/f5_citation_order_examples.csv"):
+        _corpus_pin.write_pinned_source(out, "f5_entry_comparison.py", 5, pin)
 
 
 if __name__ == "__main__":
