@@ -1,0 +1,13 @@
+{
+  "dataset": "usage_register_census",
+  "commit": "bbca791169829b8fa7d252d7ff5c7105b721c7f8",
+  "generatedAt": "2026-09-23T18:58:31.469Z",
+  "generatedBy": "npm run build-usage-register-census",
+  "sourceFiles": [
+    "data/lexico/usage_register_mapping.json",
+    "scripts/build-usage-register-census.mjs",
+    "../csl-orig/v02/<code>/<code>.txt (source of truth, external)"
+  ],
+  "upstreamCommit": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+  "schemaVersion": "1.0.0"
+}

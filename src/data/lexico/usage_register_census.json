@@ -1,0 +1,2806 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "status": "usage-register-census",
+  "claim": "Every CDSL dictionary states a word's usage or register in a small, dictionary-specific set of markup labels; normalised onto one closed vocabulary the labels are comparable across dictionaries, and the per-dictionary rate shows how much of the lexicon each dictionary marks for register at all.",
+  "evidenceLabel": "observed",
+  "ownerRepo": "csl-atlas",
+  "generatedBy": "npm run build-usage-register-census",
+  "sourceFiles": [
+    "data/lexico/usage_register_mapping.json",
+    "scripts/build-usage-register-census.mjs",
+    "../csl-orig/v02/<code>/<code>.txt (source of truth, external)"
+  ],
+  "method": "For each csl-orig dictionary, scan the <ab>, <lang> and <ls> markup tags; count an occurrence only when its exact (tag, token) pair is listed in data/lexico/usage_register_mapping.json; normalise it to the closed vocabulary; report instances, the number of <L>..<LEND> records carrying the label, and the instances-per-1000-entries rate per dictionary.",
+  "limit": "Zero is not absence. A dictionary with no mapped label marks register in prose, not markup (the indigenous SKD/VCP and the untagged reverse dictionaries), or simply does not mark register at all. Only marked labels are counted; the mission's 'the like' is bounded by the published mapping and its `excluded` section.",
+  "sourceCommit": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+  "vocabulary": {
+    "register": [
+      "vedic",
+      "post-vedic",
+      "epic",
+      "classical",
+      "poetic",
+      "mythological",
+      "buddhist",
+      "jaina",
+      "figurative",
+      "metaphorical",
+      "colloquial",
+      "vulgar",
+      "archaic",
+      "onomatopoeic"
+    ],
+    "dialect": [
+      "pali",
+      "prakrit",
+      "apabhramsa",
+      "desi",
+      "ardhamagadhi",
+      "mixed-indic",
+      "jaina-maharashtri",
+      "maharashtri",
+      "marathi",
+      "hindi",
+      "bengali"
+    ],
+    "lexicographic": [
+      "lexicographer-only"
+    ],
+    "domain": [
+      "philosophical",
+      "religious",
+      "astronomical",
+      "political"
+    ]
+  },
+  "mappingSummary": {
+    "source": "data/lexico/usage_register_mapping.json",
+    "labels": 77,
+    "excludedLookAlikes": 20,
+    "byTag": {
+      "ls": 1,
+      "lang": 34,
+      "ab": 42
+    },
+    "byClass": {
+      "lexicographic": 1,
+      "register": 47,
+      "dialect": 24,
+      "domain": 5
+    }
+  },
+  "scope": {
+    "dictionariesScanned": 45,
+    "dictionariesWithLabels": 16,
+    "totalEntries": 1506391,
+    "totalInstances": 62812,
+    "entriesWithLabel": 58105,
+    "pctEntriesWithLabel": 3.8572,
+    "instancesPer1000Entries": 41.697
+  },
+  "categories": [
+    {
+      "category": "lexicographer-only",
+      "class": "lexicographic",
+      "instances": 40212,
+      "entries": 39962,
+      "instancesPer1000Entries": 26.6943,
+      "shareOfInstances": 0.6402
+    },
+    {
+      "category": "pali",
+      "class": "dialect",
+      "instances": 7246,
+      "entries": 5166,
+      "instancesPer1000Entries": 4.8102,
+      "shareOfInstances": 0.1154
+    },
+    {
+      "category": "vedic",
+      "class": "register",
+      "instances": 5534,
+      "entries": 5076,
+      "instancesPer1000Entries": 3.6737,
+      "shareOfInstances": 0.0881
+    },
+    {
+      "category": "figurative",
+      "class": "register",
+      "instances": 3116,
+      "entries": 2898,
+      "instancesPer1000Entries": 2.0685,
+      "shareOfInstances": 0.0496
+    },
+    {
+      "category": "marathi",
+      "class": "dialect",
+      "instances": 1295,
+      "entries": 1244,
+      "instancesPer1000Entries": 0.8597,
+      "shareOfInstances": 0.0206
+    },
+    {
+      "category": "buddhist",
+      "class": "register",
+      "instances": 1077,
+      "entries": 1069,
+      "instancesPer1000Entries": 0.715,
+      "shareOfInstances": 0.0171
+    },
+    {
+      "category": "prakrit",
+      "class": "dialect",
+      "instances": 797,
+      "entries": 771,
+      "instancesPer1000Entries": 0.5291,
+      "shareOfInstances": 0.0127
+    },
+    {
+      "category": "ardhamagadhi",
+      "class": "dialect",
+      "instances": 703,
+      "entries": 661,
+      "instancesPer1000Entries": 0.4667,
+      "shareOfInstances": 0.0112
+    },
+    {
+      "category": "metaphorical",
+      "class": "register",
+      "instances": 600,
+      "entries": 553,
+      "instancesPer1000Entries": 0.3983,
+      "shareOfInstances": 0.0096
+    },
+    {
+      "category": "mixed-indic",
+      "class": "dialect",
+      "instances": 553,
+      "entries": 533,
+      "instancesPer1000Entries": 0.3671,
+      "shareOfInstances": 0.0088
+    },
+    {
+      "category": "epic",
+      "class": "register",
+      "instances": 427,
+      "entries": 365,
+      "instancesPer1000Entries": 0.2835,
+      "shareOfInstances": 0.0068
+    },
+    {
+      "category": "onomatopoeic",
+      "class": "register",
+      "instances": 355,
+      "entries": 354,
+      "instancesPer1000Entries": 0.2357,
+      "shareOfInstances": 0.0057
+    },
+    {
+      "category": "vulgar",
+      "class": "register",
+      "instances": 250,
+      "entries": 236,
+      "instancesPer1000Entries": 0.166,
+      "shareOfInstances": 0.004
+    },
+    {
+      "category": "classical",
+      "class": "register",
+      "instances": 154,
+      "entries": 132,
+      "instancesPer1000Entries": 0.1022,
+      "shareOfInstances": 0.0025
+    },
+    {
+      "category": "colloquial",
+      "class": "register",
+      "instances": 97,
+      "entries": 96,
+      "instancesPer1000Entries": 0.0644,
+      "shareOfInstances": 0.0015
+    },
+    {
+      "category": "philosophical",
+      "class": "domain",
+      "instances": 88,
+      "entries": 88,
+      "instancesPer1000Entries": 0.0584,
+      "shareOfInstances": 0.0014
+    },
+    {
+      "category": "hindi",
+      "class": "dialect",
+      "instances": 55,
+      "entries": 53,
+      "instancesPer1000Entries": 0.0365,
+      "shareOfInstances": 0.0009
+    },
+    {
+      "category": "post-vedic",
+      "class": "register",
+      "instances": 55,
+      "entries": 53,
+      "instancesPer1000Entries": 0.0365,
+      "shareOfInstances": 0.0009
+    },
+    {
+      "category": "jaina-maharashtri",
+      "class": "dialect",
+      "instances": 41,
+      "entries": 40,
+      "instancesPer1000Entries": 0.0272,
+      "shareOfInstances": 0.0007
+    },
+    {
+      "category": "maharashtri",
+      "class": "dialect",
+      "instances": 37,
+      "entries": 37,
+      "instancesPer1000Entries": 0.0246,
+      "shareOfInstances": 0.0006
+    },
+    {
+      "category": "bengali",
+      "class": "dialect",
+      "instances": 32,
+      "entries": 29,
+      "instancesPer1000Entries": 0.0212,
+      "shareOfInstances": 0.0005
+    },
+    {
+      "category": "apabhramsa",
+      "class": "dialect",
+      "instances": 23,
+      "entries": 23,
+      "instancesPer1000Entries": 0.0153,
+      "shareOfInstances": 0.0004
+    },
+    {
+      "category": "mythological",
+      "class": "register",
+      "instances": 21,
+      "entries": 21,
+      "instancesPer1000Entries": 0.0139,
+      "shareOfInstances": 0.0003
+    },
+    {
+      "category": "desi",
+      "class": "dialect",
+      "instances": 16,
+      "entries": 16,
+      "instancesPer1000Entries": 0.0106,
+      "shareOfInstances": 0.0003
+    },
+    {
+      "category": "jaina",
+      "class": "register",
+      "instances": 14,
+      "entries": 14,
+      "instancesPer1000Entries": 0.0093,
+      "shareOfInstances": 0.0002
+    },
+    {
+      "category": "poetic",
+      "class": "register",
+      "instances": 6,
+      "entries": 6,
+      "instancesPer1000Entries": 0.004,
+      "shareOfInstances": 0.0001
+    },
+    {
+      "category": "religious",
+      "class": "domain",
+      "instances": 4,
+      "entries": 4,
+      "instancesPer1000Entries": 0.0027,
+      "shareOfInstances": 0.0001
+    },
+    {
+      "category": "astronomical",
+      "class": "domain",
+      "instances": 2,
+      "entries": 2,
+      "instancesPer1000Entries": 0.0013,
+      "shareOfInstances": 0
+    },
+    {
+      "category": "archaic",
+      "class": "register",
+      "instances": 1,
+      "entries": 1,
+      "instancesPer1000Entries": 0.0007,
+      "shareOfInstances": 0
+    },
+    {
+      "category": "political",
+      "class": "domain",
+      "instances": 1,
+      "entries": 1,
+      "instancesPer1000Entries": 0.0007,
+      "shareOfInstances": 0
+    }
+  ],
+  "perDictionary": [
+    {
+      "code": "abch",
+      "entries": 1965,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "acc",
+      "entries": 49833,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "acph",
+      "entries": 163,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "acsj",
+      "entries": 240,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "ae",
+      "entries": 11359,
+      "instances": 158,
+      "entriesWithLabel": 153,
+      "pctEntriesWithLabel": 1.3469,
+      "instancesPer1000Entries": 13.9097,
+      "categoriesCredited": 1,
+      "byCategory": [
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 158,
+          "entries": 153,
+          "instancesPer1000Entries": 13.9097,
+          "shareOfInstances": 1
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 144
+        },
+        {
+          "tag": "ab",
+          "token": "Fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 14
+        }
+      ]
+    },
+    {
+      "code": "ap",
+      "entries": 90847,
+      "instances": 3626,
+      "entriesWithLabel": 3510,
+      "pctEntriesWithLabel": 3.8636,
+      "instancesPer1000Entries": 39.9133,
+      "categoriesCredited": 8,
+      "byCategory": [
+        {
+          "category": "vedic",
+          "class": "register",
+          "instances": 1915,
+          "entries": 1880,
+          "instancesPer1000Entries": 21.0794,
+          "shareOfInstances": 0.5281
+        },
+        {
+          "category": "marathi",
+          "class": "dialect",
+          "instances": 1277,
+          "entries": 1226,
+          "instancesPer1000Entries": 14.0566,
+          "shareOfInstances": 0.3522
+        },
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 416,
+          "entries": 403,
+          "instancesPer1000Entries": 4.5791,
+          "shareOfInstances": 0.1147
+        },
+        {
+          "category": "jaina",
+          "class": "register",
+          "instances": 14,
+          "entries": 14,
+          "instancesPer1000Entries": 0.1541,
+          "shareOfInstances": 0.0039
+        },
+        {
+          "category": "hindi",
+          "class": "dialect",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.011,
+          "shareOfInstances": 0.0003
+        },
+        {
+          "category": "onomatopoeic",
+          "class": "register",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.011,
+          "shareOfInstances": 0.0003
+        },
+        {
+          "category": "pali",
+          "class": "dialect",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.011,
+          "shareOfInstances": 0.0003
+        },
+        {
+          "category": "poetic",
+          "class": "register",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.011,
+          "shareOfInstances": 0.0003
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "Ved.",
+          "category": "vedic",
+          "gloss": "Vedic usage",
+          "instances": 1915
+        },
+        {
+          "tag": "lang",
+          "token": "Mar.",
+          "category": "marathi",
+          "gloss": "Marathi vernacular form",
+          "instances": 1276
+        },
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 387
+        },
+        {
+          "tag": "ab",
+          "token": "Fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 29
+        },
+        {
+          "tag": "ab",
+          "token": "Jaina",
+          "category": "jaina",
+          "gloss": "Jaina usage",
+          "instances": 10
+        },
+        {
+          "tag": "ab",
+          "token": "Jaina.",
+          "category": "jaina",
+          "gloss": "Jaina usage",
+          "instances": 4
+        },
+        {
+          "tag": "lang",
+          "token": "Hind.",
+          "category": "hindi",
+          "gloss": "Hindi vernacular form",
+          "instances": 1
+        },
+        {
+          "tag": "lang",
+          "token": "Marāṭhī",
+          "category": "marathi",
+          "gloss": "Marathi vernacular form",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "Onomat.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 1
+        },
+        {
+          "tag": "lang",
+          "token": "Pāli",
+          "category": "pali",
+          "gloss": "Pāli form / Pāli usage",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "poet.",
+          "category": "poetic",
+          "gloss": "poetic usage",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "code": "ap90",
+      "entries": 34882,
+      "instances": 2258,
+      "entriesWithLabel": 2058,
+      "pctEntriesWithLabel": 5.8999,
+      "instancesPer1000Entries": 64.7325,
+      "categoriesCredited": 2,
+      "byCategory": [
+        {
+          "category": "vedic",
+          "class": "register",
+          "instances": 1893,
+          "entries": 1736,
+          "instancesPer1000Entries": 54.2687,
+          "shareOfInstances": 0.8384
+        },
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 365,
+          "entries": 341,
+          "instancesPer1000Entries": 10.4638,
+          "shareOfInstances": 0.1616
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "Ved.",
+          "category": "vedic",
+          "gloss": "Vedic usage",
+          "instances": 1893
+        },
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 365
+        }
+      ]
+    },
+    {
+      "code": "armh",
+      "entries": 7907,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "ben",
+      "entries": 25062,
+      "instances": 469,
+      "entriesWithLabel": 402,
+      "pctEntriesWithLabel": 1.604,
+      "instancesPer1000Entries": 18.7136,
+      "categoriesCredited": 4,
+      "byCategory": [
+        {
+          "category": "vedic",
+          "class": "register",
+          "instances": 431,
+          "entries": 368,
+          "instancesPer1000Entries": 17.1974,
+          "shareOfInstances": 0.919
+        },
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 27,
+          "entries": 25,
+          "instancesPer1000Entries": 1.0773,
+          "shareOfInstances": 0.0576
+        },
+        {
+          "category": "onomatopoeic",
+          "class": "register",
+          "instances": 10,
+          "entries": 10,
+          "instancesPer1000Entries": 0.399,
+          "shareOfInstances": 0.0213
+        },
+        {
+          "category": "metaphorical",
+          "class": "register",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.0399,
+          "shareOfInstances": 0.0021
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "ved.",
+          "category": "vedic",
+          "gloss": "vedisch (Vedic usage)",
+          "instances": 408
+        },
+        {
+          "tag": "ab",
+          "token": "figurat.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 24
+        },
+        {
+          "tag": "ab",
+          "token": "Ved.",
+          "category": "vedic",
+          "gloss": "Vedic usage",
+          "instances": 23
+        },
+        {
+          "tag": "ab",
+          "token": "onomatop.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 10
+        },
+        {
+          "tag": "ab",
+          "token": "figur.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 2
+        },
+        {
+          "tag": "ab",
+          "token": "Figurat.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "metaph.",
+          "category": "metaphorical",
+          "gloss": "metaphorical usage",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "code": "bhs",
+      "entries": 17839,
+      "instances": 9106,
+      "entriesWithLabel": 5917,
+      "pctEntriesWithLabel": 33.1689,
+      "instancesPer1000Entries": 510.4546,
+      "categoriesCredited": 14,
+      "byCategory": [
+        {
+          "category": "pali",
+          "class": "dialect",
+          "instances": 7162,
+          "entries": 5082,
+          "instancesPer1000Entries": 401.4799,
+          "shareOfInstances": 0.7865
+        },
+        {
+          "category": "ardhamagadhi",
+          "class": "dialect",
+          "instances": 703,
+          "entries": 661,
+          "instancesPer1000Entries": 39.408,
+          "shareOfInstances": 0.0772
+        },
+        {
+          "category": "mixed-indic",
+          "class": "dialect",
+          "instances": 553,
+          "entries": 533,
+          "instancesPer1000Entries": 30.9995,
+          "shareOfInstances": 0.0607
+        },
+        {
+          "category": "prakrit",
+          "class": "dialect",
+          "instances": 278,
+          "entries": 266,
+          "instancesPer1000Entries": 15.5838,
+          "shareOfInstances": 0.0305
+        },
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 111,
+          "entries": 102,
+          "instancesPer1000Entries": 6.2223,
+          "shareOfInstances": 0.0122
+        },
+        {
+          "category": "vedic",
+          "class": "register",
+          "instances": 88,
+          "entries": 87,
+          "instancesPer1000Entries": 4.933,
+          "shareOfInstances": 0.0097
+        },
+        {
+          "category": "post-vedic",
+          "class": "register",
+          "instances": 46,
+          "entries": 46,
+          "instancesPer1000Entries": 2.5786,
+          "shareOfInstances": 0.0051
+        },
+        {
+          "category": "jaina-maharashtri",
+          "class": "dialect",
+          "instances": 41,
+          "entries": 40,
+          "instancesPer1000Entries": 2.2983,
+          "shareOfInstances": 0.0045
+        },
+        {
+          "category": "maharashtri",
+          "class": "dialect",
+          "instances": 37,
+          "entries": 37,
+          "instancesPer1000Entries": 2.0741,
+          "shareOfInstances": 0.0041
+        },
+        {
+          "category": "hindi",
+          "class": "dialect",
+          "instances": 24,
+          "entries": 22,
+          "instancesPer1000Entries": 1.3454,
+          "shareOfInstances": 0.0026
+        },
+        {
+          "category": "apabhramsa",
+          "class": "dialect",
+          "instances": 21,
+          "entries": 21,
+          "instancesPer1000Entries": 1.1772,
+          "shareOfInstances": 0.0023
+        },
+        {
+          "category": "buddhist",
+          "class": "register",
+          "instances": 16,
+          "entries": 16,
+          "instancesPer1000Entries": 0.8969,
+          "shareOfInstances": 0.0018
+        },
+        {
+          "category": "desi",
+          "class": "dialect",
+          "instances": 16,
+          "entries": 16,
+          "instancesPer1000Entries": 0.8969,
+          "shareOfInstances": 0.0018
+        },
+        {
+          "category": "classical",
+          "class": "register",
+          "instances": 10,
+          "entries": 10,
+          "instancesPer1000Entries": 0.5606,
+          "shareOfInstances": 0.0011
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "lang",
+          "token": "Pali",
+          "category": "pali",
+          "gloss": "Pāli form / Pāli usage",
+          "instances": 7162
+        },
+        {
+          "tag": "lang",
+          "token": "AMg.",
+          "category": "ardhamagadhi",
+          "gloss": "Ardhamāgadhī form",
+          "instances": 703
+        },
+        {
+          "tag": "lang",
+          "token": "MIndic",
+          "category": "mixed-indic",
+          "gloss": "Middle Indic form",
+          "instances": 553
+        },
+        {
+          "tag": "lang",
+          "token": "Pkt.",
+          "category": "prakrit",
+          "gloss": "Prākrit form / Prākrit usage",
+          "instances": 278
+        },
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 111
+        },
+        {
+          "tag": "lang",
+          "token": "Vedic",
+          "category": "vedic",
+          "gloss": "Vedic usage",
+          "instances": 73
+        },
+        {
+          "tag": "lang",
+          "token": "late Skt.",
+          "category": "post-vedic",
+          "gloss": "late Sanskrit usage",
+          "instances": 46
+        },
+        {
+          "tag": "lang",
+          "token": "JM.",
+          "category": "jaina-maharashtri",
+          "gloss": "Jaina-Māhārāṣṭrī form",
+          "instances": 41
+        },
+        {
+          "tag": "lang",
+          "token": "M.",
+          "category": "maharashtri",
+          "gloss": "Māhārāṣṭrī form",
+          "instances": 37
+        },
+        {
+          "tag": "lang",
+          "token": "Hindi",
+          "category": "hindi",
+          "gloss": "Hindi vernacular form",
+          "instances": 24
+        },
+        {
+          "tag": "lang",
+          "token": "Ap.",
+          "category": "apabhramsa",
+          "gloss": "Apabhraṃśa form",
+          "instances": 21
+        },
+        {
+          "tag": "ab",
+          "token": "Buddh.",
+          "category": "buddhist",
+          "gloss": "Buddhist usage",
+          "instances": 16
+        },
+        {
+          "tag": "lang",
+          "token": "Deśī",
+          "category": "desi",
+          "gloss": "Deśī (regional vernacular) form",
+          "instances": 16
+        },
+        {
+          "tag": "lang",
+          "token": "Ved.",
+          "category": "vedic",
+          "gloss": "Vedic form or Vedic-only usage",
+          "instances": 15
+        },
+        {
+          "tag": "lang",
+          "token": "Class. Skt.",
+          "category": "classical",
+          "gloss": "classical Sanskrit",
+          "instances": 10
+        }
+      ]
+    },
+    {
+      "code": "bop",
+      "entries": 8961,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "bor",
+      "entries": 24609,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "bur",
+      "entries": 19776,
+      "instances": 776,
+      "entriesWithLabel": 688,
+      "pctEntriesWithLabel": 3.479,
+      "instancesPer1000Entries": 39.2395,
+      "categoriesCredited": 1,
+      "byCategory": [
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 776,
+          "entries": 688,
+          "instancesPer1000Entries": 39.2395,
+          "shareOfInstances": 1
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 776
+        }
+      ]
+    },
+    {
+      "code": "cae",
+      "entries": 40069,
+      "instances": 187,
+      "entriesWithLabel": 181,
+      "pctEntriesWithLabel": 0.4517,
+      "instancesPer1000Entries": 4.6669,
+      "categoriesCredited": 1,
+      "byCategory": [
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 187,
+          "entries": 181,
+          "instancesPer1000Entries": 4.6669,
+          "shareOfInstances": 1
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 187
+        }
+      ]
+    },
+    {
+      "code": "ccs",
+      "entries": 30010,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "fri",
+      "entries": 8155,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "gra",
+      "entries": 12785,
+      "instances": 16,
+      "entriesWithLabel": 9,
+      "pctEntriesWithLabel": 0.0704,
+      "instancesPer1000Entries": 1.2515,
+      "categoriesCredited": 1,
+      "byCategory": [
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 16,
+          "entries": 9,
+          "instancesPer1000Entries": 1.2515,
+          "shareOfInstances": 1
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "bildl.",
+          "category": "figurative",
+          "gloss": "bildlich (figurative)",
+          "instances": 16
+        }
+      ]
+    },
+    {
+      "code": "gst",
+      "entries": 6780,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "ieg",
+      "entries": 7932,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "inm",
+      "entries": 12647,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "krm",
+      "entries": 2061,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "lan",
+      "entries": 4944,
+      "instances": 70,
+      "entriesWithLabel": 65,
+      "pctEntriesWithLabel": 1.3147,
+      "instancesPer1000Entries": 14.1586,
+      "categoriesCredited": 2,
+      "byCategory": [
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 60,
+          "entries": 55,
+          "instancesPer1000Entries": 12.1359,
+          "shareOfInstances": 0.8571
+        },
+        {
+          "category": "colloquial",
+          "class": "register",
+          "instances": 10,
+          "entries": 10,
+          "instancesPer1000Entries": 2.0227,
+          "shareOfInstances": 0.1429
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 60
+        },
+        {
+          "tag": "ab",
+          "token": "colloq.",
+          "category": "colloquial",
+          "gloss": "colloquial",
+          "instances": 10
+        }
+      ]
+    },
+    {
+      "code": "lrv",
+      "entries": 53440,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "mci",
+      "entries": 2643,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "md",
+      "entries": 20749,
+      "instances": 275,
+      "entriesWithLabel": 247,
+      "pctEntriesWithLabel": 1.1904,
+      "instancesPer1000Entries": 13.2537,
+      "categoriesCredited": 5,
+      "byCategory": [
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 165,
+          "entries": 145,
+          "instancesPer1000Entries": 7.9522,
+          "shareOfInstances": 0.6
+        },
+        {
+          "category": "prakrit",
+          "class": "dialect",
+          "instances": 76,
+          "entries": 69,
+          "instancesPer1000Entries": 3.6628,
+          "shareOfInstances": 0.2764
+        },
+        {
+          "category": "colloquial",
+          "class": "register",
+          "instances": 27,
+          "entries": 27,
+          "instancesPer1000Entries": 1.3013,
+          "shareOfInstances": 0.0982
+        },
+        {
+          "category": "onomatopoeic",
+          "class": "register",
+          "instances": 6,
+          "entries": 6,
+          "instancesPer1000Entries": 0.2892,
+          "shareOfInstances": 0.0218
+        },
+        {
+          "category": "pali",
+          "class": "dialect",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.0482,
+          "shareOfInstances": 0.0036
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 165
+        },
+        {
+          "tag": "lang",
+          "token": "Pr.",
+          "category": "prakrit",
+          "gloss": "Prākrit form / Prākrit usage",
+          "instances": 64
+        },
+        {
+          "tag": "ab",
+          "token": "coll.",
+          "category": "colloquial",
+          "gloss": "colloquial",
+          "instances": 27
+        },
+        {
+          "tag": "lang",
+          "token": "Prākrit",
+          "category": "prakrit",
+          "gloss": "Prākrit form / Prākrit usage",
+          "instances": 12
+        },
+        {
+          "tag": "ab",
+          "token": "onom.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 6
+        },
+        {
+          "tag": "lang",
+          "token": "Pāli",
+          "category": "pali",
+          "gloss": "Pāli form / Pāli usage",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "code": "mw",
+      "entries": 286525,
+      "instances": 41929,
+      "entriesWithLabel": 41369,
+      "pctEntriesWithLabel": 14.4382,
+      "instancesPer1000Entries": 146.3363,
+      "categoriesCredited": 16,
+      "byCategory": [
+        {
+          "category": "lexicographer-only",
+          "class": "lexicographic",
+          "instances": 40212,
+          "entries": 39962,
+          "instancesPer1000Entries": 140.3438,
+          "shareOfInstances": 0.959
+        },
+        {
+          "category": "vedic",
+          "class": "register",
+          "instances": 612,
+          "entries": 534,
+          "instancesPer1000Entries": 2.1359,
+          "shareOfInstances": 0.0146
+        },
+        {
+          "category": "epic",
+          "class": "register",
+          "instances": 328,
+          "entries": 292,
+          "instancesPer1000Entries": 1.1448,
+          "shareOfInstances": 0.0078
+        },
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 245,
+          "entries": 243,
+          "instancesPer1000Entries": 0.8551,
+          "shareOfInstances": 0.0058
+        },
+        {
+          "category": "prakrit",
+          "class": "dialect",
+          "instances": 240,
+          "entries": 235,
+          "instancesPer1000Entries": 0.8376,
+          "shareOfInstances": 0.0057
+        },
+        {
+          "category": "onomatopoeic",
+          "class": "register",
+          "instances": 108,
+          "entries": 107,
+          "instancesPer1000Entries": 0.3769,
+          "shareOfInstances": 0.0026
+        },
+        {
+          "category": "buddhist",
+          "class": "register",
+          "instances": 55,
+          "entries": 55,
+          "instancesPer1000Entries": 0.192,
+          "shareOfInstances": 0.0013
+        },
+        {
+          "category": "classical",
+          "class": "register",
+          "instances": 49,
+          "entries": 38,
+          "instancesPer1000Entries": 0.171,
+          "shareOfInstances": 0.0012
+        },
+        {
+          "category": "pali",
+          "class": "dialect",
+          "instances": 31,
+          "entries": 31,
+          "instancesPer1000Entries": 0.1082,
+          "shareOfInstances": 0.0007
+        },
+        {
+          "category": "philosophical",
+          "class": "domain",
+          "instances": 23,
+          "entries": 23,
+          "instancesPer1000Entries": 0.0803,
+          "shareOfInstances": 0.0005
+        },
+        {
+          "category": "mythological",
+          "class": "register",
+          "instances": 13,
+          "entries": 13,
+          "instancesPer1000Entries": 0.0454,
+          "shareOfInstances": 0.0003
+        },
+        {
+          "category": "colloquial",
+          "class": "register",
+          "instances": 4,
+          "entries": 4,
+          "instancesPer1000Entries": 0.014,
+          "shareOfInstances": 0.0001
+        },
+        {
+          "category": "metaphorical",
+          "class": "register",
+          "instances": 3,
+          "entries": 3,
+          "instancesPer1000Entries": 0.0105,
+          "shareOfInstances": 0.0001
+        },
+        {
+          "category": "poetic",
+          "class": "register",
+          "instances": 3,
+          "entries": 3,
+          "instancesPer1000Entries": 0.0105,
+          "shareOfInstances": 0.0001
+        },
+        {
+          "category": "religious",
+          "class": "domain",
+          "instances": 2,
+          "entries": 2,
+          "instancesPer1000Entries": 0.007,
+          "shareOfInstances": 0
+        },
+        {
+          "category": "political",
+          "class": "domain",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.0035,
+          "shareOfInstances": 0
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ls",
+          "token": "L.",
+          "category": "lexicographer-only",
+          "gloss": "Monier-Williams hedge: cited only to the lexicographers, i.e. no textual attestation",
+          "instances": 40212
+        },
+        {
+          "tag": "lang",
+          "token": "Ved.",
+          "category": "vedic",
+          "gloss": "Vedic form or Vedic-only usage",
+          "instances": 612
+        },
+        {
+          "tag": "lang",
+          "token": "ep.",
+          "category": "epic",
+          "gloss": "epic form or epic-only usage",
+          "instances": 328
+        },
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 245
+        },
+        {
+          "tag": "lang",
+          "token": "Prākṛt",
+          "category": "prakrit",
+          "gloss": "Prākrit form / Prākrit usage",
+          "instances": 227
+        },
+        {
+          "tag": "ab",
+          "token": "onomat.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 106
+        },
+        {
+          "tag": "ab",
+          "token": "Buddh.",
+          "category": "buddhist",
+          "gloss": "Buddhist usage",
+          "instances": 55
+        },
+        {
+          "tag": "lang",
+          "token": "Class.",
+          "category": "classical",
+          "gloss": "classical Sanskrit usage",
+          "instances": 32
+        },
+        {
+          "tag": "lang",
+          "token": "Pāli",
+          "category": "pali",
+          "gloss": "Pāli form / Pāli usage",
+          "instances": 31
+        },
+        {
+          "tag": "ab",
+          "token": "philos.",
+          "category": "philosophical",
+          "gloss": "philosophical usage",
+          "instances": 23
+        },
+        {
+          "tag": "lang",
+          "token": "classical Sanskṛt",
+          "category": "classical",
+          "gloss": "classical Sanskrit usage",
+          "instances": 17
+        },
+        {
+          "tag": "lang",
+          "token": "Prākṛ.",
+          "category": "prakrit",
+          "gloss": "Prākrit form / Prākrit usage",
+          "instances": 13
+        },
+        {
+          "tag": "ab",
+          "token": "myth.",
+          "category": "mythological",
+          "gloss": "mythological usage",
+          "instances": 9
+        },
+        {
+          "tag": "ab",
+          "token": "coll.",
+          "category": "colloquial",
+          "gloss": "colloquial",
+          "instances": 4
+        },
+        {
+          "tag": "ab",
+          "token": "mythol.",
+          "category": "mythological",
+          "gloss": "mythological usage",
+          "instances": 4
+        },
+        {
+          "tag": "ab",
+          "token": "metaph.",
+          "category": "metaphorical",
+          "gloss": "metaphorical usage",
+          "instances": 3
+        },
+        {
+          "tag": "ab",
+          "token": "poet.",
+          "category": "poetic",
+          "gloss": "poetic usage",
+          "instances": 3
+        },
+        {
+          "tag": "ab",
+          "token": "onom.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 2
+        },
+        {
+          "tag": "ab",
+          "token": "relig.",
+          "category": "religious",
+          "gloss": "religious usage",
+          "instances": 2
+        },
+        {
+          "tag": "ab",
+          "token": "polit.",
+          "category": "political",
+          "gloss": "political usage",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "code": "mw72",
+      "entries": 55390,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "mwe",
+      "entries": 32378,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "nmmb",
+      "entries": 506,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "nybj",
+      "entries": 2479,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "pe",
+      "entries": 8799,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "pgn",
+      "entries": 485,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "pui",
+      "entries": 17512,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "pw",
+      "entries": 170556,
+      "instances": 1396,
+      "entriesWithLabel": 1343,
+      "pctEntriesWithLabel": 0.7874,
+      "instancesPer1000Entries": 8.185,
+      "categoriesCredited": 14,
+      "byCategory": [
+        {
+          "category": "buddhist",
+          "class": "register",
+          "instances": 793,
+          "entries": 786,
+          "instancesPer1000Entries": 4.6495,
+          "shareOfInstances": 0.5681
+        },
+        {
+          "category": "metaphorical",
+          "class": "register",
+          "instances": 247,
+          "entries": 224,
+          "instancesPer1000Entries": 1.4482,
+          "shareOfInstances": 0.1769
+        },
+        {
+          "category": "prakrit",
+          "class": "dialect",
+          "instances": 161,
+          "entries": 159,
+          "instancesPer1000Entries": 0.944,
+          "shareOfInstances": 0.1153
+        },
+        {
+          "category": "onomatopoeic",
+          "class": "register",
+          "instances": 68,
+          "entries": 68,
+          "instancesPer1000Entries": 0.3987,
+          "shareOfInstances": 0.0487
+        },
+        {
+          "category": "vedic",
+          "class": "register",
+          "instances": 52,
+          "entries": 49,
+          "instancesPer1000Entries": 0.3049,
+          "shareOfInstances": 0.0372
+        },
+        {
+          "category": "pali",
+          "class": "dialect",
+          "instances": 31,
+          "entries": 31,
+          "instancesPer1000Entries": 0.1818,
+          "shareOfInstances": 0.0222
+        },
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 22,
+          "entries": 20,
+          "instancesPer1000Entries": 0.129,
+          "shareOfInstances": 0.0158
+        },
+        {
+          "category": "colloquial",
+          "class": "register",
+          "instances": 10,
+          "entries": 10,
+          "instancesPer1000Entries": 0.0586,
+          "shareOfInstances": 0.0072
+        },
+        {
+          "category": "classical",
+          "class": "register",
+          "instances": 5,
+          "entries": 5,
+          "instancesPer1000Entries": 0.0293,
+          "shareOfInstances": 0.0036
+        },
+        {
+          "category": "epic",
+          "class": "register",
+          "instances": 2,
+          "entries": 2,
+          "instancesPer1000Entries": 0.0117,
+          "shareOfInstances": 0.0014
+        },
+        {
+          "category": "philosophical",
+          "class": "domain",
+          "instances": 2,
+          "entries": 2,
+          "instancesPer1000Entries": 0.0117,
+          "shareOfInstances": 0.0014
+        },
+        {
+          "category": "apabhramsa",
+          "class": "dialect",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.0059,
+          "shareOfInstances": 0.0007
+        },
+        {
+          "category": "bengali",
+          "class": "dialect",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.0059,
+          "shareOfInstances": 0.0007
+        },
+        {
+          "category": "marathi",
+          "class": "dialect",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.0059,
+          "shareOfInstances": 0.0007
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "buddh.",
+          "category": "buddhist",
+          "gloss": "buddhistisch (Buddhist usage)",
+          "instances": 782
+        },
+        {
+          "tag": "ab",
+          "token": "übertr.",
+          "category": "metaphorical",
+          "gloss": "übertragen (transferred / metaphorical)",
+          "instances": 247
+        },
+        {
+          "tag": "lang",
+          "token": "Prākrit",
+          "category": "prakrit",
+          "gloss": "Prākrit form / Prākrit usage",
+          "instances": 161
+        },
+        {
+          "tag": "ab",
+          "token": "onomatop.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 64
+        },
+        {
+          "tag": "lang",
+          "token": "ved.",
+          "category": "vedic",
+          "gloss": "vedisch (Vedic usage)",
+          "instances": 52
+        },
+        {
+          "tag": "lang",
+          "token": "Pāli",
+          "category": "pali",
+          "gloss": "Pāli form / Pāli usage",
+          "instances": 31
+        },
+        {
+          "tag": "ab",
+          "token": "uneig.",
+          "category": "figurative",
+          "gloss": "uneigentlich (figurative)",
+          "instances": 20
+        },
+        {
+          "tag": "ab",
+          "token": "Buddh.",
+          "category": "buddhist",
+          "gloss": "Buddhist usage",
+          "instances": 11
+        },
+        {
+          "tag": "ab",
+          "token": "coll.",
+          "category": "colloquial",
+          "gloss": "colloquial",
+          "instances": 8
+        },
+        {
+          "tag": "lang",
+          "token": "klass.",
+          "category": "classical",
+          "gloss": "klassisch (classical Sanskrit usage)",
+          "instances": 5
+        },
+        {
+          "tag": "ab",
+          "token": "onomat.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 3
+        },
+        {
+          "tag": "ab",
+          "token": "Coll.",
+          "category": "colloquial",
+          "gloss": "colloquial",
+          "instances": 2
+        },
+        {
+          "tag": "lang",
+          "token": "ep.",
+          "category": "epic",
+          "gloss": "epic form or epic-only usage",
+          "instances": 2
+        },
+        {
+          "tag": "ab",
+          "token": "philos.",
+          "category": "philosophical",
+          "gloss": "philosophical usage",
+          "instances": 2
+        },
+        {
+          "tag": "lang",
+          "token": "Apabhraṃśa",
+          "category": "apabhramsa",
+          "gloss": "Apabhraṃśa form",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "Onomatop.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "Uneig.",
+          "category": "figurative",
+          "gloss": "uneigentlich (figurative)",
+          "instances": 1
+        },
+        {
+          "tag": "lang",
+          "token": "beng.",
+          "category": "bengali",
+          "gloss": "Bengali vernacular form",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 1
+        },
+        {
+          "tag": "lang",
+          "token": "mahratt.",
+          "category": "marathi",
+          "gloss": "Marathi vernacular form",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "code": "pwg",
+      "entries": 123366,
+      "instances": 1909,
+      "entriesWithLabel": 1557,
+      "pctEntriesWithLabel": 1.2621,
+      "instancesPer1000Entries": 15.4743,
+      "categoriesCredited": 20,
+      "byCategory": [
+        {
+          "category": "vedic",
+          "class": "register",
+          "instances": 543,
+          "entries": 422,
+          "instancesPer1000Entries": 4.4015,
+          "shareOfInstances": 0.2844
+        },
+        {
+          "category": "metaphorical",
+          "class": "register",
+          "instances": 341,
+          "entries": 317,
+          "instancesPer1000Entries": 2.7641,
+          "shareOfInstances": 0.1786
+        },
+        {
+          "category": "vulgar",
+          "class": "register",
+          "instances": 243,
+          "entries": 229,
+          "instancesPer1000Entries": 1.9697,
+          "shareOfInstances": 0.1273
+        },
+        {
+          "category": "buddhist",
+          "class": "register",
+          "instances": 189,
+          "entries": 188,
+          "instancesPer1000Entries": 1.532,
+          "shareOfInstances": 0.099
+        },
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 131,
+          "entries": 124,
+          "instancesPer1000Entries": 1.0619,
+          "shareOfInstances": 0.0686
+        },
+        {
+          "category": "onomatopoeic",
+          "class": "register",
+          "instances": 117,
+          "entries": 117,
+          "instancesPer1000Entries": 0.9484,
+          "shareOfInstances": 0.0613
+        },
+        {
+          "category": "epic",
+          "class": "register",
+          "instances": 97,
+          "entries": 71,
+          "instancesPer1000Entries": 0.7863,
+          "shareOfInstances": 0.0508
+        },
+        {
+          "category": "classical",
+          "class": "register",
+          "instances": 90,
+          "entries": 79,
+          "instancesPer1000Entries": 0.7295,
+          "shareOfInstances": 0.0471
+        },
+        {
+          "category": "bengali",
+          "class": "dialect",
+          "instances": 31,
+          "entries": 28,
+          "instancesPer1000Entries": 0.2513,
+          "shareOfInstances": 0.0162
+        },
+        {
+          "category": "hindi",
+          "class": "dialect",
+          "instances": 30,
+          "entries": 30,
+          "instancesPer1000Entries": 0.2432,
+          "shareOfInstances": 0.0157
+        },
+        {
+          "category": "philosophical",
+          "class": "domain",
+          "instances": 25,
+          "entries": 25,
+          "instancesPer1000Entries": 0.2026,
+          "shareOfInstances": 0.0131
+        },
+        {
+          "category": "colloquial",
+          "class": "register",
+          "instances": 23,
+          "entries": 23,
+          "instancesPer1000Entries": 0.1864,
+          "shareOfInstances": 0.012
+        },
+        {
+          "category": "marathi",
+          "class": "dialect",
+          "instances": 16,
+          "entries": 16,
+          "instancesPer1000Entries": 0.1297,
+          "shareOfInstances": 0.0084
+        },
+        {
+          "category": "post-vedic",
+          "class": "register",
+          "instances": 9,
+          "entries": 7,
+          "instancesPer1000Entries": 0.073,
+          "shareOfInstances": 0.0047
+        },
+        {
+          "category": "prakrit",
+          "class": "dialect",
+          "instances": 9,
+          "entries": 9,
+          "instancesPer1000Entries": 0.073,
+          "shareOfInstances": 0.0047
+        },
+        {
+          "category": "mythological",
+          "class": "register",
+          "instances": 8,
+          "entries": 8,
+          "instancesPer1000Entries": 0.0648,
+          "shareOfInstances": 0.0042
+        },
+        {
+          "category": "astronomical",
+          "class": "domain",
+          "instances": 2,
+          "entries": 2,
+          "instancesPer1000Entries": 0.0162,
+          "shareOfInstances": 0.001
+        },
+        {
+          "category": "poetic",
+          "class": "register",
+          "instances": 2,
+          "entries": 2,
+          "instancesPer1000Entries": 0.0162,
+          "shareOfInstances": 0.001
+        },
+        {
+          "category": "religious",
+          "class": "domain",
+          "instances": 2,
+          "entries": 2,
+          "instancesPer1000Entries": 0.0162,
+          "shareOfInstances": 0.001
+        },
+        {
+          "category": "archaic",
+          "class": "register",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.0081,
+          "shareOfInstances": 0.0005
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "lang",
+          "token": "ved.",
+          "category": "vedic",
+          "gloss": "vedisch (Vedic usage)",
+          "instances": 543
+        },
+        {
+          "tag": "ab",
+          "token": "übertr.",
+          "category": "metaphorical",
+          "gloss": "übertragen (transferred / metaphorical)",
+          "instances": 341
+        },
+        {
+          "tag": "ab",
+          "token": "vulg.",
+          "category": "vulgar",
+          "gloss": "vulgar / popular usage",
+          "instances": 241
+        },
+        {
+          "tag": "ab",
+          "token": "buddh.",
+          "category": "buddhist",
+          "gloss": "buddhistisch (Buddhist usage)",
+          "instances": 178
+        },
+        {
+          "tag": "lang",
+          "token": "ep.",
+          "category": "epic",
+          "gloss": "epic form or epic-only usage",
+          "instances": 97
+        },
+        {
+          "tag": "ab",
+          "token": "onomatop.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 96
+        },
+        {
+          "tag": "lang",
+          "token": "klass.",
+          "category": "classical",
+          "gloss": "klassisch (classical Sanskrit usage)",
+          "instances": 89
+        },
+        {
+          "tag": "ab",
+          "token": "uneig.",
+          "category": "figurative",
+          "gloss": "uneigentlich (figurative)",
+          "instances": 75
+        },
+        {
+          "tag": "ab",
+          "token": "Uneig.",
+          "category": "figurative",
+          "gloss": "uneigentlich (figurative)",
+          "instances": 26
+        },
+        {
+          "tag": "lang",
+          "token": "Hindi",
+          "category": "hindi",
+          "gloss": "Hindi vernacular form",
+          "instances": 23
+        },
+        {
+          "tag": "ab",
+          "token": "coll.",
+          "category": "colloquial",
+          "gloss": "colloquial",
+          "instances": 22
+        },
+        {
+          "tag": "ab",
+          "token": "onomat.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 21
+        },
+        {
+          "tag": "ab",
+          "token": "philos.",
+          "category": "philosophical",
+          "gloss": "philosophical usage",
+          "instances": 21
+        },
+        {
+          "tag": "lang",
+          "token": "beng.",
+          "category": "bengali",
+          "gloss": "Bengali vernacular form",
+          "instances": 19
+        },
+        {
+          "tag": "ab",
+          "token": "bildl.",
+          "category": "figurative",
+          "gloss": "bildlich (figurative)",
+          "instances": 19
+        },
+        {
+          "tag": "lang",
+          "token": "mahr.",
+          "category": "marathi",
+          "gloss": "Marathi vernacular form",
+          "instances": 16
+        },
+        {
+          "tag": "ab",
+          "token": "Bildl.",
+          "category": "figurative",
+          "gloss": "bildlich (figurative)",
+          "instances": 10
+        },
+        {
+          "tag": "ab",
+          "token": "Buddh.",
+          "category": "buddhist",
+          "gloss": "Buddhist usage",
+          "instances": 10
+        },
+        {
+          "tag": "lang",
+          "token": "Prākrit",
+          "category": "prakrit",
+          "gloss": "Prākrit form / Prākrit usage",
+          "instances": 9
+        },
+        {
+          "tag": "lang",
+          "token": "nachved.",
+          "category": "post-vedic",
+          "gloss": "nachvedisch (post-Vedic usage)",
+          "instances": 9
+        },
+        {
+          "tag": "lang",
+          "token": "Hindī",
+          "category": "hindi",
+          "gloss": "Hindi vernacular form",
+          "instances": 7
+        },
+        {
+          "tag": "lang",
+          "token": "Beng.",
+          "category": "bengali",
+          "gloss": "Bengali vernacular form",
+          "instances": 6
+        },
+        {
+          "tag": "lang",
+          "token": "bengal.",
+          "category": "bengali",
+          "gloss": "Bengali vernacular form",
+          "instances": 6
+        },
+        {
+          "tag": "ab",
+          "token": "Philos.",
+          "category": "philosophical",
+          "gloss": "philosophisch (philosophical)",
+          "instances": 4
+        },
+        {
+          "tag": "ab",
+          "token": "Mythol.",
+          "category": "mythological",
+          "gloss": "mythologisch (mythological)",
+          "instances": 3
+        },
+        {
+          "tag": "ab",
+          "token": "astronom.",
+          "category": "astronomical",
+          "gloss": "astronomical usage",
+          "instances": 2
+        },
+        {
+          "tag": "ab",
+          "token": "myth.",
+          "category": "mythological",
+          "gloss": "mythological usage",
+          "instances": 2
+        },
+        {
+          "tag": "ab",
+          "token": "mythol.",
+          "category": "mythological",
+          "gloss": "mythological usage",
+          "instances": 2
+        },
+        {
+          "tag": "ab",
+          "token": "poet.",
+          "category": "poetic",
+          "gloss": "poetic usage",
+          "instances": 2
+        },
+        {
+          "tag": "ab",
+          "token": "relig.",
+          "category": "religious",
+          "gloss": "religious usage",
+          "instances": 2
+        },
+        {
+          "tag": "ab",
+          "token": "Myth.",
+          "category": "mythological",
+          "gloss": "mythologisch (mythological)",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "Vulg.",
+          "category": "vulgar",
+          "gloss": "vulgar / popular usage",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "arch.",
+          "category": "archaic",
+          "gloss": "archaisch (archaic)",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "buddhist.",
+          "category": "buddhist",
+          "gloss": "Buddhist usage",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "class.",
+          "category": "classical",
+          "gloss": "klassisch (classical)",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "gespr.",
+          "category": "colloquial",
+          "gloss": "gesprochen (colloquial)",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "niedrig.",
+          "category": "vulgar",
+          "gloss": "niedrig (low / vulgar usage)",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "code": "pwkvn",
+      "entries": 24976,
+      "instances": 91,
+      "entriesWithLabel": 91,
+      "pctEntriesWithLabel": 0.3643,
+      "instancesPer1000Entries": 3.6435,
+      "categoriesCredited": 8,
+      "byCategory": [
+        {
+          "category": "prakrit",
+          "class": "dialect",
+          "instances": 33,
+          "entries": 33,
+          "instancesPer1000Entries": 1.3213,
+          "shareOfInstances": 0.3626
+        },
+        {
+          "category": "buddhist",
+          "class": "register",
+          "instances": 24,
+          "entries": 24,
+          "instancesPer1000Entries": 0.9609,
+          "shareOfInstances": 0.2637
+        },
+        {
+          "category": "pali",
+          "class": "dialect",
+          "instances": 20,
+          "entries": 20,
+          "instancesPer1000Entries": 0.8008,
+          "shareOfInstances": 0.2198
+        },
+        {
+          "category": "metaphorical",
+          "class": "register",
+          "instances": 6,
+          "entries": 6,
+          "instancesPer1000Entries": 0.2402,
+          "shareOfInstances": 0.0659
+        },
+        {
+          "category": "onomatopoeic",
+          "class": "register",
+          "instances": 5,
+          "entries": 5,
+          "instancesPer1000Entries": 0.2002,
+          "shareOfInstances": 0.0549
+        },
+        {
+          "category": "apabhramsa",
+          "class": "dialect",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.04,
+          "shareOfInstances": 0.011
+        },
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.04,
+          "shareOfInstances": 0.011
+        },
+        {
+          "category": "marathi",
+          "class": "dialect",
+          "instances": 1,
+          "entries": 1,
+          "instancesPer1000Entries": 0.04,
+          "shareOfInstances": 0.011
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "lang",
+          "token": "Prākrit",
+          "category": "prakrit",
+          "gloss": "Prākrit form / Prākrit usage",
+          "instances": 33
+        },
+        {
+          "tag": "ab",
+          "token": "buddh.",
+          "category": "buddhist",
+          "gloss": "buddhistisch (Buddhist usage)",
+          "instances": 23
+        },
+        {
+          "tag": "lang",
+          "token": "Pāli",
+          "category": "pali",
+          "gloss": "Pāli form / Pāli usage",
+          "instances": 20
+        },
+        {
+          "tag": "ab",
+          "token": "übertr.",
+          "category": "metaphorical",
+          "gloss": "übertragen (transferred / metaphorical)",
+          "instances": 6
+        },
+        {
+          "tag": "ab",
+          "token": "onomatop.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 5
+        },
+        {
+          "tag": "lang",
+          "token": "Apabhraṃśa",
+          "category": "apabhramsa",
+          "gloss": "Apabhraṃśa form",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "Buddh.",
+          "category": "buddhist",
+          "gloss": "Buddhist usage",
+          "instances": 1
+        },
+        {
+          "tag": "lang",
+          "token": "mahratt.",
+          "category": "marathi",
+          "gloss": "Marathi vernacular form",
+          "instances": 1
+        },
+        {
+          "tag": "ab",
+          "token": "uneig.",
+          "category": "figurative",
+          "gloss": "uneigentlich (figurative)",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "code": "sch",
+      "entries": 29125,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "shs",
+      "entries": 47326,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "skd",
+      "entries": 42531,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "snp",
+      "entries": 453,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "stc",
+      "entries": 24574,
+      "instances": 522,
+      "entriesWithLabel": 491,
+      "pctEntriesWithLabel": 1.998,
+      "instancesPer1000Entries": 21.242,
+      "categoriesCredited": 4,
+      "byCategory": [
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 421,
+          "entries": 393,
+          "instancesPer1000Entries": 17.1319,
+          "shareOfInstances": 0.8065
+        },
+        {
+          "category": "onomatopoeic",
+          "class": "register",
+          "instances": 40,
+          "entries": 40,
+          "instancesPer1000Entries": 1.6277,
+          "shareOfInstances": 0.0766
+        },
+        {
+          "category": "philosophical",
+          "class": "domain",
+          "instances": 38,
+          "entries": 38,
+          "instancesPer1000Entries": 1.5463,
+          "shareOfInstances": 0.0728
+        },
+        {
+          "category": "colloquial",
+          "class": "register",
+          "instances": 23,
+          "entries": 22,
+          "instancesPer1000Entries": 0.9359,
+          "shareOfInstances": 0.0441
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 421
+        },
+        {
+          "tag": "ab",
+          "token": "philos.",
+          "category": "philosophical",
+          "gloss": "philosophical usage",
+          "instances": 38
+        },
+        {
+          "tag": "ab",
+          "token": "onom.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 26
+        },
+        {
+          "tag": "ab",
+          "token": "coll.",
+          "category": "colloquial",
+          "gloss": "colloquial",
+          "instances": 23
+        },
+        {
+          "tag": "ab",
+          "token": "onomat.",
+          "category": "onomatopoeic",
+          "gloss": "onomatopoeic",
+          "instances": 14
+        }
+      ]
+    },
+    {
+      "code": "vcp",
+      "entries": 50135,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "vei",
+      "entries": 3834,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    },
+    {
+      "code": "wil",
+      "entries": 44577,
+      "instances": 24,
+      "entriesWithLabel": 24,
+      "pctEntriesWithLabel": 0.0538,
+      "instancesPer1000Entries": 0.5384,
+      "categoriesCredited": 3,
+      "byCategory": [
+        {
+          "category": "figurative",
+          "class": "register",
+          "instances": 15,
+          "entries": 15,
+          "instancesPer1000Entries": 0.3365,
+          "shareOfInstances": 0.625
+        },
+        {
+          "category": "vulgar",
+          "class": "register",
+          "instances": 7,
+          "entries": 7,
+          "instancesPer1000Entries": 0.157,
+          "shareOfInstances": 0.2917
+        },
+        {
+          "category": "metaphorical",
+          "class": "register",
+          "instances": 2,
+          "entries": 2,
+          "instancesPer1000Entries": 0.0449,
+          "shareOfInstances": 0.0833
+        }
+      ],
+      "byLabel": [
+        {
+          "tag": "ab",
+          "token": "fig.",
+          "category": "figurative",
+          "gloss": "figurative(ly)",
+          "instances": 15
+        },
+        {
+          "tag": "ab",
+          "token": "vulg.",
+          "category": "vulgar",
+          "gloss": "vulgar / popular usage",
+          "instances": 7
+        },
+        {
+          "tag": "ab",
+          "token": "metaph.",
+          "category": "metaphorical",
+          "gloss": "metaphorical usage",
+          "instances": 2
+        }
+      ]
+    },
+    {
+      "code": "yat",
+      "entries": 45206,
+      "instances": 0,
+      "entriesWithLabel": 0,
+      "pctEntriesWithLabel": 0,
+      "instancesPer1000Entries": 0,
+      "categoriesCredited": 0,
+      "byCategory": [],
+      "byLabel": []
+    }
+  ],
+  "diagnostics": [
+    {
+      "code": "abch",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "acc",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "acph",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "acsj",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "armh",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "bop",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "bor",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "ccs",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "fri",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "gst",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "ieg",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "inm",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "krm",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "lrv",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "mci",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "mw72",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "mwe",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "nmmb",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "nybj",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "pe",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "pgn",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "pui",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "sch",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "shs",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "skd",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "snp",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "vcp",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "vei",
+      "reason": "no mapped usage/register label in markup"
+    },
+    {
+      "code": "yat",
+      "reason": "no mapped usage/register label in markup"
+    }
+  ],
+  "generatedAt": "2026-09-23T18:58:31.469Z"
+}
