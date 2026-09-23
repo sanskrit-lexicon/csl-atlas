@@ -140,7 +140,9 @@ def retrieve(pratika_folded, corpus, concat, offsets, vsets, inv):
     if not cand:
         return "none", None
     best, bestloc = 0.0, None
-    for j, inter in cand.items():
+    # H5264: sorted() so a coverage tie resolves to the earliest verse, not to set-iteration
+    # order — iterating cand in insertion order made the locus PYTHONHASHSEED-dependent.
+    for j, inter in sorted(cand.items()):
         jac = inter / len(pg)            # coverage of the pratīka's n-grams
         if jac > best:
             best, bestloc = jac, corpus[j]["loc"]

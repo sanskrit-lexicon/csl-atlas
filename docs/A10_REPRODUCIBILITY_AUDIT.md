@@ -1,6 +1,6 @@
 # A10 "Apparatus, not errors" — reproducibility audit
 
-_Created: 03-07-2026 · Last updated: 22-09-2026_
+_Created: 03-07-2026 · Last updated: 23-09-2026_
 
 Data-verification pass over [`docs/articles/article_21_apparatus_not_errors.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/article_21_apparatus_not_errors.md)
 (A10), checking every headline figure against the committed forensic artifacts and,
@@ -102,9 +102,13 @@ flip on a tracked file (a hook installer's `chmod`) is not counted as dirt; a co
      60,003 present/present, 5,965 present/absent, 4,010 unresolved-locus, 445 absent/unchecked
      [60,101 / 5,950 / 3,880 / 492]. F8 quote lane: exact Δ = 0 48.4 % [49.4 %], ±2 66.6 % [68.0 %],
      ±10 71.1 % [72.5 %]. F8 Droṇa: unchanged (847/2,862 corroborated, 29.6 %).
-   - Still unpinned: F8 verify (`mbh_note_verdicts.csv`; its BORI witness, the local GRETIL
-     `mbh_*_u.htm` mirror, is absent on both boxes and the script refuses to build an empty
-     corpus), F10 (`sense_order_test.csv`; offline-MT engine and cache absent). F0 and F9 read frozen
+   - F8 verify pinned 23-09-2026: the local GRETIL `mbh_*_u.htm` BORI mirror (18 parvans,
+     72,771 verses; gitignored in SamudraManthanam) was re-downloaded, and `mbh_note_verdicts.csv`
+     now inherits the `f4c08c57` pin. Every tier and verdict is unchanged (2,466 notes; report
+     figures identical). The run exposed a `PYTHONHASHSEED` dependence: a fuzzy-coverage tie took
+     whichever verse set-iteration met first. Ties now resolve to the earliest verse, and 32
+     `bori_locus` values moved. Byte-identical under `=1` and `=2` and from a cold cache.
+   - Still unpinned: F10 (`sense_order_test.csv`; offline-MT engine and cache absent). F0 and F9 read frozen
      `key1` headword exports, not `csl-orig`, and carry no corpus pin by design. No A10 figure
      rests on F8 verify.
 
