@@ -1,4 +1,4 @@
-_Created: 03-06-2026 · Last updated: 22-09-2026_
+_Created: 03-06-2026 · Last updated: 23-09-2026_
 
 # Apparatus, not errors: how Monier-Williams inherited the Petersburg lexicon
 
@@ -383,9 +383,9 @@ index) were re-run at the same `f4c08c57`, byte-identical across hash seeds; the
 content-identical across two machines. The re-harvested vulgate e-text reproduces 15,364 verses
 exactly and the index validation is unchanged (68.4 % vs 2.1 %). On the pinned pool's 565
 Harivaṃśa rows the vulgate arm corroborates 207 (37.9 % of 546 evaluable; June 206, 37.7 % of 547), with displaced cases
-85 against a 204.5 null (June 79 vs 200.5). No verdict changes. Still unpinned: F8 verify (its
-GRETIL witness is absent on both machines; no figure in this article) and F10 (sense order), whose
-offline-MT engine and cache are absent too.
+85 against a 204.5 null (June 79 vs 200.5). No verdict changes. F8 verify was pinned on 23-09-2026 against a re-staged local GRETIL
+BORI mirror (72,771 verses; every tier and verdict unchanged; no figure in this article). Still
+unpinned: F10 (sense order), whose offline-MT engine and cache are absent.
 
 Per-run provenance in the
 `.source.json` sidecars.
