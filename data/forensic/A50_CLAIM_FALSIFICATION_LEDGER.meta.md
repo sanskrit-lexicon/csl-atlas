@@ -37,8 +37,10 @@ counterexample · provenance · verdict · patch) is the reusable part.
 
 ## Maintenance
 
-- Regenerate after any change to `data/citations/ls_citation_*.tsv` (H5407 will):
-  rerun both scripts, re-derive the committed-report pins by hand, update §P.
+- Regenerate after any change to `data/citations/ls_citation_*.tsv` (H5407 did so on
+  24-09-2026): rerun both scripts, re-derive the committed-report pins by hand, update §P and
+  the post-re-freeze status paragraph under the header. Rows C1–C7 keep the H5295-pass
+  figures as the falsification record; only the status paragraph, §P and §4 track the data.
 - The arms script takes ~15 minutes (8 arms + 12 sweep runs × 1,000 nulls; `--quick` skips the sweep). A perfectly nested
   construction hangs the fixed-fixed null — keep the rank-biased sampler.
 - The ASCII fold deliberately does not collapse `ṃ`/`n`; extend `NAMED_VARIANTS`
@@ -48,6 +50,7 @@ counterexample · provenance · verdict · patch) is the reusable part.
 
 - [`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) — the sibling pass over A10 (H5073).
 - [`data/citations/README.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/README.md) — dataset change log, provenance sidecar.
-- Handoffs: H5295 (this pass), H5407 (alias extension + re-freeze at a recorded revision).
+- Handoffs: H5295 (this pass), H5407 (alias extension + re-freeze at a recorded revision,
+  executed 24-09-2026: §P `narrows` → `survives`).
 
 _Гасунс_

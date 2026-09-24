@@ -269,7 +269,7 @@ export function buildPayload(edgeRows, nodeRows, tagRows, generatedAt) {
       taggedTexts: taggedTexts.length,
       taggedCites: allTaggedCites,
       note:
-        "Shares are over the ~120 tagged texts (the modular signal: shared head + each dict's heaviest sources), not the full 912-text graph; per-dict taggedCoverage reports the covered fraction. Prose/iti citations (VCP, SKD, WIL) and MW's filtered grammatical markers are out of the <ls> graph entirely (see A50 §5)."
+        "Shares are over the ~120 tagged texts (the modular signal: shared head + each dict's heaviest sources), not the full 874-text graph; per-dict taggedCoverage reports the covered fraction. Prose/iti citations (VCP, SKD, WIL) and MW's filtered grammatical markers are out of the <ls> graph entirely (see A50 §5)."
     },
     traditions,
     perDict,

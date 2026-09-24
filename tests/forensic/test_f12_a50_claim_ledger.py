@@ -151,37 +151,47 @@ def test_null_fixture_no_variants(pin, monkeypatch, tmp_path):
 
 @pytest.mark.skipif(not (REPO / "data" / "forensic" / "f12_a50_report.json").exists(), reason="committed report absent")
 def test_committed_report_pins(pin):
-    """The figures the ledger doc and the A50 edits quote (24-09-2026 freeze)."""
+    """The figures the ledger doc and the A50 edits quote (24-09-2026 re-freeze, H5407:
+    csl-orig@f4c08c57 + csl-guides@64c967d, 37-pair fold in CANON_ALIAS)."""
     rep = json.loads((REPO / "data" / "forensic" / "f12_a50_report.json").read_text(encoding="utf-8"))
-    pin("f12", "committed cites", 828505, rep["totals"]["cites"])
-    pin("f12", "committed nodes", 912, rep["totals"]["nodes"])
-    pin("f12", "pwg volume share", 64.7, rep["C1_concentration"]["per_dict_volume_share_pct"]["pwg"])
-    pin("f12", "top10 pooled", 33.7, rep["C1_concentration"]["topk_share_pooled_pct"]["10"])
-    pin("f12", "top10 excl pwg", 37.7, rep["C1_concentration"]["topk_share_excluding_pwg_pct"]["10"])
-    pin("f12", "private 608", 608, rep["C2_reach"]["private_nodes"])
-    pin("f12", "every usable row", ["Bhagavadgītā", "Kathāsaritsāgara", "Mārkandeyapuraṇa", "Rāmāyaṇa"],
+    pin("f12", "committed cites", 826752, rep["totals"]["cites"])
+    pin("f12", "committed edges", 1699, rep["totals"]["edges"])
+    pin("f12", "committed nodes", 874, rep["totals"]["nodes"])
+    pin("f12", "pwg volume share", 64.9, rep["C1_concentration"]["per_dict_volume_share_pct"]["pwg"])
+    pin("f12", "top10 pooled", 34.9, rep["C1_concentration"]["topk_share_pooled_pct"]["10"])
+    pin("f12", "top50 pooled", 72.5, rep["C1_concentration"]["topk_share_pooled_pct"]["50"])
+    pin("f12", "top10 excl pwg", 40.3, rep["C1_concentration"]["topk_share_excluding_pwg_pct"]["10"])
+    pin("f12", "private 567", 567, rep["C2_reach"]["private_nodes"])
+    pin("f12", "private volume pct", 9.6, rep["C2_reach"]["private_volume_pct"])
+    pin("f12", "ge7 texts", 38, rep["C2_reach"]["texts_ge7_dicts"])
+    pin("f12", "reach all 11", 1, rep["C2_reach"]["reach_all_11"]["11"])
+    pin("f12", "every usable row", ["Bhagavadgītā", "Kathāsaritsāgara", "Mārkandeyapuraṇa", "Rāmāyaṇa", "Ṛgveda"],
         rep["C2_reach"]["texts_cited_by_every_usable_row"])
     pin("f12", "Ṛgveda reaches all 11 after fold", ["Ṛgveda"], rep["C2b_variant_fold"]["texts_cited_by_every_dict_after_fold"])
     pin("f12", "Rigveda union", 11, rep["C2b_variant_fold"]["named_variants"]["Rigveda"]["union_dicts"])
     pin("f12", "Śabdakalpadruma pwg share", 99.5, rep["C5_kosa_citers"]["Śabdakalpadruma"]["pwg_share_pct"])
     pin("f12", "Aṣṭādhyāyī pwg", 21509, rep["reproduction"]["astadhyayi_pwg_cites"])
-    # C2′ accounting: 31 private variants of shared texts = 2 named + 29 ascii;
-    # 9 private labels merge into another private label; 608 − 31 − 9 = 568.
+    # C2′ accounting after the re-freeze: the 37 fold pairs live in CANON_ALIAS, so the
+    # residual fold table is empty and the folded floor equals the raw private count.
     fold = rep["C2b_variant_fold"]
-    pin("f12", "private variants by tier", {"named": 2, "ascii": 29}, fold["private_variants_of_shared_by_tier"])
-    pin("f12", "private→private merges", 9, fold["private_variants_merging_into_private_canonical"])
-    pin("f12", "private after fold", 568, fold["private_after_fold"])
-    pin("f12", "private after fold volume pct", 9.8, fold["private_after_fold_volume_pct"])
-    assert 608 - 31 - 9 == fold["private_after_fold"]
-    # Provenance drift block (committed vs csl-orig@f4c08c57 regeneration).
+    pin("f12", "residual fold rows", 0, fold["fold_rows"])
+    pin("f12", "private variants by tier", {"named": 0, "ascii": 0}, fold["private_variants_of_shared_by_tier"])
+    pin("f12", "private→private merges", 0, fold["private_variants_merging_into_private_canonical"])
+    pin("f12", "private after fold", 567, fold["private_after_fold"])
+    pin("f12", "private after fold volume pct", 9.6, fold["private_after_fold_volume_pct"])
+    assert fold["private_after_fold"] == rep["C2_reach"]["private_nodes"]
+    assert fold["nodes_after_fold"] == rep["totals"]["nodes"]
+    # Provenance drift block: regenerated at the recorded pair == committed, byte-identical.
     drift = rep["drift"]
+    pin("f12", "drift regen sha == committed edges sha",
+        "41bee9315b730009874b163ce266e81a998360602788edb4552ebcc703203bd0", drift["regen_sha256"])
     pin("f12", "drift regenerated cites", 826752, drift["regenerated"]["cites"])
-    pin("f12", "drift regenerated nodes", 911, drift["regenerated"]["nodes"])
-    pin("f12", "drift top50 move", [71.0, 71.2], drift["topk_moves"]["50"])
-    pin("f12", "drift ben", [49003, 47251], drift["dicts_with_changed_cites"]["ben"])
-    pin("f12", "drift ap", [57113, 57112], drift["dicts_with_changed_cites"]["ap"])
-    pin("f12", "drift nodes only committed", ["Kullūka Schol", "Weber"], drift["nodes_only_committed"])
-    pin("f12", "drift edges changed", 30, drift["edges_changed"])
+    pin("f12", "drift regenerated nodes", 874, drift["regenerated"]["nodes"])
+    pin("f12", "drift topk moves", {}, drift["topk_moves"])
+    pin("f12", "drift dicts changed", {}, drift["dicts_with_changed_cites"])
+    pin("f12", "drift nodes only committed", [], drift["nodes_only_committed"])
+    pin("f12", "drift nodes only regenerated", [], drift["nodes_only_regenerated"])
+    pin("f12", "drift edges changed", 0, drift["edges_changed"])
 
 
 @pytest.mark.skipif(not (REPO / "data" / "forensic" / "f12_a50_topology_arms.json").exists(), reason="arms report absent")
@@ -190,19 +200,26 @@ def test_arms_json_pins(pin):
     arms report (seed 0x5eedca11, 1,000 nulls per arm)."""
     arms = json.loads((REPO / "data" / "forensic" / "f12_a50_topology_arms.json").read_text(encoding="utf-8"))
     by = {a["name"]: a for a in arms["arms"]}
-    pin("f12", "arms input edges sha", "6c7f7065c0e6445eb100f71aadc6f0cfde6b0871563b058d6e4c571693453491",
+    pin("f12", "arms input edges sha", "41bee9315b730009874b163ce266e81a998360602788edb4552ebcc703203bd0",
         arms["inputs"]["data/citations/ls_citation_edges.tsv"])
-    pin("f12", "A0 Q", 0.4995, by["A0-committed"]["modularity"]["observed"])
-    pin("f12", "A0 Q null", 0.4295, by["A0-committed"]["modularity"]["nullMean"])
-    pin("f12", "A0 margin", 0.07, by["A0-committed"]["modularity"]["marginOverNull"])
-    pin("f12", "A0 NODF", 24.441, by["A0-committed"]["nodf"]["observed"])
+    pin("f12", "arms regen == committed", arms["inputs"]["data/citations/ls_citation_edges.tsv"],
+        arms["inputs"]["data/forensic/f12_a50_regen_edges.tsv"])
+    pin("f12", "A0 Q", 0.4757, by["A0-committed"]["modularity"]["observed"])
+    pin("f12", "A0 Q null", 0.4094, by["A0-committed"]["modularity"]["nullMean"])
+    pin("f12", "A0 margin", 0.0663, by["A0-committed"]["modularity"]["marginOverNull"])
+    pin("f12", "A0 NODF", 26.857, by["A0-committed"]["nodf"]["observed"])
+    pin("f12", "A0 NODF null", 31.356, by["A0-committed"]["nodf"]["nullMean"])
     pin("f12", "A0 verdict", "modular", by["A0-committed"]["verdict"])
-    pin("f12", "A0 modules", [["ap", "ap90"], ["pwkvn", "sch"], ["ben"], ["bhs"], ["lrv"], ["md"], ["mw"], ["pw"], ["pwg"]],
+    pin("f12", "A0 modules", [["ap", "ap90"], ["bhs", "md"], ["pwkvn", "sch"], ["ben"], ["lrv"], ["mw"], ["pw"], ["pwg"]],
         by["A0-committed"]["dictModules"])
-    # C6: the margin over the null is flat under the §5.5 fold, 0.0035 lower under the 37-pair fold.
-    pin("f12", "A1a margin", 0.07, by["A1a-folded-named"]["modularity"]["marginOverNull"])
-    pin("f12", "A1b margin", 0.0665, by["A1b-folded-ascii"]["modularity"]["marginOverNull"])
-    pin("f12", "A1b Q", 0.4759, by["A1b-folded-ascii"]["modularity"]["observed"])
+    # The fold is in the committed data since H5407 and the regeneration IS the committed
+    # data, so the folded and regenerated arms coincide with A0 exactly.
+    for name in ("A1a-folded-named", "A1b-folded-ascii", "A5-regen-f4c08c57"):
+        pin("f12", f"{name} == A0 Q", by["A0-committed"]["modularity"]["observed"], by[name]["modularity"]["observed"])
+        pin("f12", f"{name} == A0 margin", by["A0-committed"]["modularity"]["marginOverNull"], by[name]["modularity"]["marginOverNull"])
+        pin("f12", f"{name} == A0 NODF", by["A0-committed"]["nodf"]["observed"], by[name]["nodf"]["observed"])
+        pin("f12", f"{name} == A0 modules", by["A0-committed"]["dictModules"], by[name]["dictModules"])
+    pin("f12", "A2 nine rows margin", 0.0667, by["A2-nine-rows"]["modularity"]["marginOverNull"])
     # C7: the one-canon construction sits on the null on both statistics.
     pin("f12", "A3 verdict", "neither-detected", by["A3-one-canon"]["verdict"])
     assert by["A3-one-canon"]["modularity"]["p"] > 0.05 and by["A3-one-canon"]["nodf"]["p"] > 0.05
@@ -210,20 +227,20 @@ def test_arms_json_pins(pin):
     # one-canon arms pair it arbitrarily and A2 drops it.
     for name in ("A0-committed", "A1a-folded-named", "A1b-folded-ascii", "A5-regen-f4c08c57"):
         assert ["mw"] in by[name]["dictModules"], name
-    # The two key-borrow pairs are modules in every real-data arm (bhs+md joins them in
-    # the folded and regenerated arms — one heuristic run, see ledger C4).
+    # The two key-borrow pairs are modules in every real-data arm (bhs+md joins them on the
+    # re-frozen data — one heuristic run, see ledger C4 / A50 §4).
     for name in ("A0-committed", "A1a-folded-named", "A1b-folded-ascii", "A5-regen-f4c08c57"):
         for pair in (["ap", "ap90"], ["pwkvn", "sch"]):
             assert pair in by[name]["dictModules"], (name, pair)
     # The sweep exists, and every run's margin is far below the real graph's.
     assert arms["sweepSummary"]["runs"] == 12
     assert arms["sweepSummary"]["maxMarginOverNull"] < 0.01
-    pin("f12", "sweep max margin", 0.0026, arms["sweepSummary"]["maxMarginOverNull"])
+    pin("f12", "sweep max margin", 0.0016, arms["sweepSummary"]["maxMarginOverNull"])
     # Provenance binding (delta pass D3.4): script hash + atlas checkout recorded.
     assert len(arms["scriptSha256"]) == 64 and "revision" in arms["cslAtlas"]
     # The two A4 arms are the same construction with the arm seed; one reads "modular" alone.
     pin("f12", "A4 f0.1 verdict", "modular", by["A4-one-canon-spell-0.1"]["verdict"])
-    pin("f12", "A4 f0.1 margin", 0.0018, by["A4-one-canon-spell-0.1"]["modularity"]["marginOverNull"])
+    pin("f12", "A4 f0.1 margin", 0.0015, by["A4-one-canon-spell-0.1"]["modularity"]["marginOverNull"])
     pin("f12", "A4 f0.3 verdict", "nested", by["A4-one-canon-spell-0.3"]["verdict"])
-    pin("f12", "sweep verdict counts", {"modular": 0, "nested": 2, "nestedAndModular": 6, "neither": 4},
+    pin("f12", "sweep verdict counts", {"modular": 1, "nested": 2, "nestedAndModular": 3, "neither": 6},
         {k: arms["sweepSummary"][k] for k in ("modular", "nested", "nestedAndModular", "neither")})

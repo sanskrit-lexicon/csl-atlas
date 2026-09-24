@@ -564,7 +564,9 @@ BUILDERS = {
         [("shared-core", "общие рёбра")],
         xref_screening,
     ),
-    "tradition": ("csl-atlas-tradition-tags_119texts", "Теги традиций — 119 текстов", "Неавтоматизированная проверка, разблокирующая A50.", tradition_items, []),
+    # Keep the historical 119texts stem (sheet ID / filename / localStorage contract);
+    # the visible count is 114 since H5407 folded five duplicate variant rows (24-09-2026).
+    "tradition": ("csl-atlas-tradition-tags_119texts", "Теги традиций — 114 текстов", "Неавтоматизированная проверка, разблокирующая A50.", tradition_items, []),
     # Keep the historical 100units stem: it is part of the download filename,
     # sheet ID, and localStorage key contract. The corrected visible count is 102.
     "skd-iti": ("csl-atlas-skd-iti_100units", "SKD iti: 102 единицы для адъюдикации", "Общая доказательная очередь A02/A08/A30.", skd_items, [("authority-terminal", "authority-terminal"), ("separable", "separable"), ("other-no-authority", "other-no-authority")]),

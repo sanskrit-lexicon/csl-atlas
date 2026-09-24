@@ -24,6 +24,7 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
 | [`ls_citation_nodes.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_nodes.tsv) | node table — `canonical_text · total_cites · n_dicts · variant_forms` (the raw expansions that folded into it) |
 | [`ls_citation_unresolved_top.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_unresolved_top.tsv) | top unresolved raw keys per dict — the QA worklist for extending coverage |
 | [`ls_citation_nontext_filtered.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_nontext_filtered.tsv) | audit trail of `<ls>` markers filtered as non-bibliographic (grammatical/editorial) — MW only |
+| [`ls_citation_graph.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_graph.source.json) | provenance sidecar written on every run — csl-atlas / `csl-orig` / `csl-guides` revisions with dirty flags, abbreviations-key SHA-256, builder SHA-256, SHA-256 of each output (the revision binding of the committed TSVs) |
 | [`build_ls_citation_graph.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/build_ls_citation_graph.py) | the builder (reproduce below) |
 
 ## Method
@@ -57,8 +58,10 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
    text name — e.g. `MANU'S Gesetzbuch` + `Mānavadharmaśāstra` → *Manusmṛti*;
    `PĀṆINI'S acht Bücher grammatischer Regeln` → *Aṣṭādhyāyī (Pāṇini)*;
    `The ŚATAPATHABRĀHMAṆA in the Mādhyandina-Śākhā` → *Śatapatha-Brāhmaṇa*. Every mapping is a
-   well-established identification, never a guess; the long tail of title-synonymy is left as a
-   documented residual.
+   well-established identification, never a guess. Since the 24-09-2026 re-freeze the table
+   also carries the 37 eye-checked transliteration-variant pairs of the H5295 fold table
+   (`Raghuvanśa` → Raghuvaṃśa, `Rigveda` → Ṛgveda, `Naishadhacharita` → Naiṣadhacarita, …);
+   the long tail of title-synonymy beyond transliteration is left as a documented residual.
 
 ## Coverage
 
@@ -70,31 +73,31 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
 | pwg | 801,790 | 0 | 536,172 | 66.9% | 481 |
 | mw | 320,830 | 63,582 | 20,250 | 7.9% | 5 |
 | pw | 98,484 | 0 | 50,701 | 51.5% | 243 |
-| ap\* | 68,273 | 0 | 57,113 | 83.7% | 155 |
-| ben | 49,234 | 0 | 49,003 | 99.5% | 96 |
+| ap\* | 68,273 | 0 | 57,112 | 83.7% | 155 |
+| ben | 49,389 | 0 | 47,251 | 95.7% | 94 |
 | bhs | 48,419 | 0 | 40,875 | 84.4% | 136 |
 | ap90 | 43,894 | 0 | 37,993 | 86.6% | 149 |
 | sch\* | 31,041 | 0 | 11,496 | 37.0% | 161 |
 | pwkvn\* | 17,629 | 0 | 8,386 | 47.6% | 173 |
 | lrv | 16,650 | 0 | 16,469 | 98.9% | 106 |
 | md | 58 | 0 | 47 | 81.0% | 4 |
-| **total** | **1,496,302** | **63,582** | **828,505** | **57.8%** | **912** |
+| **total** | **1,496,457** | **63,582** | **826,752** | **57.7%** | **874** |
 
 ## Most-cited texts across the tradition (folded)
 
 | cites | #dicts | text |
 |--:|--:|---|
-| 56,818 | 8 | Mahābhārata |
-| 38,187 | 7 | Ṛgveda |
-| 38,155 | 9 | Rāmāyaṇa (most widespread) |
-| 26,365 | 7 | Manusmṛti *(incl. Mānavadharmaśāstra / Manu's Gesetzbuch)* |
+| 56,822 | 8 | Mahābhārata |
+| 39,025 | 11 | Ṛgveda (cited by every dictionary) |
+| 38,154 | 9 | Rāmāyaṇa |
+| 28,140 | 8 | Manusmṛti *(incl. Mānavadharmaśāstra / Manu's Gesetzbuch / Manusmṛiti)* |
+| 24,300 | 8 | Bhāgavata-Purāṇa |
+| 24,025 | 8 | Raghuvaṃśa |
 | 21,791 | 3 | Aṣṭādhyāyī (Pāṇini) |
-| 21,330 | 5 | Bhāgavata-Purāṇa |
 | 20,232 | 7 | Śabdakalpadruma *(a dictionary cited as a source)* |
-| 19,922 | 7 | Raghuvaṃśa |
 | 18,073 | 3 | Abhidhānacintāmaṇi |
 | 18,030 | 4 | Indische Sprüche |
-| 17,015 | 9 | Kathāsaritsāgara (most widespread) |
+| 17,015 | 9 | Kathāsaritsāgara |
 | 14,918 | 8 | Amarakoṣa |
 
 ## Known issues (still a derived dataset — read the caveats)
@@ -113,7 +116,9 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
   not classical texts, and belongs to a separate epigraphic citation universe — left out of the
   text graph on purpose.
 - **🟠 Title-synonymy tail.** The curated alias folds the largest author's-genitive and
-  synonym forms; the long tail (a text under a second lesser-used title) is unmerged. `AUFRECHT`
+  synonym forms and, since 24-09-2026, the 37 transliteration-variant pairs the A50 ledger
+  listed (its residual fold table is now empty); the long tail (a text under a second
+  lesser-used title) is unmerged. `AUFRECHT`
   (12,718, a scholar/editor shorthand of ambiguous referent) is deliberately left unresolved
   rather than guessed.
 - **🟠 No per-locus resolution.** Counts are per source-text only; the locus (book/verse) is
@@ -122,6 +127,25 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
 
 ## Change log
 
+- **24-09-2026 (v3, re-freeze at a recorded revision, [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md)):**
+  `CANON_ALIAS` extended with the 37 eye-checked transliteration-variant pairs of the H5295
+  fold table (with a chain guard: an alias target is never itself an alias key); TSVs rebuilt
+  against `csl-orig@f4c08c578b330e2379e38f54d3a541f1564b8eee` + 
+  `csl-guides@64c967d1d08d26868bbbc289b4aacec7f4a8f3ff` (both clean; `abbreviations.json`
+  SHA-256 `dfd9fb68…8a48`) and the first `ls_citation_graph.source.json` committed beside them;
+  two builder runs at that pair are byte-identical (`ls_citation_edges.tsv` SHA-256
+  `41bee931…3bd0`, `ls_citation_nodes.tsv` `6039af4d…e474`). 828,505 citations / 912 nodes /
+  1,701 edges → **826,752 / 874 / 1,699**. The non-fold part of the move is entirely Benfey:
+  `csl-orig` `v02/ben/ben.txt` was edited after the 06-07-2026 freeze —
+  [`056acf4`](https://github.com/sanskrit-lexicon/csl-orig/commit/056acf4) (06-07-2026, "BEN now
+  has PWG style references", BEN #19: bare `Chr.` tags for *my Sanskrit Chrestomathy* 3,017 →
+  1,602), [`d1d0a18`](https://github.com/sanskrit-lexicon/csl-orig/commit/d1d0a18) (07-07-2026,
+  "BEN LS Gorr. handled", BEN #21: `Gorr.` 347 → 29) and
+  [`45d6907`](https://github.com/sanskrit-lexicon/csl-orig/commit/45d6907) (09-07-2026, BEN #27:
+  → 15); ben raw `<ls>` 49,234 → 49,389, resolved 49,003 → 47,251. The `csl-guides` key is
+  unchanged since `cd79a7b` (03-07-2026) apart from the `Weber` → `WEBER` case change. Five
+  duplicate variant rows dropped from `tradition_tags.tsv` (119 → 114). A50, the claim ledger
+  §P (`narrows` → `survives`) and the forensic pins updated in the same PR.
 - **24-09-2026 (provenance sidecar, H5295, no data change):** the builder now writes
   `ls_citation_graph.source.json` next to the TSVs on every run (first committed copy lands
   with the H5407 re-freeze) — sibling `csl-orig`/`csl-guides` `HEAD` revisions, dirty flags, the
@@ -146,7 +170,11 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
 python data/citations/build_ls_citation_graph.py    # reads ../csl-orig + ../csl-guides
 ```
 
-Requires `csl-orig` and `csl-guides` as siblings of `csl-atlas`. ~1 min.
+Requires `csl-orig` and `csl-guides` as siblings of `csl-atlas` (or `SIBLING_ROOT=<dir>`).
+~1 min. The committed TSVs reproduce byte-for-byte at the revision pair recorded in
+`ls_citation_graph.source.json` — currently `csl-orig@f4c08c57` + `csl-guides@64c967d`
+(`git -C ../csl-orig checkout f4c08c57`, `git -C ../csl-guides checkout 64c967d`); at any other
+revision compare the sidecar's output hashes before trusting a diff.
 
 **Provenance:** derived from [`csl-orig`](https://github.com/sanskrit-lexicon/csl-orig)
 `<ls>` tags + [`csl-guides`](https://github.com/sanskrit-lexicon/csl-guides) abbreviation keys.

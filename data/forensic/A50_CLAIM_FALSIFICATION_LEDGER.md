@@ -19,6 +19,20 @@ Independent logic critic on the pre-merge head: §5 (all 25 findings adjudicated
 this pass, 1 deferred to merge — P8; the key unification I4 asks for is forwarded to H5407).
 A delta pass over those fixes (§5.1) returned 22 further findings, all fixed in this pass.
 
+**Post-re-freeze status (24-09-2026, [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md), Fable 5.1 `claude-fable-5-1`).**
+The dataset this ledger was measured on — the 06-07-2026 freeze, 828,505 citations / 912 nodes
+/ 1,701 edges, no recorded sibling revision — has been **re-frozen at a recorded revision pair**
+with the 37-pair variant fold applied in the builder (§P, now `survives`). Rows C1–C7 keep the
+measurements of the H5295 pass as the record of what was falsified and how; every figure the
+*paper* quotes has been recomputed on the re-frozen data (826,752 / 874 / 1,699; Q 0.4757 vs.
+null 0.4094, margin 0.0663, z 81.9, p = 0.001; NODF 26.857 vs. 31.356; 8 modules `ap+ap90` ·
+`bhs+md` · `pwkvn+sch` + five singletons; A3 one-canon NODF p = 0.71, Q p = 0.28; sweep max
+margin 0.0016). The harness outputs (`f12_a50_report.json`, `f12_a50_topology_arms.json`) and
+the pins carry the re-frozen figures; the C-row prose below carries the pre-re-freeze ones.
+**No verdict changed** under the re-freeze except P (`narrows` → `survives`): the tally is now
+6 narrow, 1 withdraws, 2 survive. The 37-pair fold table `f12_a50_variant_fold.tsv` is empty
+(residual 0); the drift block of the report is zero (regenerated == committed, byte-identical).
+
 ## 0 Verdict in one table
 
 | # | Claim (A50 location) | Verdict | What changed in the paper |
@@ -31,7 +45,7 @@ A delta pass over those fixes (§5.1) returned 22 further findings, all fixed in
 | C5 | "the Western dictionaries cite the Indian dictionaries, descent made visible as citation" (§3) | **narrows** | 89–99.5% of each kośa's citations are PWG's; the sentence now names PWG |
 | C6 | Folding variants "would only sharpen" the modularity result (§5.5) | **narrows** | Raw Q falls with folding (0.4995 → 0.4972 → 0.4759) but so does the null; the margin is unchanged under the §5.5 fold (0.070 → 0.070) and 0.0035 lower under the 37-pair fold. "Sharpen" is unsupported in either direction; the sentence now states the measured margins |
 | C7 | "a shared canon predicts a *nested* matrix … the arrangement of citations runs the other way" (§1, §4) | **narrows** | A rank-biased one-canon draw with the same breadths sits on the fixed-fixed null on both statistics (A3: NODF p 0.95, Q p 0.39). NODF below the null means less nested than a one-canon draw, not "the opposite of a shared canon" |
-| P | TSVs rebuild "against sibling `csl-orig` and `csl-guides` checkouts" (Data availability, README) | **narrows** | No revision recorded at the 06-07-2026 freeze; a rebuild at `csl-orig@f4c08c57` + `csl-guides@64c967d` moves six percentage figures by ≤ 0.2 points (top-50 share 71.0 → 71.2) and four counts (−1,753 citations, −2 edges, −1 node, −1 private label) (§2 P). Builder now writes a sidecar; re-freeze minted as H5407 |
+| P | TSVs rebuild "against sibling `csl-orig` and `csl-guides` checkouts" (Data availability, README) | **survives** (was *narrows* on 24-09-2026 before the re-freeze) | The 06-07-2026 freeze recorded no revision and a rebuild drifted (top-50 share 71.0 → 71.2, −1,753 citations); the TSVs are now re-frozen at `csl-orig@f4c08c57` + `csl-guides@64c967d` (H5407), the builder writes the binding to `ls_citation_graph.source.json`, two runs at that pair are byte-identical, and the drift was traced to three dated Benfey `<ls>` edits in `csl-orig` (§2 P) |
 
 Nothing in the paper's *descriptive* layer was wrong as arithmetic: every number reproduces
 from the committed TSVs. What did not survive is the step from measurement to mechanism —
@@ -324,16 +338,17 @@ arm, null mean, SD, z and p recorded per arm).
   tags were being edited on the freeze day itself) and
   `csl-guides@9e8f4c8e9b9c6e37093e8eff5d827344ebcb1542` (06-07-2026 09:00 +0300). Whether the
   freeze ran before or after `75b229a` is exactly what the missing sidecar would have said.
-- **Regeneration (bound):** builder re-run on 24-09-2026 against
+- **Regeneration (bound, H5295 pass):** builder re-run on 24-09-2026 against
   `csl-orig@f4c08c578b330e2379e38f54d3a541f1564b8eee` (clean) and
   `csl-guides@64c967d1d08d26868bbbc289b4aacec7f4a8f3ff` (clean, `abbreviations.json` SHA-256
-  `dfd9fb68…8a48`), builder file SHA-256 `af12dcb9…0371`; output byte-identical to the first rebuild of this pass (24-09)
-  run, kept as
+  `dfd9fb68…8a48`), builder file SHA-256 `af12dcb9…0371` (pre-fold builder); output
+  byte-identical across two runs, SHA-256 `02891158…fec95`. That copy has since been replaced:
   [`f12_a50_regen_edges.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f12_a50_regen_edges.tsv)
-  (SHA-256 `02891158…fec95`) with its sidecar
+  is now the H5407 rebuild (SHA-256 `41bee931…3bd0`, identical to the committed edge list) with its sidecar
   [`f12_a50_regen_edges.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f12_a50_regen_edges.source.json).
-- **Measured drift** (`f12_a50_report.json` `drift`, every headline figure recomputed on both
-  edge lists by the same code):
+- **Measured drift of the 06-07-2026 freeze** (H5295 pass; `f12_a50_report.json` `drift` then,
+  every headline figure recomputed on both edge lists by the same code — the block is zero
+  since the re-freeze):
 
 | Figure | committed | regenerated |
 |---|--:|--:|
@@ -353,26 +368,56 @@ arm, null mean, SD, z and p recorded per arm).
   unchanged; the module count is not (9 → 8). The drift sits in Benfey's resolution (plus one
   Apte citation and a key-case change in the `csl-guides` key), i.e. in the inputs, not in
   the paper's arithmetic — but "stable" would be the wrong word for a headline that moves.
-- **Verdict: narrows.** The paper's numbers are bound to the committed TSVs (hashes in §4)
-  and reproduce from them byte-for-byte; they are not reproducible from the *named* procedure
-  without a revision, and a revision-bound rebuild moves the Abstract's top-50 figure.
-- **Patch (this PR):** the builder writes `ls_citation_graph.source.json` (csl-atlas revision
+- **Verdict on 24-09-2026 before the re-freeze: narrows.** The paper's numbers were bound to
+  the committed TSVs and reproduced from them byte-for-byte; they were not reproducible from
+  the *named* procedure without a revision, and a revision-bound rebuild moved the Abstract's
+  top-50 figure.
+- **Patch (H5295 PR):** the builder writes `ls_citation_graph.source.json` (csl-atlas revision
   and builder hash; both sibling revisions with dirty flags; abbreviations-key SHA-256; output
   SHA-256s; git failures recorded as `unavailable: <error>`, never as null); the
-  Data-availability section states the freeze gap and the drift; the citations README records
-  both. **Not done here, deliberately:** re-freezing the TSVs at a recorded revision and
-  extending `CANON_ALIAS` with the 37 fold pairs — both change the dataset the paper cites and
-  belong to one residual mint so code, data, sidecar and prose move together:
-  [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md).
+  Data-availability section stated the freeze gap and the drift; the citations README recorded
+  both. Re-freezing at a recorded revision and extending `CANON_ALIAS` with the 37 fold pairs
+  were deferred to one residual mint so code, data, sidecar and prose move together: H5407.
+- **Re-freeze ([H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md), 24-09-2026):**
+  `CANON_ALIAS` extended with the 37 fold pairs (a chain guard asserts no alias target is itself
+  an alias key; three pairs of the fold table were reversed so the diacritic IAST form is the
+  target: `SARVOPANISHATSĀRA` → `SARVOPANIṢATSĀRA`, `BRAHMOPANISHAD` → `BRAHMOPANIṢAD`,
+  `Harshacharita` → `Harṣacarita`); builder (SHA-256 `08791a7c…bfc5`) run **twice** against the
+  **recorded revision pair** `csl-orig@f4c08c578b330e2379e38f54d3a541f1564b8eee` (clean) +
+  `csl-guides@64c967d1d08d26868bbbc289b4aacec7f4a8f3ff` (clean, `abbreviations.json`
+  `dfd9fb68…8a48`): byte-identical outputs — `ls_citation_edges.tsv` SHA-256
+  `41bee9315b730009874b163ce266e81a998360602788edb4552ebcc703203bd0`, `ls_citation_nodes.tsv`
+  `6039af4d75669230f74b1b39e8578221a474bd2942cda4139b0c1698fad3e474` — and the sidecar
+  [`ls_citation_graph.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_graph.source.json)
+  committed beside them naming both revisions. The report's drift block against the same
+  rebuild is zero (`edges_changed` 0, `nodes_only_committed` []).
+  **The `ben` drift, attributed:** `csl-guides` `abbreviations.json` is unchanged since
+  `cd79a7b` (03-07-2026) and the six commits the local csl-guides checkout is behind do not
+  touch it, so the key is not the cause. The cause is three `csl-orig` `v02/ben/ben.txt` edits
+  **after** the 06-07-2026 freeze: [`056acf4`](https://github.com/sanskrit-lexicon/csl-orig/commit/056acf4) (06-07-2026 14:13 +0530,
+  "BEN now has PWG style references", BEN #19) folds the bare `<ls>Chr.</ls>` tags for *my
+  Sanskrit Chrestomathy* 3,017 → 1,602; [`d1d0a18`](https://github.com/sanskrit-lexicon/csl-orig/commit/d1d0a18) (07-07-2026 10:50 +0530,
+  "BEN LS Gorr. handled", BEN #21) takes `Gorr.` 347 → 29; [`45d6907`](https://github.com/sanskrit-lexicon/csl-orig/commit/45d6907)
+  (09-07-2026, BEN #27) → 15. So the freeze ran before `056acf4` on 06-07 — which answers the
+  "before or after `75b229a`" question above (before). ben raw `<ls>` 49,234 → 49,389,
+  resolved 49,003 → 47,251 (96 → 94 texts).
+  **Re-frozen figures:** 826,752 citations / 1,699 edges / 874 nodes; top-10/20/50/100 shares
+  34.9 / 50.9 / 72.5 / 85.9; PWG share 64.9; private 567 (64.9%, 9.6% of volume); ≥ 7-dict
+  texts 38 (52.4% of volume); Ṛgveda reaches all 11; five texts reach every usable row;
+  NODF 26.857 (null 31.356, p 1); Q 0.4757 (null 0.4094, margin 0.0663, z 81.9, p 0.001), 8
+  modules; arms A1a = A1b = A5 = A0 (the fold is in the data, the regeneration is the data).
+- **Verdict: survives.** The named procedure now reproduces the committed TSVs byte-for-byte
+  at the revision pair the sidecar records, two runs agree, and the earlier drift has a named
+  cause in the inputs' history rather than in the paper's arithmetic.
 
 ## 3 What the constructed control changes and what it leaves alone
 
 Per the handoff's fail condition ("counterexample changes more than the claimed mechanism"):
 between A3 and A4 every cell keeps its dictionary and its text (a shared text's column is
 split into private `T@dict` columns), every row keeps its breadth, the
-edge count stays 1,701, and no citation moves between dictionaries — only node labels
+edge count stays 1,699 (1,701 before the re-freeze), and no citation moves between dictionaries — only node labels
 change, the single thing an unfolded variant changes in the real graph. The column margins
-therefore change (683 → 805 → 1,081 columns), and the null is re-drawn on the new margins —
+therefore change (672 → 799 → 1,093 columns on the re-frozen data; 683 → 805 → 1,081 before), and the null is re-drawn on the new margins —
 which is why every comparison above is observed-vs-null within an arm and never raw Q across
 arms. What the control isolates is the effect of label privacy on the *test's output*, not a
 community mechanism.
@@ -386,12 +431,15 @@ npm run test-forensic-pins -- tests/forensic/test_f12_a50_claim_ledger.py
 node scripts/validate-citation-canon.mjs                 # committed topology payload unchanged
 ```
 
-Inputs (SHA-256, 24-09-2026): `ls_citation_edges.tsv`
-`6c7f7065c0e6445eb100f71aadc6f0cfde6b0871563b058d6e4c571693453491` ·
-`ls_citation_nodes.tsv` `29d1b588e9b4b1dca7d6dbffea74c6d1a9ee442d071f42d37b437dd2f2898711` ·
+Inputs (SHA-256, 24-09-2026, post-re-freeze H5407): `ls_citation_edges.tsv`
+`41bee9315b730009874b163ce266e81a998360602788edb4552ebcc703203bd0` ·
+`ls_citation_nodes.tsv` `6039af4d75669230f74b1b39e8578221a474bd2942cda4139b0c1698fad3e474` ·
 `src/data/citations/citation_canon.json`
-`663f90248ec4bb175da5070b2ff11b9d31550175d813667b8b051e047b325c02` (before this PR's
-verdict-string regeneration; the post-regeneration hash is in `f12_a50_report.json`). The
+`3e8da588161c1b420fd3a0757bc2e26d6ff0177528a49690a9ac575018c4e77d` ·
+`data/citations/build_ls_citation_graph.py`
+`08791a7cdbc56783d7f4e38da8f818438cc1c01835dfadec17734723203fbcf5`. The H5295-pass inputs
+(06-07-2026 freeze) were `ls_citation_edges.tsv` `6c7f7065…3491`, `ls_citation_nodes.tsv`
+`29d1b588…8711`, `citation_canon.json` `663f9024…5c02`. The
 ledger script never opens `../csl-orig`; the arms script never opens anything outside
 `data/` and `scripts/`; the regeneration behind `f12_a50_regen_edges.tsv` is the one external
 run, and its sidecar binds it.
