@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sanskrit-lexicon.github.io/csl-atlas/schema/kosa-macrostructure.schema.json",
+  "title": "Kośa macrostructure model (H5328)",
+  "description": "The versified synonymic kośa as a macrostructural type: kāṇḍa → varga → (upavarga) → verse-group → set → member, plus a table of ordering devices each labelled observed (source text / digitization markup) or inferred (measurement). Contrast type: the semasiological alphabetical European dictionary, whose single ordering device is the alphabetised headword. Methods: src/paper/kosa-macrostructure.md. Validated by scripts/validate-kosa-model.mjs (this schema + semantic rules).",
+  "type": "object",
+  "required": ["schemaVersion", "schema", "generatedBy", "generatedAt", "license", "licenseUrl", "kosha",
+               "macrostructureType", "digitizationModel", "genderMarking", "sample", "orderingDevices", "kandas"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "schema": { "const": "data/schema/kosa-macrostructure.schema.json" },
+    "generatedBy": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "license": { "type": "string" },
+    "licenseUrl": { "type": "string" },
+    "kosha": { "$ref": "#/$defs/kosha" },
+    "macrostructureType": {
+      "description": "onomasiological-versified = concept-ordered verse kośa (this model); semasiological-alphabetical = the European contrast type, admitted so a contrast instance can be expressed in the same envelope.",
+      "enum": ["onomasiological-versified", "semasiological-alphabetical"]
+    },
+    "digitizationModel": {
+      "description": "grouped = one record per verse-group holding <eid> sets (AMAR, ABCH); exploded = one record per synonym, grouped by a verse locator (ARMH).",
+      "enum": ["grouped", "exploded"]
+    },
+    "genderMarking": { "type": "boolean", "description": "true when the digitization carries per-member liṅga tags." },
+    "sample": {
+      "type": "object",
+      "required": ["isSample", "plan", "note"],
+      "additionalProperties": false,
+      "properties": {
+        "isSample": { "type": "boolean" },
+        "plan": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["unit", "unitIast", "groups"],
+            "additionalProperties": false,
+            "properties": {
+              "unit": { "type": "string" },
+              "unitIast": { "type": "string" },
+              "groups": { "type": "integer", "minimum": 1 }
+            }
+          }
+        },
+        "note": { "type": "string" }
+      }
+    },
+    "orderingDevices": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/device" } },
+    "kandas": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/kanda" } }
+  },
+  "$defs": {
+    "nullableString": { "type": ["string", "null"] },
+    "kosha": {
+      "type": "object",
+      "required": ["code", "title", "author", "tradition", "date", "source"],
+      "additionalProperties": false,
+      "properties": {
+        "code": { "type": "string", "pattern": "^[A-Z0-9]{2,6}$" },
+        "title": { "type": "string" },
+        "author": { "type": "string" },
+        "tradition": { "type": "string" },
+        "date": { "type": "string" },
+        "source": {
+          "type": "object",
+          "required": ["upstream", "path", "revision", "licence"],
+          "additionalProperties": false,
+          "properties": {
+            "upstream": { "type": "string" },
+            "path": { "type": "string" },
+            "revision": { "type": ["string", "null"], "pattern": "^[0-9a-f]{7,40}$" },
+            "licence": { "type": "string" }
+          }
+        }
+      }
+    },
+    "device": {
+      "type": "object",
+      "required": ["device", "evidence", "layer", "level", "note"],
+      "additionalProperties": false,
+      "properties": {
+        "device": {
+          "enum": ["kanda", "varga", "upavarga", "verse", "synonym-set", "homonym-section", "final-sound-order",
+                   "gender-marking", "gender-contiguity", "indeclinable-section", "alphabetical-order"]
+        },
+        "evidence": {
+          "description": "observed = present in the source text or encoded in the digitization; inferred = established by our measurement; absent = looked for and not there.",
+          "enum": ["observed", "inferred", "absent"]
+        },
+        "layer": { "enum": ["source-text", "digitization-markup", "measurement"] },
+        "level": { "enum": ["division", "group", "set", "member"] },
+        "note": { "type": "string", "minLength": 1 }
+      }
+    },
+    "kanda": {
+      "type": "object",
+      "required": ["n", "label", "labelIast", "labelStatus", "vargas"],
+      "additionalProperties": false,
+      "properties": {
+        "n": { "type": "integer", "minimum": 1 },
+        "label": { "$ref": "#/$defs/nullableString" },
+        "labelIast": { "$ref": "#/$defs/nullableString" },
+        "labelStatus": { "enum": ["stated-in-text", "numeric-locator-only", "absent"] },
+        "vargas": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/varga" } }
+      }
+    },
+    "varga": {
+      "type": "object",
+      "required": ["n", "label", "labelIast", "labelStatus", "sectionType", "sectionTypeBasis", "counts", "groups"],
+      "additionalProperties": false,
+      "properties": {
+        "n": { "type": "integer", "minimum": 1 },
+        "label": { "$ref": "#/$defs/nullableString" },
+        "labelIast": { "$ref": "#/$defs/nullableString" },
+        "labelStatus": { "enum": ["stated-in-text", "not-divided-in-source"] },
+        "sectionType": {
+          "description": "synonymic = sets of co-referent names; homonymic = nānārtha/anekārtha, one word with several meanings; indeclinable = avyaya section.",
+          "enum": ["synonymic", "homonymic", "indeclinable"]
+        },
+        "sectionTypeBasis": {
+          "description": "section-label = read from the varga/kāṇḍa name; content = inferred from verse formula; default = no signal, synonymic assumed.",
+          "enum": ["section-label", "content", "default"]
+        },
+        "counts": {
+          "type": "object",
+          "required": ["groups", "sets", "members", "fullVerses"],
+          "additionalProperties": false,
+          "properties": {
+            "groups": { "type": "integer", "minimum": 0 },
+            "sets": { "type": "integer", "minimum": 0 },
+            "members": { "type": "integer", "minimum": 0 },
+            "fullVerses": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "groups": { "type": "array", "items": { "$ref": "#/$defs/group" } }
+      }
+    },
+    "group": {
+      "description": "A verse-group: one <L> record (grouped) or one verse locator (exploded).",
+      "type": "object",
+      "required": ["L", "sourceLine", "upavarga", "upavargaIast", "verseRefs", "verseLines", "sets"],
+      "additionalProperties": false,
+      "properties": {
+        "L": { "type": "string", "minLength": 1 },
+        "sourceLine": { "type": "integer", "minimum": 1 },
+        "upavarga": { "$ref": "#/$defs/nullableString" },
+        "upavargaIast": { "$ref": "#/$defs/nullableString" },
+        "locator": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)*$" },
+        "verseRefs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["n", "half"],
+            "additionalProperties": false,
+            "properties": { "n": { "type": "integer", "minimum": 1 }, "half": { "type": "boolean" } }
+          }
+        },
+        "verseLines": { "type": "array", "items": { "type": "string" } },
+        "sets": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/set" } }
+      }
+    },
+    "set": {
+      "type": "object",
+      "required": ["eid", "kind", "members"],
+      "additionalProperties": false,
+      "properties": {
+        "eid": { "type": ["integer", "null"], "minimum": 1 },
+        "kind": {
+          "description": "synonym-set = co-referent names; homonym-sense = one headword + gloss(es) naming one of its meanings; indeclinable-set = avyaya set (synonyms, optionally glossed); unsegmented-verse = exploded digitization, set boundaries not encoded.",
+          "enum": ["synonym-set", "homonym-sense", "indeclinable-set", "unsegmented-verse"]
+        },
+        "members": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/member" } }
+      }
+    },
+    "member": {
+      "type": "object",
+      "required": ["form", "formIast", "role", "gender"],
+      "additionalProperties": false,
+      "properties": {
+        "form": { "type": "string", "minLength": 1, "description": "SLP1 stem as annotated." },
+        "formIast": { "type": "string", "minLength": 1 },
+        "role": { "enum": ["synonym", "headword", "gloss"] },
+        "gender": { "anyOf": [{ "type": "null" }, { "$ref": "#/$defs/gender" }] }
+      }
+    },
+    "gender": {
+      "description": "Parsed liṅga tag: puM/strI/klI = m/f/n; tri = triliṅga (adjectival, all three); a = avyaya; dvi/ba = dual/plural; vA = optional ('or').",
+      "type": "object",
+      "required": ["tag", "genders", "indeclinable", "triLinga", "optional", "number", "parsed"],
+      "additionalProperties": false,
+      "properties": {
+        "tag": { "type": "string", "pattern": "^(puM|strI|klI|tri|dvi|ba|vA|a)+$" },
+        "genders": { "type": "array", "items": { "enum": ["m", "f", "n"] }, "uniqueItems": true },
+        "indeclinable": { "type": "boolean" },
+        "triLinga": { "type": "boolean" },
+        "optional": { "type": "boolean" },
+        "number": { "enum": ["du", "pl", null] },
+        "parsed": { "type": "boolean" }
+      }
+    }
+  }
+}

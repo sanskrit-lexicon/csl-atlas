@@ -25,6 +25,14 @@ const COPIES = [
     target: "src/data/lexico/h4_semantic_field_review_packet.json"
   },
   {
+    source: "data/lexico/kosa_model_measures.json",
+    target: "src/data/lexico/kosa_model_measures.json"
+  },
+  {
+    source: "data/lexico/kosa_model_amar_sample.json",
+    target: "src/data/lexico/kosa_model_amar_sample.json"
+  },
+  {
     source: "data/lexico/heap_sat.json",
     target: "src/data/lexico/heap_sat.json"
   },

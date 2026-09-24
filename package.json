@@ -115,6 +115,8 @@
     "validate-l0-gqd": "node scripts/validate-l0-gqd.mjs",
     "build-root-agreement-kappa": "python scripts/lexico/root_agreement_kappa.py",
     "validate-review-reports": "node scripts/validate-review-reports.mjs",
+    "build-kosa-model": "python scripts/lexico/m10_kosa_macrostructure_model.py",
+    "validate-kosa-model": "node scripts/validate-kosa-model.mjs",
     "build-divergence-map": "python scripts/lexico/build_divergence_map.py",
     "install-review-tools": "python -m pip install --upgrade -r requirements-review.txt",
     "build-review-sheets": "node scripts/build-review-sheets.mjs",
