@@ -1,7 +1,7 @@
 {
  "schemaVersion": "1.0",
  "generatedBy": "scripts/lexico/m10_kosa_macrostructure_model.py",
- "generatedAt": "2026-09-24T02:33:30.596Z",
+ "generatedAt": "2026-09-24T02:40:20.645Z",
  "license": "CC-BY-SA-4.0",
  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
  "sources": {
@@ -45,7 +45,7 @@
     "evidence": "observed",
     "layer": "source-text",
     "level": "division",
-    "note": "Section headings name all 24 vargas; 22 open with atha … vargaḥ and 23 close with iti … vargaḥ (no opening colophon: bhūmivargaḥ, avyayavargaḥ; no closing one: avyayavargaḥ)."
+    "note": "Section headings name all 24 vargas; 23 open with atha … vargaḥ and 23 close with iti … vargaḥ (no opening colophon: bhūmivargaḥ; no closing one: avyayavargaḥ)."
    },
    {
     "device": "upavarga",
@@ -460,11 +460,10 @@
    },
    "sectionColophons": {
     "sections": 24,
-    "withOpeningAtha": 22,
+    "withOpeningAtha": 23,
     "withClosingIti": 23,
     "withoutOpening": [
-     "bhūmivargaḥ",
-     "avyayavargaḥ"
+     "bhūmivargaḥ"
     ],
     "withoutClosing": [
      "avyayavargaḥ"
