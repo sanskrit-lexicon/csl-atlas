@@ -134,6 +134,26 @@ One commit per dictionary, in the handoff's order except that AP90 was filled af
 2. **Printed page 1 is in neither series.** `pg01`-`pg04` return HTTP 404 and `f15`/`f16` do not exist, so the kośa's opening verses are unscanned: the known gap.
 3. The volume is item **No. 6** of the six-work *Abhidhānasaṃgraha* collection named on both title pages, but it carries only the Abhidhānacintāmaṇi; the collection relation is a misfit because the schema has no series field.
 
+## Verification of the fill (24-09-2026)
+
+The fill was re-checked mechanically, page by page, against the sources rather than against its own claims. This section records what was checked, how to reproduce it, and **what it does not establish**: it is the executor's own check, not the `## Verifier` PASS that H5325's `data` class owes, which must come from a different session.
+
+1. **Schema and coverage.** `npm run validate-megastructure` → `OK - 9 dictionaries, 91 components`, with one `note:` line per scan set giving `covered/pages` (or the excluded count) for all 15 sets. `node --test test/megastructure.test.mjs` → 9 tests, 9 pass, including the nine-dictionary stop condition.
+2. **Every declared page exists at its declared place.** The csldoc inventories were matched file for file against the local `csl-doc/source/images` tree - MW 29/29, PWG 27/27, SKD 30/30, VCP 7/7, WIL 6/6, PW 5/5 - and every PDF-set ref against `csl-websanlexicon/v02/distinctfiles/<dict>/web/webtc/pdffiles.txt` - ABCH 15/15, AP90 33/33 (15 tit + 18 appendix), ARMH 2/2, MW 62/62, PWG 1/1. The one set that does not match `pdffiles.txt` is `vcp-scan-pdf` (0/34): those 34 pages exist only on the scan server, which is the misfit VCP's record already carries - and the pages were probed and return HTTP 200.
+3. **Every scan URL resolves.** Probing `baseUrl` + image for each set returns 200: `ARMH_0001/0101`, `tit_0001/tit_0015`, `pg_1179/pg_1196`, `f01/f10/pg58`, `mw010001/mw1333` (PDFs), `pwg7-1821`, `pg0001/0017/0034` (VCP).
+4. **Every transcription pointer resolves.** All 38 `transcriptions` locations across the nine records exist: AP90's six (`csl-doc/.../ap90pref.rst`, `ap90app1-3.rst`), SKD's 21 (`docs/refs/SKD_Front pages.docx`, this repo), MW's 11 (nine `MWS/prefaces/mwprefNN.md` ranges of mwpref01-29 plus `csl-pywork` `mwauth/tooltip.txt` and `mwab/mwab_input.txt`). A record marked `transcribed` therefore names a file that is really there.
+5. **Defect found and fixed.** The csldoc `baseUrl` on all six csldoc sets pointed at `.../csldoc/build/dictionaries/prefaces/<dict>pref/`, which serves nothing: the directory answers 403 and `baseUrl` + image answers 404. The csldoc pages sit at `.../build/dictionaries/prefaces/<dict>pref.html` and reference their images as `../../../_images/<file>`, so the corrected base is `https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/`, where one probed image per dictionary returns 200. The two pilot records (MW, SKD) carried the same error and were corrected with them.
+6. **What was *not* verified independently.** The identification of ARMH's, AP90's and ABCH's components rests on reading their scan pages, and that reading was done by the session that wrote those three records; a different session should re-read at least the ARMH colophon, the AP90 blank leaf `tit_0012`, and ABCH's `f12`-`f14` before the PASS.
+
+Reproduction:
+
+```bash
+npm run build-megastructure && npm run validate-megastructure
+node --test test/megastructure.test.mjs
+curl -s -o /dev/null -w '%{http_code}\n' \
+  https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/mw010001.jpg
+```
+
 ## Traps for H5325 (read before filling)
 
 1. **csl-orig `*_front.txt`, `*_middle.txt` and `*_back.txt` are page-marker scaffolding, not front matter.** SKD's `skd_back.txt` is empty. Use the csldoc preface pages and the scan maps.
