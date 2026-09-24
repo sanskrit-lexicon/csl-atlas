@@ -19,7 +19,7 @@ and separates what the sources *show* from what we *infer*.
 - Evidence: the Amarakośa in the sanskrit-kosha markup (`amar.txt`, GPL-3.0, revision `f5575c3`), and ABCH, ARMH and MW from `csl-orig` (revision `f4c08c5`). All counts come from [`m10_kosa_macrostructure_model.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m10_kosa_macrostructure_model.py) → [`kosa_model_measures.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/kosa_model_measures.json).
 - Model: [`kosa-macrostructure.schema.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/schema/kosa-macrostructure.schema.json), validated on the [Amarakośa sample](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/kosa_model_amar_sample.json) (40 verse-groups from all three kāṇḍas and all three section types), with ABCH and ARMH instances as generality checks.
 - Limitations: the synonym-set boundaries and gender tags are the annotators' reading of the verse, not marks in the verse itself (§4); the liṅgādisaṅgraha-varga is not in this digitization; ARMH encodes neither sets nor gender.
-- Validation: `npm run validate-kosa-model` (schema + semantic rules) and `node --test test/kosa-model.test.mjs`, which also mutates a valid instance nine ways and checks each defect is rejected.
+- Validation: `npm run validate-kosa-model` (schema + semantic rules) and `node --test test/kosa-model.test.mjs`, which also mutates valid instances 24 ways (20 on the Amarakośa sample, 4 on ARMH) and checks each defect is rejected.
 - Owner repo: `csl-atlas` (handoff H5328, epic E014).
 
 ```js
