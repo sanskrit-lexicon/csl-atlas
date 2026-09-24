@@ -91,8 +91,6 @@ HALF_VERSE_RE = re.compile(r"\((\d+)\)")
 VN_RE = re.compile(r"<vn>([0-9.]+)")
 K1_RE = re.compile(r"<k1>([^<]*)")
 TAG_TOKEN_RE = re.compile(r"puM|strI|klI|tri|dvi|ba|vA|a")
-OPEN_COLOPHON_RE = re.compile(r"^;c\{<s>aTa \S*vargaH")
-CLOSE_COLOPHON_RE = re.compile(r"^;c\{<s>iti \S*vargaH")
 VARGA_HEAD_RE = re.compile(r"^;v\{<s>(\S*vargaH)</s>\}")
 
 
@@ -484,13 +482,26 @@ def numbering_scope(rows):
                         ("scope", "per-section" if restarts > len(boundaries) / 2 else "continuous")])
 
 
+def sandhi_join(particle, word):
+    """atha / iti + word with vowel sandhi (aTa+avyaya -> aTAvyaya, iti+a -> itya): the colophon
+    'aTAvyayavargaH' is atha + avyayavargaH, so a space-separated match alone misses it."""
+    v, rest = word[0], word[1:]
+    if particle == "aTa":
+        joined = {"a": "A", "A": "A", "i": "e", "I": "e", "u": "o", "U": "o"}.get(v)
+        return f"aT{joined}{rest}" if joined else f"aTa {word}"
+    if v in "iI":
+        return f"itI{rest}"
+    if v in "aAuUeEoOf":
+        return f"ity{word}"
+    return f"iti {word}"
+
+
 def colophons(lines):
     """Section headings (;v) against opening 'atha … vargaḥ' and closing 'iti … vargaḥ' colophons."""
     heads = [m.group(1) for ln in lines for m in [VARGA_HEAD_RE.match(ln)] if m]
-    opening = {ln.split()[1].rstrip(".<") for ln in lines if OPEN_COLOPHON_RE.match(ln)}
-    closing = {ln.split()[1].rstrip(".<") for ln in lines if CLOSE_COLOPHON_RE.match(ln)}
-    opening = {re.sub(r"<.*$", "", o) for o in opening}
-    closing = {re.sub(r"<.*$", "", c) for c in closing}
+    texts = [ln[len(";c{<s>"):] for ln in lines if ln.startswith(";c{<s>")]
+    opening = {h for h in heads if any(t.startswith(sandhi_join("aTa", h)) for t in texts)}
+    closing = {h for h in heads if any(t.startswith(sandhi_join("iti", h)) for t in texts)}
     return OrderedDict([
         ("sections", len(heads)),
         ("withOpeningAtha", sum(1 for h in heads if h in opening)),

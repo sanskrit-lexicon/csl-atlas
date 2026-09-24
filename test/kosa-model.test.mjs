@@ -68,7 +68,19 @@ const MUTATIONS = [
   ["parsed false on a clean tag", d => { firstExpanded(d, "synonymic").groups[1].sets[0].members[0].gender.parsed = false; }, /parsed false disagree/],
   ["kāṇḍa stated-in-text without a label", d => { d.kandas[0].label = null; }, /kandas\[0\]: labelStatus stated-in-text needs a label/],
   ["counts.sets below the expanded sets", d => { firstExpanded(d, "synonymic").counts.sets = 1; }, /expanded sets exceed counts.sets/],
-  ["counts.members below the expanded members", d => { firstExpanded(d, "synonymic").counts.members = 1; }, /expanded members exceed counts.members/]
+  ["counts.members below the expanded members", d => { firstExpanded(d, "synonymic").counts.members = 1; }, /expanded members exceed counts.members/],
+  // verifier round 2
+  ["counts.fullVerses below the expanded verses", d => { firstExpanded(d, "synonymic").counts.fullVerses = 0; }, /expanded fullVerses exceed/],
+  ["section type contradicting its label", d => {
+    const v = firstExpanded(d, "synonymic");
+    v.sectionType = "homonymic";
+    v.groups.forEach(g => g.sets.forEach(s => { s.kind = "homonym-sense"; }));
+  }, /contradicts its section label/],
+  ["upavarga without its IAST", d => {
+    const g = firstExpanded(d, "synonymic").groups[0];
+    g.upavarga = "x";
+    g.upavargaIast = null;
+  }, /upavarga and upavargaIast/]
 ];
 
 for (const [name, mutate, expected] of MUTATIONS) {
@@ -92,7 +104,8 @@ const ARMH_MUTATIONS = [
     const g = firstExpanded(d).groups[0];
     g.sets.push(structuredClone(g.sets[0]));
   }, /exactly one unsegmented-verse set/],
-  ["eid in the exploded model", d => { firstExpanded(d).groups[0].sets[0].eid = 7; }, /eid must be null/]
+  ["eid in the exploded model", d => { firstExpanded(d).groups[0].sets[0].eid = 7; }, /eid must be null/],
+  ["locator of another kāṇḍa", d => { firstExpanded(d).groups[0].locator = "5.1.1.3"; }, /does not belong to kāṇḍa 1/]
 ];
 
 for (const [name, mutate, expected] of ARMH_MUTATIONS) {
@@ -114,7 +127,8 @@ test("device notes agree with the measures they summarise", () => {
   const notes = code => Object.fromEntries(measures.devices[code].map(d => [d.device, d.note]));
   const col = measures.measures.AMAR.sectionColophons;
   assert.equal(col.sections, 24);
-  assert.ok(col.withoutClosing.includes("avyayavargaḥ"), "avyaya-varga has no closing iti");
+  assert.deepEqual(col.withoutClosing, ["avyayavargaḥ"], "only the avyaya-varga lacks a closing iti");
+  assert.deepEqual(col.withoutOpening, ["bhūmivargaḥ"], "aTAvyayavargaH is atha + avyaya- in sandhi");
   assert.match(notes("AMAR").varga, new RegExp(`${col.withOpeningAtha} open with atha`));
   assert.match(notes("AMAR")["indeclinable-section"], /liṅgādisaṅgraha/, "the text names a varga after avyaya");
   assert.equal(measures.measures.AMAR.verseNumberingScope.scope, "per-section");

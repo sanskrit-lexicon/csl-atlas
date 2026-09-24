@@ -66,8 +66,9 @@ display(csvDownloadButton(deviceRows, "kosa-ordering-devices.csv"));
 **Observed in the source text** — present in the words of the kośa itself:
 
 1. the *kāṇḍa* and *varga* divisions. Section headings name all 24 vargas of the
-   Amarakośa; 22 open with *atha … vargaḥ* and 23 close with *iti … vargaḥ* (the
-   *bhūmi-varga* has no opening colophon, the *avyaya-varga* neither);
+   Amarakośa; 23 open with *atha … vargaḥ* (once in sandhi, *athāvyayavargaḥ*) and
+   23 close with *iti … vargaḥ* (the *bhūmi-varga* has no opening colophon, the
+   *avyaya-varga* no closing one);
 2. the verse and its number. Amara's numbers restart at every one of the 23
    varga boundaries and, in this digitization, run in steps of exactly one inside
    each varga: 1,432 full verses inside the verse-groups, 1,444 in the file, the

@@ -108,6 +108,14 @@ export function expectedGender(tag) {
   };
 }
 
+// Same rule as the builder's section_type(): the section label names the section type.
+function sectionTypeOfLabel(label) {
+  const lab = label || "";
+  if (lab.includes("nAnArTa") || lab.includes("anekArTa")) return "homonymic";
+  if (lab.includes("avyaya")) return "indeclinable";
+  return "synonymic";
+}
+
 export function checkSemantics(doc) {
   const errors = [];
   const devices = new Map();
@@ -139,11 +147,15 @@ export function checkSemantics(doc) {
       const nSets = v.groups.reduce((n, g) => n + g.sets.length, 0);
       const nMembers = v.groups.reduce((n, g) => n + g.sets.reduce((a, s) => a + s.members.length, 0), 0);
       const complete = v.groups.length === v.counts.groups;
-      for (const [what, have, counted] of [["sets", nSets, v.counts.sets], ["members", nMembers, v.counts.members]]) {
+      const nVerses = new Set(v.groups.flatMap(g => g.verseRefs.filter(r => !r.half).map(r => r.n))).size;
+      for (const [what, have, counted] of [["sets", nSets, v.counts.sets], ["members", nMembers, v.counts.members],
+        ["fullVerses", nVerses, v.counts.fullVerses]]) {
         if (have > counted) errors.push(`${at}: ${have} expanded ${what} exceed counts.${what} ${counted}`);
         else if (complete && have !== counted) errors.push(`${at}: fully expanded but ${have} ${what} != counts.${what} ${counted}`);
       }
       if (v.labelStatus === "stated-in-text" && !v.label) errors.push(`${at}: labelStatus stated-in-text needs a label`);
+      if (v.sectionTypeBasis === "section-label" && v.sectionType !== sectionTypeOfLabel(v.label ?? k.label))
+        errors.push(`${at}: sectionType ${v.sectionType} contradicts its section label`);
       let lastVerse = 0;
       v.groups.forEach((g, gi) => {
         expandedGroups += 1;
@@ -152,10 +164,17 @@ export function checkSemantics(doc) {
         seenL.add(g.L);
         if (doc.digitizationModel === "exploded") {
           if (!g.locator) errors.push(`${gat}: exploded model needs a locator`);
+          else if (g.locator.split(".")[0] !== String(k.n))
+            errors.push(`${gat}: locator ${g.locator} does not belong to kāṇḍa ${k.n}`);
           else if (seenLocator.has(g.locator)) errors.push(`${gat}: duplicate locator "${g.locator}"`);
           seenLocator.add(g.locator);
           if (g.sets.length !== 1) errors.push(`${gat}: an exploded verse-group is exactly one unsegmented-verse set`);
         }
+        if ((g.upavarga === null) !== (g.upavargaIast === null))
+          errors.push(`${gat}: upavarga and upavargaIast must be both set or both null`);
+        // Full verses only: the source's half-verse marks "(N)" are no monotone counter — a
+        // varga-initial group can carry the previous varga's number ("(258)" before ".. 1 .."
+        // at the head of the Amarakośa avyaya-varga), so ordering them would reject faithful data.
         for (const r of g.verseRefs.filter(r => !r.half)) {
           if (r.n < lastVerse) errors.push(`${gat}: verse ${r.n} after ${lastVerse} (verse order broken)`);
           lastVerse = r.n;
