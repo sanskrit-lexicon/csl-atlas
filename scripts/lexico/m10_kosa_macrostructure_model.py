@@ -91,6 +91,9 @@ HALF_VERSE_RE = re.compile(r"\((\d+)\)")
 VN_RE = re.compile(r"<vn>([0-9.]+)")
 K1_RE = re.compile(r"<k1>([^<]*)")
 TAG_TOKEN_RE = re.compile(r"puM|strI|klI|tri|dvi|ba|vA|a")
+OPEN_COLOPHON_RE = re.compile(r"^;c\{<s>aTa \S*vargaH")
+CLOSE_COLOPHON_RE = re.compile(r"^;c\{<s>iti \S*vargaH")
+VARGA_HEAD_RE = re.compile(r"^;v\{<s>(\S*vargaH)</s>\}")
 
 
 # ---------------------------------------------------------------- helpers
@@ -295,10 +298,15 @@ def model_exploded(lines):
             g["Ls"].append(m.group(1).strip())
             cur = g
             continue
-        if cur is not None and not ln.startswith("<LEND>") and ".." in ln and not cur["verseLines"]:
-            cur["verseLines"].append(ln.strip())
-        if cur is not None and ln.startswith("<LEND>"):
+        if cur is None:
+            continue
+        if ln.startswith("<LEND>"):
             cur = None
+        # records of one locator repeat its verse block (kāṇḍas 1–4) or carry the half-line
+        # their word stands in (kāṇḍa 5): keep the ordered union of distinct verse lines
+        elif ln.strip() and ln.strip() != cur["vn"] and not ln.rstrip().endswith(";") \
+                and ln.strip() not in cur["verseLines"]:
+            cur["verseLines"].append(ln.strip())
     kandas = OrderedDict()
     for vn, g in by_vn.items():
         kandas.setdefault(vn.split(".")[0], []).append(g)
@@ -385,7 +393,9 @@ def exploded_instance(kandas):
                 ("sectionTypeBasis", "content" if sect == "homonymic" else "default"),
                 ("counts", OrderedDict([("groups", len(groups)), ("sets", len(groups)),
                                         ("members", sum(len(g["k1"]) for g in groups)),
-                                        ("fullVerses", len(groups))])),
+                                        ("fullVerses", len({int(m.group(1)) for g in groups
+                                                            for vl in g["verseLines"]
+                                                            for m in FULL_VERSE_RE.finditer(vl)}))])),
                 ("groups", groups_out),
             ])]),
         ]))
@@ -449,7 +459,7 @@ def all_sets(kandas_full, code):
 
 
 def verse_integrity(kandas_full):
-    """Full-verse numbers restart per varga and should run 1..N without gaps."""
+    """Full-verse numbers per section: they should run in steps of one (restarting or not)."""
     rows = []
     for klabel, vargas in kandas_full.items():
         for vlabel, members in vargas.items():
@@ -464,6 +474,30 @@ def verse_integrity(kandas_full):
                 ("otherSteps", [[a, b] for a, b in steps if b != a + 1][:5]),
             ]))
     return rows
+
+
+def numbering_scope(rows):
+    """Does the verse count restart at a section boundary, or run on through the work?"""
+    boundaries = list(zip(rows, rows[1:]))
+    restarts = sum(1 for a, b in boundaries if b["first"] <= a["last"])
+    return OrderedDict([("sectionBoundaries", len(boundaries)), ("restarts", restarts),
+                        ("scope", "per-section" if restarts > len(boundaries) / 2 else "continuous")])
+
+
+def colophons(lines):
+    """Section headings (;v) against opening 'atha … vargaḥ' and closing 'iti … vargaḥ' colophons."""
+    heads = [m.group(1) for ln in lines for m in [VARGA_HEAD_RE.match(ln)] if m]
+    opening = {ln.split()[1].rstrip(".<") for ln in lines if OPEN_COLOPHON_RE.match(ln)}
+    closing = {ln.split()[1].rstrip(".<") for ln in lines if CLOSE_COLOPHON_RE.match(ln)}
+    opening = {re.sub(r"<.*$", "", o) for o in opening}
+    closing = {re.sub(r"<.*$", "", c) for c in closing}
+    return OrderedDict([
+        ("sections", len(heads)),
+        ("withOpeningAtha", sum(1 for h in heads if h in opening)),
+        ("withClosingIti", sum(1 for h in heads if h in closing)),
+        ("withoutOpening", [iast(h) for h in heads if h not in opening]),
+        ("withoutClosing", [iast(h) for h in heads if h not in closing]),
+    ])
 
 
 def nanartha_order(sets):
@@ -549,7 +583,7 @@ def mw_forms():
     return forms
 
 
-def measure(code, kandas_full=None, exploded=None):
+def measure(code, kandas_full=None, exploded=None, lines=None):
     res = OrderedDict()
     if exploded is not None:
         forms = [k for groups in exploded.values() for g in groups for k in g["k1"]]
@@ -560,6 +594,12 @@ def measure(code, kandas_full=None, exploded=None):
     sets = all_sets(kandas_full, code)
     res["digitizationModel"] = "grouped"
     res["verseNumbering"] = verse_integrity(kandas_full)
+    res["verseNumberingScope"] = numbering_scope(res["verseNumbering"])
+    in_groups = sum(r["fullVerses"] for r in res["verseNumbering"])
+    in_file = sum(len(FULL_VERSE_RE.findall(ln)) for ln in lines) if lines else None
+    res["fullVerseCount"] = OrderedDict([("inVerseGroups", in_groups), ("inFile", in_file)])
+    if lines and code == "AMAR":
+        res["sectionColophons"] = colophons(lines)
     size = defaultdict(list)
     for sect, _, s in sets:
         size[s["kind"]].append(len([m for m in s["members"] if m["role"] != "gloss"]))
@@ -601,17 +641,32 @@ def devices_for(code, meas):
             device("alphabetical-order", "inferred", "measurement", "member",
                    f"Adjacent-headword non-decreasing share {meas['alphabeticalAdjacency']['nondecreasing']} — chance level."),
         ]
+    col = meas.get("sectionColophons")
+    if col:
+        varga_note = (f"Section headings name all {col['sections']} vargas; {col['withOpeningAtha']} open with "
+                      f"atha … vargaḥ and {col['withClosingIti']} close with iti … vargaḥ (no opening colophon: "
+                      f"{', '.join(col['withoutOpening'])}; no closing one: {', '.join(col['withoutClosing'])}).")
+    else:
+        varga_note = ("ABCH is divided by kāṇḍa; varga-level labels occur only in the tiryak-kāṇḍa "
+                      "and the avyaya-varga.")
+    scope = meas["verseNumberingScope"]
+    verse_note = ("Verse-end numbers '.. N ..' (half-verse '(N)'); "
+                  + (f"numbering restarts at {scope['restarts']} of {scope['sectionBoundaries']} section boundaries."
+                     if scope["scope"] == "per-section" else
+                     f"numbering runs on continuously across all {scope['sectionBoundaries']} section boundaries."))
+    if code == "AMAR":
+        avyaya_note = ("avyaya-varga is the last varga in this digitization; kāṇḍa 3 v. 1 names a "
+                       "liṅgādisaṅgraha-varga after it, which the digitization does not contain.")
+    else:
+        avyaya_note = "avyaya-varga is the last section of the digitization, a top-level division after the sāmānya-kāṇḍa."
     devs = [
         device("kanda", "observed", "source-text", "division",
                "Book headings/colophons are part of the text (e.g. prathamaṃ kāṇḍam)."),
-        device("varga", "observed" if code == "AMAR" else "observed", "source-text", "division",
-               "atha … vargaḥ / iti … vargaḥ colophons open and close each section."
-               if code == "AMAR" else "ABCH is divided by kāṇḍa; varga-level labels occur only in the tiryak-kāṇḍa and the avyaya-varga."),
+        device("varga", "observed", "source-text", "division", varga_note),
         device("upavarga", "absent" if code == "AMAR" else "observed", "digitization-markup", "division",
                "No third kvvv tier in AMAR (every record carries kāṇḍa + varga only)."
                if code == "AMAR" else "tiryak-kāṇḍa carries a third kvvv tier (e.g. pañcendriya → sthalacara)."),
-        device("verse", "observed", "source-text", "group",
-               "Verse-end numbers '.. N ..' (half-verse '(N)'); numbering restarts per section."),
+        device("verse", "observed", "source-text", "group", verse_note),
         device("synonym-set", "observed", "digitization-markup", "set",
                "<eid> segmentation of a verse into sets is editorial annotation, not marked in the verse itself."),
         device("gender-marking", "observed", "digitization-markup", "member",
@@ -629,11 +684,12 @@ def devices_for(code, meas):
                            "nānārtha-varga; its opening verse states the arrangement by final sound (kāntādi)."))
         explained = sum(1 for v in no["violations"] if v["explainedBy"])
         devs.append(device("final-sound-order", "inferred", "measurement", "member",
+                           "The kāntādi verse states the principle; measured here is how strictly it holds. "
                            f"Final-consonant rank non-decreasing on {no['finalConsonantNondecreasing']} of adjacent "
                            f"headwords vs {no['initialLetterNondecreasing']} for the initial letter; "
                            f"{len(no['series'])} a-tergo series (the second almost wholly indeclinable); "
                            f"{explained} of {len(no['violations'])} descending steps fall under the ḍ=l / b=v equivalences."))
-    devs.append(device("indeclinable-section", "observed", "source-text", "division", "avyaya-varga closes the work."))
+    devs.append(device("indeclinable-section", "observed", "source-text", "division", avyaya_note))
     devs.append(device("alphabetical-order", "inferred", "measurement", "member",
                        f"Adjacent-headword non-decreasing share {meas['alphabeticalAdjacency']['nondecreasing']} "
                        "in synonymic sections — chance level, i.e. no alphabetical device."))
@@ -690,7 +746,7 @@ def main():
     for code in ("AMAR", "ABCH"):
         lines = read_lines(code)
         full = model_grouped(code, lines)
-        meas = measure(code, kandas_full=full)
+        meas = measure(code, kandas_full=full, lines=lines)
         measures[code] = meas
         instances[code] = envelope(code, "grouped", grouped_instance(code, full, meas), devices_for(code, meas), meas)
     lines = read_lines("ARMH")

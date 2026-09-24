@@ -2,7 +2,7 @@
  "schemaVersion": "1.0",
  "schema": "data/schema/kosa-macrostructure.schema.json",
  "generatedBy": "scripts/lexico/m10_kosa_macrostructure_model.py",
- "generatedAt": "2026-09-24T02:16:11.164Z",
+ "generatedAt": "2026-09-24T02:33:30.564Z",
  "license": "CC-BY-SA-4.0",
  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
  "kosha": {
@@ -69,7 +69,7 @@
    "evidence": "observed",
    "layer": "source-text",
    "level": "group",
-   "note": "Verse-end numbers '.. N ..' (half-verse '(N)'); numbering restarts per section."
+   "note": "Verse-end numbers '.. N ..' (half-verse '(N)'); numbering runs on continuously across all 14 section boundaries."
   },
   {
    "device": "synonym-set",
@@ -97,7 +97,7 @@
    "evidence": "observed",
    "layer": "source-text",
    "level": "division",
-   "note": "avyaya-varga closes the work."
+   "note": "avyaya-varga is the last section of the digitization, a top-level division after the sāmānya-kāṇḍa."
   },
   {
    "device": "alphabetical-order",

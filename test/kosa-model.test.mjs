@@ -57,7 +57,18 @@ const MUTATIONS = [
     const g = firstExpanded(d, "synonymic").groups;
     g[0].verseRefs = [{ n: 999, half: false }];
   }, /verse order broken/],
-  ["required device dropped", d => { d.orderingDevices = d.orderingDevices.filter(x => x.device !== "verse"); }, /missing "verse"/]
+  ["required device dropped", d => { d.orderingDevices = d.orderingDevices.filter(x => x.device !== "verse"); }, /missing "verse"/],
+  // verifier round 1 (H5328): every field of the gender object must follow from its tag
+  ["avyaya member not flagged indeclinable", d => {
+    const m = firstExpanded(d, "indeclinable").groups[0].sets[0].members.find(x => x.gender?.tag === "a");
+    m.gender.indeclinable = false;
+  }, /indeclinable false disagree with tag a/],
+  ["optional flag without vA", d => { firstExpanded(d, "synonymic").groups[1].sets[0].members[0].gender.optional = true; }, /optional true disagree/],
+  ["number without dvi/ba", d => { firstExpanded(d, "synonymic").groups[1].sets[0].members[0].gender.number = "pl"; }, /number "pl" disagree/],
+  ["parsed false on a clean tag", d => { firstExpanded(d, "synonymic").groups[1].sets[0].members[0].gender.parsed = false; }, /parsed false disagree/],
+  ["kāṇḍa stated-in-text without a label", d => { d.kandas[0].label = null; }, /kandas\[0\]: labelStatus stated-in-text needs a label/],
+  ["counts.sets below the expanded sets", d => { firstExpanded(d, "synonymic").counts.sets = 1; }, /expanded sets exceed counts.sets/],
+  ["counts.members below the expanded members", d => { firstExpanded(d, "synonymic").counts.members = 1; }, /expanded members exceed counts.members/]
 ];
 
 for (const [name, mutate, expected] of MUTATIONS) {
@@ -73,6 +84,43 @@ test("validator rejects a segmented set in the exploded (ARMH) model", () => {
   const doc = clone(armh);
   firstExpanded(doc).groups[0].sets[0].kind = "synonym-set";
   assert.ok(validateKosaModel(doc).some(e => /exploded model admits only unsegmented-verse/.test(e)));
+});
+
+const ARMH_MUTATIONS = [
+  ["duplicate locator", d => { const g = firstExpanded(d).groups; g[1].locator = g[0].locator; }, /duplicate locator/],
+  ["two unsegmented-verse sets in one group", d => {
+    const g = firstExpanded(d).groups[0];
+    g.sets.push(structuredClone(g.sets[0]));
+  }, /exactly one unsegmented-verse set/],
+  ["eid in the exploded model", d => { firstExpanded(d).groups[0].sets[0].eid = 7; }, /eid must be null/]
+];
+
+for (const [name, mutate, expected] of ARMH_MUTATIONS) {
+  test(`validator rejects (ARMH): ${name}`, () => {
+    const doc = clone(armh);
+    mutate(doc);
+    const errors = validateKosaModel(doc);
+    assert.ok(errors.some(e => expected.test(e)), `${name}: got ${JSON.stringify(errors.slice(0, 3))}`);
+  });
+}
+
+test("ARMH verse-groups keep their whole verse block (a locator may span two verses)", () => {
+  const byLocator = new Map(firstExpanded(armh).groups.map(g => [g.locator, g]));
+  assert.deepEqual(byLocator.get("1.1.1.6").verseRefs.map(r => r.n), [6, 7]);
+  assert.ok(armh.kandas.flatMap(k => k.vargas).flatMap(v => v.groups).every(g => g.verseLines.length > 0));
+});
+
+test("device notes agree with the measures they summarise", () => {
+  const notes = code => Object.fromEntries(measures.devices[code].map(d => [d.device, d.note]));
+  const col = measures.measures.AMAR.sectionColophons;
+  assert.equal(col.sections, 24);
+  assert.ok(col.withoutClosing.includes("avyayavargaḥ"), "avyaya-varga has no closing iti");
+  assert.match(notes("AMAR").varga, new RegExp(`${col.withOpeningAtha} open with atha`));
+  assert.match(notes("AMAR")["indeclinable-section"], /liṅgādisaṅgraha/, "the text names a varga after avyaya");
+  assert.equal(measures.measures.AMAR.verseNumberingScope.scope, "per-section");
+  assert.equal(measures.measures.ABCH.verseNumberingScope.scope, "continuous");
+  assert.match(notes("ABCH").verse, /continuously/);
+  assert.match(notes("AMAR").verse, /restarts/);
 });
 
 test("measured contrast: kośas show no alphabetical device, MW does", () => {

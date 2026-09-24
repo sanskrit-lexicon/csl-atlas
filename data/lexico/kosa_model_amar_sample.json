@@ -2,7 +2,7 @@
  "schemaVersion": "1.0",
  "schema": "data/schema/kosa-macrostructure.schema.json",
  "generatedBy": "scripts/lexico/m10_kosa_macrostructure_model.py",
- "generatedAt": "2026-09-24T02:20:31.324Z",
+ "generatedAt": "2026-09-24T02:33:19.395Z",
  "license": "CC-BY-SA-4.0",
  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
  "kosha": {
@@ -65,7 +65,7 @@
    "evidence": "observed",
    "layer": "source-text",
    "level": "division",
-   "note": "atha … vargaḥ / iti … vargaḥ colophons open and close each section."
+   "note": "Section headings name all 24 vargas; 22 open with atha … vargaḥ and 23 close with iti … vargaḥ (no opening colophon: bhūmivargaḥ, avyayavargaḥ; no closing one: avyayavargaḥ)."
   },
   {
    "device": "upavarga",
@@ -79,7 +79,7 @@
    "evidence": "observed",
    "layer": "source-text",
    "level": "group",
-   "note": "Verse-end numbers '.. N ..' (half-verse '(N)'); numbering restarts per section."
+   "note": "Verse-end numbers '.. N ..' (half-verse '(N)'); numbering restarts at 23 of 23 section boundaries."
   },
   {
    "device": "synonym-set",
@@ -114,14 +114,14 @@
    "evidence": "inferred",
    "layer": "measurement",
    "level": "member",
-   "note": "Final-consonant rank non-decreasing on 0.9907 of adjacent headwords vs 0.536 for the initial letter; 2 a-tergo series (the second almost wholly indeclinable); 5 of 7 descending steps fall under the ḍ=l / b=v equivalences."
+   "note": "The kāntādi verse states the principle; measured here is how strictly it holds. Final-consonant rank non-decreasing on 0.9907 of adjacent headwords vs 0.536 for the initial letter; 2 a-tergo series (the second almost wholly indeclinable); 5 of 7 descending steps fall under the ḍ=l / b=v equivalences."
   },
   {
    "device": "indeclinable-section",
    "evidence": "observed",
    "layer": "source-text",
    "level": "division",
-   "note": "avyaya-varga closes the work."
+   "note": "avyaya-varga is the last varga in this digitization; kāṇḍa 3 v. 1 names a liṅgādisaṅgraha-varga after it, which the digitization does not contain."
   },
   {
    "device": "alphabetical-order",

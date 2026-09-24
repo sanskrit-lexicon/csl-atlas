@@ -85,10 +85,27 @@ const KIND_FOR_SECTION = {
 };
 const REQUIRED_DEVICES = ["kanda", "varga", "verse", "synonym-set", "gender-marking", "alphabetical-order"];
 const GENDER_OF = { puM: "m", strI: "f", klI: "n" };
+const TAG_TOKEN = /puM|strI|klI|tri|dvi|ba|vA|a/gy;
 
-function expectedGenders(tag) {
-  if (tag.includes("tri")) return ["m", "f", "n"];
-  return Object.entries(GENDER_OF).filter(([t]) => tag.includes(t)).map(([, g]) => g);
+// The whole gender object follows from the tag (same parse as the builder's parse_tag):
+// a validator that checked only some fields would pass an object contradicting its own tag.
+export function expectedGender(tag) {
+  TAG_TOKEN.lastIndex = 0;
+  const toks = [];
+  let m;
+  while ((m = TAG_TOKEN.exec(tag))) toks.push(m[0]);
+  const parsed = toks.join("") === tag;
+  const triLinga = toks.includes("tri");
+  const genders = triLinga ? ["m", "f", "n"]
+    : Object.entries(GENDER_OF).filter(([t]) => toks.includes(t)).map(([, g]) => g);
+  return {
+    tag, genders,
+    indeclinable: toks.includes("a") && genders.length === 0,
+    triLinga,
+    optional: toks.includes("vA"),
+    number: toks.includes("dvi") ? "du" : toks.includes("ba") ? "pl" : null,
+    parsed
+  };
 }
 
 export function checkSemantics(doc) {
@@ -111,12 +128,21 @@ export function checkSemantics(doc) {
   const seenEid = new Set();
   let lastEid = 0;
   let expandedGroups = 0;
+  const seenLocator = new Set();
   (doc.kandas || []).forEach((k, ki) => {
+    if (k.labelStatus === "stated-in-text" && !k.label) errors.push(`kandas[${ki}]: labelStatus stated-in-text needs a label`);
     (k.vargas || []).forEach((v, vi) => {
       const at = `kandas[${ki}].vargas[${vi}]`;
       if (v.groups.length > v.counts.groups) errors.push(`${at}: ${v.groups.length} groups exceed counts.groups ${v.counts.groups}`);
       if (v.groups.length < v.counts.groups && !doc.sample?.isSample)
         errors.push(`${at}: groups truncated but sample.isSample is false`);
+      const nSets = v.groups.reduce((n, g) => n + g.sets.length, 0);
+      const nMembers = v.groups.reduce((n, g) => n + g.sets.reduce((a, s) => a + s.members.length, 0), 0);
+      const complete = v.groups.length === v.counts.groups;
+      for (const [what, have, counted] of [["sets", nSets, v.counts.sets], ["members", nMembers, v.counts.members]]) {
+        if (have > counted) errors.push(`${at}: ${have} expanded ${what} exceed counts.${what} ${counted}`);
+        else if (complete && have !== counted) errors.push(`${at}: fully expanded but ${have} ${what} != counts.${what} ${counted}`);
+      }
       if (v.labelStatus === "stated-in-text" && !v.label) errors.push(`${at}: labelStatus stated-in-text needs a label`);
       let lastVerse = 0;
       v.groups.forEach((g, gi) => {
@@ -124,7 +150,12 @@ export function checkSemantics(doc) {
         const gat = `${at}.groups[${gi}]`;
         if (seenL.has(g.L)) errors.push(`${gat}: duplicate L "${g.L}"`);
         seenL.add(g.L);
-        if (doc.digitizationModel === "exploded" && !g.locator) errors.push(`${gat}: exploded model needs a locator`);
+        if (doc.digitizationModel === "exploded") {
+          if (!g.locator) errors.push(`${gat}: exploded model needs a locator`);
+          else if (seenLocator.has(g.locator)) errors.push(`${gat}: duplicate locator "${g.locator}"`);
+          seenLocator.add(g.locator);
+          if (g.sets.length !== 1) errors.push(`${gat}: an exploded verse-group is exactly one unsegmented-verse set`);
+        }
         for (const r of g.verseRefs.filter(r => !r.half)) {
           if (r.n < lastVerse) errors.push(`${gat}: verse ${r.n} after ${lastVerse} (verse order broken)`);
           lastVerse = r.n;
@@ -133,6 +164,7 @@ export function checkSemantics(doc) {
           const sat = `${gat}.sets[${si}]`;
           if (doc.digitizationModel === "exploded") {
             if (s.kind !== "unsegmented-verse") errors.push(`${sat}: exploded model admits only unsegmented-verse`);
+            if (s.eid !== null) errors.push(`${sat}: exploded model has no eid segmentation (eid must be null)`);
           } else {
             if (!KIND_FOR_SECTION[v.sectionType].has(s.kind))
               errors.push(`${sat}: kind ${s.kind} not allowed in a ${v.sectionType} section`);
@@ -160,11 +192,11 @@ export function checkSemantics(doc) {
               return;
             }
             if (!doc.genderMarking) errors.push(`${mat}: gender tag in a kośa declared genderMarking=false`);
-            const want = expectedGenders(m.gender.tag);
-            if (JSON.stringify(want) !== JSON.stringify(m.gender.genders))
-              errors.push(`${mat}: genders ${JSON.stringify(m.gender.genders)} disagree with tag ${m.gender.tag}`);
-            if (m.gender.triLinga !== m.gender.tag.includes("tri")) errors.push(`${mat}: triLinga disagrees with tag`);
-            if (m.gender.indeclinable && m.gender.genders.length) errors.push(`${mat}: indeclinable member carries a gender`);
+            const want = expectedGender(m.gender.tag);
+            for (const [field, value] of Object.entries(want)) {
+              if (JSON.stringify(value) !== JSON.stringify(m.gender[field]))
+                errors.push(`${mat}: ${field} ${JSON.stringify(m.gender[field])} disagree with tag ${m.gender.tag}`);
+            }
           });
         });
       });
