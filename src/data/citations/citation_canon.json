@@ -3533,8 +3533,8 @@
     }
   ],
   "interpretation": [
-    "PH1 CANON-CORE is REFUTED, and in the opposite direction: the matrix is significantly MODULAR (Barber Q 0.4995 vs degree-preserving null mean 0.4295, permutation p 0.001) and is if anything LESS nested than chance (NODF 24.441 vs null mean 28.976, p 1). The cited canon is NOT one additive core–periphery ladder — the dictionaries carry partly disjoint tradition communities (e.g. bhs's Buddhist sources, the Apte pair ap/ap90, the Petersburg group pwg/pw/pwkvn). A50 §4 should therefore report \"traditions\" as genuinely separate citation communities, not strata of a single shared canon.",
-    "The matrix is extremely sparse and long-tailed: 608 of the 912 cited texts are private to a single dictionary and none is shared by all 11 <ls>-tagged dicts (the broadest by reach, Rāmāyaṇa, appears in 9). A thin universal head (Rāmāyaṇa, Mahābhārata, Ṛgveda) doubles as a shared reading list, but the mass of each apparatus is its own idiosyncratic tail — which is exactly what drives the modular rather than nested signal.\""
+    "PH1 CANON-CORE is not supported — the matrix is less nested than a one-canon random draw with the same margins and more modular than it: it is significantly MODULAR (Barber Q 0.4995 vs degree-preserving null mean 0.4295, permutation p 0.001) and is if anything LESS nested than chance (NODF 24.441 vs null mean 28.976, p 1). The cited canon is NOT one additive core–periphery ladder: the assignments cluster beyond what a one-canon draw with the same breadths and popularities forces. The partition the optimiser finds is two key-sharing pairs (ap+ap90, pwkvn+sch) plus singletons — a shared resolver key is sufficient for both pairs — and the margin over the null survives variant folding (H5295 ledger). A50 §4 reports the margin, the partition and that alternative; tradition names come from the curated map, not from the partition.",
+    "The matrix is extremely sparse and long-tailed: 608 of the 912 cited node labels are private to a single dictionary and on the committed labels none is shared by all 11 <ls>-tagged dicts (the broadest by reach, Rāmāyaṇa, appears in 9; the Ṛgveda reaches all 11 once its Rigveda spelling is folded, and four texts reach every dictionary with a usable yield — H5295). A thin universal head (Rāmāyaṇa, Mahābhārata, Ṛgveda) doubles as a shared reading list, but the mass of each apparatus is its own idiosyncratic tail; private labels inflate raw Q in observed and null alike, and the margin over the null is what carries the modular signal.\""
   ],
   "limitations": [
     "MW contributes only its 5 bibliographic <ls> markers here — 63,582 grammatical/editorial <ls> markers were filtered as non-text (audit: data/citations/ls_citation_nontext_filtered.tsv) — so MW's apparatus is under-represented relative to its true citation load.",
@@ -3546,5 +3546,5 @@
   "boundary": [
     "Derived from two committed atlas citation TSVs only; no source/corpus read, no public-facing decision, no external maker work. Owner repo csl-atlas."
   ],
-  "generatedAt": "2026-07-07T14:23:17.635Z"
+  "generatedAt": "2026-09-24T03:15:29.341Z"
 }

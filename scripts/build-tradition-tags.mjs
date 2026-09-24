@@ -1,13 +1,15 @@
 // Build the tradition-community packet for A50 §4 (agenda backlog #9).
 //
 // H305 (PH1 CANON-CORE) found the dict×text citation matrix significantly
-// MODULAR, not nested — the dictionaries carry partly disjoint tradition
-// communities. A50 §4 asserts "separate citation communities" but had no
-// human-reviewed map NAMING them. This builder joins the small curated
+// MODULAR, not nested — the arrangement clusters beyond a one-canon draw
+// (H5295, 24-09-2026: the partition found is two key-sharing pairs plus
+// singletons; this map gives tradition PROFILES per dictionary, it does not
+// name the optimiser's modules). A50 §4 had no human-reviewed map for those
+// profiles. This builder joins the small curated
 // text→tradition overlay (data/citations/tradition_tags.tsv, ~120 texts) onto
 // the committed <ls> citation edges and derives, per dictionary, how its cited
-// volume splits across traditions — the evidence that turns the machine verdict
-// into a named-community reading.
+// volume splits across traditions — a tradition PROFILE per dictionary, read
+// alongside the modular verdict; it does not name modules or communities.
 //
 // The map is INFERRED until a human votes (evidenceLabel: inferred). The page
 // and A50 flag every tradition claim by the tags' review state; unreviewed tags
@@ -236,7 +238,7 @@ export function buildPayload(edgeRows, nodeRows, tagRows, generatedAt) {
     ...licenseFields(),
     status: "tradition-community-map",
     claim:
-      "Each Cologne Sanskrit dictionary's <ls> citation volume splits across a small set of textual traditions (Vedic, epic, classical-kāvya, Buddhist, dharma-śāstra, lexical-kośa, …); the per-dictionary split names the modular citation communities PH1 CANON-CORE detected quantitatively.",
+      "Each Cologne Sanskrit dictionary's <ls> citation volume splits across a small set of textual traditions (Vedic, epic, classical-kāvya, Buddhist, dharma-śāstra, lexical-kośa, …); the per-dictionary split gives each dictionary a tradition profile to read alongside the modular verdict of PH1 CANON-CORE; it does not name the optimiser modules (H5295).",
     evidenceLabel,
     reviewStatus,
     reviewNote:

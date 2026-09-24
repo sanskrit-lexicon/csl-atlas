@@ -1,0 +1,885 @@
+{
+  "handoff": "H5295",
+  "script": "scripts/forensic/f12_a50_topology_arms.mjs",
+  "scriptSha256": "f5f46ff9c6cb5c69718ed39f26c6432470664024ea84016cfbfa930483987f70",
+  "testScript": "scripts/build-citation-canon.mjs",
+  "cslAtlas": {
+    "revision": "bbca791169829b8fa7d252d7ff5c7105b721c7f8",
+    "dirty": true
+  },
+  "seed": 1592642065,
+  "nNull": 1000,
+  "inputs": {
+    "data/citations/ls_citation_edges.tsv": "6c7f7065c0e6445eb100f71aadc6f0cfde6b0871563b058d6e4c571693453491",
+    "data/forensic/f12_a50_variant_fold.tsv": "4da9b24e2e565852d1ca72965988899faadbc1ba5c4ba15550af896584de81b0",
+    "data/forensic/f12_a50_regen_edges.tsv": "02891158b9a65d62bbef0f88894f57861b649b989bcdc231e4379e3653cfec95",
+    "scripts/build-citation-canon.mjs": "b5ac41f5a3b61c7d659355bfa895657a2e391db396176bd22bfe0fad646ceee4"
+  },
+  "arms": [
+    {
+      "name": "A0-committed",
+      "note": "committed ls_citation_edges.tsv; reproduction + module read-out",
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 912,
+        "nEdges": 1701,
+        "privateTexts": 608
+      },
+      "nodf": {
+        "observed": 24.441,
+        "nullMean": 28.976,
+        "nullSd": 0.176,
+        "z": -25.73,
+        "p": 1,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.4995,
+        "nModules": 9,
+        "nullMean": 0.4295,
+        "nullSd": 0.0008,
+        "z": 83.79,
+        "p": 0.001,
+        "nNull": 1000,
+        "marginOverNull": 0.07
+      },
+      "verdict": "modular",
+      "dictModules": [
+        [
+          "ap",
+          "ap90"
+        ],
+        [
+          "pwkvn",
+          "sch"
+        ],
+        [
+          "ben"
+        ],
+        [
+          "bhs"
+        ],
+        [
+          "lrv"
+        ],
+        [
+          "md"
+        ],
+        [
+          "mw"
+        ],
+        [
+          "pw"
+        ],
+        [
+          "pwg"
+        ]
+      ]
+    },
+    {
+      "name": "A1a-folded-named",
+      "note": "the four §5.5 variants folded (4 rows)",
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 908,
+        "nEdges": 1701,
+        "privateTexts": 606
+      },
+      "nodf": {
+        "observed": 24.649,
+        "nullMean": 29.184,
+        "nullSd": 0.177,
+        "z": -25.67,
+        "p": 1,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.4972,
+        "nModules": 8,
+        "nullMean": 0.4272,
+        "nullSd": 0.0008,
+        "z": 89.52,
+        "p": 0.001,
+        "nNull": 1000,
+        "marginOverNull": 0.07
+      },
+      "verdict": "modular",
+      "dictModules": [
+        [
+          "ap",
+          "ap90"
+        ],
+        [
+          "bhs",
+          "md"
+        ],
+        [
+          "pwkvn",
+          "sch"
+        ],
+        [
+          "ben"
+        ],
+        [
+          "lrv"
+        ],
+        [
+          "mw"
+        ],
+        [
+          "pw"
+        ],
+        [
+          "pwg"
+        ]
+      ]
+    },
+    {
+      "name": "A1b-folded-ascii",
+      "note": "all ASCII-fold collisions folded (37 rows; upper bound on curated folding)",
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 875,
+        "nEdges": 1701,
+        "privateTexts": 568
+      },
+      "nodf": {
+        "observed": 26.819,
+        "nullMean": 31.316,
+        "nullSd": 0.184,
+        "z": -24.44,
+        "p": 1,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.4759,
+        "nModules": 8,
+        "nullMean": 0.4094,
+        "nullSd": 0.0008,
+        "z": 83.47,
+        "p": 0.001,
+        "nNull": 1000,
+        "marginOverNull": 0.0665
+      },
+      "verdict": "modular",
+      "dictModules": [
+        [
+          "ap",
+          "ap90"
+        ],
+        [
+          "bhs",
+          "md"
+        ],
+        [
+          "pwkvn",
+          "sch"
+        ],
+        [
+          "ben"
+        ],
+        [
+          "lrv"
+        ],
+        [
+          "mw"
+        ],
+        [
+          "pw"
+        ],
+        [
+          "pwg"
+        ]
+      ]
+    },
+    {
+      "name": "A2-nine-rows",
+      "note": "mw and md dropped (5 and 4 nodes)",
+      "matrix": {
+        "nDicts": 9,
+        "nTexts": 909,
+        "nEdges": 1692,
+        "privateTexts": 605
+      },
+      "nodf": {
+        "observed": 24.602,
+        "nullMean": 29.15,
+        "nullSd": 0.176,
+        "z": -25.78,
+        "p": 1,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.4989,
+        "nModules": 7,
+        "nullMean": 0.4277,
+        "nullSd": 0.0007,
+        "z": 108.24,
+        "p": 0.001,
+        "nNull": 1000,
+        "marginOverNull": 0.0712
+      },
+      "verdict": "modular",
+      "dictModules": [
+        [
+          "ap",
+          "ap90"
+        ],
+        [
+          "pwkvn",
+          "sch"
+        ],
+        [
+          "ben"
+        ],
+        [
+          "bhs"
+        ],
+        [
+          "lrv"
+        ],
+        [
+          "pw"
+        ],
+        [
+          "pwg"
+        ]
+      ]
+    },
+    {
+      "name": "A3-one-canon",
+      "note": "constructed: one ranked canon sampled rank-biased (weight 1/(rank+1)) to the real breadths; one reading list, no communities",
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 683,
+        "nEdges": 1701,
+        "privateTexts": 271
+      },
+      "nodf": {
+        "observed": 46.404,
+        "nullMean": 46.577,
+        "nullSd": 0.094,
+        "z": -1.85,
+        "p": 0.954,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.3101,
+        "nModules": 9,
+        "nullMean": 0.3099,
+        "nullSd": 0.0007,
+        "z": 0.31,
+        "p": 0.3926,
+        "nNull": 1000,
+        "marginOverNull": 0.0002
+      },
+      "verdict": "neither-detected",
+      "dictModules": [
+        [
+          "pwkvn",
+          "mw",
+          "md"
+        ],
+        [
+          "ap"
+        ],
+        [
+          "ap90"
+        ],
+        [
+          "ben"
+        ],
+        [
+          "bhs"
+        ],
+        [
+          "lrv"
+        ],
+        [
+          "pw"
+        ],
+        [
+          "pwg"
+        ],
+        [
+          "sch"
+        ]
+      ]
+    },
+    {
+      "name": "A4-one-canon-spell-0.1",
+      "note": "constructed: A3 with a 0.1 fraction of each row relabelled to a dictionary-private spelling; still one canon",
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 805,
+        "nEdges": 1701,
+        "privateTexts": 425
+      },
+      "nodf": {
+        "observed": 36.638,
+        "nullMean": 36.666,
+        "nullSd": 0.099,
+        "z": -0.28,
+        "p": 0.6464,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.376,
+        "nModules": 9,
+        "nullMean": 0.3742,
+        "nullSd": 0.0008,
+        "z": 2.33,
+        "p": 0.011,
+        "nNull": 1000,
+        "marginOverNull": 0.0018
+      },
+      "verdict": "modular",
+      "dictModules": [
+        [
+          "lrv",
+          "md"
+        ],
+        [
+          "pwkvn",
+          "mw"
+        ],
+        [
+          "ap"
+        ],
+        [
+          "ap90"
+        ],
+        [
+          "ben"
+        ],
+        [
+          "bhs"
+        ],
+        [
+          "pw"
+        ],
+        [
+          "pwg"
+        ],
+        [
+          "sch"
+        ]
+      ]
+    },
+    {
+      "name": "A4-one-canon-spell-0.3",
+      "note": "constructed: A3 with a 0.3 fraction of each row relabelled to a dictionary-private spelling; still one canon",
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 1081,
+        "nEdges": 1701,
+        "privateTexts": 774
+      },
+      "nodf": {
+        "observed": 20.927,
+        "nullMean": 20.653,
+        "nullSd": 0.147,
+        "z": 1.87,
+        "p": 0.021,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.5223,
+        "nModules": 11,
+        "nullMean": 0.5215,
+        "nullSd": 0.0008,
+        "z": 1.07,
+        "p": 0.1489,
+        "nNull": 1000,
+        "marginOverNull": 0.0008
+      },
+      "verdict": "nested",
+      "dictModules": [
+        [
+          "ap"
+        ],
+        [
+          "ap90"
+        ],
+        [
+          "ben"
+        ],
+        [
+          "bhs"
+        ],
+        [
+          "lrv"
+        ],
+        [
+          "md"
+        ],
+        [
+          "mw"
+        ],
+        [
+          "pw"
+        ],
+        [
+          "pwg"
+        ],
+        [
+          "pwkvn"
+        ],
+        [
+          "sch"
+        ]
+      ]
+    },
+    {
+      "name": "A5-regen-f4c08c57",
+      "note": "edge list regenerated at sibling csl-orig@f4c08c57 / csl-guides@64c967d (23-09-2026)",
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 911,
+        "nEdges": 1699,
+        "privateTexts": 607
+      },
+      "nodf": {
+        "observed": 24.475,
+        "nullMean": 29.021,
+        "nullSd": 0.173,
+        "z": -26.28,
+        "p": 1,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.5003,
+        "nModules": 8,
+        "nullMean": 0.4295,
+        "nullSd": 0.0008,
+        "z": 89.27,
+        "p": 0.001,
+        "nNull": 1000,
+        "marginOverNull": 0.0708
+      },
+      "verdict": "modular",
+      "dictModules": [
+        [
+          "ap",
+          "ap90"
+        ],
+        [
+          "bhs",
+          "md"
+        ],
+        [
+          "pwkvn",
+          "sch"
+        ],
+        [
+          "ben"
+        ],
+        [
+          "lrv"
+        ],
+        [
+          "mw"
+        ],
+        [
+          "pw"
+        ],
+        [
+          "pwg"
+        ]
+      ]
+    }
+  ],
+  "sweep": [
+    {
+      "seed": 1,
+      "fraction": 0.05,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 766,
+        "nEdges": 1701,
+        "privateTexts": 369
+      },
+      "nodf": {
+        "observed": 39.615,
+        "nullMean": 39.52,
+        "nullSd": 0.079,
+        "z": 1.21,
+        "p": 0.1009,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.3549,
+        "nModules": 9,
+        "nullMean": 0.3537,
+        "nullSd": 0.0008,
+        "z": 1.54,
+        "p": 0.0639,
+        "nNull": 1000,
+        "marginOverNull": 0.0012
+      },
+      "verdict": "neither-detected",
+      "nModulesObserved": 9
+    },
+    {
+      "seed": 1,
+      "fraction": 0.1,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 847,
+        "nEdges": 1701,
+        "privateTexts": 480
+      },
+      "nodf": {
+        "observed": 33.894,
+        "nullMean": 33.689,
+        "nullSd": 0.115,
+        "z": 1.79,
+        "p": 0.01,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.3977,
+        "nModules": 10,
+        "nullMean": 0.3962,
+        "nullSd": 0.0008,
+        "z": 1.93,
+        "p": 0.024,
+        "nNull": 1000,
+        "marginOverNull": 0.0015
+      },
+      "verdict": "nested-and-modular",
+      "nModulesObserved": 10
+    },
+    {
+      "seed": 1,
+      "fraction": 0.2,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 989,
+        "nEdges": 1701,
+        "privateTexts": 665
+      },
+      "nodf": {
+        "observed": 25.478,
+        "nullMean": 25.094,
+        "nullSd": 0.155,
+        "z": 2.48,
+        "p": 0.002,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.4746,
+        "nModules": 10,
+        "nullMean": 0.472,
+        "nullSd": 0.0008,
+        "z": 3.18,
+        "p": 0.002,
+        "nNull": 1000,
+        "marginOverNull": 0.0026
+      },
+      "verdict": "nested-and-modular",
+      "nModulesObserved": 10
+    },
+    {
+      "seed": 1,
+      "fraction": 0.3,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 1111,
+        "nEdges": 1701,
+        "privateTexts": 812
+      },
+      "nodf": {
+        "observed": 19.648,
+        "nullMean": 19.348,
+        "nullSd": 0.154,
+        "z": 1.95,
+        "p": 0.014,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.5395,
+        "nModules": 10,
+        "nullMean": 0.5376,
+        "nullSd": 0.0008,
+        "z": 2.45,
+        "p": 0.012,
+        "nNull": 1000,
+        "marginOverNull": 0.0019
+      },
+      "verdict": "nested-and-modular",
+      "nModulesObserved": 10
+    },
+    {
+      "seed": 2,
+      "fraction": 0.05,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 754,
+        "nEdges": 1701,
+        "privateTexts": 370
+      },
+      "nodf": {
+        "observed": 40.785,
+        "nullMean": 40.689,
+        "nullSd": 0.088,
+        "z": 1.08,
+        "p": 0.1219,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.347,
+        "nModules": 10,
+        "nullMean": 0.3467,
+        "nullSd": 0.0008,
+        "z": 0.37,
+        "p": 0.3536,
+        "nNull": 1000,
+        "marginOverNull": 0.0003
+      },
+      "verdict": "neither-detected",
+      "nModulesObserved": 10
+    },
+    {
+      "seed": 2,
+      "fraction": 0.1,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 826,
+        "nEdges": 1701,
+        "privateTexts": 452
+      },
+      "nodf": {
+        "observed": 35.328,
+        "nullMean": 35.153,
+        "nullSd": 0.106,
+        "z": 1.64,
+        "p": 0.028,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.3866,
+        "nModules": 9,
+        "nullMean": 0.3853,
+        "nullSd": 0.0008,
+        "z": 1.66,
+        "p": 0.048,
+        "nNull": 1000,
+        "marginOverNull": 0.0013
+      },
+      "verdict": "nested-and-modular",
+      "nModulesObserved": 9
+    },
+    {
+      "seed": 2,
+      "fraction": 0.2,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 966,
+        "nEdges": 1701,
+        "privateTexts": 653
+      },
+      "nodf": {
+        "observed": 26.335,
+        "nullMean": 26.179,
+        "nullSd": 0.161,
+        "z": 0.97,
+        "p": 0.1668,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.4594,
+        "nModules": 10,
+        "nullMean": 0.459,
+        "nullSd": 0.0008,
+        "z": 0.4,
+        "p": 0.3556,
+        "nNull": 1000,
+        "marginOverNull": 0.0004
+      },
+      "verdict": "neither-detected",
+      "nModulesObserved": 10
+    },
+    {
+      "seed": 2,
+      "fraction": 0.3,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 1074,
+        "nEdges": 1701,
+        "privateTexts": 774
+      },
+      "nodf": {
+        "observed": 21.237,
+        "nullMean": 20.892,
+        "nullSd": 0.157,
+        "z": 2.2,
+        "p": 0.007,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.5183,
+        "nModules": 11,
+        "nullMean": 0.5175,
+        "nullSd": 0.0008,
+        "z": 1.09,
+        "p": 0.1449,
+        "nNull": 1000,
+        "marginOverNull": 0.0008
+      },
+      "verdict": "nested",
+      "nModulesObserved": 11
+    },
+    {
+      "seed": 3,
+      "fraction": 0.05,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 765,
+        "nEdges": 1701,
+        "privateTexts": 392
+      },
+      "nodf": {
+        "observed": 40.048,
+        "nullMean": 39.898,
+        "nullSd": 0.104,
+        "z": 1.45,
+        "p": 0.049,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.3535,
+        "nModules": 10,
+        "nullMean": 0.3527,
+        "nullSd": 0.0007,
+        "z": 1.15,
+        "p": 0.1259,
+        "nNull": 1000,
+        "marginOverNull": 0.0008
+      },
+      "verdict": "nested",
+      "nModulesObserved": 10
+    },
+    {
+      "seed": 3,
+      "fraction": 0.1,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 824,
+        "nEdges": 1701,
+        "privateTexts": 473
+      },
+      "nodf": {
+        "observed": 35.632,
+        "nullMean": 35.309,
+        "nullSd": 0.134,
+        "z": 2.42,
+        "p": 0.002,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.3852,
+        "nModules": 10,
+        "nullMean": 0.3834,
+        "nullSd": 0.0008,
+        "z": 2.27,
+        "p": 0.016,
+        "nNull": 1000,
+        "marginOverNull": 0.0018
+      },
+      "verdict": "nested-and-modular",
+      "nModulesObserved": 10
+    },
+    {
+      "seed": 3,
+      "fraction": 0.2,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 970,
+        "nEdges": 1701,
+        "privateTexts": 637
+      },
+      "nodf": {
+        "observed": 26.403,
+        "nullMean": 26.141,
+        "nullSd": 0.154,
+        "z": 1.7,
+        "p": 0.023,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.4634,
+        "nModules": 10,
+        "nullMean": 0.4619,
+        "nullSd": 0.0008,
+        "z": 1.83,
+        "p": 0.038,
+        "nNull": 1000,
+        "marginOverNull": 0.0015
+      },
+      "verdict": "nested-and-modular",
+      "nModulesObserved": 10
+    },
+    {
+      "seed": 3,
+      "fraction": 0.3,
+      "matrix": {
+        "nDicts": 11,
+        "nTexts": 1082,
+        "nEdges": 1701,
+        "privateTexts": 787
+      },
+      "nodf": {
+        "observed": 20.591,
+        "nullMean": 20.486,
+        "nullSd": 0.164,
+        "z": 0.64,
+        "p": 0.2697,
+        "nNull": 1000
+      },
+      "modularity": {
+        "observed": 0.5225,
+        "nModules": 11,
+        "nullMean": 0.5216,
+        "nullSd": 0.0008,
+        "z": 1.01,
+        "p": 0.1598,
+        "nNull": 1000,
+        "marginOverNull": 0.0009
+      },
+      "verdict": "neither-detected",
+      "nModulesObserved": 11
+    }
+  ],
+  "sweepSummary": {
+    "runs": 12,
+    "modular": 0,
+    "nested": 2,
+    "nestedAndModular": 6,
+    "neither": 4,
+    "maxMarginOverNull": 0.0026,
+    "maxModularityZ": 3.18,
+    "byFraction": {
+      "0.05": [
+        "neither-detected (Q−null 0.0012, z 1.54, p 0.0639)",
+        "neither-detected (Q−null 0.0003, z 0.37, p 0.3536)",
+        "nested (Q−null 0.0008, z 1.15, p 0.1259)"
+      ],
+      "0.1": [
+        "nested-and-modular (Q−null 0.0015, z 1.93, p 0.024)",
+        "nested-and-modular (Q−null 0.0013, z 1.66, p 0.048)",
+        "nested-and-modular (Q−null 0.0018, z 2.27, p 0.016)"
+      ],
+      "0.2": [
+        "nested-and-modular (Q−null 0.0026, z 3.18, p 0.002)",
+        "neither-detected (Q−null 0.0004, z 0.4, p 0.3556)",
+        "nested-and-modular (Q−null 0.0015, z 1.83, p 0.038)"
+      ],
+      "0.3": [
+        "nested-and-modular (Q−null 0.0019, z 2.45, p 0.012)",
+        "nested (Q−null 0.0008, z 1.09, p 0.1449)",
+        "neither-detected (Q−null 0.0009, z 1.01, p 0.1598)"
+      ]
+    }
+  }
+}

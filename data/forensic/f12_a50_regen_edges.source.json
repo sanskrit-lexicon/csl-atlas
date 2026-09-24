@@ -1,0 +1,27 @@
+{
+  "dataset": "ls_citation_graph",
+  "generated_at": "2026-09-24T02:47:47+00:00",
+  "generated_by": "python data/citations/build_ls_citation_graph.py",
+  "csl_atlas": {
+    "revision": "bbca791169829b8fa7d252d7ff5c7105b721c7f8",
+    "dirty": true,
+    "builder_sha256": "af12dcb917ae6547e5cafeb43ff4fce39fdf45e062c8020684c09b9baf510371"
+  },
+  "csl_orig": {
+    "path": "/Users/mac/Documents/GitHub/csl-orig",
+    "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+    "dirty": false
+  },
+  "csl_guides": {
+    "path": "/Users/mac/Documents/GitHub/csl-guides",
+    "revision": "64c967d1d08d26868bbbc289b4aacec7f4a8f3ff",
+    "dirty": false,
+    "abbreviations_sha256": "dfd9fb68a4e6dd8f355e47656a4cd34c774f9fa7958b1b18fcc6f9a4f1d58a48"
+  },
+  "outputs": {
+    "ls_citation_edges.tsv": "02891158b9a65d62bbef0f88894f57861b649b989bcdc231e4379e3653cfec95",
+    "ls_citation_nodes.tsv": "b5d56c0277eba99029045bb9e0d1149560e71becc9a768e9267ed02a07a79dec",
+    "ls_citation_unresolved_top.tsv": "b55de43a8ccd6197d0090db54b0289ad44531c4fffb4d61604a1accc8b7c8e04",
+    "ls_citation_nontext_filtered.tsv": "f7bfd5f72ca9a3f66b078406ededd3326266d6dbee253504f26483f5de5a5f72"
+  }
+}

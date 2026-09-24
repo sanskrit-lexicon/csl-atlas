@@ -1,6 +1,6 @@
 # `<ls>` cross-dictionary citation graph
 
-_Created: 06-07-2026 · Last updated: 06-07-2026_
+_Created: 06-07-2026 · Last updated: 24-09-2026_
 
 **What this is.** A **citation-frequency graph** over the Cologne dictionaries: which
 classical Sanskrit texts each dictionary quotes (via its `<ls>` source-citation tags) and
@@ -122,6 +122,17 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
 
 ## Change log
 
+- **24-09-2026 (provenance sidecar, H5295, no data change):** the builder now writes
+  `ls_citation_graph.source.json` next to the TSVs on every run (first committed copy lands
+  with the H5407 re-freeze) — sibling `csl-orig`/`csl-guides` `HEAD` revisions, dirty flags, the
+  abbreviations-key SHA-256 and the SHA-256 of each output. The committed TSVs were frozen on
+  06-07-2026 **without** a recorded sibling revision; a rebuild at `csl-orig@f4c08c57` +
+  `csl-guides@64c967d` (24-09-2026) drifts to 826,752 citations / 911 nodes / 1,699 edges
+  (almost all in `ben`: `my Sanskrit Chrestomathy` 3,017 → 1,599, `Gaspare Gorresio` 347 → 16;
+  plus one `ap` citation and a `Weber` → `WEBER` key case). The TSVs are left as committed so the A50 figures stay bound to
+  them by hash; the re-freeze at a recorded revision plus the 37-pair alias extension is
+  [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md).
+  Claim ledger: [`data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md).
 - **06-07-2026 (v2, H213):** MW non-text filter (−63,582 markers); `? [Cologne Addition]`
   placeholder dropped (was a spurious ~39k-cite node); `ap`/`sch`/`pwkvn` added via key-borrow
   (8→11 dicts); curated alias fold (Manusmṛti/Aṣṭādhyāyī/Śatapatha-Brāhmaṇa/… merged);
