@@ -1,0 +1,812 @@
+{
+  "generatedAt": "2026-09-24T18:40:39Z",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "sourceRoot": "csl-orig/v02",
+  "derivedFrom": "csl-orig <dict>/<dict>.txt display text (entry-level marker scan)",
+  "provenance": "csl-atlas scripts/build-etymology-census.py (H5334)",
+  "note": "Entry-level marker census. A type is credited once per entry, at the position of its FIRST marker. Types are not mutually exclusive, so per-type counts may sum above entriesWithEtymology. Complements data/etymology-oracle.json (root attribution on the extracted subset) and the frozen n=5 witness CSV.",
+  "types": [
+    "root-reference",
+    "cognate",
+    "vyutpatti",
+    "affix",
+    "nirukta-citation"
+  ],
+  "positionBuckets": {
+    "initial": "first marker in the first 15% of the article body (or first 120 chars)",
+    "medial": "between",
+    "final": "first marker in the last 15% of the article body"
+  },
+  "dictionaryCount": 9,
+  "dicts": [
+    {
+      "code": "WIL",
+      "dir": "wil",
+      "year": 1832,
+      "family": "european",
+      "title": "Wilson, A Dictionary Sanscrit and English (2nd ed.)",
+      "entries": 44577,
+      "entriesWithEtymology": 16321,
+      "etymologyRate": 0.36613,
+      "byType": {
+        "affix": {
+          "entries": 16321,
+          "rate": 0.36613,
+          "positions": {
+            "initial": 7284,
+            "medial": 1911,
+            "final": 7126
+          }
+        }
+      },
+      "markers": [
+        {
+          "label": "aff.",
+          "type": "affix",
+          "entries": 14804
+        },
+        {
+          "label": "neg./priv.",
+          "type": "affix",
+          "entries": 1620
+        },
+        {
+          "label": "caus./desid.",
+          "type": "affix",
+          "entries": 27
+        }
+      ]
+    },
+    {
+      "code": "PWG",
+      "dir": "pwg",
+      "year": 1875,
+      "family": "european",
+      "title": "Böhtlingk–Roth, Sanskrit-Wörterbuch (Großes PW)",
+      "entries": 123366,
+      "entriesWithEtymology": 24103,
+      "etymologyRate": 0.19538,
+      "byType": {
+        "root-reference": {
+          "entries": 22563,
+          "rate": 0.18289,
+          "positions": {
+            "initial": 21250,
+            "medial": 892,
+            "final": 421
+          }
+        },
+        "cognate": {
+          "entries": 11,
+          "rate": 9e-05,
+          "positions": {
+            "initial": 2,
+            "medial": 4,
+            "final": 5
+          }
+        },
+        "nirukta-citation": {
+          "entries": 2542,
+          "rate": 0.02061,
+          "positions": {
+            "initial": 1345,
+            "medial": 972,
+            "final": 225
+          }
+        }
+      },
+      "markers": [
+        {
+          "label": "von {#…#}",
+          "type": "root-reference",
+          "entries": 22255
+        },
+        {
+          "label": "Wurzel",
+          "type": "root-reference",
+          "entries": 428
+        },
+        {
+          "label": "vgl.",
+          "type": "cognate",
+          "entries": 11
+        },
+        {
+          "label": "Nir.",
+          "type": "nirukta-citation",
+          "entries": 2542
+        }
+      ]
+    },
+    {
+      "code": "MW72",
+      "dir": "mw72",
+      "year": 1872,
+      "family": "european",
+      "title": "Monier-Williams, Sanskrit-English Dictionary (1872)",
+      "entries": 55390,
+      "entriesWithEtymology": 10040,
+      "etymologyRate": 0.18126,
+      "byType": {
+        "root-reference": {
+          "entries": 9134,
+          "rate": 0.1649,
+          "positions": {
+            "initial": 8782,
+            "medial": 271,
+            "final": 81
+          }
+        },
+        "cognate": {
+          "entries": 1703,
+          "rate": 0.03075,
+          "positions": {
+            "initial": 539,
+            "medial": 961,
+            "final": 203
+          }
+        }
+      },
+      "markers": [
+        {
+          "label": "rt.",
+          "type": "root-reference",
+          "entries": 5035
+        },
+        {
+          "label": "fr.",
+          "type": "root-reference",
+          "entries": 6945
+        },
+        {
+          "label": "<nsi>",
+          "type": "cognate",
+          "entries": 1383
+        },
+        {
+          "label": "<lang>",
+          "type": "cognate",
+          "entries": 1012
+        }
+      ]
+    },
+    {
+      "code": "MW",
+      "dir": "mw",
+      "year": 1899,
+      "family": "european",
+      "title": "Monier-Williams, Sanskrit-English Dictionary (1899)",
+      "entries": 286525,
+      "entriesWithEtymology": 16888,
+      "etymologyRate": 0.05894,
+      "byType": {
+        "root-reference": {
+          "entries": 14168,
+          "rate": 0.04945,
+          "positions": {
+            "initial": 13616,
+            "medial": 506,
+            "final": 46
+          }
+        },
+        "cognate": {
+          "entries": 2104,
+          "rate": 0.00734,
+          "positions": {
+            "initial": 1803,
+            "medial": 278,
+            "final": 23
+          }
+        },
+        "nirukta-citation": {
+          "entries": 1182,
+          "rate": 0.00413,
+          "positions": {
+            "initial": 961,
+            "medial": 195,
+            "final": 26
+          }
+        }
+      },
+      "markers": [
+        {
+          "label": "√",
+          "type": "root-reference",
+          "entries": 8036
+        },
+        {
+          "label": "fr.",
+          "type": "root-reference",
+          "entries": 7290
+        },
+        {
+          "label": "rt.",
+          "type": "root-reference",
+          "entries": 1
+        },
+        {
+          "label": "<lang>",
+          "type": "cognate",
+          "entries": 2095
+        },
+        {
+          "label": "<etym>",
+          "type": "cognate",
+          "entries": 805
+        },
+        {
+          "label": "Nir.",
+          "type": "nirukta-citation",
+          "entries": 1182
+        }
+      ]
+    },
+    {
+      "code": "PWK",
+      "dir": "pw",
+      "year": 1889,
+      "family": "european",
+      "title": "Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung",
+      "entries": 170556,
+      "entriesWithEtymology": 3844,
+      "etymologyRate": 0.02254,
+      "byType": {
+        "root-reference": {
+          "entries": 3841,
+          "rate": 0.02252,
+          "positions": {
+            "initial": 3501,
+            "medial": 239,
+            "final": 101
+          }
+        },
+        "cognate": {
+          "entries": 3,
+          "rate": 2e-05,
+          "positions": {
+            "initial": 3,
+            "medial": 0,
+            "final": 0
+          }
+        }
+      },
+      "markers": [
+        {
+          "label": "von {#…#}",
+          "type": "root-reference",
+          "entries": 3563
+        },
+        {
+          "label": "Wurzel",
+          "type": "root-reference",
+          "entries": 287
+        },
+        {
+          "label": "vgl.",
+          "type": "cognate",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "code": "AP90",
+      "dir": "ap90",
+      "year": 1890,
+      "family": "european",
+      "title": "Apte, The Practical Sanskrit-English Dictionary (1890)",
+      "entries": 34882,
+      "entriesWithEtymology": 6309,
+      "etymologyRate": 0.18087,
+      "byType": {
+        "cognate": {
+          "entries": 0,
+          "rate": 0.0,
+          "positions": {
+            "initial": 0,
+            "medial": 0,
+            "final": 0
+          }
+        },
+        "vyutpatti": {
+          "entries": 6148,
+          "rate": 0.17625,
+          "positions": {
+            "initial": 6092,
+            "medial": 46,
+            "final": 10
+          }
+        },
+        "affix": {
+          "entries": 173,
+          "rate": 0.00496,
+          "positions": {
+            "initial": 124,
+            "medial": 41,
+            "final": 8
+          }
+        }
+      },
+      "markers": [
+        {
+          "label": "[{#…#}] bracket",
+          "type": "vyutpatti",
+          "entries": 6148
+        },
+        {
+          "label": "<lang>",
+          "type": "cognate",
+          "entries": 0
+        },
+        {
+          "label": "caus./desid./pass.",
+          "type": "affix",
+          "entries": 173
+        }
+      ]
+    },
+    {
+      "code": "AP",
+      "dir": "ap",
+      "year": 1957,
+      "family": "european",
+      "title": "Apte, Practical Sanskrit-English Dictionary (revised)",
+      "entries": 90847,
+      "entriesWithEtymology": 8160,
+      "etymologyRate": 0.08982,
+      "byType": {
+        "cognate": {
+          "entries": 1346,
+          "rate": 0.01482,
+          "positions": {
+            "initial": 1084,
+            "medial": 218,
+            "final": 44
+          }
+        },
+        "vyutpatti": {
+          "entries": 6834,
+          "rate": 0.07523,
+          "positions": {
+            "initial": 6798,
+            "medial": 33,
+            "final": 3
+          }
+        },
+        "affix": {
+          "entries": 174,
+          "rate": 0.00192,
+          "positions": {
+            "initial": 124,
+            "medial": 38,
+            "final": 12
+          }
+        }
+      },
+      "markers": [
+        {
+          "label": "[{#…#}] bracket",
+          "type": "vyutpatti",
+          "entries": 6834
+        },
+        {
+          "label": "<lang>",
+          "type": "cognate",
+          "entries": 1346
+        },
+        {
+          "label": "caus./desid./pass.",
+          "type": "affix",
+          "entries": 174
+        }
+      ]
+    },
+    {
+      "code": "SKD",
+      "dir": "skd",
+      "year": 1886,
+      "family": "indigenous",
+      "title": "Rādhākāntadeva, Śabdakalpadruma",
+      "entries": 42531,
+      "entriesWithEtymology": 2726,
+      "etymologyRate": 0.06409,
+      "byType": {
+        "root-reference": {
+          "entries": 347,
+          "rate": 0.00816,
+          "positions": {
+            "initial": 146,
+            "medial": 165,
+            "final": 36
+          }
+        },
+        "vyutpatti": {
+          "entries": 2423,
+          "rate": 0.05697,
+          "positions": {
+            "initial": 2046,
+            "medial": 322,
+            "final": 55
+          }
+        }
+      },
+      "markers": [
+        {
+          "label": "kāraka + kṛt",
+          "type": "vyutpatti",
+          "entries": 2345
+        },
+        {
+          "label": "dhātu",
+          "type": "root-reference",
+          "entries": 347
+        },
+        {
+          "label": "vyutpatti citation",
+          "type": "vyutpatti",
+          "entries": 89
+        }
+      ]
+    },
+    {
+      "code": "VCP",
+      "dir": "vcp",
+      "year": 1873,
+      "family": "indigenous",
+      "title": "Tārānātha, Vācaspatyam",
+      "entries": 50135,
+      "entriesWithEtymology": 4666,
+      "etymologyRate": 0.09307,
+      "byType": {
+        "root-reference": {
+          "entries": 326,
+          "rate": 0.0065,
+          "positions": {
+            "initial": 173,
+            "medial": 120,
+            "final": 33
+          }
+        },
+        "vyutpatti": {
+          "entries": 4420,
+          "rate": 0.08816,
+          "positions": {
+            "initial": 3713,
+            "medial": 560,
+            "final": 147
+          }
+        }
+      },
+      "markers": [
+        {
+          "label": "kāraka + kṛt",
+          "type": "vyutpatti",
+          "entries": 4352
+        },
+        {
+          "label": "dhātu",
+          "type": "root-reference",
+          "entries": 326
+        },
+        {
+          "label": "vyutpatti citation",
+          "type": "vyutpatti",
+          "entries": 89
+        }
+      ]
+    }
+  ],
+  "sharedLemmas": {
+    "dicts": [
+      "MW",
+      "PWG",
+      "SKD",
+      "VCP"
+    ],
+    "european": [
+      "MW",
+      "PWG"
+    ],
+    "indigenous": [
+      "SKD",
+      "VCP"
+    ],
+    "lemmaCount": 4134,
+    "withEtymology": {
+      "MW": 616,
+      "PWG": 950,
+      "SKD": 192,
+      "VCP": 402
+    },
+    "sides": {
+      "both": 268,
+      "europeanOnly": 941,
+      "indigenousOnly": 235,
+      "neither": 2690
+    },
+    "typePairs": [
+      {
+        "european": "none",
+        "indigenous": "none",
+        "lemmas": 2690
+      },
+      {
+        "european": "root-reference",
+        "indigenous": "none",
+        "lemmas": 654
+      },
+      {
+        "european": "none",
+        "indigenous": "vyutpatti",
+        "lemmas": 198
+      },
+      {
+        "european": "root-reference",
+        "indigenous": "vyutpatti",
+        "lemmas": 145
+      },
+      {
+        "european": "cognate+root-reference",
+        "indigenous": "none",
+        "lemmas": 76
+      },
+      {
+        "european": "nirukta-citation+root-reference",
+        "indigenous": "none",
+        "lemmas": 65
+      },
+      {
+        "european": "cognate+nirukta-citation+root-reference",
+        "indigenous": "none",
+        "lemmas": 50
+      },
+      {
+        "european": "nirukta-citation",
+        "indigenous": "none",
+        "lemmas": 45
+      },
+      {
+        "european": "cognate",
+        "indigenous": "none",
+        "lemmas": 36
+      },
+      {
+        "european": "none",
+        "indigenous": "root-reference",
+        "lemmas": 27
+      },
+      {
+        "european": "cognate+nirukta-citation+root-reference",
+        "indigenous": "vyutpatti",
+        "lemmas": 19
+      },
+      {
+        "european": "nirukta-citation+root-reference",
+        "indigenous": "vyutpatti",
+        "lemmas": 18
+      },
+      {
+        "european": "cognate+root-reference",
+        "indigenous": "vyutpatti",
+        "lemmas": 17
+      },
+      {
+        "european": "cognate+nirukta-citation",
+        "indigenous": "none",
+        "lemmas": 15
+      },
+      {
+        "european": "nirukta-citation",
+        "indigenous": "vyutpatti",
+        "lemmas": 14
+      },
+      {
+        "european": "root-reference",
+        "indigenous": "root-reference",
+        "lemmas": 13
+      },
+      {
+        "european": "cognate",
+        "indigenous": "vyutpatti",
+        "lemmas": 11
+      },
+      {
+        "european": "none",
+        "indigenous": "root-reference+vyutpatti",
+        "lemmas": 10
+      },
+      {
+        "european": "root-reference",
+        "indigenous": "root-reference+vyutpatti",
+        "lemmas": 10
+      },
+      {
+        "european": "cognate+nirukta-citation",
+        "indigenous": "vyutpatti",
+        "lemmas": 5
+      },
+      {
+        "european": "cognate+nirukta-citation+root-reference",
+        "indigenous": "root-reference",
+        "lemmas": 4
+      },
+      {
+        "european": "cognate+root-reference",
+        "indigenous": "root-reference",
+        "lemmas": 3
+      },
+      {
+        "european": "cognate",
+        "indigenous": "root-reference+vyutpatti",
+        "lemmas": 2
+      },
+      {
+        "european": "nirukta-citation",
+        "indigenous": "root-reference+vyutpatti",
+        "lemmas": 2
+      },
+      {
+        "european": "nirukta-citation+root-reference",
+        "indigenous": "root-reference",
+        "lemmas": 2
+      }
+    ],
+    "sample": [
+      {
+        "lemma": "aBiDA",
+        "MW": [
+          "cognate"
+        ],
+        "PWG": [
+          "root-reference"
+        ],
+        "SKD": [
+          "vyutpatti"
+        ],
+        "VCP": [
+          "vyutpatti"
+        ]
+      },
+      {
+        "lemma": "ava",
+        "MW": [
+          "cognate"
+        ],
+        "PWG": [
+          "nirukta-citation",
+          "root-reference"
+        ],
+        "SKD": [
+          "vyutpatti"
+        ],
+        "VCP": [
+          "vyutpatti"
+        ]
+      },
+      {
+        "lemma": "kleSa",
+        "MW": [
+          "root-reference"
+        ],
+        "PWG": [
+          "root-reference"
+        ],
+        "SKD": [
+          "root-reference"
+        ],
+        "VCP": [
+          "vyutpatti"
+        ]
+      },
+      {
+        "lemma": "krama",
+        "MW": [
+          "root-reference"
+        ],
+        "PWG": [
+          "root-reference"
+        ],
+        "SKD": [
+          "root-reference"
+        ],
+        "VCP": [
+          "root-reference",
+          "vyutpatti"
+        ]
+      },
+      {
+        "lemma": "mfd",
+        "MW": [
+          "cognate",
+          "root-reference"
+        ],
+        "PWG": [
+          "root-reference"
+        ],
+        "SKD": [
+          "vyutpatti"
+        ],
+        "VCP": [
+          "vyutpatti"
+        ]
+      },
+      {
+        "lemma": "nAqI",
+        "MW": [
+          "root-reference"
+        ],
+        "PWG": [
+          "root-reference"
+        ],
+        "SKD": [
+          "root-reference"
+        ],
+        "VCP": [
+          "root-reference"
+        ]
+      },
+      {
+        "lemma": "paca",
+        "MW": [
+          "root-reference"
+        ],
+        "PWG": [
+          "root-reference"
+        ],
+        "SKD": [
+          "vyutpatti"
+        ],
+        "VCP": [
+          "vyutpatti"
+        ]
+      },
+      {
+        "lemma": "prekzA",
+        "MW": [
+          "nirukta-citation"
+        ],
+        "PWG": [
+          "nirukta-citation",
+          "root-reference"
+        ],
+        "SKD": [
+          "vyutpatti"
+        ],
+        "VCP": [
+          "vyutpatti"
+        ]
+      },
+      {
+        "lemma": "psA",
+        "MW": [
+          "root-reference"
+        ],
+        "PWG": [
+          "nirukta-citation",
+          "root-reference"
+        ],
+        "SKD": [
+          "vyutpatti"
+        ],
+        "VCP": [
+          "vyutpatti"
+        ]
+      },
+      {
+        "lemma": "trAyantI",
+        "MW": [
+          "root-reference"
+        ],
+        "PWG": [
+          "root-reference"
+        ],
+        "SKD": [
+          "root-reference"
+        ],
+        "VCP": [
+          "vyutpatti"
+        ]
+      }
+    ]
+  }
+}
