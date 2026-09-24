@@ -1,4 +1,4 @@
-_Created: 13-06-2026 · Last updated: 05-09-2026_
+_Created: 13-06-2026 · Last updated: 25-09-2026_
 
 ---
 title: Learner's reading layer
@@ -54,6 +54,19 @@ function findPrefix(prefix, limit = 60) {
   }
   return out;
 }
+const L = (en, ru) => currentLanguage === "ru" ? ru : en;
+const tierByCode = Object.fromEntries((idx.tierLegend ?? []).map(t => [t.tier, t]));
+const senseText = s => s.t ?? L(`sense ${s.pos + 1} of the ancestor article`, `смысл ${s.pos + 1} статьи-источника`);
+const vdcsStableId = p => p.k === "nominal" ? `vdcs:v1:nominal:${p.id}` : `vdcs:v1:verb:${p.id}`;
+function absences(e) {
+  const out = [];
+  if (e.fb === 0) out.push([idx.absenceCodes.frequency, idx.absenceNotes.frequency]);
+  if (!e.p) out.push([idx.absenceCodes.paradigm, idx.absenceNotes.paradigm]);
+  if (!e.w) out.push([idx.absenceCodes.root, idx.absenceNotes.root]);
+  if (!e.s) out.push([idx.absenceCodes.senses, idx.absenceNotes.senses]);
+  if (!e.hm) out.push([idx.absenceCodes.homonyms, idx.absenceNotes.homonyms]);
+  return out;
+}
 ```
 
 ```js
@@ -64,6 +77,21 @@ display(html`<div class="learner-metrics">
     [t("learner.metric.grammar-reliable"), idx.grammarReliableCodes.length],
     [t("learner.metric.min-coverage"), `${idx.minDicts}/7`]
   ].map(([label, value]) => html`<div class="learner-metric"><strong>${value}</strong><span>${label}</span></div>`)}
+</div>`);
+```
+
+```js
+display(html`<div class="learner-tiers">
+  <h3>${L("Card completeness", "Полнота карточки")}</h3>
+  <div class="learner-tier-row">
+    ${(idx.tierLegend ?? []).map(t => html`<span class="learner-tier-chip tier-${t.tier}" title=${t.note}>
+      <strong>${t.tier}</strong> ${currentLanguage === "ru" ? t.ru : t.en}
+      <small>· ${(idx.counts.tiers?.[t.tier] ?? 0).toLocaleString()}</small>
+    </span>`)}
+  </div>
+  <p class="learner-tier-note">${L(
+    "Every missing layer is named with a reason code — an empty slot is a statement about the evidence, never a silent gap.",
+    "Каждый отсутствующий слой назван кодом причины — пустой слот говорит о состоянии источников, а не молчит.")}</p>
 </div>`);
 ```
 
@@ -140,7 +168,10 @@ display(html`<div class="learner-cards">
   ${shown.map(e => html`<section class="learner-card">
     <div class="learner-card-head">
       <h2>${slp1ToIast(e.l)}${e.g ? html` <small class="learner-gender">${e.g}</small>` : ""} <code style="font-size:.6em;color:var(--theme-foreground-muted);font-weight:400">${e.l}</code></h2>
-      <span class="learner-band-chip band-${e.fb}">${e.fb >= 1 ? html`${bandLabel(e.fb)} · ${bandPriority(e.fb)}` : t("learner.not-in-corpus")}</span>
+      <span>
+        ${tierByCode[e.tier] ? html`<span class="learner-tier-chip tier-${e.tier}" title=${tierByCode[e.tier].note}><strong>${e.tier}</strong> ${currentLanguage === "ru" ? tierByCode[e.tier].ru : tierByCode[e.tier].en}</span>` : ""}
+        <span class="learner-band-chip band-${e.fb}">${e.fb >= 1 ? html`${bandLabel(e.fb)} · ${bandPriority(e.fb)}` : t("learner.not-in-corpus")}</span>
+      </span>
     </div>
     <div class="learner-card-body">
       <div class="learner-coverage">
@@ -149,6 +180,35 @@ display(html`<div class="learner-cards">
           ${e.d.map(code => html`<span class="learner-dict-chip ${grSet.has(code) ? "gr" : ""}">${code}</span>`)}
         </div>
       </div>
+      ${e.hm ? html`<div class="learner-homonym">⚠️ ${L("homonyms", "омонимия")}: ≤ ${e.hm.mx} ${L("in some dictionaries", "в части словарей")} — ${L("advisory and incomplete (400 of 9,839 candidates shipped); check the source links before trusting one merged card", "предупреждение неполно по построению (400 из 9 839 кандидатов); сверяйтесь с источником, прежде чем читать карточку как одно слово")}</div>` : ""}
+      ${e.s ? html`<details class="learner-evidence" open=${e.tier === "A"}>
+        <summary>${L("Survival-ranked senses", "Смыслы по выживаемости")} (${e.s.length}) · ${L("threshold", "порог")} ≥ ${idx.survivalThreshold}</summary>
+        <ol class="learner-senses">
+          ${e.s.slice(0, 5).map(s => html`<li>
+            <span class="learner-sv ${s.sv ? "yes" : "no"}">${s.sv ? "✓" : "✗"}</span>
+            ${senseText(s)}
+            <small>· ${L("overlap", "пересечение")} ${s.ov} · ${s.e}${s.ci ? ` · ${L("cited", "с цитатой")}` : ""}</small>
+          </li>`)}
+        </ol>
+        <p class="learner-caveat">${idx.survivalCaveat}</p>
+      </details>` : ""}
+      ${e.p || e.w ? html`<details class="learner-evidence">
+        <summary>${L("Grammar evidence", "Грамматика")}</summary>
+        <dl class="learner-grammar">
+          ${e.p ? html`<div><dt>${L("Paradigm", "Парадигма")}</dt><dd>
+            <code>${vdcsStableId(e.p)}</code> · ${e.p.cells} ${L("attested cells", "аттестованных форм")}
+            ${e.p.alt ? html`<small> · ${L("alternatives disclosed", "показаны альтернативы")}: ${e.p.alt.map(a => html`<code>${vdcsStableId(a)}</code>`)} (${L("resolved by corpus tokens; an ID change here is visible, not silent", "выбран по корпусной частоте; смена ID здесь видима, а не тиха")})</small>` : ""}
+          </dd></div>` : ""}
+          ${e.w ? html`<div><dt>${L("Whitney root(s)", "Корни Уитни")}</dt><dd>
+            ${e.w.map(r => html`<span class="learner-root"><code>${r.iast}</code> #${r.no}${r.gana ? html` · ${L("gaṇa", "гана")} ${r.gana}${r.clsUnc ? ` (${L("class uncertain", "класс не вполне надёжен")})` : ""}` : html` · ${L("gaṇa not recorded — never inferred", "гана не записана — не домысливается")}`}${e.w.length > 1 ? html` <small>(${L("homonym", "омоним")} ${r.hom})</small>` : ""}</span>`)}
+            ${e.w.length > 1 ? html`<small>${L("All matching roots are shown — none is picked for you.", "Показаны все подходящие корни — выбор за вами.")}</small>` : ""}
+          </dd></div>` : ""}
+        </dl>
+      </details>` : ""}
+      ${absences(e).length ? html`<details class="learner-absences">
+        <summary>${L("What this card does not have — and why", "Чего в карточке нет — и почему")} (${absences(e).length})</summary>
+        <ul>${absences(e).map(([code, note]) => html`<li><code>${code}</code> — ${note}</li>`)}</ul>
+      </details>` : ""}
       ${e.src ? html`<a class="learner-source" href=${sourceHref(e.src)} target="_blank" rel="noopener">${t("learner.open-source")} ${e.src[0].toUpperCase()}</a>` : ""}
     </div>
   </section>`)}
@@ -195,11 +255,34 @@ display(html`<div class="learner-cards">
 .learner-dict-chip { font-size: .72rem; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--theme-foreground-faint); color: var(--theme-foreground-muted); }
 .learner-dict-chip.gr { color: var(--theme-foreground); border-color: color-mix(in srgb, #2ca02c, transparent 40%); }
 .learner-source { font-size: .82rem; text-decoration: none; }
-@media (max-width: 640px) { .trust-block div { grid-template-columns: 1fr; gap: 2px; } }
+.learner-tiers { margin: 8px 0 16px; }
+.learner-tiers h3 { font-size: 1rem; margin: 0 0 8px; }
+.learner-tier-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.learner-tier-chip { display: inline-flex; align-items: baseline; gap: 4px; font-size: .76rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--theme-foreground-faint); border-left-width: 5px; }
+.learner-tier-chip small { color: var(--theme-foreground-muted); }
+.tier-A { border-left-color: #2ca02c; }
+.tier-B { border-left-color: #66bd63; }
+.tier-C { border-left-color: #d9b300; }
+.tier-D { border-left-color: var(--theme-foreground-faint); }
+.learner-tier-note { font-size: .8rem; color: var(--theme-foreground-muted); margin: 6px 0 0; }
+.learner-evidence, .learner-absences { font-size: .88rem; border: 1px dashed var(--theme-foreground-faint); border-radius: 6px; padding: 6px 10px; }
+.learner-evidence summary, .learner-absences summary { cursor: pointer; color: var(--theme-foreground-muted); }
+.learner-senses { margin: 8px 0 4px; padding-left: 1.2rem; display: grid; gap: 4px; }
+.learner-sv { font-weight: 700; }
+.learner-sv.yes { color: #2ca02c; }
+.learner-sv.no { color: #d9544d; }
+.learner-caveat { font-size: .76rem; color: var(--theme-foreground-muted); margin: 6px 0 2px; }
+.learner-grammar { display: grid; gap: 6px; margin: 8px 0 2px; }
+.learner-grammar div { display: grid; grid-template-columns: minmax(90px, 0.3fr) 1fr; gap: 8px; }
+.learner-grammar dt { font-weight: 700; }
+.learner-grammar dd { margin: 0; overflow-wrap: anywhere; }
+.learner-root { display: inline-block; margin-right: 10px; }
+.learner-homonym { font-size: .8rem; border: 1px solid color-mix(in srgb, #d9b300, transparent 40%); border-radius: 6px; padding: 4px 8px; background: color-mix(in srgb, #d9b300, transparent 92%); }
+@media (max-width: 640px) { .trust-block div { grid-template-columns: 1fr; gap: 2px; } .learner-grammar div { grid-template-columns: 1fr; gap: 2px; } }
 </style>
 
 ---
 
-Generated by `npm run build-learner-index`. Joins `lemma-lookup.json` (dictionary coverage) with the DCS corpus frequency band (`data/dcs/dcs_lemma_summary.json`). CC-BY-SA-4.0.
+Generated by `npm run build-learner-index` (v1). Joins `lemma-lookup.json` (dictionary coverage) with the DCS corpus frequency band, the P2 survival-ranked senses (28-lemma panel, threshold ≥ 0.15), WhitneyRoots roots + gaṇa, and the VisualDCS learner-contracts-v1 paradigm links pinned at `vdcs-learner-v1-20260809`. Every missing layer carries a reason code; survival is per-sense only — the within-edge effect is not significant and no population claim is made. CC-BY-SA-4.0.
 
 _Dr. Mārcis Gasūns_
