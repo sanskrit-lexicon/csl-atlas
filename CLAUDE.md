@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-_Created: 03-07-2026 · Last updated: 08-09-2026_
+_Created: 03-07-2026 · Last updated: 15-09-2026_
 
 `csl-atlas` is the public **dictionary-evidence** microsite for the Cologne
 Digital Sanskrit Dictionaries — a static Observable Framework site for
@@ -90,5 +90,9 @@ Danger facts:
 [Uprava DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md)
 (org-private) and the generated block of
 [AGENTS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/AGENTS.md).
+
+## Memory store
+
+This repo keeps a committed memory store at [`.claude/projects/csl-atlas/memory/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/.claude/projects/csl-atlas/memory) per the org Memory-routing rule ([`/danger-memory`](https://github.com/gasyoun/claude-config/blob/main/commands/danger-memory.md)) — write dangerous/durable facts there and index each in its `MEMORY.md` (H4547).
 
 _Dr. Mārcis Gasūns_
