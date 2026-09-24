@@ -31,6 +31,16 @@ def read_json(relative: str | Path):
     return json.loads((ROOT / relative).read_text(encoding="utf-8"))
 
 
+def h4_expected_rows(h4):
+    """Mirrors build-review-sheets.py's h4_items() fallback (H5308/B1): open
+    rows if any, else the agent-adjudicated `reviewed-ok` set. H1621 flipped
+    all 105 rows to reviewed-ok/auto-resolved, so before this fallback the
+    validator's expected set was always empty and every H4 export — pool or
+    otherwise — failed on `decided must equal the full sheet count`."""
+    open_rows = [r for r in h4["sampleRows"] if r["reviewStatus"] == "needs-review"]
+    return open_rows or [r for r in h4["sampleRows"] if r["reviewStatus"] == "reviewed-ok"]
+
+
 def expected_sheets():
     skd = read_json("data/lexico/r2_kosa_fusion_sample.json")
     h4 = read_json("data/lexico/h4_semantic_field_review_packet.json")
@@ -50,7 +60,7 @@ def expected_sheets():
         },
         "csl-atlas-h4-semantic-field_89rows": {
             row["reviewId"]: (row["proposedLabel"], set(row["expectedDecisionLabels"]))
-            for row in h4["sampleRows"] if row["reviewStatus"] == "needs-review"
+            for row in h4_expected_rows(h4)
         },
         "csl-atlas-xref-shared-core_40edges": {
             row["sampleId"]: (
