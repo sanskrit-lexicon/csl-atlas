@@ -1,0 +1,29 @@
+dict,word_class,verdict,measure,value,counted,exceptions
+MW,nominal_stems,stem (uninflected keys),inflected_share,0.000389,51359,20
+MW,verbs,root form (the bare dhātu is the headword),root_exact_share,0.940211,853,9
+MW,compounds,nested — most compounds are run-ons inside another entry,nested_share,0.916714,148332,12354
+MW,derivatives,nested — most derivatives are run-ons inside another entry,nested_share,0.957415,27075,1153
+PWG,nominal_stems,stem (uninflected keys),inflected_share,0.000178,123357,22
+PWG,verbs,root form (the bare dhātu is the headword),root_exact_share,0.901524,853,15
+PWG,compounds,"own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,51312,0
+PWG,derivatives,"own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,8449,0
+PW (PWK),nominal_stems,stem (uninflected keys),inflected_share,8.2e-05,158370,13
+PW (PWK),verbs,root form (the bare dhātu is the headword),root_exact_share,0.908558,853,13
+PW (PWK),compounds,"own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,69756,0
+PW (PWK),derivatives,"own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,9357,0
+AP,nominal_stems,citation form (inflected nominative keys),inflected_share,0.283165,45002,32259
+AP,verbs,root form (the bare dhātu is the headword),root_exact_share,0.834701,853,55
+AP,compounds,nested — most compounds are run-ons inside another entry,nested_share,0.549086,23805,10734
+AP,derivatives,own head — derivatives get their own entry,nested_share,0.039206,2066,81
+WIL,nominal_stems,stem (uninflected keys),inflected_share,0.000247,44577,11
+WIL,verbs,marginal root layer — most roots are reached only through derivatives,root_exact_share,0.186401,853,82
+WIL,compounds,"own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,13663,0
+WIL,derivatives,"own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,2390,0
+SKD,nominal_stems,citation form (inflected nominative keys),inflected_share,0.672078,42196,13837
+SKD,verbs,marginal root layer — most roots are reached only through derivatives,root_exact_share,0.148886,853,89
+SKD,compounds,"own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,6696,0
+SKD,derivatives,"own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,41,0
+VCP,nominal_stems,stem (uninflected keys),inflected_share,0.001468,48370,71
+VCP,verbs,marginal root layer — most roots are reached only through derivatives,root_exact_share,0.179367,853,73
+VCP,compounds,"own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,14211,0
+VCP,derivatives,"own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",nested_share,0.0,1525,0
