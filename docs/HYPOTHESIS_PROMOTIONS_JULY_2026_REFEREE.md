@@ -111,7 +111,7 @@ delivers 5) is a point in the packet's favour.
 Artifact [`src/data/ghost-stock/ghost_stock.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/ghost-stock/ghost_stock.json)
 (generated 25-07-2026). Row vs artifact: monotone attestation strata 4.7% (n=1) →
 0.0474 ✓, 11.8% → 0.1181 ✓, 35.2% (n=4) → 0.3523 ✓, 74.8% (n=7) → 0.7479 ✓, 100% at
-13+ ✓ (Wilson CIs present per stratum ✓); n=323,417 union lemmas, 19.0% attested →
+13+ ✓ (Wilson CIs present per stratum ✓); n=323,422 union lemmas, 19.0% attested →
 0.1897 ✓; logistic n_dicts coefficient +0.626 (SE 0.005, OR e^0.626≈1.87) ✓, McFadden
 R² 0.27 → 0.2657 ✓; reversal sub-finding MW 10.5% → 0.1052 (4,644/44,156 exact) ✓,
 MD 10.3% → 0.1028 ✓, BHS 4.4% → 0.0435 vs unique-stratum mean 4.7% ✓. The DCS
@@ -133,7 +133,7 @@ words ✓.
 
 Artifact [`data/lexico/heap_sat.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/heap_sat.json)
 (generated 25-07-2026). Row vs artifact: β=0.538 → 0.53821, log–log R²=0.989 →
-0.98874, 15 steps ✓; 323,417 distinct from 806,120 listings, PWG 1855 → AP 1957 ✓;
+0.98874, 15 steps ✓; 323,422 distinct from 806,120 listings, PWG 1855 → AP 1957 ✓;
 SKD break +170% → relativeResidual 1.7043, 78.9% novel → 0.7888 ✓; BHS +178% → 1.7775,
 59.0% → 0.5898 ✓; trio mean residual +0.50 → 0.4978 ✓; order-permutation p=0.070 →
 0.07019 (5,000 seeded) ✓; exhaustive label-permutation p=0.165 → 0.16484 ✓; VEI −44% →
