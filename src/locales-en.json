@@ -364,5 +364,27 @@
       "trust-next-use-label": "Next use",
       "trust-next-use": "Use broad mode to find which dictionaries record a headword, then use core comparison pages for deeper claims."
     }
+  },
+  "access-structure": {
+    "title": "Access structures — printed sort order",
+    "view-all": "all records",
+    "view-print": "printed entries",
+    "view-main": "main entries",
+    "view-heads": "heads (AP nests removed)",
+    "view-heads_nest": "heads, vowel-grade nests collapsed",
+    "factor-anusvara": "anusvāra ṃ",
+    "factor-visarga_internal": "internal visarga ḥ",
+    "factor-visarga_final": "final visarga ḥ",
+    "factor-gemination_after_r": "geminate after r",
+    "status-clear": "clear",
+    "status-partial": "partial",
+    "status-weak": "weak",
+    "status-undetermined": "undetermined",
+    "status-contested": "contested",
+    "kind-isolated": "isolated",
+    "kind-block": "displaced block",
+    "axis-rate": "Violation rate",
+    "axis-displaced": "Displaced headwords",
+    "axis-runs": "Alphabet runs"
   }
 }
