@@ -165,6 +165,15 @@ class BuildReportTests(unittest.TestCase):
         with self.assertRaises(KAPPA.KappaInputError):
             KAPPA.load_decisions(path)
 
+    def test_zero_paired_opinions_render_is_not_none_pct(self):
+        # Verifier finding: with no paired opinions the markdown must not read "None%".
+        load_e = KAPPA.load_decisions(self._dump("e.json", decisions_payload("sht", {"only_a": "approve"})))
+        load_f = KAPPA.load_decisions(self._dump("f.json", decisions_payload("sht", {"only_b": "reject"})))
+        report = KAPPA.build_report(load_e, load_f)
+        md = KAPPA.render_markdown(report)
+        self.assertIn("not computable", md)
+        self.assertNotIn("None%", md)
+
     def test_missing_file_is_rejected(self):
         with self.assertRaises(KAPPA.KappaInputError):
             KAPPA.load_decisions("/nonexistent/decisions.json")

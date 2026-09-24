@@ -226,8 +226,10 @@ def render_markdown(report):
       f"({len(pk['onlyInA'])} only in {report['labelA']}, {len(pk['onlyInB'])} only in "
       f"{report['labelB']}, {len(pk['unvotedEither'])} unvoted by either).")
     A("")
-    if ag["cohenKappa"] is None:
-        note = ag.get("degenerateNote") or "no paired opinions"
+    if ag["rawAgreementPct"] is None:
+        A("Raw agreement and Cohen κ: **not computable** (no paired opinions).")
+    elif ag["cohenKappa"] is None:
+        note = ag.get("degenerateNote") or "kappa undefined"
         A(f"Raw agreement: **{ag['rawAgreementPct']}%** — Cohen κ: **undefined** ({note}).")
     else:
         lo, hi = ag["kappaCi95"]
