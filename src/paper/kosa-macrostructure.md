@@ -65,14 +65,20 @@ display(csvDownloadButton(deviceRows, "kosa-ordering-devices.csv"));
 
 **Observed in the source text** — present in the words of the kośa itself:
 
-1. the *kāṇḍa* and *varga* divisions (the text opens and closes each section with
-   *atha … vargaḥ* / *iti … vargaḥ*);
-2. the verse and its number — Amara's numbers restart in each varga and, in this
-   digitization, run in steps of exactly one through all 24 numbered vargas
-   (1,432 full verses);
+1. the *kāṇḍa* and *varga* divisions. Section headings name all 24 vargas of the
+   Amarakośa; 22 open with *atha … vargaḥ* and 23 close with *iti … vargaḥ* (the
+   *bhūmi-varga* has no opening colophon, the *avyaya-varga* neither);
+2. the verse and its number. Amara's numbers restart at every one of the 23
+   varga boundaries and, in this digitization, run in steps of exactly one inside
+   each varga: 1,432 full verses inside the verse-groups, 1,444 in the file, the
+   other 12 standing outside any verse-group (the preface, for example).
+   Hemacandra's numbers, by contrast, run on through all 14 section boundaries of
+   ABCH without restarting;
 3. the homonym section (*nānārtha-varga*), whose opening verse announces the
    arrangement by final sound (*kāntādi*);
-4. the indeclinable section (*avyaya-varga*) closing the work;
+4. the indeclinable section (*avyaya-varga*), the last varga of this digitization —
+   the text itself (kāṇḍa 3, v. 1) names one more, the *liṅgādisaṅgraha-varga*,
+   after it;
 5. the *rule* of gender marking: Amara's *paribhāṣā* (vv. 3–5) says liṅga is known
    by form, by association with a neighbouring word, or by an explicit statement.
 
@@ -86,12 +92,15 @@ the annotators, not by the author:
 3. Hemacandra's upavarga tier in the animal book (e.g. *pañcendriya* →
    *sthalacara*).
 
-**Inferred by measurement** — patterns we establish, which the text does not state:
+**Inferred by measurement** — patterns we establish; the text states none of
+them, or (for the homonym section) only the principle:
 
 1. *No alphabetical device.* Adjacent synonyms are in alphabetical order no more
    often than chance.
-2. *The a-tergo order of the homonym section* holds almost perfectly, and its
-   exceptions are the traditional letter equivalences.
+2. *How strictly the a-tergo order of the homonym section holds.* The
+   *kāntādi* verse announces the principle. That it holds almost perfectly, that
+   it runs in two series, and that its exceptions are the traditional letter
+   equivalences is what we measure.
 3. *Gender contiguity* in the Amarakośa: words of one gender stand together.
 
 **Absent**: an upavarga tier in the Amarakośa, the liṅgādisaṅgraha-varga in

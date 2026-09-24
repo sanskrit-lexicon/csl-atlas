@@ -2,7 +2,7 @@
  "schemaVersion": "1.0",
  "schema": "data/schema/kosa-macrostructure.schema.json",
  "generatedBy": "scripts/lexico/m10_kosa_macrostructure_model.py",
- "generatedAt": "2026-09-24T02:16:11.167Z",
+ "generatedAt": "2026-09-24T02:34:06.232Z",
  "license": "CC-BY-SA-4.0",
  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
  "kosha": {
@@ -106,7 +106,7 @@
       "groups": 138,
       "sets": 138,
       "members": 1462,
-      "fullVerses": 138
+      "fullVerses": 153
      },
      "groups": [
       {
@@ -122,6 +122,7 @@
         }
        ],
        "verseLines": [
+        "svaH svargaH surasadma tridaSAvAsastrivizwapaM tridivam .",
         "dyOrgOramartyaBuvanaM nAkaH syAdUrDvalokaSca .. 3 .."
        ],
        "sets": [
@@ -212,6 +213,9 @@
         }
        ],
        "verseLines": [
+        "AdityAstridaSAH surAH sumanasaH svargOkaso devatA,",
+        "gIrvARA fBavo'marASca maruto vfndArakA nirjarAH .",
+        "asvapnA vibuDAstrivizwapasado leKAH suparvARa i-,",
         "tyAKyAtA amftASanA animizA devAstaTA dEvatam .. 4 .."
        ],
        "sets": [
@@ -362,6 +366,7 @@
         }
        ],
        "verseLines": [
+        "asurA dAnavA dEtyA dEteyAH suraSatravaH .",
         "pUrvadevAH SukraSizyAH pAtAlanilayAH smftAH .. 5 .."
        ],
        "sets": [
@@ -431,10 +436,17 @@
         {
          "n": 6,
          "half": false
+        },
+        {
+         "n": 7,
+         "half": false
         }
        ],
        "verseLines": [
-        "veDA viDirviriYco hiraRyagarBaH SatAnandaH .. 6 .."
+        "brahmA srazwA paramezWI DAtA padmaBUH surajyezWaH .",
+        "veDA viDirviriYco hiraRyagarBaH SatAnandaH .. 6 ..",
+        "SamBuH svayamBUrdruhiRaScaturvaktraH prajApatiH .",
+        "pitAmaho jagatkartA viraYciH kamalAsanaH .. 7 .."
        ],
        "sets": [
         {
@@ -572,7 +584,9 @@
        "upavargaIast": null,
        "locator": "1.1.1.7",
        "verseRefs": [],
-       "verseLines": [],
+       "verseLines": [
+        "vAgvARI BAratI BAzA gOrgIrbrAhmI sarasvatI ."
+       ],
        "sets": [
         {
          "eid": null,
@@ -699,7 +713,7 @@
       "groups": 461,
       "sets": 461,
       "members": 3959,
-      "fullVerses": 461
+      "fullVerses": 467
      },
      "groups": []
     }
@@ -745,7 +759,7 @@
       "groups": 98,
       "sets": 98,
       "members": 958,
-      "fullVerses": 98
+      "fullVerses": 100
      },
      "groups": []
     }
@@ -784,6 +798,7 @@
         }
        ],
        "verseLines": [
+        "rudre'pi KaRqaparaSurvESravaRe'pyekakuRqalaH proktaH .",
         "dvAre'pi pratihAraH prAkArAgre'pi kapiSIrzam .. 788 .."
        ],
        "sets": [
@@ -856,6 +871,7 @@
         }
        ],
        "verseLines": [
+        "paryApte'pi kftaM syAdAhavanIyAdizu trizu tretA .",
         "sandehe'pi dvAparamAhuH kalahe'pi kaliSabdam .. 789 .."
        ],
        "sets": [
@@ -928,6 +944,7 @@
         }
        ],
        "verseLines": [
+        "senAyAmapi kawakaM prARidyUtaM vadanti yudDe'pi .",
         "rakzasyapi puRyajanaM mfdBARqe'pyuzwrikAmAryAH .. 790 .."
        ],
        "sets": [
@@ -1000,6 +1017,7 @@
         }
        ],
        "verseLines": [
+        "SvetaM rajate'pyuktaM rajataM hAre Sare'pi kiMSAruH .",
         "damBe'pi gahvaraM syAdupahvaraM sanniDAne'pi .. 791 .."
        ],
        "sets": [
