@@ -50,7 +50,13 @@ def expected_sheets():
         },
         "csl-atlas-h4-semantic-field_89rows": {
             row["reviewId"]: (row["proposedLabel"], set(row["expectedDecisionLabels"]))
-            for row in h4["sampleRows"] if row["reviewStatus"] == "needs-review"
+            for row in (
+                [r for r in h4["sampleRows"] if r["reviewStatus"] == "needs-review"]
+                # H1621 flipped all 105 rows to reviewed-ok/auto-resolved, emptying the
+                # needs-review set; mirror build-review-sheets.py's h4_items() fallback
+                # so the validator's expected set matches what the sheet actually emits.
+                or [r for r in h4["sampleRows"] if r["reviewStatus"] == "reviewed-ok"]
+            )
         },
         "csl-atlas-xref-shared-core_40edges": {
             row["sampleId"]: (

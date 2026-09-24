@@ -42,9 +42,11 @@ class ReviewDecisionValidationTests(unittest.TestCase):
             {
                 "csl-atlas-skd-iti_100units": 102,
                 "csl-atlas-tradition-tags_119texts": 114,  # H5407: 5 duplicate variant rows folded; the 119texts stem is the sheet-ID contract
-                # 0 open since the H1621 agent adjudication filled all 89
-                # rows (PR #297); the sheet no longer takes a human export.
-                "csl-atlas-h4-semantic-field_89rows": 0,
+                # H1621 filled all 89 sampled rows to reviewed-ok (16 more are
+                # auto-resolved and excluded); A02/H5307 B1: the validator falls
+                # back to the reviewed-ok set, mirroring build-review-sheets.py's
+                # h4_items(), so a full pool export against this sheet validates.
+                "csl-atlas-h4-semantic-field_89rows": 89,
                 "csl-atlas-xref-shared-core_40edges": 40,
             },
         )
@@ -97,6 +99,28 @@ class ReviewDecisionValidationTests(unittest.TestCase):
 
         item["note"] = f"{corrected}: source context contradicts the proposal"
         self.assertEqual(VALIDATOR.validate_export(payload, self.sheets), 102)
+
+    def test_h4_full_export_validates_against_the_reviewed_ok_fallback(self):
+        # A02/H5307 B1 regression: before this fix expected_sheets() selected
+        # H4 rows by reviewStatus == "needs-review", which H1621 emptied, so
+        # every full H4 export failed "decided must equal the full sheet count"
+        # against the 89 cards build-review-sheets.py's h4_items() actually emits.
+        sheet_id = "csl-atlas-h4-semantic-field_89rows"
+        expected = self.sheets[sheet_id]
+        self.assertEqual(len(expected), 89)
+        payload = {
+            "sheet_id": sheet_id,
+            "generated": "25-09-2026",
+            "decided": len(expected),
+            "reviewer": "gasyoun",
+            "reviewedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "complete": True,
+            "items": [
+                {"id": item_id, "decision": "approve", "note": ""}
+                for item_id in expected
+            ],
+        }
+        self.assertEqual(VALIDATOR.validate_export(payload, self.sheets), 89)
 
 
 if __name__ == "__main__":
