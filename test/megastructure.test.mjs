@@ -34,10 +34,18 @@ const TINY_INVENTORY = [
   { dict: "xx", scanSet: "xx-scan", ref: "02" }
 ];
 
-test("the committed pilot catalogues pass the schema and every semantic check", () => {
+// H5324 shipped the pilot; H5325 fills the remaining dictionaries one commit at
+// a time. While the fill is in flight the committed set only grows, so this test
+// asserts the pilot dicts are present and every committed catalogue is sound;
+// the nine-dict stop condition is tightened in the final fill commit.
+const PILOT_DICTS = ["mw", "skd"];
+
+test("the committed catalogues pass the schema and every semantic check", () => {
   const { catalogues, errors, coverage } = loadAndCheck();
   assert.deepEqual(errors, []);
-  assert.deepEqual(catalogues.map((c) => c.dict).sort(), ["mw", "skd"]);
+  const dicts = catalogues.map((c) => c.dict);
+  assert.equal(new Set(dicts).size, dicts.length, "no duplicate dict codes");
+  for (const dict of PILOT_DICTS) assert.ok(dicts.includes(dict), `pilot ${dict} present`);
   for (const row of coverage) assert.equal(row.covered, row.pages, `${row.dict} ${row.scanSet} fully covered`);
 });
 
