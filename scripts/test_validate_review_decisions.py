@@ -41,7 +41,7 @@ class ReviewDecisionValidationTests(unittest.TestCase):
             {sheet_id: len(items) for sheet_id, items in self.sheets.items()},
             {
                 "csl-atlas-skd-iti_100units": 102,
-                "csl-atlas-tradition-tags_119texts": 119,
+                "csl-atlas-tradition-tags_119texts": 114,  # H5407: 5 duplicate variant rows folded; the 119texts stem is the sheet-ID contract
                 # 0 open since the H1621 agent adjudication filled all 89
                 # rows (PR #297); the sheet no longer takes a human export.
                 "csl-atlas-h4-semantic-field_89rows": 0,
