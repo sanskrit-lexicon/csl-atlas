@@ -203,7 +203,7 @@ catalogue = {
     "scanSets": [
         {"id": "pwg-csldoc", "kind": "cologne-csldoc",
          "description": "Cologne csldoc front-matter pages for PWG (27 pages: 7 volume titles, the Part-1 Vorwort and abbreviation key, per-part corrigenda, Vorworte and abbreviation supplements of Parts 2-3, Vorworte of Parts 4-7).",
-         "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/pwgpref/",
+         "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
          "inventory": "data/megastructure/scan_inventory.tsv"},
         {"id": "pwg-scan-pdf", "kind": "cologne-scan-pdf",
          "description": "Cologne PWG page PDFs (body map, odd leaf refs each carrying printed pages ref and ref+1); declared here only for the final back-matter leaf pwg7-1821 = printed pp. 1821-1822.",

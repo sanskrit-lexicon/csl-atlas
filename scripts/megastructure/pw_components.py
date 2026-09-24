@@ -97,7 +97,7 @@ catalogue = {
     "scanSets": [
         {"id": "pw-csldoc", "kind": "cologne-csldoc",
          "description": "Cologne csldoc front-matter pages for PW (5 pages: Part-1 title, Vorwort, and the key to cited works).",
-         "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/pwpref/",
+         "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
          "inventory": "data/megastructure/scan_inventory.tsv"}
     ],
     "components": components,

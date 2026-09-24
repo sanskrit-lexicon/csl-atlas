@@ -116,7 +116,7 @@ catalogue = {
     "scanSets": [
         {"id": "vcp-csldoc", "kind": "cologne-csldoc",
          "description": "Cologne csldoc front-matter pages for VCP (7 pages: two title pages, imprint, publisher's note, dedication, Woodrow's preface, contents), sampled from the volume's preliminary batch.",
-         "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/vcppref/",
+         "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
          "inventory": "data/megastructure/scan_inventory.tsv"},
         {"id": "vcp-scan-pdf", "kind": "cologne-scan-pdf",
          "description": "Cologne VCP page PDFs before the letter A: the author's Liṅgānuśāsana treatise, printed pp. 1-34 (pg0001-pg0034). These pages are served by the scan server but absent from csl-websanlexicon pdffiles.txt, which starts at pg0035 (first body page, 'a').",

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-09-24T19:14:00.931Z",
+  "generatedAt": "2026-09-24T20:52:38.326Z",
   "generatedBy": "scripts/build-megastructure.mjs",
   "componentSchema": "data/schema/megastructure-component.schema.json",
   "dicts": [
@@ -1498,7 +1498,7 @@
           "id": "mw-csldoc",
           "kind": "cologne-csldoc",
           "description": "Cologne csldoc front-matter pages for MW (29 pages, title + v-xxxii), OCR'd in sanskrit-lexicon/MWS prefaces/.",
-          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/mwpref/",
+          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
           "inventory": "data/megastructure/scan_inventory.tsv"
         },
         {
@@ -2865,7 +2865,7 @@
           "id": "pw-csldoc",
           "kind": "cologne-csldoc",
           "description": "Cologne csldoc front-matter pages for PW (5 pages: Part-1 title, Vorwort, and the key to cited works).",
-          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/pwpref/",
+          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
           "inventory": "data/megastructure/scan_inventory.tsv"
         }
       ],
@@ -3083,7 +3083,7 @@
           "id": "pwg-csldoc",
           "kind": "cologne-csldoc",
           "description": "Cologne csldoc front-matter pages for PWG (27 pages: 7 volume titles, the Part-1 Vorwort and abbreviation key, per-part corrigenda, Vorworte and abbreviation supplements of Parts 2-3, Vorworte of Parts 4-7).",
-          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/pwgpref/",
+          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
           "inventory": "data/megastructure/scan_inventory.tsv"
         },
         {
@@ -3990,7 +3990,7 @@
           "id": "skd-csldoc",
           "kind": "cologne-csldoc",
           "description": "Cologne csldoc front-matter pages for SKD (30 pages, one scan image each, taken from a PDF whose even pages 2/4/6/8 are skipped).",
-          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/skdpref/",
+          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
           "inventory": "data/megastructure/scan_inventory.tsv"
         }
       ],
@@ -5475,7 +5475,7 @@
           "id": "vcp-csldoc",
           "kind": "cologne-csldoc",
           "description": "Cologne csldoc front-matter pages for VCP (7 pages: two title pages, imprint, publisher's note, dedication, Woodrow's preface, contents), sampled from the volume's preliminary batch.",
-          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/vcppref/",
+          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
           "inventory": "data/megastructure/scan_inventory.tsv"
         },
         {
@@ -5858,7 +5858,7 @@
           "id": "wil-csldoc",
           "kind": "cologne-csldoc",
           "description": "Cologne csldoc front-matter pages for WIL (6 pages: title, dedication, preface pp. vii-x).",
-          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/wilpref/",
+          "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
           "inventory": "data/megastructure/scan_inventory.tsv"
         }
       ],
