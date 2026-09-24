@@ -11,7 +11,7 @@ with per-dictionary counts and rates.
 WHAT IS COUNTED (all from the csl-orig record text — no semantic parsing):
 
 1. TAGGED SURFACES. Two Cologne tags carry usage/register labels:
-   - `<ab>…</ab>`  abbreviation runs — AP files `Ved.` here (1,915×), PWG files
+   - `<ab>…</ab>`  abbreviation runs — AP files `Ved.` here (1,916×), PWG files
      its LEXICOGRAPHERS-ONLY family here (`Lexicogrr.`/`Lexicogr.`/`Lexicc.`),
      MW files `poet.`/`fig.`/`lit.` here.
    - `<lang>…</lang>` language-tag runs — MW files `Ved.`/`ep.` here, PWG/PW
