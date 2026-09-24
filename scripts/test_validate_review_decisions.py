@@ -159,6 +159,22 @@ class PoolModeTests(unittest.TestCase):
         for row_id, (_, allowed) in self.expected.items():
             self.assertEqual(allowed, set(by_id[row_id]["proposedParserLabels"]))
 
+    def test_h4_fallback_prefers_open_rows_over_reviewed_ok(self):
+        """P1 gate (H5308/B1, cf. #516): when needs-review rows exist the expected
+        H4 set must be those open rows, not the reviewed-ok fallback."""
+        import copy as _copy
+        h4 = VALIDATOR.read_json("data/lexico/h4_semantic_field_review_packet.json")
+        patched = _copy.deepcopy(h4)
+        first_id = patched["sampleRows"][0]["reviewId"]
+        patched["sampleRows"][0]["reviewStatus"] = "needs-review"
+        original = VALIDATOR.read_json
+        VALIDATOR.read_json = lambda rel: patched if "h4_semantic" in rel else original(rel)
+        try:
+            h4_expected = VALIDATOR.expected_sheets()["csl-atlas-h4-semantic-field_89rows"]
+        finally:
+            VALIDATOR.read_json = original
+        self.assertEqual(list(h4_expected), [first_id])
+
 
 if __name__ == "__main__":
     unittest.main()
