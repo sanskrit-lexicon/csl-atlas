@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-_Created: 03-07-2026 · Last updated: 08-09-2026_
+_Created: 03-07-2026 · Last updated: 24-09-2026_
 
 `csl-atlas` is the public **dictionary-evidence** microsite for the Cologne
 Digital Sanskrit Dictionaries — a static Observable Framework site for
@@ -64,6 +64,15 @@ publishes `dist/` to GitHub Pages.
   `csl-observatory`.
 - Generated `src/data/**` JSON from `sync-site-data` is gitignored — regenerate,
   do not hand-edit.
+- **Citation-graph re-freeze chain (H5407).** `data/citations/ls_citation_*.tsv` are frozen
+  at the revision pair in `ls_citation_graph.source.json`; regenerate them only with the
+  siblings at that pair (or record the new pair). A change to the TSVs or to `CANON_ALIAS`
+  regenerates, in the same PR: `build-citation-canon` + `validate-citation-canon`,
+  `build-tradition-tags`, `scripts/forensic/f12_a50_claim_ledger.py` +
+  `f12_a50_topology_arms.mjs` (~15 min) with the pins in
+  `tests/forensic/test_f12_a50_claim_ledger.py`, `build-four-axis-independence`, and the
+  tradition review-sheet count in `scripts/test_validate_review_decisions.py`; then the
+  A50 figures and the claim ledger §P. CI red on any of these = a step skipped.
 
 ## Do not touch
 
