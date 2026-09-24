@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "1.0.0",
+  "dict": "abch",
+  "dictName": "Hemacandra, Abhidhanacintamani (Namalinganushasana)",
+  "edition": {
+    "label": "The edition Cologne scanned (print statement awaits scan reading)",
+    "year": null,
+    "imprint": null,
+    "evidenceLevel": "inferred",
+    "evidence": "Dictionary identity from csl-orig abch.txt metadata (;title{aBiDAnacintAmaRi}; author hemacandrAcArya)."
+  },
+  "scanSets": [
+    {
+      "id": "abch-scan-pdf",
+      "kind": "cologne-scan-pdf",
+      "description": "Cologne ABCH front-matter page PDFs: the f* series (14 pages) listed in csl-websanlexicon pdffiles.txt. Body pages pg05-pg58 are out of scope (entry list).",
+      "baseUrl": "https://www.sanskrit-lexicon.uni-koeln.de/scans/ABCHScan/ABCHScanpdf/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    }
+  ],
+  "components": [
+    {
+      "id": "abch.fm.title",
+      "sequence": 1,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": null,
+        "iast": null,
+        "english": "Title page of the scanned Abhidhanacintamani edition"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f01",
+          "image": "f01.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "inferred",
+      "evidence": "Scan map row f01 (f01.pdf, caption empty in pdffiles.txt); first of the 14 f* pages preceding the body page series (which starts at scan pg05). Page content awaits scan reading.",
+      "notes": null
+    },
+    {
+      "id": "abch.fm.front-sequence",
+      "sequence": 2,
+      "position": "front",
+      "componentType": "other",
+      "componentTypeNote": "Unidentified block: per-page parts are not yet attributed to scan pages.",
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": null,
+        "iast": null,
+        "english": "Unidentified front-matter sequence (13 pages between the title page and the body block)"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 13,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f02",
+          "image": "f02.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f03",
+          "image": "f03.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f04",
+          "image": "f04.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f05",
+          "image": "f05.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f06",
+          "image": "f06.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f07",
+          "image": "f07.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f08",
+          "image": "f08.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f09",
+          "image": "f09.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f10",
+          "image": "f10.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f11",
+          "image": "f11.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f12",
+          "image": "f12.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f13",
+          "image": "f13.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f14",
+          "image": "f14.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "inferred",
+      "evidence": "Scan map rows f02-f14 (f02.pdf-f14.pdf, captions empty); body page series starts at scan pg05 (csl-orig abch.txt first entry <pc>0001...).",
+      "notes": "Kosha editions typically open with a mangala and commentarial apparatus; the per-page split awaits scan reading."
+    }
+  ],
+  "excludedScans": [],
+  "knownGaps": [
+    {
+      "label": "Body print pages 1-4 (scan map starts at pg05)",
+      "evidenceLevel": "observed",
+      "evidence": "pdffiles.txt for abch lists body pages pg05-pg58 only; no pg01-pg04 rows exist and the direct URL probe for f01.pdf returned 404 (25-09-2026), so the first four body pages are not shown by any declared scan set."
+    }
+  ],
+  "notes": "Scan-set URL probe 25-09-2026 returned 404 for f01.pdf under the canonical ABCHScan/ABCHScanpdf/ path; the images are named in the Cologne scan map. The inventory rows come from the map, not from a verified direct URL.",
+  "misfits": [
+    {
+      "label": "The 13-page front block cannot be decomposed without reading the scans",
+      "why": "The schema has no 'unidentified block' component type, so the sequence is one 'other' record; per-page parts are owed a follow-up scan reading.",
+      "componentId": "abch.fm.front-sequence"
+    }
+  ]
+}
