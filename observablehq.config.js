@@ -98,6 +98,7 @@ const PAGE_DESCRIPTIONS = {
   "/paper/grounded": "The grounded framework: the atlas paper's body, building its analysis from Monier-Williams's own data before any external theory.",
   "/paper/triangulation": "Triangulation (§7): how three analytic frameworks converge on the atlas's findings about the Cologne Sanskrit dictionaries.",
   "/paper/appendices": "Framework appendices A·B·C: three external-framework treatments condensed as appendices to the atlas paper.",
+  "/paper/kosa-macrostructure": "The versified synonymic kośa (Amarakośa, Halāyudha, Hemacandra) as a macrostructural type: a schema of kāṇḍa, varga, verse, synonym-set, homonym section and gender marking, with what the sources show separated from what is inferred.",
   "/paper/related-work": "Related work: where the atlas sits in the Sanskrit digitisation pipeline relative to current machine-readable dictionary efforts.",
   "/dicts/mw": "MW — Monier-Williams Sanskrit-English Dictionary (1899): an atlas chapter on its structure, sources, and place among the Cologne dictionaries.",
   "/dicts/pwg": "PWG — the Grosses Petersburger Wörterbuch (1855–1875): an atlas chapter on its structure and lineage within the Cologne dictionaries.",
@@ -232,7 +233,8 @@ export default {
         { name: "Grounded framework (body)", path: "/paper/grounded" },
         { name: "Triangulation (§7)", path: "/paper/triangulation" },
         { name: "Framework appendices A·B·C", path: "/paper/appendices" },
-        { name: "Related work & positioning", path: "/paper/related-work" }
+        { name: "Related work & positioning", path: "/paper/related-work" },
+        { name: "Kośa macrostructure model", path: "/paper/kosa-macrostructure" }
       ]
     },
     {

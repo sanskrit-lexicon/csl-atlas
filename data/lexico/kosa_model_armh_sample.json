@@ -1,0 +1,1079 @@
+{
+ "schemaVersion": "1.0",
+ "schema": "data/schema/kosa-macrostructure.schema.json",
+ "generatedBy": "scripts/lexico/m10_kosa_macrostructure_model.py",
+ "generatedAt": "2026-09-24T02:16:11.167Z",
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "kosha": {
+  "code": "ARMH",
+  "title": "Abhidhānaratnamālā",
+  "author": "Halāyudha",
+  "tradition": "Brahmanical",
+  "date": "~10th c.",
+  "source": {
+   "upstream": "sanskrit-lexicon/csl-orig",
+   "path": "v02/armh/armh.txt",
+   "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+   "licence": "CC-BY-SA-4.0"
+  }
+ },
+ "macrostructureType": "onomasiological-versified",
+ "digitizationModel": "exploded",
+ "genderMarking": false,
+ "sample": {
+  "isSample": true,
+  "plan": [
+   {
+    "unit": "1",
+    "unitIast": "1",
+    "groups": 6
+   },
+   {
+    "unit": "5",
+    "unitIast": "5",
+    "groups": 4
+   }
+  ],
+  "note": "Every division is listed with its full-text counts; only the planned verse-groups are expanded."
+ },
+ "orderingDevices": [
+  {
+   "device": "kanda",
+   "evidence": "observed",
+   "layer": "digitization-markup",
+   "level": "division",
+   "note": "Only as the first field of the <vn> locator; no kāṇḍa headings in the digitization."
+  },
+  {
+   "device": "varga",
+   "evidence": "absent",
+   "layer": "digitization-markup",
+   "level": "division",
+   "note": "The <vn> locator does not vary below the kāṇḍa (A06 §6)."
+  },
+  {
+   "device": "verse",
+   "evidence": "observed",
+   "layer": "source-text",
+   "level": "group",
+   "note": "Verse-end numbers in the text; the <vn> groups the exploded records."
+  },
+  {
+   "device": "synonym-set",
+   "evidence": "absent",
+   "layer": "digitization-markup",
+   "level": "set",
+   "note": "Exploded model: one record per synonym, set boundaries inside a verse not encoded."
+  },
+  {
+   "device": "homonym-section",
+   "evidence": "inferred",
+   "layer": "measurement",
+   "level": "division",
+   "note": "kāṇḍa 5 identified as anekārtha from its '…api…' formula (A06 §4.2), not from a heading."
+  },
+  {
+   "device": "gender-marking",
+   "evidence": "absent",
+   "layer": "digitization-markup",
+   "level": "member",
+   "note": "No liṅga tags in the digitization."
+  },
+  {
+   "device": "alphabetical-order",
+   "evidence": "inferred",
+   "layer": "measurement",
+   "level": "member",
+   "note": "Adjacent-headword non-decreasing share 0.4985 — chance level."
+  }
+ ],
+ "kandas": [
+  {
+   "n": 1,
+   "label": null,
+   "labelIast": null,
+   "labelStatus": "numeric-locator-only",
+   "vargas": [
+    {
+     "n": 1,
+     "label": null,
+     "labelIast": null,
+     "labelStatus": "not-divided-in-source",
+     "sectionType": "synonymic",
+     "sectionTypeBasis": "default",
+     "counts": {
+      "groups": 138,
+      "sets": 138,
+      "members": 1462,
+      "fullVerses": 138
+     },
+     "groups": [
+      {
+       "L": "1",
+       "sourceLine": 1,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "1.1.1.3",
+       "verseRefs": [
+        {
+         "n": 3,
+         "half": false
+        }
+       ],
+       "verseLines": [
+        "dyOrgOramartyaBuvanaM nAkaH syAdUrDvalokaSca .. 3 .."
+       ],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "svar",
+           "formIast": "svar",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "svarga",
+           "formIast": "svarga",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "surasadman",
+           "formIast": "surasadman",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "tridaSAvAsa",
+           "formIast": "tridaśāvāsa",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "trivizwapa",
+           "formIast": "triviṣṭapa",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "tridiva",
+           "formIast": "tridiva",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "dyo",
+           "formIast": "dyo",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "go",
+           "formIast": "go",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "amartyaBuvana",
+           "formIast": "amartyabhuvana",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "nAka",
+           "formIast": "nāka",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "UrDvaloka",
+           "formIast": "ūrdhvaloka",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "L": "12",
+       "sourceLine": 67,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "1.1.1.4",
+       "verseRefs": [
+        {
+         "n": 4,
+         "half": false
+        }
+       ],
+       "verseLines": [
+        "tyAKyAtA amftASanA animizA devAstaTA dEvatam .. 4 .."
+       ],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "Aditya",
+           "formIast": "āditya",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "tridaSa",
+           "formIast": "tridaśa",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "sura",
+           "formIast": "sura",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "sumanas",
+           "formIast": "sumanas",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "svargOkas",
+           "formIast": "svargaukas",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "devatA",
+           "formIast": "devatā",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "gIrvARa",
+           "formIast": "gīrvāṇa",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "fBu",
+           "formIast": "ṛbhu",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "amara",
+           "formIast": "amara",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "marut",
+           "formIast": "marut",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "vfndAraka",
+           "formIast": "vṛndāraka",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "nirjara",
+           "formIast": "nirjara",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "asvapna",
+           "formIast": "asvapna",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "vibuDa",
+           "formIast": "vibudha",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "trivizwapasad",
+           "formIast": "triviṣṭapasad",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "leKa",
+           "formIast": "lekha",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "suparvan",
+           "formIast": "suparvan",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "amftASana",
+           "formIast": "amṛtāśana",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "animiza",
+           "formIast": "animiṣa",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "deva",
+           "formIast": "deva",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "dEvata",
+           "formIast": "daivata",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "L": "33",
+       "sourceLine": 235,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "1.1.1.5",
+       "verseRefs": [
+        {
+         "n": 5,
+         "half": false
+        }
+       ],
+       "verseLines": [
+        "pUrvadevAH SukraSizyAH pAtAlanilayAH smftAH .. 5 .."
+       ],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "asura",
+           "formIast": "asura",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "dAnava",
+           "formIast": "dānava",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "dEtya",
+           "formIast": "daitya",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "dEteya",
+           "formIast": "daiteya",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "suraSatru",
+           "formIast": "suraśatru",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "pUrvadeva",
+           "formIast": "pūrvadeva",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "SukraSizya",
+           "formIast": "śukraśiṣya",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "pAtAlanilaya",
+           "formIast": "pātālanilaya",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "L": "41",
+       "sourceLine": 283,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "1.1.1.6",
+       "verseRefs": [
+        {
+         "n": 6,
+         "half": false
+        }
+       ],
+       "verseLines": [
+        "veDA viDirviriYco hiraRyagarBaH SatAnandaH .. 6 .."
+       ],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "brahman",
+           "formIast": "brahman",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "srazwf",
+           "formIast": "sraṣṭṛ",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "paramezWin",
+           "formIast": "parameṣṭhin",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "DAtf",
+           "formIast": "dhātṛ",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "padmaBU",
+           "formIast": "padmabhū",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "surajyezWa",
+           "formIast": "surajyeṣṭha",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "veDas",
+           "formIast": "vedhas",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "viDi",
+           "formIast": "vidhi",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "viriYca",
+           "formIast": "viriñca",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "hiraRyagarBa",
+           "formIast": "hiraṇyagarbha",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "SatAnanda",
+           "formIast": "śatānanda",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "SamBu",
+           "formIast": "śambhu",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "svayamBU",
+           "formIast": "svayambhū",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "druhiRa",
+           "formIast": "druhiṇa",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "caturvaktra",
+           "formIast": "caturvaktra",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "prajApati",
+           "formIast": "prajāpati",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "pitAmaha",
+           "formIast": "pitāmaha",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "jagatkartf",
+           "formIast": "jagatkartṛ",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "viraYci",
+           "formIast": "virañci",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "kamalAsana",
+           "formIast": "kamalāsana",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "L": "61",
+       "sourceLine": 443,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "1.1.1.7",
+       "verseRefs": [],
+       "verseLines": [],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "vAk",
+           "formIast": "vāk",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "vARI",
+           "formIast": "vāṇī",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "BAratI",
+           "formIast": "bhāratī",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "BAzA",
+           "formIast": "bhāṣā",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "go",
+           "formIast": "go",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "gIr",
+           "formIast": "gīr",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "brAhmI",
+           "formIast": "brāhmī",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "sarasvatI",
+           "formIast": "sarasvatī",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "L": "69",
+       "sourceLine": 483,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "1.1.1.8",
+       "verseRefs": [
+        {
+         "n": 8,
+         "half": false
+        }
+       ],
+       "verseLines": [
+        "oNkAraH praRavaH proktastrayo vedAstrayI smftAH .. 8 .."
+       ],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "oNkAra",
+           "formIast": "oṅkāra",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "praRava",
+           "formIast": "praṇava",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "vedAH",
+           "formIast": "vedāḥ",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "trayI",
+           "formIast": "trayī",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "label": null,
+   "labelIast": null,
+   "labelStatus": "numeric-locator-only",
+   "vargas": [
+    {
+     "n": 1,
+     "label": null,
+     "labelIast": null,
+     "labelStatus": "not-divided-in-source",
+     "sectionType": "synonymic",
+     "sectionTypeBasis": "default",
+     "counts": {
+      "groups": 461,
+      "sets": 461,
+      "members": 3959,
+      "fullVerses": 461
+     },
+     "groups": []
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "label": null,
+   "labelIast": null,
+   "labelStatus": "numeric-locator-only",
+   "vargas": [
+    {
+     "n": 1,
+     "label": null,
+     "labelIast": null,
+     "labelStatus": "not-divided-in-source",
+     "sectionType": "synonymic",
+     "sectionTypeBasis": "default",
+     "counts": {
+      "groups": 63,
+      "sets": 63,
+      "members": 597,
+      "fullVerses": 63
+     },
+     "groups": []
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "label": null,
+   "labelIast": null,
+   "labelStatus": "numeric-locator-only",
+   "vargas": [
+    {
+     "n": 1,
+     "label": null,
+     "labelIast": null,
+     "labelStatus": "not-divided-in-source",
+     "sectionType": "synonymic",
+     "sectionTypeBasis": "default",
+     "counts": {
+      "groups": 98,
+      "sets": 98,
+      "members": 958,
+      "fullVerses": 98
+     },
+     "groups": []
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "label": null,
+   "labelIast": null,
+   "labelStatus": "numeric-locator-only",
+   "vargas": [
+    {
+     "n": 1,
+     "label": null,
+     "labelIast": null,
+     "labelStatus": "not-divided-in-source",
+     "sectionType": "homonymic",
+     "sectionTypeBasis": "content",
+     "counts": {
+      "groups": 100,
+      "sets": 100,
+      "members": 931,
+      "fullVerses": 100
+     },
+     "groups": [
+      {
+       "L": "6977",
+       "sourceLine": 42231,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "5.1.1.788",
+       "verseRefs": [
+        {
+         "n": 788,
+         "half": false
+        }
+       ],
+       "verseLines": [
+        "dvAre'pi pratihAraH prAkArAgre'pi kapiSIrzam .. 788 .."
+       ],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "KaRqaparaSu",
+           "formIast": "khaṇḍaparaśu",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "rudra",
+           "formIast": "rudra",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "ekakuRqala",
+           "formIast": "ekakuṇḍala",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "vESravaRa",
+           "formIast": "vaiśravaṇa",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "pratihAra",
+           "formIast": "pratihāra",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "dvAra",
+           "formIast": "dvāra",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "kapiSIrza",
+           "formIast": "kapiśīrṣa",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "prAkArAgra",
+           "formIast": "prākārāgra",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "L": "6985",
+       "sourceLine": 42271,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "5.1.1.789",
+       "verseRefs": [
+        {
+         "n": 789,
+         "half": false
+        }
+       ],
+       "verseLines": [
+        "sandehe'pi dvAparamAhuH kalahe'pi kaliSabdam .. 789 .."
+       ],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "kfta",
+           "formIast": "kṛta",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "paryApta",
+           "formIast": "paryāpta",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "tretA",
+           "formIast": "tretā",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "AhavanIyAdi",
+           "formIast": "āhavanīyādi",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "dvApara",
+           "formIast": "dvāpara",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "sandeha",
+           "formIast": "sandeha",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "kali",
+           "formIast": "kali",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "kalaha",
+           "formIast": "kalaha",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "L": "6993",
+       "sourceLine": 42311,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "5.1.1.790",
+       "verseRefs": [
+        {
+         "n": 790,
+         "half": false
+        }
+       ],
+       "verseLines": [
+        "rakzasyapi puRyajanaM mfdBARqe'pyuzwrikAmAryAH .. 790 .."
+       ],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "kawaka",
+           "formIast": "kaṭaka",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "senA",
+           "formIast": "senā",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "prARidyUta",
+           "formIast": "prāṇidyūta",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "yudDa",
+           "formIast": "yuddha",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "puRyajana",
+           "formIast": "puṇyajana",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "rakzas",
+           "formIast": "rakṣas",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "uzwrikA",
+           "formIast": "uṣṭrikā",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "mfdBARqa",
+           "formIast": "mṛdbhāṇḍa",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "L": "7001",
+       "sourceLine": 42351,
+       "upavarga": null,
+       "upavargaIast": null,
+       "locator": "5.1.1.791",
+       "verseRefs": [
+        {
+         "n": 791,
+         "half": false
+        }
+       ],
+       "verseLines": [
+        "damBe'pi gahvaraM syAdupahvaraM sanniDAne'pi .. 791 .."
+       ],
+       "sets": [
+        {
+         "eid": null,
+         "kind": "unsegmented-verse",
+         "members": [
+          {
+           "form": "Sveta",
+           "formIast": "śveta",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "rajata",
+           "formIast": "rajata",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "rajata",
+           "formIast": "rajata",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "hAra",
+           "formIast": "hāra",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "kiMSAru",
+           "formIast": "kiṃśāru",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "Sara",
+           "formIast": "śara",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "gahvara",
+           "formIast": "gahvara",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "damBa",
+           "formIast": "dambha",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "upahvara",
+           "formIast": "upahvara",
+           "role": "synonym",
+           "gender": null
+          },
+          {
+           "form": "sanniDAna",
+           "formIast": "sannidhāna",
+           "role": "synonym",
+           "gender": null
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
