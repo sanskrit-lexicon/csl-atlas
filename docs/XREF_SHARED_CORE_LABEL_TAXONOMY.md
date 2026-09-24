@@ -1,6 +1,6 @@
 # Xref shared-core: label taxonomy and sampling method
 
-_Created: 25-07-2026 · Last updated: 26-07-2026_
+_Created: 25-07-2026 · Last updated: 24-09-2026_
 
 Russian version: [XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md).
 Both files say the same thing; their figures are checked against the data automatically
@@ -147,13 +147,20 @@ So the risk runs in **both** directions:
 The evidence on the card is too thin to answer either way: typically only one
 dictionary's record is attached (`missingExactEdgeDictionaries` is non-empty), so the
 "shared" in shared-core is not demonstrated. This is not a rejection of the edge — it is
-the honest answer when the card does not contain what the question asks about. **4 of the
-40 rows are in this state** and now say so on the card.
+the honest answer when the card does not contain what the question asks about. **0 of the
+40 rows are in this state** since 24-09-2026. The 4 rows the packet used to flag
+(`mw-pwg-shared:03`, `:07`, `:16`, `:36`) were a lookup defect, not thin evidence: the
+packet builder compared MW's raw target — `a/nAkzit`, `Are/`, `Basa/d`, `-DArmyAyaRa`, with
+the SLP1 accent mark or the compound hyphen still on it — against the accent-free sample key
+and never found the row, while MW prints the `cf.` in all four (H5408). The builder now folds
+both ends with the same normaliser as `m6_xref_lineage.py`
+([`scripts/lib/xref-normalize.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/xref-normalize.mjs)),
+and the label stays on the sheet for the case it names.
 
 | Example | Why |
 |---|---|
-| `mw-pwg-shared:07` — `ArAt → Are` (ārāt → āre), PWG only | PWG's record shows an ablative adverb pointing at a locative-shaped one; MW has no exact edge row, so there is no second side to corroborate a shared editorial judgement. |
-| `mw-pwg-shared:03` — `Akzit → anAkzit` (ākṣit → anākṣit), PWG only | Single-dictionary evidence again. |
+| `mw-pwg-shared:07` — `ArAt → Are` (ārāt → āre) | Showed PWG only until 24-09-2026 and was the textbook example here. MW L26162 does print `cf. Are/`; the udātta mark on the target hid the row from the exact-edge lookup. Both records are attached now, so the label no longer applies to this card. |
+| `mw-pwg-shared:36` — `Darmya → DArmyAyaRa` (dharmya → dhārmyāyaṇa) | The hyphen case: MW L100511, an `<e>2A` continuation record, prints `cf. -DArmyAyaRa`. The leading hyphen is MW's compound-member notation, not a different target. Attached now for the same reason. |
 
 ## How the 40 edges were sampled
 
