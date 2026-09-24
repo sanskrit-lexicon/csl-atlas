@@ -42,12 +42,46 @@ class ReviewDecisionValidationTests(unittest.TestCase):
             {
                 "csl-atlas-skd-iti_100units": 102,
                 "csl-atlas-tradition-tags_119texts": 114,  # H5407: 5 duplicate variant rows folded; the 119texts stem is the sheet-ID contract
-                # 0 open since the H1621 agent adjudication filled all 89
-                # rows (PR #297); the sheet no longer takes a human export.
-                "csl-atlas-h4-semantic-field_89rows": 0,
+                # 89 (the H1621 reviewed-ok fallback), not 0 (H5308/B1): the
+                # sheet takes no single-reviewer human export any more, but the
+                # community review pool re-keys these same 89 rows for double-
+                # keying, so the validator's expected set must not be empty.
+                "csl-atlas-h4-semantic-field_89rows": 89,
                 "csl-atlas-xref-shared-core_40edges": 40,
             },
         )
+
+    def test_h4_fallback_accepts_a_synthetic_full_export(self):
+        """H5308/B1 phase-P1 gate (REVIEW_POOL_V1_DESIGN.md §10): a synthetic
+        full H4 export — one row per reviewed-ok id, decision approve — must
+        validate, proving the fallback stopped the unconditional failure."""
+        sheet_id = "csl-atlas-h4-semantic-field_89rows"
+        expected = self.sheets[sheet_id]
+        self.assertEqual(len(expected), 89)
+        payload = {
+            "sheet_id": sheet_id,
+            "generated": "24-09-2026",
+            "decided": len(expected),
+            "reviewer": "gasyoun",
+            "reviewedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "complete": True,
+            "items": [
+                {"id": item_id, "decision": "approve", "note": ""}
+                for item_id in expected
+            ],
+        }
+        self.assertEqual(VALIDATOR.validate_export(payload, self.sheets), 89)
+
+    def test_h4_fallback_prefers_open_rows_over_reviewed_ok(self):
+        """When needs-review rows exist, the fallback must not fall through to
+        reviewed-ok — mirrors h4_items()'s `open_rows or reviewed_ok` order."""
+        h4 = copy.deepcopy(
+            VALIDATOR.read_json("data/lexico/h4_semantic_field_review_packet.json")
+        )
+        h4["sampleRows"][0]["reviewStatus"] = "needs-review"
+        rows = VALIDATOR.h4_expected_rows(h4)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["reviewStatus"], "needs-review")
 
     def test_complete_export_matches_all_102_stable_ids(self):
         self.assertEqual(VALIDATOR.validate_export(self.payload(), self.sheets), 102)
