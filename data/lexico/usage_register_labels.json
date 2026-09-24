@@ -1,0 +1,381 @@
+{
+ "schema": "csl-atlas/usage-register-labels/1.0",
+ "generatedBy": "scripts/lexico/m12_usage_register_labels.py",
+ "cslOrigCommit": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+ "sourceFiles": [
+  "csl-orig/v02/mw/mw.txt",
+  "csl-orig/v02/pwg/pwg.txt",
+  "csl-orig/v02/pw/pw.txt",
+  "csl-orig/v02/ap/ap.txt",
+  "csl-orig/v02/wil/wil.txt",
+  "csl-orig/v02/skd/skd.txt",
+  "csl-orig/v02/vcp/vcp.txt",
+  "csl-orig/v02/armh/armh.txt",
+  "csl-orig/v02/abch/abch.txt"
+ ],
+ "mapping": {
+  "APABHRAMSA": {
+   "kind": "middle_indic",
+   "rawTokens": [
+    "Apabhraṃśa"
+   ]
+  },
+  "CLASSICAL": {
+   "kind": "register",
+   "rawTokens": [
+    "klass"
+   ]
+  },
+  "EPIC": {
+   "kind": "register",
+   "rawTokens": [
+    "ep",
+    "epic"
+   ]
+  },
+  "FIGURATIVE": {
+   "kind": "register",
+   "rawTokens": [
+    "fig",
+    "Fig"
+   ]
+  },
+  "LEXICOGRAPHERS_ONLY": {
+   "kind": "register",
+   "rawTokens": [
+    "Lexicogrr",
+    "Lexicogr",
+    "Lexicc",
+    "lex"
+   ]
+  },
+  "LITERAL": {
+   "kind": "register",
+   "rawTokens": [
+    "lit",
+    "Lit",
+    "Litt",
+    "liter"
+   ]
+  },
+  "LITURGICAL": {
+   "kind": "register",
+   "rawTokens": [
+    "liturg"
+   ]
+  },
+  "PALI": {
+   "kind": "middle_indic",
+   "rawTokens": [
+    "Pāli"
+   ]
+  },
+  "POETIC": {
+   "kind": "register",
+   "rawTokens": [
+    "poet"
+   ]
+  },
+  "POST_VEDIC": {
+   "kind": "register",
+   "rawTokens": [
+    "nachved"
+   ]
+  },
+  "PRAKRIT": {
+   "kind": "middle_indic",
+   "rawTokens": [
+    "Prākṛt",
+    "Prākrit"
+   ]
+  },
+  "VEDIC": {
+   "kind": "register",
+   "rawTokens": [
+    "Ved",
+    "ved"
+   ]
+  }
+ },
+ "totalsByLabel": {
+  "APABHRAMSA": 7,
+  "CLASSICAL": 94,
+  "EPIC": 436,
+  "FIGURATIVE": 678,
+  "LEXICOGRAPHERS_ONLY": 41,
+  "LITERAL": 353,
+  "LITURGICAL": 15,
+  "PALI": 63,
+  "POETIC": 6,
+  "POST_VEDIC": 9,
+  "PRAKRIT": 398,
+  "VEDIC": 3123
+ },
+ "notes": [
+  "Register/usage labels counted from the tagged markup only (<ab>, <lang>); untagged_core is the NET untagged residue (tag-stripped occurrences minus tagged) per dict, excluded from rates.",
+  "A <lang> token absent from the mapping is a true language name (Gk., Lat., …); these are envelope counts (language_name_tags), never register rows.",
+  "SKD/VCP/ARMH/ABCH carry no tagged usage labels — their markers are Devanāgarī prose, outside this tag census; zeros are findings, not defects.",
+  "Rate denominator = csl-orig <L> records per dict."
+ ],
+ "perDict": [
+  {
+   "dict": "mw",
+   "label": "MW",
+   "records": 286525,
+   "tagged": {
+    "APABHRAMSA": {
+     "ab": 0,
+     "lang": 6
+    },
+    "EPIC": {
+     "ab": 0,
+     "lang": 328
+    },
+    "FIGURATIVE": {
+     "ab": 245,
+     "lang": 0
+    },
+    "LITERAL": {
+     "ab": 217,
+     "lang": 19
+    },
+    "PALI": {
+     "ab": 0,
+     "lang": 31
+    },
+    "POETIC": {
+     "ab": 3,
+     "lang": 0
+    },
+    "PRAKRIT": {
+     "ab": 0,
+     "lang": 227
+    },
+    "VEDIC": {
+     "ab": 0,
+     "lang": 612
+    }
+   },
+   "untagged_core": {
+    "POETIC": 43,
+    "VEDIC": 1
+   },
+   "language_name_tags": 2737,
+   "language_name_top": {
+    "Lat": 527,
+    "Gk": 504,
+    "Germ": 210,
+    "Goth": 200,
+    "Eng": 190
+   }
+  },
+  {
+   "dict": "pwg",
+   "label": "PWG",
+   "records": 123366,
+   "tagged": {
+    "CLASSICAL": {
+     "ab": 0,
+     "lang": 89
+    },
+    "EPIC": {
+     "ab": 0,
+     "lang": 97
+    },
+    "FIGURATIVE": {
+     "ab": 1,
+     "lang": 0
+    },
+    "LEXICOGRAPHERS_ONLY": {
+     "ab": 41,
+     "lang": 0
+    },
+    "LITERAL": {
+     "ab": 4,
+     "lang": 2
+    },
+    "LITURGICAL": {
+     "ab": 11,
+     "lang": 0
+    },
+    "POETIC": {
+     "ab": 2,
+     "lang": 0
+    },
+    "POST_VEDIC": {
+     "ab": 0,
+     "lang": 9
+    },
+    "PRAKRIT": {
+     "ab": 0,
+     "lang": 10
+    },
+    "VEDIC": {
+     "ab": 0,
+     "lang": 543
+    }
+   },
+   "untagged_core": {
+    "VEDIC": 1
+   },
+   "language_name_tags": 248,
+   "language_name_top": {
+    "Zend": 34,
+    "Hindi": 23,
+    "lat": 22,
+    "beng": 19,
+    "griech": 17
+   }
+  },
+  {
+   "dict": "pw",
+   "label": "PW (PWK)",
+   "records": 170556,
+   "tagged": {
+    "APABHRAMSA": {
+     "ab": 0,
+     "lang": 1
+    },
+    "CLASSICAL": {
+     "ab": 0,
+     "lang": 5
+    },
+    "EPIC": {
+     "ab": 0,
+     "lang": 2
+    },
+    "FIGURATIVE": {
+     "ab": 1,
+     "lang": 0
+    },
+    "LITURGICAL": {
+     "ab": 4,
+     "lang": 0
+    },
+    "PALI": {
+     "ab": 0,
+     "lang": 31
+    },
+    "PRAKRIT": {
+     "ab": 0,
+     "lang": 161
+    },
+    "VEDIC": {
+     "ab": 0,
+     "lang": 52
+    }
+   },
+   "untagged_core": {
+    "VEDIC": 4
+   },
+   "language_name_tags": 10,
+   "language_name_top": {
+    "arab": 2,
+    "pers": 2,
+    "Telugu": 2,
+    "beng": 1,
+    "zend": 1
+   }
+  },
+  {
+   "dict": "ap",
+   "label": "AP",
+   "records": 90847,
+   "tagged": {
+    "EPIC": {
+     "ab": 9,
+     "lang": 0
+    },
+    "FIGURATIVE": {
+     "ab": 416,
+     "lang": 0
+    },
+    "LITERAL": {
+     "ab": 98,
+     "lang": 0
+    },
+    "PALI": {
+     "ab": 0,
+     "lang": 1
+    },
+    "POETIC": {
+     "ab": 1,
+     "lang": 0
+    },
+    "VEDIC": {
+     "ab": 1916,
+     "lang": 0
+    }
+   },
+   "untagged_core": {
+    "EPIC": 1,
+    "POETIC": 20,
+    "VEDIC": 3
+   },
+   "language_name_tags": 1537,
+   "language_name_top": {
+    "Mar": 1276,
+    "L": 69,
+    "Gr": 56,
+    "Zend": 31,
+    "English": 26
+   }
+  },
+  {
+   "dict": "wil",
+   "label": "WIL",
+   "records": 44577,
+   "tagged": {
+    "FIGURATIVE": {
+     "ab": 15,
+     "lang": 0
+    },
+    "LITERAL": {
+     "ab": 13,
+     "lang": 0
+    }
+   },
+   "untagged_core": {
+    "POETIC": 14
+   },
+   "language_name_tags": 0,
+   "language_name_top": {}
+  },
+  {
+   "dict": "skd",
+   "label": "SKD",
+   "records": 42531,
+   "tagged": {},
+   "untagged_core": {},
+   "language_name_tags": 0,
+   "language_name_top": {}
+  },
+  {
+   "dict": "vcp",
+   "label": "VCP",
+   "records": 50135,
+   "tagged": {},
+   "untagged_core": {},
+   "language_name_tags": 0,
+   "language_name_top": {}
+  },
+  {
+   "dict": "armh",
+   "label": "ARMH",
+   "records": 7907,
+   "tagged": {},
+   "untagged_core": {},
+   "language_name_tags": 0,
+   "language_name_top": {}
+  },
+  {
+   "dict": "abch",
+   "label": "ABCH",
+   "records": 1965,
+   "tagged": {},
+   "untagged_core": {},
+   "language_name_tags": 0,
+   "language_name_top": {}
+  }
+ ]
+}
