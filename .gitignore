@@ -45,8 +45,10 @@ stardict-dist/
 HANDOFF.md
 docs/SESSION_HANDOFF.md
 
-# interactive review sheets (personal voting artifacts, per /review-sheet)
-review/
+# interactive review sheets (personal voting artifacts, per /review-sheet).
+# Root-anchored (H5308): data/review/ is the COMMITTED pool-assignment home
+# (REVIEW_POOL_V1_DESIGN §5); only the repo-root review/ working dir is local.
+/review/
 
 # regenerable L0 annotation-sheet emit (built by gen_lrv_fri_annotation_sheet.py)
 data/L0/lrv_fri_annotation_items.json

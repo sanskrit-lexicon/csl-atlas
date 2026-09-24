@@ -42,46 +42,14 @@ class ReviewDecisionValidationTests(unittest.TestCase):
             {
                 "csl-atlas-skd-iti_100units": 102,
                 "csl-atlas-tradition-tags_119texts": 114,  # H5407: 5 duplicate variant rows folded; the 119texts stem is the sheet-ID contract
-                # 89 (the H1621 reviewed-ok fallback), not 0 (H5308/B1): the
-                # sheet takes no single-reviewer human export any more, but the
-                # community review pool re-keys these same 89 rows for double-
-                # keying, so the validator's expected set must not be empty.
+                # H5308 B1 (design §3.1): fallback to the reviewed-ok set —
+                # H1621 left 0 open rows, and a 0-row expectation rejected every
+                # returned H4 export while the builder emitted 89 cards.
                 "csl-atlas-h4-semantic-field_89rows": 89,
                 "csl-atlas-xref-shared-core_40edges": 40,
+                "csl-atlas-r2-checkpoint_10rows": 10,  # H5308 B5: R2's first sheet
             },
         )
-
-    def test_h4_fallback_accepts_a_synthetic_full_export(self):
-        """H5308/B1 phase-P1 gate (REVIEW_POOL_V1_DESIGN.md §10): a synthetic
-        full H4 export — one row per reviewed-ok id, decision approve — must
-        validate, proving the fallback stopped the unconditional failure."""
-        sheet_id = "csl-atlas-h4-semantic-field_89rows"
-        expected = self.sheets[sheet_id]
-        self.assertEqual(len(expected), 89)
-        payload = {
-            "sheet_id": sheet_id,
-            "generated": "24-09-2026",
-            "decided": len(expected),
-            "reviewer": "gasyoun",
-            "reviewedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-            "complete": True,
-            "items": [
-                {"id": item_id, "decision": "approve", "note": ""}
-                for item_id in expected
-            ],
-        }
-        self.assertEqual(VALIDATOR.validate_export(payload, self.sheets), 89)
-
-    def test_h4_fallback_prefers_open_rows_over_reviewed_ok(self):
-        """When needs-review rows exist, the fallback must not fall through to
-        reviewed-ok — mirrors h4_items()'s `open_rows or reviewed_ok` order."""
-        h4 = copy.deepcopy(
-            VALIDATOR.read_json("data/lexico/h4_semantic_field_review_packet.json")
-        )
-        h4["sampleRows"][0]["reviewStatus"] = "needs-review"
-        rows = VALIDATOR.h4_expected_rows(h4)
-        self.assertEqual(len(rows), 1)
-        self.assertEqual(rows[0]["reviewStatus"], "needs-review")
 
     def test_complete_export_matches_all_102_stable_ids(self):
         self.assertEqual(VALIDATOR.validate_export(self.payload(), self.sheets), 102)
@@ -131,6 +99,81 @@ class ReviewDecisionValidationTests(unittest.TestCase):
 
         item["note"] = f"{corrected}: source context contradicts the proposal"
         self.assertEqual(VALIDATOR.validate_export(payload, self.sheets), 102)
+
+
+class PoolModeTests(unittest.TestCase):
+    """H5308 B2/B4: per-annotator slices validated against the pool manifest."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.sheets = VALIDATOR.expected_sheets()
+        cls.pool = {
+            "annotators": ["pool-a01", "pool-a02"],
+            "packets": {
+                "csl-atlas-r2-checkpoint_10rows": {
+                    "rows": {row_id: ["pool-a01", "pool-a02"]
+                             for row_id in cls.sheets["csl-atlas-r2-checkpoint_10rows"]},
+                },
+            },
+        }
+        cls.sheet_id = "csl-atlas-r2-checkpoint_10rows"
+        cls.expected = VALIDATOR.pool_expected(cls.pool, cls.sheet_id, "pool-a01")
+
+    def payload(self, reviewer="pool-a01"):
+        return {
+            "sheet_id": self.sheet_id,
+            "decided": len(self.expected),
+            "reviewer": reviewer,
+            "reviewedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "complete": True,
+            "items": [{"id": item_id, "decision": "approve", "note": ""}
+                      for item_id in self.expected],
+        }
+
+    def test_slice_equals_assigned_rows_not_whole_sheet(self):
+        self.assertEqual(len(self.expected), 10)
+        self.assertEqual(VALIDATOR.validate_export(self.payload(), self.sheets, self.pool), 10)
+
+    def test_unknown_pseudonym_is_rejected(self):
+        with self.assertRaisesRegex(VALIDATOR.ValidationError, "not a known pool pseudonym"):
+            VALIDATOR.validate_export(self.payload("gasyoun"), self.sheets, self.pool)
+
+    def test_slice_must_carry_exactly_the_assigned_rows(self):
+        payload = self.payload()
+        payload["items"] = payload["items"][:-1]
+        payload["decided"] -= 1
+        with self.assertRaisesRegex(VALIDATOR.ValidationError, "decided must equal the full sheet count"):
+            VALIDATOR.validate_export(payload, self.sheets, self.pool)
+
+    def test_pool_defer_requires_note(self):
+        payload = self.payload()
+        payload["items"][0] = {"id": payload["items"][0]["id"], "decision": "defer", "note": ""}
+        with self.assertRaisesRegex(VALIDATOR.ValidationError, "defer requires a note"):
+            VALIDATOR.validate_export(payload, self.sheets, self.pool)
+        payload["items"][0]["note"] = "словарь меток не подходит к этой строке"
+        self.assertEqual(VALIDATOR.validate_export(payload, self.sheets, self.pool), 10)
+
+    def test_r2_vocabulary_is_the_rows_proposed_parser_labels(self):
+        packet = VALIDATOR.read_json("data/lexico/r2_checkpoint_review_packet.json")
+        by_id = {r["checkpointId"]: r for r in packet["checkpointRows"]}
+        for row_id, (_, allowed) in self.expected.items():
+            self.assertEqual(allowed, set(by_id[row_id]["proposedParserLabels"]))
+
+    def test_h4_fallback_prefers_open_rows_over_reviewed_ok(self):
+        """P1 gate (H5308/B1, cf. #516): when needs-review rows exist the expected
+        H4 set must be those open rows, not the reviewed-ok fallback."""
+        import copy as _copy
+        h4 = VALIDATOR.read_json("data/lexico/h4_semantic_field_review_packet.json")
+        patched = _copy.deepcopy(h4)
+        first_id = patched["sampleRows"][0]["reviewId"]
+        patched["sampleRows"][0]["reviewStatus"] = "needs-review"
+        original = VALIDATOR.read_json
+        VALIDATOR.read_json = lambda rel: patched if "h4_semantic" in rel else original(rel)
+        try:
+            h4_expected = VALIDATOR.expected_sheets()["csl-atlas-h4-semantic-field_89rows"]
+        finally:
+            VALIDATOR.read_json = original
+        self.assertEqual(list(h4_expected), [first_id])
 
 
 if __name__ == "__main__":

@@ -127,6 +127,8 @@
     "build-review-sheets": "node scripts/build-review-sheets.mjs",
     "test-review-decisions": "python -m unittest scripts.test_validate_review_decisions",
     "validate-review-decisions": "python scripts/validate_review_decisions.py",
+    "build-review-pool-assignment": "node scripts/build-review-pool-assignment.mjs",
+    "dry-run-review-pool": "python scripts/dry_run_review_pool.py",
     "build-ls-abbreviation-frequency": "python scripts/obs/ls_abbreviation_frequency.py",
     "test-ls-abbreviation-frequency": "python -m unittest scripts.test_ls_abbreviation_frequency",
     "test-forensic-pins": "python -m pytest tests/forensic -q -p no:cacheprovider"
