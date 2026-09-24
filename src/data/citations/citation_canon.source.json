@@ -1,9 +1,9 @@
 {
   "dataset": "citation_canon",
-  "commit": "824cf79d934e612c9c91a78f9358074f430d555c",
+  "commit": "8adad5c2b777015821b1646fb3fe5cb460a1b5cc",
   "dirty": true,
-  "builderSha256": "b459f40805619cee9912084fde2860c221187720e6475146f41b937d0ae1f35e",
-  "generatedAt": "2026-09-24T03:27:33.703Z",
+  "builderSha256": "b519311ec802522429189145c8753fcf2c21e91b6abe8aa8241590b84e81a7e7",
+  "generatedAt": "2026-09-24T11:17:43.602Z",
   "generatedBy": "npm run build-citation-canon",
   "sourceFiles": [
     "data/citations/ls_citation_edges.tsv",

@@ -18,20 +18,20 @@ authorities. In the Cologne Digital Sanskrit Dictionaries (CDSL) digitizations, 
 are machine-readable: every `<ls>` ("literary source") tag names the text a lexicographer
 invoked as evidence. I extract all 1,496,302 `<ls>` tags from the 11 CDSL dictionaries with a
 usable abbreviation key, resolve and canonicalize them into a citation-frequency graph of
-828,505 citations of 912 distinct source texts, and release the graph as a documented,
+826,752 citations of 874 distinct source texts, and release the graph as a documented,
 reproducible dataset. Three findings follow. First, the pooled citation mass is heavily
 concentrated: the top 10 texts (led by the Mahābhārata, Ṛgveda, Rāmāyaṇa, and Manusmṛti) carry
-33.7% of all citations and the top 50 carry 71.0% — in a pool that is 64.7% PWG's, so this is
+34.9% of all citations and the top 50 carry 72.5% — in a pool that is 64.9% PWG's, so this is
 a volume-weighted figure, not a tradition-wide average. Second, the shared canon is thin:
-one text (the Ṛgveda) is cited by all 11 dictionaries once its spelling variants are folded,
-four more reach every dictionary with a usable yield, only 29 labels (3.2%; 38 of 875 after folding) appear in seven or
-more, and 608 of 912 node labels (66.7%; 568 of 875 after folding) are private to a single
-dictionary. Third, the arrangement of citations is significantly *modular*, not nested
-(Barber bipartite Q = 0.4995 vs. degree-preserving null 0.4295, permutation p = 0.001; NODF
-24.4 *below* the null 29.0): given each dictionary's breadth and each text's popularity, the
+one text (the Ṛgveda) is cited by all 11 dictionaries, four more reach every dictionary with
+a usable yield, only 38 texts (4.3%) appear in seven or more, and 567 of 874 nodes (64.9%)
+are private to a single dictionary. Third, the arrangement of citations is significantly *modular*, not nested
+(Barber bipartite Q = 0.4757 vs. degree-preserving null 0.4094, permutation p = 0.001; NODF
+26.9 *below* the null 31.4): given each dictionary's breadth and each text's popularity, the
 specific assignments cluster more than that constraint forces. The partition the test finds is
-two pairs — the Apte line (`ap`, `ap90`) and Schmidt with the PW-*Nachträge* (`sch`, `pwkvn`),
-both pairs that share an abbreviation key by construction — and seven singletons; the tradition
+three pairs — the Apte line (`ap`, `ap90`) and Schmidt with the PW-*Nachträge* (`sch`, `pwkvn`),
+both pairs that share an abbreviation key by construction, plus Macdonell's four-node row
+attached to Edgerton's (`bhs`, `md`) — and five singletons; the tradition
 profiles alongside the clustering (Buddhist, classical-kāvya, Vedic, the broad-spectrum Petersburg
 lineage) are read from a curated text→tradition map, not from the partition. The graph is a
 reusable evidence layer for studies of lexicographic descent, and its per-locus verification is
@@ -62,7 +62,7 @@ null (§4), so the test asks whether the arrangement is *more*
 nested or *more* modular than that.
 
 **Contributions.** (1) A documented, reproducible citation-frequency graph over 11 CDSL
-dictionaries — 828,505 resolved citations, 912 canonical text nodes, 1,701 dictionary→text
+dictionaries — 826,752 resolved citations, 874 canonical text nodes, 1,699 dictionary→text
 edges — with per-dictionary abbreviation-key resolution, an audited non-text filter, and a
 curated alias fold ([`data/citations/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/citations)).
 (2) Headline distributional results: concentration, reach, and the single-dictionary tail (§3).
@@ -116,23 +116,26 @@ Full method detail and change log:
 6. **Canonical folding.** Editorial tails are stripped; nodes fold under a diacritic- and
    case-insensitive key (`ṚGVEDA` ≡ `Ṛg-veda` ≡ `Ṛgveda`); a small hand-verified alias table
    folds the highest-count author's-genitive and title-synonym forms (`MANU'S Gesetzbuch` +
-   `Mānavadharmaśāstra` → *Manusmṛti*). Every alias is a well-established identification;
-   the long synonymy tail is deliberately left unmerged and quantified in §5.
+   `Mānavadharmaśāstra` → *Manusmṛti*) and, since the 24-09-2026 re-freeze, the 37
+   eye-checked transliteration-variant pairs of the H5295 fold table (`Raghuvanśa` →
+   *Raghuvaṃśa*, `Naishadhacharita` → *Naiṣadhacarita*, `Rigveda` → *Ṛgveda*, …; §5.5).
+   Every alias is a well-established identification; the long synonymy tail beyond
+   transliteration is deliberately left unmerged and quantified in §5.
 
 **Table 1 — corpus and coverage.** Source:
 [`data/citations/README.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/README.md)
 coverage table (raw/filtered/resolved) and
 [`ls_citation_edges.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_edges.tsv)
-(distinct texts, recomputed 11-07-2026; where the README's per-dictionary distinct-text counts
+(distinct texts, recomputed 24-09-2026; where the README's per-dictionary distinct-text counts
 differ by a few units, the committed edge list is authoritative). `% text` =
 resolved ÷ (raw − non-text). `*` = borrowed key.
 
 | Code | Dictionary | Raw `<ls>` | Non-text filtered | Resolved text citations | % text | Distinct texts |
 |---|---|--:|--:|--:|--:|--:|
 | pwg | Böhtlingk & Roth, *Sanskrit-Wörterbuch* (1855–1875) | 801,790 | 0 | 536,172 | 66.9% | 475 |
-| ap\* | Apte, *Practical Sanskrit-English Dictionary*, revised ed. (1957–1959) | 68,273 | 0 | 57,113 | 83.7% | 155 |
+| ap\* | Apte, *Practical Sanskrit-English Dictionary*, revised ed. (1957–1959) | 68,273 | 0 | 57,112 | 83.7% | 155 |
 | pw | Böhtlingk, *Sanskrit-Wörterbuch in kürzerer Fassung* (1879–1889) | 98,484 | 0 | 50,701 | 51.5% | 243 |
-| ben | Benfey, *Sanskrit-English Dictionary* (1866) | 49,234 | 0 | 49,003 | 99.5% | 96 |
+| ben | Benfey, *Sanskrit-English Dictionary* (1866) | 49,389 | 0 | 47,251 | 95.7% | 94 |
 | bhs | Edgerton, *Buddhist Hybrid Sanskrit Dictionary* (1953) | 48,419 | 0 | 40,875 | 84.4% | 136 |
 | ap90 | Apte, *Practical Sanskrit-English Dictionary* (1890) | 43,894 | 0 | 37,993 | 86.6% | 149 |
 | mw | Monier-Williams, *Sanskrit-English Dictionary* (1899) | 320,830 | 63,582 | 20,250 | 7.9% | 5 |
@@ -140,9 +143,9 @@ resolved ÷ (raw − non-text). `*` = borrowed key.
 | sch\* | Schmidt, *Nachträge zum Sanskrit-Wörterbuch* (1928) | 31,041 | 0 | 11,496 | 37.0% | 160 |
 | pwkvn\* | *Petersburger Wörterbuch* (PW) *Nachträge und Verbesserungen* | 17,629 | 0 | 8,386 | 47.6% | 172 |
 | md | Macdonell, *Sanskrit-English Dictionary* (1893) | 58 | 0 | 47 | 81.0% | 4 |
-| **total** | | **1,496,302** | **63,582** | **828,505** | **57.8%** | **912** |
+| **total** | | **1,496,457** | **63,582** | **826,752** | **57.7%** | **874** |
 
-The overall resolution ceiling — 57.8% of non-filtered tags resolve to a canonical text — and
+The overall resolution ceiling — 57.7% of non-filtered tags resolve to a canonical text — and
 its two largest causes (MW's tag reuse, partial borrowed keys) are treated as limitations in
 §5, not hidden in the denominator.
 
@@ -150,35 +153,35 @@ its two largest causes (MW's tag reuse, partial borrowed keys) are treated as li
 
 **Concentration.** Citation mass is strongly top-heavy. Computed from
 [`ls_citation_nodes.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_nodes.tsv)
-(n = 912 texts, 828,505 citations, data as of 11-07-2026): the top 10 texts carry 33.7% of
-all citations, the top 20 carry 49.7%, the top 50 carry 71.0%, and the top 100 carry 84.9%.
-These are properties of the *pool*, and the pool is 64.7% PWG (next: Apte 6.9%, pw 6.1%,
-Benfey 5.9%), so they are volume-weighted toward Böhtlingk's habits. Excluding PWG the pooled
-top 10 carry 37.7% and the top 50 73.4% (657 texts) — the same order of concentration, so the
+(n = 874 texts, 826,752 citations, data as of 24-09-2026): the top 10 texts carry 34.9% of
+all citations, the top 20 carry 50.9%, the top 50 carry 72.5%, and the top 100 carry 85.9%.
+These are properties of the *pool*, and the pool is 64.9% PWG (next: Apte 6.9%, pw 6.1%,
+Benfey 5.7%), so they are volume-weighted toward Böhtlingk's habits. Excluding PWG the pooled
+top 10 carry 40.3% and the top 50 75.5% (623 texts) — the same order of concentration, so the
 direction does not depend on PWG. Per-dictionary top-*k* shares are not compared here: a top-10
 share depends on how many texts a dictionary cites (Macdonell's four texts give 100%), so those
 figures are not comparable with each other or with the pool
 ([f12 ledger](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md) C1).
 A working lexicographer's evidentiary world was, in volume terms, a few dozen texts deep.
 
-**Table 2 — the most-cited texts.** Source: `ls_citation_nodes.tsv` (n = 912; folded canonical
-nodes; 11-07-2026). `#dicts` = how many of the 11 dictionaries cite the text at least once.
+**Table 2 — the most-cited texts.** Source: `ls_citation_nodes.tsv` (n = 874; folded canonical
+nodes; 24-09-2026). `#dicts` = how many of the 11 dictionaries cite the text at least once.
 
 | Citations | #dicts | Text |
 |--:|--:|---|
-| 56,818 | 8 | Mahābhārata |
-| 38,187 | 7 | Ṛgveda |
-| 38,155 | 9 | Rāmāyaṇa |
-| 26,365 | 7 | Manusmṛti |
+| 56,822 | 8 | Mahābhārata |
+| 39,025 | 11 | Ṛgveda |
+| 38,154 | 9 | Rāmāyaṇa |
+| 28,140 | 8 | Manusmṛti |
+| 24,300 | 8 | Bhāgavata-Purāṇa |
+| 24,025 | 8 | Raghuvaṃśa |
 | 21,791 | 3 | Aṣṭādhyāyī (Pāṇini) |
-| 21,330 | 5 | Bhāgavata-Purāṇa |
 | 20,232 | 7 | Śabdakalpadruma |
-| 19,922 | 7 | Raghuvaṃśa |
 | 18,073 | 3 | Abhidhānacintāmaṇi |
 | 18,030 | 4 | Indische Sprüche |
 | 17,015 | 9 | Kathāsaritsāgara |
 | 14,918 | 8 | Amarakoṣa |
-| 14,743 | 6 | Pañcatantra |
+| 14,853 | 7 | Pañcatantra |
 | 13,685 | 7 | Harivaṃśa |
 | 13,246 | 6 | Medinīkośa |
 
@@ -194,34 +197,32 @@ almost entirely PWG (21,509, its third-largest source), and *Indische Sprüche* 
 citing his own anthology (see §5 on its verification).
 
 **Reach: the canon is thin.** Reach is nearly the inverse of volume. Computed from
-`ls_citation_nodes.tsv` (n = 912; 11-07-2026):
+`ls_citation_nodes.tsv` (n = 874; 24-09-2026):
 
 | Cited by *k* dictionaries | Texts |
 |--:|--:|
-| 11 | 0 |
+| 11 | 1 |
 | 10 | 0 |
 | 9 | 4 |
-| 8 | 13 |
-| 7 | 12 |
-| 6 | 20 |
-| 5 | 25 |
-| 4 | 31 |
-| 3 | 102 |
-| 2 | 97 |
-| 1 | 608 |
+| 8 | 19 |
+| 7 | 14 |
+| 6 | 23 |
+| 5 | 16 |
+| 4 | 30 |
+| 3 | 97 |
+| 2 | 103 |
+| 1 | 567 |
 
-On the committed labels no text reaches all 11 dictionaries — but that ceiling is set by the
-two thin rows (Monier-Williams contributes 5 nodes, Macdonell 4; §5.2, §5.4) and by unfolded
-spelling: `Rigveda` (837 citations; Benfey, Edgerton, Vaidya, Macdonell) is the Ṛgveda of the
-other seven, so the **Ṛgveda is cited by every one of the 11 dictionaries** once that
-§5.5-listed variant is folded — a count that leans on the same two thin rows, which is why the
-sturdier statement is the next one. Over the nine dictionaries with a usable yield, four texts
-reach every row: the Rāmāyaṇa, the Kathāsaritsāgara, the Bhagavadgītā, and the
-Mārkaṇḍeya-Purāṇa. Only 29 texts (3.2%) reach seven or more dictionaries — but those 29 carry
-44.1% of all citation volume. Meanwhile 608 of 912 node labels (66.7%) are private to a single
-dictionary, jointly carrying 11.1% of the volume; 31 of those labels are variants of texts
-cited elsewhere and 9 more merge with another private label (the 37-pair fold table of §5.5),
-so the folded floor is 568 of 875 (64.9%). The picture is a thin, heavily-cited universal head
+Exactly one text, the **Ṛgveda, is cited by every one of the 11 dictionaries** — since the
+24-09-2026 re-freeze folds `Rigveda` (837 citations; Benfey, Edgerton, Vaidya, Macdonell) into
+it; on the earlier labels none reached 11 — a count that leans on the two thin rows
+(Monier-Williams contributes 5 nodes, Macdonell 4; §5.2, §5.4), which is why the sturdier
+statement is the next one. Over the nine dictionaries with a usable yield, five texts reach
+every row: the Ṛgveda, the Rāmāyaṇa, the Kathāsaritsāgara, the Bhagavadgītā, and the
+Mārkaṇḍeya-Purāṇa. Only 38 texts (4.3%) reach seven or more dictionaries — but those 38 carry
+52.4% of all citation volume. Meanwhile 567 of 874 nodes (64.9%) are private to a single
+dictionary, jointly carrying 9.6% of the volume (on the 06-07-2026 labels, before the 37-pair
+fold of §5.5: 608 of 912, 66.7%, 11.1% of volume). The picture is a thin, heavily-cited universal head
 over a long private tail — which raises the topological question of §4: is the tail
 structured?
 
@@ -234,76 +235,78 @@ authorities, the matrix should be *modular*: blocks of texts co-cited by a group
 dictionaries and absent elsewhere. Following the committed test
 ([`scripts/build-citation-canon.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-canon.mjs)
 → [`citation_canon.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/citations/citation_canon.json),
-generated 07-07-2026; matrix 11 × 912, 1,701 edges, fill 0.170), I compute NODF nestedness
+generated 24-09-2026; matrix 11 × 874, 1,699 edges, fill 0.177), I compute NODF nestedness
 (Almeida-Neto et al. 2008) and Barber (2007) bipartite modularity Q (label propagation, best of
 6 restarts), each against 1,000 degree-preserving (fixed-fixed) permutation nulls; permutation
 p = (r+1)/(n+1).
 
 **Result: the matrix is significantly modular and, if anything, *less* nested than chance.**
-NODF = 24.44 vs. null mean 28.98 ± 0.18 (z = −25.7, p = 1.0); Barber Q = 0.4995 (9 modules)
-vs. null mean 0.4295 ± 0.0008 (z = 83.8, p = 0.001). The degree-preserving null holds each
+NODF = 26.86 vs. null mean 31.36 ± 0.19 (z = −24.3, p = 1.0); Barber Q = 0.4757 (8 modules)
+vs. null mean 0.4094 ± 0.0008 (z = 81.9, p = 0.001). The degree-preserving null holds each
 dictionary's breadth and each text's popularity fixed, so this is a statement about
 *arrangement*, not about the concentration already reported in §3: given how many texts each
 dictionary cites and how popular each text is, the specific assignments cluster more than
 that constraint forces. Note what the null can and cannot tell apart: it is the margins-only
 ensemble, and a one-canon matrix (one ranked list, real breadths sampled from it with weight
 1/(rank + 1), no communities by construction) sits on it on both statistics (NODF p =
-0.95, Q p = 0.39); so "less nested than the null" means less nested than a one-canon random
+0.71, Q p = 0.28); so "less nested than the null" means less nested than a one-canon random
 draw, not that the shared-canon reading runs the other way, and "more modular than the null"
 is the finding.
 
-**What the partition is.** The optimiser's nine modules on the committed matrix (same seed
-as the committed run) are `ap`+`ap90` · `pwkvn`+`sch` · `ben` · `bhs` · `lrv` · `md` ·
-`mw` · `pw` · `pwg` — two pairs and seven singletons. The "Petersburg lineage" is *not* a
+**What the partition is.** The optimiser's eight modules on the committed matrix (same seed
+as the committed run) are `ap`+`ap90` · `pwkvn`+`sch` · `bhs`+`md` · `ben` · `lrv` · `mw` ·
+`pw` · `pwg` — three pairs and five singletons. The "Petersburg lineage" is *not* a
 module (PWG and pw each stand alone), and there is no "Vedic" pair: `mw` is a singleton in every
-real-data arm that keeps it (folded, regenerated), and `md` pairs with `bhs` after the §5.5 fold and in a regenerated matrix,
-where the count drops to eight. The read-out is one run of a heuristic label-propagation
+real-data arm that keeps it, and the `bhs`+`md` pair is Macdonell's four Vedic nodes attached
+to Edgerton's Buddhist row — a heuristic placement of a four-node row with no shared profile
+(Table 3); on the 06-07-2026 labels `md` was a singleton and the count was nine. The read-out is one run of a heuristic label-propagation
 optimiser (§5.7) and moves under input drift alone; it is the partition the statistic *found*,
 not a fact about the dictionaries. The tradition *names* below come from the profiles of
 Table 3, not from that partition.
 
-**The alternative the partition admits.** The two non-singleton modules are exactly the two
-pairs that share an abbreviation key by construction (§2, step 5: `ap` borrows `ap90`'s key,
+**The alternative the partition admits.** The two non-singleton modules that carry any weight
+are exactly the two pairs that share an abbreviation key by construction (§2, step 5: `ap` borrows `ap90`'s key,
 `sch` and `pwkvn` borrow PWG's). A pair resolved through one key is co-cited under one set of
 canonical labels while every other pair is resolved through two — a resolver artefact that is
 sufficient for both observed pairs. Until the borrowed keys are unified (H5407), "citation
 community" and "shared key" are not distinguishable in this graph.
 
 **Is the modular margin a label artefact? Not of the known variants, nor of per-dictionary
-spelling privacy.** Folding the 37 known variants leaves the margin flat (below). A control
+spelling privacy.** The 37 known variants are folded in the committed data since 24-09-2026;
+the margin was flat under that fold (below). A control
 then isolates what an unfolded *private* variant changes — the node label: take the one-canon matrix above and relabel a
 fraction of each dictionary's texts to a dictionary-private spelling (text and row breadth
 unchanged; the column margins change, so the null is re-drawn). Over 12 runs (three
-seeds × fractions 0.05–0.3) the margin over the null never exceeds 0.0026 (z ≤
-3.18), against 0.070 and z = 83.8 here; the *verdict* at that margin is seed- and
-fraction-sensitive (of 14 constructed runs including the two arm-seed runs, one reads modular
-alone at p = 0.011, six nested-and-modular, three nested, four neither; at one fraction the
+seeds × fractions 0.05–0.3) the margin over the null never exceeds 0.0016 (z ≤
+1.97), against 0.066 and z = 81.9 here; the *verdict* at that margin is seed- and
+fraction-sensitive (of 14 constructed runs including the two arm-seed runs, two read modular
+alone at p ≤ 0.027, three nested-and-modular, three nested, six neither; at two fractions the
 three sweep seeds return three different readings), which is a warning about reading a p-value near 0.05 on a matrix like this, not a
-mechanism. Private labels inflate *raw* Q in observed and null alike: folding the 37 known
-variant pairs lowers Q from 0.4995 to 0.4759 and the null from 0.4295 to 0.4094, leaving the
-margin at 0.067 (0.070 under the four-name fold of §5.5, z up from 83.8 to 89.5); dropping the
-two thin rows leaves it at 0.071
+mechanism. Private labels inflate *raw* Q in observed and null alike: on the 06-07-2026
+labels Q was 0.4995 against a null of 0.4295 (margin 0.070, z 83.8); folding the 37 variant
+pairs — the committed data since 24-09-2026 — lowers both (0.4757 vs. 0.4094) and leaves the
+margin at 0.066; dropping the two thin rows leaves it at 0.067
 ([f12 ledger](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md) C3–C4, C7;
 arms in [`f12_a50_topology_arms.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f12_a50_topology_arms.json)).
 
-**Tradition profiles.** A curated 119-text text→tradition map
+**Tradition profiles.** A curated 114-text text→tradition map
 ([`tradition_tags.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/tradition_tags.tsv),
-confidence-scored, covering 80.3% of total citation volume) gives each dictionary a tradition
+confidence-scored, covering 80.6% of total citation volume) gives each dictionary a tradition
 profile. It does not name the optimiser's modules (listed above); it says what each row cites.
 **Table 3 — per-dictionary tradition profile.** Source: `tradition_tags.tsv` joined to
-`ls_citation_edges.tsv` (tagged volume per dictionary; recomputed 11-07-2026). Shares are of
+`ls_citation_edges.tsv` (tagged volume per dictionary; recomputed 24-09-2026). Shares are of
 each dictionary's *tagged* volume; the tagged fraction is given per row.
 
 | Dict | Tagged volume (share of dict) | Leading traditions |
 |---|--:|---|
 | pwg | 416,050 (78%) | lexical-kośa 21% · classical-kāvya 20% · epic 19% · vedic 14% |
-| ap | 52,231 (91%) | classical-kāvya 59% · epic 15% · dharmaśāstra 11% |
-| ben | 44,859 (92%) | classical-kāvya 39% · epic 30% · dharmaśāstra 15% |
+| ap | 52,230 (91%) | classical-kāvya 59% · epic 15% · dharmaśāstra 11% |
+| ben | 43,486 (92%) | classical-kāvya 40% · epic 31% · dharmaśāstra 15% |
+| pw | 35,859 (71%) | classical-kāvya 27% · epic 20% · dharmaśāstra 17% · vedic 15% |
 | ap90 | 34,494 (91%) | classical-kāvya 79% · dharmaśāstra 10% · epic 5% |
-| pw | 34,034 (67%) | classical-kāvya 28% · epic 21% · dharmaśāstra 18% · vedic 14% |
 | bhs | 32,405 (79%) | **buddhist 98%** |
 | mw | 20,250 (100%) | vedic 87% · buddhist 9% |
-| lrv | 14,304 (87%) | classical-kāvya 76% · dharmaśāstra 15% |
+| lrv | 15,065 (91%) | classical-kāvya 77% · dharmaśāstra 15% |
 | sch | 9,944 (86%) | classical-kāvya 26% · lexical-kośa 24% · epic 12% |
 | pwkvn | 6,755 (81%) | classical-kāvya 27% · epic 18% · dharmaśāstra 13% |
 | md | 47 (100%) | vedic 100% |
@@ -321,8 +324,9 @@ kośas at scale (a fifth of PWG's tagged volume). Monier-Williams' small tagged 
 Macdonell read as Vedic, though both on unrepresentative yields (§5). Benfey sits between the
 kāvya and epic profiles, consistent with its chrestomathy-anchored design.
 
-**Caveat (blocking for submission).** The tradition map is `inferred`: 0 of its 119 rows are
-human-reviewed as of 11-07-2026. The *topology* result (modularity) is independent of the map;
+**Caveat (blocking for submission).** The tradition map is `inferred`: 0 of its 114 rows are
+human-reviewed as of 24-09-2026 (119 rows before the H5407 fold removed five duplicate
+variant labels). The *topology* result (modularity) is independent of the map;
 only the tradition *names* in Table 3 depend on it. The review sheet is queued
 ([agenda backlog #9](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ATLAS_RESEARCH_AGENDA.md));
 this section must be re-stated over the reviewed map before submission.
@@ -344,22 +348,25 @@ this section must be re-stated over the reviewed map before submission.
 4. **Keyless dictionaries are excluded**, notably Grassmann (`gra`, Vedic-specific), and `ieg`
    is an epigraphic outlier citing inscription corpora (Epigraphia Indica, South Indian
    Inscriptions) — a separate citation universe, deliberately out of the text graph.
-5. **The title-synonymy tail is unmerged and inflates the private tail.** The curated alias
-   table folds only hand-verified identifications, so spelling variants outside it remain
-   separate nodes: Vaidya's `Raghuvanśa` (4,101 citations) does not fold into *Raghuvaṃśa*
-   (19,922), nor `Manusmṛiti` (1,762) into *Manusmṛti*, nor `Rigveda` (837) into *Ṛgveda*, nor
-   `Bhāgavata` (2,968) into *Bhāgavata-Purāṇa*. Each such miss both understates a major text's
-   reach and adds spurious single-dictionary "texts" to the 608 of §3. The direction of the
-   bias is therefore *against* the shared-canon reading on reach and privacy. On topology,
-   measured rather than guessed: the modularity result (§4) is computed on the matrix as
-   committed; folding the four names above leaves the margin over the null unchanged (Q − null
-   0.070 → 0.070, z 83.8 → 89.5) and folding all 37 label-variant pairs of the fold table — an
-   upper bound, since that tier also merges doubled consonants and parenthetical authors —
-   lowers it to 0.067; the verdict "modular, p = 0.001" survives both. Raw Q falls with either
-   fold (0.4995 → 0.4972 → 0.4759) only because the null falls with it. The residual is
-   quantified in [`f12_a50_variant_fold.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f12_a50_variant_fold.tsv)
-   (37 rows) and is the dataset's top QA item
-   ([H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md)).
+5. **Transliteration variants are folded since 24-09-2026; the title-synonymy tail beyond
+   them is unmerged.** The curated alias table folds only hand-verified identifications. Until
+   the re-freeze ([H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md))
+   spelling variants outside it were separate nodes — Vaidya's `Raghuvanśa` (4,101 citations)
+   beside *Raghuvaṃśa* (19,922), `Manusmṛiti` (1,762) beside *Manusmṛti*, `Rigveda` (837)
+   beside *Ṛgveda*, `Bhāgavata` (2,968) beside *Bhāgavata-Purāṇa* — each miss understating a
+   major text's reach and adding a spurious single-dictionary "text" to the private tail (608 of
+   912 labels on the 06-07-2026 freeze; 567 of 874 now). The H5295 ledger's fold table listed 37
+   such pairs (those four plus 33 ASCII-digraph collisions: `sh`/`ṣ`, `ch`/`c`, `ri`/`ṛ`), all
+   eye-checked; all 37 are now `CANON_ALIAS` entries of the builder and the residual table
+   [`f12_a50_variant_fold.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f12_a50_variant_fold.tsv)
+   is empty. The direction of the earlier bias was *against* the shared-canon reading on reach
+   and privacy. On topology, measured rather than guessed: on the old labels folding the four
+   names left the margin over the null unchanged (Q − null 0.070 → 0.070, z 83.8 → 89.5) and
+   folding all 37 pairs lowered it to 0.067; the committed matrix now carries the fold (§4:
+   0.4757 − 0.4094 = 0.066) and the verdict "modular, p = 0.001" is unchanged. Raw Q fell with
+   the fold (0.4995 → 0.4759) only because the null fell with it. What remains unmerged is a
+   text under a second, lesser-used title — and `AUFRECHT` (12,718 citations, a scholar
+   shorthand of ambiguous referent), left unresolved rather than guessed.
 6. **Counts are per text, not per locus.** The graph discards the book/verse locus, so it
    cannot say whether a citation is *correct* — only that it was made. Per-locus verification
    is a companion program, with first waves executed: the Harivaṃśa resolution census
@@ -378,7 +385,7 @@ this section must be re-stated over the reviewed map before submission.
    but not in the significance tests. Barber Q via label propagation is a heuristic lower
    bound, not an exhaustive optimum.
 8. **The tradition map is inferred and unreviewed** (§4 caveat): the tradition *names* await the
-   119-row human review; the modularity statistic does not depend on them.
+   114-row human review; the modularity statistic does not depend on them.
 
 ## 6 Conclusion
 
@@ -386,12 +393,13 @@ Read as a citation network, the Sanskrit dictionary tradition does not read from
 Its pooled citation mass concentrates on a few dozen texts, but the *arrangement* of citations
 is significantly modular: given how widely each dictionary read and how popular each text was,
 the specific assignments cluster beyond what a one-canon draw forces. What the test partitions
-is two key-sharing pairs and seven singletons; read through the tradition map, a Buddhist
+is three pairs — two of them key-sharing — and five singletons; read through the tradition map, a Buddhist
 lexicon, a kāvya-schoolroom line, a Vedic profile, and the omnivorous Petersburg lineage each
 show their own profile of authorities, sharing a thin universal head — Rāmāyaṇa, Mahābhārata,
 Ṛgveda, Manusmṛti — of which one text, the Ṛgveda, reaches all eleven dictionaries and four
-reach every dictionary with a usable yield. The partition is softer than its names: the two
-pairs it finds are the two pairs resolved through a borrowed abbreviation key (§4). The "canon
+reach every dictionary with a usable yield. The partition is softer than its names: two of
+the three pairs it finds are the two pairs resolved through a borrowed abbreviation key, and
+the third attaches Macdonell's four-node row to Edgerton's (§4). The "canon
 of Sanskrit literature" implied by the dictionaries is a set of dictionary-specific reading lists with a
 very small intersection.
 
@@ -408,26 +416,32 @@ a versioned data release (Zenodo DOI) is the remaining packaging step before sub
 All tables and statistics in this paper are computed from committed artifacts in
 [csl-atlas](https://github.com/sanskrit-lexicon/csl-atlas):
 [`ls_citation_edges.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_edges.tsv)
-(1,701 edges),
+(1,699 edges),
 [`ls_citation_nodes.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_nodes.tsv)
-(912 nodes),
+(874 nodes),
 [`tradition_tags.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/tradition_tags.tsv)
-(119 rows),
+(114 rows),
 [`citation_canon.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/citations/citation_canon.json)
-(topology statistics + provenance sidecar). The graph rebuilds in ~1 minute with
+(topology statistics + provenance sidecar),
+[`ls_citation_graph.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_graph.source.json)
+(the revision binding below). The graph rebuilds in ~1 minute with
 `python data/citations/build_ls_citation_graph.py` against sibling `csl-orig` and `csl-guides`
 checkouts; the topology statistics with `npm run build-citation-canon`. **Revision binding.**
-The committed TSVs were frozen on 06-07-2026 without a recorded sibling revision; every figure
-in this paper is bound to those files by hash (`ls_citation_edges.tsv` SHA-256 `6c7f7065…3491`,
-`ls_citation_nodes.tsv` `29d1b588…8711`) and reproduces from them byte-for-byte. A rebuild at
-`csl-orig@f4c08c57` + `csl-guides@64c967d` (24-09-2026, both clean) drifts — Benfey's resolution (`my Sanskrit Chrestomathy` 3,017 → 1,599), one Apte
-citation, and a `Weber`/`WEBER` key-case change — and moves six percentage figures by up to 0.2
-points (top-50 share 71.0 → 71.2, PWG share 64.7 → 64.9, private volume 11.1 → 10.9) and
-four counts (−1,753 citations, −2 edges, −1 node, −1 private label) while
-leaving every verdict and p-value unchanged (Q 0.5003 vs null 0.4295, p = 0.001; 8 modules
-instead of 9). Since 24-09-2026 the builder writes `ls_citation_graph.source.json` (csl-atlas
-and sibling revisions, dirty flags, key, builder and output hashes) on every run; the re-freeze
-at a recorded revision is H5407. Claim-by-claim falsification of this paper, with the drift
+The committed TSVs were re-frozen on 24-09-2026 (H5407) at a recorded sibling revision pair —
+`csl-orig@f4c08c578b330e2379e38f54d3a541f1564b8eee` and
+`csl-guides@64c967d1d08d26868bbbc289b4aacec7f4a8f3ff`, both clean, `abbreviations.json`
+SHA-256 `dfd9fb68…8a48` — and the builder writes that binding to `ls_citation_graph.source.json`
+(csl-atlas and sibling revisions, dirty flags, key, builder and output hashes) on every run;
+two runs at that pair are byte-identical. Every figure in this paper is bound to those files
+by hash (`ls_citation_edges.tsv` SHA-256 `41bee931…3bd0`, `ls_citation_nodes.tsv`
+`6039af4d…e474`) and reproduces from them byte-for-byte. The previous freeze (06-07-2026)
+recorded no revision; its figures differ from these by Benfey's `<ls>` edits in `csl-orig`
+between 06-07 and 09-07-2026 (BEN issues #19, #21, #27: the bare `Chr.` tag for *my Sanskrit
+Chrestomathy* 3,017 → 1,602 and `Gorr.` 347 → 15 after page numbers were folded into fewer
+tags), one Apte citation, a `Weber`/`WEBER` key-case change, and the 37-pair variant fold of
+§5.5 — 828,505 citations / 912 nodes / 1,701 edges → 826,752 / 874 / 1,699; top-50 share
+71.0 → 72.5; Q 0.4995 → 0.4757 with the null 0.4295 → 0.4094; every verdict and p-value
+unchanged. Claim-by-claim falsification of this paper, with the drift
 table and the constructed controls behind §4:
 [`A50_CLAIM_FALSIFICATION_LEDGER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md).
 An interactive view
@@ -484,5 +498,9 @@ Zenodo release. `/venue-scout` later.
 - Full prose draft 11-07-2026 by Fable 5 (`claude-fable-5`) under
   [H677](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H677-Fable_csl-atlas_a50-citation-graph-prose_11.07.26.md);
   all figures recomputed from the committed dataset in the same pass.
+- Re-freeze at a recorded `csl-orig`/`csl-guides` revision pair, 37-pair transliteration
+  fold and five duplicate tradition-map rows removed, 24-09-2026, by Fable 5.1
+  (`claude-fable-5-1`) under [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md);
+  every table and figure recomputed from the re-frozen dataset in the same pass.
 
 _Dr. Mārcis Gasūns_

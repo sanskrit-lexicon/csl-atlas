@@ -75,8 +75,55 @@ CANON_ALIAS_RAW = {
     'ŚATAPATHABRĀHMAṆA': 'Śatapatha-Brāhmaṇa',
     'ATHARVAVEDASAM̃HITĀ': 'Atharvaveda',
     'RĀJANIRGHAṆṬA': 'Rājanighaṇṭu',
+    # --- H5407 (24-09-2026): the 37 transliteration-variant pairs of
+    #     data/forensic/f12_a50_variant_fold.tsv (H5295), every pair eye-checked.
+    #     `named` = the four A50 §5.5 names; `ascii` = Anglo-Indian digraph /
+    #     ASCII-fold collisions (sh→ṣ, ch→c, ri→ṛ, missing anusvāra/virāma dots).
+    #     canonical = the diacritic IAST label the majority of dictionaries already use;
+    #     three table rows were flipped so the diacritic form is the target
+    #     (Harshacharita, SARVOPANISHATSĀRA, BRAHMOPANISHAD).
+    'Raghuvanśa': 'Raghuvaṃśa',  # named
+    'Bhāgavata': 'Bhāgavata-Purāṇa',  # named
+    'Manusmṛiti': 'Manusmṛti',  # named
+    'Rigveda': 'Ṛgveda',  # named
+    'VISHṆUPURĀṆA': 'Viṣṇu Purāṇa',  # ascii
+    'TAITTIRYASAM5HITĀ': 'Taittirīya Saṃhitā',  # ascii
+    "LĀṬYĀYANA'S ŚRAUTASŪTRA": 'Lāṭyāyana-Śrautasūtra',  # ascii
+    'Nirukta': 'Nirukta (Yāska)',  # ascii
+    'Bhāminīivilāsa': 'Bhāminīvilāsa',  # ascii
+    'Mudrārākshasa': 'Mudrārākṣasa',  # ascii
+    'Uttararāmacharita': 'Uttararāmacarita',  # ascii
+    'Naishadhacharita': 'Naiṣadhacarita',  # ascii
+    'Panchatantra': 'Pañcatantra',  # ascii
+    'Daśakumāracharita': 'Daśakumāracarita',  # ascii
+    'Mahāvīracharita': 'Mahāvīracarita',  # ascii
+    'Śṛingāratilaka': 'Śṛṅgāratilaka',  # ascii
+    'Trikāṇḍaśesha': 'Trikāṇḍaśeṣa',  # ascii
+    'Vikramānkadevacharita': 'Vikramāṅkadevacarita',  # ascii
+    'Chaurapanchaśika': 'Caurapañcāśikā',  # ascii
+    'ŚVETĀŚVATAROPANISHAD': 'Śvetāśvataropaniṣad',  # ascii
+    'MUṆḌAKOPANISHAD': 'Muṇḍakopaniṣad',  # ascii
+    'TAITTIRIYOPANISHAD': 'TAITTIRĪYOPANIṢAD',  # ascii
+    'Mitākshara': 'Mitākṣarā',  # ascii
+    'Mugdhabodha': 'Mugdhabodha (Vopadeva)',  # ascii
+    'Prabodhachandrodaya': 'Prabodhacandrodaya',  # ascii
+    'Kaṭhopanishad': 'Kaṭhopaniṣad',  # ascii
+    'Śikshā': 'Śikṣā',  # ascii
+    'KENOPANISHAD': 'Kenopaniṣad',  # ascii
+    'Chāṇakya': 'Cāṇakya',  # ascii
+    'KAIVALYOPANISHAD': 'KAIVALYOPANIṢAD',  # ascii
+    'Chandrāloka': 'Candrāloka',  # ascii
+    'Vārtika': 'Vārttika',  # ascii
+    'SARVOPANISHATSĀRA': 'SARVOPANIṢATSĀRA',  # ascii
+    'Chātakāshṭaka': 'Cātakāṣṭaka',  # ascii
+    'Harshacharita': 'Harṣacarita',  # ascii
+    'BRAHMOPANISHAD': 'BRAHMOPANIṢAD',  # ascii
+    'WILSON': 'Wilson (dictionary)',  # ascii
 }
 CANON_ALIAS = {fold_key(k): v for k, v in CANON_ALIAS_RAW.items()}
+# an alias target must never itself be an alias key (alias() is a single hop)
+_chain = [v for v in CANON_ALIAS.values() if CANON_ALIAS.get(fold_key(v), v) != v]
+assert not _chain, f'CANON_ALIAS chains: {_chain}'
 
 # --- load per-dict abbreviation -> expansion maps ---
 ab = json.load(open(os.path.join(ROOT,'csl-guides','src','data','abbreviations.json'),encoding='utf-8'))

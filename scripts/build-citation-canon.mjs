@@ -7,7 +7,7 @@
 // next-broader dictionary's — one canon in additive strata) or MODULAR (dicts
 // fall into disjoint tradition communities)?
 //
-// Method (agenda §2 PH1, §4 Dror et al. protocol): on the binarised 11×912
+// Method (agenda §2 PH1, §4 Dror et al. protocol): on the binarised 11×874 (874 texts since the H5407 re-freeze, 24-09-2026; 912 before)
 // matrix compute
 //   - NODF nestedness (Almeida-Neto et al. 2008), and
 //   - Barber (2007) bipartite modularity Q, optimised by label propagation

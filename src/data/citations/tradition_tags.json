@@ -34,11 +34,11 @@
     "other"
   ],
   "reviewState": {
-    "taggedTexts": 119,
+    "taggedTexts": 114,
     "reviewed": 0,
     "pctReviewed": 0,
     "byConfidence": {
-      "high": 94,
+      "high": 89,
       "medium": 14,
       "low": 11
     },
@@ -49,76 +49,76 @@
   },
   "coverage": {
     "nDicts": 11,
-    "taggedTexts": 119,
-    "taggedCites": 665373,
-    "note": "Shares are over the ~120 tagged texts (the modular signal: shared head + each dict's heaviest sources), not the full 912-text graph; per-dict taggedCoverage reports the covered fraction. Prose/iti citations (VCP, SKD, WIL) and MW's filtered grammatical markers are out of the <ls> graph entirely (see A50 §5)."
+    "taggedTexts": 114,
+    "taggedCites": 666585,
+    "note": "Shares are over the ~120 tagged texts (the modular signal: shared head + each dict's heaviest sources), not the full 874-text graph; per-dict taggedCoverage reports the covered fraction. Prose/iti citations (VCP, SKD, WIL) and MW's filtered grammatical markers are out of the <ls> graph entirely (see A50 §5)."
   },
   "traditions": [
     {
       "tradition": "classical-kavya",
-      "texts": 38,
-      "cites": 181956,
-      "share": 0.2735
+      "texts": 36,
+      "cites": 182893,
+      "share": 0.2744
     },
     {
       "tradition": "epic",
       "texts": 4,
-      "cites": 114307,
-      "share": 0.1718
+      "cites": 114310,
+      "share": 0.1715
     },
     {
       "tradition": "lexical-kosa",
       "texts": 8,
-      "cites": 92593,
-      "share": 0.1392
+      "cites": 92643,
+      "share": 0.139
     },
     {
       "tradition": "vedic",
-      "texts": 18,
-      "cites": 88287,
-      "share": 0.1327
+      "texts": 17,
+      "cites": 88964,
+      "share": 0.1335
     },
     {
       "tradition": "dharma-sastra",
-      "texts": 11,
-      "cites": 40152,
+      "texts": 10,
+      "cites": 40182,
       "share": 0.0603
     },
     {
       "tradition": "buddhist",
       "texts": 15,
       "cites": 36216,
-      "share": 0.0544
+      "share": 0.0543
     },
     {
       "tradition": "purana",
-      "texts": 5,
-      "cites": 33757,
-      "share": 0.0507
+      "texts": 4,
+      "cites": 34688,
+      "share": 0.052
     },
     {
       "tradition": "grammar-sastra",
       "texts": 3,
       "cites": 24195,
-      "share": 0.0364
+      "share": 0.0363
     },
     {
       "tradition": "other",
       "texts": 7,
-      "cites": 23307,
-      "share": 0.035
+      "cites": 21889,
+      "share": 0.0328
     },
     {
       "tradition": "medical",
       "texts": 2,
-      "cites": 13879,
-      "share": 0.0209
+      "cites": 13881,
+      "share": 0.0208
     },
     {
       "tradition": "jyotisa",
       "texts": 3,
       "cites": 9159,
-      "share": 0.0138
+      "share": 0.0137
     },
     {
       "tradition": "poetics-sastra",
@@ -136,16 +136,16 @@
   "perDict": [
     {
       "dict": "ap",
-      "taggedCites": 52231,
-      "totalInGraphCites": 57113,
+      "taggedCites": 52230,
+      "totalInGraphCites": 57112,
       "taggedCoverage": 0.9145,
       "dominantTradition": "classical-kavya",
       "byTradition": [
         {
           "tradition": "classical-kavya",
-          "cites": 30866,
+          "cites": 30865,
           "texts": 30,
-          "share": 0.591
+          "share": 0.5909
         },
         {
           "tradition": "epic",
@@ -286,58 +286,58 @@
     },
     {
       "dict": "ben",
-      "taggedCites": 44859,
-      "totalInGraphCites": 49003,
-      "taggedCoverage": 0.9154,
+      "taggedCites": 43486,
+      "totalInGraphCites": 47251,
+      "taggedCoverage": 0.9203,
       "dominantTradition": "classical-kavya",
       "byTradition": [
         {
           "tradition": "classical-kavya",
-          "cites": 17576,
+          "cites": 17599,
           "texts": 27,
-          "share": 0.3918
+          "share": 0.4047
         },
         {
           "tradition": "epic",
-          "cites": 13656,
+          "cites": 13659,
           "texts": 4,
-          "share": 0.3044
+          "share": 0.3141
         },
         {
           "tradition": "dharma-sastra",
-          "cites": 6556,
+          "cites": 6570,
           "texts": 3,
-          "share": 0.1461
-        },
-        {
-          "tradition": "other",
-          "cites": 3017,
-          "texts": 1,
-          "share": 0.0673
+          "share": 0.1511
         },
         {
           "tradition": "purana",
-          "cites": 2054,
+          "cites": 2056,
           "texts": 2,
-          "share": 0.0458
+          "share": 0.0473
+        },
+        {
+          "tradition": "other",
+          "cites": 1599,
+          "texts": 1,
+          "share": 0.0368
         },
         {
           "tradition": "medical",
-          "cites": 776,
+          "cites": 778,
           "texts": 1,
-          "share": 0.0173
+          "share": 0.0179
         },
         {
           "tradition": "vedic",
-          "cites": 771,
+          "cites": 772,
           "texts": 2,
-          "share": 0.0172
+          "share": 0.0178
         },
         {
           "tradition": "darsana",
           "cites": 316,
           "texts": 1,
-          "share": 0.007
+          "share": 0.0073
         },
         {
           "tradition": "poetics-sastra",
@@ -430,52 +430,52 @@
     },
     {
       "dict": "lrv",
-      "taggedCites": 14304,
+      "taggedCites": 15065,
       "totalInGraphCites": 16469,
-      "taggedCoverage": 0.8685,
+      "taggedCoverage": 0.9147,
       "dominantTradition": "classical-kavya",
       "byTradition": [
         {
           "tradition": "classical-kavya",
-          "cites": 10868,
-          "texts": 20,
-          "share": 0.7598
+          "cites": 11607,
+          "texts": 29,
+          "share": 0.7705
         },
         {
           "tradition": "dharma-sastra",
-          "cites": 2183,
-          "texts": 3,
-          "share": 0.1526
+          "cites": 2199,
+          "texts": 4,
+          "share": 0.146
         },
         {
           "tradition": "epic",
           "cites": 743,
           "texts": 2,
-          "share": 0.0519
+          "share": 0.0493
         },
         {
           "tradition": "poetics-sastra",
           "cites": 396,
           "texts": 4,
-          "share": 0.0277
+          "share": 0.0263
         },
         {
           "tradition": "grammar-sastra",
           "cites": 72,
           "texts": 2,
-          "share": 0.005
+          "share": 0.0048
         },
         {
           "tradition": "lexical-kosa",
-          "cites": 33,
-          "texts": 2,
+          "cites": 35,
+          "texts": 3,
           "share": 0.0023
         },
         {
           "tradition": "vedic",
-          "cites": 5,
-          "texts": 2,
-          "share": 0.0003
+          "cites": 9,
+          "texts": 3,
+          "share": 0.0006
         },
         {
           "tradition": "purana",
@@ -529,76 +529,76 @@
     },
     {
       "dict": "pw",
-      "taggedCites": 34034,
+      "taggedCites": 35859,
       "totalInGraphCites": 50701,
-      "taggedCoverage": 0.6713,
+      "taggedCoverage": 0.7073,
       "dominantTradition": "classical-kavya",
       "byTradition": [
         {
           "tradition": "classical-kavya",
-          "cites": 9546,
-          "texts": 12,
-          "share": 0.2805
+          "cites": 9722,
+          "texts": 13,
+          "share": 0.2711
         },
         {
           "tradition": "epic",
           "cites": 7013,
           "texts": 4,
-          "share": 0.2061
+          "share": 0.1956
         },
         {
           "tradition": "dharma-sastra",
           "cites": 6005,
           "texts": 6,
-          "share": 0.1764
+          "share": 0.1675
         },
         {
           "tradition": "vedic",
-          "cites": 4753,
-          "texts": 6,
-          "share": 0.1397
+          "cites": 5425,
+          "texts": 10,
+          "share": 0.1513
         },
         {
           "tradition": "other",
           "cites": 2888,
           "texts": 3,
-          "share": 0.0849
+          "share": 0.0805
         },
         {
           "tradition": "medical",
           "cites": 2319,
           "texts": 2,
-          "share": 0.0681
+          "share": 0.0647
+        },
+        {
+          "tradition": "purana",
+          "cites": 1100,
+          "texts": 2,
+          "share": 0.0307
         },
         {
           "tradition": "buddhist",
           "cites": 772,
           "texts": 2,
-          "share": 0.0227
+          "share": 0.0215
         },
         {
           "tradition": "poetics-sastra",
           "cites": 366,
           "texts": 4,
-          "share": 0.0108
-        },
-        {
-          "tradition": "purana",
-          "cites": 171,
-          "texts": 1,
-          "share": 0.005
+          "share": 0.0102
         },
         {
           "tradition": "lexical-kosa",
-          "cites": 130,
-          "texts": 3,
-          "share": 0.0038
+          "cites": 178,
+          "texts": 4,
+          "share": 0.005
         },
         {
           "tradition": "grammar-sastra",
           "cites": 71,
           "texts": 1,
-          "share": 0.0021
+          "share": 0.002
         }
       ]
     },
@@ -872,7 +872,7 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "",
-      "totalCites": 56818,
+      "totalCites": 56822,
       "nDicts": 8
     },
     {
@@ -882,8 +882,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "",
-      "totalCites": 38187,
-      "nDicts": 7
+      "totalCites": 39025,
+      "nDicts": 11
     },
     {
       "text": "Rāmāyaṇa",
@@ -892,7 +892,7 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "",
-      "totalCites": 38155,
+      "totalCites": 38154,
       "nDicts": 9
     },
     {
@@ -902,8 +902,28 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "",
-      "totalCites": 26365,
-      "nDicts": 7
+      "totalCites": 28140,
+      "nDicts": 8
+    },
+    {
+      "text": "Bhāgavata-Purāṇa",
+      "tradition": "purana",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "",
+      "totalCites": 24300,
+      "nDicts": 8
+    },
+    {
+      "text": "Raghuvaṃśa",
+      "tradition": "classical-kavya",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "",
+      "totalCites": 24025,
+      "nDicts": 8
     },
     {
       "text": "Aṣṭādhyāyī (Pāṇini)",
@@ -916,16 +936,6 @@
       "nDicts": 3
     },
     {
-      "text": "Bhāgavata-Purāṇa",
-      "tradition": "purana",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "",
-      "totalCites": 21330,
-      "nDicts": 5
-    },
-    {
       "text": "Śabdakalpadruma",
       "tradition": "lexical-kosa",
       "confidence": "high",
@@ -933,16 +943,6 @@
       "reviewedBy": "",
       "note": "19th-c Skt encyclopaedic lexicon",
       "totalCites": 20232,
-      "nDicts": 7
-    },
-    {
-      "text": "Raghuvaṃśa",
-      "tradition": "classical-kavya",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "",
-      "totalCites": 19922,
       "nDicts": 7
     },
     {
@@ -992,8 +992,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "nīti/fable",
-      "totalCites": 14743,
-      "nDicts": 6
+      "totalCites": 14853,
+      "nDicts": 7
     },
     {
       "text": "Harivaṃśa",
@@ -1052,7 +1052,7 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "āyurveda",
-      "totalCites": 11571,
+      "totalCites": 11573,
       "nDicts": 7
     },
     {
@@ -1092,7 +1092,7 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "",
-      "totalCites": 8846,
+      "totalCites": 8861,
       "nDicts": 8
     },
     {
@@ -1102,7 +1102,7 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "historical kāvya",
-      "totalCites": 8640,
+      "totalCites": 8641,
       "nDicts": 5
     },
     {
@@ -1112,8 +1112,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "",
-      "totalCites": 8435,
-      "nDicts": 6
+      "totalCites": 8485,
+      "nDicts": 8
     },
     {
       "text": "Bṛhatsaṃhitā",
@@ -1146,13 +1146,23 @@
       "nDicts": 8
     },
     {
+      "text": "Taittirīya Saṃhitā",
+      "tradition": "vedic",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "",
+      "totalCites": 5871,
+      "nDicts": 6
+    },
+    {
       "text": "Bhaṭṭikāvya",
       "tradition": "classical-kavya",
       "confidence": "high",
       "reviewed": false,
       "reviewedBy": "",
       "note": "",
-      "totalCites": 5827,
+      "totalCites": 5829,
       "nDicts": 8
     },
     {
@@ -1182,18 +1192,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "",
-      "totalCites": 5604,
+      "totalCites": 5605,
       "nDicts": 8
-    },
-    {
-      "text": "Taittirīya Saṃhitā",
-      "tradition": "vedic",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "",
-      "totalCites": 5252,
-      "nDicts": 5
     },
     {
       "text": "Vājasaneyi Saṃhitā",
@@ -1236,6 +1236,16 @@
       "nDicts": 8
     },
     {
+      "text": "Viṣṇu Purāṇa",
+      "tradition": "purana",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "",
+      "totalCites": 4655,
+      "nDicts": 6
+    },
+    {
       "text": "Divyāvadāna",
       "tradition": "buddhist",
       "confidence": "high",
@@ -1262,8 +1272,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "",
-      "totalCites": 4493,
-      "nDicts": 7
+      "totalCites": 4553,
+      "nDicts": 8
     },
     {
       "text": "Uttararāmacarita",
@@ -1272,8 +1282,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "drama",
-      "totalCites": 4246,
-      "nDicts": 6
+      "totalCites": 4425,
+      "nDicts": 7
     },
     {
       "text": "Mahāvyutpatti",
@@ -1286,16 +1296,6 @@
       "nDicts": 1
     },
     {
-      "text": "Raghuvanśa",
-      "tradition": "classical-kavya",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "OCR variant of Raghuvaṃśa",
-      "totalCites": 4101,
-      "nDicts": 1
-    },
-    {
       "text": "Kādambarī",
       "tradition": "classical-kavya",
       "confidence": "high",
@@ -1303,16 +1303,6 @@
       "reviewedBy": "",
       "note": "",
       "totalCites": 3785,
-      "nDicts": 5
-    },
-    {
-      "text": "Viṣṇu Purāṇa",
-      "tradition": "purana",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "",
-      "totalCites": 3726,
       "nDicts": 5
     },
     {
@@ -1366,26 +1356,6 @@
       "nDicts": 6
     },
     {
-      "text": "my Sanskrit Chrestomathy",
-      "tradition": "other",
-      "confidence": "low",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "Benfey modern reader, not a text",
-      "totalCites": 3017,
-      "nDicts": 1
-    },
-    {
-      "text": "Bhāgavata",
-      "tradition": "purana",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "Bhāgavata-Purāṇa",
-      "totalCites": 2968,
-      "nDicts": 3
-    },
-    {
       "text": "Vikramorvaśī",
       "tradition": "classical-kavya",
       "confidence": "high",
@@ -1402,8 +1372,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "allegorical drama",
-      "totalCites": 2717,
-      "nDicts": 6
+      "totalCites": 2725,
+      "nDicts": 7
     },
     {
       "text": "Kauśikasūtra",
@@ -1462,7 +1432,7 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "Yājñavalkyasmṛti",
-      "totalCites": 2300,
+      "totalCites": 2301,
       "nDicts": 4
     },
     {
@@ -1506,6 +1476,16 @@
       "nDicts": 2
     },
     {
+      "text": "Naiṣadhacarita",
+      "tradition": "classical-kavya",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "",
+      "totalCites": 2034,
+      "nDicts": 7
+    },
+    {
       "text": "Sāyaṇa",
       "tradition": "vedic",
       "confidence": "medium",
@@ -1524,16 +1504,6 @@
       "note": "",
       "totalCites": 1876,
       "nDicts": 2
-    },
-    {
-      "text": "Naiṣadhacarita",
-      "tradition": "classical-kavya",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "",
-      "totalCites": 1876,
-      "nDicts": 6
     },
     {
       "text": "Buddhist",
@@ -1556,16 +1526,6 @@
       "nDicts": 1
     },
     {
-      "text": "Manusmṛiti",
-      "tradition": "dharma-sastra",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "variant of Manusmṛti",
-      "totalCites": 1762,
-      "nDicts": 1
-    },
-    {
       "text": "Bṛhadāraṇyakopaniṣad",
       "tradition": "vedic",
       "confidence": "high",
@@ -1574,6 +1534,26 @@
       "note": "upaniṣad",
       "totalCites": 1758,
       "nDicts": 5
+    },
+    {
+      "text": "Mudrārākṣasa",
+      "tradition": "classical-kavya",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "drama",
+      "totalCites": 1758,
+      "nDicts": 8
+    },
+    {
+      "text": "Bhāminīvilāsa",
+      "tradition": "classical-kavya",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "",
+      "totalCites": 1736,
+      "nDicts": 7
     },
     {
       "text": "GALANO's Wörterbuch",
@@ -1616,6 +1596,16 @@
       "nDicts": 1
     },
     {
+      "text": "my Sanskrit Chrestomathy",
+      "tradition": "other",
+      "confidence": "low",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "Benfey modern reader, not a text",
+      "totalCites": 1599,
+      "nDicts": 1
+    },
+    {
       "text": "Śikṣāsamuccaya",
       "tradition": "buddhist",
       "confidence": "high",
@@ -1626,16 +1616,6 @@
       "nDicts": 1
     },
     {
-      "text": "Mudrārākṣasa",
-      "tradition": "classical-kavya",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "drama",
-      "totalCites": 1502,
-      "nDicts": 6
-    },
-    {
       "text": "Maitrāyaṇī Saṃhitā",
       "tradition": "vedic",
       "confidence": "high",
@@ -1644,16 +1624,6 @@
       "note": "",
       "totalCites": 1445,
       "nDicts": 2
-    },
-    {
-      "text": "Bhāminīvilāsa",
-      "tradition": "classical-kavya",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "",
-      "totalCites": 1437,
-      "nDicts": 6
     },
     {
       "text": "Mūla-Sarvāstivāda-Vinaya; Gilgit Manuscripts",
@@ -1726,6 +1696,16 @@
       "nDicts": 1
     },
     {
+      "text": "Mahāvīracarita",
+      "tradition": "classical-kavya",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "drama",
+      "totalCites": 1111,
+      "nDicts": 6
+    },
+    {
       "text": "Avadāna-śataka",
       "tradition": "buddhist",
       "confidence": "high",
@@ -1734,16 +1714,6 @@
       "note": "",
       "totalCites": 1108,
       "nDicts": 2
-    },
-    {
-      "text": "Mahāvīracarita",
-      "tradition": "classical-kavya",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "drama",
-      "totalCites": 1057,
-      "nDicts": 5
     },
     {
       "text": "Classified Index to the Sanskrit Mss",
@@ -1784,16 +1754,6 @@
       "note": "",
       "totalCites": 852,
       "nDicts": 5
-    },
-    {
-      "text": "Rigveda",
-      "tradition": "vedic",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "variant of Ṛgveda",
-      "totalCites": 837,
-      "nDicts": 4
     },
     {
       "text": "Bhāṣāpariccheda",
@@ -1846,6 +1806,16 @@
       "nDicts": 1
     },
     {
+      "text": "Śvetāśvataropaniṣad",
+      "tradition": "vedic",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "upaniṣad",
+      "totalCites": 623,
+      "nDicts": 7
+    },
+    {
       "text": "Daśarūpa",
       "tradition": "poetics-sastra",
       "confidence": "high",
@@ -1856,24 +1826,24 @@
       "nDicts": 8
     },
     {
-      "text": "Śvetāśvataropaniṣad",
-      "tradition": "vedic",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "upaniṣad",
-      "totalCites": 591,
-      "nDicts": 6
-    },
-    {
       "text": "Kaṭhopaniṣad",
       "tradition": "vedic",
       "confidence": "high",
       "reviewed": false,
       "reviewedBy": "",
       "note": "upaniṣad",
-      "totalCites": 588,
-      "nDicts": 5
+      "totalCites": 592,
+      "nDicts": 6
+    },
+    {
+      "text": "Caurapañcāśikā",
+      "tradition": "classical-kavya",
+      "confidence": "high",
+      "reviewed": false,
+      "reviewedBy": "",
+      "note": "",
+      "totalCites": 561,
+      "nDicts": 6
     },
     {
       "text": "ŚUKASAPTATI in LASSEN'S Anthologie",
@@ -1904,16 +1874,6 @@
       "note": "the PW dictionary itself, not a text",
       "totalCites": 525,
       "nDicts": 1
-    },
-    {
-      "text": "Caurapañcāśikā",
-      "tradition": "classical-kavya",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "",
-      "totalCites": 522,
-      "nDicts": 5
     },
     {
       "text": "Sāmaveda",
@@ -1962,8 +1922,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "upaniṣad",
-      "totalCites": 361,
-      "nDicts": 5
+      "totalCites": 379,
+      "nDicts": 6
     },
     {
       "text": "Mitākṣarā",
@@ -1972,8 +1932,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "commentary on Yājñavalkya",
-      "totalCites": 355,
-      "nDicts": 5
+      "totalCites": 371,
+      "nDicts": 6
     },
     {
       "text": "Śrutabodha",
@@ -1986,24 +1946,14 @@
       "nDicts": 8
     },
     {
-      "text": "Bhāminīivilāsa",
-      "tradition": "classical-kavya",
-      "confidence": "high",
-      "reviewed": false,
-      "reviewedBy": "",
-      "note": "variant of Bhāminīvilāsa",
-      "totalCites": 299,
-      "nDicts": 1
-    },
-    {
       "text": "Śṛṅgāratilaka",
       "tradition": "classical-kavya",
       "confidence": "medium",
       "reviewed": false,
       "reviewedBy": "",
       "note": "short kāvya (attrib. Kālidāsa)",
-      "totalCites": 240,
-      "nDicts": 5
+      "totalCites": 292,
+      "nDicts": 6
     },
     {
       "text": "Gaṇaratnamahodadhi",
@@ -2032,8 +1982,8 @@
       "reviewed": false,
       "reviewedBy": "",
       "note": "upaniṣad",
-      "totalCites": 97,
-      "nDicts": 5
+      "totalCites": 100,
+      "nDicts": 6
     },
     {
       "text": "Śiva Purāṇa",
@@ -2056,5 +2006,5 @@
       "nDicts": 5
     }
   ],
-  "generatedAt": "2026-09-24T03:15:29.520Z"
+  "generatedAt": "2026-09-24T11:21:57.866Z"
 }
