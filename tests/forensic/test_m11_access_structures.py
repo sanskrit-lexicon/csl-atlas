@@ -106,6 +106,42 @@ def test_heads_filter(pin):
                                   "root_nest_derivatives_dropped": 1}, st)
 
 
+def test_grade_variants(pin):
+    # √kṛ `kf`: guṇa ar → kar, vṛddhi ār → kAr, zero grade of f is f itself (no ZERO entry).
+    pin(S, "grade_variants(kf)", ["kf", "kar", "kAr"], m11.grade_variants("kf"))
+    # √budh `buD`: guṇa o → boD, vṛddhi au → bOD; u has no zero grade below itself.
+    pin(S, "grade_variants(buD)", ["buD", "boD", "bOD"], m11.grade_variants("buD"))
+    # √gam: guṇa of a is a (= the root), vṛddhi ā → gAm.
+    pin(S, "grade_variants(gam)", ["gam", "gAm"], m11.grade_variants("gam"))
+    # √jīv `jIv`: guṇa/vṛddhi of ī are e/ai → jev, jEv; zero grade ī → i → jiv.
+    pin(S, "grade_variants(jIv)", ["jIv", "jev", "jEv", "jiv"], m11.grade_variants("jIv"))
+    # the LAST vowel is the nucleus: `praC` → prAC (vṛddhi), guṇa a = the root itself.
+    pin(S, "grade_variants(praC)", ["praC", "prAC"], m11.grade_variants("praC"))
+    # √sthā `sTA`: ā is its own guṇa and vṛddhi; zero grade a → sTa.
+    pin(S, "grade_variants(sTA)", ["sTA", "sTa"], m11.grade_variants("sTA"))
+
+
+def test_heads_filter_nest_aware(pin):
+    # √kṛ nests kāra (vṛddhi) and karaṇa (guṇa): the `heads` filter keeps both (neither
+    # extends `kf`), the `heads_nest` filter collapses them into the root's unit. `kila`
+    # matches no grade of the root, so it ends the nest and survives in both views.
+    recs = [{"L": "1", "k1": "kf", "root": True}, {"L": "2", "k1": "kAra", "root": False},
+            {"L": "3", "k1": "karaRa", "root": False}, {"L": "4", "k1": "kila", "root": False}]
+    plain, _ = m11.heads_filter(recs)
+    pin(S, "heads kept (no grades)", ["kf", "kAra", "karaRa", "kila"], [r["k1"] for r in plain])
+    kept, st = m11.heads_filter(recs, nest_aware=True)
+    pin(S, "heads_nest kept", ["kf", "kila"], [r["k1"] for r in kept])
+    pin(S, "heads_nest stats", {"roots": 1, "paragraph_runons_dropped": 0,
+                                "root_nest_derivatives_dropped": 2,
+                                "vowel_grade_derivatives_dropped": 2}, st)
+    # a literal extension still counts as nested, but not as a vowel-grade drop
+    recs2 = [{"L": "1", "k1": "gam", "root": True}, {"L": "2", "k1": "gamana", "root": False},
+             {"L": "3", "k1": "gAmin", "root": False}]
+    kept2, st2 = m11.heads_filter(recs2, nest_aware=True)
+    pin(S, "heads_nest kept (gam)", ["gam"], [r["k1"] for r in kept2])
+    pin(S, "heads_nest graded drops (gam)", 1, st2["vowel_grade_derivatives_dropped"])
+
+
 FIXTURE = [
     ("1", "001", "a", ""), ("2", "001", "aMkura", ""), ("2.1", "001", "Ata", "alias"),
     ("3", "001", "aka", ""), ("4", "002", "ka", "1"), ("5", "002", "ka", "2"),
