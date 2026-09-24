@@ -13,6 +13,7 @@ import { parseCsv } from "./build-xref-hub-review.mjs";
 import { dictExists, iterateDict } from "./lib/dict-parser.mjs";
 import { cologneLinksFor, entryUrl } from "./lib/cologne-links.mjs";
 import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
+import { normalizeXrefKey } from "./lib/xref-normalize.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const GENERATED_BY = "npm run build-xref-source-check-packet";
@@ -240,19 +241,30 @@ export const XREF_LABEL_VOCABULARY = Object.freeze([
     examples: [
       {
         sampleId: "mw-pwg-shared:07",
-        edge: "ArAt -> Are (ārāt -> āre), PWG only",
+        edge: "ArAt -> Are (ārāt -> āre) — showed PWG only until 24-09-2026",
         why:
-          "Only the PWG record is attached; MW has no exact edge row. PWG's record shows an ablative "
-          + "adverb pointing at a locative-shaped one, and there is no MW side to corroborate.",
+          "The textbook example here until H5408: the card carried only the PWG record because the "
+          + "exact-edge lookup compared MW's raw target `Are/` (udātta mark still on it) with the "
+          + "accent-free sample key and never found the row. MW L26162 does print `cf. Are/`; both "
+          + "records are attached now, so the label no longer applies to this card. 0 of the 40 rows "
+          + "are in the too-sparse state today.",
         whyRu:
-          "Приложена только запись PWG; точного ребра MW нет. В записи PWG наречие в аблативе отсылает "
-          + "к форме локативного вида, и нет стороны MW, чтобы это подтвердить."
+          "До H5408 — образцовый пример этой метки: на карточке была только запись PWG, потому что "
+          + "поиск точного ребра сравнивал сырую цель MW `Are/` (с ударением) с ключом выборки без "
+          + "ударения и не находил строку. MW L26162 печатает `cf. Are/`; теперь приложены обе записи, "
+          + "и метка к этой карточке больше не относится. Сегодня в состоянии too-sparse 0 строк из 40."
       },
       {
-        sampleId: "mw-pwg-shared:03",
-        edge: "Akzit -> anAkzit (ākṣit -> anākṣit), PWG only",
-        why: "Single-dictionary evidence again: 4 of the 40 rows are in this state and are marked as such on the card.",
-        whyRu: "Снова свидетельство одного словаря: в таком состоянии 4 строки из 40, и на карточке это отмечено."
+        sampleId: "mw-pwg-shared:36",
+        edge: "Darmya -> DArmyAyaRa (dharmya -> dhārmyāyaṇa) — the hyphen case",
+        why:
+          "MW L100511, an <e>2A continuation record, prints `cf. -DArmyAyaRa`: the leading hyphen is "
+          + "MW's compound-member notation, not a different target. The same lookup defect hid it "
+          + "(and `a/nAkzit`, `Basa/d`) until the builder folded both ends with the m6 normaliser.",
+        whyRu:
+          "MW L100511 (запись-продолжение <e>2A) печатает `cf. -DArmyAyaRa`: начальный дефис — "
+          + "обозначение члена сложного слова в MW, а не другая цель. Тот же дефект поиска скрывал её "
+          + "(и `a/nAkzit`, `Basa/d`), пока сборщик не стал сворачивать оба конца нормализатором m6."
       }
     ]
   },
@@ -304,8 +316,11 @@ function compactText(value, length = EXCERPT_LENGTH) {
   return text.length > length ? `${text.slice(0, length - 1)}...` : text;
 }
 
+// Exact-edge lookups fold both ends exactly as m6_xref_lineage.py does before it
+// intersects: the sample carries normalised lemmas, xref_edges.csv carries MW's raw
+// accented / hyphen-prefixed targets, and the two only meet on the folded key (H5408).
 function edgeKey(dict, k1, target) {
-  return `${String(dict).toLowerCase()}\u0000${k1}\u0000${target}`;
+  return `${String(dict).toLowerCase()}\u0000${normalizeXrefKey(k1)}\u0000${normalizeXrefKey(target)}`;
 }
 
 function recordKey(dict, L) {
@@ -320,7 +335,7 @@ function labelSet() {
   return new Set(XREF_LABEL_VOCABULARY.map(row => row.label));
 }
 
-function indexExactEdges(edgeRows) {
+export function indexExactEdges(edgeRows) {
   const index = new Map();
   for (const row of edgeRows) {
     const key = edgeKey(row.dict, row.k1, row.target);
@@ -330,7 +345,7 @@ function indexExactEdges(edgeRows) {
   return index;
 }
 
-function sourceEdgesForSharedSample(sample, exactEdgeIndex) {
+export function sourceEdgesForSharedSample(sample, exactEdgeIndex) {
   return ["mw", "pwg"].flatMap(dict => exactEdgeIndex.get(edgeKey(dict, sample.sourceLemma, sample.target)) ?? []);
 }
 
