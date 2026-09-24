@@ -1,0 +1,1485 @@
+{
+  "schemaVersion": "1.0.0",
+  "dict": "skd",
+  "dictName": "Śabdakalpadruma (Rādhākāntadeva)",
+  "edition": {
+    "label": "Chowkhamba third edition (photo-offset) of the Vasu Devanāgarī edition, part one front matter",
+    "year": "Vasu edition Śaka 1808 (1886/87 CE); Chowkhamba reprint after 1961",
+    "imprint": "Calcutta, 71 Pāthuriyāghāṭa (Vasu); Chowkhamba Sanskrit Series Office, Vārāṇasī (reprint)",
+    "evidenceLevel": "observed",
+    "evidence": "Title pages csldoc skdpref01, 02, 04 and publisher's note skdpref03 viewed 24-09-2026."
+  },
+  "scanSets": [
+    {
+      "id": "skd-csldoc",
+      "kind": "cologne-csldoc",
+      "description": "Cologne csldoc front-matter pages for SKD (30 pages, one scan image each, taken from a PDF whose even pages 2/4/6/8 are skipped).",
+      "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/skdpref/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    }
+  ],
+  "components": [
+    {
+      "id": "skd.fm.reprint-title-sanskrit",
+      "sequence": 1,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "शब्दकल्पद्रुमः",
+        "iast": "śabdakalpadrumaḥ",
+        "english": "Chowkhamba reprint title page, Devanāgarī (part one)"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "01",
+          "image": "skd_Page_01_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc skdpref01 scan viewed 24-09-2026: Chowkhamba Sanskrit Granthamālā series line, author, Vasu brothers, 'prathamo bhāgaḥ', Chowkhamba Sanskrit Series Office, Vārāṇasī.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.reprint-title-english",
+      "sequence": 2,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "SHABDA-KALPADRUM",
+        "iast": null,
+        "english": "Chowkhamba reprint title page, English (Chowkhamba Sanskrit Series Work No. 93, Part One)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "02",
+          "image": "skd_Page_03_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc skdpref02 scan viewed 24-09-2026: 'The Chowkhamba Sanskrit Series Work No. 93 ... by Raja Radha Kanta Deva, Part One'.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.publisher-note",
+      "sequence": 3,
+      "position": "front",
+      "componentType": "publisher-note",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "PUBLISHER'S NOTE.",
+        "iast": null,
+        "english": "Publisher's note to the third (Chowkhamba) edition"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "03",
+          "image": "skd_Page_05_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc skdpref03 scan read 24-09-2026: states a 1961 photo-offset reprint sold out and presents this as the third edition.",
+      "notes": "Dates the scanned copy: a post-1961 Chowkhamba photo-offset of the Vasu Devanāgarī edition."
+    },
+    {
+      "id": "skd.fm.title-1886",
+      "sequence": 4,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "शब्दकल्पद्रुमः",
+        "iast": "śabdakalpadrumaḥ",
+        "english": "Title page of the Vasu Devanāgarī edition, part one (Calcutta, Śaka 1808)"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "04",
+          "image": "skd_Page_07_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc skdpref04 scan viewed 24-09-2026; docx lines 5-25 transcribe it (imprint: kalikātā-rājadhānyām ... śakābdāḥ 1808).",
+      "notes": "csldoc captions this page '1888 Title'; the imprint reads Śaka 1808, i.e. 1886/87 CE. The long subtitle is itself a programme of the microstructure (liṅga, nānārtha, paryāya, pramāṇa, prayoga, dhātu with anubandha)."
+    },
+    {
+      "id": "skd.fm.bhumika",
+      "sequence": 5,
+      "position": "front",
+      "componentType": "preface",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [
+        "commemorate"
+      ],
+      "title": {
+        "asPrinted": "भूमिका",
+        "iast": "bhūmikā",
+        "english": "Verse preface of the Vasu edition"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 4,
+        "printedRange": "(1)-(4)",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "05",
+          "image": "skd_Page_09_Image_0002.png",
+          "printedPage": "(१)"
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "06",
+          "image": "skd_Page_10_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "07",
+          "image": "skd_Page_11_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "08",
+          "image": "skd_Page_12_Image_0002.png",
+          "printedPage": "(४)"
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc skdpref05-08 scans viewed 24-09-2026: heading bhūmikā after 'śrījagadīśo jayati', numbered ślokas in two columns, signed at the end by Varadāprasāda Vasu and Haricaraṇa Vasu, Calcutta, 71 Pāthuriyāghāṭa, Śaka 1808.",
+      "notes": "Absent from the docx transcription; only the scan exists."
+    },
+    {
+      "id": "skd.fm.testimonials",
+      "sequence": 6,
+      "position": "front",
+      "componentType": "testimonials",
+      "componentTypeNote": null,
+      "function": "attest",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "OPINIONS OF LITERARY MEN ABOUT THE CELEBRATED SANSKRIT ENCYCLOPAEDIC LEXICON THE ŚABDAKALPADRUMA ...",
+        "iast": null,
+        "english": "Opinions of scholars and learned societies on the Śabdakalpadruma"
+      },
+      "languages": [
+        "eng",
+        "san",
+        "deu"
+      ],
+      "extent": {
+        "pages": 8,
+        "printedRange": "(1)-(8)",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "09",
+          "image": "skd_Page_13_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "10",
+          "image": "skd_Page_14_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "11",
+          "image": "skd_Page_15_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "12",
+          "image": "skd_Page_16_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "13",
+          "image": "skd_Page_17_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "14",
+          "image": "skd_Page_18_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "15",
+          "image": "skd_Page_19_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "16",
+          "image": "skd_Page_20_Image_0002.png",
+          "printedPage": "(८)"
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc skdpref09-16 scans viewed 24-09-2026: extracts of letters and society minutes (Asiatic Society, Royal Asiatic Society, European academies, Indian scholars); Sanskrit and German letters carry English translations.",
+      "notes": "Reception layer that neither the docx nor csl-orig carries."
+    },
+    {
+      "id": "skd.fm.mukhabandhana",
+      "sequence": 7,
+      "position": "front",
+      "componentType": "introduction",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [
+        "instruct",
+        "decode",
+        "source"
+      ],
+      "title": {
+        "asPrinted": "मुखबन्धनं।",
+        "iast": "mukhabandhanaṃ",
+        "english": "Introduction (mukhabandhana) of Rādhākāntadeva"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 13,
+        "printedRange": null,
+        "items": 17,
+        "itemsUnit": "headed sub-sections"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "17",
+          "image": "skd_Page_21_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "18",
+          "image": "skd_Page_22_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "19",
+          "image": "skd_Page_23_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "20",
+          "image": "skd_Page_24_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "21",
+          "image": "skd_Page_25_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "22",
+          "image": "skd_Page_26_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "23",
+          "image": "skd_Page_27_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "24",
+          "image": "skd_Page_28_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "25",
+          "image": "skd_Page_29_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "26",
+          "image": "skd_Page_30_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "27",
+          "image": "skd_Page_31_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "28",
+          "image": "skd_Page_32_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "29",
+          "image": "skd_Page_33_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc skdpref17-29 scans viewed 24-09-2026 and aligned to docx headings (docx lines 27-920).",
+      "notes": "Printed page numbers of scans 21-33 not legible at screen resolution; left null. Sub-sections are records with parent = this id."
+    },
+    {
+      "id": "skd.fm.mangalacarana-slokah",
+      "sequence": 8,
+      "position": "front",
+      "componentType": "benediction",
+      "componentTypeNote": null,
+      "function": "commemorate",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "तत्रादौ मङ्गलाचरणश्लोकाः।",
+        "iast": "tatrādau maṅgalācaraṇaślokāḥ",
+        "english": "Opening benedictory verses"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.1,
+        "printedRange": null,
+        "items": 4,
+        "itemsUnit": "verses"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "17",
+          "image": "skd_Page_21_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 21 top; docx lines 29-37.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.mangala-bija",
+      "sequence": 9,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "ग्रन्थसमाप्तौ मङ्गलाचरणबीजं।",
+        "iast": "granthasamāptau maṅgalācaraṇabījaṃ",
+        "english": "Why the benediction is printed at the completion of the work"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.2,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "17",
+          "image": "skd_Page_21_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 21; docx lines 39-41: the first kāṇḍa sold out before the benediction was written, so it heads the later kāṇḍa.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.prayojana",
+      "sequence": 10,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "ग्रन्थरचनप्रयोजनं।",
+        "iast": "grantharacanaprayojanaṃ",
+        "english": "Purpose of composing the work"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.2,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "17",
+          "image": "skd_Page_21_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 21; docx lines 43-45.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.namakarana",
+      "sequence": 11,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "ग्रन्थस्य नामकारणं।",
+        "iast": "granthasya nāmakāraṇaṃ",
+        "english": "Reason for the title Śabdakalpadruma"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "17",
+          "image": "skd_Page_21_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 21; docx lines 47-48.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.paripati",
+      "sequence": 12,
+      "position": "front",
+      "componentType": "user-guide",
+      "componentTypeNote": null,
+      "function": "instruct",
+      "secondaryFunctions": [
+        "decode"
+      ],
+      "title": {
+        "asPrinted": "अथ ग्रन्थपरिपाटी।",
+        "iast": "atha granthaparipāṭī",
+        "english": "Plan and conventions of the work"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 1.3,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "headword order, including the separate places of vargya ba and antaḥstha va",
+          "markup": null,
+          "mechanism": "States the varṇakrama the whole alphabet follows and why the two va letters were separated through root derivation.",
+          "atlasRef": null
+        },
+        {
+          "target": "empty anubandha slot of a root entry",
+          "markup": "slot after ¦ in root entries (e.g. 'aka¦, i ka ...')",
+          "mechanism": "'yeṣāṃ dhātūnām anubandho nāsti tatsthānaṃ binduyuktam athavā śūnyam āste': a dot or 0 means no anubandha, never no verb.",
+          "atlasRef": "docs/MICROSTRUCTURE_ZERO_MEANING.md"
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "17",
+          "image": "skd_Page_21_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "18",
+          "image": "skd_Page_22_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scans 21-22; docx lines 50-58: alphabetic order and the va/ba distinction, inclusion of Vopadeva's 1754 roots via Durgādāsa's Dhātudīpikā, gaṇa list, and 'roots without anubandha get a dot or a zero'.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.sanketika",
+      "sequence": 13,
+      "position": "front",
+      "componentType": "sigla-key",
+      "componentTypeNote": null,
+      "function": "decode",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "साङ्केतिकवर्णचिह्नादीनां विवरणं।",
+        "iast": "sāṅketikavarṇacihnādīnāṃ vivaraṇaṃ",
+        "english": "Key to the conventional letters and signs"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.4,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "gender labels",
+          "markup": "puṃ / strī / klī / tri after the headword",
+          "mechanism": "puṃ = masculine, strī = feminine, klī = neuter, tri = vācyaliṅga (adjective, all three genders).",
+          "atlasRef": null
+        },
+        {
+          "target": "sense and synonym separators",
+          "markup": "daṇḍa । and double daṇḍa ॥",
+          "mechanism": "one daṇḍa after a same-meaning word and before its authority; two after a different-meaning word and after the authority (irregular in the first kāṇḍa).",
+          "atlasRef": null
+        },
+        {
+          "target": "synonym numbering",
+          "markup": "numerals after paryāya words",
+          "mechanism": "the principal word counts as 1, its synonyms are numbered 2, 3, ...",
+          "atlasRef": null
+        },
+        {
+          "target": "grouped synonyms, section breaks and line-split words",
+          "markup": "brace }, flower mark (*), short hyphen",
+          "mechanism": "} closes a set of co-referential words; * separates a special account from the next sense or sub-topic; - marks a word broken across two lines.",
+          "atlasRef": null
+        },
+        {
+          "target": "page layout",
+          "markup": null,
+          "mechanism": "each page is split in two by a double rule; catchwords of the last word are given (column layout of the print).",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "18",
+          "image": "skd_Page_22_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 22 (heading mid-page); docx lines 60-68.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.anubandha-key",
+      "sequence": 14,
+      "position": "front",
+      "componentType": "grammatical-key",
+      "componentTypeNote": null,
+      "function": "decode",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "... षट्चत्वारिंशदनुबन्धवर्णानां फलानि लिख्यन्ते॥",
+        "iast": null,
+        "english": "Effects of the 46 anubandha letters (from Durgādāsa's Dhātudīpikā)"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 2.0,
+        "printedRange": null,
+        "items": 46,
+        "itemsUnit": "anubandha letters"
+      },
+      "decodes": [
+        {
+          "target": "gaṇa, pada and operation of every root",
+          "markup": "anubandha slot right after ¦ in SKD root entries",
+          "mechanism": "each it-letter maps to a gaṇa (ka=curādi, ya=divādi, ...), a pada (ṅ=ātmane, ñ=ubhaya) or a morphophonemic operation.",
+          "atlasRef": "docs/MICROSTRUCTURE_SKD_ANUBANDHA_KEY.md"
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "18",
+          "image": "skd_Page_22_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "19",
+          "image": "skd_Page_23_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "20",
+          "image": "skd_Page_24_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scans 22 (foot) - 24 (top); docx lines 69-110, closing 'iti dhātudīpikāyāṃ anubandhaphalanirūpaṇaṃ'.",
+      "notes": "An embedded extract of another work (Dhātudīpikā on Vopadeva's Kavikalpadruma) serving as the dictionary's key; already applied by scripts/lexico/m4_indigenous.py (SKD gaṇa resolved 1,117 -> 1,737)."
+    },
+    {
+      "id": "skd.fm.adikosa",
+      "sequence": 15,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [
+        "source"
+      ],
+      "title": {
+        "asPrinted": "आदिकोषविवरणं।",
+        "iast": "ādikoṣavivaraṇaṃ",
+        "english": "Account of the earliest lexicons"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.2,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "20",
+          "image": "skd_Page_24_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 24; docx lines 120-121 (from the Agnipurāṇa lexicon onward).",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.prapta-kosa",
+      "sequence": 16,
+      "position": "front",
+      "componentType": "source-list",
+      "componentTypeNote": null,
+      "function": "source",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "प्राप्तकोषादिनामानि।",
+        "iast": "prāptakoṣādināmāni",
+        "english": "Lexicons obtained and excerpted"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.4,
+        "printedRange": null,
+        "items": 29,
+        "itemsUnit": "numbered sources"
+      },
+      "decodes": [
+        {
+          "target": "authority citations in entries",
+          "markup": "iti <source> at the end of a sense",
+          "mechanism": "lists the kośas SKD excerpts, so a body citation 'iti medinī' etc. resolves to a named work and author.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "20",
+          "image": "skd_Page_24_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 24 table; docx lines 122-152 numbered 1-29 (26 and 27 share one line).",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.aprapta-kosa",
+      "sequence": 17,
+      "position": "front",
+      "componentType": "source-list",
+      "componentTypeNote": null,
+      "function": "source",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "अप्राप्तकोषनामानि।",
+        "iast": "aprāptakoṣanāmāni",
+        "english": "Lexicons known only through citation (Viśva- and Medinī-cited)"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.5,
+        "printedRange": null,
+        "items": 32,
+        "itemsUnit": "numbered sources"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "20",
+          "image": "skd_Page_24_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "21",
+          "image": "skd_Page_25_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scans 24 foot - 25; docx lines 154-192: viśvadhṛta 10 + medinīdhṛta 22.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.amara-tika",
+      "sequence": 18,
+      "position": "front",
+      "componentType": "source-list",
+      "componentTypeNote": null,
+      "function": "source",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "लब्धालब्धामरकोषटीकानामानि।",
+        "iast": "labdhālabdhāmarakoṣaṭīkānāmāni",
+        "english": "Commentaries on the Amarakośa, obtained and not obtained"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.3,
+        "printedRange": null,
+        "items": 35,
+        "itemsUnit": "numbered commentaries"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "21",
+          "image": "skd_Page_25_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 25 table; docx lines 195-233.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.ahrta-visaya",
+      "sequence": 19,
+      "position": "front",
+      "componentType": "scope-statement",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "अत्राहृतविषयबृन्दं शब्दसिन्धुदुस्तरत्वञ्च विज्ञापयामि।",
+        "iast": null,
+        "english": "Subjects brought into the work, and the unfathomable ocean of words"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.3,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "21",
+          "image": "skd_Page_25_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 25 foot; docx lines 235-237.",
+      "notes": "The docx footnotes this heading '[*] Splitted as per the original first edition'."
+    },
+    {
+      "id": "skd.fm.parisista-karana",
+      "sequence": 20,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "परिशिष्टकरणकारणम्।",
+        "iast": "pariśiṣṭakaraṇakāraṇam",
+        "english": "Why the appendix (pariśiṣṭa) was made"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.3,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "22",
+          "image": "skd_Page_26_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 26 top; docx lines 239-242, closing with the dated completion verse of the seven-kāṇḍa work.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.mangala-19",
+      "sequence": 21,
+      "position": "front",
+      "componentType": "benediction",
+      "componentTypeNote": null,
+      "function": "commemorate",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "अथ सर्व्वोपासकसम्मतमङ्गलाचरणोनविंशतिपद्यानि।",
+        "iast": null,
+        "english": "Nineteen benedictory verses acceptable to every sect"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.5,
+        "printedRange": null,
+        "items": 19,
+        "itemsUnit": "verses"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "22",
+          "image": "skd_Page_26_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 26; docx lines 244-282.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.pratijna",
+      "sequence": 22,
+      "position": "front",
+      "componentType": "scope-statement",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "अथ ग्रन्थप्रतिज्ञानवश्लोकाः।",
+        "iast": null,
+        "english": "Nine verses announcing the additions (the Vedanighaṇṭu)"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.3,
+        "printedRange": null,
+        "items": 9,
+        "itemsUnit": "verses"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "22",
+          "image": "skd_Page_26_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "23",
+          "image": "skd_Page_27_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scans 26 foot - 27 top; docx lines 284-303.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.vedanighantu",
+      "sequence": 23,
+      "position": "front",
+      "componentType": "embedded-text",
+      "componentTypeNote": null,
+      "function": "source",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "तत्र प्रथमाध्याये ४१४ नामानि यथा।",
+        "iast": null,
+        "english": "Synopsis of the Vedanighaṇṭu: five adhyāyas, varga by varga, with word counts"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.5,
+        "printedRange": null,
+        "items": 1769,
+        "itemsUnit": "words counted in the tables (414+516+410+278+151)"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "23",
+          "image": "skd_Page_27_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 27 tables; docx lines 304-407.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.anukramanika-abhava",
+      "sequence": 24,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "अथ ग्रन्थस्यानुक्रमणिकादिलेखनाभावकारणं वृत्तद्वयम्।",
+        "iast": null,
+        "english": "Two verses on why no index or sigla list is repeated here"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.1,
+        "printedRange": null,
+        "items": 2,
+        "itemsUnit": "verses"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "23",
+          "image": "skd_Page_27_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 27; docx lines 409-414: index, sigla and the appendix rationale were given in the seventh-kāṇḍa preface of the earlier edition.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.valmika",
+      "sequence": 25,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [
+        "decode"
+      ],
+      "title": {
+        "asPrinted": "अथादर्शपत्राणां वल्मीकभक्षणजन्यमनस्तापतन्निवारणहेतुपञ्चपद्यानि।",
+        "iast": null,
+        "english": "Five verses on the appendix copy eaten by termites and its remedy"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 0.2,
+        "printedRange": null,
+        "items": 5,
+        "itemsUnit": "verses"
+      },
+      "decodes": [
+        {
+          "target": "absence of a separate appendix in this edition",
+          "markup": null,
+          "mechanism": "termites destroyed much of the appendix printer's copy; the family reprinted SKD in Devanāgarī with the surviving appendix words and others merged into the work.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "23",
+          "image": "skd_Page_27_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scan 27 foot; docx lines 416-425.",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.vamsa",
+      "sequence": 26,
+      "position": "front",
+      "componentType": "genealogy",
+      "componentTypeNote": null,
+      "function": "commemorate",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "अथ ग्रन्थकर्तुर्व्वंशवर्णश्लोकाः।",
+        "iast": null,
+        "english": "Verses on the author's lineage"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 6,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "24",
+          "image": "skd_Page_28_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "25",
+          "image": "skd_Page_29_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "26",
+          "image": "skd_Page_30_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "27",
+          "image": "skd_Page_31_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "28",
+          "image": "skd_Page_32_Image_0002.png",
+          "printedPage": null
+        },
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "29",
+          "image": "skd_Page_33_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-atlas:docs/refs/SKD_Front pages.docx",
+          "note": "Unpaginated Word transcription of the Sanskrit front matter (1886 title + mukhabandhana + genealogy)."
+        }
+      ],
+      "parent": "skd.fm.mukhabandhana",
+      "evidenceLevel": "observed",
+      "evidence": "scans 28-33; docx lines 427-920 (verses numbered in groups up to 26).",
+      "notes": null
+    },
+    {
+      "id": "skd.fm.varnamala",
+      "sequence": 27,
+      "position": "front",
+      "componentType": "transliteration-table",
+      "componentTypeNote": null,
+      "function": "decode",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "वर्णमाला।",
+        "iast": "varṇamālā",
+        "english": "Table of letters"
+      },
+      "languages": [
+        "san",
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "letters of the Devanāgarī print",
+          "markup": null,
+          "mechanism": "maps each letter to an English (Roman) value and other script forms for readers unused to Devanāgarī.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "skd-csldoc",
+          "ref": "30",
+          "image": "skd_Page_34_Image_0002.png",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "inferred",
+      "evidence": "csldoc skdpref30 scan viewed 24-09-2026: heading varṇamālā, a two-block table of Devanāgarī letters against an 'English' column and further script columns.",
+      "notes": "Not in the docx. csldoc files it as 'Introduction, 14' but it has its own heading and no sub-section 'atha' formula, so it is recorded outside mukhabandhana (parent null is the inferred part). Column headers beyond 'English' not legible at screen resolution."
+    }
+  ],
+  "excludedScans": [],
+  "knownGaps": [
+    {
+      "label": "Title pages of parts 2-5",
+      "evidenceLevel": "inferred",
+      "evidence": "Part one is 'prathamo bhāgaḥ'; the Cologne SKD body scans (csl-websanlexicon pdffiles.txt) begin each volume at its page 1 (1-001 ... 5-001) and csldoc shows part one only."
+    },
+    {
+      "label": "Anything printed after body page 5-555 (errata, colophon)",
+      "evidenceLevel": "inferred",
+      "evidence": "The SKD scan-pdf map ends at 5-555 (pg5_555.pdf, headword hrIkA ... La) and csl-orig skd.txt ends on the same page; no back matter is scanned, so its existence cannot be observed from Cologne material."
+    },
+    {
+      "label": "Seventh-kāṇḍa preface of the first (Bengali-script) edition with index and sigla",
+      "evidenceLevel": "observed",
+      "evidence": "Referred to in skd.fm.anukramanika-abhava (docx lines 409-414); belongs to the earlier edition, not the one scanned."
+    }
+  ],
+  "notes": "Trap: csl-orig v02/skd/skd_front.txt, skd_middle.txt and skd_back.txt are digitisation scaffolding (page markers such as '[Page1-002-b+ 52]'; skd_back.txt is empty) - not front or back matter. No back matter is visible in any Cologne SKD scan set; the appendix of the first edition is merged into the body (skd.fm.valmika). Body: 5 volumes, pages 315/937/792/565/555, one alphabet (L=42139 'asvaH' is a typo for hrasvaH, not an alphabet restart).",
+  "misfits": [
+    {
+      "label": "Printed page numbers of the mukhabandhana",
+      "componentId": "skd.fm.mukhabandhana",
+      "why": "Devanāgarī folio numerals on scans 21-33 are not legible at the resolution viewed; printedPage left null rather than guessed."
+    },
+    {
+      "label": "Fractional extents of sub-sections sharing a page",
+      "componentId": null,
+      "why": "extent.pages accepts fractions (0.1-0.5) estimated from the share of the page; they are estimates, and the record-level evidenceLevel cannot grade one field separately."
+    }
+  ]
+}

@@ -1,0 +1,1367 @@
+{
+  "schemaVersion": "1.0.0",
+  "dict": "mw",
+  "dictName": "Monier-Williams, A Sanskrit-English Dictionary",
+  "edition": {
+    "label": "New edition 1899 (Oxford, Clarendon Press), as scanned from an OUP reprint",
+    "year": "1899",
+    "imprint": "Oxford University Press, Amen House, London (reprint)",
+    "evidenceLevel": "observed",
+    "evidence": "Title page OCR (mwpref01.md), postscript dated May 4, 1899, imprint scan t08."
+  },
+  "scanSets": [
+    {
+      "id": "mw-csldoc",
+      "kind": "cologne-csldoc",
+      "description": "Cologne csldoc front-matter pages for MW (29 pages, title + v-xxxii), OCR'd in sanskrit-lexicon/MWS prefaces/.",
+      "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/mwpref/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    },
+    {
+      "id": "mw-scan-pdf",
+      "kind": "cologne-scan-pdf",
+      "description": "Cologne MW page PDFs: front matter t01-t36 and supplement pages 1308-1333, per csl-websanlexicon pdffiles.txt.",
+      "baseUrl": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/MWScanpdf/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    }
+  ],
+  "components": [
+    {
+      "id": "mw.fm.title",
+      "sequence": 1,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "A SANSKRIT-ENGLISH DICTIONARY ETYMOLOGICALLY AND PHILOLOGICALLY ARRANGED",
+        "iast": null,
+        "english": "Title page of the 1899 new edition"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "01",
+          "image": "mw010001.jpg",
+          "printedPage": null
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t01",
+          "image": "mw010001.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "ocr-markdown",
+          "location": "sanskrit-lexicon/MWS:prefaces/mwpref01.md..mwpref01.md",
+          "note": "Vision OCR with frontmatter source_scan per page; RU translations alongside (*.ru.md)."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc mwpref01 + MWS/prefaces/mwpref01.md (source_scan mw010001.jpg); scan map t01 'Title'.",
+      "notes": "Scanned first, although a half-title (t07) and the imprint (t08) follow it in the scan set; see catalogue notes."
+    },
+    {
+      "id": "mw.fm.half-title",
+      "sequence": 2,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "A SANSKRIT-ENGLISH DICTIONARY",
+        "iast": null,
+        "english": "Half-title"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t07",
+          "image": "mw010007.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scan t07 viewed 24-09-2026: only 'A SANSKṚIT-ENGLISH DICTIONARY'. The Cologne map captions it 'Title'.",
+      "notes": null
+    },
+    {
+      "id": "mw.fm.imprint",
+      "sequence": 3,
+      "position": "front",
+      "componentType": "imprint",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "Oxford University Press, Amen House, London E.C.4",
+        "iast": null,
+        "english": "Publisher's imprint of the scanned reprint"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t08",
+          "image": "mw010008.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scan t08 viewed 24-09-2026: OUP Amen House imprint with branch list (Glasgow ... Kuala Lumpur, Hong Kong).",
+      "notes": "Belongs to the OUP reprint that Cologne scanned, not to the 1899 printing; the branch list dates it to the mid-20th century."
+    },
+    {
+      "id": "mw.fm.preface",
+      "sequence": 4,
+      "position": "front",
+      "componentType": "preface",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "PREFACE TO THE NEW EDITION.",
+        "iast": null,
+        "english": "Preface to the new edition"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 6,
+        "printedRange": "v-x",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "02",
+          "image": "mw010009.jpg",
+          "printedPage": "v"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t09",
+          "image": "mw010009.pdf",
+          "printedPage": "v"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "03",
+          "image": "mw010010.jpg",
+          "printedPage": "vi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t10",
+          "image": "mw010010.pdf",
+          "printedPage": "vi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "04",
+          "image": "mw010011.jpg",
+          "printedPage": "vii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t11",
+          "image": "mw010011.pdf",
+          "printedPage": "vii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "05",
+          "image": "mw010012.jpg",
+          "printedPage": "viii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t12",
+          "image": "mw010012.pdf",
+          "printedPage": "viii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "06",
+          "image": "mw010013.jpg",
+          "printedPage": "ix"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t13",
+          "image": "mw010013.pdf",
+          "printedPage": "ix"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "07",
+          "image": "mw010014.jpg",
+          "printedPage": "x"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t14",
+          "image": "mw010014.pdf",
+          "printedPage": "x"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "ocr-markdown",
+          "location": "sanskrit-lexicon/MWS:prefaces/mwpref02.md..mwpref07.md",
+          "note": "Vision OCR with frontmatter source_scan per page; RU translations alongside (*.ru.md)."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc mwpref02-07 = printed v-x, scans mw010009-mw010014; OCR headings checked 24-09-2026.",
+      "notes": null
+    },
+    {
+      "id": "mw.fm.postscript",
+      "sequence": 5,
+      "position": "front",
+      "componentType": "postscript",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "POSTSCRIPT.",
+        "iast": null,
+        "english": "Postscript (dated May 4, 1899)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 0.3,
+        "printedRange": "x",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "07",
+          "image": "mw010014.jpg",
+          "printedPage": "x"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t14",
+          "image": "mw010014.pdf",
+          "printedPage": "x"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "ocr-markdown",
+          "location": "sanskrit-lexicon/MWS:prefaces/mwpref07.md..mwpref07.md",
+          "note": "Vision OCR with frontmatter source_scan per page; RU translations alongside (*.ru.md)."
+        }
+      ],
+      "parent": "mw.fm.preface",
+      "evidenceLevel": "observed",
+      "evidence": "mwpref07.md: '## POSTSCRIPT.' on p. x, signed 'May 4, 1899. M. F. MONIER-WILLIAMS.'",
+      "notes": "Signed by the son after the author's death (April 1899)."
+    },
+    {
+      "id": "mw.fm.introduction",
+      "sequence": 6,
+      "position": "front",
+      "componentType": "introduction",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [
+        "instruct",
+        "decode"
+      ],
+      "title": {
+        "asPrinted": "INTRODUCTION.",
+        "iast": null,
+        "english": "Introduction, sections I-V"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 22,
+        "printedRange": "xi-xxxii",
+        "items": 5,
+        "itemsUnit": "sections"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "08",
+          "image": "mw010015.jpg",
+          "printedPage": "xi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t15",
+          "image": "mw010015.pdf",
+          "printedPage": "xi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "09",
+          "image": "mw010016.jpg",
+          "printedPage": "xii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t16",
+          "image": "mw010016.pdf",
+          "printedPage": "xii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "10",
+          "image": "mw010017.jpg",
+          "printedPage": "xiii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t17",
+          "image": "mw010017.pdf",
+          "printedPage": "xiii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "11",
+          "image": "mw010018.jpg",
+          "printedPage": "xiv"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t18",
+          "image": "mw010018.pdf",
+          "printedPage": "xiv"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "12",
+          "image": "mw010019.jpg",
+          "printedPage": "xv"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t19",
+          "image": "mw010019.pdf",
+          "printedPage": "xv"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "13",
+          "image": "mw010020.jpg",
+          "printedPage": "xvi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t20",
+          "image": "mw010020.pdf",
+          "printedPage": "xvi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "14",
+          "image": "mw010021.jpg",
+          "printedPage": "xvii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t21",
+          "image": "mw010021.pdf",
+          "printedPage": "xvii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "15",
+          "image": "mw010022.jpg",
+          "printedPage": "xviii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t22",
+          "image": "mw010022.pdf",
+          "printedPage": "xviii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "16",
+          "image": "mw010023.jpg",
+          "printedPage": "xix"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t23",
+          "image": "mw010023.pdf",
+          "printedPage": "xix"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "17",
+          "image": "mw010024.jpg",
+          "printedPage": "xx"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t24",
+          "image": "mw010024.pdf",
+          "printedPage": "xx"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "18",
+          "image": "mw010025.jpg",
+          "printedPage": "xxi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t25",
+          "image": "mw010025.pdf",
+          "printedPage": "xxi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "19",
+          "image": "mw010026.jpg",
+          "printedPage": "xxii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t26",
+          "image": "mw010026.pdf",
+          "printedPage": "xxii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "20",
+          "image": "mw010027.jpg",
+          "printedPage": "xxiii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t27",
+          "image": "mw010027.pdf",
+          "printedPage": "xxiii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "21",
+          "image": "mw010028.jpg",
+          "printedPage": "xxiv"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t28",
+          "image": "mw010028.pdf",
+          "printedPage": "xxiv"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "22",
+          "image": "mw010029.jpg",
+          "printedPage": "xxv"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t29",
+          "image": "mw010029.pdf",
+          "printedPage": "xxv"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "23",
+          "image": "mw010030.jpg",
+          "printedPage": "xxvi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t30",
+          "image": "mw010030.pdf",
+          "printedPage": "xxvi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "24",
+          "image": "mw010031.jpg",
+          "printedPage": "xxvii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t31",
+          "image": "mw010031.pdf",
+          "printedPage": "xxvii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "25",
+          "image": "mw010032.jpg",
+          "printedPage": "xxviii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t32",
+          "image": "mw010032.pdf",
+          "printedPage": "xxviii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "26",
+          "image": "mw010034.jpg",
+          "printedPage": "xxix"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t34",
+          "image": "mw010034.pdf",
+          "printedPage": "xxix"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "27",
+          "image": "mw010033.jpg",
+          "printedPage": "xxx"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t33",
+          "image": "mw010033.pdf",
+          "printedPage": "xxx"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "28",
+          "image": "mw010035.jpg",
+          "printedPage": "xxxi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t35",
+          "image": "mw010035.pdf",
+          "printedPage": "xxxi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "29",
+          "image": "mw010036.jpg",
+          "printedPage": "xxxii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t36",
+          "image": "mw010036.pdf",
+          "printedPage": "xxxii"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "ocr-markdown",
+          "location": "sanskrit-lexicon/MWS:prefaces/mwpref08.md..mwpref29.md",
+          "note": "Vision OCR with frontmatter source_scan per page; RU translations alongside (*.ru.md)."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc mwpref08-29 = printed xi-xxxii; section headings grepped from MWS/prefaces 24-09-2026.",
+      "notes": "Scans mw010033/mw010034 are swapped against print (xxx/xxix) in the Cologne scan map itself; csldoc and the OCR follow the print."
+    },
+    {
+      "id": "mw.fm.intro-sec1",
+      "sequence": 7,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "SECTION I. Statement of the circumstances which led to the peculiar System of Sanskrit Lexicography introduced for the first time in the Monier-Williams Sanskrit-English Dictionary of 1872.",
+        "iast": null,
+        "english": "Why the root-based arrangement of 1872"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 3,
+        "printedRange": "xi-xiii",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "08",
+          "image": "mw010015.jpg",
+          "printedPage": "xi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t15",
+          "image": "mw010015.pdf",
+          "printedPage": "xi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "09",
+          "image": "mw010016.jpg",
+          "printedPage": "xii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t16",
+          "image": "mw010016.pdf",
+          "printedPage": "xii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "10",
+          "image": "mw010017.jpg",
+          "printedPage": "xiii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t17",
+          "image": "mw010017.pdf",
+          "printedPage": "xiii"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "ocr-markdown",
+          "location": "sanskrit-lexicon/MWS:prefaces/mwpref08.md..mwpref10.md",
+          "note": "Vision OCR with frontmatter source_scan per page; RU translations alongside (*.ru.md)."
+        }
+      ],
+      "parent": "mw.fm.introduction",
+      "evidenceLevel": "observed",
+      "evidence": "mwpref08.md heading; runs to mwpref10.md.",
+      "notes": null
+    },
+    {
+      "id": "mw.fm.intro-sec2",
+      "sequence": 8,
+      "position": "front",
+      "componentType": "user-guide",
+      "componentTypeNote": null,
+      "function": "instruct",
+      "secondaryFunctions": [
+        "decode"
+      ],
+      "title": {
+        "asPrinted": "SECTION II. Explanation of the Plan and Arrangement of the Work, and of the Improvements introduced into the Present Edition.",
+        "iast": null,
+        "english": "Plan and arrangement of the work"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 6,
+        "printedRange": "xiv-xix",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "root-and-derivative grouping with typographic levels",
+          "markup": "<e> level codes (1, 2, 3, 4 and 1A...) and <k2> hyphenation in mw.txt",
+          "mechanism": "explains the root-first arrangement: derivatives and compounds follow their leading word, with levels of type size; Cologne encodes the levels in the <e> field.",
+          "atlasRef": "scripts/lib/mw-parser.mjs"
+        },
+        {
+          "target": "homonym numbering",
+          "markup": "<hom> and <h> in mw.txt",
+          "mechanism": "homonyms are distinguished by figures 1, 2, 3 placed before the transliterated forms.",
+          "atlasRef": null
+        },
+        {
+          "target": "references and the symbol &c.",
+          "markup": "<ls>",
+          "mechanism": "states the reference policy (few quotations; the Petersburg Thesaurus as the store of citations) and the economy symbol &c.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "11",
+          "image": "mw010018.jpg",
+          "printedPage": "xiv"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t18",
+          "image": "mw010018.pdf",
+          "printedPage": "xiv"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "12",
+          "image": "mw010019.jpg",
+          "printedPage": "xv"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t19",
+          "image": "mw010019.pdf",
+          "printedPage": "xv"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "13",
+          "image": "mw010020.jpg",
+          "printedPage": "xvi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t20",
+          "image": "mw010020.pdf",
+          "printedPage": "xvi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "14",
+          "image": "mw010021.jpg",
+          "printedPage": "xvii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t21",
+          "image": "mw010021.pdf",
+          "printedPage": "xvii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "15",
+          "image": "mw010022.jpg",
+          "printedPage": "xviii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t22",
+          "image": "mw010022.pdf",
+          "printedPage": "xviii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "16",
+          "image": "mw010023.jpg",
+          "printedPage": "xix"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t23",
+          "image": "mw010023.pdf",
+          "printedPage": "xix"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "ocr-markdown",
+          "location": "sanskrit-lexicon/MWS:prefaces/mwpref11.md..mwpref16.md",
+          "note": "Vision OCR with frontmatter source_scan per page; RU translations alongside (*.ru.md)."
+        }
+      ],
+      "parent": "mw.fm.introduction",
+      "evidenceLevel": "observed",
+      "evidence": "mwpref11.md heading; runs to mwpref16.md; homonym figures 'from each other by the figures 1, 2, 3, &c.' on p. xv.",
+      "notes": null
+    },
+    {
+      "id": "mw.fm.intro-sec3",
+      "sequence": 9,
+      "position": "front",
+      "componentType": "scope-statement",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [
+        "source"
+      ],
+      "title": {
+        "asPrinted": "SECTION III. Extent of Sanskṛit Literature comprehended in the Present Edition.",
+        "iast": null,
+        "english": "Extent of the literature covered"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 2.5,
+        "printedRange": "xx-xxii",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "17",
+          "image": "mw010024.jpg",
+          "printedPage": "xx"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t24",
+          "image": "mw010024.pdf",
+          "printedPage": "xx"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "18",
+          "image": "mw010025.jpg",
+          "printedPage": "xxi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t25",
+          "image": "mw010025.pdf",
+          "printedPage": "xxi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "19",
+          "image": "mw010026.jpg",
+          "printedPage": "xxii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t26",
+          "image": "mw010026.pdf",
+          "printedPage": "xxii"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "ocr-markdown",
+          "location": "sanskrit-lexicon/MWS:prefaces/mwpref17.md..mwpref19.md",
+          "note": "Vision OCR with frontmatter source_scan per page; RU translations alongside (*.ru.md)."
+        }
+      ],
+      "parent": "mw.fm.introduction",
+      "evidenceLevel": "observed",
+      "evidence": "mwpref17.md '## SECTION III.' mid-page xx; runs into mwpref19.md.",
+      "notes": null
+    },
+    {
+      "id": "mw.fm.intro-sec4",
+      "sequence": 10,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "decode",
+      "secondaryFunctions": [
+        "frame"
+      ],
+      "title": {
+        "asPrinted": "SECTION IV. Reasons for applying the Roman Alphabet to the expression of Sanskṛit, with an account of the Method of Transliteration employed in the Present Dictionary.",
+        "iast": null,
+        "english": "Roman alphabet and the transliteration method"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 8.5,
+        "printedRange": "xxii-xxx",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "Indo-Romanic transliteration printed after every Nāgarī headword",
+          "markup": "<k2> and the Roman forms Cologne normalises to SLP1",
+          "mechanism": "argues for Roman type and sets out the letter-by-letter transliteration used throughout.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "19",
+          "image": "mw010026.jpg",
+          "printedPage": "xxii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t26",
+          "image": "mw010026.pdf",
+          "printedPage": "xxii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "20",
+          "image": "mw010027.jpg",
+          "printedPage": "xxiii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t27",
+          "image": "mw010027.pdf",
+          "printedPage": "xxiii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "21",
+          "image": "mw010028.jpg",
+          "printedPage": "xxiv"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t28",
+          "image": "mw010028.pdf",
+          "printedPage": "xxiv"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "22",
+          "image": "mw010029.jpg",
+          "printedPage": "xxv"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t29",
+          "image": "mw010029.pdf",
+          "printedPage": "xxv"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "23",
+          "image": "mw010030.jpg",
+          "printedPage": "xxvi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t30",
+          "image": "mw010030.pdf",
+          "printedPage": "xxvi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "24",
+          "image": "mw010031.jpg",
+          "printedPage": "xxvii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t31",
+          "image": "mw010031.pdf",
+          "printedPage": "xxvii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "25",
+          "image": "mw010032.jpg",
+          "printedPage": "xxviii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t32",
+          "image": "mw010032.pdf",
+          "printedPage": "xxviii"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "26",
+          "image": "mw010034.jpg",
+          "printedPage": "xxix"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t34",
+          "image": "mw010034.pdf",
+          "printedPage": "xxix"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "27",
+          "image": "mw010033.jpg",
+          "printedPage": "xxx"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t33",
+          "image": "mw010033.pdf",
+          "printedPage": "xxx"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "ocr-markdown",
+          "location": "sanskrit-lexicon/MWS:prefaces/mwpref19.md..mwpref27.md",
+          "note": "Vision OCR with frontmatter source_scan per page; RU translations alongside (*.ru.md)."
+        }
+      ],
+      "parent": "mw.fm.introduction",
+      "evidenceLevel": "observed",
+      "evidence": "mwpref19.md '## SECTION IV.' on p. xxii; runs to mwpref27.md.",
+      "notes": null
+    },
+    {
+      "id": "mw.fm.intro-sec5",
+      "sequence": 11,
+      "position": "front",
+      "componentType": "introduction-section",
+      "componentTypeNote": null,
+      "function": "commemorate",
+      "secondaryFunctions": [
+        "source"
+      ],
+      "title": {
+        "asPrinted": "SECTION V. Acknowledgment of Assistance Received.",
+        "iast": null,
+        "english": "Acknowledgment of assistance"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 2.5,
+        "printedRange": "xxx-xxxii",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "the authority mark MW.",
+          "markup": "<ls>MW.</ls>",
+          "mechanism": "words marked MW. rest partly on the Śabdakalpadruma or on the author's own books.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "27",
+          "image": "mw010033.jpg",
+          "printedPage": "xxx"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t33",
+          "image": "mw010033.pdf",
+          "printedPage": "xxx"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "28",
+          "image": "mw010035.jpg",
+          "printedPage": "xxxi"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t35",
+          "image": "mw010035.pdf",
+          "printedPage": "xxxi"
+        },
+        {
+          "scanSet": "mw-csldoc",
+          "ref": "29",
+          "image": "mw010036.jpg",
+          "printedPage": "xxxii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t36",
+          "image": "mw010036.pdf",
+          "printedPage": "xxxii"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "ocr-markdown",
+          "location": "sanskrit-lexicon/MWS:prefaces/mwpref27.md..mwpref29.md",
+          "note": "Vision OCR with frontmatter source_scan per page; RU translations alongside (*.ru.md)."
+        }
+      ],
+      "parent": "mw.fm.introduction",
+      "evidenceLevel": "observed",
+      "evidence": "mwpref27.md '## SECTION V.' on p. xxx; ends mwpref29.md signed 'MONIER MONIER-WILLIAMS. Indian Institute, Oxford.'",
+      "notes": null
+    },
+    {
+      "id": "mw.fm.works-authors",
+      "sequence": 12,
+      "position": "front",
+      "componentType": "source-list",
+      "componentTypeNote": null,
+      "function": "source",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "LIST OF WORKS AND AUTHORS.",
+        "iast": null,
+        "english": "List of works and authors"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 2,
+        "printedRange": "xxxiii-xxxiv",
+        "items": 604,
+        "itemsUnit": "rows of the printed list in tooltip.txt (incl. variant rows such as 01:02x)"
+      },
+      "decodes": [
+        {
+          "target": "literary source abbreviations in entries",
+          "markup": "<ls>",
+          "mechanism": "'the letters outside the parentheses represent the abbreviated forms used in the references', e.g. Abhinav(a-gupta).",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t05",
+          "image": "mw010005.pdf",
+          "printedPage": "xxxiii"
+        },
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t06",
+          "image": "mw010006.pdf",
+          "printedPage": "xxxiv"
+        }
+      ],
+      "digitalDisposition": "structured-data",
+      "transcriptions": [
+        {
+          "kind": "structured-data",
+          "location": "sanskrit-lexicon/csl-pywork:v02/distinctfiles/mw/pywork/mwauth/tooltip.txt",
+          "note": "Display tooltip table; mwauth.txt (XML) no longer maintained since 25-07-2022."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scan t05 viewed 24-09-2026 (five columns, head-note); csl-pywork mwauth/tooltip.txt: 871 rows, 267 marked '[Cologne Addition]', 604 from the printed list.",
+      "notes": "Not in csldoc and not OCR'd as a page; exists only as the display table."
+    },
+    {
+      "id": "mw.fm.abbreviations",
+      "sequence": 13,
+      "position": "front",
+      "componentType": "abbreviation-list",
+      "componentTypeNote": null,
+      "function": "decode",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "ABBREVIATIONS.",
+        "iast": null,
+        "english": "Abbreviations"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": "xxxv",
+        "items": 424,
+        "itemsUnit": "rows in mwab_input.txt (Cologne-extended)"
+      },
+      "decodes": [
+        {
+          "target": "grammatical and general abbreviations in entries",
+          "markup": "<ab> and <lex>",
+          "mechanism": "one-line expansions (f. = feminine, ind. = indeclinable ...); the head-note concedes the use is not uniform.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t04",
+          "image": "mw010004.pdf",
+          "printedPage": "xxxv"
+        }
+      ],
+      "digitalDisposition": "structured-data",
+      "transcriptions": [
+        {
+          "kind": "structured-data",
+          "location": "sanskrit-lexicon/csl-pywork:v02/distinctfiles/mw/pywork/mwab/mwab_input.txt",
+          "note": "Expansion table with Cologne occurrence counts; rows are not flagged printed vs added."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scan t04 viewed 24-09-2026: five columns, head-note on inconsistent use; csl-pywork mwab/mwab_input.txt 424 rows with lexicon counts.",
+      "notes": null
+    },
+    {
+      "id": "mw.fm.dict-order",
+      "sequence": 14,
+      "position": "front",
+      "componentType": "ordering-note",
+      "componentTypeNote": null,
+      "function": "decode",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": null,
+        "iast": null,
+        "english": "Order of the dictionary (p. xxxvi)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": "xxxvi",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "headword sort order",
+          "markup": null,
+          "mechanism": "caption says the page states the dictionary order; content not yet read.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "t03",
+          "image": "mw010003.pdf",
+          "printedPage": "xxxvi"
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "inferred",
+      "evidence": "Cologne scan map caption only: 't03:mw010003.pdf:Page xxxvi, Dict. Order'; the PDF did not render when viewed 24-09-2026.",
+      "notes": "Re-view the scan and replace this record's inferred parts before H5325 relies on it."
+    },
+    {
+      "id": "mw.bm.additions",
+      "sequence": 15,
+      "position": "back",
+      "componentType": "supplement",
+      "componentTypeNote": null,
+      "function": "supplement",
+      "secondaryFunctions": [
+        "decode"
+      ],
+      "title": {
+        "asPrinted": null,
+        "iast": null,
+        "english": "Additions and corrections (supplement)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 26,
+        "printedRange": "1308-1333",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "headwords added by the supplement",
+          "markup": "decimal L numbers (e.g. L=27.1) with <info n=\"sup\"/>",
+          "mechanism": "Cologne interleaved each supplement entry into the main alphabet after the entry it follows, keeping its supplement page in <pc>.",
+          "atlasRef": null
+        },
+        {
+          "target": "corrections to existing entries",
+          "markup": "<info n=\"rev\" pc=\"1308,1\"/>",
+          "mechanism": "a body entry revised by the supplement points back to the supplement page and column.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "mw-scan-pdf",
+          "ref": "1308..1333",
+          "image": "mw1308-hvala.pdf .. mw1333.pdf",
+          "printedPage": "1308-1333"
+        }
+      ],
+      "digitalDisposition": "merged-into-body",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Cologne scan map: '1308 hvala, Suppl.' then S1309 ... S1333; csl-orig mw.txt: 7,096 records carry n=\"sup\" (6,220 with a decimal L, 876 with an integer L); 279 <info n=\"rev\"> markers - 269 with pc in 1308-1333, 5 with pc=\"cdsl\" (Cologne's own revisions), 5 with no pc - plus 15 <listinfo n=\"rev\"/>.",
+      "notes": "Printed heading not viewed (the PDF did not render); body ends mid-page 1308 (L=264858 hval at 1307,3)."
+    }
+  ],
+  "excludedScans": [
+    {
+      "scanSet": "mw-scan-pdf",
+      "ref": "t02",
+      "reason": "Blank leaf with the scanned copy's library stamp (Inventar 5148); Cologne captions it 'Copyright', but it carries no text of the edition."
+    }
+  ],
+  "knownGaps": [],
+  "notes": "Scan order is not print order: the Cologne MW scan set runs t01 title, t02 blank leaf, t03-t06 = pp. xxxvi, xxxv, xxxiii, xxxiv (end of the front matter, bound or scanned first and backwards), t07 half-title, t08 imprint, t09-t36 = pp. v-xxxii with t33/t34 = xxx/xxix. Two Cologne captions are wrong: t02 'Copyright' is a blank leaf with a library stamp, t07 'Title' is the half-title.",
+  "misfits": [
+    {
+      "label": "Library provenance stamp on scan t02 ('ex libris', Inventar 5148)",
+      "componentId": null,
+      "why": "A mark of the scanned copy, not of the edition; the schema has no copy-level layer, so it is not a component."
+    },
+    {
+      "label": "Printed list vs Cologne additions inside one structured table",
+      "componentId": "mw.fm.works-authors",
+      "why": "extent.items can hold only one count; the 267 Cologne-added rows are reported in evidence text rather than a field."
+    }
+  ]
+}

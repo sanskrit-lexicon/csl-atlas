@@ -1,0 +1,556 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/schema/megastructure-component.schema.json",
+  "title": "Megastructure catalogue - one dictionary",
+  "description": "Front and back matter (megastructure) of one Cologne narrative dictionary, one record per component. Designed in H5324 on the SKD and MW pilot so that the remaining narrative dictionaries (H5325) fill it without change. A component that does not fit goes into `misfits`, never into a bent record. See docs/MEGASTRUCTURE_CATALOGUE.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "dict",
+    "dictName",
+    "edition",
+    "scanSets",
+    "components",
+    "excludedScans",
+    "knownGaps",
+    "misfits"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "dict": {
+      "$ref": "#/$defs/dictCode"
+    },
+    "dictName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "edition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "evidenceLevel",
+        "evidence"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The edition the scans show, as the scans show it."
+        },
+        "year": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "imprint": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidenceLevel": {
+          "$ref": "#/$defs/evidenceLevel"
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "scanSets": {
+      "type": "array",
+      "minItems": 1,
+      "description": "The scan sets a scanLocus may point into.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "kind",
+          "description",
+          "baseUrl"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "kind": {
+            "$ref": "#/$defs/scanSetKind"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "baseUrl": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "inventory": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Repo-relative path of a committed page inventory for this set, when one exists."
+          }
+        }
+      }
+    },
+    "components": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/component"
+      }
+    },
+    "excludedScans": {
+      "type": "array",
+      "description": "Inventory pages of a scan set that deliberately belong to no component (a copy-specific leaf, a blank). Every inventory page must be covered by a component scanLocus or listed here; the validator enforces it.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scanSet",
+          "ref",
+          "reason"
+        ],
+        "properties": {
+          "scanSet": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "knownGaps": {
+      "type": "array",
+      "description": "Components known to exist in print that no scan set of this catalogue shows. They carry no scan locus and are therefore not components.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "evidenceLevel",
+          "evidence"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidenceLevel": {
+            "$ref": "#/$defs/evidenceLevel"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Catalogue-level remarks: traps in the Cologne sources, scan-set quirks."
+    },
+    "misfits": {
+      "type": "array",
+      "description": "Components or facts the schema could not hold without bending. H5325 reads this list to decide whether a schema revision is owed.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "why"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why": {
+            "type": "string",
+            "minLength": 1
+          },
+          "componentId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "dictCode": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*$",
+      "description": "Lower-case Cologne dictionary code (mw, pwg, pw, ap90, wil, skd, vcp, armh, abch)."
+    },
+    "evidenceLevel": {
+      "type": "string",
+      "enum": [
+        "observed",
+        "derived",
+        "inferred",
+        "reviewed"
+      ],
+      "description": "csl-atlas evidence grade; crosswalk to PROV-O/TEI in csl-standards docs/EVIDENCE_LABEL_CROSSWALK.md."
+    },
+    "scanSetKind": {
+      "type": "string",
+      "enum": [
+        "cologne-csldoc",
+        "cologne-scan-pdf",
+        "other-scan"
+      ]
+    },
+    "componentType": {
+      "type": "string",
+      "enum": [
+        "title-page",
+        "imprint",
+        "publisher-note",
+        "dedication",
+        "benediction",
+        "preface",
+        "postscript",
+        "testimonials",
+        "introduction",
+        "introduction-section",
+        "user-guide",
+        "sigla-key",
+        "grammatical-key",
+        "abbreviation-list",
+        "source-list",
+        "ordering-note",
+        "transliteration-table",
+        "scope-statement",
+        "embedded-text",
+        "supplement",
+        "corrigenda",
+        "genealogy",
+        "colophon",
+        "index",
+        "other"
+      ]
+    },
+    "function": {
+      "type": "string",
+      "enum": [
+        "identify",
+        "frame",
+        "instruct",
+        "decode",
+        "source",
+        "supplement",
+        "attest",
+        "commemorate"
+      ],
+      "description": "What the component does for the reader: identify the book; frame (motivate, position, justify) the work; instruct how to use it; decode body notation; declare sources; supplement or correct the body; attest reception; commemorate patron, author or lineage."
+    },
+    "digitalDisposition": {
+      "type": "string",
+      "enum": [
+        "not-digitized",
+        "transcribed",
+        "structured-data",
+        "merged-into-body"
+      ],
+      "description": "What the Cologne digital edition did with the component: nothing; a page transcription (csldoc OCR, docx); a structured table the display uses (mwab, mwauth); or its content interleaved into the entry file."
+    },
+    "scanLocus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scanSet",
+        "ref"
+      ],
+      "properties": {
+        "scanSet": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Page id inside the scan set (csldoc page number, scan file name, or a page range 'first..last')."
+        },
+        "image": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Scan image file name, when the set exposes one per page."
+        },
+        "printedPage": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Page number as printed on the scan, verbatim; null when none is printed or legible."
+        }
+      }
+    },
+    "decodes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target",
+        "mechanism"
+      ],
+      "properties": {
+        "target": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The body feature the component explains."
+        },
+        "markup": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Where the feature sits in the csl-orig entry markup, when it has a fixed place."
+        },
+        "mechanism": {
+          "type": "string",
+          "minLength": 1
+        },
+        "atlasRef": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Repo-relative path of the csl-atlas artefact that already applies this key."
+        }
+      }
+    },
+    "transcription": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "location"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "ocr-markdown",
+            "docx",
+            "structured-data",
+            "entry-markup"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1,
+          "description": "owner/repo:path or URL."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sequence",
+        "position",
+        "componentType",
+        "function",
+        "title",
+        "languages",
+        "extent",
+        "decodes",
+        "scanLocus",
+        "digitalDisposition",
+        "transcriptions",
+        "parent",
+        "evidenceLevel",
+        "evidence",
+        "notes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*\\.(fm|bm|in)\\.[a-z0-9][a-z0-9-]*$",
+          "description": "<dict>.<fm|bm|in>.<slug>; fm = front matter, bm = back matter, in = inset inside the body."
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Reading order implied by the printed pagination (front matter from 1; back matter continues after the last front-matter number). Not the scan-file order, which can differ (MW scans pp. xxxiii-xxxvi before the half-title); unpaginated pages take the order the scans show."
+        },
+        "position": {
+          "type": "string",
+          "enum": [
+            "front",
+            "back",
+            "inset"
+          ]
+        },
+        "componentType": {
+          "$ref": "#/$defs/componentType"
+        },
+        "componentTypeNote": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Required when componentType is 'other'."
+        },
+        "function": {
+          "$ref": "#/$defs/function"
+        },
+        "secondaryFunctions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/function"
+          }
+        },
+        "title": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "asPrinted",
+            "english"
+          ],
+          "properties": {
+            "asPrinted": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Heading as printed, in its own script; null when the component has no printed heading."
+            },
+            "iast": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "english": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "languages": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z]{3}$"
+          },
+          "description": "ISO 639-3 codes of the text on the page."
+        },
+        "extent": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "pages",
+            "printedRange"
+          ],
+          "properties": {
+            "pages": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "exclusiveMinimum": 0,
+              "description": "Number of printed pages; fractions allowed for a section sharing pages; null when only an item count is meaningful."
+            },
+            "printedRange": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Printed page range verbatim (e.g. 'v-x', '1308-1333'); null when the pages carry no numbers."
+            },
+            "items": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "description": "Countable units (list entries, verses, records)."
+            },
+            "itemsUnit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "decodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/decodes"
+          },
+          "description": "Empty when the component explains no body notation."
+        },
+        "scanLocus": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/scanLocus"
+          }
+        },
+        "digitalDisposition": {
+          "$ref": "#/$defs/digitalDisposition"
+        },
+        "transcriptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/transcription"
+          }
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "id of the enclosing component (an introduction section's introduction)."
+        },
+        "evidenceLevel": {
+          "$ref": "#/$defs/evidenceLevel"
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "description": "What was looked at to make this record, concretely enough to re-check."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

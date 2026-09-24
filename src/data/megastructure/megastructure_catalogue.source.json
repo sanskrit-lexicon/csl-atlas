@@ -1,0 +1,37 @@
+{
+  "dataset": "megastructure_catalogue",
+  "commit": "bbca791169829b8fa7d252d7ff5c7105b721c7f8",
+  "generatedAt": "2026-09-24T05:54:08.055Z",
+  "generatedBy": "scripts/build-megastructure.mjs",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "inputs": [
+    "data/schema/megastructure-component.schema.json",
+    "data/megastructure/scan_inventory.tsv",
+    "data/megastructure/mw.json",
+    "data/megastructure/skd.json"
+  ],
+  "sourcePins": [
+    {
+      "repo": "sanskrit-lexicon/csl-orig",
+      "commit": "f4c08c5",
+      "used": "mw.txt supplement markers; skd.txt body extent"
+    },
+    {
+      "repo": "sanskrit-lexicon/csl-pywork",
+      "commit": "4943a6d",
+      "used": "mwauth/tooltip.txt, mwab/mwab_input.txt"
+    },
+    {
+      "repo": "sanskrit-lexicon/csl-websanlexicon",
+      "commit": "7a69600",
+      "used": "distinctfiles/{mw,skd}/web/webtc/pdffiles.txt scan maps"
+    },
+    {
+      "repo": "sanskrit-lexicon/MWS",
+      "commit": "8261e06",
+      "used": "prefaces/mwpref01-29.md OCR"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}
