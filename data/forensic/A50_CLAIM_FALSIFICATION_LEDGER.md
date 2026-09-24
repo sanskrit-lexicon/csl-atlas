@@ -461,15 +461,22 @@ findings adopted and fixed in this pass:
 | D2.2 | major | 14 constructed runs, not 12: the two A4 arms were never tabulated, and A4 f = 0.1 is verdict **modular** (p 0.011) — the unfavourable arm omitted | **Fixed** — both A4 rows added to the table; counts now 1 modular / 6 nested-and-modular / 3 nested / 4 neither of 14, in ledger and paper |
 | D2.3 | minor | control-vs-real (0.070 vs 0.0026) is itself a cross-matrix Q − null comparison | **Fixed** — stated once with why it is defensible (11 rows, 1,701 edges, null SD ~0.0008 on both sides) |
 | D2.4 | minor | "relabelling is one-to-one" — columns split (683 → 805 → 1,081) | **Fixed** — "a shared text's column is split into private columns" |
-| D3.1 | major | P4 regression: `data/citations/README.md` still "all in `ben`"; rebuild dated 23-09 vs 24-09 elsewhere | **Fixed** — "almost all in ben; plus one ap citation and the key case"; 24-09 everywhere |
+| D3.1 | major | P4 regression: `data/citations/README.md` still "all in `ben`"; rebuild dated 23-09 vs 24-09 elsewhere | **Fixed** — "almost all in ben; plus one ap citation and the key case"; 24-09 everywhere (the arms script's A5 note and its JSON caught by the confirmation pass, fixed in the follow-up commit) |
 | D3.2 | major | "nine headline figures by ≤ 0.2 points" matches neither the JSON (10 keys) nor the units (three are counts) | **Fixed** — "six percentage figures ≤ 0.2 points; four counts (−1,753 / −2 / −1 / −1)" in ledger, paper, README, changelog |
 | D3.3 | major | `citation_canon.source.json` records the commit but no dirty flag; payload came from the modified builder | **Fixed** — builder sidecar now carries `dirty` and `builderSha256`; regenerated |
 | D3.4 | minor | arms and report JSON record script paths only, no script hash or atlas HEAD/dirty | **Fixed** — `scriptSha256` + `cslAtlas {revision, dirty}` (arms), `script_sha256` + `csl_atlas` (report); both regenerated |
 | D3.5 | minor | "Volume unchanged to the tenth of a point" (folded private tail) had no field behind it | **Fixed** — field `private_after_fold_volume_pct` added: it *falls* 11.1 → 9.8%, sentence corrected, pinned |
 | D3.6 | minor | "24 fixed, 1 forwarded" miscounts: P8 is deferred, the forwarded item is I4's consequence | **Fixed** — restated in §1, changelog, meta |
-| D3.7 | minor | `.githooks/pre-push` mode change still in the tree | **Fixed** — reverted before the commit |
+| D3.7 | minor | `.githooks/pre-push` mode change still in the tree | **Fixed** in the follow-up commit — `git checkout --` had not restored the mode and the first commit carried 100644 → 100755 (confirmation pass caught it); mode set back to 100644 |
 | D3.8 | minor | changelog "Data unchanged" while two payloads are regenerated | **Fixed** — "TSVs unchanged; payloads regenerated (strings only)" |
 
-The pass is recorded verbatim in the PR thread and in the handoff's `## Verifier` section.
+A third, confirmation-only pass on the committed head (same contract) passed 20 of the 22 rows
+and found: the paper still said `mw` is a singleton "in every perturbation tried" (fixed: "every
+real-data arm that keeps it"), the pre-push mode change had been committed (fixed), a 23-09 date
+in the arms script's A5 note (fixed, JSON regenerated), a canon-page reading rule and a
+HYPOTHESIS_INDEX history line still saying "disjoint communities" / "refuted-modular" (fixed),
+a stray quote in the second canon verdict string (fixed, payload regenerated), "12-run" where 14
+constructed runs are tabulated (fixed). All three passes are recorded verbatim in the PR thread
+and in the handoff's `## Verifier` section.
 
 _Гасунс_

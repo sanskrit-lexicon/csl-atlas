@@ -1,10 +1,10 @@
 {
   "handoff": "H5295",
   "script": "scripts/forensic/f12_a50_topology_arms.mjs",
-  "scriptSha256": "f5f46ff9c6cb5c69718ed39f26c6432470664024ea84016cfbfa930483987f70",
+  "scriptSha256": "76db303935d5c637ed4c5101913248da8ed0aff23de6dcdf12484551df6ce2d0",
   "testScript": "scripts/build-citation-canon.mjs",
   "cslAtlas": {
-    "revision": "bbca791169829b8fa7d252d7ff5c7105b721c7f8",
+    "revision": "824cf79d934e612c9c91a78f9358074f430d555c",
     "dirty": true
   },
   "seed": 1592642065,
@@ -13,7 +13,7 @@
     "data/citations/ls_citation_edges.tsv": "6c7f7065c0e6445eb100f71aadc6f0cfde6b0871563b058d6e4c571693453491",
     "data/forensic/f12_a50_variant_fold.tsv": "4da9b24e2e565852d1ca72965988899faadbc1ba5c4ba15550af896584de81b0",
     "data/forensic/f12_a50_regen_edges.tsv": "02891158b9a65d62bbef0f88894f57861b649b989bcdc231e4379e3653cfec95",
-    "scripts/build-citation-canon.mjs": "b5ac41f5a3b61c7d659355bfa895657a2e391db396176bd22bfe0fad646ceee4"
+    "scripts/build-citation-canon.mjs": "b459f40805619cee9912084fde2860c221187720e6475146f41b937d0ae1f35e"
   },
   "arms": [
     {
@@ -432,7 +432,7 @@
     },
     {
       "name": "A5-regen-f4c08c57",
-      "note": "edge list regenerated at sibling csl-orig@f4c08c57 / csl-guides@64c967d (23-09-2026)",
+      "note": "edge list regenerated at sibling csl-orig@f4c08c57 / csl-guides@64c967d (24-09-2026)",
       "matrix": {
         "nDicts": 11,
         "nTexts": 911,

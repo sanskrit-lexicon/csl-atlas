@@ -256,7 +256,7 @@ is the finding.
 as the committed run) are `ap`+`ap90` · `pwkvn`+`sch` · `ben` · `bhs` · `lrv` · `md` ·
 `mw` · `pw` · `pwg` — two pairs and seven singletons. The "Petersburg lineage" is *not* a
 module (PWG and pw each stand alone), and there is no "Vedic" pair: `mw` is a singleton in every
-perturbation tried, and `md` pairs with `bhs` after the §5.5 fold and in a regenerated matrix,
+real-data arm that keeps it (folded, regenerated), and `md` pairs with `bhs` after the §5.5 fold and in a regenerated matrix,
 where the count drops to eight. The read-out is one run of a heuristic label-propagation
 optimiser (§5.7) and moves under input drift alone; it is the partition the statistic *found*,
 not a fact about the dictionaries. The tradition *names* below come from the profiles of
@@ -420,8 +420,7 @@ checkouts; the topology statistics with `npm run build-citation-canon`. **Revisi
 The committed TSVs were frozen on 06-07-2026 without a recorded sibling revision; every figure
 in this paper is bound to those files by hash (`ls_citation_edges.tsv` SHA-256 `6c7f7065…3491`,
 `ls_citation_nodes.tsv` `29d1b588…8711`) and reproduces from them byte-for-byte. A rebuild at
-`csl-orig@f4c08c57` + `csl-guides@64c967d` (24-09-2026, both clean) drifts by −1,753 citations
-and one node — Benfey's resolution (`my Sanskrit Chrestomathy` 3,017 → 1,599), one Apte
+`csl-orig@f4c08c57` + `csl-guides@64c967d` (24-09-2026, both clean) drifts — Benfey's resolution (`my Sanskrit Chrestomathy` 3,017 → 1,599), one Apte
 citation, and a `Weber`/`WEBER` key-case change — and moves six percentage figures by up to 0.2
 points (top-50 share 71.0 → 71.2, PWG share 64.7 → 64.9, private volume 11.1 → 10.9) and
 four counts (−1,753 citations, −2 edges, −1 node, −1 private label) while

@@ -84,7 +84,7 @@ full specs (data, join keys, method, nearest-existing delta, readiness) in
 [`ATLAS_RESEARCH_AGENDA.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ATLAS_RESEARCH_AGENDA.md) §2 (H273, 07-07-2026). They enter
 the tables above only when a build session tests them; owner repo for all is
 `csl-atlas` (boundary-checked in the agenda). **PH1 CANON-CORE has been tested (H305,
-07-07-2026) and moved up into the Type 1 table above** with a refuted-modular verdict.
+07-07-2026) and moved up into the Type 1 table above** with a not-supported (modular, beyond one canon) verdict.
 **PH2 CITE-4AXIS has been tested (H342, 08-07-2026) and moved up into the Type 1 table
 above** with an independence-not-rejected (descriptive, n=5) verdict.
 **PH4 GHOST-STOCK and PH6 HERITAGE-WIT have been tested (H1575, 25-07-2026) and moved up

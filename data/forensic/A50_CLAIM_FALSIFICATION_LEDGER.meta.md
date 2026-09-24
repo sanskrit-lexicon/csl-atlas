@@ -30,8 +30,9 @@ counterexample · provenance · verdict · patch) is the reusable part.
    expectations + the committed-report and arms-report figures the prose quotes).
 5. Paper repaired in the same PR; an independent read-only logic critic reviewed
    the pre-merge head (three FAIL verdicts, 25 findings: 24 fixed, 1 deferred to
-   merge), then a delta pass over the fixes (22 findings, all fixed) — both
-   adjudicated in the ledger's §5 / §5.1 and recorded in the PR thread and the
+   merge), then a delta pass over the fixes (22 findings, all fixed; the key unification
+   I4 asks for is forwarded to H5407) and a confirmation pass on the committed
+   head (7 residues, all fixed) — all adjudicated in the ledger's §5 / §5.1 and recorded in the PR thread and the
    handoff's `## Verifier`.
 
 ## Maintenance

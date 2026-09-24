@@ -117,7 +117,8 @@ display(Plot.plot({
 
 > Empty cells are true zeros (that dictionary does not cite that text in its
 > tagged apparatus). A staircase of decreasing fill down and to the right would
-> mean nesting; discrete blocks would mean disjoint communities.
+> mean nesting; discrete blocks would mean clustering beyond one canon — here
+> two key-sharing pairs plus singletons (H5295 ledger, C4), not named communities.
 
 ## Canon curve — how widely shared is each text?
 
