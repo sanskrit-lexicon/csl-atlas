@@ -61,18 +61,29 @@ def cast(o):
     if isinstance(o, dict): return {k: cast(v) for k, v in o.items()}
     if isinstance(o, list): return [cast(v) for v in o]
     return o
+
+# (a) CITATION.cff vs official CFF 1.2.0 schema
 cff = cast(yaml.safe_load(open('CITATION.cff')))
-sch = json.load(urllib.request.urlopen('https://raw.githubusercontent.com/citation-file-format/citation-file-format/1.2.0/schema.json'))
+sch = json.load(urllib.request.urlopen(
+    'https://raw.githubusercontent.com/citation-file-format/citation-file-format/1.2.0/schema.json'))
 jsonschema.Draft7Validator.check_schema(sch)
 errs = list(jsonschema.Draft7Validator(sch).iter_errors(cff))
-print('CITATION.cff:', 'VALID' if not errs else errs[0].message)
+print('CITATION.cff:', 'VALID' if not errs else 'FAIL: ' + errs[0].message)
+
+# (b) .zenodo.json vs official Zenodo legacy deposit schema. The upstream
+# schema file is missing the documented `version` deposit field, so that one
+# key is allowed explicitly (everything else stays strict).
 zen = json.load(open('.zenodo.json'))
-print('.zenodo.json JSON: VALID (fields checked at H5304 against zenodo/zenodo legacyrecord.json)')
+zsch = json.load(urllib.request.urlopen(
+    'https://raw.githubusercontent.com/zenodo/zenodo/master/zenodo/modules/deposit/jsonschemas/deposits/records/legacyrecord.json'))
+zsch['properties']['version'] = {'type': 'string'}
+errs = list(jsonschema.Draft7Validator(zsch).iter_errors(zen))
+print('.zenodo.json:', 'VALID' if not errs else 'FAIL: ' + errs[0].message)
 EOF
 ```
 
-Expected: `CITATION.cff: VALID` and `.zenodo.json JSON: VALID`. If anything
-else prints, stop and fix the named file before tagging.
+Expected: `CITATION.cff: VALID` and `.zenodo.json: VALID`. If anything else
+prints, stop and fix the named file before tagging.
 
 ## 3. Stamp the build commit into the release notes (~1 min)
 
