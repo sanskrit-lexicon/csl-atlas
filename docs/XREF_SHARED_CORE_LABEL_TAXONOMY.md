@@ -83,7 +83,7 @@ section above for what this deliberately no longer claims.
 | Example | Why |
 |---|---|
 | `mw-pwg-shared:09` — `Awi → Aqi` (āṭi → āḍi) | MW prints `(cf. Aqi and Ati)`, PWG prints `Vgl. Aqi und Ati`, for the same bird name (*Turdus Ginginianus*). A real by-form link — though not, on this evidence alone, two independent records of it. |
-| `mw-pwg-shared:14` — `BI → Byas` (bhī → bhyas) | A derivational/etymological relation between the root *bhī* 'fear' and *bhyas*, carried by both dictionaries. Not synonyms — and that does not matter; the edge is still lexical rather than an artifact. |
+| `mw-pwg-shared:15` — `BI → Byas` (bhī → bhyas) | A derivational/etymological relation between the root *bhī* 'fear' and *bhyas*, carried by both dictionaries. Not synonyms — and that does not matter; the edge is still lexical rather than an artifact. |
 
 ### `prefix-convention` — reject
 
@@ -115,8 +115,8 @@ could have manufactured it.
 
 | Example | Why |
 |---|---|
-| `mw-pwg-shared:30` — `BuHKAra → BUHKAra` (buhkāra → būhkāra) | Differs only in the length of the first vowel, and the reciprocal edge `mw-pwg-shared:15` runs the other way. Plausibly an artifact of which form each dictionary chose as headword. |
-| `mw-pwg-shared:21` — `BastrakA → BastrAkA` (bhastrakā → bhastrākā) | Same shape: only the placement of vowel length distinguishes the two strings. |
+| `mw-pwg-shared:35` — `BuHKAra → BUHKAra` (buhkāra → būhkāra) | Differs only in the length of the first vowel, and the reciprocal edge `mw-pwg-shared:17` runs the other way. Plausibly an artifact of which form each dictionary chose as headword. |
+| `mw-pwg-shared:26` — `BastrakA → BastrAkA` (bhastrakā → bhastrākā) | Same shape: only the placement of vowel length distinguishes the two strings. |
 
 #### How artifacts get made: the documented MW↔PWG convention divergences
 
@@ -138,7 +138,7 @@ So the risk runs in **both** directions:
 - **Created.** The accent/`°`/hyphen stripping in `m6_xref_lineage.py` can fold two
   genuinely distinct spellings onto one key — the mechanism behind the two examples above.
 - **Hidden.** The four divergences above mean a real shared edge on, say, a ṛ-stem *can
-  never intersect*, because MW's `-ṛ` key and PWG's `-ar` key never match. **The 641-edge
+  never intersect*, because MW's `-ṛ` key and PWG's `-ar` key never match. **The 694-edge
   intersection is therefore an undercount**, and a whole-alphabet re-run that first
   normalises per Patel would be expected to find more, not fewer, shared edges.
 
@@ -149,7 +149,9 @@ dictionary's record is attached (`missingExactEdgeDictionaries` is non-empty), s
 "shared" in shared-core is not demonstrated. This is not a rejection of the edge — it is
 the honest answer when the card does not contain what the question asks about. **0 of the
 40 rows are in this state** since 24-09-2026. The 4 rows the packet used to flag
-(`mw-pwg-shared:03`, `:07`, `:16`, `:36`) were a lookup defect, not thin evidence: the
+(`mw-pwg-shared:03`, `:07`, `:16`, `:36`, as numbered on the 641-edge pool; since the 24-09-2026
+pool refresh those edges sit at `:03`, `:07` and `:18`, and `Darmya → DArmyAyaRa` is no longer
+among the first 40) were a lookup defect, not thin evidence: the
 packet builder compared MW's raw target — `a/nAkzit`, `Are/`, `Basa/d`, `-DArmyAyaRa`, with
 the SLP1 accent mark or the compound hyphen still on it — against the accent-free sample key
 and never found the row, while MW prints the `cf.` in all four (H5408). The builder now folds
@@ -160,7 +162,7 @@ and the label stays on the sheet for the case it names.
 | Example | Why |
 |---|---|
 | `mw-pwg-shared:07` — `ArAt → Are` (ārāt → āre) | Showed PWG only until 24-09-2026 and was the textbook example here. MW L26162 does print `cf. Are/`; the udātta mark on the target hid the row from the exact-edge lookup. Both records are attached now, so the label no longer applies to this card. |
-| `mw-pwg-shared:36` — `Darmya → DArmyAyaRa` (dharmya → dhārmyāyaṇa) | The hyphen case: MW L100511, an `<e>2A` continuation record, prints `cf. -DArmyAyaRa`. The leading hyphen is MW's compound-member notation, not a different target. Attached now for the same reason. |
+| `Darmya → DArmyAyaRa` (dharmya → dhārmyāyaṇa; `mw-pwg-shared:36` on the 641-edge pool, off the sheet since the 694-edge refresh) | The hyphen case: MW L100511, an `<e>2A` continuation record, prints `cf. -DArmyAyaRa`. The leading hyphen is MW's compound-member notation, not a different target. Attached now for the same reason. |
 
 ## How the 40 edges were sampled
 
@@ -171,7 +173,10 @@ the same order.
    [`scripts/lexico/m6_xref_lineage.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lexico/m6_xref_lineage.py)
    reads MW's and PWG's cross-reference edges, normalises each target (see
    `normalization-risk` above), and writes the MW ∩ PWG set to
-   `data/lexico/xref_shared_edges.csv` — **641 edges**. (Quoted as "642" until 26-07-2026:
+   `data/lexico/xref_shared_edges.csv` — **694 edges** since 24-09-2026 (H5453: 641 until the
+   July-20 `xref_edges.csv`, which added PWG's `<ab>s.</ab>` redirect edges, was re-intersected;
+   53 edges entered, none left; MW-side inheritance rate unchanged at 21.8%, PWG-side 9.1% → 9.2%).
+   (Quoted as "642" until 26-07-2026:
    a `wc -l` that counted the CSV header as a data row. The packet now computes this figure
    rather than carrying it as a literal, and
    [`test/xref-taxonomy-docs.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/xref-taxonomy-docs.test.mjs)
@@ -188,8 +193,8 @@ the same order.
 ### The bias, stated plainly
 
 **This is not a random sample.** The CSV is in headword order, so all 40 cards are Ā-, B-,
-C-, D- or G-initial headwords. A confirm/reject rate measured on these 40 describes the
-head of the alphabet, not the 641. Re-running over a random or stratified draw is a
+C- or D-initial headwords. A confirm/reject rate measured on these 40 describes the
+head of the alphabet, not the 694. Re-running over a random or stratified draw is a
 separate job that has not been started.
 
 Alongside the 40, 10 `prefix-control` rows (the top 5 prefix-convention targets in each

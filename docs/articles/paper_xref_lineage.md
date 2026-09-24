@@ -1,4 +1,4 @@
-_Created: 16-06-2026 · Last updated: 06-09-2026_
+_Created: 16-06-2026 · Last updated: 24-09-2026_
 
 # Pointing Inward: Cross-Reference Graphs as a Signal of Dictionary Descent
 
@@ -42,7 +42,7 @@ common scholarly knowledge, and they share prefix-marking conventions that manuf
 spurious hubs, so a raw overlap number conflates inheritance with coincidence and with
 house style. I make the signal legible with a positive control. Parsing the
 cross-reference slots of the Cologne Digital Sanskrit Lexicon yields directed pointer
-graphs for the Petersburg lexicon (PWG `Vgl.`, 22,937 normalised edges over 11,857
+graphs for the Petersburg lexicon (PWG `Vgl.`, 25,766 normalised edges over 14,016
 source lemmas), Monier-Williams (MW `cf.`, 7,637 edges / 6,974 sources), and the Apte
 editions (`cf.` in SLP1, 444 clean lemma edges for Apte 1890 and 609 for the revised
 1957 Apte).
@@ -117,7 +117,7 @@ of analysis: each node is a normalised headword, each edge a `source → target`
 
 | Dictionary | Marker | Edges | Source lemmas |
 |---|---|---:|---:|
-| Petersburg (PWG) | `Vgl.` | 22,937 | 11,857 |
+| Petersburg (PWG) | `Vgl.` | 25,766 | 14,016 |
 | Monier-Williams (MW) | `cf.` | 7,637 | 6,974 |
 | Apte revised, 1957 (AP) | `cf.` `{#…#}` | 609 | 604 |
 | Apte 1890 (AP90) | `cf.` `{#…#}` | 444 | 432 |
@@ -183,12 +183,12 @@ rate is directed (a-rate / b-rate); the reading is the machine review label.
 | Pair | Overlapping edges | a-rate / b-rate | Jaccard | Reading |
 |---|---:|---|---:|---|
 | **AP × AP90** | 182 | **85.5 % / 84.7 %** | **0.740** | edition-continuity (positive control) |
-| AP × PWG | 23 | 34.3 % / 7.4 % | 0.065 | too sparse to read |
+| AP × PWG | 23 | 31.1 % / 7.0 % | 0.060 | too sparse to read |
 | AP × MW | 19 | 28.8 % / 23.2 % | 0.147 | sparse |
 | CAE × MW | 11 | 24.4 % / 20.0 % | 0.124 | sparse |
-| **MW × PWG** | 641 | **21.8 % / 9.1 %** | 0.069 | lexical shared core |
-| AP90 × PWG | 11 | 14.7 % / 2.8 % | 0.024 | too sparse |
-| CAE × PWG | 7 | 12.5 % / 1.8 % | 0.016 | too sparse |
+| **MW × PWG** | 694 | **21.8 % / 9.2 %** | 0.069 | lexical shared core |
+| CAE × PWG | 11 | 16.7 % / 2.6 % | 0.023 | too sparse |
+| AP90 × PWG | 12 | 14.3 % / 2.9 % | 0.025 | too sparse |
 | AP90 × MW | 10 | 11.2 % / 8.6 % | 0.051 | sparse |
 
 *Source: [`xref-lineage.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/xref-lineage.json)
@@ -202,12 +202,12 @@ of the pointer graph across an edition. Every other pair is read against it.
 
 ### 4.2 Monier-Williams and the Petersburg lexicon: a shared core
 
-The headline pair is the largest. MW and PWG share 2,538 source lemmas; on those, MW
-makes 2,946 cross-references and PWG makes 7,022, of which 641 are identical edges.
-That is an inheritance rate of 21.8 % from the MW side (and 9.1 % from the denser PWG
+The headline pair is the largest. MW and PWG share 2,750 source lemmas; on those, MW
+makes 3,184 cross-references and PWG makes 7,544, of which 694 are identical edges.
+That is an inheritance rate of 21.8 % from the MW side (and 9.2 % from the denser PWG
 side), at Jaccard 0.069. The number cuts both ways. It is far above chance — in the
-≈300,000-headword union of the two dictionaries' key spaces, 641 coincident directed
-pointers on a 2,538-lemma overlap is not what independent networks produce — so MW and
+≈300,000-headword union of the two dictionaries' key spaces, 694 coincident directed
+pointers on a 2,750-lemma overlap is not what independent networks produce — so MW and
 PWG are demonstrably related, as the
 philology has always held. But it is barely a quarter of the edition-continuity ceiling,
 and roughly four in five of MW's cross-references — even from lemmas PWG also
@@ -226,7 +226,7 @@ edges), *mahā°* (254), *su°* (160), *vi°* — each a hub that exists because
 records compound families by pointing to the bare prefix. Any dictionary that shares the
 convention will appear to "agree" with PWG on these hubs while sharing no lexical
 knowledge at all. Held out as convention artefacts, they stop inflating the lexical-core
-reading, leaving the 641 shared edges to be adjudicated on their lexical merits.
+reading, leaving the 694 shared edges to be adjudicated on their lexical merits.
 
 ### 4.4 A content finding: Benfey points nowhere inward
 
@@ -255,7 +255,7 @@ The cross-reference graph is a fourth coordinate on the inheritance problem the 
 studies, and it decomposes the same way the methods companion (P3) requires. The
 prefix-convention hubs (§4.3) are a pure *convention*-axis effect — shared marking style
 that fakes content overlap — and must be subtracted before the graph speaks to descent;
-the 641 shared lexical edges are a *content*-axis signal, a floor for relatedness, never
+the 694 shared lexical edges are a *content*-axis signal, a floor for relatedness, never
 on their own proof of copying. The AP × AP90 control is the same edition-continuity edge
 that the sense-inheritance study (P2) reads as an Apte revision and the three-axis packet
 (P3) scores at high content and microstructure: across senses, axes, and now pointer
@@ -271,7 +271,7 @@ targets only lower the measured overlap, so the true shared core is at least as 
 reported. Edges are directed: only `source → target` matches count, and a reciprocal
 pointer in the other dictionary is not credited, which understates symmetric relatedness.
 The two networks differ in density: PWG cross-references roughly three times as densely as
-MW (22,937 vs 7,637 edges), so the two directed inheritance rates are not comparable in
+MW (25,766 vs 7,637 edges), so the two directed inheritance rates are not comparable in
 magnitude and are reported separately rather than averaged.
 
 The sparse pairs are unreadable: every cross-tradition pair except MW × PWG and the Apte

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-05T08:29:19.672Z",
+  "generatedAt": "2026-09-24T15:05:42.140Z",
   "claim": "M6: cross-reference graphs preserve lineage signals as a shared core, not wholesale descent.",
   "evidenceLabel": "derived",
   "reviewStatus": "machine-reviewed",
@@ -17,7 +17,7 @@
   "verdictMwPwg": "PARTIAL overlap — a shared cross-reference CORE (MW 22% / PWG 9% of cross-refs on lemmas both treat, well above chance) plus large independent expansion in each tradition; NOT wholesale inheritance",
   "counts": {
     "pairRows": 10,
-    "sharedEdges": 641
+    "sharedEdges": 694
   },
   "pairs": [
     {
@@ -29,17 +29,17 @@
       "label": "MW x PWG",
       "reading": "headline-shared-core",
       "aEdges": 7637,
-      "bEdges": 22937,
+      "bEdges": 25766,
       "aSources": 6974,
-      "bSources": 11857,
-      "sharedSources": 2538,
-      "aEdgesOnSharedSources": 2946,
-      "bEdgesOnSharedSources": 7022,
-      "overlappingEdges": 641,
-      "jaccardOnSharedSources": 0.0687,
-      "aInheritanceRate": 0.2176,
-      "bInheritanceRate": 0.0913,
-      "sharedSourcesWithSharedTarget": 640
+      "bSources": 14016,
+      "sharedSources": 2750,
+      "aEdgesOnSharedSources": 3184,
+      "bEdgesOnSharedSources": 7544,
+      "overlappingEdges": 694,
+      "jaccardOnSharedSources": 0.0692,
+      "aInheritanceRate": 0.218,
+      "bInheritanceRate": 0.092,
+      "sharedSourcesWithSharedTarget": 693
     },
     {
       "pair": "ap-ap90",
@@ -71,16 +71,16 @@
       "label": "AP x PWG",
       "reading": "comparison",
       "aEdges": 609,
-      "bEdges": 22937,
+      "bEdges": 25766,
       "aSources": 604,
-      "bSources": 11857,
-      "sharedSources": 67,
-      "aEdgesOnSharedSources": 67,
-      "bEdgesOnSharedSources": 310,
+      "bSources": 14016,
+      "sharedSources": 74,
+      "aEdgesOnSharedSources": 74,
+      "bEdgesOnSharedSources": 331,
       "overlappingEdges": 23,
-      "jaccardOnSharedSources": 0.065,
-      "aInheritanceRate": 0.3433,
-      "bInheritanceRate": 0.0742,
+      "jaccardOnSharedSources": 0.0602,
+      "aInheritanceRate": 0.3108,
+      "bInheritanceRate": 0.0695,
       "sharedSourcesWithSharedTarget": 23
     },
     {
@@ -105,6 +105,27 @@
       "sharedSourcesWithSharedTarget": 19
     },
     {
+      "pair": "ap90-pwg",
+      "a": "ap90",
+      "b": "pwg",
+      "aLabel": "AP90",
+      "bLabel": "PWG",
+      "label": "AP90 x PWG",
+      "reading": "comparison",
+      "aEdges": 444,
+      "bEdges": 25766,
+      "aSources": 432,
+      "bSources": 14016,
+      "sharedSources": 80,
+      "aEdgesOnSharedSources": 84,
+      "bEdgesOnSharedSources": 415,
+      "overlappingEdges": 12,
+      "jaccardOnSharedSources": 0.0246,
+      "aInheritanceRate": 0.1429,
+      "bInheritanceRate": 0.0289,
+      "sharedSourcesWithSharedTarget": 12
+    },
+    {
       "pair": "cae-mw",
       "a": "cae",
       "b": "mw",
@@ -126,24 +147,24 @@
       "sharedSourcesWithSharedTarget": 11
     },
     {
-      "pair": "ap90-pwg",
-      "a": "ap90",
+      "pair": "cae-pwg",
+      "a": "cae",
       "b": "pwg",
-      "aLabel": "AP90",
+      "aLabel": "CAE",
       "bLabel": "PWG",
-      "label": "AP90 x PWG",
+      "label": "CAE x PWG",
       "reading": "comparison",
-      "aEdges": 444,
-      "bEdges": 22937,
-      "aSources": 432,
-      "bSources": 11857,
-      "sharedSources": 71,
-      "aEdgesOnSharedSources": 75,
-      "bEdgesOnSharedSources": 391,
+      "aEdges": 190,
+      "bEdges": 25766,
+      "aSources": 160,
+      "bSources": 14016,
+      "sharedSources": 53,
+      "aEdgesOnSharedSources": 66,
+      "bEdgesOnSharedSources": 416,
       "overlappingEdges": 11,
-      "jaccardOnSharedSources": 0.0242,
-      "aInheritanceRate": 0.1467,
-      "bInheritanceRate": 0.0281,
+      "jaccardOnSharedSources": 0.0234,
+      "aInheritanceRate": 0.1667,
+      "bInheritanceRate": 0.0264,
       "sharedSourcesWithSharedTarget": 11
     },
     {
@@ -166,27 +187,6 @@
       "aInheritanceRate": 0.1124,
       "bInheritanceRate": 0.0862,
       "sharedSourcesWithSharedTarget": 10
-    },
-    {
-      "pair": "cae-pwg",
-      "a": "cae",
-      "b": "pwg",
-      "aLabel": "CAE",
-      "bLabel": "PWG",
-      "label": "CAE x PWG",
-      "reading": "comparison",
-      "aEdges": 190,
-      "bEdges": 22937,
-      "aSources": 160,
-      "bSources": 11857,
-      "sharedSources": 46,
-      "aEdgesOnSharedSources": 56,
-      "bEdgesOnSharedSources": 395,
-      "overlappingEdges": 7,
-      "jaccardOnSharedSources": 0.0158,
-      "aInheritanceRate": 0.125,
-      "bInheritanceRate": 0.0177,
-      "sharedSourcesWithSharedTarget": 7
     },
     {
       "pair": "ap-cae",
@@ -285,8 +285,16 @@
       "target": "Bavitra"
     },
     {
+      "src": "BAvyaraTa",
+      "target": "BAvya"
+    },
+    {
       "src": "BI",
       "target": "Byas"
+    },
+    {
+      "src": "BImagava",
+      "target": "BEmagava"
     },
     {
       "src": "BUHKAra",
@@ -295,6 +303,18 @@
     {
       "src": "BaMsas",
       "target": "Basad"
+    },
+    {
+      "src": "BaNgAsura",
+      "target": "BANgAsuri"
+    },
+    {
+      "src": "BadrasAman",
+      "target": "BAdrasAma"
+    },
+    {
+      "src": "Badravarman",
+      "target": "BAdravarmaRa"
     },
     {
       "src": "BakkikA",
@@ -461,6 +481,10 @@
       "target": "karpara"
     },
     {
+      "src": "Kawa",
+      "target": "kaPa"
+    },
+    {
       "src": "Kaz",
       "target": "kaz"
     },
@@ -497,6 +521,14 @@
       "target": "SApeya"
     },
     {
+      "src": "SAlAvfka",
+      "target": "sAlAvfka"
+    },
+    {
+      "src": "SAnita",
+      "target": "SARita"
+    },
+    {
       "src": "SArvarin",
       "target": "Sarvarin"
     },
@@ -507,6 +539,14 @@
     {
       "src": "SaRqila",
       "target": "SARqila"
+    },
+    {
+      "src": "SakapURa",
+      "target": "SAkapURi"
+    },
+    {
+      "src": "Sakawavila",
+      "target": "SakawAvila"
     },
     {
       "src": "SalAtura",
@@ -549,6 +589,10 @@
       "target": "SayaRqa"
     },
     {
+      "src": "Scand",
+      "target": "cand"
+    },
+    {
       "src": "SevalinI",
       "target": "SEvalinI"
     },
@@ -559,6 +603,10 @@
     {
       "src": "SilUza",
       "target": "SElUza"
+    },
+    {
+      "src": "SimizIpada",
+      "target": "SamanIzada"
     },
     {
       "src": "SitAman",
@@ -583,6 +631,10 @@
     {
       "src": "SraT",
       "target": "SlaT"
+    },
+    {
+      "src": "SravaRa",
+      "target": "sravaRa"
     },
     {
       "src": "Srutarvan",
@@ -733,6 +785,10 @@
       "target": "arDajAhnavI"
     },
     {
+      "src": "araDra",
+      "target": "raDra"
+    },
+    {
       "src": "aratni",
       "target": "ratni"
     },
@@ -799,6 +855,14 @@
     {
       "src": "buboDayizu",
       "target": "biboDayizu"
+    },
+    {
+      "src": "bud",
+      "target": "bund"
+    },
+    {
+      "src": "bunD",
+      "target": "bund"
     },
     {
       "src": "cAwu",
@@ -925,6 +989,10 @@
       "target": "dAva"
     },
     {
+      "src": "devamaYjara",
+      "target": "kOstuBa"
+    },
+    {
       "src": "dfQadasyu",
       "target": "dfQasyu"
     },
@@ -941,6 +1009,10 @@
       "target": "dilha"
     },
     {
+      "src": "divAkara",
+      "target": "arka"
+    },
+    {
       "src": "dohya",
       "target": "duhya"
     },
@@ -955,6 +1027,10 @@
     {
       "src": "drAq",
       "target": "DrAq"
+    },
+    {
+      "src": "drahya",
+      "target": "drAhyAyaRa"
     },
     {
       "src": "drek",
@@ -983,6 +1059,10 @@
     {
       "src": "dvIpikA",
       "target": "dvIpaSatru"
+    },
+    {
+      "src": "dvitavana",
+      "target": "dvEtavana"
     },
     {
       "src": "dyUna",
@@ -1049,6 +1129,10 @@
       "target": "gOtama"
     },
     {
+      "src": "guRW",
+      "target": "guRq"
+    },
+    {
       "src": "gud",
       "target": "gUrd"
     },
@@ -1109,6 +1193,10 @@
       "target": "undura"
     },
     {
+      "src": "induvrata",
+      "target": "cAndrAyaRa"
+    },
+    {
       "src": "irA",
       "target": "iqA"
     },
@@ -1149,6 +1237,10 @@
       "target": "kARa"
     },
     {
+      "src": "kARqikA",
+      "target": "laNkA"
+    },
+    {
       "src": "kARvya",
       "target": "kARva"
     },
@@ -1169,12 +1261,20 @@
       "target": "kAka"
     },
     {
+      "src": "kAkaDvaja",
+      "target": "Orva"
+    },
+    {
       "src": "kAkud",
       "target": "kakud"
     },
     {
       "src": "kAlakIla",
       "target": "kalakala"
+    },
+    {
+      "src": "kAntidAyaka",
+      "target": "kAlIyaka"
     },
     {
       "src": "kAtalAyana",
@@ -1217,6 +1317,10 @@
       "target": "kanIci"
     },
     {
+      "src": "kaRWevidDa",
+      "target": "kARWevidDi"
+    },
+    {
       "src": "kaRa",
       "target": "kanizWa"
     },
@@ -1247,6 +1351,10 @@
     {
       "src": "kaWara",
       "target": "kaWina"
+    },
+    {
+      "src": "kaWikA",
+      "target": "kaWinI"
     },
     {
       "src": "kaYc",
@@ -1433,6 +1541,10 @@
       "target": "kira"
     },
     {
+      "src": "kledana",
+      "target": "kaPa"
+    },
+    {
       "src": "klind",
       "target": "kland"
     },
@@ -1507,6 +1619,10 @@
     {
       "src": "kujjiSa",
       "target": "kuqiSa"
+    },
+    {
+      "src": "kukola",
+      "target": "koli"
     },
     {
       "src": "kumodaka",
@@ -1853,6 +1969,10 @@
       "target": "mavy"
     },
     {
+      "src": "mfdi",
+      "target": "mArdeya"
+    },
+    {
       "src": "miS",
       "target": "maS"
     },
@@ -1897,8 +2017,16 @@
       "target": "mUrvA"
     },
     {
+      "src": "nAgasuganDA",
+      "target": "nAkulI"
+    },
+    {
       "src": "nAkra",
       "target": "nakra"
+    },
+    {
+      "src": "nAqi",
+      "target": "nAqI"
     },
     {
       "src": "nIDra",
@@ -1919,6 +2047,10 @@
     {
       "src": "naBaga",
       "target": "naBAga"
+    },
+    {
+      "src": "naS",
+      "target": "ninaNkzu"
     },
     {
       "src": "naq",
@@ -1965,6 +2097,10 @@
       "target": "nikz"
     },
     {
+      "src": "niSAvana",
+      "target": "SaRa"
+    },
+    {
       "src": "niScapraca",
       "target": "AcaparAca"
     },
@@ -1975,6 +2111,10 @@
     {
       "src": "nicaka",
       "target": "nEcakya"
+    },
+    {
+      "src": "nicita",
+      "target": "nEcitya"
     },
     {
       "src": "nidrAyoga",
@@ -2019,6 +2159,10 @@
     {
       "src": "pARqUka",
       "target": "pARquka"
+    },
+    {
+      "src": "pAlakApya",
+      "target": "pAlakAvya"
     },
     {
       "src": "pApapurI",
@@ -2077,6 +2221,14 @@
       "target": "panT"
     },
     {
+      "src": "pad",
+      "target": "pada"
+    },
+    {
+      "src": "padapAWa",
+      "target": "pada"
+    },
+    {
       "src": "pakvaSa",
       "target": "pakkaRa"
     },
@@ -2131,6 +2283,10 @@
     {
       "src": "pfkkA",
       "target": "spfkkA"
+    },
+    {
+      "src": "pfzadvARa",
+      "target": "pArzadvARa"
     },
     {
       "src": "piRqala",
@@ -2217,12 +2373,24 @@
       "target": "pravalha"
     },
     {
+      "src": "proT",
+      "target": "pruT"
+    },
+    {
       "src": "puNga",
       "target": "puYja"
     },
     {
+      "src": "puRqranagara",
+      "target": "pORqranAgara"
+    },
+    {
       "src": "pucCawi",
       "target": "mucuwI"
+    },
+    {
+      "src": "puluza",
+      "target": "pOluzi"
     },
     {
       "src": "puruda",
@@ -2357,6 +2525,10 @@
       "target": "rUvuka"
     },
     {
+      "src": "sAKi",
+      "target": "SAKi"
+    },
+    {
       "src": "sASikya",
       "target": "SASika"
     },
@@ -2463,6 +2635,10 @@
     {
       "src": "sutaMgama",
       "target": "sOtaMgami"
+    },
+    {
+      "src": "svAdumfdu",
+      "target": "sOvAdumfdava"
     },
     {
       "src": "svard",
@@ -2593,6 +2769,10 @@
       "target": "vArawA"
     },
     {
+      "src": "vArdara",
+      "target": "bAdara"
+    },
+    {
       "src": "vArtantavIya",
       "target": "vAratantavIya"
     },
@@ -2665,6 +2845,14 @@
       "target": "vaNkzu"
     },
     {
+      "src": "van",
+      "target": "vanIvan"
+    },
+    {
+      "src": "varIzu",
+      "target": "ravIzu"
+    },
+    {
       "src": "vasika",
       "target": "vaSika"
     },
@@ -2717,6 +2905,14 @@
       "target": "vEKAnasa"
     },
     {
+      "src": "viSIta",
+      "target": "vESIti"
+    },
+    {
+      "src": "viSvaDA",
+      "target": "viSvaDa"
+    },
+    {
       "src": "viT",
       "target": "veT"
     },
@@ -2729,12 +2925,24 @@
       "target": "vEdaTina"
     },
     {
+      "src": "vidadaSva",
+      "target": "vEdadaSvi"
+    },
+    {
+      "src": "vidala",
+      "target": "bidala"
+    },
+    {
       "src": "vipraSna",
       "target": "vEpraSnika"
     },
     {
       "src": "viq",
       "target": "biw"
+    },
+    {
+      "src": "vizRu",
+      "target": "avatAra"
     },
     {
       "src": "vokkARa",
@@ -2775,6 +2983,10 @@
     {
       "src": "yadu",
       "target": "yAdava"
+    },
+    {
+      "src": "yavAza",
+      "target": "yevAza"
     },
     {
       "src": "yazwinivAsa",
