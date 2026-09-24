@@ -1,4 +1,4 @@
-_Created: 06-06-2026 · Last updated: 05-09-2026_
+_Created: 06-06-2026 · Last updated: 24-09-2026_
 
 # Cross-Reference Hub Review
 
@@ -32,8 +32,8 @@ Status: scholar-facing review note for the M6 xref lineage package and
 M6 already supports the cautious finding: cross-reference graphs preserve a
 shared core but do not prove wholesale descent. The strongest positive control
 is AP/AP90: 182 overlapping edges on 211 shared source lemmas, with about 85%
-matched edges on both sides. MW/PWG is different: 641 overlapping edges on
-2,538 shared source lemmas, with a 21.8% MW-side and 9.1% PWG-side rate.
+matched edges on both sides. MW/PWG is different: 694 overlapping edges on
+2,750 shared source lemmas, with a 21.8% MW-side and 9.2% PWG-side rate.
 
 That means MW/PWG has a real shared core, but each tradition also expands its
 xref graph independently.
@@ -57,7 +57,7 @@ after source checking.
 |---|---|---|
 | Edition-continuity hubs | AP/AP90 high overlap. | Which targets remain stable across edition revision? |
 | Prefix/compound hubs | MW top targets include `a-`, `A-`, `aBi-`, `vi-`, `pra-`; PWG top targets include related compound-marker hubs. | Are these structural convention hubs or meaningful lineage links? |
-| Lexical shared-core hubs | MW/PWG shared edges include 641 normalized source-target pairs. | Which shared edges are philologically meaningful rather than normalizing artifacts? |
+| Lexical shared-core hubs | MW/PWG shared edges include 694 normalized source-target pairs. | Which shared edges are philologically meaningful rather than normalizing artifacts? |
 | Sparse-pair hubs | AP/CAE and AP90/CAE have one or two shared sources. | Keep these visible but do not interpret them as lineage evidence. |
 
 ## Review Samples
@@ -78,7 +78,7 @@ after source checking.
 | AP/AP90/CAE top targets | Top targets are lexical targets rather than prefix hubs. | `lexical-target` | Use these as a different xref style, not as evidence that AP-style graphs behave like PWG/MW. |
 | AE top targets | Only 2 xref edges, both proverb-like strings. | `normalization-risk` | Keep AE as a control for target extraction risk. |
 | AP/AP90 pair | 211 shared sources, 182 overlapping edges, about 85% match on both sides. | `edition-continuity` | Positive-control ceiling for what same-family xref inheritance looks like. |
-| MW/PWG pair | 2,538 shared sources, 641 overlapping edges, 21.8% MW-side and 9.1% PWG-side match. | `lexical-shared-core` | Real shared core, not wholesale xref inheritance. |
+| MW/PWG pair | 2,750 shared sources, 694 overlapping edges, 21.8% MW-side and 9.2% PWG-side match. | `lexical-shared-core` | Real shared core, not wholesale xref inheritance. |
 | AP/CAE and AP90/CAE pairs | 1 or 2 shared source lemmas. | `too-sparse` | Keep visible, but do not use for lineage interpretation. |
 | Other AP/MW/PWG/CAE pairs | Modest overlap with normalization and convention exposure. | `normalization-risk` | Review only as controls unless a rare shared target is source-confirmed. |
 

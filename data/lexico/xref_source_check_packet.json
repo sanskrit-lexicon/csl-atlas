@@ -5,7 +5,7 @@
   "evidenceLabel": "derived-source-pointers",
   "reviewStatus": "needs-source-check",
   "ownerRepo": "csl-atlas",
-  "generatedAt": "2026-09-24T11:18:02.135Z",
+  "generatedAt": "2026-09-24T15:05:42.920Z",
   "generatedBy": "npm run build-xref-source-check-packet",
   "sourceFiles": [
     "data/lexico/xref_hub_review.json",
@@ -18,7 +18,7 @@
   "sourceArtifact": {
     "path": "data/lexico/xref_hub_review.json",
     "generatedBy": "npm run build-xref-hub-review",
-    "sourceGeneratedAt": "2026-06-05T08:29:19.672Z",
+    "sourceGeneratedAt": "2026-09-24T15:05:42.140Z",
     "sharedCoreSample": 40
   },
   "packetLabelVocabulary": [
@@ -77,8 +77,8 @@
       "meaningRu": "Строка-цель, на которой нормализация может создать или, наоборот, скрыть ребро.",
       "asserts": "The edge may be an artifact of string folding rather than a fact about the language. Two mechanisms, in opposite directions. (a) CREATED: m6_xref_lineage.py strips MW's '-'/accent marks and PWG's '°' ring before intersecting, so headwords the dictionaries spelt differently can meet in the middle. (b) HIDDEN: MW and PWG follow documented and DIFFERENT headword conventions (Patel 2016, docs/refs/Patel_2016_Normalizing_headwords.pdf) which this pipeline does not reconcile — śatṛ stems MW '-at' vs PWG '-a' (conv. 3.1/3.2), vatup/matup MW '-vat/-mat' vs PWG '-v/-m' (3.4/3.5), ṛ-stems MW '-ṛ' vs PWG '-ar' (6.1/6.2), and vas/yas MW '-vas/-yas' vs PWG '-vaṃs/-yaṃs' (7.1/7.4). Reach for this label when source and target differ only in vowel length, accent, or a diacritic the normaliser touches.",
       "assertsRu": "Ребро может быть артефактом склейки строк, а не фактом языка. Два механизма, действующих в противоположные стороны. (а) СОЗДАНО: m6_xref_lineage.py перед пересечением убирает у MW дефисы и знаки ударения, а у PWG — кружок «°», поэтому заголовки, написанные словарями по-разному, могут совпасть. (б) СКРЫТО: MW и PWG следуют задокументированным и РАЗНЫМ конвенциям записи заголовков (Patel 2016, docs/refs/Patel_2016_Normalizing_headwords.pdf), которые этот конвейер не согласует: причастия на śatṛ у MW «-at», у PWG «-a» (конв. 3.1/3.2); vatup/matup у MW «-vat/-mat», у PWG «-v/-m» (3.4/3.5); основы на ṛ у MW «-ṛ», у PWG «-ar» (6.1/6.2); vas/yas у MW «-vas/-yas», у PWG «-vaṃs/-yaṃs» (7.1/7.4). Выбирайте эту метку, когда источник и цель различаются только долготой гласного, ударением или диакритикой, которую трогает нормализатор.",
-      "doesNotAssert": "NOT that the words are unrelated — a length variant is often a genuine by-form. It flags that THIS edge is not independent evidence, because the matching step could have manufactured it. Note the (b) mechanism also means the 641-edge intersection UNDERCOUNTS: a ṛ-stem edge can never intersect while MW writes '-ṛ' and PWG writes '-ar'.",
-      "doesNotAssertRu": "НЕ утверждает, что слова не связаны, — вариант по долготе часто является настоящей побочной формой. Метка говорит лишь о том, что ИМЕННО ЭТО ребро не является независимым свидетельством, поскольку шаг сопоставления мог его изготовить. Заметьте: механизм (б) означает также, что пересечение из 641 рёбер ЗАНИЖЕНО — ребро на основе с ṛ вообще не может попасть в пересечение, пока MW пишет «-ṛ», а PWG «-ar».",
+      "doesNotAssert": "NOT that the words are unrelated — a length variant is often a genuine by-form. It flags that THIS edge is not independent evidence, because the matching step could have manufactured it. Note the (b) mechanism also means the 694-edge intersection UNDERCOUNTS: a ṛ-stem edge can never intersect while MW writes '-ṛ' and PWG writes '-ar'.",
+      "doesNotAssertRu": "НЕ утверждает, что слова не связаны, — вариант по долготе часто является настоящей побочной формой. Метка говорит лишь о том, что ИМЕННО ЭТО ребро не является независимым свидетельством, поскольку шаг сопоставления мог его изготовить. Заметьте: механизм (б) означает также, что пересечение из 694 рёбер ЗАНИЖЕНО — ребро на основе с ṛ вообще не может попасть в пересечение, пока MW пишет «-ṛ», а PWG «-ar».",
       "examples": [
         {
           "sampleId": "mw-pwg-shared:30",
@@ -168,18 +168,18 @@
     }
   },
   "selectionPolicy": [
-    "Stage 1 — build the candidate pool: scripts/lexico/m6_xref_lineage.py reads MW's and PWG's cross-reference edges, normalises each target (strips MW's '-' and accent marks and PWG's '°' ring), and writes the MW-intersect-PWG set to data/lexico/xref_shared_edges.csv. That intersection is 641 edges.",
+    "Stage 1 — build the candidate pool: scripts/lexico/m6_xref_lineage.py reads MW's and PWG's cross-reference edges, normalises each target (strips MW's '-' and accent marks and PWG's '°' ring), and writes the MW-intersect-PWG set to data/lexico/xref_shared_edges.csv. That intersection is 694 edges.",
     "Stage 2 — take the sample: buildSharedCoreSample() in scripts/build-xref-hub-review.mjs takes sharedEdges.slice(0, 40), i.e. the FIRST 40 rows of that CSV in file order.",
-    "NOT A RANDOM SAMPLE, and the bias is visible on the sheet: the CSV is in headword order, so all 40 cards are Ā-, B-, C-, D- and G-initial headwords. Findings from these 40 describe the head of the alphabet, not the 641 as a whole. Re-running over a random or stratified draw is a separate, unstarted job.",
+    "NOT A RANDOM SAMPLE, and the bias is visible on the sheet: the CSV is in headword order, so all 40 cards are Ā-, B-, C-, D- and G-initial headwords. Findings from these 40 describe the head of the alphabet, not the 694 as a whole. Re-running over a random or stratified draw is a separate, unstarted job.",
     "Stage 3 — attach evidence: this script re-slices to 40, keeps the frozen sampleId order (validatePayload rejects any reorder), and attaches the exact MW/PWG source records per edge from xref_edges.csv, plus Cologne entry/scan links for both ends of the edge.",
     "Controls: the first five prefix-convention top targets for PWG and MW, with up to three source examples each, are carried alongside as a contrast class; all ten auto-resolve on their truncation marker and are not put to the reviewer.",
     "Deterministic throughout — no RNG anywhere in the three stages; re-running reproduces the same 40 cards in the same order.",
     "Labels on the cards are source-check prompts, not accepted lineage decisions."
   ],
   "selectionPolicyRu": [
-    "Шаг 1 — построение пула кандидатов: scripts/lexico/m6_xref_lineage.py читает перекрёстные ссылки MW и PWG, нормализует каждую цель (убирает у MW дефис и знаки ударения, у PWG — кружок «°») и записывает пересечение MW ∩ PWG в data/lexico/xref_shared_edges.csv. В пересечении 641 ребра.",
+    "Шаг 1 — построение пула кандидатов: scripts/lexico/m6_xref_lineage.py читает перекрёстные ссылки MW и PWG, нормализует каждую цель (убирает у MW дефис и знаки ударения, у PWG — кружок «°») и записывает пересечение MW ∩ PWG в data/lexico/xref_shared_edges.csv. В пересечении 694 ребра.",
     "Шаг 2 — взятие выборки: buildSharedCoreSample() в scripts/build-xref-hub-review.mjs берёт sharedEdges.slice(0, 40), то есть ПЕРВЫЕ 40 строк этого CSV в порядке файла.",
-    "ЭТО НЕ СЛУЧАЙНАЯ ВЫБОРКА, и смещение видно на листе: CSV упорядочен по заголовкам, поэтому все 40 карточек — заголовки на Ā-, B-, C-, D- и G-. Выводы по этим 40 описывают начало алфавита, а не все 641. Прогон по случайной или стратифицированной выборке — отдельная, ещё не начатая задача.",
+    "ЭТО НЕ СЛУЧАЙНАЯ ВЫБОРКА, и смещение видно на листе: CSV упорядочен по заголовкам, поэтому все 40 карточек — заголовки на Ā-, B-, C-, D- и G-. Выводы по этим 40 описывают начало алфавита, а не все 694. Прогон по случайной или стратифицированной выборке — отдельная, ещё не начатая задача.",
     "Шаг 3 — приложение свидетельств: этот скрипт снова берёт 40, сохраняет замороженный порядок sampleId (validatePayload отвергает любую перестановку) и прикладывает точные записи MW/PWG для каждого ребра из xref_edges.csv, а также кёльнские ссылки на статью и скан для обоих концов ребра.",
     "Контроли: первые пять частых prefix-convention целей у PWG и у MW, до трёх примеров-источников на каждую, идут рядом как контрастный класс; все десять разрешаются автоматически по знаку усечения и человеку не показываются.",
     "Всё детерминировано — ни на одном из трёх шагов нет генератора случайных чисел; повторный прогон даёт те же 40 карточек в том же порядке.",
@@ -1189,6 +1189,82 @@
     {
       "sampleId": "mw-pwg-shared:14",
       "sampleClass": "shared-core",
+      "sourceLemma": "BAvyaraTa",
+      "target": "BAvya",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "150473",
+          "line": 503893,
+          "pc": "755,2",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L503893",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=BAvyaraTa&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=755",
+          "sourceLemma": "BAvyaraTa",
+          "sourceRecordLemma": "BAvyaraTa",
+          "target": "BAvya",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BAvya—raTa</s> ¦ <lex>m.</lex> <ab>N.</ab> of a king, <ls>VP.</ls> (<ab>cf.</ab> <s>BAvya</s>). <info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54755",
+          "line": 271656,
+          "pc": "5-0266",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L271656",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=BAvyaraTa&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=5-0266",
+          "sourceLemma": "BAvyaraTa",
+          "sourceRecordLemma": "BAvyaraTa",
+          "target": "BAvya",
+          "kind": "s",
+          "bodyExcerpt": "{#BAvyaraTa#}¦ ({#BA˚#} + {#raTa#}) <lex>m.</lex> <ab>N. pr.</ab> eines Fürsten (<ab>s.</ab> {#BAvya#} 2.) <ls>VP. 463, N. 10</ls>."
+        }
+      ],
+      "targetLinks": [
+        {
+          "role": "target-lookup",
+          "dictionary": "MW",
+          "dict": "mw",
+          "headword": "BAvya",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=BAvya&transLit=slp1&filter=roman"
+        },
+        {
+          "role": "target-lookup",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "headword": "BAvya",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=BAvya&transLit=slp1&filter=roman"
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BAvyaraTa -> BAvya as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что BAvyaraTa -> BAvya — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": "",
+      "autoTriage": {
+        "resolved": false
+      }
+    },
+    {
+      "sampleId": "mw-pwg-shared:15",
+      "sampleClass": "shared-core",
       "sourceLemma": "BI",
       "target": "Byas",
       "hubClass": "lexical-target",
@@ -1263,7 +1339,83 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:15",
+      "sampleId": "mw-pwg-shared:16",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BImagava",
+      "target": "BEmagava",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "151020",
+          "line": 505728,
+          "pc": "758,1",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L505728",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=BImagava&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=758",
+          "sourceLemma": "BImagava",
+          "sourceRecordLemma": "BImagava",
+          "target": "BEmagava",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BIma—gava</s> or <s>BIma—gu</s>, ¦ <lex>m.</lex> (<s>gava</s> or <s>gu</s> = <s>go</s>) <ab>N.</ab> of man (<ab>cf.</ab> <s>BEmagava</s>). <info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54950",
+          "line": 272742,
+          "pc": "5-0294",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L272742",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=BImagava&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=5-0294",
+          "sourceLemma": "BImagava",
+          "sourceRecordLemma": "BImagava",
+          "target": "BEmagava",
+          "kind": "s",
+          "bodyExcerpt": "{#BImagava#} oder {#BImagu#}¦ ({#BIma#} + {#gava#} oder {#gu#} = {#go#}) <lex>m.</lex> <ab>N. pr.</ab>; <ab>s.</ab> {#BEmagava#}"
+        }
+      ],
+      "targetLinks": [
+        {
+          "role": "target-lookup",
+          "dictionary": "MW",
+          "dict": "mw",
+          "headword": "BEmagava",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=BEmagava&transLit=slp1&filter=roman"
+        },
+        {
+          "role": "target-lookup",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "headword": "BEmagava",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=BEmagava&transLit=slp1&filter=roman"
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BImagava -> BEmagava as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что BImagava -> BEmagava — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": "",
+      "autoTriage": {
+        "resolved": false
+      }
+    },
+    {
+      "sampleId": "mw-pwg-shared:17",
       "sampleClass": "shared-core",
       "sourceLemma": "BUHKAra",
       "target": "BuHKAra",
@@ -1339,7 +1491,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:16",
+      "sampleId": "mw-pwg-shared:18",
       "sampleClass": "shared-core",
       "sourceLemma": "BaMsas",
       "target": "Basad",
@@ -1415,7 +1567,235 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:17",
+      "sampleId": "mw-pwg-shared:19",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BaNgAsura",
+      "target": "BANgAsuri",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "148005",
+          "line": 496144,
+          "pc": "744,3",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L496144",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=BaNgAsura&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=744",
+          "sourceLemma": "BaNgAsura",
+          "sourceRecordLemma": "BaNgAsura",
+          "target": "BANgAsuri",
+          "kind": "cf",
+          "bodyExcerpt": "<s>BaNgA<srs/>sura</s> ¦ <lex>m.</lex> <ab>N.</ab> of a man (<ab>cf.</ab> <s>BANgAsuri</s>). <info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "53846",
+          "line": 267120,
+          "pc": "5-0177",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L267120",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=BaNgAsura&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=5-0177",
+          "sourceLemma": "BaNgAsura",
+          "sourceRecordLemma": "BaNgAsura",
+          "target": "BANgAsuri",
+          "kind": "s",
+          "bodyExcerpt": "{#BaNgAsura#}¦ <ab>s.</ab> {#BANgAsuri#}."
+        }
+      ],
+      "targetLinks": [
+        {
+          "role": "target-lookup",
+          "dictionary": "MW",
+          "dict": "mw",
+          "headword": "BANgAsuri",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=BANgAsuri&transLit=slp1&filter=roman"
+        },
+        {
+          "role": "target-lookup",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "headword": "BANgAsuri",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=BANgAsuri&transLit=slp1&filter=roman"
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BaNgAsura -> BANgAsuri as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что BaNgAsura -> BANgAsuri — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": "",
+      "autoTriage": {
+        "resolved": false
+      }
+    },
+    {
+      "sampleId": "mw-pwg-shared:20",
+      "sampleClass": "shared-core",
+      "sourceLemma": "BadrasAman",
+      "target": "BAdrasAma",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "148470",
+          "line": 497533,
+          "pc": "746,2",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L497533",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=BadrasAman&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=746",
+          "sourceLemma": "BadrasAman",
+          "sourceRecordLemma": "BadrasAman",
+          "target": "BAdrasAma",
+          "kind": "cf",
+          "bodyExcerpt": "<s>Badra—sAman</s> ¦ <lex>m.</lex> <ab>N.</ab> of a man (<ab>cf.</ab> <s>BAdrasAma</s>). <info lex=\"m\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54066",
+          "line": 268235,
+          "pc": "5-0199",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L268235",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=BadrasAman&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=5-0199",
+          "sourceLemma": "BadrasAman",
+          "sourceRecordLemma": "BadrasAman",
+          "target": "BAdrasAma",
+          "kind": "s",
+          "bodyExcerpt": "{#BadrasAman#}¦ ({#Badra#} + {#sA˚#}) <lex>m.</lex> <ab>N. pr.</ab> eines Mannes; <ab>s.</ab> {#BAdrasAma#}."
+        }
+      ],
+      "targetLinks": [
+        {
+          "role": "target-lookup",
+          "dictionary": "MW",
+          "dict": "mw",
+          "headword": "BAdrasAma",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=BAdrasAma&transLit=slp1&filter=roman"
+        },
+        {
+          "role": "target-lookup",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "headword": "BAdrasAma",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=BAdrasAma&transLit=slp1&filter=roman"
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support BadrasAman -> BAdrasAma as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что BadrasAman -> BAdrasAma — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": "",
+      "autoTriage": {
+        "resolved": false
+      }
+    },
+    {
+      "sampleId": "mw-pwg-shared:21",
+      "sampleClass": "shared-core",
+      "sourceLemma": "Badravarman",
+      "target": "BAdravarmaRa",
+      "hubClass": "lexical-target",
+      "proposedLabels": [
+        "lexical-shared-core"
+      ],
+      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
+      "sourcePointers": [
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "MW",
+          "dict": "mw",
+          "L": "148440",
+          "line": 497443,
+          "pc": "746,2",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L497443",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=Badravarman&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=746",
+          "sourceLemma": "Badravarman",
+          "sourceRecordLemma": "Badravarman",
+          "target": "BAdravarmaRa",
+          "kind": "cf",
+          "bodyExcerpt": "¦ <ab>N.</ab> of a man (<ab>cf.</ab> <s>BAdravarmaRa</s>). <info lex=\"inh\"/>"
+        },
+        {
+          "role": "exact-shared-edge",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "L": "54041",
+          "line": 268132,
+          "pc": "5-0198",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L268132",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=Badravarman&transLit=slp1&filter=roman",
+          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=5-0198",
+          "sourceLemma": "Badravarman",
+          "sourceRecordLemma": "Badravarman",
+          "target": "BAdravarmaRa",
+          "kind": "s",
+          "bodyExcerpt": "{#Badravarman#}¦ ({#Badra#} + {#va˚#}) <lex>m.</lex> <div n=\"1\"> 1〉 {%arabischer Jasmin%} <ls>ŚABDAC.</ls>_im_<ls>ŚKDR.</ls> <div n=\"1\">— 2〉 <ab>N. pr.</ab> eines Mannes; <ab>s.</ab> {#BAdravarmaRa#}."
+        }
+      ],
+      "targetLinks": [
+        {
+          "role": "target-lookup",
+          "dictionary": "MW",
+          "dict": "mw",
+          "headword": "BAdravarmaRa",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=BAdravarmaRa&transLit=slp1&filter=roman"
+        },
+        {
+          "role": "target-lookup",
+          "dictionary": "PWG",
+          "dict": "pwg",
+          "headword": "BAdravarmaRa",
+          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=BAdravarmaRa&transLit=slp1&filter=roman"
+        }
+      ],
+      "matchedDictionaries": [
+        "MW",
+        "PWG"
+      ],
+      "missingExactEdgeDictionaries": [],
+      "reviewQuestion": "Do the MW/PWG source records support Badravarman -> BAdravarmaRa as a meaningful shared lexical xref rather than a normalization or convention artifact?",
+      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что Badravarman -> BAdravarmaRa — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
+      "reviewStatus": "needs-source-check",
+      "reviewedValue": null,
+      "reviewer": "",
+      "reviewedAt": "",
+      "note": "",
+      "autoTriage": {
+        "resolved": false
+      }
+    },
+    {
+      "sampleId": "mw-pwg-shared:22",
       "sampleClass": "shared-core",
       "sourceLemma": "BakkikA",
       "target": "PaqiNgA",
@@ -1491,7 +1871,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:18",
+      "sampleId": "mw-pwg-shared:23",
       "sampleClass": "shared-core",
       "sourceLemma": "Bakz",
       "target": "biBakzayizu",
@@ -1567,7 +1947,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:19",
+      "sampleId": "mw-pwg-shared:24",
       "sampleClass": "shared-core",
       "sourceLemma": "Bala",
       "target": "bal",
@@ -1643,7 +2023,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:20",
+      "sampleId": "mw-pwg-shared:25",
       "sampleClass": "shared-core",
       "sourceLemma": "Bas",
       "target": "psA",
@@ -1719,7 +2099,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:21",
+      "sampleId": "mw-pwg-shared:26",
       "sampleClass": "shared-core",
       "sourceLemma": "BastrakA",
       "target": "BastrAkA",
@@ -1795,7 +2175,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:22",
+      "sampleId": "mw-pwg-shared:27",
       "sampleClass": "shared-core",
       "sourceLemma": "Bavanti",
       "target": "BavantI",
@@ -1871,7 +2251,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:23",
+      "sampleId": "mw-pwg-shared:28",
       "sampleClass": "shared-core",
       "sourceLemma": "Bavitra",
       "target": "BAvitra",
@@ -1947,7 +2327,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:24",
+      "sampleId": "mw-pwg-shared:29",
       "sampleClass": "shared-core",
       "sourceLemma": "Bela",
       "target": "Beqa",
@@ -2023,7 +2403,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:25",
+      "sampleId": "mw-pwg-shared:30",
       "sampleClass": "shared-core",
       "sourceLemma": "BfNgariwi",
       "target": "BfNgin",
@@ -2099,7 +2479,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:26",
+      "sampleId": "mw-pwg-shared:31",
       "sampleClass": "shared-core",
       "sourceLemma": "BfRqi",
       "target": "BaRqi",
@@ -2175,7 +2555,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:27",
+      "sampleId": "mw-pwg-shared:32",
       "sampleClass": "shared-core",
       "sourceLemma": "BogapAla",
       "target": "Bogika",
@@ -2251,7 +2631,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:28",
+      "sampleId": "mw-pwg-shared:33",
       "sampleClass": "shared-core",
       "sourceLemma": "BojyA",
       "target": "BojA",
@@ -2327,7 +2707,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:29",
+      "sampleId": "mw-pwg-shared:34",
       "sampleClass": "shared-core",
       "sourceLemma": "BrAS",
       "target": "BlAS",
@@ -2403,7 +2783,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:30",
+      "sampleId": "mw-pwg-shared:35",
       "sampleClass": "shared-core",
       "sourceLemma": "BuHKAra",
       "target": "BUHKAra",
@@ -2479,7 +2859,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:31",
+      "sampleId": "mw-pwg-shared:36",
       "sampleClass": "shared-core",
       "sourceLemma": "BuRq",
       "target": "huRq",
@@ -2555,7 +2935,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:32",
+      "sampleId": "mw-pwg-shared:37",
       "sampleClass": "shared-core",
       "sourceLemma": "Buj",
       "target": "buBukzA",
@@ -2631,7 +3011,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:33",
+      "sampleId": "mw-pwg-shared:38",
       "sampleClass": "shared-core",
       "sourceLemma": "Cadis",
       "target": "CAdizeya",
@@ -2707,7 +3087,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:34",
+      "sampleId": "mw-pwg-shared:39",
       "sampleClass": "shared-core",
       "sourceLemma": "DUmana",
       "target": "DUpana",
@@ -2783,7 +3163,7 @@
       }
     },
     {
-      "sampleId": "mw-pwg-shared:35",
+      "sampleId": "mw-pwg-shared:40",
       "sampleClass": "shared-core",
       "sourceLemma": "DUr",
       "target": "DUrv",
@@ -2849,386 +3229,6 @@
       "missingExactEdgeDictionaries": [],
       "reviewQuestion": "Do the MW/PWG source records support DUr -> DUrv as a meaningful shared lexical xref rather than a normalization or convention artifact?",
       "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что DUr -> DUrv — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
-      "reviewStatus": "needs-source-check",
-      "reviewedValue": null,
-      "reviewer": "",
-      "reviewedAt": "",
-      "note": "",
-      "autoTriage": {
-        "resolved": false
-      }
-    },
-    {
-      "sampleId": "mw-pwg-shared:36",
-      "sampleClass": "shared-core",
-      "sourceLemma": "Darmya",
-      "target": "DArmyAyaRa",
-      "hubClass": "lexical-target",
-      "proposedLabels": [
-        "lexical-shared-core"
-      ],
-      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
-      "sourcePointers": [
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "MW",
-          "dict": "mw",
-          "L": "100511",
-          "line": 336889,
-          "pc": "513,1",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L336889",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=Darmya&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=513",
-          "sourceLemma": "Darmya",
-          "sourceRecordLemma": "Darmya",
-          "target": "-DArmyAyaRa",
-          "kind": "cf",
-          "bodyExcerpt": "¦ <ab>N.</ab> of a man (<ab>cf.</ab> <s>-DArmyAyaRa</s>)<info lex=\"inh\"/>"
-        },
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "L": "36453",
-          "line": 182205,
-          "pc": "3-0896",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L182205",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=Darmya&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=3-0896",
-          "sourceLemma": "Darmya",
-          "sourceRecordLemma": "Darmya",
-          "target": "DArmyAyaRa",
-          "kind": "vgl",
-          "bodyExcerpt": "{#Da/rmya#}¦ (von {#Darma#}) <lex>adj.</lex> = {#DarmeRa prApyam#} und {#DarmAdanapetam#} <ls>P. 4,4,91</ls>. <ls n=\"P. 4,4,\">92</ls>. <div n=\"1\"> 1〉 {%gesetzmässig, gesetzlich, rechtmässig, mit dem Gesetze —, dem Rechte —, dem Brauche in Einklang stehend, zu denselben in Beziehung stehend, herkömmlich%}: {#vivAha#} <ls>M. 3,22</ls>. <ls n=\"M. 3,\">23</ls>. <ls n=\"M. 3,\">25</ls>. <ls n=\"M. 3,\">26</ls>. {#viDi#} <ls n=\"M.\">4,187</ls>. <ls n=\"M.\">10,7</ls>. {#daRqa#} <ls n=\"M.\">9,236</ls>. {#budDi#} <ls>R. 2,21,49</ls>. {#vacas#} <ls n=\"R. 2,21,\">50</ls>. {#patnI#} <ls n=\"R.\">3,4,7</ls>. — <ls>M. 7,135</ls>. <ls n=\"M.\">8,214</ls>. <ls n=\"M. 8,\">228</ls>. <ls n=\"M.\">9,1</ls>. <ls n=\"M. 9,\">111</ls>. <ls n=\"M. 9,\">152</ls>. <ls n=\"M. 9,\">251</ls>. <ls n=\"M.\">10,115</ls>. <ls n=\"M. 10,\">119</ls>. <ls n=\"M.\">11,22</ls>. <ls>YĀJÑ. 1,88</ls>. <ls n=\"YĀJÑ.\">3,44</ls>. <ls>BHAG. 2,31</ls>. <ls n=\"..."
-        }
-      ],
-      "targetLinks": [
-        {
-          "role": "target-lookup",
-          "dictionary": "MW",
-          "dict": "mw",
-          "headword": "DArmyAyaRa",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=DArmyAyaRa&transLit=slp1&filter=roman"
-        },
-        {
-          "role": "target-lookup",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "headword": "DArmyAyaRa",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=DArmyAyaRa&transLit=slp1&filter=roman"
-        }
-      ],
-      "matchedDictionaries": [
-        "MW",
-        "PWG"
-      ],
-      "missingExactEdgeDictionaries": [],
-      "reviewQuestion": "Do the MW/PWG source records support Darmya -> DArmyAyaRa as a meaningful shared lexical xref rather than a normalization or convention artifact?",
-      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что Darmya -> DArmyAyaRa — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
-      "reviewStatus": "needs-source-check",
-      "reviewedValue": null,
-      "reviewer": "",
-      "reviewedAt": "",
-      "note": "",
-      "autoTriage": {
-        "resolved": false
-      }
-    },
-    {
-      "sampleId": "mw-pwg-shared:37",
-      "sampleClass": "shared-core",
-      "sourceLemma": "DraR",
-      "target": "Dvan",
-      "hubClass": "lexical-target",
-      "proposedLabels": [
-        "lexical-shared-core"
-      ],
-      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
-      "sourcePointers": [
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "MW",
-          "dict": "mw",
-          "L": "102265",
-          "line": 342619,
-          "pc": "521,2",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L342619",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=DraR&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=521",
-          "sourceLemma": "DraR",
-          "sourceRecordLemma": "DraR",
-          "target": "Dvan",
-          "kind": "cf",
-          "bodyExcerpt": "<s>DraR</s> ¦ <ab>cl.</ab> 1. <ab>P.</ab> <s>˚Rati</s>, to sound, <ls>Dhātup. xiii, 16</ls> (<ab>cf.</ab> <s>Dvan</s>, <s>DvraR</s>). <info westergaard=\"DraRa,13.16,01.0303\"/><info verb=\"root\" cp=\"1P\"/>"
-        },
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "L": "37128",
-          "line": 185959,
-          "pc": "3-1000",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L185959",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=DraR&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=3-1000",
-          "sourceLemma": "DraR",
-          "sourceRecordLemma": "DraR",
-          "target": "Dvan",
-          "kind": "vgl",
-          "bodyExcerpt": "√{#DraR#}¦, {#Dra/Rati#} {%tönen%} <ls>DHĀTUP. 13,16</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#Dvan#}."
-        }
-      ],
-      "targetLinks": [
-        {
-          "role": "target-lookup",
-          "dictionary": "MW",
-          "dict": "mw",
-          "headword": "Dvan",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=Dvan&transLit=slp1&filter=roman"
-        },
-        {
-          "role": "target-lookup",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "headword": "Dvan",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=Dvan&transLit=slp1&filter=roman"
-        }
-      ],
-      "matchedDictionaries": [
-        "MW",
-        "PWG"
-      ],
-      "missingExactEdgeDictionaries": [],
-      "reviewQuestion": "Do the MW/PWG source records support DraR -> Dvan as a meaningful shared lexical xref rather than a normalization or convention artifact?",
-      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что DraR -> Dvan — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
-      "reviewStatus": "needs-source-check",
-      "reviewedValue": null,
-      "reviewer": "",
-      "reviewedAt": "",
-      "note": "",
-      "autoTriage": {
-        "resolved": false
-      }
-    },
-    {
-      "sampleId": "mw-pwg-shared:38",
-      "sampleClass": "shared-core",
-      "sourceLemma": "GAwarI",
-      "target": "apaGAwilA",
-      "hubClass": "lexical-target",
-      "proposedLabels": [
-        "lexical-shared-core"
-      ],
-      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
-      "sourcePointers": [
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "MW",
-          "dict": "mw",
-          "L": "69725",
-          "line": 236190,
-          "pc": "377,2",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L236190",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=GAwarI&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=377",
-          "sourceLemma": "GAwarI",
-          "sourceRecordLemma": "GAwarI",
-          "target": "apaGAwilA",
-          "kind": "cf",
-          "bodyExcerpt": "<s>GAwarI</s> ¦ <lex>f.</lex> a kind of lute, 15 f. (<ab>cf.</ab> <s>apaGAwilA</s>, <s>avaGawarikA</s>, <s>AGAwa</s>.)<info lex=\"f\"/>"
-        },
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "L": "24050",
-          "line": 119390,
-          "pc": "2-0885",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L119390",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=GAwarI&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=2-0885",
-          "sourceLemma": "GAwarI",
-          "sourceRecordLemma": "GAwarI",
-          "target": "apaGAwilA",
-          "kind": "vgl",
-          "bodyExcerpt": "{#GAwarI#}¦ <lex>f.</lex> <ab>dass.</ab> <ls>ŚĀṄKH. ŚR. 17,3,15</ls>. <ls n=\"ŚĀṄKH. ŚR. 17,3,\">16</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#apaGAwilA#} <ls>LĀṬY. 4,2,8</ls>. <ls n=\"LĀṬY. 4,2,\">9</ls>. {#avaGawarikA#} <ls>ŚĀṄKH. ŚR. 17,3,12</ls>."
-        }
-      ],
-      "targetLinks": [
-        {
-          "role": "target-lookup",
-          "dictionary": "MW",
-          "dict": "mw",
-          "headword": "apaGAwilA",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=apaGAwilA&transLit=slp1&filter=roman"
-        },
-        {
-          "role": "target-lookup",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "headword": "apaGAwilA",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=apaGAwilA&transLit=slp1&filter=roman"
-        }
-      ],
-      "matchedDictionaries": [
-        "MW",
-        "PWG"
-      ],
-      "missingExactEdgeDictionaries": [],
-      "reviewQuestion": "Do the MW/PWG source records support GAwarI -> apaGAwilA as a meaningful shared lexical xref rather than a normalization or convention artifact?",
-      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что GAwarI -> apaGAwilA — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
-      "reviewStatus": "needs-source-check",
-      "reviewedValue": null,
-      "reviewer": "",
-      "reviewedAt": "",
-      "note": "",
-      "autoTriage": {
-        "resolved": false
-      }
-    },
-    {
-      "sampleId": "mw-pwg-shared:39",
-      "sampleClass": "shared-core",
-      "sourceLemma": "Ga",
-      "target": "pariGa",
-      "hubClass": "lexical-target",
-      "proposedLabels": [
-        "lexical-shared-core"
-      ],
-      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
-      "sourcePointers": [
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "MW",
-          "dict": "mw",
-          "L": "69210",
-          "line": 234589,
-          "pc": "375,1",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L234589",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=Ga&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=375",
-          "sourceLemma": "Ga",
-          "sourceRecordLemma": "Ga",
-          "target": "pariGa",
-          "kind": "cf",
-          "bodyExcerpt": "<hom>3.</hom> <s>Ga</s> ¦ <lex>mfn.</lex> (√ <s>han</s>) <ab>ifc.</ab> ‘striking, killing’, <ab>cf.</ab> <s>jIva-</s>, <s>tAqa-</s>, <s>pARi-</s>, <s>rAja-</s>, &c. (<ab>cf.</ab> also <s>pariGa</s>)<info lex=\"m:f:n\"/>"
-        },
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "L": "23879",
-          "line": 118455,
-          "pc": "2-0870",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L118455",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=Ga&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=2-0870",
-          "sourceLemma": "Ga",
-          "sourceRecordLemma": "Ga",
-          "target": "pariGa",
-          "kind": "vgl",
-          "bodyExcerpt": "<hom>2.</hom> {#Ga#}¦ (von {#han#}) <div n=\"1\"> 1〉 <lex>adj.</lex> {%schlagend, tödtend%} in {#jIvaGa, tAqaGa, pARiGa, rAjaGa#} <ab>u. s. w.</ab> <div n=\"1\">— 2〉 <lex>f.</lex> {#GA#} {%Schlag%} <ls>MED. gh. 1</ls>. <div n=\"v\">— <ab>Vgl.</ab> {#pariGa#}."
-        }
-      ],
-      "targetLinks": [
-        {
-          "role": "target-lookup",
-          "dictionary": "MW",
-          "dict": "mw",
-          "headword": "pariGa",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=pariGa&transLit=slp1&filter=roman"
-        },
-        {
-          "role": "target-lookup",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "headword": "pariGa",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=pariGa&transLit=slp1&filter=roman"
-        }
-      ],
-      "matchedDictionaries": [
-        "MW",
-        "PWG"
-      ],
-      "missingExactEdgeDictionaries": [],
-      "reviewQuestion": "Do the MW/PWG source records support Ga -> pariGa as a meaningful shared lexical xref rather than a normalization or convention artifact?",
-      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что Ga -> pariGa — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
-      "reviewStatus": "needs-source-check",
-      "reviewedValue": null,
-      "reviewer": "",
-      "reviewedAt": "",
-      "note": "",
-      "autoTriage": {
-        "resolved": false
-      }
-    },
-    {
-      "sampleId": "mw-pwg-shared:40",
-      "sampleClass": "shared-core",
-      "sourceLemma": "GaRqa",
-      "target": "GuRqa",
-      "hubClass": "lexical-target",
-      "proposedLabels": [
-        "lexical-shared-core"
-      ],
-      "machineInterpretation": "Shared source-target edge is a candidate lexical shared-core item.",
-      "sourcePointers": [
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "MW",
-          "dict": "mw",
-          "L": "69421",
-          "line": 235258,
-          "pc": "376,1",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L235258",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=GaRqa&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=376",
-          "sourceLemma": "GaRqa",
-          "sourceRecordLemma": "GaRqa",
-          "target": "GuRqa",
-          "kind": "cf",
-          "bodyExcerpt": "<s>GaRqa</s> ¦ <lex>m.</lex> a bee (<ab>cf.</ab> <s>GuRqa</s>), <ls>L.</ls><info lex=\"m\"/>"
-        },
-        {
-          "role": "exact-shared-edge",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "L": "23946",
-          "line": 118845,
-          "pc": "2-0877",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L118845",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=GaRqa&transLit=slp1&filter=roman",
-          "cologneScanHref": "https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=2-0877",
-          "sourceLemma": "GaRqa",
-          "sourceRecordLemma": "GaRqa",
-          "target": "GuRqa",
-          "kind": "vgl",
-          "bodyExcerpt": "{#GaRqa#}¦ <lex>m.</lex> {%Biene%} <ls>UṆĀDIVṚ.</ls>_im_<ls>SAṂKṢIPTAS.</ls> <ls>ŚKDR.</ls> <div n=\"v\">— <ab>Vgl.</ab> {#GuRqa#}."
-        }
-      ],
-      "targetLinks": [
-        {
-          "role": "target-lookup",
-          "dictionary": "MW",
-          "dict": "mw",
-          "headword": "GuRqa",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php?key=GuRqa&transLit=slp1&filter=roman"
-        },
-        {
-          "role": "target-lookup",
-          "dictionary": "PWG",
-          "dict": "pwg",
-          "headword": "GuRqa",
-          "cologneEntryHref": "https://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/indexcaller.php?key=GuRqa&transLit=slp1&filter=roman"
-        }
-      ],
-      "matchedDictionaries": [
-        "MW",
-        "PWG"
-      ],
-      "missingExactEdgeDictionaries": [],
-      "reviewQuestion": "Do the MW/PWG source records support GaRqa -> GuRqa as a meaningful shared lexical xref rather than a normalization or convention artifact?",
-      "reviewQuestionRu": "Подтверждают ли записи MW и PWG, что GaRqa -> GuRqa — осмысленная общая лексическая перекрёстная ссылка, а не артефакт нормализации или издательской условности?",
       "reviewStatus": "needs-source-check",
       "reviewedValue": null,
       "reviewer": "",
@@ -4023,7 +4023,7 @@
   ],
   "limitations": [
     "Machine labels are review prompts only; this packet records no source-check decisions.",
-    "The 40 shared-core rows are the first 40 of 641 shared edges in headword order, not a random sample: every card is an Ā-, B-, C-, D- or G-initial headword. Do not generalise a rate measured on these 40 to the full intersection.",
+    "The 40 shared-core rows are the first 40 of 694 shared edges in headword order, not a random sample: every card is an Ā-, B-, C-, D- or G-initial headword. Do not generalise a rate measured on these 40 to the full intersection.",
     "Cologne entry links resolve a HEADWORD, not this exact record: where a dictionary has homonyms the lookup shows all of them. The csl-orig blob link is the pointer to the precise record.",
     "Some shared-core sample rows are present in the shared-edge sample but lack an exact MW edge row in xref_edges.csv; those rows remain visible with missing-exact-edge metadata.",
     "Prefix controls test convention pressure and are not optimization targets for lineage claims.",
@@ -4032,10 +4032,10 @@
   ],
   "limitationsRu": [
     "Машинные метки — только подсказки для проверки; этот пакет не фиксирует никаких решений.",
-    "40 строк shared-core — это первые 40 из 641 общих рёбер в порядке заголовков, а не случайная выборка: каждая карточка — заголовок на Ā-, B-, C-, D- или G-. Не переносите долю, измеренную на этих 40, на всё пересечение.",
+    "40 строк shared-core — это первые 40 из 694 общих рёбер в порядке заголовков, а не случайная выборка: каждая карточка — заголовок на Ā-, B-, C-, D- или G-. Не переносите долю, измеренную на этих 40, на всё пересечение.",
     "Кёльнская ссылка на статью открывает ЗАГОЛОВОК, а не именно эту запись: при омонимах поиск покажет их все. Точную запись адресует ссылка на csl-orig.",
     "Часть строк присутствует в выборке общих рёбер, но не имеет точного ребра MW в xref_edges.csv; такие строки остаются видимыми и помечены.",
-    "MW и PWG следуют разным конвенциям записи заголовков (Patel 2016), которые конвейер не согласует, поэтому пересечение из 641 рёбер занижено: часть настоящих общих рёбер не может совпасть по строке в принципе.",
+    "MW и PWG следуют разным конвенциям записи заголовков (Patel 2016), которые конвейер не согласует, поэтому пересечение из 694 рёбер занижено: часть настоящих общих рёбер не может совпасть по строке в принципе.",
     "Prefix-control проверяют давление издательских условностей и не являются целью оптимизации.",
     "Пересечение перекрёстных ссылок остаётся внутрисловарным свидетельством и не должно смешиваться с совстречаемостью по корпусу DCS."
   ],

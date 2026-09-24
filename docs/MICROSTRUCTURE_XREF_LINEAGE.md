@@ -1,4 +1,4 @@
-_Created: 04-06-2026 · Last updated: 05-09-2026_
+_Created: 04-06-2026 · Last updated: 24-09-2026_
 
 # Cross-reference lineage: does MW `cf.` inherit PWG `Vgl.`? (issue #30 §3.1)
 
@@ -46,14 +46,14 @@ that don't reduce cleanly simply fail to match.
 
 | | MW (`cf.`) | PWG (`Vgl.`) |
 |---|---:|---:|
-| normalized edges | 7,637 | 22,937 |
-| distinct source lemmas | 6,974 | 11,857 |
-| **shared source lemmas** | colspan | **2,538** |
-| edges on those shared sources | 2,946 | 7,022 |
-| **overlapping edges (same src→tgt)** | colspan | **641** |
-| inheritance rate on shared sources | **21.8%** | 9.1% |
+| normalized edges | 7,637 | 25,766 |
+| distinct source lemmas | 6,974 | 14,016 |
+| **shared source lemmas** | colspan | **2,750** |
+| edges on those shared sources | 3,184 | 7,544 |
+| **overlapping edges (same src→tgt)** | colspan | **694** |
+| inheritance rate on shared sources | **21.8%** | 9.2% |
 | Jaccard on shared sources | colspan | 0.069 |
-| shared-source lemmas agreeing on ≥1 target | colspan | 640 |
+| shared-source lemmas agreeing on ≥1 target | colspan | 693 |
 
 Sample shared edges (genuine — mostly variant-form and cognate-root pointers both
 traditions independently record): `ARi→aRi`, `Adinava→AdInava`, `Ali→ali`,
@@ -65,7 +65,7 @@ traditions independently record): `ARi→aRi`, `Adinava→AdInava`, `Ali→ali`,
 Of the cross-references MW makes from lemmas PWG also cross-references, **21.8%** point
 to the same target — far above what chance would give in a ~300k-lemma space, so the
 two networks are *not* independent. But ~78% of MW's cross-refs (even on shared source
-lemmas) go where PWG does not, and PWG's network is ~3× denser (only 9.1% of its
+lemmas) go where PWG does not, and PWG's network is ~3× denser (only 9.2% of its
 cross-refs are shared). So this is **not** evidence that MW was built on the Petersburg
 cross-references wholesale — rather a common substrate (shared scholarly knowledge of
 variants/cognates, and likely some borrowing) over which each dictionary cross-referenced
@@ -80,12 +80,12 @@ contrast is the validation:
 | pair | overlap | a-rate / b-rate | Jaccard | reading |
 |---|---:|---|---:|---|
 | **AP × AP90** | 182 | **85.5% / 84.7%** | **0.74** | **same dictionary, two Apte editions → near-identical network (positive control)** |
-| AP × PWG | 23 | 34.3% / 7.4% | 0.065 | |
+| AP × PWG | 23 | 31.1% / 7.0% | 0.060 | |
 | AP × MW | 19 | 28.8% / 23.2% | 0.147 | |
 | CAE × MW | 11 | 24.4% / 20.0% | 0.124 | |
-| **MW × PWG** | 641 | **21.8% / 9.1%** | 0.069 | **different traditions → shared core only** |
-| AP90 × PWG | 11 | 14.7% / 2.8% | 0.024 | |
-| CAE × PWG | 7 | 12.5% / 1.8% | 0.016 | |
+| **MW × PWG** | 694 | **21.8% / 9.2%** | 0.069 | **different traditions → shared core only** |
+| CAE × PWG | 11 | 16.7% / 2.6% | 0.023 | |
+| AP90 × PWG | 12 | 14.3% / 2.9% | 0.025 | |
 | AP90 × MW | 10 | 11.2% / 8.6% | 0.051 | |
 
 **The positive control validates the measure.** AP and AP90 are the *same* dictionary
@@ -109,7 +109,7 @@ cognate (`<lang>`) / roman, so BEN does no internal Sanskrit cross-referencing a
 - **Floor, not ceiling** — the normalization is conservative; unmatched messy targets
   only *lower* the measured overlap.
 - **Directed edges** — `src→tgt`; a reciprocal `tgt→src` in the other dict is not counted as a match.
-- **Density asymmetry** — PWG cross-references far more (22,937 vs 7,637 edges), which
+- **Density asymmetry** — PWG cross-references far more (25,766 vs 7,637 edges), which
   structurally caps its inheritance rate; the smaller-dict-side rate is the more meaningful number.
 - Cross-referencing dicts: MW, PWG (heavy), AP, AP90, CAE (Apte `cf.`, modest); BEN does none;
   PW/MW72/WIL/indigenous use no cross-ref convention (the m1 "0 ≠ structureless" rule).
@@ -118,7 +118,7 @@ cognate (`<lang>`) / roman, so BEN does no internal Sanskrit cross-referencing a
 
 `scripts/lexico/m3_xrefs.py` (edges + Apte `cf.` parsing → `xref_edges.csv` +
 `xref_cf_quotes.csv`) → `scripts/lexico/m6_xref_lineage.py` → `data/lexico/xref_lineage.json`
-(all-pair stats) + `data/lexico/xref_shared_edges.csv` (the 641 MW∩PWG edges). Validated by
+(all-pair stats) + `data/lexico/xref_shared_edges.csv` (the 694 MW∩PWG edges). Validated by
 `validate_lexico.py` (m6 check). Deterministic, no deps.
 
 _Dr. Mārcis Gasūns_

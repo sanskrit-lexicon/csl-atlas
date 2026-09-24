@@ -60,7 +60,7 @@ and its upstream `m6_xref_lineage.py` normaliser) is unchanged by this handoff.
   «работайте по рабочему листу» fallback in the R2 section with the sheet name and add the
   submission path.
 - No test pins this file's figures (unlike the xref taxonomy pair); the counts it repeats
-  (10 / 105 = 89 + 16 / 40 + 10, 641 shared edges) come from the generated worksheets,
+  (10 / 105 = 89 + 16 / 40 + 10, 694 shared edges) come from the generated worksheets,
   which are themselves byte-pinned by `test/review-worksheets.test.mjs`.
 
 _Гасунс_
