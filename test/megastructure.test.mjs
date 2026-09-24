@@ -37,7 +37,7 @@ const TINY_INVENTORY = [
 test("the committed pilot catalogues pass the schema and every semantic check", () => {
   const { catalogues, errors, coverage } = loadAndCheck();
   assert.deepEqual(errors, []);
-  assert.deepEqual(catalogues.map((c) => c.dict).sort(), ["mw", "skd"]);
+  assert.deepEqual(catalogues.map((c) => c.dict).sort(), ["abch", "ap90", "mw", "skd", "vcp", "wil"]);
   for (const row of coverage) assert.equal(row.covered, row.pages, `${row.dict} ${row.scanSet} fully covered`);
 });
 

@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "1.0.0",
+  "dict": "ap90",
+  "dictName": "Apte, The Practical Sanskrit-English Dictionary (revised and enlarged edition)",
+  "edition": {
+    "label": "The revised and enlarged edition of 1890, as scanned by Cologne",
+    "year": "1890",
+    "imprint": null,
+    "evidenceLevel": "inferred",
+    "evidence": "Dictionary identity from the csl-orig ap90 digitization; the scanned title page awaits reading to confirm the print statement."
+  },
+  "scanSets": [
+    {
+      "id": "ap90-scan-pdf",
+      "kind": "cologne-scan-pdf",
+      "description": "Cologne AP90 front-matter page PDFs: the tit_* series (15 pages) listed in csl-websanlexicon pdffiles.txt ahead of body page 0001. Body pages 0001-1196 are out of scope (entry list).",
+      "baseUrl": "https://www.sanskrit-lexicon.uni-koeln.de/scans/AP90Scan/AP90Scanpdf/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    }
+  ],
+  "components": [
+    {
+      "id": "ap90.fm.title",
+      "sequence": 1,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": null,
+        "iast": null,
+        "english": "Title page of Apte's Practical Sanskrit-English Dictionary (1890)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0001",
+          "image": "tit_0001.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "inferred",
+      "evidence": "Scan map row t0001 (tit_0001.pdf, caption empty in pdffiles.txt); first of the 15 tit_* pages preceding body page 0001. Page content awaits scan reading.",
+      "notes": null
+    },
+    {
+      "id": "ap90.fm.front-sequence",
+      "sequence": 2,
+      "position": "front",
+      "componentType": "other",
+      "componentTypeNote": "Unidentified block: per-page parts are not yet attributed to scan pages.",
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": null,
+        "iast": null,
+        "english": "Unidentified front-matter sequence (14 pages between the title page and body page 1)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 14,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0002",
+          "image": "tit_0002.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0003",
+          "image": "tit_0003.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0004",
+          "image": "tit_0004.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0005",
+          "image": "tit_0005.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0006",
+          "image": "tit_0006.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0007",
+          "image": "tit_0007.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0008",
+          "image": "tit_0008.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0009",
+          "image": "tit_0009.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0010",
+          "image": "tit_0010.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0011",
+          "image": "tit_0011.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0012",
+          "image": "tit_0012.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0013",
+          "image": "tit_0013.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0014",
+          "image": "tit_0014.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "t0015",
+          "image": "tit_0015.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "structured-data",
+      "transcriptions": [
+        {
+          "kind": "structured-data",
+          "location": "sanskrit-lexicon/csl-pywork:v02/distinctfiles/ap90/pywork/ap90ab/ap90ab_input.txt",
+          "note": "Abbreviation display table, 91 rows; printed page placement inside t0002-t0015 awaits scan reading."
+        },
+        {
+          "kind": "structured-data",
+          "location": "sanskrit-lexicon/csl-pywork:v02/distinctfiles/ap90/pywork/ap90auth/tooltip.txt",
+          "note": "Works/authors display table, 330 rows; printed page placement inside t0002-t0015 awaits scan reading."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "inferred",
+      "evidence": "Scan map rows t0002-t0015 (tit_0002.pdf-tit_0015.pdf, captions empty); csl-pywork carries two Cologne display tables for this dictionary (ap90ab_input.txt, 91 rows; ap90auth/tooltip.txt, 330 rows) counted 25-09-2026.",
+      "notes": "The composition (preface, abbreviation list, works/authors list) follows the Cologne front-matter pattern; the per-page split awaits scan reading."
+    }
+  ],
+  "excludedScans": [],
+  "knownGaps": [
+    {
+      "label": "Back matter (addenda/corrigenda after body page 1196)",
+      "evidenceLevel": "inferred",
+      "evidence": "The trailing pdffiles.txt rows (pg_1194-pg_1196) carry empty captions; whether the print carries a closing addenda section is unresolved without reading the scans."
+    }
+  ],
+  "notes": null,
+  "misfits": [
+    {
+      "label": "The 14-page front block cannot be decomposed without reading the scans",
+      "why": "The schema has no 'unidentified block' component type, so the sequence is one 'other' record; per-page parts are owed a follow-up scan reading.",
+      "componentId": "ap90.fm.front-sequence"
+    },
+    {
+      "label": "Placement of the two digitized tables inside the block is unknown",
+      "why": "extent.pages holds the block, but the schema cannot record that ap90ab (91 rows) and ap90auth (330 rows) belong to unnamed pages of the range.",
+      "componentId": "ap90.fm.front-sequence"
+    }
+  ]
+}

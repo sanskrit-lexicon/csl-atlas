@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0.0",
+  "dict": "wil",
+  "dictName": "Wilson, A Sanskrit-English Dictionary",
+  "edition": {
+    "label": "The second edition (1832), as scanned by Cologne",
+    "year": "1832",
+    "imprint": null,
+    "evidenceLevel": "inferred",
+    "evidence": "Dictionary identity from the csl-orig wil digitization (Wilson 2nd ed. is the Cologne source); the scanned title page awaits reading to confirm the print statement."
+  },
+  "scanSets": [
+    {
+      "id": "wil-scan-pdf",
+      "kind": "cologne-scan-pdf",
+      "description": "Cologne WIL front-matter page images: the tit-* series (6 pages) listed in csl-websanlexicon pdffiles.txt ahead of body page 001. Body pages 001-982 are out of scope (entry list).",
+      "baseUrl": "https://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/WILScanpdf/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    }
+  ],
+  "components": [
+    {
+      "id": "wil.fm.title",
+      "sequence": 1,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": null,
+        "iast": null,
+        "english": "Title page of Wilson's Sanskrit-English Dictionary (second edition)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "wil-scan-pdf",
+          "ref": "t001",
+          "image": "tit-001.jpg",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "inferred",
+      "evidence": "Scan map row t001 (tit-001.jpg, caption empty in pdffiles.txt); first of the 6 tit-* pages preceding body page 001. Page content awaits scan reading.",
+      "notes": null
+    },
+    {
+      "id": "wil.fm.front-sequence",
+      "sequence": 2,
+      "position": "front",
+      "componentType": "other",
+      "componentTypeNote": "Unidentified block: per-page parts are not yet attributed to scan pages.",
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": null,
+        "iast": null,
+        "english": "Unidentified front-matter sequence (5 pages between the title page and body page 1)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 5,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "wil-scan-pdf",
+          "ref": "t002",
+          "image": "tit-002.jpg",
+          "printedPage": null
+        },
+        {
+          "scanSet": "wil-scan-pdf",
+          "ref": "t003",
+          "image": "tit-003.jpg",
+          "printedPage": null
+        },
+        {
+          "scanSet": "wil-scan-pdf",
+          "ref": "t004",
+          "image": "tit-004.jpg",
+          "printedPage": null
+        },
+        {
+          "scanSet": "wil-scan-pdf",
+          "ref": "t005",
+          "image": "tit-005.jpg",
+          "printedPage": null
+        },
+        {
+          "scanSet": "wil-scan-pdf",
+          "ref": "t006",
+          "image": "tit-006.jpg",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "inferred",
+      "evidence": "Scan map rows t002-t006 (tit-002.jpg-tit-006.jpg, captions empty).",
+      "notes": "The second edition (1832) traditionally carries a dedication and preface; the per-page split awaits scan reading."
+    }
+  ],
+  "excludedScans": [],
+  "knownGaps": [],
+  "notes": "Scan-set URL probe 25-09-2026 returned 404 for tit-001.jpg under the canonical WILScan/WILScanpdf/ path; the images are named in the Cologne scan map and served through the dictionary pages. The inventory rows come from the map, not from a verified direct URL.",
+  "misfits": [
+    {
+      "label": "The 5-page front block cannot be decomposed without reading the scans",
+      "why": "The schema has no 'unidentified block' component type, so the sequence is one 'other' record; per-page parts are owed a follow-up scan reading.",
+      "componentId": "wil.fm.front-sequence"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-_Created: 24-09-2026 · Last updated: 24-09-2026_
+_Created: 24-09-2026 · Last updated: 25-09-2026_
 
 # Megastructure catalogue — schema and the SKD + MW pilot
 
@@ -81,6 +81,21 @@ Three catalogue-level lists keep the records honest:
    2. the homonym figures, encoded as `<hom>`
    3. the reference policy, encoded as `<ls>`
 5. **Section IV of the introduction** decodes the transliteration.
+
+## Fill state after H5325 (25-09-2026)
+
+Four of the seven remaining dictionaries are catalogued at **block level**: every front/back scan page of ap90, wil, abch and vcp is claimed, but the pages are not yet identified one by one, so each front block is one `other`-type component at evidence level `inferred`. The schema stayed at 1.0.0; the pooled `misfits` now carry what a follow-up scan-reading pass must resolve.
+
+| Dict | Scan pages catalogued | Components | Evidence | Finding |
+|---|---|---|---|---|
+| ap90 | 15 (t0001–t0015 `tit_*.pdf`) | title page + 14-page front block | inferred | Cologne also digitizes two front tables: `ap90ab_input.txt` (91 rows), `ap90auth/tooltip.txt` (330 rows) — placement inside the block unknown (misfit). |
+| wil | 6 (t001–t006 `tit-*.jpg`) | title page + 5-page front block | inferred | Direct scan URL probe 404s; images named by the scan map only. |
+| abch | 14 (f01–f14 `f*.pdf`) | title page + 13-page front block | inferred | Body print pages 1–4 are absent from the scan map (body starts at pg05) — `knownGap`. |
+| vcp | 34 (pg0001–pg0034) | 34-page front block | inferred | The scan map **omits** these pages (`pdffiles.txt` starts at pg0035) while the PDFs are served (HTTP 200 probes 25-09-2026) — misfit. |
+
+Census of the remaining three scan maps (25-09-2026, `csl-websanlexicon pdffiles.txt`): **pwg, pw and armh list no non-body pages at all** (pwg 4,747/4,747 body rows 1-0001–7-1821; pw 2,127/2,127 rows 1-001–7-390; armh 101/101 rows with the first body entry on scan 0001). Their front matter exists in print but no Cologne scan set shows it, so no components can be minted from these maps — full nine-dictionary coverage needs unlisted scans (or external witnesses such as archive.org), which is a separate unit. armh and abch are both the Abhidhānacintāmaṇi of Hemacandra in two Cologne editions.
+
+Validator after this pass: 6 dictionaries, 49 components, every declared scan set 100 % covered.
 
 ## Traps for H5325 (read before filling)
 
