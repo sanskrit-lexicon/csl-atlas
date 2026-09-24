@@ -89,8 +89,8 @@
       "microstructureAxis": 0.6788,
       "citationAxis": 0.5933,
       "citationSharedSources": 50,
-      "graphCitationCosine": 0.508,
-      "graphSharedTexts": 58
+      "graphCitationCosine": 0.5198,
+      "graphSharedTexts": 72
     },
     {
       "rowId": "three-axis:AP90:AP",
@@ -141,8 +141,8 @@
       "microstructureAxis": 0.6821,
       "citationAxis": 0.3758,
       "citationSharedSources": 18,
-      "graphCitationCosine": 0,
-      "graphSharedTexts": 0
+      "graphCitationCosine": 0.0595,
+      "graphSharedTexts": 1
     }
   ],
   "citationCorrelations": [
@@ -289,5 +289,5 @@
   "boundary": [
     "Derived from committed atlas dictionary evidence only; no source/corpus read, no human decision, no external maker work."
   ],
-  "generatedAt": "2026-07-08T20:00:42.423Z"
+  "generatedAt": "2026-09-24T11:39:50.532Z"
 }
