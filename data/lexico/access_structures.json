@@ -103,7 +103,8 @@
   "all",
   "print",
   "main",
-  "heads"
+  "heads",
+  "heads_nest"
  ],
  "thresholds": {
   "min_disagreeing_pairs": 30,
@@ -11066,6 +11067,11 @@
      "units": 29128,
      "descent_rate": 0.093556,
      "displaced_rate": 0.158233
+    },
+    "heads_nest": {
+     "units": 27212,
+     "descent_rate": 0.081915,
+     "displaced_rate": 0.130788
     }
    },
    "segments": [
@@ -14408,6 +14414,748 @@
       "displaced": 15682,
       "displaced_rate": 0.538382
      }
+    },
+    "heads_nest": {
+     "M-pos/Hi-pos/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2350,
+      "descent_rate_raw": 0.086362,
+      "descents": 2350,
+      "descent_rate": 0.086362,
+      "displaced": 4141,
+      "displaced_rate": 0.152176
+     },
+     "M-pos/Hi-pos/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2352,
+      "descent_rate_raw": 0.086436,
+      "descents": 2352,
+      "descent_rate": 0.086436,
+      "displaced": 4145,
+      "displaced_rate": 0.152323
+     },
+     "M-pos/Hi-pos/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3521,
+      "descent_rate_raw": 0.129396,
+      "descents": 3521,
+      "descent_rate": 0.129396,
+      "displaced": 5164,
+      "displaced_rate": 0.189769
+     },
+     "M-pos/Hi-pos/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3523,
+      "descent_rate_raw": 0.12947,
+      "descents": 3523,
+      "descent_rate": 0.12947,
+      "displaced": 5168,
+      "displaced_rate": 0.189916
+     },
+     "M-pos/Hi-pos/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2309,
+      "descent_rate_raw": 0.084855,
+      "descents": 2309,
+      "descent_rate": 0.084855,
+      "displaced": 4094,
+      "displaced_rate": 0.150448
+     },
+     "M-pos/Hi-pos/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2311,
+      "descent_rate_raw": 0.084929,
+      "descents": 2311,
+      "descent_rate": 0.084929,
+      "displaced": 4098,
+      "displaced_rate": 0.150595
+     },
+     "M-pos/Hi-sib/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2354,
+      "descent_rate_raw": 0.086509,
+      "descents": 2354,
+      "descent_rate": 0.086509,
+      "displaced": 4167,
+      "displaced_rate": 0.153131
+     },
+     "M-pos/Hi-sib/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2356,
+      "descent_rate_raw": 0.086583,
+      "descents": 2356,
+      "descent_rate": 0.086583,
+      "displaced": 4171,
+      "displaced_rate": 0.153278
+     },
+     "M-pos/Hi-sib/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3525,
+      "descent_rate_raw": 0.129543,
+      "descents": 3525,
+      "descent_rate": 0.129543,
+      "displaced": 5190,
+      "displaced_rate": 0.190725
+     },
+     "M-pos/Hi-sib/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3527,
+      "descent_rate_raw": 0.129617,
+      "descents": 3527,
+      "descent_rate": 0.129617,
+      "displaced": 5194,
+      "displaced_rate": 0.190872
+     },
+     "M-pos/Hi-sib/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2313,
+      "descent_rate_raw": 0.085002,
+      "descents": 2313,
+      "descent_rate": 0.085002,
+      "displaced": 4120,
+      "displaced_rate": 0.151404
+     },
+     "M-pos/Hi-sib/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2315,
+      "descent_rate_raw": 0.085076,
+      "descents": 2315,
+      "descent_rate": 0.085076,
+      "displaced": 4124,
+      "displaced_rate": 0.151551
+     },
+     "M-pos/Hi-s/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2359,
+      "descent_rate_raw": 0.086693,
+      "descents": 2359,
+      "descent_rate": 0.086693,
+      "displaced": 4177,
+      "displaced_rate": 0.153498
+     },
+     "M-pos/Hi-s/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2361,
+      "descent_rate_raw": 0.086766,
+      "descents": 2361,
+      "descent_rate": 0.086766,
+      "displaced": 4181,
+      "displaced_rate": 0.153645
+     },
+     "M-pos/Hi-s/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3530,
+      "descent_rate_raw": 0.129727,
+      "descents": 3530,
+      "descent_rate": 0.129727,
+      "displaced": 5200,
+      "displaced_rate": 0.191092
+     },
+     "M-pos/Hi-s/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3532,
+      "descent_rate_raw": 0.1298,
+      "descents": 3532,
+      "descent_rate": 0.1298,
+      "displaced": 5204,
+      "displaced_rate": 0.191239
+     },
+     "M-pos/Hi-s/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2318,
+      "descent_rate_raw": 0.085186,
+      "descents": 2318,
+      "descent_rate": 0.085186,
+      "displaced": 4130,
+      "displaced_rate": 0.151771
+     },
+     "M-pos/Hi-s/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2320,
+      "descent_rate_raw": 0.08526,
+      "descents": 2320,
+      "descent_rate": 0.08526,
+      "displaced": 4134,
+      "displaced_rate": 0.151918
+     },
+     "M-nasal/Hi-pos/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2252,
+      "descent_rate_raw": 0.082761,
+      "descents": 2252,
+      "descent_rate": 0.082761,
+      "displaced": 3588,
+      "displaced_rate": 0.131854
+     },
+     "M-nasal/Hi-pos/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2254,
+      "descent_rate_raw": 0.082834,
+      "descents": 2254,
+      "descent_rate": 0.082834,
+      "displaced": 3592,
+      "displaced_rate": 0.132001
+     },
+     "M-nasal/Hi-pos/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3443,
+      "descent_rate_raw": 0.12653,
+      "descents": 3443,
+      "descent_rate": 0.12653,
+      "displaced": 4650,
+      "displaced_rate": 0.17088
+     },
+     "M-nasal/Hi-pos/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3445,
+      "descent_rate_raw": 0.126603,
+      "descents": 3445,
+      "descent_rate": 0.126603,
+      "displaced": 4654,
+      "displaced_rate": 0.171027
+     },
+     "M-nasal/Hi-pos/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2229,
+      "descent_rate_raw": 0.081915,
+      "descents": 2229,
+      "descent_rate": 0.081915,
+      "displaced": 3559,
+      "displaced_rate": 0.130788
+     },
+     "M-nasal/Hi-pos/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2231,
+      "descent_rate_raw": 0.081989,
+      "descents": 2231,
+      "descent_rate": 0.081989,
+      "displaced": 3563,
+      "displaced_rate": 0.130935
+     },
+     "M-nasal/Hi-sib/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2256,
+      "descent_rate_raw": 0.082908,
+      "descents": 2256,
+      "descent_rate": 0.082908,
+      "displaced": 3616,
+      "displaced_rate": 0.132883
+     },
+     "M-nasal/Hi-sib/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2258,
+      "descent_rate_raw": 0.082981,
+      "descents": 2258,
+      "descent_rate": 0.082981,
+      "displaced": 3620,
+      "displaced_rate": 0.13303
+     },
+     "M-nasal/Hi-sib/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3447,
+      "descent_rate_raw": 0.126677,
+      "descents": 3447,
+      "descent_rate": 0.126677,
+      "displaced": 4678,
+      "displaced_rate": 0.171909
+     },
+     "M-nasal/Hi-sib/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3449,
+      "descent_rate_raw": 0.12675,
+      "descents": 3449,
+      "descent_rate": 0.12675,
+      "displaced": 4682,
+      "displaced_rate": 0.172056
+     },
+     "M-nasal/Hi-sib/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2233,
+      "descent_rate_raw": 0.082062,
+      "descents": 2233,
+      "descent_rate": 0.082062,
+      "displaced": 3587,
+      "displaced_rate": 0.131817
+     },
+     "M-nasal/Hi-sib/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2235,
+      "descent_rate_raw": 0.082136,
+      "descents": 2235,
+      "descent_rate": 0.082136,
+      "displaced": 3591,
+      "displaced_rate": 0.131964
+     },
+     "M-nasal/Hi-s/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2261,
+      "descent_rate_raw": 0.083091,
+      "descents": 2261,
+      "descent_rate": 0.083091,
+      "displaced": 3626,
+      "displaced_rate": 0.13325
+     },
+     "M-nasal/Hi-s/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2263,
+      "descent_rate_raw": 0.083165,
+      "descents": 2263,
+      "descent_rate": 0.083165,
+      "displaced": 3630,
+      "displaced_rate": 0.133397
+     },
+     "M-nasal/Hi-s/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3452,
+      "descent_rate_raw": 0.12686,
+      "descents": 3452,
+      "descent_rate": 0.12686,
+      "displaced": 4688,
+      "displaced_rate": 0.172277
+     },
+     "M-nasal/Hi-s/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3454,
+      "descent_rate_raw": 0.126934,
+      "descents": 3454,
+      "descent_rate": 0.126934,
+      "displaced": 4692,
+      "displaced_rate": 0.172424
+     },
+     "M-nasal/Hi-s/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2238,
+      "descent_rate_raw": 0.082246,
+      "descents": 2238,
+      "descent_rate": 0.082246,
+      "displaced": 3597,
+      "displaced_rate": 0.132184
+     },
+     "M-nasal/Hi-s/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2240,
+      "descent_rate_raw": 0.08232,
+      "descents": 2240,
+      "descent_rate": 0.08232,
+      "displaced": 3601,
+      "displaced_rate": 0.132331
+     },
+     "M-nasal_m/Hi-pos/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2300,
+      "descent_rate_raw": 0.084525,
+      "descents": 2300,
+      "descent_rate": 0.084525,
+      "displaced": 3971,
+      "displaced_rate": 0.145928
+     },
+     "M-nasal_m/Hi-pos/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2302,
+      "descent_rate_raw": 0.084598,
+      "descents": 2302,
+      "descent_rate": 0.084598,
+      "displaced": 3975,
+      "displaced_rate": 0.146075
+     },
+     "M-nasal_m/Hi-pos/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3504,
+      "descent_rate_raw": 0.128771,
+      "descents": 3504,
+      "descent_rate": 0.128771,
+      "displaced": 5035,
+      "displaced_rate": 0.185029
+     },
+     "M-nasal_m/Hi-pos/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3506,
+      "descent_rate_raw": 0.128845,
+      "descents": 3506,
+      "descent_rate": 0.128845,
+      "displaced": 5039,
+      "displaced_rate": 0.185176
+     },
+     "M-nasal_m/Hi-pos/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2290,
+      "descent_rate_raw": 0.084157,
+      "descents": 2290,
+      "descent_rate": 0.084157,
+      "displaced": 3960,
+      "displaced_rate": 0.145524
+     },
+     "M-nasal_m/Hi-pos/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2292,
+      "descent_rate_raw": 0.084231,
+      "descents": 2292,
+      "descent_rate": 0.084231,
+      "displaced": 3964,
+      "displaced_rate": 0.145671
+     },
+     "M-nasal_m/Hi-sib/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2304,
+      "descent_rate_raw": 0.084672,
+      "descents": 2304,
+      "descent_rate": 0.084672,
+      "displaced": 3998,
+      "displaced_rate": 0.14692
+     },
+     "M-nasal_m/Hi-sib/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2306,
+      "descent_rate_raw": 0.084745,
+      "descents": 2306,
+      "descent_rate": 0.084745,
+      "displaced": 4002,
+      "displaced_rate": 0.147067
+     },
+     "M-nasal_m/Hi-sib/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3508,
+      "descent_rate_raw": 0.128918,
+      "descents": 3508,
+      "descent_rate": 0.128918,
+      "displaced": 5062,
+      "displaced_rate": 0.186021
+     },
+     "M-nasal_m/Hi-sib/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3510,
+      "descent_rate_raw": 0.128992,
+      "descents": 3510,
+      "descent_rate": 0.128992,
+      "displaced": 5066,
+      "displaced_rate": 0.186168
+     },
+     "M-nasal_m/Hi-sib/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2294,
+      "descent_rate_raw": 0.084304,
+      "descents": 2294,
+      "descent_rate": 0.084304,
+      "displaced": 3987,
+      "displaced_rate": 0.146516
+     },
+     "M-nasal_m/Hi-sib/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2296,
+      "descent_rate_raw": 0.084378,
+      "descents": 2296,
+      "descent_rate": 0.084378,
+      "displaced": 3991,
+      "displaced_rate": 0.146663
+     },
+     "M-nasal_m/Hi-s/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2308,
+      "descent_rate_raw": 0.084819,
+      "descents": 2308,
+      "descent_rate": 0.084819,
+      "displaced": 4008,
+      "displaced_rate": 0.147288
+     },
+     "M-nasal_m/Hi-s/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2310,
+      "descent_rate_raw": 0.084892,
+      "descents": 2310,
+      "descent_rate": 0.084892,
+      "displaced": 4012,
+      "displaced_rate": 0.147435
+     },
+     "M-nasal_m/Hi-s/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3512,
+      "descent_rate_raw": 0.129065,
+      "descents": 3512,
+      "descent_rate": 0.129065,
+      "displaced": 5072,
+      "displaced_rate": 0.186388
+     },
+     "M-nasal_m/Hi-s/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3514,
+      "descent_rate_raw": 0.129139,
+      "descents": 3514,
+      "descent_rate": 0.129139,
+      "displaced": 5076,
+      "displaced_rate": 0.186535
+     },
+     "M-nasal_m/Hi-s/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2298,
+      "descent_rate_raw": 0.084451,
+      "descents": 2298,
+      "descent_rate": 0.084451,
+      "displaced": 3997,
+      "displaced_rate": 0.146884
+     },
+     "M-nasal_m/Hi-s/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2300,
+      "descent_rate_raw": 0.084525,
+      "descents": 2300,
+      "descent_rate": 0.084525,
+      "displaced": 4001,
+      "displaced_rate": 0.147031
+     },
+     "M-m/Hi-pos/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2354,
+      "descent_rate_raw": 0.086509,
+      "descents": 2354,
+      "descent_rate": 0.086509,
+      "displaced": 4280,
+      "displaced_rate": 0.157284
+     },
+     "M-m/Hi-pos/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2356,
+      "descent_rate_raw": 0.086583,
+      "descents": 2356,
+      "descent_rate": 0.086583,
+      "displaced": 4284,
+      "displaced_rate": 0.157431
+     },
+     "M-m/Hi-pos/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3557,
+      "descent_rate_raw": 0.130719,
+      "descents": 3557,
+      "descent_rate": 0.130719,
+      "displaced": 5329,
+      "displaced_rate": 0.195833
+     },
+     "M-m/Hi-pos/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3559,
+      "descent_rate_raw": 0.130793,
+      "descents": 3559,
+      "descent_rate": 0.130793,
+      "displaced": 5333,
+      "displaced_rate": 0.19598
+     },
+     "M-m/Hi-pos/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2344,
+      "descent_rate_raw": 0.086142,
+      "descents": 2344,
+      "descent_rate": 0.086142,
+      "displaced": 4269,
+      "displaced_rate": 0.156879
+     },
+     "M-m/Hi-pos/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2346,
+      "descent_rate_raw": 0.086215,
+      "descents": 2346,
+      "descent_rate": 0.086215,
+      "displaced": 4273,
+      "displaced_rate": 0.157026
+     },
+     "M-m/Hi-sib/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2358,
+      "descent_rate_raw": 0.086656,
+      "descents": 2358,
+      "descent_rate": 0.086656,
+      "displaced": 4306,
+      "displaced_rate": 0.158239
+     },
+     "M-m/Hi-sib/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2360,
+      "descent_rate_raw": 0.08673,
+      "descents": 2360,
+      "descent_rate": 0.08673,
+      "displaced": 4310,
+      "displaced_rate": 0.158386
+     },
+     "M-m/Hi-sib/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3561,
+      "descent_rate_raw": 0.130866,
+      "descents": 3561,
+      "descent_rate": 0.130866,
+      "displaced": 5355,
+      "displaced_rate": 0.196788
+     },
+     "M-m/Hi-sib/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3563,
+      "descent_rate_raw": 0.13094,
+      "descents": 3563,
+      "descent_rate": 0.13094,
+      "displaced": 5359,
+      "displaced_rate": 0.196935
+     },
+     "M-m/Hi-sib/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2348,
+      "descent_rate_raw": 0.086289,
+      "descents": 2348,
+      "descent_rate": 0.086289,
+      "displaced": 4295,
+      "displaced_rate": 0.157835
+     },
+     "M-m/Hi-sib/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2350,
+      "descent_rate_raw": 0.086362,
+      "descents": 2350,
+      "descent_rate": 0.086362,
+      "displaced": 4299,
+      "displaced_rate": 0.157982
+     },
+     "M-m/Hi-s/Hf-slot/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2362,
+      "descent_rate_raw": 0.086803,
+      "descents": 2362,
+      "descent_rate": 0.086803,
+      "displaced": 4316,
+      "displaced_rate": 0.158606
+     },
+     "M-m/Hi-s/Hf-slot/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2364,
+      "descent_rate_raw": 0.086877,
+      "descents": 2364,
+      "descent_rate": 0.086877,
+      "displaced": 4320,
+      "displaced_rate": 0.158753
+     },
+     "M-m/Hi-s/Hf-s/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3565,
+      "descent_rate_raw": 0.131013,
+      "descents": 3565,
+      "descent_rate": 0.131013,
+      "displaced": 5365,
+      "displaced_rate": 0.197156
+     },
+     "M-m/Hi-s/Hf-s/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 3567,
+      "descent_rate_raw": 0.131087,
+      "descents": 3567,
+      "descent_rate": 0.131087,
+      "displaced": 5369,
+      "displaced_rate": 0.197303
+     },
+     "M-m/Hi-s/Hf-drop/G-keep": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2352,
+      "descent_rate_raw": 0.086436,
+      "descents": 2352,
+      "descent_rate": 0.086436,
+      "displaced": 4305,
+      "displaced_rate": 0.158202
+     },
+     "M-m/Hi-s/Hf-drop/G-degem": {
+      "units": 27212,
+      "segments": 1,
+      "descents_raw": 2354,
+      "descent_rate_raw": 0.086509,
+      "descents": 2354,
+      "descent_rate": 0.086509,
+      "displaced": 4309,
+      "displaced_rate": 0.158349
+     },
+     "ascii": {
+      "units": 27212,
+      "segments": 21,
+      "descents_raw": 10170,
+      "descent_rate_raw": 0.373746,
+      "descents": 10150,
+      "descent_rate": 0.373285,
+      "displaced": 22942,
+      "displaced_rate": 0.843084
+     },
+     "roman": {
+      "units": 27212,
+      "segments": 632,
+      "descents_raw": 9434,
+      "descent_rate_raw": 0.346698,
+      "descents": 8803,
+      "descent_rate": 0.331189,
+      "displaced": 14586,
+      "displaced_rate": 0.536014
+     }
     }
    },
    "root_nests": {
@@ -14480,7 +15228,336 @@
     },
     "roots_only_units": 3184,
     "roots_only_descents": 16,
-    "roots_only_descent_rate": 0.005027
+    "roots_only_descent_rate": 0.005027,
+    "vowel_grade_filter": {
+     "view": "heads_nest",
+     "rule": "M-nasal/Hi-pos/Hf-drop/G-keep",
+     "grades": "guna / vrddhi / zero-grade of the root's last vowel",
+     "units": 27212,
+     "root_nest_derivatives_dropped": 9217,
+     "vowel_grade_derivatives_dropped": 1519,
+     "descents": 2229,
+     "descent_rate": 0.081915,
+     "heads_view_descent_rate": 0.093556,
+     "roots_only_descent_rate": 0.005027,
+     "share_of_heads_rate_removed": 0.124428,
+     "share_of_gap_to_roots_only_closed": 0.131494,
+     "refutation_condition_3_verdict": "refuted",
+     "descent_rate_by_distance_from_last_root": {
+      "0": {
+       "pairs": 3184,
+       "descents": 629,
+       "descent_rate": 0.19755
+      },
+      "1": {
+       "pairs": 2283,
+       "descents": 124,
+       "descent_rate": 0.054314
+      },
+      "2": {
+       "pairs": 1974,
+       "descents": 143,
+       "descent_rate": 0.072442
+      },
+      "3": {
+       "pairs": 1737,
+       "descents": 144,
+       "descent_rate": 0.082902
+      },
+      "4": {
+       "pairs": 1511,
+       "descents": 126,
+       "descent_rate": 0.083388
+      },
+      "5": {
+       "pairs": 1301,
+       "descents": 110,
+       "descent_rate": 0.08455
+      },
+      "6": {
+       "pairs": 1147,
+       "descents": 72,
+       "descent_rate": 0.062772
+      },
+      "7": {
+       "pairs": 986,
+       "descents": 91,
+       "descent_rate": 0.092292
+      },
+      "8": {
+       "pairs": 852,
+       "descents": 65,
+       "descent_rate": 0.076291
+      },
+      "9": {
+       "pairs": 749,
+       "descents": 49,
+       "descent_rate": 0.065421
+      },
+      "10+": {
+       "pairs": 11485,
+       "descents": 676,
+       "descent_rate": 0.058859
+      },
+      "before_first_root": {
+       "pairs": 2,
+       "descents": 0,
+       "descent_rate": 0.0
+      }
+     },
+     "residual_counterexamples_sample": [
+      {
+       "prev_L": "273",
+       "prev_pc": "0021-2",
+       "prev_iast": "aghārin",
+       "prev_is_root": false,
+       "next_L": "274",
+       "next_pc": "0021-2",
+       "next_iast": "agharma",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "478",
+       "prev_pc": "0034-2",
+       "prev_iast": "añj",
+       "prev_is_root": true,
+       "next_L": "498",
+       "next_pc": "0036-1",
+       "next_iast": "akta",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "586",
+       "prev_pc": "0040-1",
+       "prev_iast": "atikrāntiḥ",
+       "prev_is_root": false,
+       "next_L": "587",
+       "next_pc": "0040-1",
+       "next_iast": "atikramaṇam",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "593",
+       "prev_pc": "0040-2",
+       "prev_iast": "atigam",
+       "prev_is_root": true,
+       "next_L": "594",
+       "next_pc": "0040-2",
+       "next_iast": "atiga",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "618",
+       "prev_pc": "0041-1",
+       "prev_iast": "aticchedaḥ",
+       "prev_is_root": false,
+       "next_L": "619",
+       "next_pc": "0041-1",
+       "next_iast": "aticchandaḥ",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "635",
+       "prev_pc": "0042-1",
+       "prev_iast": "atithin",
+       "prev_is_root": false,
+       "next_L": "636",
+       "next_pc": "0042-1",
+       "next_iast": "atithigvaḥ",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "665",
+       "prev_pc": "0043-1",
+       "prev_iast": "atipad",
+       "prev_is_root": true,
+       "next_L": "667",
+       "next_pc": "0043-1",
+       "next_iast": "atipattiḥ",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "674",
+       "prev_pc": "0043-1",
+       "prev_iast": "atiprabandhaḥ",
+       "prev_is_root": false,
+       "next_L": "675",
+       "next_pc": "0043-1",
+       "next_iast": "atiprage",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "690",
+       "prev_pc": "0044-1",
+       "prev_iast": "atibhū",
+       "prev_is_root": true,
+       "next_L": "691",
+       "next_pc": "0044-1",
+       "next_iast": "atibhavaḥ",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "697",
+       "prev_pc": "0044-1",
+       "prev_iast": "atimāna",
+       "prev_is_root": false,
+       "next_L": "698",
+       "next_pc": "0044-1",
+       "next_iast": "atimartya",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "723",
+       "prev_pc": "0044-2",
+       "prev_iast": "atiric",
+       "prev_is_root": false,
+       "next_L": "724",
+       "next_pc": "0045-1",
+       "next_iast": "atirikta",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "725",
+       "prev_pc": "0045-1",
+       "prev_iast": "atireka",
+       "prev_is_root": false,
+       "next_L": "726",
+       "next_pc": "0045-1",
+       "next_iast": "atiruc",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "758",
+       "prev_pc": "0046-1",
+       "prev_iast": "ativṛt",
+       "prev_is_root": true,
+       "next_L": "762",
+       "next_pc": "0046-2",
+       "next_iast": "ativardhanam",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "763",
+       "prev_pc": "0046-2",
+       "prev_iast": "ativṛddha",
+       "prev_is_root": false,
+       "next_L": "764",
+       "next_pc": "0046-2",
+       "next_iast": "ativiṣṭhita",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "776",
+       "prev_pc": "0047-1",
+       "prev_iast": "atiśī",
+       "prev_is_root": true,
+       "next_L": "777",
+       "next_pc": "0047-1",
+       "next_iast": "atiśayaḥ",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "796",
+       "prev_pc": "0047-2",
+       "prev_iast": "atisāntapanam",
+       "prev_is_root": false,
+       "next_L": "797",
+       "next_pc": "0047-2",
+       "next_iast": "atisāṃvatsara",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "803",
+       "prev_pc": "0048-1",
+       "prev_iast": "atisṛj",
+       "prev_is_root": true,
+       "next_L": "804",
+       "next_pc": "0048-1",
+       "next_iast": "atisargaḥ",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "809",
+       "prev_pc": "0048-1",
+       "prev_iast": "atisparśa",
+       "prev_is_root": false,
+       "next_L": "810",
+       "next_pc": "0048-1",
+       "next_iast": "atisnehaḥ",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "817",
+       "prev_pc": "0049-1",
+       "prev_iast": "atyayin",
+       "prev_is_root": false,
+       "next_L": "818",
+       "next_pc": "0049-1",
+       "next_iast": "atīndriya",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "836",
+       "prev_pc": "0049-2",
+       "prev_iast": "atnam",
+       "prev_is_root": false,
+       "next_L": "837",
+       "next_pc": "0049-2",
+       "next_iast": "atnaḥ",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "860",
+       "prev_pc": "0050-2",
+       "prev_iast": "atyānandā",
+       "prev_is_root": false,
+       "next_L": "861",
+       "next_pc": "0050-2",
+       "next_iast": "atyādhānam",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "878",
+       "prev_pc": "0051-1",
+       "prev_iast": "atratya",
+       "prev_is_root": false,
+       "next_L": "879",
+       "next_pc": "0051-2",
+       "next_iast": "atra",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "890",
+       "prev_pc": "0052-2",
+       "prev_iast": "atho",
+       "prev_is_root": false,
+       "next_L": "891",
+       "next_pc": "0052-2",
+       "next_iast": "athariḥ",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "892",
+       "prev_pc": "0052-2",
+       "prev_iast": "atharyati",
+       "prev_is_root": false,
+       "next_L": "893",
+       "next_pc": "0052-2",
+       "next_iast": "atharya",
+       "next_is_root": false
+      },
+      {
+       "prev_L": "896",
+       "prev_pc": "0052-2",
+       "prev_iast": "atharvan",
+       "prev_is_root": false,
+       "next_L": "897",
+       "next_pc": "0053-1",
+       "next_iast": "atharvaṇiḥ",
+       "next_is_root": false
+      }
+     ]
+    }
    }
   },
   {
