@@ -117,6 +117,7 @@
     "validate-l0-gqd": "node scripts/validate-l0-gqd.mjs",
     "build-root-agreement-kappa": "python scripts/lexico/root_agreement_kappa.py",
     "build-access-structures": "python scripts/lexico/m11_access_structures.py",
+    "build-lemmatisation-policy": "python scripts/lexico/m12_lemmatisation_policy.py",
     "validate-review-reports": "node scripts/validate-review-reports.mjs",
     "build-kosa-model": "python scripts/lexico/m10_kosa_macrostructure_model.py",
     "validate-kosa-model": "node scripts/validate-kosa-model.mjs",
