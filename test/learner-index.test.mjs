@@ -135,19 +135,17 @@ test("readPinnedPayload fails closed on a digest mismatch (spec §9.2)", () => {
   const abs = path.join(dir, "visual", "contracts", "v1");
   fs.mkdirSync(abs, { recursive: true });
   const rel = "visual/contracts/v1/manifest.json";
+  const originalPin = VDCS_PIN.payloads[rel]; // restored in finally — tests share the pin table
   fs.writeFileSync(path.join(abs, "manifest.json"), JSON.stringify({ contractVersion: "1.0.0" }));
-  assert.throws(() => readPinnedPayload(dir, rel), /digest mismatch/);
-  // correct bytes but unknown contractVersion → reject (spec §9.3)
-  fs.writeFileSync(path.join(abs, "manifest.json"), "not-the-pinned-bytes"); // digest still wrong; craft exact bytes:
-  const exact = Buffer.from(JSON.stringify({ contractVersion: "9.9.9" }) + "\n");
-  const digest = sha256LfCanonical(exact);
-  VDCS_PIN.payloads[rel] = digest;
   try {
-    fs.writeFileSync(path.join(abs, "manifest.json"), exact);
+    assert.throws(() => readPinnedPayload(dir, rel), /digest mismatch/);
     // payload carries an unknown future version → reject, keep the previous pin (spec §9.3)
+    const exact = Buffer.from(JSON.stringify({ contractVersion: "9.9.9" }) + "\n");
+    VDCS_PIN.payloads[rel] = sha256LfCanonical(exact);
+    fs.writeFileSync(path.join(abs, "manifest.json"), exact);
     assert.throws(() => readPinnedPayload(dir, rel), /unknown contractVersion/);
   } finally {
-    delete VDCS_PIN.payloads[rel]; // restore the shared pin table
+    VDCS_PIN.payloads[rel] = originalPin;
   }
 });
 

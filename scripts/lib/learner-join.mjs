@@ -210,7 +210,8 @@ export function loadSurvival(dataRoot) {
     if (!byLemma.has(row.lemma)) byLemma.set(row.lemma, []);
     byLemma.get(row.lemma).push(row);
   }
-  for (const rows of byLemma.values()) rankSenses(rows);
+  // rankSenses returns a NEW array — assign it back or the pre-ranking is a no-op
+  for (const [lemma, rows] of byLemma) byLemma.set(lemma, rankSenses(rows));
   return { threshold, panel: new Set(h2h3.panel), byLemma, rowCount: senses.rows.length };
 }
 

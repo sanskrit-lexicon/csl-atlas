@@ -104,6 +104,9 @@ export function validateLearnerIndex(payload) {
     if (Math.abs(tiers[tier] - SPEC_TIERS[tier]) > tol) {
       throw new Error(`tier ${tier}: ${tiers[tier]} vs spec ${SPEC_TIERS[tier]} (±${tol}) — card population drifted beyond tolerance; re-measure against the spec before re-pinning`);
     }
+    if (payload.counts?.tiers?.[tier] !== tiers[tier]) {
+      throw new Error(`counts.tiers.${tier}: payload ${payload.counts?.tiers?.[tier]} ≠ recomputed ${tiers[tier]} — the page renders counts.tiers, so it must reconcile`);
+    }
   }
   for (const [k, v] of Object.entries(coverage)) {
     if (payload.counts?.coverage?.[k] !== v) {
