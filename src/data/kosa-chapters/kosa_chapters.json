@@ -1,0 +1,1268 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "npm run build-kosa-chapters",
+  "generatedAt": "2026-09-24T12:26:49.073Z",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "inputs": {
+    "instances": {
+      "AMAR": "data/lexico/kosa_model_amar_sample.json",
+      "ABCH": "data/lexico/kosa_model_abch_sample.json",
+      "ARMH": "data/lexico/kosa_model_armh_sample.json"
+    },
+    "measures": "data/lexico/kosa_model_measures.json",
+    "parseRules": {
+      "ABCH": "data/parse-rules/abch.json",
+      "ARMH": "data/parse-rules/armh.json"
+    }
+  },
+  "koshas": {
+    "AMAR": {
+      "code": "AMAR",
+      "identity": {
+        "title": "Nāmaliṅgānuśāsana (Amarakośa)",
+        "author": "Amarasiṃha",
+        "tradition": "Buddhist (attr.)",
+        "date": "~6th c. (trad.)",
+        "source": {
+          "upstream": "sanskrit-kosha/kosha (mirrored as ../AMAR)",
+          "path": "amar.txt",
+          "revision": "f5575c3a7742effabb3b79a8aa37d9b2d57bbb98",
+          "licence": "GPL-3.0"
+        }
+      },
+      "digitizationModel": "grouped",
+      "genderMarking": true,
+      "parseRules": null,
+      "totals": {
+        "kandas": 3,
+        "vargas": 24,
+        "verseGroups": 2359,
+        "sets": 5590,
+        "members": 14036,
+        "fullVerses": 1432
+      },
+      "divisions": [
+        {
+          "n": 1,
+          "label": "praTamaM kARqam",
+          "labelIast": "prathamaṃ kāṇḍam",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": "svargavargaH",
+              "labelIast": "svargavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 52,
+                "sets": 162,
+                "members": 690,
+                "fullVerses": 66
+              }
+            },
+            {
+              "label": "vyomavargaH",
+              "labelIast": "vyomavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 1,
+                "sets": 2,
+                "members": 25,
+                "fullVerses": 1
+              }
+            },
+            {
+              "label": "digvargaH",
+              "labelIast": "digvargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 43,
+                "sets": 120,
+                "members": 362,
+                "fullVerses": 35
+              }
+            },
+            {
+              "label": "kAlavargaH",
+              "labelIast": "kālavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 49,
+                "sets": 96,
+                "members": 255,
+                "fullVerses": 31
+              }
+            },
+            {
+              "label": "DIvargaH",
+              "labelIast": "dhīvargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 27,
+                "sets": 56,
+                "members": 160,
+                "fullVerses": 17
+              }
+            },
+            {
+              "label": "SabdAdivargaH",
+              "labelIast": "śabdādivargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 44,
+                "sets": 91,
+                "members": 211,
+                "fullVerses": 25
+              }
+            },
+            {
+              "label": "nAwyavargaH",
+              "labelIast": "nāṭyavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 55,
+                "sets": 138,
+                "members": 319,
+                "fullVerses": 38
+              }
+            },
+            {
+              "label": "pAtAlaBogivargaH",
+              "labelIast": "pātālabhogivargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 14,
+                "sets": 35,
+                "members": 103,
+                "fullVerses": 11
+              }
+            },
+            {
+              "label": "narakavargaH",
+              "labelIast": "narakavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 3,
+                "sets": 13,
+                "members": 30,
+                "fullVerses": 3
+              }
+            },
+            {
+              "label": "vArivargaH",
+              "labelIast": "vārivargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 66,
+                "sets": 139,
+                "members": 353,
+                "fullVerses": 45
+              }
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "label": "dvitIyaM kARqam",
+          "labelIast": "dvitīyaṃ kāṇḍam",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": "BUmivargaH",
+              "labelIast": "bhūmivargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 28,
+                "sets": 50,
+                "members": 146,
+                "fullVerses": 18
+              }
+            },
+            {
+              "label": "puravargaH",
+              "labelIast": "puravargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 34,
+                "sets": 68,
+                "members": 151,
+                "fullVerses": 20
+              }
+            },
+            {
+              "label": "SElavargaH",
+              "labelIast": "śailavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 14,
+                "sets": 30,
+                "members": 68,
+                "fullVerses": 8
+              }
+            },
+            {
+              "label": "vanOzaDivargaH",
+              "labelIast": "vanauṣadhivargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 248,
+                "sets": 379,
+                "members": 1451,
+                "fullVerses": 169
+              }
+            },
+            {
+              "label": "siMhAdivargaH",
+              "labelIast": "siṃhādivargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 60,
+                "sets": 140,
+                "members": 406,
+                "fullVerses": 43
+              }
+            },
+            {
+              "label": "manuzyavargaH",
+              "labelIast": "manuṣyavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 241,
+                "sets": 462,
+                "members": 1107,
+                "fullVerses": 140
+              }
+            },
+            {
+              "label": "brahmavargaH",
+              "labelIast": "brahmavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 106,
+                "sets": 191,
+                "members": 391,
+                "fullVerses": 57
+              }
+            },
+            {
+              "label": "kzatriyavargaH",
+              "labelIast": "kṣatriyavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 194,
+                "sets": 341,
+                "members": 898,
+                "fullVerses": 119
+              }
+            },
+            {
+              "label": "vESyavargaH",
+              "labelIast": "vaiśyavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 186,
+                "sets": 355,
+                "members": 872,
+                "fullVerses": 111
+              }
+            },
+            {
+              "label": "SUdravargaH",
+              "labelIast": "śūdravargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 76,
+                "sets": 130,
+                "members": 355,
+                "fullVerses": 45
+              }
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "label": "tftIyaM sAmAnyakARqam",
+          "labelIast": "tṛtīyaṃ sāmānyakāṇḍam",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": "viSezyaniGnavargaH",
+              "labelIast": "viśeṣyanighnavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 194,
+                "sets": 326,
+                "members": 1044,
+                "fullVerses": 110
+              }
+            },
+            {
+              "label": "saNkIrRavargaH",
+              "labelIast": "saṅkīrṇavargaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 80,
+                "sets": 168,
+                "members": 354,
+                "fullVerses": 41
+              }
+            },
+            {
+              "label": "nAnArTavargaH",
+              "labelIast": "nānārthavargaḥ",
+              "sectionType": "homonymic",
+              "counts": {
+                "groups": 501,
+                "sets": 1995,
+                "members": 3990,
+                "fullVerses": 256
+              }
+            },
+            {
+              "label": "avyayavargaH",
+              "labelIast": "avyayavargaḥ",
+              "sectionType": "indeclinable",
+              "counts": {
+                "groups": 43,
+                "sets": 103,
+                "members": 295,
+                "fullVerses": 23
+              }
+            }
+          ]
+        }
+      ],
+      "numbering": {
+        "scope": "per-section",
+        "sectionBoundaries": 23,
+        "restarts": 23,
+        "fullVerseCount": {
+          "inVerseGroups": 1432,
+          "inFile": 1444
+        }
+      },
+      "sectionColophons": {
+        "sections": 24,
+        "withOpeningAtha": 23,
+        "withClosingIti": 23,
+        "withoutOpening": [
+          "bhūmivargaḥ"
+        ],
+        "withoutClosing": [
+          "avyayavargaḥ"
+        ]
+      },
+      "setSizes": {
+        "homonym-sense": {
+          "sets": 1995,
+          "mean": 1,
+          "max": 1,
+          "singletons": 1995
+        },
+        "indeclinable-set": {
+          "sets": 103,
+          "mean": 1.98,
+          "max": 7,
+          "singletons": 54
+        },
+        "synonym-set": {
+          "sets": 3492,
+          "mean": 2.79,
+          "max": 55,
+          "singletons": 1059
+        }
+      },
+      "genderTags": {
+        "distinctTags": 14,
+        "top": {
+          "puM": 5097,
+          "strI": 2356,
+          "klI": 2072,
+          "tri": 1614,
+          "a": 381,
+          "puMklI": 296,
+          "puMstrI": 70,
+          "puMdvi": 22,
+          "strIba": 14,
+          "strIklI": 13,
+          "puMba": 11,
+          "klIa": 2
+        },
+        "unparsed": [],
+        "untaggedByRole": {
+          "gloss": 2084
+        }
+      },
+      "genderContiguity": {
+        "multiGenderSets": 756,
+        "contiguousObserved": 0.8995,
+        "contiguousExpectedUnderPermutation": 0.6776,
+        "mascFirstObserved": 0.3558,
+        "mascFirstExpected": 0.3464
+      },
+      "nanartha": {
+        "headwords": 861,
+        "senses": 1995,
+        "series": 2,
+        "violations": [
+          {
+            "series": 1,
+            "from": "ilA",
+            "fromIast": "ilā",
+            "to": "kzveqA",
+            "toIast": "kṣveḍā",
+            "explainedBy": "ḍ=l"
+          },
+          {
+            "series": 1,
+            "from": "ganDarva",
+            "fromIast": "gandharva",
+            "to": "kambu",
+            "toIast": "kambu",
+            "explainedBy": "b=v"
+          },
+          {
+            "series": 1,
+            "from": "pUrva",
+            "fromIast": "pūrva",
+            "to": "kumBa",
+            "toIast": "kumbha",
+            "explainedBy": "b=v"
+          },
+          {
+            "series": 1,
+            "from": "jihma",
+            "fromIast": "jihma",
+            "to": "uzRa",
+            "toIast": "uṣṇa",
+            "explainedBy": null
+          },
+          {
+            "series": 1,
+            "from": "sattva",
+            "fromIast": "sattva",
+            "to": "klIba",
+            "toIast": "klība",
+            "explainedBy": "b=v"
+          },
+          {
+            "series": 2,
+            "from": "vA",
+            "fromIast": "vā",
+            "to": "sAmi",
+            "toIast": "sāmi",
+            "explainedBy": "b=v"
+          },
+          {
+            "series": 2,
+            "from": "kim",
+            "fromIast": "kim",
+            "to": "nAman",
+            "toIast": "nāman",
+            "explainedBy": null
+          }
+        ]
+      },
+      "alphabeticalAdjacency": {
+        "pairs": 9750,
+        "nondecreasing": 0.4926
+      },
+      "devices": [
+        {
+          "device": "kanda",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "division",
+          "note": "Book headings/colophons are part of the text (e.g. prathamaṃ kāṇḍam)."
+        },
+        {
+          "device": "varga",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "division",
+          "note": "Section headings name all 24 vargas; 23 open with atha … vargaḥ and 23 close with iti … vargaḥ (no opening colophon: bhūmivargaḥ; no closing one: avyayavargaḥ)."
+        },
+        {
+          "device": "upavarga",
+          "evidence": "absent",
+          "layer": "digitization-markup",
+          "level": "division",
+          "note": "No third kvvv tier in AMAR (every record carries kāṇḍa + varga only)."
+        },
+        {
+          "device": "verse",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "group",
+          "note": "Verse-end numbers '.. N ..' (half-verse '(N)'); numbering restarts at 23 of 23 section boundaries."
+        },
+        {
+          "device": "synonym-set",
+          "evidence": "observed",
+          "layer": "digitization-markup",
+          "level": "set",
+          "note": "<eid> segmentation of a verse into sets is editorial annotation, not marked in the verse itself."
+        },
+        {
+          "device": "gender-marking",
+          "evidence": "observed",
+          "layer": "digitization-markup",
+          "level": "member",
+          "note": "Per-lexeme liṅga tags are annotator-supplied; the text marks gender by form, association and explicit statement (paribhāṣā vv. 3–5)."
+        },
+        {
+          "device": "gender-contiguity",
+          "evidence": "inferred",
+          "layer": "measurement",
+          "level": "member",
+          "note": "0.8995 of multi-gender sets keep each gender in one run vs 0.6776 expected by chance."
+        },
+        {
+          "device": "homonym-section",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "division",
+          "note": "nānārtha-varga; its opening verse states the arrangement by final sound (kāntādi)."
+        },
+        {
+          "device": "final-sound-order",
+          "evidence": "inferred",
+          "layer": "measurement",
+          "level": "member",
+          "note": "The kāntādi verse states the principle; measured here is how strictly it holds. Final-consonant rank non-decreasing on 0.9907 of adjacent headwords vs 0.536 for the initial letter; 2 a-tergo series (the second almost wholly indeclinable); 5 of 7 descending steps fall under the ḍ=l / b=v equivalences."
+        },
+        {
+          "device": "indeclinable-section",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "division",
+          "note": "avyaya-varga is the last varga in this digitization; kāṇḍa 3 v. 1 names a liṅgādisaṅgraha-varga after it, which the digitization does not contain."
+        },
+        {
+          "device": "alphabetical-order",
+          "evidence": "inferred",
+          "layer": "measurement",
+          "level": "member",
+          "note": "Adjacent-headword non-decreasing share 0.4926 in synonymic sections — chance level, i.e. no alphabetical device."
+        }
+      ]
+    },
+    "ABCH": {
+      "code": "ABCH",
+      "identity": {
+        "title": "Abhidhānacintāmaṇi",
+        "author": "Hemacandra",
+        "tradition": "Jain",
+        "date": "~12th c.",
+        "source": {
+          "upstream": "sanskrit-lexicon/csl-orig",
+          "path": "v02/abch/abch.txt",
+          "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+          "licence": "CC-BY-SA-4.0"
+        }
+      },
+      "digitizationModel": "grouped",
+      "genderMarking": true,
+      "parseRules": {
+        "file": "data/parse-rules/abch.json",
+        "schema": "mudidi-parse-rules/0.1",
+        "title": "Hemacandra Abhidhanacintamani",
+        "sourceFile": "csl-orig/v02/abch/abch.txt",
+        "recordCount": 1965,
+        "tags": [
+          {
+            "tag": "s",
+            "count": 8565,
+            "mdf": null,
+            "adequacy": "partial",
+            "role": "inline Sanskrit (context-dependent)"
+          },
+          {
+            "tag": "info",
+            "count": 1965,
+            "mdf": null,
+            "adequacy": "n/a",
+            "role": "machine annotation (infrastructure)"
+          },
+          {
+            "tag": "pc",
+            "count": 1965,
+            "mdf": null,
+            "adequacy": "n/a",
+            "role": "page-column coordinate (archival)"
+          }
+        ],
+        "unmappedTags": [
+          {
+            "tag": "eid",
+            "count": 4619
+          },
+          {
+            "tag": "syns",
+            "count": 4619
+          }
+        ],
+        "caveats": [
+          "Western-markup field inventory is ~empty by construction: this dictionary encodes citations / verbs / senses in indigenous prose (iti+authority, quotes, dhatuh / preraNe / conjugation-class names), not European tags. A zero here is detector blindness, NOT absence of content. See docs/MICROSTRUCTURE_ZERO_MEANING.md."
+        ]
+      },
+      "totals": {
+        "kandas": 7,
+        "vargas": 15,
+        "verseGroups": 1965,
+        "sets": 4596,
+        "members": 13563,
+        "fullVerses": 1518
+      },
+      "divisions": [
+        {
+          "n": 1,
+          "label": "devADidevakARqaH",
+          "labelIast": "devādhidevakāṇḍaḥ",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 41,
+                "sets": 340,
+                "members": 434,
+                "fullVerses": 63
+              }
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "label": "devakARqaH",
+          "labelIast": "devakāṇḍaḥ",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 271,
+                "sets": 761,
+                "members": 2355,
+                "fullVerses": 250
+              }
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "label": "martyakARqaH",
+          "labelIast": "martyakāṇḍaḥ",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 811,
+                "sets": 1763,
+                "members": 5161,
+                "fullVerses": 598
+              }
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "label": "tiryakkARqaH",
+          "labelIast": "tiryakkāṇḍaḥ",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": "pfTvIkAyaH",
+              "labelIast": "pṛthvīkāyaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 198,
+                "sets": 355,
+                "members": 1176,
+                "fullVerses": 134
+              }
+            },
+            {
+              "label": "jalakAyaH",
+              "labelIast": "jalakāyaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 38,
+                "sets": 78,
+                "members": 300,
+                "fullVerses": 28
+              }
+            },
+            {
+              "label": "tejaskAyaH",
+              "labelIast": "tejaskāyaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 9,
+                "sets": 17,
+                "members": 107,
+                "fullVerses": 9
+              }
+            },
+            {
+              "label": "vAyukAyaH",
+              "labelIast": "vāyukāyaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 5,
+                "sets": 7,
+                "members": 32,
+                "fullVerses": 4
+              }
+            },
+            {
+              "label": "vanaspatikAyaH",
+              "labelIast": "vanaspatikāyaḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 134,
+                "sets": 313,
+                "members": 840,
+                "fullVerses": 92
+              }
+            },
+            {
+              "label": "dvIndriyAH",
+              "labelIast": "dvīndriyāḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 6,
+                "sets": 14,
+                "members": 37,
+                "fullVerses": 4
+              }
+            },
+            {
+              "label": "trIndriyAH",
+              "labelIast": "trīndriyāḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 6,
+                "sets": 11,
+                "members": 30,
+                "fullVerses": 3
+              }
+            },
+            {
+              "label": "caturindriyAH",
+              "labelIast": "caturindriyāḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 9,
+                "sets": 16,
+                "members": 63,
+                "fullVerses": 6
+              }
+            },
+            {
+              "label": "paYcendriyAH",
+              "labelIast": "pañcendriyāḥ",
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 197,
+                "sets": 390,
+                "members": 1145,
+                "fullVerses": 142
+              }
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "label": "narakakARqaH",
+          "labelIast": "narakakāṇḍaḥ",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 6,
+                "sets": 16,
+                "members": 51,
+                "fullVerses": 7
+              }
+            }
+          ]
+        },
+        {
+          "n": 6,
+          "label": "sAmAnyakARqaH",
+          "labelIast": "sāmānyakāṇḍaḥ",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 203,
+                "sets": 449,
+                "members": 1607,
+                "fullVerses": 160
+              }
+            }
+          ]
+        },
+        {
+          "n": 7,
+          "label": "avyayavargaH",
+          "labelIast": "avyayavargaḥ",
+          "labelStatus": "stated-in-text",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "indeclinable",
+              "counts": {
+                "groups": 31,
+                "sets": 66,
+                "members": 225,
+                "fullVerses": 18
+              }
+            }
+          ]
+        }
+      ],
+      "numbering": {
+        "scope": "continuous",
+        "sectionBoundaries": 14,
+        "restarts": 0,
+        "fullVerseCount": {
+          "inVerseGroups": 1518,
+          "inFile": 1548
+        }
+      },
+      "sectionColophons": null,
+      "setSizes": {
+        "indeclinable-set": {
+          "sets": 66,
+          "mean": 3.41,
+          "max": 11,
+          "singletons": 2
+        },
+        "synonym-set": {
+          "sets": 4530,
+          "mean": 2.94,
+          "max": 75,
+          "singletons": 1590
+        }
+      },
+      "genderTags": {
+        "distinctTags": 18,
+        "top": {
+          "puM": 6990,
+          "klI": 3107,
+          "strI": 2519,
+          "puMklI": 385,
+          "a": 175,
+          "puMstrI": 122,
+          "vA": 95,
+          "puMdvi": 39,
+          "tri": 38,
+          "strIklI": 29,
+          "puMba": 21,
+          "strIba": 20
+        },
+        "unparsed": [],
+        "untaggedByRole": {
+          "gloss": 4
+        }
+      },
+      "genderContiguity": {
+        "multiGenderSets": 945,
+        "contiguousObserved": 0.6667,
+        "contiguousExpectedUnderPermutation": 0.6212,
+        "mascFirstObserved": 0.3407,
+        "mascFirstExpected": 0.3363
+      },
+      "nanartha": null,
+      "alphabeticalAdjacency": {
+        "pairs": 13333,
+        "nondecreasing": 0.4993
+      },
+      "devices": [
+        {
+          "device": "kanda",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "division",
+          "note": "Book headings/colophons are part of the text (e.g. prathamaṃ kāṇḍam)."
+        },
+        {
+          "device": "varga",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "division",
+          "note": "ABCH is divided by kāṇḍa; varga-level labels occur only in the tiryak-kāṇḍa and the avyaya-varga."
+        },
+        {
+          "device": "upavarga",
+          "evidence": "observed",
+          "layer": "digitization-markup",
+          "level": "division",
+          "note": "tiryak-kāṇḍa carries a third kvvv tier (e.g. pañcendriya → sthalacara)."
+        },
+        {
+          "device": "verse",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "group",
+          "note": "Verse-end numbers '.. N ..' (half-verse '(N)'); numbering runs on continuously across all 14 section boundaries."
+        },
+        {
+          "device": "synonym-set",
+          "evidence": "observed",
+          "layer": "digitization-markup",
+          "level": "set",
+          "note": "<eid> segmentation of a verse into sets is editorial annotation, not marked in the verse itself."
+        },
+        {
+          "device": "gender-marking",
+          "evidence": "observed",
+          "layer": "digitization-markup",
+          "level": "member",
+          "note": "Per-lexeme liṅga tags are annotator-supplied; the text marks gender by form, association and explicit statement."
+        },
+        {
+          "device": "gender-contiguity",
+          "evidence": "inferred",
+          "layer": "measurement",
+          "level": "member",
+          "note": "0.6667 of multi-gender sets keep each gender in one run vs 0.6212 expected by chance."
+        },
+        {
+          "device": "indeclinable-section",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "division",
+          "note": "avyaya-varga is the last section of the digitization, a top-level division after the sāmānya-kāṇḍa."
+        },
+        {
+          "device": "alphabetical-order",
+          "evidence": "inferred",
+          "layer": "measurement",
+          "level": "member",
+          "note": "Adjacent-headword non-decreasing share 0.4993 in synonymic sections — chance level, i.e. no alphabetical device."
+        }
+      ]
+    },
+    "ARMH": {
+      "code": "ARMH",
+      "identity": {
+        "title": "Abhidhānaratnamālā",
+        "author": "Halāyudha",
+        "tradition": "Brahmanical",
+        "date": "~10th c.",
+        "source": {
+          "upstream": "sanskrit-lexicon/csl-orig",
+          "path": "v02/armh/armh.txt",
+          "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+          "licence": "CC-BY-SA-4.0"
+        }
+      },
+      "digitizationModel": "exploded",
+      "genderMarking": false,
+      "parseRules": {
+        "file": "data/parse-rules/armh.json",
+        "schema": "mudidi-parse-rules/0.1",
+        "title": "Halayudha Abhidhanaratnamala",
+        "sourceFile": "csl-orig/v02/armh/armh.txt",
+        "recordCount": 7907,
+        "tags": [
+          {
+            "tag": "k1",
+            "count": 7907,
+            "mdf": "\\lx",
+            "adequacy": "clean",
+            "role": "headword"
+          },
+          {
+            "tag": "k2",
+            "count": 7907,
+            "mdf": "\\lc",
+            "adequacy": "partial",
+            "role": "segmented/sort key"
+          },
+          {
+            "tag": "pc",
+            "count": 7907,
+            "mdf": null,
+            "adequacy": "n/a",
+            "role": "page-column coordinate (archival)"
+          }
+        ],
+        "unmappedTags": [
+          {
+            "tag": "vn",
+            "count": 7907
+          }
+        ],
+        "caveats": [
+          "Western-markup field inventory is ~empty by construction: this dictionary encodes citations / verbs / senses in indigenous prose (iti+authority, quotes, dhatuh / preraNe / conjugation-class names), not European tags. A zero here is detector blindness, NOT absence of content. See docs/MICROSTRUCTURE_ZERO_MEANING.md."
+        ]
+      },
+      "totals": {
+        "kandas": 5,
+        "vargas": 5,
+        "verseGroups": 860,
+        "sets": 860,
+        "members": 7907,
+        "fullVerses": 883
+      },
+      "divisions": [
+        {
+          "n": 1,
+          "label": null,
+          "labelIast": null,
+          "labelStatus": "numeric-locator-only",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 138,
+                "sets": 138,
+                "members": 1462,
+                "fullVerses": 153
+              }
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "label": null,
+          "labelIast": null,
+          "labelStatus": "numeric-locator-only",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 461,
+                "sets": 461,
+                "members": 3959,
+                "fullVerses": 467
+              }
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "label": null,
+          "labelIast": null,
+          "labelStatus": "numeric-locator-only",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 63,
+                "sets": 63,
+                "members": 597,
+                "fullVerses": 63
+              }
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "label": null,
+          "labelIast": null,
+          "labelStatus": "numeric-locator-only",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "synonymic",
+              "counts": {
+                "groups": 98,
+                "sets": 98,
+                "members": 958,
+                "fullVerses": 100
+              }
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "label": null,
+          "labelIast": null,
+          "labelStatus": "numeric-locator-only",
+          "vargas": [
+            {
+              "label": null,
+              "labelIast": null,
+              "sectionType": "homonymic",
+              "counts": {
+                "groups": 100,
+                "sets": 100,
+                "members": 931,
+                "fullVerses": 100
+              }
+            }
+          ]
+        }
+      ],
+      "numbering": null,
+      "sectionColophons": null,
+      "setSizes": null,
+      "genderTags": null,
+      "genderContiguity": null,
+      "nanartha": null,
+      "alphabeticalAdjacency": {
+        "pairs": 7906,
+        "nondecreasing": 0.4985
+      },
+      "devices": [
+        {
+          "device": "kanda",
+          "evidence": "observed",
+          "layer": "digitization-markup",
+          "level": "division",
+          "note": "Only as the first field of the <vn> locator; no kāṇḍa headings in the digitization."
+        },
+        {
+          "device": "varga",
+          "evidence": "absent",
+          "layer": "digitization-markup",
+          "level": "division",
+          "note": "The <vn> locator does not vary below the kāṇḍa (A06 §6)."
+        },
+        {
+          "device": "verse",
+          "evidence": "observed",
+          "layer": "source-text",
+          "level": "group",
+          "note": "Verse-end numbers in the text; the <vn> groups the exploded records."
+        },
+        {
+          "device": "synonym-set",
+          "evidence": "absent",
+          "layer": "digitization-markup",
+          "level": "set",
+          "note": "Exploded model: one record per synonym, set boundaries inside a verse not encoded."
+        },
+        {
+          "device": "homonym-section",
+          "evidence": "inferred",
+          "layer": "measurement",
+          "level": "division",
+          "note": "kāṇḍa 5 identified as anekārtha from its '…api…' formula (A06 §4.2), not from a heading."
+        },
+        {
+          "device": "gender-marking",
+          "evidence": "absent",
+          "layer": "digitization-markup",
+          "level": "member",
+          "note": "No liṅga tags in the digitization."
+        },
+        {
+          "device": "alphabetical-order",
+          "evidence": "inferred",
+          "layer": "measurement",
+          "level": "member",
+          "note": "Adjacent-headword non-decreasing share 0.4985 — chance level."
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "rows": [
+      {
+        "aspect": "Digitization model",
+        "AMAR": "grouped",
+        "ABCH": "grouped",
+        "ARMH": "exploded"
+      },
+      {
+        "aspect": "Records (CDSL <L> entries)",
+        "AMAR": "n/a — sanskrit-kosha markup, not CDSL v02",
+        "ABCH": "1,965",
+        "ARMH": "7,907"
+      },
+      {
+        "aspect": "Verse-groups (numbered verse units)",
+        "AMAR": "2,359",
+        "ABCH": "1,965",
+        "ARMH": "860"
+      },
+      {
+        "aspect": "Sets (all kinds)",
+        "AMAR": "5,590",
+        "ABCH": "4,596",
+        "ARMH": "not encoded"
+      },
+      {
+        "aspect": "Members (word forms)",
+        "AMAR": "14,036",
+        "ABCH": "13,563",
+        "ARMH": "7,907"
+      },
+      {
+        "aspect": "Full verses",
+        "AMAR": "1,432",
+        "ABCH": "1,518",
+        "ARMH": "883"
+      },
+      {
+        "aspect": "Verse numbering",
+        "AMAR": "per-section — 23 restarts at 23 section boundaries",
+        "ABCH": "continuous — 0 restarts at 14 section boundaries",
+        "ARMH": "grouped by the <vn> locator; no numbering below the kāṇḍa"
+      },
+      {
+        "aspect": "Section colophons",
+        "AMAR": "23/24 open with atha, 23/24 close with iti",
+        "ABCH": "headings present in the markup; colophon openings/closings not measured",
+        "ARMH": "headings present in the markup; colophon openings/closings not measured"
+      },
+      {
+        "aspect": "Set boundaries",
+        "AMAR": "<eid> annotation (editorial)",
+        "ABCH": "<eid> annotation (editorial)",
+        "ARMH": "not encoded — one record per synonym"
+      },
+      {
+        "aspect": "Gender (liṅga) marking",
+        "AMAR": "14 distinct tags; most common puM (5,097)",
+        "ABCH": "18 distinct tags; most common puM (6,990)",
+        "ARMH": "absent in markup"
+      },
+      {
+        "aspect": "Homonym section",
+        "AMAR": "observed: nānārtha-varga; its opening verse states the arrangement by final sound (kāntādi).",
+        "ABCH": "—",
+        "ARMH": "inferred: kāṇḍa 5 identified as anekārtha from its '…api…' formula (A06 §4.2), not from a heading."
+      },
+      {
+        "aspect": "Gender-run contiguity",
+        "AMAR": "0.8995 observed vs 0.6776 under permutation",
+        "ABCH": "0.6667 observed vs 0.6212 under permutation",
+        "ARMH": "n/a — no gender tags"
+      },
+      {
+        "aspect": "Alphabetical adjacency (chance check)",
+        "AMAR": "0.4926 non-decreasing over 9,750 pairs",
+        "ABCH": "0.4993 non-decreasing over 13,333 pairs",
+        "ARMH": "0.4985 non-decreasing over 7,906 pairs"
+      }
+    ]
+  }
+}
