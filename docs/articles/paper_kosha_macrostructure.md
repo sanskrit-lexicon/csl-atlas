@@ -1,4 +1,4 @@
-_Created: 13-06-2026 · Last updated: 06-09-2026_
+_Created: 13-06-2026 · Last updated: 24-09-2026_
 
 # Order Is the Dictionary: A Macrostructural Model of the Versified Synonymic *Kośa*
 
@@ -100,8 +100,8 @@ sense-division lineage that reached the European dictionaries.
 The synonymic *kośa* (*nāmamālā*, "garland of names") arranges the vocabulary by subject
 into *kāṇḍa*s (books) and *varga*s (thematic sections), and within each section composes
 the synonyms of a concept into metrical verse for memorisation (for the genre's history
-see Vogel 1979). The *Amarakośa* (not in
-CDSL) is the prototype; at the 2026-06 snapshot analysed here the CDSL held four others
+see Vogel 1979). The *Amarakośa* (not in the CDSL `csl-orig` corpus, and so not among the koshas measured
+here) is the prototype; at the 2026-06 snapshot analysed here the CDSL held four others
 (Table 1), headed by the two I
 analyse: Halāyudha's *Abhidhānaratnamālā* (**ARMH**, ~10th c.) and Hemacandra's
 *Abhidhānacintāmaṇi* (**ABCH**, ~12th c.), together with the latter's two supplements,
@@ -282,8 +282,12 @@ sense-lists came from.
 ## 6. Limitations and future work
 
 The snapshot analysed holds four koshas — five since 2026-06, with NMMB (§2.1) awaiting
-its own modeling pass — but not the *Amarakośa* itself, so the genre prototype is a
-comparandum rather than data; adding a digitized Amara would anchor the model. ARMH's
+its own modeling pass — but not the *Amarakośa* itself, so in this paper the genre prototype is a comparandum
+rather than data. A digitized Amara is now available to the atlas outside the CDSL: the
+*sanskrit-kosha* markup (`amar.txt`, GPL-3.0) is modelled, alongside ABCH and ARMH, on the
+atlas's [kośa macrostructure methods page](https://sanskrit-lexicon.github.io/csl-atlas/paper/kosa-macrostructure) (schema, instances and measures, 24-09-2026).
+Folding those Amara measures into this paper's tables is the anchoring step for the next
+revision; the figures reported here are unchanged by it. ARMH's
 `<vn>` is not *varga*-subdivided in the digitization (only the *kāṇḍa* and a running
 verse number vary), so I model ARMH at *kāṇḍa* granularity and ABCH at *kāṇḍa*/*varga*
 granularity — a normalisation the sources permit but do not yet expose uniformly. The
