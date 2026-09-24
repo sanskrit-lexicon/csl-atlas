@@ -122,7 +122,9 @@
     "validate-review-decisions": "python scripts/validate_review_decisions.py",
     "build-ls-abbreviation-frequency": "python scripts/obs/ls_abbreviation_frequency.py",
     "test-ls-abbreviation-frequency": "python -m unittest scripts.test_ls_abbreviation_frequency",
-    "test-forensic-pins": "python -m pytest tests/forensic -q -p no:cacheprovider"
+    "test-forensic-pins": "python -m pytest tests/forensic -q -p no:cacheprovider",
+    "review-pool-kappa": "python scripts/review_pool_kappa.py",
+    "test-review-pool-kappa": "python -m unittest scripts.test_review_pool_kappa"
   },
   "engines": {
     "node": "20.x",
