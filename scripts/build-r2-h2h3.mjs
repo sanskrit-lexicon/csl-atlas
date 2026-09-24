@@ -79,7 +79,7 @@ export function splitSemicolon(body) {
 }
 
 // Return an array of {text, rawText} where rawText still has <ls> for citation check
-function extractSenses(body, dictCode) {
+export function extractSenses(body, dictCode) {
   if (!body || !body.trim()) return [];
   const cfg = DICT_CONFIG[dictCode];
 
@@ -132,7 +132,7 @@ export function glossOverlap(a, b) {
 }
 
 // --- Load all entries for a dict as stem→{body} ---
-function loadDictByStem(dictCode) {
+export function loadDictByStem(dictCode) {
   const map = new Map();
   for (const rec of iterateDict(dictCode)) {
     const stem = stemKey(rec.k1);
