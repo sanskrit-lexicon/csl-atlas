@@ -1,0 +1,545 @@
+{
+  "handoff": "H5295",
+  "script": "scripts/forensic/f12_a50_claim_ledger.py",
+  "script_sha256": "6fb10803ec22e60cb5e768e18a1f087f21e8f868ee6bb99873c4fa13d1a15d81",
+  "csl_atlas": {
+    "revision": "bbca791169829b8fa7d252d7ff5c7105b721c7f8",
+    "dirty": true
+  },
+  "inputs": {
+    "data/citations/ls_citation_edges.tsv": "6c7f7065c0e6445eb100f71aadc6f0cfde6b0871563b058d6e4c571693453491",
+    "data/citations/ls_citation_nodes.tsv": "29d1b588e9b4b1dca7d6dbffea74c6d1a9ee442d071f42d37b437dd2f2898711",
+    "src/data/citations/citation_canon.json": "f415df2f8d8e99f42d2f09facd6ce1ff319f1805531bd89320f2e8615ef2daf2"
+  },
+  "totals": {
+    "cites": 828505,
+    "edges": 1701,
+    "nodes": 912
+  },
+  "C1_concentration": {
+    "per_dict_volume_share_pct": {
+      "pwg": 64.7,
+      "ap": 6.9,
+      "pw": 6.1,
+      "ben": 5.9,
+      "bhs": 4.9,
+      "ap90": 4.6,
+      "mw": 2.4,
+      "lrv": 2.0,
+      "sch": 1.4,
+      "pwkvn": 1.0,
+      "md": 0.0
+    },
+    "topk_share_pooled_pct": {
+      "10": 33.7,
+      "20": 49.7,
+      "50": 71.0,
+      "100": 84.9
+    },
+    "topk_share_excluding_pwg_pct": {
+      "10": 37.7,
+      "20": 51.3,
+      "50": 73.4,
+      "100": 87.8
+    },
+    "texts_excluding_pwg": 657,
+    "per_dict_top10_share_pct": {
+      "ap": 52.7,
+      "ap90": 56.2,
+      "ben": 68.9,
+      "bhs": 71.4,
+      "lrv": 71.3,
+      "md": 100.0,
+      "mw": 100.0,
+      "pw": 42.1,
+      "pwg": 38.6,
+      "pwkvn": 49.5,
+      "sch": 56.2
+    }
+  },
+  "C2_reach": {
+    "reach_all_11": {
+      "9": 4,
+      "8": 13,
+      "7": 12,
+      "6": 20,
+      "5": 25,
+      "4": 31,
+      "3": 102,
+      "2": 97,
+      "1": 608
+    },
+    "reach_excluding_thin_rows": {
+      "9": 4,
+      "8": 12,
+      "7": 11,
+      "6": 22,
+      "5": 23,
+      "4": 32,
+      "3": 103,
+      "2": 97,
+      "1": 605
+    },
+    "thin_rows": [
+      "md",
+      "mw"
+    ],
+    "thin_row_node_counts": {
+      "md": 4,
+      "mw": 5
+    },
+    "usable_rows": 9,
+    "texts_cited_by_every_usable_row": [
+      "Bhagavadgītā",
+      "Kathāsaritsāgara",
+      "Mārkandeyapuraṇa",
+      "Rāmāyaṇa"
+    ],
+    "private_nodes": 608,
+    "private_nodes_pct": 66.7,
+    "private_volume_pct": 11.1,
+    "private_by_dict": {
+      "pwg": 255,
+      "pw": 168,
+      "bhs": 101,
+      "lrv": 45,
+      "ben": 24,
+      "ap": 5,
+      "ap90": 5,
+      "mw": 3,
+      "sch": 2
+    },
+    "texts_ge7_dicts": 29,
+    "texts_ge7_volume_pct": 44.1
+  },
+  "C2b_variant_fold": {
+    "fold_rows": 37,
+    "fold_rows_named": 4,
+    "fold_rows_ascii": 33,
+    "private_nodes_that_are_variants_of_shared_texts": 31,
+    "private_variants_of_shared_by_tier": {
+      "named": 2,
+      "ascii": 29
+    },
+    "private_variants_merging_into_private_canonical": 9,
+    "private_variants_merging_into_private_canonical_pairs": [
+      "Chandrāloka → Candrāloka",
+      "Chātakāshṭaka → Cātakāṣṭaka",
+      "Harṣacarita → Harshacharita",
+      "Chāṇakya → Cāṇakya",
+      "Vārtika → Vārttika",
+      "BRAHMOPANIṢAD → BRAHMOPANISHAD",
+      "SARVOPANIṢATSĀRA → SARVOPANISHATSĀRA",
+      "KAIVALYOPANISHAD → KAIVALYOPANIṢAD",
+      "WILSON → Wilson (dictionary)"
+    ],
+    "nodes_after_fold": 875,
+    "private_after_fold": 568,
+    "private_after_fold_pct": 64.9,
+    "private_after_fold_volume_pct": 9.8,
+    "reach_after_fold": {
+      "11": 1,
+      "9": 4,
+      "8": 19,
+      "7": 14,
+      "6": 23,
+      "5": 16,
+      "4": 30,
+      "3": 98,
+      "2": 102,
+      "1": 568
+    },
+    "reach_after_fold_excluding_thin_rows": {
+      "9": 5,
+      "8": 18,
+      "7": 14,
+      "6": 23,
+      "5": 16,
+      "4": 31,
+      "3": 98,
+      "2": 102,
+      "1": 565
+    },
+    "texts_cited_by_every_dict_after_fold": [
+      "Ṛgveda"
+    ],
+    "named_variants": {
+      "Raghuvanśa": {
+        "variant_cites": 4101,
+        "variant_dicts": [
+          "lrv"
+        ],
+        "canonical_dicts": [
+          "ap",
+          "ap90",
+          "ben",
+          "pw",
+          "pwg",
+          "pwkvn",
+          "sch"
+        ],
+        "union_dicts": 8
+      },
+      "Manusmṛiti": {
+        "variant_cites": 1762,
+        "variant_dicts": [
+          "lrv"
+        ],
+        "canonical_dicts": [
+          "ap",
+          "ap90",
+          "ben",
+          "pw",
+          "pwg",
+          "pwkvn",
+          "sch"
+        ],
+        "union_dicts": 8
+      },
+      "Rigveda": {
+        "variant_cites": 837,
+        "variant_dicts": [
+          "ben",
+          "bhs",
+          "lrv",
+          "md"
+        ],
+        "canonical_dicts": [
+          "ap",
+          "ap90",
+          "mw",
+          "pw",
+          "pwg",
+          "pwkvn",
+          "sch"
+        ],
+        "union_dicts": 11
+      },
+      "Bhāgavata": {
+        "variant_cites": 2968,
+        "variant_dicts": [
+          "ap",
+          "ap90",
+          "lrv"
+        ],
+        "canonical_dicts": [
+          "ben",
+          "bhs",
+          "pwg",
+          "pwkvn",
+          "sch"
+        ],
+        "union_dicts": 8
+      }
+    }
+  },
+  "C5_kosa_citers": {
+    "Śabdakalpadruma": {
+      "total": 20232,
+      "pwg_share_pct": 99.5,
+      "per_dict": {
+        "pwg": 20130,
+        "ben": 27,
+        "ap": 23,
+        "ap90": 22,
+        "pw": 17,
+        "pwkvn": 7,
+        "sch": 6
+      },
+      "dicts_citing_at_least_100_times": [
+        "pwg"
+      ]
+    },
+    "Amarakoṣa": {
+      "total": 14918,
+      "pwg_share_pct": 97.3,
+      "per_dict": {
+        "pwg": 14510,
+        "ap": 187,
+        "ap90": 125,
+        "pw": 50,
+        "lrv": 32,
+        "pwkvn": 7,
+        "sch": 6,
+        "bhs": 1
+      },
+      "dicts_citing_at_least_100_times": [
+        "ap",
+        "ap90",
+        "pwg"
+      ]
+    },
+    "Abhidhānacintāmaṇi": {
+      "total": 18073,
+      "pwg_share_pct": 88.9,
+      "per_dict": {
+        "pwg": 16060,
+        "sch": 2000,
+        "pwkvn": 13
+      },
+      "dicts_citing_at_least_100_times": [
+        "pwg",
+        "sch"
+      ]
+    },
+    "Medinīkośa": {
+      "total": 13246,
+      "pwg_share_pct": 98.8,
+      "per_dict": {
+        "pwg": 13083,
+        "pw": 63,
+        "ap": 56,
+        "sch": 34,
+        "pwkvn": 6,
+        "ap90": 4
+      },
+      "dicts_citing_at_least_100_times": [
+        "pwg"
+      ]
+    }
+  },
+  "reproduction": {
+    "table1_distinct_texts": {
+      "ap": 155,
+      "ap90": 149,
+      "ben": 96,
+      "bhs": 136,
+      "lrv": 106,
+      "md": 4,
+      "mw": 5,
+      "pw": 243,
+      "pwg": 475,
+      "pwkvn": 172,
+      "sch": 160
+    },
+    "astadhyayi_pwg_cites": 21509,
+    "node_table_n_dicts_mismatches": 0
+  },
+  "drift": {
+    "regen_sha256": "02891158b9a65d62bbef0f88894f57861b649b989bcdc231e4379e3653cfec95",
+    "committed": {
+      "cites": 828505,
+      "edges": 1701,
+      "nodes": 912,
+      "topk_share_pooled_pct": {
+        "10": 33.7,
+        "20": 49.7,
+        "50": 71.0,
+        "100": 84.9
+      },
+      "pwg_volume_share_pct": 64.7,
+      "private_nodes": 608,
+      "private_nodes_pct": 66.7,
+      "private_volume_pct": 11.1,
+      "texts_ge7_dicts": 29,
+      "texts_ge7_volume_pct": 44.1,
+      "reach_max": 9,
+      "per_dict_cites": {
+        "ap": 57113,
+        "ap90": 37993,
+        "ben": 49003,
+        "bhs": 40875,
+        "lrv": 16469,
+        "md": 47,
+        "mw": 20250,
+        "pw": 50701,
+        "pwg": 536172,
+        "pwkvn": 8386,
+        "sch": 11496
+      },
+      "per_dict_texts": {
+        "ap": 155,
+        "ap90": 149,
+        "ben": 96,
+        "bhs": 136,
+        "lrv": 106,
+        "md": 4,
+        "mw": 5,
+        "pw": 243,
+        "pwg": 475,
+        "pwkvn": 172,
+        "sch": 160
+      }
+    },
+    "regenerated": {
+      "cites": 826752,
+      "edges": 1699,
+      "nodes": 911,
+      "topk_share_pooled_pct": {
+        "10": 33.7,
+        "20": 49.8,
+        "50": 71.2,
+        "100": 84.9
+      },
+      "pwg_volume_share_pct": 64.9,
+      "private_nodes": 607,
+      "private_nodes_pct": 66.6,
+      "private_volume_pct": 10.9,
+      "texts_ge7_dicts": 29,
+      "texts_ge7_volume_pct": 44.2,
+      "reach_max": 9,
+      "per_dict_cites": {
+        "ap": 57112,
+        "ap90": 37993,
+        "ben": 47251,
+        "bhs": 40875,
+        "lrv": 16469,
+        "md": 47,
+        "mw": 20250,
+        "pw": 50701,
+        "pwg": 536172,
+        "pwkvn": 8386,
+        "sch": 11496
+      },
+      "per_dict_texts": {
+        "ap": 155,
+        "ap90": 149,
+        "ben": 94,
+        "bhs": 136,
+        "lrv": 106,
+        "md": 4,
+        "mw": 5,
+        "pw": 243,
+        "pwg": 475,
+        "pwkvn": 172,
+        "sch": 160
+      }
+    },
+    "headline_moves": {
+      "cites": [
+        828505,
+        826752
+      ],
+      "edges": [
+        1701,
+        1699
+      ],
+      "nodes": [
+        912,
+        911
+      ],
+      "pwg_volume_share_pct": [
+        64.7,
+        64.9
+      ],
+      "private_nodes": [
+        608,
+        607
+      ],
+      "private_nodes_pct": [
+        66.7,
+        66.6
+      ],
+      "private_volume_pct": [
+        11.1,
+        10.9
+      ],
+      "texts_ge7_volume_pct": [
+        44.1,
+        44.2
+      ]
+    },
+    "topk_moves": {
+      "20": [
+        49.7,
+        49.8
+      ],
+      "50": [
+        71.0,
+        71.2
+      ]
+    },
+    "dicts_with_changed_cites": {
+      "ap": [
+        57113,
+        57112
+      ],
+      "ben": [
+        49003,
+        47251
+      ]
+    },
+    "nodes_only_committed": [
+      "Kullūka Schol",
+      "Weber"
+    ],
+    "nodes_only_regenerated": [
+      "WEBER"
+    ],
+    "edges_changed": 30,
+    "largest_edge_moves": [
+      {
+        "dict": "ben",
+        "text": "my Sanskrit Chrestomathy",
+        "committed": 3017,
+        "regenerated": 1599
+      },
+      {
+        "dict": "pwg",
+        "text": "WEBER",
+        "committed": 0,
+        "regenerated": 350
+      },
+      {
+        "dict": "pwg",
+        "text": "Weber",
+        "committed": 350,
+        "regenerated": 0
+      },
+      {
+        "dict": "ben",
+        "text": "Gaspare Gorresio",
+        "committed": 347,
+        "regenerated": 16
+      },
+      {
+        "dict": "pw",
+        "text": "WEBER",
+        "committed": 0,
+        "regenerated": 66
+      },
+      {
+        "dict": "pw",
+        "text": "Weber",
+        "committed": 66,
+        "regenerated": 0
+      },
+      {
+        "dict": "ben",
+        "text": "Kullūka Schol",
+        "committed": 27,
+        "regenerated": 0
+      },
+      {
+        "dict": "ben",
+        "text": "Kumārasambhava",
+        "committed": 155,
+        "regenerated": 170
+      },
+      {
+        "dict": "ben",
+        "text": "Manusmṛti",
+        "committed": 6058,
+        "regenerated": 6071
+      },
+      {
+        "dict": "ben",
+        "text": "Weber",
+        "committed": 11,
+        "regenerated": 0
+      },
+      {
+        "dict": "ben",
+        "text": "Yogasūtrāṇi",
+        "committed": 7,
+        "regenerated": 1
+      },
+      {
+        "dict": "ben",
+        "text": "Friedrich Schlegel",
+        "committed": 5,
+        "regenerated": 1
+      }
+    ]
+  }
+}

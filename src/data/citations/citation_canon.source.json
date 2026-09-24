@@ -1,7 +1,9 @@
 {
   "dataset": "citation_canon",
-  "commit": "943721622b1c27d1762d913030d1650c9faf9a16",
-  "generatedAt": "2026-07-07T14:23:17.635Z",
+  "commit": "824cf79d934e612c9c91a78f9358074f430d555c",
+  "dirty": true,
+  "builderSha256": "b459f40805619cee9912084fde2860c221187720e6475146f41b937d0ae1f35e",
+  "generatedAt": "2026-09-24T03:27:33.703Z",
   "generatedBy": "npm run build-citation-canon",
   "sourceFiles": [
     "data/citations/ls_citation_edges.tsv",

@@ -3,7 +3,7 @@
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "status": "tradition-community-map",
-  "claim": "Each Cologne Sanskrit dictionary's <ls> citation volume splits across a small set of textual traditions (Vedic, epic, classical-kāvya, Buddhist, dharma-śāstra, lexical-kośa, …); the per-dictionary split names the modular citation communities PH1 CANON-CORE detected quantitatively.",
+  "claim": "Each Cologne Sanskrit dictionary's <ls> citation volume splits across a small set of textual traditions (Vedic, epic, classical-kāvya, Buddhist, dharma-śāstra, lexical-kośa, …); the per-dictionary split gives each dictionary a tradition profile to read alongside the modular verdict of PH1 CANON-CORE; it does not name the optimiser modules (H5295).",
   "evidenceLabel": "inferred",
   "reviewStatus": "inferred-pending-review",
   "reviewNote": "The text→tradition map is a scholarly proposal routed to human review (agenda backlog #9). Every tradition claim on the page is flagged by review state; unreviewed tags are shown as inferred, never asserted as fact. Rows promoted by the H1684 agent adjudication carry reviewed_by=agent-h1684 and are reported separately from human-read rows — a fully-reviewed map whose reviews are partly agent-made reads agent-adjudicated-human-gated, never human-reviewed.",
@@ -2056,5 +2056,5 @@
       "nDicts": 5
     }
   ],
-  "generatedAt": "2026-07-27T09:21:20.352Z"
+  "generatedAt": "2026-09-24T03:15:29.520Z"
 }

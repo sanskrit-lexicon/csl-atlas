@@ -23,7 +23,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
-import { pathToFileURL } from "node:url";
+import { pathToFileURL, fileURLToPath } from "node:url";
+import crypto from "node:crypto";
 import { licenseFields, generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
@@ -40,7 +41,7 @@ const LPA_RESTARTS = 6;       // label-propagation restarts, best Q kept
 const SEED = 0x5eedca11;      // fixed seed → reproducible nulls
 
 // ---- deterministic PRNG (mulberry32) --------------------------------------
-function mulberry32(seed) {
+export function mulberry32(seed) {
   let a = seed >>> 0;
   return function () {
     a |= 0;
@@ -314,7 +315,10 @@ export function modularity(rowSets, nCols, rng) {
     let kd = 0;
     for (const L of labels) kd += (K.get(L) || 0) * (D.get(L) || 0);
     const q = eWithin / E - kd / (E * E);
-    return { q, nModules: labels.size };
+    // rowLabels: module label per row (dict), in rowSets order — lets a caller
+    // report WHICH dictionaries share a module (H5295 falsification ledger);
+    // the committed payload keeps storing only q and nModules.
+    return { q, nModules: labels.size, rowLabels: rowLabel.slice() };
   }
 
   let best = { q: -Infinity, nModules: 0 };
@@ -540,9 +544,9 @@ export function buildPayload(edgeRows, nodeRows, generatedAt) {
       verdict === "nested"
         ? `The matrix is significantly nested (NODF ${stats.nodf.observed} vs null mean ${stats.nodf.nullMean}, permutation p ${stats.nodf.p}) and NOT significantly modular (Q ${stats.modularity.observed} vs null mean ${stats.modularity.nullMean}, p ${stats.modularity.p}). PH1 CANON-CORE is supported: the cited canon reads as one additive stratum, not disjoint traditions — A50 §4 should frame "traditions" as core–periphery strata of a shared canon.`
         : verdict === "modular"
-        ? `PH1 CANON-CORE is REFUTED, and in the opposite direction: the matrix is significantly MODULAR (Barber Q ${stats.modularity.observed} vs degree-preserving null mean ${stats.modularity.nullMean}, permutation p ${stats.modularity.p}) and is if anything LESS nested than chance (NODF ${stats.nodf.observed} vs null mean ${stats.nodf.nullMean}, p ${stats.nodf.p}). The cited canon is NOT one additive core–periphery ladder — the dictionaries carry partly disjoint tradition communities (e.g. bhs's Buddhist sources, the Apte pair ap/ap90, the Petersburg group pwg/pw/pwkvn). A50 §4 should therefore report "traditions" as genuinely separate citation communities, not strata of a single shared canon.`
+        ? `PH1 CANON-CORE is not supported — the matrix is less nested than a one-canon random draw with the same margins and more modular than it: it is significantly MODULAR (Barber Q ${stats.modularity.observed} vs degree-preserving null mean ${stats.modularity.nullMean}, permutation p ${stats.modularity.p}) and is if anything LESS nested than chance (NODF ${stats.nodf.observed} vs null mean ${stats.nodf.nullMean}, p ${stats.nodf.p}). The cited canon is NOT one additive core–periphery ladder: the assignments cluster beyond what a one-canon draw with the same breadths and popularities forces. The partition the optimiser finds is two key-sharing pairs (ap+ap90, pwkvn+sch) plus singletons — a shared resolver key is sufficient for both pairs — and the margin over the null survives variant folding (H5295 ledger). A50 §4 reports the margin, the partition and that alternative; tradition names come from the curated map, not from the partition.`
         : `Verdict: ${verdict}. NODF ${stats.nodf.observed} (null ${stats.nodf.nullMean}, p ${stats.nodf.p}); modularity Q ${stats.modularity.observed} (null ${stats.modularity.nullMean}, p ${stats.modularity.p}). Neither topology is cleanly detected against the degree-preserving null; A50 §4 framing follows the measured verdict.`,
-      `The matrix is extremely sparse and long-tailed: ${views.canonCurve.find((c) => c.nDicts === 1)?.texts ?? 0} of the ${nCols} cited texts are private to a single dictionary and none is shared by all ${nRows} <ls>-tagged dicts (the broadest by reach, Rāmāyaṇa, appears in 9). A thin universal head (Rāmāyaṇa, Mahābhārata, Ṛgveda) doubles as a shared reading list, but the mass of each apparatus is its own idiosyncratic tail — which is exactly what drives the modular rather than nested signal."`
+      `The matrix is extremely sparse and long-tailed: ${views.canonCurve.find((c) => c.nDicts === 1)?.texts ?? 0} of the ${nCols} cited node labels are private to a single dictionary and on the committed labels none is shared by all ${nRows} <ls>-tagged dicts (the broadest by reach, Rāmāyaṇa, appears in 9; the Ṛgveda reaches all ${nRows} once its Rigveda spelling is folded, and four texts reach every dictionary with a usable yield — H5295). A thin universal head (Rāmāyaṇa, Mahābhārata, Ṛgveda) doubles as a shared reading list, but the mass of each apparatus is its own idiosyncratic tail; private labels inflate raw Q in observed and null alike, and the margin over the null is what carries the modular signal.`
     ],
     limitations: [
       "MW contributes only its 5 bibliographic <ls> markers here — 63,582 grammatical/editorial <ls> markers were filtered as non-text (audit: data/citations/ls_citation_nontext_filtered.tsv) — so MW's apparatus is under-represented relative to its true citation load.",
@@ -561,14 +565,22 @@ export function buildPayload(edgeRows, nodeRows, generatedAt) {
 
 function writeSourceEnvelope(payload) {
   let commit = "unknown";
+  let dirty = null;
   try {
     commit = execSync("git rev-parse HEAD", { encoding: "utf8" }).trim();
+    dirty = execSync("git status --porcelain -- scripts/build-citation-canon.mjs data/citations", { encoding: "utf8" }).trim().length > 0;
   } catch {
     commit = "unknown";
   }
+  // H5295: a commit alone does not bind the payload when the builder or its
+  // inputs are modified in the working tree — record the dirty flag and the
+  // builder's own hash so a rebuild at `commit` can be told apart from this one.
+  const builderSha256 = crypto.createHash("sha256").update(fs.readFileSync(fileURLToPath(import.meta.url))).digest("hex");
   const envelope = {
     dataset: "citation_canon",
     commit,
+    dirty,
+    builderSha256,
     generatedAt: payload.generatedAt,
     generatedBy: GENERATED_BY,
     sourceFiles: payload.sourceFiles,
