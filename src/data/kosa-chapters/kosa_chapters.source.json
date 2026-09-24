@@ -1,0 +1,23 @@
+{
+  "dataset": "kosa_chapters",
+  "commit": "e48500e8c8810211d45d8da18e480703286d7b5b",
+  "inputRevisions": {
+    "AMAR": "f5575c3a7742effabb3b79a8aa37d9b2d57bbb98",
+    "ABCH": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+    "ARMH": "f4c08c578b330e2379e38f54d3a541f1564b8eee"
+  },
+  "parseRulesGeneratedBy": "scripts/parse_rules/build_parse_rules.py",
+  "upstreamBuilder": "scripts/lexico/m10_kosa_macrostructure_model.py (H5328)",
+  "generatedAt": "2026-09-24T12:26:49.073Z",
+  "generatedBy": "npm run build-kosa-chapters",
+  "sourceFiles": [
+    "data/lexico/kosa_model_amar_sample.json",
+    "data/lexico/kosa_model_abch_sample.json",
+    "data/lexico/kosa_model_armh_sample.json",
+    "data/lexico/kosa_model_measures.json",
+    "data/parse-rules/abch.json",
+    "data/parse-rules/armh.json",
+    "scripts/build-kosa-chapters.mjs"
+  ],
+  "schemaVersion": "1.0.0"
+}
