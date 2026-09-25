@@ -1,15 +1,22 @@
 {
   "dataset": "megastructure_catalogue",
-  "commit": "bbca791169829b8fa7d252d7ff5c7105b721c7f8",
-  "generatedAt": "2026-09-24T05:54:08.055Z",
+  "commit": "12782aaffbeab1ca1e5bc288a7b3875f71a3ff74",
+  "generatedAt": "2026-09-24T20:52:38.326Z",
   "generatedBy": "scripts/build-megastructure.mjs",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "inputs": [
     "data/schema/megastructure-component.schema.json",
     "data/megastructure/scan_inventory.tsv",
+    "data/megastructure/abch.json",
+    "data/megastructure/ap90.json",
+    "data/megastructure/armh.json",
     "data/megastructure/mw.json",
-    "data/megastructure/skd.json"
+    "data/megastructure/pw.json",
+    "data/megastructure/pwg.json",
+    "data/megastructure/skd.json",
+    "data/megastructure/vcp.json",
+    "data/megastructure/wil.json"
   ],
   "sourcePins": [
     {
