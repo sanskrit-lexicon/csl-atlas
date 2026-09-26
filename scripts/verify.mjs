@@ -17,7 +17,8 @@ const VALIDATORS = [
   "validate-period-signatures.mjs",
   "validate-four-axis-independence.mjs",
   "validate-l0-gqd.mjs",
-  "validate-review-reports.mjs"
+  "validate-review-reports.mjs",
+  "validate-usage-register-census.mjs"
 ];
 
 function run(command, args) {

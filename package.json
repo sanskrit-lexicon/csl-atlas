@@ -50,6 +50,8 @@
     "build-period-signatures": "node scripts/build-period-signatures.mjs",
     "validate-period-signatures": "node scripts/validate-period-signatures.mjs",
     "build-structural-register": "node scripts/build-structural-register.mjs",
+    "build-usage-register-census": "node scripts/build-usage-register-census.mjs",
+    "validate-usage-register-census": "node scripts/validate-usage-register-census.mjs",
     "build-richness-typology": "node scripts/build-richness-typology.mjs",
     "validate-richness-typology": "node scripts/validate-richness-typology.mjs",
     "build-h6-structural-review": "node scripts/build-h6-structural-review.mjs",

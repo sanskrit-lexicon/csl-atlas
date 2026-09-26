@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "1.0.0",
+  "_created": "23-09-2026",
+  "_updated": "23-09-2026",
+  "title": "Usage and register label normalisation map for the CDSL dictionaries",
+  "note": "Maps every CDSL markup label that states a word's USAGE or REGISTER (as opposed to its grammar, its citation source, or a purely editorial aside) onto one closed vocabulary. Consumed by scripts/build-usage-register-census.mjs. A label is matched on the exact (tag, token) pair because the same token means different things in different tags and dictionaries: <ab>lit. is always English 'literally', while <lang>Lit. is Lithuanian; <ab>ep. is 'epithet', while <lang>ep. is 'epic'; <lang>L. in AP is Latin, while <ls>L. in MW is the lexicographers hedge.",
+  "classes": {
+    "register": "usage / stylistic-register labels (Vedic, epic, poetic, figurative, vulgar, ...)",
+    "dialect": "language-variety labels marking the form as a dialect/Prākrit/Pāli/New-Indo-Aryan usage",
+    "lexicographic": "the lexicographers-only hedge (word attested only in lexica, not in a text)",
+    "domain": "subject-field labels the dictionary uses as a usage statement (philosophical, religious, ...)"
+  },
+  "vocabulary": {
+    "register": [
+      "vedic",
+      "post-vedic",
+      "epic",
+      "classical",
+      "poetic",
+      "mythological",
+      "buddhist",
+      "jaina",
+      "figurative",
+      "metaphorical",
+      "colloquial",
+      "vulgar",
+      "archaic",
+      "onomatopoeic"
+    ],
+    "dialect": [
+      "pali",
+      "prakrit",
+      "apabhramsa",
+      "desi",
+      "ardhamagadhi",
+      "mixed-indic",
+      "jaina-maharashtri",
+      "maharashtri",
+      "marathi",
+      "hindi",
+      "bengali"
+    ],
+    "lexicographic": [
+      "lexicographer-only"
+    ],
+    "domain": [
+      "philosophical",
+      "religious",
+      "astronomical",
+      "political"
+    ]
+  },
+  "labels": [
+    { "tag": "ls", "token": "L.", "class": "lexicographic", "category": "lexicographer-only", "gloss": "Monier-Williams hedge: cited only to the lexicographers, i.e. no textual attestation", "dictionaries": ["mw"] },
+
+    { "tag": "lang", "token": "Ved.", "class": "register", "category": "vedic", "gloss": "Vedic form or Vedic-only usage", "dictionaries": ["mw", "bhs"] },
+    { "tag": "lang", "token": "ved.", "class": "register", "category": "vedic", "gloss": "vedisch (Vedic usage)", "dictionaries": ["pwg", "pw"] },
+    { "tag": "lang", "token": "Vedic", "class": "register", "category": "vedic", "gloss": "Vedic usage", "dictionaries": ["bhs"] },
+    { "tag": "ab", "token": "Ved.", "class": "register", "category": "vedic", "gloss": "Vedic usage", "dictionaries": ["ap", "ap90", "ben"] },
+    { "tag": "ab", "token": "ved.", "class": "register", "category": "vedic", "gloss": "vedisch (Vedic usage)", "dictionaries": ["ben"] },
+
+    { "tag": "lang", "token": "nachved.", "class": "register", "category": "post-vedic", "gloss": "nachvedisch (post-Vedic usage)", "dictionaries": ["pwg"] },
+    { "tag": "lang", "token": "late Skt.", "class": "register", "category": "post-vedic", "gloss": "late Sanskrit usage", "dictionaries": ["bhs"] },
+
+    { "tag": "lang", "token": "ep.", "class": "register", "category": "epic", "gloss": "epic form or epic-only usage", "dictionaries": ["mw", "pwg", "pw"] },
+
+    { "tag": "lang", "token": "Class.", "class": "register", "category": "classical", "gloss": "classical Sanskrit usage", "dictionaries": ["mw"] },
+    { "tag": "lang", "token": "classical Sanskṛt", "class": "register", "category": "classical", "gloss": "classical Sanskrit usage", "dictionaries": ["mw"] },
+    { "tag": "lang", "token": "klass.", "class": "register", "category": "classical", "gloss": "klassisch (classical Sanskrit usage)", "dictionaries": ["pwg", "pw"] },
+    { "tag": "lang", "token": "Class. Skt.", "class": "register", "category": "classical", "gloss": "classical Sanskrit", "dictionaries": ["bhs"] },
+    { "tag": "ab", "token": "class.", "class": "register", "category": "classical", "gloss": "klassisch (classical)", "dictionaries": ["pwg"] },
+
+    { "tag": "ab", "token": "poet.", "class": "register", "category": "poetic", "gloss": "poetic usage", "dictionaries": ["ap", "mw", "pwg"] },
+
+    { "tag": "ab", "token": "myth.", "class": "register", "category": "mythological", "gloss": "mythological usage", "dictionaries": ["mw", "pwg"] },
+    { "tag": "ab", "token": "Myth.", "class": "register", "category": "mythological", "gloss": "mythologisch (mythological)", "dictionaries": ["pwg"] },
+    { "tag": "ab", "token": "mythol.", "class": "register", "category": "mythological", "gloss": "mythological usage", "dictionaries": ["mw", "pwg"] },
+    { "tag": "ab", "token": "Mythol.", "class": "register", "category": "mythological", "gloss": "mythologisch (mythological)", "dictionaries": ["pwg"] },
+
+    { "tag": "ab", "token": "Buddh.", "class": "register", "category": "buddhist", "gloss": "Buddhist usage", "dictionaries": ["mw", "pw", "bhs", "pwg", "pwkvn"] },
+    { "tag": "ab", "token": "buddh.", "class": "register", "category": "buddhist", "gloss": "buddhistisch (Buddhist usage)", "dictionaries": ["pw", "pwg", "pwkvn"] },
+    { "tag": "ab", "token": "buddhist.", "class": "register", "category": "buddhist", "gloss": "Buddhist usage", "dictionaries": ["pwg"] },
+
+    { "tag": "ab", "token": "Jaina", "class": "register", "category": "jaina", "gloss": "Jaina usage", "dictionaries": ["ap"] },
+    { "tag": "ab", "token": "Jaina.", "class": "register", "category": "jaina", "gloss": "Jaina usage", "dictionaries": ["ap"] },
+
+    { "tag": "ab", "token": "fig.", "class": "register", "category": "figurative", "gloss": "figurative(ly)", "dictionaries": ["mw", "ae", "ap", "ap90", "ben", "bhs", "bur", "cae", "lan", "md", "pwg", "pw", "stc", "wil", "pwkvn"] },
+    { "tag": "ab", "token": "Fig.", "class": "register", "category": "figurative", "gloss": "figurative(ly)", "dictionaries": ["ae", "ap"] },
+    { "tag": "ab", "token": "figurat.", "class": "register", "category": "figurative", "gloss": "figurative(ly)", "dictionaries": ["ben"] },
+    { "tag": "ab", "token": "Figurat.", "class": "register", "category": "figurative", "gloss": "figurative(ly)", "dictionaries": ["ben"] },
+    { "tag": "ab", "token": "figur.", "class": "register", "category": "figurative", "gloss": "figurative(ly)", "dictionaries": ["ben"] },
+    { "tag": "ab", "token": "bildl.", "class": "register", "category": "figurative", "gloss": "bildlich (figurative)", "dictionaries": ["gra", "pwg"] },
+    { "tag": "ab", "token": "Bildl.", "class": "register", "category": "figurative", "gloss": "bildlich (figurative)", "dictionaries": ["pwg"] },
+    { "tag": "ab", "token": "uneig.", "class": "register", "category": "figurative", "gloss": "uneigentlich (figurative)", "dictionaries": ["pw", "pwg", "pwkvn"] },
+    { "tag": "ab", "token": "Uneig.", "class": "register", "category": "figurative", "gloss": "uneigentlich (figurative)", "dictionaries": ["pw", "pwg"] },
+
+    { "tag": "ab", "token": "metaph.", "class": "register", "category": "metaphorical", "gloss": "metaphorical usage", "dictionaries": ["mw", "wil", "ben"] },
+    { "tag": "ab", "token": "übertr.", "class": "register", "category": "metaphorical", "gloss": "übertragen (transferred / metaphorical)", "dictionaries": ["pw", "pwg", "pwkvn"] },
+
+    { "tag": "ab", "token": "coll.", "class": "register", "category": "colloquial", "gloss": "colloquial", "dictionaries": ["mw", "md", "pw", "pwg", "stc"] },
+    { "tag": "ab", "token": "Coll.", "class": "register", "category": "colloquial", "gloss": "colloquial", "dictionaries": ["pw"] },
+    { "tag": "ab", "token": "colloq.", "class": "register", "category": "colloquial", "gloss": "colloquial", "dictionaries": ["lan"] },
+    { "tag": "ab", "token": "gespr.", "class": "register", "category": "colloquial", "gloss": "gesprochen (colloquial)", "dictionaries": ["pwg"] },
+
+    { "tag": "ab", "token": "vulg.", "class": "register", "category": "vulgar", "gloss": "vulgar / popular usage", "dictionaries": ["pwg", "wil"] },
+    { "tag": "ab", "token": "Vulg.", "class": "register", "category": "vulgar", "gloss": "vulgar / popular usage", "dictionaries": ["pwg"] },
+    { "tag": "ab", "token": "niedrig.", "class": "register", "category": "vulgar", "gloss": "niedrig (low / vulgar usage)", "dictionaries": ["pwg"] },
+
+    { "tag": "ab", "token": "arch.", "class": "register", "category": "archaic", "gloss": "archaisch (archaic)", "dictionaries": ["pwg"] },
+
+    { "tag": "ab", "token": "onom.", "class": "register", "category": "onomatopoeic", "gloss": "onomatopoeic", "dictionaries": ["mw", "md", "stc"] },
+    { "tag": "ab", "token": "onomat.", "class": "register", "category": "onomatopoeic", "gloss": "onomatopoeic", "dictionaries": ["mw", "pwg", "pw", "stc"] },
+    { "tag": "ab", "token": "onomatop.", "class": "register", "category": "onomatopoeic", "gloss": "onomatopoeic", "dictionaries": ["ben", "pw", "pwg", "pwkvn"] },
+    { "tag": "ab", "token": "Onomat.", "class": "register", "category": "onomatopoeic", "gloss": "onomatopoeic", "dictionaries": ["ap", "pw"] },
+    { "tag": "ab", "token": "Onomatop.", "class": "register", "category": "onomatopoeic", "gloss": "onomatopoeic", "dictionaries": ["pw"] },
+
+    { "tag": "lang", "token": "Pāli", "class": "dialect", "category": "pali", "gloss": "Pāli form / Pāli usage", "dictionaries": ["mw", "pw", "pwkvn", "ap", "md"] },
+    { "tag": "lang", "token": "Pali", "class": "dialect", "category": "pali", "gloss": "Pāli form / Pāli usage", "dictionaries": ["bhs"] },
+
+    { "tag": "lang", "token": "Prākṛt", "class": "dialect", "category": "prakrit", "gloss": "Prākrit form / Prākrit usage", "dictionaries": ["mw"] },
+    { "tag": "lang", "token": "Prākṛ.", "class": "dialect", "category": "prakrit", "gloss": "Prākrit form / Prākrit usage", "dictionaries": ["mw"] },
+    { "tag": "lang", "token": "Prākrit", "class": "dialect", "category": "prakrit", "gloss": "Prākrit form / Prākrit usage", "dictionaries": ["pwg", "pw", "pwkvn", "md"] },
+    { "tag": "lang", "token": "Pr.", "class": "dialect", "category": "prakrit", "gloss": "Prākrit form / Prākrit usage", "dictionaries": ["md"] },
+    { "tag": "lang", "token": "Pkt.", "class": "dialect", "category": "prakrit", "gloss": "Prākrit form / Prākrit usage", "dictionaries": ["bhs"] },
+
+    { "tag": "lang", "token": "Apabhraṃśa", "class": "dialect", "category": "apabhramsa", "gloss": "Apabhraṃśa form", "dictionaries": ["pw", "pwkvn"] },
+    { "tag": "lang", "token": "Ap.", "class": "dialect", "category": "apabhramsa", "gloss": "Apabhraṃśa form", "dictionaries": ["bhs"] },
+
+    { "tag": "lang", "token": "Deśī", "class": "dialect", "category": "desi", "gloss": "Deśī (regional vernacular) form", "dictionaries": ["bhs"] },
+    { "tag": "lang", "token": "AMg.", "class": "dialect", "category": "ardhamagadhi", "gloss": "Ardhamāgadhī form", "dictionaries": ["bhs"] },
+    { "tag": "lang", "token": "MIndic", "class": "dialect", "category": "mixed-indic", "gloss": "Middle Indic form", "dictionaries": ["bhs"] },
+    { "tag": "lang", "token": "JM.", "class": "dialect", "category": "jaina-maharashtri", "gloss": "Jaina-Māhārāṣṭrī form", "dictionaries": ["bhs"] },
+    { "tag": "lang", "token": "M.", "class": "dialect", "category": "maharashtri", "gloss": "Māhārāṣṭrī form", "dictionaries": ["bhs"] },
+
+    { "tag": "lang", "token": "Mar.", "class": "dialect", "category": "marathi", "gloss": "Marathi vernacular form", "dictionaries": ["ap"] },
+    { "tag": "lang", "token": "Marāṭhī", "class": "dialect", "category": "marathi", "gloss": "Marathi vernacular form", "dictionaries": ["ap"] },
+    { "tag": "lang", "token": "mahr.", "class": "dialect", "category": "marathi", "gloss": "Marathi vernacular form", "dictionaries": ["pwg"] },
+    { "tag": "lang", "token": "mahratt.", "class": "dialect", "category": "marathi", "gloss": "Marathi vernacular form", "dictionaries": ["pw", "pwkvn"] },
+
+    { "tag": "lang", "token": "Hindi", "class": "dialect", "category": "hindi", "gloss": "Hindi vernacular form", "dictionaries": ["pwg", "bhs"] },
+    { "tag": "lang", "token": "Hindī", "class": "dialect", "category": "hindi", "gloss": "Hindi vernacular form", "dictionaries": ["pwg"] },
+    { "tag": "lang", "token": "Hind.", "class": "dialect", "category": "hindi", "gloss": "Hindi vernacular form", "dictionaries": ["ap"] },
+
+    { "tag": "lang", "token": "beng.", "class": "dialect", "category": "bengali", "gloss": "Bengali vernacular form", "dictionaries": ["pwg", "pw"] },
+    { "tag": "lang", "token": "bengal.", "class": "dialect", "category": "bengali", "gloss": "Bengali vernacular form", "dictionaries": ["pwg"] },
+    { "tag": "lang", "token": "Beng.", "class": "dialect", "category": "bengali", "gloss": "Bengali vernacular form", "dictionaries": ["pwg"] },
+
+    { "tag": "ab", "token": "philos.", "class": "domain", "category": "philosophical", "gloss": "philosophical usage", "dictionaries": ["mw", "pw", "pwg", "stc"] },
+    { "tag": "ab", "token": "Philos.", "class": "domain", "category": "philosophical", "gloss": "philosophisch (philosophical)", "dictionaries": ["pwg"] },
+    { "tag": "ab", "token": "relig.", "class": "domain", "category": "religious", "gloss": "religious usage", "dictionaries": ["mw", "pwg"] },
+    { "tag": "ab", "token": "astronom.", "class": "domain", "category": "astronomical", "gloss": "astronomical usage", "dictionaries": ["pwg"] },
+    { "tag": "ab", "token": "polit.", "class": "domain", "category": "political", "gloss": "political usage", "dictionaries": ["mw"] }
+  ],
+  "excluded": {
+    "note": "Tokens that look like register labels but are NOT, verified in context. They are deliberately absent from `labels`, so a build never counts them. Kept here as the published negative map.",
+    "tokens": [
+      { "tag": "ab", "token": "lit.", "reason": "'literally' - an English translation hedge (MW 217, CAE 848, BHS 387, ...), never the literary register" },
+      { "tag": "ab", "token": "Lit.", "reason": "'literally' in AE/BHS; a literary reading was not found in any tag context" },
+      { "tag": "ab", "token": "ep.", "reason": "'epithet' (MD 801, BHS 257) - a grammar/editorial marker, not the epic register" },
+      { "tag": "ab", "token": "obs.", "reason": "'obsolete (grammatical form)' in MW ('obs. acc. pl.'), not an archaic usage label" },
+      { "tag": "ab", "token": "L.", "reason": "'Latin' (AP90 69) / lexicographic cross-reference near 'cf.'; the lexicographers hedge is <ls>L. in MW only" },
+      { "tag": "ab", "token": "l.", "reason": "'line' (BHS, BEN), French 'lieu' (BUR) - editorial, not the lexicographic register" },
+      { "tag": "lang", "token": "L.", "reason": "'Latin' etymon (AP 69, and cf. language etyma) - an etymology language, not a usage label" },
+      { "tag": "lang", "token": "Lit.", "reason": "'Lithuanian' etymon language (MW 19), not the literary register" },
+      { "tag": "lang", "token": "lit.", "reason": "'litauisch' = Lithuanian etymon (GRA), not the literary register" },
+      { "tag": "ab", "token": "prep.", "reason": "grammar (preposition)" },
+      { "tag": "ab", "token": "Praep.", "reason": "grammar (Präposition)" },
+      { "tag": "ab", "token": "pronom.", "reason": "grammar (pronoun)" },
+      { "tag": "ab", "token": "collect.", "reason": "grammar (collective)" },
+      { "tag": "ab", "token": "Collect.", "reason": "grammar (collective)" },
+      { "tag": "ab", "token": "enklit.", "reason": "grammar (enclitic)" },
+      { "tag": "ab", "token": "cf.", "reason": "editorial (confer)" },
+      { "tag": "ab", "token": "id.", "reason": "editorial (idem)" },
+      { "tag": "ab", "token": "q.v.", "reason": "editorial (quod vide)" },
+      { "tag": "ab", "token": "i. e.", "reason": "editorial (id est)" },
+      { "tag": "ab", "token": "etc.", "reason": "editorial" }
+    ]
+  }
+}
