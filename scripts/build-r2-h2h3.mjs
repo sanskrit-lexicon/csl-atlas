@@ -307,7 +307,8 @@ async function main() {
           if (senses.some(({ text }) => glossOverlap(row.ancText, text) >= SURVIVAL_THRESHOLD)) crossDict++;
         }
         h2Rows.push({ lemma: stem, edge: edge.key, cited: row.cited, survived: row.survived,
-                      overlap: row.overlap, position: row.position, glossLen: row.glossLen, crossDict });
+                      overlap: row.overlap, position: row.position, glossLen: row.glossLen, crossDict,
+                      text: row.ancText });
       }
 
       const meanOverlap = rows.reduce((s, r) => s + r.overlap, 0) / rows.length;
