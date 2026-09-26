@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import { parseTsv, buildPayload } from "../scripts/build-heritage-witness.mjs";
+import { parseTsv, buildPayload, koshaRowsToCrosswalkRows } from "../scripts/build-heritage-witness.mjs";
 
 const FIXED_AT = "2026-07-08T00:00:00.000Z";
 
@@ -84,11 +84,34 @@ test("buildPayload treats an unknown headword (absent from the crosswalk entirel
   assert.equal(p.totals.heritageCovered, 0);
 });
 
+test("koshaRowsToCrosswalkRows maps kosha heritage_anchor rows onto crosswalk shape", () => {
+  const rows = koshaRowsToCrosswalkRows([
+    { mw_key1: "akAra", covered: 1, anchor: "DICO/1.html#akaara" },
+    { mw_key1: "afRin", covered: 0, anchor: null },
+    { mw_key1: "aMSa", covered: 1, anchor: "" }
+  ]);
+  assert.deepEqual(rows, [
+    { mw_key1: "akAra", covered_flag: "1", heritage_entry_anchor: "DICO/1.html#akaara" },
+    { mw_key1: "afRin", covered_flag: "0", heritage_entry_anchor: "" },
+    { mw_key1: "aMSa", covered_flag: "1", heritage_entry_anchor: "" }
+  ]);
+  // and the mapped rows feed the unchanged fold: anchored / covered-no-anchor / absent
+  const p = buildPayload(
+    [mwRecord({ k1: "akAra" }), mwRecord({ k1: "aMSa" }), mwRecord({ k1: "afRin" })],
+    rows,
+    { generatedAt: FIXED_AT, source: { layer: "kosha.heritage_anchor" } }
+  );
+  assert.equal(p.totals.anchored, 1);
+  assert.equal(p.totals.coveredNoAnchor, 1);
+  assert.equal(p.totals.absent, 1);
+  assert.equal(p.sourceLayer, "kosha.heritage_anchor");
+});
+
 test("committed packet is internally consistent", () => {
   const file = path.resolve(process.cwd(), "src", "data", "heritage", "heritage_witness.json");
   assert.ok(fs.existsSync(file), "committed heritage_witness.json missing");
   const packet = JSON.parse(fs.readFileSync(file, "utf8"));
-  assert.equal(packet.schemaVersion, "1.0.0");
+  assert.equal(packet.schemaVersion, "1.1.0");
   assert.equal(packet.totals.anchored + packet.totals.coveredNoAnchor, packet.totals.heritageCovered);
   assert.equal(packet.totals.heritageCovered + packet.totals.absent, packet.totals.mwEntries);
   assert.equal(packet.witnessed.length, packet.totals.heritageCovered);

@@ -1,15 +1,21 @@
 {
   "dataset": "heritage_witness",
-  "commit": "3423ca2a0a57f4b13fd88d005af1c2f8b1d2f390",
+  "commit": "410111234d5ca5ed6504bf94db30b620eaea12f2",
   "crosswalkRepo": "https://github.com/gasyoun/SanskritLexicography",
   "crosswalkPath": "HeadwordLists/mw_heritage_crosswalk.tsv",
-  "crosswalkCommit": "c6c35389239f7c782201f4478a6a9616310d6d63",
-  "generatedAt": "2026-07-08T07:21:45.056Z",
+  "crosswalkCommit": "b4c4c0a13d95edc93f409aeab4b5ebec7ece872a",
+  "generatedAt": "2026-09-15T04:15:50.811Z",
   "generatedBy": "npm run build-heritage-witness",
   "sourceFiles": [
-    "SanskritLexicography/HeadwordLists/mw_heritage_crosswalk.tsv",
+    "kosha/data/db/kosha.db (heritage_anchor table, H345 ingest)",
+    "SanskritLexicography/HeadwordLists/mw_heritage_crosswalk.tsv (upstream of the kosha layer)",
     "csl-orig/v02/mw/mw.txt",
     "scripts/build-heritage-witness.mjs"
   ],
-  "schemaVersion": "1.0.0"
+  "schemaVersion": "1.1.0",
+  "sourceLayer": "kosha.heritage_anchor",
+  "koshaRepo": "https://github.com/gasyoun/kosha",
+  "koshaDbPath": "data/db/kosha.db",
+  "koshaCommit": "59bade444ee38f412a9ae0c6ab374ef0734d7c2a",
+  "koshaHeritageAnchorRows": 185803
 }
