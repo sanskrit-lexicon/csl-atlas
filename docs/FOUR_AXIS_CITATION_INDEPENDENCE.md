@@ -1,4 +1,4 @@
-_Created: 08-07-2026 · Last updated: 05-09-2026_
+_Created: 08-07-2026 · Last updated: 24-09-2026_
 
 # Four-Axis Citation Independence Test (PH2 / CITE-4AXIS)
 
@@ -25,11 +25,11 @@ Status: generated machine-reviewed analysis packet; derived from `data/lexico/th
 
 | Edge | content | convention | microstructure | citation (apparatus cosine) | ls-graph cosine (sensitivity) |
 |---|---:|---:|---:|---:|---:|
-| PWG→PW | 0.9375 | 0.7466 | 0.6788 | 0.5933 | 0.508 |
+| PWG→PW | 0.9375 | 0.7466 | 0.6788 | 0.5933 | 0.5198 |
 | AP90→AP | 0.7601 | 0.6163 | 0.9569 | 0.8994 | 0.8736 |
 | PWG→MW | 0.8934 | 0.3708 | 0.6911 | 0.4478 | 0.228 |
 | PWG→SCH | 0.0734 | 0.682 | 0.2162 | 0.2684 | 0.4611 |
-| BEN→MW | 0.9374 | 0.5297 | 0.6821 | 0.3758 | 0 |
+| BEN→MW | 0.9374 | 0.5297 | 0.6821 | 0.3758 | 0.0595 |
 
 ## Interpretation
 

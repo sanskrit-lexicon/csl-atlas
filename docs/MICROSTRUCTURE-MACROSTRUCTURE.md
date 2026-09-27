@@ -1,4 +1,4 @@
-_Created: 04-06-2026 · Last updated: 05-09-2026_
+_Created: 04-06-2026 · Last updated: 24-09-2026_
 
 # Microstructure & Macrostructure typology of CDSL dictionaries
 
@@ -158,9 +158,9 @@ While **microstructure** is what's INSIDE an entry, **macrostructure** is how th
 
 | # | Dimension | Examples / values |
 |---|---|---|
-| 1 | Alphabetisation order | Sanskrit varṇamālā / IAST / German alphabetical (PWG) / English (WIL, MW) |
+| 1 | Alphabetisation order | **Measured 24-09-2026 (H5331, [access-structures census](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ACCESS_STRUCTURES_SORT_ORDER_CENSUS_24-09-2026.md)):** all seven narrative dicts follow the varṇamālā (Latin-alphabet order would violate 31–37 % of adjacent pairs). Best-fit rules: PWG/PW/MW/AP file ṃ as the class nasal (PWG/PW also ḥ before a sibilant as that sibilant); SKD/VCP/WIL keep ṃ at its own slot and sort r+geminate as single. Within-run violation rates 0.16 % (PW) – 9.36 % (AP). |
 | 2 | Entry granularity | one lemma = one entry (MW) vs lemma + variants combined (PWG `gam (vgl. gā)`) |
-| 3 | Homonym treatment | separate `<L>` entries (MW: 3× gam) vs hom-numbered same entry (PWG: 1. gam, 2. gam) |
+| 3 | Homonym treatment | separate `<L>` entries (MW: 3× gam) vs hom-numbered same entry (PWG: 1. gam, 2. gam). Measured (H5331): homonym groups are contiguous in 90.6 % (MW) to 99.8 % (PW) of cases, `<h>` numbers ascend in ≥ 99.7 %; AP only 47.5 % (root and noun homonyms sit in different nests) |
 | 4 | Compound treatment | each compound a headword (MW) vs nested under primary lemma (PWG `gata` subentries) |
 | 5 | Section division | preface + body + indices + appendices structure |
 | 6 | Volume division | by letter (PWG vol1=a-, vol4=n-p) vs by alphabet section vs by topic |

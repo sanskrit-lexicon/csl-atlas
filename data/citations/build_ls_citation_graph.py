@@ -75,8 +75,55 @@ CANON_ALIAS_RAW = {
     'ŚATAPATHABRĀHMAṆA': 'Śatapatha-Brāhmaṇa',
     'ATHARVAVEDASAM̃HITĀ': 'Atharvaveda',
     'RĀJANIRGHAṆṬA': 'Rājanighaṇṭu',
+    # --- H5407 (24-09-2026): the 37 transliteration-variant pairs of
+    #     data/forensic/f12_a50_variant_fold.tsv (H5295), every pair eye-checked.
+    #     `named` = the four A50 §5.5 names; `ascii` = Anglo-Indian digraph /
+    #     ASCII-fold collisions (sh→ṣ, ch→c, ri→ṛ, missing anusvāra/virāma dots).
+    #     canonical = the diacritic IAST label the majority of dictionaries already use;
+    #     three table rows were flipped so the diacritic form is the target
+    #     (Harshacharita, SARVOPANISHATSĀRA, BRAHMOPANISHAD).
+    'Raghuvanśa': 'Raghuvaṃśa',  # named
+    'Bhāgavata': 'Bhāgavata-Purāṇa',  # named
+    'Manusmṛiti': 'Manusmṛti',  # named
+    'Rigveda': 'Ṛgveda',  # named
+    'VISHṆUPURĀṆA': 'Viṣṇu Purāṇa',  # ascii
+    'TAITTIRYASAM5HITĀ': 'Taittirīya Saṃhitā',  # ascii
+    "LĀṬYĀYANA'S ŚRAUTASŪTRA": 'Lāṭyāyana-Śrautasūtra',  # ascii
+    'Nirukta': 'Nirukta (Yāska)',  # ascii
+    'Bhāminīivilāsa': 'Bhāminīvilāsa',  # ascii
+    'Mudrārākshasa': 'Mudrārākṣasa',  # ascii
+    'Uttararāmacharita': 'Uttararāmacarita',  # ascii
+    'Naishadhacharita': 'Naiṣadhacarita',  # ascii
+    'Panchatantra': 'Pañcatantra',  # ascii
+    'Daśakumāracharita': 'Daśakumāracarita',  # ascii
+    'Mahāvīracharita': 'Mahāvīracarita',  # ascii
+    'Śṛingāratilaka': 'Śṛṅgāratilaka',  # ascii
+    'Trikāṇḍaśesha': 'Trikāṇḍaśeṣa',  # ascii
+    'Vikramānkadevacharita': 'Vikramāṅkadevacarita',  # ascii
+    'Chaurapanchaśika': 'Caurapañcāśikā',  # ascii
+    'ŚVETĀŚVATAROPANISHAD': 'Śvetāśvataropaniṣad',  # ascii
+    'MUṆḌAKOPANISHAD': 'Muṇḍakopaniṣad',  # ascii
+    'TAITTIRIYOPANISHAD': 'TAITTIRĪYOPANIṢAD',  # ascii
+    'Mitākshara': 'Mitākṣarā',  # ascii
+    'Mugdhabodha': 'Mugdhabodha (Vopadeva)',  # ascii
+    'Prabodhachandrodaya': 'Prabodhacandrodaya',  # ascii
+    'Kaṭhopanishad': 'Kaṭhopaniṣad',  # ascii
+    'Śikshā': 'Śikṣā',  # ascii
+    'KENOPANISHAD': 'Kenopaniṣad',  # ascii
+    'Chāṇakya': 'Cāṇakya',  # ascii
+    'KAIVALYOPANISHAD': 'KAIVALYOPANIṢAD',  # ascii
+    'Chandrāloka': 'Candrāloka',  # ascii
+    'Vārtika': 'Vārttika',  # ascii
+    'SARVOPANISHATSĀRA': 'SARVOPANIṢATSĀRA',  # ascii
+    'Chātakāshṭaka': 'Cātakāṣṭaka',  # ascii
+    'Harshacharita': 'Harṣacarita',  # ascii
+    'BRAHMOPANISHAD': 'BRAHMOPANIṢAD',  # ascii
+    'WILSON': 'Wilson (dictionary)',  # ascii
 }
 CANON_ALIAS = {fold_key(k): v for k, v in CANON_ALIAS_RAW.items()}
+# an alias target must never itself be an alias key (alias() is a single hop)
+_chain = [v for v in CANON_ALIAS.values() if CANON_ALIAS.get(fold_key(v), v) != v]
+assert not _chain, f'CANON_ALIAS chains: {_chain}'
 
 # --- load per-dict abbreviation -> expansion maps ---
 ab = json.load(open(os.path.join(ROOT,'csl-guides','src','data','abbreviations.json'),encoding='utf-8'))
@@ -246,5 +293,41 @@ with open(os.path.join(out,'ls_citation_nontext_filtered.tsv'),'w',encoding='utf
     fh.write("dict\tnontext_markers_filtered\n")
     for dc in sorted(nontext, key=lambda d:-nontext[d]):
         fh.write(f"{dc}\t{nontext[dc]}\n")
-print("\n[wrote ls_citation_edges.tsv, ls_citation_nodes.tsv, ls_citation_unresolved_top.tsv, ls_citation_nontext_filtered.tsv]")
+# provenance sidecar (H5295, 24-09-2026): the committed 06-07-2026 freeze was built
+# against an UNRECORDED csl-orig revision, and a rebuild at csl-orig@f4c08c57 moved
+# ben by -1,752 citations (see data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md).
+# Every rebuild from now on records the generating revisions and output hashes, so
+# the next freeze is bound to a commit, not to a date.
+import hashlib, subprocess, datetime
+def _git_rev(repo):
+    try:
+        return subprocess.run(['git','-C',repo,'rev-parse','HEAD'],capture_output=True,text=True,check=True).stdout.strip()
+    except Exception as exc:  # an explicit marker, never a silent null
+        return f'unavailable: {type(exc).__name__}'
+def _git_dirty(repo):
+    try:
+        return bool(subprocess.run(['git','-C',repo,'status','--porcelain'],capture_output=True,text=True,check=True).stdout.strip())
+    except Exception as exc:
+        return f'unavailable: {type(exc).__name__}'
+def _sha(path):
+    h=hashlib.sha256()
+    with open(path,'rb') as fh:
+        for chunk in iter(lambda: fh.read(1<<20), b''): h.update(chunk)
+    return h.hexdigest()
+OUTPUTS=['ls_citation_edges.tsv','ls_citation_nodes.tsv','ls_citation_unresolved_top.tsv','ls_citation_nontext_filtered.tsv']
+_ATLAS=os.path.dirname(os.path.dirname(os.path.abspath(out)))  # the checkout this builder file lives in (worktree-safe)
+sidecar={
+    'dataset':'ls_citation_graph',
+    'generated_at':datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat(),
+    'generated_by':'python data/citations/build_ls_citation_graph.py',
+    'csl_atlas':{'revision':_git_rev(_ATLAS),'dirty':_git_dirty(_ATLAS),
+                 'builder_sha256':_sha(os.path.abspath(__file__))},
+    'csl_orig':{'path':os.path.join(ROOT,'csl-orig'),'revision':_git_rev(os.path.join(ROOT,'csl-orig')),'dirty':_git_dirty(os.path.join(ROOT,'csl-orig'))},
+    'csl_guides':{'path':os.path.join(ROOT,'csl-guides'),'revision':_git_rev(os.path.join(ROOT,'csl-guides')),'dirty':_git_dirty(os.path.join(ROOT,'csl-guides')),
+                  'abbreviations_sha256':_sha(os.path.join(ROOT,'csl-guides','src','data','abbreviations.json'))},
+    'outputs':{name:_sha(os.path.join(out,name)) for name in OUTPUTS},
+}
+with open(os.path.join(out,'ls_citation_graph.source.json'),'w',encoding='utf-8') as fh:
+    json.dump(sidecar,fh,ensure_ascii=False,indent=2); fh.write('\n')
+print("\n[wrote ls_citation_edges.tsv, ls_citation_nodes.tsv, ls_citation_unresolved_top.tsv, ls_citation_nontext_filtered.tsv, ls_citation_graph.source.json]")
 print(f"distinct canonical nodes: {len(node_total):,}  total resolved: {sum(resolved.values()):,}  nontext filtered: {sum(nontext.values()):,}")

@@ -71,6 +71,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/lexicography": "Dictionary genealogy: first empirical findings on how the Cologne Sanskrit dictionaries descend from one another, derived from canonical headword data.",
   "/tools/descent-axes": "Descent axes (PH2 CITE-4AXIS): whether citation-profile similarity is a fourth separable axis of dictionary inheritance beside content, convention, and microstructure — axis-pair scatters and the 4×4 correlation matrix on the testable L0 edges.",
   "/tools/lexicographic-conventions": "Convention fingerprints: how the Cologne Sanskrit dictionaries relate by house style — orthographic and citation formatting — as a cladogram.",
+  "/tools/access-structures": "Access structures (Zugriffsstrukturen): which alphabetisation rule produced each Cologne dictionary's printed headword order — best-fit varṇamālā rule and violation rate per dictionary, what the order can and cannot decide about ṃ/ḥ/geminates, AP's root nests, and a browsable counterexample list.",
   "/tools/citation-truncation": "Citation truncation and hapax overlap (PET-MW-CITE): whether the Petersburg-to-MW lineage is visible as a one-directional loss of citation locator precision, with within-lane control pairs and a rare-headword (hapax) overlap test.",
   "/tools/ortho-drift": "Orthographic drift (PH5 ORTHO-CLOCK): pre-reform German and Russian spellings in dictionary gloss text as a dating and descent signal — per-dictionary drift census with CIs, drift-vs-year scatter, era-composition clock, and a searchable top-drifted-forms table.",
   "/tools/structural-register": "Structural register scatter (H6): whether citation style plus grammar marking predicts a Cologne dictionary's family.",
@@ -98,6 +99,7 @@ const PAGE_DESCRIPTIONS = {
   "/paper/grounded": "The grounded framework: the atlas paper's body, building its analysis from Monier-Williams's own data before any external theory.",
   "/paper/triangulation": "Triangulation (§7): how three analytic frameworks converge on the atlas's findings about the Cologne Sanskrit dictionaries.",
   "/paper/appendices": "Framework appendices A·B·C: three external-framework treatments condensed as appendices to the atlas paper.",
+  "/paper/kosa-macrostructure": "The versified synonymic kośa (Amarakośa, Halāyudha, Hemacandra) as a macrostructural type: a schema of kāṇḍa, varga, verse, synonym-set, homonym section and gender marking, with what the sources show separated from what is inferred.",
   "/paper/related-work": "Related work: where the atlas sits in the Sanskrit digitisation pipeline relative to current machine-readable dictionary efforts.",
   "/dicts/mw": "MW — Monier-Williams Sanskrit-English Dictionary (1899): an atlas chapter on its structure, sources, and place among the Cologne dictionaries.",
   "/dicts/pwg": "PWG — the Grosses Petersburger Wörterbuch (1855–1875): an atlas chapter on its structure and lineage within the Cologne dictionaries.",
@@ -203,6 +205,7 @@ export default {
         { name: "Descent axes", path: "/tools/descent-axes" },
         { name: "Citation truncation", path: "/tools/citation-truncation" },
         { name: "Convention fingerprints", path: "/tools/lexicographic-conventions" },
+        { name: "Access structures", path: "/tools/access-structures" },
         { name: "Orthographic drift", path: "/tools/ortho-drift" },
         { name: "Structural register", path: "/tools/structural-register" },
         { name: "Data-richness typology", path: "/tools/richness-typology" },
@@ -232,7 +235,8 @@ export default {
         { name: "Grounded framework (body)", path: "/paper/grounded" },
         { name: "Triangulation (§7)", path: "/paper/triangulation" },
         { name: "Framework appendices A·B·C", path: "/paper/appendices" },
-        { name: "Related work & positioning", path: "/paper/related-work" }
+        { name: "Related work & positioning", path: "/paper/related-work" },
+        { name: "Kośa macrostructure model", path: "/paper/kosa-macrostructure" }
       ]
     },
     {

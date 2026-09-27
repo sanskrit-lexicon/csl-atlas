@@ -1,4 +1,4 @@
-_Created: 04-06-2026 · Last updated: 05-09-2026_
+_Created: 04-06-2026 · Last updated: 24-09-2026_
 
 # SKD anubandha key — the authoritative Dhātudīpikā decode (issue #30)
 
@@ -93,5 +93,7 @@ variants are tallied, not in substance.)
 Key: `docs/refs/SKD_Front pages.docx` (Dhātudīpikā anubandha-phala table). Decode:
 `scripts/lexico/m4_indigenous.py` (`_ANU_KEY`, `decode_anubandhas`) → `indigenous_roots.csv`
 (`gana`, `pada`, `anubandhas`). Empirical antecedent: `scripts/lexico/_xwalk_skd_vcp.py`.
+
+Where the key sits in the SKD front matter (scans 22–24 of the *mukhabandhana*), alongside the other decoding sub-sections: [MEGASTRUCTURE_CATALOGUE.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MEGASTRUCTURE_CATALOGUE.md) (H5324).
 
 _Dr. Mārcis Gasūns_

@@ -1,4 +1,4 @@
-_Created: 29-05-2026 · Last updated: 05-09-2026_
+_Created: 29-05-2026 · Last updated: 24-09-2026_
 
 # Evidence Labels
 
@@ -68,8 +68,16 @@ The evidence labels describe *how a value was produced*. Review status describes
 
 For the full review-status vocabulary and how corrections are recorded, see [`docs/REVIEW_REPORTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md).
 
+## Standards Equivalents
+
+If you export atlas data, the four labels have a stated crosswalk to the W3C PROV
+Ontology and to TEI `@cert` / `@resp`, with one worked JSON envelope per label
+and the list of things that deliberately have **no** equivalent:
+[`docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md).
+
 ## Related Documents
 
+- [`docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md) — these labels in PROV-O and TEI terms, and what does not map.
 - [`docs/DICTIONARY_USER_GUIDE.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md) — the reader-facing lookup guide.
 - [`docs/REVIEW_REPORTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_REPORTS.md) — how machine claims become reviewed claims.
 - `ARCHITECTURE.md` — the core certainty principle and the diachronic-scale caveats.

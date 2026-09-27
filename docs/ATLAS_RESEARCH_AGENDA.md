@@ -45,7 +45,7 @@ The five highest-leverage moves, in order:
    (PH2 CITE-4AXIS) — a one-script extension of the committed
    [three-axis independence test](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/THREE_AXIS_INDEPENDENCE.md)
    that would upgrade A03's "descent is a vector" thesis.
-3. **(c)** Join the 323,425-row
+3. **(c)** Join the 323,422-row
    [`union_headwords.tsv`](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/union/union_headwords.tsv)
    coverage backbone to the in-repo DCS attestation flags (PH4 GHOST-STOCK) — settling what
    the 42.2% dictionary-unique headword stock actually is: ghost words, real rare words, or
@@ -571,7 +571,7 @@ Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Fable_csl-atlas_coverag
   French/English reform maps are **18 / 76** rows (brief said 254/71) — too small for
   claims; a `la_reform_map.tsv` exists but is empty; `do_not_file_suppress.txt` lives in
   `nochange/`, not `ortho_drift/`. All other claimed counts verified exact: union
-  323,425 · crosswalk 185,803 · dcs_cdsl_xref 15,902 · lemma_frequency 83,277 · citation
+  323,422 · crosswalk 185,803 · dcs_cdsl_xref 15,902 · lemma_frequency 83,277 · citation
   graph 1,701 edges / 912 nodes / 11 dicts. **No cited asset remained unverifiable.**
 
 _Dr. Mārcis Gasūns_

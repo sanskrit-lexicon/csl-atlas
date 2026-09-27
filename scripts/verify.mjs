@@ -12,10 +12,12 @@ const VALIDATORS = [
   "validate-correction-feed.mjs",
   "validate-heritage-witness.mjs",
   "validate-ghost-stock.mjs",
+  "validate-kosa-chapters.mjs",
   "validate-heap-sat.mjs",
   "validate-period-signatures.mjs",
   "validate-four-axis-independence.mjs",
   "validate-l0-gqd.mjs",
+  "validate-learner-index.mjs",
   "validate-review-reports.mjs"
 ];
 
@@ -40,6 +42,8 @@ export function verify() {
   assertClean("before verification");
   run(process.execPath, ["--test"]);
   run("python", ["-m", "unittest", "scripts.test_validate_review_decisions"]);
+  run("python", ["-m", "unittest", "scripts.test_merge_review_pool_decisions"]);
+  run("python", ["-m", "unittest", "scripts.lexico.test_review_pool_kappa"]);
   for (const validator of VALIDATORS) run(process.execPath, [path.join("scripts", validator)]);
   run(process.execPath, [path.join("scripts", "regen-review-artifacts.mjs")]);
   run(process.execPath, [path.join("scripts", "regen-review-artifacts.mjs")]);

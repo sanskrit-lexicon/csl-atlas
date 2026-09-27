@@ -1,0 +1,444 @@
+{
+  "tool": "tools/document_check.py",
+  "skill": "/document",
+  "legacy_name": "/artifact-propagate",
+  "generated": "2026-09-24 15:02:19",
+  "artifacts": [
+    {
+      "artifact": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/data/citations/ls_citation_graph.source.json",
+      "repo": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309",
+      "kind": "dataset",
+      "surfaces": [
+        {
+          "id": "readme",
+          "phase": 1,
+          "label": "README.md",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/README.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "claude_md",
+          "phase": 1,
+          "label": "CLAUDE.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/CLAUDE.md:68: at the revision pair in `ls_citation_graph.source.json`; regenerate them only with the"
+        },
+        {
+          "id": "cold_start",
+          "phase": 1,
+          "label": "Cold-start doc (GEMINI.md / equivalent)",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/AGENTS.md exist, no mention of artifact"
+        },
+        {
+          "id": "sibling_domain_docs",
+          "phase": 1,
+          "label": "Sibling domain docs (manual/roadmap/method docs)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "data/citations/README.md v3 change log + A50 Data-availability + ledger §P + .meta.md all updated in #500; no other doc governs the citation graph"
+        },
+        {
+          "id": "metadoc",
+          "phase": 1,
+          "label": "Metadoc (<name>.meta.md)",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/data/citations/ls_citation_graph.source.meta.md (file does not exist)"
+        },
+        {
+          "id": "changelog",
+          "phase": 1,
+          "label": "CHANGELOG.md -> release (/cut-release)",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/CHANGELOG.md:12: - **H5407 (Fable 5.1 `claude-fable-5-1`) — A50 citation graph re-frozen at a recorded `csl-orig`/`csl-guides` revision pair; 37-pair transliteration fold in the"
+        },
+        {
+          "id": "ai_state",
+          "phase": 1,
+          "label": ".ai_state.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/.ai_state.md:62: first `data/citations/ls_citation_graph.source.json` committed (builder twice → byte-identical);"
+        },
+        {
+          "id": "issues",
+          "phase": 1,
+          "label": "Issues (per-person task issues)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no tracking issue on H5407 (mint had no handoff-issue metadata); results live in PR #500 + release v0.19.8"
+        },
+        {
+          "id": "gtd",
+          "phase": 2,
+          "label": "Uprava/GTD_NEXT_ACTIONS.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/GTD_NEXT_ACTIONS.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "handoffs_registry",
+          "phase": 2,
+          "label": "Uprava/handoffs/README.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/handoffs/README.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "features_index",
+          "phase": 2,
+          "label": "SanskritLexicography/FEATURES_INDEX.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/SanskritLexicography/FEATURES_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "reuse_index",
+          "phase": 2,
+          "label": "Uprava/REUSE_INDEX.md (reusable assets)",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REUSE_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "kosha_manifest",
+          "phase": 2,
+          "label": "kosha/data/manifest/datasets.json",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/kosha/data/manifest/datasets.json (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "data_layers_census",
+          "phase": 2,
+          "label": "Uprava/DATA_LAYERS_CENSUS.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/DATA_LAYERS_CENSUS.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "project_interlinks",
+          "phase": 2,
+          "label": "Uprava/PROJECT_INTERLINKS.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/PROJECT_INTERLINKS.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "skills_index",
+          "phase": 2,
+          "label": "root SKILLS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not itself a skill/command"
+        },
+        {
+          "id": "articles",
+          "phase": 2,
+          "label": "Uprava/ARTICLES.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not a paper (delegate to /articles-update when it is)"
+        },
+        {
+          "id": "danger_facts",
+          "phase": 2,
+          "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no destructive-risk fact surfaced"
+        },
+        {
+          "id": "questions_log",
+          "phase": 2,
+          "label": "Uprava/QUESTIONS_LOG.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/QUESTIONS_LOG.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "megabook",
+          "phase": 2,
+          "label": "Uprava/MEGABOOK.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "operational re-freeze, no thesis change"
+        },
+        {
+          "id": "skills_manual_ru",
+          "phase": 2,
+          "label": "Uprava/SKILLS_MANUAL_RU.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no skill/tool contract changed"
+        },
+        {
+          "id": "hooks_index",
+          "phase": 2,
+          "label": "claude-config HOOKS_INDEX.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/claude-config/HOOKS_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "repo_status_rollup",
+          "phase": 2,
+          "label": "Uprava/REPO_STATUS_ROLLUP.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REPO_STATUS_ROLLUP.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "hub_manifest",
+          "phase": 2,
+          "label": "Uprava/tools/hub_manifest.json",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/tools/hub_manifest.json (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "auto_derived_views",
+          "phase": 2,
+          "label": "Auto-derived views (NEXT_UP/BOTTLENECKS/kanban/dashboards/HUB_STALENESS_REPORT)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "auto -- never hand-edit; verify their SOURCES carry the change instead"
+        },
+        {
+          "id": "epistemic_registries",
+          "phase": 2,
+          "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "ledger §P records the resolved provenance gap itself; H5295 sweep already registered the falsification premise; no new open unknown"
+        }
+      ]
+    },
+    {
+      "artifact": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md",
+      "repo": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309",
+      "kind": "doc",
+      "surfaces": [
+        {
+          "id": "readme",
+          "phase": 1,
+          "label": "README.md",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/README.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "claude_md",
+          "phase": 1,
+          "label": "CLAUDE.md",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/CLAUDE.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "cold_start",
+          "phase": 1,
+          "label": "Cold-start doc (GEMINI.md / equivalent)",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/AGENTS.md exist, no mention of artifact"
+        },
+        {
+          "id": "sibling_domain_docs",
+          "phase": 1,
+          "label": "Sibling domain docs (manual/roadmap/method docs)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "data/citations/README.md v3 change log + A50 Data-availability + ledger §P + .meta.md all updated in #500; no other doc governs the citation graph"
+        },
+        {
+          "id": "metadoc",
+          "phase": 1,
+          "label": "Metadoc (<name>.meta.md)",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.meta.md:1: # Metadoc — A50_CLAIM_FALSIFICATION_LEDGER.md"
+        },
+        {
+          "id": "changelog",
+          "phase": 1,
+          "label": "CHANGELOG.md -> release (/cut-release)",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/CHANGELOG.md:12: - **H5407 (Fable 5.1 `claude-fable-5-1`) — A50 citation graph re-frozen at a recorded `csl-orig`/`csl-guides` revision pair; 37-pair transliteration fold in the"
+        },
+        {
+          "id": "ai_state",
+          "phase": 1,
+          "label": ".ai_state.md",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5407-63309/.ai_state.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "issues",
+          "phase": 1,
+          "label": "Issues (per-person task issues)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no tracking issue on H5407 (mint had no handoff-issue metadata); results live in PR #500 + release v0.19.8"
+        },
+        {
+          "id": "gtd",
+          "phase": 2,
+          "label": "Uprava/GTD_NEXT_ACTIONS.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/GTD_NEXT_ACTIONS.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "handoffs_registry",
+          "phase": 2,
+          "label": "Uprava/handoffs/README.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/handoffs/README.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "features_index",
+          "phase": 2,
+          "label": "SanskritLexicography/FEATURES_INDEX.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/SanskritLexicography/FEATURES_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "reuse_index",
+          "phase": 2,
+          "label": "Uprava/REUSE_INDEX.md (reusable assets)",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REUSE_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "kosha_manifest",
+          "phase": 2,
+          "label": "kosha/data/manifest/datasets.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a derived dataset"
+        },
+        {
+          "id": "data_layers_census",
+          "phase": 2,
+          "label": "Uprava/DATA_LAYERS_CENSUS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not large/local-only data (risk) and no open statistics cell to close"
+        },
+        {
+          "id": "project_interlinks",
+          "phase": 2,
+          "label": "Uprava/PROJECT_INTERLINKS.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/PROJECT_INTERLINKS.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "skills_index",
+          "phase": 2,
+          "label": "root SKILLS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not itself a skill/command"
+        },
+        {
+          "id": "articles",
+          "phase": 2,
+          "label": "Uprava/ARTICLES.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not a paper (delegate to /articles-update when it is)"
+        },
+        {
+          "id": "danger_facts",
+          "phase": 2,
+          "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no destructive-risk fact surfaced"
+        },
+        {
+          "id": "questions_log",
+          "phase": 2,
+          "label": "Uprava/QUESTIONS_LOG.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/QUESTIONS_LOG.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "megabook",
+          "phase": 2,
+          "label": "Uprava/MEGABOOK.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "operational re-freeze, no thesis change"
+        },
+        {
+          "id": "skills_manual_ru",
+          "phase": 2,
+          "label": "Uprava/SKILLS_MANUAL_RU.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no skill/tool contract changed"
+        },
+        {
+          "id": "hooks_index",
+          "phase": 2,
+          "label": "claude-config HOOKS_INDEX.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/claude-config/HOOKS_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "repo_status_rollup",
+          "phase": 2,
+          "label": "Uprava/REPO_STATUS_ROLLUP.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REPO_STATUS_ROLLUP.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "hub_manifest",
+          "phase": 2,
+          "label": "Uprava/tools/hub_manifest.json",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/tools/hub_manifest.json (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "auto_derived_views",
+          "phase": 2,
+          "label": "Auto-derived views (NEXT_UP/BOTTLENECKS/kanban/dashboards/HUB_STALENESS_REPORT)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "auto -- never hand-edit; verify their SOURCES carry the change instead"
+        },
+        {
+          "id": "epistemic_registries",
+          "phase": 2,
+          "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "ledger §P records the resolved provenance gap itself; H5295 sweep already registered the falsification premise; no new open unknown"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "host": "MacBook-Air.local",
+    "git_head": "a728bb5aaad1f5c8b5fddda810ef22b817141c39",
+    "git_branch": "h5407-document-sweep",
+    "handoff": "H5407"
+  }
+}

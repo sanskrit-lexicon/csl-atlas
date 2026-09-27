@@ -1,0 +1,444 @@
+{
+  "tool": "tools/document_check.py",
+  "skill": "/document",
+  "legacy_name": "/artifact-propagate",
+  "generated": "2026-09-24 14:32:32",
+  "artifacts": [
+    {
+      "artifact": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/scripts/lib/xref-normalize.mjs",
+      "repo": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965",
+      "kind": "doc",
+      "surfaces": [
+        {
+          "id": "readme",
+          "phase": 1,
+          "label": "README.md",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/README.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "claude_md",
+          "phase": 1,
+          "label": "CLAUDE.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/CLAUDE.md:81: - **Xref key normaliser twin** — [`scripts/lib/xref-normalize.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/xref-normalize.mjs)"
+        },
+        {
+          "id": "cold_start",
+          "phase": 1,
+          "label": "Cold-start doc (GEMINI.md / equivalent)",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/AGENTS.md exist, no mention of artifact"
+        },
+        {
+          "id": "sibling_domain_docs",
+          "phase": 1,
+          "label": "Sibling domain docs (manual/roadmap/method docs)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "student guide REVIEW_POOL_STUDENT_GUIDE.ru.md unaffected: label set and 40-row count unchanged; taxonomy metadoc carries the revision row"
+        },
+        {
+          "id": "metadoc",
+          "phase": 1,
+          "label": "Metadoc (<name>.meta.md)",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/scripts/lib/xref-normalize.meta.md (file does not exist)"
+        },
+        {
+          "id": "changelog",
+          "phase": 1,
+          "label": "CHANGELOG.md -> release (/cut-release)",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/CHANGELOG.md:13: - **H5408: xref source-check packet — 4 shared-core rows falsely flagged 'exact edge missing in MW' (24-09-2026, Claude Code Fable 5.1 `claude-fable-5-1`).** Th"
+        },
+        {
+          "id": "ai_state",
+          "phase": 1,
+          "label": ".ai_state.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/.ai_state.md:62: not in m3/m6. New `scripts/lib/xref-normalize.mjs` + test; packet 0/80/110; taxonomy docs updated; v0.19.7."
+        },
+        {
+          "id": "issues",
+          "phase": 1,
+          "label": "Issues (per-person task issues)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no per-person issue names this workstream; residual is handoff H5453, not an issue"
+        },
+        {
+          "id": "gtd",
+          "phase": 2,
+          "label": "Uprava/GTD_NEXT_ACTIONS.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/GTD_NEXT_ACTIONS.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "handoffs_registry",
+          "phase": 2,
+          "label": "Uprava/handoffs/README.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/handoffs/README.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "features_index",
+          "phase": 2,
+          "label": "SanskritLexicography/FEATURES_INDEX.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/SanskritLexicography/FEATURES_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "reuse_index",
+          "phase": 2,
+          "label": "Uprava/REUSE_INDEX.md (reusable assets)",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REUSE_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "kosha_manifest",
+          "phase": 2,
+          "label": "kosha/data/manifest/datasets.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a derived dataset"
+        },
+        {
+          "id": "data_layers_census",
+          "phase": 2,
+          "label": "Uprava/DATA_LAYERS_CENSUS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not large/local-only data (risk) and no open statistics cell to close"
+        },
+        {
+          "id": "project_interlinks",
+          "phase": 2,
+          "label": "Uprava/PROJECT_INTERLINKS.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/PROJECT_INTERLINKS.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "skills_index",
+          "phase": 2,
+          "label": "root SKILLS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not itself a skill/command"
+        },
+        {
+          "id": "articles",
+          "phase": 2,
+          "label": "Uprava/ARTICLES.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not a paper (delegate to /articles-update when it is)"
+        },
+        {
+          "id": "danger_facts",
+          "phase": 2,
+          "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no destructive-risk fact surfaced"
+        },
+        {
+          "id": "questions_log",
+          "phase": 2,
+          "label": "Uprava/QUESTIONS_LOG.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/QUESTIONS_LOG.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "megabook",
+          "phase": 2,
+          "label": "Uprava/MEGABOOK.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "bug fix in a packet builder, refines no thesis"
+        },
+        {
+          "id": "skills_manual_ru",
+          "phase": 2,
+          "label": "Uprava/SKILLS_MANUAL_RU.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no skill/tool contract changed"
+        },
+        {
+          "id": "hooks_index",
+          "phase": 2,
+          "label": "claude-config HOOKS_INDEX.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/claude-config/HOOKS_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "repo_status_rollup",
+          "phase": 2,
+          "label": "Uprava/REPO_STATUS_ROLLUP.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REPO_STATUS_ROLLUP.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "hub_manifest",
+          "phase": 2,
+          "label": "Uprava/tools/hub_manifest.json",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/tools/hub_manifest.json (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "auto_derived_views",
+          "phase": 2,
+          "label": "Auto-derived views (NEXT_UP/BOTTLENECKS/kanban/dashboards/HUB_STALENESS_REPORT)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "auto -- never hand-edit; verify their SOURCES carry the change instead"
+        },
+        {
+          "id": "epistemic_registries",
+          "phase": 2,
+          "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no premise/dead-end; the 641-vs-694 pool drift is carried by residual handoff H5453 and the taxonomy doc itself"
+        }
+      ]
+    },
+    {
+      "artifact": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md",
+      "repo": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965",
+      "kind": "doc",
+      "surfaces": [
+        {
+          "id": "readme",
+          "phase": 1,
+          "label": "README.md",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/README.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "claude_md",
+          "phase": 1,
+          "label": "CLAUDE.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/CLAUDE.md:79: `XREF_SHARED_CORE_LABEL_TAXONOMY*`) or to a packet's row count updates the guide's"
+        },
+        {
+          "id": "cold_start",
+          "phase": 1,
+          "label": "Cold-start doc (GEMINI.md / equivalent)",
+          "scope": "repo",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/AGENTS.md exist, no mention of artifact"
+        },
+        {
+          "id": "sibling_domain_docs",
+          "phase": 1,
+          "label": "Sibling domain docs (manual/roadmap/method docs)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "student guide REVIEW_POOL_STUDENT_GUIDE.ru.md unaffected: label set and 40-row count unchanged; taxonomy metadoc carries the revision row"
+        },
+        {
+          "id": "metadoc",
+          "phase": 1,
+          "label": "Metadoc (<name>.meta.md)",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.meta.md:1: # XREF_SHARED_CORE_LABEL_TAXONOMY.md — metadoc"
+        },
+        {
+          "id": "changelog",
+          "phase": 1,
+          "label": "CHANGELOG.md -> release (/cut-release)",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/CHANGELOG.md:659: - [`docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.ru.md)"
+        },
+        {
+          "id": "ai_state",
+          "phase": 1,
+          "label": ".ai_state.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas-h5408-doc-7965/.ai_state.md:223: `docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md`."
+        },
+        {
+          "id": "issues",
+          "phase": 1,
+          "label": "Issues (per-person task issues)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no per-person issue names this workstream; residual is handoff H5453, not an issue"
+        },
+        {
+          "id": "gtd",
+          "phase": 2,
+          "label": "Uprava/GTD_NEXT_ACTIONS.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/GTD_NEXT_ACTIONS.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "handoffs_registry",
+          "phase": 2,
+          "label": "Uprava/handoffs/README.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/handoffs/README.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "features_index",
+          "phase": 2,
+          "label": "SanskritLexicography/FEATURES_INDEX.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/SanskritLexicography/FEATURES_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "reuse_index",
+          "phase": 2,
+          "label": "Uprava/REUSE_INDEX.md (reusable assets)",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REUSE_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "kosha_manifest",
+          "phase": 2,
+          "label": "kosha/data/manifest/datasets.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a derived dataset"
+        },
+        {
+          "id": "data_layers_census",
+          "phase": 2,
+          "label": "Uprava/DATA_LAYERS_CENSUS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not large/local-only data (risk) and no open statistics cell to close"
+        },
+        {
+          "id": "project_interlinks",
+          "phase": 2,
+          "label": "Uprava/PROJECT_INTERLINKS.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/PROJECT_INTERLINKS.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "skills_index",
+          "phase": 2,
+          "label": "root SKILLS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not itself a skill/command"
+        },
+        {
+          "id": "articles",
+          "phase": 2,
+          "label": "Uprava/ARTICLES.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not a paper (delegate to /articles-update when it is)"
+        },
+        {
+          "id": "danger_facts",
+          "phase": 2,
+          "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no destructive-risk fact surfaced"
+        },
+        {
+          "id": "questions_log",
+          "phase": 2,
+          "label": "Uprava/QUESTIONS_LOG.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/QUESTIONS_LOG.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "megabook",
+          "phase": 2,
+          "label": "Uprava/MEGABOOK.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "bug fix in a packet builder, refines no thesis"
+        },
+        {
+          "id": "skills_manual_ru",
+          "phase": 2,
+          "label": "Uprava/SKILLS_MANUAL_RU.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no skill/tool contract changed"
+        },
+        {
+          "id": "hooks_index",
+          "phase": 2,
+          "label": "claude-config HOOKS_INDEX.md",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/claude-config/HOOKS_INDEX.md (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "repo_status_rollup",
+          "phase": 2,
+          "label": "Uprava/REPO_STATUS_ROLLUP.md",
+          "scope": "org",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REPO_STATUS_ROLLUP.md:1554: - 25-07-2026 (H1646, Opus 5 (1M context) `claude-opus-5[1m]`): xref shared-core sheet made answerable after MG's review — Cologne entry/scan links on **both** e"
+        },
+        {
+          "id": "hub_manifest",
+          "phase": 2,
+          "label": "Uprava/tools/hub_manifest.json",
+          "scope": "org",
+          "status": "missing",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/tools/hub_manifest.json (file exists, no mention of artifact found)"
+        },
+        {
+          "id": "auto_derived_views",
+          "phase": 2,
+          "label": "Auto-derived views (NEXT_UP/BOTTLENECKS/kanban/dashboards/HUB_STALENESS_REPORT)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "auto -- never hand-edit; verify their SOURCES carry the change instead"
+        },
+        {
+          "id": "epistemic_registries",
+          "phase": 2,
+          "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no premise/dead-end; the 641-vs-694 pool drift is carried by residual handoff H5453 and the taxonomy doc itself"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "host": "MacBook-Air.local",
+    "git_head": "0d37d007df1ffddb29723c42f42aba87fe40765c",
+    "git_branch": "h5408-document-sweep",
+    "handoff": "H5408"
+  }
+}

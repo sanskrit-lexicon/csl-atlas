@@ -1,6 +1,6 @@
 # XREF_SHARED_CORE_LABEL_TAXONOMY.md — metadoc
 
-_Created: 25-07-2026 · Last updated: 26-07-2026_
+_Created: 25-07-2026 · Last updated: 24-09-2026_
 
 Companion record for
 [`docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md).
@@ -77,5 +77,6 @@ re-sampling, or extending the xref shared-core review. Not a public-site documen
 | 25-07-2026 | Created alongside the sheet rebuild (Cologne links, entry anatomy, label definitions, sampling disclosure). | [H1646](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1646-Opus_csl-atlas_xref-sheet-reviewability-40edges_25.07.26.md) |
 | 26-07-2026 | Added the Russian companion `.ru.md` + a docs-vs-data drift guard (5 tests). The guard immediately caught a real error: the candidate pool was quoted everywhere as **642** but is **641** — a `wc -l` counting the CSV header as data. The packet now computes it instead of carrying a literal. Also fixed a leftover "two independent editors recorded the same by-form link" line that had survived the retraction. | [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md) |
 | 26-07-2026 | **Retracted the "two independent witnesses" justification** after MG's ruling that MW depends on PW/PWG; added the measured non-independence (21.8% vs 0.007%, ≈2953×, p&nbsp;<&nbsp;0.005), grounded `normalization-risk` in the four documented MW↔PWG convention divergences from Patel 2016 (incl. that the 642-edge intersection is an undercount), and recorded that the sheet is now fully Russian. | [H1648](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1648-Opus_csl-atlas_xref-sheet-ru-and-mw-pwg-dependence_26.07.26.md) |
+| 24-09-2026 | `too-sparse` examples rewritten: the 4 rows shown as "exact edge missing in MW" (`:07 Akzit`, `:14 ArAt`, `:22 BaMsas`, `:36 Darmya`) were a packet-builder defect — raw accented/hyphenated CSV targets compared byte-for-byte against normalised sample keys — not a source gap; fixed via `scripts/lib/xref-normalize.mjs`, count now 0 of 40; both languages updated, drift guard green. | [H5408](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5408-Fable_csl-atlas_xref-extractor-accented-targets-false-missing-mw_24.09.26.md) |
 
 _Dr. Mārcis Gasūns_

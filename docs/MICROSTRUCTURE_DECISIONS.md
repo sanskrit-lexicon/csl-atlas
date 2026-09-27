@@ -1,4 +1,4 @@
-_Created: 04-06-2026 · Last updated: 05-09-2026_
+_Created: 04-06-2026 · Last updated: 24-09-2026_
 
 # Microstructure line — decision log (issue #30)
 
@@ -152,8 +152,8 @@ PWG `Vgl.`? — lineage roadmap §3.1) and AP/AP90/BEN `cf.` target parsing.
 
 **Built — `scripts/lexico/m6_xref_lineage.py`** (validated, m6 check added): normalizes
 m3 edges (unify PWG `°` / MW `-`, drop SLP1 accents) and intersects the two edge sets.
-**Finding — PARTIAL overlap:** 641 shared directed edges; **MW 21.8% / PWG 9.1%** of
-cross-refs on the 2,538 lemmas both treat (Jaccard 0.069). A shared cross-reference CORE
+**Finding — PARTIAL overlap:** 694 shared directed edges; **MW 21.8% / PWG 9.2%** of
+cross-refs on the 2,750 lemmas both treat (Jaccard 0.069). A shared cross-reference CORE
 (variant-form / cognate-root pointers, well above chance) plus large independent expansion
 — **not** wholesale inheritance. Write-up: `docs/MICROSTRUCTURE_XREF_LINEAGE.md`; outputs
 `xref_lineage.json` + `xref_shared_edges.csv`. Still ungated and open: AP/AP90/BEN `cf.` parsing.

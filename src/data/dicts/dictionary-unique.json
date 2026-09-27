@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-14T07:43:39.724Z",
+  "generatedAt": "2026-09-24T16:04:53.676Z",
   "sourceRoot": "../csl-orig/v02",
   "assumptions": [
     "A lemma is unique when it appears in exactly one dictionary within the selected scope."
@@ -13,7 +13,7 @@
   },
   "unique": {
     "SKD": {
-      "count": 15169,
+      "count": 15159,
       "examples": [
         {
           "lemma": "afRI",
@@ -218,7 +218,7 @@
       ]
     },
     "WIL": {
-      "count": 243,
+      "count": 242,
       "examples": [
         {
           "lemma": "ajalamvana",
@@ -423,7 +423,7 @@
       ]
     },
     "YAT": {
-      "count": 1264,
+      "count": 1263,
       "examples": [
         {
           "lemma": "aMSuBarttf",
@@ -628,7 +628,7 @@
       ]
     },
     "BOP": {
-      "count": 117,
+      "count": 114,
       "examples": [
         {
           "lemma": "aYcitapatrAkza",
@@ -763,10 +763,6 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L10267"
         },
         {
-          "lemma": "kamalapatrAkza",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L10339"
-        },
-        {
           "lemma": "kalaSA",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L10750"
         },
@@ -829,216 +825,220 @@
         {
           "lemma": "jigIz",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L20370"
+        },
+        {
+          "lemma": "jiGfkz",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L20390"
         }
       ]
     },
     "PWG": {
-      "count": 2029,
+      "count": 2011,
       "examples": [
         {
           "lemma": "aMSasavarRa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L208"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L84"
         },
         {
           "lemma": "aMSApay",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L219"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L92"
         },
         {
           "lemma": "aMsApay",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L443"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L225"
         },
         {
           "lemma": "akrILant",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1279"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L765"
         },
         {
           "lemma": "akrIyamARa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1284"
-        },
-        {
-          "lemma": "akzamAla",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1655"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L769"
         },
         {
           "lemma": "akzavant",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1927"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1123"
         },
         {
           "lemma": "aKuva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2416"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1433"
         },
         {
           "lemma": "aKKalIkar",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2442"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1455"
         },
         {
           "lemma": "agnivAyu",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3684"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2226"
         },
         {
           "lemma": "agnivESya",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3734"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2265"
         },
         {
           "lemma": "agnIDrI",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4045"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2458"
         },
         {
           "lemma": "agnIzomIyatva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4101"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2494"
         },
         {
           "lemma": "agropaharaRa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4765"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2880"
         },
         {
           "lemma": "aNgay",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5822"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3426"
         },
         {
           "lemma": "aNgalIyalipi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5870"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3459"
         },
         {
           "lemma": "acirapraBa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6942"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4085"
         },
         {
           "lemma": "acirABa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6989"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4123"
         },
         {
           "lemma": "acCAvAkaSastra",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7154"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4202"
         },
         {
           "lemma": "acCupta",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7234"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4252"
         },
         {
           "lemma": "ajaganDa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7606"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4440"
         },
         {
           "lemma": "ajaGnivaMs",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7672"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4481"
         },
         {
           "lemma": "ajAkfpaRIya",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8078"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4754"
         },
         {
           "lemma": "aYcay",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8846"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5229"
         },
         {
           "lemma": "aYjalIkar",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9247"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5379"
         },
         {
           "lemma": "aYjasyA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9311"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5410"
         },
         {
           "lemma": "aRuDarma",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9938"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5786"
         },
         {
           "lemma": "atimuktakamAlA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11648"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6834"
         },
         {
           "lemma": "atiliha",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11881"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6998"
         },
         {
           "lemma": "ativizAdin",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12023"
-        },
-        {
-          "lemma": "atisaMDita",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12293"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7102"
         },
         {
           "lemma": "atItvan",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12489"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7432"
         },
         {
           "lemma": "atIpa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12505"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7442"
         },
         {
           "lemma": "atyamlaparRa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12902"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7699"
         },
         {
           "lemma": "adaHkar",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13881"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8124"
         },
         {
           "lemma": "adoBU",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L14752"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8596"
         },
         {
           "lemma": "admanI",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L14941"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8705"
         },
         {
           "lemma": "aDaHpada",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15476"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9038"
         },
         {
           "lemma": "aDaHpuzpa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15480"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9042"
         },
         {
           "lemma": "aDarIkar",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15711"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9164"
         },
         {
           "lemma": "aDarmaya",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15789"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9209"
         },
         {
           "lemma": "aDyAyaka",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L17942"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10391"
         },
         {
           "lemma": "aDyuzitASva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18021"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10449"
         },
         {
           "lemma": "aDvayant",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18260"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10572"
         },
         {
           "lemma": "anaqvan",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18838"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10897"
         },
         {
           "lemma": "ananukftya",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18945"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10971"
         },
         {
           "lemma": "anapahftapApman",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L19524"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11323"
         },
         {
           "lemma": "analAnanda",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L19974"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11602"
         },
         {
           "lemma": "anavant",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L20088"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11682"
         },
         {
           "lemma": "anavararaTa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L20134"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11718"
+        },
+        {
+          "lemma": "anahar",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11938"
+        },
+        {
+          "lemma": "anAbaya",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12227"
         }
       ]
     },
     "GST": {
-      "count": 532,
+      "count": 529,
       "examples": [
         {
           "lemma": "aMsavat",
@@ -1067,10 +1067,6 @@
         {
           "lemma": "agnIzomya",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L3091"
-        },
-        {
-          "lemma": "agnyAhiti",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L3144"
         },
         {
           "lemma": "ajinapattra",
@@ -1103,10 +1099,6 @@
         {
           "lemma": "atrinetraBava",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L9693"
-        },
-        {
-          "lemma": "adIrGasUtratA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L10445"
         },
         {
           "lemma": "adevatrA",
@@ -1239,6 +1231,14 @@
         {
           "lemma": "anunAsikAtva",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L19584"
+        },
+        {
+          "lemma": "anupaja",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L19685"
+        },
+        {
+          "lemma": "anupadfzwin",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L19769"
         }
       ]
     },
@@ -1448,7 +1448,7 @@
       ]
     },
     "BUR": {
-      "count": 4354,
+      "count": 4353,
       "examples": [
         {
           "lemma": "akarizi",
@@ -1653,212 +1653,212 @@
       ]
     },
     "BEN": {
-      "count": 125,
+      "count": 582,
       "examples": [
         {
+          "lemma": "tanvaMSuka",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L74"
+        },
+        {
+          "lemma": "kopAgni",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L311"
+        },
+        {
+          "lemma": "rAjAgni",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L332"
+        },
+        {
+          "lemma": "daMzwrAgra",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L394"
+        },
+        {
           "lemma": "agrAhyanAmakatA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L441"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L458"
+        },
+        {
+          "lemma": "jambAlANka",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L501"
+        },
+        {
+          "lemma": "aBilAzANkura",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L523"
+        },
+        {
+          "lemma": "daMzwrANkura",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L529"
+        },
+        {
+          "lemma": "vIjANkura",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L538"
+        },
+        {
+          "lemma": "smarANkura",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L541"
+        },
+        {
+          "lemma": "harmyANgaRa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L665"
         },
         {
           "lemma": "awwapatiBAgAKya",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1022"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L973"
         },
         {
           "lemma": "atilubDatA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1257"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1139"
         },
         {
           "lemma": "atfptitA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1332"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1191"
         },
         {
           "lemma": "adyUti",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1532"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1326"
         },
         {
           "lemma": "advAratas",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1559"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1355"
+        },
+        {
+          "lemma": "KaRqitADara",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1382"
+        },
+        {
+          "lemma": "aNgulisaMvftADarozWa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1389"
+        },
+        {
+          "lemma": "vimbaPalADarozWa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1392"
+        },
+        {
+          "lemma": "pftanADikAra",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1456"
         },
         {
           "lemma": "aDyApakatA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1979"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1706"
         },
         {
           "lemma": "anatiprakASakatva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2102"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1783"
         },
         {
           "lemma": "anasUyitf",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2242"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1867"
+        },
+        {
+          "lemma": "lakzmaRAnucara",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2053"
+        },
+        {
+          "lemma": "saveRuvIRApaRavAnunAdam",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2120"
         },
         {
           "lemma": "anubuBUzu",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2656"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2175"
+        },
+        {
+          "lemma": "dattAnuyAtra",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2228"
+        },
+        {
+          "lemma": "kftAnurAga",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2262"
         },
         {
           "lemma": "anuzRaSIta",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3001"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2417"
         },
         {
           "lemma": "antarAtmanya",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3288"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2628"
         },
         {
           "lemma": "apaRqitatA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3843"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2994"
+        },
+        {
+          "lemma": "vipannApatya",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3004"
         },
         {
           "lemma": "aparADakft",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4017"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3123"
+        },
+        {
+          "lemma": "SilApiDAna",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3283"
+        },
+        {
+          "lemma": "aDikodrecitABiKya",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3416"
+        },
+        {
+          "lemma": "SUravarmABiDa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3501"
         },
         {
           "lemma": "aBiniveSavant",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4645"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3542"
+        },
+        {
+          "lemma": "kAnanABimuKa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3650"
+        },
+        {
+          "lemma": "kftapAdABivandana",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3734"
+        },
+        {
+          "lemma": "lokABihAra",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3874"
+        },
+        {
+          "lemma": "anaBIkzRam",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3881"
+        },
+        {
+          "lemma": "anaByasana",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3962"
         },
         {
           "lemma": "aBrAvakASaka",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L5341"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4027"
+        },
+        {
+          "lemma": "hemAmburuha",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4209"
         },
         {
           "lemma": "arAjanyaprasUtitas",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L5782"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4371"
         },
         {
           "lemma": "arGatas",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L5939"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4485"
         },
         {
-          "lemma": "avaBAsakatva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L7007"
+          "lemma": "yajYArTa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4639"
         },
         {
-          "lemma": "avaBAsanA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L7011"
+          "lemma": "CAyArTin",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4703"
         },
         {
-          "lemma": "aSaMkusuka",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L7446"
+          "lemma": "hemArTya",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4740"
         },
         {
-          "lemma": "asamavAyitva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L7890"
-        },
-        {
-          "lemma": "Agatva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L8539"
-        },
-        {
-          "lemma": "AGrARatas",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L8703"
-        },
-        {
-          "lemma": "AcAratas",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L8755"
-        },
-        {
-          "lemma": "AjYatva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L8858"
-        },
-        {
-          "lemma": "AtmaMBaritva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L9134"
-        },
-        {
-          "lemma": "Adaka",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L9198"
-        },
-        {
-          "lemma": "AdeSatas",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L9345"
-        },
-        {
-          "lemma": "ArttatA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L10482"
-        },
-        {
-          "lemma": "ASitva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L10953"
-        },
-        {
-          "lemma": "ASrayASavat",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L11059"
-        },
-        {
-          "lemma": "itaretaratas",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L11899"
-        },
-        {
-          "lemma": "ukzaRaja",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L12831"
-        },
-        {
-          "lemma": "uccEstaratva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L12953"
-        },
-        {
-          "lemma": "ucCrAyavant",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L13034"
-        },
-        {
-          "lemma": "upADitA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L15491"
-        },
-        {
-          "lemma": "UDasvant",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16011"
-        },
-        {
-          "lemma": "UrRamaya",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16118"
-        },
-        {
-          "lemma": "ekapatnItva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16740"
-        },
-        {
-          "lemma": "ekaSrutaDaratva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16779"
-        },
-        {
-          "lemma": "ekasTatA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16789"
-        },
-        {
-          "lemma": "ekAMSatA",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16793"
-        },
-        {
-          "lemma": "enad",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L17032"
-        },
-        {
-          "lemma": "kakzaGna",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L17893"
-        },
-        {
-          "lemma": "kadarT",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L18547"
-        },
-        {
-          "lemma": "kapAlika",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L18792"
-        },
-        {
-          "lemma": "karttari",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L19615"
-        },
-        {
-          "lemma": "kalApavant",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L20101"
-        },
-        {
-          "lemma": "kalkaka",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L20193"
+          "lemma": "puRqarIkAvataMsa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L5125"
         }
       ]
     },
     "MW72": {
-      "count": 2384,
+      "count": 2380,
       "examples": [
         {
           "lemma": "aktvA",
@@ -2063,7 +2063,7 @@
       ]
     },
     "GRA": {
-      "count": 455,
+      "count": 454,
       "examples": [
         {
           "lemma": "akuDryac",
@@ -2072,10 +2072,6 @@
         {
           "lemma": "akuDriac",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gra/gra.txt#L132"
-        },
-        {
-          "lemma": "aKKalIkf",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gra/gra.txt#L338"
         },
         {
           "lemma": "aGaaSva",
@@ -2264,11 +2260,15 @@
         {
           "lemma": "AdvAdaSa",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gra/gra.txt#L8684"
+        },
+        {
+          "lemma": "ApfCya",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gra/gra.txt#L8829"
         }
       ]
     },
     "VCP": {
-      "count": 4522,
+      "count": 4518,
       "examples": [
         {
           "lemma": "aMSasavarRRana",
@@ -2331,16 +2331,8 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L2721"
         },
         {
-          "lemma": "agnIzomapraRayanI",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L2860"
-        },
-        {
           "lemma": "agnyudDAra",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L2968"
-        },
-        {
-          "lemma": "agrajAta",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L3141"
         },
         {
           "lemma": "agradAnIya",
@@ -2469,11 +2461,19 @@
         {
           "lemma": "acirAya",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L5101"
+        },
+        {
+          "lemma": "acyutANgaja",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L5353"
+        },
+        {
+          "lemma": "ajakaRa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L5490"
         }
       ]
     },
     "PWK": {
-      "count": 6653,
+      "count": 6624,
       "examples": [
         {
           "lemma": "akaRWatAlvozWa",
@@ -2763,7 +2763,7 @@
       ]
     },
     "LAN": {
-      "count": 140,
+      "count": 139,
       "examples": [
         {
           "lemma": "akzatakesara",
@@ -2787,10 +2787,6 @@
         },
         {
           "lemma": "atyugrapuRyapApa",
-          "href": null
-        },
-        {
-          "lemma": "aDikarUpavant",
           "href": null
         },
         {
@@ -2963,6 +2959,10 @@
         },
         {
           "lemma": "tatpArSva",
+          "href": null
+        },
+        {
+          "lemma": "tatprahfzwa",
           "href": null
         }
       ]
@@ -3173,7 +3173,7 @@
       ]
     },
     "LRV": {
-      "count": 8505,
+      "count": 8495,
       "examples": [
         {
           "lemma": "afRinI",
@@ -3583,7 +3583,7 @@
       ]
     },
     "CAE": {
-      "count": 608,
+      "count": 606,
       "examples": [
         {
           "lemma": "akandasamutTita",
@@ -3788,7 +3788,7 @@
       ]
     },
     "MD": {
-      "count": 340,
+      "count": 338,
       "examples": [
         {
           "lemma": "akzat",
@@ -3993,7 +3993,7 @@
       ]
     },
     "ABCH": {
-      "count": 384,
+      "count": 383,
       "examples": [
         {
           "lemma": "caramatIrTakft",
@@ -4600,7 +4600,7 @@
       ]
     },
     "MW": {
-      "count": 25089,
+      "count": 24765,
       "examples": [
         {
           "lemma": "aMSarUpiRI",
@@ -4641,10 +4641,6 @@
         {
           "lemma": "akartftva",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L633"
-        },
-        {
-          "lemma": "akARqaSUla",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L792"
         },
         {
           "lemma": "akAraRena",
@@ -4801,11 +4797,15 @@
         {
           "lemma": "aKaRqopaDi",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2641"
+        },
+        {
+          "lemma": "aKilIkf",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2707"
         }
       ]
     },
     "SHS": {
-      "count": 901,
+      "count": 889,
       "examples": [
         {
           "lemma": "agnikukkawa",
@@ -4940,28 +4940,12 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L39894"
         },
         {
-          "lemma": "kARqapfzwa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L40127"
-        },
-        {
           "lemma": "kArkkaSya",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L41169"
         },
         {
-          "lemma": "kAryyodvAra",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L41437"
-        },
-        {
           "lemma": "kAlamaSikA",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L41721"
-        },
-        {
-          "lemma": "kAlAttaraviza",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L41867"
-        },
-        {
-          "lemma": "kAlyaRineya",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L42041"
         },
         {
           "lemma": "kASmaro",
@@ -5006,11 +4990,27 @@
         {
           "lemma": "kulahaRwaka",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44838"
+        },
+        {
+          "lemma": "kuliSANkuSa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44970"
+        },
+        {
+          "lemma": "kulakvaguYjA",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45015"
+        },
+        {
+          "lemma": "kulmAzABimuta",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45064"
+        },
+        {
+          "lemma": "kumumADipa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45521"
         }
       ]
     },
     "INM": {
-      "count": 2144,
+      "count": 2143,
       "examples": [
         {
           "lemma": "abBakzAH",
@@ -5420,7 +5420,7 @@
       ]
     },
     "SCH": {
-      "count": 8423,
+      "count": 8421,
       "examples": [
         {
           "lemma": "aMSumatPala",
@@ -5625,7 +5625,7 @@
       ]
     },
     "STC": {
-      "count": 1067,
+      "count": 1066,
       "examples": [
         {
           "lemma": "akalkakalita",
@@ -5830,7 +5830,7 @@
       ]
     },
     "PUI": {
-      "count": 4529,
+      "count": 4527,
       "examples": [
         {
           "lemma": "aMkuSA",
@@ -6035,7 +6035,7 @@
       ]
     },
     "BHS": {
-      "count": 10243,
+      "count": 10242,
       "examples": [
         {
           "lemma": "aMSaDAtrI",
@@ -6445,7 +6445,7 @@
       ]
     },
     "AP": {
-      "count": 30758,
+      "count": 30834,
       "examples": [
         {
           "lemma": "aMSAMSaH",
@@ -6650,7 +6650,7 @@
       ]
     },
     "ACC": {
-      "count": 14107,
+      "count": 14115,
       "examples": [
         {
           "lemma": "aMSadaSA",
@@ -7064,208 +7064,208 @@
       "examples": [
         {
           "lemma": "aki",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L94"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L86"
         },
         {
           "lemma": "akzU",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L147"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L131"
         },
         {
           "lemma": "agi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L194"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L173"
         },
         {
           "lemma": "aGi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L206"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L185"
         },
         {
           "lemma": "aWi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L502"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L445"
         },
         {
           "lemma": "adi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L811"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L712"
         },
         {
           "lemma": "anjU",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L961"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L842"
         },
         {
           "lemma": "abi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1053"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L928"
         },
         {
           "lemma": "aSU",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1795"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1600"
         },
         {
           "lemma": "ACi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2185"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1946"
         },
         {
           "lemma": "Apx",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2220"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1977"
         },
         {
           "lemma": "iKi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2489"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2212"
         },
         {
           "lemma": "igi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2534"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2252"
         },
         {
           "lemma": "idi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2785"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2449"
         },
         {
           "lemma": "inDI",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2821"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2482"
         },
         {
           "lemma": "ivi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2933"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2583"
         },
         {
           "lemma": "IKi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3164"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2780"
         },
         {
           "lemma": "IN",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3173"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2788"
         },
         {
           "lemma": "uKi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3557"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3141"
         },
         {
           "lemma": "uN",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3562"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3146"
         },
         {
           "lemma": "uCi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3642"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3219"
         },
         {
           "lemma": "uCI",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3685"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3260"
         },
         {
           "lemma": "undI",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3812"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3378"
         },
         {
           "lemma": "uhir",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4069"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3616"
         },
         {
           "lemma": "UWa",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4102"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3648"
         },
         {
           "lemma": "UyI",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4159"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3704"
         },
         {
           "lemma": "UrRuY",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4233"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3772"
         },
         {
           "lemma": "fji",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4629"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4111"
         },
         {
           "lemma": "fRu",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4664"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4142"
         },
         {
           "lemma": "fDu",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4765"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4234"
         },
         {
           "lemma": "ejf",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4966"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4419"
         },
         {
           "lemma": "ezf",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5089"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4529"
         },
         {
           "lemma": "oKf",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5095"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4535"
         },
         {
           "lemma": "oRf",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5124"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4562"
         },
         {
           "lemma": "olaqi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5135"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4573"
         },
         {
           "lemma": "kaki",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5209"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4640"
         },
         {
           "lemma": "kaKe",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5268"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4698"
         },
         {
           "lemma": "kage",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5292"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4720"
         },
         {
           "lemma": "kaci",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5334"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4760"
         },
         {
           "lemma": "kawe",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5404"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4827"
         },
         {
           "lemma": "kaWi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5446"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4866"
         },
         {
           "lemma": "kaqi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5514"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4931"
         },
         {
           "lemma": "kadi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5792"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5188"
         },
         {
           "lemma": "kabf",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5953"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5334"
         },
         {
           "lemma": "kamu",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5988"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5367"
         },
         {
           "lemma": "kasi",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6467"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5813"
         },
         {
           "lemma": "kAci",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6537"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5879"
         },
         {
           "lemma": "kASf",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6599"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5938"
         },
         {
           "lemma": "kAsf",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6656"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5988"
         },
         {
           "lemma": "kuN",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6999"
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6305"
         }
       ]
     },
     "IEG": {
-      "count": 4373,
+      "count": 4366,
       "examples": [
         {
           "lemma": "abAtamAla",
@@ -7444,10 +7444,6 @@
           "href": null
         },
         {
-          "lemma": "AQa",
-          "href": null
-        },
-        {
           "lemma": "ADavApa",
           "href": null
         },
@@ -7465,6 +7461,10 @@
         },
         {
           "lemma": "aDikAravarttanA",
+          "href": null
+        },
+        {
+          "lemma": "aDikArimuKya",
           "href": null
         }
       ]
@@ -7952,7 +7952,7 @@
       "dictionaryCount": 40,
       "unique": {
         "SKD": {
-          "count": 15169,
+          "count": 15159,
           "examples": [
             {
               "lemma": "afRI",
@@ -8157,7 +8157,7 @@
           ]
         },
         "WIL": {
-          "count": 243,
+          "count": 242,
           "examples": [
             {
               "lemma": "ajalamvana",
@@ -8362,7 +8362,7 @@
           ]
         },
         "YAT": {
-          "count": 1264,
+          "count": 1263,
           "examples": [
             {
               "lemma": "aMSuBarttf",
@@ -8567,7 +8567,7 @@
           ]
         },
         "BOP": {
-          "count": 117,
+          "count": 114,
           "examples": [
             {
               "lemma": "aYcitapatrAkza",
@@ -8702,10 +8702,6 @@
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L10267"
             },
             {
-              "lemma": "kamalapatrAkza",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L10339"
-            },
-            {
               "lemma": "kalaSA",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L10750"
             },
@@ -8768,216 +8764,220 @@
             {
               "lemma": "jigIz",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L20370"
+            },
+            {
+              "lemma": "jiGfkz",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/bop/bop.txt#L20390"
             }
           ]
         },
         "PWG": {
-          "count": 2029,
+          "count": 2011,
           "examples": [
             {
               "lemma": "aMSasavarRa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L208"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L84"
             },
             {
               "lemma": "aMSApay",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L219"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L92"
             },
             {
               "lemma": "aMsApay",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L443"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L225"
             },
             {
               "lemma": "akrILant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1279"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L765"
             },
             {
               "lemma": "akrIyamARa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1284"
-            },
-            {
-              "lemma": "akzamAla",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1655"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L769"
             },
             {
               "lemma": "akzavant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1927"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1123"
             },
             {
               "lemma": "aKuva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2416"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1433"
             },
             {
               "lemma": "aKKalIkar",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2442"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1455"
             },
             {
               "lemma": "agnivAyu",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3684"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2226"
             },
             {
               "lemma": "agnivESya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3734"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2265"
             },
             {
               "lemma": "agnIDrI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4045"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2458"
             },
             {
               "lemma": "agnIzomIyatva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4101"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2494"
             },
             {
               "lemma": "agropaharaRa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4765"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2880"
             },
             {
               "lemma": "aNgay",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5822"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3426"
             },
             {
               "lemma": "aNgalIyalipi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5870"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3459"
             },
             {
               "lemma": "acirapraBa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6942"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4085"
             },
             {
               "lemma": "acirABa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6989"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4123"
             },
             {
               "lemma": "acCAvAkaSastra",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7154"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4202"
             },
             {
               "lemma": "acCupta",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7234"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4252"
             },
             {
               "lemma": "ajaganDa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7606"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4440"
             },
             {
               "lemma": "ajaGnivaMs",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7672"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4481"
             },
             {
               "lemma": "ajAkfpaRIya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8078"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4754"
             },
             {
               "lemma": "aYcay",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8846"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5229"
             },
             {
               "lemma": "aYjalIkar",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9247"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5379"
             },
             {
               "lemma": "aYjasyA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9311"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5410"
             },
             {
               "lemma": "aRuDarma",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9938"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5786"
             },
             {
               "lemma": "atimuktakamAlA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11648"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6834"
             },
             {
               "lemma": "atiliha",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11881"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6998"
             },
             {
               "lemma": "ativizAdin",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12023"
-            },
-            {
-              "lemma": "atisaMDita",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12293"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7102"
             },
             {
               "lemma": "atItvan",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12489"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7432"
             },
             {
               "lemma": "atIpa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12505"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7442"
             },
             {
               "lemma": "atyamlaparRa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12902"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7699"
             },
             {
               "lemma": "adaHkar",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13881"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8124"
             },
             {
               "lemma": "adoBU",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L14752"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8596"
             },
             {
               "lemma": "admanI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L14941"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8705"
             },
             {
               "lemma": "aDaHpada",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15476"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9038"
             },
             {
               "lemma": "aDaHpuzpa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15480"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9042"
             },
             {
               "lemma": "aDarIkar",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15711"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9164"
             },
             {
               "lemma": "aDarmaya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15789"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9209"
             },
             {
               "lemma": "aDyAyaka",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L17942"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10391"
             },
             {
               "lemma": "aDyuzitASva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18021"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10449"
             },
             {
               "lemma": "aDvayant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18260"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10572"
             },
             {
               "lemma": "anaqvan",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18838"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10897"
             },
             {
               "lemma": "ananukftya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L18945"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L10971"
             },
             {
               "lemma": "anapahftapApman",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L19524"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11323"
             },
             {
               "lemma": "analAnanda",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L19974"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11602"
             },
             {
               "lemma": "anavant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L20088"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11682"
             },
             {
               "lemma": "anavararaTa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L20134"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11718"
+            },
+            {
+              "lemma": "anahar",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11938"
+            },
+            {
+              "lemma": "anAbaya",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12227"
             }
           ]
         },
         "GST": {
-          "count": 532,
+          "count": 529,
           "examples": [
             {
               "lemma": "aMsavat",
@@ -9006,10 +9006,6 @@
             {
               "lemma": "agnIzomya",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L3091"
-            },
-            {
-              "lemma": "agnyAhiti",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L3144"
             },
             {
               "lemma": "ajinapattra",
@@ -9042,10 +9038,6 @@
             {
               "lemma": "atrinetraBava",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L9693"
-            },
-            {
-              "lemma": "adIrGasUtratA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L10445"
             },
             {
               "lemma": "adevatrA",
@@ -9178,6 +9170,14 @@
             {
               "lemma": "anunAsikAtva",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L19584"
+            },
+            {
+              "lemma": "anupaja",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L19685"
+            },
+            {
+              "lemma": "anupadfzwin",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gst/gst.txt#L19769"
             }
           ]
         },
@@ -9387,7 +9387,7 @@
           ]
         },
         "BUR": {
-          "count": 4354,
+          "count": 4353,
           "examples": [
             {
               "lemma": "akarizi",
@@ -9592,212 +9592,212 @@
           ]
         },
         "BEN": {
-          "count": 125,
+          "count": 582,
           "examples": [
             {
+              "lemma": "tanvaMSuka",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L74"
+            },
+            {
+              "lemma": "kopAgni",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L311"
+            },
+            {
+              "lemma": "rAjAgni",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L332"
+            },
+            {
+              "lemma": "daMzwrAgra",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L394"
+            },
+            {
               "lemma": "agrAhyanAmakatA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L441"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L458"
+            },
+            {
+              "lemma": "jambAlANka",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L501"
+            },
+            {
+              "lemma": "aBilAzANkura",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L523"
+            },
+            {
+              "lemma": "daMzwrANkura",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L529"
+            },
+            {
+              "lemma": "vIjANkura",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L538"
+            },
+            {
+              "lemma": "smarANkura",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L541"
+            },
+            {
+              "lemma": "harmyANgaRa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L665"
             },
             {
               "lemma": "awwapatiBAgAKya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1022"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L973"
             },
             {
               "lemma": "atilubDatA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1257"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1139"
             },
             {
               "lemma": "atfptitA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1332"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1191"
             },
             {
               "lemma": "adyUti",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1532"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1326"
             },
             {
               "lemma": "advAratas",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1559"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1355"
+            },
+            {
+              "lemma": "KaRqitADara",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1382"
+            },
+            {
+              "lemma": "aNgulisaMvftADarozWa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1389"
+            },
+            {
+              "lemma": "vimbaPalADarozWa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1392"
+            },
+            {
+              "lemma": "pftanADikAra",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1456"
             },
             {
               "lemma": "aDyApakatA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1979"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1706"
             },
             {
               "lemma": "anatiprakASakatva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2102"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1783"
             },
             {
               "lemma": "anasUyitf",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2242"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L1867"
+            },
+            {
+              "lemma": "lakzmaRAnucara",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2053"
+            },
+            {
+              "lemma": "saveRuvIRApaRavAnunAdam",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2120"
             },
             {
               "lemma": "anubuBUzu",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2656"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2175"
+            },
+            {
+              "lemma": "dattAnuyAtra",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2228"
+            },
+            {
+              "lemma": "kftAnurAga",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2262"
             },
             {
               "lemma": "anuzRaSIta",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3001"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2417"
             },
             {
               "lemma": "antarAtmanya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3288"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2628"
             },
             {
               "lemma": "apaRqitatA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3843"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L2994"
+            },
+            {
+              "lemma": "vipannApatya",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3004"
             },
             {
               "lemma": "aparADakft",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4017"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3123"
+            },
+            {
+              "lemma": "SilApiDAna",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3283"
+            },
+            {
+              "lemma": "aDikodrecitABiKya",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3416"
+            },
+            {
+              "lemma": "SUravarmABiDa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3501"
             },
             {
               "lemma": "aBiniveSavant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4645"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3542"
+            },
+            {
+              "lemma": "kAnanABimuKa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3650"
+            },
+            {
+              "lemma": "kftapAdABivandana",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3734"
+            },
+            {
+              "lemma": "lokABihAra",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3874"
+            },
+            {
+              "lemma": "anaBIkzRam",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3881"
+            },
+            {
+              "lemma": "anaByasana",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L3962"
             },
             {
               "lemma": "aBrAvakASaka",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L5341"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4027"
+            },
+            {
+              "lemma": "hemAmburuha",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4209"
             },
             {
               "lemma": "arAjanyaprasUtitas",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L5782"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4371"
             },
             {
               "lemma": "arGatas",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L5939"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4485"
             },
             {
-              "lemma": "avaBAsakatva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L7007"
+              "lemma": "yajYArTa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4639"
             },
             {
-              "lemma": "avaBAsanA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L7011"
+              "lemma": "CAyArTin",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4703"
             },
             {
-              "lemma": "aSaMkusuka",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L7446"
+              "lemma": "hemArTya",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L4740"
             },
             {
-              "lemma": "asamavAyitva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L7890"
-            },
-            {
-              "lemma": "Agatva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L8539"
-            },
-            {
-              "lemma": "AGrARatas",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L8703"
-            },
-            {
-              "lemma": "AcAratas",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L8755"
-            },
-            {
-              "lemma": "AjYatva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L8858"
-            },
-            {
-              "lemma": "AtmaMBaritva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L9134"
-            },
-            {
-              "lemma": "Adaka",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L9198"
-            },
-            {
-              "lemma": "AdeSatas",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L9345"
-            },
-            {
-              "lemma": "ArttatA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L10482"
-            },
-            {
-              "lemma": "ASitva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L10953"
-            },
-            {
-              "lemma": "ASrayASavat",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L11059"
-            },
-            {
-              "lemma": "itaretaratas",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L11899"
-            },
-            {
-              "lemma": "ukzaRaja",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L12831"
-            },
-            {
-              "lemma": "uccEstaratva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L12953"
-            },
-            {
-              "lemma": "ucCrAyavant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L13034"
-            },
-            {
-              "lemma": "upADitA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L15491"
-            },
-            {
-              "lemma": "UDasvant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16011"
-            },
-            {
-              "lemma": "UrRamaya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16118"
-            },
-            {
-              "lemma": "ekapatnItva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16740"
-            },
-            {
-              "lemma": "ekaSrutaDaratva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16779"
-            },
-            {
-              "lemma": "ekasTatA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16789"
-            },
-            {
-              "lemma": "ekAMSatA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L16793"
-            },
-            {
-              "lemma": "enad",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L17032"
-            },
-            {
-              "lemma": "kakzaGna",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L17893"
-            },
-            {
-              "lemma": "kadarT",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L18547"
-            },
-            {
-              "lemma": "kapAlika",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L18792"
-            },
-            {
-              "lemma": "karttari",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L19615"
-            },
-            {
-              "lemma": "kalApavant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L20101"
-            },
-            {
-              "lemma": "kalkaka",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L20193"
+              "lemma": "puRqarIkAvataMsa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ben/ben.txt#L5125"
             }
           ]
         },
         "MW72": {
-          "count": 2384,
+          "count": 2380,
           "examples": [
             {
               "lemma": "aktvA",
@@ -10002,7 +10002,7 @@
           ]
         },
         "GRA": {
-          "count": 455,
+          "count": 454,
           "examples": [
             {
               "lemma": "akuDryac",
@@ -10011,10 +10011,6 @@
             {
               "lemma": "akuDriac",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gra/gra.txt#L132"
-            },
-            {
-              "lemma": "aKKalIkf",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gra/gra.txt#L338"
             },
             {
               "lemma": "aGaaSva",
@@ -10203,11 +10199,15 @@
             {
               "lemma": "AdvAdaSa",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gra/gra.txt#L8684"
+            },
+            {
+              "lemma": "ApfCya",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/gra/gra.txt#L8829"
             }
           ]
         },
         "VCP": {
-          "count": 4522,
+          "count": 4518,
           "examples": [
             {
               "lemma": "aMSasavarRRana",
@@ -10270,16 +10270,8 @@
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L2721"
             },
             {
-              "lemma": "agnIzomapraRayanI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L2860"
-            },
-            {
               "lemma": "agnyudDAra",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L2968"
-            },
-            {
-              "lemma": "agrajAta",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L3141"
             },
             {
               "lemma": "agradAnIya",
@@ -10408,11 +10400,19 @@
             {
               "lemma": "acirAya",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L5101"
+            },
+            {
+              "lemma": "acyutANgaja",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L5353"
+            },
+            {
+              "lemma": "ajakaRa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L5490"
             }
           ]
         },
         "PWK": {
-          "count": 6653,
+          "count": 6624,
           "examples": [
             {
               "lemma": "akaRWatAlvozWa",
@@ -10702,7 +10702,7 @@
           ]
         },
         "LAN": {
-          "count": 140,
+          "count": 139,
           "examples": [
             {
               "lemma": "akzatakesara",
@@ -10726,10 +10726,6 @@
             },
             {
               "lemma": "atyugrapuRyapApa",
-              "href": null
-            },
-            {
-              "lemma": "aDikarUpavant",
               "href": null
             },
             {
@@ -10902,6 +10898,10 @@
             },
             {
               "lemma": "tatpArSva",
+              "href": null
+            },
+            {
+              "lemma": "tatprahfzwa",
               "href": null
             }
           ]
@@ -11112,7 +11112,7 @@
           ]
         },
         "LRV": {
-          "count": 8505,
+          "count": 8495,
           "examples": [
             {
               "lemma": "afRinI",
@@ -11522,7 +11522,7 @@
           ]
         },
         "CAE": {
-          "count": 608,
+          "count": 606,
           "examples": [
             {
               "lemma": "akandasamutTita",
@@ -11727,7 +11727,7 @@
           ]
         },
         "MD": {
-          "count": 340,
+          "count": 338,
           "examples": [
             {
               "lemma": "akzat",
@@ -11932,7 +11932,7 @@
           ]
         },
         "ABCH": {
-          "count": 384,
+          "count": 383,
           "examples": [
             {
               "lemma": "caramatIrTakft",
@@ -12539,7 +12539,7 @@
           ]
         },
         "MW": {
-          "count": 25089,
+          "count": 24765,
           "examples": [
             {
               "lemma": "aMSarUpiRI",
@@ -12580,10 +12580,6 @@
             {
               "lemma": "akartftva",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L633"
-            },
-            {
-              "lemma": "akARqaSUla",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L792"
             },
             {
               "lemma": "akAraRena",
@@ -12740,11 +12736,15 @@
             {
               "lemma": "aKaRqopaDi",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2641"
+            },
+            {
+              "lemma": "aKilIkf",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L2707"
             }
           ]
         },
         "SHS": {
-          "count": 901,
+          "count": 889,
           "examples": [
             {
               "lemma": "agnikukkawa",
@@ -12879,28 +12879,12 @@
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L39894"
             },
             {
-              "lemma": "kARqapfzwa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L40127"
-            },
-            {
               "lemma": "kArkkaSya",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L41169"
             },
             {
-              "lemma": "kAryyodvAra",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L41437"
-            },
-            {
               "lemma": "kAlamaSikA",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L41721"
-            },
-            {
-              "lemma": "kAlAttaraviza",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L41867"
-            },
-            {
-              "lemma": "kAlyaRineya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L42041"
             },
             {
               "lemma": "kASmaro",
@@ -12945,11 +12929,27 @@
             {
               "lemma": "kulahaRwaka",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44838"
+            },
+            {
+              "lemma": "kuliSANkuSa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44970"
+            },
+            {
+              "lemma": "kulakvaguYjA",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45015"
+            },
+            {
+              "lemma": "kulmAzABimuta",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45064"
+            },
+            {
+              "lemma": "kumumADipa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45521"
             }
           ]
         },
         "INM": {
-          "count": 2144,
+          "count": 2143,
           "examples": [
             {
               "lemma": "abBakzAH",
@@ -13359,7 +13359,7 @@
           ]
         },
         "SCH": {
-          "count": 8423,
+          "count": 8421,
           "examples": [
             {
               "lemma": "aMSumatPala",
@@ -13564,7 +13564,7 @@
           ]
         },
         "STC": {
-          "count": 1067,
+          "count": 1066,
           "examples": [
             {
               "lemma": "akalkakalita",
@@ -13769,7 +13769,7 @@
           ]
         },
         "PUI": {
-          "count": 4529,
+          "count": 4527,
           "examples": [
             {
               "lemma": "aMkuSA",
@@ -13974,7 +13974,7 @@
           ]
         },
         "BHS": {
-          "count": 10243,
+          "count": 10242,
           "examples": [
             {
               "lemma": "aMSaDAtrI",
@@ -14384,7 +14384,7 @@
           ]
         },
         "AP": {
-          "count": 30758,
+          "count": 30834,
           "examples": [
             {
               "lemma": "aMSAMSaH",
@@ -14589,7 +14589,7 @@
           ]
         },
         "ACC": {
-          "count": 14107,
+          "count": 14115,
           "examples": [
             {
               "lemma": "aMSadaSA",
@@ -15003,208 +15003,208 @@
           "examples": [
             {
               "lemma": "aki",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L94"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L86"
             },
             {
               "lemma": "akzU",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L147"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L131"
             },
             {
               "lemma": "agi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L194"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L173"
             },
             {
               "lemma": "aGi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L206"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L185"
             },
             {
               "lemma": "aWi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L502"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L445"
             },
             {
               "lemma": "adi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L811"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L712"
             },
             {
               "lemma": "anjU",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L961"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L842"
             },
             {
               "lemma": "abi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1053"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L928"
             },
             {
               "lemma": "aSU",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1795"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1600"
             },
             {
               "lemma": "ACi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2185"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1946"
             },
             {
               "lemma": "Apx",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2220"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L1977"
             },
             {
               "lemma": "iKi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2489"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2212"
             },
             {
               "lemma": "igi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2534"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2252"
             },
             {
               "lemma": "idi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2785"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2449"
             },
             {
               "lemma": "inDI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2821"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2482"
             },
             {
               "lemma": "ivi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2933"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2583"
             },
             {
               "lemma": "IKi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3164"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2780"
             },
             {
               "lemma": "IN",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3173"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L2788"
             },
             {
               "lemma": "uKi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3557"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3141"
             },
             {
               "lemma": "uN",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3562"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3146"
             },
             {
               "lemma": "uCi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3642"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3219"
             },
             {
               "lemma": "uCI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3685"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3260"
             },
             {
               "lemma": "undI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3812"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3378"
             },
             {
               "lemma": "uhir",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4069"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3616"
             },
             {
               "lemma": "UWa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4102"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3648"
             },
             {
               "lemma": "UyI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4159"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3704"
             },
             {
               "lemma": "UrRuY",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4233"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L3772"
             },
             {
               "lemma": "fji",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4629"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4111"
             },
             {
               "lemma": "fRu",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4664"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4142"
             },
             {
               "lemma": "fDu",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4765"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4234"
             },
             {
               "lemma": "ejf",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4966"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4419"
             },
             {
               "lemma": "ezf",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5089"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4529"
             },
             {
               "lemma": "oKf",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5095"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4535"
             },
             {
               "lemma": "oRf",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5124"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4562"
             },
             {
               "lemma": "olaqi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5135"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4573"
             },
             {
               "lemma": "kaki",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5209"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4640"
             },
             {
               "lemma": "kaKe",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5268"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4698"
             },
             {
               "lemma": "kage",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5292"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4720"
             },
             {
               "lemma": "kaci",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5334"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4760"
             },
             {
               "lemma": "kawe",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5404"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4827"
             },
             {
               "lemma": "kaWi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5446"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4866"
             },
             {
               "lemma": "kaqi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5514"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L4931"
             },
             {
               "lemma": "kadi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5792"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5188"
             },
             {
               "lemma": "kabf",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5953"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5334"
             },
             {
               "lemma": "kamu",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5988"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5367"
             },
             {
               "lemma": "kasi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6467"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5813"
             },
             {
               "lemma": "kAci",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6537"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5879"
             },
             {
               "lemma": "kASf",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6599"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5938"
             },
             {
               "lemma": "kAsf",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6656"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L5988"
             },
             {
               "lemma": "kuN",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6999"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/krm/krm.txt#L6305"
             }
           ]
         },
         "IEG": {
-          "count": 4373,
+          "count": 4366,
           "examples": [
             {
               "lemma": "abAtamAla",
@@ -15383,10 +15383,6 @@
               "href": null
             },
             {
-              "lemma": "AQa",
-              "href": null
-            },
-            {
               "lemma": "ADavApa",
               "href": null
             },
@@ -15404,6 +15400,10 @@
             },
             {
               "lemma": "aDikAravarttanA",
+              "href": null
+            },
+            {
+              "lemma": "aDikArimuKya",
               "href": null
             }
           ]
@@ -15891,7 +15891,7 @@
       "dictionaryCount": 7,
       "unique": {
         "MW": {
-          "count": 45112,
+          "count": 45097,
           "examples": [
             {
               "lemma": "aMSarUpiRI",
@@ -16096,7 +16096,7 @@
           ]
         },
         "AP": {
-          "count": 35762,
+          "count": 35854,
           "examples": [
             {
               "lemma": "aMSAMSaH",
@@ -16301,212 +16301,212 @@
           ]
         },
         "PWG": {
-          "count": 2601,
+          "count": 2599,
           "examples": [
             {
               "lemma": "aMSasavarRa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L208"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L84"
             },
             {
               "lemma": "aMSApay",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L219"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L92"
             },
             {
               "lemma": "aMsApay",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L443"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L225"
             },
             {
               "lemma": "akrILant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1279"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L765"
             },
             {
               "lemma": "akrIyamARa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1284"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L769"
             },
             {
               "lemma": "akzamAla",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1655"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L955"
             },
             {
               "lemma": "akzavant",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1927"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1123"
             },
             {
               "lemma": "akzArAlavaRASin",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1997"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1173"
             },
             {
               "lemma": "akzoByarAja",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2285"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1354"
             },
             {
               "lemma": "aKuva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2416"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1433"
             },
             {
               "lemma": "aKKalIkar",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2442"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L1455"
             },
             {
               "lemma": "agnivAyu",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3684"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2226"
             },
             {
               "lemma": "agnivESya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3734"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2265"
             },
             {
               "lemma": "agnivESyAyana",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3740"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2270"
             },
             {
               "lemma": "agnisiMhanandana",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3926"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2389"
             },
             {
               "lemma": "agnIDrI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4045"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2458"
             },
             {
               "lemma": "agnIzomIyatva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4101"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2494"
             },
             {
               "lemma": "agropaharaRa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4765"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L2880"
             },
             {
               "lemma": "aNgay",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5822"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3426"
             },
             {
               "lemma": "aNgalIyalipi",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5870"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3459"
             },
             {
               "lemma": "aNgIkar",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6273"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L3703"
             },
             {
               "lemma": "acirapraBa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6942"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4085"
             },
             {
               "lemma": "acirABa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6989"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4123"
             },
             {
               "lemma": "acCAvAkaSastra",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7154"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4202"
             },
             {
               "lemma": "acCupta",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7234"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4252"
             },
             {
               "lemma": "acCowana",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7255"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4270"
             },
             {
               "lemma": "ajaganDa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7606"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4440"
             },
             {
               "lemma": "ajaGnivaMs",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7672"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4481"
             },
             {
               "lemma": "ajarAja",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7970"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4686"
             },
             {
               "lemma": "ajAkfpaRIya",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8078"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4754"
             },
             {
               "lemma": "ajinapatrikA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8372"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L4927"
             },
             {
               "lemma": "aYcay",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8846"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5229"
             },
             {
               "lemma": "aYjalIkar",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9247"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5379"
             },
             {
               "lemma": "aYjasyA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9311"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5410"
             },
             {
               "lemma": "awaviSiKara",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9492"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5513"
             },
             {
               "lemma": "awwAlikAbanDa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9671"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5631"
             },
             {
               "lemma": "aRAla",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9764"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5699"
             },
             {
               "lemma": "aRuDarma",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9938"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L5786"
             },
             {
               "lemma": "atimuktakamAlA",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11648"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6834"
             },
             {
               "lemma": "atiliha",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L11881"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L6998"
             },
             {
               "lemma": "ativizAdin",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12023"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7102"
             },
             {
               "lemma": "atisaMDita",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12293"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7288"
             },
             {
               "lemma": "atItvan",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12489"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7432"
             },
             {
               "lemma": "atIpa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12505"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7442"
             },
             {
               "lemma": "atyamlaparRa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L12902"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7699"
             },
             {
               "lemma": "atyAsa",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13106"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L7807"
             },
             {
               "lemma": "adaHkar",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L13881"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8124"
             },
             {
               "lemma": "adoBU",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L14752"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8596"
             },
             {
               "lemma": "admanI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L14941"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L8705"
             },
             {
               "lemma": "aDaHpada",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L15476"
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L9038"
             }
           ]
         },
         "PWK": {
-          "count": 13826,
+          "count": 13825,
           "examples": [
             {
               "lemma": "aMSukAnta",
@@ -16711,7 +16711,7 @@
           ]
         },
         "WIL": {
-          "count": 3933,
+          "count": 3931,
           "examples": [
             {
               "lemma": "aMSana",
@@ -16916,7 +16916,7 @@
           ]
         },
         "VCP": {
-          "count": 5191,
+          "count": 5193,
           "examples": [
             {
               "lemma": "aMSasavarRRana",
@@ -16999,16 +16999,8 @@
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L2721"
             },
             {
-              "lemma": "agnIzomapraRayanI",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L2860"
-            },
-            {
               "lemma": "agnyudDAra",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L2968"
-            },
-            {
-              "lemma": "agrajAta",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L3141"
             },
             {
               "lemma": "agradAnIya",
@@ -17117,11 +17109,19 @@
             {
               "lemma": "aNgavEguRya",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L4406"
+            },
+            {
+              "lemma": "aNgaSudDi",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L4415"
+            },
+            {
+              "lemma": "aNgahAni",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L4447"
             }
           ]
         },
         "SKD": {
-          "count": 17192,
+          "count": 17183,
           "examples": [
             {
               "lemma": "afRI",
