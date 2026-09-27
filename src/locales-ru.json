@@ -367,5 +367,27 @@
       "trust-next-use-label": "Следующий шаг",
       "trust-next-use": "Используйте широкий режим, чтобы узнать, какие словари фиксируют заглавное слово; для более глубоких выводов используйте страницы основного сравнения."
     }
+  },
+  "access-structure": {
+    "title": "Структуры доступа — печатный порядок словника",
+    "view-all": "все записи",
+    "view-print": "печатные статьи",
+    "view-main": "основные статьи",
+    "view-heads": "заглавные (гнёзда AP сняты)",
+    "view-heads_nest": "заглавные, гнёзда по ступеням гласного свёрнуты",
+    "factor-anusvara": "анусвара ṃ",
+    "factor-visarga_internal": "висарга ḥ внутри слова",
+    "factor-visarga_final": "висарга ḥ в исходе",
+    "factor-gemination_after_r": "удвоение после r",
+    "status-clear": "однозначно",
+    "status-partial": "частично",
+    "status-weak": "слабо",
+    "status-undetermined": "не определено",
+    "status-contested": "оспаривается",
+    "kind-isolated": "одиночное",
+    "kind-block": "смещённый блок",
+    "axis-rate": "Доля нарушений",
+    "axis-displaced": "Смещённые заголовки",
+    "axis-runs": "Алфавитные прогоны"
   }
 }

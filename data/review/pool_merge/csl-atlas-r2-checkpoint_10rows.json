@@ -1,0 +1,245 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-24T23:57:53Z",
+  "generatedBy": "npm run merge-review-pool-decisions",
+  "poolVersion": "v1",
+  "sheetId": "csl-atlas-r2-checkpoint_10rows",
+  "rows": 10,
+  "rowsDoubleKeyed": 10,
+  "rowsSingleKey": 0,
+  "counts": {
+    "reviewed-ok": 10
+  },
+  "records": [
+    {
+      "reviewId": "checkpoint:r2-drift:gam:pwg",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    },
+    {
+      "reviewId": "checkpoint:r2-drift:dharma:pwg",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    },
+    {
+      "reviewId": "checkpoint:r2-drift:gam:ben",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    },
+    {
+      "reviewId": "checkpoint:r2-drift:rama:ben",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    },
+    {
+      "reviewId": "checkpoint:r2-drift:gam:ae",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    },
+    {
+      "reviewId": "checkpoint:r2-drift:dharma:ae",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    },
+    {
+      "reviewId": "checkpoint:r2-drift:dharma:vcp",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    },
+    {
+      "reviewId": "checkpoint:r2-drift:dharma:skd",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    },
+    {
+      "reviewId": "checkpoint:r2-drift:iti:ap",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    },
+    {
+      "reviewId": "checkpoint:r2-drift:gam:ap",
+      "keys": [
+        {
+          "annotator": "pool-a01",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        },
+        {
+          "annotator": "pool-a02",
+          "decision": "approve",
+          "resolvedLabel": "",
+          "note": ""
+        }
+      ],
+      "singleKey": false,
+      "reviewStatus": "reviewed-ok",
+      "reviewedValue": "",
+      "adjudicated": false,
+      "adjudicatedBy": null,
+      "note": ""
+    }
+  ]
+}

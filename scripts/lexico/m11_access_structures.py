@@ -21,6 +21,11 @@ WHAT IS MEASURED (all from the `<L>` header lines — no body parsing except the
    - `heads` — AP only (its PRIMARY view): `main` minus fractional-L paragraph run-ons and
                minus the prefix derivatives nested under a verbal root (a root record is
                one whose body carries the conjugation-class mark `¦ €N`).
+   - `heads_nest` — AP only (H5409): `heads` with the nest also closing over the root's
+               VOWEL GRADES — guṇa, vṛddhi, zero grade of the root's last vowel, so √kṛ
+               `kf` swallows kāra and karaṇa. Reported in `root_nests.vowel_grade_filter`
+               with the verdict on refutation condition 3 of the methods page; it is NOT
+               the scored view (AP stays scored on `heads`).
    Consecutive records with the same `k1` collapse into one UNIT (MW's `1A`/`1B`
    continuation records; adjacent homonyms), so a unit is one position in the order.
 
@@ -131,12 +136,14 @@ def _grid():
 
 VARNA_RULES = [rule_name(p) for p in _grid()]
 RULES = VARNA_RULES + CONTROLS
-VIEWS = ["all", "print", "main", "heads"]
+VIEWS = ["all", "print", "main", "heads", "heads_nest"]
 PRIMARY_VIEW = {"ap": "heads"}   # every other dict is scored on `main`
 RESTART_WINDOW = 10         # units compared on each side of a candidate restart
 MIN_SENSITIVE = 30          # below this a contrast verdict is `undetermined`
 RUN_MIN = 25                # displaced stretch this long = an out-of-place block
 SAMPLE_ISOLATED = 25        # isolated counterexamples embedded in the JSON per dict
+CONFIRM_SHARE = 0.75        # share of the heads→roots-only gap a filter must close (H5409)
+PARTLY_SHARE = 0.25         # below CONFIRM_SHARE but at least this = `partly`
 # First page of a supplement the digitisers MERGED into alphabetical place (fractional L),
 # so record order cannot show it as a separate sequence: MW's Additions and Corrections.
 MERGED_SUPPLEMENT_FROM_PAGE = {"mw": 1308}
@@ -311,11 +318,50 @@ def e_level(e):
     return int(m.group(1)) if m else 1
 
 
-def heads_filter(recs):
+VOWELS = set("aAiIuUfFxXeEoO")
+# Vowel grades (H5409). A derivative nested under a root carries the root vowel in one of
+# three grades, so its stem is NOT a literal prefix extension of the root: √kṛ (`kf`) nests
+# kāra (`kAra`, vṛddhi) and karaṇa (`karaRa`, guṇa); √budh (`buD`) nests bodha (`boDa`).
+GUNA = {"a": "a", "A": "A", "i": "e", "I": "e", "u": "o", "U": "o",
+        "f": "ar", "F": "ar", "x": "al", "X": "al", "e": "e", "E": "E", "o": "o", "O": "O"}
+VRDDHI = {"a": "A", "A": "A", "i": "E", "I": "E", "u": "O", "U": "O",
+          "f": "Ar", "F": "Ar", "x": "Al", "X": "Al", "e": "E", "E": "E", "o": "O", "O": "O"}
+ZERO = {"A": "a", "I": "i", "U": "u", "F": "f", "X": "x", "e": "i", "E": "i",
+        "o": "u", "O": "u"}
+
+
+def grade_variants(root):
+    """Stem prefixes a derivative of `root` may open with: the root itself plus its guṇa,
+    vṛddhi and zero-grade forms, the root vowel being the LAST vowel of the root string
+    (Sanskrit roots are all but monosyllabic once the class mark is stripped).
+    √kṛ `kf` → kf, kar, kAr; √budh `buD` → buD, boD, bOD; √gam `gam` → gam, gAm.
+    Returns a deterministic list, the literal root first. Not modelled: samprasāraṇa,
+    nasal infix loss, set/anit ā-roots (`sTA` → sTita) — those stay counterexamples."""
+    idx = [i for i, ch in enumerate(root) if ch in VOWELS]
+    if not idx:
+        return [root]
+    i = idx[-1]
+    onset, nuc, coda = root[:i], root[i], root[i + 1:]
+    out = [root]
+    for table in (GUNA, VRDDHI, ZERO):
+        g = table.get(nuc)
+        if not g:
+            continue
+        v = onset + g + coda
+        if v not in out:
+            out.append(v)
+    return out
+
+
+def heads_filter(recs, nest_aware=False):
     """AP only: drop paragraph run-ons (fractional L at level 1) and the derivatives that
-    follow a root inside its nest (k1 extends the root's k1). Returns kept, stats."""
-    kept, runons, nested, roots = [], 0, 0, 0
+    follow a root inside its nest. `nest_aware=False` (the `heads` view) matches a
+    derivative only when its k1 literally extends the root's k1; `nest_aware=True` (the
+    `heads_nest` view, H5409) also matches the root's guṇa/vṛddhi/zero-grade stems, so the
+    whole nest collapses into one sort unit keyed on the root. Returns kept, stats."""
+    kept, runons, nested, roots, graded = [], 0, 0, 0, 0
     root = None
+    variants = ()
     for r in recs:
         if "." in r["L"]:
             runons += 1
@@ -323,15 +369,24 @@ def heads_filter(recs):
         if r["root"]:
             roots += 1
             root = r["k1"]
+            variants = grade_variants(root) if nest_aware else (root,)
             kept.append(r)
             continue
-        if root is not None and r["k1"].startswith(root) and r["k1"] != root:
-            nested += 1
-            continue
+        if root is not None and r["k1"] != root:
+            hit = next((v for v in variants if r["k1"].startswith(v)), None)
+            if hit is not None:
+                nested += 1
+                if hit != root:
+                    graded += 1
+                continue
         root = None
+        variants = ()
         kept.append(r)
-    return kept, {"roots": roots, "paragraph_runons_dropped": runons,
-                  "root_nest_derivatives_dropped": nested}
+    st = {"roots": roots, "paragraph_runons_dropped": runons,
+          "root_nest_derivatives_dropped": nested}
+    if nest_aware:
+        st["vowel_grade_derivatives_dropped"] = graded
+    return kept, st
 
 
 def view_records(recs, view, code=None):
@@ -343,7 +398,7 @@ def view_records(recs, view, code=None):
     main_ = [r for r in kept if e_level(r["e"]) == 1]
     if view == "main" or code not in ROOT_MARK:
         return main_
-    return heads_filter(main_)[0]
+    return heads_filter(main_, nest_aware=(view == "heads_nest"))[0]
 
 
 def units(recs):
@@ -668,6 +723,50 @@ def root_distance_profile(us, ev):
                        for k, v in buckets.items())
 
 
+def nest_aware_block(main_recs, rule, cache, heads_rate, roots_rate):
+    """H5409 — re-measure AP on the `heads_nest` view (root nests collapsed through the
+    vowel grades) and grade refutation condition 3 of the census methods page: does a
+    vowel-grade-aware filter move the heads-view rate toward the roots-only floor?
+    `confirmed` = at least CONFIRM_SHARE of the gap between the two closed, `partly` = at
+    least PARTLY_SHARE, `refuted` = less (or the rate gets worse)."""
+    kept, st = heads_filter(main_recs, nest_aware=True)
+    us = units(kept)
+    ev = evaluate(us, rule, cache)
+    nest_rate = rate(len(ev["within"]), len(us) - 1 - len(ev["restarts"]))
+    gap = heads_rate - roots_rate
+    closed = rate(heads_rate - nest_rate, gap) if gap > 0 else None
+    verdict = "refuted"
+    if closed is not None and closed >= CONFIRM_SHARE:
+        verdict = "confirmed"
+    elif closed is not None and closed >= PARTLY_SHARE:
+        verdict = "partly"
+    residual = []
+    for i in ev["within"][:SAMPLE_ISOLATED]:
+        a, b = us[i], us[i + 1]
+        residual.append(OrderedDict([
+            ("prev_L", a["L"]), ("prev_pc", a["pc"]), ("prev_iast", slp1_to_iast(a["k1"])),
+            ("prev_is_root", bool(a["root"])),
+            ("next_L", b["L"]), ("next_pc", b["pc"]), ("next_iast", slp1_to_iast(b["k1"])),
+            ("next_is_root", bool(b["root"]))]))
+    return OrderedDict([
+        ("view", "heads_nest"),
+        ("rule", rule),
+        ("grades", "guna / vrddhi / zero-grade of the root's last vowel"),
+        ("units", len(us)),
+        ("root_nest_derivatives_dropped", st["root_nest_derivatives_dropped"]),
+        ("vowel_grade_derivatives_dropped", st["vowel_grade_derivatives_dropped"]),
+        ("descents", len(ev["within"])),
+        ("descent_rate", nest_rate),
+        ("heads_view_descent_rate", heads_rate),
+        ("roots_only_descent_rate", roots_rate),
+        ("share_of_heads_rate_removed", rate(heads_rate - nest_rate, heads_rate) if heads_rate else None),
+        ("share_of_gap_to_roots_only_closed", closed),
+        ("refutation_condition_3_verdict", verdict),
+        ("descent_rate_by_distance_from_last_root", root_distance_profile(us, ev)),
+        ("residual_counterexamples_sample", residual),
+    ])
+
+
 def displaced_blocks(us, on):
     blocks, i = [], 0
     while i < len(us):
@@ -718,7 +817,7 @@ def run_dict(code, rules_rows, cex_rows, csl=CSL):
     per_view = OrderedDict()
     evals = {}
     for view in VIEWS:
-        if view == "heads" and code not in ROOT_MARK:
+        if view in ("heads", "heads_nest") and code not in ROOT_MARK:
             continue
         us = units(view_records(recs, view, code))
         per_view[view] = OrderedDict()
@@ -829,7 +928,10 @@ def run_dict(code, rules_rows, cex_rows, csl=CSL):
         rev = evaluate(roots_only, best, cache)
         st["roots_only_units"] = len(roots_only)
         st["roots_only_descents"] = len(rev["within"])
-        st["roots_only_descent_rate"] = rate(len(rev["within"]), len(roots_only) - 1 - len(rev["restarts"]))
+        roots_rate = rate(len(rev["within"]), len(roots_only) - 1 - len(rev["restarts"]))
+        st["roots_only_descent_rate"] = roots_rate
+        st["vowel_grade_filter"] = nest_aware_block(main_recs, best, cache,
+                                                    pb["descent_rate"], roots_rate)
         out["root_nests"] = st
     return out
 
