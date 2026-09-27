@@ -9,6 +9,10 @@ abstract: >-
   (observed / derived / inferred / reviewed) and every dataset is reproducible
   from committed JSON plus the csl-orig source dictionaries.
 type: software
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21419691"
+    description: The concept DOI of the csl-atlas Zenodo deposit (resolves to the latest tagged release)
 authors:
   - family-names: "Gasūns"
     given-names: "Mārcis"
