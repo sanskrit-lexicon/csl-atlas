@@ -1,0 +1,630 @@
+{
+  "schemaVersion": "1.0.0",
+  "dict": "ap90",
+  "dictName": "Apte, The Practical Sanskrit-English Dictionary",
+  "edition": {
+    "label": "First edition (Poona, Shiralkar & Co., 1890), as scanned by Cologne",
+    "year": "1890",
+    "imprint": "Printed at the 'Arya Vijaya' Press, 160 Budhwar Peth, Poona; sold by Shiralkar & Co.",
+    "evidenceLevel": "observed",
+    "evidence": "Title page and imprint scans viewed 24-09-2026; preface signed 'Poona, 28th December 1890.'"
+  },
+  "scanSets": [
+    {
+      "id": "ap90-scan-pdf-tit",
+      "kind": "cologne-scan-pdf",
+      "description": "Cologne AP90Scan preliminary pages tit_0001-tit_0015 (title, imprint, preface pp. 1-4, directions 5-6, terminations 7-9, one blank leaf, abbreviations). Empty captions in csl-websanlexicon pdffiles.txt.",
+      "baseUrl": "https://www.sanskrit-lexicon.uni-koeln.de/scans/AP90Scan/AP90Scanpdf/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    },
+    {
+      "id": "ap90-scan-pdf",
+      "kind": "cologne-scan-pdf",
+      "description": "Cologne AP90Scan printed back matter pg_1179-pg_1196: the three appendices that close the numbered pagination. The numbered body pages pg_0001-pg_1178 are not part of the megastructure and are not declared.",
+      "baseUrl": "https://www.sanskrit-lexicon.uni-koeln.de/scans/AP90Scan/AP90Scanpdf/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    }
+  ],
+  "components": [
+    {
+      "id": "ap90.fm.title",
+      "sequence": 1,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "THE PRACTICAL SANSKRIT-ENGLISH DICTIONARY.",
+        "iast": null,
+        "english": "Title page of the first edition (Poona, Shiralkar & Co., 1890)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0001",
+          "image": "tit_0001.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-doc:source/dictionaries/prefaces/ap90pref.rst",
+          "note": "csldoc transcription of the title page and preface."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scan tit_0001 viewed 24-09-2026: 'The Practical Sanskrit-English Dictionary. Containing Appendices on Sanskrit Prosody and important Literary & Geographical names in the ancient history of India. (For the use of schools and colleges.) By Vaman Shivram Apte M.A., Principal and Professor of Sanskrit, Fergusson College, Poona. (All Rights Reserved.) Poona: Shiralkar & Co., Booksellers &c. &c. Budhwar Peth. 1890'; handwritten marks top right.",
+      "notes": null
+    },
+    {
+      "id": "ap90.fm.imprint",
+      "sequence": 2,
+      "position": "front",
+      "componentType": "imprint",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "POONA: PRINTED AT THE 'ARYA VIJAYA' PRESS.",
+        "iast": null,
+        "english": "Printer's imprint on the title verso (Arya Vijaya Press, 160 Budhwar Peth, Poona)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0002",
+          "image": "tit_0002.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-doc:source/dictionaries/prefaces/ap90pref.rst",
+          "note": "Cologne csldoc page transcription."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scan tit_0002 viewed 24-09-2026: 'POONA: Printed at the \"Arya Vijaya\" Press. 160 Budhwar Peth.' with handwritten accession marks.",
+      "notes": null
+    },
+    {
+      "id": "ap90.fm.preface",
+      "sequence": 3,
+      "position": "front",
+      "componentType": "preface",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [
+        "decode",
+        "source"
+      ],
+      "title": {
+        "asPrinted": "PREFACE.",
+        "iast": null,
+        "english": "Apte's preface to the first edition"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 4,
+        "printedRange": "1-4",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "scope of the headword stock: Vedic vs classical usage",
+          "markup": null,
+          "mechanism": "p. (2): words are marked as Vedic or Classical or both, and as common or obsolete; the Vedic and the 'Bhashya' (classical) branches are deliberately kept as two distinct branches (Upanishads vs Vedanga class).",
+          "atlasRef": null
+        },
+        {
+          "target": "the sources behind the entries",
+          "markup": "<ls> in ap90.txt",
+          "mechanism": "p. (2): built on Böhtlingk-Roth and Wilson with the smaller aid-works, plus (p. 3) the Tarkasamgraha, Bhāṣāparichchheda and other philosophy manuals for the technical vocabularies, and Monier Williams, Goldstücker's Dictionary, the Petersburg Dictionary and Bohlen's Glossary where quotable.",
+          "atlasRef": null
+        },
+        {
+          "target": "prose-before-verse arrangement of quotations",
+          "markup": null,
+          "mechanism": "p. (3): 'the plan and arrangement of the work will be best understood by the Directions which follow', and quotations of prose composed before verse are so noted.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0003",
+          "image": "tit_0003.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0004",
+          "image": "tit_0004.pdf",
+          "printedPage": "(2)"
+        },
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0005",
+          "image": "tit_0005.pdf",
+          "printedPage": "(3)"
+        },
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0006",
+          "image": "tit_0006.pdf",
+          "printedPage": "(4)"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-doc:source/dictionaries/prefaces/ap90pref.rst",
+          "note": "Cologne csldoc page transcription."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scans tit_0003-tit_0006 viewed 24-09-2026: printed pages (1)-(4), first page unnumbered, signed 'Poona, 28th December 1890. V. S. APTE.' with a Devanagari closing couplet.",
+      "notes": null
+    },
+    {
+      "id": "ap90.fm.directions",
+      "sequence": 4,
+      "position": "front",
+      "componentType": "user-guide",
+      "componentTypeNote": null,
+      "function": "instruct",
+      "secondaryFunctions": [
+        "decode"
+      ],
+      "title": {
+        "asPrinted": "DIRECTIONS TO BE STUDIED BEFORE USING THIS DICTIONARY.",
+        "iast": null,
+        "english": "The fourteen numbered directions explaining the entry arrangement"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 2,
+        "printedRange": "5-6",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "order of the parts of speech inside an entry",
+          "markup": "sense and homonym order in ap90.txt entries",
+          "mechanism": "direction 1 fixes the sequence: noun in large type with derivative parts of speech after it; within a noun the order is nom. of trees and plants, inferior animals, male human beings, women, objects common to both sexes, and things neither male nor female (direction 2, numerals by black dashes, etc.).",
+          "atlasRef": null
+        },
+        {
+          "target": "typographic conventions: synonyms, compounds, accents",
+          "markup": "marker and bracket conventions in ap90.txt",
+          "mechanism": "directions 5-8: several meanings distinguished by black figures; synonyms of the same meaning under one; compounds grouped under the first word with the black dash; semi-antiquated or Puranic forms marked 'v.r.'",
+          "atlasRef": null
+        },
+        {
+          "target": "grammar apparatus: conjugation signs and Krit/Taddhita references",
+          "markup": "conjugation-class and suffix notations in ap90.txt",
+          "mechanism": "directions 10-11: P., Atm. and U. signs with conjugation-class numbers; Krit and Taddhita words referenced to the Explanation of Terminations; direction 13 sends mythology to small type keyed to the Puranas and Kirtya.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0007",
+          "image": "tit_0007.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0008",
+          "image": "tit_0008.pdf",
+          "printedPage": "(6)"
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scans tit_0007-tit_0008 viewed 24-09-2026: fourteen numbered items; first page unnumbered, second printed (6).",
+      "notes": null
+    },
+    {
+      "id": "ap90.fm.terminations",
+      "sequence": 5,
+      "position": "front",
+      "componentType": "grammatical-key",
+      "componentTypeNote": null,
+      "function": "decode",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "EXPLANATION OF TERMINATIONS USED IN THE DERIVATION OF WORDS.",
+        "iast": null,
+        "english": "Key to the Krit and Taddhita terminations used in derivations"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 3,
+        "printedRange": "7-9",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "derivation suffixes quoted in entries",
+          "markup": "Krit/Taddhita termination references in ap90.txt entries",
+          "mechanism": "each termination (a, ka, tra, tana, lyu, u, ti, ktva...) is glossed with its function and examples, e.g. '(s) a Tad. ter. showing possession, as in ...'.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0009",
+          "image": "tit_0009.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0010",
+          "image": "tit_0010.pdf",
+          "printedPage": "(8)"
+        },
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0011",
+          "image": "tit_0011.pdf",
+          "printedPage": "(9)"
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scans tit_0009-tit_0011 viewed 24-09-2026: two-column key 'N.B. Ter. stands for Termination, and Tad. for Taddhita', running (7)-(9), the last page closing with 'Note.-The Dhatus will be separately published hereafter.'",
+      "notes": "The promised separate publication of the Dhatus never forms part of this volume's scans."
+    },
+    {
+      "id": "ap90.fm.abbreviations",
+      "sequence": 6,
+      "position": "front",
+      "componentType": "abbreviation-list",
+      "componentTypeNote": null,
+      "function": "decode",
+      "secondaryFunctions": [
+        "decode"
+      ],
+      "title": {
+        "asPrinted": "A LIST OF ABBREVIATIONS USED IN THE DICTIONARY.",
+        "iast": null,
+        "english": "Abbreviations: I. of works and authors, II. grammatical and other symbols"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 3,
+        "printedRange": "10-13",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "literary source abbreviations in entries",
+          "markup": "<ls> in ap90.txt",
+          "mechanism": "siglum = title with the edition used; the note fixes how one or two Arabic figures after a siglum are read (canto/chapter vs verse; a single figure = page).",
+          "atlasRef": null
+        },
+        {
+          "target": "grammatical abbreviations and symbols",
+          "markup": "<ab>-style markers in ap90.txt",
+          "mechanism": "part II expands them (a. = adjective, pass. = passive, pot. p. = potential passive participle, s.v. = sub voce, ° = elision supplying the rest of a word, etc.).",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0013",
+          "image": "tit_0013.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0014",
+          "image": "tit_0014.pdf",
+          "printedPage": "(12)"
+        },
+        {
+          "scanSet": "ap90-scan-pdf-tit",
+          "ref": "t0015",
+          "image": "tit_0015.pdf",
+          "printedPage": "(13)"
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scans tit_0013-tit_0015 viewed 24-09-2026: section I opens unnumbered with the head-note 'Except where otherwise specified, the Editions of works referred to are mostly those printed at Calcutta' and runs Ait. Br.-K. P.; page (12) carries Ks.-V. May.; page (13) closes the works list (Vop.-Yv., Yaj.), adds the note on Arabic figures (canto vs verse vs page) and opens 'II. Grammatical and other Abbreviations, and Symbols' (A./Atm.-lit., loc.-&c. plus the ° symbol).",
+      "notes": "The first page of the list is unnumbered and the intervening verso (scan tit_0012) is blank, so printed pages (10)-(11) are not identifiable as such on the scans; the numbered run resumes at (12)-(13)."
+    },
+    {
+      "id": "ap90.bm.appendix1-prosody",
+      "sequence": 7,
+      "position": "back",
+      "componentType": "embedded-text",
+      "componentTypeNote": null,
+      "function": "instruct",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "APPENDIX I. SANSKRIT PROSODY.",
+        "iast": null,
+        "english": "Appendix I: a compact manual of Sanskrit prosody (Introduction and Sections A-D of metres)"
+      },
+      "languages": [
+        "eng",
+        "san"
+      ],
+      "extent": {
+        "pages": 11,
+        "printedRange": "1179-1189",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1179",
+          "image": "pg_1179.pdf",
+          "printedPage": "1179"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1180",
+          "image": "pg_1180.pdf",
+          "printedPage": "1180"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1181",
+          "image": "pg_1181.pdf",
+          "printedPage": "1181"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1182",
+          "image": "pg_1182.pdf",
+          "printedPage": "1182"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1183",
+          "image": "pg_1183.pdf",
+          "printedPage": "1183"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1184",
+          "image": "pg_1184.pdf",
+          "printedPage": "1184"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1185",
+          "image": "pg_1185.pdf",
+          "printedPage": "1185"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1186",
+          "image": "pg_1186.pdf",
+          "printedPage": "1186"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1187",
+          "image": "pg_1187.pdf",
+          "printedPage": "1187"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1188",
+          "image": "pg_1188.pdf",
+          "printedPage": "1188"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1189",
+          "image": "pg_1189.pdf",
+          "printedPage": "1189"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-doc:source/dictionaries/prefaces/ap90app1.rst",
+          "note": "csldoc transcription of Appendix I."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scans pg_1179-pg_1189 viewed 24-09-2026: 'APPENDIX I. - SANSKRIT PROSODY.' opens printed p. 1179 with the Introduction (Piṅgala's eight-chapter work, Yādava Prakāśa's method, Śebaliṅkara's commentary, mātrā and guru/laghu definitions); pp. 1180-1189 hold Section A (metres with 4-14 syllables per quarter, Gāthā), Section B (Hallegal metres) and Sections C-D (samavṛtta and ardhasamavṛtta classes up to 28 syllables), each metre with definition, gana scheme and examples.",
+      "notes": null
+    },
+    {
+      "id": "ap90.bm.appendix2-writers",
+      "sequence": 8,
+      "position": "back",
+      "componentType": "source-list",
+      "componentTypeNote": null,
+      "function": "source",
+      "secondaryFunctions": [
+        "attest"
+      ],
+      "title": {
+        "asPrinted": "APPENDIX II.",
+        "iast": null,
+        "english": "Appendix II: dates and notices of important Sanskrit writers"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 3,
+        "printedRange": "1190-1192",
+        "items": null,
+        "itemsUnit": "writer notices"
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1190",
+          "image": "pg_1190.pdf",
+          "printedPage": "1190"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1191",
+          "image": "pg_1191.pdf",
+          "printedPage": "1191"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1192",
+          "image": "pg_1192.pdf",
+          "printedPage": "1192"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-doc:source/dictionaries/prefaces/ap90app2.rst",
+          "note": "csldoc transcription of Appendix II."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scans pg_1190-pg_1192 viewed 24-09-2026: 'APPENDIX II. - Giving the dates &c. of important Sanskrit writers', Devanagari headwords with English notices in two columns (Aryabhata 'A well-known astronomer. Born A.D. 476' ... Madhavacarya 'flourished in the 14th century A.D.'), ending on p. 1192.",
+      "notes": null
+    },
+    {
+      "id": "ap90.bm.appendix3-geo",
+      "sequence": 9,
+      "position": "back",
+      "componentType": "embedded-text",
+      "componentTypeNote": null,
+      "function": "source",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "APPENDIX III.",
+        "iast": null,
+        "english": "Appendix III: important geographical names in ancient India"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 4,
+        "printedRange": "1193-1196",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1193",
+          "image": "pg_1193.pdf",
+          "printedPage": "1193"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1194",
+          "image": "pg_1194.pdf",
+          "printedPage": "1194"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1195",
+          "image": "pg_1195.pdf",
+          "printedPage": "1195"
+        },
+        {
+          "scanSet": "ap90-scan-pdf",
+          "ref": "1196",
+          "image": "pg_1196.pdf",
+          "printedPage": "1196"
+        }
+      ],
+      "digitalDisposition": "transcribed",
+      "transcriptions": [
+        {
+          "kind": "docx",
+          "location": "sanskrit-lexicon/csl-doc:source/dictionaries/prefaces/ap90app3.rst",
+          "note": "csldoc transcription of Appendix III."
+        }
+      ],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scans pg_1193-pg_1196 viewed 24-09-2026: 'APPENDIX III. - On important Geographical names in ancient India', Devanagari headwords with English notices (Aṅga 'N. of an important kingdom situated on the right bank of the Ganges ...' through Videha), ending p. 1196 with the closing ornament.",
+      "notes": null
+    }
+  ],
+  "excludedScans": [
+    {
+      "scanSet": "ap90-scan-pdf-tit",
+      "ref": "t0012",
+      "reason": "Blank leaf (verso after the terminations key, before the abbreviations list); carries no printed content."
+    }
+  ],
+  "knownGaps": [],
+  "notes": "The title page, imprint, preface and all three appendices are transcribed in Cologne csldoc (ap90pref.rst, ap90app1-3.rst); the directions and terminations keys exist only as scans. The appendices sit inside the dictionary's printed pagination (pp. 1179-1196) rather than being separately paginated; the body's last page is 1178. The preface's 'Directions' pointer and the small-type mythology keys are described on directions page (6).",
+  "misfits": [
+    {
+      "label": "Handwritten accession and shelf marks on the title and imprint scans",
+      "componentId": null,
+      "why": "Marks of the scanned copy or an intermediate library, not of the edition; the schema has no copy-level layer (same class as the MW pilot's stamp-leaf misfit)."
+    }
+  ]
+}

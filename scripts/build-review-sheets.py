@@ -134,7 +134,7 @@ def source_panels(pointers):
     return [("Источник", "".join(rows))]
 
 
-def emit(stem, title, subtitle, items, filters, screening=None):
+def emit(stem, title, subtitle, items, filters, screening=None, reviewer=None, subdir=None):
     if _version_tuple(CSL_PYUTIL_VERSION) < _version_tuple(MIN_EMITTER_VERSION):
         raise RuntimeError(
             f"csl-pyutil >= {MIN_EMITTER_VERSION} is required "
@@ -151,7 +151,9 @@ def emit(stem, title, subtitle, items, filters, screening=None):
         "filters": filters,
         "generated": DATE,
         "strict_review": {
-            "reviewer": REVIEWER,
+            # B4 (H5308): in pool mode the pseudonym travels in the export's
+            # reviewer field; the sheet_id stem stays the contract (design §7 B4).
+            "reviewer": reviewer or REVIEWER,
             "require_all_votes": True,
             "require_reject_note": True,
         },
@@ -171,8 +173,9 @@ def emit(stem, title, subtitle, items, filters, screening=None):
             f"следующая сессия поймёт, к какому листу относятся эти решения)."
         ),
     }
-    OUT.mkdir(exist_ok=True)
-    target = OUT / f"{stem}_review.html"
+    out_dir = OUT / subdir if subdir else OUT
+    out_dir.mkdir(parents=True, exist_ok=True)
+    target = out_dir / f"{stem}_review.html"
     target.write_text(
         render_review_sheet(items, config, screening=screening), encoding="utf-8")
     print(f"wrote {target.relative_to(ROOT)} ({len(items)} items)")
@@ -200,9 +203,13 @@ def _humanize_h4_question(row):
     return q
 
 
-def h4_items():
+def h4_items(blind=False):
     """H4 sheet is no longer a human vote gate (H1621): show open rows if any,
-    else the agent-adjudicated set with IAST titles. Machine keys stay SLP1."""
+    else the agent-adjudicated set with IAST titles. Machine keys stay SLP1.
+
+    blind=True (H5308 pool mode, design §3.1/B3): the `Agent decision:` line is
+    contamination for a double-keyed reliability measurement — both keys would
+    measure agreement with a visible prior. Pool sheets render without it."""
     packet = read_json("data/lexico/h4_semantic_field_review_packet.json")
     open_rows = [r for r in packet["sampleRows"] if r["reviewStatus"] == "needs-review"]
     rows = open_rows or [r for r in packet["sampleRows"] if r["reviewStatus"] == "reviewed-ok"]
@@ -215,14 +222,17 @@ def h4_items():
         agent_line = (
             f"<p><strong>Agent decision:</strong> <code>{html.escape(str(agent))}</code>"
             f" ({html.escape(str(row.get('reviewer') or ''))}).</p>"
-            if agent else ""
+            if agent and not blind else ""
         )
+        h4_note = ("H1621: human vote not required; agent adjudication is the stage of record."
+                   if not blind else
+                   "Лист пула: прежние машинные решения скрыты — решайте только по источнику.")
         question = (
             f"<p><strong>Предлагаемая метка:</strong> <code>{html.escape(row['proposedLabel'])}</code>.</p>"
             f"<p>{html.escape(_humanize_h4_question(row))}</p>"
             f"{agent_line}"
             f"<p>Допустимые итоговые метки: <code>{html.escape(options)}</code>. "
-            "H1621: human vote not required; agent adjudication is the stage of record.</p>"
+            f"{h4_note}</p>"
         )
         items.append({
             "id": row["reviewId"],
@@ -231,7 +241,9 @@ def h4_items():
             "badges": [row["dictionary"]["label"], field_iast or row["field"]["label"]],
             "question": question,
             "panels": source_panels(row.get("sourcePointers", [])),
-            "note_placeholder": "Agent stage closed; optional override note only.",
+            "note_placeholder": "Agent stage closed; optional override note only."
+                                if not blind else
+                                "Если отклоняете: corrected-label: краткое основание.",
         })
     return items
 
@@ -543,6 +555,49 @@ def skd_items():
     return items
 
 
+def r2_items():
+    """B5 (H5308, design §7): R2 never had a sheet. Ten checkpoint cards from
+    r2_checkpoint_review_packet.json; the closed vocabulary is the row's own
+    proposedParserLabels. MG's recorded reviewedValue/reviewer/note are the
+    withheld expert baseline (design §9 honesty rule 3) and are deliberately
+    never rendered here — a pool card must not show a prior (design §3.1)."""
+    packet = read_json("data/lexico/r2_checkpoint_review_packet.json")
+    items = []
+    for row in packet["checkpointRows"]:
+        vocabulary = " · ".join(
+            f"<code>{html.escape(label)}</code>" for label in row["proposedParserLabels"])
+        pointers = []
+        for pointer in row.get("sourcePointers", []):
+            label = f"{pointer.get('kind')} · block {pointer.get('blockId') or pointer.get('rowId') or '—'}"
+            href = pointer.get("href")
+            line = (f'<a href="{html.escape(href)}" target="_blank" rel="noopener">'
+                    f'{html.escape(label)} · L{pointer.get("sourceLine")}</a>' if href
+                    else html.escape(label))
+            pointers.append(f"<p>{line} (строк: {pointer.get('rowCount', '—')})</p>")
+        question = (
+            f"<p><strong>Диагноз:</strong> <code>{html.escape(row['driftClass'])}</code> "
+            f"(приоритет {html.escape(row['priority'])}); пакет «{html.escape(row['packetTitle'])}».</p>"
+            f"<p>{html.escape(row['reviewQuestion'])}</p>"
+            f"<p><strong>Закрытый словарь меток серии</strong> (выберите одну; отклонение — "
+            f"укажите метку в примечании в формате <code>метка: основание</code>):<br>{vocabulary}</p>"
+            + _details("Сопоставление с архивом (source vs archive rows)",
+                       f"<p>source sense rows: <code>{row['archiveComparison']['sourceSenseRows']}</code> · "
+                       f"archive rows: <code>{row['archiveComparison']['archivedSenseRows']}</code> · "
+                       f"ratio: <code>{row['archiveComparison']['sourceToArchiveRatio']}</code> · "
+                       f"source records: <code>{row['archiveComparison']['sourceRecordCount']}</code></p>")
+        )
+        items.append({
+            "id": row["checkpointId"],
+            "filt": row["packetId"],
+            "title": f"{_iast(row['lemma'])} [{row['dict'].upper()}] — {row['driftClass']}",
+            "badges": [row["dict"].upper(), row["priority"], row["packetId"]],
+            "question": question,
+            "panels": [("Источник", "".join(pointers) or "<p>—</p>")],
+            "note_placeholder": "Если отклоняете: метка-из-словаря: краткое основание.",
+        })
+    return items
+
+
 BUILDERS = {
     "h4": (
         "csl-atlas-h4-semantic-field_89rows",
@@ -570,13 +625,74 @@ BUILDERS = {
     # Keep the historical 100units stem: it is part of the download filename,
     # sheet ID, and localStorage key contract. The corrected visible count is 102.
     "skd-iti": ("csl-atlas-skd-iti_100units", "SKD iti: 102 единицы для адъюдикации", "Общая доказательная очередь A02/A08/A30.", skd_items, [("authority-terminal", "authority-terminal"), ("separable", "separable"), ("other-no-authority", "other-no-authority")]),
+    # B5 (H5308): the R2 checkpoint packet's first sheet. Pool-dealt via
+    # --pool/--annotator; the standalone sheet is the full 10-card set.
+    "r2": (
+        "csl-atlas-r2-checkpoint_10rows",
+        "R2: чекпойнт-пакет дрифта — 10 строк",
+        "Десять контрольных строк R2 (дрифт парсера/архива). На каждой карточке — диагноз, "
+        "вопрос, закрытый словарь меток серии и ссылки на записи-источники csl-orig. "
+        "Записанные ранее решения скрыты: лист пула решается только по источнику.",
+        r2_items,
+        [("div-source-scope", "div-source-scope"), ("marker-run-scope", "marker-run-scope"),
+         ("indigenous-iti-authority", "indigenous-iti-authority"), ("ae-reverse-bands", "ae-reverse-bands"),
+         ("source-gap-controls", "source-gap-controls")],
+    ),
 }
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--only", choices=BUILDERS.keys())
-    choice = parser.parse_args().only
+    # B3/B4 (H5308, design §5–§7): pool mode renders a per-annotator BLIND slice.
+    # --annotator requires --pool; --pool without --annotator lists the deal.
+    parser.add_argument("--pool", type=Path, default=None,
+                        help="pool assignment manifest (data/review/pool_assignment.json)")
+    parser.add_argument("--annotator", default=None,
+                        help="pool pseudonym (pool-aNN) whose slice to render")
+    args = parser.parse_args()
+
+    if args.annotator:
+        if not args.pool:
+            parser.error("--annotator requires --pool")
+        pool = read_json(str(args.pool))
+        reviewer = args.annotator
+        if reviewer not in pool["annotators"]:
+            raise SystemExit(f"unknown pool annotator: {reviewer!r}")
+        # Blindness is the whole measurement (design §3.1 item 2): pool sheets
+        # never render a prior decision, ours or the agent's.
+        def pool_screening(deterministic, human, evidence, rules):
+            return {"deterministic": deterministic, "lookup": 0, "agent": 0,
+                    "human": human, "evidence_path": evidence, "rules": rules}
+        blind_builders = {
+            "r2": (r2_items, lambda: pool_screening(
+                0, 10, "data/lexico/r2_checkpoint_review_packet.json",
+                ["review pool: all 10 checkpoint rows are human-keyed, double-keyed "
+                 "(H5308); prior decisions withheld from the card"])),
+            "h4": (lambda: h4_items(blind=True), lambda: pool_screening(
+                0, 89, "data/lexico/h4_semantic_field_review_packet.json",
+                ["review pool: 16 auto-resolved rows excluded; the 89 keyable rows "
+                 "are re-keyed blind by two annotators (H5308)"])),
+            "xref": (xref_items, lambda: pool_screening(
+                10, 40, "data/lexico/xref_source_check_packet.json",
+                ["prefix-control: auto-resolve on the truncation marker (10 rows, not shown)",
+                 "review pool: the 40 shared-core rows are double-keyed blind (H5308)"])),
+        }
+        for key, (builder, screening_fn) in blind_builders.items():
+            entry = BUILDERS[key]
+            stem, title, subtitle, _, filters = entry[:5]
+            screening = screening_fn() if screening_fn else None
+            items = builder()
+            assigned = {row_id for row_id, keys in pool["packets"].get(stem, {}).get("rows", {}).items() if reviewer in keys}
+            sliced = [item for item in items if item["id"] in assigned]
+            if not sliced:
+                print(f"skip {stem}: no rows assigned to {reviewer}")
+                continue
+            emit(stem, title, subtitle, sliced, filters, screening,
+                 reviewer=reviewer, subdir=f"pool/{reviewer}")
+        return
+
+    choice = args.only
     for key, entry in BUILDERS.items():
         if choice and key != choice:
             continue

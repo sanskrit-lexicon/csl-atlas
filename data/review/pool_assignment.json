@@ -1,0 +1,584 @@
+{
+  "schemaVersion": "1.0.0",
+  "poolVersion": "v1",
+  "generatedAt": "2026-09-24T21:07:39Z",
+  "generatedBy": "npm run build-review-pool-assignment",
+  "rule": "rotating-offset-blocks; keys(i) = [A[i%n], A[(i%n + 1 + (i//n) % (n-1)) % n]]",
+  "annotators": [
+    "pool-a01",
+    "pool-a02"
+  ],
+  "packets": {
+    "csl-atlas-r2-checkpoint_10rows": {
+      "sourcePacket": "data/lexico/r2_checkpoint_review_packet.json",
+      "rows": {
+        "checkpoint:r2-drift:gam:pwg": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "checkpoint:r2-drift:dharma:pwg": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "checkpoint:r2-drift:gam:ben": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "checkpoint:r2-drift:rama:ben": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "checkpoint:r2-drift:gam:ae": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "checkpoint:r2-drift:dharma:ae": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "checkpoint:r2-drift:dharma:vcp": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "checkpoint:r2-drift:dharma:skd": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "checkpoint:r2-drift:iti:ap": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "checkpoint:r2-drift:gam:ap": [
+          "pool-a02",
+          "pool-a01"
+        ]
+      }
+    },
+    "csl-atlas-h4-semantic-field_89rows": {
+      "sourcePacket": "data/lexico/h4_semantic_field_review_packet.json",
+      "rows": {
+        "h4-skd-false-low:skd:01:viSezyaniGnavargaH:sukftin": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-skd-false-low:skd:02:viSezyaniGnavargaH:puRyavat": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-skd-false-low:skd:11:brahmavargaH:janana": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-skd-false-low:skd:17:vyomavargaH:dyo": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-skd-false-low:skd:18:vyomavargaH:div": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-skd-false-low:skd:19:vyomavargaH:vyoman": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-skd-false-low:skd:21:vyomavargaH:ambara": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-skd-false-low:skd:22:vyomavargaH:naBas": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-skd-false-low:skd:23:vyomavargaH:antarikza": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-skd-false-low:skd:24:vyomavargaH:gagana": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:01:narakavargaH:nAraka": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:02:narakavargaH:naraka": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:03:narakavargaH:niraya": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:04:narakavargaH:durgati": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:05:narakavargaH:tapana": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:06:narakavargaH:avIci": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:07:narakavargaH:mahArOrava": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:08:narakavargaH:rOrava": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:09:avyayavargaH:cirAya": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:10:avyayavargaH:cirarAtrAya": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:11:avyayavargaH:cirasya": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:12:avyayavargaH:cira": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:13:avyayavargaH:muhus": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:14:avyayavargaH:SaSvat": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:15:avyayavargaH:aBIkzRam": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:16:avyayavargaH:asakft": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:17:BUmivargaH:BU": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:18:BUmivargaH:BUmi": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-vcp-high-coverage:vcp:19:BUmivargaH:anantA": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-vcp-high-coverage:vcp:20:BUmivargaH:rasA": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:01:vanOzaDivargaH:vipina": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-ap-ap90-delta:ap:02:BUmivargaH:acalA": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:03:BUmivargaH:anantA": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-ap-ap90-delta:ap:04:BUmivargaH:sTirA": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:05:viSezyaniGnavargaH:mahASaya": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-ap-ap90-delta:ap:06:viSezyaniGnavargaH:mahecCa": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:07:viSezyaniGnavargaH:mahotsAha": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-ap-ap90-delta:ap:08:viSezyaniGnavargaH:suhfdaya": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:09:viSezyaniGnavargaH:sukftin": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-ap-ap90-delta:ap:10:digvargaH:pUrvA": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:11:SUdravargaH:avaravarRa": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-ap-ap90-delta:ap:12:DIvargaH:DizaRA": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:13:avyayavargaH:aBIkzRam": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-ap-ap90-delta:ap:14:avyayavargaH:cirarAtrAya": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:16:vyomavargaH:suravartman": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-ap-ap90-delta:ap:17:vESyavargaH:BUmispfS": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:18:vESyavargaH:vArtA": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-ap-ap90-delta:ap:19:siMhAdivargaH:paYcAsya": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-ap-ap90-delta:ap:20:kzatriyavargaH:mUrDABizikta": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:armh:01:pAtAlaBogivargaH:aDoBuvana": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:fri:02:vyomavargaH:div": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:bhs:03:DIvargaH:prajYA": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:armh:04:pAtAlaBogivargaH:pAtAla": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:fri:05:vyomavargaH:aBra": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:bhs:06:DIvargaH:mati": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:armh:07:pAtAlaBogivargaH:rasAtala": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:fri:08:vyomavargaH:vyoman": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:bhs:09:DIvargaH:pratipad": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:armh:10:pAtAlaBogivargaH:nAgaloka": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:fri:11:vyomavargaH:puzkara": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:bhs:12:DIvargaH:jYapti": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:armh:13:pAtAlaBogivargaH:kuhara": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:fri:14:vyomavargaH:ambara": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:bhs:15:DIvargaH:samADAna": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:armh:16:pAtAlaBogivargaH:Suzira": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:fri:17:vyomavargaH:naBas": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:bhs:18:DIvargaH:praRiDAna": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-specialized-baseline:armh:19:pAtAlaBogivargaH:vivara": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-specialized-baseline:fri:20:vyomavargaH:antarikza": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:ae:01:avyayavargaH:cit": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:mwe:02:avyayavargaH:cit": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:pui:03:narakavargaH:naraka": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:inm:04:svargavargaH:svar": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:ieg:05:vyomavargaH:aBra": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:ae:06:avyayavargaH:ha": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:mwe:07:avyayavargaH:ha": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:pui:08:narakavargaH:niraya": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:inm:09:svargavargaH:svarga": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:ieg:10:vyomavargaH:vyoman": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:ae:11:avyayavargaH:he": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:mwe:12:avyayavargaH:he": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:pui:13:narakavargaH:durgati": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:inm:14:svargavargaH:nAka": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:ieg:15:vyomavargaH:puzkara": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:ae:16:avyayavargaH:a": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:mwe:17:avyayavargaH:a": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:pui:18:narakavargaH:tapana": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "h4-index-reverse-control:inm:19:svargavargaH:tridiva": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "h4-index-reverse-control:ieg:20:vyomavargaH:ambara": [
+          "pool-a01",
+          "pool-a02"
+        ]
+      }
+    },
+    "csl-atlas-xref-shared-core_40edges": {
+      "sourcePacket": "data/lexico/xref_source_check_packet.json",
+      "rows": {
+        "mw-pwg-shared:01": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:02": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:03": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:04": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:05": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:06": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:07": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:08": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:09": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:10": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:11": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:12": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:13": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:14": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:15": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:16": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:17": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:18": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:19": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:20": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:21": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:22": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:23": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:24": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:25": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:26": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:27": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:28": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:29": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:30": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:31": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:32": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:33": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:34": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:35": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:36": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:37": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:38": [
+          "pool-a02",
+          "pool-a01"
+        ],
+        "mw-pwg-shared:39": [
+          "pool-a01",
+          "pool-a02"
+        ],
+        "mw-pwg-shared:40": [
+          "pool-a02",
+          "pool-a01"
+        ]
+      }
+    }
+  }
+}
