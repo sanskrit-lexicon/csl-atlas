@@ -10,6 +10,7 @@ ${t("learner.description")}
 
 ```js
 import { normalizeLookupQuery, slp1ToIast } from "../lib/lookup-normalize.js";
+import { csvDownloadButton } from "../lib/csv-download.js";
 ```
 
 ```js
@@ -58,6 +59,27 @@ const L = (en, ru) => currentLanguage === "ru" ? ru : en;
 const tierByCode = Object.fromEntries((idx.tierLegend ?? []).map(t => [t.tier, t]));
 const senseText = s => s.t ?? L(`sense ${s.pos + 1} of the ancestor article`, `смысл ${s.pos + 1} статьи-источника`);
 const vdcsStableId = p => p.k === "nominal" ? `vdcs:v1:nominal:${p.id}` : `vdcs:v1:verb:${p.id}`;
+const cardCsvRow = e => ({
+  lemma_iast: slp1ToIast(e.l),
+  lemma_slp1: e.l,
+  gender: e.g ?? "",
+  band: e.fb,
+  band_label_en: bandByNum[e.fb]?.en ?? "",
+  tier: e.tier,
+  dict_coverage: e.c,
+  dict_grammar_reliable: e.gr,
+  dictionaries: e.d.join(" "),
+  senses_survival: e.s?.length ?? 0,
+  senses_survived: e.s?.filter(s => s.sv).length ?? 0,
+  survival_threshold: e.s ? idx.survivalThreshold : "",
+  paradigm_id: e.p ? vdcsStableId(e.p) : "",
+  paradigm_cells: e.p?.cells ?? "",
+  roots_whitney: e.w?.map(r => r.iast).join(" ") ?? "",
+  root_ganas: e.w?.map(r => r.gana ?? "-").join(" ") ?? "",
+  homonyms_max: e.hm?.mx ?? "",
+  absences: absences(e).map(([code]) => code).join(" ")
+});
+const cardCsvColumns = Object.keys(cardCsvRow(idx.entries[0]));
 function absences(e) {
   const out = [];
   if (e.fb === 0) out.push([idx.absenceCodes.frequency, idx.absenceNotes.frequency]);
@@ -215,6 +237,14 @@ display(html`<div class="learner-cards">
 </div>`);
 ```
 
+```js
+display(html`<div class="learner-csv">${csvDownloadButton(
+  () => shown.map(cardCsvRow),
+  () => `learner-cards${browseBand >= 1 ? `-band${browseBand}` : ""}${query ? `-q-${normalizedQuery.candidates[0] ?? "search"}` : ""}.csv`,
+  cardCsvColumns
+)} <small>${L("Downloads the cards currently shown — the lookup/band-filter view, not the whole index.", "Выгружает показанные карточки — текущий вид поиска/фильтра, не весь указатель.")}</small></div>`);
+```
+
 <div class="note">${t("learner.caveat")}</div>
 
 <style>
@@ -278,6 +308,8 @@ display(html`<div class="learner-cards">
 .learner-grammar dd { margin: 0; overflow-wrap: anywhere; }
 .learner-root { display: inline-block; margin-right: 10px; }
 .learner-homonym { font-size: .8rem; border: 1px solid color-mix(in srgb, #d9b300, transparent 40%); border-radius: 6px; padding: 4px 8px; background: color-mix(in srgb, #d9b300, transparent 92%); }
+.learner-csv { display: flex; align-items: center; gap: 10px; margin: 4px 0 18px; }
+.learner-csv small { color: var(--theme-foreground-muted); }
 @media (max-width: 640px) { .trust-block div { grid-template-columns: 1fr; gap: 2px; } .learner-grammar div { grid-template-columns: 1fr; gap: 2px; } }
 </style>
 
