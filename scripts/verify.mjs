@@ -17,6 +17,7 @@ const VALIDATORS = [
   "validate-period-signatures.mjs",
   "validate-four-axis-independence.mjs",
   "validate-l0-gqd.mjs",
+  "validate-learner-index.mjs",
   "validate-review-reports.mjs"
 ];
 

@@ -22,6 +22,7 @@
     "validate-mw-depth": "node scripts/validate-mw-depth.mjs",
     "build-dict-comparison": "node scripts/build-dictionary-comparison.mjs",
     "build-learner-index": "node scripts/build-learner-index.mjs",
+    "validate-learner-index": "node scripts/validate-learner-index.mjs",
     "build-citation-apparatus": "node scripts/build-citation-apparatus.mjs",
     "build-citation-canon": "node scripts/build-citation-canon.mjs",
     "validate-citation-canon": "node scripts/validate-citation-canon.mjs",
