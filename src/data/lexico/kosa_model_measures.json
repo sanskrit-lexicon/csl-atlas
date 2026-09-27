@@ -1,0 +1,1094 @@
+{
+ "schemaVersion": "1.0",
+ "generatedBy": "scripts/lexico/m10_kosa_macrostructure_model.py",
+ "generatedAt": "2026-09-24T02:40:20.645Z",
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "sources": {
+  "AMAR": {
+   "upstream": "sanskrit-kosha/kosha (mirrored as ../AMAR)",
+   "path": "amar.txt",
+   "revision": "f5575c3a7742effabb3b79a8aa37d9b2d57bbb98",
+   "licence": "GPL-3.0"
+  },
+  "ABCH": {
+   "upstream": "sanskrit-lexicon/csl-orig",
+   "path": "v02/abch/abch.txt",
+   "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+   "licence": "CC-BY-SA-4.0"
+  },
+  "ARMH": {
+   "upstream": "sanskrit-lexicon/csl-orig",
+   "path": "v02/armh/armh.txt",
+   "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+   "licence": "CC-BY-SA-4.0"
+  },
+  "MW": {
+   "upstream": "sanskrit-lexicon/csl-orig",
+   "path": "v02/mw/mw.txt",
+   "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+   "licence": "CC-BY-SA-4.0"
+  }
+ },
+ "collation": "SLP1 varṇa order: aAiIuUfFxXeEoOMHkKgGNcCjJYwWqQRtTdDnpPbBmyrlvSzsh",
+ "devices": {
+  "AMAR": [
+   {
+    "device": "kanda",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "division",
+    "note": "Book headings/colophons are part of the text (e.g. prathamaṃ kāṇḍam)."
+   },
+   {
+    "device": "varga",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "division",
+    "note": "Section headings name all 24 vargas; 23 open with atha … vargaḥ and 23 close with iti … vargaḥ (no opening colophon: bhūmivargaḥ; no closing one: avyayavargaḥ)."
+   },
+   {
+    "device": "upavarga",
+    "evidence": "absent",
+    "layer": "digitization-markup",
+    "level": "division",
+    "note": "No third kvvv tier in AMAR (every record carries kāṇḍa + varga only)."
+   },
+   {
+    "device": "verse",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "group",
+    "note": "Verse-end numbers '.. N ..' (half-verse '(N)'); numbering restarts at 23 of 23 section boundaries."
+   },
+   {
+    "device": "synonym-set",
+    "evidence": "observed",
+    "layer": "digitization-markup",
+    "level": "set",
+    "note": "<eid> segmentation of a verse into sets is editorial annotation, not marked in the verse itself."
+   },
+   {
+    "device": "gender-marking",
+    "evidence": "observed",
+    "layer": "digitization-markup",
+    "level": "member",
+    "note": "Per-lexeme liṅga tags are annotator-supplied; the text marks gender by form, association and explicit statement (paribhāṣā vv. 3–5)."
+   },
+   {
+    "device": "gender-contiguity",
+    "evidence": "inferred",
+    "layer": "measurement",
+    "level": "member",
+    "note": "0.8995 of multi-gender sets keep each gender in one run vs 0.6776 expected by chance."
+   },
+   {
+    "device": "homonym-section",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "division",
+    "note": "nānārtha-varga; its opening verse states the arrangement by final sound (kāntādi)."
+   },
+   {
+    "device": "final-sound-order",
+    "evidence": "inferred",
+    "layer": "measurement",
+    "level": "member",
+    "note": "The kāntādi verse states the principle; measured here is how strictly it holds. Final-consonant rank non-decreasing on 0.9907 of adjacent headwords vs 0.536 for the initial letter; 2 a-tergo series (the second almost wholly indeclinable); 5 of 7 descending steps fall under the ḍ=l / b=v equivalences."
+   },
+   {
+    "device": "indeclinable-section",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "division",
+    "note": "avyaya-varga is the last varga in this digitization; kāṇḍa 3 v. 1 names a liṅgādisaṅgraha-varga after it, which the digitization does not contain."
+   },
+   {
+    "device": "alphabetical-order",
+    "evidence": "inferred",
+    "layer": "measurement",
+    "level": "member",
+    "note": "Adjacent-headword non-decreasing share 0.4926 in synonymic sections — chance level, i.e. no alphabetical device."
+   }
+  ],
+  "ABCH": [
+   {
+    "device": "kanda",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "division",
+    "note": "Book headings/colophons are part of the text (e.g. prathamaṃ kāṇḍam)."
+   },
+   {
+    "device": "varga",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "division",
+    "note": "ABCH is divided by kāṇḍa; varga-level labels occur only in the tiryak-kāṇḍa and the avyaya-varga."
+   },
+   {
+    "device": "upavarga",
+    "evidence": "observed",
+    "layer": "digitization-markup",
+    "level": "division",
+    "note": "tiryak-kāṇḍa carries a third kvvv tier (e.g. pañcendriya → sthalacara)."
+   },
+   {
+    "device": "verse",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "group",
+    "note": "Verse-end numbers '.. N ..' (half-verse '(N)'); numbering runs on continuously across all 14 section boundaries."
+   },
+   {
+    "device": "synonym-set",
+    "evidence": "observed",
+    "layer": "digitization-markup",
+    "level": "set",
+    "note": "<eid> segmentation of a verse into sets is editorial annotation, not marked in the verse itself."
+   },
+   {
+    "device": "gender-marking",
+    "evidence": "observed",
+    "layer": "digitization-markup",
+    "level": "member",
+    "note": "Per-lexeme liṅga tags are annotator-supplied; the text marks gender by form, association and explicit statement."
+   },
+   {
+    "device": "gender-contiguity",
+    "evidence": "inferred",
+    "layer": "measurement",
+    "level": "member",
+    "note": "0.6667 of multi-gender sets keep each gender in one run vs 0.6212 expected by chance."
+   },
+   {
+    "device": "indeclinable-section",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "division",
+    "note": "avyaya-varga is the last section of the digitization, a top-level division after the sāmānya-kāṇḍa."
+   },
+   {
+    "device": "alphabetical-order",
+    "evidence": "inferred",
+    "layer": "measurement",
+    "level": "member",
+    "note": "Adjacent-headword non-decreasing share 0.4993 in synonymic sections — chance level, i.e. no alphabetical device."
+   }
+  ],
+  "ARMH": [
+   {
+    "device": "kanda",
+    "evidence": "observed",
+    "layer": "digitization-markup",
+    "level": "division",
+    "note": "Only as the first field of the <vn> locator; no kāṇḍa headings in the digitization."
+   },
+   {
+    "device": "varga",
+    "evidence": "absent",
+    "layer": "digitization-markup",
+    "level": "division",
+    "note": "The <vn> locator does not vary below the kāṇḍa (A06 §6)."
+   },
+   {
+    "device": "verse",
+    "evidence": "observed",
+    "layer": "source-text",
+    "level": "group",
+    "note": "Verse-end numbers in the text; the <vn> groups the exploded records."
+   },
+   {
+    "device": "synonym-set",
+    "evidence": "absent",
+    "layer": "digitization-markup",
+    "level": "set",
+    "note": "Exploded model: one record per synonym, set boundaries inside a verse not encoded."
+   },
+   {
+    "device": "homonym-section",
+    "evidence": "inferred",
+    "layer": "measurement",
+    "level": "division",
+    "note": "kāṇḍa 5 identified as anekārtha from its '…api…' formula (A06 §4.2), not from a heading."
+   },
+   {
+    "device": "gender-marking",
+    "evidence": "absent",
+    "layer": "digitization-markup",
+    "level": "member",
+    "note": "No liṅga tags in the digitization."
+   },
+   {
+    "device": "alphabetical-order",
+    "evidence": "inferred",
+    "layer": "measurement",
+    "level": "member",
+    "note": "Adjacent-headword non-decreasing share 0.4985 — chance level."
+   }
+  ]
+ },
+ "measures": {
+  "AMAR": {
+   "digitizationModel": "grouped",
+   "verseNumbering": [
+    {
+     "varga": "svargavargaH",
+     "vargaIast": "svargavargaḥ",
+     "first": 6,
+     "last": 71,
+     "fullVerses": 66,
+     "stepsOfOne": 65,
+     "otherSteps": []
+    },
+    {
+     "varga": "vyomavargaH",
+     "vargaIast": "vyomavargaḥ",
+     "first": 1,
+     "last": 1,
+     "fullVerses": 1,
+     "stepsOfOne": 0,
+     "otherSteps": []
+    },
+    {
+     "varga": "digvargaH",
+     "vargaIast": "digvargaḥ",
+     "first": 1,
+     "last": 35,
+     "fullVerses": 35,
+     "stepsOfOne": 34,
+     "otherSteps": []
+    },
+    {
+     "varga": "kAlavargaH",
+     "vargaIast": "kālavargaḥ",
+     "first": 1,
+     "last": 31,
+     "fullVerses": 31,
+     "stepsOfOne": 30,
+     "otherSteps": []
+    },
+    {
+     "varga": "DIvargaH",
+     "vargaIast": "dhīvargaḥ",
+     "first": 1,
+     "last": 17,
+     "fullVerses": 17,
+     "stepsOfOne": 16,
+     "otherSteps": []
+    },
+    {
+     "varga": "SabdAdivargaH",
+     "vargaIast": "śabdādivargaḥ",
+     "first": 1,
+     "last": 25,
+     "fullVerses": 25,
+     "stepsOfOne": 24,
+     "otherSteps": []
+    },
+    {
+     "varga": "nAwyavargaH",
+     "vargaIast": "nāṭyavargaḥ",
+     "first": 1,
+     "last": 38,
+     "fullVerses": 38,
+     "stepsOfOne": 37,
+     "otherSteps": []
+    },
+    {
+     "varga": "pAtAlaBogivargaH",
+     "vargaIast": "pātālabhogivargaḥ",
+     "first": 1,
+     "last": 11,
+     "fullVerses": 11,
+     "stepsOfOne": 10,
+     "otherSteps": []
+    },
+    {
+     "varga": "narakavargaH",
+     "vargaIast": "narakavargaḥ",
+     "first": 1,
+     "last": 3,
+     "fullVerses": 3,
+     "stepsOfOne": 2,
+     "otherSteps": []
+    },
+    {
+     "varga": "vArivargaH",
+     "vargaIast": "vārivargaḥ",
+     "first": 1,
+     "last": 45,
+     "fullVerses": 45,
+     "stepsOfOne": 44,
+     "otherSteps": []
+    },
+    {
+     "varga": "BUmivargaH",
+     "vargaIast": "bhūmivargaḥ",
+     "first": 2,
+     "last": 19,
+     "fullVerses": 18,
+     "stepsOfOne": 17,
+     "otherSteps": []
+    },
+    {
+     "varga": "puravargaH",
+     "vargaIast": "puravargaḥ",
+     "first": 1,
+     "last": 20,
+     "fullVerses": 20,
+     "stepsOfOne": 19,
+     "otherSteps": []
+    },
+    {
+     "varga": "SElavargaH",
+     "vargaIast": "śailavargaḥ",
+     "first": 1,
+     "last": 8,
+     "fullVerses": 8,
+     "stepsOfOne": 7,
+     "otherSteps": []
+    },
+    {
+     "varga": "vanOzaDivargaH",
+     "vargaIast": "vanauṣadhivargaḥ",
+     "first": 1,
+     "last": 169,
+     "fullVerses": 169,
+     "stepsOfOne": 168,
+     "otherSteps": []
+    },
+    {
+     "varga": "siMhAdivargaH",
+     "vargaIast": "siṃhādivargaḥ",
+     "first": 1,
+     "last": 43,
+     "fullVerses": 43,
+     "stepsOfOne": 42,
+     "otherSteps": []
+    },
+    {
+     "varga": "manuzyavargaH",
+     "vargaIast": "manuṣyavargaḥ",
+     "first": 1,
+     "last": 140,
+     "fullVerses": 140,
+     "stepsOfOne": 139,
+     "otherSteps": []
+    },
+    {
+     "varga": "brahmavargaH",
+     "vargaIast": "brahmavargaḥ",
+     "first": 1,
+     "last": 57,
+     "fullVerses": 57,
+     "stepsOfOne": 56,
+     "otherSteps": []
+    },
+    {
+     "varga": "kzatriyavargaH",
+     "vargaIast": "kṣatriyavargaḥ",
+     "first": 1,
+     "last": 119,
+     "fullVerses": 119,
+     "stepsOfOne": 118,
+     "otherSteps": []
+    },
+    {
+     "varga": "vESyavargaH",
+     "vargaIast": "vaiśyavargaḥ",
+     "first": 1,
+     "last": 111,
+     "fullVerses": 111,
+     "stepsOfOne": 110,
+     "otherSteps": []
+    },
+    {
+     "varga": "SUdravargaH",
+     "vargaIast": "śūdravargaḥ",
+     "first": 1,
+     "last": 45,
+     "fullVerses": 45,
+     "stepsOfOne": 44,
+     "otherSteps": []
+    },
+    {
+     "varga": "viSezyaniGnavargaH",
+     "vargaIast": "viśeṣyanighnavargaḥ",
+     "first": 3,
+     "last": 112,
+     "fullVerses": 110,
+     "stepsOfOne": 109,
+     "otherSteps": []
+    },
+    {
+     "varga": "saNkIrRavargaH",
+     "vargaIast": "saṅkīrṇavargaḥ",
+     "first": 2,
+     "last": 42,
+     "fullVerses": 41,
+     "stepsOfOne": 40,
+     "otherSteps": []
+    },
+    {
+     "varga": "nAnArTavargaH",
+     "vargaIast": "nānārthavargaḥ",
+     "first": 2,
+     "last": 257,
+     "fullVerses": 256,
+     "stepsOfOne": 255,
+     "otherSteps": []
+    },
+    {
+     "varga": "avyayavargaH",
+     "vargaIast": "avyayavargaḥ",
+     "first": 1,
+     "last": 23,
+     "fullVerses": 23,
+     "stepsOfOne": 22,
+     "otherSteps": []
+    }
+   ],
+   "verseNumberingScope": {
+    "sectionBoundaries": 23,
+    "restarts": 23,
+    "scope": "per-section"
+   },
+   "fullVerseCount": {
+    "inVerseGroups": 1432,
+    "inFile": 1444
+   },
+   "sectionColophons": {
+    "sections": 24,
+    "withOpeningAtha": 23,
+    "withClosingIti": 23,
+    "withoutOpening": [
+     "bhūmivargaḥ"
+    ],
+    "withoutClosing": [
+     "avyayavargaḥ"
+    ]
+   },
+   "setSizes": {
+    "homonym-sense": {
+     "sets": 1995,
+     "mean": 1.0,
+     "max": 1,
+     "singletons": 1995
+    },
+    "indeclinable-set": {
+     "sets": 103,
+     "mean": 1.98,
+     "max": 7,
+     "singletons": 54
+    },
+    "synonym-set": {
+     "sets": 3492,
+     "mean": 2.79,
+     "max": 55,
+     "singletons": 1059
+    }
+   },
+   "genderTags": {
+    "distinctTags": 14,
+    "top": {
+     "puM": 5097,
+     "strI": 2356,
+     "klI": 2072,
+     "tri": 1614,
+     "a": 381,
+     "puMklI": 296,
+     "puMstrI": 70,
+     "puMdvi": 22,
+     "strIba": 14,
+     "strIklI": 13,
+     "puMba": 11,
+     "klIa": 2
+    },
+    "unparsed": [],
+    "untaggedByRole": {
+     "gloss": 2084
+    }
+   },
+   "genderContiguity": {
+    "multiGenderSets": 756,
+    "contiguousObserved": 0.8995,
+    "contiguousExpectedUnderPermutation": 0.6776,
+    "mascFirstObserved": 0.3558,
+    "mascFirstExpected": 0.3464
+   },
+   "nanarthaOrder": {
+    "headwords": 861,
+    "senses": 1995,
+    "series": [
+     {
+      "startIast": "nāka",
+      "headwords": 802,
+      "indeclinableShare": 0.0012,
+      "finalConsonantNondecreasing": 0.9938
+     },
+     {
+      "startIast": "āṅ",
+      "headwords": 59,
+      "indeclinableShare": 0.9831,
+      "finalConsonantNondecreasing": 0.9636
+     }
+    ],
+    "violations": [
+     {
+      "series": 1,
+      "from": "ilA",
+      "fromIast": "ilā",
+      "to": "kzveqA",
+      "toIast": "kṣveḍā",
+      "explainedBy": "ḍ=l"
+     },
+     {
+      "series": 1,
+      "from": "ganDarva",
+      "fromIast": "gandharva",
+      "to": "kambu",
+      "toIast": "kambu",
+      "explainedBy": "b=v"
+     },
+     {
+      "series": 1,
+      "from": "pUrva",
+      "fromIast": "pūrva",
+      "to": "kumBa",
+      "toIast": "kumbha",
+      "explainedBy": "b=v"
+     },
+     {
+      "series": 1,
+      "from": "jihma",
+      "fromIast": "jihma",
+      "to": "uzRa",
+      "toIast": "uṣṇa",
+      "explainedBy": null
+     },
+     {
+      "series": 1,
+      "from": "sattva",
+      "fromIast": "sattva",
+      "to": "klIba",
+      "toIast": "klība",
+      "explainedBy": "b=v"
+     },
+     {
+      "series": 2,
+      "from": "vA",
+      "fromIast": "vā",
+      "to": "sAmi",
+      "toIast": "sāmi",
+      "explainedBy": "b=v"
+     },
+     {
+      "series": 2,
+      "from": "kim",
+      "fromIast": "kim",
+      "to": "nAman",
+      "toIast": "nāman",
+      "explainedBy": null
+     }
+    ],
+    "finalConsonantNondecreasing": 0.9907,
+    "initialLetterNondecreasing": 0.536,
+    "finalConsonantBlocks": 55,
+    "distinctFinalConsonants": 33,
+    "blockSequence": [
+     {
+      "final": "k",
+      "finalIast": "k",
+      "headwords": 68
+     },
+     {
+      "final": "K",
+      "finalIast": "kh",
+      "headwords": 5
+     },
+     {
+      "final": "g",
+      "finalIast": "g",
+      "headwords": 24
+     },
+     {
+      "final": "G",
+      "finalIast": "gh",
+      "headwords": 5
+     },
+     {
+      "final": "c",
+      "finalIast": "c",
+      "headwords": 4
+     },
+     {
+      "final": "C",
+      "finalIast": "ch",
+      "headwords": 3
+     },
+     {
+      "final": "j",
+      "finalIast": "j",
+      "headwords": 12
+     },
+     {
+      "final": "Y",
+      "finalIast": "ñ",
+      "headwords": 2
+     },
+     {
+      "final": "w",
+      "finalIast": "ṭ",
+      "headwords": 18
+     },
+     {
+      "final": "W",
+      "finalIast": "ṭh",
+      "headwords": 6
+     },
+     {
+      "final": "q",
+      "finalIast": "ḍ",
+      "headwords": 4
+     },
+     {
+      "final": "l",
+      "finalIast": "l",
+      "headwords": 1
+     },
+     {
+      "final": "q",
+      "finalIast": "ḍ",
+      "headwords": 4
+     },
+     {
+      "final": "Q",
+      "finalIast": "ḍh",
+      "headwords": 4
+     },
+     {
+      "final": "R",
+      "finalIast": "ṇ",
+      "headwords": 36
+     },
+     {
+      "final": "t",
+      "finalIast": "t",
+      "headwords": 95
+     },
+     {
+      "final": "T",
+      "finalIast": "th",
+      "headwords": 9
+     },
+     {
+      "final": "d",
+      "finalIast": "d",
+      "headwords": 26
+     },
+     {
+      "final": "D",
+      "finalIast": "dh",
+      "headwords": 29
+     },
+     {
+      "final": "n",
+      "finalIast": "n",
+      "headwords": 69
+     },
+     {
+      "final": "p",
+      "finalIast": "p",
+      "headwords": 13
+     },
+     {
+      "final": "P",
+      "finalIast": "ph",
+      "headwords": 1
+     },
+     {
+      "final": "v",
+      "finalIast": "v",
+      "headwords": 1
+     },
+     {
+      "final": "b",
+      "finalIast": "b",
+      "headwords": 1
+     },
+     {
+      "final": "v",
+      "finalIast": "v",
+      "headwords": 2
+     },
+     {
+      "final": "B",
+      "finalIast": "bh",
+      "headwords": 12
+     },
+     {
+      "final": "m",
+      "finalIast": "m",
+      "headwords": 13
+     },
+     {
+      "final": "R",
+      "finalIast": "ṇ",
+      "headwords": 1
+     },
+     {
+      "final": "m",
+      "finalIast": "m",
+      "headwords": 13
+     },
+     {
+      "final": "y",
+      "finalIast": "y",
+      "headwords": 50
+     },
+     {
+      "final": "r",
+      "finalIast": "r",
+      "headwords": 97
+     },
+     {
+      "final": "l",
+      "finalIast": "l",
+      "headwords": 50
+     },
+     {
+      "final": "v",
+      "finalIast": "v",
+      "headwords": 20
+     },
+     {
+      "final": "b",
+      "finalIast": "b",
+      "headwords": 1
+     },
+     {
+      "final": "S",
+      "finalIast": "ś",
+      "headwords": 23
+     },
+     {
+      "final": "z",
+      "finalIast": "ṣ",
+      "headwords": 32
+     },
+     {
+      "final": "s",
+      "finalIast": "s",
+      "headwords": 36
+     },
+     {
+      "final": "h",
+      "finalIast": "h",
+      "headwords": 12
+     },
+     {
+      "final": "N",
+      "finalIast": "ṅ",
+      "headwords": 1
+     },
+     {
+      "final": null,
+      "finalIast": null,
+      "headwords": 2
+     },
+     {
+      "final": "k",
+      "finalIast": "k",
+      "headwords": 2
+     },
+     {
+      "final": "c",
+      "finalIast": "c",
+      "headwords": 1
+     },
+     {
+      "final": "t",
+      "finalIast": "t",
+      "headwords": 17
+     },
+     {
+      "final": "T",
+      "finalIast": "th",
+      "headwords": 3
+     },
+     {
+      "final": "n",
+      "finalIast": "n",
+      "headwords": 4
+     },
+     {
+      "final": "p",
+      "finalIast": "p",
+      "headwords": 1
+     },
+     {
+      "final": "v",
+      "finalIast": "v",
+      "headwords": 1
+     },
+     {
+      "final": "m",
+      "finalIast": "m",
+      "headwords": 7
+     },
+     {
+      "final": "n",
+      "finalIast": "n",
+      "headwords": 1
+     },
+     {
+      "final": "m",
+      "finalIast": "m",
+      "headwords": 2
+     },
+     {
+      "final": "y",
+      "finalIast": "y",
+      "headwords": 1
+     },
+     {
+      "final": "r",
+      "finalIast": "r",
+      "headwords": 7
+     },
+     {
+      "final": "l",
+      "finalIast": "l",
+      "headwords": 2
+     },
+     {
+      "final": "s",
+      "finalIast": "s",
+      "headwords": 4
+     },
+     {
+      "final": "h",
+      "finalIast": "h",
+      "headwords": 3
+     }
+    ],
+    "syllableNondecreasingWithinBlocks": 0.7556
+   },
+   "alphabeticalAdjacency": {
+    "pairs": 9750,
+    "nondecreasing": 0.4926
+   }
+  },
+  "ABCH": {
+   "digitizationModel": "grouped",
+   "verseNumbering": [
+    {
+     "varga": "devADidevakARqaH",
+     "vargaIast": "devādhidevakāṇḍaḥ",
+     "first": 24,
+     "last": 86,
+     "fullVerses": 63,
+     "stepsOfOne": 62,
+     "otherSteps": []
+    },
+    {
+     "varga": "devakARqaH",
+     "vargaIast": "devakāṇḍaḥ",
+     "first": 87,
+     "last": 336,
+     "fullVerses": 250,
+     "stepsOfOne": 249,
+     "otherSteps": []
+    },
+    {
+     "varga": "martyakARqaH",
+     "vargaIast": "martyakāṇḍaḥ",
+     "first": 337,
+     "last": 934,
+     "fullVerses": 598,
+     "stepsOfOne": 597,
+     "otherSteps": []
+    },
+    {
+     "varga": "pfTvIkAyaH",
+     "vargaIast": "pṛthvīkāyaḥ",
+     "first": 935,
+     "last": 1068,
+     "fullVerses": 134,
+     "stepsOfOne": 133,
+     "otherSteps": []
+    },
+    {
+     "varga": "jalakAyaH",
+     "vargaIast": "jalakāyaḥ",
+     "first": 1069,
+     "last": 1096,
+     "fullVerses": 28,
+     "stepsOfOne": 27,
+     "otherSteps": []
+    },
+    {
+     "varga": "tejaskAyaH",
+     "vargaIast": "tejaskāyaḥ",
+     "first": 1097,
+     "last": 1105,
+     "fullVerses": 9,
+     "stepsOfOne": 8,
+     "otherSteps": []
+    },
+    {
+     "varga": "vAyukAyaH",
+     "vargaIast": "vāyukāyaḥ",
+     "first": 1106,
+     "last": 1109,
+     "fullVerses": 4,
+     "stepsOfOne": 3,
+     "otherSteps": []
+    },
+    {
+     "varga": "vanaspatikAyaH",
+     "vargaIast": "vanaspatikāyaḥ",
+     "first": 1110,
+     "last": 1201,
+     "fullVerses": 92,
+     "stepsOfOne": 91,
+     "otherSteps": []
+    },
+    {
+     "varga": "dvIndriyAH",
+     "vargaIast": "dvīndriyāḥ",
+     "first": 1202,
+     "last": 1205,
+     "fullVerses": 4,
+     "stepsOfOne": 3,
+     "otherSteps": []
+    },
+    {
+     "varga": "trIndriyAH",
+     "vargaIast": "trīndriyāḥ",
+     "first": 1207,
+     "last": 1209,
+     "fullVerses": 3,
+     "stepsOfOne": 2,
+     "otherSteps": []
+    },
+    {
+     "varga": "caturindriyAH",
+     "vargaIast": "caturindriyāḥ",
+     "first": 1210,
+     "last": 1215,
+     "fullVerses": 6,
+     "stepsOfOne": 5,
+     "otherSteps": []
+    },
+    {
+     "varga": "paYcendriyAH",
+     "vargaIast": "pañcendriyāḥ",
+     "first": 1216,
+     "last": 1357,
+     "fullVerses": 142,
+     "stepsOfOne": 141,
+     "otherSteps": []
+    },
+    {
+     "varga": "narakakARqaH",
+     "vargaIast": "narakakāṇḍaḥ",
+     "first": 1358,
+     "last": 1364,
+     "fullVerses": 7,
+     "stepsOfOne": 6,
+     "otherSteps": []
+    },
+    {
+     "varga": "sAmAnyakARqaH",
+     "vargaIast": "sāmānyakāṇḍaḥ",
+     "first": 1365,
+     "last": 1524,
+     "fullVerses": 160,
+     "stepsOfOne": 159,
+     "otherSteps": []
+    },
+    {
+     "varga": "avyayavargaH",
+     "vargaIast": "avyayavargaḥ",
+     "first": 1525,
+     "last": 1542,
+     "fullVerses": 18,
+     "stepsOfOne": 17,
+     "otherSteps": []
+    }
+   ],
+   "verseNumberingScope": {
+    "sectionBoundaries": 14,
+    "restarts": 0,
+    "scope": "continuous"
+   },
+   "fullVerseCount": {
+    "inVerseGroups": 1518,
+    "inFile": 1548
+   },
+   "setSizes": {
+    "indeclinable-set": {
+     "sets": 66,
+     "mean": 3.41,
+     "max": 11,
+     "singletons": 2
+    },
+    "synonym-set": {
+     "sets": 4530,
+     "mean": 2.94,
+     "max": 75,
+     "singletons": 1590
+    }
+   },
+   "genderTags": {
+    "distinctTags": 18,
+    "top": {
+     "puM": 6990,
+     "klI": 3107,
+     "strI": 2519,
+     "puMklI": 385,
+     "a": 175,
+     "puMstrI": 122,
+     "vA": 95,
+     "puMdvi": 39,
+     "tri": 38,
+     "strIklI": 29,
+     "puMba": 21,
+     "strIba": 20
+    },
+    "unparsed": [],
+    "untaggedByRole": {
+     "gloss": 4
+    }
+   },
+   "genderContiguity": {
+    "multiGenderSets": 945,
+    "contiguousObserved": 0.6667,
+    "contiguousExpectedUnderPermutation": 0.6212,
+    "mascFirstObserved": 0.3407,
+    "mascFirstExpected": 0.3363
+   },
+   "alphabeticalAdjacency": {
+    "pairs": 13333,
+    "nondecreasing": 0.4993
+   }
+  },
+  "ARMH": {
+   "digitizationModel": "exploded",
+   "alphabeticalAdjacency": {
+    "pairs": 7906,
+    "nondecreasing": 0.4985
+   },
+   "genderMarking": "absent-in-markup"
+  },
+  "MW": {
+   "digitizationModel": "alphabetical-entry",
+   "alphabeticalAdjacency": {
+    "pairs": 286524,
+    "nondecreasing": 0.9389
+   }
+  }
+ }
+}
