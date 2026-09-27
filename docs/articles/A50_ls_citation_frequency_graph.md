@@ -413,6 +413,8 @@ a versioned data release (Zenodo DOI) is the remaining packaging step before sub
 
 ## Data availability and reproducibility
 
+The atlas repository carries an archival Zenodo DOI: [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (concept DOI, resolves to the latest tagged release; version 0.19.10: [`10.5281/zenodo.22948318`](https://doi.org/10.5281/zenodo.22948318)).
+
 All tables and statistics in this paper are computed from committed artifacts in
 [csl-atlas](https://github.com/sanskrit-lexicon/csl-atlas):
 [`ls_citation_edges.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_edges.tsv)
