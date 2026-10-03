@@ -134,7 +134,7 @@
     "merge-review-pool-decisions": "python scripts/merge-review-pool-decisions.py",
     "test-merge-review-pool-decisions": "python -m unittest scripts.test_merge_review_pool_decisions",
     "build-review-pool-kappa": "python scripts/lexico/review_pool_kappa.py",
-    "test-review-pool-kappa": "python -m unittest scripts.lexico.test_review_pool_kappa",
+    "test-review-pool-kappa-lexico": "python -m unittest scripts.lexico.test_lexico_review_pool_kappa",
     "build-ls-abbreviation-frequency": "python scripts/obs/ls_abbreviation_frequency.py",
     "test-ls-abbreviation-frequency": "python -m unittest scripts.test_ls_abbreviation_frequency",
     "test-forensic-pins": "python -m pytest tests/forensic -q -p no:cacheprovider",
