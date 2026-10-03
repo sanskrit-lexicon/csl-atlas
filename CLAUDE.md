@@ -110,4 +110,12 @@ Danger facts:
 (org-private) and the generated block of
 [AGENTS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/AGENTS.md).
 
+## Repo guards
+
+The shared main tree is guarded: `.githooks/pre-commit` blocks main-tree commits
+(escape `ALLOW_MAIN_TREE_COMMIT=1`, solo only) and `.githooks/post-checkout`
+auto-reverts a foreign branch-switch back to `main` (shared-tree branch-switch guard,
+03-10-2026, PR #532; escape `ALLOW_MAIN_TREE_CHECKOUT=1`). Work in a session-unique
+worktree; `core.hooksPath=.githooks`.
+
 _Dr. Mārcis Gasūns_
