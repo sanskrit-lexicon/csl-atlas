@@ -33,14 +33,20 @@ Outputs (committed measurements — no verse text):
 Run from repo root:  python scripts/forensic/f8_mbh_census.py
 Deps: ../sanskrit-util/py on sys.path (for SLP1 folding of the note forms; optional).
 """
-import sys, os, re, json, csv, statistics
-from collections import defaultdict, Counter
+import csv
+import json
+import os
+import re
+import statistics
+import sys
+from collections import Counter, defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/L0"))
-from parse_cslorig import iter_entries, CSL_ORIG
+from parse_cslorig import CSL_ORIG, iter_entries
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import _corpus_pin
 

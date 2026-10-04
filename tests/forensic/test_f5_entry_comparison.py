@@ -27,9 +27,8 @@ import csv
 import json
 import subprocess
 
-import pytest
-
 import f5_entry_comparison as f5
+import pytest
 from conftest import git_commit_all, write_text
 
 

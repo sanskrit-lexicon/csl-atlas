@@ -8,6 +8,7 @@ observablehq.config.js). Re-run if the tagline or branding changes.
 """
 import sys
 from pathlib import Path
+
 from PIL import Image, ImageDraw, ImageFont
 
 sys.stdout.reconfigure(encoding="utf-8")

@@ -20,11 +20,11 @@ This patches data/L0/convention_fingerprint.csv in place: it sets dim_2 / dim_4
 annotation_todo.csv. Idempotent — safe to re-run after s2_fingerprint.py.
 """
 
-import os
-import sys
-import re
 import csv
 import json
+import os
+import re
+import sys
 from collections import defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")

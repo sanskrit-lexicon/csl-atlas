@@ -26,7 +26,13 @@ unverified SSL context; WebFetch fails, this does not. Pages cache under the git
 Run from repo root:  python scripts/forensic/f7_harivamsa_harvest.py
 Deps: pip install indic_transliteration
 """
-import sys, os, re, ssl, time, json, urllib.request
+import json
+import os
+import re
+import ssl
+import sys
+import time
+import urllib.request
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

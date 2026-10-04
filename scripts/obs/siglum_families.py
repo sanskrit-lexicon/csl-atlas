@@ -24,8 +24,15 @@ Outputs
 
 Usage:  python scripts/obs/siglum_families.py [--prefix-len 4] [--min-freq 20]
 """
-import argparse, csv, json, os, re, sys, unicodedata
+import argparse
+import csv
+import json
+import os
+import re
+import sys
+import unicodedata
 from collections import Counter, defaultdict
+
 sys.stdout.reconfigure(encoding='utf-8'); sys.stderr.reconfigure(encoding='utf-8')
 
 HERE = os.path.dirname(os.path.abspath(__file__))

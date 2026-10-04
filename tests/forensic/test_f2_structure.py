@@ -25,11 +25,10 @@ they stay out of the raw pool; pw carries only pool probes):
 import csv
 import json
 
+import _corpus_pin
 import f2_structure as f2
 import parse_cslorig
 import pytest
-
-import _corpus_pin
 from conftest import FIXTURE_REVISION, write_parse_provenance, write_text, write_tsv
 
 

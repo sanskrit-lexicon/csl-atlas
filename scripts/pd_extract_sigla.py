@@ -19,11 +19,11 @@ so the qualifier's own "Gr." is not miscounted as a separate siglum.
 Occurrence mass, not distinct-token count, is what the coverage metrics weight,
 so the count column is load-bearing downstream.
 """
-import sys
-import re
-import os
 import io
-from collections import defaultdict, Counter
+import os
+import re
+import sys
+from collections import Counter, defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

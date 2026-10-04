@@ -24,17 +24,17 @@ Output : data/forensic/citation_pair_overlap.csv  (all citation-bearing pairs, r
 Run from repo root:  python scripts/forensic/f1_citations.py
 """
 
+import collections
+import csv
+import itertools
+import json
 import os
 import re
 import sys
-import csv
-import json
-import collections
-import itertools
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
-from parse_cslorig import load_entries, PARSED_DIR
 import _corpus_pin
+from parse_cslorig import PARSED_DIR, load_entries
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

@@ -57,17 +57,17 @@ Outputs : data/forensic/f11_report.json
 Run from repo root:  python scripts/forensic/f11_evidence_dependence.py
 """
 
-import os
-import re
-import csv
-import sys
-import json
-import random
-import hashlib
 import collections
+import csv
+import hashlib
+import json
+import os
+import random
+import re
+import sys
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
-from parse_cslorig import load_entries, PARSED_DIR  # noqa: E402
+from parse_cslorig import PARSED_DIR, load_entries  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

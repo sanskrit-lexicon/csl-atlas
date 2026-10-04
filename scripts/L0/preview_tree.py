@@ -9,10 +9,11 @@ the convention fingerprint clusters into the lineages we already know.
 Outputs -> data/L0/preview/  (kept apart from data/L0/distances|trees).
 """
 
-import os
-import sys
 import csv
 import json
+import os
+import sys
+
 import numpy as np
 from scipy.cluster.hierarchy import linkage, to_tree
 from scipy.spatial.distance import squareform

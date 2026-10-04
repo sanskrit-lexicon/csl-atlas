@@ -82,6 +82,7 @@ results.sort(key=lambda r: (-r["range"], -r["nDicts"], r["k1"]))
 
 # Distribution summary
 from collections import Counter
+
 dist = Counter(r["range"] for r in results)
 print("Range distribution:", dict(sorted(dist.items())))
 print(f"Lemmas with range > 0: {sum(v for k,v in dist.items() if k > 0)}")
