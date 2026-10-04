@@ -135,26 +135,24 @@ def skd_card(row, blind):
     the card shows exactly what the original sheet showed."""
     href = row["sourceHref"]
     proposed = row["proposedClass"]
-    vocab = " · ".join("<code>%s</code>" % c for c in SKD_CLASSES)
+    vocab = " · ".join("<code>{}</code>".format(c) for c in SKD_CLASSES)
     question = (
-        "<p><strong>Классификатор предлагает:</strong> <code>%s</code>.</p>"
+        "<p><strong>Классификатор предлагает:</strong> <code>{}</code>.</p>"
         "<p>Единица <em>iti</em> — цитатная граница (заканчивается формулой авторитета) "
         "или грамматическая? Подтвердите предложенный класс либо отклоните и укажите в "
-        "примечании один из: %s.</p>" % (esc(proposed), vocab)
+        "примечании один из: {}.</p>".format(esc(proposed), vocab)
     )
     if not blind:
         question += (
-            '<p style="margin-top:10px;color:#e6c07b"><strong>Агент не смог решить.</strong> %s</p>'
-            % esc(row["evidence"])
+            '<p style="margin-top:10px;color:#e6c07b"><strong>Агент не смог решить.</strong> {}</p>'.format(esc(row["evidence"]))
         )
     panels = [(
         "Источник",
-        '<p><a href="%s" target="_blank" rel="noopener">SKD L%s</a> · единица %s · %s знаков</p><code>%s</code>'
-        % (esc(href), esc(row["L"]), esc(row["unitIndex"]), esc(row["fullUnitChars"]), esc(row["unitText"]))
+        '<p><a href="{}" target="_blank" rel="noopener">SKD L{}</a> · единица {} · {} знаков</p><code>{}</code>'.format(esc(href), esc(row["L"]), esc(row["unitIndex"]), esc(row["fullUnitChars"]), esc(row["unitText"]))
     )]
     return {
         "id": row["reviewId"],
-        "title": "%s · единица %s" % (esc(row["k1"]), esc(row["unitIndex"])),
+        "title": "{} · единица {}".format(esc(row["k1"]), esc(row["unitIndex"])),
         "title_href": href,
         "badges": [proposed, "SKD"],
         "question": question,
@@ -166,14 +164,13 @@ def skd_card(row, blind):
 def trad_card(row, blind):
     proposed = row["proposedTradition"]
     question = (
-        "<p>Машинная/редакционная гипотеза: <code>%s</code>.</p>"
+        "<p>Машинная/редакционная гипотеза: <code>{}</code>.</p>"
         "<p>Подтвердите её либо отклоните и укажите в примечании одну метку из закрытого "
-        "словаря традиций.</p>" % esc(proposed)
+        "словаря традиций.</p>".format(esc(proposed))
     )
     if not blind:
         question += (
-            '<p style="margin-top:10px;color:#e6c07b"><strong>Агент не смог решить (%s).</strong> %s</p>'
-            % (esc(row["rule"]), esc(row["why"]))
+            '<p style="margin-top:10px;color:#e6c07b"><strong>Агент не смог решить ({}).</strong> {}</p>'.format(esc(row["rule"]), esc(row["why"]))
         )
     panels = []
     if row.get("seedNote"):
@@ -181,8 +178,7 @@ def trad_card(row, blind):
     entries = row.get("crosswalkPairs") or []
     if entries:
         body = "".join(
-            "<p><b>%s</b> ↔ <b>%s</b> (Tier %s)<br><code>%s</code><br><code>%s</code></p>"
-            % (esc(p["accId"]), esc(p["nccId"]), esc(p["tier"]), esc(p["accExcerpt"]), esc(p["nccExcerpt"]))
+            "<p><b>{}</b> ↔ <b>{}</b> (Tier {})<br><code>{}</code><br><code>{}</code></p>".format(esc(p["accId"]), esc(p["nccId"]), esc(p["tier"]), esc(p["accExcerpt"]), esc(p["nccExcerpt"]))
             for p in entries[:3]
         )
         panels.append(("Каталог ACC↔NCC (сшитые пары)", body))
@@ -190,8 +186,7 @@ def trad_card(row, blind):
         cat = row.get("catalogueEntries") or []
         if cat:
             body = "".join(
-                "<p><b>%s</b>%s<br><code>%s</code></p>"
-                % (esc(e["id"]), (" · sigla: %s" % esc(", ".join(e["sigla"]))) if e["sigla"] else "", esc(e["excerpt"]))
+                "<p><b>{}</b>{}<br><code>{}</code></p>".format(esc(e["id"]), (" · sigla: {}".format(esc(", ".join(e["sigla"])))) if e["sigla"] else "", esc(e["excerpt"]))
                 for e in cat[:4]
             )
             panels.append(("Каталог ACC/NCC (совпадения по заглавию)", body))
@@ -253,7 +248,7 @@ def main():
     for sheet, row in forks:
         card = skd_card(row, blind=False) if sheet == "skd-iti" else trad_card(row, blind=False)
         card["filt"] = "fork"
-        card["id"] = "%s::%s" % (sheet, card["id"])
+        card["id"] = "{}::{}".format(sheet, card["id"])
         items.append(card)
 
     for st in strata:
@@ -263,7 +258,7 @@ def main():
         for row in picked:
             card = skd_card(row, blind=True) if st["sheet"] == "skd-iti" else trad_card(row, blind=True)
             card["filt"] = "sample"
-            card["id"] = "%s::%s" % (st["sheet"], card["id"])
+            card["id"] = "{}::{}".format(st["sheet"], card["id"])
             items.append(card)
         manifest_strata.append({
             "key": st["key"],
@@ -275,7 +270,7 @@ def main():
             "unanimousLowerBound": round(wilson_lower(len(picked), len(picked), population=population), 4),
             "members": [
                 {
-                    "reviewId": "%s::%s" % (st["sheet"], r["reviewId"]),
+                    "reviewId": "{}::{}".format(st["sheet"], r["reviewId"]),
                     # The hidden half of the comparison. Present in the manifest
                     # (a machine artefact) but never rendered on the sheet.
                     "agentLabel": r["agentClass"] if st["sheet"] == "skd-iti" else r["agentTradition"],
@@ -286,14 +281,13 @@ def main():
         })
 
     total_sampled = sum(s["sampled"] for s in manifest_strata)
-    stem = "csl-atlas-h1684-spotcheck_%drows" % len(items)
-    save_as = "review/%s_decisions.json" % stem
+    stem = f"csl-atlas-h1684-spotcheck_{len(items)}rows"
+    save_as = "review/{}_decisions.json".format(stem)
     subtitle = (
-        "Сокращённый человеческий запрос по H1684: %d форк(ов), где агент воздержался, "
-        "плюс слепая стратифицированная выборка из %d строк (из 207 решённых агентом). "
-        "Порог продвижения: нижняя граница Уилсона 95%% ≥ %.2f по каждому слою. "
-        "Всего к проверке %d строк вместо исходных 221."
-        % (len(forks), total_sampled, PROMOTION_FLOOR, len(items))
+        f"Сокращённый человеческий запрос по H1684: {len(forks)} форк(ов), где агент воздержался, "
+        f"плюс слепая стратифицированная выборка из {total_sampled} строк (из 207 решённых агентом). "
+        f"Порог продвижения: нижняя граница Уилсона 95% ≥ {PROMOTION_FLOOR:.2f} по каждому слою. "
+        f"Всего к проверке {len(items)} строк вместо исходных 221."
     )
 
     config = {
@@ -315,15 +309,15 @@ def main():
         "ui_strings": {
             **UI_STRINGS_RU,
             "save_banner": (
-                "&#128229; Экспорт скачается файлом <code>%s_decisions.json</code> &rarr; "
-                "сохраните его в <code>%s</code>, затем запустите "
-                "<code>python scripts/apply_h1684_spotcheck.py</code>." % (stem, html.escape(save_as))
+                "&#128229; Экспорт скачается файлом <code>{}_decisions.json</code> &rarr; "
+                "сохраните его в <code>{}</code>, затем запустите "
+                "<code>python scripts/apply_h1684_spotcheck.py</code>.".format(stem, html.escape(save_as))
             ),
         },
     }
 
     OUT.mkdir(exist_ok=True)
-    target = OUT / ("%s_review.html" % stem)
+    target = OUT / ("{}_review.html".format(stem))
     target.write_text(render_review_sheet(items, config), encoding="utf-8")
 
     manifest = {
@@ -331,21 +325,21 @@ def main():
         "handoff": HANDOFF,
         "sheetId": stem,
         "generated": DATE,
-        "emitter": "csl_pyutil %s" % CSL_PYUTIL_VERSION,
+        "emitter": "csl_pyutil {}".format(CSL_PYUTIL_VERSION),
         "gate": {
             "z": Z,
             "promotionFloor": PROMOTION_FLOOR,
             "rule": (
-                "Per stratum: promote its agent verdicts to reviewed=yes only if the Wilson 95%% "
-                "lower bound of human-agent agreement reaches %.2f. Strata are gated "
+                "Per stratum: promote its agent verdicts to reviewed=yes only if the Wilson 95% "
+                "lower bound of human-agent agreement reaches {:.2f}. Strata are gated "
                 "independently; a stratum that fails stays unpromoted and its rows return to the "
-                "human queue." % PROMOTION_FLOOR
+                "human queue.".format(PROMOTION_FLOOR)
             ),
             "sizing": "n >= pi0*z^2*N / ((1-pi0)*(N-1) + pi0*z^2)  [finite-population corrected]",
             "blind": "Sample cards omit the agent verdict; agentLabel lives only in this manifest.",
         },
         "forks": [
-            {"reviewId": "%s::%s" % (sheet, r["reviewId"]), "sheet": sheet, "rule": r["rule"]}
+            {"reviewId": "{}::{}".format(sheet, r["reviewId"]), "sheet": sheet, "rule": r["rule"]}
             for sheet, r in forks
         ],
         "strata": manifest_strata,
@@ -357,17 +351,16 @@ def main():
             "reducedHumanAsk": len(items),
         },
     }
-    (OUT / ("%s_manifest.json" % stem)).write_text(
+    (OUT / ("{}_manifest.json".format(stem))).write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
 
-    print("Wrote %s" % target.relative_to(ROOT))
-    print("Wrote %s" % (OUT / ("%s_manifest.json" % stem)).relative_to(ROOT))
-    print("forks=%d blind-sampled=%d total=%d (was %d)"
-          % (len(forks), total_sampled, len(items), manifest["counts"]["originalHumanAsk"]))
+    print("Wrote {}".format(target.relative_to(ROOT)))
+    print("Wrote {}".format((OUT / ("{}_manifest.json".format(stem))).relative_to(ROOT)))
+    print(f"forks={len(forks)} blind-sampled={total_sampled} total={len(items)} "
+          f"(was {manifest['counts']['originalHumanAsk']})")
     for s in manifest_strata:
-        print("  %-36s N=%-4d n=%-3d unanimous-lower=%.3f"
-              % (s["key"], s["population"], s["sampled"], s["unanimousLowerBound"]))
+        print(f"  {s['key']:<36} N={s['population']:<4} n={s['sampled']:<3} unanimous-lower={s['unanimousLowerBound']:.3f}")
 
 
 if __name__ == "__main__":

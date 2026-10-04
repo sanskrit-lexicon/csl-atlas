@@ -9,10 +9,10 @@ unblock the gated Stage 3 of phase L0.
 AMAR) get rows with empty exemplars and source_available=no.
 """
 
-import os
-import sys
 import csv
+import os
 import re
+import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding="utf-8")

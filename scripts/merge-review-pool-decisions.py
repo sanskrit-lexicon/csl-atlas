@@ -52,7 +52,11 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
-from validate_review_decisions import expected_sheets, REJECTION_NOTE, POOL_ID  # noqa: E402
+from validate_review_decisions import (  # noqa: E402
+    POOL_ID,
+    REJECTION_NOTE,
+    expected_sheets,
+)
 
 DEFER_LABEL = "__defer__"
 VALID_VERDICTS = {"reviewed-ok", "reviewed-corrected", "blocked"}

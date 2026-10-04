@@ -34,7 +34,6 @@ import os
 import sys
 
 import pytest
-
 from conftest import write_text
 
 SNAP = """agni:MW,PWG,PW,AP,BOP,SKD,VCP,BEN

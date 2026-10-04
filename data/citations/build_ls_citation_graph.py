@@ -10,8 +10,14 @@
 #     borrow another dict's key (ap<-ap90 same author; sch,pwkvn<-pwg PW-Nachtrag tradition).
 #   - Curated alias fold: the top author's-genitive / German-description PWG expansions
 #     (MANU'S Gesetzbuch, PANINI'S acht Bucher ...) fold to their standard indological text name.
-import os, re, sys, glob, json, unicodedata
+import glob
+import json
+import os
+import re
+import sys
+import unicodedata
 from collections import Counter, defaultdict
+
 sys.stdout.reconfigure(encoding='utf-8')
 
 def fold_key(name):
@@ -298,7 +304,11 @@ with open(os.path.join(out,'ls_citation_nontext_filtered.tsv'),'w',encoding='utf
 # ben by -1,752 citations (see data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md).
 # Every rebuild from now on records the generating revisions and output hashes, so
 # the next freeze is bound to a commit, not to a date.
-import hashlib, subprocess, datetime
+import datetime
+import hashlib
+import subprocess
+
+
 def _git_rev(repo):
     try:
         return subprocess.run(['git','-C',repo,'rev-parse','HEAD'],capture_output=True,text=True,check=True).stdout.strip()

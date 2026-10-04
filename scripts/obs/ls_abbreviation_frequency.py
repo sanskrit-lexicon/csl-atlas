@@ -51,14 +51,16 @@ from collections import Counter
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/lib"))
 sys.path.insert(0, os.path.abspath("scripts/obs"))
-from parse_cslorig import iter_entries  # noqa: E402
-from dataset_meta import (  # noqa: E402
-    generated_at_for_payload, license_fields, read_json_if_exists,
-)
 # Same dictionary roster as the sibling register artifact, imported rather than
 # re-globbed so the two artifacts can never disagree about which dicts exist
 # (the test asserts their `dicts` key sets are identical).
 from citation_register_gaps import CSL_ORIG, discover_dicts  # noqa: E402
+from dataset_meta import (  # noqa: E402
+    generated_at_for_payload,
+    license_fields,
+    read_json_if_exists,
+)
+from parse_cslorig import iter_entries  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

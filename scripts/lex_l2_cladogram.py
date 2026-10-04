@@ -12,10 +12,10 @@ this with the convention-fingerprint cladogram + L3 forensic signals
 to produce the canonical genealogy.
 """
 
+import collections
+import csv
 import os
 import sys
-import csv
-import collections
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')

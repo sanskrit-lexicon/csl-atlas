@@ -24,10 +24,13 @@ import sys
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/lib"))
-from parse_cslorig import iter_entries, CSL_ORIG as _DEFAULT_CSL_ORIG  # noqa: E402
 from dataset_meta import (  # noqa: E402
-    generated_at_for_payload, license_fields, read_json_if_exists,
+    generated_at_for_payload,
+    license_fields,
+    read_json_if_exists,
 )
+from parse_cslorig import CSL_ORIG as _DEFAULT_CSL_ORIG
+from parse_cslorig import iter_entries  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

@@ -22,11 +22,11 @@ writes data/L0/patel_open_assignments.csv, patel_open_evidence.json.
 Run after s2/s2b/s2d.
 """
 
-import os
-import sys
-import re
 import csv
 import json
+import os
+import re
+import sys
 from collections import defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")

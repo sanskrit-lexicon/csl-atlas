@@ -15,11 +15,11 @@ Outputs:
   data/L0/patel_evidence.json     raw per-(dict,dim) evidence (rates + examples)
 """
 
-import os
-import sys
-import re
 import csv
 import json
+import os
+import re
+import sys
 from collections import defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -40,19 +40,19 @@ HOMORGANIC = [("N", "kKgG"), ("Y", "cCjJ"), ("R", "wWqQ"), ("n", "tTdD"), ("m", 
 
 DIM_META = {
     1: ("Anusvāra before consonants",
-        "When a nasal precedes a stop inside a word, is it written as anusvāra "
-        "(SLP1 M: aMka, saMskAra) or as the homorganic nasal (aNka, saMskAra→saNskAra)?",
+        ("When a nasal precedes a stop inside a word, is it written as anusvāra "
+        "(SLP1 M: aMka, saMskAra) or as the homorganic nasal (aNka, saMskAra→saNskAra)?"),
         "anusvara | homorganic | mixed"),
     3: ("Words ending with -at (śatṛ / vatup-matup)",
-        "How are present participles in -at and possessives in -vat/-mat cited "
-        "(bare -at stem, or with further marking)? Patel: 5 options across 3+2 sub-conventions.",
+        ("How are present participles in -at and possessives in -vat/-mat cited "
+        "(bare -at stem, or with further marking)? Patel: 5 options across 3+2 sub-conventions."),
         "see Patel 2016 — assign from -at / -vat / -mat examples"),
     5: ("Anusvāra of verbs",
         "Are nasal verbal roots cited with anusvāra (aMS) or the dental/labial nasal (aMs)?",
         "anusvara | nasal-letter | n.a. (no verb roots)"),
     6: ("ṛkārānta words (ṛ-final agent nouns)",
-        "How is an ṛ-stem agent noun (kartṛ) cited — bare stem (SLP1 kartf), "
-        "nominative (kartA), or with -ar/-ṛ (kartar/kartR)?",
+        ("How is an ṛ-stem agent noun (kartṛ) cited — bare stem (SLP1 kartf), "
+        "nominative (kartA), or with -ar/-ṛ (kartar/kartR)?"),
         "stem-f | nominative-A | ar/R"),
     7: ("vas/yas suffixes (perfect ppl. -vas, comparative -yas)",
         "How are -vas (perfect participle) and -yas (comparative) stems cited / spelled?",

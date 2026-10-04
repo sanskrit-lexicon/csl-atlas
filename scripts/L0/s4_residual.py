@@ -22,10 +22,10 @@ Outputs: data/L0/content_convention_residual.csv (ranked directed edges),
          data/L0/residual_report.json.
 """
 
-import os
-import sys
 import csv
 import json
+import os
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

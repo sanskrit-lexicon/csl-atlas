@@ -30,7 +30,12 @@ Outputs:
 Run from repo root (after f8_mbh_census.py):  python scripts/forensic/f8_mbh_verify.py
 Deps: indic_transliteration; ../sanskrit-util/py (slp1_simplify).
 """
-import sys, os, re, json, csv, glob
+import csv
+import glob
+import json
+import os
+import re
+import sys
 from collections import Counter
 
 sys.stdout.reconfigure(encoding="utf-8")

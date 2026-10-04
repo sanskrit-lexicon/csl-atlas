@@ -12,7 +12,9 @@ Writes: data/pd/compound_share_by_letter.tsv (+ src/data/pd mirror).
 Fallback: if the snapshot is absent (ByT5 unavailable), emits a dash-truth-only
 table for MW/GRA and marks the splitter columns 'n/a (model unavailable)'.
 """
-import sys, json, math
+import json
+import math
+import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')

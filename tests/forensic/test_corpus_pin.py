@@ -3,10 +3,15 @@ ONE recorded csl-orig revision — None, MIXED, dirty or moved all refuse."""
 
 import json
 
-import pytest
-
 import _corpus_pin as cp
-from conftest import FIXTURE_REVISION, git_commit_all, write_parse_provenance, write_text, write_tsv
+import pytest
+from conftest import (
+    FIXTURE_REVISION,
+    git_commit_all,
+    write_parse_provenance,
+    write_text,
+    write_tsv,
+)
 
 
 def _caches(parsed, codes=("mw", "pwg")):

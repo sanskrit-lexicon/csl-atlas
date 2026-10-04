@@ -11,7 +11,9 @@ Usage:
   python scripts/import_compound_segmentation.py --source local [--per-letter 300]
 Writes: data/dharmamitra/compound_segmentation_sample.json
 """
-import sys, json, argparse
+import argparse
+import json
+import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -19,8 +21,8 @@ sys.stderr.reconfigure(encoding='utf-8')
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / 'lib'))
-import letter_anatomy as la
 import dharmamitra_infer as dm
+import letter_anatomy as la
 from dict_sample import stratified_sample
 
 OUT = la.ATLAS / 'data' / 'dharmamitra' / 'compound_segmentation_sample.json'

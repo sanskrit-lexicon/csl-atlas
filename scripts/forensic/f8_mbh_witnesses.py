@@ -38,7 +38,12 @@ works again) and the `curl` loop in CommentaryStrategies'
 Run from repo root:  python scripts/forensic/f8_mbh_witnesses.py
 Deps: indic_transliteration; ../sanskrit-util/py (slp1_simplify).
 """
-import sys, os, re, json, subprocess, unicodedata
+import json
+import os
+import re
+import subprocess
+import sys
+import unicodedata
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

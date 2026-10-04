@@ -22,7 +22,11 @@ Writes (into data/pd/):
 
 Windows-safe: utf-8 stdout, streaming CLI reads, no BOM writes.
 """
-import sys, re, json, glob, math
+import glob
+import json
+import math
+import re
+import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')

@@ -55,15 +55,15 @@ Outputs (data/lexico/):
     m4_report.json
 """
 
-import os
-import re
-import sys
 import csv
 import glob
 import json
+import os
+import re
+import sys
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
-from parse_cslorig import iter_entries, CSL_ORIG
+from parse_cslorig import CSL_ORIG, iter_entries
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
