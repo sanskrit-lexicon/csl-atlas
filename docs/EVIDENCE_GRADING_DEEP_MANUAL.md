@@ -1,6 +1,6 @@
 # csl-atlas — Evidence-Grading Methodology & Human-Review Deep Manual
 
-_Created: 21-07-2026 · Last updated: 17-08-2026_
+_Created: 21-07-2026 · Last updated: 04-10-2026_
 
 > Deep manual for the org's flagship epistemic architecture: how a claim in csl-atlas is
 > born, labeled, provenance-stamped, routed to human review, statistically tested,
@@ -769,15 +769,17 @@ and incident is already in the public repo.
 
 ## 16. Operator appendix — the pipeline estate
 
-### 16.1 Script census (21-07-2026, `package.json` at `6956469`)
+### 16.1 Script census (re-census 04-10-2026; prior 21-07-2026, `package.json` at `6956469`)
 
-**93 script entries** (the census row's "73" is stale): 61 `build-*` dataset pipelines,
-9 `validate-*`, 6 `import-*`, and 17 lifecycle/orchestration/tooling entries —
-`predev`/`dev`, `prebuild`/`build`/`postbuild`, `predeploy`/`deploy`, `test`,
-`verify`, `sync-site-data`, `regen-review-artifacts`, `recover-r2-archive`,
-`train-langdetect-german`, `install-review-tools`, `test-review-decisions`,
-`audit-analysis-capabilities`, and `verify-yat-sense-artifact` (§13.2's evidence
-script). Do not guess a script name — grep `package.json`.
+**135 script entries** (04-10-2026 re-census; the 21-07 census's 93 and the gap
+row's "73" are stale): 79 `build-*` dataset pipelines,
+21 `validate-*`, 6 `import-*`, and 29 lifecycle/orchestration/tooling entries —
+the 17 the 21-07 census enumerated (`predev`/`dev`, `prebuild`/`build`/`postbuild`,
+`predeploy`/`deploy`, `test`, `verify`, `sync-site-data`, `regen-review-artifacts`,
+`recover-r2-archive`, `train-langdetect-german`, `install-review-tools`,
+`test-review-decisions`, `audit-analysis-capabilities`, and
+`verify-yat-sense-artifact`, §13.2's evidence script) plus 12 added since. Do not
+guess a script name — grep `package.json`.
 
 ### 16.2 Order contracts
 
