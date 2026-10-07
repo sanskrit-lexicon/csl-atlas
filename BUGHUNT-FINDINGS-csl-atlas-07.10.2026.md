@@ -32,6 +32,7 @@ No committed secrets found (regex sweep over `scripts/`, `src/`, `.github/`, con
 - Dating: last re-vendor `790d3dd0` "re-vendor sanskrit-util v0.11.0" (04-09-2026, PR #438); canonical fix `48052f3` "fix(form_key): medial anusvāra before a labial folds to m (0.12.0, H3975)" landed 06-09-2026 in [sanskrit-lexicon/sanskrit-util](https://github.com/sanskrit-lexicon/sanskrit-util) — **three days after the re-vendor, so the drift window is a full month**.
 - Impact: `slp1_form_key` is load-bearing in this repo — [build-h4-review-packet.mjs:675,691,697](https://github.com/sanskrit-lexicon/csl-atlas/blob/1e2a391fa98f3968f511049381d05356e06d050b/scripts/build-h4-review-packet.mjs#L675) (H4 crosswalk joins) and [adjudicate-h4-agent.mjs:38,82,148](https://github.com/sanskrit-lexicon/csl-atlas/blob/1e2a391fa98f3968f511049381d05356e06d050b/scripts/adjudicate-h4-agent.mjs#L38) (adjudication matching). With the stale fold, `saṃbhavaḥ`/`sambhavaḥ`-class lemma↔form pairs do **not** collide here while they do in every consumer on canonical v0.12.0 — the H4 evidence joins silently diverge from the estate-wide key. This drift class has hit the repo before (H1394 residue, re-synced in CHANGELOG §0.10-era "Fixed — vendored sanskrit-util re-synced").
 - Disposition: **auto-fixed in this run** per the MG 26-09-2026 ruling — re-vendored byte-identical from canonical v0.12.0 (documented repair; the guard's own message). Fix PR: _linked in the changelog queue entry of this merge_.
+  - Fix PR landed as [#542](https://github.com/sanskrit-lexicon/csl-atlas/pull/542) (re-vendor byte-identical from canonical v0.12.0; drift-guard suite 72/72, consumer suites 81/81).
 - Verification of the fix: `node --test test/lib.test.mjs` green after re-vendor; vendored file byte-equal (modulo CRLF) to `../sanskrit-util/js/index.mjs`; no repo test pins the old fold (`grep form_key test/*.mjs` → 0 hits), exports unchanged.
 
 ### 2. MEDIUM — the drift guard is blind in CI by construction
@@ -65,6 +66,7 @@ No committed secrets found (regex sweep over `scripts/`, `src/`, `.github/`, con
 ## Process notes
 
 - Phases: hunt (read-only) → this report → HIGH auto-fix. Max-3-attempts fix budget: used 1 of 3 (first attempt verified green).
+- Process slip, self-caught and reverted in the same pass: the first application of the re-vendor `cp` ran against the shared main tree (workdir error) instead of the fix worktree; the file was restored from HEAD (`git checkout --`) before any commit, the shared tree verified clean, and the fix re-applied and verified inside worktree `csl-atlas-h4068f-78843`. No commit ever carried the slip.
 - No HIGH credential/infra finding, so no GTD `@DO` row was minted; findings 2–4 are report-only per the ruling.
 
 _Dr. Mārcis Gasūns_
