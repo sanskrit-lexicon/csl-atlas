@@ -137,6 +137,8 @@
     "test-review-pool-kappa-lexico": "python -m unittest scripts.lexico.test_lexico_review_pool_kappa",
     "build-ls-abbreviation-frequency": "python scripts/obs/ls_abbreviation_frequency.py",
     "test-ls-abbreviation-frequency": "python -m unittest scripts.test_ls_abbreviation_frequency",
+    "build-abbrev-census": "python scripts/build_abbrev_census.py",
+    "test-abbrev-census": "python -m unittest scripts.test_build_abbrev_census",
     "test-forensic-pins": "python -m pytest tests/forensic -q -p no:cacheprovider",
     "review-pool-kappa": "python scripts/review_pool_kappa.py",
     "test-review-pool-kappa": "python -m unittest scripts.test_review_pool_kappa"
