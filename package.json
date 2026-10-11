@@ -139,6 +139,8 @@
     "test-ls-abbreviation-frequency": "python -m unittest scripts.test_ls_abbreviation_frequency",
     "build-abbrev-census": "python scripts/build_abbrev_census.py",
     "test-abbrev-census": "python -m unittest scripts.test_build_abbrev_census",
+    "build-validation-2006": "python scripts/build_abbrev_validation_2006.py",
+    "test-validation-2006": "python -m unittest scripts.test_build_abbrev_validation_2006",
     "test-forensic-pins": "python -m pytest tests/forensic -q -p no:cacheprovider",
     "review-pool-kappa": "python scripts/review_pool_kappa.py",
     "test-review-pool-kappa": "python -m unittest scripts.test_review_pool_kappa"
