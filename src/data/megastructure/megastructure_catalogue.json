@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-10-10T20:46:25.520Z",
+  "generatedAt": "2026-10-11T06:54:27.837Z",
   "generatedBy": "scripts/build-megastructure.mjs",
   "componentSchema": "data/schema/megastructure-component.schema.json",
   "dicts": [
@@ -1413,9 +1413,9 @@
             "commemorate"
           ],
           "title": {
-            "asPrinted": "इति श्रीभद्रहलायुधकृतायामभिधानरत्नमालायां मनोहराकाण्डे पञ्चमं समाप्तम् ॥ ५ ॥",
+            "asPrinted": "इति श्रीभट्टहलायुधकृतायामभिधानरत्नमालायां [अ]नेकार्थकाण्डे पञ्चमं समाप्तम् ॥ ५ ॥",
             "iast": null,
-            "english": "Closing colophon: 'Thus ends the fifth, the Manohara-kāṇḍa, in the Abhidhānaratnamālā composed by Śrī Bhadra Halāyudha'"
+            "english": "Closing colophon: 'Thus ends the fifth, the Anekārtha-kāṇḍa (homonym section), in the Abhidhānaratnamālā composed by Śrī Bhaṭṭa Halāyudha'"
           },
           "languages": [
             "san"
@@ -1439,7 +1439,7 @@
           "transcriptions": [],
           "parent": null,
           "evidenceLevel": "observed",
-          "evidence": "ARMH_0101 viewed 24-09-2026: the kośa's last verse (1887) is followed by the closing colophon and the kāṇḍa numeral 5, closing the volume. It is printed at the foot of the last text page (printed 101), not on a separate leaf.",
+          "evidence": "ARMH_0101 viewed 24-09-2026 and re-read 11-10-2026 from a fresh 400 dpi render of a newly fetched byte-identical PDF: the kośa's last verse (1887) is followed by the closing colophon and the kāṇḍa numeral 5, closing the volume. It is printed at the foot of the last text page (printed 101), not on a separate leaf. The re-read corrects two akṣaras of the 24-09 transcription: भट्ट for भद्र (the author is styled Bhaṭṭa), and [अ]नेकार्थ for मनोहरा (e-kāra not o-kāra, क not ह; the kośa-final homonym section, not a proper name; the initial अ is faint on the scan).",
           "notes": null
         }
       ],
@@ -1451,7 +1451,7 @@
           "evidence": "The Cologne ARMHScan index links a 'Front Matter' page at sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/armh.html, which returns HTTP 404 (probed 24-09-2026), and csl-doc carries no armh prefaced directory, so no csldoc front-matter scan set exists for this dictionary. Whether the printed volume has a title leaf, preface or publisher's note before the text page that the scans number 1 cannot be established from the scan set."
         }
       ],
-      "notes": "The edition prints an English index in the margins of every text page (left and right margins of each page carry English glosses with reference numbers to the entry verses, e.g. page 3: 'Shiva's bow 2.', 'Name of Ganesh 9.', 'Name of Vishnu 55.'). That apparatus is digitized as the extra headwords in csl-orig/v02/armh/armh_hwextra.txt, but it recurs on every page and is not bracketed front or back matter, so it is recorded here rather than as a component. The kośa's body divisions are the five kāṇḍas - svarga (from page 1), bhūmi-kāṇḍa (opens printed page 20), the third kāṇḍa (opens page 75), the fourth, sāmānyakāṇḍa (ends printed page 90), and the fifth, manohara-kāṇḍa (pages 91-101).",
+      "notes": "The edition prints an English index in the margins of every text page (left and right margins of each page carry English glosses with reference numbers to the entry verses, e.g. page 3: 'Shiva's bow 2.', 'Name of Ganesh 9.', 'Name of Vishnu 55.'). That apparatus is digitized as the extra headwords in csl-orig/v02/armh/armh_hwextra.txt, but it recurs on every page and is not bracketed front or back matter, so it is recorded here rather than as a component. The kośa's body divisions are the five kāṇḍas - svarga (from page 1), bhūmi-kāṇḍa (opens printed page 20), the third kāṇḍa (opens page 75), the fourth, sāmānyakāṇḍa (ends printed page 90), and the fifth, anekārtha-kāṇḍa (the homonym section, pages 91-101).",
       "misfits": [
         {
           "label": "English index printed in the margins of every text page",

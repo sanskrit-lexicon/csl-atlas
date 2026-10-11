@@ -48,10 +48,10 @@ components = [
          notes="The edition's title is given in Devanagari only; no English title page is present in the scan set.",
          secondary=["frame"]),
     comp("armh.bm.colophon", 2, "back", "colophon", "attest",
-         t("इति श्रीभद्रहलायुधकृतायामभिधानरत्नमालायां मनोहराकाण्डे पञ्चमं समाप्तम् ॥ ५ ॥",
-           "Closing colophon: 'Thus ends the fifth, the Manohara-kāṇḍa, in the Abhidhānaratnamālā composed by Śrī Bhadra Halāyudha'"),
+         t("इति श्रीभट्टहलायुधकृतायामभिधानरत्नमालायां [अ]नेकार्थकाण्डे पञ्चमं समाप्तम् ॥ ५ ॥",
+           "Closing colophon: 'Thus ends the fifth, the Anekārtha-kāṇḍa (homonym section), in the Abhidhānaratnamālā composed by Śrī Bhaṭṭa Halāyudha'"),
          ext(1), [locus("0101")], "not-digitized",
-         "ARMH_0101 viewed 24-09-2026: the kośa's last verse (1887) is followed by the closing colophon and the kāṇḍa numeral 5, closing the volume. It is printed at the foot of the last text page (printed 101), not on a separate leaf.",
+         "ARMH_0101 viewed 24-09-2026 and re-read 11-10-2026 from a fresh 400 dpi render of a newly fetched byte-identical PDF: the kośa's last verse (1887) is followed by the closing colophon and the kāṇḍa numeral 5, closing the volume. It is printed at the foot of the last text page (printed 101), not on a separate leaf. The re-read corrects two akṣaras of the 24-09 transcription: भट्ट for भद्र (the author is styled Bhaṭṭa), and [अ]नेकार्थ for मनोहरा (e-kāra not o-kāra, क not ह; the kośa-final homonym section, not a proper name; the initial अ is faint on the scan).",
          secondary=["commemorate"]),
 ]
 
@@ -97,7 +97,7 @@ catalogue = {
               "That apparatus is digitized as the extra headwords in csl-orig/v02/armh/armh_hwextra.txt, but it recurs on every page and is "
               "not bracketed front or back matter, so it is recorded here rather than as a component. The kośa's body divisions are the five "
               "kāṇḍas - svarga (from page 1), bhūmi-kāṇḍa (opens printed page 20), the third kāṇḍa (opens page 75), the fourth, sāmānyakāṇḍa "
-              "(ends printed page 90), and the fifth, manohara-kāṇḍa (pages 91-101)."),
+              "(ends printed page 90), and the fifth, anekārtha-kāṇḍa (the homonym section, pages 91-101)."),
     "misfits": [
         {"label": "English index printed in the margins of every text page", "componentId": None,
          "why": ("A recurring in-page apparatus, not bracketed matter. The component vocabulary (title-page, preface, index, ...) assumes "
