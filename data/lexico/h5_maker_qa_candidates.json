@@ -5,14 +5,14 @@
   "evidenceLabel": "review-derived",
   "reviewStatus": "source-checked",
   "ownerRepo": "csl-atlas",
-  "generatedAt": "2026-07-17T18:43:38.416Z",
+  "generatedAt": "2026-10-14T18:43:31.583Z",
   "generatedBy": "npm run build-h5-maker-qa-candidates",
   "sourceFiles": [
     "src/data/review/h5-anomaly-review.json"
   ],
   "sourceReviewReport": {
     "path": "src/data/review/h5-anomaly-review.json",
-    "generatedAt": "2026-07-03T02:20:52.185Z",
+    "generatedAt": "2026-10-14T18:43:28.619Z",
     "recordCount": 130,
     "reviewFamily": "h5-ghost-anomaly"
   },
@@ -76,8 +76,8 @@
         {
           "dictionary": "MW",
           "L": "23892",
-          "line": 84959,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L84959"
+          "line": 84960,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L84960"
         },
         {
           "dictionary": "PW",
@@ -109,8 +109,8 @@
         {
           "dictionary": "MW",
           "L": "22292",
-          "line": 79510,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L79510"
+          "line": 79511,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L79511"
         },
         {
           "dictionary": "PW",
@@ -142,8 +142,8 @@
         {
           "dictionary": "MW",
           "L": "149044",
-          "line": 499371,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499371"
+          "line": 499372,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499372"
         },
         {
           "dictionary": "PW",
@@ -166,8 +166,8 @@
         "note": "Known-correction calibration: observed old/new strings change source text or headword content, so this stays a possible source correction target."
       },
       "oldNewEvidence": {
-        "petOld": "<ls>VS. 11. 39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
-        "petNew": "<ls>VS. 11,39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
+        "petOld": "<ls>VS. 11,39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
+        "petNew": "<ls>VS. 11,39.</ls> <ls n=\"VS.\">19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
         "mwOld": "<ab>Impv.</ab> <s>dADAtu</s> <ab>pl.</ab> <s>°Datu</s>;",
         "mwNew": "<ab>Impv.</ab> <s>da/DAtu</s>, <ab>pl.</ab> <s>°Datu</s>;"
       },
@@ -175,8 +175,8 @@
         {
           "dictionary": "MW",
           "L": "99233",
-          "line": 332776,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L332776"
+          "line": 332777,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L332777"
         },
         {
           "dictionary": "PWG",
@@ -208,8 +208,8 @@
         {
           "dictionary": "MW",
           "L": "101481",
-          "line": 340020,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340020"
+          "line": 340021,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340021"
         },
         {
           "dictionary": "PWG",
@@ -241,8 +241,8 @@
         {
           "dictionary": "MW",
           "L": "41088",
-          "line": 143936,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L143936"
+          "line": 143937,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L143937"
         },
         {
           "dictionary": "PW",
@@ -482,8 +482,8 @@
           "form": "cApaqa",
           "dictionary": "MW",
           "L": "72974",
-          "line": 246834,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246834",
+          "line": 246835,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246835",
           "bodyExcerpt": "<s>cApaqa</s> ¦ <ab>N.</ab> of a village, <ls>Kṣitīś. iv.</ls>"
         },
         {
@@ -502,8 +502,8 @@
           "form": "cApala",
           "dictionary": "MW",
           "L": "72975",
-          "line": 246837,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246837",
+          "line": 246838,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246838",
           "bodyExcerpt": "<s>cApala</s> ¦ <lex>n.</lex> (<ab>fr.</ab> <s>cap˚</s>, <ab>g.</ab> <s>yuvA<srs/>di</s>) mobility, swiftness, <ls>Ragh. iii, 42</ls>; <ls>BhP. vii, 12, 20</ls><info lex=\"n\"/>"
         },
         {
@@ -549,8 +549,8 @@
           "form": "uzmopagama",
           "dictionary": "MW",
           "L": "37850",
-          "line": 132833,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132833",
+          "line": 132834,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132834",
           "bodyExcerpt": "<s>uzmo<srs/>pagama</s> ¦ <lex>m.</lex> beginning of the hot season, <ls>L.</ls><info lex=\"m\"/>"
         },
         {
@@ -569,8 +569,8 @@
           "form": "uzRopagama",
           "dictionary": "MW",
           "L": "37807",
-          "line": 132695,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132695",
+          "line": 132696,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132696",
           "bodyExcerpt": "<s>uzRo<srs/>pagama</s> ¦ <lex>m.</lex> the beginning of the hot season, <ls>L.</ls><info lex=\"m\"/>"
         },
         {
@@ -750,8 +750,8 @@
           "form": "divaraTa",
           "dictionary": "MW",
           "L": "92243",
-          "line": 309834,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309834",
+          "line": 309835,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309835",
           "bodyExcerpt": "<s>diva—raTa</s> ¦ <ab>w.r.</ab> for <s>divi-</s> (<ab>q.v.</ab>)"
         },
         {
@@ -770,8 +770,8 @@
           "form": "devaraTa",
           "dictionary": "MW",
           "L": "95965",
-          "line": 321966,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L321966",
+          "line": 321967,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L321967",
           "bodyExcerpt": "<s>deva—raTa/</s> ¦ <lex>m.</lex> the car or vehicle of a god, <ls>AV.</ls>; <ls>TS.</ls>; <ls>Br.</ls><info lex=\"m\"/>"
         },
         {
@@ -817,8 +817,8 @@
           "form": "jalaDitA",
           "dictionary": "MW",
           "L": "77921",
-          "line": 262746,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262746",
+          "line": 262747,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262747",
           "bodyExcerpt": "<s>jala—Di—tA</s> ¦ <lex>f.</lex> the state of the ocean, <ls>ŚārṅgP. xxix, 12</ls><info lex=\"f\"/>"
         },
         {
@@ -837,8 +837,8 @@
           "form": "jalaDigA",
           "dictionary": "MW",
           "L": "77919",
-          "line": 262740,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262740",
+          "line": 262741,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262741",
           "bodyExcerpt": "<s>jala—Di—gA</s> ¦ <lex>f.</lex> a river flowing into the ocean, <ls>L.</ls><info lex=\"f\"/>"
         },
         {
@@ -884,8 +884,8 @@
           "form": "kftAlaka",
           "dictionary": "MW",
           "L": "54495",
-          "line": 187256,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L187256",
+          "line": 187257,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L187257",
           "bodyExcerpt": "<s>kftA<srs/>laka</s> ¦ <lex>m.</lex> <ab>N.</ab> of one of <s1>Śiva</s1>'s attendants <ab>Comm.</ab> on <ls>L.</ls><info lex=\"m\"/>"
         },
         {
@@ -904,8 +904,8 @@
           "form": "mftAlaka",
           "dictionary": "MW",
           "L": "167215",
-          "line": 558492,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L558492",
+          "line": 558493,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L558493",
           "bodyExcerpt": "<s>mftAlaka</s>, <s>mfttAla</s> and <s>mfttA˚laka</s>, ¦ <lex>n.</lex> a kind of loam or clay, <ls>L.</ls><info lex=\"n\"/>"
         },
         {
