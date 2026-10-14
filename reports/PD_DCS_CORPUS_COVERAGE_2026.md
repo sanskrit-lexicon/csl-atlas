@@ -22,7 +22,7 @@ the answer is a study in two numbers that point in opposite directions:
 | # | Metric | Value | What it answers |
 |---|---|---|---|
 | 1 | **PD-citation-weighted coverage** | **25.2 %** | Of what PD actually cites, how much is in DCS? |
-| 2 | **Title-level coverage** | **~2.4–4.8 %** (118 of ~2,445 works) | How many of PD's works exist in DCS at all? |
+| 2 | **Title-level coverage** | **8.3 %** of the declared canon (118 of 1,419 AOB rows); exercised letter-a band **~2.4–4.8 %** (118 of ~2,445) | How many of PD's works exist in DCS at all? |
 | 3 | **DCS-token-weighted coverage** | **77.9 %** (2026) · 74.1 % (2021) | Of DCS's own text mass, how much does PD also cite? |
 | 4 | **Partial-coverage grade** | mostly `present`; 2 partial | Is "covered" a whole work or a fragment? |
 
@@ -96,18 +96,33 @@ the coverage denominator.
 Of PD's 353,512 primary-work citation occurrences, **88,929 (25.2 %)** go to works DCS
 contains. Three-quarters of PD's citation practice points at texts DCS does not hold.
 
-### Metric 2 — title-level coverage: **~2.4 – 4.8 %**
+### Metric 2 — title-level coverage: **8.3 % of the declared canon** (exercised letter-a band **~2.4 – 4.8 %**)
 
-DCS contains **118** of the distinct works PD cites. The denominator — how many distinct
-works PD cites — is inherently fuzzy because unmerged spelling variants inflate a raw
-siglum count:
+DCS contains **118** of the distinct works PD cites.
+
+**Declared-canon denominator (H6707 pass-2, 14-10-2026).** PD's printed *Abbreviations of
+Books* (KoshaSHRI official PDF, re-OCR ground truth) declares a dictionary-wide canon of
+**1,419 edition-level rows** (1,418 machine-recovered at pass-1 + the Viṣṇupurāṇa row the
+pass-1 OCR had lost; print-verified p. 40). Against it, 118 covered works =
+118 / 1,419 = **8.32 %** (about one in twelve; collapsing the few same-work edition pairs
+gives ≈1,412 works / ≈8.4 %). The census joins the declared list at **63.3 % of sigla /
+78.0 % of occurrence mass** after 14 official-PDF ground-truth joins (ṚV., AV.,
+Viṣṇupurāṇa, Nyāyasūtra/Nyāyasāra, Yājñavalkyasmṛti, Meghadūta, Gautamadharmasūtra,
+Kāmasūtra, Pañcaviṃśabrāhmaṇa, Āśvalāyana-śrauta/gṛhya-sūtra + variant spellings) and
+adjudication of the 150 low-confidence fuzzy joins (24 confirmed, 126 demoted).
+Machine-readable canon: `data/pd/pd_aob_declared_works.tsv`,
+`data/pd/pd_aob_siglum_title.tsv`, `data/pd/pd_aob_fuzzy_short_adjudication.tsv`.
+
+**Exercised letter-a denominator** — as measured before the declared canon was available;
+inherently fuzzy because unmerged spelling variants inflate a raw siglum count:
 
 - **Lower bound:** 118 / 4,986 distinct primary sigla = **2.37 %** (denominator over-counts).
 - **Estimate:** merging sigla by consonant skeleton (so `PadmP.`/`PadmaP.` collapse) gives
   ~2,445 distinct works → 118 / 2,445 = **4.83 %**.
 
 Either way the order of magnitude is robust: **even under the single letter a-, PD's source
-canon runs to roughly 2,400 distinct works, of which DCS holds about one in twenty.**
+canon runs to roughly 2,400 distinct works, of which DCS holds about one in twenty — and
+against the declared list, one in twelve.**
 
 ### Metric 3 — DCS-token-weighted coverage: **77.9 %** (2026), **74.1 %** (2021)
 

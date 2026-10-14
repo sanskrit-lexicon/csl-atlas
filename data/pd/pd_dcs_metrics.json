@@ -22,5 +22,13 @@
   "total_dcs_tok_2021": 4577021,
   "total_dcs_tok_2026": 5688416,
   "structural_pct": 10.04,
-  "secondary_pct": 1.22
+  "secondary_pct": 1.22,
+  "updated_by": "H6707 pass-2 AOB declared-canon rebase (GLM 5.3, zai-coding-plan/glm-5.3-flash via ZCode, 14-10-2026)",
+  "n_declared_aob_rows_edition_level": 1419,
+  "n_declared_aob_works_work_level_est": 1412,
+  "metric_title_level_declared_pct": 8.32,
+  "metric_title_level_declared_work_level_pct_est": 8.36,
+  "metric_aob_census_join_sigla_pct": 63.3,
+  "metric_aob_census_join_occurrence_pct": 78.0,
+  "declared_canon_note": "AOB = printed Abbreviations of Books (KoshaSHRI official PDF, re-OCR ground truth 14-10-2026): 1,418 pass-1 rows + Visnupurana row recovered = 1,419 edition-level rows; dictionary-wide, not letter-a. Sources: data/pd/pd_aob_declared_works.tsv, data/pd/pd_aob_siglum_title.tsv."
 }
