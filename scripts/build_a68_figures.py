@@ -102,7 +102,7 @@ def fig1(m):
 def fig2(m):
     """The three coverage metrics side by side."""
     bars = [
-        ("Title-level\n(118 of ~2,445 works)", m["metric_title_level_pct_estimate"], C_BAR2),
+        ("Title-level, declared canon\n(118 of 1,419 AOB rows)", m["metric_title_level_declared_pct"], C_BAR2),
         ("PD-citation-weighted\n(of what PD cites)", m["metric_pd_citation_weighted_pct"], C_BAR),
         ("DCS-token-weighted 2021\n(of DCS's own mass)", m["metric_dcs_token_weighted_2021_pct"], C_BAR2),
         ("DCS-token-weighted 2026\n(of DCS's own mass)", m["metric_dcs_token_weighted_2026_pct"], C_BAR),
