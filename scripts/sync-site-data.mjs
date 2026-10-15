@@ -29,6 +29,18 @@ const COPIES = [
     target: "src/data/lexico/kosa_model_measures.json"
   },
   {
+    source: "data/lexico/access_structures.json",
+    target: "src/data/lexico/access_structures.json"
+  },
+  {
+    source: "data/lexico/access_structures_rules.csv",
+    target: "src/data/lexico/access_structures_rules.csv"
+  },
+  {
+    source: "data/lexico/access_structures_counterexamples.csv",
+    target: "src/data/lexico/access_structures_counterexamples.csv"
+  },
+  {
     source: "data/lexico/kosa_model_amar_sample.json",
     target: "src/data/lexico/kosa_model_amar_sample.json"
   },

@@ -1,4 +1,4 @@
-_Created: 24-09-2026 · Last updated: 24-09-2026_
+_Created: 24-09-2026 · Last updated: 25-09-2026 (H5409 — §5a vowel-grade nest filter, refutation condition 3 resolved)_
 
 # Access structures census — sort order of the seven narrative dictionaries
 
@@ -121,7 +121,24 @@ The CSV holds every violation with both L-ids. It also flags the pairs that some
 3. **AP root nests** — the 3,198 records marked as verbal roots, found by the conjugation mark `¦ €N`:
    - The roots, taken alone, are almost perfectly alphabetical: 16 violations in 3,184, or 0.50 %.
    - The pair right after a root descends 27.1 % of the time, against 5.9 % ten or more headwords later.
-   - AP's 9.4 % rate is therefore a nest effect, not a collation effect. The heads view already removes 8,316 paragraph run-ons and 7,322 prefix derivatives (the `main` view scores 10.6 %). The remainder is derivatives whose stem changes the root vowel (guṇa/vṛddhi) and so cannot be recognised by key prefix.
+   - AP's 9.4 % rate is partly a nest effect, not a collation effect. The heads view already removes 8,316 paragraph run-ons and 7,322 prefix derivatives (the `main` view scores 10.6 %). H5331 hypothesised that the remainder is derivatives whose stem changes the root vowel (guṇa/vṛddhi) and so cannot be recognised by key prefix. **H5409 tested that hypothesis and it does not hold — see §5a.**
+
+### 5a. The vowel-grade nest filter (H5409) — the hypothesis fails
+
+The `heads_nest` view collapses a root and the following headwords whose stem is the root's guṇa, vṛddhi or zero grade into one sort unit keyed on the root. Grades are taken on the root's last vowel: √kṛ `kf` → *kf, kar, kār*, so *kāra* and *karaṇa* both fall into √kṛ's nest; √budh `buD` → *buD, boD, baud*; √gam → *gam, gām*.
+
+| View | Units | Descent rate | Displaced rate |
+|---|---|---|---|
+| `main` | 44,403 | 10.63 % | 17.32 % |
+| `heads` | 29,128 | 9.36 % | 15.82 % |
+| `heads_nest` | 27,212 | **8.19 %** | 13.08 % |
+| roots only | 3,184 | 0.50 % | — |
+
+1. The filter removes a further **1,519 headwords** as vowel-grade derivatives (9,217 nest drops against the heads view's 7,322).
+2. It removes **12.4 %** of AP's 9.36 % rate, and closes **13.1 %** of the distance between the heads view and the 0.50 % roots-only floor. The pre-registered bar was 75 % of that gap for *confirmed* and 25 % for *partly*.
+3. **Verdict: refuted.** Vowel-grade nesting is real but small. It explains roughly one violation in eight, not the bulk.
+4. The residual disorder is not concentrated at the root either. Right after a root the rate falls from 27.1 % to 19.8 %, but ten or more headwords later it is still 5.9 %, and 676 of the 2,229 remaining descents sit in that far bucket. Much of what is left is prefix-family ordering inside a section rather than root nesting at all: *atikrāntiḥ* → *atikramaṇam* (0040-1), *aticchedaḥ* → *aticchandaḥ* (0041-1), *atithin* → *atithigvaḥ* (0042-1) — Apte groups a preverb's derivatives semantically, and the vowel-grade filter never sees them because their heads are not root records.
+5. Known limits of the grade mapping, each a source of surviving counterexamples: samprasāraṇa (√yaj → *iṣṭa*), nasal-infix loss (√añj → *akta*, visible at 0034-2 → 0036-1), and set/anit ā-roots whose derivatives take *-i-* (√sthā → *sthita*). A mapping that covered them would be a morphological analyser, not a collation census.
 
 ## 6. Unknowns and what would refute this
 
@@ -136,6 +153,6 @@ The CSV holds every violation with both L-ids. It also flags the pairs that some
 
 1. A *printed* page image showing a sequence that the best-fit rule orders differently, where csl-orig follows the image, refutes that dictionary's rule. Example: an MW page with *aṃśa* before *aṅkura*.
 2. Front matter that states a different treatment of ṃ, ḥ or geminates for a factor marked *clear* refutes that factor.
-3. For AP: if a vowel-grade-aware root filter (guṇa/vṛddhi) does not bring the heads-view rate toward the 0.5 % roots-only rate, the nest explanation in §5 is wrong.
+3. For AP: if a vowel-grade-aware root filter (guṇa/vṛddhi) does not bring the heads-view rate toward the 0.5 % roots-only rate, the nest explanation in §5 is wrong. **Tested (H5409, 24-09-2026): the condition fired — REFUTED.** The `heads_nest` view scores 8.19 % against the heads view's 9.36 %, closing 13.1 % of the gap to the 0.50 % floor, far below the pre-registered 75 % bar (§5a). Vowel-grade nesting accounts for about an eighth of AP's disorder; the rest needs a different explanation — prefix-family grouping is the leading candidate, and it is untested.
 
 _Гасунс_

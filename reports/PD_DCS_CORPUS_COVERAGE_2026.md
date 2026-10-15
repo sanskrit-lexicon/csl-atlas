@@ -1,6 +1,6 @@
 # What share of the Poona Dictionary's source canon does DCS cover? (2026)
 
-_Created: 20-07-2026 · Last updated: 20-07-2026_
+_Created: 20-07-2026 · Last updated: 14-10-2026_
 
 **Handoff:** [H1336](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1336-Opus_csl-atlas_pd-abbrev-vs-dcs-corpus-coverage_19.07.26.md)
 · **Model:** Opus 4.8 (`claude-opus-4-8`) · **Scope:** Poona Dictionary letter **a-** only (see §6).
@@ -22,7 +22,7 @@ the answer is a study in two numbers that point in opposite directions:
 | # | Metric | Value | What it answers |
 |---|---|---|---|
 | 1 | **PD-citation-weighted coverage** | **25.2 %** | Of what PD actually cites, how much is in DCS? |
-| 2 | **Title-level coverage** | **~2.4–4.8 %** (118 of ~2,445 works) | How many of PD's works exist in DCS at all? |
+| 2 | **Title-level coverage** | **8.3 %** of the declared canon (118 of 1,419 AOB rows); exercised letter-a band **~2.4–4.8 %** (118 of ~2,445) | How many of PD's works exist in DCS at all? |
 | 3 | **DCS-token-weighted coverage** | **77.9 %** (2026) · 74.1 % (2021) | Of DCS's own text mass, how much does PD also cite? |
 | 4 | **Partial-coverage grade** | mostly `present`; 2 partial | Is "covered" a whole work or a fragment? |
 
@@ -96,18 +96,33 @@ the coverage denominator.
 Of PD's 353,512 primary-work citation occurrences, **88,929 (25.2 %)** go to works DCS
 contains. Three-quarters of PD's citation practice points at texts DCS does not hold.
 
-### Metric 2 — title-level coverage: **~2.4 – 4.8 %**
+### Metric 2 — title-level coverage: **8.3 % of the declared canon** (exercised letter-a band **~2.4 – 4.8 %**)
 
-DCS contains **118** of the distinct works PD cites. The denominator — how many distinct
-works PD cites — is inherently fuzzy because unmerged spelling variants inflate a raw
-siglum count:
+DCS contains **118** of the distinct works PD cites.
+
+**Declared-canon denominator (H6707 pass-2, 14-10-2026).** PD's printed *Abbreviations of
+Books* (KoshaSHRI official PDF, re-OCR ground truth) declares a dictionary-wide canon of
+**1,419 edition-level rows** (1,418 machine-recovered at pass-1 + the Viṣṇupurāṇa row the
+pass-1 OCR had lost; print-verified p. 40). Against it, 118 covered works =
+118 / 1,419 = **8.32 %** (about one in twelve; collapsing the few same-work edition pairs
+gives ≈1,412 works / ≈8.4 %). The census joins the declared list at **63.3 % of sigla /
+78.0 % of occurrence mass** after 14 official-PDF ground-truth joins (ṚV., AV.,
+Viṣṇupurāṇa, Nyāyasūtra/Nyāyasāra, Yājñavalkyasmṛti, Meghadūta, Gautamadharmasūtra,
+Kāmasūtra, Pañcaviṃśabrāhmaṇa, Āśvalāyana-śrauta/gṛhya-sūtra + variant spellings) and
+adjudication of the 150 low-confidence fuzzy joins (24 confirmed, 126 demoted).
+Machine-readable canon: `data/pd/pd_aob_declared_works.tsv`,
+`data/pd/pd_aob_siglum_title.tsv`, `data/pd/pd_aob_fuzzy_short_adjudication.tsv`.
+
+**Exercised letter-a denominator** — as measured before the declared canon was available;
+inherently fuzzy because unmerged spelling variants inflate a raw siglum count:
 
 - **Lower bound:** 118 / 4,986 distinct primary sigla = **2.37 %** (denominator over-counts).
 - **Estimate:** merging sigla by consonant skeleton (so `PadmP.`/`PadmaP.` collapse) gives
   ~2,445 distinct works → 118 / 2,445 = **4.83 %**.
 
 Either way the order of magnitude is robust: **even under the single letter a-, PD's source
-canon runs to roughly 2,400 distinct works, of which DCS holds about one in twenty.**
+canon runs to roughly 2,400 distinct works, of which DCS holds about one in twenty — and
+against the declared list, one in twelve.**
 
 ### Metric 3 — DCS-token-weighted coverage: **77.9 %** (2026), **74.1 %** (2021)
 
@@ -474,19 +489,30 @@ historical monuments** of other traditions (same ambition, different language).
 | KOW · Kossowicz | Skt→Rus | 1854 | — | 13,488 *(Russian-ordered)* | ✗ incomplete |
 | **GST · Goldstücker** | Skt→Eng | 1856–1864 | ~8 | 6,761 | ✗ **abandoned in `a`** |
 | PWG · Böhtlingk–Roth (*grosse*) | Skt→Ger | 1855–1875 | 20 | 106,083 | ✓ complete |
-| PW · Böhtlingk (*kürzere*) | Skt→Ger | 1879–1889 | **10** | 151,349 | ✓ complete |
+| PWK · Böhtlingk (*kürzere*) | Skt→Ger | 1879–1889 | **10** | 151,349 | ✓ complete |
 | MW · Monier-Williams | Skt→Eng | 1872–1899 | ~27 | 194,084 | ✓ complete |
 | KEWA · Mayrhofer (etymological) | Skt→Ger | 1956–1980 | 24 | — | ✓ complete |
 | EWA · Mayrhofer (etymological) | Ind.-Ar.→Ger | 1986–2001 | 15 | — | ✓ complete |
 | BORI Prakrit Dict. (CDPL) | Prakrit→Eng | 1988–ongoing | 38+ | 33,600 *(3 vols, a→`u`)* | ⧗ far from finished |
 | **PD · Poona Dictionary** | Skt→Eng | **1976–~2284⁺** | **~308⁺** | 104,959 *(a- only)* | ⧗ **still in `a`** |
 
-The contrast could not be sharper. Böhtlingk's *kürzere Fassung* (PW) documented **151,349
+> **Siglum convention (fixed 14-10-2026, H6698 C1).** This report writes **PWG** for Böhtlingk–Roth's
+> *grosses Petersburger Wörterbuch* and **PWK** for Böhtlingk's single-handed *Sanskrit-Wörterbuch in
+> kürzerer Fassung*; earlier revisions here (and the NWS dossier in Uprava `papers/A61_wsc/`) used bare
+> **PW** for the *kürzere*. Bare *PW* is a collision: traditional Sanskritist usage (Monier-Williams's
+> citations) names the *grosse*, while Cologne's digitisation codes the *kürzere* as `PW` and the
+> *grosse* as `PWG` (live probe sanskrit-lexicon.uni-koeln.de, 14-10-2026). PD's own citation siglum
+> `PW.` in the census is a different object — PD's apparatus — and is untouched.
+
+The contrast could not be sharper. Böhtlingk's *kürzere Fassung* (PWK) documented **151,349
 lemmas across the whole alphabet in ten years**; PD has 104,959 lemmas and has covered ~4 % of
 the alphabet in fifty. Sanskrit is not the problem — **exhaustive historical detail is**, and the
 proof is 170 years old. **Theodor Goldstücker's 1856 remake of Wilson** set out to improve the
 whole dictionary, sank into `a`, published 6,761 exhaustive entries, and was abandoned there at his
-death — the one clean death-in-`a`. Two contemporaries are often lumped with him but do not
+death — the one clean death-in-`a` (his exact last entry is *abhyāhita*, printed p. 320b — 6,780
+entries in Cologne's GST digitisation, `csl-orig` v02/gst, checked 14-10-2026; PD's printed
+fascicles, through *abhigamyamānaparadā* in 2019, have not yet passed it).
+Two contemporaries are often lumped with him but do not
 belong: **Kossowicz's 1854 Sanskrit→Russian dictionary** reached 13,488 entries but is arranged in
 **Russian**, not Sanskrit, alphabetical order and was left unfinished — a partial work of a
 different kind, not comparable on the Sanskrit-letter axis; and **Böhtlingk–Roth's PWG** spent its
@@ -711,7 +737,7 @@ _Data: [data/pd/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/p
 ([gasyoun/VisualDCS](https://github.com/gasyoun/VisualDCS)); reference-dictionary headword counts from
 [HeadwordLists/now-2026](https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/now-2026)._
 
-_Peer-dictionary spans (§8.8): Sanskrit/Indo-Aryan (WIL · GST · PWG · PW · MW) from
+_Peer-dictionary spans (§8.8): Sanskrit/Indo-Aryan (WIL · GST · PWG · PWK · MW) from
 [dictionary_inventory.csv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv);
 Mayrhofer [KEWA/EWA](https://www.winter-verlag.de/en/detail/c1954/Mayrhofer_Manfred_Kurzgefasstes_etymologisches_Woerterbuch_des_Altindischen/);
 [Thesaurus Linguae Latinae](https://en.wikipedia.org/wiki/Thesaurus_Linguae_Latinae),

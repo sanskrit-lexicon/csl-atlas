@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "1.0.0",
+  "dict": "wil",
+  "dictName": "Wilson, A Dictionary in Sanscrit and English",
+  "edition": {
+    "label": "Second edition, greatly extended (Calcutta, Education Press, 1832)",
+    "year": "1832",
+    "imprint": "Education Press, Circular Road, Calcutta; sold by Parbury, Allen & Co., London",
+    "evidenceLevel": "observed",
+    "evidence": "Title page scan viewed 24-09-2026; preface names the 1819 first edition."
+  },
+  "scanSets": [
+    {
+      "id": "wil-csldoc",
+      "kind": "cologne-csldoc",
+      "description": "Cologne csldoc front-matter pages for WIL (6 pages: title, dedication, preface pp. vii-x).",
+      "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    }
+  ],
+  "components": [
+    {
+      "id": "wil.fm.title",
+      "sequence": 1,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "A DICTIONARY IN SANSCRIT AND ENGLISH",
+        "iast": null,
+        "english": "Title page of the second edition, greatly extended (Calcutta, Education Press, 1832)"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "wil-csldoc",
+          "ref": "01",
+          "image": "wilson_Page_001.jpg",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc wilpref01 scan viewed 24-09-2026: 'A Dictionary in Sanscrit and English; Translated, amended, and enlarged from an original compilation, prepared by learned natives for the College of Fort William. By H. H. Wilson. The second edition, greatly extended, and published under the sanction of the General Committee of Public Instruction in Bengal. Calcutta: printed at the Education Press, Circular Road: 1832. Sold by Parbury, Allen & Co. London'; handwritten shelf mark top left.",
+      "notes": "The first edition (1819) is named on the preface's first page; the title itself documents the work's origin in a native compilation for Fort William College."
+    },
+    {
+      "id": "wil.fm.dedication",
+      "sequence": 2,
+      "position": "front",
+      "componentType": "dedication",
+      "componentTypeNote": null,
+      "function": "commemorate",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "TO HENRY THOMAS COLEBROOKE, Esq.",
+        "iast": null,
+        "english": "Dedication to Henry Thomas Colebrooke"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "wil-csldoc",
+          "ref": "02",
+          "image": "wilson_Page_002.jpg",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc wilpref02 scan viewed 24-09-2026: 'To Henry Thomas Colebrooke, Esq., Director of the Royal Asiatic Society of Great Britain, and for many years President of the Asiatic Society of Bengal, to whose aid and encouragement the Sanscrit Dictionary owed its first publication ... this work is inscribed, as a tribute of acknowledgement, admiration, and esteem, by H. H. Wilson.'",
+      "notes": null
+    },
+    {
+      "id": "wil.fm.preface",
+      "sequence": 3,
+      "position": "front",
+      "componentType": "preface",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [
+        "decode",
+        "source"
+      ],
+      "title": {
+        "asPrinted": "PREFACE.",
+        "iast": null,
+        "english": "Preface to the second edition"
+      },
+      "languages": [
+        "eng",
+        "san"
+      ],
+      "extent": {
+        "pages": 4,
+        "printedRange": "vii-x",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "order of senses inside an entry",
+          "markup": "sense sequence in wil.txt entries",
+          "mechanism": "p. ix: the first edition followed the source vocabularies (Amara-kośa first); the second edition gives precedence to 'the sense that seems most naturally to result from the etymology of the word', the others following by relation to the original purport.",
+          "atlasRef": null
+        },
+        {
+          "target": "provenance of the headword stock",
+          "markup": null,
+          "mechanism": "pp. vii-viii: the compilation embodies indigenous lexicography (native vocabularies and commentaries), with exceptions such as the Vaijayantī, Utpalinī, Śāśvat, Keśava and Śiva kośas barely used; verbal indices of printed books (Māgha, Kirātārjunīya, Hitopadeśa, Manu, Bhagavad Gītā, Gīta Govinda, Durgā Pāṭha, Amaru Śataka, Siddhānta Kaumudī, parts of Bhatti and Mitākṣarā) fed the additions, and Rādhākānta Deb's dictionary supplied material as far as the word prātardanda.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "wil-csldoc",
+          "ref": "03",
+          "image": "wilson_Page_003.jpg",
+          "printedPage": "vii"
+        },
+        {
+          "scanSet": "wil-csldoc",
+          "ref": "04",
+          "image": "wilson_Page_004.jpg",
+          "printedPage": "viii"
+        },
+        {
+          "scanSet": "wil-csldoc",
+          "ref": "05",
+          "image": "wilson_Page_005.jpg",
+          "printedPage": "ix"
+        },
+        {
+          "scanSet": "wil-csldoc",
+          "ref": "06",
+          "image": "wilson_Page_006.jpg",
+          "printedPage": "x"
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "csldoc wilpref03-06 scans viewed 24-09-2026: pp. viii-x carry printed bracketed numbers ([viii], [ix], [x]); the first page is unnumbered (vii inferred, viii follows). Ends on p. x with Wilson 'on the eve of quitting India' and his election by the University of Oxford.",
+      "notes": "p. ix: the second edition holds 'between fifty and sixty thousand' words, nearly double the first; per-particular vocabulary references were dropped to save space. pp. ix-x work the case of vas-('to serve') with its āśrita derivatives to show why dictionary senses cannot simply mirror translations."
+    }
+  ],
+  "excludedScans": [],
+  "knownGaps": [
+    {
+      "label": "Any abbreviations key or advertisement leaves between the dedication and the preface, if printed",
+      "evidenceLevel": "inferred",
+      "evidence": "The preface runs [vii]-[x]; the scans hold no pages before it except title and dedication, and the body map starts at pg-001.jpg with no captions; nothing in the scan universe shows whether such leaves exist."
+    }
+  ],
+  "notes": "The WIL scan map's final rows t001-t006 (tit-001..006.jpg) duplicate the six csldoc pages (tit-001.jpg fetched and viewed 24-09-2026: the same title page), so only the csldoc set is declared. No separately printed abbreviation key exists in the scanned front matter; the preface itself names the source works. Scans carry the Cologne caption strip ('H.H. Wilson, A Dictionary in Sanskrit and English, 2nd ed., Calcutta 1832' header, 'Institut of Indology & Tamil Studies University of Cologne Germany 21/10/07' footer) - see misfits.",
+  "misfits": [
+    {
+      "label": "Scan-era caption strip printed onto every csldoc page image",
+      "componentId": null,
+      "why": "Header and footer naming the work, the Cologne scanning institute and the scan date (21/10/07) overlay the edition's pages; the schema has no scan-overlay layer."
+    },
+    {
+      "label": "Handwritten shelf mark on the title page",
+      "componentId": "wil.fm.title",
+      "why": "A mark of the scanned copy, not of the edition; the schema has no copy-level layer (same class as the MW pilot's stamp-leaf misfit)."
+    }
+  ]
+}

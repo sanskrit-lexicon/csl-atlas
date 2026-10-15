@@ -28,7 +28,6 @@ import json
 import sys
 
 import pytest
-
 from conftest import write_text
 
 

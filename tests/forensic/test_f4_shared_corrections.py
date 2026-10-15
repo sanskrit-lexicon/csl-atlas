@@ -35,10 +35,9 @@ csl-corrections/2024/dictionaries/
 import csv
 import json
 
-import pytest
-
-import f4_shared_corrections as f4
 import _corpus_pin
+import f4_shared_corrections as f4
+import pytest
 from conftest import git_commit_all, write_text
 
 

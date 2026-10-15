@@ -18,10 +18,10 @@ confidence 0.95; inconsistent cells get both options at 0.6). Also writes the
 ground-truth table data/L0/patel2016_assignments.csv. Run after s2 + s2b.
 """
 
-import os
-import sys
 import csv
 import json
+import os
+import sys
 from collections import defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")

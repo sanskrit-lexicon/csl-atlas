@@ -26,13 +26,13 @@ shared_corrections.csv, data/forensic/f4_report.json.
 Run from repo root:  python scripts/forensic/f4_shared_corrections.py
 """
 
+import collections
+import csv
+import glob
+import json
 import os
 import re
 import sys
-import csv
-import json
-import glob
-import collections
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import _corpus_pin

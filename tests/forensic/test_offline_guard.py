@@ -5,7 +5,6 @@ import socket
 import urllib.request
 
 import pytest
-
 from conftest import NetworkDisabled
 
 

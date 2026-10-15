@@ -10,10 +10,10 @@ kill loses at most CHUNK translations. Run repeatedly until it prints ALL_CACHED
 
     python scripts/forensic/_f10_pretranslate.py [workers]   # default 6
 """
-import os
-import sys
 import json
 import multiprocessing as mp
+import os
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

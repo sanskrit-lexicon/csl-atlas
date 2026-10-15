@@ -181,7 +181,7 @@ catalogue = {
     "scanSets": [
         {"id": "mw-csldoc", "kind": "cologne-csldoc",
          "description": "Cologne csldoc front-matter pages for MW (29 pages, title + v-xxxii), OCR'd in sanskrit-lexicon/MWS prefaces/.",
-         "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/mwpref/",
+         "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
          "inventory": "data/megastructure/scan_inventory.tsv"},
         {"id": "mw-scan-pdf", "kind": "cologne-scan-pdf",
          "description": "Cologne MW page PDFs: front matter t01-t36 and supplement pages 1308-1333, per csl-websanlexicon pdffiles.txt.",

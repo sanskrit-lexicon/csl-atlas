@@ -9,6 +9,10 @@ abstract: >-
   (observed / derived / inferred / reviewed) and every dataset is reproducible
   from committed JSON plus the csl-orig source dictionaries.
 type: software
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21419691"
+    description: The concept DOI of the csl-atlas Zenodo deposit (resolves to the latest tagged release)
 authors:
   - family-names: "Gasūns"
     given-names: "Mārcis"
@@ -19,8 +23,8 @@ authors:
     alias: "funderburkjim"
     # orcid: ...  # TODO
   - alias: "Andhrabharati"  # TODO: confirm preferred legal name and ORCID
-version: 0.19.9
-date-released: 2026-09-24
+version: 0.19.11
+date-released: 2026-09-27
 license: "CC-BY-SA-4.0"
 repository-code: "https://github.com/sanskrit-lexicon/csl-atlas"
 url: "https://sanskrit-lexicon.github.io/csl-atlas/"

@@ -1,6 +1,16 @@
 # CLAUDE.md
 
-_Created: 03-07-2026 · Last updated: 24-09-2026_
+_Created: 03-07-2026 · Last updated: 09-10-2026 (H5885 truth refresh: sanskrit-util v0.12.0 re-vendor, paper-priv guard, DOI, lint-zero)_
+
+Recent state (09-10-2026): `v0.19.11` released; vendored
+`sanskrit-util` re-pinned to **v0.12.0** (#542 — H3975 medial-anusvāra
+`form_key` fold); `ci: paper-priv-guard` blocks manuscript-shape files
+outside the allowlist and the P1–P6 manuscripts were removed
+(STANDING_POLICY_PAPER_WORK_PRIVATE_REPOS_ONLY, MG 06-10); nightly
+bughunt findings reports are committed (latest #541); the mechanical lint
+sweep took UP031/ISC004/I001 to 0 in scope (#534); the atlas concept DOI
+`10.5281/zenodo.21419691` is pinned in `CITATION.cff`, the README citation
+block, and A50 data-availability (#528).
 
 `csl-atlas` is the public **dictionary-evidence** microsite for the Cologne
 Digital Sanskrit Dictionaries — a static Observable Framework site for
