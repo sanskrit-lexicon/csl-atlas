@@ -488,25 +488,34 @@ The dataset supports several further measures, each a different lens on the same
 
 ### 8.8 The long-dictionary league table
 
-PD's slowness is best judged against two peer groups: the other **Sanskrit / Indo-Aryan
-dictionaries** (same language, so density is the only variable), and the **century-long
-historical monuments** of other traditions (same ambition, different language).
+PD's slowness is best judged against three peer groups: the other **Sanskrit / Indo-Aryan
+dictionaries** (same language, so density is the only variable); the **century-long historical
+monuments** of other traditions (same ambition, different language); and — added 17-10-2026 — the
+**Eastern historical dictionaries**.
 
 **First peer group — the Sanskrit / Indo-Aryan dictionaries.** Seven were *completed* in
-10–27 years. Only the two that chose exhaustive historical-principles treatment stall:
+10–27 years. Only the two that chose exhaustive historical-principles treatment stall.
+`Entries/yr` is derived here from the printed count and the span — **on compilation years, not
+publication years**, because a publication window hides the real work (Nikkoku, below: published
+1972–1976 after some forty years of compilation):
 
-| Dictionary | Direction | Span | Years | Lemmas | Status |
-|---|---|---|---:|---:|---|
-| WIL · Wilson | Skt→Eng | 1819–1832 | ~13 | 43,939 | ✓ complete |
-| KOW · Kossowicz | Skt→Rus | 1854 | — | 13,488 *(Russian-ordered)* | ✗ incomplete |
-| **GST · Goldstücker** | Skt→Eng | 1856–1864 | ~8 | 6,761 | ✗ **abandoned in `a`** |
-| PWG · Böhtlingk–Roth (*grosse*) | Skt→Ger | 1855–1875 | 20 | 106,083 | ✓ complete |
-| PWK · Böhtlingk (*kürzere*) | Skt→Ger | 1879–1889 | **10** | 151,349 | ✓ complete |
-| MW · Monier-Williams | Skt→Eng | 1872–1899 | ~27 | 194,084 | ✓ complete |
-| KEWA · Mayrhofer (etymological) | Skt→Ger | 1956–1980 | 24 | — | ✓ complete |
-| EWA · Mayrhofer (etymological) | Ind.-Ar.→Ger | 1986–2001 | 15 | — | ✓ complete |
-| BORI Prakrit Dict. (CDPL) | Prakrit→Eng | 1988–ongoing | 38+ | 33,600 *(3 vols, a→`u`)* | ⧗ far from finished |
-| **PD · Poona Dictionary** | Skt→Eng | **1976–~2284⁺** | **~308⁺** | 104,959 *(a- only)* | ⧗ **still in `a`** |
+| Dictionary | Direction | Span | Years | Lemmas | Entries/yr | Status |
+|---|---|---:|---:|---:|---:|---|
+| WIL · Wilson | Skt→Eng | 1819–1832 | ~13 | 43,939 | 3,380 | ✓ complete |
+| KOW · Kossowicz | Skt→Rus | 1854 | — | 13,488 *(Russian-ordered)* | — | ✗ incomplete |
+| **GST · Goldstücker** | Skt→Eng | 1856–1864 | ~8 | 6,761 | 845 | ✗ **abandoned in `a`** |
+| PWG · Böhtlingk–Roth (*grosse*) | Skt→Ger | 1855–1875 | 20 | 106,083 | 5,304 | ✓ complete |
+| PWK · Böhtlingk (*kürzere*) | Skt→Ger | 1879–1889 | **10** | 151,349 | **15,135** | ✓ complete |
+| MW · Monier-Williams | Skt→Eng | 1872–1899 | ~27 | 194,084 | 7,188 | ✓ complete |
+| KEWA · Mayrhofer (etymological) | Skt→Ger | 1956–1980 | 24 | — | — | ✓ complete |
+| EWA · Mayrhofer (etymological) | Ind.-Ar.→Ger | 1986–2001 | 15 | — | — | ✓ complete |
+| BORI Prakrit Dict. (CDPL) | Prakrit→Eng | 1988–ongoing | 38+ | 33,600 *(3 vols, a→`u`)* | 884 | ⧗ far from finished |
+| **PD · Poona Dictionary** | Skt→Eng | **1976–~2284⁺** | **~308⁺** | 104,959 *(a- only)* | **2,099** (50 printing yr) · **1,346** (78 yr from 1948) | ⧗ **still in `a`** |
+
+The rate column is a **ceiling** for every finished dictionary and a **floor** for PD: the others
+delivered their counts across the whole alphabet, PD delivered 104,959 inside ~4–6 % of its span.
+Three entries carry no rate — the Mayrhofers are etymological dictionaries with no lemma count, and
+Kossowicz is Russian-ordered and unfinished, so a Sanskrit-axis rate would be false precision.
 
 > **Siglum convention (fixed 14-10-2026, H6698 C1).** This report writes **PWG** for Böhtlingk–Roth's
 > *grosses Petersburger Wörterbuch* and **PWK** for Böhtlingk's single-handed *Sanskrit-Wörterbuch in
@@ -533,6 +542,25 @@ exhaustive. Terseness finishes; exhaustiveness drowns. PD is Goldstücker's proj
 the density (104,959 vs Goldstücker's 6,761 for `a`) and computer-typeset — the same undertaking,
 the same letter, the same trap, now a century and a half deep.
 
+**What PD's own rate implies for PD's own scope.** PD's density is 13.36 entries per MW headword in
+the range it has covered (104,959 ÷ 7,856), so holding that density across MW's 194,084 headwords
+means writing **≈2.59 M entries** of PD-grain text, not 194 k. At the rates above:
+
+| Rate applied | Years to 2.59 M entries | Completes (from 2026) |
+|---|---:|---:|
+| PD's own 2,099/yr | **~1,235** | ~3261 |
+| MW's 7,188/yr | ~361 | ~2387 |
+| PWK's 15,135/yr | **~171** | ~2197 |
+
+Only the last lands under the ~180-year ceiling that every finished dictionary has respected — and
+it requires PD to write at the terseness of the *kürzere Fassung*, the one thing its historical
+principles forbid. **Scope, not speed, is the binding constraint:** the ~37-volume plan
+(37,333 pp × 17.3 entries/pp ≈ **647 k** entries) silently assumes the remaining alphabet is **~4×
+terser per page** than `a` has been. That unstated assumption is exactly what separates the
+plan-based horizon (≈2284) from the density-held one (≈3211) in
+[Uprava `papers/A68/PD_COMPLETION_ARITHMETIC_2026-10-17.md`](https://github.com/gasyoun/Uprava/blob/main/papers/A68/PD_COMPLETION_ARITHMETIC_2026-10-17.md)
+— this section is that argument's league-table half.
+
 **The controlled experiment — two dictionaries, one city, one editor.** The sharpest comparison
 is not across centuries but across town. In the *same* Pune, the **Bhandarkar Oriental Research
 Institute**'s *Comprehensive and Critical Dictionary of the Prakrit Languages* (CDPL) began in
@@ -546,6 +574,7 @@ bounded its corpus (~450 texts, terser articles) and in 38 years cleared the ent
 PD chose the unbounded historical maximum and in 50 years has not left `a`. It is as close to a natural experiment in
 lexicographic ambition as the field offers, and its verdict is unambiguous: **a great
 Sanskrit-family dictionary finishes only if it refuses to let the letter `a` become infinite.**
+
 
 **Second peer group — the century-long giants.** PD's real family is not the fast Sanskrit
 dictionaries but the multi-generational historical monuments — and it is projected to outlast
@@ -568,11 +597,41 @@ scenario (~1,235 years) is roughly **9× the WNT**. On present evidence PD is on
 the longest single lexicographic project in human history — a distinction that is the direct
 consequence of the ~13–23× density measured in §8.5, not of any lack of effort.
 
+> **Where this group has no rate.** `entries/yr` is deliberately absent from the table above: our
+> sources record spans and status for these monuments but never an entry count, and inventing one
+> would break this report's provenance discipline. Closing that gap (OED 1st ed., CAD, Grimm, SAOB,
+> WNT, TLL) is a named future item, not a number to guess at.
+
 > **Milestone caveats.** Years assume PD holds its current per-MW-headword density and a
 > constant rate; both are simplifications (density drops in the consonants, the rate may rise
 > under digital editing). Vowel-section milestones are robust; consonant ones (mid-dictionary,
 > completion) are upper bounds. Peer spans are start-of-publication to completion (or estimated
 > completion) per each project's own record — see sources below.
+
+**Third peer group — the Eastern historical dictionaries** (new, 17-10-2026, H6939). The horizon is
+sometimes framed as a Sanskrit problem. It is not: the two largest historical dictionaries of East
+Asia were finished, at greater size, inside two generations — because their articles are terse where
+PD's are exhaustive.
+
+| Dictionary | Language | Compilation | Years | Entries | Entries/yr | Source class |
+|---|---|---|---:|---:|---:|---|
+| **Hànyǔ Dà Cídiǎn 漢語大詞典** | Chinese | 1979–1994 (13 vols: vol. 1 1986, appendix/index vol. 1994) | **15** | 370,000 words · 23,000 head characters · 1.5 M citations | **24,667** | [secondary] |
+| **Nikkoku 日本国語大辞典**, 1st ed. | Japanese | composed c. 40 yr; published 1972–1976 (20 vols) | ~40 | 450,000 | **11,250** | [secondary] |
+
+Both are OED-comparable in ambition — HDC traces usage over three millennia from the classics to
+modern slang; Nikkoku prints etymologies and historical citations for ~1 M example sentences. Each is
+3.5–4.3× PD's current entry count and covers its **whole** language, where PD has `a-` to `apaca-`.
+Their rates are 5.4–11.8× PD's with no density ceiling in sight, because neither tried to be
+exhaustive per headword. **The constraint is editorial policy, not script or language.**
+
+> **Provenance — and the scheduled-not-realized line.** Both figures are **[secondary]**
+> encyclopaedic summaries of publisher records, not our own probes: HDC via the English Wikipedia
+> article drawing on Luo (1993) and Wilkinson's *Chinese History: A New Manual*; Nikkoku via the same
+> source citing the publisher and the Indiana University library guide. Upgrade both to [literature]
+> before quoting either in a paper. **Nikkoku's 3rd edition** — cloud-native since 25-07-2024, digital
+> completion **scheduled for 2032** (print 2034) — is a **plan, not an outcome**; it is cited only as
+> evidence that a ~500 k-entry historical dictionary is now budgeted as an 8-year editorial cycle.
+
 
 ### 8.9 Is `a` the hardest letter? — the graveyard of the first letter
 
@@ -669,11 +728,16 @@ the alphabet for centuries. The drastic difference is not that TamiLex is *faste
 grandest, of the great print historical dictionaries; the born-digital corpus lexicon is what
 comes after — and DCS, welded to a lexical layer, is the Sanskrit form it would take.
 
-> _TamiLex specifics (exact start year, funding term, entry counts, source-dictionary set) were
-> not machine-verifiable at time of writing — the project site returned a transient server error —
-> and are described here at the level of paradigm, which is what the comparison turns on. The
-> concrete figures should be confirmed against [tamilex.uni-hamburg.de](https://www.tamilex.uni-hamburg.de)
-> and folded in._
+> **Re-probe, 17-10-2026 (H6939).** The earlier caveat here said the project site returned a server
+> error. It now answers HTTP 200, and what it publishes is the point: TamiLex is hosted at the
+> University of Hamburg and **funded by the Hamburg Academy of Sciences and Humanities with a
+> long-term grant**; it is building an electronic corpus of first-millennium Classical Tamil with
+> per-word concordances feeding a historical lexicon (definitions in English and modern Tamil,
+> medieval glosses layered on, every citation linked back to text, commentary and manuscript
+> witness). It publishes **no start year, no term length and no entry count** — so the paradigm
+> comparison stands and no rate can be computed from it. That is a finding, not a failure: a project
+> that publishes editions and concordances instead of fascicules has no alphabet-progress metric to
+> report. Figures to be requested from the project directly, not inferred.
 
 ### 8.11 Who finishes a dictionary — and why (a measured note)
 
