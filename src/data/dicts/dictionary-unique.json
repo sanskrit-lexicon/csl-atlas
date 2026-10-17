@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-24T16:04:53.676Z",
+  "generatedAt": "2026-10-03T10:03:59.508Z",
   "sourceRoot": "../csl-orig/v02",
   "assumptions": [
     "A lemma is unique when it appears in exactly one dictionary within the selected scope."
@@ -13,7 +13,7 @@
   },
   "unique": {
     "SKD": {
-      "count": 15159,
+      "count": 15157,
       "examples": [
         {
           "lemma": "afRI",
@@ -4805,7 +4805,7 @@
       ]
     },
     "SHS": {
-      "count": 889,
+      "count": 888,
       "examples": [
         {
           "lemma": "agnikukkawa",
@@ -4984,10 +4984,6 @@
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44326"
         },
         {
-          "lemma": "kurukzeva",
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44535"
-        },
-        {
           "lemma": "kulahaRwaka",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44838"
         },
@@ -5006,6 +5002,10 @@
         {
           "lemma": "kumumADipa",
           "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45521"
+        },
+        {
+          "lemma": "kUBa",
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45873"
         }
       ]
     },
@@ -6445,7 +6445,7 @@
       ]
     },
     "AP": {
-      "count": 30834,
+      "count": 30835,
       "examples": [
         {
           "lemma": "aMSAMSaH",
@@ -7952,7 +7952,7 @@
       "dictionaryCount": 40,
       "unique": {
         "SKD": {
-          "count": 15159,
+          "count": 15157,
           "examples": [
             {
               "lemma": "afRI",
@@ -12744,7 +12744,7 @@
           ]
         },
         "SHS": {
-          "count": 889,
+          "count": 888,
           "examples": [
             {
               "lemma": "agnikukkawa",
@@ -12923,10 +12923,6 @@
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44326"
             },
             {
-              "lemma": "kurukzeva",
-              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44535"
-            },
-            {
               "lemma": "kulahaRwaka",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L44838"
             },
@@ -12945,6 +12941,10 @@
             {
               "lemma": "kumumADipa",
               "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45521"
+            },
+            {
+              "lemma": "kUBa",
+              "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt#L45873"
             }
           ]
         },
@@ -14384,7 +14384,7 @@
           ]
         },
         "AP": {
-          "count": 30834,
+          "count": 30835,
           "examples": [
             {
               "lemma": "aMSAMSaH",
@@ -16096,7 +16096,7 @@
           ]
         },
         "AP": {
-          "count": 35854,
+          "count": 35855,
           "examples": [
             {
               "lemma": "aMSAMSaH",
@@ -17121,7 +17121,7 @@
           ]
         },
         "SKD": {
-          "count": 17183,
+          "count": 17181,
           "examples": [
             {
               "lemma": "afRI",
