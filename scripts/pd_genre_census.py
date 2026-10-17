@@ -815,7 +815,6 @@ SIGLUM_SUFFIX = [
     (re.compile(r"^.{2,}gs$"), "vedic", "siglum -*GS. (grhya)"),
     (re.compile(r"^.{2,}ds$"), "medieval", "siglum -*DS. (dharmasutra)"),
     (re.compile(r"^.{2,}sm$"), "medieval", "siglum -*Sm. (smrti)"),
-    (re.compile(r"^.{2,}vr$"), "grammar", "siglum -*Vr. (vrtti)"),
     (re.compile(r"^.{2,}bh$"), "medieval", "siglum -*Bh. (bhasya)"),
     (re.compile(r"^.{2,}ti$"), "medieval", "siglum -*Ti. (tika)"),
     (re.compile(r"^.{2,}kau$"), "medieval", "siglum -*Kau. (kaumudi)"),
@@ -1050,7 +1049,7 @@ def census() -> dict:
         return len(first) >= 6 and any(first in c for c in canon)
 
     def covered(names: list[str]) -> list[str]:
-        return list(names)
+        return sorted(set(names))
 
     return {
         "sigla": sigla,
@@ -1065,8 +1064,8 @@ def census() -> dict:
             "vedic_from_abhyankar": anchor_names("vedic"),
             "entries": anchor_entries,
             "covered": {
-                "grammar": [flat(t) for ab, t in anchor_entries["grammar"] if anchor_hit(ab, t, "grammar")],
-                "epigraphy": [flat(t) for ab, t in anchor_entries["epigraphy"] if anchor_hit(ab, t, "epigraphy")],
+                "grammar": sorted({flat(t) for ab, t in anchor_entries["grammar"] if anchor_hit(ab, t, "grammar")}),
+                "epigraphy": sorted({flat(t) for ab, t in anchor_entries["epigraphy"] if anchor_hit(ab, t, "epigraphy")}),
             },
         },
         "metrics": metrics,
@@ -1248,7 +1247,8 @@ def main(argv: list[str]) -> int:
                     f"{s['provenance']:<30} {(s['evidence'] or '')[:55]}"
                 )
 
-    if not (args.no_dice or args.no_map):
+    writes = not (args.no_dice or args.no_map or args.audit or args.json)
+    if writes:
         target.write_text(tsv, encoding="utf-8")
         print(f"\nwrote {target.relative_to(REPO)}")
     return 0
