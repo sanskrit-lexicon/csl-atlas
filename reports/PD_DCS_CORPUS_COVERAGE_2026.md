@@ -22,7 +22,7 @@ the answer is a study in two numbers that point in opposite directions:
 | # | Metric | Value | What it answers |
 |---|---|---|---|
 | 1 | **PD-citation-weighted coverage** | **25.2 %** | Of what PD actually cites, how much is in DCS? |
-| 2 | **Title-level coverage** | **8.3 %** of the declared canon (118 of 1,419 AOB rows); exercised letter-a band **~2.4–4.8 %** (118 of ~2,445) | How many of PD's works exist in DCS at all? |
+| 2 | **Title-level coverage** | **8.0 %** of the declared canon (118 of ≈1,476 AOB entry rows; band 7.8–8.3 %); exercised letter-a band **~2.4–4.8 %** (118 of ~2,445) | How many of PD's works exist in DCS at all? |
 | 3 | **DCS-token-weighted coverage** | **77.9 %** (2026) · 74.1 % (2021) | Of DCS's own text mass, how much does PD also cite? |
 | 4 | **Partial-coverage grade** | mostly `present`; 2 partial | Is "covered" a whole work or a fragment? |
 
@@ -96,25 +96,27 @@ the coverage denominator.
 Of PD's 353,512 primary-work citation occurrences, **88,929 (25.2 %)** go to works DCS
 contains. Three-quarters of PD's citation practice points at texts DCS does not hold.
 
-### Metric 2 — title-level coverage: **8.3 % of the declared canon** (band **7.8–8.3 %**; exercised letter-a band **~2.4 – 4.8 %**)
+### Metric 2 — title-level coverage: **8.0 % of the declared canon** (band **7.8–8.3 %**; exercised letter-a band **~2.4 – 4.8 %**)
 
 DCS contains **118** of the distinct works PD cites.
 
-**Declared-canon denominator (H6707 pass-2, 14-10-2026; audited H6923, 17-10-2026).** PD's
+**Declared-canon denominator (H6707 pass-2, 14-10-2026; audited H6923, ruled and applied H6933, 17-10-2026).** PD's
 printed *Abbreviations of Books* (KoshaSHRI official PDF, re-OCR ground truth) declares a
-dictionary-wide canon of **1,419 entry-level rows** (1,418 machine-recovered at pass-1 + the
-Viṣṇupurāṇa row the pass-1 OCR had lost; print-verified p. 40). Against it, 118 covered
-works = 118 / 1,419 = **8.32 %** — about one in twelve.
+dictionary-wide canon of about **1,476 entry-level rows** — the central estimate of a
+1,419–1,517 bracket (1,418 machine-recovered at pass-1 + the Viṣṇupurāṇa row the pass-1 OCR
+had lost, print-verified p. 40, at the low end; 1,517 for the committed re-parse of the same
+OCR; 1,464 for the printed census). Against it, 118 covered works =
+118 / 1,476 = **7.99 %**, quoted as **8.0 %** — about one in twelve and a half. The MG
+ruling of 17-10-2026 fixes this central estimate as *the* quoted denominator; the pass-1
+point 8.32 % survives only as the band's upper bound.
 
 That denominator is an **entry** count, not the row count of the published table, and it is
-not reproducible to the row. The committed re-parse of the same OCR yields 1,517 raw
-entries and the printed OCR supports 1,476 entry-like lines, so the defensible statement is
-a band: **118 / N = 7.78 – 8.32 %** (the printed census of 1,464 books gives 8.06 %). The
-landed table `data/pd/pd_aob_declared_works.tsv` carries **1,112 work groups / 1,118 edition
-rows** and is a *clean-subset floor*, not the canon: the pass-2 clean filter dropped 556
-OCR-merged `Siglum Title` entry lines (plus the garbled-start rows), so 118 / 1,118 =
-10.55 % **overstates** coverage and must not be quoted as the declared canon. Audit:
-`data/pd/pd_aob_declared_canon_audit.json`, reproducible with
+not reproducible to the row — which is why the paper quotes the central value with its band
+(**118 / N = 7.78 – 8.32 %**). The landed table `data/pd/pd_aob_declared_works.tsv` carries
+**1,112 work groups / 1,118 edition rows** and is a *clean-subset floor*, not the canon: the
+pass-2 clean filter dropped 556 OCR-merged `Siglum Title` entry lines (plus the garbled-start
+rows), so 118 / 1,118 = 10.55 % **overstates** coverage and must not be quoted as the
+declared canon. Audit: `data/pd/pd_aob_declared_canon_audit.json`, reproducible with
 `python3 scripts/pd_aob_declared_canon_audit.py --check`.
 
 The census joins the declared list at **63.3 % of sigla / 78.0 % of occurrence mass** after
