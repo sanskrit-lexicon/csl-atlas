@@ -42,6 +42,8 @@ Outputs (all deterministic, no network):
   data/pd/pd_aob_sigla_reconciliation.tsv  the discrepancy list
   data/pd/pd_aob_sigla_reconciliation.json aggregates, method, input hashes
 
+``--check`` verifies the JSON aggregates *and* both row-level TSVs byte for byte.
+
 Run:
   python3 scripts/pd_aob_sigla_reconciliation.py            # measure + write
   python3 scripts/pd_aob_sigla_reconciliation.py --check    # verify committed
@@ -558,7 +560,7 @@ def measure(aob_path, families_path, join_path):
 
 # --- writers / checks --------------------------------------------------------
 
-def write_tsv(path, cols, rows):
+def render_tsv(cols, rows):
     import io
     buf = io.StringIO()
     w = csv.DictWriter(buf, fieldnames=cols, delimiter="\t",
@@ -566,7 +568,11 @@ def write_tsv(path, cols, rows):
     w.writeheader()
     for r in rows:
         w.writerow(r)
-    path.write_text(buf.getvalue(), encoding="utf-8")
+    return buf.getvalue()
+
+
+def write_tsv(path, cols, rows):
+    path.write_text(render_tsv(cols, rows), encoding="utf-8")
 
 
 ENTRY_COLS = ["entry_id", "page", "siglum", "siglum_skeleton", "merged_token",
@@ -640,12 +646,21 @@ def main(argv=None):
         for key in ("harvest", "aob", "source_aob", "discrepancies"):
             if committed.get(key) != summary.get(key):
                 diffs.append(key)
+        # row-level artifacts are gated too: aggregates can be right while a
+        # TSV row is hand-edited or truncated
+        for name, cols, rows in (
+                ("pd_aob_entries.tsv", ENTRY_COLS, entries),
+                ("pd_aob_sigla_reconciliation.tsv", DISC_COLS, disc)):
+            path = out_dir / name
+            if (path.read_text(encoding="utf-8") if path.exists() else "") != \
+                    render_tsv(cols, rows):
+                diffs.append(name)
         if diffs:
-            print("[FAIL] committed JSON drifted in: %s" % ", ".join(diffs),
+            print("[FAIL] committed artifacts drifted in: %s" % ", ".join(diffs),
                   file=sys.stderr)
             return 1
-        print("ok  committed reconciliation reproduces (%s)" % ", ".join(sorted(
-            ["harvest", "aob", "source_aob", "discrepancies"])))
+        print("ok  committed reconciliation reproduces "
+              "(json aggregates + both row-level TSVs)")
         return 0
 
     out_dir = ROOT / "data/pd"
