@@ -127,7 +127,7 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
 
 ## Change log
 
-- **24-09-2026 (v3, re-freeze at a recorded revision, [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md)):**
+- **24-09-2026 (v3, re-freeze at a recorded revision, [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md)):**
   `CANON_ALIAS` extended with the 37 eye-checked transliteration-variant pairs of the H5295
   fold table (with a chain guard: an alias target is never itself an alias key); TSVs rebuilt
   against `csl-orig@f4c08c578b330e2379e38f54d3a541f1564b8eee` + 
@@ -155,7 +155,7 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
   (almost all in `ben`: `my Sanskrit Chrestomathy` 3,017 → 1,599, `Gaspare Gorresio` 347 → 16;
   plus one `ap` citation and a `Weber` → `WEBER` key case). The TSVs are left as committed so the A50 figures stay bound to
   them by hash; the re-freeze at a recorded revision plus the 37-pair alias extension is
-  [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md).
+  [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md).
   Claim ledger: [`data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/A50_CLAIM_FALSIFICATION_LEDGER.md).
 - **06-07-2026 (v2, H213):** MW non-text filter (−63,582 markers); `? [Cologne Addition]`
   placeholder dropped (was a spurious ~39k-cite node); `ap`/`sch`/`pwkvn` added via key-borrow

@@ -25,7 +25,7 @@ student-facing — that is
 
 ## Provenance
 
-- Handoff: [H5307](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5307-Opus_csl-atlas_review-pool-v1-double-keying-design_23.09.26.md)
+- Handoff: [H5307](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5307-Opus_csl-atlas_review-pool-v1-double-keying-design_23.09.26.md)
   (epic E014, ATLAS fair-pubs wave 1); roadmap item «Community review pool v1» and gap G4 in
   [ROADMAP_ATLAS_FAIR_PUBLICATIONS_2026_2027.md](https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_ATLAS_FAIR_PUBLICATIONS_2026_2027.md).
 - Model: Claude Code Opus 5 (`claude-opus-5`), 24-09-2026.

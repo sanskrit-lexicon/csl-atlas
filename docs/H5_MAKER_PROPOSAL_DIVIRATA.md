@@ -38,9 +38,9 @@ _Гасунс_
 
 Two Cologne digital dictionary entries carry the headword `divaraTa` (divaratha):
 
-- [MW L92243](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309835)
+- [MW L92243](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw.txt#L309835)
   — `<s>diva—raTa</s> ¦ <ab>w.r.</ab> for <s>divi-</s> (<ab>q.v.</ab>)`
-- [PWG L32945](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L165464)
+- [PWG L32945](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L165464)
   — `{#divaraTa#}¦ <ls>VP. 445</ls> falsche Form für {#diviraTa#}.`
 
 Both entries declare — in their own words — that divaratha is the **wrong reading** for
@@ -80,13 +80,13 @@ dictionary's headword stock.
 
 | Dictionary | divaratha | diviratha | Entry record | Body (transliterated) | Printed locus (`<pc>`) |
 |---|---|---|---|---|---|
-| MW (Monier-Williams 1899) | ✓ | ✓ | [mw.txt L92243](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309835) | `diva—raTa ¦ w.r. for divi- (q.v.)` | p. 478, col. 3 |
-| MW | — | ✓ | [mw.txt L92364](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L310249) | `divi—raTa ¦ m. N. of several men (v.l. diva-), MBh.; Hariv.; Pur.` | p. 479, col. 1 |
-| PW (Böhtlingk & Roth, Sanskrit-Wörterbuch) | — | ✓ | [pw.txt L50335](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L206741) | `diviraTa ¦ m. N. pr. verschiedener Männer.` | vol. 3, p. 89, col. b |
-| PWG (Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung) | ✓ | ✓ | [pwg.txt L32945](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L165464) | `divaraTa ¦ VP. 445 falsche Form für diviraTa.` | vol. 3, p. 620 |
-| PWG | — | ✓ | [pwg.txt L33004](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pwg/pwg.txt#L165728) | `diviraTa ¦ (divi loc. + raTa) m. N. pr. eines Sohnes des Bhumanyu MBH. 1,3714. des Dadhivāhana MBH. 12,1796. HARIV. 1694. des Khanapāna ... BHĀG. P. 9,23,6.` — ends `Vgl. divaraTa.` | vol. 3, p. 623 |
-| VCP (Vācaspatyam) | — | ✓ | [vcp.txt L25025](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/vcp/vcp.txt#L327526) | Devanagari entry with the genealogy verses (`tato diviraTo 'Bavat ...` — son of Bhūmanyu, "Cakratulya-parākrama") | `<pc>3588,a` |
-| INM (Sørensen, An Index to the Names in the Mahābhārata) | — | ✓ | [inm.txt L3636](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/inm/inm.txt#L43478), [L3637](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/inm/inm.txt#L43483) | two entries for `diviraTa` (two homs); the SLP1 key `raTa` = ratha, and Sørensen writes the name "Diviratha" in the body — "Diviratha, the son of Bhumanyu. § 152" | `<pc>256-1` (p. 256) |
+| MW (Monier-Williams 1899) | ✓ | ✓ | [mw.txt L92243](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw.txt#L309835) | `diva—raTa ¦ w.r. for divi- (q.v.)` | p. 478, col. 3 |
+| MW | — | ✓ | [mw.txt L92364](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw.txt#L310249) | `divi—raTa ¦ m. N. of several men (v.l. diva-), MBh.; Hariv.; Pur.` | p. 479, col. 1 |
+| PW (Böhtlingk & Roth, Sanskrit-Wörterbuch) | — | ✓ | [pw.txt L50335](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pw/pw.txt#L206741) | `diviraTa ¦ m. N. pr. verschiedener Männer.` | vol. 3, p. 89, col. b |
+| PWG (Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung) | ✓ | ✓ | [pwg.txt L32945](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L165464) | `divaraTa ¦ VP. 445 falsche Form für diviraTa.` | vol. 3, p. 620 |
+| PWG | — | ✓ | [pwg.txt L33004](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pwg/pwg.txt#L165728) | `diviraTa ¦ (divi loc. + raTa) m. N. pr. eines Sohnes des Bhumanyu MBH. 1,3714. des Dadhivāhana MBH. 12,1796. HARIV. 1694. des Khanapāna ... BHĀG. P. 9,23,6.` — ends `Vgl. divaraTa.` | vol. 3, p. 623 |
+| VCP (Vācaspatyam) | — | ✓ | [vcp.txt L25025](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/vcp/vcp.txt#L327526) | Devanagari entry with the genealogy verses (`tato diviraTo 'Bavat ...` — son of Bhūmanyu, "Cakratulya-parākrama") | `<pc>3588,a` |
+| INM (Sørensen, An Index to the Names in the Mahābhārata) | — | ✓ | [inm.txt L3636](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/inm/inm.txt#L43478), [L3637](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/inm/inm.txt#L43483) | two entries for `diviraTa` (two homs); the SLP1 key `raTa` = ratha, and Sørensen writes the name "Diviratha" in the body — "Diviratha, the son of Bhumanyu. § 152" | `<pc>256-1` (p. 256) |
 | DCS-2021 corpus (Hellwig) | — | ✓ | [dcs_lemma_summary.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dcs/dcs_lemma_summary.json) | `diviraTa: freqBand 2, attested: true` | — |
 
 The pattern is one-directional: **every witness that mentions the word at all carries

@@ -17,9 +17,9 @@ which owns the numbering; this doc owns the text.
 ## Provenance
 
 Written 16-08-2026 by Opus 5 (`claude-opus-5`) under
-[H2845](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2845-Opus_csl-atlas_citation-etext-layer-mbh-nilakantha-critical-presence_15.08.26.md),
+[H2845](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2845-Opus_csl-atlas_citation-etext-layer-mbh-nilakantha-critical-presence_15.08.26.md),
 covering point P2 of the MG crosswalk-review umbrella
-[H2843](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2843-Opus_Uprava_mg-crosswalk-review-8-point-vote-contour-umbrella_15.08.26.md).
+[H2843](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2843-Opus_Uprava_mg-crosswalk-review-8-point-vote-contour-umbrella_15.08.26.md).
 
 ## Pipeline — run in this order, from the repo root
 
