@@ -7,7 +7,7 @@ Status: design of record for the roadmap item «Community review pool v1»
 Q3 2026), closing gap **G4 — single-reviewer bottleneck**. Nothing below is built yet: this
 document names what is reused, what is missing, and the four rules the missing code must
 implement (identity, assignment, adjudication, κ). Handoff
-[H5307](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5307-Opus_csl-atlas_review-pool-v1-double-keying-design_23.09.26.md),
+[H5307](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5307-Opus_csl-atlas_review-pool-v1-double-keying-design_23.09.26.md),
 epic E014.
 
 ## 1. What G4 actually says

@@ -7,7 +7,7 @@ contains, which files it is joined from, on what key, how homonyms are handled, 
 much of the lemma set each layer actually reaches (measured, not assumed), and which
 five readers the card is built for.
 
-Parent handoff: [H5317](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5317-Opus_csl-atlas_learner-layer-v1-card-and-join-spec_23.09.26.md)
+Parent handoff: [H5317](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5317-Opus_csl-atlas_learner-layer-v1-card-and-join-spec_23.09.26.md)
 (epic [E014](https://github.com/gasyoun/Uprava/blob/main/handoffs/epics)). This document is a
 **specification, not an implementation** — nothing here is built yet beyond the v0
 index described in §2.
