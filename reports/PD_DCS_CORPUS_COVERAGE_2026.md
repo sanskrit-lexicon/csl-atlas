@@ -497,9 +497,12 @@ monuments** of other traditions (same ambition, different language); and — add
 
 **First peer group — the Sanskrit / Indo-Aryan dictionaries.** Seven were *completed* in
 10–27 years. Only the two that chose exhaustive historical-principles treatment stall.
-`Entries/yr` is derived here from the printed count and the span — **on compilation years, not
-publication years**, because a publication window hides the real work (Nikkoku, below: published
-1972–1976 after some forty years of compilation):
+`Entries/yr` is derived from the printed count and the span each project spent **producing** it. For
+the nineteenth-century dictionaries the publication window practically *is* the compilation window —
+they were typeset as they went — but where a project's own record gives a longer compilation span,
+both bases are shown, because the publication window can hide most of the work (PD: 50 printing years
+from 1976 vs 78 from Katre's 1948 conception; Nikkoku: four publication years after some forty of
+compilation):
 
 | Dictionary | Direction | Span | Years | Lemmas | Entries/yr | Status |
 |---|---|---:|---:|---:|---:|---|
@@ -563,8 +566,9 @@ Only the PWK-rate line lands under the ~180-year ceiling that every finished dic
 respected — and it requires PD to write at the terseness of the *kürzere Fassung*, the one thing its
 historical principles forbid. **Scope, not speed, is the binding constraint:** the ~37-volume plan
 (37,333 pp at `a`'s 17.3 entries/pp ≈ **647 k** entries) covers only **~25 %** of the 2.59 M that
-`a`-density implies, so it silently assumes the remaining alphabet is written at **~4× the entries
-per page** (`a`'s 17.3 → ~69.5, i.e. articles roughly four times shorter). That unstated assumption
+`a`-density implies; across the alphabet still to come it silently assumes **~4.6× the entries per
+page** that `a` actually carried (17.3 → ~79.5 over the 31,277 plan pages left), i.e. articles
+roughly 4.5× shorter. (The 4.0× ratio is over the completed work, not the work ahead.) That unstated assumption
 is exactly what separates the plan-based horizon (≈2284) from the density-held one (≈3211) in
 [Uprava `papers/A68/PD_COMPLETION_ARITHMETIC_2026-10-17.md`](https://github.com/gasyoun/Uprava/blob/main/papers/A68/PD_COMPLETION_ARITHMETIC_2026-10-17.md)
 — this section is that argument's league-table half.
