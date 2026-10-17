@@ -544,20 +544,26 @@ the same letter, the same trap, now a century and a half deep.
 
 **What PD's own rate implies for PD's own scope.** PD's density is 13.36 entries per MW headword in
 the range it has covered (104,959 ÷ 7,856), so holding that density across MW's 194,084 headwords
-means writing **≈2.59 M entries** of PD-grain text, not 194 k. At the rates above:
+means a whole-alphabet target of **≈2.59 M entries** of PD-grain text, not 194 k — of which
+**≈2.49 M are still unwritten** (2,593,032 − 104,959). Dividing the *remainder* by each rate:
 
-| Rate applied | Years to 2.59 M entries | Completes (from 2026) |
+| Rate applied | Years to the ~2.49 M remaining | Completes (from 2026) |
 |---|---:|---:|
-| PD's own 2,099/yr | **~1,235** | ~3261 |
-| MW's 7,188/yr | ~361 | ~2387 |
-| PWK's 15,135/yr | **~171** | ~2197 |
+| PD's own 2,099/yr | **~1,185** | ~3211 |
+| MW's 7,188/yr | ~346 | ~2372 |
+| PWK's 15,135/yr | **~164** | ~2190 |
 
-Only the last lands under the ~180-year ceiling that every finished dictionary has respected — and
-it requires PD to write at the terseness of the *kürzere Fassung*, the one thing its historical
-principles forbid. **Scope, not speed, is the binding constraint:** the ~37-volume plan
-(37,333 pp × 17.3 entries/pp ≈ **647 k** entries) silently assumes the remaining alphabet is **~4×
-terser per page** than `a` has been. That unstated assumption is exactly what separates the
-plan-based horizon (≈2284) from the density-held one (≈3211) in
+The first line **reconciles with the density-held horizon (~3211)** used elsewhere in this report —
+same model, one stated in entries and one in pages; the earlier "2.59 M at the rate" framing would
+have double-counted the 104,959 entries already printed, so the remainder is the correct numerator.
+
+Only the PWK-rate line lands under the ~180-year ceiling that every finished dictionary has
+respected — and it requires PD to write at the terseness of the *kürzere Fassung*, the one thing its
+historical principles forbid. **Scope, not speed, is the binding constraint:** the ~37-volume plan
+(37,333 pp at `a`'s 17.3 entries/pp ≈ **647 k** entries) covers only **~25 %** of the 2.59 M that
+`a`-density implies, so it silently assumes the remaining alphabet is written at **~4× the entries
+per page** (`a`'s 17.3 → ~69.5, i.e. articles roughly four times shorter). That unstated assumption
+is exactly what separates the plan-based horizon (≈2284) from the density-held one (≈3211) in
 [Uprava `papers/A68/PD_COMPLETION_ARITHMETIC_2026-10-17.md`](https://github.com/gasyoun/Uprava/blob/main/papers/A68/PD_COMPLETION_ARITHMETIC_2026-10-17.md)
 — this section is that argument's league-table half.
 
@@ -593,7 +599,8 @@ them all:
 **No dictionary ever completed has taken more than ~180 years** (Grimm, with its revision). Even
 PD's most optimistic scenario (2182 — 206 years, plan @ 200 pp/yr) already exceeds the longest
 finished dictionary (WNT, 134) and the slowest still running (TLL, ~156); its density-held
-scenario (~1,235 years) is roughly **9× the WNT**. On present evidence PD is on course to become
+scenario (~1,235 years measured for the whole project 1976→3211, i.e. ~1,185 still to go from 2026 —
+the two bases differ by the 50 years already spent) is roughly **9× the WNT**. On present evidence PD is on course to become
 the longest single lexicographic project in human history — a distinction that is the direct
 consequence of the ~13–23× density measured in §8.5, not of any lack of effort.
 
