@@ -30,5 +30,20 @@
   "metric_title_level_declared_work_level_pct_est": 8.36,
   "metric_aob_census_join_sigla_pct": 63.3,
   "metric_aob_census_join_occurrence_pct": 78.0,
-  "declared_canon_note": "AOB = printed Abbreviations of Books (KoshaSHRI official PDF, re-OCR ground truth 14-10-2026): 1,418 pass-1 rows + Visnupurana row recovered = 1,419 edition-level rows; dictionary-wide, not letter-a. Sources: data/pd/pd_aob_declared_works.tsv, data/pd/pd_aob_siglum_title.tsv."
+  "n_declared_aob_entries_reparse_raw": 1517,
+  "n_declared_aob_entry_lines_structural_r1": 1476,
+  "n_declared_aob_edition_rows_published_tsv": 1118,
+  "n_declared_aob_works_published_tsv": 1112,
+  "n_declared_aob_print_census": 1464,
+  "declared_canon_rows_reproducible": false,
+  "declared_canon_denominator_band": [1419, 1517],
+  "metric_title_level_declared_pct_by_denominator": {
+    "1419_pass1_entry_rows": 8.32,
+    "1464_print_census": 8.06,
+    "1476_structural_entry_lines": 7.99,
+    "1517_reparse_raw": 7.78,
+    "1118_published_tsv_edition_rows_NOT_A_DENOMINATOR": 10.55
+  },
+  "declared_canon_audit": "data/pd/pd_aob_declared_canon_audit.json",
+  "declared_canon_note": "AOB = printed Abbreviations of Books (KoshaSHRI official PDF, re-OCR ground truth 14-10-2026). 1,418 pass-1 machine rows + the Visnupurana row recovered = 1,419 ENTRY-level rows, dictionary-wide, not letter-a. H6923 audit (17-10-2026): 1,419 has no committed parser behind it (the committed re-parse gives 1,517 raw entries, the printed OCR 1,476 entry-like lines), so the denominator is the band 1,419-1,517 and metric 2 spans 7.78-8.32 %. The published artifact data/pd/pd_aob_declared_works.tsv carries 1,112 works / 1,118 edition rows and is a clean-subset FLOOR, NOT the canon: the pass-2 clean filter dropped 556 OCR-merged 'Siglum Title' entry lines plus the garbled-start rows, so 118/1,118 = 10.55 % overstates coverage and must never be quoted as the declared canon. Sources: data/pd/pd_aob_declared_works.tsv, data/pd/pd_aob_siglum_title.tsv, data/pd/pd_aob_declared_canon_audit.json."
 }
