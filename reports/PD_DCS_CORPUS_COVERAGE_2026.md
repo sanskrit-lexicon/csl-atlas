@@ -96,22 +96,34 @@ the coverage denominator.
 Of PD's 353,512 primary-work citation occurrences, **88,929 (25.2 %)** go to works DCS
 contains. Three-quarters of PD's citation practice points at texts DCS does not hold.
 
-### Metric 2 — title-level coverage: **8.3 % of the declared canon** (exercised letter-a band **~2.4 – 4.8 %**)
+### Metric 2 — title-level coverage: **8.3 % of the declared canon** (band **7.8–8.3 %**; exercised letter-a band **~2.4 – 4.8 %**)
 
 DCS contains **118** of the distinct works PD cites.
 
-**Declared-canon denominator (H6707 pass-2, 14-10-2026).** PD's printed *Abbreviations of
-Books* (KoshaSHRI official PDF, re-OCR ground truth) declares a dictionary-wide canon of
-**1,419 edition-level rows** (1,418 machine-recovered at pass-1 + the Viṣṇupurāṇa row the
-pass-1 OCR had lost; print-verified p. 40). Against it, 118 covered works =
-118 / 1,419 = **8.32 %** (about one in twelve; collapsing the few same-work edition pairs
-gives ≈1,412 works / ≈8.4 %). The census joins the declared list at **63.3 % of sigla /
-78.0 % of occurrence mass** after 14 official-PDF ground-truth joins (ṚV., AV.,
-Viṣṇupurāṇa, Nyāyasūtra/Nyāyasāra, Yājñavalkyasmṛti, Meghadūta, Gautamadharmasūtra,
-Kāmasūtra, Pañcaviṃśabrāhmaṇa, Āśvalāyana-śrauta/gṛhya-sūtra + variant spellings) and
-adjudication of the 150 low-confidence fuzzy joins (24 confirmed, 126 demoted).
-Machine-readable canon: `data/pd/pd_aob_declared_works.tsv`,
-`data/pd/pd_aob_siglum_title.tsv`, `data/pd/pd_aob_fuzzy_short_adjudication.tsv`.
+**Declared-canon denominator (H6707 pass-2, 14-10-2026; audited H6923, 17-10-2026).** PD's
+printed *Abbreviations of Books* (KoshaSHRI official PDF, re-OCR ground truth) declares a
+dictionary-wide canon of **1,419 entry-level rows** (1,418 machine-recovered at pass-1 + the
+Viṣṇupurāṇa row the pass-1 OCR had lost; print-verified p. 40). Against it, 118 covered
+works = 118 / 1,419 = **8.32 %** — about one in twelve.
+
+That denominator is an **entry** count, not the row count of the published table, and it is
+not reproducible to the row. The committed re-parse of the same OCR yields 1,517 raw
+entries and the printed OCR supports 1,476 entry-like lines, so the defensible statement is
+a band: **118 / N = 7.78 – 8.32 %** (the printed census of 1,464 books gives 8.06 %). The
+landed table `data/pd/pd_aob_declared_works.tsv` carries **1,112 work groups / 1,118 edition
+rows** and is a *clean-subset floor*, not the canon: the pass-2 clean filter dropped 556
+OCR-merged `Siglum Title` entry lines (plus the garbled-start rows), so 118 / 1,118 =
+10.55 % **overstates** coverage and must not be quoted as the declared canon. Audit:
+`data/pd/pd_aob_declared_canon_audit.json`, reproducible with
+`python3 scripts/pd_aob_declared_canon_audit.py --check`.
+
+The census joins the declared list at **63.3 % of sigla / 78.0 % of occurrence mass** after
+14 official-PDF ground-truth joins (ṚV., AV., Viṣṇupurāṇa, Nyāyasūtra/Nyāyasāra,
+Yājñavalkyasmṛti, Meghadūta, Gautamadharmasūtra, Kāmasūtra, Pañcaviṃśabrāhmaṇa,
+Āśvalāyana-śrauta/gṛhya-sūtra + variant spellings) and adjudication of the 150
+low-confidence fuzzy joins (24 confirmed, 126 demoted). Machine-readable spine:
+`data/pd/pd_aob_siglum_title.tsv` (join), `data/pd/pd_aob_fuzzy_short_adjudication.tsv`
+(verdicts), `data/pd/pd_aob_declared_works.tsv` (declared canon, clean-subset floor).
 
 **Exercised letter-a denominator** — as measured before the declared canon was available;
 inherently fuzzy because unmerged spelling variants inflate a raw siglum count:
