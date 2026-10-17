@@ -36,6 +36,9 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_dcs_metrics.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_dcs_metrics.json) | — | the four headline metrics + mass breakdown |
 | [pd_aob_declared_works.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_declared_works.tsv) | 1,112 works / 1,118 editions | declared AOB canon, work groups — a **clean-subset floor**, not the full declared list (see Caveats) |
 | [pd_aob_declared_canon_audit.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_declared_canon_audit.json) | — | H6923 denominator audit: what 1,419 / 1,118 / 1,464 each measure, and the 7.78–8.32 % band |
+| [pd_aob_entries.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_entries.tsv) | 1,430 | H6720 printed AOB entry inventory (one row per printed row, tails reassembled across OCR wraps) with its harvested match, route and exercise state |
+| [pd_aob_sigla_reconciliation.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.tsv) | 2,954 | H6720 discrepancy list — `harvest_not_in_aob`, `join_unconfirmed_at_entry`, `aob_never_cited` (+ near-miss), `join_miss_siglum_equal`, OCR fragments |
+| [pd_aob_sigla_reconciliation.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.json) | — | H6720 aggregates: three presence measures, never-cited split, method, input hashes |
 
 ## Method
 
@@ -46,7 +49,14 @@ adjudicated `match_type`. Scripts:
 [scripts/pd_extract_sigla.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_extract_sigla.py)
 (harvest) →
 [scripts/pd_dcs_crosswalk.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_dcs_crosswalk.py)
-(classify + join).
+(classify + join);
+[scripts/pd_aob_sigla_reconciliation.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_aob_sigla_reconciliation.py)
+reconciles the printed AOB authority against the harvest (H6720, write-up
+[reports/PD_AOB_SIGLA_RECONCILIATION_2026-10-17.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_AOB_SIGLA_RECONCILIATION_2026-10-17.md)):
+join-declared presence **63.32 %** of families (78.04 % of mass), **64.88 %** after 80
+siglum-identity corrections the join missed, entry-located lower bound 51.55 %;
+**26.36 %** of well-formed printed entries were never exercised under `a-`, half of them
+only as OCR variants.
 
 **Sources.** PD =
 [pd.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/external_src/pd/pd.txt)
