@@ -42,6 +42,10 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_quotations_by_entry.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_quotations_by_entry.tsv) | 107,630 | H6949 quotation-level unit — one row per entry: `{#...#}` blocks, quotations, siglum loci, further references, attestations |
 | [pd_quotations_vs_pwg.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_quotations_vs_pwg.tsv) | 4,093 | H6949 PD against PWG on the same lemmas, both measured with the same quotation rule — counts and ratios |
 | [pd_quotations_summary.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_quotations_summary.json) | — | H6949 totals, distribution, top-20, the PWG comparison block, input hashes |
+| [pd_publication_ledger.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_publication_ledger.tsv) | 35 | H6947 Deccan College ledger — fascicle-volume, year, general editor, opening/closing entry, pp; 24 measured + 11 print-only |
+| [pd_volume_homogeneity.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.tsv) | 35 | H6947 per-fascicle-volume entry size, chars, blocks, quotations and dictionary-source marking share |
+| [pd_volume_homogeneity_bound.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity_bound.tsv) | 8 | H6947 the same measures for the 8 bound volumes |
+| [pd_volume_homogeneity.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.json) | — | H6947 totals, H6942/H6949 canaries, source decomposition, conversion diagnostics |
 
 ## Method
 
@@ -72,6 +76,19 @@ gives **302,442 quotations and 419,890 attestations** (384,217 siglum loci + 35,
 references), and against PWG measured the same way it puts PD's first letter at **52.4 % of
 PWG's entire-alphabet attestation mass**. Rule: `scripts/lib/quotation_units.py`; pins:
 `tests/forensic/test_quotation_units.py`.
+
+**Volume homogeneity (H6947).** Entry size is stable at the median — **3 printed lines in
+every measured fascicle-volume** — while the mean runs 4.36–6.21 lines by bound volume and
+4.22–7.56 by fascicle. The H6942 dictionary-source marking share falls from **2.06 % in
+vol. 1 to 0.39 % in vol. 8**, but not as a clean step after vol. 6: pre-v7 is 1.94 %, v7 is
+0.88 %, v8 is 0.39 %, and the fascicle series is non-monotonic (7.2 = 1.88 %, 8.3 = 0.99 %
+against 8.2 = 0.17 %). The fall is editorial/content, not a conversion artefact on the
+machine-text evidence: general bracket use stays at 11–17 % of entries, long source
+brackets are 29 in the whole corpus, and OCR near-misses of the seven sigla are 3 (none in
+v7/v8). The print check that would falsify this is specified in
+[reports/PD_VOLUME_HOMOGENEITY_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_VOLUME_HOMOGENEITY_2026-10-18.md).
+Rule: `scripts/lib/pd_marked_sources.py`; parser: `scripts/pd_volume_homogeneity.py`;
+`--check` recomputes the tables and both baselines.
 
 **Sources.** PD =
 [PDScan 2020 `pdtxt.zip`](https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/downloads/pdtxt.zip)
