@@ -652,15 +652,50 @@ exhaustive per headword. **The constraint is editorial policy, not script or lan
 > completion **scheduled for 2032** (print 2034) — is a **plan, not an outcome**; it is cited only as
 > evidence that a ~500 k-entry historical dictionary is now budgeted as an 8-year editorial cycle.
 
-**Plan against delivery — a separate test (H6984).** This league table measures *delivery*; it does
-not say whether these projects kept the plans they set themselves, which is a different question
-with a much thinner evidence base: only **6 of the 17** dictionaries above have a numeric plan
-documented at the start. Testing the familiar "great dictionaries run ~3× over plan" against them
-splits the claim cleanly — the completed plans miss their **size** by a median **2.5×** (n=3) and
-their **schedule** by a median **8.9×** (n=4), and every documented schedule is missed by more than
-4×. "~3×" is a fair summary of size and a three-fold understatement of time; the two must not be
-averaged. Table, sources and classes:
+**Plan against delivery — the same corpus, read on the plan axis (H6983).** The three tables above
+rank *delivery*. Whether a project kept the plan it declared at the start is a separate question:
+a dictionary can hit one axis and miss another, so every deviation is stated **per axis** and is
+never averaged into a single "over plan" figure. `Deviation` = delivered ÷ declared on that axis;
+the bands are `PLAN-KEPT` (< 1.5×), `PLAN-MISSED` (1.5–4×) and `PLAN-BROKEN` (> 4×). For a work
+still in progress the size figure is **progress** (delivered ÷ plan), not a deviation. `Years` and
+`Entries/yr` above are left exactly as delivered; this table adds a dimension, it does not revise
+a rate.
+
+| Dictionary | Plan declared at the start | Delivered | Volumes | Pages | Years |
+|---|---|---|---|---|---|
+| **OED**, 1st ed. | 4 vols · 6,400 pp · 10 yr (1879 contract; the project was conceived in 1857) | 10 bound vols, April 1928 (reprinted as 12 vols in 1933) · ~15,500 pp *(not re-verified)* · 71 yr from 1857 (49 yr from the 1879 contract) | **2.50×** (10/4; **3.00×** on the 1933 12-vol count) | **2.42×** (OED1 ~15,500 pp, provisional) · **3.40×** on OED2's fully sourced 21,730 pp (20 vols · 291,500 entries, 1989) | **7.10×** (71/10 from 1857) · **4.90×** (49/10 from the contract) |
+| **Grimm**, DWB | 6–7 vols · 10 yr (1838) | 32 vols · 123 yr | **4.92×** (32/6.5) | no documented plan | **12.30×** |
+| **TLL** | 15 yr (1894) | 132 yr and counting; still at `N`/`R` | no documented plan | no documented plan | **8.80×** (floor) |
+| **CAD** | 10 yr (1921) | 26 vols · 90 yr (1921–2011) | no documented plan | no documented plan | **9.00×** |
+| **PD** | ~37 vols · ~37,333 pp · 200 pp/yr (2017 plan) | 35 fascicles / ~6 bound vols · 6,056 pp = **16% of plan** · 50 printing yr (78 yr from 1948) | **0.16 progress** (not a deviation) | **0.16 progress**; **~149,615 pp** required at its own `a`-density = **4.0× the plan** | **1.65×** projected at the realized 121 pp/yr |
+| WIL · GST · PWG · PWK · MW · KEWA · EWA | — | spans and counts in the tables above | no documented plan | no documented plan | no documented plan |
+| **CDPL** · BORI Prakrit | — | 3 vols · ~33,600 lexemes · 38 yr | no documented plan | no documented plan | no documented plan |
+| KOW · WNT · SAOB · HDC · Nikkoku | — | spans and counts in the tables above | no documented plan | no documented plan | no documented plan |
+
+**OED sources and the two size bases.** The plan is the publisher's own record: Oxford University
+Press, *History of the OED*, [public.oed.com/history/](https://public.oed.com/history/) (accessed 18-10-2026) — the Philological Society's 1857 call, the 1879 agreement with OUP and James Murray,
+the planned four volumes / 6,400 pages / ten years, the ten volumes completed in April 1928, and
+the 1933 reprint in twelve volumes. OED2's size is from OUP, *OED editions*,
+[public.oed.com/history/oed-editions/](https://public.oed.com/history/oed-editions/) (accessed 18-10-2026): 20 volumes, 21,730 pages, 291,500 entries (1989). OED1's ~15,500 pp is the commonly
+cited figure and is **not re-verified**, so its 2.42× is provisional; the 3.40× row uses OED2, the
+only fully sourced size, and is likewise a different edition, not a substitute numerator for the
+OED1 outcome. The two are shown side by side, not averaged.
+
+**PD and CDPL.** PD's 37-volume / 37,333-page plan and its 200 pp/yr target are press-mediated
+(Uprava A68 `PD_KNOWLEDGE_INDEX` §2/§4); the 6,056 pp delivered by 2019 and the realized 121 pp/yr
+are from §8.2. Its density-held scope — 149,615 pp at `a`'s 13.36 entries per MW headword — is
+**4.0× the 37,333-page plan**; that is a scope deviation, not a schedule one, and the 1.65× duration
+projection must not be read as good planning. CDPL's ~90,000-entry cap is a documented **entry-axis
+scope denominator** (H6984 §4.3), but it is not a start-of-project volumes/pages/years plan, so on
+the three axes this table measures CDPL's cells say **no documented plan** rather than inventing
+one.
+
+**Full table and aggregates.** The machine-readable 52-row table (17 dictionaries × 3 axes, plus CDPL's entry-axis cap), its source classes
+and the aggregate medians — completed size 2.50× (n=3), completed duration 8.90× (n=4) on the
+plan-anchored basis — are in
 [DICTIONARY_PLAN_DEVIATION_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/DICTIONARY_PLAN_DEVIATION_2026-10-18.md).
+OED's 71-year conception basis printed here gives 7.10× rather than that note's contract-anchored
+4.90×; the direction is unchanged, and neither number is averaged with the other.
 
 
 ### 8.9 Is `a` the hardest letter? — the graveyard of the first letter

@@ -68,7 +68,7 @@ The §8.8 corpus is 17 dictionaries (9 Sanskrit/Indo-Aryan, 6 century-long monum
 | **TLL** | **15 years** for the whole (1894) | **[literature]** | 132 yr, still at N/R, ~2/3 done | years measurable (floor) |
 | **CAD** | **10 years** (1921) | [secondary] | 26 vols · 90 yr (1921–2011) | years measurable |
 | **PD** | 37 vols · 37,333 pp · 200 pp/yr (2017 plan) | [secondary] | 35 fascicles / ~6 vols · 6,056 pp · 50 yr | progress + projection |
-| **CDPL** | ~90,000 entries over ~450 texts | [secondary] | 33,600 lexemes · 38 yr | progress only |
+| **CDPL** | ~90,000 entries over ~450 texts — entry axis only | [secondary] | 33,600 lexemes · 38 yr | progress only; no volumes/pages/years plan |
 | WIL · GST · PWG · PWK · MW · KEWA · EWA | **none documented** | — | spans and counts in §8.8 | `NO-DOCUMENTED-PLAN` |
 | WNT · SAOB · HDC · Nikkoku, 1st ed. | **none documented** | — | spans and counts in §8.8 | `NO-DOCUMENTED-PLAN` |
 
@@ -103,10 +103,13 @@ exist, and finding one is a named open item (§7).
 This is where "~3×" lives. Three of the four size observations sit at 2.4–2.5×, and the mean lands
 at 3.28× — close enough that a round "about three times" is a defensible summary **of size**.
 
-Two caveats keep this from being stronger than it is. **The OED page count is not re-verified**
-(A68 §5 carries the same warning): the 2.42× row is provisional. And **a volume is not a unit of
-size** — the OED's volumes average ~1,290 pp, PD's plan averages ~1,009 — so a volume ratio is a
-count ratio, exactly the trap H6985 identified in a different pair of units.
+Two caveats keep this from being stronger than it is. **The OED1 page count is not re-verified**
+(A68 §5 carries the same warning): the 2.42× row is provisional. The only fully sourced OED size is
+**OED2 (1989): 20 volumes · 21,730 pp · 291,500 entries**, from OUP's *OED editions* page (accessed
+18-10-2026); against the same 6,400-page plan it gives **3.40×**. That is a different edition, so it
+is printed beside the OED1 outcome, never substituted for it, and §8.8 shows both. And **a volume is
+not a unit of size** — the OED's volumes average ~1,290 pp, PD's plan averages ~1,009 — so a volume
+ratio is a count ratio, exactly the trap H6985 identified in a different pair of units.
 
 ### 4.2 Duration axis — elapsed years
 
@@ -118,6 +121,11 @@ count ratio, exactly the trap H6985 identified in a different pair of units.
 | Grimm, DWB | 10 yr | 123 yr (1838–1961) | **12.30×** | PLAN-BROKEN |
 
 **Median 8.90× · mean 8.75× (n=4).**
+
+OED's 4.90× is **plan-anchored**: the ten-year plan was made in 1879. Measured from the 1857
+Philological Society conception, as §8.8 also prints it, the 71 years to April 1928 give **7.10×**.
+Both are stated per axis and neither is averaged with the other; the median above uses the
+plan-anchored figure because no ten-year plan existed before 1879.
 
 Not one documented schedule was kept, and **every one is PLAN-BROKEN by the handoff's own >4×
 threshold**. The TLL's ratio is a floor, not a final figure: the 15-year estimate was made in 1894
@@ -203,9 +211,11 @@ deviation is mild.
   that moves a figure fails CI rather than leaving the prose stale).
 
 _Plan sources: [TLL Geschichte](https://thesaurus.badw.de/ueber-den-tll/geschichte.html)
-([literature], the 15-year estimate and the "half of D" outcome); [OED history text as transcribed
-by PCC](https://www.pcc.edu/staff/djacobse/history-of-the-o-e-d/) ([secondary], the 4-volume /
-6,400-page / 10-year plan); [Deutsches Wörterbuch](https://en.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch)
+([literature], the 15-year estimate and the "half of D" outcome); [OUP, History of the
+OED](https://public.oed.com/history/) (accessed 18-10-2026; the 1857 Philological Society call, the
+1879 agreement and the 4-volume / 6,400-page / 10-year plan); [OUP, OED
+editions](https://public.oed.com/history/oed-editions/) (accessed 18-10-2026; OED2, 20 vols /
+21,730 pp / 291,500 entries); [Deutsches Wörterbuch](https://en.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch)
 ([secondary], 6–7 volumes and ten years); [Chicago Assyrian
 Dictionary](https://en.wikipedia.org/wiki/Chicago_Assyrian_Dictionary) ([secondary], "initially
 expected to take 10 years"); PD from [PD_KNOWLEDGE_INDEX §2/§4](https://github.com/gasyoun/Uprava/blob/main/papers/A68/PD_KNOWLEDGE_INDEX.md)
