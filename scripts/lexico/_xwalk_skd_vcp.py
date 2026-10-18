@@ -11,11 +11,16 @@ per SKD anubandha, the distribution of VCP's explicit properties. The dominant
 associations = the proposed anubandha->property key, for the maintainer to
 adjudicate. Deliberately conservative: only unambiguous 1:1 roots are used.
 """
-import os, re, sys, collections
+import collections
+import os
+import re
+import sys
+
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/lexico"))
-from parse_cslorig import iter_entries, CSL_ORIG
-from m4_indigenous import analyze_entry, _PADA, _TRANS, _GANA, _first
+from m4_indigenous import _GANA, _PADA, _TRANS, _first, analyze_entry
+from parse_cslorig import CSL_ORIG, iter_entries
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 def src(code): return os.path.join(CSL_ORIG, code, f"{code}.txt")

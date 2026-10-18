@@ -1,0 +1,62 @@
+{
+  "generated_by": "H6923 scripts/pd_aob_declared_canon_audit.py (DeepSeek Flash, deepseek-flash)",
+  "audited_on": "2026-10-17",
+  "method": "R1 entry-like printed lines; R2 garbled-start dated lines (upper bound, never added); R3 merged siglum+title tokens (the clean-filter loss class)",
+  "source_aob": {
+    "path": "PD/AOB.md (sanskrit-lexicon/PD, OCR of the official KoshaSHRI AOB PDF)",
+    "sha256": "a3ce1a795c6f751da8ee103588c5cc9004f3f81df87c3f39731e78a78398da12",
+    "lines_total": 2011,
+    "pages": 42
+  },
+  "line_census": {
+    "backtick_start_lines": 1879,
+    "distinct_first_tokens": 1781
+  },
+  "entry_estimates": {
+    "entry_like_lines_r1": 1476,
+    "merged_siglum_title_tokens_r3": 556,
+    "consecutive_duplicate_sigla": 1,
+    "garbled_start_dated_r2_upper_bound": 99
+  },
+  "published_artifact": {
+    "file": "data/pd/pd_aob_declared_works.tsv",
+    "work_rows": 1112,
+    "edition_rows": 1118,
+    "is": "clean-subset FLOOR (every row survived the pass-2 filter), not the canon"
+  },
+  "recorded_numbers": {
+    "pass1_loose_entries": 1419,
+    "pass1_reproducible": false,
+    "reparse_raw_entries": 1517,
+    "print_census": 1464
+  },
+  "denominator": {
+    "n_covered_dcs_titles": 118,
+    "band_lo": 1419,
+    "band_hi": 1517,
+    "structural_estimate": 1476
+  },
+  "metric_title_level_declared_pct_at": {
+    "published_tsv_edition_rows": {
+      "n": 1118,
+      "pct": 10.55
+    },
+    "print_census": {
+      "n": 1464,
+      "pct": 8.06
+    },
+    "pass1_recorded": {
+      "n": 1419,
+      "pct": 8.32
+    },
+    "structural_r1": {
+      "n": 1476,
+      "pct": 7.99
+    },
+    "reparse_raw": {
+      "n": 1517,
+      "pct": 7.78
+    }
+  },
+  "verdict": "1,419 is an ENTRY-level parse count (loose entry-start rule) with no committed parser behind it: the committed re-parse yields 1517 raw entries and the printed OCR supports 1476 entry-like lines, so the reproducible statement is the band [1419, 1517] and 118/N = 7.78-8.32 %. The published TSV's 1118 edition rows are a clean-subset FLOOR, not the canon: 556 of 1476 entry lines carry an OCR-merged 'Siglum Title' token that the pass-2 filter discarded, so 118/1,118 = 10.55 % overstates coverage and must never be quoted as the declared canon."
+}

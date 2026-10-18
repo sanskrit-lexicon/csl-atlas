@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pool-assignment.schema.json",
+  "title": "Review pool assignment manifest (H5308, REVIEW_POOL_V1_DESIGN §5)",
+  "type": "object",
+  "required": ["schemaVersion", "poolVersion", "generatedAt", "generatedBy", "rule", "annotators", "packets"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "poolVersion": { "type": "string" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "generatedBy": { "type": "string" },
+    "rule": { "type": "string" },
+    "annotators": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "pattern": "^pool-a\\d{2,}$" }
+    },
+    "packets": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["sourcePacket", "rows"],
+        "properties": {
+          "sourcePacket": { "type": "string" },
+          "rows": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": { "type": "string", "pattern": "^pool-a\\d{2,}$" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

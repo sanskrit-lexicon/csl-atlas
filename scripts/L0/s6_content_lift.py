@@ -38,12 +38,12 @@ Output : data/L0/content_lift.csv           (every ordered pair: all instruments
 Run from repo root:  python scripts/L0/s6_content_lift.py
 """
 
-import os
-import sys
+import collections
 import csv
 import json
 import math
-import collections
+import os
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

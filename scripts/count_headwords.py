@@ -6,7 +6,10 @@ Reads:  ../../csl-orig/v02/<dict>/<dict>.txt
 Writes: ../data/headwords.json   keyed by dictionary id (lowercase)
         ../data/snapshots/<date>/headwords.json
 """
-import json, sys, datetime, re
+import datetime
+import json
+import re
+import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')

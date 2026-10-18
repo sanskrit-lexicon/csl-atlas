@@ -68,7 +68,6 @@ import csv
 import json
 
 import pytest
-
 from conftest import write_text, write_tsv
 
 MW_ROWS = [
@@ -479,6 +478,7 @@ def test_corpus_revision_is_per_cache_and_hash_bound(f11, pin, tmp_path, monkeyp
     Edit pwg.tsv without re-recording (hash no longer matches)  -> None.
     """
     import json
+
     import parse_cslorig
     monkeypatch.setattr(f11, "PARSED_DIR", str(tmp_path))
     monkeypatch.setattr(parse_cslorig, "PARSED_DIR", str(tmp_path))

@@ -1,0 +1,755 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-18",
+  "generatedBy": "python3 scripts/build-compound-depth-evidence.py",
+  "question": "Q6: corrected compound-depth distribution, depths 3-8 (no new model calls)",
+  "source": {
+    "snapshot": "data/compound-depth/typography-probe-2026-10-17.json",
+    "sha256": "c902dd99b42221e4628d82a0b4820fd3f40724c3bf3e8dbf5055579232903baa",
+    "model": "Dharmamitra ByT5-Sanskrit (unsandhied), remote API",
+    "markupRecordsFrom": "/tmp/h6963/csl-orig/v02/mw/mw.txt",
+    "markupRecordsSha256": "555ecf5aadaaf21e5965d6b3b419f428fc9ab9237f563627001ceca468d0cff8"
+  },
+  "units": {
+    "markupDepth": "joints: em-dash/hyphen-separated <k2> members",
+    "modelRead": "immediate constituents as read by the segmenter",
+    "records": "MW records (a surface may repeat)",
+    "surfaces": "distinct surfaces"
+  },
+  "markupDepths": {
+    "3": {
+      "markupDepth": 3,
+      "records": 27174,
+      "surfaces": 6946,
+      "valid": 4488,
+      "validRate": 0.6461,
+      "validRateCi95": [
+        0.6348,
+        0.6573
+      ],
+      "status": {
+        "empty": 583,
+        "garbage": 811,
+        "ok": 4488,
+        "truncated": 1064
+      },
+      "modelReads": {
+        "1": {
+          "n": 745,
+          "share": 0.166,
+          "ci95": [
+            0.1554,
+            0.1772
+          ]
+        },
+        "2": {
+          "n": 2121,
+          "share": 0.4726,
+          "ci95": [
+            0.458,
+            0.4872
+          ]
+        },
+        "3": {
+          "n": 1544,
+          "share": 0.344,
+          "ci95": [
+            0.3303,
+            0.3581
+          ]
+        },
+        "4": {
+          "n": 74,
+          "share": 0.0165,
+          "ci95": [
+            0.0132,
+            0.0206
+          ]
+        },
+        "5": {
+          "n": 4,
+          "share": 0.0009,
+          "ci95": [
+            0.0003,
+            0.0023
+          ]
+        },
+        "6": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.0009
+          ]
+        },
+        "7": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.0009
+          ]
+        },
+        "8": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.0009
+          ]
+        }
+      },
+      "pRead2": 0.4726,
+      "pRead2Ci95": [
+        0.458,
+        0.4872
+      ]
+    },
+    "4": {
+      "markupDepth": 4,
+      "records": 2974,
+      "surfaces": 1190,
+      "valid": 821,
+      "validRate": 0.6899,
+      "validRateCi95": [
+        0.6631,
+        0.7155
+      ],
+      "status": {
+        "empty": 105,
+        "garbage": 90,
+        "ok": 821,
+        "truncated": 174
+      },
+      "modelReads": {
+        "1": {
+          "n": 71,
+          "share": 0.0865,
+          "ci95": [
+            0.0691,
+            0.1077
+          ]
+        },
+        "2": {
+          "n": 186,
+          "share": 0.2266,
+          "ci95": [
+            0.1992,
+            0.2564
+          ]
+        },
+        "3": {
+          "n": 339,
+          "share": 0.4129,
+          "ci95": [
+            0.3797,
+            0.4469
+          ]
+        },
+        "4": {
+          "n": 197,
+          "share": 0.24,
+          "ci95": [
+            0.212,
+            0.2703
+          ]
+        },
+        "5": {
+          "n": 27,
+          "share": 0.0329,
+          "ci95": [
+            0.0227,
+            0.0474
+          ]
+        },
+        "6": {
+          "n": 1,
+          "share": 0.0012,
+          "ci95": [
+            0.0002,
+            0.0069
+          ]
+        },
+        "7": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.0047
+          ]
+        },
+        "8": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.0047
+          ]
+        }
+      },
+      "pRead2": 0.2266,
+      "pRead2Ci95": [
+        0.1992,
+        0.2564
+      ]
+    },
+    "5": {
+      "markupDepth": 5,
+      "records": 434,
+      "surfaces": 196,
+      "valid": 140,
+      "validRate": 0.7143,
+      "validRateCi95": [
+        0.6474,
+        0.7729
+      ],
+      "status": {
+        "empty": 14,
+        "garbage": 15,
+        "ok": 140,
+        "truncated": 27
+      },
+      "modelReads": {
+        "1": {
+          "n": 5,
+          "share": 0.0357,
+          "ci95": [
+            0.0153,
+            0.0809
+          ]
+        },
+        "2": {
+          "n": 12,
+          "share": 0.0857,
+          "ci95": [
+            0.0497,
+            0.1438
+          ]
+        },
+        "3": {
+          "n": 36,
+          "share": 0.2571,
+          "ci95": [
+            0.1919,
+            0.3353
+          ]
+        },
+        "4": {
+          "n": 47,
+          "share": 0.3357,
+          "ci95": [
+            0.2628,
+            0.4174
+          ]
+        },
+        "5": {
+          "n": 31,
+          "share": 0.2214,
+          "ci95": [
+            0.1606,
+            0.2971
+          ]
+        },
+        "6": {
+          "n": 9,
+          "share": 0.0643,
+          "ci95": [
+            0.0342,
+            0.1177
+          ]
+        },
+        "7": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.0267
+          ]
+        },
+        "8": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.0267
+          ]
+        }
+      },
+      "pRead2": 0.0857,
+      "pRead2Ci95": [
+        0.0497,
+        0.1438
+      ]
+    },
+    "6": {
+      "markupDepth": 6,
+      "records": 95,
+      "surfaces": 47,
+      "valid": 32,
+      "validRate": 0.6809,
+      "validRateCi95": [
+        0.5383,
+        0.796
+      ],
+      "status": {
+        "empty": 4,
+        "garbage": 4,
+        "ok": 32,
+        "truncated": 7
+      },
+      "modelReads": {
+        "1": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.1072
+          ]
+        },
+        "2": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.1072
+          ]
+        },
+        "3": {
+          "n": 1,
+          "share": 0.0312,
+          "ci95": [
+            0.0055,
+            0.1574
+          ]
+        },
+        "4": {
+          "n": 11,
+          "share": 0.3438,
+          "ci95": [
+            0.2041,
+            0.5169
+          ]
+        },
+        "5": {
+          "n": 7,
+          "share": 0.2188,
+          "ci95": [
+            0.1102,
+            0.3876
+          ]
+        },
+        "6": {
+          "n": 9,
+          "share": 0.2812,
+          "ci95": [
+            0.1556,
+            0.4537
+          ]
+        },
+        "7": {
+          "n": 2,
+          "share": 0.0625,
+          "ci95": [
+            0.0173,
+            0.2015
+          ]
+        },
+        "8": {
+          "n": 2,
+          "share": 0.0625,
+          "ci95": [
+            0.0173,
+            0.2015
+          ]
+        }
+      },
+      "pRead2": 0.0,
+      "pRead2Ci95": [
+        0.0,
+        0.1072
+      ]
+    },
+    "7": {
+      "markupDepth": 7,
+      "records": 15,
+      "surfaces": 8,
+      "valid": 6,
+      "validRate": 0.75,
+      "validRateCi95": [
+        0.4093,
+        0.9285
+      ],
+      "status": {
+        "empty": 2,
+        "ok": 6
+      },
+      "modelReads": {
+        "1": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.3903
+          ]
+        },
+        "2": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.3903
+          ]
+        },
+        "3": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.3903
+          ]
+        },
+        "4": {
+          "n": 2,
+          "share": 0.3333,
+          "ci95": [
+            0.0968,
+            0.7
+          ]
+        },
+        "5": {
+          "n": 1,
+          "share": 0.1667,
+          "ci95": [
+            0.0301,
+            0.5635
+          ]
+        },
+        "6": {
+          "n": 2,
+          "share": 0.3333,
+          "ci95": [
+            0.0968,
+            0.7
+          ]
+        },
+        "7": {
+          "n": 1,
+          "share": 0.1667,
+          "ci95": [
+            0.0301,
+            0.5635
+          ]
+        },
+        "8": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.3903
+          ]
+        }
+      },
+      "pRead2": 0.0,
+      "pRead2Ci95": [
+        0.0,
+        0.3903
+      ]
+    },
+    "8": {
+      "markupDepth": 8,
+      "records": 9,
+      "surfaces": 5,
+      "valid": 2,
+      "validRate": 0.4,
+      "validRateCi95": [
+        0.1176,
+        0.7693
+      ],
+      "status": {
+        "empty": 3,
+        "ok": 2
+      },
+      "modelReads": {
+        "1": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "2": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "3": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "4": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "5": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "6": {
+          "n": 1,
+          "share": 0.5,
+          "ci95": [
+            0.0945,
+            0.9055
+          ]
+        },
+        "7": {
+          "n": 1,
+          "share": 0.5,
+          "ci95": [
+            0.0945,
+            0.9055
+          ]
+        },
+        "8": {
+          "n": 0,
+          "share": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        }
+      },
+      "pRead2": 0.0,
+      "pRead2Ci95": [
+        0.0,
+        0.6576
+      ]
+    },
+    "9": {
+      "markupDepth": 9,
+      "records": 1,
+      "surfaces": 1,
+      "valid": 0,
+      "validRate": 0.0,
+      "validRateCi95": [
+        0.0,
+        0.7935
+      ],
+      "status": {
+        "truncated": 1
+      },
+      "modelReads": {
+        "1": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "2": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "3": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "4": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "5": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "6": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "7": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "8": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        }
+      },
+      "pRead2": null,
+      "pRead2Ci95": null
+    },
+    "10": {
+      "markupDepth": 10,
+      "records": 1,
+      "surfaces": 1,
+      "valid": 0,
+      "validRate": 0.0,
+      "validRateCi95": [
+        0.0,
+        0.7935
+      ],
+      "status": {
+        "empty": 1
+      },
+      "modelReads": {
+        "1": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "2": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "3": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "4": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "5": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "6": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "7": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        },
+        "8": {
+          "n": 0,
+          "share": null,
+          "ci95": null
+        }
+      },
+      "pRead2": null,
+      "pRead2Ci95": null
+    }
+  },
+  "icDistribution": {
+    "1": {
+      "n": 821,
+      "shareOfValid": 0.1496,
+      "shareOfAllSurfaces": 0.0978,
+      "ci95OfValid": [
+        0.1404,
+        0.1593
+      ]
+    },
+    "2": {
+      "n": 2319,
+      "shareOfValid": 0.4225,
+      "shareOfAllSurfaces": 0.2763,
+      "ci95OfValid": [
+        0.4095,
+        0.4356
+      ]
+    },
+    "3": {
+      "n": 1920,
+      "shareOfValid": 0.3498,
+      "shareOfAllSurfaces": 0.2287,
+      "ci95OfValid": [
+        0.3373,
+        0.3625
+      ]
+    },
+    "4": {
+      "n": 331,
+      "shareOfValid": 0.0603,
+      "shareOfAllSurfaces": 0.0394,
+      "ci95OfValid": [
+        0.0543,
+        0.0669
+      ]
+    },
+    "5": {
+      "n": 70,
+      "shareOfValid": 0.0128,
+      "shareOfAllSurfaces": 0.0083,
+      "ci95OfValid": [
+        0.0101,
+        0.0161
+      ]
+    },
+    "6": {
+      "n": 22,
+      "shareOfValid": 0.004,
+      "shareOfAllSurfaces": 0.0026,
+      "ci95OfValid": [
+        0.0026,
+        0.0061
+      ]
+    },
+    "7": {
+      "n": 4,
+      "shareOfValid": 0.0007,
+      "shareOfAllSurfaces": 0.0005,
+      "ci95OfValid": [
+        0.0003,
+        0.0019
+      ]
+    },
+    "8": {
+      "n": 2,
+      "shareOfValid": 0.0004,
+      "shareOfAllSurfaces": 0.0002,
+      "ci95OfValid": [
+        0.0001,
+        0.0013
+      ]
+    }
+  },
+  "totals": {
+    "surfaces": 8394,
+    "valid": 5489,
+    "validRate": 0.6539,
+    "validRateCi95": [
+      0.6437,
+      0.664
+    ],
+    "modelRead3Plus": {
+      "n": 2349,
+      "shareOfValid": 0.4279,
+      "shareOfAllSurfaces": 0.2798,
+      "ci95OfValid": [
+        0.4149,
+        0.4411
+      ],
+      "scaledToAllSurfacesPoint": 3592
+    }
+  },
+  "caveat": "The snapshot is a remote API run; Q9 makes the pinned local model canonical for new runs. These are derived tabs from the committed snapshot, which the ruling explicitly permits (no new model calls)."
+}

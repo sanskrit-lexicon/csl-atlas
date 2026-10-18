@@ -1164,9 +1164,9 @@ test("xref source-check rows keep human fields empty and reviewer-ready", () => 
 test("xref source-check counts match current generated artifacts", () => {
   assert.equal(xrefHubReview.counts.sharedCoreSample, 40);
   assert.equal(xrefSourceCheckPacket.counts.sourceCheckRows, 50);
-  assert.equal(xrefSourceCheckPacket.counts.sourcePointerRows, 106);
-  assert.equal(xrefSourceCheckPacket.counts.exactSharedCorePointers, 76);
-  assert.equal(xrefSourceCheckPacket.counts.sharedCoreRowsWithMissingExactEdge, 4);
+  assert.equal(xrefSourceCheckPacket.counts.sourcePointerRows, 110);
+  assert.equal(xrefSourceCheckPacket.counts.exactSharedCorePointers, 80);
+  assert.equal(xrefSourceCheckPacket.counts.sharedCoreRowsWithMissingExactEdge, 0);
   assert.equal(xrefSourceCheckPacket.counts.prefixControlPointers, 30);
   assert.deepEqual(xrefSourceCheckPacket.counts.bySampleClass, {
     "shared-core": 40,

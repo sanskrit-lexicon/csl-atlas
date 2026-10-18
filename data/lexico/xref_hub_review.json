@@ -6,7 +6,7 @@
   "reviewStatus": "machine-reviewed",
   "ownerRepo": "csl-atlas",
   "generatedBy": "npm run build-xref-hub-review",
-  "sourceGeneratedAt": "2026-06-05T08:29:19.672Z",
+  "sourceGeneratedAt": "2026-09-24T15:05:42.140Z",
   "sourceFiles": [
     "data/lexico/xref_by_dict.json",
     "data/lexico/xref_shared_edges.csv",
@@ -19,7 +19,7 @@
   "counts": {
     "dictionaryProfiles": 6,
     "pairReviewRows": 10,
-    "sourceSharedEdges": 641,
+    "sourceSharedEdges": 694,
     "sharedCoreSample": 40,
     "topTargetLimit": 25
   },
@@ -750,11 +750,11 @@
       "pair": "mw-pwg",
       "label": "MW x PWG",
       "reading": "headline-shared-core",
-      "sharedSources": 2538,
-      "overlappingEdges": 641,
-      "jaccardOnSharedSources": 0.0687,
-      "aInheritanceRate": 0.2176,
-      "bInheritanceRate": 0.0913,
+      "sharedSources": 2750,
+      "overlappingEdges": 694,
+      "jaccardOnSharedSources": 0.0692,
+      "aInheritanceRate": 0.218,
+      "bInheritanceRate": 0.092,
       "reviewLabel": "lexical-shared-core",
       "interpretation": "Review shared lexical targets separately from prefix or normalization artifacts."
     },
@@ -774,11 +774,11 @@
       "pair": "ap-pwg",
       "label": "AP x PWG",
       "reading": "comparison",
-      "sharedSources": 67,
+      "sharedSources": 74,
       "overlappingEdges": 23,
-      "jaccardOnSharedSources": 0.065,
-      "aInheritanceRate": 0.3433,
-      "bInheritanceRate": 0.0742,
+      "jaccardOnSharedSources": 0.0602,
+      "aInheritanceRate": 0.3108,
+      "bInheritanceRate": 0.0695,
       "reviewLabel": "normalization-risk",
       "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
     },
@@ -795,6 +795,18 @@
       "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
     },
     {
+      "pair": "ap90-pwg",
+      "label": "AP90 x PWG",
+      "reading": "comparison",
+      "sharedSources": 80,
+      "overlappingEdges": 12,
+      "jaccardOnSharedSources": 0.0246,
+      "aInheritanceRate": 0.1429,
+      "bInheritanceRate": 0.0289,
+      "reviewLabel": "normalization-risk",
+      "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
+    },
+    {
       "pair": "cae-mw",
       "label": "CAE x MW",
       "reading": "comparison",
@@ -807,14 +819,14 @@
       "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
     },
     {
-      "pair": "ap90-pwg",
-      "label": "AP90 x PWG",
+      "pair": "cae-pwg",
+      "label": "CAE x PWG",
       "reading": "comparison",
-      "sharedSources": 71,
+      "sharedSources": 53,
       "overlappingEdges": 11,
-      "jaccardOnSharedSources": 0.0242,
-      "aInheritanceRate": 0.1467,
-      "bInheritanceRate": 0.0281,
+      "jaccardOnSharedSources": 0.0234,
+      "aInheritanceRate": 0.1667,
+      "bInheritanceRate": 0.0264,
       "reviewLabel": "normalization-risk",
       "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
     },
@@ -827,18 +839,6 @@
       "jaccardOnSharedSources": 0.0513,
       "aInheritanceRate": 0.1124,
       "bInheritanceRate": 0.0862,
-      "reviewLabel": "normalization-risk",
-      "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
-    },
-    {
-      "pair": "cae-pwg",
-      "label": "CAE x PWG",
-      "reading": "comparison",
-      "sharedSources": 46,
-      "overlappingEdges": 7,
-      "jaccardOnSharedSources": 0.0158,
-      "aInheritanceRate": 0.125,
-      "bInheritanceRate": 0.0177,
       "reviewLabel": "normalization-risk",
       "interpretation": "Compare cautiously; overlap can reflect target normalization or convention."
     },
@@ -974,6 +974,14 @@
     },
     {
       "sampleId": "mw-pwg-shared:14",
+      "sourceLemma": "BAvyaraTa",
+      "target": "BAvya",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:15",
       "sourceLemma": "BI",
       "target": "Byas",
       "hubClass": "lexical-target",
@@ -981,7 +989,15 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:15",
+      "sampleId": "mw-pwg-shared:16",
+      "sourceLemma": "BImagava",
+      "target": "BEmagava",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:17",
       "sourceLemma": "BUHKAra",
       "target": "BuHKAra",
       "hubClass": "lexical-target",
@@ -989,7 +1005,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:16",
+      "sampleId": "mw-pwg-shared:18",
       "sourceLemma": "BaMsas",
       "target": "Basad",
       "hubClass": "lexical-target",
@@ -997,7 +1013,31 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:17",
+      "sampleId": "mw-pwg-shared:19",
+      "sourceLemma": "BaNgAsura",
+      "target": "BANgAsuri",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:20",
+      "sourceLemma": "BadrasAman",
+      "target": "BAdrasAma",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:21",
+      "sourceLemma": "Badravarman",
+      "target": "BAdravarmaRa",
+      "hubClass": "lexical-target",
+      "reviewLabel": "lexical-shared-core",
+      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
+    },
+    {
+      "sampleId": "mw-pwg-shared:22",
       "sourceLemma": "BakkikA",
       "target": "PaqiNgA",
       "hubClass": "lexical-target",
@@ -1005,7 +1045,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:18",
+      "sampleId": "mw-pwg-shared:23",
       "sourceLemma": "Bakz",
       "target": "biBakzayizu",
       "hubClass": "lexical-target",
@@ -1013,7 +1053,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:19",
+      "sampleId": "mw-pwg-shared:24",
       "sourceLemma": "Bala",
       "target": "bal",
       "hubClass": "lexical-target",
@@ -1021,7 +1061,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:20",
+      "sampleId": "mw-pwg-shared:25",
       "sourceLemma": "Bas",
       "target": "psA",
       "hubClass": "lexical-target",
@@ -1029,7 +1069,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:21",
+      "sampleId": "mw-pwg-shared:26",
       "sourceLemma": "BastrakA",
       "target": "BastrAkA",
       "hubClass": "lexical-target",
@@ -1037,7 +1077,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:22",
+      "sampleId": "mw-pwg-shared:27",
       "sourceLemma": "Bavanti",
       "target": "BavantI",
       "hubClass": "lexical-target",
@@ -1045,7 +1085,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:23",
+      "sampleId": "mw-pwg-shared:28",
       "sourceLemma": "Bavitra",
       "target": "BAvitra",
       "hubClass": "lexical-target",
@@ -1053,7 +1093,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:24",
+      "sampleId": "mw-pwg-shared:29",
       "sourceLemma": "Bela",
       "target": "Beqa",
       "hubClass": "lexical-target",
@@ -1061,7 +1101,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:25",
+      "sampleId": "mw-pwg-shared:30",
       "sourceLemma": "BfNgariwi",
       "target": "BfNgin",
       "hubClass": "lexical-target",
@@ -1069,7 +1109,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:26",
+      "sampleId": "mw-pwg-shared:31",
       "sourceLemma": "BfRqi",
       "target": "BaRqi",
       "hubClass": "lexical-target",
@@ -1077,7 +1117,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:27",
+      "sampleId": "mw-pwg-shared:32",
       "sourceLemma": "BogapAla",
       "target": "Bogika",
       "hubClass": "lexical-target",
@@ -1085,7 +1125,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:28",
+      "sampleId": "mw-pwg-shared:33",
       "sourceLemma": "BojyA",
       "target": "BojA",
       "hubClass": "lexical-target",
@@ -1093,7 +1133,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:29",
+      "sampleId": "mw-pwg-shared:34",
       "sourceLemma": "BrAS",
       "target": "BlAS",
       "hubClass": "lexical-target",
@@ -1101,7 +1141,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:30",
+      "sampleId": "mw-pwg-shared:35",
       "sourceLemma": "BuHKAra",
       "target": "BUHKAra",
       "hubClass": "lexical-target",
@@ -1109,7 +1149,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:31",
+      "sampleId": "mw-pwg-shared:36",
       "sourceLemma": "BuRq",
       "target": "huRq",
       "hubClass": "lexical-target",
@@ -1117,7 +1157,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:32",
+      "sampleId": "mw-pwg-shared:37",
       "sourceLemma": "Buj",
       "target": "buBukzA",
       "hubClass": "lexical-target",
@@ -1125,7 +1165,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:33",
+      "sampleId": "mw-pwg-shared:38",
       "sourceLemma": "Cadis",
       "target": "CAdizeya",
       "hubClass": "lexical-target",
@@ -1133,7 +1173,7 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:34",
+      "sampleId": "mw-pwg-shared:39",
       "sourceLemma": "DUmana",
       "target": "DUpana",
       "hubClass": "lexical-target",
@@ -1141,49 +1181,9 @@
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
     },
     {
-      "sampleId": "mw-pwg-shared:35",
+      "sampleId": "mw-pwg-shared:40",
       "sourceLemma": "DUr",
       "target": "DUrv",
-      "hubClass": "lexical-target",
-      "reviewLabel": "lexical-shared-core",
-      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
-    },
-    {
-      "sampleId": "mw-pwg-shared:36",
-      "sourceLemma": "Darmya",
-      "target": "DArmyAyaRa",
-      "hubClass": "lexical-target",
-      "reviewLabel": "lexical-shared-core",
-      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
-    },
-    {
-      "sampleId": "mw-pwg-shared:37",
-      "sourceLemma": "DraR",
-      "target": "Dvan",
-      "hubClass": "lexical-target",
-      "reviewLabel": "lexical-shared-core",
-      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
-    },
-    {
-      "sampleId": "mw-pwg-shared:38",
-      "sourceLemma": "GAwarI",
-      "target": "apaGAwilA",
-      "hubClass": "lexical-target",
-      "reviewLabel": "lexical-shared-core",
-      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
-    },
-    {
-      "sampleId": "mw-pwg-shared:39",
-      "sourceLemma": "Ga",
-      "target": "pariGa",
-      "hubClass": "lexical-target",
-      "reviewLabel": "lexical-shared-core",
-      "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
-    },
-    {
-      "sampleId": "mw-pwg-shared:40",
-      "sourceLemma": "GaRqa",
-      "target": "GuRqa",
       "hubClass": "lexical-target",
       "reviewLabel": "lexical-shared-core",
       "interpretation": "Shared source-target edge is a candidate lexical shared-core item."
