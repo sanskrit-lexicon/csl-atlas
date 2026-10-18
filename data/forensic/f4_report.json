@@ -1,4 +1,9 @@
 {
+  "csl_orig_revision": null,
+  "input_revisions": {
+    "PWG/pwgissues": "05a023a18459c572ded097624c65495d21557253",
+    "csl-corrections": "3cb692daf1a31361d0479fdbe22c1e06031d4fdc"
+  },
   "source1_cross_issues": 13,
   "issue_breakdown": [
     {
@@ -93,8 +98,8 @@
       "cit_examples": "HARIV. 9529"
     }
   ],
-  "source2_pet_corrected_hw": 10143,
-  "source2_mw_corrected_hw": 4593,
+  "source2_pet_corrected_hw": 10145,
+  "source2_mw_corrected_hw": 4628,
   "shared_headwords_issue": [
     "Sukriya",
     "aSvayuj",
@@ -119,7 +124,7 @@
     "tvac",
     "vallaBa"
   ],
-  "shared_headwords_corpus": 268,
+  "shared_headwords_corpus": 272,
   "shared_citations_issue": [
     "AV",
     "HARIV. 9529",
@@ -130,11 +135,11 @@
     "TBR",
     "VP"
   ],
-  "shared_citations_corpus": 1,
+  "shared_citations_corpus": 4,
   "print_errors_pet": 24,
   "print_errors_mw": 122,
   "shared_print_error_headwords": [],
-  "n_shared_correction_rows": 289,
-  "finding": "Using the editors' OWN corrections: the intentional shared signal is issue-bundled CITATION fixes (HARIV. 9529, MBH, SĀY, NĪLAK, MAHĪDH) = apparatus, corroborating F1. Headword-level 'corrected in both' (268) is ~chance for two correction sets this size over a shared vocabulary, so NOT evidence of inherited typos. SHARED documented PRINT errors = 0 (PWG 24 / MW 122, small + format-divergent). => MW inherited Böhtlingk's APPARATUS, not his mechanical errors — the books were independently typeset. Definitive error-copy test remains F4 vs DCS ground truth.",
-  "caveat": "The editors bundle fixes by ISSUE THEME (mostly citation/markup), and most are digitization fixes -> a shared correction corroborates shared apparatus (and the F1 finding), it is NOT by itself proof of a copied PRINT error. The strongest items are headwords/citations the editors corrected on BOTH the Petersburg side and MW. Airtight copied-error proof = F4 shared ERRONEOUS citations vs DCS ground truth."
+  "n_shared_correction_rows": 293,
+  "finding": "Using the editors' OWN corrections: the intentional shared signal is issue-bundled CITATION fixes (HARIV. 9529, MBH, SĀY, NĪLAK, MAHĪDH) = apparatus, corroborating F1. Headword-level 'corrected in both' (268) is ~chance for two correction sets this size over a shared vocabulary, so NOT evidence of inherited typos. SHARED documented PRINT errors = 0 (PWG 24 / MW 122, small + format-divergent). => MW inherited Böhtlingk's APPARATUS, not his mechanical errors — the books were independently typeset. Definitive error-copy test remains external DCS/VisualDCS ground truth.",
+  "caveat": "The editors bundle fixes by ISSUE THEME (mostly citation/markup), and most are digitization fixes -> a shared correction corroborates shared apparatus (and the F1 finding), it is NOT by itself proof of a copied PRINT error. The strongest items are headwords/citations the editors corrected on BOTH the Petersburg side and MW. Airtight copied-error proof = shared ERRONEOUS citations vs external DCS/VisualDCS ground truth."
 }

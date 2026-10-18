@@ -18,11 +18,11 @@ Outputs (data/lexico/):
     microstructure_fingerprint.json  per-dict densities + dominant layer
 """
 
-import os
-import sys
+import collections
 import csv
 import json
-import collections
+import os
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

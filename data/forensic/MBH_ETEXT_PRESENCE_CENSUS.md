@@ -1,6 +1,8 @@
 # Mahābhārata e-text link layer + the vulgate/critical presence verdict
 
-_Created: 16-08-2026 · Last updated: 16-08-2026_
+_Created: 16-08-2026 · Last updated: 22-09-2026_
+
+> **Re-pinned 22-09-2026 (H5264).** `f8_mbh_presence.py` and `f8_mbh_quote_lane.py` were re-run at `csl-orig@f4c08c57`: citation level **60,003 present/present, 5,965 present/absent, 4,010 unresolved-locus, 445 absent/unchecked** (was 60,101 / 5,950 / 3,880 / 492); quote lane exact 48.4 %, ±2 66.6 %, ±10 71.1 % (was 49.4 / 68.0 / 72.5 %). The August figures below are kept as the first-pass record. Details: [A10 audit, "Re-pinned 22-09-2026" item 3](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/A10_REPRODUCIBILITY_AUDIT.md).
 
 **What this is.** The text half of the MBh citation programme. Its sibling
 [`MBH_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MBH_CITATION_RESOLUTION_CENSUS.md)

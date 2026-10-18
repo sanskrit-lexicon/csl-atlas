@@ -1,6 +1,31 @@
 {
   "stage": 4,
-  "commit": "bf86716d01c2e9d5316188232482055064b6d817",
-  "utc_iso": "2026-06-03T16:23:07.942989+00:00",
-  "script": "f4b_ahlborn_nulltest.py"
+  "commit": "49a7e89fde0c9c4c2fd78934b0e6e5ad5e266bb6",
+  "utc_iso": "2026-09-22T15:46:07.149685+00:00",
+  "script": "f4b_ahlborn_nulltest.py",
+  "csl_orig": {
+    "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+    "via": "parse_provenance",
+    "caches": {
+      "mw": "7821d7865608fd377524789237b59a1abb4d4dc3c194d0ca6e77c3e2ab0aff08",
+      "pw": "7e486ee1632ba3a51d98505de026b23a871e9c65c18488b9bc6d5a59feaf9dd0",
+      "pwg": "d31654a0d6b79611853827709b440406b4d20610105c1777138d5c6c7f31c861",
+      "pwkvn": "e67fa06a778492b3377e89c709af3a1048a0eee6ac204ba525225dd07ad5b800",
+      "sch": "d5ddfbc1dfa42d27159a389f2adba26780e991c103dbbb0f9e0fc750f621b97c"
+    }
+  },
+  "inputs": {
+    "../CORRECTIONS/dictionaries": {
+      "revision": "1e04b2341c1bd1e538e807d6abe311c1e192e92a",
+      "via": "live_checkout"
+    },
+    "../CORRECTIONS/dictionaries/PWG": {
+      "revision": "1e04b2341c1bd1e538e807d6abe311c1e192e92a",
+      "via": "live_checkout"
+    },
+    "../csl-corrections": {
+      "revision": "3cb692daf1a31361d0479fdbe22c1e06031d4fdc",
+      "via": "live_checkout"
+    }
+  }
 }

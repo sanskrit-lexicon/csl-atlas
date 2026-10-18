@@ -1,4 +1,4 @@
-_Created: 03-06-2026 · Last updated: 06-09-2026_
+_Created: 03-06-2026 · Last updated: 23-09-2026_
 
 # Apparatus, not errors: how Monier-Williams inherited the Petersburg lexicon
 
@@ -36,8 +36,8 @@ share zero documented print errors. Nor did MW copy the order of the *meanings* 
 Böhtlingk's fourth charge: it sequences its senses no more like PWG's (0.767) than like the
 independent Apte's (0.751), shared lexicographic convention rather than transcription, with a
 copying residue only in the entries whose definitions MW derived most closely. Resolving the 565 shared Harivaṃśa references
-directly against the Calcutta vulgate both traditions cite corroborates 206 of them at the
-exact cited śloka (≈75× the shuffled null) while turning up no shared mistake. The
+directly against the Calcutta vulgate both traditions cite corroborates 207 of them at the
+exact cited śloka (≈74× the shuffled null) while turning up no shared mistake. The
 inheritance is of scholarship, not of typesetting. This resolves the size-confounded "MW absorbed 89–94% of PWG" claim (the
 raw-containment reading of the companion redundancy study) into a
 precise, defensible statement and supplies a reusable template for separating
@@ -102,15 +102,26 @@ the unrelated BOP→MW at 0.35 (`data/L0/content_lift.csv`). **17,007 headwords 
 only MW and PW** in the entire corpus (L0.8).
 
 **3.2 Citation apparatus (the strongest signal).** Both traditions tag references with
-`<ls>`. MW shares a per-lemma citation **source-Jaccard of 0.16–0.19** with PWG/PW, versus
-**0.004 (BHS) – 0.017 (Apte)** for the unrelated nulls — a 9.5–49× separation. Intermediate
+`<ls>`. MW shares a per-lemma citation **source-Jaccard of 0.16–0.18** with PWG/PW, versus
+**0.004 (BHS) – 0.016 (Apte)** for the unrelated nulls — a 9.7–47× separation. Intermediate
 values (Benfey 0.10, Grassmann 0.04) sit between lineage and null, consistent with Benfey's
-own Petersburg exposure (§3.4). **587 rare exact references are shared for the *same
-headword***, each attested at ≤4 lemmas corpus-wide, 203 of them occurring nowhere else in
+own Petersburg exposure (§3.4). **598 rare exact references are shared for the *same
+headword***, each attested at ≤4 lemmas corpus-wide, 169 of them occurring nowhere else in
 the corpus at all: e.g. `ullApya → SĀH. 545`, `dAsatA → VEṆĪS. 175`, `granTakAra →
 VEDĀNTAS. 1` (all three corpus-unique), and 565
-exact Harivaṃśa line-numbers (`HARIV. 9529` …). MW further reduces Böhtlingk's full verse
-references to a bare sigil **41,552 times** — a directional PWG→MW compression. The method
+exact Harivaṃśa line-numbers (`HARIV. 9529` …). Those last are 94.5% of the pool (565/598 at the
+`csl-orig` revision every F1/F5 figure is pinned to, §7), and they are the source events §6 resolves against the
+vulgate at the same pin (49 of the June pool's 565 left it and 49 others entered it between the two
+corpus revisions, §7): the rare-reference mass and the
+Harivaṃśa run-to-ground are one line of evidence read at two resolutions, not two independent
+ones. Ablating Harivaṃśa leaves 33 rare shared references over 18 other texts — the
+idiosyncratic-apparatus signal is real but concentrated
+([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §3.3).
+The Jaccard signal itself is *not* concentrated: ablating the most widely cited texts never
+collapses the lineage-over-null separation — across ablation depths of 5 to 100 texts it stays
+between 8.6× and 18.3× (16.3× at depth 25, against 9.7× unablated) — so it is not shared
+common texts doing the work (ibid. §3.5). MW further reduces Böhtlingk's full verse
+references to a bare sigil **41,571 times** — a directional PWG→MW compression. The method
 self-validates: it ranks known same-apparatus pairs at the top (PW/PWKVN 0.87, SCH/PW 0.62,
 AP/AP90 0.76) and the nulls at the floor.
 
@@ -122,18 +133,40 @@ division is partly linguistically forced, so this corroborates rather than prove
 
 **3.4 Citation order — MW worked *from* PWG's articles.** Sharing *which* texts to cite
 (§3.2) is consistent with merely using the same sources; sharing their *order* is not.
-Over 3,593 shared headwords for which both works cite ≥3 common sources, MW reproduces
-PWG's citation **sequence** at **0.811** concordance, with **47.8% of entries in perfectly
+Over 3,583 shared headwords for which both works cite ≥3 common sources, MW reproduces
+PWG's citation **sequence** at **0.811** concordance, with **47.7% of entries in perfectly
 identical order** — against a random baseline of 0.50 concordance and only ~5–17%
 chance-identical for k≥3 sources (a 3–10× excess). For example *droṇa*: both cite
 MBH · YĀJÑ · SUŚR · HARIV · VP in that order; *pratikartavya*: MBH · HARIV · ŚAṂK · R ·
-PRAB · SUŚR (six sources, identical sequence — random odds 1/720). The effect is
-Petersburg-*specific*, not a shared scholarly ordering convention: agreement falls
-monotonically with distance from the tradition — PWG 0.81 > PW 0.73 > Benfey 0.68 (itself
+PRAB · SUŚR (six sources, identical sequence — random odds 1/720). The effect points to
+Petersburg-*specificity* rather than a shared scholarly ordering convention: agreement falls
+monotonically with distance from the tradition — PWG 0.81 > PW 0.73 > Benfey 0.70 (itself
 Petersburg-influenced) > the independent Apte 0.42 (the Apte tail rests on 8 order-bearing
-entries and Benfey on 154 — thin, but the gradient is monotone). MW did not merely consult Böhtlingk's
-sources; it assembled its entries **following Böhtlingk's entry**. This is the strongest
-single copying signal in the suite, and it is structural, not lexical.
+entries and Benfey on 116 — thin, but the gradient is monotone). Because that independent arm
+is thin, the Petersburg-specificity is better carried by a direct control than by the
+gradient: derive each dictionary's *global* ordering habit (the mean normalised position of
+every text across all its entries), then keep only the sigil pairs on which MW's and PWG's
+habits point in **opposite** directions. On those 4,685 convention-defying pairs MW still
+follows PWG's particular article **75.2%** of the time. The margin that matters is not the one
+over a within-entry permutation floor (0.500 — that floor represents no signal at all) but the
+one over a dictionary that did *not* work from MW's source while writing in the same citation
+culture: Benfey manages 0.634 on the same pair class, so MW's excess over the best available
+non-lineage reference is **≈0.12** (entry-clustered 95% interval +0.02 to +0.21). That margin is
+descriptive, not an identified copying excess: the two arms score largely different pairs
+(2,168 vs 64 contributing entries), and on the 24 pairs both score Benfey agrees *more*
+(0.75 vs 0.67); nor is the gradient monotone (PW 0.628 < Benfey 0.634). The convention estimator is
+a marginal mean, so even one *fixed* ordering shared by two dictionaries that copy nothing can
+score 1.0 on "convention-discordant" pairs (a pinned constructed example), so 0.752 is a pair-agreement rate, not a bound on copying
+([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §3.6, §7).
+The order agreement is what MW
+assembling its entries **following Böhtlingk's entry** would produce, and it is structural,
+not lexical; but the available controls cannot yet exclude a shared ordering habit, fixed
+or conditional, so it is consistent with copying rather than proof of it. It is not, either, a
+*separate* body of evidence: every one of these entries is by construction a §3.2
+shared-cited lemma, so §3.2 and §3.4 are two questions put to one evidence base, not two
+corroborations (ibid. §3.1). The only leg that adds loci of its own is §3.5: 3,244 of its
+6,941 anchor words (46.7%) are touched by neither citation signal, while the other 53.3%
+overlap them — added loci, though not thereby statistically independent evidence.
 
 **3.5 Shared omission — the inventory backbone, from the negative-space side.** §3.1 shows
 shared *presence*; Böhtlingk's item #1 was shared *absence* — "was in Ihrem Werk ausgelaßen
@@ -156,6 +189,19 @@ exactly as with the shared citations (§6), an omission is not a conjunctive err
 can independently drop the same rare word — so this corroborates common descent without
 delivering the airtight Lachmann proof. It strengthens the *apparatus* side, not the error side
 (full census: [`data/forensic/SHARED_OMISSION_TEST.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/SHARED_OMISSION_TEST.md)).
+
+The Petersburg Nachträge give this result a complement on the entry side. In the largest
+supplement volume (volume 7; 35,581 entries), a canary-locked census finds **571
+homonym-extensions** — words MW already heads, for which the Nachträge record a further homonym
+MW's main body never reaches: e.g. *kārin*, whose Nachträge homonym *kārin*³ (`pw.txt` line
+620966) exceeds MW's main-body maximum of two — while the *kārin*³ in MW's own annexure is a
+different derivation, a numbering coincidence the census refuses to score as absorption. The
+inventory backbone of §3.1 thus has a precise edge: it thins exactly at the supplements' newest
+stratum. Two clauses travel with the figure: MW's and Petersburg's homonym numbering are not
+proven 1:1 comparable (the count spans 498–626 across defensible definitions of "extension"),
+and every figure describes the Cologne digitizations, not the printed page (full census:
+[`data/forensic/MW_UNABSORBED_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MW_UNABSORBED_CENSUS.md);
+the book-form twin carries the full class list at Chapter 12, §3.5).
 
 **3.6 Sense order — the fourth clause, measured directly, and it comes out near-null.** §3.4 measured the
 order in which the two works cite their *sources*; Böhtlingk's item #4 was narrower and more literal —
@@ -196,8 +242,8 @@ genuine figure is ≈ **0%**. Where PWG erred, MW has the *correct* form (90 cas
 lacks the word (31). MW's text is independent of PWG's typesetting accidents.
 
 **4.2 The null-test trap.** A naïve corpus null is misleading here: headwords corrected in
-*both* a Petersburg dict and MW number 256 against 102.8 expected by chance — a lift of
-**2.49** (hypergeometric p ≈ 4×10⁻⁴¹). Taken alone this *looks* like shared errors. It is
+*both* a Petersburg dict and MW number 260 against 103.3 expected by chance — a lift of
+**2.52** (hypergeometric p ≈ 1.5×10⁻⁴²). Taken alone this *looks* like shared errors. It is
 not: it is the *same hard words* attracting corrections in both works, with **different**
 errors in each — convergence on difficult vocabulary, compounded by editorial coupling
 (the Cologne `pwgissues` bundles correct one word across several dictionaries by design).
@@ -243,11 +289,12 @@ edition can match. The airtight upgrade, in classical stemmatic terms, would be 
 **erroneous** citation — a verse number wrong against the actual text, present in both
 dictionaries. I ran that test twice, against the two corpora available.
 
-**Against the DCS corpus the test is structurally blocked.** Of the 587 shared rare
-citations, only **1** resolved to a DCS locus: 96 % are Harivaṃśa references, cited by the
+**Against the DCS corpus the test is structurally blocked.** Of the 598 shared rare
+citations at the §7 pin, only **1** resolved to a DCS locus (re-run 22-09-2026; the June
+587-row pool gave the same single candidate): 94.5 % are Harivaṃśa references, cited by the
 Petersburg dictionaries in the **Calcutta-vulgate continuous śloka numbering** (running to
-16 291), while DCS carries the **critical edition** (118 chapters, ≈ 6 073 verses). 298
-references provably exceed the entire DCS Harivaṃśa, and the single resolvable candidate
+16 291), while DCS carries the **critical edition** (118 chapters, ≈ 6 073 verses). 293
+references provably exceed the entire DCS Harivaṃśa (298 in the June pool), and the single resolvable candidate
 (CAURAP. (A.) 49) is a recension artifact, not an editor-independent wrong locus (full
 per-candidate classification:
 [`VisualDCS …/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md`](https://github.com/gasyoun/VisualDCS/blob/main/src/DCS-data-2026/reports/F4_DCS_SHARED_CITATION_ERRORS_VERDICT.md);
@@ -266,13 +313,14 @@ dictionaries actually cite, using a free vulgate e-text (Kinjawadekar, Chitrasha
 **15,364 verses = 93.8 %** of the 16,374-śloka vulgate). A per-adhyāya continuous index was
 fitted on 14,471 PWG anchors and **validated on 815 held-out MW anchors: 68.4 % land within
 ±3 of their cited śloka vs a 2.1 % shuffled-N null (≈ 33×)** — the index is trustworthy. Of
-the **565** shared rare Harivaṃśa citations, **206 (37.7 %) corroborate at the exact cited
+the **565** shared rare Harivaṃśa citations at the §7 pin (re-run 22-09-2026; 206 of the June
+pool's 565, 37.7 %), **207 (37.9 % of the 546 evaluable) corroborate at the exact cited
 vulgate śloka** (e.g. `kīrtimant` `HARIV. 62` → verse 1-2-9 *…kīrtimantaṃ ca…*) against a
-**0.5 % shuffled-N null — a ≈ 75× enrichment, and against 1 of 587 resolvable via DCS.**
+**0.5 % shuffled-N null — a ≈ 74× enrichment, and against 1 of 598 resolvable via DCS.**
 This upgrades the citation evidence from *shared editions* to a **shared, verse-level,
 verifiably-correct apparatus.** The *airtight* upgrade — a shared **erroneous** citation —
 is **not** obtained, and the reason is positive rather than circumstantial: displaced cases
-fall *below* their shuffled-N null (79 vs 200) with no clustering, so against the correct
+fall *below* their shuffled-N null (85 vs 205) with no clustering, so against the correct
 edition the shared citations verify as correct and there is **no shared error to find** in
 this pool. The shared-mistake signal is a measured null, not a data-availability block.
 
@@ -293,10 +341,53 @@ and the sanhw1 snapshot. Datasets: `data/forensic/{citation_pair_overlap,
 shared_rare_citations, homonym_concordance, ahlborn_mw_comparison, shared_corrections,
 shared_omission_test, sense_order_test, sense_order_robustness}.csv`
 and the `f*_report.json` files; `data/L0/content_lift.csv`. F9 (shared omission) additionally
-reads the `now-2026` `key1` headword exports from `../SanskritLexicography/HeadwordLists/`. F10
+reads the `now-2026` `key1` headword exports from `../SanskritLexicography/HeadwordLists/`. The
+volume-7 unabsorbed census folded into §3.5 is external to this suite: it regenerates with
+SanskritLexicography's [`mw_unabsorbed_census.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/mw_unabsorbed_census.py)
+(deterministic, stdlib-only, ~8 s) over `../csl-orig`, and its frozen outputs are archived in
+[`data/forensic/MW_UNABSORBED_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/MW_UNABSORBED_CENSUS.md).
+F10
 (sense order) renders PWG's German glosses `de→en` with offline argos-translate (one-time model
 install via `scripts/forensic/_setup_argos.py`; cache gitignored + rebuildable, parallel fill via
-`_f10_pretranslate.py`) — the only figure not derived purely from the source text. Per-run provenance in the
+`_f10_pretranslate.py`) — the only figure not derived purely from the source text.
+
+**Pinned to one `csl-orig` revision (H5073 → H5248, re-frozen 22-09-2026).** `csl-orig`
+receives upstream corrections continuously, and the first freeze (03-06-2026) recorded only the
+*csl-atlas* commit — so F1 and F5, which read `../csl-orig`, drifted while F9 (frozen `key1`
+exports) reproduced to the digit. Every F1 and F5 figure in this article is now computed at
+[`csl-orig@f4c08c57`](https://github.com/sanskrit-lexicon/csl-orig/commit/f4c08c578b330e2379e38f54d3a541f1564b8eee)
+(2026-09-20). Each F1/F5 `.source.json` sidecar and `f1_report.json` / `f5_report.json` carry that
+revision, and the scripts refuse to write a figure if it is unrecorded, dirty, mixed across caches
+or moves mid-run. A second clean run at that revision, from a rebuilt cache, reproduces every
+re-frozen figure to the digit, and the output files are byte-identical across hash seeds. What moved against the June freeze: the rare-reference pool
+587 → 598 (Harivaṃśa count unchanged at 565, though 49 rows left the pool and 49 others entered it; corpus-unique 203 → 169), the order-bearing entries
+3,593 → 3,583 (concordance 0.8107 → 0.8108, identical share 47.8% → 47.7%), PWG→MW truncations
+41,552 → 41,571, the lineage source-Jaccard band 0.16–0.19 → 0.16–0.18 (Apte null 0.017 → 0.016;
+separation 9.5–49× → 9.7–47×), and the Benfey order arm 0.68 on 154 entries → 0.70 on 116.
+No verdict changes. The June values stay in the `superseded_2026_06_03` block of
+[`f11_report.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/f11_report.json)
+([`EVIDENCE_DEPENDENCE_AUDIT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/EVIDENCE_DEPENDENCE_AUDIT.md) §4).
+**Extended to F2–F4 and F8 (H5260, 22-09-2026).** F2 and F4b pin the parsed caches, F3 and the F8
+Mahābhārata census pin the live checkout, all at the same `f4c08c57`; F4 reads no `csl-orig` file,
+so its sidecar pins the two correction checkouts it does read (`PWG/pwgissues`, `csl-corrections`)
+instead of claiming a corpus revision. The F8 stages that read only derived tables inherit the pin
+from those tables' sidecars and refuse an unpinned or mixed upstream. Re-running at the pin, byte-
+identical across hash seeds: §4.2's null 256 vs 102.8 (lift 2.49, p ≈ 4×10⁻⁴¹) → 260 vs 103.3
+(lift 2.52, p ≈ 1.5×10⁻⁴²), the 2/123 direct test unchanged; F3 PWG 0.5641 vs Apte 0.5763
+(differential −0.012, unchanged at the precision of §4.3); the F2 deep-split agreements of §3.3
+unchanged at whole-percent precision (MW/PWG 65.3 % → 65.1 %); F4a's zero shared print errors
+unchanged. The §6 DCS arm, re-run against the 598-row pool, resolves the same single candidate.
+**Witness stages re-run (H5264, 22-09-2026).** The §6 **vulgate arm** (F7) and the F8 stages that
+read the rights-restricted vulgate/critical witness texts (resolve, presence, quote lane, Droṇa
+index) were re-run at the same `f4c08c57`, byte-identical across hash seeds; the F8 outputs are also
+content-identical across two machines. The re-harvested vulgate e-text reproduces 15,364 verses
+exactly and the index validation is unchanged (68.4 % vs 2.1 %). On the pinned pool's 565
+Harivaṃśa rows the vulgate arm corroborates 207 (37.9 % of 546 evaluable; June 206, 37.7 % of 547), with displaced cases
+85 against a 204.5 null (June 79 vs 200.5). No verdict changes. F8 verify was pinned on 23-09-2026 against a re-staged local GRETIL
+BORI mirror (72,771 verses; every tier and verdict unchanged; no figure in this article). Still
+unpinned: F10 (sense order), whose offline-MT engine and cache are absent.
+
+Per-run provenance in the
 `.source.json` sidecars.
 
 ## References

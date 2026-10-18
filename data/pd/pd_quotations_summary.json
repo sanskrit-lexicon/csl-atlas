@@ -1,0 +1,327 @@
+{
+ "dataset": "pd_quotations",
+ "handoff": "H6949",
+ "generated_by": "python scripts/pd_quotation_units.py",
+ "generated_on": "2026-10-18",
+ "unit": "quotation = maximal run of consecutive {#...#} blocks separated only by whitespace, immediately followed by a citation locus (siglum + locus); attestation = siglum locus + each bare further reference after ';'",
+ "source": {
+  "path": "/Users/mac/Documents/GitHub/.h6948-scratch/txt/pd.txt",
+  "bytes": 55122076,
+  "sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442",
+  "url": "https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/downloads/pdtxt.zip",
+  "licence": "© 2014 The Sanskrit Library / Thomas Malten, CC BY-NC-SA 3.0"
+ },
+ "scope_caveat": "letter-a canon only, up to ~apaca- (fascicles 1976-2009); the printed record has since reached Vol. 35 / 6,056 pp, still inside a-",
+ "totals": {
+  "printed_lines": 554243,
+  "slp1_blocks": 621100,
+  "quotations": 302442,
+  "blocks_in_quotations": 486984,
+  "headword_block": 107630,
+  "siglum_loci": 384217,
+  "continuation_loci": 35673,
+  "attestations": 419890,
+  "distinct_sigla": 311859,
+  "chars": 42247645,
+  "entries": 107630
+ },
+ "distribution": {
+  "quotations": {
+   "median": 1.0,
+   "p90": 4,
+   "p99": 30,
+   "max": 2329,
+   "zero_entries": 1686,
+   "mean": 2.81
+  },
+  "attestations": {
+   "median": 1.0,
+   "p90": 5,
+   "p99": 47,
+   "max": 3458,
+   "mean": 3.901
+  }
+ },
+ "blocks_vs_quotations": {
+  "slp1_blocks": 621100,
+  "quotations": 302442,
+  "blocks_per_quotation": 2.0536,
+  "share_of_blocks_inside_quotations": 78.41
+ },
+ "cross_checks": {
+  "siglum_loci_vs_h1336": {
+   "h1336_citation_occurrences": 398359,
+   "this_pass_siglum_loci": 384217,
+   "agreement_pct": 96.45,
+   "why_they_differ": "H1336 counts every siglum token anywhere in the entry; this pass counts only loci that close a quotation. The shortfall is sigla attached to a bare reference or to an entry with no quotation at all."
+  }
+ },
+ "integrity": {
+  "entries_written": 107630,
+  "unmatched_headers": 0,
+  "duplicate_lids": 0
+ },
+ "top20_by_quotations": [
+  {
+   "lid": "97714",
+   "pc": "8-3866a",
+   "k1": "anya",
+   "quotations": 2329,
+   "blocks_in_quotations": 3753,
+   "attestations": 3458,
+   "printed_lines": 2796
+  },
+  {
+   "lid": "9424",
+   "pc": "1-0329a",
+   "k1": "agni",
+   "quotations": 1503,
+   "blocks_in_quotations": 2143,
+   "attestations": 1926,
+   "printed_lines": 1424
+  },
+  {
+   "lid": "106685",
+   "pc": "8-4266b",
+   "k1": "ap",
+   "quotations": 1463,
+   "blocks_in_quotations": 2067,
+   "attestations": 2526,
+   "printed_lines": 1554
+  },
+  {
+   "lid": "96442",
+   "pc": "7-3813b",
+   "k1": "anna",
+   "quotations": 967,
+   "blocks_in_quotations": 1395,
+   "attestations": 1500,
+   "printed_lines": 1048
+  },
+  {
+   "lid": "90876",
+   "pc": "7-3549b",
+   "k1": "antar",
+   "quotations": 856,
+   "blocks_in_quotations": 1354,
+   "attestations": 1708,
+   "printed_lines": 1070
+  },
+  {
+   "lid": "90880",
+   "pc": "7-3559a",
+   "k1": "antara",
+   "quotations": 742,
+   "blocks_in_quotations": 1101,
+   "attestations": 1317,
+   "printed_lines": 905
+  },
+  {
+   "lid": "99041",
+   "pc": "8-3951a",
+   "k1": "anyaTA",
+   "quotations": 697,
+   "blocks_in_quotations": 1190,
+   "attestations": 835,
+   "printed_lines": 897
+  },
+  {
+   "lid": "91942",
+   "pc": "7-3618a",
+   "k1": "antarikza",
+   "quotations": 601,
+   "blocks_in_quotations": 867,
+   "attestations": 1154,
+   "printed_lines": 651
+  },
+  {
+   "lid": "70339",
+   "pc": "5-2628b",
+   "k1": "anu",
+   "quotations": 596,
+   "blocks_in_quotations": 849,
+   "attestations": 1143,
+   "printed_lines": 704
+  },
+  {
+   "lid": "91398",
+   "pc": "7-3588a",
+   "k1": "antarA",
+   "quotations": 544,
+   "blocks_in_quotations": 878,
+   "attestations": 820,
+   "printed_lines": 672
+  },
+  {
+   "lid": "98921",
+   "pc": "8-3941a",
+   "k1": "anyatra",
+   "quotations": 531,
+   "blocks_in_quotations": 797,
+   "attestations": 701,
+   "printed_lines": 595
+  },
+  {
+   "lid": "95623",
+   "pc": "7-3775b",
+   "k1": "anDa",
+   "quotations": 497,
+   "blocks_in_quotations": 774,
+   "attestations": 813,
+   "printed_lines": 610
+  },
+  {
+   "lid": "89506",
+   "pc": "7-3491a",
+   "k1": "anta",
+   "quotations": 495,
+   "blocks_in_quotations": 669,
+   "attestations": 1145,
+   "printed_lines": 615
+  },
+  {
+   "lid": "105002",
+   "pc": "8-4169a",
+   "k1": "anvaya",
+   "quotations": 485,
+   "blocks_in_quotations": 771,
+   "attestations": 634,
+   "printed_lines": 631
+  },
+  {
+   "lid": "77807",
+   "pc": "6-2979b",
+   "k1": "anuBU",
+   "quotations": 475,
+   "blocks_in_quotations": 758,
+   "attestations": 630,
+   "printed_lines": 553
+  },
+  {
+   "lid": "48533",
+   "pc": "3-1691b",
+   "k1": "aDI",
+   "quotations": 467,
+   "blocks_in_quotations": 699,
+   "attestations": 661,
+   "printed_lines": 528
+  },
+  {
+   "lid": "25",
+   "pc": "1-0003a",
+   "k1": "aMSa",
+   "quotations": 449,
+   "blocks_in_quotations": 743,
+   "attestations": 520,
+   "printed_lines": 571
+  },
+  {
+   "lid": "106329",
+   "pc": "8-4242a",
+   "k1": "anvita",
+   "quotations": 445,
+   "blocks_in_quotations": 736,
+   "attestations": 508,
+   "printed_lines": 521
+  },
+  {
+   "lid": "92218",
+   "pc": "7-3636b",
+   "k1": "antareRa",
+   "quotations": 424,
+   "blocks_in_quotations": 662,
+   "attestations": 858,
+   "printed_lines": 534
+  },
+  {
+   "lid": "54601",
+   "pc": "4-1964a",
+   "k1": "ananta",
+   "quotations": 405,
+   "blocks_in_quotations": 600,
+   "attestations": 589,
+   "printed_lines": 454
+  }
+ ],
+ "comparison_pwg": {
+  "unit": "same rule both sides (scripts/lib/quotation_units.py); PD marker = inline siglum + inherited further references, PWG marker = <ls> tag",
+  "pwg_totals": {
+   "entries": 123366,
+   "ls_tags": 801788,
+   "quotations": 329623,
+   "machine_text_lines": 223497
+  },
+  "pd_totals": {
+   "entries": 107630,
+   "quotations": 302442,
+   "attestations": 419890,
+   "lines": 554243
+  },
+  "shared_lemmas": 4093,
+  "pd_only_lemmas": 100866,
+  "pwg_only_lemmas": 101989,
+  "attestation_ratio": {
+   "median": 4.0,
+   "mean": 8.973,
+   "p25": 2.0,
+   "p75": 9.75,
+   "share_ge_12": 19.7
+  },
+  "quotation_ratio": {
+   "median": 4.0,
+   "mean": 8.953
+  },
+  "aggregate_over_shared_lemmas": {
+   "pd_attestations": 157480,
+   "pwg_attestations": 18423,
+   "attestation_ratio": 8.548,
+   "pd_quotations": 97413,
+   "pwg_quotations": 10225,
+   "quotation_ratio": 9.527
+  },
+  "attestation_ratio_buckets": {
+   "lt_1": 340,
+   "1_to_3": 967,
+   "3_to_12": 1586,
+   "ge_12": 710
+  },
+  "anchor_akamatas": {
+   "wright": "PW three lines, six Manu attestations; PD 47 lines; 'a twelvefold increase in bulk' (BSOAS 41(2), 388-389)",
+   "pd": {
+    "entries": 1,
+    "quotations": 31,
+    "attestations": 75,
+    "lines": 47
+   },
+   "pwg": {
+    "entries": 1,
+    "quotations": 2,
+    "attestations": 6,
+    "lines": 1
+   },
+   "manu_loci": {
+    "pd_manu_loci": [
+     "2.181",
+     "9.242",
+     "11.45",
+     "11.46",
+     "11.89"
+    ],
+    "pwg_manu_loci": [
+     "M.2,181",
+     "M.9,242",
+     "M.11,45",
+     "M.11,46",
+     "M.11,89",
+     "M.11,127"
+    ],
+    "pd_quotations": 0,
+    "pwg_quotations": 0
+   }
+  },
+  "inputs": {
+   "pd_sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442",
+   "pwg_sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166"
+  }
+ }
+}

@@ -18,16 +18,25 @@ Outputs (numbers only — no verse text):
 Run from repo root (after f8_mbh_harvest.py):  python scripts/forensic/f8_mbh_resolve.py
 Deps: ../sanskrit-util/py (slp1_simplify).
 """
-import sys, os, re, json, csv, bisect, random, statistics
-from collections import defaultdict, Counter
+import bisect
+import csv
+import json
+import os
+import random
+import re
+import statistics
+import sys
+from collections import Counter, defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/L0"))
 sys.path.insert(0, os.path.abspath("../sanskrit-util/py"))
-from parse_cslorig import iter_entries, CSL_ORIG
-from _provenance import write_source
+from parse_cslorig import CSL_ORIG, iter_entries
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _corpus_pin
 from sanskrit_util import slp1_simplify
 
 VERSES = "data/forensic/_mbh_vulgate_verses.jsonl"
@@ -224,7 +233,13 @@ def main():
     V = load_verses()
     P = build_parvan(V)
     print(f"vulgate verses={len(V)}  parvans={sorted(P)}")
+    # H5260: anchors are re-read live; the notes are census output pinned in its sidecar.
+    pin = _corpus_pin.live_revision(CSL_ORIG)
     pwg = pwg_anchors(); mw = mw_anchors()
+    _corpus_pin.assert_unmoved(pin, CSL_ORIG)
+    if os.path.exists(NOTES):
+        _corpus_pin.assert_same(pin, _corpus_pin.inherited_revision([NOTES]))
+    print(f"csl-orig revision (live checkout, clean): {pin['revision']}")
     print(f"anchors: PWG={len(pwg)} MW={len(mw)}")
 
     for b, pk in P.items():
@@ -283,7 +298,7 @@ def main():
         for r in sorted(res, key=lambda r:(r["cat"], int(r["parvan"]), int(r["verse"]))):
             w.writerow([r["L"], r["headword_slp1"], r["parvan"], r["verse"], r["marker"], r["confidence"], r["cat"], r["delta"]])
 
-    report = {"vulgate_verses": len(V), "parvans_harvested": sorted(P),
+    report = {"csl_orig_revision": pin["revision"], "vulgate_verses": len(V), "parvans_harvested": sorted(P),
               "per_parvan_Cmax": {b: P[b]["Cby"][-1] for b in sorted(P)},
               "anchors_pwg": len(pwg), "anchors_mw": len(mw),
               "held_out_pooled_agreement": round(pooled_agr,3), "held_out_pooled_null": round(pooled_null,3),
@@ -293,7 +308,7 @@ def main():
               "note_locus_resolution": dict(cats)}
     json.dump(report, open("data/forensic/f8_resolve_report.json","w",encoding="utf-8"), ensure_ascii=False, indent=1)
     for p in ("mbh_vulgate_concordance.csv","mbh_continuous_index_offsets.csv","mbh_citation_resolution.csv"):
-        write_source(f"data/forensic/{p}", "f8_mbh_resolve.py", 8)
+        _corpus_pin.write_pinned_source(f"data/forensic/{p}", "f8_mbh_resolve.py", 8, pin)
     print("\nwrote mbh_vulgate_concordance.csv + mbh_continuous_index_offsets.csv + mbh_citation_resolution.csv + f8_resolve_report.json")
 
 

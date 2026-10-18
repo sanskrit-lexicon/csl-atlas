@@ -1,6 +1,7 @@
 import json
-from datetime import datetime, timezone
 import subprocess
+from datetime import datetime, timezone
+
 
 def write_source(out_path: str, script: str, stage: int) -> None:
     try:

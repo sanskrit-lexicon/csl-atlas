@@ -23,12 +23,12 @@ Or build caches:  python parse_cslorig.py pwg pw mw mw72      (--all = every loc
 The body/gloss is NOT cached (large); F3 re-parses the few dicts it needs.
 """
 
-import os
-import re
-import sys
 import csv
 import glob
 import json
+import os
+import re
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -138,6 +138,49 @@ def main():
     with open(os.path.join(PARSED_DIR, "_parse_stats.json"), "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
     print(f"Cached {len(stats)} dict(s); stats -> {PARSED_DIR}/_parse_stats.json")
+    write_provenance([st["code"] for st in stats])
+
+
+def write_provenance(codes):
+    """Record, PER CACHE, the csl-orig revision that generated it (H5073).
+
+    A partial rebuild (`parse_cslorig.py mw`) updates only the records it
+    rebuilt; every record is bound to its TSV's SHA-256 so a consumer can
+    reject a record whose file has since changed.
+    """
+    import hashlib
+    import subprocess
+    rev = dirty = None
+    note = None
+    try:
+        r = subprocess.run(["git", "-C", CSL_ORIG, "rev-parse", "HEAD"],
+                           capture_output=True, text=True, encoding="utf-8", timeout=30)
+        d = subprocess.run(["git", "-C", CSL_ORIG, "status", "--porcelain", "-uno"],
+                           capture_output=True, text=True, encoding="utf-8", timeout=60)
+        if r.returncode == 0:
+            rev = r.stdout.strip()
+        if d.returncode == 0:
+            dirty = bool(d.stdout.strip())
+    except Exception as exc:                                   # noqa: BLE001
+        note = repr(exc)[:200]
+    path = os.path.join(PARSED_DIR, "_parse_provenance.json")
+    prov = {"csl_orig": os.path.abspath(CSL_ORIG), "caches": {}}
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            old = json.load(f) or {}
+        prov["caches"] = old.get("caches", {}) or {}
+    for code in codes:
+        tsv = os.path.join(PARSED_DIR, f"{code}.tsv")
+        h = hashlib.sha256()
+        with open(tsv, "rb") as f:
+            for chunk in iter(lambda: f.read(1 << 20), b""):
+                h.update(chunk)
+        rec = {"revision": rev, "dirty": dirty, "tsv_sha256": h.hexdigest()}
+        if note:
+            rec["note"] = note
+        prov["caches"][code] = rec
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(prov, f, indent=2, ensure_ascii=False, sort_keys=True)
 
 
 if __name__ == "__main__":

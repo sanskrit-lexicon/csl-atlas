@@ -1,4 +1,5 @@
 {
+  "csl_orig_revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
   "min_cit": 500,
   "citation_dicts": [
     "AE",
@@ -8,6 +9,8 @@
     "BHS",
     "BOR",
     "GRA",
+    "IEG",
+    "LAN",
     "LRV",
     "MW",
     "PW",
@@ -16,167 +19,179 @@
     "SCH"
   ],
   "citation_tagging_note": "'citation_dicts' = <ls>-TAGGED dicts only. SKD (84,616 iti) and VCP (30,928 iti) are the corpus's MOST citation-dense dicts but use the indigenous style (iti+authority, quotes) with no <ls>, so they are absent here -- NOT citation-free. F1 compares the Western <ls> apparatus. See data/forensic/CITATION_TAGGING.md.",
-  "n_pairs": 78,
-  "n_smoking_guns": 587,
+  "n_pairs": 105,
+  "n_smoking_guns": 598,
   "smoking_gun_sources": {
     "HARIV": 565,
-    "KAUŚ": 4,
+    "PAÑCAT. II": 4,
     "GAṆAR": 4,
+    "PAÑCAT. IV": 3,
+    "PAÑCAT. I": 3,
     "LAGHUK": 3,
+    "PAÑCAT. III": 2,
     "CHANDOM": 2,
     "BHĀṢĀP": 2,
+    "HIT. IV": 1,
+    "HIT. II": 1,
     "BHĀRADV": 1,
     "VEDĀNTAS": 1,
     "SĀH": 1,
-    "PURUṢOTT": 1,
-    "VEṆĪS": 1,
-    "CAURAP. (A.)": 1,
-    "BĪJAG": 1
+    "KAUŚ": 1
   },
   "lineage": {
     "PWG/MW": {
       "dict_a": "MW",
       "dict_b": "PWG",
-      "shared_cited_lemmas": 79989,
-      "mean_source_jaccard": 0.1594,
-      "shared_exact_refs": 3136,
-      "b_truncates_a": 20,
-      "a_truncates_b": 41552,
-      "comparable_sources": 44366
+      "shared_cited_lemmas": 80600,
+      "mean_source_jaccard": 0.1579,
+      "shared_exact_refs": 3132,
+      "b_truncates_a": 4,
+      "a_truncates_b": 41571,
+      "comparable_sources": 44289
     },
     "PW/MW": {
       "dict_a": "MW",
       "dict_b": "PW",
-      "shared_cited_lemmas": 44243,
-      "mean_source_jaccard": 0.1875,
-      "shared_exact_refs": 2426,
+      "shared_cited_lemmas": 46061,
+      "mean_source_jaccard": 0.1791,
+      "shared_exact_refs": 2430,
       "b_truncates_a": 3,
-      "a_truncates_b": 11411,
-      "comparable_sources": 13906
+      "a_truncates_b": 11424,
+      "comparable_sources": 13919
     },
     "PWKVN/MW": {
       "dict_a": "MW",
       "dict_b": "PWKVN",
-      "shared_cited_lemmas": 7810,
-      "mean_source_jaccard": 0.1775,
-      "shared_exact_refs": 142,
+      "shared_cited_lemmas": 7826,
+      "mean_source_jaccard": 0.1771,
+      "shared_exact_refs": 145,
       "b_truncates_a": 0,
-      "a_truncates_b": 1749,
-      "comparable_sources": 1913
+      "a_truncates_b": 1752,
+      "comparable_sources": 1916
     },
     "PWG/PW": {
       "dict_a": "PW",
       "dict_b": "PWG",
-      "shared_cited_lemmas": 24704,
-      "mean_source_jaccard": 0.1419,
-      "shared_exact_refs": 3400,
-      "b_truncates_a": 3220,
-      "a_truncates_b": 1042,
-      "comparable_sources": 12421
+      "shared_cited_lemmas": 25734,
+      "mean_source_jaccard": 0.1349,
+      "shared_exact_refs": 3781,
+      "b_truncates_a": 3158,
+      "a_truncates_b": 1058,
+      "comparable_sources": 12426
     }
   },
   "nulls": {
     "BHS/MW": {
       "dict_a": "BHS",
       "dict_b": "MW",
-      "shared_cited_lemmas": 5637,
+      "shared_cited_lemmas": 5647,
       "mean_source_jaccard": 0.0038,
       "shared_exact_refs": 96,
       "b_truncates_a": 0,
-      "a_truncates_b": 60,
-      "comparable_sources": 156
+      "a_truncates_b": 61,
+      "comparable_sources": 157
     },
     "AP/MW": {
       "dict_a": "AP",
       "dict_b": "MW",
-      "shared_cited_lemmas": 12362,
-      "mean_source_jaccard": 0.0168,
+      "shared_cited_lemmas": 12402,
+      "mean_source_jaccard": 0.0163,
       "shared_exact_refs": 159,
       "b_truncates_a": 948,
       "a_truncates_b": 5,
-      "comparable_sources": 1108
+      "comparable_sources": 1109
     },
     "BEN/MW": {
       "dict_a": "BEN",
       "dict_b": "MW",
-      "shared_cited_lemmas": 11483,
-      "mean_source_jaccard": 0.1012,
-      "shared_exact_refs": 4589,
-      "b_truncates_a": 0,
-      "a_truncates_b": 123,
-      "comparable_sources": 4690
+      "shared_cited_lemmas": 15977,
+      "mean_source_jaccard": 0.1016,
+      "shared_exact_refs": 129,
+      "b_truncates_a": 4831,
+      "a_truncates_b": 1,
+      "comparable_sources": 5008
     }
   },
   "top_pairs": [
     {
       "dict_a": "PW",
       "dict_b": "PWKVN",
-      "shared_cited_lemmas": 12912,
-      "mean_source_jaccard": 0.8737,
-      "shared_exact_refs": 14795,
+      "shared_cited_lemmas": 12914,
+      "mean_source_jaccard": 0.8688,
+      "shared_exact_refs": 16651,
       "b_truncates_a": 5,
       "a_truncates_b": 0,
-      "comparable_sources": 14640
+      "comparable_sources": 14694
     },
     {
       "dict_a": "PWKVN",
       "dict_b": "SCH",
-      "shared_cited_lemmas": 11715,
-      "mean_source_jaccard": 0.8349,
-      "shared_exact_refs": 10625,
-      "b_truncates_a": 13,
-      "a_truncates_b": 3,
-      "comparable_sources": 12029
+      "shared_cited_lemmas": 11717,
+      "mean_source_jaccard": 0.8353,
+      "shared_exact_refs": 10828,
+      "b_truncates_a": 15,
+      "a_truncates_b": 2,
+      "comparable_sources": 12046
     },
     {
       "dict_a": "AP",
       "dict_b": "AP90",
-      "shared_cited_lemmas": 8036,
-      "mean_source_jaccard": 0.7648,
-      "shared_exact_refs": 22168,
-      "b_truncates_a": 155,
-      "a_truncates_b": 11,
-      "comparable_sources": 20514
+      "shared_cited_lemmas": 8031,
+      "mean_source_jaccard": 0.7643,
+      "shared_exact_refs": 25467,
+      "b_truncates_a": 159,
+      "a_truncates_b": 15,
+      "comparable_sources": 20527
     },
     {
       "dict_a": "PW",
       "dict_b": "SCH",
-      "shared_cited_lemmas": 13933,
-      "mean_source_jaccard": 0.6249,
-      "shared_exact_refs": 9964,
-      "b_truncates_a": 24,
-      "a_truncates_b": 3,
-      "comparable_sources": 11355
+      "shared_cited_lemmas": 13987,
+      "mean_source_jaccard": 0.6199,
+      "shared_exact_refs": 10167,
+      "b_truncates_a": 26,
+      "a_truncates_b": 2,
+      "comparable_sources": 11397
     },
     {
       "dict_a": "MW",
       "dict_b": "PW",
-      "shared_cited_lemmas": 44243,
-      "mean_source_jaccard": 0.1875,
-      "shared_exact_refs": 2426,
+      "shared_cited_lemmas": 46061,
+      "mean_source_jaccard": 0.1791,
+      "shared_exact_refs": 2430,
       "b_truncates_a": 3,
-      "a_truncates_b": 11411,
-      "comparable_sources": 13906
+      "a_truncates_b": 11424,
+      "comparable_sources": 13919
     },
     {
       "dict_a": "MW",
       "dict_b": "PWKVN",
-      "shared_cited_lemmas": 7810,
-      "mean_source_jaccard": 0.1775,
-      "shared_exact_refs": 142,
+      "shared_cited_lemmas": 7826,
+      "mean_source_jaccard": 0.1771,
+      "shared_exact_refs": 145,
       "b_truncates_a": 0,
-      "a_truncates_b": 1749,
-      "comparable_sources": 1913
+      "a_truncates_b": 1752,
+      "comparable_sources": 1916
+    },
+    {
+      "dict_a": "BEN",
+      "dict_b": "PWG",
+      "shared_cited_lemmas": 15451,
+      "mean_source_jaccard": 0.16,
+      "shared_exact_refs": 1586,
+      "b_truncates_a": 18,
+      "a_truncates_b": 2,
+      "comparable_sources": 11387
     },
     {
       "dict_a": "MW",
       "dict_b": "PWG",
-      "shared_cited_lemmas": 79989,
-      "mean_source_jaccard": 0.1594,
-      "shared_exact_refs": 3136,
-      "b_truncates_a": 20,
-      "a_truncates_b": 41552,
-      "comparable_sources": 44366
+      "shared_cited_lemmas": 80600,
+      "mean_source_jaccard": 0.1579,
+      "shared_exact_refs": 3132,
+      "b_truncates_a": 4,
+      "a_truncates_b": 41571,
+      "comparable_sources": 44289
     },
     {
       "dict_a": "AP90",
@@ -189,20 +204,10 @@
       "comparable_sources": 1609
     },
     {
-      "dict_a": "BEN",
-      "dict_b": "PWG",
-      "shared_cited_lemmas": 11585,
-      "mean_source_jaccard": 0.1486,
-      "shared_exact_refs": 558,
-      "b_truncates_a": 0,
-      "a_truncates_b": 11675,
-      "comparable_sources": 12051
-    },
-    {
       "dict_a": "AP",
       "dict_b": "LRV",
-      "shared_cited_lemmas": 3588,
-      "mean_source_jaccard": 0.1473,
+      "shared_cited_lemmas": 3589,
+      "mean_source_jaccard": 0.1472,
       "shared_exact_refs": 10,
       "b_truncates_a": 1545,
       "a_truncates_b": 0,
@@ -211,18 +216,18 @@
     {
       "dict_a": "PW",
       "dict_b": "PWG",
-      "shared_cited_lemmas": 24704,
-      "mean_source_jaccard": 0.1419,
-      "shared_exact_refs": 3400,
-      "b_truncates_a": 3220,
-      "a_truncates_b": 1042,
-      "comparable_sources": 12421
+      "shared_cited_lemmas": 25734,
+      "mean_source_jaccard": 0.1349,
+      "shared_exact_refs": 3781,
+      "b_truncates_a": 3158,
+      "a_truncates_b": 1058,
+      "comparable_sources": 12426
     },
     {
       "dict_a": "MW",
       "dict_b": "SCH",
-      "shared_cited_lemmas": 11584,
-      "mean_source_jaccard": 0.1239,
+      "shared_cited_lemmas": 11609,
+      "mean_source_jaccard": 0.1236,
       "shared_exact_refs": 213,
       "b_truncates_a": 1,
       "a_truncates_b": 1766,
@@ -231,79 +236,79 @@
     {
       "dict_a": "BEN",
       "dict_b": "MW",
-      "shared_cited_lemmas": 11483,
-      "mean_source_jaccard": 0.1012,
-      "shared_exact_refs": 4589,
-      "b_truncates_a": 0,
-      "a_truncates_b": 123,
-      "comparable_sources": 4690
+      "shared_cited_lemmas": 15977,
+      "mean_source_jaccard": 0.1016,
+      "shared_exact_refs": 129,
+      "b_truncates_a": 4831,
+      "a_truncates_b": 1,
+      "comparable_sources": 5008
+    },
+    {
+      "dict_a": "BEN",
+      "dict_b": "PW",
+      "shared_cited_lemmas": 8386,
+      "mean_source_jaccard": 0.046,
+      "shared_exact_refs": 35,
+      "b_truncates_a": 94,
+      "a_truncates_b": 0,
+      "comparable_sources": 1236
     },
     {
       "dict_a": "LRV",
       "dict_b": "PWG",
       "shared_cited_lemmas": 6437,
       "mean_source_jaccard": 0.0434,
-      "shared_exact_refs": 39,
+      "shared_exact_refs": 45,
       "b_truncates_a": 0,
-      "a_truncates_b": 3571,
-      "comparable_sources": 3580
+      "a_truncates_b": 3574,
+      "comparable_sources": 3582
     },
     {
       "dict_a": "GRA",
       "dict_b": "MW",
-      "shared_cited_lemmas": 1327,
-      "mean_source_jaccard": 0.0426,
+      "shared_cited_lemmas": 1331,
+      "mean_source_jaccard": 0.0417,
       "shared_exact_refs": 207,
       "b_truncates_a": 93,
       "a_truncates_b": 0,
       "comparable_sources": 293
     },
     {
+      "dict_a": "BEN",
+      "dict_b": "PWKVN",
+      "shared_cited_lemmas": 1593,
+      "mean_source_jaccard": 0.0385,
+      "shared_exact_refs": 2,
+      "b_truncates_a": 0,
+      "a_truncates_b": 0,
+      "comparable_sources": 108
+    },
+    {
       "dict_a": "GRA",
       "dict_b": "PWG",
       "shared_cited_lemmas": 1269,
-      "mean_source_jaccard": 0.0382,
-      "shared_exact_refs": 173,
+      "mean_source_jaccard": 0.0379,
+      "shared_exact_refs": 198,
       "b_truncates_a": 1,
-      "a_truncates_b": 109,
+      "a_truncates_b": 110,
       "comparable_sources": 299
-    },
-    {
-      "dict_a": "BEN",
-      "dict_b": "PW",
-      "shared_cited_lemmas": 6116,
-      "mean_source_jaccard": 0.0349,
-      "shared_exact_refs": 106,
-      "b_truncates_a": 0,
-      "a_truncates_b": 869,
-      "comparable_sources": 965
     },
     {
       "dict_a": "PWG",
       "dict_b": "PWKVN",
-      "shared_cited_lemmas": 3330,
-      "mean_source_jaccard": 0.0308,
-      "shared_exact_refs": 142,
+      "shared_cited_lemmas": 3333,
+      "mean_source_jaccard": 0.0303,
+      "shared_exact_refs": 172,
       "b_truncates_a": 14,
-      "a_truncates_b": 29,
-      "comparable_sources": 496
-    },
-    {
-      "dict_a": "GRA",
-      "dict_b": "PW",
-      "shared_cited_lemmas": 776,
-      "mean_source_jaccard": 0.0287,
-      "shared_exact_refs": 29,
-      "b_truncates_a": 2,
-      "a_truncates_b": 5,
-      "comparable_sources": 44
+      "a_truncates_b": 32,
+      "comparable_sources": 508
     },
     {
       "dict_a": "AP",
       "dict_b": "PWG",
-      "shared_cited_lemmas": 8237,
-      "mean_source_jaccard": 0.028,
-      "shared_exact_refs": 62,
+      "shared_cited_lemmas": 8242,
+      "mean_source_jaccard": 0.0279,
+      "shared_exact_refs": 63,
       "b_truncates_a": 3,
       "a_truncates_b": 216,
       "comparable_sources": 1786

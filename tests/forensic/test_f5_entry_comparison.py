@@ -25,11 +25,11 @@ Hand derivation, positive corpus (sigil = citation text before its first digit):
 
 import csv
 import json
-
-import pytest
+import subprocess
 
 import f5_entry_comparison as f5
-from conftest import write_text
+import pytest
+from conftest import git_commit_all, write_text
 
 
 def _entry(k1, body, L="1"):
@@ -71,6 +71,7 @@ def _corpus(tmp_path, spec):
     root = tmp_path / "csl-orig"
     for code, text in spec.items():
         write_text(root / code / f"{code}.txt", text)
+    git_commit_all(root)
     return root
 
 
@@ -139,6 +140,13 @@ def test_positive_fixture_pair_summary(tmp_path, monkeypatch, forensic_cwd, pin)
     pin("f5", "AP.is_null", "True", rows["AP"]["is_null"])
     pin("f5", "null_mean_order", 0.8333, report["null_mean_order"])
     pin("f5", "n_order_examples_identical", 1, report["n_order_examples_identical"])
+    head = subprocess.run(["git", "-C", str(tmp_path / "csl-orig"), "rev-parse", "HEAD"],
+                          capture_output=True, text=True, check=True).stdout.strip()
+    pin("f5", "csl_orig_revision(H5248)", head, report["csl_orig_revision"])
+    for out in ("f5_pair_summary.csv", "f5_citation_order_examples.csv"):
+        side = json.loads((forensic_cwd / f"data/forensic/{out}.source.json").read_text(encoding="utf-8"))
+        pin("f5", f"sidecar.{out}.csl_orig", (head, "live_checkout"),
+            (side["csl_orig"]["revision"], side["csl_orig"]["via"]))
     pin("f5", "examples", [("PWG", "agni", "MBH R AV P")],
         [(e["dict"], e["headword"], e["shared_sources"]) for e in examples])
 

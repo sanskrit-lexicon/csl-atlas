@@ -1,0 +1,517 @@
+{
+  "seed": 20260920,
+  "min_shared_sources_for_order": 3,
+  "permutation_iters": 200,
+  "anchor_sources": {
+    "SKD": "key1-export",
+    "VCP": "key1-export"
+  },
+  "corpus_revision": {
+    "cache_generating_revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+    "sibling_checkout_at_run": {
+      "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+      "committed": "2026-09-20T11:58:58+03:00"
+    },
+    "binding_pin": "source_hashes",
+    "per_cache": {
+      "ae": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "ap": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "ap90": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "ben": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "bhs": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "bor": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "gra": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "lrv": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "mw": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "pw": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "pwg": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "pwkvn": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "sch": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "skd": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      },
+      "vcp": {
+        "status": "verified",
+        "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+        "dirty": false
+      }
+    }
+  },
+  "reproduction_delta": {
+    "note": "'published' = the f1/f5 reports on disk. Since H5248 (22-09-2026) those carry csl_orig_revision, and published_revision below says which; a published revision equal to corpus_revision.cache_generating_revision should reproduce to the digit. The first freeze (2026-06-03, unpinned ../csl-orig) is kept verbatim in superseded_2026_06_03 — upstream drift is the most plausible, not a proven, cause of its deltas, because its revision was never recorded.",
+    "published_revision": {
+      "f1": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+      "f5": "f4c08c578b330e2379e38f54d3a541f1564b8eee"
+    },
+    "superseded_2026_06_03": {
+      "S-F1-RARE": 587,
+      "S-F1-RARE-HARIV": 565,
+      "S-F1-RARE-corpus-unique": 203,
+      "S-F5-ORDER": {
+        "entries": 3593,
+        "concordance": 0.8107,
+        "pct_identical": 47.8
+      },
+      "csl_orig_revision": null
+    },
+    "S-F1-RARE": {
+      "published": 598,
+      "reproduced": 598
+    },
+    "S-F1-RARE-HARIV": {
+      "published": 565,
+      "reproduced": 565
+    },
+    "S-F5-ORDER": {
+      "published_entries": 3583,
+      "reproduced_entries": 3583,
+      "published_concordance": 0.8108,
+      "reproduced_concordance": 0.8108,
+      "published_pct_identical": 47.7,
+      "reproduced_pct_identical": 47.73
+    },
+    "S-F9-GAPSENS": {
+      "published_mw": 12.336,
+      "reproduced_mw": 12.336,
+      "published_ap": 1.51,
+      "reproduced_ap": 1.51
+    }
+  },
+  "source_hashes": {
+    "data/forensic/parsed/mw.tsv": "7821d7865608fd377524789237b59a1abb4d4dc3c194d0ca6e77c3e2ab0aff08",
+    "data/forensic/parsed/pwg.tsv": "d31654a0d6b79611853827709b440406b4d20610105c1777138d5c6c7f31c861",
+    "data/forensic/parsed/pw.tsv": "7e486ee1632ba3a51d98505de026b23a871e9c65c18488b9bc6d5a59feaf9dd0",
+    "data/forensic/parsed/ap.tsv": "a227bd1fec86eb5987fac4822df555e5358adb9f4060f9cea5607209e64c8352",
+    "data/forensic/parsed/ben.tsv": "2084467db113b7cbc4fa321a05ef1b76794f8422caaf71ae9b416749bbdc99b3",
+    "data/forensic/parsed/sch.tsv": "d5ddfbc1dfa42d27159a389f2adba26780e991c103dbbb0f9e0fc750f621b97c",
+    "data/forensic/parsed/pwkvn.tsv": "e67fa06a778492b3377e89c709af3a1048a0eee6ac204ba525225dd07ad5b800",
+    "data/forensic/parsed/ae.tsv": "c355dcab3e3ecce4e420d3d1097c04209802f1e53a79500ee36b346634bf19ee",
+    "data/forensic/parsed/ap90.tsv": "46a2a543fd0826239551080a19345c30d519219e80ae4b5340343b3bd8dc60d3",
+    "data/forensic/parsed/bhs.tsv": "989c664163f515dba1851f4d7cf118a69b4558ede0ee7faa6f6c470a09da01e2",
+    "data/forensic/parsed/bor.tsv": "473b504c443f0bd74605391e79ccef7fe884de9d8ad37bff87c6cbbcec41e816",
+    "data/forensic/parsed/gra.tsv": "7c06ef3c339a857b520904d33d4fc5b1ec6a12242c9e13dbfc8f8110b4b28462",
+    "data/forensic/parsed/lrv.tsv": "2426d8973e7eb87a51bcc3414f5975d882ca8049e1073f391cadf0c2cb250d4f",
+    "data/forensic/parsed/skd.tsv": "530c0aaec5c2ae395a8f1adfce6e532052d1bbd388e9cb5928d50a794f2b56cc",
+    "data/forensic/parsed/vcp.tsv": "409c896e4c4ebc763ea9d5cd48c76aa585c978c68629740479423cd51ba6bc8f",
+    "data/forensic/f1_report.json": "e15a21afa3a091836cb68c0f5707d0fe2a23fb6e0678f41c3976c7aed80f4047",
+    "data/forensic/f5_report.json": "2a2e5cbff10dc0a7da2e10c478fb6e041cecc4ff84524a6a83e2b13c98a36173",
+    "data/forensic/shared_omission_test.csv": "1fb5cfafa205e0ea1cdd80f0e0c2a04285bdadb5256d6b361010086d69d69335",
+    "data/forensic/shared_rare_citations.csv": "581b3914793a254c5493f4bf50d69a30c1f23bb5820c32794c17b65d8c457df5"
+  },
+  "claims": {
+    "A10-C1": {
+      "section": "3.2",
+      "signals": [
+        "S-F1-JACC",
+        "S-F1-RARE"
+      ],
+      "loci": {
+        "L-CIT-LEMMA": 80600,
+        "L-RARE-EVENT": 598
+      }
+    },
+    "A10-C2": {
+      "section": "3.4",
+      "signals": [
+        "S-F5-ORDER",
+        "S-F5-IDENT"
+      ],
+      "loci": {
+        "L-ORD-ENTRY": 3583
+      }
+    },
+    "A10-C3": {
+      "section": "3.5",
+      "signals": [
+        "S-F9-GAPSENS"
+      ],
+      "loci": {
+        "L-ANCHOR-WORD": 6941
+      }
+    }
+  },
+  "locus_overlap": {
+    "C2_in_C1": {
+      "c2": 3583,
+      "intersection": 3583,
+      "share_of_c2": 1.0,
+      "kind": "structural",
+      "note": "1.0 by construction, not by measurement: c2_entries is built by iterating c1_lemmas, so this share cannot come out below 1.0. It is reported because the CONSEQUENCE — §3.4 is not an independent corroboration of §3.2 — is what the paper had not stated"
+    },
+    "C1rare_in_C2": {
+      "rare_lemmas": 513,
+      "intersection": 133,
+      "share_of_rare_lemmas": 0.2593
+    },
+    "C3_in_C1": {
+      "anchor": 6941,
+      "intersection": 3697,
+      "share_of_anchor": 0.5326
+    },
+    "C3_in_C2": {
+      "anchor": 6941,
+      "intersection": 340,
+      "share_of_anchor": 0.049
+    }
+  },
+  "deduplicated_accounting": {
+    "C1_loci": 80600,
+    "C2_loci": 3583,
+    "C3_loci": 6941,
+    "naive_sum_of_loci": 91124,
+    "union_of_loci": 83844,
+    "double_counted_by_naive_sum": 7280,
+    "C2_loci_not_in_C1": 0,
+    "C3_loci_not_in_C1_or_C2": 3244
+  },
+  "c3_reproduction": {
+    "MW": {
+      "pwg_has_probe_has": 4134,
+      "pwg_has_probe_lacks": 158,
+      "pwg_lacks_probe_has": 1446,
+      "pwg_lacks_probe_lacks": 1203,
+      "pwg_has": 4292,
+      "pwg_lacks": 2649,
+      "lack_given_pwg_has": 0.0368,
+      "lack_given_pwg_lacks": 0.4541,
+      "gap_sensitivity": 12.336
+    },
+    "AP": {
+      "pwg_has_probe_has": 2696,
+      "pwg_has_probe_lacks": 1596,
+      "pwg_lacks_probe_has": 1162,
+      "pwg_lacks_probe_lacks": 1487,
+      "pwg_has": 4292,
+      "pwg_lacks": 2649,
+      "lack_given_pwg_has": 0.3719,
+      "lack_given_pwg_lacks": 0.5613,
+      "gap_sensitivity": 1.51
+    }
+  },
+  "c2_observed": {
+    "PWG": {
+      "entries": 3583,
+      "mean_concordance": 0.8108,
+      "pct_identical": 47.73
+    },
+    "AP": {
+      "entries": 8,
+      "mean_concordance": 0.4167,
+      "pct_identical": 12.5
+    }
+  },
+  "rare_event_concentration": {
+    "HARIV": 565,
+    "GAṆAR": 4,
+    "PAÑCAT. II": 4,
+    "LAGHUK": 3,
+    "PAÑCAT. I": 3,
+    "PAÑCAT. IV": 3,
+    "BHĀṢĀP": 2,
+    "CHANDOM": 2,
+    "PAÑCAT. III": 2,
+    "BHĀRADV": 1,
+    "BĪJAG": 1,
+    "CAURAP. (A.)": 1,
+    "HIT. II": 1,
+    "HIT. IV": 1,
+    "KAUŚ": 1,
+    "PURUṢOTT": 1,
+    "SĀH": 1,
+    "VEDĀNTAS": 1,
+    "VEṆĪS": 1
+  },
+  "controls": {
+    "CTRL-DUP": {
+      "before": {
+        "naive_witness_events": 598,
+        "independent_source_events": 574
+      },
+      "after_seeding_verbatim_PWG_duplicate": {
+        "naive_witness_events": 1125,
+        "independent_source_events": 574
+      },
+      "naive_inflation": 527,
+      "independent_support_delta": 0,
+      "control_passes": true,
+      "note": "structural, not empirical: independent_support projects onto (lemma, ref) and a verbatim duplicate shares that key, so Δ=0 cannot fail — read with CTRL-NOVEL, which can"
+    },
+    "CTRL-NOVEL": {
+      "injected_novel_triples": 100,
+      "distinct_new_source_events": 91,
+      "before": {
+        "naive_witness_events": 598,
+        "independent_source_events": 574
+      },
+      "after_seeding_novel_events": {
+        "naive_witness_events": 698,
+        "independent_source_events": 665
+      },
+      "independent_support_delta": 91,
+      "expected_delta": 91,
+      "control_passes": true
+    },
+    "CTRL-PWDUP": {
+      "pwg_witness_events": 527,
+      "pw_witness_events": 71,
+      "shared_by_both_petersburg_witnesses": 24,
+      "pw_events_already_in_pwg": 0.338,
+      "independent_source_events": 574,
+      "naive_witness_events": 598
+    },
+    "CTRL-ABL-H": {
+      "rare_events_all": 598,
+      "harivamsa_events": 565,
+      "harivamsa_share": 0.9448,
+      "rare_events_without_harivamsa": 33,
+      "distinct_sigils_without_harivamsa": 18,
+      "residue_by_sigil": {
+        "GAṆAR": 4,
+        "PAÑCAT. II": 4,
+        "LAGHUK": 3,
+        "PAÑCAT. I": 3,
+        "PAÑCAT. IV": 3,
+        "BHĀṢĀP": 2,
+        "CHANDOM": 2,
+        "PAÑCAT. III": 2,
+        "BHĀRADV": 1,
+        "BĪJAG": 1,
+        "CAURAP. (A.)": 1,
+        "HIT. II": 1,
+        "HIT. IV": 1,
+        "KAUŚ": 1,
+        "PURUṢOTT": 1,
+        "SĀH": 1,
+        "VEDĀNTAS": 1,
+        "VEṆĪS": 1
+      }
+    },
+    "CTRL-ABL-S": {
+      "ablated_sigils": [
+        "AK",
+        "AV",
+        "BHP",
+        "BHĀG. P",
+        "H",
+        "HARIV",
+        "IB",
+        "KATHĀS",
+        "L",
+        "M",
+        "MBH",
+        "P",
+        "R",
+        "RAGH",
+        "RV",
+        "RĀJAN",
+        "SUŚR",
+        "TRIK",
+        "TS",
+        "VERZ. D. OXF. H",
+        "VS",
+        "W",
+        "ŚAT. BR",
+        "ŚKDR",
+        "ṚV"
+      ],
+      "pairs": {
+        "PWG/MW": {
+          "mean_source_jaccard": 0.1579,
+          "n_lemmas": 80600,
+          "mean_source_jaccard_top_sigils_ablated": 0.0684,
+          "n_lemmas_ablated": 64904
+        },
+        "PW/MW": {
+          "mean_source_jaccard": 0.1791,
+          "n_lemmas": 46061,
+          "mean_source_jaccard_top_sigils_ablated": 0.1564,
+          "n_lemmas_ablated": 40591
+        },
+        "AP/MW": {
+          "mean_source_jaccard": 0.0163,
+          "n_lemmas": 12402,
+          "mean_source_jaccard_top_sigils_ablated": 0.0042,
+          "n_lemmas_ablated": 12196
+        },
+        "BEN/MW": {
+          "mean_source_jaccard": 0.1016,
+          "n_lemmas": 15977,
+          "mean_source_jaccard_top_sigils_ablated": 0.0494,
+          "n_lemmas_ablated": 15038
+        }
+      },
+      "depth_sweep": {
+        "0": {
+          "PWG/MW": 0.1579,
+          "AP/MW": 0.0163,
+          "separation": 9.69
+        },
+        "5": {
+          "PWG/MW": 0.1037,
+          "AP/MW": 0.0116,
+          "separation": 8.94
+        },
+        "10": {
+          "PWG/MW": 0.0783,
+          "AP/MW": 0.0091,
+          "separation": 8.6
+        },
+        "25": {
+          "PWG/MW": 0.0684,
+          "AP/MW": 0.0042,
+          "separation": 16.29
+        },
+        "50": {
+          "PWG/MW": 0.0592,
+          "AP/MW": 0.0041,
+          "separation": 14.44
+        },
+        "100": {
+          "PWG/MW": 0.0293,
+          "AP/MW": 0.0016,
+          "separation": 18.31
+        }
+      },
+      "separation_min_over_depths": 8.6,
+      "separation_max_over_depths": 18.31,
+      "survives_every_depth": true
+    },
+    "CTRL-PERM": {
+      "PWG": {
+        "iters": 200,
+        "entries": 3583,
+        "mean_concordance": 0.5004,
+        "min_concordance": 0.4885,
+        "max_concordance": 0.5123,
+        "pct_identical": 10.13
+      }
+    },
+    "CTRL-CONV": {
+      "PWG": {
+        "entries_scored": 3583,
+        "convention_concordant_pairs": 20363,
+        "agreement_on_convention_concordant": 0.8006,
+        "convention_discordant_pairs": 4685,
+        "agreement_on_convention_discordant": 0.7518
+      },
+      "PW": {
+        "entries_scored": 183,
+        "convention_concordant_pairs": 590,
+        "agreement_on_convention_concordant": 0.7254,
+        "convention_discordant_pairs": 199,
+        "agreement_on_convention_discordant": 0.6281
+      },
+      "AP": {
+        "entries_scored": 8,
+        "convention_concordant_pairs": 14,
+        "agreement_on_convention_concordant": 0.6429,
+        "convention_discordant_pairs": 13,
+        "agreement_on_convention_discordant": 0.2308
+      },
+      "BEN": {
+        "entries_scored": 116,
+        "convention_concordant_pairs": 435,
+        "agreement_on_convention_concordant": 0.7057,
+        "convention_discordant_pairs": 101,
+        "agreement_on_convention_discordant": 0.6337
+      },
+      "_reference_floor": {
+        "permutation_floor": 0.5004,
+        "min_discordant_pairs_for_a_reference_arm": 50,
+        "non_lineage_arms": {
+          "AP": {
+            "agreement_on_convention_discordant": 0.2308,
+            "convention_discordant_pairs": 13,
+            "usable_as_floor": false
+          },
+          "BEN": {
+            "agreement_on_convention_discordant": 0.6337,
+            "convention_discordant_pairs": 101,
+            "usable_as_floor": true
+          }
+        },
+        "best_non_lineage_reference": "BEN",
+        "best_non_lineage_agreement": 0.6337,
+        "pwg_excess_over_best_reference": 0.1181,
+        "pwg_excess_over_permutation_floor": 0.2514,
+        "note": "the excess over the best non-lineage reference is a DESCRIPTIVE difference between two different pair populations, not an identified copying excess; see pwg_vs_best_reference for the matched loci and an entry-clustered bootstrap. BEN carries its own Petersburg exposure.",
+        "pwg_vs_best_reference": {
+          "contributing_entries": {
+            "a": 2168,
+            "b": 64
+          },
+          "discordant_pairs": {
+            "a": 4685,
+            "b": 101
+          },
+          "shared_discordant_loci": 24,
+          "shared_entries": 22,
+          "matched_agreement": {
+            "a": 0.6667,
+            "b": 0.75
+          },
+          "unmatched_difference": 0.1181,
+          "entry_cluster_bootstrap_95": [
+            0.023,
+            0.2101
+          ],
+          "bootstrap_iters": 1000
+        }
+      }
+    }
+  }
+}

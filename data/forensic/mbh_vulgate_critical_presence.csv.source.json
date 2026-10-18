@@ -1,6 +1,14 @@
 {
   "stage": 8,
-  "commit": "9d1ee720aea34df60828831dedfe7e44e7beacb5",
-  "utc_iso": "2026-08-16T07:37:34.027536+00:00",
-  "script": "f8_mbh_presence.py"
+  "commit": "dc7c2d7b86dff9dc2d9e991423a11095402a99d4",
+  "utc_iso": "2026-09-22T20:46:04.264358+00:00",
+  "script": "f8_mbh_presence.py",
+  "csl_orig": {
+    "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+    "via": "inherited",
+    "from": [
+      "mbh_citation_inventory.csv.source.json",
+      "mbh_vulgate_concordance.csv.source.json"
+    ]
+  }
 }

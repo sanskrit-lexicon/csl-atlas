@@ -1,6 +1,13 @@
 {
   "stage": 8,
-  "commit": "289eb05b6250c940907bd318cc256baf4f135f0d",
-  "utc_iso": "2026-07-11T12:19:25.194169+00:00",
-  "script": "f8_mbh_verify.py"
+  "commit": "d2a9388c602a92bc8445f47f09187f3ee880db25",
+  "utc_iso": "2026-09-23T01:40:27.798185+00:00",
+  "script": "f8_mbh_verify.py",
+  "csl_orig": {
+    "revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
+    "via": "inherited",
+    "from": [
+      "mbh_correction_notes.csv.source.json"
+    ]
+  }
 }

@@ -25,10 +25,9 @@ MW-vs-AP bags (no MT needed): jaccard (0,0)=1 (1,1)=2/3 (2,2)=1 (3,3)=2/3, rest 
 
 import sys
 
-import pytest
-
 import f10_sense_order as f10
-from conftest import write_text
+import pytest
+from conftest import git_commit_all, write_text
 
 MW_TXT = """<L>1<pc>1-1<k1>go<k2>go
 go ¦ m. a cow bull ox <div n="to">a ray of light beam</div><div n="to">the earth ground<ls>MBh.</ls>
@@ -62,6 +61,7 @@ def _corpus(tmp_path, pwg=PWG_TXT):
     write_text(root / "mw" / "mw.txt", MW_TXT)
     write_text(root / "pwg" / "pwg.txt", pwg)
     write_text(root / "ap" / "ap.txt", AP_TXT)
+    git_commit_all(root)
     return root
 
 

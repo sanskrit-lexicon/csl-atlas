@@ -1,6 +1,8 @@
 # Mahābhārata citation resolution census — PWG/MW loci against the Nīlakaṇṭha vulgate (all 18 parvans)
 
-_Created: 11-07-2026 · Last updated: 12-07-2026_
+_Created: 11-07-2026 · Last updated: 22-09-2026_
+
+> **Re-pinned 22-09-2026 (H5264).** `f8_mbh_resolve.py` and the Droṇa index were re-run at `csl-orig@f4c08c57`: held-out pooled agreement **0.526 on 4,044** (was 0.552 on 4,048); note loci **391 corroborated / 790 displaced / 1,285 absent** (was 409 / 787 / 1,270). The Droṇa figures are unchanged. The July figures below are kept as the first-pass record. Details: [A10 audit, "Re-pinned 22-09-2026" item 3](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/A10_REPRODUCIBILITY_AUDIT.md).
 
 **What this is.** The Mahābhārata port of the executed Harivaṃśa census
 ([`HARIVAMSA_CITATION_RESOLUTION_CENSUS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/forensic/HARIVAMSA_CITATION_RESOLUTION_CENSUS.md),

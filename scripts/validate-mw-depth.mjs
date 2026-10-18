@@ -14,6 +14,8 @@ import path from "node:path";
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "mw");
 const EXPECTED_RECORD_COUNT = 286561;
 const RECORD_TOLERANCE = 100;
+const EXPECTED_STRICT_3PLUS = 8638;
+const EXPECTED_LOOSE_3PLUS = 30703;
 
 const REQUIRED = [
   "mw-quantitative-summary.json",
@@ -68,7 +70,64 @@ if (fam) {
   }
 }
 
-// 4. Type-count divergences must be warned, not silent.
+// 4. Depth distribution publishes two labelled joint series with pinned 3+ sums.
+const depth = docs["mw-depth-distribution.json"];
+if (depth) {
+  const series = depth.compoundDepthSeries;
+  const checkSeries = (id, expectedTotal) => {
+    const s = series?.[id];
+    if (!s) {
+      errors.push(`mw-depth-distribution.json lacks the "${id}" depth series.`);
+      return;
+    }
+    if (typeof s.label !== "string" || !/joint/i.test(s.label)) {
+      errors.push(`The "${id}" depth series has no joint-count label.`);
+    }
+    if (!Array.isArray(s.distribution) || s.distribution.length === 0) {
+      errors.push(`The "${id}" depth series has no distribution.`);
+      return;
+    }
+    const sum = s.distribution
+      .filter(p => Number(p.value) >= 3)
+      .reduce((acc, p) => acc + Number(p.count || 0), 0);
+    if (sum !== expectedTotal) {
+      errors.push(`The "${id}" depth series sums to ${sum} at 3+, expected ${expectedTotal}.`);
+    } else {
+      notes.push(`${id} joint series sums to ${expectedTotal} at 3+.`);
+    }
+    if (s.threePlusTotal !== expectedTotal) {
+      errors.push(`The "${id}" series declares threePlusTotal ${s.threePlusTotal}, expected ${expectedTotal}.`);
+    }
+  };
+  if (!series) {
+    errors.push("mw-depth-distribution.json lacks compoundDepthSeries.");
+  } else {
+    checkSeries("strict", EXPECTED_STRICT_3PLUS);
+    checkSeries("loose", EXPECTED_LOOSE_3PLUS);
+    if (series.strict?.distribution && series.loose?.distribution) {
+      const strictJson = JSON.stringify(series.strict.distribution);
+      const looseJson = JSON.stringify(series.loose.distribution);
+      if (strictJson === looseJson) errors.push("Strict and loose depth series are identical.");
+    }
+    if (depth.compoundSegmentDistribution && series.loose?.distribution) {
+      if (JSON.stringify(depth.compoundSegmentDistribution) !== JSON.stringify(series.loose.distribution)) {
+        errors.push("compoundSegmentDistribution no longer matches the labelled loose series.");
+      }
+    }
+  }
+}
+
+// 5. Family depth must be labelled as joints.
+if (fam) {
+  const label = fam.depthMetric?.label;
+  if (typeof label !== "string" || !/joint/i.test(label)) {
+    errors.push("mw-deepest-families.json lacks a joint-count depthMetric label.");
+  } else {
+    notes.push(`Family depth metric labelled "${label}".`);
+  }
+}
+
+// 6. Type-count divergences must be warned, not silent.
 const report = docs["mw-validation-report.json"];
 if (report) {
   const warned = new Set(

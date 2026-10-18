@@ -14,7 +14,11 @@ which is the join axis to the PD siglum side (§4 of the handoff):
 A `norm` key (lowercase, diacritics folded, non-alpha stripped) is emitted for
 fuzzy matching against decoded PD titles. Output: data/pd/dcs_text_inventory.tsv.
 """
-import sys, os, csv, unicodedata, re
+import csv
+import os
+import re
+import sys
+import unicodedata
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

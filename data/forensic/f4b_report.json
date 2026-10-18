@@ -1,4 +1,5 @@
 {
+  "csl_orig_revision": "f4c08c578b330e2379e38f54d3a541f1564b8eee",
   "ahlborn_total": 123,
   "ahlborn_status": {
     "mw_correct": 90,
@@ -7,13 +8,13 @@
   },
   "ahlborn_shares_error": 2,
   "ahlborn_shares_error_pct": 1.6,
-  "null_U": 133117,
-  "null_pet_corrected": 8384,
-  "null_mw_corrected": 1632,
-  "null_observed": 256,
-  "null_expected": 102.79,
-  "null_lift": 2.491,
-  "null_p": 4.012891867722993e-41,
+  "null_U": 133119,
+  "null_pet_corrected": 8386,
+  "null_mw_corrected": 1640,
+  "null_observed": 260,
+  "null_expected": 103.31,
+  "null_lift": 2.517,
+  "null_p": 1.4937970802610883e-42,
   "null_verdict": "same hard words corrected in both, but DIFFERENT errors (convergence + editorial coupling, NOT copying — see direct test)",
   "shared_corrected_examples": [
     "ABoga",
@@ -47,5 +48,5 @@
     "SuD",
     "Suka"
   ],
-  "finding": "DIRECT test (Ahlborn, decisive): MW shares the PWG headword error in only 2/123 (1.6%) cases — where PWG erred, MW has the CORRECT form (90) or lacks the word (31). MW did NOT inherit PWG's headword mistakes. NULL test: headwords corrected in BOTH = 256 vs 102.8 expected (lift 2.49, p=4.01e-41) — the SAME hard words are error-prone in both, but with DIFFERENT errors. That lift is convergence on difficult vocabulary PLUS editorial coupling (cross-dict fix-bundles like pwgissues correct the same word in several dicts by design), NOT copied errors — the direct test rules copying out. Conclusion: MW inherited Böhtlingk's APPARATUS/content (F1 citations, F2 homonyms), not his mechanical errors; the books were independently typeset. (Many ahlborn errors are err='scan' = digitization artifacts a separately-keyed MW could not share anyway.)"
+  "finding": "DIRECT test (Ahlborn, decisive): MW shares the PWG headword error in only 2/123 (1.6%) cases — where PWG erred, MW has the CORRECT form (90) or lacks the word (31). MW did NOT inherit PWG's headword mistakes. NULL test: headwords corrected in BOTH = 260 vs 103.3 expected (lift 2.52, p=1.49e-42) — the SAME hard words are error-prone in both, but with DIFFERENT errors. That lift is convergence on difficult vocabulary PLUS editorial coupling (cross-dict fix-bundles like pwgissues correct the same word in several dicts by design), NOT copied errors — the direct test rules copying out. Conclusion: MW inherited Böhtlingk's APPARATUS/content (F1 citations, F2 homonyms), not his mechanical errors; the books were independently typeset. (Many ahlborn errors are err='scan' = digitization artifacts a separately-keyed MW could not share anyway.)"
 }
