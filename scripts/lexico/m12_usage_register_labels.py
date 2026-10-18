@@ -243,13 +243,13 @@ def build_envelope(per_dict):
         )),
         ("totalsByLabel", OrderedDict(sorted(totals.items()))),
         ("notes", [
-            "Register/usage labels counted from the tagged markup only (<ab>, <lang>); "
+            ("Register/usage labels counted from the tagged markup only (<ab>, <lang>); "
             "untagged_core is the NET untagged residue (tag-stripped occurrences minus tagged) "
-            "per dict, excluded from rates.",
-            "A <lang> token absent from the mapping is a true language name (Gk., Lat., …); "
-            "these are envelope counts (language_name_tags), never register rows.",
-            "SKD/VCP/ARMH/ABCH carry no tagged usage labels — their markers are Devanāgarī prose, "
-            "outside this tag census; zeros are findings, not defects.",
+            "per dict, excluded from rates."),
+            ("A <lang> token absent from the mapping is a true language name (Gk., Lat., …); "
+            "these are envelope counts (language_name_tags), never register rows."),
+            ("SKD/VCP/ARMH/ABCH carry no tagged usage labels — their markers are Devanāgarī prose, "
+            "outside this tag census; zeros are findings, not defects."),
             "Rate denominator = csl-orig <L> records per dict.",
         ]),
         ("perDict", per_dict),

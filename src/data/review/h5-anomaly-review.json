@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-07-03T02:20:52.185Z",
+  "generatedAt": "2026-10-14T18:43:28.619Z",
   "sourcePath": "data/forensic/{shared_headword_anomalies.csv,raw_headword_pool.csv,shared_corrections.csv}",
   "recordCount": 130,
   "queue": "encoding-ocr",
@@ -44,8 +44,8 @@
         {
           "dictionary": "MW",
           "L": "25336",
-          "line": 89826,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L89826"
+          "line": 89827,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L89827"
         },
         {
           "dictionary": "PW",
@@ -87,8 +87,8 @@
         {
           "dictionary": "MW",
           "L": "23892",
-          "line": 84959,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L84959"
+          "line": 84960,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L84960"
         },
         {
           "dictionary": "PW",
@@ -130,8 +130,8 @@
         {
           "dictionary": "MW",
           "L": "22044",
-          "line": 78651,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L78651"
+          "line": 78652,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L78652"
         },
         {
           "dictionary": "PW",
@@ -173,8 +173,8 @@
         {
           "dictionary": "MW",
           "L": "22292",
-          "line": 79510,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L79510"
+          "line": 79511,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L79511"
         },
         {
           "dictionary": "PW",
@@ -216,8 +216,8 @@
         {
           "dictionary": "MW",
           "L": "24743",
-          "line": 87785,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L87785"
+          "line": 87786,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L87786"
         },
         {
           "dictionary": "PWG",
@@ -259,8 +259,8 @@
         {
           "dictionary": "MW",
           "L": "149044",
-          "line": 499371,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499371"
+          "line": 499372,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L499372"
         },
         {
           "dictionary": "PW",
@@ -302,8 +302,8 @@
         {
           "dictionary": "MW",
           "L": "150969",
-          "line": 505545,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L505545"
+          "line": 505546,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L505546"
         },
         {
           "dictionary": "PWG",
@@ -345,8 +345,8 @@
         {
           "dictionary": "MW",
           "L": "151472",
-          "line": 507267,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L507267"
+          "line": 507268,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L507268"
         },
         {
           "dictionary": "PWG",
@@ -388,8 +388,8 @@
         {
           "dictionary": "MW",
           "L": "75713",
-          "line": 255679,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L255679"
+          "line": 255680,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L255680"
         },
         {
           "dictionary": "PWG",
@@ -431,8 +431,8 @@
         {
           "dictionary": "MW",
           "L": "99233",
-          "line": 332776,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L332776"
+          "line": 332777,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L332777"
         },
         {
           "dictionary": "PWG",
@@ -446,8 +446,8 @@
         "headword": "DA",
         "petDict": "pwg",
         "inPwgIssues": false,
-        "petOld": "<ls>VS. 11. 39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
-        "petNew": "<ls>VS. 11,39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
+        "petOld": "<ls>VS. 11,39. 19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
+        "petNew": "<ls>VS. 11,39.</ls> <ls n=\"VS.\">19,93.</ls> {#saM vajra^M parva\\So da^DuH#}",
         "mwOld": "<ab>Impv.</ab> <s>dADAtu</s> <ab>pl.</ab> <s>°Datu</s>;",
         "mwNew": "<ab>Impv.</ab> <s>da/DAtu</s>, <ab>pl.</ab> <s>°Datu</s>;",
         "interpretation": "Already observed correction pair for reviewer calibration."
@@ -474,8 +474,8 @@
         {
           "dictionary": "MW",
           "L": "101159",
-          "line": 338986,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L338986"
+          "line": 338987,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L338987"
         },
         {
           "dictionary": "PWG",
@@ -517,8 +517,8 @@
         {
           "dictionary": "MW",
           "L": "101481",
-          "line": 340020,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340020"
+          "line": 340021,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L340021"
         },
         {
           "dictionary": "PWG",
@@ -560,8 +560,8 @@
         {
           "dictionary": "MW",
           "L": "101420",
-          "line": 339837,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L339837"
+          "line": 339838,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L339838"
         },
         {
           "dictionary": "PWG",
@@ -603,8 +603,8 @@
         {
           "dictionary": "MW",
           "L": "40350",
-          "line": 141441,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L141441"
+          "line": 141442,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L141442"
         },
         {
           "dictionary": "PW",
@@ -646,8 +646,8 @@
         {
           "dictionary": "MW",
           "L": "60897",
-          "line": 207596,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L207596"
+          "line": 207597,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L207597"
         },
         {
           "dictionary": "PWG",
@@ -689,8 +689,8 @@
         {
           "dictionary": "MW",
           "L": "60843",
-          "line": 207415,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L207415"
+          "line": 207416,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L207416"
         },
         {
           "dictionary": "PW",
@@ -732,8 +732,8 @@
         {
           "dictionary": "MW",
           "L": "62110",
-          "line": 211485,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L211485"
+          "line": 211486,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L211486"
         },
         {
           "dictionary": "PWG",
@@ -775,8 +775,8 @@
         {
           "dictionary": "MW",
           "L": "41088",
-          "line": 143936,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L143936"
+          "line": 143937,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L143937"
         },
         {
           "dictionary": "PW",
@@ -818,8 +818,8 @@
         {
           "dictionary": "MW",
           "L": "141720",
-          "line": 475476,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L475476"
+          "line": 475477,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L475477"
         },
         {
           "dictionary": "PW",
@@ -861,8 +861,8 @@
         {
           "dictionary": "MW",
           "L": "221881",
-          "line": 736041,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L736041"
+          "line": 736042,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L736042"
         },
         {
           "dictionary": "PWG",
@@ -2230,8 +2230,8 @@
         {
           "dictionary": "MW",
           "L": "22872",
-          "line": 81499,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L81499"
+          "line": 81500,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L81500"
         },
         {
           "dictionary": "PWG",
@@ -2274,8 +2274,8 @@
         {
           "dictionary": "MW",
           "L": "24211",
-          "line": 86055,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86055"
+          "line": 86056,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86056"
         },
         {
           "dictionary": "PWG",
@@ -2594,8 +2594,8 @@
         {
           "dictionary": "MW",
           "L": "26960",
-          "line": 95390,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L95390"
+          "line": 95391,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L95391"
         },
         {
           "dictionary": "PWG",
@@ -2638,8 +2638,8 @@
         {
           "dictionary": "MW",
           "L": "72974",
-          "line": 246834,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246834"
+          "line": 246835,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L246835"
         },
         {
           "dictionary": "PWG",
@@ -2682,8 +2682,8 @@
         {
           "dictionary": "MW",
           "L": "71429.4",
-          "line": 241947,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L241947"
+          "line": 241948,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L241948"
         },
         {
           "dictionary": "PWG",
@@ -2726,8 +2726,8 @@
         {
           "dictionary": "MW",
           "L": "92695",
-          "line": 311403,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L311403"
+          "line": 311404,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L311404"
         },
         {
           "dictionary": "PWG",
@@ -2776,8 +2776,8 @@
         {
           "dictionary": "MW",
           "L": "92243",
-          "line": 309834,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309834"
+          "line": 309835,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L309835"
         },
         {
           "dictionary": "PWG",
@@ -2820,8 +2820,8 @@
         {
           "dictionary": "MW",
           "L": "68030",
-          "line": 230681,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L230681"
+          "line": 230682,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L230682"
         },
         {
           "dictionary": "PWG",
@@ -2864,8 +2864,8 @@
         {
           "dictionary": "MW",
           "L": "77921",
-          "line": 262746,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262746"
+          "line": 262747,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L262747"
         },
         {
           "dictionary": "PWG",
@@ -2908,8 +2908,8 @@
         {
           "dictionary": "MW",
           "L": "49068",
-          "line": 169843,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L169843"
+          "line": 169844,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L169844"
         },
         {
           "dictionary": "PWG",
@@ -2952,8 +2952,8 @@
         {
           "dictionary": "MW",
           "L": "43062",
-          "line": 150387,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L150387"
+          "line": 150388,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L150388"
         },
         {
           "dictionary": "PWG",
@@ -2996,8 +2996,8 @@
         {
           "dictionary": "MW",
           "L": "44755",
-          "line": 155967,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L155967"
+          "line": 155968,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L155968"
         },
         {
           "dictionary": "PWG",
@@ -3040,8 +3040,8 @@
         {
           "dictionary": "MW",
           "L": "49949",
-          "line": 172664,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L172664"
+          "line": 172665,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L172665"
         },
         {
           "dictionary": "PWG",
@@ -3084,8 +3084,8 @@
         {
           "dictionary": "MW",
           "L": "47377",
-          "line": 164424,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L164424"
+          "line": 164425,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L164425"
         },
         {
           "dictionary": "PWG",
@@ -3128,8 +3128,8 @@
         {
           "dictionary": "MW",
           "L": "54495",
-          "line": 187256,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L187256"
+          "line": 187257,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L187257"
         },
         {
           "dictionary": "PWG",
@@ -3172,8 +3172,8 @@
         {
           "dictionary": "MW",
           "L": "55089",
-          "line": 189194,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L189194"
+          "line": 189195,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L189195"
         },
         {
           "dictionary": "PWG",
@@ -3216,8 +3216,8 @@
         {
           "dictionary": "MW",
           "L": "53232",
-          "line": 183142,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L183142"
+          "line": 183143,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L183143"
         },
         {
           "dictionary": "PWG",
@@ -3260,8 +3260,8 @@
         {
           "dictionary": "MW",
           "L": "57615",
-          "line": 197112,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L197112"
+          "line": 197113,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L197113"
         },
         {
           "dictionary": "PWG",
@@ -3304,8 +3304,8 @@
         {
           "dictionary": "MW",
           "L": "81592",
-          "line": 274759,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L274759"
+          "line": 274760,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L274760"
         },
         {
           "dictionary": "PWG",
@@ -3348,8 +3348,8 @@
         {
           "dictionary": "MW",
           "L": "37624",
-          "line": 132094,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132094"
+          "line": 132095,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132095"
         },
         {
           "dictionary": "PWG",
@@ -3392,8 +3392,8 @@
         {
           "dictionary": "MW",
           "L": "31732",
-          "line": 112091,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L112091"
+          "line": 112092,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L112092"
         },
         {
           "dictionary": "PWG",
@@ -3436,8 +3436,8 @@
         {
           "dictionary": "MW",
           "L": "31874",
-          "line": 112609,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L112609"
+          "line": 112610,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L112610"
         },
         {
           "dictionary": "PWG",
@@ -3480,8 +3480,8 @@
         {
           "dictionary": "MW",
           "L": "31187",
-          "line": 110182,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L110182"
+          "line": 110183,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L110183"
         },
         {
           "dictionary": "PWG",
@@ -3524,8 +3524,8 @@
         {
           "dictionary": "MW",
           "L": "37850",
-          "line": 132833,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132833"
+          "line": 132834,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L132834"
         },
         {
           "dictionary": "PWG",
@@ -3574,8 +3574,8 @@
         {
           "dictionary": "MW",
           "L": "18728",
-          "line": 67028,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L67028"
+          "line": 67029,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L67029"
         }
       ],
       "machineValue": {
@@ -3618,8 +3618,8 @@
         {
           "dictionary": "MW",
           "L": "147750",
-          "line": 495174,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L495174"
+          "line": 495175,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L495175"
         }
       ],
       "machineValue": {
@@ -3662,8 +3662,8 @@
         {
           "dictionary": "MW",
           "L": "93419",
-          "line": 313681,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L313681"
+          "line": 313682,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L313682"
         }
       ],
       "machineValue": {
@@ -3706,8 +3706,8 @@
         {
           "dictionary": "MW",
           "L": "39813",
-          "line": 139482,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L139482"
+          "line": 139483,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L139483"
         }
       ],
       "machineValue": {
@@ -3750,8 +3750,8 @@
         {
           "dictionary": "MW",
           "L": "40062",
-          "line": 140362,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L140362"
+          "line": 140363,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L140363"
         }
       ],
       "machineValue": {
@@ -3794,8 +3794,8 @@
         {
           "dictionary": "MW",
           "L": "66413.1",
-          "line": 225299,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L225299"
+          "line": 225300,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L225300"
         }
       ],
       "machineValue": {
@@ -3838,8 +3838,8 @@
         {
           "dictionary": "MW",
           "L": "29820",
-          "line": 105479,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L105479"
+          "line": 105480,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L105480"
         }
       ],
       "machineValue": {
@@ -3882,8 +3882,8 @@
         {
           "dictionary": "MW",
           "L": "29717.1",
-          "line": 105135,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L105135"
+          "line": 105136,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L105136"
         }
       ],
       "machineValue": {
@@ -3926,8 +3926,8 @@
         {
           "dictionary": "MW",
           "L": "45674",
-          "line": 158948,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L158948"
+          "line": 158949,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L158949"
         }
       ],
       "machineValue": {
@@ -3970,8 +3970,8 @@
         {
           "dictionary": "MW",
           "L": "46267",
-          "line": 160936,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L160936"
+          "line": 160937,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L160937"
         }
       ],
       "machineValue": {
@@ -4014,8 +4014,8 @@
         {
           "dictionary": "MW",
           "L": "44559",
-          "line": 155340,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L155340"
+          "line": 155341,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L155341"
         }
       ],
       "machineValue": {
@@ -4058,8 +4058,8 @@
         {
           "dictionary": "MW",
           "L": "42855",
-          "line": 149721,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L149721"
+          "line": 149722,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L149722"
         }
       ],
       "machineValue": {
@@ -4102,8 +4102,8 @@
         {
           "dictionary": "MW",
           "L": "50788",
-          "line": 175372,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L175372"
+          "line": 175373,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L175373"
         }
       ],
       "machineValue": {
@@ -4146,8 +4146,8 @@
         {
           "dictionary": "MW",
           "L": "58670",
-          "line": 200439,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L200439"
+          "line": 200440,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L200440"
         }
       ],
       "machineValue": {
@@ -4190,8 +4190,8 @@
         {
           "dictionary": "MW",
           "L": "229234",
-          "line": 760490,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L760490"
+          "line": 760491,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L760491"
         }
       ],
       "machineValue": {
@@ -4234,8 +4234,8 @@
         {
           "dictionary": "MW",
           "L": "83936",
-          "line": 282465,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L282465"
+          "line": 282466,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L282466"
         }
       ],
       "machineValue": {
@@ -4278,8 +4278,8 @@
         {
           "dictionary": "MW",
           "L": "81984",
-          "line": 276089,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276089"
+          "line": 276090,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L276090"
         }
       ],
       "machineValue": {
@@ -4322,8 +4322,8 @@
         {
           "dictionary": "MW",
           "L": "37964",
-          "line": 133202,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L133202"
+          "line": 133203,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L133203"
         }
       ],
       "machineValue": {
@@ -4366,8 +4366,8 @@
         {
           "dictionary": "MW",
           "L": "31340",
-          "line": 110701,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L110701"
+          "line": 110702,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L110702"
         }
       ],
       "machineValue": {
@@ -4410,8 +4410,8 @@
         {
           "dictionary": "MW",
           "L": "81248",
-          "line": 273543,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L273543"
+          "line": 273544,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L273544"
         }
       ],
       "machineValue": {
@@ -4448,8 +4448,8 @@
         {
           "dictionary": "MW",
           "L": "25352",
-          "line": 89882,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L89882"
+          "line": 89883,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L89883"
         },
         {
           "dictionary": "PWG",
@@ -4486,8 +4486,8 @@
         {
           "dictionary": "MW",
           "L": "22872",
-          "line": 81499,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L81499"
+          "line": 81500,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L81500"
         },
         {
           "dictionary": "PWG",
@@ -4524,8 +4524,8 @@
         {
           "dictionary": "MW",
           "L": "24211",
-          "line": 86055,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86055"
+          "line": 86056,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86056"
         },
         {
           "dictionary": "PWG",
@@ -4562,8 +4562,8 @@
         {
           "dictionary": "MW",
           "L": "28298",
-          "line": 100052,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L100052"
+          "line": 100053,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L100053"
         },
         {
           "dictionary": "PWG",
@@ -4600,8 +4600,8 @@
         {
           "dictionary": "MW",
           "L": "26912",
-          "line": 95212,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L95212"
+          "line": 95213,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L95213"
         },
         {
           "dictionary": "PWG",
@@ -4638,8 +4638,8 @@
         {
           "dictionary": "MW",
           "L": "24332",
-          "line": 86438,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86438"
+          "line": 86439,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L86439"
         },
         {
           "dictionary": "PWG",
@@ -4676,8 +4676,8 @@
         {
           "dictionary": "MW",
           "L": "25013",
-          "line": 88732,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L88732"
+          "line": 88733,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L88733"
         },
         {
           "dictionary": "PWG",
@@ -4714,8 +4714,8 @@
         {
           "dictionary": "MW",
           "L": "27452",
-          "line": 97091,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L97091"
+          "line": 97092,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L97092"
         },
         {
           "dictionary": "PWG",
@@ -4752,8 +4752,8 @@
         {
           "dictionary": "MW",
           "L": "27542",
-          "line": 97408,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L97408"
+          "line": 97409,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L97409"
         },
         {
           "dictionary": "PWG",
@@ -4790,8 +4790,8 @@
         {
           "dictionary": "MW",
           "L": "26960",
-          "line": 95390,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L95390"
+          "line": 95391,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L95391"
         },
         {
           "dictionary": "PWG",
@@ -4828,8 +4828,8 @@
         {
           "dictionary": "MW",
           "L": "27244",
-          "line": 96387,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L96387"
+          "line": 96388,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L96388"
         },
         {
           "dictionary": "PWG",
@@ -4866,8 +4866,8 @@
         {
           "dictionary": "MW",
           "L": "148260",
-          "line": 496872,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L496872"
+          "line": 496873,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L496873"
         },
         {
           "dictionary": "PWG",
@@ -4904,8 +4904,8 @@
         {
           "dictionary": "MW",
           "L": "147939",
-          "line": 495939,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L495939"
+          "line": 495940,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L495940"
         },
         {
           "dictionary": "PWG",
@@ -4942,8 +4942,8 @@
         {
           "dictionary": "MW",
           "L": "149741",
-          "line": 501597,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L501597"
+          "line": 501598,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L501598"
         },
         {
           "dictionary": "PWG",
@@ -4980,8 +4980,8 @@
         {
           "dictionary": "MW",
           "L": "149719",
-          "line": 501531,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L501531"
+          "line": 501532,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L501532"
         },
         {
           "dictionary": "PWG",
@@ -5018,8 +5018,8 @@
         {
           "dictionary": "MW",
           "L": "149784",
-          "line": 501747,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L501747"
+          "line": 501748,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L501748"
         },
         {
           "dictionary": "PWG",
@@ -5056,8 +5056,8 @@
         {
           "dictionary": "MW",
           "L": "148807",
-          "line": 498624,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L498624"
+          "line": 498625,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L498625"
         },
         {
           "dictionary": "PWG",
@@ -5094,8 +5094,8 @@
         {
           "dictionary": "MW",
           "L": "150122",
-          "line": 502791,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L502791"
+          "line": 502792,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L502792"
         },
         {
           "dictionary": "PWG",
@@ -5132,8 +5132,8 @@
         {
           "dictionary": "MW",
           "L": "147521",
-          "line": 494387,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L494387"
+          "line": 494388,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L494388"
         },
         {
           "dictionary": "PWG",
@@ -5170,8 +5170,8 @@
         {
           "dictionary": "MW",
           "L": "148611",
-          "line": 497967,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L497967"
+          "line": 497968,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L497968"
         },
         {
           "dictionary": "PWG",
@@ -5208,8 +5208,8 @@
         {
           "dictionary": "MW",
           "L": "152754",
-          "line": 511387,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511387"
+          "line": 511388,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L511388"
         },
         {
           "dictionary": "PWG",
@@ -5246,8 +5246,8 @@
         {
           "dictionary": "MW",
           "L": "151308",
-          "line": 506633,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506633"
+          "line": 506634,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506634"
         },
         {
           "dictionary": "PWG",
@@ -5284,8 +5284,8 @@
         {
           "dictionary": "MW",
           "L": "151383",
-          "line": 506914,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506914"
+          "line": 506915,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L506915"
         },
         {
           "dictionary": "PWG",
@@ -5322,8 +5322,8 @@
         {
           "dictionary": "MW",
           "L": "152454.1",
-          "line": 510402,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510402"
+          "line": 510403,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510403"
         },
         {
           "dictionary": "PWG",
@@ -5360,8 +5360,8 @@
         {
           "dictionary": "MW",
           "L": "152411",
-          "line": 510264,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510264"
+          "line": 510265,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L510265"
         },
         {
           "dictionary": "PWG",
@@ -5398,8 +5398,8 @@
         {
           "dictionary": "MW",
           "L": "151471",
-          "line": 507264,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L507264"
+          "line": 507265,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L507265"
         },
         {
           "dictionary": "PWG",
@@ -5436,8 +5436,8 @@
         {
           "dictionary": "MW",
           "L": "152311",
-          "line": 509940,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L509940"
+          "line": 509941,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L509941"
         },
         {
           "dictionary": "PWG",
@@ -5474,8 +5474,8 @@
         {
           "dictionary": "MW",
           "L": "75648",
-          "line": 255483,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L255483"
+          "line": 255484,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L255484"
         },
         {
           "dictionary": "PWG",
@@ -5512,8 +5512,8 @@
         {
           "dictionary": "MW",
           "L": "99949",
-          "line": 335027,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L335027"
+          "line": 335028,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L335028"
         },
         {
           "dictionary": "PWG",
@@ -5550,8 +5550,8 @@
         {
           "dictionary": "MW",
           "L": "101326",
-          "line": 339538,
-          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L339538"
+          "line": 339539,
+          "href": "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L339539"
         },
         {
           "dictionary": "PWG",

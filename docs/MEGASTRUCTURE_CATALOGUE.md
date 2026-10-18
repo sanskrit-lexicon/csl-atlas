@@ -2,7 +2,7 @@ _Created: 24-09-2026 · Last updated: 24-09-2026_
 
 # Megastructure catalogue — schema and all nine dictionaries
 
-H5324 (E014) piloted the schema on SKD and MW; H5325 filled the other seven (PWG, PW, AP90, WIL, VCP, ARMH, ABCH) without changing it. This catalogue records the **megastructure** of the narrative dictionaries: the front and back matter around the entry list. That means title pages, prefaces, keys, source lists, supplements and genealogies. Each part is one record, and each record points to the scan page it came from. As of 24-09-2026 all nine dictionaries validate against `schemaVersion` 1.0.0: 91 parts over 15 scan sets.
+H5324 (E014) piloted the schema on SKD and MW; H5325 filled the other seven (PWG, PW, AP90, WIL, VCP, ARMH, ABCH) without changing it. This catalogue records the **megastructure** of the narrative dictionaries: the front and back matter around the entry list. That means title pages, prefaces, keys, source lists, supplements and genealogies. Each part is one record, and each record points to the scan page it came from. As of 24-09-2026 all nine dictionaries validate against `schemaVersion` 1.0.0: 91 parts over 13 scan sets.
 
 ## Files
 
@@ -94,7 +94,7 @@ One commit per dictionary, in the handoff's order except that AP90 was filled af
 | VCP | 8 | 8 / 0 | vcp-csldoc (7) · vcp-scan-pdf (34) | 2 | 2 |
 | AP90 | 9 | 6 / 3 | ap90-scan-pdf-tit (15, 1 excluded) · ap90-scan-pdf (18) | 0 | 1 |
 | ARMH | 2 | 1 / 1 | armh-scan-pdf (2) | 1 | 2 |
-| ABCH | 5 | 4 / 1 | abch-scan-pdf (15, 3 excluded) | 1 | 3 |
+| ABCH | 5 | 4 / 1 | abch-scan-pdf (15, 4 excluded) | 0 | 3 |
 
 ### PWG — Böhtlingk & Roth, Sanskrit-Wörterbuch (the great Petersburg dictionary)
 
@@ -130,8 +130,8 @@ One commit per dictionary, in the handoff's order except that AP90 was filled af
 
 ### ABCH — Hemacandra, Abhidhānacintāmaṇi (Nirṇaya-sāgara Press, Bombay 1896)
 
-1. **The f-series mixes matter and body.** `f01`-`f11` are the English and Devanagari title pages, the four-page *prastāvanā* and the five-page introduction on Hemacandra; `f12`, `f13` and `f14` are printed pages 2, 3 and 4 of the kośa itself, excluded as body. The numbered series `pg05`-`pg58` is printed pages 5-58.
-2. **Printed page 1 is in neither series.** `pg01`-`pg04` return HTTP 404 and `f15`/`f16` do not exist, so the kośa's opening verses are unscanned: the known gap.
+1. **The f-series mixes matter and body.** `f01`-`f10` are front matter: the English title page (`f01`), the registration notice (`f02`), the Devanagari title page (`f03`), a blank leaf (`f04`) and the six-page introduction on Hemacandra (`f05`-`f10`, first page unnumbered, then printed 2-6, closing with the works list and the editors' signature); `f11`-`f14` are printed pages 1-4 of the kośa itself, excluded as body. The numbered series `pg05`-`pg58` is printed pages 5-58.
+2. **Printed pages 1-4 sit in the f series.** `pg01`-`pg04` return HTTP 404 and `f15`/`f16` do not exist, but the kośa's opening page is scanned as `f11` (the division title with the opening verses 1-3), so no printed page is a known gap — H5325's gap entry was removed by H6411 after verifier round 2 read the f-series in full.
 3. The volume is item **No. 6** of the six-work *Abhidhānasaṃgraha* collection named on both title pages, but it carries only the Abhidhānacintāmaṇi; the collection relation is a misfit because the schema has no series field.
 
 ## Verification of the fill (24-09-2026)
@@ -181,7 +181,7 @@ curl -s -o /dev/null -w '%{http_code}\n' \
 ## Misfits from the fill (H5325)
 
 1. **A recurring in-page apparatus has no slot.** ARMH prints an English index in the margins of every page; it runs across the whole body, so the component vocabulary (title-page, preface, index, ...) cannot express it, and there is no way to declare its per-page extent once.
-2. **A scan set can mix kinds of matter.** ABCH's `f` series is Cologne's front-matter set but its last three pages (f12-f14) are printed body pages 2-4; the schema can only record them individually in `excludedScans`, not as "this set is front matter except its tail".
+2. **A scan set can mix kinds of matter.** ABCH's `f` series is Cologne's front-matter set but its last four pages (f11-f14) are printed body pages 1-4; the schema can only record them individually in `excludedScans`, not as "this set is front matter except its tail".
 3. **A title printed on a body page.** ARMH's only title is set at the head of the volume's first body page, so `armh.fm.title-page` points at page 1 while `position` forces the front/back/inset choice.
 4. **Series membership and volume-in-series.** ABCH is No. 6 of the six-work *Abhidhānasaṃgraha* named on its title pages, and the volume carries only that one item; the `edition` block has no series, volume or "items absent from this volume" field.
 5. **One count per extent.** MW's printed/added split and PW's two-title-page structure both exceed what `extent.items` can hold, so the numbers live in the evidence text.

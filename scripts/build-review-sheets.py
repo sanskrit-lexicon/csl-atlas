@@ -33,7 +33,8 @@ from csl_pyutil import render_review_sheet
 from sanskrit_util import from_slp1
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
-from cdsl_anatomy import highlight as cdsl_highlight, legend_html as cdsl_legend  # noqa: E402
+from cdsl_anatomy import highlight as cdsl_highlight  # noqa: E402
+from cdsl_anatomy import legend_html as cdsl_legend
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -609,12 +610,12 @@ BUILDERS = {
     "xref": (
         "csl-atlas-xref-shared-core_40edges",
         "Xref: общие MW/PWG рёбра — 40 строк",
-        "Первые 40 из 641 общего ребра в порядке заголовков (не случайная выборка); "
+        ("Первые 40 из 641 общего ребра в порядке заголовков (не случайная выборка); "
         "prefix-control разрешены автоматически. На каждой карточке: ссылки в Кёльн на оба конца ребра, "
         "разметка статьи с подсветкой, словарь меток и метод отбора. "
         "⚠ Общая ссылка НЕ означает двух независимых свидетельств: MW опирается на PW/PWG "
         "(совпадение целей 21,8% против 0,007% случайных) — подтверждайте реальность и лексичность "
-        "ссылки, а не её двойную засвидетельствованность.",
+        "ссылки, а не её двойную засвидетельствованность."),
         xref_items,
         [("shared-core", "общие рёбра")],
         xref_screening,
@@ -630,9 +631,9 @@ BUILDERS = {
     "r2": (
         "csl-atlas-r2-checkpoint_10rows",
         "R2: чекпойнт-пакет дрифта — 10 строк",
-        "Десять контрольных строк R2 (дрифт парсера/архива). На каждой карточке — диагноз, "
+        ("Десять контрольных строк R2 (дрифт парсера/архива). На каждой карточке — диагноз, "
         "вопрос, закрытый словарь меток серии и ссылки на записи-источники csl-orig. "
-        "Записанные ранее решения скрыты: лист пула решается только по источнику.",
+        "Записанные ранее решения скрыты: лист пула решается только по источнику."),
         r2_items,
         [("div-source-scope", "div-source-scope"), ("marker-run-scope", "marker-run-scope"),
          ("indigenous-iti-authority", "indigenous-iti-authority"), ("ae-reverse-bands", "ae-reverse-bands"),
@@ -667,12 +668,12 @@ def main():
         blind_builders = {
             "r2": (r2_items, lambda: pool_screening(
                 0, 10, "data/lexico/r2_checkpoint_review_packet.json",
-                ["review pool: all 10 checkpoint rows are human-keyed, double-keyed "
-                 "(H5308); prior decisions withheld from the card"])),
+                [("review pool: all 10 checkpoint rows are human-keyed, double-keyed "
+                 "(H5308); prior decisions withheld from the card")])),
             "h4": (lambda: h4_items(blind=True), lambda: pool_screening(
                 0, 89, "data/lexico/h4_semantic_field_review_packet.json",
-                ["review pool: 16 auto-resolved rows excluded; the 89 keyable rows "
-                 "are re-keyed blind by two annotators (H5308)"])),
+                [("review pool: 16 auto-resolved rows excluded; the 89 keyable rows "
+                 "are re-keyed blind by two annotators (H5308)")])),
             "xref": (xref_items, lambda: pool_screening(
                 10, 40, "data/lexico/xref_source_check_packet.json",
                 ["prefix-control: auto-resolve on the truncation marker (10 rows, not shown)",

@@ -15,7 +15,10 @@ Outputs
 
 Usage:  python scripts/obs/siglum_uncertain_evidence.py
 """
-import csv, os, re, sys
+import csv
+import os
+import re
+import sys
 from collections import Counter
 
 sys.stdout.reconfigure(encoding='utf-8'); sys.stderr.reconfigure(encoding='utf-8')

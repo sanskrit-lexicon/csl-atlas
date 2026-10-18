@@ -1,6 +1,6 @@
 # EVIDENCE_GRADING_DEEP_MANUAL.meta.md
 
-_Created: 21-07-2026 · Last updated: 21-07-2026_
+_Created: 21-07-2026 · Last updated: 04-10-2026_
 
 Companion metadoc for
 [EVIDENCE_GRADING_DEEP_MANUAL.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_GRADING_DEEP_MANUAL.md).
@@ -39,9 +39,19 @@ of the org deep-manual gap census
 
 ## Verification block
 
-LAST_VERIFIED: 21-07-2026
-VERIFIED_BY: Fable 5 (claude-fable-5), H1408
-COMMANDS_SPOT_RUN: 3
+LAST_VERIFIED: 04-10-2026
+VERIFIED_BY: GLM 5.3 Flash (zai-start-plan/GLM-5.3-Flash), H5991
+COMMANDS_SPOT_RUN: 5
+
+Spot-run 04-10-2026 (H5991 monthly cadence, worktree off `origin/main`):
+`npm run validate-review-reports` — still valid, still 14 report files (the corpus
+grew in items, not files: `unknown-source-layers-review.json` alone carries 449);
+script census re-derived from `package.json` — **93 → 135 entries** (79 build /
+21 validate / 6 import / 29 other), §16.1 updated; named paths re-checked live
+(`src/lib/sanskrit-util.js`, `src/data/review/`, 124 `.md` under `docs/`); the
+vendored `sanskrit-util.js` vs canonical sibling drift (the known local-only test
+failure) is still present, 8 lines behind — unchanged state, not re-fixed here.
+§16.2 order contracts read against the workflows, unchanged.
 
 Commands executed during authoring (worktree `csl-atlas-h1408` at `6956469`,
 21-07-2026), with real outputs:

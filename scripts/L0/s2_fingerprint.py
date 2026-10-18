@@ -17,11 +17,11 @@ Design rules honoured:
 - Confidence is margin-based, capped at 0.9 (only a Patel pass would be 1.0).
 """
 
-import os
-import sys
-import json
 import csv
+import json
+import os
 import re
+import sys
 import unicodedata
 from collections import defaultdict
 

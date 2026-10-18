@@ -193,6 +193,14 @@ export function form_key(s) {
   // every anusvāra-final attestation reads as un-generated. Deliberately does NOT touch
   // final `n`: `rājan` and a hypothetical `rājam` stay distinct keys.
   s = s.replace(/[ṃṁ]$/, 'm');            // final anusvāra -> m (H3911)
+  // MEDIAL anusvāra directly before a LABIAL (p ph b bh m) is also underlyingly /m/ — that is
+  // the homorganic nasal at that place of articulation, so `saṃbhavaḥ` and `sambhavaḥ` are one
+  // word in two spellings exactly as `rasaṃ`/`rasam` are. The general fold below sends it to
+  // `n` instead and leaves the literal `m` alone, so the pair could never collide. `ph`/`bh`
+  // need no separate class: the digraphs start with `p`/`b`. Deliberately narrow — anusvāra
+  // anywhere else keeps folding to `n` (`saṃskṛta == sanskṛta`, `krāṃta == krānta`), and the
+  // real letters ṅ/ñ/ṇ are never rewritten to `m`.
+  s = s.replace(/[ṃṁ](?=[pbm])/g, 'm');   // medial anusvāra before a labial -> m (H3975)
   s = s.replace(/[ṃṁṅñṇ]/g, 'n');
   const out = [];
   for (const ch of s.normalize('NFD')) {
