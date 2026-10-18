@@ -42,6 +42,7 @@
     "validate-heritage-witness": "node scripts/validate-heritage-witness.mjs",
     "build-ghost-stock": "node scripts/build-ghost-stock.mjs",
     "validate-ghost-stock": "node scripts/validate-ghost-stock.mjs",
+    "validate-plan-deviation": "node scripts/validate-plan-deviation.mjs",
     "build-megastructure": "node scripts/build-megastructure.mjs",
     "validate-megastructure": "node scripts/validate-megastructure.mjs",
     "build-heap-sat": "node scripts/build-heap-sat.mjs",
