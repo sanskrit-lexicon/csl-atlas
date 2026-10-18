@@ -24,12 +24,15 @@
   "structural_pct": 10.04,
   "secondary_pct": 1.22,
   "updated_by": "H6707 pass-2 AOB declared-canon rebase (GLM 5.3, zai-coding-plan/glm-5.3-flash via ZCode, 14-10-2026)",
-  "n_declared_aob_rows_edition_level": 1419,
+  "n_declared_aob_rows_edition_level": 1437,
+  "n_declared_aob_rows_edition_level_pass1": 1419,
   "n_declared_aob_works_work_level_est": 1412,
   "metric_title_level_declared_pct": 7.99,
   "metric_title_level_declared_pct_denominator": 1476,
   "metric_title_level_declared_pct_pass1_point": 8.32,
   "metric_title_level_declared_pct_ruled_display": 8.0,
+  "metric_title_level_declared_pct_landed_inventory_point": 8.21,
+  "metric_title_level_declared_pct_landed_inventory_n": 1437,
   "declared_canon_ruling": "MG 17-10-2026 (H6923 fork): the denominator is the CENTRAL estimate (≈1,476 entry rows, 118/1,476 = 7.99 % ≈ 8.0 %, 'one in twelve and a half'), not the pass-1 point 1,419/8.32 % — the pass-1 point survives only as the band's upper bound. Applied to the A68 manuscript §5/§7, iscls.tex, fig2 and the canary in the H6933 pass (17-10-2026), before the ISCLS-9 submission.",
   "metric_title_level_declared_work_level_pct_est": 8.36,
   "metric_aob_census_join_sigla_pct": 63.3,
@@ -44,10 +47,13 @@
   "metric_title_level_declared_pct_header_corrected": 8.03,
   "declared_canon_header_correction": "H6969 (18-10-2026): the structural estimate 1,476 is an R1 ENTRY-LIKE LINE count and it includes the AOB's own repeated column header ('Abbreviation. Name of the Book, Author, Edition and Editor — Mode of Reference'), which the OCR catches 7 times (pages 2, 13, 30, 37, 40, 41, 42) and which passes R1 as if it were a book. Printed ENTRY rows are therefore 1,469, and 118/1,469 = 8.03 % — which still displays as the ruled 8.0 %, so no manuscript, figure or canary value moves. The DENOMINATOR CHOICE between 1,469 and the ruled ≈1,476 remains H6932's; this key records the measurement, it does not re-rule the denominator.",
   "declared_canon_row_test": "data/pd/pd_aob_row_test_1473.json",
-  "declared_canon_rows_reproducible": false,
+  "declared_canon_rows_reproducible": true,
+  "declared_canon_entries_table": "data/pd/pd_aob_declared_entries.tsv",
+  "declared_canon_entries_reconciliation": "H6932 (18-10-2026): the H6720/H6960 printed-entry inventory (data/pd/pd_aob_entries.tsv, 1,444 parsed / 1,437 usable / 7 junk) is projected by scripts/pd_aob_declared_entries.py into data/pd/pd_aob_declared_entries.tsv -- one row per usable printed entry. The landed point is 118/1,437 = 8.21 %; the MG ruling of 17-10-2026 (central estimate 1,476 -> 7.99 %, displayed 8.0 %) is retained as the quoted denominator until MG re-rules. Both ends are reproducible: `python3 scripts/pd_aob_declared_entries.py --check` gates the point, `python3 scripts/pd_aob_declared_canon_audit.py --check` gates the structural census. The 7.8-8.3 % band brackets the choice, so no A68 manuscript/figure/canary value moved in this pass.",
   "declared_canon_denominator_band": [1419, 1517],
   "metric_title_level_declared_pct_by_denominator": {
     "1419_pass1_entry_rows": 8.32,
+    "1437_landed_usable_entries": 8.21,
     "1464_print_census": 8.06,
     "1469_entry_rows_header_corrected": 8.03,
     "1476_structural_entry_lines": 7.99,
@@ -55,5 +61,5 @@
     "1118_published_tsv_edition_rows_NOT_A_DENOMINATOR": 10.55
   },
   "declared_canon_audit": "data/pd/pd_aob_declared_canon_audit.json",
-  "declared_canon_note": "AOB = printed Abbreviations of Books (KoshaSHRI official PDF, re-OCR ground truth 14-10-2026). 1,418 pass-1 machine rows + the Visnupurana row recovered = 1,419 ENTRY-level rows, dictionary-wide, not letter-a. H6923 audit (17-10-2026): 1,419 has no committed parser behind it (the committed re-parse gives 1,517 raw entries, the printed OCR 1,476 entry-like lines, the print census 1,464), so the denominator is the band 1,419-1,517 and metric 2 spans 7.78-8.32 %. RULING (MG 17-10-2026, applied in the H6933 pass): the quoted denominator is the CENTRAL estimate 1,476 entry rows -> 118/1,476 = 7.99 % (8.0 %, one in twelve and a half); the pass-1 point 8.32 % survives as the band's upper bound. The published artifact data/pd/pd_aob_declared_works.tsv carries 1,112 works / 1,118 edition rows and is a clean-subset FLOOR, NOT the canon: the pass-2 clean filter dropped 556 OCR-merged 'Siglum Title' entry lines plus the garbled-start rows, so 118/1,118 = 10.55 % (10.6 % in the paper) overstates coverage and must never be quoted as the declared canon. Sources: data/pd/pd_aob_declared_works.tsv, data/pd/pd_aob_siglum_title.tsv, data/pd/pd_aob_declared_canon_audit.json."
+  "declared_canon_note": "AOB = printed Abbreviations of Books (KoshaSHRI official PDF, re-OCR ground truth 14-10-2026). 1,418 pass-1 machine rows + the Visnupurana row recovered = 1,419 ENTRY-level rows, dictionary-wide, not letter-a. H6923 audit (17-10-2026): 1,419 has no committed parser behind it (the committed re-parse gives 1,517 raw entries, the printed OCR 1,476 entry-like lines, the print census 1,464), so the denominator is the band 1,419-1,517 and metric 2 spans 7.78-8.32 %. RULING (MG 17-10-2026, applied in the H6933 pass): the quoted denominator is the CENTRAL estimate 1,476 entry rows -> 118/1,476 = 7.99 % (8.0 %, one in twelve and a half); the pass-1 point 8.32 % survives as the band's upper bound. The published artifact data/pd/pd_aob_declared_works.tsv carries 1,112 works / 1,118 edition rows and is a clean-subset FLOOR, NOT the canon: the pass-2 clean filter dropped 556 OCR-merged 'Siglum Title' entry lines plus the garbled-start rows, so 118/1,118 = 10.55 % (10.6 % in the paper) overstates coverage and must never be quoted as the declared canon. H6932 (18-10-2026) landed the reproducible entry-level table: data/pd/pd_aob_declared_entries.tsv carries 1,437 usable printed entries projected from the H6720/H6960 inventory by scripts/pd_aob_declared_entries.py --check, giving the point 118/1,437 = 8.21 %; that point and the ruled central estimate are both reproducible, and the denominator choice stays open for MG (band 7.8-8.3 % brackets both). Sources: data/pd/pd_aob_declared_entries.tsv, data/pd/pd_aob_entries.tsv, data/pd/pd_aob_declared_works.tsv, data/pd/pd_aob_siglum_title.tsv, data/pd/pd_aob_declared_canon_audit.json."
 }
