@@ -1,0 +1,202 @@
+{
+ "baseline_canaries": {
+  "h6942_entries": 107630,
+  "h6942_marked_entries": 1801,
+  "h6942_marks_by_source": {
+   "APTE": 264,
+   "DBHS": 852,
+   "MW": 245,
+   "NT": 84,
+   "PW": 399,
+   "VAC": 11,
+   "VISVA": 101
+  },
+  "h6942_marks_total": 1956,
+  "h6949_blocks": 621100,
+  "reproduced": true
+ },
+ "dataset": "pd_volume_homogeneity",
+ "definitions": {
+  "blocks": "{#...#} SLP1 blocks, H6949 block unit",
+  "chars": "characters of the body after joining lines and removing <div n=\"lb\"> tags",
+  "entry": "<L>…<LEND>",
+  "marked_entry": "entry with >=1 bracketed dictionary source under the H6942 capped rule",
+  "printed_lines": "body lines between <L> and <LEND>, H6949 definition",
+  "quotations": "H6949 quotation unit (run of blocks followed by a siglum locus)"
+ },
+ "diagnostics": {
+  "all_bracket_entries_by_volume": {
+   "1": 3133,
+   "2": 2849,
+   "3": 1569,
+   "4": 1698,
+   "5": 1519,
+   "6": 1710,
+   "7": 1295,
+   "8": 1270
+  },
+  "all_bracket_share_by_volume_pct": {
+   "1": 15.1,
+   "2": 12.69,
+   "3": 13.9,
+   "4": 14.68,
+   "5": 15.44,
+   "6": 17.4,
+   "7": 11.26,
+   "8": 12.19
+  },
+  "all_brackets_by_volume": {
+   "1": 4021,
+   "2": 3744,
+   "3": 2276,
+   "4": 2245,
+   "5": 2180,
+   "6": 2553,
+   "7": 2188,
+   "8": 1990
+  },
+  "entries_by_volume": {
+   "1": 20748,
+   "2": 22446,
+   "3": 11288,
+   "4": 11565,
+   "5": 9836,
+   "6": 9828,
+   "7": 11498,
+   "8": 10421
+  },
+  "gloss_excluded_brackets": 2,
+  "long_source_brackets": 29,
+  "long_source_brackets_by_volume": {
+   "1": 3,
+   "2": 9,
+   "3": 11,
+   "4": 3,
+   "5": 1,
+   "6": 1,
+   "7": 1
+  },
+  "near_miss_examples": [
+   "vacaknuH",
+   "Vācs",
+   "vacilatling in one's convictions nt."
+  ],
+  "near_miss_source_brackets": 3,
+  "unassigned_entries": 0,
+  "unassigned_headers": 0,
+  "uncapped_marked_entries": 1804,
+  "uncapped_marks_total": 1956,
+  "zero_mark_pages": {
+   "7": [
+    {
+     "brackets": 1,
+     "entries": 44,
+     "lines": 125,
+     "marked": 0,
+     "page": 3398
+    },
+    {
+     "brackets": 3,
+     "entries": 44,
+     "lines": 128,
+     "marked": 0,
+     "page": 3399
+    },
+    {
+     "brackets": 5,
+     "entries": 44,
+     "lines": 124,
+     "marked": 0,
+     "page": 3740
+    },
+    {
+     "brackets": 0,
+     "entries": 44,
+     "lines": 124,
+     "marked": 0,
+     "page": 3783
+    },
+    {
+     "brackets": 3,
+     "entries": 43,
+     "lines": 125,
+     "marked": 0,
+     "page": 3445
+    }
+   ],
+   "8": [
+    {
+     "brackets": 0,
+     "entries": 44,
+     "lines": 124,
+     "marked": 0,
+     "page": 3861
+    },
+    {
+     "brackets": 4,
+     "entries": 42,
+     "lines": 129,
+     "marked": 0,
+     "page": 3863
+    },
+    {
+     "brackets": 4,
+     "entries": 42,
+     "lines": 124,
+     "marked": 0,
+     "page": 3865
+    },
+    {
+     "brackets": 4,
+     "entries": 41,
+     "lines": 123,
+     "marked": 0,
+     "page": 3857
+    },
+    {
+     "brackets": 4,
+     "entries": 41,
+     "lines": 128,
+     "marked": 0,
+     "page": 4062
+    }
+   ]
+  }
+ },
+ "generated_by": "python scripts/pd_volume_homogeneity.py",
+ "generated_on": "2026-10-18",
+ "handoff": "H6947",
+ "ledger": {
+  "digital_rows": 24,
+  "path": "data/pd/pd_publication_ledger.tsv",
+  "rows": 35,
+  "sha256": "dd97efb611533657921bfe4ce05d8447d5530a89799cf224bd9a39a411dc302c",
+  "source_sha256": "7432bd1bb5ab992c42529fface6409459a3abe732a474f1484a21d190307093d",
+  "source_url": "https://dcpune.ac.in/pdf/12.%20Publication%20(Dictionary%20Publication).pdf"
+ },
+ "scope_caveat": "Machine text = pp. 1-4327, ledger fascicles 1.1-8.3 (1976-2008). Rows 9.1-35 are print-only and carry no measurements.",
+ "source": {
+  "bytes": 55122076,
+  "licence": "© 2014 The Sanskrit Library / Thomas Malten, CC BY-NC-SA 3.0",
+  "sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442",
+  "url": "https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/downloads/pdtxt.zip"
+ },
+ "totals": {
+  "blocks": 621100,
+  "chars": 42247645,
+  "entries": 107630,
+  "lines": 554243,
+  "marked_entries": 1801,
+  "marks_by_source": {
+   "APTE": 264,
+   "DBHS": 852,
+   "MW": 245,
+   "NT": 84,
+   "PW": 399,
+   "VAC": 11,
+   "VISVA": 101
+  },
+  "marks_total": 1956,
+  "quotations": 302442
+ }
+}
