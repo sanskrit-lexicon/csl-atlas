@@ -1,6 +1,6 @@
 # PD × DCS corpus-coverage dataset
 
-_Created: 20-07-2026 · Last updated: 20-07-2026_
+_Created: 20-07-2026 · Last updated: 18-10-2026_
 
 What share of the **Poona Dictionary**'s cited source canon does the **Digital Corpus of
 Sanskrit** hold? This directory is the first measurement — data, metrics, and crosswalk.
@@ -39,6 +39,9 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_aob_entries.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_entries.tsv) | 1,430 | H6720 printed AOB entry inventory (one row per printed row, tails reassembled across OCR wraps) with its harvested match, route and exercise state |
 | [pd_aob_sigla_reconciliation.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.tsv) | 2,954 | H6720 discrepancy list — `harvest_not_in_aob`, `join_unconfirmed_at_entry`, `aob_never_cited` (+ near-miss), `join_miss_siglum_equal`, OCR fragments |
 | [pd_aob_sigla_reconciliation.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.json) | — | H6720 aggregates: three presence measures, never-cited split, method, input hashes |
+| [pd_quotations_by_entry.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_quotations_by_entry.tsv) | 107,630 | H6949 quotation-level unit — one row per entry: `{#...#}` blocks, quotations, siglum loci, further references, attestations |
+| [pd_quotations_vs_pwg.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_quotations_vs_pwg.tsv) | 4,093 | H6949 PD against PWG on the same lemmas, both measured with the same quotation rule — counts and ratios |
+| [pd_quotations_summary.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_quotations_summary.json) | — | H6949 totals, distribution, top-20, the PWG comparison block, input hashes |
 
 ## Method
 
@@ -60,9 +63,22 @@ only as OCR variants. H6941 re-confirms the join's unconfirmable rows against th
 book's own text witnesses (PDF/A text layer + second OCR): **269 of 681 recovered, join
 confirmation 78.94 % → 87.26 %.
 
+**Quotations (H6949).** Everything above counts *sigla*; nothing above counts *quotations*.
+The unit for that is defined in [reports/PD_QUOTATION_UNIT_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_QUOTATION_UNIT_2026-10-18.md):
+a quotation is a run of consecutive `{#...#}` blocks separated only by whitespace,
+immediately followed by a siglum-plus-locus — **not** a block, which counts the headword,
+etymology morphemes, and line-wrapped halves of one passage. Over the letter-*a* canon that
+gives **302,442 quotations and 419,890 attestations** (384,217 siglum loci + 35,673 further
+references), and against PWG measured the same way it puts PD's first letter at **52.4 % of
+PWG's entire-alphabet attestation mass**. Rule: `scripts/lib/quotation_units.py`; pins:
+`tests/forensic/test_quotation_units.py`.
+
 **Sources.** PD =
-[pd.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/external_src/pd/pd.txt)
-(external, read-only). DCS token counts =
+[PDScan 2020 `pdtxt.zip`](https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/downloads/pdtxt.zip)
+(member `txt/pd.txt`, 55,122,076 B; © 2014 The Sanskrit Library / Thomas Malten, CC BY-NC-SA 3.0;
+re-stage with SanskritSpellCheck's `detectors/get_external_source.py PD`). The older
+`external_src/pd/pd.txt` path in `drdhaval2785/SanskritSpellCheck` no longer exists upstream —
+the Cologne archive is the canonical copy. DCS token counts =
 [VisualDCS Corpus-Delta 2021–2026](https://github.com/gasyoun/VisualDCS/blob/main/derived-data/Corpus-Delta-2021-2026/per_text_token_delta.csv)
 (Digital Corpus of Sanskrit, Oliver Hellwig, CC BY 4.0).
 
