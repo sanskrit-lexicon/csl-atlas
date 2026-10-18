@@ -577,9 +577,15 @@ is exactly what separates the plan-based horizon (≈2284) from the density-held
 is not across centuries but across town. In the *same* Pune, the **Bhandarkar Oriental Research
 Institute**'s *Comprehensive and Critical Dictionary of the Prakrit Languages* (CDPL) began in
 **1988** — twelve years *younger* than PD — and has published 3 volumes covering **`a` through
-`ujjhittu`**: all the vowels and into the consonants, ~33,600 lexemes against a *bounded* plan of
-~90,000 entries over ~450 texts. It is **still far from finished** — only ~37 % of its own planned
-entries after 38 years — but it is *moving through the alphabet*, which is the whole point. Its
+`ujjhittu`**, ~33,600 lexemes against a *bounded* plan of ~90,000 entries over ~450 texts. **How far
+through the vowels that is depends on which account you take, and both are recorded here rather than
+reconciled by assertion.** By the **printed range** [computed], a volume series ending at *ujjhittu*
+stops inside `u`, and in the Indian order (`a ā i ī u ū ṛ ṝ ḷ e ai o au`) has therefore not reached
+`e`/`o` — two vowels short. By **oral testimony** [testimony] given to MG at BORI in 2019, the vowels
+had been finished in Indian order completely. What settles it is the last printed entry of vol. 3
+against the title-page ranges of vols 1–3 (BORI catalogue) — a named open item, not an inference.
+
+It is **still far from finished** — only ~37 % of its own planned entries after 38 years — but it is *moving through the alphabet*, which is the whole point. Its
 founding general editor was **A. M. Ghatage — the very scholar who edited PD's first volumes.** The
 same man, the same city, the same decade, ran both projects; the difference is *scope*. BORI
 bounded its corpus (~450 texts, terser articles) and in 38 years cleared the entire vowel series;
