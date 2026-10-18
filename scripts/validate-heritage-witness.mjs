@@ -19,8 +19,9 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { parseTsv, buildPayload } from "./build-heritage-witness.mjs";
+import { parseTsv, buildPayload, loadKoshaHeritageRows, koshaRowsToCrosswalkRows } from "./build-heritage-witness.mjs";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
+import { normalizeLemma } from "./lib/dict-normalize.mjs";
 
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "heritage");
 const JSON_OUT = path.join(OUT_DIR, "heritage_witness.json");
@@ -116,6 +117,61 @@ if (packet) {
     notes.push(`sibling cross-check ran (${crosswalkRows.length} crosswalk rows, ${mwRecords.length} MW records)`);
   } else {
     notes.push("sibling SanskritLexicography checkout or MW dict absent — internal-consistency checks only (expected on CI)");
+  }
+
+  // Kosha witness-anchoring check (H4720 consumer edge): when the sibling
+  // kosha checkout is present, verify the committed packet's witness values
+  // against kosha's heritage_anchor table — totals can only under-count the
+  // kosha raw rows (the normalized fold collapses homonyms), and a
+  // deterministic sample of witnessed rows must be reproducible from kosha.
+  const kosha = await loadKoshaHeritageRows();
+  if (kosha) {
+    const koshaCovered = kosha.rows.filter((r) => r.covered).length;
+    const koshaAnchored = kosha.rows.filter((r) => r.covered && (r.anchor ?? "") !== "").length;
+    if (t.heritageCovered > koshaCovered) {
+      errors.push(`kosha totals: packet heritageCovered ${t.heritageCovered} > kosha covered rows ${koshaCovered}`);
+    }
+    if (t.anchored > koshaAnchored) {
+      errors.push(`kosha totals: packet anchored ${t.anchored} > kosha anchor-resolved rows ${koshaAnchored}`);
+    }
+    const koshaByNorm = new Map(); // normalized mw_key1 -> crosswalk-shaped rows
+    for (const r of koshaRowsToCrosswalkRows(kosha.rows)) {
+      const { normalized } = normalizeLemma(r.mw_key1);
+      if (!normalized) continue;
+      if (!koshaByNorm.has(normalized)) koshaByNorm.set(normalized, []);
+      koshaByNorm.get(normalized).push(r);
+    }
+    const witnessed = packet.witnessed ?? [];
+    const step = Math.max(1, Math.floor(witnessed.length / 400));
+    let sampled = 0;
+    for (let i = 0; i < witnessed.length; i += step) {
+      sampled += 1;
+      const w = witnessed[i];
+      const cands = koshaByNorm.get(w.headword) ?? [];
+      if (cands.length === 0) {
+        errors.push(`kosha sample ${w.headword}: no kosha heritage_anchor row normalizes to this witnessed key`);
+        continue;
+      }
+      if (w.matchTier === "anchored") {
+        const hit = cands.some((c) => c.covered_flag === "1" && (c.heritage_entry_anchor ?? "") === w.heritageAnchor);
+        if (!hit) {
+          errors.push(`kosha sample ${w.headword}: no covered kosha row carries the packet anchor ${w.heritageAnchor}`);
+        }
+      } else {
+        if (!cands.some((c) => c.covered_flag === "1")) {
+          errors.push(`kosha sample ${w.headword}: kosha has no covered row but the packet says covered-no-anchor`);
+        }
+        const stray = cands.find((c) => (c.heritage_entry_anchor ?? "") !== "");
+        if (stray) {
+          errors.push(`kosha sample ${w.headword}: kosha row ${stray.mw_key1} has an anchor but the packet says covered-no-anchor`);
+        }
+      }
+    }
+    notes.push(
+      `kosha witness check ran (${sampled} of ${witnessed.length} witnessed rows sampled against ${kosha.rows.length} kosha heritage_anchor rows; kosha raw covered ${koshaCovered}/anchored ${koshaAnchored})`
+    );
+  } else {
+    notes.push("sibling kosha checkout absent — kosha witness-anchoring check skipped (expected on CI)");
   }
 }
 
