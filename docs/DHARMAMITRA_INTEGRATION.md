@@ -70,6 +70,19 @@ pits the markup-based `compoundSegmentCount` against ByT5 `unsandhied` segmentat
 compounds (markup depth ≥ 4: **3,496 distinct surfaces** of 182k total), flagging markup that
 over- or under-splits — e.g. counting the privative `a-` or suffixes `-tva`/`-tā` as members.
 
+**Typography probe (18-10-2026).** The depth metric's two brackets were tested against the
+model on the full frames: the strict em-dash bracket stands (single-hyphen privatives parse as
+3+ in only 1.5 % of 2,713 valid API rows, 6.2 % on a 160-row local replication — far below the
+50 % loose trigger), but the strict numerator is a **joint** count, not an
+immediate-constituent count: 47.3 % of valid markup-3 rows parse as 2 members
+(`agni—zwoma—yAjin` → `agniṣṭoma_yājin`). The remote API truncates or empties ~33 % of bare
+compounds; the pinned local HF model does not (A 92.5 %, B 100 % valid on the same slice).
+Evidence: [`reports/COMPOUND_DEPTH_TYPOGRAPHY_PROBE_2026-10-17.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/COMPOUND_DEPTH_TYPOGRAPHY_PROBE_2026-10-17.md),
+snapshots [`data/compound-depth/typography-probe-2026-10-17.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/compound-depth/typography-probe-2026-10-17.json)
+and [`data/compound-depth/local-replication-2026-10-17.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/compound-depth/local-replication-2026-10-17.json),
+scripts [`scripts/probe-compound-depth-privative.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/probe-compound-depth-privative.py) /
+[`scripts/verify-compound-probe-local.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/verify-compound-probe-local.py).
+
 **Lemma-normalization cross-check** ([#92](https://github.com/sanskrit-lexicon/csl-atlas/pull/92)) —
 validates the atlas's orthographic key (`normalizeSlp1Lemma`) against ByT5 `lemma` over the
 **1,913 lemmas attested in all 7 dictionaries**, normalizing the model lemma back through
