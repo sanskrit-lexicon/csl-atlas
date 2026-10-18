@@ -1,0 +1,297 @@
+{
+ "handoff": "H6992 (S1 of 5)",
+ "source": {
+  "title": "An Encyclopaedic Dictionary of Sanskrit on Historical Principles, vol. 1 (A. M. Ghatage, ed., Deccan College, Poona 1976)",
+  "section": "Index of Works Used in the Dictionary",
+  "printed_pages": "LXXXIX-CXXVII",
+  "leaves": [
+   98,
+   136
+  ],
+  "leaf_count": 39,
+  "archive_org_identifier": "mAAY_an-encyclopaedic-dictionary-of-sanskrit-vol-1-critically-edited-by-a-m-ghatage-1",
+  "page_image_api": "https://archive.org/download/{id}/page/n{leaf}.jpg",
+  "image_size": "2030x2738"
+ },
+ "schema": [
+  "page",
+  "row",
+  "title_deva",
+  "title_iast",
+  "author_deva",
+  "author_iast",
+  "nature_deva",
+  "subject_code",
+  "subject_class_no",
+  "subject_label",
+  "abbreviation_siglum",
+  "abbreviation_qualifier",
+  "confidence"
+ ],
+ "pages_total": 39,
+ "pages_laid_out": 1,
+ "pages_transcribed": {
+  "LXXXIX": 48
+ },
+ "row_total_verified": 48,
+ "row_total_full": null,
+ "row_total_note": "No full-Index total is published: 38 of 39 pages are still pending. The H6992 mission rejects extrapolating a total from a partial layout.",
+ "blank_siglum": 2,
+ "subject_subcodes": {
+  "1": 2,
+  "4.2": 8,
+  "5": 5,
+  "9": 1,
+  "11": 1,
+  "15": 1,
+  "17": 2,
+  "23": 9,
+  "27.1": 2,
+  "27.4": 1,
+  "27.7": 2,
+  "29": 1,
+  "36": 3,
+  "43": 1,
+  "46": 1,
+  "53": 1,
+  "54.4": 2,
+  "59": 3
+ },
+ "subject_integer_classes": {
+  "1": 2,
+  "4": 8,
+  "5": 5,
+  "9": 1,
+  "11": 1,
+  "15": 1,
+  "17": 2,
+  "23": 9,
+  "27": 5,
+  "29": 1,
+  "36": 3,
+  "43": 1,
+  "46": 1,
+  "53": 1,
+  "54": 2,
+  "59": 3
+ },
+ "siglum_reconciliation": {
+  "index_rows": 48,
+  "with_siglum": 46,
+  "status": {
+   "index_only": 3,
+   "in_families_only": 15,
+   "in_both": 26,
+   "index_blank": 2,
+   "in_aob_only": 2
+  },
+  "delta_rows": 1423,
+  "aob_only_rows": 1375,
+  "aob_entries_input": 1444,
+  "aob_unique_sigla": 1403,
+  "siglum_families_unique": 3569
+ },
+ "method": "Vision transcription from the 2030x2738 page images; Devanagari→IAST by indic_transliteration (IAST scheme); column order and sigla read from the printed page, not from _djvu.txt (whose Devanagari is unusable).",
+ "confidence": "All 48 committed rows are vision-transcribed (confidence=vision). No OCR-draft rows are committed.",
+ "backlog": {
+  "pages": "XC-CXXVII (38 pages)",
+  "scripts": "scripts/pd_index_works_transcribe.py provides image fetch, an OCR-draft helper (non-authoritative) and a schema check for the next shards."
+ },
+ "pages_manifest": [
+  {
+   "leaf": 98,
+   "printed_page": "LXXXIX",
+   "status": "vision"
+  },
+  {
+   "leaf": 99,
+   "printed_page": "XC",
+   "status": "pending"
+  },
+  {
+   "leaf": 100,
+   "printed_page": "XCI",
+   "status": "pending"
+  },
+  {
+   "leaf": 101,
+   "printed_page": "XCII",
+   "status": "pending"
+  },
+  {
+   "leaf": 102,
+   "printed_page": "XCIII",
+   "status": "pending"
+  },
+  {
+   "leaf": 103,
+   "printed_page": "XCIV",
+   "status": "pending"
+  },
+  {
+   "leaf": 104,
+   "printed_page": "XCV",
+   "status": "pending"
+  },
+  {
+   "leaf": 105,
+   "printed_page": "XCVI",
+   "status": "pending"
+  },
+  {
+   "leaf": 106,
+   "printed_page": "XCVII",
+   "status": "pending"
+  },
+  {
+   "leaf": 107,
+   "printed_page": "XCVIII",
+   "status": "pending"
+  },
+  {
+   "leaf": 108,
+   "printed_page": "XCIX",
+   "status": "pending"
+  },
+  {
+   "leaf": 109,
+   "printed_page": "C",
+   "status": "pending"
+  },
+  {
+   "leaf": 110,
+   "printed_page": "CI",
+   "status": "pending"
+  },
+  {
+   "leaf": 111,
+   "printed_page": "CII",
+   "status": "pending"
+  },
+  {
+   "leaf": 112,
+   "printed_page": "CIII",
+   "status": "pending"
+  },
+  {
+   "leaf": 113,
+   "printed_page": "CIV",
+   "status": "pending"
+  },
+  {
+   "leaf": 114,
+   "printed_page": "CV",
+   "status": "pending"
+  },
+  {
+   "leaf": 115,
+   "printed_page": "CVI",
+   "status": "pending"
+  },
+  {
+   "leaf": 116,
+   "printed_page": "CVII",
+   "status": "pending"
+  },
+  {
+   "leaf": 117,
+   "printed_page": "CVIII",
+   "status": "pending"
+  },
+  {
+   "leaf": 118,
+   "printed_page": "CIX",
+   "status": "pending"
+  },
+  {
+   "leaf": 119,
+   "printed_page": "CX",
+   "status": "pending"
+  },
+  {
+   "leaf": 120,
+   "printed_page": "CXI",
+   "status": "pending"
+  },
+  {
+   "leaf": 121,
+   "printed_page": "CXII",
+   "status": "pending"
+  },
+  {
+   "leaf": 122,
+   "printed_page": "CXIII",
+   "status": "pending"
+  },
+  {
+   "leaf": 123,
+   "printed_page": "CXIV",
+   "status": "pending"
+  },
+  {
+   "leaf": 124,
+   "printed_page": "CXV",
+   "status": "pending"
+  },
+  {
+   "leaf": 125,
+   "printed_page": "CXVI",
+   "status": "pending"
+  },
+  {
+   "leaf": 126,
+   "printed_page": "CXVII",
+   "status": "pending"
+  },
+  {
+   "leaf": 127,
+   "printed_page": "CXVIII",
+   "status": "pending"
+  },
+  {
+   "leaf": 128,
+   "printed_page": "CXIX",
+   "status": "pending"
+  },
+  {
+   "leaf": 129,
+   "printed_page": "CXX",
+   "status": "pending"
+  },
+  {
+   "leaf": 130,
+   "printed_page": "CXXI",
+   "status": "pending"
+  },
+  {
+   "leaf": 131,
+   "printed_page": "CXXII",
+   "status": "pending"
+  },
+  {
+   "leaf": 132,
+   "printed_page": "CXXIII",
+   "status": "pending"
+  },
+  {
+   "leaf": 133,
+   "printed_page": "CXXIV",
+   "status": "pending"
+  },
+  {
+   "leaf": 134,
+   "printed_page": "CXXV",
+   "status": "pending"
+  },
+  {
+   "leaf": 135,
+   "printed_page": "CXXVI",
+   "status": "pending"
+  },
+  {
+   "leaf": 136,
+   "printed_page": "CXXVII",
+   "status": "pending"
+  }
+ ]
+}
