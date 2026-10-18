@@ -37,8 +37,9 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_aob_declared_works.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_declared_works.tsv) | 1,112 works / 1,118 editions | declared AOB canon, work groups — a **clean-subset floor**, not the full declared list (see Caveats) |
 | [pd_aob_declared_canon_audit.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_declared_canon_audit.json) | — | H6923 denominator audit: what 1,419 / 1,118 / 1,464 each measure, and the 7.78–8.32 % band |
 | [pd_aob_row_test_1473.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_row_test_1473.json) | — | H6969 row test: per-page census of the 42 printed AOB pages, the 7 repeated column-header rows that inflate R1 1,476 → **1,469 entry rows**, and the verdict on the 2003 *Outlook* "1,473 texts" figure |
-| [pd_aob_entries.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_entries.tsv) | 1,430 | H6720 printed AOB entry inventory (one row per printed row, tails reassembled across OCR wraps) with its harvested match, route and exercise state |
-| [pd_aob_sigla_reconciliation.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.tsv) | 2,954 | H6720 discrepancy list — `harvest_not_in_aob`, `join_unconfirmed_at_entry`, `aob_never_cited` (+ near-miss), `join_miss_siglum_equal`, OCR fragments |
+| [pd_aob_entries.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_entries.tsv) | 1,444 (1,437 usable) | H6720/H6960 printed AOB entry inventory (one row per printed row, tails reassembled across OCR wraps) with its harvested match, route and exercise state |
+| [pd_aob_sigla_reconciliation.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.tsv) | 2,955 | H6720/H6960 discrepancy list — `harvest_not_in_aob`, `join_unconfirmed_at_entry`, `aob_never_cited` (+ near-miss), `join_miss_siglum_equal`, OCR fragments |
+
 | [pd_aob_sigla_reconciliation.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.json) | — | H6720 aggregates: three presence measures, never-cited split, method, input hashes |
 | [pd_inheritance_metrics.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_inheritance_metrics.tsv) | 6,866 | H6948 per-headword probe rows (sampled, stratified by marked × entry size) — citation Jaccard / strict subset / target coverage / gloss Jaccard per shared headword, with `marked`, `marked_strict`, `marked_mw`, `marked_pw` |
 | [pd_inheritance_distributions.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_inheritance_distributions.json) | — | H6948 aggregates: sampling frame, input SHA-256s, marks census (broad and strict), macro inventory vs PWG/MW and DCS, shared-abbreviation `mappable_share`, calibration with bootstrap CIs, the three distributions, and the script's own verdict |
@@ -75,12 +76,15 @@ adjudicated `match_type`. Scripts:
 [scripts/pd_aob_sigla_reconciliation.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_aob_sigla_reconciliation.py)
 reconciles the printed AOB authority against the harvest (H6720, write-up
 [reports/PD_AOB_SIGLA_RECONCILIATION_2026-10-17.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_AOB_SIGLA_RECONCILIATION_2026-10-17.md)):
-join-declared presence **63.32 %** of families (78.04 % of mass), **64.88 %** after 80
-siglum-identity corrections the join missed, entry-located lower bound 51.55 %;
-**26.36 %** of well-formed printed entries were never exercised under `a-`, half of them
+join-declared presence **63.32 %** of families (78.04 % of mass), **64.92 %** after 82
+siglum-identity corrections the join missed, entry-located lower bound 51.65 %;
+**26.61 %** of well-formed printed entries were never exercised under `a-`, half of them
 only as OCR variants. H6941 re-confirms the join's unconfirmable rows against the printed
-book's own text witnesses (PDF/A text layer + second OCR): **269 of 681 recovered, join
-confirmation 78.94 % → 87.26 %.
+book's own text witnesses (PDF/A text layer + second OCR): **266 of 678 recovered, join
+confirmation 79.03 % → 87.26 %.** H6960 repairs the wrap-fragment rule: 29 dated edition
+entries the H6720 parser folded (Kādambarī, Aṣṭādhyāyī, the three Linganu editions …) are
+back as rows and 15 part-word "recoveries" are folded, so the usable inventory is
+1,437 (1,423 + 29 − 15), not 1,423.
 
 **Quotations (H6949).** Everything above counts *sigla*; nothing above counts *quotations*.
 The unit for that is defined in [reports/PD_QUOTATION_UNIT_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_QUOTATION_UNIT_2026-10-18.md):
