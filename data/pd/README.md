@@ -70,6 +70,7 @@ percentage as *marked* gloss attribution; it cannot be ranked. Write-up:
 [reports/PD_SILENT_INHERITANCE_PROBE_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SILENT_INHERITANCE_PROBE_2026-10-18.md).
 | [pd_dcs_earliest_lag.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_dcs_earliest_lag.tsv) | 2,458 | H6944 per-lemma lag between PD's first citation and DCS's earliest dated attestation, both in the Dharmamitra chronology |
 | [pd_dcs_earliest_lag.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_dcs_earliest_lag.json) | — | H6944 join cascade, distribution and pinned input hashes |
+| [pd_citation_order_sample.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_citation_order_sample.tsv) | 100 | H6943 sample: 100 letter-a sense divisions with per-entry citation order verdicts against PD/SWC, DCS and Dharmamitra clocks; builder [pd_citation_order_sample.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_citation_order_sample.py); report [PD_CITATION_ORDER_SAMPLE_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_CITATION_ORDER_SAMPLE_2026-10-18.md) |
 
 ## Method
 
