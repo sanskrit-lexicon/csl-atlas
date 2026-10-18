@@ -39,7 +39,7 @@ export function normalizeLookupQuery(value) {
 
   // A reader may type an IAST-looking ASCII word with an initial capital.
   // Preserve SLP1 as the primary candidate, but try the lower-case form too.
-  if (!hasIast && /^[A-Z][a-z][A-Za-z-]*$/.test(raw)) {
+  if (!hasIast && (/^[A-Z][a-z][A-Za-z-]*$/.test(raw) || /^[A-Z][A-Z-]+$/.test(raw))) {
     const lower = normalizeSlp1Lemma(raw.toLowerCase()).normalized;
     if (lower) candidates.add(lower);
     const lowerIast = normalizeSlp1Lemma(iastToSlp1(raw.toLowerCase())).normalized;
