@@ -56,7 +56,9 @@ reconciles the printed AOB authority against the harvest (H6720, write-up
 join-declared presence **63.32 %** of families (78.04 % of mass), **64.88 %** after 80
 siglum-identity corrections the join missed, entry-located lower bound 51.55 %;
 **26.36 %** of well-formed printed entries were never exercised under `a-`, half of them
-only as OCR variants.
+only as OCR variants. H6941 re-confirms the join's unconfirmable rows against the printed
+book's own text witnesses (PDF/A text layer + second OCR): **269 of 681 recovered, join
+confirmation 78.94 % → 87.26 %.
 
 **Sources.** PD =
 [pd.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/external_src/pd/pd.txt)
