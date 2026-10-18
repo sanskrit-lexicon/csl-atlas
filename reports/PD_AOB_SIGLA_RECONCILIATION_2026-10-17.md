@@ -106,7 +106,7 @@ the title, short titles <8 chars only on exact containment).
 | **+ confirmed in a printed-text witness (H6941)** | **2,821** | **87.26 %** |
 | still unconfirmed | 412 | 12.74 % |
 
-**269 rows recovered** (`join_confirmed_printed_text`, 203 in the PDF text layer, 66 in the
+**269 rows recovered** (`join_confirmed_printed_text`, 153 in the PDF text layer, 116 in the
 second OCR). Presence itself does not move — the join's 63.32 % / 78.04 % and the corrected
 64.88 % / 80.08 % stand; what moves is how much of that join this repository can *re-verify
 independently*.
