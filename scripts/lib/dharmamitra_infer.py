@@ -16,7 +16,9 @@
 # never a silent build input.
 
 import json
+import os
 import sys
+from pathlib import Path
 
 # ByT5 task prefixes (local HF path) from dharmamitra/byt5-sanskrit-analyzers
 # inf/model.py, and the PyPI `mode` strings (remote path). Keep in sync.
@@ -63,6 +65,11 @@ def add_common_args(ap):
     ap.add_argument("--revision", default=PINNED_REVISION,
                     help=f"HF model revision for --source local (default: pinned {PINNED_REVISION[:12]}; pass another commit to override)")
     ap.add_argument("--device", default=None, help="torch device for --source local")
+    ap.add_argument("--cpu-int8", action="store_true",
+                    help="dynamic int8 quantization of Linear layers on CPU (same pinned weights; "
+                         "records the quantization in the snapshot; ~7x faster on 1-vCPU boxes)")
+    ap.add_argument("--max-new-tokens", type=int, default=0,
+                    help="generation cap; 0 = use HF_MAX_LENGTH (legacy behaviour)")
     return ap
 
 
@@ -110,21 +117,42 @@ def _run_local(rows, local_prefix, args):
     print(f"  loading {HF_MODEL_ID}@{args.revision} on {device} (prefix {local_prefix!r})...")
     tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_ID, revision=args.revision)
     model = T5ForConditionalGeneration.from_pretrained(HF_MODEL_ID, revision=args.revision).to(device)
+    quantized = bool(getattr(args, "cpu_int8", False) and device == "cpu")
+    if quantized:
+        # Quantize the encoder/decoder stacks only. Quantizing the top-level
+        # lm_head (whose weights differ from the tied input embedding in this
+        # checkpoint) collapses generation into unrelated strings, so it stays
+        # in fp32. This is the same pinned model; the quantization is recorded
+        # in the snapshot.
+        model.encoder = torch.quantization.quantize_dynamic(
+            model.encoder, {torch.nn.Linear}, dtype=torch.qint8)
+        model.decoder = torch.quantization.quantize_dynamic(
+            model.decoder, {torch.nn.Linear}, dtype=torch.qint8)
+        print("  CPU int8 quantization applied to encoder+decoder (lm_head fp32)")
     model.eval()
 
+    max_new_tokens = int(getattr(args, "max_new_tokens", 0) or 0)
+    gen_kw = ({"max_new_tokens": max_new_tokens} if max_new_tokens
+              else {"max_length": HF_MAX_LENGTH})
     out = {}
     for start in range(0, len(rows), args.batch_size):
         chunk = rows[start:start + args.batch_size]
         inputs = [slp1_to_iast(s) for _, s in chunk]
         enc = tokenizer([local_prefix + s for s in inputs], return_tensors="pt",
                         padding=True, truncation=True, max_length=HF_MAX_LENGTH).to(device)
-        with torch.no_grad():
-            gen = model.generate(**enc, max_length=HF_MAX_LENGTH, num_beams=1)
+        with torch.inference_mode():
+            gen = model.generate(**enc, num_beams=1, **gen_kw)
         decoded = tokenizer.batch_decode(gen, skip_special_tokens=True)
         for (key, _), iast, raw in zip(chunk, inputs, decoded):
             out[key] = {"input": iast, "raw": raw}
-        print(f"  inferred {min(start + args.batch_size, len(rows))}/{len(rows)}")
-    return out, {"revision": args.revision, "device": device}
+        cache = os.environ.get("DHARMAMITRA_RAW_CACHE")
+        if cache:
+            Path(cache).write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
+        print(f"  inferred {min(start + args.batch_size, len(rows))}/{len(rows)}", flush=True)
+    extra = {"revision": args.revision, "device": device,
+             "max_new_tokens": max_new_tokens or HF_MAX_LENGTH,
+             "quantization": "int8-dynamic (encoder+decoder Linear; lm_head fp32)" if quantized else "none"}
+    return out, extra
 
 
 def run(rows, *, pypi_mode, local_prefix, args):
