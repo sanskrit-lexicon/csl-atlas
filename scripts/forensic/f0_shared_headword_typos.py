@@ -31,12 +31,12 @@ Output : data/forensic/shared_headword_anomalies.csv  (each candidate typo + its
 Run from repo root:  python scripts/forensic/f0_shared_headword_typos.py
 """
 
+import collections
+import csv
+import itertools
+import json
 import os
 import sys
-import csv
-import json
-import collections
-import itertools
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

@@ -224,7 +224,7 @@ catalogue = {
     "scanSets": [{
         "id": "skd-csldoc", "kind": "cologne-csldoc",
         "description": "Cologne csldoc front-matter pages for SKD (30 pages, one scan image each, taken from a PDF whose even pages 2/4/6/8 are skipped).",
-        "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/skdpref/",
+        "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
         "inventory": "data/megastructure/scan_inventory.tsv",
     }],
     "components": components,

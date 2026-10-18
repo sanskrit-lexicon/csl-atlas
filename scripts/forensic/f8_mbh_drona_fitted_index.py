@@ -40,7 +40,13 @@ Run from repo root (after CommentaryStrategies vulgate scrape):
     python scripts/forensic/f8_mbh_drona_fitted_index.py
 Deps: ../sanskrit-util/py, ../csl-orig, indic_transliteration; the local vulgate JSONL.
 """
-import sys, os, re, json, csv, random, statistics
+import csv
+import json
+import os
+import random
+import re
+import statistics
+import sys
 from collections import Counter
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -50,12 +56,21 @@ sys.path.insert(0, os.path.abspath("scripts/L0"))
 sys.path.insert(0, os.path.abspath("../sanskrit-util/py"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import _corpus_pin
+from f7_harivamsa_resolve import (
+    TOKEN,
+    W,
+    build_index,
+    classify,
+    fit_offsets,
+    held_out,
+    stem_key,
+)
+from f8_mbh_census import load as load_cites
+from f8_mbh_census import mw_citations, pwg_citations
 from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
-from sanskrit_util import slp1_simplify
 from parse_cslorig import CSL_ORIG
-from f8_mbh_census import load as load_cites, pwg_citations, mw_citations
-from f7_harivamsa_resolve import stem_key, build_index, fit_offsets, held_out, classify, TOKEN, W
+from sanskrit_util import slp1_simplify
 
 BOOK = 7
 VJSONL = "../CommentaryStrategies/mahabharata-nilakantha/nilakantha_vulgate_full.jsonl"

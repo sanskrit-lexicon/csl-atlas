@@ -1,0 +1,24 @@
+{
+  "dataset": "pd_publication_ledger",
+  "handoff": "H6947",
+  "what": "Deccan College 'Details of completed work of An Encyclopaedic Dictionary of Sanskrit on Historical Principles' — the 35 fascicle-volume publication ledger (year, general editor, opening/closing entry, printed page range).",
+  "source_url": "https://dcpune.ac.in/pdf/12.%20Publication%20(Dictionary%20Publication).pdf",
+  "fetched": "2026-10-18T07:10Z",
+  "bytes": 163716,
+  "sha256": "7432bd1bb5ab992c42529fface6409459a3abe732a474f1484a21d190307093d",
+  "extractor": "pdftotext -layout; rows transcribed to data/pd/pd_publication_ledger.tsv",
+  "rows": 35,
+  "digital_text_coverage": {
+    "pp_lo": 1,
+    "pp_hi": 4327,
+    "ledger_rows": "1.1-8.3",
+    "year_range": "1976-2008",
+    "note": "The Cologne PDScan 2020 machine text carries page codes 1-0001a through 8-4327a; the ledger's 8.3 close is p. 4328, one page beyond the text. Rows 9.1-35 are print-only."
+  },
+  "known_ledger_quirks": [
+    "5.3's range (2687-2887) overlaps 5.2 (2607-2689) by three pages; the parser assigns pages 2687-2689 to 5.2 by first match.",
+    "6.1 starts at p. 2889, leaving p. 2888 unassigned between 5.3 and 6.1.",
+    "Vol. 33 repeats Vol. 32's range (5609-5708); print-only, not used for metrics."
+  ],
+  "license_note": "Third-party PDF; not committed. The transcription and its hash are the reproducible artifact."
+}

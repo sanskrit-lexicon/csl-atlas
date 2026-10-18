@@ -24,12 +24,12 @@ The MahāBhā./MahāBh. trap (§3) is handled explicitly below: MahāBhā. = Mah
 (epic, in DCS), MahāBh. = Mahābhāṣya (Patañjali, grammar, NOT in DCS). They are
 never merged.
 """
-import sys
-import os
-import io
-import re
-import json
 import csv
+import io
+import json
+import os
+import re
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

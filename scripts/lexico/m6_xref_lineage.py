@@ -21,12 +21,12 @@ Outputs (data/lexico/):
     xref_shared_edges.csv    the actual (src → target) edges shared by MW and PWG
 """
 
+import collections
+import csv
+import json
 import os
 import re
 import sys
-import csv
-import json
-import collections
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

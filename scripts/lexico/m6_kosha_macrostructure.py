@@ -19,8 +19,12 @@ Two source formats:
 Stdlib only; UTF-8, no BOM. Output: data/lexico/kosha_macrostructure.json (envelope).
 Run:  python scripts/lexico/m6_kosha_macrostructure.py
 """
-import sys, os, re, json, statistics
-from collections import Counter, defaultdict, OrderedDict
+import json
+import os
+import re
+import statistics
+import sys
+from collections import Counter, OrderedDict, defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -179,12 +183,12 @@ def main():
         "ABCH/ACPH/ACSJ kāṇḍa membership is read from ;k{} headers and <info kvvv=> tags; lexemes counted as <eid>.",
         "Gender tokens counted as -puM/-strI/-na/-avy suffixes in the <syns> field (Hemacandra's liṅga apparatus).",
         "Record counts are NOT cross-comparable: the two digitization models grain the same genre differently.",
-        "THREE grouped-kosha granularities are reported separately and MUST NOT be conflated as 'lexeme': "
+        ("THREE grouped-kosha granularities are reported separately and MUST NOT be conflated as 'lexeme': "
         "records (<L> concept-groups) < lexeme_eids (<eid> concept-slots) < synonym_forms_total "
         "(comma-split <s> members). Gender tags ride on synonym-forms, so gendered_lexeme_tags is per-form, "
         "not per-eid. The OBS-R redundancy census (headword_multiplicity.csv) counts the first <s> per line "
         "comma-split, a fourth slice again — e.g. ABCH is 1,965 records / 4,619 eids / 14,735 distinct forms "
-        "(19,511 total) / 11,584 OBS-R keys; cite the unit explicitly in any kosha size claim.",
+        "(19,511 total) / 11,584 OBS-R keys; cite the unit explicitly in any kosha size claim."),
     ]
     payload["koshas"] = result
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

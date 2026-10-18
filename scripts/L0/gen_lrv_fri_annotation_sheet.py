@@ -21,10 +21,10 @@ Output: review/csl-atlas-lrv-fri-patel_l0dictset_review.html  (gitignored person
 Run from repo root:  python scripts/L0/gen_lrv_fri_annotation_sheet.py
 """
 
+import html
+import json
 import os
 import sys
-import json
-import html
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

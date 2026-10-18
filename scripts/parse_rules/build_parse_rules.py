@@ -15,9 +15,9 @@ Outputs: data/parse-rules/<dict>.json, index.json, _validation.json
 No LLM inference. Counts are `observed`; the MDF column is `derived` from the
 csl-standards MDF_EXPORT_MAPPING.md table. Run: python scripts/parse_rules/build_parse_rules.py
 """
-import sys
 import json
 import re
+import sys
 from collections import Counter
 from pathlib import Path
 
