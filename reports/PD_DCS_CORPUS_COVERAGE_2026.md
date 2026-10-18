@@ -580,8 +580,8 @@ Institute**'s *Comprehensive and Critical Dictionary of the Prakrit Languages* (
 `ujjhittu`**, ~33,600 lexemes against a *bounded* plan of ~90,000 entries over ~450 texts. **How far
 through the vowels that is depends on which account you take, and both are recorded here rather than
 reconciled by assertion.** By the **printed range** [computed], a volume series ending at *ujjhittu*
-stops inside `u`, and in the Indian order (`a ā i ī u ū ṛ ṝ ḷ e ai o au`) has therefore not reached
-`e`/`o` — two vowels short. By **oral testimony** [testimony] given to MG at BORI in 2019, the vowels
+stops inside `u`, so in the Indian order (`a ā i ī u ū ṛ ṝ ḷ e ai o au`) it has not yet reached
+`ū ṛ ṝ ḷ e ai o au` — eight vowel symbols still ahead. By **oral testimony** [testimony] given to MG at BORI in 2019, the vowels
 had been finished in Indian order completely. What settles it is the last printed entry of vol. 3
 against the title-page ranges of vols 1–3 (BORI catalogue) — a named open item, not an inference.
 
