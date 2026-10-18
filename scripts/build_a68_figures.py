@@ -73,7 +73,7 @@ def fig1(m):
     W, H, bx, bw, bh, by = 760, 220, 30, 700, 56, 46
     s = svg_header(W, H, "PD siglum occurrence mass by class")
     s += (f"<text x='{bx}' y='28' {FONT} font-size='15' font-weight='bold'>"
-          f"PD a‑volume citation occurrences (n = {total:,}) by class</text>\n")
+          f"PD a-volume citation occurrences (n = {total:,}) by class</text>\n")
     x = bx
     for label, v, color in parts:
         w = bw * v / total
@@ -145,7 +145,7 @@ def fig3(residue_rows):
     s += (f"<text x='30' y='30' {FONT} font-size='15' font-weight='bold'>"
           f"The residue: most-cited PD works absent from DCS</text>\n")
     s += (f"<text x='30' y='50' {FONT} font-size='12' fill='#555555'>"
-          f"bar length = PD citation occurrences (letter a‑ volumes)</text>\n")
+          f"bar length = PD citation occurrences (letter a- volumes)</text>\n")
     y = 70
     for title, v in rows:
         w = bw_max * v / maxv
@@ -161,9 +161,13 @@ def fig3(residue_rows):
 
 
 def fig4(gainers):
-    """Top 2021→2026 DCS token gainers among PD-covered texts."""
+    """Top 2021→2026 DCS token gainers among PD-covered texts.
+
+    Canvas is 830 wide (not 760): the first bar label '144,139 (+140,421)'
+    ends ~794px at x0+420+6 — it clipped at 760.
+    """
     rows = gainers[:8]
-    W = 760
+    W = 830
     rh = 40
     H = 90 + rh * len(rows)
     maxv = max(r[2] for r in rows)
