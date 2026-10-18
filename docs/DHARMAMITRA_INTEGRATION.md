@@ -83,6 +83,12 @@ and [`data/compound-depth/local-replication-2026-10-17.json`](https://github.com
 scripts [`scripts/probe-compound-depth-privative.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/probe-compound-depth-privative.py) /
 [`scripts/verify-compound-probe-local.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/verify-compound-probe-local.py).
 
+**The June queue is retired (18-10-2026, H6962/Q14).** The 3,496-item
+`compound-depth-crosscheck` queue was never triaged; of its 2,173 resolved rows, **1,439
+(66.2 %)** already read `model-splits-fewer`. It now carries a dated tombstone in
+[`src/data/review/compound-depth-crosscheck-review.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/review/compound-depth-crosscheck-review.json)
+and its builder refuses to regenerate over it. The probe above is the replacement evidence.
+
 **Lemma-normalization cross-check** ([#92](https://github.com/sanskrit-lexicon/csl-atlas/pull/92)) —
 validates the atlas's orthographic key (`normalizeSlp1Lemma`) against ByT5 `lemma` over the
 **1,913 lemmas attested in all 7 dictionaries**, normalizing the model lemma back through
