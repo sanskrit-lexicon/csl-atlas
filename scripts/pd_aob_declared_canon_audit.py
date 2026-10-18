@@ -152,7 +152,12 @@ def measure(atlas: Path, aob: Path) -> dict:
     lines = read_text(aob).splitlines()
     census = count_lines(lines)
 
-    recorded_pass1 = int(metrics.get("n_declared_aob_rows_edition_level", 0))
+    # H6932 (18-10-2026): n_declared_aob_rows_edition_level now carries the
+    # landed, reproducible 1,437-entry inventory point. The pass-1 1,419 is
+    # preserved as n_declared_aob_rows_edition_level_pass1 and is what this
+    # audit measures (it is the band's low end, not the landed table).
+    recorded_pass1 = int(metrics.get("n_declared_aob_rows_edition_level_pass1",
+                                     metrics.get("n_declared_aob_rows_edition_level", 0)))
     print_census = 1464  # «1 464 книг», Indian Express, quoted at pass-1
     reparse_raw = 1517   # scripts-h6707/parse_aob.py on the same OCR (Uprava papers/A68)
     structural = census["entry_like_lines_r1"]

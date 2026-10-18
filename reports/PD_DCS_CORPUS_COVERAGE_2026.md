@@ -110,10 +110,17 @@ OCR; 1,464 for the printed census). Against it, 118 covered works =
 ruling of 17-10-2026 fixes this central estimate as *the* quoted denominator; the pass-1
 point 8.32 % survives only as the band's upper bound.
 
-That denominator is an **entry** count, not the row count of the published table, and it is
-not reproducible to the row — which is why the paper quotes the central value with its band
-(**118 / N = 7.78 – 8.32 %**). The landed table `data/pd/pd_aob_declared_works.tsv` carries
-**1,112 work groups / 1,118 edition rows** and is a *clean-subset floor*, not the canon: the
+That denominator is an **entry** count, not the row count of the published table. H6932
+(18-10-2026) has now landed the reproducible entry-level table,
+`data/pd/pd_aob_declared_entries.tsv`: **1,437 usable printed entries** projected from the
+H6720/H6960 inventory (`data/pd/pd_aob_entries.tsv`, 1,444 parsed / 7 junk) and gated by
+`python3 scripts/pd_aob_declared_entries.py --check`. That gives the point
+**118 / 1,437 = 8.21 %**. The MG ruling of 17-10-2026 keeps the central estimate
+(≈1,476 → 7.99 %, displayed **8.0 %**) as the quoted denominator until MG re-rules, so the
+paper still quotes the central value with its band (**118 / N = 7.78 – 8.32 %**), which
+brackets both the landed point and every other candidate. The older table
+`data/pd/pd_aob_declared_works.tsv` carries **1,112 work groups / 1,118 edition rows** and is
+a *clean-subset floor*, not the canon: the
 pass-2 clean filter dropped 556 OCR-merged `Siglum Title` entry lines (plus the garbled-start
 rows), so 118 / 1,118 = 10.55 % **overstates** coverage and must not be quoted as the
 declared canon. Audit: `data/pd/pd_aob_declared_canon_audit.json`, reproducible with
