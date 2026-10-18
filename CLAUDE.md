@@ -83,6 +83,16 @@ publishes `dist/` to GitHub Pages.
   `tests/forensic/test_f12_a50_claim_ledger.py`, `build-four-axis-independence`, and the
   tradition review-sheet count in `scripts/test_validate_review_decisions.py`; then the
   A50 figures and the claim ledger §P. CI red on any of these = a step skipped.
+- **PD quotation-level unit (H6949).** `data/pd/pd_quotations_by_entry.tsv`,
+  `pd_quotations_vs_pwg.tsv` and `pd_quotations_summary.json` are generated, not hand-kept:
+  `python scripts/pd_quotation_units.py --pd <staged pd.txt>` then
+  `python scripts/pd_quotations_vs_pwg.py --pd <pd.txt> --pwg ../csl-orig/v02/pwg/pwg.txt`.
+  The rule lives in `scripts/lib/quotation_units.py` and **both** dictionaries import it —
+  that identity is the whole reason the PD/PWG comparison is like-for-like, so a change to
+  the rule regenerates both artifacts in the same PR. The counts in
+  `reports/PD_QUOTATION_UNIT_2026-10-18.md` and the `data/pd/README.md` row must move with
+  them. `tests/forensic/test_quotation_units.py` holds the rule with **hand-derived**
+  expectations — never regenerate those pins from the script they check.
 
 ## Do not touch
 
