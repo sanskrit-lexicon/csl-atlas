@@ -1,0 +1,149 @@
+{
+ "generated_by": "H6969 scripts/pd_aob_row_test_1473.py (DeepSeek Flash, deepseek-flash)",
+ "audited_on": "2026-10-18",
+ "question": "Is the 2003 press figure 1,473 the printed AOB row count?",
+ "source_aob": {
+  "path": "PD/AOB.md (sanskrit-lexicon/PD, OCR of the official KoshaSHRI AOB.pdf)",
+  "sha256": "a3ce1a795c6f751da8ee103588c5cc9004f3f81df87c3f39731e78a78398da12",
+  "pages": 42,
+  "lines_total": 2011,
+  "note": "only one AOB printing exists in the estate (AOB.pdf); AOB_ocr.md is a second OCR pass of the same PDF, so no 2003-vintage AOB list can be tested"
+ },
+ "source_inventory": {
+  "path": "data/pd/pd_aob_entries.tsv",
+  "sha256": "2cd57647657e9bc8b664c173ada3c714661ec6fc3ee0647885e3e58316b8407f",
+  "entries_parsed": 1430,
+  "entries_junk": 7,
+  "entries_usable": 1423,
+  "entries_wellformed": 1362,
+  "entries_merged_token": 623,
+  "entries_garbled_start": 15
+ },
+ "printed_row_census": {
+  "r1_entry_like_lines_uncorrected": 1476,
+  "repeated_column_header_rows": 7,
+  "repeated_column_header_pages": [
+   2,
+   13,
+   30,
+   37,
+   40,
+   41,
+   42
+  ],
+  "repeated_column_header_tokens": [
+   "Abbreviation* *Name",
+   "Abbreviation.",
+   "Abbreviation* *Name* o",
+   "Abbreviation* 23.)",
+   "Abbreviation* Dos",
+   "Abbreviation* हि",
+   "Abbreviation."
+  ],
+  "entry_rows_header_corrected": 1469,
+  "consecutive_duplicate_sigla": 1,
+  "entry_rows_header_and_dup_corrected": 1468,
+  "merged_siglum_title_tokens": 556,
+  "garbled_start_dated_r2_upper_bound": 99,
+  "entry_rows_plus_unrecovered_ceiling": 1568
+ },
+ "page_density": {
+  "pages": 42,
+  "per_page_r1": [
+   32,
+   45,
+   33,
+   36,
+   42,
+   30,
+   38,
+   41,
+   37,
+   37,
+   35,
+   33,
+   41,
+   30,
+   28,
+   25,
+   39,
+   45,
+   36,
+   41,
+   38,
+   32,
+   45,
+   18,
+   49,
+   38,
+   47,
+   32,
+   34,
+   33,
+   36,
+   30,
+   46,
+   36,
+   33,
+   29,
+   30,
+   30,
+   40,
+   26,
+   43,
+   7
+  ],
+  "mean_per_page": 35.14,
+  "median_per_page": 36.0,
+  "min_per_page": 7,
+  "max_per_page": 49
+ },
+ "candidates": {
+  "inventory_usable": 1423,
+  "inventory_parsed": 1430,
+  "print_census_press": 1464,
+  "entry_rows_header_corrected": 1469,
+  "r1_entry_like_lines_uncorrected": 1476
+ },
+ "band": {
+  "lo": 1423,
+  "hi": 1476,
+  "width": 53
+ },
+ "press_claim": {
+  "value": 1473,
+  "distance_to_candidate": {
+   "inventory_usable": 50,
+   "inventory_parsed": 43,
+   "print_census_press": 9,
+   "entry_rows_header_corrected": 4,
+   "r1_entry_like_lines_uncorrected": -3
+  },
+  "nearest_candidate": "r1_entry_like_lines_uncorrected",
+  "inside_band": true
+ },
+ "metric_effect": {
+  "covered_works": 118,
+  "at_r1_uncorrected": {
+   "n": 1476,
+   "pct": 7.99
+  },
+  "at_header_corrected": {
+   "n": 1469,
+   "pct": 8.03
+  },
+  "at_inventory_usable": {
+   "n": 1423,
+   "pct": 8.29
+  },
+  "displayed_after_rounding": 8.0
+ },
+ "verdict": {
+  "is_1473_the_printed_row_count": "no -- not reproducible as the count",
+  "why": "The printed AOB carries 1,469 entry rows once the 7 repeated column-header lines are removed from R1's 1,476; 1,473 is 4 above that and 50 above the careful parse (1,423 usable). Adding back the OCR-garbled entries R1 misses (R2, 99 candidate lines, an upper bound) a printed count of 1,473 is well inside the recoverable range, so the press figure CANNOT be excluded as the list count -- but no committed rule REPRODUCES it, so it is consistent with the printed row count rather than equal to it.",
+  "independent_witness_for_1476": "no",
+  "independence_reason": "Three failures: (1) different measurement channel -- the figure is the project's own count of texts excerpted, given in a feature sourced to its director and coordinator, not an external count of the printed list; (2) different time slice -- 'first 25 years', catalogued by 1975, against a list printed with volumes 1976-2019 and OCR'd from the current PDF; (3) same producer -- the AOB and the press figure both originate at Deccan College, so relaying it is not an independent second measurement of that institution's own list.",
+  "evidentiary_value": "A dateable corroboration of magnitude: by 2003 the project itself put its source corpus at ~1.47x, which rules out reading 1,419 or 1,118 as its own intended canon, and brackets the printed list from below. It must NOT be counted as a second independent witness.",
+  "correction_landed": "H6923's structural estimate 1,476 includes 7 repeated column-header rows; the header-corrected printed entry-row count is 1,469, so 118/N = 8.03 % -- which still displays as the ruled 8.0 %, so no manuscript number moves."
+ }
+}
