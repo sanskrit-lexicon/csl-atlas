@@ -1,0 +1,5068 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-18",
+  "generatedBy": "python3 scripts/pilot-gra-compound-depth.py",
+  "question": "Q8: do GRA's hyphen-marked compound splits survive the segmenter?",
+  "source": "remote API (recorded cross-check)",
+  "model": {
+    "id": "remote",
+    "revision": null,
+    "endpoint": "https://dharmamitra.org/api/tagging/",
+    "note": "remote, not reproducible"
+  },
+  "audit": "data/compound-depth/gra-marker-audit-2026-10-18.json",
+  "frame": {
+    "universe": "GRA <k2> containing at least one hyphen",
+    "rows": 4356,
+    "sample": 500,
+    "seed": 20261018
+  },
+  "sample": {
+    "rows": 500,
+    "seed": 20261018,
+    "selection": "sha256(seed:surface:k2) rank, first N"
+  },
+  "stats": {
+    "rows": 500,
+    "valid": 304,
+    "validRate": 0.608,
+    "validRateCi95": [
+      0.5645,
+      0.6498
+    ],
+    "status": {
+      "empty": 32,
+      "garbage": 75,
+      "ok": 304,
+      "truncated": 89
+    },
+    "modelSegments": {
+      "1": 171,
+      "2": 128,
+      "3": 5
+    },
+    "p1": 0.5625,
+    "p2": 0.4211,
+    "p2Ci95": [
+      0.3669,
+      0.4772
+    ],
+    "p3plus": 0.0164,
+    "p3plusCi95": [
+      0.007,
+      0.0379
+    ],
+    "exactMarkupAgreement": 0.4178,
+    "exactMarkupAgreementCi95": [
+      0.3637,
+      0.4739
+    ],
+    "readsCompoundAtLeast2": 0.4375,
+    "readsCompoundAtLeast2Ci95": [
+      0.3829,
+      0.4937
+    ]
+  },
+  "rows": [
+    {
+      "surface": "ASuheman",
+      "k2": "ASu-he/man",
+      "line": "1637",
+      "markupSegments": 2,
+      "input": "āśuheman",
+      "raw": "heman_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "BUriAsuti",
+      "k2": "BU/ri-Asuti",
+      "line": "6434.1",
+      "markupSegments": 2,
+      "input": "bhūriāsuti",
+      "raw": "bhūri_āsuti_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "BUricakzas",
+      "k2": "BU/ri-cakzas",
+      "line": "6415",
+      "markupSegments": 2,
+      "input": "bhūricakṣas",
+      "raw": "bhūri_cakṣaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "BUrijanman",
+      "k2": "BU/ri-janman",
+      "line": "6416",
+      "markupSegments": 2,
+      "input": "bhūrijanman",
+      "raw": "bhūrijanman_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "BUrizAh",
+      "k2": "BUri-zA/h",
+      "line": "6430.1",
+      "markupSegments": 2,
+      "input": "bhūriṣāh",
+      "raw": "bhūriṣāh_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "Badrakft",
+      "k2": "Badra-kf/t",
+      "line": "6297",
+      "markupSegments": 2,
+      "input": "bhadrakṛt",
+      "raw": "bhadra_kṛt_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "Badravac",
+      "k2": "Badra-va/c",
+      "line": "6299",
+      "markupSegments": 2,
+      "input": "bhadravac",
+      "raw": "bhadra_vac_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "CardizpA",
+      "k2": "Cardiz-pA/",
+      "line": "3361",
+      "markupSegments": 2,
+      "input": "chardiṣpā",
+      "raw": "chardiṣpā_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "DAmasAc",
+      "k2": "DAma-sA/c",
+      "line": "4679.1",
+      "markupSegments": 2,
+      "input": "dhāmasāc",
+      "raw": "Rai_SBM dhāmasāc_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "DArayatkziti",
+      "k2": "DAraya/t-kziti",
+      "line": "4685",
+      "markupSegments": 2,
+      "input": "dhārayatkṣiti",
+      "raw": "dhārayat_kṣiti_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "Dftadakza",
+      "k2": "Dfta/-dakza",
+      "line": "4739",
+      "markupSegments": 2,
+      "input": "dhṛtadakṣa",
+      "raw": "hṛtadakṣa_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "DfzRvo^jas",
+      "k2": "DfzRv-o^jas",
+      "line": "4750",
+      "markupSegments": 2,
+      "input": "dhṛṣṇvo^jas",
+      "raw": "dhṛṣṇvaḥ_jas_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "DfzadvarRa",
+      "k2": "Dfza/d-varRa",
+      "line": "4745",
+      "markupSegments": 2,
+      "input": "dhṛṣadvarṇa",
+      "raw": "dhṛṣat_varṇa_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "DiyAjur",
+      "k2": "DiyA-ju/r",
+      "line": "4701",
+      "markupSegments": 2,
+      "input": "dhiyājur",
+      "raw": "R̤_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "Druvacyut",
+      "k2": "Druva-cyu/t",
+      "line": "4774",
+      "markupSegments": 2,
+      "input": "dhruvacyut",
+      "raw": "hruva_cyut_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "ISAnakft",
+      "k2": "ISAna-kf/t",
+      "line": "1837",
+      "markupSegments": 2,
+      "input": "īśānakṛt",
+      "raw": "īśāna_kṛt_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "SUkfta",
+      "k2": "SU/-kfta",
+      "line": "8885",
+      "markupSegments": 2,
+      "input": "śūkṛta",
+      "raw": "ta_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "Satakratu",
+      "k2": "Sata/-kratu",
+      "line": "8592",
+      "markupSegments": 2,
+      "input": "śatakratu",
+      "raw": "śatakratu_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "Satakratu",
+      "k2": "Sata/-kratu",
+      "line": "12607",
+      "markupSegments": 2,
+      "input": "śatakratu",
+      "raw": "śatakratu_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "SatavAja",
+      "k2": "Sata/-vAja",
+      "line": "8618",
+      "markupSegments": 2,
+      "input": "śatavāja",
+      "raw": "śata_vāja_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "Satavraja",
+      "k2": "Sata/-vraja",
+      "line": "8620",
+      "markupSegments": 2,
+      "input": "śatavraja",
+      "raw": "śata_vraja_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "SatrutUrya",
+      "k2": "Satru-tU/rya",
+      "line": "8640",
+      "markupSegments": 2,
+      "input": "śatrutūrya",
+      "raw": "śatru_tūrya_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "Slokayantra",
+      "k2": "Slo/ka-yantra",
+      "line": "9021",
+      "markupSegments": 2,
+      "input": "ślokayantra",
+      "raw": "ma_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "SrAvayatsaKi",
+      "k2": "SrAvaya/t-saKi",
+      "line": "8978",
+      "markupSegments": 2,
+      "input": "śrāvayatsakhi",
+      "raw": "śrāvayat_sakhi_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "SradDAmanas",
+      "k2": "SradDA/-manas",
+      "line": "8957",
+      "markupSegments": 2,
+      "input": "śraddhāmanas",
+      "raw": "śraddhā_manaḥ_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "Sravaeza",
+      "k2": "Srava-eza/",
+      "line": "8965",
+      "markupSegments": 2,
+      "input": "śravaeṣa",
+      "raw": "śravaḥ_eṣa_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "SravaskAma",
+      "k2": "Sra/vas-kAma",
+      "line": "8968",
+      "markupSegments": 2,
+      "input": "śravaskāma",
+      "raw": "śravaskāma_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "Sravojit",
+      "k2": "Sravo-ji/t",
+      "line": "8974",
+      "markupSegments": 2,
+      "input": "śravojit",
+      "raw": "m_jit_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "SrezWavarcas",
+      "k2": "Sre/zWa-varcas",
+      "line": "9010",
+      "markupSegments": 2,
+      "input": "śreṣṭhavarcas",
+      "raw": "mad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_ad_a",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "SrutAmaGa",
+      "k2": "SrutA/-maGa",
+      "line": "8995",
+      "markupSegments": 2,
+      "input": "śrutāmagha",
+      "raw": "śrutāmagha_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "Sucivrata",
+      "k2": "Su/ci-vrata",
+      "line": "8844",
+      "markupSegments": 2,
+      "input": "śucivrata",
+      "raw": "śuci_vrata_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "SunaSSepa",
+      "k2": "Su/naS-Se/pa",
+      "line": "8852",
+      "markupSegments": 2,
+      "input": "śunaśśepa",
+      "raw": "śunaḥśepa_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "UrjAhuti",
+      "k2": "Urj-A/huti",
+      "line": "2110",
+      "markupSegments": 2,
+      "input": "ūrjāhuti",
+      "raw": "R̤_āhuti_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "aBakta",
+      "k2": "a/-Bakta",
+      "line": "761",
+      "markupSegments": 2,
+      "input": "abhakta",
+      "raw": "ta_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "aBakta",
+      "k2": "a/-Bakta",
+      "line": "12076",
+      "markupSegments": 2,
+      "input": "abhakta",
+      "raw": "ta_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "aBiarDayajvan",
+      "k2": "aBiarDa-ya/jvan",
+      "line": "843.1",
+      "markupSegments": 2,
+      "input": "abhiardhayajvan",
+      "raw": "yajvan_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "aBinna",
+      "k2": "a/-Binna",
+      "line": "779",
+      "markupSegments": 2,
+      "input": "abhinna",
+      "raw": "abhinna_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aBipitva",
+      "k2": "aBi-pitva/",
+      "line": "780",
+      "markupSegments": 2,
+      "input": "abhipitva",
+      "raw": "abhipitvā_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aBipitva",
+      "k2": "aBi-pitva/",
+      "line": "12080",
+      "markupSegments": 2,
+      "input": "abhipitva",
+      "raw": "abhipitvā_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aDaspada",
+      "k2": "aDas-pada/",
+      "line": "353",
+      "markupSegments": 2,
+      "input": "adhaspada",
+      "raw": "adhaspada_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aDastAt",
+      "k2": "aDa/s-tAt",
+      "line": "352",
+      "markupSegments": 2,
+      "input": "adhastāt",
+      "raw": "adhastāt_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aDinirRij",
+      "k2": "a/Di-nirRij",
+      "line": "357",
+      "markupSegments": 2,
+      "input": "adhinirṇij",
+      "raw": "adhi_nirṇij_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "aDivastra",
+      "k2": "a/Di-vastra",
+      "line": "366",
+      "markupSegments": 2,
+      "input": "adhivastra",
+      "raw": "R adhivastra_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aDizavaRa",
+      "k2": "aDi-za/vaRa",
+      "line": "369",
+      "markupSegments": 2,
+      "input": "adhiṣavaṇa",
+      "raw": "adhiṣavaṇa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aGnat",
+      "k2": "a/-Gnat",
+      "line": "121",
+      "markupSegments": 2,
+      "input": "aghnat",
+      "raw": "hnat_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "aSAsya",
+      "k2": "a-SAsya/",
+      "line": "1222",
+      "markupSegments": 2,
+      "input": "aśāsya",
+      "raw": "aśāsya_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aSastihan",
+      "k2": "aSasti-ha/n",
+      "line": "1221",
+      "markupSegments": 2,
+      "input": "aśastihan",
+      "raw": "aśasti_han_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "aSastihan",
+      "k2": "aSasti-ha/n",
+      "line": "12128",
+      "markupSegments": 2,
+      "input": "aśastihan",
+      "raw": "aśasti_han_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "aSezas",
+      "k2": "a-Se/zas",
+      "line": "1232",
+      "markupSegments": 2,
+      "input": "aśeṣas",
+      "raw": "aśeṣas_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aSvAmaGa",
+      "k2": "a/SvA-maGa",
+      "line": "1285",
+      "markupSegments": 2,
+      "input": "aśvāmagha",
+      "raw": "aśvāmagha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aSvaScandra",
+      "k2": "a/Sva-Scandra",
+      "line": "1280",
+      "markupSegments": 2,
+      "input": "aśvaścandra",
+      "raw": "aśvaścandra_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aSvapfzWa",
+      "k2": "a/Sva-pfzWa",
+      "line": "1265",
+      "markupSegments": 2,
+      "input": "aśvapṛṣṭha",
+      "raw": "aśva_pṛṣṭha_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "aSvarADas",
+      "k2": "a/Sva-rADas",
+      "line": "1277",
+      "markupSegments": 2,
+      "input": "aśvarādhas",
+      "raw": "aśvarādhas_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "abaDira",
+      "k2": "a/-baDira",
+      "line": "745",
+      "markupSegments": 2,
+      "input": "abadhira",
+      "raw": "badhira_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "adButakratu",
+      "k2": "a/dButa-kratu",
+      "line": "309",
+      "markupSegments": 2,
+      "input": "adbhutakratu",
+      "raw": "dharma_kratu_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "adU",
+      "k2": "a/-dU",
+      "line": "295",
+      "markupSegments": 2,
+      "input": "adū",
+      "raw": "R",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "adaBa",
+      "k2": "a-da/Ba",
+      "line": "276",
+      "markupSegments": 2,
+      "input": "adabha",
+      "raw": "Radabha_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "adaya",
+      "k2": "a-daya/",
+      "line": "278",
+      "markupSegments": 2,
+      "input": "adaya",
+      "raw": "R̤aya_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "aditi",
+      "k2": "a/-diti",
+      "line": "286",
+      "markupSegments": 2,
+      "input": "aditi",
+      "raw": "ti_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "aditi",
+      "k2": "a/-diti",
+      "line": "287",
+      "markupSegments": 2,
+      "input": "aditi",
+      "raw": "ti_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "aditi",
+      "k2": "a/-diti",
+      "line": "12030",
+      "markupSegments": 2,
+      "input": "aditi",
+      "raw": "ti_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "adri",
+      "k2": "a/-dri",
+      "line": "320",
+      "markupSegments": 2,
+      "input": "adri",
+      "raw": "Raiḥ_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "adri",
+      "k2": "a/-dri",
+      "line": "12034",
+      "markupSegments": 2,
+      "input": "adri",
+      "raw": "Raiḥ_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "adrisAnu",
+      "k2": "adri-sAnu",
+      "line": "331",
+      "markupSegments": 2,
+      "input": "adrisānu",
+      "raw": "adri_sānu_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "adurmaKa",
+      "k2": "a/-durmaKa",
+      "line": "292",
+      "markupSegments": 2,
+      "input": "adurmakha",
+      "raw": "adurmakha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aduzkft",
+      "k2": "a/-duzkft",
+      "line": "294",
+      "markupSegments": 2,
+      "input": "aduṣkṛt",
+      "raw": "a_duṣkṛt_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "agirOkas",
+      "k2": "a/-girOkas",
+      "line": "70",
+      "markupSegments": 2,
+      "input": "agiraukas",
+      "raw": "R agiraukaḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "agnIzoma",
+      "k2": "agnI/-zo/ma",
+      "line": "100",
+      "markupSegments": 2,
+      "input": "agnīṣoma",
+      "raw": "agnīṣoma_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "agnitapas",
+      "k2": "agni-ta/pas",
+      "line": "82",
+      "markupSegments": 2,
+      "input": "agnitapas",
+      "raw": "agnitapaḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ago",
+      "k2": "a/-go",
+      "line": "71.1",
+      "markupSegments": 2,
+      "input": "ago",
+      "raw": "R̤_gaḥ_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "agrega",
+      "k2": "agre-ga/",
+      "line": "112",
+      "markupSegments": 2,
+      "input": "agrega",
+      "raw": "_________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "ahardivi",
+      "k2": "a/har-divi",
+      "line": "1407",
+      "markupSegments": 2,
+      "input": "ahardivi",
+      "raw": "har_divi_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "ahiGna",
+      "k2": "a/hi-Gna",
+      "line": "1417",
+      "markupSegments": 2,
+      "input": "ahighna",
+      "raw": "hna_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "ahiMsAna",
+      "k2": "a/-hiMsAna",
+      "line": "1414",
+      "markupSegments": 2,
+      "input": "ahiṃsāna",
+      "raw": "a_hiṃsāna_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "ajAta",
+      "k2": "a/-jAta",
+      "line": "182",
+      "markupSegments": 2,
+      "input": "ajāta",
+      "raw": "R ajāta_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ajasra",
+      "k2": "a/-jasra",
+      "line": "181",
+      "markupSegments": 2,
+      "input": "ajasra",
+      "raw": "ajasra_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ajasra",
+      "k2": "a/-jasra",
+      "line": "11008",
+      "markupSegments": 2,
+      "input": "ajasra",
+      "raw": "ajasra_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ajozia",
+      "k2": "a/-jozia",
+      "line": "197.1",
+      "markupSegments": 2,
+      "input": "ajoṣia",
+      "raw": "R ajoṣia_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ajurya",
+      "k2": "a-jurya/",
+      "line": "192",
+      "markupSegments": 2,
+      "input": "ajurya",
+      "raw": "ajurya_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ajurya",
+      "k2": "a-jurya/",
+      "line": "12020",
+      "markupSegments": 2,
+      "input": "ajurya",
+      "raw": "ajurya_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "akfta",
+      "k2": "a/-kfta",
+      "line": "29",
+      "markupSegments": 2,
+      "input": "akṛta",
+      "raw": "akṛta_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "akftta",
+      "k2": "a-kftta",
+      "line": "30",
+      "markupSegments": 2,
+      "input": "akṛtta",
+      "raw": "ta_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "alalABavat",
+      "k2": "alalA-Ba/vat",
+      "line": "1097",
+      "markupSegments": 2,
+      "input": "alalābhavat",
+      "raw": "alalābha_vat_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "amIvacAtana",
+      "k2": "amIva-cA/tana",
+      "line": "898",
+      "markupSegments": 2,
+      "input": "amīvacātana",
+      "raw": "mīva_cātana_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "amaDyama",
+      "k2": "a/-maDyama",
+      "line": "862",
+      "markupSegments": 2,
+      "input": "amadhyama",
+      "raw": "amadhyama_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "amarman",
+      "k2": "a-ma/rman",
+      "line": "870",
+      "markupSegments": 2,
+      "input": "amarman",
+      "raw": "amarman_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anADfzya",
+      "k2": "an-ADfzya/",
+      "line": "458",
+      "markupSegments": 2,
+      "input": "anādhṛṣya",
+      "raw": "an_ādhṛṣya_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "anASu",
+      "k2": "an-ASu/",
+      "line": "476",
+      "markupSegments": 2,
+      "input": "anāśu",
+      "raw": "anāśu_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anASu",
+      "k2": "an-ASu/",
+      "line": "477",
+      "markupSegments": 2,
+      "input": "anāśu",
+      "raw": "anāśu_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anAmfRa",
+      "k2": "an-AmfRa/",
+      "line": "469",
+      "markupSegments": 2,
+      "input": "anāmṛṇa",
+      "raw": "anāmṛṇa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anAs",
+      "k2": "an-A/s",
+      "line": "478",
+      "markupSegments": 2,
+      "input": "anās",
+      "raw": "anās_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anUDas",
+      "k2": "an-UDa/s",
+      "line": "549",
+      "markupSegments": 2,
+      "input": "anūdhas",
+      "raw": "anūdhas_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anUrmi",
+      "k2": "a/n-Urmi",
+      "line": "555",
+      "markupSegments": 2,
+      "input": "anūrmi",
+      "raw": "anūrmi_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anaBidruh",
+      "k2": "a/n-aBidruh",
+      "line": "415",
+      "markupSegments": 2,
+      "input": "anabhidruh",
+      "raw": "anabhidruh_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anakza",
+      "k2": "an-akza/",
+      "line": "395",
+      "markupSegments": 2,
+      "input": "anakṣa",
+      "raw": "anakṣa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anapavyayat",
+      "k2": "a/n-apavyayat",
+      "line": "407",
+      "markupSegments": 2,
+      "input": "anapavyayat",
+      "raw": "R an_apa_vyayat_",
+      "status": "ok",
+      "modelSegments": 3
+    },
+    {
+      "surface": "anapta",
+      "k2": "a/n-apta",
+      "line": "413",
+      "markupSegments": 2,
+      "input": "anapta",
+      "raw": "Ro_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "anarSarAti",
+      "k2": "a/narSa-rAti",
+      "line": "427",
+      "markupSegments": 2,
+      "input": "anarśarāti",
+      "raw": "ha_narśarāti_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "anarviS",
+      "k2": "a/nar-viS",
+      "line": "424",
+      "markupSegments": 2,
+      "input": "anarviś",
+      "raw": "R_anarviś_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anedia",
+      "k2": "a/-nedia",
+      "line": "563.1",
+      "markupSegments": 2,
+      "input": "anedia",
+      "raw": "Raidia_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "anfc",
+      "k2": "an-f/c",
+      "line": "557",
+      "markupSegments": 2,
+      "input": "anṛc",
+      "raw": "pa_anṛc_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "anftadviz",
+      "k2": "anfta-dvi/z",
+      "line": "561",
+      "markupSegments": 2,
+      "input": "anṛtadviṣ",
+      "raw": "anṛta_dviṣ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "anindya",
+      "k2": "a-nindya/",
+      "line": "484",
+      "markupSegments": 2,
+      "input": "anindya",
+      "raw": "anindya_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "annAvfD",
+      "k2": "annA-vfD",
+      "line": "11027",
+      "markupSegments": 2,
+      "input": "annāvṛdh",
+      "raw": "t_annāvṛdh_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "annAvfD",
+      "k2": "annA-vfD",
+      "line": "11028",
+      "markupSegments": 2,
+      "input": "annāvṛdh",
+      "raw": "t_annāvṛdh_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "antaspaTa",
+      "k2": "a/ntas-paTa",
+      "line": "584",
+      "markupSegments": 2,
+      "input": "antaspatha",
+      "raw": "tha_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "anudita",
+      "k2": "a/n-udita",
+      "line": "520",
+      "markupSegments": 2,
+      "input": "anudita",
+      "raw": "R anudita_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anukTa",
+      "k2": "an-ukTa/",
+      "line": "513",
+      "markupSegments": 2,
+      "input": "anuktha",
+      "raw": "anuktha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "anulbaRa",
+      "k2": "an-ulbaRa/",
+      "line": "532",
+      "markupSegments": 2,
+      "input": "anulbaṇa",
+      "raw": "____________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "anulbaRa",
+      "k2": "an-ulbaRa/",
+      "line": "11025",
+      "markupSegments": 2,
+      "input": "anulbaṇa",
+      "raw": "____________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "anya",
+      "k2": "a/-nya",
+      "line": "602",
+      "markupSegments": 2,
+      "input": "anya",
+      "raw": "R̤anya_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "apAkacakzas",
+      "k2": "a/pAka-cakzas",
+      "line": "655",
+      "markupSegments": 2,
+      "input": "apākacakṣas",
+      "raw": "apāka_cakṣaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "apUrvia",
+      "k2": "a/-pUrvia",
+      "line": "689.1",
+      "markupSegments": 2,
+      "input": "apūrvia",
+      "raw": "pūrvia_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "aparIta",
+      "k2": "a/-parIta",
+      "line": "636",
+      "markupSegments": 2,
+      "input": "aparīta",
+      "raw": "aparīta_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "apavIravat",
+      "k2": "a/-pavIravat",
+      "line": "641",
+      "markupSegments": 2,
+      "input": "apavīravat",
+      "raw": "apavīra_vat_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "apnarAj",
+      "k2": "apna-rA/j",
+      "line": "697",
+      "markupSegments": 2,
+      "input": "apnarāj",
+      "raw": "Rāj_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "apracetas",
+      "k2": "a/-pracetas",
+      "line": "706",
+      "markupSegments": 2,
+      "input": "apracetas",
+      "raw": "apracetaḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "apracetas",
+      "k2": "a/-pracetas",
+      "line": "12071",
+      "markupSegments": 2,
+      "input": "apracetas",
+      "raw": "apracetaḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "apraketa",
+      "k2": "a-praketa/",
+      "line": "704",
+      "markupSegments": 2,
+      "input": "apraketa",
+      "raw": "Raiḥ_apraketa_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "aprayuCat",
+      "k2": "a/-prayuCat",
+      "line": "721",
+      "markupSegments": 2,
+      "input": "aprayuchat",
+      "raw": "prayuchat_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "aprayuCat",
+      "k2": "a/-prayuCat",
+      "line": "12074",
+      "markupSegments": 2,
+      "input": "aprayuchat",
+      "raw": "prayuchat_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "aprozivas",
+      "k2": "a/-prozivas",
+      "line": "733",
+      "markupSegments": 2,
+      "input": "aproṣivas",
+      "raw": "proṣi_vas_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "apsukzit",
+      "k2": "apsu-kzit",
+      "line": "740",
+      "markupSegments": 2,
+      "input": "apsukṣit",
+      "raw": "apsukṣit_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aritraparaRa",
+      "k2": "aritra-pa/raRa",
+      "line": "997",
+      "markupSegments": 2,
+      "input": "aritraparaṇa",
+      "raw": "________________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "arizwuta",
+      "k2": "ari-zwuta/",
+      "line": "1011",
+      "markupSegments": 2,
+      "input": "ariṣṭuta",
+      "raw": "ariṣṭuta_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "asUrta",
+      "k2": "a-sU/rta",
+      "line": "1354",
+      "markupSegments": 2,
+      "input": "asūrta",
+      "raw": "ta_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "asaMdina",
+      "k2": "a/-saMdina",
+      "line": "1318",
+      "markupSegments": 2,
+      "input": "asaṃdina",
+      "raw": "asaṃdina_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "asacadviz",
+      "k2": "asaca-dviz",
+      "line": "1310",
+      "markupSegments": 2,
+      "input": "asacadviṣ",
+      "raw": "t_a_saca_dviṣ_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "asamana",
+      "k2": "a-samana/",
+      "line": "1321",
+      "markupSegments": 2,
+      "input": "asamana",
+      "raw": "R asamana_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "asmadriac",
+      "k2": "asmadri/-ac",
+      "line": "1383.1",
+      "markupSegments": 2,
+      "input": "asmadriac",
+      "raw": "R asmadriac_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "asreman",
+      "k2": "a-srema/n",
+      "line": "1393",
+      "markupSegments": 2,
+      "input": "asreman",
+      "raw": "a_sreman_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "asriD",
+      "k2": "a-sri/D",
+      "line": "1390",
+      "markupSegments": 2,
+      "input": "asridh",
+      "raw": "sridh_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "asuzvi",
+      "k2": "a/-suzvi",
+      "line": "1350",
+      "markupSegments": 2,
+      "input": "asuṣvi",
+      "raw": "t_a_su_svi_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "atavyas",
+      "k2": "a/-tavyas",
+      "line": "223",
+      "markupSegments": 2,
+      "input": "atavyas",
+      "raw": "tavyas_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "atfpa",
+      "k2": "a-tfpa/",
+      "line": "245",
+      "markupSegments": 2,
+      "input": "atṛpa",
+      "raw": "atṛpa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "atfzRaj",
+      "k2": "a/-tfzRaj",
+      "line": "248",
+      "markupSegments": 2,
+      "input": "atṛṣṇaj",
+      "raw": "atṛṣṇac_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "atimati",
+      "k2": "a/ti-mati",
+      "line": "233",
+      "markupSegments": 2,
+      "input": "atimati",
+      "raw": "ti_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "atyUrmi",
+      "k2": "a/ty-Urmi",
+      "line": "254",
+      "markupSegments": 2,
+      "input": "atyūrmi",
+      "raw": "Raiḥ_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "avAta",
+      "k2": "a-vAta/",
+      "line": "1151",
+      "markupSegments": 2,
+      "input": "avāta",
+      "raw": "avāta_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "avAta",
+      "k2": "a-vAta/",
+      "line": "1152",
+      "markupSegments": 2,
+      "input": "avāta",
+      "raw": "avāta_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "avIrahan",
+      "k2": "a/-vIrahan",
+      "line": "1196",
+      "markupSegments": 2,
+      "input": "avīrahan",
+      "raw": "___",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "avaDra",
+      "k2": "a-vaDra/",
+      "line": "1115",
+      "markupSegments": 2,
+      "input": "avadhra",
+      "raw": "_",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "avadyaBI",
+      "k2": "avadya-BI/",
+      "line": "1113",
+      "markupSegments": 2,
+      "input": "avadyabhī",
+      "raw": "R_avadya_bhī_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "avadyapa",
+      "k2": "avadya-pa",
+      "line": "1112",
+      "markupSegments": 2,
+      "input": "avadyapa",
+      "raw": "avadyapa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "avastAt",
+      "k2": "ava/s-tAt",
+      "line": "1142",
+      "markupSegments": 2,
+      "input": "avastāt",
+      "raw": "avastāt_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aviTura",
+      "k2": "a/-viTura",
+      "line": "1171",
+      "markupSegments": 2,
+      "input": "avithura",
+      "raw": "avithura_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "aviat",
+      "k2": "a/-viat",
+      "line": "1204.1",
+      "markupSegments": 2,
+      "input": "aviat",
+      "raw": "aviat_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "avicetas",
+      "k2": "a/-vicetas",
+      "line": "1166",
+      "markupSegments": 2,
+      "input": "avicetas",
+      "raw": "avicetaḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "avidIDayu",
+      "k2": "a/-vidIDayu",
+      "line": "1173",
+      "markupSegments": 2,
+      "input": "avidīdhayu",
+      "raw": "R vidīdhayu_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "avijAnat",
+      "k2": "a/-vijAnat",
+      "line": "1167",
+      "markupSegments": 2,
+      "input": "avijānat",
+      "raw": "ṛchat_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "avikzita",
+      "k2": "a/-vikzita",
+      "line": "1163",
+      "markupSegments": 2,
+      "input": "avikṣita",
+      "raw": "avikṣita_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "avitArin",
+      "k2": "a/-vitArin",
+      "line": "1168",
+      "markupSegments": 2,
+      "input": "avitārin",
+      "raw": "avitārin_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "avodeva",
+      "k2": "avo/-deva",
+      "line": "1202",
+      "markupSegments": 2,
+      "input": "avodeva",
+      "raw": "_____iva_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "avyat",
+      "k2": "a/-vyat",
+      "line": "1204",
+      "markupSegments": 2,
+      "input": "avyat",
+      "raw": "avyat_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ayAsia",
+      "k2": "a-yA/sia",
+      "line": "940.1",
+      "markupSegments": 2,
+      "input": "ayāsia",
+      "raw": "Rayāsia_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "ayaHSIrzan",
+      "k2": "a/yaH-SIrzan",
+      "line": "932",
+      "markupSegments": 2,
+      "input": "ayaḥśīrṣan",
+      "raw": "ayaḥ_śīrṣan_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "ayasagra",
+      "k2": "a/yas-agra",
+      "line": "948.1",
+      "markupSegments": 2,
+      "input": "ayasagra",
+      "raw": "R ayasagra_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ayoagra",
+      "k2": "a/yo-agra",
+      "line": "948",
+      "markupSegments": 2,
+      "input": "ayoagra",
+      "raw": "R_ayoagra_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ayohata",
+      "k2": "a/yo-hata",
+      "line": "952",
+      "markupSegments": 2,
+      "input": "ayohata",
+      "raw": "ayohata_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ayudDasena",
+      "k2": "a/yudDa-sena",
+      "line": "945",
+      "markupSegments": 2,
+      "input": "ayuddhasena",
+      "raw": "R ayuddhasena_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ayuta",
+      "k2": "a-yu/ta",
+      "line": "943",
+      "markupSegments": 2,
+      "input": "ayuta",
+      "raw": "Rayuta_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "azAQa",
+      "k2": "a/-zAQa",
+      "line": "1294",
+      "markupSegments": 2,
+      "input": "aṣāḍha",
+      "raw": "aṣāḍha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "baladA",
+      "k2": "bala-dA/",
+      "line": "6167",
+      "markupSegments": 2,
+      "input": "baladā",
+      "raw": "R_bala_dā_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "bfhaddiva",
+      "k2": "bfha/d-diva",
+      "line": "6237",
+      "markupSegments": 2,
+      "input": "bṛhaddiva",
+      "raw": "bṛhat_diva_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "bfhatketu",
+      "k2": "bfha/t-ketu",
+      "line": "6231",
+      "markupSegments": 2,
+      "input": "bṛhatketu",
+      "raw": "bṛhat_ketu_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "brahmayuj",
+      "k2": "brahma-yu/j",
+      "line": "6272",
+      "markupSegments": 2,
+      "input": "brahmayuj",
+      "raw": "brahma_yuj_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "candraraTa",
+      "k2": "candra/-raTa",
+      "line": "3232",
+      "markupSegments": 2,
+      "input": "candraratha",
+      "raw": "candraratha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "canohita",
+      "k2": "ca/no-hita",
+      "line": "3226",
+      "markupSegments": 2,
+      "input": "canohita",
+      "raw": "canohita_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "canohita",
+      "k2": "ca/no-hita",
+      "line": "12336",
+      "markupSegments": 2,
+      "input": "canohita",
+      "raw": "canohita_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "carmamnA",
+      "k2": "carma-mnA/",
+      "line": "3262",
+      "markupSegments": 2,
+      "input": "carmamnā",
+      "raw": "R_carmamnā_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "caturanIka",
+      "k2": "ca/tur-anIka",
+      "line": "3204",
+      "markupSegments": 2,
+      "input": "caturanīka",
+      "raw": "Rai_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "citrarAti",
+      "k2": "citra/-rAti",
+      "line": "3304",
+      "markupSegments": 2,
+      "input": "citrarāti",
+      "raw": "citrarāti_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "dASuaDvara",
+      "k2": "dASu/-aDvara",
+      "line": "4206.1",
+      "markupSegments": 2,
+      "input": "dāśuadhvara",
+      "raw": "dāśu_adhvara_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "dAsapravarga",
+      "k2": "dAsa/-pravarga",
+      "line": "4212",
+      "markupSegments": 2,
+      "input": "dāsapravarga",
+      "raw": "Rai_SVM pravarga_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "dIdiagni",
+      "k2": "dI/di-agni",
+      "line": "4258.1",
+      "markupSegments": 2,
+      "input": "dīdiagni",
+      "raw": "R dīdi_agni_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "dIrGAyuSocis",
+      "k2": "dIrGA/yu-Socis",
+      "line": "4280",
+      "markupSegments": 2,
+      "input": "dīrghāyuśocis",
+      "raw": "dīrgha_āyu_śociḥ_",
+      "status": "ok",
+      "modelSegments": 3
+    },
+    {
+      "surface": "dUraupabda",
+      "k2": "dUra/-upabda",
+      "line": "4391",
+      "markupSegments": 2,
+      "input": "dūraupabda",
+      "raw": "tūra_aupabda_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "dUrearTa",
+      "k2": "dUre/-arTa",
+      "line": "4394",
+      "markupSegments": 2,
+      "input": "dūreartha",
+      "raw": "tha_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "daMsanAvat",
+      "k2": "daMsa/nA-vat",
+      "line": "4034",
+      "markupSegments": 2,
+      "input": "daṃsanāvat",
+      "raw": "ūrdhvam_daṃsanāvat_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "daSaBuji",
+      "k2": "da/Sa-Buji",
+      "line": "4129",
+      "markupSegments": 2,
+      "input": "daśabhuji",
+      "raw": "daśa_bhuji_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "daSaSipra",
+      "k2": "da/Sa-Sipra",
+      "line": "4139",
+      "markupSegments": 2,
+      "input": "daśaśipra",
+      "raw": "R_",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "daSadyu",
+      "k2": "da/Sa-dyu",
+      "line": "4126",
+      "markupSegments": 2,
+      "input": "daśadyu",
+      "raw": "daśa_dyu_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "daSakakzia",
+      "k2": "da/Sa-kakzia",
+      "line": "4121.1",
+      "markupSegments": 2,
+      "input": "daśakakṣia",
+      "raw": "R daśakakṣia_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "devAvI",
+      "k2": "devA-vI/",
+      "line": "4485",
+      "markupSegments": 2,
+      "input": "devāvī",
+      "raw": "devāvī_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "devahUya",
+      "k2": "deva-hU/ya",
+      "line": "4480",
+      "markupSegments": 2,
+      "input": "devahūya",
+      "raw": "deva_hūya_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "devajA",
+      "k2": "deva-jA/",
+      "line": "4430",
+      "markupSegments": 2,
+      "input": "devajā",
+      "raw": "9 deva_jā_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "devasenA",
+      "k2": "deva-senA/",
+      "line": "4474",
+      "markupSegments": 2,
+      "input": "devasenā",
+      "raw": "Rai_senā_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "devavAhana",
+      "k2": "deva-vA/hana",
+      "line": "4464",
+      "markupSegments": 2,
+      "input": "devavāhana",
+      "raw": "ṛṣabha_vāhana_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "devayajya",
+      "k2": "deva-ya/jya",
+      "line": "4454",
+      "markupSegments": 2,
+      "input": "devayajya",
+      "raw": "deva_yajya_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "divikzaya",
+      "k2": "divi-kzaya/",
+      "line": "4237",
+      "markupSegments": 2,
+      "input": "divikṣaya",
+      "raw": "R divikṣaya_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "divodAsa",
+      "k2": "di/vo-dAsa",
+      "line": "4247",
+      "markupSegments": 2,
+      "input": "divodāsa",
+      "raw": "Raivodāsa_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "draviRodas",
+      "k2": "draviRo-da/s",
+      "line": "4549",
+      "markupSegments": 2,
+      "input": "draviṇodas",
+      "raw": "9 draviṇaḥ_das_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "duHSIma",
+      "k2": "duH-SI/ma",
+      "line": "4363",
+      "markupSegments": 2,
+      "input": "duḥśīma",
+      "raw": "śīma_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "duibanDu",
+      "k2": "dui-ba/nDu",
+      "line": "4611.1",
+      "markupSegments": 2,
+      "input": "duibandhu",
+      "raw": "R duibandhu_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "durASir",
+      "k2": "du/r-ASir",
+      "line": "4302",
+      "markupSegments": 2,
+      "input": "durāśir",
+      "raw": "Rāśiḥ_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "durDita",
+      "k2": "du/r-Dita",
+      "line": "4324",
+      "markupSegments": 2,
+      "input": "durdhita",
+      "raw": "durdhita_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "duratyetu",
+      "k2": "dur-atye/tu",
+      "line": "4297",
+      "markupSegments": 2,
+      "input": "duratyetu",
+      "raw": "atyetu_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "durdfSIka",
+      "k2": "dur-df/SIka",
+      "line": "4319",
+      "markupSegments": 2,
+      "input": "durdṛśīka",
+      "raw": "7 śatāyuḥ_na_u_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "durmantu",
+      "k2": "dur-ma/ntu",
+      "line": "4332",
+      "markupSegments": 2,
+      "input": "durmantu",
+      "raw": "9_mantu_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "duroRasad",
+      "k2": "duroRa-sa/d",
+      "line": "4310",
+      "markupSegments": 2,
+      "input": "duroṇasad",
+      "raw": "7 duroṇa_sad_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "duroza",
+      "k2": "dur-o/za",
+      "line": "4311",
+      "markupSegments": 2,
+      "input": "duroṣa",
+      "raw": "R duroṣa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "duvanyasad",
+      "k2": "duvanya-sa/d",
+      "line": "4352",
+      "markupSegments": 2,
+      "input": "duvanyasad",
+      "raw": "R duvanyasad_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "duzwarItu",
+      "k2": "duz-wa/rItu",
+      "line": "4369",
+      "markupSegments": 2,
+      "input": "duṣṭarītu",
+      "raw": "tu_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "eDamAnadviz",
+      "k2": "eDamAna-dvi/z",
+      "line": "2307",
+      "markupSegments": 2,
+      "input": "edhamānadviṣ",
+      "raw": "R_edhamāna_dviṣ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "ekapad",
+      "k2": "e/ka-pad",
+      "line": "2280",
+      "markupSegments": 2,
+      "input": "ekapad",
+      "raw": "pad_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "fjumuzka",
+      "k2": "fju-muzka/",
+      "line": "2165",
+      "markupSegments": 2,
+      "input": "ṛjumuṣka",
+      "raw": "ṛjumuṣka_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "fksAma",
+      "k2": "fk-sAma/",
+      "line": "2141",
+      "markupSegments": 2,
+      "input": "ṛksāma",
+      "raw": "ṛk_sāma_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "ftavAka",
+      "k2": "fta-vAka/",
+      "line": "2205",
+      "markupSegments": 2,
+      "input": "ṛtavāka",
+      "raw": "R̤a_ṛtavāka_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "ftupA",
+      "k2": "ftu-pA/",
+      "line": "2222",
+      "markupSegments": 2,
+      "input": "ṛtupā",
+      "raw": "ṛtu_pā_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "ftvij",
+      "k2": "ftv-i/j",
+      "line": "2227",
+      "markupSegments": 2,
+      "input": "ṛtvij",
+      "raw": "ṛtvij_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "fzidviz",
+      "k2": "fzi-dvi/z",
+      "line": "2256",
+      "markupSegments": 2,
+      "input": "ṛṣidviṣ",
+      "raw": "R ṛṣi_dviṣ_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "gATapati",
+      "k2": "gATa/-pati",
+      "line": "2957",
+      "markupSegments": 2,
+      "input": "gāthapati",
+      "raw": "R_gāthapati_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "gOrivIti",
+      "k2": "gO/ri-vIti",
+      "line": "3092",
+      "markupSegments": 2,
+      "input": "gaurivīti",
+      "raw": "mā_iva_iti_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "garBarasa",
+      "k2": "ga/rBa-rasa",
+      "line": "2925",
+      "markupSegments": 2,
+      "input": "garbharasa",
+      "raw": "Rasa_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "gayasADana",
+      "k2": "gaya-sA/Dana",
+      "line": "2911",
+      "markupSegments": 2,
+      "input": "gayasādhana",
+      "raw": "___________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "gayasPAna",
+      "k2": "gaya-sPA/na",
+      "line": "2912",
+      "markupSegments": 2,
+      "input": "gayasphāna",
+      "raw": "________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "goSrIta",
+      "k2": "go/-SrIta",
+      "line": "3079",
+      "markupSegments": 2,
+      "input": "gośrīta",
+      "raw": "________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "gojit",
+      "k2": "go-ji/t",
+      "line": "3042",
+      "markupSegments": 2,
+      "input": "gojit",
+      "raw": "_jit_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "goruDa",
+      "k2": "go-ruDa",
+      "line": "3074",
+      "markupSegments": 2,
+      "input": "gorudha",
+      "raw": "______",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "govid",
+      "k2": "go-vi/d",
+      "line": "3076",
+      "markupSegments": 2,
+      "input": "govid",
+      "raw": "Ro_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "govid",
+      "k2": "go-vi/d",
+      "line": "12325",
+      "markupSegments": 2,
+      "input": "govid",
+      "raw": "Ro_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "gozuyuD",
+      "k2": "gozu-yu/D",
+      "line": "3085",
+      "markupSegments": 2,
+      "input": "goṣuyudh",
+      "raw": "___________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "harimBara",
+      "k2": "harim-Bara/",
+      "line": "10568",
+      "markupSegments": 2,
+      "input": "harimbhara",
+      "raw": "harimbhara_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "harivarpas",
+      "k2": "ha/ri-varpas",
+      "line": "10574",
+      "markupSegments": 2,
+      "input": "harivarpas",
+      "raw": "hari_varpaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "hariyUpa",
+      "k2": "hari-yU/pa",
+      "line": "10569",
+      "markupSegments": 2,
+      "input": "hariyūpa",
+      "raw": "hariyūpa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "haskfti",
+      "k2": "ha/s-kfti",
+      "line": "10625",
+      "markupSegments": 2,
+      "input": "haskṛti",
+      "raw": "haskṛti_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "havyavah",
+      "k2": "havya-va/h",
+      "line": "10615",
+      "markupSegments": 2,
+      "input": "havyavah",
+      "raw": "havyavah_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "hiraRyahasta",
+      "k2": "hi/raRya-hasta",
+      "line": "10703",
+      "markupSegments": 2,
+      "input": "hiraṇyahasta",
+      "raw": "hiraṇya_hasta_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "hiraRyajihva",
+      "k2": "hi/raRya-jihva",
+      "line": "10670",
+      "markupSegments": 2,
+      "input": "hiraṇyajihva",
+      "raw": "hiraṇyajihva_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "hiraRyavanDura",
+      "k2": "hi/raRya-vanDura",
+      "line": "10691",
+      "markupSegments": 2,
+      "input": "hiraṇyavandhura",
+      "raw": "hiraṇya_vandhura_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "hotravah",
+      "k2": "hotra-va/h",
+      "line": "10754",
+      "markupSegments": 2,
+      "input": "hotravah",
+      "raw": "hotravah_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "indrAbrahmaRaspati",
+      "k2": "indrA-brahmaRaspati",
+      "line": "1740",
+      "markupSegments": 2,
+      "input": "indrābrahmaṇaspati",
+      "raw": "indrābrahmaṇaspati_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "izwaraSmi",
+      "k2": "izwa/-raSmi",
+      "line": "1810",
+      "markupSegments": 2,
+      "input": "iṣṭaraśmi",
+      "raw": "R śmi_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "jArayanmaKa",
+      "k2": "jAraya/n-maKa",
+      "line": "3492",
+      "markupSegments": 2,
+      "input": "jārayanmakha",
+      "raw": "ha_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "jamBasuta",
+      "k2": "ja/mBa-suta",
+      "line": "3424",
+      "markupSegments": 2,
+      "input": "jambhasuta",
+      "raw": "mbhasuta_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "janapAna",
+      "k2": "jana-pA/na",
+      "line": "3393",
+      "markupSegments": 2,
+      "input": "janapāna",
+      "raw": "R̤anapāna_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "janiDA",
+      "k2": "jani-DA/",
+      "line": "3409",
+      "markupSegments": 2,
+      "input": "janidhā",
+      "raw": "R_janidhā_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "jiAvAja",
+      "k2": "jiA/-vAja",
+      "line": "3585.1",
+      "markupSegments": 2,
+      "input": "jiāvāja",
+      "raw": "Rai_āvāja_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "jyotiranIka",
+      "k2": "jyo/tir-anIka",
+      "line": "3594",
+      "markupSegments": 2,
+      "input": "jyotiranīka",
+      "raw": "R jyotiḥ_anīka_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "kAruDAyas",
+      "k2": "kAru/-DAyas",
+      "line": "2534",
+      "markupSegments": 2,
+      "input": "kārudhāyas",
+      "raw": "kāru_dhāyaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "kaDaprI",
+      "k2": "kaDa-prI",
+      "line": "2408",
+      "markupSegments": 2,
+      "input": "kadhaprī",
+      "raw": "RNe",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "kaRvahotf",
+      "k2": "ka/Rva-hotf",
+      "line": "2393",
+      "markupSegments": 2,
+      "input": "kaṇvahotṛ",
+      "raw": "kaṇva_hotṛ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "karRaSoBana",
+      "k2": "karRa-So/Bana",
+      "line": "2458",
+      "markupSegments": 2,
+      "input": "karṇaśobhana",
+      "raw": "mad_karṇa_śobhanaiḥ_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "kavivfDa",
+      "k2": "kavi-vfDa/",
+      "line": "2495",
+      "markupSegments": 2,
+      "input": "kavivṛdha",
+      "raw": "kavi_vṛdha_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "kenipa",
+      "k2": "ke-nipa/",
+      "line": "2710",
+      "markupSegments": 2,
+      "input": "kenipa",
+      "raw": "R kenipa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "kfCreSrit",
+      "k2": "kfCre-Sri/t",
+      "line": "2650",
+      "markupSegments": 2,
+      "input": "kṛchreśrit",
+      "raw": "preśrit_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "kzIrapAka",
+      "k2": "kzIra-pAka/",
+      "line": "2809",
+      "markupSegments": 2,
+      "input": "kṣīrapāka",
+      "raw": "9 kṣīrapāka_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "kzatraSrI",
+      "k2": "kzatra-SrI/",
+      "line": "2774",
+      "markupSegments": 2,
+      "input": "kṣatraśrī",
+      "raw": "9 śrī_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "kzayadvIra",
+      "k2": "kzaya/d-vIra",
+      "line": "2788",
+      "markupSegments": 2,
+      "input": "kṣayadvīra",
+      "raw": "tat_tat_tat_tat_tat_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_tvad_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "kzetravid",
+      "k2": "kzetra-vi/d",
+      "line": "2822",
+      "markupSegments": 2,
+      "input": "kṣetravid",
+      "raw": "m___",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "mAnuzapraDana",
+      "k2": "mA/nuza-praDana",
+      "line": "6791",
+      "markupSegments": 2,
+      "input": "mānuṣapradhana",
+      "raw": "mānuṣapradhana_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "maDupeya",
+      "k2": "maDu-pe/ya",
+      "line": "6561",
+      "markupSegments": 2,
+      "input": "madhupeya",
+      "raw": "madhupeya_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "maDuzut",
+      "k2": "maDu-zu/t",
+      "line": "6572",
+      "markupSegments": 2,
+      "input": "madhuṣut",
+      "raw": "madhuṣut_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "maDuzut",
+      "k2": "maDu-zu/t",
+      "line": "12441",
+      "markupSegments": 2,
+      "input": "madhuṣut",
+      "raw": "madhuṣut_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "maDyaMdina",
+      "k2": "maDya/M-dina",
+      "line": "6577",
+      "markupSegments": 2,
+      "input": "madhyaṃdina",
+      "raw": "madhyaṃdina_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "maGatti",
+      "k2": "maGa/-tti",
+      "line": "6500",
+      "markupSegments": 2,
+      "input": "maghatti",
+      "raw": "maghatti_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "maRigrIva",
+      "k2": "maRi-grIva/",
+      "line": "6511",
+      "markupSegments": 2,
+      "input": "maṇigrīva",
+      "raw": "maṇigrīva_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "madacyuta",
+      "k2": "ma/da-cyuta",
+      "line": "6536",
+      "markupSegments": 2,
+      "input": "madacyuta",
+      "raw": "mada_cyuta_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "mahADana",
+      "k2": "mahA-Dana/",
+      "line": "6720",
+      "markupSegments": 2,
+      "input": "mahādhana",
+      "raw": "mahādhana_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "manasfNga",
+      "k2": "ma/nas-fNga",
+      "line": "6587.1",
+      "markupSegments": 2,
+      "input": "manasṛṅga",
+      "raw": "manasṛṅga_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "mandrajihva",
+      "k2": "mandra/-jihva",
+      "line": "6649",
+      "markupSegments": 2,
+      "input": "mandrajihva",
+      "raw": "mandrajihva_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "marudgaRa",
+      "k2": "maru/d-gaRa",
+      "line": "6684",
+      "markupSegments": 2,
+      "input": "marudgaṇa",
+      "raw": "marut_gaṇa_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "marutsaKi",
+      "k2": "maru/t-saKi",
+      "line": "6682",
+      "markupSegments": 2,
+      "input": "marutsakhi",
+      "raw": "_sakhi_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "marutsaKi",
+      "k2": "maru/t-saKi",
+      "line": "11175",
+      "markupSegments": 2,
+      "input": "marutsakhi",
+      "raw": "_sakhi_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "matkfta",
+      "k2": "ma/t-kfta",
+      "line": "6521",
+      "markupSegments": 2,
+      "input": "matkṛta",
+      "raw": "R mad_kṛta_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "matsaKi",
+      "k2": "ma/t-saKi",
+      "line": "6522",
+      "markupSegments": 2,
+      "input": "matsakhi",
+      "raw": "R_sakhi_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "meDapati",
+      "k2": "meDa/-pati",
+      "line": "6948",
+      "markupSegments": 2,
+      "input": "medhapati",
+      "raw": "medha_pati_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "mfnmaya",
+      "k2": "mfn-ma/ya",
+      "line": "6934",
+      "markupSegments": 2,
+      "input": "mṛnmaya",
+      "raw": "mṛd_maya_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "miTastur",
+      "k2": "miTas-tu/r",
+      "line": "6844",
+      "markupSegments": 2,
+      "input": "mithastur",
+      "raw": "mithastuḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "nAmaDeya",
+      "k2": "nAma-De/ya",
+      "line": "4922",
+      "markupSegments": 2,
+      "input": "nāmadheya",
+      "raw": "nāmadheya_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "nakzaddABa",
+      "k2": "nakzad-dABa/",
+      "line": "4806",
+      "markupSegments": 2,
+      "input": "nakṣaddābha",
+      "raw": "nakṣat_dābha_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "namaukti",
+      "k2": "na/ma-ukti",
+      "line": "4843",
+      "markupSegments": 2,
+      "input": "namaukti",
+      "raw": "R na_maukti_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "namovfkti",
+      "k2": "na/mo-vfkti",
+      "line": "4855",
+      "markupSegments": 2,
+      "input": "namovṛkti",
+      "raw": "namaḥ_vṛkti_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "nfmAdana",
+      "k2": "nf-mA/dana",
+      "line": "5104",
+      "markupSegments": 2,
+      "input": "nṛmādana",
+      "raw": "nṛmādana_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "nfpAtf",
+      "k2": "nf-pAtf/",
+      "line": "5097",
+      "markupSegments": 2,
+      "input": "nṛpātṛ",
+      "raw": "R nṛ_pātṛ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "nfpati",
+      "k2": "nf-pa/ti",
+      "line": "5094",
+      "markupSegments": 2,
+      "input": "nṛpati",
+      "raw": "nṛpate_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "nfpatnI",
+      "k2": "nf-pa/tnI",
+      "line": "5095",
+      "markupSegments": 2,
+      "input": "nṛpatnī",
+      "raw": "nṛpatnī_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "nfvatsaKi",
+      "k2": "nfva/t-saKi",
+      "line": "5109",
+      "markupSegments": 2,
+      "input": "nṛvatsakhi",
+      "raw": "nṛvat_sakhi_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "nfzadana",
+      "k2": "nf-za/dana",
+      "line": "5115",
+      "markupSegments": 2,
+      "input": "nṛṣadana",
+      "raw": "nṛṣadana_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "niDApati",
+      "k2": "niDA/-pati",
+      "line": "4977",
+      "markupSegments": 2,
+      "input": "nidhāpati",
+      "raw": "nidhāpati_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "nicakrA",
+      "k2": "ni/-cakrA",
+      "line": "4949",
+      "markupSegments": 2,
+      "input": "nicakrā",
+      "raw": "nicakrā_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "nirmAya",
+      "k2": "ni/r-mAya",
+      "line": "5014",
+      "markupSegments": 2,
+      "input": "nirmāya",
+      "raw": "nirmāya_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "nizwigrI",
+      "k2": "nizwi-grI/",
+      "line": "5040",
+      "markupSegments": 2,
+      "input": "niṣṭigrī",
+      "raw": "R niṣṭi_grī_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "pUrvahUti",
+      "k2": "pUrva/-hUti",
+      "line": "5717",
+      "markupSegments": 2,
+      "input": "pūrvahūti",
+      "raw": "pūrva_hi_iti_",
+      "status": "ok",
+      "modelSegments": 3
+    },
+    {
+      "surface": "pUrvajA",
+      "k2": "pUrva-jA/",
+      "line": "5706",
+      "markupSegments": 2,
+      "input": "pūrvajā",
+      "raw": "pūrvajā_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "pUrvapAyya",
+      "k2": "pUrva-pA/yya",
+      "line": "5710",
+      "markupSegments": 2,
+      "input": "pūrvapāyya",
+      "raw": "pūrvapāyya_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "pUrviastuti",
+      "k2": "pUrvia/-stuti",
+      "line": "5723",
+      "markupSegments": 2,
+      "input": "pūrviastuti",
+      "raw": "pūrvia_stuti_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "paSusADana",
+      "k2": "paSu-sA/Dana",
+      "line": "5390",
+      "markupSegments": 2,
+      "input": "paśusādhana",
+      "raw": "ṛtu_sādhana_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "paSuvarDana",
+      "k2": "paSu-va/rDana",
+      "line": "5388",
+      "markupSegments": 2,
+      "input": "paśuvardhana",
+      "raw": "paśu_vardhana_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "paSvayantra",
+      "k2": "paSva/-yantra",
+      "line": "5398",
+      "markupSegments": 2,
+      "input": "paśvayantra",
+      "raw": "paśvayantra_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "padavI",
+      "k2": "pada-vI/",
+      "line": "5229",
+      "markupSegments": 2,
+      "input": "padavī",
+      "raw": "padavī_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "patiloka",
+      "k2": "pati-loka/",
+      "line": "5204",
+      "markupSegments": 2,
+      "input": "patiloka",
+      "raw": "pati_loka_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "patividya",
+      "k2": "pati-vi/dya",
+      "line": "5206",
+      "markupSegments": 2,
+      "input": "patividya",
+      "raw": "ti_vidya_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "pfTivIdyAvA",
+      "k2": "pfTivI/-dyA/vA",
+      "line": "5761",
+      "markupSegments": 2,
+      "input": "pṛthivīdyāvā",
+      "raw": "____________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "pfTupragARa",
+      "k2": "pfTu/-pragARa",
+      "line": "5772",
+      "markupSegments": 2,
+      "input": "pṛthupragāṇa",
+      "raw": "pṛthu_pragāṇa_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "pftsuti",
+      "k2": "pft-suti/",
+      "line": "5753",
+      "markupSegments": 2,
+      "input": "pṛtsuti",
+      "raw": "tsu_ti_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "pitfyARa",
+      "k2": "pitf-yA/Ra",
+      "line": "5484",
+      "markupSegments": 2,
+      "input": "pitṛyāṇa",
+      "raw": "pitṛyāṇa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "prAcAjihva",
+      "k2": "prAcA/-jihva",
+      "line": "6039",
+      "markupSegments": 2,
+      "input": "prācājihva",
+      "raw": "prācājihva_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "prAtaritvan",
+      "k2": "prAtar-i/tvan",
+      "line": "6046",
+      "markupSegments": 2,
+      "input": "prātaritvan",
+      "raw": "prātaritvan_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "pradiv",
+      "k2": "pra-di/v",
+      "line": "5915",
+      "markupSegments": 2,
+      "input": "pradiv",
+      "raw": "pradiv_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "prakalA",
+      "k2": "pra-kalA",
+      "line": "5837",
+      "markupSegments": 2,
+      "input": "prakalā",
+      "raw": "prakalā_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "pramahas",
+      "k2": "pra/-mahas",
+      "line": "5943",
+      "markupSegments": 2,
+      "input": "pramahas",
+      "raw": "pramahas_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "pratadvasu",
+      "k2": "prata/d-vasu",
+      "line": "5862",
+      "markupSegments": 2,
+      "input": "pratadvasu",
+      "raw": "pratadvasu_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "prauga",
+      "k2": "pra/-uga",
+      "line": "5834",
+      "markupSegments": 2,
+      "input": "prauga",
+      "raw": "prauga_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "priyaraTa",
+      "k2": "priya/-raTa",
+      "line": "6079",
+      "markupSegments": 2,
+      "input": "priyaratha",
+      "raw": "priyaratha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "puRyaganDa",
+      "k2": "pu/Rya-ganDa",
+      "line": "5532",
+      "markupSegments": 2,
+      "input": "puṇyagandha",
+      "raw": "mahā_gandha_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "pulukAma",
+      "k2": "pulu-kA/ma",
+      "line": "5664",
+      "markupSegments": 2,
+      "input": "pulukāma",
+      "raw": "pulu_kāma_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "puraHstAtf",
+      "k2": "puraH-stAtf/",
+      "line": "5559",
+      "markupSegments": 2,
+      "input": "puraḥstātṛ",
+      "raw": "puraḥstātṛ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "purucetana",
+      "k2": "puru-ce/tana",
+      "line": "5575",
+      "markupSegments": 2,
+      "input": "purucetana",
+      "raw": "purucetana_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "purumIQa",
+      "k2": "puru-mIQa/",
+      "line": "5614",
+      "markupSegments": 2,
+      "input": "purumīḍha",
+      "raw": "purumīḍha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "purunizWA",
+      "k2": "puru-nizWA/",
+      "line": "5593.1",
+      "markupSegments": 2,
+      "input": "puruniṣṭhā",
+      "raw": "puru_niṣṭhā_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "puruprEza",
+      "k2": "puru-prEza/",
+      "line": "5604",
+      "markupSegments": 2,
+      "input": "purupraiṣa",
+      "raw": "puru_praiṣa_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "purupraSasta",
+      "k2": "puru-praSasta/",
+      "line": "5602",
+      "markupSegments": 2,
+      "input": "purupraśasta",
+      "raw": "puru_praśasta_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "puruvAra",
+      "k2": "puru-vA/ra",
+      "line": "5621",
+      "markupSegments": 2,
+      "input": "puruvāra",
+      "raw": "puru_vāra_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "puruvAra",
+      "k2": "puru-vA/ra",
+      "line": "5622",
+      "markupSegments": 2,
+      "input": "puruvāra",
+      "raw": "puru_vāra_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "puruvArapuzwi",
+      "k2": "puruvA/ra-puzwi",
+      "line": "5623",
+      "markupSegments": 2,
+      "input": "puruvārapuṣṭi",
+      "raw": "puru_vāra_puṣṭi_",
+      "status": "ok",
+      "modelSegments": 3
+    },
+    {
+      "surface": "purvanIka",
+      "k2": "purv-anIka",
+      "line": "5662",
+      "markupSegments": 2,
+      "input": "purvanīka",
+      "raw": "___",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "rItiAp",
+      "k2": "rIti/-Ap",
+      "line": "7424.2",
+      "markupSegments": 2,
+      "input": "rītiāp",
+      "raw": "R īti_āp_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "raGuzyad",
+      "k2": "raGu-zya/d",
+      "line": "7230",
+      "markupSegments": 2,
+      "input": "raghuṣyad",
+      "raw": "R aghuṣyat_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "raMsujihva",
+      "k2": "ra/Msu-jihva",
+      "line": "7203",
+      "markupSegments": 2,
+      "input": "raṃsujihva",
+      "raw": "Raṃsu_jihva_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "raRyajit",
+      "k2": "raRya-ji/t",
+      "line": "7246",
+      "markupSegments": 2,
+      "input": "raṇyajit",
+      "raw": "R aṇya_jit_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "raTaprozWa",
+      "k2": "ra/Ta-prozWa",
+      "line": "7265",
+      "markupSegments": 2,
+      "input": "rathaproṣṭha",
+      "raw": "rathaproṣṭha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "rakzohan",
+      "k2": "rakzo-ha/n",
+      "line": "7218",
+      "markupSegments": 2,
+      "input": "rakṣohan",
+      "raw": "R rakṣaḥ_han_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "rudravartani",
+      "k2": "rudra/-vartani",
+      "line": "7440",
+      "markupSegments": 2,
+      "input": "rudravartani",
+      "raw": "Rudravartani_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sADuarya",
+      "k2": "sADu-arya/",
+      "line": "9630.1",
+      "markupSegments": 2,
+      "input": "sādhuarya",
+      "raw": "Ro_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "sAdadyoni",
+      "k2": "sAda/d-yoni",
+      "line": "9616",
+      "markupSegments": 2,
+      "input": "sādadyoni",
+      "raw": "sādat_yoni_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sAmaBft",
+      "k2": "sAma-Bf/t",
+      "line": "9644",
+      "markupSegments": 2,
+      "input": "sāmabhṛt",
+      "raw": "sāmabhṛt_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sUryAvasu",
+      "k2": "sUryA-vasu",
+      "line": "10127",
+      "markupSegments": 2,
+      "input": "sūryāvasu",
+      "raw": "sūryāvasu_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "saDriac",
+      "k2": "saDri/-ac",
+      "line": "9250.1",
+      "markupSegments": 2,
+      "input": "sadhriac",
+      "raw": "R sadhriac_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sadaSva",
+      "k2": "sa/d-aSva",
+      "line": "9213",
+      "markupSegments": 2,
+      "input": "sadaśva",
+      "raw": "R_sadaśva_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sadmabarhis",
+      "k2": "sa/dma-barhis",
+      "line": "9227",
+      "markupSegments": 2,
+      "input": "sadmabarhis",
+      "raw": "sadmabarhiḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sadyasUti",
+      "k2": "sadya/s-Uti",
+      "line": "9229.1",
+      "markupSegments": 2,
+      "input": "sadyasūti",
+      "raw": "sadyasūti_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sadyoarTa",
+      "k2": "sadyo/-arTa",
+      "line": "9231",
+      "markupSegments": 2,
+      "input": "sadyoartha",
+      "raw": "sadyoartha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sagaRa",
+      "k2": "sa/-gaRa",
+      "line": "9118",
+      "markupSegments": 2,
+      "input": "sagaṇa",
+      "raw": "R_sa_gaṇa_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sahUti",
+      "k2": "sa/-hUti",
+      "line": "9595",
+      "markupSegments": 2,
+      "input": "sahūti",
+      "raw": "sahūti_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sahamUra",
+      "k2": "saha/-mUra",
+      "line": "9518",
+      "markupSegments": 2,
+      "input": "sahamūra",
+      "raw": "hamūra_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "sahasraDAra",
+      "k2": "saha/sra-DAra",
+      "line": "9547",
+      "markupSegments": 2,
+      "input": "sahasradhāra",
+      "raw": "hāra_sahasradhāra_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "sahasraSfNga",
+      "k2": "saha/sra-SfNga",
+      "line": "9574",
+      "markupSegments": 2,
+      "input": "sahasraśṛṅga",
+      "raw": "sahasra_śṛṅga_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sahasradA",
+      "k2": "sahasra-dA/",
+      "line": "9541",
+      "markupSegments": 2,
+      "input": "sahasradā",
+      "raw": "7_dā_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "sahasradAvan",
+      "k2": "sahasra-dA/van",
+      "line": "9544",
+      "markupSegments": 2,
+      "input": "sahasradāvan",
+      "raw": "sahasra_dāvan_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sahasrapoza",
+      "k2": "sahasra-poza/",
+      "line": "9553",
+      "markupSegments": 2,
+      "input": "sahasrapoṣa",
+      "raw": "sahasrapoṣa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sahasrapozin",
+      "k2": "sahasra-pozi/n",
+      "line": "9555",
+      "markupSegments": 2,
+      "input": "sahasrapoṣin",
+      "raw": "sahasra_poṣin_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sahavIra",
+      "k2": "saha/-vIra",
+      "line": "9523",
+      "markupSegments": 2,
+      "input": "sahavīra",
+      "raw": "sahavīra_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sakftsU",
+      "k2": "sakft-sU/",
+      "line": "9098",
+      "markupSegments": 2,
+      "input": "sakṛtsū",
+      "raw": "sakṛt_sū_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "samAnadakza",
+      "k2": "samAna/-dakza",
+      "line": "9387",
+      "markupSegments": 2,
+      "input": "samānadakṣa",
+      "raw": "samāna_dakṣa_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "samanyu",
+      "k2": "sa-manyu/",
+      "line": "9373",
+      "markupSegments": 2,
+      "input": "samanyu",
+      "raw": "samanyu_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "samanyu",
+      "k2": "sa/-manyu",
+      "line": "9374",
+      "markupSegments": 2,
+      "input": "samanyu",
+      "raw": "samanyu_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "samaryarAjia",
+      "k2": "samarya-rA/jia",
+      "line": "9381.1",
+      "markupSegments": 2,
+      "input": "samaryarājia",
+      "raw": "Rajia_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "samokas",
+      "k2": "sa/m-okas",
+      "line": "9411",
+      "markupSegments": 2,
+      "input": "samokas",
+      "raw": "samokas_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "samrAjYI",
+      "k2": "sam-rA/jYI",
+      "line": "9426",
+      "markupSegments": 2,
+      "input": "samrājñī",
+      "raw": "samrājñī_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "samudrajyezWa",
+      "k2": "samudra/-jyezWa",
+      "line": "9400",
+      "markupSegments": 2,
+      "input": "samudrajyeṣṭha",
+      "raw": "samudrajyeṣṭha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "samudramINKaya",
+      "k2": "samudram-INKaya",
+      "line": "9402",
+      "markupSegments": 2,
+      "input": "samudramīṅkhaya",
+      "raw": "samudram_īṅkhaya_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "samudravyacas",
+      "k2": "samudra/-vyacas",
+      "line": "9404",
+      "markupSegments": 2,
+      "input": "samudravyacas",
+      "raw": "samudra_vyacaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sanadrayi",
+      "k2": "sana/d-rayi",
+      "line": "9259",
+      "markupSegments": 2,
+      "input": "sanadrayi",
+      "raw": "R sanadrayi_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sanajA",
+      "k2": "sana-jA/",
+      "line": "9257",
+      "markupSegments": 2,
+      "input": "sanajā",
+      "raw": "R sana_jā_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "saptabuDna",
+      "k2": "sapta/-buDna",
+      "line": "9329",
+      "markupSegments": 2,
+      "input": "saptabudhna",
+      "raw": "pta_budhna_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "saptajihva",
+      "k2": "sapta/-jihva",
+      "line": "9320",
+      "markupSegments": 2,
+      "input": "saptajihva",
+      "raw": "saptajihva_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "saptaraSmi",
+      "k2": "sapta/-raSmi",
+      "line": "9332",
+      "markupSegments": 2,
+      "input": "saptaraśmi",
+      "raw": "sapta_raśmi_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "saptavaDri",
+      "k2": "sapta/-vaDri",
+      "line": "9333",
+      "markupSegments": 2,
+      "input": "saptavadhri",
+      "raw": "saptavadhri_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sarvagaRa",
+      "k2": "sa/rva-gaRa",
+      "line": "9463",
+      "markupSegments": 2,
+      "input": "sarvagaṇa",
+      "raw": "sarva_gaṇa_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sarvaraTa",
+      "k2": "sarva-raTa/",
+      "line": "9468",
+      "markupSegments": 2,
+      "input": "sarvaratha",
+      "raw": "sarvaratha_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "satyamanman",
+      "k2": "satya/-manman",
+      "line": "9182",
+      "markupSegments": 2,
+      "input": "satyamanman",
+      "raw": "tya_manman_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "satyamantra",
+      "k2": "satya/-mantra",
+      "line": "9181",
+      "markupSegments": 2,
+      "input": "satyamantra",
+      "raw": "satyamantra_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "satyarADas",
+      "k2": "satya/-rADas",
+      "line": "9186",
+      "markupSegments": 2,
+      "input": "satyarādhas",
+      "raw": "Rādhaḥ_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "satyayaj",
+      "k2": "satya-ya/j",
+      "line": "9184",
+      "markupSegments": 2,
+      "input": "satyayaj",
+      "raw": "tyayac_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "savfD",
+      "k2": "sa-vf/D",
+      "line": "9486",
+      "markupSegments": 2,
+      "input": "savṛdh",
+      "raw": "tavṛdh_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "sinDuvAhas",
+      "k2": "si/nDu-vAhas",
+      "line": "9683",
+      "markupSegments": 2,
+      "input": "sindhuvāhas",
+      "raw": "sindhuvāhaḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "somapati",
+      "k2": "so/ma-pati",
+      "line": "10167",
+      "markupSegments": 2,
+      "input": "somapati",
+      "raw": "R_soma_pati_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "somasutvan",
+      "k2": "soma-su/tvan",
+      "line": "10184",
+      "markupSegments": 2,
+      "input": "somasutvan",
+      "raw": "R_soma_sutvan_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "stanayadama",
+      "k2": "stana/yad-ama",
+      "line": "10217",
+      "markupSegments": 2,
+      "input": "stanayadama",
+      "raw": "stanaya_dama_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "suAyuDa",
+      "k2": "su-AyuDa/",
+      "line": "10510.1",
+      "markupSegments": 2,
+      "input": "suāyudha",
+      "raw": "9_āyudha_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "suSiSvi",
+      "k2": "su/-SiSvi",
+      "line": "9994",
+      "markupSegments": 2,
+      "input": "suśiśvi",
+      "raw": "su_śi_śvi_",
+      "status": "ok",
+      "modelSegments": 3
+    },
+    {
+      "surface": "suaNga",
+      "k2": "su-a/Nga",
+      "line": "10372.1",
+      "markupSegments": 2,
+      "input": "suaṅga",
+      "raw": "tu_aṅga_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "suapatya",
+      "k2": "su-apatya/",
+      "line": "10403.1",
+      "markupSegments": 2,
+      "input": "suapatya",
+      "raw": "su_apatya_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "suaraMkfta",
+      "k2": "su/-araMkfta",
+      "line": "10437.1",
+      "markupSegments": 2,
+      "input": "suaraṃkṛta",
+      "raw": "R su_araṃkṛta_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "suarzA",
+      "k2": "suar-zA/",
+      "line": "10466.1",
+      "markupSegments": 2,
+      "input": "suarṣā",
+      "raw": "9_su_arṣā_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "suarzAti",
+      "k2": "su/ar-zAti",
+      "line": "10467.1",
+      "markupSegments": 2,
+      "input": "suarṣāti",
+      "raw": "ti_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "subanDu",
+      "k2": "su-ba/nDu",
+      "line": "9874",
+      "markupSegments": 2,
+      "input": "subandhu",
+      "raw": "tu_bandhu_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "sudarSa",
+      "k2": "su-da/rSa",
+      "line": "9787",
+      "markupSegments": 2,
+      "input": "sudarśa",
+      "raw": "R sudarśa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sugaBasti",
+      "k2": "su/-gaBasti",
+      "line": "9729",
+      "markupSegments": 2,
+      "input": "sugabhasti",
+      "raw": "su_gabhasti_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sugevfD",
+      "k2": "suge-vf/D",
+      "line": "9737",
+      "markupSegments": 2,
+      "input": "sugevṛdh",
+      "raw": "sugevṛdh_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "suhantu",
+      "k2": "su-ha/ntu",
+      "line": "10064",
+      "markupSegments": 2,
+      "input": "suhantu",
+      "raw": "su_hantu_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sujAta",
+      "k2": "su/-jAta",
+      "line": "9752",
+      "markupSegments": 2,
+      "input": "sujāta",
+      "raw": "sujāta_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sukiMSuka",
+      "k2": "su-kiMSuka/",
+      "line": "9706",
+      "markupSegments": 2,
+      "input": "sukiṃśuka",
+      "raw": "su_kiṃśuka_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sumadgaRa",
+      "k2": "suma/d-gaRa",
+      "line": "9896",
+      "markupSegments": 2,
+      "input": "sumadgaṇa",
+      "raw": "9 sumat_gaṇa_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "sumati",
+      "k2": "su-mati/",
+      "line": "9893",
+      "markupSegments": 2,
+      "input": "sumati",
+      "raw": "Raiḥ_sumati_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "sumeDa",
+      "k2": "su-me/Da",
+      "line": "9916",
+      "markupSegments": 2,
+      "input": "sumedha",
+      "raw": "medha_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "sumitria",
+      "k2": "su-mitria/",
+      "line": "9911.1",
+      "markupSegments": 2,
+      "input": "sumitria",
+      "raw": "sumitria_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "sunITa",
+      "k2": "su-nITa/",
+      "line": "9826",
+      "markupSegments": 2,
+      "input": "sunītha",
+      "raw": "nītha_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "sunizka",
+      "k2": "su-nizka/",
+      "line": "9823",
+      "markupSegments": 2,
+      "input": "suniṣka",
+      "raw": "R su_niṣka_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "supAra",
+      "k2": "su-pAra/",
+      "line": "9837",
+      "markupSegments": 2,
+      "input": "supāra",
+      "raw": "pāra_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "supUrRa",
+      "k2": "su/-pUrRa",
+      "line": "9845",
+      "markupSegments": 2,
+      "input": "supūrṇa",
+      "raw": "su_pūrṇa_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "supaTa",
+      "k2": "su-pa/Ta",
+      "line": "9830",
+      "markupSegments": 2,
+      "input": "supatha",
+      "raw": "tha_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "supalASa",
+      "k2": "su-palASa/",
+      "line": "9835",
+      "markupSegments": 2,
+      "input": "supalāśa",
+      "raw": "R_supalāśa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "supatnI",
+      "k2": "su-pa/tnI",
+      "line": "9828",
+      "markupSegments": 2,
+      "input": "supatnī",
+      "raw": "patnī_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "supeSas",
+      "k2": "su-pe/Sas",
+      "line": "9847",
+      "markupSegments": 2,
+      "input": "supeśas",
+      "raw": "supeśaḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "supiS",
+      "k2": "su-pi/S",
+      "line": "9841",
+      "markupSegments": 2,
+      "input": "supiś",
+      "raw": "R supiś_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "supraRIti",
+      "k2": "su-pra/RIti",
+      "line": "9854",
+      "markupSegments": 2,
+      "input": "supraṇīti",
+      "raw": "su_praṇīti_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "supracetas",
+      "k2": "su-pra/cetas",
+      "line": "9850",
+      "markupSegments": 2,
+      "input": "supracetas",
+      "raw": "pracetaḥ_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "suprajAvat",
+      "k2": "su-prajA/vat",
+      "line": "9852",
+      "markupSegments": 2,
+      "input": "suprajāvat",
+      "raw": "su_prajāvat_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "suprajAvat",
+      "k2": "su-prajA/vat",
+      "line": "11272",
+      "markupSegments": 2,
+      "input": "suprajāvat",
+      "raw": "su_prajāvat_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "suprayAvan",
+      "k2": "su-prayA/van",
+      "line": "9862",
+      "markupSegments": 2,
+      "input": "suprayāvan",
+      "raw": "______",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "suraBi",
+      "k2": "su-raBi/",
+      "line": "9939",
+      "markupSegments": 2,
+      "input": "surabhi",
+      "raw": "Rabhi_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "suraSmi",
+      "k2": "su-raSmi/",
+      "line": "9942",
+      "markupSegments": 2,
+      "input": "suraśmi",
+      "raw": "R_su_raśmi_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "susamubDa",
+      "k2": "su/-samubDa",
+      "line": "10055",
+      "markupSegments": 2,
+      "input": "susamubdha",
+      "raw": "R_su_samubdha_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "susanitA",
+      "k2": "su-sanitA",
+      "line": "10051",
+      "markupSegments": 2,
+      "input": "susanitā",
+      "raw": "R_su_sanitā_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "susanitf",
+      "k2": "su-sanitf",
+      "line": "10052",
+      "markupSegments": 2,
+      "input": "susanitṛ",
+      "raw": "R su_sanitṛ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "susvaru",
+      "k2": "su-sva/ru",
+      "line": "10062",
+      "markupSegments": 2,
+      "input": "susvaru",
+      "raw": "RU_susvaru_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "suvIria",
+      "k2": "su-vI/ria",
+      "line": "9976.1",
+      "markupSegments": 2,
+      "input": "suvīria",
+      "raw": "su_vīria_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "suvasana",
+      "k2": "su-vasana/",
+      "line": "9961",
+      "markupSegments": 2,
+      "input": "suvasana",
+      "raw": "R su_vasana_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "suvfjana",
+      "k2": "su-vfja/na",
+      "line": "9978",
+      "markupSegments": 2,
+      "input": "suvṛjana",
+      "raw": "9_vṛjana_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "suvipra",
+      "k2": "su/-vipra",
+      "line": "9973",
+      "markupSegments": 2,
+      "input": "suvipra",
+      "raw": "su_vipra_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "suvrata",
+      "k2": "su-vrata/",
+      "line": "9984",
+      "markupSegments": 2,
+      "input": "suvrata",
+      "raw": "suvrata_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "suyajYa",
+      "k2": "su-yajYa/",
+      "line": "9927",
+      "markupSegments": 2,
+      "input": "suyajña",
+      "raw": "su_yajña_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "suzAraTi",
+      "k2": "su-zAraTi/",
+      "line": "10020",
+      "markupSegments": 2,
+      "input": "suṣārathi",
+      "raw": "9 suṣārathi_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "svAvfj",
+      "k2": "sv-A/vfj",
+      "line": "10513",
+      "markupSegments": 2,
+      "input": "svāvṛj",
+      "raw": "puru_āvṛj_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "svaDApati",
+      "k2": "svaDA-pati",
+      "line": "10386",
+      "markupSegments": 2,
+      "input": "svadhāpati",
+      "raw": "R svadhā_pati_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "svaSocis",
+      "k2": "sva/-Socis",
+      "line": "10474",
+      "markupSegments": 2,
+      "input": "svaśocis",
+      "raw": "sva_śociḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "sva^rRf",
+      "k2": "sva^r-Rf",
+      "line": "10456",
+      "markupSegments": 2,
+      "input": "sva^rṇṛ",
+      "raw": "pū_r_ṇṛ_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "svagUrta",
+      "k2": "sva/-gUrta",
+      "line": "10369",
+      "markupSegments": 2,
+      "input": "svagūrta",
+      "raw": "sva_gūrta_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "svarAj",
+      "k2": "sva-rA/j",
+      "line": "10440",
+      "markupSegments": 2,
+      "input": "svarāj",
+      "raw": "svarāj_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "svarAjia",
+      "k2": "sva-rA/jia",
+      "line": "10441.1",
+      "markupSegments": 2,
+      "input": "svarājia",
+      "raw": "Rājia_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "svayAvan",
+      "k2": "sva-yAvan",
+      "line": "10427",
+      "markupSegments": 2,
+      "input": "svayāvan",
+      "raw": "sva_yāvan_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "svayata",
+      "k2": "sva/-yata",
+      "line": "10422",
+      "markupSegments": 2,
+      "input": "svayata",
+      "raw": "ta_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "tIvrasut",
+      "k2": "tIvra-su/t",
+      "line": "3772",
+      "markupSegments": 2,
+      "input": "tīvrasut",
+      "raw": "tīvra_sut_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "tadapas",
+      "k2": "ta/d-apas",
+      "line": "3629",
+      "markupSegments": 2,
+      "input": "tadapas",
+      "raw": "tad_apaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "tadokas",
+      "k2": "ta/d-okas",
+      "line": "3632",
+      "markupSegments": 2,
+      "input": "tadokas",
+      "raw": "tad_okaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "tamohan",
+      "k2": "tamo-ha/n",
+      "line": "3683",
+      "markupSegments": 2,
+      "input": "tamohan",
+      "raw": "tamaḥ_han_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "tapurjamBa",
+      "k2": "ta/pur-jamBa",
+      "line": "3669",
+      "markupSegments": 2,
+      "input": "tapurjambha",
+      "raw": "tapurjambha_tapurjambha_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "tigmaSfNga",
+      "k2": "tigma/-SfNga",
+      "line": "3749",
+      "markupSegments": 2,
+      "input": "tigmaśṛṅga",
+      "raw": "tigmaśṛṅga_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "tigmamUrDan",
+      "k2": "tigma/-mUrDan",
+      "line": "3748",
+      "markupSegments": 2,
+      "input": "tigmamūrdhan",
+      "raw": "tigma_mūrdhan_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "triambaka",
+      "k2": "tri/-ambaka",
+      "line": "3975.1",
+      "markupSegments": 2,
+      "input": "triambaka",
+      "raw": "triambaka_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "triaruRa",
+      "k2": "tri/-aruRa",
+      "line": "3976.1",
+      "markupSegments": 2,
+      "input": "triaruṇa",
+      "raw": "tri_aruṇa_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "triavi",
+      "k2": "tri-a/vi",
+      "line": "3978.1",
+      "markupSegments": 2,
+      "input": "triavi",
+      "raw": "tri_avi_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "turAzAh",
+      "k2": "turA-zA/h",
+      "line": "3805",
+      "markupSegments": 2,
+      "input": "turāṣāh",
+      "raw": "turāṣāh_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "turagAtu",
+      "k2": "tura/-gAtu",
+      "line": "3798",
+      "markupSegments": 2,
+      "input": "turagātu",
+      "raw": "R a_gātu_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "turayA",
+      "k2": "tura-yA/",
+      "line": "3803",
+      "markupSegments": 2,
+      "input": "turayā",
+      "raw": "R_",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "tuviojas",
+      "k2": "tuvi-o/jas",
+      "line": "3851.1",
+      "markupSegments": 2,
+      "input": "tuviojas",
+      "raw": "tuvi_ojaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "tvezadyumna",
+      "k2": "tveza/-dyumna",
+      "line": "4014",
+      "markupSegments": 2,
+      "input": "tveṣadyumna",
+      "raw": "tveṣa_dyumna_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "tvezapratIka",
+      "k2": "tveza/-pratIka",
+      "line": "4016",
+      "markupSegments": 2,
+      "input": "tveṣapratīka",
+      "raw": "tveṣa_pratīka_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "udavraja",
+      "k2": "uda/-vraja",
+      "line": "1914",
+      "markupSegments": 2,
+      "input": "udavraja",
+      "raw": "udavraja_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ukTaSas",
+      "k2": "ukTa-Sa/s",
+      "line": "1850",
+      "markupSegments": 2,
+      "input": "ukthaśas",
+      "raw": "ukthaśas_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "ukTaarka",
+      "k2": "ukTa-arka/",
+      "line": "1852.1",
+      "markupSegments": 2,
+      "input": "ukthaarka",
+      "raw": "Ra_uktha_arka_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "ulokakft",
+      "k2": "uloka-kf/t",
+      "line": "7532.1",
+      "markupSegments": 2,
+      "input": "ulokakṛt",
+      "raw": "R ulokakṛt_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "upakakza",
+      "k2": "upa-kakza/",
+      "line": "1934",
+      "markupSegments": 2,
+      "input": "upakakṣa",
+      "raw": "upakakṣa_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "urujrayas",
+      "k2": "uru-jra/yas",
+      "line": "2035",
+      "markupSegments": 2,
+      "input": "urujrayas",
+      "raw": "R uru_jrayas_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "urujri",
+      "k2": "uru-jri/",
+      "line": "2036",
+      "markupSegments": 2,
+      "input": "urujri",
+      "raw": "R __",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "uruvyac",
+      "k2": "uru-vya/c",
+      "line": "2042",
+      "markupSegments": 2,
+      "input": "uruvyac",
+      "raw": "R uruvyac_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "uttAnapad",
+      "k2": "uttAna/-pad",
+      "line": "1886",
+      "markupSegments": 2,
+      "input": "uttānapad",
+      "raw": "R uttānapad_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "vAjaBarman",
+      "k2": "vAja-Barman",
+      "line": "7865",
+      "markupSegments": 2,
+      "input": "vājabharman",
+      "raw": "man_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "vAjaSruta",
+      "k2": "vA/ja-Sruta",
+      "line": "7872",
+      "markupSegments": 2,
+      "input": "vājaśruta",
+      "raw": "vāja_śruta_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vAjadraviRas",
+      "k2": "vA/ja-draviRas",
+      "line": "7857",
+      "markupSegments": 2,
+      "input": "vājadraviṇas",
+      "raw": "vāja_draviṇaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vAjakftya",
+      "k2": "vAja-kf/tya",
+      "line": "7852",
+      "markupSegments": 2,
+      "input": "vājakṛtya",
+      "raw": "vāja_kṛtya_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vAjasAti",
+      "k2": "vA/ja-sAti",
+      "line": "7875",
+      "markupSegments": 2,
+      "input": "vājasāti",
+      "raw": "9_sāti_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "vAjinIvasu",
+      "k2": "vAji/nI-vasu",
+      "line": "7880",
+      "markupSegments": 2,
+      "input": "vājinīvasu",
+      "raw": "m_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "vAjinIvasu",
+      "k2": "vAji/nI-vasu",
+      "line": "11213",
+      "markupSegments": 2,
+      "input": "vājinīvasu",
+      "raw": "m_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "vAmadeva",
+      "k2": "vAma/-deva",
+      "line": "7910",
+      "markupSegments": 2,
+      "input": "vāmadeva",
+      "raw": "vāmadeva_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "vAyugopa",
+      "k2": "vAyu/-gopa",
+      "line": "7919",
+      "markupSegments": 2,
+      "input": "vāyugopa",
+      "raw": "________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "vAyukeSa",
+      "k2": "vAyu/-keSa",
+      "line": "7918",
+      "markupSegments": 2,
+      "input": "vāyukeśa",
+      "raw": "______",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "vIquharas",
+      "k2": "vIqu/-haras",
+      "line": "8300",
+      "markupSegments": 2,
+      "input": "vīḍuharas",
+      "raw": "R vīḍu_haras_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vIqupARi",
+      "k2": "vIqu/-pARi",
+      "line": "8299",
+      "markupSegments": 2,
+      "input": "vīḍupāṇi",
+      "raw": "vīḍu_pāṇi_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vIrapastya",
+      "k2": "vIra/-pastya",
+      "line": "8318",
+      "markupSegments": 2,
+      "input": "vīrapastya",
+      "raw": "_______",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "vItihotra",
+      "k2": "vIti/-hotra",
+      "line": "8310",
+      "markupSegments": 2,
+      "input": "vītihotra",
+      "raw": "_________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "vItirADas",
+      "k2": "vIti/-rADas",
+      "line": "8309",
+      "markupSegments": 2,
+      "input": "vītirādhas",
+      "raw": "____",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "vacovid",
+      "k2": "vaco-vi/d",
+      "line": "7577",
+      "markupSegments": 2,
+      "input": "vacovid",
+      "raw": "acaḥ_vid_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "vanaMkaraRa",
+      "k2": "vanaM-ka/raRa",
+      "line": "7618",
+      "markupSegments": 2,
+      "input": "vanaṃkaraṇa",
+      "raw": "manaṃkaraṇa_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "vanad",
+      "k2": "van-a/d",
+      "line": "7619",
+      "markupSegments": 2,
+      "input": "vanad",
+      "raw": "R vanat_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "vanad",
+      "k2": "van-a/d",
+      "line": "12537",
+      "markupSegments": 2,
+      "input": "vanad",
+      "raw": "R vanat_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "vandanaSrut",
+      "k2": "vandana-Srut",
+      "line": "7651",
+      "markupSegments": 2,
+      "input": "vandanaśrut",
+      "raw": "________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "varzizWakzatra",
+      "k2": "va/rzizWa-kzatra",
+      "line": "7758",
+      "markupSegments": 2,
+      "input": "varṣiṣṭhakṣatra",
+      "raw": "R varṣiṣṭha_kṣatra_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vasuDiti",
+      "k2": "va/su-Diti",
+      "line": "7807",
+      "markupSegments": 2,
+      "input": "vasudhiti",
+      "raw": "R vasu_dhiti_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vasuvani",
+      "k2": "vasu-va/ni",
+      "line": "7813",
+      "markupSegments": 2,
+      "input": "vasuvani",
+      "raw": "___________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "vayovfD",
+      "k2": "vayo-vf/D",
+      "line": "7694",
+      "markupSegments": 2,
+      "input": "vayovṛdh",
+      "raw": "vayaḥ_vṛdh_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vfTAzAh",
+      "k2": "vfTA-zA/h",
+      "line": "8376.1",
+      "markupSegments": 2,
+      "input": "vṛthāṣāh",
+      "raw": "9_vṛthāṣāh_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "vfdDamahas",
+      "k2": "vfdDa/-mahas",
+      "line": "8377",
+      "markupSegments": 2,
+      "input": "vṛddhamahas",
+      "raw": "R vṛddha_mahas_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vfdDavayas",
+      "k2": "vfdDa/-vayas",
+      "line": "8378",
+      "markupSegments": 2,
+      "input": "vṛddhavayas",
+      "raw": "R vṛddha_vayaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vftaMcaya",
+      "k2": "vftaM-caya/",
+      "line": "8363",
+      "markupSegments": 2,
+      "input": "vṛtaṃcaya",
+      "raw": "yaḥ_vṛtaṃcaya_",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "vfzAkapi",
+      "k2": "vfzA/-kapi",
+      "line": "8434",
+      "markupSegments": 2,
+      "input": "vṛṣākapi",
+      "raw": "vṛṣākapi_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "vfzAyuD",
+      "k2": "vfzA-yu/D",
+      "line": "8439",
+      "markupSegments": 2,
+      "input": "vṛṣāyudh",
+      "raw": "______",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "vfzaSuzma",
+      "k2": "vf/za-Suzma",
+      "line": "8431",
+      "markupSegments": 2,
+      "input": "vṛṣaśuṣma",
+      "raw": "9_vṛṣa_śuṣma_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "vfzanAman",
+      "k2": "vf/za-nA/man",
+      "line": "8410",
+      "markupSegments": 2,
+      "input": "vṛṣanāman",
+      "raw": "vṛṣa_nāman_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "vfzapARi",
+      "k2": "vf/za-pARi",
+      "line": "8415",
+      "markupSegments": 2,
+      "input": "vṛṣapāṇi",
+      "raw": "R vṛṣa_pāṇi_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "viSvagUrti",
+      "k2": "viSva-gUrti",
+      "line": "8157",
+      "markupSegments": 2,
+      "input": "viśvagūrti",
+      "raw": "_________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "viSvajU",
+      "k2": "viSva-jU/",
+      "line": "8163",
+      "markupSegments": 2,
+      "input": "viśvajū",
+      "raw": "R_viśvajū_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "viSvakarman",
+      "k2": "viSva/-karman",
+      "line": "8154",
+      "markupSegments": 2,
+      "input": "viśvakarman",
+      "raw": "man_viśvakarman_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "viSvaminva",
+      "k2": "viSvam-inva/",
+      "line": "8199",
+      "markupSegments": 2,
+      "input": "viśvaminva",
+      "raw": "______",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "viSvavArya",
+      "k2": "viSva/-vArya",
+      "line": "8204",
+      "markupSegments": 2,
+      "input": "viśvavārya",
+      "raw": "____________",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "viaDvan",
+      "k2": "vi/-aDvan",
+      "line": "8517.1",
+      "markupSegments": 2,
+      "input": "viadhvan",
+      "raw": "adhvan_",
+      "status": "truncated",
+      "modelSegments": null
+    },
+    {
+      "surface": "vidvezas",
+      "k2": "vi/-dvezas",
+      "line": "8027",
+      "markupSegments": 2,
+      "input": "vidveṣas",
+      "raw": "__",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "vimanyu",
+      "k2": "vi/-manyu",
+      "line": "8100",
+      "markupSegments": 2,
+      "input": "vimanyu",
+      "raw": "______",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "vipakzas",
+      "k2": "vi/-pakzas",
+      "line": "8045",
+      "markupSegments": 2,
+      "input": "vipakṣas",
+      "raw": "vipakṣaḥ_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "visfzwaDena",
+      "k2": "vi/sfzwa-Dena",
+      "line": "8277",
+      "markupSegments": 2,
+      "input": "visṛṣṭadhena",
+      "raw": "visṛṣṭadhena_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "visfzwarAti",
+      "k2": "vi/sfzwa-rAti",
+      "line": "8278",
+      "markupSegments": 2,
+      "input": "visṛṣṭarāti",
+      "raw": "visṛṣṭa_rāti_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "yAmahU",
+      "k2": "yAma-hU/",
+      "line": "7116",
+      "markupSegments": 2,
+      "input": "yāmahū",
+      "raw": "R̤",
+      "status": "garbage",
+      "modelSegments": null
+    },
+    {
+      "surface": "yAtayajjana",
+      "k2": "yAtaya/j-jana",
+      "line": "7096",
+      "markupSegments": 2,
+      "input": "yātayajjana",
+      "raw": "R_yātayat_jana_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "yAvayaddvezas",
+      "k2": "yAvaya/d-dvezas",
+      "line": "7122",
+      "markupSegments": 2,
+      "input": "yāvayaddveṣas",
+      "raw": "yāvayat_dveṣaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "yajYaprI",
+      "k2": "yajYa-prI/",
+      "line": "7009",
+      "markupSegments": 2,
+      "input": "yajñaprī",
+      "raw": "___",
+      "status": "empty",
+      "modelSegments": null
+    },
+    {
+      "surface": "yajYasAc",
+      "k2": "yajYa-sAc",
+      "line": "7017",
+      "markupSegments": 2,
+      "input": "yajñasāc",
+      "raw": "R yajñasāc_",
+      "status": "ok",
+      "modelSegments": 1
+    },
+    {
+      "surface": "yajYavAhas",
+      "k2": "yajYa/-vAhas",
+      "line": "7014",
+      "markupSegments": 2,
+      "input": "yajñavāhas",
+      "raw": "R yajña_vāhaḥ_",
+      "status": "ok",
+      "modelSegments": 2
+    },
+    {
+      "surface": "yuvadrik",
+      "k2": "yuva-dri/-k",
+      "line": "7154",
+      "markupSegments": 3,
+      "input": "yuvadrik",
+      "raw": "R yuvat_rik_",
+      "status": "ok",
+      "modelSegments": 2
+    }
+  ]
+}
