@@ -1,5 +1,5 @@
 {
- "handoff": "H6992 (S1 of 5) + residual",
+ "handoff": "H6992 (S1 of 5)",
  "source": {
   "title": "An Encyclopaedic Dictionary of Sanskrit on Historical Principles, vol. 1 (A. M. Ghatage, ed., Deccan College, Poona 1976)",
   "section": "Index of Works Used in the Dictionary",
@@ -11,7 +11,7 @@
   "leaf_count": 39,
   "archive_org_identifier": "mAAY_an-encyclopaedic-dictionary-of-sanskrit-vol-1-critically-edited-by-a-m-ghatage-1",
   "page_image_api": "https://archive.org/download/{id}/page/n{leaf}.jpg",
-  "image_size": "2030x2753"
+  "image_size": "2030x2738"
  },
  "schema": [
   "page",
@@ -32,131 +32,219 @@
  "pages_laid_out": 39,
  "pages_transcribed": {
   "LXXXIX": 48,
-  "XC": 52,
+  "XC": 53,
   "XCI": 56,
-  "XCII": 55
+  "XCII": 55,
+  "XCIII": 48,
+  "XCIV": 48,
+  "XCV": 55,
+  "XCVI": 54,
+  "XCVII": 56,
+  "XCVIII": 49,
+  "XCIX": 51,
+  "C": 49,
+  "CI": 50,
+  "CII": 52,
+  "CIII": 50,
+  "CIV": 57,
+  "CV": 50,
+  "CVI": 54,
+  "CVII": 55,
+  "CVIII": 50,
+  "CIX": 52,
+  "CX": 50,
+  "CXI": 52,
+  "CXII": 54,
+  "CXIII": 50,
+  "CXIV": 55,
+  "CXV": 54,
+  "CXVI": 50,
+  "CXVII": 53,
+  "CXVIII": 53,
+  "CXIX": 48,
+  "CXX": 49,
+  "CXXI": 50,
+  "CXXII": 53,
+  "CXXIII": 54,
+  "CXXIV": 56,
+  "CXXV": 52,
+  "CXXVI": 53,
+  "CXXVII": 53
  },
- "row_total_verified": 211,
- "row_total_full": null,
- "row_total_note": "No full-Index total is published until every one of the 39 pages is transcribed; the mission rejects extrapolating a total from a partial layout.",
- "blank_siglum": 32,
+ "row_total_verified": 2031,
+ "row_total_full": 2031,
+ "row_total_note": "Every printed row of pp. LXXXIX-CXXVII is transcribed from the page images; no total is extrapolated.",
+ "blank_siglum": 409,
  "subject_subcodes": {
-  "1": 2,
-  "2": 1,
-  "4.1": 4,
-  "4.2": 22,
-  "5": 15,
-  "6": 4,
-  "7": 1,
-  "9": 3,
-  "11": 3,
-  "14": 8,
-  "15": 1,
-  "16": 3,
-  "17": 2,
-  "17.3": 1,
-  "18": 6,
-  "19": 4,
-  "21": 1,
-  "22": 2,
-  "23": 13,
-  "24": 1,
-  "26": 2,
-  "27.1": 8,
-  "27.3": 4,
-  "27.4": 2,
-  "27.7": 2,
-  "29": 3,
-  "32": 6,
-  "33": 1,
-  "35": 2,
-  "36": 5,
-  "38": 1,
-  "39.1": 3,
-  "41": 1,
-  "42": 8,
-  "43": 1,
-  "45": 2,
-  "46": 1,
-  "48": 14,
-  "49": 2,
-  "50": 1,
-  "52": 2,
-  "53": 1,
-  "54.1": 7,
-  "54.2": 1,
-  "54.3": 1,
-  "54.4": 7,
-  "54.5": 4,
-  "56": 1,
-  "58": 3,
-  "59": 10,
-  "60": 1,
-  "61": 1
+  "1": 17,
+  "10": 3,
+  "11": 14,
+  "12": 6,
+  "13": 9,
+  "14": 52,
+  "15": 31,
+  "16": 66,
+  "17": 39,
+  "17.2": 2,
+  "17.3": 2,
+  "18": 63,
+  "19": 46,
+  "2": 28,
+  "20": 30,
+  "21": 11,
+  "21.1": 1,
+  "22": 21,
+  "23": 56,
+  "24": 4,
+  "25": 9,
+  "26": 41,
+  "27": 2,
+  "27.1": 93,
+  "27.2": 1,
+  "27.3": 25,
+  "27.4": 36,
+  "27.5": 5,
+  "27.6": 4,
+  "27.7": 3,
+  "27.8": 2,
+  "27.9": 1,
+  "28": 11,
+  "29": 20,
+  "3": 5,
+  "30": 11,
+  "31": 12,
+  "32": 39,
+  "33": 10,
+  "34": 14,
+  "35": 8,
+  "36": 46,
+  "37": 11,
+  "38": 11,
+  "39": 1,
+  "39.1": 7,
+  "39.2": 2,
+  "39.3": 2,
+  "4.1": 19,
+  "4.2": 175,
+  "40": 9,
+  "41": 8,
+  "42": 41,
+  "43": 19,
+  "44": 4,
+  "45": 29,
+  "46": 20,
+  "47": 4,
+  "48": 77,
+  "49": 10,
+  "5": 78,
+  "50": 5,
+  "51": 12,
+  "52": 74,
+  "53": 29,
+  "54": 2,
+  "54.1": 40,
+  "54.2": 6,
+  "54.3": 10,
+  "54.4": 91,
+  "54.5": 66,
+  "55": 11,
+  "56": 23,
+  "57": 5,
+  "58": 22,
+  "59": 77,
+  "6": 30,
+  "60": 18,
+  "61": 7,
+  "7": 3,
+  "7.2": 1,
+  "8": 4,
+  "9": 39
  },
- "method": "vision transcription of the archive.org page images; IAST via indic_transliteration; page fragments merged by scripts/pd_index_works_build.py; _djvu.txt used only as a structural skeleton and an OCR cross-check on the Latin columns",
  "subject_integer_classes": {
-  "1": 2,
-  "2": 1,
-  "4": 26,
-  "5": 15,
-  "6": 4,
-  "7": 1,
-  "9": 3,
-  "11": 3,
-  "14": 8,
-  "15": 1,
-  "16": 3,
-  "17": 3,
-  "18": 6,
-  "19": 4,
-  "21": 1,
-  "22": 2,
-  "23": 13,
-  "24": 1,
-  "26": 2,
-  "27": 16,
-  "29": 3,
-  "32": 6,
-  "33": 1,
-  "35": 2,
-  "36": 5,
-  "38": 1,
-  "39": 3,
-  "41": 1,
-  "42": 8,
-  "43": 1,
-  "45": 2,
-  "46": 1,
-  "48": 14,
-  "49": 2,
-  "50": 1,
-  "52": 2,
-  "53": 1,
-  "54": 20,
-  "56": 1,
-  "58": 3,
-  "59": 10,
-  "60": 1,
-  "61": 1
+  "1": 17,
+  "10": 3,
+  "11": 14,
+  "12": 6,
+  "13": 9,
+  "14": 52,
+  "15": 31,
+  "16": 66,
+  "17": 43,
+  "18": 63,
+  "19": 46,
+  "2": 28,
+  "20": 30,
+  "21": 12,
+  "22": 21,
+  "23": 56,
+  "24": 4,
+  "25": 9,
+  "26": 41,
+  "27": 172,
+  "28": 11,
+  "29": 20,
+  "3": 5,
+  "30": 11,
+  "31": 12,
+  "32": 39,
+  "33": 10,
+  "34": 14,
+  "35": 8,
+  "36": 46,
+  "37": 11,
+  "38": 11,
+  "39": 12,
+  "4": 194,
+  "40": 9,
+  "41": 8,
+  "42": 41,
+  "43": 19,
+  "44": 4,
+  "45": 29,
+  "46": 20,
+  "47": 4,
+  "48": 77,
+  "49": 10,
+  "5": 78,
+  "50": 5,
+  "51": 12,
+  "52": 74,
+  "53": 29,
+  "54": 215,
+  "55": 11,
+  "56": 23,
+  "57": 5,
+  "58": 22,
+  "59": 77,
+  "6": 30,
+  "60": 18,
+  "61": 7,
+  "7": 4,
+  "8": 4,
+  "9": 39
  },
  "siglum_reconciliation": {
-  "index_rows": 211,
-  "with_siglum": 179,
+  "index_rows": 2031,
+  "with_siglum": 1622,
   "status": {
-   "index_only": 10,
-   "in_families_only": 64,
-   "in_both": 100,
-   "index_blank": 32,
-   "in_aob_only": 5,
-   "aob_only": 1301
+   "index_only": 87,
+   "in_families_only": 554,
+   "in_both": 936,
+   "index_blank": 409,
+   "in_aob_only": 45,
+   "aob_only": 497
   },
-  "delta_rows": 1512
+  "delta_rows": 2528,
+  "aob_only_rows": 497,
+  "aob_entries_input": 1444,
+  "aob_unique_sigla": 1403,
+  "siglum_families_unique": 3569
  },
- "confidence": "All 211 committed rows are vision-transcribed (confidence=vision). No OCR-draft row is committed.",
+ "method": "Vision transcription from the 2030x2738 page images; Devanagari→IAST by indic_transliteration (IAST scheme); column order and sigla read from the printed page, not from _djvu.txt (whose Devanagari is unusable).",
+ "confidence": "All 48 committed rows are vision-transcribed (confidence=vision). No OCR-draft rows are committed.",
  "backlog": {
-  "pages": "XCIII, XCIV, XCV, XCVI, XCVII, XCVIII, XCIX, C, CI, CII, CIII, CIV, CV, CVI, CVII, CVIII, CIX, CX, CXI, CXII, CXIII, CXIV, CXV, CXVI, CXVII, CXVIII, CXIX, CXX, CXXI, CXXII, CXXIII, CXXIV, CXXV, CXXVI, CXXVII (35 pages)",
-  "scripts": "scripts/pd_index_works_build.py ingests one page fragment per page (page row title_deva author_deva nature_deva subject_code subject_label siglum qualifier) and regenerates this table, the page inventory, the delta and this summary."
+  "pages": "none",
+  "scripts": "scripts/build_pd_index_works.py rebuilds the table from shards"
  },
  "pages_manifest": [
   {
@@ -182,177 +270,177 @@
   {
    "leaf": 102,
    "printed_page": "XCIII",
-   "status": "pending"
+   "status": "vision"
   },
   {
    "leaf": 103,
    "printed_page": "XCIV",
-   "status": "pending"
+   "status": "vision"
   },
   {
    "leaf": 104,
    "printed_page": "XCV",
-   "status": "pending"
+   "status": "vision"
   },
   {
    "leaf": 105,
    "printed_page": "XCVI",
-   "status": "pending"
+   "status": "vision"
   },
   {
    "leaf": 106,
    "printed_page": "XCVII",
-   "status": "pending"
+   "status": "vision"
   },
   {
    "leaf": 107,
    "printed_page": "XCVIII",
-   "status": "pending"
+   "status": "vision"
   },
   {
    "leaf": 108,
    "printed_page": "XCIX",
-   "status": "pending"
-  },
-  {
-   "leaf": 109,
-   "printed_page": "C",
-   "status": "pending"
-  },
-  {
-   "leaf": 110,
-   "printed_page": "CI",
-   "status": "pending"
+   "status": "vision"
   },
   {
    "leaf": 111,
-   "printed_page": "CII",
-   "status": "pending"
+   "printed_page": "C",
+   "status": "vision"
   },
   {
    "leaf": 112,
-   "printed_page": "CIII",
-   "status": "pending"
+   "printed_page": "CI",
+   "status": "vision"
   },
   {
    "leaf": 113,
-   "printed_page": "CIV",
-   "status": "pending"
+   "printed_page": "CII",
+   "status": "vision"
   },
   {
    "leaf": 114,
-   "printed_page": "CV",
-   "status": "pending"
+   "printed_page": "CIII",
+   "status": "vision"
   },
   {
    "leaf": 115,
-   "printed_page": "CVI",
-   "status": "pending"
+   "printed_page": "CIV",
+   "status": "vision"
   },
   {
    "leaf": 116,
-   "printed_page": "CVII",
-   "status": "pending"
+   "printed_page": "CV",
+   "status": "vision"
   },
   {
    "leaf": 117,
-   "printed_page": "CVIII",
-   "status": "pending"
+   "printed_page": "CVI",
+   "status": "vision"
   },
   {
    "leaf": 118,
-   "printed_page": "CIX",
-   "status": "pending"
+   "printed_page": "CVII",
+   "status": "vision"
   },
   {
    "leaf": 119,
-   "printed_page": "CX",
-   "status": "pending"
+   "printed_page": "CVIII",
+   "status": "vision"
   },
   {
    "leaf": 120,
-   "printed_page": "CXI",
-   "status": "pending"
+   "printed_page": "CIX",
+   "status": "vision"
   },
   {
    "leaf": 121,
-   "printed_page": "CXII",
-   "status": "pending"
+   "printed_page": "CX",
+   "status": "vision"
   },
   {
    "leaf": 122,
-   "printed_page": "CXIII",
-   "status": "pending"
+   "printed_page": "CXI",
+   "status": "vision"
   },
   {
    "leaf": 123,
-   "printed_page": "CXIV",
-   "status": "pending"
+   "printed_page": "CXII",
+   "status": "vision"
   },
   {
    "leaf": 124,
-   "printed_page": "CXV",
-   "status": "pending"
+   "printed_page": "CXIII",
+   "status": "vision"
   },
   {
    "leaf": 125,
-   "printed_page": "CXVI",
-   "status": "pending"
+   "printed_page": "CXIV",
+   "status": "vision"
   },
   {
    "leaf": 126,
-   "printed_page": "CXVII",
-   "status": "pending"
+   "printed_page": "CXV",
+   "status": "vision"
   },
   {
    "leaf": 127,
-   "printed_page": "CXVIII",
-   "status": "pending"
+   "printed_page": "CXVI",
+   "status": "vision"
   },
   {
    "leaf": 128,
-   "printed_page": "CXIX",
-   "status": "pending"
+   "printed_page": "CXVII",
+   "status": "vision"
   },
   {
    "leaf": 129,
-   "printed_page": "CXX",
-   "status": "pending"
+   "printed_page": "CXVIII",
+   "status": "vision"
   },
   {
    "leaf": 130,
-   "printed_page": "CXXI",
-   "status": "pending"
+   "printed_page": "CXIX",
+   "status": "vision"
   },
   {
    "leaf": 131,
-   "printed_page": "CXXII",
-   "status": "pending"
+   "printed_page": "CXX",
+   "status": "vision"
   },
   {
    "leaf": 132,
-   "printed_page": "CXXIII",
-   "status": "pending"
+   "printed_page": "CXXI",
+   "status": "vision"
   },
   {
    "leaf": 133,
-   "printed_page": "CXXIV",
-   "status": "pending"
+   "printed_page": "CXXII",
+   "status": "vision"
   },
   {
    "leaf": 134,
-   "printed_page": "CXXV",
-   "status": "pending"
+   "printed_page": "CXXIII",
+   "status": "vision"
   },
   {
    "leaf": 135,
-   "printed_page": "CXXVI",
-   "status": "pending"
+   "printed_page": "CXXIV",
+   "status": "vision"
   },
   {
    "leaf": 136,
+   "printed_page": "CXXV",
+   "status": "vision"
+  },
+  {
+   "leaf": 137,
+   "printed_page": "CXXVI",
+   "status": "vision"
+  },
+  {
+   "leaf": 138,
    "printed_page": "CXXVII",
-   "status": "pending"
+   "status": "vision"
   }
  ]
 }
