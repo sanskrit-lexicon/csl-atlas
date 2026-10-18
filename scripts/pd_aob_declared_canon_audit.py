@@ -152,7 +152,11 @@ def measure(atlas: Path, aob: Path) -> dict:
     lines = read_text(aob).splitlines()
     census = count_lines(lines)
 
-    recorded_pass1 = int(metrics.get("n_declared_aob_rows_edition_level", 0))
+    # the pass-1 point is a HISTORICAL value and must not be read off the live
+    # n_declared_aob_rows_edition_level field: since H6932 (18-10-2026) that field carries the
+    # ruled denominator (1,423 usable inventory entries), not the pass-1 parse (1,419)
+    recorded_pass1 = int(metrics.get("n_declared_aob_rows_edition_level_pass1_point",
+                                    metrics.get("n_declared_aob_rows_edition_level", 0)))
     print_census = 1464  # «1 464 книг», Indian Express, quoted at pass-1
     reparse_raw = 1517   # scripts-h6707/parse_aob.py on the same OCR (Uprava papers/A68)
     structural = census["entry_like_lines_r1"]

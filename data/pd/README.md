@@ -78,13 +78,18 @@ confirmation 78.94 % → 87.26 %.
 - Siglum→title expansion is adjudicated by hand for the covered set, not sourced from PD's
   printed abbreviation list (a parked follow-up). `Kāśi.` and `Loc.` carry documented
   ambiguities, immaterial to the headline (report §6).
-- **The declared-canon denominator is the central estimate 1,476 entry rows — 8.0 %, band 7.8–8.3 % (H6923 audit + MG ruling, applied H6933, 17-10-2026).** Metric 2's older
-  1,419 is an *entry* count from the pass-1 parse, not the row count of any committed table;
-  the committed re-parse gives 1,517 raw entries and the printed OCR supports 1,476 entry-like
-  lines, so 118 / N = 7.78–8.32 % and the paper quotes 118/1,476 = 7.99 % (8.0 %, one in
-  twelve and a half). `pd_aob_declared_works.tsv` (1,118 edition rows) is a
-  *floor*: the pass-2 clean filter discarded 556 OCR-merged `Siglum Title` entry lines, so
-  118 / 1,118 = 10.55 % overstates coverage and must not be quoted as the declared canon.
-  Audit: [pd_aob_declared_canon_audit.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_declared_canon_audit.json).
+- **The declared-canon denominator is 1,423 usable entry rows — 8.29 %, quoted 8.3 % (H6932 reconciliation + MG ruling 18-10-2026, superseding the 17-10 H6923 estimate of 1,476).**
+  The count is the landed entry inventory `pd_aob_entries.tsv` (H6720): 1,430 parsed rows
+  less the 7 the table itself flags `junk`. The old 1,476 was R1 *entry-like printed lines*,
+  which over-counts 165 dotless OCR wrap fragments and misses 119 real entries —
+  **1,476 − 165 + 119 = 1,430**, an identity asserted by
+  `python3 scripts/pd_aob_declared_entries.py --selftest`. 1,419 (pass-1) is unreproducible,
+  1,464 (printed census) is an external quote, 1,517 (pass-2 raw re-parse) is superseded;
+  the old 1,419–1,517 bracket survives as provenance only. `pd_aob_declared_works.tsv`
+  (1,118 edition rows) is a *floor*: the pass-2 clean filter discarded 556 OCR-merged
+  `Siglum Title` entry lines, so 118 / 1,118 = 10.55 % overstates coverage and must not be
+  quoted as the declared canon.
+  Audit: [pd_aob_denominator_reconciliation.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_denominator_reconciliation.json) ·
+  [pd_aob_declared_canon_audit.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_declared_canon_audit.json).
 
 _Dr. Mārcis Gasūns_

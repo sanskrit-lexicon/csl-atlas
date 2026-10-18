@@ -1,0 +1,93 @@
+{
+  "source_aob": {
+    "path": "/Users/mac/Documents/GitHub/PD/AOB.md",
+    "sha256": "a3ce1a795c6f751da8ee103588c5cc9004f3f81df87c3f39731e78a78398da12",
+    "lines": 2011,
+    "pages": 42
+  },
+  "entry_inventory": {
+    "path": "data/pd/pd_aob_entries.tsv",
+    "sha256": "2cd57647657e9bc8b664c173ada3c714661ec6fc3ee0647885e3e58316b8407f",
+    "entries_parsed": 1430,
+    "junk": 7,
+    "usable": 1423,
+    "wellformed": 1362
+  },
+  "line_reconciliation": {
+    "both": 1311,
+    "parser_only_recovered": 119,
+    "r1_only_wrap_fragments": 165,
+    "neither": 284,
+    "r1_entry_like_lines": 1476,
+    "parsed_entries": 1430,
+    "r1_audit_census": 1476,
+    "parser_entry_count": 1430,
+    "identity": "1476 - 165 + 119 = 1430",
+    "cross_checks": {
+      "r1_matches_committed_audit": true,
+      "parser_matches_committed_tsv": true
+    }
+  },
+  "count_classes": {
+    "1419_pass1_loose_parse": {
+      "n": 1419,
+      "is": "pass-1 loose entry-start parse; no committed parser behind it",
+      "reproducible": false
+    },
+    "1423_usable_inventory_entries": {
+      "n": 1423,
+      "is": "landed entry inventory minus 7 OCR-junk rows (data/pd/pd_aob_entries.tsv)",
+      "reproducible": true
+    },
+    "1430_parsed_entries": {
+      "n": 1430,
+      "is": "landed entry inventory including the 7 junk rows",
+      "reproducible": true
+    },
+    "1362_wellformed_entries": {
+      "n": 1362,
+      "is": "inventory entries passing the well-formed tail test (NOT the denominator)",
+      "reproducible": true
+    },
+    "1464_print_census_books": {
+      "n": 1464,
+      "is": "printed census of books (external press quote)",
+      "reproducible": false
+    },
+    "1476_structural_r1_lines": {
+      "n": 1476,
+      "is": "R1 entry-like printed lines (a line census, over-counts by 165, misses 119)",
+      "reproducible": true
+    },
+    "1517_reparse_raw": {
+      "n": 1517,
+      "is": "pass-2 committed re-parse, raw before the clean filter",
+      "reproducible": true
+    }
+  },
+  "denominator": {
+    "n_covered_dcs_titles": 118,
+    "ruled_n": 1423,
+    "ruled_on": "18-10-2026",
+    "ruled_by": "MG 18-10-2026 (H6932 fork)",
+    "pct": 8.29,
+    "display_pct": 8.3,
+    "ratio": "one in 12.1",
+    "pct_by_class": {
+      "1419_pass1_loose_parse": 8.32,
+      "1423_usable_inventory_entries": 8.29,
+      "1430_parsed_entries": 8.25,
+      "1362_wellformed_entries": 8.66,
+      "1464_print_census_books": 8.06,
+      "1476_structural_r1_lines": 7.99,
+      "1517_reparse_raw": 7.78
+    },
+    "provenance_band": [
+      1419,
+      1517
+    ],
+    "superseded_central_estimate": 1476
+  },
+  "generated_by": "H6932 scripts/pd_aob_declared_entries.py (DeepSeek Flash, deepseek-flash)",
+  "measured_on": "18-10-2026"
+}

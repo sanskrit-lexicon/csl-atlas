@@ -7,8 +7,11 @@ pd_dcs_metrics.json before drawing anything — a mismatch aborts the run
 (cross-paper figure drift is a tracked defect class; every figure must be
 regenerable AND re-derived, never restated).
 
-Outputs deterministic SVG (no timestamps, no randomness, stdlib only) into
-papers/figures/:
+Outputs deterministic SVG (no timestamps, no randomness, stdlib only) into the
+transient ``papers/figures/`` here -- NOT committed: the paper lives in the private
+``gasyoun/Uprava`` repo (papers/A68/, STANDING_POLICY_PAPER_WORK_PRIVATE_REPOS_ONLY), so a
+changed figure must be copied to ``Uprava/papers/A68/figures/`` and its PDF rebuilt from the
+SVG. Do not commit ``papers/`` into this public repo:
 
   a68_fig1_mass_breakdown.svg   — the 398,359 siglum occurrences by class
   a68_fig2_two_lenses.svg       — the three coverage metrics side by side
@@ -102,7 +105,9 @@ def fig1(m):
 def fig2(m):
     """The three coverage metrics side by side."""
     bars = [
-        ("Title-level, declared canon\n(118 of ≈1,476 AOB entries)", m["metric_title_level_declared_pct"], C_BAR2),
+        ("Title-level, declared canon\n(118 of %s AOB entries)"
+         % f"{m['n_declared_aob_rows_edition_level']:,}",
+         m["metric_title_level_declared_pct"], C_BAR2),
         ("PD-citation-weighted\n(of what PD cites)", m["metric_pd_citation_weighted_pct"], C_BAR),
         ("DCS-token-weighted 2021\n(of DCS's own mass)", m["metric_dcs_token_weighted_2021_pct"], C_BAR2),
         ("DCS-token-weighted 2026\n(of DCS's own mass)", m["metric_dcs_token_weighted_2026_pct"], C_BAR),
@@ -224,6 +229,12 @@ def main():
     ok &= check("metric_dcs_token_weighted_2021_pct",
                 round(100.0 * cov_tok_21 / m["total_dcs_tok_2021"], 2),
                 m["metric_dcs_token_weighted_2021_pct"], tol=0.01)
+    # metric 2's declared-canon denominator (H6932): the figure caption and the bar
+    # are one quantity, so the spine must satisfy 118 / n_declared = the plotted pct
+    ok &= check("metric_title_level_declared_pct",
+                round(100.0 * m["n_covered_dcs_titles"]
+                      / m["n_declared_aob_rows_edition_level"], 2),
+                m["metric_title_level_declared_pct"], tol=0.01)
     if not ok:
         print("DRIFT DETECTED — refusing to draw figures from stale metrics.")
         return 2
