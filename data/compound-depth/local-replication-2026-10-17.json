@@ -1,0 +1,2449 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-17T20:38:48.599527+00:00",
+  "generatedBy": "python scripts/verify-compound-probe-local.py",
+  "model": {
+    "id": "chronbmm/sanskrit5-multitask",
+    "revision": "c0d2ada54f3d19903149425aa888a203601423f8",
+    "device": "cpu"
+  },
+  "slice": {
+    "A": 80,
+    "B": 80
+  },
+  "summary": {
+    "A": {
+      "rows": 80,
+      "valid": 74,
+      "validRate": 0.925,
+      "status": {
+        "ok": 74,
+        "empty": 6
+      },
+      "segments": {
+        "1": 18,
+        "2": 33,
+        "3": 20,
+        "4": 3
+      }
+    },
+    "B": {
+      "rows": 80,
+      "valid": 80,
+      "validRate": 1.0,
+      "status": {
+        "ok": 80
+      },
+      "segments": {
+        "1": 50,
+        "2": 25,
+        "3": 5
+      }
+    },
+    "bothValid": 116,
+    "agree": 92,
+    "agreement": 0.793
+  },
+  "rows": [
+    {
+      "surface": "aMsatrakoSa",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R aṃsatra_kośa_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "aṃsatra_kośa_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akzatattvavid",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "akṣa_tattva_vid_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "___________",
+        "status": "empty",
+        "segments": null
+      }
+    },
+    {
+      "surface": "agnizwomayAjin",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "agniṣṭoma_yājin_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "agniṣṭoma_yājin_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnizwomasad",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "agniṣṭoma_sad_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "agniṣṭoma_sad_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnizwomasadya",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "agniṣṭoma_sadya_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "agniṣṭoma_sadya_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnizwomasAma",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "agniṣṭoma_sāma_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "agniṣṭoma_sāma_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnizwomasAman",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "agniṣṭoma_sāman_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "agniṣṭoma_sāman_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnizwomahotra",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "agniṣṭoma_hotra_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "agniṣṭoma_hotra_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnihotrIvatsa",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "agnihotrī_vat_sa_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "agnihotrī_vat_sa_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "agnihotradevatA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "hotra_devatā_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "agnihotra_devatā_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnihotratva",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R̤a",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "agnihotra_tva_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnihotrasTAlI",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "agnihotra_sthālī_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "agnihotra_sthālī_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnihotrahavanI",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "agnihotra_havanī_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "agnihotrahavanī_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "agnihotrahut",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": null,
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "agnihotra_hut_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "agnihotrahoma",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "Ragnihotra_homa_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "agnihotra_homa_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "aNgulitravat",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "aṅgulitra_vat_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "aṅgulitra_vat_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "aNGryavanejanatva",
+      "population": "A",
+      "markupSegments": 4,
+      "api": {
+        "raw": null,
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "aṅghri_avanejana_tva_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "ativepaTumat",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "ati_vepathumat_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "ati_vepathumat_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "atiSaktitA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "tā_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "ati_śakti_tā_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "atElapUra",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "atailapūra_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_tailapūra_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "aDaHSAyitA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "adhas_śāyi_tā_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "adhas_śāyi_tā_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "anuBayAtman",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "anubhaya_ātman_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "an_ubhaya_ātman_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "anuBayAtmatA",
+      "population": "A",
+      "markupSegments": 4,
+      "api": {
+        "raw": "anubhaya_ātma_tā_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "anubhaya_ātma_tā_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "antaHsalilasTa",
+      "population": "A",
+      "markupSegments": 4,
+      "api": {
+        "raw": "antar_salila_stha_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "antar_salila_stha_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "anyArTatva",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R_",
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "anya_artha_tva_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "anyArTavat",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "nyārthavat_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "anya_artha_vat_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "anyoktikaRWABaraRa",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R anyokti_kaṇṭha_ābharaṇa_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "_________",
+        "status": "empty",
+        "segments": null
+      }
+    },
+    {
+      "surface": "anyoktiparicCeda",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R anyokti_pariccheda_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "anyokti_pariccheda_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "anyoktiSataka",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R anyoktiśataka_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "anyoktiśataka_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "anyonyasparDin",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "anyonya_spardhin_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "anyonya_spardhin_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "apavarjitatElapUra",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "apavarjita_taila_pūra_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "apavarjita_taila_pūra_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "apAtravarzin",
+      "population": "A",
+      "markupSegments": 4,
+      "api": {
+        "raw": "apātra_varṣin_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "apātra_varṣin_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "apfTagjita",
+      "population": "A",
+      "markupSegments": 4,
+      "api": {
+        "raw": "apṛthagjita_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "apṛthagjita_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "aprativIrya",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "tivīrya_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "aprativīrya_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "ambuDisravA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R ambudhisravā_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "ambudhi_sravā_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "ambuvAcItyAga",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R ambuvācī_tyāga_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "ambuvācī_tyāga_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "ambuvAcIprada",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R_ambuvācīprada_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "______",
+        "status": "empty",
+        "segments": null
+      }
+    },
+    {
+      "surface": "amBoDipallava",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R ambhodhi_pallava_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "ambhodhi_pallava_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "amBoDivallaBa",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R ambhodhi_vallabhaiḥ_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "_________",
+        "status": "empty",
+        "segments": null
+      }
+    },
+    {
+      "surface": "arTapUrvakatva",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "artha_pūrvakatva_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "artha_pūrvaka_tva_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "arTavyayasaha",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "artha_vyaya_saha_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "artha_vyaya_saha_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "arDacandrakuRqa",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "ardhacandra_kuṇḍa_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "ardhacandrakuṇḍa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "arDacandraBAgin",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "Radhacandrabhāgin_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "ardhacandrabhāgin_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "arDacandramuKa",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "ardhacandramukha_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "ardhacandramukha_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "arDaPAlakamata",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": null,
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "ardhaphālakam_ata_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "arDamAsatama",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": null,
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "ardha_māsatama_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "arDamAsaSas",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "ardhamāsaśas_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "ardhamāsaśas_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "arDamAsasahasra",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R___________",
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "ardha_māsa_sahasra_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "arDarUpatA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "ardha_rūpatā_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "ardha_rūpa_tā_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "arDarcaSas",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "ardharcaśaḥ_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "ardharcaśaḥ_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "arDarcaSasya",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "ardharcaśasya_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "ardharcaśasya_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "arDasamamuktAvalI",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R ardha_sama_muktā_āvaliḥ_",
+        "status": "ok",
+        "segments": 4
+      },
+      "local": {
+        "raw": "ardha_sama_muktā_āvalī_",
+        "status": "ok",
+        "segments": 4
+      }
+    },
+    {
+      "surface": "alaMkArakArikA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alaṃkārakārikā_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "alaṃkārakārikā_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "alaMkArakOstuBa",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R alaṃkārakaustubhaḥ_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "alaṃkārakaustubha_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "alaMkAracandrikA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alaṃkāracandrikā_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "alaṃkāracandrikā_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "alaMkAracUqAmaRi",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R alaṃkāra_cūḍāmaṇi_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "_________",
+        "status": "empty",
+        "segments": null
+      }
+    },
+    {
+      "surface": "alaMkAramaYjarI",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R alaṃkāramañjarī_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "alaṃkāramañjarī_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "alaMkAramAlA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alaṃkāramālā_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "alaṃkāramālā_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "alaMkAramuktAvalI",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R alaṃkāramuktāvalī_SNF",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "alaṃkāramuktāvalī_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "alaMkAravatI",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alaṃkāravatī_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "alaṃkāravatī_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "alaMkAraSAstra",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alaṃkāra_śāstra_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "alaṃkāra_śāstra_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "alaMkAraSIla",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alaṃkāra_śīla_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "alaṃkāra_śīla_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "alaMkArasuvarRa",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alaṃkāra_suvarṇa_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "alaṃkāra_suvarṇa_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "alaMkArasUra",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alaṃkārasūra_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "alaṃkārasūra_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "alaMkArahIna",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alaṃkāra_hīna_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "alaṃkāra_hīna_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "alikulapriyA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "ali_kula_priyā_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "__________",
+        "status": "empty",
+        "segments": null
+      }
+    },
+    {
+      "surface": "alikulasaMkulA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "ali_kula_saṃkulā_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "ali_kula_saṃkulā_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "alpakAyatva",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R",
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "alpa_kāya_tva_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "alpapraBAvatA",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "alpa_prabhāva_tā_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "alpa_prabhāva_tā_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "alpapraBAvatva",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": null,
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "alpa_prabhāva_tva_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "alpANgatva",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "tva_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "alpa_aṅga_tva_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "alpAvaSizwatva",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "tva_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "alpa_avaśiṣṭa_tva_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "avaDAnavattA",
+      "population": "A",
+      "markupSegments": 4,
+      "api": {
+        "raw": "avadhānavat_tā_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "avadhānavat_tā_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "avastAtprapadana",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "avastāt_prapadana_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "avastāt_prapadana_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "aviyogatftIyAvrata",
+      "population": "A",
+      "markupSegments": 4,
+      "api": {
+        "raw": "aviyogatṛtīyāvrata_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "aviyoga_tṛtīyāvrata_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "aSUnyaSayanadvitIyA",
+      "population": "A",
+      "markupSegments": 4,
+      "api": {
+        "raw": "a_śūnya_śayana_dvitīyā_",
+        "status": "ok",
+        "segments": 4
+      },
+      "local": {
+        "raw": "a_śūnya_śayana_dvitīyā_",
+        "status": "ok",
+        "segments": 4
+      }
+    },
+    {
+      "surface": "aSUnyaSayanavrata",
+      "population": "A",
+      "markupSegments": 4,
+      "api": {
+        "raw": "Ra_a_śūnya_śayana_vrata_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "a_śūnya_śayana_vrata_",
+        "status": "ok",
+        "segments": 4
+      }
+    },
+    {
+      "surface": "aSmasAramaya",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "aśmasāra_maya_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "aśmasāra_maya_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "aSvameDakARqa",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "R aśvamedha_kāṇḍa_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "aśvamedha_kāṇḍa_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "aSvameDaja",
+      "population": "A",
+      "markupSegments": 3,
+      "api": {
+        "raw": "aśvamedha_ja_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "aśvamedha_ja_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "afRin",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R a_ṛṇin_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "a_ṛṇin_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "aka",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "Raka_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "aka_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akaca",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R akaca_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_ka_ca_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "akawuka",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akaṭuka_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akaṭuka_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akaWora",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "a_kaṭhora_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "a_kaṭhora_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akaRaka",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "a_a_kaṇaka_",
+        "status": "ok",
+        "segments": 3
+      },
+      "local": {
+        "raw": "a_kaṇaka_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akaRwaka",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akaṇṭaka_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akaṇṭaka_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akaRWa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akaṇṭha_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_kaṇṭha_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akatTana",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "Ro",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "akatthana_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akaTya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akathya_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_kathya_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akanizWa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akaniṣṭha_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akaniṣṭha_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akanyA",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "anyā_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "a_kanyā_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akampita",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R kampita_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "akampita_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akampya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akampya_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_kampya_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akara",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "Rakara_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "akara_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akarA",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R_",
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "a_karā_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akaraRa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akaraṇa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_karaṇa_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akaraRi",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "a_karaṇi_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "a_karaṇi_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akaraRIya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "ca_a_karaṇīya_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "a_karaṇīya_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akarizyat",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akariṣyat_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akariṣyat_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akaruRa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akaruṇa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akaruṇa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akarkaSa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akarkaśa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akarkaśa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akarRa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akarṇa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akarṇa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akarRaka",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akarṇaka_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akarṇaka_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akarRIya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akarṇīya_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_karṇīya_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akarRya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "tha_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "a_karṇya_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akarRaDAra",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akarṇadhāra_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_karṇa_dhāra_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "akartana",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akartana_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akartana_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akartf",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "a_kartṛ_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "a_kartṛ_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akarman",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "arman_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "akarman_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akarmAnvita",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "arma_anvitaiḥ_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "a_karma_anvita_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "akarmaka",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "armaka_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akarmaka_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akarmikA",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akarmikā_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akarmikā_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akarmaRya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akarmaṇya_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akarmaṇya_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akala",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "ala_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "akala_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akalaNka",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akalaṅka_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akalaṅka_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akali",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R a_kali_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "a_ka_li_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "akalita",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R kalita_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "akalita_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akalka",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R̤a_kalka_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "a_kalka_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akalkA",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "a_kalkā_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "a_kalkā_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akalkana",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "ya_kalkana_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "a_kalkana_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akalkala",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R̤a_kalkala_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "akalkala_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akalpa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "Rakalpa_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "akalpa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akalpita",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R akalpita_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akalpita_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akalmaza",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akalmaṣa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akalmaṣa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akalmAza",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akalmāṣa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akalmāṣa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akalya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akalya_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akalya_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akalyARa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akalyāṇa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akalyāṇa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akava",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akava_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_kava_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akavAri",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akavāri_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_kavāri_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akavaca",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R_a_kavaca_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "a_kavaca_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akavi",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R_",
+        "status": "empty",
+        "segments": null
+      },
+      "local": {
+        "raw": "a_kavi_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akasmAt",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akasmāt_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akasmāt_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akARa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāṇa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāṇa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akARqa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāṇḍa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāṇḍa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akARqe",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāṇḍe_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāṇḍe_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAtara",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akātara_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akātara_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAma",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāma_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāma_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAmin",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāmin_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāmin_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāya_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_kāya_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akAyikA",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāyikā_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāyikā_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAraRa",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāraṇa_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāraṇa_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAraRam",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāraṇam_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāraṇam_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAraRena",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāraṇena_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāraṇena_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAraRe",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāraṇe_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāraṇe_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAraRAt",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāraṇāt_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāraṇāt_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAraRotpanna",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akāraṇa_utpad_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "akāraṇa_utpanna_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akArin",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "Rakārin_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "akārin_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akArRavezwakika",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akārṇava_iṣṭakika_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "aka_arṇava_iṣṭakika_",
+        "status": "ok",
+        "segments": 3
+      }
+    },
+    {
+      "surface": "akArya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R̤akārya_",
+        "status": "garbage",
+        "segments": null
+      },
+      "local": {
+        "raw": "akārya_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akArzRya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akārṣṇya_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akārṣṇya_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAla",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "Rakāla_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "akāla_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAle",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R_akāle_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akāle_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAlaka",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akālaka_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akālaka_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAlikam",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akālikam_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akālikam_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAlya",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akālya_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akālya_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akAsAra",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "Ra_kāsāra_",
+        "status": "truncated",
+        "segments": null
+      },
+      "local": {
+        "raw": "akāsāra_",
+        "status": "ok",
+        "segments": 1
+      }
+    },
+    {
+      "surface": "akiMcid",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "a_kiṃcid_",
+        "status": "ok",
+        "segments": 2
+      },
+      "local": {
+        "raw": "a_kiṃcid_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akiYcana",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "akiñcana_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "a_kiñcana_",
+        "status": "ok",
+        "segments": 2
+      }
+    },
+    {
+      "surface": "akiYcaniman",
+      "population": "B",
+      "markupSegments": 2,
+      "api": {
+        "raw": "R akiñcaniman_",
+        "status": "ok",
+        "segments": 1
+      },
+      "local": {
+        "raw": "akiñcaniman_",
+        "status": "ok",
+        "segments": 1
+      }
+    }
+  ]
+}
