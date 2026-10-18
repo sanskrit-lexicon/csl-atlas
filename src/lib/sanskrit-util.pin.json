@@ -1,0 +1,10 @@
+{
+  "vendored_path": "src/lib/sanskrit-util.js",
+  "canonical_source": "sanskrit-lexicon/sanskrit-util js/index.mjs",
+  "canonical_version": "0.12.0",
+  "canonical_commit": "48052f3",
+  "sha256": "b6875ad6fd5762d1caac000d436800ba91dd6b0ecf67b6852e8fe73b540a216f",
+  "digest_normalization": "CRLF -> LF",
+  "reason": "CI has no sibling sanskrit-util checkout, so the byte-compare guard skipped and the vendored copy drifted for a month (BUGHUNT 07-10-2026 finding 2). The pinned digest is checked unconditionally; refresh it in the same commit as every re-vendor.",
+  "updated": "18-10-2026"
+}

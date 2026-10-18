@@ -46,6 +46,16 @@ export function normalizeLookupQuery(value) {
     if (lowerIast) candidates.add(lowerIast);
   }
 
+  // ALL-CAPS input (e.g. "DEVA") has no lower-case second letter, so the
+  // title-case branch above misses it. Keep the caps form as the primary SLP1
+  // candidate and add the lower-case fallback so the query is indexable.
+  if (!hasIast && /^[A-Z][A-Z-]*$/.test(raw)) {
+    const lower = normalizeSlp1Lemma(raw.toLowerCase()).normalized;
+    if (lower) candidates.add(lower);
+    const lowerIast = normalizeSlp1Lemma(iastToSlp1(raw.toLowerCase())).normalized;
+    if (lowerIast) candidates.add(lowerIast);
+  }
+
   return {
     raw,
     normalized,

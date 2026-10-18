@@ -10,6 +10,7 @@ import assert from "node:assert/strict";
 import os from "node:os";
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 
 import { injectMarker, generateExplorerScript, h1PanelPoints } from "../scripts/build-r2-pages.mjs";
 import { parseHeader, iterateRecords } from "../scripts/lib/mw-parser.mjs";
@@ -450,13 +451,30 @@ test("transcoders delegate to sanskrit-util and fix the Vedic retroflex L (ḻ)"
 });
 
 // The IAST<->SLP1 transcoders are vendored verbatim from the canonical sanskrit-util
-// package (src/lib/sanskrit-util.js). Guard against silent drift from the sibling
-// checkout; skip when the sibling repo is absent (e.g. on the csl-atlas CI runner).
+// package (src/lib/sanskrit-util.js). CI has no sibling checkout, so the digest pin
+// is checked unconditionally; the byte-compare below still runs when the sibling is
+// present locally (stronger evidence, same drift class).
+const vendoredSanskritUtil = path.resolve("src", "lib", "sanskrit-util.js");
+const sanskritUtilPinPath = path.resolve("src", "lib", "sanskrit-util.pin.json");
 const canonicalSanskritUtil = path.resolve("..", "sanskrit-util", "js", "index.mjs");
+const sanskritUtilSha256 = file => crypto.createHash("sha256")
+  .update(fs.readFileSync(file, "utf8").replace(/\r\n/g, "\n"))
+  .digest("hex");
+
+test("vendored sanskrit-util.js matches its pinned canonical sha256", () => {
+  const pin = JSON.parse(fs.readFileSync(sanskritUtilPinPath, "utf8"));
+  assert.match(pin.sha256, /^[0-9a-f]{64}$/, "sanskrit-util.pin.json must carry a lowercase hex sha256");
+  assert.equal(
+    sanskritUtilSha256(vendoredSanskritUtil),
+    pin.sha256,
+    "src/lib/sanskrit-util.js has drifted from its pinned canonical sha256 — re-vendor it and refresh src/lib/sanskrit-util.pin.json in the same commit"
+  );
+});
+
 const driftOpts = { skip: fs.existsSync(canonicalSanskritUtil) ? false : "requires sibling ../sanskrit-util checkout" };
 test("vendored sanskrit-util.js matches the canonical sanskrit-util source", driftOpts, () => {
   const lf = s => s.replace(/\r\n/g, "\n");
-  const vendored = lf(fs.readFileSync(path.resolve("src", "lib", "sanskrit-util.js"), "utf8"));
+  const vendored = lf(fs.readFileSync(vendoredSanskritUtil, "utf8"));
   const canonical = lf(fs.readFileSync(canonicalSanskritUtil, "utf8"));
   assert.equal(vendored, canonical, "src/lib/sanskrit-util.js has drifted from ../sanskrit-util/js/index.mjs — re-vendor it");
 });
@@ -468,6 +486,12 @@ test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", ()
   assert.deepEqual(normalizeLookupQuery("dharma").candidates, ["dharma", "Darma"]);
   assert.deepEqual(normalizeLookupQuery("Agni").candidates, ["Agni", "agni"]);
   assert.deepEqual(normalizeLookupQuery("Dharma").candidates, ["Dharma", "dharma", "Darma"]);
+});
+
+test("normalizeLookupQuery adds a lower-case candidate for ALL-CAPS reader input", () => {
+  assert.deepEqual(normalizeLookupQuery("DEVA").candidates, ["DEVA", "deva"]);
+  assert.deepEqual(normalizeLookupQuery("AGNI").candidates, ["AGNI", "agni"]);
+  assert.deepEqual(normalizeLookupQuery("A").candidates, ["A", "a"]);
 });
 
 test("lookup UI helpers support deep links, locales, and sorted lemma lookup", () => {
