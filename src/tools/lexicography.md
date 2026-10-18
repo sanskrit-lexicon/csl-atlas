@@ -1,4 +1,4 @@
-_Created: 04-06-2026 · Last updated: 05-09-2026_
+_Created: 04-06-2026 · Last updated: 25-09-2026_
 
 ---
 title: Dictionary genealogy - first findings
@@ -155,6 +155,11 @@ For each pair of dictionaries (A, B):
 - **Temporal plausibility** = year(A) ≤ year(B) → A could be ancestor of B
 
 UPGMA cladogram from the distance matrix is in [`data/sanhw1_cladogram.newick`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/sanhw1_cladogram.newick).
+
+## Companion pages
+
+- [Access structures](./access-structures) — the other half of the macrostructure question: which alphabetisation rule produced each dictionary's *printed* order, with the full counterexample list.
+- [Convention fingerprints](./lexicographic-conventions) — lineage by house style rather than by shared content.
 
 [← back to overview](../)
 

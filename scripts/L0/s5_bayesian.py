@@ -17,13 +17,14 @@ Validation that the sampler works: the documented sister pairs (WIL+SHS, PWG+PW,
 CAE+CCS, MW72+BOP) should carry high posterior. Outputs to data/L0/.
 """
 
-import os
-import sys
 import csv
 import json
 import math
-import numpy as np
+import os
+import sys
 from collections import defaultdict
+
+import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import s3_cladogram as s3  # reuse load / informative_dims / clades / rf_distance

@@ -89,42 +89,42 @@ N_PERM = 999
 # nothing, which is exactly why the generalized form is used.
 GOLD_STEMMA_GROUPS = [
     ("Wilson", ["WIL", "YAT", "SHS"], "flat",
-     "Wilson 1832 is the head of the English-tradition line; YAT (1846) and SHS "
-     "(1900) both re-lexicalise it.",
-     "dictionary_inventory.csv notes (WIL<->YAT ~91% mutual containment; "
-     "WIL subset SHS 0.953); s3_cladogram.py KNOWN_EDGES tier A"),
+     ("Wilson 1832 is the head of the English-tradition line; YAT (1846) and SHS "
+     "(1900) both re-lexicalise it."),
+     ("dictionary_inventory.csv notes (WIL<->YAT ~91% mutual containment; "
+     "WIL subset SHS 0.953); s3_cladogram.py KNOWN_EDGES tier A")),
     ("Cappeller", ["CCS", "CAE"], "flat",
-     "Same compiler (Carl Cappeller): CCS 1887 (Skt-German) and CAE 1891 "
-     "(Skt-English) are the two faces of one lexicon.",
-     "dictionary_inventory.csv notes ('Same author as CCS'/'Same author as CAE'); "
-     "KNOWN_EDGES tier A CCS->CAE"),
+     ("Same compiler (Carl Cappeller): CCS 1887 (Skt-German) and CAE 1891 "
+     "(Skt-English) are the two faces of one lexicon."),
+     ("dictionary_inventory.csv notes ('Same author as CCS'/'Same author as CAE'); "
+     "KNOWN_EDGES tier A CCS->CAE")),
     ("Petersburg", ["PWG", "PW", "SCH", "CCS", "CAE"], "nest:Cappeller",
-     "The Petersburg line: PWG (1855-75) -> PW (1879-89, Boehtlingk's shorter "
+     ("The Petersburg line: PWG (1855-75) -> PW (1879-89, Boehtlingk's shorter "
      "recension) -> SCH (1928 Nachtraege) with the Cappeller pair descending "
-     "from PW.",
-     "dictionary_inventory.csv notes ('Continuation of PWG/PWK'; "
+     "from PW."),
+     ("dictionary_inventory.csv notes ('Continuation of PWG/PWK'; "
      "'CCS subset PW 0.945 confirms PWK->CCS'); KNOWN_EDGES tier A "
-     "PWG->PW, PW->CCS, PWG->SCH"),
+     "PWG->PW, PW->CCS, PWG->SCH")),
     ("Monier-Williams", ["MW72", "MW"], "flat",
      "Same compiler, first (1872) and second (1899) editions.",
-     "dictionary_inventory.csv notes ('Predecessor to MW (1899)'); "
-     "KNOWN_EDGES tier A MW72->MW"),
+     ("dictionary_inventory.csv notes ('Predecessor to MW (1899)'); "
+     "KNOWN_EDGES tier A MW72->MW")),
     ("Apte", ["AP90", "AP"], "flat",
      "Apte 1890 and the 1957-59 Pune revision of it.",
-     "dictionary_inventory.csv notes ('Original 1890 Apte; AP90->AP grew 2.6x'); "
-     "KNOWN_EDGES tier A AP90->AP"),
+     ("dictionary_inventory.csv notes ('Original 1890 Apte; AP90->AP grew 2.6x'); "
+     "KNOWN_EDGES tier A AP90->AP")),
 ]
 
 # Documented descent that a TREE cannot express (reticulation): recorded here so
 # the limitation is machine-readable rather than prose-only.
 GOLD_STEMMA_UNREPRESENTABLE = [
-    ("PWG", "MW72", "A", "MW72's preface credits the early PWG fascicles, but MW72 "
-     "already sits in the Monier-Williams group; a tree gives each leaf one parent."),
+    ("PWG", "MW72", "A", ("MW72's preface credits the early PWG fascicles, but MW72 "
+     "already sits in the Monier-Williams group; a tree gives each leaf one parent.")),
     ("PWG", "MW", "A", "Same conflict for MW (1899)."),
     ("BOP", "MW", "B", "Bopp-Glossarium hypothesis; MW is already placed."),
     ("BEN", "MW", "B", "Benfey hypothesis; MW is already placed."),
-    ("YAT", "SHS", "A", "Collapsed into the flat Wilson group rather than resolved, "
-     "to keep the gold conservative."),
+    ("YAT", "SHS", "A", ("Collapsed into the flat Wilson group rather than resolved, "
+     "to keep the gold conservative.")),
 ]
 
 
@@ -461,8 +461,8 @@ def selftest():
 # ----------------------------------------------------------------- main ----
 TREES = [
     ("canonical_consensus", f"{OUT}/trees/canonical_consensus.newick", "gated",
-     "convention", "published point estimate: B_whamming UPGMA, 1000x "
-     "dimension-bootstrap consensus"),
+     "convention", ("published point estimate: B_whamming UPGMA, 1000x "
+     "dimension-bootstrap consensus")),
     ("B_whamming_upgma", f"{OUT}/trees/B_whamming_upgma.newick", "gated",
      "convention", "canonical config, single UPGMA run"),
     ("B_whamming_nj", f"{OUT}/trees/B_whamming_nj.newick", "gated", "convention", ""),
@@ -475,11 +475,11 @@ TREES = [
     ("bayesian_map", f"{OUT}/trees/bayesian_map.newick", "gated", "convention",
      "Bayesian Mk MCMC maximum-a-posteriori tree (s5_bayesian.py)"),
     ("preview_common_convention", f"{OUT}/preview/common_convention.newick", "preview",
-     "convention", "preview-grade (19 dims, Gower), restricted to the tanglegram "
-     "leaf set"),
+     "convention", ("preview-grade (19 dims, Gower), restricted to the tanglegram "
+     "leaf set")),
     ("preview_common_lemma", f"{OUT}/preview/common_lemma.newick", "preview",
-     "content", "CONTENT baseline: UPGMA on sanhw1 lemma-overlap Jaccard "
-     "(tanglegram.py), same leaf set"),
+     "content", ("CONTENT baseline: UPGMA on sanhw1 lemma-overlap Jaccard "
+     "(tanglegram.py), same leaf set")),
 ]
 
 
@@ -632,25 +632,25 @@ def main():
         "head_to_head": head,
         "clade_recovery": recov,
         "limitations": [
-            "The expert stemma is a TREE; documented dictionary descent is "
+            ("The expert stemma is a TREE; documented dictionary descent is "
             "reticulate. Five documented edges (listed in "
             "gold/gold_stemma_warrants.csv as UNREPRESENTABLE) cannot be encoded, "
             "including PWG->MW and PWG->MW72 — the very edges the L0 results "
             "identify as reformatted. GQD therefore cannot reward a tree for "
-            "recovering them.",
-            "The gold stemma's warrants include sanhw1 lemma containment, which is "
+            "recovering them."),
+            ("The gold stemma's warrants include sanhw1 lemma containment, which is "
             "the content axis. That gives the CONTENT tree a mild home-field "
             "advantage in the head-to-head and gives the convention tree none; "
             "read a convention-tree win as conservative and a content-tree win as "
-            "partly circular.",
-            "The permutation test randomises leaf labels only. It bounds accidental "
+            "partly circular."),
+            ("The permutation test randomises leaf labels only. It bounds accidental "
             "agreement given the tree's shape; it is not a model-comparison test "
-            "and yields no likelihood.",
-            f"n = {len(full)} dictionaries, of which only {len(placed)} sit in a "
+            "and yields no likelihood."),
+            (f"n = {len(full)} dictionaries, of which only {len(placed)} sit in a "
             f"documented group; the remaining {len(full) - len(placed)} are "
-            "unresolved in the gold and contribute no butterflies of their own.",
-            "Corpus is European-tradition-skewed (see L0_DESIGN limitations); the "
-            "gold inherits that skew.",
+            "unresolved in the gold and contribute no butterflies of their own."),
+            ("Corpus is European-tradition-skewed (see L0_DESIGN limitations); the "
+            "gold inherits that skew."),
         ],
     }
     with open(f"{OUT}/gqd_report.json", "w", encoding="utf-8") as f:

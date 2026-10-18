@@ -1,0 +1,1185 @@
+{
+ "generator": "scripts/lexico/m12_lemmatisation_policy.py",
+ "handoff": "H5332",
+ "epic": "E014",
+ "csl_orig_commit": "f4c08c57",
+ "whitney_roots": 853,
+ "dcs_lemmas": 83239,
+ "policy_thresholds": {
+  "citation_form_min": 0.2,
+  "citation_form_mixed": 0.02,
+  "root_form_min": 0.6,
+  "root_form_partial": 0.2,
+  "nesting_min": 0.5,
+  "nesting_mixed": 0.05
+ },
+ "present_endings_tested": [
+  "ti",
+  "te",
+  "ati",
+  "ate",
+  "anti",
+  "ante",
+  "yati",
+  "yate"
+ ],
+ "suffixes_tested": [
+  "tva",
+  "tā",
+  "tara",
+  "tama",
+  "maya",
+  "aka",
+  "ana",
+  "ita",
+  "in",
+  "mat",
+  "vat",
+  "tṛ",
+  "tas",
+  "ya",
+  "ka"
+ ],
+ "dicts": {
+  "mw": {
+   "dict": "MW",
+   "records": 286525,
+   "printed_records": 282173,
+   "level1_records": 51359,
+   "distinct_keys": 190095,
+   "nominal_stems": {
+    "verdict": "stem (uninflected keys)",
+    "headwords": 51359,
+    "shapes": {
+     "vowel": 41593,
+     "consonant": 9746,
+     "visarga": 12,
+     "anusvara": 8,
+     "empty": 0
+    },
+    "inflected_share": 0.000389,
+    "exception_count": 20
+   },
+   "verbs": {
+    "verdict": "root form (the bare dhātu is the headword)",
+    "whitney_roots_tested": 853,
+    "counts": {
+     "root_exact": 802,
+     "citation_root": 0,
+     "finite_form": 2,
+     "derived_only": 40,
+     "absent": 9
+    },
+    "root_exact_share": 0.940211,
+    "citation_root_share": 0.0,
+    "root_marked_records": 0,
+    "finite_form_examples": [
+     {
+      "root": "tAv",
+      "headword": "tAvati"
+     },
+     {
+      "root": "sPA",
+      "headword": "sPAti"
+     }
+    ]
+   },
+   "compounds": {
+    "verdict": "nested — most compounds are run-ons inside another entry",
+    "nesting_recorded": true,
+    "detected": 148332,
+    "own_head": 12354,
+    "nested": 135978,
+    "nested_share": 0.916714,
+    "detected_share_of_records": 0.525678
+   },
+   "derivatives": {
+    "verdict": "nested — most derivatives are run-ons inside another entry",
+    "nesting_recorded": true,
+    "detected": 27075,
+    "own_head": 1153,
+    "nested": 25922,
+    "nested_share": 0.957415,
+    "detected_share_of_records": 0.095952,
+    "suffix_profile": {
+     "tva": 2234,
+     "tā": 2312,
+     "tara": 287,
+     "tama": 251,
+     "maya": 692,
+     "aka": 1579,
+     "ana": 2509,
+     "ita": 2166,
+     "in": 1013,
+     "mat": 627,
+     "vat": 2095,
+     "tṛ": 326,
+     "tas": 479,
+     "ya": 3810,
+     "ka": 6695
+    }
+   },
+   "dcs_spine": {
+    "bands": {
+     "1": {
+      "lemmas": 35693,
+      "exact": 18801,
+      "citation_only": 1,
+      "absent": 16891,
+      "exact_share": 0.526742,
+      "covered_share": 0.52677
+     },
+     "2": {
+      "lemmas": 29453,
+      "exact": 21328,
+      "citation_only": 1,
+      "absent": 8124,
+      "exact_share": 0.724137,
+      "covered_share": 0.724171
+     },
+     "3": {
+      "lemmas": 13276,
+      "exact": 11601,
+      "citation_only": 0,
+      "absent": 1675,
+      "exact_share": 0.873832,
+      "covered_share": 0.873832
+     },
+     "4": {
+      "lemmas": 4112,
+      "exact": 3831,
+      "citation_only": 0,
+      "absent": 281,
+      "exact_share": 0.931663,
+      "covered_share": 0.931663
+     },
+     "5": {
+      "lemmas": 705,
+      "exact": 684,
+      "citation_only": 0,
+      "absent": 21,
+      "exact_share": 0.970213,
+      "covered_share": 0.970213
+     }
+    },
+    "lemmas": 83239,
+    "covered": 56247,
+    "covered_share": 0.675729
+   }
+  },
+  "pwg": {
+   "dict": "PWG",
+   "records": 123366,
+   "printed_records": 123357,
+   "level1_records": 123357,
+   "distinct_keys": 106079,
+   "nominal_stems": {
+    "verdict": "stem (uninflected keys)",
+    "headwords": 123357,
+    "shapes": {
+     "vowel": 103333,
+     "consonant": 20002,
+     "visarga": 8,
+     "anusvara": 14,
+     "empty": 0
+    },
+    "inflected_share": 0.000178,
+    "exception_count": 22
+   },
+   "verbs": {
+    "verdict": "root form (the bare dhātu is the headword)",
+    "whitney_roots_tested": 853,
+    "counts": {
+     "root_exact": 769,
+     "citation_root": 0,
+     "finite_form": 14,
+     "derived_only": 55,
+     "absent": 15
+    },
+    "root_exact_share": 0.901524,
+    "citation_root_share": 0.0,
+    "root_marked_records": 0,
+    "finite_form_examples": [
+     {
+      "root": "kf",
+      "headword": "kfti"
+     },
+     {
+      "root": "kxp",
+      "headword": "kxpti"
+     },
+     {
+      "root": "tA",
+      "headword": "tAti"
+     },
+     {
+      "root": "df",
+      "headword": "dfti"
+     },
+     {
+      "root": "Df",
+      "headword": "Dfti"
+     },
+     {
+      "root": "nf",
+      "headword": "nfti"
+     },
+     {
+      "root": "Bf",
+      "headword": "Bfti"
+     },
+     {
+      "root": "mf",
+      "headword": "mfti"
+     },
+     {
+      "root": "vf",
+      "headword": "vfti"
+     },
+     {
+      "root": "sf",
+      "headword": "sfti"
+     },
+     {
+      "root": "stf",
+      "headword": "stfti"
+     },
+     {
+      "root": "spf",
+      "headword": "spfti"
+     },
+     {
+      "root": "smf",
+      "headword": "smfti"
+     },
+     {
+      "root": "hf",
+      "headword": "hfti"
+     }
+    ]
+   },
+   "compounds": {
+    "verdict": "own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 51312,
+    "own_head": 51312,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.415963
+   },
+   "derivatives": {
+    "verdict": "own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 8449,
+    "own_head": 8449,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.068492,
+    "suffix_profile": {
+     "tva": 846,
+     "tā": 911,
+     "tara": 56,
+     "tama": 73,
+     "maya": 371,
+     "aka": 587,
+     "ana": 570,
+     "ita": 172,
+     "in": 396,
+     "mat": 1,
+     "vat": 43,
+     "tas": 127,
+     "ya": 972,
+     "ka": 3324
+    }
+   },
+   "dcs_spine": {
+    "bands": {
+     "1": {
+      "lemmas": 35693,
+      "exact": 12819,
+      "citation_only": 2,
+      "absent": 22872,
+      "exact_share": 0.359146,
+      "covered_share": 0.359202
+     },
+     "2": {
+      "lemmas": 29453,
+      "exact": 15293,
+      "citation_only": 0,
+      "absent": 14160,
+      "exact_share": 0.519234,
+      "covered_share": 0.519234
+     },
+     "3": {
+      "lemmas": 13276,
+      "exact": 9037,
+      "citation_only": 2,
+      "absent": 4237,
+      "exact_share": 0.680702,
+      "covered_share": 0.680853
+     },
+     "4": {
+      "lemmas": 4112,
+      "exact": 3170,
+      "citation_only": 0,
+      "absent": 942,
+      "exact_share": 0.770914,
+      "covered_share": 0.770914
+     },
+     "5": {
+      "lemmas": 705,
+      "exact": 641,
+      "citation_only": 0,
+      "absent": 64,
+      "exact_share": 0.90922,
+      "covered_share": 0.90922
+     }
+    },
+    "lemmas": 83239,
+    "covered": 40964,
+    "covered_share": 0.492125
+   }
+  },
+  "pw": {
+   "dict": "PW (PWK)",
+   "records": 170556,
+   "printed_records": 158370,
+   "level1_records": 158370,
+   "distinct_keys": 141687,
+   "nominal_stems": {
+    "verdict": "stem (uninflected keys)",
+    "headwords": 158370,
+    "shapes": {
+     "vowel": 133145,
+     "consonant": 25212,
+     "visarga": 8,
+     "anusvara": 5,
+     "empty": 0
+    },
+    "inflected_share": 8.2e-05,
+    "exception_count": 13
+   },
+   "verbs": {
+    "verdict": "root form (the bare dhātu is the headword)",
+    "whitney_roots_tested": 853,
+    "counts": {
+     "root_exact": 775,
+     "citation_root": 0,
+     "finite_form": 14,
+     "derived_only": 51,
+     "absent": 13
+    },
+    "root_exact_share": 0.908558,
+    "citation_root_share": 0.0,
+    "root_marked_records": 0,
+    "finite_form_examples": [
+     {
+      "root": "kf",
+      "headword": "kfti"
+     },
+     {
+      "root": "kxp",
+      "headword": "kxpti"
+     },
+     {
+      "root": "df",
+      "headword": "dfti"
+     },
+     {
+      "root": "Df",
+      "headword": "Dfti"
+     },
+     {
+      "root": "nf",
+      "headword": "nfti"
+     },
+     {
+      "root": "pUr",
+      "headword": "pUrti"
+     },
+     {
+      "root": "Bf",
+      "headword": "Bfti"
+     },
+     {
+      "root": "mf",
+      "headword": "mfti"
+     },
+     {
+      "root": "vf",
+      "headword": "vfti"
+     },
+     {
+      "root": "sf",
+      "headword": "sfti"
+     },
+     {
+      "root": "stf",
+      "headword": "stfti"
+     },
+     {
+      "root": "spf",
+      "headword": "spfti"
+     },
+     {
+      "root": "smf",
+      "headword": "smfti"
+     },
+     {
+      "root": "hf",
+      "headword": "hfti"
+     }
+    ]
+   },
+   "compounds": {
+    "verdict": "own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 69756,
+    "own_head": 69756,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.440462
+   },
+   "derivatives": {
+    "verdict": "own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 9357,
+    "own_head": 9357,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.059083,
+    "suffix_profile": {
+     "tva": 819,
+     "tā": 1016,
+     "tara": 65,
+     "tama": 92,
+     "maya": 550,
+     "aka": 569,
+     "ana": 513,
+     "ita": 235,
+     "in": 364,
+     "mat": 2,
+     "vat": 83,
+     "tas": 164,
+     "ya": 989,
+     "ka": 3896
+    }
+   },
+   "dcs_spine": {
+    "bands": {
+     "1": {
+      "lemmas": 35693,
+      "exact": 15402,
+      "citation_only": 0,
+      "absent": 20291,
+      "exact_share": 0.431513,
+      "covered_share": 0.431513
+     },
+     "2": {
+      "lemmas": 29453,
+      "exact": 17273,
+      "citation_only": 0,
+      "absent": 12180,
+      "exact_share": 0.58646,
+      "covered_share": 0.58646
+     },
+     "3": {
+      "lemmas": 13276,
+      "exact": 9429,
+      "citation_only": 0,
+      "absent": 3847,
+      "exact_share": 0.710229,
+      "covered_share": 0.710229
+     },
+     "4": {
+      "lemmas": 4112,
+      "exact": 3155,
+      "citation_only": 0,
+      "absent": 957,
+      "exact_share": 0.767267,
+      "covered_share": 0.767267
+     },
+     "5": {
+      "lemmas": 705,
+      "exact": 640,
+      "citation_only": 0,
+      "absent": 65,
+      "exact_share": 0.907801,
+      "covered_share": 0.907801
+     }
+    },
+    "lemmas": 83239,
+    "covered": 45899,
+    "covered_share": 0.551412
+   }
+  },
+  "ap": {
+   "dict": "AP",
+   "records": 90847,
+   "printed_records": 81222,
+   "level1_records": 45002,
+   "distinct_keys": 79928,
+   "nominal_stems": {
+    "verdict": "citation form (inflected nominative keys)",
+    "headwords": 45002,
+    "shapes": {
+     "vowel": 18513,
+     "consonant": 13746,
+     "visarga": 12741,
+     "anusvara": 2,
+     "empty": 0
+    },
+    "inflected_share": 0.283165,
+    "exception_count": 32259
+   },
+   "verbs": {
+    "verdict": "root form (the bare dhātu is the headword)",
+    "whitney_roots_tested": 853,
+    "counts": {
+     "root_exact": 712,
+     "citation_root": 0,
+     "finite_form": 0,
+     "derived_only": 86,
+     "absent": 55
+    },
+    "root_exact_share": 0.834701,
+    "citation_root_share": 0.0,
+    "root_marked_records": 3201,
+    "finite_form_examples": []
+   },
+   "compounds": {
+    "verdict": "nested — most compounds are run-ons inside another entry",
+    "nesting_recorded": true,
+    "detected": 23805,
+    "own_head": 10734,
+    "nested": 13071,
+    "nested_share": 0.549086,
+    "detected_share_of_records": 0.293086
+   },
+   "derivatives": {
+    "verdict": "own head — derivatives get their own entry",
+    "nesting_recorded": true,
+    "detected": 2066,
+    "own_head": 1985,
+    "nested": 81,
+    "nested_share": 0.039206,
+    "detected_share_of_records": 0.025436,
+    "suffix_profile": {
+     "tva": 2,
+     "tā": 273,
+     "tara": 19,
+     "tama": 12,
+     "maya": 19,
+     "aka": 140,
+     "ana": 90,
+     "ita": 465,
+     "in": 234,
+     "mat": 25,
+     "vat": 124,
+     "tṛ": 67,
+     "tas": 25,
+     "ya": 305,
+     "ka": 266
+    }
+   },
+   "dcs_spine": {
+    "bands": {
+     "1": {
+      "lemmas": 35693,
+      "exact": 3847,
+      "citation_only": 2770,
+      "absent": 29076,
+      "exact_share": 0.10778,
+      "covered_share": 0.185386
+     },
+     "2": {
+      "lemmas": 29453,
+      "exact": 6003,
+      "citation_only": 3587,
+      "absent": 19863,
+      "exact_share": 0.203816,
+      "covered_share": 0.325604
+     },
+     "3": {
+      "lemmas": 13276,
+      "exact": 5295,
+      "citation_only": 2643,
+      "absent": 5338,
+      "exact_share": 0.39884,
+      "covered_share": 0.597921
+     },
+     "4": {
+      "lemmas": 4112,
+      "exact": 2346,
+      "citation_only": 1020,
+      "absent": 746,
+      "exact_share": 0.570525,
+      "covered_share": 0.81858
+     },
+     "5": {
+      "lemmas": 705,
+      "exact": 459,
+      "citation_only": 175,
+      "absent": 71,
+      "exact_share": 0.651064,
+      "covered_share": 0.899291
+     }
+    },
+    "lemmas": 83239,
+    "covered": 28145,
+    "covered_share": 0.338123
+   }
+  },
+  "wil": {
+   "dict": "WIL",
+   "records": 44577,
+   "printed_records": 44577,
+   "level1_records": 44577,
+   "distinct_keys": 43938,
+   "nominal_stems": {
+    "verdict": "stem (uninflected keys)",
+    "headwords": 44577,
+    "shapes": {
+     "vowel": 40129,
+     "consonant": 4437,
+     "visarga": 1,
+     "anusvara": 10,
+     "empty": 0
+    },
+    "inflected_share": 0.000247,
+    "exception_count": 11
+   },
+   "verbs": {
+    "verdict": "marginal root layer — most roots are reached only through derivatives",
+    "whitney_roots_tested": 853,
+    "counts": {
+     "root_exact": 159,
+     "citation_root": 0,
+     "finite_form": 35,
+     "derived_only": 577,
+     "absent": 82
+    },
+    "root_exact_share": 0.186401,
+    "citation_root_share": 0.0,
+    "root_marked_records": 0,
+    "finite_form_examples": [
+     {
+      "root": "aMh",
+      "headword": "aMhati"
+     },
+     {
+      "root": "aNg",
+      "headword": "aNgati"
+     },
+     {
+      "root": "at",
+      "headword": "atti"
+     },
+     {
+      "root": "an",
+      "headword": "anti"
+     },
+     {
+      "root": "am",
+      "headword": "amati"
+     },
+     {
+      "root": "art",
+      "headword": "artti"
+     },
+     {
+      "root": "av",
+      "headword": "avanti"
+     },
+     {
+      "root": "as",
+      "headword": "asti"
+     },
+     {
+      "root": "Ap",
+      "headword": "Apti"
+     },
+     {
+      "root": "Ar",
+      "headword": "Arati"
+     },
+     {
+      "root": "kan",
+      "headword": "kanti"
+     },
+     {
+      "root": "kft",
+      "headword": "kftti"
+     },
+     {
+      "root": "kzip",
+      "headword": "kzipti"
+     },
+     {
+      "root": "gup",
+      "headword": "gupti"
+     },
+     {
+      "root": "jA",
+      "headword": "jAti"
+     },
+     {
+      "root": "tan",
+      "headword": "tanti"
+     },
+     {
+      "root": "tA",
+      "headword": "tAti"
+     },
+     {
+      "root": "tfp",
+      "headword": "tfpti"
+     },
+     {
+      "root": "dIp",
+      "headword": "dIpti"
+     },
+     {
+      "root": "nI",
+      "headword": "nIti"
+     },
+     {
+      "root": "pat",
+      "headword": "patti"
+     },
+     {
+      "root": "raMh",
+      "headword": "raMhati"
+     },
+     {
+      "root": "ran",
+      "headword": "ranti"
+     },
+     {
+      "root": "ram",
+      "headword": "ramati"
+     },
+     {
+      "root": "vad",
+      "headword": "vadanti"
+     }
+    ]
+   },
+   "compounds": {
+    "verdict": "own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 13663,
+    "own_head": 13663,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.306503
+   },
+   "derivatives": {
+    "verdict": "own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 2390,
+    "own_head": 2390,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.053615,
+    "suffix_profile": {
+     "tva": 168,
+     "tā": 401,
+     "tara": 21,
+     "tama": 21,
+     "maya": 54,
+     "aka": 20,
+     "ana": 17,
+     "ita": 32,
+     "in": 7,
+     "mat": 63,
+     "vat": 250,
+     "tṛ": 13,
+     "tas": 80,
+     "ya": 139,
+     "ka": 1104
+    }
+   },
+   "dcs_spine": {
+    "bands": {
+     "1": {
+      "lemmas": 35693,
+      "exact": 3781,
+      "citation_only": 0,
+      "absent": 31912,
+      "exact_share": 0.105931,
+      "covered_share": 0.105931
+     },
+     "2": {
+      "lemmas": 29453,
+      "exact": 6181,
+      "citation_only": 2,
+      "absent": 23270,
+      "exact_share": 0.20986,
+      "covered_share": 0.209928
+     },
+     "3": {
+      "lemmas": 13276,
+      "exact": 6093,
+      "citation_only": 0,
+      "absent": 7183,
+      "exact_share": 0.458948,
+      "covered_share": 0.458948
+     },
+     "4": {
+      "lemmas": 4112,
+      "exact": 2689,
+      "citation_only": 0,
+      "absent": 1423,
+      "exact_share": 0.65394,
+      "covered_share": 0.65394
+     },
+     "5": {
+      "lemmas": 705,
+      "exact": 567,
+      "citation_only": 0,
+      "absent": 138,
+      "exact_share": 0.804255,
+      "covered_share": 0.804255
+     }
+    },
+    "lemmas": 83239,
+    "covered": 19313,
+    "covered_share": 0.232019
+   }
+  },
+  "skd": {
+   "dict": "SKD",
+   "records": 42531,
+   "printed_records": 42196,
+   "level1_records": 42196,
+   "distinct_keys": 40512,
+   "nominal_stems": {
+    "verdict": "citation form (inflected nominative keys)",
+    "headwords": 42196,
+    "shapes": {
+     "vowel": 12832,
+     "consonant": 1005,
+     "visarga": 20727,
+     "anusvara": 7632,
+     "empty": 0
+    },
+    "inflected_share": 0.672078,
+    "exception_count": 13837
+   },
+   "verbs": {
+    "verdict": "marginal root layer — most roots are reached only through derivatives",
+    "whitney_roots_tested": 853,
+    "counts": {
+     "root_exact": 127,
+     "citation_root": 3,
+     "finite_form": 2,
+     "derived_only": 632,
+     "absent": 89
+    },
+    "root_exact_share": 0.148886,
+    "citation_root_share": 0.003517,
+    "root_marked_records": 0,
+    "finite_form_examples": [
+     {
+      "root": "as",
+      "headword": "asti"
+     },
+     {
+      "root": "has",
+      "headword": "haste"
+     }
+    ]
+   },
+   "compounds": {
+    "verdict": "own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 6696,
+    "own_head": 6696,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.158688
+   },
+   "derivatives": {
+    "verdict": "own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 41,
+    "own_head": 41,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.000972,
+    "suffix_profile": {
+     "tā": 36,
+     "vat": 3,
+     "ya": 1,
+     "ka": 1
+    }
+   },
+   "dcs_spine": {
+    "bands": {
+     "1": {
+      "lemmas": 35693,
+      "exact": 1559,
+      "citation_only": 2949,
+      "absent": 31185,
+      "exact_share": 0.043678,
+      "covered_share": 0.126299
+     },
+     "2": {
+      "lemmas": 29453,
+      "exact": 2027,
+      "citation_only": 4169,
+      "absent": 23257,
+      "exact_share": 0.068822,
+      "covered_share": 0.210369
+     },
+     "3": {
+      "lemmas": 13276,
+      "exact": 1295,
+      "citation_only": 4135,
+      "absent": 7846,
+      "exact_share": 0.097544,
+      "covered_share": 0.409009
+     },
+     "4": {
+      "lemmas": 4112,
+      "exact": 627,
+      "citation_only": 1885,
+      "absent": 1600,
+      "exact_share": 0.152481,
+      "covered_share": 0.610895
+     },
+     "5": {
+      "lemmas": 705,
+      "exact": 211,
+      "citation_only": 290,
+      "absent": 204,
+      "exact_share": 0.299291,
+      "covered_share": 0.710638
+     }
+    },
+    "lemmas": 83239,
+    "covered": 19147,
+    "covered_share": 0.230024
+   }
+  },
+  "vcp": {
+   "dict": "VCP",
+   "records": 50135,
+   "printed_records": 48370,
+   "level1_records": 48370,
+   "distinct_keys": 47096,
+   "nominal_stems": {
+    "verdict": "stem (uninflected keys)",
+    "headwords": 48370,
+    "shapes": {
+     "vowel": 44229,
+     "consonant": 4070,
+     "visarga": 50,
+     "anusvara": 21,
+     "empty": 0
+    },
+    "inflected_share": 0.001468,
+    "exception_count": 71
+   },
+   "verbs": {
+    "verdict": "marginal root layer — most roots are reached only through derivatives",
+    "whitney_roots_tested": 853,
+    "counts": {
+     "root_exact": 153,
+     "citation_root": 0,
+     "finite_form": 35,
+     "derived_only": 592,
+     "absent": 73
+    },
+    "root_exact_share": 0.179367,
+    "citation_root_share": 0.0,
+    "root_marked_records": 0,
+    "finite_form_examples": [
+     {
+      "root": "aMh",
+      "headword": "aMhati"
+     },
+     {
+      "root": "aNg",
+      "headword": "aNgati"
+     },
+     {
+      "root": "an",
+      "headword": "anti"
+     },
+     {
+      "root": "art",
+      "headword": "artti"
+     },
+     {
+      "root": "av",
+      "headword": "avanti"
+     },
+     {
+      "root": "as",
+      "headword": "asti"
+     },
+     {
+      "root": "ah",
+      "headword": "ahati"
+     },
+     {
+      "root": "Ap",
+      "headword": "Apti"
+     },
+     {
+      "root": "Ar",
+      "headword": "Arati"
+     },
+     {
+      "root": "Ikz",
+      "headword": "Ikzati"
+     },
+     {
+      "root": "kA",
+      "headword": "kAti"
+     },
+     {
+      "root": "kxp",
+      "headword": "kxpti"
+     },
+     {
+      "root": "gup",
+      "headword": "gupti"
+     },
+     {
+      "root": "cit",
+      "headword": "citti"
+     },
+     {
+      "root": "jval",
+      "headword": "jvalati"
+     },
+     {
+      "root": "tan",
+      "headword": "tanti"
+     },
+     {
+      "root": "tA",
+      "headword": "tAti"
+     },
+     {
+      "root": "tfp",
+      "headword": "tfpti"
+     },
+     {
+      "root": "dIp",
+      "headword": "dIpti"
+     },
+     {
+      "root": "pac",
+      "headword": "pacati"
+     },
+     {
+      "root": "pat",
+      "headword": "patti"
+     },
+     {
+      "root": "Byas",
+      "headword": "Byasate"
+     },
+     {
+      "root": "yaj",
+      "headword": "yajati"
+     },
+     {
+      "root": "ram",
+      "headword": "ramati"
+     },
+     {
+      "root": "rej",
+      "headword": "rejate"
+     }
+    ]
+   },
+   "compounds": {
+    "verdict": "own head — every compound is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 14211,
+    "own_head": 14211,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.293798
+   },
+   "derivatives": {
+    "verdict": "own head — every derivative is a level-1 entry; csl-orig records no nesting level for this dictionary, so a printed run-on would not be visible here",
+    "nesting_recorded": false,
+    "detected": 1525,
+    "own_head": 1525,
+    "nested": 0,
+    "nested_share": 0.0,
+    "detected_share_of_records": 0.031528,
+    "suffix_profile": {
+     "tva": 24,
+     "tā": 70,
+     "tara": 17,
+     "tama": 17,
+     "maya": 47,
+     "aka": 19,
+     "ana": 22,
+     "ita": 20,
+     "in": 9,
+     "mat": 51,
+     "vat": 140,
+     "tṛ": 22,
+     "tas": 24,
+     "ya": 179,
+     "ka": 864
+    }
+   },
+   "dcs_spine": {
+    "bands": {
+     "1": {
+      "lemmas": 35693,
+      "exact": 5606,
+      "citation_only": 8,
+      "absent": 30079,
+      "exact_share": 0.157062,
+      "covered_share": 0.157286
+     },
+     "2": {
+      "lemmas": 29453,
+      "exact": 7889,
+      "citation_only": 9,
+      "absent": 21555,
+      "exact_share": 0.26785,
+      "covered_share": 0.268156
+     },
+     "3": {
+      "lemmas": 13276,
+      "exact": 6464,
+      "citation_only": 11,
+      "absent": 6801,
+      "exact_share": 0.486894,
+      "covered_share": 0.487722
+     },
+     "4": {
+      "lemmas": 4112,
+      "exact": 2744,
+      "citation_only": 1,
+      "absent": 1367,
+      "exact_share": 0.667315,
+      "covered_share": 0.667558
+     },
+     "5": {
+      "lemmas": 705,
+      "exact": 572,
+      "citation_only": 0,
+      "absent": 133,
+      "exact_share": 0.811348,
+      "covered_share": 0.811348
+     }
+    },
+    "lemmas": 83239,
+    "covered": 23304,
+    "covered_share": 0.279965
+   }
+  }
+ }
+}

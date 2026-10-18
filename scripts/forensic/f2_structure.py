@@ -23,17 +23,17 @@ Output : data/forensic/homonym_concordance.csv  (pairs: split-agreement),
 Run from repo root:  python scripts/forensic/f2_structure.py
 """
 
+import collections
+import csv
+import glob
+import itertools
+import json
 import os
 import sys
-import csv
-import json
-import glob
-import collections
-import itertools
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
-from parse_cslorig import load_entries, PARSED_DIR
 import _corpus_pin
+from parse_cslorig import PARSED_DIR, load_entries
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

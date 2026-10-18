@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-14T11:28:07.516Z",
+  "generatedAt": "2026-09-24T16:04:54.922Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -43,12 +43,12 @@
   ],
   "assumptions": [],
   "warnings": [],
-  "distinctLemmas": 298413,
-  "dossierEntries": 28512,
-  "lookupEntries": 52934,
+  "distinctLemmas": 298508,
+  "dossierEntries": 28524,
+  "lookupEntries": 52957,
   "recordsByDict": {
-    "MW": 286560,
-    "AP": 90654,
+    "MW": 286525,
+    "AP": 90847,
     "PWG": 123366,
     "PWK": 170556,
     "WIL": 44577,
@@ -58,14 +58,14 @@
   "coverageScopes": {
     "broadHeadword": {
       "dictionaryCount": 40,
-      "distinctLemmas": 376943,
+      "distinctLemmas": 377481,
       "intersectionAll": 0,
       "pairwiseRows": 780
     },
     "coreComparison": {
       "dictionaryCount": 7,
-      "distinctLemmas": 298413,
-      "intersectionAll": 1913,
+      "distinctLemmas": 298508,
+      "intersectionAll": 1916,
       "pairwiseRows": 21
     }
   },
@@ -83,7 +83,7 @@
       "unavailable": 0
     }
   },
-  "intersectionAll": 1913,
-  "genderConflicts": 6680,
+  "intersectionAll": 1916,
+  "genderConflicts": 6666,
   "homonymSplits": 9839
 }

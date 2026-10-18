@@ -11,11 +11,12 @@ Outputs:
   Stdout: ranked table for direct paste into the paper.
 """
 
-import os
-import sys
 import csv
 import json
+import os
+import sys
 from collections import defaultdict
+
 import numpy as np
 
 sys.stdout.reconfigure(encoding="utf-8")

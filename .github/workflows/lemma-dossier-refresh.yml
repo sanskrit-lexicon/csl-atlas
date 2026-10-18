@@ -1,0 +1,96 @@
+name: Lemma dossier refresh
+
+# Uprava H5423 (E016 wave 5) — live trigger for the Comparative Dictionary Lab
+# outputs (src/data/dicts/: lemma-dossier.json, lemma-lookup.json, coverage,
+# overlap, core-dossier/core-lookup shards, ...). scripts/build-dictionary-comparison.mjs
+# reads the sibling ../csl-orig/v02 checkout, which no CI job had, so the outputs
+# were only ever rebuilt by hand (lemma-dossier generatedAt 14-06-2026, 102 days
+# old on 24-09-2026).
+#
+# This job fetches a shallow, v02-only csl-orig into ../csl-orig, rebuilds, then
+# HIDES csl-orig and runs regen-review-artifacts.mjs exactly as `npm run verify`
+# does in CI, so the proposed tree passes verify's clean-tree assert. The
+# source-derived H4/H5 review packets are deliberately NOT refreshed here — they
+# re-deal review sheets and belong to their own handoffs.
+#
+#   schedule / dispatch  open a bot PR with the refreshed outputs, dispatch test.yml
+#                        on its branch (PRs opened by GITHUB_TOKEN get no pull_request
+#                        runs, but a workflow_dispatch run does report the required
+#                        `test` and `generator-owned-negative-control` checks on the
+#                        head commit), and enable auto-merge.
+#   pull_request         dry run: rebuild + validate + print the diffstat, open nothing.
+#
+# generatedAt is preserved when a payload is unchanged (scripts/lib/dataset-meta.mjs),
+# so a month with no relevant csl-orig change opens no PR.
+
+on:
+  schedule:
+    - cron: "41 4 3 * *"   # 3rd of each month, 04:41 UTC
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/lemma-dossier-refresh.yml"
+      - "scripts/build-dictionary-comparison.mjs"
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: lemma-dossier-refresh-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "20"
+      - name: Fetch csl-orig v02 (shallow, sparse) into ../csl-orig
+        run: |
+          git clone --quiet --depth 1 --filter=blob:none --sparse \
+            https://github.com/sanskrit-lexicon/csl-orig.git ../csl-orig
+          git -C ../csl-orig sparse-checkout set v02
+          echo "CSL_ORIG_SHA=$(git -C ../csl-orig rev-parse --short HEAD)" >> "$GITHUB_ENV"
+          du -sh ../csl-orig/v02
+      - name: Rebuild dictionary comparison outputs
+        run: |
+          node scripts/build-dictionary-comparison.mjs
+          node scripts/validate-dictionary-comparison.mjs
+      - name: Re-run CI-side regeneration without csl-orig (mirrors npm run verify)
+        run: |
+          mv ../csl-orig ../csl-orig.hidden
+          node scripts/regen-review-artifacts.mjs
+          mv ../csl-orig.hidden ../csl-orig
+      - name: Summarize
+        id: diff
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No output changed against csl-orig ${CSL_ORIG_SHA}."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --cached --stat | tail -25
+          fi
+      - name: Open refresh PR with auto-merge
+        if: github.event_name != 'pull_request' && steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="bot/lemma-dossier-refresh-$(date -u +%Y%m%d-%H%M)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -q -m "chore(dicts): refresh comparison outputs from csl-orig ${CSL_ORIG_SHA} [H5423]"
+          git push -q origin "$branch"
+          url=$(gh pr create --base main --head "$branch" \
+            --title "chore(dicts): refresh comparison outputs from csl-orig ${CSL_ORIG_SHA}" \
+            --body "Automated monthly refresh (Uprava H5423, E016 wave 5) by .github/workflows/lemma-dossier-refresh.yml: scripts/build-dictionary-comparison.mjs over csl-orig ${CSL_ORIG_SHA}, validated by validate-dictionary-comparison.mjs. Required checks are dispatched on this branch; auto-merge squashes once they pass.")
+          echo "PR: $url"
+          gh workflow run test.yml --ref "$branch"
+          gh pr merge "$url" --auto --squash

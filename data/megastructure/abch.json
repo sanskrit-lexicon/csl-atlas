@@ -1,0 +1,302 @@
+{
+  "schemaVersion": "1.0.0",
+  "dict": "abch",
+  "dictName": "Hemacandra, Abhidhānacintāmaṇi (No. 6 of the Abhidhānasaṃgraha collection)",
+  "edition": {
+    "label": "Abhidhānasaṃgraha: a collection of Sanskrit ancient lexicons, No. 6-11, edited by Paṇḍit Śivadatta and Kāśīnāth Pāṇḍuraṅg Parab; the scanned volume carries No. 6, Hemacandra's Abhidhānacintāmaṇi",
+    "year": "1896",
+    "imprint": "The Nirṇaya-sāgara Press, Bombay",
+    "evidenceLevel": "observed",
+    "evidence": "The English title page (scan f01) and the Devanagari title page (scan f03) both give the editors, the Nirṇaya-sāgara Press and the year 1896, matching csl-orig/v02/abch/abchheader.xml (Hemacandra, Abhidhānacintāmaṇi, Bombay, The Nirṇaya-sāgara press, 1896, 58 p.) and the abch.txt metadata block (editors Paṇdit Śivadatta and Kāśīnāth Pāṇḍuraṅg Parab, publisher The Nirṇaya-sāgara press, Bombay, 1896 A.D.). The abch.txt credits record that the scanned book came from Acharya Shri Kailasasagarasuri Gyanamandir (kobatirth.org) and that Google OCR supplied the raw data, which is why every scan carries a 'Digitized by Google' watermark."
+  },
+  "scanSets": [
+    {
+      "id": "abch-scan-pdf",
+      "kind": "cologne-scan-pdf",
+      "description": "Cologne ABCH page PDFs: the f series f01-f14 - f01 the English title page, f02 the registration notice, f03 the Devanagari title page, f04 a blank leaf, f05-f10 the six-page introduction on Hemacandra (the first page unnumbered, then printed 2-6, closing with the collection's works list and the editors' signature), f11 the kosa's division title with its opening verses 1-3 (printed page 1), f12-f14 printed pages 2-4 of the kosa - and the numbered series pg05-pg58 (printed pages 5-58). Printed pages 1-4 sit in the f series, so the numbered series begins at pg05 and pg01-pg04 do not exist. The volume is a Google-digitized copy and every page carries a 'Digitized by Google' watermark.",
+      "baseUrl": "https://www.sanskrit-lexicon.uni-koeln.de/scans/ABCHScan/pdfpages/",
+      "inventory": "data/megastructure/scan_inventory.tsv"
+    }
+  ],
+  "components": [
+    {
+      "id": "abch.fm.title-en",
+      "sequence": 1,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [
+        "frame"
+      ],
+      "title": {
+        "asPrinted": "THE ABHIDHĀNA-SAṂGRAHA or A Collection of Sanskrit Ancient Lexicons. Nos. 6, 7, 8, 9, 10. THE ABHIDHĀNA-CHINTĀMAṆI, THE ABHIDHĀNA-CHINTĀMAṆI-PARIŚIṢṬA, THE ANEKĀRTHA-SAṂGRAHA, THE NIGHANṬU-ŚESHA AND THE LINGĀNUŚĀSANA of HEMACHANDRA. AND No. 11. THE ABHIDHĀNA-CHINTĀMAṆI-ŚILONCHCHHA of JINADEVA MUNIŚVARA. Edited by Paṇḍit Śivadatta and Kāśīnāth Pāṇḍuraṅg Parab. Printed and published by the proprietor, the Nirṇaya-sāgara Press. Bombay. 1896. [Price 11, Rs. 2]",
+        "iast": null,
+        "english": "English title page of the volume, giving the collection's six works, its editors, the press and the year 1896"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f01",
+          "image": "f01.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "observed",
+      "evidence": "Scan f01 viewed 24-09-2026 and re-read 10-10-2026 (H6411): the English title page giving the collection's six works, its editors, the Nirnaya-sagara Press and the year 1896, with a 'Digitized by Google' watermark at the foot. The registration notice H5325's fill placed on this page is on f02.",
+      "notes": null
+    },
+    {
+      "id": "abch.fm.registration",
+      "sequence": 2,
+      "position": "front",
+      "componentType": "publisher-note",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "(Registered according to act XXV of 1867.) (All rights reserved by the publisher.)",
+        "iast": null,
+        "english": "The publisher's registration notice page of the volume"
+      },
+      "languages": [
+        "eng"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f02",
+          "image": "f02.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "reviewed",
+      "evidence": "Scan f02 read 10-10-2026 (H6411 rework): the registration notice - '(Registered according to act XXV of 1867.)' and '(All rights reserved by the publisher.)' on an otherwise blank Google-digitised page. H5325's fill read this page as the Devanagari title page; the Devanagari title is f03.",
+      "notes": null
+    },
+    {
+      "id": "abch.fm.title-sa",
+      "sequence": 3,
+      "position": "front",
+      "componentType": "title-page",
+      "componentTypeNote": null,
+      "function": "identify",
+      "secondaryFunctions": [
+        "frame"
+      ],
+      "title": {
+        "asPrinted": "॥ श्रीः ॥ अभिधानसंग्रहः नाम संस्कृतप्राचीनकोशग्रन्थसमुच्चयः । तत्र (६, ७, ८, ९, १०) श्रीमदाचार्यहेमचन्द्रविरचिताः अभिधानचिन्तामणि-अभिधानचिन्तामणिपरिशिष्ट-अनेकार्थसंग्रह-निघण्टुशेष-लिङ्गानुशासनकोशाः । (११) जिनदेवमुनिवरविरचितः अभिधानचिन्तामणिशीलोञ्छः ।",
+        "iast": null,
+        "english": "Devanagari title page of the collection, naming its six kośas (Nos. 6-11) and its editors"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f03",
+          "image": "f02.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "reviewed",
+      "evidence": "Scan f03 read 10-10-2026 (H6411 rework): the Devanagari title page, 'Abhidhanasamgrahah nama samskrtapracinakosagranthasamuccayah', listing the collection's six works by number (6, 7, 8, 9, 10) with the editors' names and a 'Digitized by Google' watermark. H5325's fill cited f02 for this page; the Devanagari title is f03 and f02 is the registration notice.",
+      "notes": null
+    },
+    {
+      "id": "abch.fm.introduction",
+      "sequence": 4,
+      "position": "front",
+      "componentType": "introduction",
+      "componentTypeNote": null,
+      "function": "frame",
+      "secondaryFunctions": [],
+      "title": {
+        "asPrinted": "हेमचन्द्रः ।",
+        "iast": null,
+        "english": "Introduction on Hemacandra's date and the Chaulukya kings, running head 'Hemacandrah'; six pages, the first unnumbered and the rest printed 2-6, closing with the collection's works list and the editors' signature"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 6,
+        "printedRange": null,
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [
+        {
+          "target": "the chronology behind the author's floruit",
+          "markup": null,
+          "mechanism": "the introduction fixes Hemacandra's date by synchronising the Hemakumāracarita's account of his death with Kumārapāla's reign, and gives each Chaulukya king's reign in Vaṃśa-saṃvat years in the footnotes.",
+          "atlasRef": null
+        }
+      ],
+      "scanLocus": [
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f05",
+          "image": "f05.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f06",
+          "image": "f06.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f07",
+          "image": "f07.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f08",
+          "image": "f08.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f09",
+          "image": "f09.pdf",
+          "printedPage": null
+        },
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "f10",
+          "image": "f10.pdf",
+          "printedPage": null
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "reviewed",
+      "evidence": "Scans f05-f10 read 25-09-2026 (verifier round 2) and re-anchored 10-10-2026 (H6411 rework): an unpaginated-first Sanskrit introduction under the running head 'Hemacandrah', establishing Hemacandra's date from the Hemakumaracarita and the Prabandhakosa, with the genealogy verses of the Caulukya kings and their Vamsa dates in the footnotes. The first page (f05) carries no printed number; f06-f10 are printed 2-6 (number bands read on f06 '२', f10 '६'); the final page f10 carries the collection's works list ('८. Abhidhanacintamanisilonchhah', '९. Linganusasanam') and closes with the editors' signature 'Pandita-Sivadatta-Kasinathah'. H5325's fill had placed this introduction at f07-f11 as five unnumbered pages, missing the registration leaf (f02), the blank leaf (f04) and the kosa's own opening page (f11).",
+      "notes": "The introduction's first page carries no printed number and pages 2-6 are printed 2-6; the volume's own pagination continues with the kosa itself from printed page 1 on f11."
+    },
+    {
+      "id": "abch.bm.colophon",
+      "sequence": 5,
+      "position": "back",
+      "componentType": "colophon",
+      "componentTypeNote": null,
+      "function": "attest",
+      "secondaryFunctions": [
+        "commemorate"
+      ],
+      "title": {
+        "asPrinted": "इति श्रीहेमचन्द्राचार्यविरचितोऽभिधानचिन्तामणिः समाप्तः ॥",
+        "iast": null,
+        "english": "Closing colophon: 'Thus ends the Abhidhānacintāmaṇi composed by Śrī Hemacandrācārya'"
+      },
+      "languages": [
+        "san"
+      ],
+      "extent": {
+        "pages": 1,
+        "printedRange": "58",
+        "items": null,
+        "itemsUnit": null
+      },
+      "decodes": [],
+      "scanLocus": [
+        {
+          "scanSet": "abch-scan-pdf",
+          "ref": "58",
+          "image": "pg58.pdf",
+          "printedPage": "58"
+        }
+      ],
+      "digitalDisposition": "not-digitized",
+      "transcriptions": [],
+      "parent": null,
+      "evidenceLevel": "reviewed",
+      "evidence": "Scan pg58 read 25-09-2026 (verifier round 2) and re-read 10-10-2026 (H6411 rework): the volume's last page (printed 58), head 'Abhidhanasamgrahah-6 Abhidhanacintamanih', carrying the final verses (to 9542) and the closing colophon 'iti Srimadhemacandracaryavirabito'bhidhanacintamanih samaptah || 6 ||' at the foot. The sixth kanda (Samanyakandah) opens at printed page 57 (pg57's head '६ Samanyakandah') and this colophon closes it with the work at printed page 58; H5325's claim that the same colophon closes the kanda at printed page 57 was wrong, and the verse count H5325 recorded as 'to 1542' drops the leading 9.",
+      "notes": "The colophon is printed at the foot of the last text page, not on a separate leaf."
+    }
+  ],
+  "excludedScans": [
+    {
+      "scanSet": "abch-scan-pdf",
+      "ref": "f04",
+      "reason": "A blank leaf in the front matter (between the Devanagari title page f03 and the introduction)."
+    },
+    {
+      "scanSet": "abch-scan-pdf",
+      "ref": "f11",
+      "reason": "Printed page 1 of the kosa (division title 'Abhidhanasamgrahah-(छ) Abhidhanacintamanih' with the opening verses 1-3). Body text, scanned in the f series because the dictionary's own page refs begin at printed page 5."
+    },
+    {
+      "scanSet": "abch-scan-pdf",
+      "ref": "f12",
+      "reason": "Printed page 2 of the kośa (head 'अभिधानसंग्रहः—६ अभिधानचिन्तामणिः', verses 4-9 with the commentary). Body text, scanned in the f series because the dictionary's own page refs begin at printed page 5."
+    },
+    {
+      "scanSet": "abch-scan-pdf",
+      "ref": "f13",
+      "reason": "Printed page 3 of the kośa (head '१ देवाधिदेवकाण्डः', verses 10-15 with the commentary). Body text, same reason."
+    },
+    {
+      "scanSet": "abch-scan-pdf",
+      "ref": "f14",
+      "reason": "Printed page 4 of the kośa (head 'अभिधानसंग्रहः—६ अभिधानचिन्तामणिः', verses 16-23 with the commentary). Body text, same reason."
+    }
+  ],
+  "knownGaps": [],
+  "notes": "The scan set is a Google-digitized copy from Acharya Shri Kailasasagari Gyanamandir (kobatirth.org): every page carries a 'Digitized by Google' watermark, and the f-series mixes true front matter with the kosa's printed pages 1-4. The volume is item No. 6 of the six-work 'Abhidhanasamgraha' collection named on both title pages, but it carries only the Abhidhanacintamani: the kosa's own pagination runs 1-58 (printed pages 1-4 in the f series, 5-58 in the numbered series) and its kandas are 1 Devadhidevakandah (printed page 1), 2 Devakandah (opens printed page 7) and, at the end, 6 Samanyakandah (opening at printed page 57 and closing with the work's colophon at printed page 58). The dictionary's digitized text in csl-orig/v02/abch/abch.txt covers printed pages 5-58.",
+  "misfits": [
+    {
+      "label": "One scan set whose pages are two different kinds of matter",
+      "componentId": null,
+      "why": "The f series is Cologne's front-matter scan set for this dictionary, but f11-f14 are printed pages 1-4 of the kosa body. The schema can declare a scan set only as a whole and each page either belongs to a component or is excluded; there is no way to say 'this set is front matter except for its last four pages, which are body'. Those four pages are recorded in excludedScans."
+    },
+    {
+      "label": "The volume is one item of a numbered collection",
+      "componentId": null,
+      "why": "Both title pages announce the 'Abhidhānasaṃgraha' series and its six kośas, and the volume is No. 6; the schema's edition block has no series, volume-in-series or 'items not present in this volume' field, so the series relation is stated in the edition label and the notes."
+    },
+    {
+      "label": "'Digitized by Google' watermark on every page",
+      "componentId": null,
+      "why": "A mark of the digitizing contractor, not of the edition; the schema has no scan-artefact layer (same class as the MW pilot's stamp-leaf misfit)."
+    }
+  ]
+}
