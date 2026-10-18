@@ -39,9 +39,23 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_aob_entries.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_entries.tsv) | 1,430 | H6720 printed AOB entry inventory (one row per printed row, tails reassembled across OCR wraps) with its harvested match, route and exercise state |
 | [pd_aob_sigla_reconciliation.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.tsv) | 2,954 | H6720 discrepancy list — `harvest_not_in_aob`, `join_unconfirmed_at_entry`, `aob_never_cited` (+ near-miss), `join_miss_siglum_equal`, OCR fragments |
 | [pd_aob_sigla_reconciliation.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.json) | — | H6720 aggregates: three presence measures, never-cited split, method, input hashes |
+| [pd_inheritance_metrics.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_inheritance_metrics.tsv) | 6,866 | H6948 per-headword probe rows (sampled, stratified by marked × entry size) — citation Jaccard / strict subset / target coverage / gloss Jaccard per shared headword, with `marked`, `marked_strict`, `marked_mw`, `marked_pw` |
+| [pd_inheritance_distributions.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_inheritance_distributions.json) | — | H6948 aggregates: sampling frame, input SHA-256s, marks census (broad and strict), macro inventory vs PWG/MW and DCS, shared-abbreviation `mappable_share`, calibration with bootstrap CIs, the three distributions, and the script's own verdict |
 | [pd_quotations_by_entry.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_quotations_by_entry.tsv) | 107,630 | H6949 quotation-level unit — one row per entry: `{#...#}` blocks, quotations, siglum loci, further references, attestations |
 | [pd_quotations_vs_pwg.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_quotations_vs_pwg.tsv) | 4,093 | H6949 PD against PWG on the same lemmas, both measured with the same quotation rule — counts and ratios |
 | [pd_quotations_summary.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_quotations_summary.json) | — | H6949 totals, distribution, top-20, the PWG comparison block, input hashes |
+
+## Silent inheritance (H6948)
+
+The bracket mark is PD's only machine-visible trace of inheritance, so `1.67 %` needed a
+ceiling. The probe measures it two ways. **The inventory is PD's own:** 92.5 % of PD's
+104,773 letter-*a* headwords are absent from PWG and MW, and only 1.67 % of that residue is
+a DCS lemma (40.3 % of the shared ones are — the control). **The bracket marks a gloss, not
+an entry:** entries PD marks are *less* subsumed by the target's citations than unmarked
+ones, while `[MW]`-marked entries overlap MW's gloss vocabulary 0.262 against 0.198, and a
+marked entry is gloss-only (zero citations) 30.8 % of the time against 1.29 %. Read the
+percentage as *marked* gloss attribution; it cannot be ranked. Write-up:
+[reports/PD_SILENT_INHERITANCE_PROBE_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SILENT_INHERITANCE_PROBE_2026-10-18.md).
 
 ## Method
 
