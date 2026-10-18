@@ -7,6 +7,7 @@
     "route_a": "siglum identity: strict key, else diacritic-free skeleton (len>=3, unique); shorter sigla require strict equality",
     "route_b": "title identity: H6707 adjudicated title vs entry tail, skeleton, ratio>=0.85 or containment>=12 chars",
     "trap": "MahāBhā. (Mahābhārata) and MahāBh. (Mahābhāṣya) stay distinct: mahabha vs mahabh; asserted in --selftest",
+    "witness": "H6941: a join row whose adjudicated title is found in a printed-book text witness (PDF/A text layer via pdftotext, or the second OCR) at >=0.85 skeleton coverage is reclassified join_confirmed_printed_text -- presence confirmed, siglum binding still unbound",
     "not_moved": "frozen headline values 25.2% / 77.9% are not touched here"
   },
   "source_aob": {
@@ -81,12 +82,35 @@
     "families_sha256": "d5d0b32ae2f380cd8a0d38dce7bc1adf88b3c6891a9a6fdf7db3cdd434254871",
     "join_sha256": "9861d383f02f236f2a4700fd213760df338858ec00af16e9189230f7c4bf67a6"
   },
+  "witness": {
+    "sources": [
+      {
+        "path": "AOB.pdf",
+        "sha256": "072f436ebf8bc87efd3464e3c4a1ca33e5e690406783c27843b6e2b0c2ec4664",
+        "text_sha256": "14ce8227f5c60ca254e90ae981c6e2687c58aefb7a1a9fd5cf1a90cb541b9a5a",
+        "chars": 162027
+      },
+      {
+        "path": "AOB_ocr.md",
+        "sha256": "efd66a89eb4e22579c70140123861d12d13f0f5cf71553b92df6681ad9a43fc3",
+        "text_sha256": "efd66a89eb4e22579c70140123861d12d13f0f5cf71553b92df6681ad9a43fc3",
+        "chars": 166348
+      }
+    ],
+    "confirmed_rows": 269,
+    "join_rows": 3233,
+    "join_rows_entry_located": 2552,
+    "coverage_before_pct": 78.94,
+    "coverage_after_pct": 87.26,
+    "min_coverage": 0.85
+  },
   "discrepancies": {
     "aob_never_cited": 223,
     "aob_fragment_or_garble": 34,
     "aob_never_cited_near_miss": 136,
     "harvest_not_in_aob": 1793,
-    "join_unconfirmed_at_entry": 681,
+    "join_unconfirmed_at_entry": 412,
+    "join_confirmed_printed_text": 269,
     "join_miss_siglum_equal": 80,
     "junk_ocr": 7
   }

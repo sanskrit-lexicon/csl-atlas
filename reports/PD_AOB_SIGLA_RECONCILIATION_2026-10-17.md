@@ -1,6 +1,6 @@
 # Printed AOB authority vs harvested PD sigla — reconciliation
 
-_Created: 17-10-2026 · H6720 · DeepSeek v4.1 Flash (`deepseek-flash`) via DSH_
+_Created: 17-10-2026 (H6720) · updated 18-10-2026 (H6941 printed-text confirmation) · DeepSeek v4.1 Flash (`deepseek-flash`) via DSH_
 
 The PD sigla harvest (`pd_siglum_families.tsv`, 5,106 sigla from PDScan's letter-`a-`
 text) and the printed *Abbreviations of Books Quoted* (PD repo `AOB.md`, 42 pp OCR of
@@ -90,6 +90,34 @@ Plus 34 never-cited rows that are OCR fragments/garble (excluded from the denomi
 | `join_miss_siglum_equal` | 80 | printed entry the join missed; siglum identity proves it |
 | `aob_fragment_or_garble` / `junk_ocr` | 34 / 7 | OCR artefacts, reported not counted |
 
+## H6941 — printed-text confirmation of the join's unconfirmed rows
+
+The 681 `join_unconfirmed_at_entry` rows were not left as a shrug. The printed book has two
+further machine witnesses on the same disk: the **PDF/A text layer** of `AOB.pdf` (poppler
+`pdftotext`, 162,027 chars — both columns legible, cleaner than the AOB.md tesseract pass)
+and the **second OCR** `AOB_ocr.md` (166,348 chars, column-per-line). For each unconfirmed
+row the H6707 adjudicated title is matched against both witness texts by skeleton coverage
+(longest common substring in a window anchored on the title or its longest words; ≥0.85 of
+the title, short titles <8 chars only on exact containment).
+
+| | Rows | Share of the join's 3,233 |
+|---|---:|---:|
+| confirmed at entry level (H6720) | 2,552 | 78.94 % |
+| **+ confirmed in a printed-text witness (H6941)** | **2,821** | **87.26 %** |
+| still unconfirmed | 412 | 12.74 % |
+
+**269 rows recovered** (`join_confirmed_printed_text`, 203 in the PDF text layer, 66 in the
+second OCR). Presence itself does not move — the join's 63.32 % / 78.04 % and the corrected
+64.88 % / 80.08 % stand; what moves is how much of that join this repository can *re-verify
+independently*.
+
+The 412 residuals share one cause: **the adjudicated title itself is OCR-broken at a wrap**
+(`Jainend lravyikarana` for *Jainendravyākaraṇa*, `Nyayava irttika` for *Nyāyavārttika*,
+`Pauskar rasarhhita`), so no witness contains that string and coverage lands at 0.75–0.84 —
+below the bar. Repairing H6707's titles is a different job (it is the join's own authority,
+not the printed book's text); lowering the threshold would trade a verifiable 269 for an
+unverifiable one.
+
 ## Caveats
 
 - **Letter `a-` only.** Q2 answers "not cited in the published `a-` volumes", not "not
@@ -109,8 +137,10 @@ Plus 34 never-cited rows that are OCR fragments/garble (excluded from the denomi
 
 ```sh
 python3 scripts/pd_aob_sigla_reconciliation.py --selftest
-python3 scripts/pd_aob_sigla_reconciliation.py --aob ../PD/AOB.md
-python3 scripts/pd_aob_sigla_reconciliation.py --check
+python3 scripts/pd_aob_sigla_reconciliation.py --aob ../PD/AOB.md \
+  --witness ../PD/AOB.pdf --witness ../PD/AOB_ocr.md
+python3 scripts/pd_aob_sigla_reconciliation.py --check --aob ../PD/AOB.md \
+  --witness ../PD/AOB.pdf --witness ../PD/AOB_ocr.md
 ```
 
 _Dr. Mārcis Gasūns_

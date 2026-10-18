@@ -42,6 +42,14 @@ Outputs (all deterministic, no network):
   data/pd/pd_aob_sigla_reconciliation.tsv  the discrepancy list
   data/pd/pd_aob_sigla_reconciliation.json aggregates, method, input hashes
 
+H6941: the 681 `join_unconfirmed_at_entry` rows are re-checked against the printed
+book's own text witnesses -- the PDF/A text layer of ``AOB.pdf`` (poppler
+``pdftotext``) and the second OCR (``AOB_ocr.md``). A row whose adjudicated title
+is found there (>=0.85 of the title skeleton) becomes
+`join_confirmed_printed_text`: presence in the printed list is confirmed, the
+siglum binding is still NOT bound at entry level. ``--check`` needs the same
+witness inputs to reproduce the class.
+
 ``--check`` verifies the JSON aggregates *and* both row-level TSVs byte for byte.
 
 Run:
@@ -49,6 +57,7 @@ Run:
   python3 scripts/pd_aob_sigla_reconciliation.py --check    # verify committed
   python3 scripts/pd_aob_sigla_reconciliation.py --selftest # trap + parser
   python3 scripts/pd_aob_sigla_reconciliation.py --aob /path/to/AOB.md
+  python3 scripts/pd_aob_sigla_reconciliation.py --witness ../PD/AOB_ocr.md
 
 Exit codes: 0 ok / 1 drift under --check or failed selftest / 2 input missing.
 """
@@ -60,6 +69,7 @@ import difflib
 import hashlib
 import json
 import re
+import subprocess
 import sys
 import unicodedata
 from pathlib import Path
@@ -301,9 +311,79 @@ class TitleMatcher(object):
         return res
 
 
+# --- printed-book witnesses (H6941) ------------------------------------------
+
+WITNESS_MIN_COVERAGE = 0.85
+WITNESS_ANCHOR_OCCURRENCES = 40
+
+
+def pdf_text(path):
+    """The PDF/A text layer, via poppler's pdftotext. None when unavailable."""
+    try:
+        out = subprocess.run(["pdftotext", str(path), "-"],
+                             capture_output=True, text=True, timeout=180)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if out.returncode != 0 or not out.stdout.strip():
+        return None
+    return out.stdout
+
+
+def load_witnesses(paths):
+    """[(label, text)] for every witness that can be read; [] if none."""
+    got = []
+    for raw in paths:
+        if not raw:
+            continue
+        path = Path(raw)
+        if not path.exists():
+            continue
+        if path.suffix.lower() == ".pdf":
+            text = pdf_text(path)
+            if text is None:
+                print("[WARN] witness unreadable (pdftotext missing or empty): %s"
+                      % path, file=sys.stderr)
+                continue
+        else:
+            text = path.read_text(encoding="utf-8", errors="replace")
+        got.append((str(path), text))
+    return got
+
+
+def title_coverage(ts, corpus):
+    """How much of a title skeleton is present in a witness skeleton.
+
+    0-1 coverage = longest common substring over a window anchored on the
+    title's first 8 chars and on its longest words. Short titles (<8 chars)
+    only count on exact containment -- a six-letter skeleton has no room for
+    a tolerant match.
+    """
+    if not ts:
+        return 0.0
+    if len(ts) < 8:
+        return 1.0 if ts in corpus else 0.0
+    anchors = {ts[:8]}
+    words = [w for w in re.split(r"[^a-z0-9]+", ts) if len(w) >= 6]
+    anchors.update(w[:8] for w in sorted(set(words), key=len, reverse=True)[:3])
+    best = 0.0
+    for a in anchors:
+        i = corpus.find(a)
+        seen = 0
+        while i != -1 and seen < WITNESS_ANCHOR_OCCURRENCES:
+            window = corpus[i:i + len(ts) + 12]
+            hit = difflib.SequenceMatcher(None, ts, window).find_longest_match(
+                0, len(ts), 0, len(window)).size
+            best = max(best, hit / float(len(ts)))
+            if best >= 0.99:
+                return best
+            i = corpus.find(a, i + 1)
+            seen += 1
+    return best
+
+
 # --- measure -----------------------------------------------------------------
 
-def measure(aob_path, families_path, join_path):
+def measure(aob_path, families_path, join_path, witnesses=None):
     text = aob_path.read_text(encoding="utf-8")
     entries = parse_aob(text)
     by_strict, by_skeleton, by_base = build_entry_index(entries)
@@ -459,6 +539,56 @@ def measure(aob_path, families_path, join_path):
             "harvest_class": r["class"],
             "evidence": evidence,
         })
+    # H6941: the printed book's own text witnesses (PDF/A text layer, second
+    # OCR) can confirm a join row whose entry the AOB.md OCR mangled. This
+    # confirms *presence of the title in the printed list*, never the row's
+    # siglum binding -- the class says so.
+    witness_summary = None
+    if witnesses:
+        witness_skel = [(label, skeleton(text)) for label, text in witnesses]
+        confirmed = 0
+        for row in discrepancies:
+            if row["kind"] != "join_unconfirmed_at_entry":
+                continue
+            title = join.get(row["harvest_siglum"], {}).get("title", "")
+            ts = skeleton(title)[:160]
+            if not ts:
+                continue
+            best_cov, best_src = 0.0, ""
+            for label, corpus in witness_skel:
+                cov = title_coverage(ts, corpus)
+                if cov > best_cov:
+                    best_cov, best_src = cov, label
+            if best_cov >= WITNESS_MIN_COVERAGE:
+                row["kind"] = "join_confirmed_printed_text"
+                row["evidence"] = ("adjudicated title found in the printed text "
+                                   "witness %s at coverage %.2f"
+                                   % (Path(best_src).name, best_cov))
+                confirmed += 1
+        join_entry_rows = sum(1 for r in harvest_rows
+                              if r["harvest_match_type"]
+                              and r["harvest_match_type"] != "census_unmatched")
+        join_entry_located = sum(
+            1 for r in harvest_rows
+            if r["harvest_match_type"] and r["harvest_match_type"] != "census_unmatched"
+            and r["entry"] is not None and not r["entry"]["junk"])
+        witness_summary = {
+            "sources": [{"path": Path(lbl).name,
+                         "sha256": sha256_of(Path(lbl)),
+                         "text_sha256": hashlib.sha256(
+                             txt.encode("utf-8")).hexdigest(),
+                         "chars": len(txt)} for lbl, txt in witnesses],
+            "confirmed_rows": confirmed,
+            "join_rows": join_entry_rows,
+            "join_rows_entry_located": join_entry_located,
+            "coverage_before_pct": round(
+                100.0 * join_entry_located / join_entry_rows, 2) if join_entry_rows else None,
+            "coverage_after_pct": round(
+                100.0 * (join_entry_located + confirmed) / join_entry_rows, 2)
+                if join_entry_rows else None,
+            "min_coverage": WITNESS_MIN_COVERAGE,
+        }
+
     for r in rescued:
         discrepancies.append({
             "kind": "join_miss_siglum_equal",
@@ -487,6 +617,11 @@ def measure(aob_path, families_path, join_path):
                        % (TITLE_MIN_RATIO, TITLE_MIN_CONTAINED),
             "trap": "MahāBhā. (Mahābhārata) and MahāBh. (Mahābhāṣya) stay distinct: "
                     "mahabha vs mahabh; asserted in --selftest",
+            "witness": "H6941: a join row whose adjudicated title is found in a "
+                       "printed-book text witness (PDF/A text layer via pdftotext, or "
+                       "the second OCR) at >=%.2f skeleton coverage is reclassified "
+                       "join_confirmed_printed_text -- presence confirmed, siglum "
+                       "binding still unbound" % WITNESS_MIN_COVERAGE,
             "not_moved": "frozen headline values 25.2% / 77.9% are not touched here",
         },
         "source_aob": {
@@ -542,6 +677,7 @@ def measure(aob_path, families_path, join_path):
             "families_sha256": sha256_of(families_path),
             "join_sha256": sha256_of(join_path),
         },
+        "witness": witness_summary,
         "discrepancies": {
             "aob_never_cited": len(never) - near,
             "aob_fragment_or_garble": sum(1 for e in entries_out
@@ -550,7 +686,10 @@ def measure(aob_path, families_path, join_path):
                                           and e["junk"] != "yes"),
             "aob_never_cited_near_miss": near,
             "harvest_not_in_aob": len(not_in_aob) - unconfirmed,
-            "join_unconfirmed_at_entry": unconfirmed,
+            "join_unconfirmed_at_entry": sum(
+                1 for d in discrepancies if d["kind"] == "join_unconfirmed_at_entry"),
+            "join_confirmed_printed_text": sum(
+                1 for d in discrepancies if d["kind"] == "join_confirmed_printed_text"),
             "join_miss_siglum_equal": len(rescued),
             "junk_ocr": sum(1 for e in entries_out if e["junk"] == "yes"),
         },
@@ -619,6 +758,11 @@ def selftest():
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--aob", default=None, help="path to PD/AOB.md")
+    ap.add_argument("--witness", action="append", default=None,
+                    help="printed-book text witness (.pdf or .txt), repeatable; "
+                         "default: ../PD/AOB.pdf + ../PD/AOB_ocr.md when present")
+    ap.add_argument("--no-witness", action="store_true",
+                    help="skip the printed-text confirmation (H6941 classes)")
     ap.add_argument("--check", action="store_true",
                     help="recompute and compare with the committed artifacts")
     ap.add_argument("--selftest", action="store_true")
@@ -636,14 +780,24 @@ def main(argv=None):
             print("[FAIL] missing input: %s" % p, file=sys.stderr)
             return 2
 
-    entries, disc, summary = measure(aob, families, join)
+    if args.no_witness:
+        witness_paths = []
+    elif args.witness:
+        witness_paths = args.witness
+    else:
+        witness_paths = [str(p) for p in (ROOT.parent / "PD/AOB.pdf",
+                                          ROOT.parent / "PD/AOB_ocr.md")
+                         if p.exists()]
+    witnesses = load_witnesses(witness_paths) if witness_paths else []
+
+    entries, disc, summary = measure(aob, families, join, witnesses)
 
     if args.check:
         out_dir = ROOT / "data/pd"
         committed = json.loads(
             (out_dir / "pd_aob_sigla_reconciliation.json").read_text(encoding="utf-8"))
         diffs = []
-        for key in ("harvest", "aob", "source_aob", "discrepancies"):
+        for key in ("harvest", "aob", "source_aob", "discrepancies", "witness"):
             if committed.get(key) != summary.get(key):
                 diffs.append(key)
         # row-level artifacts are gated too: aggregates can be right while a
@@ -688,6 +842,15 @@ def main(argv=None):
           % (h["entry_located"]["families"], h["entry_located"]["share_pct"],
              h["entry_located"]["mass_share_pct"]))
     print("join misses rescued  : %d" % summary["harvest"]["join_misses_rescued"])
+    w = summary.get("witness")
+    if w:
+        print("printed-text witnesses: %s" % ", ".join(x["path"] for x in w["sources"]))
+        print("  join confirmed     : %d/%d entry-located (%.2f %%) -> %d/%d (%.2f %%)"
+              % (w["join_rows_entry_located"], w["join_rows"],
+                 w["coverage_before_pct"], w["join_rows_entry_located"] + w["confirmed_rows"],
+                 w["join_rows"], w["coverage_after_pct"]))
+        print("  rows reclassified  : %d join_unconfirmed_at_entry -> join_confirmed_printed_text"
+              % w["confirmed_rows"])
     print("wrote                : data/pd/pd_aob_entries.tsv, "
           "data/pd/pd_aob_sigla_reconciliation.tsv, "
           "data/pd/pd_aob_sigla_reconciliation.json")
