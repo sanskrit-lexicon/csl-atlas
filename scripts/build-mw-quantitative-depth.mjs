@@ -19,6 +19,8 @@ import {
 import {
   buildFamilies,
   compoundSegmentCount,
+  compoundStrictJointCount,
+  COMPOUND_METRIC,
   FAMILY_ASSUMPTIONS
 } from "./lib/mw-depth-graph.mjs";
 import { licenseFields, generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
@@ -67,7 +69,8 @@ function main() {
   const typeExamples = Object.fromEntries(ARTICLE_TYPES.map(t => [t, []]));
   const overlap = new Map(); // "a|b" -> count
   const typeCountHistogram = new Map(); // number of types per record -> count
-  const compoundDepthHistogram = new Map();
+  const compoundDepthHistogram = new Map(); // loose joints: em dash, hyphen, plus
+  const strictCompoundDepthHistogram = new Map(); // strict joints: em dash only
   const citationBuckets = { "0": 0, "1": 0, "2-3": 0, "4-7": 0, "8-15": 0, "16+": 0 };
 
   const layerMembership = Object.fromEntries(LAYER_ORDER.map(l => [l, 0]));
@@ -80,6 +83,7 @@ function main() {
     const types = classifyTypes(r);
     const layerInfo = recordSourceLayers(r);
     const segCount = compoundSegmentCount(r);
+    const strictJointCount = compoundStrictJointCount(r);
 
     r.types = types;
     r.citationCount = layerInfo.citationCount;
@@ -106,6 +110,10 @@ function main() {
     // histograms
     typeCountHistogram.set(types.length, (typeCountHistogram.get(types.length) || 0) + 1);
     compoundDepthHistogram.set(segCount, (compoundDepthHistogram.get(segCount) || 0) + 1);
+    strictCompoundDepthHistogram.set(
+      strictJointCount,
+      (strictCompoundDepthHistogram.get(strictJointCount) || 0) + 1
+    );
 
     // citations
     const c = layerInfo.citationCount;
@@ -180,19 +188,47 @@ function main() {
   // ---- 3. Depth distribution. ----
   const toSortedPairs = m =>
     [...m.entries()].sort((a, b) => a[0] - b[0]).map(([value, count]) => ({ value, count }));
+  const threePlusTotal = pairs =>
+    pairs.filter(p => p.value >= 3).reduce((sum, p) => sum + p.count, 0);
+  const looseDistribution = toSortedPairs(compoundDepthHistogram);
+  const strictDistribution = toSortedPairs(strictCompoundDepthHistogram);
   written.push(
     writeJson(
       "mw-depth-distribution.json",
       envelope(
         {
           typesPerRecord: toSortedPairs(typeCountHistogram),
-          compoundSegmentDistribution: toSortedPairs(compoundDepthHistogram),
+          compoundDepthSeries: {
+            metricId: COMPOUND_METRIC.id,
+            metricLabel: COMPOUND_METRIC.label,
+            note: COMPOUND_METRIC.note,
+            strict: {
+              id: "strict",
+              label: "Strict joints — em dash only",
+              definition:
+                "Members are divided only by em dashes; hyphens and plus signs do not deepen the count.",
+              distribution: strictDistribution,
+              threePlusTotal: threePlusTotal(strictDistribution)
+            },
+            loose: {
+              id: "loose",
+              label: "Loose joints — em dash, hyphen, plus",
+              definition:
+                "Members are divided by em dashes, hyphens and plus signs; the historical compoundSegmentCount series.",
+              distribution: looseDistribution,
+              threePlusTotal: threePlusTotal(looseDistribution)
+            }
+          },
+          // Backwards-compatible alias of the loose series.
+          compoundSegmentDistribution: looseDistribution,
           citationCountBuckets: citationBuckets
         },
         {
           recordCount,
           assumptions: [
-            "compoundSegmentDistribution counts <k2> segments; segment count 1 means no compound marker."
+            "compoundDepthSeries publishes the joint count under two labelled brackets: strict (em dash only) and loose (em dash, hyphen, plus).",
+            "compoundSegmentDistribution is the loose series, kept under its historical key for existing consumers.",
+            "A joint is an internal division of <k2>; a joint count is not a member (immediate-constituent) depth. Segment/joint count 1 means no compound marker."
           ]
         }
       )
@@ -208,12 +244,16 @@ function main() {
         {
           familyCount,
           shown: Math.min(TOP_FAMILIES, families.length),
+          depthMetric: COMPOUND_METRIC,
           families: families.slice(0, TOP_FAMILIES)
         },
         {
           recordCount,
           assumptions: FAMILY_ASSUMPTIONS,
-          warnings: ["Family grouping is inferred (evidence level: inferred); verify against source records via the example links."]
+          warnings: [
+            "Family grouping is inferred (evidence level: inferred); verify against source records via the example links.",
+            "maxCompoundDepth is a joint count, not a member or immediate-constituent depth; families are not re-ranked on model output."
+          ]
         }
       )
     )

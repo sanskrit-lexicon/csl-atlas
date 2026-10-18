@@ -1,0 +1,239 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-18",
+  "generatedBy": "python3 scripts/build-compound-depth-evidence.py",
+  "question": "Q10: Wilson CI for p2 plus censoring bounds, markup depths 3-8",
+  "source": {
+    "snapshot": "data/compound-depth/typography-probe-2026-10-17.json",
+    "sha256": "c902dd99b42221e4628d82a0b4820fd3f40724c3bf3e8dbf5055579232903baa",
+    "markupRecordsFrom": "/tmp/h6963/csl-orig/v02/mw/mw.txt",
+    "markupRecordsSha256": "555ecf5aadaaf21e5965d6b3b419f428fc9ab9237f563627001ceca468d0cff8"
+  },
+  "method": {
+    "p2": "share of valid rows the model reads as exactly 2 members",
+    "ci": "Wilson score interval, 95 %",
+    "bounds": "Manski worst-case over non-valid rows, narrowed by the truncation rule",
+    "why": "truncation drops the first member, so missingness is depth-correlated; the bounds state exactly what the missing rows can and cannot move"
+  },
+  "table": [
+    {
+      "markupDepth": 3,
+      "rows": 6946,
+      "valid": 4488,
+      "reads2": 2121,
+      "p2OfValid": 0.4726,
+      "p2OfValidCi95": [
+        0.458,
+        0.4872
+      ],
+      "truncated": 1064,
+      "truncatedCouldBe2": 120,
+      "empty": 583,
+      "garbage": 811,
+      "p2LowerAllRows": 0.3054,
+      "p2UpperAllRows": 0.5233,
+      "p2LowerAllRowsCi95": [
+        0.2946,
+        0.3163
+      ],
+      "p2UpperAllRowsCi95": [
+        0.5116,
+        0.5351
+      ],
+      "p2LowerValidDenominator": 0.4726,
+      "p2UpperEligibleValidDenominator": 0.6056,
+      "censoringRule": "truncated true depth >= returned+1, so only returned<=1 rows remain candidates for a 2-read; empty/garbage unbounded"
+    },
+    {
+      "markupDepth": 4,
+      "rows": 1190,
+      "valid": 821,
+      "reads2": 186,
+      "p2OfValid": 0.2266,
+      "p2OfValidCi95": [
+        0.1992,
+        0.2564
+      ],
+      "truncated": 174,
+      "truncatedCouldBe2": 9,
+      "empty": 105,
+      "garbage": 90,
+      "p2LowerAllRows": 0.1563,
+      "p2UpperAllRows": 0.3277,
+      "p2LowerAllRowsCi95": [
+        0.1368,
+        0.178
+      ],
+      "p2UpperAllRowsCi95": [
+        0.3017,
+        0.3549
+      ],
+      "p2LowerValidDenominator": 0.2266,
+      "p2UpperEligibleValidDenominator": 0.3805,
+      "censoringRule": "truncated true depth >= returned+1, so only returned<=1 rows remain candidates for a 2-read; empty/garbage unbounded"
+    },
+    {
+      "markupDepth": 5,
+      "rows": 196,
+      "valid": 140,
+      "reads2": 12,
+      "p2OfValid": 0.0857,
+      "p2OfValidCi95": [
+        0.0497,
+        0.1438
+      ],
+      "truncated": 27,
+      "truncatedCouldBe2": 1,
+      "empty": 14,
+      "garbage": 15,
+      "p2LowerAllRows": 0.0612,
+      "p2UpperAllRows": 0.2143,
+      "p2LowerAllRowsCi95": [
+        0.0354,
+        0.104
+      ],
+      "p2UpperAllRowsCi95": [
+        0.1626,
+        0.2769
+      ],
+      "p2LowerValidDenominator": 0.0857,
+      "p2UpperEligibleValidDenominator": 0.2471,
+      "censoringRule": "truncated true depth >= returned+1, so only returned<=1 rows remain candidates for a 2-read; empty/garbage unbounded"
+    },
+    {
+      "markupDepth": 6,
+      "rows": 47,
+      "valid": 32,
+      "reads2": 0,
+      "p2OfValid": 0.0,
+      "p2OfValidCi95": [
+        0.0,
+        0.1072
+      ],
+      "truncated": 7,
+      "truncatedCouldBe2": 0,
+      "empty": 4,
+      "garbage": 4,
+      "p2LowerAllRows": 0.0,
+      "p2UpperAllRows": 0.1702,
+      "p2LowerAllRowsCi95": [
+        0.0,
+        0.0756
+      ],
+      "p2UpperAllRowsCi95": [
+        0.0889,
+        0.3014
+      ],
+      "p2LowerValidDenominator": 0.0,
+      "p2UpperEligibleValidDenominator": 0.2,
+      "censoringRule": "truncated true depth >= returned+1, so only returned<=1 rows remain candidates for a 2-read; empty/garbage unbounded"
+    },
+    {
+      "markupDepth": 7,
+      "rows": 8,
+      "valid": 6,
+      "reads2": 0,
+      "p2OfValid": 0.0,
+      "p2OfValidCi95": [
+        0.0,
+        0.3903
+      ],
+      "truncated": 0,
+      "truncatedCouldBe2": 0,
+      "empty": 2,
+      "garbage": 0,
+      "p2LowerAllRows": 0.0,
+      "p2UpperAllRows": 0.25,
+      "p2LowerAllRowsCi95": [
+        0.0,
+        0.3244
+      ],
+      "p2UpperAllRowsCi95": [
+        0.0715,
+        0.5907
+      ],
+      "p2LowerValidDenominator": 0.0,
+      "p2UpperEligibleValidDenominator": 0.25,
+      "censoringRule": "truncated true depth >= returned+1, so only returned<=1 rows remain candidates for a 2-read; empty/garbage unbounded"
+    },
+    {
+      "markupDepth": 8,
+      "rows": 5,
+      "valid": 2,
+      "reads2": 0,
+      "p2OfValid": 0.0,
+      "p2OfValidCi95": [
+        0.0,
+        0.6576
+      ],
+      "truncated": 0,
+      "truncatedCouldBe2": 0,
+      "empty": 3,
+      "garbage": 0,
+      "p2LowerAllRows": 0.0,
+      "p2UpperAllRows": 0.6,
+      "p2LowerAllRowsCi95": [
+        -0.0,
+        0.4345
+      ],
+      "p2UpperAllRowsCi95": [
+        0.2307,
+        0.8824
+      ],
+      "p2LowerValidDenominator": 0.0,
+      "p2UpperEligibleValidDenominator": 0.6,
+      "censoringRule": "truncated true depth >= returned+1, so only returned<=1 rows remain candidates for a 2-read; empty/garbage unbounded"
+    },
+    {
+      "markupDepth": 9,
+      "rows": 1,
+      "valid": 0,
+      "reads2": 0,
+      "p2OfValid": null,
+      "p2OfValidCi95": null,
+      "truncated": 1,
+      "truncatedCouldBe2": 0,
+      "empty": 0,
+      "garbage": 0,
+      "p2LowerAllRows": 0.0,
+      "p2UpperAllRows": 0.0,
+      "p2LowerAllRowsCi95": [
+        0.0,
+        0.7935
+      ],
+      "p2UpperAllRowsCi95": [
+        0.0,
+        0.7935
+      ],
+      "p2LowerValidDenominator": null,
+      "p2UpperEligibleValidDenominator": null,
+      "censoringRule": "truncated true depth >= returned+1, so only returned<=1 rows remain candidates for a 2-read; empty/garbage unbounded"
+    },
+    {
+      "markupDepth": 10,
+      "rows": 1,
+      "valid": 0,
+      "reads2": 0,
+      "p2OfValid": null,
+      "p2OfValidCi95": null,
+      "truncated": 0,
+      "truncatedCouldBe2": 0,
+      "empty": 1,
+      "garbage": 0,
+      "p2LowerAllRows": 0.0,
+      "p2UpperAllRows": 1.0,
+      "p2LowerAllRowsCi95": [
+        0.0,
+        0.7935
+      ],
+      "p2UpperAllRowsCi95": [
+        0.2065,
+        1.0
+      ],
+      "p2LowerValidDenominator": null,
+      "p2UpperEligibleValidDenominator": 1.0,
+      "censoringRule": "truncated true depth >= returned+1, so only returned<=1 rows remain candidates for a 2-read; empty/garbage unbounded"
+    }
+  ],
+  "reading": "The published 47.3 % (CI 45.8-48.7) is the markup-depth-3 cell; its censoring upper bound is in the table and is the number to quote when the missing third of rows is treated adversarially."
+}

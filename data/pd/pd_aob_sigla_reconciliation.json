@@ -1,0 +1,117 @@
+{
+  "generated_by": "H6720 scripts/pd_aob_sigla_reconciliation.py (DeepSeek v4.1 Flash, deepseek-flash)",
+  "measured_on": "2026-10-17",
+  "method": {
+    "aob_universe": "PD/AOB.md OCR entries (siglum opens a backticked row; tail reassembled across OCR wraps)",
+    "harvest_universe": "data/pd/pd_siglum_families.tsv (PDScan letter-a-)",
+    "route_a": "siglum identity: strict key, else diacritic-free skeleton (len>=3, unique); shorter sigla require strict equality",
+    "route_b": "title identity: H6707 adjudicated title vs entry tail, skeleton, ratio>=0.85 or containment>=12 chars",
+    "trap": "MahāBhā. (Mahābhārata) and MahāBh. (Mahābhāṣya) stay distinct: mahabha vs mahabh; asserted in --selftest",
+    "witness": "H6941: a join row whose adjudicated title is found in a printed-book text witness (PDF/A text layer via pdftotext, or the second OCR) at >=0.85 skeleton coverage is reclassified join_confirmed_printed_text -- presence confirmed, siglum binding still unbound",
+    "not_moved": "frozen headline values 25.2% / 77.9% are not touched here"
+  },
+  "source_aob": {
+    "path": "PD/AOB.md (sanskrit-lexicon/PD, OCR of the official KoshaSHRI PDF)",
+    "sha256": "a3ce1a795c6f751da8ee103588c5cc9004f3f81df87c3f39731e78a78398da12",
+    "lines": 2011,
+    "entries": 1430,
+    "entries_usable": 1423,
+    "merged_tokens": 623,
+    "junk_tokens": 7
+  },
+  "harvest": {
+    "families": 5106,
+    "occurrences": 398359,
+    "in_aob": 2632,
+    "share_pct": 51.55,
+    "occurrences_in_aob": 271784,
+    "mass_share_pct": 68.23,
+    "not_in_aob": 2474,
+    "join_misses_rescued": 80,
+    "by_class": {
+      "primary": {
+        "families": 4988,
+        "in_aob": 2624,
+        "share_pct": 52.61,
+        "occurrences": 353512,
+        "occurrences_in_aob": 270119
+      },
+      "secondary": {
+        "families": 13,
+        "in_aob": 0,
+        "share_pct": 0.0,
+        "occurrences": 4860,
+        "occurrences_in_aob": 0
+      },
+      "structural": {
+        "families": 105,
+        "in_aob": 8,
+        "share_pct": 7.62,
+        "occurrences": 39987,
+        "occurrences_in_aob": 1665
+      }
+    },
+    "join_claim": {
+      "families": 3233,
+      "share_pct": 63.32,
+      "occurrences": 310863,
+      "mass_share_pct": 78.04
+    },
+    "join_claim_plus_siglum_identity": {
+      "families": 3313,
+      "share_pct": 64.88,
+      "occurrences": 318997,
+      "mass_share_pct": 80.08
+    },
+    "entry_located": {
+      "families": 2632,
+      "share_pct": 51.55,
+      "occurrences": 271784,
+      "mass_share_pct": 68.23
+    }
+  },
+  "aob": {
+    "entries_usable": 1423,
+    "entries_wellformed": 1362,
+    "exercised": 1003,
+    "never_cited": 359,
+    "never_cited_pct": 26.36,
+    "fragments_or_garble": 61
+  },
+  "inputs": {
+    "families_sha256": "d5d0b32ae2f380cd8a0d38dce7bc1adf88b3c6891a9a6fdf7db3cdd434254871",
+    "join_sha256": "9861d383f02f236f2a4700fd213760df338858ec00af16e9189230f7c4bf67a6"
+  },
+  "witness": {
+    "sources": [
+      {
+        "path": "AOB.pdf",
+        "sha256": "072f436ebf8bc87efd3464e3c4a1ca33e5e690406783c27843b6e2b0c2ec4664",
+        "text_sha256": "14ce8227f5c60ca254e90ae981c6e2687c58aefb7a1a9fd5cf1a90cb541b9a5a",
+        "chars": 162027
+      },
+      {
+        "path": "AOB_ocr.md",
+        "sha256": "efd66a89eb4e22579c70140123861d12d13f0f5cf71553b92df6681ad9a43fc3",
+        "text_sha256": "efd66a89eb4e22579c70140123861d12d13f0f5cf71553b92df6681ad9a43fc3",
+        "chars": 166348
+      }
+    ],
+    "confirmed_rows": 269,
+    "join_rows": 3233,
+    "join_rows_entry_located": 2552,
+    "coverage_before_pct": 78.94,
+    "coverage_after_pct": 87.26,
+    "min_coverage": 0.85
+  },
+  "discrepancies": {
+    "aob_never_cited": 223,
+    "aob_fragment_or_garble": 34,
+    "aob_never_cited_near_miss": 136,
+    "harvest_not_in_aob": 1793,
+    "join_unconfirmed_at_entry": 412,
+    "join_confirmed_printed_text": 269,
+    "join_miss_siglum_equal": 80,
+    "junk_ocr": 7
+  }
+}
