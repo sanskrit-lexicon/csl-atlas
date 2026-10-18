@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/schema/label-misread-feedback.schema.json",
+  "title": "Label-misread feedback row (A72 pedagogy, H6465)",
+  "description": "One lightweight row per misread dictionary label, collected through the optional onboarding guide (docs/A72_LABEL_READING_GUIDE.ru.md) during community review-pool work. Rows live in the gitignored review/ tree only; an aggregated roll-up is what reaches the repository and is routed back to the E3 small-class register follow-up (csl-standards). No personal data: the annotator is a pool pseudonym (pool-aNN), never a name or contact; free-text notes are subject to the same contact-scrub rule as review-pool exports (docs/REVIEW_POOL_V1_DESIGN.md §4.5).",
+  "type": "object",
+  "required": ["feedbackId", "guideLabel", "expectedExpansion", "censusExpansion", "annotator", "createdAt"],
+  "additionalProperties": false,
+  "properties": {
+    "feedbackId": {
+      "type": "string",
+      "description": "Opaque unique row id, e.g. lmf-<uuid4>."
+    },
+    "guideLabel": {
+      "type": "string",
+      "description": "The abbreviation string as printed in the guide, e.g. \"c.\" or \"P.\". Should be a label section of docs/A72_LABEL_READING_GUIDE.ru.md; labels marked «нет в цензе» are especially valuable feedback."
+    },
+    "sheetId": {
+      "type": "string",
+      "description": "Optional: the review-pool sheet the feedback arose during, e.g. csl-atlas-r2-checkpoint_10rows. Omit for standalone guide reading."
+    },
+    "packetId": {
+      "type": "string",
+      "description": "Optional: pool packet context (r2-checkpoint | h4-semantic-field | xref-shared-core | none)."
+    },
+    "annotator": {
+      "type": "string",
+      "pattern": "^pool-a[0-9]{2}$",
+      "description": "Pseudonymous pool annotator id only — 152-ФЗ: no names, e-mails, handles."
+    },
+    "expectedExpansion": {
+      "type": "string",
+      "minLength": 1,
+      "description": "What the reader expected the label to mean, in their own words."
+    },
+    "censusExpansion": {
+      "type": "string",
+      "description": "The expansion the reader actually met, quoted verbatim from the census legend row; empty when the label is «not in census»."
+    },
+    "censusSource": {
+      "enum": ["guide", "census-payload", "dictionary-front-matter", "other"],
+      "description": "Where the reader met the expansion: the generated guide, data/abbrev/abbrev_census.json, a dictionary preface, or elsewhere."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date",
+      "description": "UTC date only (coarsened per the pool identity rule, §4)."
+    },
+    "note": {
+      "type": "string",
+      "description": "Optional free text. Contact-bearing tokens (e-mail, @handle, t.me/ link, bare URL) are refused before storage, same as review-pool export notes (§4.5)."
+    }
+  }
+}

@@ -142,6 +142,8 @@
     "test-abbrev-census": "python -m unittest scripts.test_build_abbrev_census",
     "build-validation-2006": "python scripts/build_abbrev_validation_2006.py",
     "test-validation-2006": "python -m unittest scripts.test_build_abbrev_validation_2006",
+    "build-abbrev-label-guide": "python scripts/build_abbrev_label_guide.py",
+    "test-abbrev-label-guide": "python -m unittest scripts.test_build_abbrev_label_guide",
     "test-forensic-pins": "python -m pytest tests/forensic -q -p no:cacheprovider",
     "review-pool-kappa": "python scripts/review_pool_kappa.py",
     "test-review-pool-kappa": "python -m unittest scripts.test_review_pool_kappa"
