@@ -588,7 +588,8 @@ against the title-page ranges of vols 1–3 (BORI catalogue) — a named open it
 It is **still far from finished** — only ~37 % of its own planned entries after 38 years — but it is *moving through the alphabet*, which is the whole point. Its
 founding general editor was **A. M. Ghatage — the very scholar who edited PD's first volumes.** The
 same man, the same city, the same decade, ran both projects; the difference is *scope*. BORI
-bounded its corpus (~450 texts, terser articles) and in 38 years cleared the entire vowel series;
+bounded its corpus (~450 texts, terser articles) and in 38 years carried its alphabet from `a` into `u`
+(the end of the vowel series is exactly what the two accounts above disagree about);
 PD chose the unbounded historical maximum and in 50 years has not left `a`. It is as close to a natural experiment in
 lexicographic ambition as the field offers, and its verdict is unambiguous: **a great
 Sanskrit-family dictionary finishes only if it refuses to let the letter `a` become infinite.**
