@@ -7,11 +7,20 @@
 // separately from the sort score.
 
 const COMPOUND_MARKER = /[—\-+]/;
+const STRICT_JOINT_MARKER = /—/;
+
+export const COMPOUND_METRIC = {
+  id: "compoundSegmentCount",
+  label: "compound joints",
+  note:
+    "A joint is an internal division of <k2>. A joint count is not a member (immediate-constituent) depth: " +
+    "the Dharmamitra probe found 47.3% of valid markup-3 rows parse as two members."
+};
 
 export const FAMILY_ASSUMPTIONS = [
   "Families are grouped by the leading base segment of <k2>; this is an inferred grouping, not an explicit MW derivation link.",
-  "compoundSegmentCount counts <k2> segments split on compound markers (em dash, hyphen, plus).",
-  "maxFamilyDepth uses compound segment count as a depth proxy; it is not a Paninian derivation depth.",
+  "compoundSegmentCount counts <k2> joints split on compound markers (em dash, hyphen, plus); it is a joint count, not a member (immediate-constituent) depth.",
+  "maxFamilyDepth uses the joint count as a depth proxy; it is not a Paninian derivation depth.",
   "rootCandidate prefers a member tagged genuineroot, else the shortest base member.",
   "depthScore is for ranking only; always read the stored components instead."
 ];
@@ -24,10 +33,18 @@ export function familyBase(record) {
   return first.trim();
 }
 
+// Kept name: the id is part of the published data contract (MG Q4, 18-10-2026).
 export function compoundSegmentCount(record) {
   const k2 = (record.k2 || "").replace(/\//g, "");
   if (!COMPOUND_MARKER.test(k2)) return 1;
   return k2.split(COMPOUND_MARKER).filter(Boolean).length;
+}
+
+// Strict joint count: only em dashes divide members (the probe's em-dash-only bracket).
+export function compoundStrictJointCount(record) {
+  const k2 = (record.k2 || "").replace(/\//g, "");
+  if (!STRICT_JOINT_MARKER.test(k2)) return 1;
+  return k2.split(STRICT_JOINT_MARKER).filter(Boolean).length;
 }
 
 function layerRank(order, layer) {
