@@ -68,6 +68,8 @@ ones, while `[MW]`-marked entries overlap MW's gloss vocabulary 0.262 against 0.
 marked entry is gloss-only (zero citations) 30.8 % of the time against 1.29 %. Read the
 percentage as *marked* gloss attribution; it cannot be ranked. Write-up:
 [reports/PD_SILENT_INHERITANCE_PROBE_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SILENT_INHERITANCE_PROBE_2026-10-18.md).
+| [pd_dcs_earliest_lag.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_dcs_earliest_lag.tsv) | 2,458 | H6944 per-lemma lag between PD's first citation and DCS's earliest dated attestation, both in the Dharmamitra chronology |
+| [pd_dcs_earliest_lag.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_dcs_earliest_lag.json) | — | H6944 join cascade, distribution and pinned input hashes |
 
 ## Method
 
