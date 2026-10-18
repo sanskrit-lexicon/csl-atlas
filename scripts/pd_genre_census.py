@@ -40,6 +40,19 @@ Siddhāntakaumudī), so token matching alone misfires.  Three ordered channels:
 
 Anything left is "other"; the residual mass is reported, never hidden.
 
+SUBJECT-CODE CROSSWALK (H6946).  The nine genre classes are crosswalked to the
+62 printed subject classes of PD's *Subject-wise Classification and Approximate
+Chronology of the Works* (PD/SWC.md, pp. LXXIII-LXXXI,
+https://github.com/sanskrit-lexicon/PD/blob/main/SWC.md).  The same numbered
+scheme (1-62) is the subject-code apparatus of the printed Index of Works
+(pp. LXXXIX-CXXVII); H6945 transcribes that per-work index separately.  The
+crosswalk is one-to-many: a genre owns every printed class that its classifier
+would draw from.  The residual "other" genre is the explicit unmapped bucket,
+and its share is carried in pd_genre_subject_crosswalk.tsv.  The union of the
+mapped codes is validated to cover 1-62 exactly once, so no printed class is
+silently dropped.  Genre shares are copied from the census table and never
+recomputed from the crosswalk.
+
 TWO INDEPENDENT ANCHORS (not derived from the PD data):
 
   epigraphy -- Sircar, *Indian Epigraphical Glossary* (IEG), Cologne
@@ -62,8 +75,8 @@ TWO INDEPENDENT ANCHORS (not derived from the PD data):
       grammatical bibliography against which PD's coverage is measured.
 
 Usage:
-    python scripts/pd_genre_census.py            # (re)write data/pd/pd_citation_genre.tsv
-    python scripts/pd_genre_census.py --check    # exit 1 if the committed TSV drifts
+    python scripts/pd_genre_census.py            # (re)write both TSVs
+    python scripts/pd_genre_census.py --check    # exit 1 if either committed TSV drifts
     python scripts/pd_genre_census.py --audit    # top sigla per genre (stdout)
     python scripts/pd_genre_census.py --json     # machine-readable table + verdicts
 """
@@ -92,6 +105,125 @@ GENRES = [
     "medieval",
     "other",
 ]
+
+# --------------------------------------------------------------------------
+# H6946 -- printed subject classes 1-62.
+# Transcribed from the v2 OCR of PD/SWC.md, "Subject-wise Classification and
+# Approximate Chronology of the Works" (pp. LXXIII-LXXXI), with OCR spellings
+# normalised to the printed forms (Linganugasanas -> Linganusasanas,
+# Samgita -> Sangita, Nibandha -> Nibandhas).  Sub-codes 4.1/4.2, 27.1-27.9,
+# 39.1-39.3 and 54.1-54.5 are divisions of their parent code and are not
+# counted as separate classes.
+# --------------------------------------------------------------------------
+SUBJECT_CLASSES: list[tuple[int, str]] = [
+    (1, "Samhitas"),
+    (2, "Brahmanas"),
+    (3, "Aranyakas"),
+    (4, "Upanisads"),
+    (5, "Mantrapatha, Anukramanis etc."),
+    (6, "Srautasutras"),
+    (7, "Sulbasutras"),
+    (8, "Pitrmedhasutras"),
+    (9, "Grhyasutras"),
+    (10, "Nirukta"),
+    (11, "Pratigakhyas"),
+    (12, "Epics"),
+    (13, "Commentaries on the Mahabharata"),
+    (14, "Buddhism"),
+    (15, "Jainism: Dogmatics"),
+    (16, "Jainism: Narrations"),
+    (17, "Puranas"),
+    (18, "Tantras"),
+    (19, "Grammar: Paninian"),
+    (20, "Grammar: Non-Paninian"),
+    (21, "Linganusasanas"),
+    (22, "Siksas"),
+    (23, "Lexicons"),
+    (24, "Commentaries on the Amarakosa"),
+    (25, "Philosophy: General"),
+    (26, "Mimamsa"),
+    (27, "Vedanta"),
+    (28, "Bhakti"),
+    (29, "Trika"),
+    (30, "Samkhya"),
+    (31, "Yoga"),
+    (32, "Nyaya"),
+    (33, "Vaisesika"),
+    (34, "Nyayavaisesika"),
+    (35, "Dharmasutras"),
+    (36, "Dharma"),
+    (37, "Nibandhas"),
+    (38, "Arthasastra"),
+    (39, "Minor sciences"),
+    (40, "Sangita"),
+    (41, "Silpa"),
+    (42, "Medicine"),
+    (43, "Kama"),
+    (44, "Mathematics"),
+    (45, "Astronomy"),
+    (46, "Astrology"),
+    (47, "Alchemy"),
+    (48, "Poetics"),
+    (49, "Dramaturgy"),
+    (50, "Nrtya"),
+    (51, "Prosody"),
+    (52, "Kavyas"),
+    (53, "Historical Poems"),
+    (54, "Minor Poems"),
+    (55, "Anthology"),
+    (56, "Brhatkatha and connected Works"),
+    (57, "Stories and Romances"),
+    (58, "Campu"),
+    (59, "Drama"),
+    (60, "Farces"),
+    (61, "Allegorical plays"),
+    (62, "Inscriptions"),
+]
+
+# One-to-many genre -> printed class map.  "other" is left without codes: it is
+# the unmapped bucket and keeps its own share in the crosswalk TSV.
+GENRE_SUBJECT_CODES: dict[str, list[int]] = {
+    "vedic": list(range(1, 12)) + [22],
+    "epic": [12, 13],
+    "purana": [17],
+    "kavya": [16] + list(range(48, 62)),
+    "grammar": [19, 20, 21],
+    "epigraphy": [62],
+    "lexicography": [23, 24],
+    "medieval": [14, 15, 18] + list(range(25, 48)),
+    "other": [],
+}
+
+UNMAPPED_LABEL = "unmapped"
+
+GENRE_SUBJECT_NOTES = {
+    "vedic": (
+        "Includes class 22 Siksas: H6930 treats pratisakhya/siksa/nirukta as "
+        "Vedic auxiliary texts, not as grammar."
+    ),
+    "epic": "Epics and their commentaries.",
+    "purana": "Puranas.",
+    "kavya": (
+        "Includes classes 48-51 (Poetics, Dramaturgy, Nrtya, Prosody) because "
+        "H6930's kavya classifier absorbs Kavyaprakasa, Natyasastra, Dasrupaka, "
+        "etc.; class 16 Jainism Narrations falls here as narrative kavya."
+    ),
+    "grammar": (
+        "Paninian and non-Paninian grammar plus Linganusasanas; class 24 "
+        "Amarakosa commentaries sit under lexicography."
+    ),
+    "epigraphy": "Epigraphia Indica and the epigraphic corpora.",
+    "lexicography": "Lexicons and their commentaries.",
+    "medieval": (
+        "Post-classical systematic and commentarial corpus: Buddhism, Jain "
+        "dogmatics, Tantras, philosophy, dharma, artha, sciences, medicine, "
+        "astronomy/astrology, alchemy."
+    ),
+    "other": (
+        "Unmapped bucket: H6930 residual mass whose title/siglum evidence did "
+        "not resolve to a genre; no printed subject class is assigned."
+    ),
+}
 
 # --------------------------------------------------------------------------
 # Anchor 1 -- IEG (Sircar 1966), Cologne digitisation.
@@ -1005,6 +1137,10 @@ def census() -> dict:
                 "pct_of_361310": 100.0 * occ_safe / total_safe,
                 "top5": " | ".join(f"{s['siglum']} ({s['count']})" for s in top),
                 "top5_works": " | ".join(s["evidence"].strip()[:70] for s in top),
+                "printed_subject_codes": ",".join(
+                    str(c) for c in GENRE_SUBJECT_CODES[genre]
+                )
+                or UNMAPPED_LABEL,
             }
         )
 
@@ -1131,7 +1267,66 @@ TSV_COLUMNS = [
     "pct_of_361310",
     "top5_sigla",
     "top5_works",
+    "printed_subject_codes",
 ]
+
+CROSSWALK_COLUMNS = [
+    "genre",
+    "mapping",
+    "printed_subject_codes",
+    "printed_subject_classes",
+    "index_of_works_subject_codes",
+    "code_count",
+    "share_pct_of_361310",
+    "share_pct_of_353512",
+    "note",
+]
+
+
+def validate_subject_crosswalk() -> None:
+    """Every printed class 1-62 is owned exactly once; 'other' owns none."""
+    owners: dict[int, str] = {}
+    for genre in GENRES:
+        for code in GENRE_SUBJECT_CODES[genre]:
+            if not 1 <= code <= 62:
+                raise SystemExit(f"crosswalk: {genre} has out-of-range code {code}")
+            if code in owners:
+                raise SystemExit(
+                    f"crosswalk: code {code} mapped twice ({owners[code]}, {genre})"
+                )
+            owners[code] = genre
+    missing = sorted(set(range(1, 63)) - set(owners))
+    if missing:
+        raise SystemExit(f"crosswalk: printed classes not mapped: {missing}")
+    if GENRE_SUBJECT_CODES["other"]:
+        raise SystemExit("crosswalk: 'other' must remain the unmapped bucket")
+
+
+def render_crosswalk(table: list[dict]) -> str:
+    validate_subject_crosswalk()
+    names = dict(SUBJECT_CLASSES)
+    lines = ["\t".join(CROSSWALK_COLUMNS)]
+    for r in table:
+        genre = r["genre"]
+        codes = GENRE_SUBJECT_CODES[genre]
+        mapped = "unmapped" if genre == "other" else "mapped"
+        lines.append(
+            "\t".join(
+                [
+                    genre,
+                    mapped,
+                    ",".join(str(c) for c in codes) or UNMAPPED_LABEL,
+                    "; ".join(f"{c} {names[c]}" for c in codes)
+                    or UNMAPPED_LABEL,
+                    ",".join(str(c) for c in codes) or UNMAPPED_LABEL,
+                    str(len(codes)),
+                    f"{r['pct_of_361310']:.2f}",
+                    f"{r['pct_of_353512']:.2f}",
+                    GENRE_SUBJECT_NOTES[genre],
+                ]
+            )
+        )
+    return "\n".join(lines) + "\n"
 
 
 def render_tsv(table: list[dict]) -> str:
@@ -1151,6 +1346,7 @@ def render_tsv(table: list[dict]) -> str:
                     f"{r['pct_of_361310']:.2f}",
                     r["top5"],
                     r["top5_works"],
+                    r["printed_subject_codes"],
                 ]
             )
         )
@@ -1186,14 +1382,23 @@ def main(argv: list[str]) -> int:
     result = census()
     table = result["table"]
     tsv = render_tsv(table)
+    crosswalk_tsv = render_crosswalk(table)
     target = DATA / "pd_citation_genre.tsv"
+    crosswalk_target = DATA / "pd_genre_subject_crosswalk.tsv"
 
     if args.check:
-        committed = target.read_text(encoding="utf-8") if target.exists() else ""
-        if committed != tsv:
-            print("FAIL: data/pd/pd_citation_genre.tsv is stale; re-run the script", file=sys.stderr)
+        stale = []
+        for path, rendered in ((target, tsv), (crosswalk_target, crosswalk_tsv)):
+            committed = path.read_text(encoding="utf-8") if path.exists() else ""
+            if committed != rendered:
+                stale.append(f"data/pd/{path.name}")
+        if stale:
+            print(
+                "FAIL: stale; re-run the script: " + ", ".join(stale),
+                file=sys.stderr,
+            )
             return 1
-        print("PASS: committed TSV reproduces")
+        print("PASS: both committed TSVs reproduce")
         return 0
 
     verdicts = {g: verdict(table, result, g) for g in ("epigraphy", "grammar")}
@@ -1250,7 +1455,9 @@ def main(argv: list[str]) -> int:
     writes = not (args.no_dice or args.no_map or args.audit or args.json)
     if writes:
         target.write_text(tsv, encoding="utf-8")
+        crosswalk_target.write_text(crosswalk_tsv, encoding="utf-8")
         print(f"\nwrote {target.relative_to(REPO)}")
+        print(f"wrote {crosswalk_target.relative_to(REPO)}")
     return 0
 
 
