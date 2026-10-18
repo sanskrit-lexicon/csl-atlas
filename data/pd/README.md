@@ -36,6 +36,7 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_dcs_metrics.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_dcs_metrics.json) | — | the four headline metrics + mass breakdown |
 | [pd_aob_declared_works.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_declared_works.tsv) | 1,112 works / 1,118 editions | declared AOB canon, work groups — a **clean-subset floor**, not the full declared list (see Caveats) |
 | [pd_aob_declared_canon_audit.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_declared_canon_audit.json) | — | H6923 denominator audit: what 1,419 / 1,118 / 1,464 each measure, and the 7.78–8.32 % band |
+| [pd_aob_row_test_1473.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_row_test_1473.json) | — | H6969 row test: per-page census of the 42 printed AOB pages, the 7 repeated column-header rows that inflate R1 1,476 → **1,469 entry rows**, and the verdict on the 2003 *Outlook* "1,473 texts" figure |
 | [pd_aob_entries.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_entries.tsv) | 1,430 | H6720 printed AOB entry inventory (one row per printed row, tails reassembled across OCR wraps) with its harvested match, route and exercise state |
 | [pd_aob_sigla_reconciliation.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.tsv) | 2,954 | H6720 discrepancy list — `harvest_not_in_aob`, `join_unconfirmed_at_entry`, `aob_never_cited` (+ near-miss), `join_miss_siglum_equal`, OCR fragments |
 | [pd_aob_sigla_reconciliation.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_sigla_reconciliation.json) | — | H6720 aggregates: three presence measures, never-cited split, method, input hashes |
@@ -116,5 +117,17 @@ the Cologne archive is the canonical copy. DCS token counts =
   *floor*: the pass-2 clean filter discarded 556 OCR-merged `Siglum Title` entry lines, so
   118 / 1,118 = 10.55 % overstates coverage and must not be quoted as the declared canon.
   Audit: [pd_aob_declared_canon_audit.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_declared_canon_audit.json).
+- **The printed AOB carries 1,469 entry rows, not 1,476 — the difference is the page's own repeated column header (H6969 row test, 18-10-2026).** The AOB prints
+  `Abbreviation. Name of the Book, Author, Edition and Editor — Mode of Reference` at the top of its
+  pages; the OCR catches it **7 times** (pp. 2, 13, 30, 37, 40, 41, 42) and every one of those lines
+  passes the R1 entry-like rule, so the structural 1,476 is **1,469 entry rows + 7 header rows**.
+  `118 / 1,469 = 8.03 %`, which still displays as the ruled **8.0 %** — no manuscript, figure or
+  canary value moves, and the choice between 1,469 and the ruled ≈1,476 stays H6932's. The corrected
+  count is also the reference point for the 2003 *Outlook* figure of **1,473 texts**: it sits 4 rows
+  above the recovered row floor and inside the OCR-loss ceiling (R2 = 99 un-recovered garbled
+  lines), so it is *consistent* with the printed list but is **not an independent witness** for it —
+  same producer (Deccan College), different time slice (a 1975-vintage corpus count) and a different
+  object (texts excerpted, not books quoted). Test: [pd_aob_row_test_1473.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_row_test_1473.json)
+  ([`scripts/pd_aob_row_test_1473.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_aob_row_test_1473.py), `--check` green).
 
 _Dr. Mārcis Gasūns_
