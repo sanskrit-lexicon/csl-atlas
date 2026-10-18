@@ -4,4 +4,9 @@
 #   papers/foo.md  # published: <venue year> | preprint: <id> | license: <DOI>
 # Manuscripts live only in gasyoun/Uprava/papers
 # (STANDING_POLICY_PAPER_WORK_PRIVATE_REPOS_ONLY, 04-10-2026).
-# No active exemptions below — add lines only with a documented reason.
+# Every exemption below carries its reason — add lines only with a documented one.
+
+# A68 report figures — code-generated SVG plates (scripts/build_a68_figures.py),
+# published with the public A68 report; no manuscript prose. The paper itself
+# stays in gasyoun/Uprava/papers.
+papers/figures/a68_fig*.svg  # published: csl-atlas A68 report figures | license: repo (generated)
