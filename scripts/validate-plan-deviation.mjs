@@ -27,6 +27,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const TSV = path.join(ROOT, "data", "plan_deviation.tsv");
 const REPORT = path.join(ROOT, "reports", "DICTIONARY_PLAN_DEVIATION_2026-10-18.md");
+const SECTION_REPORT = path.join(ROOT, "reports", "PD_DCS_CORPUS_COVERAGE_2026.md");
 
 const COLUMNS = [
   "dict_id", "name", "group", "axis", "plan_value", "plan_unit", "plan_declared",
@@ -220,6 +221,68 @@ if (!fs.existsSync(REPORT)) {
   const report = fs.readFileSync(REPORT, "utf8");
   for (const pin of REPORT_PINS) {
     if (!report.includes(pin)) fail(`report no longer contains the pinned string ${JSON.stringify(pin)}`);
+  }
+}
+
+// --- §8.8 plan-vs-delivered dimension (H6983): the inline league-table section
+// must keep the handoff's required cells and per-axis factors. This is the
+// presentation of the same evidence, so its arithmetic is pinned here too.
+if (!fs.existsSync(SECTION_REPORT)) {
+  fail(`section report missing: ${SECTION_REPORT}`);
+} else {
+  const full = fs.readFileSync(SECTION_REPORT, "utf8");
+  const start = full.indexOf("### 8.8 ");
+  const end = full.indexOf("### 8.9 ");
+  if (start === -1 || end === -1 || end <= start) {
+    fail("§8.8 section not found (or §8.9 missing) in PD_DCS_CORPUS_COVERAGE_2026.md");
+  } else {
+    const section = full.slice(start, end);
+    const required = [
+      "4 vols · 6,400 pp · 10 yr",
+      "10 bound vols, April 1928",
+      "12 vols in 1933",
+      "71 yr from 1857",
+      "21,730 pp",
+      "291,500 entries",
+      "not re-verified",
+      "149,615 pp",
+      "4.0× the plan",
+      "public.oed.com/history/",
+      "accessed 18-10-2026",
+      "| Dictionary | Direction | Span | Years | Lemmas | Entries/yr | Status |",
+      "| Dictionary | Language | Span | Years | Status |",
+      "| Dictionary | Language | Compilation | Years | Entries | Entries/yr | Source class |"
+    ];
+    for (const pin of required) {
+      if (!section.includes(pin)) fail(`§8.8 no longer contains the pinned string ${JSON.stringify(pin)}`);
+    }
+
+    // Every dictionary the handoff names as undocumented must sit in a table
+    // row that actually says "no documented plan" on all three axes.
+    for (const names of [
+      "WIL · GST · PWG · PWK · MW · KEWA · EWA",
+      "CDPL",
+      "KOW · WNT · SAOB · HDC · Nikkoku"
+    ]) {
+      const row = section.split("\n").find((line) =>
+        line.startsWith("|") && line.includes(names) && line.includes("no documented plan"));
+      if (!row) fail(`§8.8: ${names} is not marked "no documented plan" in a table row`);
+    }
+
+    // The handoff's factors must remain arithmetically true.
+    for (const [label, computed, expected] of [
+      ["OED volumes 10/4", 10 / 4, 2.50],
+      ["OED 1933 volumes 12/4", 12 / 4, 3.00],
+      ["OED1 pages 15,500/6,400", 15500 / 6400, 2.42],
+      ["OED2 pages 21,730/6,400", 21730 / 6400, 3.40],
+      ["OED years 71/10", 71 / 10, 7.10],
+      ["OED contract years 49/10", 49 / 10, 4.90],
+      ["PD scope 149,615/37,333", 149615 / 37333, 4.0]
+    ]) {
+      if (Math.abs(computed - expected) > 0.011) {
+        fail(`§8.8 ${label}: computed ${computed.toFixed(3)}, stated ${expected.toFixed(2)}`);
+      }
+    }
   }
 }
 
