@@ -652,6 +652,16 @@ exhaustive per headword. **The constraint is editorial policy, not script or lan
 > completion **scheduled for 2032** (print 2034) — is a **plan, not an outcome**; it is cited only as
 > evidence that a ~500 k-entry historical dictionary is now budgeted as an 8-year editorial cycle.
 
+**Plan against delivery — a separate test (H6984).** This league table measures *delivery*; it does
+not say whether these projects kept the plans they set themselves, which is a different question
+with a much thinner evidence base: only **6 of the 17** dictionaries above have a numeric plan
+documented at the start. Testing the familiar "great dictionaries run ~3× over plan" against them
+splits the claim cleanly — the completed plans miss their **size** by a median **2.5×** (n=3) and
+their **schedule** by a median **8.9×** (n=4), and every documented schedule is missed by more than
+4×. "~3×" is a fair summary of size and a three-fold understatement of time; the two must not be
+averaged. Table, sources and classes:
+[DICTIONARY_PLAN_DEVIATION_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/DICTIONARY_PLAN_DEVIATION_2026-10-18.md).
+
 
 ### 8.9 Is `a` the hardest letter? — the graveyard of the first letter
 

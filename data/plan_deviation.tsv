@@ -1,0 +1,53 @@
+dict_id	name	group	axis	plan_value	plan_unit	plan_declared	plan_source	plan_source_class	delivered_value	delivered_unit	outcome_source	outcome_source_class	ratio	classification	status	basis	caveat
+WIL	Wilson	sanskrit	volumes					none		volumes	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	13 years 1819-1832; volumes and pages not in the ledger
+WIL	Wilson	sanskrit	pages					none		pages	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	13 years 1819-1832; volumes and pages not in the ledger
+WIL	Wilson	sanskrit	years					none	13	years	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	13 years 1819-1832; volumes and pages not in the ledger
+GST	Goldstücker	sanskrit	volumes					none		volumes	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	abandoned in a; last entry abhyāhita
+GST	Goldstücker	sanskrit	pages					none		pages	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	abandoned in a; last entry abhyāhita
+GST	Goldstücker	sanskrit	years					none	8	years	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	abandoned in a; last entry abhyāhita
+PWG	Böhtlingk–Roth (grosse)	sanskrit	volumes					none		volumes	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	7 volumes commonly cited but not in the estate ledger
+PWG	Böhtlingk–Roth (grosse)	sanskrit	pages					none		pages	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	7 volumes commonly cited but not in the estate ledger
+PWG	Böhtlingk–Roth (grosse)	sanskrit	years					none	20	years	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	7 volumes commonly cited but not in the estate ledger
+PWK	Böhtlingk (kürzere)	sanskrit	volumes					none		volumes	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	10 years, single-handed
+PWK	Böhtlingk (kürzere)	sanskrit	pages					none		pages	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	10 years, single-handed
+PWK	Böhtlingk (kürzere)	sanskrit	years					none	10	years	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	10 years, single-handed
+MW	Monier-Williams	sanskrit	volumes					none		volumes	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	one quarto volume, page count not in the ledger
+MW	Monier-Williams	sanskrit	pages					none		pages	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	one quarto volume, page count not in the ledger
+MW	Monier-Williams	sanskrit	years					none	27	years	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	one quarto volume, page count not in the ledger
+KEWA	Mayrhofer (etymological)	sanskrit	volumes					none	4	volumes	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	etymological: no lemma count
+KEWA	Mayrhofer (etymological)	sanskrit	pages					none		pages	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	etymological: no lemma count
+KEWA	Mayrhofer (etymological)	sanskrit	years					none	24	years	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	etymological: no lemma count
+EWA	Mayrhofer (etymological)	sanskrit	volumes					none	3	volumes	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	15 fascicles bound as 3 volumes; no lemma count
+EWA	Mayrhofer (etymological)	sanskrit	pages					none		pages	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	15 fascicles bound as 3 volumes; no lemma count
+EWA	Mayrhofer (etymological)	sanskrit	years					none	15	years	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	complete	n/a	15 fascicles bound as 3 volumes; no lemma count
+CDPL	BORI Prakrit Dictionary	sanskrit	entries	90000	entries	1988	csl-atlas §8.8 (BORI bounded plan: ~90,000 entries over ~450 texts)	secondary	33600	lexemes	csl-atlas §8.8	secondary	0.37	IN-PROGRESS	unfinished	progress	delivered/plan is progress, not deviation; still inside the vowels
+CDPL	BORI Prakrit Dictionary	sanskrit	volumes					none	3	volumes	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	unfinished	n/a	no volume plan documented
+CDPL	BORI Prakrit Dictionary	sanskrit	pages					none		pages	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	unfinished	n/a	no page plan documented
+CDPL	BORI Prakrit Dictionary	sanskrit	years					none	38	years	csl-atlas §8.8	secondary		NO-DOCUMENTED-PLAN	unfinished	n/a	elapsed 1988-2026; no planned duration documented
+PD	Poona Dictionary	sanskrit	volumes	37	volumes	2017	PD_KNOWLEDGE_INDEX §2/§4	secondary	6	bound volumes	csl-atlas §8.2	secondary	0.16	IN-PROGRESS	unfinished	progress	35 published fascicles = ~6 bound volumes; a fascicle is not a volume, so this axis is units-mismatched
+PD	Poona Dictionary	sanskrit	pages	37333	pages	2017	PD_KNOWLEDGE_INDEX §2/§4	secondary	6056	pages	csl-atlas §8.2	secondary	0.16	IN-PROGRESS	unfinished	progress	6,056 pp by 2019 = 16.2% of the plan
+PD	Poona Dictionary	sanskrit	years	186.7	years	2017	PD_KNOWLEDGE_INDEX §4 (37,333 pp at the 200 pp/yr plan)	secondary	308.2	years (projected)	csl-atlas §8.2 (realized 121.12 pp/yr)	secondary	1.65	PLAN-MISSED	unfinished	projection	projection at the realized rate, not an outcome; PD's scope, not its rate, is the binding constraint
+OED	Oxford English Dictionary, 1st ed.	monument	volumes	4	volumes	1879 contract	OED history text (OUP, read in third-party transcription)	secondary	10	volumes	csl-atlas §8.8 / OED history text	secondary	2.50	PLAN-MISSED	complete	outcome	volumes are of unequal thickness (~1,290 pp/vol), so this axis is a count, not a size
+OED	Oxford English Dictionary, 1st ed.	monument	pages	6400	pages	1879 contract	OED history text (OUP, read in third-party transcription)	secondary	15500	pages	Uprava A68 §5 (OED1 ~15,500 pp, not re-verified)	secondary	2.42	PLAN-MISSED	complete	outcome	OED1 page count is commonly cited but was NOT re-verified; treat this ratio as provisional
+OED	Oxford English Dictionary, 1st ed.	monument	years	10	years	1879 contract	OED history text (OUP, read in third-party transcription)	secondary	49	years	OED history text (1879-1928)	secondary	4.90	PLAN-BROKEN	complete	outcome	71 years from the 1857 conception would give 7.1x; 49 is the plan-anchored denominator
+GRIMM	Deutsches Wörterbuch (Grimm)	monument	volumes	6.5	volumes	1838	Wikipedia, Deutsches Woerterbuch	secondary	32	volumes	Wikipedia, Deutsches Woerterbuch	secondary	4.92	PLAN-BROKEN	complete	outcome	planned 6-7 volumes, so the ratio range is 4.57-5.33; 33 with the 1971 supplement
+GRIMM	Deutsches Wörterbuch (Grimm)	monument	pages					none	67744	columns	Wikipedia, Deutsches Woerterbuch	secondary		NO-DOCUMENTED-PLAN	complete	n/a	no planned page count; delivered counted in columns
+GRIMM	Deutsches Wörterbuch (Grimm)	monument	years	10	years	1838	Wikipedia, Deutsches Woerterbuch	secondary	123	years	Wikipedia, Deutsches Woerterbuch	secondary	12.30	PLAN-BROKEN	complete	outcome	1838-1961
+TLL	Thesaurus Linguae Latinae	monument	volumes					none		volumes	Bayerische Akademie der Wissenschaften, TLL Geschichte	literature		NO-DOCUMENTED-PLAN	unfinished	n/a	no planned volume count documented
+TLL	Thesaurus Linguae Latinae	monument	pages					none		pages	Bayerische Akademie der Wissenschaften, TLL Geschichte	literature		NO-DOCUMENTED-PLAN	unfinished	n/a	no planned page count documented
+TLL	Thesaurus Linguae Latinae	monument	years	15	years	1894	Bayerische Akademie der Wissenschaften, TLL Geschichte	literature	132	years	Bayerische Akademie der Wissenschaften, TLL Geschichte	literature	8.80	PLAN-BROKEN	unfinished	outcome so far (floor)	1894-2026 and still at N/R; the 15-year estimate had reached only half of D; ~156 yr by 2050 = 10.4x
+CAD	Chicago Assyrian Dictionary	monument	volumes					none	26	volumes	Wikipedia, Chicago Assyrian Dictionary	secondary		NO-DOCUMENTED-PLAN	complete	n/a	no planned volume count documented
+CAD	Chicago Assyrian Dictionary	monument	pages					none		pages	Wikipedia, Chicago Assyrian Dictionary	secondary		NO-DOCUMENTED-PLAN	complete	n/a	no planned page count documented
+CAD	Chicago Assyrian Dictionary	monument	years	10	years	1921	Wikipedia, Chicago Assyrian Dictionary	secondary	90	years	Wikipedia, Chicago Assyrian Dictionary	secondary	9.00	PLAN-BROKEN	complete	outcome	initially expected to take 10 years; 1921-2011
+WNT	Woordenboek der Nederlandsche Taal	monument	volumes					none	43	volumes	Wikipedia, Woordenboek der Nederlandsche Taal	secondary		NO-DOCUMENTED-PLAN	complete	n/a	43 volumes including 3 supplements
+WNT	Woordenboek der Nederlandsche Taal	monument	pages					none	49255	pages	Wikipedia, Woordenboek der Nederlandsche Taal	secondary		NO-DOCUMENTED-PLAN	complete	n/a	largest dictionary in the world by page count
+WNT	Woordenboek der Nederlandsche Taal	monument	years					none	134	years	Wikipedia, Woordenboek der Nederlandsche Taal	secondary		NO-DOCUMENTED-PLAN	complete	n/a	1864-1998 publication; 150 years from the 1849 proposal
+SAOB	Svenska Akademiens ordbok	monument	volumes					none	39	volumes	Wikipedia, Svenska Akademiens ordbok	secondary		NO-DOCUMENTED-PLAN	complete	n/a	39 volumes 1898-2023
+SAOB	Svenska Akademiens ordbok	monument	pages					none	33111	pages	Wikipedia, Svenska Akademiens ordbok	secondary		NO-DOCUMENTED-PLAN	complete	n/a	33,111 pages
+SAOB	Svenska Akademiens ordbok	monument	years					none	130	years	Wikipedia, Svenska Akademiens ordbok	secondary		NO-DOCUMENTED-PLAN	complete	n/a	1893-2023; planning from 1787
+HDC	Hanyu Da Cidian	eastern	volumes					none	13	volumes	Wikipedia, Hanyu Da Cidian	secondary		NO-DOCUMENTED-PLAN	complete	n/a	13 volumes 1986-1994; no start-of-project plan documented
+HDC	Hanyu Da Cidian	eastern	pages					none	20000	pages	Wikipedia, Hanyu Da Cidian	secondary		NO-DOCUMENTED-PLAN	complete	n/a	~20,000 large double-column pages
+HDC	Hanyu Da Cidian	eastern	years					none	15	years	Wikipedia, Hanyu Da Cidian	secondary		NO-DOCUMENTED-PLAN	complete	n/a	1979-1994
+NIKKOKU	Nihon Kokugo Daijiten, 1st ed.	eastern	volumes					none	20	volumes	Wikipedia, Nihon Kokugo Daijiten	secondary		NO-DOCUMENTED-PLAN	complete	n/a	20 volumes 1972-1976
+NIKKOKU	Nihon Kokugo Daijiten, 1st ed.	eastern	pages					none		pages	Wikipedia, Nihon Kokugo Daijiten	secondary		NO-DOCUMENTED-PLAN	complete	n/a	page count not documented
+NIKKOKU	Nihon Kokugo Daijiten, 1st ed.	eastern	years					none	40	years	Wikipedia, Nihon Kokugo Daijiten	secondary		NO-DOCUMENTED-PLAN	complete	n/a	~40 years of composition, 4 years of publication (1972-1976); no planned duration documented

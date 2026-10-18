@@ -12,6 +12,7 @@ const VALIDATORS = [
   "validate-correction-feed.mjs",
   "validate-heritage-witness.mjs",
   "validate-ghost-stock.mjs",
+  "validate-plan-deviation.mjs",
   "validate-kosa-chapters.mjs",
   "validate-heap-sat.mjs",
   "validate-period-signatures.mjs",
