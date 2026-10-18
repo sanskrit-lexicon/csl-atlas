@@ -96,6 +96,178 @@ NOT_A_SIGLUM = {
     "of", "and", "the",
 }
 
+# --- H6960: the wrap-fragment rule -------------------------------------------
+#
+# H6720 folded *every* dotless backticked token into the previous entry. That
+# catches OCR wraps ("Lakshmidha" + "ra Katre.") but also swallows real printed
+# entries whose siglum lost its terminal punctuation to the wrap
+# ("AtmaU.1", "AnyaS( Ni)", "P. Astadhy", "Kad. Kadam"). H6960 re-adjudicates
+# the direction from the tail:
+#
+#   * a capital-initial bibliographic tail (title/author, publisher+number or
+#     a year) proves the token is an entry, not a continuation;
+#   * a lowercase / part-word tail ("ra Katre.", "svami", "attagobhakara")
+#     proves it is a continuation of the previous row;
+#   * a very short terminal token ("N.", "Pt.", "Siv:", "K:") with a lowercase
+#     tail is a part-word wrap, not a siglum, even though it ends in
+#     ``.,;:*-``.
+#
+# The promoted/false lists below are the hand adjudication from AOB.md checked
+# against the second OCR witness (PD/AOB_ocr.md); --selftest re-derives both
+# from the source and fails if the parse stops matching them.
+PUBLISHER_RE = re.compile(
+    r"\b(?:NSP|GOS|KM|ASS|TSS|HSS|KSS|MUSS|DLJP|YJGM|SJS|VVP|BORI|BI|BSS|"
+    r"BSPS|MGOMS|ALS|SKS|PSP|SVS|VSP|VSS|TSWS|IFI|GPP|OUSA|ChSS|CHSS|MLSPS|"
+    r"VSGM|BVP|HOS|AOS|BJS|BJSS|BVSM|MDJG)\b[.,]?\s*\d")
+
+#: 29 printed entries H6720 folded as wrap fragments (hand-checked; the second
+#: OCR witness shows each as its own siglum). Keyed by the token as printed.
+H6960_PROMOTED = (
+    "AnyaS( Ni)", "AtmaU.1", "AVP.)", "\u2018BhavU", "BrahmSi", "Chanda",
+    "DagavaC, a", "EkaNa. (Vi)", "GitaBh.( Ra.)", "HamsDii.( Ri.)",
+    "Kad. Kadam", "Linganu, (Sa.)", "Linganu, (Va.)", "Linganu. (Va.)",
+    "Naga. Nagan", "01101)", "P. Astadhy", "PranU.1", "PranU.2",
+    "Praudha. ae", "SabdaBhePra.(Pa.)", "SabdaRa.(Su.)", "SabdaRa.(Va.)",
+    "SaddarSa.(Ra.)", "SmigaTi.( Ra.)", "TajiNi", "TarkSarh.( A.)",
+    "TatpaT.( Va.)", "UnmaRa( Vi.)",
+)
+
+#: "recoveries" H6932 counted that are really continuations: the 10 parser-only
+#: rows named in the handoff (N., Pt., Siv: x3, K:, Sh:, Par:, Av:, Ram) plus
+#: 5 rows R1 also counts (Bh: x2, Ny: x2, Ra,). The first two keep the OCR's
+#: leading fragment; the siglum H6720 read off them is the second element.
+H6960_FALSE_RECOVERIES = (
+    ("and N. G. 8:", "N."),
+    ("111, Pt. Siv:", "Pt."),
+    ("Siv:", "Siv:"), ("Siv:", "Siv:"), ("Siv:", "Siv:"),
+    ("K:", "K:"),
+    ("Sh:", "Sh:"),
+    ("Par:", "Par:"),
+    ("Av:", "Av:"),
+    ("Ram Acharya", "Ram"),
+    ("Bh:", "Bh:"), ("Bh:", "Bh:"),
+    ("Ny:", "Ny:"), ("Ny:", "Ny:"),
+    ("Ra,", "Ra,"),
+)
+
+#: non-entry reasons that continue the previous row's tail (everything else
+#: resets it, exactly as H6720 did for a terminal token with no usable tail)
+FOLD_REASONS = {
+    "merged_without_title",
+    "first_word_punct_fragment",
+    "dotless_fragment",
+    "short_lowercase_continuation",
+    "leading_continuation",
+}
+
+#: a small named sample of the 136+ genuine wrap fragments that must stay
+#: folded in both directions (start + tail as printed)
+H6960_FRAGMENT_SAMPLE = (
+    ("Lakshmidha", "ra Katre."),
+    ("Gos", "svami Damodara Sastri."),
+    ("Pt. Durgapr", "asida and Wasudev Laxman Sastri: Pan"),
+    ("Has", "rvard University Press, Cambridge, Mass. 1957"),
+    ("Bhi", "arati Series 2-7; Varanasi 1965-67"),
+    ("De", "partment 2, University of Madras 1934"),
+    ("Vy", "yavaharakanda Pt. 2, 1916, 317-773"),
+    ("Sra", "iddhakanda, 1918, 1-452"),
+    ("Pas", "dma Prasad Upadhyaya; Samayaprakaga (1935)"),
+    ("Bs Sar", "uskrit Vidyamandira, Ahmedabad.1966"),
+)
+
+
+def _first_alpha(s):
+    for ch in s:
+        if ch.isalpha():
+            return ch
+    return ""
+
+
+def _starts_lower(s):
+    ch = _first_alpha(s or "")
+    return bool(ch) and ch.islower()
+
+
+def _has_bibliographic_tail(rest):
+    """True when the tail reads as ``Title/Author, PUB. N, YEAR``."""
+    rest = (rest or "").strip()
+    if not rest or _starts_lower(rest):
+        return False
+    return bool(YEAR_RE.search(rest)) or bool(PUBLISHER_RE.search(rest))
+
+
+def _has_internal_punct(s):
+    return any(ch in ".,;:*-" for ch in (s or ""))
+
+
+def classify_aob_token(clean, token, rest, merged):
+    """H6960: (is_entry, garbled, reason) for one backticked token.
+
+    ``clean`` is the token with OCR quote/bracket prefixes stripped; ``merged``
+    is H6720's ``Siglum Title`` token test. The caller still applies the
+    tail-length test, so a terminal siglum with no tail is dropped as before.
+    """
+    words = clean.split()
+    first = words[0] if words else ""
+    terminal = clean[-1:] in ".,;:*-"
+    nonascii = any(ord(ch) > 127 for ch in clean)
+
+    if not terminal and not nonascii:
+        # --- dotless ASCII: the repaired rule -------------------------------
+        if merged:
+            # ``Siglum Title`` tokens already carry their title; only a bare
+            # two-word token with no title ("Ram Acharya") is a wrap.
+            if rest.strip() or first[-1:] in ".,;:*-":
+                return True, False, "merged"
+            return False, False, "merged_without_title"
+        if UPPER_START_RE.match(clean):
+            if first[-1:] in ".,;:*-" and len(words) > 1:
+                if YEAR_RE.search(rest) and _has_internal_punct(clean):
+                    return True, False, "first_word_punct_year"
+                if _has_bibliographic_tail(rest):
+                    return True, False, "first_word_punct_bib"
+                if (_has_internal_punct(clean) and rest.count(",") >= 2
+                        and len(rest) >= 20):
+                    return True, False, "punct_and_commas"
+                return False, False, "first_word_punct_fragment"
+            if _has_bibliographic_tail(rest):
+                return True, False, "bibliographic_tail"
+            if (_has_internal_punct(clean) and rest.count(",") >= 2
+                    and len(rest) >= 20):
+                return True, False, "punct_and_commas"
+            return False, False, "dotless_fragment"
+        # non-uppercase dotless: only a digit-only garble can be a siglum
+        if (re.fullmatch(r"[0-9]+\)", clean) and rest.strip()[:1].isupper()
+                and rest.count(",") >= 2 and YEAR_RE.search(rest)):
+            return True, True, "numeric_garble"
+        return False, False, "dotless_fragment"
+
+    # --- terminal punctuation or non-ASCII: H6720 rules + the H6960 guard ---
+    if (terminal and not merged and len(words) == 1
+            and letters(clean) <= 4 and _starts_lower(rest)):
+        # "Siv:" / "K:" / "Bh:" / "Ny:" -- a word split at the wrap, even
+        # when the rest of the row carries a year
+        return False, False, "short_lowercase_continuation"
+    if not UPPER_START_RE.match(clean):
+        lead = words[0] if words else ""
+        ascii_word = re.fullmatch(r"[A-Za-z]+[.,;:]*", lead) is not None
+        ascii_digits = re.fullmatch(r"[0-9]+[.,;:]*", lead) is not None
+        if ((ascii_word and lead[:1].islower()) or ascii_digits) and _starts_lower(rest):
+            # "and N. G. 8:" / "111, Pt. Siv:" -- the OCR kept a piece of the
+            # preceding row in the token; the Devanagari-garbled real entries
+            # ("18०8, Naradas") are untouched because their lead is not ASCII
+            return False, False, "leading_continuation"
+    tail_ok = (
+        letters(rest) >= ENTRY_MIN_TAIL_LETTERS
+        or bool(YEAR_RE.search(rest))
+        or merged
+    )
+    if UPPER_START_RE.match(clean):
+        return (tail_ok, False, "terminal" if terminal else "nonascii_upper")
+    latin = [w for w in words if SIGLUM_WORD_RE.match(w)]
+    ok = bool(latin) and tail_ok and letters(rest) >= ENTRY_MIN_TAIL_LETTERS
+    return (ok, ok, "garbled_start" if ok else "continuation")
+
 
 # --- normalisation -----------------------------------------------------------
 
@@ -155,42 +327,35 @@ def parse_aob(text):
         # the upper-case test must not read as a garbled row
         clean = token.lstrip("\u2018\u2019\u201c\u201d\"'`([{*")
         words = clean.split()
-        # A printed siglum closes with . , ; : * or - (or carries Devanagari,
-        # which the OCR wraps in backticks the same way). A dotless backticked
-        # token is a *wrap fragment* of the previous row ("Catur | wadipika"),
-        # never a siglum: fold it back into that entry's tail.
         merged = (
             len(words) > 1
             and bool(SIGLUM_WORD_RE.match(words[0]))
             and letters(token) >= 10
         )
-        if not merged and not (
-                clean[-1:] in ".,;:*-" or any(ord(c) > 127 for c in clean)):
-            if cur is not None:
-                cur["tail_parts"].append(token)
-                if rest:
-                    cur["tail_parts"].append(rest)
+        is_entry, garbled, reason = classify_aob_token(
+            clean, token, rest, merged)
+        if not is_entry:
+            if reason in FOLD_REASONS:
+                if cur is not None:
+                    cur["tail_parts"].append(token)
+                    if rest:
+                        cur["tail_parts"].append(rest)
+            else:
+                cur = None
             continue
         tail_ok = (
             letters(rest) >= ENTRY_MIN_TAIL_LETTERS
             or bool(YEAR_RE.search(rest))
             or merged
         )
-        garbled = False
-        if UPPER_START_RE.match(clean) is not None:
-            is_entry = tail_ok
-            siglum = words[0] if merged else (clean or token)
-        else:
-            # the OCR also mangles a printed siglum into Devanagari/figures
-            # ("`श्प, Visnup` urana" for VisnuP.); such a row is still a real
-            # printed entry -- keep it for the title route, flagged garbled
-            latin = [w for w in words if SIGLUM_WORD_RE.match(w)]
-            is_entry = bool(latin) and tail_ok and letters(rest) >= ENTRY_MIN_TAIL_LETTERS
-            siglum = latin[0] if latin else ""
-            garbled = True
-        if not is_entry:
+        if not tail_ok:
             cur = None
             continue
+        if garbled:
+            latin = [w for w in words if SIGLUM_WORD_RE.match(w)]
+            siglum = latin[0] if latin else clean
+        else:
+            siglum = words[0] if merged else (clean or token)
         cur = {
             "page": page,
             "siglum_raw": siglum,
@@ -603,12 +768,15 @@ def measure(aob_path, families_path, join_path, witnesses=None):
         })
 
     summary = {
-        "generated_by": "H6720 scripts/pd_aob_sigla_reconciliation.py "
+        "generated_by": "H6720/H6960 scripts/pd_aob_sigla_reconciliation.py "
                         "(DeepSeek v4.1 Flash, deepseek-flash)",
-        "measured_on": "2026-10-17",
+        "measured_on": "2026-10-18",
         "method": {
             "aob_universe": "PD/AOB.md OCR entries (siglum opens a backticked row; "
                             "tail reassembled across OCR wraps)",
+            "fragment_rule": "H6960: dotless tokens are entries when the tail is a "
+                             "capital-initial bibliographic tail (or the first word "
+                             "already ends the siglum); lowercase/part-word tails fold",
             "harvest_universe": "data/pd/pd_siglum_families.tsv (PDScan letter-a-)",
             "route_a": "siglum identity: strict key, else diacritic-free skeleton "
                        "(len>=3, unique); shorter sigla require strict equality",
@@ -673,6 +841,30 @@ def measure(aob_path, families_path, join_path, witnesses=None):
             "fragments_or_garble": sum(1 for e in entries_out
                                        if e["wellformed"] == "no" and e["junk"] == "no"),
         },
+        "h6960": {
+            "rule": "dotless token = entry when its tail is a capital-initial "
+                    "bibliographic tail (title/author + publisher+number or year), "
+                    "or when its first word already carries the siglum's terminal "
+                    "punctuation; a lowercase/part-word tail folds it back",
+            "usable_before": 1423,
+            "promoted_entries": len(H6960_PROMOTED),
+            "false_recoveries": len(H6960_FALSE_RECOVERIES),
+            "usable_after": len(usable),
+            "arithmetic": "1423 + %d - %d = %d"
+                          % (len(H6960_PROMOTED), len(H6960_FALSE_RECOVERIES),
+                             len(usable)),
+            "promoted_tokens": list(H6960_PROMOTED),
+            "false_recovery_tokens": [tok for tok, _ in H6960_FALSE_RECOVERIES],
+            "false_recovery_sigla": sorted({sig for _, sig in H6960_FALSE_RECOVERIES}),
+            "residual_known_false": ["both-rows outside the 119 recoveries "
+                                     "(e.g. Pt. Durgapr., R.) are not re-adjudicated "
+                                     "in this pass; see report Caveats"],
+            "headline_absences": {
+                "kadambari": "Kad. Kadam -> Kadambari, Bana, BS(P)S. 24, 1885",
+                "astadhyayi": "P. Astadhy -> Astadhyayi, Panini, Leipzig, 1887",
+            },
+            "linganu_editions": 7,
+        },
         "inputs": {
             "families_sha256": sha256_of(families_path),
             "join_sha256": sha256_of(join_path),
@@ -721,7 +913,7 @@ DISC_COLS = ["kind", "aob_siglum", "aob_page", "aob_title", "harvest_siglum",
              "harvest_count", "harvest_class", "evidence"]
 
 
-def selftest():
+def selftest(aob_path=None):
     ok = True
     # 1. parser: wrapped tail is reassembled, merged siglum split off
     text = ("## Page 1\n"
@@ -734,6 +926,34 @@ def selftest():
     assert "urana" in ents[0]["tail"], ents[0]
     assert ents[1]["merged_token"] is True and ents[1]["siglum_raw"] == "AllaU.", ents[1]
     print("ok  parser: tails reassembled, merged tokens split (%d entries)" % len(ents))
+    # 1b. H6960: both directions of the repaired fragment rule
+    text = ("## Page 1\n"
+            "`PadmP.` Padmapi\n"
+            "urana, ASS. 1893, Vishvanatha Narayana\n"
+            "`AllaU. Allopanisad` Allopanisad, MB, 1970\n"
+            "`Lakshmidha` ra Katre.\n"
+            "`Gos` svami Damodara Sastri.\n"
+            "`N.` ardesai.\n"
+            "`Siv:` adatta and Kaginath Parab.\n"
+            "`Siv:` adatta and Kasinath Pandurang Parab.\n"
+            "`K:` aul Shastri; IFI. 1962, Kriyapada (2)\n"
+            "`Ram Acharya`\n"
+            "`AnyaS( Ni)` Anyapadegasataka, Nilakanthadiksita, BMS. 1929,\n"
+            "`AtmaU.1` Atmopanisad, NSP. 1948,\n"
+            "`Kad. Kadam` bari, Bana and his son, BS(P)S. 24, 1885,\n"
+            "`P. Astadhy` ayi, Panini, Leipzig, 1887,\n"
+            "`01101)` Nityotsavanibandha, Umanandanatha, GOS. 23, 1948,\n")
+    ents = parse_aob(text)
+    got = [e["siglum_raw"] for e in ents]
+    expected = ["PadmP.", "AllaU.", "AnyaS( Ni)", "AtmaU.1",
+                "Kad. Kadam", "P. Astadhy", "01101)"]
+    if got != expected:
+        print("FAIL H6960 parser: got %r, expected %r" % (got, expected))
+        ok = False
+    else:
+        print("ok  H6960 parser: 29-entry class promoted, short wrap tokens folded")
+    if not ok:
+        return 1
     # 2. trap: Mahabharata vs Mahabhasya never share a skeleton
     if skeleton("MahāBhā.") == skeleton("MahāBh."):
         print("FAIL trap: MahāBhā. and MahāBh. share a skeleton")
@@ -752,6 +972,62 @@ def selftest():
         ok = False
     else:
         print("ok  short keys: 'A.' matches, 'Ā' refused")
+    # 4. H6960 on the real AOB when it is on disk (the --check input)
+    real = Path(aob_path) if aob_path else (ROOT.parent / "PD/AOB.md")
+    if real.exists():
+        entries = parse_aob(real.read_text(encoding="utf-8"))
+        tokens = {e["token_raw"] for e in entries}
+        missing = [t for t in H6960_PROMOTED if t not in tokens]
+        still = sorted({t for t, _ in H6960_FALSE_RECOVERIES if t in tokens})
+        ling = [e for e in entries if e["siglum_raw"].startswith("Linganu")]
+        kad = next((e for e in entries if e["siglum_raw"] == "Kad. Kadam"), None)
+        ast = next((e for e in entries if e["siglum_raw"] == "P. Astadhy"), None)
+        # the 136+ genuine fragments must STAY folded: count R1 entry-like lines
+        # (audit rule) whose token the repaired parser did not turn into an entry
+        text = real.read_text(encoding="utf-8")
+        folded_fragments = 0
+        for line in text.splitlines():
+            m = TOKEN_RE.match(line)
+            if not m:
+                continue
+            tok = m.group(1).strip()
+            tail = m.group(2).strip()
+            words = tok.lstrip("\u2018\u2019\u201c\u201d\"'`([{*").split()
+            merged_r1 = (len(words) > 1 and bool(SIGLUM_WORD_RE.match(words[0]))
+                         and letters(tok) >= 10)
+            r1 = bool(UPPER_START_RE.match(tok)) and (
+                letters(tail) >= 6 or bool(YEAR_RE.search(tail)) or merged_r1)
+            if r1 and tok not in tokens:
+                folded_fragments += 1
+        sample_still = [tok for tok, _ in H6960_FRAGMENT_SAMPLE
+                        if tok in tokens]
+        problems = []
+        if missing:
+            problems.append("not promoted: %r" % missing)
+        if sample_still:
+            problems.append("fragment sample became entries: %r" % sample_still)
+        if still:
+            problems.append("still entries: %r" % still)
+        if len(ling) != 7:
+            problems.append("Linganu rows %d != 7 (witness)" % len(ling))
+        if kad is None or "1885" not in kad["tail"]:
+            problems.append("Kadambari row missing its year")
+        if ast is None or "1887" not in ast["tail"]:
+            problems.append("Astadhyayi row missing its year")
+        if folded_fragments < 136:
+            problems.append("only %d genuine fragments still folded (<136)"
+                            % folded_fragments)
+        if problems:
+            print("FAIL H6960 real data: %s" % "; ".join(problems))
+            ok = False
+        else:
+            print("ok  H6960 real data: %d promoted, %d folded, %d genuine "
+                  "fragments stayed folded, Linganu=7, Kadambari/Astadhyayi own "
+                  "dated rows"
+                  % (len(H6960_PROMOTED), len(H6960_FALSE_RECOVERIES),
+                     folded_fragments))
+    else:
+        print("skip H6960 real-data assertions (no AOB.md at %s)" % real)
     return 0 if ok else 1
 
 
@@ -770,7 +1046,7 @@ def main(argv=None):
     args = ap.parse_args(argv)
 
     if args.selftest:
-        return selftest()
+        return selftest(Path(args.aob) if args.aob else None)
 
     aob = Path(args.aob) if args.aob else (ROOT.parent / "PD/AOB.md")
     families = ROOT / "data/pd/pd_siglum_families.tsv"
@@ -797,7 +1073,8 @@ def main(argv=None):
         committed = json.loads(
             (out_dir / "pd_aob_sigla_reconciliation.json").read_text(encoding="utf-8"))
         diffs = []
-        for key in ("harvest", "aob", "source_aob", "discrepancies", "witness"):
+        for key in ("harvest", "aob", "source_aob", "discrepancies", "witness",
+                    "h6960"):
             if committed.get(key) != summary.get(key):
                 diffs.append(key)
         # row-level artifacts are gated too: aggregates can be right while a

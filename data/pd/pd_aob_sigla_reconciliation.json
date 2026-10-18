@@ -1,8 +1,9 @@
 {
-  "generated_by": "H6720 scripts/pd_aob_sigla_reconciliation.py (DeepSeek v4.1 Flash, deepseek-flash)",
-  "measured_on": "2026-10-17",
+  "generated_by": "H6720/H6960 scripts/pd_aob_sigla_reconciliation.py (DeepSeek v4.1 Flash, deepseek-flash)",
+  "measured_on": "2026-10-18",
   "method": {
     "aob_universe": "PD/AOB.md OCR entries (siglum opens a backticked row; tail reassembled across OCR wraps)",
+    "fragment_rule": "H6960: dotless tokens are entries when the tail is a capital-initial bibliographic tail (or the first word already ends the siglum); lowercase/part-word tails fold",
     "harvest_universe": "data/pd/pd_siglum_families.tsv (PDScan letter-a-)",
     "route_a": "siglum identity: strict key, else diacritic-free skeleton (len>=3, unique); shorter sigla require strict equality",
     "route_b": "title identity: H6707 adjudicated title vs entry tail, skeleton, ratio>=0.85 or containment>=12 chars",
@@ -14,27 +15,27 @@
     "path": "PD/AOB.md (sanskrit-lexicon/PD, OCR of the official KoshaSHRI PDF)",
     "sha256": "a3ce1a795c6f751da8ee103588c5cc9004f3f81df87c3f39731e78a78398da12",
     "lines": 2011,
-    "entries": 1430,
-    "entries_usable": 1423,
-    "merged_tokens": 623,
+    "entries": 1444,
+    "entries_usable": 1437,
+    "merged_tokens": 622,
     "junk_tokens": 7
   },
   "harvest": {
     "families": 5106,
     "occurrences": 398359,
-    "in_aob": 2632,
-    "share_pct": 51.55,
-    "occurrences_in_aob": 271784,
-    "mass_share_pct": 68.23,
-    "not_in_aob": 2474,
-    "join_misses_rescued": 80,
+    "in_aob": 2637,
+    "share_pct": 51.65,
+    "occurrences_in_aob": 272969,
+    "mass_share_pct": 68.52,
+    "not_in_aob": 2469,
+    "join_misses_rescued": 82,
     "by_class": {
       "primary": {
         "families": 4988,
-        "in_aob": 2624,
-        "share_pct": 52.61,
+        "in_aob": 2628,
+        "share_pct": 52.69,
         "occurrences": 353512,
-        "occurrences_in_aob": 270119
+        "occurrences_in_aob": 271202
       },
       "secondary": {
         "families": 13,
@@ -45,10 +46,10 @@
       },
       "structural": {
         "families": 105,
-        "in_aob": 8,
-        "share_pct": 7.62,
+        "in_aob": 9,
+        "share_pct": 8.57,
         "occurrences": 39987,
-        "occurrences_in_aob": 1665
+        "occurrences_in_aob": 1767
       }
     },
     "join_claim": {
@@ -58,25 +59,102 @@
       "mass_share_pct": 78.04
     },
     "join_claim_plus_siglum_identity": {
-      "families": 3313,
-      "share_pct": 64.88,
-      "occurrences": 318997,
-      "mass_share_pct": 80.08
+      "families": 3315,
+      "share_pct": 64.92,
+      "occurrences": 319096,
+      "mass_share_pct": 80.1
     },
     "entry_located": {
-      "families": 2632,
-      "share_pct": 51.55,
-      "occurrences": 271784,
-      "mass_share_pct": 68.23
+      "families": 2637,
+      "share_pct": 51.65,
+      "occurrences": 272969,
+      "mass_share_pct": 68.52
     }
   },
   "aob": {
-    "entries_usable": 1423,
-    "entries_wellformed": 1362,
-    "exercised": 1003,
-    "never_cited": 359,
-    "never_cited_pct": 26.36,
-    "fragments_or_garble": 61
+    "entries_usable": 1437,
+    "entries_wellformed": 1379,
+    "exercised": 1012,
+    "never_cited": 367,
+    "never_cited_pct": 26.61,
+    "fragments_or_garble": 58
+  },
+  "h6960": {
+    "rule": "dotless token = entry when its tail is a capital-initial bibliographic tail (title/author + publisher+number or year), or when its first word already carries the siglum's terminal punctuation; a lowercase/part-word tail folds it back",
+    "usable_before": 1423,
+    "promoted_entries": 29,
+    "false_recoveries": 15,
+    "usable_after": 1437,
+    "arithmetic": "1423 + 29 - 15 = 1437",
+    "promoted_tokens": [
+      "AnyaS( Ni)",
+      "AtmaU.1",
+      "AVP.)",
+      "‘BhavU",
+      "BrahmSi",
+      "Chanda",
+      "DagavaC, a",
+      "EkaNa. (Vi)",
+      "GitaBh.( Ra.)",
+      "HamsDii.( Ri.)",
+      "Kad. Kadam",
+      "Linganu, (Sa.)",
+      "Linganu, (Va.)",
+      "Linganu. (Va.)",
+      "Naga. Nagan",
+      "01101)",
+      "P. Astadhy",
+      "PranU.1",
+      "PranU.2",
+      "Praudha. ae",
+      "SabdaBhePra.(Pa.)",
+      "SabdaRa.(Su.)",
+      "SabdaRa.(Va.)",
+      "SaddarSa.(Ra.)",
+      "SmigaTi.( Ra.)",
+      "TajiNi",
+      "TarkSarh.( A.)",
+      "TatpaT.( Va.)",
+      "UnmaRa( Vi.)"
+    ],
+    "false_recovery_tokens": [
+      "and N. G. 8:",
+      "111, Pt. Siv:",
+      "Siv:",
+      "Siv:",
+      "Siv:",
+      "K:",
+      "Sh:",
+      "Par:",
+      "Av:",
+      "Ram Acharya",
+      "Bh:",
+      "Bh:",
+      "Ny:",
+      "Ny:",
+      "Ra,"
+    ],
+    "false_recovery_sigla": [
+      "Av:",
+      "Bh:",
+      "K:",
+      "N.",
+      "Ny:",
+      "Par:",
+      "Pt.",
+      "Ra,",
+      "Ram",
+      "Sh:",
+      "Siv:"
+    ],
+    "residual_known_false": [
+      "both-rows outside the 119 recoveries (e.g. Pt. Durgapr., R.) are not re-adjudicated in this pass; see report Caveats"
+    ],
+    "headline_absences": {
+      "kadambari": "Kad. Kadam -> Kadambari, Bana, BS(P)S. 24, 1885",
+      "astadhyayi": "P. Astadhy -> Astadhyayi, Panini, Leipzig, 1887"
+    },
+    "linganu_editions": 7
   },
   "inputs": {
     "families_sha256": "d5d0b32ae2f380cd8a0d38dce7bc1adf88b3c6891a9a6fdf7db3cdd434254871",
@@ -97,21 +175,21 @@
         "chars": 166348
       }
     ],
-    "confirmed_rows": 269,
+    "confirmed_rows": 266,
     "join_rows": 3233,
-    "join_rows_entry_located": 2552,
-    "coverage_before_pct": 78.94,
+    "join_rows_entry_located": 2555,
+    "coverage_before_pct": 79.03,
     "coverage_after_pct": 87.26,
     "min_coverage": 0.85
   },
   "discrepancies": {
-    "aob_never_cited": 223,
-    "aob_fragment_or_garble": 34,
-    "aob_never_cited_near_miss": 136,
-    "harvest_not_in_aob": 1793,
+    "aob_never_cited": 225,
+    "aob_fragment_or_garble": 30,
+    "aob_never_cited_near_miss": 142,
+    "harvest_not_in_aob": 1791,
     "join_unconfirmed_at_entry": 412,
-    "join_confirmed_printed_text": 269,
-    "join_miss_siglum_equal": 80,
+    "join_confirmed_printed_text": 266,
+    "join_miss_siglum_equal": 82,
     "junk_ocr": 7
   }
 }
