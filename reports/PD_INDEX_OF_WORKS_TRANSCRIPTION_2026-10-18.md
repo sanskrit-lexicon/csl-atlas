@@ -1,4 +1,4 @@
-# PD Index of Works — pages XC and XCI (vision transcription)
+# PD Index of Works — pages XC–XCII (vision transcription)
 
 _Created: 18-10-2026 · Last updated: 18-10-2026_
 
@@ -19,8 +19,9 @@ the residual handoff minted for the remainder.
 | LXXXIX | 98 | 48 | 2 | S1, unchanged |
 | **XC** | **99** | **52** | **7** | **this pass** |
 | **XCI** | **100** | **56** | **12** | **this pass** |
+| **XCII** | **101** | **55** | **14** | **this pass (H7072)** |
 
-Table total: **156 rows over 3 of 39 pages** (36 pages pending). `row_total_full`
+Table total: **211 rows over 4 of 39 pages** (35 pages pending). `row_total_full`
 stays `null` — a full-Index total from three pages would be an extrapolation,
 which the handoff forbids.
 
@@ -122,16 +123,17 @@ subcode H6946 does not yet carry — flagged for the composition stream (H6994).
 
 ## Backlog (resume pointer)
 
-**36 pages: XCII–CXXVII (leaves 101–136).** One page = one fragment; run
-`python scripts/pd_index_works_build.py rows/<PAGE>.tsv` to append. Leaves
-103–107, 116 and 134 failed to fetch in this session (archive.org resets) —
-retry `page/n{leaf}.jpg` before starting XCII.
+**35 pages: XCIII–CXXVII (leaves 102–136).** One page = one fragment; run
+`python scripts/pd_index_works_build.py data/pd/index_fragments/<PAGE>.tsv` to append.
+This session (H7072) completed XCII (leaf 101, 55 rows) and staged leaves
+102–117 locally; archive.org fetch is ~20–40 s/page, so fetch sequentially with
+`curl --retry 3` (parallel fetches time out). Resume at XCIII (leaf 102).
 
 ## Checks
 
 ```text
 python scripts/pd_index_works_build.py --check
-{"rows": 156, "pages": ["LXXXIX", "XC", "XCI"], "blank_siglum": 21}
+{"rows": 211, "pages": ["LXXXIX", "XC", "XCI", "XCII"], "blank_siglum": 32}
 
 git diff origin/main -- data/pd/pd_index_works.tsv | head   # 48 old rows untouched
 LXXXIX delta statuses == committed delta                     # parity, see above
