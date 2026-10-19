@@ -19,11 +19,13 @@ can decide it is mixed.  It is a decision rule, not a dating clock.
 Usage:
     python scripts/pd_citation_order_full.py --pd-txt /path/to/pd.txt --build
     python scripts/pd_citation_order_full.py --check
+    python scripts/pd_citation_order_full.py --refresh
 
 pd.txt is the read-only PDScan 2020 text (pdtxt.zip) and is not committed.
 Committed artefacts: the TSV, the adjudication sheet, the summary JSON and the
 report.  `--check` recomputes every committed number from the TSV and the same
-pooled-permutation seed.
+pooled-permutation seed.  `--refresh` re-derives the summary JSON and the
+report from the committed TSV when only the derived blocks have to move.
 """
 from __future__ import annotations
 
@@ -318,6 +320,18 @@ def _binom_cdf(k: int, n: int, p: float) -> float:
     return math.exp(top) * sum(math.exp(x - top) for x in logs)
 
 
+CI_DP = 10
+"""Decimals the published Clopper-Pearson bounds are rounded to.
+
+``_binom_cdf`` evaluates the binomial CDF in log space through ``math.lgamma``,
+whose last bit depends on the platform's libm; the 80-step bisection then
+amplifies that one-ULP difference into a ~1e-14 spread of the bound.  The
+bound is reported at 0.1 % (1e-3 of a probability), so rounding to 1e-10 keeps
+seven orders of magnitude of head-room and makes the committed summary JSON
+byte-identical on every platform -- which is what the ``--check`` gate needs.
+"""
+
+
 def clopper_pearson(k: int, n: int, alpha: float = 0.05) -> tuple[float, float]:
     if n == 0:
         return 0.0, 1.0
@@ -340,7 +354,7 @@ def clopper_pearson(k: int, n: int, alpha: float = 0.05) -> tuple[float, float]:
             else:
                 a = mid
         hi = (a + b) / 2
-    return lo, hi
+    return round(lo, CI_DP), round(hi, CI_DP)
 
 
 # ------------------------------------------------------------------ build
@@ -904,16 +918,65 @@ def check() -> int:
 # ------------------------------------------------------------------ main
 
 
+ADJ_NOTE = (
+    "**Status: sheet drawn, human annotation outstanding.** The 200 rows in "
+    "`data/pd/pd_citation_order_adjudication.tsv` are the seeded adjudication frame. "
+    "No human annotator has filled it in this run, so no κ and no adjudicated "
+    "precision are reported, and the verdict above is a verdict about the dating "
+    "clocks, not yet about editorial practice."
+)
+
+
+def refresh() -> int:
+    """Recompute the derived blocks from the committed TSV and rewrite them.
+
+    The TSV is the committed source of truth for every number in the summary
+    JSON and the report; the 55 MB PDScan text is not committed and is not
+    needed to re-derive them.  ``--refresh`` therefore rewrites the summary
+    block, the null block and the report from the committed TSV plus the
+    committed population/inputs blocks, leaving the row-level TSV and the
+    adjudication sheet untouched.
+    """
+    if not OUT_TSV.exists() or not OUT_JSON.exists():
+        print("FAIL: missing committed artefacts", file=sys.stderr)
+        return 1
+    with OUT_TSV.open(encoding="utf-8", newline="") as fh:
+        rows = list(csv.DictReader(fh, delimiter="\t"))
+    committed = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+    print("recomputing summary from the committed TSV ...", file=sys.stderr)
+    summary = summarize(rows)
+    print("running pooled permutation null ...", file=sys.stderr)
+    null = null_model(rows, reps=committed["null"]["reps"], seed=committed["null"]["seed"])
+    payload = {
+        "handoff": committed.get("handoff", "H7093"),
+        "generated": committed.get("generated", "2026-10-19"),
+        "population": committed["population"],
+        "summary": summary,
+        "null": null,
+        "inputs": committed["inputs"],
+    }
+    OUT_JSON.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    write_report(summary, null, committed["population"], committed["inputs"], ADJ_NOTE)
+    print("rewrote data/pd/pd_citation_order_full_summary.json and "
+          "reports/PD_CITATION_ORDER_FULL_2026.md", file=sys.stderr)
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--pd-txt", type=Path)
     ap.add_argument("--build", action="store_true")
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--refresh", action="store_true",
+                    help="recompute the summary JSON and the report from the "
+                         "committed TSV (no --pd-txt needed)")
     args = ap.parse_args()
     if args.check:
         return check()
+    if args.refresh:
+        return refresh()
     if not args.build:
-        ap.error("choose --build or --check")
+        ap.error("choose --build, --check or --refresh")
     if not args.pd_txt or not args.pd_txt.exists():
         print("FAIL: --pd-txt is required (Cologne PDScan pdtxt.zip pd.txt)", file=sys.stderr)
         return 2
@@ -940,14 +1003,7 @@ def main() -> int:
     write_tsv(adj, OUT_ADJ, ADJ_COLS)
     OUT_JSON.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-    adj_note = (
-        "**Status: sheet drawn, human annotation outstanding.** The 200 rows in "
-        "`data/pd/pd_citation_order_adjudication.tsv` are the seeded adjudication frame. "
-        "No human annotator has filled it in this run, so no κ and no adjudicated "
-        "precision are reported, and the verdict above is a verdict about the dating "
-        "clocks, not yet about editorial practice."
-    )
-    write_report(summary, null, stats, pins, adj_note)
+    write_report(summary, null, stats, pins, ADJ_NOTE)
     print(json.dumps({"population": stats, "any": summary["any"],
                       "null_any": null["clocks"]["any"]}, indent=2))
     return 0

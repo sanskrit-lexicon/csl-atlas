@@ -70,6 +70,32 @@ def test_summary_recomputed_from_tsv_matches_json():
         assert o["observed_rate"] == committed["summary"][clock]["mixed_rate"]
 
 
+def test_clopper_pearson_bounds_are_rounded_to_a_portable_precision():
+    """The published CI must not carry platform-dependent last bits.
+
+    ``math.lgamma`` differs between libm builds in its last bit and the
+    80-step bisection amplifies that into a ~1e-14 spread of the bound, so the
+    committed summary JSON could not be reproduced byte-for-byte off the
+    machine that built it.  The bound is therefore rounded to 1e-10 -- seven
+    orders below the 0.1 % reporting precision.
+    """
+    assert h7093.CI_DP == 10
+    for k, n, lo, hi in (
+        (428, 1047, 0.3788236665, 0.4392645766),
+        (1027, 2989, 0.3265606234, 0.3609324109),
+        (1840, 3877, 0.4587705357, 0.4904553106),
+        (5614, 9501, 0.5809195323, 0.600795053),
+        (5676, 9689, 0.5759346628, 0.595651656),
+    ):
+        assert h7093.clopper_pearson(k, n) == (lo, hi)
+    committed = json.loads(
+        (ROOT / "data" / "pd" / "pd_citation_order_full_summary.json").read_text(encoding="utf-8")
+    )
+    for clock in ("pd_swc", "dcs", "dm", "imprint", "any"):
+        for bound in committed["summary"][clock]["ci95_mixed"]:
+            assert bound == round(bound, h7093.CI_DP)
+
+
 def test_verdict_sentence_is_clock_specific_and_adjudication_is_open():
     report = (ROOT / "reports" / "PD_CITATION_ORDER_FULL_2026.md").read_text(encoding="utf-8")
     assert "Strong form (strict ascending in every division):** refuted" in report
