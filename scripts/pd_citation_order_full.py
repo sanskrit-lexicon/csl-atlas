@@ -321,7 +321,7 @@ def _binom_cdf(k: int, n: int, p: float) -> float:
 
 
 CI_DP = 10
-"""Decimals the published Clopper-Pearson bounds are rounded to.
+"""Decimals every published aggregate is rounded to.
 
 ``_binom_cdf`` evaluates the binomial CDF in log space through ``math.lgamma``,
 whose last bit depends on the platform's libm; the 80-step bisection then
@@ -329,6 +329,12 @@ amplifies that one-ULP difference into a ~1e-14 spread of the bound.  The
 bound is reported at 0.1 % (1e-3 of a probability), so rounding to 1e-10 keeps
 seven orders of magnitude of head-room and makes the committed summary JSON
 byte-identical on every platform -- which is what the ``--check`` gate needs.
+
+The same rounding is applied to the per-clock means and to the null's mean
+replicate rate, because CPython 3.12 changed the builtin float ``sum`` to
+Neumaier compensation: the same 9,689- or 10,000-term sum ends in a different
+bit on a 3.11 runner (the CI matrix) than on a 3.12+ box, and the gate
+compares the two for equality.
 """
 
 
@@ -555,7 +561,13 @@ def null_model(rows: list[dict], reps: int = NULL_REPS, seed: int = NULL_SEED) -
         k = sum(1 for r in rows if r[vcol] == "inverted")
         obs_rate = k / n if n else 0.0
         dist = sorted(x / n for x in null_counts[clock]) if n else [0.0]
-        mean = sum(dist) / len(dist)
+        # The mean over 10,000 replicate rates is a float sum, and CPython
+        # 3.12 changed the builtin float ``sum`` to Neumaier compensation -- so
+        # the same sum ends in a different bit on a 3.11 runner (the CI
+        # matrix) than on a 3.12+ box.  ``math.fsum`` is correctly rounded and
+        # the bound is rounded like every other published aggregate, so the
+        # committed null reproduces byte for byte on every interpreter.
+        mean = round(math.fsum(dist) / len(dist), CI_DP)
         lo = dist[int(0.025 * (len(dist) - 1))]
         hi = dist[int(0.975 * (len(dist) - 1))]
         ge = sum(1 for x in dist if x >= obs_rate) / len(dist)
