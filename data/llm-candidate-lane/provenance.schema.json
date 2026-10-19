@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sanskrit-lexicon.github.io/csl-atlas/data/llm-candidate-lane/provenance.schema.json",
+  "title": "H7101 LLM candidate span-provenance record",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "split",
+    "sourceRef",
+    "inputSha256",
+    "prompt",
+    "model",
+    "prediction",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "split": {
+      "enum": [
+        "eval"
+      ]
+    },
+    "sourceRef": {
+      "type": "object",
+      "required": [
+        "repo",
+        "path"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "commit": {
+          "type": "string"
+        },
+        "dict": {
+          "type": "string"
+        },
+        "L": {
+          "type": "string"
+        },
+        "line": {
+          "type": "string"
+        },
+        "process": {
+          "enum": [
+            "human",
+            "bulk"
+          ]
+        },
+        "batch": {
+          "type": "string"
+        },
+        "batchDate": {
+          "type": "string"
+        },
+        "reviewId": {
+          "type": "string"
+        },
+        "queue": {
+          "type": "string"
+        },
+        "reviewedValue": {
+          "type": "string"
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "reviewedAt": {
+          "type": "string"
+        }
+      }
+    },
+    "inputSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "prompt": {
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "sha256"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "provider",
+        "name",
+        "revision",
+        "temperature"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "string"
+        },
+        "temperature": {
+          "type": "number"
+        }
+      }
+    },
+    "prediction": {
+      "type": "object",
+      "required": [
+        "editType",
+        "span",
+        "confidence",
+        "abstain",
+        "rationale"
+      ],
+      "properties": {
+        "editType": {
+          "enum": [
+            "ocr-error",
+            "sense-split",
+            "source-mismatch",
+            "markup-normalization",
+            "no-correction",
+            null
+          ]
+        },
+        "span": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "text",
+            "start",
+            "end"
+          ],
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "start": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "end": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "abstain": {
+          "type": "boolean"
+        },
+        "rationale": {
+          "type": "string"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "editType",
+        "source",
+        "model",
+        "confidence",
+        "abstain",
+        "revisionStatus",
+        "reviewedValue",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "properties": {
+        "editType": {
+          "enum": [
+            "ocr-error",
+            "sense-split",
+            "source-mismatch",
+            "markup-normalization",
+            "no-correction",
+            null
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "abstain": {
+          "type": "boolean"
+        },
+        "revisionStatus": {
+          "const": "machine-candidate"
+        },
+        "reviewedValue": {
+          "type": "null"
+        },
+        "reviewer": {
+          "type": "null"
+        },
+        "reviewedAt": {
+          "type": "null"
+        }
+      }
+    }
+  }
+}
