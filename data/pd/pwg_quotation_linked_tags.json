@@ -1,0 +1,228 @@
+{
+ "dataset": "pwg_quotation_linked_tags",
+ "created": "2026-10-19",
+ "why": "separate the raw <ls> tag count from the quotation-linked count (the unit's attestations) so the A68 four-ledger table can name its denominator",
+ "source": {
+  "path": "/Users/mac/Documents/GitHub/csl-orig/v02/pwg/pwg.txt",
+  "bytes": 54634244,
+  "sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166"
+ },
+ "rule": "an <ls> tag counts as a quotation-linked attestation only when it closes a run of consecutive {#...#} blocks (scripts/lib/quotation_units.py)",
+ "totals": {
+  "entries": 123366,
+  "raw_ls_tags": 801788,
+  "quotation_linked_attestations": 729719,
+  "non_quotation_linked_tags": 72069,
+  "quotations": 329623
+ },
+ "residue": {
+  "tags": 72069,
+  "entries_with_residue": 33577,
+  "entries_with_residue_and_no_quotation": 25490,
+  "share_of_raw_tags": 8.99,
+  "sample": [
+   {
+    "k1": "a",
+    "raw_tags": 2,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 2
+   },
+   {
+    "k1": "aMSa",
+    "raw_tags": 2,
+    "quotation_linked": 1,
+    "quotations": 1,
+    "residue": 1
+   },
+   {
+    "k1": "aMSaka",
+    "raw_tags": 2,
+    "quotation_linked": 1,
+    "quotations": 1,
+    "residue": 1
+   },
+   {
+    "k1": "aMSu",
+    "raw_tags": 30,
+    "quotation_linked": 13,
+    "quotations": 4,
+    "residue": 17
+   },
+   {
+    "k1": "aMSumant",
+    "raw_tags": 10,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 10
+   },
+   {
+    "k1": "aMsa",
+    "raw_tags": 4,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 4
+   },
+   {
+    "k1": "aMsa",
+    "raw_tags": 17,
+    "quotation_linked": 7,
+    "quotations": 1,
+    "residue": 10
+   },
+   {
+    "k1": "aMhati",
+    "raw_tags": 9,
+    "quotation_linked": 8,
+    "quotations": 4,
+    "residue": 1
+   },
+   {
+    "k1": "aMhati",
+    "raw_tags": 6,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 6
+   },
+   {
+    "k1": "aMhas",
+    "raw_tags": 23,
+    "quotation_linked": 22,
+    "quotations": 14,
+    "residue": 1
+   },
+   {
+    "k1": "aMhiti",
+    "raw_tags": 3,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 3
+   },
+   {
+    "k1": "akartana",
+    "raw_tags": 2,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 2
+   },
+   {
+    "k1": "akutrA",
+    "raw_tags": 2,
+    "quotation_linked": 1,
+    "quotations": 1,
+    "residue": 1
+   },
+   {
+    "k1": "akUvAra",
+    "raw_tags": 1,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 1
+   },
+   {
+    "k1": "akkA",
+    "raw_tags": 4,
+    "quotation_linked": 2,
+    "quotations": 1,
+    "residue": 2
+   },
+   {
+    "k1": "aklikA",
+    "raw_tags": 2,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 2
+   },
+   {
+    "k1": "akza",
+    "raw_tags": 30,
+    "quotation_linked": 21,
+    "quotations": 9,
+    "residue": 9
+   },
+   {
+    "k1": "akza",
+    "raw_tags": 62,
+    "quotation_linked": 59,
+    "quotations": 27,
+    "residue": 3
+   },
+   {
+    "k1": "akza",
+    "raw_tags": 21,
+    "quotation_linked": 16,
+    "quotations": 8,
+    "residue": 5
+   },
+   {
+    "k1": "akzaDUrtila",
+    "raw_tags": 1,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 1
+   },
+   {
+    "k1": "akzi",
+    "raw_tags": 40,
+    "quotation_linked": 39,
+    "quotations": 17,
+    "residue": 1
+   },
+   {
+    "k1": "akzOhiRI",
+    "raw_tags": 5,
+    "quotation_linked": 2,
+    "quotations": 2,
+    "residue": 3
+   },
+   {
+    "k1": "akzRa",
+    "raw_tags": 2,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 2
+   },
+   {
+    "k1": "aKewika",
+    "raw_tags": 1,
+    "quotation_linked": 0,
+    "quotations": 0,
+    "residue": 1
+   },
+   {
+    "k1": "aga",
+    "raw_tags": 3,
+    "quotation_linked": 2,
+    "quotations": 1,
+    "residue": 1
+   }
+  ]
+ },
+ "committed_checks": {
+  "entries": {
+   "committed": 123366,
+   "measured": 123366,
+   "ok": true
+  },
+  "raw_ls_tags": {
+   "committed": 801788,
+   "measured": 801788,
+   "ok": true
+  },
+  "quotations": {
+   "committed": 329623,
+   "measured": 329623,
+   "ok": true
+  }
+ },
+ "ratios": {
+  "pd_attestations_over_raw_pwg_tags": 52.4,
+  "pd_attestations_over_quotation_linked_pwg_tags": 57.5,
+  "pd_quotations_over_pwg_quotations": 91.8
+ },
+ "provenance": {
+  "pd_attestations": 419890,
+  "pd_quotations": 302442,
+  "pd_source": "reports/PD_QUOTATION_UNIT_2026-10-18.md — PD letter-a canon, measured with the same unit"
+ }
+}

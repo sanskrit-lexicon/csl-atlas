@@ -1,0 +1,107 @@
+{
+ "dataset": "pd_dcs_2021_baseline",
+ "created": "2026-10-19",
+ "why": "name which 2021 baseline the A68 §5.4 delta quotes: the like-for-like one (the six texts DCS-2021 carried and DCS-2026 dropped are excluded from the 2021 denominator) or the raw one",
+ "sources": {
+  "delta_csv": {
+   "path": "/Users/mac/Documents/GitHub/VisualDCS/derived-data/Corpus-Delta-2021-2026/per_text_token_delta.csv",
+   "bytes": 16120,
+   "sha256": "ded308c548f24d98e340935f22dc376de7e61fb7d89f809cae75d60892f65561",
+   "rows": 276
+  },
+  "crosswalk": {
+   "path": "/Users/mac/Documents/GitHub-worktrees/csl-atlas/a68-probe/data/pd/pd_dcs_text_crosswalk.tsv",
+   "sha256": "00b2a34f7f2fe13edbdcbc63b43eef9559aaf6717b9375357a7955e29939eb88",
+   "rows": 118
+  },
+  "spine": {
+   "path": "/Users/mac/Documents/GitHub-worktrees/csl-atlas/a68-probe/data/pd/pd_dcs_metrics.json",
+   "sha256": "02ebee08936418e882b6e92e2ffb40888e80ea88c793ae1b27503537d2959416"
+  }
+ },
+ "dropped_since_2021": {
+  "count": 6,
+  "tokens_2021": 892,
+  "commentaries": 4,
+  "zero_token_stubs": 2,
+  "rows": [
+   {
+    "text_2021": "Cakra ?) on Suśr",
+    "tok_2021": 165,
+    "class": "commentary"
+   },
+   {
+    "text_2021": "Comm. on the Kāvyālaṃkāravṛtti",
+    "tok_2021": 393,
+    "class": "commentary"
+   },
+   {
+    "text_2021": "Ekākṣarakoṣa",
+    "tok_2021": 0,
+    "class": "stub"
+   },
+   {
+    "text_2021": "Hārāṇacandara on Suśr",
+    "tok_2021": 162,
+    "class": "commentary"
+   },
+   {
+    "text_2021": "Khādiragṛhyasūtrarudraskandavyākhyā",
+    "tok_2021": 172,
+    "class": "commentary"
+   },
+   {
+    "text_2021": "Nāḍīvijñāna",
+    "tok_2021": 0,
+    "class": "stub"
+   }
+  ]
+ },
+ "totals": {
+  "total_dcs_tok_2021_raw": 4577913,
+  "total_dcs_tok_2021_like_for_like": 4577021,
+  "total_dcs_tok_2026": 5688416,
+  "covered_dcs_tok_2021": 3389516,
+  "covered_dcs_tok_2026": 4430111
+ },
+ "baselines": {
+  "like_for_like_2021_pct": 74.06,
+  "raw_2021_pct": 74.04,
+  "pct_2026": 77.88,
+  "delta_like_for_like_pp": 3.82,
+  "delta_raw_pp": 3.84
+ },
+ "committed_checks": {
+  "total_dcs_tok_2021": {
+   "measured": 4577021,
+   "committed": 4577021,
+   "ok": true
+  },
+  "total_dcs_tok_2026": {
+   "measured": 5688416,
+   "committed": 5688416,
+   "ok": true
+  },
+  "covered_dcs_tok_2021": {
+   "measured": 3389516,
+   "committed": 3389516,
+   "ok": true
+  },
+  "covered_dcs_tok_2026": {
+   "measured": 4430111,
+   "committed": 4430111,
+   "ok": true
+  },
+  "metric_dcs_token_weighted_2021_pct": {
+   "measured": 74.06,
+   "committed": 74.06,
+   "ok": true
+  },
+  "metric_dcs_token_weighted_2026_pct": {
+   "measured": 77.88,
+   "committed": 77.88,
+   "ok": true
+  }
+ },
+ "reading": "the committed spine (and therefore the A68 canary) holds the LIKE-FOR-LIKE baseline: 74.06 % (74.1 %). The raw 2021 baseline, keeping the six texts DCS-2026 dropped, is 74.04 % (74.0 %). Both deltas to 2026 round to +3.8 pp."
+}
