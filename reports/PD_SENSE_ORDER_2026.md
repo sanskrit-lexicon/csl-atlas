@@ -27,7 +27,8 @@ with three or more senses, Kendall τ between sense position and earliest date, 
 The work-date clocks put the sense sequence well outside the null band (τ ≈ +0.32 against a band of
 ±0.05), and the median drift from the first to the last sense is **+265 years** under Dharmamitra.
 So PD's senses are chronologically ordered **as a tendency, not as a rule**: about 40 % of two-sense
-entries run backwards, and for entries with ≥3 senses the mean τ is positive but far from 1.
+entries are not forward (26 % run backwards, 14 % tie on the Dharmamitra clock), and for entries
+with ≥3 senses the mean τ is positive but far from 1.
 
 The PD/SWC row is not evidence either way: that clock sees only 15 works (the *Subject-Wise Class*
 page of PD's front matter), and 116 of its 344 two-sense entries are ties.
