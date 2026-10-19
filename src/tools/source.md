@@ -132,6 +132,49 @@ if (ctx.error) {
 }
 ```
 
+## Cited at
+
+For an MW entry, the citation index knows which canonical sources its `<ls>` tags name.
+This panel reads the entry's `<L>` number from the streamed context and looks it up in
+[`source-to-entries.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/source-to-entries.json).
+
+```js
+const sourceIndex = code === "mw" ? await FileAttachment("../data/citations/source-to-entries.json").json() : null;
+const currentEntryL = (() => {
+  if (!sourceIndex || ctx.error || !ctx.reachedTarget) return null;
+  const byN = new Map(ctx.lines.map(l => [l.n, l]));
+  let start = line;
+  while (start > ctx.from && !byN.get(start)?.text.startsWith("<L>")) start--;
+  return (byN.get(start)?.text.match(/^<L>([^<\s]+)/) || [])[1] || null;
+})();
+const citedAt = currentEntryL && sourceIndex
+  ? Object.entries(sourceIndex.sources)
+      .filter(([, entry]) => entry.records.includes(currentEntryL))
+      .sort((a, b) => b[1].citations - a[1].citations)
+  : [];
+```
+
+```js
+if (code !== "mw") {
+  display(html`<p class="muted">The source-to-entry index currently covers MW; this viewer is showing ${DICT_LABELS[code]}.</p>`);
+} else if (!currentEntryL) {
+  display(html`<p class="muted">No MW entry was resolved at this line.</p>`);
+} else {
+  display(html`<div class="cited-at-panel">
+    <p><b>MW entry ${currentEntryL}</b> cites ${citedAt.length} indexed source${citedAt.length === 1 ? "" : "s"}.
+      ${citedAt.length ? html`<a href="../citation-tracer">Open the citation tracer</a>` : ""}</p>
+    ${citedAt.length ? html`<ul>${citedAt.slice(0, 60).map(([label, entry]) => html`<li><a href=${`../citation-tracer`}>${label}</a> <span class="muted">· ${entry.citations.toLocaleString()} citations across ${entry.entryCount.toLocaleString()} MW entries</span></li>`)}</ul>` : html`<p class="muted">No canonical source resolved for this entry (it may cite only editorial markers or an unresolved abbreviation).</p>`}
+  </div>`);
+}
+```
+
+<style>
+.cited-at-panel { border-left: 4px solid var(--theme-foreground-faint); padding: 4px 0 4px 14px; margin: 14px 0; }
+.cited-at-panel ul { margin: 6px 0; padding-left: 20px; }
+.cited-at-panel li { margin: 2px 0; }
+.cited-at-panel .muted, .muted { color: var(--theme-foreground-muted); }
+</style>
+
 ---
 
 Opens **exactly the line you need** in a Cologne source file — not the whole document. GitHub refuses to render the multi-MB `csl-orig` `.txt` files (it only offers "View raw", and `#L…` anchors never fire), so this page streams the raw text, stops as soon as it has reached your line plus a little context, and highlights the entry. Link here from any review queue, or set the dictionary and line above — e.g. `/tools/source?dict=pw&line=26745`.
