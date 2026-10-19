@@ -78,6 +78,17 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 
 ENTRY_MIN_TAIL_LETTERS = 6
+#: H7096: the KoshaSHRI scan leaves a zero-width non-joiner (U+200C) after a
+#: truncated Devanagari fragment ("... W. Calan — त्‌.").  The character is
+#: invisible, breaks literal search/comparison and is an artifact of the scan,
+#: not part of the printed title.  It is removed at the source (the tail), so
+#: every emitted artifact regenerates byte-for-byte.  U+200D (ZWJ) is NOT
+#: removed: it can be orthographically meaningful.
+ZWNJ = "‌"
+#: U+200B ZERO WIDTH SPACE and U+FEFF BOM/ZWNBSP are the other two invisibles
+#: this scan is known to emit; all three are artifacts of the same class.
+OCR_INVISIBLES = ZWNJ + "﻿"
+
 YEAR_RE = re.compile(r"\b(1[89]\d\d|20[0-2]\d)\b")
 LETTER_RE = re.compile(r"[A-Za-z\u00c0-\u024f]")
 UPPER_START_RE = re.compile(r"^[A-Z\u00c0-\u024f]")
@@ -271,6 +282,23 @@ def classify_aob_token(clean, token, rest, merged):
 
 # --- normalisation -----------------------------------------------------------
 
+def strip_ocr_invisibles(s):
+    """H7096 -- drop the scan's invisible artifacts from a printed string.
+
+    The KoshaSHRI OCR emits a zero-width non-joiner after a truncated
+    Devanagari fragment.  It is invisible on screen, absent from the printed
+    book, and breaks any literal comparison against the title.  Removing it
+    *here*, at the source, is what keeps ``pd_aob_entries.tsv`` regenerable:
+    the rule lives in the generator instead of a hand edit to the output
+    (which is what made the ``--check`` gate red in #598).
+
+    The characters are removed outright, not replaced by a space: in
+    Devanagari a ZWNJ is intra-word, never a word separator, so removing it
+    can never glue two words together.
+    """
+    return (s or "").translate({ord(ch): None for ch in OCR_INVISIBLES})
+
+
 def strict_key(s):
     """Punctuation-trimmed, whitespace-collapsed, casefolded; diacritics kept."""
     s = (s or "").strip()
@@ -367,7 +395,9 @@ def parse_aob(text):
         entries.append(cur)
     for i, e in enumerate(entries, 1):
         e["entry_id"] = "AOB-%04d" % i
-        e["tail"] = re.sub(r"\s+", " ", " ".join(e.pop("tail_parts"))).strip()
+        e["tail"] = re.sub(
+            r"\s+", " ",
+            strip_ocr_invisibles(" ".join(e.pop("tail_parts")))).strip()
         e["strict"] = strict_key(e["siglum_raw"])
         e["skeleton"] = skeleton(e["siglum_raw"])
         # a printed entry may carry an edition suffix -- "RajTa,(Ka.)",
@@ -791,6 +821,11 @@ def measure(aob_path, families_path, join_path, witnesses=None):
                        "join_confirmed_printed_text -- presence confirmed, siglum "
                        "binding still unbound" % WITNESS_MIN_COVERAGE,
             "not_moved": "frozen headline values 25.2% / 77.9% are not touched here",
+            "invisibles": "H7096: the scan's invisible artifacts (U+200C ZWNJ, "
+                          "U+200B, U+FEFF) are removed from the printed tail at the "
+                          "source, so every emitted artifact regenerates "
+                          "byte-for-byte; U+200D ZWJ is kept (it can be "
+                          "orthographically meaningful)",
         },
         "source_aob": {
             "path": "PD/AOB.md (sanskrit-lexicon/PD, OCR of the official KoshaSHRI PDF)",
@@ -954,6 +989,28 @@ def selftest(aob_path=None):
         print("ok  H6960 parser: 29-entry class promoted, short wrap tokens folded")
     if not ok:
         return 1
+    # 1c. H7096: the scan's invisible artifacts never reach an emitted title
+    dirty = "Gopalakelicandrika, Ramakrsna, Amsterdam 1917, W. Calan — त्‌."
+    clean = strip_ocr_invisibles(dirty)
+    if clean != "Gopalakelicandrika, Ramakrsna, Amsterdam 1917, W. Calan — त्.":
+        print("FAIL H7096 invisibles: ZWNJ survived the strip: %r" % clean)
+        ok = False
+    elif any(ch in clean for ch in OCR_INVISIBLES):
+        print("FAIL H7096 invisibles: an invisible survived the strip")
+        ok = False
+    elif "‌" in strip_ocr_invisibles("a‌b"):
+        print("FAIL H7096 invisibles: ZWJ must survive (it can be meaningful)")
+        ok = False
+    else:
+        ents = parse_aob("## Page 1\n`GopaKeCan,` " + dirty + "\n")
+        if not ents or any(ch in ents[0]["tail"] for ch in OCR_INVISIBLES):
+            print("FAIL H7096 invisibles: an invisible reached a parsed tail")
+            ok = False
+        else:
+            print("ok  H7096 invisibles: U+200C/U+200B/U+FEFF stripped at the "
+                  "source, U+200D kept")
+    if not ok:
+        return 1
     # 2. trap: Mahabharata vs Mahabhasya never share a skeleton
     if skeleton("MahāBhā.") == skeleton("MahāBh."):
         print("FAIL trap: MahāBhā. and MahāBh. share a skeleton")
@@ -1017,6 +1074,11 @@ def selftest(aob_path=None):
         if folded_fragments < 136:
             problems.append("only %d genuine fragments still folded (<136)"
                             % folded_fragments)
+        dirty_tails = [e["entry_id"] for e in entries
+                       if any(ch in e["tail"] for ch in OCR_INVISIBLES)]
+        if dirty_tails:
+            problems.append("invisible artifact in %d tails: %r"
+                            % (len(dirty_tails), dirty_tails[:5]))
         if problems:
             print("FAIL H6960 real data: %s" % "; ".join(problems))
             ok = False
