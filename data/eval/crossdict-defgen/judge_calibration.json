@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "goal": "H7104",
+  "status": "human-scored",
+  "n": 100,
+  "human_file": "data/eval/crossdict-defgen/judge_calibration_human.tsv",
+  "n_sample": 100,
+  "exact_agreement": 0.65,
+  "within_one_agreement": 0.97,
+  "mean_human": 3.31,
+  "mean_judge": 3.38,
+  "quadratic_weighted_kappa": 0.9356,
+  "pearson": 0.9412,
+  "spearman": 0.8602,
+  "byArm": {
+    "A0_random_floor": {
+      "n": 20,
+      "exact_agreement": 0.95,
+      "within_one_agreement": 1,
+      "quadratic_weighted_kappa": 0
+    },
+    "A1_chat_ctx": {
+      "n": 20,
+      "exact_agreement": 0.4,
+      "within_one_agreement": 1,
+      "quadratic_weighted_kappa": 0.6875
+    },
+    "A2_chat_noctx": {
+      "n": 20,
+      "exact_agreement": 0.7,
+      "within_one_agreement": 0.9,
+      "quadratic_weighted_kappa": 0.8381
+    },
+    "A3_reasoner_ctx": {
+      "n": 20,
+      "exact_agreement": 0.65,
+      "within_one_agreement": 1,
+      "quadratic_weighted_kappa": 0.6602
+    },
+    "F1_fable_ctx": {
+      "n": 20,
+      "exact_agreement": 0.55,
+      "within_one_agreement": 0.95,
+      "quadratic_weighted_kappa": 0.7143
+    }
+  },
+  "rubric": {
+    "0": "empty or unusable",
+    "1": "wrong sense",
+    "2": "only a partial/related sense; main sense missing",
+    "3": "core sense present; at least one cross-dictionary distinction lost",
+    "4": "main senses preserved; one minor sense or nuance missing",
+    "5": "all main senses preserved; no invented sense",
+    "scale": "1-5 adequacy against the MW gold gloss and the joined AP/PWG/PWK sense units",
+    "blinding": "Human scorer sees slp1, gold gloss and generated gloss only; judge score is hidden during scoring."
+  }
+}
