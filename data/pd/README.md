@@ -58,6 +58,8 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_volume_homogeneity.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.tsv) | 35 | H6947 per-fascicle-volume entry size, chars, blocks, quotations and dictionary-source marking share |
 | [pd_volume_homogeneity_bound.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity_bound.tsv) | 8 | H6947 the same measures for the 8 bound volumes |
 | [pd_volume_homogeneity.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.json) | — | H6947 totals, H6942/H6949 canaries, source decomposition, conversion diagnostics |
+| [page_economics.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/page_economics.tsv) | 3 | H7109 PD / PWG / OED page economics — pages, entries, lines, characters, per-page rates, columns, page size, each row naming its own source and page basis; regenerate with `python3 scripts/pd_page_economics.py --pd <pd.txt> --pwg ../csl-orig/v02/pwg/pwg.txt` |
+| [oed_page_sample.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/oed_page_sample.json) | 4 pages | H7109 the OED sample measured on page images — edition statement (1933 corrected re-issue of OED1 1928, vol. IV F–G), printed page and leaf IDs, columns, printed lines per column, visual entry counts, characters per column from the page's own OCR layer |
 
 ## Silent inheritance (H6948)
 

@@ -1,0 +1,98 @@
+{
+  "dataset": "oed_page_sample",
+  "handoff": "H7109",
+  "what": "Four OED page measurements taken from the page images of one scanned volume: the entry fire (anchor) plus three pages drawn by a seeded random pick. Columns and printed lines are measured on the image; characters per column are measured on the page's own OCR text layer between that page's two running heads.",
+  "edition": {
+    "statement": "The Oxford English Dictionary, being a corrected re-issue with an introduction, supplement, and bibliography of A New English Dictionary on Historical Principles",
+    "imprint": "Clarendon Press, Oxford, 1933",
+    "volume": "IV",
+    "letters": "F-G",
+    "edition_id": "OED1 corrected re-issue 1933",
+    "first_edition": "OED1 1928",
+    "note": "This is the 1933 corrected re-issue of the 1928 first edition, not OED2 1989. The title page was read from the same scan (leaf 2 of the volume); its OCR text reads 'THE OXFORD ENGLISH DICTIONARY / BEING A CORRECTED RE-ISSUE ... VOLUME IV ... CLARENDON PRESS 1933'.",
+    "source_url": "https://archive.org/details/the-oxford-english-dictionary-1933-all-volumes",
+    "source_item": "the-oxford-english-dictionary-1933-all-volumes",
+    "source_files": [
+      "The Oxford English Dictionary Volume 4_jp2.zip",
+      "The Oxford English Dictionary Volume 4_scandata.xml",
+      "The Oxford English Dictionary Volume 4_djvu.txt"
+    ],
+    "scan": {
+      "dpi_declared": 600,
+      "leaf_count": 1176,
+      "orig_width_px": 3245,
+      "orig_height_px": 4405,
+      "page_cm_from_declared_dpi": [13.74, 18.65],
+      "note": "Page size is derived from the scandata's origWidth/origHeight at the declared 600 dpi and is therefore only as good as that dpi declaration; it is not a caliper measurement."
+    }
+  },
+  "method": {
+    "columns": "Column count is the number of vertical text blocks found by column projection of the ink mask over the body band of the page image (threshold 18% of the peak column-ink sum).",
+    "printed_lines": "Printed lines per column are counted by row projection of the ink mask inside each detected column: a line is a run of rows whose ink sum exceeds 25% of the column peak and is at least 12 px tall. The line grid is regular (median pitch 31-33 px at 300-600 dpi render), so the count is stable to about +/-1 per column.",
+    "characters_per_column": "Characters per column are the length of the OCR text layer (Volume 4 _djvu.txt) between the two running heads printed at the top of that page, i.e. exactly the left column's text. Measured on the two sampled pages whose running heads survived OCR as literal tokens.",
+    "entries": "Entries per page are the bold entry-headwords that begin on that page, counted visually on the page image. Cross-reference lines, compound sub-lemmas set inside a parent entry, and quotations are not counted as entries.",
+    "entries_uncertainty": "+/-1 entry per page for the three random pages; the visual count is not machine-verified, and no automated bold-headword detector reached a usable signal on this scan (ink-density discrimination returned zero detections at a 1.30x threshold)."
+  },
+  "random_pick": {
+    "seed": 7109,
+    "population": "leaves 20-1150 of the volume, excluding leaves 235-262 (the fire entry and its compounds)",
+    "picker": "python -c 'import random; random.seed(7109); random.sample(cands,3)'",
+    "leaves": [89, 373, 793]
+  },
+  "pages": [
+    {
+      "role": "anchor",
+      "entry": "fire",
+      "printed_page": 242,
+      "leaf": 253,
+      "running_heads": ["FIRE.", "FIRE."],
+      "columns": 3,
+      "lines_per_column": [101, 98, 93],
+      "printed_lines": 292,
+      "entries": 1,
+      "chars_per_column": null,
+      "note": "Both running heads read FIRE.: the whole page lies inside the fire entry, which the three columns continue. Only one new headword begins here. The fire entry itself opens earlier in the volume and runs across many pages, so this page is an anchor for what a long entry costs in page area, not a sample of ordinary page density. It is excluded from the random-page means."
+    },
+    {
+      "role": "random",
+      "printed_page": 78,
+      "leaf": 89,
+      "running_heads": ["FARMERLY.", "FARRAND."],
+      "columns": 3,
+      "lines_per_column": [99, 93, 92],
+      "printed_lines": 284,
+      "entries": 21,
+      "chars_per_column": null
+    },
+    {
+      "role": "random",
+      "printed_page": 362,
+      "leaf": 373,
+      "running_heads": ["FLURTED.", "FLUSH."],
+      "columns": 3,
+      "lines_per_column": [96, 98, 96],
+      "printed_lines": 290,
+      "entries": 9,
+      "chars_per_column": 5664,
+      "chars_method": "OCR text length between the running-head tokens 'FLUSH.' at offset 6221946 and the same token at 6227610 in The Oxford English Dictionary Volume 4_djvu.txt; those are the two running heads of this page (left head, right head), so the span is the left column."
+    },
+    {
+      "role": "random",
+      "printed_page": 154,
+      "leaf": 793,
+      "running_heads": ["GIBBON.", "GIBLET."],
+      "columns": 3,
+      "lines_per_column": [100, 95, 98],
+      "printed_lines": 293,
+      "entries": 20,
+      "chars_per_column": 5823,
+      "chars_method": "OCR text length between the running-head tokens 'GIBBON.' at 13502721 and 'GIBLET.' at 13508544 in The Oxford English Dictionary Volume 4_djvu.txt; those are the two running heads of this page."
+    }
+  ],
+  "volume_cross_check": {
+    "ocr_chars": 20157083,
+    "leaves": 1176,
+    "chars_per_leaf": 17140,
+    "note": "The volume mean (17,140 chars per leaf) agrees with three columns x the 5,664-5,823 chars measured per column (17,000-17,500), which is the evidence that the per-column span measures a column rather than something else."
+  }
+}
