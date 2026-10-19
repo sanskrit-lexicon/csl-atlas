@@ -96,6 +96,32 @@ def test_clopper_pearson_bounds_are_rounded_to_a_portable_precision():
             assert bound == round(bound, h7093.CI_DP)
 
 
+def test_null_mean_rate_is_rounded_to_a_portable_precision():
+    """The null's mean replicate rate must not carry interpreter-dependent bits.
+
+    CPython 3.12 changed the builtin float ``sum`` to Neumaier compensation, so
+    a 3.11 runner (the CI matrix) and a 3.12+ box sum the 10,000 replicate
+    rates to different last bits -- and in a 200-trial simulation of this
+    exact shape the two disagreed in 99 % of cases.  ``--check`` compares the
+    null for equality, so an unrounded mean there makes the handoff's own
+    verifier fail on a 3.11 box.  The mean is therefore aggregated with
+    ``math.fsum`` and rounded like every other published aggregate.
+    """
+    assert h7093.CI_DP == 10
+    committed = json.loads(
+        (ROOT / "data" / "pd" / "pd_citation_order_full_summary.json").read_text(encoding="utf-8")
+    )
+    for clock in ("pd_swc", "dcs", "dm", "imprint", "any"):
+        mean_rate = committed["null"]["clocks"][clock]["null_mean_rate"]
+        assert mean_rate == round(mean_rate, h7093.CI_DP)
+    # the observed rate, the percentile bounds and the counts are exact
+    # divisions of integers and need no rounding; assert the shape stays put
+    for clock in ("pd_swc", "dcs", "dm", "imprint", "any"):
+        o = committed["null"]["clocks"][clock]
+        assert o["observed_rate"] == committed["summary"][clock]["mixed_rate"]
+        assert o["null_mean_count"] == round(o["null_mean_count"], 4)
+
+
 def test_verdict_sentence_is_clock_specific_and_adjudication_is_open():
     report = (ROOT / "reports" / "PD_CITATION_ORDER_FULL_2026.md").read_text(encoding="utf-8")
     assert "Strong form (strict ascending in every division):** refuted" in report
