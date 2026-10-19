@@ -27,7 +27,10 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
 | [`ls_citation_graph.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_graph.source.json) | provenance sidecar written on every run — csl-atlas / `csl-orig` / `csl-guides` revisions with dirty flags, abbreviations-key SHA-256, builder SHA-256, SHA-256 of each output (the revision binding of the committed TSVs) |
 | [`source-to-entries.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/source-to-entries.json) | passage-level index (H7100) — canonical source label → the MW `<L>` records that cite it, with source-line pointers; 209 canonical labels cover 205,722 of MW's 320,828 citations |
 | [`citation-passage-links.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/citation-passage-links.json) | 100-link pilot from MW's explicit Ṛgveda verse loci to per-verse GRETIL anchors, with the latest verification result per link |
-| [`citation-passage-link-verification.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/citation-passage-link-verification.json) | non-deterministic provenance snapshot from `npm run verify-citation-passage-links` (HTTP 200 + anchor presence) |
+| [`citation-passage-link-verification.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/citation-passage-link-verification.json) | non-deterministic provenance snapshot from `npm run check-citation-links` (HTTP 200 + anchor presence) |
+| [`passage_pilot.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/passage_pilot.tsv) / [`passage_pilot.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/passage_pilot.csv) | the 100-row pilot: `dict · L · canonical_text · raw_locus · dcs_id · dcs_url · gretil_url · vedaweb_url · status · evidence` |
+| [`passage_pilot_checks.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/passage_pilot_checks.tsv) | per-link check log: `gretil_url · status · final_url · checked_at · anchor_verified` |
+| [`source-to-entries.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/source-to-entries.source.json) | provenance sidecar: `csl-orig` revision, abbreviation-table hash, output SHA-256s |
 | [`mw-source-abbreviations.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/mw-source-abbreviations.tsv) | vendored MWS `mwauthorities/tooltip.txt` table (`code · abbreviation · expansion_iast · type`) — the MW works key that `csl-guides` does not carry |
 | [`build_ls_citation_graph.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/build_ls_citation_graph.py) | the frequency-graph builder (reproduce below) |
 | [`../scripts/build-citation-passage-index.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-passage-index.mjs) | the passage-index builder (`npm run build-citation-passage-index`) |
@@ -147,14 +150,22 @@ anchor `RV_<maṇḍala>.<hymn:3>.<verse:2>`. The 100 most-cited distinct verse 
 DCS is a link-out target only and is **not** ingested; its interactive browser challenge means a
 machine HTTP check cannot establish a stable DCS passage URL, so GRETIL is the verified target.
 A verified anchor proves the passage exists, not that MW's quotation is accurate — human
-spot-checks remain required.
+spot-checks remain required. The residual is explicit: among the accessible GRETIL
+transformations only the Ṛgveda and Rāmāyaṇa pages expose per-verse anchors (the MBh parvan
+pages and the Manu page do not), and this pilot is Ṛgveda-only so that one edition carries all
+100 checks; Rāmāyaṇa anchors (`R_<kāṇḍa>.<sarga:3>.<verse:3>`) are available for a follow-on.
+DCS is recorded as `no-stable-url` for every row, never guessed.
+
+This is not a re-measurement of H6949: that unit counts PD quotations and their siglum+locus;
+this table maps MW entries to sources and links existing loci. No PD quotation data is read or
+recomputed here.
 
 Reproduce:
 
 ```sh
-npm run build-citation-passage-index      # deterministic, reads ../csl-orig/v02/mw/mw.txt
-npm run verify-citation-passage-links     # network: HTTP 200 + anchor presence
-npm run build-citation-passage-index      # merge the verification snapshot
+npm run build-source-to-entries           # deterministic, reads ../csl-orig/v02/mw/mw.txt
+npm run check-citation-links              # network: HTTP 200 + anchor presence
+npm run build-source-to-entries           # merge the verification snapshot
 node --test test/citation-passage-index.test.mjs
 ```
 

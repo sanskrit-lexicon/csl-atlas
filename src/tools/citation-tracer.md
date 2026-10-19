@@ -14,6 +14,7 @@ says *how often* a text is cited; this page says *where*.
 ```js
 const sourceIndex = FileAttachment("../data/citations/source-to-entries.json").json();
 const passagePilot = FileAttachment("../data/citations/citation-passage-links.json").json();
+const pilotCsvUrl = FileAttachment("../data/citations/passage_pilot.csv").url();
 ```
 
 ```js
@@ -76,7 +77,8 @@ const pilotRows = (pilotForSource.length ? pilotForSource : passagePilot.items).
 display(html`<div class="citation-summary">
   <div>${passagePilot.summary.verified} / ${passagePilot.summary.pilotSize} passage links verified
     (HTTP 200 ${passagePilot.summary.http200}, anchor present ${passagePilot.summary.anchorVerified})</div>
-  <div>${passagePilot.summary.checkedAt ? `checked ${passagePilot.summary.checkedAt}` : "verification snapshot pending"}</div>
+  <div>${passagePilot.summary.checkedAt ? `checked ${passagePilot.summary.checkedAt}` : "verification snapshot pending"}
+    · <a href=${pilotCsvUrl} download="passage_pilot.csv">Download the 100-row pilot (CSV)</a></div>
 </div>`);
 ```
 

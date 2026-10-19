@@ -19,6 +19,18 @@ const COPIES = [
     target: "src/data/citations/citation-passage-links.json"
   },
   {
+    source: "data/citations/passage_pilot.tsv",
+    target: "src/data/citations/passage_pilot.tsv"
+  },
+  {
+    source: "data/citations/passage_pilot_checks.tsv",
+    target: "src/data/citations/passage_pilot_checks.tsv"
+  },
+  {
+    source: "data/citations/passage_pilot.csv",
+    target: "src/data/citations/passage_pilot.csv"
+  },
+  {
     source: "data/dcs/dcs_lemma_summary.json",
     target: "src/data/dcs/dcs_lemma_summary.json",
     optionalFallback: JSON.stringify({ lemmas: {} }, null, 2) + "\n",

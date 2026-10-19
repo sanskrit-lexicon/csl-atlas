@@ -68,6 +68,7 @@ test("source-to-entries covers the MW inventory with canonical node labels", () 
   const mbh = INDEX.sources["Mahābhārata"];
   assert.equal(mbh.records.length, mbh.entryCount);
   assert.equal(new Set(mbh.records).size, mbh.records.length, "L records are deduplicated");
+  assert.equal(mbh.dict, "MW");
   assert.equal(mbh.records[0], "37");
   assert.equal(mbh.lines["37"], 139);
 });
@@ -98,6 +99,24 @@ test("the RV passage pilot carries 100 HTTP-200 links with verified anchors", ()
   }
 });
 
+test("pilot tables and provenance sidecar carry the 100 checked links", () => {
+  const pilotTsv = fs.readFileSync(path.join(ROOT, "data/citations/passage_pilot.tsv"), "utf8").trim().split("\n");
+  const checksTsv = fs.readFileSync(path.join(ROOT, "data/citations/passage_pilot_checks.tsv"), "utf8").trim().split("\n");
+  const sidecar = JSON.parse(fs.readFileSync(path.join(ROOT, "data/citations/source-to-entries.source.json"), "utf8"));
+  assert.equal(pilotTsv[0], "dict\tL\tcanonical_text\traw_locus\tdcs_id\tdcs_url\tgretil_url\tvedaweb_url\tstatus\tevidence");
+  assert.equal(pilotTsv.length, 101);
+  assert.equal(checksTsv.length, 101);
+  assert.ok(pilotTsv.slice(1).every((row) => row.split("\t")[0] === "MW"));
+  assert.ok(pilotTsv.slice(1).every((row) => row.split("\t")[8] === "200"));
+  assert.ok(pilotTsv.slice(1).every((row) => row.split("\t")[9] === "observed"));
+  assert.ok(checksTsv.slice(1).every((row) => row.split("\t")[1] === "200"));
+  assert.ok(checksTsv.slice(1).every((row) => row.split("\t")[4] === "yes"));
+  assert.equal(sidecar.cslOrig.revision.length, 40);
+  assert.equal(Object.keys(sidecar.outputs).length, 5);
+  const csv = fs.readFileSync(path.join(ROOT, "data/citations/passage_pilot.csv"), "utf8").trim().split("\n");
+  assert.equal(csv.length, 101);
+});
+
 test("citation-tracer is no longer a placeholder and all three tools carry a cited-at panel", () => {
   const tracer = fs.readFileSync(path.join(ROOT, "src/tools/citation-tracer.md"), "utf8");
   const source = fs.readFileSync(path.join(ROOT, "src/tools/source.md"), "utf8");
@@ -105,6 +124,7 @@ test("citation-tracer is no longer a placeholder and all three tools carry a cit
   assert.doesNotMatch(tracer, /Tier 3 tool — placeholder|Data prerequisite:.*not yet exported/i);
   assert.match(tracer, /source-to-entries\.json/);
   assert.match(tracer, /passage pilot/i);
+  assert.match(tracer, /download the 100-row pilot \(csv\)/i);
   assert.match(source, /## Cited at/);
   assert.match(dossier, /## Cited at/);
 });

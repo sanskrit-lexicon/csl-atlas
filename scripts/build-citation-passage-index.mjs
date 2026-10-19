@@ -30,6 +30,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
+import crypto from "node:crypto";
 import { pathToFileURL } from "node:url";
 import { iterateDict } from "./lib/dict-parser.mjs";
 import { extractCitations, normalizeSource } from "./lib/mw-classifiers.mjs";
@@ -44,6 +45,10 @@ const ABBR_PATH = path.resolve(process.cwd(), "data", "citations", "mw-source-ab
 const INDEX_OUT = path.resolve(process.cwd(), "data", "citations", "source-to-entries.json");
 const LINKS_OUT = path.resolve(process.cwd(), "data", "citations", "citation-passage-links.json");
 const VERIFY_PATH = path.resolve(process.cwd(), "data", "citations", "citation-passage-link-verification.json");
+const PILOT_TSV = path.resolve(process.cwd(), "data", "citations", "passage_pilot.tsv");
+const CHECKS_TSV = path.resolve(process.cwd(), "data", "citations", "passage_pilot_checks.tsv");
+const PILOT_CSV = path.resolve(process.cwd(), "data", "citations", "passage_pilot.csv");
+const PROVENANCE_PATH = path.resolve(process.cwd(), "data", "citations", "source-to-entries.source.json");
 const MW_SOURCE_LABEL = "Ṛgveda";
 const MW_HREF = "https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt";
 const GRETIL_RV = "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm";
@@ -249,6 +254,7 @@ function writeIndex(index, cslOrig) {
   const sources = {};
   for (const [label, source] of [...index.sources.entries()].sort((a, b) => b[1].citations - a[1].citations || (a[0] < b[0] ? -1 : 1))) {
     sources[label] = {
+      dict: "MW",
       citations: source.citations,
       entryCount: source.records.length,
       records: source.records,
@@ -327,6 +333,7 @@ function writeLinks(index, cslOrig) {
       reviewId: `citation-passage:RV:${locus.key}`,
       canonicalText: MW_SOURCE_LABEL,
       rawLabel: "RV",
+      rawLocus: `RV ${locus.key}`,
       locus: locus.key,
       mandala: locus.mandala,
       hymn: locus.hymn,
@@ -393,6 +400,66 @@ function writeLinks(index, cslOrig) {
   return payload;
 }
 
+function tsvCell(value) {
+  return String(value ?? "").replace(/\t/g, " ").replace(/[\r\n]+/g, " ").trim();
+}
+
+function writePilotTables(pilot) {
+  const header = ["dict", "L", "canonical_text", "raw_locus", "dcs_id", "dcs_url", "gretil_url", "vedaweb_url", "status", "evidence"];
+  const rows = pilot.items.map((item) => [
+    item.sourcePointer?.dictionary ?? "MW",
+    item.mwRecords?.[0] ?? "",
+    item.canonicalText,
+    item.rawLocus,
+    "",
+    "no-stable-url",
+    item.url,
+    item.vedawebUrl,
+    item.httpStatus ?? "",
+    item.verified ? "observed" : "derived"
+  ]);
+  fs.writeFileSync(PILOT_TSV, [header, ...rows].map((row) => row.map(tsvCell).join("\t")).join("\n") + "\n");
+
+  const checkHeader = ["gretil_url", "status", "final_url", "checked_at", "anchor_verified"];
+  const checkRows = pilot.items.map((item) => [
+    item.url,
+    item.httpStatus ?? "",
+    item.url,
+    pilot.summary.checkedAt ?? "",
+    item.anchorVerified === true ? "yes" : "no"
+  ]);
+  fs.writeFileSync(CHECKS_TSV, [checkHeader, ...checkRows].map((row) => row.map(tsvCell).join("\t")).join("\n") + "\n");
+
+  const csvCell = (value) => {
+    const text = String(value ?? "");
+    return /[",\r\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+  };
+  fs.writeFileSync(PILOT_CSV, [header, ...rows].map((row) => row.map(csvCell).join(",")).join("\n") + "\n");
+}
+
+function writeProvenance(cslOrig) {
+  const sha256 = (file) => crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+  const payload = {
+    schemaVersion: SCHEMA_VERSION,
+    generatedBy: GENERATED_BY,
+    generatedAt: new Date().toISOString(),
+    cslOrig,
+    abbreviations: {
+      path: "data/citations/mw-source-abbreviations.tsv",
+      source: "https://github.com/sanskrit-lexicon/MWS/blob/main/mwauthorities/tooltip.txt",
+      sha256: sha256(ABBR_PATH)
+    },
+    outputs: {
+      "source-to-entries.json": sha256(INDEX_OUT),
+      "citation-passage-links.json": sha256(LINKS_OUT),
+      "passage_pilot.tsv": sha256(PILOT_TSV),
+      "passage_pilot.csv": sha256(PILOT_CSV),
+      "passage_pilot_checks.tsv": sha256(CHECKS_TSV)
+    }
+  };
+  fs.writeFileSync(PROVENANCE_PATH, `${JSON.stringify(payload, null, 2)}\n`);
+}
+
 function readCslOrigProvenance() {
   const git = (args) => {
     try {
@@ -412,6 +479,8 @@ function main() {
   const index = buildIndex({ nodeRows, abbreviationRows });
   const indexPayload = writeIndex(index, cslOrig);
   const linksPayload = writeLinks(index, cslOrig);
+  writePilotTables(linksPayload);
+  writeProvenance(cslOrig);
   console.log(`Wrote ${Object.keys(indexPayload.sources).length} canonical sources / ${indexPayload.counts.indexedCitations} indexed citations to:`);
   console.log(`- ${path.relative(process.cwd(), INDEX_OUT)}`);
   console.log(`Wrote ${linksPayload.summary.pilotSize} RV passage links (${linksPayload.summary.verified} verified) to:`);
