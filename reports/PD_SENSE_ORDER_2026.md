@@ -42,7 +42,11 @@ page of PD's front matter), and 116 of its 344 two-sense entries are ties.
   Until the same test is run on PWG and MW with dated citations, the +0.32 **cannot be attributed
   to PD's historical principle rather than to the semantic structure of meanings**. That comparative
   run is the refutation condition: if PWG (not an OED-model dictionary) shows the same τ, the
-  editorial reading is withdrawn.
+  editorial reading is withdrawn. Nor can a second dating authority serve as the control: DCS and
+  Dharmamitra are one lineage — Hellwig & Nehrdich 2018 (word segmentation, EMNLP) is their only joint
+  publication, and there is no joint chronology — so agreement between the two dates is
+  cross-validation, not evidence. The dates are only the common measuring stick, and they must be
+  identical on both sides so the difference is not a clock artefact.
 - The date of a sense is the earliest **quotation filed under it**, not a date the editors recorded;
   a sense can be perfectly defensible and still be illustrated from later texts.
 - Only entries with ≥2 datable divisions are decidable (about a quarter of the entries in the
