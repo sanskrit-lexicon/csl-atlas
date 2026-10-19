@@ -299,6 +299,15 @@ def sha256_of(path):
 
 # --- AOB parse ---------------------------------------------------------------
 
+# The OCR of the printed AOB injects zero-width characters into the Indic
+# titles (two U+200C ZERO WIDTH NON-JOINER across the 42 pages, e.g. the
+# "W. Calan -- tat." and "am. Part 7" rows).  They are typesetting artefacts
+# of the OCR, not part of the printed title, so they are removed when the
+# tail is assembled.  Without this the generator re-introduces them and the
+# committed artifacts stop reproducing byte for byte (H7107).
+ZERO_WIDTH_TABLE = {ord(c): None for c in "\u200b\u200c\u200d\u2060\ufeff"}
+
+
 def parse_aob(text):
     """One entry per printed row: siglum + the tail reassembled across wraps.
 
@@ -367,7 +376,8 @@ def parse_aob(text):
         entries.append(cur)
     for i, e in enumerate(entries, 1):
         e["entry_id"] = "AOB-%04d" % i
-        e["tail"] = re.sub(r"\s+", " ", " ".join(e.pop("tail_parts"))).strip()
+        e["tail"] = re.sub(r"\s+", " ", " ".join(e.pop("tail_parts"))
+                           .translate(ZERO_WIDTH_TABLE)).strip()
         e["strict"] = strict_key(e["siglum_raw"])
         e["skeleton"] = skeleton(e["siglum_raw"])
         # a printed entry may carry an edition suffix -- "RajTa,(Ka.)",
