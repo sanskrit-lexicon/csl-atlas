@@ -1,0 +1,76 @@
+{
+  "handoff": "H7093",
+  "generated": "2026-10-19",
+  "input": "data/pd/pd_citation_order_full.tsv",
+  "unit": "earliest datable citation per sense division, in sense order",
+  "clocks": {
+    "pd_swc": {
+      "entries_with_series": 1855,
+      "entries_two_senses": 344,
+      "two_sense_later_sense_later_date": 110,
+      "two_sense_ties": 116,
+      "two_sense_backward": 118,
+      "two_sense_forward_rate": 0.3197674419,
+      "entries_three_plus_senses": 359,
+      "mean_tau_position_vs_earliest": -0.0019425503,
+      "median_last_minus_first_years": 0,
+      "null": {
+        "reps": 5000,
+        "mean_tau_null": 6.42736e-05,
+        "p2_5": -0.0644801456,
+        "p97_5": 0.0633895222
+      }
+    },
+    "dcs": {
+      "entries_with_series": 2788,
+      "entries_two_senses": 509,
+      "two_sense_later_sense_later_date": 252,
+      "two_sense_ties": 150,
+      "two_sense_backward": 107,
+      "two_sense_forward_rate": 0.4950884086,
+      "entries_three_plus_senses": 590,
+      "mean_tau_position_vs_earliest": 0.3222197478,
+      "median_last_minus_first_years": 150,
+      "null": {
+        "reps": 5000,
+        "mean_tau_null": -0.0001925807,
+        "p2_5": -0.0460859028,
+        "p97_5": 0.0463387934
+      }
+    },
+    "dm": {
+      "entries_with_series": 3189,
+      "entries_two_senses": 582,
+      "two_sense_later_sense_later_date": 350,
+      "two_sense_ties": 82,
+      "two_sense_backward": 150,
+      "two_sense_forward_rate": 0.6013745704,
+      "entries_three_plus_senses": 706,
+      "mean_tau_position_vs_earliest": 0.3232684268,
+      "median_last_minus_first_years": 265.0,
+      "null": {
+        "reps": 5000,
+        "mean_tau_null": -9.87955e-05,
+        "p2_5": -0.0411753613,
+        "p97_5": 0.0396583621
+      }
+    },
+    "imprint": {
+      "entries_with_series": 4733,
+      "entries_two_senses": 852,
+      "two_sense_later_sense_later_date": 427,
+      "two_sense_ties": 74,
+      "two_sense_backward": 351,
+      "two_sense_forward_rate": 0.5011737089,
+      "entries_three_plus_senses": 1009,
+      "mean_tau_position_vs_earliest": 0.1335576625,
+      "median_last_minus_first_years": 5,
+      "null": {
+        "reps": 5000,
+        "mean_tau_null": -0.0002534108,
+        "p2_5": -0.0323793402,
+        "p97_5": 0.0319604594
+      }
+    }
+  }
+}
