@@ -157,6 +157,18 @@ leans on hardest.
 (74.1 → 77.9 %) because DCS's 2021 → 2026 expansion was concentrated in PD-core texts — and
 overwhelmingly in the **Vedic** layer:
 
+**Which 2021 baseline this is (19-10-2026).** DCS-2021 carried six texts DCS-2026 dropped —
+four commentaries (*Cakra* on Suśr 165 tok, *Comm. on the Kāvyālaṃkāravṛtti* 393 tok,
+*Hārāṇacandara* on Suśr 162 tok, *Khādiragṛhyasūtrarudraskandavyākhyā* 172 tok) and two
+zero-token stubs (*Ekākṣarakoṣa*, *Nāḍīvijñāna*) — **892 tokens** in all. The metric's
+2021 denominator (4,577,021) already excludes them, so the published **74.06 % (74.1 %)
+is the like-for-like baseline** (2021 text mass restricted to texts 2026 still carries) and
+**74.04 % (74.0 %)** is the raw one, with the 892 kept. Both deltas to 2026 round to
+**+3.8 pp** (+3.82 like-for-like, +3.84 raw). Measured by
+[`scripts/pd_dcs_2021_baseline.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_dcs_2021_baseline.py),
+pinned in
+[`data/pd/pd_dcs_2021_baseline.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_dcs_2021_baseline.json).
+
 | Text | DCS tok 2021 | DCS tok 2026 | Δ |
 |---|---:|---:|---:|
 | Śatapathabrāhmaṇa | 3,718 | 144,139 | +140,421 |

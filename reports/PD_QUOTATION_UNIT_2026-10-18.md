@@ -140,10 +140,17 @@ dictionary treats whole compound families under one lemma — the same design th
 ## 4. PD against PWG, same unit, same rule
 
 PWG (Böhtlingk–Roth, *Sanskrit-Wörterbuch*) over its whole alphabet: 123,366 entries,
-**801,788 `<ls>` attestations**, 329,623 quotations.
+**801,788 raw `<ls>` tags**, of which **729,719 close a quotation** and are the unit's
+attestations, 329,623 quotations. The two counts are different objects and this report
+earlier used one word for both; the split is measured by
+[`scripts/pwg_quotation_linked_tags.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pwg_quotation_linked_tags.py)
+and pinned in [`data/pd/pwg_quotation_linked_tags.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pwg_quotation_linked_tags.json):
+the 72,069 tags that do not close a quotation (8.99 % of the raw count) sit in 33,577
+entries and are references, not citations.
 
 **Aggregate.** PD's letter-*a* fragment alone carries **419,890 attestations = 52.4 % of
-PWG's entire-alphabet 801,788**, and **302,442 quotations = 91.8 % of PWG's 329,623** — for
+PWG's entire-alphabet 801,788 raw tags — and 57.5 % of the 729,719 that close a
+quotation**, and **302,442 quotations = 91.8 % of PWG's 329,623** — for
 the ~4–6 % of the alphabet PD has covered. Whatever else the twelvefold claim means, the
 dictionary is not merely denser per headword; it has, inside its first letter, already
 quoted nearly as many passages as the finished Petersburger Wörterbuch quotes in its
@@ -235,7 +242,11 @@ pinned to the revisions they were measured on.
   the printed Abbreviations of Books Quoted. A siglum absent from the AOB would still be
   counted here; the AOB join is H6720's separate measurement.
 - **PWG's `<ls>` count** here is the raw tag count in `pwg.txt` (801,788, verified with
-  `grep -o '<ls' | wc -l`). The committed citation graph
+  `grep -o '<ls' | wc -l`). Of those, 729,719 close a quotation and are the unit's
+  attestations; the remaining 72,069 are references that do not close a block run
+  (`scripts/pwg_quotation_linked_tags.py`). Any ratio that divides PD's 419,890 by
+  PWG's mass must name which of the two it uses — 52.4 % against the raw tags, 57.5 %
+  against the quotation-linked ones. The committed citation graph
   ([`data/citations/ls_citation_edges.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_edges.tsv))
   totals 536,172 for PWG because it filters non-text markers and unresolved targets — a
   different question, answered elsewhere.
