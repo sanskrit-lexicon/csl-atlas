@@ -118,7 +118,13 @@ function lastUnclosedTag(text, position, tag) {
 }
 
 function stripMarkup(text) {
-  return text.replace(/<[^>]*>/g, "").replace(/[\s\p{P}\p{S}]/gu, "");
+  let current = text;
+  let previous;
+  do {
+    previous = current;
+    current = current.replace(/<[^>]*>/g, "");
+  } while (current !== previous);
+  return current.replace(/[\s\p{P}\p{S}]/gu, "");
 }
 
 /**
