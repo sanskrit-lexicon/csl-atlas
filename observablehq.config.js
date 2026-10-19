@@ -88,6 +88,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/review-alignment": "Alignment confidence: how confidently lemmas align across the seven core Cologne dictionaries, and the queue that doesn't align cleanly.",
   "/tools/review-source-siglum": "Review queue: source sigla cited by only one tagged Cologne dictionary — genuinely unique, or the same source under different aliases.",
   "/tools/sense-divergence": "Cross-dict entry-coverage divergence: which Sanskrit headwords each Cologne dictionary treats very differently from its peers.",
+  "/tools/sense-inventory-audit": "Cross-dictionary sense-inventory audit: sense-unit comparison, cross-dict survival, disagreement rate and an automated double-key kappa on a 500-lemma sample.",
   "/tools/h4-review": "H4 semantic-field review: per dictionary and Amarakośa field, whether an apparent coverage anomaly is real or an artifact.",
   "/tools/cross-dict": "Cross-dictionary comparison: nine Cologne dictionaries on a format-robust common-block vocabulary, showing citation density and structure.",
   "/tools/dictionary-coverage": "All-dictionary coverage: the nine-chapter comparison extended to every CDSL v02 dictionary with a main source file.",
@@ -226,6 +227,7 @@ export default {
         { name: "Alignment confidence", path: "/tools/review-alignment" },
         { name: "Source-siglum aliases", path: "/tools/review-source-siglum" },
         { name: "Cross-dict divergence", path: "/tools/sense-divergence" },
+        { name: "Sense-inventory audit", path: "/tools/sense-inventory-audit" },
         { name: "H4 semantic fields", path: "/tools/h4-review" }
       ]
     },

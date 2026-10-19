@@ -127,6 +127,7 @@
     "build-kosa-chapters": "node scripts/build-kosa-chapters.mjs",
     "validate-kosa-chapters": "node scripts/validate-kosa-chapters.mjs",
     "build-divergence-map": "python scripts/lexico/build_divergence_map.py",
+    "build-sense-inventory-audit": "node scripts/build-sense-inventory-audit.mjs",
     "install-review-tools": "python -m pip install --upgrade -r requirements-review.txt",
     "build-review-sheets": "node scripts/build-review-sheets.mjs",
     "test-review-decisions": "python -m unittest scripts.test_validate_review_decisions",

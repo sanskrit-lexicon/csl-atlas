@@ -1,0 +1,120 @@
+{
+  "stage": 0,
+  "createdUtc": "2026-10-19T14:28:10.876Z",
+  "script": "scripts/build-sense-inventory-audit.mjs",
+  "goal": "H7098",
+  "command": "npm run build-sense-inventory-audit",
+  "inputs": [
+    {
+      "path": "data/lexico/microstructure_profile.csv",
+      "sha256": "770e688b1a369f1061cbe10fcb3e9f5e6d950b5cae4068fc632b94fd039976d4"
+    },
+    {
+      "path": "src/data/dicts/sense-depth.json",
+      "sha256": "0ae4f7937de16ae15f596c781bf3541777ed6e35362bc953ac19c49285d7ca57"
+    },
+    {
+      "path": "data/lexico/senses_ae.jsonl",
+      "sha256": "f08912bf54c8298e1120efcdd18f87b6fe61303f56eb138061c20b57079d4b87"
+    },
+    {
+      "path": "data/lexico/senses_ap.jsonl",
+      "sha256": "549b34990ad20c333ec3c3957c471dfb9540b4e716855b4c6ded31aece0953dc"
+    },
+    {
+      "path": "data/lexico/senses_ap90.jsonl",
+      "sha256": "01ce3ecbbe0fa87a7db4f59c358de32eddca01fc1f8f404099bee8d454f8a479"
+    },
+    {
+      "path": "data/lexico/senses_ben.jsonl",
+      "sha256": "a6f543f9d3a08fcbf2183101a13852312635316b7d84876a34cff27bfbac3a21"
+    },
+    {
+      "path": "data/lexico/senses_bhs.jsonl",
+      "sha256": "b906cc24ea2112ea85c75f7f541f11bb89fd6f2bf24bb42a2c27222a2178378b"
+    },
+    {
+      "path": "data/lexico/senses_cae.jsonl",
+      "sha256": "2044ea396dcbe974d8ca5321c3bf95f7fa75113f7df8e824fa1d634733af4f64"
+    },
+    {
+      "path": "data/lexico/senses_mw.jsonl",
+      "sha256": "e148dd43becba05800db72cc395775fde36a995b43b64a290527a0523eecb465"
+    },
+    {
+      "path": "data/lexico/senses_mw72.jsonl",
+      "sha256": "5dc2b7396be74931022b03c777857e85f458d4e8230d5b46febbe9cb8b6524e1"
+    },
+    {
+      "path": "data/lexico/senses_pw.jsonl",
+      "sha256": "dd1c53a5ce64f522b767138e92eedebdcfaa1414ec9b7b6eb70380c78bde0b74"
+    },
+    {
+      "path": "data/lexico/senses_pwg.jsonl",
+      "sha256": "773897333b8fff04d44870d0f94c94acb1ea4781d88ada10337c9d50ae41462e"
+    },
+    {
+      "path": "data/lexico/senses_sch.jsonl",
+      "sha256": "a104637e41421cf2716ee04d71fc6ef305ca4751b629a700c6d421bde6ff99b6"
+    },
+    {
+      "path": "data/lexico/senses_skd.jsonl",
+      "sha256": "1962cdc000701fd119cd034e7ac113e6179c58e76e60d8ca058d86f1ada36738"
+    },
+    {
+      "path": "data/lexico/senses_vcp.jsonl",
+      "sha256": "adb9bfee7afcdfb3ea58a69140d43d9bfaec657ba255639c92d5b5d452c8b184"
+    },
+    {
+      "path": "data/lexico/senses_wil.jsonl",
+      "sha256": "e5eb077c2692875ac89d44e79962b5b0f2abb9e9e9f8ab6520e03027d4f36ad6"
+    },
+    {
+      "path": "data/lexico/r2_align_bodhisattva.json",
+      "sha256": "676468c49709550ac8222d0884ce5b5c2767bc1d8569e51e8e5eb74001fb07e5"
+    },
+    {
+      "path": "data/lexico/r2_align_dharma.json",
+      "sha256": "db40ff2c5f11a22816fff2b226f9b3812cbcb06b0f0005c69c30ccf925221e44"
+    },
+    {
+      "path": "data/lexico/r2_align_gam.json",
+      "sha256": "432cd199379c65308c2ef45f0c3eb2a7edaa7acc88ccb27ef377ba67b6d2daa2"
+    },
+    {
+      "path": "data/lexico/r2_align_iti.json",
+      "sha256": "11b5dfbf093e581d414b651ecce955706b06d98158f2e301b7f7a77df23b1c0b"
+    },
+    {
+      "path": "data/lexico/r2_align_rama.json",
+      "sha256": "fce28c0d8030d84eb98c4764c27377196408e5657a05264165610515e553f73d"
+    }
+  ],
+  "liveSources": [
+    {
+      "path": "../csl-orig/v02/mw/mw.txt",
+      "records": 286560,
+      "sampleMatches": 2300,
+      "sha256": "6457c145c517acf311ffe7bfd8efec630347a1de8dc546c90e3c4b49a7bd6683"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/sense/inventory_audit.json",
+      "sha256": "e3617e8764c2f56221a1edaeedef4339b496254daebece2ddc09259877e576ec"
+    },
+    {
+      "path": "data/sense/inventory_audit.csv",
+      "sha256": "540d6d53528dab0082559b36673254b55734f57c70fe24ec82adc712b2cd4378"
+    },
+    {
+      "path": "data/sense/inventory_audit_sample.tsv",
+      "sha256": "2c2411d6a24a2bc4806cbdf9700badd73d309aa4cd70aaeebf1bb5f77f489fe8"
+    }
+  ],
+  "notes": [
+    "The 200-lemma disparity stratum comes from committed sense-depth adapters, not from a new parser promotion.",
+    "The MW double-key recomputes sense units live from csl-orig when available.",
+    "No ELEXIS MWSA inventory was present; external evaluation is null."
+  ]
+}
