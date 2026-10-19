@@ -11,6 +11,14 @@ import { BROAD_HEADWORD_SHARD_PREFIXES, shardIdForLemma, shardPrefixForId } from
 
 const COPIES = [
   {
+    source: "data/citations/source-to-entries.json",
+    target: "src/data/citations/source-to-entries.json"
+  },
+  {
+    source: "data/citations/citation-passage-links.json",
+    target: "src/data/citations/citation-passage-links.json"
+  },
+  {
     source: "data/dcs/dcs_lemma_summary.json",
     target: "src/data/dcs/dcs_lemma_summary.json",
     optionalFallback: JSON.stringify({ lemmas: {} }, null, 2) + "\n",

@@ -59,6 +59,8 @@
     "validate-dict-comparison": "node scripts/validate-dictionary-comparison.mjs",
     "import-rv-verse-counts": "node scripts/import-rv-verse-counts.mjs",
     "build-citation-link-pilot": "node scripts/build-citation-link-pilot.mjs",
+    "build-citation-passage-index": "node scripts/build-citation-passage-index.mjs",
+    "verify-citation-passage-links": "node scripts/verify-citation-passage-links.mjs",
     "build-citation-link-split": "node scripts/build-citation-link-split.mjs",
     "build-source-date-anchor": "node scripts/build-source-date-anchor.mjs",
     "build-stardict-export": "node scripts/build-stardict-export.mjs",
