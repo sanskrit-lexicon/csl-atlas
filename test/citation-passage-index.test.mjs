@@ -78,7 +78,7 @@ test("editorial markers stay out of the text index", () => {
   assert.ok(!INDEX.sources["ib"], "ib. is not a text");
   assert.equal(INDEX.nontext["L"].citations, 40213);
   assert.equal(INDEX.nontext["ib"].citations, 10100);
-  assert.equal(INDEX.counts.nontextCitations, 78014);
+  assert.equal(INDEX.counts.nontextCitations, 78015);
 });
 
 test("the RV passage pilot carries 100 HTTP-200 links with verified anchors", () => {
@@ -107,6 +107,7 @@ test("pilot tables and provenance sidecar carry the 100 checked links", () => {
   assert.equal(pilotTsv.length, 101);
   assert.equal(checksTsv.length, 101);
   assert.ok(pilotTsv.slice(1).every((row) => row.split("\t")[0] === "MW"));
+  assert.ok(pilotTsv.slice(1).every((row) => /^RV[ .]/.test(row.split("\t")[3])), "raw_locus keeps MW's raw <ls> text");
   assert.ok(pilotTsv.slice(1).every((row) => row.split("\t")[8] === "200"));
   assert.ok(pilotTsv.slice(1).every((row) => row.split("\t")[9] === "observed"));
   assert.ok(checksTsv.slice(1).every((row) => row.split("\t")[1] === "200"));

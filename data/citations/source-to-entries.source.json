@@ -1,11 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "generatedBy": "npm run build-citation-passage-index",
-  "generatedAt": "2026-10-19T14:41:54.120Z",
+  "generatedAt": "2026-10-19T14:53:39.347Z",
   "cslOrig": {
     "revision": "55e8addbd96e8d9001b8789026b026763f4049c1",
-    "dirty": null,
-    "path": "../csl-orig"
+    "dirty": true,
+    "dirtyPaths": [
+      "M  v02/mw/mw.txt"
+    ],
+    "path": "../csl-orig",
+    "mwTxtSha256": "6457c145c517acf311ffe7bfd8efec630347a1de8dc546c90e3c4b49a7bd6683"
   },
   "abbreviations": {
     "path": "data/citations/mw-source-abbreviations.tsv",
@@ -13,10 +17,10 @@
     "sha256": "35d7f1a42575dee4beeaaf7caf684ca1a95dcd4888d25e8e7a7ae2735d2fc0e5"
   },
   "outputs": {
-    "source-to-entries.json": "9944c5a860fd24bbcd4bf1c5c07dd2881a88313fdbc0b9820c36c45633c97d22",
-    "citation-passage-links.json": "09f5b6b969501e74395b88bcf7f35db39d4418cc3f9ebb51299e5ef933ecab6b",
-    "passage_pilot.tsv": "e68d2f4c41e4000fd58bf160ee8a466220c7baa45aa5c1a498287f6621138e4e",
-    "passage_pilot.csv": "5983d1060980d6b64db14a4dac71326c88126d65c806d88e16322ba859ecdf88",
-    "passage_pilot_checks.tsv": "66bbd3b825f0d0f00d013d1c033cfc751a6f28d15ab941cf0ec3a367071a236b"
+    "source-to-entries.json": "e10ecea1e44376c62204c51164c86f428aff23d372eb8faae06f789b9269974e",
+    "citation-passage-links.json": "b759e4e0f1f940c9ccf00649f30621ffc958e516a711e1a38f6b7d6bfe13482c",
+    "passage_pilot.tsv": "c6187b51bee83aa181da9c7c665f908e93e8b1c04149dc360de98eccff28556c",
+    "passage_pilot.csv": "8cf6981361d639b05151f4751bf1473324f90838343594f6bdba3671fb64d4fb",
+    "passage_pilot_checks.tsv": "ec17e861e765dece7d2efa4b42fa22ad33e76d54f8577048373649063f8e57ef"
   }
 }

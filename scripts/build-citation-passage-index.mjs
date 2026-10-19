@@ -175,6 +175,20 @@ function addRecord(source, L, line) {
   source.lines[L] = line;
 }
 
+// MW sometimes puts the siglum in the tag attribute and leaves only the locus
+// in the text: <ls n="RV.">ix, 62, 25</ls>. extractCitations() returns the text
+// only, so those citations were previously filed under the bare locus ("ix").
+export function extractCitationsWithAttrs(body) {
+  const out = [];
+  for (const match of (body || "").matchAll(/<ls\b([^>]*)>([\s\S]*?)<\/ls>/gi)) {
+    const attrs = match[1] || "";
+    const content = match[2].trim();
+    const n = (attrs.match(/\bn\s*=\s*"([^"]*)"/) || [])[1] || null;
+    out.push({ content, n, raw: match[0] });
+  }
+  return out;
+}
+
 export function buildIndex({ nodeRows, abbreviationRows, limit = null }) {
   const canonicalAliases = buildCanonicalAliases(nodeRows);
   const abbreviationMap = buildAbbreviationMap(abbreviationRows);
@@ -191,10 +205,15 @@ export function buildIndex({ nodeRows, abbreviationRows, limit = null }) {
     if (limit && scanned > limit) break;
     if (!rec.k1) continue;
     records += 1;
-    for (const rawCitation of extractCitations(rec.body || "")) {
+    for (const citation of extractCitationsWithAttrs(rec.body || "")) {
       citations += 1;
-      const normalized = normalizeSource(rawCitation);
-      const rawBase = baseForm(normalized);
+      const normalized = normalizeSource(citation.content);
+      let rawBase = baseForm(normalized);
+      let rawCitation = normalized;
+      if (citation.n && /^[ivxlcdm0-9]/i.test(rawBase)) {
+        rawBase = baseForm(normalizeSource(citation.n));
+        rawCitation = `${normalizeSource(citation.n)} ${normalized}`.trim();
+      }
       if (!rawBase) continue;
       const resolved = resolveSourceLabel(rawBase, abbreviationMap, canonicalAliases);
 
@@ -208,11 +227,12 @@ export function buildIndex({ nodeRows, abbreviationRows, limit = null }) {
       } else if (resolved.canonical) {
         let source = sources.get(resolved.canonical);
         if (!source) {
-          source = { citations: 0, records: [], lines: {}, rawForms: {} };
+          source = { citations: 0, records: [], lines: {}, rawForms: {}, rawCitations: new Set() };
           sources.set(resolved.canonical, source);
         }
         source.citations += 1;
         source.rawForms[rawBase] = (source.rawForms[rawBase] || 0) + 1;
+        source.rawCitations.add(citation.raw);
         addRecord(source, rec.L, rec.startLine);
 
         if (resolved.canonical === MW_SOURCE_LABEL) {
@@ -221,10 +241,11 @@ export function buildIndex({ nodeRows, abbreviationRows, limit = null }) {
             const key = `${locus.mandala}.${locus.hymn}.${locus.verse}`;
             let item = rvLoci.get(key);
             if (!item) {
-              item = { ...locus, key, citations: 0, records: [], lines: {} };
+              item = { ...locus, key, citations: 0, records: [], lines: {}, raws: new Map() };
               rvLoci.set(key, item);
             }
             item.citations += 1;
+            item.raws.set(rawCitation, (item.raws.get(rawCitation) || 0) + 1);
             addRecord(item, rec.L, rec.startLine);
           }
         }
@@ -259,7 +280,8 @@ function writeIndex(index, cslOrig) {
       entryCount: source.records.length,
       records: source.records,
       lines: source.lines,
-      rawForms: sortObjectByKey(source.rawForms)
+      rawForms: sortObjectByKey(source.rawForms),
+      rawCitations: [...source.rawCitations].sort()
     };
   }
   const unresolved = {};
@@ -333,7 +355,7 @@ function writeLinks(index, cslOrig) {
       reviewId: `citation-passage:RV:${locus.key}`,
       canonicalText: MW_SOURCE_LABEL,
       rawLabel: "RV",
-      rawLocus: `RV ${locus.key}`,
+      rawLocus: [...locus.raws.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? `RV ${locus.key}`,
       locus: locus.key,
       mandala: locus.mandala,
       hymn: locus.hymn,
@@ -468,7 +490,16 @@ function readCslOrigProvenance() {
       return null;
     }
   };
-  return { revision: git("rev-parse HEAD"), dirty: null, path: "../csl-orig" };
+  const dirtyPaths = (git("status --porcelain -- v02/mw/mw.txt") || "").split("\n").filter(Boolean);
+  const mwPath = path.resolve(process.cwd(), "..", "csl-orig", "v02", "mw", "mw.txt");
+  const mwSha256 = crypto.createHash("sha256").update(fs.readFileSync(mwPath)).digest("hex");
+  return {
+    revision: git("rev-parse HEAD"),
+    dirty: dirtyPaths.length > 0,
+    dirtyPaths,
+    path: "../csl-orig",
+    mwTxtSha256: mwSha256
+  };
 }
 
 function main() {

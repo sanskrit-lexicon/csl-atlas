@@ -96,7 +96,7 @@ display(html`<table class="cited-table">
 
 ## Trust Block
 
-- Evidence: `data/citations/source-to-entries.json` (209 canonical labels; 205,722 of 320,828 MW citations resolved) and `data/citations/citation-passage-links.json` (100 RV verse loci, all HTTP 200 with anchors present on 19-10-2026).
+- Evidence: `data/citations/source-to-entries.json` (209 canonical labels; 213,906 of 320,828 MW citations resolved) and `data/citations/citation-passage-links.json` (100 RV verse loci, all HTTP 200 with anchors present on 19-10-2026).
 - Limitations: MW only; locus parsing covers explicit RV verse citations only. GRETIL is a link-out target and is not ingested. A verified anchor proves the passage exists, not that MW's quotation is accurate.
 - Validation: `npm run build-citation-passage-index`, `npm run verify-citation-passage-links`, and `node --test test/citation-passage-index.test.mjs`; the page is built by `npm run build`.
 - Owner repo: `csl-atlas`.
