@@ -79,15 +79,19 @@ ROOT = HERE.parent
 
 ENTRY_MIN_TAIL_LETTERS = 6
 #: H7096: the KoshaSHRI scan leaves a zero-width non-joiner (U+200C) after a
-#: truncated Devanagari fragment ("... W. Calan — त्‌.").  The character is
+#: truncated Devanagari fragment ("... W. Calan — त्<ZWNJ>.").  The character is
 #: invisible, breaks literal search/comparison and is an artifact of the scan,
 #: not part of the printed title.  It is removed at the source (the tail), so
 #: every emitted artifact regenerates byte-for-byte.  U+200D (ZWJ) is NOT
 #: removed: it can be orthographically meaningful.
-ZWNJ = "‌"
+#:
+#: The invisibles are written as escapes on purpose: a literal U+200C in the
+#: source is itself invisible, and a reader cannot tell a deliberate literal
+#: from a stray one (or tell which codepoint it is).
+ZWNJ = "\u200c"
 #: U+200B ZERO WIDTH SPACE and U+FEFF BOM/ZWNBSP are the other two invisibles
 #: this scan is known to emit; all three are artifacts of the same class.
-OCR_INVISIBLES = ZWNJ + "﻿"
+OCR_INVISIBLES = ZWNJ + "\u200b\ufeff"
 
 YEAR_RE = re.compile(r"\b(1[89]\d\d|20[0-2]\d)\b")
 LETTER_RE = re.compile(r"[A-Za-z\u00c0-\u024f]")
@@ -990,7 +994,8 @@ def selftest(aob_path=None):
     if not ok:
         return 1
     # 1c. H7096: the scan's invisible artifacts never reach an emitted title
-    dirty = "Gopalakelicandrika, Ramakrsna, Amsterdam 1917, W. Calan — त्‌."
+    dirty = ("Gopalakelicandrika, Ramakrsna, Amsterdam 1917, "
+              "W. Calan — त्\u200c.")
     clean = strip_ocr_invisibles(dirty)
     if clean != "Gopalakelicandrika, Ramakrsna, Amsterdam 1917, W. Calan — त्.":
         print("FAIL H7096 invisibles: ZWNJ survived the strip: %r" % clean)
@@ -998,7 +1003,7 @@ def selftest(aob_path=None):
     elif any(ch in clean for ch in OCR_INVISIBLES):
         print("FAIL H7096 invisibles: an invisible survived the strip")
         ok = False
-    elif "‌" in strip_ocr_invisibles("a‌b"):
+    elif "\u200d" not in strip_ocr_invisibles("a\u200db"):
         print("FAIL H7096 invisibles: ZWJ must survive (it can be meaningful)")
         ok = False
     else:
@@ -1132,13 +1137,23 @@ def main(argv=None):
 
     if args.check:
         out_dir = ROOT / "data/pd"
-        committed = json.loads(
-            (out_dir / "pd_aob_sigla_reconciliation.json").read_text(encoding="utf-8"))
+        committed_text = (
+            out_dir / "pd_aob_sigla_reconciliation.json").read_text(encoding="utf-8")
+        committed = json.loads(committed_text)
+        # The WHOLE artifact is compared, byte for byte, not a hand-picked
+        # list of blocks.  A partial comparison is exactly what let H7107's
+        # own `method` edit drift away from the committed JSON unnoticed:
+        # the six blocks this loop used to name all matched, and the seventh
+        # key (the one H7107 added) did not.  Derive-don't-store means the
+        # committed file is the generator's output, in full.
         diffs = []
-        for key in ("harvest", "aob", "source_aob", "discrepancies", "witness",
-                    "h6960"):
-            if committed.get(key) != summary.get(key):
-                diffs.append(key)
+        fresh_text = json.dumps(summary, ensure_ascii=False, indent=2) + "\n"
+        if committed_text != fresh_text:
+            for key in sorted(set(committed) | set(summary)):
+                if committed.get(key) != summary.get(key):
+                    diffs.append(key)
+            if not diffs:
+                diffs.append("json formatting/ordering")
         # row-level artifacts are gated too: aggregates can be right while a
         # TSV row is hand-edited or truncated
         for name, cols, rows in (
