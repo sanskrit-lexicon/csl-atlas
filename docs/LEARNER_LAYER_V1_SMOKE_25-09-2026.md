@@ -5,7 +5,7 @@ _Created: 25-09-2026 · Last updated: 25-09-2026_
 Browser smoke of [src/tools/learner-reading-layer.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/tools/learner-reading-layer.md)
 against the v1 payload ([src/data/learner/learner-index.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/learner/learner-index.json),
 schema 2.0.0, 52,957 cards, pin `vdcs-learner-v1-20260809`), executed 25-09-2026 as handoff
-[H5319](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5319-OxAlpha_csl-atlas_learner-layer-v1-public-page_23.09.26.md)
+[H5319](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5319-OxAlpha_csl-atlas_learner-layer-v1-public-page_23.09.26.md)
 (epic E014). Stop condition: *the page renders cards for a high, a mid and a rare lemma and the
 trust block is filled.* Method: `npm run dev` (Observable preview, `127.0.0.1:3000`) + Playwright,
 viewports 1280×800 (desktop) and 390×844 (mobile); DOM assertions read back in-page.

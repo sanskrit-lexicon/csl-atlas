@@ -12,7 +12,7 @@ a four-state presence verdict saying, for each citation, whether the verse stand
 vulgate, in the BORI critical edition, in both, or was never checked.
 
 Executed under
-[H2845](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2845-Opus_csl-atlas_citation-etext-layer-mbh-nilakantha-critical-presence_15.08.26.md),
+[H2845](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2845-Opus_csl-atlas_citation-etext-layer-mbh-nilakantha-critical-presence_15.08.26.md),
 16-08-2026, Opus 5 (`claude-opus-5`).
 
 ## 0. The question this answers

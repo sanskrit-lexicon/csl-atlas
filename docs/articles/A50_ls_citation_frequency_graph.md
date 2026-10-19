@@ -350,7 +350,7 @@ this section must be re-stated over the reviewed map before submission.
    Inscriptions) — a separate citation universe, deliberately out of the text graph.
 5. **Transliteration variants are folded since 24-09-2026; the title-synonymy tail beyond
    them is unmerged.** The curated alias table folds only hand-verified identifications. Until
-   the re-freeze ([H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md))
+   the re-freeze ([H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md))
    spelling variants outside it were separate nodes — Vaidya's `Raghuvanśa` (4,101 citations)
    beside *Raghuvaṃśa* (19,922), `Manusmṛiti` (1,762) beside *Manusmṛti*, `Rigveda` (837)
    beside *Ṛgveda*, `Bhāgavata` (2,968) beside *Bhāgavata-Purāṇa* — each miss understating a
@@ -502,7 +502,7 @@ Zenodo release. `/venue-scout` later.
   all figures recomputed from the committed dataset in the same pass.
 - Re-freeze at a recorded `csl-orig`/`csl-guides` revision pair, 37-pair transliteration
   fold and five duplicate tradition-map rows removed, 24-09-2026, by Fable 5.1
-  (`claude-fable-5-1`) under [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md);
+  (`claude-fable-5-1`) under [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md);
   every table and figure recomputed from the re-frozen dataset in the same pass.
 
 _Dr. Mārcis Gasūns_

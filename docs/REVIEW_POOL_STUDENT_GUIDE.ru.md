@@ -475,8 +475,8 @@ base āra fr. ā-√ṛ; cf. āré) from a distant place». Ссылка ест�
 - [REVIEW_QUEUE_PROOFS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_QUEUE_PROOFS.md)
   — что каждая очередь проверки доказывает, а что нет.
 - Проект пула проверки с двойным вводом и отчётом каппа готовится отдельными задачами
-  ([H5307](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5307-Opus_csl-atlas_review-pool-v1-double-keying-design_23.09.26.md),
-  [H5308](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5308-OxAlpha_csl-atlas_review-pool-packets-to-double-keyed-sheets_23.09.26.md),
+  ([H5307](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5307-Opus_csl-atlas_review-pool-v1-double-keying-design_23.09.26.md),
+  [H5308](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5308-OxAlpha_csl-atlas_review-pool-packets-to-double-keyed-sheets_23.09.26.md),
   [H5309](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5309-OxAlpha_csl-atlas_review-pool-kappa-report-tool_23.09.26.md));
   это руководство написано под их общую схему и обновится, когда листы будут собраны.
 

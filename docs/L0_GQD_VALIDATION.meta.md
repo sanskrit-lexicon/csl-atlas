@@ -19,7 +19,7 @@ accuracy. Not a reader-facing page — the site-facing summary is one sentence i
 
 ## Provenance
 
-- Handoff [H1578](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1578-Fable_csl-atlas_l0-gqd-validation_24.07.26.md),
+- Handoff [H1578](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1578-Fable_csl-atlas_l0-gqd-validation_24.07.26.md),
   agenda §6 backlog #8. Executed 26-07-2026 by **Fable 5 (`claude-fable-5`)**.
 - Method: Pompei, Loreto & Tria (2011) PLOS ONE 6(6):e20109 eq. 8, as used for tree
   evaluation by Rama, List, Wahle & Jäger (2018), NAACL-HLT (arXiv:1804.05416).

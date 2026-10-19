@@ -2,7 +2,7 @@
 
 _Created: 24-09-2026 · Last updated: 24-09-2026_
 
-**Handoff:** [H5295](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5295-Fable_csl-atlas_research-claim-falsification-preflight_23.09.26.md)
+**Handoff:** [H5295](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5295-Fable_csl-atlas_research-claim-falsification-preflight_23.09.26.md)
 (Fable 5.1 `claude-fable-5-1`). **Target:**
 [`docs/articles/A50_ls_citation_frequency_graph.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/articles/A50_ls_citation_frequency_graph.md)
 (*The Citation Canon of the Sanskrit Dictionary Tradition*). **Question asked of every
@@ -19,7 +19,7 @@ Independent logic critic on the pre-merge head: §5 (all 25 findings adjudicated
 this pass, 1 deferred to merge — P8; the key unification I4 asks for is forwarded to H5407).
 A delta pass over those fixes (§5.1) returned 22 further findings, all fixed in this pass.
 
-**Post-re-freeze status (24-09-2026, [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md), Fable 5.1 `claude-fable-5-1`).**
+**Post-re-freeze status (24-09-2026, [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md), Fable 5.1 `claude-fable-5-1`).**
 The dataset this ledger was measured on — the 06-07-2026 freeze, 828,505 citations / 912 nodes
 / 1,701 edges, no recorded sibling revision — has been **re-frozen at a recorded revision pair**
 with the 37-pair variant fold applied in the builder (§P, now `survives`). Rows C1–C7 keep the
@@ -378,7 +378,7 @@ arm, null mean, SD, z and p recorded per arm).
   Data-availability section stated the freeze gap and the drift; the citations README recorded
   both. Re-freezing at a recorded revision and extending `CANON_ALIAS` with the 37 fold pairs
   were deferred to one residual mint so code, data, sidecar and prose move together: H5407.
-- **Re-freeze ([H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md), 24-09-2026):**
+- **Re-freeze ([H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md), 24-09-2026):**
   `CANON_ALIAS` extended with the 37 fold pairs (a chain guard asserts no alias target is itself
   an alias key; three pairs of the fold table were reversed so the diacritic IAST form is the
   target: `SARVOPANISHATSĀRA` → `SARVOPANIṢATSĀRA`, `BRAHMOPANISHAD` → `BRAHMOPANIṢAD`,
@@ -484,7 +484,7 @@ disposition:
 
 **Forwarded, not fixed here (1):** unifying the borrowed resolver keys so that "shared key"
 and "citation community" become distinguishable (I4's consequence) — dataset change,
-[H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md).
+[H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md).
 ### 5.1 Delta pass over the fixes (same critic contract, final head)
 
 A second read-only critic (Explore agent, no edits, no sub-agents) re-judged the three axes on
