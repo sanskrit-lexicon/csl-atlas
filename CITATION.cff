@@ -7,7 +7,10 @@ abstract: >-
   chapters plus an all-dictionary coverage layer for every local CDSL v02
   source dictionary. Every public claim carries an explicit evidence label
   (observed / derived / inferred / reviewed) and every dataset is reproducible
-  from committed JSON plus the csl-orig source dictionaries.
+  from committed JSON plus the csl-orig source dictionaries. Release 0.20.0
+  publishes the core dossier (28,524 lemmas attested in at least five
+  dictionaries) with an OntoLex-Lemon application profile and a data
+  statement.
 type: software
 identifiers:
   - type: doi
@@ -23,8 +26,8 @@ authors:
     alias: "funderburkjim"
     # orcid: ...  # TODO
   - alias: "Andhrabharati"  # TODO: confirm preferred legal name and ORCID
-version: 0.19.11
-date-released: 2026-09-27
+version: 0.20.0
+date-released: 2026-10-19
 license: "CC-BY-SA-4.0"
 repository-code: "https://github.com/sanskrit-lexicon/csl-atlas"
 url: "https://sanskrit-lexicon.github.io/csl-atlas/"
@@ -37,6 +40,8 @@ keywords:
   - "Cologne Digital Sanskrit Lexicon"
   - "FAIR data"
   - "evidence-graded data"
+  - "OntoLex-Lemon"
+  - "core dossier"
 references:
   - type: data
     title: "Cologne Digital Sanskrit Lexicon — source dictionaries (csl-orig v02)"

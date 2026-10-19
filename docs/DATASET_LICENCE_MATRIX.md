@@ -1,6 +1,6 @@
 # Per-dataset licence matrix — what licence each `data/` family may carry, and why
 
-_Created: 24-09-2026 · Last updated: 24-09-2026_
+_Created: 24-09-2026 · Last updated: 19-10-2026_
 
 **This is a proposal, not an applied change.** No data file, sidecar, `LICENSE`,
 `CITATION.cff` or `.zenodo.json` is edited by the pass that produced this document
@@ -82,8 +82,12 @@ files should declare. Flag: 🟢 clean · 🟠 condition attached · 🔴 unreso
 | 12 | [`data/schema/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/schema) | JSON Schemas (`kosa-macrostructure`, `megastructure-component`, `review-report`) | Own work — no dictionary content | None inherited | **CC BY 4.0** (or CC0) — the one genuinely clean family | 🟢 |
 | 13 | [`data/snapshots/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/snapshots) | Frozen `headwords.json` at 2026-05-07 (reproducibility baseline) | `csl-orig` v02 (counts per dictionary) | CC BY-SA 4.0 — adaptation | **CC BY-SA 4.0** | 🟢 |
 | 14 | `data/` root files | [`dictionary_inventory.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv), [`dictionary-coverage.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary-coverage.json), [`headwords.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/headwords.json), [`etymology-oracle.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/etymology-oracle.json), `sanhw1_*` cladistics | `csl-orig` v02 + its `etymology_stats`; `csl-observatory` snapshot `sanhw1.txt`; bibliographic facts for the inventory | CC BY-SA 4.0 for everything derived from dictionary text | **CC BY-SA 4.0**, except `dictionary_inventory.csv` → **CC BY 4.0** (bibliographic facts only) | 🟢 |
+| 15 | [`src/data/dicts/core-dossier/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/src/data/dicts/core-dossier) | Released core dossier: 28,524 lemmas × 7 dictionary coverage tuples + first source lines (dataset 1.0.0, repo release v0.20.0) | `csl-orig` v02 `*.txt` revision `f4c08c5` (pinned in `.source.json`) | CC BY-SA 4.0 — adaptation, ShareAlike | **CC BY-SA 4.0** (declared in `.source.json`) | 🟢 |
 
 Every family under `data/` is covered: 13 directories plus the root file group.
+Row 15 covers the released `src/data/dicts/core-dossier/` payload, which sits
+outside `data/` and is the first dataset shipped with an explicit licence
+declaration in its provenance sidecar.
 
 ## Exceptions, in the order they should be resolved
 

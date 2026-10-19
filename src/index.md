@@ -15,6 +15,24 @@ toc: false
 - Owner repo: `csl-atlas`.
 - Next use: start with `/dictionary-chooser` or Reader Lookup, then inspect source-linked dictionary records.
 
+## Cite this dataset
+
+The **core dossier** is the first citable atlas dataset: 28,524 lemmas attested
+in at least five of seven Cologne dictionaries, with per-dictionary record
+counts, first source lines, and grammar tokens.
+
+- **Version:** dataset 1.0.0, repo release `v0.20.0`
+- **DOI (concept):** [10.5281/zenodo.21419691](https://doi.org/10.5281/zenodo.21419691)
+- **Licence:** CC BY-SA 4.0
+- **OntoLex profile:** [docs/ONTOLEX_PROFILE_CORE_DOSSIER.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ONTOLEX_PROFILE_CORE_DOSSIER.md)
+- **Data statement:** [docs/DATA_STATEMENT_CORE_DOSSIER.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DATA_STATEMENT_CORE_DOSSIER.md)
+
+The concept DOI resolves to the latest tagged release. The version DOI is
+minted when `v0.20.0` is published; until then cite the concept DOI and name
+the release tag.
+
+---
+
 A comparative microstructural atlas of **nine narrative Sanskrit-dictionary chapters plus an all-dictionary coverage layer** spanning the indigenous *kośa* tradition (~6th c.) through to the [Cologne Digital Sanskrit Lexicon](https://www.sanskrit-lexicon.uni-koeln.de/) (2024). Each chapter analyses one dictionary under an [18-block formal apparatus](https://github.com/sanskrit-lexicon/MWS/blob/docs-pass/papers/microanalysis/PAPER.md#3-the-five-grounded-constructs) developed for MW; the coverage layer asks which parts of that apparatus transfer, and how large those parts are, across every available CDSL v02 dictionary.
 
 <!-- Русская версия → /ru/ — re-enable once the RU locale routes are wired (see I18N.md / DOUBTS D11). -->
