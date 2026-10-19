@@ -1,0 +1,2265 @@
+{
+  "schemaVersion": "2.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedBy": "npm run build-benchmark-report",
+  "seed": 20261019,
+  "sampling": "Stratified by the task's declared stratum, rows ordered inside each stratum by sha256(seed:taskId:reviewId); one row drawn per stratum round-robin until the sample size is reached. Recomputable from this file and the committed queues.",
+  "trainingPolicy": "No model is trained in this repository. train rows = 0 for every task; held-out rows are never used for fitting any baseline. The rule baseline is fixed in scripts/build-benchmark-report.mjs and the trivial baseline is fit on gold only.",
+  "sampleSize": 100,
+  "goldDefinition": "Gold = two independent keys on the same row (data/review/pool_merge/*.json, >=2 distinct pool-aNN annotators) or an explicit expert row in src/data/benchmark/gold.json. Single-key reviews, agent reviews, and self-reviewed machine verdicts are not gold.",
+  "tasks": [
+    {
+      "taskId": "encoding-ocr",
+      "title": "Encoding/OCR anomaly triage",
+      "source": "src/data/review/h5-anomaly-review.json",
+      "populationSize": 130,
+      "heldOutRows": 100,
+      "trainRows": 0,
+      "strata": [
+        {
+          "stratum": "mw-pw-shared-doublet",
+          "population": 30,
+          "sampled": 20
+        },
+        {
+          "stratum": "mw-pwg-shared-doublet",
+          "population": 30,
+          "sampled": 20
+        },
+        {
+          "stratum": "raw-headword-exclusive",
+          "population": 30,
+          "sampled": 20
+        },
+        {
+          "stratum": "known-correction",
+          "population": 20,
+          "sampled": 20
+        },
+        {
+          "stratum": "null-control",
+          "population": 20,
+          "sampled": 20
+        }
+      ],
+      "rows": [
+        {
+          "reviewId": "h5:known-correction:MW-PW:Bavamanyu:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprativAdin:prativAdin",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kullUkA:kullUka",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:tatraBavatI:tatraBavat",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:ADUmana:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:Cala:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apraRASa:aprakASa",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:atimarSa:aBimarSa",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:saktimat:Baktimat",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:AvantI:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:DAv:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprArTaka:prArTaka",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:AcamanI:Acamana",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:IYj:aYj",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:BayanASin:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PW:Akara:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:anugeya:anumeya",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:utpAra:utpAta",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:karuRam:karuRa",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:BagnatAla:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:Buvana:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aparaSvas:paraSvas",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:catuzpAdI:catuzpAd",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:klIv:klIva",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:ASArEzin:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PW:ABoga:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apratiboDa:pratiboDa",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:ADUmana:ADamana",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:uttarottaram:uttarottara",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:DarmakAra:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PW:Adya:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apaYcama:paYcama",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kftAlaka:mftAlaka",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:duHKatara:duHKakara",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:ASuPala:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:KaYjana:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apratIBA:apratiBA",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kAlakaYjya:kAlakaYja",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:kat:ka",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:BARasTAna:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:Dur:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apreta:preta",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:cApaqa:cApala",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:Il:I",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:AnakAyani:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:DA:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:ajamI_a:ajamIQa",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:divaraTa:devaraTa",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:avicAritam:avicArita",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:AvartanamaRi:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:SOrya:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aparivIta:parivIta",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:apiDAnI:apiDAna",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:ekAntam:ekAnta",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:BAgurI:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:DU:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprapAda:apramAda",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kyat:yat",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:tApasI:tApasa",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:BUmIyARa:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PW:Akenipa:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:abadDamUla:badDamUla",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:dIkzaRA:dIkzaRa",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:etat:eta",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:BfSIBU:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PW:Pala:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apadasTa:padasTa",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:karkowI:karkowa",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:wiwwiBI:wiwwiBa",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:Badantavarman:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:BI:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apradagDa:apradugDa",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kASmIrikA:kASmIrika",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:kalyam:kalya",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:Buvadvasu:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PW:Ekzava:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:awawyA:awAwyA",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:apAzWi:apAzWa",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:UM:Uh",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:BuktvAsuhita:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:Ap:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apratihAra:pratihAra",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kanInika:kanInaka",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:kalahaMsI:kalahaMsa",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:AhatavisargatA:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PW:Opala:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apasvAna:apasnAna",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:utsAdin:utpAdin",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:Baktftva:Boktftva",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:ApUyita:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PW:Kewa:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apracyuti:apracyuta",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kAYcanapraBA:kAYcanapraBa",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:gfYj:guYj",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:AlokagadADarI:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:known-correction:MW-PWG:KyA:",
+          "stratum": "known-correction",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apraBraMSa:apaBraMSa",
+          "stratum": "mw-pw-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:akalkala:akalkana",
+          "stratum": "mw-pwg-shared-doublet",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:null-control:BOP-MW:kIrt:kIrti",
+          "stratum": "null-control",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "h5:raw-headword-exclusive:MW-PWG:BUrilagnA:",
+          "stratum": "raw-headword-exclusive",
+          "reviewStatus": "reviewed-ok",
+          "existingKeys": 1,
+          "goldEligible": false
+        }
+      ]
+    },
+    {
+      "taskId": "gender-conflict",
+      "title": "Cross-dictionary gender conflict adjudication",
+      "source": "src/data/review/gender-conflicts-review.json",
+      "populationSize": 4543,
+      "heldOutRows": 100,
+      "trainRows": 0,
+      "strata": [
+        {
+          "stratum": "m/n · lex",
+          "population": 1985,
+          "sampled": 12
+        },
+        {
+          "stratum": "m/n · prose-mixed",
+          "population": 1099,
+          "sampled": 12
+        },
+        {
+          "stratum": "m/f · prose-mixed",
+          "population": 586,
+          "sampled": 13
+        },
+        {
+          "stratum": "m/f · lex",
+          "population": 524,
+          "sampled": 13
+        },
+        {
+          "stratum": "f/n · lex",
+          "population": 162,
+          "sampled": 13
+        },
+        {
+          "stratum": "m/f/n · lex",
+          "population": 89,
+          "sampled": 12
+        },
+        {
+          "stratum": "m/f/n · prose-mixed",
+          "population": 75,
+          "sampled": 12
+        },
+        {
+          "stratum": "f/n · prose-mixed",
+          "population": 23,
+          "sampled": 13
+        }
+      ],
+      "rows": [
+        {
+          "reviewId": "gender-conflict:saMyamana",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:GarGarA",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:badari",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:patrasUciH",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:sikTa",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:jYAna",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:galoqya",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:dAtva",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:ahirbuDnyadevatA",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kArAyikA",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:tanti",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:karzU",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kAYcanaka",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:Kecara",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:prativacana",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:dyuta",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:agamyAgamana",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:taRqulAmbu",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:gAtrayazwi",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:Basat",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:pradeya",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:BAradvAja",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kArkowaka",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:malinAmbu",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:pitfsaMhitA",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:viSvakarmmasutA",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:Svavftti",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:suBUti",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:pORqarIka",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:ketumAla",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:candrapramardana",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:rAjasUya",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:Bedaka",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:pucCawI",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:SiroDi",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:anurAga",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:pataMga",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:vedi",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:brahmapada",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:puwodaka",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:lavana",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:nAma",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:GAtaka",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kvaNgu",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:karRika",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:dru",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:Sri",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kalAntara",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:parirakzaRa",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:BAs",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:sTalasIman",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kzetrI",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:GrARa",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:prAjApatya",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:vAtaskanDa",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:manTana",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:preNKolana",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:prema",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:jinendrabudDi",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:sOraBeyI",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:dakziRa",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:raktAkza",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:vyavaDAna",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:vedin",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:prarocana",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:tARqi",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:pENgIputra",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:karkaSa",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:alAbu",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:marut",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:vfdDAraRya",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:AmrAtakeSvara",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:triSata",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kaWinA",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:SAri",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:KagaH",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:avaDUta",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:likzA",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:keSacEtya",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:animiza",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:saptaSataka",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:satI",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:asi",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kAkakaNgu",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:tIkzRasAra",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:gAnDAra",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:arvAksAman",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kAlapfzWa",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:vEkfti",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:supriyA",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:dvipadarASi",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:SElaBitti",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:DAra",
+          "stratum": "m/f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:trinayana",
+          "stratum": "m/f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:puragAvaRa",
+          "stratum": "m/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:cippa",
+          "stratum": "m/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:bahizwAjjyotis",
+          "stratum": "f/n · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:anavaDAnatA",
+          "stratum": "f/n · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:brahmasidDi",
+          "stratum": "m/f · lex",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "gender-conflict:kATakya",
+          "stratum": "m/f · prose-mixed",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        }
+      ]
+    },
+    {
+      "taskId": "citation-link-target",
+      "title": "Citation-link target verification",
+      "source": "src/data/review/citation-link-pilot-review.json",
+      "populationSize": 3942,
+      "heldOutRows": 100,
+      "trainRows": 0,
+      "strata": [
+        {
+          "stratum": "mandala-1",
+          "population": 914,
+          "sampled": 10
+        },
+        {
+          "stratum": "mandala-10",
+          "population": 762,
+          "sampled": 10
+        },
+        {
+          "stratum": "mandala-8",
+          "population": 502,
+          "sampled": 10
+        },
+        {
+          "stratum": "mandala-5",
+          "population": 301,
+          "sampled": 10
+        },
+        {
+          "stratum": "mandala-6",
+          "population": 296,
+          "sampled": 10
+        },
+        {
+          "stratum": "mandala-7",
+          "population": 264,
+          "sampled": 10
+        },
+        {
+          "stratum": "mandala-4",
+          "population": 239,
+          "sampled": 10
+        },
+        {
+          "stratum": "mandala-9",
+          "population": 239,
+          "sampled": 10
+        },
+        {
+          "stratum": "mandala-2",
+          "population": 235,
+          "sampled": 10
+        },
+        {
+          "stratum": "mandala-3",
+          "population": 190,
+          "sampled": 10
+        }
+      ],
+      "rows": [
+        {
+          "reviewId": "citation-link-target:RV:1.37.7",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.160.1",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.35.5",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.35.4",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.51.4",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.39.3",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.45.24",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.62.1",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.32.29",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.77.5",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:1.24.5",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.144.2",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.38.7",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.52.5",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.30.19",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.55.5",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.45.31",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.67.2",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.10.1",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.43.5",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:1.150.3",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.94.8",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.33.1",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.28.5",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.32.2",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.62.8",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.21.12",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.33.10",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.1.4",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.14.5",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:1.48.11",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.48.5",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.20.4",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.30.8",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.16.12",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.61.17",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.4.2",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.96.4",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.32.5",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.111.2",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:1.97.8",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.61.5",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.35.2",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.33.4",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.31.2",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.30.15",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.49.7",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.43.4",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.21.5",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.97.45",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:1.32.6",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.50.3",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.34.7",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.54.9",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.4.11",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.51.11",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.65.5",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.82.7",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.21.14",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.97.22",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:1.110.5",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.67.8",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.13.12",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.4.7",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.18.8",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.41.15",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.25.4",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.22.3",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.3.22",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.94.1",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:1.133.2",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.17.5",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.15.9",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.52.6",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.4.1",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.84.2",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.24.5",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.96.1",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.69.6",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.113.5",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:1.162.18",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.4.6",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.1.9",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.30.17",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.19.5",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.33.10",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.56.3",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.34.22",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.4.9",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.86.15",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:1.116.7",
+          "stratum": "mandala-1",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:10.34.10",
+          "stratum": "mandala-10",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:2.40.1",
+          "stratum": "mandala-2",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:3.2.6",
+          "stratum": "mandala-3",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:4.31.6",
+          "stratum": "mandala-4",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:5.61.8",
+          "stratum": "mandala-5",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:6.48.11",
+          "stratum": "mandala-6",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:7.15.7",
+          "stratum": "mandala-7",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:8.102.4",
+          "stratum": "mandala-8",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        },
+        {
+          "reviewId": "citation-link-target:RV:9.113.6",
+          "stratum": "mandala-9",
+          "reviewStatus": "needs-review",
+          "existingKeys": 0,
+          "goldEligible": false
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-10-19T14:16:58.204Z"
+}
