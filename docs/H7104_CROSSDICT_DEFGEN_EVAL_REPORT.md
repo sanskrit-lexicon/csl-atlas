@@ -8,14 +8,16 @@ The frozen kosha definition-generation evaluation (H730/H2408) is extended into
 a cross-dictionary sense-consistency test on atlas data **without re-running
 generation**. The five frozen arms are joined to AP/PWG/PWK/MW sense units from
 live `csl-orig/v02` through the committed H7098 sense adapters. The
-100-row judge-calibration sample is human-scored and reconciled against the
-frozen LLM judge.
+100-row judge-calibration sample was scored manually by the executing worker
+(one blind key) and reconciled against the frozen LLM judge. This is a
+provisional calibration: it is not an independent human key.
 
 Best arm on the primary endpoint: **A2_chat_noctx** — 89.16 % of the sampled
 lemmas where another dictionary distinguishes at least two senses get an
 adequate multi-sense gloss. The random floor is 0 % once adequacy is required.
-Judge-vs-human agreement is high (quadratic weighted kappa 0.9356, n = 100).
-Decision: **GO for the candidate lane, NO promotion of generated content**.
+Judge-vs-worker agreement is high (quadratic weighted kappa 0.9356, n = 100).
+Decision: **GO (provisional) for the candidate lane, NO promotion of generated
+content** until a genuine human key exists.
 
 ## Scope guards
 
@@ -122,12 +124,12 @@ Frozen from the kosha scorer (`scores_per_item.tsv`); not recomputed here.
 | A3 reasoner + context | 20.48 | 4.08 | 0.2560 |
 | F1 fable + context | 30.33 | 6.72 | 0.3401 |
 
-## Judge-vs-human calibration
+## Judge-vs-worker calibration (provisional)
 
 A deterministic 100-row sample (20 per arm, SHA-256 of `H7104:<arm>:<slp1>`)
-was scored blind by the worker on a 0–5 adequacy rubric against the MW gold
+was scored blind by the executing worker on a 0–5 adequacy rubric against the MW gold
 gloss and the joined cross-dictionary units. The LLM judge score was hidden
-during scoring. Human scores: `judge_calibration_human.tsv`; rubric and sample:
+during scoring. Worker scores: `judge_calibration_worker.tsv`; rubric and sample:
 `judge_calibration_sample.csv`, `judge_calibration.json`.
 
 | Statistic | Value |
@@ -135,17 +137,17 @@ during scoring. Human scores: `judge_calibration_human.tsv`; rubric and sample:
 | n | 100 |
 | Exact agreement | 0.650 |
 | Within-one agreement | 0.970 |
-| Mean human | 3.31 |
+| Mean worker | 3.31 |
 | Mean LLM judge | 3.38 |
-| Quadratic weighted kappa | **0.9356** |
+| Quadratic weighted kappa (provisional) | **0.9356** |
 | Pearson | 0.9412 |
 | Spearman | 0.8602 |
 
 Per-arm exact agreement ranges from 0.40 (A1) to 0.95 (A0); within-one
 agreement is >= 0.90 in every arm. A0's per-arm kappa is 0 by construction
-(the human key is constant 0 and the judge is nearly constant 0), so the pooled
+(the worker key is constant 0 and the judge is nearly constant 0), so the pooled
 kappa carries the calibration signal. The small A1 exact-agreement figure is
-the expected cost of the human key using 3 where the judge says 4 on partially
+the expected cost of the worker key using 3 where the judge says 4 on partially
 covered senses; within-one agreement is 1.00.
 
 ## MW-contamination caveat
@@ -160,8 +162,9 @@ material; all LLM judges saw MW gold. Therefore:
   Independence is partial, not absolute.
 - The cross-dictionary units are structural marker counts, not curated sense
   inventories. A match in count is not a match in meaning.
-- The 100-row human key is one key, not two blind keys plus adjudication. It is
-  enough to calibrate the judge, not enough to certify the definitions.
+- The 100-row worker key is one model-assisted key, not two blind human keys
+  plus adjudication. It is enough to provisionally calibrate the judge, not
+  enough to certify the definitions. `humanGoldStatus` is `blocked`.
 
 ## Reproduction
 
@@ -172,7 +175,7 @@ node --test test/crossdict-defgen-eval.test.mjs
 ```
 
 `npm run build-crossdict-defgen-eval -- --reset-calibration` redraws the
-100-row sample; without the flag the committed sample and human key are
+100-row sample; without the flag the committed sample and worker key are
 preserved.
 
 ## Files
@@ -186,7 +189,7 @@ preserved.
 ## What this does not prove
 
 The lane shows that the best frozen arm preserves cross-dictionary sense
-distinctions more often than a random floor and that the LLM judge tracks a
-human key. It does not show that any generated gloss is a correct dictionary
-definition. Promotion requires a bounded 100-item replication and two blind
-human keys with source-line adjudication.
+distinctions more often than a random floor and that the LLM judge tracks the single-key
+worker adjudication. It does not show that any generated gloss is a correct dictionary
+definition. Promotion requires a bounded 100-item replication, two blind human keys
+with source-line adjudication, and the `humanGoldStatus` block lifted.

@@ -143,8 +143,8 @@ export function decideVerdict(byArm, calibration) {
   if (preservation <= floor) reasons.push(`best arm ${best?.[0]} does not beat the random-floor adequacy-gated preservation rate (${preservation} vs ${floor})`);
   if (preservation < 0.5) reasons.push(`adequacy-gated sense-distinction preservation is below the pre-registered 0.5 bar (${preservation})`);
   if (bestF1 <= floorF1) reasons.push(`best arm ${best?.[0]} does not beat the random-floor sense-count F1 (${bestF1} vs ${floorF1})`);
-  if (kappa == null) reasons.push("no human judge calibration available, so judge adequacy cannot be trusted");
-  else if (kappa < 0.4) reasons.push(`judge-vs-human quadratic weighted kappa is below 0.4 (${kappa})`);
+  if (kappa == null) reasons.push("no manual judge calibration available, so judge adequacy cannot be trusted");
+  else if (kappa < 0.4) reasons.push(`judge-vs-worker quadratic weighted kappa is below 0.4 (${kappa})`);
   const go = reasons.length === 0;
   return {
     decision: go ? "GO" : "NO-GO",
@@ -153,8 +153,8 @@ export function decideVerdict(byArm, calibration) {
     randomFloorPreservationRate: floor,
     bestCountF1: bestF1,
     randomFloorCountF1: floorF1,
-    judgeHumanKappa: kappa,
-    reasons: go ? ["best arm clears the random floor on adequacy-gated preservation and count F1, clears the 0.5 preservation bar, and judge calibration clears kappa 0.4"] : reasons,
-    stoppingRule: "Stop after 6 tries and publish the null if the best arm does not clear the floor/0.5 bar or judge-human kappa stays below 0.4. No generated definition is promoted into dictionary content by this lane."
+    judgeWorkerKappa: kappa,
+    reasons: go ? ["best arm clears the random floor on adequacy-gated preservation and count F1, clears the 0.5 preservation bar, and the single-key worker calibration clears kappa 0.4 (provisional; a human key is still required before promotion)"] : reasons,
+    stoppingRule: "Stop after 6 tries and publish the null if the best arm does not clear the floor/0.5 bar or judge-worker kappa stays below 0.4. No generated definition is promoted into dictionary content by this lane."
   };
 }

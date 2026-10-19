@@ -34,7 +34,7 @@ const OUT_SENSE = path.join(DIR, "sense_units.jsonl");
 const OUT_ITEMS = path.join(DIR, "crossdict_scores_per_item.csv");
 const OUT_SCORES = path.join(DIR, "crossdict_scores.json");
 const OUT_CAL_SAMPLE = path.join(DIR, "judge_calibration_sample.csv");
-const HUMAN_FILE = path.join(DIR, "judge_calibration_human.tsv");
+const WORKER_FILE = path.join(DIR, "judge_calibration_worker.tsv");
 const OUT_CAL = path.join(DIR, "judge_calibration.json");
 const SEED = "H7104";
 const CORE_SENSE_DICTS = ["mw", "ap", "pwg", "pw"];
@@ -288,33 +288,33 @@ function main() {
       "Sense units are structural marker counts, not curated sense inventories.",
       "The defgen sample is MW-derived and MW-stratified; cross-dictionary reference coverage is uneven.",
       "No generation was re-run; the five frozen arms are evaluated as delivered.",
-      "Judges are LLM judges, not humans; the 100-row calibration is the only human anchor."
+      "Judges are LLM judges; the 100-row single-key manual calibration was scored by the executing worker, not an independent human."
     ]
   };
 
   if (resetCalibration || !fs.existsSync(OUT_CAL_SAMPLE)) {
     const picked = calibrationRows(calibrationPool);
-    const calHeader = ["sample_id", "arm", "slp1", "iast", "cell", "judge_adequacy", "human_adequacy", "gold_gloss", "gloss"];
+    const calHeader = ["sample_id", "arm", "slp1", "iast", "cell", "judge_adequacy", "worker_adequacy", "gold_gloss", "gloss"];
     fs.writeFileSync(OUT_CAL_SAMPLE, [
       calHeader.join(","),
       ...picked.map((r, i) => {
         const sampleId = `H7104-CAL-${String(i + 1).padStart(3, "0")}`;
-        const values = { ...r, sample_id: sampleId, human_adequacy: "" };
+        const values = { ...r, sample_id: sampleId, worker_adequacy: "" };
         return calHeader.map(k => csvEscape(values[k])).join(",");
       })
     ].join("\n") + "\n");
   }
 
-  const calibration = { status: "sample-built", n: 0, human_file: path.relative(process.cwd(), HUMAN_FILE) };
-  if (fs.existsSync(HUMAN_FILE)) {
-    const human = new Map(parseTsv(fs.readFileSync(HUMAN_FILE, "utf8"))
-      .filter(r => /^[0-5]$/.test((r.human_adequacy || "").trim()))
-      .map(r => [r.sample_id, Number(r.human_adequacy)]));
+  const calibration = { status: "sample-built", n: 0, worker_file: path.relative(process.cwd(), WORKER_FILE) };
+  if (fs.existsSync(WORKER_FILE)) {
+    const worker = new Map(parseTsv(fs.readFileSync(WORKER_FILE, "utf8"))
+      .filter(r => /^[0-5]$/.test((r.worker_adequacy || "").trim()))
+      .map(r => [r.sample_id, Number(r.worker_adequacy)]));
     const sample = parseCsv(fs.readFileSync(OUT_CAL_SAMPLE, "utf8"));
     const pairs = [];
     const byArmPairs = {};
     for (const row of sample) {
-      const h = human.get(row.sample_id);
+      const h = worker.get(row.sample_id);
       const j = Number(row.judge_adequacy);
       if (h == null || !Number.isFinite(j)) continue;
       pairs.push([j, h]);
@@ -322,12 +322,12 @@ function main() {
     }
     const qwk = quadraticWeightedKappa(pairs);
     Object.assign(calibration, {
-      status: pairs.length === sample.length ? "human-scored" : "partially-human-scored",
+      status: pairs.length === sample.length ? "single-key-worker-scored" : "partially-single-key-worker-scored",
       n: pairs.length,
       n_sample: sample.length,
       exact_agreement: pairs.length ? round(pairs.filter(([a, b]) => a === b).length / pairs.length) : null,
       within_one_agreement: pairs.length ? round(pairs.filter(([a, b]) => Math.abs(a - b) <= 1).length / pairs.length) : null,
-      mean_human: round(mean(pairs.map(p => p[1]))),
+      mean_worker: round(mean(pairs.map(p => p[1]))),
       mean_judge: round(mean(pairs.map(p => p[0]))),
       quadratic_weighted_kappa: qwk.kappa,
       pearson: pearson(pairs),
@@ -338,6 +338,8 @@ function main() {
         within_one_agreement: round(ps.filter(([a, b]) => Math.abs(a - b) <= 1).length / ps.length),
         quadratic_weighted_kappa: quadraticWeightedKappa(ps).kappa
       }])),
+      humanGoldStatus: "blocked",
+      calibrationBasis: "one blind manual key scored by the executing worker, not an independent human; provisional until two human keys plus adjudication",
       rubric: {
         scale: "1-5 adequacy against the MW gold gloss and the joined AP/PWG/PWK sense units",
         "5": "all main senses preserved; no invented sense",

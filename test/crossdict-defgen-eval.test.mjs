@@ -50,7 +50,7 @@ const senseRows = readJsonl(path.join(dir, "sense_units.jsonl"));
 const items = parseCsv(fs.readFileSync(path.join(dir, "crossdict_scores_per_item.csv"), "utf8"));
 const calibration = JSON.parse(fs.readFileSync(path.join(dir, "judge_calibration.json"), "utf8"));
 const calSample = parseCsv(fs.readFileSync(path.join(dir, "judge_calibration_sample.csv"), "utf8"));
-const human = fs.readFileSync(path.join(dir, "judge_calibration_human.tsv"), "utf8")
+const worker = fs.readFileSync(path.join(dir, "judge_calibration_worker.tsv"), "utf8")
   .split(/\r?\n/).slice(1).filter(Boolean).map(line => line.split("\t"));
 
 test("the frozen MW sample is 500 unique headwords", () => {
@@ -100,9 +100,10 @@ test("chrF/BLEU baselines are frozen from the kosha scorer, not recomputed here"
 test("the 100-row calibration sample is 20 rows per arm and human-scored", () => {
   assert.equal(calSample.length, 100);
   for (const arm of ARMS) assert.equal(calSample.filter(row => row.arm === arm).length, 20);
-  assert.equal(human.length, 100);
-  assert.ok(human.every(([, value]) => /^[0-5]$/.test(value)));
-  assert.equal(calibration.status, "human-scored");
+  assert.equal(worker.length, 100);
+  assert.ok(worker.every(([, value]) => /^[0-5]$/.test(value)));
+  assert.equal(calibration.status, "single-key-worker-scored");
+  assert.equal(calibration.humanGoldStatus, "blocked");
   assert.equal(calibration.n, 100);
   assert.ok(calibration.quadratic_weighted_kappa >= -1 && calibration.quadratic_weighted_kappa <= 1);
   assert.ok(calibration.within_one_agreement >= calibration.exact_agreement);

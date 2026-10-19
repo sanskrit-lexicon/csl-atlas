@@ -5,7 +5,7 @@
   "dataset": "h7104_crossdict_defgen_eval",
   "goal": "H7104",
   "purpose": "Cross-dictionary sense-consistency test of frozen MW definition-generation arms without re-running generation.",
-  "generatedAt": "2026-10-19T15:31:28.430Z",
+  "generatedAt": "2026-10-19T15:33:54.676Z",
   "seed": "H7104",
   "sourceProvenance": {
     "koshaDefgen": {
@@ -1067,16 +1067,16 @@
     "Sense units are structural marker counts, not curated sense inventories.",
     "The defgen sample is MW-derived and MW-stratified; cross-dictionary reference coverage is uneven.",
     "No generation was re-run; the five frozen arms are evaluated as delivered.",
-    "Judges are LLM judges, not humans; the 100-row calibration is the only human anchor."
+    "Judges are LLM judges; the 100-row single-key manual calibration was scored by the executing worker, not an independent human."
   ],
   "judgeCalibration": {
-    "status": "human-scored",
+    "status": "single-key-worker-scored",
     "n": 100,
-    "human_file": "data/eval/crossdict-defgen/judge_calibration_human.tsv",
+    "worker_file": "data/eval/crossdict-defgen/judge_calibration_worker.tsv",
     "n_sample": 100,
     "exact_agreement": 0.65,
     "within_one_agreement": 0.97,
-    "mean_human": 3.31,
+    "mean_worker": 3.31,
     "mean_judge": 3.38,
     "quadratic_weighted_kappa": 0.9356,
     "pearson": 0.9412,
@@ -1113,6 +1113,8 @@
         "quadratic_weighted_kappa": 0.7143
       }
     },
+    "humanGoldStatus": "blocked",
+    "calibrationBasis": "one blind manual key scored by the executing worker, not an independent human; provisional until two human keys plus adjudication",
     "rubric": {
       "0": "empty or unusable",
       "1": "wrong sense",
@@ -1131,10 +1133,10 @@
     "randomFloorPreservationRate": 0,
     "bestCountF1": 0.6732,
     "randomFloorCountF1": 0.5679,
-    "judgeHumanKappa": 0.9356,
+    "judgeWorkerKappa": 0.9356,
     "reasons": [
-      "best arm clears the random floor on adequacy-gated preservation and count F1, clears the 0.5 preservation bar, and judge calibration clears kappa 0.4"
+      "best arm clears the random floor on adequacy-gated preservation and count F1, clears the 0.5 preservation bar, and the single-key worker calibration clears kappa 0.4 (provisional; a human key is still required before promotion)"
     ],
-    "stoppingRule": "Stop after 6 tries and publish the null if the best arm does not clear the floor/0.5 bar or judge-human kappa stays below 0.4. No generated definition is promoted into dictionary content by this lane."
+    "stoppingRule": "Stop after 6 tries and publish the null if the best arm does not clear the floor/0.5 bar or judge-worker kappa stays below 0.4. No generated definition is promoted into dictionary content by this lane."
   }
 }

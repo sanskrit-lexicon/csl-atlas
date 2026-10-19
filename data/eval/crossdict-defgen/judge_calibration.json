@@ -3,13 +3,13 @@
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "goal": "H7104",
-  "status": "human-scored",
+  "status": "single-key-worker-scored",
   "n": 100,
-  "human_file": "data/eval/crossdict-defgen/judge_calibration_human.tsv",
+  "worker_file": "data/eval/crossdict-defgen/judge_calibration_worker.tsv",
   "n_sample": 100,
   "exact_agreement": 0.65,
   "within_one_agreement": 0.97,
-  "mean_human": 3.31,
+  "mean_worker": 3.31,
   "mean_judge": 3.38,
   "quadratic_weighted_kappa": 0.9356,
   "pearson": 0.9412,
@@ -46,6 +46,8 @@
       "quadratic_weighted_kappa": 0.7143
     }
   },
+  "humanGoldStatus": "blocked",
+  "calibrationBasis": "one blind manual key scored by the executing worker, not an independent human; provisional until two human keys plus adjudication",
   "rubric": {
     "0": "empty or unusable",
     "1": "wrong sense",
