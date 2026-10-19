@@ -49,6 +49,8 @@
     "validate-heap-sat": "node scripts/validate-heap-sat.mjs",
     "build-ortho-drift": "node scripts/build-ortho-drift.mjs",
     "validate-ortho-drift": "node scripts/validate-ortho-drift.mjs",
+    "build-ortho-benchmark": "node scripts/build-ortho-benchmark.mjs",
+    "score-ortho-benchmark": "node scripts/score-ortho-benchmark.mjs",
     "build-period-signatures": "node scripts/build-period-signatures.mjs",
     "validate-period-signatures": "node scripts/validate-period-signatures.mjs",
     "build-structural-register": "node scripts/build-structural-register.mjs",
