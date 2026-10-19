@@ -149,6 +149,55 @@ display(Inputs.table(censusRows, { rows: de.length + 1, layout: "auto" }));
 display(csvDownloadButton(censusRows, "ortho-drift-census.csv"));
 ```
 
+## Normalization benchmark — 200 frozen gold tokens
+
+A companion artifact turns the reform maps into a **measurable normalization
+task**: 100 German pre-reform gloss tokens from PWG, PWK, CCS and SCH, and 100
+pre-1918 Russian tokens from Kossovich, each frozen with its source file, line,
+context and modern target. Splits are 120 train / 40 dev / 40 test. Metrics are
+token accuracy and character error rate (CER), framed after Bollmann (2019,
+N19-1389).
+
+```js
+const bench = FileAttachment("../data/ortho/normalization_benchmark.json").json();
+const goldRows = FileAttachment("../data/ortho/normalization_benchmark.gold.tsv").tsv();
+```
+
+```js
+const baselineRows = [
+  ["rule-map rewrite", bench.metrics.ruleMap],
+  ["identity (no-op)", bench.metrics.identity],
+  ["map lookup (ceiling)", bench.metrics.mapOracle]
+].map(([name, m]) => ({
+  baseline: name,
+  accuracy: `${(m.accuracy * 100).toFixed(1)}%`,
+  CER: m.cer.toFixed(4),
+  "n": m.n
+}));
+display(Inputs.table(baselineRows, { layout: "auto" }));
+```
+
+```js
+display(Inputs.table(goldRows.slice(0, 12), {
+  columns: ["id", "split", "lang", "dict", "line", "token", "target", "era", "context"],
+  layout: "auto"
+}));
+```
+
+> Grounding is **source-text-level, not scan-image-level**: every token is an
+> actual occurrence at the named csl-orig / SamudraManthanam line, but no page
+> image was re-opened. Russian is Kossovich only — one dictionary, one date.
+> SanskritSpellCheck declares no license, so its maps are consumed read-only and
+> not redistributed; only the 200 short gold pairs and contexts are committed.
+> The map-lookup row is a ceiling by construction; the substantive baseline is
+> the generic rule rewriter. Full limits and rights:
+> [`data/ortho/normalization_benchmark.card.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/ortho/normalization_benchmark.card.md).
+
+Score the benchmark with `npm run score-ortho-benchmark`, or pass a model's
+`id<TAB>prediction` TSV via `-- --predictions predictions.tsv`. Rebuild with
+`npm run build-ortho-benchmark` when the sibling csl-orig / SanskritSpellCheck /
+SamudraManthanam checkouts are present.
+
 ## The descent contrast — refuted, and honestly bounded
 
 With exactly **one** independent German dictionary in the corpus (GRA), no

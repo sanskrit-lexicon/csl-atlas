@@ -1,0 +1,321 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "generatedBy": "npm run build-ortho-benchmark",
+  "title": "German and Russian historical orthographic normalization benchmark (200 gold tokens)",
+  "description": "A frozen 200-token gold sample for historical orthographic normalization: 100 pre-reform German gloss tokens from PWG, PWK, CCS and SCH, and 100 pre-1918 Russian gloss tokens from Kossovich. Each row names the csl-orig/SamudraManthanam source record, line number, a short context, the historical token and its modern target.",
+  "citation": "Bollmann, M. (2019). A Large-Scale Comparison of Historical Text Normalization Systems. Proceedings of NAACL 2019 (N19-1389). Metrics follow that evaluation: token accuracy and character error rate (CER) on a fixed gold set.",
+  "method": "Distinct old forms were collected from the csl-orig v02 gloss text (cleanGloss/glossTokens from build-ortho-drift.mjs) by membership in the frozen SanskritSpellCheck reform maps; only era-attributed dated reforms (1901-*/1996-ss/archaic-ey for German, 1918-* for Russian) are admitted. Forms were deterministically shuffled with fixed-seed mulberry32 and 25 were taken per German dictionary (100) and 100 from Kossovich. Each token instance is the first source occurrence of the selected form; line = 1-based physical line (Kossovich: JSONL record index). Targets are the map's modern-side form. Within each dictionary the rows are assigned 15/5/5 train/dev/test (Kossovich 60/20/20), so the global split is 120/40/40.",
+  "sampling": {
+    "seed": 71031910,
+    "germanPerDict": 25,
+    "russianRows": 100,
+    "unit": "distinct old form, one source occurrence each",
+    "splitRule": "per-dictionary 60/20/20 = 15/5/5 German, 60/20/20 Russian"
+  },
+  "sources": [
+    {
+      "id": "csl-orig",
+      "url": "https://github.com/sanskrit-lexicon/csl-orig",
+      "license": "CC-BY-SA-4.0",
+      "note": "v02/pwg/pwg.txt, v02/pw/pw.txt, v02/ccs/ccs.txt, v02/sch/sch.txt"
+    },
+    {
+      "id": "samudra-manthanam",
+      "url": "https://github.com/gasyoun/SamudraManthanam",
+      "license": "see upstream",
+      "note": "web/corpus_builder/jsonl/kossovich.jsonl"
+    },
+    {
+      "id": "sanskrit-spellcheck",
+      "url": "https://github.com/drdhaval2785/SanskritSpellCheck",
+      "license": "upstream declares no license (recorded honestly; map not redistributed)",
+      "note": "ortho_drift/de_reform_map.tsv, ortho_drift/ru_reform_map.tsv"
+    }
+  ],
+  "rightsNote": "Gold contexts are short excerpts of csl-orig text (CC-BY-SA-4.0), so this benchmark is CC-BY-SA-4.0. SanskritSpellCheck declares no software license; its reform maps are consumed read-only to derive modern targets and are NOT redistributed here (no map TSV is committed). Only 200 short token/target pairs and brief contexts are published. Kossovich excerpts come from the SamudraManthanam corpus build; consult that repository for its rights statement.",
+  "counts": {
+    "total": 200,
+    "german": 100,
+    "russian": 100,
+    "bySplit": {
+      "train": 120,
+      "dev": 40,
+      "test": 40
+    }
+  },
+  "dicts": [
+    {
+      "code": "pwg",
+      "label": "PWG",
+      "lang": "de",
+      "rows": 25
+    },
+    {
+      "code": "pw",
+      "label": "PWK",
+      "lang": "de",
+      "rows": 25
+    },
+    {
+      "code": "ccs",
+      "label": "CCS",
+      "lang": "de",
+      "rows": 25
+    },
+    {
+      "code": "sch",
+      "label": "SCH",
+      "lang": "de",
+      "rows": 25
+    },
+    {
+      "code": "kow",
+      "label": "KOW",
+      "lang": "ru",
+      "rows": 100
+    }
+  ],
+  "metrics": {
+    "ruleMap": {
+      "name": "rule-map rewrite baseline",
+      "n": 200,
+      "accuracy": 0.845,
+      "cer": 0.01931,
+      "macroCer": 0.021274,
+      "byLang": {
+        "de": {
+          "n": 100,
+          "accuracy": 0.69,
+          "cer": 0.036304,
+          "macroCer": 0.042549
+        },
+        "ru": {
+          "n": 100,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        }
+      },
+      "byDict": {
+        "ccs": {
+          "n": 25,
+          "accuracy": 0.52,
+          "cer": 0.053571,
+          "macroCer": 0.071843
+        },
+        "kow": {
+          "n": 100,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        },
+        "pw": {
+          "n": 25,
+          "accuracy": 0.68,
+          "cer": 0.038793,
+          "macroCer": 0.036242
+        },
+        "pwg": {
+          "n": 25,
+          "accuracy": 0.72,
+          "cer": 0.027778,
+          "macroCer": 0.029033
+        },
+        "sch": {
+          "n": 25,
+          "accuracy": 0.84,
+          "cer": 0.024876,
+          "macroCer": 0.033077
+        }
+      },
+      "bySplit": {
+        "dev": {
+          "n": 40,
+          "accuracy": 0.85,
+          "cer": 0.017647,
+          "macroCer": 0.022976
+        },
+        "test": {
+          "n": 40,
+          "accuracy": 0.825,
+          "cer": 0.023324,
+          "macroCer": 0.029454
+        },
+        "train": {
+          "n": 120,
+          "accuracy": 0.85,
+          "cer": 0.018519,
+          "macroCer": 0.01798
+        }
+      }
+    },
+    "identity": {
+      "name": "identity (no-op) baseline",
+      "n": 200,
+      "accuracy": 0,
+      "cer": 0.145699,
+      "macroCer": 0.167394,
+      "byLang": {
+        "de": {
+          "n": 100,
+          "accuracy": 0,
+          "cer": 0.143014,
+          "macroCer": 0.158721
+        },
+        "ru": {
+          "n": 100,
+          "accuracy": 0,
+          "cer": 0.14875,
+          "macroCer": 0.176068
+        }
+      },
+      "byDict": {
+        "ccs": {
+          "n": 25,
+          "accuracy": 0,
+          "cer": 0.129464,
+          "macroCer": 0.147484
+        },
+        "kow": {
+          "n": 100,
+          "accuracy": 0,
+          "cer": 0.14875,
+          "macroCer": 0.176068
+        },
+        "pw": {
+          "n": 25,
+          "accuracy": 0,
+          "cer": 0.12931,
+          "macroCer": 0.133495
+        },
+        "pwg": {
+          "n": 25,
+          "accuracy": 0,
+          "cer": 0.107143,
+          "macroCer": 0.111192
+        },
+        "sch": {
+          "n": 25,
+          "accuracy": 0,
+          "cer": 0.218905,
+          "macroCer": 0.242712
+        }
+      },
+      "bySplit": {
+        "dev": {
+          "n": 40,
+          "accuracy": 0,
+          "cer": 0.138235,
+          "macroCer": 0.162698
+        },
+        "test": {
+          "n": 40,
+          "accuracy": 0,
+          "cer": 0.148688,
+          "macroCer": 0.169146
+        },
+        "train": {
+          "n": 120,
+          "accuracy": 0,
+          "cer": 0.147173,
+          "macroCer": 0.168376
+        }
+      }
+    },
+    "mapOracle": {
+      "name": "frozen reform-map lookup (ceiling)",
+      "n": 200,
+      "accuracy": 1,
+      "cer": 0,
+      "macroCer": 0,
+      "byLang": {
+        "de": {
+          "n": 100,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        },
+        "ru": {
+          "n": 100,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        }
+      },
+      "byDict": {
+        "ccs": {
+          "n": 25,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        },
+        "kow": {
+          "n": 100,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        },
+        "pw": {
+          "n": 25,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        },
+        "pwg": {
+          "n": 25,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        },
+        "sch": {
+          "n": 25,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        }
+      },
+      "bySplit": {
+        "dev": {
+          "n": 40,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        },
+        "test": {
+          "n": 40,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        },
+        "train": {
+          "n": 120,
+          "accuracy": 1,
+          "cer": 0,
+          "macroCer": 0
+        }
+      }
+    }
+  },
+  "goldTsv": {
+    "path": "data/ortho/normalization_benchmark.gold.tsv",
+    "rows": 200,
+    "sha256": "9250066a44f8f8799db2b9ea9a7e55a46dcb338abcae661d1630d2e5c1ab9bf4"
+  },
+  "datasetCard": "data/ortho/normalization_benchmark.card.md",
+  "caveats": [
+    "SOURCE-TEXT-GROUNDED, NOT SCAN-IMAGE VERIFIED: each row is grounded in a named csl-orig/SamudraManthanam source line, but no page image was re-opened. This is not a scan-level diplomatic edition.",
+    "Targets are the frozen SanskritSpellCheck reform-map modern forms. The rule-map baseline is therefore an agreement-with-the-map lower bound, not an independent historical judgement; the map's provenance and limits are upstream.",
+    "The reform maps are not redistributed: no map TSV is committed. Only the 200 sampled token/target pairs are published, with upstream attribution; SanskritSpellCheck declares no license.",
+    "The German roster is the Petersburg line plus CCS and SCH as specified by the handoff (PWG, PWK, CCS, SCH). GRA and PWKVN are outside this benchmark.",
+    "Russian is KOW (Kossovich, 1854) only: csl-orig v02 exposes no second Russian-gloss dictionary locally, so the Russian half is single-dictionary and single-date.",
+    "The 'map oracle' row is a ceiling by construction (it copies the gold target) and exists only to bound the metric; the substantive baseline is the rule-map rewriter.",
+    "CER uses lowercased Unicode code points and target-length normalization; it is a token-level CER, not Bollmann's sentence-level corpus CER.",
+    "The Kossovich source is a corpus JSONL, not a csl-orig v02 file; its 'line' is the 1-based JSONL record index."
+  ],
+  "boundary": [
+    "Gloss-language (meta-language) orthography only. Sanskrit-side orthography is out of scope. csl-orig is read, never written. Reform maps stay upstream in SanskritSpellCheck; only sampled gold pairs are committed."
+  ],
+  "generatedAt": "2026-10-19T14:28:27.468Z"
+}
