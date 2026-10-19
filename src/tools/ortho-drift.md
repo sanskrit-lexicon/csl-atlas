@@ -154,13 +154,14 @@ display(csvDownloadButton(censusRows, "ortho-drift-census.csv"));
 A companion artifact turns the reform maps into a **measurable normalization
 task**: 100 German pre-reform gloss tokens from PWG, PWK, CCS and SCH, and 100
 pre-1918 Russian tokens from Kossovich, each frozen with its source file, line,
-context and modern target. Splits are 120 train / 40 dev / 40 test. Metrics are
-token accuracy and character error rate (CER), framed after Bollmann (2019,
+context and modern target. Splits are **100 train / 50 dev / 50 test**,
+stratified by dictionary. Metrics are token accuracy, word error rate (WER) and
+character error rate (CER) with bootstrap 95% CIs, framed after Bollmann (2019,
 N19-1389).
 
 ```js
 const bench = FileAttachment("../data/ortho/normalization_benchmark.json").json();
-const goldRows = FileAttachment("../data/ortho/normalization_benchmark.gold.tsv").tsv();
+const goldRows = FileAttachment("../data/ortho/gold.tsv").tsv();
 ```
 
 ```js
@@ -171,7 +172,9 @@ const baselineRows = [
 ].map(([name, m]) => ({
   baseline: name,
   accuracy: `${(m.accuracy * 100).toFixed(1)}%`,
+  WER: `${(m.wer * 100).toFixed(1)}%`,
   CER: m.cer.toFixed(4),
+  "95% accuracy CI": m.ci?.accuracy ? `[${m.ci.accuracy.map((v) => (v * 100).toFixed(1)).join(", ")}]` : "—",
   "n": m.n
 }));
 display(Inputs.table(baselineRows, { layout: "auto" }));
@@ -179,19 +182,24 @@ display(Inputs.table(baselineRows, { layout: "auto" }));
 
 ```js
 display(Inputs.table(goldRows.slice(0, 12), {
-  columns: ["id", "split", "lang", "dict", "line", "token", "target", "era", "context"],
+  columns: ["id", "split", "lang", "dict", "line", "scan_verified", "token", "target", "era", "context"],
   layout: "auto"
 }));
+display(csvDownloadButton(goldRows, "ortho-benchmark-gold.csv"));
 ```
 
 > Grounding is **source-text-level, not scan-image-level**: every token is an
 > actual occurrence at the named csl-orig / SamudraManthanam line, but no page
-> image was re-opened. Russian is Kossovich only — one dictionary, one date.
+> image was re-opened, so every row carries `scan_verified=false` and all 200
+> appear in `data/ortho/candidates.tsv` with that reason. This is the handoff's
+> fail-path scope: a reform-map benchmark with no scan claim. Russian is
+> Kossovich only — one dictionary, one date.
 > SanskritSpellCheck declares no license, so its maps are consumed read-only and
 > not redistributed; only the 200 short gold pairs and contexts are committed.
 > The map-lookup row is a ceiling by construction; the substantive baseline is
 > the generic rule rewriter. Full limits and rights:
-> [`data/ortho/normalization_benchmark.card.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/ortho/normalization_benchmark.card.md).
+> [`data/ortho/normalization_benchmark.card.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/ortho/normalization_benchmark.card.md)
+> and [`docs/ORTHO_BENCHMARK.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ORTHO_BENCHMARK.md).
 
 Score the benchmark with `npm run score-ortho-benchmark`, or pass a model's
 `id<TAB>prediction` TSV via `-- --predictions predictions.tsv`. Rebuild with

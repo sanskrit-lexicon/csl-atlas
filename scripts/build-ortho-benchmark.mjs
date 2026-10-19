@@ -31,7 +31,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { cleanGloss, glossTokens, DE_PROFILE, RU_PROFILE, mulberry32, round } from "./build-ortho-drift.mjs";
 import { licenseFields, generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
-import { normalizeRule, computeMetrics } from "./score-ortho-benchmark.mjs";
+import { normalizeRule, computeMetrics, bootstrapMetricCis } from "./score-ortho-benchmark.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const GENERATED_BY = "npm run build-ortho-benchmark";
@@ -43,8 +43,10 @@ const KOSSOVICH_PATH =
   process.env.KOSSOVICH_JSONL || path.resolve(GITHUB_ROOT, "SamudraManthanam", "web", "corpus_builder", "jsonl", "kossovich.jsonl");
 const OUT_DIR = path.resolve(process.cwd(), "data", "ortho");
 const JSON_OUT = path.join(OUT_DIR, "normalization_benchmark.json");
-const GOLD_OUT = path.join(OUT_DIR, "normalization_benchmark.gold.tsv");
+const GOLD_OUT = path.join(OUT_DIR, "gold.tsv");
+const CANDIDATES_OUT = path.join(OUT_DIR, "candidates.tsv");
 const CARD_OUT = path.join(OUT_DIR, "normalization_benchmark.card.md");
+const DOCS_CARD_OUT = path.resolve(process.cwd(), "docs", "ORTHO_BENCHMARK.md");
 
 const SEED = 71031910;
 const PER_GERMAN_DICT = 25;
@@ -118,16 +120,7 @@ export function collectOccurrences(profile, map, lines, { datedOnly = true } = {
   return occurrences;
 }
 
-export function sampleRows({
-  lang,
-  dict,
-  label,
-  sourceFile,
-  occurrences,
-  count,
-  seed,
-  splitPlan = { train: 0.6, dev: 0.2, test: 0.2 }
-}) {
+export function sampleRows({ lang, dict, label, sourceFile, occurrences, count, seed }) {
   const forms = [...occurrences.keys()].sort();
   if (forms.length < count) {
     throw new Error(`${label}: only ${forms.length} distinct dated old forms found, need ${count}`);
@@ -135,13 +128,11 @@ export function sampleRows({
   const rand = mulberry32(seed);
   shuffleInPlace(forms, rand);
   const chosen = forms.slice(0, count);
-  const nTrain = Math.round(count * splitPlan.train);
-  const nDev = Math.round(count * splitPlan.dev);
   return chosen.map((token, index) => {
     const occ = occurrences.get(token);
     return {
       id: `${lang}-${dict}-${String(index + 1).padStart(3, "0")}`,
-      split: index < nTrain ? "train" : index < nTrain + nDev ? "dev" : "test",
+      split: null,
       lang,
       dict,
       source_file: sourceFile,
@@ -149,9 +140,41 @@ export function sampleRows({
       token,
       target: occ.modern,
       era: occ.era,
-      context: occ.context
+      context: occ.context,
+      scan_url: "",
+      scan_verified: "false"
     };
   });
+}
+
+/**
+ * Stratified 100/50/50 split. German quotas per dictionary sum to 50/25/25;
+ * Kossovich contributes 50/25/25 on its own. Rows keep their deterministic
+ * within-dictionary order, so the split is reproducible.
+ */
+export const GERMAN_SPLIT_QUOTAS = {
+  pwg: { train: 13, dev: 6, test: 6 },
+  pw: { train: 13, dev: 6, test: 6 },
+  ccs: { train: 12, dev: 6, test: 7 },
+  sch: { train: 12, dev: 7, test: 6 }
+};
+
+export function assignSplits(rows) {
+  const byDict = new Map();
+  for (const row of rows) {
+    if (!byDict.has(row.dict)) byDict.set(row.dict, []);
+    byDict.get(row.dict).push(row);
+  }
+  for (const [dict, dictRows] of byDict) {
+    const quota = dict === "kow" ? { train: 50, dev: 25, test: 25 } : GERMAN_SPLIT_QUOTAS[dict];
+    if (!quota) throw new Error(`no split quota for ${dict}`);
+    const total = quota.train + quota.dev + quota.test;
+    if (dictRows.length !== total) throw new Error(`${dict}: ${dictRows.length} rows but quota sums to ${total}`);
+    dictRows.forEach((row, index) => {
+      row.split = index < quota.train ? "train" : index < quota.train + quota.dev ? "dev" : "test";
+    });
+  }
+  return rows;
 }
 
 export function buildGold({ deMap, ruMap, germanFiles, kossovichPath }) {
@@ -193,13 +216,15 @@ export function buildGold({ deMap, ruMap, germanFiles, kossovichPath }) {
     })
   );
 
-  // line numbers for Kossovich are record indexes, not physical lines
-  for (const row of rows) if (row.dict === "kow") row.line = row.line;
-  return rows;
+  // Kossovich line numbers are 1-based JSONL record indexes.
+  return assignSplits(rows);
 }
 
 export function toTsv(rows) {
-  const header = ["id", "split", "lang", "dict", "source_file", "line", "token", "target", "era", "context"];
+  const header = [
+    "id", "split", "lang", "dict", "source_file", "line", "scan_url", "scan_verified",
+    "token", "target", "era", "context"
+  ];
   const esc = (value) => String(value ?? "").replace(/\t/g, " ").replace(/\r?\n/g, " ");
   return [header.join("\t"), ...rows.map((row) => header.map((key) => esc(row[key])).join("\t"))].join("\n") + "\n";
 }
@@ -216,7 +241,35 @@ export function parseTsv(text) {
 export function summarize(rows, predictions, name) {
   const pairs = rows.map((row) => ({ lang: row.lang, dict: row.dict, split: row.split, target: row.target, pred: predictions(row) }));
   const metrics = computeMetrics(pairs);
-  return { name, ...metrics };
+  const byDict = {};
+  for (const [dict, values] of Object.entries(metrics.byDict)) {
+    byDict[dict] = {
+      ...values,
+      ci: bootstrapMetricCis(pairs.filter((pair) => pair.dict === dict), { b: 1000, seed: SEED + dict.length })
+    };
+  }
+  return {
+    name,
+    ...metrics,
+    byDict,
+    ci: bootstrapMetricCis(pairs, { b: 1000, seed: SEED })
+  };
+}
+
+export function candidatesTsv(rows) {
+  const header = ["id", "lang", "dict", "source_file", "line", "token", "target", "reason"];
+  const reason = "no scan-image verification: source-text-grounded only; page image not opened, scan_verified=false";
+  return [header.join("\t"), ...rows.map((row) => [row.id, row.lang, row.dict, row.source_file, row.line, row.token, row.target, reason].join("\t"))].join("\n") + "\n";
+}
+
+export function splitManifest(rows) {
+  const body = rows.map((row) => `${row.id}\t${row.split}`).join("\n") + "\n";
+  return {
+    seed: SEED,
+    rule: "stratified by dictionary; German quotas pwg/pw 13-6-6, ccs 12-6-7, sch 12-7-6; Kossovich 50-25-25",
+    sha256: crypto.createHash("sha256").update(body).digest("hex"),
+    body
+  };
 }
 
 export function buildPayload({ rows, generatedAt }) {
@@ -239,13 +292,13 @@ export function buildPayload({ rows, generatedAt }) {
     citation:
       "Bollmann, M. (2019). A Large-Scale Comparison of Historical Text Normalization Systems. Proceedings of NAACL 2019 (N19-1389). Metrics follow that evaluation: token accuracy and character error rate (CER) on a fixed gold set.",
     method:
-      "Distinct old forms were collected from the csl-orig v02 gloss text (cleanGloss/glossTokens from build-ortho-drift.mjs) by membership in the frozen SanskritSpellCheck reform maps; only era-attributed dated reforms (1901-*/1996-ss/archaic-ey for German, 1918-* for Russian) are admitted. Forms were deterministically shuffled with fixed-seed mulberry32 and 25 were taken per German dictionary (100) and 100 from Kossovich. Each token instance is the first source occurrence of the selected form; line = 1-based physical line (Kossovich: JSONL record index). Targets are the map's modern-side form. Within each dictionary the rows are assigned 15/5/5 train/dev/test (Kossovich 60/20/20), so the global split is 120/40/40.",
+      "Distinct old forms were collected from the csl-orig v02 gloss text (cleanGloss/glossTokens from build-ortho-drift.mjs) by membership in the frozen SanskritSpellCheck reform maps; only era-attributed dated reforms (1901-*/1996-ss/archaic-ey for German, 1918-* for Russian) are admitted. Forms were deterministically shuffled with fixed-seed mulberry32 and 25 were taken per German dictionary (100) and 100 from Kossovich. Each token instance is the first source occurrence of the selected form; line = 1-based physical line (Kossovich: JSONL record index). Targets are the map's modern-side form. Splits are stratified by dictionary into 100 train / 50 dev / 50 test; the split seed and manifest hash are recorded. No page image was opened, so every row carries scan_verified=false and appears in candidates.tsv with that reason.",
     sampling: {
       seed: SEED,
       germanPerDict: PER_GERMAN_DICT,
       russianRows: RU_ROWS,
       unit: "distinct old form, one source occurrence each",
-      splitRule: "per-dictionary 60/20/20 = 15/5/5 German, 60/20/20 Russian"
+      splitRule: "stratified by dictionary; global 100 train / 50 dev / 50 test"
     },
     sources: [
       { id: "csl-orig", url: "https://github.com/sanskrit-lexicon/csl-orig", license: "CC-BY-SA-4.0", note: "v02/pwg/pwg.txt, v02/pw/pw.txt, v02/ccs/ccs.txt, v02/sch/sch.txt" },
@@ -254,21 +307,27 @@ export function buildPayload({ rows, generatedAt }) {
     ],
     rightsNote:
       "Gold contexts are short excerpts of csl-orig text (CC-BY-SA-4.0), so this benchmark is CC-BY-SA-4.0. SanskritSpellCheck declares no software license; its reform maps are consumed read-only to derive modern targets and are NOT redistributed here (no map TSV is committed). Only 200 short token/target pairs and brief contexts are published. Kossovich excerpts come from the SamudraManthanam corpus build; consult that repository for its rights statement.",
-    counts: { ...counts, bySplit: splitCounts },
+    counts: { ...counts, bySplit: splitCounts, scanVerified: 0, scanUnverified: rows.length },
+    scope:
+      "Reform-map benchmark under the handoff's fail-path clause: scan-image grounding was not established, so no scan claim is made. Every row is source-text-grounded in a named csl-orig/SamudraManthanam line; scan_verified=false and candidates.tsv carries the full honest residual.",
+    splitManifest: splitManifest(rows),
     dicts: GERMAN_ROSTER.map((d) => ({ code: d.code, label: d.label, lang: "de", rows: PER_GERMAN_DICT })).concat([
       { code: "kow", label: "KOW", lang: "ru", rows: RU_ROWS }
     ]),
     metrics: { ruleMap, identity, mapOracle },
-    goldTsv: { path: "data/ortho/normalization_benchmark.gold.tsv", rows: rows.length, sha256 },
+    goldTsv: { path: "data/ortho/gold.tsv", rows: rows.length, sha256 },
+    candidatesTsv: { path: "data/ortho/candidates.tsv", rows: rows.length, reason: "no scan-image verification (source-text-grounded only)" },
     datasetCard: "data/ortho/normalization_benchmark.card.md",
+    docsCard: "docs/ORTHO_BENCHMARK.md",
     caveats: [
-      "SOURCE-TEXT-GROUNDED, NOT SCAN-IMAGE VERIFIED: each row is grounded in a named csl-orig/SamudraManthanam source line, but no page image was re-opened. This is not a scan-level diplomatic edition.",
+      "SOURCE-TEXT-GROUNDED, NOT SCAN-IMAGE VERIFIED: each row is grounded in a named csl-orig/SamudraManthanam source line, but no page image was re-opened. This is not a scan-level diplomatic edition, and no scan claim is made (handoff fail-path scope).",
+      "All 200 rows carry scan_verified=false and are listed in candidates.tsv with the reason; the gold set is the reform-map benchmark, not a scan-verified subset.",
       "Targets are the frozen SanskritSpellCheck reform-map modern forms. The rule-map baseline is therefore an agreement-with-the-map lower bound, not an independent historical judgement; the map's provenance and limits are upstream.",
       "The reform maps are not redistributed: no map TSV is committed. Only the 200 sampled token/target pairs are published, with upstream attribution; SanskritSpellCheck declares no license.",
       "The German roster is the Petersburg line plus CCS and SCH as specified by the handoff (PWG, PWK, CCS, SCH). GRA and PWKVN are outside this benchmark.",
       "Russian is KOW (Kossovich, 1854) only: csl-orig v02 exposes no second Russian-gloss dictionary locally, so the Russian half is single-dictionary and single-date.",
       "The 'map oracle' row is a ceiling by construction (it copies the gold target) and exists only to bound the metric; the substantive baseline is the rule-map rewriter.",
-      "CER uses lowercased Unicode code points and target-length normalization; it is a token-level CER, not Bollmann's sentence-level corpus CER.",
+      "CER uses lowercased Unicode code points and target-length normalization; WER is the token error rate (1 - accuracy) on single-token rows. This is a token-level adaptation, not Bollmann's sentence-level corpus CER.",
       "The Kossovich source is a corpus JSONL, not a csl-orig v02 file; its 'line' is the 1-based JSONL record index."
     ],
     boundary: [
@@ -281,7 +340,7 @@ export function buildPayload({ rows, generatedAt }) {
 
 function cardMarkdown(payload) {
   const m = payload.metrics;
-  const row = (name, metric) => `| ${name} | ${(metric.accuracy * 100).toFixed(1)}% | ${metric.cer.toFixed(4)} | ${metric.n} |`;
+  const row = (name, metric) => `| ${name} | ${(metric.accuracy * 100).toFixed(1)}% | ${(metric.wer * 100).toFixed(1)}% | ${metric.cer.toFixed(4)} | ${metric.ci?.accuracy ? `[${metric.ci.accuracy.map((v) => (v * 100).toFixed(1)).join(", ")}]` : "—"} | ${metric.n} |`;
   return `# Dataset card — de/ru historical normalization benchmark (H7103)
 
 _Created: 19-10-2026 · Schema ${payload.schemaVersion}_
@@ -295,16 +354,21 @@ source file, line, short context, historical token and modern target.
 
 Files:
 
-- \`data/ortho/normalization_benchmark.gold.tsv\` — the gold rows
-  (sha256 \`${payload.goldTsv.sha256}\`, ${payload.goldTsv.rows} rows).
+- \`data/ortho/gold.tsv\` — the gold rows
+  (sha256 \`${payload.goldTsv.sha256}\`, ${payload.goldTsv.rows} rows),
+  including \`scan_url\` and \`scan_verified\` columns.
+- \`data/ortho/candidates.tsv\` — the honest residual: all rows whose
+  \`scan_verified\` is false, with the reason (here: all ${payload.candidatesTsv.rows}).
 - \`data/ortho/normalization_benchmark.json\` — this card's machine-readable
   envelope: counts, splits, baselines, caveats, rights.
 - \`data/ortho/normalization_benchmark.card.md\` — this file.
 - \`scripts/build-ortho-benchmark.mjs\` — reproducible builder (needs the
   sibling csl-orig/SanskritSpellCheck/SamudraManthanam inputs; the committed
   files are the CI-safe artifact).
-- \`scripts/score-ortho-benchmark.mjs\` — scorer (accuracy + CER, overall and
-  by language/dictionary/split; \`--predictions id<TAB>prediction\`).
+- \`docs/ORTHO_BENCHMARK.md\` — the same card at its handoff-specified path.
+- \`scripts/score-ortho-benchmark.mjs\` — scorer (accuracy + WER + CER,
+  bootstrap CIs, overall and by language/dictionary/split;
+  \`--predictions id<TAB>prediction\`).
 
 ## Provenance and grounding
 
@@ -314,7 +378,9 @@ Files:
   consumed read-only; the maps are not redistributed.
 - Grounding: **source-text-grounded, not scan-image verified.** Every token is
   an actual occurrence in the digitised transcription at the named line; no page
-  image was re-opened. Do not describe this as a diplomatic scan edition.
+  image was re-opened. Every row has \`scan_verified=false\` and is listed in
+  \`candidates.tsv\`. This is the handoff's **fail-path scope**: publish the
+  reform-map benchmark with an explicit caveat and no scan claim.
 
 ## Splits
 
@@ -322,12 +388,13 @@ Files:
 |---|---:|
 ${Object.entries(payload.counts.bySplit).map(([k, v]) => `| ${k} | ${v} |`).join("\n")}
 
-Per German dictionary: 15 train / 5 dev / 5 test. Kossovich: 60 / 20 / 20.
+Stratified by dictionary: PWG/PW 13-6-6, CCS 12-6-7, SCH 12-7-6,
+Kossovich 50-25-25. Split seed and manifest sha256 are in the JSON.
 
 ## Baselines
 
-| baseline | accuracy | CER | n |
-|---|---:|---:|---:|
+| baseline | accuracy | WER | CER | 95% accuracy CI | n |
+|---|---:|---:|---:|---:|---:|
 ${row(m.ruleMap.name, m.ruleMap)}
 ${row(m.identity.name, m.identity)}
 ${row(m.mapOracle.name, m.mapOracle)}
@@ -339,10 +406,12 @@ gold target and is a ceiling by construction, not a model.
 
 ## Metrics
 
-Token accuracy = exact match after lowercasing/NFC. CER = character Levenshtein
-distance on lowercased Unicode code points, summed over the set and divided by
-the summed target length. Framing follows Bollmann (2019), NAACL, N19-1389;
-this is a token-level adaptation, not the paper's sentence-level corpus CER.
+Token accuracy = exact match after lowercasing/NFC. WER = 1 - accuracy on these
+single-token rows. CER = character Levenshtein distance on lowercased Unicode
+code points, summed over the set and divided by the summed target length. 95%
+CIs are fixed-seed row-level bootstrap (B=1,000). Framing follows Bollmann
+(2019), NAACL, N19-1389; this is a token-level adaptation, not the paper's
+sentence-level corpus CER. Per-dictionary CIs are in the JSON.
 
 ## Rights
 
@@ -386,13 +455,19 @@ function main() {
   const { payload, goldTsv } = buildPayload({ rows });
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(GOLD_OUT, goldTsv);
+  fs.writeFileSync(CANDIDATES_OUT, candidatesTsv(rows));
   fs.writeFileSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`);
-  fs.writeFileSync(CARD_OUT, cardMarkdown(payload));
+  const card = cardMarkdown(payload);
+  fs.writeFileSync(CARD_OUT, card);
+  fs.mkdirSync(path.dirname(DOCS_CARD_OUT), { recursive: true });
+  fs.writeFileSync(DOCS_CARD_OUT, card);
   console.log(`Wrote ${rows.length} gold rows (${payload.counts.german} de + ${payload.counts.russian} ru), splits ${JSON.stringify(payload.counts.bySplit)}`);
   console.log(`- ${path.relative(process.cwd(), GOLD_OUT)}`);
+  console.log(`- ${path.relative(process.cwd(), CANDIDATES_OUT)}`);
   console.log(`- ${path.relative(process.cwd(), JSON_OUT)}`);
   console.log(`- ${path.relative(process.cwd(), CARD_OUT)}`);
-  console.log(`  rule-map accuracy ${(payload.metrics.ruleMap.accuracy * 100).toFixed(1)}%, CER ${payload.metrics.ruleMap.cer.toFixed(4)}`);
+  console.log(`- ${path.relative(process.cwd(), DOCS_CARD_OUT)}`);
+  console.log(`  rule-map accuracy ${(payload.metrics.ruleMap.accuracy * 100).toFixed(1)}%, WER ${(payload.metrics.ruleMap.wer * 100).toFixed(1)}%, CER ${payload.metrics.ruleMap.cer.toFixed(4)}`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) main();

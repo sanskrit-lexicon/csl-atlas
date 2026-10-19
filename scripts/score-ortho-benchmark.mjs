@@ -15,7 +15,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
-const GOLD = path.resolve(process.cwd(), "data", "ortho", "normalization_benchmark.gold.tsv");
+const GOLD = path.resolve(process.cwd(), "data", "ortho", "gold.tsv");
 const BENCH = path.resolve(process.cwd(), "data", "ortho", "normalization_benchmark.json");
 
 /** Generic legislated-reform rewrite rules; deliberately map-independent. */
@@ -68,12 +68,45 @@ function aggregate(rows) {
   const correct = rows.filter((r) => r.pred === r.target).length;
   const charDistance = rows.reduce((sum, r) => sum + levenshtein(r.pred, r.target), 0);
   const targetChars = rows.reduce((sum, r) => sum + Array.from(r.target).length, 0);
+  const accuracy = n ? round(correct / n) : null;
   return {
     n,
-    accuracy: n ? round(correct / n) : null,
+    accuracy,
+    wer: accuracy === null ? null : round(1 - accuracy),
     cer: targetChars ? round(charDistance / targetChars) : n ? round(rows.reduce((s, r) => s + cer(r.pred, r.target), 0) / n) : null,
     macroCer: n ? round(rows.reduce((s, r) => s + cer(r.pred, r.target), 0) / n) : null
   };
+}
+
+function lcg(seed) {
+  let state = seed >>> 0;
+  return () => {
+    state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
+    return state / 4294967296;
+  };
+}
+
+function percentile(sorted, q) {
+  return sorted[Math.min(sorted.length - 1, Math.max(0, Math.floor(q * sorted.length)))];
+}
+
+/** Fixed-seed row-level bootstrap 95% CIs for accuracy, WER and CER. */
+export function bootstrapMetricCis(rows, { b = 1000, seed = 7103 } = {}) {
+  if (!rows.length) return null;
+  const rand = lcg(seed);
+  const draws = { accuracy: [], wer: [], cer: [] };
+  for (let i = 0; i < b; i++) {
+    const sample = Array.from({ length: rows.length }, () => rows[Math.floor(rand() * rows.length)]);
+    const m = aggregate(sample);
+    draws.accuracy.push(m.accuracy);
+    draws.wer.push(m.wer);
+    draws.cer.push(m.cer);
+  }
+  const ci = (values) => {
+    const sorted = values.slice().sort((a, b2) => a - b2);
+    return [round(percentile(sorted, 0.025)), round(percentile(sorted, 0.975))];
+  };
+  return { accuracy: ci(draws.accuracy), wer: ci(draws.wer), cer: ci(draws.cer) };
 }
 
 /** rows: [{lang, dict, split, target, pred}] */
@@ -161,9 +194,9 @@ function main() {
     console.log(JSON.stringify({ name, ...metrics }, null, 2));
   } else {
     console.log(`score-ortho-benchmark: ${name}`);
-    console.log(`  n=${metrics.n} accuracy=${(metrics.accuracy * 100).toFixed(1)}% CER=${metrics.cer.toFixed(4)} macroCER=${metrics.macroCer.toFixed(4)}`);
+    console.log(`  n=${metrics.n} accuracy=${(metrics.accuracy * 100).toFixed(1)}% WER=${(metrics.wer * 100).toFixed(1)}% CER=${metrics.cer.toFixed(4)} macroCER=${metrics.macroCer.toFixed(4)}`);
     for (const [lang, m] of Object.entries(metrics.byLang)) {
-      console.log(`  ${lang}: n=${m.n} accuracy=${(m.accuracy * 100).toFixed(1)}% CER=${m.cer.toFixed(4)}`);
+      console.log(`  ${lang}: n=${m.n} accuracy=${(m.accuracy * 100).toFixed(1)}% WER=${(m.wer * 100).toFixed(1)}% CER=${m.cer.toFixed(4)}`);
     }
     console.log("  committed baseline matches.");
   }

@@ -6,13 +6,13 @@
   "title": "German and Russian historical orthographic normalization benchmark (200 gold tokens)",
   "description": "A frozen 200-token gold sample for historical orthographic normalization: 100 pre-reform German gloss tokens from PWG, PWK, CCS and SCH, and 100 pre-1918 Russian gloss tokens from Kossovich. Each row names the csl-orig/SamudraManthanam source record, line number, a short context, the historical token and its modern target.",
   "citation": "Bollmann, M. (2019). A Large-Scale Comparison of Historical Text Normalization Systems. Proceedings of NAACL 2019 (N19-1389). Metrics follow that evaluation: token accuracy and character error rate (CER) on a fixed gold set.",
-  "method": "Distinct old forms were collected from the csl-orig v02 gloss text (cleanGloss/glossTokens from build-ortho-drift.mjs) by membership in the frozen SanskritSpellCheck reform maps; only era-attributed dated reforms (1901-*/1996-ss/archaic-ey for German, 1918-* for Russian) are admitted. Forms were deterministically shuffled with fixed-seed mulberry32 and 25 were taken per German dictionary (100) and 100 from Kossovich. Each token instance is the first source occurrence of the selected form; line = 1-based physical line (Kossovich: JSONL record index). Targets are the map's modern-side form. Within each dictionary the rows are assigned 15/5/5 train/dev/test (Kossovich 60/20/20), so the global split is 120/40/40.",
+  "method": "Distinct old forms were collected from the csl-orig v02 gloss text (cleanGloss/glossTokens from build-ortho-drift.mjs) by membership in the frozen SanskritSpellCheck reform maps; only era-attributed dated reforms (1901-*/1996-ss/archaic-ey for German, 1918-* for Russian) are admitted. Forms were deterministically shuffled with fixed-seed mulberry32 and 25 were taken per German dictionary (100) and 100 from Kossovich. Each token instance is the first source occurrence of the selected form; line = 1-based physical line (Kossovich: JSONL record index). Targets are the map's modern-side form. Splits are stratified by dictionary into 100 train / 50 dev / 50 test; the split seed and manifest hash are recorded. No page image was opened, so every row carries scan_verified=false and appears in candidates.tsv with that reason.",
   "sampling": {
     "seed": 71031910,
     "germanPerDict": 25,
     "russianRows": 100,
     "unit": "distinct old form, one source occurrence each",
-    "splitRule": "per-dictionary 60/20/20 = 15/5/5 German, 60/20/20 Russian"
+    "splitRule": "stratified by dictionary; global 100 train / 50 dev / 50 test"
   },
   "sources": [
     {
@@ -40,10 +40,19 @@
     "german": 100,
     "russian": 100,
     "bySplit": {
-      "train": 120,
-      "dev": 40,
-      "test": 40
-    }
+      "train": 100,
+      "dev": 50,
+      "test": 50
+    },
+    "scanVerified": 0,
+    "scanUnverified": 200
+  },
+  "scope": "Reform-map benchmark under the handoff's fail-path clause: scan-image grounding was not established, so no scan claim is made. Every row is source-text-grounded in a named csl-orig/SamudraManthanam line; scan_verified=false and candidates.tsv carries the full honest residual.",
+  "splitManifest": {
+    "seed": 71031910,
+    "rule": "stratified by dictionary; German quotas pwg/pw 13-6-6, ccs 12-6-7, sch 12-7-6; Kossovich 50-25-25",
+    "sha256": "938ae6dc75875c629f14b9d840280da76fee9e86d2b8834b1cb8dd2f4dd04876",
+    "body": "de-pwg-001\ttrain\nde-pwg-002\ttrain\nde-pwg-003\ttrain\nde-pwg-004\ttrain\nde-pwg-005\ttrain\nde-pwg-006\ttrain\nde-pwg-007\ttrain\nde-pwg-008\ttrain\nde-pwg-009\ttrain\nde-pwg-010\ttrain\nde-pwg-011\ttrain\nde-pwg-012\ttrain\nde-pwg-013\ttrain\nde-pwg-014\tdev\nde-pwg-015\tdev\nde-pwg-016\tdev\nde-pwg-017\tdev\nde-pwg-018\tdev\nde-pwg-019\tdev\nde-pwg-020\ttest\nde-pwg-021\ttest\nde-pwg-022\ttest\nde-pwg-023\ttest\nde-pwg-024\ttest\nde-pwg-025\ttest\nde-pw-001\ttrain\nde-pw-002\ttrain\nde-pw-003\ttrain\nde-pw-004\ttrain\nde-pw-005\ttrain\nde-pw-006\ttrain\nde-pw-007\ttrain\nde-pw-008\ttrain\nde-pw-009\ttrain\nde-pw-010\ttrain\nde-pw-011\ttrain\nde-pw-012\ttrain\nde-pw-013\ttrain\nde-pw-014\tdev\nde-pw-015\tdev\nde-pw-016\tdev\nde-pw-017\tdev\nde-pw-018\tdev\nde-pw-019\tdev\nde-pw-020\ttest\nde-pw-021\ttest\nde-pw-022\ttest\nde-pw-023\ttest\nde-pw-024\ttest\nde-pw-025\ttest\nde-ccs-001\ttrain\nde-ccs-002\ttrain\nde-ccs-003\ttrain\nde-ccs-004\ttrain\nde-ccs-005\ttrain\nde-ccs-006\ttrain\nde-ccs-007\ttrain\nde-ccs-008\ttrain\nde-ccs-009\ttrain\nde-ccs-010\ttrain\nde-ccs-011\ttrain\nde-ccs-012\ttrain\nde-ccs-013\tdev\nde-ccs-014\tdev\nde-ccs-015\tdev\nde-ccs-016\tdev\nde-ccs-017\tdev\nde-ccs-018\tdev\nde-ccs-019\ttest\nde-ccs-020\ttest\nde-ccs-021\ttest\nde-ccs-022\ttest\nde-ccs-023\ttest\nde-ccs-024\ttest\nde-ccs-025\ttest\nde-sch-001\ttrain\nde-sch-002\ttrain\nde-sch-003\ttrain\nde-sch-004\ttrain\nde-sch-005\ttrain\nde-sch-006\ttrain\nde-sch-007\ttrain\nde-sch-008\ttrain\nde-sch-009\ttrain\nde-sch-010\ttrain\nde-sch-011\ttrain\nde-sch-012\ttrain\nde-sch-013\tdev\nde-sch-014\tdev\nde-sch-015\tdev\nde-sch-016\tdev\nde-sch-017\tdev\nde-sch-018\tdev\nde-sch-019\tdev\nde-sch-020\ttest\nde-sch-021\ttest\nde-sch-022\ttest\nde-sch-023\ttest\nde-sch-024\ttest\nde-sch-025\ttest\nru-kow-001\ttrain\nru-kow-002\ttrain\nru-kow-003\ttrain\nru-kow-004\ttrain\nru-kow-005\ttrain\nru-kow-006\ttrain\nru-kow-007\ttrain\nru-kow-008\ttrain\nru-kow-009\ttrain\nru-kow-010\ttrain\nru-kow-011\ttrain\nru-kow-012\ttrain\nru-kow-013\ttrain\nru-kow-014\ttrain\nru-kow-015\ttrain\nru-kow-016\ttrain\nru-kow-017\ttrain\nru-kow-018\ttrain\nru-kow-019\ttrain\nru-kow-020\ttrain\nru-kow-021\ttrain\nru-kow-022\ttrain\nru-kow-023\ttrain\nru-kow-024\ttrain\nru-kow-025\ttrain\nru-kow-026\ttrain\nru-kow-027\ttrain\nru-kow-028\ttrain\nru-kow-029\ttrain\nru-kow-030\ttrain\nru-kow-031\ttrain\nru-kow-032\ttrain\nru-kow-033\ttrain\nru-kow-034\ttrain\nru-kow-035\ttrain\nru-kow-036\ttrain\nru-kow-037\ttrain\nru-kow-038\ttrain\nru-kow-039\ttrain\nru-kow-040\ttrain\nru-kow-041\ttrain\nru-kow-042\ttrain\nru-kow-043\ttrain\nru-kow-044\ttrain\nru-kow-045\ttrain\nru-kow-046\ttrain\nru-kow-047\ttrain\nru-kow-048\ttrain\nru-kow-049\ttrain\nru-kow-050\ttrain\nru-kow-051\tdev\nru-kow-052\tdev\nru-kow-053\tdev\nru-kow-054\tdev\nru-kow-055\tdev\nru-kow-056\tdev\nru-kow-057\tdev\nru-kow-058\tdev\nru-kow-059\tdev\nru-kow-060\tdev\nru-kow-061\tdev\nru-kow-062\tdev\nru-kow-063\tdev\nru-kow-064\tdev\nru-kow-065\tdev\nru-kow-066\tdev\nru-kow-067\tdev\nru-kow-068\tdev\nru-kow-069\tdev\nru-kow-070\tdev\nru-kow-071\tdev\nru-kow-072\tdev\nru-kow-073\tdev\nru-kow-074\tdev\nru-kow-075\tdev\nru-kow-076\ttest\nru-kow-077\ttest\nru-kow-078\ttest\nru-kow-079\ttest\nru-kow-080\ttest\nru-kow-081\ttest\nru-kow-082\ttest\nru-kow-083\ttest\nru-kow-084\ttest\nru-kow-085\ttest\nru-kow-086\ttest\nru-kow-087\ttest\nru-kow-088\ttest\nru-kow-089\ttest\nru-kow-090\ttest\nru-kow-091\ttest\nru-kow-092\ttest\nru-kow-093\ttest\nru-kow-094\ttest\nru-kow-095\ttest\nru-kow-096\ttest\nru-kow-097\ttest\nru-kow-098\ttest\nru-kow-099\ttest\nru-kow-100\ttest\n"
   },
   "dicts": [
     {
@@ -82,18 +91,21 @@
       "name": "rule-map rewrite baseline",
       "n": 200,
       "accuracy": 0.845,
+      "wer": 0.155,
       "cer": 0.01931,
       "macroCer": 0.021274,
       "byLang": {
         "de": {
           "n": 100,
           "accuracy": 0.69,
+          "wer": 0.31,
           "cer": 0.036304,
           "macroCer": 0.042549
         },
         "ru": {
           "n": 100,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
           "macroCer": 0
         }
@@ -102,71 +114,166 @@
         "ccs": {
           "n": 25,
           "accuracy": 0.52,
+          "wer": 0.48,
           "cer": 0.053571,
-          "macroCer": 0.071843
+          "macroCer": 0.071843,
+          "ci": {
+            "accuracy": [
+              0.32,
+              0.72
+            ],
+            "wer": [
+              0.28,
+              0.68
+            ],
+            "cer": [
+              0.029046,
+              0.082474
+            ]
+          }
         },
         "kow": {
           "n": 100,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
-          "macroCer": 0
+          "macroCer": 0,
+          "ci": {
+            "accuracy": [
+              1,
+              1
+            ],
+            "wer": [
+              0,
+              0
+            ],
+            "cer": [
+              0,
+              0
+            ]
+          }
         },
         "pw": {
           "n": 25,
           "accuracy": 0.68,
+          "wer": 0.32,
           "cer": 0.038793,
-          "macroCer": 0.036242
+          "macroCer": 0.036242,
+          "ci": {
+            "accuracy": [
+              0.48,
+              0.84
+            ],
+            "wer": [
+              0.16,
+              0.52
+            ],
+            "cer": [
+              0.017094,
+              0.063559
+            ]
+          }
         },
         "pwg": {
           "n": 25,
           "accuracy": 0.72,
+          "wer": 0.28,
           "cer": 0.027778,
-          "macroCer": 0.029033
+          "macroCer": 0.029033,
+          "ci": {
+            "accuracy": [
+              0.56,
+              0.88
+            ],
+            "wer": [
+              0.12,
+              0.44
+            ],
+            "cer": [
+              0.011811,
+              0.045082
+            ]
+          }
         },
         "sch": {
           "n": 25,
           "accuracy": 0.84,
+          "wer": 0.16,
           "cer": 0.024876,
-          "macroCer": 0.033077
+          "macroCer": 0.033077,
+          "ci": {
+            "accuracy": [
+              0.68,
+              0.96
+            ],
+            "wer": [
+              0.04,
+              0.32
+            ],
+            "cer": [
+              0.004587,
+              0.053333
+            ]
+          }
         }
       },
       "bySplit": {
         "dev": {
-          "n": 40,
-          "accuracy": 0.85,
-          "cer": 0.017647,
-          "macroCer": 0.022976
+          "n": 50,
+          "accuracy": 0.88,
+          "wer": 0.12,
+          "cer": 0.014599,
+          "macroCer": 0.017919
         },
         "test": {
-          "n": 40,
-          "accuracy": 0.825,
-          "cer": 0.023324,
-          "macroCer": 0.029454
+          "n": 50,
+          "accuracy": 0.84,
+          "wer": 0.16,
+          "cer": 0.020408,
+          "macroCer": 0.025563
         },
         "train": {
-          "n": 120,
-          "accuracy": 0.85,
-          "cer": 0.018519,
-          "macroCer": 0.01798
+          "n": 100,
+          "accuracy": 0.83,
+          "wer": 0.17,
+          "cer": 0.021004,
+          "macroCer": 0.020807
         }
+      },
+      "ci": {
+        "accuracy": [
+          0.795,
+          0.895
+        ],
+        "wer": [
+          0.105,
+          0.205
+        ],
+        "cer": [
+          0.013264,
+          0.026175
+        ]
       }
     },
     "identity": {
       "name": "identity (no-op) baseline",
       "n": 200,
       "accuracy": 0,
+      "wer": 1,
       "cer": 0.145699,
       "macroCer": 0.167394,
       "byLang": {
         "de": {
           "n": 100,
           "accuracy": 0,
+          "wer": 1,
           "cer": 0.143014,
           "macroCer": 0.158721
         },
         "ru": {
           "n": 100,
           "accuracy": 0,
+          "wer": 1,
           "cer": 0.14875,
           "macroCer": 0.176068
         }
@@ -175,71 +282,166 @@
         "ccs": {
           "n": 25,
           "accuracy": 0,
+          "wer": 1,
           "cer": 0.129464,
-          "macroCer": 0.147484
+          "macroCer": 0.147484,
+          "ci": {
+            "accuracy": [
+              0,
+              0
+            ],
+            "wer": [
+              1,
+              1
+            ],
+            "cer": [
+              0.110204,
+              0.154255
+            ]
+          }
         },
         "kow": {
           "n": 100,
           "accuracy": 0,
+          "wer": 1,
           "cer": 0.14875,
-          "macroCer": 0.176068
+          "macroCer": 0.176068,
+          "ci": {
+            "accuracy": [
+              0,
+              0
+            ],
+            "wer": [
+              1,
+              1
+            ],
+            "cer": [
+              0.132754,
+              0.167539
+            ]
+          }
         },
         "pw": {
           "n": 25,
           "accuracy": 0,
+          "wer": 1,
           "cer": 0.12931,
-          "macroCer": 0.133495
+          "macroCer": 0.133495,
+          "ci": {
+            "accuracy": [
+              0,
+              0
+            ],
+            "wer": [
+              1,
+              1
+            ],
+            "cer": [
+              0.108333,
+              0.153846
+            ]
+          }
         },
         "pwg": {
           "n": 25,
           "accuracy": 0,
+          "wer": 1,
           "cer": 0.107143,
-          "macroCer": 0.111192
+          "macroCer": 0.111192,
+          "ci": {
+            "accuracy": [
+              0,
+              0
+            ],
+            "wer": [
+              1,
+              1
+            ],
+            "cer": [
+              0.096654,
+              0.118143
+            ]
+          }
         },
         "sch": {
           "n": 25,
           "accuracy": 0,
+          "wer": 1,
           "cer": 0.218905,
-          "macroCer": 0.242712
+          "macroCer": 0.242712,
+          "ci": {
+            "accuracy": [
+              0,
+              0
+            ],
+            "wer": [
+              1,
+              1
+            ],
+            "cer": [
+              0.192469,
+              0.253086
+            ]
+          }
         }
       },
       "bySplit": {
         "dev": {
-          "n": 40,
+          "n": 50,
           "accuracy": 0,
-          "cer": 0.138235,
-          "macroCer": 0.162698
+          "wer": 1,
+          "cer": 0.143552,
+          "macroCer": 0.162235
         },
         "test": {
-          "n": 40,
+          "n": 50,
           "accuracy": 0,
-          "cer": 0.148688,
-          "macroCer": 0.169146
+          "wer": 1,
+          "cer": 0.142857,
+          "macroCer": 0.164446
         },
         "train": {
-          "n": 120,
+          "n": 100,
           "accuracy": 0,
-          "cer": 0.147173,
-          "macroCer": 0.168376
+          "wer": 1,
+          "cer": 0.148191,
+          "macroCer": 0.171448
         }
+      },
+      "ci": {
+        "accuracy": [
+          0,
+          0
+        ],
+        "wer": [
+          1,
+          1
+        ],
+        "cer": [
+          0.136594,
+          0.156138
+        ]
       }
     },
     "mapOracle": {
       "name": "frozen reform-map lookup (ceiling)",
       "n": 200,
       "accuracy": 1,
+      "wer": 0,
       "cer": 0,
       "macroCer": 0,
       "byLang": {
         "de": {
           "n": 100,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
           "macroCer": 0
         },
         "ru": {
           "n": 100,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
           "macroCer": 0
         }
@@ -248,74 +450,173 @@
         "ccs": {
           "n": 25,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
-          "macroCer": 0
+          "macroCer": 0,
+          "ci": {
+            "accuracy": [
+              1,
+              1
+            ],
+            "wer": [
+              0,
+              0
+            ],
+            "cer": [
+              0,
+              0
+            ]
+          }
         },
         "kow": {
           "n": 100,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
-          "macroCer": 0
+          "macroCer": 0,
+          "ci": {
+            "accuracy": [
+              1,
+              1
+            ],
+            "wer": [
+              0,
+              0
+            ],
+            "cer": [
+              0,
+              0
+            ]
+          }
         },
         "pw": {
           "n": 25,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
-          "macroCer": 0
+          "macroCer": 0,
+          "ci": {
+            "accuracy": [
+              1,
+              1
+            ],
+            "wer": [
+              0,
+              0
+            ],
+            "cer": [
+              0,
+              0
+            ]
+          }
         },
         "pwg": {
           "n": 25,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
-          "macroCer": 0
+          "macroCer": 0,
+          "ci": {
+            "accuracy": [
+              1,
+              1
+            ],
+            "wer": [
+              0,
+              0
+            ],
+            "cer": [
+              0,
+              0
+            ]
+          }
         },
         "sch": {
           "n": 25,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
-          "macroCer": 0
+          "macroCer": 0,
+          "ci": {
+            "accuracy": [
+              1,
+              1
+            ],
+            "wer": [
+              0,
+              0
+            ],
+            "cer": [
+              0,
+              0
+            ]
+          }
         }
       },
       "bySplit": {
         "dev": {
-          "n": 40,
+          "n": 50,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
           "macroCer": 0
         },
         "test": {
-          "n": 40,
+          "n": 50,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
           "macroCer": 0
         },
         "train": {
-          "n": 120,
+          "n": 100,
           "accuracy": 1,
+          "wer": 0,
           "cer": 0,
           "macroCer": 0
         }
+      },
+      "ci": {
+        "accuracy": [
+          1,
+          1
+        ],
+        "wer": [
+          0,
+          0
+        ],
+        "cer": [
+          0,
+          0
+        ]
       }
     }
   },
   "goldTsv": {
-    "path": "data/ortho/normalization_benchmark.gold.tsv",
+    "path": "data/ortho/gold.tsv",
     "rows": 200,
-    "sha256": "9250066a44f8f8799db2b9ea9a7e55a46dcb338abcae661d1630d2e5c1ab9bf4"
+    "sha256": "a47554556de14baefe4b203d198e8982b40ccc69ddd02cf970d7c14fcf8136a7"
+  },
+  "candidatesTsv": {
+    "path": "data/ortho/candidates.tsv",
+    "rows": 200,
+    "reason": "no scan-image verification (source-text-grounded only)"
   },
   "datasetCard": "data/ortho/normalization_benchmark.card.md",
+  "docsCard": "docs/ORTHO_BENCHMARK.md",
   "caveats": [
-    "SOURCE-TEXT-GROUNDED, NOT SCAN-IMAGE VERIFIED: each row is grounded in a named csl-orig/SamudraManthanam source line, but no page image was re-opened. This is not a scan-level diplomatic edition.",
+    "SOURCE-TEXT-GROUNDED, NOT SCAN-IMAGE VERIFIED: each row is grounded in a named csl-orig/SamudraManthanam source line, but no page image was re-opened. This is not a scan-level diplomatic edition, and no scan claim is made (handoff fail-path scope).",
+    "All 200 rows carry scan_verified=false and are listed in candidates.tsv with the reason; the gold set is the reform-map benchmark, not a scan-verified subset.",
     "Targets are the frozen SanskritSpellCheck reform-map modern forms. The rule-map baseline is therefore an agreement-with-the-map lower bound, not an independent historical judgement; the map's provenance and limits are upstream.",
     "The reform maps are not redistributed: no map TSV is committed. Only the 200 sampled token/target pairs are published, with upstream attribution; SanskritSpellCheck declares no license.",
     "The German roster is the Petersburg line plus CCS and SCH as specified by the handoff (PWG, PWK, CCS, SCH). GRA and PWKVN are outside this benchmark.",
     "Russian is KOW (Kossovich, 1854) only: csl-orig v02 exposes no second Russian-gloss dictionary locally, so the Russian half is single-dictionary and single-date.",
     "The 'map oracle' row is a ceiling by construction (it copies the gold target) and exists only to bound the metric; the substantive baseline is the rule-map rewriter.",
-    "CER uses lowercased Unicode code points and target-length normalization; it is a token-level CER, not Bollmann's sentence-level corpus CER.",
+    "CER uses lowercased Unicode code points and target-length normalization; WER is the token error rate (1 - accuracy) on single-token rows. This is a token-level adaptation, not Bollmann's sentence-level corpus CER.",
     "The Kossovich source is a corpus JSONL, not a csl-orig v02 file; its 'line' is the 1-based JSONL record index."
   ],
   "boundary": [
     "Gloss-language (meta-language) orthography only. Sanskrit-side orthography is out of scope. csl-orig is read, never written. Reform maps stay upstream in SanskritSpellCheck; only sampled gold pairs are committed."
   ],
-  "generatedAt": "2026-10-19T14:28:27.468Z"
+  "generatedAt": "2026-10-19T14:33:42.014Z"
 }
