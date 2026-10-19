@@ -16,14 +16,14 @@
       "n_inverted": 428,
       "mixed_rate": 0.4087870105062082,
       "ci95_mixed": [
-        0.37882366654508015,
-        0.43926457659991724
+        0.3788236665,
+        0.4392645766
       ],
       "n_ascending": 208,
       "n_descending": 411,
       "n_mixed": 428,
-      "mean_tau": -0.252970964660936,
-      "mean_adjacent_rate": 0.37763763132760264,
+      "mean_tau": -0.2529709647,
+      "mean_adjacent_rate": 0.3776376313,
       "n_not_ascending": 839
     },
     "dcs": {
@@ -31,14 +31,14 @@
       "n_inverted": 1027,
       "mixed_rate": 0.343593174974908,
       "ci95_mixed": [
-        0.3265606233646354,
-        0.3609324109191625
+        0.3265606234,
+        0.3609324109
       ],
       "n_ascending": 1803,
       "n_descending": 159,
       "n_mixed": 1027,
-      "mean_tau": 0.6099001338240214,
-      "mean_adjacent_rate": 0.7030330210772833,
+      "mean_tau": 0.6099001338,
+      "mean_adjacent_rate": 0.7030330211,
       "n_not_ascending": 1186
     },
     "dm": {
@@ -46,14 +46,14 @@
       "n_inverted": 1840,
       "mixed_rate": 0.4745937580603559,
       "ci95_mixed": [
-        0.45877053570486725,
-        0.4904553105806376
+        0.4587705357,
+        0.4904553106
       ],
       "n_ascending": 1587,
       "n_descending": 450,
       "n_mixed": 1840,
-      "mean_tau": 0.4831056744905855,
-      "mean_adjacent_rate": 0.6920411400567449,
+      "mean_tau": 0.4831056745,
+      "mean_adjacent_rate": 0.6920411401,
       "n_not_ascending": 2290
     },
     "imprint": {
@@ -61,14 +61,14 @@
       "n_inverted": 5614,
       "mixed_rate": 0.5908851699821072,
       "ci95_mixed": [
-        0.5809195323460996,
-        0.600795052954781
+        0.5809195323,
+        0.600795053
       ],
       "n_ascending": 2052,
       "n_descending": 1835,
       "n_mixed": 5614,
-      "mean_tau": 0.02682089253762762,
-      "mean_adjacent_rate": 0.5023628460162088,
+      "mean_tau": 0.0268208925,
+      "mean_adjacent_rate": 0.502362846,
       "n_not_ascending": 7449
     },
     "any": {
@@ -76,14 +76,14 @@
       "n_inverted": 5676,
       "mixed_rate": 0.5858189699659407,
       "ci95_mixed": [
-        0.5759346627628381,
-        0.5956516559766483
+        0.5759346628,
+        0.595651656
       ],
       "n_ascending": 2074,
       "n_descending": 1939,
       "n_mixed": 5676,
-      "mean_tau": 0.07990769945298792,
-      "mean_adjacent_rate": 0.5248206522860976,
+      "mean_tau": 0.0799076995,
+      "mean_adjacent_rate": 0.5248206523,
       "n_not_ascending": 7615
     }
   },
