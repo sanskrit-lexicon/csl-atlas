@@ -1,0 +1,784 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "dataset": "h7101_llm_candidate_scores",
+  "generatedAt": "2026-10-19T14:20:11.143Z",
+  "sample": {
+    "path": "data/llm-candidate-lane/sample-500.jsonl",
+    "sha256": "bd1d30deef5a080c3883094ab1ccecc32264b9f3fb888d88e60cd88b4c1dbaf2",
+    "rows": 500
+  },
+  "labels": {
+    "types": [
+      "ocr-error",
+      "sense-split",
+      "source-mismatch",
+      "markup-normalization",
+      "no-correction"
+    ],
+    "targetErrorTypes": [
+      "ocr-error",
+      "sense-split",
+      "source-mismatch"
+    ],
+    "goldProvenance": {
+      "correction-loci": "weak-diff-label (human correction event, type derived from the old/new diff)",
+      "review-queue": "human-reviewed (H5 reviewedValue)"
+    }
+  },
+  "baseline": {
+    "total": 500,
+    "coverage": 1,
+    "abstentionRate": 0,
+    "abstained": 0,
+    "missing": [],
+    "accuracyAll": 0.216,
+    "selectiveAccuracy": 0.216,
+    "macroF1": 0.1284,
+    "macroF1AbstainZero": 0.1284,
+    "perClass": {
+      "ocr-error": {
+        "support": 122,
+        "precision": null,
+        "recall": 0,
+        "f1": 0,
+        "predicted": 0
+      },
+      "sense-split": {
+        "support": 17,
+        "precision": 0.1667,
+        "recall": 0.0588,
+        "f1": 0.087,
+        "predicted": 6
+      },
+      "source-mismatch": {
+        "support": 60,
+        "precision": 0.1905,
+        "recall": 0.8,
+        "f1": 0.3077,
+        "predicted": 252
+      },
+      "markup-normalization": {
+        "support": 235,
+        "precision": 0.2438,
+        "recall": 0.2511,
+        "f1": 0.2474,
+        "predicted": 242
+      },
+      "no-correction": {
+        "support": 66,
+        "precision": null,
+        "recall": 0,
+        "f1": 0,
+        "predicted": 0
+      }
+    },
+    "confusion": {
+      "ocr-error": {
+        "ocr-error": 0,
+        "sense-split": 2,
+        "source-mismatch": 23,
+        "markup-normalization": 97,
+        "no-correction": 0,
+        "__abstain": 0
+      },
+      "sense-split": {
+        "ocr-error": 0,
+        "sense-split": 1,
+        "source-mismatch": 8,
+        "markup-normalization": 8,
+        "no-correction": 0,
+        "__abstain": 0
+      },
+      "source-mismatch": {
+        "ocr-error": 0,
+        "sense-split": 0,
+        "source-mismatch": 48,
+        "markup-normalization": 12,
+        "no-correction": 0,
+        "__abstain": 0
+      },
+      "markup-normalization": {
+        "ocr-error": 0,
+        "sense-split": 3,
+        "source-mismatch": 173,
+        "markup-normalization": 59,
+        "no-correction": 0,
+        "__abstain": 0
+      },
+      "no-correction": {
+        "ocr-error": 0,
+        "sense-split": 0,
+        "source-mismatch": 0,
+        "markup-normalization": 66,
+        "no-correction": 0,
+        "__abstain": 0
+      }
+    },
+    "abstentionByGold": {
+      "ocr-error": 0,
+      "sense-split": 0,
+      "source-mismatch": 0,
+      "markup-normalization": 0,
+      "no-correction": 0
+    },
+    "binaryTargetError": {
+      "precision": 0.3178,
+      "recall": 0.4121,
+      "f1": 0.3589,
+      "tp": 82,
+      "fp": 176,
+      "fn": 117
+    },
+    "binaryAnyCorrection": {
+      "precision": 0.868,
+      "recall": 1,
+      "f1": 0.9293,
+      "tp": 434,
+      "fp": 66,
+      "fn": 0
+    },
+    "confidenceBins": [
+      {
+        "bin": "0.5-0.6",
+        "n": 500,
+        "correct": 108,
+        "accuracy": 0.216
+      }
+    ],
+    "path": "data/llm-candidate-lane/outputs/rule-baseline.jsonl",
+    "sha256": "dca2bc074387aae8bda6d540cf28fb0e0e1c448d8896895f6b0f52269b3edc1a",
+    "recordCount": 500,
+    "prompt": {
+      "id": "P6",
+      "version": "1.0.0",
+      "sha256": "0a6fb6c846fffcbe7bd917e744f3d080a3cdcb31f843299308b4c7b2e16174fa"
+    },
+    "model": {
+      "provider": "csl-atlas",
+      "name": "surface-rule-baseline",
+      "revision": "H7101-v1",
+      "temperature": 0
+    },
+    "runStatus": "complete"
+  },
+  "llm": {
+    "total": 500,
+    "coverage": 0,
+    "abstentionRate": 1,
+    "abstained": 500,
+    "missing": [],
+    "accuracyAll": 0,
+    "selectiveAccuracy": null,
+    "macroF1": null,
+    "macroF1AbstainZero": 0,
+    "perClass": {
+      "ocr-error": {
+        "support": 122,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "predicted": 0
+      },
+      "sense-split": {
+        "support": 17,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "predicted": 0
+      },
+      "source-mismatch": {
+        "support": 60,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "predicted": 0
+      },
+      "markup-normalization": {
+        "support": 235,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "predicted": 0
+      },
+      "no-correction": {
+        "support": 66,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "predicted": 0
+      }
+    },
+    "confusion": {
+      "ocr-error": {
+        "ocr-error": 0,
+        "sense-split": 0,
+        "source-mismatch": 0,
+        "markup-normalization": 0,
+        "no-correction": 0,
+        "__abstain": 122
+      },
+      "sense-split": {
+        "ocr-error": 0,
+        "sense-split": 0,
+        "source-mismatch": 0,
+        "markup-normalization": 0,
+        "no-correction": 0,
+        "__abstain": 17
+      },
+      "source-mismatch": {
+        "ocr-error": 0,
+        "sense-split": 0,
+        "source-mismatch": 0,
+        "markup-normalization": 0,
+        "no-correction": 0,
+        "__abstain": 60
+      },
+      "markup-normalization": {
+        "ocr-error": 0,
+        "sense-split": 0,
+        "source-mismatch": 0,
+        "markup-normalization": 0,
+        "no-correction": 0,
+        "__abstain": 235
+      },
+      "no-correction": {
+        "ocr-error": 0,
+        "sense-split": 0,
+        "source-mismatch": 0,
+        "markup-normalization": 0,
+        "no-correction": 0,
+        "__abstain": 66
+      }
+    },
+    "abstentionByGold": {
+      "ocr-error": 122,
+      "sense-split": 17,
+      "source-mismatch": 60,
+      "markup-normalization": 235,
+      "no-correction": 66
+    },
+    "binaryTargetError": {
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "binaryAnyCorrection": {
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "confidenceBins": [],
+    "path": "data/llm-candidate-lane/outputs/llm-abstain.jsonl",
+    "sha256": "f7160ac73c4a65537e1095334d75261cac8703783c8a1914259b8dd7103857ba",
+    "recordCount": 500,
+    "prompt": {
+      "id": "P6",
+      "version": "1.0.0",
+      "sha256": "0a6fb6c846fffcbe7bd917e744f3d080a3cdcb31f843299308b4c7b2e16174fa"
+    },
+    "model": {
+      "provider": "not-run",
+      "name": "no-credentials-in-offline-unit",
+      "revision": "n/a",
+      "temperature": 0
+    },
+    "runStatus": "has-abstentions"
+  },
+  "bySource": {
+    "correction-loci": {
+      "rows": 400,
+      "baseline": {
+        "total": 400,
+        "coverage": 1,
+        "abstentionRate": 0,
+        "abstained": 0,
+        "missing": [],
+        "accuracyAll": 0.24,
+        "selectiveAccuracy": 0.24,
+        "macroF1": 0.1631,
+        "macroF1AbstainZero": 0.1305,
+        "perClass": {
+          "ocr-error": {
+            "support": 100,
+            "precision": null,
+            "recall": 0,
+            "f1": 0,
+            "predicted": 0
+          },
+          "sense-split": {
+            "support": 17,
+            "precision": 0.1667,
+            "recall": 0.0588,
+            "f1": 0.087,
+            "predicted": 6
+          },
+          "source-mismatch": {
+            "support": 60,
+            "precision": 0.1912,
+            "recall": 0.8,
+            "f1": 0.3087,
+            "predicted": 251
+          },
+          "markup-normalization": {
+            "support": 223,
+            "precision": 0.3287,
+            "recall": 0.2108,
+            "f1": 0.2568,
+            "predicted": 143
+          },
+          "no-correction": {
+            "support": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          }
+        },
+        "confusion": {
+          "ocr-error": {
+            "ocr-error": 0,
+            "sense-split": 2,
+            "source-mismatch": 22,
+            "markup-normalization": 76,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "sense-split": {
+            "ocr-error": 0,
+            "sense-split": 1,
+            "source-mismatch": 8,
+            "markup-normalization": 8,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "source-mismatch": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 48,
+            "markup-normalization": 12,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "markup-normalization": {
+            "ocr-error": 0,
+            "sense-split": 3,
+            "source-mismatch": 173,
+            "markup-normalization": 47,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "no-correction": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 0
+          }
+        },
+        "abstentionByGold": {
+          "ocr-error": 0,
+          "sense-split": 0,
+          "source-mismatch": 0,
+          "markup-normalization": 0,
+          "no-correction": 0
+        },
+        "binaryTargetError": {
+          "precision": 0.3152,
+          "recall": 0.4576,
+          "f1": 0.3733,
+          "tp": 81,
+          "fp": 176,
+          "fn": 96
+        },
+        "binaryAnyCorrection": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 400,
+          "fp": 0,
+          "fn": 0
+        },
+        "confidenceBins": [
+          {
+            "bin": "0.5-0.6",
+            "n": 400,
+            "correct": 96,
+            "accuracy": 0.24
+          }
+        ]
+      },
+      "llm": {
+        "total": 400,
+        "coverage": 0,
+        "abstentionRate": 1,
+        "abstained": 400,
+        "missing": [],
+        "accuracyAll": 0,
+        "selectiveAccuracy": null,
+        "macroF1": null,
+        "macroF1AbstainZero": 0,
+        "perClass": {
+          "ocr-error": {
+            "support": 100,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          },
+          "sense-split": {
+            "support": 17,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          },
+          "source-mismatch": {
+            "support": 60,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          },
+          "markup-normalization": {
+            "support": 223,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          },
+          "no-correction": {
+            "support": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          }
+        },
+        "confusion": {
+          "ocr-error": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 100
+          },
+          "sense-split": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 17
+          },
+          "source-mismatch": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 60
+          },
+          "markup-normalization": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 223
+          },
+          "no-correction": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 0
+          }
+        },
+        "abstentionByGold": {
+          "ocr-error": 100,
+          "sense-split": 17,
+          "source-mismatch": 60,
+          "markup-normalization": 223,
+          "no-correction": 0
+        },
+        "binaryTargetError": {
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "binaryAnyCorrection": {
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "confidenceBins": []
+      }
+    },
+    "review-queue": {
+      "rows": 100,
+      "baseline": {
+        "total": 100,
+        "coverage": 1,
+        "abstentionRate": 0,
+        "abstained": 0,
+        "missing": [],
+        "accuracyAll": 0.12,
+        "selectiveAccuracy": 0.12,
+        "macroF1": 0.0541,
+        "macroF1AbstainZero": 0.0432,
+        "perClass": {
+          "ocr-error": {
+            "support": 22,
+            "precision": null,
+            "recall": 0,
+            "f1": 0,
+            "predicted": 0
+          },
+          "sense-split": {
+            "support": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          },
+          "source-mismatch": {
+            "support": 0,
+            "precision": 0,
+            "recall": null,
+            "f1": 0,
+            "predicted": 1
+          },
+          "markup-normalization": {
+            "support": 12,
+            "precision": 0.1212,
+            "recall": 1,
+            "f1": 0.2162,
+            "predicted": 99
+          },
+          "no-correction": {
+            "support": 66,
+            "precision": null,
+            "recall": 0,
+            "f1": 0,
+            "predicted": 0
+          }
+        },
+        "confusion": {
+          "ocr-error": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 1,
+            "markup-normalization": 21,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "sense-split": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "source-mismatch": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "markup-normalization": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 12,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "no-correction": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 66,
+            "no-correction": 0,
+            "__abstain": 0
+          }
+        },
+        "abstentionByGold": {
+          "ocr-error": 0,
+          "sense-split": 0,
+          "source-mismatch": 0,
+          "markup-normalization": 0,
+          "no-correction": 0
+        },
+        "binaryTargetError": {
+          "precision": 1,
+          "recall": 0.0455,
+          "f1": 0.087,
+          "tp": 1,
+          "fp": 0,
+          "fn": 21
+        },
+        "binaryAnyCorrection": {
+          "precision": 0.34,
+          "recall": 1,
+          "f1": 0.5075,
+          "tp": 34,
+          "fp": 66,
+          "fn": 0
+        },
+        "confidenceBins": [
+          {
+            "bin": "0.5-0.6",
+            "n": 100,
+            "correct": 12,
+            "accuracy": 0.12
+          }
+        ]
+      },
+      "llm": {
+        "total": 100,
+        "coverage": 0,
+        "abstentionRate": 1,
+        "abstained": 100,
+        "missing": [],
+        "accuracyAll": 0,
+        "selectiveAccuracy": null,
+        "macroF1": null,
+        "macroF1AbstainZero": 0,
+        "perClass": {
+          "ocr-error": {
+            "support": 22,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          },
+          "sense-split": {
+            "support": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          },
+          "source-mismatch": {
+            "support": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          },
+          "markup-normalization": {
+            "support": 12,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          },
+          "no-correction": {
+            "support": 66,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "predicted": 0
+          }
+        },
+        "confusion": {
+          "ocr-error": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 22
+          },
+          "sense-split": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "source-mismatch": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 0
+          },
+          "markup-normalization": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 12
+          },
+          "no-correction": {
+            "ocr-error": 0,
+            "sense-split": 0,
+            "source-mismatch": 0,
+            "markup-normalization": 0,
+            "no-correction": 0,
+            "__abstain": 66
+          }
+        },
+        "abstentionByGold": {
+          "ocr-error": 22,
+          "sense-split": 0,
+          "source-mismatch": 0,
+          "markup-normalization": 12,
+          "no-correction": 66
+        },
+        "binaryTargetError": {
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "binaryAnyCorrection": {
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "confidenceBins": []
+      }
+    }
+  },
+  "comparison": {
+    "verdict": "NO-GO",
+    "status": "not-run",
+    "reason": "The LLM lane produced no predictions (coverage 0); no evidence of gain over the rule baseline. Do not expand or promote."
+  },
+  "stoppingRule": {
+    "maxPromptTries": 6,
+    "stopIf": "no gain over the rule baseline on this 500-row eval",
+    "maxFullCorpusRuns": 0,
+    "promotion": "none; candidates remain machine-candidate until human review"
+  }
+}
