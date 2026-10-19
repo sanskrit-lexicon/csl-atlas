@@ -198,6 +198,7 @@ atlas:lemma-iti
   rdfs:label "iti"@sa ;
   ontolex:canonicalForm atlas:form-iti ;
   lexinfo:partOfSpeech lexinfo:indeclinable ;
+  lexinfo:gender lexinfo:feminine, lexinfo:masculine ;
   prov:wasDerivedFrom
     <https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/mw/mw.txt#L100917>,
     <https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/ap/ap.txt#L93443>,
