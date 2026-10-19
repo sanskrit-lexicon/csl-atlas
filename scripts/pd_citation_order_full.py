@@ -26,6 +26,14 @@ Committed artefacts: the TSV, the adjudication sheet, the summary JSON and the
 report.  `--check` recomputes every committed number from the TSV and the same
 pooled-permutation seed.  `--refresh` re-derives the summary JSON and the
 report from the committed TSV when only the derived blocks have to move.
+
+Every float that reaches a committed artefact is aggregated with
+``math.fsum`` (correctly rounded, and identical on every interpreter and
+platform) rather than with the builtin ``sum``, whose float behaviour changed
+in CPython 3.12 (Neumaier compensation) and therefore differs between the
+build box, a 3.12+ runner and a 3.11 runner in the last bits.  The
+Clopper-Pearson bound is additionally rounded to ``CI_DP`` decimals, because
+``math.lgamma`` is libm-dependent in its last bit.
 """
 from __future__ import annotations
 
@@ -317,7 +325,7 @@ def _binom_cdf(k: int, n: int, p: float) -> float:
         for i in range(0, k + 1)
     ]
     top = max(logs)
-    return math.exp(top) * sum(math.exp(x - top) for x in logs)
+    return math.exp(top) * math.fsum(math.exp(x - top) for x in logs)
 
 
 CI_DP = 10
@@ -506,8 +514,8 @@ def summarize(rows: list[dict]) -> dict:
             "n_ascending": sum(1 for r in dec if r[dcol] == "ascending"),
             "n_descending": sum(1 for r in dec if r[dcol] == "descending"),
             "n_mixed": sum(1 for r in dec if r[dcol] == "mixed"),
-            "mean_tau": (sum(float(r[tcol]) for r in dec) / n) if n else None,
-            "mean_adjacent_rate": (sum(float(r[acol]) for r in dec) / n) if n else None,
+            "mean_tau": (math.fsum(float(r[tcol]) for r in dec) / n) if n else None,
+            "mean_adjacent_rate": (math.fsum(float(r[acol]) for r in dec) / n) if n else None,
             "n_not_ascending": sum(1 for r in dec if r[dcol] in ("descending", "mixed")),
         }
     return summary
@@ -555,7 +563,7 @@ def null_model(rows: list[dict], reps: int = NULL_REPS, seed: int = NULL_SEED) -
         k = sum(1 for r in rows if r[vcol] == "inverted")
         obs_rate = k / n if n else 0.0
         dist = sorted(x / n for x in null_counts[clock]) if n else [0.0]
-        mean = sum(dist) / len(dist)
+        mean = math.fsum(dist) / len(dist)
         lo = dist[int(0.025 * (len(dist) - 1))]
         hi = dist[int(0.975 * (len(dist) - 1))]
         ge = sum(1 for x in dist if x >= obs_rate) / len(dist)

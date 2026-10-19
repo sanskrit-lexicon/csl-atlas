@@ -10,6 +10,7 @@ counts must agree with the summary.
 
 import csv
 import json
+import math
 import pathlib
 import sys
 
@@ -94,6 +95,36 @@ def test_clopper_pearson_bounds_are_rounded_to_a_portable_precision():
     for clock in ("pd_swc", "dcs", "dm", "imprint", "any"):
         for bound in committed["summary"][clock]["ci95_mixed"]:
             assert bound == round(bound, h7093.CI_DP)
+
+
+def test_summary_means_use_exact_summation_not_the_builtin_sum():
+    """The means must not depend on the interpreter's float ``sum``.
+
+    CPython 3.12 changed the builtin ``sum`` for floats to Neumaier
+    compensation, so a 3.11 runner (the CI matrix) and a 3.12+ box produce
+    different last bits for the same 9,689-term sum -- which is what made
+    ``forensic-pins`` red.  ``math.fsum`` is correctly rounded and therefore
+    identical on every interpreter and platform, and it is the value the
+    committed artefact already carries.
+    """
+    rows = load_tsv(ROOT / "data" / "pd" / "pd_citation_order_full.tsv")
+    dec = [r for r in rows if r["verdict"] != "undecidable"]
+    tau = [float(r["tau"]) for r in dec]
+    n = len(dec)
+    naive = 0.0
+    for v in tau:
+        naive += v
+    naive /= n
+    exact = math.fsum(tau) / n
+    summary = h7093.summarize(rows)
+    committed = json.loads(
+        (ROOT / "data" / "pd" / "pd_citation_order_full_summary.json").read_text(encoding="utf-8")
+    )
+    assert summary["any"]["mean_tau"] == exact
+    assert committed["summary"]["any"]["mean_tau"] == exact
+    # the naive sum is a different number on this frozen population -- that
+    # difference is exactly what the pin exists to catch
+    assert naive != exact
 
 
 def test_verdict_sentence_is_clock_specific_and_adjudication_is_open():
