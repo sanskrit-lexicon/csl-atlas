@@ -42,7 +42,9 @@ page of PD's front matter), and 116 of its 344 two-sense entries are ties.
   Until the same test is run on PWG and MW with dated citations, the +0.32 **cannot be attributed
   to PD's historical principle rather than to the semantic structure of meanings**. That comparative
   run is the refutation condition: if PWG (not an OED-model dictionary) shows the same τ, the
-  editorial reading is withdrawn. Nor can a second dating authority serve as the control: DCS and
+  editorial reading is withdrawn. **It has been run (19-10-2026): PWG τ = +0.41, i.e. higher than
+  PD's, so the editorial reading is withdrawn** —
+  [PD_SENSE_ORDER_COMPARE_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SENSE_ORDER_COMPARE_2026.md). Nor can a second dating authority serve as the control: DCS and
   Dharmamitra are one lineage — Hellwig & Nehrdich 2018 (word segmentation, EMNLP) is their only joint
   publication, and there is no joint chronology — so agreement between the two dates is
   cross-validation, not evidence. The dates are only the common measuring stick, and they must be

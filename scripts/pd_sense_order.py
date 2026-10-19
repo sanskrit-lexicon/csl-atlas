@@ -22,7 +22,10 @@ Units and limits that matter when reading the numbers:
   `data/forensic/SENSE_ORDER_TEST.md` (MW vs PWG 0.767 against an independent
   Apte control 0.751, shuffle floor 0.50).  Until the same test is run on
   PWG/MW, the tendency below cannot be attributed to PD's editorial principle
-  rather than to the semantic structure of meanings.
+  rather than to the semantic structure of meanings.  That control has now been
+  run (`scripts/pd_sense_order_compare.py`, H7116): PWG orders its senses at
+  least as chronologically (τ = +0.41 against +0.32), so the editorial reading
+  is withdrawn — see `reports/PD_SENSE_ORDER_COMPARE_2026.md`.
 
 Usage:
     python scripts/pd_sense_order.py --check     # verify committed numbers
