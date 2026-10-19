@@ -1,203 +1,450 @@
 {
-  "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-15T14:08:59.814Z",
+  "schemaVersion": "2.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "generatedBy": "npm run build-benchmark-report",
-  "method": "Per review queue: precision = reviewed-ok / (reviewed-ok + reviewed-corrected) over the human-reviewed gold subset; coverage = gold / total. Fills in as reviewers adjudicate.",
+  "benchmarkVersion": "v2",
+  "method": "Frozen stratified held-out samples; gold = two independent keys (pool-aNN) or explicit expert labels. No model is trained on the held-out rows. Metrics are macro precision/recall/F1, Cohen's kappa, Krippendorff's alpha (nominal), and seeded bootstrap 95% CIs. Tasks below 10% gold coverage report null scores.",
+  "scoringScript": "scripts/build-benchmark-report.mjs",
+  "splitManifest": "src/data/benchmark/split-manifest.json",
   "summary": {
-    "queueCount": 14,
-    "totalItems": 19435,
-    "totalGold": 147,
-    "overallPrecision": 1,
-    "dharmamitraQueues": 8,
-    "dharmamitraGold": 0,
-    "dharmamitraGoldPending": true
+    "taskCount": 3,
+    "totalHeldOut": 300,
+    "totalTrain": 0,
+    "totalGold": 0,
+    "goldCoverage": 0,
+    "goldCoverageTarget": 0.1,
+    "goldCoverageMet": false,
+    "noSelfGradedPrecision": true,
+    "status": "gold-insufficient-honest-report",
+    "blockingReason": "Only 0 of 300 held-out rows are double-keyed (0.0%, target 10%). The honest result is no task score."
   },
-  "queues": [
+  "tasks": [
     {
-      "queue": "encoding-ocr",
-      "file": "src/data/review/h5-anomaly-review.json",
-      "dharmamitra": false,
-      "total": 130,
-      "gold": 130,
-      "coverage": 1,
-      "precision": 1,
-      "statusCounts": {
-        "reviewed-ok": 130
+      "taskId": "encoding-ocr",
+      "title": "Encoding/OCR anomaly triage",
+      "question": "Is an observed MW↔Petersburg entry difference a parser/OCR artifact, a possible typo, a variant convention, a legitimate form, or lineage-only?",
+      "source": "src/data/review/h5-anomaly-review.json",
+      "labels": [
+        "parser-artifact",
+        "possible-typo",
+        "variant-convention",
+        "legitimate-form",
+        "lineage-only"
+      ],
+      "split": {
+        "populationSize": 130,
+        "heldOutRows": 100,
+        "trainRows": 0,
+        "manifest": "src/data/benchmark/split-manifest.json",
+        "strata": 100,
+        "stratumCount": 5
+      },
+      "gold": {
+        "targetGoldRows": 10,
+        "goldRows": 0,
+        "coverage": 0,
+        "coverageMet": false,
+        "rowsSingleKey": 100,
+        "rowsUnkeyed": 0,
+        "additionalKeysNeeded": 10,
+        "recruitmentNeed": "Recruit 5–10 independent keyings (10 keys) to reach 10 double-keyed rows for this task.",
+        "blockingRows": [
+          {
+            "reviewId": "h5:known-correction:MW-PW:Bavamanyu:",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          },
+          {
+            "reviewId": "h5:mw-pw-shared-doublet:MW-PW:aprativAdin:prativAdin",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          },
+          {
+            "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:kullUkA:kullUka",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          },
+          {
+            "reviewId": "h5:null-control:BOP-MW:tatraBavatI:tatraBavat",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          },
+          {
+            "reviewId": "h5:raw-headword-exclusive:MW-PWG:ADUmana:",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          },
+          {
+            "reviewId": "h5:known-correction:MW-PWG:Cala:",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          },
+          {
+            "reviewId": "h5:mw-pw-shared-doublet:MW-PW:apraRASa:aprakASa",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          },
+          {
+            "reviewId": "h5:mw-pwg-shared-doublet:MW-PWG:atimarSa:aBimarSa",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          },
+          {
+            "reviewId": "h5:null-control:BOP-MW:saktimat:Baktimat",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          },
+          {
+            "reviewId": "h5:raw-headword-exclusive:MW-PWG:AvantI:",
+            "reason": "single-key-only",
+            "reviewStatus": "reviewed-ok"
+          }
+        ],
+        "note": "A review by the same session or agent that produced the machine value is not an independent key and never counts as gold."
+      },
+      "baselines": {
+        "rule": {
+          "description": "known-correction → parser-artifact; null-control → legitimate-form; every other class → possible-typo.",
+          "status": "not_evaluable_insufficient_gold",
+          "metrics": null
+        },
+        "trivial": {
+          "description": "Majority class in the gold rows (fit only after gold exists).",
+          "status": "not_evaluable_insufficient_gold",
+          "majorityLabel": null,
+          "metrics": null
+        },
+        "negativeControl": {
+          "description": "Inverted-oracle control on a 40-row synthetic canary; it must fail. Its real-data scores are null because there is no gold.",
+          "status": "canary",
+          "onRealData": "not_evaluable_insufficient_gold",
+          "canary": {
+            "kind": "inverted-oracle synthetic canary",
+            "rows": 40,
+            "expected": "macroF1 < 0.5 and chance-corrected agreement <= 0",
+            "observed": {
+              "macroF1": 0,
+              "cohenKappa": -1,
+              "krippendorffAlpha": -0.975
+            },
+            "passes": true
+          }
+        }
+      },
+      "evaluation": {
+        "status": "not_evaluable",
+        "classification": "INSUFFICIENT GOLD — every score below is null by design",
+        "reason": "0 of 100 held-out rows have two independent keys; no task metric can be computed from review rows graded by the same session that produced the machine value.",
+        "metrics": {
+          "n": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "accuracy": null,
+          "cohenKappa": null,
+          "krippendorffAlpha": null,
+          "bootstrapCI95": {
+            "macroF1": null,
+            "krippendorffAlpha": null
+          },
+          "perLabel": {}
+        }
       }
     },
     {
-      "queue": "r2-checkpoint",
-      "file": "src/data/review/r2-checkpoint-review.json",
-      "dharmamitra": false,
-      "total": 10,
-      "gold": 10,
-      "coverage": 1,
-      "precision": 1,
-      "statusCounts": {
-        "reviewed-ok": 10
+      "taskId": "gender-conflict",
+      "title": "Cross-dictionary gender conflict adjudication",
+      "question": "Is a disjoint gender assertion between two dictionaries a real conflict, or a convention/evidence artifact?",
+      "source": "src/data/review/gender-conflicts-review.json",
+      "labels": [
+        "real-conflict",
+        "convention-or-artifact"
+      ],
+      "split": {
+        "populationSize": 4543,
+        "heldOutRows": 100,
+        "trainRows": 0,
+        "manifest": "src/data/benchmark/split-manifest.json",
+        "strata": 100,
+        "stratumCount": 8
+      },
+      "gold": {
+        "targetGoldRows": 10,
+        "goldRows": 0,
+        "coverage": 0,
+        "coverageMet": false,
+        "rowsSingleKey": 0,
+        "rowsUnkeyed": 100,
+        "additionalKeysNeeded": 20,
+        "recruitmentNeed": "Recruit 10–20 independent keyings (20 keys) to reach 10 double-keyed rows for this task.",
+        "blockingRows": [
+          {
+            "reviewId": "gender-conflict:saMyamana",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "gender-conflict:GarGarA",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "gender-conflict:badari",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "gender-conflict:patrasUciH",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "gender-conflict:sikTa",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "gender-conflict:jYAna",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "gender-conflict:galoqya",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "gender-conflict:dAtva",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "gender-conflict:ahirbuDnyadevatA",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "gender-conflict:kArAyikA",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          }
+        ],
+        "note": "A review by the same session or agent that produced the machine value is not an independent key and never counts as gold."
+      },
+      "baselines": {
+        "rule": {
+          "description": "lex-basis + disjoint overlap → real-conflict; every prose-mixed or partial row → convention-or-artifact.",
+          "status": "not_evaluable_insufficient_gold",
+          "metrics": null
+        },
+        "trivial": {
+          "description": "Majority class in the gold rows (fit only after gold exists).",
+          "status": "not_evaluable_insufficient_gold",
+          "majorityLabel": null,
+          "metrics": null
+        },
+        "negativeControl": {
+          "description": "Inverted-oracle control on a 40-row synthetic canary; it must fail. Its real-data scores are null because there is no gold.",
+          "status": "canary",
+          "onRealData": "not_evaluable_insufficient_gold",
+          "canary": {
+            "kind": "inverted-oracle synthetic canary",
+            "rows": 40,
+            "expected": "macroF1 < 0.5 and chance-corrected agreement <= 0",
+            "observed": {
+              "macroF1": 0,
+              "cohenKappa": -1,
+              "krippendorffAlpha": -0.975
+            },
+            "passes": true
+          }
+        }
+      },
+      "evaluation": {
+        "status": "not_evaluable",
+        "classification": "INSUFFICIENT GOLD — every score below is null by design",
+        "reason": "0 of 100 held-out rows have two independent keys; no task metric can be computed from review rows graded by the same session that produced the machine value.",
+        "metrics": {
+          "n": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "accuracy": null,
+          "cohenKappa": null,
+          "krippendorffAlpha": null,
+          "bootstrapCI95": {
+            "macroF1": null,
+            "krippendorffAlpha": null
+          },
+          "perLabel": {}
+        }
       }
     },
     {
-      "queue": "low-confidence-alignment",
-      "file": "src/data/review/low-confidence-alignment-review.json",
-      "dharmamitra": false,
-      "total": 7,
-      "gold": 7,
-      "coverage": 1,
-      "precision": 1,
-      "statusCounts": {
-        "reviewed-ok": 7
-      }
-    },
-    {
-      "queue": "pos-gender-conflict",
-      "file": "src/data/review/gender-conflicts-review.json",
-      "dharmamitra": false,
-      "total": 4556,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 4556
-      }
-    },
-    {
-      "queue": "pos-gender-model-crosscheck",
-      "file": "src/data/review/gender-model-crosscheck-review.json",
-      "dharmamitra": true,
-      "total": 4556,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 4556
-      }
-    },
-    {
-      "queue": "citation-link-target",
-      "file": "src/data/review/citation-link-pilot-review.json",
-      "dharmamitra": true,
-      "total": 3996,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 3996
-      }
-    },
-    {
-      "queue": "compound-depth-crosscheck",
-      "file": "src/data/review/compound-depth-crosscheck-review.json",
-      "dharmamitra": true,
-      "total": 3496,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 3496
-      }
-    },
-    {
-      "queue": "lemma-normalization-crosscheck",
-      "file": "src/data/review/lemma-normalization-crosscheck-review.json",
-      "dharmamitra": true,
-      "total": 1913,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 1913
-      }
-    },
-    {
-      "queue": "unknown-source-layer",
-      "file": "src/data/review/unknown-source-layers-review.json",
-      "dharmamitra": false,
-      "total": 449,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 449
-      }
-    },
-    {
-      "queue": "source-siglum-alias",
-      "file": "src/data/review/source-siglum-review.json",
-      "dharmamitra": false,
-      "total": 158,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 158
-      }
-    },
-    {
-      "queue": "langdetect-markup-crosscheck",
-      "file": "src/data/review/langdetect-markup-crosscheck-review.json",
-      "dharmamitra": true,
-      "total": 89,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 89
-      }
-    },
-    {
-      "queue": "source-date-anchor",
-      "file": "src/data/review/source-date-anchor-review.json",
-      "dharmamitra": true,
-      "total": 67,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 67
-      }
-    },
-    {
-      "queue": "source-layer-anchoring",
-      "file": "src/data/review/source-layer-anchoring-review.json",
-      "dharmamitra": true,
-      "total": 6,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 6
-      }
-    },
-    {
-      "queue": "citation-link-target",
-      "file": "src/data/review/citation-link-split-review.json",
-      "dharmamitra": true,
-      "total": 2,
-      "gold": 0,
-      "coverage": 0,
-      "precision": null,
-      "statusCounts": {
-        "needs-review": 2
+      "taskId": "citation-link-target",
+      "title": "Citation-link target verification",
+      "question": "Does the proposed VedaWeb URL for an RV locus resolve to the intended stanza?",
+      "source": "src/data/review/citation-link-pilot-review.json",
+      "labels": [
+        "link-correct",
+        "link-wrong"
+      ],
+      "split": {
+        "populationSize": 3942,
+        "heldOutRows": 100,
+        "trainRows": 0,
+        "manifest": "src/data/benchmark/split-manifest.json",
+        "strata": 100,
+        "stratumCount": 10
+      },
+      "gold": {
+        "targetGoldRows": 10,
+        "goldRows": 0,
+        "coverage": 0,
+        "coverageMet": false,
+        "rowsSingleKey": 0,
+        "rowsUnkeyed": 100,
+        "additionalKeysNeeded": 20,
+        "recruitmentNeed": "Recruit 10–20 independent keyings (20 keys) to reach 10 double-keyed rows for this task.",
+        "blockingRows": [
+          {
+            "reviewId": "citation-link-target:RV:1.37.7",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "citation-link-target:RV:10.160.1",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "citation-link-target:RV:2.35.5",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "citation-link-target:RV:3.35.4",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "citation-link-target:RV:4.51.4",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "citation-link-target:RV:5.39.3",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "citation-link-target:RV:6.45.24",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "citation-link-target:RV:7.62.1",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "citation-link-target:RV:8.32.29",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          },
+          {
+            "reviewId": "citation-link-target:RV:9.77.5",
+            "reason": "no-independent-key",
+            "reviewStatus": "needs-review"
+          }
+        ],
+        "note": "A review by the same session or agent that produced the machine value is not an independent key and never counts as gold."
+      },
+      "baselines": {
+        "rule": {
+          "description": "Accept every machine-proposed VedaWeb link (the current machine verdict).",
+          "status": "not_evaluable_insufficient_gold",
+          "metrics": null
+        },
+        "trivial": {
+          "description": "Majority class in the gold rows (fit only after gold exists).",
+          "status": "not_evaluable_insufficient_gold",
+          "majorityLabel": null,
+          "metrics": null
+        },
+        "negativeControl": {
+          "description": "Inverted-oracle control on a 40-row synthetic canary; it must fail. Its real-data scores are null because there is no gold.",
+          "status": "canary",
+          "onRealData": "not_evaluable_insufficient_gold",
+          "canary": {
+            "kind": "inverted-oracle synthetic canary",
+            "rows": 40,
+            "expected": "macroF1 < 0.5 and chance-corrected agreement <= 0",
+            "observed": {
+              "macroF1": 0,
+              "cohenKappa": -1,
+              "krippendorffAlpha": -0.975
+            },
+            "passes": true
+          }
+        }
+      },
+      "evaluation": {
+        "status": "not_evaluable",
+        "classification": "INSUFFICIENT GOLD — every score below is null by design",
+        "reason": "0 of 100 held-out rows have two independent keys; no task metric can be computed from review rows graded by the same session that produced the machine value.",
+        "metrics": {
+          "n": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "accuracy": null,
+          "cohenKappa": null,
+          "krippendorffAlpha": null,
+          "bootstrapCI95": {
+            "macroF1": null,
+            "krippendorffAlpha": null
+          },
+          "perLabel": {}
+        }
       }
     }
   ],
+  "negativeControl": {
+    "description": "A deliberately inverted predictor on a synthetic canary must fail. Pass = the scorer reports macroF1 < 0.5 and chance-corrected agreement <= 0.",
+    "kind": "inverted-oracle synthetic canary",
+    "rows": 40,
+    "expected": "macroF1 < 0.5 and chance-corrected agreement <= 0",
+    "observed": {
+      "macroF1": 0,
+      "cohenKappa": -1,
+      "krippendorffAlpha": -0.975
+    },
+    "passes": true,
+    "realDataStatus": "not_evaluable_insufficient_gold"
+  },
+  "reviewOverlayCounts": {
+    "note": "Counts only. These rows are not gold and no precision is computed from them.",
+    "reviewedRowsWithoutSecondKey": 100,
+    "unkeyedRows": 200
+  },
   "modelBenchmarks": {
     "langdetectGerman": {
       "task": "PWG Sanskrit-vs-German classification (held-out)",
       "baselineAccuracy": 0.9415,
       "germanAwareAccuracy": 0.9954,
       "accuracyLift": 0.0539,
-      "source": "src/data/external/langdetect-german-metrics.json (#115)"
-    },
-    "byt5Pending": {
-      "note": "ByT5 task accuracy (gender / lemma / segmentation) and an external comparison via dharmamitra-leaderboard need a GPU run of the model on a gold corpus.",
-      "blockedOn": "GPU (no torch/transformers in-session)"
+      "source": "src/data/external/langdetect-german-metrics.json (#115)",
+      "caveat": "Trained on PWG's own markup; this evaluates markup consistency, not an external gold standard. Not one of the three v2 tasks."
     }
   },
-  "notes": [
-    "precision here is the machine-verdict accept rate under human review, not classifier precision on an external gold set.",
-    "Most Dharmamitra cross-checks have zero gold today (pending review); this report is the framework that scores them as reviews land.",
-    "The langdetect German model has a real held-out benchmark (#115); the ByT5 queues need a GPU run for task-level accuracy."
-  ]
+  "limitations": [
+    "No task score is reported today: zero of the three frozen samples contain a double-keyed gold row.",
+    "A review by the session or agent that produced the machine value is not an independent key; v1's 147 self-reviewed rows are excluded by construction.",
+    "The negative control is machinery verification on synthetic rows, not benchmark evidence about the data.",
+    "Pool reviewers are pseudonymous; agreement cannot be corrected for a shared prior if both keys saw the public repo.",
+    "The frozen sample is drawn now; adding gold later must not change the sample without a new benchmark version."
+  ],
+  "generatedAt": "2026-10-19T14:19:41.859Z"
 }

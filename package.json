@@ -68,6 +68,7 @@
     "build-stardict-export": "node scripts/build-stardict-export.mjs",
     "train-langdetect-german": "python scripts/train-langdetect-german.py",
     "build-benchmark-report": "node scripts/build-benchmark-report.mjs",
+    "score-benchmark": "node scripts/score-benchmark.mjs",
     "build-broad-headword-lookup": "node scripts/build-broad-headword-lookup.mjs",
     "audit-analysis-capabilities": "node scripts/audit-broad-analysis-capabilities.mjs",
     "build-gender-review": "node scripts/build-gender-conflict-review.mjs",
