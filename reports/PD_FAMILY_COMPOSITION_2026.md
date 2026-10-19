@@ -165,9 +165,9 @@ PWG per headword, an order of magnitude.
 Sanskrit collation, `apaca` frontier): 104,959 ÷ 4,519 = **23.2×**; 21.1× / 21.3× without
 the privatives, as above.
 
-_A note for a future A68 pass (outside this handoff's edit scope, which allows only table
-rows): the prose figure "about 8,900 (8.6 %), 21.3×" is the literal count; the
-accent-normalised one is ≈9,450 (9.2 %), 21.1×._
+_A68 §6.2 has since folded this in: its privative paragraph now carries 9,452 headwords
+(9.2 %), 21.1×, with the accent-blind 8,894 / 8.6 % / 21.3× kept beside it as the literal
+count (gasyoun/Uprava#5420, 19-10-2026)._
 
 ## 6. Limits
 
