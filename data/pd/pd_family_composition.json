@@ -1,0 +1,597 @@
+{
+ "hid": "H7110",
+ "generated_by": "scripts/pd_family_composition.py",
+ "rule": {
+  "population": "unique <k1> with at least one entry printing k1==k2 and an analysis parenthesis",
+  "population_pin": 103127,
+  "analysis": "first ( … ) after the ¦ separator on the entry's first body line",
+  "members": "strip U+0301/U+0300, °, apostrophes; split on hyphen/en-dash/em-dash/whitespace",
+  "classification": "1 member ⇒ simplex; last member in suffixes ⇒ derivative; else compound",
+  "suffixes": [
+   "ka",
+   "tva",
+   "tā",
+   "tara",
+   "tama",
+   "maya",
+   "aka",
+   "ana",
+   "ita",
+   "in",
+   "mat",
+   "vat",
+   "tṛ",
+   "tas",
+   "ya"
+  ],
+  "threshold_pp": 15.0,
+  "threshold_rule": "qualify when one category differs from BOTH anna and agni by > 15 pp"
+ },
+ "sources": {
+  "pd": {
+   "bytes": 55122076,
+   "sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442",
+   "entries": 107620,
+   "unique_key1": 104950
+  },
+  "pwg": {
+   "sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166",
+   "unique_key1": 106067
+  }
+ },
+ "population": {
+  "classified_headwords": 102747,
+  "correction_block_headwords": 380,
+  "reconciled_total": 103127,
+  "pin": 103127,
+  "delta_vs_pin": 0,
+  "within_band": true,
+  "note": "the A68 draft's 103,127 is this parser's 102747 analyses plus the 380 headwords whose first-line parenthesis is a CORRECTIONS block (an errata insertion, not an analysis); the 380 are counted but not classified"
+ },
+ "composition": {
+  "classified": 102747,
+  "compound_n": 72632,
+  "derivative_n": 12670,
+  "simplex_n": 17445,
+  "compound_pct": 70.7,
+  "derivative_pct": 12.3,
+  "simplex_pct": 17.0
+ },
+ "families": [
+  {
+   "family": "anna",
+   "kind": "string",
+   "role": "reference",
+   "token": "anna",
+   "pd_headwords": 877,
+   "pwg_headwords": 33,
+   "classified": 875,
+   "compound_n": 683,
+   "derivative_n": 71,
+   "simplex_n": 121,
+   "compound_pct": 78.1,
+   "derivative_pct": 8.1,
+   "simplex_pct": 13.8,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "annaBARqa",
+     "annaBAga",
+     "annaBAgin",
+     "annaBAj",
+     "annaBAjana"
+    ],
+    "derivative": [
+     "annaBojanatva",
+     "annaSudDyarTakatva",
+     "annadAnAdika",
+     "annadAnapraBAvatas",
+     "annadAnatas"
+    ],
+    "simplex": [
+     "anna",
+     "annaBawwa",
+     "annaBojanABAva",
+     "annaBojanAdi",
+     "annaMBawwa"
+    ]
+   }
+  },
+  {
+   "family": "agni",
+   "kind": "string",
+   "role": "reference",
+   "token": "agni",
+   "pd_headwords": 2312,
+   "pwg_headwords": 170,
+   "classified": 2299,
+   "compound_n": 1716,
+   "derivative_n": 321,
+   "simplex_n": 262,
+   "compound_pct": 74.6,
+   "derivative_pct": 14.0,
+   "simplex_pct": 11.4,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "agniBARqa",
+     "agniBAga",
+     "agniBAjana",
+     "agniBAryA",
+     "agniBAsA"
+    ],
+    "derivative": [
+     "agniBAgatas",
+     "agniBAvatA",
+     "agniBakzin",
+     "agniBedatas",
+     "agniDAraRArTatva"
+    ],
+    "simplex": [
+     "agni",
+     "agniBA",
+     "agniBAgAgra",
+     "agniBAsa",
+     "agniBAvApatti"
+    ]
+   }
+  },
+  {
+   "family": "anya",
+   "kind": "string",
+   "role": "control",
+   "token": "anya",
+   "pd_headwords": 4071,
+   "pwg_headwords": 83,
+   "classified": 4047,
+   "compound_n": 2883,
+   "derivative_n": 435,
+   "simplex_n": 729,
+   "compound_pct": 71.2,
+   "derivative_pct": 10.7,
+   "simplex_pct": 18.0,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "anyaBARqa",
+     "anyaBAga",
+     "anyaBAgya",
+     "anyaBAj",
+     "anyaBAjyahara"
+    ],
+    "derivative": [
+     "anyaBAsyatA",
+     "anyaBAsyatva",
+     "anyaBAvatva",
+     "anyaBAvitva",
+     "anyaBUmika"
+    ],
+    "simplex": [
+     "anya",
+     "anyaBAnAnupapatti",
+     "anyaBAvAdarSana",
+     "anyaBAvAnupapatti",
+     "anyaBAvApatti"
+    ]
+   }
+  },
+  {
+   "family": "antar",
+   "kind": "string",
+   "role": "control",
+   "token": "antar",
+   "pd_headwords": 2735,
+   "pwg_headwords": 135,
+   "classified": 2727,
+   "compound_n": 2024,
+   "derivative_n": 222,
+   "simplex_n": 481,
+   "compound_pct": 74.2,
+   "derivative_pct": 8.1,
+   "simplex_pct": 17.6,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "antarABAsa",
+     "antarABAsamAna",
+     "antarABAsasaMBava",
+     "antarABAsasamarTana",
+     "antarABAsavarga"
+    ],
+    "derivative": [
+     "antarABAsamaya",
+     "antarABagnapotatva",
+     "antarABavadehaka",
+     "antarAMSaka",
+     "antarAcintAtva"
+    ],
+    "simplex": [
+     "antar",
+     "antarA",
+     "antarABIzwarasa",
+     "antarAByaDikam",
+     "antarADikAra"
+    ]
+   }
+  },
+  {
+   "family": "ati",
+   "kind": "string",
+   "role": "preverb",
+   "token": "ati",
+   "pd_headwords": 7541,
+   "pwg_headwords": 376,
+   "classified": 7507,
+   "compound_n": 5839,
+   "derivative_n": 982,
+   "simplex_n": 686,
+   "compound_pct": 77.8,
+   "derivative_pct": 13.1,
+   "simplex_pct": 9.1,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "atiBA",
+     "atiBAgavyavasTA",
+     "atiBAgya",
+     "atiBAgyaSAlin",
+     "atiBAgyasaMpad"
+    ],
+    "derivative": [
+     "atiBAgyADikatva",
+     "atiBAragurutva",
+     "atiBAratA",
+     "atiBAsvaratA",
+     "atiBAsvaratva"
+    ],
+    "simplex": [
+     "ati",
+     "atiBArABAva",
+     "atiBArADigama",
+     "atiBArAkrAnta",
+     "atiBArAropaRa"
+    ]
+   }
+  },
+  {
+   "family": "anu",
+   "kind": "string",
+   "role": "preverb",
+   "token": "anu",
+   "pd_headwords": 13849,
+   "pwg_headwords": 604,
+   "classified": 13754,
+   "compound_n": 9304,
+   "derivative_n": 1851,
+   "simplex_n": 2599,
+   "compound_pct": 67.6,
+   "derivative_pct": 13.5,
+   "simplex_pct": 18.9,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "anuBA",
+     "anuBARqa",
+     "anuBAga",
+     "anuBAgaSas",
+     "anuBAgabanDa"
+    ],
+    "derivative": [
+     "anuBAvaBinnatva",
+     "anuBAvaka",
+     "anuBAvakatA",
+     "anuBAvakatva",
+     "anuBAvarUpatA"
+    ],
+    "simplex": [
+     "anu",
+     "anuBAgabanDanopakrama",
+     "anuBAgodIraRA",
+     "anuBAladeSam",
+     "anuBAnalakzaRAnukAra"
+    ]
+   }
+  },
+  {
+   "family": "apa",
+   "kind": "string",
+   "role": "preverb",
+   "token": "apa",
+   "pd_headwords": 875,
+   "pwg_headwords": 444,
+   "classified": 870,
+   "compound_n": 662,
+   "derivative_n": 79,
+   "simplex_n": 129,
+   "compound_pct": 76.1,
+   "derivative_pct": 9.1,
+   "simplex_pct": 14.8,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "apaGAta",
+     "apaGAtaka",
+     "apaGAtamfta",
+     "apaGAtana",
+     "apaGAtin"
+    ],
+    "derivative": [
+     "apaNgvAdika",
+     "apaNkaka",
+     "apaNkatA",
+     "apagUrya",
+     "apagalBaka"
+    ],
+    "simplex": [
+     "apa",
+     "apaGAwalIkA",
+     "apaGanAnvita",
+     "apaGanopeta",
+     "apagAram"
+    ]
+   }
+  },
+  {
+   "family": "atra",
+   "kind": "string",
+   "role": "function",
+   "token": "atra",
+   "pd_headwords": 76,
+   "pwg_headwords": 6,
+   "classified": 76,
+   "compound_n": 65,
+   "derivative_n": 3,
+   "simplex_n": 8,
+   "compound_pct": 85.5,
+   "derivative_pct": 3.9,
+   "simplex_pct": 10.5,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "atra",
+     "atraBagavat",
+     "atraBava",
+     "atraBavaddarSana",
+     "atraBavat"
+    ],
+    "derivative": [
+     "atrasnutA",
+     "atrastatA",
+     "atratas"
+    ],
+    "simplex": [
+     "atrakftAnuyoga",
+     "atran",
+     "atrapatraka",
+     "atratyArTEkarUpya",
+     "atratyanyAyAtideSa"
+    ]
+   }
+  },
+  {
+   "family": "atha",
+   "kind": "string",
+   "role": "function",
+   "token": "aTa",
+   "pd_headwords": 173,
+   "pwg_headwords": 24,
+   "classified": 160,
+   "compound_n": 101,
+   "derivative_n": 12,
+   "simplex_n": 47,
+   "compound_pct": 63.1,
+   "derivative_pct": 7.5,
+   "simplex_pct": 29.4,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "aTaNSabda",
+     "aTadrA",
+     "aTagir",
+     "aTakAra",
+     "aTakAraRiDana"
+    ],
+    "derivative": [
+     "aTamUlatva",
+     "aTarvANgirastas",
+     "aTarvaRamaya",
+     "aTarvaRanAmaka",
+     "aTarvaka"
+    ],
+    "simplex": [
+     "aTa",
+     "aTak",
+     "aTaluza",
+     "aTamaTa",
+     "aTapadArTa"
+    ]
+   }
+  },
+  {
+   "family": "privative a-",
+   "kind": "morph",
+   "role": "privative",
+   "token": "a",
+   "pd_headwords": 4320,
+   "pwg_headwords": "n/a",
+   "classified": 4320,
+   "compound_n": 4315,
+   "derivative_n": 4,
+   "simplex_n": 1,
+   "compound_pct": 99.9,
+   "derivative_pct": 0.1,
+   "simplex_pct": 0.0,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "aCadirdarSa",
+     "aCambawkAra",
+     "aCambawkAram",
+     "aCandoma",
+     "aDA"
+    ],
+    "derivative": [
+     "acarutva",
+     "atara",
+     "atas",
+     "atva"
+    ],
+    "simplex": [
+     "a"
+    ]
+   }
+  },
+  {
+   "family": "negative an-",
+   "kind": "morph",
+   "role": "privative",
+   "token": "an",
+   "pd_headwords": 4481,
+   "pwg_headwords": "n/a",
+   "classified": 4481,
+   "compound_n": 4476,
+   "derivative_n": 4,
+   "simplex_n": 1,
+   "compound_pct": 99.9,
+   "derivative_pct": 0.1,
+   "simplex_pct": 0.0,
+   "unclassified": 0,
+   "examples": {
+    "compound": [
+     "anABAsa",
+     "anABAsamAna",
+     "anABAsana",
+     "anABAsarUpa",
+     "anABAta"
+    ],
+    "derivative": [
+     "anana",
+     "anita",
+     "antama",
+     "antva"
+    ],
+    "simplex": [
+     "an"
+    ]
+   }
+  }
+ ],
+ "privative": {
+  "entries_a": 4698,
+  "entries_an": 4754,
+  "entries_total": 9452,
+  "loose_a": 4712,
+  "loose_an": 4768,
+  "loose_total": 9480,
+  "literal_a": 4419,
+  "literal_an": 4475,
+  "literal_total": 8894,
+  "unique_a": 4430,
+  "unique_an": 4536,
+  "unique_total": 8926,
+  "share_of_population_pct": 9.2
+ },
+ "density": {
+  "pd_lemmas": 104959,
+  "pwg_in_span": 4519,
+  "pwg_total": 106082,
+  "multiple": 23.2,
+  "multiple_without_privatives": 21.1,
+  "multiple_without_privatives_literal": 21.3,
+  "privatives_subtracted": 9452,
+  "privatives_subtracted_literal": 8894,
+  "span_frontier": "apaca"
+ },
+ "ledger": [
+  {
+   "family": "anya",
+   "kind": "string",
+   "pd_headwords": 4071,
+   "pwg_headwords": 83,
+   "worst_category": "compound",
+   "worst_delta_pp": 6.9,
+   "qualifies_15pp": false,
+   "pwg_counterpart": true
+  },
+  {
+   "family": "antar",
+   "kind": "string",
+   "pd_headwords": 2735,
+   "pwg_headwords": 135,
+   "worst_category": "simplex",
+   "worst_delta_pp": 6.2,
+   "qualifies_15pp": false,
+   "pwg_counterpart": true
+  },
+  {
+   "family": "ati",
+   "kind": "string",
+   "pd_headwords": 7541,
+   "pwg_headwords": 376,
+   "worst_category": "derivative",
+   "worst_delta_pp": 5.0,
+   "qualifies_15pp": false,
+   "pwg_counterpart": true
+  },
+  {
+   "family": "anu",
+   "kind": "string",
+   "pd_headwords": 13849,
+   "pwg_headwords": 604,
+   "worst_category": "compound",
+   "worst_delta_pp": 10.5,
+   "qualifies_15pp": false,
+   "pwg_counterpart": true
+  },
+  {
+   "family": "apa",
+   "kind": "string",
+   "pd_headwords": 875,
+   "pwg_headwords": 444,
+   "worst_category": "derivative",
+   "worst_delta_pp": 4.9,
+   "qualifies_15pp": false,
+   "pwg_counterpart": true
+  },
+  {
+   "family": "atra",
+   "kind": "string",
+   "pd_headwords": 76,
+   "pwg_headwords": 6,
+   "worst_category": "compound",
+   "worst_delta_pp": 10.9,
+   "qualifies_15pp": false,
+   "pwg_counterpart": true
+  },
+  {
+   "family": "atha",
+   "kind": "string",
+   "pd_headwords": 173,
+   "pwg_headwords": 24,
+   "worst_category": "simplex",
+   "worst_delta_pp": 18.0,
+   "qualifies_15pp": true,
+   "pwg_counterpart": true
+  },
+  {
+   "family": "privative a-",
+   "kind": "morph",
+   "pd_headwords": 4320,
+   "pwg_headwords": "n/a",
+   "worst_category": "compound",
+   "worst_delta_pp": 25.3,
+   "qualifies_15pp": true,
+   "pwg_counterpart": false
+  },
+  {
+   "family": "negative an-",
+   "kind": "morph",
+   "pd_headwords": 4481,
+   "pwg_headwords": "n/a",
+   "worst_category": "compound",
+   "worst_delta_pp": 25.3,
+   "qualifies_15pp": true,
+   "pwg_counterpart": false
+  }
+ ]
+}

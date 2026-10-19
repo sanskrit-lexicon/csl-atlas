@@ -58,6 +58,19 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_volume_homogeneity.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.tsv) | 35 | H6947 per-fascicle-volume entry size, chars, blocks, quotations and dictionary-source marking share |
 | [pd_volume_homogeneity_bound.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity_bound.tsv) | 8 | H6947 the same measures for the 8 bound volumes |
 | [pd_volume_homogeneity.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.json) | — | H6947 totals, H6942/H6949 canaries, source decomposition, conversion diagnostics |
+| [pd_family_composition.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_family_composition.tsv) | 11 | H7110 family composition — per family: `pd_headwords`, `pwg_headwords`, classified count, compound/derivative/simplex counts and shares, one example per class (SLP1 `k1`) |
+| [pd_family_composition.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_family_composition.json) | — | H7110 envelope: the classification rule and suffix set, source SHA-256s, the 103,127 population reconciliation (102,747 analyses + 380 CORRECTIONS blocks), the whole-alphabet split, five examples per class per family, the privative recount under both rules, the density recompute, and the >15 pp ledger |
+
+## Family composition (H7110)
+
+The A68 §6.2 table shows PD's lemmatisation policy on *anna* (877 headwords, 78.1 % compounds)
+and *agni* (2,312, 74.6 %). H7110 classifies every family inside *a*–*apaca-* from PD's
+printed analysis parenthesis and applies a 15 pp rule: only *atha* (173 headwords, 63.1 %
+compounds, 29.4 % simplex) is a table-worthy exception; the privative *a‑* and negative
+*an‑* sets are 99.9 % compounds by construction (8,894 entries under the draft's literal
+prefix rule, 9,452 once accented privatives like *á-cyuta* are counted, which moves the
+without-privatives density multiple 21.3× → 21.1×). Full write-up:
+[reports/PD_FAMILY_COMPOSITION_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_FAMILY_COMPOSITION_2026.md).
 
 ## Silent inheritance (H6948)
 
