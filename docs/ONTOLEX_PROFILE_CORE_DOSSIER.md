@@ -2,8 +2,9 @@ _Created: 19-10-2026 · Last updated: 19-10-2026_
 
 # OntoLex-Lemon application profile — csl-atlas core dossier
 
-Status: **release candidate** for dataset `csl-atlas-core-dossier` v1.0.0,
-shipped with repo release `v0.20.0`.
+Status: **published** for dataset `csl-atlas-core-dossier` v1.0.0, shipped with
+repo release [`v0.20.0`](https://github.com/sanskrit-lexicon/csl-atlas/releases/tag/v0.20.0)
+(version DOI [`10.5281/zenodo.23536487`](https://doi.org/10.5281/zenodo.23536487)).
 
 This is an **application profile**, not an exporter and not a new ontology. The
 normative RDF serialization remains in
@@ -22,6 +23,7 @@ it must not invent.
 | Builder | `npm run build-dict-comparison` (`scripts/build-dictionary-comparison.mjs`) |
 | Provenance sidecar | [`src/data/dicts/core-dossier/.source.json`](../src/data/dicts/core-dossier/.source.json) |
 | Licence | CC BY-SA 4.0, inherited from `csl-orig` |
+| Release | [`v0.20.0`](https://github.com/sanskrit-lexicon/csl-atlas/releases/tag/v0.20.0), version DOI [`10.5281/zenodo.23536487`](https://doi.org/10.5281/zenodo.23536487) |
 
 The dataset is a **coverage dossier**: it records which of seven dictionaries
 attest a normalized headword, how many dictionary records each dictionary has

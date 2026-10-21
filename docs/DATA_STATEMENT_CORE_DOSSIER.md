@@ -130,14 +130,14 @@ declares the licence and URL explicitly.
 | Grammar-token interpretation | machine extraction from `<lex>` | complete, lossy |
 | Sense/definition mapping | not in this dataset | out of scope |
 | Row-level human review | none | 0 of 28,524 rows |
-| Release/profile review | human reviewer per handoff verifier | pending PR review |
+| Release/profile review | human reviewer per handoff verifier | release published 2026-10-21; independent review pending |
 
 ## Citation
 
 Use the release citation block in the repository
-[`README.md`](../README.md#cite-this-dataset) and the concept DOI
-[`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691). The
-version DOI is minted by Zenodo when the `v0.20.0` GitHub release is published;
-the release-candidate note
-[`docs/RELEASE_CANDIDATE_CORE_DOSSIER.md`](RELEASE_CANDIDATE_CORE_DOSSIER.md)
-records the blocker and the post-merge steps.
+[`README.md`](../README.md#cite-this-dataset) and the version DOI
+[`10.5281/zenodo.23536487`](https://doi.org/10.5281/zenodo.23536487). The concept
+DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) always
+resolves to the latest tagged release. The release record and the archived
+payload are documented in
+[`docs/RELEASE_CANDIDATE_CORE_DOSSIER.md`](RELEASE_CANDIDATE_CORE_DOSSIER.md).
