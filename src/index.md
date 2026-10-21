@@ -22,14 +22,14 @@ in at least five of seven Cologne dictionaries, with per-dictionary record
 counts, first source lines, and grammar tokens.
 
 - **Version:** dataset 1.0.0, repo release `v0.20.0`
-- **DOI (concept):** [10.5281/zenodo.21419691](https://doi.org/10.5281/zenodo.21419691)
+- **DOI (this version):** [10.5281/zenodo.23536487](https://doi.org/10.5281/zenodo.23536487)
+- **DOI (concept, all versions):** [10.5281/zenodo.21419691](https://doi.org/10.5281/zenodo.21419691)
 - **Licence:** CC BY-SA 4.0
 - **OntoLex profile:** [docs/ONTOLEX_PROFILE_CORE_DOSSIER.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ONTOLEX_PROFILE_CORE_DOSSIER.md)
 - **Data statement:** [docs/DATA_STATEMENT_CORE_DOSSIER.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DATA_STATEMENT_CORE_DOSSIER.md)
 
-The concept DOI resolves to the latest tagged release. The version DOI is
-minted when `v0.20.0` is published; until then cite the concept DOI and name
-the release tag.
+Cite the version DOI for this dataset; the concept DOI always resolves to the
+latest tagged release.
 
 ---
 

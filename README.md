@@ -230,21 +230,21 @@ attested in at least five of seven Cologne dictionaries, with per-dictionary
 record counts, first source lines, and grammar tokens.
 
 - **Version:** dataset 1.0.0, repo release `v0.20.0`
-- **DOI (concept):** [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691)
+- **DOI (this version):** [`10.5281/zenodo.23536487`](https://doi.org/10.5281/zenodo.23536487)
+- **DOI (concept, all versions):** [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691)
 - **Licence:** CC BY-SA 4.0
 - **OntoLex profile:** [`docs/ONTOLEX_PROFILE_CORE_DOSSIER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ONTOLEX_PROFILE_CORE_DOSSIER.md)
 - **Data statement:** [`docs/DATA_STATEMENT_CORE_DOSSIER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DATA_STATEMENT_CORE_DOSSIER.md)
 - **Provenance:** [`src/data/dicts/core-dossier/.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/core-dossier/.source.json)
-- **Release candidate note:** [`docs/RELEASE_CANDIDATE_CORE_DOSSIER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RELEASE_CANDIDATE_CORE_DOSSIER.md)
+- **Release record:** [`docs/RELEASE_CANDIDATE_CORE_DOSSIER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RELEASE_CANDIDATE_CORE_DOSSIER.md)
 
-The concept DOI resolves to the latest tagged release. The **version DOI** is
-minted by Zenodo when the `v0.20.0` release is published; until then cite the
-concept DOI and name the release tag. The dataset is machine-built and has no
+Cite the **version DOI** for this dataset; the concept DOI always resolves to
+the latest tagged release. The dataset is machine-built and has no
 human-reviewed rows; see the data statement for the full limitations.
 
 ## How to cite
 
-Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; the most recent minted version DOI is 0.19.10: [`10.5281/zenodo.22948318`](https://doi.org/10.5281/zenodo.22948318)).
+Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; the most recent minted version DOI is 0.20.0: [`10.5281/zenodo.23536487`](https://doi.org/10.5281/zenodo.23536487)).
 
 Cite the atlas via its archival Zenodo DOI:
 
