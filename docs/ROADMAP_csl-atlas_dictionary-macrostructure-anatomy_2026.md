@@ -1,5 +1,9 @@
 # Roadmap — Cross-dictionary macrostructure anatomy (compound law · entry-size chronology · density fingerprint)
 
+> **Wave-2 verdict 22-10-2026 (H7126):** retained in place — supporting research-agenda spec; the unminted prose IS the agenda, delivery order governed by `ROADMAP_2026_2027.md` (truth-pass 27-08-2026, H3002); all execution handoffs referenced are terminal (drain report bucket C, live_eng=0).
+
+
+
 _Created: 21-07-2026 · Last updated: 21-07-2026_
 
 Phase-2 of the H1416 letter-anatomy study
