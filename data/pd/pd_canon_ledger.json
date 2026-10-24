@@ -1,0 +1,14 @@
+{
+ "generated_by": "scripts/pd_canon_ledger.py",
+ "scope": "PD declared canon — every base that has been quoted, with 118/N each",
+ "covered_works": 118,
+ "row_count": 14,
+ "inputs_sha256": {
+  "pd_aob_row_test_1473.json": "279a9614f945c6e5ddfb2ed7885607a2ff088b1b3a525f690316033ed07c1390",
+  "pd_aob_declared_canon_audit.json": "d522fa41048aeb433c78bdd5492ed591a19209255950e79c1b6ea4d53f869e65",
+  "pd_index_works_summary.json": "29b22790c810586b940cf042d687d2d700fce229f32a7c920f4c200f7a722e9d",
+  "pd_dcs_metrics.json": "02ebee08936418e882b6e92e2ffb40888e80ea88c793ae1b27503537d2959416",
+  "pd_index_works_siglum_delta.tsv": "24732e94cae0ead51e3d21b47836cc5b91da760746dc74465a11549f91de0035"
+ },
+ "rule": "no percentage without its base in the same row; aob_clean_subset_editions is a floor and must never be quoted"
+}

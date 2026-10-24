@@ -914,4 +914,44 @@ dictionary to be folded in when supplied); Apte's dates from
 [Wikipedia](https://en.wikipedia.org/wiki/Vaman_Shivram_Apte); PD staffing (74 years since 1948; a
 severe shortage of lexicographers) from the [Deccan College dictionary project](https://www.frontlist.in/1464-volumes-74-years-and-counting-the-making-of-the-worlds-biggest-encyclopaedic-sanskrit-dictionary)._
 
+## 9. The canon denominator is not one number (24-10-2026)
+
+Every "118 of N" quoted in this report, in the A68 paper and on the PD knowledge page divides the
+same **118 covered works** by a different **N**. The bases are not rival estimates of one quantity;
+they are different objects, and until now each document picked one silently. They are now derived,
+labelled and checked in [`data/pd/pd_canon_ledger.tsv`](../data/pd/pd_canon_ledger.tsv) by
+[`scripts/pd_canon_ledger.py`](../scripts/pd_canon_ledger.py), which refuses to write if a computed
+percentage disagrees with the percentage recorded in the JSON it reads.
+
+| Base | Rows | 118 / base | What it is |
+|---|---:|---:|---|
+| AOB entry-like printed lines (R1) | 1,476 | 7.99 % | structural count; the paper's denominator |
+| AOB entry rows, repeated headers removed | 1,469 | 8.03 % | the printed list's own row count |
+| AOB print census | 1,464 | 8.06 % | press-attributed external count |
+| AOB pass-1 loose parse | 1,419 | 8.32 % | not reproducible; kept only so it is not requoted |
+| AOB re-parse, raw entries | 1,517 | 7.78 % | upper bound of the audit band |
+| Usable edition-level inventory | 1,437 | 8.21 % | the H6932 inventory |
+| Clean-subset edition rows | 1,118 | 10.55 % | **a floor, never a denominator** — it drops the Mahābhārata and Rāmāyaṇa |
+| **Index of Works, all rows** | **2,031** | **5.81 %** | pp. LXXXIX–CXXVII, vision transcription; the work authority (Q5) |
+| Index rows printing a siglum | 1,622 | 7.27 % | the joinable layer |
+| Index rows with no siglum | 409 | 20.1 % of the Index | classed, not dropped (adjudication: unit M2) |
+
+The two printed counts — **1,469** AOB entry rows and **2,031** Index rows — differ by **562 rows
+(38.3 %)**. That gap is the whole finding of this section: the canon is not a number that moved,
+it is two lists that were never reconciled.
+
+The join itself is now measured rather than assumed. Of the **1,622** Index sigla, **981 (60.5 %)**
+find an AOB row (936 in both, 45 AOB-only) and **641 (39.5 %)** do not (554 families-only, 87 in
+neither); **497** AOB sigla never appear in the Index at all. The pilot's "direct siglum join" is
+therefore real but two-thirds complete, not complete.
+
+**The rule this section exists to enforce.** No percentage without its base in the same sentence or
+row. The A68 paper's 8.0 % is the 1,476 basis and stays valid *as that*; the research page's
+headline must name 1,476, 1,469 or 2,031 whenever it divides by one of them. Quoting 118/1,118 =
+10.55 % as the declared canon is a defect, not an alternative.
+
+_§9 added 24-10-2026 — DeepSeek Flash (`deepseek-flash`) via DSH, W1 of the PD knowledge-index
+grill ([PR #5762](https://github.com/gasyoun/Uprava/pull/5762)); ledger `--check` green; no earlier
+number edited._
+
 _Dr. Mārcis Gasūns_
