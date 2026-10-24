@@ -95,8 +95,8 @@ The repository's Zenodo machinery mints a DOI **per tagged release** (concept DO
 version DOI was minted — items 1 (ordering) and 3 (version drift) are closed by that order, not argued
 away. **Item 2 is not closed:** v0.21.0 ships under the repository's existing CC BY-SA 4.0, and whether the
 siglum-level PD join tables are a derivative of the CC BY-NC-SA 3.0 machine text remains an open
-rights question. A standalone PD dataset deposit is still the alternative if that question needs its
-own licence rather than the atlas's.
+rights question. **Ruled 24-10-2026:** no standalone PD deposit and no separate licence — the atlas's CC BY-SA 4.0
+stands for these tables. The rights question is recorded, not reopened.
 
 ## 6. What this programme does not claim
 
@@ -129,5 +129,5 @@ all present in `data/pd/`.
 - [`PD_KNOWLEDGE.md`](https://github.com/sanskrit-lexicon/PD/blob/main/PD_KNOWLEDGE.md) — the public
   knowledge page this programme exists to make citable.
 
-_24-10-2026 — DeepSeek Flash (`deepseek-flash`) via DSH; no earlier number edited, three open rows
-left open on purpose._
+_24-10-2026 — DeepSeek Flash (`deepseek-flash`) via DSH; no earlier number edited, two open rows
+left open on purpose (κ and edition availability); the DOI and the chapter closed after first publication._
